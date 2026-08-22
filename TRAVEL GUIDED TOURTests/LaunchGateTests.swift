@@ -1,5 +1,6 @@
 import XCTest
 import CoreLocation
+import MapKit
 @testable import TRAVEL_GUIDED_TOUR
 
 /// The launch splash used to end on a fixed 2-second timer that waited for
@@ -20,7 +21,8 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor - 0.01,
                 catalogLoaded: true,
-                locationSettled: true
+                locationSettled: true,
+                imagesReady: true
             )
         )
     }
@@ -30,7 +32,8 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor,
                 catalogLoaded: true,
-                locationSettled: true
+                locationSettled: true,
+                imagesReady: true
             )
         )
     }
@@ -40,7 +43,8 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
                 catalogLoaded: false,
-                locationSettled: true
+                locationSettled: true,
+                imagesReady: true
             )
         )
     }
@@ -50,7 +54,8 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
                 catalogLoaded: true,
-                locationSettled: false
+                locationSettled: false,
+                imagesReady: true
             )
         )
     }
@@ -62,7 +67,8 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
                 catalogLoaded: false,
-                locationSettled: false
+                locationSettled: false,
+                imagesReady: true
             )
         )
     }
@@ -123,56 +129,10 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertEqual(LaunchBloom.ramp(0.2, delay: 0.2, window: 0), 1)
     }
 
-    /// The bloom travels outward: the nearest pin is always at least as far
-    /// along as one further away.
-    func test_bloomTravelsOutwardFromTheUser() {
-        for step in stride(from: 0.0, through: 1.0, by: 0.05) {
-            let near = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 0)
-            let mid = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 0.5)
-            let far = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 1)
-            XCTAssertGreaterThanOrEqual(near, mid, "at \(step)")
-            XCTAssertGreaterThanOrEqual(mid, far, "at \(step)")
-        }
-    }
 
-    /// 🔴 The one that matters for correctness rather than feel: every pin must
-    /// be fully arrived by the end. A pin left mid-bloom would sit permanently
-    /// scaled-down and semi-transparent on the map.
-    func test_everyPinIsFullyArrivedByTheEnd() {
-        for d in stride(from: 0.0, through: 1.0, by: 0.05) {
-            XCTAssertEqual(LaunchBloom.pinProgress(handOff: 1, normalisedDistance: d), 1, "distance \(d)")
-        }
-    }
 
-    func test_noPinStartsBeforeTheMarkLands() {
-        let landing = LaunchBloom.markLanding.delay + LaunchBloom.markLanding.window
-        for d in stride(from: 0.0, through: 1.0, by: 0.1) {
-            XCTAssertEqual(
-                LaunchBloom.pinProgress(handOff: landing - 0.01, normalisedDistance: d), 0,
-                "distance \(d)"
-            )
-        }
-    }
 
-    func test_pinProgressIsMonotonic() {
-        var previous = 0.0
-        for step in stride(from: 0.0, through: 1.0, by: 0.02) {
-            let value = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 0.4)
-            XCTAssertGreaterThanOrEqual(value, previous)
-            previous = value
-        }
-    }
 
-    func test_outOfRangeDistanceClamps() {
-        XCTAssertEqual(
-            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: -5),
-            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: 0)
-        )
-        XCTAssertEqual(
-            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: 5),
-            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: 1)
-        )
-    }
 
     func test_staggerRunsInOrderAndFinishes() {
         let count = 6
@@ -201,6 +161,141 @@ final class LaunchGateTests: XCTestCase {
             LaunchBloom.staggerProgress(handOff: 0.8, index: 99, count: count),
             LaunchBloom.staggerProgress(handOff: 0.8, index: count - 1, count: count)
         )
+    }
+
+
+    // MARK: - Photos
+
+    func test_imagesNotReadyHoldsTheSplash() {
+        XCTAssertFalse(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.floor + 0.5,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: false
+            )
+        )
+    }
+
+    /// ⚠️ Photos are worth a moment, never the app. Past the ceiling we open
+    /// regardless of what is still downloading.
+    func test_ceilingOverridesImages() {
+        XCTAssertTrue(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.ceiling,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: false
+            )
+        )
+    }
+
+    func test_warmupDeadlineFitsInsideTheCeiling() {
+        XCTAssertLessThan(LaunchImageWarmup.deadline, LaunchGate.ceiling)
+    }
+
+    // MARK: - The three-edge settle
+
+    /// 🔴 THE INVARIANT THIS DESIGN WAS CHOSEN FOR.
+    ///
+    /// The bottom module, the search bar and the drawer come from three
+    /// different edges and must land on ONE frame — owner, 2026-08-22: *"I like
+    /// that the things settle at exactly the same time."* They all read
+    /// `assemblyProgress`, so this asserts the thing that would break it: that
+    /// there is exactly one curve, sampled everywhere.
+    func test_theThreeEdgesShareOneProgressAtEveryInstant() {
+        for step in stride(from: 0.0, through: 1.0, by: 0.01) {
+            let value = LaunchBloom.assemblyProgress(handOff: step)
+            let direct = LaunchBloom.ramp(
+                step,
+                delay: LaunchBloom.assembly.delay,
+                window: LaunchBloom.assembly.window
+            )
+            XCTAssertEqual(value, direct, "at \(step)")
+        }
+    }
+
+    func test_theAssemblySettlesBeforeTheHandOffEnds() {
+        let settle = LaunchBloom.assembly.delay + LaunchBloom.assembly.window
+        XCTAssertLessThan(settle, 1.0)
+        XCTAssertEqual(LaunchBloom.assemblyProgress(handOff: settle), 1)
+    }
+
+    /// The mark has to land BEFORE the frame settles — the arrival is the
+    /// moment, the assembly is the resolution.
+    func test_theMarkLandsBeforeTheFrameSettles() {
+        XCTAssertLessThan(
+            LaunchBloom.landingFraction,
+            LaunchBloom.assembly.delay + LaunchBloom.assembly.window
+        )
+    }
+
+    /// The ripple, the blue dot and the haptic all key off the landing.
+    func test_arrivalStartsExactlyWhenTheMarkLands() {
+        XCTAssertEqual(LaunchBloom.arrival.delay, LaunchBloom.landingFraction, accuracy: 1e-9)
+    }
+
+    /// The splash is a cut, not a dissolve — and it must be gone before the
+    /// frame settles, or the black is still up over the thing you're watching.
+    func test_theSplashCutIsShortAndFinishesEarly() {
+        XCTAssertLessThanOrEqual(LaunchBloom.splashCut.window, 0.2)
+        XCTAssertLessThan(
+            LaunchBloom.splashCut.delay + LaunchBloom.splashCut.window,
+            LaunchBloom.assembly.delay + LaunchBloom.assembly.window
+        )
+    }
+
+    // MARK: - Framing
+
+    /// 🔴 Centred is what put the location dot behind the drawer. The camera
+    /// centre must sit SOUTH of the user so the user rides UP the screen.
+    func test_launchFramingPutsTheUserAboveCentre() {
+        XCTAssertGreaterThan(LaunchLayout.cameraOffsetFraction, 0)
+        XCTAssertLessThan(LaunchLayout.userScreenFraction, 0.5)
+
+        let user = CLLocationCoordinate2D(latitude: 40.75, longitude: -73.98)
+        let centred = MKCoordinateRegion(
+            center: user,
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+        let framed = HomeView.launchFramed(centred)
+        XCTAssertLessThan(framed.center.latitude, user.latitude, "camera must move south")
+        XCTAssertEqual(framed.center.longitude, user.longitude, accuracy: 1e-9)
+        XCTAssertEqual(framed.span.latitudeDelta, centred.span.latitudeDelta, accuracy: 1e-9)
+    }
+
+    func test_landingPointMatchesTheFramedFraction() {
+        let size = CGSize(width: 390, height: 844)
+        let point = LaunchLayout.landingPoint(in: size)
+        XCTAssertEqual(point.x, 195, accuracy: 0.001)
+        XCTAssertEqual(point.y, 844 * LaunchLayout.userScreenFraction, accuracy: 0.001)
+    }
+
+    // MARK: - Photo warm-up selection
+
+    func test_warmupTakesTheFirstCardsInRailOrderWithoutRepeats() {
+        let a = TestFixtures.makeTour(title: "A", heroImageURL: "https://x/a.webp")
+        let b = TestFixtures.makeTour(title: "B", heroImageURL: "https://x/b.webp")
+        let rails = [
+            HomeRail(id: "1", title: "Near you", tours: [a, b]),
+            HomeRail(id: "2", title: "Iconic", tours: [a]),
+        ]
+        let urls = LaunchImageWarmup.warmupURLs(rails: rails)
+        XCTAssertEqual(urls.map(\.absoluteString), ["https://x/a.webp", "https://x/b.webp"],
+                       "a tour on two shelves must be fetched once")
+    }
+
+    func test_warmupIsCapped() {
+        let tours = (0..<40).map { TestFixtures.makeTour(title: "T\($0)", heroImageURL: "https://x/\($0).webp") }
+        let urls = LaunchImageWarmup.warmupURLs(rails: [HomeRail(id: "1", title: "R", tours: tours)])
+        XCTAssertEqual(urls.count, LaunchImageWarmup.count)
+    }
+
+    func test_warmupSkipsUnusableURLs() {
+        let bad = TestFixtures.makeTour(title: "Bad", heroImageURL: "")
+        let good = TestFixtures.makeTour(title: "Good", heroImageURL: "https://x/g.webp")
+        let urls = LaunchImageWarmup.warmupURLs(rails: [HomeRail(id: "1", title: "R", tours: [bad, good])])
+        XCTAssertEqual(urls.map(\.absoluteString), ["https://x/g.webp"])
     }
 
     // MARK: - LaunchState

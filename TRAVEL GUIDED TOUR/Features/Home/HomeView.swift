@@ -247,6 +247,12 @@ struct HomeView: View {
                         )
                     }
                     .padding(.top, AtlasSpacing.sm)
+                    // Arrives from the RIGHT on the launch, sharing its timing
+                    // with the bottom module and the drawer — see
+                    // `LaunchBloom.assembly`. Owner decision 2026-08-22: three
+                    // edges, one settle.
+                    .opacity(assemblyProgress)
+                    .offset(x: (1 - assemblyProgress) * geo.size.width)
 
                     // Map-control button stack anchored to bottom-leading,
                     // padded up by the drawer's *current* visible height
@@ -366,8 +372,15 @@ struct HomeView: View {
         // splash cleared, so the map opened on the fallback region and then
         // visibly travelled somewhere else. Resolve it instantly instead, and
         // the user's first frame of the map is already their own city.
+        //
+        // 🔴 And it frames the user HIGH rather than centred. Centred puts the
+        // location dot at mid-screen, which is *behind the drawer* at its mid
+        // detent — you cannot see yourself. `LaunchLayout` shifts the camera
+        // south so the user sits in the upper third, which also gives the
+        // launch mark somewhere to travel to. Launch only: the recenter button
+        // still centres, because by then the user has asked to be centred.
         if launchState?.isSplashVisible == true {
-            cameraPosition = .region(region)
+            cameraPosition = .region(Self.launchFramed(region))
             return
         }
         withAnimation(.easeInOut(duration: 0.6)) {
@@ -556,6 +569,27 @@ struct HomeView: View {
     /// dropped at a few-block zoom that hides most pins. ~0.1° is
     /// roughly 11 km N-S / ~8.5 km E-W at NYC latitude — about the
     /// full length of Manhattan island.
+    /// Shift a user-centred region south so the user appears in the upper
+    /// third of the screen. Pure + static so it can be unit-tested without a
+    /// map: north is +latitude, so moving the CENTRE south (−latitude) pushes
+    /// the user north, i.e. up the screen. Easy to get backwards.
+    static func launchFramed(_ region: MKCoordinateRegion) -> MKCoordinateRegion {
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
+                latitude: region.center.latitude
+                    - region.span.latitudeDelta * Double(LaunchLayout.cameraOffsetFraction),
+                longitude: region.center.longitude
+            ),
+            span: region.span
+        )
+    }
+
+    /// The three-edge assembly's progress, or 1 when not launching.
+    private var assemblyProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
+    }
+
     private static let initialUserSpan = MKCoordinateSpan(
         latitudeDelta: 0.1,
         longitudeDelta: 0.1

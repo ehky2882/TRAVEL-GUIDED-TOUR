@@ -197,42 +197,11 @@ struct HomeMapSection: View {
         }
     }
 
-    // MARK: - Launch bloom
+    // MARK: - Launch arrival
 
-    /// How far into its own arrival a given pin is, 0…1.
-    ///
-    /// 🔴 A **value**, never a `.transition`. MapKit rebuilds annotation views
-    /// as the region changes and this map emits settle frames for seconds after
-    /// any camera move, so an insertion animation would replay the bloom on
-    /// every pan for the life of the session. A rebuilt annotation reading a
-    /// number just picks up wherever that number is — which, after launch, is
-    /// permanently 1.
-    private func bloomProgress(for item: MapClustering.ClusterItem) -> Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        return LaunchBloom.pinProgress(
-            handOff: launchState.handOffProgress,
-            normalisedDistance: normalisedDistance(to: item.coordinate)
-        )
-    }
-
-    /// 0 at the user, 1 at the far edge of what's on screen — so the bloom
-    /// travels outward from where the user is standing. Falls back to 0 (every
-    /// pin blooms together) when there's no fix or no settled region to
-    /// measure against.
-    private func normalisedDistance(to coordinate: CLLocationCoordinate2D) -> Double {
-        guard let userLocation, let region = currentRegion else { return 0 }
-        let metres = userLocation.distance(
-            from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        )
-        // Half the visible span's diagonal is roughly the furthest anything on
-        // screen can be from a centred user — good enough to order an
-        // animation, and it costs no extra geometry.
-        let latMetres = region.span.latitudeDelta * 111_000 / 2
-        let lonMetres = region.span.longitudeDelta * 111_000 / 2
-        let reach = max((latMetres * latMetres + lonMetres * lonMetres).squareRoot(), 1)
-        return min(metres / reach, 1)
-    }
-
+    /// The blue location dot fades in as the launch mark lands on it, so the
+    /// brass circle visibly BECOMES the user's position rather than vanishing
+    /// and being replaced. Fully opaque at any other time.
     private var userDotOpacity: Double {
         guard let launchState, launchState.isCovering else { return 1 }
         return LaunchBloom.ramp(
@@ -251,12 +220,10 @@ struct HomeMapSection: View {
     /// land on the gesture; drags still pass through to pan the map.
     @ViewBuilder
     private func pinView(for item: MapClustering.ClusterItem) -> some View {
-        let bloom = bloomProgress(for: item)
         switch item.kind {
         case .single(let marker):
             if let placeId = marker.placeId {
                 PlacePin(count: marker.placeTourCount, isSelected: placeId == selectedPlaceId)
-                    .atlasPinBloom(bloom)
                     .frame(width: 44, height: 44)
                     .contentShape(Rectangle())
                     .onTapGesture {
@@ -266,7 +233,6 @@ struct HomeMapSection: View {
                     .accessibilityAddTraits(.isButton)
             } else {
                 StopPin(isSelected: marker.tourId == selectedTourId)
-                    .atlasPinBloom(bloom)
                     .frame(width: 44, height: 44)
                     .contentShape(Circle())
                     .onTapGesture {
@@ -278,7 +244,6 @@ struct HomeMapSection: View {
 
         case .cluster(let count, let stops):
             ClusterPin(count: count)
-                .atlasPinBloom(bloom)
                 .frame(width: 44, height: 44)
                 .contentShape(Circle())
                 .onTapGesture {

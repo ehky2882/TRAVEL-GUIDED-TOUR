@@ -10,10 +10,6 @@ import SwiftUI
 struct SplashView: View {
     /// 0 → 1 across the hand-off. See `LaunchState.handOffProgress`.
     var handOff: Double = 0
-    /// Where the mark should land, in this view's coordinate space — the
-    /// user's dot on the map. `nil` (no location fix) lands it at the centre,
-    /// where the fallback region is centred anyway.
-    var landingPoint: CGPoint? = nil
     /// Reduce Motion: hold the resting composition and let the ground fade.
     /// The mark doesn't travel, the ripple doesn't fire.
     var reduceMotion: Bool = false
@@ -22,7 +18,12 @@ struct SplashView: View {
 
     var body: some View {
         GeometryReader { geo in
-            let target = landingPoint ?? CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
+            // Where the user's dot will be. With no location fix there is no
+            // dot — but the fallback region is framed the same way, so the mark
+            // still rises and ripples in the same place; nothing appears
+            // underneath it afterwards, which is the honest answer to "we don't
+            // know where you are".
+            let target = LaunchLayout.landingPoint(in: geo.size)
             ZStack {
                 // Black, not `AtlasColors.background` — the splash is the same
                 // black in both appearances, the way the brand screen has
@@ -101,13 +102,13 @@ struct SplashView: View {
         CGPoint(x: size.width / 2, y: size.height / 2 - Self.restingDiameter / 2)
     }
 
-    /// Interpolates from the resting position to the landing point.
+    /// Interpolates from the resting position up to the landing point.
     ///
-    /// ⚠️ The travel is SHORT — the launch camera centres on the user, so the
-    /// dot lands at the map's centre, a few points below where the mark already
-    /// sits. The motion that carries this moment is the **contraction**
-    /// (44pt → 16pt) and the ripple, not a fall. Don't add distance by moving
-    /// the resting mark; that is the brand screen's composition.
+    /// The mark RISES — it travels from the wordmark's position to the user's
+    /// dot in the upper third of the map, roughly a fifth of the screen. That
+    /// distance exists because `LaunchLayout` frames the user high rather than
+    /// centred; an earlier revision centred the camera, which left the mark
+    /// with nowhere to go and read as a dot quietly vanishing.
     private func markPosition(in size: CGSize, target: CGPoint) -> CGPoint {
         let from = restingPosition(in: size)
         guard !reduceMotion else { return from }
@@ -129,8 +130,15 @@ struct SplashView: View {
     private var arrival: Double {
         LaunchBloom.ramp(handOff, delay: LaunchBloom.arrival.delay, window: LaunchBloom.arrival.window)
     }
+    /// A CUT, not a dissolve — 0.18 of the hand-off, and linear.
+    ///
+    /// The gentle 0.42s fade this replaced was the single biggest reason the
+    /// launch stopped feeling snappy once there was something to watch
+    /// underneath it: the black lingered over the assembly instead of getting
+    /// out of its way. Owner, 2026-08-21: *"the fade of the splash page doesn't
+    /// feel like a good transition, too slow and gentle."*
     private var groundOpacity: Double {
-        1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.groundFade.delay, window: LaunchBloom.groundFade.window)
+        1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.splashCut.delay, window: LaunchBloom.splashCut.window)
     }
 
     /// Contracts to the location dot's exact size as it lands.

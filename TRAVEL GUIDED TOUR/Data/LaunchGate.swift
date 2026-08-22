@@ -18,9 +18,10 @@ import Observation
 /// The two bounds are as load-bearing as the readiness test itself:
 /// - a **floor**, so a warm launch that is ready in 200 ms doesn't flash the
 ///   wordmark and rip it away again;
-/// - a **ceiling**, so a dead network or a location fix that never arrives
-///   cannot hold the user on a black screen indefinitely. Past the ceiling we
-///   hand off regardless — an app on the fallback region beats no app.
+/// - a **ceiling**, so a dead network, a location fix that never arrives or a
+///   stalled image fetch cannot hold the user on a black screen indefinitely.
+///   Past the ceiling we hand off regardless — an app with a few photos still
+///   loading beats no app.
 enum LaunchGate {
     /// Shortest time the splash is ever shown.
     static let floor: TimeInterval = 1.2
@@ -35,14 +36,17 @@ enum LaunchGate {
     ///   - elapsed: seconds since launch.
     ///   - catalogLoaded: the catalog has tours (cache, bundle or network).
     ///   - locationSettled: see `locationSettled(status:hasFix:)`.
+    ///   - imagesReady: the first screenful of card photos is in the image
+    ///     cache, or its own deadline passed. See `LaunchImageWarmup`.
     static func isReady(
         elapsed: TimeInterval,
         catalogLoaded: Bool,
-        locationSettled: Bool
+        locationSettled: Bool,
+        imagesReady: Bool
     ) -> Bool {
         if elapsed >= ceiling { return true }
         guard elapsed >= floor else { return false }
-        return catalogLoaded && locationSettled
+        return catalogLoaded && locationSettled && imagesReady
     }
 
     /// Whether there is any point waiting longer for a location fix.
@@ -63,17 +67,42 @@ enum LaunchGate {
     }
 }
 
+/// Where the launch frames the user on the map.
+///
+/// 🔴 **Not decoration.** The launch camera used to centre on the user, which
+/// puts the location dot at the middle of the screen — *behind the drawer* at
+/// its mid detent, where you cannot see it. Framing the user higher fixes that,
+/// and it is also what gives the launch mark somewhere to travel to.
+///
+/// The splash's mark and the map camera BOTH read this, which is the point: the
+/// mark has to land exactly where the dot will appear, and two constants would
+/// drift apart the first time either was touched.
+enum LaunchLayout {
+    /// The user's position as a fraction of screen height, measured from the
+    /// top. 0.5 would be dead centre (and behind the drawer).
+    static let userScreenFraction: CGFloat = 0.30
+
+    /// How far the camera's centre sits *south* of the user, as a fraction of
+    /// the visible latitude span. Moving the camera south pushes the user north
+    /// — i.e. up the screen.
+    static var cameraOffsetFraction: CGFloat { 0.5 - userScreenFraction }
+
+    /// The mark's landing point in a full-screen view's coordinate space.
+    static func landingPoint(in size: CGSize) -> CGPoint {
+        CGPoint(x: size.width / 2, y: size.height * userScreenFraction)
+    }
+}
+
 /// Whether the launch splash is still covering the app.
 ///
-/// Injected app-wide because three places behave differently while it is up,
-/// and all three are the point of the change:
+/// Injected app-wide because four places behave differently while it is up, and
+/// all four are the point of the change:
 /// - the camera resolves to the user's region **without** animation, so nobody
 ///   watches the map travel there from the fallback region;
 /// - the mini-player + tab bar's window is installed but hidden (it sits at a
-///   higher window level than the splash, so it would otherwise paint on top
-///   of it);
-/// - the drawer holds off-screen and rises once the splash clears, which is
-///   the one piece of motion the hand-off keeps.
+///   higher window level than the splash, so it would otherwise paint over it);
+/// - the search bar and filter chips hold off-screen to the right;
+/// - the drawer holds off-screen below.
 @MainActor
 @Observable
 final class LaunchState {
@@ -81,7 +110,7 @@ final class LaunchState {
     enum Phase {
         /// The splash is resting, the app is being built behind it.
         case splash
-        /// The hand-off choreography is playing: the mark lands, the pins bloom.
+        /// The hand-off choreography is playing.
         case handingOff
         /// Done. The overlay is gone and nothing launch-related is animating.
         case settled
@@ -90,16 +119,8 @@ final class LaunchState {
     private(set) var phase: Phase = .splash
 
     /// 0 → 1 across the hand-off. **Every part of the choreography reads this
-    /// one value** — the mark's contraction, the ripple, the pin bloom, the
+    /// one value** — the mark's rise, the ripple, the three-edge assembly, the
     /// rail stagger — each through its own ramp in `LaunchBloom`.
-    ///
-    /// 🔴 It is a stored, animated `Double` rather than a set of `.transition`s
-    /// for one specific reason: the pins are **MapKit annotations**, and MapKit
-    /// rebuilds annotation views as the region changes. An insertion animation
-    /// would re-fire every time the map settled — and this map emits settle
-    /// frames for seconds after any camera move, so the bloom would replay on
-    /// every pan, forever. A rebuilt annotation reading a *value* just picks up
-    /// wherever the number is now, which is nothing at all once it reaches 1.
     private(set) var handOffProgress: Double = 0
 
     /// True only while the splash is resting. The launch camera resolves
@@ -141,11 +162,7 @@ enum LaunchBloom {
         // than on `progress` against `delay + window`.
         //
         // `(progress - delay) / window` lands on 0.9999999999999999 for plenty
-        // of ordinary inputs, and everything downstream treats 1 as "arrived":
-        // `atlasPinBloom` short-circuits on it, and a pin that never quite gets
-        // there keeps a fractional scale and opacity for the life of the
-        // session. Close enough to look right, wrong in a way nobody would ever
-        // find.
+        // of ordinary inputs, and everything downstream treats 1 as "arrived".
         //
         // ⚠️ Comparing `progress >= delay + window` does NOT fix it — that sum
         // carries its own error (0.2 + 0.4 is 0.6000000000000001, so an exact
@@ -160,39 +177,44 @@ enum LaunchBloom {
     // MARK: - Phase fractions
     //
     // Named rather than inlined so the sequence can be read in one place and
-    // retimed without hunting through four views.
+    // retimed without hunting through five views.
 
     /// The wordmark lifts away first.
-    static let wordmarkLift = (delay: 0.0, window: 0.28)
-    /// The mark contracts from the splash circle to the location dot.
-    ///
-    /// ⚠️ `delay + window` must equal `arrival.delay` and `bloom.delay`: the
-    /// ripple, the blue dot and the first pin all key off the instant the mark
-    /// touches down. Retime one and retime all four, or the bloom starts before
-    /// the thing it is supposed to be radiating from has arrived.
-    static let markLanding = (delay: 0.05, window: 0.47)
-    /// Ripple + blue dot, from the moment the mark lands.
-    static let arrival = (delay: 0.52, window: 0.34)
-    /// The black ground fades, revealing the map already built underneath.
-    static let groundFade = (delay: 0.28, window: 0.44)
-    /// Pins bloom outward; the furthest starts as the nearest finishes.
-    static let bloom = (delay: 0.52, window: 0.48)
-    /// Rail cards stagger in behind the rising drawer.
-    static let rails = (delay: 0.66, window: 0.34)
+    static let wordmarkLift = (delay: 0.02, window: 0.22)
 
-    /// Progress of one pin's own arrival.
+    /// The brass mark rises from the wordmark's position onto the user's dot.
     ///
-    /// The bloom travels outward from the user, so a pin's delay is set by how
-    /// far away it is: the nearest starts immediately, the furthest starts last.
-    /// - Parameter normalisedDistance: 0 = at the user, 1 = furthest pin on screen.
-    static func pinProgress(handOff: Double, normalisedDistance: Double) -> Double {
-        let d = min(max(normalisedDistance, 0), 1)
-        // Each pin's own animation is `share` of the bloom window; the rest of
-        // the window is spent waiting its turn.
-        let share = 0.55
-        let lead = bloom.window * (1 - share) * d
-        return ramp(handOff, delay: bloom.delay + lead, window: bloom.window * share)
-    }
+    /// ⚠️ `delay + window` must equal `arrival.delay`: the ripple, the blue dot
+    /// and the haptic all key off the instant the mark touches down.
+    /// `landingFraction` below is the single expression of that, and a test
+    /// pins it.
+    static let markLanding = (delay: 0.045, window: 0.47)
+
+    /// The splash CUTS rather than dissolving — short and linear, so the black
+    /// is gone before you register it and the assembly is what you watch.
+    static let splashCut = (delay: 0.22, window: 0.18)
+
+    /// Ripple + blue dot + haptic, from the moment the mark lands.
+    static let arrival = (delay: 0.515, window: 0.34)
+
+    /// 🔴 THE THREE-EDGE SETTLE — the thing this design was chosen for.
+    ///
+    /// The bottom module (from below), the search bar and filter chips (from
+    /// the right) and the drawer (from below) all share **this one delay and
+    /// this one window**. They start together and land together on a single
+    /// frame; the drawer travels furthest so it simply moves fastest.
+    ///
+    /// ⚠️ Do not give any of the three its own timing. Owner decision
+    /// 2026-08-22: *"I like that the things settle at exactly the same time."*
+    /// A test asserts all three resolve to the same value at every step.
+    static let assembly = (delay: 0.31, window: 0.38)
+
+    /// Rail cards ease in behind the settled drawer.
+    static let rails = (delay: 0.66, window: 0.30)
+
+    /// The instant the mark touches down, as a fraction of the hand-off.
+    /// The haptic fires here, and `arrival` starts here.
+    static var landingFraction: Double { markLanding.delay + markLanding.window }
 
     /// Progress of one staggered item in a sequence (rail cards).
     static func staggerProgress(handOff: Double, index: Int, count: Int) -> Double {
@@ -201,5 +223,11 @@ enum LaunchBloom {
         let share = 0.6
         let lead = rails.window * (1 - share) * d
         return ramp(handOff, delay: rails.delay + lead, window: rails.window * share)
+    }
+
+    /// Progress of the three-edge assembly. One function, so the module, the
+    /// chrome and the drawer physically cannot drift apart.
+    static func assemblyProgress(handOff: Double) -> Double {
+        ramp(handOff, delay: assembly.delay, window: assembly.window)
     }
 }

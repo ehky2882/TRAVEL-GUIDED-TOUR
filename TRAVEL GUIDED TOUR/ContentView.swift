@@ -119,18 +119,13 @@ struct ContentView: View {
     /// Whether the launch splash is still up. Optional for the same reason
     /// `HomeView` reads it optionally — nil means "not launching".
     @Environment(LaunchState.self) private var launchState: LaunchState?
-    /// False until the drawer has played its one entrance of the session.
-    ///
-    /// The drawer used to simply *be* there at `.medium` the moment the app
-    /// appeared, which taught the user nothing about the fact that it moves.
-    /// It now starts off-screen behind the splash and rises once the splash
-    /// clears — the single piece of motion the hand-off keeps, and the only
-    /// hint the home screen gives that the panel is draggable.
-    ///
-    /// ⚠️ Launch only. A tab return must still restore the remembered detent
-    /// instantly; re-playing this every time Home came back would be a tax on
-    /// the most-repeated navigation in the app.
-    @State private var drawerHasEntered = false
+    /// The drawer's share of the three-edge launch assembly, or 1 when not
+    /// launching (so a tab return is instant — the entrance is launch-only).
+    private var drawerAssemblyProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
+    }
+
 
     var body: some View {
         @Bindable var appShared = appShared
@@ -184,7 +179,12 @@ struct ContentView: View {
                 // bottom-anchored inside a full-screen frame, so translating
                 // the whole thing down by more than any phone's height parks
                 // it completely out of view without touching its internals.
-                .offset(y: drawerHasEntered ? 0 : Self.drawerEntryOffset)
+                // 🔴 Same ramp as the bottom module and the search bar. The
+                // drawer travels furthest of the three, so it moves fastest —
+                // that is what makes them land on one frame. Owner decision
+                // 2026-08-22: *"I want the mid-detent to settle at the same
+                // time as the stuff at top."*
+                .offset(y: (1 - drawerAssemblyProgress) * Self.drawerEntryOffset)
             }
             // Fallback mini-player + tab bar, rendered in THIS (main) window
             // whenever the secondary higher-level window isn't installed.
@@ -228,22 +228,12 @@ struct ContentView: View {
             guard !splashVisible else { return }
             requestLocationPermissionIfNeeded()
         }
-        // The drawer rises PART WAY THROUGH the hand-off, not at its start —
-        // after the mark has landed and the pins have begun to bloom, so the
-        // two don't compete for the eye. Driven off the progress value rather
-        // than a timer so it can't drift out of step with the choreography.
-        .onChange(of: launchState?.handOffProgress ?? 1) { _, progress in
-            guard !drawerHasEntered, progress >= Self.drawerEntryProgress else { return }
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) {
-                drawerHasEntered = true
-            }
-        }
+
         .onAppear {
             // Backstop for any host that never injects `LaunchState` (previews,
             // tests): with no splash to wait for, behave exactly as before.
             guard launchState == nil else { return }
             requestLocationPermissionIfNeeded()
-            drawerHasEntered = true
         }
         // 🔴 Give each presenter a DIRECT route to take its layer down.
         //
@@ -533,9 +523,6 @@ struct ContentView: View {
     /// iPhone is tall, so the sheet is fully off-screen whatever the device.
     private static let drawerEntryOffset: CGFloat = 1200
 
-    /// How far into the hand-off the drawer starts to rise. Sits just after the
-    /// mark lands (`LaunchBloom.arrival.delay`) so the arrival reads first.
-    private static let drawerEntryProgress: Double = 0.58
 
     /// Ask for location permission exactly once per session.
     private func requestLocationPermissionIfNeeded() {

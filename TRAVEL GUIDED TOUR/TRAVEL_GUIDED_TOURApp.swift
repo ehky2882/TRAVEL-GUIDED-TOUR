@@ -106,6 +106,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// decides — see `LaunchGate` for why, and for the floor and ceiling that
     /// bound it.
     @State private var launchState = LaunchState()
+    /// Warms the first screenful of card photos during the splash so the drawer
+    /// arrives complete. Owner decision 2026-08-22: "ready including photos".
+    @State private var imageWarmup = LaunchImageWarmup()
     /// A tour deep link that arrived during the launch splash (cold launch),
     /// held until `ContentView` — which hosts the detail presenter — is mounted.
     @State private var pendingDeepLink: DeepLink?
@@ -329,13 +332,24 @@ struct TRAVEL_GUIDED_TOURApp: App {
     private func runLaunchGate() async {
         let startedAt = Date()
         while launchState.isSplashVisible {
+            // Start warming photos the moment there is a catalog to pick them
+            // from. Idempotent, so polling can't restart it.
+            if !dataService.tours.isEmpty {
+                imageWarmup.start(
+                    tours: dataService.tours,
+                    libraryEntries: libraryStore.entries,
+                    recentlyViewedIds: recentlyViewed.tourIds,
+                    userLocation: locationManager.userLocation
+                )
+            }
             let ready = LaunchGate.isReady(
                 elapsed: Date().timeIntervalSince(startedAt),
                 catalogLoaded: !dataService.tours.isEmpty,
                 locationSettled: LaunchGate.locationSettled(
                     status: locationManager.authorizationStatus,
                     hasFix: locationManager.userLocation != nil
-                )
+                ),
+                imagesReady: imageWarmup.isReady
             )
             if ready { break }
             try? await Task.sleep(for: .seconds(LaunchGate.pollInterval))
@@ -380,7 +394,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
         if reduceMotion {
             try? await Task.sleep(for: .seconds(duration))
         } else {
-            let landing = LaunchBloom.markLanding.delay + LaunchBloom.markLanding.window
+            let landing = LaunchBloom.landingFraction
             try? await Task.sleep(for: .seconds(duration * landing))
             AtlasHaptics.impact(.medium)
             try? await Task.sleep(for: .seconds(duration * (1 - landing)))
@@ -430,6 +444,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             BottomModuleRoot(onInteractiveHeightChange: { [bottomModuleWindow] height in
                 bottomModuleWindow.setInteractiveBottomInset(height)
             })
+                .environment(launchState)
                 .environment(dataService)
                 .environment(authService)
                 .environment(followService)

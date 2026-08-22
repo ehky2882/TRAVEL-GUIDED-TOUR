@@ -50,6 +50,9 @@ enum TestFixtures {
     static func makeTour(
         id: UUID = UUID(),
         title: String = "Test Tour",
+        /// Overridable so tests that care about image identity (the launch
+        /// photo warm-up dedupes and caps by hero URL) can make tours distinct.
+        heroImageURL: String = "https://example.test/hero.jpg",
         makerId: UUID = defaultMakerId,
         kind: TourKind = .single,
         category: TourCategory = .architecture,
@@ -97,7 +100,7 @@ enum TestFixtures {
             shortDescription: "Test short description",
             longDescription: "Test long description",
             makerId: makerId,
-            heroImageURL: "https://example.test/hero.jpg",
+            heroImageURL: heroImageURL,
             additionalImageURLs: nil,
             videoURLs: nil,
             kind: kind,
