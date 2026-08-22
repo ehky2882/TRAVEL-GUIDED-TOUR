@@ -266,10 +266,12 @@ final class LaunchGateTests: XCTestCase {
     func test_theBlockSharesOneProgressAtEveryInstant() {
         for step in stride(from: 0.0, through: 1.0, by: 0.01) {
             let value = LaunchBloom.assemblyProgress(handOff: step)
-            let direct = LaunchBloom.ramp(
-                step,
-                delay: LaunchBloom.assembly.delay,
-                window: LaunchBloom.assembly.window
+            let direct = LaunchBloom.easeOut(
+                LaunchBloom.ramp(
+                    step,
+                    delay: LaunchBloom.assembly.delay,
+                    window: LaunchBloom.assembly.window
+                )
             )
             XCTAssertEqual(value, direct, "at \(step)")
         }
@@ -298,6 +300,19 @@ final class LaunchGateTests: XCTestCase {
     /// beat (zoom → slide → the drawer opening) and three beats inside 0.42s
     /// left none of them long enough to read. The ceiling is on the WHOLE
     /// hand-off, so a fourth beat has to buy its time from the other three.
+    /// The arrivals decelerate into place rather than stopping dead — that is
+    /// what "snappy" means, and a linear slide cannot do it however short.
+    func test_theArrivalsAreEasedOutAndTheDiscIsNot() {
+        // Past the halfway point of its own window well before halfway in time.
+        XCTAssertGreaterThan(LaunchBloom.easeOut(0.5), 0.8)
+        XCTAssertEqual(LaunchBloom.easeOut(0), 0)
+        XCTAssertEqual(LaunchBloom.easeOut(1), 1)
+
+        // The disc's growth stays linear.
+        let midZoom = LaunchBloom.zoom.delay + LaunchBloom.zoom.window / 2
+        XCTAssertEqual(LaunchBloom.zoomProgress(handOff: midZoom), 0.5, accuracy: 1e-9)
+    }
+
     func test_theHandOffStaysSnappy() {
         XCTAssertLessThanOrEqual(LaunchBloom.duration, 0.7)
         XCTAssertLessThan(LaunchBloom.reducedMotionDuration, LaunchBloom.duration)

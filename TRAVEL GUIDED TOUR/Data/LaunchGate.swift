@@ -197,6 +197,26 @@ enum LaunchBloom {
         return t
     }
 
+    /// 🔴 THE ARRIVALS ARE EASED OUT; THE DISC IS NOT.
+    ///
+    /// Everything here is driven by a linear tick, and linear motion reads as
+    /// mechanical no matter how short you make it — a thing that is still
+    /// travelling at full speed when it reaches its mark cannot look like it
+    /// *landed*. Owner, on the 0.55s version: *"I want the animation of the
+    /// components sliding into place to be faster and snappier."* Shaving
+    /// milliseconds alone would not have answered that.
+    ///
+    /// Cubic ease-out: it leaves at speed and decelerates into place, which is
+    /// what "snappy" actually means. Applied to the three ARRIVALS only — the
+    /// disc's growth stays linear, because it is a reveal rather than an
+    /// object coming to rest, and the owner already approved how it feels.
+    static func easeOut(_ t: Double) -> Double {
+        guard t > 0 else { return 0 }
+        guard t < 1 else { return 1 }
+        let inverse = 1 - t
+        return 1 - inverse * inverse * inverse
+    }
+
     /// How long the whole hand-off takes.
     ///
     /// ⚠️ Lives HERE, beside the fractions it scales, and not in the App —
@@ -209,7 +229,7 @@ enum LaunchBloom {
     /// Was 1.05s (staged assembly), then 0.9s, then 0.42s — now 0.62s,
     /// because the sequence gained a third beat (the drawer opening) and 0.42s
     /// could not hold three of them without any one reading as a jump.
-    static let duration: TimeInterval = 0.55
+    static let duration: TimeInterval = 0.51
 
     /// Reduce Motion gets a plain cross-dissolve, and a shorter one.
     static let reducedMotionDuration: TimeInterval = 0.28
@@ -241,16 +261,16 @@ enum LaunchBloom {
 
     /// The disc's growth, from the mark's 44pt to covering the screen. Runs
     /// from the very first frame: this IS the transition.
-    static let zoom = (delay: 0.0, window: 0.36)
+    static let zoom = (delay: 0.0, window: 0.39)
 
     /// The disc dissolving into the map behind it — and it starts only once
     /// the disc COVERS the screen, so the brass is solid for the whole of its
     /// growth and what is left when it goes is a bare map.
-    static let markDissolve = (delay: 0.36, window: 0.12)
+    static let markDissolve = (delay: 0.39, window: 0.14)
 
     /// The black is cut while the disc is covering the screen, so the cut
     /// itself is never visible.
-    static let splashCut = (delay: 0.36, window: 0.12)
+    static let splashCut = (delay: 0.39, window: 0.14)
 
     /// 🔴 THE SLIDE — the module and the closed drawer as ONE BLOCK.
     ///
@@ -258,7 +278,7 @@ enum LaunchBloom {
     /// travel as a single object. Owner: *"the entire bottom module should
     /// slide up together… right now the miniplayer and bottom tabs are already
     /// in place and then the drawer slides up from behind it."*
-    static let assembly = (delay: 0.50, window: 0.14)
+    static let assembly = (delay: 0.57, window: 0.12)
 
     /// 🔴 THE OPENING — the drawer alone, closed → mid detent, after the block
     /// has landed.
@@ -268,7 +288,7 @@ enum LaunchBloom {
     /// all: it simply keeps rising, and the two beats read as one long slide.
     /// The pause is what makes "the module arrives, *then* the drawer opens"
     /// legible.
-    static let drawerExpand = (delay: 0.74, window: 0.26)
+    static let drawerExpand = (delay: 0.75, window: 0.25)
 
     /// The search bar (from the top) and the chips (from the right) travel
     /// alongside the drawer's opening, so all three land on one frame.
@@ -277,7 +297,7 @@ enum LaunchBloom {
     /// snap. A test pins it. It used to start with the block and drift in over
     /// twice as long; owner, 2026-08-22: *"the animation of the module and top
     /// is still coming in a little slower than i would prefer."*
-    static let chrome = (delay: 0.74, window: 0.26)
+    static let chrome = (delay: 0.75, window: 0.25)
 
     /// The instant everything comes to rest — where the haptic fires.
     ///
@@ -303,17 +323,17 @@ enum LaunchBloom {
     /// Progress of the slide: the module and the closed drawer, one value, so
     /// they physically cannot drift apart.
     static func assemblyProgress(handOff: Double) -> Double {
-        ramp(handOff, delay: assembly.delay, window: assembly.window)
+        easeOut(ramp(handOff, delay: assembly.delay, window: assembly.window))
     }
 
     /// Progress of the drawer's opening, closed → mid detent.
     static func drawerExpandProgress(handOff: Double) -> Double {
-        ramp(handOff, delay: drawerExpand.delay, window: drawerExpand.window)
+        easeOut(ramp(handOff, delay: drawerExpand.delay, window: drawerExpand.window))
     }
 
     /// Progress of the top chrome's arrival from the right.
     static func chromeProgress(handOff: Double) -> Double {
-        ramp(handOff, delay: chrome.delay, window: chrome.window)
+        easeOut(ramp(handOff, delay: chrome.delay, window: chrome.window))
     }
 
     /// Progress of the opening.
