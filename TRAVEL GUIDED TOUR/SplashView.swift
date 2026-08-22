@@ -20,7 +20,7 @@ import SwiftUI
 struct SplashView: View {
     /// 0 → 1 across the hand-off. See `LaunchState.handOffProgress`.
     var handOff: Double = 0
-    /// Reduce Motion: the mark doesn't bloom, the black simply clears.
+    /// Reduce Motion: the mark doesn't bloom, the ground simply clears.
     var reduceMotion: Bool = false
 
     @State private var pulse: Double = 1.0
@@ -29,9 +29,20 @@ struct SplashView: View {
         GeometryReader { geo in
             let origin = LaunchZoom.origin(in: geo.size)
             ZStack {
-                // 🔴 A PLAIN BLACK GROUND, AND NOTHING CLEVER — the disc is
+                // 🔴 A PLAIN GROUND, AND NOTHING CLEVER — the disc is
                 // simply drawn on top of it and cut out from under once it
                 // covers the screen.
+                //
+                // ⚠️ THE GROUND IS `AtlasColors.background`, NOT `.black` —
+                // it must follow the colour scheme. `UILaunchScreen` is an
+                // empty dict, so the system's own launch screen paints
+                // `systemBackground`: white in light mode. A hardcoded black
+                // splash therefore flashed white → black → white on every
+                // light-mode launch (owner, 2026-08-22: *"splash page if on
+                // light mode should have light background rather than
+                // black"*). This token IS `systemBackground`, so dark mode is
+                // the same pure black it always drew, and light mode now
+                // continues the system launch screen with no seam.
                 //
                 // ⚠️ TWO REJECTED GROUNDS, do not rebuild either. A masked
                 // rectangle (an offscreen pass every frame) and a circle
@@ -45,15 +56,19 @@ struct SplashView: View {
                 //
                 // One shape over another has no seam to show.
                 Rectangle()
-                    .fill(.black)
+                    .fill(AtlasColors.background)
                     .opacity(groundOpacity)
                     .ignoresSafeArea()
 
                 // The wordmark is not part of the gesture; it goes first and
                 // fast, so the mark is alone by the time it starts to grow.
+                // `primaryText`, not `.white`: it reverses with the ground
+                // above, so it stays white on the dark splash and goes black
+                // on the light one. (Settings draws the same wordmark in
+                // brass — see the note there for why the two differ.)
                 Text("Dozent")
                     .font(AtlasTypography.wordmark)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(AtlasColors.primaryText)
                     .tracking(2)
                     .opacity(1 - wordmarkLift)
                     .position(
