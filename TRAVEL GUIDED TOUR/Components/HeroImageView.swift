@@ -101,7 +101,15 @@ struct HeroImageView: View {
             ImageCache.shared.store(uiImage, for: url)
             cachedImage = uiImage
         } catch {
-            // Network error or task cancelled — placeholder stays.
+            // A failed request does not mean we do not have the photograph:
+            // it may be sitting in `URLCache` behind a ten-minute freshness
+            // rule that no network can now satisfy. See `OfflineImageFallback`
+            // for why this is tied to the failure rather than made the
+            // default.
+            guard OfflineImageFallback.isWorthFallingBack(after: error),
+                  let uiImage = OfflineImageFallback.cachedImage(for: url) else { return }
+            ImageCache.shared.store(uiImage, for: url)
+            cachedImage = uiImage
         }
     }
     #endif

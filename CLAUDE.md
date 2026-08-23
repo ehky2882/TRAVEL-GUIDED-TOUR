@@ -124,6 +124,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-23)
 
+### A photograph you already have is drawn when the network fails ([PR #568](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/568), session 105c — code)
+
+The second half of the subway report — the first half is the block below. `test_sim` **436/436** (+8). Two files. Full detail: `archive/HANDOFF-260823-3.md`.
+
+- **🔴 A FAILED REQUEST DOES NOT MEAN WE DO NOT HAVE THE PHOTOGRAPH.** `App.init` gives `URLCache.shared` 200 MB of disk, so a photo scrolled past before is on the phone — but **gh-pages sends `Cache-Control: max-age=600`**, so ten minutes on iOS insists on revalidating with a server that, underground, is not there. `URLSession` throws and `HeroImageView`'s `catch` was a comment reading *"placeholder stays"*. **The phone was discarding photographs it already held.** `Data/OfflineImageFallback.swift` now reads `URLCache.shared.cachedResponse(for:)` directly on failure — a lookup no freshness rule stands in front of — in **both** fetch paths (`HeroImageView` and `LaunchImageWarmup`, so the first screenful is warm offline too).
+- **🔴 IT MUST STAY TIED TO AN ACTUAL FAILED REQUEST — do not "simplify" it to `.returnCacheDataElseLoad`.** That prefers the stored copy on a perfect connection too, so a photograph we later **replace** never updates; the catalogue does replace them (the Thyssen hero was the wrong building for a month, Milan's castle hero was swapped for the facade its script names) and those corrections must reach people. **Owner accepted the narrow trade-off on that basis** (2026-08-23): offline you may see a superseded photo until you are back on signal.
+- **⚠️ Cancellation is deliberately NOT worth falling back on** — a view scrolled off screen cancels its own fetch, and consulting the cache there is work on every row of a fast scroll. `CancellationError` and `NSURLErrorCancelled` are excluded; every other error consults the cache, unrecognised ones included.
+- **⚠️ The tests never touch `URLCache.shared`** (process-wide state a test has no business mutating) — they build their own in a temp directory, and one stores `max-age=0` to pin the actual point: the fallback ignores freshness entirely.
+- **Verified by A/B, not by reasoning.** A temporary launch argument made every photo request throw `NSURLErrorNotConnectedToInternet`. With the fallback: photos render, including tours never downloaded. **Control, same switch, fallback neutralised: the downloaded tour keeps its photo and the card beside it is grey** — the reported symptom exactly. Switch and control edit removed before committing.
+- **⚠️ What is still not covered:** a photograph **never fetched on this phone** cannot appear offline. Between this and the download fix, what stays grey underground is genuinely new content the user has neither browsed nor saved. Still open, small: say "you're offline" rather than showing blank grey.
+
 ### A downloaded tour brings its photographs now — and the subway report's real cause ([PR #567](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/567), session 105b — code)
 
 **Owner, from the Underground: "the app loaded right away but the images did not load… Would it be better if the app only goes past the splash page after the loading of everything is confirmed?"** `test_sim` **428/428** (+10). No SQL, no catalogue change. Full detail: `archive/HANDOFF-260823-2.md`.
