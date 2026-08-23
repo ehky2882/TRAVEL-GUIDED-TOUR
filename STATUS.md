@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-22 19:20 UTC
+**Last verified:** 2026-08-23 20:55 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -29,7 +29,26 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 (48 tours, 32nd maker), **#559 the launch sequence** (a readiness-gated splash and a three-beat
 hand-off), **#562 the coordinate guard**, plus their docs (#561).
 
-✅ **BUILD 110 IS UP — GREEN, FROM `main`, WITH ITS NOTES** (`b421bde9`, done 19:07).
+🔴 **THREE MERGED CHANGES HAVE NO BUILD CARRYING THEM.** Build 110 was cut 22 Aug 19:02 and
+everything below landed after it. **This is the first time this state has been non-empty**, which is
+precisely what the merged-not-built section was added to surface.
+
+| Merged | What | Needs a build? |
+|---|---|---|
+| **#567** 23 Aug 19:42 | A downloaded tour brings its photographs | 🔴 **Yes** — `TourDownloader`, `HeroImageView`, new `DownloadedImageIndex` |
+| **#565** 23 Aug 19:21 | Architects 94 → 279 names | 🔴 **Yes** — `Models/Tag.swift` is code; the tagging is content |
+| **#566** 23 Aug 15:55 | The launch screen carries the brass mark | 🔴 **Yes** — `Info.plist` + a new image set |
+| #564 22 Aug 19:44 | Gallery duplicates + five wrong buildings | No — `Tours.json`, already live |
+| #570 23 Aug 20:49 | Docs | No |
+
+⚠️ **#566 has a device trap worth knowing before reviewing it:** the rendered launch screen is cached
+so hard it survived reinstall *and* a build-number bump in the simulator, cleared only by
+`simctl erase`. **If the next build's launch screen looks stale, delete the app and reinstall.**
+
+**Open PRs: #568** (the offline photo fallback — the second half #567 deliberately left) and **#569**
+(VIA 57 West, plus Bjarke Ingels in the tag vocabulary).
+
+✅ **BUILD 110 WAS GREEN, FROM `main`, WITH ITS NOTES** (`b421bde9`, done 22 Aug 19:07).
 **The first build from `main` since 91, two days ago**, so it is the first to carry the whole of the
 last two days in one binary: the seven-step wizard and its round two, saved lists, the list page as
 a layer, Liked on the shared screen, the launch sequence, the Library fix, and **#563's light-mode
@@ -143,7 +162,7 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **110** | **`main`** | **Everything from the last two days, plus #563 light mode** (`b421bde9`) | ✅ **install this** |
+| **110** | **`main`** | Everything to 22 Aug 19:02, plus #563 light mode (`b421bde9`) | ⚠️ **newest, but three merges behind** |
 | 109 | `launch-performance-animations-df4d7p` | #559 launch sequence (`52a86cfa`) | ✅ superseded by 110 |
 | 108 | `launch-performance-animations-df4d7p` | Same work, one commit earlier | ⚠️ superseded |
 | 98 | `wizard-comments-round2` | #558 wizard round two (`e0132c90`) | ✅ merged |
