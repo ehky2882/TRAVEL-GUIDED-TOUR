@@ -831,7 +831,8 @@
         "Viewpoint",
         "Iconic Landmark",
         "Designed by a Master",
-        "Rem Koolhaas"
+        "Rem Koolhaas",
+        "Ellen van Loon"
       ],
       "priceUSD": 0
     },
@@ -977,7 +978,9 @@
         "Park",
         "Maritime",
         "Green Escape",
-        "Viewpoint"
+        "Viewpoint",
+        "Michael Van Valkenburgh",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -1354,7 +1357,9 @@
         "Art",
         "History",
         "Immigration",
-        "Colonial"
+        "Colonial",
+        "Joseph H. Freedlander",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -1497,7 +1502,9 @@
         "Architecture",
         "Faith",
         "Immigration",
-        "Gothic"
+        "Gothic",
+        "James Renwick Jr.",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -1648,7 +1655,8 @@
         "Literature",
         "Green Escape",
         "McKim, Mead & White",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Stanford White"
       ],
       "priceUSD": 0
     },
@@ -1779,7 +1787,9 @@
         "Art",
         "History",
         "Beaux-Arts",
-        "Gilded Age"
+        "Gilded Age",
+        "Annabelle Selldorf",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -1877,7 +1887,9 @@
         "Art",
         "Food",
         "Literature",
-        "Contemporary"
+        "Contemporary",
+        "Brad Cloepfil",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -2174,7 +2186,8 @@
         "Designed by a Master",
         "Calvert Vaux",
         "John Russell Pope",
-        "Jeanne Gang"
+        "Jeanne Gang",
+        "J. Cleaveland Cady"
       ],
       "priceUSD": 0
     },
@@ -3063,7 +3076,9 @@
         "Architecture",
         "Art",
         "Literature",
-        "Power"
+        "Power",
+        "João Queiroz",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -3257,7 +3272,9 @@
         "Art",
         "Faith",
         "Gothic",
-        "Green Escape"
+        "Green Escape",
+        "Charles Collens",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -3399,7 +3416,9 @@
         "Architecture",
         "Food",
         "Commerce",
-        "Beaux-Arts"
+        "Beaux-Arts",
+        "António Correia da Silva",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -3590,7 +3609,10 @@
         "Architecture",
         "History",
         "Performance",
-        "Art Deco"
+        "Art Deco",
+        "Donald Deskey",
+        "Edward Durell Stone",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -3725,7 +3747,9 @@
         "Remembrance",
         "Fashion",
         "Immigration",
-        "Green Escape"
+        "Green Escape",
+        "Henry Janeway Hardenbergh",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -4054,7 +4078,9 @@
         "Museum",
         "Architecture",
         "Art",
-        "Public Art"
+        "Public Art",
+        "Thom Mayne",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -4203,7 +4229,9 @@
         "History",
         "Performance",
         "Green Escape",
-        "Viewpoint"
+        "Viewpoint",
+        "James Corner Field Operations",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4382,7 +4410,9 @@
         "Immigration",
         "Maritime",
         "Neoclassical",
-        "Green Escape"
+        "Green Escape",
+        "Minard Lafever",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4568,7 +4598,9 @@
         "Architecture",
         "Faith",
         "Immigration",
-        "Gothic"
+        "Gothic",
+        "Henry C. Pelton",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "stops": [
@@ -5114,7 +5146,9 @@
         "History",
         "Literature",
         "Performance",
-        "Victorian"
+        "Victorian",
+        "Philip Hubert",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -5161,7 +5195,9 @@
         "Performance",
         "Gilded Age",
         "Herzog & de Meuron",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Charles W. Clinton",
+        "Stanford White"
       ],
       "priceUSD": 0
     },
@@ -5181,7 +5217,9 @@
         "Architecture",
         "History",
         "Art Deco",
-        "Public Art"
+        "Public Art",
+        "Artur Andrade",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -5316,7 +5354,9 @@
         "Venue",
         "Architecture",
         "Performance",
-        "Art Deco"
+        "Art Deco",
+        "Pedro Ramalho",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -5763,7 +5803,9 @@
         "Remembrance",
         "History",
         "Gothic",
-        "Green Escape"
+        "Green Escape",
+        "Richard Upjohn",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -5811,7 +5853,9 @@
         "Remembrance",
         "Faith",
         "History",
-        "Colonial"
+        "Colonial",
+        "Rodney Leon",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -5854,7 +5898,9 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Performance"
+        "Performance",
+        "Frederick A. Petersen",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6111,7 +6157,12 @@
         "Fashion",
         "History",
         "Commerce",
-        "Gilded Age"
+        "Gilded Age",
+        "Der Scutt",
+        "James Renwick Jr.",
+        "Robert W. Gibson",
+        "Thierry Despont",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6163,7 +6214,10 @@
         "History",
         "Commerce",
         "Power",
-        "Neoclassical"
+        "Neoclassical",
+        "Alexander Jackson Davis",
+        "Ithiel Town",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6257,7 +6311,9 @@
         "Notable Building",
         "Architecture",
         "History",
-        "Immigration"
+        "Immigration",
+        "Bond Ryder",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6398,7 +6454,9 @@
         "Remembrance",
         "War",
         "Beaux-Arts",
-        "Green Escape"
+        "Green Escape",
+        "John H. Duncan",
+        "Designed by a Master"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6493,7 +6551,8 @@
         "Immigration",
         "Neoclassical",
         "McKim, Mead & White",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Bruce Price"
       ],
       "priceUSD": 0
     },
@@ -6534,7 +6593,8 @@
         "Notable Building",
         "Architecture",
         "Designed by a Master",
-        "Frank Gehry"
+        "Frank Gehry",
+        "Work Architecture Company"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6673,7 +6733,9 @@
         "Architecture",
         "Engineering",
         "Power",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Théophile Seyrig",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -6718,7 +6780,10 @@
         "Civic",
         "Architecture",
         "Commerce",
-        "Power"
+        "Power",
+        "Gustavo Adolfo Gonçalves e Sousa",
+        "Tomás Soler",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -6932,7 +6997,9 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Green Escape"
+        "Green Escape",
+        "Dan Kiley",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -6977,7 +7044,9 @@
         "Park",
         "Architecture",
         "Gothic",
-        "Green Escape"
+        "Green Escape",
+        "H. Douglas Ives",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -7026,7 +7095,8 @@
         "Power",
         "Designed by a Master",
         "Le Corbusier",
-        "Oscar Niemeyer"
+        "Oscar Niemeyer",
+        "Wallace Harrison"
       ],
       "stops": [
         {
@@ -7237,7 +7307,9 @@
         "Architecture",
         "Faith",
         "Baroque",
-        "Public Art"
+        "Public Art",
+        "Jorge Colaço",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -7326,7 +7398,9 @@
         "Venue",
         "Architecture",
         "Commerce",
-        "Gothic"
+        "Gothic",
+        "João Carlos Machado",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -7739,7 +7813,9 @@
         "Market",
         "Architecture",
         "Engineering",
-        "Maritime"
+        "Maritime",
+        "Richard Rogers",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -8409,7 +8485,9 @@
         "Architecture",
         "Faith",
         "Performance",
-        "Colonial"
+        "Colonial",
+        "James Gibbs",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -8718,7 +8796,9 @@
         "Venue",
         "Museum",
         "Architecture",
-        "Engineering"
+        "Engineering",
+        "Manuel Salgado",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -8810,7 +8890,9 @@
         "Religious Building",
         "Architecture",
         "Faith",
-        "Brutalist"
+        "Brutalist",
+        "Agostinho Ricca",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -8857,7 +8939,9 @@
         "History",
         "Literature",
         "Power",
-        "Green Escape"
+        "Green Escape",
+        "Franz Koepp",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -8902,7 +8986,10 @@
         "Park",
         "Green Escape",
         "Viewpoint",
-        "Performance"
+        "Performance",
+        "Emílio David",
+        "Thomas Dillen Jones",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -8993,7 +9080,9 @@
         "Architecture",
         "Engineering",
         "Food",
-        "Modernist"
+        "Modernist",
+        "Américo Soares Braga",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -9416,7 +9505,8 @@
         "War",
         "Contemporary",
         "Designed by a Master",
-        "Kengo Kuma"
+        "Kengo Kuma",
+        "Gonçalo Ribeiro Telles"
       ],
       "priceUSD": 0
     },
@@ -9650,7 +9740,10 @@
         "Remembrance",
         "Maritime",
         "Power",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Diogo de Boitaca",
+        "João de Castilho",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -10121,7 +10214,9 @@
         "History",
         "Power",
         "Neoclassical",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Eugénio dos Santos",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -10259,7 +10354,9 @@
         "Market",
         "Food",
         "Commerce",
-        "Victorian"
+        "Victorian",
+        "Aires Mateus",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -11954,7 +12051,10 @@
         "Architecture",
         "Faith",
         "Maritime",
-        "Baroque"
+        "Baroque",
+        "Luigi Vanvitelli",
+        "Nicola Salvi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -11999,7 +12099,9 @@
         "Tower",
         "Architecture",
         "Viewpoint",
-        "Modernist"
+        "Modernist",
+        "Tomás Taveira",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -12087,7 +12189,9 @@
         "Religious Building",
         "Architecture",
         "Remembrance",
-        "Faith"
+        "Faith",
+        "Filippo Terzi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -12275,7 +12379,9 @@
         "Architecture",
         "Art",
         "Contemporary",
-        "Modernist"
+        "Modernist",
+        "Vittorio Gregotti",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -12821,7 +12927,9 @@
         "Architecture",
         "Remembrance",
         "Faith",
-        "Green Escape"
+        "Green Escape",
+        "Giuseppe Cinatti",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -13257,7 +13365,9 @@
         "Museum",
         "Architecture",
         "Faith",
-        "History"
+        "History",
+        "Alfred Waterhouse",
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -14361,7 +14471,9 @@
         "Engineering",
         "History",
         "Maritime",
-        "Green Escape"
+        "Green Escape",
+        "Peter Chermayeff",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -19213,7 +19325,9 @@
         "Tower",
         "Notable Building",
         "Architecture",
-        "Viewpoint"
+        "Viewpoint",
+        "William Pereira",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -20193,7 +20307,9 @@
         "Architecture",
         "Art",
         "Green Escape",
-        "Viewpoint"
+        "Viewpoint",
+        "Fumio Asakura",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -20381,7 +20497,9 @@
         "Engineering",
         "History",
         "Modernist",
-        "Green Escape"
+        "Green Escape",
+        "Kunio Maekawa",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -20894,7 +21012,9 @@
         "Architecture",
         "Faith",
         "History",
-        "Power"
+        "Power",
+        "Hiroshi Naito",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -21270,7 +21390,8 @@
         "Notable Building",
         "Architecture",
         "Designed by a Master",
-        "Public Art"
+        "Public Art",
+        "Kazoo Sato"
       ],
       "priceUSD": 0
     },
@@ -21635,7 +21756,9 @@
         "Architecture",
         "Engineering",
         "Faith",
-        "History"
+        "History",
+        "Kenichi Iwasaki",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -22471,7 +22594,8 @@
         "Modernist",
         "Green Escape",
         "Designed by a Master",
-        "Le Corbusier"
+        "Le Corbusier",
+        "Kunio Maekawa"
       ],
       "priceUSD": 0
     },
@@ -22659,7 +22783,9 @@
         "Architecture",
         "Engineering",
         "Performance",
-        "Power"
+        "Power",
+        "Rafael Viñoly",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -22753,7 +22879,10 @@
         "Architecture",
         "Engineering",
         "History",
-        "Neoclassical"
+        "Neoclassical",
+        "Jin Watanabe",
+        "Josiah Conder",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -22847,7 +22976,8 @@
         "Art",
         "History",
         "Hidden Gem",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Von Jour Caux"
       ],
       "priceUSD": 0
     },
@@ -23772,7 +23902,9 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Food"
+        "Food",
+        "Jo Nagasaka",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -23954,7 +24086,9 @@
         "Notable Building",
         "Architecture",
         "Art",
-        "Engineering"
+        "Engineering",
+        "Kazumasa Yamashita",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -24275,7 +24409,10 @@
         "Architecture",
         "Art",
         "History",
-        "Beaux-Arts"
+        "Beaux-Arts",
+        "Tokuma Katayama",
+        "Yoshio Taniguchi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -24548,7 +24685,9 @@
         "Architecture",
         "Art",
         "History",
-        "Contemporary"
+        "Contemporary",
+        "Yoshio Taniguchi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -26338,7 +26477,9 @@
         "Notable Building",
         "Architecture",
         "Engineering",
-        "Contemporary"
+        "Contemporary",
+        "Hiroyuki Wakabayashi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -29391,7 +29532,9 @@
         "Performance",
         "Architecture",
         "Beaux-Arts",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Charles Garnier",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -29675,7 +29818,9 @@
         "Public Square",
         "Hidden Gem",
         "Public Art",
-        "Art"
+        "Art",
+        "Hector Guimard",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -30295,7 +30440,9 @@
         "History",
         "Art",
         "Performance",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Hector Guimard",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -31152,7 +31299,9 @@
         "Power",
         "History",
         "Victorian",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Richard Waite",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -32501,7 +32650,9 @@
         "Art",
         "Architecture",
         "Contemporary",
-        "Free to Visit"
+        "Free to Visit",
+        "David Chipperfield",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -32682,7 +32833,9 @@
       "tags": [
         "Venue",
         "Architecture",
-        "Food"
+        "Food",
+        "Yang Tae-oh",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -32773,7 +32926,9 @@
         "Museum",
         "Art",
         "Architecture",
-        "Contemporary"
+        "Contemporary",
+        "Jean-Michel Wilmotte",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -33005,7 +33160,9 @@
         "Museum",
         "Art",
         "Architecture",
-        "Contemporary"
+        "Contemporary",
+        "Baek Jong-hwan",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -33052,7 +33209,9 @@
         "Notable Building",
         "Architecture",
         "Literature",
-        "Hidden Gem"
+        "Hidden Gem",
+        "OONN Metaworks",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -33473,7 +33632,9 @@
         "Art",
         "History",
         "Contemporary",
-        "Free to Visit"
+        "Free to Visit",
+        "Min Hyun-jun",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -34671,7 +34832,12 @@
         "Green Escape",
         "Art",
         "Architecture",
-        "Contemporary"
+        "Contemporary",
+        "Ensamble Studio",
+        "Lee Jae-yeon",
+        "Pezo von Ellrichshausen",
+        "Seung H-Sang",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -35422,7 +35588,9 @@
         "Performance",
         "Architecture",
         "Contemporary",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "David Rockwell",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -35745,7 +35913,9 @@
         "Architecture",
         "Engineering",
         "Contemporary",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Welton Becket",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -36507,7 +36677,9 @@
         "Art",
         "Architecture",
         "Viewpoint",
-        "Free to Visit"
+        "Free to Visit",
+        "Richard Meier",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -36943,7 +37115,9 @@
         "Art",
         "History",
         "Free to Visit",
-        "Public Art"
+        "Public Art",
+        "Peter Zumthor",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -37543,7 +37717,8 @@
         "Commerce",
         "Contemporary",
         "Designed by a Master",
-        "Amanda Levete"
+        "Amanda Levete",
+        "Klein Dytham Architecture"
       ],
       "priceUSD": 0
     },
@@ -37765,7 +37940,9 @@
         "Museum",
         "Art",
         "Architecture",
-        "Contemporary"
+        "Contemporary",
+        "Kulapat Yantrasast",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -38167,7 +38344,9 @@
         "Architecture",
         "Contemporary",
         "Viewpoint",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Ole Scheeren",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -38382,7 +38561,9 @@
         "Library",
         "Literature",
         "Architecture",
-        "Neoclassical"
+        "Neoclassical",
+        "Mario Tamagno",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -38864,7 +39045,9 @@
         "Museum",
         "Faith",
         "Art",
-        "Architecture"
+        "Architecture",
+        "Lek Viriyaphant",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -39173,7 +39356,9 @@
         "Faith",
         "Architecture",
         "History",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Hercules Manfredi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -40537,7 +40722,9 @@
       "tags": [
         "Market",
         "History",
-        "Waterfront"
+        "Waterfront",
+        "Hendrick de Keyser",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -40930,7 +41117,9 @@
       "tags": [
         "Monument",
         "Remembrance",
-        "War"
+        "War",
+        "Daniel Libeskind",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -42000,7 +42189,9 @@
         "Tower",
         "Architecture",
         "Viewpoint",
-        "Contemporary"
+        "Contemporary",
+        "Carlos Zapata",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -42353,7 +42544,9 @@
         "Venue",
         "Performance",
         "Beaux-Arts",
-        "Colonial"
+        "Colonial",
+        "Eugène Ferret",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -42442,7 +42635,9 @@
         "Notable Building",
         "Power",
         "History",
-        "Modernist"
+        "Modernist",
+        "Ngô Viết Thụ",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -42836,7 +43031,9 @@
       "tags": [
         "Civic",
         "Power",
-        "Colonial"
+        "Colonial",
+        "Fernand Gardès",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -43055,7 +43252,9 @@
       "tags": [
         "Civic",
         "Architecture",
-        "Colonial"
+        "Colonial",
+        "Alfred Foulhoux",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -45877,7 +46076,9 @@
       "tags": [
         "Museum",
         "Art",
-        "History"
+        "History",
+        "Rafael Moneo",
+        "Designed by a Master"
       ],
       "city": "Madrid",
       "country": "Spain",
@@ -46963,7 +47164,9 @@
         "District",
         "History",
         "Power",
-        "Free to Visit"
+        "Free to Visit",
+        "Juan Gómez de Mora",
+        "Designed by a Master"
       ],
       "city": "Madrid",
       "country": "Spain",
@@ -47096,7 +47299,9 @@
         "Museum",
         "Art",
         "History",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Juan de Villanueva",
+        "Designed by a Master"
       ],
       "city": "Madrid",
       "country": "Spain",
@@ -50493,7 +50698,9 @@
         "Food",
         "Commerce",
         "Art Deco",
-        "Free to Visit"
+        "Free to Visit",
+        "Ludger Lemieux",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -50611,7 +50818,9 @@
         "History",
         "Maritime",
         "Colonial",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "James O'Donnell",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -52764,7 +52973,9 @@
         "Faith",
         "Architecture",
         "Modernist",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Edgar de Oliveira da Fonseca",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -52812,7 +53023,9 @@
         "Art",
         "Architecture",
         "Neoclassical",
-        "Free to Visit"
+        "Free to Visit",
+        "Francisco Joaquim Béthencourt da Silva",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -53863,7 +54076,9 @@
         "Green Escape",
         "Art",
         "History",
-        "Free to Visit"
+        "Free to Visit",
+        "Mario Vodret",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -54323,7 +54538,9 @@
         "Performance",
         "Architecture",
         "Beaux-Arts",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Albert Guilbert",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -54371,7 +54588,9 @@
         "History",
         "Viewpoint",
         "Green Escape",
-        "Free to Visit"
+        "Free to Visit",
+        "Luis Rey",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -54700,7 +54919,9 @@
         "Notable Building",
         "History",
         "Art",
-        "Free to Visit"
+        "Free to Visit",
+        "Alberto Kuhlmann",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -55581,7 +55802,8 @@
         "History",
         "Architecture",
         "Ramos de Azevedo",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Domiziano Rossi"
       ],
       "priceUSD": 0
     },
@@ -55812,7 +56034,9 @@
         "Art",
         "Public Art",
         "Hidden Gem",
-        "Free to Visit"
+        "Free to Visit",
+        "Chu Ming Silveira",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -56004,7 +56228,8 @@
         "Brutalist",
         "Designed by a Master",
         "Iconic Landmark",
-        "Lina Bo Bardi"
+        "Lina Bo Bardi",
+        "François Hennebique"
       ],
       "priceUSD": 0
     },
@@ -56050,7 +56275,9 @@
         "Performance",
         "Architecture",
         "Beaux-Arts",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Nelson Dupré",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -56098,7 +56325,8 @@
         "Modernist",
         "Public Art",
         "Rino Levi",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Paulo Bruna"
       ],
       "priceUSD": 0
     },
@@ -56144,7 +56372,8 @@
         "Performance",
         "Architecture",
         "Designed by a Master",
-        "Lina Bo Bardi"
+        "Lina Bo Bardi",
+        "Edson Elito"
       ],
       "priceUSD": 0
     },
@@ -57144,7 +57373,9 @@
         "Remembrance",
         "Faith",
         "Modernist",
-        "Free to Visit"
+        "Free to Visit",
+        "Egon Eiermann",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -57841,7 +58072,9 @@
         "Commerce",
         "Immigration",
         "Market",
-        "Free to Visit"
+        "Free to Visit",
+        "Peter Joseph Lenné",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -58881,7 +59114,9 @@
         "Park",
         "Art",
         "Iconic Landmark",
-        "Green Escape"
+        "Green Escape",
+        "Paul Sinoir",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -59580,7 +59815,8 @@
         "Food",
         "Contemporary",
         "Designed by a Master",
-        "Studio KO"
+        "Studio KO",
+        "Karl Fournier"
       ],
       "priceUSD": 0
     },
@@ -59631,7 +59867,8 @@
         "Fashion",
         "Contemporary",
         "Designed by a Master",
-        "Studio KO"
+        "Studio KO",
+        "Olivier Marty"
       ],
       "priceUSD": 0
     },
@@ -59674,7 +59911,9 @@
         "Commerce",
         "History",
         "Performance",
-        "Art Deco"
+        "Art Deco",
+        "Viktor Sulčič",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -59815,7 +60054,9 @@
         "Notable Building",
         "Architecture",
         "Beaux-Arts",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Eduardo Le Monnier",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -59906,7 +60147,9 @@
         "Remembrance",
         "Neoclassical",
         "Iconic Landmark",
-        "Free to Visit"
+        "Free to Visit",
+        "Próspero Catelin",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -59953,7 +60196,9 @@
         "Literature",
         "Performance",
         "History",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Alejandro Christophersen",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -60138,7 +60383,9 @@
         "Venue",
         "Food",
         "History",
-        "Power"
+        "Power",
+        "Francesco Gianotti",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -60636,7 +60883,9 @@
         "Food",
         "Commerce",
         "History",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Juan A. Buschiazzo",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -60729,7 +60978,9 @@
         "History",
         "Power",
         "Colonial",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Mario Buschiazzo",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -60906,7 +61157,9 @@
         "History",
         "Modernist",
         "Iconic Landmark",
-        "Free to Visit"
+        "Free to Visit",
+        "Alberto Prebisch",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -61186,7 +61439,8 @@
         "Iconic Landmark",
         "Designed by a Master",
         "Víctor Meano",
-        "Francesco Tamburini"
+        "Francesco Tamburini",
+        "Jules Dormal"
       ],
       "priceUSD": 0
     },
@@ -61281,7 +61535,10 @@
         "History",
         "Gothic",
         "Neoclassical",
-        "Free to Visit"
+        "Free to Visit",
+        "Arturo Ochoa",
+        "Eduardo Catalano",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -61437,7 +61694,8 @@
         "Free to Visit",
         "Iconic Landmark",
         "Designed by a Master",
-        "Carlos Thays"
+        "Carlos Thays",
+        "Enrique Jan"
       ],
       "priceUSD": 0
     },
@@ -61807,7 +62065,9 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Engineering"
+        "Engineering",
+        "Bertrand Goldberg",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -62081,7 +62341,9 @@
         "Art",
         "Modernist",
         "Public Art",
-        "Free to Visit"
+        "Free to Visit",
+        "Jacques Brownson",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -62258,7 +62520,9 @@
         "Waterfront",
         "Engineering",
         "Art Deco",
-        "Free to Visit"
+        "Free to Visit",
+        "Emanuel Buchsbaum",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -63639,7 +63903,8 @@
         "Art",
         "Modernist",
         "Green Escape",
-        "Designed by a Master"
+        "Designed by a Master",
+        "David McGlashan"
       ],
       "priceUSD": 0
     },
@@ -63685,7 +63950,9 @@
         "Food",
         "Contemporary",
         "Viewpoint",
-        "After Dark"
+        "After Dark",
+        "Tamsin Johnson",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -64186,7 +64453,8 @@
         "Food",
         "Commerce",
         "Gothic",
-        "Designed by a Master"
+        "Designed by a Master",
+        "William Pitt"
       ],
       "priceUSD": 0
     },
@@ -64384,7 +64652,10 @@
         "Neoclassical",
         "Iconic Landmark",
         "Viewpoint",
-        "Free to Visit"
+        "Free to Visit",
+        "James Wardrop",
+        "Phillip Hudson",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -64478,7 +64749,8 @@
         "Neoclassical",
         "Iconic Landmark",
         "Free to Visit",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Norman Peebles"
       ],
       "priceUSD": 0
     },
@@ -64525,7 +64797,8 @@
         "Museum",
         "Art",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Allan Powell"
       ],
       "priceUSD": 0
     },
@@ -64663,7 +64936,9 @@
         "Venue",
         "Food",
         "Commerce",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Rod Faucheux",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -65918,7 +66193,9 @@
         "Architecture",
         "Commerce",
         "Victorian",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "George McRae",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -67188,7 +67465,9 @@
         "Museum",
         "Art",
         "Contemporary",
-        "Green Escape"
+        "Green Escape",
+        "DHK Architects",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -67979,7 +68258,9 @@
         "Notable Building",
         "Architecture",
         "Food",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Studio Tack",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -68118,7 +68399,9 @@
         "History",
         "Architecture",
         "Free to Visit",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Emili Sala Cortés",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -68594,7 +68877,8 @@
         "Hidden Gem",
         "Josep Fontserè",
         "Antoni Gaudí",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Lluís Clotet"
       ],
       "priceUSD": 0
     },
@@ -69474,7 +69758,9 @@
         "Commerce",
         "Architecture",
         "Contemporary",
-        "Free to Visit"
+        "Free to Visit",
+        "Fermín Vázquez",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -70074,7 +70360,9 @@
         "History",
         "Architecture",
         "Free to Visit",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Ramon Reventós",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -70351,7 +70639,9 @@
         "Food",
         "Contemporary",
         "Hidden Gem",
-        "After Dark"
+        "After Dark",
+        "H3O Architects",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -70887,7 +71177,10 @@
         "Public Art",
         "History",
         "Designed by a Master",
-        "Antoni Gaudí"
+        "Antoni Gaudí",
+        "Bonaventura Bassegoda",
+        "Francisco de Paula del Villar",
+        "Jeroni Martorell"
       ],
       "priceUSD": 0
     },
@@ -71024,7 +71317,8 @@
         "Art",
         "Modernist",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Giovanni Muzio"
       ],
       "priceUSD": 0
     },
@@ -71115,7 +71409,10 @@
         "Museum",
         "Art",
         "Engineering",
-        "Contemporary"
+        "Contemporary",
+        "Ico Migliore",
+        "Mara Servetto",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -71246,7 +71543,9 @@
         "Notable Building",
         "Fashion",
         "Commerce",
-        "Neoclassical"
+        "Neoclassical",
+        "Pietro Pestagalli",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -71290,7 +71589,9 @@
         "War",
         "Neoclassical",
         "Iconic Landmark",
-        "Free to Visit"
+        "Free to Visit",
+        "Luigi Cagnola",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -71426,7 +71727,8 @@
         "Art",
         "History",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Guiniforte Solari"
       ],
       "priceUSD": 0
     },
@@ -71516,7 +71818,8 @@
         "Engineering",
         "Contemporary",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Stefano Boeri"
       ],
       "priceUSD": 0
     },
@@ -71562,7 +71865,9 @@
         "Venue",
         "Commerce",
         "Contemporary",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Antonio Citterio",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -71608,7 +71913,9 @@
         "Venue",
         "Food",
         "Commerce",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Giuseppe Mengoni",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -71655,7 +71962,9 @@
         "History",
         "Power",
         "War",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Luca Beltrami",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -71886,7 +72195,8 @@
         "Art",
         "History",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Mario Cucinella"
       ],
       "priceUSD": 0
     },
@@ -71934,7 +72244,8 @@
         "Contemporary",
         "Iconic Landmark",
         "Designed by a Master",
-        "Rem Koolhaas"
+        "Rem Koolhaas",
+        "Wes Anderson"
       ],
       "priceUSD": 0
     },
@@ -72117,7 +72428,9 @@
       "tags": [
         "Venue",
         "Food",
-        "After Dark"
+        "After Dark",
+        "Roberto Peregalli",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -72163,7 +72476,9 @@
         "Venue",
         "Food",
         "Fashion",
-        "Viewpoint"
+        "Viewpoint",
+        "Emilio Lancia",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -72250,7 +72565,9 @@
       "tags": [
         "Venue",
         "Food",
-        "Contemporary"
+        "Contemporary",
+        "Silvia Bettini",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -72479,7 +72796,9 @@
         "Remembrance",
         "Art",
         "Free to Visit",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Carlo Maciachini",
+        "Gio Ponti"
       ],
       "priceUSD": 0
     },
@@ -72569,7 +72888,9 @@
         "Venue",
         "Art",
         "Commerce",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Massimiliano Locatelli",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -72661,7 +72982,9 @@
         "Museum",
         "Art",
         "History",
-        "Neoclassical"
+        "Neoclassical",
+        "Mario Cucinella",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -72707,7 +73030,10 @@
         "History",
         "Architecture",
         "Iconic Landmark",
-        "Free to Visit"
+        "Free to Visit",
+        "Giuseppe Mengoni",
+        "Giuseppe Piermarini",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -72845,7 +73171,10 @@
         "Notable Building",
         "History",
         "Commerce",
-        "Baroque"
+        "Baroque",
+        "Michele De Lucchi",
+        "Pellegrino Tibaldi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -73172,7 +73501,9 @@
         "Food",
         "Commerce",
         "Waterfront",
-        "Free to Visit"
+        "Free to Visit",
+        "David Chipperfield",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     }

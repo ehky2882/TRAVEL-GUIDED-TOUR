@@ -122,6 +122,28 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-08-23)
+
+### The architect vocabulary triples — 94 → 279 names, and 24 of the candidates were rejected on the Sullivan rule (session 104 — code + content)
+
+**Owner: "Yes add the architects."** The standing backlog was recorded as "the nine from Milan, plus the Melbourne / Chicago / Sydney / Cape Town names". **A catalog-wide sweep found 207 candidates, not nine.** [PR #565](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/565) — **code + content, so it waits for owner OK and a simulator look.**
+
+- **Vocabulary 94 → 279 architects; 170 tours gained 193 architect tags and 138 gained `Designed by a Master`.** Every one of the 279 names is **actually used by at least one tour** — no dead vocabulary. **409 tours now name an architect and 0 are missing the shelf tag.**
+- **🔴 THE SWEEP MUST BE DRIVEN BY AUTHORSHIP VERBS AND THEN READ BY A HUMAN — 24 of 207 candidates were rejected, and the rejections are the valuable part.** A mention is not authorship (the Sullivan / Eiffel rule, now paid for a third time):
+  - **Francis Greenway** merely *suggested* a Sydney harbour crossing in 1815 — he did not design the bridge.
+  - **James Stirling's** Palazzo Citterio plans were **never built**.
+  - **Vertner Tandy** is listed as a *resident* of Strivers' Row, alongside W. C. Handy and Eubie Blake — not its designer.
+  - **Paul Renner** designed the **typeface** Futura, not Futura Seoul, the gallery named after it.
+  - **Joan Martorell** *pushed the city* to hand the Plaça Reial lamps to the newly-graduated Gaudí.
+  - **U.S. Steel** fabricated the Unisphere; **"Van Alen's"** captured a sentence about Van Alen's *former partner*; **Salvador Dalí** appeared only because a salvaged fragment ended up in his museum.
+- **⚠️ Nine more were rejected as ALREADY PRESENT UNDER ANOTHER FORM, which a naive name check misses.** `I.M. Pei` vs **`I. M. Pei`**, `Heatherwick Studio` vs **`Thomas Heatherwick`**, `Foster + Partners` and `Norman Foster's` vs **`Norman Foster`**, `Kazuyo Sejima` vs **`SANAA`**, `Taniguchi Yoshio` vs **`Yoshio Taniguchi`** (name order), plus possessives (`Joseph Reed's`, `Kisho Kurokawa's`). **Compare on normalised token sets, not strings**, or the vocabulary silently grows near-duplicates that split a shelf in two.
+- **⚠️ The regex captures trailing sentence fragments and truncated names, and both ship silently if unread.** `Pellegrino Tibaldi. Priests`, `Mario Cucinella. What's`, `Luis Rey. Look`, `Ellen van Loon. Commissioned`, `WGNB. Three`; and **`Gustavo Adolfo Gonçalves` is really `Gustavo Adolfo Gonçalves e Sousa`**, `António Correia` really `António Correia da Silva`. Every name was corrected by hand against its own sentence.
+- **The editorial rule used, written down so the next sweep is consistent:** include whoever designed the **building, a major part of it, its landscape, or its complete interior scheme**; exclude anyone who made a **single artwork inside it**. So Dan Kiley (the Ford Foundation's indoor park), Donald Deskey (Radio City's interiors), Jorge Colaço (the azulejos that *are* Santo António's exterior) and Wes Anderson (Bar Luce) are in; **Kiki Smith's single rose window at Eldridge Street is out.** Engineers and landscape architects are in, following the existing Gustave Eiffel and Roberto Burle Marx precedent.
+- **Names that were simply missing and are hard to justify having been absent:** **Charles Garnier** (the Palais Garnier), Peter Zumthor, Richard Rogers, Richard Meier, Rafael Moneo, Daniel Libeskind, Thom Mayne, Gio Ponti, Alfred Waterhouse, Hendrick de Keyser, James Gibbs, Stanford White, Giuseppe Mengoni, Charles Collens, Henry Janeway Hardenbergh.
+- **🔴 `scripts/validate-tours.swift` KEEPS ITS OWN COPY OF THE VOCABULARY AND BOTH MUST BE EDITED.** Adding 185 names to `Models/Tag.swift` alone produced **193 validator errors**. The two lists are now asserted equal (279 = 279) as part of this change; **a future architect PR that touches only one file will fail the same way.**
+- **⚠️ `Designed by a Master` is appended explicitly to every tagged tour — `Tag.matches` performs NO implication**, and the curated home shelf is keyed on that literal string (`Tag.swift`), while `CreateTourView` auto-appends it when a maker picks an architect. **Do not "tidy" the generic tag away from a named-architect tour**; it would drop the tour off the shelf built for exactly those tours.
+- **Verification:** `swift scripts/validate-tours.swift` **0 errors, 0 warnings across 1,466 tours**; **`test_sim` 418/418**; both vocabulary lists asserted identical; 0 duplicate entries; every one of the 279 names in use.
+
 ## Current State (2026-08-22)
 
 ### The same photo twice in one carousel — and the check that structurally could not see it (session 103c — content + tooling)
