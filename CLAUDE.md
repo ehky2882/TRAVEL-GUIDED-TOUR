@@ -122,6 +122,20 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-08-23)
+
+### The blank screen before the splash is iOS's own, and it now carries the mark ([PR #566](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/566), session 105 — code)
+
+**Owner: "Why is my splash at launch preceded by a blank black screen? Can't it go straight to my splash?"** It can't literally, but it can look as though it does. Three lines of `Info.plist` plus one image set; **no Swift**. `test_sim` **418/418**. Full detail: `archive/HANDOFF-260823.md`.
+
+- **THE BLANK SCREEN WAS iOS'S LAUNCH SCREEN, NOT OURS.** `UILaunchScreen` was an **empty dict** — "paint `systemBackground` and nothing else" — shown from the tap until the app's first frame. No app can skip it; the only move is to make it *be* the splash. It now names `LaunchMark.imageset` via `UIImageName`.
+- **⚠️ IT LINGERS BECAUSE OUR FIRST FRAME IS THE WHOLE APP.** The splash is an `.overlay` on `ContentView`, so the map, the first clustering pass over 1,466 tours, the drawer and the bars are all built **before** anything can be shown. Measured in the Simulator (Debug): `DataService.init`'s catalog load + decode is **71 ms**, and `ContentView` first appears **~2.7 s** after that. That is the launch design working as intended — the cost is simply that iOS's blank screen covers the wait instead of the brass mark.
+- **⚠️ `UIImageName` RENDERS CENTRED AT NATURAL SIZE — measured, not assumed.** A 44pt disc came back 44pt, dead centre, with no safe-area offset, which is why the asset can mirror `SplashView` exactly: a 120×98pt image, symmetric about the disc, wordmark centre 38pt below (the disc's radius, 22, plus `AtlasSpacing.md`, 16).
+- **🔴 THE RENDERED LAUNCH SCREEN IS CACHED HARD, AND THAT COST MOST OF THE SESSION.** iOS kept serving a 44pt disc from the *first* version of the asset while the file on disk had the wordmark in it — through rebuilds, through `simctl uninstall` + `install`, and through a **build-number bump**; a brand-new asset name rendered **blank** rather than falling back. Only **`xcrun simctl erase`** cleared it. **Verify a launch screen only on an erased simulator or a fresh install**, and expect the same on device: if the next TestFlight build looks stale, delete the app and reinstall.
+- **⚠️ THE LAUNCH SCREEN FOLLOWS THE SYSTEM APPEARANCE, NOT THE IN-APP PICKER**, and cannot do otherwise — it is drawn before the app runs. Phone on Light with the app forced to Dark gives a white launch screen into a black splash. Accepted. The light/dark split is **two renditions** tagged by luminosity (a launch screen cannot resolve a semantic colour); ground pixels verified `(255,255,255)` and `(0,0,0)`.
+- **`scripts/render-launch-mark.swift` regenerates the asset** from the real New York face at `SplashView`'s geometry. **Re-run it if the wordmark, the disc size or `LaunchZoom.originFraction` changes** — the two screens are shown back to back and any drift reads as a jump.
+- **⚠️ OWNER REPORT THAT THIS RAISED, NOT YET FIXED — photos are not kept for offline.** On weak reception the app opened but images did not load. We *do* preload — `LaunchImageWarmup` fetches the first **8** heroes — but with a **1.2 s deadline** inside the **3.0 s** ceiling, which a weak connection never beats. **🔴 Do NOT "make the splash wait until everything is loaded": with no signal that never completes and the splash reads as a frozen app** — the ceiling exists precisely to stop that, and everything except photographs already works offline. The real gaps: **a downloaded tour does not bring its photos** (`TourDownloader` fetches audio only — fix this first), and **hero persistence via `URLCache.shared` (50 MB / 200 MB, set in `App.init`) is assumed rather than proven** — the owner's report is the first evidence against it.
+
 ## Current State (2026-08-22)
 
 ### The same photo twice in one carousel — and the check that structurally could not see it (session 103c — content + tooling)
