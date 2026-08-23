@@ -94,15 +94,7 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
         activeTourId = tour.id
         states[tour.id] = .downloading(progress: 0.0)
 
-        pendingFiles = []
-        if let urlString = tour.introAudioURL, let url = URL(string: urlString) {
-            pendingFiles.append((name: "intro", url: url))
-        }
-        for stop in tour.stops {
-            if let url = URL(string: stop.audioURL) {
-                pendingFiles.append((name: stop.id.uuidString, url: url))
-            }
-        }
+        pendingFiles = Self.downloadPlan(for: tour)
         totalActiveFiles = pendingFiles.count
         completedActiveFileCount = 0
 
@@ -126,6 +118,59 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
         return true
     }
 
+    /// Everything a tour needs on disk to work with no signal: the audio
+    /// first, then the photographs the walker actually sees.
+    ///
+    /// 🔴 THE PHOTOGRAPHS ARE PART OF THE DOWNLOAD, and were not until
+    /// 2026-08-23. The owner rode the Underground with a tour saved for
+    /// exactly that trip and got empty grey boxes: this queued the intro audio
+    /// and each stop's audio and nothing else, so a deliberately-saved tour
+    /// had no pictures the moment the signal went.
+    ///
+    /// ⚠️ AUDIO IS QUEUED FIRST, deliberately. Files download sequentially, so
+    /// a download interrupted half way still yields a tour you can *listen*
+    /// to — which is the point of downloading one — rather than a gallery with
+    /// no narration.
+    ///
+    /// ⚠️ Deduplicated by URL, which is not a micro-optimisation: a
+    /// single-stop tour sets `stop0.imageURL` to its own hero, and a walk's
+    /// intro stop reuses the landmark's photograph, so the naive list repeats
+    /// itself constantly. Two files of identical bytes under one name would
+    /// also make the progress total lie.
+    ///
+    /// The extra gallery photographs (`additionalImageURLs`) are deliberately
+    /// NOT included — they are seen while browsing, before you set off, and
+    /// they would roughly double the download for pictures you rarely look at
+    /// underground.
+    static func downloadPlan(for tour: Tour) -> [(name: String, url: URL)] {
+        var plan: [(name: String, url: URL)] = []
+        var seen = Set<String>()
+
+        func append(name: String, urlString: String?) {
+            guard let urlString, let url = URL(string: urlString) else { return }
+            guard seen.insert(url.absoluteString).inserted else { return }
+            plan.append((name: name, url: url))
+        }
+
+        append(name: "intro", urlString: tour.introAudioURL)
+        for stop in tour.stops {
+            append(name: stop.id.uuidString, urlString: stop.audioURL)
+        }
+
+        // Photographs are named after their own URL so `DownloadedImageIndex`
+        // can find them again knowing nothing but the URL — see that type.
+        func appendImage(_ urlString: String?) {
+            guard let urlString, let url = URL(string: urlString) else { return }
+            append(name: DownloadedImageIndex.baseName(for: url), urlString: urlString)
+        }
+
+        appendImage(tour.heroImageURL)
+        for stop in tour.stops {
+            appendImage(stop.imageURL)
+        }
+        return plan
+    }
+
     /// Cancel an in-progress download. Removes any partial files
     /// already written for that tour.
     func cancel(tourId: UUID) {
@@ -141,7 +186,10 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
     /// responsible for also calling `libraryStore.clearDownload(tourId)`
     /// so the Downloaded section in Library reflects the change.
     func deleteDownload(tourId: UUID) {
-        try? FileManager.default.removeItem(at: tourFolder(for: tourId))
+        let folder = tourFolder(for: tourId)
+        try? FileManager.default.removeItem(at: folder)
+        // Before anything can ask for a path that no longer exists.
+        DownloadedImageIndex.shared.forget(folder: folder)
         states[tourId] = .idle
     }
 
@@ -227,6 +275,10 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
     private func finishActiveDownload() {
         guard let tourId = activeTourId else { return }
         states[tourId] = .completed
+        // The photographs just written are only findable once indexed — do it
+        // here rather than per file, so a half-finished download never hands a
+        // view a path it is about to clean up.
+        DownloadedImageIndex.shared.register(folder: tourFolder(for: tourId))
         Task { @MainActor in AtlasHaptics.success() }
         resetActiveBookkeeping()
         // Views observing `states[tourId]` are responsible for
@@ -338,6 +390,9 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
     private func loadExistingStates() {
         for tourId in allDownloadedTourIds() {
             states[tourId] = .completed
+            // Photographs downloaded on a previous launch are on disk but
+            // unknown until something enumerates them.
+            DownloadedImageIndex.shared.register(folder: tourFolder(for: tourId))
         }
     }
 

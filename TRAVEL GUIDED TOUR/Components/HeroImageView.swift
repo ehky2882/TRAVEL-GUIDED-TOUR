@@ -85,6 +85,16 @@ struct HeroImageView: View {
     private func fetchIfNeeded() async {
         guard let url = URL(string: imageName) else { return }
         if ImageCache.shared.image(for: url) != nil { return }
+        // A tour downloaded for offline keeps its photographs on disk. Read
+        // that before touching the network: underground it is the only copy
+        // that exists, and on signal it still beats a round trip.
+        if let local = DownloadedImageIndex.shared.file(for: url),
+           let data = try? Data(contentsOf: local),
+           let uiImage = UIImage(data: data) {
+            ImageCache.shared.store(uiImage, for: url)
+            cachedImage = uiImage
+            return
+        }
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             guard let uiImage = UIImage(data: data) else { return }
