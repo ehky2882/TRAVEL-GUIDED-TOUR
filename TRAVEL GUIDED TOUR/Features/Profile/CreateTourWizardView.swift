@@ -1521,6 +1521,8 @@ struct CreateTourWizardView: View {
             videoURLs: tour.videoURLs,
             videoRole: tour.videoRole,
             kind: tour.kind,
+            sourceURL: tour.sourceURL,
+            sourceAuthor: tour.sourceAuthor,
             stops: [stop],
             introAudioURL: tour.introAudioURL,
             totalDurationSeconds: tour.totalDurationSeconds,

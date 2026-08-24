@@ -4,6 +4,132 @@ import CoreLocation
 enum TourKind: String, Codable {
     case single
     case multiStop
+
+    /// A pin that stands for someone else's post — a TikTok, a Short — rather
+    /// than narration Atlas hosts. It appears everywhere a tour appears, and
+    /// its detail page sends you to the platform instead of playing anything.
+    ///
+    /// ⚠️ Deliberately a `TourKind` and not a separate model. Map markers,
+    /// placecards, rails, search and the library are all keyed to `Tour`, and
+    /// this enum is only ever `==`-compared — never exhaustively switched — so
+    /// a new case reaches all of them without touching any of it.
+    ///
+    /// 🔴 A link pin carries exactly ONE stop, `triggerMode == .manual`, with
+    /// an EMPTY `audioURL` and a duration of 0 — the same "no audio yet"
+    /// representation a fresh maker draft already writes. That is what keeps
+    /// it safe by construction: `ProximityMonitor` registers only `.geofenced`
+    /// stops so the geofence can never fire, and every reader of `audioURL`
+    /// goes through `URL(string:)`, which rejects an empty string. Validator-
+    /// enforced in `scripts/validate-tours.swift`.
+    case link
+}
+
+/// Which app a link pin opens, derived from its own URL rather than stored
+/// beside it — one field cannot then contradict the other.
+enum LinkSource {
+    case tiktok
+    case youtube
+    case instagram
+    case other
+
+    /// What the button says. The post already plays inside Atlas via the
+    /// embed, so this is the *secondary* action — going to the platform to
+    /// like, comment or follow. Naming the app is the honest warning that the
+    /// tap leaves Atlas; a generic "Open" hides it.
+    var watchLabel: String {
+        switch self {
+        case .tiktok: "OPEN IN TIKTOK"
+        case .youtube: "OPEN IN YOUTUBE"
+        case .instagram: "OPEN IN INSTAGRAM"
+        case .other: "OPEN THIS POST"
+        }
+    }
+
+    /// Shape of the embedded player, so the box matches the post rather than
+    /// letterboxing it. TikTok and Reels are vertical by construction;
+    /// YouTube's player letterboxes a Short correctly inside 16:9.
+    var embedAspectRatio: CGFloat {
+        switch self {
+        case .tiktok, .instagram: 9.0 / 16.0
+        case .youtube, .other: 16.0 / 9.0
+        }
+    }
+
+    /// The post's own embeddable player, derived from the share URL.
+    ///
+    /// 🔴 All three platforms publish a player that needs **no API key, no
+    /// registration and no app review** — verified live 2026-08-24, and it is
+    /// what lets a post play *inside* Atlas instead of throwing the viewer out
+    /// to another app. TikTok's `player/v1/{id}` returned HTTP 200 unauthenticated.
+    ///
+    /// ⚠️ Derived, never stored beside `sourceURL`, so the two cannot disagree
+    /// about which post this pin is.
+    ///
+    /// ⚠️ Short links (`vm.tiktok.com/…`, `youtu.be` aside) cannot be resolved
+    /// here — they need a redirect follow. `scripts/make-link-pin.py` resolves
+    /// them at authoring time and stores the canonical URL, so this stays pure.
+    static func embedURL(for urlString: String) -> URL? {
+        guard let url = URL(string: urlString) else { return nil }
+        let parts = url.pathComponents.filter { $0 != "/" }
+
+        switch from(urlString: urlString) {
+        case .tiktok:
+            // .../@handle/video/{id}
+            guard let i = parts.firstIndex(of: "video"), i + 1 < parts.count else { return nil }
+            let id = parts[i + 1]
+            guard !id.isEmpty, id.allSatisfy(\.isNumber) else { return nil }
+            // Chrome kept on: the creator's handle, the sound and the caption
+            // are TikTok's own credit, and stripping them to make the pin look
+            // native would be passing someone's work off as ours.
+            return URL(string: "https://www.tiktok.com/player/v1/\(id)?music_info=1&description=1&rel=0")
+
+        case .youtube:
+            let id: String?
+            if let v = URLComponents(url: url, resolvingAgainstBaseURL: false)?
+                .queryItems?.first(where: { $0.name == "v" })?.value {
+                id = v                                   // youtube.com/watch?v=ID
+            } else if let i = parts.firstIndex(of: "shorts"), i + 1 < parts.count {
+                id = parts[i + 1]                        // youtube.com/shorts/ID
+            } else if url.host()?.lowercased().contains("youtu.be") == true {
+                id = parts.first                         // youtu.be/ID
+            } else {
+                id = nil
+            }
+            guard let id, !id.isEmpty else { return nil }
+            return URL(string: "https://www.youtube.com/embed/\(id)?playsinline=1&rel=0")
+
+        case .instagram:
+            // instagram.com/p/{code}/ and /reel/{code}/
+            guard let i = parts.firstIndex(where: { $0 == "p" || $0 == "reel" || $0 == "tv" }),
+                  i + 1 < parts.count else { return nil }
+            let code = parts[i + 1]
+            guard !code.isEmpty else { return nil }
+            return URL(string: "https://www.instagram.com/\(parts[i])/\(code)/embed")
+
+        case .other:
+            return nil
+        }
+    }
+
+    /// Matched on the **registrable domain** — the label immediately before
+    /// the TLD — so `www.`, `m.` and regional prefixes all resolve.
+    ///
+    /// 🔴 NOT a `contains` over the labels. That was the first version and the
+    /// authoring tool's self-test caught it within a minute: `tiktok.evil.com`
+    /// splits to ["tiktok", "evil", "com"], so a hostile URL would have been
+    /// labelled "WATCH ON TIKTOK" while sending the tap somewhere else. Only
+    /// the second-to-last label decides.
+    static func from(urlString: String) -> LinkSource {
+        guard let host = URL(string: urlString)?.host()?.lowercased() else { return .other }
+        let labels = host.split(separator: ".").map(String.init)
+        guard labels.count >= 2 else { return .other }
+        switch labels[labels.count - 2] {
+        case "tiktok": return .tiktok
+        case "youtube", "youtu": return .youtube
+        case "instagram": return .instagram
+        default: return .other
+        }
+    }
 }
 
 /// What a tour's video actually IS — the distinction the app could not make
@@ -58,6 +184,14 @@ struct Tour: Codable, Identifiable, Hashable {
     /// decode fine without the key.
     let videoRole: TourVideoRole?
     let kind: TourKind
+    /// For a `.link` tour, the post this pin stands for. Optional because
+    /// every other kind has none, and because the bundled seed and the
+    /// gh-pages mirror decode fine without the key until republished.
+    let sourceURL: String?
+    /// The creator being credited, as the platform reports them (e.g.
+    /// `"@explaining.architecturee"`). Shown on the detail page — a pin
+    /// standing for someone's work names them.
+    let sourceAuthor: String?
     let stops: [Stop]
     let introAudioURL: String?
     let totalDurationSeconds: Int
@@ -112,6 +246,25 @@ struct Tour: Codable, Identifiable, Hashable {
     /// in Phase 3. `nil` only for a tagless tour. `primaryCategory` is
     /// still the source of truth for map pins + placeholders in Phase 2.
     var primaryTag: String? { Tag.derivePrimary(from: tags) }
+
+    /// True when this pin stands for a post hosted somewhere else.
+    var isLink: Bool { kind == .link }
+
+    /// Which app this link pin opens. `nil` for anything that is not a link
+    /// pin, or a link pin whose URL is missing — both of which the validator
+    /// rejects, so `nil` here means bad data rather than a state to design for.
+    var linkSource: LinkSource? {
+        guard kind == .link, let sourceURL else { return nil }
+        return LinkSource.from(urlString: sourceURL)
+    }
+
+    /// The player to embed for this link pin, or `nil` when the URL is one we
+    /// cannot derive a player from — in which case the detail page falls back
+    /// to sending the viewer to the post instead of showing it inline.
+    var linkEmbedURL: URL? {
+        guard kind == .link, let sourceURL else { return nil }
+        return LinkSource.embedURL(for: sourceURL)
+    }
 
     /// True when this tour must be bought before its audio will play.
     /// A `nil` or non-positive tier means free — the whole catalog today.
