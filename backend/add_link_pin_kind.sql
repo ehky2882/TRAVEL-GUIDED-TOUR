@@ -1,0 +1,40 @@
+-- add_link_pin_kind.sql
+--
+-- Migration: let a tour actually BE a link pin in Postgres.
+--
+-- 🔴 WHY THIS EXISTS, AND WHY add_link_pins.sql WAS NOT ENOUGH
+--
+-- `add_link_pins.sql` added `source_url` and `source_author` and taught the
+-- catalog function to emit them. What it did NOT do is widen the enum that
+-- says what kind of thing a tour is:
+--
+--     create type tour_kind as enum ('single', 'multiStop');   -- schema.sql:24
+--
+-- So the app could read a link pin, the validator accepted one, the tests
+-- passed, and `make-link-pin.py` happily emitted one — but the moment a
+-- `kind: "link"` tour reached `seed_from_toursjson.py` the insert was
+-- rejected by the type, the seed transaction rolled back, and the live
+-- catalog silently kept its previous contents.
+--
+-- ⚠️ The failure mode is the dangerous one: the gh-pages mirror job is
+-- SEPARATE and would still publish, so the mirror would carry link pins while
+-- Supabase did not. The app reads Supabase first, so the pins simply never
+-- appear and nothing looks broken.
+--
+-- Found by trying to publish the first real link pin, not by review.
+--
+-- Idempotent: `add value if not exists` is a no-op on re-run.
+-- Run once in the Supabase SQL Editor (project "Dozent").
+-- Expect "Success. No rows returned."
+--
+-- Nothing changes for existing tours: every one of them is still 'single' or
+-- 'multiStop'. This only makes a third value legal.
+
+alter type public.tour_kind add value if not exists 'link';
+
+-- Verify (run separately, after the statement above commits — a new enum
+-- value cannot be used in the same transaction that added it):
+--
+--   select unnest(enum_range(null::public.tour_kind));
+--
+-- Expect three rows: single, multiStop, link.

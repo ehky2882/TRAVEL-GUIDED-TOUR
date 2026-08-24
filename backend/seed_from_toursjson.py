@@ -25,7 +25,11 @@ DEFAULT_INPUT = os.path.join(
 
 # Closed sets — mirror schema.sql enums. Seeding a value outside these would
 # fail the INSERT, so we catch it early with a clear message.
-KINDS = {"single", "multiStop"}
+# 'link' is a link pin — someone else's post, played through that platform's
+# embed. It carries no audio, so it is exempt from the audio checks below.
+# ⚠️ Postgres has its own copy of this list as the `tour_kind` enum; both must
+# agree or the seed is rejected by the type. See backend/add_link_pin_kind.sql.
+KINDS = {"single", "multiStop", "link"}
 TRIGGER_MODES = {"geofenced", "manual"}
 CATEGORIES = {
     "history", "architecture", "visualArt", "musicAndPerformance", "literature",
