@@ -588,3 +588,52 @@ same way at ship time.
 **No credit required:** `alserkal-avenue_hero.webp` is Wikimedia **CC0**, and the
 `al-shindagha_hero.webp` / `difc-gate_hero.webp` heroes are owner-supplied (both
 carry provenance flags — see `drafts/dubai-batch1/README.md`).
+
+## Atlanta — 25 credit-required images (`drafts/atlanta-batch1`)
+
+Nine subjects went live on gh-pages 2026-08-24. **16 of the 41 files need no credit** and
+are not listed below: Big Bethel and the Ebenezer gallery add are Unsplash; two Krog files
+are Pexels; and the CC0 files are `the-temple_hero`, `the-temple_3`, `atlanta-flatiron_4`,
+`atlanta-flatiron_6`, `atlanta-flatiron_7`, `atlanta-flatiron_8`, `hurt-building_3`,
+`hurt-building_4`, `hurt-building_8`, `hurt-building_9`, `hurt-building_10`,
+`hurt-building_11`.
+
+**The eleven Atlanta tours already live before this batch carry zero obligations** — they
+came from Unsplash, Pexels, the Library of Congress, or the owner. See
+`drafts/atlanta-batch1/README.md`.
+
+| file | subject | photographer | licence | source |
+|------|---------|--------------|---------|--------|
+| `historic-fourth-ward-park_hero.webp` | Stone water cascade, Clear Creek Basin | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Stone_water_cascade_at_Clear_Creek_Basin_in_Historic_Fourth_Ward_Park_in_Atlanta,_March_2016.jpg |
+| `historic-fourth-ward-park_2.webp` | Ponce City Market across the detention pond | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:View_of_Ponce_City_Market_across_the_stormwater_detention_pond_at_Historic_Fourth_Ward_Park,_December_2015.jpg |
+| `krog-street-tunnel_hero.webp` | Krog Street Tunnel exterior, CSX viaduct | Lee Coursey | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Krog_Street_Tunnel,_Atlanta.jpg |
+| `krog-street-tunnel_4.webp` | Krog Street Tunnel interior piers | Schwerdf | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Krog_Street_Tunnel_2025-05-23.jpg |
+| `krog-street-tunnel_5.webp` | Krog Street Tunnel | Josh Hallett | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Krog_Street_Tunnel_-_Atlanta,_GA_-_Flickr_-_hyku_(22).jpg |
+| `the-temple_2.webp` | The Temple at golden hour | JJonahJackalope | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:The_Temple,_Atlanta.jpg |
+| `the-temple_4.webp` | The Temple, portico | David from Washington, DC | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:The_Temple,_Atlanta_(Wiki).jpg |
+| `georgian-terrace_hero.webp` | Georgian Terrace + Fox + Ponce de Leon Apts | Daniel Mayer | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Hotels_around_Fabulous_Fox_Theater.JPG |
+| `georgian-terrace_2.webp` | Georgian Terrace entrance sign and crest | JJonahJackalope | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Georgian_Terrace_Hotel_2.jpg |
+| `georgian-terrace_3.webp` | Georgian Terrace, corner bays | JJonahJackalope | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Georgian_Terrace_Hotel,_Atlanta.jpg |
+| `georgian-terrace_4.webp` | Georgian Terrace from Peachtree Street | MikeSchinkel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Georgia_Terrace_Hotel,_Peachtree_Street_-_panoramio.jpg |
+| `georgian-terrace_5.webp` | Georgian Terrace historical marker | JJonahJackalope | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:The_Georgian_Terrace_Hotel_historical_marker.jpg |
+| `atlanta-flatiron_hero.webp` | Flatiron edge-on, Peachtree at Luckie | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Flatiron_Building_(Atlanta)_edge-on_from_the_corner_of_Peachtree_and_Luckie_Streets.jpg |
+| `atlanta-flatiron_2.webp` | Flatiron from Woodruff Park | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Atlanta%E2%80%99s_Flatiron_Building_viewed_from_Woodruff_Park.jpg |
+| `atlanta-flatiron_3.webp` | Flatiron on a cloudy day | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Flatiron_Building_(Atlanta)_on_a_cloudy_day.jpg |
+| `atlanta-flatiron_5.webp` | Flatiron Building (Atlanta) | Aleksandr Zykov | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Flatiron_Building_(Atlanta)_(8215285913).jpg |
+| `hurt-building_hero.webp` | Hurt Building at sunset | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hurt_Building_at_sunset_in_Atlanta.jpg |
+| `hurt-building_2.webp` | Hurt Building from Hurt Park | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hurt_Building_view_from_Hurt_Park.jpg |
+| `hurt-building_5.webp` | Hurt Building, NE corner | Michael Rivera | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:The_Hurt_Building_(NE_corner).JPG |
+| `hurt-building_6.webp` | Hurt Building, south face | Michael Rivera | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:The_Hurt_Building_(South_face).JPG |
+| `hurt-building_7.webp` | Hurt Building entrance, Peachtree Center Ave | Michael Rivera | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:The_Hurt_Building_entrance_on_Peachtree_Center_Ave.JPG |
+| `hurt-building_12.webp` | Hurt Park | Michael Rivera | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Hurt_Park,_Atlanta.JPG |
+| `prince-hall-masonic-temple_hero.webp` | Prince Hall Masonic Building, Auburn at Hilliard | Michael Barera | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Martin_Luther_King_Jr._National_Historic_Site_August_2016_07_(Prince_Hall_Masonic_Building).jpg |
+| `prince-hall-masonic-temple_2.webp` | Prince Hall Masonic Building | Michael Barera | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Martin_Luther_King_Jr._National_Historic_Site_August_2016_08_(Prince_Hall_Masonic_Building).jpg |
+| `prince-hall-masonic-temple_3.webp` | Prince Hall, blade sign and Auburn Ave | JJonahJackalope | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Prince_Hall,_Atlanta.jpg |
+
+**⚠️ Krog Street Tunnel — the graffiti itself is unresolved, exactly as for the Pilsen
+murals.** These credit the photographers only. The tunnel's painted work is the principal
+subject in `krog-street-tunnel_4` and `_5`; tags there are ephemeral and largely
+unattributable, which is why no artist row exists. This is one of the three Atlanta stops
+the owner cleared to ship with the obligation logged open rather than cleared.
+
+**Woodruff Park (stop 04) shipped NO images** — see `drafts/atlanta-batch1/README.md`.

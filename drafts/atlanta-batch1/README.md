@@ -52,55 +52,96 @@ written down to prevent. If the other 15 ever arrive they are a **second batch**
 | 28 | Graves Hall, Morehouse | `graves-hall` | `28_graves_hall` | `history` | `33.74600, -84.41310` | Notable Building, History, Architecture | C | AUC campus — likely needs an owner photo |
 | 29 | Spelman College Oval | `spelman-oval` | `29_spelman_oval` | `history` | `33.74560, -84.41190` | District, History, Green Escape | C | AUC campus — likely needs an owner photo |
 | 30 | Student Movement Boulevard | `student-movement-blvd` | `30_student_movement_blvd` | `history` | `33.75160, -84.41200` | District, History, Remembrance, Free to Visit | C | ⚠️ movement site — buildings and street, not archival protest imagery |
-## Images — 11 of 30 live on gh-pages (verified 2026-08-24)
+## Images — 20 of 30 live on gh-pages (verified 2026-08-24)
+
+### Shipped earlier — 11 subjects, zero credit obligations
+
+| tour | files | source |
+|------|-------|--------|
+| 03 Georgia State Capitol | `georgia-state-capitol_hero` + `_2`..`_5` | Unsplash / Pexels |
+| 06 Ebenezer Baptist | `ebenezer-baptist_hero` | Library of Congress, PD |
+| 07 King Center | `king-center_hero` | Unsplash / Pexels |
+| 09 Centennial Olympic Park | `centennial-olympic-park_hero` + `_2`,`_3` | Unsplash / Pexels |
+| 10 Fox Theatre | `fox-theatre_hero` + `_2`..`_4` | LoC (Highsmith), PD |
+| 11 Ponce City Market | `ponce-city-market_hero` + `_2` | Unsplash / Pexels |
+| 12 Jackson Street Bridge | `jackson-street-bridge_hero` + `_2`..`_4` | Unsplash / Pexels |
+| 13 Piedmont Park | `piedmont-park_hero` + `_2`..`_5` | Unsplash / Pexels |
+| 14 Oakland Cemetery | `oakland-cemetery_hero` + `_2`..`_6` | LoC (Highsmith), PD |
+| 15 Mercedes-Benz Stadium | `mercedes-benz-stadium_hero` + `_2`,`_3` | Unsplash / Pexels |
+| 20 High Museum | `high-museum_hero` (owner) + `_2` | owner / stock |
+
+Ponce ships at hero + 1 — all its stock pool supported. Its Commons category holds 26, so
+backfill from there. **20 High Museum's hero is owner-supplied** (the Meier volumes with the
+incised lettering along the approach wall); `_2` is the one clean stock exterior in the pool,
+the rest being gallery interiors, which carry their own copyright problem since the hung
+artworks are the subject.
+
+### Shipped 2026-08-24 — 9 subjects, 41 files, 25 credit rows
 
 | tour | files | source | credit |
 |------|-------|--------|--------|
-| 03 Georgia State Capitol | `georgia-state-capitol_hero` + `_2`..`_5` | Unsplash / Pexels | none |
-| 06 Ebenezer Baptist | `ebenezer-baptist_hero` | Library of Congress, PD | none |
-| 07 King Center | `king-center_hero` | Unsplash / Pexels | none |
-| 09 Centennial Olympic Park | `centennial-olympic-park_hero` + `_2`,`_3` | Unsplash / Pexels | none |
-| 10 Fox Theatre | `fox-theatre_hero` + `_2`..`_4` | Library of Congress (Highsmith), PD | none |
-| 11 Ponce City Market | `ponce-city-market_hero` + `_2` | Unsplash / Pexels | none |
-| 12 Jackson Street Bridge | `jackson-street-bridge_hero` + `_2`..`_4` | Unsplash / Pexels | none |
-| 13 Piedmont Park | `piedmont-park_hero` + `_2`..`_5` | Unsplash / Pexels | none |
-| 14 Oakland Cemetery | `oakland-cemetery_hero` + `_2`..`_6` | Library of Congress (Highsmith), PD | none |
-| 15 Mercedes-Benz Stadium | `mercedes-benz-stadium_hero` + `_2`,`_3` | Unsplash / Pexels | none |
-| 20 High Museum | `high-museum_hero` (owner) + `_2` | owner-supplied / stock | none |
+| 06 Ebenezer (gallery add) | `ebenezer-baptist_2` | Unsplash | none |
+| 16 Historic Fourth Ward Park | `historic-fourth-ward-park_hero` + `_2` | Commons | 2 rows |
+| 17 Krog Street Tunnel | `krog-street-tunnel_hero` + `_2`..`_5` | Commons + Pexels | 3 rows |
+| 19 The Temple | `the-temple_hero` + `_2`..`_4` | Commons | 2 rows (hero + `_3` are CC0) |
+| 21 Georgian Terrace | `georgian-terrace_hero` + `_2`..`_5` | Commons | 5 rows |
+| 22 The Flatiron | `atlanta-flatiron_hero` + `_2`..`_8` | Commons | 4 rows (4 files CC0) |
+| 24 Hurt Building | `hurt-building_hero` + `_2`..`_12` | Commons | 6 rows (6 files CC0) |
+| 25 Big Bethel AME | `big-bethel-ame_hero` | Unsplash | none |
+| 27 Prince Hall Masonic Temple | `prince-hall-masonic-temple_hero` + `_2`,`_3` | Commons | 3 rows |
 
-**All eleven carry zero credit obligations.** Ponce ships at hero + 1 only — that is all its
-stock pool supported; its Commons category holds 26, so backfill from there.
+Credit rows live in `drafts/CREDITS.md` § "Atlanta". **The Krog graffiti remains an open
+obligation** — those rows credit the photographers only; the painted work is the subject and
+is largely unattributable. That is one of the three stops cleared to ship with the obligation
+logged open.
 
-**20 High Museum's hero is owner-supplied** (the Meier volumes with the incised "High Museum of
-Art" lettering along the approach wall). `high-museum_2.webp` is the stock exterior. Only one
-clean exterior existed in the whole stock pool; the rest were gallery interiors, which carry
-their own copyright problem since the hung artworks are the subject.
+### 🔴 SLUG COLLISION — Atlanta's Flatiron ships as `atlanta-flatiron_*`
 
-### 🔴 SLUG COLLISION — Atlanta's Flatiron must NOT use `flatiron-building_*`
+`images/flatiron-building_hero.webp` and `_2`..`_4` are **live on gh-pages and belong to the
+NEW YORK catalog**. The slug column above already says `atlanta-flatiron`; honour it. Sweep
+`git ls-tree -r --name-only origin/gh-pages images/` for any slug before its first push —
+this batch was checked and all 41 files were confirmed new before the push.
 
-`images/flatiron-building_hero.webp` and `_2`..`_4` are **already live on gh-pages and belong to
-the NEW YORK catalog**. Pushing Atlanta's Flatiron under that slug would silently overwrite four
-images on a shipped tour. Use **`atlanta-flatiron_*`**. The same check applies to any Atlanta
-subject whose name exists in another city — sweep `git ls-tree -r --name-only origin/gh-pages
-images/` for the slug before the first push, every time.
+### 🔴 Stop 04 Woodruff Park shipped NOTHING — its four candidates all fail
 
-### Sourced this session, awaiting owner picks (not yet cropped or pushed)
+The owner picked `OC1` as hero. It cannot be cropped to the house 4:3 format: the source is
+6190&times;11004 (1:1.78), so a 4:3 band keeps only 42% of the height and every anchor either
+holds the EQUITABLE crown and loses the park entirely, or holds treetops and loses the
+building's identity. Three anchors were rendered and compared; none is publishable.
 
-| tour | pool | best | licence |
-|------|------|------|---------|
-| 17 Krog Street Tunnel | 53 Commons + 2 Pexels | Pexels MARTA-overpass shot; Commons `KC2` exterior w/ CSX containers | Pexels none; Commons CC BY / BY-SA |
-| 19 The Temple | 4 Commons | `TC1` full exterior, pediment + dome | **CC0 on 2 of 4** |
-| 21 Georgian Terrace | 7 Commons | `GC4` building; `GC3` entrance sign | CC BY-SA 4.0 |
-| 22 Flatiron (Atlanta) | 9 Commons | `FC2` hero; `FC6` doorway w/ MDCCCXCVII | **CC0 on 4 of 9** |
-| 24 Hurt Building | 12 Commons distinct | `HCX7` wedge apex (landscape); `HCX4` marble stair | CC BY-SA 4.0 |
-| 25 Big Bethel AME | 1 Unsplash | granite tower + JESUS SAVES steeple sign | none |
-| 06 Ebenezer (gallery add) | 1 Unsplash | Auburn Ave neon blade sign | none |
+The other three are worse, not better:
 
-**⚠️ Content flag on Krog `KC1`** (the sharpest Commons file, 7584×5056): two legible f-words on
-the piers. Croppable around, not shippable as shot.
+- **`OC4`** (25 Park Place from the park) is exactly 3:4, so it crops gently — but every
+  anchor is a curtain wall with the park reduced to framing foliage.
+- **`OC2`** is an animal-rights demonstration: a wall of placards with identifiable adults
+  **and children**. Not shippable in any slot, regardless of licence.
+- **`OC3`** is the one that works visually — cropped at `top_bias=0.05` the phoenix reads
+  against clean sky and the Coca-Cola sign shrinks to a small arc bottom-right. But it is
+  *Atlanta from the Ashes* (1969), still in copyright, unambiguously the subject: a **fourth**
+  artwork obligation on top of the three already open.
 
-**The remaining 13 have no usable imagery yet.** See § Sourcing below — solvable, not a property
-of the subjects.
+**Recommendation:** re-source. `Category:Woodruff Park` holds 9 files and only these 4 cleared
+the size bar; a wider sweep (Five Points / downtown Peachtree categories) or an owner
+photograph would settle it. Do NOT ship `OC2`.
+
+### Still unsourced — 10 subjects
+
+01 Five Points &middot; 02 Zero Mile Post &middot; 04 Woodruff Park (above) &middot;
+05 MLK Birth Home &middot; 08 Sweet Auburn Curb Market &middot; 18 BeltLine Eastside Trail
+&middot; 23 Candler Building &middot; 26 APEX / Auburn Avenue &middot; 28 Graves Hall
+&middot; 29 Spelman Oval &middot; 30 Student Movement Boulevard
+
+Two findings that narrow the search:
+
+- **Graves Hall is NOT in `Category:Buildings of Morehouse College`.** That category holds 8
+  files — John Hope, Brawley, Quarles, Kilgore, the MLK International Chapel, the Ray Charles
+  Center, the President's Residence — and no Graves. Search the title directly.
+- **`Category:Spelman College` is 59 files of people, not architecture.** Its depth is one
+  alumnae group-portrait session: identifiable private individuals holding a pennant, indoors,
+  no campus. Public domain, and still unusable — portraits of private people are not tour
+  imagery. Spelman has no buildings subcategory. `Category:Sisters Chapel` yielded the AUC
+  Woodruff Library and Archives Research Center instead (both CC0, staged, deferred by the
+  owner as better suited to stop 30).
 
 ## 🔴 Three stops depict copyrighted artwork — owner cleared them to ship (2026-08-17)
 
