@@ -7519,6 +7519,7 @@
       "videoURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/videos/via-57-west.mp4"
       ],
+      "videoRole": "narration",
       "kind": "single",
       "stops": [
         {
@@ -34118,7 +34119,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shinsegae-media-facade_2.webp"
       ],
       "videoURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/videos/shinsegae-media-facade.mp4"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/videos/shinsegae-media-facade.mp4",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/videos/landscape-test.mp4"
       ],
       "kind": "single",
       "stops": [
