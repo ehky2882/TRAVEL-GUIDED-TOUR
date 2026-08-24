@@ -40,6 +40,8 @@ final class TourDownloadPlanTests: XCTestCase {
             videoURLs: nil,
             videoRole: nil,
             kind: .single,
+            sourceURL: nil,
+            sourceAuthor: nil,
             stops: stops,
             introAudioURL: intro,
             totalDurationSeconds: 60,

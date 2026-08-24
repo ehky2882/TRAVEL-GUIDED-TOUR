@@ -24,6 +24,7 @@ import Foundation
 enum TourKind: String, Codable {
     case single
     case multiStop
+    case link
 }
 
 enum StopTriggerMode: String, Codable {
@@ -71,6 +72,8 @@ struct Tour: Codable {
     let videoURLs: [String]?
     let videoRole: String?
     let kind: TourKind
+    let sourceURL: String?
+    let sourceAuthor: String?
     let stops: [Stop]
     let introAudioURL: String?
     let totalDurationSeconds: Int
@@ -439,6 +442,34 @@ for (ti, t) in file.tours.enumerated() {
         } else if let d = t.walkingDistanceMeters, d <= 0 {
             err(tloc, "walkingDistanceMeters \(d) must be positive")
         }
+    case .link:
+        // A link pin stands for someone else's post. It carries one
+        // placeholder stop so `MapMarkers` has something at order 0 to draw,
+        // and that stop must be `manual` — a geofenced one would ask
+        // `ProximityMonitor` to fire audio that does not exist.
+        if t.stops.count != 1 {
+            err(tloc, "kind 'link' requires exactly 1 stop, found \(t.stops.count)")
+        }
+        if let first = t.stops.first, first.triggerMode != .manual {
+            err(tloc, "kind 'link' requires its stop to be triggerMode 'manual', got '\(first.triggerMode.rawValue)'")
+        }
+        if !isValidURL(t.sourceURL ?? "") {
+            err(tloc, "kind 'link' requires a valid sourceURL, got '\(t.sourceURL ?? "nil")'")
+        }
+        if !isNonEmpty(t.sourceAuthor ?? "") {
+            // The pin is built out of someone's work; shipping it uncredited
+            // is an editorial fault, not a technical one.
+            err(tloc, "kind 'link' requires sourceAuthor — a link pin must credit its creator")
+        }
+        if t.totalDurationSeconds != 0 {
+            err(tloc, "kind 'link' must have totalDurationSeconds 0, got \(t.totalDurationSeconds)")
+        }
+    }
+
+    // Only a link pin may name a source; anything else is a mis-set key.
+    if t.kind != .link {
+        if t.sourceURL != nil { err(tloc, "sourceURL is set on a '\(t.kind.rawValue)' tour — only 'link' may carry one") }
+        if t.sourceAuthor != nil { err(tloc, "sourceAuthor is set on a '\(t.kind.rawValue)' tour — only 'link' may carry one") }
     }
 
     // Stop order must pack 0..<count, no gaps, no dupes within a tour.
@@ -466,14 +497,27 @@ for (ti, t) in file.tours.enumerated() {
             err(sloc, "longitude \(s.longitude) out of [-180, 180]")
         }
 
-        if !isValidURL(s.audioURL) {
+        // 🔴 A link pin's stop carries an EMPTY audioURL and a zero duration
+        // — the same "no audio" representation a fresh maker draft writes,
+        // and safe because every reader goes through `URL(string:)`, which
+        // rejects "". Legal for `kind: link` and nowhere else: relaxing this
+        // for other kinds would let a real tour ship silently unplayable.
+        if t.kind == .link {
+            if !s.audioURL.isEmpty {
+                err(sloc, "a link pin's stop must have an empty audioURL, got '\(s.audioURL)'")
+            }
+        } else if !isValidURL(s.audioURL) {
             err(sloc, "audioURL '\(s.audioURL)' is not a valid URL")
         }
         if let u = s.imageURL, !isValidURL(u) {
             err(sloc, "imageURL '\(u)' is not a valid URL")
         }
 
-        if s.audioDurationSeconds <= 0 {
+        if t.kind == .link {
+            if s.audioDurationSeconds != 0 {
+                err(sloc, "a link pin's stop must have audioDurationSeconds 0, got \(s.audioDurationSeconds)")
+            }
+        } else if s.audioDurationSeconds <= 0 {
             err(sloc, "audioDurationSeconds must be positive, got \(s.audioDurationSeconds)")
         }
         stopAudioSum += max(0, s.audioDurationSeconds)
@@ -495,7 +539,9 @@ for (ti, t) in file.tours.enumerated() {
             if tx.range(of: "\\[[A-Za-z]", options: .regularExpression) != nil {
                 err(sloc, "transcriptText contains a bracketed stage direction (e.g. '[beat]') — strip production markers")
             }
-        } else {
+        } else if t.kind != .link {
+            // A link pin has no audio, so "has audio but no transcript" would
+            // be a false warning on every one of them.
             warn(sloc, "stop has audio but no transcriptText (accessibility gap — backfill when possible)")
         }
     }
@@ -516,7 +562,10 @@ for (ti, t) in file.tours.enumerated() {
     }
 
     // Duration math: total must cover the sum of stop durations.
-    if t.totalDurationSeconds <= 0 {
+    if t.kind == .link {
+        // Already checked above: a link pin is 0/0 by definition, and the
+        // sum-vs-total comparisons below are meaningless without audio.
+    } else if t.totalDurationSeconds <= 0 {
         err(tloc, "totalDurationSeconds must be positive, got \(t.totalDurationSeconds)")
     } else if t.totalDurationSeconds < stopAudioSum {
         err(tloc, "totalDurationSeconds \(t.totalDurationSeconds) < sum of stop durations \(stopAudioSum)")

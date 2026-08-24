@@ -31,6 +31,7 @@ REQUIRED_TOP = {"makers", "tours", "places"}
 REQUIRED_TOUR = {
     "id", "title", "shortDescription", "longDescription", "makerId",
     "heroImageURL", "additionalImageURLs", "videoURLs", "videoRole", "kind",
+    "sourceURL", "sourceAuthor",
     "introAudioURL", "totalDurationSeconds", "walkingDistanceMeters",
     "centroidLatitude", "centroidLongitude", "city", "country",
     "primaryCategory", "tags", "priceUSD", "priceTier", "stops",

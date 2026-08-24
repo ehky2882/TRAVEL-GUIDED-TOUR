@@ -514,6 +514,10 @@ private struct NewTourRow: Encodable {
             // Maker-authored tours carry no video yet, so no role to state.
             videoRole: nil,
             kind: TourKind(rawValue: kind) ?? .single,
+            // A maker cannot author a link pin — those are curated into
+            // the catalog by hand, so there is no source to carry here.
+            sourceURL: nil,
+            sourceAuthor: nil,
             stops: stops,
             introAudioURL: nil,
             totalDurationSeconds: totalDurationSeconds,
@@ -702,6 +706,8 @@ private struct TourRow: Decodable {
             // Maker-authored tours carry no video yet, so no role to state.
             videoRole: nil,
             kind: TourKind(rawValue: kind) ?? .single,
+            sourceURL: nil,
+            sourceAuthor: nil,
             stops: [],
             introAudioURL: nil,
             totalDurationSeconds: totalDurationSeconds,

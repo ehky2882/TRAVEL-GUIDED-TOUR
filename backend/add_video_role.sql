@@ -108,7 +108,7 @@ begin
     if patched = src then
         raise exception
             'found % but could not parse its videoURLs expression - refusing to guess. '
-            'Read it with: select pg_get_functiondef(''%%''::regprocedure);', target, target;
+            'Read it with: select pg_get_functiondef(''%''::regprocedure);', target, target;
     end if;
 
     execute patched;

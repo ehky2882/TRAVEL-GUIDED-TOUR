@@ -1076,6 +1076,29 @@ That requires several large pieces of infrastructure, roughly:
 | **8. In-app search.** Once catalog grows past browsable. | |
 | **9. Social — share a tour.** Deep links into a specific tour from a shared URL. | |
 
+### Outside content — link pins (new, 2026-08-24)
+
+Bringing content creators already have into Atlas, rather than asking them to start again.
+Owner's stated goal: *"creators that currently post on tik tok, instagram, linked in, youtube
+etc. can find maximum compatibility for content they've already created… i want to remove the
+hurdle."* Three routes, only the first built.
+
+| | |
+|---|---|
+| **Link pins — BUILT, [PR #584](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/584), open.** You find someone's post and it becomes a map pin that **plays inside the app** via that platform's own embed. No API key, no registration, no app review on any of the three. **An embed, never a copy** — TikTok exposes no video-file field and their terms forbid getting one otherwise. Detail: `archive/HANDOFF-260824-4.md`. | ⚠️ The embedded player has **never been on a screen**; simulator fixture in §4 of that handoff. |
+| **Creator import (camera roll).** A creator picks their own clip; the app extracts its audio as narration, a frame as the cover, and the duration. **Mostly exists already** — six of the seven wizard steps do their job; what blocks it is three walls: the audio step accepts `[.audio]` only, the photo picker is `matching: .images`, and `MakerTourService` hardcodes `videoURLs: nil` so **no tour can hold a video at all**. | Specced, not built. |
+| **Connect TikTok (official Display API).** A creator authorises `video.list` and picks from their own posts — pre-fills title, caption, cover and duration, more than the camera roll can. Needs TikTok developer registration + app review. | Not started. |
+
+**⚠️ The distinction that decides which to use: an embed cannot do what Atlas is for.** It needs
+signal and the screen on — no offline, no geofence audio, no Group Listen, no download. A link
+pin is something people *look at*; a tour is something that plays while they walk. That is why
+`TourKind.link` exists rather than link pins pretending to be tours.
+
+**🔴 A closed enum on a remotely-loaded catalogue is a forward-compatibility landmine.** An
+unknown `kind` throws, failing the whole catalog decode, so any already-shipped build silently
+stops updating. Decode unknown values to a safe default before the App Store — applies equally
+to `triggerMode` and `primaryCategory`.
+
 ### Tier 4 — Platform expansion
 
 | | |

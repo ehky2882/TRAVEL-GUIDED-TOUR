@@ -62,6 +62,10 @@ enum TestFixtures {
         stopCount: Int = 1,
         createdAt: String? = nil,
         priceTier: Int? = nil,
+        /// Only a `.link` tour carries these. Defaulted nil so every existing
+        /// caller is untouched.
+        sourceURL: String? = nil,
+        sourceAuthor: String? = nil,
         /// Explicit per-stop coordinates. Overrides `stopCount` +
         /// `latitude`/`longitude`. Needed for multi-stop tours whose
         /// stops are genuinely spread out — where the centroid is a
@@ -105,6 +109,8 @@ enum TestFixtures {
             videoURLs: nil,
             videoRole: nil,
             kind: kind,
+            sourceURL: sourceURL,
+            sourceAuthor: sourceAuthor,
             stops: stops,
             introAudioURL: nil,
             totalDurationSeconds: totalDuration,
