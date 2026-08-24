@@ -78,6 +78,37 @@ def check(catalog: dict) -> list:
     return problems
 
 
+def audit_migration_files(root: Path) -> list:
+    """Every file that replaces `get_catalog` wholesale must warn that it does.
+
+    A banner is not a fix — those files still contain the destructive
+    statement — but an unbannered one is a loaded gun with no trigger guard,
+    and this is what stops a new one being added quietly.
+
+    Legitimate: files whose new body CALLS `get_catalog_core()` (they are the
+    wrapper), and `schema.sql`, which is the base and runs before the rename.
+    """
+    import glob
+    problems = []
+    for f in sorted(glob.glob(str(root / "backend" / "*.sql"))):
+        raw = Path(f).read_text()
+        code = "\n".join(l for l in raw.splitlines() if not l.strip().startswith("--"))
+        marker = "create or replace function public.get_catalog()"
+        if marker not in code:
+            continue
+        body = code[code.index(marker):code.index(marker) + 900]
+        name = Path(f).name
+        if "get_catalog_core()" in body or name == "schema.sql":
+            continue  # the wrapper itself, or the base
+        if "NO LONGER SAFE TO RE-RUN" not in raw:
+            problems.append(
+                f"backend/{name} replaces get_catalog() with an inline body and "
+                f"carries no warning — re-running it would sever get_catalog_core() "
+                f"and drop places, priceTier and isPrivate"
+            )
+    return problems
+
+
 def selftest() -> int:
     good = {
         "makers": [{k: 1 for k in REQUIRED_MAKER}],
@@ -154,8 +185,10 @@ def fetch() -> dict:
 def main() -> int:
     if "--selftest" in sys.argv:
         return selftest()
+    root = Path(__file__).resolve().parent.parent
+    file_problems = audit_migration_files(root)
     catalog = fetch()
-    problems = check(catalog)
+    problems = check(catalog) + file_problems
     print(f"live catalog: {len(catalog.get('tours', []))} tours, "
           f"{len(catalog.get('makers', []))} makers, "
           f"{len(catalog.get('places', []))} places")
