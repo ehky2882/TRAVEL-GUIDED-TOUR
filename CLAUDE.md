@@ -126,6 +126,14 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-23)
 
+### TestFlight 1.1 (111) — the day's four changes are on a phone (session 105d)
+
+**Owner: "build is live. i didnt test thouroughly but it seems ok."** Cut from `891702fd` on `main`, so it carries the four blocks below **plus** the parallel session's work that landed the same day. App Store Connect reports the build **VALID** — verified against Apple rather than the workflow's own success line, per § READ FIRST.
+
+- **⚠️ "Seems ok" IS NOT A VERIFICATION, and the specific thing still unconfirmed is the one that was flagged before the build: light mode on the TOUR UPLOAD WIZARD and the SIGN-IN SHEET.** Those two draw the deep surface as a recessed field on a chrome page — the pairing that inverted — and the Simulator holds no session, so nobody has seen them with real content in either scheme. **Do not record light mode as owner-verified on the strength of this build.**
+- **Also unconfirmed rather than confirmed:** the offline behaviour (download a tour, Airplane Mode, open it) and the launch screen on a device — the launch screen especially, because **iOS caches it through an update** and a stale-looking first frame needs a delete-and-reinstall before it means anything.
+- **Open, offered and not built:** a hairline on the chrome's outer edges, which is the only thing that will separate the drawer and bars from Apple's near-white light map (no fill value can); and an explicit "you're offline" state instead of blank grey.
+
 ### A photograph you already have is drawn when the network fails ([PR #568](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/568), session 105c — code)
 
 The second half of the subway report — the first half is the block below. `test_sim` **436/436** (+8). Two files. Full detail: `archive/HANDOFF-260823-4.md`.
