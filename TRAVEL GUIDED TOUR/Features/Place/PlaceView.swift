@@ -89,8 +89,20 @@ struct PlaceView: View {
         scrollBody
             .safeAreaInset(edge: .top, spacing: 0) {
                 chromeRow
-                    .background(AtlasColors.secondaryBackground.opacity(0.8))
-                    .background(.regularMaterial)
+                    // 🔴 OPAQUE, and NOT over a material. The row and the
+                    // page below it must be the SAME shade, which is the
+                    // entire reason `secondaryBackground` is a hardcoded
+                    // RGB pair rather than a semantic colour. This used to
+                    // read `.opacity(0.8)` over `.regularMaterial`, which
+                    // defeated that: the material resolves lighter than
+                    // #1C1C1E, so the composite came out a few levels off
+                    // the page and the boundary was visible as a band
+                    // (owner, 2026-08-24). Worse, a material samples what
+                    // is behind it, so the row's shade DRIFTED as a
+                    // photograph scrolled under it. Fully opaque, the
+                    // material was invisible anyway — it was only paying
+                    // for an offscreen blur pass per frame.
+                    .background(AtlasColors.secondaryBackground)
             }
             .background(AtlasColors.secondaryBackground)
             .toolbar(.hidden, for: .navigationBar)
