@@ -7500,6 +7500,52 @@
       "walkingDistanceMeters": null
     },
     {
+      "id": "E05080DD-9C96-410E-908D-8DD60D2B666C",
+      "createdAt": "2026-08-23",
+      "title": "VIA 57 West",
+      "shortDescription": "Bjarke Ingels' tetrahedral courtscraper on the Hudson at 625 West 57th Street.",
+      "longDescription": "VIA 57 West is a hybrid of two building types that rarely meet: the Manhattan tower and the Copenhagen perimeter block. The structure warps into a tetrahedron, rising from a low corner near the West Side Highway to a peak at its north-west edge, and wraps a planted courtyard at its centre. Completed in 2016 to a design by Bjarke Ingels Group.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/via-57-west_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/videos/via-57-west.mp4"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F30AED81-E00B-42DD-A8F8-53A56E5D30FD",
+          "order": 0,
+          "title": "VIA 57 West",
+          "caption": "Stand on West 57th Street near Eleventh Avenue, looking up at the sloping face where the building lifts from its low corner toward the river.",
+          "latitude": 40.7714885,
+          "longitude": -73.9935735,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/via-57-west.mp3",
+          "audioDurationSeconds": 12,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/via-57-west_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 12,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7714885,
+      "centroidLongitude": -73.9935735,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Bjarke Ingels"
+      ],
+      "priceUSD": 0
+    },
+    {
       "id": "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
       "createdAt": "2026-06-08",
       "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",

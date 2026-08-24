@@ -202,7 +202,7 @@ let architectTags: Set<String> = [
     "Clorindo Testa", "Víctor Meano", "Jørn Utzon", "Joseph Reed",
     "Roy Grounds", "Marc Newson", "Studio KO", "Mario Botta", "Jun Aoki",
     "Rocco Yim", "Bing Thom", "Philippe Starck", "Gustave Eiffel",
-    "Rem Koolhaas", "Dominique Perrault", "Hiroshi Sambuichi",
+    "Rem Koolhaas", "Dominique Perrault", "Hiroshi Sambuichi", "Bjarke Ingels",
     "Antoni Gaudí", "Lluís Domènech i Montaner", "Josep Puig i Cadafalch",
     "Ricardo Bofill", "Enric Sagnier", "Josep Fontserè",
     "Antoni Bonet i Castellana", "Josep Maria Subirachs",

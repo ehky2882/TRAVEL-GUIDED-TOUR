@@ -95,6 +95,9 @@ enum Tag {
             "Studio KO", "Mario Botta", "Jun Aoki", "Rocco Yim", "Bing Thom",
             "Philippe Starck", "Gustave Eiffel", "Rem Koolhaas",
             "Dominique Perrault", "Hiroshi Sambuichi",
+            // Denmark. VIA 57 West on the Manhattan waterfront is his
+            // best-known building outside Copenhagen.
+            "Bjarke Ingels",
             // Catalonia and Spain. Gaudi alone accounts for 16 tours, which makes
             // him the most-represented architect in the catalog; all eight shipped
             // with the generic Designed by a Master fallback until Barcelona landed.
