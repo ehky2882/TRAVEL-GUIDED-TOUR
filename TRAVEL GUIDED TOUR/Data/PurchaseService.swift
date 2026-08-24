@@ -114,6 +114,19 @@ final class PurchaseService {
 
     /// Whether this tour's audio may play in full. Free tours are always
     /// unlocked — the entire catalog today.
+    /// Seconds of preview to allow for this tour, or `nil` for unlimited.
+    ///
+    /// 🔴 One definition, because a lock enforced in one place is not enforced
+    /// until EVERY place enforces it. `TourDetailView`'s play button used to
+    /// own this rule privately; the fullscreen video viewer needs the same
+    /// answer, and a second copy computed slightly differently is how the
+    /// session-91 overflow-menu paywall hole happened. Anything that can
+    /// START a tour must call this first.
+    func previewLimit(for tour: Tour) -> TimeInterval? {
+        guard tour.isPaid, !isUnlocked(tour) else { return nil }
+        return Self.previewSeconds
+    }
+
     func isUnlocked(_ tour: Tour) -> Bool {
         guard tour.isPaid else { return true }
         return entitlements.contains(tour.id)

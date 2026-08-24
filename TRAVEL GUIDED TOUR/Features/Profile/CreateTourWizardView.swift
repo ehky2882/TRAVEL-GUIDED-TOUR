@@ -1519,6 +1519,7 @@ struct CreateTourWizardView: View {
             heroImageURL: tour.heroImageURL,
             additionalImageURLs: tour.additionalImageURLs,
             videoURLs: tour.videoURLs,
+            videoRole: tour.videoRole,
             kind: tour.kind,
             stops: [stop],
             introAudioURL: tour.introAudioURL,

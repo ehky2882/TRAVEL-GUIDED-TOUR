@@ -6,6 +6,37 @@ enum TourKind: String, Codable {
     case multiStop
 }
 
+/// What a tour's video actually IS — the distinction the app could not make
+/// before, and the reason a clip and the play bar behaved as two unrelated
+/// things (owner, 2026-08-24: *"i agree we need to define different types of
+/// videos"*).
+///
+/// 🔴 Do NOT infer this from the data. The tempting rule — single stop, clip
+/// has sound, durations match — breaks `gallery` the first time a piece of
+/// b-roll happens to be the length of its narration, and the failure is
+/// silent: a moving photograph would seize the tour's transport.
+enum TourVideoRole: String, Codable {
+    /// The clip is extra: b-roll, a moving photograph beside the still ones.
+    /// It plays on its own, and if it has sound it borrows the narration and
+    /// hands it straight back. This is every video in the catalogue today,
+    /// and the default for anything that does not say otherwise.
+    case gallery
+
+    /// The clip IS the tour. Its soundtrack is the narration, so the play bar
+    /// and the picture are one thing: play, pause or scrub either and both
+    /// move together.
+    ///
+    /// ⚠️ The AUDIO is the clock and the video is muted, not the other way
+    /// round. The tour player already owns the lock screen, background
+    /// playback, the geofence hand-off, Group Listen, downloads, playback
+    /// progress and the speed control; rebuilding all of that on an
+    /// `AVPlayer` fed by a video file would be enormous and would regress
+    /// every one of them. Slaving a muted picture to the existing clock costs
+    /// almost nothing and keeps them all. It also matches how creator import
+    /// is planned to work, which extracts the clip's audio to an MP3 anyway.
+    case narration
+}
+
 struct Tour: Codable, Identifiable, Hashable {
     let id: UUID
     let title: String
@@ -21,6 +52,11 @@ struct Tour: Codable, Identifiable, Hashable {
     /// image-only exactly as before. Additive + backward-compatible:
     /// a catalog without this key decodes to `nil`.
     let videoURLs: [String]?
+    /// What those videos are — see `TourVideoRole`. Optional, and nil means
+    /// `.gallery`: every tour authored before this existed keeps behaving
+    /// exactly as it did, and the bundled seed and the gh-pages mirror both
+    /// decode fine without the key.
+    let videoRole: TourVideoRole?
     let kind: TourKind
     let stops: [Stop]
     let introAudioURL: String?

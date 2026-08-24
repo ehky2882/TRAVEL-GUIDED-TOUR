@@ -153,6 +153,24 @@ struct BottomModuleRoot: View {
                 PlayerView(tour: tour)
             }
         }
+        // 🔴 The fullscreen video viewer presents from THIS window for exactly
+        // the same reason the player above does: the bars live at
+        // `windowLevel = .normal + 1` and would otherwise paint straight over
+        // an ordinary modal put up by the tour sheet. Session 24 hit this with
+        // `PlayerView` — hiding the module around the transition made it
+        // worse; presenting from this window was the fix.
+        //
+        // ⚠️ Hosted on its OWN view rather than chained onto the modifier
+        // above. Two presentation modifiers of the same kind attached to one
+        // view do not both work in SwiftUI — the second is silently ignored,
+        // which reads as a dead button rather than an error. Verified here:
+        // chained, the expand control did nothing at all.
+        .background {
+            Color.clear
+                .fullScreenCover(item: $appShared.fullscreenVideo) { request in
+                    FullscreenVideoView(request: request)
+                }
+        }
     }
 
     /// Should the bars paint edge-to-edge rather than as a floating island?

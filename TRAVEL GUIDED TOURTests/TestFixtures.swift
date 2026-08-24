@@ -103,6 +103,7 @@ enum TestFixtures {
             heroImageURL: heroImageURL,
             additionalImageURLs: nil,
             videoURLs: nil,
+            videoRole: nil,
             kind: kind,
             stops: stops,
             introAudioURL: nil,

@@ -511,6 +511,8 @@ private struct NewTourRow: Encodable {
             heroImageURL: heroImageURL,
             additionalImageURLs: nil,
             videoURLs: nil,
+            // Maker-authored tours carry no video yet, so no role to state.
+            videoRole: nil,
             kind: TourKind(rawValue: kind) ?? .single,
             stops: stops,
             introAudioURL: nil,
@@ -697,6 +699,8 @@ private struct TourRow: Decodable {
             heroImageURL: heroImageURL,
             additionalImageURLs: additionalImageURLs,
             videoURLs: nil,
+            // Maker-authored tours carry no video yet, so no role to state.
+            videoRole: nil,
             kind: TourKind(rawValue: kind) ?? .single,
             stops: [],
             introAudioURL: nil,

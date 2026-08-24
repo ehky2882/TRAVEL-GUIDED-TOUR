@@ -395,7 +395,9 @@ struct TourDetailView: View {
             additionalImageURLs: tour.additionalImageURLs,
             videoURLs: tour.videoURLs,
             height: nil,   // takes AtlasSpacing.heroAspectRatio
-            category: tour.primaryCategory
+            category: tour.primaryCategory,
+            tourId: tour.id,
+            videoRole: tour.videoRole ?? .gallery
         )
         .padding(.horizontal, AtlasSpacing.lg)
     }
@@ -1129,7 +1131,9 @@ struct TourDetailView: View {
     /// Seconds of preview to allow for the current state — `nil` (unlimited)
     /// for anything the user may hear in full.
     private var activePreviewLimit: TimeInterval? {
-        isLockedPaid ? PurchaseService.previewSeconds : nil
+        // Shared with the fullscreen video viewer — see
+        // `PurchaseService.previewLimit(for:)`. Do not inline this rule again.
+        purchaseService?.previewLimit(for: tour)
     }
 
     private var buttonRow: some View {

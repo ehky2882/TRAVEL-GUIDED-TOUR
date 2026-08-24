@@ -69,6 +69,7 @@ struct Tour: Codable {
     let heroImageURL: String
     let additionalImageURLs: [String]?
     let videoURLs: [String]?
+    let videoRole: String?
     let kind: TourKind
     let stops: [Stop]
     let introAudioURL: String?
@@ -379,6 +380,23 @@ for (ti, t) in file.tours.enumerated() {
             } else if !videoExts.contains(where: { u.lowercased().hasSuffix($0) }) {
                 warn(tloc, "videoURLs[\(i)] '\(u)' doesn't end in a known video extension (.mp4/.mov/.m4v) — sanity check?")
             }
+        }
+    }
+    // videoRole — closed vocabulary, mirroring `TourVideoRole` in
+    // Models/Tour.swift. Absent means `gallery`, which is every video authored
+    // before the role existed.
+    if let role = t.videoRole {
+        let known = ["gallery", "narration"]
+        if !known.contains(role) {
+            err(tloc, "videoRole '\(role)' is not one of \(known.joined(separator: ", "))")
+        }
+        if (t.videoURLs ?? []).isEmpty {
+            err(tloc, "videoRole '\(role)' is set but the tour has no videoURLs")
+        }
+        // A narration clip IS the tour, so a tour with several of them has no
+        // single soundtrack to be slaved to.
+        if role == "narration", (t.videoURLs ?? []).count > 1 {
+            err(tloc, "videoRole 'narration' with \((t.videoURLs ?? []).count) videos — a narration clip is the tour, so there can only be one")
         }
     }
     if let u = t.introAudioURL, !isValidURL(u) { err(tloc, "introAudioURL '\(u)' is not a valid URL") }
