@@ -156,28 +156,47 @@ create policy stops_public_read on public.stops
 -- camelCase keys match the Swift Codable property names. SECURITY INVOKER
 -- (default) so RLS applies — anon sees published tours only.
 -- ---------------------------------------------------------------------------
--- 🔴 THIS DEFINITION IS STALE, AND MUST NOT BE PASTED AT A LIVE DATABASE.
+-- ============================================================================
+-- 🔴 READ THIS BEFORE CHANGING WHAT THE CATALOG EMITS.
 --
--- Later migrations rebuilt `get_catalog()` in the live project and did not
--- come back to update this file. Measured against the live RPC on 2026-08-24:
+-- This function is the BASE of a three-part composition, not the whole thing.
+-- `places.sql` renames whatever `get_catalog` is at the time to
+-- `get_catalog_core`, then creates a new `get_catalog` that wraps it:
 --
---     live has    places, priceTier, isPrivate, country, videoURLs, videoRole
---     this has    country, videoURLs, videoRole
+--     get_catalog()  =  get_catalog_core()  ||  { places: catalog_places() }
 --
--- So a `create or replace` from here would silently drop **all 25 places,
--- priceTier (every paid tour's price) and isPrivate (private accounts)** -
--- three shipped features, no error. `add_video_role.sql` was drafted that way
--- before the comparison was run, and it would have done exactly that.
+-- So the body below is what ends up running as `get_catalog_core`. It is
+-- deliberately narrower than the live core, because it may only reference
+-- columns THIS FILE creates. `price_tier`, `is_private` and the whole
+-- `places` table arrive later, from `paid_tours.sql`, `social.sql` and
+-- `places.sql` — so this file cannot emit `priceTier`, `isPrivate` or
+-- `places` without failing on a fresh database. That gap is the layering
+-- working, not drift.
 --
--- ⚠️ To change what the catalog emits, PATCH the live function rather than
--- replacing it: read `pg_get_functiondef`, insert your key, put it back, and
--- raise if the anchor is missing. `backend/add_video_role.sql` is the worked
--- example.
+-- ⚠️ WHAT IS ACTUALLY LIVE (measured 2026-08-24, and NOT reproducible by
+-- running the files in this repo in any order):
 --
--- This file remains correct as the table/RLS bootstrap for a FRESH database;
--- it is only the get_catalog body that has drifted. Reconciling it means
--- diffing against the live function, not against any one migration - no
--- single file in this repo carries the whole thing.
+--     get_catalog()        3 lines, 260 chars, the wrapper above
+--     get_catalog_core()   makers  — id, displayName, avatarURL, avatarEmoji,
+--                                    avatarInitials, avatarColor, bio,
+--                                    websiteURL, link2URL, link3URL, userId,
+--                                    isPrivate
+--                          tours   — the keys below, PLUS priceTier and
+--                                    videoRole
+--                          stops   — as below
+--     catalog_places()     places with >= 2 published tours
+--
+-- 🔴 TO ADD A KEY: PATCH `get_catalog_core`. NEVER `create or replace
+-- get_catalog`. Replacing the wrapper severs the call to the core and
+-- silently drops places and every key the core has — no error, the app just
+-- stops receiving them. Three files in this directory still do that and now
+-- carry a banner saying so: `paid_tours.sql`, `add_country.sql`,
+-- `add_video_urls.sql`.
+--
+-- The safe shape — read the live definition, insert one key, put it back, and
+-- RAISE if the anchor is missing so the transaction rolls back — is worked
+-- through in `backend/add_video_role.sql`.
+-- ============================================================================
 
 create or replace function public.get_catalog()
 returns jsonb
