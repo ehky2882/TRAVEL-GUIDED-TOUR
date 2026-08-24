@@ -28,6 +28,15 @@ struct FullscreenVideoRequest: Identifiable, Equatable {
     let didPauseNarration: Bool
     /// Shape as displayed (i.e. after `preferredTransform`), not as stored.
     let isLandscape: Bool
+    /// The carousel thumbnail's frame in GLOBAL coordinates — where the clip
+    /// is on screen at the moment the user taps expand. The viewer grows out
+    /// of this rather than sliding up from the bottom, so the picture appears
+    /// to be the same object getting bigger.
+    ///
+    /// Global rather than local because the two live in different windows:
+    /// the thumbnail is in the main window, the viewer in the bottom module's.
+    /// Both are full-screen on the same scene, so global coordinates line up.
+    let sourceFrame: CGRect
 
     static func == (a: FullscreenVideoRequest, b: FullscreenVideoRequest) -> Bool { a.id == b.id }
 }
@@ -78,6 +87,17 @@ struct FullscreenVideoView: View {
     /// Narration debt: seeded from the request, then owned here.
     @State private var owesNarrationResume = false
     @State private var controlsVisible = true
+    /// 0 = the carousel thumbnail, 1 = the whole screen. Driven on appear and
+    /// on close, and the ONLY animation the viewer has — the cover is
+    /// presented with animation suppressed so there is no slide underneath it.
+    @State private var expansion: Double = 0
+
+    /// The growth curve. Short, and eased so the picture arrives rather than
+    /// stopping dead — the same reasoning as the launch hand-off's arrivals.
+    static let expandCurve: Animation = .spring(response: 0.34, dampingFraction: 0.86)
+    /// How long to let the collapse run before the state is cleared. Slightly
+    /// past the curve, so the viewer is not torn out mid-flight.
+    static let collapseSeconds: Double = 0.30
 
     // MARK: - Pure rules (unit-tested; no view, no device needed)
 
@@ -165,6 +185,45 @@ struct FullscreenVideoView: View {
         return max(resolved.top, resolved.bottom, resolved.left, resolved.right, floor)
     }
 
+    /// How the viewer's content is transformed partway through the expand.
+    ///
+    /// `progress` 0 sits it in the carousel thumbnail, 1 fills the screen.
+    ///
+    /// 🔴 **The scale is UNIFORM.** Matching the thumbnail's box exactly would
+    /// need a different scale on each axis — the box and the screen have
+    /// different proportions — and that squashes the picture for the whole
+    /// flight, which is far more noticeable than a few points of misalignment
+    /// at the start. So the content is fitted into the box (`min` of the two
+    /// ratios) and centred on it.
+    ///
+    /// The consequence, stated rather than hidden: at progress 0 the picture
+    /// is a little smaller than the thumbnail's own letterboxed video, because
+    /// a clip that is width-limited on the screen can be height-limited in the
+    /// box. Over ~0.3s it reads as growth, not as a jump.
+    ///
+    /// An empty `source` (nothing measured) returns the identity, so a missing
+    /// measurement degrades to the picture simply being there rather than to a
+    /// zero-sized view.
+    static func expandTransform(
+        source: CGRect,
+        full: CGRect,
+        progress: Double
+    ) -> (scale: CGFloat, centre: CGPoint) {
+        let identity = (scale: CGFloat(1), centre: CGPoint(x: full.midX, y: full.midY))
+        guard source.width > 0, source.height > 0, full.width > 0, full.height > 0 else {
+            return identity
+        }
+        let t = CGFloat(min(max(progress, 0), 1))
+        let fit = min(source.width / full.width, source.height / full.height)
+        return (
+            scale: fit + (1 - fit) * t,
+            centre: CGPoint(
+                x: source.midX + (full.midX - source.midX) * t,
+                y: source.midY + (full.midY - source.midY) * t
+            )
+        )
+    }
+
     /// The size the content stack is laid out at before rotation. When
     /// rotated it takes the screen's dimensions swapped, so the picture fills
     /// the long axis.
@@ -190,8 +249,22 @@ struct FullscreenVideoView: View {
             // edge relative to them; `safeAreaInsets` still reports what was
             // ignored, which is exactly the number needed here.
             let controlInset = Self.controlInset()
+            let full = CGRect(origin: .zero, size: geo.size)
+            let zoom = Self.expandTransform(
+                source: request.sourceFrame,
+                full: full,
+                progress: expansion
+            )
+            // The picture GROWS out of the carousel thumbnail rather than
+            // sliding up from the bottom, so it reads as the same object
+            // getting bigger. The cover itself is presented with animation
+            // suppressed (see `GalleryVideoView.expand()`); this is the only
+            // motion.
             ZStack {
-                Color.black.ignoresSafeArea()
+                // The ground fades in with the growth. At progress 0 it is
+                // clear, so the first frame shows the tour page underneath
+                // exactly as it was.
+                Color.black.opacity(expansion).ignoresSafeArea()
                 // Everything the viewer contains — picture AND controls —
                 // lives inside the rotated stack. A sideways picture with an
                 // upright close button reads as broken.
@@ -225,12 +298,18 @@ struct FullscreenVideoView: View {
                 // A rotated frame wider than the screen must not be clipped by
                 // the ZStack's own bounds.
                 .frame(width: geo.size.width, height: geo.size.height)
+                // One uniform transform rather than a re-layout each frame, so
+                // the video surface is never asked to resize 60 times a second
+                // and the picture cannot distort on the way.
+                .scaleEffect(zoom.scale)
+                .position(zoom.centre)
             }
         }
         .ignoresSafeArea()
         .statusBarHidden()
         .task { await prepare() }
         .onAppear {
+            withAnimation(Self.expandCurve) { expansion = 1 }
             owesNarrationResume = request.didPauseNarration
             // The device keeps reporting physical orientation while the app is
             // portrait-locked, but only while generation is switched on.
@@ -269,9 +348,7 @@ struct FullscreenVideoView: View {
             if controlsVisible {
                 VStack {
                     HStack {
-                        Button {
-                            appShared?.fullscreenVideo = nil
-                        } label: {
+                        Button(action: collapse) {
                             Image(systemName: "xmark")
                                 .font(.system(size: 15, weight: .semibold))
                                 .foregroundStyle(.white)
@@ -300,6 +377,20 @@ struct FullscreenVideoView: View {
                 .accessibilityLabel(isPlaying ? "Pause video" : "Play video")
                 .transition(.opacity)
             }
+        }
+    }
+
+    /// Shrink back into the carousel thumbnail, then clear the state.
+    ///
+    /// The state is cleared inside a transaction with animations suppressed:
+    /// otherwise the cover would slide *down* on top of the collapse we just
+    /// ran, which reads as two dismissals.
+    private func collapse() {
+        withAnimation(Self.expandCurve) { expansion = 0 }
+        DispatchQueue.main.asyncAfter(deadline: .now() + Self.collapseSeconds) {
+            var t = Transaction()
+            t.disablesAnimations = true
+            withTransaction(t) { appShared?.fullscreenVideo = nil }
         }
     }
 

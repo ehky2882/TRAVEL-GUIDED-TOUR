@@ -76,6 +76,9 @@ struct GalleryVideoView: View {
     /// opens in the right orientation immediately rather than resolving the
     /// asset a second time.
     @State private var isLandscape = true
+    /// This page's frame on screen, in global coordinates — handed to the
+    /// viewer so it can grow out of exactly where the clip already is.
+    @State private var frameOnScreen: CGRect = .zero
 
     /// Optional for the same reason `audioPlayer` is: not every presentation
     /// path injects it. Without it the expand button simply isn't offered.
@@ -137,6 +140,11 @@ struct GalleryVideoView: View {
         // one page every time. Applied as an overlay (rather than inside the
         // ZStack) so it also sits above the surface tap gesture below.
         .overlay(alignment: .topTrailing) { expandAffordance }
+        // Global, because the viewer is presented in a different window. Both
+        // are full-screen on the same scene, so the coordinates line up.
+        .onGeometryChange(for: CGRect.self) { proxy in
+            proxy.frame(in: .global)
+        } action: { frameOnScreen = $0 }
         .task(id: urlString) {
             await prepare()
         }
@@ -229,13 +237,21 @@ struct GalleryVideoView: View {
         player?.pause()
         let debt = didPauseNarration
         didPauseNarration = false
-        appShared.fullscreenVideo = FullscreenVideoRequest(
+        let request = FullscreenVideoRequest(
             urlString: urlString,
             startSeconds: at.isFinite ? max(0, at) : 0,
             hasAudio: hasAudio,
             didPauseNarration: debt,
-            isLandscape: isLandscape
+            isLandscape: isLandscape,
+            sourceFrame: frameOnScreen
         )
+        // 🔴 Presented with animation SUPPRESSED. A `fullScreenCover` slides up
+        // from the bottom by default, and the viewer's own growth out of this
+        // thumbnail would then run on top of that slide — two motions at once.
+        // The growth is the only animation the expand should have.
+        var t = Transaction()
+        t.disablesAnimations = true
+        withTransaction(t) { appShared.fullscreenVideo = request }
     }
 
     /// Builds the player and detects whether the clip has an audio

@@ -232,7 +232,8 @@ final class FullscreenVideoRulesTests: XCTestCase {
             startSeconds: 4.5,
             hasAudio: true,
             didPauseNarration: true,
-            isLandscape: false
+            isLandscape: false,
+            sourceFrame: CGRect(x: 24, y: 180, width: 345, height: 345)
         )
         XCTAssertTrue(req.didPauseNarration)
         XCTAssertEqual(req.startSeconds, 4.5, accuracy: 0.001)
@@ -246,9 +247,75 @@ final class FullscreenVideoRulesTests: XCTestCase {
             FullscreenVideoRequest(
                 urlString: "https://example.com/clip.mp4",
                 startSeconds: 0, hasAudio: true,
-                didPauseNarration: false, isLandscape: false
+                didPauseNarration: false, isLandscape: false,
+                sourceFrame: .zero
             )
         }
         XCTAssertNotEqual(make(), make())
+    }
+
+    // MARK: - The expand transform
+
+    private let thumb = CGRect(x: 24, y: 180, width: 345, height: 345)
+    private let screen = CGRect(x: 0, y: 0, width: 393, height: 852)
+
+    /// At the start the content sits on the thumbnail, fitted inside it.
+    func testAtProgressZeroTheContentSitsOnTheThumbnail() {
+        let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 0)
+        XCTAssertEqual(z.centre.x, thumb.midX, accuracy: 0.01)
+        XCTAssertEqual(z.centre.y, thumb.midY, accuracy: 0.01)
+        // Fitted, so it never exceeds the box on either axis.
+        XCTAssertLessThanOrEqual(screen.width * z.scale, thumb.width + 0.01)
+        XCTAssertLessThanOrEqual(screen.height * z.scale, thumb.height + 0.01)
+    }
+
+    /// At the end it is the screen, untransformed.
+    func testAtProgressOneTheContentFillsTheScreen() {
+        let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 1)
+        XCTAssertEqual(z.scale, 1, accuracy: 0.0001)
+        XCTAssertEqual(z.centre.x, screen.midX, accuracy: 0.01)
+        XCTAssertEqual(z.centre.y, screen.midY, accuracy: 0.01)
+    }
+
+    /// 🔴 The scale is a single number, so the picture cannot squash on the
+    /// way. Matching the thumbnail's box exactly would need one scale per
+    /// axis; that distortion runs for the whole flight and is far worse than a
+    /// few points of misalignment at the start.
+    func testScaleIsUniformSoThePictureCannotDistort() {
+        for p in stride(from: 0.0, through: 1.0, by: 0.1) {
+            let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: p)
+            let w = screen.width * z.scale
+            let h = screen.height * z.scale
+            XCTAssertEqual(w / h, screen.width / screen.height, accuracy: 0.0001,
+                           "aspect must hold at progress \(p)")
+        }
+    }
+
+    /// Growth is monotonic — no dip on the way out.
+    func testScaleGrowsMonotonically() {
+        var last: CGFloat = -1
+        for p in stride(from: 0.0, through: 1.0, by: 0.05) {
+            let s = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: p).scale
+            XCTAssertGreaterThanOrEqual(s, last)
+            last = s
+        }
+    }
+
+    /// Progress outside 0...1 is clamped, so a spring overshoot cannot push
+    /// the picture past the screen or invert it.
+    func testProgressIsClamped() {
+        let under = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: -0.5)
+        let zero = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 0)
+        XCTAssertEqual(under.scale, zero.scale, accuracy: 0.0001)
+        let over = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 1.5)
+        XCTAssertEqual(over.scale, 1, accuracy: 0.0001)
+    }
+
+    /// An unmeasured thumbnail degrades to the picture simply being there,
+    /// full size — never to a zero-sized view.
+    func testUnmeasuredSourceFallsBackToFullScreen() {
+        let z = FullscreenVideoView.expandTransform(source: .zero, full: screen, progress: 0)
+        XCTAssertEqual(z.scale, 1, accuracy: 0.0001)
+        XCTAssertEqual(z.centre.x, screen.midX, accuracy: 0.01)
     }
 }
