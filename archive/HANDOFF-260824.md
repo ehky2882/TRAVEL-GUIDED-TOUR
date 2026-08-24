@@ -1,0 +1,133 @@
+# Handoff — 2026-08-24 (session 107, local Mac) — a clip you can actually see
+
+Built the fullscreen video viewer specced in `archive/HANDOFF-260823-5.md` §A.
+[PR #571](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/571), stacked on
+[#569](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/569). Code only —
+no SQL, no catalogue change. `test_sim` **457/457** (+21).
+
+---
+
+## 0. Two things that had to be cleared first
+
+**The handoff filename collided — twice over.** `archive/HANDOFF-260823-3.md`
+exists as **two entirely different files**: session 104's coordinates /
+duplicates / architects handoff (on `main` via #570) and session 106's video
+handoff (on the creator branch). The prompt pointed at `-3`; reading `main`'s
+copy gave the wrong document. **The video handoff is now `-5`.**
+
+**That collision was also the ONLY thing blocking #569.** Its conflict was the
+add/add on that one file; everything else auto-merged, including both copies
+of the architect vocabulary. Resolved on its branch — main's `-3` kept, the
+video handoff renamed — and pushed, so #569 is mergeable again. Validator
+**0 errors** across 1,467 tours afterwards.
+
+⚠️ **VIA 57 West is not in the live catalogue while #569 is unmerged**, so the
+simulator needed a temporary switch to the bundled copy (`autoRefresh` off,
+`refreshOnForeground` stubbed, app uninstalled — all three, or Supabase wins).
+Both `via-57-west.mp4` and its hero were already live on gh-pages.
+
+⚠️ **The owner's `.mov` is the 296×640 Instagram screen recording session 106
+already flagged.** Usable locally; **not** to be hosted. The generated
+1080×1920 stand-in is the better test asset anyway — its TOP/BOTTOM/L/R
+markers make a crop or rotation fault obvious on sight.
+
+---
+
+## 1. 🔴 Three hit-testing traps, one symptom
+
+Each drew a control that **rendered, sat in the accessibility tree, and whose
+action never ran**. None was findable by reading the code. All three were
+found with an `NSLog` probe — the decisive move, and the reason this cost one
+extra build each rather than the six the session-102 hang cost.
+
+1. **A paged `TabView`'s `UIPageControl` spans the FULL WIDTH** of the strip
+   its dots sit in, and a tap on its right half advances a page. The expand
+   button at bottom-trailing sat underneath it — drawn on top, hit-tested
+   beneath, because the page control belongs to the TabView and is above page
+   content whatever the page draws. **The tell: the tap fired nothing and the
+   carousel advanced by exactly one page, every time.** Now top-trailing.
+2. **Two `.fullScreenCover` modifiers chained on one view: the second is
+   silently ignored.** The player's cover already lived on `BottomModuleRoot`.
+   The video cover now hosts on its own view beside it.
+3. **A plain 24pt inset put the close button's centre at y=46 — inside the
+   Dynamic Island's cutout**, where the system takes the touch. Controls now
+   use the real safe inset, **read from the WINDOW**: once `.ignoresSafeArea()`
+   is applied the `GeometryReader` reports **zero**, so deriving it there hands
+   back the same broken 24pt and looks like the fix did nothing. It did
+   nothing — the button did not move a pixel.
+
+**⚠️ The generalisable rule: a control that is visible and in the
+accessibility tree can still be unreachable.** Presence in the tree says
+nothing about hit-testing. Probe the action, don't infer it from the tree.
+
+---
+
+## 2. Rotation turns the video, never the app
+
+Implemented as specced, and the reasoning held up: `Info.plist` is a ceiling
+(a view controller can only *narrow* the declared orientations), and
+orientation belongs to the window **scene**, which the secondary
+`PassThroughWindow` shares with the main window — so a real rotation would
+turn the map, drawer and tour sheet behind the video.
+
+- Landscape clips rotate on the **physical device orientation**, which is
+  still reported while portrait-locked.
+- **Vertical clips never rotate** — 9:16 is already largest upright.
+- Controls ride inside the rotated stack, so they never read as upright over a
+  sideways picture.
+- Signs are easy to invert: `UIDeviceOrientation.landscapeLeft` is the home
+  button on the **right**, so content rotates **+90**. (`UIDeviceOrientation`
+  and `UIInterfaceOrientation` name these opposite ways round.)
+
+**⚠️ Shape comes from the DISPLAY size, after `preferredTransform`** — phone
+video is commonly 1920×1080 with a 90° transform, and `naturalSize` alone
+calls that vertical clip landscape and rotates it the wrong way.
+
+---
+
+## 3. The narration debt is transferred, not copied
+
+The carousel clears its own `didPauseNarration` **as it builds the request**,
+so all three of its `resumeNarrationIfNeeded()` call sites become no-ops and
+the fullscreen view owes the resume. That is what keeps the tour audio from
+playing behind the video — and it holds for a fourth call site added later,
+which suppressing the three individually would not.
+
+The takeover rule is now one shared static used by both views, so the
+silent-clip behaviour cannot drift.
+
+**⚠️ Deliberately NOT one shared `AVPlayer`.** The inline view's
+`onDisappear` / `isActive` hooks fire when the cover goes up and would pause
+the clip the fullscreen view is showing. Separate players make the handover
+explicit in both directions; the cost is that the inline thumbnail stays at
+the frame it was expanded from.
+
+---
+
+## 4. Verified, and not
+
+**Verified in the simulator on VIA 57 West:** expand fires with `hasAudio=1
+isLandscape=0` · the cover presents **above the mini-player and tab bar** ·
+**all four edge markers visible**, so nothing is cropped · the mini-player
+reads **"Paused"** while the clip plays · close dismisses. Probes removed
+before committing, and `git diff` on `DataService.swift` and the App entry is
+empty — the local-catalog switch is fully reverted.
+
+**⚠️ Rotation is device-only.** The simulator rotates the *interface*, which is
+exactly what this design does not do. The arithmetic is pinned by tests; the
+feel needs a phone.
+
+**⚠️ The silent-clip path is test-covered, not eyeballed.** It differs only by
+`hasAudio: false` feeding a unit-tested guard, and the inline silent path is
+untouched — but it is the one shipped behaviour that could regress, so it is
+worth a look on device.
+
+---
+
+## Owed
+
+- **Merge #569 first**, or #571 has no vertical clip to test against.
+- A device pass: rotation with a **landscape** clip (the catalogue has none —
+  the only two clips are a silent 4:3 and a vertical), and the silent path.
+- The catalogue still has **no landscape video**, so the rotation half of this
+  feature has never been exercised against real content.
