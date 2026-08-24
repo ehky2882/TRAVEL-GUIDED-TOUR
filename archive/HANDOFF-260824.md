@@ -94,3 +94,72 @@ reasoning is now a comment at each call site so it is not re-derived from scratc
 - `git fetch` timed out twice against the proxy in this session; branch freshness was
   established through the GitHub API (`list_commits` on the branch) instead. Worth reaching
   for when the shell's git is the thing that is broken.
+
+---
+
+# Follow-up, same session — the row is now one component
+
+[PR #576](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/576), squash `c7fda39`.
+**TestFlight 1.1 (113)** — owner: *"looks good."* Net **−61 lines** across the three
+views, plus one new file. Refactor only; no visual change, which was the whole test.
+
+## Why immediately after the fix rather than later
+
+The fix above had to be made in **three places**. That worked, but it is the shape of
+problem that eventually does not work: CLAUDE.md kept the three rows in step by
+*asserting* they were byte-identical by design, and an assertion in a document is weaker
+than code that makes it true.
+
+## What moved
+
+New **`Components/AtlasChromeRow.swift`** — `.atlasChromeRow { controls }` — owning the
+four things the three pages must never disagree about: the row's shell (`sm` spacing,
+`lg`/`sm` padding), parking it via `.safeAreaInset(edge: .top)`, the paint, and hiding
+the system nav bar.
+
+Each page still supplies its own **controls**, because those legitimately differ — the
+list page hides its bookmark when there is nothing to save, and its `…` when Liked is on
+screen. Contents at the call site, everything around them shared.
+
+**🔴 The paint is the real prize, and it is a stronger guarantee than the fix above
+achieved.** The row and the page are now filled from the **same expression**, not from
+two expressions that happen to name the same token. #573 made them the same *value*,
+written three times. This makes them incapable of differing.
+
+**⚠️ `.toolbar(.hidden, for: .navigationBar)` moved in too, deliberately.** It is not
+decoration: this row *replaces* the system bar, and iOS 26's glass-grouping stacks on
+custom chrome when both are present (the "two layers" look, owner correction
+2026-06-03). Bundling it means a fourth page gets the whole thing right by construction
+rather than by remembering. A page can still set `.navigationTitle` afterwards — the
+list page does, purely so VoiceOver has a label for a bar nobody sees.
+
+## Verification
+
+- **Owner device check on 1.1 (113)**: the three pages read as untouched.
+- CI green — simulator build, unit tests, validator, and the TestFlight job itself.
+- The modifier applies `safeAreaInset` → `background` → `toolbar` in the **same order**
+  all three call sites did, so each resulting chain is unchanged; padding still precedes
+  the background.
+- No remaining references to the old `chromeRow` symbol; no remaining
+  `secondaryBackground.opacity(0.8)` outside the new file's own history note.
+- ⚠️ Still a Linux web session with no Swift toolchain — CI was the only compile check
+  before the build.
+
+## ⚠️ Branch staleness caught, and this time it mattered
+
+`main` moved mid-session: the **Stockholm launch** (#575 — 45 tours, 33rd maker, catalog
+1,467 → 1,512) landed while this PR was open. `main` was merged in **before** cutting
+113, so that build carries the refactor *and* Stockholm. Building without it would have
+shipped a binary whose bundled offline seed predated an entire city — the 1.1 (92)
+lesson, live again. The merge was clean and touched none of the four files here, which
+was checked rather than assumed.
+
+**The general rule this keeps proving: check the branch against `main` immediately
+before every build, not at the point the branch was created.** In this repo `main` can
+move twice in an hour.
+
+## Also
+
+Removed a doc comment in `TourListDetailView` that was **already orphaned on `main`** —
+it documented a helper `AtlasChromeButton` replaced, and its "down to the fill opacity"
+had gone stale twice over.
