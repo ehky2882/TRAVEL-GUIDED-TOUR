@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-23 20:55 UTC
+**Last verified:** 2026-08-24 14:10 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,69 +25,25 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟢 **NOTHING IS WAITING ON A REVIEW. Zero open PRs.** Merged since the wizard work: **#560 Milan**
-(48 tours, 32nd maker), **#559 the launch sequence** (a readiness-gated splash and a three-beat
-hand-off), **#562 the coordinate guard**, plus their docs (#561).
+✅ **NOTHING IS STRANDED. Build 113 is the newest and it carries everything merged.** Its head is a
+**merge of `origin/main` taken at 13:14**, so it holds the chrome-row work, the light-mode opacity
+fix, Stockholm and everything before them. The only things merged after it are **#576 itself** (113
+*is* that work), two docs PRs and a read-only workflow — none of which ships in a build.
 
-🔴 **THREE MERGED CHANGES HAVE NO BUILD CARRYING THEM.** Build 110 was cut 22 Aug 19:02 and
-everything below landed after it. **This is the first time this state has been non-empty**, which is
-precisely what the merged-not-built section was added to surface.
+⚠️ **113 is a branch build whose branch has since merged**, so it is equivalent to `main` rather than
+cut from it. **The last true from-`main` build is 111** (23 Aug 23:56).
 
-| Merged | What | Needs a build? |
+### Open, none built
+
+| PR | What | Note |
 |---|---|---|
-| **#567** 23 Aug 19:42 | A downloaded tour brings its photographs | 🔴 **Yes** — `TourDownloader`, `HeroImageView`, new `DownloadedImageIndex` |
-| **#565** 23 Aug 19:21 | Architects 94 → 279 names | 🔴 **Yes** — `Models/Tag.swift` is code; the tagging is content |
-| **#566** 23 Aug 15:55 | The launch screen carries the brass mark | 🔴 **Yes** — `Info.plist` + a new image set |
-| #564 22 Aug 19:44 | Gallery duplicates + five wrong buildings | No — `Tours.json`, already live |
-| #570 23 Aug 20:49 | Docs | No |
+| [#571](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/571) | **A clip you can actually see** — the fullscreen video viewer | The first real use of the video support that shipped in session 62 and has had no content until now |
+| [#579](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/579) | Swedish architects: vocabulary 280 → 299, four rejected on the Sullivan rule | Code + content |
+| [#581](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/581) | Akalla: replacement hero under a new filename | Content |
 
-⚠️ **#566 has a device trap worth knowing before reviewing it:** the rendered launch screen is cached
-so hard it survived reinstall *and* a build-number bump in the simulator, cleared only by
-`simctl erase`. **If the next build's launch screen looks stale, delete the app and reinstall.**
-
-**Open PRs: #568** (the offline photo fallback — the second half #567 deliberately left) and **#569**
-(VIA 57 West, plus Bjarke Ingels in the tag vocabulary).
-
-✅ **BUILD 110 WAS GREEN, FROM `main`, WITH ITS NOTES** (`b421bde9`, done 22 Aug 19:07).
-**The first build from `main` since 91, two days ago**, so it is the first to carry the whole of the
-last two days in one binary: the seven-step wizard and its round two, saved lists, the list page as
-a layer, Liked on the shared screen, the launch sequence, the Library fix, and **#563's light-mode
-work** — which the owner specifically asked to be included and which merged at 18:58.
-
-✅ **The build-notes fix is proven.** Build 97 went red because Apple refused a `✕` in the notes;
-`scripts/ascii-build-notes.py` now transliterates them first, and 110 is the first build through it —
-green all the way, notes attached. **The class is closed, not just theoretically fixed.**
-
-✅ **MILAN IS ALREADY LIVE AND NEEDS NO BUILD.** Verified against the live RPC: **1,466 tours / 40
-maker rows**, up from 1,418. Content reaches phones over the air through Supabase — a build only
-matters for app code. **Build 109 is the newest**, carrying #559's launch work.
-
-⚠️ **THE NORTHWARD COORDINATE FAULT RECURRED IN MILAN.** Barcelona's ten wrong coordinates were all
-displaced due north, and CLAUDE.md predicted it would repeat because it is upstream of the drop.
-It did. #562 adds a check that measures it rather than relying on someone noticing. **At a 30 m
-geofence a displaced stop simply never fires** — no error, no dead link, just a tour that does
-nothing while you stand in front of the building.
-
-📌 **Kept because the lesson recurs: a TestFlight build can succeed and report failure.** Build 97
-archived, signed, uploaded and processed, then went red because Apple refused a `✕` in the build
-notes — the changelog is written *after* the upload, so the rejection lands past the point of no
-return at a step whose failure looks like a build failure. Fixed forward by
-`scripts/ascii-build-notes.py`.
-
-**Install 98.** It carries the round-two wizard work and, unlike 97, it has its notes.
-
-### Two risks named in #558, neither fixed
-
-- ⚠️ **Step 2 now overflows an iPhone SE by ~94pt** and scrolls there. Sizing the text boxes to their
-  character limits is what did it — the no-scroll rule holds on your phone and not on the smallest.
-- ⚠️ **Dynamic Type is still the largest open risk.** `AtlasTypography.body` is pinned fixed-size; with
-  Larger Text every step overflows at once. The ScrollView valve means it degrades rather than
-  breaks, but the premise goes.
-- ⚠️ **`maxHeight: .infinity` is still asked for on step 3's tag group** — dead code (a flexible child
-  gets no room from a ScrollView frame that sets only a minHeight), but harmless there because five
-  rows of tags have a real height. **Do not report it as a defect without checking the child
-  collapses** — that overstatement was made once and caught.
-
+⚠️ **#566's launch-screen trap still applies whenever you next install:** the rendered launch screen
+is cached so hard it survived reinstall *and* a build-number bump in the simulator. **If it looks
+stale, delete the app and reinstall.**
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
@@ -162,7 +118,10 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **110** | **`main`** | Everything to 22 Aug 19:02, plus #563 light mode (`b421bde9`) | ⚠️ **newest, but three merges behind** |
+| 113 | `chrome-row-modifier` | #576 chrome row extracted — **head is a merge of `main` at 13:14** (`e90d9995`) | ✅ **install this** |
+| 112 | `color-mismatch-elements-pj2ptt` | #573 chrome row made opaque | ✅ merged |
+| 111 | **`main`** | #565 architects, #566 launch mark, #567 + #568 offline photographs (`891702fd`) | ✅ last true from-main build |
+| 110 | **`main`** | Everything to 22 Aug, plus #563 light mode (`b421bde9`) | ✅ superseded |
 | 109 | `launch-performance-animations-df4d7p` | #559 launch sequence (`52a86cfa`) | ✅ superseded by 110 |
 | 108 | `launch-performance-animations-df4d7p` | Same work, one commit earlier | ⚠️ superseded |
 | 98 | `wizard-comments-round2` | #558 wizard round two (`e0132c90`) | ✅ merged |
@@ -197,8 +156,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**Catalog 1,466 tours / 32 makers** — Milan (Atlas Studio MIL, 48 tours) landed 2026-08-22 and is
-live in the RPC. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
+**Catalog 1,513 tours / 33 makers** — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
+and is live in the RPC, along with VIA 57 West. Milan (48 tours) landed 2026-08-22. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
 long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
 
