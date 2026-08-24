@@ -71,6 +71,15 @@ struct GalleryVideoView: View {
     /// than being set by the tap, so it stays honest if playback stalls
     /// or ends on its own.
     @State private var isPlaying = false
+    /// Clip shape as *displayed* (after `preferredTransform`). Resolved with
+    /// `hasAudio` in `prepare()` and handed to the fullscreen viewer so it
+    /// opens in the right orientation immediately rather than resolving the
+    /// asset a second time.
+    @State private var isLandscape = true
+
+    /// Optional for the same reason `audioPlayer` is: not every presentation
+    /// path injects it. Without it the expand button simply isn't offered.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
 
     var body: some View {
         ZStack {
@@ -117,6 +126,17 @@ struct GalleryVideoView: View {
         // control in the accessibility tree.
         .contentShape(Rectangle())
         .onTapGesture { if isPlaying { player?.pause() } }
+        // 🔴 TOP-trailing, and the corner matters. At the BOTTOM the button
+        // rendered, appeared in the accessibility tree, and its action never
+        // ran: a paged `TabView` draws its `UIPageControl` across the FULL
+        // width of the strip where the dots sit, and a tap on that control's
+        // right half advances a page. So the tap paged the carousel instead —
+        // the page control is part of the TabView and hit-tests above page
+        // content, whatever the page draws on top. Verified with a probe:
+        // `expand()` was never reached, and the carousel advanced by exactly
+        // one page every time. Applied as an overlay (rather than inside the
+        // ZStack) so it also sits above the surface tap gesture below.
+        .overlay(alignment: .topTrailing) { expandAffordance }
         .task(id: urlString) {
             await prepare()
         }
@@ -155,6 +175,69 @@ struct GalleryVideoView: View {
         }
     }
 
+    /// Expand to fullscreen.
+    ///
+    /// **A corner button, deliberately not the surface tap** — the surface tap
+    /// is already pause-while-playing, and a real `Button` lands in the
+    /// accessibility tree so VoiceOver reaches it. Being a small corner target
+    /// it also cannot claim the horizontal drag the carousel needs for paging,
+    /// which is the whole reason this view draws its own controls rather than
+    /// using AVKit's.
+    ///
+    /// Stays visible during playback — unlike the play glyph, which hides so
+    /// nothing sits over the picture — because expanding *while watching* is
+    /// the common case.
+    @ViewBuilder
+    private var expandAffordance: some View {
+        if appShared != nil {
+            Button(action: expand) {
+                Image(systemName: "arrow.up.left.and.arrow.down.right")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(.white)
+                    // 44pt is the app's universal control diameter (map
+                    // controls, the tour action row, the chrome capsules).
+                    // The painted disc is smaller; the target is not.
+                    .frame(width: 44, height: 44)
+                    .background(
+                        Circle()
+                            .fill(.black.opacity(0.45))
+                            .frame(width: 32, height: 32)
+                    )
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Expand video to fullscreen")
+            .padding(AtlasSpacing.xs)
+        }
+    }
+
+    /// Hand the clip to the fullscreen viewer.
+    ///
+    /// 🔴 **The narration debt is TRANSFERRED, not copied.** Clearing
+    /// `didPauseNarration` as we hand it over is what stops this view resuming
+    /// the tour audio behind the video: presenting a cover trips at least one
+    /// of the three `resumeNarrationIfNeeded()` call sites (the
+    /// `timeControlStatus` change from the pause below, `isActive`, and
+    /// `onDisappear`), and every one of them is guarded on that flag. With the
+    /// flag cleared they all become no-ops, and the fullscreen view owes the
+    /// resume instead. Suppressing the call sites individually would leave the
+    /// next one added unguarded.
+    private func expand() {
+        guard let appShared else { return }
+        let at = player?.currentTime().seconds ?? 0
+        // Pause the inline clip: the fullscreen view runs its own player, and
+        // two players on one clip with sound would talk over each other.
+        player?.pause()
+        let debt = didPauseNarration
+        didPauseNarration = false
+        appShared.fullscreenVideo = FullscreenVideoRequest(
+            urlString: urlString,
+            startSeconds: at.isFinite ? max(0, at) : 0,
+            hasAudio: hasAudio,
+            didPauseNarration: debt,
+            isLandscape: isLandscape
+        )
+    }
+
     /// Builds the player and detects whether the clip has an audio
     /// track. Runs on the main actor (`.task`), so the `@State`
     /// mutations are safe. `hasAudio` stays `false` if the load is
@@ -166,14 +249,30 @@ struct GalleryVideoView: View {
         if let tracks = try? await asset.loadTracks(withMediaType: .audio) {
             hasAudio = !tracks.isEmpty
         }
+        // Shape for the fullscreen viewer. ⚠️ Must come from the DISPLAY size
+        // — phone video is commonly 1920x1080 stored with a 90 degree
+        // `preferredTransform`, and reading `naturalSize` alone would call
+        // that vertical clip landscape and rotate it the wrong way.
+        if let video = try? await asset.loadTracks(withMediaType: .video).first,
+           let size = try? await video.load(.naturalSize),
+           let transform = try? await video.load(.preferredTransform) {
+            isLandscape = FullscreenVideoView.isLandscape(
+                naturalSize: size,
+                preferredTransform: transform
+            )
+        }
     }
 
     /// Pause the narration when a clip *with sound* starts — but only if
     /// the narration is actually playing, so we never fight a tour the
     /// user deliberately paused.
     private func pauseNarrationIfNeeded() {
-        guard hasAudio, !didPauseNarration else { return }
-        guard audioPlayer?.state == .playing else { return }
+        // One rule, shared with the fullscreen viewer so the two cannot drift.
+        guard FullscreenVideoView.shouldTakeOverNarration(
+            clipHasAudio: hasAudio,
+            narrationIsPlaying: audioPlayer?.state == .playing,
+            alreadyOwesResume: didPauseNarration
+        ) else { return }
         audioPlayer?.pause()
         didPauseNarration = true
     }
