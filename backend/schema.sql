@@ -156,6 +156,29 @@ create policy stops_public_read on public.stops
 -- camelCase keys match the Swift Codable property names. SECURITY INVOKER
 -- (default) so RLS applies — anon sees published tours only.
 -- ---------------------------------------------------------------------------
+-- 🔴 THIS DEFINITION IS STALE, AND MUST NOT BE PASTED AT A LIVE DATABASE.
+--
+-- Later migrations rebuilt `get_catalog()` in the live project and did not
+-- come back to update this file. Measured against the live RPC on 2026-08-24:
+--
+--     live has    places, priceTier, isPrivate, country, videoURLs, videoRole
+--     this has    country, videoURLs, videoRole
+--
+-- So a `create or replace` from here would silently drop **all 25 places,
+-- priceTier (every paid tour's price) and isPrivate (private accounts)** -
+-- three shipped features, no error. `add_video_role.sql` was drafted that way
+-- before the comparison was run, and it would have done exactly that.
+--
+-- ⚠️ To change what the catalog emits, PATCH the live function rather than
+-- replacing it: read `pg_get_functiondef`, insert your key, put it back, and
+-- raise if the anchor is missing. `backend/add_video_role.sql` is the worked
+-- example.
+--
+-- This file remains correct as the table/RLS bootstrap for a FRESH database;
+-- it is only the get_catalog body that has drifted. Reconciling it means
+-- diffing against the live function, not against any one migration - no
+-- single file in this repo carries the whole thing.
+
 create or replace function public.get_catalog()
 returns jsonb
 language sql
