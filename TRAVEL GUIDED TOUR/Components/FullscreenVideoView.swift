@@ -28,6 +28,10 @@ struct FullscreenVideoRequest: Identifiable, Equatable {
     let didPauseNarration: Bool
     /// Shape as displayed (i.e. after `preferredTransform`), not as stored.
     let isLandscape: Bool
+    /// Displayed width ÷ height. Lets the expand land the picture exactly on
+    /// the thumbnail's picture: the clip is aspect-fit inside both boxes, so
+    /// knowing its shape is what makes the two rects comparable.
+    let aspectRatio: CGFloat
     /// The carousel thumbnail's frame in GLOBAL coordinates — where the clip
     /// is on screen at the moment the user taps expand. The viewer grows out
     /// of this rather than sliding up from the bottom, so the picture appears
@@ -185,28 +189,46 @@ struct FullscreenVideoView: View {
         return max(resolved.top, resolved.bottom, resolved.left, resolved.right, floor)
     }
 
+    /// The rect a clip of this shape actually occupies inside a box, once
+    /// aspect-fit. The letterboxing is why the picture's on-screen rect is not
+    /// the box: a vertical clip in a wide box leaves black down both sides.
+    static func aspectFitRect(aspectRatio: CGFloat, in box: CGRect) -> CGRect {
+        guard aspectRatio > 0, box.width > 0, box.height > 0 else { return box }
+        let boxRatio = box.width / box.height
+        let size: CGSize = aspectRatio > boxRatio
+            ? CGSize(width: box.width, height: box.width / aspectRatio)   // width-limited
+            : CGSize(width: box.height * aspectRatio, height: box.height) // height-limited
+        return CGRect(
+            x: box.midX - size.width / 2,
+            y: box.midY - size.height / 2,
+            width: size.width,
+            height: size.height
+        )
+    }
+
     /// How the viewer's content is transformed partway through the expand.
     ///
-    /// `progress` 0 sits it in the carousel thumbnail, 1 fills the screen.
+    /// `progress` 0 lands the picture exactly on the carousel thumbnail's
+    /// picture; 1 fills the screen.
     ///
-    /// 🔴 **The scale is UNIFORM.** Matching the thumbnail's box exactly would
-    /// need a different scale on each axis — the box and the screen have
-    /// different proportions — and that squashes the picture for the whole
-    /// flight, which is far more noticeable than a few points of misalignment
-    /// at the start. So the content is fitted into the box (`min` of the two
-    /// ratios) and centred on it.
-    ///
-    /// The consequence, stated rather than hidden: at progress 0 the picture
-    /// is a little smaller than the thumbnail's own letterboxed video, because
-    /// a clip that is width-limited on the screen can be height-limited in the
-    /// box. Over ~0.3s it reads as growth, not as a jump.
+    /// The match is computed between the two **aspect-fit rects**, not the two
+    /// boxes. The clip is letterboxed inside both, and the box proportions
+    /// differ, so matching boxes would need a different scale per axis — which
+    /// squashes the picture for the whole flight. Matching the pictures gives
+    /// one uniform scale that is also exactly right at rest, because both rects
+    /// are fits of the same shape.
     ///
     /// An empty `source` (nothing measured) returns the identity, so a missing
     /// measurement degrades to the picture simply being there rather than to a
     /// zero-sized view.
+    ///
+    /// ⚠️ Computed unrotated. Expanding while the phone is already sideways
+    /// with a landscape clip starts fractionally off for the length of the
+    /// growth; not worth carrying the rotation through for that.
     static func expandTransform(
         source: CGRect,
         full: CGRect,
+        aspectRatio: CGFloat,
         progress: Double
     ) -> (scale: CGFloat, centre: CGPoint) {
         let identity = (scale: CGFloat(1), centre: CGPoint(x: full.midX, y: full.midY))
@@ -214,12 +236,15 @@ struct FullscreenVideoView: View {
             return identity
         }
         let t = CGFloat(min(max(progress, 0), 1))
-        let fit = min(source.width / full.width, source.height / full.height)
+        let sourcePicture = aspectFitRect(aspectRatio: aspectRatio, in: source)
+        let fullPicture = aspectFitRect(aspectRatio: aspectRatio, in: full)
+        guard fullPicture.width > 0 else { return identity }
+        let start = sourcePicture.width / fullPicture.width
         return (
-            scale: fit + (1 - fit) * t,
+            scale: start + (1 - start) * t,
             centre: CGPoint(
-                x: source.midX + (full.midX - source.midX) * t,
-                y: source.midY + (full.midY - source.midY) * t
+                x: sourcePicture.midX + (full.midX - sourcePicture.midX) * t,
+                y: sourcePicture.midY + (full.midY - sourcePicture.midY) * t
             )
         )
     }
@@ -253,6 +278,7 @@ struct FullscreenVideoView: View {
             let zoom = Self.expandTransform(
                 source: request.sourceFrame,
                 full: full,
+                aspectRatio: request.aspectRatio,
                 progress: expansion
             )
             // The picture GROWS out of the carousel thumbnail rather than

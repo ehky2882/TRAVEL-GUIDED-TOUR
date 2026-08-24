@@ -76,6 +76,9 @@ struct GalleryVideoView: View {
     /// opens in the right orientation immediately rather than resolving the
     /// asset a second time.
     @State private var isLandscape = true
+    /// Displayed width ÷ height, resolved with `isLandscape` in `prepare()`.
+    /// Lets the fullscreen viewer grow from exactly the picture you tapped.
+    @State private var aspectRatio: CGFloat = 4.0 / 3.0
     /// This page's frame on screen, in global coordinates — handed to the
     /// viewer so it can grow out of exactly where the clip already is.
     @State private var frameOnScreen: CGRect = .zero
@@ -243,6 +246,7 @@ struct GalleryVideoView: View {
             hasAudio: hasAudio,
             didPauseNarration: debt,
             isLandscape: isLandscape,
+            aspectRatio: aspectRatio,
             sourceFrame: frameOnScreen
         )
         // 🔴 Presented with animation SUPPRESSED. A `fullScreenCover` slides up
@@ -276,6 +280,10 @@ struct GalleryVideoView: View {
                 naturalSize: size,
                 preferredTransform: transform
             )
+            let display = size.applying(transform)
+            if abs(display.height) > 0 {
+                aspectRatio = abs(display.width) / abs(display.height)
+            }
         }
     }
 

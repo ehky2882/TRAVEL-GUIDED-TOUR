@@ -233,6 +233,7 @@ final class FullscreenVideoRulesTests: XCTestCase {
             hasAudio: true,
             didPauseNarration: true,
             isLandscape: false,
+            aspectRatio: 9.0 / 16.0,
             sourceFrame: CGRect(x: 24, y: 180, width: 345, height: 345)
         )
         XCTAssertTrue(req.didPauseNarration)
@@ -248,6 +249,7 @@ final class FullscreenVideoRulesTests: XCTestCase {
                 urlString: "https://example.com/clip.mp4",
                 startSeconds: 0, hasAudio: true,
                 didPauseNarration: false, isLandscape: false,
+                aspectRatio: 9.0 / 16.0,
                 sourceFrame: .zero
             )
         }
@@ -258,20 +260,74 @@ final class FullscreenVideoRulesTests: XCTestCase {
 
     private let thumb = CGRect(x: 24, y: 180, width: 345, height: 345)
     private let screen = CGRect(x: 0, y: 0, width: 393, height: 852)
+    private let vertical: CGFloat = 9.0 / 16.0
 
-    /// At the start the content sits on the thumbnail, fitted inside it.
-    func testAtProgressZeroTheContentSitsOnTheThumbnail() {
-        let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 0)
-        XCTAssertEqual(z.centre.x, thumb.midX, accuracy: 0.01)
-        XCTAssertEqual(z.centre.y, thumb.midY, accuracy: 0.01)
-        // Fitted, so it never exceeds the box on either axis.
-        XCTAssertLessThanOrEqual(screen.width * z.scale, thumb.width + 0.01)
-        XCTAssertLessThanOrEqual(screen.height * z.scale, thumb.height + 0.01)
+    /// 🔴 The point of the whole transform: at progress 0 the picture lands
+    /// EXACTLY on the thumbnail's picture, so there is no jump when the growth
+    /// begins. Both are aspect-fits of the same clip, which is what makes one
+    /// uniform scale able to match them.
+    func testAtProgressZeroThePictureLandsExactlyOnTheThumbnailsPicture() {
+        let z = FullscreenVideoView.expandTransform(
+            source: thumb, full: screen, aspectRatio: vertical, progress: 0
+        )
+        let thumbPicture = FullscreenVideoView.aspectFitRect(aspectRatio: vertical, in: thumb)
+        let screenPicture = FullscreenVideoView.aspectFitRect(aspectRatio: vertical, in: screen)
+        // The screen-sized picture, scaled, must equal the thumbnail's picture.
+        XCTAssertEqual(screenPicture.width * z.scale, thumbPicture.width, accuracy: 0.01)
+        XCTAssertEqual(screenPicture.height * z.scale, thumbPicture.height, accuracy: 0.01)
+        // ...and sit in the same place.
+        XCTAssertEqual(z.centre.x, thumbPicture.midX, accuracy: 0.01)
+        XCTAssertEqual(z.centre.y, thumbPicture.midY, accuracy: 0.01)
+    }
+
+    /// The same has to hold for a landscape clip, whose letterboxing runs the
+    /// other way (bars top and bottom rather than down the sides).
+    func testExactMatchAlsoHoldsForALandscapeClip() {
+        let wide: CGFloat = 16.0 / 9.0
+        let z = FullscreenVideoView.expandTransform(
+            source: thumb, full: screen, aspectRatio: wide, progress: 0
+        )
+        let thumbPicture = FullscreenVideoView.aspectFitRect(aspectRatio: wide, in: thumb)
+        let screenPicture = FullscreenVideoView.aspectFitRect(aspectRatio: wide, in: screen)
+        XCTAssertEqual(screenPicture.width * z.scale, thumbPicture.width, accuracy: 0.01)
+        XCTAssertEqual(z.centre.y, thumbPicture.midY, accuracy: 0.01)
+    }
+
+    /// Which axis the bars land on depends on the clip AND the box, not the
+    /// clip alone — a 16:9 clip is width-limited in a square box but
+    /// height-limited in a 2:1 box, which is wider than the clip.
+    func testAspectFitPicksTheLimitingAxisFromBothShapes() {
+        let square = CGRect(x: 0, y: 0, width: 400, height: 400)
+        let wideInSquare = FullscreenVideoView.aspectFitRect(aspectRatio: 16.0 / 9.0, in: square)
+        XCTAssertEqual(wideInSquare.width, 400, accuracy: 0.01, "width-limited in a square box")
+        XCTAssertEqual(wideInSquare.height, 225, accuracy: 0.01)
+
+        let veryWideBox = CGRect(x: 0, y: 0, width: 400, height: 200) // 2:1, wider than 16:9
+        let wideInWider = FullscreenVideoView.aspectFitRect(aspectRatio: 16.0 / 9.0, in: veryWideBox)
+        XCTAssertEqual(wideInWider.height, 200, accuracy: 0.01, "height-limited when the box is wider still")
+        XCTAssertLessThan(wideInWider.width, 400)
+
+        // A vertical clip in a wide box: bars down the sides.
+        let tall = FullscreenVideoView.aspectFitRect(aspectRatio: 9.0 / 16.0, in: veryWideBox)
+        XCTAssertEqual(tall.height, 200, accuracy: 0.01)
+        XCTAssertEqual(tall.width, 112.5, accuracy: 0.01)
+    }
+
+    /// The fit never exceeds its box on either axis, whatever the shapes.
+    func testAspectFitNeverOverflowsItsBox() {
+        let box = CGRect(x: 10, y: 20, width: 345, height: 345)
+        for ratio in [0.4, 0.5625, 0.75, 1.0, 1.333, 1.778, 2.35] {
+            let r = FullscreenVideoView.aspectFitRect(aspectRatio: CGFloat(ratio), in: box)
+            XCTAssertLessThanOrEqual(r.width, box.width + 0.01, "ratio \(ratio)")
+            XCTAssertLessThanOrEqual(r.height, box.height + 0.01, "ratio \(ratio)")
+            XCTAssertEqual(r.midX, box.midX, accuracy: 0.01, "centred, ratio \(ratio)")
+            XCTAssertEqual(r.midY, box.midY, accuracy: 0.01, "centred, ratio \(ratio)")
+        }
     }
 
     /// At the end it is the screen, untransformed.
     func testAtProgressOneTheContentFillsTheScreen() {
-        let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 1)
+        let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, aspectRatio: vertical, progress: 1)
         XCTAssertEqual(z.scale, 1, accuracy: 0.0001)
         XCTAssertEqual(z.centre.x, screen.midX, accuracy: 0.01)
         XCTAssertEqual(z.centre.y, screen.midY, accuracy: 0.01)
@@ -283,7 +339,7 @@ final class FullscreenVideoRulesTests: XCTestCase {
     /// few points of misalignment at the start.
     func testScaleIsUniformSoThePictureCannotDistort() {
         for p in stride(from: 0.0, through: 1.0, by: 0.1) {
-            let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: p)
+            let z = FullscreenVideoView.expandTransform(source: thumb, full: screen, aspectRatio: vertical, progress: p)
             let w = screen.width * z.scale
             let h = screen.height * z.scale
             XCTAssertEqual(w / h, screen.width / screen.height, accuracy: 0.0001,
@@ -295,7 +351,7 @@ final class FullscreenVideoRulesTests: XCTestCase {
     func testScaleGrowsMonotonically() {
         var last: CGFloat = -1
         for p in stride(from: 0.0, through: 1.0, by: 0.05) {
-            let s = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: p).scale
+            let s = FullscreenVideoView.expandTransform(source: thumb, full: screen, aspectRatio: vertical, progress: p).scale
             XCTAssertGreaterThanOrEqual(s, last)
             last = s
         }
@@ -304,17 +360,17 @@ final class FullscreenVideoRulesTests: XCTestCase {
     /// Progress outside 0...1 is clamped, so a spring overshoot cannot push
     /// the picture past the screen or invert it.
     func testProgressIsClamped() {
-        let under = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: -0.5)
-        let zero = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 0)
+        let under = FullscreenVideoView.expandTransform(source: thumb, full: screen, aspectRatio: vertical, progress: -0.5)
+        let zero = FullscreenVideoView.expandTransform(source: thumb, full: screen, aspectRatio: vertical, progress: 0)
         XCTAssertEqual(under.scale, zero.scale, accuracy: 0.0001)
-        let over = FullscreenVideoView.expandTransform(source: thumb, full: screen, progress: 1.5)
+        let over = FullscreenVideoView.expandTransform(source: thumb, full: screen, aspectRatio: vertical, progress: 1.5)
         XCTAssertEqual(over.scale, 1, accuracy: 0.0001)
     }
 
     /// An unmeasured thumbnail degrades to the picture simply being there,
     /// full size — never to a zero-sized view.
     func testUnmeasuredSourceFallsBackToFullScreen() {
-        let z = FullscreenVideoView.expandTransform(source: .zero, full: screen, progress: 0)
+        let z = FullscreenVideoView.expandTransform(source: .zero, full: screen, aspectRatio: vertical, progress: 0)
         XCTAssertEqual(z.scale, 1, accuracy: 0.0001)
         XCTAssertEqual(z.centre.x, screen.midX, accuracy: 0.01)
     }
