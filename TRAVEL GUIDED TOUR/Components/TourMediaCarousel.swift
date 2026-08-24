@@ -38,6 +38,9 @@ struct TourMediaCarousel: View {
     /// stranding the user on a bare picture. Optional because the carousel is
     /// otherwise given nothing but URLs; nil simply means no tour chrome.
     var tourId: UUID? = nil
+    /// What the videos are — see `TourVideoRole`. Passed through to each
+    /// video page; `.gallery` is the default and the existing behaviour.
+    var videoRole: TourVideoRole = .gallery
 
     /// One carousel page — an image URL or a video URL. `id` namespaces
     /// the two so ForEach/selection diffing is stable even if a URL
@@ -87,7 +90,8 @@ struct TourMediaCarousel: View {
         videoURLs: [String]?,
         height: CGFloat?,
         category: TourCategory? = nil,
-        tourId: UUID? = nil
+        tourId: UUID? = nil,
+        videoRole: TourVideoRole = .gallery
     ) {
         self.heroImageURL = heroImageURL
         self.additionalImageURLs = additionalImageURLs
@@ -95,6 +99,7 @@ struct TourMediaCarousel: View {
         self.height = height
         self.category = category
         self.tourId = tourId
+        self.videoRole = videoRole
         let ordered = Self.orderedMedia(
             heroImageURL: heroImageURL,
             additionalImageURLs: additionalImageURLs,
@@ -143,7 +148,8 @@ struct TourMediaCarousel: View {
                 urlString: url,
                 height: height,
                 isActive: selection == item.id,
-                tourId: tourId
+                tourId: tourId,
+                role: videoRole
             )
         }
     }

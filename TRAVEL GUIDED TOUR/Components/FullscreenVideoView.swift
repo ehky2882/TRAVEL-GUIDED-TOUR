@@ -44,6 +44,9 @@ struct FullscreenVideoRequest: Identifiable, Equatable {
     /// The owning tour. The viewer resolves it to show the same chrome the
     /// tour page has — see `FullscreenVideoView.chromeRow`.
     let tourId: UUID?
+    /// What the clip is — see `TourVideoRole`. A `.narration` clip is muted
+    /// and follows the tour's audio clock, and has no transport of its own.
+    let role: TourVideoRole
 
     static func == (a: FullscreenVideoRequest, b: FullscreenVideoRequest) -> Bool { a.id == b.id }
 }
@@ -405,6 +408,8 @@ struct FullscreenVideoView: View {
             // handed this over precisely so it could not also resume.
             resumeNarrationIfOwed()
         }
+        .onChange(of: audioPlayer?.currentTime ?? 0) { _, _ in followNarration() }
+        .onChange(of: audioPlayer?.state) { _, _ in followNarration() }
         .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
             let new = UIDevice.current.orientation
             // Face-up / face-down / unknown carry no useful heading — keep the
@@ -453,7 +458,7 @@ struct FullscreenVideoView: View {
             // button keeps its shared shape rather than growing a second one.
             .environment(\.colorScheme, .dark)
 
-            if controlsVisible {
+            if controlsVisible, request.role != .narration {
                 Button {
                     if isPlaying { player?.pause() } else { player?.play() }
                 } label: {
@@ -550,6 +555,25 @@ struct FullscreenVideoView: View {
         }
     }
 
+    /// Keep a `.narration` clip on the narration's clock — the same rule the
+    /// carousel applies, so the picture does not jump when it is expanded.
+    private func followNarration() {
+        guard request.role == .narration, let player, let audioPlayer else { return }
+        let audioTime = audioPlayer.currentTime
+        if GalleryVideoView.shouldResync(
+            audioTime: audioTime,
+            videoTime: player.currentTime().seconds
+        ) {
+            player.seek(
+                to: CMTime(seconds: audioTime, preferredTimescale: 600),
+                toleranceBefore: .zero,
+                toleranceAfter: .zero
+            )
+        }
+        let wanted = audioPlayer.state == .playing ? Float(audioPlayer.rate) : 0
+        if player.rate != wanted { player.rate = wanted }
+    }
+
     /// Shrink back into the carousel thumbnail, then clear the state.
     ///
     /// The state is cleared inside a transaction with animations suppressed:
@@ -582,6 +606,15 @@ struct FullscreenVideoView: View {
             )
         }
         player = p
+        // A narration clip is a passenger: muted, and moved only by the tour's
+        // clock. It must not take the narration over — it IS the narration —
+        // and it must not carry a transport of its own, which would start the
+        // content with the paid preview cap unapplied.
+        if request.role == .narration {
+            p.isMuted = true
+            followNarration()
+            return
+        }
         takeNarrationOverIfNeeded()
         p.play()
     }

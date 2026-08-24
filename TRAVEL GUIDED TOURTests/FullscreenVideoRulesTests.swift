@@ -236,7 +236,8 @@ final class FullscreenVideoRulesTests: XCTestCase {
             isLandscape: false,
             aspectRatio: 9.0 / 16.0,
             sourceFrame: CGRect(x: 24, y: 180, width: 345, height: 345),
-            tourId: nil
+            tourId: nil,
+            role: .gallery
         )
         XCTAssertTrue(req.didPauseNarration)
         XCTAssertEqual(req.startSeconds, 4.5, accuracy: 0.001)
@@ -253,7 +254,8 @@ final class FullscreenVideoRulesTests: XCTestCase {
                 didPauseNarration: false, isLandscape: false,
                 aspectRatio: 9.0 / 16.0,
                 sourceFrame: .zero,
-                tourId: nil
+                tourId: nil,
+                role: .gallery
             )
         }
         XCTAssertNotEqual(make(), make())

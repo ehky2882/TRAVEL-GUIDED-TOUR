@@ -38,6 +38,7 @@ final class TourDownloadPlanTests: XCTestCase {
             heroImageURL: hero,
             additionalImageURLs: ["https://example.com/gallery-1.webp"],
             videoURLs: nil,
+            videoRole: nil,
             kind: .single,
             stops: stops,
             introAudioURL: intro,

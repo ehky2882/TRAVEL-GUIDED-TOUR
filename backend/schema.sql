@@ -73,6 +73,10 @@ create table if not exists public.tours (
     hero_image_url          text not null,
     additional_image_urls   text[],
     video_urls              text[],
+    -- What those videos ARE. NULL or 'gallery' = b-roll beside the
+    -- photographs; 'narration' = the clip IS the tour, muted and slaved to
+    -- the audio clock. See TourVideoRole in Models/Tour.swift.
+    video_role              text,
     kind                    tour_kind not null,
     intro_audio_url         text,
     total_duration_seconds  int not null,
@@ -191,6 +195,7 @@ as $$
           'heroImageURL',         t.hero_image_url,
           'additionalImageURLs',  to_jsonb(t.additional_image_urls),
           'videoURLs',            to_jsonb(t.video_urls),
+          'videoRole',            to_jsonb(t.video_role),
           'kind',                 t.kind::text,
           'introAudioURL',        t.intro_audio_url,
           'totalDurationSeconds', t.total_duration_seconds,

@@ -55,6 +55,10 @@ struct GalleryVideoView: View {
     /// The owning tour, so the fullscreen viewer can show the page's own
     /// chrome. nil = no tour chrome (the carousel is given only URLs).
     var tourId: UUID? = nil
+    /// What this clip is. `.narration` slaves it to the tour's audio clock —
+    /// see `TourVideoRole`. Defaults to `.gallery`, which is every video in
+    /// the catalogue today and the behaviour that already shipped.
+    var role: TourVideoRole = .gallery
 
     /// Optional so any presentation path that doesn't inject the
     /// player (there shouldn't be one — it's app-wide + injected into
@@ -134,7 +138,11 @@ struct GalleryVideoView: View {
         // the explicit button below rather than this, so there's a real
         // control in the accessibility tree.
         .contentShape(Rectangle())
-        .onTapGesture { if isPlaying { player?.pause() } }
+        .onTapGesture {
+            // Same reason: a narration clip is not independently pausable, or
+            // the picture would stop while the narration carried on.
+            if role != .narration, isPlaying { player?.pause() }
+        }
         // 🔴 TOP-trailing, and the corner matters. At the BOTTOM the button
         // rendered, appeared in the accessibility tree, and its action never
         // ran: a paged `TabView` draws its `UIPageControl` across the FULL
@@ -154,6 +162,11 @@ struct GalleryVideoView: View {
         .task(id: urlString) {
             await prepare()
         }
+        // A narration clip has no independent life: it is muted, and it moves
+        // only when the narration moves. Reading `currentTime` here is what
+        // subscribes this view to the audio clock.
+        .onChange(of: audioPlayer?.currentTime ?? 0) { _, _ in followNarration() }
+        .onChange(of: audioPlayer?.state) { _, _ in followNarration() }
         .onChange(of: isActive) { _, active in
             if !active {
                 player?.pause()
@@ -173,7 +186,14 @@ struct GalleryVideoView: View {
     /// target rather than relying on the whole surface.
     @ViewBuilder
     private var playAffordance: some View {
-        if !isPlaying {
+        // 🔴 A narration clip has NO transport of its own, and that is a
+        // safety property as much as a design one. The tour's own play button
+        // re-asserts the paid preview cap on every start
+        // (`TourDetailView.handlePrimaryAction`); a second start control here
+        // would begin the same content with no cap applied — the overflow-menu
+        // paywall hole from session 91, in a new place. One clock, one
+        // control: the play bar drives, the picture follows.
+        if role != .narration, !isPlaying {
             Button {
                 player?.play()
             } label: {
@@ -187,6 +207,53 @@ struct GalleryVideoView: View {
             .accessibilityLabel("Play video")
             .transition(.opacity)
         }
+    }
+
+    /// How far the picture may drift from the narration before it is worth
+    /// seeking. Both run on the same device off the same clock, so this is
+    /// only absorbing decode jitter — unlike Group Listen, which is bridging
+    /// two phones and needs a much wider dead zone plus rate trimming.
+    ///
+    /// Tight enough that a lip-sync error would be visible before it fires,
+    /// loose enough not to seek every frame.
+    static let followTolerance: TimeInterval = 0.25
+
+    /// Should the picture be seeked to catch up with the narration?
+    ///
+    /// Pure so the rule is testable without a player: seek only when the gap
+    /// is worth the stutter a seek costs.
+    static func shouldResync(
+        audioTime: TimeInterval,
+        videoTime: TimeInterval,
+        tolerance: TimeInterval = followTolerance
+    ) -> Bool {
+        abs(audioTime - videoTime) > tolerance
+    }
+
+    /// Keep a `.narration` clip on the narration's clock.
+    ///
+    /// ⚠️ The audio leads and the video is MUTED. The tour player owns the
+    /// lock screen, background playback, the geofence hand-off, Group Listen,
+    /// downloads, progress and speed; the picture is a passenger. Reversing
+    /// that would mean rebuilding all of it on an `AVPlayer` fed by a video
+    /// file.
+    private func followNarration() {
+        guard role == .narration, let player, let audioPlayer else { return }
+        player.isMuted = true
+        let audioTime = audioPlayer.currentTime
+        if Self.shouldResync(audioTime: audioTime, videoTime: player.currentTime().seconds) {
+            player.seek(
+                to: CMTime(seconds: audioTime, preferredTimescale: 600),
+                toleranceBefore: .zero,
+                toleranceAfter: .zero
+            )
+        }
+        // Match the transport. `rate` rather than play()/pause() so the
+        // picture also follows the speed control — a tour played at 1.5x
+        // would otherwise drift a second every two seconds and be reseeked
+        // continuously.
+        let wanted = audioPlayer.state == .playing ? Float(audioPlayer.rate) : 0
+        if player.rate != wanted { player.rate = wanted }
     }
 
     /// Expand to fullscreen.
@@ -251,7 +318,8 @@ struct GalleryVideoView: View {
             isLandscape: isLandscape,
             aspectRatio: aspectRatio,
             sourceFrame: frameOnScreen,
-            tourId: tourId
+            tourId: tourId,
+            role: role
         )
         // 🔴 Presented with animation SUPPRESSED. A `fullScreenCover` slides up
         // from the bottom by default, and the viewer's own growth out of this
@@ -295,6 +363,10 @@ struct GalleryVideoView: View {
     /// the narration is actually playing, so we never fight a tour the
     /// user deliberately paused.
     private func pauseNarrationIfNeeded() {
+        // 🔴 A narration clip must never take the narration over: it IS the
+        // narration. Pausing the tour to play its own soundtrack would stop
+        // the very clock the picture is following.
+        guard role != .narration else { return }
         // One rule, shared with the fullscreen viewer so the two cannot drift.
         guard FullscreenVideoView.shouldTakeOverNarration(
             clipHasAudio: hasAudio,
