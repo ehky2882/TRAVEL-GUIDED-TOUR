@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-24 14:10 UTC
+**Last verified:** 2026-08-24 17:30 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,25 +25,28 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-✅ **NOTHING IS STRANDED. Build 113 is the newest and it carries everything merged.** Its head is a
-**merge of `origin/main` taken at 13:14**, so it holds the chrome-row work, the light-mode opacity
-fix, Stockholm and everything before them. The only things merged after it are **#576 itself** (113
-*is* that work), two docs PRs and a read-only workflow — none of which ships in a build.
+✅ **Build 114 is from `main`** (`8d2ad947`, 15:55) and **zero PRs are open** — the cleanest state
+this board has recorded. It carries the fullscreen video viewer, the Swedish architects, the Akalla
+hero and the `get_catalog` hardening.
 
-⚠️ **113 is a branch build whose branch has since merged**, so it is equivalent to `main` rather than
-cut from it. **The last true from-`main` build is 111** (23 Aug 23:56).
+🔴 **ONE THING MERGED AFTER IT AND IS NOT IN ANY BUILD: [#583](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/583)** (17:21) — *a reused hero
+view kept the previous tour's photograph*. **You may well have hit this on 114 itself**: the
+"Continue listening" row read **VIA 57 WEST while showing the Colosseum**.
 
-### Open, none built
+- **The cause is a SwiftUI reuse trap worth remembering.** `HeroImageView` guarded its fetch with
+  *"already cached, nothing to do"* — but `.task(id: imageName)` fires when the URL **changes under
+  a view SwiftUI has reused**, and at that moment the state still holds the *previous* URL's
+  photograph. `State(initialValue:)` seeds only the first use of a view identity and is discarded on
+  reuse. So the early return left the old picture under the new title, permanently, with nothing
+  logged anywhere.
+- **⚠️ It only affects a view that SWAPS TOURS** — Continue listening, the map placecard, a resume
+  banner. Anything inside a `ForEach` keyed by tour was always correct, which is exactly why the
+  rails beside it looked fine and made the bug read as a data fault.
 
-| PR | What | Note |
-|---|---|---|
-| [#571](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/571) | **A clip you can actually see** — the fullscreen video viewer | The first real use of the video support that shipped in session 62 and has had no content until now |
-| [#579](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/579) | Swedish architects: vocabulary 280 → 299, four rejected on the Sullivan rule | Code + content |
-| [#581](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/581) | Akalla: replacement hero under a new filename | Content |
-
-⚠️ **#566's launch-screen trap still applies whenever you next install:** the rendered launch screen
-is cached so hard it survived reinstall *and* a build-number bump in the simulator. **If it looks
-stale, delete the app and reinstall.**
+✅ **#582 closes the loop on this session's opening problem** — *`create or replace get_catalog()`
+destroys the place layer, and four files still do it*. That is the regression that took out places,
+prices and private accounts on 2026-08-19; the files that could repeat it are now identified.
+Contract check still passes: **1,513 tours, 25 places, 41 maker rows**.
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
@@ -118,7 +121,8 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| 113 | `chrome-row-modifier` | #576 chrome row extracted — **head is a merge of `main` at 13:14** (`e90d9995`) | ✅ **install this** |
+| **114** | **`main`** | Fullscreen video, Swedish architects, Akalla hero, `get_catalog` hardening (`8d2ad947`) | ✅ **install this** — but see #583 |
+| 113 | `chrome-row-modifier` | #576 chrome row extracted — head merged `main` at 13:14 (`e90d9995`) | ✅ superseded |
 | 112 | `color-mismatch-elements-pj2ptt` | #573 chrome row made opaque | ✅ merged |
 | 111 | **`main`** | #565 architects, #566 launch mark, #567 + #568 offline photographs (`891702fd`) | ✅ last true from-main build |
 | 110 | **`main`** | Everything to 22 Aug, plus #563 light mode (`b421bde9`) | ✅ superseded |
