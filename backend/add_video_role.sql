@@ -3,62 +3,59 @@
 -- Migration: teach the catalog what a tour's video IS.
 --
 -- Adds a `video_role text` column to `public.tours` and adds a `videoRole`
--- key to the `get_catalog()` RPC.
+-- key to whichever catalog function emits the tour keys.
 --
 --   NULL / 'gallery'  the clip is extra - b-roll, a moving photograph beside
 --                     the still ones. It plays on its own and, if it has
 --                     sound, borrows the narration and hands it straight
---                     back. This is every video in the catalogue today, and
---                     what any tour without the key keeps doing.
+--                     back. Every video in the catalogue today, and what any
+--                     tour without the key keeps doing.
 --
---   'narration'       the clip IS the tour. Its soundtrack is the narration,
---                     so the play bar and the picture are one thing: play,
---                     pause or scrub either and both move together. The
+--   'narration'       the clip IS the tour. Play, pause or scrub either the
+--                     play bar or the picture and both move together. The
 --                     AUDIO is the clock and the video is muted.
 --
--- Owner decision, 2026-08-24: "i agree we need to define different types of
--- videos." Do NOT infer this from the data - the tempting rule (single stop,
--- clip has sound, durations match) breaks b-roll the first time a clip
--- happens to be the length of its narration, and it fails silently.
+-- Owner decision, 2026-08-24. Do NOT infer this from the data - the tempting
+-- rule (single stop, clip has sound, durations match) breaks b-roll the first
+-- time a clip happens to be the length of its narration, and it fails
+-- silently.
 --
 --
--- 🔴 WHY THIS PATCHES get_catalog INSTEAD OF REPLACING IT
+-- 🔴 THE LIVE CATALOG RPC IS A COMPOSITION, NOT ONE FUNCTION
 --
--- Every earlier migration rebuilt the whole function by pasting a full
--- `create or replace`, each one lifted from whatever the author had to hand.
--- The result is that NO FILE IN THIS REPO MATCHES THE LIVE FUNCTION, and
--- `schema.sql` least of all:
+--     get_catalog() = get_catalog_core() || { places: catalog_places() }
 --
---     live get_catalog has   places, priceTier, isPrivate, country, videoURLs
---     schema.sql has         country, videoURLs
---     paid_tours.sql has     priceTier, videoURLs
---     places_apply.sql has   places
+-- The tour keys live in `get_catalog_core()`. `get_catalog()` itself is three
+-- lines. Whoever added places split it exactly so that changing the tour
+-- payload would not mean rebuilding everything - and this migration is the
+-- case that split was for.
 --
--- The first draft of this file followed the `add_country.sql` convention and
--- lifted the body verbatim from `schema.sql` "so the two cannot drift". That
--- convention assumed schema.sql was current. It is not, and running that
--- draft would have silently dropped **all 25 places, priceTier (every paid
--- tour's price) and isPrivate (private accounts)** - three shipped features,
--- from one paste, with no error.
+-- Two earlier drafts of this file got that wrong, and the wrongness is worth
+-- recording because it nearly shipped:
 --
--- So this does not rebuild the function. It reads whatever is live, inserts
--- ONE key next to `videoURLs`, and puts it back. Nothing else can be lost,
--- whatever the live definition happens to contain.
+--   1. The first followed the `add_country.sql` convention and lifted a full
+--      `create or replace` body from `schema.sql` "so the two cannot drift".
+--      schema.sql is STALE. That draft would have silently dropped **all 25
+--      places, priceTier (every paid tour's price) and isPrivate (private
+--      accounts)** - three shipped features, from one paste, no error.
 --
--- ⚠️ It REFUSES rather than guessing: if the anchor is not found, or the key
--- is somehow still absent afterwards, it raises and the transaction rolls
--- back. A migration that cannot do its job must not report success - the
--- same rule the image and coordinate checkers were rebuilt around.
+--   2. The second patched the live definition instead of replacing it, which
+--      was right, but searched `get_catalog()` for `videoURLs` - which is not
+--      there, because it is in the core. Its guard fired and rolled back
+--      rather than doing something arbitrary, which is the only reason this
+--      is a story about two drafts and not about an outage.
+--
+-- ⚠️ So: to change what the catalog emits, PATCH the function that actually
+-- holds the key, and REFUSE if you cannot find it. Never paste a whole
+-- `create or replace` from a file in this repo at the live database - no file
+-- here matches what is running.
 --
 --
 -- Safe to re-run: `add column if not exists`, and the patch is skipped when
 -- the key is already present. Run once in the Supabase SQL Editor (project
--- "Dozent"). Expect "Success. No rows returned."; the PostgREST schema cache
--- reloads within a few seconds. Every existing tour gets NULL, which the app
--- reads as `gallery` - no behaviour changes until a tour says otherwise.
---
--- After this runs, the `seed-supabase` job (publish-catalog.yml) carries
--- `videoRole` from Tours.json into the column on every content merge.
+-- "Dozent"). Expect "Success. No rows returned." Every existing tour gets
+-- NULL, which the app reads as `gallery` - nothing changes until a tour says
+-- otherwise.
 
 begin;
 
@@ -67,57 +64,61 @@ alter table public.tours
 
 do $migration$
 declare
-    src text;
-    patched text;
+    target   regprocedure;
+    src      text;
+    patched  text;
 begin
-    select pg_get_functiondef(p.oid)
-      into src
+    -- Find whichever catalog function actually emits the tour keys, rather
+    -- than assuming which one it is. Today that is get_catalog_core(); if a
+    -- later refactor moves it again, this still finds it.
+    select p.oid::regprocedure
+      into target
       from pg_proc p
       join pg_namespace n on n.oid = p.pronamespace
      where n.nspname = 'public'
-       and p.proname = 'get_catalog';
+       and p.proname in ('get_catalog_core', 'get_catalog')
+       and pg_get_functiondef(p.oid) like '%videoURLs%'
+     order by (p.proname = 'get_catalog_core') desc
+     limit 1;
 
-    if src is null then
-        raise exception 'get_catalog() not found - is this the right database?';
+    if target is null then
+        raise exception
+            'no catalog function emits videoURLs - cannot place videoRole beside it. '
+            'Inspect: select proname from pg_proc p join pg_namespace n on n.oid = '
+            'p.pronamespace where n.nspname = ''public'' and proname like ''%%catalog%%'';';
     end if;
 
-    -- Already done: leave the live definition completely alone.
+    src := pg_get_functiondef(target);
+
     if src like '%videoRole%' then
-        raise notice 'get_catalog already emits videoRole - nothing to patch.';
+        raise notice '% already emits videoRole - nothing to patch.', target;
         return;
     end if;
 
-    -- Insert the new key immediately after videoURLs, whatever the
-    -- surrounding whitespace looks like.
+    -- Insert the new key beside videoURLs, capturing the table alias from the
+    -- existing expression rather than assuming it. Whitespace-independent, so
+    -- it does not care how the live body happens to be formatted - which is
+    -- what broke the previous draft.
     patched := regexp_replace(
         src,
-        '(''videoURLs''\s*,\s*to_jsonb\(\s*t\.video_urls\s*\)\s*,)',
-        E'\\1\n          ''videoRole'',            to_jsonb(t.video_role),'
+        '(''videoURLs''\s*,\s*to_jsonb\(\s*(\w+)\.video_urls\s*\)\s*,)',
+        E'\\1\n          ''videoRole'',            to_jsonb(\\2.video_role),'
     );
 
     if patched = src then
         raise exception
-            'could not find the videoURLs key in get_catalog() - refusing to modify it. '
-            'Patch the function by hand rather than replacing it wholesale: a full '
-            'create-or-replace from any file in this repo would drop places, priceTier '
-            'and isPrivate.';
+            'found % but could not parse its videoURLs expression - refusing to guess. '
+            'Read it with: select pg_get_functiondef(''%%''::regprocedure);', target, target;
     end if;
 
     execute patched;
 
-    -- Prove it took, rather than trusting that it did.
-    select pg_get_functiondef(p.oid)
-      into src
-      from pg_proc p
-      join pg_namespace n on n.oid = p.pronamespace
-     where n.nspname = 'public'
-       and p.proname = 'get_catalog';
-
-    if src not like '%videoRole%' then
-        raise exception 'get_catalog() still does not emit videoRole after patching.';
+    -- Prove it took rather than trusting that it did.
+    if pg_get_functiondef(target) not like '%videoRole%' then
+        raise exception '% still does not emit videoRole after patching.', target;
     end if;
 
-    raise notice 'get_catalog() now emits videoRole.';
+    raise notice '% now emits videoRole.', target;
 end
 $migration$;
 
