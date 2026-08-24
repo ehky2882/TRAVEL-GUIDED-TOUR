@@ -73820,7 +73820,9 @@
       "tags": [
         "Museum",
         "Architecture",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Fredrik Blom",
+        "Rafael Moneo"
       ],
       "priceUSD": 0
     },
@@ -73868,7 +73870,9 @@
         "Museum",
         "Art",
         "Green Escape",
-        "Contemporary"
+        "Contemporary",
+        "Johan Nyrén",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -74003,7 +74007,8 @@
         "Museum",
         "Art",
         "Hidden Gem",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Ragnar Östberg"
       ],
       "priceUSD": 0
     },
@@ -74049,7 +74054,9 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Ilse Crawford",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -74140,7 +74147,9 @@
         "Notable Building",
         "Engineering",
         "History",
-        "Architecture"
+        "Architecture",
+        "Ferdinand Boberg",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -74274,7 +74283,8 @@
         "Performance",
         "Architecture",
         "Neoclassical",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Ivar Tengbom"
       ],
       "priceUSD": 0
     },
@@ -74492,7 +74502,8 @@
         "Museum",
         "Art",
         "Architecture",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Friedrich August Stüler"
       ],
       "priceUSD": 0
     },
@@ -74538,7 +74549,8 @@
         "Museum",
         "History",
         "Architecture",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Isak Gustaf Clason"
       ],
       "priceUSD": 0
     },
@@ -74584,7 +74596,9 @@
         "Art",
         "Waterfront",
         "Hidden Gem",
-        "Free to Visit"
+        "Free to Visit",
+        "Gunilla Bandolin",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -74629,7 +74643,9 @@
         "Civic",
         "Power",
         "Architecture",
-        "Neoclassical"
+        "Neoclassical",
+        "Aron Johansson",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -74807,7 +74823,9 @@
         "Faith",
         "Architecture",
         "Gothic",
-        "Baroque"
+        "Baroque",
+        "Göran Josuae Adelcrantz",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -74895,7 +74913,8 @@
         "Civic",
         "Architecture",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Ragnar Östberg"
       ],
       "priceUSD": 0
     },
@@ -74941,7 +74960,8 @@
         "Library",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Gunnar Asplund"
       ],
       "priceUSD": 0
     },
@@ -75027,7 +75047,8 @@
         "Tower",
         "Architecture",
         "Engineering",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Ivar Tengbom"
       ],
       "priceUSD": 0
     },
@@ -75119,7 +75140,9 @@
         "Venue",
         "Performance",
         "Architecture",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Fredrik Lilljekvist",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -75349,7 +75372,9 @@
         "Architecture",
         "Remembrance",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Gunnar Asplund",
+        "Sigurd Lewerentz"
       ],
       "priceUSD": 0
     },
@@ -75396,7 +75421,9 @@
         "Notable Building",
         "Waterfront",
         "Architecture",
-        "Green Escape"
+        "Green Escape",
+        "Yoji Kasajima",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -75440,7 +75467,10 @@
         "Market",
         "Food",
         "Architecture",
-        "Victorian"
+        "Victorian",
+        "Isak Gustaf Clason",
+        "Kasper Salin",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -75654,7 +75684,9 @@
         "District",
         "History",
         "Power",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Nicodemus Tessin the Younger",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -75734,7 +75766,10 @@
         "Notable Building",
         "History",
         "Baroque",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Carl Fredrik Adelcrantz",
+        "Nicodemus Tessin the Elder",
+        "Nicodemus Tessin the Younger"
       ],
       "priceUSD": 0
     }
