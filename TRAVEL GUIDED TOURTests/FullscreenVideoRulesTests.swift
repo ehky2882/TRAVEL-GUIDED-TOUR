@@ -1,6 +1,7 @@
 import XCTest
 import AVFoundation
 import UIKit
+import SwiftUI
 @testable import TRAVEL_GUIDED_TOUR
 
 /// Covers the three pure rules behind the fullscreen video viewer: what shape
@@ -234,7 +235,8 @@ final class FullscreenVideoRulesTests: XCTestCase {
             didPauseNarration: true,
             isLandscape: false,
             aspectRatio: 9.0 / 16.0,
-            sourceFrame: CGRect(x: 24, y: 180, width: 345, height: 345)
+            sourceFrame: CGRect(x: 24, y: 180, width: 345, height: 345),
+            tourId: nil
         )
         XCTAssertTrue(req.didPauseNarration)
         XCTAssertEqual(req.startSeconds, 4.5, accuracy: 0.001)
@@ -250,7 +252,8 @@ final class FullscreenVideoRulesTests: XCTestCase {
                 startSeconds: 0, hasAudio: true,
                 didPauseNarration: false, isLandscape: false,
                 aspectRatio: 9.0 / 16.0,
-                sourceFrame: .zero
+                sourceFrame: .zero,
+                tourId: nil
             )
         }
         XCTAssertNotEqual(make(), make())
@@ -402,5 +405,56 @@ final class FullscreenVideoRulesTests: XCTestCase {
         let z = FullscreenVideoView.expandTransform(source: .zero, full: screen, aspectRatio: vertical, progress: 0)
         XCTAssertEqual(z.scale, 1, accuracy: 0.0001)
         XCTAssertEqual(z.centre.x, screen.midX, accuracy: 0.01)
+    }
+
+    // MARK: - Control insets
+
+    private var phoneSafeArea: UIEdgeInsets {
+        UIEdgeInsets(top: 59, left: 0, bottom: 34, right: 0)
+    }
+
+    /// 🔴 Unrotated, the row must land where `TourDetailView.chromeRow` lands:
+    /// that row sits inside the safe area with `sm` above it, so a 44pt button
+    /// centres at `safeTop + sm + 22`. Owner direction — the X, bookmark and
+    /// `…` sit where they sit on the tour page.
+    func testUnrotatedInsetsPutTheRowWhereTheTourPagePutsIt() {
+        let i = FullscreenVideoView.controlInsets(rotated: false, safeArea: phoneSafeArea)
+        XCTAssertEqual(i.top, 59 + AtlasSpacing.sm, accuracy: 0.01)
+        XCTAssertEqual(i.leading, AtlasSpacing.lg, accuracy: 0.01)
+        XCTAssertEqual(i.trailing, AtlasSpacing.lg, accuracy: 0.01)
+        // The button's centre, which is the thing that has to match.
+        let centreY = i.top + AtlasChromeButton.diameter / 2
+        XCTAssertEqual(centreY, 59 + AtlasSpacing.sm + 22, accuracy: 0.01)
+    }
+
+    /// ...and clear of the Dynamic Island, which is the failure this replaced:
+    /// a bare 24pt inset centred the close button at y=46, inside the cutout,
+    /// where the system takes the touch.
+    func testUnrotatedRowClearsTheDynamicIsland() {
+        let i = FullscreenVideoView.controlInsets(rotated: false, safeArea: phoneSafeArea)
+        XCTAssertGreaterThan(i.top, phoneSafeArea.top, "the row starts below the cutout")
+    }
+
+    /// Rotated, the insets go uniform: the controls ride inside the rotated
+    /// stack, so the island can be along any edge relative to them and a 24pt
+    /// side inset would put a control straight back under it.
+    func testRotatedInsetsAreUniformAndClearTheIslandOnEveryEdge() {
+        let i = FullscreenVideoView.controlInsets(rotated: true, safeArea: phoneSafeArea)
+        XCTAssertEqual(i.top, i.leading, accuracy: 0.01)
+        XCTAssertEqual(i.leading, i.bottom, accuracy: 0.01)
+        XCTAssertEqual(i.bottom, i.trailing, accuracy: 0.01)
+        XCTAssertGreaterThanOrEqual(i.top, phoneSafeArea.top)
+    }
+
+    /// A device with no insets at all still gets a sane margin rather than
+    /// controls flush against the glass.
+    func testInsetsNeverCollapseToZero() {
+        for rotated in [false, true] {
+            let i = FullscreenVideoView.controlInsets(rotated: rotated, safeArea: .zero)
+            XCTAssertGreaterThan(i.top, 0)
+            XCTAssertGreaterThan(i.leading, 0)
+            XCTAssertGreaterThan(i.bottom, 0)
+            XCTAssertGreaterThan(i.trailing, 0)
+        }
     }
 }

@@ -41,6 +41,9 @@ struct FullscreenVideoRequest: Identifiable, Equatable {
     /// the thumbnail is in the main window, the viewer in the bottom module's.
     /// Both are full-screen on the same scene, so global coordinates line up.
     let sourceFrame: CGRect
+    /// The owning tour. The viewer resolves it to show the same chrome the
+    /// tour page has — see `FullscreenVideoView.chromeRow`.
+    let tourId: UUID?
 
     static func == (a: FullscreenVideoRequest, b: FullscreenVideoRequest) -> Bool { a.id == b.id }
 }
@@ -82,6 +85,11 @@ struct FullscreenVideoView: View {
     /// "is a clip expanded", and it is the same state the carousel set to get
     /// here. Verified: the environment dismiss did not close it.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    /// Resolves `request.tourId` so the viewer can carry the tour page's own
+    /// chrome. Optional so a presentation path without it degrades to a bare
+    /// close button rather than crashing.
+    @Environment(DataService.self) private var dataService: DataService?
+    @Environment(LibraryStore.self) private var libraryStore: LibraryStore?
 
     @State private var player: AVPlayer?
     @State private var isPlaying = false
@@ -96,12 +104,18 @@ struct FullscreenVideoView: View {
     /// presented with animation suppressed so there is no slide underneath it.
     @State private var expansion: Double = 0
 
-    /// The growth curve. Short, and eased so the picture arrives rather than
-    /// stopping dead — the same reasoning as the launch hand-off's arrivals.
-    static let expandCurve: Animation = .spring(response: 0.34, dampingFraction: 0.86)
-    /// How long to let the collapse run before the state is cleared. Slightly
-    /// past the curve, so the viewer is not torn out mid-flight.
-    static let collapseSeconds: Double = 0.30
+    /// The growth curve. Deliberately quick — owner: *"can the expand and
+    /// contract animation be faster? right now doesnt feel very snappy."*
+    /// Damping is high so that at this speed it lands cleanly instead of
+    /// wobbling; a springier curve reads as slower even when it is not.
+    ///
+    /// This is the same instinct the launch hand-off settled on at ~0.2s for
+    /// the brass disc, and for the same reason: a reveal wants to be over.
+    static let expandCurve: Animation = .spring(response: 0.22, dampingFraction: 0.9)
+    /// How long to let the collapse run before the state is cleared. Just past
+    /// the curve, so the viewer is never torn out mid-flight — but no longer,
+    /// or the tap-to-close feels like it hesitated.
+    static let collapseSeconds: Double = 0.22
 
     // MARK: - Pure rules (unit-tested; no view, no device needed)
 
@@ -164,29 +178,44 @@ struct FullscreenVideoView: View {
         clipHasAudio && narrationIsPlaying && !alreadyOwesResume
     }
 
-    /// How far in from the edge the controls sit.
+    /// How far in from each edge the controls sit.
     ///
-    /// 🔴 Read from the WINDOW, not from the `GeometryReader`. Once
-    /// `.ignoresSafeArea()` is applied the geometry reports insets of zero, so
-    /// deriving the number there silently gives a bare 24pt — which puts the
-    /// close button's centre at y=46, inside the Dynamic Island's cutout,
-    /// where the system takes the touch. The button then draws, sits in the
-    /// accessibility tree, and does nothing at all. The window keeps
-    /// reporting the device's real insets regardless of what any view ignores.
+    /// 🔴 Read the safe area from the WINDOW, not from the `GeometryReader`.
+    /// Once `.ignoresSafeArea()` is applied the geometry reports insets of
+    /// zero, so deriving the numbers there silently gives a bare constant —
+    /// which is how the close button ended up centred at y=46, inside the
+    /// Dynamic Island's cutout, where the system takes the touch. It drew, it
+    /// sat in the accessibility tree, and it did nothing.
     ///
-    /// A single uniform inset, because the controls ride inside the rotated
-    /// stack: relative to them the island can be along any edge.
-    static func controlInset(
-        insets: UIEdgeInsets? = nil,
-        floor: CGFloat = AtlasSpacing.lg
-    ) -> CGFloat {
-        let resolved = insets ?? (UIApplication.shared.connectedScenes
+    /// **Unrotated, these reproduce `TourDetailView.chromeRow` exactly**: that
+    /// row lives inside the safe area with `sm` above it and `lg` at the
+    /// sides, so its button centres land at `safeTop + sm + 22`. Matching that
+    /// is the point — owner direction, the X / bookmark / `…` sit where they
+    /// sit on the tour page.
+    ///
+    /// **Rotated, they go uniform.** The controls ride inside the rotated
+    /// stack, so the island can be along any edge relative to them, and a
+    /// 24pt side inset would put a control straight back under it.
+    static func controlInsets(
+        rotated: Bool,
+        safeArea: UIEdgeInsets? = nil
+    ) -> EdgeInsets {
+        let safe = safeArea ?? (UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
             .flatMap(\.windows)
             .first { $0.isKeyWindow }?
             .safeAreaInsets)
             ?? .zero
-        return max(resolved.top, resolved.bottom, resolved.left, resolved.right, floor)
+        if rotated {
+            let uniform = max(safe.top, safe.bottom, safe.left, safe.right, AtlasSpacing.lg)
+            return EdgeInsets(top: uniform, leading: uniform, bottom: uniform, trailing: uniform)
+        }
+        return EdgeInsets(
+            top: safe.top + AtlasSpacing.sm,
+            leading: AtlasSpacing.lg,
+            bottom: max(safe.bottom, AtlasSpacing.sm) + AtlasSpacing.sm,
+            trailing: AtlasSpacing.lg
+        )
     }
 
     /// The rect a clip of this shape actually occupies inside a box, once
@@ -292,7 +321,7 @@ struct FullscreenVideoView: View {
             // ride inside the rotated stack, so the island can be along any
             // edge relative to them; `safeAreaInsets` still reports what was
             // ignored, which is exactly the number needed here.
-            let controlInset = Self.controlInset()
+            let controlInsets = Self.controlInsets(rotated: rotation != 0)
             let full = CGRect(origin: .zero, size: geo.size)
             let zoom = Self.expandTransform(
                 source: request.sourceFrame,
@@ -336,7 +365,7 @@ struct FullscreenVideoView: View {
                                 withAnimation { controlsVisible = true }
                             }
                     }
-                    controlsLayer(inset: controlInset)
+                    controlsLayer(insets: controlInsets)
                 }
                 .frame(width: size.width, height: size.height)
                 .rotationEffect(.degrees(rotation))
@@ -387,35 +416,44 @@ struct FullscreenVideoView: View {
         .animation(.easeInOut(duration: 0.2), value: controlsVisible)
     }
 
-    /// Close + play/pause, riding inside the rotated stack.
-    private func controlsLayer(inset: CGFloat) -> some View {
+    /// The tour this clip belongs to, when the carousel supplied one.
+    private var tour: Tour? {
+        guard let id = request.tourId else { return nil }
+        return dataService?.tour(by: id)
+    }
+
+    /// The viewer's controls, riding inside the rotated stack so they never
+    /// read as upright over a sideways picture.
+    ///
+    /// **Two tiers, deliberately.** The chrome row PERSISTS — owner direction:
+    /// the X, the bookmark and the `…` sit where they sit on the tour page and
+    /// stay put, because they are how you leave and how you act on the tour,
+    /// and hunting for them by tapping is not acceptable. Only the play/pause
+    /// hides, so nothing sits over the picture while it runs.
+    private func controlsLayer(insets: EdgeInsets) -> some View {
         ZStack {
-            // Tap the picture to show/hide the controls; while they are hidden
-            // a tap brings them back rather than toggling playback, so nothing
-            // is one accidental tap from stopping.
+            // Tapping the picture shows/hides the play control. While it is
+            // hidden a tap brings it back rather than toggling playback, so
+            // nothing is one accidental tap from stopping.
             Color.clear
                 .contentShape(Rectangle())
                 .onTapGesture { withAnimation { controlsVisible.toggle() } }
 
-            if controlsVisible {
-                VStack {
-                    HStack {
-                        Button(action: collapse) {
-                            Image(systemName: "xmark")
-                                .font(.system(size: 15, weight: .semibold))
-                                .foregroundStyle(.white)
-                                .frame(width: 44, height: 44)
-                                .background(.black.opacity(0.45), in: Circle())
-                        }
-                        .buttonStyle(.plain)
-                        .accessibilityLabel("Close video")
-                        Spacer()
-                    }
-                    Spacer()
-                }
-                .padding(inset)
-                .transition(.opacity)
+            VStack(spacing: 0) {
+                chromeRow
+                Spacer(minLength: 0)
+                if tour != nil { identityBlock }
+            }
+            .padding(insets)
+            // 🔴 The chrome is drawn over VIDEO, so it must be light whatever
+            // the app's appearance. `AtlasChromeButton` paints `primaryText`,
+            // which in light mode is near-black — invisible on a dark clip,
+            // which is exactly how it first shipped here. Pinning the scheme
+            // resolves the same semantic colours the dark-mode way, so the
+            // button keeps its shared shape rather than growing a second one.
+            .environment(\.colorScheme, .dark)
 
+            if controlsVisible {
                 Button {
                     if isPlaying { player?.pause() } else { player?.play() }
                 } label: {
@@ -429,6 +467,86 @@ struct FullscreenVideoView: View {
                 .accessibilityLabel(isPlaying ? "Pause video" : "Play video")
                 .transition(.opacity)
             }
+        }
+    }
+
+    /// The tour page's own chrome row, at the tour page's own geometry:
+    /// `AtlasChromeButton`s, X leading, bookmark and `…` trailing, `sm`
+    /// between them.
+    ///
+    /// ⚠️ The POSITIONS match `TourDetailView.chromeRow`; the bar behind it
+    /// does not, and must not. That page floats its row on a material bar over
+    /// a scrolling page. Banding the top of a video the same way would fight
+    /// the whole point of fullscreen — Reels and TikTok float their controls
+    /// straight on the picture. The buttons carry their own capsule fill, so
+    /// they stay legible without one.
+    private var chromeRow: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Button(action: collapse) {
+                AtlasChromeButton("xmark")
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Close video")
+
+            Spacer()
+
+            if let tour {
+                Button {
+                    libraryStore?.toggleSaved(tour.id)
+                } label: {
+                    AtlasChromeButton(
+                        libraryStore?.isSaved(tour.id) == true ? "bookmark.fill" : "bookmark"
+                    )
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(
+                    libraryStore?.isSaved(tour.id) == true ? "Remove from saved" : "Save tour"
+                )
+
+                Menu {
+                    ShareLink(item: AtlasShareLink.tourURL(for: tour)) {
+                        Label("Share", systemImage: "square.and.arrow.up")
+                    }
+                } label: {
+                    AtlasChromeButton("ellipsis")
+                }
+                .accessibilityLabel("More options")
+            }
+        }
+    }
+
+    /// Creator and title, bottom-left — the block Reels and TikTok both put
+    /// there, and the one piece of their layout worth borrowing: over a
+    /// full-bleed picture you still need to know whose it is and what it is.
+    ///
+    /// Their right-hand action rail is deliberately NOT copied: the owner
+    /// asked for the tour page's chrome positions, and having save in a rail
+    /// here and in the top row one screen back would be the inconsistency this
+    /// app keeps having to fix.
+    @ViewBuilder
+    private var identityBlock: some View {
+        if let tour {
+            HStack(alignment: .center, spacing: AtlasSpacing.sm) {
+                if let maker = dataService?.maker(for: tour) {
+                    MakerAvatarView(maker: maker, size: 32)
+                }
+                VStack(alignment: .leading, spacing: 2) {
+                    if let maker = dataService?.maker(for: tour) {
+                        Text(maker.displayName)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(.white.opacity(0.85))
+                            .lineLimit(1)
+                    }
+                    Text(tour.title.uppercased())
+                        .font(AtlasTypography.body)
+                        .foregroundStyle(.white)
+                        .lineLimit(2)
+                }
+                Spacer(minLength: 0)
+            }
+            // A scrim rather than a panel: the picture keeps going underneath,
+            // which is what stops the block reading as a bar stuck on the end.
+            .shadow(color: .black.opacity(0.6), radius: 8, y: 1)
         }
     }
 

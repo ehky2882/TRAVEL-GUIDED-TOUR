@@ -407,7 +407,8 @@ struct TourDetailView: View {
             additionalImageURLs: tour.additionalImageURLs,
             videoURLs: tour.videoURLs,
             height: nil,   // takes AtlasSpacing.heroAspectRatio
-            category: tour.primaryCategory
+            category: tour.primaryCategory,
+            tourId: tour.id
         )
         .padding(.horizontal, AtlasSpacing.lg)
     }

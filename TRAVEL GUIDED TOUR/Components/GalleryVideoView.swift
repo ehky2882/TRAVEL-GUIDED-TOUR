@@ -52,6 +52,9 @@ struct GalleryVideoView: View {
     /// page (and its narration resumes). Defaults true for standalone
     /// use.
     var isActive: Bool = true
+    /// The owning tour, so the fullscreen viewer can show the page's own
+    /// chrome. nil = no tour chrome (the carousel is given only URLs).
+    var tourId: UUID? = nil
 
     /// Optional so any presentation path that doesn't inject the
     /// player (there shouldn't be one — it's app-wide + injected into
@@ -247,7 +250,8 @@ struct GalleryVideoView: View {
             didPauseNarration: debt,
             isLandscape: isLandscape,
             aspectRatio: aspectRatio,
-            sourceFrame: frameOnScreen
+            sourceFrame: frameOnScreen,
+            tourId: tourId
         )
         // 🔴 Presented with animation SUPPRESSED. A `fullScreenCover` slides up
         // from the bottom by default, and the viewer's own growth out of this

@@ -33,6 +33,11 @@ struct TourMediaCarousel: View {
     /// Placeholder tint category, used only on the single-image fallback
     /// (matches the previous `HeroImageView(category:)` call).
     var category: TourCategory? = nil
+    /// Which tour these media belong to, so a video expanded to fullscreen can
+    /// carry the page's own chrome — save, share, the `…` menu — rather than
+    /// stranding the user on a bare picture. Optional because the carousel is
+    /// otherwise given nothing but URLs; nil simply means no tour chrome.
+    var tourId: UUID? = nil
 
     /// One carousel page — an image URL or a video URL. `id` namespaces
     /// the two so ForEach/selection diffing is stable even if a URL
@@ -81,13 +86,15 @@ struct TourMediaCarousel: View {
         additionalImageURLs: [String]?,
         videoURLs: [String]?,
         height: CGFloat?,
-        category: TourCategory? = nil
+        category: TourCategory? = nil,
+        tourId: UUID? = nil
     ) {
         self.heroImageURL = heroImageURL
         self.additionalImageURLs = additionalImageURLs
         self.videoURLs = videoURLs
         self.height = height
         self.category = category
+        self.tourId = tourId
         let ordered = Self.orderedMedia(
             heroImageURL: heroImageURL,
             additionalImageURLs: additionalImageURLs,
@@ -135,7 +142,8 @@ struct TourMediaCarousel: View {
             GalleryVideoView(
                 urlString: url,
                 height: height,
-                isActive: selection == item.id
+                isActive: selection == item.id,
+                tourId: tourId
             )
         }
     }
