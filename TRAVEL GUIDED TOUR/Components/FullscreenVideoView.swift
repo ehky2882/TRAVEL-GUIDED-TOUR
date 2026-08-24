@@ -93,6 +93,7 @@ struct FullscreenVideoView: View {
     /// close button rather than crashing.
     @Environment(DataService.self) private var dataService: DataService?
     @Environment(LibraryStore.self) private var libraryStore: LibraryStore?
+    @Environment(PurchaseService.self) private var purchaseService: PurchaseService?
 
     @State private var player: AVPlayer?
     @State private var isPlaying = false
@@ -102,6 +103,12 @@ struct FullscreenVideoView: View {
     /// Narration debt: seeded from the request, then owned here.
     @State private var owesNarrationResume = false
     @State private var controlsVisible = true
+    /// The clip's own length, for the scrubber on a gallery clip. A narration
+    /// clip scrubs the tour instead, so it reads the audio player's duration.
+    @State private var videoDuration: Double = 0
+    /// Set while a drag is in progress so the scrubber follows the finger
+    /// rather than snapping back to the clock on every tick.
+    @State private var scrubTarget: Double? = nil
     /// 0 = the carousel thumbnail, 1 = the whole screen. Driven on appear and
     /// on close, and the ONLY animation the viewer has — the cover is
     /// presented with animation suppressed so there is no slide underneath it.
@@ -350,8 +357,12 @@ struct FullscreenVideoView: View {
                         FullscreenVideoSurface(player: player)
                             .onReceive(player.publisher(for: \.timeControlStatus)) { status in
                                 switch status {
-                                case .playing: isPlaying = true
-                                case .paused: isPlaying = false
+                                case .playing:
+                                    isPlaying = true
+                                    withAnimation { controlsVisible = false }
+                                case .paused:
+                                    isPlaying = false
+                                    withAnimation { controlsVisible = true }
                                 default: break
                                 }
                             }
@@ -440,14 +451,30 @@ struct FullscreenVideoView: View {
             // Tapping the picture shows/hides the play control. While it is
             // hidden a tap brings it back rather than toggling playback, so
             // nothing is one accidental tap from stopping.
+            // Tap the picture to play or pause — owner, 2026-08-24. This used
+            // to only show and hide the controls, which meant the biggest
+            // target on screen did the least useful thing. The controls now
+            // follow playback instead: hidden while it runs, back when it
+            // stops, so nothing sits over a moving picture.
             Color.clear
                 .contentShape(Rectangle())
-                .onTapGesture { withAnimation { controlsVisible.toggle() } }
+                .onTapGesture {
+                    GalleryVideoView.toggle(
+                        role: request.role,
+                        videoPlayer: player,
+                        isPlaying: isPlaying,
+                        tour: tour,
+                        audioPlayer: audioPlayer,
+                        purchaseService: purchaseService,
+                        appShared: appShared
+                    )
+                }
 
             VStack(spacing: 0) {
                 chromeRow
                 Spacer(minLength: 0)
                 if tour != nil { identityBlock }
+                scrubber
             }
             .padding(insets)
             // 🔴 The chrome is drawn over VIDEO, so it must be light whatever
@@ -517,6 +544,85 @@ struct FullscreenVideoView: View {
                 }
                 .accessibilityLabel("More options")
             }
+        }
+    }
+
+    /// Where the clip is, and a way to move it.
+    ///
+    /// 🔴 It reads whichever clock actually drives the picture: a
+    /// **narration** clip is slaved to the tour's audio, so the scrubber IS
+    /// the tour's scrubber and dragging it moves the sound (the picture
+    /// follows). A **gallery** clip owns its own player, so it scrubs that.
+    /// Getting this backwards is precisely the complaint that started the
+    /// video-role work — a bar that did not match the picture.
+    ///
+    /// Styled after the full player's: a thin brass line, no thumb knob.
+    private var scrubber: some View {
+        let total = max(scrubDuration, 0.001)
+        let shown = scrubTarget ?? scrubPosition
+        let fraction = min(max(shown / total, 0), 1)
+        return VStack(spacing: AtlasSpacing.xs) {
+            GeometryReader { bar in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(.white.opacity(0.28))
+                    Capsule().fill(AtlasColors.accent)
+                        .frame(width: bar.size.width * fraction)
+                }
+                .frame(height: 3)
+                .frame(maxHeight: .infinity, alignment: .center)
+                .contentShape(Rectangle())
+                .gesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged { g in
+                            let f = min(max(g.location.x / bar.size.width, 0), 1)
+                            scrubTarget = f * total
+                        }
+                        .onEnded { g in
+                            let f = min(max(g.location.x / bar.size.width, 0), 1)
+                            seek(to: f * total)
+                            scrubTarget = nil
+                        }
+                )
+            }
+            // A tall touch target over a 3pt line — the line is the drawing,
+            // not the thing you have to hit.
+            .frame(height: 28)
+
+            HStack {
+                Text(AtlasFormatters.duration(seconds: Int(shown)))
+                Spacer()
+                Text(AtlasFormatters.duration(seconds: Int(total)))
+            }
+            .font(AtlasTypography.caption)
+            .foregroundStyle(.white.opacity(0.85))
+        }
+        .shadow(color: .black.opacity(0.6), radius: 8, y: 1)
+        .padding(.top, AtlasSpacing.md)
+    }
+
+    /// The clock this clip runs on.
+    private var scrubPosition: Double {
+        if request.role == .narration { return audioPlayer?.currentTime ?? 0 }
+        let t = player?.currentTime().seconds ?? 0
+        return t.isFinite ? t : 0
+    }
+
+    private var scrubDuration: Double {
+        if request.role == .narration { return audioPlayer?.duration ?? 0 }
+        return videoDuration
+    }
+
+    /// Move whichever clock drives the picture. For a narration clip that is
+    /// the tour's audio — the picture catches up on the next follow tick.
+    private func seek(to seconds: Double) {
+        if request.role == .narration {
+            audioPlayer?.seek(to: seconds, precise: true)
+        } else {
+            player?.seek(
+                to: CMTime(seconds: seconds, preferredTimescale: 600),
+                toleranceBefore: .zero,
+                toleranceAfter: .zero
+            )
         }
     }
 
@@ -604,6 +710,10 @@ struct FullscreenVideoView: View {
                 toleranceBefore: .zero,
                 toleranceAfter: .zero
             )
+        }
+        if let d = try? await p.currentItem?.asset.load(.duration),
+           CMTimeGetSeconds(d).isFinite {
+            videoDuration = CMTimeGetSeconds(d)
         }
         player = p
         // A narration clip is a passenger: muted, and moved only by the tour's

@@ -93,6 +93,8 @@ struct GalleryVideoView: View {
     /// Optional for the same reason `audioPlayer` is: not every presentation
     /// path injects it. Without it the expand button simply isn't offered.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    @Environment(DataService.self) private var dataService: DataService?
+    @Environment(PurchaseService.self) private var purchaseService: PurchaseService?
 
     var body: some View {
         ZStack {
@@ -138,10 +140,20 @@ struct GalleryVideoView: View {
         // the explicit button below rather than this, so there's a real
         // control in the accessibility tree.
         .contentShape(Rectangle())
+        // Tap the picture to play or pause — owner, 2026-08-24. This used to
+        // only ever PAUSE, with starting reserved for the glyph; the glyph
+        // stays (it is the discoverable, VoiceOver-reachable control) but the
+        // surface now works both ways.
         .onTapGesture {
-            // Same reason: a narration clip is not independently pausable, or
-            // the picture would stop while the narration carried on.
-            if role != .narration, isPlaying { player?.pause() }
+            Self.toggle(
+                role: role,
+                videoPlayer: player,
+                isPlaying: isPlaying,
+                tour: owningTour,
+                audioPlayer: audioPlayer,
+                purchaseService: purchaseService,
+                appShared: appShared
+            )
         }
         // 🔴 TOP-trailing, and the corner matters. At the BOTTOM the button
         // rendered, appeared in the accessibility tree, and its action never
@@ -209,6 +221,56 @@ struct GalleryVideoView: View {
         }
     }
 
+    /// Toggle whatever actually drives this clip.
+    ///
+    /// A **gallery** clip owns its own player, so the tap is simply play or
+    /// pause. A **narration** clip is muted and slaved to the tour's audio, so
+    /// the tap has to move the TOUR — pausing the picture alone would leave
+    /// the sound running without it.
+    ///
+    /// 🔴 Starting a tour from here asserts the paid preview cap FIRST, via
+    /// the one shared rule (`PurchaseService.previewLimit(for:)`). A play
+    /// control that starts a tour without doing that is the session-91
+    /// overflow-menu paywall hole in a new place. Resuming a tour that is
+    /// already loaded does not need it — the cap is already on the player.
+    static func toggle(
+        role: TourVideoRole,
+        videoPlayer: AVPlayer?,
+        isPlaying: Bool,
+        tour: Tour?,
+        audioPlayer: AudioPlayerService?,
+        purchaseService: PurchaseService?,
+        appShared: AppSharedState?
+    ) {
+        guard role == .narration else {
+            if isPlaying { videoPlayer?.pause() } else { videoPlayer?.play() }
+            return
+        }
+        guard let tour, let audioPlayer else { return }
+
+        // Already this tour's audio: resume or pause in place.
+        if audioPlayer.currentSourceId == tour.id.uuidString,
+           audioPlayer.state != .idle, audioPlayer.state != .failed {
+            switch audioPlayer.state {
+            case .playing, .loading: audioPlayer.pause()
+            case .paused, .ended:    audioPlayer.play()
+            case .idle, .failed:     break
+            }
+            return
+        }
+
+        // Not loaded yet — start it, capped.
+        guard let stop = tour.stops.first, let url = URL(string: stop.audioURL) else { return }
+        audioPlayer.setPreviewLimit(purchaseService?.previewLimit(for: tour))
+        audioPlayer.play(
+            url: url,
+            title: tour.title,
+            artist: nil,
+            sourceId: tour.id.uuidString
+        )
+        appShared?.currentPlayingStopId = stop.id
+    }
+
     /// How far the picture may drift from the narration before it is worth
     /// seeking. Both run on the same device off the same clock, so this is
     /// only absorbing decode jitter — unlike Group Listen, which is bridging
@@ -254,6 +316,12 @@ struct GalleryVideoView: View {
         // continuously.
         let wanted = audioPlayer.state == .playing ? Float(audioPlayer.rate) : 0
         if player.rate != wanted { player.rate = wanted }
+    }
+
+    /// This clip's tour, when the carousel supplied one.
+    private var owningTour: Tour? {
+        guard let tourId else { return nil }
+        return dataService?.tour(by: tourId)
     }
 
     /// Expand to fullscreen.

@@ -1131,7 +1131,9 @@ struct TourDetailView: View {
     /// Seconds of preview to allow for the current state — `nil` (unlimited)
     /// for anything the user may hear in full.
     private var activePreviewLimit: TimeInterval? {
-        isLockedPaid ? PurchaseService.previewSeconds : nil
+        // Shared with the fullscreen video viewer — see
+        // `PurchaseService.previewLimit(for:)`. Do not inline this rule again.
+        purchaseService?.previewLimit(for: tour)
     }
 
     private var buttonRow: some View {
