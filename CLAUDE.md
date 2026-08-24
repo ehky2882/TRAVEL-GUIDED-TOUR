@@ -124,6 +124,20 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-08-24)
+
+### The chrome row stops being a slightly different colour than its page ([PR #573](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/573), session 107 — code)
+
+**Owner, marking two regions of a tour-detail screenshot: *"1 and 2 marked in the screencap are supposed to be same color. They look like they're just a little different."*** They were. Squash `1232cbd`, **merged**. **TestFlight 1.1 (112), owner device-verified — "looks great."** Three Swift files, +43/−7. No SQL, no catalogue change. Full detail: `archive/HANDOFF-260824.md`.
+
+- **🔴 THE CAUSE: AN OPACITY + MATERIAL PAIR DEFEATING THE TOKEN BUILT TO PREVENT EXACTLY THIS.** All three canonical chrome rows painted themselves `secondaryBackground.opacity(0.8)` over `.regularMaterial`, on a page that is a plain `secondaryBackground`. **That token is a hardcoded RGB pair precisely so every painted surface resolves to the same value regardless of window or elevation** — its own doc comment says it stopped being `.secondarySystemBackground` because the semantic colour resolved differently at `.base` vs `.elevated`, which is what put a seam between the bottom-module chrome and the detail body in dark mode. Drawing the literal at 80% over a material threw that away: `.regularMaterial` resolves lighter than `#1C1C1E`, so the composite landed a few levels above the page — small, but a straight edge across the full screen width makes a few levels legible.
+- **⚠️ THE SECOND HALF, WHICH NOBODY HAD NAMED: THE MISMATCH WAS NOT A CONSTANT.** A material samples what is behind it, and the row is a `.safeAreaInset(edge: .top)` with page content — including a full-width hero — scrolling directly underneath. **The row's shade drifted as you scrolled.** A fixed offset would have been filed years ago; a shade that only misbehaves mid-scroll reads as "something feels slightly off" and never gets pinned down.
+- **The fix is one opaque `secondaryBackground`, with the material dropped rather than kept behind it.** At full opacity it contributed nothing visible and was only paying for an offscreen blur pass per frame — the same reasoning that deleted the app-wide scale-and-blur in #559.
+- **Applied to all three pages that carry this row** — `TourDetailView`, `PlaceView`, `TourListDetailView` — which are byte-identical by design with tour detail canonical (owner, 2026-08-20). **Verified by hashing the `.safeAreaInset` block in all three AFTER the change: still identical.** Fixing one would have started exactly the drift that note warns about.
+- **🔴 DO NOT REINTRODUCE THE MATERIAL HERE.** The original intent was "solid material + tint backdrop" — the row's own comment said so, and it was never solid. A future pass cannot have translucency on this row *and* an invisible boundary with the page: **one token deliberately paints both surfaces**, so any material resolves off it. Same constraint #563 recorded for why light mode cannot separate the bars from the page they sit on. The reasoning is now a comment at each call site.
+- **⚠️ Authored in a Linux web session with no Swift toolchain — nothing was compiled locally.** CI on the PR (simulator build + unit tests) was the `test_sim` stand-in, per Automation Rule #3, and the owner's device check on 1.1 (112) is what confirmed the visual result.
+- **⚠️ Process: the branch was checked for staleness before the build was cut.** Its second commit *was* current `origin/main`, so 1.1 (112) carried everything on main plus the fix — the 1.1 (92) lesson. Build notes were written in **plain ASCII** deliberately (1.1 (97) uploaded fine then went red seven minutes later on a single `✕`). And `git fetch` timed out twice against the proxy; branch freshness was established through the GitHub API instead — worth reaching for when the shell's git is the broken thing.
+
 ## Current State (2026-08-23)
 
 ### TestFlight 1.1 (111) — the day's four changes are on a phone (session 105d)
