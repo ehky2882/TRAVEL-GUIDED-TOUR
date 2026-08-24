@@ -55,6 +55,24 @@ enum LinkSource {
         }
     }
 
+    /// 🔴 A YouTube **Short** is 9:16, exactly like a TikTok — so the shape has
+    /// to come from the URL, not from the platform alone. Framed in the 16:9
+    /// box that suits an ordinary video, a Short's picture fills only
+    /// `(9/16)² = 31.6%` of the width; YouTube pads the rest with a blurred,
+    /// stretched copy of the frame and clips its own title overlay.
+    static func embedAspectRatio(for urlString: String) -> CGFloat {
+        let source = from(urlString: urlString)
+        if source == .youtube, isYouTubeShort(urlString) { return 9.0 / 16.0 }
+        return source.embedAspectRatio
+    }
+
+    /// `youtube.com/shorts/{id}` — matched as a whole path component so a video
+    /// merely *titled* "shorts" cannot be mistaken for one.
+    static func isYouTubeShort(_ urlString: String) -> Bool {
+        guard let url = URL(string: urlString) else { return false }
+        return url.pathComponents.contains("shorts")
+    }
+
     /// The post's own embeddable player, derived from the share URL.
     ///
     /// 🔴 All three platforms publish a player that needs **no API key, no

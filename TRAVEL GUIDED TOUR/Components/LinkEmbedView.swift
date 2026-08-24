@@ -29,6 +29,47 @@ struct LinkEmbedView: UIViewRepresentable {
     /// fullscreen system player, which defeats the point; without clearing
     /// `mediaTypesRequiringUserActionForPlayback` the platform's own play
     /// button cannot start anything.
+
+    /// 🔴 The embed is hosted in an iframe under a **real origin** rather than
+    /// loaded directly. `web.load(URLRequest(url: embedURL))` gives the player
+    /// no referrer and an opaque parent origin; TikTok tolerates that, YouTube
+    /// refuses it outright with **"Error 153 — video player configuration
+    /// error"** and plays nothing. Verified both ways in the simulator.
+    static func shell(_ embed: URL) -> String {
+        """
+        <!DOCTYPE html><html><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <style>html,body{margin:0;padding:0;background:#000;height:100%;overflow:hidden}
+        iframe{border:0;width:100%;height:100%;display:block}</style>
+        </head><body>
+        <iframe src="\(htmlAttributeEscaped(embed.absoluteString))"
+                allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                allowfullscreen playsinline></iframe>
+        </body></html>
+        """
+    }
+
+    /// ⚠️ The embed URL is now interpolated into an **HTML attribute**, which it
+    /// never was before this shell existed. `LinkSource.embedURL` only ever
+    /// builds URLs from validated ids, so nothing hostile reaches here today —
+    /// but escaping at the boundary is cheaper than proving every future
+    /// derivation safe, and this file has already paid once for a URL that
+    /// looked trustworthy (`tiktok.evil.com`).
+    ///
+    /// `&` is replaced first, or the escapes introduced after it get
+    /// double-escaped into visible `&amp;quot;`.
+    static func htmlAttributeEscaped(_ raw: String) -> String {
+        raw.replacingOccurrences(of: "&", with: "&amp;")
+            .replacingOccurrences(of: "\"", with: "&quot;")
+            .replacingOccurrences(of: "'", with: "&#39;")
+            .replacingOccurrences(of: "<", with: "&lt;")
+            .replacingOccurrences(of: ">", with: "&gt;")
+    }
+
+    /// The origin the iframe's parent reports. Any real https origin we control
+    /// satisfies the platforms' referrer checks.
+    static let embedOrigin = URL(string: "https://dozent.world")
+
     func makeUIView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
         config.allowsInlineMediaPlayback = true
@@ -43,7 +84,7 @@ struct LinkEmbedView: UIViewRepresentable {
         web.isOpaque = false
         web.backgroundColor = .black
         web.scrollView.backgroundColor = .black
-        web.load(URLRequest(url: embedURL))
+        web.loadHTMLString(Self.shell(embedURL), baseURL: Self.embedOrigin)
         return web
     }
 
@@ -53,7 +94,7 @@ struct LinkEmbedView: UIViewRepresentable {
         // re-renders constantly while audio elsewhere is playing.
         guard context.coordinator.loadedURL != embedURL else { return }
         context.coordinator.loadedURL = embedURL
-        web.load(URLRequest(url: embedURL))
+        web.loadHTMLString(Self.shell(embedURL), baseURL: Self.embedOrigin)
     }
 
     func makeCoordinator() -> Coordinator { Coordinator(loadedURL: embedURL) }

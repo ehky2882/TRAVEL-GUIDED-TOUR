@@ -399,11 +399,15 @@ struct TourDetailView: View {
     /// padding stays here so the footprint matches the map tab.
     @ViewBuilder
     private var imageSection: some View {
-        if tour.isLink, let embed = tour.linkEmbedURL, let source = tour.linkSource {
+        if tour.isLink, let embed = tour.linkEmbedURL, let sourceURL = tour.sourceURL {
             // The post plays here rather than on TikTok. See `LinkEmbedView`
             // for why this is an embed and can never be a copy.
+            //
+            // The shape comes from the URL, not the platform: a YouTube Short
+            // is 9:16 like a TikTok, while an ordinary YouTube video is 16:9.
             LinkEmbedView(embedURL: embed)
-                .aspectRatio(source.embedAspectRatio, contentMode: .fit)
+                .aspectRatio(LinkSource.embedAspectRatio(for: sourceURL),
+                             contentMode: .fit)
                 .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
                 .padding(.horizontal, AtlasSpacing.lg)
         } else if tour.isLink {

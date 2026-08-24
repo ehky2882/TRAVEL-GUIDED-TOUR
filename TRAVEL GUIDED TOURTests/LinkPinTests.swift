@@ -120,4 +120,73 @@ final class LinkPinTests: XCTestCase {
         XCTAssertEqual(LinkSource.instagram.embedAspectRatio, 9.0 / 16.0, accuracy: 0.0001)
         XCTAssertEqual(LinkSource.youtube.embedAspectRatio, 16.0 / 9.0, accuracy: 0.0001)
     }
+
+    // MARK: - Shorts are vertical, ordinary YouTube videos are not
+
+    /// 🔴 A YouTube **Short** is 9:16, exactly like a TikTok. The shape used to
+    /// come from the platform alone, so a Short was framed in the 16:9 box that
+    /// suits an ordinary video and its picture filled only `(9/16)^2 = 31.6%`
+    /// of the width — YouTube padding the rest with a blurred, stretched copy
+    /// of the frame and clipping its own title overlay. Confirmed on screen.
+    func test_embedAspect_youtubeShortIsVertical() {
+        XCTAssertEqual(LinkSource.embedAspectRatio(for: "https://www.youtube.com/shorts/kSBYbyN17qo"),
+                       9.0 / 16.0, accuracy: 0.0001)
+    }
+
+    /// The other half of that rule, and the regression that would matter most:
+    /// an ordinary video must stay landscape.
+    func test_embedAspect_youtubeWatchStaysLandscape() {
+        XCTAssertEqual(LinkSource.embedAspectRatio(for: "https://www.youtube.com/watch?v=jNQXAC9IVRw"),
+                       16.0 / 9.0, accuracy: 0.0001)
+        XCTAssertEqual(LinkSource.embedAspectRatio(for: "https://youtu.be/jNQXAC9IVRw"),
+                       16.0 / 9.0, accuracy: 0.0001)
+    }
+
+    /// TikTok is unaffected by routing the shape through the URL.
+    func test_embedAspect_tiktokUnchangedThroughURLPath() {
+        XCTAssertEqual(LinkSource.embedAspectRatio(for: "https://www.tiktok.com/@tiktok/video/7106594312292453675"),
+                       9.0 / 16.0, accuracy: 0.0001)
+    }
+
+    /// ⚠️ "shorts" is matched as a whole path component, so a channel or video
+    /// whose slug merely *starts with* those letters is not mistaken for one.
+    /// Same discipline as the registrable-domain fix above.
+    func test_isYouTubeShort_matchesWholePathComponentOnly() {
+        XCTAssertTrue(LinkSource.isYouTubeShort("https://www.youtube.com/shorts/abc123"))
+        XCTAssertFalse(LinkSource.isYouTubeShort("https://www.youtube.com/shortsxyz/abc123"))
+        XCTAssertFalse(LinkSource.isYouTubeShort("https://www.youtube.com/watch?v=shorts"))
+        XCTAssertFalse(LinkSource.isYouTubeShort("https://www.tiktok.com/@a/video/1"))
+    }
+
+    // MARK: - The iframe shell
+
+    /// The shell must actually carry the player it was handed, or the box
+    /// renders empty and the failure looks like a dead network.
+    func test_shell_embedsTheGivenPlayerURL() {
+        let embed = URL(string: "https://www.youtube.com/embed/ID?playsinline=1&rel=0")!
+        let html = LinkEmbedView.shell(embed)
+        XCTAssertTrue(html.contains("<iframe"))
+        XCTAssertTrue(html.contains("https://www.youtube.com/embed/ID?playsinline=1&amp;rel=0"))
+        XCTAssertNotNil(LinkEmbedView.embedOrigin)
+    }
+
+    /// ⚠️ The shell interpolates a URL into an HTML attribute, which nothing
+    /// did before it existed. Nothing hostile can reach it today — every embed
+    /// URL is built from a validated id — but the escape is what keeps that
+    /// true if a future derivation is looser.
+    func test_htmlAttributeEscaped_closesTheAttributeInjectionRoute() {
+        let nasty = #"https://x.test/a"onload="alert(1)"#
+        let out = LinkEmbedView.htmlAttributeEscaped(nasty)
+        XCTAssertFalse(out.contains("\""), "a raw quote would end the src attribute early")
+        XCTAssertTrue(out.contains("&quot;"))
+        XCTAssertEqual(LinkEmbedView.htmlAttributeEscaped("<b>"), "&lt;b&gt;")
+    }
+
+    /// `&` is escaped first, or every escape introduced after it is escaped a
+    /// second time and the src arrives as visible `&amp;quot;`.
+    func test_htmlAttributeEscaped_doesNotDoubleEscapeAmpersands() {
+        XCTAssertEqual(LinkEmbedView.htmlAttributeEscaped("a&b"), "a&amp;b")
+        XCTAssertEqual(LinkEmbedView.htmlAttributeEscaped("a\"b"), "a&quot;b")
+    }
+
 }
