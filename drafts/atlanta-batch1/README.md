@@ -52,28 +52,55 @@ written down to prevent. If the other 15 ever arrive they are a **second batch**
 | 28 | Graves Hall, Morehouse | `graves-hall` | `28_graves_hall` | `history` | `33.74600, -84.41310` | Notable Building, History, Architecture | C | AUC campus — likely needs an owner photo |
 | 29 | Spelman College Oval | `spelman-oval` | `29_spelman_oval` | `history` | `33.74560, -84.41190` | District, History, Green Escape | C | AUC campus — likely needs an owner photo |
 | 30 | Student Movement Boulevard | `student-movement-blvd` | `30_student_movement_blvd` | `history` | `33.75160, -84.41200` | District, History, Remembrance, Free to Visit | C | ⚠️ movement site — buildings and street, not archival protest imagery |
-## Images — 3 of 30 done
+## Images — 11 of 30 live on gh-pages (verified 2026-08-24)
 
 | tour | files | source | credit |
 |------|-------|--------|--------|
-| 03 Georgia State Capitol | `georgia-state-capitol_hero` + `_2`.. `_5` | Unsplash / Pexels | none |
+| 03 Georgia State Capitol | `georgia-state-capitol_hero` + `_2`..`_5` | Unsplash / Pexels | none |
+| 06 Ebenezer Baptist | `ebenezer-baptist_hero` | Library of Congress, PD | none |
+| 07 King Center | `king-center_hero` | Unsplash / Pexels | none |
+| 09 Centennial Olympic Park | `centennial-olympic-park_hero` + `_2`,`_3` | Unsplash / Pexels | none |
+| 10 Fox Theatre | `fox-theatre_hero` + `_2`..`_4` | Library of Congress (Highsmith), PD | none |
 | 11 Ponce City Market | `ponce-city-market_hero` + `_2` | Unsplash / Pexels | none |
-| 12 Jackson Street Bridge | `jackson-street-bridge_hero` + `_2`.. `_4` | Unsplash / Pexels | none |
+| 12 Jackson Street Bridge | `jackson-street-bridge_hero` + `_2`..`_4` | Unsplash / Pexels | none |
+| 13 Piedmont Park | `piedmont-park_hero` + `_2`..`_5` | Unsplash / Pexels | none |
+| 14 Oakland Cemetery | `oakland-cemetery_hero` + `_2`..`_6` | Library of Congress (Highsmith), PD | none |
+| 15 Mercedes-Benz Stadium | `mercedes-benz-stadium_hero` + `_2`,`_3` | Unsplash / Pexels | none |
+| 20 High Museum | `high-museum_hero` (owner) + `_2` | owner-supplied / stock | none |
 
-All nine verified live (HTTP 200). **Ponce ships at hero + 1 only** — that is all its pool
-supported; backfill when Commons is reachable, its category holds 26 files.
+**All eleven carry zero credit obligations.** Ponce ships at hero + 1 only — that is all its
+stock pool supported; its Commons category holds 26, so backfill from there.
 
-**✅ 20 High Museum — hero is owner-supplied** (`high-museum_hero.webp`): the Meier volumes with
-the incised "High Museum of Art" lettering along the approach wall. `high-museum_2.webp` is the
-stock exterior (HGH2). Superseded note kept for context:
-**~~hero was OWNER-PENDING~~.** `high-museum_2.webp` (the Meier porcelain
-panels, the script's exact description) is staged in the **gallery** slot; the owner is
-supplying their own hero. Do not promote `_2` to hero — wait for it. Only one clean exterior
-existed in the whole stock pool; the rest were gallery interiors, which carry their own
-copyright problem since the hung artworks are the subject.
+**20 High Museum's hero is owner-supplied** (the Meier volumes with the incised "High Museum of
+Art" lettering along the approach wall). `high-museum_2.webp` is the stock exterior. Only one
+clean exterior existed in the whole stock pool; the rest were gallery interiors, which carry
+their own copyright problem since the hung artworks are the subject.
 
-**The other 27 have no usable imagery yet.** See § Sourcing below — this is a solvable
-blocker, not a property of the subjects.
+### 🔴 SLUG COLLISION — Atlanta's Flatiron must NOT use `flatiron-building_*`
+
+`images/flatiron-building_hero.webp` and `_2`..`_4` are **already live on gh-pages and belong to
+the NEW YORK catalog**. Pushing Atlanta's Flatiron under that slug would silently overwrite four
+images on a shipped tour. Use **`atlanta-flatiron_*`**. The same check applies to any Atlanta
+subject whose name exists in another city — sweep `git ls-tree -r --name-only origin/gh-pages
+images/` for the slug before the first push, every time.
+
+### Sourced this session, awaiting owner picks (not yet cropped or pushed)
+
+| tour | pool | best | licence |
+|------|------|------|---------|
+| 17 Krog Street Tunnel | 53 Commons + 2 Pexels | Pexels MARTA-overpass shot; Commons `KC2` exterior w/ CSX containers | Pexels none; Commons CC BY / BY-SA |
+| 19 The Temple | 4 Commons | `TC1` full exterior, pediment + dome | **CC0 on 2 of 4** |
+| 21 Georgian Terrace | 7 Commons | `GC4` building; `GC3` entrance sign | CC BY-SA 4.0 |
+| 22 Flatiron (Atlanta) | 9 Commons | `FC2` hero; `FC6` doorway w/ MDCCCXCVII | **CC0 on 4 of 9** |
+| 24 Hurt Building | 12 Commons distinct | `HCX7` wedge apex (landscape); `HCX4` marble stair | CC BY-SA 4.0 |
+| 25 Big Bethel AME | 1 Unsplash | granite tower + JESUS SAVES steeple sign | none |
+| 06 Ebenezer (gallery add) | 1 Unsplash | Auburn Ave neon blade sign | none |
+
+**⚠️ Content flag on Krog `KC1`** (the sharpest Commons file, 7584×5056): two legible f-words on
+the piers. Croppable around, not shippable as shot.
+
+**The remaining 13 have no usable imagery yet.** See § Sourcing below — solvable, not a property
+of the subjects.
 
 ## 🔴 Three stops depict copyrighted artwork — owner cleared them to ship (2026-08-17)
 
@@ -148,6 +175,35 @@ the file whole. Beat markers are bare `[beat]`, no asterisks — one per script,
 heavily phoneticised (`may ree ett uh`, `muhs koh gee`, `chat uh noo guh`, `eb uh nee zer`,
 `pahnss duh lee on`) and would ship gibberish to a reader. They also carry **no header at
 all**, in every format.
+
+## ✅ CORRECTION (2026-08-24) — Commons is NOT blocked; the earlier read was wrong
+
+**Everything in the post-mortem below about the rate limit is accurate as history, but its
+conclusion — that Commons was unusable — was not.** The window reopens. A grabber that honours
+`Retry-After`, spaces downloads ~4s, and backs off exponentially pulls **12+ files per subject**
+without tripping anything. `/tmp/cgrab.py` in that session was the working shape:
+
+- **The failure mode that fooled me twice:** when throttled, `list=categorymembers` returns an
+  HTTP error, and a naive caller reports it as **"0 files"** — indistinguishable from an empty
+  category. Two separate sessions concluded "Commons is dry for Atlanta" from exactly this.
+  **Always distinguish transport failure from an empty result.** Probe a category that is known
+  to hold files; if that also reads 0, you are throttled, not out of material.
+- **`list=search` (namespace 6) throttles just as hard** but works with wide spacing, and is how
+  you find a category name instead of guessing it. `Woodruff Park` → 793 hits.
+- **I re-made the "five of my first guesses were wrong" mistake** — probed `Category:Atlanta
+  BeltLine` (0) when the verified name `Category:BeltLine, Atlanta` was already written down
+  below. **Read the verified list before probing.**
+
+**Counts confirmed live 2026-08-24:** Krog Street Tunnel 59 · Spelman College 59 · Hurt Building
+50 · Flatiron Building (Atlanta) 35 · Morehouse College 28 · Historic Fourth Ward Park 12 ·
+Georgian Terrace Hotel 10 · The Temple (Atlanta) 6 · Prince Hall Masonic Temple (Atlanta) 3.
+
+**Dedupe by content hash, not filename.** Repeated category listings re-serve the same files
+under new labels — the Hurt pool read 17 and held 12. Do this *before* saving.
+
+**Licensing note:** Commons for Atlanta is mostly CC BY / CC BY-SA (credit rows required in
+`drafts/CREDITS.md`), but there is real CC0 in there — 4 of 9 Flatirons and 2 of 4 Temples.
+**Prefer the CC0 file when it is good enough**; it costs nothing downstream.
 
 ## Sourcing — what happened, so the next session doesn't repeat it
 
