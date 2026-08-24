@@ -1,3 +1,29 @@
+-- ============================================================================
+-- 🔴 NO LONGER SAFE TO RE-RUN. THIS FILE WOULD DESTROY THE PLACE LAYER.
+--
+-- It contains `create or replace function public.get_catalog()`. That was
+-- correct when written. It is not any more.
+--
+-- `places.sql` RENAMED the then-current `get_catalog` to `get_catalog_core`
+-- and made `get_catalog` a three-line wrapper:
+--
+--     get_catalog() = get_catalog_core() || { places: catalog_places() }
+--
+-- So replacing `get_catalog()` today overwrites the WRAPPER with a full body,
+-- severing the call to the core. The result: all 25 places gone, and every
+-- key the core has gained since this file was written gone with them -
+-- `priceTier`, `isPrivate`, `country`, `videoURLs`, `videoRole`. No error.
+-- The app simply stops receiving them.
+--
+-- ⚠️ The "idempotent - safe to re-run" note below refers to the table and
+-- policy statements, which are still fine. It does NOT cover the function.
+--
+-- TO CHANGE WHAT THE CATALOG EMITS: patch `get_catalog_core`, never replace
+-- `get_catalog`. Read `pg_get_functiondef`, insert your key, execute it back,
+-- and raise if the anchor is missing so the transaction rolls back.
+-- `backend/add_video_role.sql` is the worked example.
+-- ============================================================================
+
 -- ---------------------------------------------------------------------------
 -- Public lists on maker pages
 -- ---------------------------------------------------------------------------
