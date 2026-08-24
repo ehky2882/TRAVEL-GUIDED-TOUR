@@ -148,7 +148,7 @@ struct GalleryVideoView: View {
             Self.toggle(
                 role: role,
                 videoPlayer: player,
-                isPlaying: isPlaying,
+                isPlaying: effectivelyPlaying,
                 tour: owningTour,
                 audioPlayer: audioPlayer,
                 purchaseService: purchaseService,
@@ -198,16 +198,26 @@ struct GalleryVideoView: View {
     /// target rather than relying on the whole surface.
     @ViewBuilder
     private var playAffordance: some View {
-        // 🔴 A narration clip has NO transport of its own, and that is a
-        // safety property as much as a design one. The tour's own play button
-        // re-asserts the paid preview cap on every start
-        // (`TourDetailView.handlePrimaryAction`); a second start control here
-        // would begin the same content with no cap applied — the overflow-menu
-        // paywall hole from session 91, in a new place. One clock, one
-        // control: the play bar drives, the picture follows.
-        if role != .narration, !isPlaying {
+        // Shown whenever the picture is stopped, on BOTH kinds of clip —
+        // owner, 2026-08-24: a still frame with no play button gives no sign
+        // it can be played at all.
+        //
+        // ⚠️ This was withheld from narration clips until the paid preview cap
+        // moved into `PurchaseService.previewLimit(for:)`. A second control
+        // that can START a tour is only safe once the cap is a shared rule
+        // rather than something one view owns privately — see
+        // `GalleryVideoView.toggle`, which every path here goes through.
+        if !effectivelyPlaying {
             Button {
-                player?.play()
+                Self.toggle(
+                    role: role,
+                    videoPlayer: player,
+                    isPlaying: effectivelyPlaying,
+                    tour: owningTour,
+                    audioPlayer: audioPlayer,
+                    purchaseService: purchaseService,
+                    appShared: appShared
+                )
             } label: {
                 Image(systemName: "play.circle.fill")
                     .font(.system(size: 52))
@@ -219,6 +229,13 @@ struct GalleryVideoView: View {
             .accessibilityLabel("Play video")
             .transition(.opacity)
         }
+    }
+
+    /// Is the picture actually moving? A narration clip is driven by the
+    /// tour's audio, so its own player's status is a consequence rather than
+    /// the truth — read the clock that leads.
+    private var effectivelyPlaying: Bool {
+        role == .narration ? (audioPlayer?.state == .playing) : isPlaying
     }
 
     /// Toggle whatever actually drives this clip.

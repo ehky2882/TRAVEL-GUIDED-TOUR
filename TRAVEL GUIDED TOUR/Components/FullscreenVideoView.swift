@@ -420,7 +420,14 @@ struct FullscreenVideoView: View {
             resumeNarrationIfOwed()
         }
         .onChange(of: audioPlayer?.currentTime ?? 0) { _, _ in followNarration() }
-        .onChange(of: audioPlayer?.state) { _, _ in followNarration() }
+        .onChange(of: audioPlayer?.state) { _, _ in
+            followNarration()
+            // A narration clip's controls follow the TOUR: the play button has
+            // to come back when the narration stops, not when the muted
+            // picture happens to.
+            guard request.role == .narration else { return }
+            withAnimation { controlsVisible = audioPlayer?.state != .playing }
+        }
         .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
             let new = UIDevice.current.orientation
             // Face-up / face-down / unknown carry no useful heading — keep the
@@ -430,6 +437,13 @@ struct FullscreenVideoView: View {
             withAnimation(.easeInOut(duration: 0.28)) { deviceOrientation = new }
         }
         .animation(.easeInOut(duration: 0.2), value: controlsVisible)
+    }
+
+    /// Is the picture actually moving? A narration clip is driven by the
+    /// tour's audio, so read the clock that leads rather than the video
+    /// player's own status, which merely follows it.
+    private var effectivelyPlaying: Bool {
+        request.role == .narration ? (audioPlayer?.state == .playing) : isPlaying
     }
 
     /// The tour this clip belongs to, when the carousel supplied one.
@@ -462,7 +476,7 @@ struct FullscreenVideoView: View {
                     GalleryVideoView.toggle(
                         role: request.role,
                         videoPlayer: player,
-                        isPlaying: isPlaying,
+                        isPlaying: effectivelyPlaying,
                         tour: tour,
                         audioPlayer: audioPlayer,
                         purchaseService: purchaseService,
@@ -485,18 +499,35 @@ struct FullscreenVideoView: View {
             // button keeps its shared shape rather than growing a second one.
             .environment(\.colorScheme, .dark)
 
-            if controlsVisible, request.role != .narration {
+            // Shown whenever the picture is stopped, on BOTH kinds of clip —
+            // owner, 2026-08-24: a still frame with no play button gives no
+            // sign it can be played at all. It hides while the picture runs,
+            // so nothing sits over moving content.
+            //
+            // ⚠️ Withheld from narration clips until the paid preview cap moved
+            // into `PurchaseService.previewLimit(for:)`. A second control that
+            // can START a tour is only safe once that cap is shared rather
+            // than privately owned by one view.
+            if controlsVisible {
                 Button {
-                    if isPlaying { player?.pause() } else { player?.play() }
+                    GalleryVideoView.toggle(
+                        role: request.role,
+                        videoPlayer: player,
+                        isPlaying: effectivelyPlaying,
+                        tour: tour,
+                        audioPlayer: audioPlayer,
+                        purchaseService: purchaseService,
+                        appShared: appShared
+                    )
                 } label: {
-                    Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                    Image(systemName: effectivelyPlaying ? "pause.circle.fill" : "play.circle.fill")
                         .font(.system(size: 56))
                         .symbolRenderingMode(.palette)
                         .foregroundStyle(.white, .black.opacity(0.35))
                         .shadow(color: .black.opacity(0.35), radius: 6)
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(isPlaying ? "Pause video" : "Play video")
+                .accessibilityLabel(effectivelyPlaying ? "Pause video" : "Play video")
                 .transition(.opacity)
             }
         }
