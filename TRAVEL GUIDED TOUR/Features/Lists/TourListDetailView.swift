@@ -196,25 +196,11 @@ struct TourListDetailView: View {
 
     var body: some View {
         scrollBody
-            .safeAreaInset(edge: .top, spacing: 0) {
-                chromeRow
-                    // 🔴 OPAQUE, and NOT over a material. The row and the
-                    // page below it must be the SAME shade, which is the
-                    // entire reason `secondaryBackground` is a hardcoded
-                    // RGB pair rather than a semantic colour. This used to
-                    // read `.opacity(0.8)` over `.regularMaterial`, which
-                    // defeated that: the material resolves lighter than
-                    // #1C1C1E, so the composite came out a few levels off
-                    // the page and the boundary was visible as a band
-                    // (owner, 2026-08-24). Worse, a material samples what
-                    // is behind it, so the row's shade DRIFTED as a
-                    // photograph scrolled under it. Fully opaque, the
-                    // material was invisible anyway — it was only paying
-                    // for an offscreen blur pass per frame.
-                    .background(AtlasColors.secondaryBackground)
-            }
-            .background(AtlasColors.secondaryBackground)
-            .toolbar(.hidden, for: .navigationBar)
+            // Shared with tour detail and the place page — see `atlasChromeRow`,
+            // including why the fill is opaque and must not sit over a material.
+            // It hides the system nav bar; the `.navigationTitle` set below is
+            // kept purely so VoiceOver has a label for a bar nobody sees.
+            .atlasChromeRow { chromeControls }
             .navigationDestination(item: $makerToPush) { maker in
                 MakerView(maker: maker)
             }
@@ -279,56 +265,50 @@ struct TourListDetailView: View {
     /// slides up as its own layer from every entry point (owner direction,
     /// 2026-08-20), so there is no stack behind it to go back to — closing it
     /// slides it back down.
-    private var chromeRow: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            Button { close() } label: {
-                AtlasChromeButton("xmark")
+    @ViewBuilder
+    private var chromeControls: some View {
+        Button { close() } label: {
+            AtlasChromeButton("xmark")
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Close")
+
+        Spacer()
+
+        // Saving lives in the menu as well, but a bookmark you can see is
+        // worth a capsule of its own — the place page makes the same call.
+        //
+        // ⚠️ Signed out it is drawn and greyed, never removed (owner
+        // decision, 2026-08-20). A control that vanishes changes the row's
+        // shape depending on who is looking; a dimmed one says saving
+        // belongs here and isn't available yet. Your own list is the one
+        // case with no bookmark at all — saving a list you already own
+        // means nothing, so there is no disabled state to show — and
+        // neither is Liked, which nobody can save. See `showsBookmark`.
+        if showsBookmark {
+            Button { toggleSaved() } label: {
+                AtlasChromeButton(isSavedList ? "bookmark.fill" : "bookmark",
+                                  enabled: canSave)
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Close")
-
-            Spacer()
-
-            // Saving lives in the menu as well, but a bookmark you can see is
-            // worth a capsule of its own — the place page makes the same call.
-            //
-            // ⚠️ Signed out it is drawn and greyed, never removed (owner
-            // decision, 2026-08-20). A control that vanishes changes the row's
-            // shape depending on who is looking; a dimmed one says saving
-            // belongs here and isn't available yet. Your own list is the one
-            // case with no bookmark at all — saving a list you already own
-            // means nothing, so there is no disabled state to show — and
-            // neither is Liked, which nobody can save. See `showsBookmark`.
-            if showsBookmark {
-                Button { toggleSaved() } label: {
-                    AtlasChromeButton(isSavedList ? "bookmark.fill" : "bookmark",
-                                      enabled: canSave)
-                }
-                .buttonStyle(.plain)
-                .disabled(!canSave || isSaving)
-                .accessibilityLabel(
-                    canSave
-                        ? (isSavedList ? "Remove from your saved lists" : "Save this list")
-                        : "Save this list — sign in required"
-                )
-            }
-
-            // ⚠️ Liked carries no `…`, and not as an oversight: every item
-            // the menu holds acts on a `journeys` row Liked does not have.
-            // It cannot be shared (there is no link to send), renamed, made
-            // visible or deleted — Liked is permanent by construction, the
-            // owner's own decision of 2026-07-27. An empty menu, or one of
-            // permanently-greyed items, would say less than no menu does.
-            if !isLiked {
-                overflowMenu
-            }
+            .disabled(!canSave || isSaving)
+            .accessibilityLabel(
+                canSave
+                    ? (isSavedList ? "Remove from your saved lists" : "Save this list")
+                    : "Save this list — sign in required"
+            )
         }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
-    }
 
-    /// Identical to tour detail's and the place page's, down to the fill
-    /// opacity. Gold is reserved for action controls, so chrome stays neutral.
+        // ⚠️ Liked carries no `…`, and not as an oversight: every item
+        // the menu holds acts on a `journeys` row Liked does not have.
+        // It cannot be shared (there is no link to send), renamed, made
+        // visible or deleted — Liked is permanent by construction, the
+        // owner's own decision of 2026-07-27. An empty menu, or one of
+        // permanently-greyed items, would say less than no menu does.
+        if !isLiked {
+            overflowMenu
+        }
+    }
 
     // MARK: - Body
 
