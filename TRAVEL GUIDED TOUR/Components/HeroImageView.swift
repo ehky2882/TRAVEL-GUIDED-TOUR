@@ -70,6 +70,40 @@ struct HeroImageView: View {
         #endif
     }
 
+    // MARK: - Cache rule
+
+    /// What to do with the photograph already on screen when `imageName`
+    /// settles.
+    ///
+    /// 🔴 `.task(id: imageName)` fires when the URL **changes** under a view
+    /// SwiftUI has REUSED, and at that moment `cachedImage` still holds the
+    /// *previous* URL's photograph — `State(initialValue:)` in `init` only
+    /// seeds the very first use of a given view identity, and is discarded on
+    /// reuse. So "already cached, nothing to do" is wrong: it leaves the old
+    /// picture sitting under the new title, forever, with no error anywhere.
+    ///
+    /// The "Continue listening" row is exactly that shape — a single view
+    /// whose tour changes — which is why it showed a previous tour's
+    /// photograph while the rails beside it, keyed per tour by `ForEach`, were
+    /// right. Any singleton that swaps tours (the map placecard, a resume
+    /// banner) inherits this; anything inside a `ForEach` keyed by tour does
+    /// not.
+    enum CacheAction: Equatable {
+        /// The cache holds this URL's image — show it now, no fetch.
+        case adopt
+        /// Nothing cached for THIS URL, and what is on screen belongs to a
+        /// previous one. Drop it first: a placeholder frame is correct, and
+        /// the wrong photograph never is.
+        case clearThenFetch
+        /// Nothing cached, nothing showing — just fetch.
+        case fetch
+    }
+
+    static func cacheAction(hasCacheHit: Bool, isShowingImage: Bool) -> CacheAction {
+        if hasCacheHit { return .adopt }
+        return isShowingImage ? .clearThenFetch : .fetch
+    }
+
     // MARK: - UIKit path (iOS / visionOS)
 
     #if canImport(UIKit)
@@ -83,8 +117,21 @@ struct HeroImageView: View {
     }
 
     private func fetchIfNeeded() async {
-        guard let url = URL(string: imageName) else { return }
-        if ImageCache.shared.image(for: url) != nil { return }
+        guard let url = URL(string: imageName) else {
+            cachedImage = nil
+            return
+        }
+        let hit = ImageCache.shared.image(for: url)
+        switch Self.cacheAction(hasCacheHit: hit != nil, isShowingImage: cachedImage != nil) {
+        case .adopt:
+            // Adopt it — do NOT merely return. See `cacheAction`.
+            if cachedImage !== hit { cachedImage = hit }
+            return
+        case .clearThenFetch:
+            cachedImage = nil
+        case .fetch:
+            break
+        }
         // A tour downloaded for offline keeps its photographs on disk. Read
         // that before touching the network: underground it is the only copy
         // that exists, and on signal it still beats a round trip.
