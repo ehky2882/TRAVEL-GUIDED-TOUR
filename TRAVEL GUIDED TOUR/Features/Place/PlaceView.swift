@@ -18,8 +18,9 @@ import MapKit
 /// and a full-bleed hero. What the two pages now share, and must keep sharing:
 ///
 ///   - `secondaryBackground` ground and a hidden system nav bar.
-///   - A sticky `chromeRow` parked by `.safeAreaInset(edge: .top)` — 44 pt
-///     capsules on a material bar, content scrolling *under* it.
+///   - A sticky chrome row, parked and painted by the shared `atlasChromeRow`
+///     — 44 pt capsules on an opaque bar (NOT a material: see that file),
+///     content scrolling *under* it.
 ///   - `AtlasTabStrip` (GALLERY / MAP) above a swap zone, with `GET DIRECTIONS`
 ///     *outside* it so the layout height doesn't jump when you toggle.
 ///   - `TourMediaCarousel` at the hero ratio, inset by `lg`, square corners.
@@ -87,25 +88,9 @@ struct PlaceView: View {
 
     var body: some View {
         scrollBody
-            .safeAreaInset(edge: .top, spacing: 0) {
-                chromeRow
-                    // 🔴 OPAQUE, and NOT over a material. The row and the
-                    // page below it must be the SAME shade, which is the
-                    // entire reason `secondaryBackground` is a hardcoded
-                    // RGB pair rather than a semantic colour. This used to
-                    // read `.opacity(0.8)` over `.regularMaterial`, which
-                    // defeated that: the material resolves lighter than
-                    // #1C1C1E, so the composite came out a few levels off
-                    // the page and the boundary was visible as a band
-                    // (owner, 2026-08-24). Worse, a material samples what
-                    // is behind it, so the row's shade DRIFTED as a
-                    // photograph scrolled under it. Fully opaque, the
-                    // material was invisible anyway — it was only paying
-                    // for an offscreen blur pass per frame.
-                    .background(AtlasColors.secondaryBackground)
-            }
-            .background(AtlasColors.secondaryBackground)
-            .toolbar(.hidden, for: .navigationBar)
+            // Shared with tour detail and the list page — see `atlasChromeRow`,
+            // including why the fill is opaque and must not sit over a material.
+            .atlasChromeRow { chromeControls }
             .sheet(isPresented: $showingReport) {
                 ReportSheet(target: .place(place))
             }
@@ -114,29 +99,27 @@ struct PlaceView: View {
     // MARK: - Chrome
 
     /// X close (leading) · bookmark · overflow (trailing) — the same three
-    /// controls, in the same order and the same capsule, as tour detail.
-    private var chromeRow: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            Button(action: onDismiss) {
-                AtlasChromeButton("xmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Close")
-
-            Spacer()
-
-            Button {
-                savedPlaces.toggleSaved(place.id)
-            } label: {
-                AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(isSaved ? "Remove \(place.name) from saved places" : "Save \(place.name)")
-
-            overflowMenu
+    /// controls, in the same order and the same capsule, as tour detail. The
+    /// row around them comes from `atlasChromeRow`, shared with that page.
+    @ViewBuilder
+    private var chromeControls: some View {
+        Button(action: onDismiss) {
+            AtlasChromeButton("xmark")
         }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
+        .buttonStyle(.plain)
+        .accessibilityLabel("Close")
+
+        Spacer()
+
+        Button {
+            savedPlaces.toggleSaved(place.id)
+        } label: {
+            AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(isSaved ? "Remove \(place.name) from saved places" : "Save \(place.name)")
+
+        overflowMenu
     }
 
     /// Deliberately shorter than tour detail's menu. There is no download (a

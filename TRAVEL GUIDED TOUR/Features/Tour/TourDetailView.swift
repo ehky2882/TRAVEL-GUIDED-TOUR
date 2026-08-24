@@ -64,8 +64,9 @@ struct TourDetailView: View {
     /// SwiftUI ancestor of the wizard has.
     ///
     /// What preview drops, and why each one:
-    /// - **chromeRow** — its ✕ calls `tourPresenter.dismiss()`, and there is no
-    ///   layer to dismiss; the wizard has its own header.
+    /// - **the chrome row** (`atlasChromeRow` + `chromeControls`) — its ✕ calls
+    ///   `tourPresenter.dismiss()`, and there is no layer to dismiss; the wizard
+    ///   has its own header.
     /// - **buttonRow** — Start tour, Buy, Download, Save. Live controls on an
     ///   unpublished draft, all of them wrong before the tour exists.
     /// - **stopsSection**, **placeSection**, **nearbyToursSection** — read
@@ -180,38 +181,15 @@ struct TourDetailView: View {
 
     private var liveBody: some View {
         scrollBody
-            // `.safeAreaInset(.top)` parks the chromeRow above the
-            // ScrollView's content area: the row stays anchored at
-            // the screen top while the body content scrolls *under*
-            // it. Opaque backdrop, hard bottom edge — see below.
-            // A gradient fade was explored on 2026-06-03 and parked
-            // — owner wants to revisit later.
-            .safeAreaInset(edge: .top, spacing: 0) {
-                chromeRow
-                    // 🔴 OPAQUE, and NOT over a material. The row and the
-                    // page below it must be the SAME shade, which is the
-                    // entire reason `secondaryBackground` is a hardcoded
-                    // RGB pair rather than a semantic colour. This used to
-                    // read `.opacity(0.8)` over `.regularMaterial`, which
-                    // defeated that: the material resolves lighter than
-                    // #1C1C1E, so the composite came out a few levels off
-                    // the page and the boundary was visible as a band
-                    // (owner, 2026-08-24). Worse, a material samples what
-                    // is behind it, so the row's shade DRIFTED as a
-                    // photograph scrolled under it. Fully opaque, the
-                    // material was invisible anyway — it was only paying
-                    // for an offscreen blur pass per frame.
-                    .background(AtlasColors.secondaryBackground)
-            }
-            .background(AtlasColors.secondaryBackground)
-            // System nav bar hidden — our chromeRow handles all top
-            // chrome inline so each control is an identical 44pt
-            // Capsule, sized + styled to match the action row's
-            // secondary buttons exactly. iOS 26's auto glass-grouping
-            // around toolbar items was visually stacking on top of
-            // any custom chrome we added, producing a "two layers"
-            // look (owner correction, 2026-06-03).
-            .toolbar(.hidden, for: .navigationBar)
+            // Parks the controls above the ScrollView's content area, paints
+            // them and the page from one expression, and hides the system nav
+            // bar. All of that lives in `atlasChromeRow` so the three pages
+            // carrying this row cannot drift apart — see that file, including
+            // why the fill must stay opaque and must not sit over a material.
+            //
+            // A gradient fade at the row's bottom edge was explored on
+            // 2026-06-03 and parked — owner wants to revisit later.
+            .atlasChromeRow { chromeControls }
         .navigationDestination(isPresented: $showingMaker) {
             if let maker = dataService.maker(for: tour) {
                 MakerView(maker: maker)
@@ -263,43 +241,41 @@ struct TourDetailView: View {
         }
     }
 
-    /// Sticky top chrome — X close (leading) · Save · overflow
-    /// (trailing), each an `AtlasChromeButton`. The row sits at the
-    /// top of the body (outside the ScrollView) so it stays put
-    /// while the content scrolls underneath.
+    /// The controls only — X close (leading) · Save · overflow (trailing),
+    /// each an `AtlasChromeButton`. The row *around* them (spacing, padding,
+    /// parking, paint, hiding the nav bar) belongs to `atlasChromeRow`.
     ///
-    /// **This row is the app's canonical page chrome** (owner,
-    /// 2026-08-20): the place, list and wizard headers all match it.
-    /// Change the button here and it changes everywhere, which is
-    /// the point of `AtlasChromeButton` — three private copies of it
-    /// used to live in those three files.
+    /// **This row is the app's canonical page chrome** (owner, 2026-08-20):
+    /// the place, list and wizard headers all match it. Two things enforce
+    /// that rather than describe it — `AtlasChromeButton` for the control
+    /// (three private copies of it used to live in those files) and
+    /// `atlasChromeRow` for everything around it (three copies of *that*
+    /// used to live there too, until the opacity fix had to be made in
+    /// three places on 2026-08-24).
     ///
     /// (An earlier version of this comment described the buttons as
     /// gold on a `mapPin.opacity(0.15)` fill. They have never been:
     /// the glyph is `primaryText` on `tertiaryText.opacity(0.18)`.)
-    private var chromeRow: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            Button(action: { tourPresenter.dismiss() }) {
-                AtlasChromeButton("xmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Close")
-
-            Spacer()
-
-            Button(action: toggleSaved) {
-                AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(saveActions.accessibilityLabel(tour.id))
-
-            overflowMenu
+    @ViewBuilder
+    private var chromeControls: some View {
+        Button(action: { tourPresenter.dismiss() }) {
+            AtlasChromeButton("xmark")
         }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
+        .buttonStyle(.plain)
+        .accessibilityLabel("Close")
+
+        Spacer()
+
+        Button(action: toggleSaved) {
+            AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(saveActions.accessibilityLabel(tour.id))
+
+        overflowMenu
     }
 
-    /// Scrollable body content — everything below the chromeRow.
+    /// Scrollable body content — everything below the chrome row.
     private var scrollBody: some View {
         ScrollView {
             detailContent
