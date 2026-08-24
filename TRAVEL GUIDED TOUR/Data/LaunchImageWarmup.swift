@@ -118,8 +118,15 @@ final class LaunchImageWarmup {
             for url in urls {
                 group.addTask {
                     if ImageCache.shared.image(for: url) != nil { return }
-                    guard let (data, _) = try? await URLSession.shared.data(from: url),
-                          let image = UIImage(data: data) else { return }
+                    if let (data, _) = try? await URLSession.shared.data(from: url),
+                       let image = UIImage(data: data) {
+                        ImageCache.shared.store(image, for: url)
+                        return
+                    }
+                    // Offline, the fetch fails even for a photograph already on
+                    // the phone — so warm from the cache directly, and the
+                    // first screenful still has its pictures underground.
+                    guard let image = OfflineImageFallback.cachedImage(for: url) else { return }
                     ImageCache.shared.store(image, for: url)
                 }
             }
