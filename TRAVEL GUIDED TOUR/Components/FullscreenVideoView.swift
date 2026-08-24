@@ -208,43 +208,62 @@ struct FullscreenVideoView: View {
 
     /// How the viewer's content is transformed partway through the expand.
     ///
-    /// `progress` 0 lands the picture exactly on the carousel thumbnail's
-    /// picture; 1 fills the screen.
+    /// `progress` 0 reproduces the carousel thumbnail exactly; 1 fills the
+    /// screen.
     ///
-    /// The match is computed between the two **aspect-fit rects**, not the two
-    /// boxes. The clip is letterboxed inside both, and the box proportions
-    /// differ, so matching boxes would need a different scale per axis — which
-    /// squashes the picture for the whole flight. Matching the pictures gives
-    /// one uniform scale that is also exactly right at rest, because both rects
-    /// are fits of the same shape.
+    /// 🔴 The thumbnail FILLS its box (cropping the clip) while fullscreen
+    /// FITS (showing all of it), so the expand is a reveal, not just a
+    /// growth: the picture keeps its scale relationship while the window onto
+    /// it opens out. Three interpolations do that —
     ///
-    /// An empty `source` (nothing measured) returns the identity, so a missing
-    /// measurement degrades to the picture simply being there rather than to a
-    /// zero-sized view.
+    ///  - `scale` from the fill scale to 1, so at rest the picture is exactly
+    ///    the size the thumbnail draws it;
+    ///  - `centre` from the thumbnail's centre to the screen's;
+    ///  - `mask` from the thumbnail's box to the whole screen, which is what
+    ///    uncrops the top and bottom on the way out.
+    ///
+    /// Matching only the box would have needed a per-axis scale, squashing the
+    /// picture for the whole flight.
+    ///
+    /// An empty `source` returns the identity, so a missing measurement
+    /// degrades to the picture simply being there rather than to nothing.
     ///
     /// ⚠️ Computed unrotated. Expanding while the phone is already sideways
     /// with a landscape clip starts fractionally off for the length of the
-    /// growth; not worth carrying the rotation through for that.
+    /// growth; not worth carrying rotation through for that.
     static func expandTransform(
         source: CGRect,
         full: CGRect,
         aspectRatio: CGFloat,
         progress: Double
-    ) -> (scale: CGFloat, centre: CGPoint) {
-        let identity = (scale: CGFloat(1), centre: CGPoint(x: full.midX, y: full.midY))
+    ) -> (scale: CGFloat, centre: CGPoint, mask: CGRect) {
+        let identity = (
+            scale: CGFloat(1),
+            centre: CGPoint(x: full.midX, y: full.midY),
+            mask: full
+        )
         guard source.width > 0, source.height > 0, full.width > 0, full.height > 0 else {
             return identity
         }
         let t = CGFloat(min(max(progress, 0), 1))
-        let sourcePicture = aspectFitRect(aspectRatio: aspectRatio, in: source)
+        // What fullscreen draws: the clip fitted into the screen.
         let fullPicture = aspectFitRect(aspectRatio: aspectRatio, in: full)
-        guard fullPicture.width > 0 else { return identity }
-        let start = sourcePicture.width / fullPicture.width
+        guard fullPicture.width > 0, fullPicture.height > 0 else { return identity }
+        // What the thumbnail draws: the same clip scaled to COVER its box.
+        // `max` is what makes it a fill — the overflow is the crop.
+        let fillScale = max(
+            source.width / fullPicture.width,
+            source.height / fullPicture.height
+        )
+        func lerp(_ a: CGFloat, _ b: CGFloat) -> CGFloat { a + (b - a) * t }
         return (
-            scale: start + (1 - start) * t,
-            centre: CGPoint(
-                x: sourcePicture.midX + (full.midX - sourcePicture.midX) * t,
-                y: sourcePicture.midY + (full.midY - sourcePicture.midY) * t
+            scale: lerp(fillScale, 1),
+            centre: CGPoint(x: lerp(source.midX, full.midX), y: lerp(source.midY, full.midY)),
+            mask: CGRect(
+                x: lerp(source.minX, full.minX),
+                y: lerp(source.minY, full.minY),
+                width: lerp(source.width, full.width),
+                height: lerp(source.height, full.height)
             )
         )
     }
@@ -330,6 +349,13 @@ struct FullscreenVideoView: View {
                 .scaleEffect(zoom.scale)
                 .position(zoom.centre)
             }
+            // The window onto the picture, opening from the thumbnail's box to
+            // the whole screen. This is what uncrops a filled thumbnail.
+            .mask(
+                Rectangle()
+                    .frame(width: zoom.mask.width, height: zoom.mask.height)
+                    .position(x: zoom.mask.midX, y: zoom.mask.midY)
+            )
         }
         .ignoresSafeArea()
         .statusBarHidden()

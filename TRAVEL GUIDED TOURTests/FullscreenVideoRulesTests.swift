@@ -262,35 +262,64 @@ final class FullscreenVideoRulesTests: XCTestCase {
     private let screen = CGRect(x: 0, y: 0, width: 393, height: 852)
     private let vertical: CGFloat = 9.0 / 16.0
 
-    /// 🔴 The point of the whole transform: at progress 0 the picture lands
-    /// EXACTLY on the thumbnail's picture, so there is no jump when the growth
-    /// begins. Both are aspect-fits of the same clip, which is what makes one
-    /// uniform scale able to match them.
-    func testAtProgressZeroThePictureLandsExactlyOnTheThumbnailsPicture() {
+    /// 🔴 The point of the whole transform: at progress 0 it reproduces the
+    /// carousel thumbnail exactly — which now FILLS its box, cropping the clip.
+    /// So the picture must be scaled to COVER the box, and the mask must be
+    /// the box, which is what does the cropping.
+    func testAtProgressZeroItReproducesTheFilledThumbnail() {
         let z = FullscreenVideoView.expandTransform(
             source: thumb, full: screen, aspectRatio: vertical, progress: 0
         )
-        let thumbPicture = FullscreenVideoView.aspectFitRect(aspectRatio: vertical, in: thumb)
         let screenPicture = FullscreenVideoView.aspectFitRect(aspectRatio: vertical, in: screen)
-        // The screen-sized picture, scaled, must equal the thumbnail's picture.
-        XCTAssertEqual(screenPicture.width * z.scale, thumbPicture.width, accuracy: 0.01)
-        XCTAssertEqual(screenPicture.height * z.scale, thumbPicture.height, accuracy: 0.01)
-        // ...and sit in the same place.
-        XCTAssertEqual(z.centre.x, thumbPicture.midX, accuracy: 0.01)
-        XCTAssertEqual(z.centre.y, thumbPicture.midY, accuracy: 0.01)
+        let drawnWidth = screenPicture.width * z.scale
+        let drawnHeight = screenPicture.height * z.scale
+        // Covers the box on BOTH axes — that is what "fill" means.
+        XCTAssertGreaterThanOrEqual(drawnWidth, thumb.width - 0.01)
+        XCTAssertGreaterThanOrEqual(drawnHeight, thumb.height - 0.01)
+        // ...and touches it on at least one, so it is not scaled up further
+        // than filling requires.
+        let touches = abs(drawnWidth - thumb.width) < 0.01 || abs(drawnHeight - thumb.height) < 0.01
+        XCTAssertTrue(touches, "fill must be the tightest cover, not an arbitrary overscale")
+        // The window onto it is exactly the thumbnail's box.
+        XCTAssertEqual(z.mask.minX, thumb.minX, accuracy: 0.01)
+        XCTAssertEqual(z.mask.width, thumb.width, accuracy: 0.01)
+        XCTAssertEqual(z.mask.height, thumb.height, accuracy: 0.01)
+        XCTAssertEqual(z.centre.x, thumb.midX, accuracy: 0.01)
+        XCTAssertEqual(z.centre.y, thumb.midY, accuracy: 0.01)
     }
 
-    /// The same has to hold for a landscape clip, whose letterboxing runs the
-    /// other way (bars top and bottom rather than down the sides).
-    func testExactMatchAlsoHoldsForALandscapeClip() {
+    /// A vertical clip filling a square box is cropped top and bottom — the
+    /// crop the expand then reveals.
+    func testAVerticalClipIsCroppedVerticallyInTheSquareThumbnail() {
+        let z = FullscreenVideoView.expandTransform(
+            source: thumb, full: screen, aspectRatio: vertical, progress: 0
+        )
+        let screenPicture = FullscreenVideoView.aspectFitRect(aspectRatio: vertical, in: screen)
+        XCTAssertGreaterThan(screenPicture.height * z.scale, thumb.height,
+                             "taller than the window, so top and bottom are cut")
+        XCTAssertEqual(screenPicture.width * z.scale, thumb.width, accuracy: 0.01,
+                       "and exactly as wide, so the sides are flush")
+    }
+
+    /// The same must hold the other way round: a landscape clip filling a
+    /// square box is cropped left and right.
+    func testALandscapeClipIsCroppedHorizontallyInTheSquareThumbnail() {
         let wide: CGFloat = 16.0 / 9.0
         let z = FullscreenVideoView.expandTransform(
             source: thumb, full: screen, aspectRatio: wide, progress: 0
         )
-        let thumbPicture = FullscreenVideoView.aspectFitRect(aspectRatio: wide, in: thumb)
         let screenPicture = FullscreenVideoView.aspectFitRect(aspectRatio: wide, in: screen)
-        XCTAssertEqual(screenPicture.width * z.scale, thumbPicture.width, accuracy: 0.01)
-        XCTAssertEqual(z.centre.y, thumbPicture.midY, accuracy: 0.01)
+        XCTAssertGreaterThan(screenPicture.width * z.scale, thumb.width)
+        XCTAssertEqual(screenPicture.height * z.scale, thumb.height, accuracy: 0.01)
+    }
+
+    /// The mask opens all the way out, so nothing stays cropped at the end.
+    func testTheMaskOpensToTheWholeScreen() {
+        let z = FullscreenVideoView.expandTransform(
+            source: thumb, full: screen, aspectRatio: vertical, progress: 1
+        )
+        XCTAssertEqual(z.mask, screen)
+        XCTAssertEqual(z.scale, 1, accuracy: 0.0001)
     }
 
     /// Which axis the bars land on depends on the clip AND the box, not the

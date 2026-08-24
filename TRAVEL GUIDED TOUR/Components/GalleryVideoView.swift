@@ -322,7 +322,14 @@ private struct VideoSurface: UIViewControllerRepresentable {
         let controller = AVPlayerViewController()
         controller.player = player
         controller.showsPlaybackControls = false
-        controller.videoGravity = .resizeAspect
+        // 🔴 FILL, not fit — owner decision. In the square carousel box a
+        // letterboxed vertical clip used barely half the frame and the rest
+        // was black. Filling makes the clip read like the photographs it sits
+        // beside, which are also fill-cropped into this box. The cost is that
+        // the top and bottom of a vertical clip are cropped here — which is
+        // precisely what the expand button is for: fullscreen fits, so
+        // nothing is cut off once you open it.
+        controller.videoGravity = .resizeAspectFill
         controller.allowsPictureInPicturePlayback = false
         // The tour narration owns the lock screen. Without this, AVKit
         // overwrites the now-playing info with the (untitled) clip.
