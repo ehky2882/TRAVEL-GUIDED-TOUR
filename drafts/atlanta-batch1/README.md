@@ -97,6 +97,20 @@ the statue anyway.
 **Trap for future sessions: an owner-supplied photo does NOT clear this.** It clears the
 photographer, never the artist.
 
+## ✅ Stop 06's copyright problem is SOLVED — do not re-source it from the statue
+
+`ebenezer-baptist_hero.webp` is the **Heritage Sanctuary interior** (Library of Congress /
+Highsmith, public domain — the LoC caption names it: *"Sanctuary of the Ebenezer Baptist Church
+at the Martin Luther King Jr. National Historic Site"*).
+
+A sanctuary interior is a **building**, so Patrick Morelli's *Behold* (1990) — the one
+unambiguously in-copyright work in this batch — never enters the frame. The narration still
+carries the statue exactly as written; the script even opens by saying people misread it.
+
+**Do not "improve" this stop with a photograph of the statue.** That would re-introduce an
+obligation this image exists to avoid. Stops 04 (the phoenix) and 17 (Krog) remain open — they
+have no equivalent escape.
+
 ## ⚠️ Sensitivity — six stops
 
 Default treatment is the Berlin-memorial standard: the place as it stands, nothing archival,
