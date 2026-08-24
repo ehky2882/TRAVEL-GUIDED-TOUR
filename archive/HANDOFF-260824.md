@@ -75,6 +75,9 @@ reasoning is now a comment at each call site so it is not re-derived from scratc
 
 - **Owner device-verified on TestFlight 1.1 (112)** ([run 32724989508](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/actions/runs/32724989508)),
   cut from `80f2c0b` on the branch, notes attached via the workflow's `notes` input.
+- **✅ Both colour schemes confirmed** — dark on the build (*"looks great"*), then light
+  separately (*"light mode is fine"*, 2026-08-24). Light was flagged as reasoned-about
+  rather than seen when this merged; that gap is now closed.
 - CI green on the PR — simulator build, unit tests, validator.
 - ⚠️ **Authored in a Linux web session with no Swift toolchain**, so nothing was compiled
   locally. CI on the PR was the `test_sim` stand-in, per Automation Rule #3.
