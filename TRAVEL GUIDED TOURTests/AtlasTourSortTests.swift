@@ -87,6 +87,32 @@ final class AtlasTourSortTests: XCTestCase {
         XCTAssertEqual(sorted([near, far], by: .distance, ascending: false, from: here), ["Far", "Near"])
     }
 
+    // MARK: - Sorting something richer than a Tour
+
+    /// The list page carries `(item, tour)` pairs, because a row needs the
+    /// curator's note as well as the tour. Same comparator, same stability.
+    func test_sortingPairs_ordersByTheirTour_andStaysStable() {
+        struct Pair { let note: String; let tour: Tour }
+        let pairs = [
+            Pair(note: "first note", tour: TestFixtures.makeTour(title: "B", createdAt: "2026-08-18")),
+            Pair(note: "second note", tour: TestFixtures.makeTour(title: "A", createdAt: "2026-08-18")),
+            Pair(note: "third note", tour: TestFixtures.makeTour(title: "C", createdAt: "2026-08-18"))
+        ]
+
+        let byName = AtlasTourSort.sorted(
+            pairs, by: .name, ascending: true, from: nil, tour: \.tour
+        )
+        XCTAssertEqual(byName.map(\.tour.title), ["A", "B", "C"])
+        XCTAssertEqual(byName.map(\.note), ["second note", "first note", "third note"],
+                       "the note must travel with its tour")
+
+        // Every date ties, so the curator's arrangement survives untouched.
+        let byDate = AtlasTourSort.sorted(
+            pairs, by: .dateAdded, ascending: false, from: nil, tour: \.tour
+        )
+        XCTAssertEqual(byDate.map(\.tour.title), ["B", "A", "C"])
+    }
+
     // MARK: - The menu's own rules
 
     func test_dateAdded_opensNewestFirst_everythingElseAscending() {

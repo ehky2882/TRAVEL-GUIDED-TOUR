@@ -76,6 +76,12 @@ struct TourListDetailView: View {
     /// empty Liked nobody can explain.
     @Environment(LibraryStore.self) private var libraryStore: LibraryStore?
     @Environment(TourPresenter.self) private var tourPresenter
+    /// Only the distance sort needs it. Optional for the same reason
+    /// `libraryStore` is: not every layer that can reach a list injects every
+    /// service, and a required lookup crashes where one is missing. With no
+    /// manager (or no fix yet) the distance sort leaves the order exactly as
+    /// it came — see `AtlasTourSort.sorted`.
+    @Environment(LocationManager.self) private var locationManager: LocationManager?
     /// Optional: this screen is reachable from the UIKit maker layer, which
     /// doesn't carry every service. A required lookup crashes there.
     @Environment(AuthService.self) private var authService: AuthService?
@@ -101,6 +107,20 @@ struct TourListDetailView: View {
     @State private var noteTarget: NoteTarget?
     @State private var topSectionTab: TopSectionTab = .gallery
     @State private var isDescriptionExpanded = false
+    /// Measured width of the grid container — drives square tile sizing.
+    @State private var gridContentWidth: CGFloat = 0
+
+    /// Rows or photo grid, and the reader's order — the controls the maker and
+    /// place pages carry, on their own keys. See `AtlasListLayout` for why the
+    /// keys are not shared between surfaces.
+    @AppStorage("listListLayout") private var layout: AtlasListLayout = .list
+    /// ⚠️ **No default, and that is the point: nil means the list's OWN order**
+    /// — what its curator arranged, or newest-saved on Liked. Unlike the maker
+    /// and place pages, this screen opens on an order somebody chose by hand,
+    /// so the sort has to be able to return to it rather than only offering
+    /// four rules that overwrite it.
+    @AppStorage("listSortCriterion") private var sortCriterion: AtlasTourSort?
+    @AppStorage("listSortAscending") private var sortAscending: Bool = false
 
     init(target: TourListTarget, onDismiss: (() -> Void)? = nil) {
         self.target = target
@@ -192,6 +212,35 @@ struct TourListDetailView: View {
             guard let tour = dataService.tour(by: item.tourId) else { return nil }
             return (item, tour)
         }
+    }
+
+    /// 🔴 **Edit mode forces the arranged order and the row layout, whatever
+    /// the reader last chose.** You can only rearrange what you can see in the
+    /// order you are rearranging: reorder arrows shown against an A–Z list
+    /// would move rows in an order that is not on screen, and a photo grid has
+    /// nowhere to put them at all. Leaving edit mode restores the reader's
+    /// choice, because these are computed rather than written back.
+    private var effectiveLayout: AtlasListLayout { isEditing ? .list : layout }
+    private var effectiveSort: AtlasTourSort? { isEditing ? nil : sortCriterion }
+
+    /// The list as the reader has chosen to see it. `nil` sort is the list's
+    /// own order, untouched.
+    private var displayedTours: [(item: TourListItem, tour: Tour)] {
+        guard let effectiveSort else { return resolvedTours }
+        return AtlasTourSort.sorted(
+            resolvedTours,
+            by: effectiveSort,
+            ascending: sortAscending,
+            from: locationManager?.userLocation,
+            tour: \.tour
+        )
+    }
+
+    /// Names the list's own order in the reader's words. Liked's is not
+    /// rearrangeable — it is the order `savedEntries` applies — so it is
+    /// described rather than called an arrangement.
+    private var naturalOrderLabel: String {
+        isLiked ? "Recently saved" : "As arranged"
     }
 
     var body: some View {
@@ -496,21 +545,43 @@ struct TourListDetailView: View {
 
     // MARK: - The tours
 
-    /// The list itself, shaped like the place page's tour list: a brass count
-    /// header over rows that run edge to edge with their padding inside.
+    /// The list itself, shaped like the place page's tour list — which is
+    /// itself the maker page's: count · layout toggle · sort, over rows that
+    /// run edge to edge with their padding inside.
     ///
     /// The count is **just the number** — owner direction 2026-08-19, dropping
     /// the place page's "AVAILABLE", which reads oddly for a list you made.
-    /// The trailing slot the place page uses to state its sort rule is
-    /// deliberately empty here: a list's order is whatever its owner arranged,
-    /// so there is no rule to state.
+    /// (The place page dropped it too on 2026-08-25, so the three now agree.)
+    ///
+    /// ⚠️ **The sort here has a fifth state the other two pages do not need:
+    /// the list's OWN order**, which is where it opens. A maker feed and a
+    /// place have only rules; a list has an arrangement somebody made by hand,
+    /// and a sort that could not return to it would be a way to lose it.
     private var tourList: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             if !resolvedTours.isEmpty {
-                Text(resolvedTours.count == 1 ? "1 TOUR" : "\(resolvedTours.count) TOURS")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.accent)
-                    .padding(.horizontal, AtlasSpacing.lg)
+                // The maker page's row, as the place page now is too: count in
+                // quiet `tertiaryText`, then the layout toggle and the sort.
+                // ⚠️ The count was brass `accent` until 2026-08-25; it is grey
+                // deliberately, so all three pages read as one screen.
+                HStack(spacing: AtlasSpacing.md) {
+                    Text(resolvedTours.count == 1 ? "1 TOUR" : "\(resolvedTours.count) TOURS")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                    Spacer()
+                    // Hidden while editing rather than disabled: edit mode
+                    // pins both (see `effectiveLayout`), and a control that
+                    // visibly does nothing is worse than one that is absent.
+                    if !isEditing {
+                        AtlasLayoutToggle(selection: $layout)
+                        AtlasSortMenu(
+                            criterion: $sortCriterion,
+                            ascending: $sortAscending,
+                            naturalLabel: naturalOrderLabel
+                        )
+                    }
+                }
+                .padding(.horizontal, AtlasSpacing.lg)
             }
 
             if isLoading {
@@ -520,17 +591,83 @@ struct TourListDetailView: View {
             } else if resolvedTours.isEmpty {
                 emptyState
             } else {
-                LazyVStack(alignment: .leading, spacing: 0) {
-                    ForEach(resolvedTours, id: \.item.id) { pair in
-                        tourRow(tour: pair.tour, note: pair.item.note)
-
-                        if pair.item.id != resolvedTours.last?.item.id {
-                            Divider().padding(.leading, AtlasSpacing.lg)
-                        }
-                    }
+                switch effectiveLayout {
+                case .list: tourRows
+                case .grid: tourGrid
                 }
             }
         }
+    }
+
+    private var tourRows: some View {
+        LazyVStack(alignment: .leading, spacing: 0) {
+            ForEach(displayedTours, id: \.item.id) { pair in
+                tourRow(tour: pair.tour, note: pair.item.note)
+
+                if pair.item.id != displayedTours.last?.item.id {
+                    Divider().padding(.leading, AtlasSpacing.lg)
+                }
+            }
+        }
+    }
+
+    /// The place page's grid, from the same shared `AtlasTourGrid` geometry.
+    ///
+    /// ⚠️ **A tile has nowhere to put the curator's note** — the one thing a
+    /// list row carries that no other tour row in the app does. That is the
+    /// cost of the grid here, and the reason the rows stay the default.
+    private var tourGrid: some View {
+        let side = AtlasTourGrid.side(forContentWidth: gridContentWidth)
+        return LazyVGrid(columns: AtlasTourGrid.columns, spacing: AtlasTourGrid.spacing) {
+            ForEach(displayedTours, id: \.item.id) { pair in
+                Button {
+                    openTour(pair.tour)
+                } label: {
+                    HeroImageView(
+                        imageName: pair.tour.heroImageURL,
+                        height: side,
+                        cornerRadius: 0,
+                        category: pair.tour.primaryCategory
+                    )
+                    .clipped()
+                    .overlay(alignment: .topLeading) {
+                        HStack(spacing: AtlasSpacing.xs) {
+                            if pair.tour.kind == .multiStop {
+                                walkPill
+                                    .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
+                            }
+                            TourPriceBadge(tour: pair.tour)
+                        }
+                        .padding(AtlasSpacing.xs)
+                    }
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                // A tile is a photograph and nothing else, so VoiceOver has no
+                // text to read unless it is given one.
+                .accessibilityLabel(pair.tour.title)
+            }
+        }
+        // ⚠️ Measured BEFORE the inset, or the reader hands back the padded
+        // width and every tile comes out 16pt too wide.
+        .background(
+            GeometryReader { geo in
+                Color.clear
+                    .onAppear { gridContentWidth = geo.size.width }
+                    .onChange(of: geo.size.width) { _, w in gridContentWidth = w }
+            }
+        )
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// The brass WALK pill, identical to the one the rows carry.
+    private var walkPill: some View {
+        Text("WALK")
+            .font(.system(size: 11, weight: .regular, design: .monospaced))
+            .foregroundStyle(AtlasColors.background)
+            .padding(.horizontal, 7)
+            .padding(.vertical, 2)
+            .background(AtlasColors.accent, in: Capsule())
     }
 
     /// One tour in the list.
