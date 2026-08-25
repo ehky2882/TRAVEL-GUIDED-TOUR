@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-25 03:20 UTC
+**Last verified:** 2026-08-25 03:30 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -28,12 +28,31 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 **Eight PRs merged between 01:22 and 03:10. Zero are open.** The link-pin feature went from four
 throwaway test pins to real content in under two hours.
 
-🟡 **ONE THING IS MERGED AND NOT IN ANY BUILD — [#592](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/592)**,
-the WALK pill moved below the metadata rather than above the title (`PlaceView.swift`,
-`TourListDetailView.swift`). Everything else that merged was content, scripts or SQL, which need no
-build. **Build 116 is still the newest** — a small UI change is the only thing waiting on the next one.
+🔨 **BUILD 117 IS RUNNING, FROM `main` AT `2a47e28`** — the tip itself, dispatched 03:27. It picks up
+#592 (the WALK pill below the metadata), which was the only merged app code not in a build, and rides
+on top of the real AMNH link pins and creator avatars. Nothing will be stranded once it lands.
 
-🔴 **#593's cleanup DID NOT REACH THE LIVE CATALOG, and it is the exact harm it was written to
+🟡 **[#596](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/596) OPEN — this board, the contract
+check and `restore_catalog_keys.sql` finally reach `main`.** All three had only ever existed on
+`claude/project-tracking-dashboard-1kggmu`, so `CLAUDE.md`'s own session-start ritual
+(`git show origin/main:STATUS.md`) has been 404ing for every parallel session. **Additive only: 5
+files, +614, −0.** The branch was 41 commits behind, so `main` was merged in first and both conflicts
+(`CLAUDE.md`, `backend/schema.sql`) resolved toward `main` — `schema.sql`'s newer warning is strictly
+better, and rules 10/11 plus the 2026-08-20 block were re-added surgically.
+
+🔴 **#593's cleanup STILL HAS NOT LANDED — TWO PASTES, BOTH MATCHED ZERO ROWS.** Owner ran
+`backend/remove_test_creators.sql` twice on 2026-08-25; the second, written as a single
+`delete … returning`, reported *"Success. No rows returned."* All four creators are still served.
+**The `where` clause provably matches**: all four rows exist, all four have `user_id` null, and a
+direct PostgREST read finds no `tours` row pointing at any of them. So the statement is not reaching
+them. Two candidates, undiagnosed: the SQL Editor running as a role subject to RLS (`public.makers`
+has public-read and **no delete policy**, so `anon`/`authenticated` filters a delete to zero rows and
+still reports success), or `tours` rows invisible to an RLS-filtered read — drafts or taken-down rows
+would block the `not exists` guard. ⚠️ **My guard turned a loud FK error into silence**: `tours.maker_id`
+is `on delete restrict`, so without `not exists` Postgres would have *said* what was wrong. A
+read-only diagnostic reporting `current_user` and per-maker tour counts distinguishes the two.
+
+🔴 **The original finding stands — #593's cleanup DID NOT REACH THE LIVE CATALOG, and it is the exact harm it was written to
 prevent.** It removed the four `TEST -` pins **and their four creators** from `Tours.json`, saying:
 *"A maker with no tours still counts toward the Dozents number in Settings and appears in creator
 search with nothing behind it, so leaving them would have quietly overstated the platform."* The
