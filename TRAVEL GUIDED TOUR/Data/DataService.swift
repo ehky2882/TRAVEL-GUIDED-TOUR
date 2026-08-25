@@ -39,6 +39,17 @@ final class DataService {
     /// map asks this per pin and a linear scan per marker would be quadratic
     /// over a 1,418-tour catalog.
     private var placeByTourId: [UUID: Place] = [:]
+    /// Tag → every tour carrying it, in catalog order.
+    ///
+    /// 🔴 THE HOME DRAWER REBUILDS THIRTEEN CURATED SHELVES ON EVERY RENDER,
+    /// and `visibleRegion` changes on every frame of a camera animation — so
+    /// this ran continuously while the map flew somewhere. Each shelf used to
+    /// `filter` the whole catalog for one tag: 13 x 1,512 tours, twice per
+    /// render, which is ~2.4 million tag-list scans across a one-second fly.
+    /// Which tours carry a tag cannot change without the catalog changing, so
+    /// it is answered here once instead of thirteen times a frame. Only the
+    /// ORDER of a shelf depends on where the map is, and that stays live.
+    private var toursByTag: [String: [Tour]] = [:]
 
     private let loader: RemoteCatalogLoader
 
@@ -133,12 +144,20 @@ final class DataService {
         var byId: [UUID: Tour] = [:]
         byId.reserveCapacity(newTours.count)
         var byMaker: [UUID: [Tour]] = [:]
+        var byTag: [String: [Tour]] = [:]
         for tour in newTours {
             byId[tour.id] = tour
             byMaker[tour.makerId, default: []].append(tour)
+            // A tour can carry the same tag twice in authored data; the shelf
+            // must not then list it twice.
+            var seen = Set<String>()
+            for tag in tour.tags where seen.insert(tag).inserted {
+                byTag[tag, default: []].append(tour)
+            }
         }
         tourById = byId
         toursByMakerId = byMaker
+        toursByTag = byTag
 
         applyMakers(newMakers)
         setPlaces(newPlaces)
@@ -197,6 +216,19 @@ final class DataService {
     func tours(by maker: Maker) -> [Tour] {
         toursByMakerId[maker.id] ?? []
     }
+
+    /// Every tour carrying `tag`, in catalog order. Empty for an unknown tag.
+    ///
+    /// The home drawer's curated shelves read this on every render — see
+    /// `toursByTag` for why it is an index and not a filter.
+    func tours(taggedWith tag: String) -> [Tour] {
+        toursByTag[tag] ?? []
+    }
+
+    /// The whole tag index, handed to `HomeRailsViewModel` so it can build
+    /// thirteen shelves with thirteen dictionary lookups instead of thirteen
+    /// passes over the catalog.
+    var toursByTagIndex: [String: [Tour]] { toursByTag }
 
     func tours(in category: TourCategory) -> [Tour] {
         tours.filter { $0.primaryCategory == category }

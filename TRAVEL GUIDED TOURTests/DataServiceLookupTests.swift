@@ -96,6 +96,81 @@ final class DataServiceLookupTests: XCTestCase {
         XCTAssertNil(service.place(forTourId: UUID()))
     }
 
+    // MARK: - Tag index
+
+    /// 🔴 THE TAG INDEX MUST RETURN EXACTLY WHAT THE OLD FILTER RETURNED.
+    ///
+    /// The home drawer's thirteen curated shelves used to `filter` the whole
+    /// catalog per shelf, on every render, while `visibleRegion` changed every
+    /// frame of a camera animation — ~2.4 million tag-list scans across a
+    /// one-second fly to a searched place. Membership cannot change without
+    /// the catalog changing, so it is indexed. The risk that swap introduces
+    /// is a shelf quietly listing different tours, or the same tours in a
+    /// different order, so both are pinned here against the filter it replaced.
+    func test_toursByTag_matchesTheFilterItReplaced_inCatalogOrder() throws {
+        let maker = TestFixtures.makeMaker()
+        let first  = TestFixtures.makeTour(title: "First",  makerId: maker.id,
+                                           tags: ["Tower", "Art"])
+        let other  = TestFixtures.makeTour(title: "Other",  makerId: maker.id,
+                                           tags: ["Food"])
+        let second = TestFixtures.makeTour(title: "Second", makerId: maker.id,
+                                           tags: ["Art"])
+        let all = [first, other, second]
+        let service = try makeService(local: ToursData(makers: [maker], tours: all))
+
+        for tag in ["Tower", "Art", "Food", "Nonexistent"] {
+            XCTAssertEqual(
+                service.tours(taggedWith: tag).map(\.title),
+                all.filter { $0.tags.contains(tag) }.map(\.title),
+                "shelf \"\(tag)\" must match the filter it replaced, in catalog order"
+            )
+        }
+    }
+
+    /// A tour carrying the same tag twice in authored data must appear on that
+    /// shelf once. The old `filter` could not duplicate a tour; an index that
+    /// appends per tag can.
+    func test_toursByTag_doesNotDuplicateATourWithARepeatedTag() throws {
+        let maker = TestFixtures.makeMaker()
+        let tour = TestFixtures.makeTour(title: "Twice", makerId: maker.id,
+                                         tags: ["Art", "Art"])
+        let service = try makeService(local: ToursData(makers: [maker], tours: [tour]))
+
+        XCTAssertEqual(service.tours(taggedWith: "Art").map(\.title), ["Twice"])
+    }
+
+    /// The staleness risk indexing always carries: a refresh that changes the
+    /// catalog must rebuild this index with it, or a shelf renders tours the
+    /// catalog no longer has.
+    func test_toursByTag_rebuildsOnRefresh() async throws {
+        let maker = TestFixtures.makeMaker()
+        let before = TestFixtures.makeTour(title: "Before", makerId: maker.id, tags: ["Art"])
+        let after  = TestFixtures.makeTour(title: "After",  makerId: maker.id, tags: ["Art"])
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [before]),
+            remote: ToursData(makers: [maker], tours: [after])
+        )
+
+        XCTAssertEqual(service.tours(taggedWith: "Art").map(\.title), ["Before"])
+        await service.refresh()
+        XCTAssertEqual(service.tours(taggedWith: "Art").map(\.title), ["After"],
+                       "the index must follow the catalog, not outlive it")
+    }
+
+    /// The index handed to `HomeRailsViewModel` must agree with the accessor —
+    /// they are two doors onto the same data and the shelves read the dict.
+    func test_toursByTagIndex_agreesWithTheAccessor() throws {
+        let maker = TestFixtures.makeMaker()
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id, tags: ["Tower"])
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id, tags: ["Tower", "Art"])
+        let service = try makeService(local: ToursData(makers: [maker], tours: [a, b]))
+
+        for tag in ["Tower", "Art"] {
+            XCTAssertEqual(service.toursByTagIndex[tag]?.map(\.title),
+                           service.tours(taggedWith: tag).map(\.title))
+        }
+    }
+
     /// `tours(by:)` is read by the maker page and by every followed-maker row
     /// in Library just to count. It must keep returning **catalog order**, not
     /// whatever a dictionary happened to hold.

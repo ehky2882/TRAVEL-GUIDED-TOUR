@@ -85,10 +85,16 @@ struct HomeDrawerContent: View {
                                 quickResumeBanner(tour: resumeTour, label: "Continue listening")
                             }
 
-                            if railList.isEmpty {
+                            // Derived ONCE. `railList` builds thirteen shelves,
+                            // and reading it twice built them twice — on every
+                            // render, while a camera animation changes
+                            // `visibleRegion` every frame. Same "derive once,
+                            // use many" trap as `filteredTours` in SearchView.
+                            let rails = railList
+                            if rails.isEmpty {
                                 emptyState
                             } else {
-                                ForEach(railList) { rail in
+                                ForEach(rails) { rail in
                                     RailCarousel(title: rail.title, tours: rail.tours)
                                         .id(rail.id)
                                 }
@@ -112,8 +118,15 @@ struct HomeDrawerContent: View {
     /// The curated tag shelves shown when no filter is active —
     /// location-anchored (Near you / In view) then one shelf per curated
     /// tag drawn from the whole catalog. Built by the pure
-    /// `HomeRailsViewModel`; recomputed each render, cheap for V1's small
-    /// catalog. The personalized rails the view-model also produces
+    /// `HomeRailsViewModel`.
+    ///
+    /// ⚠️ Recomputed on every render, and `visibleRegion` changes on every
+    /// frame of a camera animation — so this is a hot path, not the cheap one
+    /// the original comment here claimed while the catalog was small. Shelf
+    /// MEMBERSHIP comes from a prebuilt index; only the ORDER is derived live.
+    /// **Read it once per body** (see the call site).
+    ///
+    /// The personalized rails the view-model also produces
     /// (Continue listening / Recently viewed) are dropped here — Continue
     /// renders as a compact banner above the shelves; Recently viewed
     /// lives in Library.
@@ -123,7 +136,10 @@ struct HomeDrawerContent: View {
             libraryEntries: libraryStore.entries,
             recentlyViewedIds: recentlyViewedStore.tourIds,
             userLocation: locationManager.userLocation,
-            visibleRegion: sharedState.visibleRegion
+            visibleRegion: sharedState.visibleRegion,
+            // Prebuilt tag index — without it each shelf filters the whole
+            // catalog, thirteen times, on every frame of a camera move.
+            toursByTag: dataService.toursByTagIndex
         )
         .filter { $0.id != "continueListening" && $0.id != "recentlyViewed" }
     }
