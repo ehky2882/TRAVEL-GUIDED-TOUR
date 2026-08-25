@@ -295,6 +295,38 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/nasainternships/"
+    },
+    {
+      "id": "F9ADCC3C-E22E-55BC-914F-2B344617FD93",
+      "displayName": "TikTok @naturalhistorymuseum",
+      "avatarURL": null,
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@naturalhistorymuseum"
+    },
+    {
+      "id": "CC4C84F8-9CC9-5174-B343-CCB82CBC0A98",
+      "displayName": "YouTube @TheMeganDaily",
+      "avatarURL": null,
+      "avatarEmoji": "▶️",
+      "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.youtube.com/@TheMeganDaily"
+    },
+    {
+      "id": "07A3F2E2-E464-5820-91E6-B9E6314F5896",
+      "displayName": "YouTube @CruisingAddicts",
+      "avatarURL": null,
+      "avatarEmoji": "▶️",
+      "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.youtube.com/@CruisingAddicts"
+    },
+    {
+      "id": "02A82B20-3588-53D1-AF46-CF23D3568125",
+      "displayName": "Instagram @poche_space",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/poche_space/"
     }
   ],
   "tours": [
@@ -75982,6 +76014,182 @@
         "Architecture"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "D0DB1104-7355-55BF-9493-A8C7EC0A7ED3",
+      "createdAt": "2026-08-24",
+      "title": "🦑The American Museum of Natural History’s Sperm Whale and…",
+      "shortDescription": "A post by @naturalhistorymuseum on TikTok.",
+      "longDescription": "🦑The American Museum of Natural History’s Sperm Whale and Giant Squid Diorama is one of the Museum’s most captivating dioramas. The darkness of this diorama is deliberate—to approximate the pitch-black conditions of the deep ocean where no sunlight penetrates. And, unlike other dioramas in the Museum, this one has no glass. Why? Reflections created a mirror effect against the scene’s dark interior, leading visitors to think the diorama was empty. #museum #nyc #stem #marinebiology #animals",
+      "makerId": "F9ADCC3C-E22E-55BC-914F-2B344617FD93",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-sperm-whale-diorama_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@naturalhistorymuseum/video/7673253792879611166",
+      "sourceAuthor": "@naturalhistorymuseum",
+      "stops": [
+        {
+          "id": "57B7F552-00AF-5C26-AF36-885FD9A80006",
+          "order": 0,
+          "title": "🦑The American Museum of Natural History’s Sperm Whale and…",
+          "caption": "🦑The American Museum of Natural History’s Sperm Whale and Giant Squid Diorama is one of the Museum’s most captivating dioramas. The darkness",
+          "latitude": 40.78083090443824,
+          "longitude": -73.97279862427825,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-sperm-whale-diorama_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.78083090443824,
+      "centroidLongitude": -73.97279862427825,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "55F0E8B9-7038-5B9C-B6C3-B618FC0EF606",
+      "createdAt": "2026-08-24",
+      "title": "Let’s tour the American Museum of Natural History | AMNH",
+      "shortDescription": "A post by @TheMeganDaily on YouTube.",
+      "longDescription": "Let’s tour the American Museum of Natural History | AMNH",
+      "makerId": "CC4C84F8-9CC9-5174-B343-CCB82CBC0A98",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-museum-walkthrough_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.youtube.com/shorts/hSbYvigS0Ic",
+      "sourceAuthor": "@TheMeganDaily",
+      "stops": [
+        {
+          "id": "A9213837-47BF-58F6-B3B3-EE50FBC3B292",
+          "order": 0,
+          "title": "Let’s tour the American Museum of Natural History | AMNH",
+          "caption": "Let’s tour the American Museum of Natural History | AMNH",
+          "latitude": 40.78083090443824,
+          "longitude": -73.97279862427825,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-museum-walkthrough_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.78083090443824,
+      "centroidLongitude": -73.97279862427825,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C10FC91B-19F9-5FD5-BED5-9097751BF791",
+      "createdAt": "2026-08-24",
+      "title": "American Museum of Natural History Tour & Review | Must-S…",
+      "shortDescription": "A post by @CruisingAddicts on YouTube.",
+      "longDescription": "American Museum of Natural History Tour & Review | Must-See Exhibits, Tips & Full Visitor Guide NYC",
+      "makerId": "07A3F2E2-E464-5820-91E6-B9E6314F5896",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-visitor-guide_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.youtube.com/watch?v=UphcGvF-bsc",
+      "sourceAuthor": "@CruisingAddicts",
+      "stops": [
+        {
+          "id": "6510AA4E-E5F4-55DA-AD71-C9833B9B7AD8",
+          "order": 0,
+          "title": "American Museum of Natural History Tour & Review | Must-S…",
+          "caption": "American Museum of Natural History Tour & Review | Must-See Exhibits, Tips & Full Visitor Guide NYC",
+          "latitude": 40.78083090443824,
+          "longitude": -73.97279862427825,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-visitor-guide_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.78083090443824,
+      "centroidLongitude": -73.97279862427825,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "728E97FA-CF73-5CF4-88EB-FBBA819B8FBD",
+      "createdAt": "2026-08-24",
+      "title": "Poché - Studio Gang | episode 2 of 3 Completed in May 202…",
+      "shortDescription": "A post by @poche_space on Instagram.",
+      "longDescription": "Poché - Studio Gang | episode 2 of 3 Completed in May 2023, Studio Gang’s Richard Gilder Center for Science, Education, and Innovation is a 230,000-square-foot addition to New York’s American Museum of Natural History. Studio Gang approached the building as an act of architectural grafting: rather than creating an isolated object, the addition stitches together a museum campus that had accumulated over 150 years. It creates 33 connections to 10 existing buildings, replacing dead ends with continuous circulation. The design is conceived as a geological landscape shaped by wind, water, erosion, and flow. Its five-story Griffin Atrium forms the heart of the building, resembling a canyon whose irregular walls, bridges, stairs, and openings encourage exploration. The architecture was conceived from the inside out, with circulation and visual connections determining the building’s form. Its most significant innovation is structural. The canyon-like walls are load-bearing shotcrete, sprayed directly onto digitally modeled and custom-bent rebar without conventional formwork. This allowed Studio Gang and engineers Arup to achieve the non-repetitive curves economically while reducing construction waste. The technique was particularly appropriate to the museum because shotcrete was originally developed by museum naturalist Carl Akeley. Extensive mock-ups and digital modeling were required to resolve the complex geometry and construction process. Externally, the building uses Milford pink granite, echoing the museum’s historic Central Park West entrance, while its masonry courses reference Manhattan schist. This gives the contemporary addition a material relationship to its historic neighbors. The major challenge was therefore not simply creating an expressive form, but integrating structure, circulation, historic fabric, construction technology, and landscape into one coherent intervention. The result is a building where the architecture itself becomes part of the museum’s lesson about natural processes, scientific discovery, and exploration. ~poché: the space between #nycarchitecture #museumofnaturalhistory #studiogang #visitnyc",
+      "makerId": "02A82B20-3588-53D1-AF46-CF23D3568125",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-gilder-center_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcTW0yzsEok/",
+      "sourceAuthor": "@poche_space",
+      "stops": [
+        {
+          "id": "DD96BF51-2074-5C58-9CD4-CEC3CC90DC57",
+          "order": 0,
+          "title": "Poché - Studio Gang | episode 2 of 3 Completed in May 202…",
+          "caption": "Poché - Studio Gang | episode 2 of 3 Completed in May 2023, Studio Gang’s Richard Gilder Center for Science, Education, and Innovation is a ",
+          "latitude": 40.78083090443824,
+          "longitude": -73.97279862427825,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amnh-gilder-center_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.78083090443824,
+      "centroidLongitude": -73.97279862427825,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture"
+      ],
+      "priceUSD": 0
     }
   ],
   "places": [
@@ -76357,7 +76565,11 @@
       "additionalImageURLs": null,
       "tourIds": [
         "fceeb6bf-89a6-40c9-81c4-4b8efc781dcd",
-        "5bb90e3a-a81f-492d-b761-b204fa5dc405"
+        "5bb90e3a-a81f-492d-b761-b204fa5dc405",
+        "D0DB1104-7355-55BF-9493-A8C7EC0A7ED3",
+        "55F0E8B9-7038-5B9C-B6C3-B618FC0EF606",
+        "C10FC91B-19F9-5FD5-BED5-9097751BF791",
+        "728E97FA-CF73-5CF4-88EB-FBBA819B8FBD"
       ]
     }
   ]
