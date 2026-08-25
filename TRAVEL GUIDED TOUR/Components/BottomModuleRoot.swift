@@ -36,6 +36,21 @@ struct BottomModuleRoot: View {
     @Environment(AuthService.self) private var authService: AuthService?
     @Environment(FollowService.self) private var followService: FollowService?
     @Environment(MakerProfileService.self) private var makerProfileService: MakerProfileService?
+    /// Optional: this view also renders as `ContentView`'s inline fallback,
+    /// which may not carry the full environment. Nil means "not launching".
+    @Environment(LaunchState.self) private var launchState: LaunchState?
+
+    /// The module's share of the three-edge launch assembly: it rises from the
+    /// bottom edge as the search bar comes in from the right and the drawer
+    /// rises, all on one delay and one duration. See `LaunchBloom.assembly`.
+    /// Far enough below the bottom edge that the module is fully clear of it
+    /// before the slide starts — the module's own height plus a margin.
+    private static var launchTravel: CGFloat { AtlasBottomModule.height() + 40 }
+
+    private var assemblyProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
+    }
 
     var body: some View {
         @Bindable var appShared = appShared
@@ -96,6 +111,11 @@ struct BottomModuleRoot: View {
             } action: { height in
                 onInteractiveHeightChange?(height)
             }
+            // The launch slide. Offset only — the measured height above is
+            // unaffected by a translation, so the window still claims the right
+            // strip while the bars are on their way in.
+            .offset(y: (1 - assemblyProgress) * Self.launchTravel)
+            .opacity(assemblyProgress)
         }
         // Keep the Me-tab notification badge in sync with the pending
         // follow-request count on the signed-in user's own maker. Re-runs on
@@ -132,6 +152,24 @@ struct BottomModuleRoot: View {
             if let tour = nowPlayingTour {
                 PlayerView(tour: tour)
             }
+        }
+        // 🔴 The fullscreen video viewer presents from THIS window for exactly
+        // the same reason the player above does: the bars live at
+        // `windowLevel = .normal + 1` and would otherwise paint straight over
+        // an ordinary modal put up by the tour sheet. Session 24 hit this with
+        // `PlayerView` — hiding the module around the transition made it
+        // worse; presenting from this window was the fix.
+        //
+        // ⚠️ Hosted on its OWN view rather than chained onto the modifier
+        // above. Two presentation modifiers of the same kind attached to one
+        // view do not both work in SwiftUI — the second is silently ignored,
+        // which reads as a dead button rather than an error. Verified here:
+        // chained, the expand control did nothing at all.
+        .background {
+            Color.clear
+                .fullScreenCover(item: $appShared.fullscreenVideo) { request in
+                    FullscreenVideoView(request: request)
+                }
         }
     }
 

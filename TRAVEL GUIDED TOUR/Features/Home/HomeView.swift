@@ -21,6 +21,10 @@ struct HomeView: View {
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(PlacePresenter.self) private var placePresenter
+    /// Optional so previews and any host that doesn't inject it still build —
+    /// nil simply means "not launching", which is the right default anywhere
+    /// other than the real app's first seconds.
+    @Environment(LaunchState.self) private var launchState: LaunchState?
 
     /// Drawer detent — owned by `ContentView` so it persists across
     /// tab switches and so the drawer (also at `ContentView`) and the
@@ -215,32 +219,49 @@ struct HomeView: View {
                     )
                     .ignoresSafeArea()
 
+                    // 🔴 THE SEARCH BAR DROPS FROM THE TOP, THE CHIPS COME IN
+                    // FROM THE RIGHT — owner decision 2026-08-22 — and both land
+                    // on the frame the drawer finishes opening.
+                    //
+                    // ⚠️ The launch progress is read INSIDE `LaunchEntrance`,
+                    // never here: reading it in this body would re-evaluate the
+                    // map, its clustering and the rails 60 times a second for
+                    // the whole entrance. See the note on `LaunchEntrance`.
                     VStack(spacing: AtlasSpacing.sm) {
-                        SearchBar()
-                            .padding(.horizontal, AtlasSpacing.md)
-                            // Retract the drawer to `.peek` when the
-                            // user opens search from `.medium` or
-                            // `.large` — without this the SearchView
-                            // pushes on top of a fully-expanded drawer
-                            // and the user has to swipe down again
-                            // to get the map back when they pop
-                            // (owner request, 2026-06-04).
-                            // `.simultaneousGesture` runs alongside
-                            // the NavigationLink's tap so the push
-                            // still fires.
-                            .simultaneousGesture(
-                                TapGesture().onEnded {
-                                    guard sheetDetent != .peek else { return }
-                                    withAnimation(.easeInOut(duration: 0.25)) {
-                                        sheetDetent = .peek
+                        LaunchEntrance(
+                            part: .searchBar,
+                            // Its own height plus the safe area above it, so it
+                            // starts fully clear of the top edge.
+                            travel: AtlasSpacing.searchBarHeight + geo.safeAreaInsets.top + AtlasSpacing.lg
+                        ) {
+                            SearchBar()
+                                .padding(.horizontal, AtlasSpacing.md)
+                                // Retract the drawer to `.peek` when the
+                                // user opens search from `.medium` or
+                                // `.large` — without this the SearchView
+                                // pushes on top of a fully-expanded drawer
+                                // and the user has to swipe down again
+                                // to get the map back when they pop
+                                // (owner request, 2026-06-04).
+                                // `.simultaneousGesture` runs alongside
+                                // the NavigationLink's tap so the push
+                                // still fires.
+                                .simultaneousGesture(
+                                    TapGesture().onEnded {
+                                        guard sheetDetent != .peek else { return }
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            sheetDetent = .peek
+                                        }
                                     }
-                                }
-                            )
+                                )
+                        }
 
-                        TagFilterChipRow(
-                            selectedTags: $sharedState.selectedTags,
-                            walksOnly: $sharedState.walksOnly
-                        )
+                        LaunchEntrance(part: .chips, travel: geo.size.width) {
+                            TagFilterChipRow(
+                                selectedTags: $sharedState.selectedTags,
+                                walksOnly: $sharedState.walksOnly
+                            )
+                        }
                     }
                     .padding(.top, AtlasSpacing.sm)
 
@@ -357,6 +378,21 @@ struct HomeView: View {
             center: user.coordinate,
             span: Self.initialUserSpan
         )
+        // Behind the splash there is nobody to animate for, and animating
+        // would be worse than pointless: the flight used to finish AFTER the
+        // splash cleared, so the map opened on the fallback region and then
+        // visibly travelled somewhere else. Resolve it instantly instead, and
+        // the user's first frame of the map is already their own city.
+        //
+        // ⚠️ CENTRED, deliberately. A previous revision shifted the camera so
+        // the user sat in the upper third, purely to give a travelling launch
+        // mark somewhere to fly to. That was letting an animation dictate how
+        // the map frames you — owner, 2026-08-22: *"I don't think it works."*
+        // The mark no longer travels, so this is a plain centre again.
+        if launchState?.isSplashVisible == true {
+            cameraPosition = .region(region)
+            return
+        }
         withAnimation(.easeInOut(duration: 0.6)) {
             cameraPosition = .region(region)
         }
@@ -543,6 +579,8 @@ struct HomeView: View {
     /// dropped at a few-block zoom that hides most pins. ~0.1° is
     /// roughly 11 km N-S / ~8.5 km E-W at NYC latitude — about the
     /// full length of Manhattan island.
+    /// The three-edge assembly's progress, or 1 when not launching.
+
     private static let initialUserSpan = MKCoordinateSpan(
         latitudeDelta: 0.1,
         longitudeDelta: 0.1

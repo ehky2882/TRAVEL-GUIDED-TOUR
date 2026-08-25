@@ -379,6 +379,13 @@ As of 2026-07-16, `origin/main` = **15 makers / 828 tours** (Supabase upsert-acc
 | Seoul | 43 | SEL | launched 2026-07-15 (PR #389) — 40 single + 3 walks |
 | **Los Angeles** | **42** | **LAX** | ✅ **launched 2026-07-15 (PR #390)** — 38 single-stop + **4 walks** (Beachfront, Downtown LA, Museum Row, Hollywood Boulevard) |
 | **Amsterdam** | **38** | **AMS** | ✅ **launched 2026-07-16 (PR #401)** — 33 single-stop + **5 walks** (Canal Ring, Old Side, Museum Quarter, Jordaan, Jewish Quarter) |
+| **Milan** | **48** | **MIL** | ✅ **launched 2026-08-22** — 47 single-stop + **1 walk** (The Navigli, 7 stops). **Never entered the pending queue** — arrived complete (audio + scripts + images in one drop) and was wired the same day, like Rio, São Paulo, Marrakech and Buenos Aires. |
+
+> ⚠️ **This table is stale below 2026-07-16 and is NOT a count of the catalog.** Fourteen cities
+> have launched since (Rome, Berlin, Rio, São Paulo, Marrakech, Buenos Aires, Chicago, Melbourne,
+> Sydney, Cape Town, Barcelona, Chiang Mai, Bangkok, Milan) and only some have rows here. The
+> authoritative count is always `origin/main`'s `Tours.json` — **1466 tours / 32 makers /
+> 1828 stops as of 2026-08-22.** Re-derive rather than quoting this table.
 
 ---
 

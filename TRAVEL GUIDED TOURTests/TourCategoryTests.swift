@@ -33,9 +33,19 @@ final class TourCategoryTests: XCTestCase {
         XCTAssertEqual(category, .visualArt)
     }
 
-    func test_decodingBadValue_throws() {
+    /// ⚠️ **CONTRACT DELIBERATELY CHANGED — this was
+    /// `test_decodingBadValue_throws`.**
+    ///
+    /// Throwing meant one unfamiliar category failed its tour, which failed the
+    /// whole `[Tour]` array, which `RemoteCatalogLoader`'s `try?` turned into a
+    /// silent "no new content". A tour with a category this build has not heard
+    /// of is still a perfectly good tour — title, hero, narration, coordinate
+    /// all understood — and only its shelf is in doubt, so it now lands on the
+    /// neutral one rather than being lost.
+    func test_decodingUnknownValue_fallsBackToNeutralCategory() throws {
         let json = Data(#""notACategory""#.utf8)
-        XCTAssertThrowsError(try JSONDecoder().decode(TourCategory.self, from: json))
+        let category = try JSONDecoder().decode(TourCategory.self, from: json)
+        XCTAssertEqual(category, .culturalHeritage)
     }
 
     func test_encodeDecodeRoundTrip() throws {

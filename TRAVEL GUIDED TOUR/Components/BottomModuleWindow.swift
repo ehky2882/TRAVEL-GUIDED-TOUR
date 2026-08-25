@@ -35,6 +35,17 @@ final class AppSharedState {
     /// `TourDetailView.handlePrimaryAction` (Start Tour from the
     /// inline button row).
     var currentPlayingStopId: UUID? = nil
+    /// The clip currently expanded to fullscreen, or nil.
+    ///
+    /// Lives here for the same reason `showingFullPlayer` does: the request
+    /// originates inside the tour sheet (main window) but the cover MUST
+    /// present from `BottomModuleRoot`'s window, which sits at
+    /// `windowLevel = .normal + 1` and would otherwise paint the mini-player
+    /// and tab bar straight over an ordinary modal. Session 24 hit exactly
+    /// this with `PlayerView` — hiding the module around the transition made
+    /// it worse; presenting from that window was the fix.
+    var fullscreenVideo: FullscreenVideoRequest? = nil
+
     /// While true the mini-player and tab bar are withdrawn entirely — the
     /// secondary window is hidden and the inline fallback stops rendering.
     ///

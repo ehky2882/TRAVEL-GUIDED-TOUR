@@ -20,10 +20,22 @@
 import Foundation
 
 // MARK: - Model mirror
+//
+// ⚠️ THESE ENUMS STAY STRICT EVEN THOUGH THE APP'S NOW TOLERATE UNKNOWN VALUES.
+// `StopTriggerMode`, `TourVideoRole` and `TourCategory` in `Models/` decode an
+// unfamiliar value to a safe default, so that a catalog published in the future
+// cannot break a build shipped today. That is a RUNTIME property, for data this
+// build was never going to understand.
+//
+// This is the authoring gate, and it runs against data someone is writing right
+// now. A typo here must fail loudly rather than land on a silent default and
+// ship a tour onto the wrong shelf. Do not "sync" these with the app's
+// tolerance — the two are meant to disagree.
 
 enum TourKind: String, Codable {
     case single
     case multiStop
+    case link
 }
 
 enum StopTriggerMode: String, Codable {
@@ -69,7 +81,10 @@ struct Tour: Codable {
     let heroImageURL: String
     let additionalImageURLs: [String]?
     let videoURLs: [String]?
+    let videoRole: String?
     let kind: TourKind
+    let sourceURL: String?
+    let sourceAuthor: String?
     let stops: [Stop]
     let introAudioURL: String?
     let totalDurationSeconds: Int
@@ -106,6 +121,31 @@ struct ToursFile: Codable {
     let tours: [Tour]
     /// Optional — catalogs published before the place layer have no such key.
     let places: [Place]?
+    /// Link pins, in their own top-level array so that a build predating
+    /// `TourKind.link` skips them as an unknown key instead of throwing on an
+    /// unknown `kind` and losing the entire catalog. Optional for the same
+    /// reason `places` is: a catalog published before the split has no such
+    /// key. See `TRAVEL GUIDED TOUR/Data/ToursData.swift` for the full
+    /// reasoning; this file only enforces it.
+    let linkPins: [Tour]?
+}
+
+extension ToursFile {
+    /// Every tour, labelled by where it actually sits in the file, so an error
+    /// message points at the array the reader has to go and edit.
+    ///
+    /// Every rule below runs over this rather than over `tours`, so a link pin
+    /// is validated exactly as strictly as it was when link pins lived inside
+    /// `tours` — moving them must not quietly exempt them from anything.
+    var locatedTours: [(location: String, tour: Tour)] {
+        // Labels are written into each literal rather than relying on the
+        // declared return type to add them: an array of unlabelled tuples does
+        // not implicitly convert to an array of labelled ones.
+        tours.enumerated().map { (location: "tours[\($0.offset)]", tour: $0.element) }
+            + (linkPins ?? []).enumerated().map { (location: "linkPins[\($0.offset)]", tour: $0.element) }
+    }
+
+    var allTours: [Tour] { tours + (linkPins ?? []) }
 }
 
 // MARK: - Finding accumulator
@@ -180,32 +220,105 @@ let experienceTags: Set<String> = [
 ]
 let architectTags: Set<String> = [
     "Álvaro Siza", "Eduardo Souto de Moura", "Fernando Távora",
-    "Norman Foster", "Renzo Piano", "Frank Gehry", "Christopher Wren",
-    "Charles Holden", "Denys Lasdun", "Inigo Jones", "Giles Gilbert Scott",
-    "George Gilbert Scott", "Herzog & de Meuron", "Frank Lloyd Wright",
-    "Cass Gilbert", "McKim, Mead & White", "Inês Lobo", "Luís Pedro Silva",
-    "Kengo Kuma", "Kenzō Tange", "Tadao Ando", "SANAA", "Toyo Ito",
-    "Fumihiko Maki", "Shigeru Ban", "Sou Fujimoto", "Kisho Kurokawa",
-    "I. M. Pei", "Mies van der Rohe", "Le Corbusier", "Philip Johnson",
-    "William Van Alen", "Thomas Heatherwick", "Santiago Calatrava",
-    "Bernard Maybeck", "Daniel Burnham", "Zaha Hadid", "Jean Nouvel",
-    "Oscar Niemeyer", "Lina Bo Bardi", "Paulo Mendes da Rocha",
-    "Vilanova Artigas", "Affonso Eduardo Reidy", "Lúcio Costa",
-    "Christian de Portzamparc", "Ramos de Azevedo", "Rino Levi",
-    "Roberto Burle Marx", "Karl Friedrich Schinkel", "Hans Scharoun",
-    "August Endell", "Hermann Henselmann", "Nicholas Hawksmoor",
-    "John Soane", "Edwin Lutyens", "Horace Jones", "Herbert Baker",
+    "Norman Foster", "Renzo Piano", "Frank Gehry",
+    "Christopher Wren", "Charles Holden", "Denys Lasdun",
+    "Inigo Jones", "Giles Gilbert Scott", "George Gilbert Scott",
+    "Herzog & de Meuron", "Frank Lloyd Wright", "Cass Gilbert",
+    "McKim, Mead & White", "Inês Lobo", "Luís Pedro Silva",
+    "Kengo Kuma", "Kenzō Tange", "Tadao Ando",
+    "SANAA", "Toyo Ito", "Fumihiko Maki",
+    "Shigeru Ban", "Sou Fujimoto", "Kisho Kurokawa",
+    "I. M. Pei", "Mies van der Rohe", "Le Corbusier",
+    "Philip Johnson", "William Van Alen", "Thomas Heatherwick",
+    "Santiago Calatrava", "Bernard Maybeck", "Daniel Burnham",
+    "Zaha Hadid", "Jean Nouvel", "Oscar Niemeyer",
+    "Lina Bo Bardi", "Paulo Mendes da Rocha", "Vilanova Artigas",
+    "Affonso Eduardo Reidy", "Lúcio Costa", "Christian de Portzamparc",
+    "Ramos de Azevedo", "Rino Levi", "Roberto Burle Marx",
+    "Karl Friedrich Schinkel", "Hans Scharoun", "August Endell",
+    "Hermann Henselmann", "Nicholas Hawksmoor", "John Soane",
+    "Edwin Lutyens", "Horace Jones", "Herbert Baker",
     "Amanda Levete", "Frederick Law Olmsted", "Calvert Vaux",
     "Richard Morris Hunt", "John Russell Pope", "Eero Saarinen",
     "Diller Scofidio + Renfro", "Jeanne Gang", "Michael Arad",
-    "Marcel Breuer", "Francesco Tamburini", "Mario Palanti", "Carlos Thays",
-    "Clorindo Testa", "Víctor Meano", "Jørn Utzon", "Joseph Reed",
-    "Roy Grounds", "Marc Newson", "Studio KO", "Mario Botta", "Jun Aoki",
-    "Rocco Yim", "Bing Thom", "Philippe Starck", "Gustave Eiffel",
-    "Rem Koolhaas", "Dominique Perrault", "Hiroshi Sambuichi",
+    "Marcel Breuer", "Francesco Tamburini", "Mario Palanti",
+    "Carlos Thays", "Clorindo Testa", "Víctor Meano",
+    "Jørn Utzon", "Joseph Reed", "Roy Grounds",
+    "Marc Newson", "Studio KO", "Mario Botta",
+    "Jun Aoki", "Rocco Yim", "Bing Thom",
+    "Philippe Starck", "Gustave Eiffel", "Rem Koolhaas",
+    "Dominique Perrault", "Hiroshi Sambuichi", "Bjarke Ingels",
     "Antoni Gaudí", "Lluís Domènech i Montaner", "Josep Puig i Cadafalch",
     "Ricardo Bofill", "Enric Sagnier", "Josep Fontserè",
-    "Antoni Bonet i Castellana", "Josep Maria Subirachs",
+    "Antoni Bonet i Castellana", "Josep Maria Subirachs", "Agostinho Ricca",
+    "Aires Mateus", "Albert Guilbert", "Alberto Kuhlmann",
+    "Alberto Prebisch", "Alejandro Christophersen", "Alexander Jackson Davis",
+    "Alfred Foulhoux", "Alfred Waterhouse", "Allan Powell",
+    "Américo Soares Braga", "Annabelle Selldorf", "Antonio Citterio",
+    "António Correia da Silva", "Aron Johansson", "Artur Andrade",
+    "Arturo Ochoa", "Baek Jong-hwan", "Bertrand Goldberg",
+    "Bonaventura Bassegoda", "Bond Ryder", "Brad Cloepfil",
+    "Bruce Price", "Carl Fredrik Adelcrantz", "Carlo Maciachini",
+    "Carlos Zapata", "Charles Collens", "Charles Garnier",
+    "Charles W. Clinton", "Chu Ming Silveira", "DHK Architects",
+    "Dan Kiley", "Daniel Libeskind", "David Chipperfield",
+    "David McGlashan", "David Rockwell", "Der Scutt",
+    "Diogo de Boitaca", "Domiziano Rossi", "Donald Deskey",
+    "Edgar de Oliveira da Fonseca", "Edson Elito", "Eduardo Catalano",
+    "Eduardo Le Monnier", "Edward Durell Stone", "Egon Eiermann",
+    "Ellen van Loon", "Emanuel Buchsbaum", "Emili Sala Cortés",
+    "Emilio Lancia", "Emílio David", "Enrique Jan",
+    "Ensamble Studio", "Eugène Ferret", "Eugénio dos Santos",
+    "Ferdinand Boberg", "Fermín Vázquez", "Fernand Gardès",
+    "Filippo Terzi", "Francesco Gianotti", "Francisco Joaquim Béthencourt da Silva",
+    "Francisco de Paula del Villar", "Franz Koepp", "François Hennebique",
+    "Frederick A. Petersen", "Fredrik Blom", "Fredrik Lilljekvist",
+    "Friedrich August Stüler", "Fumio Asakura", "George McRae",
+    "Gio Ponti", "Giovanni Muzio", "Giuseppe Cinatti",
+    "Giuseppe Mengoni", "Giuseppe Piermarini", "Gonçalo Ribeiro Telles",
+    "Guiniforte Solari", "Gunilla Bandolin", "Gunnar Asplund",
+    "Gustavo Adolfo Gonçalves e Sousa", "Göran Josuae Adelcrantz", "H. Douglas Ives",
+    "H3O Architects", "Hector Guimard", "Hendrick de Keyser",
+    "Henry C. Pelton", "Henry Janeway Hardenbergh", "Hercules Manfredi",
+    "Hiroshi Naito", "Hiroyuki Wakabayashi", "Ico Migliore",
+    "Ilse Crawford", "Isak Gustaf Clason", "Ithiel Town",
+    "Ivar Tengbom", "J. Cleaveland Cady", "Jacques Brownson",
+    "James Corner Field Operations", "James Gibbs", "James O'Donnell",
+    "James Renwick Jr.", "James Wardrop", "Jean-Michel Wilmotte",
+    "Jeroni Martorell", "Jin Watanabe", "Jo Nagasaka",
+    "Johan Nyrén", "John H. Duncan", "Jorge Colaço",
+    "Joseph H. Freedlander", "Josiah Conder", "João Carlos Machado",
+    "João Queiroz", "João de Castilho", "Juan A. Buschiazzo",
+    "Juan Gómez de Mora", "Juan de Villanueva", "Jules Dormal",
+    "Karl Fournier", "Kasper Salin", "Kazoo Sato",
+    "Kazumasa Yamashita", "Kenichi Iwasaki", "Klein Dytham Architecture",
+    "Kulapat Yantrasast", "Kunio Maekawa", "Lee Jae-yeon",
+    "Lek Viriyaphant", "Lluís Clotet", "Luca Beltrami",
+    "Ludger Lemieux", "Luigi Cagnola", "Luigi Vanvitelli",
+    "Luis Rey", "Manuel Salgado", "Mara Servetto",
+    "Mario Buschiazzo", "Mario Cucinella", "Mario Tamagno",
+    "Mario Vodret", "Massimiliano Locatelli", "Michael Van Valkenburgh",
+    "Michele De Lucchi", "Min Hyun-jun", "Minard Lafever",
+    "Nelson Dupré", "Ngô Viết Thụ", "Nicodemus Tessin the Elder",
+    "Nicodemus Tessin the Younger", "Nicola Salvi", "Norman Peebles",
+    "OONN Metaworks", "Ole Scheeren", "Olivier Marty",
+    "Paul Sinoir", "Paulo Bruna", "Pedro Ramalho",
+    "Pellegrino Tibaldi", "Peter Chermayeff", "Peter Joseph Lenné",
+    "Peter Zumthor", "Pezo von Ellrichshausen", "Philip Hubert",
+    "Phillip Hudson", "Pietro Pestagalli", "Próspero Catelin",
+    "Rafael Moneo", "Rafael Viñoly", "Ragnar Östberg",
+    "Ramon Reventós", "Richard Meier", "Richard Rogers",
+    "Richard Upjohn", "Richard Waite", "Robert W. Gibson",
+    "Roberto Peregalli", "Rod Faucheux", "Rodney Leon",
+    "Seung H-Sang", "Sigurd Lewerentz", "Silvia Bettini",
+    "Stanford White", "Stefano Boeri", "Studio Tack",
+    "Tamsin Johnson", "Thierry Despont", "Thom Mayne",
+    "Thomas Dillen Jones", "Théophile Seyrig", "Tokuma Katayama",
+    "Tomás Soler", "Tomás Taveira", "Viktor Sulčič",
+    "Vittorio Gregotti", "Von Jour Caux", "Wallace Harrison",
+    "Welton Becket", "Wes Anderson", "William Pereira",
+    "William Pitt", "Work Architecture Company", "Yang Tae-oh",
+    "Yoji Kasajima", "Yoshio Taniguchi"
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)
@@ -267,8 +380,23 @@ let makerById = Dictionary(uniqueKeysWithValues: file.makers.map { ($0.id, $0) }
 var seenTourIds = Set<UUID>()
 var seenStopIds = Set<UUID>()
 
-for (ti, t) in file.tours.enumerated() {
-    let tloc = "tours[\(ti)] '\(t.title)'"
+// 🔴 The split is only worth anything if it holds. A link pin left in `tours`
+// is the original bug — one unknown `kind` fails the whole catalog decode on
+// every build shipped before `TourKind.link`, silently. And a non-link tour
+// filed under `linkPins` would be invisible to those builds for no reason.
+for (i, t) in file.tours.enumerated() where t.kind == .link {
+    err("tours[\(i)] '\(t.title)'",
+        "a 'link' tour is in `tours` — link pins belong in the top-level `linkPins` array, " +
+        "or every build predating TourKind.link stops decoding the catalog at all")
+}
+for (i, t) in (file.linkPins ?? []).enumerated() where t.kind != .link {
+    err("linkPins[\(i)] '\(t.title)'",
+        "kind '\(t.kind.rawValue)' is in `linkPins` — only 'link' belongs there; " +
+        "an ordinary tour filed here is hidden from every build that skips the key")
+}
+
+for (tloc0, t) in file.locatedTours {
+    let tloc = "\(tloc0) '\(t.title)'"
 
     if !seenTourIds.insert(t.id).inserted {
         err(tloc, "duplicate tour id \(t.id)")
@@ -306,6 +434,23 @@ for (ti, t) in file.tours.enumerated() {
             } else if !videoExts.contains(where: { u.lowercased().hasSuffix($0) }) {
                 warn(tloc, "videoURLs[\(i)] '\(u)' doesn't end in a known video extension (.mp4/.mov/.m4v) — sanity check?")
             }
+        }
+    }
+    // videoRole — closed vocabulary, mirroring `TourVideoRole` in
+    // Models/Tour.swift. Absent means `gallery`, which is every video authored
+    // before the role existed.
+    if let role = t.videoRole {
+        let known = ["gallery", "narration"]
+        if !known.contains(role) {
+            err(tloc, "videoRole '\(role)' is not one of \(known.joined(separator: ", "))")
+        }
+        if (t.videoURLs ?? []).isEmpty {
+            err(tloc, "videoRole '\(role)' is set but the tour has no videoURLs")
+        }
+        // A narration clip IS the tour, so a tour with several of them has no
+        // single soundtrack to be slaved to.
+        if role == "narration", (t.videoURLs ?? []).count > 1 {
+            err(tloc, "videoRole 'narration' with \((t.videoURLs ?? []).count) videos — a narration clip is the tour, so there can only be one")
         }
     }
     if let u = t.introAudioURL, !isValidURL(u) { err(tloc, "introAudioURL '\(u)' is not a valid URL") }
@@ -348,6 +493,34 @@ for (ti, t) in file.tours.enumerated() {
         } else if let d = t.walkingDistanceMeters, d <= 0 {
             err(tloc, "walkingDistanceMeters \(d) must be positive")
         }
+    case .link:
+        // A link pin stands for someone else's post. It carries one
+        // placeholder stop so `MapMarkers` has something at order 0 to draw,
+        // and that stop must be `manual` — a geofenced one would ask
+        // `ProximityMonitor` to fire audio that does not exist.
+        if t.stops.count != 1 {
+            err(tloc, "kind 'link' requires exactly 1 stop, found \(t.stops.count)")
+        }
+        if let first = t.stops.first, first.triggerMode != .manual {
+            err(tloc, "kind 'link' requires its stop to be triggerMode 'manual', got '\(first.triggerMode.rawValue)'")
+        }
+        if !isValidURL(t.sourceURL ?? "") {
+            err(tloc, "kind 'link' requires a valid sourceURL, got '\(t.sourceURL ?? "nil")'")
+        }
+        if !isNonEmpty(t.sourceAuthor ?? "") {
+            // The pin is built out of someone's work; shipping it uncredited
+            // is an editorial fault, not a technical one.
+            err(tloc, "kind 'link' requires sourceAuthor — a link pin must credit its creator")
+        }
+        if t.totalDurationSeconds != 0 {
+            err(tloc, "kind 'link' must have totalDurationSeconds 0, got \(t.totalDurationSeconds)")
+        }
+    }
+
+    // Only a link pin may name a source; anything else is a mis-set key.
+    if t.kind != .link {
+        if t.sourceURL != nil { err(tloc, "sourceURL is set on a '\(t.kind.rawValue)' tour — only 'link' may carry one") }
+        if t.sourceAuthor != nil { err(tloc, "sourceAuthor is set on a '\(t.kind.rawValue)' tour — only 'link' may carry one") }
     }
 
     // Stop order must pack 0..<count, no gaps, no dupes within a tour.
@@ -375,14 +548,27 @@ for (ti, t) in file.tours.enumerated() {
             err(sloc, "longitude \(s.longitude) out of [-180, 180]")
         }
 
-        if !isValidURL(s.audioURL) {
+        // 🔴 A link pin's stop carries an EMPTY audioURL and a zero duration
+        // — the same "no audio" representation a fresh maker draft writes,
+        // and safe because every reader goes through `URL(string:)`, which
+        // rejects "". Legal for `kind: link` and nowhere else: relaxing this
+        // for other kinds would let a real tour ship silently unplayable.
+        if t.kind == .link {
+            if !s.audioURL.isEmpty {
+                err(sloc, "a link pin's stop must have an empty audioURL, got '\(s.audioURL)'")
+            }
+        } else if !isValidURL(s.audioURL) {
             err(sloc, "audioURL '\(s.audioURL)' is not a valid URL")
         }
         if let u = s.imageURL, !isValidURL(u) {
             err(sloc, "imageURL '\(u)' is not a valid URL")
         }
 
-        if s.audioDurationSeconds <= 0 {
+        if t.kind == .link {
+            if s.audioDurationSeconds != 0 {
+                err(sloc, "a link pin's stop must have audioDurationSeconds 0, got \(s.audioDurationSeconds)")
+            }
+        } else if s.audioDurationSeconds <= 0 {
             err(sloc, "audioDurationSeconds must be positive, got \(s.audioDurationSeconds)")
         }
         stopAudioSum += max(0, s.audioDurationSeconds)
@@ -404,7 +590,9 @@ for (ti, t) in file.tours.enumerated() {
             if tx.range(of: "\\[[A-Za-z]", options: .regularExpression) != nil {
                 err(sloc, "transcriptText contains a bracketed stage direction (e.g. '[beat]') — strip production markers")
             }
-        } else {
+        } else if t.kind != .link {
+            // A link pin has no audio, so "has audio but no transcript" would
+            // be a false warning on every one of them.
             warn(sloc, "stop has audio but no transcriptText (accessibility gap — backfill when possible)")
         }
     }
@@ -425,7 +613,10 @@ for (ti, t) in file.tours.enumerated() {
     }
 
     // Duration math: total must cover the sum of stop durations.
-    if t.totalDurationSeconds <= 0 {
+    if t.kind == .link {
+        // Already checked above: a link pin is 0/0 by definition, and the
+        // sum-vs-total comparisons below are meaningless without audio.
+    } else if t.totalDurationSeconds <= 0 {
         err(tloc, "totalDurationSeconds must be positive, got \(t.totalDurationSeconds)")
     } else if t.totalDurationSeconds < stopAudioSum {
         err(tloc, "totalDurationSeconds \(t.totalDurationSeconds) < sum of stop durations \(stopAudioSum)")
@@ -460,7 +651,10 @@ for (ti, t) in file.tours.enumerated() {
 if let places = file.places {
     var seenPlaceIds = Set<UUID>()
     var tourToPlace: [UUID: String] = [:]
-    let tourById = Dictionary(file.tours.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+    // `allTours`, not `tours`: a place legitimately names a link pin among
+    // its members (AMNH does), and looking those up in `tours` alone would
+    // report a real reference as an unknown tour.
+    let tourById = Dictionary(file.allTours.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
 
     for (i, place) in places.enumerated() {
         let loc = "places[\(i)] '\(place.name)'"
@@ -523,12 +717,13 @@ if let places = file.places {
 
 let errorCount   = findings.filter { $0.severity == .error }.count
 let warningCount = findings.filter { $0.severity == .warn  }.count
-let stopCount    = file.tours.reduce(0) { $0 + $1.stops.count }
+let stopCount    = file.allTours.reduce(0) { $0 + $1.stops.count }
 
 print("Atlas Tours.json validator")
 print("  file:    \(path)")
 print("  makers:  \(file.makers.count)")
 print("  tours:   \(file.tours.count) (\(stopCount) stops total)")
+print("  linkPins: \(file.linkPins?.count ?? 0)")
 print("  places:  \(file.places?.count ?? 0)")
 print("")
 

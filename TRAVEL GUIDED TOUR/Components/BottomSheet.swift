@@ -33,6 +33,44 @@ struct BottomSheet<Content: View>: View {
     /// Peek detent's pixel height. Tunable per consumer; default ~100
     /// gives room for a drag handle + a single header line.
     var peekHeight: CGFloat = 100
+
+    /// 🔴 THE LAUNCH ENTRANCE IS READ HERE, NOT PASSED IN.
+    ///
+    /// `handOffProgress` ticks ~60 times a second while the entrance plays, and
+    /// whichever body reads it is re-evaluated that often. Read in
+    /// `ContentView` — where this sheet is built — that meant re-running the
+    /// body of the whole app, every frame, for the length of the launch. See
+    /// the note on `LaunchEntrance`. Optional, so previews and every other
+    /// caller (which inject nothing) simply see a finished entrance.
+    @Environment(LaunchState.self) private var launchState: LaunchState?
+
+    /// 🔴 HOW FAR THE CLOSED SHEET IS PARKED BELOW THE SCREEN — its closed
+    /// strip, the bars it sits on, and a small margin. NOT some huge number.
+    ///
+    /// It was 1200 ("safely off-screen whatever the device"), and that broke
+    /// the one thing the block is for. The bars travel ~166pt and the drawer
+    /// travelled 1200: on the SAME ramp, the bars are visually home while the
+    /// drawer is still a screen away, so they read as two separate arrivals.
+    /// Owner: *"the entire module … comes in together into place."* Parking it
+    /// just out of sight makes the two distances comparable, so they move as
+    /// one object.
+    ///
+    /// ⚠️ Not a `static let` — `BottomSheet` is generic, and Swift does not
+    /// allow static stored properties on generic types.
+    private var launchEntryOffset: CGFloat { peekHeight + bottomReservedHeight + 24 }
+
+    /// 0 while the block is still off-screen, 1 once it has landed.
+    private var launchSlideProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
+    }
+
+    /// 0 draws the sheet CLOSED (peek height) whatever detent it is in, 1 draws
+    /// it at that detent.
+    private var launchOpenProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.drawerExpandProgress(handOff: launchState.handOffProgress)
+    }
     /// Inset from the screen edges on the left, right, AND bottom of
     /// the drawer.
     var horizontalInset: CGFloat = 8
@@ -96,6 +134,21 @@ struct BottomSheet<Content: View>: View {
     var body: some View {
         GeometryReader { geo in
             let topInset = geo.safeAreaInsets.top
+            // 🔴 THE LAUNCH OPENING IS A TRANSLATION, NOT A HEIGHT CHANGE.
+            //
+            // 0 draws the sheet closed (only `peekHeight` of it above the
+            // bars), 1 draws it at its detent. It is applied as an offset
+            // further down rather than by shrinking `dragHeight`, because
+            // shrinking re-lays out the drawer's whole content — rails, cards,
+            // images — on EVERY FRAME of the opening. Reported from a device:
+            // *"the performance/animation feels very lagg-y."* Translating a
+            // laid-out drawer costs nothing.
+            //
+            // ⚠️ The part that travels below the screen is hidden by the
+            // mini-player + tab bar, which live in a window ABOVE this one.
+            let launchOpening = (1 - launchOpenProgress)
+                * max(0, heightForDetent(detent, in: geo, topInset: topInset) - peekHeight)
+
             let baseHeight = heightForDetent(detent, in: geo, topInset: topInset)
             // Clamp the drag-time visual height to the `.large` detent's
             // resolved height — NOT the full container height. Otherwise
@@ -134,6 +187,25 @@ struct BottomSheet<Content: View>: View {
                     style: .continuous
                 )
             )
+            // 🔴 THE ENTRANCE TRANSLATES THE FINISHED PANEL, then clips it to
+            // where the panel WOULD rest. Both halves matter.
+            //
+            // Translating: `.offset` is a rendering transform and does not
+            // move the layout frame, so applied before `.background` the panel
+            // and its rounded corners stayed put while only the content slid —
+            // the drawer looked open at its detent with its rails moving
+            // inside it. Owner: *"the drawer portion is already showing at
+            // mid-detent, with the content itself sliding up."*
+            //
+            // Clipping: without it the part pushed below the resting bottom
+            // shows through the gaps around the floating mini-player and tab
+            // bar — a strip of rail cards under the tab bar. The clip box is
+            // the resting box, so the visible height is exactly
+            // `detent − offset`: a closed drawer that grows as the offset
+            // unwinds, with no per-frame relayout of the rails.
+            .offset(y: launchOpening + (1 - launchSlideProgress) * launchEntryOffset)
+            .frame(height: dragHeight, alignment: .top)
+            .clipped()
             // 8pt insets on left + right. The bottom padding is
             // exactly the parent's reserved height — when 0, the
             // drawer sits flush against the screen edge (default

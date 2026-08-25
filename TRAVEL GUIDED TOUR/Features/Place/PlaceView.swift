@@ -18,19 +18,21 @@ import MapKit
 /// and a full-bleed hero. What the two pages now share, and must keep sharing:
 ///
 ///   - `secondaryBackground` ground and a hidden system nav bar.
-///   - A sticky `chromeRow` parked by `.safeAreaInset(edge: .top)` — 44 pt
-///     capsules on a material bar, content scrolling *under* it.
+///   - A sticky chrome row, parked and painted by the shared `atlasChromeRow`
+///     — 44 pt capsules on an opaque bar (NOT a material: see that file),
+///     content scrolling *under* it.
 ///   - `AtlasTabStrip` (GALLERY / MAP) above a swap zone, with `GET DIRECTIONS`
 ///     *outside* it so the layout height doesn't jump when you toggle.
 ///   - `TourMediaCarousel` at the hero ratio, inset by `lg`, square corners.
 ///   - Outer stack spacing `lg`, inner `md`, one horizontal `lg` on the body.
 ///   - A 4-line description with an inline Read more.
 ///
-/// **The one deliberate divergence is the brass tour count** (owner decision,
-/// 2026-08-18: keep it). Tour detail's section headers are quiet
-/// `secondaryText`; this one is `AtlasColors.accent`, because the count of
-/// tours *is* the reason a place page exists. Don't quietly tone it down for
-/// consistency — it was looked at side by side and chosen.
+/// **The tour list's header is the MAKER page's header** (owner, 2026-08-25:
+/// *"it should just look exactly like the example from profile page"*) — the
+/// count, the list/grid toggle and the sort pull-down, in that order and those
+/// colours. ⚠️ It was briefly brass and read "N TOURS AVAILABLE" (2026-08-18);
+/// that divergence is retired, and the note explaining it now sits at the row
+/// itself so it cannot be restored by accident.
 struct PlaceView: View {
     let place: Place
 
@@ -45,6 +47,16 @@ struct PlaceView: View {
     @State private var topSectionTab: TopSectionTab = .gallery
     @State private var isDescriptionExpanded = false
     @State private var showingReport = false
+    /// Rows or photo grid, remembered between visits — the same control the
+    /// maker page carries (owner, 2026-08-25). The key is this page's own; see
+    /// `AtlasListLayout` for why it is not shared with the maker page's.
+    @AppStorage("placeListLayout") private var layout: AtlasListLayout = .list
+    /// Sort, its own key for the same reason. Opens on Newest, which is what
+    /// `Place.ranked` already produced when this page could not be sorted.
+    @AppStorage("placeSortCriterion") private var sortCriterion: AtlasTourSort = .dateAdded
+    @AppStorage("placeSortAscending") private var sortAscending: Bool = false
+    /// Measured width of the grid container — drives square tile sizing.
+    @State private var gridContentWidth: CGFloat = 0
 
     private enum TopSectionTab: String, CaseIterable, Identifiable {
         case gallery = "Gallery"
@@ -58,16 +70,31 @@ struct PlaceView: View {
     private static let descriptionPreviewLineLimit = 4
     private static let descriptionOverflowThreshold = 240
 
-    /// The place's tours in display order. `Place.ranked` owns the rule so it
-    /// can change without a content re-seed.
-    private var tours: [Tour] {
+    /// The place's tours in catalogue order. `Place.ranked` owns the rule so
+    /// it can change without a content re-seed — and it stays the page's
+    /// identity (which photograph leads, which category the placeholder
+    /// borrows) so that sorting the list cannot change the hero under the
+    /// reader.
+    private var rankedTours: [Tour] {
         dataService.rankedTours(at: place)
+    }
+
+    /// The list as the reader has chosen to order it. The sort is stable, so
+    /// its default — Newest — reproduces `Place.ranked` exactly, tiebreaks
+    /// included; see `AtlasTourSort.sorted`.
+    private var tours: [Tour] {
+        AtlasTourSort.sorted(
+            rankedTours,
+            by: sortCriterion,
+            ascending: sortAscending,
+            from: locationManager.userLocation
+        )
     }
 
     /// The place's own editorial hero when it has one, otherwise the hero of
     /// its top-ranked tour — so a place is never blocked on new photography.
     private var heroImageURL: String {
-        place.heroImageURL ?? tours.first?.heroImageURL ?? ""
+        place.heroImageURL ?? rankedTours.first?.heroImageURL ?? ""
     }
 
     /// Extra photos only when the place has a hero of its own. If the hero is
@@ -87,13 +114,9 @@ struct PlaceView: View {
 
     var body: some View {
         scrollBody
-            .safeAreaInset(edge: .top, spacing: 0) {
-                chromeRow
-                    .background(AtlasColors.secondaryBackground.opacity(0.8))
-                    .background(.regularMaterial)
-            }
-            .background(AtlasColors.secondaryBackground)
-            .toolbar(.hidden, for: .navigationBar)
+            // Shared with tour detail and the list page — see `atlasChromeRow`,
+            // including why the fill is opaque and must not sit over a material.
+            .atlasChromeRow { chromeControls }
             .sheet(isPresented: $showingReport) {
                 ReportSheet(target: .place(place))
             }
@@ -102,29 +125,27 @@ struct PlaceView: View {
     // MARK: - Chrome
 
     /// X close (leading) · bookmark · overflow (trailing) — the same three
-    /// controls, in the same order and the same capsule, as tour detail.
-    private var chromeRow: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            Button(action: onDismiss) {
-                AtlasChromeButton("xmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Close")
-
-            Spacer()
-
-            Button {
-                savedPlaces.toggleSaved(place.id)
-            } label: {
-                AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(isSaved ? "Remove \(place.name) from saved places" : "Save \(place.name)")
-
-            overflowMenu
+    /// controls, in the same order and the same capsule, as tour detail. The
+    /// row around them comes from `atlasChromeRow`, shared with that page.
+    @ViewBuilder
+    private var chromeControls: some View {
+        Button(action: onDismiss) {
+            AtlasChromeButton("xmark")
         }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
+        .buttonStyle(.plain)
+        .accessibilityLabel("Close")
+
+        Spacer()
+
+        Button {
+            savedPlaces.toggleSaved(place.id)
+        } label: {
+            AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(isSaved ? "Remove \(place.name) from saved places" : "Save \(place.name)")
+
+        overflowMenu
     }
 
     /// Deliberately shorter than tour detail's menu. There is no download (a
@@ -184,7 +205,7 @@ struct PlaceView: View {
                 // Rows run edge to edge — their own padding is inside, so the
                 // dividers reach the screen edges the way a list's do. That is
                 // why this sits outside the padded stack above.
-                tourList
+                toursSection
 
                 // The bottom module floats over every screen from a higher
                 // window, so the last row has to reserve its height or it can
@@ -221,7 +242,7 @@ struct PlaceView: View {
             additionalImageURLs: galleryImageURLs,
             videoURLs: nil,
             height: nil,   // takes AtlasSpacing.heroAspectRatio
-            category: tours.first?.primaryCategory ?? .culturalHeritage
+            category: rankedTours.first?.primaryCategory ?? .culturalHeritage
         )
         .padding(.horizontal, AtlasSpacing.lg)
     }
@@ -355,37 +376,120 @@ struct PlaceView: View {
 
     // MARK: - The tours
 
-    private var tourList: some View {
+    /// "29 TOURS" / "1 TOUR" — the maker page's wording, uppercased at the
+    /// call site so VoiceOver still reads it as words.
+    private var tourCountText: String {
+        tours.count == 1 ? "1 tour" : "\(tours.count) tours"
+    }
+
+    private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            HStack {
-                Text("\(tours.count) TOURS AVAILABLE")
+            // 🔴 This row is the maker page's row — same wording, same colour,
+            // same two controls in the same order (owner, 2026-08-25: *"it
+            // should just look exactly like the example from profile page"*).
+            //
+            // ⚠️ That RETIRES two earlier decisions on this page, deliberately,
+            // so neither gets "restored" by someone reading the old note: the
+            // count was brass `accent` and read "N TOURS AVAILABLE" (kept as a
+            // divergence on 2026-08-18 because the count is why a place page
+            // exists), and the order was STATED as "NEWEST FIRST" rather than
+            // offered. The count is quiet `tertiaryText` now, and the order is
+            // a real control.
+            HStack(spacing: AtlasSpacing.md) {
+                Text(tourCountText)
                     .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.accent)
-                Spacer()
-                // Stated, not offered. There is one order today and no usage
-                // data to rank on, so a sort control would be a promise the
-                // app cannot keep — see Place.ranked.
-                Text("NEWEST FIRST")
-                    .font(AtlasTypography.caption)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.tertiaryText)
+                Spacer()
+                AtlasLayoutToggle(selection: $layout)
+                AtlasSortMenu(criterion: $sortCriterion, ascending: $sortAscending)
             }
             .padding(.horizontal, AtlasSpacing.lg)
 
-            LazyVStack(alignment: .leading, spacing: 0) {
-                ForEach(tours) { tour in
-                    Button {
-                        tourPresenter.present(tour)
-                    } label: {
-                        PlaceTourRow(tour: tour, maker: dataService.maker(for: tour))
-                    }
-                    .buttonStyle(.plain)
+            switch layout {
+            case .list: tourList
+            case .grid: tourGrid
+            }
+        }
+    }
 
-                    if tour.id != tours.last?.id {
-                        Divider().padding(.leading, AtlasSpacing.lg)
-                    }
+    private var tourList: some View {
+        LazyVStack(alignment: .leading, spacing: 0) {
+            ForEach(tours) { tour in
+                Button {
+                    tourPresenter.present(tour)
+                } label: {
+                    PlaceTourRow(tour: tour, maker: dataService.maker(for: tour))
+                }
+                .buttonStyle(.plain)
+
+                if tour.id != tours.last?.id {
+                    Divider().padding(.leading, AtlasSpacing.lg)
                 }
             }
         }
+    }
+
+    /// The same three-across square photo grid the maker page draws, from the
+    /// shared `AtlasTourGrid` geometry so the two can't disagree about tile
+    /// size or gutter. Unlike the rows it is inset by `lg`, because a grid has
+    /// no internal padding to run its edges out to.
+    private var tourGrid: some View {
+        let side = AtlasTourGrid.side(forContentWidth: gridContentWidth)
+        return LazyVGrid(columns: AtlasTourGrid.columns, spacing: AtlasTourGrid.spacing) {
+            ForEach(tours) { tour in
+                Button {
+                    tourPresenter.present(tour)
+                } label: {
+                    HeroImageView(
+                        imageName: tour.heroImageURL,
+                        height: side,
+                        cornerRadius: 0,
+                        category: tour.primaryCategory
+                    )
+                    .clipped()
+                    // WALK and price share this corner as one chip row, the
+                    // maker grid's arrangement — the tile carries no title, so
+                    // these two are the only thing distinguishing a paid walk
+                    // from a free single stop.
+                    .overlay(alignment: .topLeading) {
+                        HStack(spacing: AtlasSpacing.xs) {
+                            if tour.kind == .multiStop {
+                                walkPill
+                                    .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
+                            }
+                            TourPriceBadge(tour: tour)
+                        }
+                        .padding(AtlasSpacing.xs)
+                    }
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                // A tile is a photograph and nothing else, so VoiceOver has
+                // no text to read unless it is given one.
+                .accessibilityLabel(tour.title)
+            }
+        }
+        // ⚠️ Measured BEFORE the inset, or the reader hands back the padded
+        // width and every tile comes out 16pt too wide.
+        .background(
+            GeometryReader { geo in
+                Color.clear
+                    .onAppear { gridContentWidth = geo.size.width }
+                    .onChange(of: geo.size.width) { _, w in gridContentWidth = w }
+            }
+        )
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// The brass WALK pill, identical to the one `PlaceTourRow` carries.
+    private var walkPill: some View {
+        Text("WALK")
+            .font(.system(size: 11, weight: .regular, design: .monospaced))
+            .foregroundStyle(AtlasColors.background)
+            .padding(.horizontal, 7)
+            .padding(.vertical, 2)
+            .background(AtlasColors.accent, in: Capsule())
     }
 }
 
@@ -410,8 +514,25 @@ private struct PlaceTourRow: View {
             .frame(width: 56)
 
             VStack(alignment: .leading, spacing: 3) {
-                // Absence is the default state: only the exception is marked,
-                // so a free single-stop tour carries no badge at all.
+                Text(tour.title.uppercased())
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+
+                Text(subtitle)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+
+                // 🔴 Badges sit BELOW the metadata, not above the title — owner
+                // decision 2026-08-25. Above the title they took a line of their
+                // own, so a walk with a two-line title ran to four rows with the
+                // pill stranded at the top, furthest from the information it
+                // qualifies. A fourth row is fine; the pill being adrift was not.
+                //
+                // ⚠️ `PlaceView` and `TourListDetailView` carry this row
+                // byte-identically by design. Change one and change the other.
                 HStack(spacing: AtlasSpacing.xs) {
                     if tour.kind == .multiStop {
                         Text("WALK")
@@ -423,17 +544,6 @@ private struct PlaceTourRow: View {
                     }
                     TourPriceBadge(tour: tour)
                 }
-
-                Text(tour.title.uppercased())
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                Text(subtitle)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(1)
             }
 
             Spacer(minLength: 0)

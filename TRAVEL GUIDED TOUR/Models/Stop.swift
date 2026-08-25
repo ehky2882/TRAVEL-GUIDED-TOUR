@@ -4,6 +4,25 @@ import CoreLocation
 enum StopTriggerMode: String, Codable {
     case geofenced
     case manual
+
+    /// An unfamiliar trigger mode becomes `.manual` rather than throwing.
+    ///
+    /// 🔴 **`.manual` is load-bearing here, not an arbitrary default.** A manual
+    /// stop never auto-fires: `ProximityMonitor` registers regions only for
+    /// `.geofenced` stops, so a value this build cannot interpret can never
+    /// produce a geofence that triggers by itself. The failure is "you have to
+    /// press play", which is visible and harmless. Defaulting to `.geofenced`
+    /// would invent a region from a rule we did not understand.
+    ///
+    /// ⚠️ **Optional does not protect a field like this, and neither does
+    /// throwing.** Before tolerance, an unfamiliar value here failed the stop,
+    /// which failed its tour, which failed the whole catalogue array — and
+    /// `RemoteCatalogLoader`'s `try?` turned that into a silent "no new
+    /// content". See `ToursData` for the full story.
+    init(from decoder: Decoder) throws {
+        let raw = try decoder.singleValueContainer().decode(String.self)
+        self = StopTriggerMode(rawValue: raw) ?? .manual
+    }
 }
 
 struct Stop: Codable, Identifiable, Hashable {

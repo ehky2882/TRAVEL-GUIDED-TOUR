@@ -12,6 +12,77 @@ ships inside the iOS app.
 Design rationale, schema details, and the forward-designed maker-platform
 tables live in [`../docs/backend-design.md`](../docs/backend-design.md).
 
+## 🔴 Changing what the catalog emits — read this first
+
+**The live catalog RPC is a composition, not one function:**
+
+```
+get_catalog()       =  get_catalog_core()       ||  { places: catalog_places() }
+get_catalog_core()  =  get_catalog_core_base()  with link pins lifted out of `tours`
+```
+
+`places.sql` renamed the then-current `get_catalog` to `get_catalog_core` and
+made `get_catalog` a three-line wrapper. Measured live 2026-08-24:
+`get_catalog()` is **260 characters**. `split_link_pins.sql` then used the same
+move one level down — renaming `get_catalog_core` to **`get_catalog_core_base`**
+and wrapping it — so that link pins travel under their own top-level `linkPins`
+key instead of inside `tours`.
+
+🔴 **Why that split exists:** `TourKind` is a closed enum and `ToursData`
+decodes `tours` as one array, so a single `kind: "link"` inside `tours` fails
+the WHOLE catalog decode on every build shipped before `TourKind.link` — and
+`RemoteCatalogLoader`'s `try?` reads that as a failed fetch, so the phone keeps
+its last good copy and says nothing. An unknown top-level *key* costs those
+builds nothing. Do not undo it.
+
+⚠️ **The function that holds the tour keys is now `get_catalog_core_base`.**
+`add_video_role.sql`'s finder searches `proname in ('get_catalog_core',
+'get_catalog')` — a new key migration must add `'get_catalog_core_base'` to
+that list. It fails closed if you forget, raising rather than guessing.
+
+**So `create or replace function public.get_catalog()` is now destructive.** It
+overwrites the wrapper with a full body, severing the call to the core, and
+silently drops **every place** plus every key the core carries — `priceTier`,
+`isPrivate`, `country`, `videoURLs`, `videoRole`. No error is raised. The app
+just stops receiving them.
+
+⚠️ **Three files here still contain that statement and are no longer safe to
+re-run**, whatever their own header says. Each now carries a banner:
+`paid_tours.sql`, `add_country.sql`, `add_video_urls.sql`.
+
+⚠️ **And no file in this directory matches what is running.** The live
+definition is the accumulation of migrations that each rebuilt the function
+from whatever their author had; running them in any order does not reproduce
+it. `schema.sql` is the *base* — deliberately narrower, because it may only
+reference columns it creates.
+
+**The safe shape, and the one to copy:**
+
+1. Read the live definition with `pg_get_functiondef`.
+2. Find the function that actually holds the neighbouring key — today that is
+   `get_catalog_core_base`, not `get_catalog` and no longer `get_catalog_core`.
+   Search by content (`pg_get_functiondef(...) like '%theNeighbouringKey%'`)
+   rather than by name, so the next rename cannot strand you.
+3. Insert your key, `execute` it back.
+4. **RAISE if the anchor is not found**, so the transaction rolls back rather
+   than doing something arbitrary.
+5. Verify afterwards instead of trusting the `execute`.
+
+`add_video_role.sql` is the worked example for patching a key into the body.
+It also captures the table alias out of the existing expression rather than
+assuming `t`, so formatting drift cannot break it. `split_link_pins.sql` is the
+worked example for the other move — when you need to change the *shape* rather
+than add a key, rename the existing function aside and wrap it, so its body,
+volatility and security attribute all carry over untouched and nothing has to
+be parsed at all.
+
+**After any catalog migration, ask the live RPC what it now returns** — do not
+trust *"Success. No rows returned."* Run `python3 scripts/check-catalog-keys.py`;
+it fails on a missing key, on `places` going empty, and on a link pin turning up
+back inside `tours`. And run `bash backend/test-migrations.sh` against a real
+Postgres *before* handing any file to the owner. A one-line check that the keys you expect
+are still there would have caught this class years earlier.
+
 ## Status (2026-06-27)
 **Project is LIVE.** Supabase project "Dozent" (free tier) stood up via the
 dashboard; `schema.sql` → `accounts.sql` → `storage.sql` → `moderation.sql` all
