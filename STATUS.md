@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-25 01:30 UTC
+**Last verified:** 2026-08-25 03:20 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,65 +25,55 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-✅ **BUILD 116 IS THE ONE TO INSTALL** — `main` at `233eb912`, cut 21:58. It carries link pins
-(#584) and the YouTube/Short fixes (#585). Nothing app-side is stranded: everything merged after it
-was SQL or content.
+**Eight PRs merged between 01:22 and 03:10. Zero are open.** The link-pin feature went from four
+throwaway test pins to real content in under two hours.
 
-🟡 **ONE PR OPEN — [#588](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/588)** *Link pins at
-volume: batch mode, Instagram, and a maker per creator*, opened 01:22. **`scripts/make-link-pin.py`
-only** (+300/−45) — developer tooling, ships in no build, so this is the **auto-merge class**:
-squash on green, no owner gate. Validator ✅ and iOS build ✅; **unit tests still running** at 01:24.
-Left for its own session to land rather than merged from here.
+🟡 **ONE THING IS MERGED AND NOT IN ANY BUILD — [#592](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/592)**,
+the WALK pill moved below the metadata rather than above the title (`PlaceView.swift`,
+`TourListDetailView.swift`). Everything else that merged was content, scripts or SQL, which need no
+build. **Build 116 is still the newest** — a small UI change is the only thing waiting on the next one.
 
-- **What it adds:** a `--batch` file of `url | lat,lon | city | country` lines; Instagram support by
-  scraping the public embed page (its oEmbed needs a Meta token, the embed page does not);
-  and **each pinned creator becomes their own maker row**, id'd `uuid5(platform + lowercased
-  handle)` so re-running never mints a duplicate and `@NASA` / `@nasa` stay one person.
-- ⚠️ **The Instagram path is scraping and says so** — it keys on Instagram's internal JSON names and
-  raises rather than guessing, so a batch fails loudly instead of writing captionless pins. Expect it
-  to break without notice.
-- ⚠️ **"A maker per creator" collides with known debt:** Settings counts maker rows as Dozents, so
-  pinned creators who never signed up would start counting toward that number.
+🔴 **#593's cleanup DID NOT REACH THE LIVE CATALOG, and it is the exact harm it was written to
+prevent.** It removed the four `TEST -` pins **and their four creators** from `Tours.json`, saying:
+*"A maker with no tours still counts toward the Dozents number in Settings and appears in creator
+search with nothing behind it, so leaving them would have quietly overstated the platform."* The
+tours went; **the creators did not** — `seed_from_toursjson.py` is upsert-only and never deletes.
 
-🔴 **BUILD 115 AND EVERY OLDER BUILD CAN NO LONGER RECEIVE CATALOG UPDATES.** Four `kind: "link"`
-test pins went live at 22:51 (#586) and **`TourKind` is a closed `String, Codable` enum with no
-tolerance** — no `case link`, no custom `init(from:)`. One unknown raw value throws, `ToursData`
-decodes as a single `[Tour]`, and `RemoteCatalogLoader` swallows it with `try?`. So the refresh
-returns nil, falls back to the on-disk cache, and **nothing is logged anywhere**. Both remote
-sources are affected — the RPC *and* the gh-pages mirror each carry the four pins.
+- **Live right now: 49 makers served, 11 of them with zero tours.** Four are the test creators
+  (`TikTok @tiktok`, `YouTube @jawed`, `YouTube @Blippi`, `Instagram @nasainternships`). The other
+  seven are real empty signups (`New Creator` ×2, `EHKY-APPL`, `Kathy Ng`, `Shawn Tay`,
+  `🏆 kiubert 🏆`, `hgc9kfnf77`) — legitimately accounts, arguably a separate question.
+- **So Settings says 49 Dozents where 38 have any content.** Removing a maker from `Tours.json` is
+  not a delete; it needs a `delete from public.makers where id in (…)` in the SQL Editor.
+- ⚠️ **This is the long-standing upsert-only debt, now with a user-visible consequence and a
+  deliberate cleanup defeated by it.** Worth fixing properly before launch rather than one delete
+  at a time.
 
-- **This is the failure #584's own commit predicted:** *"One link pin published before a build that
-  understands it would silently stop every older build receiving catalog updates. Merge, build,
-  install, then publish."* Build 116 landed at 21:58 and the pins at 22:51, so the order held **for
-  116** — but every phone still on 115 or earlier is now frozen at its last good catalog.
-- **Anyone on TestFlight needs build 116.** Nothing breaks visibly; new content simply stops arriving.
-- ⚠️ **The general form is worse than this instance and is flagged in ROADMAP:** a strict enum on a
-  remotely loaded catalogue breaks every shipped version the first time a new value appears.
-  `triggerMode` and `primaryCategory` have the same shape. Worth fixing before the App Store.
+✅ **Build 116 carries link pins.** The four live pins are real AMNH creator posts — @naturalhistorymuseum,
+@CruisingAddicts, @TheMeganDaily, @poche_space — attached to the AMNH place. Test pins are gone.
 
-**To check on 116:** the four `TEST -` pins on the map — TikTok, YouTube, a Short, an Instagram
-Reel. The Reel is **expected not to play**; it renders the post and offers *Watch again on
-Instagram*. It is in there deliberately so the limit is visible rather than taken on trust.
-Also, from #583: play two different tours and confirm **Continue listening** shows the right
-photograph for the title.
+⚠️ **Build 115 and older still cannot read the catalogue at all** — see § 1c.
 
-**#583** (merged 17:21) is *a reused hero view kept the previous tour's photograph*. **The owner hit
-this on 114**: the "Continue listening" row read **VIA 57 WEST while showing the Colosseum**.
+**To check on 116:** the four creator pins on the AMNH place page, each with its creator's real
+profile picture (Instagram keeps the platform mark deliberately — its avatar is only 100×100 and
+goes soft at the 288px the maker page needs). The Instagram pin is **expected not to play**; it
+renders the post and offers *Watch again on Instagram*.
 
-- **The cause is a SwiftUI reuse trap worth remembering.** `HeroImageView` guarded its fetch with
-  *"already cached, nothing to do"* — but `.task(id: imageName)` fires when the URL **changes under
-  a view SwiftUI has reused**, and at that moment the state still holds the *previous* URL's
-  photograph. `State(initialValue:)` seeds only the first use of a view identity and is discarded on
-  reuse. So the early return left the old picture under the new title, permanently, with nothing
-  logged anywhere.
-- **⚠️ It only affects a view that SWAPS TOURS** — Continue listening, the map placecard, a resume
-  banner. Anything inside a `ForEach` keyed by tour was always correct, which is exactly why the
-  rails beside it looked fine and made the bug read as a data fault.
+## 1c. 🔴 Every build before 116 is frozen
 
-✅ **#582 closes the loop on this session's opening problem** — *`create or replace get_catalog()`
-destroys the place layer, and four files still do it*. That is the regression that took out places,
-prices and private accounts on 2026-08-19; the files that could repeat it are now identified.
-Contract check still passes: **1,513 tours, 25 places, 41 maker rows**.
+Four `kind: "link"` tours went live 2026-08-24 22:51. **`TourKind` is a closed `String, Codable`
+enum with no tolerance** — no `case link` before build 116, no custom `init(from:)`. One unknown raw
+value throws, `ToursData` decodes as a single `[Tour]`, and `RemoteCatalogLoader` swallows it with
+`try?`. The refresh returns nil, falls back to the on-disk cache, and **nothing is logged**. Both
+the RPC and the gh-pages mirror carry the pins, so there is no good source to fall back to.
+
+- **Predicted by #584's own commit:** *"One link pin published before a build that understands it
+  would silently stop every older build receiving catalog updates. Merge, build, install, then
+  publish."* The order held for 116 (built 21:58, pins published 22:51) — but any phone on an older
+  build is stuck at its last good catalogue, silently.
+- ⚠️ **The general form is worse and is flagged in ROADMAP:** a strict enum on a remotely loaded
+  catalogue breaks every shipped version the first time a new value appears. `triggerMode` and
+  `primaryCategory` have the same shape. Worth fixing before the App Store.
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
@@ -158,7 +148,7 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **116** | **`main`** | #584 link pins + #585 YouTube/Short fixes (`233eb912`) | ✅ **install this** |
+| **116** | **`main`** | #584 link pins + #585 YouTube/Short fixes (`233eb912`) | ✅ **install this** — 1 UI change merged since |
 | 115 | **`main`** | #583 the stale hero fix (`8f5748b7`) | 🔴 **frozen** — cannot decode the live catalog |
 | 114 | **`main`** | Fullscreen video, Swedish architects, Akalla hero, `get_catalog` hardening (`8d2ad947`) | ✅ superseded |
 | 113 | `chrome-row-modifier` | #576 chrome row extracted — head merged `main` at 13:14 (`e90d9995`) | ✅ superseded |
@@ -191,7 +181,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/milan-tours-upload` · `claude/milan-docs-260822` | Merged (#560, #561) |
 | `claude/coordinate-guard` | Merged (#562 at 17:20) |
 | link-pin branches (#584, #585, #586, #587) | All merged 20:59–22:51; auto-delete should remove them |
-| `claude/link-pin-batch-workflow` | 🟡 **Open as #588** — scripts-only, auto-merge class, awaiting unit tests |
+| `claude/link-pin-batch-workflow` | Merged (#588 at ~01:40) |
+| link-pin follow-ups (#589–#595) | All merged 01:40–03:10 |
 | `claude/ellipsis-button-consistency-vdorpi` | Merged twice from one branch (#553, #555). ⚠️ The second stacked on already-merged history, which CLAUDE.md says to avoid — it worked, but no PR existed while build 95 was installable |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
@@ -201,8 +192,9 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**Catalog 1,516 tours / 33 makers** — **4 `TEST -` link pins added 2026-08-24 (#586), meant to be
-removed after device review.** Before that: **1,513 tours / 33 makers** — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
+**Catalog 1,516 tours live / 49 maker rows served.** The four `TEST -` pins are gone (#593),
+replaced by **4 real AMNH creator link pins** (#591). ⚠️ **11 served makers have zero tours** — four
+of them the test creators #593 tried to remove; see § 1. — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
 and is live in the RPC, along with VIA 57 West. Milan (48 tours) landed 2026-08-22. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
 long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
