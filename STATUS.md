@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-25 13:10 UTC
+**Last verified:** 2026-08-25 14:25 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -96,9 +96,13 @@ broke until a new *value* appeared inside a field builds already parsed.
 builds shipped after it; build 66 is strict and always will be. The separate section is the only
 thing that rescues an already-shipped build. Keep both — different jobs.
 
-⚠️ **A BUILD IS OWED: 116 and 117 no longer show the link pins**, because neither knows to look in
-`linkPins`. That is the accepted one-build lag, and it is still outstanding — **build 117 is still
-the newest.**
+🔨 **BUILD 118 IS RUNNING, FROM `main` AT `d80465b`** — the tip itself, dispatched 14:23. It is the
+first build that reads `linkPins`, so the four creator pins reappear after being absent from 116 and
+117. That closes the accepted one-build lag.
+
+⚠️ **118 changed HOW THE CATALOGUE IS READ, so ordinary browsing is the real test** — home map, a few
+cities, a walk, the library. A decode regression would not look like a decode regression; it would
+look like content quietly missing.
 
 ⚠️ **Build 66's release decision is now the owner's, unblocked.** It can be released safely, or
 replaced with something current. It is still eight days and three cities behind in what it ships in
@@ -181,8 +185,10 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **116** | **`main`** | #584 link pins + #585 YouTube/Short fixes (`233eb912`) | ✅ **install this** — 1 UI change merged since |
-| 115 | **`main`** | #583 the stale hero fix (`8f5748b7`) | 🔴 **frozen** — cannot decode the live catalog |
+| **118** | **`main`** | #597 link pins split out + #598 decode tolerance (`d80465b`) | 🔨 building — **first build that reads `linkPins`** |
+| 117 | **`main`** | #592 WALK pill, on the real AMNH pins (`2a47e28`) | ✅ superseded — shows no link pins |
+| 116 | **`main`** | #584 link pins + #585 YouTube/Short fixes (`233eb912`) | ✅ superseded — shows no link pins |
+| 115 | **`main`** | #583 the stale hero fix (`8f5748b7`) | ✅ superseded — **un-frozen by #597** |
 | 114 | **`main`** | Fullscreen video, Swedish architects, Akalla hero, `get_catalog` hardening (`8d2ad947`) | ✅ superseded |
 | 113 | `chrome-row-modifier` | #576 chrome row extracted — head merged `main` at 13:14 (`e90d9995`) | ✅ superseded |
 | 112 | `color-mismatch-elements-pj2ptt` | #573 chrome row made opaque | ✅ merged |
