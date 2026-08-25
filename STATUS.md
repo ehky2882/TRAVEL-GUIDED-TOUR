@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-24 17:46 UTC
+**Last verified:** 2026-08-24 23:15 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,13 +25,31 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-✅ **BUILD 115 IS UP, FROM `main` AT `8f5748b7`** — verified to be **#583's squash itself**, so
-everything merged is now carried by an installable build and **zero PRs are open**. Nothing is
-stranded. It succeeded at 17:35, notes attached.
+✅ **BUILD 116 IS THE ONE TO INSTALL** — `main` at `233eb912`, cut 21:58. It carries link pins
+(#584) and the YouTube/Short fixes (#585). **Zero PRs are open** and nothing app-side is stranded:
+everything merged after it was SQL or content.
 
-**To check on device:** play one tour, back out, play a *different* one, then look at **Continue
-listening** — the photograph must match the title. Same for the map placecard after tapping two
-different pins.
+🔴 **BUILD 115 AND EVERY OLDER BUILD CAN NO LONGER RECEIVE CATALOG UPDATES.** Four `kind: "link"`
+test pins went live at 22:51 (#586) and **`TourKind` is a closed `String, Codable` enum with no
+tolerance** — no `case link`, no custom `init(from:)`. One unknown raw value throws, `ToursData`
+decodes as a single `[Tour]`, and `RemoteCatalogLoader` swallows it with `try?`. So the refresh
+returns nil, falls back to the on-disk cache, and **nothing is logged anywhere**. Both remote
+sources are affected — the RPC *and* the gh-pages mirror each carry the four pins.
+
+- **This is the failure #584's own commit predicted:** *"One link pin published before a build that
+  understands it would silently stop every older build receiving catalog updates. Merge, build,
+  install, then publish."* Build 116 landed at 21:58 and the pins at 22:51, so the order held **for
+  116** — but every phone still on 115 or earlier is now frozen at its last good catalog.
+- **Anyone on TestFlight needs build 116.** Nothing breaks visibly; new content simply stops arriving.
+- ⚠️ **The general form is worse than this instance and is flagged in ROADMAP:** a strict enum on a
+  remotely loaded catalogue breaks every shipped version the first time a new value appears.
+  `triggerMode` and `primaryCategory` have the same shape. Worth fixing before the App Store.
+
+**To check on 116:** the four `TEST -` pins on the map — TikTok, YouTube, a Short, an Instagram
+Reel. The Reel is **expected not to play**; it renders the post and offers *Watch again on
+Instagram*. It is in there deliberately so the limit is visible rather than taken on trust.
+Also, from #583: play two different tours and confirm **Continue listening** shows the right
+photograph for the title.
 
 **#583** (merged 17:21) is *a reused hero view kept the previous tour's photograph*. **The owner hit
 this on 114**: the "Continue listening" row read **VIA 57 WEST while showing the Colosseum**.
@@ -124,7 +142,8 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **115** | **`main`** | #583 the stale hero fix, on top of everything in 114 (`8f5748b7`) | ✅ **install this** |
+| **116** | **`main`** | #584 link pins + #585 YouTube/Short fixes (`233eb912`) | ✅ **install this** |
+| 115 | **`main`** | #583 the stale hero fix (`8f5748b7`) | 🔴 **frozen** — cannot decode the live catalog |
 | 114 | **`main`** | Fullscreen video, Swedish architects, Akalla hero, `get_catalog` hardening (`8d2ad947`) | ✅ superseded |
 | 113 | `chrome-row-modifier` | #576 chrome row extracted — head merged `main` at 13:14 (`e90d9995`) | ✅ superseded |
 | 112 | `color-mismatch-elements-pj2ptt` | #573 chrome row made opaque | ✅ merged |
@@ -155,6 +174,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/launch-performance-animations-df4d7p` | Merged (#559 at 16:43) — built as 108/109 |
 | `claude/milan-tours-upload` · `claude/milan-docs-260822` | Merged (#560, #561) |
 | `claude/coordinate-guard` | Merged (#562 at 17:20) |
+| link-pin branches (#584, #585, #586, #587) | All merged 20:59–22:51; auto-delete should remove them |
 | `claude/ellipsis-button-consistency-vdorpi` | Merged twice from one branch (#553, #555). ⚠️ The second stacked on already-merged history, which CLAUDE.md says to avoid — it worked, but no PR existed while build 95 was installable |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
@@ -164,7 +184,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**Catalog 1,513 tours / 33 makers** — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
+**Catalog 1,516 tours / 33 makers** — **4 `TEST -` link pins added 2026-08-24 (#586), meant to be
+removed after device review.** Before that: **1,513 tours / 33 makers** — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
 and is live in the RPC, along with VIA 57 West. Milan (48 tours) landed 2026-08-22. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
 long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
