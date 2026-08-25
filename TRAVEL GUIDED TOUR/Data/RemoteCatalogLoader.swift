@@ -1,4 +1,5 @@
 import Foundation
+import os
 
 /// Abstracts the network fetch so the catalog loader can be unit-tested
 /// without hitting the network. Production uses `URLSessionCatalogFetcher`;
@@ -229,6 +230,32 @@ final class RemoteCatalogLoader {
         return nil
     }
 
+    /// The one place a catalog is turned from bytes into a `ToursData`.
+    ///
+    /// ⚠️ **This exists so a dropped element cannot pass unnoticed.** The
+    /// element-wise decode in `ToursData` means one unreadable tour costs that
+    /// tour instead of the whole catalog — a good trade, and exactly the kind
+    /// of thing that then goes unobserved for months. The three decode sites
+    /// (network, cache, bundle) all come through here, so any loss is logged
+    /// once, with its source named.
+    ///
+    /// It stays `try?` at the boundary: a decode that fails *outright* is still
+    /// how this loader says "this source is unusable, try the next one".
+    private func decodeCatalog(_ data: Data, from source: String) -> ToursData? {
+        guard let decoded = try? JSONDecoder().decode(ToursData.self, from: data) else {
+            return nil
+        }
+        if !decoded.losses.isEmpty {
+            // `.public` throughout: none of this is user data, and a redacted
+            // "<private>" in Console is exactly as useless as not logging it.
+            Self.log.error("Catalog from \(source, privacy: .public) dropped \(decoded.losses.summary, privacy: .public) this build could not read; kept \(decoded.tours.count, privacy: .public) tours and \(decoded.makers.count, privacy: .public) makers.")
+        }
+        return decoded
+    }
+
+    private static let log = Logger(subsystem: Bundle.main.bundleIdentifier ?? "com.ehky.atlas",
+                                    category: "catalog")
+
     /// Fetches from a single source, retrying transient failures with
     /// exponential backoff. Returns the decoded catalog (and caches it) on
     /// success, or `nil` if this source is exhausted/unusable — the caller then
@@ -239,7 +266,7 @@ final class RemoteCatalogLoader {
             attempt += 1
             do {
                 let data = try await source.fetcher.fetchData(from: source.url)
-                guard let decoded = try? JSONDecoder().decode(ToursData.self, from: data) else {
+                guard let decoded = decodeCatalog(data, from: source.url.host() ?? "network") else {
                     // A 2xx with undecodable bytes is a bad response, not a
                     // transient glitch — a retry returns the same bytes. Give up
                     // on this source and fall through to the next.
@@ -293,13 +320,13 @@ final class RemoteCatalogLoader {
             return nil
         }
         guard let data = try? Data(contentsOf: cacheURL) else { return nil }
-        return try? JSONDecoder().decode(ToursData.self, from: data)
+        return decodeCatalog(data, from: "the on-disk cache")
     }
 
     private func readBundle() -> ToursData? {
         guard let url = bundle.url(forResource: "Tours", withExtension: "json"),
               let data = try? Data(contentsOf: url) else { return nil }
-        return try? JSONDecoder().decode(ToursData.self, from: data)
+        return decodeCatalog(data, from: "the bundled seed")
     }
 
     private func cachedVersionMatches() -> Bool {

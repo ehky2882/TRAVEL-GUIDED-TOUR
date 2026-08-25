@@ -12,6 +12,25 @@ enum TourCategory: String, Codable, CaseIterable, Identifiable {
     case culturalHeritage
     case sacredSites
 
+    /// An unfamiliar category becomes `.culturalHeritage` rather than throwing.
+    ///
+    /// The tour itself is fine — it has a title, a hero, narration and a
+    /// coordinate, all of which this build understands perfectly. The only
+    /// thing in doubt is which shelf it belongs on, and losing the tour over
+    /// that would be absurd. `.culturalHeritage` is the neutral choice: it is
+    /// the widest existing bucket (its icon is a globe), so it claims nothing
+    /// about the tour that the tour has not said. `.hiddenGems` would.
+    ///
+    /// ⚠️ The cost is real but small and visible: the tour appears under the
+    /// wrong heading and answers the wrong filter chip until the app is
+    /// updated. Browse has been keyed on `tags` since Tag Phase 2 anyway
+    /// (`Models/Tag.swift`); `primaryCategory` mostly drives an icon and a
+    /// shelf title.
+    init(from decoder: Decoder) throws {
+        let raw = try decoder.singleValueContainer().decode(String.self)
+        self = TourCategory(rawValue: raw) ?? .culturalHeritage
+    }
+
     var id: String { rawValue }
 
     var displayName: String {

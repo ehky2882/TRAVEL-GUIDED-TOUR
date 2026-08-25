@@ -39,6 +39,23 @@ import Foundation
 /// `publish-catalog.yml` copies byte-for-byte to the gh-pages mirror),
 /// `backend/seed_from_toursjson.py`, and `get_catalog`
 /// (`backend/split_link_pins.sql`).
+///
+/// # Why every array here decodes element by element
+///
+/// The split above fixes one known value. It cannot fix the next one, and it
+/// does nothing for a field nobody thought to guard. So `init(from:)` below
+/// decodes `makers`, `tours`, `linkPins` and `places` **one element at a
+/// time**, keeping what decodes and dropping what does not: one unreadable
+/// element costs that element, never the catalog.
+///
+/// ⚠️ **The drops are counted, not swallowed.** See `CatalogDecodeLosses` at
+/// the bottom of this file; `RemoteCatalogLoader` logs a non-zero total with
+/// its source named. A drop nobody can see is how a catalog quietly loses
+/// content for months.
+///
+/// ⚠️ Tolerance is for ELEMENTS, not for the document. A payload with no
+/// `tours` key at all still throws, because that is how the loader says "this
+/// source is unusable, try the next one".
 struct ToursData: Codable {
     let makers: [Maker]
 
@@ -53,32 +70,66 @@ struct ToursData: Codable {
     /// still decode rather than dropping the whole catalog on the floor.
     let places: [Place]?
 
+    /// What this decode threw away. Not part of the wire format — it describes
+    /// the decode, not the catalog.
+    let losses: CatalogDecodeLosses
+
     /// Written out rather than synthesized so `places` can default to nil for
     /// callers that predate the place layer. A `let` carrying an initial value
     /// would be skipped by the synthesized decoder entirely — the property
     /// would silently never decode — so the default belongs here, not on the
     /// declaration.
-    init(makers: [Maker], tours: [Tour], places: [Place]? = nil) {
+    init(makers: [Maker],
+         tours: [Tour],
+         places: [Place]? = nil,
+         losses: CatalogDecodeLosses = CatalogDecodeLosses()) {
         self.makers = makers
         self.tours = tours
         self.places = places
+        self.losses = losses
     }
 
     private enum CodingKeys: String, CodingKey {
         case makers, tours, places, linkPins
     }
 
+    /// # Layer 2: one unreadable element costs that element, not the catalog
+    ///
+    /// 🔴 This is the real protection, and it is deliberately blunt: every
+    /// array here decodes **element by element**, keeping what decodes and
+    /// dropping what does not. It covers every field nobody thought to guard —
+    /// including fields added years from now — where the per-field defaults on
+    /// `StopTriggerMode`, `TourVideoRole` and `TourCategory` only cover the four
+    /// closed enums we can currently name.
+    ///
+    /// It is also what makes `TourKind`'s deliberate strictness affordable: an
+    /// unfamiliar `kind` drops that one tour, which is the outcome the owner
+    /// asked for, rather than rendering it as an ordinary tour with a play
+    /// button and no audio behind it.
+    ///
+    /// ⚠️ The drops are counted, never swallowed. See `CatalogDecodeLosses`.
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        makers = try container.decode([Maker].self, forKey: .makers)
-        places = try container.decodeIfPresent([Place].self, forKey: .places)
+        var losses = CatalogDecodeLosses()
 
-        // `linkPins` is absent from every catalog published before this change,
-        // and stays absent whenever there are no pins — hence
-        // `decodeIfPresent`, exactly as `places` is handled.
-        let listed = try container.decode([Tour].self, forKey: .tours)
-        let pins = try container.decodeIfPresent([Tour].self, forKey: .linkPins) ?? []
-        tours = listed + pins
+        let decodedMakers = try container.decodeTolerantArray(of: Maker.self, forKey: .makers)
+        makers = decodedMakers.elements
+        losses.makers = decodedMakers.dropped
+
+        let decodedPlaces = try container.decodeTolerantArrayIfPresent(of: Place.self, forKey: .places)
+        places = decodedPlaces.elements
+        losses.places = decodedPlaces.dropped
+
+        // `linkPins` is absent from every catalog published before the split,
+        // and stays absent whenever there are no pins — hence the
+        // if-present form, exactly as `places` is handled.
+        let listed = try container.decodeTolerantArray(of: Tour.self, forKey: .tours)
+        let pins = try container.decodeTolerantArrayIfPresent(of: Tour.self, forKey: .linkPins)
+        losses.tours = listed.dropped
+        losses.linkPins = pins.dropped
+
+        tours = listed.elements + (pins.elements ?? [])
+        self.losses = losses
     }
 
     /// Splits the pins back out, so a re-encoded catalog carries the same wire
@@ -96,5 +147,71 @@ struct ToursData: Codable {
         if !pins.isEmpty {
             try container.encode(pins, forKey: .linkPins)
         }
+    }
+}
+
+// MARK: - Tolerant decoding
+
+/// What a tolerant decode threw away, so it can be reported rather than
+/// disappearing.
+///
+/// ⚠️ **A dropped element must stay countable.** The whole point of decoding
+/// element by element is that one bad tour costs that tour instead of the
+/// catalogue — but a drop that nobody can see is how a catalogue quietly loses
+/// content for months. `RemoteCatalogLoader` logs a non-zero total, and this
+/// type is what a future session greps for.
+struct CatalogDecodeLosses: Equatable {
+    var makers = 0
+    var tours = 0
+    var linkPins = 0
+    var places = 0
+
+    var total: Int { makers + tours + linkPins + places }
+    var isEmpty: Bool { total == 0 }
+
+    var summary: String {
+        "\(makers) maker(s), \(tours) tour(s), \(linkPins) link pin(s), \(places) place(s)"
+    }
+}
+
+/// Decodes one element without ever throwing, so a bad element cannot fail the
+/// array around it.
+///
+/// 🔴 The obvious version of this — loop an `UnkeyedDecodingContainer` and
+/// `try?` each `decode` — is a trap: whether `currentIndex` advances past an
+/// element that threw is not guaranteed, so it can spin forever. Wrapping the
+/// element in a type whose `init(from:)` *cannot* throw sidesteps that
+/// entirely: the array decode always succeeds, and each element is attempted
+/// independently.
+private struct Tolerated<Wrapped: Decodable>: Decodable {
+    let value: Wrapped?
+
+    init(from decoder: Decoder) throws {
+        value = try? Wrapped(from: decoder)
+    }
+}
+
+private extension KeyedDecodingContainer {
+    /// Decodes an array element by element, keeping what decodes and reporting
+    /// how much was dropped.
+    func decodeTolerantArray<Element: Decodable>(
+        of _: Element.Type,
+        forKey key: Key
+    ) throws -> (elements: [Element], dropped: Int) {
+        let wrapped = try decode([Tolerated<Element>].self, forKey: key)
+        let elements = wrapped.compactMap(\.value)
+        return (elements, wrapped.count - elements.count)
+    }
+
+    /// The same, for a key that may legitimately be absent.
+    func decodeTolerantArrayIfPresent<Element: Decodable>(
+        of _: Element.Type,
+        forKey key: Key
+    ) throws -> (elements: [Element]?, dropped: Int) {
+        guard let wrapped = try decodeIfPresent([Tolerated<Element>].self, forKey: key) else {
+            return (nil, 0)
+        }
+        let elements = wrapped.compactMap(\.value)
+        return (elements, wrapped.count - elements.count)
     }
 }
