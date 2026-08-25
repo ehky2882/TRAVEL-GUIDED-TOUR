@@ -126,7 +126,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-25)
 
-### Link pins move out of `tours`, and every frozen build starts receiving content again ([PR TBD](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/compare/main...claude/catalog-forward-compat), session 110 — code + content + backend)
+### Link pins move out of `tours`, and every frozen build starts receiving content again ([PR #597](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/597), session 110 — code + content + backend)
 
 **Four `kind: "link"` pins went into the live catalogue on 2026-08-24 at 22:51, and every build before 116 has been frozen since — silently.** Not merged; app code, so it waits for owner OK + a simulator look.
 
