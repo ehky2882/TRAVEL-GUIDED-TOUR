@@ -58,6 +58,35 @@ def text_array(values):
     return f"ARRAY[{inner}]::text[]"
 
 
+def merge_link_pins(data):
+    """Fold the catalog's `linkPins` array back into `tours`.
+
+    🔴 The split is a WIRE-FORMAT concern, not a storage one. Link pins travel
+    under their own top-level key so that a build predating `TourKind.link`
+    skips them as an unknown key instead of throwing on an unknown `kind` and
+    losing the whole catalog decode — see
+    `TRAVEL GUIDED TOUR/Data/ToursData.swift`.
+
+    In Postgres they are ordinary rows in `public.tours` with `kind = 'link'`,
+    exactly as before; it is `get_catalog` that splits them back out on the way
+    out (`backend/split_link_pins.sql`). So everything below this line — the
+    validator, the place membership check, the emitted SQL — keeps seeing one
+    list of tours and needs no change at all.
+
+    ⚠️ This must run BEFORE `validate_places`: the AMNH place legitimately
+    names link pins among its members, and they would otherwise read as
+    references to unknown tours and abort the seed.
+
+    Tolerates a catalog that predates the split (no `linkPins` key), and one
+    that has pins in both places (idempotent — merges by id, keeping `tours`).
+    """
+    pins = data.pop("linkPins", None) or []
+    if not pins:
+        return
+    seen = {t["id"] for t in data["tours"]}
+    data["tours"].extend(p for p in pins if p["id"] not in seen)
+
+
 def validate_places(data):
     """Places are optional; when present their membership must resolve.
 
@@ -250,6 +279,7 @@ def main():
 
     with open(args.input) as f:
         data = json.load(f)
+    merge_link_pins(data)
     validate(data)
 
     if args.output:

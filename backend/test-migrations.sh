@@ -52,13 +52,20 @@ PSQL="$PGBIN/psql -h $PGDIR -U postgres -q -v ON_ERROR_STOP=1"
 # what the live database actually looks like and what every migration must
 # leave intact. Deliberately WITHOUT the keys the migrations add.
 cat > "$PGDIR/base.sql" <<'SQL'
+-- Supabase ships these two roles; a migration that grants execute on a catalog
+-- function needs them to exist or it fails for a reason that has nothing to do
+-- with the migration.
+create role anon;
+create role authenticated;
 create table public.tours (
     id uuid primary key, title text, video_urls text[], kind text,
     price_tier int, is_private boolean
 );
 create or replace function public.get_catalog_core()
 returns jsonb language sql stable as $fn$
-  select jsonb_build_object('tours', (
+  select jsonb_build_object(
+    'makers', jsonb_build_array(jsonb_build_object('id', 'maker-1', 'isPrivate', false)),
+    'tours', (
     select coalesce(jsonb_agg(jsonb_build_object(
       'id',                   t.id,
       'title',                t.title,
@@ -74,13 +81,15 @@ returns jsonb language sql stable as $fn$
     jsonb_build_array(jsonb_build_object('id', 'place-1')));
 $fn$;
 insert into public.tours values
-  ('11111111-1111-1111-1111-111111111111', 'Test tour', null, 'single', 299, false);
+  ('11111111-1111-1111-1111-111111111111', 'Test tour', null, 'single', 299, false),
+  -- A link pin, so split_link_pins.sql has something to lift out of `tours`.
+  ('22222222-2222-2222-2222-222222222222', 'Test pin', null, 'link', null, false);
 SQL
 [ -n "$AS" ] && chown postgres:postgres "$PGDIR"/*.sql
 run "$PSQL -f $PGDIR/base.sql" >/dev/null
 
 # Order matters: add_link_pins anchors on the key add_video_role inserts.
-MIGRATIONS=(add_video_role.sql add_link_pins.sql)
+MIGRATIONS=(add_video_role.sql add_link_pins.sql split_link_pins.sql)
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 fail=0
@@ -133,6 +142,17 @@ missing=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \"
 places=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
   \"select jsonb_array_length(coalesce(get_catalog()->'places','[]'::jsonb));\"" 2>/dev/null | tr -d '[:space:]')
 [ "$places" = "1" ] || { echo "  x places layer LOST (got '${places:-nothing}') - the composition was severed"; fail=1; }
+
+# 🔴 The split itself. A link pin left inside `tours` is the original bug: one
+# unknown `kind` fails the WHOLE catalog decode on every build predating
+# TourKind.link, silently. Assert both halves - that the pin left `tours`, and
+# that it actually arrived in `linkPins` rather than being dropped on the floor.
+split=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"select jsonb_array_length(get_catalog()->'tours') || '/' ||
+            jsonb_array_length(coalesce(get_catalog()->'linkPins','[]'::jsonb)) || '/' ||
+            (select count(*) from jsonb_array_elements(get_catalog()->'tours') t
+              where t->>'kind' = 'link');\"" 2>/dev/null | tr -d '[:space:]')
+[ "$split" = "1/1/0" ] || { echo "  x link pins NOT split correctly (tours/linkPins/strays = '${split:-nothing}', want 1/1/0)"; fail=1; }
 
 if [ "$fail" = "0" ]; then
     echo "MIGRATIONS OK - ${#MIGRATIONS[@]} applied, idempotent, all catalog keys and places intact"

@@ -176,17 +176,23 @@ create policy stops_public_read on public.stops
 -- ⚠️ WHAT IS ACTUALLY LIVE (measured 2026-08-24, and NOT reproducible by
 -- running the files in this repo in any order):
 --
---     get_catalog()        3 lines, 260 chars, the wrapper above
---     get_catalog_core()   makers  — id, displayName, avatarURL, avatarEmoji,
+--     get_catalog()             3 lines, 260 chars, the wrapper above
+--     get_catalog_core()        since `split_link_pins.sql`, a thin wrapper that
+--                               lifts `kind: "link"` tours out of `tours` into a
+--                               top-level `linkPins` key — see that file for why
+--                               (an unknown key is free to an old build, an
+--                               unknown VALUE in `kind` fails the whole decode)
+--     get_catalog_core_base()   makers  — id, displayName, avatarURL, avatarEmoji,
 --                                    avatarInitials, avatarColor, bio,
 --                                    websiteURL, link2URL, link3URL, userId,
---                                    isPrivate
---                          tours   — the keys below, PLUS priceTier and
---                                    videoRole
---                          stops   — as below
---     catalog_places()     places with >= 2 published tours
+--                                         isPrivate
+--                               tours   — the keys below, PLUS priceTier,
+--                                         videoRole, sourceURL, sourceAuthor
+--                               stops   — as below
+--     catalog_places()          places with >= 2 published tours
 --
--- 🔴 TO ADD A KEY: PATCH `get_catalog_core`. NEVER `create or replace
+-- 🔴 TO ADD A KEY: PATCH THE FUNCTION THAT HOLDS THE TOUR KEYS — today that is
+-- `get_catalog_core_base`. NEVER `create or replace
 -- get_catalog`. Replacing the wrapper severs the call to the core and
 -- silently drops places and every key the core has — no error, the app just
 -- stops receiving them. Three files in this directory still do that and now
@@ -195,7 +201,14 @@ create policy stops_public_read on public.stops
 --
 -- The safe shape — read the live definition, insert one key, put it back, and
 -- RAISE if the anchor is missing so the transaction rolls back — is worked
--- through in `backend/add_video_role.sql`.
+-- through in `backend/add_video_role.sql`. ⚠️ Its finder searches
+-- `proname in ('get_catalog_core', 'get_catalog')`; a new migration must add
+-- `'get_catalog_core_base'`, or better, search by CONTENT rather than by name.
+--
+-- When you need to change the catalog's SHAPE rather than add a key, the move
+-- is the one `places.sql` invented and `split_link_pins.sql` repeated: rename
+-- the existing function aside, once, and wrap it. Nothing is parsed and nothing
+-- can be dropped, because the old body is still there under a new name.
 -- ============================================================================
 
 create or replace function public.get_catalog()

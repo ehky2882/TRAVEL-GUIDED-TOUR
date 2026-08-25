@@ -62,7 +62,22 @@ jobs:
               sys.exit("Validation failed: 'tours' is missing or empty")
           if not isinstance(makers, list) or not makers:
               sys.exit("Validation failed: 'makers' is missing or empty")
-          print(f"OK: {len(tours)} tours / {len(makers)} makers")
+
+          # 🔴 The mirror is the FALLBACK the app reads when Supabase is
+          # unreachable, so it is exactly the copy an old build ends up on in
+          # the worst moment. A `kind: "link"` tour inside `tours` fails the
+          # whole catalog decode on every build predating `TourKind.link` — one
+          # bad element, `try?` swallows it, the phone silently stops receiving
+          # content. That is not a shape the mirror may ever carry, so refuse to
+          # publish it rather than discovering it on a phone.
+          stray = [t.get("id") for t in tours if t.get("kind") == "link"]
+          if stray:
+              sys.exit(
+                  f"Validation failed: {len(stray)} link pin(s) are inside 'tours' "
+                  f"(first: {stray[0]}). They belong in the top-level 'linkPins' array."
+              )
+          pins = data.get("linkPins") or []
+          print(f"OK: {len(tours)} tours / {len(makers)} makers / {len(pins)} link pins")
           PY
 
       # gh-pages — the publish target. Full branch so the commit preserves

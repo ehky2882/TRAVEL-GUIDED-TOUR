@@ -4,7 +4,8 @@
 This exists because a single migration could silently strip features out of
 the catalog and nothing anywhere would notice. The live RPC is a composition —
 
-    get_catalog() = get_catalog_core() || { places: catalog_places() }
+    get_catalog()      = get_catalog_core()      || { places: catalog_places() }
+    get_catalog_core() = get_catalog_core_base() with link pins lifted out of `tours`
 
 — so a `create or replace function public.get_catalog()` severs the call to
 the core and drops places plus every key the core carries. No error is raised.
@@ -27,7 +28,7 @@ from pathlib import Path
 
 # Every key the app decodes. Adding one here without adding it to the RPC
 # turns this check red, which is the point: the contract is written down.
-REQUIRED_TOP = {"makers", "tours", "places"}
+REQUIRED_TOP = {"makers", "tours", "places", "linkPins"}
 REQUIRED_TOUR = {
     "id", "title", "shortDescription", "longDescription", "makerId",
     "heroImageURL", "additionalImageURLs", "videoURLs", "videoRole", "kind",
@@ -76,6 +77,19 @@ def check(catalog: dict) -> list:
             f"places is empty or absent — the strongest sign get_catalog() has "
             f"been replaced wholesale, severing catalog_places()"
         )
+
+    # 🔴 The split is the whole reason older builds can still read the catalog.
+    # A link pin back inside `tours` fails the entire decode on every build
+    # predating TourKind.link — silently, because RemoteCatalogLoader's `try?`
+    # reads a throw as a failed fetch and keeps its last good copy. This is the
+    # check whose absence let that sit undetected for a day.
+    stray = [t.get("id") for t in (catalog.get("tours") or [])
+             if t.get("kind") == "link"]
+    if stray:
+        problems.append(
+            f"{len(stray)} link pin(s) are inside tours (first: {stray[0]}) — "
+            f"every build predating TourKind.link will fail the whole catalog decode"
+        )
     return problems
 
 
@@ -116,6 +130,7 @@ def selftest() -> int:
         "tours": [{**{k: 1 for k in REQUIRED_TOUR},
                    "stops": [{k: 1 for k in REQUIRED_STOP}]}],
         "places": [{"id": 1}],
+        "linkPins": [],
     }
     cases = []
     cases.append(("a complete catalog passes", good, 0))
@@ -126,8 +141,9 @@ def selftest() -> int:
     for k in ("priceTier", "videoRole"):
         clobbered["tours"][0].pop(k)
     clobbered["makers"][0].pop("isPrivate")
-    # Four: the top-level `places` key, the tour keys, the maker key, and
-    # the places-count floor. All four fire, which is the point.
+    clobbered.pop("linkPins")
+    # Five: the two missing top-level keys (places, linkPins) report as one
+    # finding, plus the tour keys, the maker key, the places-count floor.
     cases.append(("get_catalog replaced wholesale is caught", clobbered, 4))
 
     no_places = json.loads(json.dumps(good)); no_places["places"] = []
@@ -140,8 +156,16 @@ def selftest() -> int:
     no_stop_key["tours"][0]["stops"][0].pop("transcriptText")
     cases.append(("a dropped stop key is caught", no_stop_key, 1))
 
-    empty = {"makers": [], "tours": [], "places": []}
+    empty = {"makers": [], "tours": [], "places": [], "linkPins": []}
     cases.append(("an empty catalog is caught", empty, 3))
+
+    # The regression this whole change exists to prevent, in both directions.
+    regressed = json.loads(json.dumps(good))
+    regressed["tours"][0]["kind"] = "link"
+    cases.append(("a link pin back inside tours is caught", regressed, 1))
+
+    no_pins_key = json.loads(json.dumps(good)); no_pins_key.pop("linkPins")
+    cases.append(("linkPins dropped from the payload is caught", no_pins_key, 1))
 
     failed = 0
     for name, payload, expected in cases:

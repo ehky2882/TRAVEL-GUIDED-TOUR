@@ -12,7 +12,8 @@ platform instead of playing anything.
         --city "New York" --country "United States" \
         --category architecture --tags "Notable Building,Architecture"
 
-Writes the cropped hero next to the script and prints the `Tours.json` entry.
+Writes the cropped hero next to the script and prints the `Tours.json` entry
+— under `linkPins`, the top-level array older builds skip, never `tours`.
 
 WHAT IT DOES NOT DO, deliberately
 ---------------------------------
@@ -814,11 +815,17 @@ def main() -> int:
     for p_ in paths:
         sys.stderr.write(f"#   hero {p_}\n")
     sys.stderr.write("# Upload the heroes to gh-pages under images/ before merging.\n")
+    sys.stderr.write("# 🔴 The pins below go in Tours.json's top-level `linkPins` array,\n"
+                     "#    NEVER inside `tours`: a build predating TourKind.link throws on\n"
+                     "#    an unknown `kind` and loses the WHOLE catalog decode, silently.\n")
     for m in makers.values():
         sys.stderr.write(f"#   creator: {m['displayName']}\n")
     sys.stderr.write("\n")
 
-    print(json.dumps({"makers": list(makers.values()), "tours": tours},
+    # Emitted under `linkPins`, not `tours`, so pasting this straight into
+    # Tours.json puts the pins where every older build will skip them. See
+    # TRAVEL GUIDED TOUR/Data/ToursData.swift for why that matters.
+    print(json.dumps({"makers": list(makers.values()), "linkPins": tours},
                      indent=2, ensure_ascii=False))
     return 1 if failures and not tours else 0
 
