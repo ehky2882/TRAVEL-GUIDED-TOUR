@@ -189,4 +189,56 @@ final class LinkPinTests: XCTestCase {
         XCTAssertEqual(LinkEmbedView.htmlAttributeEscaped("a\"b"), "a&quot;b")
     }
 
+
+    // MARK: - A tap on the video must not launch the other app
+
+    /// 🔴 The bug the owner found on a real phone. Instagram wraps the media in
+    /// an anchor pointing back at the post, so pressing play arrives as a link
+    /// activation; opening it externally launches the Instagram app.
+    ///
+    /// ⚠️ Invisible in the simulator — with no Instagram app installed,
+    /// `UIApplication.open` does nothing and the embed looks perfect.
+    func test_tapOnTheVideoIsSwallowedNotSentToTheOtherApp() {
+        let embed = URL(string: "https://www.instagram.com/reel/DcTW0yzsEok/embed")!
+        // The anchor Instagram wraps around the media, tracking params and all.
+        let media = URL(string: "https://www.instagram.com/reel/DcTW0yzsEok/?utm_source=ig_embed")!
+        XCTAssertFalse(LinkEmbedView.shouldOpenExternally(media, embedURL: embed))
+
+        // Trailing-slash and case variants are the same post.
+        XCTAssertFalse(LinkEmbedView.shouldOpenExternally(
+            URL(string: "https://www.instagram.com/reel/DcTW0yzsEok")!, embedURL: embed))
+    }
+
+    /// The other half: a genuinely outbound tap still leaves for the real app,
+    /// which is what someone tapping a creator's handle is asking for.
+    func test_outboundLinksStillOpenTheOtherApp() {
+        let embed = URL(string: "https://www.instagram.com/reel/DcTW0yzsEok/embed")!
+        for out in ["https://www.instagram.com/poche_space/",
+                    "https://www.instagram.com/stories/poche_space/",
+                    "https://www.instagram.com/reel/SOMEOTHERCODE/"] {
+            XCTAssertTrue(
+                LinkEmbedView.shouldOpenExternally(URL(string: out)!, embedURL: embed),
+                "\(out) should have opened externally")
+        }
+    }
+
+    /// A different host is always outbound — never swallow a tap that leaves
+    /// the platform, or a hostile embed could trap navigation silently.
+    func test_aDifferentHostIsAlwaysOutbound() {
+        let embed = URL(string: "https://www.instagram.com/reel/ABC/embed")!
+        XCTAssertTrue(LinkEmbedView.shouldOpenExternally(
+            URL(string: "https://evil.test/reel/ABC/")!, embedURL: embed))
+    }
+
+    /// TikTok and YouTube serve bare players with no wrapping anchor, so their
+    /// behaviour must be unchanged: any link they raise is outbound.
+    func test_barePlayersAreUnaffected() {
+        let tt = URL(string: "https://www.tiktok.com/player/v1/123")!
+        XCTAssertTrue(LinkEmbedView.shouldOpenExternally(
+            URL(string: "https://www.tiktok.com/@someone")!, embedURL: tt))
+        let yt = URL(string: "https://www.youtube.com/embed/abc")!
+        XCTAssertTrue(LinkEmbedView.shouldOpenExternally(
+            URL(string: "https://www.youtube.com/channel/xyz")!, embedURL: yt))
+    }
+
 }
