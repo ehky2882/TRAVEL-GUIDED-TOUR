@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-25 12:15 UTC
+**Last verified:** 2026-08-25 13:10 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -66,57 +66,47 @@ Only a query run as `postgres` saw them.
   ever leaves the live database on its own. Every future removal needs a hand-written delete like
   this one. Worth fixing properly before launch.
 
-## 1c. 🔴 BUILD 66 IS AT APPLE AND MUST NOT BE RELEASED AS-IS
+## 1c. ✅ RESOLVED — build 66 can read the catalogue again
 
-Build 66 is `2bcf0df2`, submitted 17 August, still **Waiting for Review** (owner-reported 2026-08-25;
-there is no App Store Connect key in a web container, so a session cannot check this — ask the owner).
+**Both fixes merged and are LIVE. Verified against both sources, not the PR descriptions.**
 
-| | Build 66 | Live today |
-|---|---|---|
-| Bundled tours | **1,350** | 1,516 |
-| Creators | 30 | 33 |
-| Kinds understood | `single`, `multiStop` | plus `link` |
+| | `tours` | `linkPins` | Build 66 decodes? |
+|---|---|---|---|
+| gh-pages mirror | 1,512, only `single`/`multiStop` | 4 | ✅ all of it |
+| Supabase RPC | 1,513, only `single`/`multiStop` | 4 | ✅ all of it |
 
-**Missing 166 tours and three whole cities — Barcelona, Milan, Stockholm.**
+Top-level keys on both: `linkPins`, `makers`, `places`, `tours`. **Zero unfamiliar kinds inside
+`tours`** — which is the whole test. Build 66 now catches up to the full catalogue on first launch
+rather than freezing at its 1,350-tour August seed.
 
-- **🔴 THE MECHANISM.** `ToursData` decodes `let tours: [Tour]` as one array; `TourKind` is a closed
-  `String, Codable` enum with no custom `init(from:)`; `RemoteCatalogLoader` swallows the result with
-  `try?` at three sites. So ONE unfamiliar value fails the WHOLE catalogue, the loader reads it as a
-  failed fetch, keeps its last good copy, and **logs nothing**. Both remote sources carry the four
-  `kind: "link"` pins, so there is nowhere to fall back to.
-- **Build 66 would otherwise have been fine.** It ships an 18-August seed but fetches the live
-  catalogue on first launch and catches up to all 1,516. The pins are the ONLY reason it cannot — so
-  anyone who installs it is **permanently frozen at 18 August**, silently, until they update again.
-- **Release is MANUAL**, so approval publishes nothing. No emergency, just a decision.
-- ⚠️ **UNVERIFIED: whether Apple allows swapping the build while "Waiting for Review" without losing
-  queue position.** Check in App Store Connect before choosing.
+- **[#597](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/597)** — link pins move out of `tours`
+  into their own top-level array, carried consistently through `Tours.json`, the gh-pages mirror
+  (`publish-catalog.yml`), `seed_from_toursjson.py` and `get_catalog` (`backend/split_link_pins.sql`).
+  New `LegacyCatalogCompatibilityTests` pins the guarantee.
+- **[#598](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/598)** — per-field tolerance plus a
+  tolerant array, and it **counts what it drops** rather than swallowing silently.
 
-**✅ OWNER DECISION 2026-08-25: keep the pins, move them.** Pulling the four pins was offered and
-declined. Link pins will be carried in **their own top-level section** rather than inside `tours`.
+**🔴 WHY THIS WORKED AT ALL, and the rule to keep:** an unknown top-level KEY is free; an unknown
+VALUE in a known field is fatal. `ToursData` uses synthesised `Codable`, which ignores keys it does
+not know. Proven on this app before it was relied on: `sourceURL`, `sourceAuthor`, `country`,
+`videoURLs` and `videoRole` were all added over time with no shipped build noticing. Nothing ever
+broke until a new *value* appeared inside a field builds already parsed.
 
-- 🔴 **An unknown top-level KEY is free; an unknown VALUE in a known field is fatal.** `ToursData` uses
-  synthesised `Codable`, which ignores keys it does not know. **Proven on this app, not theory:**
-  `sourceURL` and `sourceAuthor` were added to all 1,513 tours on 2026-08-24 and every shipped build
-  carried on fine, as did `country`, `videoURLs` and `videoRole`. Nothing ever broke until a new
-  *value* appeared inside a field builds already parsed.
-- **So build 66 reads `tours`, finds 1,512 tours in words it knows, and ignores `linkPins` entirely**
-  — every city, every future correction, permanently. **This is the only change that rescues a build
-  already shipped.** Tolerance cannot: it protects only builds shipped after it.
-- ⚠️ **Accepted cost:** builds 116/117 stop showing the pins until a build reads the new key. One lag.
-- ⚠️ **Same shape needed in `Tours.json`, the gh-pages mirror, `seed_from_toursjson.py` and
-  `get_catalog`**, or the fallback chain reintroduces the bug the moment Supabase is unreachable.
+**⚠️ Tolerance could not have fixed this and must not be mistaken for the fix.** It protects only
+builds shipped after it; build 66 is strict and always will be. The separate section is the only
+thing that rescues an already-shipped build. Keep both — different jobs.
 
-🔨 **IN FLIGHT: cloud session `session_01X7YfqrxiZbD418rMBCYHoo`**, branch
-`claude/catalog-forward-compat`, briefed on both parts in priority order — the separate section first,
-then per-field tolerance plus a tolerant array as the seatbelt for next time.
+⚠️ **A BUILD IS OWED: 116 and 117 no longer show the link pins**, because neither knows to look in
+`linkPins`. That is the accepted one-build lag, and it is still outstanding — **build 117 is still
+the newest.**
 
-⚠️ **A CLOUD SESSION CANNOT BE MESSAGED FROM A WEB SESSION.** `ListAgents` does not reach it and
-`SendMessage` fails with "no agent named …". An earlier session briefed on tolerance only had to be
-archived and replaced rather than corrected. **Brief a spawned cloud session completely up front.**
+⚠️ **Build 66's release decision is now the owner's, unblocked.** It can be released safely, or
+replaced with something current. It is still eight days and three cities behind in what it ships in
+the box; it just no longer stays that way.
 
-⚠️ **The four fields with the fatal shape:** `Tour.kind`, `Tour.primaryCategory`, `Tour.videoRole`,
-`Stop.triggerMode`. **Optional does NOT protect** — synthesised `decodeIfPresent` tolerates an absent
-key but propagates a decode error on an unfamiliar value, so `videoRole` is exactly as fragile.
+⚠️ **A cloud session cannot be messaged from a web session** — `ListAgents` does not reach it and
+`SendMessage` fails. A session briefed on tolerance only had to be archived and replaced rather than
+corrected. **Brief a spawned cloud session completely up front.**
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
