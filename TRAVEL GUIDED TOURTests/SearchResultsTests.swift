@@ -110,12 +110,20 @@ final class SearchResultsTests: XCTestCase {
 
     // MARK: - Degenerate inputs
 
-    func test_zeroCap_yieldsNoToursButKeepsTheTotal() {
+    /// 🔴 A cap must never make the screen say "no results".
+    ///
+    /// `isEmpty` drives the empty state, so it asks `totalTours` rather than
+    /// the capped array. Reading the capped array instead is harmless at 50
+    /// and silently wrong at 0 — this pins the distinction so a future change
+    /// to the cap cannot resurrect it.
+    func test_zeroCap_rendersNothingButIsNotEmpty() {
         let results = SearchView.SearchResults(makers: [], tours: tours(10), cap: 0)
 
-        XCTAssertTrue(results.tours.isEmpty)
+        XCTAssertTrue(results.tours.isEmpty, "nothing is rendered")
         XCTAssertEqual(results.totalTours, 10)
         XCTAssertTrue(results.isTruncated)
+        XCTAssertFalse(results.isEmpty,
+                       "ten tours matched — the empty state must not show")
     }
 
     func test_resultCap_isPositive() {

@@ -612,9 +612,14 @@ struct SearchView: View {
             self.tours = tours.count > cap ? Array(tours.prefix(cap)) : tours
         }
 
-        /// Nothing found at all — drives the empty state. Deliberately asks
-        /// the stored arrays, never the computed properties.
-        var isEmpty: Bool { makers.isEmpty && tours.isEmpty }
+        /// Nothing matched at all — drives the empty state.
+        ///
+        /// ⚠️ Asks `totalTours`, NOT the capped `tours` array: "nothing
+        /// matched" and "nothing rendered" are different questions, and a cap
+        /// must never be able to make the screen claim there were no results.
+        /// Harmless at a cap of 50, wrong at a cap of 0 — so it is written the
+        /// way that stays correct whatever the cap becomes.
+        var isEmpty: Bool { makers.isEmpty && totalTours == 0 }
 
         var isTruncated: Bool { totalTours > tours.count }
     }
