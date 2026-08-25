@@ -27,11 +27,12 @@ import MapKit
 ///   - Outer stack spacing `lg`, inner `md`, one horizontal `lg` on the body.
 ///   - A 4-line description with an inline Read more.
 ///
-/// **The one deliberate divergence is the brass tour count** (owner decision,
-/// 2026-08-18: keep it). Tour detail's section headers are quiet
-/// `secondaryText`; this one is `AtlasColors.accent`, because the count of
-/// tours *is* the reason a place page exists. Don't quietly tone it down for
-/// consistency — it was looked at side by side and chosen.
+/// **The tour list's header is the MAKER page's header** (owner, 2026-08-25:
+/// *"it should just look exactly like the example from profile page"*) — the
+/// count, the list/grid toggle and the sort pull-down, in that order and those
+/// colours. ⚠️ It was briefly brass and read "N TOURS AVAILABLE" (2026-08-18);
+/// that divergence is retired, and the note explaining it now sits at the row
+/// itself so it cannot be restored by accident.
 struct PlaceView: View {
     let place: Place
 
@@ -50,6 +51,10 @@ struct PlaceView: View {
     /// maker page carries (owner, 2026-08-25). The key is this page's own; see
     /// `AtlasListLayout` for why it is not shared with the maker page's.
     @AppStorage("placeListLayout") private var layout: AtlasListLayout = .list
+    /// Sort, its own key for the same reason. Opens on Newest, which is what
+    /// `Place.ranked` already produced when this page could not be sorted.
+    @AppStorage("placeSortCriterion") private var sortCriterion: AtlasTourSort = .dateAdded
+    @AppStorage("placeSortAscending") private var sortAscending: Bool = false
     /// Measured width of the grid container — drives square tile sizing.
     @State private var gridContentWidth: CGFloat = 0
 
@@ -65,16 +70,31 @@ struct PlaceView: View {
     private static let descriptionPreviewLineLimit = 4
     private static let descriptionOverflowThreshold = 240
 
-    /// The place's tours in display order. `Place.ranked` owns the rule so it
-    /// can change without a content re-seed.
-    private var tours: [Tour] {
+    /// The place's tours in catalogue order. `Place.ranked` owns the rule so
+    /// it can change without a content re-seed — and it stays the page's
+    /// identity (which photograph leads, which category the placeholder
+    /// borrows) so that sorting the list cannot change the hero under the
+    /// reader.
+    private var rankedTours: [Tour] {
         dataService.rankedTours(at: place)
+    }
+
+    /// The list as the reader has chosen to order it. The sort is stable, so
+    /// its default — Newest — reproduces `Place.ranked` exactly, tiebreaks
+    /// included; see `AtlasTourSort.sorted`.
+    private var tours: [Tour] {
+        AtlasTourSort.sorted(
+            rankedTours,
+            by: sortCriterion,
+            ascending: sortAscending,
+            from: locationManager.userLocation
+        )
     }
 
     /// The place's own editorial hero when it has one, otherwise the hero of
     /// its top-ranked tour — so a place is never blocked on new photography.
     private var heroImageURL: String {
-        place.heroImageURL ?? tours.first?.heroImageURL ?? ""
+        place.heroImageURL ?? rankedTours.first?.heroImageURL ?? ""
     }
 
     /// Extra photos only when the place has a hero of its own. If the hero is
@@ -222,7 +242,7 @@ struct PlaceView: View {
             additionalImageURLs: galleryImageURLs,
             videoURLs: nil,
             height: nil,   // takes AtlasSpacing.heroAspectRatio
-            category: tours.first?.primaryCategory ?? .culturalHeritage
+            category: rankedTours.first?.primaryCategory ?? .culturalHeritage
         )
         .padding(.horizontal, AtlasSpacing.lg)
     }
@@ -356,22 +376,33 @@ struct PlaceView: View {
 
     // MARK: - The tours
 
+    /// "29 TOURS" / "1 TOUR" — the maker page's wording, uppercased at the
+    /// call site so VoiceOver still reads it as words.
+    private var tourCountText: String {
+        tours.count == 1 ? "1 tour" : "\(tours.count) tours"
+    }
+
     private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            // 🔴 This row is the maker page's row — same wording, same colour,
+            // same two controls in the same order (owner, 2026-08-25: *"it
+            // should just look exactly like the example from profile page"*).
+            //
+            // ⚠️ That RETIRES two earlier decisions on this page, deliberately,
+            // so neither gets "restored" by someone reading the old note: the
+            // count was brass `accent` and read "N TOURS AVAILABLE" (kept as a
+            // divergence on 2026-08-18 because the count is why a place page
+            // exists), and the order was STATED as "NEWEST FIRST" rather than
+            // offered. The count is quiet `tertiaryText` now, and the order is
+            // a real control.
             HStack(spacing: AtlasSpacing.md) {
-                Text("\(tours.count) TOURS AVAILABLE")
+                Text(tourCountText)
                     .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.accent)
-                Spacer()
-                // Same control, same glyphs, same slot as the maker page's —
-                // it sits left of the trailing text there too.
-                AtlasLayoutToggle(selection: $layout)
-                // Stated, not offered. There is one order today and no usage
-                // data to rank on, so a sort control would be a promise the
-                // app cannot keep — see Place.ranked.
-                Text("NEWEST FIRST")
-                    .font(AtlasTypography.caption)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.tertiaryText)
+                Spacer()
+                AtlasLayoutToggle(selection: $layout)
+                AtlasSortMenu(criterion: $sortCriterion, ascending: $sortAscending)
             }
             .padding(.horizontal, AtlasSpacing.lg)
 

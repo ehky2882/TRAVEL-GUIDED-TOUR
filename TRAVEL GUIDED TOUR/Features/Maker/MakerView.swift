@@ -22,33 +22,6 @@ enum ProfileTab: String, CaseIterable, Identifiable {
     var id: String { rawValue }
 }
 
-/// Sort criteria for a maker's tour list. All reversible — the menu
-/// shows a direction-specific label so the active sort reads in plain
-/// words ("A–Z" / "Z–A", "Newest" / "Oldest", …). The page opens on
-/// Date added → Newest (see the `@AppStorage` default).
-private enum MakerSortCriterion: String, CaseIterable, Identifiable {
-    case name, duration, distance, dateAdded
-
-    var id: String { rawValue }
-
-    /// The direction a criterion takes when first selected. Date added
-    /// defaults to newest-first; everything else to its natural
-    /// ascending form.
-    var defaultAscending: Bool {
-        self == .dateAdded ? false : true
-    }
-
-    /// Direction-aware label (their vocabulary, not "ascending").
-    func label(ascending: Bool) -> String {
-        switch self {
-        case .name:      return ascending ? "A–Z" : "Z–A"
-        case .duration:  return ascending ? "Shortest" : "Longest"
-        case .distance:  return ascending ? "Nearest" : "Farthest"
-        case .dateAdded: return ascending ? "Oldest" : "Newest"
-        }
-    }
-}
-
 /// How a `MakerView` is being shown.
 ///
 /// A maker page and the signed-in user's own profile are the SAME
@@ -142,7 +115,7 @@ struct MakerView: View {
     /// Current sort of the maker's tour list. Persisted across visits +
     /// launches (shared by all maker pages). Opens on Date added →
     /// Newest by default.
-    @AppStorage("makerSortCriterion") private var sortCriterion: MakerSortCriterion = .dateAdded
+    @AppStorage("makerSortCriterion") private var sortCriterion: AtlasTourSort = .dateAdded
     @AppStorage("makerSortAscending") private var sortAscending: Bool = false
 
     /// List vs grid presentation; persisted like the sort. The key is this
@@ -874,7 +847,7 @@ struct MakerView: View {
                     .foregroundStyle(AtlasColors.tertiaryText)
                 Spacer()
                 AtlasLayoutToggle(selection: $layout)
-                sortMenu
+                AtlasSortMenu(criterion: $sortCriterion, ascending: $sortAscending)
             }
             .padding(.top, AtlasSpacing.md)
 
@@ -1058,53 +1031,6 @@ struct MakerView: View {
         )
     }
 
-    /// Pull-down sort control. Each criterion is one row; the active
-    /// one carries an up/down chevron and a direction-aware label.
-    /// Tapping the active criterion flips its direction; tapping
-    /// another selects it at its default direction.
-    private var sortMenu: some View {
-        Menu {
-            ForEach(MakerSortCriterion.allCases) { criterion in
-                Button {
-                    if criterion == sortCriterion {
-                        sortAscending.toggle()
-                    } else {
-                        sortCriterion = criterion
-                        sortAscending = criterion.defaultAscending
-                    }
-                } label: {
-                    sortMenuRowLabel(criterion)
-                }
-            }
-        } label: {
-            HStack(spacing: AtlasSpacing.xs) {
-                Image(systemName: "arrow.up.arrow.down")
-                Text(activeSortLabel)
-            }
-            .font(AtlasTypography.caption)
-            .foregroundStyle(AtlasColors.secondaryText)
-        }
-        .accessibilityLabel("Sort tours, currently \(activeSortLabel)")
-    }
-
-    /// The active criterion shows its current direction + a chevron;
-    /// inactive ones show their default-direction label.
-    @ViewBuilder
-    private func sortMenuRowLabel(_ criterion: MakerSortCriterion) -> some View {
-        if criterion == sortCriterion {
-            Label(
-                criterion.label(ascending: sortAscending),
-                systemImage: sortAscending ? "chevron.up" : "chevron.down"
-            )
-        } else {
-            Text(criterion.label(ascending: criterion.defaultAscending))
-        }
-    }
-
-    private var activeSortLabel: String {
-        sortCriterion.label(ascending: sortAscending)
-    }
-
     private func tourRow(_ tour: Tour) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
             // Square corners per the app-wide "all images square
@@ -1247,48 +1173,15 @@ struct MakerView: View {
         return makerTourService?.myTours.first(where: { $0.id == tour.id })?.status
     }
 
+    /// The feed in the reader's chosen order. Stable, so tours a criterion
+    /// cannot separate keep catalog order rather than an arbitrary one.
     private var makerTours: [Tour] {
-        let tours = feedTours
-        let asc = sortAscending
-        switch sortCriterion {
-        case .name:
-            return tours.sorted { Self.compareName($0, $1, ascending: asc) }
-        case .duration:
-            return tours.sorted {
-                asc
-                    ? $0.totalDurationSeconds < $1.totalDurationSeconds
-                    : $0.totalDurationSeconds > $1.totalDurationSeconds
-            }
-        case .distance:
-            // No location yet → leave catalog order rather than a
-            // meaningless one.
-            guard let location = locationManager.userLocation else { return tours }
-            return tours.sorted {
-                let d0 = $0.distance(from: location)
-                let d1 = $1.distance(from: location)
-                return asc ? d0 < d1 : d0 > d1
-            }
-        case .dateAdded:
-            return tours.sorted { Self.compareCreatedAt($0, $1, ascending: asc) }
-        }
-    }
-
-    /// Title compare, direction-aware.
-    private nonisolated static func compareName(_ lhs: Tour, _ rhs: Tour, ascending: Bool) -> Bool {
-        let cmp = lhs.title.localizedCaseInsensitiveCompare(rhs.title)
-        return ascending ? cmp == .orderedAscending : cmp == .orderedDescending
-    }
-
-    /// `createdAt` compare, direction-aware. Tours without a date sort
-    /// LAST in both directions. ISO "YYYY-MM-DD" strings compare
-    /// chronologically as plain strings.
-    private nonisolated static func compareCreatedAt(_ lhs: Tour, _ rhs: Tour, ascending: Bool) -> Bool {
-        switch (lhs.createdAt, rhs.createdAt) {
-        case let (l?, r?): return ascending ? l < r : l > r
-        case (_?, nil):    return true   // dated before undated, always
-        case (nil, _?):    return false
-        case (nil, nil):   return false
-        }
+        AtlasTourSort.sorted(
+            feedTours,
+            by: sortCriterion,
+            ascending: sortAscending,
+            from: locationManager.userLocation
+        )
     }
 
     /// Subtitle: duration, plus "· N away" when a location fix exists
