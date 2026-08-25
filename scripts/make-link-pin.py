@@ -55,20 +55,31 @@ PLATFORM_LABEL = {"tiktok": "TikTok", "youtube": "YouTube", "instagram": "Instag
 PLATFORM_EMOJI = {"tiktok": "\U0001F3B5", "youtube": "\u25B6\uFE0F", "instagram": "\U0001F4F7"}
 
 
-# Per-share junk. TikTok stamps a fresh `_t` on every share, so the SAME video
-# shared twice would otherwise hash to two different tour ids and land as two
-# pins. YouTube's `v` is the identity and is never stripped.
-TRACKING_PARAMS = {"_r", "_t", "_d", "is_from_webapp", "sender_device",
-                   "igsh", "igshid", "img_index",
-                   "si", "feature", "pp",
-                   "utm_source", "utm_medium", "utm_campaign", "fbclid", "gclid"}
+# 🔴 A WHITELIST, not a blacklist. The first version listed the tracking
+# parameters to strip and immediately missed one: a shared Short arrived as
+# `?is=VMBRxPqd_b5LBIJV` while the list only knew YouTube's `si`. Since the
+# tour id is uuid5 over sourceURL, an unstripped parameter means the SAME post
+# shared twice hashes to two ids and lands as two pins — so the failure is
+# silent duplication, and chasing new parameter names is a losing game.
+#
+# Across all three platforms exactly one query parameter is ever identity:
+# YouTube's `v` on a /watch URL. Everything else lives in the path.
+IDENTITY_PARAMS = {"youtube": {"v"}}
 
 
 def normalize_url(url: str) -> str:
-    """Drop per-share tracking parameters. Pure, so the selftest covers it."""
+    """Keep only the query parameters that identify the post. Pure, so the
+    selftest covers it without a network."""
     from urllib.parse import parse_qsl, urlencode, urlunparse
     u = urlparse(url)
-    kept = [(k, v) for k, v in parse_qsl(u.query) if k not in TRACKING_PARAMS]
+    plat = platform_of(url)
+    if plat in IDENTITY_PARAMS:
+        keep = IDENTITY_PARAMS[plat]
+        kept = [(k, v) for k, v in parse_qsl(u.query) if k in keep]
+    elif plat == "other":
+        kept = parse_qsl(u.query)          # unknown host: change nothing
+    else:
+        kept = []                          # tiktok / instagram: id is in the path
     return urlunparse((u.scheme, u.netloc, u.path, "", urlencode(kept), ""))
 
 
@@ -520,6 +531,13 @@ def selftest() -> int:
     check("strips instagram igsh",
           normalize_url("https://www.instagram.com/reel/ABC/?igsh=zzz"),
           "https://www.instagram.com/reel/ABC/")
+    # 🔴 The one that caught the whitelist out: a real shared Short arrived as
+    # `?is=...`, which no blacklist knew about.
+    check("strips an unknown youtube share param",
+          normalize_url("https://www.youtube.com/shorts/hSbYvigS0Ic?is=VMBRxPqd_b5LBIJV"),
+          "https://www.youtube.com/shorts/hSbYvigS0Ic")
+    check("leaves an unknown host's query alone",
+          normalize_url("https://example.test/x?a=1"), "https://example.test/x?a=1")
 
     # --- refuse a pin the app cannot play --------------------------------
     # A share link has no /video/{id}, which is what the app parses.
@@ -535,7 +553,7 @@ def selftest() -> int:
           derivable_embed("https://www.instagram.com/x/reel/ABC/"),
           "https://www.instagram.com/reel/ABC/embed")
 
-    total = 34
+    total = 36
     if fails:
         print(f"SELFTEST FAILED — {len(fails)}/{total}")
         for f in fails:
