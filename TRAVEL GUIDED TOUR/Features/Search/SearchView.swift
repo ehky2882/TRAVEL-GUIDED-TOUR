@@ -150,11 +150,32 @@ struct SearchView: View {
     private var contentArea: some View {
         if trimmedQuery.isEmpty {
             recentSearchesSection
-        } else if filteredTours.isEmpty && filteredMakers.isEmpty
-                    && placeSearch.suggestions.isEmpty && !placeSearch.isSearching {
-            emptyResults
         } else {
-            resultsList
+            // 🔴 DERIVED ONCE, HERE, AND PASSED DOWN — never re-read from the
+            // computed properties further in. `filteredTours` scans all 1,418
+            // tours on every access, and SwiftUI re-evaluates a computed
+            // property at every reference: this block used to call it twice
+            // and `resultsList` three more times, one of them INSIDE its own
+            // `ForEach` (`filteredTours.last?.id`), so the cost was
+            // (results + 3) full catalog scans per body evaluation. Typing "b"
+            // matches 1,416 tours and cost 1,419 scans — ~2 million tour
+            // comparisons for one keystroke, which is what made the field feel
+            // frozen the moment anyone started typing.
+            //
+            // Third time this shape has been paid for: `toursInViewCount`
+            // (session 60) and `savedTours` / `rankedTours(at:)` (session 99)
+            // were the same "derive once, use many" fix.
+            let found = SearchResults(
+                makers: filteredMakers,
+                tours: filteredTours,
+                cap: Self.resultCap
+            )
+            if found.isEmpty && placeSearch.suggestions.isEmpty
+                && !placeSearch.isSearching {
+                emptyResults
+            } else {
+                resultsList(found)
+            }
         }
     }
 
@@ -227,12 +248,12 @@ struct SearchView: View {
         .padding(.vertical, AtlasSpacing.sm)
     }
 
-    private var resultsList: some View {
+    private func resultsList(_ found: SearchResults) -> some View {
         // Show section headers whenever there's more than tours to
         // label. Tours-only keeps its clean headerless list (existing
         // behavior); any Places or Makers section turns headers on for
         // every group so the boundaries read clearly.
-        let showHeaders = !placeSearch.suggestions.isEmpty || !filteredMakers.isEmpty
+        let showHeaders = !placeSearch.suggestions.isEmpty || !found.makers.isEmpty
         return ScrollView {
             LazyVStack(alignment: .leading, spacing: 0) {
                 // Places section — autocomplete suggestions from Apple's
@@ -261,9 +282,9 @@ struct SearchView: View {
                 // its own top-level screen via `MakerPresenter` (the maker
                 // twin of tapping a tour result → tourPresenter), so a
                 // creator is a first-class destination, not a child push.
-                if !filteredMakers.isEmpty {
+                if !found.makers.isEmpty {
                     if showHeaders { sectionHeader("Makers") }
-                    ForEach(filteredMakers) { maker in
+                    ForEach(found.makers) { maker in
                         Button {
                             makerPresenter.present(maker)
                         } label: {
@@ -271,15 +292,15 @@ struct SearchView: View {
                         }
                         .buttonStyle(.plain)
 
-                        if maker.id != filteredMakers.last?.id {
+                        if maker.id != found.makers.last?.id {
                             Divider().padding(.leading, AtlasSpacing.lg)
                         }
                     }
                 }
 
-                if !filteredTours.isEmpty {
+                if !found.tours.isEmpty {
                     if showHeaders { sectionHeader("Tours") }
-                    ForEach(filteredTours) { tour in
+                    ForEach(found.tours) { tour in
                         Button {
                             recentSearchStore.record(query: trimmedQuery)
                             tourPresenter.present(tour)
@@ -288,9 +309,22 @@ struct SearchView: View {
                         }
                         .buttonStyle(.plain)
 
-                        if tour.id != filteredTours.last?.id {
+                        if tour.id != found.tours.last?.id {
                             Divider().padding(.leading, AtlasSpacing.lg)
                         }
+                    }
+
+                    // Said plainly rather than silently truncating. A one-letter
+                    // query matches most of the catalog and nobody scrolls 1,400
+                    // rows; the cap keeps the array (and its per-row divider
+                    // checks) small. Results are already ranked title → category
+                    // → maker → tag → description, so the kept ones are the best.
+                    if found.isTruncated {
+                        Text("Showing the closest \(found.tours.count) of \(found.totalTours). Keep typing to narrow it down.")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .padding(.horizontal, AtlasSpacing.lg)
+                            .padding(.vertical, AtlasSpacing.md)
                     }
                 }
             }
@@ -484,8 +518,10 @@ struct SearchView: View {
 
     /// Makers whose display name matches the query (case-insensitive
     /// substring). Surfaced as their own result section above tours so
-    /// the user can jump straight to the maker page. Small catalog
-    /// (3 makers), so no cap needed.
+    /// the user can jump straight to the maker page. 31 makers, so no
+    /// cap needed — unlike tours, which cap at `resultCap`.
+    ///
+    /// ⚠️ Read this ONCE, via `SearchResults` — see that type's note.
     private var filteredMakers: [Maker] {
         let q = trimmedQuery.lowercased()
         guard !q.isEmpty else { return [] }
@@ -544,6 +580,43 @@ struct SearchView: View {
         }
 
         return titleHits + categoryHits + makerHits + tagHits + descriptionHits
+    }
+
+    // MARK: - Search results
+
+    /// The most tours rendered for one query.
+    ///
+    /// Not a relevance judgement — a cap on how much list gets built. A
+    /// one-letter query matches nearly the whole catalog (`"b"` → 1,416
+    /// tours) and nobody scrolls that far; keeping the array small keeps
+    /// the per-row divider checks small with it.
+    static let resultCap = 50
+
+    /// Everything one query found, derived exactly once per body evaluation.
+    ///
+    /// 🔴 THIS TYPE EXISTS TO MAKE RE-DERIVING HARD. `filteredMakers` and
+    /// `filteredTours` each scan the whole catalog, and a SwiftUI computed
+    /// property runs again at every single reference — so reading them from
+    /// inside a `ForEach` (which is what `filteredTours.last?.id` used to do)
+    /// multiplied one search by the number of results. Build this once in
+    /// `contentArea`, pass it down, and read only its stored properties.
+    struct SearchResults {
+        let makers: [Maker]
+        let tours: [Tour]
+        /// Matches before the cap, so the footer can say what was left out.
+        let totalTours: Int
+
+        init(makers: [Maker], tours: [Tour], cap: Int) {
+            self.makers = makers
+            self.totalTours = tours.count
+            self.tours = tours.count > cap ? Array(tours.prefix(cap)) : tours
+        }
+
+        /// Nothing found at all — drives the empty state. Deliberately asks
+        /// the stored arrays, never the computed properties.
+        var isEmpty: Bool { makers.isEmpty && tours.isEmpty }
+
+        var isTruncated: Bool { totalTours > tours.count }
     }
 
     // MARK: - Search index
