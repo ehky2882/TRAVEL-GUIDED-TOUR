@@ -320,6 +320,31 @@ def oembed(url: str) -> dict:
     return data
 
 
+def instagram_playability(html: str) -> tuple[bool, str]:
+    """(will it play inline, why not).
+
+    🔴 Instagram withholds the media file for reels using LICENSED MUSIC and
+    exposes it only for original audio — observed 2026-08-25 across posts, and
+    it is why a Reel that played in one session stopped in the next. Nothing
+    on our side changed.
+
+    A pin whose file is withheld still ships; it just opens Instagram on tap
+    instead of playing inline. The owner decides whether that is worth having
+    in the catalogue, so this reports rather than refuses.
+    """
+    import re as _re
+    if '"video_url"' in html or '\\"video_url\\"' in html:
+        return True, ""
+    text = _re.sub(r"<[^>]+>", " ", _re.sub(r"<(script|style)[^>]*>.*?</\1>", "",
+                                            html, flags=_re.S | _re.I))
+    text = _re.sub(r"\s+", " ", text)
+    track = _re.search(r"·\s*([^V]{2,40}?)\s*(?:View|Play)", text)
+    name = (track.group(1).strip() if track else "")
+    if name and "original audio" not in name.lower():
+        return False, f"licensed music ({name})"
+    return False, "Instagram is not exposing the media file for this post"
+
+
 def instagram_meta(url: str) -> dict:
     """Instagram's oEmbed needs a Meta app token, but its **embed page** is
     public and carries everything we need in a JSON blob.
@@ -377,7 +402,10 @@ def instagram_meta(url: str) -> dict:
             x = nxt
         return x.replace("\\/", "/")
 
+    playable, why = instagram_playability(html)
     return {
+        "plays_inline": playable,
+        "no_inline_reason": why,
         "title": unesc(caption).strip(),
         "author_name": handle,
         "author_unique_id": handle,
@@ -657,7 +685,7 @@ def selftest() -> int:
 
 
 def make_one(*, url, lat, lon, city, country, category, tags, slug,
-             created_at, image_base, out_dir) -> tuple[dict, dict, str, str | None]:
+             created_at, image_base, out_dir) -> tuple[dict, dict, str, str | None, str]:
     """URL -> (maker, tour, hero_path, avatar_path|None). One post, everything derived.
 
     Shared by the single-link and batch paths so the two cannot drift.
@@ -707,7 +735,7 @@ def make_one(*, url, lat, lon, city, country, category, tags, slug,
                        lat=lat, lon=lon, city=city, country=country,
                        category=category, tags=tags, created_at=created_at,
                        image_base=image_base)
-    return maker, tour, path, av_path
+    return maker, tour, path, av_path, meta.get("no_inline_reason") or ""
 
 
 def parse_batch(text: str) -> list[dict]:
@@ -788,10 +816,10 @@ def main() -> int:
         rows = [{"line": 1, "url": a.url, "lat": a.lat, "lon": a.lon,
                  "city": a.city, "country": a.country}]
 
-    makers, tours, paths, failures = {}, [], [], []
+    makers, tours, paths, failures, flagged = {}, [], [], [], []
     for r in rows:
         try:
-            maker, tour, path, av_path = make_one(
+            maker, tour, path, av_path, no_inline = make_one(
                 url=r["url"], lat=r["lat"], lon=r["lon"],
                 city=r["city"] or a.city, country=r["country"] or a.country,
                 category=a.category, tags=tags,
@@ -806,6 +834,8 @@ def main() -> int:
         paths.append(path)
         if av_path:
             paths.append(av_path)
+        if no_inline:
+            flagged.append((tour["title"][:44], no_inline))
 
     for line, url, why in failures:
         sys.stderr.write(f"\n# SKIPPED line {line}: {url}\n#   {why}\n")
@@ -820,6 +850,18 @@ def main() -> int:
                      "#    an unknown `kind` and loses the WHOLE catalog decode, silently.\n")
     for m in makers.values():
         sys.stderr.write(f"#   creator: {m['displayName']}\n")
+
+    # 🔴 Instagram withholds the media file for reels using LICENSED MUSIC and
+    # exposes it only for original audio (observed 2026-08-25). Such a pin is
+    # perfectly good except that tapping the video opens Instagram instead of
+    # playing inline — so it is reported, never refused. The owner decides.
+    if flagged:
+        sys.stderr.write(
+            f"\n#  {len(flagged)} PIN(S) WILL NOT PLAY INLINE\n"
+            "#    Tapping the video opens Instagram instead. Everything else\n"
+            "#    about the pin works. Decide whether to keep them:\n")
+        for title, why in flagged:
+            sys.stderr.write(f"#      - {title}\n#          {why}\n")
     sys.stderr.write("\n")
 
     # Emitted under `linkPins`, not `tours`, so pasting this straight into

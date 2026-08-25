@@ -42,6 +42,10 @@ import MapKit
 ///   - Go to creator → in-stack `NavigationLink` to MakerView, same
 ///     destination as tapping the inline maker row.
 struct TourDetailView: View {
+    /// Optional: the UIKit slide-up layers do not inherit the environment,
+    /// and a dropped injection must degrade to the embed rather than crash.
+    @Environment(InstagramMediaResolver.self) private var instagramResolver: InstagramMediaResolver?
+
     let tour: Tour
 
     /// Whether this is the page itself or the maker's look at it before they
@@ -397,6 +401,39 @@ struct TourDetailView: View {
     /// `disableLoadAnimation` (no crossfade while the detail layer
     /// slides up) are baked into the shared carousel. Horizontal side
     /// padding stays here so the footprint matches the map tab.
+    /// Instagram only: the resolved file, once we have it. nil means we are
+    /// either not on Instagram, or the resolve failed and the embed stands in.
+    @State private var instagramMedia: URL?
+    @State private var resolvingInstagram = false
+
+    /// ⚠️ Deliberately renders a plain black box while resolving rather than a
+    /// spinner: the resolve is one request and usually lands before the page
+    /// settles, and a spinner that flashes for 200ms reads as jank.
+    @ViewBuilder
+    private func instagramPlayer(sourceURL: String) -> some View {
+        if let media = instagramMedia {
+            // Reuses the gallery player, so this clip gets the narration
+            // takeover, the resume debt and the fullscreen viewer for free
+            // rather than growing a second video code path.
+            GalleryVideoView(urlString: media.absoluteString,
+                             height: nil,
+                             tourId: tour.id)
+        } else {
+            Color.black
+        }
+    }
+
+    /// Resolve once per post. A failure is remembered by the resolver, so this
+    /// cannot spin on a private or deleted post.
+    private func resolveInstagramIfNeeded(_ sourceURL: String) async {
+        guard LinkSource.from(urlString: sourceURL) == .instagram,
+              instagramMedia == nil, !resolvingInstagram,
+              let resolver = instagramResolver else { return }
+        resolvingInstagram = true
+        instagramMedia = await resolver.mediaURL(for: sourceURL)
+        resolvingInstagram = false
+    }
+
     @ViewBuilder
     private var imageSection: some View {
         if tour.isLink, let embed = tour.linkEmbedURL, let sourceURL = tour.sourceURL {
@@ -405,11 +442,24 @@ struct TourDetailView: View {
             //
             // The shape comes from the URL, not the platform: a YouTube Short
             // is 9:16 like a TikTok, while an ordinary YouTube video is 16:9.
-            LinkEmbedView(embedURL: embed)
-                .aspectRatio(LinkSource.embedAspectRatio(for: sourceURL),
-                             contentMode: .fit)
-                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-                .padding(.horizontal, AtlasSpacing.lg)
+            //
+            // 🔴 Instagram is the exception, and it is not a preference. Its
+            // embed is a static poster wrapped in a link with no `<video>` in
+            // it at all, so a tap either leaves for Instagram or does nothing
+            // — both shipped, both wrong. Its file is resolved and played in
+            // our own player instead. See `InstagramMediaResolver`.
+            Group {
+                if instagramMedia != nil || resolvingInstagram {
+                    instagramPlayer(sourceURL: sourceURL)
+                } else {
+                    LinkEmbedView(embedURL: embed)
+                }
+            }
+            .aspectRatio(LinkSource.embedAspectRatio(for: sourceURL),
+                         contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+            .padding(.horizontal, AtlasSpacing.lg)
+            .task(id: sourceURL) { await resolveInstagramIfNeeded(sourceURL) }
         } else if tour.isLink {
             // A link pin whose URL yields no player — a platform we cannot
             // derive one for. Fall back to the hero, and the action row's
