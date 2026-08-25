@@ -49,12 +49,6 @@ private enum MakerSortCriterion: String, CaseIterable, Identifiable {
     }
 }
 
-/// List vs. Instagram-style grid presentation of a maker's tours.
-/// `String`-backed so it can persist via `@AppStorage`.
-private enum MakerListLayout: String {
-    case list, grid
-}
-
 /// How a `MakerView` is being shown.
 ///
 /// A maker page and the signed-in user's own profile are the SAME
@@ -151,8 +145,10 @@ struct MakerView: View {
     @AppStorage("makerSortCriterion") private var sortCriterion: MakerSortCriterion = .dateAdded
     @AppStorage("makerSortAscending") private var sortAscending: Bool = false
 
-    /// List vs grid presentation; persisted like the sort.
-    @AppStorage("makerListLayout") private var layout: MakerListLayout = .list
+    /// List vs grid presentation; persisted like the sort. The key is this
+    /// page's own — see `AtlasListLayout` for why it is not shared with the
+    /// place page's.
+    @AppStorage("makerListLayout") private var layout: AtlasListLayout = .list
     /// Measured width of the grid container — drives square tile sizing.
     @State private var gridContentWidth: CGFloat = 0
     @State private var showingReport = false
@@ -877,7 +873,7 @@ struct MakerView: View {
                     .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.tertiaryText)
                 Spacer()
-                layoutToggle
+                AtlasLayoutToggle(selection: $layout)
                 sortMenu
             }
             .padding(.top, AtlasSpacing.md)
@@ -1006,10 +1002,8 @@ struct MakerView: View {
     /// side is derived from the measured grid width so tiles stay
     /// square at any device size.
     private var toursGrid: some View {
-        let spacing: CGFloat = 2
-        let columns = Array(repeating: GridItem(.flexible(), spacing: spacing), count: 3)
-        let side = max(0, (gridContentWidth - spacing * 2) / 3)
-        return LazyVGrid(columns: columns, spacing: spacing) {
+        let side = AtlasTourGrid.side(forContentWidth: gridContentWidth)
+        return LazyVGrid(columns: AtlasTourGrid.columns, spacing: AtlasTourGrid.spacing) {
             if isOwnProfile {
                 addTourTile(side: side)
             } else if makerTours.isEmpty {
@@ -1062,24 +1056,6 @@ struct MakerView: View {
                     .onChange(of: geo.size.width) { _, w in gridContentWidth = w }
             }
         )
-    }
-
-    /// List / grid presentation toggle.
-    private var layoutToggle: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            layoutToggleIcon("list.bullet", target: .list)
-            layoutToggleIcon("square.grid.3x3", target: .grid)
-        }
-    }
-
-    private func layoutToggleIcon(_ systemName: String, target: MakerListLayout) -> some View {
-        Button { layout = target } label: {
-            Image(systemName: systemName)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(layout == target ? AtlasColors.primaryText : AtlasColors.tertiaryText)
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel(target == .grid ? "Grid view" : "List view")
     }
 
     /// Pull-down sort control. Each criterion is one row; the active

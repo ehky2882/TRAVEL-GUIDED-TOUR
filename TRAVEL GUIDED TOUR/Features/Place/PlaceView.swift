@@ -46,6 +46,12 @@ struct PlaceView: View {
     @State private var topSectionTab: TopSectionTab = .gallery
     @State private var isDescriptionExpanded = false
     @State private var showingReport = false
+    /// Rows or photo grid, remembered between visits — the same control the
+    /// maker page carries (owner, 2026-08-25). The key is this page's own; see
+    /// `AtlasListLayout` for why it is not shared with the maker page's.
+    @AppStorage("placeListLayout") private var layout: AtlasListLayout = .list
+    /// Measured width of the grid container — drives square tile sizing.
+    @State private var gridContentWidth: CGFloat = 0
 
     private enum TopSectionTab: String, CaseIterable, Identifiable {
         case gallery = "Gallery"
@@ -179,7 +185,7 @@ struct PlaceView: View {
                 // Rows run edge to edge — their own padding is inside, so the
                 // dividers reach the screen edges the way a list's do. That is
                 // why this sits outside the padded stack above.
-                tourList
+                toursSection
 
                 // The bottom module floats over every screen from a higher
                 // window, so the last row has to reserve its height or it can
@@ -350,13 +356,16 @@ struct PlaceView: View {
 
     // MARK: - The tours
 
-    private var tourList: some View {
+    private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            HStack {
+            HStack(spacing: AtlasSpacing.md) {
                 Text("\(tours.count) TOURS AVAILABLE")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.accent)
                 Spacer()
+                // Same control, same glyphs, same slot as the maker page's —
+                // it sits left of the trailing text there too.
+                AtlasLayoutToggle(selection: $layout)
                 // Stated, not offered. There is one order today and no usage
                 // data to rank on, so a sort control would be a promise the
                 // app cannot keep — see Place.ranked.
@@ -366,21 +375,90 @@ struct PlaceView: View {
             }
             .padding(.horizontal, AtlasSpacing.lg)
 
-            LazyVStack(alignment: .leading, spacing: 0) {
-                ForEach(tours) { tour in
-                    Button {
-                        tourPresenter.present(tour)
-                    } label: {
-                        PlaceTourRow(tour: tour, maker: dataService.maker(for: tour))
-                    }
-                    .buttonStyle(.plain)
+            switch layout {
+            case .list: tourList
+            case .grid: tourGrid
+            }
+        }
+    }
 
-                    if tour.id != tours.last?.id {
-                        Divider().padding(.leading, AtlasSpacing.lg)
-                    }
+    private var tourList: some View {
+        LazyVStack(alignment: .leading, spacing: 0) {
+            ForEach(tours) { tour in
+                Button {
+                    tourPresenter.present(tour)
+                } label: {
+                    PlaceTourRow(tour: tour, maker: dataService.maker(for: tour))
+                }
+                .buttonStyle(.plain)
+
+                if tour.id != tours.last?.id {
+                    Divider().padding(.leading, AtlasSpacing.lg)
                 }
             }
         }
+    }
+
+    /// The same three-across square photo grid the maker page draws, from the
+    /// shared `AtlasTourGrid` geometry so the two can't disagree about tile
+    /// size or gutter. Unlike the rows it is inset by `lg`, because a grid has
+    /// no internal padding to run its edges out to.
+    private var tourGrid: some View {
+        let side = AtlasTourGrid.side(forContentWidth: gridContentWidth)
+        return LazyVGrid(columns: AtlasTourGrid.columns, spacing: AtlasTourGrid.spacing) {
+            ForEach(tours) { tour in
+                Button {
+                    tourPresenter.present(tour)
+                } label: {
+                    HeroImageView(
+                        imageName: tour.heroImageURL,
+                        height: side,
+                        cornerRadius: 0,
+                        category: tour.primaryCategory
+                    )
+                    .clipped()
+                    // WALK and price share this corner as one chip row, the
+                    // maker grid's arrangement — the tile carries no title, so
+                    // these two are the only thing distinguishing a paid walk
+                    // from a free single stop.
+                    .overlay(alignment: .topLeading) {
+                        HStack(spacing: AtlasSpacing.xs) {
+                            if tour.kind == .multiStop {
+                                walkPill
+                                    .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
+                            }
+                            TourPriceBadge(tour: tour)
+                        }
+                        .padding(AtlasSpacing.xs)
+                    }
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                // A tile is a photograph and nothing else, so VoiceOver has
+                // no text to read unless it is given one.
+                .accessibilityLabel(tour.title)
+            }
+        }
+        // ⚠️ Measured BEFORE the inset, or the reader hands back the padded
+        // width and every tile comes out 16pt too wide.
+        .background(
+            GeometryReader { geo in
+                Color.clear
+                    .onAppear { gridContentWidth = geo.size.width }
+                    .onChange(of: geo.size.width) { _, w in gridContentWidth = w }
+            }
+        )
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// The brass WALK pill, identical to the one `PlaceTourRow` carries.
+    private var walkPill: some View {
+        Text("WALK")
+            .font(.system(size: 11, weight: .regular, design: .monospaced))
+            .foregroundStyle(AtlasColors.background)
+            .padding(.horizontal, 7)
+            .padding(.vertical, 2)
+            .background(AtlasColors.accent, in: Capsule())
     }
 }
 
