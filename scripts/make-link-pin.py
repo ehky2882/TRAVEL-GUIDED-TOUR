@@ -35,6 +35,7 @@ import json
 import subprocess
 import sys
 import uuid
+from urllib.parse import urlparse
 
 OEMBED = {
     "tiktok": "https://www.tiktok.com/oembed?url=",
@@ -42,6 +43,67 @@ OEMBED = {
 }
 
 HERO_W, HERO_H = 1200, 900
+
+# How a pinned creator is named and drawn. The maker line reads
+# "TikTok @handle" — the platform first, because that is what tells a reader
+# what they are about to get (owner decision 2026-08-24).
+PLATFORM_LABEL = {"tiktok": "TikTok", "youtube": "YouTube", "instagram": "Instagram"}
+
+# ⚠️ Tours.json carries only avatarURL + avatarEmoji for a maker, so the emoji
+# is the only avatar lever here. oEmbed exposes no creator avatar on any of the
+# three platforms. A platform mark also does the badge's job on the profile.
+PLATFORM_EMOJI = {"tiktok": "\U0001F3B5", "youtube": "\u25B6\uFE0F", "instagram": "\U0001F4F7"}
+
+
+def handle_of(meta: dict, platform: str) -> str:
+    """The creator's @handle, which is not where every platform puts it.
+
+    TikTok and Instagram hand back a real username. ⚠️ YouTube's oEmbed gives
+    `author_name`, which is a DISPLAY name — using it produced the maker
+    "YouTube @Blippi - Educational Videos for Kids". The @handle is in
+    `author_url` (youtube.com/@Blippi), so that is preferred when present.
+    """
+    import re as _re
+    uid = (meta.get("author_unique_id") or "").strip()
+    if uid:
+        return uid.lstrip("@")
+    g = _re.search(r"/@([A-Za-z0-9._-]+)", meta.get("author_url") or "")
+    if g:
+        return g.group(1)
+    # ⚠️ Deliberately empty rather than falling back to author_name. That is a
+    # DISPLAY name ("Blippi - Educational Videos for Kids"), and prefixing it
+    # with @ invents a handle that does not exist. Callers decide what to show.
+    return ""
+
+
+def maker_for(platform: str, handle: str, author_url: str | None) -> dict:
+    """A pinned creator IS a maker (owner decision 2026-08-24: they get a page
+    and they count).
+
+    🔴 The id is uuid5 over the platform AND the lowercased handle, so the same
+    creator always lands on the same maker row no matter how many of their
+    posts get pinned, and re-running the tool never mints a duplicate. Handles
+    are case-insensitive on all three platforms, so the case must be normalised
+    before hashing or @NASA and @nasa become two people.
+    """
+    label = PLATFORM_LABEL.get(platform, platform.title())
+    bare = handle.lstrip("@")
+    handled = bool(handle.startswith("@")) or " " not in bare
+    key = f"atlas-maker:{platform}:@{bare.lower()}"
+    return {
+        "id": str(uuid.uuid5(uuid.NAMESPACE_URL, key)).upper(),
+        # "@name" only when it really is a handle; a display name is shown as
+        # given, so we never invent an @ that leads nowhere.
+        "displayName": f"{label} @{bare}" if handled else f"{label} — {bare}",
+        "avatarURL": None,
+        "avatarEmoji": PLATFORM_EMOJI.get(platform),
+        # Says plainly that we host none of it — this is the line a reader sees
+        # on the creator's page, and it should not imply they signed up.
+        "bio": f"{label} creator. These pins link to their posts; "
+               f"Dozent hosts none of this content.",
+        "websiteURL": author_url,
+    }
+
 
 
 def platform_of(url: str) -> str:
@@ -80,11 +142,14 @@ def curl(url: str, binary: bool = False):
 
 def oembed(url: str) -> dict:
     plat = platform_of(url)
+    if plat == "instagram":
+        # Instagram's oEmbed needs a Meta app token; its embed page does not.
+        return instagram_meta(url)
     if plat not in OEMBED:
         raise SystemExit(
-            f"COULD NOT VERIFY — no supported oEmbed for '{plat}'.\n"
-            "TikTok and YouTube work with no key. Instagram's needs a Meta app\n"
-            "token and is deliberately out of scope."
+            f"COULD NOT VERIFY — unsupported link platform '{plat}'.\n"
+            "TikTok, YouTube and Instagram are supported. Anything else has no\n"
+            "embeddable player we can derive, so it cannot become a link pin."
         )
     from urllib.parse import quote
     body = curl(OEMBED[plat] + quote(url, safe=""))
@@ -98,6 +163,73 @@ def oembed(url: str) -> dict:
     if not data.get("thumbnail_url"):
         raise SystemExit("COULD NOT VERIFY — no thumbnail in the oEmbed response.")
     return data
+
+
+def instagram_meta(url: str) -> dict:
+    """Instagram's oEmbed needs a Meta app token, but its **embed page** is
+    public and carries everything we need in a JSON blob.
+
+    ⚠️ This is scraping, and it is the fragile part of this tool: the keys
+    below are Instagram's internals and can be renamed without notice. It
+    raises rather than guessing, so a batch fails loudly instead of writing
+    pins with missing captions.
+    """
+    import re as _re
+    parts = [c for c in urlparse(url).path.split("/") if c]
+    code = None
+    for i, c in enumerate(parts):
+        if c in ("p", "reel", "tv") and i + 1 < len(parts):
+            code = parts[i + 1]
+            break
+    if not code:
+        raise SystemExit(f"COULD NOT VERIFY — not an Instagram post/reel URL: {url}")
+
+    html = curl(f"https://www.instagram.com/{parts[parts.index(code) - 1]}/{code}/embed")
+
+    def grab(pat):
+        g = _re.search(pat, html)
+        return g.group(1) if g else None
+
+    handle = grab(r'\\"username\\":\\"(.*?)\\"')
+    thumb = grab(r'\\"display_url\\":\\"(.*?)\\"')
+    caption = grab(r'\\"edge_media_to_caption\\":\{\\"edges\\":\[\{\\"node\\":\{\\"text\\":\\"(.*?)\\"\}')
+    if not handle or not thumb:
+        raise SystemExit(
+            "COULD NOT VERIFY — Instagram's embed did not yield a handle and a\n"
+            "thumbnail. The post may be private or deleted, or Instagram may have\n"
+            f"renamed its internal keys. URL: {url}"
+        )
+
+    def unesc(x):
+        """⚠️ The blob is DOUBLE-escaped — JSON embedded in JSON inside a
+        script tag — so one decode pass is not enough: it leaves `\\/` in the
+        URL (curl then rejects it as a bad port) and `\\ud83e` in the caption.
+        Two passes land on real text.
+
+        `unicode_escape` looks like the obvious tool and is wrong: it mangles
+        every non-ASCII character and turns a literal newline escape into the
+        letter n, which reached the slug as `pls-pls-pls-ud83e-udef6-n`.
+        """
+        if not x:
+            return ""
+        for _ in range(2):
+            try:
+                nxt = json.loads(f'"{x}"')
+            except json.JSONDecodeError:
+                break
+            if nxt == x:
+                break
+            x = nxt
+        return x.replace("\\/", "/")
+
+    return {
+        "title": unesc(caption).strip(),
+        "author_name": handle,
+        "author_unique_id": handle,
+        "author_url": f"https://www.instagram.com/{handle}/",
+        "provider_name": "Instagram",
+        "thumbnail_url": unesc(thumb),
+    }
 
 
 def render_hero(raw: bytes) -> bytes:
@@ -152,10 +284,17 @@ def build_entry(*, url, meta, slug, maker, lat, lon, city, country,
     post produces the same entry rather than a duplicate pin."""
     tour_id = str(uuid.uuid5(uuid.NAMESPACE_URL, f"atlas-tour:link:{url}")).upper()
     stop_id = str(uuid.uuid5(uuid.NAMESPACE_URL, f"atlas-stop:link:{url}")).upper()
-    author = meta.get("author_name") or ""
-    unique = meta.get("author_unique_id")
-    handle = f"@{unique}" if unique else author
-    caption = (meta.get("title") or "").strip()
+    # One handle rule for the whole tool: the maker line and the credit line
+    # must name the same person. Reading author_name here is what produced
+    # `sourceAuthor: "Blippi - Educational Videos for Kids"` beside the maker
+    # `YouTube @Blippi`.
+    h = handle_of(meta, platform_of(url))
+    handle = f"@{h}" if h else (meta.get("author_name") or "").strip()
+
+    # 🔴 Flatten newlines BEFORE truncating. A caption routinely spans lines,
+    # and a title carrying one reaches the catalogue, the share card and the
+    # lock screen — the same defect the upload wizard fixed for typed titles.
+    caption = " ".join((meta.get("title") or "").split())
     title = caption if len(caption) <= 60 else caption[:57].rstrip() + "…"
 
     return {
@@ -267,7 +406,39 @@ def selftest() -> int:
     check("slugify", slugify("Hello, World! Again", "f"), "hello-world-again")
     check("slugify empty", slugify("!!!", "fallback"), "fallback")
 
-    total = 18
+    # --- the creator's handle -------------------------------------------
+    check("handle: tiktok unique id",
+          handle_of({"author_unique_id": "tiktok", "author_name": "TikTok"}, "tiktok"),
+          "tiktok")
+    # 🔴 YouTube's author_name is a DISPLAY name; the handle is in author_url.
+    check("handle: youtube prefers author_url",
+          handle_of({"author_name": "Blippi - Educational Videos for Kids",
+                     "author_url": "https://www.youtube.com/@Blippi"}, "youtube"),
+          "Blippi")
+    # ⚠️ Empty, not the display name — prefixing @ to it invents a handle.
+    check("handle: no handle available",
+          handle_of({"author_name": "Some Channel"}, "youtube"), "")
+
+    # --- one creator, one maker row -------------------------------------
+    m_lower = maker_for("tiktok", "@nasa", None)
+    m_upper = maker_for("tiktok", "NASA", None)
+    check("maker id ignores handle case", m_lower["id"], m_upper["id"])
+    check("maker display name", m_lower["displayName"], "TikTok @nasa")
+    if maker_for("youtube", "@nasa", None)["id"] == m_lower["id"]:
+        fails.append("same handle on two platforms collapsed to one maker")
+
+    # --- batch parsing ---------------------------------------------------
+    rows = parse_batch(
+        "# a note\n"
+        "\n"
+        "https://a.test/1 | 1.5,-2.5 | Rome | Italy\n"
+        "https://a.test/2\n")
+    check("batch skips notes and blanks", len(rows), 2)
+    check("batch reads coords", (rows[0]["lat"], rows[0]["lon"]), (1.5, -2.5))
+    check("batch reads city", rows[0]["city"], "Rome")
+    check("batch leaves coords None", rows[1]["lat"], None)
+
+    total = 27
     if fails:
         print(f"SELFTEST FAILED — {len(fails)}/{total}")
         for f in fails:
@@ -277,13 +448,72 @@ def selftest() -> int:
     return 0
 
 
+def make_one(*, url, lat, lon, city, country, category, tags, slug,
+             created_at, image_base, out_dir) -> tuple[dict, dict, str]:
+    """URL -> (maker, tour, hero_path). One post, everything derived.
+
+    Shared by the single-link and batch paths so the two cannot drift.
+    """
+    import os
+    plat = platform_of(url)
+    meta = oembed(url)
+    handle = handle_of(meta, plat)
+    if not handle:
+        raise SystemExit(f"COULD NOT VERIFY — no creator handle for {url}")
+
+    maker = maker_for(plat, handle, meta.get("author_url"))
+    slug = slug or slugify(meta.get("title", ""), f"post-{plat}")
+
+    raw = curl(meta["thumbnail_url"], binary=True)
+    if len(raw) < 1000:
+        raise SystemExit(f"COULD NOT VERIFY — thumbnail came back {len(raw)} bytes for {url}.")
+    os.makedirs(out_dir, exist_ok=True)
+    path = os.path.join(out_dir, f"{slug}_hero.webp")
+    with open(path, "wb") as fh:
+        fh.write(render_hero(raw))
+
+    tour = build_entry(url=url, meta=meta, slug=slug, maker=maker["id"],
+                       lat=lat, lon=lon, city=city, country=country,
+                       category=category, tags=tags, created_at=created_at,
+                       image_base=image_base)
+    return maker, tour, path
+
+
+def parse_batch(text: str) -> list[dict]:
+    """One line per pin:  <url> | <lat>,<lon> | <city> | <country>
+
+    Everything after the URL is optional; a line that is just a URL comes back
+    with lat/lon None so the caller can ask where it belongs. Blank lines and
+    lines starting with # are ignored, so a batch file can carry notes.
+    """
+    rows = []
+    for n, raw in enumerate(text.splitlines(), start=1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = [p.strip() for p in line.split("|")]
+        url = parts[0]
+        lat = lon = None
+        if len(parts) > 1 and parts[1]:
+            try:
+                lat, lon = [float(x) for x in parts[1].split(",")]
+            except ValueError:
+                raise SystemExit(
+                    f"line {n}: could not read '{parts[1]}' as 'lat,lon'.\n  {line}")
+        rows.append({"line": n, "url": url, "lat": lat, "lon": lon,
+                     "city": parts[2] if len(parts) > 2 and parts[2] else None,
+                     "country": parts[3] if len(parts) > 3 and parts[3] else None})
+    return rows
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--url", help="Public TikTok or YouTube post URL")
+    ap.add_argument("--url", help="Public TikTok, YouTube or Instagram post URL")
+    ap.add_argument("--batch", help="File of '<url> | <lat>,<lon> | <city> | <country>' lines")
     ap.add_argument("--lat", type=float, help="Where the pin goes")
     ap.add_argument("--lon", type=float)
-    ap.add_argument("--maker", help="makerId (UUID) this pin files under")
+    ap.add_argument("--maker", help="(ignored) a pinned creator now gets their own maker row")
     ap.add_argument("--city")
     ap.add_argument("--country")
     ap.add_argument("--category", default="architecture")
@@ -292,48 +522,73 @@ def main() -> int:
     ap.add_argument("--created", default="", help='ISO "YYYY-MM-DD"; today if omitted')
     ap.add_argument("--image-base",
                     default="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images")
-    ap.add_argument("--out-dir", default=".", help="Where to write the cropped hero")
+    ap.add_argument("--out-dir", default=".", help="Where to write the cropped heroes")
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
 
     if a.selftest:
         return selftest()
 
-    missing = [n for n, v in (("--url", a.url), ("--lat", a.lat),
-                              ("--lon", a.lon), ("--maker", a.maker)) if v is None]
-    if missing:
-        ap.error("missing required: " + ", ".join(missing))
-
     import datetime
-    import os
+    created = a.created or datetime.date.today().isoformat()
+    tags = [t.strip() for t in a.tags.split(",") if t.strip()]
 
-    meta = oembed(a.url)
-    slug = a.slug or slugify(meta.get("title", ""), f"post-{platform_of(a.url)}")
+    if not a.url and not a.batch:
+        ap.error("give either --url or --batch")
 
-    raw = curl(meta["thumbnail_url"], binary=True)
-    if len(raw) < 1000:
-        raise SystemExit(f"COULD NOT VERIFY — thumbnail came back {len(raw)} bytes.")
-    hero = render_hero(raw)
+    rows = []
+    if a.batch:
+        with open(a.batch) as fh:
+            rows = parse_batch(fh.read())
+        # 🔴 Refuse the whole batch when any line lacks a coordinate. A link pin
+        # with no location is the one defect nothing downstream catches: it
+        # validates, it uploads, and it sits in the ocean off West Africa.
+        missing = [r for r in rows if r["lat"] is None]
+        if missing:
+            sys.stderr.write(
+                f"{len(missing)} of {len(rows)} lines have no 'lat,lon'. "
+                "Nothing was written.\nAdd a coordinate to each:\n")
+            for r in missing:
+                sys.stderr.write(f"  line {r['line']}: {r['url']}\n")
+            return 1
+    else:
+        if a.lat is None or a.lon is None:
+            ap.error("missing required: --lat, --lon")
+        rows = [{"line": 1, "url": a.url, "lat": a.lat, "lon": a.lon,
+                 "city": a.city, "country": a.country}]
 
-    os.makedirs(a.out_dir, exist_ok=True)
-    path = os.path.join(a.out_dir, f"{slug}_hero.webp")
-    with open(path, "wb") as fh:
-        fh.write(hero)
+    makers, tours, paths, failures = {}, [], [], []
+    for r in rows:
+        try:
+            maker, tour, path = make_one(
+                url=r["url"], lat=r["lat"], lon=r["lon"],
+                city=r["city"] or a.city, country=r["country"] or a.country,
+                category=a.category, tags=tags,
+                slug=a.slug if len(rows) == 1 else None,
+                created_at=created, image_base=a.image_base, out_dir=a.out_dir)
+        except SystemExit as e:                       # one bad link must not
+            failures.append((r["line"], r["url"], str(e)))   # lose the rest
+            continue
+        # Same creator across several links collapses to one maker row.
+        makers[maker["id"]] = maker
+        tours.append(tour)
+        paths.append(path)
 
-    entry = build_entry(
-        url=a.url, meta=meta, slug=slug, maker=a.maker, lat=a.lat, lon=a.lon,
-        city=a.city, country=a.country, category=a.category,
-        tags=[t.strip() for t in a.tags.split(",") if t.strip()],
-        created_at=a.created or datetime.date.today().isoformat(),
-        image_base=a.image_base,
-    )
+    for line, url, why in failures:
+        sys.stderr.write(f"\n# SKIPPED line {line}: {url}\n#   {why}\n")
 
-    print(f"\n# Wrote {path} ({len(hero):,} bytes)", file=sys.stderr)
-    print(f"# Upload it to gh-pages at  images/{slug}_hero.webp", file=sys.stderr)
-    print(f"# Credited to {entry['sourceAuthor']} — check that is right before shipping.\n",
-          file=sys.stderr)
-    print(json.dumps(entry, indent=2, ensure_ascii=False))
-    return 0
+    sys.stderr.write(f"\n# {len(tours)} pin(s), {len(makers)} creator(s), "
+                     f"{len(failures)} skipped\n")
+    for p_ in paths:
+        sys.stderr.write(f"#   hero {p_}\n")
+    sys.stderr.write("# Upload the heroes to gh-pages under images/ before merging.\n")
+    for m in makers.values():
+        sys.stderr.write(f"#   creator: {m['displayName']}\n")
+    sys.stderr.write("\n")
+
+    print(json.dumps({"makers": list(makers.values()), "tours": tours},
+                     indent=2, ensure_ascii=False))
+    return 1 if failures and not tours else 0
 
 
 if __name__ == "__main__":
