@@ -18,54 +18,46 @@
 --   '🏆 kiubert 🏆' -- real sign-ups who have not published yet. Owner
 --   decision 2026-08-25: clear the test creators, keep the real accounts.
 --
--- The discriminator is mechanical rather than a judgement call: every test
--- creator was minted by scripts/make-link-pin.py and carries NO auth user,
--- while all seven real sign-ups do. That is asserted below, not assumed.
+-- ⚠️ WRITTEN AS ONE STATEMENT, DELIBERATELY, AND THE SHAPE IS THE LESSON.
+-- The first version of this file put the delete first and a tidy summary
+-- select last. The Supabase SQL Editor shows only the LAST result, so the
+-- owner ran it, saw the summary, and had no way to tell that the delete had
+-- matched nothing -- the four creators were still live afterwards. A
+-- destructive statement must BE the visible result, so `returning` is the
+-- receipt. For the same reason there is no explicit begin/commit: the editor
+-- manages its own transaction, and wrapping it invites a silent rollback.
 --
--- SAFE TO RE-RUN -- the second run deletes nothing and reports 0.
+-- SAFE TO RE-RUN -- the second run returns no rows.
 
-begin;
+delete from public.makers m
+where
+    -- (1) An explicit list. A pattern on the display name could one day match
+    --     a real creator who calls themselves something similar; four literal
+    --     uuids cannot match anything else, ever.
+    m.id in (
+        'fed471cd-70b8-5092-97de-fd4b71df6b41',  -- TikTok @tiktok
+        '6d73290a-7ca8-56fe-b6d3-93d319e35a4d',  -- YouTube @jawed
+        '4288a1c9-477d-58c4-8222-c0616335f3c1',  -- YouTube @Blippi
+        'bc528ec4-008a-5413-8773-32c54391c0fb'   -- Instagram @nasainternships
+    )
+    -- (2) No account behind it. If one of those ids were ever wrong and landed
+    --     on a real sign-up, this stops the delete dead.
+    and m.user_id is null
+    -- (3) And nothing published. ⚠️ THIS is the guard that protects the Atlas
+    --     studios, which ALSO have user_id null by design -- what saves them
+    --     is having tours. `tours.maker_id` is already `on delete restrict`,
+    --     so Postgres would refuse regardless; this states the intent instead
+    --     of relying on an error message.
+    and not exists (
+        select 1 from public.tours t where t.maker_id = m.id
+    )
+returning m.display_name, m.id;
 
-with gone as (
-    delete from public.makers m
-    where
-        -- (1) An explicit list. A pattern on the display name could one day
-        --     match a real creator who calls themselves something similar;
-        --     four literal uuids cannot match anything else, ever.
-        m.id in (
-            'fed471cd-70b8-5092-97de-fd4b71df6b41',  -- TikTok @tiktok
-            '6d73290a-7ca8-56fe-b6d3-93d319e35a4d',  -- YouTube @jawed
-            '4288a1c9-477d-58c4-8222-c0616335f3c1',  -- YouTube @Blippi
-            'bc528ec4-008a-5413-8773-32c54391c0fb'   -- Instagram @nasainternships
-        )
-        -- (2) No account behind it. If one of those ids were ever wrong and
-        --     landed on a real sign-up, this stops the delete dead.
-        and m.user_id is null
-        -- (3) And nothing published. ⚠️ THIS is the guard that protects the
-        --     Atlas studios, which ALSO have user_id null by design -- what
-        --     saves them is having tours. `tours.maker_id` is already
-        --     `on delete restrict`, so Postgres would refuse regardless; this
-        --     states the intent instead of relying on an error message.
-        and not exists (
-            select 1 from public.tours t where t.maker_id = m.id
-        )
-    returning m.id
-)
-select
-    (select count(*) from gone)                          as creators_removed,
-    (select count(*) from public.makers)                 as makers_remaining,
-    (select count(*) from public.makers m
-       where not exists (select 1 from public.tours t
-                          where t.maker_id = m.id))      as remaining_with_no_tours;
-
-commit;
-
--- Read-only receipt: every creator still served that has no tours. After this
--- runs it should list exactly the seven real sign-ups and none of the four
--- names above.
-select m.display_name,
-       case when m.user_id is null then 'no account -- investigate'
-            else 'real sign-up -- keep' end as kind
-from public.makers m
-where not exists (select 1 from public.tours t where t.maker_id = m.id)
-order by 2, 1;
+-- Expect FOUR rows back, naming the four creators above. Zero rows means the
+-- delete matched nothing -- see the note about the editor's role below.
+--
+-- ⚠️ IF IT RETURNS ZERO ROWS while those creators are still live, the likely
+-- cause is the role the editor is running as. `public.makers` has RLS and a
+-- public-read policy but no delete policy, so running as `anon` or
+-- `authenticated` filters the delete to zero rows and still reports success.
+-- Run as `postgres`, which bypasses RLS.
