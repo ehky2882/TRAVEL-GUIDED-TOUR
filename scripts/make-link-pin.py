@@ -55,6 +55,87 @@ PLATFORM_LABEL = {"tiktok": "TikTok", "youtube": "YouTube", "instagram": "Instag
 PLATFORM_EMOJI = {"tiktok": "\U0001F3B5", "youtube": "\u25B6\uFE0F", "instagram": "\U0001F4F7"}
 
 
+# 🔴 A WHITELIST, not a blacklist. The first version listed the tracking
+# parameters to strip and immediately missed one: a shared Short arrived as
+# `?is=VMBRxPqd_b5LBIJV` while the list only knew YouTube's `si`. Since the
+# tour id is uuid5 over sourceURL, an unstripped parameter means the SAME post
+# shared twice hashes to two ids and lands as two pins — so the failure is
+# silent duplication, and chasing new parameter names is a losing game.
+#
+# Across all three platforms exactly one query parameter is ever identity:
+# YouTube's `v` on a /watch URL. Everything else lives in the path.
+IDENTITY_PARAMS = {"youtube": {"v"}}
+
+
+def normalize_url(url: str) -> str:
+    """Keep only the query parameters that identify the post. Pure, so the
+    selftest covers it without a network."""
+    from urllib.parse import parse_qsl, urlencode, urlunparse
+    u = urlparse(url)
+    plat = platform_of(url)
+    if plat in IDENTITY_PARAMS:
+        keep = IDENTITY_PARAMS[plat]
+        kept = [(k, v) for k, v in parse_qsl(u.query) if k in keep]
+    elif plat == "other":
+        kept = parse_qsl(u.query)          # unknown host: change nothing
+    else:
+        kept = []                          # tiktok / instagram: id is in the path
+    return urlunparse((u.scheme, u.netloc, u.path, "", urlencode(kept), ""))
+
+
+def canonical_url(url: str) -> str:
+    """Follow a share link to the real post, then normalise it.
+
+    🔴 A TikTok share link is `tiktok.com/t/XXXX`, which has no `/video/{id}`
+    in its path — and that path is exactly what the app parses to build the
+    player. Storing the short form produces a pin that validates, uploads, and
+    renders a hero with NO PLAYER. Found by feeding the tool a real shared link.
+    """
+    out = subprocess.run(
+        ["curl", "-sSL", "-o", "/dev/null", "--max-time", "45",
+         "-A", "Dozent/1.0 (link-pin tool; +https://dozent.world)",
+         "-w", "%{url_effective}", url],
+        capture_output=True)
+    if out.returncode != 0:
+        raise SystemExit(f"COULD NOT VERIFY — could not resolve {url}")
+    return normalize_url(out.stdout.decode().strip() or url)
+
+
+def derivable_embed(url: str) -> str | None:
+    """Mirror of `LinkSource.embedURL` in Swift — what the app will actually
+    build for this URL.
+
+    ⚠️ This exists so the tool REFUSES a pin the app cannot play, rather than
+    writing one that looks fine everywhere except on screen. Keep it in step
+    with Models/Tour.swift.
+    """
+    parts = [c for c in urlparse(url).path.split("/") if c]
+    plat = platform_of(url)
+    if plat == "tiktok":
+        if "video" not in parts:
+            return None
+        i = parts.index("video")
+        vid = parts[i + 1] if i + 1 < len(parts) else ""
+        return f"https://www.tiktok.com/player/v1/{vid}" if vid.isdigit() else None
+    if plat == "youtube":
+        from urllib.parse import parse_qs
+        v = parse_qs(urlparse(url).query).get("v", [None])[0]
+        if not v and "shorts" in parts:
+            i = parts.index("shorts")
+            v = parts[i + 1] if i + 1 < len(parts) else None
+        if not v and "youtu.be" in (urlparse(url).hostname or ""):
+            v = parts[0] if parts else None
+        return f"https://www.youtube.com/embed/{v}" if v else None
+    if plat == "instagram":
+        for k in ("p", "reel", "tv"):
+            if k in parts:
+                i = parts.index(k)
+                if i + 1 < len(parts) and parts[i + 1]:
+                    return f"https://www.instagram.com/{k}/{parts[i + 1]}/embed"
+        return None
+    return None
+
+
 def handle_of(meta: dict, platform: str) -> str:
     """The creator's @handle, which is not where every platform puts it.
 
@@ -438,7 +519,41 @@ def selftest() -> int:
     check("batch reads city", rows[0]["city"], "Rome")
     check("batch leaves coords None", rows[1]["lat"], None)
 
-    total = 27
+    # --- canonical URLs --------------------------------------------------
+    # 🔴 TikTok stamps a fresh _t on every share. Without stripping it the same
+    # video shared twice hashes to two ids and lands as two pins.
+    check("strips tiktok share params",
+          normalize_url("https://www.tiktok.com/@a/video/123?_r=1&_t=ZP-99AI"),
+          "https://www.tiktok.com/@a/video/123")
+    check("keeps the youtube id",
+          normalize_url("https://www.youtube.com/watch?v=abc123&si=xyz&feature=share"),
+          "https://www.youtube.com/watch?v=abc123")
+    check("strips instagram igsh",
+          normalize_url("https://www.instagram.com/reel/ABC/?igsh=zzz"),
+          "https://www.instagram.com/reel/ABC/")
+    # 🔴 The one that caught the whitelist out: a real shared Short arrived as
+    # `?is=...`, which no blacklist knew about.
+    check("strips an unknown youtube share param",
+          normalize_url("https://www.youtube.com/shorts/hSbYvigS0Ic?is=VMBRxPqd_b5LBIJV"),
+          "https://www.youtube.com/shorts/hSbYvigS0Ic")
+    check("leaves an unknown host's query alone",
+          normalize_url("https://example.test/x?a=1"), "https://example.test/x?a=1")
+
+    # --- refuse a pin the app cannot play --------------------------------
+    # A share link has no /video/{id}, which is what the app parses.
+    check("short tiktok link yields no player",
+          derivable_embed("https://www.tiktok.com/t/ZP87xkgbd/"), None)
+    check("canonical tiktok link yields a player",
+          derivable_embed("https://www.tiktok.com/@a/video/7673253792879611166"),
+          "https://www.tiktok.com/player/v1/7673253792879611166")
+    check("youtube shorts yields a player",
+          derivable_embed("https://www.youtube.com/shorts/abc"),
+          "https://www.youtube.com/embed/abc")
+    check("instagram reel yields a player",
+          derivable_embed("https://www.instagram.com/x/reel/ABC/"),
+          "https://www.instagram.com/reel/ABC/embed")
+
+    total = 36
     if fails:
         print(f"SELFTEST FAILED — {len(fails)}/{total}")
         for f in fails:
@@ -455,6 +570,12 @@ def make_one(*, url, lat, lon, city, country, category, tags, slug,
     Shared by the single-link and batch paths so the two cannot drift.
     """
     import os
+    url = canonical_url(url)
+    if not derivable_embed(url):
+        raise SystemExit(
+            f"COULD NOT VERIFY — no player can be derived from {url}\n"
+            "  The app builds its embed from the URL path, so a pin with a URL\n"
+            "  it cannot parse would render a hero and never play.")
     plat = platform_of(url)
     meta = oembed(url)
     handle = handle_of(meta, plat)
