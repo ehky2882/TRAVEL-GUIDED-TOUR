@@ -49,10 +49,23 @@ enum AtlasTourSort: String, CaseIterable, Identifiable {
         ascending: Bool,
         from userLocation: CLLocation?
     ) -> [Tour] {
-        tours.enumerated()
+        sorted(tours, by: criterion, ascending: ascending, from: userLocation, tour: { $0 })
+    }
+
+    /// The same sort for a caller holding something richer than a `Tour` — the
+    /// list page carries `(item, tour)` pairs, because a row needs the
+    /// curator's note as well as the tour.
+    static func sorted<Element>(
+        _ elements: [Element],
+        by criterion: AtlasTourSort,
+        ascending: Bool,
+        from userLocation: CLLocation?,
+        tour: (Element) -> Tour
+    ) -> [Element] {
+        elements.enumerated()
             .sorted { lhs, rhs in
                 compare(
-                    lhs.element, rhs.element,
+                    tour(lhs.element), tour(rhs.element),
                     by: criterion, ascending: ascending, from: userLocation
                 ) ?? (lhs.offset < rhs.offset)
             }
@@ -107,11 +120,50 @@ enum AtlasTourSort: String, CaseIterable, Identifiable {
 /// criterion flips its direction; tapping another selects it at its default
 /// direction.
 struct AtlasSortMenu: View {
-    @Binding var criterion: AtlasTourSort
+    /// `nil` means the collection's **own** order — the curator's arrangement
+    /// on a list, newest-saved on Liked. Only offered when `naturalLabel` is
+    /// set; a maker feed has no such order, so its binding can never be nil.
+    @Binding var criterion: AtlasTourSort?
     @Binding var ascending: Bool
+    /// Names the natural order in the reader's words ("As arranged"). When nil
+    /// the menu offers the four criteria only.
+    var naturalLabel: String?
+
+    /// For a surface with no natural order of its own — the maker feed.
+    init(criterion: Binding<AtlasTourSort>, ascending: Binding<Bool>) {
+        self._criterion = Binding(
+            get: { criterion.wrappedValue },
+            // A nil can't arrive: the natural row is only rendered when
+            // `naturalLabel` is set, and this initialiser leaves it nil.
+            set: { if let value = $0 { criterion.wrappedValue = value } }
+        )
+        self._ascending = ascending
+        self.naturalLabel = nil
+    }
+
+    /// For a surface whose own order is a real choice the reader can return to.
+    init(criterion: Binding<AtlasTourSort?>, ascending: Binding<Bool>, naturalLabel: String) {
+        self._criterion = criterion
+        self._ascending = ascending
+        self.naturalLabel = naturalLabel
+    }
 
     var body: some View {
         Menu {
+            if let naturalLabel {
+                Button {
+                    criterion = nil
+                } label: {
+                    // No direction to show, so the active mark is a checkmark
+                    // rather than the chevron the reversible criteria carry.
+                    if criterion == nil {
+                        Label(naturalLabel, systemImage: "checkmark")
+                    } else {
+                        Text(naturalLabel)
+                    }
+                }
+            }
+
             ForEach(AtlasTourSort.allCases) { option in
                 Button {
                     if option == criterion {
@@ -135,7 +187,9 @@ struct AtlasSortMenu: View {
         .accessibilityLabel("Sort tours, currently \(activeLabel)")
     }
 
-    private var activeLabel: String { criterion.label(ascending: ascending) }
+    private var activeLabel: String {
+        criterion?.label(ascending: ascending) ?? naturalLabel ?? ""
+    }
 
     @ViewBuilder
     private func rowLabel(_ option: AtlasTourSort) -> some View {
