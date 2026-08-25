@@ -1,6 +1,28 @@
 import Foundation
 import CoreLocation
 
+/// 🔴 **`TourKind` DELIBERATELY HAS NO UNKNOWN-VALUE FALLBACK, and it is the
+/// only one of the four closed enums on this model that does not.**
+/// `StopTriggerMode`, `TourVideoRole` and `TourCategory` all decode an
+/// unfamiliar value to a safe default. `kind` must not, and the reason is not
+/// symmetry — it is that **rendering an unfamiliar pin as an ordinary tour is
+/// worse than not showing it at all.**
+///
+/// Look at what already exists: a link pin decoded as `.single` appears with a
+/// play button and no audio behind it. Whatever the *next* kind turns out to
+/// be, "some tour type this build has never heard of" is not a tour, and
+/// dressing it as one produces a control that lies. An unknown `kind` should
+/// **drop that one tour** — which the element-wise array decode in `ToursData`
+/// now does, at the cost of that tour and nothing else — never fall back to
+/// `.single`.
+///
+/// ⚠️ So if you are here to "tidy up" the inconsistency by giving this enum an
+/// `init(from:)` like its neighbours: that is the change this comment exists to
+/// stop. Owner's reasoning, not a style choice.
+///
+/// This is also why the split in `ToursData` matters more than tolerance ever
+/// could: a new kind belongs in its own top-level section, where no shipped
+/// build has to have an opinion about it.
 enum TourKind: String, Codable {
     case single
     case multiStop
@@ -179,6 +201,26 @@ enum TourVideoRole: String, Codable {
     /// almost nothing and keeps them all. It also matches how creator import
     /// is planned to work, which extracts the clip's audio to an MP3 anyway.
     case narration
+
+    /// An unfamiliar role becomes `.gallery` rather than throwing.
+    ///
+    /// Safe by construction: `.gallery` is b-roll, so the worst a
+    /// misunderstood clip can do is sit in the carousel and play on its own. It
+    /// never takes over the tour's transport. The opposite default would let a
+    /// value we did not understand seize the play bar.
+    ///
+    /// 🔴 **BEING OPTIONAL DOES NOT PROTECT THIS FIELD — that is the thing a
+    /// future reader will get wrong.** `Tour.videoRole` is `TourVideoRole?`,
+    /// and synthesised `decodeIfPresent` returns nil for an *absent* key or an
+    /// explicit `null`, but for a key that is PRESENT with an unfamiliar value
+    /// it delegates to this initialiser and PROPAGATES whatever it throws. So
+    /// before this fallback existed, `videoRole` was exactly as fragile as
+    /// `kind`, `primaryCategory` and `triggerMode`. Pinned by
+    /// `CatalogDecodeToleranceTests`.
+    init(from decoder: Decoder) throws {
+        let raw = try decoder.singleValueContainer().decode(String.self)
+        self = TourVideoRole(rawValue: raw) ?? .gallery
+    }
 }
 
 struct Tour: Codable, Identifiable, Hashable {

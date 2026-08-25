@@ -196,6 +196,15 @@ final class ToursDataDecodingTests: XCTestCase {
         XCTAssertThrowsError(try JSONDecoder().decode(Tour.self, from: json))
     }
 
+    /// 🔴 **`kind` IS THE ONE THAT STILL THROWS, ON PURPOSE.** Its three
+    /// neighbours — `triggerMode`, `primaryCategory`, `videoRole` — all fall
+    /// back to a safe default now. `kind` must not: a tour type this build has
+    /// never heard of, rendered as `.single`, gets a play button with no audio
+    /// behind it, and a control that lies is worse than a pin that is absent.
+    ///
+    /// The tour is not lost noisily either — the element-wise decode in
+    /// `ToursData` drops that one tour and counts it, which is the whole reason
+    /// this strictness is affordable. See `CatalogDecodeToleranceTests`.
     func test_decodingTour_badKind_throws() {
         // `kind` is a closed enum; "tripleStop" isn't one of the cases.
         let json = Data(#"""
@@ -219,7 +228,21 @@ final class ToursDataDecodingTests: XCTestCase {
         XCTAssertThrowsError(try JSONDecoder().decode(Tour.self, from: json))
     }
 
-    func test_decodingStop_badTriggerMode_throws() {
+    /// ⚠️ **CONTRACT DELIBERATELY CHANGED — this test used to be
+    /// `test_decodingStop_badTriggerMode_throws`.**
+    ///
+    /// Throwing here was the old, strict contract, and it is what made the
+    /// catalogue brittle: an unfamiliar `triggerMode` failed the stop, which
+    /// failed its tour, which failed the whole `[Tour]` array, which
+    /// `RemoteCatalogLoader`'s `try?` turned into a silent "no new content".
+    /// `StopTriggerMode` now decodes an unfamiliar value to `.manual`, which is
+    /// safe by construction — `ProximityMonitor` registers regions only for
+    /// `.geofenced` stops, so a mode we do not understand can never produce a
+    /// geofence that fires on its own.
+    ///
+    /// The strict case is not gone, it moved: `test_decodingTour_badKind_throws`
+    /// above still holds, because `TourKind` deliberately has no fallback.
+    func test_decodingStop_unknownTriggerMode_fallsBackToManual() throws {
         let json = Data(#"""
         {
           "id": "33333333-3333-3333-3333-333333333333",
@@ -233,7 +256,12 @@ final class ToursDataDecodingTests: XCTestCase {
           "triggerRadiusMeters": 30
         }
         """#.utf8)
-        XCTAssertThrowsError(try JSONDecoder().decode(Stop.self, from: json))
+        let stop = try JSONDecoder().decode(Stop.self, from: json)
+        XCTAssertEqual(stop.triggerMode, .manual)
+        // Everything else about the stop survives — the point is that one
+        // unfamiliar word costs nothing, not that the stop is degraded.
+        XCTAssertEqual(stop.triggerRadiusMeters, 30)
+        XCTAssertEqual(stop.audioDurationSeconds, 120)
     }
 
     // MARK: - Round trip
