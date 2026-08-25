@@ -99,51 +99,14 @@ struct LinkEmbedView: UIViewRepresentable {
 
     func makeCoordinator() -> Coordinator { Coordinator(loadedURL: embedURL) }
 
-    /// 🔴 A TAP ON THE VIDEO IS A LINK, AND SENDING IT OUT LAUNCHES THE OTHER APP.
-    ///
-    /// Instagram's embed wraps the media itself in an anchor —
-    /// `<a class="EmbeddedMedia" href="instagram.com/reel/CODE/…">` — so
-    /// pressing play arrives here as `.linkActivated` even though the player's
-    /// own JS also handles it. Opening that externally launches the Instagram
-    /// app, which is precisely the thing link pins exist to avoid.
-    ///
-    /// ⚠️ THIS DOES NOT REPRODUCE IN THE SIMULATOR. With no Instagram app
-    /// installed, `UIApplication.open` silently does nothing and the JS play
-    /// runs, so the embed looks perfect. It only fails on a real phone, which
-    /// is where the owner found it.
-    ///
-    /// So: a link pointing back at the post we are already showing is
-    /// swallowed — cancelled and NOT opened — leaving the tap to the player.
-    /// Anything genuinely outbound (the creator's profile, their stories, the
-    /// sound) still opens the real app, which is what a viewer wants there.
-    static func shouldOpenExternally(_ target: URL, embedURL: URL) -> Bool {
-        guard let t = URLComponents(url: target, resolvingAgainstBaseURL: false),
-              let e = URLComponents(url: embedURL, resolvingAgainstBaseURL: false)
-        else { return true }
-        guard t.host?.lowercased() == e.host?.lowercased() else { return true }
-
-        // The embed lives one path component below the post
-        // (…/reel/CODE/embed), so compare against the post's own path.
-        func normalised(_ path: String) -> String {
-            var p = path
-            if p.hasSuffix("/") { p.removeLast() }
-            if p.hasSuffix("/embed") { p.removeLast("/embed".count) }
-            return p.lowercased()
-        }
-        return normalised(t.path) != normalised(e.path)
-    }
-
     final class Coordinator: NSObject, WKNavigationDelegate {
         var loadedURL: URL?
-        let embedURL: URL
-        init(loadedURL: URL?) {
-            self.loadedURL = loadedURL
-            self.embedURL = loadedURL ?? URL(string: "https://invalid.invalid")!
-        }
+        init(loadedURL: URL?) { self.loadedURL = loadedURL }
 
-        /// Keep navigation inside the embed. A tap on the creator's handle is a
-        /// link out — it should open the real app rather than replacing the
-        /// player with a login wall. A tap on the video is not.
+        /// Keep navigation inside the embed. A tap on the creator's handle or
+        /// the sound name inside the player is a link out — it should open the
+        /// real app rather than replacing the player with a login wall, which
+        /// is what happens if a webview follows it.
         func webView(_ webView: WKWebView,
                      decidePolicyFor navigationAction: WKNavigationAction,
                      decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -153,8 +116,6 @@ struct LinkEmbedView: UIViewRepresentable {
                 return
             }
             decisionHandler(.cancel)
-            // Swallowed rather than opened: the player handles this tap.
-            guard LinkEmbedView.shouldOpenExternally(url, embedURL: embedURL) else { return }
             UIApplication.shared.open(url)
         }
     }
