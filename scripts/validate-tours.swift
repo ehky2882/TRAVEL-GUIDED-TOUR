@@ -20,6 +20,17 @@
 import Foundation
 
 // MARK: - Model mirror
+//
+// ⚠️ THESE ENUMS STAY STRICT EVEN THOUGH THE APP'S NOW TOLERATE UNKNOWN VALUES.
+// `StopTriggerMode`, `TourVideoRole` and `TourCategory` in `Models/` decode an
+// unfamiliar value to a safe default, so that a catalog published in the future
+// cannot break a build shipped today. That is a RUNTIME property, for data this
+// build was never going to understand.
+//
+// This is the authoring gate, and it runs against data someone is writing right
+// now. A typo here must fail loudly rather than land on a silent default and
+// ship a tour onto the wrong shelf. Do not "sync" these with the app's
+// tolerance — the two are meant to disagree.
 
 enum TourKind: String, Codable {
     case single
@@ -110,6 +121,31 @@ struct ToursFile: Codable {
     let tours: [Tour]
     /// Optional — catalogs published before the place layer have no such key.
     let places: [Place]?
+    /// Link pins, in their own top-level array so that a build predating
+    /// `TourKind.link` skips them as an unknown key instead of throwing on an
+    /// unknown `kind` and losing the entire catalog. Optional for the same
+    /// reason `places` is: a catalog published before the split has no such
+    /// key. See `TRAVEL GUIDED TOUR/Data/ToursData.swift` for the full
+    /// reasoning; this file only enforces it.
+    let linkPins: [Tour]?
+}
+
+extension ToursFile {
+    /// Every tour, labelled by where it actually sits in the file, so an error
+    /// message points at the array the reader has to go and edit.
+    ///
+    /// Every rule below runs over this rather than over `tours`, so a link pin
+    /// is validated exactly as strictly as it was when link pins lived inside
+    /// `tours` — moving them must not quietly exempt them from anything.
+    var locatedTours: [(location: String, tour: Tour)] {
+        // Labels are written into each literal rather than relying on the
+        // declared return type to add them: an array of unlabelled tuples does
+        // not implicitly convert to an array of labelled ones.
+        tours.enumerated().map { (location: "tours[\($0.offset)]", tour: $0.element) }
+            + (linkPins ?? []).enumerated().map { (location: "linkPins[\($0.offset)]", tour: $0.element) }
+    }
+
+    var allTours: [Tour] { tours + (linkPins ?? []) }
 }
 
 // MARK: - Finding accumulator
@@ -344,8 +380,23 @@ let makerById = Dictionary(uniqueKeysWithValues: file.makers.map { ($0.id, $0) }
 var seenTourIds = Set<UUID>()
 var seenStopIds = Set<UUID>()
 
-for (ti, t) in file.tours.enumerated() {
-    let tloc = "tours[\(ti)] '\(t.title)'"
+// 🔴 The split is only worth anything if it holds. A link pin left in `tours`
+// is the original bug — one unknown `kind` fails the whole catalog decode on
+// every build shipped before `TourKind.link`, silently. And a non-link tour
+// filed under `linkPins` would be invisible to those builds for no reason.
+for (i, t) in file.tours.enumerated() where t.kind == .link {
+    err("tours[\(i)] '\(t.title)'",
+        "a 'link' tour is in `tours` — link pins belong in the top-level `linkPins` array, " +
+        "or every build predating TourKind.link stops decoding the catalog at all")
+}
+for (i, t) in (file.linkPins ?? []).enumerated() where t.kind != .link {
+    err("linkPins[\(i)] '\(t.title)'",
+        "kind '\(t.kind.rawValue)' is in `linkPins` — only 'link' belongs there; " +
+        "an ordinary tour filed here is hidden from every build that skips the key")
+}
+
+for (tloc0, t) in file.locatedTours {
+    let tloc = "\(tloc0) '\(t.title)'"
 
     if !seenTourIds.insert(t.id).inserted {
         err(tloc, "duplicate tour id \(t.id)")
@@ -600,7 +651,10 @@ for (ti, t) in file.tours.enumerated() {
 if let places = file.places {
     var seenPlaceIds = Set<UUID>()
     var tourToPlace: [UUID: String] = [:]
-    let tourById = Dictionary(file.tours.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+    // `allTours`, not `tours`: a place legitimately names a link pin among
+    // its members (AMNH does), and looking those up in `tours` alone would
+    // report a real reference as an unknown tour.
+    let tourById = Dictionary(file.allTours.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
 
     for (i, place) in places.enumerated() {
         let loc = "places[\(i)] '\(place.name)'"
@@ -663,12 +717,13 @@ if let places = file.places {
 
 let errorCount   = findings.filter { $0.severity == .error }.count
 let warningCount = findings.filter { $0.severity == .warn  }.count
-let stopCount    = file.tours.reduce(0) { $0 + $1.stops.count }
+let stopCount    = file.allTours.reduce(0) { $0 + $1.stops.count }
 
 print("Atlas Tours.json validator")
 print("  file:    \(path)")
 print("  makers:  \(file.makers.count)")
 print("  tours:   \(file.tours.count) (\(stopCount) stops total)")
+print("  linkPins: \(file.linkPins?.count ?? 0)")
 print("  places:  \(file.places?.count ?? 0)")
 print("")
 
