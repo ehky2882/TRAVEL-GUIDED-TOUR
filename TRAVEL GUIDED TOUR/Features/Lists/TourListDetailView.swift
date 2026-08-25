@@ -1,45 +1,130 @@
 import SwiftUI
 
-/// A single TourList: its title/description + the ordered list of tours in it.
-/// Tapping a tour opens it (via the shared `TourPresenter` when no detail
-/// layer is up, else a push within the current stack). Editing (remove tours,
-/// delete the TourList) lives behind an Edit toggle.
-///
-/// Tours are resolved from `DataService` by id — a TourList stores only tour
+/// A single TourList: its tours, where they are, and what the owner said about
+/// them. Tours are resolved from `DataService` by id — a TourList stores only
 /// references, never duplicated content (design: `docs/lists-design.md`).
+///
+/// **Built on `PlaceView`'s structure, deliberately** (owner direction,
+/// 2026-08-19: *"I want playlists to look more consistent with everything
+/// else. I think the formatting for the places page is a good place to
+/// start"*). Before this it was a different-looking screen — a system nav bar
+/// where the others hide it, a 180 pt banner where the others use a hero
+/// carousel, and no tab strip at all. What the three pages now share, and must
+/// keep sharing:
+///
+///   - `secondaryBackground` ground and a hidden system nav bar.
+///   - A sticky chrome row parked by `.safeAreaInset(edge: .top)` — 44 pt
+///     capsules on a material bar, content scrolling *under* it.
+///   - `AtlasTabStrip` (GALLERY / MAP) above a swap zone.
+///   - `TourMediaCarousel` at the hero ratio, inset by `lg`, square corners.
+///   - Outer stack spacing `lg`, inner `md`, one horizontal `lg` on the body.
+///   - A 4-line description with an inline Read more.
+///   - Rows running edge to edge, with their padding inside.
+///
+/// **Three deliberate differences from a place**, each because a list is not a
+/// site: the carousel swipes the **tours' own heroes** (a list has no
+/// photographs of its own), there is **no GET DIRECTIONS** (a list is not
+/// anywhere), and the map plots **every tour in the list** rather than one pin.
 struct TourListDetailView: View {
-    let listId: UUID
-    /// Metadata for a list the viewer does **not** own, passed in by the
-    /// screen that already fetched it (a creator's maker page).
+    /// A named list, or Liked. See `TourListTarget` — Liked renders through
+    /// this same view rather than a screen of its own, so the two cannot drift.
+    let target: TourListTarget
+
+    /// Metadata the presenting screen already had in hand.
     ///
-    /// Without this the title would be blank: metadata used to be looked up in
-    /// `listService.myLists`, which by definition never contains someone
-    /// else's list. Passing it beats re-fetching — the caller has it already.
-    var preloaded: TourList? = nil
+    /// Load-bearing for a list the viewer does **not** own: metadata is looked
+    /// up in `listService.myLists`, which by definition never contains someone
+    /// else's list, so without this the title would be blank. Library and a
+    /// profile pass it for their own lists too — the row is already resolved
+    /// there, so passing it puts the title on the first frame.
+    private var preloaded: TourList? {
+        if case .list(_, let preloaded) = target { return preloaded }
+        return nil
+    }
+
+    /// The list's id, or nil for Liked — which has no `journeys` row at all,
+    /// and is why every `listService` call on this screen is guarded.
+    private var listId: UUID? {
+        if case .list(let id, _) = target { return id }
+        return nil
+    }
+
+    private var isLiked: Bool {
+        if case .liked = target { return true }
+        return false
+    }
+
+    /// Tears down the slide-up layer this screen is presented in.
+    ///
+    /// ⚠️ `@Environment(\.dismiss)` is not enough here and must not be relied
+    /// on: the layer is a UIKit modal presented by `BottomLayerController`,
+    /// not a sheet or a nav push, so SwiftUI has nothing to dismiss. The
+    /// presenter's own `dismiss()` is what brings the layer down, and it does
+    /// so without depending on an observer in a window the layer covers.
+    /// Nil only in a preview or a test host, where `dismiss()` is right.
+    var onDismiss: (() -> Void)? = nil
 
     @Environment(TourListService.self) private var listService
     @Environment(DataService.self) private var dataService
+    /// Liked's contents. Not a `journeys` row — that is what makes Liked work
+    /// signed out, and why it can never be renamed, shared or deleted.
+    ///
+    /// Optional because `MakerView` reads it optionally too: not every layer
+    /// that can reach a list injects every service, and a required lookup
+    /// crashes where one is missing. The nil branch asserts in debug so a
+    /// dropped injection fails in the simulator rather than shipping as an
+    /// empty Liked nobody can explain.
+    @Environment(LibraryStore.self) private var libraryStore: LibraryStore?
     @Environment(TourPresenter.self) private var tourPresenter
     /// Optional: this screen is reachable from the UIKit maker layer, which
     /// doesn't carry every service. A required lookup crashes there.
     @Environment(AuthService.self) private var authService: AuthService?
-    /// Optional for the same reason — not every layer injects it.
-    @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
     @Environment(\.dismiss) private var dismiss
 
     @State private var items: [TourListItem] = []
     @State private var isLoading = true
     @State private var isSaving = false
+
+    /// The creator whose page "Go to creator" pushes.
+    ///
+    /// ⚠️ Pushed in-stack, deliberately, rather than presented through
+    /// `MakerPresenter`. This screen is a slide-up layer now, and stacking a
+    /// maker layer over it means asking an observer in the covered main window
+    /// to run — the class of bug that made the place pin dead on a maker page
+    /// (#532). Tour detail reaches a creator the same way and for the same
+    /// reason: back returns you to the list you were reading.
+    @State private var makerToPush: Maker?
     @State private var showingShareVisibilityPrompt = false
     @State private var isEditing = false
     @State private var showingDeleteConfirm = false
     @State private var showingEditDetails = false
     @State private var noteTarget: NoteTarget?
+    @State private var topSectionTab: TopSectionTab = .gallery
+    @State private var isDescriptionExpanded = false
+
+    init(target: TourListTarget, onDismiss: (() -> Void)? = nil) {
+        self.target = target
+        self.onDismiss = onDismiss
+    }
+
+    private enum TopSectionTab: String, CaseIterable, Identifiable {
+        case gallery = "Gallery"
+        case map = "Map"
+        var id: String { rawValue }
+    }
+
+    /// The same empirical break point tour detail and the place page use — 4
+    /// lines of 15 pt body at content width. A character count avoids a
+    /// `GeometryReader` round-trip on every body eval, which would fight the
+    /// truncation animation.
+    private static let descriptionPreviewLineLimit = 4
+    private static let descriptionOverflowThreshold = 240
 
     /// The list's metadata — yours from the service, someone else's from
     /// whoever pushed this screen.
     private var journey: TourList? {
-        listService.myLists.first(where: { $0.id == listId }) ?? preloaded
+        guard let listId else { return nil }
+        return listService.myLists.first(where: { $0.id == listId }) ?? preloaded
     }
 
     /// Whether the viewer owns this list. Drives every editing affordance:
@@ -47,179 +132,470 @@ struct TourListDetailView: View {
     /// offering a Delete button that silently fails is worse than not offering
     /// it.
     private var isOwner: Bool {
-        listService.myLists.contains { $0.id == listId }
+        guard let listId else { return false }
+        return listService.myLists.contains { $0.id == listId }
     }
+
+    /// Whether to draw the bookmark capsule at all.
+    ///
+    /// Absent on your own list (saving a list you own means nothing) and on
+    /// **Liked**, which no one can save: it isn't a `journeys` row, so there is
+    /// nothing to save a reference to — for you or for anyone looking at
+    /// yours. That is a permanent fact about Liked rather than a signed-out
+    /// state, which is why it is absent here rather than drawn and greyed.
+    private var showsBookmark: Bool { !isLiked && !isOwner }
 
     /// Saving is account-backed (`saved_journeys` is keyed on the user), so
-    /// unlike bookmarking a tour it can't work signed out. Hide the control
-    /// rather than offer one that fails — the same choice the Follow button
-    /// makes on a maker page.
+    /// unlike bookmarking a tour it can't work signed out.
+    ///
+    /// This gates whether the bookmark *works*, not whether it is *drawn* —
+    /// signed out the capsule stays on the row and greys (owner decision,
+    /// 2026-08-20). It also covers your own list, where saving is meaningless
+    /// because the list is already yours; that one is not drawn at all.
     private var canSave: Bool {
-        !isOwner && authService?.isSignedIn == true
+        showsBookmark && authService?.isSignedIn == true
     }
 
-    private var isSavedList: Bool { listService.isListSaved(listId) }
+    private var isSavedList: Bool {
+        guard let listId else { return false }
+        return listService.isListSaved(listId)
+    }
+
+    /// The screen's contents.
+    ///
+    /// A named list holds `items` fetched once; **Liked is read straight from
+    /// the store on every evaluation**, so un-saving a tour anywhere in the app
+    /// removes the row here without a refresh. `TourListItem.id` is the tour
+    /// id, so Liked's synthetic items work everywhere the real ones do — the
+    /// rows, the carousel, the map and the count all stay one code path.
+    private var effectiveItems: [TourListItem] {
+        guard isLiked else { return items }
+        let ids: [UUID]
+        if case .liked(_, let tourIds) = target, let tourIds {
+            ids = tourIds
+        } else {
+            guard let libraryStore else {
+                assertionFailure("Liked opened without a LibraryStore in the environment")
+                return []
+            }
+            // Newest saved first — the order `savedEntries` already applies,
+            // and the one thing about Liked the user cannot rearrange.
+            ids = libraryStore.savedEntries.map(\.tourId)
+        }
+        return ids.enumerated().map { TourListItem(tourId: $0.element, position: $0.offset, note: nil) }
+    }
 
     /// Resolved (tour, note) pairs in TourList order — dropping any tour id no
     /// longer in the catalog.
     private var resolvedTours: [(item: TourListItem, tour: Tour)] {
-        items.compactMap { item in
+        effectiveItems.compactMap { item in
             guard let tour = dataService.tour(by: item.tourId) else { return nil }
             return (item, tour)
         }
     }
 
-    /// Cover image source: an explicit `coverImageURL` if set, else the first
-    /// resolved tour's hero. `nil` (no banner) for an empty TourList with no
-    /// cover set.
-    private var coverImageName: String? {
-        if let url = journey?.coverImageURL, !url.isEmpty { return url }
-        return resolvedTours.first?.tour.heroImageURL
+    var body: some View {
+        scrollBody
+            // Shared with tour detail and the place page — see `atlasChromeRow`,
+            // including why the fill is opaque and must not sit over a material.
+            // It hides the system nav bar; the `.navigationTitle` set below is
+            // kept purely so VoiceOver has a label for a bar nobody sees.
+            .atlasChromeRow { chromeControls }
+            .navigationDestination(item: $makerToPush) { maker in
+                MakerView(maker: maker)
+            }
+            // Kept for VoiceOver: the visible title now lives in the body's
+            // masthead, as it does on tour detail and the place page.
+            .navigationTitle(screenTitle)
+            .inlineNavigationBarTitle()
+            .confirmationDialog(
+                "Delete this list? This can't be undone.",
+                isPresented: $showingDeleteConfirm,
+                titleVisibility: .visible
+            ) {
+                Button("Delete list", role: .destructive) { deleteList() }
+                Button("Cancel", role: .cancel) {}
+            }
+            .confirmationDialog(
+                "Only you can see this list. Anyone you send the link to won't be able to open it.",
+                isPresented: $showingShareVisibilityPrompt,
+                titleVisibility: .visible
+            ) {
+                Button("Make visible on my profile") { makeVisibleForSharing() }
+                Button("Cancel", role: .cancel) {}
+            }
+            .sheet(isPresented: $showingEditDetails) {
+                if let journey {
+                    TourListEditorSheet(editing: journey)
+                }
+            }
+            .sheet(item: $noteTarget) { entry in
+                TourListNoteEditorSheet(
+                    tourTitle: entry.tourTitle,
+                    initialNote: entry.note
+                ) { newNote in
+                    saveNote(newNote, for: entry.tourId)
+                }
+            }
+            // Liked needs no fetch — it is read from the on-device store — so
+            // it never shows the spinner either.
+            .task(id: listId) {
+                guard let listId else {
+                    isLoading = false
+                    return
+                }
+                items = await listService.items(of: listId)
+                isLoading = false
+            }
+            // Only when the Save item can appear, and only if we don't already
+            // know — Library's load fills this in for the common case.
+            .task(id: canSave) {
+                guard canSave, !listService.hasLoadedSaves else { return }
+                await listService.loadSavedListIds()
+            }
     }
 
-    var body: some View {
+    // MARK: - Chrome
+
+    /// Close (leading) · bookmark · the `…` menu (trailing) — the same
+    /// capsules, in the same places, as tour detail and the place page.
+    ///
+    /// The leading control is an **X**, matching them. It was a back chevron
+    /// while this screen pushed onto whichever nav stack you came from; it now
+    /// slides up as its own layer from every entry point (owner direction,
+    /// 2026-08-20), so there is no stack behind it to go back to — closing it
+    /// slides it back down.
+    @ViewBuilder
+    private var chromeControls: some View {
+        Button { close() } label: {
+            AtlasChromeButton("xmark")
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Close")
+
+        Spacer()
+
+        // Saving lives in the menu as well, but a bookmark you can see is
+        // worth a capsule of its own — the place page makes the same call.
+        //
+        // ⚠️ Signed out it is drawn and greyed, never removed (owner
+        // decision, 2026-08-20). A control that vanishes changes the row's
+        // shape depending on who is looking; a dimmed one says saving
+        // belongs here and isn't available yet. Your own list is the one
+        // case with no bookmark at all — saving a list you already own
+        // means nothing, so there is no disabled state to show — and
+        // neither is Liked, which nobody can save. See `showsBookmark`.
+        if showsBookmark {
+            Button { toggleSaved() } label: {
+                AtlasChromeButton(isSavedList ? "bookmark.fill" : "bookmark",
+                                  enabled: canSave)
+            }
+            .buttonStyle(.plain)
+            .disabled(!canSave || isSaving)
+            .accessibilityLabel(
+                canSave
+                    ? (isSavedList ? "Remove from your saved lists" : "Save this list")
+                    : "Save this list — sign in required"
+            )
+        }
+
+        // ⚠️ Liked carries no `…`, and not as an oversight: every item
+        // the menu holds acts on a `journeys` row Liked does not have.
+        // It cannot be shared (there is no link to send), renamed, made
+        // visible or deleted — Liked is permanent by construction, the
+        // owner's own decision of 2026-07-27. An empty menu, or one of
+        // permanently-greyed items, would say less than no menu does.
+        if !isLiked {
+            overflowMenu
+        }
+    }
+
+    // MARK: - Body
+
+    private var scrollBody: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                if let coverImageName {
-                    HeroImageView(
-                        imageName: coverImageName,
-                        height: 180,
-                        cornerRadius: 0,
-                        category: resolvedTours.first?.tour.primaryCategory
-                    )
+            VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
+                topSection
+                    .padding(.top, AtlasSpacing.md)
+
+                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                    masthead
+                    if let description = journey?.description, !description.isEmpty {
+                        descriptionSection(description)
+                    }
                 }
+                .padding(.horizontal, AtlasSpacing.lg)
 
-                header
+                // Rows run edge to edge — their padding is inside, so the
+                // dividers reach the screen edges the way a list's do. That is
+                // why this sits outside the padded stack above.
+                tourList
 
-                if isLoading {
-                    ProgressView()
-                        .frame(maxWidth: .infinity)
-                        .padding(.top, AtlasSpacing.xl)
-                } else if resolvedTours.isEmpty {
-                    emptyState
-                } else {
-                    LazyVStack(alignment: .leading, spacing: 0) {
-                        ForEach(Array(resolvedTours.enumerated()), id: \.element.item.id) { index, pair in
-                            tourRow(index: index, tour: pair.tour, note: pair.item.note)
-                            if pair.item.id != resolvedTours.last?.item.id {
-                                Divider()
-                            }
+                // The bottom module floats over every screen from a higher
+                // window, so the last row has to reserve its height or it can
+                // never be tapped.
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
+        }
+    }
+
+    // MARK: - Top section (Gallery / Map)
+
+    private var topSection: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            AtlasTabStrip(tabs: TopSectionTab.allCases, selection: $topSectionTab)
+            Group {
+                switch topSectionTab {
+                case .gallery: imageSection
+                case .map:     mapContent
+                }
+            }
+        }
+    }
+
+    /// The **same** carousel the tour page, the player and the place page use.
+    ///
+    /// A list has no photographs of its own, so it swipes **the heroes of the
+    /// tours in it, in list order** (owner direction 2026-08-19). An explicit
+    /// `coverImageURL` still leads when the owner has set one.
+    private var imageSection: some View {
+        TourMediaCarousel(
+            heroImageURL: carouselHero,
+            additionalImageURLs: carouselRest,
+            videoURLs: nil,
+            height: nil,   // takes AtlasSpacing.heroAspectRatio
+            category: resolvedTours.first?.tour.primaryCategory
+        )
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// Every tour hero, in list order, with an explicit cover in front of them.
+    private var carouselImages: [String] {
+        var urls: [String] = []
+        if let cover = journey?.coverImageURL, !cover.isEmpty { urls.append(cover) }
+        urls.append(contentsOf: resolvedTours.map(\.tour.heroImageURL))
+        // A tour whose hero *is* the cover would otherwise show twice in a row.
+        var seen = Set<String>()
+        return urls.filter { seen.insert($0).inserted }
+    }
+
+    private var carouselHero: String { carouselImages.first ?? "" }
+    private var carouselRest: [String]? {
+        let rest = Array(carouselImages.dropFirst())
+        return rest.isEmpty ? nil : rest
+    }
+
+    /// Every tour in the list, clustered, with the stacked cards a doubled-up
+    /// pin needs. The same component the maker page uses — see `TourSetMap`
+    /// for why that behaviour can't be skipped.
+    private var mapContent: some View {
+        TourSetMap(
+            tours: resolvedTours.map(\.tour),
+            places: dataService.places,
+            // A list holds other people's tours, so each card names its own
+            // maker rather than assuming one.
+            makerForTour: { dataService.maker(for: $0) },
+            countLabel: { count in
+                switch count {
+                case 0: return "Nothing on the map yet"
+                case 1: return "1 tour on the map"
+                default: return "\(count) tours on the map"
+                }
+            },
+            onOpenTour: { tourId in
+                guard let tour = dataService.tour(by: tourId) else { return }
+                openTour(tour)
+            },
+            onOpenPlace: { place in
+                // No place presenter is reliably injected on every path that
+                // reaches a list, so open the place's tours where we are.
+                guard let first = dataService.rankedTours(at: place).first else { return }
+                openTour(first)
+            }
+        )
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    // MARK: - Masthead + description
+
+    private var masthead: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(screenTitle.uppercased())
+                .font(AtlasTypography.body)
+                .foregroundStyle(AtlasColors.primaryText)
+                .fixedSize(horizontal: false, vertical: true)
+
+            let metaLine = [ownerName, onlyMeText].compactMap { $0 }.joined(separator: " · ")
+            if !metaLine.isEmpty {
+                Text(metaLine)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .padding(.top, 6)
+            }
+        }
+    }
+
+    /// The list's name. Liked is called Liked everywhere it appears — in
+    /// Library's row, in the "Save to…" sheet, and here.
+    private var screenTitle: String {
+        if isLiked { return "Liked" }
+        return journey?.title ?? "List"
+    }
+
+    /// Whose list this is — only on someone else's, since on your own it would
+    /// just be your own name.
+    private var ownerName: String? {
+        if case .liked(let owner, _) = target { return owner }
+        guard !isOwner, let journey else { return nil }
+        return TourListOwner.name(of: journey, in: dataService)
+    }
+
+    /// Only flag the exception. Visible is the normal state, so labelling it
+    /// says nothing; "Only me" is the fact worth knowing — and on someone
+    /// else's list it is redundant either way, since you could not be here.
+    private var onlyMeText: String? {
+        (isOwner && journey?.isPublic == false) ? "Only me" : nil
+    }
+
+    /// Truncated to 4 lines with an inline toggle, like the other two pages.
+    /// Untruncated, a long description pushes the tours off the screen — on
+    /// the one page whose whole purpose is that list.
+    private func descriptionSection(_ description: String) -> some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+            Text(description)
+                .font(AtlasTypography.body)
+                .foregroundStyle(AtlasColors.primaryText)
+                .lineLimit(isDescriptionExpanded ? nil : Self.descriptionPreviewLineLimit)
+                .fixedSize(horizontal: false, vertical: true)
+                .animation(.easeInOut(duration: 0.2), value: isDescriptionExpanded)
+
+            if description.count > Self.descriptionOverflowThreshold {
+                Button {
+                    withAnimation(.easeInOut(duration: 0.2)) { isDescriptionExpanded.toggle() }
+                } label: {
+                    Text(isDescriptionExpanded ? "Show less" : "Read more")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(isDescriptionExpanded ? "Show less description" : "Read more description")
+            }
+        }
+    }
+
+    /// Three cases, because an empty screen should say what would fill it —
+    /// and **someone else's empty Liked must not tell you to go save
+    /// something**, which is the one the old screen got right and is kept.
+    private var emptyStateMessage: String {
+        if isLiked {
+            if let ownerName { return "\(ownerName) hasn't saved any tours." }
+            return "Tap the bookmark on any tour and it lands here in Liked. Sign in to sort your tours into your own lists."
+        }
+        return "Open any tour, tap Save to…, and pick this list."
+    }
+
+    // MARK: - The tours
+
+    /// The list itself, shaped like the place page's tour list: a brass count
+    /// header over rows that run edge to edge with their padding inside.
+    ///
+    /// The count is **just the number** — owner direction 2026-08-19, dropping
+    /// the place page's "AVAILABLE", which reads oddly for a list you made.
+    /// The trailing slot the place page uses to state its sort rule is
+    /// deliberately empty here: a list's order is whatever its owner arranged,
+    /// so there is no rule to state.
+    private var tourList: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            if !resolvedTours.isEmpty {
+                Text(resolvedTours.count == 1 ? "1 TOUR" : "\(resolvedTours.count) TOURS")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.accent)
+                    .padding(.horizontal, AtlasSpacing.lg)
+            }
+
+            if isLoading {
+                ProgressView()
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, AtlasSpacing.xl)
+            } else if resolvedTours.isEmpty {
+                emptyState
+            } else {
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    ForEach(resolvedTours, id: \.item.id) { pair in
+                        tourRow(tour: pair.tour, note: pair.item.note)
+
+                        if pair.item.id != resolvedTours.last?.item.id {
+                            Divider().padding(.leading, AtlasSpacing.lg)
                         }
                     }
                 }
             }
-            .padding(.horizontal, AtlasSpacing.lg)
-            .padding(.top, AtlasSpacing.md)
-        }
-        .background(AtlasColors.secondaryBackground)
-        .navigationTitle(journey?.title ?? "List")
-        .inlineNavigationBarTitle()
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            Color.clear.frame(height: AtlasBottomModule.height())
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                overflowMenu
-            }
-        }
-        .confirmationDialog(
-            "Delete this list? This can't be undone.",
-            isPresented: $showingDeleteConfirm,
-            titleVisibility: .visible
-        ) {
-            Button("Delete list", role: .destructive) { deleteList() }
-            Button("Cancel", role: .cancel) {}
-        }
-        .confirmationDialog(
-            "Only you can see this list. Anyone you send the link to won't be able to open it.",
-            isPresented: $showingShareVisibilityPrompt,
-            titleVisibility: .visible
-        ) {
-            Button("Make visible on my profile") { makeVisibleForSharing() }
-            Button("Cancel", role: .cancel) {}
-        }
-        .sheet(isPresented: $showingEditDetails) {
-            if let journey {
-                TourListEditorSheet(editing: journey)
-            }
-        }
-        .sheet(item: $noteTarget) { target in
-            TourListNoteEditorSheet(
-                tourTitle: target.tourTitle,
-                initialNote: target.note
-            ) { newNote in
-                saveNote(newNote, for: target.tourId)
-            }
-        }
-        .task(id: listId) {
-            items = await listService.items(of: listId)
-            isLoading = false
-        }
-        // Only when the bookmark is actually on screen, and only if we don't
-        // already know — Library's load fills this in for the common case.
-        .task(id: canSave) {
-            guard canSave, !listService.hasLoadedSaves else { return }
-            await listService.loadSavedListIds()
         }
     }
 
-    private var header: some View {
-        VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-            if let journey, let description = journey.description, !description.isEmpty {
-                Text(description)
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            HStack(spacing: AtlasSpacing.xs) {
-                Text(resolvedTours.count == 1 ? "1 tour" : "\(resolvedTours.count) tours")
-                // Only flag the exception. Visible is the normal state now, so
-                // labelling it says nothing; "Only me" is the fact worth
-                // knowing. And on someone else's list it's redundant either
-                // way — you can only be here because you can see it.
-                if isOwner, journey?.isPublic == false {
-                    Text("·")
-                    Text("Only me")
-                }
-            }
-            .font(AtlasTypography.caption)
-            .foregroundStyle(AtlasColors.secondaryText)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    private func tourRow(index: Int, tour: Tour, note: String?) -> some View {
-        HStack(alignment: .center, spacing: AtlasSpacing.md) {
-            Text("\(index + 1)")
-                .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.secondaryText)
-                .frame(width: 20, alignment: .leading)
-
+    /// One tour in the list.
+    ///
+    /// **The place page's row, plus the two things only a list has**: the
+    /// curator's note, and — in edit mode — reorder and remove. Everything
+    /// else is deliberately identical (56 pt hero, WALK pill, price badge,
+    /// maker · duration, trailing chevron) so a user scanning tours never has
+    /// to learn a second row format.
+    ///
+    /// ⚠️ **No position number.** A list is ordered, but the sequence of rows
+    /// already shows that, and a leading number column would push the hero in
+    /// and break the match with every other tour row in the app. Order is made
+    /// *actionable* by the arrows in edit mode, which is where it matters.
+    @ViewBuilder
+    private func tourRow(tour: Tour, note: String?) -> some View {
+        HStack(spacing: AtlasSpacing.sm) {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 56,
-                cornerRadius: 0,
+                cornerRadius: AtlasSpacing.xs,
                 category: tour.primaryCategory
             )
             .frame(width: 56)
 
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(tour.title)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(tour.title.uppercased())
                     .font(AtlasTypography.body)
-                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
-                Text(AtlasFormatters.duration(seconds: tour.totalDurationSeconds))
+                Text(rowSubtitle(for: tour))
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
 
+                // 🔴 Badges sit BELOW the metadata, not above the title — owner
+                // decision 2026-08-25. Above the title they took a line of their
+                // own, so a walk with a two-line title ran to four rows with the
+                // pill stranded at the top, furthest from the information it
+                // qualifies. A fourth row is fine; the pill being adrift was not.
+                //
+                // ⚠️ `PlaceView` and `TourListDetailView` carry this row
+                // byte-identically by design. Change one and change the other.
+                HStack(spacing: AtlasSpacing.xs) {
+                    if tour.kind == .multiStop {
+                        Text("WALK")
+                            .font(.system(size: 11, weight: .regular, design: .monospaced))
+                            .foregroundStyle(AtlasColors.background)
+                            .padding(.horizontal, 7)
+                            .padding(.vertical, 2)
+                            .background(AtlasColors.accent, in: Capsule())
+                    }
+                    TourPriceBadge(tour: tour)
+                }
+
+                // The curator's voice — the one thing a list row carries that
+                // no other tour row in the app does.
                 if let note, !note.isEmpty {
                     Text(note)
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.tertiaryText)
                         .lineLimit(2)
+                        .padding(.top, 1)
                 }
 
                 if isEditing {
@@ -229,29 +605,41 @@ struct TourListDetailView: View {
                         Label(note?.isEmpty ?? true ? "Add note" : "Edit note",
                               systemImage: "text.bubble")
                             .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.mapPin)
+                            .foregroundStyle(AtlasColors.accent)
                     }
                     .buttonStyle(.plain)
                     .padding(.top, 2)
                 }
             }
 
-            Spacer()
+            Spacer(minLength: 0)
 
             if isEditing {
                 editingControls(for: tour.id, tourTitle: tour.title)
             } else {
                 Image(systemName: "chevron.right")
-                    .font(AtlasTypography.caption)
+                    .font(.system(size: 15, weight: .regular))
                     .foregroundStyle(AtlasColors.tertiaryText)
             }
         }
         .padding(.vertical, AtlasSpacing.sm)
+        .padding(.horizontal, AtlasSpacing.lg)
         .contentShape(Rectangle())
         .onTapGesture {
             guard !isEditing else { return }
             openTour(tour)
         }
+    }
+
+    /// `maker · N stops · duration` — the place page's subtitle exactly. A
+    /// list holds other people's tours, so naming the maker matters more here
+    /// than anywhere: two rows may well be by two different creators.
+    private func rowSubtitle(for tour: Tour) -> String {
+        var parts: [String] = []
+        if let maker = dataService.maker(for: tour) { parts.append(maker.displayName) }
+        if tour.kind == .multiStop { parts.append("\(tour.stops.count) stops") }
+        parts.append(AtlasFormatters.duration(seconds: tour.totalDurationSeconds))
+        return parts.joined(separator: " · ")
     }
 
     /// Trailing per-row controls in edit mode: move up / down (reorder) + remove.
@@ -290,10 +678,10 @@ struct TourListDetailView: View {
 
     private var emptyState: some View {
         VStack(spacing: AtlasSpacing.sm) {
-            Text("No tours yet")
+            Text(isLiked && ownerName != nil ? "Nothing saved yet" : "No tours yet")
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
-            Text("Open any tour, tap Save to…, and pick this list.")
+            Text(emptyStateMessage)
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)
@@ -312,6 +700,12 @@ struct TourListDetailView: View {
     /// items; someone else's gets Save and a way to their profile. Neither
     /// menu shows an item that would fail: RLS is the real gate, but offering
     /// Delete on a list you don't own would be a lie.
+    ///
+    /// ⚠️ The label is `AtlasChromeButton("ellipsis")`, like every other chrome
+    /// control on this row — never a bare `ellipsis.circle`. That glyph draws
+    /// its own ring, so it sits in no 44pt capsule and states no colour, which
+    /// leaves it reading the environment accent and painting gold beside two
+    /// neutral capsules. It shipped that way and the owner caught it on device.
     @ViewBuilder
     private var overflowMenu: some View {
         Menu {
@@ -333,21 +727,23 @@ struct TourListDetailView: View {
                 }
             } else {
                 Section {
-                    if canSave {
-                        Button {
-                            toggleSaved()
-                        } label: {
-                            Label(
-                                isSavedList ? "Saved to your lists" : "Save to your lists",
-                                systemImage: isSavedList ? "bookmark.fill" : "bookmark"
-                            )
-                        }
-                        .disabled(isSaving)
+                    // Drawn-and-disabled signed out, matching the bookmark
+                    // capsule above it. Showing the capsule greyed while the
+                    // menu simply omitted the same action would be the split
+                    // treatment this row exists to avoid.
+                    Button {
+                        toggleSaved()
+                    } label: {
+                        Label(
+                            isSavedList ? "Saved to your lists" : "Save to your lists",
+                            systemImage: isSavedList ? "bookmark.fill" : "bookmark"
+                        )
                     }
+                    .disabled(!canSave || isSaving)
 
                     if let ownerMaker {
                         Button {
-                            makerPresenter?.present(ownerMaker)
+                            makerToPush = ownerMaker
                         } label: {
                             Label("Go to creator", systemImage: "person.crop.circle")
                         }
@@ -355,8 +751,8 @@ struct TourListDetailView: View {
                 }
             }
         } label: {
-            Image(systemName: "ellipsis.circle")
-                .accessibilityLabel("List options")
+            AtlasChromeButton("ellipsis")
+                .accessibilityLabel("More options")
         }
     }
 
@@ -410,14 +806,15 @@ struct TourListDetailView: View {
 
     // MARK: - Actions
 
-    /// Open a tour. Within a pushed nav stack (this view) with no slide-up
-    /// layer active, present via the shared presenter; if a layer is already
-    /// up, that presenter call still swaps its content correctly.
+    /// Open a tour through the shared presenter — the tour layer stacks over
+    /// this one, exactly as it does over the place page, and if a tour is
+    /// already up the presenter swaps its content correctly.
     private func openTour(_ tour: Tour) {
         tourPresenter.present(tour)
     }
 
     private func remove(_ tourId: UUID) {
+        guard let listId else { return }
         Task {
             try? await listService.removeTour(tourId, from: listId)
             items = await listService.items(of: listId)
@@ -427,15 +824,17 @@ struct TourListDetailView: View {
     /// Move a tour one slot up/down. Reorders `items` optimistically (the list
     /// follows array order) then persists the new positions.
     private func move(_ tourId: UUID, up: Bool) {
-        guard let idx = items.firstIndex(where: { $0.tourId == tourId }) else { return }
-        let target = up ? idx - 1 : idx + 1
-        guard items.indices.contains(target) else { return }
-        items.swapAt(idx, target)
+        guard let listId,
+              let idx = items.firstIndex(where: { $0.tourId == tourId }) else { return }
+        let destination = up ? idx - 1 : idx + 1
+        guard items.indices.contains(destination) else { return }
+        items.swapAt(idx, destination)
         let ordered = items.map(\.tourId)
         Task { try? await listService.reorder(ordered, in: listId) }
     }
 
     private func saveNote(_ note: String, for tourId: UUID) {
+        guard let listId else { return }
         Task {
             try? await listService.setNote(note, for: tourId, in: listId)
             items = await listService.items(of: listId)
@@ -448,8 +847,20 @@ struct TourListDetailView: View {
     /// the list — so unlike the tour bookmark it toggles both ways with no
     /// confirmation. The tour bookmark can't, because there un-saving is the
     /// only way to lose a save.
+    /// Bring the layer down. Falls back to SwiftUI's `dismiss` only where no
+    /// presenter wired us up — a preview or a test host.
+    private func close() {
+        if let onDismiss {
+            onDismiss()
+        } else {
+            dismiss()
+        }
+    }
+
     private func toggleSaved() {
-        guard let journey, !isSaving else { return }
+        // `canSave` is checked here as well as on the two controls: both are
+        // drawn signed out now, so the guard is what makes "disabled" mean it.
+        guard let journey, let listId, canSave, !isSaving else { return }
         isSaving = true
         Task {
             if isSavedList {
@@ -462,9 +873,13 @@ struct TourListDetailView: View {
     }
 
     private func deleteList() {
+        guard let listId else { return }
         Task {
             try? await listService.deleteList(listId)
-            dismiss()
+            // `close()`, not `dismiss()`: this screen is a slide-up layer, and
+            // SwiftUI has nothing to dismiss inside a UIKit modal — the layer
+            // would have stayed on screen over a list that no longer exists.
+            close()
         }
     }
 }

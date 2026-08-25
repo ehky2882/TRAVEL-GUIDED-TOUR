@@ -35,20 +35,32 @@ final class AppSharedState {
     /// `TourDetailView.handlePrimaryAction` (Start Tour from the
     /// inline button row).
     var currentPlayingStopId: UUID? = nil
-    /// A list opened from a share link, held until `ContentView` can present
-    /// it. Lives here rather than in `TourListService` because it is view
-    /// state belonging to one incoming link, not part of the user's own
-    /// lists — and because the link arrives at the App, which has no other
-    /// channel into the content window.
-    var sharedList: SharedListPresentation? = nil
-}
+    /// The clip currently expanded to fullscreen, or nil.
+    ///
+    /// Lives here for the same reason `showingFullPlayer` does: the request
+    /// originates inside the tour sheet (main window) but the cover MUST
+    /// present from `BottomModuleRoot`'s window, which sits at
+    /// `windowLevel = .normal + 1` and would otherwise paint the mini-player
+    /// and tab bar straight over an ordinary modal. Session 24 hit exactly
+    /// this with `PlayerView` — hiding the module around the transition made
+    /// it worse; presenting from that window was the fix.
+    var fullscreenVideo: FullscreenVideoRequest? = nil
 
-/// A list arriving from outside the app, with its items already fetched so the
-/// screen can render without a second round-trip.
-struct SharedListPresentation: Identifiable, Equatable {
-    let list: TourList
-    let items: [TourListItem]
-    var id: UUID { list.id }
+    /// While true the mini-player and tab bar are withdrawn entirely — the
+    /// secondary window is hidden and the inline fallback stops rendering.
+    ///
+    /// Only the tour wizard sets this, and only because it needs the 126pt
+    /// those bars occupy: no step of it may scroll (owner rule, 2026-08-20),
+    /// and a quarter of the screen reserved for controls that do nothing while
+    /// you are making a tour is the cheapest height to buy back. Reverting is
+    /// one Bool — see `CreateTourWizardView.hidesBottomModule`, which is the
+    /// only thing that ever writes here.
+    ///
+    /// ⚠️ Whoever sets this true owns setting it false again. The bars going
+    /// missing for a whole session is a failure this app has shipped three
+    /// times; the wizard therefore drives it from `MakerView`'s presentation
+    /// state — which always resolves — rather than from its own lifecycle.
+    var hidesBottomModule: Bool = false
 }
 
 /// Installs and tears down the secondary `UIWindow` that hosts the
@@ -99,6 +111,10 @@ final class BottomModuleWindowController {
     /// `lastPreference`: a *deferred* install must not lose an update that
     /// arrived before the window existed.
     private var lastInteractiveBottomInset: CGFloat?
+    /// Whether the module is currently withdrawn. Stored for the same reason as
+    /// `lastPreference`: a *deferred* install must not come back on screen
+    /// after something already asked for it to be hidden.
+    private var isHiddenByRequest = false
     /// Pending self-heal retry, so only one chain is ever in flight.
     private var retryWorkItem: DispatchWorkItem?
     /// How many self-heal retries have been scheduled so far.
@@ -160,6 +176,19 @@ final class BottomModuleWindowController {
         guard clamped > 0, clamped != lastInteractiveBottomInset else { return }
         lastInteractiveBottomInset = clamped
         (window as? PassThroughWindow)?.interactiveBottomInset = clamped
+    }
+
+    /// Withdraw or restore the whole module. A hidden `UIWindow` does not
+    /// hit-test, which is the point: leaving it visible-but-empty would keep
+    /// `PassThroughWindow` claiming the bottom strip and swallow taps on
+    /// whatever now sits there — the way the Group Listen banner's Leave button
+    /// ended up dead. Hiding the window removes the claim with it.
+    ///
+    /// Idempotent, and survives a deferred install (see `isHiddenByRequest`).
+    func setHidden(_ hidden: Bool) {
+        guard hidden != isHiddenByRequest else { return }
+        isHiddenByRequest = hidden
+        window?.isHidden = hidden
     }
 
     /// Pure decision used by `install()`. Kept separate so the
@@ -287,7 +316,9 @@ final class BottomModuleWindowController {
         host.view.backgroundColor = .clear
         w.rootViewController = host
 
-        w.isHidden = false
+        // Not unconditionally visible: a window installed late must respect a
+        // hide that was requested before it existed.
+        w.isHidden = isHiddenByRequest
         window = w
         clearActivationRetry()
         cancelSelfHealRetry()

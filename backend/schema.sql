@@ -73,6 +73,10 @@ create table if not exists public.tours (
     hero_image_url          text not null,
     additional_image_urls   text[],
     video_urls              text[],
+    -- What those videos ARE. NULL or 'gallery' = b-roll beside the
+    -- photographs; 'narration' = the clip IS the tour, muted and slaved to
+    -- the audio clock. See TourVideoRole in Models/Tour.swift.
+    video_role              text,
     kind                    tour_kind not null,
     intro_audio_url         text,
     total_duration_seconds  int not null,
@@ -80,6 +84,8 @@ create table if not exists public.tours (
     centroid_latitude       double precision not null,
     centroid_longitude      double precision not null,
     city                    text,
+    -- Denormalised alongside city, exactly as the client model has it.
+    country                 text,
     primary_category        tour_category not null,
     tags                    text[] not null default '{}',
     price_usd               numeric(10,2) not null default 0,
@@ -150,20 +156,48 @@ create policy stops_public_read on public.stops
 -- camelCase keys match the Swift Codable property names. SECURITY INVOKER
 -- (default) so RLS applies — anon sees published tours only.
 -- ---------------------------------------------------------------------------
--- 🔴 THIS FUNCTION IS WRAPPED IN PRODUCTION. `places_apply.sql` renames it to
--- `get_catalog_core()` and defines a new `get_catalog()` that appends a
--- `places` key. So running the statement below AS-IS against a live database
--- overwrites that wrapper and places vanish from the payload with no error.
+-- ============================================================================
+-- 🔴 READ THIS BEFORE CHANGING WHAT THE CATALOG EMITS.
 --
--- That is not hypothetical: `add_country.sql` lifted this body verbatim on
--- 2026-08-19 and took out `places`, `priceTier` and `isPrivate` at once —
--- place pages and capsule pins disappeared, every paid walk decoded as free,
--- and every private account read as public. All three are optional in Swift,
--- so nothing errored. Fixed by `restore_catalog_keys.sql`.
+-- This function is the BASE of a three-part composition, not the whole thing.
+-- `places.sql` renames whatever `get_catalog` is at the time to
+-- `get_catalog_core`, then creates a new `get_catalog` that wraps it:
 --
--- ⚠️ Every key a later migration adds MUST be added here too, or the next
--- rebuild drops it again. This body is only canonical if it stays complete.
--- Run `restore_catalog_keys.sql` after any change to this function.
+--     get_catalog()  =  get_catalog_core()  ||  { places: catalog_places() }
+--
+-- So the body below is what ends up running as `get_catalog_core`. It is
+-- deliberately narrower than the live core, because it may only reference
+-- columns THIS FILE creates. `price_tier`, `is_private` and the whole
+-- `places` table arrive later, from `paid_tours.sql`, `social.sql` and
+-- `places.sql` — so this file cannot emit `priceTier`, `isPrivate` or
+-- `places` without failing on a fresh database. That gap is the layering
+-- working, not drift.
+--
+-- ⚠️ WHAT IS ACTUALLY LIVE (measured 2026-08-24, and NOT reproducible by
+-- running the files in this repo in any order):
+--
+--     get_catalog()        3 lines, 260 chars, the wrapper above
+--     get_catalog_core()   makers  — id, displayName, avatarURL, avatarEmoji,
+--                                    avatarInitials, avatarColor, bio,
+--                                    websiteURL, link2URL, link3URL, userId,
+--                                    isPrivate
+--                          tours   — the keys below, PLUS priceTier and
+--                                    videoRole
+--                          stops   — as below
+--     catalog_places()     places with >= 2 published tours
+--
+-- 🔴 TO ADD A KEY: PATCH `get_catalog_core`. NEVER `create or replace
+-- get_catalog`. Replacing the wrapper severs the call to the core and
+-- silently drops places and every key the core has — no error, the app just
+-- stops receiving them. Three files in this directory still do that and now
+-- carry a banner saying so: `paid_tours.sql`, `add_country.sql`,
+-- `add_video_urls.sql`.
+--
+-- The safe shape — read the live definition, insert one key, put it back, and
+-- RAISE if the anchor is missing so the transaction rolls back — is worked
+-- through in `backend/add_video_role.sql`.
+-- ============================================================================
+
 create or replace function public.get_catalog()
 returns jsonb
 language sql
@@ -187,8 +221,7 @@ as $$
           -- Needed to look up that person's lists: `journeys.owner_user_id`
           -- is an auth.users id, and without this the client has no way to
           -- name whose lists it is asking for.
-          'userId',         m.user_id,
-          'isPrivate',      m.is_private
+          'userId',         m.user_id
         ) order by m.display_name
       )
       from public.makers m
@@ -204,6 +237,7 @@ as $$
           'heroImageURL',         t.hero_image_url,
           'additionalImageURLs',  to_jsonb(t.additional_image_urls),
           'videoURLs',            to_jsonb(t.video_urls),
+          'videoRole',            to_jsonb(t.video_role),
           'kind',                 t.kind::text,
           'introAudioURL',        t.intro_audio_url,
           'totalDurationSeconds', t.total_duration_seconds,
@@ -211,10 +245,10 @@ as $$
           'centroidLatitude',     t.centroid_latitude,
           'centroidLongitude',    t.centroid_longitude,
           'city',                 t.city,
+          'country',              t.country,
           'primaryCategory',      t.primary_category::text,
           'tags',                 to_jsonb(t.tags),
           'priceUSD',             t.price_usd,
-          'priceTier',            t.price_tier,
           'stops', coalesce((
             select jsonb_agg(
               jsonb_build_object(

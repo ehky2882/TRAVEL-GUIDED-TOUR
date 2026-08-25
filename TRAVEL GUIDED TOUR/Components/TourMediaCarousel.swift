@@ -27,12 +27,20 @@ struct TourMediaCarousel: View {
     let heroImageURL: String
     let additionalImageURLs: [String]?
     let videoURLs: [String]?
-    /// nil sizes by the hero ratio (5:4) — see `atlasHeroSizing`. Every full-width
+    /// nil sizes by `AtlasSpacing.heroAspectRatio` — see `atlasHeroSizing`. Every full-width
     /// hero passes nil; the parameter stays for any fixed-size use.
     let height: CGFloat?
     /// Placeholder tint category, used only on the single-image fallback
     /// (matches the previous `HeroImageView(category:)` call).
     var category: TourCategory? = nil
+    /// Which tour these media belong to, so a video expanded to fullscreen can
+    /// carry the page's own chrome — save, share, the `…` menu — rather than
+    /// stranding the user on a bare picture. Optional because the carousel is
+    /// otherwise given nothing but URLs; nil simply means no tour chrome.
+    var tourId: UUID? = nil
+    /// What the videos are — see `TourVideoRole`. Passed through to each
+    /// video page; `.gallery` is the default and the existing behaviour.
+    var videoRole: TourVideoRole = .gallery
 
     /// One carousel page — an image URL or a video URL. `id` namespaces
     /// the two so ForEach/selection diffing is stable even if a URL
@@ -81,13 +89,17 @@ struct TourMediaCarousel: View {
         additionalImageURLs: [String]?,
         videoURLs: [String]?,
         height: CGFloat?,
-        category: TourCategory? = nil
+        category: TourCategory? = nil,
+        tourId: UUID? = nil,
+        videoRole: TourVideoRole = .gallery
     ) {
         self.heroImageURL = heroImageURL
         self.additionalImageURLs = additionalImageURLs
         self.videoURLs = videoURLs
         self.height = height
         self.category = category
+        self.tourId = tourId
+        self.videoRole = videoRole
         let ordered = Self.orderedMedia(
             heroImageURL: heroImageURL,
             additionalImageURLs: additionalImageURLs,
@@ -135,7 +147,9 @@ struct TourMediaCarousel: View {
             GalleryVideoView(
                 urlString: url,
                 height: height,
-                isActive: selection == item.id
+                isActive: selection == item.id,
+                tourId: tourId,
+                role: videoRole
             )
         }
     }

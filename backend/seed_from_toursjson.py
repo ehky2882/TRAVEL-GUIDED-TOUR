@@ -25,7 +25,11 @@ DEFAULT_INPUT = os.path.join(
 
 # Closed sets — mirror schema.sql enums. Seeding a value outside these would
 # fail the INSERT, so we catch it early with a clear message.
-KINDS = {"single", "multiStop"}
+# 'link' is a link pin — someone else's post, played through that platform's
+# embed. It carries no audio, so it is exempt from the audio checks below.
+# ⚠️ Postgres has its own copy of this list as the `tour_kind` enum; both must
+# agree or the seed is rejected by the type. See backend/add_link_pin_kind.sql.
+KINDS = {"single", "multiStop", "link"}
 TRIGGER_MODES = {"geofenced", "manual"}
 CATEGORIES = {
     "history", "architecture", "visualArt", "musicAndPerformance", "literature",
@@ -157,15 +161,23 @@ def emit(data, out):
         w(
             "insert into public.tours "
             "(id, title, short_description, long_description, maker_id, hero_image_url, "
-            "additional_image_urls, video_urls, kind, intro_audio_url, total_duration_seconds, "
-            "walking_distance_meters, centroid_latitude, centroid_longitude, city, "
+            "additional_image_urls, video_urls, video_role, source_url, source_author, "
+            "kind, intro_audio_url, total_duration_seconds, "
+            "walking_distance_meters, centroid_latitude, centroid_longitude, city, country, "
             "primary_category, tags, price_usd, status, published_at) values ("
             f"{q(t['id'])}, {q(t['title'])}, {q(t['shortDescription'])}, "
             f"{q(t['longDescription'])}, {q(t['makerId'])}, {q(t['heroImageURL'])}, "
-            f"{text_array(t.get('additionalImageURLs'))}, {text_array(t.get('videoURLs'))}, {q(t['kind'])}, "
+            f"{text_array(t.get('additionalImageURLs'))}, {text_array(t.get('videoURLs'))}, "
+            f"{q(t.get('videoRole'))}, "
+            # Link pins only — every other kind carries NULL. Absent here
+            # would mean a curated pin silently loses the post it stands for
+            # on the next content merge.
+            f"{q(t.get('sourceURL'))}, {q(t.get('sourceAuthor'))}, "
+            f"{q(t['kind'])}, "
             f"{q(t.get('introAudioURL'))}, {q(t['totalDurationSeconds'])}, "
             f"{q(t.get('walkingDistanceMeters'))}, {q(t['centroidLatitude'])}, "
-            f"{q(t['centroidLongitude'])}, {q(t.get('city'))}, {q(t['primaryCategory'])}, "
+            f"{q(t['centroidLongitude'])}, {q(t.get('city'))}, {q(t.get('country'))}, "
+            f"{q(t['primaryCategory'])}, "
             f"{text_array(t.get('tags', []))}, {q(t.get('priceUSD', 0))}, "
             "'published', now())\n"
             "on conflict (id) do update set "
@@ -173,12 +185,15 @@ def emit(data, out):
             "long_description = excluded.long_description, maker_id = excluded.maker_id, "
             "hero_image_url = excluded.hero_image_url, "
             "additional_image_urls = excluded.additional_image_urls, "
-            "video_urls = excluded.video_urls, kind = excluded.kind, "
+            "video_urls = excluded.video_urls, video_role = excluded.video_role, "
+            "source_url = excluded.source_url, source_author = excluded.source_author, "
+            "kind = excluded.kind, "
             "intro_audio_url = excluded.intro_audio_url, "
             "total_duration_seconds = excluded.total_duration_seconds, "
             "walking_distance_meters = excluded.walking_distance_meters, "
             "centroid_latitude = excluded.centroid_latitude, "
             "centroid_longitude = excluded.centroid_longitude, city = excluded.city, "
+            "country = excluded.country, "
             "primary_category = excluded.primary_category, tags = excluded.tags, "
             "price_usd = excluded.price_usd, updated_at = now();\n"
         )

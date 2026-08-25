@@ -52,6 +52,13 @@ struct GalleryVideoView: View {
     /// page (and its narration resumes). Defaults true for standalone
     /// use.
     var isActive: Bool = true
+    /// The owning tour, so the fullscreen viewer can show the page's own
+    /// chrome. nil = no tour chrome (the carousel is given only URLs).
+    var tourId: UUID? = nil
+    /// What this clip is. `.narration` slaves it to the tour's audio clock —
+    /// see `TourVideoRole`. Defaults to `.gallery`, which is every video in
+    /// the catalogue today and the behaviour that already shipped.
+    var role: TourVideoRole = .gallery
 
     /// Optional so any presentation path that doesn't inject the
     /// player (there shouldn't be one — it's app-wide + injected into
@@ -71,6 +78,23 @@ struct GalleryVideoView: View {
     /// than being set by the tap, so it stays honest if playback stalls
     /// or ends on its own.
     @State private var isPlaying = false
+    /// Clip shape as *displayed* (after `preferredTransform`). Resolved with
+    /// `hasAudio` in `prepare()` and handed to the fullscreen viewer so it
+    /// opens in the right orientation immediately rather than resolving the
+    /// asset a second time.
+    @State private var isLandscape = true
+    /// Displayed width ÷ height, resolved with `isLandscape` in `prepare()`.
+    /// Lets the fullscreen viewer grow from exactly the picture you tapped.
+    @State private var aspectRatio: CGFloat = 4.0 / 3.0
+    /// This page's frame on screen, in global coordinates — handed to the
+    /// viewer so it can grow out of exactly where the clip already is.
+    @State private var frameOnScreen: CGRect = .zero
+
+    /// Optional for the same reason `audioPlayer` is: not every presentation
+    /// path injects it. Without it the expand button simply isn't offered.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    @Environment(DataService.self) private var dataService: DataService?
+    @Environment(PurchaseService.self) private var purchaseService: PurchaseService?
 
     var body: some View {
         ZStack {
@@ -116,10 +140,45 @@ struct GalleryVideoView: View {
         // the explicit button below rather than this, so there's a real
         // control in the accessibility tree.
         .contentShape(Rectangle())
-        .onTapGesture { if isPlaying { player?.pause() } }
+        // Tap the picture to play or pause — owner, 2026-08-24. This used to
+        // only ever PAUSE, with starting reserved for the glyph; the glyph
+        // stays (it is the discoverable, VoiceOver-reachable control) but the
+        // surface now works both ways.
+        .onTapGesture {
+            Self.toggle(
+                role: role,
+                videoPlayer: player,
+                isPlaying: effectivelyPlaying,
+                tour: owningTour,
+                audioPlayer: audioPlayer,
+                purchaseService: purchaseService,
+                appShared: appShared
+            )
+        }
+        // 🔴 TOP-trailing, and the corner matters. At the BOTTOM the button
+        // rendered, appeared in the accessibility tree, and its action never
+        // ran: a paged `TabView` draws its `UIPageControl` across the FULL
+        // width of the strip where the dots sit, and a tap on that control's
+        // right half advances a page. So the tap paged the carousel instead —
+        // the page control is part of the TabView and hit-tests above page
+        // content, whatever the page draws on top. Verified with a probe:
+        // `expand()` was never reached, and the carousel advanced by exactly
+        // one page every time. Applied as an overlay (rather than inside the
+        // ZStack) so it also sits above the surface tap gesture below.
+        .overlay(alignment: .topTrailing) { expandAffordance }
+        // Global, because the viewer is presented in a different window. Both
+        // are full-screen on the same scene, so the coordinates line up.
+        .onGeometryChange(for: CGRect.self) { proxy in
+            proxy.frame(in: .global)
+        } action: { frameOnScreen = $0 }
         .task(id: urlString) {
             await prepare()
         }
+        // A narration clip has no independent life: it is muted, and it moves
+        // only when the narration moves. Reading `currentTime` here is what
+        // subscribes this view to the audio clock.
+        .onChange(of: audioPlayer?.currentTime ?? 0) { _, _ in followNarration() }
+        .onChange(of: audioPlayer?.state) { _, _ in followNarration() }
         .onChange(of: isActive) { _, active in
             if !active {
                 player?.pause()
@@ -139,9 +198,26 @@ struct GalleryVideoView: View {
     /// target rather than relying on the whole surface.
     @ViewBuilder
     private var playAffordance: some View {
-        if !isPlaying {
+        // Shown whenever the picture is stopped, on BOTH kinds of clip —
+        // owner, 2026-08-24: a still frame with no play button gives no sign
+        // it can be played at all.
+        //
+        // ⚠️ This was withheld from narration clips until the paid preview cap
+        // moved into `PurchaseService.previewLimit(for:)`. A second control
+        // that can START a tour is only safe once the cap is a shared rule
+        // rather than something one view owns privately — see
+        // `GalleryVideoView.toggle`, which every path here goes through.
+        if !effectivelyPlaying {
             Button {
-                player?.play()
+                Self.toggle(
+                    role: role,
+                    videoPlayer: player,
+                    isPlaying: effectivelyPlaying,
+                    tour: owningTour,
+                    audioPlayer: audioPlayer,
+                    purchaseService: purchaseService,
+                    appShared: appShared
+                )
             } label: {
                 Image(systemName: "play.circle.fill")
                     .font(.system(size: 52))
@@ -155,6 +231,190 @@ struct GalleryVideoView: View {
         }
     }
 
+    /// Is the picture actually moving? A narration clip is driven by the
+    /// tour's audio, so its own player's status is a consequence rather than
+    /// the truth — read the clock that leads.
+    private var effectivelyPlaying: Bool {
+        role == .narration ? (audioPlayer?.state == .playing) : isPlaying
+    }
+
+    /// Toggle whatever actually drives this clip.
+    ///
+    /// A **gallery** clip owns its own player, so the tap is simply play or
+    /// pause. A **narration** clip is muted and slaved to the tour's audio, so
+    /// the tap has to move the TOUR — pausing the picture alone would leave
+    /// the sound running without it.
+    ///
+    /// 🔴 Starting a tour from here asserts the paid preview cap FIRST, via
+    /// the one shared rule (`PurchaseService.previewLimit(for:)`). A play
+    /// control that starts a tour without doing that is the session-91
+    /// overflow-menu paywall hole in a new place. Resuming a tour that is
+    /// already loaded does not need it — the cap is already on the player.
+    static func toggle(
+        role: TourVideoRole,
+        videoPlayer: AVPlayer?,
+        isPlaying: Bool,
+        tour: Tour?,
+        audioPlayer: AudioPlayerService?,
+        purchaseService: PurchaseService?,
+        appShared: AppSharedState?
+    ) {
+        guard role == .narration else {
+            if isPlaying { videoPlayer?.pause() } else { videoPlayer?.play() }
+            return
+        }
+        guard let tour, let audioPlayer else { return }
+
+        // Already this tour's audio: resume or pause in place.
+        if audioPlayer.currentSourceId == tour.id.uuidString,
+           audioPlayer.state != .idle, audioPlayer.state != .failed {
+            switch audioPlayer.state {
+            case .playing, .loading: audioPlayer.pause()
+            case .paused, .ended:    audioPlayer.play()
+            case .idle, .failed:     break
+            }
+            return
+        }
+
+        // Not loaded yet — start it, capped.
+        guard let stop = tour.stops.first, let url = URL(string: stop.audioURL) else { return }
+        audioPlayer.setPreviewLimit(purchaseService?.previewLimit(for: tour))
+        audioPlayer.play(
+            url: url,
+            title: tour.title,
+            artist: nil,
+            sourceId: tour.id.uuidString
+        )
+        appShared?.currentPlayingStopId = stop.id
+    }
+
+    /// How far the picture may drift from the narration before it is worth
+    /// seeking. Both run on the same device off the same clock, so this is
+    /// only absorbing decode jitter — unlike Group Listen, which is bridging
+    /// two phones and needs a much wider dead zone plus rate trimming.
+    ///
+    /// Tight enough that a lip-sync error would be visible before it fires,
+    /// loose enough not to seek every frame.
+    static let followTolerance: TimeInterval = 0.25
+
+    /// Should the picture be seeked to catch up with the narration?
+    ///
+    /// Pure so the rule is testable without a player: seek only when the gap
+    /// is worth the stutter a seek costs.
+    static func shouldResync(
+        audioTime: TimeInterval,
+        videoTime: TimeInterval,
+        tolerance: TimeInterval = followTolerance
+    ) -> Bool {
+        abs(audioTime - videoTime) > tolerance
+    }
+
+    /// Keep a `.narration` clip on the narration's clock.
+    ///
+    /// ⚠️ The audio leads and the video is MUTED. The tour player owns the
+    /// lock screen, background playback, the geofence hand-off, Group Listen,
+    /// downloads, progress and speed; the picture is a passenger. Reversing
+    /// that would mean rebuilding all of it on an `AVPlayer` fed by a video
+    /// file.
+    private func followNarration() {
+        guard role == .narration, let player, let audioPlayer else { return }
+        player.isMuted = true
+        let audioTime = audioPlayer.currentTime
+        if Self.shouldResync(audioTime: audioTime, videoTime: player.currentTime().seconds) {
+            player.seek(
+                to: CMTime(seconds: audioTime, preferredTimescale: 600),
+                toleranceBefore: .zero,
+                toleranceAfter: .zero
+            )
+        }
+        // Match the transport. `rate` rather than play()/pause() so the
+        // picture also follows the speed control — a tour played at 1.5x
+        // would otherwise drift a second every two seconds and be reseeked
+        // continuously.
+        let wanted = audioPlayer.state == .playing ? Float(audioPlayer.rate) : 0
+        if player.rate != wanted { player.rate = wanted }
+    }
+
+    /// This clip's tour, when the carousel supplied one.
+    private var owningTour: Tour? {
+        guard let tourId else { return nil }
+        return dataService?.tour(by: tourId)
+    }
+
+    /// Expand to fullscreen.
+    ///
+    /// **A corner button, deliberately not the surface tap** — the surface tap
+    /// is already pause-while-playing, and a real `Button` lands in the
+    /// accessibility tree so VoiceOver reaches it. Being a small corner target
+    /// it also cannot claim the horizontal drag the carousel needs for paging,
+    /// which is the whole reason this view draws its own controls rather than
+    /// using AVKit's.
+    ///
+    /// Stays visible during playback — unlike the play glyph, which hides so
+    /// nothing sits over the picture — because expanding *while watching* is
+    /// the common case.
+    @ViewBuilder
+    private var expandAffordance: some View {
+        if appShared != nil {
+            Button(action: expand) {
+                Image(systemName: "arrow.up.left.and.arrow.down.right")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(.white)
+                    // 44pt is the app's universal control diameter (map
+                    // controls, the tour action row, the chrome capsules).
+                    // The painted disc is smaller; the target is not.
+                    .frame(width: 44, height: 44)
+                    .background(
+                        Circle()
+                            .fill(.black.opacity(0.45))
+                            .frame(width: 32, height: 32)
+                    )
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Expand video to fullscreen")
+            .padding(AtlasSpacing.xs)
+        }
+    }
+
+    /// Hand the clip to the fullscreen viewer.
+    ///
+    /// 🔴 **The narration debt is TRANSFERRED, not copied.** Clearing
+    /// `didPauseNarration` as we hand it over is what stops this view resuming
+    /// the tour audio behind the video: presenting a cover trips at least one
+    /// of the three `resumeNarrationIfNeeded()` call sites (the
+    /// `timeControlStatus` change from the pause below, `isActive`, and
+    /// `onDisappear`), and every one of them is guarded on that flag. With the
+    /// flag cleared they all become no-ops, and the fullscreen view owes the
+    /// resume instead. Suppressing the call sites individually would leave the
+    /// next one added unguarded.
+    private func expand() {
+        guard let appShared else { return }
+        let at = player?.currentTime().seconds ?? 0
+        // Pause the inline clip: the fullscreen view runs its own player, and
+        // two players on one clip with sound would talk over each other.
+        player?.pause()
+        let debt = didPauseNarration
+        didPauseNarration = false
+        let request = FullscreenVideoRequest(
+            urlString: urlString,
+            startSeconds: at.isFinite ? max(0, at) : 0,
+            hasAudio: hasAudio,
+            didPauseNarration: debt,
+            isLandscape: isLandscape,
+            aspectRatio: aspectRatio,
+            sourceFrame: frameOnScreen,
+            tourId: tourId,
+            role: role
+        )
+        // 🔴 Presented with animation SUPPRESSED. A `fullScreenCover` slides up
+        // from the bottom by default, and the viewer's own growth out of this
+        // thumbnail would then run on top of that slide — two motions at once.
+        // The growth is the only animation the expand should have.
+        var t = Transaction()
+        t.disablesAnimations = true
+        withTransaction(t) { appShared.fullscreenVideo = request }
+    }
+
     /// Builds the player and detects whether the clip has an audio
     /// track. Runs on the main actor (`.task`), so the `@State`
     /// mutations are safe. `hasAudio` stays `false` if the load is
@@ -166,14 +426,38 @@ struct GalleryVideoView: View {
         if let tracks = try? await asset.loadTracks(withMediaType: .audio) {
             hasAudio = !tracks.isEmpty
         }
+        // Shape for the fullscreen viewer. ⚠️ Must come from the DISPLAY size
+        // — phone video is commonly 1920x1080 stored with a 90 degree
+        // `preferredTransform`, and reading `naturalSize` alone would call
+        // that vertical clip landscape and rotate it the wrong way.
+        if let video = try? await asset.loadTracks(withMediaType: .video).first,
+           let size = try? await video.load(.naturalSize),
+           let transform = try? await video.load(.preferredTransform) {
+            isLandscape = FullscreenVideoView.isLandscape(
+                naturalSize: size,
+                preferredTransform: transform
+            )
+            let display = size.applying(transform)
+            if abs(display.height) > 0 {
+                aspectRatio = abs(display.width) / abs(display.height)
+            }
+        }
     }
 
     /// Pause the narration when a clip *with sound* starts — but only if
     /// the narration is actually playing, so we never fight a tour the
     /// user deliberately paused.
     private func pauseNarrationIfNeeded() {
-        guard hasAudio, !didPauseNarration else { return }
-        guard audioPlayer?.state == .playing else { return }
+        // 🔴 A narration clip must never take the narration over: it IS the
+        // narration. Pausing the tour to play its own soundtrack would stop
+        // the very clock the picture is following.
+        guard role != .narration else { return }
+        // One rule, shared with the fullscreen viewer so the two cannot drift.
+        guard FullscreenVideoView.shouldTakeOverNarration(
+            clipHasAudio: hasAudio,
+            narrationIsPlaying: audioPlayer?.state == .playing,
+            alreadyOwesResume: didPauseNarration
+        ) else { return }
         audioPlayer?.pause()
         didPauseNarration = true
     }
@@ -199,7 +483,14 @@ private struct VideoSurface: UIViewControllerRepresentable {
         let controller = AVPlayerViewController()
         controller.player = player
         controller.showsPlaybackControls = false
-        controller.videoGravity = .resizeAspect
+        // 🔴 FILL, not fit — owner decision. In the square carousel box a
+        // letterboxed vertical clip used barely half the frame and the rest
+        // was black. Filling makes the clip read like the photographs it sits
+        // beside, which are also fill-cropped into this box. The cost is that
+        // the top and bottom of a vertical clip are cropped here — which is
+        // precisely what the expand button is for: fullscreen fits, so
+        // nothing is cut off once you open it.
+        controller.videoGravity = .resizeAspectFill
         controller.allowsPictureInPicturePlayback = false
         // The tour narration owns the lock screen. Without this, AVKit
         // overwrites the now-playing info with the (untitled) clip.

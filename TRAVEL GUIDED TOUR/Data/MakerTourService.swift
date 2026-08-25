@@ -147,7 +147,8 @@ final class MakerTourService {
         category: TourCategory,
         tags: [String],
         coordinate: CLLocationCoordinate2D,
-        radiusMeters: Int
+        radiusMeters: Int,
+        city: String? = nil
     ) async throws -> UUID {
         let tourId = UUID()
         let stopId = UUID()
@@ -166,7 +167,8 @@ final class MakerTourService {
             centroidLongitude: coordinate.longitude,
             primaryCategory: category.rawValue,
             tags: tags,
-            status: TourStatus.draft.rawValue
+            status: TourStatus.draft.rawValue,
+            city: city
         )
         try await client.from("tours").insert(tourRow, returning: .minimal).execute()
 
@@ -214,7 +216,8 @@ final class MakerTourService {
         category: TourCategory,
         tags: [String],
         coordinate: CLLocationCoordinate2D,
-        radiusMeters: Int
+        radiusMeters: Int,
+        city: String? = nil
     ) async throws {
         let tourId = tour.id.uuidString.lowercased()
         let cleanTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -228,6 +231,7 @@ final class MakerTourService {
                 tags: tags,
                 centroidLatitude: coordinate.latitude,
                 centroidLongitude: coordinate.longitude,
+                city: city,
                 // Published edits re-enter moderation; drafts and in-review
                 // tours keep the status they already had.
                 status: status == .published ? TourStatus.inReview.rawValue : status.rawValue
@@ -247,6 +251,48 @@ final class MakerTourService {
             ))
             .eq("tour_id", value: tourId)
             .execute()
+
+        await loadMyTours(makerId: tour.makerId)
+    }
+
+    /// Take a tour's narration back off it, leaving the draft exactly as
+    /// `createDraftTour` left it — empty `audio_url`, zero durations.
+    ///
+    /// **Why this exists:** owner, 2026-08-20, from step 5 on device —
+    /// *"after a recording is accepted there should still be an ability to
+    /// discard it."* Until now Discard could only throw away a take that had
+    /// not been uploaded yet. Once a take was kept, the only route back was to
+    /// record or import something else over the top, so a maker who decided
+    /// their tour should carry no narration at all had no way to say so.
+    ///
+    /// ⚠️ **Empty string, not null.** `stops.audio_url` is `text not null` and
+    /// `audio_duration_seconds` is `int not null` (`backend/schema.sql`), so
+    /// there is no null to write. A fresh draft already stores `""` and `0`,
+    /// and `stopAudioURL` reads an empty string as no audio — this restores
+    /// that exact state rather than inventing a third one.
+    ///
+    /// Storage deletion is best-effort and comes last, for `setPhotos`' reason:
+    /// a failure there must not undo the removal the maker asked for, and the
+    /// worst case is an object nothing points at.
+    func removeAudio(from tour: Tour) async throws {
+        let tourId = tour.id.uuidString.lowercased()
+        let existing = await stopAudioURL(tourId: tour.id)
+
+        // Filter by tour_id only — the stop column is named "order", which
+        // collides with PostgREST's reserved sort param (see attachAudio).
+        try await client.from("stops")
+            .update(StopAudioPatch(audioURL: "", audioDurationSeconds: 0))
+            .eq("tour_id", value: tourId)
+            .execute()
+        try await client.from("tours")
+            .update(TourDurationPatch(totalDurationSeconds: 0))
+            .eq("id", value: tourId)
+            .execute()
+
+        if let existing,
+           let path = Self.storagePath(from: existing.absoluteString, bucket: "tour-audio") {
+            _ = try? await client.storage.from("tour-audio").remove(paths: [path])
+        }
 
         await loadMyTours(makerId: tour.makerId)
     }
@@ -438,9 +484,12 @@ private struct NewTourRow: Encodable {
     let primaryCategory: String
     let tags: [String]
     let status: String
+    /// Nil until the wizard's place lookup supplies one. Optional so it is
+    /// simply absent from the insert rather than written as null.
+    let city: String?
 
     enum CodingKeys: String, CodingKey {
-        case id, title, kind, tags, status
+        case id, title, kind, tags, status, city
         case shortDescription = "short_description"
         case longDescription = "long_description"
         case makerId = "maker_id"
@@ -462,14 +511,24 @@ private struct NewTourRow: Encodable {
             heroImageURL: heroImageURL,
             additionalImageURLs: nil,
             videoURLs: nil,
+            // Maker-authored tours carry no video yet, so no role to state.
+            videoRole: nil,
             kind: TourKind(rawValue: kind) ?? .single,
+            // A maker cannot author a link pin — those are curated into
+            // the catalog by hand, so there is no source to carry here.
+            sourceURL: nil,
+            sourceAuthor: nil,
             stops: stops,
             introAudioURL: nil,
             totalDurationSeconds: totalDurationSeconds,
             walkingDistanceMeters: nil,
             centroidLatitude: centroidLatitude,
             centroidLongitude: centroidLongitude,
-            city: nil,
+            // The wizard's Location step writes `city`; country is
+            // deliberately not stored — nothing displays it and the
+            // catalogue has never carried one.
+            city: city,
+            country: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? category,
             tags: tags,
             priceUSD: 0,
@@ -508,10 +567,14 @@ private struct TourDetailsPatch: Encodable {
     let tags: [String]
     let centroidLatitude: Double
     let centroidLongitude: Double
+    /// Optional on purpose. A nil optional encodes as an *absent* key, not a
+    /// null, so a caller that doesn't know about the city — the details
+    /// editor — leaves the column as it found it instead of clearing it.
+    let city: String?
     let status: String
 
     enum CodingKeys: String, CodingKey {
-        case title, tags, status
+        case title, tags, status, city
         case shortDescription = "short_description"
         case longDescription = "long_description"
         case primaryCategory = "primary_category"
@@ -640,7 +703,11 @@ private struct TourRow: Decodable {
             heroImageURL: heroImageURL,
             additionalImageURLs: additionalImageURLs,
             videoURLs: nil,
+            // Maker-authored tours carry no video yet, so no role to state.
+            videoRole: nil,
             kind: TourKind(rawValue: kind) ?? .single,
+            sourceURL: nil,
+            sourceAuthor: nil,
             stops: [],
             introAudioURL: nil,
             totalDurationSeconds: totalDurationSeconds,
@@ -648,6 +715,10 @@ private struct TourRow: Decodable {
             centroidLatitude: centroidLatitude,
             centroidLongitude: centroidLongitude,
             city: city,
+            // The authoring tables hold no country column; a maker picks a
+            // point on a map, not a country. Catalog tours get theirs from
+            // Tours.json / get_catalog instead.
+            country: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? .hiddenGems,
             tags: tags,
             priceUSD: 0,

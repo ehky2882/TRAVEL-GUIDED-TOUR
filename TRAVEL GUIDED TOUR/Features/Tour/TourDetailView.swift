@@ -44,6 +44,42 @@ import MapKit
 struct TourDetailView: View {
     let tour: Tour
 
+    /// Whether this is the page itself or the maker's look at it before they
+    /// submit.
+    ///
+    /// 🔴 **THE WIZARD'S REVIEW STEP RENDERS THIS VIEW, NOT A DRAWING OF IT**
+    /// (owner, 2026-08-20: *"why don't you just make the review a preview of
+    /// the tour detail page?"*). It replaced a hand-built mock of the player —
+    /// a fake scrubber and a fake play button — which had the flaw every mock
+    /// has: it could go on saying "this is how it will look" long after it had
+    /// stopped being true. The same code cannot drift from itself.
+    ///
+    /// ⚠️ **`preview` MUST NOT TOUCH THE LIVE ENVIRONMENT.** The wizard is a
+    /// `fullScreenCover` and does not carry the fourteen services this screen
+    /// reads; a non-optional `@Environment` traps on *access*, so the preview
+    /// branch is structural rather than a flag sprinkled through one body — it
+    /// simply never mentions them. The sections it does show
+    /// (`topSection`, `masthead`, `descriptionSection`) were checked one by one
+    /// and read nothing beyond `locationManager` and `openURL`, which any
+    /// SwiftUI ancestor of the wizard has.
+    ///
+    /// What preview drops, and why each one:
+    /// - **the chrome row** (`atlasChromeRow` + `chromeControls`) — its ✕ calls
+    ///   `tourPresenter.dismiss()`, and there is no layer to dismiss; the wizard
+    ///   has its own header.
+    /// - **buttonRow** — Start tour, Buy, Download, Save. Live controls on an
+    ///   unpublished draft, all of them wrong before the tour exists.
+    /// - **stopsSection**, **placeSection**, **nearbyToursSection** — read
+    ///   `dataService` for a tour the catalogue has never heard of.
+    /// - **`.onAppear`** — 🔴 it calls `recentlyViewedStore.record(tour.id)`,
+    ///   which would put the maker's own unpublished draft in the Home rail,
+    ///   and `navState.push()`, which would leave the app believing a detail
+    ///   page is open after the wizard closes.
+    /// - **the ScrollView** — the wizard supplies its own, and nesting two is
+    ///   how a gesture stops belonging to either.
+    enum Presentation { case live, preview }
+    var mode: Presentation = .live
+
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(AudioPlayerService.self) private var audioPlayer
@@ -134,27 +170,26 @@ struct TourDetailView: View {
     // the ordering bug it worked around are gone.
 
     var body: some View {
+        // Structural, not a flag: the preview branch must never *mention* the
+        // live environment values, because a non-optional `@Environment` traps
+        // when read and the wizard carries almost none of them.
+        switch mode {
+        case .preview: detailContent
+        case .live:    liveBody
+        }
+    }
+
+    private var liveBody: some View {
         scrollBody
-            // `.safeAreaInset(.top)` parks the chromeRow above the
-            // ScrollView's content area: the row stays anchored at
-            // the screen top while the body content scrolls *under*
-            // it. Solid material + tint backdrop, hard bottom edge.
-            // A gradient fade was explored on 2026-06-03 and parked
-            // — owner wants to revisit later.
-            .safeAreaInset(edge: .top, spacing: 0) {
-                chromeRow
-                    .background(AtlasColors.secondaryBackground.opacity(0.8))
-                    .background(.regularMaterial)
-            }
-            .background(AtlasColors.secondaryBackground)
-            // System nav bar hidden — our chromeRow handles all top
-            // chrome inline so each control is an identical 44pt
-            // Capsule, sized + styled to match the action row's
-            // secondary buttons exactly. iOS 26's auto glass-grouping
-            // around toolbar items was visually stacking on top of
-            // any custom chrome we added, producing a "two layers"
-            // look (owner correction, 2026-06-03).
-            .toolbar(.hidden, for: .navigationBar)
+            // Parks the controls above the ScrollView's content area, paints
+            // them and the page from one expression, and hides the system nav
+            // bar. All of that lives in `atlasChromeRow` so the three pages
+            // carrying this row cannot drift apart — see that file, including
+            // why the fill must stay opaque and must not sit over a material.
+            //
+            // A gradient fade at the row's bottom edge was explored on
+            // 2026-06-03 and parked — owner wants to revisit later.
+            .atlasChromeRow { chromeControls }
         .navigationDestination(isPresented: $showingMaker) {
             if let maker = dataService.maker(for: tour) {
                 MakerView(maker: maker)
@@ -206,68 +241,44 @@ struct TourDetailView: View {
         }
     }
 
-    /// Sticky top chrome — X close (leading) · Save · overflow
-    /// (trailing). Renders three discrete `chromeCapsule`-styled
-    /// buttons matching the inline action row's secondary
-    /// (save/download) buttons: 44×44 Capsule with
-    /// `AtlasColors.mapPin.opacity(0.15)` fill + 20pt regular SF
-    /// Symbol in `mapPin` gold. The row sits at the top of the
-    /// body (outside the ScrollView) so it stays put while the
-    /// content scrolls underneath.
-    private var chromeRow: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            Button(action: { tourPresenter.dismiss() }) {
-                chromeCapsule("xmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Close")
-
-            Spacer()
-
-            Button(action: toggleSaved) {
-                chromeCapsule(isSaved ? "bookmark.fill" : "bookmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(saveActions.accessibilityLabel(tour.id))
-
-            overflowMenu
+    /// The controls only — X close (leading) · Save · overflow (trailing),
+    /// each an `AtlasChromeButton`. The row *around* them (spacing, padding,
+    /// parking, paint, hiding the nav bar) belongs to `atlasChromeRow`.
+    ///
+    /// **This row is the app's canonical page chrome** (owner, 2026-08-20):
+    /// the place, list and wizard headers all match it. Two things enforce
+    /// that rather than describe it — `AtlasChromeButton` for the control
+    /// (three private copies of it used to live in those files) and
+    /// `atlasChromeRow` for everything around it (three copies of *that*
+    /// used to live there too, until the opacity fix had to be made in
+    /// three places on 2026-08-24).
+    ///
+    /// (An earlier version of this comment described the buttons as
+    /// gold on a `mapPin.opacity(0.15)` fill. They have never been:
+    /// the glyph is `primaryText` on `tertiaryText.opacity(0.18)`.)
+    @ViewBuilder
+    private var chromeControls: some View {
+        Button(action: { tourPresenter.dismiss() }) {
+            AtlasChromeButton("xmark")
         }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
+        .buttonStyle(.plain)
+        .accessibilityLabel("Close")
+
+        Spacer()
+
+        Button(action: toggleSaved) {
+            AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(saveActions.accessibilityLabel(tour.id))
+
+        overflowMenu
     }
 
-    /// Scrollable body content — everything below the chromeRow.
+    /// Scrollable body content — everything below the chrome row.
     private var scrollBody: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                // Owner-requested experiment (2026-07-06): swap the
-                // hero-only top for a GALLERY / MAP tab pair so the
-                // map is discoverable above the fold. The map's
-                // previous "Location" section below the stops list is
-                // gone (moved into the Map tab).
-                topSection
-                    .padding(.top, AtlasSpacing.md)
-
-                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                    masthead
-                    buttonRow
-                        // VStack `md` (16) + this `sm` (8) on top *and*
-                        // bottom = 24pt visible above and below the
-                        // action row (owner-set, 2026-06-03). Asymmetric
-                        // breath above the row removed.
-                        .padding(.vertical, AtlasSpacing.sm)
-                    descriptionSection
-                    stopsSection
-                    placeSection
-                    nearbyToursSection
-                }
-                .padding(.horizontal, AtlasSpacing.lg)
-
-                // Bottom inset so the last line of content clears the
-                // mini-player + tab bar that float over this view from
-                // the secondary higher-level window.
-                Color.clear.frame(height: AtlasBottomModule.height())
-            }
+            detailContent
         }
         // Pre-fetch the walking route on tour load, so switching to
         // the Map tab renders the polyline instantly (was on the Map
@@ -275,6 +286,58 @@ struct TourDetailView: View {
         // round-trip). No-op on single-stop tours.
         .task(id: tour.id) {
             await loadWalkingRoute()
+        }
+    }
+
+    /// The page's content, without the scroll around it.
+    ///
+    /// Split out so the wizard's review step can render it inside its own
+    /// ScrollView rather than nesting one inside another.
+    private var detailContent: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
+            // Owner-requested experiment (2026-07-06): swap the
+            // hero-only top for a GALLERY / MAP tab pair so the
+            // map is discoverable above the fold. The map's
+            // previous "Location" section below the stops list is
+            // gone (moved into the Map tab).
+            topSection
+                .padding(.top, AtlasSpacing.md)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                masthead
+                if mode == .live {
+                    buttonRow
+                        // VStack `md` (16) + this `sm` (8) on top *and*
+                        // bottom = 24pt visible above and below the
+                        // action row (owner-set, 2026-06-03). Asymmetric
+                        // breath above the row removed.
+                        .padding(.vertical, AtlasSpacing.sm)
+                }
+                descriptionSection
+                if mode == .live {
+                    if tour.isLink {
+                        // 🔴 NOT stopsSection. A link pin's one stop exists
+                        // solely so `MapMarkers` has something at `order == 0`
+                        // to draw; listing it would offer a play affordance
+                        // for audio that does not exist.
+                        creditSection
+                    } else {
+                        stopsSection
+                    }
+                    placeSection
+                    nearbyToursSection
+                }
+            }
+            .padding(.horizontal, AtlasSpacing.lg)
+
+            // Bottom inset so the last line of content clears the
+            // mini-player + tab bar that float over this view from
+            // the secondary higher-level window. The wizard hides that
+            // module, so a preview reserving its height would be 126pt
+            // of dead screen.
+            if mode == .live {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
         }
     }
 
@@ -304,7 +367,11 @@ struct TourDetailView: View {
                     mapContent
                 }
             }
-            getDirectionsLink
+            // A listener's action, not a maker's. Taking someone out of the
+            // wizard into Maps, mid-submission, is not a preview of anything.
+            if mode == .live {
+                getDirectionsLink
+            }
         }
     }
 
@@ -330,15 +397,45 @@ struct TourDetailView: View {
     /// `disableLoadAnimation` (no crossfade while the detail layer
     /// slides up) are baked into the shared carousel. Horizontal side
     /// padding stays here so the footprint matches the map tab.
+    @ViewBuilder
     private var imageSection: some View {
+        if tour.isLink, let embed = tour.linkEmbedURL, let sourceURL = tour.sourceURL {
+            // The post plays here rather than on TikTok. See `LinkEmbedView`
+            // for why this is an embed and can never be a copy.
+            //
+            // The shape comes from the URL, not the platform: a YouTube Short
+            // is 9:16 like a TikTok, while an ordinary YouTube video is 16:9.
+            LinkEmbedView(embedURL: embed)
+                .aspectRatio(LinkSource.embedAspectRatio(for: sourceURL),
+                             contentMode: .fit)
+                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+                .padding(.horizontal, AtlasSpacing.lg)
+        } else if tour.isLink {
+            // A link pin whose URL yields no player — a platform we cannot
+            // derive one for. Fall back to the hero, and the action row's
+            // button still opens the post. Better a still than a blank box.
+            TourMediaCarousel(
+                heroImageURL: tour.heroImageURL,
+                additionalImageURLs: nil,
+                videoURLs: nil,
+                height: nil,
+                category: tour.primaryCategory,
+                tourId: tour.id,
+                videoRole: .gallery
+            )
+            .padding(.horizontal, AtlasSpacing.lg)
+        } else {
         TourMediaCarousel(
             heroImageURL: tour.heroImageURL,
             additionalImageURLs: tour.additionalImageURLs,
             videoURLs: tour.videoURLs,
-            height: nil,   // 5:4 — see AtlasSpacing.heroAspectRatio
-            category: tour.primaryCategory
+            height: nil,   // takes AtlasSpacing.heroAspectRatio
+            category: tour.primaryCategory,
+            tourId: tour.id,
+            videoRole: tour.videoRole ?? .gallery
         )
         .padding(.horizontal, AtlasSpacing.lg)
+        }
     }
 
     // MARK: - Masthead
@@ -459,6 +556,32 @@ struct TourDetailView: View {
     /// eval, which would fight the inline truncation animation.
     private var shouldShowReadMoreToggle: Bool {
         tour.longDescription.count > 240
+    }
+
+    /// Who made the post this pin stands for. A pin built out of somebody
+    /// else's work names them, and the name is tappable so the credit leads
+    /// back to them rather than being decoration.
+    @ViewBuilder
+    private var creditSection: some View {
+        if let author = tour.sourceAuthor, !author.isEmpty {
+            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+                Text("Posted by")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .padding(.top, AtlasSpacing.md)
+
+                Button {
+                    guard let raw = tour.sourceURL, let url = URL(string: raw) else { return }
+                    openURL(url)
+                } label: {
+                    Text(author)
+                        .font(AtlasTypography.body)
+                        .foregroundStyle(AtlasColors.mapPin)
+                }
+                .buttonStyle(.plain)
+                .accessibilityHint("Opens the original post")
+            }
+        }
     }
 
     /// Stops list — header unified to "Stops" for both single- and
@@ -1070,11 +1193,20 @@ struct TourDetailView: View {
     /// Seconds of preview to allow for the current state — `nil` (unlimited)
     /// for anything the user may hear in full.
     private var activePreviewLimit: TimeInterval? {
-        isLockedPaid ? PurchaseService.previewSeconds : nil
+        // Shared with the fullscreen video viewer — see
+        // `PurchaseService.previewLimit(for:)`. Do not inline this rule again.
+        purchaseService?.previewLimit(for: tour)
     }
 
     private var buttonRow: some View {
         HStack(spacing: AtlasSpacing.md) {
+            if tour.isLink {
+                // The post plays in the embed above, so this row carries only
+                // the secondary action: go to the platform to like, comment or
+                // follow. Nothing to download or sync — those need audio we
+                // do not host.
+                watchButton
+            } else {
             primaryTransportButton
 
             if isLockedPaid {
@@ -1112,8 +1244,40 @@ struct TourDetailView: View {
 
             downloadButton
             }
+            }
         }
         .frame(maxWidth: .infinity)
+    }
+
+    /// Opens the post. `openURL` deliberately, **not** an in-app browser:
+    /// iOS routes a tiktok.com or youtube.com link straight to that app when
+    /// it is installed, which is what the owner asked for — *"opens the actual
+    /// content in its source app"* — and falls back to Safari when it is not.
+    ///
+    /// Shaped exactly like `primaryTransportButton` so a link pin reads as a
+    /// peer of every other tour rather than a special case: same brass
+    /// capsule, same 44pt height, same full width.
+    private var watchButton: some View {
+        Button {
+            guard let raw = tour.sourceURL, let url = URL(string: raw) else { return }
+            AtlasHaptics.selection()
+            openURL(url)
+        } label: {
+            HStack(spacing: AtlasSpacing.sm) {
+                Image(systemName: "arrow.up.forward.app.fill")
+                    .font(.system(size: 20, weight: .semibold))
+                Text(tour.linkSource?.watchLabel ?? "OPEN THIS POST")
+                    .font(AtlasTypography.caption)
+            }
+            .foregroundStyle(Color.white)
+            .padding(.horizontal, AtlasSpacing.md)
+            .frame(maxWidth: .infinity)
+            .frame(height: controlHeight)
+            .background(Capsule().fill(AtlasColors.mapPin))
+            .contentShape(Capsule())
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Leaves Atlas and opens the original post")
     }
 
     /// Buy this tour. Gold fill so it reads as the primary action once the
@@ -1315,10 +1479,20 @@ struct TourDetailView: View {
     @ViewBuilder
     private var overflowMenu: some View {
         Menu {
-            Button(action: handleDownloadTap) {
-                Label(menuDownloadLabel, systemImage: menuDownloadIcon)
+            // 🔴 Hidden, not disabled, on a link pin. There is nothing to
+            // download: the post lives on TikTok and this tour's only stop
+            // carries an empty audioURL, so `downloadPlan` would queue the
+            // hero image alone and call that a downloaded tour. The inline
+            // row already omits it — the menu renders the same on every tour,
+            // so it has to be gated here too (the session-91 lesson: a rule
+            // enforced in the action row is not enforced until the overflow
+            // menu enforces it).
+            if !tour.isLink {
+                Button(action: handleDownloadTap) {
+                    Label(menuDownloadLabel, systemImage: menuDownloadIcon)
+                }
+                .disabled(menuDownloadDisabled)
             }
-            .disabled(menuDownloadDisabled)
 
             // One save entry, not two. The quick toggle lives on the chrome-row
             // bookmark; this opens the membership sheet so the user can pick
@@ -1352,7 +1526,9 @@ struct TourDetailView: View {
             // bought it. The inline row already hides Listen together when
             // locked; the overflow menu renders the same on every tour, so it
             // has to be gated here as well.
-            if groupListen != nil, !isLockedPaid {
+            // `!tour.isLink` for the same reason as Download above: a group
+            // session synchronises playback, and a link pin has no playback.
+            if groupListen != nil, !isLockedPaid, !tour.isLink {
                 Button {
                     showingGroupListen = true
                 } label: {
@@ -1378,7 +1554,7 @@ struct TourDetailView: View {
                 }
             }
         } label: {
-            chromeCapsule("ellipsis")
+            AtlasChromeButton("ellipsis")
                 .accessibilityLabel("More options")
         }
     }
@@ -1389,14 +1565,6 @@ struct TourDetailView: View {
     /// reserved for the inline action row so the chrome's "navigate
     /// + manage" controls stay tonally separate from the chrome's
     /// "play this tour" controls (owner correction, 2026-06-03).
-    private func chromeCapsule(_ systemName: String) -> some View {
-        Image(systemName: systemName)
-            .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
-            .frame(width: 44, height: 44)
-            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
-            .contentShape(Capsule())
-    }
 
     /// Menu-side label for the download item — mirrors the inline
     /// button's state so the menu reads as a parallel control surface.

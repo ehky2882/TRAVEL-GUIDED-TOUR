@@ -50,6 +50,9 @@ enum TestFixtures {
     static func makeTour(
         id: UUID = UUID(),
         title: String = "Test Tour",
+        /// Overridable so tests that care about image identity (the launch
+        /// photo warm-up dedupes and caps by hero URL) can make tours distinct.
+        heroImageURL: String = "https://example.test/hero.jpg",
         makerId: UUID = defaultMakerId,
         kind: TourKind = .single,
         category: TourCategory = .architecture,
@@ -59,6 +62,10 @@ enum TestFixtures {
         stopCount: Int = 1,
         createdAt: String? = nil,
         priceTier: Int? = nil,
+        /// Only a `.link` tour carries these. Defaulted nil so every existing
+        /// caller is untouched.
+        sourceURL: String? = nil,
+        sourceAuthor: String? = nil,
         /// Explicit per-stop coordinates. Overrides `stopCount` +
         /// `latitude`/`longitude`. Needed for multi-stop tours whose
         /// stops are genuinely spread out — where the centroid is a
@@ -97,10 +104,13 @@ enum TestFixtures {
             shortDescription: "Test short description",
             longDescription: "Test long description",
             makerId: makerId,
-            heroImageURL: "https://example.test/hero.jpg",
+            heroImageURL: heroImageURL,
             additionalImageURLs: nil,
             videoURLs: nil,
+            videoRole: nil,
             kind: kind,
+            sourceURL: sourceURL,
+            sourceAuthor: sourceAuthor,
             stops: stops,
             introAudioURL: nil,
             totalDurationSeconds: totalDuration,
@@ -108,6 +118,7 @@ enum TestFixtures {
             centroidLatitude: centroidLatitude ?? latitude,
             centroidLongitude: centroidLongitude ?? longitude,
             city: "Test City",
+            country: "Test Country",
             primaryCategory: category,
             tags: tags,
             priceUSD: 0,

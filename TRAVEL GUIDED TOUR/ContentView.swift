@@ -32,6 +32,7 @@ struct ContentView: View {
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(PlacePresenter.self) private var placePresenter
+    @Environment(TourListPresenter.self) private var listPresenter
     @Environment(FollowService.self) private var followService
     @Environment(PurchaseService.self) private var purchaseService
     @Environment(AuthService.self) private var authService
@@ -96,6 +97,13 @@ struct ContentView: View {
         bottomInset: AtlasBottomModule.height()
     )
 
+    /// Fourth slide-up layer, for a LIST. Its own controller for the same
+    /// reason the others have one: a tour tapped inside a list has to stack
+    /// over it, and each controller tracks its own presented VC.
+    @State private var listLayer = BottomLayerController(
+        bottomInset: AtlasBottomModule.height()
+    )
+
     /// True while the tour-detail layer is up (or animating) having
     /// been presented from the Home ROOT — i.e. the drawer was
     /// visible underneath when it came up. While true, the drawer
@@ -108,6 +116,9 @@ struct ContentView: View {
     /// screens; cleared by the dismiss animation's completion.
     @State private var tourLayerCoversDrawer = false
 
+    /// Whether the launch splash is still up. Optional for the same reason
+    /// `HomeView` reads it optionally — nil means "not launching".
+    @Environment(LaunchState.self) private var launchState: LaunchState?
     var body: some View {
         @Bindable var appShared = appShared
         // NOTE on bindings: deliberately NOT using `@Bindable` for
@@ -137,26 +148,8 @@ struct ContentView: View {
             // and keeping it in place means the dismiss slide reveals
             // the drawer at its old detent instead of flashing it
             // back in after the animation.
-            if appShared.selectedTab == .home
-                && (tourLayerCoversDrawer || !navState.isShowingDetail) {
-                BottomSheet(
-                    detent: $homeSheetDetent,
-                    dragOffset: dragOffsetBinding,
-                    peekHeight: 80,
-                    bottomCornerRadius: 0,
-                    bottomReservedHeight: AtlasBottomModule.height(),
-                    // .large stops below the search bar + chip row
-                    // so they stay anchored at the top of the screen
-                    // when the drawer is fully expanded. AtlasSpacing.sm
-                    // is a small visual buffer between the chip row's
-                    // bottom edge and the drawer's top edge.
-                    topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
-                ) {
-                    HomeDrawerContent(
-                        sheetDetent: $homeSheetDetent
-                    )
-                }
-            }
+            homeDrawer(dragOffset: dragOffsetBinding)
+
             // Fallback mini-player + tab bar, rendered in THIS (main) window
             // whenever the secondary higher-level window isn't installed.
             //
@@ -172,7 +165,13 @@ struct ContentView: View {
             // at which point this disappears (`isInstalled` is observed). While
             // it is showing, the only thing missing is z-order above UIKit
             // modals — a much better failure than an app you can't navigate.
-            if let bottomModuleWindow, !bottomModuleWindow.isInstalled {
+            //
+            // `hidesBottomModule` withdraws the bars entirely (the tour
+            // wizard, which needs their 126pt). It has to be honoured here as
+            // well as on the window, or hiding one would simply reveal the
+            // other.
+            if let bottomModuleWindow, !bottomModuleWindow.isInstalled,
+               !appShared.hidesBottomModule {
                 BottomModuleRoot()
             }
         }
@@ -184,10 +183,21 @@ struct ContentView: View {
         // slides up over the mini-player + tab bar in the same window,
         // with no separate hide/show of the module (which used to leave
         // a visible gap during the transition).
+        // Permission is requested after hand-off, not on appear. ContentView
+        // now mounts underneath the splash, and a system alert over a black
+        // screen with a wordmark on it reads as a broken launch. `LaunchGate`
+        // treats `notDetermined` as settled precisely so this delay can't
+        // stall the gate.
+        .onChange(of: launchState?.isSplashVisible ?? false) { _, splashVisible in
+            guard !splashVisible else { return }
+            requestLocationPermissionIfNeeded()
+        }
+
         .onAppear {
-            guard !didRequestLocationPermission else { return }
-            didRequestLocationPermission = true
-            locationManager.requestPermission()
+            // Backstop for any host that never injects `LaunchState` (previews,
+            // tests): with no splash to wait for, behave exactly as before.
+            guard launchState == nil else { return }
+            requestLocationPermissionIfNeeded()
         }
         // 🔴 Give each presenter a DIRECT route to take its layer down.
         //
@@ -217,6 +227,7 @@ struct ContentView: View {
             }
             makerPresenter.performDismiss = { makerLayer.dismiss() }
             placePresenter.performDismiss = { placeLayer.dismiss() }
+            listPresenter.performDismiss = { listLayer.dismiss() }
         }
         // Paid tours: keep entitlements in step with whoever is signed in.
         // Keyed on `userId` so it re-runs on sign-in, sign-out AND an account
@@ -304,6 +315,7 @@ struct ContentView: View {
                     // button that went missing for exactly one dropped
                     // injection (build 68 → 69).
                     .environment(placePresenter)
+                    .environment(listPresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
@@ -352,6 +364,7 @@ struct ContentView: View {
                         .environment(tourPresenter)
                         .environment(makerPresenter)
                         .environment(placePresenter)
+                    .environment(listPresenter)
                         .environment(dataService)
                         .environment(locationManager)
                         .environment(audioPlayer)
@@ -372,6 +385,49 @@ struct ContentView: View {
                 placeLayer.dismiss()
             }
         }
+        // The list layer. A list is a top-level screen wherever you reach it
+        // from — Library, a profile, a shared link — so it slides up like the
+        // other three rather than pushing onto whichever stack you happened to
+        // be in (owner direction, 2026-08-20). `preloaded` is passed straight
+        // through so the title is on screen from the first frame.
+        .onChange(of: listPresenter.presented?.id) { _, _ in
+            if let presentedList = listPresenter.presented {
+                listLayer.present(
+                    // Wrapped in its own stack, like the maker layer: "Go to
+                    // creator" pushes a maker page here rather than stacking a
+                    // second layer over this one.
+                    NavigationStack {
+                        TourListDetailView(
+                            target: presentedList,
+                            onDismiss: { listPresenter.dismiss() }
+                        )
+                    }
+                        .environment(navState)
+                        .environment(homeSharedState)
+                        .environment(tourPresenter)
+                        .environment(makerPresenter)
+                        .environment(placePresenter)
+                        .environment(listPresenter)
+                        .environment(dataService)
+                        .environment(locationManager)
+                        .environment(audioPlayer)
+                        .environment(libraryStore)
+                        .environment(savedPlacesStore)
+                        .environment(recentlyViewedStore)
+                        .environment(proximityMonitor)
+                        .environment(tourDownloader)
+                        .environment(appShared)
+                        .environment(followService)
+                        .environment(authService)
+                        .environment(purchaseService)
+                        .environment(listService)
+                        .environment(groupListen),
+                    onDismiss: { listPresenter.dismiss() }
+                )
+            } else {
+                listLayer.dismiss()
+            }
+        }
         .onChange(of: makerPresenter.presentedMaker?.id) { _, _ in
             if let maker = makerPresenter.presentedMaker {
                 makerLayer.present(
@@ -383,6 +439,7 @@ struct ContentView: View {
                     .environment(tourPresenter)
                     .environment(makerPresenter)
                     .environment(placePresenter)
+                    .environment(listPresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
@@ -403,28 +460,6 @@ struct ContentView: View {
                 makerLayer.dismiss()
             }
         }
-        // A list opened from a share link. Presented as an ordinary sheet
-        // rather than the UIKit slide-up layer tours and makers use: this
-        // arrives from outside the app with no screen behind it to slide over,
-        // and it carries its own nav stack so the title and the ... menu work
-        // exactly as they do everywhere else.
-        .sheet(item: $appShared.sharedList) { shared in
-            NavigationStack {
-                TourListDetailView(listId: shared.list.id, preloaded: shared.list)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
-                            Button("Close") { appShared.sharedList = nil }
-                        }
-                    }
-            }
-            .environment(listService)
-            .environment(dataService)
-            .environment(tourPresenter)
-            .environment(makerPresenter)
-            .environment(authService)
-            .environment(libraryStore)
-            .environment(appShared)
-        }
         // Resolve the current tour's maker avatar into lock-screen /
         // Control-Center artwork whenever the loaded source changes.
         // Done here (not in AudioPlayerService) because the avatar
@@ -444,6 +479,47 @@ struct ContentView: View {
             }
             #endif
         }
+    }
+
+
+    /// The home drawer, extracted from `body`.
+    ///
+    /// ⚠️ Not stylistic: with this inline, the type-checker gave up on `body`
+    /// outright ("unable to type-check this expression in reasonable time")
+    /// the moment the sheet gained one more argument — and blamed an unrelated
+    /// line thirty lines away. If `body` starts failing to compile for no
+    /// visible reason, pull the next-largest subview out the same way.
+    @ViewBuilder
+    private func homeDrawer(dragOffset: Binding<CGFloat>) -> some View {
+        if appShared.selectedTab == .home
+            && (tourLayerCoversDrawer || !navState.isShowingDetail) {
+            BottomSheet(
+                detent: $homeSheetDetent,
+                dragOffset: dragOffset,
+                peekHeight: 80,
+                bottomCornerRadius: 0,
+                bottomReservedHeight: AtlasBottomModule.height(),
+                // .large stops below the search bar + chip row
+                // so they stay anchored at the top of the screen
+                // when the drawer is fully expanded. AtlasSpacing.sm
+                // is a small visual buffer between the chip row's
+                // bottom edge and the drawer's top edge.
+                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+            ) {
+                HomeDrawerContent(
+                    sheetDetent: $homeSheetDetent
+                )
+            }
+        }
+    }
+
+    // MARK: - Launch
+
+    /// Ask for location permission exactly once per session.
+    private func requestLocationPermissionIfNeeded() {
+        guard !didRequestLocationPermission else { return }
+        didRequestLocationPermission = true
+        locationManager.requestPermission()
     }
 
     /// Tab content. **Home is kept permanently mounted** (visibility-

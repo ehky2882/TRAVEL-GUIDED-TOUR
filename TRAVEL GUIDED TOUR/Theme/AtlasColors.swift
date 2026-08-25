@@ -29,6 +29,45 @@ enum AtlasColors {
     /// touching them.
     static let mapPin = accent
 
+    /// The brass accent as a **literal value**, immune to `.tint`.
+    ///
+    /// `accent` is `Color.accentColor`, which resolves the *environment's*
+    /// accent — so any ancestor `.tint(_:)` silently repaints it. That is
+    /// not hypothetical: `SettingsView` pins `.tint(primaryText)` on its
+    /// List, deliberately, to stop the system auto-tinting every row icon
+    /// and button label gold. The side effect is that everything on that
+    /// screen reading `accent` / `mapPin` comes out white — which is why
+    /// the Settings wordmark rendered white for months while its call site
+    /// plainly said `mapPin` (owner, 2026-08-19: "dozent should be in gold
+    /// color").
+    ///
+    /// Use this for anything that must stay brand-coloured regardless of
+    /// the surface it lands on. Same reasoning as
+    /// `secondaryBackgroundUIColor` below, which is a literal pair for the
+    /// same class of reason.
+    ///
+    /// ⚠️ Duplicates `Assets.xcassets/AccentColor.colorset` by hand —
+    /// there is no way to read an asset colour without going through the
+    /// environment. **Change one, change the other**, and check
+    /// `site/atlas.css` (`--brass`) in the same pass.
+    static let brass = Color(red: 139 / 255, green: 117 / 255, blue: 53 / 255)
+
+    /// Deleting, failing, going wrong.
+    ///
+    /// ⚠️ **Not the accent.** `accent` is the brass, so a destructive control
+    /// painted with it is indistinguishable from the submit button beside it —
+    /// which is exactly what the wizard's Delete tour was until 2026-08-20: it
+    /// carried `Button(role: .destructive)` and then drew itself in
+    /// `AtlasColors.accent`, so the intent was right and the colour said the
+    /// opposite.
+    ///
+    /// ⚠️ Three older call sites still write `Color.red` by hand —
+    /// `TourStatus.takenDown`, `AtlasToast.error`, and the over-limit character
+    /// counter in `TourListEditorSheet`. Same value, so nothing looks wrong
+    /// today; they should read this token the next time any of them is touched,
+    /// per this file's own rule that no view hardcodes a colour.
+    static let destructive = Color.red
+
     /// Three-step text hierarchy. SwiftUI's semantic colors adapt
     /// to color scheme: primary is black in light mode and white
     /// in dark mode; secondary is a muted gray in both.
@@ -41,7 +80,35 @@ enum AtlasColors {
     // equivalent. The design pass can replace these with
     // asset-catalog colorsets if the brand wants warmer surfaces.
     #if canImport(UIKit)
-    static let background = Color(uiColor: .systemBackground)
+    /// The DEEPER of the two surfaces — form fields, the player ground, and
+    /// the colour text takes when it is drawn ON the brass.
+    ///
+    /// 🔴 LIGHT IS THE GROUPED GREY, NOT WHITE, and that inversion is the
+    /// whole point: `background` is the ground and `secondaryBackground`
+    /// below is the surface RAISED on top of it, in both schemes. Dark had
+    /// that relationship already (#000 under #1C1C1E); light did not — it
+    /// was #FFFFFF under #F2F2F7, i.e. the raised surface was the darker
+    /// one — so every chrome surface sat in a haze a few percent off the
+    /// page and nothing read as raised (owner, 2026-08-22: *"the bg color
+    /// doesn't offer enough contrast"*). Swapping the light pair puts both
+    /// schemes on the same rule and costs no call site its meaning: a field
+    /// is still recessed against its page, and text on brass is still the
+    /// page colour.
+    ///
+    /// ⚠️ A literal pair rather than `.systemBackground` for the same reason
+    /// `secondaryBackgroundUIColor` is one — a semantic colour resolves
+    /// differently by elevation, and these two must hold their exact
+    /// relationship across the app's two windows.
+    /// Light: #F2F2F7. Dark: #000000.
+    static let backgroundUIColor: UIColor = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            : UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
+    }
+    static let background = Color(uiColor: backgroundUIColor)
+    /// The RAISED surface: every piece of chrome and every detail page —
+    /// bars, drawer, search field, chips, sheets, tour/place/list bodies.
+    ///
     /// Hardcoded RGB pair instead of `.secondarySystemBackground` so
     /// every painted surface — tour-detail body in window 1, bars in
     /// window 2, drawer, search bar — resolves to the EXACT same
@@ -50,11 +117,17 @@ enum AtlasColors {
     /// `.base` vs `.elevated` user-interface-level traits, which is
     /// why the bottom-module CHROME used to show a visible seam
     /// against the detail body in dark mode.
-    /// Light: #F2F2F7 (system default). Dark: #1C1C1E (base level).
+    ///
+    /// ⚠️ That seam is also why light mode CANNOT separate the bars from a
+    /// page they sit on by colour — one token paints both, deliberately.
+    /// What light mode gains from white is contrast against everything
+    /// carried ON it (photographs, black text, the brass) and against the
+    /// map behind the Home chrome.
+    /// Light: #FFFFFF. Dark: #1C1C1E (base level).
     static let secondaryBackgroundUIColor: UIColor = UIColor { traits in
         traits.userInterfaceStyle == .dark
             ? UIColor(red: 28/255, green: 28/255, blue: 30/255, alpha: 1)
-            : UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
+            : UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     }
     static let secondaryBackground = Color(uiColor: secondaryBackgroundUIColor)
     /// The bottom-module surfaces (mini-player painted bar, tab bar

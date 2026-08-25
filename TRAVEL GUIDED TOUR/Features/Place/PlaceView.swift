@@ -18,8 +18,9 @@ import MapKit
 /// and a full-bleed hero. What the two pages now share, and must keep sharing:
 ///
 ///   - `secondaryBackground` ground and a hidden system nav bar.
-///   - A sticky `chromeRow` parked by `.safeAreaInset(edge: .top)` — 44 pt
-///     capsules on a material bar, content scrolling *under* it.
+///   - A sticky chrome row, parked and painted by the shared `atlasChromeRow`
+///     — 44 pt capsules on an opaque bar (NOT a material: see that file),
+///     content scrolling *under* it.
 ///   - `AtlasTabStrip` (GALLERY / MAP) above a swap zone, with `GET DIRECTIONS`
 ///     *outside* it so the layout height doesn't jump when you toggle.
 ///   - `TourMediaCarousel` at the hero ratio, inset by `lg`, square corners.
@@ -87,13 +88,9 @@ struct PlaceView: View {
 
     var body: some View {
         scrollBody
-            .safeAreaInset(edge: .top, spacing: 0) {
-                chromeRow
-                    .background(AtlasColors.secondaryBackground.opacity(0.8))
-                    .background(.regularMaterial)
-            }
-            .background(AtlasColors.secondaryBackground)
-            .toolbar(.hidden, for: .navigationBar)
+            // Shared with tour detail and the list page — see `atlasChromeRow`,
+            // including why the fill is opaque and must not sit over a material.
+            .atlasChromeRow { chromeControls }
             .sheet(isPresented: $showingReport) {
                 ReportSheet(target: .place(place))
             }
@@ -102,29 +99,27 @@ struct PlaceView: View {
     // MARK: - Chrome
 
     /// X close (leading) · bookmark · overflow (trailing) — the same three
-    /// controls, in the same order and the same capsule, as tour detail.
-    private var chromeRow: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            Button(action: onDismiss) {
-                chromeCapsule("xmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Close")
-
-            Spacer()
-
-            Button {
-                savedPlaces.toggleSaved(place.id)
-            } label: {
-                chromeCapsule(isSaved ? "bookmark.fill" : "bookmark")
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(isSaved ? "Remove \(place.name) from saved places" : "Save \(place.name)")
-
-            overflowMenu
+    /// controls, in the same order and the same capsule, as tour detail. The
+    /// row around them comes from `atlasChromeRow`, shared with that page.
+    @ViewBuilder
+    private var chromeControls: some View {
+        Button(action: onDismiss) {
+            AtlasChromeButton("xmark")
         }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
+        .buttonStyle(.plain)
+        .accessibilityLabel("Close")
+
+        Spacer()
+
+        Button {
+            savedPlaces.toggleSaved(place.id)
+        } label: {
+            AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(isSaved ? "Remove \(place.name) from saved places" : "Save \(place.name)")
+
+        overflowMenu
     }
 
     /// Deliberately shorter than tour detail's menu. There is no download (a
@@ -156,7 +151,7 @@ struct PlaceView: View {
                 }
             }
         } label: {
-            chromeCapsule("ellipsis")
+            AtlasChromeButton("ellipsis")
                 .accessibilityLabel("More options")
         }
     }
@@ -164,14 +159,6 @@ struct PlaceView: View {
     /// Shared visual for every top chrome control — identical to tour
     /// detail's, down to the fill opacity. Gold is reserved for action
     /// controls, so chrome stays neutral.
-    private func chromeCapsule(_ systemName: String) -> some View {
-        Image(systemName: systemName)
-            .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
-            .frame(width: 44, height: 44)
-            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
-            .contentShape(Capsule())
-    }
 
     // MARK: - Body
 
@@ -228,7 +215,7 @@ struct PlaceView: View {
             heroImageURL: heroImageURL,
             additionalImageURLs: galleryImageURLs,
             videoURLs: nil,
-            height: nil,   // 5:4 — see AtlasSpacing.heroAspectRatio
+            height: nil,   // takes AtlasSpacing.heroAspectRatio
             category: tours.first?.primaryCategory ?? .culturalHeritage
         )
         .padding(.horizontal, AtlasSpacing.lg)
@@ -418,8 +405,25 @@ private struct PlaceTourRow: View {
             .frame(width: 56)
 
             VStack(alignment: .leading, spacing: 3) {
-                // Absence is the default state: only the exception is marked,
-                // so a free single-stop tour carries no badge at all.
+                Text(tour.title.uppercased())
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+
+                Text(subtitle)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+
+                // 🔴 Badges sit BELOW the metadata, not above the title — owner
+                // decision 2026-08-25. Above the title they took a line of their
+                // own, so a walk with a two-line title ran to four rows with the
+                // pill stranded at the top, furthest from the information it
+                // qualifies. A fourth row is fine; the pill being adrift was not.
+                //
+                // ⚠️ `PlaceView` and `TourListDetailView` carry this row
+                // byte-identically by design. Change one and change the other.
                 HStack(spacing: AtlasSpacing.xs) {
                     if tour.kind == .multiStop {
                         Text("WALK")
@@ -431,17 +435,6 @@ private struct PlaceTourRow: View {
                     }
                     TourPriceBadge(tour: tour)
                 }
-
-                Text(tour.title.uppercased())
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                Text(subtitle)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(1)
             }
 
             Spacer(minLength: 0)

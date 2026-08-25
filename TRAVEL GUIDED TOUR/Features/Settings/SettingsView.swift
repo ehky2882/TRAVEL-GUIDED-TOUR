@@ -47,27 +47,49 @@ struct SettingsView: View {
             List {
                 Section {
                     // Base gap is 4pt; the tagline adds 4pt on top so
-                    // DOZENT↔tagline = 8pt while tagline↔Version = 4pt.
+                    // Dozent↔tagline = 8pt while tagline↔Version = 4pt.
                     VStack(spacing: AtlasSpacing.xs) {
-                        // Wordmark: caption mono but letter-spaced so the
-                        // app name reads as a logotype rather than just
-                        // another 13pt row.
-                        Text("DOZENT")
+                        // Wordmark, drawn EXACTLY as `SplashView` draws it:
+                        // New York serif at 15pt, tracked 2, Title Case. It
+                        // was uppercase and tracked 6, which is a logotype
+                        // convention that only works on capitals — so the
+                        // launch screen and this masthead read as two
+                        // different marks (owner, 2026-08-19).
+                        //
+                        // It stays BRASS here rather than the splash's
+                        // white: the splash has a brass circle above it
+                        // carrying the accent, and this screen has nothing
+                        // else on it that does. Same call the website makes
+                        // for its page mastheads (site/atlas.css `.brand`).
+                        //
+                        // Keep this in step with SplashView and with
+                        // `.brand` / `.splash-wordmark` in site/atlas.css.
+                        // `brass`, NOT `mapPin`/`accent`. Those are
+                        // `Color.accentColor`, which resolves the
+                        // environment's accent — and this List pins
+                        // `.tint(primaryText)` (see the bottom of `body`)
+                        // to stop the system auto-tinting every row icon
+                        // gold. That tint repainted the wordmark white
+                        // too, for months, while this line said `mapPin`.
+                        // The literal token is immune to it.
+                        Text("Dozent")
                             .font(AtlasTypography.wordmark)
-                            .tracking(6)
-                            .foregroundStyle(AtlasColors.mapPin)
+                            .tracking(2)
+                            .foregroundStyle(AtlasColors.brass)
                         Text("Audio tours, anchored to places.")
                             .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.secondaryText)
                             .padding(.top, AtlasSpacing.xs)
-                        Text("Version 1.0")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
+                        if let versionLine {
+                            Text(versionLine)
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
                     }
                     .frame(maxWidth: .infinity)
                     .listRowBackground(Color.clear)
                     // Tight masthead: 4pt row inset + 4pt VStack padding
-                    // = 8pt above DOZENT and below Version 1.0.
+                    // = 8pt above Dozent and below the version line.
                     .listRowInsets(EdgeInsets(
                         top: AtlasSpacing.xs, leading: AtlasSpacing.md,
                         bottom: AtlasSpacing.xs, trailing: AtlasSpacing.md))
@@ -196,10 +218,31 @@ struct SettingsView: View {
                             .foregroundStyle(AtlasColors.secondaryText)
                     }
                     HStack {
-                        Label("Makers", systemImage: "person.2")
+                        // "Dozents", not "Makers" (owner, 2026-08-19) —
+                        // the product is named for the people who make the
+                        // tours, so the roster is named after them too.
+                        // The model type is still `Maker`; this is the
+                        // reader-facing word, and the two are allowed to
+                        // differ the way `journeys` stayed `journeys` in
+                        // Postgres after the Swift rename to `TourList`.
+                        Label("Dozents", systemImage: "person.2")
                         Spacer()
                         Text("\(dataService.makers.count)")
                             .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                    HStack {
+                        Label("Cities", systemImage: "building.2")
+                        Spacer()
+                        Text("\(cityCount)")
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                    if countryCount > 0 {
+                        HStack {
+                            Label("Countries", systemImage: "globe")
+                            Spacer()
+                            Text("\(countryCount)")
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
                     }
                     // Was "All data stored on device", which stopped being
                     // true when accounts and cross-device sync shipped: a
@@ -232,6 +275,12 @@ struct SettingsView: View {
             // No accent gold on this surface: List auto-tints row icons +
             // button labels with the accent, so pin the tint to
             // primaryText instead.
+            //
+            // ⚠️ This also repaints anything on this screen that reads
+            // `AtlasColors.accent` / `.mapPin`, because both are
+            // `Color.accentColor` and resolve against the environment.
+            // Anything here that must stay brand-coloured has to use the
+            // literal `AtlasColors.brass` — the wordmark above does.
             .tint(AtlasColors.primaryText)
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
@@ -276,6 +325,61 @@ struct SettingsView: View {
         UIApplication.shared.open(url)
     }
     #endif
+
+    /// Distinct cities in the catalog, counted from the live `city` on
+    /// each tour rather than from a list held in the app — a city launch
+    /// merges as content and reaches phones over the air with no build,
+    /// so anything hardcoded here would start understating within days.
+    ///
+    /// Counts the value as authored. That means the four New York
+    /// boroughs authored as `Brooklyn` / `Bronx` / `Queens` /
+    /// `Staten Island` each count separately from `New York`, which is
+    /// a judgement about the data rather than about this row — if the
+    /// intent changes, normalise `city` in the catalog, not here, so
+    /// every surface that reads it agrees.
+    private var cityCount: Int {
+        Set(dataService.tours.compactMap { tour in
+            tour.city?.trimmingCharacters(in: .whitespacesAndNewlines)
+        }.filter { !$0.isEmpty }).count
+    }
+
+    /// Distinct countries in the catalog, counted the same way as
+    /// `cityCount` and from the same authored data.
+    ///
+    /// The row is hidden at zero rather than printed as "0". `country`
+    /// reaches the app from `get_catalog`, and Supabase is the primary
+    /// source — so between this shipping and the column migration being
+    /// applied, the honest answer is "we do not know yet", which is a
+    /// missing row, not a count of none. It appears on its own once the
+    /// catalog serves the key; no build is needed for that.
+    private var countryCount: Int {
+        Set(dataService.tours.compactMap { tour in
+            tour.country?.trimmingCharacters(in: .whitespacesAndNewlines)
+        }.filter { !$0.isEmpty }).count
+    }
+
+    /// The running app's version, read from the bundle rather than typed
+    /// into the masthead — `Info.plist` fills both keys from the build
+    /// settings (`CFBundleShortVersionString` = `$(MARKETING_VERSION)`,
+    /// `CFBundleVersion` = `$(CURRENT_PROJECT_VERSION)`), so this can
+    /// never disagree with the binary the way a literal did: the label
+    /// still read "Version 1.0" at marketing version 1.1, build 75.
+    ///
+    /// The build number is shown because a marketing version alone
+    /// cannot identify a TestFlight build, and "which build are you on?"
+    /// is the first question asked whenever a tester reports something.
+    ///
+    /// Both keys are declared in `Info.plist`, so nil here means the
+    /// bundle is malformed; the row is dropped rather than printed as a
+    /// placeholder, since a wrong-looking version is worse than none.
+    private var versionLine: String? {
+        let info = Bundle.main.infoDictionary
+        guard let marketing = info?["CFBundleShortVersionString"] as? String,
+              !marketing.isEmpty else { return nil }
+        guard let build = info?["CFBundleVersion"] as? String,
+              !build.isEmpty else { return "Version \(marketing)" }
+        return "Version \(marketing) (\(build))"
+    }
 
     /// Section header styled to match the rest of the screen: caption
     /// mono, ALL CAPS, secondary tint — instead of the system grey

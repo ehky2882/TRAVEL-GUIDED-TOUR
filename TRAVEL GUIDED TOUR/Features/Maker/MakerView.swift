@@ -96,12 +96,23 @@ struct MakerView: View {
 
     @Environment(DataService.self) private var dataService
     @Environment(AtlasNavigationState.self) private var navState
+    /// Optional because this screen also renders inside the UIKit slide-up
+    /// layers, which carry a narrower environment than a tab root. Only the
+    /// own-profile path presents the wizard, and that path is a tab root.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    /// The secondary window hosting the mini-player and tab bar, so the wizard
+    /// can withdraw them. Optional for the same reason as `appShared`.
+    @Environment(BottomModuleWindowController.self)
+    private var bottomModuleWindow: BottomModuleWindowController?
     @Environment(TourPresenter.self) private var tourPresenter
     // Optional for the same reason as the services below: this page can be
     // reached from the tour-detail layer, whose environment does not inject
     // PlacePresenter — a required lookup would crash there, exactly the class
     // of bug the old ReportSheet crash was.
     @Environment(PlacePresenter.self) private var placePresenter: PlacePresenter?
+    // Optional for the same reason as `placePresenter`: this page is reachable
+    // from layers that don't inject every presenter.
+    @Environment(TourListPresenter.self) private var listPresenter: TourListPresenter?
     @Environment(LocationManager.self) private var locationManager
     // Optional: the public maker page can be reached via the
     // UIKit-backed tour-detail layer, whose environment does NOT inject
@@ -151,31 +162,21 @@ struct MakerView: View {
     @State private var showingSettings = false
     @State private var showingCreate = false
     @State private var showingEditProfile = false
-    /// Set when a new draft is created, to push its editor (step 2) as the
-    /// create sheet dismisses. `pendingDraftId` holds the id until the sheet is
-    /// fully gone, then `draftToEdit` fires the push (avoids a dismiss↔push race).
+    /// One of the maker's own tours, opened in the wizard.
     @State private var draftToEdit: EditingDraft?
-    @State private var pendingDraftId: UUID?
+    /// Either route into the wizard — creating or editing. One value so the
+    /// bottom module is withdrawn on both, and restored the moment neither is
+    /// showing.
+    private var isPresentingWizard: Bool { showingCreate || draftToEdit != nil }
 
     /// Which of TOURS / LISTS / MAP is showing.
     @State private var profileTab: ProfileTab = .tours
     /// Create-a-list sheet, reached from the LISTS tab.
     @State private var showingCreateList = false
-    /// MAP tab camera. Framed once to fit this maker's whole body of
-    /// work, then left alone so a pan survives a tab switch.
-    @State private var mapCamera: MapCameraPosition = .automatic
-    @State private var selectedMapTourId: UUID?
     /// Set when a place pin is tapped on a maker page that is itself inside a
     /// detail layer — see `openPlaceFromMap`.
     @State private var placeToPush: Place?
-    /// Tours behind a tapped pin that zooming can't split, plus where it
-    /// sits. A list because such a pin stands for more than one tour —
-    /// see `mapPlacecardAnchor`. Empty means no place card is showing.
-    @State private var mapPlacecardTours: [Tour] = []
-    @State private var mapPlacecardCoordinate: CLLocationCoordinate2D?
-    /// The span the map was at when the stack opened, so dismissing and
-    /// re-tapping doesn't creep the zoom.
-    @State private var mapSpanBeforePlacecard: MKCoordinateSpan?
+    @State private var listToPush: TourListTarget?
     /// Another maker's visible lists. Kept here rather than in
     /// `TourListService` so they can't be mistaken for the viewer's own —
     /// they belong to whichever page is open and die with it.
@@ -235,25 +236,77 @@ struct MakerView: View {
         .sheet(isPresented: $showingSettings) {
             SettingsView()
         }
+        // The five-step create wizard. It ends on its own confirmation screen,
+        // so there is nothing to push afterwards — unlike the old two-screen
+        // form, which saved a draft and handed you to the editor.
         .sheet(isPresented: $showingCreate) {
-            CreateTourView { newId in
-                pendingDraftId = newId
-            }
+            CreateTourWizardView()
         }
-        // Once the create sheet is fully dismissed, push the new draft's editor
-        // (step 2) so "Save draft & continue" lands there instead of the profile.
-        .onChange(of: showingCreate) { _, showing in
-            if !showing, let id = pendingDraftId {
-                pendingDraftId = nil
-                draftToEdit = EditingDraft(id: id)
-            }
+        // 🔴 EDITING PRESENTS FULL-SCREEN, NOT AS A SHEET — this is the fix
+        // for the saved-tour watchdog hang (builds 76→88), do not "restore
+        // consistency" with the create sheet above. Every crash log went
+        // through `UISheetPresentationController._sheetLayoutInfoLayout:` —
+        // a frame only a sheet can produce — spinning in a synchronous layout
+        // oscillation during the presentation transition. Five attempts at
+        // the loop's trigger failed (toolbar structure, camera writes,
+        // dismiss preferences, deferred loading); removing the sheet removes
+        // the machinery that loops. The old editor was never a sheet either:
+        // `TourAuthoringView` was pushed. Only the create path — which never
+        // hung — has ever safely lived in one.
+        .fullScreenCover(item: $draftToEdit) { draft in
+            CreateTourWizardView(existingTourId: draft.id)
         }
-        .navigationDestination(item: $draftToEdit) { draft in
-            TourAuthoringView(tourId: draft.id)
+        // 🔴 THE WIZARD'S BARS ARE WITHDRAWN FROM HERE, NOT FROM INSIDE IT.
+        //
+        // While the wizard is up the mini-player and tab bar are hidden, which
+        // buys back the 126pt they occupy — every wizard step has to fit on one
+        // screen without scrolling, and those bars do nothing during authoring.
+        //
+        // The flag is driven by *presentation state on this view*, deliberately,
+        // rather than by the wizard's own `onAppear`/`onDisappear`. This view
+        // outlives the wizard by construction, so `showingCreate` and
+        // `draftToEdit` always resolve back to their empty values however the
+        // wizard goes away — dismissed, swiped, or torn down. A missed
+        // `onDisappear` inside the wizard would leave the app with no tab bar
+        // for the rest of the session, which is a failure this app has already
+        // shipped three times.
+        //
+        // 🔴 And the window is hidden from HERE, not from an observer in
+        // `ContentView`. That view is in the main window, which the wizard
+        // covers completely, and SwiftUI can stop delivering updates to a
+        // covered hierarchy — the same trap that made the tour layer's X and
+        // the tab bar go dead. This `onChange` fires on state owned by this
+        // view, at the instant it flips, while this view is still live: it
+        // cannot be starved. The flag it also sets is only read as a *render*
+        // dependency by `ContentView`'s inline fallback, which re-evaluates
+        // whenever it is on screen.
+        //
+        // `initial: true` makes opening a profile restore the bars, so even a
+        // stuck flag heals itself. `onDisappear` is the third backstop.
+        //
+        // To bring the bars back permanently, set
+        // `CreateTourWizardView.hidesBottomModule` to false — nothing else
+        // needs touching.
+        .onChange(of: isPresentingWizard, initial: true) { _, presenting in
+            let hidden = presenting && CreateTourWizardView.hidesBottomModule
+            appShared?.hidesBottomModule = hidden
+            bottomModuleWindow?.setHidden(hidden)
+        }
+        // ⚠️ Guarded, because presenting a `fullScreenCover` can itself fire
+        // `onDisappear` on the view it covers — unguarded, this would put the
+        // bars straight back on top of the wizard. This is only here for the
+        // case where this page genuinely goes away with no wizard showing.
+        .onDisappear {
+            guard !isPresentingWizard else { return }
+            appShared?.hidesBottomModule = false
+            bottomModuleWindow?.setHidden(false)
         }
         // A place tapped on the MAP tab while this page is already inside a
         // detail layer. See `openPlaceFromMap` for why it cannot go through
         // the presenter from here.
+        .navigationDestination(item: $listToPush) { target in
+            TourListDetailView(target: target, onDismiss: { listToPush = nil })
+        }
         .navigationDestination(item: $placeToPush) { place in
             PlaceView(place: place, onDismiss: { placeToPush = nil })
         }
@@ -270,8 +323,11 @@ struct MakerView: View {
         // optional here) so the task identity is a plain `UUID?`.
         .task(id: authService?.userId ?? nil) {
             guard isOwnProfile else { return }
-            await listService?.loadMyLists()
-            await listService?.loadSavedLists()
+            // Concurrent, not stacked: neither query depends on the other, and
+            // awaiting them in turn made the LISTS tab re-lay-out twice.
+            async let mine: Void? = listService?.loadMyLists()
+            async let saved: Void? = listService?.loadSavedLists()
+            _ = await (mine, saved)
         }
         // Someone else's visible lists + their Liked. Keyed on the maker so
         // opening a second creator's page replaces them rather than showing
@@ -612,8 +668,8 @@ struct MakerView: View {
     /// creating belongs to whoever owns the page.
     private var theirListsSection: some View {
         LazyVStack(alignment: .leading, spacing: 0) {
-            NavigationLink {
-                LikedListView(tourIds: theirLikedTourIds, ownerName: maker.displayName)
+            Button {
+                openList(.liked(ownerName: maker.displayName, tourIds: theirLikedTourIds))
             } label: {
                 LikedListRow(
                     count: theirLikedTours.count,
@@ -626,9 +682,7 @@ struct MakerView: View {
             ForEach(theirLists) { list in
                 Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                NavigationLink {
-                    TourListDetailView(listId: list.id, preloaded: list)
-                } label: {
+                Button { openList(.list(id: list.id, preloaded: list)) } label: {
                     NamedListRow(
                         list: list,
                         coverImageName: TourListCover.imageName(for: list, in: dataService),
@@ -653,8 +707,8 @@ struct MakerView: View {
             NewListRow { showingCreateList = true }
             Divider().padding(.horizontal, AtlasSpacing.lg)
 
-            NavigationLink {
-                LikedListView()
+            Button {
+                openList(.ownLiked)
             } label: {
                 LikedListRow(
                     count: likedTours.count,
@@ -667,9 +721,7 @@ struct MakerView: View {
             ForEach(myLists) { list in
                 Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                NavigationLink {
-                    TourListDetailView(listId: list.id)
-                } label: {
+                Button { openList(.list(id: list.id, preloaded: list)) } label: {
                     NamedListRow(
                         list: list,
                         coverImageName: TourListCover.imageName(for: list, in: dataService),
@@ -688,9 +740,7 @@ struct MakerView: View {
                 profileListsHeader("Saved lists")
 
                 ForEach(savedLists) { list in
-                    NavigationLink {
-                        TourListDetailView(listId: list.id, preloaded: list)
-                    } label: {
+                    Button { openList(.list(id: list.id, preloaded: list)) } label: {
                         SavedListRowView(
                             list: list,
                             ownerName: TourListOwner.name(of: list, in: dataService),
@@ -728,193 +778,30 @@ struct MakerView: View {
 
     /// Where this maker's tours are in the world.
     ///
-    /// Treatment copied from `TourDetailView.mapContent` (owner
-    /// direction): hero-sized, square corners, inset `lg` by the
-    /// caller so the gutters either side stay available for scrolling
-    /// the page. That inset is load-bearing — without it a drag on the
-    /// map has nowhere else to land and the page can't be scrolled.
+    /// The camera, the "Show all" control and the stacked cards a doubled-up
+    /// pin needs all live in `TourSetMap` now — shared with the list page
+    /// rather than copied to it. **Read that file before changing anything
+    /// here**: the stacked cards are the only way a tour under a coincident
+    /// pin is reachable at all, and a second copy would drift.
+    ///
+    /// Treatment copied from `TourDetailView.mapContent` (owner direction):
+    /// hero-sized, square corners, inset `lg` by the caller so the gutters
+    /// either side stay available for scrolling the page. That inset is
+    /// load-bearing — without it a drag on the map has nowhere else to land
+    /// and the page can't be scrolled.
     @ViewBuilder
     private var mapSection: some View {
-        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            HStack(spacing: AtlasSpacing.md) {
-                Text(mapCountText)
-                    .font(AtlasTypography.caption)
-                    .textCase(.uppercase)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-                Spacer()
-                // Re-frame after panning away. Borrowed from tour
-                // detail, where GET DIRECTIONS sits in this same slot.
-                if !makerTours.isEmpty {
-                    Button("Show all") { frameWholeMap() }
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.mapPin)
-                }
-            }
-            .padding(.top, AtlasSpacing.md)
-
-            // Rendered even with nothing to plot: a maker with no tours
-            // yet opens to the world, centred on the Atlantic (owner
-            // direction 2026-07-27). A real map reads as "nothing here
-            // yet" far better than a grey box does, and it's the same
-            // map they'll see once they publish something.
-            MakerMapSection(
-                tours: makerTours,
-                places: dataService.places,
-                userLocation: locationManager.userLocation,
-                selectedTourId: selectedMapTourId,
-                cameraPosition: $mapCamera,
-                // The map frames itself on first appear — it has to
-                // set the camera and its clustering region in the
-                // same breath, so it owns both.
-                initialRegion: MakerMapSection.initialRegion(for: makerTours),
-                onPinTapped: { tourId, _ in
-                    dismissMapPlacecard()
-                    selectedMapTourId = tourId
-                    openTourFromMap(tourId)
-                },
-                onPlaceTapped: { placeId, _ in
-                    guard let place = dataService.place(by: placeId) else { return }
-                    dismissMapPlacecard()
-                    selectedMapTourId = nil
-                    openPlaceFromMap(place)
-                },
-                onClusterTapped: { tourIds, coordinate in
-                    showMapPlacecards(for: tourIds, at: coordinate)
-                },
-                onMapTapped: {
-                    selectedMapTourId = nil
-                    dismissMapPlacecard()
-                },
-                placecard: mapPlacecardAnchor
-            )
-            // Same footprint as the gallery / map on tour detail.
-            // Every hero slot in the app is 4:3, this one included — a map
-            // that is 320 tall here and 266 on tour detail is exactly the
-            // inconsistency this change exists to remove.
-            .atlasHeroSizing(nil)
-        }
+        TourSetMap(
+            tours: makerTours,
+            places: dataService.places,
+            // Every tour here is this maker's, so the card names them without
+            // a lookup. A list page passes a real lookup instead.
+            makerForTour: { _ in maker },
+            onOpenTour: openTourFromMap,
+            onOpenPlace: openPlaceFromMap
+        )
     }
 
-    private var mapCountText: String {
-        switch makerTours.count {
-        case 0: return "No tours on the map yet"
-        case 1: return "1 tour on the map"
-        case let count: return "\(count) tours on the map"
-        }
-    }
-
-    /// Frame every tour this maker has made. A maker working across
-    /// continents gets a world view, which is the honest picture of them
-    /// (owner direction 2026-07-27).
-    ///
-    /// Only used by "Show all" — the first framing is the map's own job.
-    /// The clustering region catches up here via `onMapCameraChange`,
-    /// which fires when this animation settles.
-    private func frameWholeMap() {
-        // An open stack is anchored to one pin at one zoom; re-framing
-        // the whole map would leave it floating over unrelated ground.
-        dismissMapPlacecard()
-        let region = MakerMapSection.initialRegion(for: makerTours)
-        withAnimation(.easeInOut(duration: 0.35)) { mapCamera = .region(region) }
-    }
-
-    // MARK: - Doubled-up map pins
-
-    /// Show one place card per tour behind a pin that zooming can't
-    /// split — a walk starting at a landmark that also has its own
-    /// single-stop tour, which puts two tours on one coordinate. Owner
-    /// direction 2026-08-17: match the home map's treatment here rather
-    /// than inventing a second idiom.
-    private func showMapPlacecards(for tourIds: [UUID], at coordinate: CLLocationCoordinate2D) {
-        var seen = Set<UUID>()
-        let tours = tourIds
-            .compactMap { tourId in makerTours.first { $0.id == tourId } }
-            .filter { seen.insert($0.id).inserted }
-        guard !tours.isEmpty else { return }
-
-        selectedMapTourId = nil
-        let span = mapSpanBeforePlacecard ?? mapCamera.region?.span ?? Self.placecardFallbackSpan
-        mapSpanBeforePlacecard = span
-
-        withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
-            mapPlacecardTours = tours
-            mapPlacecardCoordinate = coordinate
-        }
-        // Sit the pin low in the frame rather than dead centre. This map
-        // is only hero-sized and a stack of cards is most of it,
-        // so a plain recentre would push the top card off the map.
-        withAnimation(.easeInOut(duration: 0.35)) {
-            mapCamera = .region(
-                MapClustering.region(
-                    anchoring: coordinate,
-                    at: Self.placecardPinFraction,
-                    span: span
-                )
-            )
-        }
-    }
-
-    private func dismissMapPlacecard() {
-        guard !mapPlacecardTours.isEmpty else { return }
-        withAnimation(.easeInOut(duration: 0.2)) {
-            mapPlacecardTours = []
-            mapPlacecardCoordinate = nil
-        }
-        mapSpanBeforePlacecard = nil
-    }
-
-    /// The stack the map renders above the tapped pin. Same component and
-    /// same width as the home map, so the two read as one system.
-    private var mapPlacecardAnchor: PlacecardAnchor? {
-        guard !mapPlacecardTours.isEmpty,
-              let coordinate = mapPlacecardCoordinate else { return nil }
-
-        let tours = Array(mapPlacecardTours.prefix(Self.maxStackedPlacecards))
-        let stack = VStack(spacing: AtlasSpacing.xs) {
-            ForEach(tours) { tour in
-                PlacecardView(
-                    tour: tour,
-                    maker: maker,
-                    distanceText: mapDistanceText(for: tour),
-                    onTap: {
-                        dismissMapPlacecard()
-                        selectedMapTourId = tour.id
-                        openTourFromMap(tour.id)
-                    }
-                )
-            }
-        }
-        .frame(width: PlacecardView.standardWidth)
-        return PlacecardAnchor(coordinate: coordinate, view: AnyView(stack))
-    }
-
-    private func mapDistanceText(for tour: Tour) -> String? {
-        guard let location = locationManager.userLocation else { return nil }
-        return AtlasFormatters.distanceAway(meters: tour.distance(from: location))
-    }
-
-    /// How far down the map the tapped pin sits while its stack is open.
-    /// Two cards plus their gap and the pin clearance come to roughly
-    /// 178pt; at 0.72 of a 320pt map there is ~215pt above the pin, so
-    /// the stack fits with room to spare on the smallest iPhone.
-    private static let placecardPinFraction: Double = 0.72
-
-    /// Span used only if the camera somehow has no region yet — roughly
-    /// neighbourhood level, matching the cluster-framing floor.
-    private static let placecardFallbackSpan = MKCoordinateSpan(
-        latitudeDelta: 0.01,
-        longitudeDelta: 0.01
-    )
-
-    /// Cap on the stack so it can't outgrow the map. The deepest
-    /// coincident group in the catalog is two; more than three on a map
-    /// this size would need a different answer altogether.
-    private static let maxStackedPlacecards = 3
-
-    /// Open a tour tapped on the map, matching `tourOpen`'s routing: own
-    /// tours go to the authoring editor (via the `navigationDestination`
-    /// the create flow already installs), everyone else's slides up as a
-    /// tour.
     /// Open a place tapped on the MAP tab.
     ///
     /// 🔴 **A presenter is not enough from here, and that is the whole bug.**
@@ -933,6 +820,21 @@ struct MakerView: View {
     /// So this mirrors `tourOpen` exactly — presenter when this page is
     /// top-level, an in-stack push when it is already inside a layer. The push
     /// depends on no observer at all, so it cannot fail the same way.
+    /// Open a list. Routed exactly like `openPlaceFromMap`, and for the same
+    /// reason: the presenter only sets state, and the slide-up itself is
+    /// performed by an `.onChange` in `ContentView` — which lives in the MAIN
+    /// window. Whenever this page is *itself* inside a layer that window is
+    /// covered, SwiftUI can stop delivering updates to it, and the row would
+    /// simply do nothing. So a list slides up from a tab root and pushes
+    /// in-stack from inside a layer.
+    private func openList(_ target: TourListTarget) {
+        if let listPresenter, tourPresenter.presentedTour == nil, !isStandalone {
+            listPresenter.present(target)
+        } else {
+            listToPush = target
+        }
+    }
+
     private func openPlaceFromMap(_ place: Place) {
         if let placePresenter, tourPresenter.presentedTour == nil, !isStandalone {
             placePresenter.present(place)
@@ -941,6 +843,9 @@ struct MakerView: View {
         }
     }
 
+    /// Open a tour tapped on the map, matching `tourOpen`'s routing: own
+    /// tours go to the authoring editor (via the `navigationDestination` the
+    /// create flow already installs), everyone else's slides up as a tour.
     private func openTourFromMap(_ tourId: UUID) {
         if isOwnProfile {
             draftToEdit = EditingDraft(id: tourId)
@@ -949,8 +854,8 @@ struct MakerView: View {
         }
     }
 
-    /// Tours in Liked, newest-saved first — the same source
-    /// `LikedListView` renders.
+    /// Tours in Liked, newest-saved first — the same source the Liked screen
+    /// (`TourListDetailView` with a `.liked` target) renders.
     private var likedTours: [Tour] {
         guard let libraryStore else { return [] }
         return libraryStore.savedEntries.compactMap { dataService.tour(by: $0.tourId) }
@@ -1003,7 +908,7 @@ struct MakerView: View {
             // Own tours open the authoring EDITOR (add audio / photos /
             // transcript / submit), pushed within the Me tab's nav stack —
             // not the public read-only detail.
-            NavigationLink { TourAuthoringView(tourId: tour.id) } label: { label() }
+            Button { draftToEdit = EditingDraft(id: tour.id) } label: { label() }
                 .buttonStyle(.plain)
         } else if tourPresenter.presentedTour == nil {
             Button { tourPresenter.present(tour) } label: { label() }

@@ -24,6 +24,64 @@ final class ProfileSnapshotStoreTests: XCTestCase {
         super.tearDown()
     }
 
+    // MARK: - Lists round-trip
+
+    /// The Library Lists tab's cache. `TourListService.Snapshot` carries
+    /// `membership` as `[UUID: Set<UUID>]`, and `JSONEncoder` does **not**
+    /// write a dictionary with non-`String` keys as a JSON object — it writes a
+    /// flat array of alternating keys and values. Nothing about that is
+    /// obvious, and if it ever stopped round-tripping the failure would be
+    /// silent: membership would hydrate empty, so every bookmark glyph in every
+    /// rail would draw un-saved on the first frame after launch and then flip.
+    @MainActor
+    func testListsSnapshotRoundTripsIncludingUUIDKeyedMembership() {
+        let store = ProfileSnapshotStore<TourListService.Snapshot>("lists", defaults: defaults)
+        let lisbon = UUID(), weekend = UUID()
+        let tourA = UUID(), tourB = UUID()
+        let snapshot = TourListService.Snapshot(
+            myLists: [
+                TourList(id: lisbon, title: "Lisbon", description: nil,
+                         coverImageURL: nil, isPublic: true, itemCount: 2,
+                         firstTourId: tourA)
+            ],
+            membership: [lisbon: [tourA, tourB], weekend: []],
+            savedLists: [
+                TourList(id: weekend, title: "Weekend", description: "Theirs",
+                         coverImageURL: nil, isPublic: true, itemCount: 1,
+                         firstTourId: tourB, ownerUserId: UUID())
+            ],
+            savedListIds: [weekend]
+        )
+
+        store.save(snapshot, uid: "u1")
+        let loaded = store.load(uid: "u1")
+
+        XCTAssertEqual(loaded?.myLists.first?.title, "Lisbon")
+        XCTAssertEqual(loaded?.myLists.first?.firstTourId, tourA)
+        XCTAssertEqual(loaded?.membership[lisbon], [tourA, tourB])
+        XCTAssertEqual(loaded?.membership[weekend], [])
+        XCTAssertEqual(loaded?.savedLists.first?.title, "Weekend")
+        XCTAssertEqual(loaded?.savedListIds, [weekend])
+    }
+
+    /// A list cache must never cross accounts — one person's lists appearing
+    /// under another's name is the failure the uid key exists to prevent.
+    @MainActor
+    func testListsSnapshotIsScopedToItsAccount() {
+        let store = ProfileSnapshotStore<TourListService.Snapshot>("lists", defaults: defaults)
+        store.save(
+            TourListService.Snapshot(
+                myLists: [TourList(id: UUID(), title: "Mine", description: nil,
+                                   coverImageURL: nil, isPublic: false, itemCount: 0)],
+                membership: [:], savedLists: [], savedListIds: []
+            ),
+            uid: "u1"
+        )
+
+        XCTAssertNil(store.load(uid: "u2"))
+        XCTAssertEqual(store.load(uid: "u1")?.myLists.first?.title, "Mine")
+    }
+
     // MARK: - Maker round-trip
 
     func testSaveThenLoadReturnsSameMaker() {
