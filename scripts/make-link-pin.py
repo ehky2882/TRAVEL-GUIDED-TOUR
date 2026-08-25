@@ -157,7 +157,77 @@ def handle_of(meta: dict, platform: str) -> str:
     return ""
 
 
-def maker_for(platform: str, handle: str, author_url: str | None) -> dict:
+# 🔴 WHICH PLATFORMS GET A REAL PROFILE PICTURE, AND WHY INSTAGRAM DOES NOT.
+#
+# The maker page renders the avatar at 96pt — 288 physical pixels on a 3x
+# screen. Measured against what each platform actually serves:
+#
+#   YouTube    900x900  (channel page)      -> comfortable
+#   TikTok     400x400  (avatarLarger)      -> comfortable
+#   Instagram  100x100  (profile_pic_url)   -> visibly soft at 288px
+#
+# Instagram exposes no `profile_pic_url_hd` in its embed payload — checked,
+# it is absent — so 100x100 is the ceiling, not a lazy pick. Rather than have
+# one platform always look mushy on the largest surface it appears on,
+# Instagram creators keep the platform mark. Owner decision 2026-08-25.
+AVATAR_PLATFORMS = {"tiktok", "youtube"}
+
+AVATAR_PX = 320          # >= 288 so 96pt @3x is covered with a little headroom
+
+
+def avatar_source(platform: str, post_url: str, author_url: str | None) -> str | None:
+    """The creator's profile picture, or None when we deliberately don't take one.
+
+    ⚠️ Scraping, and the most brittle thing in this tool: these are internal
+    keys in page HTML, not a documented API, and either platform can rename
+    them without notice. It returns None rather than raising, because a missing
+    avatar must never fail a batch - the maker simply keeps the platform mark.
+    """
+    import re as _re
+    if platform not in AVATAR_PLATFORMS:
+        return None
+    try:
+        if platform == "tiktok":
+            html = curl(post_url)
+            for pat in (r'"avatarLarger":"(.*?)"',
+                        r'"avatarThumb":\{"urlList":\["(.*?)"'):
+                g = _re.search(pat, html)
+                if g:
+                    return g.group(1).replace("\\u002F", "/").replace("\\/", "/")
+        elif platform == "youtube" and author_url:
+            html = curl(author_url)
+            g = (_re.search(r'"avatar":\{"thumbnails":\[\{"url":"(.*?)"', html)
+                 or _re.search(r'(https://yt3\.googleusercontent\.com/[A-Za-z0-9_\-=]+)', html))
+            if g:
+                return g.group(1).replace("\\/", "/")
+    except Exception:
+        return None                      # never let an avatar break a pin
+    return None
+
+
+def render_avatar(raw: bytes) -> bytes:
+    """Centre-square crop to AVATAR_PX WebP. The view clips to a circle, so the
+    square just has to be centred - no aspect decision to get wrong."""
+    from PIL import Image, ImageOps
+    im = ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert("RGB")
+    w, h = im.size
+    side = min(w, h)
+    im = im.crop(((w - side) // 2, (h - side) // 2,
+                  (w - side) // 2 + side, (h - side) // 2 + side))
+    im = im.resize((AVATAR_PX, AVATAR_PX), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, "WEBP", quality=88, method=6)
+    return buf.getvalue()
+
+
+def avatar_slug(platform: str, handle: str) -> str:
+    import re as _re
+    bare = _re.sub(r"[^a-z0-9]+", "-", handle.lstrip("@").lower()).strip("-")
+    return f"avatar-{platform}-{bare}"
+
+
+def maker_for(platform: str, handle: str, author_url: str | None,
+              avatar_url: str | None = None) -> dict:
     """A pinned creator IS a maker (owner decision 2026-08-24: they get a page
     and they count).
 
@@ -176,7 +246,10 @@ def maker_for(platform: str, handle: str, author_url: str | None) -> dict:
         # "@name" only when it really is a handle; a display name is shown as
         # given, so we never invent an @ that leads nowhere.
         "displayName": f"{label} @{bare}" if handled else f"{label} — {bare}",
-        "avatarURL": None,
+        "avatarURL": avatar_url,
+        # The platform mark stays as the FALLBACK even when a photo is set:
+        # MakerAvatarView resolves photo -> emoji -> initials, so a photo that
+        # ever fails to load degrades to the mark rather than to a monogram.
         "avatarEmoji": PLATFORM_EMOJI.get(platform),
         # Says plainly that we host none of it — this is the line a reader sees
         # on the creator's page, and it should not imply they signed up.
@@ -539,6 +612,25 @@ def selftest() -> int:
     check("leaves an unknown host's query alone",
           normalize_url("https://example.test/x?a=1"), "https://example.test/x?a=1")
 
+    # --- creator avatars --------------------------------------------------
+    # 🔴 Instagram is deliberately excluded: its embed exposes only 100x100
+    # (no profile_pic_url_hd), which is soft at the 288px the 96pt maker page
+    # needs. A platform mark beats a mushy photo.
+    check("instagram takes no photo", avatar_source("instagram", "u", "a"), None)
+    check("unknown platform takes no photo", avatar_source("other", "u", "a"), None)
+    check("avatar slug is stable and filename-safe",
+          avatar_slug("tiktok", "@Natural.History_Museum"),
+          "avatar-tiktok-natural-history-museum")
+    check("avatar slug ignores handle case",
+          avatar_slug("youtube", "@NASA"), avatar_slug("youtube", "nasa"))
+
+    # A maker with a photo keeps the platform mark as its FALLBACK, so a photo
+    # that fails to load degrades to the mark rather than to a monogram.
+    mk = maker_for("tiktok", "@x", None, "https://img.test/a.webp")
+    check("photo is set", mk["avatarURL"], "https://img.test/a.webp")
+    check("mark survives as fallback", mk["avatarEmoji"], PLATFORM_EMOJI["tiktok"])
+    check("no photo leaves avatarURL nil", maker_for("instagram", "@y", None)["avatarURL"], None)
+
     # --- refuse a pin the app cannot play --------------------------------
     # A share link has no /video/{id}, which is what the app parses.
     check("short tiktok link yields no player",
@@ -553,7 +645,7 @@ def selftest() -> int:
           derivable_embed("https://www.instagram.com/x/reel/ABC/"),
           "https://www.instagram.com/reel/ABC/embed")
 
-    total = 36
+    total = 43
     if fails:
         print(f"SELFTEST FAILED — {len(fails)}/{total}")
         for f in fails:
@@ -564,8 +656,8 @@ def selftest() -> int:
 
 
 def make_one(*, url, lat, lon, city, country, category, tags, slug,
-             created_at, image_base, out_dir) -> tuple[dict, dict, str]:
-    """URL -> (maker, tour, hero_path). One post, everything derived.
+             created_at, image_base, out_dir) -> tuple[dict, dict, str, str | None]:
+    """URL -> (maker, tour, hero_path, avatar_path|None). One post, everything derived.
 
     Shared by the single-link and batch paths so the two cannot drift.
     """
@@ -582,7 +674,24 @@ def make_one(*, url, lat, lon, city, country, category, tags, slug,
     if not handle:
         raise SystemExit(f"COULD NOT VERIFY — no creator handle for {url}")
 
-    maker = maker_for(plat, handle, meta.get("author_url"))
+    # The avatar belongs to the CREATOR, not the post — one fetch per creator
+    # per run, and skipped entirely for platforms we do not take photos from.
+    av_path = av_url = None
+    src = avatar_source(plat, url, meta.get("author_url"))
+    if src:
+        try:
+            raw_av = curl(src, binary=True)
+            if len(raw_av) > 500:
+                a_slug = avatar_slug(plat, handle)
+                os.makedirs(out_dir, exist_ok=True)
+                av_path = os.path.join(out_dir, f"{a_slug}.webp")
+                with open(av_path, "wb") as fh:
+                    fh.write(render_avatar(raw_av))
+                av_url = f"{image_base}/{a_slug}.webp"
+        except Exception:
+            av_path = av_url = None      # a bad avatar must never fail the pin
+
+    maker = maker_for(plat, handle, meta.get("author_url"), av_url)
     slug = slug or slugify(meta.get("title", ""), f"post-{plat}")
 
     raw = curl(meta["thumbnail_url"], binary=True)
@@ -597,7 +706,7 @@ def make_one(*, url, lat, lon, city, country, category, tags, slug,
                        lat=lat, lon=lon, city=city, country=country,
                        category=category, tags=tags, created_at=created_at,
                        image_base=image_base)
-    return maker, tour, path
+    return maker, tour, path, av_path
 
 
 def parse_batch(text: str) -> list[dict]:
@@ -681,7 +790,7 @@ def main() -> int:
     makers, tours, paths, failures = {}, [], [], []
     for r in rows:
         try:
-            maker, tour, path = make_one(
+            maker, tour, path, av_path = make_one(
                 url=r["url"], lat=r["lat"], lon=r["lon"],
                 city=r["city"] or a.city, country=r["country"] or a.country,
                 category=a.category, tags=tags,
@@ -694,6 +803,8 @@ def main() -> int:
         makers[maker["id"]] = maker
         tours.append(tour)
         paths.append(path)
+        if av_path:
+            paths.append(av_path)
 
     for line, url, why in failures:
         sys.stderr.write(f"\n# SKIPPED line {line}: {url}\n#   {why}\n")
