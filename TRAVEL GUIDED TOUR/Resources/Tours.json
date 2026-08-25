@@ -263,6 +263,38 @@
       "avatarEmoji": "🇸🇪",
       "bio": "Atlas Studio's Stockholm bureau — audio tours of a city built across fourteen islands and straight into the bedrock beneath them: a metro whose platforms were left as blasted rock and painted, a warship that sank in twenty minutes and taught us everything, a cemetery two thirty-year-olds designed by refusing to level the ground, and a hill made entirely of the city's own rubbish.",
       "websiteURL": null
+    },
+    {
+      "id": "FED471CD-70B8-5092-97DE-FD4B71DF6B41",
+      "displayName": "TikTok @tiktok",
+      "avatarURL": null,
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@tiktok"
+    },
+    {
+      "id": "6D73290A-7CA8-56FE-B6D3-93D319E35A4D",
+      "displayName": "YouTube @jawed",
+      "avatarURL": null,
+      "avatarEmoji": "▶️",
+      "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.youtube.com/@jawed"
+    },
+    {
+      "id": "4288A1C9-477D-58C4-8222-C0616335F3C1",
+      "displayName": "YouTube @Blippi",
+      "avatarURL": null,
+      "avatarEmoji": "▶️",
+      "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.youtube.com/@Blippi"
+    },
+    {
+      "id": "BC528EC4-008A-5413-8773-32C54391C0FB",
+      "displayName": "Instagram @nasainternships",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/nasainternships/"
     }
   ],
   "tours": [
@@ -75781,7 +75813,7 @@
       "title": "TEST - TikTok",
       "shortDescription": "Throwaway link-pin test. Remove after review.",
       "longDescription": "Throwaway test pin for the link-pin device review. Should play inline, with sound, all the way through.",
-      "makerId": "00000000-0000-0000-0000-000000000001",
+      "makerId": "FED471CD-70B8-5092-97DE-FD4B71DF6B41",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zz-test-link-tiktok_hero.webp",
       "additionalImageURLs": null,
       "videoURLs": null,
@@ -75825,14 +75857,14 @@
       "title": "TEST - YouTube",
       "shortDescription": "Throwaway link-pin test. Remove after review.",
       "longDescription": "Throwaway test pin. Standard YouTube video - this is the case that showed Error 153 and played nothing before this build.",
-      "makerId": "00000000-0000-0000-0000-000000000001",
+      "makerId": "6D73290A-7CA8-56FE-B6D3-93D319E35A4D",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zz-test-link-youtube_hero.webp",
       "additionalImageURLs": null,
       "videoURLs": null,
       "videoRole": null,
       "kind": "link",
       "sourceURL": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
-      "sourceAuthor": "jawed",
+      "sourceAuthor": "@jawed",
       "stops": [
         {
           "id": "ECB65EB1-EC4D-5CA5-BCBB-FB80D8191771",
@@ -75869,14 +75901,14 @@
       "title": "TEST - YouTube Short",
       "shortDescription": "Throwaway link-pin test. Remove after review.",
       "longDescription": "Throwaway test pin. A Short should fill the frame like a TikTok - tall, no bars down the sides.",
-      "makerId": "00000000-0000-0000-0000-000000000001",
+      "makerId": "4288A1C9-477D-58C4-8222-C0616335F3C1",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zz-test-link-yt-short_hero.webp",
       "additionalImageURLs": null,
       "videoURLs": null,
       "videoRole": null,
       "kind": "link",
       "sourceURL": "https://www.youtube.com/shorts/kSBYbyN17qo",
-      "sourceAuthor": "Blippi",
+      "sourceAuthor": "@Blippi",
       "stops": [
         {
           "id": "84F9F6C6-61BE-5FEA-9A68-682625546250",
@@ -75913,7 +75945,7 @@
       "title": "TEST - Instagram Reel",
       "shortDescription": "Throwaway link-pin test. Remove after review.",
       "longDescription": "Throwaway test pin. Instagram does NOT play: it shows the post then offers 'Watch again on Instagram'. Included so the limit is visible on a real device.",
-      "makerId": "00000000-0000-0000-0000-000000000001",
+      "makerId": "BC528EC4-008A-5413-8773-32C54391C0FB",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zz-test-link-instagram_hero.webp",
       "additionalImageURLs": null,
       "videoURLs": null,
