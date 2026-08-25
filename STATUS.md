@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-24 23:15 UTC
+**Last verified:** 2026-08-25 01:30 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -26,8 +26,24 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ## 1. Awaiting owner — device review
 
 ✅ **BUILD 116 IS THE ONE TO INSTALL** — `main` at `233eb912`, cut 21:58. It carries link pins
-(#584) and the YouTube/Short fixes (#585). **Zero PRs are open** and nothing app-side is stranded:
-everything merged after it was SQL or content.
+(#584) and the YouTube/Short fixes (#585). Nothing app-side is stranded: everything merged after it
+was SQL or content.
+
+🟡 **ONE PR OPEN — [#588](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/588)** *Link pins at
+volume: batch mode, Instagram, and a maker per creator*, opened 01:22. **`scripts/make-link-pin.py`
+only** (+300/−45) — developer tooling, ships in no build, so this is the **auto-merge class**:
+squash on green, no owner gate. Validator ✅ and iOS build ✅; **unit tests still running** at 01:24.
+Left for its own session to land rather than merged from here.
+
+- **What it adds:** a `--batch` file of `url | lat,lon | city | country` lines; Instagram support by
+  scraping the public embed page (its oEmbed needs a Meta token, the embed page does not);
+  and **each pinned creator becomes their own maker row**, id'd `uuid5(platform + lowercased
+  handle)` so re-running never mints a duplicate and `@NASA` / `@nasa` stay one person.
+- ⚠️ **The Instagram path is scraping and says so** — it keys on Instagram's internal JSON names and
+  raises rather than guessing, so a batch fails loudly instead of writing captionless pins. Expect it
+  to break without notice.
+- ⚠️ **"A maker per creator" collides with known debt:** Settings counts maker rows as Dozents, so
+  pinned creators who never signed up would start counting toward that number.
 
 🔴 **BUILD 115 AND EVERY OLDER BUILD CAN NO LONGER RECEIVE CATALOG UPDATES.** Four `kind: "link"`
 test pins went live at 22:51 (#586) and **`TourKind` is a closed `String, Codable` enum with no
@@ -175,6 +191,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/milan-tours-upload` · `claude/milan-docs-260822` | Merged (#560, #561) |
 | `claude/coordinate-guard` | Merged (#562 at 17:20) |
 | link-pin branches (#584, #585, #586, #587) | All merged 20:59–22:51; auto-delete should remove them |
+| `claude/link-pin-batch-workflow` | 🟡 **Open as #588** — scripts-only, auto-merge class, awaiting unit tests |
 | `claude/ellipsis-button-consistency-vdorpi` | Merged twice from one branch (#553, #555). ⚠️ The second stacked on already-merged history, which CLAUDE.md says to avoid — it worked, but no PR existed while build 95 was installable |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
