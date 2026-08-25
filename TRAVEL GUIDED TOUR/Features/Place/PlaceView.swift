@@ -405,8 +405,25 @@ private struct PlaceTourRow: View {
             .frame(width: 56)
 
             VStack(alignment: .leading, spacing: 3) {
-                // Absence is the default state: only the exception is marked,
-                // so a free single-stop tour carries no badge at all.
+                Text(tour.title.uppercased())
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+
+                Text(subtitle)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+
+                // 🔴 Badges sit BELOW the metadata, not above the title — owner
+                // decision 2026-08-25. Above the title they took a line of their
+                // own, so a walk with a two-line title ran to four rows with the
+                // pill stranded at the top, furthest from the information it
+                // qualifies. A fourth row is fine; the pill being adrift was not.
+                //
+                // ⚠️ `PlaceView` and `TourListDetailView` carry this row
+                // byte-identically by design. Change one and change the other.
                 HStack(spacing: AtlasSpacing.xs) {
                     if tour.kind == .multiStop {
                         Text("WALK")
@@ -418,17 +435,6 @@ private struct PlaceTourRow: View {
                     }
                     TourPriceBadge(tour: tour)
                 }
-
-                Text(tour.title.uppercased())
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-
-                Text(subtitle)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(1)
             }
 
             Spacer(minLength: 0)
