@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-25 03:30 UTC
+**Last verified:** 2026-08-25 03:40 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -28,9 +28,9 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 **Eight PRs merged between 01:22 and 03:10. Zero are open.** The link-pin feature went from four
 throwaway test pins to real content in under two hours.
 
-🔨 **BUILD 117 IS RUNNING, FROM `main` AT `2a47e28`** — the tip itself, dispatched 03:27. It picks up
-#592 (the WALK pill below the metadata), which was the only merged app code not in a build, and rides
-on top of the real AMNH link pins and creator avatars. Nothing will be stranded once it lands.
+✅ **BUILD 117 IS UP, FROM `main` AT `2a47e28`** — the tip itself, succeeded 03:33 with notes
+attached. It carries #592 (the WALK pill below the metadata), which was the only merged app code not
+in a build. **Nothing is stranded and nothing is open except the board PR below.**
 
 🟡 **[#596](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/596) OPEN — this board, the contract
 check and `restore_catalog_keys.sql` finally reach `main`.** All three had only ever existed on
@@ -40,59 +40,31 @@ files, +614, −0.** The branch was 41 commits behind, so `main` was merged in f
 (`CLAUDE.md`, `backend/schema.sql`) resolved toward `main` — `schema.sql`'s newer warning is strictly
 better, and rules 10/11 plus the 2026-08-20 block were re-added surgically.
 
-🔴 **#593's cleanup STILL HAS NOT LANDED — TWO PASTES, BOTH MATCHED ZERO ROWS.** Owner ran
-`backend/remove_test_creators.sql` twice on 2026-08-25; the second, written as a single
-`delete … returning`, reported *"Success. No rows returned."* All four creators are still served.
-**The `where` clause provably matches**: all four rows exist, all four have `user_id` null, and a
-direct PostgREST read finds no `tours` row pointing at any of them. So the statement is not reaching
-them. Two candidates, undiagnosed: the SQL Editor running as a role subject to RLS (`public.makers`
-has public-read and **no delete policy**, so `anon`/`authenticated` filters a delete to zero rows and
-still reports success), or `tours` rows invisible to an RLS-filtered read — drafts or taken-down rows
-would block the `not exists` guard. ⚠️ **My guard turned a loud FK error into silence**: `tours.maker_id`
-is `on delete restrict`, so without `not exists` Postgres would have *said* what was wrong. A
-read-only diagnostic reporting `current_user` and per-maker tour counts distinguishes the two.
+✅ **THE TEST CREATORS ARE GONE — 49 makers → 45, verified against the live RPC.** Exactly the seven
+real sign-ups remain, every one carrying a `user_id`. Places still 25, contract check passes.
 
-🔴 **The original finding stands — #593's cleanup DID NOT REACH THE LIVE CATALOG, and it is the exact harm it was written to
-prevent.** It removed the four `TEST -` pins **and their four creators** from `Tours.json`, saying:
-*"A maker with no tours still counts toward the Dozents number in Settings and appears in creator
-search with nothing behind it, so leaving them would have quietly overstated the platform."* The
-tours went; **the creators did not** — `seed_from_toursjson.py` is upsert-only and never deletes.
+**🔴 IT TOOK THREE PASTES, AND THE REASON IS WORTH KEEPING. THE TEST TOURS WERE TAKEN DOWN, NOT
+DELETED.** Each of the four creators still owned one tour at `status = 'taken_down'` —
+`takedown_tour()`, run in an earlier session. **A taken-down tour is invisible to every ordinary
+read:** `get_catalog` serves published only, and so does the RLS policy behind PostgREST. So the
+catalogue reported those creators had no tours, a direct API read agreed, and **both were wrong**.
+Only a query run as `postgres` saw them.
 
-- **Live right now: 49 makers served, 11 of them with zero tours.** Four are the test creators
-  (`TikTok @tiktok`, `YouTube @jawed`, `YouTube @Blippi`, `Instagram @nasainternships`). The other
-  seven are real empty signups (`New Creator` ×2, `EHKY-APPL`, `Kathy Ng`, `Shawn Tay`,
-  `🏆 kiubert 🏆`, `hgc9kfnf77`) — legitimately accounts, arguably a separate question.
-- **So Settings says 49 Dozents where 38 have any content.** Removing a maker from `Tours.json` is
-  not a delete; it needs a `delete from public.makers where id in (…)` in the SQL Editor.
-- ⚠️ **This is the long-standing upsert-only debt, now with a user-visible consequence and a
-  deliberate cleanup defeated by it.** Worth fixing properly before launch rather than one delete
-  at a time.
-
-✅ **Build 116 carries link pins.** The four live pins are real AMNH creator posts — @naturalhistorymuseum,
-@CruisingAddicts, @TheMeganDaily, @poche_space — attached to the AMNH place. Test pins are gone.
-
-⚠️ **Build 115 and older still cannot read the catalogue at all** — see § 1c.
-
-**To check on 116:** the four creator pins on the AMNH place page, each with its creator's real
-profile picture (Instagram keeps the platform mark deliberately — its avatar is only 100×100 and
-goes soft at the 288px the maker page needs). The Instagram pin is **expected not to play**; it
-renders the post and offers *Watch again on Instagram*.
-
-## 1c. 🔴 Every build before 116 is frozen
-
-Four `kind: "link"` tours went live 2026-08-24 22:51. **`TourKind` is a closed `String, Codable`
-enum with no tolerance** — no `case link` before build 116, no custom `init(from:)`. One unknown raw
-value throws, `ToursData` decodes as a single `[Tour]`, and `RemoteCatalogLoader` swallows it with
-`try?`. The refresh returns nil, falls back to the on-disk cache, and **nothing is logged**. Both
-the RPC and the gh-pages mirror carry the pins, so there is no good source to fall back to.
-
-- **Predicted by #584's own commit:** *"One link pin published before a build that understands it
-  would silently stop every older build receiving catalog updates. Merge, build, install, then
-  publish."* The order held for 116 (built 21:58, pins published 22:51) — but any phone on an older
-  build is stuck at its last good catalogue, silently.
-- ⚠️ **The general form is worse and is flagged in ROADMAP:** a strict enum on a remotely loaded
-  catalogue breaks every shipped version the first time a new value appears. `triggerMode` and
-  `primaryCategory` have the same shape. Worth fixing before the App Store.
+- **⚠️ DURABLE RULE: anything reasoning about "does this maker have tours" must query the table as
+  `postgres`.** Otherwise it is reading a filtered view and will conclude the exact opposite of the
+  truth. The same applies to any tour count, any orphan check, any cleanup script.
+- **⚠️ AND THE GUARD MADE IT INVISIBLE — the sharper lesson.** The first version's maker delete
+  carried `not exists (select 1 from tours …)`, which the hidden rows failed, so the statement matched
+  zero rows and reported *"Success. No rows returned."* **`tours.maker_id` is `on delete restrict`**,
+  so without that guard Postgres would have raised a foreign-key violation naming the exact blocking
+  row, and the answer would have arrived on the first paste. **A guard that turns a loud, specific
+  error into silence is worse than no guard.**
+- **⚠️ It could not be one statement:** `restrict` fires the moment the parent row goes, even when the
+  child is being deleted alongside it. Tours first, then makers. `purchases.tour_id` is also
+  `restrict`, so a tour that had ever been bought would raise rather than destroy the record of a sale.
+- **The wider debt is unchanged and still real:** `seed_from_toursjson.py` is upsert-only, so nothing
+  ever leaves the live database on its own. Every future removal needs a hand-written delete like
+  this one. Worth fixing properly before launch.
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
@@ -211,9 +183,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**Catalog 1,516 tours live / 49 maker rows served.** The four `TEST -` pins are gone (#593),
-replaced by **4 real AMNH creator link pins** (#591). ⚠️ **11 served makers have zero tours** — four
-of them the test creators #593 tried to remove; see § 1. — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
+**Catalog 1,516 tours live / 45 maker rows served** (49 before the test-creator cleanup). The four `TEST -` pins are gone (#593),
+replaced by **4 real AMNH creator link pins** (#591). **7 served makers have zero tours**, all of them real sign-ups who have not published yet. — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
 and is live in the RPC, along with VIA 57 West. Milan (48 tours) landed 2026-08-22. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
 long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
