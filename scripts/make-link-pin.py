@@ -32,6 +32,7 @@ nothing at all. Any fetch failure exits non-zero and says so.
 
 import argparse
 import io
+import re
 import json
 import subprocess
 import sys
@@ -446,7 +447,46 @@ def instagram_meta(url: str) -> dict:
     }
 
 
-def render_hero(raw: bytes) -> bytes:
+def trim_bars(im, max_fraction: float = 0.30, tol: int = 22):
+    """Crop uniform dark letterbox/pillarbox bars off a frame.
+
+    🔴 A BAR SURVIVES THE SQUARE CROP, WHICH IS WHY THIS EXISTS. YouTube's
+    oEmbed hands back `hqdefault.jpg`, which is 480x360 — a 4:3 canvas with a
+    16:9 frame letterboxed into it. Cropping the middle square of that keeps
+    the bars, and since the app displays the middle square of the stored
+    1200x900, the pin ends up with black bands across the top and bottom of
+    the picture. Every YouTube pin made before this had them baked in.
+
+    Conservative by construction: a row/column counts as a bar only if it is
+    both DARK and nearly UNIFORM, and at most `max_fraction` comes off any one
+    edge — so a photograph that genuinely opens on night sky keeps it.
+    """
+    w, h = im.size
+    px = im.convert("RGB")
+
+    def is_bar(strip):
+        lo = min(min(p) for p in strip)
+        hi = max(max(p) for p in strip)
+        return hi <= 40 and (hi - lo) <= tol
+
+    top, bottom, left, right = 0, h, 0, w
+    lim_v, lim_h = int(h * max_fraction), int(w * max_fraction)
+    while top < lim_v and is_bar([px.getpixel((x, top)) for x in range(0, w, max(1, w // 32))]):
+        top += 1
+    while (h - bottom) < lim_v and is_bar([px.getpixel((x, bottom - 1)) for x in range(0, w, max(1, w // 32))]):
+        bottom -= 1
+    while left < lim_h and is_bar([px.getpixel((left, y)) for y in range(0, h, max(1, h // 32))]):
+        left += 1
+    while (w - right) < lim_h and is_bar([px.getpixel((right - 1, y)) for y in range(0, h, max(1, h // 32))]):
+        right -= 1
+
+    # Never hand back a sliver: if the trim looks implausible, keep the original.
+    if right - left < w * 0.5 or bottom - top < h * 0.5:
+        return im
+    return im.crop((left, top, right, bottom))
+
+
+def render_hero(raw: bytes, focus: float = 0.5) -> bytes:
     """Square-crop the source, then extend to 4:3 behind a blurred copy of
     itself.
 
@@ -469,14 +509,22 @@ def render_hero(raw: bytes) -> bytes:
 
     src = Image.open(io.BytesIO(raw))
     src = ImageOps.exif_transpose(src).convert("RGB")
+    src = trim_bars(src)
 
+    # ⚠️ `focus` picks WHICH square, and the middle is often the wrong one. An
+    # awards channel composes its thumbnails as a photograph beside a text
+    # panel, and a slide mid-transition shows two projects side by side — in
+    # both, a centred square lands on the seam and slices the lettering in
+    # half. The caller has looked at the frame; 0.0 takes the left square,
+    # 1.0 the right.
+    focus = min(max(focus, 0.0), 1.0)
     side = min(src.size)
-    square = ImageOps.fit(src, (side, side), method=Image.LANCZOS, centering=(0.5, 0.5))
+    square = ImageOps.fit(src, (side, side), method=Image.LANCZOS, centering=(focus, 0.5))
     square = square.resize((HERO_H, HERO_H), Image.LANCZOS)
 
     # The 4:3 surround: the same picture, blown up and blurred, so the pad
     # reads as part of the image rather than as a bar.
-    bg = ImageOps.fit(src, (HERO_W, HERO_H), method=Image.LANCZOS, centering=(0.5, 0.5))
+    bg = ImageOps.fit(src, (HERO_W, HERO_H), method=Image.LANCZOS, centering=(focus, 0.5))
     bg = bg.filter(ImageFilter.GaussianBlur(28)).point(lambda v: int(v * 0.55))
     bg.paste(square, ((HERO_W - HERO_H) // 2, 0))
 
@@ -492,8 +540,31 @@ def slugify(text: str, fallback: str) -> str:
     return s or fallback
 
 
+def hero_slug(subject: str, handle: str, platform: str) -> str:
+    """`<subject>-<handle>` — the filename stem every pin hero uses.
+
+    🔴 THE HANDLE IS NOT DECORATION, AND A BARE SUBJECT SLUG IS A REAL BUG.
+    A pin about the Green-Wood Cemetery derives `green-wood-cemetery`, which is
+    exactly the stem the Atlas TOUR of the same subject already occupies on
+    gh-pages — so writing it overwrites that tour's hero. And since #567 a
+    phone that has downloaded a tour reads its photographs off its own disk and
+    never asks the server again, so the wrong picture would never be corrected.
+    Suffixing the creator makes every pin's stem unique to that creator.
+
+    ⚠️ Done BY HAND for the fourteen pins of #607, because batch mode ignored
+    `--slug` past the first row. Folding it in here is what stops the next
+    batch quietly reintroducing the collision.
+
+    The subject is capped before the handle is appended, so a long caption can
+    never crowd the handle out of the name.
+    """
+    subj = "-".join(slugify(subject, f"post-{platform}").split("-")[:6])
+    h = re.sub(r"[^a-z0-9]+", "", (handle or "").lower())
+    return f"{subj}-{h}" if h else subj
+
+
 def build_entry(*, url, meta, slug, maker, lat, lon, city, country,
-                category, tags, created_at, image_base) -> dict:
+                category, tags, created_at, image_base, title=None) -> dict:
     """Deterministic ids keyed on the source URL, so re-running on the same
     post produces the same entry rather than a duplicate pin."""
     tour_id = str(uuid.uuid5(uuid.NAMESPACE_URL, f"atlas-tour:link:{url}")).upper()
@@ -509,7 +580,19 @@ def build_entry(*, url, meta, slug, maker, lat, lon, city, country,
     # and a title carrying one reaches the catalogue, the share card and the
     # lock screen — the same defect the upload wizard fixed for typed titles.
     caption = " ".join((meta.get("title") or "").split())
-    title = caption if len(caption) <= 60 else caption[:57].rstrip() + "…"
+
+    # ⚠️ A SOURCE TITLE IS NOT ALWAYS THE SUBJECT'S NAME, and where it is not,
+    # the pin is unusable without this. A creator's own caption reads naturally
+    # on a map ("Fui à ORIGEM da Chanfana!"), but a channel that formats every
+    # upload to a house pattern does not: an architecture prize's films arrive
+    # titled "BRICK AWARD 26 Winner Category Sharing public spaces - Dạo Mẫu
+    # (Mothergoddess) Museum & Temple, VN" — award, category and a country code
+    # around a misspelling of the place. `--title` names the subject; the
+    # source's own words are kept verbatim in longDescription either way, so
+    # nothing the platform said is discarded.
+    supplied = " ".join((title or "").split())
+    display = supplied or caption
+    title = display if len(display) <= 60 else display[:57].rstrip() + "…"
 
     return {
         "id": tour_id,
@@ -648,6 +731,108 @@ def selftest() -> int:
     check("slugify", slugify("Hello, World! Again", "f"), "hello-world-again")
     check("slugify empty", slugify("!!!", "fallback"), "fallback")
 
+    # --- hero_slug: the handle suffix is what stops a pin overwriting the
+    # --- Atlas tour of the same subject (see hero_slug's docstring).
+    check("hero slug carries the handle",
+          hero_slug("Green-Wood Cemetery", "myles_toes", "youtube"),
+          "green-wood-cemetery-mylestoes")
+    check("hero slug strips punctuation from the handle",
+          hero_slug("Gokan", "@jetset.times", "tiktok"), "gokan-jetsettimes")
+    check("hero slug lowercases the handle",
+          hero_slug("Castle Green", "TheDesignDetourist", "youtube"),
+          "castle-green-thedesigndetourist")
+    # A pin and the Atlas tour of the same subject must not collide.
+    if hero_slug("Green-Wood Cemetery", "myles_toes", "youtube") == \
+            slugify("Green-Wood Cemetery", "f"):
+        fails.append("hero slug collides with the bare subject slug")
+    check("hero slug caps the subject before appending the handle",
+          hero_slug("one two three four five six seven eight", "h", "youtube"),
+          "one-two-three-four-five-six-h")
+    check("hero slug survives a handle-less creator",
+          hero_slug("Some Place", "", "youtube"), "some-place")
+
+    # --- trim_bars: a letterboxed frame must not reach the hero.
+    try:
+        from PIL import Image as _I
+    except ImportError:
+        _I = None
+    if _I is not None:
+        # 480x360 canvas, 480x270 picture centred: hqdefault's exact shape.
+        box = _I.new("RGB", (480, 360), (0, 0, 0))
+        box.paste(_I.new("RGB", (480, 270), (180, 140, 90)), (0, 45))
+        check("letterbox is trimmed to the real frame", trim_bars(box).size, (480, 270))
+
+        # Pillarboxing too.
+        pil = _I.new("RGB", (480, 360), (0, 0, 0))
+        pil.paste(_I.new("RGB", (270, 360), (180, 140, 90)), (105, 0))
+        check("pillarbox is trimmed", trim_bars(pil).size, (270, 360))
+
+        # 🔴 A DARK PHOTOGRAPH IS NOT A BAR. A night shot must survive intact,
+        # or this "fix" starts eating real pictures.
+        import random as _r
+        _r.seed(7)
+        night = _I.new("RGB", (480, 360))
+        night.putdata([(_r.randint(0, 90), _r.randint(0, 90), _r.randint(0, 120))
+                       for _ in range(480 * 360)])
+        check("a dark textured photo is left alone", trim_bars(night).size, (480, 360))
+
+        # A frame with no bars at all is returned unchanged.
+        plain = _I.new("RGB", (640, 480), (120, 120, 120))
+        check("an unbarred frame is untouched", trim_bars(plain).size, (640, 480))
+
+        # An all-black image would trim to nothing; the guard keeps it whole.
+        check("all-black is not trimmed to a sliver",
+              trim_bars(_I.new("RGB", (200, 200), (0, 0, 0))).size, (200, 200))
+
+        # The hero still comes out at exactly 1200x900 after trimming.
+        import io as _io
+        buf = _io.BytesIO(); box.save(buf, "PNG")
+        check("hero is 1200x900 after a trim",
+              _I.open(_io.BytesIO(render_hero(buf.getvalue()))).size, (1200, 900))
+
+        # --- focus: which square survives. Left half red, right half blue.
+        pair = _I.new("RGB", (720, 360))
+        pair.paste(_I.new("RGB", (360, 360), (220, 20, 20)), (0, 0))
+        pair.paste(_I.new("RGB", (360, 360), (20, 20, 220)), (360, 0))
+        pbuf = _io.BytesIO(); pair.save(pbuf, "PNG")
+
+        def mid(focus):
+            im = _I.open(_io.BytesIO(render_hero(pbuf.getvalue(), focus=focus)))
+            return max(range(3), key=lambda c: im.getpixel((600, 450))[c])
+
+        check("focus left keeps the left square", mid(0.0), 0)   # red
+        check("focus right keeps the right square", mid(1.0), 2)  # blue
+        check("focus is clamped, not wrapped", mid(9.0), mid(1.0))
+
+    # --- --title: names the subject when the source title is a house format.
+    house = ("BRICK AWARD 26 Winner Category Sharing public spaces - "
+             "Dao Mau Museum & Temple, VN")
+    e7 = build_entry(url="https://www.youtube.com/watch?v=t1",
+                     meta={"author_name": "A", "title": house}, slug="s",
+                     maker="M", lat=1.0, lon=2.0, city=None, country=None,
+                     category="architecture", tags=[], created_at="2026-08-26",
+                     image_base="https://x/images", title="Bảo Tàng Đạo Mẫu")
+    check("supplied title wins on the pin", e7["title"], "Bảo Tàng Đạo Mẫu")
+    check("supplied title reaches the stop", e7["stops"][0]["title"],
+          "Bảo Tàng Đạo Mẫu")
+    # 🔴 The source's own words are never discarded — only demoted.
+    check("source title survives verbatim", e7["longDescription"], house)
+    e8 = build_entry(url="https://www.youtube.com/watch?v=t1",
+                     meta={"author_name": "A", "title": house}, slug="s",
+                     maker="M", lat=1.0, lon=2.0, city=None, country=None,
+                     category="architecture", tags=[], created_at="2026-08-26",
+                     image_base="https://x/images")
+    check("no supplied title falls back to the source", e8["title"][:11], "BRICK AWARD")
+    check("a supplied title does not change the id", e7["id"], e8["id"])
+    long_supplied = build_entry(
+        url="https://www.youtube.com/watch?v=t2",
+        meta={"author_name": "A", "title": "x"}, slug="s", maker="M",
+        lat=1.0, lon=2.0, city=None, country=None, category="architecture",
+        tags=[], created_at="2026-08-26", image_base="https://x/images",
+        title="q" * 200)
+    if len(long_supplied["title"]) > 60:
+        fails.append("supplied title not truncated")
+
     # --- the creator's handle -------------------------------------------
     check("handle: tiktok unique id",
           handle_of({"author_unique_id": "tiktok", "author_name": "TikTok"}, "tiktok"),
@@ -743,8 +928,30 @@ def selftest() -> int:
     return 0
 
 
+def best_thumbnail(meta: dict, platform: str) -> bytes:
+    """The largest thumbnail the platform will serve, not the one oEmbed names.
+
+    ⚠️ YouTube's oEmbed always returns `hqdefault.jpg`: 480x360, and for a 16:9
+    video that is the frame letterboxed onto a 4:3 canvas. `maxresdefault.jpg`
+    is the same frame at 1280x720 with no bars — 2.7x the pixels AND nothing to
+    trim. It is absent for some older uploads, so this falls back rather than
+    failing, and `trim_bars` still covers whatever arrives.
+    """
+    url = meta.get("thumbnail_url") or ""
+    if platform == "youtube" and "/vi/" in url:
+        stem = url.rsplit("/", 1)[0]
+        for name in ("maxresdefault.jpg", "sddefault.jpg"):
+            try:
+                candidate = curl(f"{stem}/{name}", binary=True)
+            except SystemExit:
+                continue
+            if len(candidate) > 20000:      # a 404 page is far smaller
+                return candidate
+    return curl(url, binary=True)
+
+
 def make_one(*, url, lat, lon, city, country, category, tags, slug,
-             created_at, image_base, out_dir) -> tuple[dict, dict, str, str | None, str]:
+             created_at, image_base, out_dir, title=None, focus=0.5) -> tuple[dict, dict, str, str | None, str]:
     """URL -> (maker, tour, hero_path, avatar_path|None). One post, everything derived.
 
     Shared by the single-link and batch paths so the two cannot drift.
@@ -780,20 +987,23 @@ def make_one(*, url, lat, lon, city, country, category, tags, slug,
             av_path = av_url = None      # a bad avatar must never fail the pin
 
     maker = maker_for(plat, handle, meta.get("author_url"), av_url)
-    slug = slug or slugify(meta.get("title", ""), f"post-{plat}")
+    # The handle is appended even to a slug the caller supplied: `--slug`
+    # names the SUBJECT, and the collision the suffix prevents is a
+    # property of the filename, not of who chose the subject part.
+    slug = hero_slug(slug or title or meta.get("title", ""), handle, plat)
 
-    raw = curl(meta["thumbnail_url"], binary=True)
+    raw = best_thumbnail(meta, plat)
     if len(raw) < 1000:
         raise SystemExit(f"COULD NOT VERIFY — thumbnail came back {len(raw)} bytes for {url}.")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, f"{slug}_hero.webp")
     with open(path, "wb") as fh:
-        fh.write(render_hero(raw))
+        fh.write(render_hero(raw, focus=focus))
 
     tour = build_entry(url=url, meta=meta, slug=slug, maker=maker["id"],
                        lat=lat, lon=lon, city=city, country=country,
                        category=category, tags=tags, created_at=created_at,
-                       image_base=image_base)
+                       image_base=image_base, title=title)
     return maker, tour, path, av_path, meta.get("no_inline_reason") or ""
 
 
@@ -836,10 +1046,21 @@ def main() -> int:
     ap.add_argument("--country")
     ap.add_argument("--category", default="architecture")
     ap.add_argument("--tags", default="", help="Comma-separated")
-    ap.add_argument("--slug", help="Filename stem; derived from the caption if omitted")
+    ap.add_argument("--slug", help="Subject part of the filename stem; the creator's "
+                                   "handle is appended either way. Derived from the "
+                                   "title if omitted")
+    ap.add_argument("--title", help="What the pin is called on the map. Use it when the "
+                                    "source title is a channel's house format rather than "
+                                    "the subject's name; the source title is kept in "
+                                    "longDescription regardless. Single --url runs only")
     ap.add_argument("--created", default="", help='ISO "YYYY-MM-DD"; today if omitted')
     ap.add_argument("--image-base",
                     default="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images")
+    ap.add_argument("--focus", choices=["left", "center", "right"], default="center",
+                    help="Which square of the frame the hero keeps. The app shows the "
+                         "middle square of what is stored, so a thumbnail that puts its "
+                         "photograph beside a text panel needs 'left' or 'right' or the "
+                         "pin ships with sliced lettering across it")
     ap.add_argument("--out-dir", default=".", help="Where to write the cropped heroes")
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
@@ -883,6 +1104,8 @@ def main() -> int:
                 city=r["city"] or a.city, country=r["country"] or a.country,
                 category=a.category, tags=tags,
                 slug=a.slug if len(rows) == 1 else None,
+                title=a.title if len(rows) == 1 else None,
+                focus={"left": 0.0, "center": 0.5, "right": 1.0}[a.focus],
                 created_at=created, image_base=a.image_base, out_dir=a.out_dir)
         except SystemExit as e:                       # one bad link must not
             failures.append((r["line"], r["url"], str(e)))   # lose the rest
