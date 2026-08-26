@@ -72,6 +72,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// can read it too (the mini-player + tab bar's geometry
     /// switches between floating-island and full-edge based on
     /// whether a detail is up).
+    /// Instagram-only: resolves a post to its playable file at play time.
+    /// See `InstagramMediaResolver` for why the embed cannot do this.
+    @State private var instagramResolver = InstagramMediaResolver()
     @State private var tourPresenter = TourPresenter()
     /// App-wide channel for presenting a maker page from a deep link (a shared
     /// maker link). Makers are otherwise only *pushed* onto local nav stacks;
@@ -151,6 +154,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             // is still pulsing, instead of in front of the user afterwards.
             ContentView()
                 .environment(dataService)
+                .environment(instagramResolver)
                 .environment(authService)
                 .environment(makerProfileService)
                 .environment(followService)

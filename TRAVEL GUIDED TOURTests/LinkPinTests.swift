@@ -189,4 +189,46 @@ final class LinkPinTests: XCTestCase {
         XCTAssertEqual(LinkEmbedView.htmlAttributeEscaped("a\"b"), "a&quot;b")
     }
 
+
+    // MARK: - Instagram: resolving the post to a playable file
+
+    /// The embed URL a post resolves to, matched on whole path components.
+    func test_instagram_embedURLForAPost() {
+        XCTAssertEqual(
+            InstagramMediaResolver.embedURL(for: "https://www.instagram.com/reel/ABC123/")?.absoluteString,
+            "https://www.instagram.com/reel/ABC123/embed")
+        // The /{user}/reel/{code}/ share form resolves the same way.
+        XCTAssertEqual(
+            InstagramMediaResolver.embedURL(for: "https://www.instagram.com/nasa/reel/ABC123/")?.absoluteString,
+            "https://www.instagram.com/reel/ABC123/embed")
+        XCTAssertNil(InstagramMediaResolver.embedURL(for: "https://www.instagram.com/nasa/"))
+    }
+
+    /// ⚠️ The payload is DOUBLE-escaped — JSON inside JSON inside a script tag.
+    /// One unescaping pass leaves `\/` in the URL and the request is rejected
+    /// as a malformed port, which is exactly how this failed the first time.
+    func test_instagram_videoURLIsFullyUnescaped() {
+        let html = #"...\"video_url\":\"https:\\/\\/scontent.test\\/v\\/clip.mp4?oe=1\"..."#
+        let url = InstagramMediaResolver.videoURL(inEmbedHTML: html)
+        XCTAssertEqual(url?.absoluteString, "https://scontent.test/v/clip.mp4?oe=1")
+        XCTAssertFalse(url?.absoluteString.contains("\\") ?? true)
+    }
+
+    /// 🔴 Instagram withholds the media file for reels using licensed music and
+    /// exposes it only for original audio. A pin like that is not broken — it
+    /// simply opens Instagram on tap — so the resolver must return nil quietly
+    /// and let the embed stand in, never crash or hang the page.
+    func test_instagram_noVideoURLYieldsNil() {
+        XCTAssertNil(InstagramMediaResolver.videoURL(
+            inEmbedHTML: #"{"display_url":"https://x.test/poster.jpg"}"#))
+        XCTAssertNil(InstagramMediaResolver.videoURL(inEmbedHTML: ""))
+    }
+
+    /// Never hand AVPlayer something that is not an https URL, whatever the
+    /// page contains.
+    func test_instagram_rejectsANonHTTPSValue() {
+        XCTAssertNil(InstagramMediaResolver.videoURL(
+            inEmbedHTML: #"\"video_url\":\"javascript:alert(1)\""#))
+    }
+
 }

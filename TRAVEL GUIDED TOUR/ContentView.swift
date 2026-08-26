@@ -23,6 +23,11 @@ struct ContentView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(DataService.self) private var dataService
+    /// 🔴 Passed explicitly into every slide-up layer below. The UIKit layers
+    /// do NOT inherit the SwiftUI environment — a dropped injection here reads
+    /// as "Instagram silently stopped playing", which is exactly the class of
+    /// bug the Follow button and the place pin each shipped with.
+    @Environment(InstagramMediaResolver.self) private var instagramResolver
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(SavedPlacesStore.self) private var savedPlacesStore
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
@@ -317,6 +322,7 @@ struct ContentView: View {
                     .environment(placePresenter)
                     .environment(listPresenter)
                     .environment(dataService)
+                    .environment(instagramResolver)
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(libraryStore)
@@ -366,6 +372,7 @@ struct ContentView: View {
                         .environment(placePresenter)
                     .environment(listPresenter)
                         .environment(dataService)
+                    .environment(instagramResolver)
                         .environment(locationManager)
                         .environment(audioPlayer)
                         .environment(libraryStore)
@@ -409,6 +416,7 @@ struct ContentView: View {
                         .environment(placePresenter)
                         .environment(listPresenter)
                         .environment(dataService)
+                    .environment(instagramResolver)
                         .environment(locationManager)
                         .environment(audioPlayer)
                         .environment(libraryStore)
@@ -441,6 +449,7 @@ struct ContentView: View {
                     .environment(placePresenter)
                     .environment(listPresenter)
                     .environment(dataService)
+                    .environment(instagramResolver)
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(libraryStore)
