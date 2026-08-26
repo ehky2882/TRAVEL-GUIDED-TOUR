@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-26 12:05 UTC
+**Last verified:** 2026-08-26 19:20 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,25 +25,27 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟢 **[#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) OPEN — Copenhagen: 40 tours +
-Atlas Studio CPH, the 34th Atlas maker.** Content only (one file: `Tours.json`, +1,876/−0) plus docs; **no Swift, no SQL,
-no build**. Assets already on `gh-pages` (195 files, additive, verified). Validator **0 errors**;
-the 2 warnings are pre-existing and identical on `origin/main`. **Auto-merge class once CI is green.**
+✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
+[#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
+[#616](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/616) squash `5196e459`. Both branches
+auto-deleted. **Nothing is open from this work and nothing is owed on the backend** — the story
+moves to `CLAUDE.md` § Current State, per this file's own rule.
 
-- **🔴 Seven supplied coordinates were wrong and every one was displaced NORTH** — largest 2,137 m
-  (M/S Maritime Museum). All corrected and reverse-verified. **The tool's calibrated bias line is
-  clean (p = 1), so upstream is HALF-fixed, not fixed** — same split Stockholm found.
-  **Worth telling whoever runs the generator.**
-🟡 **[#616](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/616) OPEN — the Danish architect
-vocabulary, 299 → 323 names. STACKED ON #615; merge that first.** **🔴 CODE PR — touches
-`Models/Tag.swift`, so it needs owner OK + a simulator look**, which is why it is separate. 32
-architect tags across 21 Copenhagen tours; both vocabulary copies edited and asserted identical.
-**⚠️ `Arne Jacobsen` was NOT added — he is not mentioned in a single Copenhagen script**, and
-`Gorrissen Federspiel` is the law firm that *rents* Axel Towers, not its architect.
-- **🔴 ATLANTA APPEARS TO BE STAGED WITH NO TRACKER ROW** — gh-pages `c533f3c4` pushed 41 Atlanta
-  images on 2026-08-24 while `drafts/AUDIO-PENDING-SURVEY.md` still said the queue was empty.
-  The Dubai failure repeating. **Do not report the queue empty without re-deriving.**
+- **Verified against the LIVE RPC, not the merge:** Atlas Studio CPH 🇩🇰 serving all 40 tours,
+  `country: Denmark` on 40, `places` still 27 and `priceTier` still emitted (no keys dropped).
+  Architect tags landed too — `Henning Larsen` 0 → 2, `Designed by a Master` 449 → 466. The
+  gh-pages mirror converged about seven minutes after Supabase.
+- **⚠️ OWED — no simulator or device review of #616.** Owner approved the merge without one. The
+  visible effect is 24 new architect names as filter chips and 21 tours joining the
+  "Designed by a master" shelf; no layout change, and CI's simulator build + unit tests were green.
+- **🔴 STILL UNRESOLVED: an ATLANTA batch is staged on gh-pages with no tracker row.** gh-pages
+  `c533f3c4` (2026-08-24) pushed 41 Atlanta images while `drafts/AUDIO-PENDING-SURVEY.md` said the
+  queue was empty. Flagged in the tracker; **whether scripts exist, and on which branch, was never
+  established.** Do not report the queue empty without re-deriving.
 
+---
+
+## 1b. Earlier board state (link pins)
 
 **Eight PRs merged between 01:22 and 03:10. Zero are open.** The link-pin feature went from four
 throwaway test pins to real content in under two hours.
