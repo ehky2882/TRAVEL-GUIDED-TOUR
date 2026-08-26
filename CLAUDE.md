@@ -510,7 +510,29 @@ The second half of the subway report — the first half is the block below. `tes
 
 ## Current State (2026-08-21)
 
-### Search was "AWFUL. Very laggy" — and the lag was one search running once per result row ([PR #605](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/605), session 102 — code + tooling) · **TestFlight 1.1 (123)**
+### 🔴 "The bottom module is not fully built" was the WRONG SCREEN'S LAYOUT, and three builds of measured optimisation never touched it ([PR #605](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/605), session 102) · **TestFlight 1.1 (127), owner device-verified — "things are much better"**
+
+**The most important lesson in this whole block: I diagnosed a visual complaint from code three times, shipped three builds, was measurably right each time and useful to the owner none of them. The owner offered a screen recording and it took ten seconds.** Ask for the video early.
+
+- **🔴 THE ACTUAL BUG. The module was never slow to build — it was fully drawn the whole time, wearing `SearchView`'s layout.** Frames 6.4–6.8s of the owner's recording: map fully drawn, "No Dozents here yet" up, and the module rendered **full-edge and square with NO drawer header at all**; at 6.9s it *snaps* into Home's rounded island with the header above it. **`SearchView` released `navState.pop()` in `onDisappear`, which fires only once the pop ANIMATION finishes.** Two things read `navState.isShowingDetail` and both were wrong for that ~0.5s: `BottomModuleRoot` kept the full-edge form, and **`ContentView.homeDrawer` stayed unmounted entirely**. One late flag, both symptoms. Released before `dismiss()` now.
+  - **⚠️ `ContentView` ALREADY SOLVED THIS for the tour LAYER via `tourLayerCoversDrawer`, and that branch's own comment names the symptom — *"instead of flashing it back in after the animation"*.** A pushed `NavigationLink` takes the other branch and had no equivalent. **When a screen misbehaves on dismissal, read what the layer path does first.**
+  - **⚠️ Release is idempotent behind a per-view flag** (`didRegisterPushed`), because it now runs twice on that path. `pop()` clamps at zero so a double pop is harmless at depth 1 — **but not with a second detail pushed above, where it silently eats that screen's depth.** `NavigationDepthPairingTests` pins that hazard.
+  - **⚠️ UNVERIFIED AND FLAGGED TO THE OWNER: the drawer is drawn ABOVE `tabContent` in `ContentView`'s `ZStack` with no `zIndex`**, so it now mounts while the search screen is still sliding away. Expected to read as the drawer waiting underneath (the tour layer already behaves that way). Owner reviewed 1.1 (127) and reported no problem, so it holds — but if it ever reads as the drawer landing *on top of* a closing screen, that is this change and it needs the `tourLayerCoversDrawer` treatment, not a plain early release.
+- **The three fixes that were real, measured, and NOT the bug** — all kept, all worth having, and the arrival cost genuinely fell **45,732 → 1,525 operations (30×)**. They are the block below. **Their existence is the warning: "I measured a 30× improvement" is not evidence you fixed what the user reported.**
+- **⚠️ BUILD NUMBERS CANNOT BE PREDICTED AND I PREDICTED ONE ANYWAY.** Told the owner "1.1 (126)"; it shipped as **127** because a parallel session cut 126 off `claude/instagram-best-effort` in between. `run_number` is shared across every branch and session. **This is already written down (session 95) — "read the run number back after dispatching" — and I did the arithmetic instead.**
+
+### A tour in Search lands you on the map, not in the tour page (session 102 — code)
+
+**Owner: "if i search for a tour and click on it, it takes me straight to the tour details page… when i exit that tour detail page i go to my previous map state. whereas i think it makes sense to be exiting to the area of the map that tour lives in."** Right — **a search result is a PLACE.** Opening its page directly put nothing behind it, so closing dropped you wherever the map had been before you searched.
+
+- Tapping a tour result now does what tapping its pin does: fly there, raise its placecard. **`SearchView.goToTour`** + **`PendingMapMove.placecardTourId`**.
+- **⚠️ COSTS A TAP — owner's explicit call with the trade stated.** Reaching a tour searched by name is two taps now. **The second tap is what buys the map context on the way out; do not optimise it back to a direct open.**
+- **⚠️ THE ALTERNATIVE WAS OFFERED AND REFUSED, AND WAS THE RISKIER ONE ANYWAY:** open the page *and* move the map behind it (one tap, same exit context). **A presented layer can stop the covered window's `.onChange` from running at all — the dead place pin, #532 — which is the exact mechanism the move depends on.**
+- **🔴 THE CARD TRAVELS THROUGH THE MOVE, NOT BEFORE IT.** `HomeView.flyTo` opens with `dismissPlacecard()` — correct for a city search, where a card left from the old location is stale — **so a card raised by the caller is wiped by the move itself.** Carried on `PendingMapMove` and raised after the clear. Raised **during** the flight rather than on arrival: the card is a map annotation anchored to its coordinate, so it travels in with the destination and is in place the moment the camera settles.
+- **⚠️ ANCHORS ON THE PIN, NEVER THE CENTROID.** `HomeView.placecardCoordinate` mirrors `MapMarkers` — the single stop, or **stop 0** for a walk. A walk's centroid is the mean of stops a kilometre apart (Montreal's Downtown walk: **197 m from any stop**, session 93) and would float the card over blank map. Pinned by `SearchToMapLandingTests`.
+- A tour with no stops falls back to opening directly rather than doing nothing.
+
+### The three real-but-not-it performance fixes — search, shelves, map pins ([PR #605](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/605), session 102 — code + tooling) · TestFlight 1.1 (123)/(124)/(125)
 
 **Owner: "search today is AWFUL. Very laggy. I think AI should help with that?"** It is **two problems**, and only one is an AI problem — **AI cannot fix lag, and adding it first would have made this materially worse.**
 
