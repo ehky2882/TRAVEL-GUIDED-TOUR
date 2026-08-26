@@ -128,6 +128,54 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-25)
 
+### Fourteen pinned posts, and the number that stopped meaning what it says ([PR #607](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/607), session 112 — content)
+
+**Owner sent 23 TikTok/YouTube links; 14 shipped, 9 are parked for want of a location.** Squash `937a20b2`,
+**merged and live on both Supabase and the gh-pages mirror.** Content only — no Swift, no SQL, no build.
+**linkPins 4 → 18, makers 37 → 51 in the bundle (59 live).** Full detail: `archive/HANDOFF-260825-6.md`.
+
+- **🔴 SETTINGS → ABOUT NOW READS "DOZENTS 59", AND 18 OF THOSE NEVER SIGNED UP.** `SettingsView` renders
+  `dataService.makers.count` raw. Measured live: 59 makers, **18 pinned creators**, 41 everything else. This was
+  flagged as a consequence when there were four pins; it is now the fastest-growing part of the number. **Owner has
+  the options (userId-only, published-tour-only, or split the row), not yet the decision.**
+- **🔴 THE NEAREST TOUR IS NOT NECESSARILY THE SAME SUBJECT — one pin was sited wrong and nearly shipped that way.**
+  Atlas carries **two** tours at the Tokyo International Forum site: the Forum itself and the *Oedo Antique Market*
+  held in its plaza, **94 m apart**. The sweep named the Forum (29 m) and the pin went there; the video is about the
+  market. Caught only because the market's hero slug was already taken. **Five other pins land 30–214 m from an Atlas
+  tour and are genuinely different subjects** (Kichi Kichi vs *Cavalier*, Gokan vs the Duddell Street Steps, 28 Liberty
+  vs Federal Hall, the Hess Triangle vs the Stonewall National Monument, the Sistine Chapel vs St Peter's Square).
+- **⚠️ NEW CONVENTION, NOT YET IN THE GENERATOR: every pin hero carries its creator's handle** —
+  `green-wood-cemetery-mylestoes_hero.webp`. A bare subject slug collides with the Atlas tour of the same subject, and
+  an overwritten hero at a live URL is the Thyssen bug, which since #567 a downloaded tour would never see corrected.
+  **`make-link-pin.py` still emits caption-derived slugs in batch mode** (`--slug` is ignored past one row), so this
+  was done by hand. **Fold it in before the next batch.**
+- **⚠️ `createdAt` IS SERVED ON ZERO TOURS, AND THAT DISABLES FOUR SORT CONTROLS.** The live RPC returns it on **0 of
+  1513**; `Tours.json` has it on 1476/1512 (36 missing — 35 SFO, 1 London). A **documented KNOWN_GAP** in
+  `check-catalog-contract.py`, but wider than that note says: `Place.ranked` has no dates to sort on, the maker page's
+  **Newest/Oldest** does nothing on a device, and `.dateAdded` — shipped to place and list pages in #600/#601 — is
+  inert. **🔴 Do NOT fix by adding `tours.created_at` to `get_catalog`**: it is `default now()` and holds seed time, so
+  it would look fixed and rank wrongly. Order: seed script carries the authored date → backfill the 36 → add the key.
+- **⚠️ A CORRECTION MADE MID-SESSION:** an AMNH place ordering was computed from `Tours.json` and reported to the owner
+  as pins-above-everything. **Phones read Supabase, where `createdAt` is absent**, so the real order interleaves.
+  **Compute a rendered order from the payload the app receives, never from the bundled file.**
+- **⚠️ WEB-SESSION MECHANICS, each one blocking:** **Pillow is not installed** in a fresh container and the generator
+  cannot crop a hero without it. **`scripts/upload-images.py` needs the `gh` CLI**, which a web session lacks — fell
+  back to git plumbing (blobless fetch → temp `GIT_INDEX_FILE` → `hash-object -w` → `write-tree --missing-ok` →
+  `commit-tree`), verified as **exactly 28 additions, 0 deletions, nothing outside `images/`**, none of the 28 paths
+  among the branch's 7,412 files. **Worth teaching that script the plumbing path.** All three oEmbed endpoints
+  (TikTok, YouTube, Instagram via `graph.facebook.com`) are reachable unauthenticated.
+- **⚠️ Short links MUST be resolved before hashing** — all 19 TikToks arrived as `vm.tiktok.com`, the YouTube ones
+  carried `?is=`. The id is uuid5 over `sourceURL`, so either form means the same post shared twice becomes two pins.
+  `canonical_url` handles it (#590). **Two of four YouTube links hit Google's `/sorry/` interstitial** from this
+  datacenter IP and resolved on retry — pace the resolver above ~50 links.
+- **Verification:** CI's Swift validator green (authoritative — no Swift toolchain in a Linux web session); locally a
+  Python mirror **self-tested against 9 injected fault classes, 9/9 caught**, then **0 errors / 0 warnings across 1512
+  tours + 18 link pins**. 0 id collisions. All 28 images hash-verified against the uploaded blobs **after** the Pages
+  deploy — they 404'd for ~8 minutes first.
+- **⚠️ OWED: two place candidates** already sited on their Atlas tour's exact coordinate and needing only copy, an
+  address and a hero — **Green-Wood Cemetery** and the **Oedo Antique Market**. And **9 parked links**: eight name no
+  location, and *"Top 5 Italian antique markets"* covers five cities and **cannot honestly be one pin.**
+
 ### List pages get the same grid and sort — and a sort state the other pages do not need ([PR #601](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/601), session 111 — code)
 
 **Owner: *"do the same for list pages. good idea."*** `TourListDetailView` renders **both** named lists and **Liked**, so one change covers both. Squash `3f0de399`, **merged**. **TestFlight 1.1 (121), owner device-verified: *"121 went live. Looks good."*** Full detail: `archive/HANDOFF-260825-5.md`.
@@ -155,7 +203,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ### The seatbelt for next time — per-field tolerance, and a tolerant array ([PR #598](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/598), session 110 — code)
 
-**Stacked on the link-pin split above; that one rescues builds already shipped, this one stops the next new value costing anything.** Not merged; app code, so it waits for owner OK + a simulator look.
+**Stacked on the link-pin split above; that one rescues builds already shipped, this one stops the next new value costing anything.** **MERGED** (`d80465b0`).
 
 - **Four fields had the fatal shape, not one:** `Tour.kind`, `Tour.primaryCategory` (10 cases), `Tour.videoRole` (optional) and `Stop.triggerMode`. Any one of them meeting an unfamiliar value failed its tour, which failed the whole `[Tour]` array, which the loader's `try?` turned into a silent "no new content".
 - **🔴 OPTIONAL DOES NOT PROTECT, AND IT IS THE THING A FUTURE READER WILL GET WRONG.** Synthesised `decodeIfPresent` returns nil for an **absent** key and for an explicit **null** — but for a key that is PRESENT with an unfamiliar value it delegates to the enum's initialiser and **propagates the throw**. So `videoRole` was exactly as fragile as the three non-optional fields. Pinned with a strict control enum in `CatalogDecodeToleranceTests`, so the point survives even if every enum on the model later gains a fallback.
@@ -170,7 +218,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ### Link pins move out of `tours`, and every frozen build starts receiving content again ([PR #597](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/597), session 110 — code + content + backend)
 
-**Four `kind: "link"` pins went into the live catalogue on 2026-08-24 at 22:51, and every build before 116 has been frozen since — silently.** Not merged; app code, so it waits for owner OK + a simulator look.
+**Four `kind: "link"` pins went into the live catalogue on 2026-08-24 at 22:51, and every build before 116 has been frozen since — silently.** **MERGED** (`433879ce`); the `linkPins` split is live on Supabase and the mirror.
 
 - **🔴 THE MECHANISM, AND IT LEAVES NO TRACE.** `ToursData` decodes `tours` as ONE array and `TourKind` is a closed enum, so one tour carrying a value the build does not know fails the **whole** catalogue. `RemoteCatalogLoader` wraps that decode in `try?` at three sites, reads the throw as a failed fetch, keeps its last good copy and logs nothing. No crash. The phone just stops receiving all new content.
 - **🔴 AN UNKNOWN TOP-LEVEL KEY IS FREE; AN UNKNOWN VALUE IN A KNOWN FIELD IS FATAL — and that is a fact about this app, not a claim about Swift.** `add_link_pins.sql` put `sourceURL` and `sourceAuthor` on all 1,513 tours and every shipped build carried on; so did `country`, `videoURLs`, `videoRole`, and `places` (which reached builds with no `Place` type at all). **Nothing has ever broken until a new VALUE appeared inside a field builds already parsed.** So link pins now travel under a sibling **`linkPins`** array and the app merges them back at decode — map, rails, search, library and the place page never learn the split exists.
@@ -188,7 +236,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ### Link pins — someone else's post as a map pin, playing inside the app ([PR #584](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/584), session 109 — code + backend)
 
-**Owner: *"What if i browse tiktok or instagram myself and find something i like. i can 'share' that post with dozent and automatically generate a pin so that somone can watch that post from within my app without linking to tiktok/instagram. there's an app called 'albo' that does this already so i know it is possible."*** They were right. **OPEN, not merged — waiting on a simulator look.** CI green (Build + **495 tests** + validator). Full detail: `archive/HANDOFF-260824-4.md`.
+**Owner: *"What if i browse tiktok or instagram myself and find something i like. i can 'share' that post with dozent and automatically generate a pin so that somone can watch that post from within my app without linking to tiktok/instagram. there's an app called 'albo' that does this already so i know it is possible."*** They were right. **MERGED** (`f38cef3`). CI green (Build + **495 tests** + validator). Full detail: `archive/HANDOFF-260824-4.md`.
 
 - **🔴 ALL THREE PLATFORMS PUBLISH AN EMBED NEEDING NO API KEY, NO REGISTRATION AND NO APP REVIEW — verified live, not assumed.** `tiktok.com/player/v1/{id}` returned **HTTP 200 unauthenticated**; YouTube is a standard iframe; **Instagram's tokenless oEmbed works again since Meta reversed the token requirement on 15 June 2026** (a tokenless call returns a *media* error, not an auth error). So a post can play **inside** Atlas rather than throwing the viewer out — which is what Albo does and what was asked for. **An earlier answer in this thread said a link pin must *open* TikTok; that was wrong.**
 - **🔴 THIS IS AN EMBED AND CAN NEVER BE A COPY.** Bytes stream from the platform and are never fetched or re-served. **TikTok's API exposes no video-file field at all** — not a permission that can be requested — and their terms forbid obtaining one another way. **Only the thumbnail is re-hosted**, because TikTok's thumbnail URLs are signed with `x-expires` and go blank within days.
@@ -199,7 +247,8 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - **`Components/LinkEmbedView.swift`** — `WKWebView` with **both** `allowsInlineMediaPlayback` and `mediaTypesRequiringUserActionForPlayback = []`; without either the player will not run inline. Taps inside the player open the real app rather than a login wall in the webview.
 - **`scripts/make-link-pin.py`** — post URL → catalogue entry (oEmbed for caption, author, thumbnail). Deterministic ids keyed on the source URL, so re-running produces the same pin. Self-test **18/18** offline. ⚠️ **The hero is cropped SQUARE before padding to 4:3**, because `heroAspectRatio` is `1.0` and the app shows the middle square — cropping a 576×1024 vertical thumbnail straight to 4:3 would have shown the middle ~42% of the frame.
 - **✅ `backend/add_link_pins.sql` HAS BEEN RUN** (owner, 2026-08-24) and **verified against the live RPC, not the success message**: `sourceURL` + `sourceAuthor` present on all **1,513 tours**, **25 places intact, 66 paid tours still priced**. Nothing owed.
-- **⚠️ DECIDED BUT NOT BUILT — the maker is the CREATOR.** Owner: *"these makers should be 'TikTok @asdfa;sldfkjds' or 'Instagram @asldjfa;sdf'... so on so forth."* So tapping through shows everything pinned from that creator. `make-link-pin.py` still takes `--maker <uuid>` and emits **no maker row**; it needs a deterministic `uuid5("atlas-maker:tiktok:@handle")` plus a `makers` entry (`displayName` `"TikTok @handle"`, `websiteURL` from oEmbed's `author_url`, initials + colour since **oEmbed carries no avatar URL**, `userId: null`). ⚠️ **Consequence raised and unanswered: Settings → About counts makers as "Dozents" (41 today), so every pinned creator would add one** — people who never signed up counting as Dozents.
+- **✅ BUILT — the maker IS the creator** (#588, avatars #594). A pinned post now mints a deterministic maker row per creator (`TikTok @handle` / `YouTube @handle` / `Instagram @handle`, `websiteURL` from oEmbed's `author_url`, real profile picture, `userId: null`), so tapping through a pin reaches that person rather than Atlas Studio. `--maker` is accepted and ignored.
+  - **🔴 THE CONSEQUENCE IS NOW MEASURED AND UNANSWERED: Settings → About renders `dataService.makers.count` RAW, and the live figure is 59 — of which 18 are pinned creators who never signed up.** At the owner's intended volume pinned creators outnumber real ones within a couple of batches. Options put to the owner: count only makers with a `userId`; count only makers with a published Atlas tour; or split the row into "Dozents" and "Creators". **Not a defect — a number that has stopped meaning what it says.**
 - **⚠️ THE EMBEDDED PLAYER HAS NEVER BEEN ON A SCREEN.** Authored on Linux with no Swift toolchain; CI is the only compile check. `archive/HANDOFF-260824-4.md` §4 carries a **paste-ready simulator fixture** and the three switches needed to make the sim read the bundle instead of Supabase. **The open questions: does a TikTok actually play inline, and does it survive backgrounding** (a documented `WKWebView` quirk).
 
 ### Two migrations would not compile, and now they are tested against real Postgres (session 109)

@@ -5931,8 +5931,8 @@
           "order": 0,
           "title": "Green-Wood Cemetery, Main Gate",
           "caption": "Stand at the corner of Fifth Avenue and 25th Street in Sunset Park, facing the three arched openings of the Gothic Revival gate.",
-          "latitude": 40.6503,
-          "longitude": -73.994,
+          "latitude": 40.6580892,
+          "longitude": -73.994841,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/GreenWood_Cemetery_Main_Gate.mp3",
           "audioDurationSeconds": 149,
           "triggerMode": "geofenced",
@@ -5944,8 +5944,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 149,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.6503,
-      "centroidLongitude": -73.994,
+      "centroidLatitude": 40.6580892,
+      "centroidLongitude": -73.994841,
       "city": "Brooklyn",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -76299,6 +76299,21 @@
         "C10FC91B-19F9-5FD5-BED5-9097751BF791",
         "728E97FA-CF73-5CF4-88EB-FBBA819B8FBD"
       ]
+    },
+    {
+      "id": "13C9DA6D-BBD3-54E6-B678-0B05FCA1E708",
+      "name": "Green-Wood Cemetery",
+      "description": "Four hundred and seventy-eight acres of landscaped hills, ponds and mausoleums, laid out in 1838 on the highest natural ground in Brooklyn — before New York had public parks at all. By the 1850s half a million people came each year, second only to Niagara Falls, and the crowds were part of what convinced the city it needed a Central Park; Frederick Law Olmsted walked these paths before he drew that one. Richard Upjohn's Gothic Revival brownstone gate still opens onto it from Fifth Avenue. Six hundred thousand people are buried here, among them Leonard Bernstein, Jean-Michel Basquiat, Samuel Morse, Louis Comfort Tiffany and Boss Tweed. The cemetery is still active, and increasingly a public space again.",
+      "latitude": 40.6580892,
+      "longitude": -73.994841,
+      "city": "Brooklyn",
+      "address": "500 25th Street, Brooklyn",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_3.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "28489c01-beef-41fc-82f8-f16cd4795d71",
+        "1FEF4E55-4F86-5F30-9A3D-7A284303FC7F"
+      ]
     }
   ],
   "linkPins": [
@@ -76767,8 +76782,8 @@
           "order": 0,
           "title": "Green-Wood Cemetery: If you spot any 👻 in the background…",
           "caption": "Green-Wood Cemetery: If you spot any 👻 in the background lmk below * * * #greenwoodcemetery #brookyln #tourism #nyc #travel",
-          "latitude": 40.6503,
-          "longitude": -73.994,
+          "latitude": 40.6580892,
+          "longitude": -73.994841,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -76780,8 +76795,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.6503,
-      "centroidLongitude": -73.994,
+      "centroidLatitude": 40.6580892,
+      "centroidLongitude": -73.994841,
       "city": "Brooklyn",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
