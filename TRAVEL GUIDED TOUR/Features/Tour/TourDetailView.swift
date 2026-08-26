@@ -517,6 +517,8 @@ struct TourDetailView: View {
         // see `setHidden`). The flag is what stops `ContentView`'s inline
         // fallback drawing the same bars in the main window on a launch where
         // that window never installed.
+        // TEMP-PROBE: who asked, and was the window controller even injected?
+        appShared.probe("TDV:\(hidden ? "hide" : "show")\(window == nil ? "/NILWIN" : "")")
         appShared.hidesBottomModule = hidden
         window?.setHidden(hidden)
     }
