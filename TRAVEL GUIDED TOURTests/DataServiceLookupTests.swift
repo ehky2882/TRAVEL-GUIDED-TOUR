@@ -1,4 +1,10 @@
 import XCTest
+// Needed to read `.latitude` / `.longitude` off a `CLLocationCoordinate2D` in
+// the marker tests. This project builds with `MemberImportVisibility`, so a
+// member is only visible when the module DEFINING it is imported here —
+// reaching it transitively through `@testable import` is not enough, and the
+// error names `_LocationEssentials` rather than CoreLocation.
+import CoreLocation
 @testable import TRAVEL_GUIDED_TOUR
 
 /// `DataService`'s `by id` lookups are backed by dictionaries rather than
