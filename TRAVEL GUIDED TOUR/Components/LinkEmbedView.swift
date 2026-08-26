@@ -24,6 +24,41 @@ import WebKit
 struct LinkEmbedView: UIViewRepresentable {
     let embedURL: URL
 
+    /// Called with `true` while the platform's own control has the player in
+    /// element fullscreen, `false` the moment it leaves — **or the moment this
+    /// view is torn down while still fullscreen**, which is the case that
+    /// matters. See `Coordinator.restoreIfNeeded`.
+    var onFullscreenChange: @MainActor (Bool) -> Void = { _ in }
+
+    /// Does this state mean the bottom module has to be withdrawn?
+    ///
+    /// Pure and static so the rule is testable without a live `WKWebView` —
+    /// the same treatment `BottomModuleRoot.extendsToScreenEdges` and
+    /// `BottomModuleWindowController.installOutcome` get.
+    ///
+    /// ⚠️ `.enteringFullscreen` counts as fullscreen and `.exitingFullscreen`
+    /// does not, deliberately. The module must be gone *before* the player has
+    /// finished growing and may only come back once it has finished shrinking;
+    /// reading the two transitional states the other way round leaves the bars
+    /// painted over the first and last frames of the animation, which is this
+    /// bug in miniature.
+    ///
+    /// 🔴 An unrecognised future state resolves to `false` — "show the bars".
+    /// The two failure directions are not equal: painting the bars over a
+    /// fullscreen video is the defect being fixed here, while failing to bring
+    /// them back costs the tab bar and the mini-player for the rest of the
+    /// session with no way to get them back.
+    static func withdrawsBottomModule(for state: WKWebView.FullscreenState) -> Bool {
+        switch state {
+        case .enteringFullscreen, .inFullscreen:
+            return true
+        case .exitingFullscreen, .notInFullscreen:
+            return false
+        @unknown default:
+            return false
+        }
+    }
+
     /// ⚠️ Both of these are required for the player to work at all inside an
     /// app. Without `allowsInlineMediaPlayback` iOS hands playback to the
     /// fullscreen system player, which defeats the point; without clearing
@@ -84,11 +119,16 @@ struct LinkEmbedView: UIViewRepresentable {
         web.isOpaque = false
         web.backgroundColor = .black
         web.scrollView.backgroundColor = .black
+        context.coordinator.observeFullscreen(on: web)
         web.loadHTMLString(Self.shell(embedURL), baseURL: Self.embedOrigin)
         return web
     }
 
     func updateUIView(_ web: WKWebView, context: Context) {
+        // Every re-render builds a fresh closure; the coordinator was made
+        // once. Handing the new one over keeps the two from drifting if this
+        // view is ever re-parented under a different owner.
+        context.coordinator.onFullscreenChange = onFullscreenChange
         // Reload only when the pin actually changed. A plain `load` here would
         // restart the video on every parent re-render — and the tour page
         // re-renders constantly while audio elsewhere is playing.
@@ -97,11 +137,105 @@ struct LinkEmbedView: UIViewRepresentable {
         web.loadHTMLString(Self.shell(embedURL), baseURL: Self.embedOrigin)
     }
 
-    func makeCoordinator() -> Coordinator { Coordinator(loadedURL: embedURL) }
+    func makeCoordinator() -> Coordinator {
+        Coordinator(loadedURL: embedURL, onFullscreenChange: onFullscreenChange)
+    }
+
+    /// 🔴 THE TEARDOWN RESTORE, and the reason it lives here rather than only
+    /// on whichever view hid the module: this is SwiftUI's own hook for the
+    /// representable going away, so it runs on the paths a `.onDisappear`
+    /// higher up can miss — the tour layer collapsing under a tab tap, the
+    /// page being dismissed, the whole layer being torn down mid-fullscreen.
+    /// `Coordinator.deinit` is the third belt behind it.
+    static func dismantleUIView(_ web: WKWebView, coordinator: Coordinator) {
+        coordinator.restoreIfNeeded()
+    }
 
     final class Coordinator: NSObject, WKNavigationDelegate {
         var loadedURL: URL?
-        init(loadedURL: URL?) { self.loadedURL = loadedURL }
+        /// Refreshed on every `updateUIView`, so a stale closure can never be
+        /// the thing holding the bars hostage.
+        ///
+        /// `@MainActor` because it drives `UIWindow.isHidden` and an
+        /// `@MainActor @Observable` flag; `deliver` is the only thing that
+        /// calls it, and it does so from the main queue by construction.
+        var onFullscreenChange: @MainActor (Bool) -> Void
+        private var fullscreenObservation: NSKeyValueObservation?
+        /// What we last reported. Every restore path reads it, so a teardown
+        /// that happens outside fullscreen costs nothing at all.
+        private var isFullscreen = false
+
+        init(loadedURL: URL?,
+             onFullscreenChange: @escaping @MainActor (Bool) -> Void) {
+            self.loadedURL = loadedURL
+            self.onFullscreenChange = onFullscreenChange
+        }
+
+        /// 🔴 `fullscreenState` (iOS 16+, KVO-observable) is the ONLY signal we
+        /// get. The fullscreen control lives inside a **cross-origin iframe**,
+        /// so nothing about the tap reaches us — not a navigation, not a script
+        /// message, and we may not inject script into it. WebKit changing this
+        /// property is the entire event.
+        func observeFullscreen(on web: WKWebView) {
+            fullscreenObservation = web.observe(\.fullscreenState,
+                                                options: [.new]) { [weak self] web, _ in
+                self?.report(web.fullscreenState)
+            }
+        }
+
+        /// The one way the callback is ever invoked.
+        ///
+        /// ⚠️ `DispatchQueue.main.async` rather than `Task { @MainActor in }`,
+        /// and that is not a style choice: main-queue blocks run strictly
+        /// FIFO, while the order two `Task`s reach the main actor in is not
+        /// guaranteed. The ordering of a hide against the restore that follows
+        /// it is the one thing here that must never be reordered — a restore
+        /// overtaking its own hide would leave the bars withdrawn for the rest
+        /// of the session, which is the failure this whole file guards
+        /// against. Dispatching unconditionally (rather than calling straight
+        /// through when already on main) is what keeps that queue the single
+        /// ordering authority; the cost is one runloop turn, which is not
+        /// visible against a fullscreen transition.
+        ///
+        /// `assumeIsolated` is safe by construction here: we are inside a
+        /// block the main queue just ran.
+        private func deliver(_ fullscreen: Bool) {
+            let callback = onFullscreenChange
+            DispatchQueue.main.async {
+                MainActor.assumeIsolated { callback(fullscreen) }
+            }
+        }
+
+        private func report(_ state: WKWebView.FullscreenState) {
+            let withdraw = LinkEmbedView.withdrawsBottomModule(for: state)
+            guard withdraw != isFullscreen else { return }
+            isFullscreen = withdraw
+            deliver(withdraw)
+        }
+
+        /// Put the module back if we are the reason it is gone. Idempotent,
+        /// and safe to call from anywhere at any time.
+        func restoreIfNeeded() {
+            guard isFullscreen else { return }
+            isFullscreen = false
+            deliver(false)
+        }
+
+        /// 🔴 The last line of defence, and the only one ARC guarantees: this
+        /// runs whenever the webview is released, however that happened —
+        /// including paths where neither `dismantleUIView` nor an
+        /// `.onDisappear` higher up ever fires.
+        ///
+        /// Inlined rather than calling `deliver`, because a deinit may not
+        /// escape `self` and `deliver` is an instance method. `restoreIfNeeded`
+        /// clears the flag, so a teardown that already restored skips here.
+        deinit {
+            guard isFullscreen else { return }
+            let callback = onFullscreenChange
+            DispatchQueue.main.async {
+                MainActor.assumeIsolated { callback(false) }
+            }
+        }
 
         /// Keep navigation inside the embed. A tap on the creator's handle or
         /// the sound name inside the player is a link out — it should open the

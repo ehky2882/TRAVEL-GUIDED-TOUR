@@ -331,6 +331,13 @@ struct ContentView: View {
                     .environment(proximityMonitor)
                     .environment(tourDownloader)
                     .environment(appShared)
+                    // A link pin's embedded player enters element fullscreen in THIS
+                    // window, while the mini-player and tab bar live one window level
+                    // above it — so the page has to be able to withdraw the module
+                    // while that lasts. Without this injection the lookup in
+                    // `TourDetailView` is nil and the fix is a silent no-op: the same
+                    // dropped-injection class as the batch-D Follow button above.
+                    .environment(bottomModuleWindow)
                     .environment(followService)
                     .environment(authService)
                     .environment(purchaseService)
@@ -381,6 +388,9 @@ struct ContentView: View {
                         .environment(proximityMonitor)
                         .environment(tourDownloader)
                         .environment(appShared)
+                        // Same reason as the tour layer above: a link pin reached from
+                        // here pushes `TourDetailView` in-stack and needs the module.
+                        .environment(bottomModuleWindow)
                         .environment(followService)
                         .environment(authService)
                         .environment(purchaseService)
@@ -425,6 +435,9 @@ struct ContentView: View {
                         .environment(proximityMonitor)
                         .environment(tourDownloader)
                         .environment(appShared)
+                        // Same reason as the tour layer above: a link pin reached from
+                        // here pushes `TourDetailView` in-stack and needs the module.
+                        .environment(bottomModuleWindow)
                         .environment(followService)
                         .environment(authService)
                         .environment(purchaseService)
@@ -458,6 +471,9 @@ struct ContentView: View {
                     .environment(proximityMonitor)
                     .environment(tourDownloader)
                     .environment(appShared)
+                    // Same reason as the tour layer above: a link pin reached from
+                    // here pushes `TourDetailView` in-stack and needs the module.
+                    .environment(bottomModuleWindow)
                     .environment(followService)
                     .environment(authService)
                     .environment(purchaseService)
