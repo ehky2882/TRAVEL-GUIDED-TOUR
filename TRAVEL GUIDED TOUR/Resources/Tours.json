@@ -76314,6 +76314,21 @@
         "28489c01-beef-41fc-82f8-f16cd4795d71",
         "1FEF4E55-4F86-5F30-9A3D-7A284303FC7F"
       ]
+    },
+    {
+      "id": "2F7FEA26-B07D-561C-9672-3071EAFC98EE",
+      "name": "Oedo Antique Market",
+      "description": "Twice a month the long outdoor plaza of the Tokyo International Forum fills with two hundred and fifty licensed dealers, beneath the elliptical glass hall Rafael Viñoly finished in 1996. The market opened in September 2003 for the four-hundredth anniversary of the Edo shogunate, with a deliberate brief — not a flea market but a professional fair whose dealers could account for what they sold. Around fifteen thousand people come to each edition, which makes it the largest outdoor antique market in Japan: Edo-period lacquerware three tables from Victorian clocks, ukiyo-e sharing a run with European jewellery, in the plaza of a working convention centre.",
+      "latitude": 35.67755,
+      "longitude": 139.76452,
+      "city": "Tokyo",
+      "address": "3-5-1 Marunouchi, Chiyoda City, Tokyo",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oedo-antique-market_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "ccda9933-558b-5739-9162-16cc68721d8b",
+        "4DB3A10E-69BD-56E8-854E-ACCC1BA1BA0B"
+      ]
     }
   ],
   "linkPins": [
