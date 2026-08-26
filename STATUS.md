@@ -25,8 +25,8 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟢 **[COPENHAGEN OPEN] `claude/copenhagen-upload-closure-q0j75t` — 40 tours + Atlas Studio CPH, the
-34th Atlas maker.** Content only (one file: `Tours.json`, +1,876/−0) plus docs; **no Swift, no SQL,
+🟢 **[#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) OPEN — Copenhagen: 40 tours +
+Atlas Studio CPH, the 34th Atlas maker.** Content only (one file: `Tours.json`, +1,876/−0) plus docs; **no Swift, no SQL,
 no build**. Assets already on `gh-pages` (195 files, additive, verified). Validator **0 errors**;
 the 2 warnings are pre-existing and identical on `origin/main`. **Auto-merge class once CI is green.**
 
@@ -34,10 +34,12 @@ the 2 warnings are pre-existing and identical on `origin/main`. **Auto-merge cla
   (M/S Maritime Museum). All corrected and reverse-verified. **The tool's calibrated bias line is
   clean (p = 1), so upstream is HALF-fixed, not fixed** — same split Stockholm found.
   **Worth telling whoever runs the generator.**
-- **⚠️ OWED, owner decision: the Danish architect vocabulary.** Only `Bjarke Ingels` exists; ~21
-  names (Arne Jacobsen, Henning Larsen, Jensen-Klint, Kaare Klint, 3XN, Cobe, Lundgaard & Tranberg,
-  Bindesbøll, Dahlerup …) ship the `Designed by a Master` fallback. **`Models/Tag.swift` is a code
-  change → separate PR needing owner OK + a simulator look.**
+🟡 **[#616](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/616) OPEN — the Danish architect
+vocabulary, 299 → 323 names. STACKED ON #615; merge that first.** **🔴 CODE PR — touches
+`Models/Tag.swift`, so it needs owner OK + a simulator look**, which is why it is separate. 32
+architect tags across 21 Copenhagen tours; both vocabulary copies edited and asserted identical.
+**⚠️ `Arne Jacobsen` was NOT added — he is not mentioned in a single Copenhagen script**, and
+`Gorrissen Federspiel` is the law firm that *rents* Axel Towers, not its architect.
 - **🔴 ATLANTA APPEARS TO BE STAGED WITH NO TRACKER ROW** — gh-pages `c533f3c4` pushed 41 Atlanta
   images on 2026-08-24 while `drafts/AUDIO-PENDING-SURVEY.md` still said the queue was empty.
   The Dubai failure repeating. **Do not report the queue empty without re-deriving.**
