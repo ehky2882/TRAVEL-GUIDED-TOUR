@@ -84,6 +84,23 @@ def normalize_url(url: str) -> str:
     return urlunparse((u.scheme, u.netloc, u.path, "", urlencode(kept), ""))
 
 
+# Hosts that already carry the post id in the URL. A link from one of these
+# needs no redirect resolution — everything the app parses is present.
+# youtu.be, vm.tiktok.com and tiktok.com/t/... are deliberately NOT here.
+CANONICAL_HOSTS = {
+    "youtube.com", "www.youtube.com", "m.youtube.com",
+    "tiktok.com", "www.tiktok.com",
+    "instagram.com", "www.instagram.com",
+}
+
+
+def is_already_canonical(url: str) -> bool:
+    """True when the URL is on a canonical host AND the app can already build a
+    player from its path. Pure, so the selftest covers it without a network."""
+    host = (urlparse(url).hostname or "").lower().rstrip(".")
+    return host in CANONICAL_HOSTS and derivable_embed(url) is not None
+
+
 def canonical_url(url: str) -> str:
     """Follow a share link to the real post, then normalise it.
 
@@ -91,7 +108,21 @@ def canonical_url(url: str) -> str:
     in its path — and that path is exactly what the app parses to build the
     player. Storing the short form produces a pin that validates, uploads, and
     renders a hero with NO PLAYER. Found by feeding the tool a real shared link.
+
+    🔴 BUT a URL that ALREADY carries its id is not resolved at all, because
+    that round-trip can only fail. Google serves datacenter IPs a
+    `/sorry/index` interstitial for youtube.com redirects, and the tool then
+    refuses a perfectly good `youtube.com/watch?v=ID` — it blocked three real
+    links for over twenty minutes of retries. Skipping the hop for
+    already-canonical URLs removes the whole failure mode.
+
+    ⚠️ `youtu.be/ID` is NOT treated as canonical, deliberately. The app can play
+    it, but the tour id is uuid5 over sourceURL, so storing the short form means
+    the SAME video shared as youtu.be and as youtube.com/watch hashes to two
+    different pins. Short forms must still resolve to one canonical spelling.
     """
+    if is_already_canonical(url):
+        return normalize_url(url)
     out = subprocess.run(
         ["curl", "-sSL", "-o", "/dev/null", "--max-time", "45",
          "-A", "Dozent/1.0 (link-pin tool; +https://dozent.world)",
@@ -531,8 +562,12 @@ def build_entry(*, url, meta, slug, maker, lat, lon, city, country,
 # --------------------------------------------------------------------------
 def selftest() -> int:
     fails = []
+    ran = []
 
+    # ⚠️ The total used to be a hardcoded 43, so adding or deleting a check
+    # never moved the number and the count proved nothing. It is counted now.
     def check(name, got, want):
+        ran.append(name)
         if got != want:
             fails.append(f"{name}: got {got!r}, want {want!r}")
 
@@ -545,6 +580,30 @@ def selftest() -> int:
     check("lookalike", platform_of("https://tiktok.evil.com/@a/video/1"), "other")
     check("notatiktok", platform_of("https://nottiktok.com/x"), "other")
     check("no host", platform_of("not a url"), "other")
+
+    # --- already-canonical detection (the redirect skip) --------------------
+    check("watch url is canonical",
+          is_already_canonical("https://www.youtube.com/watch?v=abc123"), True)
+    check("shorts url is canonical",
+          is_already_canonical("https://www.youtube.com/shorts/abc123"), True)
+    check("tiktok video url is canonical",
+          is_already_canonical("https://www.tiktok.com/@a/video/12345"), True)
+    check("instagram reel is canonical",
+          is_already_canonical("https://www.instagram.com/reel/ABC/"), True)
+    # 🔴 Short forms must STILL resolve, or the same post shared two ways
+    # hashes to two different pins.
+    check("youtu.be is NOT canonical",
+          is_already_canonical("https://youtu.be/abc123"), False)
+    check("vm.tiktok is NOT canonical",
+          is_already_canonical("https://vm.tiktok.com/ZGdxtmAeG/"), False)
+    check("tiktok /t/ share link is NOT canonical",
+          is_already_canonical("https://www.tiktok.com/t/ZTabc/"), False)
+    check("lookalike host is never canonical",
+          is_already_canonical("https://tiktok.evil.com/@a/video/1"), False)
+    # A canonical URL still gets its tracking parameters stripped.
+    check("canonical skip still normalises",
+          canonical_url("https://www.youtube.com/watch?v=abc123&is=XYZ&si=Q"),
+          "https://www.youtube.com/watch?v=abc123")
 
     e1 = build_entry(url="https://www.tiktok.com/@a/video/1",
                      meta={"author_name": "A", "author_unique_id": "a",
@@ -674,7 +733,7 @@ def selftest() -> int:
           derivable_embed("https://www.instagram.com/x/reel/ABC/"),
           "https://www.instagram.com/reel/ABC/embed")
 
-    total = 43
+    total = len(ran)
     if fails:
         print(f"SELFTEST FAILED — {len(fails)}/{total}")
         for f in fails:
