@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import WebKit
 
 /// The post itself, playing inside Atlas.
@@ -48,6 +49,35 @@ struct LinkEmbedView: UIViewRepresentable {
     /// fullscreen video is the defect being fixed here, while failing to bring
     /// them back costs the tab bar and the mini-player for the rest of the
     /// session with no way to get them back.
+    /// Is a newly-visible `UIWindow` the platform player going fullscreen?
+    ///
+    /// 🔴 THE SIGNAL `fullscreenState` NEVER GAVE US. Proved on device by the
+    /// probe builds: with a YouTube pin fullscreen and the bars on top of it,
+    /// the trace showed no KVO at all — not with element fullscreen off, and
+    /// not with it on. WebKit is not taking the element-fullscreen route here.
+    /// What it does instead is put the video in its OWN `UIWindow`, and that
+    /// window's level is at or below `.normal + 1`, which is where
+    /// `BottomModuleWindowController` puts ours — so ours paints over it.
+    ///
+    /// ⚠️ EXCLUDING OUR OWN WINDOW IS LOAD-BEARING, not tidiness. Hiding the
+    /// module makes its window post `didBecomeHidden`; if that fed back in as
+    /// "left fullscreen" it would restore the bars immediately, and the hide
+    /// would undo itself forever.
+    ///
+    /// ⚠️ The keyboard also gets a full-size window of its own. Typing in the
+    /// search field would otherwise read as a video going fullscreen.
+    static func isVideoFullscreenWindow(
+        className: String,
+        isOurModuleWindow: Bool,
+        size: CGSize,
+        screen: CGSize
+    ) -> Bool {
+        guard !isOurModuleWindow else { return false }
+        guard !className.contains("Keyboard"), !className.contains("TextEffects") else { return false }
+        guard screen.width > 0, screen.height > 0 else { return false }
+        return size.width >= screen.width * 0.9 && size.height >= screen.height * 0.9
+    }
+
     static func withdrawsBottomModule(for state: WKWebView.FullscreenState) -> Bool {
         switch state {
         case .enteringFullscreen, .inFullscreen:
@@ -181,6 +211,9 @@ struct LinkEmbedView: UIViewRepresentable {
         /// calls it, and it does so from the main queue by construction.
         var onFullscreenChange: @MainActor (Bool) -> Void
         private var fullscreenObservation: NSKeyValueObservation?
+        /// Observers for the window route. Removed in `deinit` — a leaked one
+        /// would keep reporting for a page that is long gone.
+        fileprivate var windowObservers: [NSObjectProtocol] = []
         /// What we last reported. Every restore path reads it, so a teardown
         /// that happens outside fullscreen costs nothing at all.
         private var isFullscreen = false
@@ -200,6 +233,46 @@ struct LinkEmbedView: UIViewRepresentable {
             fullscreenObservation = web.observe(\.fullscreenState,
                                                 options: [.new]) { [weak self] web, _ in
                 self?.report(web.fullscreenState)
+            }
+            observeVideoWindows()
+        }
+
+        /// The second signal, and on TikTok/YouTube the only one that fires.
+        /// See `LinkEmbedView.isVideoFullscreenWindow` for why a window is what
+        /// we watch rather than `fullscreenState`.
+        private func observeVideoWindows() {
+            let centre = NotificationCenter.default
+            for (name, entering) in [(UIWindow.didBecomeVisibleNotification, true),
+                                     (UIWindow.didBecomeHiddenNotification, false)] {
+                windowObservers.append(
+                    centre.addObserver(forName: name, object: nil, queue: .main) { [weak self] note in
+                        MainActor.assumeIsolated {
+                            self?.handleWindow(note.object, entering: entering)
+                        }
+                    }
+                )
+            }
+        }
+
+        private func handleWindow(_ object: Any?, entering: Bool) {
+            guard let window = object as? UIWindow else { return }
+            let name = String(describing: type(of: window))
+            let isOurs = window is PassThroughWindow
+            // TEMP-PROBE: every window event, so a wrong guess here is visible
+            // rather than inferred.
+            LinkEmbedView.probeSink?("\(entering ? "WIN+" : "WIN-"):\(name)@\(window.windowLevel.rawValue)\(isOurs ? "/ours" : "")")
+            guard LinkEmbedView.isVideoFullscreenWindow(
+                className: name,
+                isOurModuleWindow: isOurs,
+                size: window.bounds.size,
+                screen: window.screen.bounds.size
+            ) else { return }
+            if entering {
+                guard !isFullscreen else { return }
+                isFullscreen = true
+                deliver(true)
+            } else {
+                restoreIfNeeded()
             }
         }
 
@@ -253,6 +326,7 @@ struct LinkEmbedView: UIViewRepresentable {
         /// escape `self` and `deliver` is an instance method. `restoreIfNeeded`
         /// clears the flag, so a teardown that already restored skips here.
         deinit {
+            for observer in windowObservers { NotificationCenter.default.removeObserver(observer) }
             guard isFullscreen else { return }
             let callback = onFullscreenChange
             DispatchQueue.main.async {

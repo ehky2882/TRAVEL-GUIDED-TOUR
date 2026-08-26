@@ -102,4 +102,63 @@ final class LinkEmbedFullscreenTests: XCTestCase {
             )
         }
     }
+
+    // MARK: - The window route (what actually fires on TikTok/YouTube)
+
+    private static let screen = CGSize(width: 393, height: 852)
+
+    /// 🔴 THE ONE THAT MUST NEVER REGRESS. Hiding the module makes its own
+    /// window post `didBecomeHidden`; if that counted as "left fullscreen" the
+    /// restore would undo the hide immediately, every time, forever.
+    func test_ourOwnModuleWindow_isNeverTreatedAsVideoFullscreen() {
+        XCTAssertFalse(LinkEmbedView.isVideoFullscreenWindow(
+            className: "PassThroughWindow",
+            isOurModuleWindow: true,
+            size: Self.screen,
+            screen: Self.screen
+        ))
+    }
+
+    /// The keyboard gets a full-size window too. Typing in the search field
+    /// must not read as a video going fullscreen.
+    func test_keyboardWindow_isNotVideoFullscreen() {
+        for name in ["UIRemoteKeyboardWindow", "UITextEffectsWindow"] {
+            XCTAssertFalse(LinkEmbedView.isVideoFullscreenWindow(
+                className: name,
+                isOurModuleWindow: false,
+                size: Self.screen,
+                screen: Self.screen
+            ), "\(name) must not count")
+        }
+    }
+
+    func test_fullScreenForeignWindow_isVideoFullscreen() {
+        XCTAssertTrue(LinkEmbedView.isVideoFullscreenWindow(
+            className: "UIWindow",
+            isOurModuleWindow: false,
+            size: Self.screen,
+            screen: Self.screen
+        ))
+    }
+
+    /// A small transient window is not a video. The threshold is deliberately
+    /// generous (90%) because a fullscreen video window can be inset slightly.
+    func test_smallWindow_isNotVideoFullscreen() {
+        XCTAssertFalse(LinkEmbedView.isVideoFullscreenWindow(
+            className: "UIWindow",
+            isOurModuleWindow: false,
+            size: CGSize(width: 393, height: 300),
+            screen: Self.screen
+        ))
+    }
+
+    /// A zero-sized screen must not divide the world into "everything counts".
+    func test_degenerateScreen_isNotVideoFullscreen() {
+        XCTAssertFalse(LinkEmbedView.isVideoFullscreenWindow(
+            className: "UIWindow",
+            isOurModuleWindow: false,
+            size: Self.screen,
+            screen: .zero
+        ))
+    }
 }
