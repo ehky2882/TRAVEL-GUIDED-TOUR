@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-25 14:45 UTC
+**Last verified:** 2026-08-26 19:20 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,28 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
+[#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
+[#616](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/616) squash `5196e459`. Both branches
+auto-deleted. **Nothing is open from this work and nothing is owed on the backend** — the story
+moves to `CLAUDE.md` § Current State, per this file's own rule.
+
+- **Verified against the LIVE RPC, not the merge:** Atlas Studio CPH 🇩🇰 serving all 40 tours,
+  `country: Denmark` on 40, `places` still 27 and `priceTier` still emitted (no keys dropped).
+  Architect tags landed too — `Henning Larsen` 0 → 2, `Designed by a Master` 449 → 466. The
+  gh-pages mirror converged about seven minutes after Supabase.
+- **⚠️ OWED — no simulator or device review of #616.** Owner approved the merge without one. The
+  visible effect is 24 new architect names as filter chips and 21 tours joining the
+  "Designed by a master" shelf; no layout change, and CI's simulator build + unit tests were green.
+- **🔴 STILL UNRESOLVED: an ATLANTA batch is staged on gh-pages with no tracker row.** gh-pages
+  `c533f3c4` (2026-08-24) pushed 41 Atlanta images while `drafts/AUDIO-PENDING-SURVEY.md` said the
+  queue was empty. Flagged in the tracker; **whether scripts exist, and on which branch, was never
+  established.** Do not report the queue empty without re-deriving.
+
+---
+
+## 1b. Earlier board state (link pins)
 
 **Eight PRs merged between 01:22 and 03:10. Zero are open.** The link-pin feature went from four
 throwaway test pins to real content in under two hours.
