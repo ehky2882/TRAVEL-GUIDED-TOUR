@@ -116,6 +116,12 @@ struct TourDetailView: View {
     /// (that was the batch-D Follow-button bug, build 68→69).
     @Environment(PurchaseService.self) private var purchaseService: PurchaseService?
     @Environment(AuthService.self) private var detailAuth: AuthService?
+    /// Optional for the same reason as the other lookups above: this view is
+    /// hosted by UIKit slide-up layers that re-inject the environment by hand,
+    /// and the wizard's `.preview` mode has no module window at all. A nil
+    /// here means "nothing to withdraw", which is correct in both cases.
+    @Environment(BottomModuleWindowController.self)
+    private var bottomModuleWindow: BottomModuleWindowController?
     @State private var showingPurchaseSignIn = false
     @State private var purchaseErrorMessage: String?
 
@@ -230,6 +236,35 @@ struct TourDetailView: View {
         }
         .onDisappear {
             navState.pop()
+            // 🔴 GUARDED, and the guard is the fix for a race this page
+            // shipped with. `onDisappear` does NOT mean "this page went away":
+            // SwiftUI fires it for a page that is merely **covered**, and
+            // entering element fullscreen covers this one. `MakerView` already
+            // carries the same guard for the same reason — its comment reads
+            // "presenting a `fullScreenCover` can itself fire `onDisappear` on
+            // the view it covers — unguarded, this would put the bars straight
+            // back on top of the wizard." That is this bug, one screen over.
+            //
+            // The embed's hide arrives one runloop turn late (see
+            // `LinkEmbedView.Coordinator.deliver`), so whichever of the two
+            // landed last won: with the hide last the video was fullscreen, with
+            // this restore last the bars came back on top of it. The winner
+            // depended on how busy the main thread was, which is why it worked
+            // on a fresh launch and stopped after some navigating.
+            //
+            // ⚠️ Skipping here does NOT weaken the restore, which is the failure
+            // direction that matters. A page that has genuinely gone away has
+            // taken its `LinkEmbedView` with it, and that carries the two hooks
+            // that actually fire on teardown — `dismantleUIView` and
+            // `Coordinator.deinit`, the latter being the only one ARC guarantees.
+            // Both clear the flag read here, so the very state that suppresses
+            // this restore cannot outlive the thing that set it.
+            guard Self.restoresBottomModuleOnDisappear(
+                moduleHidden: appShared.hidesBottomModule
+            ) else { return }
+            Self.setBottomModuleHidden(false,
+                                       appShared: appShared,
+                                       window: bottomModuleWindow)
         }
         .onChange(of: tourDownloader.states[tour.id]) { _, newState in
             switch newState {
@@ -434,6 +469,58 @@ struct TourDetailView: View {
         resolvingInstagram = false
     }
 
+    /// Should this page's `onDisappear` put the bottom module back?
+    ///
+    /// Only when the module is not currently withdrawn. A withdrawn module on a
+    /// tour page means the link pin's embedded player is in element fullscreen
+    /// — which **covers** this page rather than dismissing it, and SwiftUI
+    /// fires `onDisappear` for a covered page exactly as it does for a dismissed
+    /// one. Restoring there is what put the bars back on top of the video.
+    ///
+    /// ⚠️ The wizard is the only other owner of that flag and cannot overlap
+    /// with this page (it covers the screen with a `fullScreenCover`, and a tour
+    /// page is not reachable underneath it) — so on this screen a withdrawn
+    /// module always means our own embed. See `AppSharedState.hidesBottomModule`.
+    ///
+    /// Pure and static so the rule is testable without a live `WKWebView` or a
+    /// window scene, the same treatment `LinkEmbedView.withdrawsBottomModule`
+    /// gets.
+    static func restoresBottomModuleOnDisappear(moduleHidden: Bool) -> Bool {
+        !moduleHidden
+    }
+
+    /// Withdraw the bottom module while a link pin's embedded player is in
+    /// element fullscreen, and put it back the moment it is not.
+    ///
+    /// 🔴 WHY THE MODULE HAS TO GO AT ALL. The mini-player and tab bar do not
+    /// live in this window: `BottomModuleWindowController` installs a separate
+    /// `PassThroughWindow` at `.normal + 1`, which paints over anything the
+    /// main window presents — and WKWebView's element fullscreen is presented
+    /// in the main window. The gallery's own viewer dodges this by being
+    /// presented from `BottomModuleRoot`, i.e. from inside the top window.
+    /// That escape is closed here: the video is inside a cross-origin iframe
+    /// we may not script, so we cannot suppress the platform's control and
+    /// substitute our own. Withdrawing the module is the move that is left.
+    ///
+    /// ⚠️ Static and parameterised rather than reading `self`, so the closure
+    /// handed to `LinkEmbedView` captures the two objects and not this view.
+    /// It has to stay callable while the view is being torn down, which is
+    /// exactly when reading a `@Environment` off a stale struct copy is not.
+    @MainActor
+    private static func setBottomModuleHidden(
+        _ hidden: Bool,
+        appShared: AppSharedState,
+        window: BottomModuleWindowController?
+    ) {
+        // Both, deliberately. Hiding the window is what stops it painting AND
+        // what stops it hit-testing (a hidden `UIWindow` does not hit-test —
+        // see `setHidden`). The flag is what stops `ContentView`'s inline
+        // fallback drawing the same bars in the main window on a launch where
+        // that window never installed.
+        appShared.hidesBottomModule = hidden
+        window?.setHidden(hidden)
+    }
+
     @ViewBuilder
     private var imageSection: some View {
         if tour.isLink, let embed = tour.linkEmbedURL, let sourceURL = tour.sourceURL {
@@ -452,7 +539,15 @@ struct TourDetailView: View {
                 if instagramMedia != nil || resolvingInstagram {
                     instagramPlayer(sourceURL: sourceURL)
                 } else {
-                    LinkEmbedView(embedURL: embed)
+                    LinkEmbedView(
+                        embedURL: embed,
+                        onFullscreenChange: { [appShared = self.appShared,
+                                               window = self.bottomModuleWindow] fullscreen in
+                            Self.setBottomModuleHidden(fullscreen,
+                                                       appShared: appShared,
+                                                       window: window)
+                        }
+                    )
                 }
             }
             .aspectRatio(LinkSource.embedAspectRatio(for: sourceURL),

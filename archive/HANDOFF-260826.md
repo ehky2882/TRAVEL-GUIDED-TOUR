@@ -1,179 +1,167 @@
-# HANDOFF — 2026-08-26 (session 113)
+# HANDOFF — 2026-08-26 (session 113, web/remote, code)
 
-**Copenhagen launched: 40 tours + Atlas Studio CPH, the 34th Atlas maker.** Denmark's first
-city and the catalog's 22nd country. Content only — no Swift, no SQL, no build.
-Branch `claude/copenhagen-upload-closure-q0j75t`.
+**Branch `claude/link-fullscreen-module`, commit `9ac38ca`, pushed. NOT merged, and
+NO PR IS OPEN — see § "The PR could not be opened from here", which is the one thing
+this session could not finish.**
 
-**Catalog 1512 → 1552 tours / 51 → 52 makers / 1884 → 1924 stops (tours array). Cities 110 → 116.**
+Owner bug report: *"in the link videos, when you go full screen, the bottom module is
+obscuring the full screen so it doesn't fully go full screen."*
 
 ---
 
-## The drop
+## 1. What reproduces, and what does not
 
-Dropbox `/scl/fo/` shared-folder link, **103 MB, downloaded first try with `dl=1`**. Forty
-`output <Name> <lat>, <lon>` folders, `#UXXXX`-escaped, each holding exactly **1 MP3 + a
-clean/TTS-safe script pair + 2–6 WebP**. No nested `output …` subdirectories (the Milan trap).
+**TikTok and YouTube pins reproduce it. Instagram does not, and the reason is
+structural rather than luck.**
 
-| | |
+`TourDetailView.imageSection` branches on the platform. Instagram resolves to a real
+media file and hands it to `GalleryVideoView`, which gets the app's own fullscreen
+viewer — presented from `BottomModuleRoot`, i.e. from *inside* the top window, which is
+exactly why that path was never affected. Everything else renders `LinkEmbedView`.
+
+Instagram cannot reproduce it even on its fallback path: when the resolve fails the
+code does drop back to `LinkEmbedView`, but its embed is a static poster wrapped in a
+link with no `<video>` in it, so there is no fullscreen control to tap. **A YouTube
+Short is affected exactly like an ordinary YouTube video** — the shape differs, the
+player does not.
+
+## 2. The cause
+
+Tapping the platform's own fullscreen control inside the iframe puts the player into
+**WKWebView element fullscreen, presented in the MAIN window**.
+
+The mini-player and tab bar are not in that window. `BottomModuleWindowController`
+installs a separate `PassThroughWindow` at `windowLevel = .normal + 1`
+(`BottomModuleWindow.swift`), which paints over anything the main window presents. So
+the video goes fullscreen and 126pt of chrome stays on top of it.
+
+**Nothing in `LinkEmbedView` had ever observed `fullscreenState`** — confirmed by
+reading the file, not by grep alone.
+
+## 3. Why this shape of fix, and the alternative that was rejected
+
+The obvious-sounding alternative is to give the embed the app's own fullscreen the way
+the gallery does: suppress the iframe's native control and present from
+`BottomModuleRoot`. **It was considered and rejected, and the reason is not effort.**
+The video is inside a **cross-origin iframe we are not allowed to script** — we cannot
+hide its control, cannot read its player state, cannot drive it. That is precisely why
+the Instagram work stopped trying to make its player behave and resolved the file
+instead, and there is no file to resolve for TikTok (their API exposes no video-file
+field at all).
+
+So the move that is left is to withdraw the module for the duration, and
+`setHidden(_:)` already exists for it — used by `CreateTourWizardView` and `MakerView`.
+Its own doc comment carries the reason it hides the **window** rather than emptying it:
+a hidden `UIWindow` does not hit-test, so it stops *claiming the bottom strip* as well
+as painting it. Leaving it visible-but-empty is how the Group Listen banner's Leave
+button ended up dead.
+
+## 4. What changed
+
+| File | Change |
 |---|---|
-| Images | **155, all already 1200×900**, numbered `01..N` with `01` = hero, **zero byte-duplicates** |
-| Audio | 40 MP3s, **all 128 kbps**; 37 at 44.1 kHz, **3 at 48 kHz** |
-| Scripts | 40 pairs, 1:1; header = `# Title` + coordinate line; **exactly one `[beat]` each**, no other bracketed direction |
-| Narration | 5,341 s ≈ 1h29m |
+| `Components/LinkEmbedView.swift` | Observes `fullscreenState` (KVO) and reports it out via a new `onFullscreenChange` callback. New pure `withdrawsBottomModule(for:)`. `dismantleUIView` + `Coordinator.deinit` restore. |
+| `Features/Tour/TourDetailView.swift` | New `@MainActor` `setBottomModuleHidden` — sets `appShared.hidesBottomModule` **and** `bottomModuleWindow?.setHidden`. Unconditional restore in `.onDisappear`. |
+| `ContentView.swift` | Injects `BottomModuleWindowController` into **all four** slide-up layers. |
+| `Components/BottomModuleWindow.swift` | Doc only: `hidesBottomModule` no longer has a single writer. |
+| `TRAVEL GUIDED TOURTests/LinkEmbedFullscreenTests.swift` | New, 5 cases over the pure rule. |
 
-**The three 48 kHz files were deliberately NOT transcoded** (Thorvaldsens Museum, Rundetårn,
-Tivoli Gardens). They are already MP3 at the correct bitrate; re-encoding MP3→MP3 costs a
-generation of quality for a consistency property nothing reads. Chicago's transcode was a
-different case — those arrived as WAVs and had to be converted regardless.
+## 5. 🔴 THE FAILURE MODE THIS IS ACTUALLY BUILT AROUND
 
----
+**Whoever hides the module owns unhiding it.** If the webview is torn down
+mid-fullscreen — the page dismissed, the layer collapsed by a tab tap, the app killed —
+and nothing restores it, **the user loses the tab bar and the mini-player for the rest
+of the session with no way to get them back.** That is far worse than the bug being
+fixed, and this app has shipped the bars-go-missing failure three times already.
 
-## 🔴 Seven wrong coordinates, all northward
+So the restore is unconditional and reachable from teardown, not only from a "left
+fullscreen" observation. Three of them, and `setHidden` being idempotent makes the
+redundancy free:
 
-| Venue | Displacement | Supplied point landed on |
-|---|---:|---|
-| **M/S Maritime Museum** | **2,137 m N** | nothing but *"Helsingør, town"* |
-| **CopenHill** | 385 m N | **Margretheholms Havn — a marina** |
-| **Alchemist** | 370 m N | Refshalevej **240** (venue is 173C) |
-| **Jordnær** | 211 m N | Gentoftegade, 211 m up the street |
-| **Grundtvigs Kirke** | 189 m N | Jeppes Allé, **behind the apse** |
-| **Rundetårn** | 109 m N | **Suhmsgade**, not the Købmagergade entrance |
-| **Graziano** | 108 m N | **Guldbergsgade**, not Møllegade |
+1. `TourDetailView.onDisappear` — the ordinary path.
+2. `LinkEmbedView.dismantleUIView` — SwiftUI's own teardown hook. **This is the one
+   that covers the tab-tap path**: `BottomModuleRoot.tabSelection` calls
+   `tourPresenter.dismiss()` on every tap (deliberately unguarded on
+   `newTab != selectedTab`), so the whole layer goes away under the page.
+3. `Coordinator.deinit` — the only one ARC guarantees.
 
-Plus **Designmuseum Danmark 57 m N**, moved to the Bredgade 68 gate as a stated judgement call
-rather than a proven error. **At the 30 m geofence not one of the seven would ever have fired.**
-Every correction reverse-verified onto the venue itself.
+**A kill mid-fullscreen cannot persist it either:** `isHiddenByRequest` is per-instance,
+and `installBottomModule` / the launch gate unhide unconditionally at hand-off.
 
-**Two heroes independently corroborate their own corrections:** Graziano's shopfront sign reads
-`TRATTORIA BOTTEGA FAMIGLIA · Graziano · MØLLEGADE 13`, and the M/S Maritime Museum hero has
-**Kronborg Castle in the background**.
+## 6. ⚠️ THE INJECTION WAS MISSING, AND WITHOUT IT THE WHOLE FIX IS A NO-OP
 
-### The bias line is clean, and that is not the same as fixed
+The four UIKit layers re-inject the environment **by hand**, and
+`BottomModuleWindowController` was not among them. The lookup in `TourDetailView` is
+optional (it has to be — the wizard's `.preview` mode has no window at all), so a
+missing injection would have been **nil, silent, and a dead fix** — the
+dropped-injection class that cost the batch-D Follow button a whole build, and which the
+tour layer's own comment warns about three lines above where this was added.
 
-`check-coordinates.py` reports **11/21 north, median +0.3 m, p = 1** — statistically identical
-to the dead-centred NYC/London baseline, nothing like Barcelona/Milan's +10.3 m at p = 5.6e-06.
-**But all seven gross errors are northward.** Upstream is **half-fixed**, the same split
-Stockholm found. It also fits the zoom theory precisely: the worst error by an order of
-magnitude is the one subject 45 km outside the city, which you must zoom out to place.
+All four layers now inject it, so a link pin reached from a place page, a list or a
+maker page is covered too, not just one opened from Home.
 
-### Three lessons about the tool itself
+## 7. Two decisions inside the fix that look like style and are not
 
-1. **🔴 ITS GROSS THRESHOLD IS NOT THE GEOFENCE.** Rundetårn (109 m) and Graziano (108 m) were
-   never flagged — the smallest that tripped it was Grundtvig at 195 m. **The geofence is 30 m,
-   so anything past ~50 m matters.** A full precision sweep against per-venue geocodes found both.
-   **Do not stop at the tool's flag list.**
-2. **🔴 "UNVERIFIABLE" IS NOT A PASS — the biggest error was hiding there.** The M/S Maritime
-   Museum was one of nine the geocoder could not resolve, so the tool printed no verdict at all.
-   Reading those nine by hand against their scripts is what caught 2.1 km.
-3. **⚠️ Four of its flags were false alarms, and the reason generalises.** **`Det Kongelige
-   Teater` names three separate buildings** (Kongens Nytorv 1874, the Opera, the Playhouse), so
-   Operaen "failed" by 928 m and Skuespilhuset by 528 m against the wrong one; both supplied
-   points are correct. **Noma** matched **"Noma Projects"**, the products arm, 812 m away, while
-   the supplied point is Refshalevej 96 — Noma's actual address. **Superkilen** is a 750 m
-   linear park, where a centroid distance is meaningless.
+- **`DispatchQueue.main.async`, never `Task { @MainActor in }`.** Main-queue blocks run
+  strictly FIFO; the order two `Task`s reach the main actor in is **not guaranteed**,
+  and a restore overtaking its own hide is exactly the permanent failure in §5.
+  Dispatching unconditionally — rather than calling straight through when already on
+  main — is what keeps that queue the single ordering authority. Costs one runloop turn,
+  invisible against a fullscreen transition.
+- **`.enteringFullscreen` counts as fullscreen, `.exitingFullscreen` does not.** The
+  bars must be gone *before* the player finishes growing and may return only once it has
+  finished shrinking. An unrecognised future state resolves to "show them" — the two
+  failure directions are not equal.
 
----
+## 8. 🔴 THE PR COULD NOT BE OPENED FROM HERE — this is what is owed
 
-## Hero audit — 40/40 clean
+**`api.github.com` is blocked by this session's egress policy: 403 at the agent proxy,
+authenticated or not. There is no `gh` CLI and no GitHub MCP tool in this session.** The
+proxy README is explicit that a 403 is an organization policy denial and must be
+reported rather than routed around, so it was.
 
-All forty opened and read against their scripts. **Zero wrong-subject errors** — the third clean
-audit after Sydney and Cape Town. Confirmed by signage in frame on many: `KØD OG FLÆSKEHAL` with
-the concrete bull at number 100, `MØLLEGADE 13`, `LA BANCHINA`, Koan's corten nameplate,
-`NY CARLSBERG GLYPTOTEK`, `NYHAVN 17`, `25hours hotel`.
+`git push` works — it goes through the git proxy, which is a different path. The branch
+is up.
 
-**Look-alike clusters checked deliberately** (Copenhagen's density here is high):
+**Consequence, and it is the important one: `ci.yml` runs on `pull_request`, `push` to
+`main`, or `workflow_dispatch` — NOT on a push to a feature branch. So nothing has
+compiled this code.** No Swift toolchain exists in a Linux web session, so CI is the
+`test_sim` stand-in per Automation Rule #3, and it has not run.
 
-- **Two Royal Theatre harbour buildings** — Henning Larsen's cantilevered Opera roof slab vs
-  Lundgaard & Tranberg's glazed Playhouse foyer band. Plus **Operaparken**, the park beside the
-  Opera, whose hero is an aerial of the lobed planting beds. All three distinct.
-- **Two multi-tower developments** — Axel Towers' five copper cylinders (Rådhus tower behind)
-  vs Kaktustårnene's serrated balconies (IKEA in frame).
-- **Two harbour baths** — the Islands Brygge timber pools in the canal vs Kastrup's curved
-  "Snail" out on the Øresund.
-- **Superkilen vs Den Røde Plads** — whole and part. The Superkilen hero deliberately shows the
-  **Black Market's** octopus climbing sculpture while the Red Square hero shows the painted
-  ground, so the two tours do not collide.
+Open the PR at:
+`https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/new/claude/link-fullscreen-module`
 
----
+What to check first when CI does run: the concurrency annotations. `AppSharedState` and
+`BottomModuleWindowController` are both `@MainActor`, so the callback is typed
+`@MainActor (Bool) -> Void` and bridged with `MainActor.assumeIsolated` inside a
+main-queue block. That is the area most likely to need a nudge, and it is the same class
+of error the fastlane SnapshotHelper work hit (six "main actor-isolated ... in a
+synchronous nonisolated context" errors).
 
-## Titles, casing and the transcript decision
+## 9. ⚠️ THIS WANTS A DEVICE CHECK, AND THE PR SHOULD SAY SO
 
-- **🔴 THE SCRIPT HEADER IS AUTHORITATIVE, NOT THE FOLDER NAME.** The folder reads
-  **`M:S Maritime Museum`** only because a colon substitutes for a slash in a filename — the real
-  name is **`M/S Museet for Søfart`**, and only the header carries it. Headers also give the
-  bilingual parenthetical form (`The Round Tower (Rundetaarn)`) and `bird : downtown`.
-- **⚠️ Danish casing left exactly as delivered.** Folder names and headers **agree** on
-  `Den Lille Havfrue`, `Den Røde Plads`, `Grundtvigs Kirke` and `Rundetaarn` (the tower's own
-  brand spelling), so there was nothing to reconcile. Stockholm's rule applies unchanged: follow
-  the delivered source, not a rule applied blindly in either direction.
-- **🔴 THE NARRATION OPENS BY SPEAKING THE PLACE NAME — new, and the decision is reversible.**
-  The `_tts-safe` twins **begin with a phoneticised title** (`Newhown`, `Kristiansborg Palace`,
-  `Keerkelbroen, the Circle Bridge`). Stockholm's, Barcelona's and Marrakech's omitted the header
-  entirely, which is how those sessions proved the title *wasn't* narrated. **`transcriptText`
-  still strips both header lines**, matching all 1,512 existing tours, so the transcript begins
-  one spoken phrase after the audio does. **One line in the builder flips it** if the owner
-  prefers verbatim over catalog consistency.
+Everything webview-related in this feature **has behaved differently on a phone than in
+the simulator, twice** — #603 and #604 both shipped and both had to be undone. Build 128
+(from `main`) is the current baseline.
 
----
+There are live pins to test against: **18 link pins**, most on the American Museum of
+Natural History place page — TikTok, YouTube, a YouTube Short and Instagram among them.
 
-## 🔴 The architect gap — largest since São Paulo
+On device, in this order:
 
-**Only `Bjarke Ingels` is in the vocabulary.** He carries 7 tours (CopenHill, Kaktus Towers,
-M/S Maritime, Panda House, Superkilen, Den Røde Plads, and Havnebadet as PLOT with Julien De Smedt).
+1. **TikTok pin → tap the platform's fullscreen control.** Bars gone, video genuinely
+   full-bleed. Leave fullscreen → bars back.
+2. **YouTube pin, then the YouTube Short.** Same, both orientations.
+3. **The restore paths, which matter more than the fix.** Enter fullscreen, then
+   (a) close the page with the X; (b) enter fullscreen and **tap a tab** — including the
+   tab you are already on; (c) enter fullscreen, background the app, force-quit,
+   relaunch. **In every case the tab bar and mini-player must come back.**
+4. **Instagram pin** — should be unchanged (it takes `GalleryVideoView`), and is the
+   control that proves nothing regressed on the good path.
+5. **A tour with no link pin** — the module must behave exactly as before.
 
-**Absent, shipping the `Designed by a Master` fallback:** Arne Jacobsen, Henning Larsen,
-Lundgaard & Tranberg, 3XN, Cobe, Nicolai Eigtved, Lauritz de Thurah, Ferdinand Meldahl,
-**Peder Vilhelm Jensen-Klint** (Grundtvig's Church *and* Bien), Kaare Klint, Michael Gottlieb
-Bindesbøll, Vilhelm Dahlerup, Hack Kampmann, Jørgen Bo, Vilhelm Wohlert, Thorvald Jørgensen,
-White Arkitekter, Olafur Eliasson, Ellen van Loon, Martin Brudnizki, Edvard Eriksen.
+## 10. Not done, deliberately
 
-**`Models/Tag.swift` is a code change needing owner OK + a simulator look, so it stayed out of
-this content PR.** ⚠️ **Two correctly excluded under the Kiki Smith rule** — a single artwork
-inside or on a building is not authorship: **Maria Rubinke** (Alchemist's bronze doors) and
-**Einar Utzon-Frank** (Kødbyens Fiskebar's bull).
-
----
-
-## Verification
-
-- **0 errors, 2 warnings across 1,552 tours** — and **both warnings are pre-existing**, proven by
-  running the same validator against `origin/main`'s catalog, which reports the identical pair
-  (VIA 57 West's transcript gap; Bedrock Caverns' deliberate null `walkingDistanceMeters`).
-  **Copenhagen contributes zero of each.**
-- No Swift toolchain on Linux, so a **Python mirror of `validate-tours.swift`** was used. It
-  parses the vocabulary from **both** `Models/Tag.swift` and the Swift validator and **raises if
-  they disagree or either parse is empty**.
-  **⚠️ THAT GUARD FIRED ON THE FIRST RUN.** The two files store the vocabulary in different
-  shapes — `(.placeType, [ … ])` in Tag.swift, `let placeTypeTags: Set<String> = [ … ]` in the
-  validator — so a parser written for only the first returns **empty** for the second, and the
-  mirror would have passed anything at all. The two lists agree at **349 tags**.
-- **Self-tested against 26 injected fault classes first — 26/26 caught.**
-- uuid5 reverse-verified against **26 of 33 live Atlas makers**; the 7 mismatches are
-  NYC/OPO/LIS/LDN/HKG/SFO/YYZ, which predate the scheme. **0 duplicate tour or stop ids.**
-  **0 slug collisions** against the live catalog and all 7,440 gh-pages paths.
-- **Assets-first via pure plumbing**, and **the base moved mid-session**: a parallel session
-  pushed link-pin heroes to `gh-pages` between the tree build and the push. The tree was
-  **rebuilt on the new base rather than force-pushed over it**. Verified none of the 195 target
-  paths pre-existed on *either* base; tree diff **exactly 195 additions, 0 deletions, nothing
-  outside `audio/` + `images/`**.
-  **⚠️ Check `git ls-remote` immediately before pushing to `gh-pages`, not just at session start.**
-- Tours.json **byte-stable under a Python re-dump at `indent=2`** before editing; diff
-  **1,876 insertions / 0 deletions**.
-
----
-
-## ⚠️ Owed / noticed
-
-- **🔴 AN ATLANTA BATCH IS STAGED AND IS NOT IN THE TRACKER.** gh-pages commit `c533f3c4`
-  (2026-08-24) pushed *"Atlanta tour images: 9 subjects (41 files)"* — Historic Fourth Ward Park,
-  Krog Street Tunnel, The Temple, Georgian Terrace, the Atlanta Flatiron, the Hurt Building,
-  Big Bethel AME, Prince Hall Masonic Temple, Ebenezer Baptist. **`drafts/AUDIO-PENDING-SURVEY.md`
-  on `main` still said the queue was empty.** This is the Dubai failure of 2026-07-27 repeating
-  exactly. A warning has been added to the tracker; whether scripts exist, and on which branch,
-  was **not** established. **Do not tell the owner the queue is empty without re-deriving.**
-- **The architect vocabulary PR** above — the single highest-value follow-up for this city.
-- **Key facts had drifted** and was corrected in passing: it read *"1512 tours + 4 link pins,
-  37 makers"* while the live figures were 18 pins and 51 makers. Re-derive that block; do not
-  trust it.
-- **Nothing owed on Supabase.** The catalog reaches the DB through `publish-catalog.yml` on merge
-  to `main`; no migration is involved in a content-only change.
+- `STATUS.md` untouched — a coordinator session owns it.
+- No `Tours.json`, no SQL, no catalogue change, no TestFlight build.
+- Nothing merged.
