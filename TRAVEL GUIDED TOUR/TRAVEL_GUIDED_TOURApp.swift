@@ -491,7 +491,6 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(proximityMonitor)
                 .environment(tourDownloader)
                 .environment(appShared)
-                .environment(bottomModuleWindow)  // TEMP-PROBE
                 .environment(tourPresenter)
                 .environment(makerPresenter)
                 .environment(placePresenter)

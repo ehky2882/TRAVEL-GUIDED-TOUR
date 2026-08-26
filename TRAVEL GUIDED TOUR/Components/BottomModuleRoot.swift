@@ -32,9 +32,6 @@ struct BottomModuleRoot: View {
     @Environment(PlacePresenter.self) private var placePresenter: PlacePresenter?
     @Environment(TourListPresenter.self) private var listPresenter: TourListPresenter?
     @Environment(AppSharedState.self) private var appShared
-    // TEMP-PROBE: optional, so a host that does not inject it still compiles.
-    @Environment(BottomModuleWindowController.self)
-    private var bottomModuleWindow: BottomModuleWindowController?
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(AuthService.self) private var authService: AuthService?
     @Environment(FollowService.self) private var followService: FollowService?
@@ -53,18 +50,6 @@ struct BottomModuleRoot: View {
     private var assemblyProgress: Double {
         guard let launchState, launchState.isCovering else { return 1 }
         return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
-    }
-
-    // MARK: - TEMP-PROBE (delete with the whole block; grep TEMP-PROBE)
-    private var probeReadout: String {
-        let inst = bottomModuleWindow?.isInstalled == true ? "1" : "0"
-        let flag = appShared.hidesBottomModule ? "1" : "0"
-        let req = bottomModuleWindow?.probeHiddenByRequest == true ? "1" : "0"
-        let winHidden: Bool? = bottomModuleWindow?.probeWindowHidden ?? nil
-        let win = winHidden.map { $0 ? "1" : "0" } ?? "-"
-        let last = bottomModuleWindow?.probeLastCall ?? "-"
-        return "inst\(inst) flag\(flag) req\(req) win\(win) last:\(last) | "
-            + appShared.probeLog.joined(separator: " ")
     }
 
     var body: some View {
@@ -102,22 +87,6 @@ struct BottomModuleRoot: View {
             isAnyLayerPresented: isAnyLayerPresented
         )
         return VStack(spacing: 0) {
-            // MARK: - TEMP-PROBE (delete with the whole block; grep TEMP-PROBE)
-            // Rendered ON the module, because the module being wrongly visible
-            // IS the bug — so this readout is on screen at exactly the moment
-            // it is needed, and a screenshot answers the question.
-            //   inst  : is the secondary window installed (else inline fallback)
-            //   flag  : appShared.hidesBottomModule
-            //   req   : the controller's cached isHiddenByRequest
-            //   win   : what the window itself thinks (nil = no window)
-            //   last  : the last setHidden call — T/F, -noop if the guard ate it
-            Text(probeReadout)
-                .font(.system(size: 9, design: .monospaced))
-                .foregroundStyle(.yellow)
-                .padding(.horizontal, 6)
-                .padding(.vertical, 2)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color.black.opacity(0.85))
 
             Spacer(minLength: 0)
             // The painted module. Measured as one unit so the window claims a

@@ -135,13 +135,6 @@ struct LinkEmbedView: UIViewRepresentable {
     /// satisfies the platforms' referrer checks.
     static let embedOrigin = URL(string: "https://dozent.world")
 
-    // MARK: - TEMP-PROBE (delete with the whole block; grep TEMP-PROBE)
-    /// Set by `TourDetailView` so the coordinator, which holds no app state of
-    /// its own, can report raw `fullscreenState` changes into the on-screen
-    /// trace. Static because the coordinator is created before any environment
-    /// is reachable from it.
-    @MainActor static var probeSink: (@MainActor (String) -> Void)?
-
     func makeUIView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
         config.allowsInlineMediaPlayback = true
@@ -258,9 +251,6 @@ struct LinkEmbedView: UIViewRepresentable {
             guard let window = object as? UIWindow else { return }
             let name = String(describing: type(of: window))
             let isOurs = window is PassThroughWindow
-            // TEMP-PROBE: every window event, so a wrong guess here is visible
-            // rather than inferred.
-            LinkEmbedView.probeSink?("\(entering ? "WIN+" : "WIN-"):\(name)@\(window.windowLevel.rawValue)\(isOurs ? "/ours" : "")")
             guard LinkEmbedView.isVideoFullscreenWindow(
                 className: name,
                 isOurModuleWindow: isOurs,
@@ -300,9 +290,6 @@ struct LinkEmbedView: UIViewRepresentable {
         }
 
         private func report(_ state: WKWebView.FullscreenState) {
-            // TEMP-PROBE: did WebKit report anything at all? An empty trace here
-            // means element fullscreen is still not the route being taken.
-            LinkEmbedView.probeSink?("KVO:\(String(describing: state))")
             let withdraw = LinkEmbedView.withdrawsBottomModule(for: state)
             guard withdraw != isFullscreen else { return }
             isFullscreen = withdraw

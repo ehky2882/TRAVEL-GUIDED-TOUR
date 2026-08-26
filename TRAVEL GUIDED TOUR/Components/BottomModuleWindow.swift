@@ -71,17 +71,6 @@ final class AppSharedState {
     /// times; the wizard therefore drives it from `MakerView`'s presentation
     /// state — which always resolves — rather than from its own lifecycle.
     var hidesBottomModule: Bool = false
-
-    // MARK: - TEMP-PROBE (delete with the whole block; grep TEMP-PROBE)
-    /// Ring of the last few writes to the module's hide/show switches, rendered
-    /// on the module itself by `BottomModuleRoot`. Exists because the failure is
-    /// only reproducible on a device and the module being wrongly visible IS the
-    /// bug — so the readout is on screen exactly when it is needed.
-    var probeLog: [String] = []
-    func probe(_ event: String) {
-        probeLog.append(event)
-        if probeLog.count > 6 { probeLog.removeFirst() }
-    }
 }
 
 /// Installs and tears down the secondary `UIWindow` that hosts the
@@ -207,21 +196,10 @@ final class BottomModuleWindowController {
     ///
     /// Idempotent, and survives a deferred install (see `isHiddenByRequest`).
     func setHidden(_ hidden: Bool) {
-        // TEMP-PROBE: record the call and what it actually did.
-        probeLastCall = "\(hidden ? "T" : "F")\(window == nil ? "-nilwin" : "")\(hidden == isHiddenByRequest ? "-noop" : "")"
         guard hidden != isHiddenByRequest else { return }
         isHiddenByRequest = hidden
         window?.isHidden = hidden
     }
-
-    // MARK: - TEMP-PROBE (delete with the whole block; grep TEMP-PROBE)
-    /// What the last `setHidden` call was and whether it did anything.
-    var probeLastCall = "-"
-    /// The cached flag the early-return above compares against. If this reads
-    /// true while the bars are visible, the guard is swallowing every hide.
-    var probeHiddenByRequest: Bool { isHiddenByRequest }
-    /// What the window actually thinks. Divergence from the above is the bug.
-    var probeWindowHidden: Bool? { window?.isHidden }
 
     /// Pure decision used by `install()`. Kept separate so the
     /// recovery branching can be unit-tested deterministically.

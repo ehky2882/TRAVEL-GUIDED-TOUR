@@ -258,7 +258,6 @@ struct MakerView: View {
         // needs touching.
         .onChange(of: isPresentingWizard, initial: true) { _, presenting in
             let hidden = presenting && CreateTourWizardView.hidesBottomModule
-            appShared?.probe("MKV.onChange:\(hidden ? "hide" : "show")")  // TEMP-PROBE
             appShared?.hidesBottomModule = hidden
             bottomModuleWindow?.setHidden(hidden)
         }
@@ -268,7 +267,6 @@ struct MakerView: View {
         // case where this page genuinely goes away with no wizard showing.
         .onDisappear {
             guard !isPresentingWizard else { return }
-            appShared?.probe("MKV.onDisappear:show")  // TEMP-PROBE
             appShared?.hidesBottomModule = false
             bottomModuleWindow?.setHidden(false)
         }
