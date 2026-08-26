@@ -236,13 +236,32 @@ struct TourDetailView: View {
         }
         .onDisappear {
             navState.pop()
-            // 🔴 UNCONDITIONAL, and the asymmetry is the whole point. Failing
-            // to hide costs the bug being fixed here; failing to restore costs
-            // the tab bar and the mini-player for the rest of the session with
-            // no way to get them back — which is far worse. `setHidden` is
-            // idempotent, so a restore that was not needed is free.
-            // `LinkEmbedView` carries two more of these (`dismantleUIView` and
-            // `Coordinator.deinit`) for the paths where this never runs.
+            // 🔴 GUARDED, and the guard is the fix for a race this page
+            // shipped with. `onDisappear` does NOT mean "this page went away":
+            // SwiftUI fires it for a page that is merely **covered**, and
+            // entering element fullscreen covers this one. `MakerView` already
+            // carries the same guard for the same reason — its comment reads
+            // "presenting a `fullScreenCover` can itself fire `onDisappear` on
+            // the view it covers — unguarded, this would put the bars straight
+            // back on top of the wizard." That is this bug, one screen over.
+            //
+            // The embed's hide arrives one runloop turn late (see
+            // `LinkEmbedView.Coordinator.deliver`), so whichever of the two
+            // landed last won: with the hide last the video was fullscreen, with
+            // this restore last the bars came back on top of it. The winner
+            // depended on how busy the main thread was, which is why it worked
+            // on a fresh launch and stopped after some navigating.
+            //
+            // ⚠️ Skipping here does NOT weaken the restore, which is the failure
+            // direction that matters. A page that has genuinely gone away has
+            // taken its `LinkEmbedView` with it, and that carries the two hooks
+            // that actually fire on teardown — `dismantleUIView` and
+            // `Coordinator.deinit`, the latter being the only one ARC guarantees.
+            // Both clear the flag read here, so the very state that suppresses
+            // this restore cannot outlive the thing that set it.
+            guard Self.restoresBottomModuleOnDisappear(
+                moduleHidden: appShared.hidesBottomModule
+            ) else { return }
             Self.setBottomModuleHidden(false,
                                        appShared: appShared,
                                        window: bottomModuleWindow)
@@ -448,6 +467,26 @@ struct TourDetailView: View {
         resolvingInstagram = true
         instagramMedia = await resolver.mediaURL(for: sourceURL)
         resolvingInstagram = false
+    }
+
+    /// Should this page's `onDisappear` put the bottom module back?
+    ///
+    /// Only when the module is not currently withdrawn. A withdrawn module on a
+    /// tour page means the link pin's embedded player is in element fullscreen
+    /// — which **covers** this page rather than dismissing it, and SwiftUI
+    /// fires `onDisappear` for a covered page exactly as it does for a dismissed
+    /// one. Restoring there is what put the bars back on top of the video.
+    ///
+    /// ⚠️ The wizard is the only other owner of that flag and cannot overlap
+    /// with this page (it covers the screen with a `fullScreenCover`, and a tour
+    /// page is not reachable underneath it) — so on this screen a withdrawn
+    /// module always means our own embed. See `AppSharedState.hidesBottomModule`.
+    ///
+    /// Pure and static so the rule is testable without a live `WKWebView` or a
+    /// window scene, the same treatment `LinkEmbedView.withdrawsBottomModule`
+    /// gets.
+    static func restoresBottomModuleOnDisappear(moduleHidden: Bool) -> Bool {
+        !moduleHidden
     }
 
     /// Withdraw the bottom module while a link pin's embedded player is in

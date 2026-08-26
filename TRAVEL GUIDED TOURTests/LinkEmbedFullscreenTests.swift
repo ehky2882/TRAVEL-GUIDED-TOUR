@@ -57,4 +57,49 @@ final class LinkEmbedFullscreenTests: XCTestCase {
         XCTAssertFalse(LinkEmbedView.withdrawsBottomModule(for: .exitingFullscreen))
         XCTAssertFalse(LinkEmbedView.withdrawsBottomModule(for: .notInFullscreen))
     }
+
+    // MARK: - The restore-on-disappear race (the half #611 shipped without)
+
+    /// 🔴 THE REGRESSION THIS PINS. `onDisappear` does not mean "this page
+    /// went away" — SwiftUI fires it for a page that is merely **covered**, and
+    /// entering element fullscreen covers the tour page. #611 restored the
+    /// module there unconditionally, so whenever that restore landed after the
+    /// embed's one-runloop-turn-late hide, the bars came straight back on top
+    /// of the fullscreen video: the very bug #611 set out to fix, reappearing
+    /// intermittently once the main thread was busy enough to lose the race.
+    ///
+    /// `MakerView` already carries the identical guard for the identical reason
+    /// (a `fullScreenCover` firing `onDisappear` on the wizard's covered page).
+    func test_moduleAlreadyWithdrawn_doesNotRestoreOnDisappear() {
+        XCTAssertFalse(
+            TourDetailView.restoresBottomModuleOnDisappear(moduleHidden: true)
+        )
+    }
+
+    /// The ordinary path, and the one that must never regress: a page closing
+    /// with nothing withdrawn still restores. That call is a no-op today, but it
+    /// is the belt that makes a missed hide free rather than permanent.
+    func test_moduleVisible_restoresOnDisappear() {
+        XCTAssertTrue(
+            TourDetailView.restoresBottomModuleOnDisappear(moduleHidden: false)
+        )
+    }
+
+    /// The two halves compose: whatever the embed reports, the page's
+    /// `onDisappear` must never be the thing that undoes an active withdrawal.
+    /// Written as the full round trip so a future change to either rule alone
+    /// fails here rather than on a phone.
+    func test_everyFullscreenState_thatWithdraws_suppressesTheDisappearRestore() {
+        let states: [WKWebView.FullscreenState] = [
+            .enteringFullscreen, .inFullscreen, .exitingFullscreen, .notInFullscreen
+        ]
+        for state in states {
+            let withdrawn = LinkEmbedView.withdrawsBottomModule(for: state)
+            XCTAssertEqual(
+                TourDetailView.restoresBottomModuleOnDisappear(moduleHidden: withdrawn),
+                !withdrawn,
+                "state \(state) must suppress the restore exactly when it withdraws"
+            )
+        }
+    }
 }
