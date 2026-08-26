@@ -96,6 +96,19 @@ final class HomeSharedState {
 struct PendingMapMove: Equatable, Identifiable {
     let id = UUID()
     let region: MKCoordinateRegion
+    /// A tour whose placecard should be open when the map gets there.
+    ///
+    /// Owner, 2026-08-26: tapping a tour in Search used to open its detail
+    /// page directly, so closing that page dropped you back wherever the map
+    /// happened to be — never near the tour you had just been reading about.
+    /// A search result is a place, so it now lands you on the map with the
+    /// tour's card up, exactly as tapping its pin would.
+    ///
+    /// 🔴 CARRIED THROUGH THE MOVE RATHER THAN SET BEFORE IT. `HomeView.flyTo`
+    /// opens with `dismissPlacecard()` — correct for a city search, where any
+    /// card left over from the old location is stale — so a card set before
+    /// the move is wiped by the move itself. It has to travel with it.
+    var placecardTourId: UUID? = nil
 
     static func == (lhs: PendingMapMove, rhs: PendingMapMove) -> Bool {
         lhs.id == rhs.id

@@ -284,9 +284,13 @@ struct SearchView: View {
                 }
 
                 // Makers section — maker entries open the creator page as
-                // its own top-level screen via `MakerPresenter` (the maker
-                // twin of tapping a tour result → tourPresenter), so a
+                // its own top-level screen via `MakerPresenter`, so a
                 // creator is a first-class destination, not a child push.
+                //
+                // ⚠️ Deliberately NOT the twin of a tour result any more: a
+                // tour has a place on the map and now lands you there
+                // (`goToTour`), while a creator does not, so it still opens
+                // directly. If creators ever gain a map presence, revisit.
                 if !found.makers.isEmpty {
                     if showHeaders { sectionHeader("Makers") }
                     ForEach(found.makers) { maker in
@@ -308,7 +312,7 @@ struct SearchView: View {
                     ForEach(found.tours) { tour in
                         Button {
                             recentSearchStore.record(query: trimmedQuery)
-                            tourPresenter.present(tour)
+                            goToTour(tour)
                         } label: {
                             resultRow(tour)
                         }
@@ -466,6 +470,40 @@ struct SearchView: View {
             releasePushed()
             dismiss()
         }
+    }
+
+    /// Land on the map where a tapped tour lives, with its card up — rather
+    /// than opening the tour's page directly.
+    ///
+    /// Owner, 2026-08-26: *"if I search for a tour and click on it, it takes
+    /// me straight to the tour details page… when I exit that page I go to my
+    /// previous map state, whereas I think it makes sense to be exiting to the
+    /// area of the map that tour lives in."* Opening the page directly left no
+    /// map context behind it, so closing it dropped you wherever you had been
+    /// before searching — never near the tour you had just been reading about.
+    ///
+    /// A search result is a place, so this now does exactly what tapping that
+    /// tour's pin does: fly there, raise its card. Opening the tour is then
+    /// one more tap, and closing it leaves you standing where the tour is.
+    ///
+    /// ⚠️ COSTS A TAP, and that was the owner's call (2026-08-26) with the
+    /// trade stated: reaching a tour you searched by name is now two taps
+    /// rather than one. Do not "optimise" it back to a direct open — the
+    /// second tap is what buys the map context on the way out.
+    ///
+    /// A tour with no stops cannot be placed on the map, so it falls back to
+    /// opening directly rather than doing nothing.
+    private func goToTour(_ tour: Tour) {
+        guard let region = HomeView.region(framing: tour) else {
+            tourPresenter.present(tour)
+            return
+        }
+        sharedState.pendingMapMove = PendingMapMove(
+            region: region,
+            placecardTourId: tour.id
+        )
+        releasePushed()
+        dismiss()
     }
 
     /// Count this screen as a pushed detail. Idempotent, so a second

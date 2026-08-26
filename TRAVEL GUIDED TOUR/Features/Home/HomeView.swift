@@ -370,7 +370,7 @@ struct HomeView: View {
                 // one-shot request: fly the camera there.
                 .onChange(of: sharedState.pendingMapMove) { _, move in
                     guard let move else { return }
-                    flyTo(move.region)
+                    flyTo(move.region, showing: move.placecardTourId)
                 }
             }
         }
@@ -412,10 +412,29 @@ struct HomeView: View {
     /// the destination isn't hidden, and arms the no-tours check for
     /// when the camera settles. Doesn't touch the recenter / pin-tap /
     /// startup paths — it's a parallel, additive camera driver.
-    private func flyTo(_ region: MKCoordinateRegion) {
+    /// - Parameter placecardTourId: a tour to raise the placecard for on
+    ///   arrival — a tour tapped in Search. Applied AFTER `dismissPlacecard()`
+    ///   below, which is why it is passed in rather than set by the caller:
+    ///   the caller's card would be wiped by this very method.
+    private func flyTo(_ region: MKCoordinateRegion, showing placecardTourId: UUID? = nil) {
         sharedState.pendingMapMove = nil
         showNoToursOverlay = false
+        // Any card from the old location is stale at a new one.
         sharedState.dismissPlacecard()
+
+        // Raised now rather than on arrival, deliberately. The card is a map
+        // annotation anchored to its coordinate, so it travels in with the
+        // destination and is already in place the moment the camera settles —
+        // rather than appearing a beat later, which is the "assembling after
+        // you arrive" feel the owner has objected to elsewhere.
+        if let placecardTourId,
+           let tour = dataService.tour(by: placecardTourId),
+           let coordinate = Self.placecardCoordinate(for: tour) {
+            sharedState.placecardPlace = nil
+            sharedState.placecardTours = [tour]
+            sharedState.placecardCoordinate = coordinate
+        }
+
         if sheetDetent != .peek {
             withAnimation(.easeInOut(duration: 0.25)) { sheetDetent = .peek }
         }
@@ -423,6 +442,27 @@ struct HomeView: View {
         withAnimation(.easeInOut(duration: 0.6)) {
             cameraPosition = .region(region)
         }
+    }
+
+    /// Where a tour's pin is drawn, and therefore where its card must anchor.
+    ///
+    /// ⚠️ Must agree with `MapMarkers.markers(for:places:)`, which draws one
+    /// pin per tour at its single stop, or at stop 0 for a walk — NOT at the
+    /// tour's centroid, which for a walk can sit a street away from any stop
+    /// and would leave the card pointing at nothing.
+    static func placecardCoordinate(for tour: Tour) -> CLLocationCoordinate2D? {
+        let stop = tour.kind == .single
+            ? tour.stops.first
+            : tour.stops.first(where: { $0.order == 0 }) ?? tour.stops.first
+        return stop?.coordinate
+    }
+
+    /// The region to land on when opening a tour from Search: its pin, at the
+    /// neighbourhood zoom the recenter button uses, so arriving reads as
+    /// "here it is on the map" rather than a continent or a doorstep.
+    static func region(framing tour: Tour) -> MKCoordinateRegion? {
+        guard let coordinate = placecardCoordinate(for: tour) else { return nil }
+        return MKCoordinateRegion(center: coordinate, span: recenterSpan)
     }
 
     /// When the camera settles after a place-search fly-to, show the
