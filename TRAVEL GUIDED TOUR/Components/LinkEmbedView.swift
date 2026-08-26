@@ -105,10 +105,30 @@ struct LinkEmbedView: UIViewRepresentable {
     /// satisfies the platforms' referrer checks.
     static let embedOrigin = URL(string: "https://dozent.world")
 
+    // MARK: - TEMP-PROBE (delete with the whole block; grep TEMP-PROBE)
+    /// Set by `TourDetailView` so the coordinator, which holds no app state of
+    /// its own, can report raw `fullscreenState` changes into the on-screen
+    /// trace. Static because the coordinator is created before any environment
+    /// is reachable from it.
+    @MainActor static var probeSink: (@MainActor (String) -> Void)?
+
     func makeUIView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
         config.allowsInlineMediaPlayback = true
         config.mediaTypesRequiringUserActionForPlayback = []
+        // 🔴 THE ONE THAT MAKES `fullscreenState` MEAN ANYTHING. It defaults to
+        // FALSE on iOS, and with it false the iframe's `requestFullscreen()`
+        // cannot go through WebKit at all — iOS hands the video to the system's
+        // native video fullscreen instead, which is a different mechanism that
+        // never touches `fullscreenState`. So the KVO below had nothing to
+        // observe, the callback never fired, and the whole withdraw-the-module
+        // fix was inert while looking perfectly correct in code.
+        //
+        // Proven on device by a probe build (1.1 (131)): with a YouTube pin
+        // fullscreen and the bars sitting on top of it, the readout showed
+        // `flag0 req0 win0` and an EMPTY trace — `setBottomModuleHidden` had
+        // never been called in either direction.
+        config.preferences.isElementFullscreenEnabled = true
 
         let web = WKWebView(frame: .zero, configuration: config)
         web.navigationDelegate = context.coordinator
@@ -207,6 +227,9 @@ struct LinkEmbedView: UIViewRepresentable {
         }
 
         private func report(_ state: WKWebView.FullscreenState) {
+            // TEMP-PROBE: did WebKit report anything at all? An empty trace here
+            // means element fullscreen is still not the route being taken.
+            LinkEmbedView.probeSink?("KVO:\(String(describing: state))")
             let withdraw = LinkEmbedView.withdrawsBottomModule(for: state)
             guard withdraw != isFullscreen else { return }
             isFullscreen = withdraw

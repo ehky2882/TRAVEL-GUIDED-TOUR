@@ -233,6 +233,8 @@ struct TourDetailView: View {
         .onAppear {
             navState.push()
             recentlyViewedStore.record(tour.id)
+            // TEMP-PROBE: let the embed's coordinator write into the trace.
+            LinkEmbedView.probeSink = { [appShared = self.appShared] in appShared.probe($0) }
         }
         .onDisappear {
             navState.pop()
