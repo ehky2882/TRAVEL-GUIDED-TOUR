@@ -235,7 +235,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 | Branch | State |
 |---|---|
-| `claude/tiktok-orlando-links-ziegoe` | **Ahead of `main`, NO PR** (session 115, harness restriction) — nine Orlando link pins, commit `32abd88d`. Content-only, so it auto-merges on green CI once someone opens it. **CI has not run.** |
+| `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` after #621 merged** — now carries the Orlando *architecture* batch (10 pins, commit `da9c96ad`). ⚠️ Same branch name, fresh history: never stacked on merged commits. |
+| ~~`claude/tiktok-orlando-links-ziegoe` (first run)~~ | Merged as #621 (squash `1c05613b`) — nine Orlando link pins, live on Supabase |
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
 | `claude/upload-wizard-improvements-ejopz3` | Merged (#552 at 19:05) |
 | `claude/wizard-comments-round2` | Merged (#558) and deleted |
@@ -254,7 +255,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**⚠️ Re-derived from `Tours.json` on 2026-08-26 (session 115): 1,552 tours + 47 link pins, 70 maker rows (34 Atlas studios + 36 pinned creators), 1,924 stops.** The paragraph below predates Copenhagen and the last three link-pin batches and its figures are stale — **re-derive, do not quote.** **🔴 Pinned creators now outnumber Atlas studios**, so the raw `dataService.makers.count` in Settings → About has passed the tipping point flagged when there were four pins; the owner's decision (userId-only / published-tour-only / split the row) is still owed. **⚠️ An ATLANTA batch is still being staged by another session and is still not in the tracker** — a gh-pages push landed mid-session (MLK Birth Home ×7 + the Candler Building). Do not report the audio-pending queue as empty without re-deriving.
+**⚠️ Re-derived from `Tours.json` on 2026-08-26 (session 115b): 1,552 tours + 57 link pins, 79 maker rows (34 Atlas studios + 45 pinned creators), 1,924 stops.** The paragraph below predates Copenhagen and the last three link-pin batches and its figures are stale — **re-derive, do not quote.** **🔴 Pinned creators now outnumber Atlas studios**, so the raw `dataService.makers.count` in Settings → About has passed the tipping point flagged when there were four pins; the owner's decision (userId-only / published-tour-only / split the row) is still owed. **⚠️ An ATLANTA batch is still being staged by another session and is still not in the tracker** — a gh-pages push landed mid-session (MLK Birth Home ×7 + the Candler Building). Do not report the audio-pending queue as empty without re-deriving.
 
 **Catalog 1,516 tours live / 45 maker rows served** (49 before the test-creator cleanup). The four `TEST -` pins are gone (#593),
 replaced by **4 real AMNH creator link pins** (#591). **7 served makers have zero tours**, all of them real sign-ups who have not published yet. — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
