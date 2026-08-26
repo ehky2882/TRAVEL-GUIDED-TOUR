@@ -60,7 +60,8 @@ struct BottomModuleRoot: View {
         let inst = bottomModuleWindow?.isInstalled == true ? "1" : "0"
         let flag = appShared.hidesBottomModule ? "1" : "0"
         let req = bottomModuleWindow?.probeHiddenByRequest == true ? "1" : "0"
-        let win = bottomModuleWindow.flatMap(\.probeWindowHidden).map { $0 ? "1" : "0" } ?? "-"
+        let winHidden: Bool? = bottomModuleWindow?.probeWindowHidden ?? nil
+        let win = winHidden.map { $0 ? "1" : "0" } ?? "-"
         let last = bottomModuleWindow?.probeLastCall ?? "-"
         return "inst\(inst) flag\(flag) req\(req) win\(win) last:\(last) | "
             + appShared.probeLog.joined(separator: " ")
