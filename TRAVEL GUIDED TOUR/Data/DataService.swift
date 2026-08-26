@@ -39,16 +39,36 @@ final class DataService {
     /// map asks this per pin and a linear scan per marker would be quadratic
     /// over a 1,418-tour catalog.
     private var placeByTourId: [UUID: Place] = [:]
+    /// Every pin the home map draws for the **unfiltered** catalog.
+    ///
+    /// 🔴 `MapMarkers.markers(for:places:)` REBUILDS A 1,512-ENTRY DICTIONARY
+    /// AND EVERY MARKER FROM SCRATCH, and `HomeMapSection` called it through a
+    /// computed property on every render — including the render triggered when
+    /// a camera fly settles, which is the frame the user is watching. Nothing
+    /// about the marker set changes as the map moves; only the clustering
+    /// does. So it is built here, once, whenever the catalog changes.
+    ///
+    /// ⚠️ Unfiltered ONLY. A place collapses into one pin just when **two or
+    /// more of its tours are present**, so an active filter genuinely changes
+    /// which pins exist and must rebuild them — `HomeView` passes this along
+    /// only when no filter is on. Do not "optimise" that by filtering these
+    /// markers instead: it would leave a place pin standing for tours the
+    /// filter has removed.
+    private(set) var stopMarkers: [MapClustering.StopMarker] = []
     /// Tag → every tour carrying it, in catalog order.
     ///
     /// 🔴 THE HOME DRAWER REBUILDS THIRTEEN CURATED SHELVES ON EVERY RENDER,
-    /// and `visibleRegion` changes on every frame of a camera animation — so
-    /// this ran continuously while the map flew somewhere. Each shelf used to
-    /// `filter` the whole catalog for one tag: 13 x 1,512 tours, twice per
-    /// render, which is ~2.4 million tag-list scans across a one-second fly.
-    /// Which tours carry a tag cannot change without the catalog changing, so
-    /// it is answered here once instead of thirteen times a frame. Only the
-    /// ORDER of a shelf depends on where the map is, and that stays live.
+    /// and `visibleRegion` is rewritten every time the camera SETTLES — so
+    /// arriving somewhere ran the lot in one synchronous burst. Each shelf
+    /// used to `filter` the whole catalog for one tag: 13 x 1,512 tours,
+    /// twice per render, ~39,000 catalog passes in the single frame where the
+    /// map lands. Which tours carry a tag cannot change without the catalog
+    /// changing, so it is answered here once. Only the ORDER of a shelf
+    /// depends on where the map is, and that stays live.
+    ///
+    /// ⚠️ The map re-clusters `.onEnd`, NOT continuously — it deliberately
+    /// freezes clusters mid-gesture (see `HomeMapSection`). So this is one
+    /// dropped frame on arrival, not a stutter throughout the fly.
     private var toursByTag: [String: [Tour]] = [:]
 
     private let loader: RemoteCatalogLoader
@@ -181,6 +201,12 @@ final class DataService {
         }
         placeById = byId
         placeByTourId = byTour
+
+        // Markers depend on tours AND places. `applyCatalog` assigns `tours`
+        // before calling this, and nothing else changes either collection, so
+        // rebuilding here covers every path that can invalidate them — the
+        // same single-door rule the id indexes above rely on.
+        stopMarkers = MapMarkers.markers(for: tours, places: newPlaces)
     }
 
     // MARK: - Lookups

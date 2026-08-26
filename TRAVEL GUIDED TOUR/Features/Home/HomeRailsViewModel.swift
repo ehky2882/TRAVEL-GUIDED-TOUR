@@ -27,8 +27,8 @@ enum HomeRailsViewModel {
     /// - Parameter toursByTag: tag → the tours carrying it, prebuilt by
     ///   `DataService`. Optional so every existing caller and test keeps
     ///   working; when it is nil each shelf falls back to filtering the whole
-    ///   catalog, which is correct but is what made a camera fly stutter.
-    ///   Pass it from anything that renders on a moving map.
+    ///   catalog, which is correct but is what made the map hitch on arrival.
+    ///   Pass it from anything that re-renders when the map region changes.
     static func rails(
         tours: [Tour],
         libraryEntries: [LibraryEntry],
@@ -71,8 +71,8 @@ enum HomeRailsViewModel {
         let viewer = viewerLocation(userLocation: userLocation, visibleRegion: visibleRegion)
         for shelf in Tag.curatedShelves {
             // One dictionary lookup where this used to be a full pass over the
-            // catalog — thirteen shelves x 1,512 tours, on every render, while
-            // `visibleRegion` changes every frame of a camera animation. The
+            // catalog — thirteen shelves x 1,512 tours, on every render, and a
+            // render is triggered every time the map region settles. The
             // fallback keeps the old behaviour for callers that pass no index.
             let matching = toursByTag?[shelf.tag]
                 ?? tours.filter { $0.tags.contains(shelf.tag) }

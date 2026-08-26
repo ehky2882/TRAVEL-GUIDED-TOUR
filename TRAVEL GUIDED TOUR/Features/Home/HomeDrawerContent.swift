@@ -86,10 +86,10 @@ struct HomeDrawerContent: View {
                             }
 
                             // Derived ONCE. `railList` builds thirteen shelves,
-                            // and reading it twice built them twice — on every
-                            // render, while a camera animation changes
-                            // `visibleRegion` every frame. Same "derive once,
-                            // use many" trap as `filteredTours` in SearchView.
+                            // and reading it twice built them twice — in the
+                            // same frame the map lands on a searched place.
+                            // Same "derive once, use many" trap as
+                            // `filteredTours` in SearchView.
                             let rails = railList
                             if rails.isEmpty {
                                 emptyState
@@ -120,10 +120,11 @@ struct HomeDrawerContent: View {
     /// tag drawn from the whole catalog. Built by the pure
     /// `HomeRailsViewModel`.
     ///
-    /// ⚠️ Recomputed on every render, and `visibleRegion` changes on every
-    /// frame of a camera animation — so this is a hot path, not the cheap one
-    /// the original comment here claimed while the catalog was small. Shelf
-    /// MEMBERSHIP comes from a prebuilt index; only the ORDER is derived live.
+    /// ⚠️ Recomputed on every render, and every camera settle rewrites
+    /// `visibleRegion` — so this runs in the one frame where the map lands on
+    /// a searched place. A hot path, not the cheap one the original comment
+    /// here claimed while the catalog was small. Shelf MEMBERSHIP comes from a
+    /// prebuilt index; only the ORDER is derived live.
     /// **Read it once per body** (see the call site).
     ///
     /// The personalized rails the view-model also produces

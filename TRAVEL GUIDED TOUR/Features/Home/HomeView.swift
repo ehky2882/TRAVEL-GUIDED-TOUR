@@ -112,6 +112,15 @@ struct HomeView: View {
                     HomeMapSection(
                         tours: filteredTours,
                         places: dataService.places,
+                        // Unfiltered is the ordinary case and the one that was
+                        // slow: flying to a searched place rebuilt every marker
+                        // on every frame. With a filter on, which pins exist
+                        // genuinely changes (a place stops collapsing once the
+                        // filter leaves it fewer than two tours), so the map
+                        // builds them itself.
+                        precomputedMarkers: sharedState.hasActiveFilters
+                            ? nil
+                            : dataService.stopMarkers,
                         userLocation: locationManager.userLocation,
                         userHeading: locationManager.heading,
                         selectedTourId: sharedState.selectedPinTourId,

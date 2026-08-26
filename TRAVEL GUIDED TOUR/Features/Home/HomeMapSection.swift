@@ -34,6 +34,13 @@ struct HomeMapSection: View {
     /// Sites whose tours collapse into a single pin. Empty is the ordinary
     /// case for any catalog published before the place layer.
     let places: [Place]
+    /// Markers prebuilt by `DataService`, passed only when NO filter is
+    /// active — see `DataService.stopMarkers`. Building them is a full pass
+    /// over the catalog, and this view used to do it on every render —
+    /// including the one where a camera fly settles and re-clusters. Nil means
+    /// "a filter is on, so the pins genuinely differ" and they are built
+    /// here instead.
+    var precomputedMarkers: [MapClustering.StopMarker]? = nil
     let userLocation: CLLocation?
     /// Device compass heading in degrees (0 = true north). When
     /// present, the user-location dot shows a directional wedge.
@@ -261,7 +268,7 @@ struct HomeMapSection: View {
     /// per tour, except that tours sharing a place collapse into one pin for
     /// the place.
     private var allStopMarkers: [MapClustering.StopMarker] {
-        MapMarkers.markers(for: tours, places: places)
+        precomputedMarkers ?? MapMarkers.markers(for: tours, places: places)
     }
 
     /// Bucket markers into the current visible region's grid, collapsing

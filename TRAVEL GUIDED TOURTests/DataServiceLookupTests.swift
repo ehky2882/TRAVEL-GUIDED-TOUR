@@ -96,14 +96,97 @@ final class DataServiceLookupTests: XCTestCase {
         XCTAssertNil(service.place(forTourId: UUID()))
     }
 
+    // MARK: - Map marker cache
+
+    /// 🔴 THE CACHED MARKERS MUST EQUAL WHAT THE MAP USED TO BUILD ITSELF.
+    ///
+    /// `HomeMapSection` rebuilt every pin through a computed property, so a
+    /// full pass over the catalog ran again in the frame where a camera fly
+    /// settles. Markers cannot change unless the catalog does, so they are
+    /// built once — and this pins that the cached set is identical to the
+    /// live call it replaced.
+    func test_stopMarkers_matchTheLiveBuild() throws {
+        let maker = TestFixtures.makeMaker()
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id)
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id)
+        let c = TestFixtures.makeTour(title: "C", makerId: maker.id)
+        let site = place(named: "Dam Square", tourIds: [a.id, b.id])
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b, c], places: [site])
+        )
+
+        // ⚠️ NOT `XCTAssertEqual` on the arrays. `StopMarker.==` compares ONLY
+        // `id` (see MapClustering), so an array comparison would pass even if
+        // every coordinate, title and place count were wrong — a test that
+        // looks strong and asserts almost nothing. Compare the fields the map
+        // actually draws.
+        let cached = service.stopMarkers
+        let live = MapMarkers.markers(for: service.tours, places: service.places)
+
+        XCTAssertEqual(cached.count, live.count)
+        for (got, want) in zip(cached, live) {
+            XCTAssertEqual(got.id, want.id)
+            XCTAssertEqual(got.tourId, want.tourId)
+            XCTAssertEqual(got.title, want.title)
+            XCTAssertEqual(got.coordinate.latitude, want.coordinate.latitude, accuracy: 1e-9)
+            XCTAssertEqual(got.coordinate.longitude, want.coordinate.longitude, accuracy: 1e-9)
+            XCTAssertEqual(got.placeId, want.placeId)
+            XCTAssertEqual(got.placeTourCount, want.placeTourCount)
+        }
+    }
+
+    /// ⚠️ The rule the cache must not be allowed to break: a place collapses
+    /// into ONE pin only when two or more of its tours are present. That is
+    /// why `HomeView` passes the cache only when no filter is active — with a
+    /// filter on, which pins exist genuinely differs, so the map rebuilds.
+    /// This pins the collapsing rule itself, so a future "just filter the
+    /// cached markers instead" cannot pass unnoticed.
+    func test_stopMarkers_collapseAPlaceOnlyWhenTwoOfItsToursArePresent() throws {
+        let maker = TestFixtures.makeMaker()
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id)
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id)
+        let both = place(named: "Both", tourIds: [a.id, b.id])
+        let lonely = place(named: "Lonely", tourIds: [a.id])
+
+        let collapsed = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b], places: [both])
+        )
+        XCTAssertEqual(collapsed.stopMarkers.filter(\.isPlace).count, 1,
+                       "two tours at one site collapse into a single place pin")
+
+        let notCollapsed = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b], places: [lonely])
+        )
+        XCTAssertEqual(notCollapsed.stopMarkers.filter(\.isPlace).count, 0,
+                       "a place holding one present tour must NOT collapse")
+    }
+
+    /// Same staleness risk as every other index here: a refresh must rebuild
+    /// the markers, or the map draws pins for a catalog that is gone.
+    func test_stopMarkers_rebuildOnRefresh() async throws {
+        let maker = TestFixtures.makeMaker()
+        let before = TestFixtures.makeTour(title: "Before", makerId: maker.id)
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [before]),
+            remote: ToursData(makers: [maker], tours: [
+                before, TestFixtures.makeTour(title: "After", makerId: maker.id)
+            ])
+        )
+
+        XCTAssertEqual(service.stopMarkers.count, 1)
+        await service.refresh()
+        XCTAssertEqual(service.stopMarkers.count, 2,
+                       "the marker cache must follow the catalog")
+    }
+
     // MARK: - Tag index
 
     /// 🔴 THE TAG INDEX MUST RETURN EXACTLY WHAT THE OLD FILTER RETURNED.
     ///
     /// The home drawer's thirteen curated shelves used to `filter` the whole
-    /// catalog per shelf, on every render, while `visibleRegion` changed every
-    /// frame of a camera animation — ~2.4 million tag-list scans across a
-    /// one-second fly to a searched place. Membership cannot change without
+    /// catalog per shelf, on every render — ~39,000 catalog passes in the one
+    /// frame where a fly to a searched place settles and everything
+    /// re-derives. Membership cannot change without
     /// the catalog changing, so it is indexed. The risk that swap introduces
     /// is a shelf quietly listing different tours, or the same tours in a
     /// different order, so both are pinned here against the filter it replaced.
