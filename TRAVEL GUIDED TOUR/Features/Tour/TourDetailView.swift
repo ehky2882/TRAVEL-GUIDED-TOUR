@@ -116,6 +116,12 @@ struct TourDetailView: View {
     /// (that was the batch-D Follow-button bug, build 68→69).
     @Environment(PurchaseService.self) private var purchaseService: PurchaseService?
     @Environment(AuthService.self) private var detailAuth: AuthService?
+    /// Optional for the same reason as the other lookups above: this view is
+    /// hosted by UIKit slide-up layers that re-inject the environment by hand,
+    /// and the wizard's `.preview` mode has no module window at all. A nil
+    /// here means "nothing to withdraw", which is correct in both cases.
+    @Environment(BottomModuleWindowController.self)
+    private var bottomModuleWindow: BottomModuleWindowController?
     @State private var showingPurchaseSignIn = false
     @State private var purchaseErrorMessage: String?
 
@@ -230,6 +236,16 @@ struct TourDetailView: View {
         }
         .onDisappear {
             navState.pop()
+            // 🔴 UNCONDITIONAL, and the asymmetry is the whole point. Failing
+            // to hide costs the bug being fixed here; failing to restore costs
+            // the tab bar and the mini-player for the rest of the session with
+            // no way to get them back — which is far worse. `setHidden` is
+            // idempotent, so a restore that was not needed is free.
+            // `LinkEmbedView` carries two more of these (`dismantleUIView` and
+            // `Coordinator.deinit`) for the paths where this never runs.
+            Self.setBottomModuleHidden(false,
+                                       appShared: appShared,
+                                       window: bottomModuleWindow)
         }
         .onChange(of: tourDownloader.states[tour.id]) { _, newState in
             switch newState {
@@ -434,6 +450,38 @@ struct TourDetailView: View {
         resolvingInstagram = false
     }
 
+    /// Withdraw the bottom module while a link pin's embedded player is in
+    /// element fullscreen, and put it back the moment it is not.
+    ///
+    /// 🔴 WHY THE MODULE HAS TO GO AT ALL. The mini-player and tab bar do not
+    /// live in this window: `BottomModuleWindowController` installs a separate
+    /// `PassThroughWindow` at `.normal + 1`, which paints over anything the
+    /// main window presents — and WKWebView's element fullscreen is presented
+    /// in the main window. The gallery's own viewer dodges this by being
+    /// presented from `BottomModuleRoot`, i.e. from inside the top window.
+    /// That escape is closed here: the video is inside a cross-origin iframe
+    /// we may not script, so we cannot suppress the platform's control and
+    /// substitute our own. Withdrawing the module is the move that is left.
+    ///
+    /// ⚠️ Static and parameterised rather than reading `self`, so the closure
+    /// handed to `LinkEmbedView` captures the two objects and not this view.
+    /// It has to stay callable while the view is being torn down, which is
+    /// exactly when reading a `@Environment` off a stale struct copy is not.
+    @MainActor
+    private static func setBottomModuleHidden(
+        _ hidden: Bool,
+        appShared: AppSharedState,
+        window: BottomModuleWindowController?
+    ) {
+        // Both, deliberately. Hiding the window is what stops it painting AND
+        // what stops it hit-testing (a hidden `UIWindow` does not hit-test —
+        // see `setHidden`). The flag is what stops `ContentView`'s inline
+        // fallback drawing the same bars in the main window on a launch where
+        // that window never installed.
+        appShared.hidesBottomModule = hidden
+        window?.setHidden(hidden)
+    }
+
     @ViewBuilder
     private var imageSection: some View {
         if tour.isLink, let embed = tour.linkEmbedURL, let sourceURL = tour.sourceURL {
@@ -452,7 +500,15 @@ struct TourDetailView: View {
                 if instagramMedia != nil || resolvingInstagram {
                     instagramPlayer(sourceURL: sourceURL)
                 } else {
-                    LinkEmbedView(embedURL: embed)
+                    LinkEmbedView(
+                        embedURL: embed,
+                        onFullscreenChange: { [appShared = self.appShared,
+                                               window = self.bottomModuleWindow] fullscreen in
+                            Self.setBottomModuleHidden(fullscreen,
+                                                       appShared: appShared,
+                                                       window: window)
+                        }
+                    )
                 }
             }
             .aspectRatio(LinkSource.embedAspectRatio(for: sourceURL),

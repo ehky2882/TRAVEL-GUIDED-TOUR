@@ -49,12 +49,22 @@ final class AppSharedState {
     /// While true the mini-player and tab bar are withdrawn entirely — the
     /// secondary window is hidden and the inline fallback stops rendering.
     ///
-    /// Only the tour wizard sets this, and only because it needs the 126pt
-    /// those bars occupy: no step of it may scroll (owner rule, 2026-08-20),
-    /// and a quarter of the screen reserved for controls that do nothing while
-    /// you are making a tour is the cheapest height to buy back. Reverting is
-    /// one Bool — see `CreateTourWizardView.hidesBottomModule`, which is the
-    /// only thing that ever writes here.
+    /// Two things set this, for two different reasons.
+    ///
+    /// The **tour wizard**, because it needs the 126pt those bars occupy: no
+    /// step of it may scroll (owner rule, 2026-08-20), and a quarter of the
+    /// screen reserved for controls that do nothing while you are making a
+    /// tour is the cheapest height to buy back. Reverting is one Bool — see
+    /// `CreateTourWizardView.hidesBottomModule`.
+    ///
+    /// A **link pin's embedded player entering element fullscreen**, because
+    /// that fullscreen is presented in the *main* window and this one sits
+    /// above it, so the bars would sit on top of the video. See
+    /// `TourDetailView.setBottomModuleHidden`.
+    ///
+    /// ⚠️ This is a plain Bool, not a count, so two owners must never overlap.
+    /// They cannot today: the wizard covers the screen with a `fullScreenCover`
+    /// and a tour page is not reachable underneath it.
     ///
     /// ⚠️ Whoever sets this true owns setting it false again. The bars going
     /// missing for a whole session is a failure this app has shipped three
