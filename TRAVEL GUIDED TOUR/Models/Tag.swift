@@ -152,7 +152,16 @@ enum Tag {
             "Vittorio Gregotti", "Von Jour Caux", "Wallace Harrison",
             "Welton Becket", "Wes Anderson", "William Pereira",
             "William Pitt", "Work Architecture Company", "Yang Tae-oh",
-            "Yoji Kasajima", "Yoshio Taniguchi"
+            "Yoji Kasajima", "Yoshio Taniguchi",
+            // Copenhagen (Atlas Studio CPH)
+            "3XN", "Cobe", "Edvard Eriksen",
+            "Ferdinand Meldahl", "Hack Kampmann", "Henning Larsen",
+            "Ivar Bentsen", "Julien De Smedt", "Jørgen Bo",
+            "Kaare Klint", "Lauritz de Thurah", "Lundgaard & Tranberg",
+            "Martin Brudnizki", "Michael Gottlieb Bindesbøll", "Nicolai Eigtved",
+            "Olafur Eliasson", "Peder Vilhelm Jensen-Klint", "Povl Baumann",
+            "Superflex", "Thorvald Jørgensen", "Topotek 1",
+            "Vilhelm Dahlerup", "Vilhelm Wohlert", "White Arkitekter"
         ]),
     ]
 
