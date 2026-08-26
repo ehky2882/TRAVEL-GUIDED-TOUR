@@ -87,7 +87,6 @@ struct BottomModuleRoot: View {
             isAnyLayerPresented: isAnyLayerPresented
         )
         return VStack(spacing: 0) {
-
             Spacer(minLength: 0)
             // The painted module. Measured as one unit so the window claims a
             // touch strip that covers exactly what's drawn here — rather than a

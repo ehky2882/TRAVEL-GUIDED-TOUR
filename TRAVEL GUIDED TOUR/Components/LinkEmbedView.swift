@@ -31,24 +31,6 @@ struct LinkEmbedView: UIViewRepresentable {
     /// matters. See `Coordinator.restoreIfNeeded`.
     var onFullscreenChange: @MainActor (Bool) -> Void = { _ in }
 
-    /// Does this state mean the bottom module has to be withdrawn?
-    ///
-    /// Pure and static so the rule is testable without a live `WKWebView` —
-    /// the same treatment `BottomModuleRoot.extendsToScreenEdges` and
-    /// `BottomModuleWindowController.installOutcome` get.
-    ///
-    /// ⚠️ `.enteringFullscreen` counts as fullscreen and `.exitingFullscreen`
-    /// does not, deliberately. The module must be gone *before* the player has
-    /// finished growing and may only come back once it has finished shrinking;
-    /// reading the two transitional states the other way round leaves the bars
-    /// painted over the first and last frames of the animation, which is this
-    /// bug in miniature.
-    ///
-    /// 🔴 An unrecognised future state resolves to `false` — "show the bars".
-    /// The two failure directions are not equal: painting the bars over a
-    /// fullscreen video is the defect being fixed here, while failing to bring
-    /// them back costs the tab bar and the mini-player for the rest of the
-    /// session with no way to get them back.
     /// Is a newly-visible `UIWindow` the platform player going fullscreen?
     ///
     /// 🔴 THE SIGNAL `fullscreenState` NEVER GAVE US. Proved on device by the
@@ -78,6 +60,24 @@ struct LinkEmbedView: UIViewRepresentable {
         return size.width >= screen.width * 0.9 && size.height >= screen.height * 0.9
     }
 
+    /// Does this state mean the bottom module has to be withdrawn?
+    ///
+    /// Pure and static so the rule is testable without a live `WKWebView` —
+    /// the same treatment `BottomModuleRoot.extendsToScreenEdges` and
+    /// `BottomModuleWindowController.installOutcome` get.
+    ///
+    /// ⚠️ `.enteringFullscreen` counts as fullscreen and `.exitingFullscreen`
+    /// does not, deliberately. The module must be gone *before* the player has
+    /// finished growing and may only come back once it has finished shrinking;
+    /// reading the two transitional states the other way round leaves the bars
+    /// painted over the first and last frames of the animation, which is this
+    /// bug in miniature.
+    ///
+    /// 🔴 An unrecognised future state resolves to `false` — "show the bars".
+    /// The two failure directions are not equal: painting the bars over a
+    /// fullscreen video is the defect being fixed here, while failing to bring
+    /// them back costs the tab bar and the mini-player for the rest of the
+    /// session with no way to get them back.
     static func withdrawsBottomModule(for state: WKWebView.FullscreenState) -> Bool {
         switch state {
         case .enteringFullscreen, .inFullscreen:
@@ -139,18 +139,18 @@ struct LinkEmbedView: UIViewRepresentable {
         let config = WKWebViewConfiguration()
         config.allowsInlineMediaPlayback = true
         config.mediaTypesRequiringUserActionForPlayback = []
-        // 🔴 THE ONE THAT MAKES `fullscreenState` MEAN ANYTHING. It defaults to
-        // FALSE on iOS, and with it false the iframe's `requestFullscreen()`
-        // cannot go through WebKit at all — iOS hands the video to the system's
-        // native video fullscreen instead, which is a different mechanism that
-        // never touches `fullscreenState`. So the KVO below had nothing to
-        // observe, the callback never fired, and the whole withdraw-the-module
-        // fix was inert while looking perfectly correct in code.
+        // ⚠️ THIS DID NOT FIX THE BUG, AND THE COMMENT SAYS SO ON PURPOSE. It
+        // defaults to false on iOS, and enabling it was build 1.1 (132)'s
+        // theory: that with it off the iframe's `requestFullscreen()` could not
+        // reach WebKit, so `fullscreenState` never moved. Enabling it changed
+        // nothing — the probe trace on 132 was still empty, with no KVO at all.
+        // TikTok and YouTube simply do not take that route here; the window
+        // observation below is what actually fires.
         //
-        // Proven on device by a probe build (1.1 (131)): with a YouTube pin
-        // fullscreen and the bars sitting on top of it, the readout showed
-        // `flag0 req0 win0` and an EMPTY trace — `setBottomModuleHidden` had
-        // never been called in either direction.
+        // It is kept because it is the configuration the owner verified on
+        // device in 1.1 (133), and removing it now would ship a combination
+        // nobody has run. If a future platform DOES use element fullscreen,
+        // this is what lets the KVO see it. Do not read it as the fix.
         config.preferences.isElementFullscreenEnabled = true
 
         let web = WKWebView(frame: .zero, configuration: config)
