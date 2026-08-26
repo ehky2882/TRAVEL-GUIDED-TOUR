@@ -52,7 +52,7 @@ written down to prevent. If the other 15 ever arrive they are a **second batch**
 | 28 | Graves Hall, Morehouse | `graves-hall` | `28_graves_hall` | `history` | `33.74600, -84.41310` | Notable Building, History, Architecture | C | AUC campus — likely needs an owner photo |
 | 29 | Spelman College Oval | `spelman-oval` | `29_spelman_oval` | `history` | `33.74560, -84.41190` | District, History, Green Escape | C | AUC campus — likely needs an owner photo |
 | 30 | Student Movement Boulevard | `student-movement-blvd` | `30_student_movement_blvd` | `history` | `33.75160, -84.41200` | District, History, Remembrance, Free to Visit | C | ⚠️ movement site — buildings and street, not archival protest imagery |
-## Images — 20 of 30 live on gh-pages (verified 2026-08-24)
+## Images — 22 of 30 live on gh-pages (verified 2026-08-24)
 
 ### Shipped earlier — 11 subjects, zero credit obligations
 
@@ -76,7 +76,25 @@ incised lettering along the approach wall); `_2` is the one clean stock exterior
 the rest being gallery interiors, which carry their own copyright problem since the hung
 artworks are the subject.
 
-### Shipped 2026-08-24 — 9 subjects, 41 files, 25 credit rows
+### Shipped 2026-08-24 (second push) — 2 subjects, 8 files, 0 credit rows
+
+| tour | files | source | credit |
+|------|-------|--------|--------|
+| 05 MLK Birth Home | `mlk-birth-home_hero` + `_2`..`_7` | HABS federal survey | **none — public domain** |
+| 23 Candler Building | `candler-building_hero` | Commons | 1 row |
+
+**The HABS scans needed a border trim before the 4:3 crop.** They carry film rebate and
+handwritten survey numbers (`HABS # GA-1171-n`) around the picture area, and a plain `crop43`
+keeps them — the first pass shipped visible numbers on three files. `/tmp/trimcrop.py` scans
+inward from each edge while the line is near-uniform, then insets a further 5%. **Reuse that
+approach for any archival scan**, not just these: LoC, HABS and Commons museum scans routinely
+have borders. Every result was opened and checked before upload.
+
+The colour hero (`MC10` in the pool) is the only colour frame in the set; the rest are
+large-format B&W, which suits a historic house. Hero `top_bias` 0.62 — a higher anchor cut the
+porch off, which is the wrong half of this building.
+
+### Shipped 2026-08-24 (first push) — 9 subjects, 41 files, 25 credit rows
 
 | tour | files | source | credit |
 |------|-------|--------|--------|
@@ -124,24 +142,45 @@ The other three are worse, not better:
 the size bar; a wider sweep (Five Points / downtown Peachtree categories) or an owner
 photograph would settle it. Do NOT ship `OC2`.
 
-### Still unsourced — 10 subjects
+### Still unsourced — 8 subjects
 
-01 Five Points &middot; 02 Zero Mile Post &middot; 04 Woodruff Park (above) &middot;
-05 MLK Birth Home &middot; 08 Sweet Auburn Curb Market &middot; 18 BeltLine Eastside Trail
-&middot; 23 Candler Building &middot; 26 APEX / Auburn Avenue &middot; 28 Graves Hall
-&middot; 29 Spelman Oval &middot; 30 Student Movement Boulevard
+**Sourced and awaiting owner picks** (pools staged, nothing cropped):
+01 Five Points (4 files) &middot; 02 Zero Mile Post (1) &middot; 18 BeltLine Eastside Trail (12)
+&middot; 26 APEX / Auburn Avenue (1) &middot; 28 Graves Hall (4).
 
-Two findings that narrow the search:
+**Genuinely dry, owner-photograph candidates:** 04 Woodruff Park (see above) &middot;
+08 Sweet Auburn Curb Market (3 hits, 1 usable) &middot; 29 Spelman Oval &middot;
+30 Student Movement Boulevard.
 
-- **Graves Hall is NOT in `Category:Buildings of Morehouse College`.** That category holds 8
-  files — John Hope, Brawley, Quarles, Kilgore, the MLK International Chapel, the Ray Charles
-  Center, the President's Residence — and no Graves. Search the title directly.
-- **`Category:Spelman College` is 59 files of people, not architecture.** Its depth is one
-  alumnae group-portrait session: identifiable private individuals holding a pennant, indoors,
-  no campus. Public domain, and still unusable — portraits of private people are not tour
-  imagery. Spelman has no buildings subcategory. `Category:Sisters Chapel` yielded the AUC
-  Woodruff Library and Archives Research Center instead (both CC0, staged, deferred by the
-  owner as better suited to stop 30).
+Findings that narrow the search for whoever picks this up:
+
+- **Search the File namespace by title; do not guess category names.** `list=search`
+  with `srnamespace=6` found Graves Hall, the Candler, Five Points (69 hits), the Birth Home
+  (863) and Zero Mile in one pass, after category guesses had returned zero for all of them.
+- **Graves Hall is NOT in `Category:Buildings of Morehouse College`** — that holds 8 files
+  (John Hope, Brawley, Quarles, Kilgore, MLK International Chapel, Ray Charles Center,
+  President's Residence) and no Graves. `File:Samuel T. Graves Hall at Morehouse College,
+  June 2015.jpg` is the one to use.
+- **`Category:Spelman College` is 59 files of people, not architecture** — one alumnae
+  group-portrait session, identifiable private individuals indoors, no campus. Public domain
+  and still unusable. No buildings subcategory exists. `Category:Sisters Chapel` returns the
+  AUC Woodruff Library and Archives Research Center instead (both CC0, staged).
+- **`"Atlanta Student Movement"` returns 0 files.** Genuinely absent.
+
+### ⚠️ Stop 02's premise may be wrong — check the script
+
+Every Commons file for the Zero Mile Post is titled *"Atlanta Zero Mile Post **in Atlanta
+History Center**"*, and the image shows the granite block (`W&A / R.R. / 00`) on brick paving
+indoors against a historical photo mural. The post was moved to the History Center in 2019.
+The tour table above says *"replica; original is 8 mi north"* and describes a dim rail
+underpass. **Those cannot both be true.** Resolve against the delivered script before
+choosing an image, because the two readings need different pictures.
+
+### ⚠️ Stop 28 sits on a grave
+
+Graves Hall's front lawn holds **Benjamin Mays's tomb** — the white memorial in the frame.
+That puts stop 28 under the same dignified-treatment rule as 07 King Center and 14 Oakland.
+A wide exterior with the building as subject is fine; a close study of the tomb is not.
 
 ## 🔴 Three stops depict copyrighted artwork — owner cleared them to ship (2026-08-17)
 
