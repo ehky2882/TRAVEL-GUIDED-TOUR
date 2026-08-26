@@ -30,6 +30,11 @@ struct SearchView: View {
     /// drives a small spinner on that row so the tap doesn't feel dead
     /// during the one-off geocode.
     @State private var resolvingPlaceID: PlaceSuggestion.ID?
+    /// Whether this screen currently counts toward `navState.pushedDepth`.
+    /// Keeps `registerPushed()` / `releasePushed()` exactly paired, so the
+    /// early release on the place-tap path and the one in `onDisappear`
+    /// cannot double-count in either direction.
+    @State private var didRegisterPushed = false
     @FocusState private var queryFieldFocused: Bool
 
     /// Precomputed, lowercased search fields built once from the catalog
@@ -92,11 +97,11 @@ struct SearchView: View {
         // module switches to full-edge while search is on top.
         .onAppear {
             queryFieldFocused = true
-            navState.push()
+            registerPushed()
             buildIndexIfNeeded()
         }
         .onDisappear {
-            navState.pop()
+            releasePushed()
             placeSearch.clear()
         }
         // Drive the (debounced) geocoder off the live query. Tour /
@@ -150,11 +155,32 @@ struct SearchView: View {
     private var contentArea: some View {
         if trimmedQuery.isEmpty {
             recentSearchesSection
-        } else if filteredTours.isEmpty && filteredMakers.isEmpty
-                    && placeSearch.suggestions.isEmpty && !placeSearch.isSearching {
-            emptyResults
         } else {
-            resultsList
+            // 🔴 DERIVED ONCE, HERE, AND PASSED DOWN — never re-read from the
+            // computed properties further in. `filteredTours` scans all 1,418
+            // tours on every access, and SwiftUI re-evaluates a computed
+            // property at every reference: this block used to call it twice
+            // and `resultsList` three more times, one of them INSIDE its own
+            // `ForEach` (`filteredTours.last?.id`), so the cost was
+            // (results + 3) full catalog scans per body evaluation. Typing "b"
+            // matches 1,416 tours and cost 1,419 scans — ~2 million tour
+            // comparisons for one keystroke, which is what made the field feel
+            // frozen the moment anyone started typing.
+            //
+            // Third time this shape has been paid for: `toursInViewCount`
+            // (session 60) and `savedTours` / `rankedTours(at:)` (session 99)
+            // were the same "derive once, use many" fix.
+            let found = SearchResults(
+                makers: filteredMakers,
+                tours: filteredTours,
+                cap: Self.resultCap
+            )
+            if found.isEmpty && placeSearch.suggestions.isEmpty
+                && !placeSearch.isSearching {
+                emptyResults
+            } else {
+                resultsList(found)
+            }
         }
     }
 
@@ -227,12 +253,12 @@ struct SearchView: View {
         .padding(.vertical, AtlasSpacing.sm)
     }
 
-    private var resultsList: some View {
+    private func resultsList(_ found: SearchResults) -> some View {
         // Show section headers whenever there's more than tours to
         // label. Tours-only keeps its clean headerless list (existing
         // behavior); any Places or Makers section turns headers on for
         // every group so the boundaries read clearly.
-        let showHeaders = !placeSearch.suggestions.isEmpty || !filteredMakers.isEmpty
+        let showHeaders = !placeSearch.suggestions.isEmpty || !found.makers.isEmpty
         return ScrollView {
             LazyVStack(alignment: .leading, spacing: 0) {
                 // Places section — autocomplete suggestions from Apple's
@@ -258,12 +284,16 @@ struct SearchView: View {
                 }
 
                 // Makers section — maker entries open the creator page as
-                // its own top-level screen via `MakerPresenter` (the maker
-                // twin of tapping a tour result → tourPresenter), so a
+                // its own top-level screen via `MakerPresenter`, so a
                 // creator is a first-class destination, not a child push.
-                if !filteredMakers.isEmpty {
+                //
+                // ⚠️ Deliberately NOT the twin of a tour result any more: a
+                // tour has a place on the map and now lands you there
+                // (`goToTour`), while a creator does not, so it still opens
+                // directly. If creators ever gain a map presence, revisit.
+                if !found.makers.isEmpty {
                     if showHeaders { sectionHeader("Makers") }
-                    ForEach(filteredMakers) { maker in
+                    ForEach(found.makers) { maker in
                         Button {
                             makerPresenter.present(maker)
                         } label: {
@@ -271,26 +301,39 @@ struct SearchView: View {
                         }
                         .buttonStyle(.plain)
 
-                        if maker.id != filteredMakers.last?.id {
+                        if maker.id != found.makers.last?.id {
                             Divider().padding(.leading, AtlasSpacing.lg)
                         }
                     }
                 }
 
-                if !filteredTours.isEmpty {
+                if !found.tours.isEmpty {
                     if showHeaders { sectionHeader("Tours") }
-                    ForEach(filteredTours) { tour in
+                    ForEach(found.tours) { tour in
                         Button {
                             recentSearchStore.record(query: trimmedQuery)
-                            tourPresenter.present(tour)
+                            goToTour(tour)
                         } label: {
                             resultRow(tour)
                         }
                         .buttonStyle(.plain)
 
-                        if tour.id != filteredTours.last?.id {
+                        if tour.id != found.tours.last?.id {
                             Divider().padding(.leading, AtlasSpacing.lg)
                         }
+                    }
+
+                    // Said plainly rather than silently truncating. A one-letter
+                    // query matches most of the catalog and nobody scrolls 1,400
+                    // rows; the cap keeps the array (and its per-row divider
+                    // checks) small. Results are already ranked title → category
+                    // → maker → tag → description, so the kept ones are the best.
+                    if found.isTruncated {
+                        Text("Showing the closest \(found.tours.count) of \(found.totalTours). Keep typing to narrow it down.")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .padding(.horizontal, AtlasSpacing.lg)
+                            .padding(.vertical, AtlasSpacing.md)
                     }
                 }
             }
@@ -405,8 +448,83 @@ struct SearchView: View {
             resolvingPlaceID = nil
             guard let region else { return }
             sharedState.pendingMapMove = PendingMapMove(region: region)
+            // 🔴 RELEASED HERE, BEFORE `dismiss()`, AND THAT ORDER IS THE FIX.
+            //
+            // `onDisappear` fires only once the pop ANIMATION has finished, so
+            // releasing there left `navState.isShowingDetail` true for the
+            // whole ~0.5s dismissal. Two things read that flag, and both were
+            // wrong for that half second while the map was already on screen:
+            // the bottom module stayed in its full-edge Search form instead of
+            // Home's floating island, and `ContentView.homeDrawer` stayed
+            // unmounted — so the drawer header was missing entirely and then
+            // both snapped into place at once. Owner, on 1.1 (125): *"after I
+            // hit the city and it goes back to the map view the bottom module
+            // is not fully built"*. It was fully built; it was wearing the
+            // wrong screen's layout.
+            //
+            // `ContentView` already solves the same problem for the tour
+            // LAYER via `tourLayerCoversDrawer`, whose comment names this
+            // exact symptom — "instead of flashing it back in after the
+            // animation". A pushed NavigationLink takes the other branch, so
+            // it needs this.
+            releasePushed()
             dismiss()
         }
+    }
+
+    /// Land on the map where a tapped tour lives, with its card up — rather
+    /// than opening the tour's page directly.
+    ///
+    /// Owner, 2026-08-26: *"if I search for a tour and click on it, it takes
+    /// me straight to the tour details page… when I exit that page I go to my
+    /// previous map state, whereas I think it makes sense to be exiting to the
+    /// area of the map that tour lives in."* Opening the page directly left no
+    /// map context behind it, so closing it dropped you wherever you had been
+    /// before searching — never near the tour you had just been reading about.
+    ///
+    /// A search result is a place, so this now does exactly what tapping that
+    /// tour's pin does: fly there, raise its card. Opening the tour is then
+    /// one more tap, and closing it leaves you standing where the tour is.
+    ///
+    /// ⚠️ COSTS A TAP, and that was the owner's call (2026-08-26) with the
+    /// trade stated: reaching a tour you searched by name is now two taps
+    /// rather than one. Do not "optimise" it back to a direct open — the
+    /// second tap is what buys the map context on the way out.
+    ///
+    /// A tour with no stops cannot be placed on the map, so it falls back to
+    /// opening directly rather than doing nothing.
+    private func goToTour(_ tour: Tour) {
+        guard let region = HomeView.region(framing: tour) else {
+            tourPresenter.present(tour)
+            return
+        }
+        sharedState.pendingMapMove = PendingMapMove(
+            region: region,
+            placecardTourId: tour.id
+        )
+        releasePushed()
+        dismiss()
+    }
+
+    /// Count this screen as a pushed detail. Idempotent, so a second
+    /// `onAppear` (SwiftUI can re-run it) cannot inflate the depth.
+    private func registerPushed() {
+        guard !didRegisterPushed else { return }
+        didRegisterPushed = true
+        navState.push()
+    }
+
+    /// Stop counting as a pushed detail.
+    ///
+    /// ⚠️ Must be idempotent: this runs early on the place-tap path and again
+    /// from `onDisappear`. `AtlasNavigationState.pop()` clamps at zero, which
+    /// makes a double pop harmless HERE — but not in general, because a second
+    /// detail pushed over this one would have its depth silently eaten. The
+    /// flag is what makes the pairing exact rather than relying on that clamp.
+    private func releasePushed() {
+        guard didRegisterPushed else { return }
+        didRegisterPushed = false
+        navState.pop()
     }
 
     private func resultRow(_ tour: Tour) -> some View {
@@ -484,8 +602,10 @@ struct SearchView: View {
 
     /// Makers whose display name matches the query (case-insensitive
     /// substring). Surfaced as their own result section above tours so
-    /// the user can jump straight to the maker page. Small catalog
-    /// (3 makers), so no cap needed.
+    /// the user can jump straight to the maker page. 31 makers, so no
+    /// cap needed — unlike tours, which cap at `resultCap`.
+    ///
+    /// ⚠️ Read this ONCE, via `SearchResults` — see that type's note.
     private var filteredMakers: [Maker] {
         let q = trimmedQuery.lowercased()
         guard !q.isEmpty else { return [] }
@@ -544,6 +664,48 @@ struct SearchView: View {
         }
 
         return titleHits + categoryHits + makerHits + tagHits + descriptionHits
+    }
+
+    // MARK: - Search results
+
+    /// The most tours rendered for one query.
+    ///
+    /// Not a relevance judgement — a cap on how much list gets built. A
+    /// one-letter query matches nearly the whole catalog (`"b"` → 1,416
+    /// tours) and nobody scrolls that far; keeping the array small keeps
+    /// the per-row divider checks small with it.
+    static let resultCap = 50
+
+    /// Everything one query found, derived exactly once per body evaluation.
+    ///
+    /// 🔴 THIS TYPE EXISTS TO MAKE RE-DERIVING HARD. `filteredMakers` and
+    /// `filteredTours` each scan the whole catalog, and a SwiftUI computed
+    /// property runs again at every single reference — so reading them from
+    /// inside a `ForEach` (which is what `filteredTours.last?.id` used to do)
+    /// multiplied one search by the number of results. Build this once in
+    /// `contentArea`, pass it down, and read only its stored properties.
+    struct SearchResults {
+        let makers: [Maker]
+        let tours: [Tour]
+        /// Matches before the cap, so the footer can say what was left out.
+        let totalTours: Int
+
+        init(makers: [Maker], tours: [Tour], cap: Int) {
+            self.makers = makers
+            self.totalTours = tours.count
+            self.tours = tours.count > cap ? Array(tours.prefix(cap)) : tours
+        }
+
+        /// Nothing matched at all — drives the empty state.
+        ///
+        /// ⚠️ Asks `totalTours`, NOT the capped `tours` array: "nothing
+        /// matched" and "nothing rendered" are different questions, and a cap
+        /// must never be able to make the screen claim there were no results.
+        /// Harmless at a cap of 50, wrong at a cap of 0 — so it is written the
+        /// way that stays correct whatever the cap becomes.
+        var isEmpty: Bool { makers.isEmpty && totalTours == 0 }
+
+        var isTruncated: Bool { totalTours > tours.count }
     }
 
     // MARK: - Search index

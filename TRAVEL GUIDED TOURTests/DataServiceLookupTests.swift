@@ -1,4 +1,10 @@
 import XCTest
+// Needed to read `.latitude` / `.longitude` off a `CLLocationCoordinate2D` in
+// the marker tests. This project builds with `MemberImportVisibility`, so a
+// member is only visible when the module DEFINING it is imported here —
+// reaching it transitively through `@testable import` is not enough, and the
+// error names `_LocationEssentials` rather than CoreLocation.
+import CoreLocation
 @testable import TRAVEL_GUIDED_TOUR
 
 /// `DataService`'s `by id` lookups are backed by dictionaries rather than
@@ -94,6 +100,164 @@ final class DataServiceLookupTests: XCTestCase {
         XCTAssertNil(service.maker(by: UUID()))
         XCTAssertNil(service.place(by: UUID()))
         XCTAssertNil(service.place(forTourId: UUID()))
+    }
+
+    // MARK: - Map marker cache
+
+    /// 🔴 THE CACHED MARKERS MUST EQUAL WHAT THE MAP USED TO BUILD ITSELF.
+    ///
+    /// `HomeMapSection` rebuilt every pin through a computed property, so a
+    /// full pass over the catalog ran again in the frame where a camera fly
+    /// settles. Markers cannot change unless the catalog does, so they are
+    /// built once — and this pins that the cached set is identical to the
+    /// live call it replaced.
+    func test_stopMarkers_matchTheLiveBuild() throws {
+        let maker = TestFixtures.makeMaker()
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id)
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id)
+        let c = TestFixtures.makeTour(title: "C", makerId: maker.id)
+        let site = place(named: "Dam Square", tourIds: [a.id, b.id])
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b, c], places: [site])
+        )
+
+        // ⚠️ NOT `XCTAssertEqual` on the arrays. `StopMarker.==` compares ONLY
+        // `id` (see MapClustering), so an array comparison would pass even if
+        // every coordinate, title and place count were wrong — a test that
+        // looks strong and asserts almost nothing. Compare the fields the map
+        // actually draws.
+        let cached = service.stopMarkers
+        let live = MapMarkers.markers(for: service.tours, places: service.places)
+
+        XCTAssertEqual(cached.count, live.count)
+        for (got, want) in zip(cached, live) {
+            XCTAssertEqual(got.id, want.id)
+            XCTAssertEqual(got.tourId, want.tourId)
+            XCTAssertEqual(got.title, want.title)
+            XCTAssertEqual(got.coordinate.latitude, want.coordinate.latitude, accuracy: 1e-9)
+            XCTAssertEqual(got.coordinate.longitude, want.coordinate.longitude, accuracy: 1e-9)
+            XCTAssertEqual(got.placeId, want.placeId)
+            XCTAssertEqual(got.placeTourCount, want.placeTourCount)
+        }
+    }
+
+    /// ⚠️ The rule the cache must not be allowed to break: a place collapses
+    /// into ONE pin only when two or more of its tours are present. That is
+    /// why `HomeView` passes the cache only when no filter is active — with a
+    /// filter on, which pins exist genuinely differs, so the map rebuilds.
+    /// This pins the collapsing rule itself, so a future "just filter the
+    /// cached markers instead" cannot pass unnoticed.
+    func test_stopMarkers_collapseAPlaceOnlyWhenTwoOfItsToursArePresent() throws {
+        let maker = TestFixtures.makeMaker()
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id)
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id)
+        let both = place(named: "Both", tourIds: [a.id, b.id])
+        let lonely = place(named: "Lonely", tourIds: [a.id])
+
+        let collapsed = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b], places: [both])
+        )
+        XCTAssertEqual(collapsed.stopMarkers.filter(\.isPlace).count, 1,
+                       "two tours at one site collapse into a single place pin")
+
+        let notCollapsed = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b], places: [lonely])
+        )
+        XCTAssertEqual(notCollapsed.stopMarkers.filter(\.isPlace).count, 0,
+                       "a place holding one present tour must NOT collapse")
+    }
+
+    /// Same staleness risk as every other index here: a refresh must rebuild
+    /// the markers, or the map draws pins for a catalog that is gone.
+    func test_stopMarkers_rebuildOnRefresh() async throws {
+        let maker = TestFixtures.makeMaker()
+        let before = TestFixtures.makeTour(title: "Before", makerId: maker.id)
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [before]),
+            remote: ToursData(makers: [maker], tours: [
+                before, TestFixtures.makeTour(title: "After", makerId: maker.id)
+            ])
+        )
+
+        XCTAssertEqual(service.stopMarkers.count, 1)
+        await service.refresh()
+        XCTAssertEqual(service.stopMarkers.count, 2,
+                       "the marker cache must follow the catalog")
+    }
+
+    // MARK: - Tag index
+
+    /// 🔴 THE TAG INDEX MUST RETURN EXACTLY WHAT THE OLD FILTER RETURNED.
+    ///
+    /// The home drawer's thirteen curated shelves used to `filter` the whole
+    /// catalog per shelf, on every render — ~39,000 catalog passes in the one
+    /// frame where a fly to a searched place settles and everything
+    /// re-derives. Membership cannot change without
+    /// the catalog changing, so it is indexed. The risk that swap introduces
+    /// is a shelf quietly listing different tours, or the same tours in a
+    /// different order, so both are pinned here against the filter it replaced.
+    func test_toursByTag_matchesTheFilterItReplaced_inCatalogOrder() throws {
+        let maker = TestFixtures.makeMaker()
+        let first  = TestFixtures.makeTour(title: "First",  makerId: maker.id,
+                                           tags: ["Tower", "Art"])
+        let other  = TestFixtures.makeTour(title: "Other",  makerId: maker.id,
+                                           tags: ["Food"])
+        let second = TestFixtures.makeTour(title: "Second", makerId: maker.id,
+                                           tags: ["Art"])
+        let all = [first, other, second]
+        let service = try makeService(local: ToursData(makers: [maker], tours: all))
+
+        for tag in ["Tower", "Art", "Food", "Nonexistent"] {
+            XCTAssertEqual(
+                service.tours(taggedWith: tag).map(\.title),
+                all.filter { $0.tags.contains(tag) }.map(\.title),
+                "shelf \"\(tag)\" must match the filter it replaced, in catalog order"
+            )
+        }
+    }
+
+    /// A tour carrying the same tag twice in authored data must appear on that
+    /// shelf once. The old `filter` could not duplicate a tour; an index that
+    /// appends per tag can.
+    func test_toursByTag_doesNotDuplicateATourWithARepeatedTag() throws {
+        let maker = TestFixtures.makeMaker()
+        let tour = TestFixtures.makeTour(title: "Twice", makerId: maker.id,
+                                         tags: ["Art", "Art"])
+        let service = try makeService(local: ToursData(makers: [maker], tours: [tour]))
+
+        XCTAssertEqual(service.tours(taggedWith: "Art").map(\.title), ["Twice"])
+    }
+
+    /// The staleness risk indexing always carries: a refresh that changes the
+    /// catalog must rebuild this index with it, or a shelf renders tours the
+    /// catalog no longer has.
+    func test_toursByTag_rebuildsOnRefresh() async throws {
+        let maker = TestFixtures.makeMaker()
+        let before = TestFixtures.makeTour(title: "Before", makerId: maker.id, tags: ["Art"])
+        let after  = TestFixtures.makeTour(title: "After",  makerId: maker.id, tags: ["Art"])
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [before]),
+            remote: ToursData(makers: [maker], tours: [after])
+        )
+
+        XCTAssertEqual(service.tours(taggedWith: "Art").map(\.title), ["Before"])
+        await service.refresh()
+        XCTAssertEqual(service.tours(taggedWith: "Art").map(\.title), ["After"],
+                       "the index must follow the catalog, not outlive it")
+    }
+
+    /// The index handed to `HomeRailsViewModel` must agree with the accessor —
+    /// they are two doors onto the same data and the shelves read the dict.
+    func test_toursByTagIndex_agreesWithTheAccessor() throws {
+        let maker = TestFixtures.makeMaker()
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id, tags: ["Tower"])
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id, tags: ["Tower", "Art"])
+        let service = try makeService(local: ToursData(makers: [maker], tours: [a, b]))
+
+        for tag in ["Tower", "Art"] {
+            XCTAssertEqual(service.toursByTagIndex[tag]?.map(\.title),
+                           service.tours(taggedWith: tag).map(\.title))
+        }
     }
 
     /// `tours(by:)` is read by the maker page and by every followed-maker row

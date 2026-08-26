@@ -39,6 +39,37 @@ final class DataService {
     /// map asks this per pin and a linear scan per marker would be quadratic
     /// over a 1,418-tour catalog.
     private var placeByTourId: [UUID: Place] = [:]
+    /// Every pin the home map draws for the **unfiltered** catalog.
+    ///
+    /// 🔴 `MapMarkers.markers(for:places:)` REBUILDS A 1,512-ENTRY DICTIONARY
+    /// AND EVERY MARKER FROM SCRATCH, and `HomeMapSection` called it through a
+    /// computed property on every render — including the render triggered when
+    /// a camera fly settles, which is the frame the user is watching. Nothing
+    /// about the marker set changes as the map moves; only the clustering
+    /// does. So it is built here, once, whenever the catalog changes.
+    ///
+    /// ⚠️ Unfiltered ONLY. A place collapses into one pin just when **two or
+    /// more of its tours are present**, so an active filter genuinely changes
+    /// which pins exist and must rebuild them — `HomeView` passes this along
+    /// only when no filter is on. Do not "optimise" that by filtering these
+    /// markers instead: it would leave a place pin standing for tours the
+    /// filter has removed.
+    private(set) var stopMarkers: [MapClustering.StopMarker] = []
+    /// Tag → every tour carrying it, in catalog order.
+    ///
+    /// 🔴 THE HOME DRAWER REBUILDS THIRTEEN CURATED SHELVES ON EVERY RENDER,
+    /// and `visibleRegion` is rewritten every time the camera SETTLES — so
+    /// arriving somewhere ran the lot in one synchronous burst. Each shelf
+    /// used to `filter` the whole catalog for one tag: 13 x 1,512 tours,
+    /// twice per render, ~39,000 catalog passes in the single frame where the
+    /// map lands. Which tours carry a tag cannot change without the catalog
+    /// changing, so it is answered here once. Only the ORDER of a shelf
+    /// depends on where the map is, and that stays live.
+    ///
+    /// ⚠️ The map re-clusters `.onEnd`, NOT continuously — it deliberately
+    /// freezes clusters mid-gesture (see `HomeMapSection`). So this is one
+    /// dropped frame on arrival, not a stutter throughout the fly.
+    private var toursByTag: [String: [Tour]] = [:]
 
     private let loader: RemoteCatalogLoader
 
@@ -133,12 +164,20 @@ final class DataService {
         var byId: [UUID: Tour] = [:]
         byId.reserveCapacity(newTours.count)
         var byMaker: [UUID: [Tour]] = [:]
+        var byTag: [String: [Tour]] = [:]
         for tour in newTours {
             byId[tour.id] = tour
             byMaker[tour.makerId, default: []].append(tour)
+            // A tour can carry the same tag twice in authored data; the shelf
+            // must not then list it twice.
+            var seen = Set<String>()
+            for tag in tour.tags where seen.insert(tag).inserted {
+                byTag[tag, default: []].append(tour)
+            }
         }
         tourById = byId
         toursByMakerId = byMaker
+        toursByTag = byTag
 
         applyMakers(newMakers)
         setPlaces(newPlaces)
@@ -162,6 +201,12 @@ final class DataService {
         }
         placeById = byId
         placeByTourId = byTour
+
+        // Markers depend on tours AND places. `applyCatalog` assigns `tours`
+        // before calling this, and nothing else changes either collection, so
+        // rebuilding here covers every path that can invalidate them — the
+        // same single-door rule the id indexes above rely on.
+        stopMarkers = MapMarkers.markers(for: tours, places: newPlaces)
     }
 
     // MARK: - Lookups
@@ -197,6 +242,19 @@ final class DataService {
     func tours(by maker: Maker) -> [Tour] {
         toursByMakerId[maker.id] ?? []
     }
+
+    /// Every tour carrying `tag`, in catalog order. Empty for an unknown tag.
+    ///
+    /// The home drawer's curated shelves read this on every render — see
+    /// `toursByTag` for why it is an index and not a filter.
+    func tours(taggedWith tag: String) -> [Tour] {
+        toursByTag[tag] ?? []
+    }
+
+    /// The whole tag index, handed to `HomeRailsViewModel` so it can build
+    /// thirteen shelves with thirteen dictionary lookups instead of thirteen
+    /// passes over the catalog.
+    var toursByTagIndex: [String: [Tour]] { toursByTag }
 
     func tours(in category: TourCategory) -> [Tour] {
         tours.filter { $0.primaryCategory == category }
