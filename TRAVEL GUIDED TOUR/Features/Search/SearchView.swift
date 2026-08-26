@@ -30,6 +30,11 @@ struct SearchView: View {
     /// drives a small spinner on that row so the tap doesn't feel dead
     /// during the one-off geocode.
     @State private var resolvingPlaceID: PlaceSuggestion.ID?
+    /// Whether this screen currently counts toward `navState.pushedDepth`.
+    /// Keeps `registerPushed()` / `releasePushed()` exactly paired, so the
+    /// early release on the place-tap path and the one in `onDisappear`
+    /// cannot double-count in either direction.
+    @State private var didRegisterPushed = false
     @FocusState private var queryFieldFocused: Bool
 
     /// Precomputed, lowercased search fields built once from the catalog
@@ -92,11 +97,11 @@ struct SearchView: View {
         // module switches to full-edge while search is on top.
         .onAppear {
             queryFieldFocused = true
-            navState.push()
+            registerPushed()
             buildIndexIfNeeded()
         }
         .onDisappear {
-            navState.pop()
+            releasePushed()
             placeSearch.clear()
         }
         // Drive the (debounced) geocoder off the live query. Tour /
@@ -439,8 +444,49 @@ struct SearchView: View {
             resolvingPlaceID = nil
             guard let region else { return }
             sharedState.pendingMapMove = PendingMapMove(region: region)
+            // 🔴 RELEASED HERE, BEFORE `dismiss()`, AND THAT ORDER IS THE FIX.
+            //
+            // `onDisappear` fires only once the pop ANIMATION has finished, so
+            // releasing there left `navState.isShowingDetail` true for the
+            // whole ~0.5s dismissal. Two things read that flag, and both were
+            // wrong for that half second while the map was already on screen:
+            // the bottom module stayed in its full-edge Search form instead of
+            // Home's floating island, and `ContentView.homeDrawer` stayed
+            // unmounted — so the drawer header was missing entirely and then
+            // both snapped into place at once. Owner, on 1.1 (125): *"after I
+            // hit the city and it goes back to the map view the bottom module
+            // is not fully built"*. It was fully built; it was wearing the
+            // wrong screen's layout.
+            //
+            // `ContentView` already solves the same problem for the tour
+            // LAYER via `tourLayerCoversDrawer`, whose comment names this
+            // exact symptom — "instead of flashing it back in after the
+            // animation". A pushed NavigationLink takes the other branch, so
+            // it needs this.
+            releasePushed()
             dismiss()
         }
+    }
+
+    /// Count this screen as a pushed detail. Idempotent, so a second
+    /// `onAppear` (SwiftUI can re-run it) cannot inflate the depth.
+    private func registerPushed() {
+        guard !didRegisterPushed else { return }
+        didRegisterPushed = true
+        navState.push()
+    }
+
+    /// Stop counting as a pushed detail.
+    ///
+    /// ⚠️ Must be idempotent: this runs early on the place-tap path and again
+    /// from `onDisappear`. `AtlasNavigationState.pop()` clamps at zero, which
+    /// makes a double pop harmless HERE — but not in general, because a second
+    /// detail pushed over this one would have its depth silently eaten. The
+    /// flag is what makes the pairing exact rather than relying on that clamp.
+    private func releasePushed() {
+        guard didRegisterPushed else { return }
+        didRegisterPushed = false
+        navState.pop()
     }
 
     private func resultRow(_ tour: Tour) -> some View {
