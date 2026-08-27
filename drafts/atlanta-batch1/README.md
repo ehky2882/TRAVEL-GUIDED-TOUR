@@ -105,6 +105,31 @@ the marker text and seal hold. The crop is **top-anchored, not centred**, to dro
 intersection; every higher anchor gave a wall of tower façade with no street in it. The shipped
 frame carries the MARTA entrance kiosk, the Decatur Street sign, pedestrians and traffic.
 
+### 🔴 gh-pages: BATCH your pushes — rapid separate pushes cancel each other's Pages build
+
+Cost real time twice in this batch, and the failure is invisible from the outside.
+
+**GitHub Pages cancels a queued build when a newer commit lands on the branch.** The four files
+in this push went up as four separate commits minutes apart, so Pages runs 720, 722, 723 and 724
+were each cancelled by the next one — and then 725 and 726 (unrelated `chore(catalog)` publishes
+from the auto-publish workflow) cancelled those. Net effect: every file was correctly in the
+gh-pages tree and **none of them was being served**, for about half an hour.
+
+**A cancelled build looks exactly like slow propagation from the outside** — a 404 either way.
+The first time this happened (commit `1a23eea`) I read it as CDN lag and let a poll run twelve
+minutes against a build that was already dead.
+
+Two rules:
+
+1. **Push once per batch, not once per file.** One commit with N files gets one build.
+2. **After pushing, check the Pages run for YOUR sha reached `success`** — not just that the URL
+   404s. `mcp__github__actions_list` with `{"branch":"gh-pages"}`, match on `head_sha`. If it says
+   `cancelled`, the fix is to wait for whatever superseded it: gh-pages deploys the whole tree, so
+   a later build carries your files out too. Nothing needs re-pushing.
+
+This repo runs many parallel sessions and an auto-publish workflow on `main`, so competing
+gh-pages pushes are normal, not exceptional.
+
 ### Spelman: what sourcing could not do
 
 `Category:Spelman College` holds **59 files and not one is architecture** — a single alumnae
