@@ -231,6 +231,48 @@ else, no coordinates and no captions.** Branch cut fresh from `origin/main`; pus
 
 ## Current State (2026-08-26)
 
+### Four Orlando architects join the vocabulary — 323 → 327 (branch `claude/tiktok-orlando-links-ziegoe`, session 115c — code + content)
+
+**Owner: *"add architects."*** The four names verified while wiring the Orlando architecture pins are
+now in the controlled vocabulary, and those four pins carry them instead of the generic fallback.
+Commit `fc30f83c`. **⚠️ This is a CODE change** (`Models/Tag.swift`), so unlike the two content
+batches before it, it wants an owner OK and a simulator look — the same footing as the Copenhagen
+architects in #616.
+
+- **All four were verified against published records this session, not recalled:** **Nils M.
+  Schweizer** (75 S Ivanhoe, the 1968 Orlando Chamber of Commerce building — buff masonry floating
+  over an open entry level behind a rust brise-soleil on canted corner piers, matching the Orlando
+  Foundation for Architecture's own description) · **Adjaye Associates** (Winter Park Library &
+  Events Center, rose-pigmented concrete, opened December 2021) · **John M. Johansen** (Orlando
+  Public Library, Brutalism, 1966 — the board-marked concrete in the pin's own hero is the
+  cedar-plank formwork the record describes) · **James Gamble Rogers II** (Casa Feliz, 1933,
+  National Register).
+- **🔴 BOTH VOCABULARIES WERE EDITED.** `Models/Tag.swift` and `scripts/validate-tours.swift` each
+  keep their own copy, and editing one alone produces **an error per tagged tour** (the session-104
+  lesson: 185 names added to Tag.swift alone produced 193 validator errors). The two are asserted
+  **identical at 327 names**.
+- **🔴 `Designed by a Master` IS KEPT ON ALL FOUR, NOT REPLACED.** `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string, so dropping it would
+  take the tour off the shelf built for exactly those tours. Verified after the change: **0
+  named-architect tours are missing it**, and **0 of the 327 names are unused** — no dead
+  vocabulary.
+- **⚠️ No other tour in the catalogue mentions any of the four**, so nothing else was retagged. Had
+  one, a mention would not have been authorship anyway (the Sullivan rule).
+- **⚠️ `Adjaye Associates` is the practice, not the individual**, which is how the building is
+  credited and how this file already handles `3XN`, `Cobe` and `White Arkitekter`. ⚠️ Note the
+  project has previously *rejected* `Foster + Partners` as a duplicate of `Norman Foster`, so the
+  practice-vs-person convention is not uniform; if a future sweep normalises it, this is one of the
+  entries to revisit.
+- **⚠️ `Richard Rogers` was already in the vocabulary and is a DIFFERENT PERSON** from James Gamble
+  Rogers II. Checked on normalised token sets, not strings — the session-104 rule that stops the
+  vocabulary growing near-duplicates that split a shelf in two. **0 collisions.**
+- **Verification.** Validator mirror **self-tested 33/33** against injected faults, then **0 errors,
+  2 warnings across 1,552 tours + 57 pins** — both warnings pre-existing. Vocabulary parsed from
+  both Swift files and required to agree: **377 tags across 5 facets**. **⚠️ Nothing compiled
+  locally** (no Swift toolchain in a Linux web session) — **CI is the only compile check**. The one
+  bracket-count imbalance in `validate-tours.swift` was confirmed **pre-existing on `origin/main`**
+  (a `[` inside a string literal), not introduced here.
+
 ### Eleven Orlando architecture TikToks; ten shipped, and the eleventh cannot be pinned at all (branch `claude/tiktok-orlando-links-ziegoe`, session 115b — content)
 
 **Second batch of the day, on a branch RESTARTED from `origin/main`** after #621 merged — a merged PR
