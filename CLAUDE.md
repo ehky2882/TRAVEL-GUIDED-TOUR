@@ -217,11 +217,19 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
     instructed: *"move the barcelona paviion coordinates to the building. place both tours at the
     locaiton."* **So the place AND both members now sit on the building at
     `41.3705476, 2.1499628`, and the geofenced tour was moved 78 m to get there.**
-  - **⚠️ THE MOVE IMPROVES THE GEOFENCE RATHER THAN DAMAGING IT, which is why it is defensible.**
-    The old point was 64 m outside the building's nearest edge, so **standing at the pavilion did
-    not fire the tour** while standing across the avenue did. The furthest building corner is now
-    **15 m** from the trigger point, so a 30 m radius covers the whole footprint plus ~15 m of
-    approach. **Check this before moving any other geofenced tour — it will not always be true.**
+  - **🔴 MOVING A GEOFENCED TOUR MEANS RE-CHECKING ITS RADIUS, AND I DID NOT UNTIL THE OWNER
+    ASKED.** The move fixed one end and broke the other: on the building at the catalogue's
+    default **30 m**, standing at the pavilion fired the tour (it had not before) but **standing
+    on the far pavement no longer did** — and the far pavement is where the tour's own script
+    puts you (*"the building standing in front of you"*). Owner: *"maybe the geofence needs to be
+    larger so that a person standing across the street looking at it will be notified."*
+    **Radius is now 90 m**, which covers the furthest building corner (**15 m**), the podium and
+    the **78 m** far-pavement vantage with 12 m to spare. Nearest other marker is **373 m**
+    (MNAC), so nothing else can fire. **Precedented — the catalogue already runs 80 m ×11, 90 m,
+    100 m ×2 and 120 m.**
+  - **⚠️ THE GENERAL RULE THIS PRODUCED: a coordinate and a radius are one decision, not two.**
+    Moving a geofenced stop changes which vantages are inside it, so re-derive the radius from
+    what the script asks the listener to be looking at — not from the city-launch default.
   - **The coordinate is the area-weighted centroid of OSM `way/67917935`**, tagged
     `architect=Ludwig Mies van der Rohe`, `wikidata=Q807915`, `int_name=Barcelona Pavilion`,
     `start_date=1929`, `opening_date=1986`, address **7 Avinguda de Francesc Ferrer i Guàrdia,
