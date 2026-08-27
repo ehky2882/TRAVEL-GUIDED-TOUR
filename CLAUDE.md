@@ -215,7 +215,9 @@ else, no coordinates and no captions.** Branch cut fresh from `origin/main`; pus
   or split the row — and still has not made the call.**
 - **Verification.** 30 images to gh-pages by pure plumbing; **`git ls-remote` re-checked immediately before
   the push**, tree diff **exactly 30 additions, 0 deletions, 0 modifications, nothing outside `images/`**,
-  none of the 30 among gh-pages' 7,716 paths (`7bb88e78`). **19 heroes + 11 avatars = 30 referenced, 0
+  none of the 30 among gh-pages' 7,716 paths (`7bb88e78`). **The Pages deploy read `in_progress`, not
+  `cancelled`, against the Actions API, and after it landed all 30 live URLs were confirmed by hashing the
+  downloaded bytes against the uploaded blobs — 30 ok, 0 bad.** **19 heroes + 11 avatars = 30 referenced, 0
   orphaned; every creator got a real profile picture.** **0** byte-duplicate heroes; closest perceptual pair
   **30.5** (identical pictures score under 1), and it is ivy-green Bohemian Club against the gilded Garden
   Court — the tonal false positive the two-stage checker exists to reject. **0** duplicate tour/stop/maker

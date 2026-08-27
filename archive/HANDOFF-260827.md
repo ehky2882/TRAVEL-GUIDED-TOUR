@@ -275,7 +275,10 @@ and "Creators" — and still has not made the call.**
   **`git ls-remote` re-checked immediately before the push**; tree diff
   **exactly 30 additions, 0 deletions, 0 modifications, nothing outside
   `images/`**; none of the 30 among gh-pages' 7,716 existing paths. Commit
-  `7bb88e78` on base `afe3bc27`.
+  `7bb88e78` on base `afe3bc27`. **Pages deploy run 719 was checked against the Actions API and
+  read `in_progress`, not `cancelled`** — the documented distinction — and after it landed (555 s)
+  **all 30 live URLs were confirmed by hashing the downloaded bytes against the uploaded blobs:
+  30 ok, 0 bad.** Verified by bytes, not by the push succeeding.
 - **19 heroes + 11 avatars = 30 files; 30 referenced, 0 orphaned.** Every
   creator got a real profile picture — no maker falls back to the platform mark
   this batch.
