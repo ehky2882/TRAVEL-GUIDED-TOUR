@@ -345,6 +345,41 @@ repo, and the correction that makes it honest.
 
 ## 6. Known debt — real, not urgent
 
+**⚠️ UNGROUPED PLACE CANDIDATES, catalogue-wide (2026-08-27, owner asked for report-only).**
+Re-derive with **`python3 scripts/check-place-candidates.py`** — do not quote the table below.
+
+**🔴 ONE EXACT COINCIDENCE WITH NO PLACE PAGE, and it is a known deferral, not a new fault.**
+**Casa Lleó Morera** and the **Dreta de l'Eixample** walk share the coordinate
+`41.39134849385539, 2.16545472553582` exactly — the walk's intro stop is wired to the landmark, the
+standard convention. CLAUDE.md already records it as *"a place candidate, deliberately NOT created
+here (a place needs its own copy, address and photograph; that is separate editorial work)."*
+**⚠️ The checker exits 1 on it, so a clean exit is not the current expected state** — that is the
+one outstanding item, and it clears the moment someone writes the Barcelona place.
+
+**NEAR — same subject, not coincident. None is acted on.**
+
+| pair | apart | note |
+|---|---|---|
+| The Jordaan / The Jordaan (Amsterdam) | 136 m | **Identical titles.** Could be a place or could be a duplicate — open both before deciding |
+| Gamla stan 1859 / Gamla stan (Stockholm) | 301 m | A historical tour and a present-day one of the same quarter |
+| Benesse House Museum / …Outdoor Works (Naoshima) | 455 m | The museum vs its outdoor works |
+| Tibidabo / Tibidabo Amusement Park (Barcelona) | 48 m | **🔴 NOT a candidate — settled.** #541 left these separate: a mountain and a funfair are two subjects. Do not re-raise |
+| Chinatown (pin) / two Atlas Chinatown tours (SF) | 257 m, 395 m | **Owner declined 2026-08-27** — a district is not a site. Do not re-propose |
+
+**🔴 THE PROCESS GAP THAT PRODUCED THIS ROW.** The SF batch shipped three place candidates without
+anyone asking — the owner spotted them on a glance at the map. The evidence was in hand at the time
+(two pins on an exactly identical coordinate, and two hero-slug collisions against existing Atlas
+tours) and was read only as a rendering and filename concern. **A place-candidate sweep now runs as
+part of the link-pin batch checks** so this never depends on a session noticing again.
+
+**🔴 AND #629 MERGED AS AN EMPTY COMMIT.** The places were committed onto the local `main` by
+mistake, then `git push -u origin <branch>` pushed the branch ref — still at an already-merged
+commit. CI went green, GitHub said "successfully merged", and nothing shipped; re-landed as #630.
+**"Successfully merged" is not evidence anything landed. Check `git log origin/main..HEAD` before
+pushing and confirm the squash changed files afterwards.**
+
+
+
 - **Supabase over-reports.** The RPC serves ~1,419 tours / 39 makers against a true 1,418 / 31.
   Upsert-only accumulation: rows deleted from `Tours.json` are never deleted from the database.
   Any count shown in-app inherits this.

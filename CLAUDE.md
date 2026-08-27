@@ -169,11 +169,54 @@ top within minutes — and all 19 pins survived it intact, checked rather than a
   `chinatown_hero.webp` are all **live Atlas tour stems already on gh-pages**. Without the suffix each push
   would have overwritten a real tour's hero — and since #567 a phone that has downloaded that tour reads its
   photographs off its own disk and would never see the correction.
-- **⚠️ TWO PINS SIT ON ONE COORDINATE AND THAT IS CORRECT.** Two creators posted about the **Legion of
-  Honor**, so both pins carry `37.7845556, -122.5009620`. Their heroes are visibly different (the Court of
-  Honor colonnade through the arch vs. the arch over flowering protea) and do not rank among the batch's five
-  closest perceptual pairs. Coincident markers can never be separated by zoom, which is exactly what
-  `MapClustering.needsDisambiguation` and the session-93 stacked placecards exist for. **Nothing to fix.**
+- **🔴 THREE PLACE PAGES CAME OUT OF THIS BATCH, AND THE OWNER HAD TO ASK FOR THEM — the process gap
+  is the lesson.** The evidence was in hand at wire-in time (two pins on an exactly identical
+  coordinate, plus hero-slug collisions against the Atlas SFO tours of Grace Cathedral and the
+  California Academy of Sciences) and was read only as a map-rendering and filename concern. **The
+  owner spotted them on a glance at the map.** Built on their instruction: **California Academy of
+  Sciences**, **Legion of Honor** and **Grace Cathedral** — places **27 → 30**.
+  - **🔴 THE PIN MOVES, NEVER THE TOUR.** Both Atlas tours are **geofenced at 40 m**, so shifting one
+    changes where its audio fires; a link pin is `manual` with no geofence, so moving it costs
+    nothing. The CalAcademy pin moved **8 m** (a pure rounding artifact — the tour stores four
+    decimal places, the pin seven) and the Grace Cathedral pin **71 m**, both onto their tour's
+    coordinate. **Neither tour was touched.**
+  - **⚠️ AND THE GRACE CATHEDRAL TOUR'S COORDINATE IS NOT WRONG, WHICH IS WHY IT WON.** It
+    reverse-geocodes to *"The Great Stairs at Grace Cathedral"* — a deliberate vantage on the
+    cathedral's own steps, the Chicago/Barcelona convention. The pin sat on OSM's building node.
+    **A 71 m gap between two correct points is a decision about where the place sits, not an error
+    to correct.**
+  - **⚠️ Legion of Honor is a place built of two link pins and nothing else** — there is no Atlas
+    tour of it (nearest is Sutro Baths, 1.2 km). AMNH is the precedent for pins inside a place, but
+    AMNH has real tours anchoring it. **Its hero also borrows a pin's own hero**, because no other
+    photograph of the Legion of Honor exists in the catalogue — the Waterlooplein case. One sourced
+    photograph fixes it.
+  - **⚠️ The other two heroes deliberately do NOT reuse their tour's hero** — CalAcademy takes the
+    street-level exterior and Grace Cathedral the nave, so the place page does not show the same
+    picture three times (the fault found across 13 of the first 24 places).
+- **✅ NEW: `scripts/check-place-candidates.py`, so this never depends on a session noticing again.**
+  Two tiers: **EXACT** (coincident markers with no place — the catalogue's own identity rule, exits
+  non-zero) and **NEAR** (same-subject titles within 500 m, reported for a human and **never**
+  auto-created). **Self-test 24/24, offline.**
+  - **🔴 IT FOUND A REAL EXACT PAIR THE HAND QUERY MISSED, AND ITS OWN FALSE-POSITIVE MODE ON THE
+    FIRST RUN.** The find: **Casa Lleó Morera and the Dreta de l'Eixample walk** share a coordinate
+    exactly, with no place — already recorded in this file as a deliberate deferral, so the checker
+    **exits 1 today and a clean exit is not the expected state** until Barcelona's place is written.
+    The false positives: stripping the city name can reduce a title to a bare generic noun, so *"The
+    Tower of London"* in London became `{tower}` and matched *Tower Bridge*, alongside New
+    Museum/Tenement Museum and Tokyo National Museum/National Museum of Western Art. **A pair now
+    counts only when the smaller title carries a word that names something in particular**; all three
+    are pinned as tests.
+- **🔴 AND THE PLACES TOOK TWO ATTEMPTS TO LAND, BECAUSE A MERGED PR CARRIED NOTHING.** The first
+  attempt ([#629](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/629)) **merged as an EMPTY
+  COMMIT** — `git diff` between its parent and the squash is empty. Cause: the work was committed
+  onto the local **`main`** by mistake and then `git push -u origin <branch>` pushed the *branch
+  ref*, which was still sitting at an already-merged commit. **So the PR contained only content main
+  already had, CI went green on it, GitHub reported "successfully merged", and nothing shipped.**
+  ⚠️ **"Pull Request successfully merged" is not evidence that anything landed** — the same
+  verify-the-system-not-the-success-line rule this file repeats elsewhere. **Check `git log
+  origin/main..HEAD` before pushing, and confirm the squash commit actually changed files
+  afterwards.** ⚠️ It also briefly looked like a parallel session's Atlanta merge had reverted the
+  work; it had not, and the counts proved it.
 - **⚠️ THREE HEROES RE-CROPPED BY HAND — the vertical `--focus` gap, third batch running.** `render_hero`
   crops with `centering=(focus, 0.5)`, and **for a 9:16 phone video the square is width-limited, so `--focus`
   does nothing at all**; the centred square is the only one the tool can make. **Saint Mary's Cathedral**
