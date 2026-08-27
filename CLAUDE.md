@@ -126,6 +126,109 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-08-27)
+
+### Twenty San Francisco architecture TikToks; nineteen shipped, and a hashtag nearly put one 30 km wrong (branch `claude/new-tour-links-nniny1`, session 116 — content)
+
+**The owner sent twenty TikTok share links under the heading "SF Architecture" — URLs and nothing
+else, no coordinates and no captions.** Branch cut fresh from `origin/main`; pushed. **NO PR OPENED**
+(this session's harness forbids opening one unasked); the work is complete and validated.
+**linkPins 57 → 76, makers 79 → 90.** Content only — no Swift, no SQL, no build. Full detail:
+`archive/HANDOFF-260827.md`.
+
+- **🔴 A HASHTAG IS NOT A LOCATION, AND THIS ONE HAD A CONFIDENT WRONG ANSWER WAITING.** One caption
+  reads, in full, *"designed by frank lloyd wright ❤️‍🔥 came here again on my day off … #franklloydwright
+  #architecture #midcenturymodern **#sanfrancisco**"*. **San Francisco has exactly one famous Wright
+  building — the V.C. Morris Gift Shop at 140 Maiden Lane — and OSM carries it under that exact name**,
+  so geocoding the caption returns a precise, plausible, wrong point. The frame settles it: a long
+  open-air corridor under a barrel-vaulted translucent skylight, terracotta walls, a planted median,
+  gold anodised screens and office doors numbered 303/304/404 — the **Marin County Civic Center** in
+  **San Rafael**, Wright's last major work, 30 km north across the Golden Gate. Ships `city: "San Rafael"`,
+  reverse-verified onto *"3501 Civic Center Drive"*. **The Gaylord Palms case at a much larger scale:
+  the creator tags the metro they think of, not the county the building stands in.**
+- **🔴 "PIAZZA ANGELA" DOES NOT EXIST — IT IS PIAZZA ANGELO, and a ZERO-HIT GEOCODE is what caught it.**
+  Both the caption and the burned-in on-screen text say *Angela*; the place is **Piazza Angelo** at
+  **Trinity Place, 8th and Mission**, named for developer **Angelo** Sangiacomo, with Lawrence Argent's
+  92-foot *Venus* at its centre — exactly the twisting mirror-polished figure in the frame. OSM names it
+  precisely, as a `square`. **The pin is titled correctly and the caption is kept verbatim, so the
+  misspelling stays the creator's** (the Schweizer/"Schweitzer" convention). ⚠️ **A zero-hit geocode is a
+  signal, not a dead end** — a name off by something a fuzzy match could absorb would have sailed through.
+- **⚠️ ONE CAPTION NAMES NO PLACE AT ALL** — *"Tours at 1pm!!!"* plus hashtags. Identified from the frame
+  (a white neoclassical temple with a Corinthian portico, **"THE INTERNET ARCHIVES"** burned across it) as
+  the **Internet Archive**, 300 Funston Avenue, the former Fourth Church of Christ, Scientist.
+- **🔴 THE TWENTIETH LINK IS DEAD AT THE SOURCE — DO NOT RETRY IT.** It resolves to a real, well-formed id
+  (`@aggie.sanfrancisco/video/7660328152421387534`); everything past that fails. **oEmbed returns an empty
+  shell** on three spaced attempts (`author_name: "@"`, no title, **no `thumbnail_url`**) and the page
+  returns **HTTP 200 with 367 KB of *"Video currently unavailable"*** and **zero `og:` tags**. No caption,
+  so no subject and no location; no thumbnail, so no hero, and a pin with no hero cannot ship. ⚠️ **Unlike
+  the eleventh link of the second Orlando batch this is NOT a `/photo/` URL** — it is an ordinary `/video/`
+  post that has simply gone. The photo-carousel limitation is separate and permanent.
+- **🔴 THE HERO-SLUG HANDLE SUFFIX PREVENTED THREE COLLISIONS IN ONE BATCH — the strongest evidence yet that
+  it is load-bearing.** `grace-cathedral_hero.webp`, `california-academy-of-sciences_hero.webp` and
+  `chinatown_hero.webp` are all **live Atlas tour stems already on gh-pages**. Without the suffix each push
+  would have overwritten a real tour's hero — and since #567 a phone that has downloaded that tour reads its
+  photographs off its own disk and would never see the correction.
+- **⚠️ TWO PINS SIT ON ONE COORDINATE AND THAT IS CORRECT.** Two creators posted about the **Legion of
+  Honor**, so both pins carry `37.7845556, -122.5009620`. Their heroes are visibly different (the Court of
+  Honor colonnade through the arch vs. the arch over flowering protea) and do not rank among the batch's five
+  closest perceptual pairs. Coincident markers can never be separated by zoom, which is exactly what
+  `MapClustering.needsDisambiguation` and the session-93 stacked placecards exist for. **Nothing to fix.**
+- **⚠️ THREE HEROES RE-CROPPED BY HAND — the vertical `--focus` gap, third batch running.** `render_hero`
+  crops with `centering=(focus, 0.5)`, and **for a 9:16 phone video the square is width-limited, so `--focus`
+  does nothing at all**; the centred square is the only one the tool can make. **Saint Mary's Cathedral**
+  (vfocus 0.0 — the centred square was almost entirely the creator's face, with the saddle roof above the
+  crop), **the Palace Hotel Garden Court** (0.15 — it sliced *"A stunning / Afternoon"* and stranded *"Tea"*)
+  and **the Shell Building** (0.30) were re-rendered through a mirror of the tool's own pipeline, same
+  filename, so `Tours.json` is untouched. ⚠️ **California Academy of Sciences is clipped and was deliberately
+  LEFT ALONE** — its lost line is the creator's *"one of Californias coolest museums"* strapline, a format
+  label, not the subject's name.
+- **✅ All nineteen heroes opened and read against their captions — zero wrong subjects.** Twelve carry the
+  name burned into the frame (*SHELL BUILDING* carved in granite, *CROCKER GALLERIA*, *The Bohemian Club*
+  over Jo Mora's Bret Harte relief, *THE INTERNET ARCHIVES*, *AURA 📍Grace Cathedral*, *Tonga Room*, both
+  *LEGION OF HONOR* cards, *Portsmouth Square Redesign*, *Four Seaons … at Embarcadero* (sic), *How San
+  Francisco's Chinatown Survived*, *VISITED SAINT MARY'S*).
+- **⚠️ EIGHT ARCHITECTS VERIFIED, ONLY TWO IN THE VOCABULARY.** **`Frank Lloyd Wright`** (Marin County Civic
+  Center) and **`Renzo Piano`** (California Academy of Sciences) are in and used by name, each **alongside**
+  `Designed by a Master` — do not tidy the generic tag away. **Absent, shipping the fallback: Pietro
+  Belluschi + Pier Luigi Nervi** (Saint Mary's), **Julia Morgan** (Hearst Castle), **SOM** (One Maritime
+  Plaza, and 345 California Center — named in that post's own caption), **George Kelham** (Shell Building),
+  **James Ingo Freed / Pei Cobb Freed** (SFPL). **Julia Morgan and SOM are the two most conspicuous absences
+  in the catalogue right now.** ⚠️ **Lawrence Argent correctly NOT tagged** for Piazza Angelo — he made the
+  *Venus* that stands in the square, he did not design the square (the Kiki Smith rule).
+- **⚠️ THREE SOURCE CLAIMS DELIBERATELY NOT CARRIED INTO OUR DATA.** The Four Seasons video's on-screen text
+  misspells **"Four Seaons"** (the caption itself spells it correctly, so nothing we author repeats it);
+  Grace Cathedral's post is about **AURA**, a show its own caption says ran *"through the end of December"* —
+  so **the pin is titled for the venue, not the show**, and cannot go stale; and **Portsmouth Square's
+  renderings are a PROPOSAL** by SWA and MEI, so nothing we author asserts the new park exists.
+- **⚠️ THREE COORDINATES REVERSE-GEOCODE TO SOMETHING ELSE AND ALL THREE ARE RIGHT.** The Four Seasons at
+  Embarcadero returns **"345 California Street"** — the hotel occupies floors 38–48 of 345 California Center
+  and its entrance is on Sansome, so that is the correct enclosing building (the Super Nintendo World shape).
+  The Shell Building returns *"Happy Donuts, 100 Bush Street"* and Crocker Galleria *"Julie's Kitchen, 50
+  Post Street"* — ground-floor tenants at the right address, and **"Julie's Kitchen" is legible in Crocker
+  Galleria's own hero**, closing that one independently.
+- **⚠️ TWO OF THE NINETEEN SIT OUTSIDE SAN FRANCISCO** and carry their own `city` (the Montserrat/Ekerö
+  convention): **San Rafael** (Marin County Civic Center) and **San Simeon** (Hearst Castle, ~4 hours south
+  and named as such in its own caption).
+- **🔴 PINNED CREATORS NOW OUTNUMBER ATLAS STUDIOS NEARLY TWO TO ONE — 34 studios against 56 pinned creators**
+  out of 90 makers (46 TikTok, 9 YouTube, 1 Instagram), and `SettingsView` still renders
+  `dataService.makers.count` raw. **The owner still has the three options — userId-only, published-tour-only,
+  or split the row — and still has not made the call.**
+- **Verification.** 30 images to gh-pages by pure plumbing; **`git ls-remote` re-checked immediately before
+  the push**, tree diff **exactly 30 additions, 0 deletions, 0 modifications, nothing outside `images/`**,
+  none of the 30 among gh-pages' 7,716 paths (`7bb88e78`). **The Pages deploy read `in_progress`, not
+  `cancelled`, against the Actions API, and after it landed all 30 live URLs were confirmed by hashing the
+  downloaded bytes against the uploaded blobs — 30 ok, 0 bad.** **19 heroes + 11 avatars = 30 referenced, 0
+  orphaned; every creator got a real profile picture.** **0** byte-duplicate heroes; closest perceptual pair
+  **30.5** (identical pictures score under 1), and it is ivy-green Bohemian Club against the gilded Garden
+  Court — the tonal false positive the two-stage checker exists to reject. **0** duplicate tour/stop/maker
+  ids, **0** already-pinned sourceURLs, **0** filename collisions. `make-link-pin.py --selftest` **71/71**
+  (**62 before Pillow was installed** — the nine image checks are silently skipped without it, which is worth
+  knowing). Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the Swift validator,
+  refusing to run if they disagree or either parse is empty (they agree at **373 tags**) — **self-tested
+  against 43 injected fault classes, 43/43 caught**, then **0 errors, 2 warnings across 1,552 tours + 76
+  pins**, **both pre-existing** (confirmed against `origin/main`). Tours.json **byte-stable under a Python
+  re-dump before editing**; diff **961 insertions / 0 deletions**. **CI has not run: no PR is open.**
+
 ## Current State (2026-08-26)
 
 ### Four Orlando architects join the vocabulary — 323 → 327 (branch `claude/tiktok-orlando-links-ziegoe`, session 115c — code + content)
@@ -2748,7 +2851,7 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **1552 tours + 57 link pins, 79 makers, 1924 stops** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 45 are pinned creators — pinned creators now outnumber the studios by a wide margin.** ⚠️ This line has gone stale twice already (it once read "33 … the other 4", then "34 … the other 27"); **re-derive it, never quote it.** (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
+- **1552 tours + 76 link pins, 90 makers, 1924 stops** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 56 are pinned creators — pinned creators now outnumber the studios nearly two to one.** ⚠️ This line has gone stale twice already (it once read "33 … the other 4", then "34 … the other 27"); **re-derive it, never quote it.** (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
 - **1480 single-stop + 72 multi-stop** — all geofenced. Copenhagen added 40 singles with no walks; Rio launched as 46 singles with no walks; São Paulo added 41 singles + 1 walk; Berlin added 31 singles + 5 walks; Marrakech added 26 singles with no walks; Buenos Aires added 34 singles + 2 walks; Chicago added 25 singles + 5 walks; Melbourne added 34 singles + 1 walk; Sydney added 29 singles with no walks; Cape Town added 30 singles with no walks; Barcelona added 66 singles + 2 walks; Milan added 47 singles + 1 walk; **Stockholm added 42 singles + 3 walks**. Multi-stop walks by maker: London 5, Paris 5, Amsterdam 5, Rome 5, Berlin 5, Chicago 5, San Francisco 4, Toronto 4, Los Angeles 4, Madrid 4, Montreal 4, Dubai 4, Seoul 3, **Stockholm 3**, NYC 2, Naoshima 2, Buenos Aires 2, **Barcelona 2**, Bangkok 1, São Paulo 1, Melbourne 1, **Milan 1**. The 4 originally-named NYC/London walks ("American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London), "Albertopolis" (6 stops, London)) are still the reference multi-stop test cases; AMNH unblocks M-qa items 6 + 7.
 - **Bilingual titles (`English | native script`) on both tour + stop across the Asian bureaus:** Tokyo (TYO), Kyoto (KYO), Naoshima (NAO) — `日本語`; Hong Kong (HKG) — `中文`; Seoul (SEL) — `한국어`; Bangkok (BKK) — `ไทย`; Ho Chi Minh City (SGN) — `Tiếng Việt` (where a Vietnamese name exists; proper-noun venues carry a single name); and Marrakech (RAK) — `العربية` (18 of 26; same proper-noun rule).
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list. Tours may also carry an optional **`videoURLs: [String]?`** (`.mp4` on gh-pages under `videos/`) — **videos LEAD the carousel** (owner decision 2026-07-26), so a tour with one opens on it and the still hero becomes page two. **`backend/add_video_urls.sql` HAS been applied** — verified against the live `get_catalog` on 2026-08-23, which emits the key on every tour; no SQL is owed, and `seed_from_toursjson.py` carries `video_urls` so a content merge cannot wipe it. Each video is openable **fullscreen** (session 107), and a tour also carries **`videoRole: TourVideoRole?`** — `gallery` (the default: b-roll beside the photographs) or **`narration`** (the clip **is** the tour, so its play bar and picture scrub together). ⚠️ **A `narration` tour may carry exactly ONE video**, validator-enforced. **Two tours carry video:** `via-57-west` (**`narration`**, 1080×1920 vertical with audio — a generated stand-in, replace when real footage exists) and `shinsegae-media-facade` (**`gallery`**, two clips: a 1200×900 silent one, plus `landscape-test.mp4`, **a 1920×1080 test card rather than real content**, added so rotation has something to run against — one-line revert). ⚠️ **`video_role` must reach Supabase to have any effect** — `seed_from_toursjson.py` carries it and `backend/add_video_role.sql` has been applied and verified live, but a catalogue edit alone is never enough. ⚠️ An earlier Key-facts note said no tour carried video; that was already false when written.
