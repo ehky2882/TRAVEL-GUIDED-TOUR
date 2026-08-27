@@ -304,6 +304,37 @@ and is live in the RPC, along with VIA 57 West. Milan (48 tours) landed 2026-08-
 long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
 
+## 7. Verification traps — each one produced a wrong answer here
+
+Not general advice. Every entry below is a check that **returned a confident, wrong result** on this
+repo, and the correction that makes it honest.
+
+- 🔴 **A MERGED PR IS NOT EVIDENCE THAT NO BUILD CARRIES IT.** This board twice reported "nothing
+  waiting on a build" from a list of merged PRs without re-reading the run list in the same turn, and
+  was wrong within five minutes both times — another session had already built the work from its own
+  branch. **Re-read the Actions run list in the same turn as any claim about what is waiting**,
+  including when the answer is "nothing".
+- 🔴 **`git diff` AGAINST A COMMIT GIT DOES NOT HAVE RETURNS EMPTY** — indistinguishable from "no
+  differences". Branches auto-delete on merge, so a build's commit is routinely unreachable. **This
+  produced a false clean twice in one session.** Fetch `refs/pull/<n>/head`, confirm with
+  `git cat-file -t`, and only then trust the diff.
+- 🔴 **A TAKEN-DOWN TOUR IS INVISIBLE TO EVERY ORDINARY READ.** `get_catalog` serves published only,
+  and so does the RLS policy behind PostgREST. On 2026-08-25 the catalogue reported four creators had
+  no tours, a direct API read agreed, and **both were wrong** — each still owned one `taken_down` row,
+  which is why a delete matched nothing three times. **Anything reasoning about "does this maker have
+  tours" must query the table as `postgres`.**
+- 🔴 **A GUARD THAT TURNS A LOUD, SPECIFIC ERROR INTO SILENCE IS WORSE THAN NO GUARD.** That same
+  delete carried `not exists (select 1 from tours …)`, which the hidden rows failed — so it reported
+  *"Success. No rows returned."* Without the guard, `tours.maker_id` being `on delete restrict` would
+  have raised a foreign-key violation **naming the exact blocking row**.
+- ⚠️ **A GREEN `publish-catalog` RUN IS NOT PROOF THE CATALOGUE CHANGED.** It reported success while
+  the live RPC still served the old place count for three more checks. **Ask the RPC.**
+- ⚠️ **A SPAWNED CLOUD SESSION MAY HAVE NO GITHUB TOOLS, AND CANNOT BE MESSAGED FROM A WEB SESSION.**
+  One spawned 2026-08-26 wrote the link-fullscreen fix, could not open a PR, and sat blocked eight
+  hours while another session solved it independently; **its branch was never pushed, so the work was
+  lost with the container.** Brief a spawned session completely up front, tell it to **push its branch
+  early**, and check on it rather than reading silence as progress.
+
 ## 6. Known debt — real, not urgent
 
 - **Supabase over-reports.** The RPC serves ~1,419 tours / 39 makers against a true 1,418 / 31.
