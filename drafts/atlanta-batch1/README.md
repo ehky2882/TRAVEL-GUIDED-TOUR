@@ -52,7 +52,7 @@ written down to prevent. If the other 15 ever arrive they are a **second batch**
 | 28 | Graves Hall, Morehouse | `graves-hall` | `28_graves_hall` | `history` | `33.74600, -84.41310` | Notable Building, History, Architecture | C | AUC campus — likely needs an owner photo |
 | 29 | Spelman College Oval | `spelman-oval` | `29_spelman_oval` | `history` | `33.74560, -84.41190` | District, History, Green Escape | C | AUC campus — likely needs an owner photo |
 | 30 | Student Movement Boulevard | `student-movement-blvd` | `30_student_movement_blvd` | `history` | `33.75160, -84.41200` | District, History, Remembrance, Free to Visit | C | ⚠️ movement site — buildings and street, not archival protest imagery |
-## Images — 22 of 30 live on gh-pages (verified 2026-08-24)
+## Images — 26 of 30 live on gh-pages (verified 2026-08-27)
 
 ### Shipped earlier — 11 subjects, zero credit obligations
 
@@ -75,6 +75,39 @@ backfill from there. **20 High Museum's hero is owner-supplied** (the Meier volu
 incised lettering along the approach wall); `_2` is the one clean stock exterior in the pool,
 the rest being gallery interiors, which carry their own copyright problem since the hung
 artworks are the subject.
+
+### Shipped 2026-08-26 (third push) — 5 subjects, 12 files, 8 credit rows
+
+| tour | files | source | credit |
+|------|-------|--------|--------|
+| 02 Zero Mile Post | `zero-mile-post_hero` | Commons | 1 row |
+| 04 Woodruff Park | `woodruff-park_hero` | Commons | 1 row 🔴 artwork |
+| 08 Sweet Auburn Curb Market | `sweet-auburn-curb-market_hero` + `_2`..`_4` | Commons | **none — all CC0** |
+| 18 BeltLine Eastside Trail | `beltline-eastside-trail_hero` + `_2`..`_5` | Commons | 5 rows |
+| 28 Graves Hall | `graves-hall_hero` | Commons | 1 row |
+
+**Two owner picks were adjusted after opening the crop:**
+
+- **Woodruff's hero needed `top_bias` 0.50, not 0.32.** The lower anchor cut off the WOODRUFF
+  PARK sign, which is the whole reason this frame beat the other nine.
+- **Zero Mile ships hero-only.** Both candidate second files crop to museum wall and Cyclorama
+  signage with the post cut mid-shaft; neither adds anything to the hero, which shows the whole
+  `W&A / R.R. / 00` block.
+
+**One owner pick was held back and flagged, not shipped:** the BeltLine **Inside Out Project**
+wall. Copyrighted participatory artwork whose entire frame is ~100 identifiable faces including
+children — the same reason the Spelman alumnae pool was dropped. See `drafts/CREDITS.md`.
+
+### 🔴 Woodruff Park: there is no image of this park without the phoenix
+
+Recorded because it will otherwise be re-litigated. Ten Commons files were sourced across two
+passes. **Every one that shows the park contains *Atlanta from the Ashes* (1969, in copyright)**,
+because the sculpture is the physical centre of the park. The only two that exclude it are a
+curtain-wall elevation of 25 Park Place and a skyline. The shipped hero is the best available
+compromise — a photograph *of the park* (sign, flowerbeds, plaza, passers-by) in which the
+sculpture stands as one element — but the artwork right is **not** cleared, and is logged open
+alongside Krog and the Pilsen murals. **A CC0 licence on such a photo clears the photographer,
+not the sculpture** — `OD7` is exactly that trap.
 
 ### Shipped 2026-08-24 (second push) — 2 subjects, 8 files, 0 credit rows
 
@@ -142,30 +175,34 @@ The other three are worse, not better:
 the size bar; a wider sweep (Five Points / downtown Peachtree categories) or an owner
 photograph would settle it. Do NOT ship `OC2`.
 
-### Still unsourced — 8 subjects
+### Still unsourced — 4 subjects
 
-**Sourced and awaiting owner picks** (pools staged, nothing cropped):
-01 Five Points (4 files) &middot; 02 Zero Mile Post (1) &middot; 18 BeltLine Eastside Trail (12)
-&middot; 26 APEX / Auburn Avenue (1) &middot; 28 Graves Hall (4).
+| tour | status |
+|------|--------|
+| 01 Five Points | 4 files staged, awaiting owner picks |
+| 23 Candler Building | **shipped** (hero) — see second push |
+| 26 APEX / Auburn Avenue | 8 files staged. **Only AC1 is a photograph** (the streetcar on Auburn, KING DIST on the board). AD2–AD8 are HABS *measured drawings* — public domain, 14544×9632, genuinely of the Sweet Auburn shopfronts and the Herndon Building, but architectural elevations rather than photos; they would read very differently from every other image in the catalog. Owner call. |
+| 29 Spelman Oval | 3 files staged: `SD3` Packard Hall (1888, faces the Oval) plus the AUC Woodruff Library ×2 (both CC0) |
+| 30 Student Movement Boulevard | **DRY — and what exists was rejected** |
 
-**Genuinely dry, owner-photograph candidates:** 04 Woodruff Park (see above) &middot;
-08 Sweet Auburn Curb Market (3 hits, 1 usable) &middot; 29 Spelman Oval &middot;
-30 Student Movement Boulevard.
+**🔴 Stop 30: Commons has seven public-domain files and none is usable.** All seven are Antony
+Blinken's 2023 State Department visit to Morehouse and Clark Atlanta — a serving politician and
+identifiable students dominate every frame. For a tour about the 1960 sit-ins and the Committee
+on Appeal for Human Rights that is the wrong subject with the wrong people in it, whatever the
+licence says. `"Atlanta Student Movement"` as a File-namespace search returns **0**. This one
+needs an owner photograph.
 
-Findings that narrow the search for whoever picks this up:
+**Search the File namespace by title; do not guess category names.** `list=search` with
+`srnamespace=6` found Graves Hall, the Candler, Five Points (69 hits), the Birth Home (863) and
+Zero Mile in a single pass, after category-name guesses had returned zero for all five. The
+Curb Market is the sharpest example: **its official name is the Municipal Market**, so every
+"Sweet Auburn" search came up thin while `"Atlanta Municipal Market"` returned five CC0 files
+immediately.
 
-- **Search the File namespace by title; do not guess category names.** `list=search`
-  with `srnamespace=6` found Graves Hall, the Candler, Five Points (69 hits), the Birth Home
-  (863) and Zero Mile in one pass, after category guesses had returned zero for all of them.
-- **Graves Hall is NOT in `Category:Buildings of Morehouse College`** — that holds 8 files
-  (John Hope, Brawley, Quarles, Kilgore, MLK International Chapel, Ray Charles Center,
-  President's Residence) and no Graves. `File:Samuel T. Graves Hall at Morehouse College,
-  June 2015.jpg` is the one to use.
-- **`Category:Spelman College` is 59 files of people, not architecture** — one alumnae
-  group-portrait session, identifiable private individuals indoors, no campus. Public domain
-  and still unusable. No buildings subcategory exists. `Category:Sisters Chapel` returns the
-  AUC Woodruff Library and Archives Research Center instead (both CC0, staged).
-- **`"Atlanta Student Movement"` returns 0 files.** Genuinely absent.
+**`Category:Spelman College` is 59 files of people, not architecture** — one alumnae
+group-portrait session, identifiable private individuals indoors, no campus. Public domain and
+still unusable. No buildings subcategory exists; `Category:Sisters Chapel` surfaces the AUC
+library instead, and Packard Hall came from a title search.
 
 ### ⚠️ Stop 02's premise may be wrong — check the script
 

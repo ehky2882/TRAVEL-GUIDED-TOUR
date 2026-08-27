@@ -636,4 +636,39 @@ subject in `krog-street-tunnel_4` and `_5`; tags there are ephemeral and largely
 unattributable, which is why no artist row exists. This is one of the three Atlanta stops
 the owner cleared to ship with the obligation logged open rather than cleared.
 
-**Woodruff Park (stop 04) shipped NO images** — see `drafts/atlanta-batch1/README.md`.
+### Atlanta — third push (2026-08-26): 5 more subjects, 8 credit rows
+
+**4 of the 12 files need no credit** and are not listed: all four Sweet Auburn Curb Market
+files are **CC0**.
+
+| file | subject | photographer | licence | source |
+|------|---------|--------------|---------|--------|
+| `beltline-eastside-trail_hero.webp` | 725 Ponce under construction, Eastside Trail | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:725_Ponce_office_tower_under_construction_on_the_Eastside_BeltLine_Trail,_July_2018.jpg |
+| `beltline-eastside-trail_2.webp` | Midtown skyline at sunset from the Eastside Trail | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Sunset_view_of_the_midtown_Atlanta_skyline_from_the_Eastside_BeltLine_Trail.jpg |
+| `beltline-eastside-trail_3.webp` | Gathering space beneath Freedom Parkway | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Gathering_space_beneath_Freedom_Parkway_along_the_Atlanta_BeltLine_Eastside_Trail.jpg |
+| `beltline-eastside-trail_4.webp` | Mural underpass with cyclist | Timothy J Carroll | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Beltline_Artwork.jpg |
+| `beltline-eastside-trail_5.webp` | Eastside Trail through Inman Park | John Phelan | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Atlanta_Beltline_Eastside_Trail,_Inman_Park_GA.jpg |
+| `graves-hall_hero.webp` | Samuel T. Graves Hall, Morehouse College | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Samuel_T._Graves_Hall_at_Morehouse_College,_June_2015.jpg |
+| `zero-mile-post_hero.webp` | Zero Mile Post, Atlanta History Center | Jimhodgson | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Zero_Mile_Post.JPG |
+| `woodruff-park_hero.webp` | Woodruff Park, the plaza and the phoenix | Ganeshk | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Atlanta_Woodruff_Park_2012_09_15_01_6192.JPG |
+
+**🔴 `woodruff-park_hero.webp` carries an UNRESOLVED artwork right — owner-directed, like the
+Pilsen murals.** The bronze is *Atlanta from the Ashes* (1969), still in copyright. The row
+above credits the photographer only. This frame was chosen over nine others precisely because
+it is a photograph *of the park* — the WOODRUFF PARK sign, the flowerbeds, the plaza and
+passers-by are all in it, and the sculpture stands within the scene rather than filling it —
+but **there is no Woodruff Park image without the phoenix**, because the phoenix is the centre
+of the park. The only two candidates that excluded it were a curtain wall and a skyline.
+
+**⚠️ `beltline-eastside-trail_4.webp` depicts unattributed street murals**, the same standing
+situation as Krog Street Tunnel: the painted work is unattributable, the trail and cyclist are
+the subject, and the row credits the photographer only.
+
+**Held back, not shipped:** the BeltLine **Inside Out Project** wall (Commons
+`Inside_Out_Project_display_on_the_BeltLine-facing_wall_of_Paris_on_Ponce.jpg`). It is a
+copyrighted participatory artwork *and* its entire frame is roughly a hundred identifiable
+faces, including children. Dropped for the same reason as the Spelman alumnae-portrait pool.
+It was an owner pick; the owner was told rather than having it silently shipped or silently
+discarded.
+
+**Woodruff Park (stop 04) DID ship, in the third push** — hero only, with the artwork right recorded above. The earlier note here said it shipped nothing; that was true of the first push only.
