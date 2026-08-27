@@ -671,4 +671,19 @@ faces, including children. Dropped for the same reason as the Spelman alumnae-po
 It was an owner pick; the owner was told rather than having it silently shipped or silently
 discarded.
 
+### Atlanta — fourth push (2026-08-27): the last 4 subjects, 1 credit row
+
+**Atlanta is now 30 of 30 image-complete.** Three of these four are owner-supplied and carry no
+obligation: `apex-auburn_hero.webp`, `spelman-oval_hero.webp` and
+`student-movement-blvd_hero.webp`.
+
+| file | subject | photographer | licence | source |
+|------|---------|--------------|---------|--------|
+| `five-points_hero.webp` | Looking north along Peachtree from Five Points | Marc Merlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Looking_north_along_Peachtree_from_from_nearby_the_Five_Points_MARTA_Station.jpg |
+
+**Atlanta's final credit position: 34 rows across 65 files.** Everything else is CC0, public
+domain (HABS / Library of Congress), Unsplash, Pexels, or owner-supplied. Two artwork rights
+remain **open, not cleared** — Krog Street Tunnel's graffiti and Woodruff Park's *Atlanta from
+the Ashes* — both owner-directed and both detailed above.
+
 **Woodruff Park (stop 04) DID ship, in the third push** — hero only, with the artwork right recorded above. The earlier note here said it shipped nothing; that was true of the first push only.

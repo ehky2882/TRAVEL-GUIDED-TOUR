@@ -52,7 +52,7 @@ written down to prevent. If the other 15 ever arrive they are a **second batch**
 | 28 | Graves Hall, Morehouse | `graves-hall` | `28_graves_hall` | `history` | `33.74600, -84.41310` | Notable Building, History, Architecture | C | AUC campus — likely needs an owner photo |
 | 29 | Spelman College Oval | `spelman-oval` | `29_spelman_oval` | `history` | `33.74560, -84.41190` | District, History, Green Escape | C | AUC campus — likely needs an owner photo |
 | 30 | Student Movement Boulevard | `student-movement-blvd` | `30_student_movement_blvd` | `history` | `33.75160, -84.41200` | District, History, Remembrance, Free to Visit | C | ⚠️ movement site — buildings and street, not archival protest imagery |
-## Images — 26 of 30 live on gh-pages (verified 2026-08-27)
+## Images — ✅ 30 of 30 COMPLETE (verified 2026-08-27)
 
 ### Shipped earlier — 11 subjects, zero credit obligations
 
@@ -75,6 +75,45 @@ backfill from there. **20 High Museum's hero is owner-supplied** (the Meier volu
 incised lettering along the approach wall); `_2` is the one clean stock exterior in the pool,
 the rest being gallery interiors, which carry their own copyright problem since the hung
 artworks are the subject.
+
+### Shipped 2026-08-27 (fourth push) — the last 4 subjects, 4 files, 1 credit row
+
+| tour | file | source | credit |
+|------|------|--------|--------|
+| 01 Five Points | `five-points_hero` | Commons | 1 row |
+| 26 APEX / Auburn Avenue | `apex-auburn_hero` | **owner-supplied** | none |
+| 29 Spelman Oval | `spelman-oval_hero` | **owner-supplied** | none |
+| 30 Student Movement Blvd | `student-movement-blvd_hero` | **owner-supplied** | none |
+
+**Three of the last four came from the owner, and that is the finding.** Each had been worked
+hard from Commons and the Library of Congress first; none of the three was solvable by
+sourcing. The pattern from every previous city held exactly: *when a script points at something
+specific and locally known, stock and Commons both thin out and an owner photograph resolves it
+faster than more searching.*
+
+**🔴 `apex-auburn_hero.webp` — do NOT "correct" this image.** A **WELCOME / INMAN PARK** banner
+hangs on the lamp post, and the APEX Museum's own address is 135 Auburn Avenue in Sweet Auburn,
+about 1.5 km west — so the frame reads as the wrong neighbourhood on first inspection. It was
+queried on exactly that basis and **the owner confirmed it is correct.**
+
+**⚠️ `student-movement-blvd_hero.webp` is a 1.50× enlargement** — source 799×797, the largest
+upscale in the catalogue (the Pilsen batch's 1.08× was the previous high). Checked at full size;
+the marker text and seal hold. The crop is **top-anchored, not centred**, to drop a COVID-era
+"MASK UP!" yard sign at the base of the post.
+
+**⚠️ `five-points_hero.webp` uses `top_bias` 1.0 — flush to the bottom.** Five Points is an
+intersection; every higher anchor gave a wall of tower façade with no street in it. The shipped
+frame carries the MARTA entrance kiosk, the Decatur Street sign, pedestrians and traffic.
+
+### Spelman: what sourcing could not do
+
+`Category:Spelman College` holds **59 files and not one is architecture** — a single alumnae
+group-portrait session, identifiable private individuals indoors. Public domain, and unusable:
+portraits of private people are not tour imagery. Spelman has **no buildings subcategory**.
+A File-namespace title search found **exactly one Giles Hall image in existence** across Commons
+and the Library of Congress — an 1893 halftone from a book, 778×548, needing a 1.64× enlargement
+off a printed screen and showing the building as it stood 130 years ago. Packard Hall (1888) was
+the only modern Spelman photograph anywhere. The owner's own Giles Hall shot closed it.
 
 ### Shipped 2026-08-26 (third push) — 5 subjects, 12 files, 8 credit rows
 
@@ -175,34 +214,14 @@ The other three are worse, not better:
 the size bar; a wider sweep (Five Points / downtown Peachtree categories) or an owner
 photograph would settle it. Do NOT ship `OC2`.
 
-### Still unsourced — 4 subjects
+### ✅ Nothing is unsourced — all 30 tours have a live hero
 
-| tour | status |
-|------|--------|
-| 01 Five Points | 4 files staged, awaiting owner picks |
-| 23 Candler Building | **shipped** (hero) — see second push |
-| 26 APEX / Auburn Avenue | 8 files staged. **Only AC1 is a photograph** (the streetcar on Auburn, KING DIST on the board). AD2–AD8 are HABS *measured drawings* — public domain, 14544×9632, genuinely of the Sweet Auburn shopfronts and the Herndon Building, but architectural elevations rather than photos; they would read very differently from every other image in the catalog. Owner call. |
-| 29 Spelman Oval | 3 files staged: `SD3` Packard Hall (1888, faces the Oval) plus the AUC Woodruff Library ×2 (both CC0) |
-| 30 Student Movement Boulevard | **DRY — and what exists was rejected** |
+Verified 2026-08-27 by requesting each tour slug's `_hero.webp` from
+`https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/` and counting 200s — **by slug, not by
+arithmetic.** Three arithmetic passes during this batch produced 20, 21 and 22 for the same
+state; only the direct check was right. Do that, not the sum.
 
-**🔴 Stop 30: Commons has seven public-domain files and none is usable.** All seven are Antony
-Blinken's 2023 State Department visit to Morehouse and Clark Atlanta — a serving politician and
-identifiable students dominate every frame. For a tour about the 1960 sit-ins and the Committee
-on Appeal for Human Rights that is the wrong subject with the wrong people in it, whatever the
-licence says. `"Atlanta Student Movement"` as a File-namespace search returns **0**. This one
-needs an owner photograph.
-
-**Search the File namespace by title; do not guess category names.** `list=search` with
-`srnamespace=6` found Graves Hall, the Candler, Five Points (69 hits), the Birth Home (863) and
-Zero Mile in a single pass, after category-name guesses had returned zero for all five. The
-Curb Market is the sharpest example: **its official name is the Municipal Market**, so every
-"Sweet Auburn" search came up thin while `"Atlanta Municipal Market"` returned five CC0 files
-immediately.
-
-**`Category:Spelman College` is 59 files of people, not architecture** — one alumnae
-group-portrait session, identifiable private individuals indoors, no campus. Public domain and
-still unusable. No buildings subcategory exists; `Category:Sisters Chapel` surfaces the AUC
-library instead, and Packard Hall came from a title search.
+**The one thing Atlanta still needs is 30 narration MP3s.** Images are done.
 
 ### ⚠️ Stop 02's premise may be wrong — check the script
 
