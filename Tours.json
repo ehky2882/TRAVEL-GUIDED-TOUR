@@ -78630,6 +78630,58 @@
         "ccda9933-558b-5739-9162-16cc68721d8b",
         "4DB3A10E-69BD-56E8-854E-ACCC1BA1BA0B"
       ]
+    },
+    {
+      "id": "21895c74-b9be-526c-8633-143f6e876f5d",
+      "name": "California Academy of Sciences",
+      "description": "Renzo Piano's 2008 building sits in Golden Gate Park with an aquarium, a planetarium, a four-storey rainforest and a natural-history collection all under one roof — and the roof is the point. Two and a half acres of rolling planted hummocks, seeded with native species, lift the park back over the building and have become one of the most copied pieces of architecture in the city.",
+      "latitude": 37.7699,
+      "longitude": -122.4661,
+      "city": "San Francisco",
+      "address": "55 Music Concourse Drive, San Francisco",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_3.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_2.webp"
+      ],
+      "tourIds": [
+        "5085c5aa-b0ae-401f-b295-bd940b8322a5",
+        "100E89FE-EA6D-5B8D-965C-A713B3030405"
+      ]
+    },
+    {
+      "id": "a586b161-f810-5863-b5ea-6679b03cb783",
+      "name": "Grace Cathedral",
+      "description": "The Episcopal cathedral on Nob Hill, finished in 1964 on the hill the railroad barons once owned. Its bronze front doors are casts of Ghiberti's Gates of Paradise from the Florence Baptistery, and inside, a labyrinth copied from Chartres is set into the floor to be walked slowly beneath modern stained glass.",
+      "latitude": 37.7919,
+      "longitude": -122.4127,
+      "city": "San Francisco",
+      "address": "1100 California Street, San Francisco",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_3.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_4.webp"
+      ],
+      "tourIds": [
+        "ee0f9fbe-25b2-4aa6-ba15-590e1e26402c",
+        "D732C712-D982-5AF4-9EE5-76AD34C9DBDA"
+      ]
+    },
+    {
+      "id": "276ad859-0907-589f-b962-6ac18a728ec9",
+      "name": "Legion of Honor",
+      "description": "A three-quarter-scale replica of the Palais de la Légion d'Honneur in Paris, set on the bluffs of Lincoln Park above Lands End. It was given to the city as a memorial to the Californian dead of the First World War, and holds several centuries of European art behind its colonnade; the Golden Gate is in view from the grounds.",
+      "latitude": 37.7845556,
+      "longitude": -122.500962,
+      "city": "San Francisco",
+      "address": "100 Legion of Honor Drive, San Francisco",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/legion-of-honor-lyndsielocks_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/legion-of-honor-theluriegroup_hero.webp"
+      ],
+      "tourIds": [
+        "1532C298-F3FA-5B50-BC04-2F8D8A25A170",
+        "A55EAA2F-FE96-5EDC-BE48-F7EC29C0704B"
+      ]
     }
   ],
   "linkPins": [
@@ -81592,8 +81644,8 @@
           "order": 0,
           "title": "Grace Cathedral",
           "caption": "Aura officially opens to the public tomorrow Fri, 10/10 at Grace Cathedral in SF! It’s such a fun immersive 360-degree experience show in su",
-          "latitude": 37.7918211,
-          "longitude": -122.4134968,
+          "latitude": 37.7919,
+          "longitude": -122.4127,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -81605,8 +81657,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.7918211,
-      "centroidLongitude": -122.4134968,
+      "centroidLatitude": 37.7919,
+      "centroidLongitude": -122.4127,
       "city": "San Francisco",
       "country": "United States",
       "primaryCategory": "sacredSites",
@@ -81913,8 +81965,8 @@
           "order": 0,
           "title": "California Academy of Sciences",
           "caption": "Is the California Academy of Sciences worth your wallet? 👀 Located in Golden Gate Park, the California Academy of Sciences is one of our fav",
-          "latitude": 37.7698266,
-          "longitude": -122.4660927,
+          "latitude": 37.7699,
+          "longitude": -122.4661,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -81926,8 +81978,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.7698266,
-      "centroidLongitude": -122.4660927,
+      "centroidLatitude": 37.7699,
+      "centroidLongitude": -122.4661,
       "city": "San Francisco",
       "country": "United States",
       "primaryCategory": "architecture",
