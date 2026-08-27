@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-27 03:05 UTC
+**Last verified:** 2026-08-27 03:20 UTC (session 117, after merging #626)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -39,12 +39,13 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
   — builds 131/132/133 came from it. **Owner must delete it in the GitHub UI**; the git proxy blocks
   branch deletion from a session. `grep TEMP-PROBE` on `main` is clean.
 
-🟡 **TWO PRs OPEN.**
+🟡 **THREE PRs OPEN.**
 
 | PR | What | Class |
 |---|---|---|
 | [#613](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/613) | *The board catches up to main* — `STATUS.md` only | ⚠️ **Behind `main`** — its base predates the 19:20 board update, so it will conflict. Re-derive rather than merge as-is |
 | [#614](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/614) | *Two more tours geofenced away from the spot their script names* | Content — no build needed |
+| [#626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626) | *Nineteen San Francisco architecture link pins* — linkPins 57 → 76, makers 79 → 90 | Content — no build needed; auto-merge class |
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
@@ -200,6 +201,9 @@ and then it catches nothing.
 
 ## 2. Blocked on owner — outside the repo
 
+**🔴 A DEAD TIKTOK LINK NEEDS RE-SHARING (2026-08-27).** `https://www.tiktok.com/t/ZP8vkb5bP/`, the twentieth of the "SF Architecture" batch, resolves to a real id (`@aggie.sanfrancisco/video/7660328152421387534`) and then fails everywhere: an empty oEmbed shell on three spaced attempts (no `thumbnail_url`), and a 367 KB *"Video currently unavailable"* page with zero `og:` tags. No caption means no subject and no location; no thumbnail means no hero, and a pin with no hero cannot ship. **Nothing on our side recovers it — only the owner re-sharing a live link.** ⚠️ It is an ordinary `/video/` post that has gone, **not** a `/photo/` carousel; that limitation is separate and permanent.
+
+
 Nothing here can be done from a session. Ordered by what blocks the most.
 
 | Item | Why it matters | State |
@@ -276,7 +280,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
 | `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
 | `claude/link-fullscreen-module` | Merged (#611, squash `8df37de8`) |
-| `claude/new-tour-links-yr5o7r` | **Ten Atlanta link pins** (commit pending, no PR — this session's harness forbids opening one unasked). Branch cut clean off `origin/main` `c5e8862`. linkPins 57 → 67, makers 79 → 89. Images live on gh-pages at `a93c06d4`. |
+| `claude/new-tour-links-nniny1` | **Open as [#626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626)** — twenty "SF Architecture" TikToks, nineteen shipped as link pins. Cut fresh from `origin/main` at `c5e8862`. Content only (`Tours.json` + docs), so it auto-merges on CI green per CLAUDE.md Rule #4 |
+| `claude/new-tour-links-yr5o7r` | **Open as [#627](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/627)** — ten "Atlanta Architecture" TikToks, all ten shipped as link pins. Cut clean off `origin/main` `c5e8862`, then **merged `main` in to resolve a four-way conflict with #626** (both batches touched `Tours.json`, `CLAUDE.md`, `STATUS.md`, and both claimed `archive/HANDOFF-260827.md`). Content only. Images live on gh-pages at `a93c06d4`. |
 | `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` after #621 merged** — now carries the Orlando *architecture* batch (10 pins, commit `da9c96ad`). ⚠️ Same branch name, fresh history: never stacked on merged commits. |
 | ~~`claude/tiktok-orlando-links-ziegoe` (first run)~~ | Merged as #621 (squash `1c05613b`) — nine Orlando link pins, live on Supabase |
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
@@ -297,13 +302,47 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**⚠️ Re-derived from `Tours.json` on 2026-08-27 (session 116): 1,552 tours + 67 link pins, 89 maker rows (34 Atlas studios + 55 pinned creators), 1,924 tour stops.** **⚠️ TWO OTHER SESSIONS WERE PUSHING TO gh-pages AT THE SAME TIME** — an **SF architecture link-pin batch** (19 subjects + 11 avatars, 02:35 UTC) and the **Atlanta tour batch, now at "29 of Atlanta's 30 tours"** (02:57 UTC). **Three consecutive Pages deploys cancelled each other**; each commit is an ancestor of the next, so the first successful run carries them all. **`main` has almost certainly moved — re-derive before quoting.** The paragraph below predates Copenhagen and the last three link-pin batches and its figures are stale — **re-derive, do not quote.** **🔴 Pinned creators now outnumber Atlas studios**, so the raw `dataService.makers.count` in Settings → About has passed the tipping point flagged when there were four pins; the owner's decision (userId-only / published-tour-only / split the row) is still owed. **⚠️ An ATLANTA batch is still being staged by another session and is still not in the tracker** — a gh-pages push landed mid-session (MLK Birth Home ×7 + the Candler Building). Do not report the audio-pending queue as empty without re-deriving.
+**⚠️ Re-derived from `Tours.json` on 2026-08-27 (session 117, after merging #626): 1,552 tours + 86 link pins, 100 maker rows (34 Atlas studios + 66 pinned creators), 1,924 tour stops.** **⚠️ TWO LINK-PIN BATCHES LANDED WITHIN AN HOUR OF EACH OTHER** — nineteen San Francisco pins (#626, merged) and ten Atlanta pins (#627, this branch) — **and they conflicted in four files, including an add/add on the same handoff filename.** Expect that whenever two content sessions run in parallel. **⚠️ THE ATLANTA TOUR BATCH IS ALSO IN FLIGHT** and is now in the tracker: 30 single-stop tours, 30 MP3s outstanding, under a new **Atlas Studio ATL**. Its Mercedes-Benz Stadium and Oakland Cemetery tours will land beside #627's pins for the same two places. **The audio-pending queue is NOT empty.**
+
+
+**⚠️ THE PARAGRAPH BELOW IS STALE AND IS KEPT ONLY FOR ITS LIVE-RPC NOTES — re-derive, do not quote.** Its figures predate Copenhagen and the last five link-pin batches, and **its claim that the audio-pending queue is EMPTY is now false**: Atlanta sits in it with 30 tours awaiting narration.
 
 **Catalog 1,516 tours live / 45 maker rows served** (49 before the test-creator cleanup). The four `TEST -` pins are gone (#593),
 replaced by **4 real AMNH creator link pins** (#591). **7 served makers have zero tours**, all of them real sign-ups who have not published yet. — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
 and is live in the RPC, along with VIA 57 West. Milan (48 tours) landed 2026-08-22. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
 long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
+
+## 7. Verification traps — each one produced a wrong answer here
+
+Not general advice. Every entry below is a check that **returned a confident, wrong result** on this
+repo, and the correction that makes it honest.
+
+- 🔴 **A MERGED PR IS NOT EVIDENCE THAT NO BUILD CARRIES IT.** This board twice reported "nothing
+  waiting on a build" from a list of merged PRs without re-reading the run list in the same turn, and
+  was wrong within five minutes both times — another session had already built the work from its own
+  branch. **Re-read the Actions run list in the same turn as any claim about what is waiting**,
+  including when the answer is "nothing".
+- 🔴 **`git diff` AGAINST A COMMIT GIT DOES NOT HAVE RETURNS EMPTY** — indistinguishable from "no
+  differences". Branches auto-delete on merge, so a build's commit is routinely unreachable. **This
+  produced a false clean twice in one session.** Fetch `refs/pull/<n>/head`, confirm with
+  `git cat-file -t`, and only then trust the diff.
+- 🔴 **A TAKEN-DOWN TOUR IS INVISIBLE TO EVERY ORDINARY READ.** `get_catalog` serves published only,
+  and so does the RLS policy behind PostgREST. On 2026-08-25 the catalogue reported four creators had
+  no tours, a direct API read agreed, and **both were wrong** — each still owned one `taken_down` row,
+  which is why a delete matched nothing three times. **Anything reasoning about "does this maker have
+  tours" must query the table as `postgres`.**
+- 🔴 **A GUARD THAT TURNS A LOUD, SPECIFIC ERROR INTO SILENCE IS WORSE THAN NO GUARD.** That same
+  delete carried `not exists (select 1 from tours …)`, which the hidden rows failed — so it reported
+  *"Success. No rows returned."* Without the guard, `tours.maker_id` being `on delete restrict` would
+  have raised a foreign-key violation **naming the exact blocking row**.
+- ⚠️ **A GREEN `publish-catalog` RUN IS NOT PROOF THE CATALOGUE CHANGED.** It reported success while
+  the live RPC still served the old place count for three more checks. **Ask the RPC.**
+- ⚠️ **A SPAWNED CLOUD SESSION MAY HAVE NO GITHUB TOOLS, AND CANNOT BE MESSAGED FROM A WEB SESSION.**
+  One spawned 2026-08-26 wrote the link-fullscreen fix, could not open a PR, and sat blocked eight
+  hours while another session solved it independently; **its branch was never pushed, so the work was
+  lost with the container.** Brief a spawned session completely up front, tell it to **push its branch
+  early**, and check on it rather than reading silence as progress.
 
 ## 6. Known debt — real, not urgent
 
