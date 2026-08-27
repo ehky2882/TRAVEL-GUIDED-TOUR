@@ -235,7 +235,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 | Branch | State |
 |---|---|
-| `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` after #621 merged** — now carries the Orlando *architecture* batch (10 pins, commit `da9c96ad`). ⚠️ Same branch name, fresh history: never stacked on merged commits. |
+| `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` again after #623 merged** — now carries the **four Orlando architects** (`Models/Tag.swift` + validator, commit `fc30f83c`). ⚠️ **A CODE change: owner OK + a simulator look owed.** |
+| ~~`claude/tiktok-orlando-links-ziegoe` (2nd run)~~ | Merged as #623 (squash `cb6cdc69`) — ten Orlando architecture pins, live on Supabase |
 | ~~`claude/tiktok-orlando-links-ziegoe` (first run)~~ | Merged as #621 (squash `1c05613b`) — nine Orlando link pins, live on Supabase |
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
 | `claude/upload-wizard-improvements-ejopz3` | Merged (#552 at 19:05) |
