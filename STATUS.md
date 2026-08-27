@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-26 19:20 UTC
+**Last verified:** 2026-08-26 23:50 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,27 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+✅ **THE LINK-PIN FULLSCREEN BUG IS FIXED, SHIPPED AND OWNER-VERIFIED.**
+[#622](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/622) squash `e22dba7`, **build 134 from
+`main`**. Owner on the probe build carrying the same fix: *"133 is live. that seem to be done the
+trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Current State.**
+
+- **🔴 IT TOOK FOUR BUILDS AND THREE WRONG DIAGNOSES, and this board carried two of them as fact.**
+  #611 (build 129) and #617 (build 130) both shipped as "the fix" and neither was. **TikTok and
+  YouTube embeds do not use WebKit element fullscreen at all** — the video takes its **own
+  `UIWindow`**, at or below `.normal + 1`, which is where the module window lives. `fullscreenState`
+  never changed, so nothing ever fired. **Never record a fix as verified on the strength of a merge.**
+- **⚠️ The probe branch `claude/link-fullscreen-probe` is still on the remote and was never merged**
+  — builds 131/132/133 came from it. **Owner must delete it in the GitHub UI**; the git proxy blocks
+  branch deletion from a session. `grep TEMP-PROBE` on `main` is clean.
+
+🟡 **TWO PRs OPEN.**
+
+| PR | What | Class |
+|---|---|---|
+| [#613](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/613) | *The board catches up to main* — `STATUS.md` only | ⚠️ **Behind `main`** — its base predates the 19:20 board update, so it will conflict. Re-derive rather than merge as-is |
+| [#614](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/614) | *Two more tours geofenced away from the spot their script names* | Content — no build needed |
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
@@ -207,7 +228,23 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **118** | **`main`** | #597 link pins split out + #598 decode tolerance (`d80465b`) | ✅ **install this** — first build that reads `linkPins` |
+| **134** | **`main`** | #622 the real fullscreen fix — the video's own window (`e22dba7`) | ✅ **install this** |
+| 133 | `link-fullscreen-probe` | Same fix + the temporary readout (`f6aaf78c`) | ✅ owner-verified — *"that seem to be done the trick"* |
+| 132 | `link-fullscreen-probe` | `isElementFullscreenEnabled` theory + probe (`839d2296`) | 🔴 wrong theory — probe proved it |
+| 131 | `link-fullscreen-probe` | The probe readout alone (`773727ae`) | ✅ diagnostic — this is what cracked it |
+| 130 | **`main`** | #617 the `onDisappear` guard (`adbe3b94`) | 🔴 shipped as "the fix"; was not |
+| 129 | **`main`** | #611 withdraw the module on `fullscreenState` (`8df37de8`) | 🔴 shipped as "the fix"; was not |
+| 128 | **`main`** | Everything, from the tip (`43c9411a`) — functionally identical to 127 | ✅ superseded |
+| 127 | `open-source-ai-integration-pxuxdh` | #605 search + map, merged as `43c9411` | ✅ superseded |
+| 126 | `instagram-best-effort` | #606 Instagram, merged as `2ecb95a9` | ✅ owner-verified — superseded |
+| 125 | `open-source-ai-integration-pxuxdh` | #605 search, branch caught up to `main` (`73364503`) | ✅ superseded |
+| 124 | `open-source-ai-integration-pxuxdh` | Merged app code + #605's then-unmerged search work (`fc94f197`) | ✅ superseded |
+| 123 | `open-source-ai-integration-pxuxdh` | Same work, earlier commit (`2f1784e9`) | ✅ superseded |
+| 122 | **`main`** | #603 Instagram tap (`e106fd3e`) | ⚠️ carries the behaviour #604 withdrew |
+| 121 | `new-task-i2k12e` | #601 list-page grid + sort (`33d2b0c4`) | ✅ owner-verified — *"121 went live. Looks good."* |
+| 120 | `new-task-i2k12e` | #600 place-page grid + sort (`ad1ff15e`) | ✅ owner-verified — *"120 is live. works"* |
+| 119 | `new-task-i2k12e` | Same work, one commit earlier (`8b4e6cdc`) | ✅ superseded |
+| 118 | **`main`** | #597 link pins split out + #598 decode tolerance (`d80465b`) | ✅ superseded — owner-verified, pins visible |
 | 117 | **`main`** | #592 WALK pill, on the real AMNH pins (`2a47e28`) | ✅ superseded — shows no link pins |
 | 116 | **`main`** | #584 link pins + #585 YouTube/Short fixes (`233eb912`) | ✅ superseded — shows no link pins |
 | 115 | **`main`** | #583 the stale hero fix (`8f5748b7`) | ✅ superseded — **un-frozen by #597** |
@@ -235,6 +272,10 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 | Branch | State |
 |---|---|
+| `claude/link-fullscreen-probe` | 🔴 **Never merged, still on the remote** — carried the temporary readout and builds 131/132/133. **Owner deletes it in the GitHub UI**; the git proxy blocks branch deletion from a session |
+| `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
+| `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
+| `claude/link-fullscreen-module` | Merged (#611, squash `8df37de8`) |
 | `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` after #621 merged** — now carries the Orlando *architecture* batch (10 pins, commit `da9c96ad`). ⚠️ Same branch name, fresh history: never stacked on merged commits. |
 | ~~`claude/tiktok-orlando-links-ziegoe` (first run)~~ | Merged as #621 (squash `1c05613b`) — nine Orlando link pins, live on Supabase |
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
