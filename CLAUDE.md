@@ -313,7 +313,10 @@ else, no coordinates and no captions.** Branch restarted clean off `origin/main`
   outside `images/`** (`a93c06d4`). **⚠️ gh-pages moved TWICE around the push** (`7bb88e78 →
   384e0e24` mid-session, then `→ 97292af7` immediately after), so the tree was **rebuilt on the new
   base** and `git ls-remote` was re-checked in the same command as the push; afterwards the commit
-  was confirmed **still an ancestor of head with all 20 paths in the head tree.** **0** byte-duplicate
+  was confirmed **still an ancestor of head with all 20 paths in the head tree.** **✅ All 20 live URLs hash-verified against the uploaded bytes** at 03:20 UTC, ~27 minutes after the
+  push — **⚠️ five consecutive Pages deploys cancelled one another** while the Atlanta tour session
+  pushed images one at a time, and **a cancelled deploy is not a lost upload**: each commit is an
+  ancestor of the next, so the first surviving run carried them all. **0** byte-duplicate
   heroes; closest perceptual pair **47.2** (identical pictures score under 1). **0** duplicate tour,
   stop or maker ids, **0** already-pinned sourceURLs, **0** filename collisions. **No new pin is
   within 500 m of any existing catalog tour**; closest pair inside the batch is 241 m (World of
