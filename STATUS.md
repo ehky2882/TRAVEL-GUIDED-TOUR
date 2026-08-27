@@ -39,12 +39,13 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
   — builds 131/132/133 came from it. **Owner must delete it in the GitHub UI**; the git proxy blocks
   branch deletion from a session. `grep TEMP-PROBE` on `main` is clean.
 
-🟡 **TWO PRs OPEN.**
+🟡 **THREE PRs OPEN.**
 
 | PR | What | Class |
 |---|---|---|
 | [#613](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/613) | *The board catches up to main* — `STATUS.md` only | ⚠️ **Behind `main`** — its base predates the 19:20 board update, so it will conflict. Re-derive rather than merge as-is |
 | [#614](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/614) | *Two more tours geofenced away from the spot their script names* | Content — no build needed |
+| [#626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626) | *Nineteen San Francisco architecture link pins* — linkPins 57 → 76, makers 79 → 90 | Content — no build needed; auto-merge class |
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
@@ -279,7 +280,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
 | `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
 | `claude/link-fullscreen-module` | Merged (#611, squash `8df37de8`) |
-| `claude/new-tour-links-nniny1` | **No PR — pushed and ready.** Twenty "SF Architecture" TikToks, nineteen shipped as link pins (commit below). Cut fresh from `origin/main` at `c5e8862`; this session's harness forbids opening a PR unasked, so the owner opens one when they want it |
+| `claude/new-tour-links-nniny1` | **Open as [#626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626)** — twenty "SF Architecture" TikToks, nineteen shipped as link pins. Cut fresh from `origin/main` at `c5e8862`. Content only (`Tours.json` + docs), so it auto-merges on CI green per CLAUDE.md Rule #4 |
 | `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` after #621 merged** — now carries the Orlando *architecture* batch (10 pins, commit `da9c96ad`). ⚠️ Same branch name, fresh history: never stacked on merged commits. |
 | ~~`claude/tiktok-orlando-links-ziegoe` (first run)~~ | Merged as #621 (squash `1c05613b`) — nine Orlando link pins, live on Supabase |
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
