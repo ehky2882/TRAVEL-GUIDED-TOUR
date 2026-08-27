@@ -31,7 +31,11 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-08-18 (🇪🇸 **Barcelona COMPLETE** — 68 tours live under Atlas Studio BCN, the 31st maker; catalog 1418 tours / 1774 stops. **Never in this table** — the tenth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 201 MB, first try; 78 MP3s already 44.1 kHz/128 kbps, 259 images already 1200×900, scripts numbered 1–59 with no gaps) and wired the same day. **The queue stays EMPTY.**)
+**Last verified:** 2026-08-26 (🇺🇸 **Atlanta added to the queue** — 30 single-stop tours staged, 21 image-complete, 0 MP3s; see the row below. Previously 2026-08-26: 🇩🇰 **Copenhagen COMPLETE** — 40 tours live under Atlas Studio CPH, the 34th Atlas maker, Denmark's first city and the catalog's 22nd country; catalog 1552 tours / 1924 stops. **Never in this table** — the thirteenth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 103 MB, first try; 155 images already 1200×900, 40 clean/TTS-safe pairs 1:1, zero byte-duplicates) and wired the same day.)
+
+> ✅ **RESOLVED 2026-08-26 — the Atlanta batch is real, and it now has a row below.** The flag was right: gh-pages `c533f3c4` (2026-08-24) and `1a23eea4` (2026-08-26) are an Atlanta staging push. **30 single-stop scripts** live on `claude/amsterdam-handoff-preserve-hlhyp8` at `drafts/atlanta-batch1/` (30 clean `.txt` + 30 `_TTS.txt` + a README pick-map), staged since 2026-08-17. **No narration audio exists** — `git ls-tree origin/gh-pages audio/` matches nothing Atlanta (`flatiron-building.mp3` is New York's, `the-temple-of-the-emerald-buddha.mp3` is Bangkok's). This was the Dubai failure repeating, and the fix is the row below.
+
+**Previously verified:** 2026-08-18 (🇪🇸 **Barcelona COMPLETE** — 68 tours live under Atlas Studio BCN, the 31st maker; catalog 1418 tours / 1774 stops. **Never in this table** — the tenth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 201 MB, first try; 78 MP3s already 44.1 kHz/128 kbps, 259 images already 1200×900, scripts numbered 1–59 with no gaps) and wired the same day. **The queue stays EMPTY.**)
 
 **Previously verified:** 2026-08-12 (🇿🇦 **Cape Town COMPLETE** — 30 tours live under Atlas Studio CPT, the 30th maker, the catalog's first South African city and Africa's second bureau after Marrakech; catalog 1350 tours / 1696 stops. **Never in this table** — the ninth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 84 MB, first try; MP3s already 44.1 kHz/128 kbps, 98 images already 1200×900, scripts numbered 1–30 with no gaps) and wired the same day. **The queue stays EMPTY.**)
 
@@ -51,15 +55,27 @@ the branches to answer "what's left?".
 
 ## PENDING — staged, awaiting narration audio
 
-**🎉 NOTHING IS PENDING. The queue is empty (first time ever, 2026-08-09) — Chicago was the
-last staged city and it is live.** Five singles the Chicago master list marks as drafted
+**The queue is no longer empty.** It was empty from 2026-08-09 (Chicago) to 2026-08-24, when
+Atlanta was script- and image-staged. Five singles the Chicago master list marks as drafted
 (18 Wrigley Field, 19 Lincoln Park, 22 Gold Coast/Astor, 26 Wicker Park, 27 The 606) were
 never delivered as scripts, images or audio — **if they ever arrive they are a second batch**
 and get a fresh row here, per the staging rule below.
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| **TOTAL PENDING** | **0** | | **0** | | |
+| 🇺🇸 Atlanta | 30 | 30 single-stop, **no walks staged** | 30 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ATL |
+| **TOTAL PENDING** | **30** | | **30** | | |
+
+> ⚠️ **Atlanta breaks this table's standing assumption that every pending tour is
+> image-complete.** It is **21 of 30** (verified against `origin/gh-pages` by slug, not by
+> arithmetic). Wiring it when audio arrives means either shipping 21 and holding 9, or sourcing
+> the last 9 first. The nine without images are **01 Five Points,
+> 02 Zero Mile Post, 04 Woodruff Park, 08 Sweet Auburn Curb Market, 18 BeltLine Eastside Trail,
+> 26 APEX / Auburn Avenue, 28 Graves Hall, 29 Spelman Oval, 30 Student Movement Boulevard** —
+> of which Five Points, Zero Mile, BeltLine, Auburn Avenue and Graves Hall have **verified
+> candidate pools already staged locally and awaiting owner picks**, and Woodruff, Spelman,
+> the Curb Market and Student Movement are the genuinely thin ones. Full detail and the
+> per-tour pick-map: `drafts/atlanta-batch1/README.md`.
 
 _(✅ 🇪🇸 **Barcelona = DONE (2026-08-18): 68 tours LIVE** — 66 single-stop (geofenced 30 m) + **2 walks** (`barcelona-dreta-eixample-walk` "Dreta de l'Eixample", intro+6, 1.4 km — seven Modernista houses on and around the Illa de la Discòrdia; `barcelona-rosari-montserrat-walk` "The Monumental Rosary of Montserrat", intro+4, 1.0 km — down the Camí de la Santa Cova) under new maker **Atlas Studio BCN** (`79ad2022-a58c-52d0-b41a-814f9ac29323`) — the **31st maker**. 78 MP3s, 10,517 s (~2h55m), **the largest narration drop to date**. **Never in this table** — arrived complete and wired the same day. Neither walk shipped an intro track, so stop 01 became the manual stop 0 in each (the Melbourne Federation Square precedent). 🔴 **TEN supplied coordinates were wrong and every one was displaced due north** — Nau Gaudí by 3.2 km, Hotel Porta Fira 1.26 km, Tibidabo 1.14 km (over the ridge into Sant Cugat), Mercantic 964 m, Walden 7 604 m, Torre Bellesguard 488 m, Col·legi de les Teresianes 339 m, Portal Miralles 309 m, Xavier Corberó 248 m, Casa Costa 203 m. All corrected against OSM and reverse-verified onto the named venue. The systematic northward bias is an upstream data-generation problem, not random error — **check it before the next city**. ⚠️ Eight tours ship outside Barcelona with their own `city`: Montserrat ×5, Sant Just Desvern ×2 (Walden 7, La Fábrica), plus El Prat de Llobregat, Santa Coloma de Cervelló, Sant Cugat del Vallès, Mataró, Esplugues de Llobregat, L'Hospitalet de Llobregat and Sant Adrià de Besòs. ⚠️ **Antoni Gaudí is NOT in the tag vocabulary** and 16 tours here are his — the strongest case yet for a `Models/Tag.swift` addition; those tours ship `Designed by a Master`.)_
 

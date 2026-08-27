@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-25 14:45 UTC
+**Last verified:** 2026-08-26 23:50 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,49 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+✅ **THE LINK-PIN FULLSCREEN BUG IS FIXED, SHIPPED AND OWNER-VERIFIED.**
+[#622](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/622) squash `e22dba7`, **build 134 from
+`main`**. Owner on the probe build carrying the same fix: *"133 is live. that seem to be done the
+trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Current State.**
+
+- **🔴 IT TOOK FOUR BUILDS AND THREE WRONG DIAGNOSES, and this board carried two of them as fact.**
+  #611 (build 129) and #617 (build 130) both shipped as "the fix" and neither was. **TikTok and
+  YouTube embeds do not use WebKit element fullscreen at all** — the video takes its **own
+  `UIWindow`**, at or below `.normal + 1`, which is where the module window lives. `fullscreenState`
+  never changed, so nothing ever fired. **Never record a fix as verified on the strength of a merge.**
+- **⚠️ The probe branch `claude/link-fullscreen-probe` is still on the remote and was never merged**
+  — builds 131/132/133 came from it. **Owner must delete it in the GitHub UI**; the git proxy blocks
+  branch deletion from a session. `grep TEMP-PROBE` on `main` is clean.
+
+🟡 **TWO PRs OPEN.**
+
+| PR | What | Class |
+|---|---|---|
+| [#613](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/613) | *The board catches up to main* — `STATUS.md` only | ⚠️ **Behind `main`** — its base predates the 19:20 board update, so it will conflict. Re-derive rather than merge as-is |
+| [#614](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/614) | *Two more tours geofenced away from the spot their script names* | Content — no build needed |
+
+✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
+[#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
+[#616](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/616) squash `5196e459`. Both branches
+auto-deleted. **Nothing is open from this work and nothing is owed on the backend** — the story
+moves to `CLAUDE.md` § Current State, per this file's own rule.
+
+- **Verified against the LIVE RPC, not the merge:** Atlas Studio CPH 🇩🇰 serving all 40 tours,
+  `country: Denmark` on 40, `places` still 27 and `priceTier` still emitted (no keys dropped).
+  Architect tags landed too — `Henning Larsen` 0 → 2, `Designed by a Master` 449 → 466. The
+  gh-pages mirror converged about seven minutes after Supabase.
+- **⚠️ OWED — no simulator or device review of #616.** Owner approved the merge without one. The
+  visible effect is 24 new architect names as filter chips and 21 tours joining the
+  "Designed by a master" shelf; no layout change, and CI's simulator build + unit tests were green.
+- **🔴 STILL UNRESOLVED: an ATLANTA batch is staged on gh-pages with no tracker row.** gh-pages
+  `c533f3c4` (2026-08-24) pushed 41 Atlanta images while `drafts/AUDIO-PENDING-SURVEY.md` said the
+  queue was empty. Flagged in the tracker; **whether scripts exist, and on which branch, was never
+  established.** Do not report the queue empty without re-deriving.
+
+---
+
+## 1b. Earlier board state (link pins)
 
 **Eight PRs merged between 01:22 and 03:10. Zero are open.** The link-pin feature went from four
 throwaway test pins to real content in under two hours.
@@ -185,7 +228,23 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **118** | **`main`** | #597 link pins split out + #598 decode tolerance (`d80465b`) | ✅ **install this** — first build that reads `linkPins` |
+| **134** | **`main`** | #622 the real fullscreen fix — the video's own window (`e22dba7`) | ✅ **install this** |
+| 133 | `link-fullscreen-probe` | Same fix + the temporary readout (`f6aaf78c`) | ✅ owner-verified — *"that seem to be done the trick"* |
+| 132 | `link-fullscreen-probe` | `isElementFullscreenEnabled` theory + probe (`839d2296`) | 🔴 wrong theory — probe proved it |
+| 131 | `link-fullscreen-probe` | The probe readout alone (`773727ae`) | ✅ diagnostic — this is what cracked it |
+| 130 | **`main`** | #617 the `onDisappear` guard (`adbe3b94`) | 🔴 shipped as "the fix"; was not |
+| 129 | **`main`** | #611 withdraw the module on `fullscreenState` (`8df37de8`) | 🔴 shipped as "the fix"; was not |
+| 128 | **`main`** | Everything, from the tip (`43c9411a`) — functionally identical to 127 | ✅ superseded |
+| 127 | `open-source-ai-integration-pxuxdh` | #605 search + map, merged as `43c9411` | ✅ superseded |
+| 126 | `instagram-best-effort` | #606 Instagram, merged as `2ecb95a9` | ✅ owner-verified — superseded |
+| 125 | `open-source-ai-integration-pxuxdh` | #605 search, branch caught up to `main` (`73364503`) | ✅ superseded |
+| 124 | `open-source-ai-integration-pxuxdh` | Merged app code + #605's then-unmerged search work (`fc94f197`) | ✅ superseded |
+| 123 | `open-source-ai-integration-pxuxdh` | Same work, earlier commit (`2f1784e9`) | ✅ superseded |
+| 122 | **`main`** | #603 Instagram tap (`e106fd3e`) | ⚠️ carries the behaviour #604 withdrew |
+| 121 | `new-task-i2k12e` | #601 list-page grid + sort (`33d2b0c4`) | ✅ owner-verified — *"121 went live. Looks good."* |
+| 120 | `new-task-i2k12e` | #600 place-page grid + sort (`ad1ff15e`) | ✅ owner-verified — *"120 is live. works"* |
+| 119 | `new-task-i2k12e` | Same work, one commit earlier (`8b4e6cdc`) | ✅ superseded |
+| 118 | **`main`** | #597 link pins split out + #598 decode tolerance (`d80465b`) | ✅ superseded — owner-verified, pins visible |
 | 117 | **`main`** | #592 WALK pill, on the real AMNH pins (`2a47e28`) | ✅ superseded — shows no link pins |
 | 116 | **`main`** | #584 link pins + #585 YouTube/Short fixes (`233eb912`) | ✅ superseded — shows no link pins |
 | 115 | **`main`** | #583 the stale hero fix (`8f5748b7`) | ✅ superseded — **un-frozen by #597** |
@@ -213,6 +272,12 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 | Branch | State |
 |---|---|
+| `claude/link-fullscreen-probe` | 🔴 **Never merged, still on the remote** — carried the temporary readout and builds 131/132/133. **Owner deletes it in the GitHub UI**; the git proxy blocks branch deletion from a session |
+| `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
+| `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
+| `claude/link-fullscreen-module` | Merged (#611, squash `8df37de8`) |
+| `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` after #621 merged** — now carries the Orlando *architecture* batch (10 pins, commit `da9c96ad`). ⚠️ Same branch name, fresh history: never stacked on merged commits. |
+| ~~`claude/tiktok-orlando-links-ziegoe` (first run)~~ | Merged as #621 (squash `1c05613b`) — nine Orlando link pins, live on Supabase |
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
 | `claude/upload-wizard-improvements-ejopz3` | Merged (#552 at 19:05) |
 | `claude/wizard-comments-round2` | Merged (#558) and deleted |
@@ -231,11 +296,44 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
+**⚠️ Re-derived from `Tours.json` on 2026-08-26 (session 115b): 1,552 tours + 57 link pins, 79 maker rows (34 Atlas studios + 45 pinned creators), 1,924 stops.** The paragraph below predates Copenhagen and the last three link-pin batches and its figures are stale — **re-derive, do not quote.** **🔴 Pinned creators now outnumber Atlas studios**, so the raw `dataService.makers.count` in Settings → About has passed the tipping point flagged when there were four pins; the owner's decision (userId-only / published-tour-only / split the row) is still owed. **⚠️ An ATLANTA batch is still being staged by another session and is still not in the tracker** — a gh-pages push landed mid-session (MLK Birth Home ×7 + the Candler Building). Do not report the audio-pending queue as empty without re-deriving.
+
 **Catalog 1,516 tours live / 45 maker rows served** (49 before the test-creator cleanup). The four `TEST -` pins are gone (#593),
 replaced by **4 real AMNH creator link pins** (#591). **7 served makers have zero tours**, all of them real sign-ups who have not published yet. — **Stockholm (Atlas Studio STO, 45 tours) landed 2026-08-24**
 and is live in the RPC, along with VIA 57 West. Milan (48 tours) landed 2026-08-22. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
 long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
+
+## 7. Verification traps — each one produced a wrong answer here
+
+Not general advice. Every entry below is a check that **returned a confident, wrong result** on this
+repo, and the correction that makes it honest.
+
+- 🔴 **A MERGED PR IS NOT EVIDENCE THAT NO BUILD CARRIES IT.** This board twice reported "nothing
+  waiting on a build" from a list of merged PRs without re-reading the run list in the same turn, and
+  was wrong within five minutes both times — another session had already built the work from its own
+  branch. **Re-read the Actions run list in the same turn as any claim about what is waiting**,
+  including when the answer is "nothing".
+- 🔴 **`git diff` AGAINST A COMMIT GIT DOES NOT HAVE RETURNS EMPTY** — indistinguishable from "no
+  differences". Branches auto-delete on merge, so a build's commit is routinely unreachable. **This
+  produced a false clean twice in one session.** Fetch `refs/pull/<n>/head`, confirm with
+  `git cat-file -t`, and only then trust the diff.
+- 🔴 **A TAKEN-DOWN TOUR IS INVISIBLE TO EVERY ORDINARY READ.** `get_catalog` serves published only,
+  and so does the RLS policy behind PostgREST. On 2026-08-25 the catalogue reported four creators had
+  no tours, a direct API read agreed, and **both were wrong** — each still owned one `taken_down` row,
+  which is why a delete matched nothing three times. **Anything reasoning about "does this maker have
+  tours" must query the table as `postgres`.**
+- 🔴 **A GUARD THAT TURNS A LOUD, SPECIFIC ERROR INTO SILENCE IS WORSE THAN NO GUARD.** That same
+  delete carried `not exists (select 1 from tours …)`, which the hidden rows failed — so it reported
+  *"Success. No rows returned."* Without the guard, `tours.maker_id` being `on delete restrict` would
+  have raised a foreign-key violation **naming the exact blocking row**.
+- ⚠️ **A GREEN `publish-catalog` RUN IS NOT PROOF THE CATALOGUE CHANGED.** It reported success while
+  the live RPC still served the old place count for three more checks. **Ask the RPC.**
+- ⚠️ **A SPAWNED CLOUD SESSION MAY HAVE NO GITHUB TOOLS, AND CANNOT BE MESSAGED FROM A WEB SESSION.**
+  One spawned 2026-08-26 wrote the link-fullscreen fix, could not open a PR, and sat blocked eight
+  hours while another session solved it independently; **its branch was never pushed, so the work was
+  lost with the container.** Brief a spawned session completely up front, tell it to **push its branch
+  early**, and check on it rather than reading silence as progress.
 
 ## 6. Known debt — real, not urgent
 
