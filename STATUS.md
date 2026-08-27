@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-27 03:35 UTC (session 117, after merging #626 and pulling one pin)
+**Last verified:** 2026-08-27 20:45 UTC (session 119, after staging 23 link pins on `claude/tour-links-paste-thsd6q`)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -300,6 +300,8 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/london-batch3-scripts-260616` · `claude/paris-scripts-260622` · `claude/dreamy-wozniak-tags-260612` | 🔒 Keep (documented archival) |
 
 ## 5. Content
+
+**⚠️ Re-derived from `Tours.json` on 2026-08-27 (session 119, this batch): 1,552 tours + 124 link pins, 133 maker rows (34 Atlas studios + 99 pinned creators — 83 TikTok, 11 YouTube, 5 Instagram), 1,924 tour stops.** Twenty-three pins added on branch `claude/tour-links-paste-thsd6q` (**no PR opened** — this session's harness forbids opening one unasked). ⚠️ **This batch adds NO new country** — India and Mexico both look new against the 22 that `tours` span, and both were already in the catalogue via existing link pins (Maya Somaiya Library; two Mexican food pins). **The catalogue spans 30 countries across tours AND pins, and it did before this batch too — never quote the tours-only figure as the catalogue's.** ⚠️ **This is the first batch where Instagram arrives at scale** — 6 reels across 4 creators, all playable inline, and **all four Instagram makers ship `avatarURL: null`** because Instagram's embed exposes no creator avatar; they fall back to the platform mark. ⚠️ **Pinned creators now outnumber Atlas studios almost three to one**, so the raw `dataService.makers.count` in Settings → About is further past the tipping point flagged when there were four pins; the owner's decision (userId-only / published-tour-only / split the row) is **still owed and getting worse each batch**.
 
 **⚠️ Re-derived from `Tours.json` on 2026-08-27 (session 117, after merging #626 and #625): 1,552 tours + 85 link pins, 99 maker rows (34 Atlas studios + 65 pinned creators), 1,924 tour stops.** **⚠️ THREE CONTENT BATCHES LANDED WITHIN TWO HOURS** — nineteen San Francisco pins (#626), four Orlando architect names (#625) and ten Atlanta pins (#627, of which nine shipped). **#626 and #627 conflicted in four files, including an add/add on the same handoff filename**, and #627 had to merge `main` twice. Expect that whenever content sessions run in parallel. **⚠️ THE ATLANTA TOUR BATCH IS ALSO IN FLIGHT** and is in the tracker: 30 single-stop tours, 30 MP3s outstanding, under a new **Atlas Studio ATL**. Its Oakland Cemetery tour will land beside #627's pin for the same site. **The audio-pending queue is NOT empty.**
 
