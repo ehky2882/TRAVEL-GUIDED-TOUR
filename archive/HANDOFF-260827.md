@@ -205,10 +205,13 @@ we author repeats them.**
   read this as a defect. It is not.**
 - **⚠️ `scripts/session-start.sh` reports `(gh unavailable)`** in this container and takes over two
   minutes to return. Its live HTTP and branch sections still work.
-- **⚠️ The Atlanta tour batch is still being staged by another session.** Nine subjects' images are
-  on gh-pages (the Flatiron, Oakland Cemetery, Mercedes-Benz Stadium and more). Whether
-  `drafts/AUDIO-PENDING-SURVEY.md` has gained its row was not re-checked here — **re-derive from
-  `origin/main` before telling the owner the queue is empty.**
+- **✅ THE ATLANTA TOUR BATCH IS IN THE TRACKER — checked, not assumed.**
+  `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` carries the row as of 2026-08-26: **30
+  single-stop tours, no walks, 30 MP3s outstanding, under a new Atlas Studio ATL**, staged on
+  `claude/amsterdam-handoff-preserve-hlhyp8`. The earlier "staged with no tracker row" flag is
+  resolved. **This confirms the overlap above is real and imminent** — that batch's Mercedes-Benz
+  Stadium and Oakland Cemetery tours will land alongside this batch's pins for the same two places.
+  ⚠️ **The audio-pending queue is NOT empty**; do not report it as such.
 - **⚠️ Pinned creators now outnumber Atlas studios 55 to 34 in the raw `dataService.makers.count`
   the Settings → About row renders** — this batch took them 45 → 55. The owner's options (userId-only,
   published-tour-only, split the row) are unchanged and the decision is still owed.

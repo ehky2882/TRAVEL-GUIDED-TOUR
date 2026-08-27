@@ -228,8 +228,12 @@ else, no coordinates and no captions.** Branch restarted clean off `origin/main`
   architecture link-pin batch** (19 subjects + 11 creator avatars) landed at 02:35, and the
   **Atlanta tour batch reached "29 of Atlanta's 30 tours"** at 02:57. **Three consecutive Pages
   deploys were cancelled by each other**, mine among them; the next successful run carries all of
-  them, since each commit is an ancestor of the next. **Expect `main` to have moved and re-derive
-  the catalog counts before quoting them.**
+  them, since each commit is an ancestor of the next. **`main` moved to `ef3ab5e8` (#613) during the
+  session — re-derive the catalog counts before quoting them.** ✅ **And the Atlanta tour batch IS in
+  the tracker now** (checked on `origin/main`, added 2026-08-26): **30 single-stop tours, 30 MP3s
+  outstanding, under a new Atlas Studio ATL** — so the queue is **not** empty, and that batch's
+  Mercedes-Benz Stadium and Oakland Cemetery tours will land beside this batch's pins for the same
+  two places.
 
 ## Current State (2026-08-26)
 
