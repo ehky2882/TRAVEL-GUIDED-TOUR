@@ -39,13 +39,12 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
   — builds 131/132/133 came from it. **Owner must delete it in the GitHub UI**; the git proxy blocks
   branch deletion from a session. `grep TEMP-PROBE` on `main` is clean.
 
-🟡 **THREE PRs OPEN.**
+🟡 **TWO PRs OPEN.**
 
 | PR | What | Class |
 |---|---|---|
 | [#613](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/613) | *The board catches up to main* — `STATUS.md` only | ⚠️ **Behind `main`** — its base predates the 19:20 board update, so it will conflict. Re-derive rather than merge as-is |
 | [#614](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/614) | *Two more tours geofenced away from the spot their script names* | Content — no build needed |
-| [#626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626) | *Nineteen San Francisco architecture link pins* — linkPins 57 → 76, makers 79 → 90 | Content — no build needed; auto-merge class |
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
@@ -280,7 +279,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
 | `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
 | `claude/link-fullscreen-module` | Merged (#611, squash `8df37de8`) |
-| `claude/new-tour-links-nniny1` | **Open as [#626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626)** — twenty "SF Architecture" TikToks, nineteen shipped as link pins. Cut fresh from `origin/main` at `c5e8862`. Content only (`Tours.json` + docs), so it auto-merges on CI green per CLAUDE.md Rule #4 |
+| `claude/new-tour-links-nniny1` | Merged (#626, squash `303012b3`) — nineteen San Francisco architecture link pins. **Verified live on BOTH sources afterwards**, not on the merge: the RPC and the gh-pages mirror each serve 76 link pins with 0 wrongly inside `tours`, and `places` / `priceTier` / `isPrivate` all survived. ⚠️ Restarted from `origin/main` for this board update — never stacked on merged history |
 | `claude/new-tour-links-yr5o7r` | **Open as [#627](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/627)** — ten "Atlanta Architecture" TikToks, **nine shipped as link pins; the tenth (Mercedes-Benz Stadium) pulled by the owner over a probably-AI hero**. Cut clean off `origin/main` `c5e8862`, then **merged `main` in to resolve a four-way conflict with #626** (both batches touched `Tours.json`, `CLAUDE.md`, `STATUS.md`, and both claimed `archive/HANDOFF-260827.md`). Content only. Images live on gh-pages at `a93c06d4`. |
 | `claude/tiktok-orlando-links-ziegoe` | **Restarted from `origin/main` after #621 merged** — now carries the Orlando *architecture* batch (10 pins, commit `da9c96ad`). ⚠️ Same branch name, fresh history: never stacked on merged commits. |
 | ~~`claude/tiktok-orlando-links-ziegoe` (first run)~~ | Merged as #621 (squash `1c05613b`) — nine Orlando link pins, live on Supabase |
@@ -302,9 +301,9 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**⚠️ Re-derived from `Tours.json` on 2026-08-27 (session 117, after merging #626): 1,552 tours + 85 link pins, 99 maker rows (34 Atlas studios + 65 pinned creators), 1,924 tour stops.** **⚠️ TWO LINK-PIN BATCHES LANDED WITHIN AN HOUR OF EACH OTHER** — nineteen San Francisco pins (#626, merged) and ten Atlanta pins (#627, this branch) — **and they conflicted in four files, including an add/add on the same handoff filename.** Expect that whenever two content sessions run in parallel. **⚠️ THE ATLANTA TOUR BATCH IS ALSO IN FLIGHT** and is now in the tracker: 30 single-stop tours, 30 MP3s outstanding, under a new **Atlas Studio ATL**. Its Mercedes-Benz Stadium and Oakland Cemetery tours will land beside #627's pins for the same two places. **The audio-pending queue is NOT empty.**
+**⚠️ Re-derived from `Tours.json` on 2026-08-27 (session 117, after merging #626 and #625): 1,552 tours + 85 link pins, 99 maker rows (34 Atlas studios + 65 pinned creators), 1,924 tour stops.** **⚠️ THREE CONTENT BATCHES LANDED WITHIN TWO HOURS** — nineteen San Francisco pins (#626), four Orlando architect names (#625) and ten Atlanta pins (#627, of which nine shipped). **#626 and #627 conflicted in four files, including an add/add on the same handoff filename**, and #627 had to merge `main` twice. Expect that whenever content sessions run in parallel. **⚠️ THE ATLANTA TOUR BATCH IS ALSO IN FLIGHT** and is in the tracker: 30 single-stop tours, 30 MP3s outstanding, under a new **Atlas Studio ATL**. Its Oakland Cemetery tour will land beside #627's pin for the same site. **The audio-pending queue is NOT empty.**
 
-
+**⚠️ Re-derived from `Tours.json` on 2026-08-27 (session 116): 1,552 tours + 76 link pins, 90 maker rows (34 Atlas studios + 56 pinned creators — 46 TikTok, 9 YouTube, 1 Instagram), 1,924 stops. Live-confirmed on both the Supabase RPC and the gh-pages mirror after #626 merged.** ⚠️ The RPC reports **1,553 tours / 98 makers** against that — the long-standing `Zxxx` test tour plus upsert-only maker accumulation, both pre-existing. **Assert on link-pin counts, not maker totals.** The paragraph below predates Copenhagen and the last three link-pin batches and its figures are stale — **re-derive, do not quote.** **🔴 Pinned creators now outnumber Atlas studios nearly two to one**, so the raw `dataService.makers.count` in Settings → About has passed the tipping point flagged when there were four pins; the owner's decision (userId-only / published-tour-only / split the row) is still owed. **⚠️ An ATLANTA batch is still being staged by another session and is still not in the tracker** — a gh-pages push landed mid-session (MLK Birth Home ×7 + the Candler Building). Do not report the audio-pending queue as empty without re-deriving.
 **⚠️ THE PARAGRAPH BELOW IS STALE AND IS KEPT ONLY FOR ITS LIVE-RPC NOTES — re-derive, do not quote.** Its figures predate Copenhagen and the last five link-pin batches, and **its claim that the audio-pending queue is EMPTY is now false**: Atlanta sits in it with 30 tours awaiting narration.
 
 **Catalog 1,516 tours live / 45 maker rows served** (49 before the test-creator cleanup). The four `TEST -` pins are gone (#593),

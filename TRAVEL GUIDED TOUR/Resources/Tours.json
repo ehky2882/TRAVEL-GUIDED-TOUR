@@ -6921,8 +6921,8 @@
           "order": 0,
           "title": "Eldridge Street Synagogue",
           "caption": "Stand on Eldridge Street facing the facade with its rose window, horseshoe arches, and Stars of David.",
-          "latitude": 40.7143,
-          "longitude": -73.9972,
+          "latitude": 40.7147291,
+          "longitude": -73.993461,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/eldridge_street_synagogue.mp3",
           "audioDurationSeconds": 136,
           "triggerMode": "geofenced",
@@ -6934,8 +6934,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 136,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7143,
-      "centroidLongitude": -73.9972,
+      "centroidLatitude": 40.7147291,
+      "centroidLongitude": -73.993461,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "sacredSites",
@@ -7062,8 +7062,8 @@
           "order": 0,
           "title": "Strivers’ Row",
           "caption": "Stand on West 139th Street between Adam Clayton Powell Jr. Boulevard and Frederick Douglass Boulevard, facing the row houses.",
-          "latitude": 40.8153,
-          "longitude": -73.9443,
+          "latitude": 40.8182647,
+          "longitude": -73.9433181,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/strivers_row.mp3",
           "audioDurationSeconds": 135,
           "triggerMode": "geofenced",
@@ -7075,8 +7075,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 135,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.8153,
-      "centroidLongitude": -73.9443,
+      "centroidLatitude": 40.8182647,
+      "centroidLongitude": -73.9433181,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -80789,7 +80789,8 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Nils M. Schweizer"
       ],
       "priceUSD": 0
     },
@@ -80835,7 +80836,8 @@
         "Library",
         "Architecture",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Adjaye Associates"
       ],
       "priceUSD": 0
     },
@@ -80882,7 +80884,8 @@
         "Architecture",
         "Brutalist",
         "Designed by a Master",
-        "Free to Visit"
+        "Free to Visit",
+        "John M. Johansen"
       ],
       "priceUSD": 0
     },
@@ -80972,7 +80975,8 @@
         "Notable Building",
         "Architecture",
         "History",
-        "Designed by a Master"
+        "Designed by a Master",
+        "James Gamble Rogers II"
       ],
       "priceUSD": 0
     },

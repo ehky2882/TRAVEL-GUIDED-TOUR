@@ -128,12 +128,13 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-27)
 
-### Twenty San Francisco architecture TikToks; nineteen shipped, and a hashtag nearly put one 30 km wrong (branch `claude/new-tour-links-nniny1`, session 116 — content)
+### Twenty San Francisco architecture TikToks; nineteen shipped, and a hashtag nearly put one 30 km wrong ([PR #626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626), session 116 — content)
 
 **The owner sent twenty TikTok share links under the heading "SF Architecture" — URLs and nothing
-else, no coordinates and no captions.** Branch cut fresh from `origin/main`; pushed. **NO PR OPENED**
-(this session's harness forbids opening one unasked); the work is complete and validated.
-**linkPins 57 → 76, makers 79 → 90.** Content only — no Swift, no SQL, no build. Full detail:
+else, no coordinates and no captions.** Squash `303012b3`, **merged and live-confirmed on both
+Supabase and the gh-pages mirror.** **linkPins 57 → 76, makers 79 → 90.** ⚠️ **`main` moved
+immediately afterwards** — [#614](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/614) merged on
+top within minutes — and all 19 pins survived it intact, checked rather than assumed. Content only — no Swift, no SQL, no build. Full detail:
 `archive/HANDOFF-260827.md`.
 
 - **🔴 A HASHTAG IS NOT A LOCATION, AND THIS ONE HAD A CONFIDENT WRONG ANSWER WAITING.** One caption
@@ -227,7 +228,7 @@ else, no coordinates and no captions.** Branch cut fresh from `origin/main`; pus
   refusing to run if they disagree or either parse is empty (they agree at **373 tags**) — **self-tested
   against 43 injected fault classes, 43/43 caught**, then **0 errors, 2 warnings across 1,552 tours + 76
   pins**, **both pre-existing** (confirmed against `origin/main`). Tours.json **byte-stable under a Python
-  re-dump before editing**; diff **961 insertions / 0 deletions**. **CI has not run: no PR is open.**
+  re-dump before editing**; diff **961 insertions / 0 deletions**. **CI green on #626** — the authoritative Swift validator agreed with the mirror, alongside the simulator build and unit tests. **Verified live AFTER the merge, not on it:** the Supabase RPC (the primary source) and the gh-pages mirror each serve **76 link pins with 0 wrongly inside `tours`**, and `places` (27), `priceTier` (all 1,553) and `isPrivate` (all makers) all survived the migration — the session-99 dropped-key check. ⚠️ The RPC reports **1,553 tours / 98 makers** against the catalogue's 1,552 / 90: the long-standing `Zxxx` test tour and upsert-only maker accumulation, both pre-existing. **Assert on link-pin counts, not maker totals.**
 
 ### Nine Atlanta TikToks shipped, and the tenth was pulled for a hero that isn't a photograph (branch `claude/new-tour-links-yr5o7r`, session 117 — content)
 
@@ -335,7 +336,7 @@ build. Shipped as [#627](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/627
   mirror **self-tested 40/40** against injected faults, then **0 errors, 2 warnings across 1,552
   tours + 67 pins**, **both pre-existing** — confirmed by running the same mirror against
   `origin/main`, which reports the identical pair. Vocabulary parsed from **both** `Models/Tag.swift`
-  and the Swift validator and required to agree (**373 tags**). `make-link-pin.py --selftest`
+  and the Swift validator and required to agree (**373 tags at the time; 377 after #625 landed the Orlando architects**). `make-link-pin.py --selftest`
   **71/71** — ⚠️ it reports **62/62 without Pillow**, so install Pillow before reading that number as
   a pass. Tours.json **byte-stable under a Python re-dump before editing**; diff **532 insertions /
   0 deletions**. **CI has not run: no PR is open.**
@@ -351,6 +352,48 @@ build. Shipped as [#627](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/627
   two places.
 
 ## Current State (2026-08-26)
+
+### Four Orlando architects join the vocabulary — 323 → 327 (branch `claude/tiktok-orlando-links-ziegoe`, session 115c — code + content)
+
+**Owner: *"add architects."*** The four names verified while wiring the Orlando architecture pins are
+now in the controlled vocabulary, and those four pins carry them instead of the generic fallback.
+Commit `fc30f83c`. **⚠️ This is a CODE change** (`Models/Tag.swift`), so unlike the two content
+batches before it, it wants an owner OK and a simulator look — the same footing as the Copenhagen
+architects in #616.
+
+- **All four were verified against published records this session, not recalled:** **Nils M.
+  Schweizer** (75 S Ivanhoe, the 1968 Orlando Chamber of Commerce building — buff masonry floating
+  over an open entry level behind a rust brise-soleil on canted corner piers, matching the Orlando
+  Foundation for Architecture's own description) · **Adjaye Associates** (Winter Park Library &
+  Events Center, rose-pigmented concrete, opened December 2021) · **John M. Johansen** (Orlando
+  Public Library, Brutalism, 1966 — the board-marked concrete in the pin's own hero is the
+  cedar-plank formwork the record describes) · **James Gamble Rogers II** (Casa Feliz, 1933,
+  National Register).
+- **🔴 BOTH VOCABULARIES WERE EDITED.** `Models/Tag.swift` and `scripts/validate-tours.swift` each
+  keep their own copy, and editing one alone produces **an error per tagged tour** (the session-104
+  lesson: 185 names added to Tag.swift alone produced 193 validator errors). The two are asserted
+  **identical at 327 names**.
+- **🔴 `Designed by a Master` IS KEPT ON ALL FOUR, NOT REPLACED.** `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string, so dropping it would
+  take the tour off the shelf built for exactly those tours. Verified after the change: **0
+  named-architect tours are missing it**, and **0 of the 327 names are unused** — no dead
+  vocabulary.
+- **⚠️ No other tour in the catalogue mentions any of the four**, so nothing else was retagged. Had
+  one, a mention would not have been authorship anyway (the Sullivan rule).
+- **⚠️ `Adjaye Associates` is the practice, not the individual**, which is how the building is
+  credited and how this file already handles `3XN`, `Cobe` and `White Arkitekter`. ⚠️ Note the
+  project has previously *rejected* `Foster + Partners` as a duplicate of `Norman Foster`, so the
+  practice-vs-person convention is not uniform; if a future sweep normalises it, this is one of the
+  entries to revisit.
+- **⚠️ `Richard Rogers` was already in the vocabulary and is a DIFFERENT PERSON** from James Gamble
+  Rogers II. Checked on normalised token sets, not strings — the session-104 rule that stops the
+  vocabulary growing near-duplicates that split a shelf in two. **0 collisions.**
+- **Verification.** Validator mirror **self-tested 33/33** against injected faults, then **0 errors,
+  2 warnings across 1,552 tours + 57 pins** — both warnings pre-existing. Vocabulary parsed from
+  both Swift files and required to agree: **377 tags across 5 facets**. **⚠️ Nothing compiled
+  locally** (no Swift toolchain in a Linux web session) — **CI is the only compile check**. The one
+  bracket-count imbalance in `validate-tours.swift` was confirmed **pre-existing on `origin/main`**
+  (a `[` inside a string literal), not introduced here.
 
 ### Eleven Orlando architecture TikToks; ten shipped, and the eleventh cannot be pinned at all (branch `claude/tiktok-orlando-links-ziegoe`, session 115b — content)
 

@@ -5,9 +5,20 @@ gone from TikTok's own servers.** Branch `claude/new-tour-links-nniny1`, cut
 fresh from `origin/main` at `c5e8862`. Content only — no Swift, no SQL, no
 build. **linkPins 57 → 76, makers 79 → 90.**
 
-**NO PR OPENED** — this session's harness forbids opening one unasked. The work
-is complete, validated and pushed; the branch is ready for a PR whenever the
-owner wants one.
+**Merged as [#626](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/626)**, squash `303012b3`,
+after the owner asked for a PR. CI green on all four checks — including the
+**authoritative Swift validator**, which agreed with the Python mirror below.
+**Verified live AFTER the merge, not on it:** the Supabase RPC (the primary
+source) and the gh-pages mirror each serve **76 link pins with 0 wrongly inside
+`tours`**, and `places` (27), `priceTier` (all 1,553) and `isPrivate` (all
+makers) survived — the session-99 dropped-key check.
+
+⚠️ **`main` moved within minutes of the merge** —
+[#614](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/614) landed on top —
+and the gh-pages mirror briefly read 57 pins while the CDN caught up. **The
+branch blob matched `main` throughout; that was propagation lag, not a lost
+push.** All 19 pins confirmed present on `main` after #614, checked rather than
+assumed.
 
 ---
 
