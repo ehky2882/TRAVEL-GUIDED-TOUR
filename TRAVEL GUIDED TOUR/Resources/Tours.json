@@ -791,14 +791,6 @@
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.tiktok.com/@itsjanasoli.co"
-    },
-    {
-      "id": "B3E0845D-F854-5314-9C02-6E749770C8A2",
-      "displayName": "TikTok @morganjamesjr",
-      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-morganjamesjr.webp",
-      "avatarEmoji": "🎵",
-      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
-      "websiteURL": "https://www.tiktok.com/@morganjamesjr"
     }
   ],
   "tours": [
@@ -82484,52 +82476,6 @@
         "Park",
         "History",
         "Green Escape"
-      ],
-      "priceUSD": 0
-    },
-    {
-      "id": "2A5CD4DD-2206-50A5-BDF2-8A56A5D818A5",
-      "createdAt": "2026-08-27",
-      "title": "Mercedes-Benz Stadium",
-      "shortDescription": "A post by @morganjamesjr on TikTok.",
-      "longDescription": "MERCEDES-BENZ STADIUM: Inside Atlanta's $1.5B+ Mechanical Mega-Arena 🏗️ #tiktokgrowthchallenge #MegaProjects #EngineeringTimelapse #ArchitectureReveal #StadiumConstruction",
-      "makerId": "B3E0845D-F854-5314-9C02-6E749770C8A2",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercedes-benz-stadium-morganjamesjr_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.tiktok.com/@morganjamesjr/video/7651705019263110430",
-      "sourceAuthor": "@morganjamesjr",
-      "stops": [
-        {
-          "id": "12767509-86D4-5EB5-82F5-A80178FBCF2F",
-          "order": 0,
-          "title": "Mercedes-Benz Stadium",
-          "caption": "MERCEDES-BENZ STADIUM: Inside Atlanta's $1.5B+ Mechanical Mega-Arena 🏗️ #tiktokgrowthchallenge #MegaProjects #EngineeringTimelapse #Architec",
-          "latitude": 33.7554123,
-          "longitude": -84.4008493,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercedes-benz-stadium-morganjamesjr_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 33.7554123,
-      "centroidLongitude": -84.4008493,
-      "city": "Atlanta",
-      "country": "United States",
-      "primaryCategory": "architecture",
-      "tags": [
-        "Venue",
-        "Architecture",
-        "Engineering",
-        "Contemporary"
       ],
       "priceUSD": 0
     }
