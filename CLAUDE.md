@@ -210,29 +210,36 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   with a real wake. The disclosure covers the video's archival material, not this frame.
 - **✅ BARCELONA PAVILION IS NOW A PLACE — owner instruction, places 30 → 31.** The Atlas tour
   *"Mies van der Rohe Pavilion"* and the new pin *"Barcelona Pavilion"* were the same subject
-  77 m apart under two names.
-  - **🔴 THE PIN MOVED, THE TOUR DID NOT.** The tour is **geofenced at 30 m**, so shifting it
-    changes where its audio fires; the pin is `manual` with no geofence, so moving it costs
-    nothing. The place anchors on the tour's coordinate and the pin travelled **77 m** onto it —
-    the Grace Cathedral precedent exactly.
-  - **⚠️ AND THE TOUR'S COORDINATE IS NOT WRONG, WHICH IS WHY IT WON.** It sits **4 m from the
-    Avinguda de Francesc Ferrer i Guàrdia roadway and its footway**, at the Carrer de Mèxic
-    corner — the **opposite-pavement vantage this file already documents for Barcelona** (Casa
-    Batlló 39 m, Casa Amatller 60 m, Casa Lleó Morera 31 m, all off their building nodes on the
-    far pavement). The tour's own script opens *"The building standing in front of you"*, which
-    is a vantage, not the building.
-  - **⚠️ The building's own coordinate, for the record, is `41.3705476, 2.1499628`** — the
-    area-weighted centroid of OSM `way/67917935`, tagged `architect=Ludwig Mies van der Rohe`,
-    `wikidata=Q807915`, address 7 Avinguda de Francesc Ferrer i Guàrdia. **The link pin was
-    already inside that footprint, 1 m from its centroid.** Two correct points 77 m apart; which
-    one the place sits on is a decision, not an error, and the never-move-a-geofenced-tour rule
-    decided it. **Do not "fix" the tour onto the building without weighing the geofence.**
+  78 m apart under two names.
+  - **🔴 OWNER OVERRODE "THE PIN MOVES, NEVER THE TOUR" — DELIBERATELY, AND THIS IS THE RECORD SO
+    NOBODY PUTS IT BACK.** I first anchored the place on the tour's coordinate, because the tour
+    is **geofenced at 30 m** and the pin is `manual`. The owner was shown that trade-off and
+    instructed: *"move the barcelona paviion coordinates to the building. place both tours at the
+    locaiton."* **So the place AND both members now sit on the building at
+    `41.3705476, 2.1499628`, and the geofenced tour was moved 78 m to get there.**
+  - **⚠️ THE MOVE IMPROVES THE GEOFENCE RATHER THAN DAMAGING IT, which is why it is defensible.**
+    The old point was 64 m outside the building's nearest edge, so **standing at the pavilion did
+    not fire the tour** while standing across the avenue did. The furthest building corner is now
+    **15 m** from the trigger point, so a 30 m radius covers the whole footprint plus ~15 m of
+    approach. **Check this before moving any other geofenced tour — it will not always be true.**
+  - **The coordinate is the area-weighted centroid of OSM `way/67917935`**, tagged
+    `architect=Ludwig Mies van der Rohe`, `wikidata=Q807915`, `int_name=Barcelona Pavilion`,
+    `start_date=1929`, `opening_date=1986`, address **7 Avinguda de Francesc Ferrer i Guàrdia,
+    08038**. It reverse-geocodes to *Pavelló Mies van der Rohe*, `type=attraction`. ⚠️ **OSM maps
+    only the roofed 29 × 24 m volume, not the podium and pools** — there is no larger site
+    polygon, checked across all 106 ways within 120 m.
+  - **⚠️ THE TOUR'S OLD COORDINATE WAS NOT WRONG, and that is worth keeping.** It sat **4 m from
+    the Avinguda de Francesc Ferrer i Guàrdia roadway and its footway** at the Carrer de Mèxic
+    corner — the **opposite-pavement vantage this file documents for Barcelona** (Casa Batlló
+    39 m, Casa Amatller 60 m, Casa Lleó Morera 31 m), and the tour's own script opens *"The
+    building standing in front of you."* **It was replaced by owner decision, not because it was
+    an error** — so do not cite this as precedent for "correcting" the other three.
   - **⚠️ The place hero is `mies-van-der-rohe-pavilion_2.webp`** — an exterior elevation already
     uploaded and verified, **deliberately NOT either member's hero**, both of which show Kolbe's
     *Alba* in the interior pool. That is the fault found across 13 of the first 24 places (one
     photograph printed three times) being avoided by construction.
-  - `check-place-candidates.py` now drops the pair from NEAR (8 → 7); its one **EXACT** group
-    remains the **pre-existing Casa Lleó Morera deferral**, which is not this batch's.
+  - `check-place-candidates.py` drops the pair from NEAR (8 → 7) and the move creates no new
+    coincidence; its one **EXACT** group remains the **pre-existing Casa Lleó Morera deferral**.
 - **⚠️ THREE ARCHITECTS IN THE VOCABULARY AND USED BY NAME, each ALONGSIDE the generic tag:**
   `Mies van der Rohe`, `Thomas Heatherwick`, `Hector Guimard`. **Verified and ABSENT: Walter
   Gropius (Bauhaus Dessau) and Luis Barragán (Cuadra San Cristóbal) are now the two most
