@@ -78954,6 +78954,21 @@
         "1532C298-F3FA-5B50-BC04-2F8D8A25A170",
         "A55EAA2F-FE96-5EDC-BE48-F7EC29C0704B"
       ]
+    },
+    {
+      "id": "b1ba2515-0b33-5d25-a257-865939e8c322",
+      "name": "Barcelona Pavilion",
+      "description": "Mies van der Rohe and Lilly Reich built the German Pavilion for the 1929 International Exposition, and it was taken down within the year. What stands here is a replica finished in 1986 on the original ground — thin planes of green Tinos marble, onyx and chrome standing free in still water rather than closing into rooms.",
+      "latitude": 41.37122283906093,
+      "longitude": 2.150222468396449,
+      "city": "Barcelona",
+      "address": "Avinguda de Francesc Ferrer i Guàrdia 7, Barcelona",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mies-van-der-rohe-pavilion_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "468468f9-80a4-5221-8e67-72c835585765",
+        "8F6C96FB-40D1-59C6-AD45-64D06D1CF9C5"
+      ]
     }
   ],
   "linkPins": [
@@ -83832,8 +83847,8 @@
           "order": 0,
           "title": "Barcelona Pavilion",
           "caption": "Is the Barcelona Pavilion the most influential building of the 20th century? Nearly 100 years after it was designed, the Barcelona Pavilion ",
-          "latitude": 41.370557,
-          "longitude": 2.1499593,
+          "latitude": 41.37122283906093,
+          "longitude": 2.150222468396449,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -83845,8 +83860,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.370557,
-      "centroidLongitude": 2.1499593,
+      "centroidLatitude": 41.37122283906093,
+      "centroidLongitude": 2.150222468396449,
       "city": "Barcelona",
       "country": "Spain",
       "primaryCategory": "architecture",
