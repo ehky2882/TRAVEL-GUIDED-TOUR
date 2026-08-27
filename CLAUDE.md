@@ -230,7 +230,18 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   under a Python re-dump before editing**; diff **1,204 insertions / 0 deletions**. gh-pages:
   `git ls-remote` re-checked **in the same command as the push**, tree diff **exactly 38 additions,
   0 deletions, nothing outside `images/`** (`aa90369b`), deploy read **`in_progress`, not
-  `cancelled`**. **CI has not run: no PR is open.**
+  `cancelled`**, and **all 38 live URLs were then hash-verified against the uploaded blobs — 38
+  ok, 0 bad**, re-run independently after the deploy completed. **38 uploaded = 38 referenced, 0
+  orphaned**, every referenced URL 200. ⚠️ **One file logged a HASH MISMATCH on the attempt before
+  the deploy finished and serves correct, stable bytes now** (checked three times) — a
+  mid-propagation artifact, and precisely why this check hashes bytes rather than reading a 200.
+  **CI has not run: no PR is open.**
+- **⚠️ TOOLING GAP: `check-image-duplicates.py` cannot scope to a link-pin batch.** It takes
+  `--maker <CODE>` (a city) or `--all` (5,800+ images); a pin batch has no maker code, and
+  `--file` alone is rejected. Covered here by running the same two-stage check by hand over the
+  exact 23 heroes, then confirming the live bytes match those files. **A `--since <ref>` or
+  `--pins` flag is the obvious fix** — every link-pin batch has hit this and worked around it
+  silently.
 
 ### Sixteen link pins and all sixteen shipped — but one supplied coordinate was 7.6 km wrong (branch `claude/tour-links-5von4n`, session 118 — content)
 
