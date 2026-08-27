@@ -181,12 +181,20 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   themselves in the frame. **Mount Everest Deli closed on three independent checks**: the
   supplied coordinate reverse-geocodes to 56-09 Myrtle Avenue, listings give 5609 Myrtle Avenue,
   and **"-09" is legible on the shop's own awning.**
-- **⚠️ THREE HAND RE-CROPS — the vertical `--focus` gap, FIFTH batch running.** `render_hero`
+- **🔴 OWNER INSTRUCTION 2026-08-27: "dont change the heros, i dont want to editorialize other
+  people's work."** All three flagged heroes ship exactly as their creators made them, and
+  **Castel Béranger's hand re-crop was REVERTED to the tool's default centred crop** — that one
+  had deliberately dropped the creator's asking-price overlay, which is precisely the
+  editorializing the instruction rules out. **The Verrazzano and Park Side Donuts re-crops were
+  KEPT**, because they *recover* the creator's own headline text that the default square had
+  sliced mid-word — fidelity to their frame rather than a change to it. **The distinction to
+  carry: recovering what the crop destroyed is not the same as removing what the creator put
+  there.**
+- **⚠️ TWO HAND RE-CROPS REMAIN — the vertical `--focus` gap, FIFTH batch running.** `render_hero`
   crops with `centering=(focus, 0.5)`, and for a 9:16 phone video the square is width-limited so
   **`--focus` does nothing at all**. Re-rendered through a mirror of the tool's own pipeline, same
   filename so `Tours.json` is untouched: **Verrazzano** (0.18) and **Park Side Donuts** (0.12),
-  whose centred squares sliced the subject's own name, and **Castel Béranger** (0.78), whose crop
-  kept an apartment asking price that will go stale. ⚠️ **Bauhaus and the Bronx Zoo were
+  whose centred squares sliced the subject's own name. ⚠️ **Bauhaus and the Bronx Zoo were
   deliberately LEFT ALONE** — what they lose is the video's topic strapline, not the subject's
   name (the California Academy rule).
 - **🔴 THREE HEROES FLAGGED FOR THE OWNER, NOT RESOLVED UNILATERALLY.** **Hugo de Grootplein is a
@@ -200,11 +208,31 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   that got Mercedes-Benz Stadium pulled. **Checked at pixel level rather than assumed:** a real
   **double-deck** span with the truss between levels, individually-shaped period cars, a tugboat
   with a real wake. The disclosure covers the video's archival material, not this frame.
-- **⚠️ PLACE CANDIDATE FLAGGED, NOT CREATED.** `check-place-candidates.py` (selftest 24/24) reports
-  the **Barcelona Pavilion pin 77 m from the Atlas tour "Mies van der Rohe Pavilion"** — the same
-  subject under two names. **NEAR, not EXACT, so never auto-created**, and both points are
-  defensible (the pin sits on OSM's own `Pavelló Mies van der Rohe` way). Its one EXACT group is
-  the pre-existing Barcelona deferral.
+- **✅ BARCELONA PAVILION IS NOW A PLACE — owner instruction, places 30 → 31.** The Atlas tour
+  *"Mies van der Rohe Pavilion"* and the new pin *"Barcelona Pavilion"* were the same subject
+  77 m apart under two names.
+  - **🔴 THE PIN MOVED, THE TOUR DID NOT.** The tour is **geofenced at 30 m**, so shifting it
+    changes where its audio fires; the pin is `manual` with no geofence, so moving it costs
+    nothing. The place anchors on the tour's coordinate and the pin travelled **77 m** onto it —
+    the Grace Cathedral precedent exactly.
+  - **⚠️ AND THE TOUR'S COORDINATE IS NOT WRONG, WHICH IS WHY IT WON.** It sits **4 m from the
+    Avinguda de Francesc Ferrer i Guàrdia roadway and its footway**, at the Carrer de Mèxic
+    corner — the **opposite-pavement vantage this file already documents for Barcelona** (Casa
+    Batlló 39 m, Casa Amatller 60 m, Casa Lleó Morera 31 m, all off their building nodes on the
+    far pavement). The tour's own script opens *"The building standing in front of you"*, which
+    is a vantage, not the building.
+  - **⚠️ The building's own coordinate, for the record, is `41.3705476, 2.1499628`** — the
+    area-weighted centroid of OSM `way/67917935`, tagged `architect=Ludwig Mies van der Rohe`,
+    `wikidata=Q807915`, address 7 Avinguda de Francesc Ferrer i Guàrdia. **The link pin was
+    already inside that footprint, 1 m from its centroid.** Two correct points 77 m apart; which
+    one the place sits on is a decision, not an error, and the never-move-a-geofenced-tour rule
+    decided it. **Do not "fix" the tour onto the building without weighing the geofence.**
+  - **⚠️ The place hero is `mies-van-der-rohe-pavilion_2.webp`** — an exterior elevation already
+    uploaded and verified, **deliberately NOT either member's hero**, both of which show Kolbe's
+    *Alba* in the interior pool. That is the fault found across 13 of the first 24 places (one
+    photograph printed three times) being avoided by construction.
+  - `check-place-candidates.py` now drops the pair from NEAR (8 → 7); its one **EXACT** group
+    remains the **pre-existing Casa Lleó Morera deferral**, which is not this batch's.
 - **⚠️ THREE ARCHITECTS IN THE VOCABULARY AND USED BY NAME, each ALONGSIDE the generic tag:**
   `Mies van der Rohe`, `Thomas Heatherwick`, `Hector Guimard`. **Verified and ABSENT: Walter
   Gropius (Bauhaus Dessau) and Luis Barragán (Cuadra San Cristóbal) are now the two most
