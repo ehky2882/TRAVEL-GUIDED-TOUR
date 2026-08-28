@@ -283,3 +283,28 @@ representative precedent.** Raise a suspect-synthetic hero and expect it to go.
 **And say up front which OTHER pins removing a creator would take.** "Pull the
 user" is a wider instruction than "pull these pins", and here it reached a pin
 that had already been examined and cleared.
+
+
+### 🔴 The removal did not reach the live app, and the mirror hid that
+
+After #634 merged and `publish-catalog` ran, **the Supabase RPC still served all
+four pins and both creators.** `seed_from_toursjson.py` is **upsert-only by
+design** — so a deletion in `Tours.json` reaches the gh-pages mirror and the
+bundled offline seed and **never reaches Postgres**, which is what the app reads
+first. Checking the mirror alone would have shown the pins gone and been wrong.
+
+**A removal is a two-part change: the catalogue edit, plus SQL the owner runs.**
+`backend/pull_nycunfilteredstories.sql` is the worked example.
+
+Ordering matters and is load-bearing. Delete the four `tours` rows first —
+`stops`, `user_library`, `user_recently_viewed`, `journey_items` and
+`group_sessions` all cascade, and `reports.tour_id` is `on delete set null`;
+`purchases.tour_id` is `on delete restrict`, but these are free pins so nothing
+can reference them there. **Then** the two `makers` rows, because
+`tours.maker_id` is `on delete restrict`. That restrict doubles as the safety
+net: a surviving pin makes the maker delete fail and rolls the whole
+transaction back rather than half-applying.
+
+⚠️ `status = 'taken_down'` would hide the pins (`get_catalog` filters
+`status = 'published'`) but would **not** let the creator rows go, for the same
+restrict — so a full "pull the user" needs the delete, not a takedown.

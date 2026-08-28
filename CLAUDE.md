@@ -137,6 +137,22 @@ Swift, no SQL, no build. **NO PR OPENED** (this session's harness forbids openin
 Full detail: `archive/HANDOFF-260828.md`.
 
 - **✅ ALL THIRTY WERE PINNABLE** — no dead posts, no `/photo/` carousels. Third fully intact batch.
+- **🔴 DELETING CONTENT FROM `Tours.json` DOES NOT REMOVE IT FROM THE LIVE APP — and that was
+  discovered by checking, not by reasoning.** After the pull merged and `publish-catalog` ran, the
+  **Supabase RPC still served all four pins and both creators.** `seed_from_toursjson.py` is
+  **upsert-only by design** (so a content re-seed can never wipe maker-created rows), so a deletion
+  in the catalogue file reaches the gh-pages mirror and the bundled offline seed and **never
+  reaches Postgres** — which is the source the app reads FIRST. The mirror going quiet is not the
+  pin going away. **⚠️ A REMOVAL IS THEREFORE A TWO-PART CHANGE: the catalogue edit, plus SQL the
+  owner runs.** `backend/pull_nycunfilteredstories.sql` is the worked example — it deletes the four
+  `tours` rows (stops, library, recently-viewed and list rows all cascade; `purchases.tour_id` is
+  `on delete restrict` but these are free pins so nothing can reference them), **then** the two
+  `makers` rows, in that order because `tours.maker_id` is `on delete restrict` — which doubles as
+  the safety net, since a surviving pin makes the maker delete fail and rolls the whole transaction
+  back. It verifies inside the transaction and raises rather than half-applying.
+  **⚠️ Setting `status = 'taken_down'` would also hide the pins** (`get_catalog` filters
+  `status = 'published'`) **but would NOT let the creator rows go**, because of that same
+  restrict — so a full "pull the user" needs the delete.
 - **🔴 OWNER PULLED FOUR PINS AND TWO CREATORS AFTER MERGE — `linkPins` 154 → 150, makers 155 → 153.**
   Owner, on being shown the flagged heroes: *"Pull empire theatre, Brooklyn bridge caissons and the
   octagon. In fact pull the user nycunfilteredstories."* So all three named pins went, **and the
