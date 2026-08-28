@@ -945,14 +945,6 @@
       "websiteURL": "https://www.tiktok.com/@natgeo"
     },
     {
-      "id": "7B5265CD-E6D6-534D-A501-D0BC50369BF8",
-      "displayName": "Instagram @nycunfilteredstories",
-      "avatarURL": null,
-      "avatarEmoji": "📷",
-      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
-      "websiteURL": "https://www.instagram.com/nycunfilteredstories/"
-    },
-    {
       "id": "9A9F4DB6-41DF-561B-B94D-C18E91478A47",
       "displayName": "TikTok @spacesofmydreams",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-spacesofmydreams.webp",
@@ -1063,14 +1055,6 @@
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.tiktok.com/@landmarksofny"
-    },
-    {
-      "id": "FA4A1E67-9AC1-5C60-A33F-21981130397D",
-      "displayName": "Instagram @theironwil",
-      "avatarURL": null,
-      "avatarEmoji": "📷",
-      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
-      "websiteURL": "https://www.instagram.com/theironwil/"
     },
     {
       "id": "45BF06CD-D852-5E3B-8911-A5BE90788848",
@@ -83958,52 +83942,6 @@
       "priceUSD": 0
     },
     {
-      "id": "9FE2A045-A1E7-58A3-B06B-1CDE9DA3C2BC",
-      "createdAt": "2026-08-27",
-      "title": "Verrazzano-Narrows Bridge",
-      "shortDescription": "A post by @nycunfilteredstories on Instagram.",
-      "longDescription": "Most New Yorkers know the Verrazzano-Narrows Bridge, but very few know it almost opened under a completely different name. Before construction, it was simply called the Narrows Bridge. Then came proposals to honor explorer Giovanni da Verrazzano, rename it the Staten Island Bridge, and even a petition after President Kennedy’s assassination to name it in his honor. Do you think New York got it right? (Images were recreated, but the history is the story.) #verrazzanobridge #StatenIslandHistory #didyouknownyc #NYCHistory #nycunfiltered",
-      "makerId": "7B5265CD-E6D6-534D-A501-D0BC50369BF8",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/verrazzano-narrows-bridge-nycunfilteredstories_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DcPXxBEh0rG/",
-      "sourceAuthor": "@nycunfilteredstories",
-      "stops": [
-        {
-          "id": "7B881690-44A7-50EB-B1D2-EA5F90A3BD53",
-          "order": 0,
-          "title": "Verrazzano-Narrows Bridge",
-          "caption": "Most New Yorkers know the Verrazzano-Narrows Bridge, but very few know it almost opened under a completely different name. Before constructi",
-          "latitude": 40.6066,
-          "longitude": -74.0447,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/verrazzano-narrows-bridge-nycunfilteredstories_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 40.6066,
-      "centroidLongitude": -74.0447,
-      "city": "New York",
-      "country": "United States",
-      "primaryCategory": "history",
-      "tags": [
-        "Bridge",
-        "History",
-        "Engineering",
-        "Iconic Landmark"
-      ],
-      "priceUSD": 0
-    },
-    {
       "id": "8F6C96FB-40D1-59C6-AD45-64D06D1CF9C5",
       "createdAt": "2026-08-27",
       "title": "Barcelona Pavilion",
@@ -84781,51 +84719,6 @@
       "priceUSD": 0
     },
     {
-      "id": "A557A03A-9B88-59BF-8463-6B1F7FDF55D2",
-      "createdAt": "2026-08-28",
-      "title": "Empire Theatre, 42nd Street",
-      "shortDescription": "A post by @nycunfilteredstories on Instagram.",
-      "longDescription": "Most people think they’re walking into a modern movie theater. But the entrance to the theater AMC Empire 25 is actually a historic Broadway theater that engineers picked up and rolled 168 feet down 42nd Street, without taking it apart. Have you ever walked through it without knowing its incredible history? (Images were recreated, but the history is the story.) #empiretheatrehistory #NewYorkHistory #historylovers #NYCStories #nycunfiltered",
-      "makerId": "7B5265CD-E6D6-534D-A501-D0BC50369BF8",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-theatre-42nd-street-nycunfilteredstories_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DcTqdWqBtYo/",
-      "sourceAuthor": "@nycunfilteredstories",
-      "stops": [
-        {
-          "id": "3A0A54FC-F942-5D8E-B95E-538F2F0712FC",
-          "order": 0,
-          "title": "Empire Theatre, 42nd Street",
-          "caption": "Most people think they’re walking into a modern movie theater. But the entrance to the theater AMC Empire 25 is actually a historic Broadway",
-          "latitude": 40.7566852,
-          "longitude": -73.9892665,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-theatre-42nd-street-nycunfilteredstories_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7566852,
-      "centroidLongitude": -73.9892665,
-      "city": "New York",
-      "country": "United States",
-      "primaryCategory": "history",
-      "tags": [
-        "Notable Building",
-        "History",
-        "Engineering"
-      ],
-      "priceUSD": 0
-    },
-    {
       "id": "1F7C8B15-EF98-59F2-8D70-3314BCB26770",
       "createdAt": "2026-08-28",
       "title": "U.S. Embassy, Nine Elms",
@@ -84868,52 +84761,6 @@
         "Architecture",
         "Power",
         "Contemporary"
-      ],
-      "priceUSD": 0
-    },
-    {
-      "id": "25A8AF20-3B33-5A9F-885D-90553F97C095",
-      "createdAt": "2026-08-28",
-      "title": "The Brooklyn Bridge Caissons",
-      "shortDescription": "A post by @theironwil on Instagram.",
-      "longDescription": "They Built The Brooklyn Bridge From The Bottom Of The River. Nobody Knew It Was Killing Them.\" 🌉🇺🇸 #BrooklynBridge #AmericanHistory #EngineeringMarvel #HistoryUntold #USHistory",
-      "makerId": "FA4A1E67-9AC1-5C60-A33F-21981130397D",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-caissons-theironwil_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DcXCyy7ByVA/",
-      "sourceAuthor": "@theironwil",
-      "stops": [
-        {
-          "id": "81734EE7-9294-51AE-9DB0-F4F56600D989",
-          "order": 0,
-          "title": "The Brooklyn Bridge Caissons",
-          "caption": "They Built The Brooklyn Bridge From The Bottom Of The River. Nobody Knew It Was Killing Them.\" 🌉🇺🇸 #BrooklynBridge #AmericanHistory #Enginee",
-          "latitude": 40.7062175,
-          "longitude": -73.9970208,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-caissons-theironwil_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7062175,
-      "centroidLongitude": -73.9970208,
-      "city": "New York",
-      "country": "United States",
-      "primaryCategory": "history",
-      "tags": [
-        "Bridge",
-        "Engineering",
-        "History",
-        "Maritime"
       ],
       "priceUSD": 0
     },
@@ -84962,51 +84809,6 @@
         "Contemporary",
         "Christian de Portzamparc",
         "Designed by a Master"
-      ],
-      "priceUSD": 0
-    },
-    {
-      "id": "C79C2FD5-4583-50D8-8F9F-0EC311CF5530",
-      "createdAt": "2026-08-28",
-      "title": "The Octagon, Roosevelt Island",
-      "shortDescription": "A post by @nycunfilteredstories on Instagram.",
-      "longDescription": "Most people walk past The Octagon without realizing it once served as the entrance to the New York Lunatic Asylum. Today, it’s one of Roosevelt Island’s most recognizable landmarks, and one of its most fascinating hidden stories. Would you have guessed its past? Comment below, share with someone who loves New York, and follow for more NYC stories they barely talk about. #rooseveltislandnyc #NYCHistory #ForgottenHistory #oldnewyork #nycunfiltered",
-      "makerId": "7B5265CD-E6D6-534D-A501-D0BC50369BF8",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-octagon-roosevelt-island-nycunfilteredstories_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DcBo9Kchknw/",
-      "sourceAuthor": "@nycunfilteredstories",
-      "stops": [
-        {
-          "id": "7F975F56-FE56-585F-A121-52E3158882F8",
-          "order": 0,
-          "title": "The Octagon, Roosevelt Island",
-          "caption": "Most people walk past The Octagon without realizing it once served as the entrance to the New York Lunatic Asylum. Today, it’s one of Roosev",
-          "latitude": 40.7690056,
-          "longitude": -73.943925,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-octagon-roosevelt-island-nycunfilteredstories_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7690056,
-      "centroidLongitude": -73.943925,
-      "city": "New York",
-      "country": "United States",
-      "primaryCategory": "history",
-      "tags": [
-        "Notable Building",
-        "History",
-        "Neoclassical"
       ],
       "priceUSD": 0
     },

@@ -7,6 +7,11 @@ session's harness forbids opening one unasked).
 **linkPins 124 → 154, makers 133 → 155, countries 30 → 32.** Tours unchanged at
 1,552; places unchanged at 31.
 
+> **⚠️ AMENDED AFTER MERGE — the owner pulled four pins and two creators, so the
+> shipped figures are `linkPins` **150** and makers **153**.** See
+> "Owner pulled four pins" at the end of this file. Everything between here and
+> there describes the batch as originally wired.
+
 ---
 
 ## What arrived
@@ -231,3 +236,50 @@ obvious fix.**
   filename against the emitted catalogue entries.
 - **CI has not run: no PR is open**, so the authoritative Swift validator has
   not seen this and the mirror is the only check.
+
+
+---
+
+## Owner pulled four pins and two creators (after PR #633 merged)
+
+Owner, shown the flagged heroes: *"Pull empire theatre, Brooklyn bridge caissons
+and the octagon. In fact pull the user nycunfilteredstories."*
+
+Removed: **`Instagram @nycunfilteredstories`** and all three of their pins —
+*Empire Theatre, 42nd Street*, *The Octagon, Roosevelt Island*, and
+**⚠️ *Verrazzano-Narrows Bridge***, which was **not** one of the three named and
+had shipped the previous day. Session 119 had checked that hero at pixel level
+and cleared it as genuine despite its caption carrying the identical *"images
+were recreated"* disclosure. It was flagged to the owner **before** removal, not
+discovered afterwards, and is trivially restorable.
+
+Also removed: **`Instagram @theironwil`** and their pin *The Brooklyn Bridge
+Caissons*. That was their only pin, so the creator row went with it — the
+Mercedes-Benz Stadium precedent (session 117), where the pin and its sole
+creator row were pulled together.
+
+**`linkPins` 154 → 150, makers 155 → 153** (Instagram creators 12 → 10).
+Countries stay at 32; Luxembourg and Norway are unaffected. Diff: **198
+deletions, 0 insertions**. Validator mirror re-run after the removal: **0
+errors, 2 warnings, both pre-existing**; self-test **44/44**;
+`check-place-candidates.py` unchanged (none of the four was a candidate).
+
+**⚠️ Four gh-pages heroes are deliberately left orphaned** — nothing references
+them, and a deletion push onto a branch other sessions write to buys nothing
+(the Mercedes-Benz Stadium handling):
+`verrazzano-narrows-bridge-nycunfilteredstories_hero.webp`,
+`empire-theatre-42nd-street-nycunfilteredstories_hero.webp`,
+`the-octagon-roosevelt-island-nycunfilteredstories_hero.webp`,
+`brooklyn-bridge-caissons-theironwil_hero.webp`. No avatars were orphaned —
+both creators are Instagram and ship `avatarURL: null` by design.
+
+### 🔴 The lesson, and it supersedes the precedent this batch was shipped on
+
+**"Shipped and flagged" is not a resolution.** This is the second time in three
+sessions that a flagged AI hero has been pulled by the owner — Mercedes-Benz
+Stadium (session 117) and now three at once. **DIFC Gate is no longer the
+representative precedent.** Raise a suspect-synthetic hero and expect it to go.
+
+**And say up front which OTHER pins removing a creator would take.** "Pull the
+user" is a wider instruction than "pull these pins", and here it reached a pin
+that had already been examined and cleared.
