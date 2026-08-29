@@ -86759,51 +86759,6 @@
       "priceUSD": 0
     },
     {
-      "id": "488AFBA8-9B62-5334-9E76-A9B078BE3E80",
-      "createdAt": "2026-08-29",
-      "title": "Zacherlhaus",
-      "shortDescription": "A post by @about_buildings on Instagram.",
-      "longDescription": "Jože Plečnik’s Zacherlhaus in Vienna, discussed in our most recent series",
-      "makerId": "9AA4659B-4FEE-586A-926D-0A9264CAD908",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zacherlhaus-reel-aboutbuildings_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DNYqAvOMDt7/",
-      "sourceAuthor": "@about_buildings",
-      "stops": [
-        {
-          "id": "1BEB76FD-8871-53DA-A3AE-625C3C49D9C5",
-          "order": 0,
-          "title": "Zacherlhaus",
-          "caption": "Jože Plečnik’s Zacherlhaus in Vienna, discussed in our most recent series",
-          "latitude": 48.2099044,
-          "longitude": 16.3716273,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zacherlhaus-reel-aboutbuildings_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 48.2099044,
-      "centroidLongitude": 16.3716273,
-      "city": "Vienna",
-      "country": "Austria",
-      "primaryCategory": "architecture",
-      "tags": [
-        "Notable Building",
-        "Architecture",
-        "Designed by a Master"
-      ],
-      "priceUSD": 0
-    },
-    {
       "id": "3AC3E485-FF15-597B-A9E0-2C9B69DE8EED",
       "createdAt": "2026-08-29",
       "title": "Royal Hospital Chelsea Stable Block",
