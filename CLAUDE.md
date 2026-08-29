@@ -31,7 +31,7 @@ facts that change with no commit, because nothing here updates when they do.
 | Perishable — check it, never quote it | How |
 |---|---|
 | Program License Agreement, agreements, tax, banking | No API. A recent build that uploaded and processed = accepted. Otherwise **ask the owner** |
-| App Store version / build / review state | `scripts/session-start.sh` (App Store Connect API) |
+| App Store version / build / review state | `scripts/session-start.sh` (App Store Connect API). ⚠️ **A remote/web session has no key** (`~/Downloads/AuthKey_*.p8` is on the owner's Mac), so the script SKIPS this check there — say you could not check it, or **ask the owner** |
 | What is merged, open, or in flight | `scripts/session-start.sh` (never this file's prose) |
 | dozent.world, gh-pages catalog | `scripts/session-start.sh` (HTTP check) |
 | Stripe standing · EU DSA trader declaration | **Cannot be checked from here — ask the owner** |
@@ -127,6 +127,50 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
 ## Current State (2026-08-28)
+
+### 🚀 DOZENT IS LIVE ON THE APP STORE — approved and published (2026-08-28, owner-reported)
+
+**Version 1.1, build 66, submitted 2026-08-18 03:22 UTC, approved and released ten days later.**
+`releaseType` was MANUAL, so the owner pressed Release. **This is the first public release** —
+every build before it went to TestFlight only. The app has been in development since May 2026 and
+the catalogue it ships into is **1,552 tours, 76+ link pins, 34 Atlas studios across 116 cities in
+22 countries**.
+
+- **⚠️ NOT machine-verified from a remote session, and that is a fact about the environment, not a
+  doubt about the news.** A web container has no App Store Connect key — `~/Downloads/AuthKey_*.p8`
+  lives on the owner's Mac — so `scripts/session-start.sh` prints *"App Store Connect: SKIPPED"*
+  here. **The owner is the primary source and outranks every document.** A local session should
+  read the live version and state from the API before quoting any number back, per § READ FIRST.
+
+- **🔴 THE STAKES OF A CONTENT MERGE JUST CHANGED, AND NOTHING IN THE PIPELINE ANNOUNCES IT.**
+  Until today a catalogue that failed to decode cost TestFlight testers. It now costs **App Store
+  users**, on a build that is **strict forever**:
+  - **Build 66 predates the tolerance work.** [#598](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/598)'s
+    per-field fallbacks and tolerant array protect only builds shipped *after* them. On 66, one
+    unfamiliar value inside a field it already parses still fails the **whole** catalogue decode —
+    `try?` swallows it at three sites, the phone keeps its last good copy, and **nothing is logged**.
+  - **What protects it is [#597](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/597)**: link
+    pins travel in a sibling **`linkPins`** array, which 66 ignores as an unknown top-level key.
+    **That split is now load-bearing for a shipped App Store build.** 🔴 **Never move a
+    `kind: "link"` row back into `tours`** — and the three guards that stop it (`check-catalog-keys.py`,
+    `publish-catalog.yml`'s mirror refusal, `validate-tours.swift`) must stay green.
+  - **Build 66 bundles 1,350 tours against 1,552 live**, so a fresh installer is ~200 tours behind
+    until the first Supabase fetch lands. That catch-up is exactly the path the split keeps open.
+
+- **⚠️ THE PUBLIC HAS THE OLDEST CODE ANYONE IS RUNNING.** Everything merged since 18 August is
+  absent from what shipped: the launch readiness gate and hand-off, offline photographs for a
+  downloaded tour, the fullscreen video viewer, the link-pin fullscreen fix, the search rewrite,
+  place/list grid + sort, the chrome-row seam fix, and the whole link-pin feature. **Build 135 is
+  the update candidate.** Shipping it is the obvious next move and needs no new work.
+
+- **⚠️ Two owner-blocked items are now live-facing rather than theoretical:** the **EU trader
+  declaration** (the app is declared non-trader while selling ten IAP tiers into EU cities) and the
+  **9 IAP tiers still `MISSING_METADATA`**. Neither blocks the release that just happened; both
+  matter more now that it is public.
+
+- **⚠️ The nine IAP price tiers can now be submitted on their own.** App Store Connect refused them
+  with `409 STATE_ERROR` while the app had never been released — that gate has just cleared. Each
+  still needs a review screenshot at its real price, which is why they remain blocked by design.
 
 ### Six places, and the one tour that genuinely had to move (branch `claude/linked-tours-send-ahlhiy`, session 120c — content)
 
