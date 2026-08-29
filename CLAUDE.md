@@ -202,12 +202,15 @@ session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-26
   Rutgers"*), and **Walt Disney World Swan** (0.20, where the centred square had **cropped the hotel
   out of the frame entirely**, leaving only the presenter panel of a split-screen). Five others clip
   a line and were **left alone** — what they lose is a hook or strapline, not the subject's name.
-- **🔴 FLAGGED, NOT RESOLVED: THE YOUTUBE PIN'S HERO IS UNUSABLE AND CANNOT BE IMPROVED.** #35's
-  `maxresdefault` and `sddefault` both **404**; only `hqdefault` exists at 480×360 and oEmbed reports
-  a **200×150, 4:3** embed — a genuinely ancient upload. The frame is a dark, indecipherable smear
-  that renders as a murky rectangle on the map. A link pin re-hosts only the thumbnail, so no better
-  frame exists. **The most likely removal candidate in this batch**; the same site is covered
-  properly by #13.
+- **✅ THE YOUTUBE PIN'S HERO IS A DARK SMEAR AND THE OWNER KEEPS IT — decided 2026-08-29, do NOT
+  re-raise.** #35's `maxresdefault` and `sddefault` both **404**; only `hqdefault` exists at 480×360
+  and oEmbed reports a **200×150, 4:3** embed — a genuinely ancient upload. The frame is dark and
+  indecipherable and renders as a murky rectangle on the map, and **a link pin re-hosts only the
+  thumbnail, so no better frame exists** — the choice was keep it or pull the pin. It was put to the
+  owner as the batch's likeliest removal, alongside the fact that the same resort is covered properly
+  by #13, and the answer was *"i'm fine with the swan dolphin hero."* ⚠️ **Anyone re-running the
+  open-every-hero audit will flag this again; it is closed** — the Ministry of Enterprise precedent
+  applies, so honour the decision rather than "fixing" it.
 - **⚠️ ALSO FLAGGED:** **#16** is a **stitch** — its hero is a screen-recording of another creator's
   Chichén Itzá video with a reaction face; **#24** ships an **architectural model** rather than the
   Noguchi playground; **#5** ships a **historical map**. All three are the creator's own frame and
