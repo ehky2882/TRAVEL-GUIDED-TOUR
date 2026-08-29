@@ -43,8 +43,14 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
 [#638](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/638) squash `ce6ec46b` ·
 [#641](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/641) squash `2f84df52` ·
 [#642](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/642) (scratch files that rode in on a
-`git add -A`). **linkPins 150 → 169 → 168 · makers 153 → 154.** Re-derived with
-`gh pr list --state open` on 2026-08-29: **no PRs are open.**
+`git add -A`). **This batch took linkPins 150 → 169 → 168 and makers 153 → 154.**
+
+⚠️ **A PARALLEL SESSION'S [#640](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/640) LANDED
+MINUTES LATER** (*"Thirty-two link pins, and the stack cap that demanded a place"*, squash
+`cd32e293`) and did not touch this board, so read the counts above as **this batch's deltas, not
+the catalogue's totals** — `main` now carries **200 link pins · 183 makers · 38 places**. Its
+story is in `CLAUDE.md` § Current State and `archive/HANDOFF-260829-2.md`. **Open PRs re-derived
+with `gh pr list --state open` after both merges: none.**
 
 - **✅ `backend/pull_pins_260829.sql` HAS BEEN RUN and verified against the live RPC** — `linkPins`
   **168**, all five pins gone (the Instagram Zacherlhaus plus the four from 2026-08-28 that had
