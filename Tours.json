@@ -1463,6 +1463,14 @@
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.youtube.com/@wdwswandolphin"
+    },
+    {
+      "id": "FB2E3A20-D7F4-5CD5-82F9-657A470AF4CC",
+      "displayName": "Instagram @nickytoursnyc",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/nickytoursnyc/"
     }
   ],
   "tours": [
@@ -88620,6 +88628,52 @@
         "Architecture",
         "Commerce",
         "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "84EBBE5D-56B4-5EAF-8408-0F94CE75E07B",
+      "createdAt": "2026-08-29",
+      "title": "Jefferson Market Garden",
+      "shortDescription": "A post by @nickytoursnyc on Instagram.",
+      "longDescription": "Discover more hidden NYC green spaces with me on a private tour 🗽❤️🪴 #nickytours #nycparks #nychistory #nyctourguide #nyctours",
+      "makerId": "FB2E3A20-D7F4-5CD5-82F9-657A470AF4CC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jefferson-market-garden-nickytoursnyc_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcWHUpxAfnY/",
+      "sourceAuthor": "@nickytoursnyc",
+      "stops": [
+        {
+          "id": "A3D8F47A-6013-5FCE-AF9D-C210748910E6",
+          "order": 0,
+          "title": "Jefferson Market Garden",
+          "caption": "Discover more hidden NYC green spaces with me on a private tour 🗽❤️🪴 #nickytours #nycparks #nychistory #nyctourguide #nyctours",
+          "latitude": 40.7344521,
+          "longitude": -73.9994809,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jefferson-market-garden-nickytoursnyc_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7344521,
+      "centroidLongitude": -73.9994809,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
