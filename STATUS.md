@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-29 (session 122, link pins — branches re-derived; Dozent is live on the App Store)
+**Last verified:** 2026-08-29 (session 122 link pins merged as #648; earlier link-pin sessions closed out — branches and counts re-derived)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -47,10 +47,26 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
 
 ⚠️ **A PARALLEL SESSION'S [#640](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/640) LANDED
 MINUTES LATER** (*"Thirty-two link pins, and the stack cap that demanded a place"*, squash
-`cd32e293`) and did not touch this board, so read the counts above as **this batch's deltas, not
-the catalogue's totals** — `main` now carries **200 link pins · 183 makers · 38 places**. Its
-story is in `CLAUDE.md` § Current State and `archive/HANDOFF-260829-2.md`. **Open PRs re-derived
-with `gh pr list --state open` after both merges: none.**
+`cd32e293`), so read the counts above as **this batch's deltas, not the catalogue's totals**.
+That session then closed itself out with two more merges — [#646](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/646)
+squash `f172f07b` (**Jefferson Market Garden**, the one link it had parked for want of an
+identifiable subject, wired on the owner's *"pretty sure it's jefferson market garden"*) and
+[#647](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/647) squash `cec3aa39` (docs).
+
+**`main` now carries 201 link pins · 184 makers · 38 places.** Pins and places were re-derived
+from the **live Supabase RPC** after the last merge (201 · 38, confirmed); the maker figure is the
+**catalogue's**, because ⚠️ **the RPC reports 194** — upsert-only accumulation plus real sign-ups,
+long-standing and expected. **Assert on link-pin counts, not maker totals.** Both branches
+auto-deleted. Its story is in
+`CLAUDE.md` § Current State and `archive/HANDOFF-260829-2.md`. **Open PRs: none.**
+
+- **✅ THE SWAN & DOLPHIN HERO IS SETTLED — the owner keeps it** (*"i'm fine with the swan dolphin
+  hero"*, 2026-08-29). Its YouTube thumbnail is a dark, indecipherable frame and **no better one
+  exists** — `maxresdefault` and `sddefault` both 404 on that upload. **A hero audit will flag it
+  again; it is closed**, like the Royal Hospital Chelsea and Ministry of Enterprise heroes above.
+- **⚠️ Two of the thirty-five links are dead at the source and cannot be recovered from this end** —
+  each returns a ~215 KB embed shell with no owner blob on six spaced fetches, against ~257–262 KB
+  with one for a live post. **Only the owner re-sharing live links fixes those.**
 
 - **✅ `backend/pull_pins_260829.sql` HAS BEEN RUN and verified against the live RPC** — `linkPins`
   **168**, all five pins gone (the Instagram Zacherlhaus plus the four from 2026-08-28 that had
@@ -320,7 +336,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 | Branch | State |
 |---|---|
-| `claude/tour-links-upload-qeoxe7` | **Ahead of `main`, no PR** — twenty-three link pins from three creators (18 TikToks `@thedesigndetourist`, 4 Instagram `@shaunbirley`, 1 `@meliluu__`); linkPins 168 → 191, makers 154 → 157. Content only, images live on gh-pages at `251cf95e`. **🔴 MERGE HAZARD: this branch AND a parallel session both create the `TikTok @thedesigndetourist` maker row with the identical uuid5 id `67CA14A6-…` — whichever merges second must drop the duplicate or the validator errors.** ⚠️ Ships two subjects twice on one coordinate each (Westin Bonaventure, Hotel Casa del Mar) — deliberate, both links were sent; `check-place-candidates.py` therefore reports 3 EXACT groups against main's 1 |
+| `claude/tour-links-upload-qeoxe7` | **Merged as [#648](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/648)** — twenty-three link pins from three creators (18 TikToks `@thedesigndetourist`, 4 Instagram `@shaunbirley`, 1 `@meliluu__`); linkPins 168 → 191, makers 154 → 157. Content only, images live on gh-pages at `251cf95e`. **🔴 MERGE HAZARD, NOW THE OTHER SESSION'S: this branch created the `TikTok @thedesigndetourist` maker row (uuid5 `67CA14A6-…`) and a parallel session's unmerged branch creates the identical id — that branch must drop the duplicate or the validator errors.** ⚠️ Ships two subjects twice on one coordinate each (Westin Bonaventure, Hotel Casa del Mar) — deliberate, both links were sent; `check-place-candidates.py` therefore reports 3 EXACT groups against main's 1 |
 | `claude/link-fullscreen-probe` | 🔴 **Never merged, still on the remote** — carried the temporary readout and builds 131/132/133. **Owner deletes it in the GitHub UI**; the git proxy blocks branch deletion from a session |
 | `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
 | `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
