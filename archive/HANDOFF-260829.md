@@ -190,8 +190,10 @@ test tour.
 
 ## Owed / open
 
-1. **The owner pastes `backend/pull_nycunfilteredstories.sql`** — see above. Nothing else can
-   remove those four pins.
+1. ~~The owner pastes the pull SQL~~ — **✅ DONE 2026-08-29.** `backend/pull_pins_260829.sql`
+   was applied and the live RPC re-read afterwards: `linkPins` **168**, all five pins and both
+   creator rows gone, the six kept pins intact, `places` still 37 and 66 tours still priced.
+   **Nothing is owed here.**
 2. **The Zacherlhaus pair** — keep both, or say which to pull.
 3. **The Royal Hospital Chelsea hero** — a talking head, unfixable in place.
 4. **Carlo Scarpa and Jože Plečnik** for `Models/Tag.swift`, whenever an architect PR next runs.
@@ -225,3 +227,19 @@ post of the same building stays, so the subject keeps a pin.
   file as well is harmless, since both are idempotent.
 - `check-place-candidates.py` drops back to its single pre-existing EXACT group
   (the Barcelona deferral). Validator still 0 errors, 2 warnings, both pre-existing.
+
+
+### ✅ The SQL was applied the same day, and verified against the RPC
+
+`backend/pull_pins_260829.sql` ran clean. **Read back from the live catalogue rather than from
+the success message:** `linkPins` **168** · all five pins gone · `Instagram @nycunfilteredstories`
+and `Instagram @theironwil` gone · `Instagram @about_buildings` kept with exactly its six
+remaining pins · `TikTok @about_buildings` keeping thirteen, the Zacherlhaus among them ·
+`places` still 37 and `priceTier` still on all 1,553 with 66 priced, so the delete severed
+nothing.
+
+**🔴 The eight-day gap is the thing to carry forward, not the fix.** #634 removed four pins from
+`Tours.json` on 2026-08-28 and #635 committed the SQL to remove them from Postgres — and the SQL
+was never pasted, so the app, which reads Supabase first, went on serving all four. **A pull is
+not done when the content PR merges.** The check that catches it is a case-insensitive id diff of
+the live RPC against the catalogue file, and it costs one query.
