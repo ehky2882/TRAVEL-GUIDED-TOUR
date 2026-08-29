@@ -39,12 +39,20 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
   — builds 131/132/133 came from it. **Owner must delete it in the GitHub UI**; the git proxy blocks
   branch deletion from a session. `grep TEMP-PROBE` on `main` is clean.
 
-🟡 **ONE PR OPEN.** Re-derived with `gh pr list --state open` on 2026-08-29: #613 and #614 are
-gone from the board because they are no longer open.
+✅ **NINETEEN LINK PINS MERGED, ONE PULLED, AND THE PULL SQL IS APPLIED.**
+[#638](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/638) squash `ce6ec46b` ·
+[#641](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/641) squash `2f84df52` ·
+[#642](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/642) (scratch files that rode in on a
+`git add -A`). **linkPins 150 → 169 → 168 · makers 153 → 154.** Re-derived with
+`gh pr list --state open` on 2026-08-29: **no PRs are open.**
 
-| PR | What | Class |
-|---|---|---|
-| [#638](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/638) | *Nineteen link pins from About Buildings + Cities* — `linkPins` 150 → 169, makers 153 → 154 | Content — no build needed. **Two owner calls in the body: the two Zacherlhaus pins are the same footage cross-posted (identical coordinate, `check-place-candidates.py` flags it EXACT), and the Royal Hospital Chelsea hero is a podcast talking head with no view of the building** |
+- **✅ `backend/pull_pins_260829.sql` HAS BEEN RUN and verified against the live RPC** — `linkPins`
+  **168**, all five pins gone (the Instagram Zacherlhaus plus the four from 2026-08-28 that had
+  never been removed from Postgres), both pulled creator rows gone, `places` still 37 and
+  `priceTier` still on all 1,553 with 66 priced. **Nothing is owed on the backend.**
+- **🟡 ONE OWNER CALL STILL OPEN: the Royal Hospital Chelsea hero is a podcast talking head** with
+  no view of the building. A link pin re-hosts only the thumbnail, so there is no other frame —
+  it either ships as-is or the pin comes out.
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
