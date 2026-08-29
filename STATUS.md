@@ -44,7 +44,7 @@ gone from the board because they are no longer open.
 
 | PR | What | Class |
 |---|---|---|
-| [#PENDING](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pulls) | *Nineteen link pins from About Buildings + Cities* — `linkPins` 150 → 169, makers 153 → 154 | Content — no build needed. **Two owner calls in the body: the two Zacherlhaus pins are the same footage cross-posted (identical coordinate, `check-place-candidates.py` flags it EXACT), and the Royal Hospital Chelsea hero is a podcast talking head with no view of the building** |
+| [#638](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/638) | *Nineteen link pins from About Buildings + Cities* — `linkPins` 150 → 169, makers 153 → 154 | Content — no build needed. **Two owner calls in the body: the two Zacherlhaus pins are the same footage cross-posted (identical coordinate, `check-place-candidates.py` flags it EXACT), and the Royal Hospital Chelsea hero is a podcast talking head with no view of the building** |
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
