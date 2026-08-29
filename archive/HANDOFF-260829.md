@@ -195,7 +195,9 @@ test tour.
    creator rows gone, the six kept pins intact, `places` still 37 and 66 tours still priced.
    **Nothing is owed here.**
 2. **The Zacherlhaus pair** — keep both, or say which to pull.
-3. **The Royal Hospital Chelsea hero** — a talking head, unfixable in place.
+3. ~~The Royal Hospital Chelsea hero~~ — **✅ CLOSED 2026-08-29.** Owner: *"keep chelsea, i'm
+   fine with it"*. The pin stays with its talking-head thumbnail. **⚠️ A future open-every-hero
+   audit will flag it again; it is settled** (the Ministry of Enterprise precedent).
 4. **Carlo Scarpa and Jože Plečnik** for `Models/Tag.swift`, whenever an architect PR next runs.
 5. **`check-image-duplicates.py` still cannot scope to a link-pin batch** (`--maker <CODE>` or
    `--all`; a pin batch has no maker code) — **sixth batch running**. Covered here by running the
@@ -243,3 +245,15 @@ nothing.
 was never pasted, so the app, which reads Supabase first, went on serving all four. **A pull is
 not done when the content PR merges.** The check that catches it is a case-insensitive id diff of
 the live RPC against the catalogue file, and it costs one query.
+
+
+### ✅ Both flagged heroes settled the same day
+
+Owner on the Zacherlhaus pair: *"pull the instagram zacherlhaus one"*. Owner on the weakest hero
+in the batch: **_"keep chelsea, i'm fine with it"_**.
+
+So of the two things put to them, one pin came out and one stayed. **The Chelsea decision is the
+one to record loudly**, because the evidence that flagged it — a thumbnail showing a person rather
+than a place — is exactly what a future hero audit re-derives from scratch. It is closed, and the
+Ministry of Enterprise / Casa Lleó Morera precedent applies: honour the decision rather than
+"fixing" it.
