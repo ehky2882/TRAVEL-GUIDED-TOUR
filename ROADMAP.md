@@ -1112,7 +1112,23 @@ That requires several large pieces of infrastructure, roughly:
 
 ### Outside content — link pins (new, 2026-08-24)
 
-**Status (2026-08-29, session 121):** content session (web) — **thirty-two link pins from
+**Status (2026-08-29, session 122):** content session (web) — **twenty link pins from twenty
+owner-supplied links**, on branch `claude/tour-links-upload-tbcerj`. **+20 pins, +2 makers**;
+tours, places and countries unchanged at 1,552 / 38 / 36. Catalogue now **244 pins / 189 makers**.
+**All twenty were alive and pinnable** — fifth fully intact batch running. **Fifteen are one
+creator, Instagram `@breatheart_hk`** (Hong Kong walking account; several from a series 「100個香港
+看海的地方」). **No PR opened** — this session's harness forbids opening one unasked.
+**🔴 Four link-pin sessions were in flight at once on near-identical branch names**, so deduping
+against `main` alone is no longer sufficient: source URLs were checked against the open PR's branch
+too, and re-checked after it merged. **⚠️ `main` moved eight commits across three rebases** and the catalogue
+edit was redone each time by taking `main`'s file and re-running the idempotent assembler.
+**🔴 A place candidate is flagged and not created: an Atlas tour of the Duddell Street Steps already
+exists 9 m from the new pin**, same subject and same name — the catalogue's tightest NEAR pair.
+**⚠️ Four heroes are weak**, one badly: the Bird Bridge pin's thumbnail is a red X the creator drew
+over a photograph to retract an earlier post, so it renders as a red X on the map.
+Detail: `archive/HANDOFF-260829-4.md`.
+
+**Previously (2026-08-29, session 121):** content session (web) — **thirty-two link pins from
 thirty-five owner-supplied links**, on branch `claude/tour-links-upload-wa3e0g`. **+32 pins, +29 makers, +1 place** and three countries (Taiwan, Finland, Hungary); tours
 unchanged at 1,552. ⚠️ **Merged alongside a parallel same-day batch**, so the catalogue landed at
 **201 pins / 183 makers / 38 places / 36 countries** — neither session's own totals survived the
