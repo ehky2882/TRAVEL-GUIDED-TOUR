@@ -50,9 +50,9 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
   **168**, all five pins gone (the Instagram Zacherlhaus plus the four from 2026-08-28 that had
   never been removed from Postgres), both pulled creator rows gone, `places` still 37 and
   `priceTier` still on all 1,553 with 66 priced. **Nothing is owed on the backend.**
-- **🟡 ONE OWNER CALL STILL OPEN: the Royal Hospital Chelsea hero is a podcast talking head** with
-  no view of the building. A link pin re-hosts only the thumbnail, so there is no other frame —
-  it either ships as-is or the pin comes out.
+- **✅ THE LAST OWNER CALL IS CLOSED: the Royal Hospital Chelsea hero stays** — *"keep chelsea,
+  i'm fine with it"* (2026-08-29), though its thumbnail is a podcast talking head with no view of
+  the building. **A hero audit will flag it again; it is settled.** Nothing from this work is open.
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
