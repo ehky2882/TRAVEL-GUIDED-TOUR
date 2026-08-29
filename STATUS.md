@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-29 (link-pin session — open PRs re-derived; Dozent is live on the App Store)
+**Last verified:** 2026-08-29 (session 122, link pins — branches re-derived; Dozent is live on the App Store)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -314,6 +314,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 | Branch | State |
 |---|---|
+| `claude/tour-links-upload-qeoxe7` | **Ahead of `main`, no PR** — twenty-three link pins from three creators (18 TikToks `@thedesigndetourist`, 4 Instagram `@shaunbirley`, 1 `@meliluu__`); linkPins 168 → 191, makers 154 → 157. Content only, images live on gh-pages at `251cf95e`. **🔴 MERGE HAZARD: this branch AND a parallel session both create the `TikTok @thedesigndetourist` maker row with the identical uuid5 id `67CA14A6-…` — whichever merges second must drop the duplicate or the validator errors.** ⚠️ Ships two subjects twice on one coordinate each (Westin Bonaventure, Hotel Casa del Mar) — deliberate, both links were sent; `check-place-candidates.py` therefore reports 3 EXACT groups against main's 1 |
 | `claude/link-fullscreen-probe` | 🔴 **Never merged, still on the remote** — carried the temporary readout and builds 131/132/133. **Owner deletes it in the GitHub UI**; the git proxy blocks branch deletion from a session |
 | `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
 | `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
