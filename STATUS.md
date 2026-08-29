@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-27 21:20 UTC (session 119, after opening #632 — 23 link pins + the Barcelona Pavilion place)
+**Last verified:** 2026-08-28 (coordinator session — **Dozent is APPROVED AND LIVE ON THE APP STORE**)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -198,6 +198,37 @@ the original bulk seed. It would look fixed and rank wrongly. The real fix is to
 gap**: printed as a warning every run, but not a failure — a check that always fails gets ignored,
 and then it catches nothing.
 
+## 1d. ✅ DOZENT IS LIVE ON THE APP STORE
+
+**Owner-reported 2026-08-28: approved by Apple and published.** Submitted 2026-08-18 03:22 UTC as
+version 1.1 on **build 66**, `releaseType` MANUAL, so the owner pressed Release themselves. Ten
+days from submission to live. **This is the first public release; every prior build was TestFlight.**
+
+⚠️ **Not machine-verified from this session** — a remote container has no App Store Connect key
+(`~/Downloads/AuthKey_*.p8` lives on the owner's Mac), so `scripts/session-start.sh` skips the
+check here. The owner is the primary source and outranks any document; a local session should
+confirm the live version/state from the API before quoting numbers back.
+
+**🔴 WHAT CHANGES NOW, AND IT CHANGES THE STAKES OF EVERY CONTENT MERGE.** Until today a bad
+catalogue reached TestFlight testers. It now reaches **App Store users on build 66**, which is a
+strict decoder frozen at 18 August:
+
+- **Build 66 has no tolerance layer.** [#598](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/598)'s
+  per-field fallbacks and tolerant array **only protect builds shipped after it**. On 66, one
+  unfamiliar value inside a known field still fails the whole catalogue decode, silently, and the
+  phone keeps its last good copy forever.
+- **What saves it is [#597](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/597)** — link pins
+  travel in their own `linkPins` array, which 66 ignores as an unknown key. **That split is now
+  load-bearing for a shipped App Store build. Never put a `kind: "link"` row back inside `tours`.**
+- **The three guards that enforce it must stay green**: `scripts/check-catalog-keys.py`,
+  `publish-catalog.yml`'s mirror refusal, and `validate-tours.swift`.
+- ⚠️ **Build 66 bundles 1,350 tours against 1,552 live** — it catches up on first launch from
+  Supabase, which is exactly the path the split protects.
+
+**Owed, and worth doing before the next release:** ship an update, because every fix since
+18 August — the launch sequence, offline photographs, fullscreen video, the search rewrite, the
+link-pin fullscreen fix — is **not** in what the public has. Build 135 is the candidate.
+
 ## 2. Blocked on owner — outside the repo
 
 **🔴 A DEAD TIKTOK LINK NEEDS RE-SHARING (2026-08-27).** `https://www.tiktok.com/t/ZP8vkb5bP/`, the twentieth of the "SF Architecture" batch, resolves to a real id (`@aggie.sanfrancisco/video/7660328152421387534`) and then fails everywhere: an empty oEmbed shell on three spaced attempts (no `thumbnail_url`), and a 367 KB *"Video currently unavailable"* page with zero `og:` tags. No caption means no subject and no location; no thumbnail means no hero, and a pin with no hero cannot ship. **Nothing on our side recovers it — only the owner re-sharing a live link.** ⚠️ It is an ordinary `/video/` post that has gone, **not** a `/photo/` carousel; that limitation is separate and permanent.
@@ -207,7 +238,7 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 
 | Item | Why it matters | State |
 |---|---|---|
-| **App Store 1.1 review** | Submitted 2026-08-18 03:22 UTC, build 66, `releaseType` MANUAL — approval does **not** publish, the owner presses Release. The licence agreement that was gating uploads is accepted as of 2026-08-19, so nothing blocks the update path now. | ❓ Status unverified — check App Store Connect |
+| ~~**App Store 1.1 review**~~ | ✅ **APPROVED AND LIVE** — owner-reported 2026-08-28. Submitted 2026-08-18 03:22 UTC on build 66. See § 1d. | ✅ Done |
 | **Stripe platform review** | Response submitted; account flagged under Restricted Businesses. | ❓ Awaiting Stripe reply |
 | **9 IAP tiers `MISSING_METADATA`** | Each needs a review screenshot at its real price. Deliberately blocked: every walk is $0.99 today, so a genuine $2.99 screenshot cannot exist yet. | ⏸ Blocked by design |
 | **EU trader declaration** | App declared **non-trader** while selling ten IAP tiers into EU cities. Declaring trader publishes an address. | 🔴 Decision owed |
