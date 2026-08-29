@@ -1,215 +1,200 @@
-# HANDOFF — 2026-08-29 (session 121, content)
+# HANDOFF 2026-08-29 — nineteen link pins from one creator, and four pulled pins still live
 
-**Thirty-two link pins from thirty-five owner-supplied links.** Branch
-`claude/tour-links-upload-wa3e0g`, cut from `origin/main` at `3f2e164`.
-**linkPins 150 → 182, makers 153 → 182, places 37 → 38; tours unchanged at
-1,552.** Content only — no Swift, no SQL, no build. **No PR opened** (this
-session's harness forbids opening one unasked).
+Session 121. Branch `claude/tour-links-260829`, cut clean off `origin/main` at `3f2e1640`.
+Content only — no Swift, no SQL, no build. **[PR #638](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/638)
+merged** (squash `ce6ec46b`); this is a local Mac session, so the content auto-merge class applies.
+
+**linkPins 150 → 169 · makers 153 → 154 · tours unchanged at 1,552 · places unchanged at 37.**
+gh-pages `10b75d06` (19 heroes). Austria is the catalogue's 33rd country.
+
+---
 
 ## What arrived
 
-34 Instagram reels + 1 YouTube video. **32 shipped, 2 dead, 1 parked.**
+Nineteen links — **12 TikTok, 7 Instagram — all from ONE creator**, `@about_buildings`
+("About Buildings + Cities", an architecture podcast). Six carried a coordinate, two of
+those also a subject name; thirteen were bare. **All nineteen were alive and pinnable** —
+no dead posts, no `/photo/` carousels. Fourth fully intact batch running.
 
-- **Dead at the source — do not retry.** `DcPNfc7oVvQ` and `DbmKLMDvERk`.
-  Six spaced fetches each return a **~215 KB** embed shell with **no owner
-  blob** (no `username`, no `display_url`), against **~257–262 KB with one**
-  for a live post fetched in the same run. That size gap is the cleanest
-  liveness test found so far for an Instagram reel — better than looking for
-  a "Video currently unavailable" string, which these pages do not carry.
-- **Parked — subject not identifiable.** `@nickytoursnyc` (`DcWHUpxAfnY`).
-  Its caption names no place; the only on-screen text is *"IN GREENWICH
-  VILLAGE"*. The frame — clipped boxwood, heavy perennials, red brick behind
-  trees, an open railing with people beyond — fits **Jefferson Market Garden**
-  and **the Garden at St Luke in the Fields** about equally, and they are
-  700 m apart. Asserting one would be the Thyssen class of error, so it is
-  parked pending the owner naming it. Everything else about it is ready.
+**This is the first batch that is one creator end to end**, which changed the shape of the
+work: no per-creator avatar hunting, one maker row already existing, and a single editorial
+voice to read the captions against.
 
-## 🔴 Yankee Stadium is now a place, because five coincident pins would have
-## put two of them out of reach
+---
 
-Five of the links are Yankee Stadium posts, and the catalogue **already has an
-Atlas Yankee Stadium tour** at `40.8296, -73.9262`. That is six markers on one
-coordinate against **`TourSetMap.maxStacked = 3`** — whose own comment reads
-*"The deepest coincident group in the catalog is two."* Three placecards is the
-ceiling, so two pins would have been **silently unreachable from the map**.
+## The things worth carrying forward
 
-- Built the place on the exact-coordinate identity rule: `Yankee Stadium`,
-  Bronx, `91f73629-1d53-5450-a070-fae14394b32c` = uuid5
-  `atlas-place:bronx:yankee-stadium`, **6 members**.
-- **The pins moved onto the tour's coordinate; the tour did not move.** The
-  OSM `Yankee Stadium` stadium polygon sits **27 m** from the tour's point, so
-  the tour's coordinate was confirmed correct before anything was moved to it.
-- **The place hero is a third photograph** — `Yankee_Stadium_2.webp`, the
-  aerial exterior promoted from the Atlas tour's own gallery. Already uploaded,
-  already verified, and neither the tour's hero (an interior bowl view) nor any
-  pin's. The one-picture-three-times fault is avoided by construction.
-- ⚠️ **This is the session-116 lesson applied at wire-in rather than after the
-  owner spotted it.** The evidence — coincident markers — was in hand while
-  wiring, which is exactly when that handoff says it should be read.
+### 🔴 A CREATOR ON TWO PLATFORMS IS TWO MAKER ROWS, AND ONE OF THEM ALREADY EXISTED
 
-## Two EXACT pairs deliberately left as pairs
+`TikTok @about_buildings` has had a maker row since the Dulwich Picture Gallery pin
+(`D6EC084F-2E18-5C16-BBE5-197D5170162C`). The uuid5 scheme is over
+`atlas-maker:<platform>:@<handle>`, so the twelve TikToks **reproduced that id exactly** and
+merged into it — verified by hand before writing (`uuid5(NAMESPACE_URL,
+"atlas-maker:tiktok:@about_buildings")` → the same id, and neither of the two plausible
+alternative strings does).
 
-`check-place-candidates.py` now reports **3 EXACT groups** (was 1) and **10
-NEAR**. The two new EXACT groups are mine and are **not** defects:
+**That merge is also what kept the avatar safe.** `avatar-tiktok-about-buildings.webp` is
+already live on gh-pages, so the tool regenerated it and it was **excluded from the upload**
+rather than overwritten — the `@urbanistariel` case from session 120, now twice. **20 files
+generated, 19 uploaded.** `Instagram @about_buildings` is the new row and ships
+`avatarURL: null`, which is all Instagram's embed allows.
 
-- **Temple of Kukulkán / Chichén Itzá** (2 pins) and **Rosewood Mayakoba**
-  (2 pins). Two coincident markers are inside the 3-card stack cap, so both
-  are reachable. A place for either would have to borrow a member's hero
-  (there is no Atlas tour at either site — the Waterlooplein case), which is
-  editorial work, not a wire-in fix. **Reported, never auto-created.**
-- The third EXACT group is the **pre-existing Barcelona deferral**, unchanged.
-- ⚠️ **The two Rosewood pins carry the same title, deliberately.** They are two
-  people posting about one hotel. `PlacecardView` renders `by <maker>` under
-  the title, so the cards stay distinguishable; inventing a distinction
-  between them would have meant siting one somewhere it is not.
-- New NEAR pairs: **Operaparken 28 m** and **Wave Hill 63 m**, each a pin
-  beside an existing Atlas tour of the same subject. Left as NEAR on purpose —
-  both markers are reachable and neither coordinate is wrong.
+### 🔴 THE SAME CLIP CROSS-POSTED IS TWO PINS ON ONE COORDINATE — FLAGGED TO THE OWNER
 
-## Subjects that had to be worked out
+Link #6 (TikTok) and #16 (Instagram) are **the same footage of Plečnik's Zacherlhaus**, and
+therefore land on the identical coordinate with the identical title. Two independent checks
+caught it: the two-stage perceptual check nominated the pair at Hamming 1 with pixel-diff
+**2.1** (identical pictures score under 1), and **`check-place-candidates.py` reports the pair
+as its only new EXACT group.** Both shipped, because both links were sent; **it is a one-line
+removal if the owner wants one gone.** Its one useful side effect is that the checker's EXACT
+tier now has a second live example beyond the pre-existing Barcelona deferral.
 
-- **#8 James Rose Center, Ridgewood NJ.** ⚠️ **My own 420-character caption
-  truncation hid the answer for half an hour.** The full caption ends
-  `📍 james rose center, ridgewood, new jersey`. **Print full captions.**
-  OSM has no node for it; the venue's own site confirms **506 East Ridgewood
-  Avenue** (the landscape architect's own 1953 home). A *structured* Nominatim
-  query returns `class/type = place/house` for 506 — a real address point, not
-  the road-centroid trap — even though reversing that point answers **450**,
-  the large adjacent parcel. The Marriage Skate Shop / Garden Room shape.
-- **#10 Public School 15, "the Little Red Schoolhouse", 4010 Dyre Avenue.**
-  The creator's on-screen text says **Wakefield**; the building is in
-  **Eastchester**, ~1.3 km away. Followed the pixels (Marin County Civic
-  Center rule): H-plan red brick, central bell tower with a steep pyramidal
-  roof and weathervane, 1877 Victorian Gothic — OSM names it exactly at that
-  address, and it was built for the *rural town of Eastchester* before the
-  1895 annexation, which is precisely the creator's claim. **The competing
-  candidate, P.S. 21 in Wakefield proper, has no architectural distinction of
-  any kind.** The creator's words stay verbatim in `longDescription`; nothing
-  we author names a neighbourhood.
-- **#26 UIC Skyspace ("Hard Scrabble Sky"), James Turrell, 2005.** OSM names
-  it `UIC Skyspace`, `class=artwork`, Earl Neal Plaza.
-- **#3 Metropolitan Faces, 57 St station (F).** MTA Arts & Design confirms
-  Alex Katz's 19 laminated-glass panels on that mezzanine, fabricated by
-  Glasmalerei Peters — matching the caption's own credits.
-- **#22 Petre Island.** OSM spells it **Petre**, the creators write **Petra**.
-  Titled for the building (`Chahroudi Cottage, Petre Island`).
-- **#1 River City** and **#33 520 West 28th Street** name themselves in frame
-  (Goldberg 1986; Zaha Hadid, shot from the High Line).
+### 🔴 ONE POST HAD NO CAPTION AT ALL AND THE HERO IDENTIFIED IT
 
-## Three heroes re-cropped, and why that is not editorializing
+TikTok `7668424951552101654` returns an **empty** oEmbed title. The thumbnail settled it in one
+look: a Gothic-crowned setback tower with *Chicago Tribune* lettering on the low pavilion beside
+it, and the burned-in line *"Did you know that Chicago's iconic gothic skyscraper,"* — the
+**Tribune Tower**, confirmed against OSM's `Tribune Tower` building node at 435 North Michigan
+Avenue. Same move as session 120's Habitat 67, and the second time in two batches that the
+picture has answered a question the metadata could not.
 
-`render_hero` crops `centering=(focus, 0.5)` and for a 9:16 phone frame the
-square is width-limited, so **`--focus` does nothing at all** — the seventh
-batch running into this. Re-rendered through a mirror of the tool's own
-pipeline (same `trim_bars`, same blur/pad, **same filename**, so `Tours.json`
-is untouched):
+### ⚠️ ALL SIX SUPPLIED COORDINATES CHECKED OUT — the first batch where none moved
 
-- **#11 Museum of Ethnography** — vfocus **0.78**. The square had sliced
-  *"MUSEUM OF ETHNOGRAPHY"* through the middle. That is the subject's name.
-- **#5 Division Street** — vfocus **0.90**. Recovers *"Division Street:
-  Delancey vs Rutgers"*, which the centred square had cut in half.
-- **#13 Walt Disney World Swan** — vfocus **0.20**. The centred square had
-  cropped **the hotel out of the frame entirely**, leaving the presenter
-  panel of a split-screen. Now shows the swan sculptures and the lake.
+Every one reverse-verified at zoom 18, and five come back **named exactly**:
+`Heilig-Geist-Kirche` (Klausgasse 18, Ottakring) · `N M Rothschild & Sons` (St Swithin's Lane —
+which is New Court) · `Bank of England` (Threadneedle Street) · `Blenheim Palace` (The Great
+Court) · `Orford Ness National Nature Reserve`.
 
-⚠️ **Deliberately left alone:** #4, #10, #21, #29, #33 all clip a line, but in
-every case what is lost is the creator's hook or strapline, not the subject's
-name (the California Academy rule). **Recovering what the crop destroyed is
-not the same as removing what the creator put there** — the 2026-08-27 owner
-instruction, applied in both directions.
+The sixth, the **Royal Hospital Chelsea stable block**, returns `Royal Hospital Road` with no
+building node — OSM maps no stable block. It sits **51 m from the National Army Museum** on the
+hospital's own western frontage, which is where Soane's 1814 stable block stands, so it is kept
+as supplied. The Marriage Skate Shop rule: when OSM has no node for the thing, the venue's own
+context is the next authority, not the nearest addressable feature.
 
-## ⚠️ Flagged for the owner, not resolved unilaterally
+### ⚠️ THIRTEEN BARE COORDINATES, FORWARD THEN REVERSE
 
-- **#35 Walt Disney World Swan & Dolphin (YouTube) has an unusable hero.**
-  `maxresdefault` and `sddefault` both **404**; only `hqdefault` exists at
-  480×360, and oEmbed reports a **200×150, 4:3** embed — a genuinely ancient
-  upload. The frame is a dark, blurred, indecipherable smear. It renders as a
-  murky rectangle on the map. **No better thumbnail exists**, and a link pin
-  re-hosts only the thumbnail. Shipped and flagged; the same site is covered
-  properly by #13. **Most likely candidate for removal in this batch.**
-- **#16 (`@bassforge.us`) is a stitch, not original footage.** Its hero is a
-  screen-recording of *another* creator's Chichén Itzá video with a reaction
-  face and a waveform graphic beside it.
-- **#24 Noguchi Playscape** ships an **architectural model**, not the
-  playground. **#5 Division Street** ships a **historical map**. Both are the
-  creator's own frame and neither is wrong; both are weak on a map.
-- **Three pins report `plays_inline=False`** — #4 House of the Redeemer, #7
-  Fondation Maeght, #8 James Rose Center — because Instagram withholds the
-  media file for **licensed music**. First time this batch shape has hit that
-  case at all; previous Instagram batches were all `True`. Those three may
-  bounce the viewer to Instagram rather than playing inline.
-- **`@urbanistariel` and `@lectec.science` now hold rows on two platforms
-  each.** `@lectec.science` on Instagram **already existed** and the uuid5
-  scheme reproduced its id exactly, so the merge collapsed it: **29 new maker
-  rows from 30 distinct creators.**
+Each was forward-geocoded and then reverse-verified onto its subject by name. Two needed a
+second query and both failures were the query, not the place:
 
-## Absent architects
+- **Kirche am Steinhof** returns only an `information/board` node under that name. The church
+  itself is OSM's **`Otto-Wagner-Kirche`**, 48.2106094, 16.2787645 — 250 m from the signboard.
+- **St Alban the Martyr** is not findable as "St Alban the Martyr, Brooke Street"; it is
+  `St Alban the Martyr, **Brooke's Court**`, which is exactly the street sign visible in the
+  hero. **Re-query before concluding a place is unmapped.**
 
-**In the vocabulary and used by name:** `Bertrand Goldberg` (River City),
-`Toyo Ito` (NTU), `Frank Lloyd Wright` (Hollyhock House, Chahroudi Cottage),
-`Zaha Hadid` (520 West 28th), `Cobe` (Operaparken) — each **alongside**
-`Designed by a Master`, never replacing it.
+**Two reverse-geocodes land on something else and both are right:** the Zacherlhaus returns
+*Hypo Vorarlberg, 6 Brandstätte* (the bank in its ground floor — road **and** number match) and
+the Certosa returns *Pinacoteca della Certosa* (the picture gallery inside it).
 
-**Verified and absent:** **Isamu Noguchi** (Playscape), **Michael Graves**
-(Swan and Dolphin), **Josep Lluís Sert** (Fondation Maeght), **Gustaf Nyström**
-(the Rotunda), **Grosvenor Atterbury** (House of the Redeemer), **James Rose**,
-**James Turrell**, **Marcel Ferencz / Napur Architect**, **Populous**. Noguchi
-and Graves are the most conspicuous. All ship the generic tag where the caption
-makes authorship the point.
+### ⚠️ THE VERTICAL `--focus` GAP, SEVENTH BATCH RUNNING — two hand re-crops
 
-⚠️ **Correctly NOT tagged:** **Giacometti** on Fondation Maeght — he made the
-bronzes standing in the courtyard, Sert made the building (the Kiki Smith
-rule). **Richard Meier** on the High Museum — the caption is entirely about
-the collection and never mentions the architect (the Jules Dalou rule).
+`render_hero` crops at `centering=(focus, 0.5)`, so on a 9:16 phone video the square is
+width-limited and **`--focus` does nothing at all**. Both re-crops went through a mirror of the
+tool's own pipeline — same `trim_bars`, same blur-and-pad, **same filename**, so `Tours.json`
+never learns about it:
+
+- **Tomba Brion** at vertical **0.15**, recovering the creator's own on-screen title
+  *"Carlo Scarpa's Tomba Brion, 1968–78"*, which the centred square sliced off entirely.
+- **Fondazione Querini Stampalia** at vertical **0.62**, dropping a half-word of clipped
+  lettering (*"Stampalia"* alone) that the centred square left floating at the top.
+
+**Negozio Olivetti was deliberately left alone** — moving up to keep the whole title would cost
+the campanile its belfry, and the pin's own title already names the shop (the California Academy
+rule).
+
+### ⚠️ TWO HEROES ARE WEAK, ONE OF THEM BADLY — flagged, not resolved
+
+- **🔴 Royal Hospital Chelsea Stable Block is a podcast talking head.** One of the hosts at a
+  microphone, letterboxed, with a caption fragment across it. Right subject, **no view of the
+  place at all** — the Hugo de Grootplein / Yonemoto Coffee shape, and the worst of them so far.
+- **Tomba Brion** shows the municipal cemetery the memorial adjoins rather than Scarpa's
+  concrete, though an `ALVISE BRION` headstone is legible in it and the re-crop now carries the
+  title.
+- **Negozio Olivetti** opens on Piazza San Marco rather than the shop, which is at least the
+  right square — the showroom is under the Procuratie Vecchie.
+
+A link pin re-hosts only the thumbnail, so **no other frame exists for any of them.**
+
+### ⚠️ ARCHITECT TAGGING — two kept, five absent from the vocabulary
+
+Caption-driven, per the documented rule. **Kept:** `Rem Koolhaas` (the caption reads *"OMA's New
+Court, 2008–11, Rem KoolhaaS"*) and **`John Soane` twice** — the Bank of England post announces
+*"our new series on John Soane"*, and the Chelsea reel is explicitly *"John Soane's work for the
+Royal Hospital Chelsea"*. The neighbouring Atlas tour *Bank Junction* already carries Soane, so
+the pin and the tour share shelves.
+
+**Absent from the vocabulary, shipping the generic `Designed by a Master`:** **Carlo Scarpa**
+(four pins — Tomba Brion, Castelvecchio, Querini Stampalia, Negozio Olivetti), **Jože Plečnik**
+(three — Heilig-Geist, Zacherlhaus ×2), **Otto Wagner**, **William Butterfield**, **John
+Vanbrugh**. **Scarpa and Plečnik are the two most conspicuous absences the catalogue now has**,
+ahead of Safdie and Roebling, because each carries several pins on their own. Adding names is a
+`Models/Tag.swift` change — code, owner OK — so it stayed out of a content PR.
+
+⚠️ **Herbert Baker is in the vocabulary and was deliberately NOT tagged** on the Bank of England,
+even though the facade in the frame is his rebuilding over Soane's screen wall. The caption makes
+Soane the subject; the rule is what the source says, not what the pixels show.
+
+### ⚠️ THE TRIBUNE TOWER PLACE CANDIDATE, FLAGGED NOT CREATED
+
+`check-place-candidates.py` reports the pin **142 m** from the Atlas tour *The Wrigley Building &
+Tribune Tower* (NEAR, never auto-created). Its tags were matched to that tour's exactly —
+`Notable Building, Architecture, Gothic, Iconic Landmark`, **and no architect tag, because the
+tour carries none either**.
+
+---
+
+## 🔴 FOUND WHILE VERIFYING, NOT PART OF THIS BATCH: the four pulled pins are still live
+
+The owner asked on 2026-08-28 to pull *Empire Theatre*, *The Brooklyn Bridge Caissons*, *The
+Octagon* and the creator `@nycunfilteredstories` (which took *Verrazzano-Narrows Bridge* with it).
+PR #634 removed them from `Tours.json` and #635 committed
+**`backend/pull_nycunfilteredstories.sql`** to remove them from Postgres.
+
+**Diffing the live RPC against the catalogue file today shows all four pins and both creator rows
+still being served.** That file has evidently never been pasted into the SQL Editor — and
+`seed_from_toursjson.py` is upsert-only by design, so nothing else can remove them. **The app
+reads Supabase first, so the four pins are on every phone right now.** The fix is the owner
+pasting that one file into the Supabase SQL Editor; it is idempotent and its own header says so.
+
+**⚠️ The diff that shows this is easy to get wrong, and I got it wrong first.**
+`Tours.json` stores some UUIDs **uppercase** and Postgres returns them **lowercase**, so a naive
+id comparison reports **173 pins missing and 133 makers missing** — the session-99 false alarm,
+repeated exactly. **Compare ids case-insensitively.** The other twelve extra maker rows are
+ordinary accounts (every signup auto-creates one) and the one extra tour is `Zxxx`, the known
+test tour.
+
+---
 
 ## Verification
 
-- Validator **mirror** (no Swift toolchain in a Linux web session), vocabulary
-  parsed from **both** `Models/Tag.swift` **and** `scripts/validate-tours.swift`
-  and refusing to run if they disagree or either parse is empty — they agree at
-  **377 tags across 5 facets**. **Self-tested against 40 injected fault classes,
-  40/40 caught**, including all seven place-layer checks. Then **0 errors,
-  2 warnings across 1,552 tours + 182 pins + 38 places** — and **both warnings
-  are pre-existing**, confirmed by running the same mirror against
-  `origin/main`, which reports the identical pair.
-- `make-link-pin.py --selftest` **71/71** (62/62 without Pillow — install it
-  before reading that number as a pass).
-- **0** duplicate tour/stop/maker ids, **0** already-pinned sourceURLs,
-  **0** byte-duplicate heroes, **0** perceptual candidates even at Hamming ≤ 45.
-- **0 of 33 target paths pre-existed** on gh-pages (checked against all 7,903
-  paths). **The handle suffix prevented 1 live-hero overwrite:**
-  `images/operaparken_hero.webp` is the live Atlas Copenhagen tour's hero.
-- gh-pages: `git ls-remote` re-checked **in the same command as the push**;
-  tree diff **exactly 33 additions, 0 deletions, 0 modifications, nothing
-  outside `images/`** (`8e20a091`); Pages deploy read **`in_progress`, not
-  `cancelled`**.
-- `Tours.json` confirmed **byte-stable under a Python re-dump at `indent=2`**
-  before editing; diff **1,726 insertions / 0 deletions**.
-- **All 32 heroes opened and read against their captions — zero wrong
-  subjects.** Sixteen name themselves in the frame.
-- ⚠️ **A bug in my own contact sheet nearly became a false alarm:** it matched
-  files by slug prefix, so `yankee-stadium` picked up
-  `yankee-stadium-four-homes-…` and #31 rendered #28's picture. The catalogue
-  was always right. **Map pins to heroes through `heroImageURL`, never by
-  prefix** — five of these slugs share one.
+- **`swift scripts/validate-tours.swift` itself** — a Mac session, so the authoritative validator
+  rather than a Python mirror. **0 errors, 2 warnings across 1,552 tours + 169 pins**, and
+  **both warnings are pre-existing**: the same binary against `main` with this branch stashed
+  reports the identical pair (VIA 57 West's transcript gap; Bedrock Caverns' deliberate null
+  `walkingDistanceMeters`). No pin of mine warns, so every one carries a Place type and a Theme.
+- `make-link-pin.py --selftest` **71/71** with Pillow installed (62/62 without it is a false pass).
+- **0** duplicate pin/stop/maker ids, **0** already-pinned sourceURLs, **0** filename collisions
+  against all **5,939** gh-pages `images/` paths.
+- **0 byte-duplicate heroes**; one perceptual nomination, which is the real Zacherlhaus pair above.
+- `Tours.json` confirmed **byte-stable under a Python re-dump at `indent=2`** before editing.
+- gh-pages: `git ls-remote` re-checked **in the same command as the push**; tree diff **exactly
+  19 additions, 0 deletions, nothing outside `images/`**; deploy read **`in_progress`, not
+  `cancelled`**, then **all 19 URLs hash-verified against the uploaded bytes**, not merely 200.
+- **Live after merge, verified against the sources rather than the workflow's success line:**
+  the Supabase RPC serves all 18 distinct new titles and both `@about_buildings` maker rows, with
+  `places` still 37 and `priceTier` still on all 1,553 with 66 priced; the gh-pages mirror
+  converged to 169 pins / 154 makers about eight minutes later.
+- CI green on the PR (validator + iOS simulator build + unit tests).
 
-## Counts after this batch
+---
 
-**1,552 tours · 182 link pins · 182 makers · 38 places · 35 countries ·
-178 city/country pairs.** Makers split **34 Atlas studios / 148 pinned
-creators** (97 TikTok, 38 Instagram, 13 YouTube). **Taiwan, Finland and
-Hungary are the 33rd, 34th and 35th countries**, re-derived over `tours` AND
-`linkPins` together — the trap sessions 118 and 119 both fell into.
+## Owed / open
 
-⚠️ **A parallel session was pushing link-pin heroes to gh-pages during this
-one** (gh-pages run 739, *"Nineteen link-pin heroes: About Buildings +
-Cities"*, 15:22 UTC). My push went on top of theirs cleanly, but **re-derive
-the counts before quoting them** — `main` may have moved.
-
-## Owed
-
-- **The parked Greenwich Village garden** — one word from the owner wires it.
-- **`check-image-duplicates.py` still cannot scope to a link-pin batch**
-  (`--maker <CODE>` or `--all`). Covered here by running the same two-stage
-  check by hand. **`--since <ref>` or `--pins` remains the obvious fix** —
-  seventh batch running into it.
+1. **The owner pastes `backend/pull_nycunfilteredstories.sql`** — see above. Nothing else can
+   remove those four pins.
+2. **The Zacherlhaus pair** — keep both, or say which to pull.
+3. **The Royal Hospital Chelsea hero** — a talking head, unfixable in place.
+4. **Carlo Scarpa and Jože Plečnik** for `Models/Tag.swift`, whenever an architect PR next runs.
+5. **`check-image-duplicates.py` still cannot scope to a link-pin batch** (`--maker <CODE>` or
+   `--all`; a pin batch has no maker code) — **sixth batch running**. Covered here by running the
+   same two-stage check by hand. A `--since <ref>` or `--pins` flag remains the obvious fix.

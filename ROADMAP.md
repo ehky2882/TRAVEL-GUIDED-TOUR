@@ -1111,9 +1111,10 @@ That requires several large pieces of infrastructure, roughly:
 ### Outside content — link pins (new, 2026-08-24)
 
 **Status (2026-08-29, session 121):** content session (web) — **thirty-two link pins from
-thirty-five owner-supplied links**, on branch `claude/tour-links-upload-wa3e0g`. **linkPins 150 →
-182, makers 153 → 182, places 37 → 38, countries 32 → 35** (Taiwan, Finland, Hungary); tours
-unchanged at 1,552. **No PR opened** — this session's harness forbids opening one unasked.
+thirty-five owner-supplied links**, on branch `claude/tour-links-upload-wa3e0g`. **+32 pins, +29 makers, +1 place** and three countries (Taiwan, Finland, Hungary); tours
+unchanged at 1,552. ⚠️ **Merged alongside a parallel same-day batch**, so the catalogue landed at
+**201 pins / 183 makers / 38 places / 36 countries** — neither session's own totals survived the
+merge, which is why that Key-facts line says re-derive rather than quote. **No PR opened** — this session's harness forbids opening one unasked.
 **2 links are dead at the source and 1 is parked.** ⚠️ **A dead Instagram reel is identified by
 SIZE, not by a string**: the two dead ones return a ~215 KB embed shell with no owner blob on six
 spaced fetches, against ~257–262 KB with one for live posts in the same run, and neither carries a
@@ -1135,7 +1136,7 @@ time that case has appeared at all. Verification: validator mirror **self-tested
 injected faults, then **0 errors, 2 warnings**, both pre-existing on `main`; **0 of 33 target paths
 pre-existed** and the handle suffix **prevented one live Atlas hero overwrite**
 (`operaparken_hero.webp`); gh-pages tree diff **exactly 33 additions, 0 deletions**. Detail:
-`archive/HANDOFF-260829.md`. Earlier status follows.
+`archive/HANDOFF-260829-2.md`. Earlier status follows.
 
 
 Bringing content creators already have into Atlas, rather than asking them to start again.
