@@ -229,9 +229,11 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   unmerged parallel branch. **0** byte-duplicate heroes; closest perceptual pair **29.5**. Tours.json
   **byte-stable under a Python re-dump before editing**; diff **1,081 insertions / 0 deletions**.
   gh-pages: `git ls-remote` re-read **in the same command as the push**, tree diff **exactly 23
-  additions, 0 deletions, nothing outside `images/`** (`251cf95e`), deploy read **`in_progress`, not
-  `cancelled`**, then all 24 live URLs hash-verified against the uploaded bytes. ⚠️ **My push
-  cancelled the parallel session's deploy** — harmless, their commit is my parent. **CI has not run:
+  additions, 0 deletions, nothing outside `images/`** (`251cf95e`), ⚠️ **my deploy was then CANCELLED by a fourth session's push** (`473af758`) and mine had
+  already cancelled a third session's — harmless in both directions, since each commit is an
+  ancestor of the next, and my commit was re-confirmed an ancestor of head with all 24 paths
+  present. The next run carried them: **all 24 live URLs hash-verified against the uploaded bytes,
+  24 ok, 0 bad.** **CI has not run:
   no PR is open.**
 - **⚠️ TOOLING GAP, SIXTH BATCH RUNNING:** `check-image-duplicates.py` still cannot scope to a
   link-pin batch. Covered by running the same two-stage check by hand. **`--since <ref>` or `--pins`
