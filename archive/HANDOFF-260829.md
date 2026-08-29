@@ -198,3 +198,30 @@ test tour.
 5. **`check-image-duplicates.py` still cannot scope to a link-pin batch** (`--maker <CODE>` or
    `--all`; a pin batch has no maker code) — **sixth batch running**. Covered here by running the
    same two-stage check by hand. A `--since <ref>` or `--pins` flag remains the obvious fix.
+
+
+---
+
+## Owner pulled the Instagram Zacherlhaus (same day, after #638 merged)
+
+Owner, shown the flagged pair: *"pull the instagram zacherlhaus one"*.
+
+Removed: **`Zacherlhaus` (Instagram @about_buildings)**, `488AFBA8-…`, sourceURL
+`https://www.instagram.com/reel/DNYqAvOMDt7/`. **linkPins 169 → 168.** The TikTok
+post of the same building stays, so the subject keeps a pin.
+
+- **⚠️ The creator row STAYS**, unlike the `@theironwil` case. `Instagram
+  @about_buildings` still carries six pins (St Alban the Martyr, Blenheim Palace,
+  Orford Ness, the Royal Hospital Chelsea stable block, the Florence Charterhouse,
+  Assisi), and `tours.maker_id` is `ON DELETE RESTRICT`, so deleting it would fail
+  anyway. The SQL asserts the survivor count rather than assuming it.
+- **`images/zacherlhaus-reel-aboutbuildings_hero.webp` is LEFT ORPHANED on
+  gh-pages**, matching what the 2026-08-28 pull did with its four heroes (all four
+  are still there). Nothing references it.
+- **`backend/pull_pins_260829.sql` is a SUPERSET of `pull_nycunfilteredstories.sql`**
+  and repeats its deletions, because the live RPC still served all four of those
+  pins and both creator rows on 2026-08-29 — eight days after they left
+  `Tours.json`. **One paste now closes everything outstanding**; running the older
+  file as well is harmless, since both are idempotent.
+- `check-place-candidates.py` drops back to its single pre-existing EXACT group
+  (the Barcelona deferral). Validator still 0 errors, 2 warnings, both pre-existing.
