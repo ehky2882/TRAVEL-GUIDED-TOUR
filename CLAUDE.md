@@ -132,10 +132,10 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **Eighteen TikToks from `@thedesigndetourist` plus five Instagram reels (`@shaunbirley` ×4,
 `@meliluu__` ×1).** All twenty-three alive and pinnable — no dead posts, no `/photo/` carousels.
-**linkPins 168 → 191 · makers 154 → 157 · tours unchanged at 1,552 · places at 37.** No new
-countries; eight cities enter the catalogue (Santa Monica, Beverly Hills, Santa Clara, Honolulu,
+**23 pins and 3 maker rows added — linkPins 201 → 224 · makers 184 → 187 after merging the two
+parallel batches that landed first; tours unchanged at 1,552, places at 38.** No new countries; eight cities enter the catalogue (Santa Monica, Beverly Hills, Santa Clara, Honolulu,
 Pasadena, Chino Hills, Ojai, Palm Springs, West Hollywood). Content only — no Swift, no SQL, no
-build. **NO PR OPENED** (this session's harness forbids opening one unasked). Full detail:
+build. **Opened and merged on owner instruction**, who reviews the flagged pins on device. Full detail:
 `archive/HANDOFF-260829-3.md`.
 
 - **🔴 TWO VENUES HAD MOVED, AND IN BOTH CASES THE STALE ADDRESS GEOCODED BEAUTIFULLY.** **Tung Po**
@@ -155,14 +155,14 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   posts on one coordinate. **These are NOT cross-posts of one clip:** the perceptual pixel-diff
   between each pair's heroes is **42.5** and **58.3**, where identical pictures score under 1 — which
   is what distinguishes them from the Zacherlhaus case. **Consequence, expected not defective:**
-  `check-place-candidates.py` reports **3 EXACT groups against `origin/main`'s 1**; the third is the
-  pre-existing Barcelona deferral. **One line removes either pin of either pair.**
+  `check-place-candidates.py` gains **2 EXACT groups** over whatever the base carries (5 against
+  `origin/main`'s 3 at merge time). **One line removes either pin of either pair.**
 - **🔴 THE HANDLE SUFFIX PREVENTED THREE LIVE-HERO OVERWRITES.** `bradbury-building_hero.webp`,
   `la-union-station_hero.webp` and `griffith-observatory_hero.webp` are all **live Atlas LAX tour
   heroes**, and three of my subjects are those same places — a bare slug would have written over
   three real tours' photographs, which since #567 a downloaded tour would never see corrected.
   **0 of 24 target paths pre-existed** against 5,991 `images/` paths. Those three, plus **Petersen
-  at 50 m**, are now **place candidates** (NEAR **9 → 13**); none created — a place needs its own
+  at 50 m**, are now **place candidates** (**+4 NEAR pairs**; 15 against `origin/main`'s 11 at merge time); none created — a place needs its own
   copy, address and photograph.
 - **🔴 A THIRD PARALLEL SESSION IS PINNING THE SAME CREATOR, AND THE MERGE WILL COLLIDE.** gh-pages
   moved twice mid-session; `a8a81767` carries **two `@thedesigndetourist` pins** from another
@@ -222,7 +222,7 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
 - **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
   Swift validator, refusing to run if they disagree or either parse is empty (they agree at **377
   tags across 5 facets**) — **self-tested against 40 injected fault classes, 40/40 caught**, then
-  **0 errors, 2 warnings across 1,552 tours + 191 pins + 37 places**, **both pre-existing** (the same
+  **0 errors, 2 warnings across 1,552 tours + 224 pins + 38 places** post-merge, **both pre-existing** (the same
   mirror against `origin/main` reports the identical pair). `make-link-pin.py --selftest` **71/71**
   with Pillow (**62/62 without it**). **0** duplicate tour/stop/maker ids, **0** already-pinned
   sourceURLs, **0** filename collisions — each checked against **both** `origin/main` **and** the
@@ -233,8 +233,7 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   already cancelled a third session's — harmless in both directions, since each commit is an
   ancestor of the next, and my commit was re-confirmed an ancestor of head with all 24 paths
   present. The next run carried them: **all 24 live URLs hash-verified against the uploaded bytes,
-  24 ok, 0 bad.** **CI has not run:
-  no PR is open.**
+  24 ok, 0 bad.** **CI green on the PR.**
 - **⚠️ TOOLING GAP, SIXTH BATCH RUNNING:** `check-image-duplicates.py` still cannot scope to a
   link-pin batch. Covered by running the same two-stage check by hand. **`--since <ref>` or `--pins`
   remains the obvious fix.**
@@ -250,11 +249,115 @@ Twelve TikToks and seven Instagram reels, **all from `@about_buildings`** ("Abou
 - **⚠️ ONE POST HAD NO CAPTION AT ALL and the hero identified it** — the **Tribune Tower**, from the *Chicago Tribune* lettering in frame, confirmed against OSM at 435 North Michigan Avenue. Second batch running where the picture answered what the metadata could not.
 - **⚠️ ALL SIX SUPPLIED COORDINATES CHECKED OUT — the first batch where none moved.** Five reverse-verify **named exactly** (`Heilig-Geist-Kirche`, `N M Rothschild & Sons`, `Bank of England`, `Blenheim Palace`, `Orford Ness National Nature Reserve`). The sixth, the Royal Hospital Chelsea stable block, returns only *Royal Hospital Road* — OSM maps no stable block — and sits 51 m from the National Army Museum on the hospital's own frontage, so it is kept (the Marriage Skate Shop rule). **⚠️ Two of the thirteen bare ones failed their first query and both failures were the query:** the church is OSM's `Otto-Wagner-Kirche`, not "Kirche am Steinhof" (which is a signboard 250 m away), and St Alban's is on **Brooke's Court**, the street sign visible in its own hero. **Re-query before concluding a place is unmapped.**
 - **⚠️ THE VERTICAL `--focus` GAP, SEVENTH BATCH RUNNING.** `render_hero` crops at `centering=(focus, 0.5)`, so on a 9:16 phone video the square is width-limited and `--focus` does nothing. Two hand re-crops through a mirror of the tool's own pipeline at the same filenames: **Tomba Brion** at 0.15 recovers the creator's own title, **Querini Stampalia** at 0.62 drops a half-word of clipped lettering. **Negozio Olivetti deliberately left alone** — keeping its title would cost the campanile its belfry.
-- **⚠️ TWO HEROES ARE WEAK AND ONE IS BADLY SO, flagged not resolved:** the **Royal Hospital Chelsea** reel's thumbnail is **a podcast talking head** with no view of the building (the Hugo de Grootplein shape, and the worst yet); Tomba Brion shows the municipal cemetery the memorial adjoins; Negozio Olivetti opens on Piazza San Marco rather than the shop. A link pin re-hosts only the thumbnail, so no other frame exists.
+- **✅ THE ROYAL HOSPITAL CHELSEA HERO STAYS — OWNER-CONFIRMED 2026-08-29: *"keep chelsea, i'm fine with it"*. THE PIN IS CLOSED; do not re-raise it.** Its thumbnail is **a podcast talking head** — one of the hosts at a microphone, with no view of the building at all (the Hugo de Grootplein shape, and the weakest hero shipped so far). It was put to the owner as a pull candidate and kept. **⚠️ ANYONE RE-RUNNING THE OPEN-EVERY-HERO AUDIT WILL FLAG THIS AGAIN — it is settled, and the Ministry of Enterprise / Casa Lleó Morera precedent applies: honour the owner's decision rather than "fixing" it.** ⚠️ Two others in the batch are weak but were never in question: **Tomba Brion** shows the municipal cemetery the memorial adjoins (an `ALVISE BRION` headstone is legible, and the re-crop restored the creator's own title), and **Negozio Olivetti** opens on Piazza San Marco rather than the shop, which is under the Procuratie. A link pin re-hosts only the thumbnail, so no other frame exists for any of them.
 - **⚠️ SCARPA AND PLEČNIK ARE NOW THE CATALOGUE'S MOST CONSPICUOUS ARCHITECT ABSENCES** — four pins and three pins respectively, all shipping the generic `Designed by a Master`, along with **Otto Wagner**, **William Butterfield** and **John Vanbrugh**. **Kept:** `Rem Koolhaas` (named in the New Court caption) and **`John Soane` twice** (both posts are explicitly about his work; the neighbouring Atlas tour *Bank Junction* already carries him). ⚠️ **`Herbert Baker` IS in the vocabulary and was deliberately not tagged** on the Bank of England although the facade in frame is his — the rule is what the source says, not what the pixels show.
 - **⚠️ Place candidate flagged, not created:** the Tribune Tower pin is **142 m** from the Atlas tour *The Wrigley Building & Tribune Tower*. Its tags match that tour's exactly, **including carrying no architect tag, because the tour carries none.**
 - **✅ AMENDED SAME DAY — the owner pulled the Instagram Zacherlhaus.** *"pull the instagram zacherlhaus one"*. **linkPins 169 → 168**; the TikTok post of the same building stays, so the subject keeps a pin. **⚠️ The `Instagram @about_buildings` creator row STAYS** (six pins remain, and `tours.maker_id` is `ON DELETE RESTRICT` so deleting it would fail anyway) — unlike the `@theironwil` case where the sole pin took the row with it. The hero is **left orphaned on gh-pages**, matching what the 2026-08-28 pull did with its four. **🔴 `backend/pull_pins_260829.sql` SUPERSEDES `pull_nycunfilteredstories.sql` and repeats its deletions**, because the live RPC still served those four pins and both creator rows — so **one owner paste now closes everything outstanding**; both files are idempotent, so running either or both is safe.
 - **Verification.** **`swift scripts/validate-tours.swift` itself** (Mac session): **0 errors, 2 warnings**, and the same binary against `main` with the branch stashed reports the identical pair — **both pre-existing**. Selftest **71/71** with Pillow. **0** duplicate ids, **0** already-pinned sourceURLs, **0** filename collisions against 5,939 gh-pages `images/` paths, **0** byte-duplicate heroes. Tree diff **exactly 19 additions, 0 deletions, nothing outside `images/`**; deploy read `in_progress`, then **all 19 URLs hash-verified against the uploaded bytes**. After merge: the **live RPC** serves all 18 distinct new titles with `places` still 37 and 66 tours still priced, and the gh-pages mirror converged about eight minutes later.
+
+### Thirty-two link pins, three new countries, and a place the stack cap demanded (branch `claude/tour-links-upload-wa3e0g`, session 121b — content)
+
+**The owner sent thirty-five links — 34 Instagram reels and one YouTube video.** Branch cut from
+`origin/main` at `3f2e164`. **linkPins 150 → 182, makers 153 → 182, places 37 → 38, countries 32 →
+35; tours unchanged at 1,552.** Content only — no Swift, no SQL, no build. **NO PR OPENED** (this
+session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-260829-2.md`.
+
+- **✅ 32 SHIPPED, 2 DEAD, 1 PARKED.** ⚠️ **A dead Instagram reel is identified by SIZE, not by a
+  string.** `DcPNfc7oVvQ` and `DbmKLMDvERk` each return a **~215 KB** embed shell with **no owner
+  blob** on six spaced fetches, against **~257–262 KB with one** for live posts fetched in the same
+  run. Neither carries a *"Video currently unavailable"* marker, so the string test used on dead
+  TikToks finds nothing here. **Do not retry them.**
+- **🔴 YANKEE STADIUM IS NOW A PLACE, BECAUSE FIVE COINCIDENT PINS WOULD HAVE PUT TWO OF THEM OUT OF
+  REACH.** Five links are Yankee Stadium posts and the catalogue **already had an Atlas Yankee
+  Stadium tour** there — six markers on one coordinate against **`TourSetMap.maxStacked = 3`**,
+  whose own comment reads *"The deepest coincident group in the catalog is two."* Beyond three, the
+  extra placecards are simply never rendered and those pins are unreachable from the map. Built on
+  the exact-coordinate rule as `atlas-place:bronx:yankee-stadium`, **6 members**. **The pins moved
+  onto the tour's coordinate; the tour did not move** — and OSM's `Yankee Stadium` polygon sits
+  **27 m** from that point, so the tour's coordinate was confirmed before anything was moved to it.
+  **The place hero is a third photograph** (`Yankee_Stadium_2.webp`, the aerial exterior promoted
+  from the Atlas tour's own gallery), so the page cannot print one picture three times.
+  ⚠️ **This is the session-116 lesson applied at wire-in instead of after the owner spotted it.**
+- **⚠️ TWO NEW EXACT PAIRS WERE LEFT AS PAIRS, DELIBERATELY.** `check-place-candidates.py` now
+  reports **3 EXACT** (was 1) and **10 NEAR**. The new ones — **Temple of Kukulkán / Chichén Itzá**
+  and **Rosewood Mayakoba**, two pins each — are inside the 3-card cap, so both members stay
+  reachable, and a place for either would have to borrow a member's hero (no Atlas tour exists at
+  either site — the Waterlooplein case). The third EXACT group is the **pre-existing Barcelona
+  deferral**. New NEAR pairs: **Operaparken 28 m** and **Wave Hill 63 m**, each a pin beside an
+  Atlas tour of the same subject, both correct where they are.
+- **🔴 MY OWN 420-CHARACTER CAPTION TRUNCATION HID AN ANSWER I THEN SPENT HALF AN HOUR SEARCHING
+  FOR.** Pin #8's caption ends `📍 james rose center, ridgewood, new jersey` — past the cut. **Print
+  full captions before geocoding anything.** OSM has no node for it; the venue's own site confirms
+  **506 East Ridgewood Avenue**, and a **structured** Nominatim query returns `class/type =
+  place/house` for that number — a real address point, not the road-centroid trap — even though
+  reversing it answers **450**, the large adjacent parcel (the Garden Room shape).
+- **⚠️ THE CREATOR SAYS WAKEFIELD; THE BUILDING IS IN EASTCHESTER.** Pin #10 is **Public School 15,
+  "the Little Red Schoolhouse", 4010 Dyre Avenue** — H-plan red brick, central bell tower with a
+  steep pyramidal roof and weathervane, 1877, built for the **rural town of Eastchester** before the
+  1895 annexation, which is exactly the creator's claim. OSM names it at that address. The competing
+  candidate, **P.S. 21 in Wakefield proper, has no architectural distinction at all.** Followed the
+  pixels (the Marin County Civic Center rule); the creator's words stay verbatim in
+  `longDescription` and nothing we author names a neighbourhood.
+- **✅ THE PARKED LINK IS NOW WIRED — the owner named it.** `@nickytoursnyc` names no place and its
+  only on-screen text is *"IN GREENWICH VILLAGE"*; the frame fitted **Jefferson Market Garden** and
+  **the Garden at St Luke in the Fields** about equally, and they are 700 m apart, so it was parked
+  rather than guessed (session 112's precedent). Owner: *"pretty sure it's jefferson market garden"*.
+  **Two things corroborated that before it was wired** — the roof glimpsed through the trees is
+  steeply pitched and reddish, which is the Jefferson Market Library and not St Luke's low Federal
+  brick; and OSM puts the library **25 m** from the garden it names as a `park`, so that roof is
+  exactly what a camera in the garden would see. ⚠️ **The identification is the owner's, not a
+  derivation** — if it is ever questioned, that is where it came from.
+- **⚠️ THREE HEROES RE-CROPPED — the vertical `--focus` gap, SEVENTH batch running.** Re-rendered
+  through a mirror of the tool's own pipeline, same filename: **Museum of Ethnography** (0.78, the
+  square had sliced *"MUSEUM OF ETHNOGRAPHY"*), **Division Street** (0.90, recovering *"Delancey vs
+  Rutgers"*), and **Walt Disney World Swan** (0.20, where the centred square had **cropped the hotel
+  out of the frame entirely**, leaving only the presenter panel of a split-screen). Five others clip
+  a line and were **left alone** — what they lose is a hook or strapline, not the subject's name.
+- **🔴 FLAGGED, NOT RESOLVED: THE YOUTUBE PIN'S HERO IS UNUSABLE AND CANNOT BE IMPROVED.** #35's
+  `maxresdefault` and `sddefault` both **404**; only `hqdefault` exists at 480×360 and oEmbed reports
+  a **200×150, 4:3** embed — a genuinely ancient upload. The frame is a dark, indecipherable smear
+  that renders as a murky rectangle on the map. A link pin re-hosts only the thumbnail, so no better
+  frame exists. **The most likely removal candidate in this batch**; the same site is covered
+  properly by #13.
+- **⚠️ ALSO FLAGGED:** **#16** is a **stitch** — its hero is a screen-recording of another creator's
+  Chichén Itzá video with a reaction face; **#24** ships an **architectural model** rather than the
+  Noguchi playground; **#5** ships a **historical map**. All three are the creator's own frame and
+  none is wrong, but all three are weak on a map.
+- **⚠️ THREE PINS REPORT `plays_inline=False` — the licensed-music case, first time at all.** House
+  of the Redeemer, Fondation Maeght and the James Rose Center: Instagram withholds the media file, so
+  those three may bounce the viewer out rather than playing inline. Every previous Instagram batch
+  was `True` throughout.
+- **⚠️ Taiwan, Finland and Hungary are the three countries this batch adds** (32 → 35 on its own base), re-derived over `tours` **and** `linkPins` together — the trap sessions 118 and 119 both fell into. ⚠️ **The merged catalogue stands at 36**, because the parallel batch above added one as well; the ordinals are meaningless across a same-day merge, so re-derive rather than quoting either figure. **`@lectec.science`
+  already had an Instagram row** and the uuid5 scheme reproduced its id exactly, so the merge
+  collapsed it: **29 new maker rows from 30 distinct creators**. **All 32 Instagram makers ship
+  `avatarURL: null` BY DESIGN.**
+- **⚠️ Absent architects, verified:** **Isamu Noguchi** and **Michael Graves** are now the most
+  conspicuous, alongside Josep Lluís Sert, Gustaf Nyström, Grosvenor Atterbury, James Rose, James
+  Turrell, Marcel Ferencz and Populous. In the vocabulary and used by name: `Bertrand Goldberg`,
+  `Toyo Ito`, `Frank Lloyd Wright`, `Zaha Hadid`, `Cobe` — each **alongside** the generic tag.
+  ⚠️ **Giacometti correctly NOT tagged** on Fondation Maeght (he made the bronzes in the courtyard,
+  Sert made the building — the Kiki Smith rule), and **Richard Meier correctly NOT tagged** on the
+  High Museum (the caption never mentions an architect — the Jules Dalou rule).
+- **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
+  Swift validator, refusing to run if they disagree or either parse is empty (they agree at **377
+  tags**) — **self-tested against 40 injected fault classes, 40/40 caught**, including all seven
+  place-layer checks; then **0 errors, 2 warnings across 1,552 tours + 182 pins + 38 places**, **both
+  pre-existing** (the same mirror against `origin/main` reports the identical pair).
+  `make-link-pin.py --selftest` **71/71**. **0** duplicate ids, **0** already-pinned sourceURLs,
+  **0** byte-duplicate heroes, **0** perceptual candidates even at Hamming ≤ 45. **0 of 33 target
+  paths pre-existed**, and **the handle suffix prevented 1 live-hero overwrite** —
+  `images/operaparken_hero.webp` is the live Atlas Copenhagen tour's hero. gh-pages: `git ls-remote`
+  re-checked **in the same command as the push**, tree diff **exactly 33 additions, 0 deletions,
+  nothing outside `images/`** (`8e20a091`), deploy read **`in_progress`, not `cancelled`**.
+  Tours.json **byte-stable under a Python re-dump before editing**; diff **1,726 insertions / 0
+  deletions**. **CI has not run: no PR is open.**
+- **⚠️ A BUG IN MY OWN CONTACT SHEET NEARLY BECAME A FALSE ALARM.** It matched heroes by slug prefix,
+  so `yankee-stadium` picked up `yankee-stadium-four-homes-…` and #31 rendered #28's picture. The
+  catalogue was always right. **Map pins to heroes through `heroImageURL`, never by prefix** — five
+  of this batch's slugs share one.
+- **⚠️ A PARALLEL SESSION WAS PUSHING LINK-PIN HEROES THROUGHOUT** (gh-pages run 739, *"Nineteen
+  link-pin heroes: About Buildings + Cities"*, 15:22 UTC). My push went on top of theirs cleanly, but
+  **re-derive the counts before quoting them.**
 
 ## Current State (2026-08-28)
 
@@ -3639,7 +3742,7 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **1552 tours + 191 link pins, 157 makers, 1924 tour stops (2115 including one per pin)** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 123 are pinned creators (98 TikTok, 12 YouTube, 13 Instagram) — pinned creators now outnumber the studios more than three to one.** ⚠️ This line has gone stale five times already (it has read "33 … the other 4", "34 … the other 27", "34 … the other 45", "34 … the other 56", "34 … the other 80", "34 … the other 99" and "34 … the other 119" — three of those within a single day, as parallel link-pin batches landed); **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
+- **1552 tours + 224 link pins, 187 makers, 1924 tour stops (2148 including one per pin)** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 153 are pinned creators (98 TikTok, 42 Instagram, 13 YouTube) — pinned creators now outnumber the studios more than four to one.** ⚠️ This line has gone stale eight times already, and **three parallel sessions invalidated it on the same afternoon** — not one session's own figure survived its merge (it has read "33 … the other 4", "34 … the other 27", "34 … the other 45", "34 … the other 56", "34 … the other 80", "34 … the other 99" and "34 … the other 119" — three of those within a single day, as parallel link-pin batches landed); **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
 - **1480 single-stop + 72 multi-stop** — all geofenced. Copenhagen added 40 singles with no walks; Rio launched as 46 singles with no walks; São Paulo added 41 singles + 1 walk; Berlin added 31 singles + 5 walks; Marrakech added 26 singles with no walks; Buenos Aires added 34 singles + 2 walks; Chicago added 25 singles + 5 walks; Melbourne added 34 singles + 1 walk; Sydney added 29 singles with no walks; Cape Town added 30 singles with no walks; Barcelona added 66 singles + 2 walks; Milan added 47 singles + 1 walk; **Stockholm added 42 singles + 3 walks**. Multi-stop walks by maker: London 5, Paris 5, Amsterdam 5, Rome 5, Berlin 5, Chicago 5, San Francisco 4, Toronto 4, Los Angeles 4, Madrid 4, Montreal 4, Dubai 4, Seoul 3, **Stockholm 3**, NYC 2, Naoshima 2, Buenos Aires 2, **Barcelona 2**, Bangkok 1, São Paulo 1, Melbourne 1, **Milan 1**. The 4 originally-named NYC/London walks ("American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London), "Albertopolis" (6 stops, London)) are still the reference multi-stop test cases; AMNH unblocks M-qa items 6 + 7.
 - **Bilingual titles (`English | native script`) on both tour + stop across the Asian bureaus:** Tokyo (TYO), Kyoto (KYO), Naoshima (NAO) — `日本語`; Hong Kong (HKG) — `中文`; Seoul (SEL) — `한국어`; Bangkok (BKK) — `ไทย`; Ho Chi Minh City (SGN) — `Tiếng Việt` (where a Vietnamese name exists; proper-noun venues carry a single name); and Marrakech (RAK) — `العربية` (18 of 26; same proper-noun rule).
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list. Tours may also carry an optional **`videoURLs: [String]?`** (`.mp4` on gh-pages under `videos/`) — **videos LEAD the carousel** (owner decision 2026-07-26), so a tour with one opens on it and the still hero becomes page two. **`backend/add_video_urls.sql` HAS been applied** — verified against the live `get_catalog` on 2026-08-23, which emits the key on every tour; no SQL is owed, and `seed_from_toursjson.py` carries `video_urls` so a content merge cannot wipe it. Each video is openable **fullscreen** (session 107), and a tour also carries **`videoRole: TourVideoRole?`** — `gallery` (the default: b-roll beside the photographs) or **`narration`** (the clip **is** the tour, so its play bar and picture scrub together). ⚠️ **A `narration` tour may carry exactly ONE video**, validator-enforced. **Two tours carry video:** `via-57-west` (**`narration`**, 1080×1920 vertical with audio — a generated stand-in, replace when real footage exists) and `shinsegae-media-facade` (**`gallery`**, two clips: a 1200×900 silent one, plus `landscape-test.mp4`, **a 1920×1080 test card rather than real content**, added so rotation has something to run against — one-line revert). ⚠️ **`video_role` must reach Supabase to have any effect** — `seed_from_toursjson.py` carries it and `backend/add_video_role.sql` has been applied and verified live, but a catalogue edit alone is never enough. ⚠️ An earlier Key-facts note said no tour carried video; that was already false when written.

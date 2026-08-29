@@ -43,16 +43,22 @@ trick."* **Nothing is open from this work; the story moves to `CLAUDE.md` § Cur
 [#638](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/638) squash `ce6ec46b` ·
 [#641](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/641) squash `2f84df52` ·
 [#642](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/642) (scratch files that rode in on a
-`git add -A`). **linkPins 150 → 169 → 168 · makers 153 → 154.** Re-derived with
-`gh pr list --state open` on 2026-08-29: **no PRs are open.**
+`git add -A`). **This batch took linkPins 150 → 169 → 168 and makers 153 → 154.**
+
+⚠️ **A PARALLEL SESSION'S [#640](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/640) LANDED
+MINUTES LATER** (*"Thirty-two link pins, and the stack cap that demanded a place"*, squash
+`cd32e293`) and did not touch this board, so read the counts above as **this batch's deltas, not
+the catalogue's totals** — `main` now carries **200 link pins · 183 makers · 38 places**. Its
+story is in `CLAUDE.md` § Current State and `archive/HANDOFF-260829-2.md`. **Open PRs re-derived
+with `gh pr list --state open` after both merges: none.**
 
 - **✅ `backend/pull_pins_260829.sql` HAS BEEN RUN and verified against the live RPC** — `linkPins`
   **168**, all five pins gone (the Instagram Zacherlhaus plus the four from 2026-08-28 that had
   never been removed from Postgres), both pulled creator rows gone, `places` still 37 and
   `priceTier` still on all 1,553 with 66 priced. **Nothing is owed on the backend.**
-- **🟡 ONE OWNER CALL STILL OPEN: the Royal Hospital Chelsea hero is a podcast talking head** with
-  no view of the building. A link pin re-hosts only the thumbnail, so there is no other frame —
-  it either ships as-is or the pin comes out.
+- **✅ THE LAST OWNER CALL IS CLOSED: the Royal Hospital Chelsea hero stays** — *"keep chelsea,
+  i'm fine with it"* (2026-08-29), though its thumbnail is a podcast talking head with no view of
+  the building. **A hero audit will flag it again; it is settled.** Nothing from this work is open.
 
 ✅ **COPENHAGEN AND THE DANISH ARCHITECTS BOTH MERGED AND VERIFIED LIVE (2026-08-26).**
 [#615](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/615) squash `1e966661` ·
