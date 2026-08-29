@@ -128,6 +128,56 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-28)
 
+### Six places, and the one tour that genuinely had to move (branch `claude/linked-tours-send-ahlhiy`, session 120c — content)
+
+**Owner: *"move iac to corrrect coordinate and make place card. same for guggenheim nyc, the met,
+habitat 67, washington square arch, st pancras. NOT little island for now."*** **Places 31 → 37.**
+Tours, pins and makers unchanged at 1,552 / 150 / 153. Content only — the seed carries `places`, so
+this reaches Supabase on merge with **no owner SQL** (unlike the removal before it).
+
+- **🔴 THE IAC TOUR MOVED 268 m, AND IT IS THE ONE CASE WHERE "THE PIN MOVES, NEVER THE TOUR" IS
+  WRONG.** That rule exists because a geofenced tour's coordinate decides where its audio fires —
+  but here the coordinate was simply an error: it sat on **West 15th Street**, while the building is
+  at **555 West 18th**. Moved onto OSM's node **named `IAC Building`** (`40.7455705, -74.0077509`),
+  which the supplied Plus Code had already reverse-verified onto the address.
+- **⚠️ AND THE RADIUS WAS RE-DERIVED, NOT INHERITED — coordinate and radius are one decision.** It
+  stays **80 m**, but checked afresh against what the script asks of the listener: *"You're on the
+  West Side Highway, between 18th and 19th Streets, looking at the IAC Building"*, with the caption
+  adding *"Walk around the curved corner at 18th Street."* From the building node that vantage is
+  ~40 m west and the 18th Street corner ~40 m south, so 80 m covers it. **0 geofenced markers sit
+  within 200 m**, so nothing else can fire; the nearest neighbour is the Lantern House pin at 95 m,
+  which is `manual`. ⚠️ **The radius was 80 all along — an earlier note in this session said 30.**
+- **⚠️ THE OTHER FIVE MOVED THE PIN, NOT THE TOUR, which is the standing rule.** Guggenheim 29 m ·
+  Met 38 m · Washington Square Arch 26 m · St Pancras 121 m · **Habitat 67 372 m**. The last is the
+  one to understand: the Atlas tour sits on the **Promenade de la Cité-du-Havre**, the public vantage
+  opposite a private residential building, and that is correct — so the place is anchored there and
+  the pin came to it, rather than the other way round. Its `address` still names the building.
+- **⚠️ EVERY PLACE HERO IS A THIRD PHOTOGRAPH, ASSERTED IN CODE.** The fault found across 13 of the
+  first 24 places was one picture printed three times; the build refuses to write a place whose hero
+  equals either member's. All six are promoted from a member tour's existing gallery — **already
+  uploaded and already verified, so nothing was sourced** — and each was opened and chosen as an
+  establishing shot rather than a close-up (the session-95 rejection criterion). All six live 200.
+- **⚠️ TWO NAMES ARE JUDGEMENTS AND ARE REVERSIBLE.** **`Washington Square Park`** — the owner said
+  "washington square arch", but the arch stands in the park and the park is the site both members
+  describe. **`St Pancras International`** — the Atlas tour is *"St Pancras & King's Cross"*, so the
+  place name covers only half of what that tour is about; it was chosen because the station is the
+  point both members share and the tour's own title leads with it.
+- **⚠️ Little Island was deliberately NOT made a place** (owner: *"NOT little island for now"*), and
+  `check-place-candidates.py` still reports it as a NEAR pair at 89 m — that is the expected state,
+  not an omission. Its one EXACT group remains the pre-existing Barcelona deferral. **NEAR fell 12 →
+  8**; the checker's title rule had never caught the Washington Square or St Pancras pairs at all,
+  which is worth knowing about its coverage.
+- **⚠️ Place ids are `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")`** — reverse-derived
+  and verified against **29 of the 31** existing places. The two exceptions (Green-Wood Cemetery,
+  Oedo Antique Market) carry uppercase ids from an earlier session, the same variance the NYC/OPO/LIS
+  makers show.
+- **Verification.** Validator mirror **self-tested 44/44** against injected faults, then **0 errors,
+  2 warnings across 1,552 tours + 150 pins + 37 places** — **both pre-existing** (the same mirror
+  against `origin/main` reports the identical pair). The validator's own exact-coordinate rule is
+  what proves all **12 members sit exactly on their place**. Tours.json **byte-stable under a Python
+  re-dump before editing**.
+
+
 ### Thirty link pins, two new countries, and a coordinate format the catalogue had not met (branch `claude/linked-tours-send-ahlhiy`, session 120 — content)
 
 **The owner sent thirty TikTok/Instagram/YouTube links — eleven carrying a subject name and/or a
