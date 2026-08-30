@@ -160,7 +160,11 @@ async function loadTour(id) {
   return {
     heading: primary,
     subheading: secondary,
-    eyebrow: row.kind === 'multiStop' ? 'Walking tour' : 'Audio tour',
+    // A link pin is somebody's post that Dozent pins to a map, not a tour we
+    // narrate — labelling it "Audio tour" would misdescribe it.
+    eyebrow: row.kind === 'multiStop' ? 'Walking tour'
+      : row.kind === 'link' ? 'Pinned post'
+      : 'Audio tour',
     meta,
     body: row.short_description || row.long_description,
     image: safeImage(row.hero_image_url),
@@ -387,7 +391,7 @@ function renderPage({ kind, subject, canonical }) {
     ${subject ? cardHTML : notFoundHTML}
     <div class="cta">
       <p class="lead">${subject
-        ? 'Open this in Dozent and it plays itself as you walk.'
+        ? 'Find this on the map in Dozent, alongside audio tours that play themselves as you walk.'
         : 'GPS-anchored audio tours that play themselves as you walk.'}</p>
       <a class="store" href="${APP_STORE_URL}">Download on the App Store</a>
     </div>
