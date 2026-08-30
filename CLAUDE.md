@@ -196,12 +196,15 @@ youtube version of the tour."*** Both done. **linkPins 244 → 242 · makers 189
 40 · tours unchanged at 1,552.** Content + one SQL file; no Swift, no build. **NO PR OPENED** (this
 session's harness forbids opening one unasked).
 
-- **🔴 THE REMOVAL IS A TWO-PART CHANGE AND THE SECOND PART IS OWED.** All four rows were
-  **verified present in the live RPC before the edit** — deleting them from `Tours.json` reaches
-  the gh-pages mirror and the bundled offline seed and **never reaches Postgres**, which is the
-  source the app reads first. `backend/pull_la_duplicates_260830.sql` is the owner's paste; until
-  it runs, both duplicates are still on every phone. This is the `pull_nycunfilteredstories.sql`
-  lesson, which cost eight days.
+- **✅ THE REMOVAL WAS A TWO-PART CHANGE AND BOTH PARTS ARE DONE. `backend/pull_la_duplicates_260830.sql`
+  HAS BEEN RUN (owner, 2026-08-30) — nothing is owed, do not tell the owner to run it again.**
+  All four rows were **verified present in the live RPC before the edit**, because deleting them
+  from `Tours.json` reaches the gh-pages mirror and the bundled offline seed and **never reaches
+  Postgres**, which is the source the app reads first (the `pull_nycunfilteredstories.sql` lesson,
+  which cost eight days). **Verified afterwards against the live RPC rather than the SQL Editor's
+  success line:** all four deleted rows gone, all three survivors present, `TikTok
+  @thedesigndetourist` still at 19 pins, **0 pins wrongly inside `tours`**, and `priceTier` (66
+  priced) and `isPrivate` both intact — the session-99 dropped-key check.
 - **⚠️ "DOESN'T MATTER WHICH ONE" TURNED OUT TO MATTER, so the choice is recorded.** Both Casa del
   Mar pins are the same script reposted months apart, but their thumbnails are not alike: the
   **later** post (`-centenary-`) is a downward view onto a patio with a palm trunk through the
