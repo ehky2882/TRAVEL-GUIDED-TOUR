@@ -109,6 +109,24 @@ struct FullscreenVideoView: View {
     /// Set while a drag is in progress so the scrubber follows the finger
     /// rather than snapping back to the clock on every tick.
     @State private var scrubTarget: Double? = nil
+    /// Where a **gallery** clip has got to, sampled from its own player.
+    ///
+    /// 🔴 THIS EXISTS BECAUSE `AVPlayer.currentTime()` IS NOT OBSERVABLE, and
+    /// that is the whole bug it fixes. Reading it from a computed property
+    /// gives SwiftUI nothing to invalidate on, so the bar never redrew: on a
+    /// link pin the elapsed label sat at `0s` and the brass fill stayed empty
+    /// for the entire clip, which reads as a scrubber that does not work.
+    ///
+    /// ⚠️ A **narration** clip never had the fault and must not read this: it
+    /// is slaved to `AudioPlayerService`, which IS `@Observable`, so its own
+    /// `.onChange(of: audioPlayer?.currentTime)` already re-renders this view
+    /// on every tick. That difference is exactly why the defect only ever
+    /// showed on gallery clips — every link pin is one.
+    @State private var playbackTime: Double = 0
+    /// The periodic-observer token, kept so it can be removed on teardown.
+    /// An observer left on a player that outlives this view retains the
+    /// closure and keeps firing.
+    @State private var timeObserver: Any? = nil
     /// 0 = the carousel thumbnail, 1 = the whole screen. Driven on appear and
     /// on close, and the ONLY animation the viewer has — the cover is
     /// presented with animation suppressed so there is no slide underneath it.
@@ -414,6 +432,8 @@ struct FullscreenVideoView: View {
         .onDisappear {
             UIDevice.current.endGeneratingDeviceOrientationNotifications()
             player?.pause()
+            if let timeObserver { player?.removeTimeObserver(timeObserver) }
+            timeObserver = nil
             // The narration debt handed over by the carousel is settled here,
             // and only here — the inline view cleared its own flag as it
             // handed this over precisely so it could not also resume.
@@ -634,8 +654,7 @@ struct FullscreenVideoView: View {
     /// The clock this clip runs on.
     private var scrubPosition: Double {
         if request.role == .narration { return audioPlayer?.currentTime ?? 0 }
-        let t = player?.currentTime().seconds ?? 0
-        return t.isFinite ? t : 0
+        return playbackTime
     }
 
     private var scrubDuration: Double {
@@ -649,6 +668,10 @@ struct FullscreenVideoView: View {
         if request.role == .narration {
             audioPlayer?.seek(to: seconds, precise: true)
         } else {
+            // Written through rather than waiting for the next tick: the
+            // observer fires up to a quarter-second later, and until it does
+            // the bar would spring back to where the finger started.
+            playbackTime = seconds
             player?.seek(
                 to: CMTime(seconds: seconds, preferredTimescale: 600),
                 toleranceBefore: .zero,
@@ -745,6 +768,22 @@ struct FullscreenVideoView: View {
         if let d = try? await p.currentItem?.asset.load(.duration),
            CMTimeGetSeconds(d).isFinite {
             videoDuration = CMTimeGetSeconds(d)
+        }
+        // The clock the scrubber runs on. Four samples a second: enough that a
+        // 3pt line visibly travels, cheap enough to ignore. Delivered on the
+        // main queue, which is what makes writing `@State` from here safe —
+        // the same contract `collapse()`'s `asyncAfter` relies on.
+        //
+        // ⚠️ Installed BEFORE `player` is published, so the first sample can
+        // never land on a view that has not adopted this player yet.
+        playbackTime = request.startSeconds
+        timeObserver = p.addPeriodicTimeObserver(
+            forInterval: CMTime(seconds: 0.25, preferredTimescale: 600),
+            queue: .main
+        ) { time in
+            let t = time.seconds
+            guard t.isFinite else { return }
+            playbackTime = max(0, t)
         }
         player = p
         // A narration clip is a passenger: muted, and moved only by the tour's
