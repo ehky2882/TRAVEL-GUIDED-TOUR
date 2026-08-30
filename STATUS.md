@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 122c — [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) both merged and verified on `main`; **no open PRs**; one dead hero image found, see § 1)
+**Last verified:** 2026-08-30 (session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -41,6 +41,11 @@ replacement.** Content only; the seed carries `places`, so **no owner SQL**.
 FOURTEEN ARE LIVE.** Verified against the **live sources**, not the workflow's success line: the
 Supabase RPC (what the app reads first) and the gh-pages mirror each serve **256 link pins**, with
 **0 pins wrongly inside `tours`** and `priceTier` / `isPrivate` both intact.
+🟡 **OPEN — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
+([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), `claude/la-tours-cleanup-place-cards-r3m4af`).**
+
+✅ **MERGED — FOURTEEN LINK PINS + THE CHECKER THAT CRIED WOLF
+([#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), `claude/tour-links-upload-3bqlib`).**
 Fourteen links from the owner — 13 TikToks + 1 Instagram reel, **all alive, nothing parked**.
 **linkPins 242 → 256 · makers 188 → 191 · New Zealand the 37th country** (re-derived after [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged under it; the PR body's 244 → 258 was measured against the older base). Then, on owner
 instruction (*"fix the checker"*), the tooling half: **`check-image-duplicates.py` was hashing error
@@ -380,6 +385,8 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
+| **137** | `instagram-player-fit` | #662 the Instagram crop + fullscreen scrubber, `main` merged in, **marketing version 1.1.1** | ✅ **owner-verified — *"works! thank you"*; #662 merged as `845f0d86`** |
+| 136 | `instagram-player-fit` | Same code at **1.1** (`49ac5382`) | 🔴 **rejected at upload** — 1.1 is released, so Apple refuses the version string |
 | **134** | **`main`** | #622 the real fullscreen fix — the video's own window (`e22dba7`) | ✅ **install this** |
 | 133 | `link-fullscreen-probe` | Same fix + the temporary readout (`f6aaf78c`) | ✅ owner-verified — *"that seem to be done the trick"* |
 | 132 | `link-fullscreen-probe` | `isElementFullscreenEnabled` theory + probe (`839d2296`) | 🔴 wrong theory — probe proved it |

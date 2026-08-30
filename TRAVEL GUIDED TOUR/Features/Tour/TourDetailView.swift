@@ -450,9 +450,24 @@ struct TourDetailView: View {
             // Reuses the gallery player, so this clip gets the narration
             // takeover, the resume debt and the fullscreen viewer for free
             // rather than growing a second video code path.
+            //
+            // 🔴 THE SHAPE HAS TO BE PASSED IN, and leaving it out is what made
+            // a Reel unwatchable here. `GalleryVideoView` defaults to the
+            // square hero box and fills it, because in the carousel a clip
+            // sits beside photographs cropped the same way. A link pin has no
+            // photographs: the post is the page. Squared and filled, a 9:16
+            // Reel showed the middle 56% of each frame and cut the creator's
+            // own titles off top and bottom.
+            //
+            // ⚠️ The ratio is the SAME expression the box below uses, so the
+            // player and the embed it stands in for are the same size and the
+            // page does not resize when a resolve succeeds or fails. It is
+            // also the shape a TikTok pin already gets — the point of the
+            // resolver is that Instagram behaves like the other two.
             GalleryVideoView(urlString: media.absoluteString,
                              height: nil,
-                             tourId: tour.id)
+                             tourId: tour.id,
+                             fittedAspectRatio: LinkSource.embedAspectRatio(for: sourceURL))
         } else {
             Color.black
         }

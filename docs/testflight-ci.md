@@ -30,6 +30,23 @@ The automation lives in [`.github/workflows/testflight.yml`](../.github/workflow
 >   in the workflow; it is [`scripts/revoke-dev-certs.py`](../scripts/revoke-dev-certs.py),
 >   called by the lane. Same behaviour.
 
+## 🔴 A released marketing version cannot be built again
+
+Apple refuses any build whose `CFBundleShortVersionString` matches a version it has already
+approved — **TestFlight builds included**, not just App Store submissions. The failure arrives as
+altool error **90062** at the *upload* step, long after the archive and the signing have succeeded,
+so the run looks like a build failure and is not one:
+
+    This bundle is invalid. The value for key CFBundleShortVersionString [1.1] in the Info.plist
+    file must contain a higher version than that of the previously approved version [1.1]. (90062)
+
+**The fix is to raise `MARKETING_VERSION`** in `project.pbxproj` — both app-target configurations,
+leaving the test targets alone — and re-dispatch. It happened first on 2026-08-30, when 1.1 went
+`READY_FOR_SALE` and build 136 was rejected; 1.1.1 (137) went through unchanged otherwise.
+
+**Check the app's App Store state before cutting a build after a release.** `scripts/session-start.sh`
+prints it.
+
 ## One-time setup (owner — ~10 minutes, dashboard only)
 
 ### Part A — create Apple's "pass" (App Store Connect API key)

@@ -59,6 +59,23 @@ struct GalleryVideoView: View {
     /// see `TourVideoRole`. Defaults to `.gallery`, which is every video in
     /// the catalogue today and the behaviour that already shipped.
     var role: TourVideoRole = .gallery
+    /// Draw the clip at this width÷height and **fit** it, instead of filling
+    /// the square hero box. nil keeps the carousel behaviour.
+    ///
+    /// 🔴 THE TWO CASES ARE GENUINELY DIFFERENT, and collapsing them is what
+    /// produced the bug this fixes. In the **carousel** a clip is one page
+    /// among photographs, so it fills the same square box they do and is
+    /// cropped to match — an owner decision, recorded on `VideoSurface`. A
+    /// **link pin** has no photographs beside it: the post IS the page. Sized
+    /// by the hero square, a 9:16 reel lost the top and bottom of every frame,
+    /// which on Instagram is where the creator puts their titles.
+    ///
+    /// ⚠️ Passed in rather than measured from the asset, deliberately. The
+    /// shape is known from the URL before a single byte is fetched (see
+    /// `LinkSource.embedAspectRatio`), so the box is right on the first frame;
+    /// adopting the measured ratio later would resize the page under the
+    /// reader's thumb.
+    var fittedAspectRatio: CGFloat? = nil
 
     /// Optional so any presentation path that doesn't inject the
     /// player (there shouldn't be one — it's app-wide + injected into
@@ -100,7 +117,7 @@ struct GalleryVideoView: View {
         ZStack {
             Color.black
             if let player {
-                VideoSurface(player: player)
+                VideoSurface(player: player, fits: fittedAspectRatio != nil)
                     .onReceive(player.publisher(for: \.timeControlStatus)) { status in
                         switch status {
                         case .playing:
@@ -131,7 +148,7 @@ struct GalleryVideoView: View {
             playAffordance
         }
         .frame(maxWidth: .infinity)
-        .atlasHeroSizing(height)
+        .modifier(VideoBoxSizing(height: height, fittedAspectRatio: fittedAspectRatio))
         .background(Color.black)
         .clipped()
         // Tap anywhere to pause while playing. A tap gesture (unlike
@@ -472,25 +489,53 @@ struct GalleryVideoView: View {
     }
 }
 
+/// The box a clip is drawn in.
+///
+/// A `ViewModifier` rather than an `if` around the content: the branch would
+/// give the two shapes different view identities, and SwiftUI would tear down
+/// and rebuild the `AVPlayerViewController` — and with it the player — on any
+/// change. This way the subtree is one thing that is merely measured
+/// differently.
+private struct VideoBoxSizing: ViewModifier {
+    let height: CGFloat?
+    let fittedAspectRatio: CGFloat?
+
+    func body(content: Content) -> some View {
+        if let fittedAspectRatio {
+            content.aspectRatio(fittedAspectRatio, contentMode: .fit)
+        } else {
+            content.atlasHeroSizing(height)
+        }
+    }
+}
+
 /// Bare video surface — `AVPlayerViewController` with its transport bar
 /// switched off. See `GalleryVideoView`'s note: the built-in controls
 /// install a pan recognizer that steals the carousel's paging swipe, so
 /// we render picture only and drive playback ourselves.
 private struct VideoSurface: UIViewControllerRepresentable {
     let player: AVPlayer
+    /// True when the box is already the clip's own shape, so fitting costs
+    /// nothing and crops nothing. See `GalleryVideoView.fittedAspectRatio`.
+    var fits: Bool = false
 
     func makeUIViewController(context: Context) -> AVPlayerViewController {
         let controller = AVPlayerViewController()
         controller.player = player
         controller.showsPlaybackControls = false
-        // 🔴 FILL, not fit — owner decision. In the square carousel box a
-        // letterboxed vertical clip used barely half the frame and the rest
-        // was black. Filling makes the clip read like the photographs it sits
-        // beside, which are also fill-cropped into this box. The cost is that
-        // the top and bottom of a vertical clip are cropped here — which is
-        // precisely what the expand button is for: fullscreen fits, so
-        // nothing is cut off once you open it.
-        controller.videoGravity = .resizeAspectFill
+        // 🔴 FILL, not fit, IN THE CAROUSEL — owner decision, and it stays. In
+        // the square carousel box a letterboxed vertical clip used barely half
+        // the frame and the rest was black. Filling makes the clip read like
+        // the photographs it sits beside, which are also fill-cropped into
+        // this box. The cost is that the top and bottom of a vertical clip are
+        // cropped there — which is precisely what the expand button is for:
+        // fullscreen fits, so nothing is cut off once you open it.
+        //
+        // ⚠️ That reasoning is about a clip sitting BESIDE PHOTOGRAPHS and does
+        // not survive the trip to a link pin, where the post is the whole
+        // page and its box is already its own shape. Cropping there is loss
+        // with nothing bought — so that caller fits.
+        controller.videoGravity = fits ? .resizeAspect : .resizeAspectFill
         controller.allowsPictureInPicturePlayback = false
         // The tour narration owns the lock screen. Without this, AVKit
         // overwrites the now-playing info with the (untitled) clip.
