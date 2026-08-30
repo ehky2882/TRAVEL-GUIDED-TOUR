@@ -163,6 +163,34 @@ unasked). Full detail: `archive/HANDOFF-260830-7.md`.
     NEAR and forms an EXACT group — **a genuine place candidate, not a manufactured coincidence**,
     because the tour moved to where it always should have been rather than onto the pin. **No place
     was created**: that needs its own copy, address, photograph and human approval.
+- **✅ THE CHELSEA HOTEL IS NOW A PLACE — owner instruction, places 48 → 49**
+  (`af67120e-8869-518c-b0d1-108b058cce9c` = uuid5 `atlas-place:new-york:the-chelsea-hotel`, the
+  scheme reverse-verified against **44 of the 48** existing places; the four misses are the two
+  documented uppercase-id exceptions and two Berlin names whose non-ASCII my slug folds
+  differently, and this name is pure ASCII). **`check-place-candidates.py` goes 4 EXACT → 3**, and
+  **nothing moved to make it** — the pair became coincident when the tour was corrected above, so
+  the identity rule held on its own.
+  - **⚠️ THE HERO IS A THIRD PHOTOGRAPH, promoted from the Atlas tour's own gallery** — already
+    uploaded, already verified, nothing sourced. **The place and both members are three distinct
+    pictures**, so the fault found across 13 of the first 24 places (one photograph printed three
+    times) is avoided by construction. `the-chelsea-hotel_2.webp` was chosen over `_3` because it
+    is the more **establishing** of the two — storeys of the balcony rhythm, with the `HOTEL
+    CHELSEA` sign in frame naming the building — where `_3` is a close-up of pediments and lion
+    consoles that could be almost any 1880s New York facade (the session-95 rejection criterion).
+    ⚠️ It is black-and-white, which is a mild cost; the sign is what decided it.
+  - **⚠️ The description asserts only what the members support**, and deliberately does not become
+    a true-crime note: the building's deaths are famous and the copy names none of them, in line
+    with the mortality-figure convention. The one dated fact added beyond the scripts is the
+    **1905 bankruptcy** that turned the co-operative into a hotel, which is what makes the rest
+    of the paragraph make sense.
+  - **⚠️ Content only — the seed carries `places`** (verified in `seed_from_toursjson.py`, not
+    assumed), so this reaches Supabase on merge with **no owner SQL**.
+- **⚠️ A DEFECT OF MY OWN, CAUGHT AND TIDIED IN THE SAME PR: all seven pin heroes shipped
+  `…/images//file.webp`** — a double slash, because the `--image-base` passed to the tool already
+  ended in one. **Both forms return 200** (GitHub Pages collapses it) so nothing was broken, and
+  the live bytes were hash-verified either way — but it was inconsistent with the other 276 pins,
+  and `URLCache` keys on the exact string, so the two forms would cache as separate entries.
+  Corrected to the single slash.
 - **⚠️ 7 OF 7 WILL NOT PLAY INLINE — the licensed-music rights gate at full scale, for the first
   time.** `video_url` is **absent from all seven embed payloads**, checked directly rather than
   inferred, and six name the same track. The poster + `OPEN IN INSTAGRAM` fallback is the correct
