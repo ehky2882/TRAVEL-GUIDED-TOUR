@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 123 — LA duplicate cleanup **and four new LA places** pushed on `claude/la-tours-cleanup-place-cards-r3m4af`, no PR opened. The places need no SQL; the **removal** SQL is owed, see § SQL pastes owed)
+**Last verified:** 2026-08-30 (session 123 — LA duplicate cleanup and four new LA places open as [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658). The places need no SQL; the **removal** SQL is owed, see § SQL pastes owed. #657 has merged and is corrected below)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,8 +25,23 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **OPEN, AUTO-MERGE CLASS — THE DUPLICATE-IMAGE CHECKER HAD NEVER SEEN A LINK PIN
-([#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657), `claude/tour-links-upload-qeoxe7`).**
+🟡 **OPEN — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
+([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), `claude/la-tours-cleanup-place-cards-r3m4af`).**
+Owner instructions: remove one of the two Hotel Casa del Mar pins and its place page, take out the
+YouTube Castle Green, then *"make bradbury, griffith and union station places. make petersen also a
+place, and go with your recommended coordinate."* **linkPins 244 → 242 · makers 189 → 188 · places
+41 → 40 → 44 · tours unchanged at 1,552.** Content + one SQL file; no Swift, no build.
+**🔴 `backend/pull_la_duplicates_260830.sql` IS OWED and is the half that reaches users** — all four
+removed rows were verified present in the live RPC, and `seed_from_toursjson.py` is upsert-only, so
+until it is pasted both duplicates are on every phone. **The four places need no SQL** (the seed
+carries them). ⚠️ Paste the SQL *before* this merges and its closing select reads `places = 40`, not
+44. **The pin moved and the tour did not — verified by diff: 0 Atlas tours changed a coordinate,
+trigger mode or radius.** Every place hero is a **third photograph promoted from the member tour's
+own gallery**, nothing sourced.
+
+✅ **MERGED — THE DUPLICATE-IMAGE CHECKER HAD NEVER SEEN A LINK PIN
+([#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657), `claude/tour-links-upload-qeoxe7`),
+squash `597b5aff`.**
 Owner: *"do it now if it helps."* `scripts/check-image-duplicates.py` reads `catalog["tours"]` and
 nothing else, so **all 244 link-pin heroes were invisible to it, `--all` included**, from the day
 #597 split them into a sibling `linkPins` array. Measured before the fix: **`--all` saw 5,595 images
