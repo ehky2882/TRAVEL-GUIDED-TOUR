@@ -142,17 +142,27 @@ unasked). Full detail: `archive/HANDOFF-260830-7.md`.
   (all that embed exposes). Subjects: **Fallingwater** · **Castell Gala Dalí, Púbol** · **Villa
   E-1027** · **Twin Palms** · **Casa Milà — La Pedrera** · **Marilyn Monroe's House** · **The
   Chelsea Hotel**. New cities Mill Run, Púbol, Roquebrune-Cap-Martin, Palm Springs.
-- **🔴 THE ATLAS `The Chelsea Hotel` TOUR SITS 290 m FROM THE CHELSEA HOTEL AND IS GEOFENCED AT
-  60 m, SO IT CAN NEVER FIRE — pre-existing, found only because a pin collided with it.** Its own
-  transcript opens *"You're on West 23rd Street, between 7th and 8th Avenues, outside the Chelsea
-  Hotel"*, while its coordinate reverse-geocodes at z18 to **315 West 21st Street**, two blocks
-  south. No error, no dead link, no log line — the tour simply does nothing while you stand in
-  front of the building. **Flagged, not fixed**, per the session-120 IAC rule (moving a geofenced
-  tour changes where its audio plays, and coordinate and radius are one decision). **The fix is one
-  line and the homework is done:** move stop 0 to **`40.7443742, -73.9968175`** — OSM's `Hotel
-  Chelsea, 222, West 23rd Street`, named exactly — and **radius 60 m needs no change, with 0 other
-  geofenced markers within 400 m**, so nothing else could fire. ⚠️ **Do not read the resulting
-  290 m NEAR pair as a place candidate; it is one wrong coordinate.**
+- **✅ THE ATLAS `The Chelsea Hotel` TOUR COULD NEVER FIRE, AND IS NOW FIXED (owner instruction:
+  *"fix the chelsea hotel coordinate"*).** Its own transcript opens *"You're on West 23rd Street,
+  between 7th and 8th Avenues, outside the Chelsea Hotel"*, while its coordinate reverse-geocoded at
+  z18 to **315 West 21st Street**, two blocks south — **290 m away, against a 60 m geofence**. So
+  standing in front of the building the tour did nothing: no error, no dead link, no log line.
+  **Pre-existing and unrelated to this batch — found only because a pin collided with it.** Stop 0
+  and the centroid now sit on **`40.7443742, -73.9968175`**, which reverse-geocodes to
+  **`Hotel Chelsea, 222, West 23rd Street`**, named exactly.
+  - **⚠️ THE RADIUS WAS RE-DERIVED, NOT INHERITED — coordinate and radius are one decision** (the
+    IAC rule). It stays **60 m**, but checked afresh against what the script asks of the listener:
+    it puts you on the pavement of West 23rd *outside* the hotel, and 60 m from the building node
+    covers that frontage in both directions. **0 other geofenced markers sit within 500 m**, so
+    nothing else can fire there — verified, not assumed.
+  - **⚠️ EXACTLY FOUR LINES CHANGED** — the stop's latitude/longitude and the centroid's, which
+    mirrors the stop at full precision on a single-stop tour. `triggerMode` and
+    `triggerRadiusMeters` are untouched.
+  - **⚠️ CONSEQUENCE, EXPECTED NOT DEFECTIVE: `check-place-candidates.py` goes 3 EXACT → 4 and
+    13 NEAR → 12.** The tour and the new `@nikola.matus` pin are now coincident, so the pair leaves
+    NEAR and forms an EXACT group — **a genuine place candidate, not a manufactured coincidence**,
+    because the tour moved to where it always should have been rather than onto the pin. **No place
+    was created**: that needs its own copy, address, photograph and human approval.
 - **⚠️ 7 OF 7 WILL NOT PLAY INLINE — the licensed-music rights gate at full scale, for the first
   time.** `video_url` is **absent from all seven embed payloads**, checked directly rather than
   inferred, and six name the same track. The poster + `OPEN IN INSTAGRAM` fallback is the correct

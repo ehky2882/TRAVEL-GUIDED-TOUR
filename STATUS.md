@@ -32,15 +32,13 @@ creator, all alive and pinnable. **linkPins 276 → 283 · makers 205 → 206 ·
 **Roquebrune-Cap-Martin**, **Palm Springs**. Validator mirror **40/40 injected faults caught**, then
 **0 errors / 2 warnings, both pre-existing**. Content only — no Swift, no SQL, no build.
 **No PR opened** (this session's harness forbids opening one unasked).
-  - 🔴 **OWNER DECISION OWED — THE ATLAS `The Chelsea Hotel` TOUR CAN NEVER FIRE.** Its own script
-    opens *"You're on West 23rd Street, between 7th and 8th Avenues, outside the Chelsea Hotel"*,
-    but its coordinate reverse-geocodes to **315 West 21st Street**, **290 m** away, and it is
-    **geofenced at 60 m** — so standing at the hotel the tour does nothing, silently. Pre-existing,
-    not caused by this batch. **Flagged, not fixed** (the session-120 IAC rule: moving a geofenced
-    tour changes where its audio plays, and coordinate and radius are one decision). The fix is one
-    line: move stop 0 to **`40.7443742, -73.9968175`** (OSM's `Hotel Chelsea, 222 West 23rd Street`).
-    **Radius 60 m needs no change and nothing else can fire** — 0 other geofenced markers within
-    400 m, checked. Say the word and it is done.
+  - ✅ **CLEARED — the Chelsea Hotel coordinate is fixed** (owner: *"fix the chelsea hotel
+    coordinate"*). The Atlas tour sat **290 m** from the hotel behind a **60 m** geofence, so it
+    could never fire; stop 0 and the centroid now sit on `40.7443742, -73.9968175`, which
+    reverse-geocodes to `Hotel Chelsea, 222, West 23rd Street`. **Radius re-derived and kept at
+    60 m; 0 other geofenced markers within 500 m.** Four lines changed. ⚠️ **`check-place-candidates.py`
+    3 EXACT → 4** — the tour and the pin are now coincident, a genuine place candidate; **no place
+    created** (needs copy, address, photograph and approval).
   - ⚠️ **ALL SEVEN ARE `plays_inline: False`** — the licensed-music rights gate, six of them naming
     the same track. Poster + `OPEN IN INSTAGRAM` on tap. Correct behaviour, not a defect, but this
     is the first batch where it is **7 of 7** rather than a stray one, so it is the owner's call
