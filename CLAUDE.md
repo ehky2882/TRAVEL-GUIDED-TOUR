@@ -128,6 +128,36 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### One dead hero image in 5,848 — found only once the checker stopped hashing error pages (session 122c — finding, not yet fixed)
+
+**`MoMA PS1`'s `heroImageURL` returns a hard 404**, so that tour renders with no photograph.
+Confirmed across **seven spaced attempts** against **four same-host controls that all return 200**,
+so it is not the Wikimedia rate limiting that was masking it.
+
+- **⚠️ IT IS THE ONLY `upload.wikimedia.org/wikipedia/en/` URL IN THE CATALOGUE.** That path is an
+  English Wikipedia **local** upload rather than a Commons file — which is where non-free/fair-use
+  images live, and where deletion is routine. All **65** other Wikimedia-hosted images are on
+  Commons and healthy. So the one URL in the wrong place is also the one that died, which is worth
+  knowing the next time an image is sourced from Wikipedia rather than Commons.
+- **⚠️ THERE IS NO FREE FIX — the tour has NO gallery**, so the Castello Sforzesco / DuSable Bridge
+  move (promote a photograph the tour already carries) does not apply. A replacement has to be
+  sourced through the image pipeline, which means owner picks. **Flagged, not fixed.**
+- **🔴 IT WAS INVISIBLE UNTIL [#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659).**
+  Until that PR the download step read curl's stdout with no status check, so an error page's
+  **body** was hashed as though it were the image. A 404 therefore looked like a successful fetch of
+  some bytes; it could never be reported as a failure, and two URLs failing the same way became a
+  fake "duplicate". **A dead image was structurally unreportable by the very check meant to find
+  bad images.**
+- **⚠️ AND MY OWN CLEAN RESULT FROM AN HOUR EARLIER HAD TO BE RE-RUN TO BE WORTH ANYTHING.** #657's
+  run used the old cache and the old fetch path; #659 bumped the cache to `image-dupes-v2` precisely
+  because a poisoned entry is indistinguishable from a good one. Re-run on the fixed code with a
+  fresh cache: **5,847 images, 0 errors, 27 INFO** — the same verdict, now on evidence.
+- **⚠️ `upload.wikimedia.org` THROTTLES A PARALLEL SWEEP HARD, and that is what hid this.** A
+  12-way run produced **37 HTTP 429s**; at `--jobs 2` it was still 18. Only fetching the stragglers
+  **serially at ~6–8 s apart** cleared them, leaving exactly one URL that failed for a different
+  reason. **A 429 and a 404 look alike in a summary count — read the codes, not the total.**
+
+
 ### Every shared link previewed as a green sphere — the OG tags were never in the HTML ([PR #661](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/661), session 124 — website)
 
 **Owner: *"when i share a link right now the preview image that people receive is still of my very old green icon. additionally, i would really like for the preview image be of the thumbnail of the tour."*** Both halves were real and shared one cause. Website only — no Swift, no `Tours.json`, no SQL, no build.
