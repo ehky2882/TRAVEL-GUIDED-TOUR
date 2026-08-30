@@ -250,6 +250,50 @@ Swift, no SQL. **Auto-merge class.**
   suspicious duplicates`** — the false alarm cannot be reproduced. `--maker MAD` still reports its 3
   documented walk-reuse INFO groups and exits clean, so the tours path is unchanged.
 
+### Glasshouse Theatre becomes a place, and every photograph of it is off-policy (branch `claude/tour-links-upload-3bqlib`, session 123 — content)
+
+**Owner: *"make place card for glasshouse theater."*** The two coincident Glasshouse pins from the
+batch below are now one place. **Places 44 → 45** (`acff2b2e-c725-5663-8e70-a63bbd2c1185` =
+uuid5 `atlas-place:brisbane:glasshouse-theatre`, the scheme reverse-verified against **42 of the 44**
+existing places — the two misses are Green-Wood and Oedo, which carry older hand-minted ids).
+Tours, pins and makers unchanged. Content only — the seed carries `places`, so this reaches Supabase
+on merge with **no owner SQL**.
+
+- **⚠️ NOTHING MOVED, WHICH IS THE POINT.** Both pins were already on the identical coordinate
+  (`-27.4753165, 153.0196736`), so the catalogue's exact-coordinate identity rule held with no pin
+  relocated to make it hold. `check-place-candidates.py` goes **4 EXACT → 3**; the three that remain
+  belong to other sessions.
+- **🔴 THE HERO IS BORROWED FROM A MEMBER, AND EVERY ALTERNATIVE IS OFF-POLICY.** The rule is that a
+  place hero must be a **third** photograph — the fault found across 13 of the first 24 places was
+  one picture printed three times. There is no third photograph to use: the venue opened in **March
+  2026**, and **every Glasshouse Theatre image on Wikimedia Commons is CC BY-SA 4.0** (a nine-frame
+  L1 Foyer series, an exterior, the opening plaque), which the app cannot ship while it has no
+  attribution UI. The only PD hits are unrelated — a 1923 Brisbane souvenir book and a volume of
+  verse. **This is the Hotel Casa del Mar / Legion of Honor / Waterlooplein case, and the owner has
+  already closed that class: do not go sourcing a replacement.** One PD or owner-supplied photograph
+  fixes it whenever one exists.
+- **⚠️ THE INTERIOR PIN'S HERO WAS CHOSEN OVER THE FACADE'S, deliberately.** The facade frame carries
+  the creator's face across its lower half; the interior frame is the glass cylinders seen from
+  within, with the Brisbane Wheel through them, and has no talking head. Establishing shot over
+  close-up, per the session-95 rejection criterion.
+- **⚠️ OPENVERSE RETURNED NOTHING AND COMMONS HAD TWENTY-FIVE FILES.** A PD-only Openverse search for
+  the theatre came back **0 results**, and I was one step from recording "no photograph exists" on
+  that basis. Querying **Wikimedia Commons directly** found the whole 2026 series immediately. It did
+  not change the outcome — they are all BY-SA — but it would have changed the *reason*, and the
+  documented lesson is exactly this: **Openverse depth varies wildly by subject; go to Commons before
+  concluding a subject is unphotographed.**
+- **⚠️ The description asserts only what both posts agree on** — Blight Rayner with Snøhetta, March
+  2026, the two tiers of unique curved panels over fourteen metres, the cantilever, the lantern
+  effect at night, the timber against precast inside. **No panel count, no cost, no floor area**: the
+  captions' "2400m2 TOTAL $" is the creator's line and stays in `longDescription`, which is their
+  verbatim words.
+- **Verification.** Validator mirror **self-tested 41/41** against injected fault classes (including
+  all seven place-layer checks — a place with one tour, a member off the coordinate, a duplicate
+  place id, an unknown tour id, a tour claimed by two places), then **0 errors, 2 warnings across
+  1,552 tours + 256 pins + 45 places**, both pre-existing. The validator's own exact-coordinate rule
+  is what proves both members sit on the place. Tours.json **byte-stable under a Python re-dump
+  before editing**; diff **15 insertions / 0 deletions**.
+
 ### Fourteen link pins, and a staircase that is no longer where its own photograph was taken (branch `claude/tour-links-upload-3bqlib`, session 123 — content)
 
 **The owner sent fourteen links — thirteen TikToks and one Instagram reel.** Branch cut clean off
@@ -291,7 +335,9 @@ owner instruction. Full detail: `archive/HANDOFF-260830-4.md`.
   under 1. **Consequence, expected not defective:** `check-place-candidates.py` goes **3 EXACT → 4**
   and **NEAR is unchanged** (at 11 against the post-#658 base; it was 15 before their four LA
   places resolved four pairs), so no pin in this batch lands near an Atlas tour of the same
-  subject. Two markers is inside `TourSetMap.maxStacked = 3`. **One line removes either.** Their
+  subject. Two markers is inside `TourSetMap.maxStacked = 3`. **✅ THE PAIR IS NOW A PLACE — owner
+  instruction 2026-08-30 (*"make place card for glasshouse theater"*); `check-place-candidates.py`
+  goes back to 3 EXACT.** Their
   slugs had to differ (`glasshouse-theatre` / `glasshouse-theatre-facade`) or one hero would have
   overwritten the other; **both keep the venue's name as their title** (the Westin Bonaventure
   precedent).
