@@ -79526,6 +79526,36 @@
         "6DA50048-2DF3-57C6-BA8A-7022FEFC86E3",
         "64D7FEE3-7DD4-5BBD-A7E7-2E885C91D0A4"
       ]
+    },
+    {
+      "id": "3fafd018-af5c-5e21-acd5-525447d170d6",
+      "name": "The Westin Bonaventure",
+      "description": "Five mirrored-glass cylinders on South Figueroa Street, built to John Portman's design and opened in 1976. The towers stand on a concrete podium wrapped around a multi-level atrium, with glass elevators running up the outside of the building and a lake of shallow pools at the bottom. It is the most filmed hotel in Los Angeles — the atrium and the exterior lifts have stood in for the future often enough that people recognise the place before they can name it.",
+      "latitude": 34.0527673,
+      "longitude": -118.255846,
+      "city": "Los Angeles",
+      "address": "404 South Figueroa Street, Los Angeles",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westin-bonaventure-place_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "9E5F8CF8-0F41-5E25-9931-8891A3057672",
+        "871828DC-B6CB-5132-8C13-6CBAB27CB966"
+      ]
+    },
+    {
+      "id": "ee70c29e-77b1-5af2-96ff-140dcc0e9918",
+      "name": "Hotel Casa del Mar",
+      "description": "A 1926 building on the Santa Monica sand, opened as a private beach club and later converted to a hotel. It sits at the foot of Pico on Ocean Way, one of the last of the grand clubs that once lined this stretch of shore. The restored interiors are what people come for — tilework, oriental rugs, painted ceilings and a long bar off the lobby — and the building turned a hundred in 2026.",
+      "latitude": 34.0064188,
+      "longitude": -118.4912658,
+      "city": "Santa Monica",
+      "address": "1910 Ocean Way, Santa Monica",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hotel-casa-del-mar-centenary-thedesigndetourist_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "CC95F611-1372-5583-9234-8909AFD6456D",
+        "6CCA19E3-F189-5F8A-AD59-9ADCD1673CD4"
+      ]
     }
   ],
   "linkPins": [
