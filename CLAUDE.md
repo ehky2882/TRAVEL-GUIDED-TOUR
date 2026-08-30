@@ -172,6 +172,18 @@ not merged; it is app code, so it waits for owner OK. Full detail: `archive/HAND
   all** (licensed music), so they still fall back to the poster and `OPEN IN INSTAGRAM`. **53 play.**
   That is Instagram withholding `video_url`, which `make-link-pin.py` already reports at authoring
   time; nothing in the app can reach it.
+- **🔴 THE VERSION TRAIN CLOSES THE MOMENT APPLE APPROVES IT, and this is the first build to pay
+  for it.** **1.1 is `READY_FOR_SALE`**, so Apple refuses *any* further build carrying that
+  marketing version — **TestFlight included**. Build **136 compiled, signed, and was rejected at
+  the upload step**: *"The value for key CFBundleShortVersionString [1.1] ... must contain a higher
+  version than that of the previously approved version [1.1]. (90062)"*. **Build 135 (2026-08-26)
+  was the last one that could ever ship under 1.1.** `MARKETING_VERSION` is now **1.1.1** on both
+  app-target configurations (the test targets stay at 1.0), and **1.1.1 (137) is VALID at Apple** —
+  verified by asking App Store Connect, not by reading the workflow's green tick. **⚠️ Every future
+  build must bump again once 1.1.1 is itself released.** ⚠️ **This failure does not look like a
+  version problem:** the archive and the signing both succeed and the run goes red at the last
+  step, which is the same shape as the certificate-cap failure and the ASCII-notes failure. Read
+  the altool error before assuming either.
 - **⚠️ A simulator trap that cost twenty minutes and is not a product bug:** on one launch the
   bottom-module window missed its install, and because the fullscreen cover is hosted **inside that
   window** (`BottomModuleRoot`), the expand button rendered, sat in the accessibility tree, and did

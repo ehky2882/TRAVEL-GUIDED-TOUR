@@ -30,8 +30,10 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 Owner: *"1. on the tour details page the crop of the thumnail/preview/play window 2. in full screen
 mode maybe the cropping of the video to avoid the instagram banners is ok, but the scrubber doesnt
 work"*. Both reproduced in the simulator first, both fixed and re-checked there. **Swift only — no SQL, no catalogue change.** `test_sim`
-**570/570** on the merged tree. **TestFlight 1.1 (136)** dispatched from the branch with `main`
-merged in, so it carries #659's fourteen new pins too.
+**570/570** on the merged tree. **TestFlight 1.1.1 (137)**, VALID at Apple, cut from the branch with `main`
+merged in so it carries #659's fourteen new pins too. ⚠️ **The marketing version had to go 1.1 →
+1.1.1**: 1.1 is `READY_FOR_SALE`, and Apple refuses any further build on a released version string
+— build 136 compiled and signed and was rejected at upload.
 **The crop:** the player was handed `height: nil`, which means `AtlasSpacing.heroAspectRatio` — and
 that is **1.0**, so a 720×1280 reel was fill-cropped to a square and showed the middle 56% of every
 frame. It now takes `LinkSource.embedAspectRatio(for:)`, the same 9:16 the embed it replaces uses.
@@ -371,7 +373,8 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **136** | `instagram-player-fit` | #662 the Instagram crop + fullscreen scrubber, with `main` merged in (`49ac5382`) | 🟡 **awaiting owner device check** |
+| **137** | `instagram-player-fit` | #662 the Instagram crop + fullscreen scrubber, `main` merged in, **marketing version 1.1.1** (`51b14c6b`) | 🟡 **1.1.1 (137) VALID at Apple — awaiting owner device check** |
+| 136 | `instagram-player-fit` | Same code at **1.1** (`49ac5382`) | 🔴 **rejected at upload** — 1.1 is released, so Apple refuses the version string |
 | **134** | **`main`** | #622 the real fullscreen fix — the video's own window (`e22dba7`) | ✅ **install this** |
 | 133 | `link-fullscreen-probe` | Same fix + the temporary readout (`f6aaf78c`) | ✅ owner-verified — *"that seem to be done the trick"* |
 | 132 | `link-fullscreen-probe` | `isElementFullscreenEnabled` theory + probe (`839d2296`) | 🔴 wrong theory — probe proved it |
