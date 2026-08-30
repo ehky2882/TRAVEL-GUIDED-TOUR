@@ -6,5 +6,22 @@
         { "key": "Content-Type", "value": "application/json" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/t", "destination": "/api/share?kind=t" },
+    { "source": "/t/", "destination": "/api/share?kind=t" },
+    { "source": "/t/:id", "destination": "/api/share?kind=t&id=:id" },
+
+    { "source": "/m", "destination": "/api/share?kind=m" },
+    { "source": "/m/", "destination": "/api/share?kind=m" },
+    { "source": "/m/:id", "destination": "/api/share?kind=m&id=:id" },
+
+    { "source": "/p", "destination": "/api/share?kind=p" },
+    { "source": "/p/", "destination": "/api/share?kind=p" },
+    { "source": "/p/:id", "destination": "/api/share?kind=p&id=:id" },
+
+    { "source": "/l", "destination": "/api/share?kind=l" },
+    { "source": "/l/", "destination": "/api/share?kind=l" },
+    { "source": "/l/:id", "destination": "/api/share?kind=l&id=:id" }
   ]
 }
