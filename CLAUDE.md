@@ -126,6 +126,77 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-08-30)
+
+### Five architects join the vocabulary — 329 → 334, and one of them is the Brooklyn Bridge's (branch `claude/linked-tours-send-ahlhiy`, session 120d — code + content)
+
+**Owner: *"add 5 architects to vocab."*** The five verified while wiring the 2026-08-28 link-pin batch
+and recorded there as *"the most conspicuous absences in the catalogue"* are now in the controlled
+vocabulary, and seven entries carry them instead of the generic fallback alone. **⚠️ This is a CODE
+change** (`Models/Tag.swift`), so unlike the content batches before it, it wants an owner OK and a
+simulator look — the same footing as the Copenhagen architects in #616 and the Orlando four in
+`fc30f83c`.
+
+- **The five: `John Augustus Roebling` · `José Ignacio Linazasoro` · `KieranTimberlake` ·
+  `Moshe Safdie` · `William Henry Barlow`.** Vocabulary **329 → 334 architects**, total tags
+  **379 → 384**. Checked on normalised token sets, not strings — **0 near-duplicates**, the
+  session-104 rule that stops the vocabulary growing two spellings that split a shelf in two.
+- **🔴 BOTH VOCABULARIES WERE EDITED.** `Models/Tag.swift` and `scripts/validate-tours.swift` each
+  keep their own copy, and editing one alone produces **an error per tagged tour** (session 104: 185
+  names added to Tag.swift alone produced 193 validator errors). The two are asserted **identical at
+  334 architect names**, parsed out of the Swift rather than retyped.
+- **🔴 THE BROOKLYN BRIDGE TOUR HAD NO ARCHITECT AND NO SHELF TAG AT ALL, WHICH IS THE REAL FIND.**
+  *Brooklyn Bridge, Manhattan Side* carried `[Bridge, Architecture, Engineering, History, Maritime,
+  Power, Iconic Landmark]` — while its own narration says *"the bridge that killed its designer"* and
+  *"John Roebling never lived to see his bridge open."* It gains **both** `John Augustus Roebling`
+  **and** `Designed by a Master`. The #493 mirror-image defect, still lurking on one of the most
+  famous structures in the catalogue.
+- **⚠️ THE TAG IS `John Augustus Roebling` WHILE THE TOUR SAYS "John Roebling"** — the vocabulary
+  follows the published full name, as it already does for `James Gamble Rogers II` and
+  `Peder Vilhelm Jensen-Klint`. Nothing in the narration changed. **`Brooklyn Bridge Park` correctly
+  keeps `Michael Van Valkenburgh` and gains nothing** — he made the park, not the bridge.
+- **⚠️ `Designed by a Master` IS KEPT ON ALL SEVEN, NOT REPLACED.** `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string, so dropping it would take
+  the entry off the shelf built for exactly those entries. Verified after the change: **0
+  named-architect entries missing it** across 496 of them, and **0 of the 334 names unused** — no dead
+  vocabulary.
+- **⚠️ WHERE A SUBJECT EXISTS AS BOTH AN ATLAS TOUR AND A LINK PIN, BOTH WERE TAGGED, so the pair
+  shares shelves** — the rule this batch established. **Habitat 67** (tour + pin) takes `Moshe Safdie`;
+  **St Pancras** (tour + pin) takes `William Henry Barlow` **alongside the `George Gilbert Scott` both
+  already carried** — Scott built the hotel, Barlow the train shed, and the Atlas tour's own
+  description names both.
+- **⚠️ TWO ARE JUDGEMENTS AND ARE REVERSIBLE.** Neither the **Escuelas Pías** nor the **U.S. Embassy**
+  caption names its architect in text — Linazasoro is named **on screen by the creator**, and
+  KieranTimberlake nowhere at all. Escuelas Pías already carried `Designed by a Master`, so a previous
+  session had already judged authorship to be part of the point. **The U.S. Embassy pin carried NO
+  generic tag and now gains one alongside `KieranTimberlake`**, on the reading that the post — *"America's
+  Billion-Dollar Embassy Has Hidden Defenses"* — is entirely about the building's **designed** defences
+  (the moat, the berms, the ETFE skin are all design decisions). That is inside the Jules Dalou rule
+  rather than a stretch of it, but it is the one entry here where a reasonable person could disagree.
+  ⚠️ **The 2026-08-28 entry claimed all five "ship the generic tag"; that was wrong about the Embassy,
+  which had none** — the note has been corrected in place.
+- **⚠️ NO OTHER ENTRY IN THE CATALOGUE MENTIONS ANY OF THE FIVE.** A full-text sweep over every title,
+  caption, description and transcript across 1,552 tours and 244 pins returns exactly three hits —
+  Roebling, Barlow and Safdie, all in the Atlas tours above — so nothing else was retagged.
+- **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
+  Swift validator, refusing to run if they disagree or either parse is empty (they agree at **384
+  tags across 5 facets**) — **self-tested against 44 injected fault classes, 44/44 caught**, then **0
+  errors, 2 warnings across 1,552 tours + 244 pins + 41 places**, **both pre-existing** (VIA 57 West's
+  transcript gap, Bedrock Caverns' deliberate null `walkingDistanceMeters`). Tours.json **byte-stable
+  under a Python re-dump before editing**; diff **exactly seven tag arrays touched, 16 insertions / 7
+  deletions**. **⚠️ Nothing compiled locally** (no Swift toolchain in a Linux web session) — **CI is
+  the only compile check.**
+
+### The `@nycunfilteredstories` removal reached Postgres — owner ran the SQL (2026-08-30)
+
+**`backend/pull_nycunfilteredstories.sql` HAS BEEN RUN. Nothing is owed here — do not tell the owner
+to run it again.** Verified against the live RPC rather than the SQL Editor's success line: all four
+pins (**Empire Theatre**, **The Octagon**, **Verrazzano-Narrows Bridge**, **The Brooklyn Bridge
+Caissons**) and both creator rows (**Instagram `@nycunfilteredstories`**, **`@theironwil`**) are gone,
+with **0 pins wrongly inside `tours`**. The catalogue edit had merged two days earlier and had
+**never reached Postgres**, because `seed_from_toursjson.py` is upsert-only by design — the two-part
+removal this file documents, closed.
+
 ## Current State (2026-08-29)
 
 ### Twenty link pins, fifteen from one Hong Kong creator, and a place candidate 9 m from its tour (branch `claude/tour-links-upload-tbcerj`, session 122 — content)
@@ -588,9 +659,11 @@ Full detail: `archive/HANDOFF-260828.md`.
   clipped headers were deliberately LEFT ALONE** (US Embassy, IAC, Empire Theatre, Habitat 67) —
   topic straplines, not the subject's name; and **Habitat 67 could not be fixed anyway**, being a
   16:9 source whose title spans the full width (the Depot MVRDV case).
-- **⚠️ FIVE ARCHITECTS VERIFIED AND ABSENT: `Moshe Safdie` (Habitat 67), `John Augustus Roebling`
+- **✅ FIVE ARCHITECTS VERIFIED AND ABSENT — ALL FIVE ADDED 2026-08-30 (see the entry at the top of
+  Current State); this bullet describes the state before that.** `Moshe Safdie` (Habitat 67),
+  `John Augustus Roebling`
   (Brooklyn Bridge), `William Henry Barlow` (St Pancras train shed), `KieranTimberlake` (US
-  Embassy), `José Ignacio Linazasoro` (Escuelas Pías — named on screen by the creator).** All ship
+  Embassy), `José Ignacio Linazasoro` (Escuelas Pías — named on screen by the creator). All shipped
   the generic tag; **Safdie and Roebling are the most conspicuous absences in the catalogue.** In
   the vocabulary and used: `Christian de Portzamparc`, `Frank Gehry`, `Frank Lloyd Wright`,
   `Stanford White`, `George Gilbert Scott`, `Thomas Heatherwick`. **⚠️ The rule applied was

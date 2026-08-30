@@ -331,7 +331,10 @@ let architectTags: Set<String> = [
     "Vilhelm Dahlerup", "Vilhelm Wohlert", "White Arkitekter",
     // Orlando (link pins)
     "Adjaye Associates", "James Gamble Rogers II",
-    "John M. Johansen", "Nils M. Schweizer"
+    "John M. Johansen", "Nils M. Schweizer",
+    // Link pins — verified from the post's own subject
+    "John Augustus Roebling", "José Ignacio Linazasoro", "KieranTimberlake",
+    "Moshe Safdie", "William Henry Barlow",
 
 ]
 let validTags: Set<String> = placeTypeTags

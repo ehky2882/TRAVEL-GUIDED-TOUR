@@ -1801,7 +1801,9 @@
         "History",
         "Maritime",
         "Power",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "John Augustus Roebling",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -18005,7 +18007,8 @@
         "Gothic",
         "Victorian",
         "Designed by a Master",
-        "George Gilbert Scott"
+        "George Gilbert Scott",
+        "William Henry Barlow"
       ],
       "kind": "single",
       "stops": [
@@ -51191,7 +51194,8 @@
         "Architecture",
         "Engineering",
         "Brutalist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Moshe Safdie"
       ],
       "priceUSD": 0
     },
@@ -85202,7 +85206,9 @@
         "Notable Building",
         "Architecture",
         "Power",
-        "Contemporary"
+        "Contemporary",
+        "KieranTimberlake",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -85570,7 +85576,8 @@
         "Notable Building",
         "Architecture",
         "Brutalist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Moshe Safdie"
       ],
       "priceUSD": 0
     },
@@ -86348,7 +86355,8 @@
         "Architecture",
         "Literature",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "José Ignacio Linazasoro"
       ],
       "priceUSD": 0
     },
@@ -86396,7 +86404,8 @@
         "Victorian",
         "Gothic",
         "George Gilbert Scott",
-        "Designed by a Master"
+        "Designed by a Master",
+        "William Henry Barlow"
       ],
       "priceUSD": 0
     },

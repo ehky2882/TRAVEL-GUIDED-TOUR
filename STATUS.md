@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-29 (session 122 — **four** link-pin sessions ran in parallel; #648 and this batch both merged, counts re-derived from `Tours.json` after three rebases)
+**Last verified:** 2026-08-30 (session 120d — architect vocabulary PR open; the pull SQL applied and verified live)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,18 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🔴 **OPEN — FIVE ARCHITECTS JOIN THE VOCABULARY (`claude/linked-tours-send-ahlhiy`).** Owner: *"add
+5 architects to vocab."* `Moshe Safdie` · `John Augustus Roebling` · `William Henry Barlow` ·
+`KieranTimberlake` · `José Ignacio Linazasoro`. **This is a CODE change** (`Models/Tag.swift` +
+`scripts/validate-tours.swift`, asserted identical at 334 architects / 384 tags), so it **waits for
+owner OK and a simulator look** — content PRs auto-merge, this one does not. Seven entries retagged;
+**the Brooklyn Bridge tour had no architect and no shelf tag at all** and gains both. **Nothing
+compiled locally** — no Swift toolchain in a web session, so CI is the only compile check.
+
+✅ **THE `@nycunfilteredstories` REMOVAL SQL HAS BEEN RUN (2026-08-30).** Owner applied
+`backend/pull_nycunfilteredstories.sql`; verified against the live RPC — all four pins and both
+creator rows gone, 0 pins wrongly inside `tours`. **Nothing owed; do not ask again.**
 
 ✅ **THE LINK-PIN FULLSCREEN BUG IS FIXED, SHIPPED AND OWNER-VERIFIED.**
 [#622](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/622) squash `e22dba7`, **build 134 from
