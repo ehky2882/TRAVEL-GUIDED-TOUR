@@ -142,6 +142,67 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - **⚠️ AASA IS UNTOUCHED AND UNIVERSAL LINKS ARE UNAFFECTED** — iOS matches the association file against the URL **path**, and a rewrite is server-side and invisible to it. The `/t/ /m/ /l/ /p/ /g/` components still match.
 - **⚠️ The gh-pages legacy landing pages were deliberately left alone.** Share links pointed there only between #297 and #542 — **two days, TestFlight-only, before the App Store release** — so the wild population is negligible, and a gh-pages push buys a Pages-deploy race for nothing.
 - **Verification.** Handler exercised against **live Supabase**: 10 shape cases (single, walk, bilingual title, place, maker, link pin, unknown list, unknown id, missing id, injection-shaped id, bad kind) all pass the structural checks — exactly one `og:image`, always https, no leaked script tags, correct `twitter:card`, sane cache headers — plus a **40-entry random sweep of the real catalogue: 40 real heroes, 0 fallbacks, 0 broken.** Bilingual titles (`Bank of China Tower | 中銀大廈`) correctly use the primary half. `node --check` clean, `vercel.json` valid.
+### An Instagram reel stops being cropped, and its fullscreen scrubber starts moving ([PR #662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662), session 124 — code)
+
+**Owner: *"1. on the tour details page the crop of the thumnail/preview/play window 2. in full
+screen mode maybe the cropping of the video to avoid the instagram banners is ok, but the scrubber
+doesnt work"*.** Two defects, both reproduced in the simulator before anything was changed and both
+re-checked there after. **Swift only — no SQL, no catalogue change.** `test_sim` **570/570**. Open,
+not merged; it is app code, so it waits for owner OK. Full detail: `archive/HANDOFF-260830-4.md`.
+
+- **🔴 A REEL WAS BEING SIZED BY THE PHOTO CAROUSEL'S SQUARE.** `instagramPlayer` passed
+  `GalleryVideoView` a `height` of nil, which means "take `AtlasSpacing.heroAspectRatio`" — and that
+  constant is **1.0**. The surface then fills its box, so a **720×1280** reel showed the **middle
+  56% of every frame**, cutting the creator's own titles off top and bottom. It now takes
+  `LinkSource.embedAspectRatio(for:)` — the same 9:16 expression the box already uses for the embed
+  this player stands in for, so the page cannot resize depending on whether a resolve succeeded, and
+  the shape matches what a TikTok pin already gets.
+- **⚠️ THE FILL IS A DELIBERATE OWNER DECISION AND IT STAYS — FOR THE CAROUSEL.** Its comment on
+  `VideoSurface` says why: there a clip is one page among photographs that are fill-cropped into the
+  same square, and expanding is what shows the whole frame. **That reasoning is about a clip sitting
+  BESIDE PHOTOGRAPHS and does not survive the trip to a link pin, where the post is the entire
+  page.** So fitting is a new **opt-in** (`fittedAspectRatio`, nil by default), not a change of
+  default; `TourMediaCarousel` is untouched and was re-checked on Shinsegae.
+- **⚠️ The 9:16 box adds no letterboxing of its own — measured, not assumed.** Six live pins read
+  with AVFoundation are **all exactly 720×1280**. Black bands some reels show are baked into the
+  source by the creator, and no crop can remove them without taking picture with them.
+- **🔴 THE FULLSCREEN SCRUBBER HAD NO CLOCK.** `scrubPosition` read `AVPlayer.currentTime()` — a
+  plain call with nothing observable about it — so **SwiftUI had no reason to re-render and the bar
+  never moved**; on a 1m 49s reel the elapsed label sat at `0s` for the whole clip. A periodic time
+  observer now samples it four times a second into `@State`.
+- **⚠️ ONLY GALLERY CLIPS EVER SHOWED IT, which is why it survived.** A `.narration` clip is slaved
+  to `AudioPlayerService`, which **is** `@Observable`, and the view already re-renders on
+  `.onChange(of: audioPlayer?.currentTime)`. **Every link pin is a gallery clip.**
+- **⚠️ The observer is removed in `onDisappear`** — one left on a player that outlives the view
+  retains the closure and keeps firing — and `playbackTime` is seeded from `request.startSeconds`,
+  so expanding mid-clip starts the bar where the picture already is rather than at zero.
+- **Verified on the Division Street pin** (Instagram `@donmawsey.nyctours`): before, the bar read
+  `0s` after two minutes of playback; after, **18s → 25s across seven seconds** with the brass fill
+  tracking. **Seeking was proved separately with a temporary probe calling the production
+  `seek(to:)` on the real asset** — `seek(60)` landed the player at **61.9s** with the bar reading
+  **61.75s** — and Instagram's CDN answers `accept-ranges: bytes`, so a drag has always been able to
+  move the video. Probe removed; the tree greps clean.
+- **⚠️ Measured while here and NOT fixed: 20 of the 73 live Instagram pins have no playable file at
+  all** (licensed music), so they still fall back to the poster and `OPEN IN INSTAGRAM`. **53 play.**
+  That is Instagram withholding `video_url`, which `make-link-pin.py` already reports at authoring
+  time; nothing in the app can reach it.
+- **🔴 THE VERSION TRAIN CLOSES THE MOMENT APPLE APPROVES IT, and this is the first build to pay
+  for it.** **1.1 is `READY_FOR_SALE`**, so Apple refuses *any* further build carrying that
+  marketing version — **TestFlight included**. Build **136 compiled, signed, and was rejected at
+  the upload step**: *"The value for key CFBundleShortVersionString [1.1] ... must contain a higher
+  version than that of the previously approved version [1.1]. (90062)"*. **Build 135 (2026-08-26)
+  was the last one that could ever ship under 1.1.** `MARKETING_VERSION` is now **1.1.1** on both
+  app-target configurations (the test targets stay at 1.0), and **1.1.1 (137) is VALID at Apple** —
+  verified by asking App Store Connect, not by reading the workflow's green tick. **⚠️ Every future
+  build must bump again once 1.1.1 is itself released.** ⚠️ **This failure does not look like a
+  version problem:** the archive and the signing both succeed and the run goes red at the last
+  step, which is the same shape as the certificate-cap failure and the ASCII-notes failure. Read
+  the altool error before assuming either.
+- **⚠️ A simulator trap that cost twenty minutes and is not a product bug:** on one launch the
+  bottom-module window missed its install, and because the fullscreen cover is hosted **inside that
+  window** (`BottomModuleRoot`), the expand button rendered, sat in the accessibility tree, and did
+  nothing. Relaunching fixed it. **A dead expand button on a link pin is worth checking against the
+  tab bar's presence before it is treated as a video bug.**
 
 ### The duplicate checker can no longer invent a duplicate — an error page is neither hashed nor cached (branch `claude/tour-links-upload-3bqlib`, session 123 — tooling)
 
