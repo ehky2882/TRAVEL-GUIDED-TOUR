@@ -25,8 +25,22 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **OPEN, AUTO-MERGE CLASS — FOURTEEN LINK PINS + THE CHECKER THAT CRIED WOLF
-([#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), `claude/tour-links-upload-3bqlib`).**
+🟡 **OPEN, AUTO-MERGE CLASS — GLASSHOUSE THEATRE BECOMES A PLACE
+([#663](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/663), `claude/tour-links-upload-3bqlib`,
+restarted off `main` after #659 merged).** Owner: *"make place card for glasshouse theater."* The two
+coincident pins from #659 become one place; **places 44 → 45**, `check-place-candidates.py` **4 EXACT
+→ 3**. **Nothing moved** — both pins were already on the identical coordinate, so the exact-coordinate
+identity rule held with no pin relocated. **🔴 The hero is BORROWED from the interior pin because no
+third photograph exists**: the venue opened March 2026 and every Commons image of it is CC BY-SA 4.0,
+off-policy while the app has no attribution UI. **The Hotel Casa del Mar case — do not go sourcing a
+replacement.** Content only; the seed carries `places`, so **no owner SQL**.
+
+
+✅ **MERGED — FOURTEEN LINK PINS + THE CHECKER THAT CRIED WOLF
+([#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), squash `e21b4fd5`), AND ALL
+FOURTEEN ARE LIVE.** Verified against the **live sources**, not the workflow's success line: the
+Supabase RPC (what the app reads first) and the gh-pages mirror each serve **256 link pins**, with
+**0 pins wrongly inside `tours`** and `priceTier` / `isPrivate` both intact.
 Fourteen links from the owner — 13 TikToks + 1 Instagram reel, **all alive, nothing parked**.
 **linkPins 242 → 256 · makers 188 → 191 · New Zealand the 37th country** (re-derived after [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged under it; the PR body's 244 → 258 was measured against the older base). Then, on owner
 instruction (*"fix the checker"*), the tooling half: **`check-image-duplicates.py` was hashing error
