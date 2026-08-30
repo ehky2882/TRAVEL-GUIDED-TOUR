@@ -79526,6 +79526,21 @@
         "6DA50048-2DF3-57C6-BA8A-7022FEFC86E3",
         "64D7FEE3-7DD4-5BBD-A7E7-2E885C91D0A4"
       ]
+    },
+    {
+      "id": "00afbb99-e518-5913-9ec2-de9b0aaa2e4c",
+      "name": "Duddell Street Steps and Gas Lamps",
+      "description": "A flight of granite steps climbing from Ice House Street to Queen's Road Central, carrying the last four working gas lamps in Hong Kong. They are two-light Rochester models by William Sugg & Co. of London, mounted on Tuscan-style balustrades, and they still light at dusk and go out at dawn — automatically now, rather than by hand. Super Typhoon Mangkhut brought trees down across them in September 2018 and the shattered castings were rebuilt piece by piece; the lamps were burning again by the end of 2019. The street takes its name from George Duddell, who arrived from Macau in 1841 and held the colony's first opium monopoly.",
+      "latitude": 22.27972,
+      "longitude": 114.15671,
+      "city": "Hong Kong",
+      "address": "Duddell Street, Central, Hong Kong",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Duddell_Street_Steps_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "de7b92ea-bf0c-4cf2-9dc5-c1928201c863",
+        "91DDC184-A7B2-522A-BF50-F5EADF74A4B3"
+      ]
     }
   ],
   "linkPins": [
@@ -90209,8 +90224,8 @@
           "order": 0,
           "title": "Duddell Street Steps and Gas Lamps | 都爹利街石階",
           "caption": "你必須知道的煤氣燈歷史秘密： 1️⃣ 開埠時期的「中環大動脈」這條花崗岩石階大約建於 1875 至 1889 年間。在那個沒有現代扶手電梯、私家車極罕有的 19 世紀，這裡是當年半山的達官貴人每天坐著轎子上下班的必經之路。 2️⃣ 全香港僅存的「生還者」 🇬🇧石階兩端的四盞煤氣燈",
-          "latitude": 22.2796542,
-          "longitude": 114.1567685,
+          "latitude": 22.27972,
+          "longitude": 114.15671,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -90222,8 +90237,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.2796542,
-      "centroidLongitude": 114.1567685,
+      "centroidLatitude": 22.27972,
+      "centroidLongitude": 114.15671,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "history",
