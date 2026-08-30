@@ -27,6 +27,30 @@ import Foundation
 /// be renamed without notice, so **every failure path returns nil** and the
 /// caller falls back to the poster-and-link embed. A broken resolve must
 /// degrade the pin, never break it.
+///
+/// 🔴 WHAT IS WITHHELD, AND WHY NO AMOUNT OF PARSING WILL FIND IT. Measured
+/// across all 73 live Instagram pins on 2026-08-30: **53 carry `video_url` and
+/// 20 do not**, and the two payloads are otherwise identical — same
+/// `is_video: true`, same `video_duration`, same `display_url` poster, same
+/// `use_lookaside_*` flags, and **no dash manifest or playback URL under any
+/// other key in either**. Instagram strips exactly one field.
+///
+/// **It tracks the AUDIO, and the direction is one-way: 20 of 20 withheld
+/// reels use a track from Instagram's music library, and no reel using the
+/// creator's own audio is ever withheld.** ⚠️ The rule is NOT "a named track
+/// means withheld" — a creator can name their own audio, and two pins do
+/// exactly that and still play (`Hotel Xcaret Arte`, `Yankee Stadium Tour`).
+/// Read the presence of `video_url`, never the track name.
+///
+/// 🔴 SO THIS IS A RIGHTS GATE, NOT A TECHNICAL ONE, and that is why there is
+/// no workaround here to find. Meta's music licences cover playback on Meta's
+/// own surfaces; handing the file to a third-party app would carry the track
+/// outside them. Routes to the file do exist — an authenticated session
+/// against the private API, or a paid scraper — and both are deliberately not
+/// taken: they need credentials Meta's terms forbid using that way, and they
+/// would put a licensed recording inside a paid App Store app on our own
+/// account. **A withheld pin falls back to the poster and opens Instagram,
+/// which is the correct outcome, not a defect awaiting a fix.**
 @MainActor
 @Observable
 final class InstagramMediaResolver {

@@ -183,10 +183,20 @@ Full detail: `archive/HANDOFF-260830-6.md`.
   `seek(to:)` on the real asset** — `seek(60)` landed the player at **61.9s** with the bar reading
   **61.75s** — and Instagram's CDN answers `accept-ranges: bytes`, so a drag has always been able to
   move the video. Probe removed; the tree greps clean.
-- **⚠️ Measured while here and NOT fixed: 20 of the 73 live Instagram pins have no playable file at
-  all** (licensed music), so they still fall back to the poster and `OPEN IN INSTAGRAM`. **53 play.**
-  That is Instagram withholding `video_url`, which `make-link-pin.py` already reports at authoring
-  time; nothing in the app can reach it.
+- **🔴 20 of the 73 live Instagram pins have no playable file, and it is a RIGHTS GATE rather than
+  a technical one — asked and answered on 2026-08-30, so it does not need re-investigating.** The
+  withheld and playable payloads are **identical but for the single `video_url` key**: same
+  `is_video: true`, same `video_duration`, same poster, same `use_lookaside_*` flags, **no dash
+  manifest or playback URL under any other key in either**. **It tracks the audio, one-way: 20 of
+  20 withheld use a track from Instagram's music library, and no reel on the creator's own audio is
+  ever withheld.** ⚠️ **The rule is NOT "a named track means withheld"** — a creator can name their
+  own audio, and two pins do and still play (`Hotel Xcaret Arte`, `Yankee Stadium Tour`); **read
+  `video_url`, never the track name.** Meta's music licences cover playback on Meta's surfaces, so
+  the file is withheld deliberately. Routes exist — an authenticated private-API session, or a paid
+  scraper — and both are **deliberately not taken**: they need credentials Meta's terms forbid using
+  that way, and they would put a licensed recording inside a paid App Store app on the owner's own
+  account. **The poster + `OPEN IN INSTAGRAM` fallback is the correct outcome, not a defect.** The
+  practical lever is curation: `make-link-pin.py` already flags a withheld pin at authoring time.
 - **🔴 THE VERSION TRAIN CLOSES THE MOMENT APPLE APPROVES IT, and this is the first build to pay
   for it.** **1.1 is `READY_FOR_SALE`**, so Apple refuses *any* further build carrying that
   marketing version — **TestFlight included**. Build **136 compiled, signed, and was rejected at
