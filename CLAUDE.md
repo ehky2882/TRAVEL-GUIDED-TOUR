@@ -207,6 +207,24 @@ session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-26
   therefore looked free — the `check-image-duplicates.py`-printed-OK failure exactly. Redone by
   HEAD-checking all 16 live URLs: **16 × 404**. **The bare-slug sweep came back clean too**, so the
   handle suffix was not load-bearing here; it simply was not called on.
+- **🔴 `check-image-duplicates.py` CACHES A FAILED FETCH AND THEN REPORTS IT AS A DUPLICATE
+  FOREVER — found by running `--pins` on this batch, and the catalogue is NOT at fault.** It
+  flagged `rosewood-mayakoba-rwmayakoba_hero.webp` and `the-old-cinema-chiswick-dreamspaces_hero.webp`
+  — two unrelated pins from earlier batches — as byte-identical. **They are not**: the live files
+  hash `7c22f2dc…` and `3c82de46…`, and purging those two cache entries returns
+  **`OK — no suspicious duplicates` over all 254 pin images**. **The cause is `fetch_hash`**, which
+  runs `curl -sL` with **no `-f`, no HTTP-status check and no decode check** and rejects a response
+  only when curl exits non-zero or the body is empty — so **any non-empty error body is hashed as
+  the image and cached permanently**, and two URLs failing the same way become a duplicate that
+  never goes away. Both entries here held `27927b33…`, which is neither file nor even the Pages 404
+  page (`b6205073…`) — a transient response served while this batch's deploy was still propagating.
+  ⚠️ **This is the script's founding bug inverted**: session 103 rebuilt it because it printed
+  *"OK"* having fetched nothing; it can no longer report a false pass, but it can now report a
+  **false alarm that persists across runs**. **The fix belongs in `fetch_hash` — pass `-f`, check
+  the status, refuse to cache anything Pillow will not decode — and was deliberately NOT made in a
+  content batch.** Until then, **a group naming two unrelated pins is more likely a poisoned cache
+  entry than a catalogue fault**: re-hash the live URLs by hand, then
+  `grep -l <sha> .cache/image-dupes/* | xargs rm`.
 - **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
   Swift validator, refusing to run if they disagree or either parse is empty (they agree at **385
   tags across 5 facets**) — **self-tested against 41 injected fault classes, 41/41 caught**, then
@@ -218,9 +236,13 @@ session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-26
   heroes; closest perceptual pair **64.2**. **No pin lands within 500 m of any existing catalogue
   marker** — nearest is La Colombe d'Or at 618 m from the Fondation Maeght pin, a different subject.
   gh-pages: `git ls-remote` re-read **in the same command as the push**, tree diff **exactly 16
-  additions, 0 deletions, nothing outside `images/`** (`628c78bc`). Tours.json **byte-stable under a
-  Python re-dump before editing**; diff **674 insertions / 0 deletions**. **CI has not run: no PR is
-  open.**
+  additions, 0 deletions, nothing outside `images/`** (`628c78bc`); the deploy read **`in_progress`,
+  never `cancelled`**, and after it landed **all 16 live URLs were hash-verified against the
+  uploaded bytes — 16 ok, 0 bad**, with the head re-confirmed as this batch's own commit.
+  `check-image-duplicates.py --pins` **254 images, OK** (254 for 258 pins because the five
+  `@malata.antwerp` pins share one hero URL by design), once the poisoned cache entries above were
+  cleared. Tours.json **byte-stable under a Python re-dump before editing**; diff **674 insertions /
+  0 deletions**. **CI has not run: no PR is open.**
 
 ### The duplicate checker had never seen a link pin — 244 of them, invisible since the split (branch `claude/tour-links-upload-qeoxe7`, session 122 — tooling)
 
