@@ -128,6 +128,52 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### The duplicate checker can no longer invent a duplicate — an error page is neither hashed nor cached (branch `claude/tour-links-upload-3bqlib`, session 123 — tooling)
+
+**Owner: *"fix the checker."*** Found by running `--pins` on this session's own batch, which reported
+two unrelated link pins as byte-identical when they are not. Tooling only — no catalogue change, no
+Swift, no SQL. **Auto-merge class.**
+
+- **🔴 THE BUG: `curl` WRITES AN ERROR PAGE'S BODY TO STDOUT AND EXITS 0.** `fetch_hash` ran
+  `curl -sL` with **no `-f`, no status check and no decode check**, and rejected a response only
+  when curl exited non-zero or the body was empty. So **a 404, a CDN interstitial, a rate-limit
+  page — any non-empty error body — was hashed as though it were the picture and written to
+  `.cache/image-dupes/`**, where every later run trusted it. Two URLs failing the same way became a
+  byte-identical "duplicate", **and because it was cached, it came back forever**. That is what
+  reported `rosewood-mayakoba-rwmayakoba_hero.webp` and `the-old-cinema-chiswick-dreamspaces_hero.webp`
+  as sharing bytes: they hash `7c22f2dc…` and `3c82de46…`, and both cache entries held `27927b33…`,
+  which is neither file **nor even the Pages 404 page** (`b6205073…`) — a transient response served
+  while that session's own deploy was still propagating.
+- **⚠️ THIS IS THE SCRIPT'S FOUNDING BUG INVERTED, AND THAT IS THE POINT.** Session 103 rebuilt it
+  because it printed *"OK — no suspicious duplicates"* having fetched nothing at all. It could no
+  longer report a false pass — but it could report a **false alarm**, and a cached one is permanent.
+  **A checker that cries wolf gets ignored, which is the same failure as one that says nothing.**
+- **The fix is three guards, in order.** `download()` now writes the body to a temp file with `-o`
+  and reads the status with `-w "%{http_code}"`, so **a 200 is the only success** — the verdict is a
+  pure `download_verdict(returncode, status, data)` so the selftest can pin it offline. Then
+  `looks_like_image()` must pass before anything is hashed: a **format signature**
+  (`has_image_signature`, covering WEBP/JPEG/PNG/GIF) and, when Pillow is present, **an actual
+  decode**, because a truncated file has a valid header and no usable content. **Nothing that fails
+  any of those is cached.**
+- **🔴 `has_image_signature` IS PINNED SEPARATELY AND MUST STAY THAT WAY — it is the ONLY guard when
+  Pillow is absent, which a fresh container always is.** With Pillow installed the decode covers for
+  it, so a test that leans on the decode would let its removal pass silently; the selftest exercises
+  the signature directly, and the whole selftest was re-run with `PIL` blocked to prove the
+  no-Pillow path.
+- **🔴 THE CACHE DIRECTORY IS NOW `.cache/image-dupes-v2/`, DELIBERATELY.** A poisoned entry written
+  by the old code is **indistinguishable from a good one** from the outside, so the only safe move
+  was to stop reading the old ones. Cost: one full refetch per machine, once — and a fresh container
+  pays nothing, since the cache is gitignored. **Bump the suffix again if the format or its
+  trustworthiness ever changes.**
+- **Verification — proven by breaking it, not by reading it.** Selftest extended and run against
+  **7 injected fault classes, 7/7 caught**: removing the status check, the empty-body check, the
+  curl-exit check, the decode gate, the format-signature check, the WEBP branch, and (under a
+  blocked `PIL`) the signature call inside `looks_like_image`. Against the **live** host, a real 404
+  now returns `HTTP 404, 9379 bytes` and **writes 0 cache entries**, while a real image still hashes
+  correctly. **`--pins` on a COLD v2 cache: 254 images fetched fresh, 254 cached, `OK — no
+  suspicious duplicates`** — the false alarm cannot be reproduced. `--maker MAD` still reports its 3
+  documented walk-reuse INFO groups and exits clean, so the tours path is unchanged.
+
 ### Fourteen link pins, and a staircase that is no longer where its own photograph was taken (branch `claude/tour-links-upload-3bqlib`, session 123 — content)
 
 **The owner sent fourteen links — thirteen TikToks and one Instagram reel.** Branch cut clean off
@@ -146,8 +192,10 @@ session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-26
   sits at Christchurch (`-43.5291941, 172.6209687`) **because that is where someone can walk to it**
   — while the creator's frame is unmistakably the coastal Waiheke siting (turquoise water,
   headlands, a bay), which the Botanic Gardens are not. The caption names no location, so nothing we
-  author claims either place. ⚠️ **Anyone re-running the open-every-hero audit will read this as a
-  wrong-place hero; it is a stated trade-off, not an oversight.** ⚠️ **A bounded viewbox is what
+  author claims either place. **✅ RAISED AND CLOSED BY THE OWNER 2026-08-30: *"keep christchurch"*.
+  THE PIN STAYS WHERE IT IS.** ⚠️ **Anyone re-running the open-every-hero audit will read this as a
+  wrong-place hero; it is a settled trade-off, not an oversight** — honour the decision rather than
+  moving the pin or sourcing a replacement (the Ministry of Enterprise precedent). ⚠️ **A bounded viewbox is what
   found the coordinate** — `Kiosk Lake` unbounded returns nothing at all, bounded to the gardens OSM
   names it immediately. Fourth batch running where the bounded query was the whole fix.
 - **🔴 CLAUDE.md's OWN INSTAGRAM DEAD-POST TEST GAVE THE WRONG ANSWER, AND THE TOOL GAVE THE RIGHT
@@ -220,11 +268,8 @@ session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-26
   page (`b6205073…`) — a transient response served while this batch's deploy was still propagating.
   ⚠️ **This is the script's founding bug inverted**: session 103 rebuilt it because it printed
   *"OK"* having fetched nothing; it can no longer report a false pass, but it can now report a
-  **false alarm that persists across runs**. **The fix belongs in `fetch_hash` — pass `-f`, check
-  the status, refuse to cache anything Pillow will not decode — and was deliberately NOT made in a
-  content batch.** Until then, **a group naming two unrelated pins is more likely a poisoned cache
-  entry than a catalogue fault**: re-hash the live URLs by hand, then
-  `grep -l <sha> .cache/image-dupes/* | xargs rm`.
+  **false alarm that persists across runs**. **✅ FIXED THE SAME SESSION on owner instruction —
+  see the entry directly below.**
 - **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
   Swift validator, refusing to run if they disagree or either parse is empty (they agree at **385
   tags across 5 facets**) — **self-tested against 41 injected fault classes, 41/41 caught**, then
