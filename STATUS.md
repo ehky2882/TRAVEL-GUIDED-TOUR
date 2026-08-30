@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
+**Last verified:** 2026-08-30 (session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,32 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **PUSHED, NO PR — SEVEN INSTAGRAM REELS FROM `@nikola.matus`
+(`claude/links-tours-upload-zcxcfm`, commit `7fde232b`).** Owner sent 7 Instagram reels, all one
+creator, all alive and pinnable. **linkPins 276 → 283 · makers 205 → 206 · tours unchanged at 1,552
+· places 45.** No new country (37 holds); new cities **Mill Run**, **Púbol**,
+**Roquebrune-Cap-Martin**, **Palm Springs**. Validator mirror **40/40 injected faults caught**, then
+**0 errors / 2 warnings, both pre-existing**. Content only — no Swift, no SQL, no build.
+**No PR opened** (this session's harness forbids opening one unasked).
+  - ✅ **CLEARED — the Chelsea Hotel coordinate is fixed** (owner: *"fix the chelsea hotel
+    coordinate"*). The Atlas tour sat **290 m** from the hotel behind a **60 m** geofence, so it
+    could never fire; stop 0 and the centroid now sit on `40.7443742, -73.9968175`, which
+    reverse-geocodes to `Hotel Chelsea, 222, West 23rd Street`. **Radius re-derived and kept at
+    60 m; 0 other geofenced markers within 500 m.** Four lines changed. ⚠️ **`check-place-candidates.py`
+    3 EXACT → 4** — the tour and the pin are now coincident, a genuine place candidate; **no place
+    created** (needs copy, address, photograph and approval).
+  - ⚠️ **ALL SEVEN ARE `plays_inline: False`** — the licensed-music rights gate, six of them naming
+    the same track. Poster + `OPEN IN INSTAGRAM` on tap. Correct behaviour, not a defect, but this
+    is the first batch where it is **7 of 7** rather than a stray one, so it is the owner's call
+    whether a creator whose whole account is withheld is worth pinning.
+  - ⚠️ **Two heroes are portraits of a person, not a place** — Marilyn Monroe and Edie Sedgwick.
+    Neither is wrong (both name their subject in frame) but both render as a face on the map. A
+    link pin re-hosts only the thumbnail, so no other frame exists.
+  - ⚠️ **`check-place-candidates.py` 4 EXACT unchanged, 13 NEAR → 15.** Both new pairs are a pin
+    beside an Atlas tour of the same subject: **Casa Milà 11 m** (the CalAcademy rounding artifact —
+    a genuine place candidate) and **The Chelsea Hotel 290 m** (which is the defect above, not a
+    place candidate until the tour is corrected). No pin was moved to manufacture a coincidence.
 
 🟡 **PUSHED, NO PR — TWENTY LINK PINS FROM TWENTY LINKS
 (`claude/link-tours-to-upload-i4dfhl`, commits `cb0f0662` + `e7b93eb1`).** Owner sent 20 links (17 Instagram
