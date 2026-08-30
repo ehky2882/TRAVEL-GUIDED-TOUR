@@ -35,15 +35,42 @@ classifies each group of identical files:
 Exit codes: 0 = no errors (INFO reuse is fine), 1 = duplicates that look wrong,
 2 = file/network error.
 
+LINK PINS
+---------
+Link pins do NOT live in the `tours` array — they travel in a sibling `linkPins`
+array, because one unfamiliar `kind` inside `tours` fails the whole catalog
+decode on every build shipped before TourKind.link (PR #597). This script read
+only `tours` from the day it was written until 2026-08-30, so for five days
+`--all` reported success over a catalog it was not fully checking: every one of
+the 244 link-pin heroes was invisible to it. Six link-pin batches worked around
+it by hand. `--all` now covers both; `--pins` scopes to link pins alone.
+
+SCOPES
+------
+    --maker <CODE>   tours by that maker only. Matches displayName as a
+                     substring, and pinned creators' handles collide with city
+                     codes (STO matches @urbanstoriesyt), so this deliberately
+                     does NOT include link pins.
+    --pins           link pins only — the right scope when staging a batch.
+                     Combine with --maker <handle> for one creator.
+    --all            everything: tours AND link pins.
+
 USAGE
 -----
     python3 scripts/check-image-duplicates.py --maker MAD    # one city (fast)
-    python3 scripts/check-image-duplicates.py --all          # whole catalog (slow)
+    python3 scripts/check-image-duplicates.py --pins         # all link pins
+    python3 scripts/check-image-duplicates.py --pins --maker thedesigndetourist
+    python3 scripts/check-image-duplicates.py --all          # everything (slow)
     python3 scripts/check-image-duplicates.py --selftest     # logic only, no network
 
-Run it with --maker <CODE> when staging a new city's images — that is when this
-bug class appears, and it keeps the download to one batch instead of thousands
-of files. Downloads are cached under .cache/image-dupes/ so re-runs are cheap.
+Run it with --maker <CODE> when staging a new city's images, or --pins when
+staging a link-pin batch — that is when this bug class appears, and it keeps the
+download to one batch instead of thousands of files. Downloads are cached under
+.cache/image-dupes/ so re-runs are cheap.
+
+Places are deliberately out of scope: a place hero is allowed to be a member's
+own hero at the SAME url (Legion of Honor, Hotel Casa del Mar), which produces
+no group at all, and nothing else references a place image.
 """
 import argparse
 import collections
@@ -97,15 +124,34 @@ def tour_slug(tour):
 
     Singles:    audio/museo-del-prado.mp3        -> museo-del-prado
     Walk stops: audio/madrid-retiro_stop3.mp3    -> madrid-retiro
+
+    A link pin hosts no audio at all — every one carries audioURL "" — so the
+    slug comes from its hero filename instead. Without this fallback all 244
+    pins collapse onto one empty slug and the classifier cannot tell them apart.
     """
     stops = tour.get("stops") or []
     src = (stops[0].get("audioURL") if stops else None) or tour.get("introAudioURL") or ""
     stem = os.path.splitext(os.path.basename(src))[0]
+    if not stem:
+        return asset_slug(tour.get("heroImageURL") or "")
     return re.sub(r"_stop\d+$", "", stem)
 
 
-def build_index(catalog, maker_code=None):
-    """-> (urls, slug_kind, walk_stop_urls) for the selected tours.
+def entries_in_scope(catalog, scope):
+    """The catalog entries a given scope covers.
+
+    `tours` and `linkPins` are two top-level arrays (see LINK PINS above), so
+    "the whole catalog" has to read both or it silently checks a subset.
+    """
+    if scope == "pins":
+        return list(catalog.get("linkPins") or [])
+    if scope == "all":
+        return list(catalog["tours"]) + list(catalog.get("linkPins") or [])
+    return list(catalog["tours"])
+
+
+def build_index(catalog, maker_code=None, scope="tours"):
+    """-> (urls, slug_kind, walk_stop_urls) for the selected entries.
 
     walk_stop_urls are images used as a *stop* image of a multi-stop walk.
     That is the documented reuse slot — walk stops reuse imagery that already
@@ -117,7 +163,7 @@ def build_index(catalog, maker_code=None):
     makers = {m["id"]: m for m in catalog["makers"]}
     slug_kind, urls, walk_stop_urls = {}, set(), set()
 
-    for tour in catalog["tours"]:
+    for tour in entries_in_scope(catalog, scope):
         maker = makers.get(tour.get("makerId")) or {}
         if maker_code and maker_code.upper() not in maker.get("displayName", "").upper():
             continue
@@ -225,6 +271,15 @@ def classify(group, slug_kind, walk_stop_urls=frozenset()):
     kinds = [slug_kind.get(s, "single") for s in slugs]
     if any(k == "multiStop" for k in kinds):
         return "info", "multi-stop walk reusing a single-stop image (expected convention)"
+
+    if any(k == "link" for k in kinds):
+        # A link pin re-hosts its own post's thumbnail and nothing else. Two
+        # pins can legitimately be the same clip cross-posted to two platforms
+        # (the Zacherlhaus case) — but those are two separate downloads, so
+        # they are never byte-identical; they surface perceptually instead.
+        # Byte-identical means one hero was written twice from one decode,
+        # which is the Thyssen bug wearing a link pin's clothes.
+        return "error", "a link pin shares bytes with another entry — a hero was written twice from one decode"
 
     # Distinct single-stop tours sharing bytes. Sometimes legitimate — one photo
     # can genuinely show two adjacent landmarks (Millennium Bridge and St Paul's).
@@ -353,6 +408,14 @@ def selftest():
     # walk_stop_urls, since "ponte-santangelo" is a stop, not a tour slug.
     walk_stops = {"ponte-santangelo_hero.webp"}
     cases.append((["castel-santangelo_3.webp", "ponte-santangelo_hero.webp"], "info"))
+    # Link pins: two pins' heroes sharing bytes means one was written twice.
+    slug_kind["papaya-king-thedesigndetourist"] = "link"
+    slug_kind["shun-hing-restaurant-thedesigndetourist"] = "link"
+    cases.append((["papaya-king-thedesigndetourist_hero.webp",
+                   "shun-hing-restaurant-thedesigndetourist_hero.webp"], "error"))
+    # A pin sharing bytes with an Atlas tour's hero is the same mis-stage.
+    cases.append((["papaya-king-thedesigndetourist_hero.webp",
+                   "museo-reina-sofia_hero.webp"], "error"))
     failures = 0
     for group, expected in cases:
         got, reason = classify(group, slug_kind, walk_stops if "ponte-santangelo_hero.webp" in group else frozenset())
@@ -364,14 +427,57 @@ def selftest():
     print()
     if not _selftest_perceptual():
         failures += 1
+    if not _selftest_scope():
+        failures += 1
     print("selftest OK" if not failures else f"selftest FAILED ({failures})")
     return 0 if not failures else 1
+
+
+def _selftest_scope():
+    """Link pins live in a sibling array; --all must actually reach them."""
+    hero = "https://x/images/papaya-king-thedesigndetourist_hero.webp"
+    catalog = {
+        "makers": [{"id": "M1", "displayName": "Atlas Studio NYC"},
+                   {"id": "M2", "displayName": "TikTok @thedesigndetourist"}],
+        "tours": [{
+            "id": "T1", "makerId": "M1", "kind": "single",
+            "heroImageURL": "https://x/images/empire-state-building_hero.webp",
+            "stops": [{"audioURL": "audio/empire-state-building.mp3"}],
+        }],
+        "linkPins": [{
+            "id": "P1", "makerId": "M2", "kind": "link", "heroImageURL": hero,
+            "stops": [{"audioURL": "", "imageURL": hero}],
+        }],
+    }
+    ok = True
+    checks = [
+        ("tours", 1, "papaya" , False),
+        ("pins",  1, "empire" , False),
+        ("all",   2, None     , None),
+    ]
+    for scope, want_n, absent, _ in checks:
+        urls, slug_kind, _ = build_index(catalog, None, scope)
+        if len(urls) != want_n:
+            print(f"  FAIL scope {scope}: expected {want_n} urls, got {len(urls)}"); ok = False
+        if absent and any(absent in u for u in urls):
+            print(f"  FAIL scope {scope}: should not contain {absent}"); ok = False
+    # the pin's slug must come from its hero, not collapse to ""
+    _, slug_kind, _ = build_index(catalog, None, "pins")
+    if slug_kind.get("papaya-king-thedesigndetourist") != "link":
+        print(f"  FAIL pin slug fallback: {slug_kind}"); ok = False
+    # --maker must not leak pinned creators into a city scope
+    urls, _, _ = build_index(catalog, "NYC", "tours")
+    if len(urls) != 1 or "empire" not in urls[0]:
+        print(f"  FAIL --maker NYC scoping: {urls}"); ok = False
+    print("  PASS  scope: tours / pins / all" if ok else "  FAIL  scope")
+    return ok
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--maker", help="limit to one maker, e.g. MAD (matches displayName)")
-    ap.add_argument("--all", action="store_true", help="check the whole catalog (slow)")
+    ap.add_argument("--pins", action="store_true", help="check link pins instead of tours")
+    ap.add_argument("--all", action="store_true", help="check everything: tours AND link pins (slow)")
     ap.add_argument("--selftest", action="store_true", help="run classification tests, no network")
     ap.add_argument("--file", default=TOURS_JSON, help="path to Tours.json")
     ap.add_argument("--jobs", type=int, default=8, help="parallel downloads (default 8)")
@@ -380,8 +486,12 @@ def main():
     if args.selftest:
         sys.exit(selftest())
 
-    if not args.maker and not args.all:
-        ap.error("pass --maker <CODE> for one city, or --all for the whole catalog")
+    if not args.maker and not args.all and not args.pins:
+        ap.error("pass --maker <CODE> for one city, --pins for link pins, or --all for everything")
+    if args.pins and args.all:
+        ap.error("--pins and --all are different scopes; pass one")
+
+    scope_name = "all" if args.all else ("pins" if args.pins else "tours")
 
     try:
         with open(args.file) as fh:
@@ -390,12 +500,16 @@ def main():
         print(f"cannot read {args.file}: {exc}", file=sys.stderr)
         sys.exit(2)
 
-    urls, slug_kind, walk_stop_urls = build_index(catalog, args.maker)
+    urls, slug_kind, walk_stop_urls = build_index(catalog, args.maker, scope_name)
     if not urls:
-        print(f"no images found{' for maker ' + args.maker if args.maker else ''}")
+        print(f"no images found{' for maker ' + args.maker if args.maker else ''}"
+              f" in scope {scope_name}")
         sys.exit(2)
 
-    scope = args.maker or "whole catalog"
+    scope = {"all": "whole catalog (tours + link pins)",
+             "pins": "link pins", "tours": "tours"}[scope_name]
+    if args.maker:
+        scope = f"{args.maker} ({scope})"
     print(f"Atlas duplicate-image check — {scope}: {len(urls)} images\n")
 
     groups, failed, phashes, thumbs = collections.defaultdict(list), [], {}, {}

@@ -75,7 +75,7 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | **Web/remote session (preferred, no Mac):** push the branch, then trigger `.github/workflows/testflight.yml` (Actions → Run workflow on the branch, or add the `build` label to its PR) — CI builds + signs + uploads automatically; build number = `github.run_number` → `1.1 (N)`. See `docs/testflight-ci.md`. **Local (Mac) session:** bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, `xcodebuild archive` (`docs/testflight.md`), owner uploads via Organizer. |
 | 8b | **New city drop received, BEFORE wiring anything** | **Run `python3 scripts/check-coordinates.py --drop "<folder>" --city "<City>, <Country>"`.** A wrong coordinate is the only defect that is invisible to every other check — the validator passes, CI compiles, every URL 200s, and the tour simply never fires. It has shipped twice from the same upstream pipeline (Barcelona ×10, Milan ×2), **always displaced north**. Fix every GROSS before wiring; read every UNVERIFIABLE by hand; and **check the BIAS line — if the northward offset is gone, upstream has been fixed, and if it is still ~+10 m it has not, however clean the gross list looks.** |
-| 8 | New tour added (to `Tours.json`) that lacks images | Run the image pipeline (§ Image Pipeline) automatically — no prompting — and **reply with a numbered, labeled contact sheet of ~12 verified CC0 candidates per tour so the owner can pick hero + gallery by number** (e.g. `"3 hero, 1, 7, 9"`). This is the standard "upload tours without images" flow. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** **Always finish with `python3 scripts/check-image-duplicates.py --maker <CODE>` (§ Image Pipeline step 8) — it is the only thing that catches an image written under the wrong tour's filename.** |
+| 8 | New tour added (to `Tours.json`) that lacks images | Run the image pipeline (§ Image Pipeline) automatically — no prompting — and **reply with a numbered, labeled contact sheet of ~12 verified CC0 candidates per tour so the owner can pick hero + gallery by number** (e.g. `"3 hero, 1, 7, 9"`). This is the standard "upload tours without images" flow. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** **Always finish with `python3 scripts/check-image-duplicates.py --maker <CODE>` — or **`--pins`** for a link-pin batch (§ Image Pipeline step 8) — it is the only thing that catches an image written under the wrong tour's filename.** |
 | 9 | Triggering ANY TestFlight build | **Always attach build notes — never ship a mystery build.** Provide two short sections: **What changed** (the features/fixes in this build) and **What to test** (concrete on-device steps + anything device-only). Put them in **(a)** the reply to the owner in chat, **(b)** the build's `notes` workflow input (Actions → Run workflow → *Build notes*, or the trigger call's inputs) — **the workflow then auto-attaches them to the build's "What to Test" field in TestFlight** (confirmed working 2026-07-25, via fastlane `upload_to_testflight` with `distribute_only: true` + `app_platform: "ios"`; falls back to PR title+body, then commit subject), so the owner reads them right in the TestFlight app — and **(c)** the PR body if a PR exists. Keep it plain-English for a non-technical owner. |
 | 10 | Opening or merging a PR · dispatching a TestFlight build · finding or clearing an owner-blocked item | Update the matching table in **`STATUS.md`** in the same commit — it is the live board of what is in flight across all parallel sessions (open PRs, which build number carries which branch, what is owed by the owner). **Re-derive, never predict:** `gh pr list --state open`, and read the build number back from the Actions run list after dispatching. `STATUS.md` holds only current state; finished work moves to `CLAUDE.md` § Current State. |
 | 11 | Applying ANY SQL that touches `get_catalog` — or the owner reporting a feature "missing" that the code clearly ships | Run `python3 scripts/check-catalog-contract.py`. It asks the LIVE RPC what keys it returns and diffs them against the Swift models, which is the only way to catch a dropped key: every one of them is optional in Swift, so it decodes as nil and the feature silently stops existing — no crash, no log, no failed CI. This is how `places`, `priceTier` and `isPrivate` vanished for 14 hours on 2026-08-19. **Run it after the migration, not before.** |
@@ -108,7 +108,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 5. **Process** — Crop selections to final 1200×900 WebP (no label). Name: `{audio-slug}_hero.webp`, `{audio-slug}_2.webp`, etc.
 6. **Upload** — Commit to `gh-pages` branch under `images/`. Pull + rebase if non-fast-forward.
 7. **Patch Tours.json** — Replace `heroImageURL` + set/update `additionalImageURLs`. Commit + push to session branch.
-8. **Verify the bytes, not the filename** — run `python3 scripts/check-image-duplicates.py --maker <CODE>`. **This is not optional when staging a city.** Two images written back-to-back can silently share content: in the Madrid batch the Thyssen hero was byte-identical to the Reina Sofía hero written 40 seconds earlier, and shipped the wrong building for a month. `validate-tours.swift` cannot see it — the URLs are distinct and all return 200. **When an owner-pasted image is the only copy, hash the written file against the decode before committing** (a fresh web-session container has no prior transcripts, so a lost paste is unrecoverable). After a gh-pages push, **confirm the live URL's hash** rather than trusting the push — Pages deploys can be cancelled and serve stale for ~10 min.
+8. **Verify the bytes, not the filename** — run `python3 scripts/check-image-duplicates.py --maker <CODE>`, or **`--pins`** for a link-pin batch (`--all` covers both and takes ~7 minutes). **This is not optional when staging a city or a batch of pins.** ⚠️ **`--maker <CODE>` is tours only, deliberately** — a pinned creator's handle collides with city codes as a substring (`STO` matches `@urbanstoriesyt`), so scoping a city must not sweep pins in. Two images written back-to-back can silently share content: in the Madrid batch the Thyssen hero was byte-identical to the Reina Sofía hero written 40 seconds earlier, and shipped the wrong building for a month. `validate-tours.swift` cannot see it — the URLs are distinct and all return 200. **When an owner-pasted image is the only copy, hash the written file against the decode before committing** (a fresh web-session container has no prior transcripts, so a lost paste is unrecoverable). After a gh-pages push, **confirm the live URL's hash** rather than trusting the push — Pages deploys can be cancelled and serve stale for ~10 min.
 
 9. **🔴 CORRECTING AN IMAGE MEANS A NEW FILENAME — NEVER OVERWRITE BYTES AT A LIVE URL.** Publish the replacement as its own file (`..._hero-2.webp`) and repoint `Tours.json` at it. **A phone that has downloaded a tour reads that tour's photographs off its own disk and never asks the server again** (PR #567), and the offline fallback serves whatever `URLCache` holds for a URL (PR #568) — so bytes swapped underneath an unchanged URL reach neither. Someone who downloaded a tour would keep the wrong photograph until they deleted and re-downloaded it, which nobody would think to do. **A new filename is a new address, so every phone fetches it automatically.** This is exactly how the Thyssen hero was corrected — in place, at the same URL — and that fix would not have reached a downloaded tour. Costs nothing; the old file can stay on gh-pages, orphaned, or be deleted once nothing references it.
 
@@ -127,6 +127,53 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
 ## Current State (2026-08-30)
+
+### The duplicate checker had never seen a link pin — 244 of them, invisible since the split (branch `claude/tour-links-upload-qeoxe7`, session 122 — tooling)
+
+**Owner: *"do it now if it helps."*** `scripts/check-image-duplicates.py` reads `catalog["tours"]`
+and nothing else, so **every one of the 244 link-pin heroes was invisible to it** — including under
+`--all`, which reported success over a catalogue it was not fully checking. Tooling only; no
+catalogue change, no Swift, no SQL.
+
+- **🔴 THIS IS BIGGER THAN THE "CANNOT SCOPE TO A BATCH" NOTE SIX SESSIONS HAVE BEEN WRITING, AND MY
+  OWN FIRST DESCRIPTION OF IT WAS WRONG.** I told the owner it was a convenience gap and that
+  "nothing in the catalogue is wrong because of it." The scoping half was real, but the actual
+  finding is that **`--all` has been silently blind to the whole `linkPins` array since PR #597
+  split it out on 2026-08-25** — the script was written in #453/#455 on 19 August, six days
+  earlier, and was never taught about the second array. Measured before the fix: `--all` saw
+  **5,595 images and 0 of the 240 link-pin hero URLs.**
+- **✅ THE CATALOGUE IS CLEAN, AND THAT IS NOW MEASURED RATHER THAN ASSUMED.** First honest whole-
+  catalogue run: **5,835 images, 0 errors, 27 INFO** (12 byte-level walk-reuse groups plus the
+  documented Paris/London walk-stop reuses), **0 fetch failures**. So the blindness never let a
+  wrong image through — but nothing had checked, which is the same shape as the SSL failure that
+  once made this script print "OK" having fetched nothing.
+- **Scopes are explicit now, because `--maker` could not safely be widened.** A pinned creator's
+  handle collides with city codes as a substring — **`--maker STO` matches `@urbanstoriesyt`,
+  `@hollywoodhistory` and four more; 31 such collisions catalogue-wide** — so folding pins into
+  `--maker` would quietly drag unrelated creators into a city check. Therefore: **`--maker <CODE>`
+  is tours only, unchanged**; **`--pins`** is link pins (optionally `--pins --maker <handle>` for
+  one creator); **`--all`** is both.
+- **⚠️ `--pins` is 240 images in 10 seconds; `--all` is 5,835 in 7 minutes.** That gap is the whole
+  reason six batches worked around this by hand rather than running the tool.
+- **⚠️ A LINK PIN CARRIES NO AUDIO, AND `tour_slug` DERIVES A SLUG FROM `audioURL`.** Every pin's is
+  `""`, so all 244 collapsed onto one empty slug and the classifier could not tell them apart. The
+  slug now falls back to the hero filename; a selftest pins it.
+- **⚠️ Byte-identical is the right severity for pins, and the reasoning matters.** A pin re-hosts
+  its own post's thumbnail and nothing else. Two pins that are the same clip cross-posted to two
+  platforms (the Zacherlhaus case) are **two separate downloads**, so they are never byte-identical
+  — they surface perceptually as INFO. Byte-identical means one hero was written twice from one
+  decode, which is the Thyssen bug wearing a link pin's clothes, so it errors.
+- **⚠️ Places are deliberately still out of scope.** A place hero is allowed to be a member's own
+  hero **at the same URL** (Legion of Honor, Hotel Casa del Mar, Oedo Antique Market all do this),
+  which produces no group at all, and nothing else references a place image.
+- **Verification.** Selftest **13 checks, all pass**, and **self-tested against 3 injected faults —
+  3/3 caught**: `--all` reverting to tours-only, the pin slug fallback removed, and a link-pin
+  duplicate downgraded to INFO. The perceptual pass was confirmed to have teeth on the new data
+  rather than silently no-opping: **165 pairs nominated at Hamming ≤ 45, every one rejected by the
+  thumbnail confirmation, closest 23.0 against a threshold of 8.0** (identical pictures score under
+  1). ⚠️ **`--pins` reports 240 images for 244 pins** — the five `@malata.antwerp` Italian-market
+  pins share one hero URL by design.
+
 
 ### Five architects join the vocabulary — 329 → 334, and one of them is the Brooklyn Bridge's (branch `claude/linked-tours-send-ahlhiy`, session 120d — code + content)
 
@@ -381,9 +428,10 @@ build. **Opened and merged on owner instruction**, who reviews the flagged pins 
   ancestor of the next, and my commit was re-confirmed an ancestor of head with all 24 paths
   present. The next run carried them: **all 24 live URLs hash-verified against the uploaded bytes,
   24 ok, 0 bad.** **CI green on the PR.**
-- **⚠️ TOOLING GAP, SIXTH BATCH RUNNING:** `check-image-duplicates.py` still cannot scope to a
-  link-pin batch. Covered by running the same two-stage check by hand. **`--since <ref>` or `--pins`
-  remains the obvious fix.**
+- **⚠️ TOOLING GAP, SIXTH BATCH RUNNING — ✅ FIXED 2026-08-30 (`--pins`); see the entry at the top
+  of Current State, which also records that the real defect was wider than this note says.**
+  `check-image-duplicates.py` could not scope to a link-pin batch. Covered at the time by running
+  the same two-stage check by hand.
 
 ### Nineteen link pins from one creator — and the four pins the owner pulled are still live ([PR #638](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/638), session 121 — content)
 
@@ -724,9 +772,9 @@ Full detail: `archive/HANDOFF-260828.md`.
   where its audio plays, and coordinate and radius are one decision. ⚠️ **By contrast the Habitat
   67 tour's 372 m offset is NOT an error**: it sits on the Promenade de la Cité-du-Havre, the public
   vantage opposite a private residential building — the documented convention. Do not "correct" it.
-- **⚠️ TOOLING GAP, FIFTH BATCH RUNNING:** `check-image-duplicates.py` still cannot scope to a
-  link-pin batch. Covered by running the same two-stage check by hand. **`--since <ref>` or
-  `--pins` remains the obvious fix.**
+- **⚠️ TOOLING GAP, FIFTH BATCH RUNNING — ✅ FIXED 2026-08-30 (`--pins`).**
+  `check-image-duplicates.py` could not scope to a link-pin batch. Covered at the time by running
+  the same two-stage check by hand.
 - **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and**
   the Swift validator, refusing to run if they disagree or either parse is empty (they agree at
   **377 tags**) — **self-tested against 44 injected fault classes, 44/44 caught**, then **0 errors,
@@ -896,7 +944,8 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   the deploy finished and serves correct, stable bytes now** (checked three times) — a
   mid-propagation artifact, and precisely why this check hashes bytes rather than reading a 200.
   **CI has not run: no PR is open.**
-- **⚠️ TOOLING GAP: `check-image-duplicates.py` cannot scope to a link-pin batch.** It takes
+- **⚠️ TOOLING GAP — ✅ FIXED 2026-08-30 (`--pins`): `check-image-duplicates.py` could not scope to
+  a link-pin batch.** It took
   `--maker <CODE>` (a city) or `--all` (5,800+ images); a pin batch has no maker code, and
   `--file` alone is rejected. Covered here by running the same two-stage check by hand over the
   exact 23 heroes, then confirming the live bytes match those files. **A `--since <ref>` or
