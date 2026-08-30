@@ -179,8 +179,9 @@ Swift, no SQL. **Auto-merge class.**
 **The owner sent fourteen links — thirteen TikToks and one Instagram reel.** Branch cut clean off
 `origin/main` at `597b5aff`. **linkPins 244 → 258 · makers 189 → 192 · tours unchanged at 1,552 ·
 places unchanged at 41.** **New Zealand is the catalogue's 37th country**, re-derived over `tours`
-**and** `linkPins` together. Content only — no Swift, no SQL, no build. **NO PR OPENED** (this
-session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-260830-3.md`.
+**and** `linkPins` together. Content only — no Swift, no SQL, no build; it rides to `main` with the
+tooling fix above as [#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), opened on
+owner instruction. Full detail: `archive/HANDOFF-260830-3.md`.
 
 - **✅ ALL FOURTEEN WERE PINNABLE** — no dead posts, no `/photo/` carousels. Sixth fully intact batch
   running. **Three creators:** `@mckernarchitecture` (7 — Sydney and Brisbane architecture),
@@ -287,7 +288,8 @@ session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-26
   `check-image-duplicates.py --pins` **254 images, OK** (254 for 258 pins because the five
   `@malata.antwerp` pins share one hero URL by design), once the poisoned cache entries above were
   cleared. Tours.json **byte-stable under a Python re-dump before editing**; diff **674 insertions /
-  0 deletions**. **CI has not run: no PR is open.**
+  0 deletions**. **CI runs on [#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659)** —
+  the authoritative Swift validator, and the only compile check a web session gets.
 
 ### The duplicate checker had never seen a link pin — 244 of them, invisible since the split (branch `claude/tour-links-upload-qeoxe7`, session 122 — tooling)
 

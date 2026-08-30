@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 122c — the duplicate-image checker fix is open as #657; the architect-vocabulary PR is still open for owner review)
+**Last verified:** 2026-08-30 (session 123 — #659 open: fourteen link pins + the duplicate-checker false-alarm fix; the architect-vocabulary PR is still open for owner review)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,20 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN, AUTO-MERGE CLASS — FOURTEEN LINK PINS + THE CHECKER THAT CRIED WOLF
+([#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), `claude/tour-links-upload-3bqlib`).**
+Fourteen links from the owner — 13 TikToks + 1 Instagram reel, **all alive, nothing parked**.
+**linkPins 244 → 258 · makers 189 → 192 · New Zealand the 37th country.** Then, on owner
+instruction (*"fix the checker"*), the tooling half: **`check-image-duplicates.py` was hashing error
+pages and caching them**, so two URLs failing the same way became a permanent false "duplicate" — it
+reported two unrelated pins as byte-identical when they are not. `download()` now reads the status
+code (a 200 is the only success), `looks_like_image()` gates the hasher, nothing failing either is
+cached, and the cache dir moved to `.cache/image-dupes-v2/` because a poisoned entry is
+indistinguishable from a good one. **Content + tooling + docs, no Swift — auto-merge on green.**
+⚠️ **`Diminish and Ascend` is pinned at Christchurch though its thumbnail shows Waiheke — owner
+decided: *"keep christchurch."* Settled; do not "fix" it.**
+
 
 🟡 **OPEN, AUTO-MERGE CLASS — THE DUPLICATE-IMAGE CHECKER HAD NEVER SEEN A LINK PIN
 ([#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657), `claude/tour-links-upload-qeoxe7`).**
