@@ -22,6 +22,49 @@
 -- wrapper around the STALE core — restoring places while dropping `country`
 -- straight back out again. This file refreshes the core first, then rewraps.
 --
+--
+-- =================================================================
+-- 🔴 SUPERSEDED 2026-08-25 — DO NOT RUN THIS FILE AS IT STANDS.
+--
+-- `backend/split_link_pins.sql` has since been applied to the live database.
+-- It renamed the then-current `get_catalog_core` aside to
+-- `get_catalog_core_base` and made `get_catalog_core` a THIN WRAPPER that
+-- lifts `kind = 'link'` tours out of `tours` into a sibling `linkPins` array.
+--
+-- The statement below is `create or replace function public.get_catalog_core()`
+-- with a full inline body. Running it now REPLACES that wrapper, severs the
+-- call to `get_catalog_core_base`, and puts link pins straight back inside
+-- `tours`.
+--
+-- WHY THAT IS SERIOUS, and it is not a cosmetic regression. `TourKind` is a
+-- closed enum in every build shipped before the split, and `[Tour]` decodes as
+-- ONE array — so a single `kind: "link"` element fails the WHOLE catalog
+-- decode, and `RemoteCatalogLoader`'s `try?` reads that as a failed fetch and
+-- keeps its last good copy. Nothing errors. Those phones simply stop receiving
+-- all new content, silently and permanently. That outage is exactly what
+-- split_link_pins.sql was written to end, and there are 57 link pins live now
+-- rather than the 4 there were then.
+--
+-- This is the same class of failure this file's own header describes — a
+-- migration rebuilding the catalog function from a body that predates a later
+-- key — one layer further down. See CLAUDE.md § "create or replace
+-- get_catalog() NOW DESTROYS THE PLACE LAYER".
+--
+-- IF THESE KEYS EVER NEED RESTORING AGAIN:
+--   1. Patch `get_catalog_core_base` — that is where the tour keys now live.
+--      Read it with pg_get_functiondef, insert the key, execute it back, and
+--      raise if the anchor is missing so the transaction rolls back.
+--      `backend/add_video_role.sql` is the worked example.
+--   2. Do NOT replace `get_catalog_core` or `get_catalog` with an inline body.
+--   3. If this file is ever run anyway, re-apply `split_link_pins.sql`
+--      immediately afterwards to rebuild the wrapper.
+--
+-- VERIFY, ALWAYS, rather than trusting "Success. No rows returned.":
+--     python3 scripts/check-catalog-keys.py
+-- It fails when `linkPins` vanishes from the live payload, which is precisely
+-- the damage this file would do.
+-- =================================================================
+--
 -- Idempotent. Safe to run more than once. Paste the whole file.
 -- =================================================================
 
