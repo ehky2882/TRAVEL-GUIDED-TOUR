@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 123 — LA duplicate cleanup and four new LA places open as [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658). The places need no SQL; the **removal** SQL is owed, see § SQL pastes owed. #657 has merged and is corrected below)
+**Last verified:** 2026-08-30 (session 124 — the Instagram player crop + fullscreen scrubber open as [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662). #660 has merged, so the LA removal SQL below is applied)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,22 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN — INSTAGRAM PINS: THE REEL STOPS BEING CROPPED, AND THE FULLSCREEN SCRUBBER MOVES
+([#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662), `claude/instagram-player-fit`).**
+Owner: *"1. on the tour details page the crop of the thumnail/preview/play window 2. in full screen
+mode maybe the cropping of the video to avoid the instagram banners is ok, but the scrubber doesnt
+work"*. Both reproduced in the simulator first, both fixed and re-checked there. **Swift only — no
+SQL, no catalogue change, no build cut yet.** `test_sim` **570/570**.
+**The crop:** the player was handed `height: nil`, which means `AtlasSpacing.heroAspectRatio` — and
+that is **1.0**, so a 720×1280 reel was fill-cropped to a square and showed the middle 56% of every
+frame. It now takes `LinkSource.embedAspectRatio(for:)`, the same 9:16 the embed it replaces uses.
+**⚠️ The carousel's fill is an owner decision and is untouched** — fitting is a new opt-in, verified
+against Shinsegae. **The scrubber:** `scrubPosition` read `AVPlayer.currentTime()`, which is not
+observable, so the bar never redrew; a periodic observer now samples it. **⚠️ Only gallery clips
+ever showed it** — a narration clip re-renders off the `@Observable` audio player, and every link
+pin is a gallery clip. **⚠️ Measured, not fixed here: 20 of the 73 live Instagram pins have no
+playable file** (licensed music) and still fall back to the poster; 53 play.
 
 🟡 **OPEN — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
 ([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), `claude/la-tours-cleanup-place-cards-r3m4af`).**
