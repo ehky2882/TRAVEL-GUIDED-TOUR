@@ -128,6 +128,66 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### Four LA places built on owner instruction — Bradbury, Griffith, Petersen and Union Station (branch `claude/la-tours-cleanup-place-cards-r3m4af`, session 123 — content)
+
+**Owner: *"make bradbury, griffith and union station places. make petersen also a place, and go with
+your recommended coordinate."*** All four built. **Places 40 → 44** (41 → 40 when the Hotel Casa del
+Mar place was pulled in the same session, then → 44). Tours, pins and makers unchanged at 1,552 /
+242 / 188. Content only — the seed carries `places`, so this reaches Supabase on merge with **no
+owner SQL** (unlike the removal in the entry below, which still owes one).
+
+- **All four are one shape: an Atlas LAX single-stop `geofenced` tour beside a
+  `@thedesigndetourist` TikTok `manual` pin of the same subject.** So **the pin moved and the tour
+  did not** — verified rather than assumed: **0 Atlas tours changed a stop coordinate, trigger mode
+  or radius**, and exactly 4 link pins moved (9 m · 22 m · 50 m · 56 m). All four tours stay
+  geofenced at 40 m.
+- **⚠️ EVERY PLACE HERO IS A THIRD PHOTOGRAPH, promoted from the member tour's own gallery** —
+  already uploaded, already verified, nothing sourced — and each was opened and chosen as an
+  establishing shot rather than a close-up (the session-95 rejection criterion). **Bradbury** takes
+  the atrium looking up into its glass roof; **Griffith** the front elevation at dusk with the name
+  carved over the door; **Petersen** the ribboned facade at street level; **Union Station** the
+  great waiting hall. The fault found across 13 of the first 24 places — one picture printed three
+  times — is avoided by construction on all four. **⚠️ `bradbury-building_8` was rejected on
+  inspection** although it is the better *kind* of shot (the street facade): it carries a **"RETAIL
+  FOR LEASE" board with a phone number** across the frame.
+- **🔴 PETERSEN IS THE ONE JUDGEMENT AND THE SCRIPT SETTLED IT.** The **pin** had the better
+  address — it reverse-geocodes to **6060 Wilshire Boulevard**, the museum's own — while the
+  **tour** lands on **South Fairfax Avenue**, which reads like a road-centroid error. It is not: the
+  tour's own narration opens *"You should be at Wilshire and Fairfax, on the corner opposite the
+  Academy Museum's gold cylinder"*, so the coordinate is a **deliberate vantage**, the Grace
+  Cathedral case exactly. The place is anchored on the tour and the pin moved 50 m to it. ⚠️ **The
+  place's `address` still names the building** (6060 Wilshire), as Habitat 67's does — the
+  coordinate is where you stand, the address is what you are looking at.
+- **⚠️ THE PLACE IS `Los Angeles Union Station`, NOT `Union Station`, and that is deliberate** —
+  **Toronto has a `Union Station` tour too**, so the bare name is ambiguous catalogue-wide. It is
+  also the pin's own title. The other three take the Atlas tour's title (the pin's *The* Bradbury
+  Building is dropped).
+- **⚠️ Union Station's description carries the harder history plainly** — the station was built on
+  the site of the city's original Chinatown, whose residents and businesses were displaced for its
+  construction and rebuilt a short walk north. That is what the tour's own script says, in the same
+  register; it is not softened and it is not dramatised.
+- **`check-place-candidates.py` NEAR fell 15 → 11 — all four LA pairs resolved — and EXACT stayed at
+  3**, all pre-existing and none in LA, so moving the pins created no new coincidence. **Deliberately
+  still not places:** LACMA / Academy Museum at 22 m (CLAUDE.md already names that pair as the false
+  merge the 40 m rule produced), the Bunker Hill neighbours, and the walk-intro coincidences.
+- **Place ids are `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")`** — the scheme was
+  **reverse-verified against 36 of the 40 existing places** before minting. The 4 that do not match
+  are the two documented uppercase-id exceptions (Green-Wood Cemetery, Oedo Antique Market) and two
+  Berlin names whose non-ASCII characters my slug folds differently; all four new names are pure
+  ASCII, so nothing is at risk.
+- **Verification.** Structural checks over the edited catalogue: **0** duplicate tour/stop/maker/
+  place ids, **0** orphan `makerId`s, **0** places under two members, **0** members off their
+  place's coordinate, **0** tours in more than one place, **0** centroids disagreeing with stop 0,
+  **0** link pins inside `tours`, **0** heroes also in their own gallery, **0** tags outside
+  `Models/Tag.swift`. **6 place-hero warnings are ALL pre-existing** — confirmed by running the same
+  check against `origin/main`, which reports the identical set **plus one more** (Hotel Casa del
+  Mar's borrowed hero, gone with its place). `seed_from_toursjson.py` regenerates cleanly at **188
+  makers / 1,794 tours / 2,166 stops / 44 places** — it carries its own `validate_places`. All four
+  place heroes **live 200**. `check-image-duplicates.py --pins` clean over 238 images.
+  **⚠️ Nothing compiled and the Swift validator has not run** — no toolchain in a Linux web session,
+  and no PR is open, so CI has not seen this.
+
+
 ### Two duplicate LA pins pulled, and four LA place candidates put to the owner (branch `claude/la-tours-cleanup-place-cards-r3m4af`, session 123 — content + backend)
 
 **Owner: *"hotel casa del mar - remove one of the tours. doesnt matter which one. this also means
