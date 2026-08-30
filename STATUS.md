@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 124 — the Instagram player crop + fullscreen scrubber open as [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662), TestFlight build dispatched. [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) and [#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659) have both merged and their removal SQL is run — nothing owed there; the architect-vocabulary PR is still open for owner review)
+**Last verified:** 2026-08-30 (session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -41,25 +41,6 @@ replacement.** Content only; the seed carries `places`, so **no owner SQL**.
 FOURTEEN ARE LIVE.** Verified against the **live sources**, not the workflow's success line: the
 Supabase RPC (what the app reads first) and the gh-pages mirror each serve **256 link pins**, with
 **0 pins wrongly inside `tours`** and `priceTier` / `isPrivate` both intact.
-🟡 **OPEN — INSTAGRAM PINS: THE REEL STOPS BEING CROPPED, AND THE FULLSCREEN SCRUBBER MOVES
-([#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662), `claude/instagram-player-fit`).**
-Owner: *"1. on the tour details page the crop of the thumnail/preview/play window 2. in full screen
-mode maybe the cropping of the video to avoid the instagram banners is ok, but the scrubber doesnt
-work"*. Both reproduced in the simulator first, both fixed and re-checked there. **Swift only — no SQL, no catalogue change.** `test_sim`
-**570/570** on the merged tree. **TestFlight 1.1.1 (137)**, VALID at Apple, cut from the branch with `main`
-merged in so it carries #659's fourteen new pins too. ⚠️ **The marketing version had to go 1.1 →
-1.1.1**: 1.1 is `READY_FOR_SALE`, and Apple refuses any further build on a released version string
-— build 136 compiled and signed and was rejected at upload.
-**The crop:** the player was handed `height: nil`, which means `AtlasSpacing.heroAspectRatio` — and
-that is **1.0**, so a 720×1280 reel was fill-cropped to a square and showed the middle 56% of every
-frame. It now takes `LinkSource.embedAspectRatio(for:)`, the same 9:16 the embed it replaces uses.
-**⚠️ The carousel's fill is an owner decision and is untouched** — fitting is a new opt-in, verified
-against Shinsegae. **The scrubber:** `scrubPosition` read `AVPlayer.currentTime()`, which is not
-observable, so the bar never redrew; a periodic observer now samples it. **⚠️ Only gallery clips
-ever showed it** — a narration clip re-renders off the `@Observable` audio player, and every link
-pin is a gallery clip. **⚠️ Measured, not fixed here: 20 of the 73 live Instagram pins have no
-playable file** (licensed music) and still fall back to the poster; 53 play.
-
 🟡 **OPEN — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
 ([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), `claude/la-tours-cleanup-place-cards-r3m4af`).**
 
@@ -389,7 +370,7 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| **137** | `instagram-player-fit` | #662 the Instagram crop + fullscreen scrubber, `main` merged in, **marketing version 1.1.1** (`51b14c6b`) | 🟡 **1.1.1 (137) VALID at Apple — awaiting owner device check** |
+| **137** | `instagram-player-fit` | #662 the Instagram crop + fullscreen scrubber, `main` merged in, **marketing version 1.1.1** | ✅ **owner-verified — *"works! thank you"*; #662 merged as `845f0d86`** |
 | 136 | `instagram-player-fit` | Same code at **1.1** (`49ac5382`) | 🔴 **rejected at upload** — 1.1 is released, so Apple refuses the version string |
 | **134** | **`main`** | #622 the real fullscreen fix — the video's own window (`e22dba7`) | ✅ **install this** |
 | 133 | `link-fullscreen-probe` | Same fix + the temporary readout (`f6aaf78c`) | ✅ owner-verified — *"that seem to be done the trick"* |

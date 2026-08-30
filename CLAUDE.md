@@ -147,8 +147,9 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **Owner: *"1. on the tour details page the crop of the thumnail/preview/play window 2. in full
 screen mode maybe the cropping of the video to avoid the instagram banners is ok, but the scrubber
 doesnt work"*.** Two defects, both reproduced in the simulator before anything was changed and both
-re-checked there after. **Swift only — no SQL, no catalogue change.** `test_sim` **570/570**. Open,
-not merged; it is app code, so it waits for owner OK. Full detail: `archive/HANDOFF-260830-4.md`.
+re-checked there after. **Swift only — no SQL, no catalogue change.** `test_sim` **570/570**. Squash
+`845f0d86`, **merged**. **TestFlight 1.1.1 (137), owner device-verified: *"works! thank you"*.**
+Full detail: `archive/HANDOFF-260830-6.md`.
 
 - **🔴 A REEL WAS BEING SIZED BY THE PHOTO CAROUSEL'S SQUARE.** `instagramPlayer` passed
   `GalleryVideoView` a `height` of nil, which means "take `AtlasSpacing.heroAspectRatio`" — and that
