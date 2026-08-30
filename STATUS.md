@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
+**Last verified:** 2026-08-30 (session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -88,13 +88,28 @@ deliberately**, because pinned handles collide with city codes as substrings (`S
 `@urbanstoriesyt`; 31 collisions catalogue-wide).
 
 
-🔴 **OPEN — FIVE ARCHITECTS JOIN THE VOCABULARY (`claude/linked-tours-send-ahlhiy`).** Owner: *"add
-5 architects to vocab."* `Moshe Safdie` · `John Augustus Roebling` · `William Henry Barlow` ·
-`KieranTimberlake` · `José Ignacio Linazasoro`. **This is a CODE change** (`Models/Tag.swift` +
-`scripts/validate-tours.swift`, asserted identical at 334 architects / 384 tags), so it **waits for
-owner OK and a simulator look** — content PRs auto-merge, this one does not. Seven entries retagged;
-**the Brooklyn Bridge tour had no architect and no shelf tag at all** and gains both. **Nothing
-compiled locally** — no Swift toolchain in a web session, so CI is the only compile check.
+✅ **MERGED — FIVE ARCHITECTS JOIN THE VOCABULARY
+([#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654), squash `f93321b6`).** `Moshe
+Safdie` · `John Augustus Roebling` · `William Henry Barlow` · `KieranTimberlake` · `José Ignacio
+Linazasoro`. **⚠️ IT MERGED *AFTER* THE PORTMAN PR ([#655](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/655), `0086a212`) THOUGH IT WAS BRANCHED BEFORE IT** — the case where one
+session's vocabulary edit silently reverts another's. **Checked rather than assumed, on `main`:
+Portman survived, 330 + 5 = 335 architects / 385 tags, and the two copies of the vocabulary agree
+exactly** (`Models/Tag.swift` and `scripts/validate-tours.swift` — a mismatch produces an error per
+tagged entry). Validator mirror: **0 errors, 2 warnings across 1,552 tours + 244 pins + 41 places**,
+both pre-existing; **0 unused names**, and **0 of the 497 named-architect entries missing `Designed
+by a Master`**. ⚠️ **Still never compiled or seen in a simulator** — it is a `Models/Tag.swift`
+change and CI's build is the only check it has had.
+
+🔴 **OPEN, NEEDS AN OWNER DECISION — `MoMA PS1` SHIPS A DEAD HERO IMAGE.** Its
+`heroImageURL` returns a hard **404**, confirmed across seven spaced attempts against four
+same-host controls that all return 200, so it is not the rate limiting that hid it. **The tour has
+no gallery**, so there is nothing to promote in its place (the Castello / DuSable free fix does not
+apply) — a replacement has to be sourced through the image pipeline, which means owner picks.
+**⚠️ It is the ONLY `upload.wikimedia.org/wikipedia/en/` URL in the catalogue** — an English
+Wikipedia *local* upload rather than a Commons file, which is where non-free/fair-use images live
+and where deletion is routine. Everything else Wikimedia-hosted is on Commons and healthy. **One
+dead image in 5,848**, found only because #659's fetch fix stopped error-page bodies being hashed
+as though they were pictures.
 
 ✅ **THE `@nycunfilteredstories` REMOVAL SQL HAS BEEN RUN (2026-08-30).** Owner applied
 `backend/pull_nycunfilteredstories.sql`; verified against the live RPC — all four pins and both
