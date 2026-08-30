@@ -79636,6 +79636,21 @@
         "49424a7b-75a0-5675-8a6c-3b0213c9ab15",
         "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB"
       ]
+    },
+    {
+      "id": "acff2b2e-c725-5663-8e70-a63bbd2c1185",
+      "name": "Glasshouse Theatre",
+      "description": "QPAC's newest theatre, opened on Grey Street in March 2026 to a design by Blight Rayner with Snøhetta. Its street front is a wall of custom-curved glass panels, no two of them alike, stacked in two tiers and rising more than fourteen metres on so little visible structure that the glass appears to stand clear of the ground, with a cantilever running out along the pavement. The panels shift between reflection and transparency as the light moves across them, and after dark the whole front reads as a lantern. Inside, a warm timber palette is set against the existing precast concrete, and the curved lining of the auditorium carries the facade's wave into the room.",
+      "latitude": -27.4753165,
+      "longitude": 153.0196736,
+      "city": "Brisbane",
+      "address": "Grey Street, South Bank, Brisbane",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/glasshouse-theatre-mckernarchitecture_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "53D3A6CA-8E99-572F-A237-9DF4E4079B9D",
+        "CD8787E6-116C-58C9-BA34-EDE57F560F4C"
+      ]
     }
   ],
   "linkPins": [
