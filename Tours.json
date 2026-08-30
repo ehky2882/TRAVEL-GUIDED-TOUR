@@ -79763,6 +79763,51 @@
         "53D3A6CA-8E99-572F-A237-9DF4E4079B9D",
         "CD8787E6-116C-58C9-BA34-EDE57F560F4C"
       ]
+    },
+    {
+      "id": "adeb1195-d265-5ddf-b218-71750f2e9d0b",
+      "name": "VIA 57 West",
+      "city": "New York",
+      "address": "625 West 57th Street, New York",
+      "description": "A single building that is two building types at once: the Manhattan tower and the Copenhagen perimeter block. Bjarke Ingels Group warped the block into a tetrahedron, so the roofline climbs from a low corner near the West Side Highway to a peak at the north-west edge, and the whole form wraps a planted courtyard at its centre. Completed in 2016 on the Hudson at 625 West 57th Street, it is best read from across the highway, where the slope of the roof and the courtyard cut into it are both visible at once.",
+      "latitude": 40.7714885,
+      "longitude": -73.9935735,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/via-57-west-pasttworld_hero.webp",
+      "additionalImageURLs": [],
+      "tourIds": [
+        "E05080DD-9C96-410E-908D-8DD60D2B666C",
+        "F70F0376-C237-5610-BA05-94F6478775E4"
+      ]
+    },
+    {
+      "id": "c19ad740-e910-58a7-a9cf-fa26e72d4f58",
+      "name": "Kaktus Towers",
+      "city": "Copenhagen",
+      "address": "Dybbølsbro 5, Copenhagen",
+      "description": "Two residential towers on an elevated green plateau by Dybbølsbro station, one about seventy-four metres over twenty-three floors and the other fifty-nine over eighteen. BIG unveiled the design in 2017 for the wider Kalvebod Brygge redevelopment. Each floor plate is rotated slightly against the one below, so the buildings twist as they climb, and close to five hundred angular balconies wrap the resulting form — which is where the cactus nickname came from, and why it stuck. The twist is structural economy rather than ornament: rotating a repeating plate gave nearly five hundred small apartments their own outdoor space and a different view from the flat above.",
+      "latitude": 55.663510015423974,
+      "longitude": 12.560377282200308,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kaktus-towers_2.webp",
+      "additionalImageURLs": [],
+      "tourIds": [
+        "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0"
+      ]
+    },
+    {
+      "id": "e9731677-1b3b-5643-858f-50ab694e4f47",
+      "name": "Vessel, Hudson Yards",
+      "city": "New York",
+      "address": "Hudson Yards Public Square, New York",
+      "description": "A hundred-and-fifty-foot copper-coloured honeycomb of interlocking staircases standing in the Public Square at the centre of Hudson Yards — some two and a half thousand steps and eighty landings spiralling around an open void. Thomas Heatherwick designed it as a kind of urban climbing frame, public art meant to be walked rather than looked at, and it opened in 2019 as the centrepiece of the largest private real-estate development in American history. Whether it is sculpture, structure or backdrop has been argued over ever since. The plaza around it is open to walk at any time; the staircases themselves are not always accessible.",
+      "latitude": 40.753964305467136,
+      "longitude": -74.00176489443685,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_4.webp",
+      "additionalImageURLs": [],
+      "tourIds": [
+        "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
+        "FB11F2BF-7AAF-5C1A-96CA-FF34BE6EB056"
+      ]
     }
   ],
   "linkPins": [
@@ -92210,8 +92255,8 @@
           "order": 0,
           "title": "Kaktus Towers",
           "caption": "• s02e05 • 🌵KAKTUS TOWERS🌵 • For the 3rd time this Copenhagen season, we’re meeting a @big_builds creation: two rather prickly buildings tha",
-          "latitude": 55.6637498,
-          "longitude": 12.5603409,
+          "latitude": 55.663510015423974,
+          "longitude": 12.560377282200308,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -92223,8 +92268,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 55.6637498,
-      "centroidLongitude": 12.5603409,
+      "centroidLatitude": 55.663510015423974,
+      "centroidLongitude": 12.560377282200308,
       "city": "Copenhagen",
       "country": "Denmark",
       "primaryCategory": "architecture",
@@ -92257,8 +92302,8 @@
           "order": 0,
           "title": "The Vessel",
           "caption": "• s01e06 Season 1 Finale : The #vessel • • #Building #Stories is officially going global! Every season, we’ll visit a different city and con",
-          "latitude": 40.7537995,
-          "longitude": -74.0020025,
+          "latitude": 40.753964305467136,
+          "longitude": -74.00176489443685,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -92270,8 +92315,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7537995,
-      "centroidLongitude": -74.0020025,
+      "centroidLatitude": 40.753964305467136,
+      "centroidLongitude": -74.00176489443685,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -92326,7 +92371,9 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Contemporary"
+        "Contemporary",
+        "Herzog & de Meuron",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
