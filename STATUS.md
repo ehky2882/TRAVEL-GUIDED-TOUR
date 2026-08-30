@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 123 — LA duplicate cleanup and four new LA places open as [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658). The places need no SQL; the **removal** SQL is owed, see § SQL pastes owed. #657 has merged and is corrected below)
+**Last verified:** 2026-08-30 (session 123 — [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged as `2a222899` and its removal SQL has been run and verified live. Nothing owed from it)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,17 +25,18 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **OPEN — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
-([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), `claude/la-tours-cleanup-place-cards-r3m4af`).**
+✅ **MERGED — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
+([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), squash `2a222899`), AND ITS SQL
+HAS BEEN RUN.**
 Owner instructions: remove one of the two Hotel Casa del Mar pins and its place page, take out the
 YouTube Castle Green, then *"make bradbury, griffith and union station places. make petersen also a
 place, and go with your recommended coordinate."* **linkPins 244 → 242 · makers 189 → 188 · places
 41 → 40 → 44 · tours unchanged at 1,552.** Content + one SQL file; no Swift, no build.
-**🔴 `backend/pull_la_duplicates_260830.sql` IS OWED and is the half that reaches users** — all four
-removed rows were verified present in the live RPC, and `seed_from_toursjson.py` is upsert-only, so
-until it is pasted both duplicates are on every phone. **The four places need no SQL** (the seed
-carries them). ⚠️ Paste the SQL *before* this merges and its closing select reads `places = 40`, not
-44. **The pin moved and the tour did not — verified by diff: 0 Atlas tours changed a coordinate,
+**✅ `backend/pull_la_duplicates_260830.sql` HAS BEEN RUN (owner, 2026-08-30) and nothing is owed** —
+re-read from the **live RPC** rather than the SQL Editor's success line: all four deleted rows gone,
+all three survivors present, `TikTok @thedesigndetourist` still at 19 pins, 0 pins wrongly inside
+`tours`, `priceTier` (66 priced) and `isPrivate` both intact. **The four places needed no SQL** — the
+seed carries them, so they arrived with the merge. **The pin moved and the tour did not — verified by diff: 0 Atlas tours changed a coordinate,
 trigger mode or radius.** Every place hero is a **third photograph promoted from the member tour's
 own gallery**, nothing sourced.
 
@@ -318,11 +319,13 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 ### SQL pastes owed (Supabase SQL Editor, project **Dozent**)
 
 ✅ **Applied:** `add_country.sql` (Countries row live) · `restore_catalog_keys.sql` (places, priceTier,
-isPrivate restored 2026-08-20).
+isPrivate restored 2026-08-20) · **`pull_la_duplicates_260830.sql` (owner ran it 2026-08-30 —
+verified against the live RPC, not the SQL Editor's success line: all four deleted rows gone, all
+three survivors present, `TikTok @thedesigndetourist` still at 19 pins, 0 pins wrongly inside
+`tours`, `priceTier` and `isPrivate` both intact. **Nothing is owed here — do not ask again.**)**.
 
 | File | Unlocks | Without it |
 |---|---|---|
-| 🔴 `backend/pull_la_duplicates_260830.sql` | Removes the two duplicate LA link pins, the YouTube creator row and the Hotel Casa del Mar place | **Both duplicates stay on every phone.** Verified present in the live RPC on 2026-08-30 — the catalogue edit alone cannot remove them, because `seed_from_toursjson.py` is upsert-only |
 | `backend/saved_places.sql` | Saved places syncing across devices | Saving works, stays on one device |
 | `backend/places_photos.sql` | Places serving their own photographs | Optional — the app is correct without it |
 
