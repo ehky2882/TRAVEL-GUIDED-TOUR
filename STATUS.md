@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 123 — [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged as `2a222899` and its removal SQL has been run and verified live. Nothing owed from it)
+**Last verified:** 2026-08-30 (session 123 — [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged as `2a222899`, its removal SQL run and verified live, nothing owed; [#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659) open with fourteen link pins + the duplicate-checker false-alarm fix; the architect-vocabulary PR still open for owner review)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,20 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN, AUTO-MERGE CLASS — FOURTEEN LINK PINS + THE CHECKER THAT CRIED WOLF
+([#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), `claude/tour-links-upload-3bqlib`).**
+Fourteen links from the owner — 13 TikToks + 1 Instagram reel, **all alive, nothing parked**.
+**linkPins 242 → 256 · makers 188 → 191 · New Zealand the 37th country** (re-derived after [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged under it; the PR body's 244 → 258 was measured against the older base). Then, on owner
+instruction (*"fix the checker"*), the tooling half: **`check-image-duplicates.py` was hashing error
+pages and caching them**, so two URLs failing the same way became a permanent false "duplicate" — it
+reported two unrelated pins as byte-identical when they are not. `download()` now reads the status
+code (a 200 is the only success), `looks_like_image()` gates the hasher, nothing failing either is
+cached, and the cache dir moved to `.cache/image-dupes-v2/` because a poisoned entry is
+indistinguishable from a good one. **Content + tooling + docs, no Swift — auto-merge on green.**
+⚠️ **`Diminish and Ascend` is pinned at Christchurch though its thumbnail shows Waiheke — owner
+decided: *"keep christchurch."* Settled; do not "fix" it.**
+
 
 ✅ **MERGED — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
 ([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), squash `2a222899`), AND ITS SQL

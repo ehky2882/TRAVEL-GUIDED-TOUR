@@ -66,7 +66,18 @@ USAGE
 Run it with --maker <CODE> when staging a new city's images, or --pins when
 staging a link-pin batch — that is when this bug class appears, and it keeps the
 download to one batch instead of thousands of files. Downloads are cached under
-.cache/image-dupes/ so re-runs are cheap.
+.cache/image-dupes-v2/ so re-runs are cheap.
+
+A FALSE ALARM IS AS BAD AS A FALSE PASS
+---------------------------------------
+Until 2026-08-30 the download step read curl's stdout with no `-f` and no
+status check, so an error page's BODY — a 404, a CDN interstitial — was hashed
+as though it were the image and written to the cache. Two URLs failing the same
+way therefore became a byte-identical "duplicate", and because it was cached it
+came back on every later run. That reported the Rosewood Mayakoba and Old
+Cinema Chiswick link pins as sharing bytes when the live files hash differently.
+The status code is now read, the bytes must actually decode as an image, and
+nothing else is ever cached — see `download` and `looks_like_image`.
 
 Places are deliberately out of scope: a place hero is allowed to be a member's
 own hero at the SAME url (Legion of Honor, Hotel Casa del Mar), which produces
@@ -77,6 +88,7 @@ import collections
 import hashlib
 import io
 import subprocess
+import tempfile
 import json
 import os
 import re
@@ -94,7 +106,14 @@ TOURS_JSON = os.path.join(REPO, "TRAVEL GUIDED TOUR", "Resources", "Tours.json")
 PHASH_TOLERANCE = 12  # bits of a 256-bit average hash - deliberately loose:
                       # it only proposes candidates, THUMB_TOLERANCE decides
 THUMB_TOLERANCE = 8.0 # mean 0-255 difference; same picture scores under 1
-CACHE_DIR = os.path.join(REPO, ".cache", "image-dupes")
+# 🔴 THE "v2" IS DELIBERATE AND MUST NOT BE TIDIED AWAY. Entries written
+# before 2026-08-30 may hold the hash of an ERROR PAGE rather than of an image
+# (see fetch_hash), and a poisoned entry is indistinguishable from a good one
+# from the outside — so the only safe move was to stop reading them. The cost
+# is one full refetch per machine, once; the cache is gitignored, so a fresh
+# container pays nothing at all. Bump the suffix again if the cache format or
+# its trustworthiness ever changes.
+CACHE_DIR = os.path.join(REPO, ".cache", "image-dupes-v2")
 UA = "AtlasTourBot/1.0 (edward.yung@gmail.com) duplicate-image check"
 
 # Trailing role suffix on an image filename: _hero, _2.._99, _stop3, _tiles, ...
@@ -224,6 +243,95 @@ def hamming(a, b):
     return sum(1 for x, y in zip(a, b) if x != y)
 
 
+# Magic bytes for the formats the catalog actually ships. Checked before
+# anything is hashed OR cached, because an error page is not an image and
+# hashing one is how this script invented a duplicate that did not exist.
+_IMAGE_MAGIC = (
+    (b"\xff\xd8\xff", "JPEG"),
+    (b"\x89PNG\r\n\x1a\n", "PNG"),
+    (b"GIF87a", "GIF"),
+    (b"GIF89a", "GIF"),
+)
+
+
+def has_image_signature(data):
+    """Do the first bytes claim to be one of the formats the catalog ships?
+
+    🔴 THIS IS THE ONLY GUARD WHEN PILLOW IS ABSENT, which a fresh container
+    always is — so it is pinned by its own selftest rather than leaning on the
+    decode below to cover for it.
+    """
+    if not data:
+        return False
+    if len(data) >= 12 and data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        return True
+    return any(data.startswith(sig) for sig, _ in _IMAGE_MAGIC)
+
+
+def looks_like_image(data):
+    """Is this actually a picture, or an error page wearing an image's URL?
+
+    Signature check first, so it works with no Pillow; then, when Pillow is
+    present, an actual decode, because a truncated or half-written file has a
+    valid header and no usable content.
+    """
+    if not has_image_signature(data):
+        return False
+    if Image is None:
+        return True
+    try:
+        Image.open(io.BytesIO(data)).convert("L")
+        return True
+    except Exception:
+        return False
+
+
+def download(url):
+    """(data, error). A seam, so the guards below are testable offline.
+
+    curl, not urllib: urllib fails SSL verification on the owner's Mac, which
+    is how this script once reported "OK" having fetched nothing.
+
+    🔴 THE STATUS CODE IS READ, NOT ASSUMED. Without `-o`/`-w` curl writes an
+    error page's BODY to stdout and exits 0, so a 404 or a CDN interstitial
+    arrives looking exactly like a successful download.
+    """
+    fd, tmp = tempfile.mkstemp(prefix="atlas-dupe-", dir=CACHE_DIR)
+    os.close(fd)
+    try:
+        proc = subprocess.run(
+            ["curl", "-sL", "--max-time", "90", "-A", UA,
+             "-o", tmp, "-w", "%{http_code}", url],
+            capture_output=True, timeout=120)
+        status = (proc.stdout or b"").decode(errors="replace").strip()
+        with open(tmp, "rb") as fh:
+            data = fh.read()
+        return download_verdict(proc.returncode, status, data)
+    except Exception as exc:
+        return None, str(exc)
+    finally:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
+
+
+def download_verdict(returncode, status, data):
+    """(data, error) from what curl reported. Pure, so the selftest can pin it.
+
+    A 200 is the ONLY success. Anything else — 404, 403, 429, a 5xx, a blank
+    status from a transport failure — is an error whose body must never reach
+    the hasher, however many bytes of HTML it happens to carry.
+    """
+    if returncode != 0:
+        return None, f"curl exit {returncode}"
+    if status != "200":
+        return None, f"HTTP {status or '???'}, {len(data)} bytes"
+    if not data:
+        return None, "empty body"
+    return data, None
+
+
 def fetch_hash(url):
     os.makedirs(CACHE_DIR, exist_ok=True)
     cached = os.path.join(CACHE_DIR, hashlib.sha256(url.encode()).hexdigest())
@@ -235,16 +343,19 @@ def fetch_hash(url):
                     (parts[1] if len(parts) > 1 else None),
                     (parts[2] if len(parts) > 2 else None), None)
         # cached before perceptual hashing existed - refetch to fill it in
-    try:
-        # curl, not urllib: urllib fails SSL verification on the owner's Mac,
-        # which is how this script once reported "OK" having fetched nothing.
-        proc = subprocess.run(["curl", "-sL", "--max-time", "90", "-A", UA, url],
-                              capture_output=True, timeout=120)
-        data = proc.stdout
-        if proc.returncode != 0 or not data:
-            return url, None, None, None, f"curl exit {proc.returncode}, {len(data)} bytes"
-    except Exception as exc:
-        return url, None, None, None, str(exc)
+    data, err = download(url)
+    if err:
+        return url, None, None, None, err
+    # 🔴 NEVER CACHE SOMETHING THAT IS NOT AN IMAGE. A non-empty error body
+    # used to be hashed as though it were the picture and written to the cache,
+    # where every later run trusted it — so two URLs failing the same way
+    # became a byte-identical "duplicate" that never went away. On 2026-08-30
+    # that reported the Rosewood Mayakoba and Old Cinema Chiswick pins as
+    # sharing bytes; they do not, and the live files hash differently. This is
+    # the script's founding bug inverted: it could not report a false pass any
+    # more, but it could report a false ALARM, and a cached one is permanent.
+    if not looks_like_image(data):
+        return url, None, None, None, f"not a decodable image ({len(data)} bytes)"
     digest = hashlib.sha256(data).hexdigest()
     ph = perceptual_hash(data)
     th = thumbnail(data)
@@ -429,8 +540,88 @@ def selftest():
         failures += 1
     if not _selftest_scope():
         failures += 1
+    if not _selftest_fetch_guards():
+        failures += 1
     print("selftest OK" if not failures else f"selftest FAILED ({failures})")
     return 0 if not failures else 1
+
+
+def _selftest_fetch_guards():
+    """An error page must never be hashed, and must never be cached.
+
+    This is the 2026-08-30 false alarm: two unrelated link pins were reported
+    as byte-identical because a transient response had been hashed as the image
+    and cached, where every later run trusted it.
+    """
+    ok = True
+    png = (b"\x89PNG\r\n\x1a\n" + b"\x00" * 32)
+    webp = b"RIFF" + b"\x00\x00\x00\x00" + b"WEBP" + b"VP8 " + b"\x00" * 16
+    html = b"<!DOCTYPE html>\n<html><head><title>Site not found</title>" + b" " * 9000
+    # Signature checks hold with or without Pillow; the decode only tightens.
+    for data, want, label in [
+        (html, False, "an HTML error page is not an image"),
+        (b"", False, "an empty body is not an image"),
+        (b"RIFFxxxxNOPE", False, "RIFF that is not WEBP is not an image"),
+        (png, Image is None, "a header-only PNG fails the decode when Pillow is present"),
+    ]:
+        got = looks_like_image(data)
+        if got is not want:
+            print(f"  FAIL  looks_like_image: {label} (got {got})"); ok = False
+    # The signature check is pinned on its own: with no Pillow it is the only
+    # thing standing between an HTML error page and the hasher.
+    for data, want, label in [
+        (webp, True, "WEBP signature passes"),
+        (png, True, "PNG signature passes"),
+        (b"\xff\xd8\xff\xe0junk", True, "JPEG signature passes"),
+        (html, False, "HTML has no image signature"),
+        (b"", False, "empty has no image signature"),
+        (b"RIFFxxxxNOPE", False, "RIFF that is not WEBP has no image signature"),
+    ]:
+        if has_image_signature(data) is not want:
+            print(f"  FAIL  has_image_signature: {label}"); ok = False
+
+    # A 200 is the only success. Everything else must be an error, whatever
+    # body came with it — curl writes an error page's HTML happily and exits 0.
+    for rc, status, body, want_ok, label in [
+        (0, "200", png, True, "200 with a body succeeds"),
+        (0, "404", html, False, "404 is an error even with 9 KB of HTML"),
+        (0, "403", html, False, "403 is an error"),
+        (0, "429", html, False, "429 is an error"),
+        (0, "500", html, False, "500 is an error"),
+        (0, "", b"", False, "a blank status is an error"),
+        (0, "200", b"", False, "200 with an empty body is an error"),
+        (6, "", b"", False, "a non-zero curl exit is an error"),
+        (23, "200", png, False, "a non-zero exit is an error even alongside a 200"),
+    ]:
+        got, err = download_verdict(rc, status, body)
+        if (got is not None) is not want_ok or (err is None) is not want_ok:
+            print(f"  FAIL  download_verdict: {label} (err={err!r})"); ok = False
+
+    # fetch_hash must refuse a failed download AND leave no cache entry behind.
+    import shutil, tempfile as _tf
+    global CACHE_DIR, download
+    real_cache, real_download = CACHE_DIR, download
+    CACHE_DIR = _tf.mkdtemp(prefix="atlas-dupe-selftest-")
+    try:
+        for stub, label in [
+            ((lambda url: (None, "HTTP 404, 9379 bytes")), "a 404 is an error, not a hash"),
+            ((lambda url: (html, None)), "a 200 that is not an image is an error"),
+        ]:
+            download = stub
+            _, digest, _, _, err = fetch_hash("https://x/images/whatever_hero.webp")
+            if digest is not None or not err:
+                print(f"  FAIL  fetch_hash: {label}"); ok = False
+            if os.listdir(CACHE_DIR):
+                print(f"  FAIL  fetch_hash cached a failure: {label}"); ok = False
+                for f in os.listdir(CACHE_DIR):
+                    os.unlink(os.path.join(CACHE_DIR, f))
+    finally:
+        download, _bad = real_download, None
+        shutil.rmtree(CACHE_DIR, ignore_errors=True)
+        CACHE_DIR = real_cache
+    print("  PASS  fetch guards: an error page is neither hashed nor cached"
+          if ok else "  FAIL  fetch guards")
+    return ok
 
 
 def _selftest_scope():
