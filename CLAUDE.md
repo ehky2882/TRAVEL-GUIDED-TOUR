@@ -128,6 +128,36 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### One dead hero image in 5,848 — found only once the checker stopped hashing error pages (session 122c — finding, not yet fixed)
+
+**`MoMA PS1`'s `heroImageURL` returns a hard 404**, so that tour renders with no photograph.
+Confirmed across **seven spaced attempts** against **four same-host controls that all return 200**,
+so it is not the Wikimedia rate limiting that was masking it.
+
+- **⚠️ IT IS THE ONLY `upload.wikimedia.org/wikipedia/en/` URL IN THE CATALOGUE.** That path is an
+  English Wikipedia **local** upload rather than a Commons file — which is where non-free/fair-use
+  images live, and where deletion is routine. All **65** other Wikimedia-hosted images are on
+  Commons and healthy. So the one URL in the wrong place is also the one that died, which is worth
+  knowing the next time an image is sourced from Wikipedia rather than Commons.
+- **⚠️ THERE IS NO FREE FIX — the tour has NO gallery**, so the Castello Sforzesco / DuSable Bridge
+  move (promote a photograph the tour already carries) does not apply. A replacement has to be
+  sourced through the image pipeline, which means owner picks. **Flagged, not fixed.**
+- **🔴 IT WAS INVISIBLE UNTIL [#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659).**
+  Until that PR the download step read curl's stdout with no status check, so an error page's
+  **body** was hashed as though it were the image. A 404 therefore looked like a successful fetch of
+  some bytes; it could never be reported as a failure, and two URLs failing the same way became a
+  fake "duplicate". **A dead image was structurally unreportable by the very check meant to find
+  bad images.**
+- **⚠️ AND MY OWN CLEAN RESULT FROM AN HOUR EARLIER HAD TO BE RE-RUN TO BE WORTH ANYTHING.** #657's
+  run used the old cache and the old fetch path; #659 bumped the cache to `image-dupes-v2` precisely
+  because a poisoned entry is indistinguishable from a good one. Re-run on the fixed code with a
+  fresh cache: **5,847 images, 0 errors, 27 INFO** — the same verdict, now on evidence.
+- **⚠️ `upload.wikimedia.org` THROTTLES A PARALLEL SWEEP HARD, and that is what hid this.** A
+  12-way run produced **37 HTTP 429s**; at `--jobs 2` it was still 18. Only fetching the stragglers
+  **serially at ~6–8 s apart** cleared them, leaving exactly one URL that failed for a different
+  reason. **A 429 and a 404 look alike in a summary count — read the codes, not the total.**
+
+
 ### Every shared link previewed as a green sphere — the OG tags were never in the HTML ([PR #661](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/661), session 124 — website)
 
 **Owner: *"when i share a link right now the preview image that people receive is still of my very old green icon. additionally, i would really like for the preview image be of the thumbnail of the tour."*** Both halves were real and shared one cause. Website only — no Swift, no `Tours.json`, no SQL, no build.
@@ -183,10 +213,20 @@ Full detail: `archive/HANDOFF-260830-6.md`.
   `seek(to:)` on the real asset** — `seek(60)` landed the player at **61.9s** with the bar reading
   **61.75s** — and Instagram's CDN answers `accept-ranges: bytes`, so a drag has always been able to
   move the video. Probe removed; the tree greps clean.
-- **⚠️ Measured while here and NOT fixed: 20 of the 73 live Instagram pins have no playable file at
-  all** (licensed music), so they still fall back to the poster and `OPEN IN INSTAGRAM`. **53 play.**
-  That is Instagram withholding `video_url`, which `make-link-pin.py` already reports at authoring
-  time; nothing in the app can reach it.
+- **🔴 20 of the 73 live Instagram pins have no playable file, and it is a RIGHTS GATE rather than
+  a technical one — asked and answered on 2026-08-30, so it does not need re-investigating.** The
+  withheld and playable payloads are **identical but for the single `video_url` key**: same
+  `is_video: true`, same `video_duration`, same poster, same `use_lookaside_*` flags, **no dash
+  manifest or playback URL under any other key in either**. **It tracks the audio, one-way: 20 of
+  20 withheld use a track from Instagram's music library, and no reel on the creator's own audio is
+  ever withheld.** ⚠️ **The rule is NOT "a named track means withheld"** — a creator can name their
+  own audio, and two pins do and still play (`Hotel Xcaret Arte`, `Yankee Stadium Tour`); **read
+  `video_url`, never the track name.** Meta's music licences cover playback on Meta's surfaces, so
+  the file is withheld deliberately. Routes exist — an authenticated private-API session, or a paid
+  scraper — and both are **deliberately not taken**: they need credentials Meta's terms forbid using
+  that way, and they would put a licensed recording inside a paid App Store app on the owner's own
+  account. **The poster + `OPEN IN INSTAGRAM` fallback is the correct outcome, not a defect.** The
+  practical lever is curation: `make-link-pin.py` already flags a withheld pin at authoring time.
 - **🔴 THE VERSION TRAIN CLOSES THE MOMENT APPLE APPROVES IT, and this is the first build to pay
   for it.** **1.1 is `READY_FOR_SALE`**, so Apple refuses *any* further build carrying that
   marketing version — **TestFlight included**. Build **136 compiled, signed, and was rejected at
