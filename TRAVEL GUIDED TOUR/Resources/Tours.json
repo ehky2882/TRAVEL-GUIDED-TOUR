@@ -1631,6 +1631,14 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/buildingst0ries/"
+    },
+    {
+      "id": "6781DA22-3276-5BA4-96FA-9EC094E9FA8B",
+      "displayName": "TikTok @ian_in_nyc",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-ian-in-nyc.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@ian_in_nyc"
     }
   ],
   "tours": [
@@ -92364,6 +92372,52 @@
         "Notable Building",
         "Architecture",
         "Brutalist",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F3579E9F-B19D-554F-B337-827DF1FF1588",
+      "createdAt": "2026-08-30",
+      "title": "Yakuni",
+      "shortDescription": "A post by @ian_in_nyc on TikTok.",
+      "longDescription": "I’m a tour guide and I plan out custom day experiences in New York so message me if you’d like me to show you around for a day :)",
+      "makerId": "6781DA22-3276-5BA4-96FA-9EC094E9FA8B",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakuni-ianinnyc_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@ian_in_nyc/video/7674102754901626134",
+      "sourceAuthor": "@ian_in_nyc",
+      "stops": [
+        {
+          "id": "44DE03C8-D300-5B90-93BC-868D93669B85",
+          "order": 0,
+          "title": "Yakuni",
+          "caption": "I’m a tour guide and I plan out custom day experiences in New York so message me if you’d like me to show you around for a day :)",
+          "latitude": 40.7570643,
+          "longitude": -73.9684093,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakuni-ianinnyc_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7570643,
+      "centroidLongitude": -73.9684093,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
         "Hidden Gem"
       ],
       "priceUSD": 0
