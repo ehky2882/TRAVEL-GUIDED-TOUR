@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 120d — architect vocabulary PR open; the pull SQL applied and verified live)
+**Last verified:** 2026-08-30 (session 122c — the duplicate-image checker fix is open as #657; the architect-vocabulary PR is still open for owner review)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,20 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN, AUTO-MERGE CLASS — THE DUPLICATE-IMAGE CHECKER HAD NEVER SEEN A LINK PIN
+([#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657), `claude/tour-links-upload-qeoxe7`).**
+Owner: *"do it now if it helps."* `scripts/check-image-duplicates.py` reads `catalog["tours"]` and
+nothing else, so **all 244 link-pin heroes were invisible to it, `--all` included**, from the day
+#597 split them into a sibling `linkPins` array. Measured before the fix: **`--all` saw 5,595 images
+and 0 of the 240 pin heroes.** Tooling + docs only — no catalogue change, no Swift, no SQL — so this
+is the **auto-merge class**: merge on green, no owner gate. ⚠️ **The catalogue is clean, and that is
+now measured** (5,835 images, 0 errors, 27 INFO, 0 fetch failures) rather than assumed — my first
+description of this to the owner called it a convenience gap and said nothing was wrong because of
+it, which was not something I had checked. Adds **`--pins`**; **`--maker <CODE>` stays tours-only
+deliberately**, because pinned handles collide with city codes as substrings (`STO` matches
+`@urbanstoriesyt`; 31 collisions catalogue-wide).
+
 
 🔴 **OPEN — FIVE ARCHITECTS JOIN THE VOCABULARY (`claude/linked-tours-send-ahlhiy`).** Owner: *"add
 5 architects to vocab."* `Moshe Safdie` · `John Augustus Roebling` · `William Henry Barlow` ·
@@ -70,7 +84,7 @@ from the **live Supabase RPC** after the last merge (201 · 38, confirmed); the 
 **catalogue's**, because ⚠️ **the RPC reports 194** — upsert-only accumulation plus real sign-ups,
 long-standing and expected. **Assert on link-pin counts, not maker totals.** Both branches
 auto-deleted. Its story is in
-`CLAUDE.md` § Current State and `archive/HANDOFF-260829-2.md`. **Open PRs: none.**
+`CLAUDE.md` § Current State and `archive/HANDOFF-260829-2.md`. **Open PRs: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) (tooling, auto-merge class) plus the architect-vocabulary PR above.**
 
 - **✅ THE SWAN & DOLPHIN HERO IS SETTLED — the owner keeps it** (*"i'm fine with the swan dolphin
   hero"*, 2026-08-29). Its YouTube thumbnail is a dark, indecipherable frame and **no better one
