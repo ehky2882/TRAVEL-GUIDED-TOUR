@@ -128,6 +128,94 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### Seven Instagram reels, one creator, and an Atlas tour that can never fire (branch `claude/links-tours-upload-zcxcfm`, session 125 — content)
+
+**The owner sent seven Instagram reels — all architecture and design, all by one creator.** Branch
+restarted clean off `origin/main` at `0393cd3` (the previous PR on this branch name, #666, is
+merged, so this is a fresh change and not stacked on merged history). **linkPins 276 → 283 ·
+makers 205 → 206 · tours unchanged at 1,552 · places 45.** No new country — 37 holds. Content only
+— no Swift, no SQL, no build. **NO PR OPENED** (this session's harness forbids opening one
+unasked). Full detail: `archive/HANDOFF-260830-7.md`.
+
+- **✅ ALL SEVEN WERE PINNABLE** — no dead posts, no `/photo/` carousels. Seventh fully intact batch
+  running. One creator, **Instagram `@nikola.matus`**, a new maker row shipping `avatarURL: null`
+  (all that embed exposes). Subjects: **Fallingwater** · **Castell Gala Dalí, Púbol** · **Villa
+  E-1027** · **Twin Palms** · **Casa Milà — La Pedrera** · **Marilyn Monroe's House** · **The
+  Chelsea Hotel**. New cities Mill Run, Púbol, Roquebrune-Cap-Martin, Palm Springs.
+- **🔴 THE ATLAS `The Chelsea Hotel` TOUR SITS 290 m FROM THE CHELSEA HOTEL AND IS GEOFENCED AT
+  60 m, SO IT CAN NEVER FIRE — pre-existing, found only because a pin collided with it.** Its own
+  transcript opens *"You're on West 23rd Street, between 7th and 8th Avenues, outside the Chelsea
+  Hotel"*, while its coordinate reverse-geocodes at z18 to **315 West 21st Street**, two blocks
+  south. No error, no dead link, no log line — the tour simply does nothing while you stand in
+  front of the building. **Flagged, not fixed**, per the session-120 IAC rule (moving a geofenced
+  tour changes where its audio plays, and coordinate and radius are one decision). **The fix is one
+  line and the homework is done:** move stop 0 to **`40.7443742, -73.9968175`** — OSM's `Hotel
+  Chelsea, 222, West 23rd Street`, named exactly — and **radius 60 m needs no change, with 0 other
+  geofenced markers within 400 m**, so nothing else could fire. ⚠️ **Do not read the resulting
+  290 m NEAR pair as a place candidate; it is one wrong coordinate.**
+- **⚠️ 7 OF 7 WILL NOT PLAY INLINE — the licensed-music rights gate at full scale, for the first
+  time.** `video_url` is **absent from all seven embed payloads**, checked directly rather than
+  inferred, and six name the same track. The poster + `OPEN IN INSTAGRAM` fallback is the correct
+  outcome and not a defect — but every previous batch had at most a stray withheld pin, and this
+  creator uses a licensed track across their whole account. **Whether a creator whose entire output
+  is withheld is worth pinning is the owner's call, not a technical question.** ⚠️ On one of the
+  seven the tool's track-name regex mis-captured *"28K followers"*, so **its reason string is wrong
+  while its verdict is right** — the verdict comes from the absent `video_url`. Cosmetic, one line
+  in `instagram_playability`.
+- **🔴 `Le Corbusier` IS DELIBERATELY NOT TAGGED ON VILLA E-1027 — the sharpest form of the Sullivan
+  rule yet.** He is in the vocabulary, and the post's entire thesis is that he did **not** design
+  the house — Eileen Gray did — and that his murals and fame led decades of publications to
+  miscredit him. Tagging him would reproduce the exact error the post exists to correct. **Do not
+  "fix" this.** ⚠️ **OSM's own label for the villa reads `Villa E-1027, Le Corbusier`**, so the
+  misattribution is baked into the map data too; the coordinate is right, the label is not evidence.
+- **⚠️ EILEEN GRAY AND E. STEWART WILLIAMS ARE ABSENT FROM THE VOCABULARY**, so E-1027 and Twin
+  Palms ship the generic `Designed by a Master`. **Eileen Gray is the more conspicuous absence** —
+  it is her most famous work and the caption is about her being written out of its history. In the
+  vocabulary and used by name: `Frank Lloyd Wright` (Fallingwater) and `Antoni Gaudí` (Casa Milà),
+  each **alongside** the generic tag, never replacing it. **`Salvador Dalí` is absent and would not
+  be tagged anyway** — he filled Púbol, he did not build it (the Kiki Smith rule).
+- **⚠️ CASA MILÀ RETURNED NOTHING FOR ITS OWN FAMOUS ADDRESS.** `Casa Milà, Passeig de Gràcia,
+  Barcelona` geocodes to **zero results**; OSM files it under **Carrer de Provença 261-265**, and
+  `La Pedrera Barcelona` returns it instantly. **Re-query before concluding a place is unmapped** —
+  fifth batch running where re-querying was the whole fix. The other six were named exactly by OSM
+  first time, including **`Cursum Perficio`**, which is OSM's own name for the Marilyn Monroe house
+  and is taken from the Latin porch tiles the caption is entirely about — coordinate and caption
+  confirming each other independently.
+- **⚠️ TWO HAND RE-CROPS — the vertical `--focus` gap, TENTH batch running.** Every source is
+  1080×1920, so the square is width-limited and `--focus` does nothing at all. Re-rendered through a
+  mirror of the tool's own pipeline at the same filenames: **Twin Palms at 0.66**, recovering
+  *"Inside Frank Sinatra's **Twin Palms.**"*, and **Casa Milà at 0.80**, recovering *"…Antoni
+  Gaudí's **Casa Milà.**"* (0.70 was tried first and still sliced it). **Deliberately left alone:**
+  Fallingwater (loses *"masterpiece"* — a strapline, and the building is never named on screen
+  anyway), E-1027 and Chelsea (their venue names are already legible), Púbol (title complete), and
+  **Marilyn**, where shifting down to catch the full title would crop her face off.
+- **⚠️ TWO HEROES ARE PORTRAITS OF A PERSON RATHER THAN A PLACE** — Marilyn Monroe and Edie
+  Sedgwick. Neither is wrong, and both name their subject in the burned-in text, but both render as
+  a face on the map. A link pin re-hosts only the thumbnail, so no other frame exists. The Fu Shan /
+  Tai O precedent; flagged, shipped.
+- **⚠️ Casa Milà's pin tags MATCH the Atlas tour's exactly**, so the pair shares shelves — the
+  documented rule where a subject exists as both a tour and a pin. **Chelsea's pin deliberately does
+  NOT match**: it gains `Fashion` (the caption is substantially about Edie Sedgwick as a style icon)
+  and omits `Philip Hubert` and `Designed by a Master`, which the Atlas tour carries, because this
+  caption names no architect (the Jules Dalou rule).
+- **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
+  Swift validator, refusing to run if they disagree or either parse is empty (they agree at **385
+  tags across 5 facets**) — **self-tested against 40 injected fault classes, 40/40 caught**, then
+  **0 errors, 2 warnings across 1,552 tours + 283 pins + 45 places**, **both pre-existing** (the same
+  mirror against `origin/main` reports the identical pair). `make-link-pin.py --selftest` **71/71**
+  (**62/62 without Pillow**, which a fresh container lacks — install it before reading that as a
+  pass). **0** duplicate tour/stop/maker ids, **0** already-pinned sourceURLs — checked against
+  `main` **and** the parallel branch `claude/link-tours-to-upload-i4dfhl`, **zero overlap** — **0**
+  filename collisions against 6,075 gh-pages `images/` paths, **0** byte-duplicate heroes; closest
+  perceptual pair **34.6**. `check-image-duplicates.py --pins` **OK** over 279 images.
+  `check-place-candidates.py` **4 EXACT / 15 NEAR** against main's **4 / 13** — **+2 NEAR, +0
+  EXACT**, exactly the Casa Milà (11 m) and Chelsea (290 m) pairs, with no pin moved to manufacture
+  a coincidence. gh-pages: `git ls-remote` re-read **in the same command as the commit**, tree diff
+  **exactly 7 additions, 0 deletions, nothing outside `images/`** (`366cc84b`), the deploy read
+  **`in_progress`, never `cancelled`**, and after it landed **all 7 live URLs were hash-verified
+  against the uploaded bytes — 7 ok, 0 bad**. Tours.json **byte-stable under a Python re-dump before
+  editing**; diff **336 insertions / 0 deletions**. **CI has not run: no PR is open.**
+
 ### One dead hero image in 5,848 — found only once the checker stopped hashing error pages (session 122c — finding, not yet fixed)
 
 **`MoMA PS1`'s `heroImageURL` returns a hard 404**, so that tour renders with no photograph.
