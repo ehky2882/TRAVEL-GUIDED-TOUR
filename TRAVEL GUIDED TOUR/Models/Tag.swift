@@ -121,7 +121,7 @@ enum Tag {
             "James Corner Field Operations", "James Gibbs", "James O'Donnell",
             "James Renwick Jr.", "James Wardrop", "Jean-Michel Wilmotte",
             "Jeroni Martorell", "Jin Watanabe", "Jo Nagasaka",
-            "Johan Nyrén", "John H. Duncan", "Jorge Colaço",
+            "Johan Nyrén", "John H. Duncan", "John Portman", "Jorge Colaço",
             "Joseph H. Freedlander", "Josiah Conder", "Jože Plečnik", "João Carlos Machado",
             "João Queiroz", "João de Castilho", "Juan A. Buschiazzo",
             "Juan Gómez de Mora", "Juan de Villanueva", "Jules Dormal",

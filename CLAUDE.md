@@ -128,6 +128,44 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-29)
 
+### John Portman joins the architect vocabulary — 329 → 330 (branch `claude/tour-links-upload-qeoxe7`, session 122 — code + content)
+
+**Owner: *"add portman."*** He was the catalogue's most conspicuous architect absence, named across
+two batches and shipping the generic `Designed by a Master` both times. **⚠️ This is a CODE change**
+(`Models/Tag.swift`), so unlike the content batches before it, it wants an owner OK and a simulator
+look — the same footing as Scarpa and Plečnik in #653, whose shape this follows exactly.
+
+- **🔴 BOTH VOCABULARIES WERE EDITED.** `Models/Tag.swift` and `scripts/validate-tours.swift` each
+  keep their own copy, and editing one alone produces **an error per tagged tour** (the session-104
+  lesson: 185 names added to Tag.swift alone produced 193 validator errors). The two are asserted
+  **identical at 380 tags across 5 facets**.
+- **⚠️ EXACTLY ONE TOUR IS TAGGED, AND THE TWO THAT ARE NOT ARE THE INTERESTING PART.** Only the
+  **Westin Bonaventure** cylinders pin carries it — its caption opens *"John Portman designed five
+  glass cylinders on Figueroa in 1976."* That is authorship.
+  - **🔴 `Ford Foundation Building` is deliberately NOT tagged** although it names him twice. Both
+    mentions are the *influenced-by* case — *"became the model for hundreds of later atrium
+    buildings — the John Portman hotels of the 1970s and 80s"*. The building is Kevin Roche and John
+    Dinkeloo's. **This is the textbook Sullivan/Eiffel rule: a mention is not authorship.**
+  - **🔴 `Atlanta Marriott Marquis` is deliberately NOT tagged although Portman really did design
+    it.** Its caption is entirely about *The Hunger Games* filming there and names no architect at
+    all, so tagging him would import a fact the source never states — the Jules Dalou / Richard
+    Meier rule. It keeps the generic tag. ⚠️ CLAUDE.md's Atlanta entry records his authorship, so a
+    future session will be tempted to "finish the job" here; **that is the rule working, not a gap.**
+  - **⚠️ The second Westin Bonaventure pin is also untagged** — its caption calls the building a
+    *"brutalist masterpiece"* and names nobody. Same rule.
+- **🔴 `Designed by a Master` IS KEPT, NOT REPLACED.** `Tag.matches` performs **no implication** and
+  the curated home shelf is keyed on that literal string, so dropping it would take the tour off the
+  shelf built for exactly these tours. Verified after the change: **0 named-architect tours missing
+  it**, and **0 of the 330 names unused** — no dead vocabulary.
+- **⚠️ `John H. Duncan` was already present and is a DIFFERENT PERSON.** Checked on normalised token
+  sets rather than strings — the session-104 rule that stops the vocabulary growing near-duplicates
+  that split a shelf in two. **0 collisions.**
+- **Verification.** Validator mirror **self-tested 40/40** against injected faults, then **0 errors,
+  2 warnings across 1,552 tours + 244 pins + 41 places** — both pre-existing. Vocabularies parsed
+  from both Swift files and asserted equal. **⚠️ Nothing compiled locally** (no Swift toolchain in a
+  Linux web session) — **CI is the only compile check.**
+
+
 ### Twenty link pins, fifteen from one Hong Kong creator, and a place candidate 9 m from its tour (branch `claude/tour-links-upload-tbcerj`, session 122 — content)
 
 **The owner sent twenty links — 18 Instagram reels, 2 TikToks.** Four carried location information; sixteen were bare. Branch cut off `origin/main` at `05e90f47` and **rebased TWICE mid-session** — onto `00a420bd` after four commits landed under it, then onto `9c6dc699` after three more. **linkPins 224 → 244 · makers 187 → 189 · tours unchanged at 1,552 · places 38 → 39.** Content only — no Swift, no SQL, no build. **NO PR OPENED** (this session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-260829-4.md`.
