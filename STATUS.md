@@ -25,6 +25,26 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🟡 **PUSHED, NO PR — NINETEEN LINK PINS FROM TWENTY LINKS
+(`claude/link-tours-to-upload-i4dfhl`, commit `cb0f0662`).** Owner sent 20 links (17 Instagram
+reels, 3 TikToks). All 20 alive, all with a thumbnail, no `/photo/` carousels. **linkPins 256 →
+275 · makers 191 → 204 · tours unchanged at 1,552 · places 45. No new country (37 holds); new
+cities Pigeon Forge, Hopewell Cape, Burntcoat.** Validator mirror **45/45 injected faults caught**,
+then **0 errors / 2 warnings, both pre-existing**. Content only — no Swift, no SQL, no build.
+**No PR opened** (this session's harness forbids opening one unasked).
+  - 🔴 **OWNER INPUT NEEDED — one link is PARKED.** TikTok `@ian_in_nyc`'s caption is a tour-guide
+    plug naming no place; the frame is a paper lantern reading 一期一会 under a distressed ceiling.
+    Identifiable as a NYC Japanese bar and no further, so it is parked rather than guessed at.
+  - ⚠️ **Two heroes flagged, shipped:** #12 Burntcoat Head Park is pinned where its caption sends
+    you but its frame is a different Bay of Fundy wharf; #11 Hopewell Rocks is pinned from its
+    frame, since its caption names only the bay.
+  - ⚠️ **`check-place-candidates.py` 3 EXACT → 4, 11 NEAR → 13.** The new EXACT group is **VIA 57
+    West** — OSM's own node for the building *is* the Atlas tour's coordinate, so the pin lands
+    there independently; no pin was moved to manufacture a coincidence. New NEAR pairs: **The
+    Vessel 27 m** and **Kaktus Towers 27 m**. ⚠️ The checker's title rule **misses Grand Central**
+    (88 m from *The South Facade of Grand Central*) — same gap it has for Washington Square.
+
+
 🟡 **OPEN, AUTO-MERGE CLASS — GLASSHOUSE THEATRE BECOMES A PLACE
 ([#663](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/663), `claude/tour-links-upload-3bqlib`,
 restarted off `main` after #659 merged).** Owner: *"make place card for glasshouse theater."* The two
