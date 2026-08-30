@@ -128,6 +128,56 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### An Instagram reel stops being cropped, and its fullscreen scrubber starts moving ([PR #662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662), session 124 — code)
+
+**Owner: *"1. on the tour details page the crop of the thumnail/preview/play window 2. in full
+screen mode maybe the cropping of the video to avoid the instagram banners is ok, but the scrubber
+doesnt work"*.** Two defects, both reproduced in the simulator before anything was changed and both
+re-checked there after. **Swift only — no SQL, no catalogue change.** `test_sim` **570/570**. Open,
+not merged; it is app code, so it waits for owner OK. Full detail: `archive/HANDOFF-260830-4.md`.
+
+- **🔴 A REEL WAS BEING SIZED BY THE PHOTO CAROUSEL'S SQUARE.** `instagramPlayer` passed
+  `GalleryVideoView` a `height` of nil, which means "take `AtlasSpacing.heroAspectRatio`" — and that
+  constant is **1.0**. The surface then fills its box, so a **720×1280** reel showed the **middle
+  56% of every frame**, cutting the creator's own titles off top and bottom. It now takes
+  `LinkSource.embedAspectRatio(for:)` — the same 9:16 expression the box already uses for the embed
+  this player stands in for, so the page cannot resize depending on whether a resolve succeeded, and
+  the shape matches what a TikTok pin already gets.
+- **⚠️ THE FILL IS A DELIBERATE OWNER DECISION AND IT STAYS — FOR THE CAROUSEL.** Its comment on
+  `VideoSurface` says why: there a clip is one page among photographs that are fill-cropped into the
+  same square, and expanding is what shows the whole frame. **That reasoning is about a clip sitting
+  BESIDE PHOTOGRAPHS and does not survive the trip to a link pin, where the post is the entire
+  page.** So fitting is a new **opt-in** (`fittedAspectRatio`, nil by default), not a change of
+  default; `TourMediaCarousel` is untouched and was re-checked on Shinsegae.
+- **⚠️ The 9:16 box adds no letterboxing of its own — measured, not assumed.** Six live pins read
+  with AVFoundation are **all exactly 720×1280**. Black bands some reels show are baked into the
+  source by the creator, and no crop can remove them without taking picture with them.
+- **🔴 THE FULLSCREEN SCRUBBER HAD NO CLOCK.** `scrubPosition` read `AVPlayer.currentTime()` — a
+  plain call with nothing observable about it — so **SwiftUI had no reason to re-render and the bar
+  never moved**; on a 1m 49s reel the elapsed label sat at `0s` for the whole clip. A periodic time
+  observer now samples it four times a second into `@State`.
+- **⚠️ ONLY GALLERY CLIPS EVER SHOWED IT, which is why it survived.** A `.narration` clip is slaved
+  to `AudioPlayerService`, which **is** `@Observable`, and the view already re-renders on
+  `.onChange(of: audioPlayer?.currentTime)`. **Every link pin is a gallery clip.**
+- **⚠️ The observer is removed in `onDisappear`** — one left on a player that outlives the view
+  retains the closure and keeps firing — and `playbackTime` is seeded from `request.startSeconds`,
+  so expanding mid-clip starts the bar where the picture already is rather than at zero.
+- **Verified on the Division Street pin** (Instagram `@donmawsey.nyctours`): before, the bar read
+  `0s` after two minutes of playback; after, **18s → 25s across seven seconds** with the brass fill
+  tracking. **Seeking was proved separately with a temporary probe calling the production
+  `seek(to:)` on the real asset** — `seek(60)` landed the player at **61.9s** with the bar reading
+  **61.75s** — and Instagram's CDN answers `accept-ranges: bytes`, so a drag has always been able to
+  move the video. Probe removed; the tree greps clean.
+- **⚠️ Measured while here and NOT fixed: 20 of the 73 live Instagram pins have no playable file at
+  all** (licensed music), so they still fall back to the poster and `OPEN IN INSTAGRAM`. **53 play.**
+  That is Instagram withholding `video_url`, which `make-link-pin.py` already reports at authoring
+  time; nothing in the app can reach it.
+- **⚠️ A simulator trap that cost twenty minutes and is not a product bug:** on one launch the
+  bottom-module window missed its install, and because the fullscreen cover is hosted **inside that
+  window** (`BottomModuleRoot`), the expand button rendered, sat in the accessibility tree, and did
+  nothing. Relaunching fixed it. **A dead expand button on a link pin is worth checking against the
+  tab bar's presence before it is treated as a video bug.**
+
 ### Four LA places built on owner instruction — Bradbury, Griffith, Petersen and Union Station (branch `claude/la-tours-cleanup-place-cards-r3m4af`, session 123 — content)
 
 **Owner: *"make bradbury, griffith and union station places. make petersen also a place, and go with
