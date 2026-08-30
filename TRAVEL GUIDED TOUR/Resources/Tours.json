@@ -441,14 +441,6 @@
       "websiteURL": "https://www.tiktok.com/@michaelmotamedi"
     },
     {
-      "id": "DE9EEDAE-9BF0-52C5-9067-A38EEDE85E77",
-      "displayName": "YouTube @Thedesigndetourist",
-      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-thedesigndetourist.webp",
-      "avatarEmoji": "▶️",
-      "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
-      "websiteURL": "https://www.youtube.com/@Thedesigndetourist"
-    },
-    {
       "id": "05A34772-F0AB-57B0-9850-131F156A1273",
       "displayName": "YouTube @TheFoodFetishist",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-thefoodfetishist.webp",
@@ -79586,18 +79578,63 @@
       ]
     },
     {
-      "id": "ee70c29e-77b1-5af2-96ff-140dcc0e9918",
-      "name": "Hotel Casa del Mar",
-      "description": "A 1926 building on the Santa Monica sand, opened as a private beach club and later converted to a hotel. It sits at the foot of Pico on Ocean Way, one of the last of the grand clubs that once lined this stretch of shore. The restored interiors are what people come for — tilework, oriental rugs, painted ceilings and a long bar off the lobby — and the building turned a hundred in 2026.",
-      "latitude": 34.0064188,
-      "longitude": -118.4912658,
-      "city": "Santa Monica",
-      "address": "1910 Ocean Way, Santa Monica",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hotel-casa-del-mar-centenary-thedesigndetourist_hero.webp",
+      "id": "c84d64c1-929a-56d2-81e9-9f7dcd4688a3",
+      "name": "Bradbury Building",
+      "description": "A five-storey block of brown brick and sandstone at Third and Broadway, finished in 1893 and deliberately unremarkable from the pavement. Inside, a narrow lobby opens into a court flooded with daylight from a glass roof — rose-coloured glazed brick, Belgian marble stairs, Mexican tile floors, and black wrought iron made in France and shown at the 1893 Chicago World's Fair before it was installed here. Two open-cage lifts still run on their original hydraulics. It was designed by George Wyman, a thirty-two-year-old draftsman with no formal training, for a dying gold-mining millionaire who died months before the doors opened. Visitors can go as far as the first landing, and it is the most filmed interior in Los Angeles.",
+      "latitude": 34.0505,
+      "longitude": -118.2479,
+      "city": "Los Angeles",
+      "address": "304 South Broadway, Los Angeles",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bradbury-building_3.webp",
       "additionalImageURLs": null,
       "tourIds": [
-        "CC95F611-1372-5583-9234-8909AFD6456D",
-        "6CCA19E3-F189-5F8A-AD59-9ADCD1673CD4"
+        "26828f4e-9ad4-5682-b16d-327ee86439b3",
+        "F1F59415-AA33-5001-A4F4-AA0D9B696556"
+      ]
+    },
+    {
+      "id": "a0b4eb53-9959-537e-b9f5-7cf2954a2bc5",
+      "name": "Griffith Observatory",
+      "description": "A white Art Deco observatory on the south slope of Mount Hollywood, looking out over the whole Los Angeles basin with the Hollywood Sign across the canyon. It opened in 1935 under the terms of Griffith J. Griffith's will — admission free, forever, for everyone — sixteen years after his death, the city having refused his money while he lived. Inside are a Foucault pendulum, a Tesla coil and a planetarium under the central dome; on the roof, the twelve-inch Zeiss refractor opens to the public on clear evenings and is said to have been looked through by more people than any telescope in history. Sunset draws half the city up here.",
+      "latitude": 34.1184,
+      "longitude": -118.3004,
+      "city": "Los Angeles",
+      "address": "2800 East Observatory Road, Los Angeles",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/griffith-observatory_3.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "395687ef-e6d6-5638-ae69-0c0bb575bdaa",
+        "990F2058-3173-5501-8AA2-709E8BC7761B"
+      ]
+    },
+    {
+      "id": "28784b58-be57-56aa-a423-6f827c4566f7",
+      "name": "Petersen Automotive Museum",
+      "description": "A museum of the automobile on the corner of Wilshire and Fairfax, at the eastern end of the Miracle Mile and facing the Academy Museum's gold cylinder across the intersection. Underneath is a nearly windowless department store of 1962 by Welton Becket, chosen in the 1990s precisely because sunlight could not reach the paintwork, which opened as a museum in 1994 still looking like a converted store. In 2015 it was wrapped in about a hundred tons of brushed stainless steel in more than three hundred custom sections, streaming around a body of hot-rod red. Four floors of race cars, concept cars and film vehicles tell the story of the machine that laid out the city.",
+      "latitude": 34.0619,
+      "longitude": -118.3614,
+      "city": "Los Angeles",
+      "address": "6060 Wilshire Boulevard, Los Angeles",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/petersen-automotive_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "e53bc0ae-ef86-51a5-ad39-0c8826924a6e",
+        "8C0CEF89-C5D8-52BC-8D01-35CA0E140784"
+      ]
+    },
+    {
+      "id": "7999a893-374f-5677-a2f6-339158d94554",
+      "name": "Los Angeles Union Station",
+      "description": "The last of the great American railway stations, opened in 1939 at almost exactly the moment Los Angeles settled permanently on the car. The main hall blends Mission Revival — white walls, arches, red tile — with the streamlined moderne of the late 1930s, under a cathedral-high beamed ceiling, with an inlaid floor, windows tall as houses and rows of original deep leather armchairs; walled garden courtyards open off either side. It was built on the site of the city's original Chinatown, whose residents and businesses were displaced for its construction and rebuilt a short walk north. Never busy enough to be modernised, it survived intact, and is now the busiest rail hub in the western United States.",
+      "latitude": 34.0561,
+      "longitude": -118.2365,
+      "city": "Los Angeles",
+      "address": "800 North Alameda Street, Los Angeles",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-union-station_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "49424a7b-75a0-5675-8a6c-3b0213c9ab15",
+        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB"
       ]
     }
   ],
@@ -80541,50 +80578,6 @@
       "tags": [
         "Venue",
         "Food"
-      ],
-      "priceUSD": 0
-    },
-    {
-      "id": "678625AC-2C18-5054-97B4-E2A2ACCCB62D",
-      "createdAt": "2026-08-26",
-      "title": "This Pasadena Castle Feels Like Wednesday Came to Life |…",
-      "shortDescription": "A post by @Thedesigndetourist on YouTube.",
-      "longDescription": "This Pasadena Castle Feels Like Wednesday Came to Life | Tim Burton’s Former Home",
-      "makerId": "DE9EEDAE-9BF0-52C5-9067-A38EEDE85E77",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castle-green-designdetourist_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.youtube.com/watch?v=EsAazWdUfwU",
-      "sourceAuthor": "@Thedesigndetourist",
-      "stops": [
-        {
-          "id": "CFDB303B-70C0-5E89-8248-B26640931B15",
-          "order": 0,
-          "title": "This Pasadena Castle Feels Like Wednesday Came to Life |…",
-          "caption": "This Pasadena Castle Feels Like Wednesday Came to Life | Tim Burton’s Former Home",
-          "latitude": 34.14410225147926,
-          "longitude": -118.14908388349532,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castle-green-designdetourist_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 34.14410225147926,
-      "centroidLongitude": -118.14908388349532,
-      "city": "Pasadena",
-      "country": "United States",
-      "primaryCategory": "architecture",
-      "tags": [
-        "Notable Building",
-        "Architecture"
       ],
       "priceUSD": 0
     },
@@ -89073,52 +89066,6 @@
       "priceUSD": 0
     },
     {
-      "id": "CC95F611-1372-5583-9234-8909AFD6456D",
-      "createdAt": "2026-08-29",
-      "title": "Hotel Casa del Mar",
-      "shortDescription": "A post by @thedesigndetourist on TikTok.",
-      "longDescription": "Hotel Casa Del Mar just turned 100 and she has never looked better. Hidden gem alert for my LA people, I drove past this building a hundred times and had no idea. The vintage interiors alone will stop you mid-scroll, we are talking oriental rugs, Chinese vases, stunning tilework and a bar that gives full Bahia escape energy. If you are looking for luxury hotel recommendations that actually have a story to tell, this is it. One of the best trendy hotel design ideas brought to life, the renovation is chef’s kiss. Whether you are looking for that cozy vibe aesthetic or just want to feel like you have time traveled to 1926 glamour, Hotel Casa Del Mar delivers. And yes, there may or may not be a ghost still running an illegal card game somewhere. Celebrating 100 years and still the most iconic spot for Santa Monica activities , book it, walk through it, or at least come stare at the bar.",
-      "makerId": "67CA14A6-3350-5C91-842F-81D05800D035",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hotel-casa-del-mar-centenary-thedesigndetourist_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.tiktok.com/@thedesigndetourist/video/7646929468241562894",
-      "sourceAuthor": "@thedesigndetourist",
-      "stops": [
-        {
-          "id": "51293D0C-1E4E-51A4-A635-03B459029C1D",
-          "order": 0,
-          "title": "Hotel Casa del Mar",
-          "caption": "Hotel Casa Del Mar just turned 100 and she has never looked better. Hidden gem alert for my LA people, I drove past this building a hundred ",
-          "latitude": 34.0064188,
-          "longitude": -118.4912658,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hotel-casa-del-mar-centenary-thedesigndetourist_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0064188,
-      "centroidLongitude": -118.4912658,
-      "city": "Santa Monica",
-      "country": "United States",
-      "primaryCategory": "architecture",
-      "tags": [
-        "Notable Building",
-        "Architecture",
-        "History",
-        "Hidden Gem"
-      ],
-      "priceUSD": 0
-    },
-    {
       "id": "8BAE16EF-CB02-5716-ACEC-E31DB747E6E1",
       "createdAt": "2026-08-29",
       "title": "Beverly Hills City Hall",
@@ -89229,8 +89176,8 @@
           "order": 0,
           "title": "The Bradbury Building",
           "caption": "THE most filmed building in LA is free to enter and most locals have never been inside. The Bradbury Building in downtown LA is pure archite",
-          "latitude": 34.0504755,
-          "longitude": -118.2478075,
+          "latitude": 34.0505,
+          "longitude": -118.2479,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -89242,8 +89189,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0504755,
-      "centroidLongitude": -118.2478075,
+      "centroidLatitude": 34.0505,
+      "centroidLongitude": -118.2479,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -89370,8 +89317,8 @@
           "order": 0,
           "title": "Petersen Automotive Museum",
           "caption": "On Los Angeles’ Miracle Mile stands one of the city’s most unforgettable buildings, the Petersen Automotive Museum, a backdrop to Jennie of ",
-          "latitude": 34.062315,
-          "longitude": -118.3611914,
+          "latitude": 34.0619,
+          "longitude": -118.3614,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -89383,8 +89330,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.062315,
-      "centroidLongitude": -118.3611914,
+      "centroidLatitude": 34.0619,
+      "centroidLongitude": -118.3614,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -89417,8 +89364,8 @@
           "order": 0,
           "title": "Los Angeles Union Station",
           "caption": "Union Station is one of the most beautiful buildings in LA. But as an Asian American, I can’t just let that slide. The station was built on ",
-          "latitude": 34.0560576,
-          "longitude": -118.2358962,
+          "latitude": 34.0561,
+          "longitude": -118.2365,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -89430,8 +89377,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0560576,
-      "centroidLongitude": -118.2358962,
+      "centroidLatitude": 34.0561,
+      "centroidLongitude": -118.2365,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -89558,8 +89505,8 @@
           "order": 0,
           "title": "Griffith Observatory",
           "caption": "Griffith J. Griffith was one of Los Angeles’ most prominent philanthropists, and one of its most complicated figures. In 1903, he shot and s",
-          "latitude": 34.1182187,
-          "longitude": -118.3002933,
+          "latitude": 34.1184,
+          "longitude": -118.3004,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -89571,8 +89518,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.1182187,
-      "centroidLongitude": -118.3002933,
+      "centroidLatitude": 34.1184,
+      "centroidLongitude": -118.3004,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "history",

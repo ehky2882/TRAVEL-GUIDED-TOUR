@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 123 — #659 open: fourteen link pins + the duplicate-checker false-alarm fix; the architect-vocabulary PR is still open for owner review)
+**Last verified:** 2026-08-30 (session 123 — [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged as `2a222899`, its removal SQL run and verified live, nothing owed; [#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659) open with fourteen link pins + the duplicate-checker false-alarm fix; the architect-vocabulary PR still open for owner review)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -28,7 +28,7 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 🟡 **OPEN, AUTO-MERGE CLASS — FOURTEEN LINK PINS + THE CHECKER THAT CRIED WOLF
 ([#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), `claude/tour-links-upload-3bqlib`).**
 Fourteen links from the owner — 13 TikToks + 1 Instagram reel, **all alive, nothing parked**.
-**linkPins 244 → 258 · makers 189 → 192 · New Zealand the 37th country.** Then, on owner
+**linkPins 242 → 256 · makers 188 → 191 · New Zealand the 37th country** (re-derived after [#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658) merged under it; the PR body's 244 → 258 was measured against the older base). Then, on owner
 instruction (*"fix the checker"*), the tooling half: **`check-image-duplicates.py` was hashing error
 pages and caching them**, so two URLs failing the same way became a permanent false "duplicate" — it
 reported two unrelated pins as byte-identical when they are not. `download()` now reads the status
@@ -39,8 +39,24 @@ indistinguishable from a good one. **Content + tooling + docs, no Swift — auto
 decided: *"keep christchurch."* Settled; do not "fix" it.**
 
 
-🟡 **OPEN, AUTO-MERGE CLASS — THE DUPLICATE-IMAGE CHECKER HAD NEVER SEEN A LINK PIN
-([#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657), `claude/tour-links-upload-qeoxe7`).**
+✅ **MERGED — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
+([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), squash `2a222899`), AND ITS SQL
+HAS BEEN RUN.**
+Owner instructions: remove one of the two Hotel Casa del Mar pins and its place page, take out the
+YouTube Castle Green, then *"make bradbury, griffith and union station places. make petersen also a
+place, and go with your recommended coordinate."* **linkPins 244 → 242 · makers 189 → 188 · places
+41 → 40 → 44 · tours unchanged at 1,552.** Content + one SQL file; no Swift, no build.
+**✅ `backend/pull_la_duplicates_260830.sql` HAS BEEN RUN (owner, 2026-08-30) and nothing is owed** —
+re-read from the **live RPC** rather than the SQL Editor's success line: all four deleted rows gone,
+all three survivors present, `TikTok @thedesigndetourist` still at 19 pins, 0 pins wrongly inside
+`tours`, `priceTier` (66 priced) and `isPrivate` both intact. **The four places needed no SQL** — the
+seed carries them, so they arrived with the merge. **The pin moved and the tour did not — verified by diff: 0 Atlas tours changed a coordinate,
+trigger mode or radius.** Every place hero is a **third photograph promoted from the member tour's
+own gallery**, nothing sourced.
+
+✅ **MERGED — THE DUPLICATE-IMAGE CHECKER HAD NEVER SEEN A LINK PIN
+([#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657), `claude/tour-links-upload-qeoxe7`),
+squash `597b5aff`.**
 Owner: *"do it now if it helps."* `scripts/check-image-duplicates.py` reads `catalog["tours"]` and
 nothing else, so **all 244 link-pin heroes were invisible to it, `--all` included**, from the day
 #597 split them into a sibling `linkPins` array. Measured before the fix: **`--all` saw 5,595 images
@@ -317,7 +333,10 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 ### SQL pastes owed (Supabase SQL Editor, project **Dozent**)
 
 ✅ **Applied:** `add_country.sql` (Countries row live) · `restore_catalog_keys.sql` (places, priceTier,
-isPrivate restored 2026-08-20).
+isPrivate restored 2026-08-20) · **`pull_la_duplicates_260830.sql` (owner ran it 2026-08-30 —
+verified against the live RPC, not the SQL Editor's success line: all four deleted rows gone, all
+three survivors present, `TikTok @thedesigndetourist` still at 19 pins, 0 pins wrongly inside
+`tours`, `priceTier` and `isPrivate` both intact. **Nothing is owed here — do not ask again.**)**.
 
 | File | Unlocks | Without it |
 |---|---|---|
