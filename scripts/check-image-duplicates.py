@@ -450,12 +450,12 @@ def _selftest_scope():
         }],
     }
     ok = True
-    checks = [
-        ("tours", 1, "papaya" , False),
-        ("pins",  1, "empire" , False),
-        ("all",   2, None     , None),
+    checks = [                       # scope, expected urls, url fragment that must NOT appear
+        ("tours", 1, "papaya"),
+        ("pins",  1, "empire"),
+        ("all",   2, None),
     ]
-    for scope, want_n, absent, _ in checks:
+    for scope, want_n, absent in checks:
         urls, slug_kind, _ = build_index(catalog, None, scope)
         if len(urls) != want_n:
             print(f"  FAIL scope {scope}: expected {want_n} urls, got {len(urls)}"); ok = False
