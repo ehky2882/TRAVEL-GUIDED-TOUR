@@ -176,6 +176,20 @@ build. **Opened and merged on owner instruction**, who reviews the flagged pins 
   is what distinguishes them from the Zacherlhaus case. **Consequence, expected not defective:**
   `check-place-candidates.py` gains **2 EXACT groups** over whatever the base carries (5 against
   `origin/main`'s 3 at merge time). **One line removes either pin of either pair.**
+- **✅ BOTH DOUBLE-PINNED SUBJECTS ARE NOW PLACES — owner instruction 2026-08-29 (*"make westin
+  bonaventure a place"*, *"make hotel casa del mar a place"*). Places 38 → 40, and both EXACT groups
+  are resolved** (`check-place-candidates.py` 5 → 3; the three that remain belong to other sessions).
+  **The pin moved nowhere** — each place sits on its members' existing exact coordinate, so nothing
+  was relocated to make the identity rule hold, and neither place creates a NEAR pair.
+  **⚠️ THE TWO HEROES ARE NOT ALIKE AND ONE IS A DELIBERATE COMPROMISE.** The Bonaventure gets a
+  genuine third photograph — Portman's five cylinders from a **2816×2112 PUBLIC DOMAIN** Commons
+  file, a **0.85× downscale rather than an upscale**, with no burned-in text.
+  **Hotel Casa del Mar BORROWS a member's hero**, because no PD photograph of it exists at usable
+  size: Commons holds exactly one real photo of the building (2950×2252) and it is **CC BY-SA 3.0**,
+  which is off-policy while the app has no attribution UI, and the only PD images are 596×346 and
+  539×331 — a 2.6× upscale. Every other "casa del mar" hit is a Spanish book scan or a hotel in
+  Santander. **This is the Legion of Honor / Waterlooplein case, and the owner has closed it** (see
+  the hero decision below) — do not go sourcing a replacement.
 - **🔴 THE HANDLE SUFFIX PREVENTED THREE LIVE-HERO OVERWRITES.** `bradbury-building_hero.webp`,
   `la-union-station_hero.webp` and `griffith-observatory_hero.webp` are all **live Atlas LAX tour
   heroes**, and three of my subjects are those same places — a bare slug would have written over
@@ -216,20 +230,25 @@ build. **Opened and merged on owner instruction**, who reviews the flagged pins 
   *← TO TELESCOPE*, and more). **Kith Paris closed itself independently** — its headline reads
   *"TURNS OUT WAR MEMORIALS MAKE GREAT SNEAKER STORES"*, and the building is Pershing Hall, a WWI
   American Legion memorial.
-- **⚠️ THREE HEROES ARE WEAK, flagged not resolved.** **Papaya King** and **Shun Hing Restaurant**
-  are talking heads with no view of the venue; **The Royal Hawaiian** shows **Diamond Head from
-  Waikiki beach**, with the pink hotel the pin is named for absent from the frame. A link pin
-  re-hosts only the thumbnail, so no other frame exists.
+- **✅ THREE WEAK HEROES — RAISED AND CLOSED BY THE OWNER 2026-08-29: *"dont worry about the
+  heroes."* THEY SHIP AS THEY ARE; DO NOT RE-RAISE OR "FIX" THEM.** **Papaya King** and **Shun Hing
+  Restaurant** are talking heads with no view of the venue; **The Royal Hawaiian** shows **Diamond
+  Head from Waikiki beach**, with the pink hotel the pin is named for absent from the frame. A link
+  pin re-hosts only the thumbnail, so no other frame exists. ⚠️ **Anyone re-running the
+  open-every-hero audit will flag all three again — they are settled**, and the Ministry of
+  Enterprise / Royal Hospital Chelsea precedent applies: honour the decision rather than sourcing
+  replacements.
 - **⚠️ ONE HAND RE-CROP — the vertical `--focus` gap, EIGHTH batch running.** **Papaya King** was
   re-rendered at vertical focus **0.72** through a mirror of the tool's own pipeline (same filename,
   so `Tours.json` is untouched), recovering the creator's own headline **"Best Hotdog in NYC?!"**
   that the centred square had sliced. That is *recovering* what the crop destroyed, not removing
   what the creator put there. **Deliberately left alone:** the Bonaventure's and Kith's top-clipped
   lines are topic hooks, not the subject's name (the California Academy rule).
-- **⚠️ ONE PIN WILL NOT PLAY INLINE** — `plays_inline` is **False** on the Tung Lung Chau reel,
-  the licensed-music case where Instagram withholds the media file. It ships and opens Instagram on
-  tap; the tool reports rather than refuses. **All three Instagram creators ship `avatarURL: null`
-  by design.**
+- **✅ ONE PIN WILL NOT PLAY INLINE — RAISED AND CLOSED BY THE OWNER 2026-08-29: *"dont worry
+  about the post that wont play inline either."* IT STAYS.** `plays_inline` is **False** on the Tung
+  Lung Chau reel, the licensed-music case where Instagram withholds the media file, so it opens
+  Instagram on tap instead of playing inline. The tool reports rather than refuses, and the owner
+  decided it is worth having. **All three Instagram creators ship `avatarURL: null` by design.**
 - **⚠️ EVERY ARCHITECT NAMED IN THESE CAPTIONS IS ABSENT FROM THE VOCABULARY** — **John Portman**
   (twice), **Warren and Wetmore**, **Kohn Pedersen Fox**, **Gensler**, **Frederick Roehrig**,
   **Charles Moore**, **Gage & Koerner**, **John and Donald Parkinson**. All ship the generic
