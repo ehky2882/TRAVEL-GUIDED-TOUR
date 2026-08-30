@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 122c — the duplicate-image checker fix is open as #657; the architect-vocabulary PR is still open for owner review)
+**Last verified:** 2026-08-30 (session 123 — LA duplicate cleanup pushed on `claude/la-tours-cleanup-place-cards-r3m4af`, no PR opened; its removal SQL is owed, see § SQL pastes owed)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -307,6 +307,7 @@ isPrivate restored 2026-08-20).
 
 | File | Unlocks | Without it |
 |---|---|---|
+| 🔴 `backend/pull_la_duplicates_260830.sql` | Removes the two duplicate LA link pins, the YouTube creator row and the Hotel Casa del Mar place | **Both duplicates stay on every phone.** Verified present in the live RPC on 2026-08-30 — the catalogue edit alone cannot remove them, because `seed_from_toursjson.py` is upsert-only |
 | `backend/saved_places.sql` | Saved places syncing across devices | Saving works, stays on one device |
 | `backend/places_photos.sql` | Places serving their own photographs | Optional — the app is correct without it |
 

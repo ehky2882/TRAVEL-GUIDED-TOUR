@@ -441,14 +441,6 @@
       "websiteURL": "https://www.tiktok.com/@michaelmotamedi"
     },
     {
-      "id": "DE9EEDAE-9BF0-52C5-9067-A38EEDE85E77",
-      "displayName": "YouTube @Thedesigndetourist",
-      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-thedesigndetourist.webp",
-      "avatarEmoji": "▶️",
-      "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
-      "websiteURL": "https://www.youtube.com/@Thedesigndetourist"
-    },
-    {
       "id": "05A34772-F0AB-57B0-9850-131F156A1273",
       "displayName": "YouTube @TheFoodFetishist",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-thefoodfetishist.webp",
@@ -79560,21 +79552,6 @@
         "9E5F8CF8-0F41-5E25-9931-8891A3057672",
         "871828DC-B6CB-5132-8C13-6CBAB27CB966"
       ]
-    },
-    {
-      "id": "ee70c29e-77b1-5af2-96ff-140dcc0e9918",
-      "name": "Hotel Casa del Mar",
-      "description": "A 1926 building on the Santa Monica sand, opened as a private beach club and later converted to a hotel. It sits at the foot of Pico on Ocean Way, one of the last of the grand clubs that once lined this stretch of shore. The restored interiors are what people come for — tilework, oriental rugs, painted ceilings and a long bar off the lobby — and the building turned a hundred in 2026.",
-      "latitude": 34.0064188,
-      "longitude": -118.4912658,
-      "city": "Santa Monica",
-      "address": "1910 Ocean Way, Santa Monica",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hotel-casa-del-mar-centenary-thedesigndetourist_hero.webp",
-      "additionalImageURLs": null,
-      "tourIds": [
-        "CC95F611-1372-5583-9234-8909AFD6456D",
-        "6CCA19E3-F189-5F8A-AD59-9ADCD1673CD4"
-      ]
     }
   ],
   "linkPins": [
@@ -80517,50 +80494,6 @@
       "tags": [
         "Venue",
         "Food"
-      ],
-      "priceUSD": 0
-    },
-    {
-      "id": "678625AC-2C18-5054-97B4-E2A2ACCCB62D",
-      "createdAt": "2026-08-26",
-      "title": "This Pasadena Castle Feels Like Wednesday Came to Life |…",
-      "shortDescription": "A post by @Thedesigndetourist on YouTube.",
-      "longDescription": "This Pasadena Castle Feels Like Wednesday Came to Life | Tim Burton’s Former Home",
-      "makerId": "DE9EEDAE-9BF0-52C5-9067-A38EEDE85E77",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castle-green-designdetourist_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.youtube.com/watch?v=EsAazWdUfwU",
-      "sourceAuthor": "@Thedesigndetourist",
-      "stops": [
-        {
-          "id": "CFDB303B-70C0-5E89-8248-B26640931B15",
-          "order": 0,
-          "title": "This Pasadena Castle Feels Like Wednesday Came to Life |…",
-          "caption": "This Pasadena Castle Feels Like Wednesday Came to Life | Tim Burton’s Former Home",
-          "latitude": 34.14410225147926,
-          "longitude": -118.14908388349532,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castle-green-designdetourist_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 34.14410225147926,
-      "centroidLongitude": -118.14908388349532,
-      "city": "Pasadena",
-      "country": "United States",
-      "primaryCategory": "architecture",
-      "tags": [
-        "Notable Building",
-        "Architecture"
       ],
       "priceUSD": 0
     },
@@ -89045,52 +88978,6 @@
         "Architecture",
         "John Portman",
         "Designed by a Master"
-      ],
-      "priceUSD": 0
-    },
-    {
-      "id": "CC95F611-1372-5583-9234-8909AFD6456D",
-      "createdAt": "2026-08-29",
-      "title": "Hotel Casa del Mar",
-      "shortDescription": "A post by @thedesigndetourist on TikTok.",
-      "longDescription": "Hotel Casa Del Mar just turned 100 and she has never looked better. Hidden gem alert for my LA people, I drove past this building a hundred times and had no idea. The vintage interiors alone will stop you mid-scroll, we are talking oriental rugs, Chinese vases, stunning tilework and a bar that gives full Bahia escape energy. If you are looking for luxury hotel recommendations that actually have a story to tell, this is it. One of the best trendy hotel design ideas brought to life, the renovation is chef’s kiss. Whether you are looking for that cozy vibe aesthetic or just want to feel like you have time traveled to 1926 glamour, Hotel Casa Del Mar delivers. And yes, there may or may not be a ghost still running an illegal card game somewhere. Celebrating 100 years and still the most iconic spot for Santa Monica activities , book it, walk through it, or at least come stare at the bar.",
-      "makerId": "67CA14A6-3350-5C91-842F-81D05800D035",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hotel-casa-del-mar-centenary-thedesigndetourist_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.tiktok.com/@thedesigndetourist/video/7646929468241562894",
-      "sourceAuthor": "@thedesigndetourist",
-      "stops": [
-        {
-          "id": "51293D0C-1E4E-51A4-A635-03B459029C1D",
-          "order": 0,
-          "title": "Hotel Casa del Mar",
-          "caption": "Hotel Casa Del Mar just turned 100 and she has never looked better. Hidden gem alert for my LA people, I drove past this building a hundred ",
-          "latitude": 34.0064188,
-          "longitude": -118.4912658,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hotel-casa-del-mar-centenary-thedesigndetourist_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0064188,
-      "centroidLongitude": -118.4912658,
-      "city": "Santa Monica",
-      "country": "United States",
-      "primaryCategory": "architecture",
-      "tags": [
-        "Notable Building",
-        "Architecture",
-        "History",
-        "Hidden Gem"
       ],
       "priceUSD": 0
     },
