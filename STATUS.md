@@ -25,16 +25,18 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **PUSHED, NO PR — NINETEEN LINK PINS FROM TWENTY LINKS
-(`claude/link-tours-to-upload-i4dfhl`, commit `cb0f0662`).** Owner sent 20 links (17 Instagram
-reels, 3 TikToks). All 20 alive, all with a thumbnail, no `/photo/` carousels. **linkPins 256 →
-275 · makers 191 → 204 · tours unchanged at 1,552 · places 45. No new country (37 holds); new
+🟡 **PUSHED, NO PR — TWENTY LINK PINS FROM TWENTY LINKS
+(`claude/link-tours-to-upload-i4dfhl`, commits `cb0f0662` + `e7b93eb1`).** Owner sent 20 links (17 Instagram
+reels, 3 TikToks). All 20 alive, all with a thumbnail, no `/photo/` carousels, none parked. **linkPins 256 →
+276 · makers 191 → 205 · tours unchanged at 1,552 · places 45. No new country (37 holds); new
 cities Pigeon Forge, Hopewell Cape, Burntcoat.** Validator mirror **45/45 injected faults caught**,
 then **0 errors / 2 warnings, both pre-existing**. Content only — no Swift, no SQL, no build.
 **No PR opened** (this session's harness forbids opening one unasked).
-  - 🔴 **OWNER INPUT NEEDED — one link is PARKED.** TikTok `@ian_in_nyc`'s caption is a tour-guide
-    plug naming no place; the frame is a paper lantern reading 一期一会 under a distressed ceiling.
-    Identifiable as a NYC Japanese bar and no further, so it is parked rather than guessed at.
+  - ✅ **CLEARED — the parked link is wired.** TikTok `@ian_in_nyc`'s caption named no place; the
+    owner supplied a Google Maps link resolving to **Yakuni, 226 E 53rd St (basement), Turtle Bay**.
+    **linkPins 275 → 276 · makers 204 → 205.** ⚠️ Nominatim returns two "226 East 53rd Street" —
+    Manhattan and East Flatbush; the 10022 ZIP settles it. Its hero is the lantern rather than the
+    frontage (the Yonemoto Coffee class) — the creator's own frame, shipped as-is.
   - ⚠️ **Two heroes flagged, shipped:** #12 Burntcoat Head Park is pinned where its caption sends
     you but its frame is a different Bay of Fundy wharf; #11 Hopewell Rocks is pinned from its
     frame, since its caption names only the bay.
