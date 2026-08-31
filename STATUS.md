@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-31 (session 127b — ten place cards pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
+**Last verified:** 2026-08-31 (session 127b — ten place cards pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -27,7 +27,7 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 🟡 **OPEN — TEN PLACE CARDS FOR THE TOUR-PLUS-PIN SITES
 (branch `claude/tour-links-upload-t5jk3n`, commit `6df08b8c`, pushed — NO PR).**
-**places 56 → 66; tours (1,552), link pins (378) and makers (208) byte-for-byte unchanged.** Content
+**places 56 → 66; tours (1,552), link pins (483) and makers (208) byte-for-byte unchanged.** Content
 only — no Swift, no SQL, no gh-pages push, no build. Built on owner instruction from the ten Tier 1
 candidates the 95-pin batch produced: **Westminster Abbey · The National Gallery · The Tower of
 London · Natural History Museum · Churchill War Rooms · The Charles Dickens Museum · Leighton House
@@ -50,33 +50,73 @@ London · Natural History Museum · Churchill War Rooms · The Charles Dickens M
     reference the IDENTICAL seven image URLs** (a bare-slug collision predating the handle suffix),
     so `natural-history-museum_2.webp` is **the LA museum** and `_4.webp` is **LA Union Station**.
     Both galleries have been mixing cities. **The fix is new filenames, never a byte swap** (#567).
-  - `check-place-candidates.py` **10 EXACT → 7, 30 NEAR → 24**; the three EXACT groups that remain
+  - `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35**; the three EXACT groups that remain
     are the owner's own exclusions. **CI has not run — no PR is open.**
 
-🟡 **OPEN — SEVEN PLACE CARDS FROM AN AUDIT, AND `check-place-candidates.py` REACHES ZERO
-([#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673), branch `claude/place-cards-audit-px3z3o`).**
-**places 49 → 56; tours (1,552), link pins (283) and makers (206) byte-for-byte unchanged.** Content
-only — no Swift, no SQL, no gh-pages push, no build. Built: **Casa Milà — La Pedrera**,
-**Operaparken**, **Wave Hill**, **Grand Central Terminal**, **Chichén Itzá**, **Rosewood Mayakoba**,
-**Casa Lleó Morera**. The pin moved and the tour never did, every time; nothing moved at all for the
-last three, whose members were already coincident.
-  - 🔴 **EXACT is now empty and the script exits 0 for the first time in its history.** The Barcelona
-    deferral it had reported stood since session 116. **CLAUDE.md's standing note that a clean exit
-    is NOT the expected state is corrected in place** — treat any future EXACT group as a real
-    finding. **0 EXACT / 9 NEAR** against `origin/main`'s 3 / 12.
+🟢 **MERGED — ONE HUNDRED AND FIVE LINK PINS FROM `@hereinnyc`
+([#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) `2bc05e30`).**
+**linkPins 378 → 483; tours (1,552), makers (208) and places (56) unchanged.** Content only — no
+Swift, no SQL, no build. CI green on all three jobs; the squash was verified to have actually
+changed files on `main` (5,072 insertions across 6 files) and the catalogue re-read from
+`origin/main` at 483 pins. **The largest batch to date**, against a previous record of 95.
+  - **⚠️ Owner decision available, not blocking — one pin is a paid advertisement.** A Coca-Cola
+    partnership, marked **`AD`** in the frame and opening `AD |` in its own caption. It is still a
+    real location post (Marilyn Monroe photographs at Bowling Green) so it ships, but pinning an ad
+    is the owner's call. One line removes it.
+  - **🔴 Owner decision — two heroes are the same vintage subway carriage, and one is pinned at
+    Yankee Stadium.** They score perceptual Hamming **6 of 256** with a thumbnail diff of **12.2**,
+    where every other pair in the batch sits at 32+/30+ — the creator reused the footage. So the
+    Yankee Stadium pin's hero is a Transit Museum carriage. A link pin re-hosts only the thumbnail,
+    so **no other frame exists**; the alternatives are keep it or pull the pin.
+  - **⚠️ One building could not be named** — a Beaux-Arts mansion near Riverside Drive and 86th–87th
+    (the Isaac L. Rice Mansion was checked and is 172 m away). It ships under the creator's own frame
+    title, *"A Gilded Age Mansion for Sale"*, asserting no attribution.
+  - **⚠️ `check-place-candidates.py` goes 10 EXACT → 11, NEAR 30 → 41.** The one new EXACT group is
+    this batch's own **Gracie Mansion** pair — two posts about the same building on the same node.
+    Honest rather than manufactured; **the pins were deliberately not nudged apart to dodge the
+    checker.** **Flagged, none created.**
+  - **⚠️ A note for the next batch: `check-image-duplicates.py --pins` reports OK on this batch**,
+    because its confirmation threshold (8.0) sits below the 12.2 diff of the reused-footage pair.
+    That is the tool working as designed — it hunts byte-level re-writes — but "same footage,
+    different frame" passes it, and only a per-batch perceptual sweep catches it.
+
+🟢 **MERGED — NINETY-FIVE LINK PINS FROM ALICE LOXTON, DOMUS AND ROME ART STORIES
+([#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674), merged 12:01 UTC).**
+**linkPins 283 → 378 · makers 206 → 208; tours (1,552) and places (56) unchanged.** Content only.
+  - **⚠️ Owner decision available, not blocking:** whether any of the ten EXACT same-subject pairs
+    the owner sent twice should become places (Harvington Hall ×2, Hatfield + the Elizabeth Oak,
+    Syon Park ×2, York Minster + Roman York, **Windsor Castle ×3**, Hampton Court ×2, Hever ×2, the
+    National Gallery ×2, Leighton + the Arab Hall) plus **CaixaForum Madrid**, where the Domus pin
+    lands on the existing Atlas tour. **Flagged, not created.**
+  - **⚠️ One weak hero flagged, not fixed:** *Windsor Castle #88* is a **postbox**. Its caption is
+    "Historic delights of Windsor Castle!" and Windsor does have a famous Victorian wall postbox, but
+    on the map it reads as a generic red box. One line removes the pin if the owner prefers.
+  - **🔴 A failure class worth knowing before the next batch:** 13 posts answered their oEmbed
+    thumbnail with **52 bytes of `{"code":5009,"error":"fail to make process filters"}`** — not a
+    dead post, not transient, and per-object rather than per-host. **The fix is the same post's
+    `originCover` (`tplv-tiktokx-origin`)**, fed through the tool's own `best_thumbnail`. 13/13
+    recovered. **If it recurs, fold the fallback into `make-link-pin.py` itself.**
+
+🟢 **MERGED — SEVEN PLACE CARDS FROM AN AUDIT, AND `check-place-candidates.py` REACHES ZERO
+([#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673)).**
+**places 49 → 56; tours (1,552), link pins (283) and makers (206) byte-for-byte unchanged.** Built:
+**Casa Milà — La Pedrera**, **Operaparken**, **Wave Hill**, **Grand Central Terminal**,
+**Chichén Itzá**, **Rosewood Mayakoba**, **Casa Lleó Morera**. The pin moved and the tour never did.
+  - 🔴 **EXACT reached zero and the script exited 0 for the first time in its history** at that
+    point. **CLAUDE.md's standing note that a clean exit is NOT the expected state is corrected in
+    place** — treat any future EXACT group as a real finding. ⚠️ The two batches above have since
+    taken it to 11; those are same-subject pairs the owner sent twice, not a regression.
   - 🔴 **The checker cannot see every candidate.** Its NEAR tier matches on title containment, so
     *The South Facade of Grand Central* and *Grand Central Terminal* never pair — run it **and** a
     hand sweep (every pair within 40 m, plus every pair within 200 m sharing a distinctive word).
   - ⚠️ **Two heroes are BORROWED from a member** (Chichén Itzá, Rosewood Mayakoba) — both are
     pin-only sites with empty galleries, so no third photograph exists. The Waterlooplein case,
-    already closed by the owner: **do not go sourcing a replacement.** The other five are third
-    photographs promoted from a member tour's gallery, nothing sourced.
+    already closed by the owner: **do not go sourcing a replacement.**
   - ⚠️ **The Great Ball Court is deliberately excluded** from the Chichén Itzá place and stays its
     own pin 224 m away. **Do not "complete" it.**
   - **Still flagged, not built:** Monestir de Montserrat (31 m), Tribune Tower (142 m), Petit Palais
     (276 m), Walt Disney World Swan + Dolphin (216 m). **There is no Grand Palais candidate** — it
     has one entry in the catalogue and the pin beside it is the Petit Palais, 155 m away.
-
 
 🟢 **MERGED — SEVEN `@nikola.matus` PINS, THE CHELSEA HOTEL COORDINATE, AND THE CHELSEA PLACE
 ([#668](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/668) `a997860a`, plus the place PR).**
@@ -99,7 +139,7 @@ merge will lie to you.
   - ⚠️ **Two heroes are portraits of a person rather than a place** (Marilyn Monroe, Edie
     Sedgwick). Not wrong, but they render as a face on the map; no other frame exists.
 
-🟡 **OPEN, AUTO-MERGE CLASS — GLASSHOUSE THEATRE BECOMES A PLACE
+🟢 **MERGED — GLASSHOUSE THEATRE BECOMES A PLACE
 ([#663](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/663), `claude/tour-links-upload-3bqlib`,
 restarted off `main` after #659 merged).** Owner: *"make place card for glasshouse theater."* The two
 coincident pins from #659 become one place; **places 44 → 45**, `check-place-candidates.py` **4 EXACT
@@ -115,8 +155,6 @@ replacement.** Content only; the seed carries `places`, so **no owner SQL**.
 FOURTEEN ARE LIVE.** Verified against the **live sources**, not the workflow's success line: the
 Supabase RPC (what the app reads first) and the gh-pages mirror each serve **256 link pins**, with
 **0 pins wrongly inside `tours`** and `priceTier` / `isPrivate` both intact.
-🟡 **OPEN — LA CLEANUP: TWO DUPLICATE PINS PULLED, FOUR LA PLACES BUILT
-([#658](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/658), `claude/la-tours-cleanup-place-cards-r3m4af`).**
 
 ✅ **MERGED — FOURTEEN LINK PINS + THE CHECKER THAT CRIED WOLF
 ([#659](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/659), `claude/tour-links-upload-3bqlib`).**
