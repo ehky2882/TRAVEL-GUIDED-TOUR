@@ -128,6 +128,63 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-31)
 
+### Nine more place cards, and the stack-cap workaround a place makes unnecessary (branch `claude/tier2-place-cards`, session 127c — content)
+
+**Owner: *"do the tier 2 list"*** — the nine pin-only clusters enumerated when the place candidates
+were first put to them. Cut clean off `main` at `62157914`. **Places 66 → 75. The `tours` and
+`makers` arrays are BYTE-IDENTICAL.** Content only — no Swift, no SQL, no gh-pages push, no build.
+Full detail: `archive/HANDOFF-260831-5.md`.
+
+- **Built:** **Windsor Castle** (6 members) · **Hampton Court Palace** (3) · **Hever Castle** ·
+  **Harvington Hall** · **Syon Park** · **Hatfield House** · **York Minster** · **The Guild Chapel**
+  · **Blenheim Palace**. Every member is a link pin — **no Atlas tour is a member of any of these**,
+  which the build asserts — so nothing geofenced was touched and all 10 moved pins are `manual`.
+- **🔴 WINDSOR IS THE POINT OF THE EXERCISE, AND IT GENERALISES.** The 95-pin batch deliberately
+  spread six Windsor pins across three coordinates (0 / 143 / 376 m) because
+  **`TourSetMap.maxStacked` is 3** and six coincident pins would have left three **unreachable on
+  that creator's own maker page**. **A place collapses its members into ONE capsule pin, so the cap
+  stops applying** — all six go back onto the castle. Same at Hampton Court (3 pins, 64 m) and
+  Blenheim (2, 123 m). **When coincident pins are being spread to dodge the stack cap, a place is the
+  real fix and the spread is the stopgap.**
+- **🔴 THE HERO IS BORROWED FROM A MEMBER IN ALL NINE, AND THAT IS STRUCTURAL.** Tier 1's ten each
+  had an Atlas tour with a gallery, so every hero was a free third photograph. **Here there is no
+  Atlas tour at any site and every member is a pin with an EMPTY gallery**, so **no third photograph
+  of these sites exists anywhere in the catalogue** — the Waterlooplein / Legion of Honor / Chichén
+  Itzá case the owner has already closed. **Do not go sourcing replacements.** Cost, stated: the
+  borrowed-hero warning count goes **6 → 15**.
+- **⚠️ EVERY FRAME THIS CREATOR SHOOTS HAS HER IN IT**, so there was no clean architectural shot to
+  choose. `blenheim-palace-aboutbuildings_hero.webp` is the **one exception among all 23 candidate
+  images** — a `@about_buildings` frame of the facade with no person — which is why Blenheim alone
+  gets a proper establishing hero. **⚠️ Windsor has no picture of the castle at all**: an armour,
+  three portraits, a drawing room and **the postbox already flagged in #674**. The Crimson Drawing
+  Room was taken as least-bad; **it is the weakest hero of the nine and one sourced photograph fixes
+  it.** York Minster's nave and Syon House across the lawn are the two strongest.
+- **⚠️ THREE MEMBERSHIP JUDGEMENTS, EACH ONE LINE TO REVERSE.** **The Tudor Kitchens joins Hampton
+  Court** (64 m) on the **Arab Hall / Elizabeth Oak** precedent rather than the **Beauchamp Tower**
+  exclusion — the owner drew that line explicitly for the Tower of London *and* let the Arab Hall in,
+  so this reads their own two precedents rather than inventing a rule. **Roman York joins York
+  Minster** — coincident, and the Minster stands directly on the Roman `principia` of Eboracum,
+  though its caption is only *"Roman York!"*, so the subject is inferred from the coordinate rather
+  than asserted from the source. **🔴 The Temple of Diana is EXCLUDED from Blenheim** at 262 m — the
+  **Great Ball Court** precedent, a separate destination inside a large park; Shakespeare's
+  Birthplace, 372 m from the Guild Chapel, is likewise out.
+- **⚠️ THE CAPTIONS ARE ALMOST ENTIRELY HASHTAGS**, so unlike tier 1 there is no script to ground the
+  copy in. Each description is written from established public fact about the **site**, and nothing a
+  member claims is repeated as ours — **Hatfield says *"tradition places her under an oak"*** rather
+  than stating it, because the accession story is undocumented while the member's own frame asserts
+  *"on this exact spot"*. Addresses are editorial, corroborated by reverse geocoding rather than
+  taken from it; **the Guild Chapel ships Chapel Lane, not Church Street** (the session-122 finding).
+- **Verification.** Validator mirror — vocabulary from **both** Swift files, refusing to run if they
+  disagree or either parse is empty (**385 tags**) — **self-tested 20/20**, then **0 errors, 15
+  warnings across 1,552 tours + 483 pins + 75 places**, six pre-existing and nine the borrowed heroes
+  above. **`tours` and `makers` byte-identical**; exactly 10 pins changed, in exactly the four
+  coordinate fields, **all ten `manual`** — asserted, not assumed. **`check-place-candidates.py` 8
+  EXACT → 1, 35 NEAR → 21** — ⚠️ **the one EXACT left is Gracie Mansion**, which arrived in #675 and
+  was never part of tier 2. `seed_from_toursjson.py` clean at **208 / 2,035 / 2,407 / 75**; all nine
+  hero URLs live **200**; `Tours.json` byte-stable before editing, diff **180 insertions / 40
+  deletions**. **⚠️ Nothing compiled locally — CI on the PR is the only check.**
+
+
 ### Ten place cards, and three sites the owner deliberately did not merge (branch `claude/tour-links-upload-t5jk3n`, session 127b — content)
 
 **Owner: *"do tier 1. for tower of london, leave beauchamp tower seaprate. for westminster abbey,
