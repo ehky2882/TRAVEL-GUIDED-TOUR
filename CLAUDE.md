@@ -134,7 +134,8 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 want to be able to click on a button that 'expands' the map which effectively takes me back to the
 home map view at the location of that particular item … with the placecard showing, similar to if i
 were to get to a tour by searching."*** Built, `test_sim` **578/578** (+8), driven end to end in the
-simulator on all three reachable surfaces. Code only — no SQL, no catalogue change, nothing for the
+simulator on all three reachable surfaces. Squash `01c70f63`, **merged**. **TestFlight 1.1.1 (138),
+owner device-verified: *"LOOKS GOOD."*** Code only — no SQL, no catalogue change, nothing for the
 owner to run. Full detail: `archive/HANDOFF-260830-8.md`.
 
 - **Every inline map in the app is a PREVIEW, and that is the problem it solves.** Tour detail, a
@@ -202,8 +203,6 @@ owner to run. Full detail: `archive/HANDOFF-260830-8.md`.
   Rijksmuseum → the **place** card up in Amsterdam), **creator** (`dozent://maker/…` Atlas Studio
   AMS → Amsterdam framed, 39 tours in view, no card). **The list page was not driven** — login-gated,
   and it renders through the same `TourSetMap` the creator page proved.
-- **⚠️ OWED: owner device review.** This is a code change, so it wants an owner OK and a look on
-  device before merge (§ Merging PRs).
 
 
 ### Seven Instagram reels, one creator, and an Atlas tour that can never fire (branch `claude/links-tours-upload-zcxcfm`, session 125 — content)
