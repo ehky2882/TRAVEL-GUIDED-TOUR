@@ -128,7 +128,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
-### An inline map gets an expand button — back to the one map, framed on what you were reading (branch `claude/map-expand-control`, session 126 — code)
+### An inline map gets an expand button — back to the one map, framed on what you were reading ([#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671), session 126 — code)
 
 **Owner: *"when i'm in a places page, or tour details page, or dozent page etc. in the 'map' view i
 want to be able to click on a button that 'expands' the map which effectively takes me back to the

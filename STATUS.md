@@ -25,8 +25,8 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **PUSHED, NO PR YET — EXPAND CONTROL ON EVERY INLINE MAP (`claude/map-expand-control`,
-session 126 — CODE).** Owner ask: an expand button on the map view of a place / tour / dozent page
+🟡 **OPEN PR [#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671) — EXPAND CONTROL ON EVERY INLINE MAP
+(`claude/map-expand-control`, session 126 — CODE).** Owner ask: an expand button on the map view of a place / tour / dozent page
 that takes you back to the **Home map** at that item, placecard up, exactly like arriving from
 Search. Built for all four map surfaces (tour detail, place, creator, list). **Code only — no SQL,
 no catalogue change, nothing for the owner to run.** `build_sim` clean, `test_sim` **578/578**
