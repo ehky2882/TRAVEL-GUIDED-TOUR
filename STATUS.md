@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-31 (session 127c — nine tier 2 place cards on `claude/tier2-place-cards`, see § 1. Earlier: session 127b — ten place cards, merged as [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676). Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
+**Last verified:** 2026-08-31 (session 127d — the Natural History Museum audio/gallery collision fixed on `claude/nhm-gallery-fix`, see § 1. Earlier: session 127c — nine tier 2 place cards on `claude/tier2-place-cards`, see § 1. Earlier: session 127b — ten place cards, merged as [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676). Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,23 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN — THE LONDON NATURAL HISTORY MUSEUM WAS PLAYING LA'S NARRATION
+(branch `claude/nhm-gallery-fix`, commit `cf4bd2b4`; gh-pages `1e0ebee6`).**
+Asked as a gallery fix; **the gallery was the smaller half.** Both museums used the bare slug
+`natural-history-museum`, so both tours pointed at the **identical `audioURL`**. The live file
+measures **129.7 s** against LA's declared 130 and London's 160 — London has played LA's narration
+since **2026-07-15**, six and a half weeks, with no error and nothing any check would flag.
+  - **⚠️ A third tour was affected and was not in the report:** the `Albertopolis` walk shows the LA
+    *T. rex* at its NHM stop.
+  - **Everything was recoverable** from gh-pages history, byte-identically, and republished under
+    `natural-history-museum-london` — **a new address, never an overwrite** (#567). The recovered
+    audio measures **159.9 s**, matching London's declared 160.
+  - ⚠️ **The LA tour deliberately keeps the bare slug** — those URLs now serve LA content and it is
+    the tour they are correct for.
+  - **🔴 OWED: this is a class of bug with no check behind it.** `check-image-duplicates.py` compares
+    image **bytes** and structurally cannot see two entries sharing ONE URL, and **nothing anywhere
+    checks for a shared `audioURL`**. A whole-catalogue sweep has not been run.
 
 🟡 **OPEN — NINE TIER 2 PLACE CARDS FOR THE PIN-ONLY CLUSTERS
 (branch `claude/tier2-place-cards`, commit `3569993e`).**
