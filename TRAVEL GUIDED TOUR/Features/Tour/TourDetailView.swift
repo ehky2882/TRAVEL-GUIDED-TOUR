@@ -98,6 +98,9 @@ struct TourDetailView: View {
     /// chevron pops one level; X always exits the layer.
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(AppSharedState.self) private var appShared
+    /// Optional so a preview — which wires no layers — still renders. Nil hides
+    /// the map's expand control rather than drawing one that cannot act.
+    @Environment(MapExpander.self) private var mapExpander: MapExpander?
     @Environment(\.openURL) private var openURL
     /// Optional: TourDetailView is hosted in the UIKit slide-up layers, which
     /// inject `TourListService` explicitly. Optional so any other presentation
@@ -934,8 +937,27 @@ struct TourDetailView: View {
             // Same sizing as the carousel it swaps with, so switching
             // GALLERY / MAP never changes the page's height.
             .atlasHeroSizing(nil)
+            // Take this tour's pin to the Home map, card already up — the same
+            // landing tapping it in Search gives. A tour with no stops cannot
+            // be placed on a map, so it gets no control rather than a dead one.
+            .atlasMapExpandControl(isVisible: expandRegion != nil && mapExpander != nil) {
+                guard let expandRegion else { return }
+                mapExpander?.expand(to: expandRegion, showingTour: tour.id)
+            }
         }
         .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// Where expanding lands: this tour's pin at the Home map's neighbourhood
+    /// zoom, NOT the region this inline map frames.
+    ///
+    /// ⚠️ The two are legitimately different. This preview frames the whole
+    /// route so you can see the shape of a walk; the Home map is for browsing
+    /// on from, so it lands you at the reading zoom with the card in reach.
+    /// `HomeView.region(framing:)` is the same helper Search uses, so both
+    /// doors into the map arrive identically.
+    private var expandRegion: MKCoordinateRegion? {
+        HomeView.region(framing: tour)
     }
 
     /// Persistent `GET DIRECTIONS` affordance — hoisted out of the

@@ -67,6 +67,10 @@ struct ContentView: View {
     /// z-order on top of the mini-player + tab bar). Both sides read
     /// it via `@Environment`.
     @State private var homeSharedState = HomeSharedState()
+    /// The expand control on every inline map. Lives here rather than at the
+    /// App level because only the surfaces `ContentView` injects can reach it,
+    /// and its closure is wired against this view's layer controllers.
+    @State private var mapExpander = MapExpander()
 
     /// Tracks whether any pushed detail screen is currently visible.
     /// Driven by each detail view's `.onAppear` / `.onDisappear`
@@ -183,6 +187,7 @@ struct ContentView: View {
         .ignoresSafeArea(.container, edges: .bottom)
         .environment(navState)
         .environment(homeSharedState)
+        .environment(mapExpander)
         // NOTE: the full PlayerView is presented from `BottomModuleRoot`
         // (the secondary top window), NOT here — so the cover physically
         // slides up over the mini-player + tab bar in the same window,
@@ -233,6 +238,35 @@ struct ContentView: View {
             makerPresenter.performDismiss = { makerLayer.dismiss() }
             placePresenter.performDismiss = { placeLayer.dismiss() }
             listPresenter.performDismiss = { listLayer.dismiss() }
+            // The expand control on a detail page's inline map: take every
+            // layer down, go to Home, and hand the landing to `HomeView`.
+            //
+            // 🔴 THE TEARDOWN RUNS HERE RATHER THAN THROUGH AN OBSERVER, for
+            // the reason `performDismiss` exists at all: the caller is inside a
+            // layer that covers this window, and SwiftUI can stop delivering
+            // updates to a covered hierarchy. Each `dismiss()` is idempotent —
+            // `BottomLayerController.dismiss` no-ops when nothing is presented
+            // — so calling all four is free and means the button works from a
+            // page reached through any stack of them.
+            //
+            // ⚠️ THE MOVE IS DELIVERED ON THE NEXT MAIN-QUEUE TURN, deliberately.
+            // Written synchronously it lands while this window is still covered
+            // and `HomeView`'s observer may never see it — a fly-to that simply
+            // doesn't happen. `DispatchQueue.main.async`, not
+            // `Task { @MainActor in }`: main-queue blocks run strictly FIFO, so
+            // this cannot overtake the dismissals above. `HomeView` also
+            // re-checks for an unconsumed move when it becomes the active tab,
+            // which covers the path where Home wasn't showing to begin with.
+            mapExpander.performExpand = { move in
+                tourPresenter.dismiss()
+                makerPresenter.dismiss()
+                placePresenter.dismiss()
+                listPresenter.dismiss()
+                appShared.selectedTab = .home
+                DispatchQueue.main.async {
+                    homeSharedState.pendingMapMove = move
+                }
+            }
         }
         // Paid tours: keep entitlements in step with whoever is signed in.
         // Keyed on `userId` so it re-runs on sign-in, sign-out AND an account
@@ -311,6 +345,7 @@ struct ContentView: View {
                     }
                     .environment(navState)
                     .environment(homeSharedState)
+                    .environment(mapExpander)
                     .environment(tourPresenter)
                     // MakerView is pushed in-stack from tour detail, and its
                     // MAP tab draws place pins. Without this the presenter is
@@ -374,6 +409,7 @@ struct ContentView: View {
                     PlaceView(place: place, onDismiss: { placePresenter.dismiss() })
                         .environment(navState)
                         .environment(homeSharedState)
+                        .environment(mapExpander)
                         .environment(tourPresenter)
                         .environment(makerPresenter)
                         .environment(placePresenter)
@@ -421,6 +457,7 @@ struct ContentView: View {
                     }
                         .environment(navState)
                         .environment(homeSharedState)
+                        .environment(mapExpander)
                         .environment(tourPresenter)
                         .environment(makerPresenter)
                         .environment(placePresenter)
@@ -457,6 +494,7 @@ struct ContentView: View {
                     }
                     .environment(navState)
                     .environment(homeSharedState)
+                    .environment(mapExpander)
                     .environment(tourPresenter)
                     .environment(makerPresenter)
                     .environment(placePresenter)

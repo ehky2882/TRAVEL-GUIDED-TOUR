@@ -45,6 +45,9 @@ struct TourSetMap: View {
     let onOpenPlace: (Place) -> Void
 
     @Environment(LocationManager.self) private var locationManager
+    /// Optional so a preview — which wires no layers — still renders. Nil hides
+    /// the expand control rather than drawing one that cannot act.
+    @Environment(MapExpander.self) private var mapExpander: MapExpander?
 
     /// Framed once to fit the whole set, then left alone so a pan survives a
     /// tab switch.
@@ -111,7 +114,24 @@ struct TourSetMap: View {
                 placecard: placecardAnchor
             )
             .atlasHeroSizing(nil)
+            // Take the whole set to the Home map.
+            //
+            // ⚠️ NO CARD, and that is the owner's call (2026-08-30). A creator
+            // page or a list holds many tours across many cities and has no
+            // single subject — raising one tour's card would single it out for
+            // no reason. What you get is the picture `SHOW ALL` gives, on the
+            // map you can browse on from. Hidden when there is nothing to
+            // frame, so an empty creator page shows no control at all.
+            .atlasMapExpandControl(isVisible: canExpand) {
+                mapExpander?.expand(framing: tours)
+            }
         }
+    }
+
+    /// Whether expanding can do anything: something to frame, and something
+    /// wired to frame it with.
+    private var canExpand: Bool {
+        mapExpander != nil && MapExpander.regionFraming(tours) != nil
     }
 
     private var initialRegion: MKCoordinateRegion {

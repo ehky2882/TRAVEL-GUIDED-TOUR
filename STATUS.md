@@ -25,6 +25,20 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🟡 **PUSHED, NO PR YET — EXPAND CONTROL ON EVERY INLINE MAP (`claude/map-expand-control`,
+session 126 — CODE).** Owner ask: an expand button on the map view of a place / tour / dozent page
+that takes you back to the **Home map** at that item, placecard up, exactly like arriving from
+Search. Built for all four map surfaces (tour detail, place, creator, list). **Code only — no SQL,
+no catalogue change, nothing for the owner to run.** `build_sim` clean, `test_sim` **578/578**
+(+8), and driven end to end in the simulator on tour detail, a place and a creator page (the list
+page shares `TourSetMap` with the creator page).
+  - **Owner decisions already taken, in this thread:** a **creator or list page raises no card**
+    (many tours, no single subject — it frames the lot); a **place raises its own place card**, not
+    a member tour's.
+  - **⚠️ Needs an owner device look before merge** — this is a code change (§ Merging PRs). What a
+    device adds over the simulator is the feel of the layer teardown and the fly-to running
+    together.
+
 🟡 **PUSHED, NO PR — SEVEN INSTAGRAM REELS FROM `@nikola.matus`
 (`claude/links-tours-upload-zcxcfm`, commit `7fde232b`).** Owner sent 7 Instagram reels, all one
 creator, all alive and pinnable. **linkPins 276 → 283 · makers 205 → 206 · tours unchanged at 1,552

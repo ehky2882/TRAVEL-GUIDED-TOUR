@@ -128,6 +128,73 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### An inline map gets an expand button — back to the one map, framed on what you were reading (branch `claude/map-expand-control`, session 126 — code)
+
+**Owner: *"when i'm in a places page, or tour details page, or dozent page etc. in the 'map' view i
+want to be able to click on a button that 'expands' the map which effectively takes me back to the
+home map view at the location of that particular item … with the placecard showing, similar to if i
+were to get to a tour by searching."*** Built, `test_sim` **578/578** (+8), driven end to end in the
+simulator on all three reachable surfaces. Code only — no SQL, no catalogue change, nothing for the
+owner to run. Full detail: `archive/HANDOFF-260830-8.md`.
+
+- **Every inline map in the app is a PREVIEW, and that is the problem it solves.** Tour detail, a
+  place, a creator and a list each draw a map that holds only that page's own pins — you can pan it
+  and you cannot browse on from it. `.atlasMapExpandControl` is the door back to the one map that
+  holds everything.
+- **The landing is the one Search already writes**, deliberately: `PendingMapMove` has carried a
+  region plus a `placecardTourId` since session 102, and `HomeView.flyTo` already raises the card
+  *after* the flight. **The one map should not look different depending on which door you came
+  through.**
+- **Owner decisions, taken before any code was written.** A **creator or list page raises NO card** —
+  those maps hold many tours across many cities and have no single subject, so it frames the lot,
+  which is the picture their own `SHOW ALL` gives. A **place raises its own place card, not a member
+  tour's** — a site with ≥2 published tours draws as ONE capsule pin, so a member's card would hang
+  over a pin that stands for the place. New `PendingMapMove.placecardPlaceId`; `flyTo` prefers it
+  over the tour id when both are set.
+- **🔴 SETTING STATE IS NOT ENOUGH, and `MapExpander.performExpand` exists for exactly the reason
+  `TourPresenter.performDismiss` does.** Every surface with an expand button sits inside a UIKit
+  slide-up layer that completely covers the main window, and SwiftUI can stop delivering updates to
+  a covered hierarchy — an `.onChange` in `ContentView` may simply never run. That is the dead tab
+  bar of session 74, the dead place pin (#532) and the dead X (#535). The closure tears the layers
+  down **directly**; all four `dismiss()` calls are idempotent, so calling every one is free and the
+  button works from a page reached through any stack of them.
+- **⚠️ THE MOVE IS DELIVERED ON THE NEXT MAIN-QUEUE TURN, DELIBERATELY.** Written synchronously it
+  lands while the main window is still covered and `HomeView`'s observer may never see it — a fly-to
+  that simply doesn't happen. **`DispatchQueue.main.async`, not `Task { @MainActor in }`**:
+  main-queue blocks run strictly FIFO, so it cannot overtake the dismissals. And **`HomeView`
+  consumes the move from THREE triggers, not one** — first appearance, the request landing, and
+  **`isActive` becoming true**. The third is not belt-and-braces: it is the reliable signal on the
+  path where Home was not the showing tab. `consumePendingMapMove()` clears the request, so at most
+  one of the three acts.
+- **⚠️ ONE COMPONENT FOR ALL FOUR SURFACES, and this app has paid three times for the alternative** —
+  `StopPin`/`ClusterPin` drifted to 14pt against 16pt before `MapPins` was extracted, and the
+  swallowed-tap placecard stack was two copies before `TourSetMap` was. **A fifth map surface should
+  call `.atlasMapExpandControl`, not grow a fifth copy.** Bottom-trailing, matching the Home map's
+  own control stack — and because the placecards these maps raise travel *upwards* from a pin
+  sitting low in the frame, so top-trailing would sit where the top card lands.
+- **⚠️ THE EXPAND REGION IS NOT THE REGION THE INLINE MAP FRAMES, and the two are legitimately
+  different.** Tour detail's preview frames the whole route so you can read the shape of a walk; the
+  place page's is ~400 m of street. Both expand to `HomeView.region(framing:)`, the same zoom Search
+  uses. **`MapExpander.regionFraming` takes the PIN coordinate** — a single tour's only stop, or
+  **stop 0** of a walk — not every stop and not the centroid, which can sit hundreds of metres from
+  any stop (Montreal's Downtown walk: 197 m — the session-102 drawer bug).
+- **⚠️ Hidden, never disabled or inert**, when there is nothing to expand to (a tour with no stops, a
+  creator with nothing published, a host that wired no layers). A control that visibly does nothing
+  is worse than one that is absent; an *inert* one is the invisible-defect class this codebase keeps
+  rediscovering. `@Environment(MapExpander.self)` is optional at every call site so previews render.
+- **Verified in the simulator:** tour detail (Grand Army Plaza → its card up on the Home map),
+  **place** (`dozent://place/…` Rijksmuseum → the **place** card up in Amsterdam), **creator**
+  (`dozent://maker/…` Atlas Studio AMS → Amsterdam framed, no card). **The list page was not driven**
+  — login-gated, and it renders through the same `TourSetMap` the creator page proved.
+- **⚠️ A harness artifact, not a product bug.** On the first creator-page attempt the synthetic tap
+  "landed on the Me tab": the button's accessibility frame sat at y≈808 on an 852pt screen,
+  *underneath* the bottom-module window, so the tap went to the tab bar above it. Scrolling the map
+  into view first made it work. Same class as the `UIPageControl` trap in #571 — **anything a page
+  draws at the height of that bar is unreachable.**
+- **⚠️ OWED: owner device review.** This is a code change, so it wants an owner OK and a look on
+  device before merge (§ Merging PRs).
+
+
 ### Seven Instagram reels, one creator, and an Atlas tour that can never fire (branch `claude/links-tours-upload-zcxcfm`, session 125 — content)
 
 **The owner sent seven Instagram reels — all architecture and design, all by one creator.** Branch

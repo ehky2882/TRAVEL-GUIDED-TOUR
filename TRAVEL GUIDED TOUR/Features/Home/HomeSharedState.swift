@@ -79,10 +79,12 @@ final class HomeSharedState {
     /// is still settling, instead of momentarily reading as "0 tours."
     var isMapMoving: Bool = false
 
-    /// One-shot request to fly the map camera somewhere, set by
-    /// `SearchView` when the user taps a place result and consumed +
-    /// cleared by `HomeView`. Lets the Search screen drive the Home
-    /// map without lifting `cameraPosition` out of `HomeView`.
+    /// One-shot request to fly the map camera somewhere, consumed +
+    /// cleared by `HomeView`. Lets another screen drive the Home map
+    /// without lifting `cameraPosition` out of `HomeView`.
+    ///
+    /// Two writers: `SearchView` (tapping a place or tour result) and
+    /// `MapExpander` (the expand control on a detail page's inline map).
     var pendingMapMove: PendingMapMove? = nil
 }
 
@@ -109,6 +111,19 @@ struct PendingMapMove: Equatable, Identifiable {
     /// card left over from the old location is stale — so a card set before
     /// the move is wiped by the move itself. It has to travel with it.
     var placecardTourId: UUID? = nil
+
+    /// A place whose card should be open when the map gets there.
+    ///
+    /// The place page's expand control uses this rather than
+    /// `placecardTourId`: the home map draws a site with two or more tours as
+    /// a single *place* pin with a place card, so landing on one of its member
+    /// tours' cards would show a card the map has no pin for. Same one-shot
+    /// contract, and carried through the move for the same reason.
+    ///
+    /// ⚠️ At most one of the two is honoured — `HomeView.flyTo` prefers the
+    /// place, because a caller that knows a place id knows the more specific
+    /// thing about where you are landing.
+    var placecardPlaceId: UUID? = nil
 
     static func == (lhs: PendingMapMove, rhs: PendingMapMove) -> Bool {
         lhs.id == rhs.id
