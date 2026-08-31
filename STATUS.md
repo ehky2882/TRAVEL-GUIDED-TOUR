@@ -47,53 +47,26 @@ page shares `TourSetMap` with the creator page).
     device adds over the simulator is the feel of the layer teardown and the fly-to running
     together.
 
-🟡 **PUSHED, NO PR — SEVEN INSTAGRAM REELS FROM `@nikola.matus`
-(`claude/links-tours-upload-zcxcfm`, commit `7fde232b`).** Owner sent 7 Instagram reels, all one
-creator, all alive and pinnable. **linkPins 276 → 283 · makers 205 → 206 · tours unchanged at 1,552
-· places 45.** No new country (37 holds); new cities **Mill Run**, **Púbol**,
-**Roquebrune-Cap-Martin**, **Palm Springs**. Validator mirror **40/40 injected faults caught**, then
-**0 errors / 2 warnings, both pre-existing**. Content only — no Swift, no SQL, no build.
-**No PR opened** (this session's harness forbids opening one unasked).
-  - ✅ **CLEARED — the Chelsea Hotel coordinate is fixed** (owner: *"fix the chelsea hotel
-    coordinate"*). The Atlas tour sat **290 m** from the hotel behind a **60 m** geofence, so it
-    could never fire; stop 0 and the centroid now sit on `40.7443742, -73.9968175`, which
-    reverse-geocodes to `Hotel Chelsea, 222, West 23rd Street`. **Radius re-derived and kept at
-    60 m; 0 other geofenced markers within 500 m.** Four lines changed. ⚠️ **`check-place-candidates.py`
-    3 EXACT → 4** — the tour and the pin are now coincident, a genuine place candidate; **no place
-    created** (needs copy, address, photograph and approval).
-  - ⚠️ **ALL SEVEN ARE `plays_inline: False`** — the licensed-music rights gate, six of them naming
-    the same track. Poster + `OPEN IN INSTAGRAM` on tap. Correct behaviour, not a defect, but this
-    is the first batch where it is **7 of 7** rather than a stray one, so it is the owner's call
-    whether a creator whose whole account is withheld is worth pinning.
-  - ⚠️ **Two heroes are portraits of a person, not a place** — Marilyn Monroe and Edie Sedgwick.
-    Neither is wrong (both name their subject in frame) but both render as a face on the map. A
-    link pin re-hosts only the thumbnail, so no other frame exists.
-  - ⚠️ **`check-place-candidates.py` 4 EXACT unchanged, 13 NEAR → 15.** Both new pairs are a pin
-    beside an Atlas tour of the same subject: **Casa Milà 11 m** (the CalAcademy rounding artifact —
-    a genuine place candidate) and **The Chelsea Hotel 290 m** (which is the defect above, not a
-    place candidate until the tour is corrected). No pin was moved to manufacture a coincidence.
-
-🟡 **PUSHED, NO PR — TWENTY LINK PINS FROM TWENTY LINKS
-(`claude/link-tours-to-upload-i4dfhl`, commits `cb0f0662` + `e7b93eb1`).** Owner sent 20 links (17 Instagram
-reels, 3 TikToks). All 20 alive, all with a thumbnail, no `/photo/` carousels, none parked. **linkPins 256 →
-276 · makers 191 → 205 · tours unchanged at 1,552 · places 45. No new country (37 holds); new
-cities Pigeon Forge, Hopewell Cape, Burntcoat.** Validator mirror **45/45 injected faults caught**,
-then **0 errors / 2 warnings, both pre-existing**. Content only — no Swift, no SQL, no build.
-**No PR opened** (this session's harness forbids opening one unasked).
-  - ✅ **CLEARED — the parked link is wired.** TikTok `@ian_in_nyc`'s caption named no place; the
-    owner supplied a Google Maps link resolving to **Yakuni, 226 E 53rd St (basement), Turtle Bay**.
-    **linkPins 275 → 276 · makers 204 → 205.** ⚠️ Nominatim returns two "226 East 53rd Street" —
-    Manhattan and East Flatbush; the 10022 ZIP settles it. Its hero is the lantern rather than the
-    frontage (the Yonemoto Coffee class) — the creator's own frame, shipped as-is.
-  - ⚠️ **Two heroes flagged, shipped:** #12 Burntcoat Head Park is pinned where its caption sends
-    you but its frame is a different Bay of Fundy wharf; #11 Hopewell Rocks is pinned from its
-    frame, since its caption names only the bay.
-  - ⚠️ **`check-place-candidates.py` 3 EXACT → 4, 11 NEAR → 13.** The new EXACT group is **VIA 57
-    West** — OSM's own node for the building *is* the Atlas tour's coordinate, so the pin lands
-    there independently; no pin was moved to manufacture a coincidence. New NEAR pairs: **The
-    Vessel 27 m** and **Kaktus Towers 27 m**. ⚠️ The checker's title rule **misses Grand Central**
-    (88 m from *The South Facade of Grand Central*) — same gap it has for Washington Square.
-
+🟢 **MERGED — SEVEN `@nikola.matus` PINS, THE CHELSEA HOTEL COORDINATE, AND THE CHELSEA PLACE
+([#668](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/668) `a997860a`, plus the place PR).**
+**linkPins 276 → 283 · makers 205 → 206 · places 48 → 49 · tours unchanged at 1,552.** CI green on
+all three jobs; verified live against the Supabase RPC **and** the gh-pages mirror, both serving
+283 pins with **0 pins wrongly inside `tours`**, and `priceTier` / `isPrivate` / `country` all
+intact. ⚠️ The mirror lagged Supabase by **~8 minutes** — a mirror read taken straight after a
+merge will lie to you.
+  - ✅ **The Atlas `The Chelsea Hotel` tour could never fire and is fixed.** It sat **290 m** from
+    the hotel behind a **60 m** geofence, while its own script says *"outside the Chelsea Hotel"*.
+    Stop 0 and the centroid now sit on `40.7443742, -73.9968175` (`Hotel Chelsea, 222, West 23rd
+    Street`). **Radius re-derived and kept at 60 m; 0 other geofenced markers within 500 m.**
+  - ✅ **The Chelsea Hotel is now a place** (owner: *"make it a place"*), **places 48 → 49**,
+    `check-place-candidates.py` **4 EXACT → 3**. **Nothing moved to make it** — the pair became
+    coincident when the tour was corrected. **Hero is a third photograph** from the tour's own
+    gallery; place + both members are three distinct pictures. No owner SQL.
+  - ⚠️ **7 of 7 pins will not play inline** — the licensed-music rights gate, `video_url` absent
+    from every embed. Correct behaviour, but the first batch where a creator's *entire* output is
+    withheld; **whether to keep them is a curation call.**
+  - ⚠️ **Two heroes are portraits of a person rather than a place** (Marilyn Monroe, Edie
+    Sedgwick). Not wrong, but they render as a face on the map; no other frame exists.
 
 🟡 **OPEN, AUTO-MERGE CLASS — GLASSHOUSE THEATRE BECOMES A PLACE
 ([#663](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/663), `claude/tour-links-upload-3bqlib`,
