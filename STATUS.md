@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-31 (session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
+**Last verified:** 2026-08-31 (session 127b — ten place cards pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,34 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN — TEN PLACE CARDS FOR THE TOUR-PLUS-PIN SITES
+(branch `claude/tour-links-upload-t5jk3n`, commit `6df08b8c`, pushed — NO PR).**
+**places 56 → 66; tours (1,552), link pins (483) and makers (208) byte-for-byte unchanged.** Content
+only — no Swift, no SQL, no gh-pages push, no build. Built on owner instruction from the ten Tier 1
+candidates the 95-pin batch produced: **Westminster Abbey · The National Gallery · The Tower of
+London · Natural History Museum · Churchill War Rooms · The Charles Dickens Museum · Leighton House
+· CaixaForum Madrid · Ewha Campus Complex · Houses of Parliament**.
+  - **🔴 Three owner exclusions, and a future audit will read them as unresolved — they are
+    settled.** The **Beauchamp Tower** stays its own pin; **only the two general Westminster Abbey
+    entries** join (the other four abbey posts sit on distinct verified interior points precisely so
+    the 3-card stack cap could never hide one); Houses of Parliament takes the **House of Commons**
+    pin but **not Big Ben**.
+  - **🔴 One tour moved, and it is a pre-existing error rather than a concession to its pin:
+    Leighton House sat 179 m away on Park Close**, a residential street, against its own script's
+    *"From the street, Leighton House looks like a fairly stern red-brick Victorian villa"*. It is
+    `manual`, so nothing was firing there — but at a geofence this is the IAC / Chelsea Hotel
+    failure. Radius and trigger mode byte-identical. The other nine members moved the **pin**
+    (6.1–34.7 m, all `manual`).
+  - **⚠️ Owner decision available, not blocking:** the **Charles Dickens Museum** ships
+    `heroImageURL: null` (the field is optional and falls back to the tour's hero) because that
+    tour's only spare image is a **19th-century engraving**. One sourced photograph closes it.
+  - **🔴 FOUND, FLAGGED, NOT FIXED — the London Natural History Museum tour and the LA County one
+    reference the IDENTICAL seven image URLs** (a bare-slug collision predating the handle suffix),
+    so `natural-history-museum_2.webp` is **the LA museum** and `_4.webp` is **LA Union Station**.
+    Both galleries have been mixing cities. **The fix is new filenames, never a byte swap** (#567).
+  - `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35**; the three EXACT groups that remain
+    are the owner's own exclusions. **CI has not run — no PR is open.**
 
 🟢 **MERGED — ONE HUNDRED AND FIVE LINK PINS FROM `@hereinnyc`
 ([#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) `2bc05e30`).**
