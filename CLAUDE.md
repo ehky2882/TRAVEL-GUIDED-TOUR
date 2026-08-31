@@ -173,11 +173,7 @@ gh-pages `1e0ebee6`. Content only — no Swift, no SQL, no build. Full detail:
   eight paths pre-existing. Validator mirror **self-tested 20/20**, then **0 errors, 16 warnings —
   unchanged**. **`makers` and `linkPins` byte-identical**; exactly **3 tours + 1 place** changed,
   **URL fields only**, no coordinate or trigger change anywhere.
-- **🔴 OWED — THIS IS A CLASS OF BUG, NOT AN INSTANCE, AND NOTHING CHECKS FOR IT.**
-  `check-image-duplicates.py` compares image **bytes**, which structurally cannot see this: the two
-  tours pointed at ONE URL, so there was only ever one file to hash. **Nothing anywhere checks for
-  two catalogue entries sharing an `audioURL`.** A whole-catalogue sweep for shared audio and shared
-  image URLs across different tours **has not been run** and is the obvious next move.
+- **✅ **SWEEP RUN AND THE CATALOGUE IS CLEAN (read-only, same session).** Across all 1,552 tours and 483 pins: **0 shared `audioURL`** — the Natural History Museum was the only instance, so no other tour is playing the wrong city's narration — and **exactly 1 cross-city shared image URL**, which is the **documented deliberate** `@malata.antwerp` case (five link pins from one *Top 5 Italian antique markets* video sharing one thumbnail by design). ⚠️ **Neither check exists as tooling** — `check-image-duplicates.py` compares image *bytes* and structurally cannot see two entries sharing ONE URL, and nothing checks `audioURL` at all. Both are ~20 lines and would be worth folding into that script.**
 
 
 ### Nine more place cards, and the stack-cap workaround a place makes unnecessary (branch `claude/tier2-place-cards`, session 127c — content)

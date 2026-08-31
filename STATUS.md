@@ -38,9 +38,10 @@ since **2026-07-15**, six and a half weeks, with no error and nothing any check 
     audio measures **159.9 s**, matching London's declared 160.
   - ⚠️ **The LA tour deliberately keeps the bare slug** — those URLs now serve LA content and it is
     the tour they are correct for.
-  - **🔴 OWED: this is a class of bug with no check behind it.** `check-image-duplicates.py` compares
-    image **bytes** and structurally cannot see two entries sharing ONE URL, and **nothing anywhere
-    checks for a shared `audioURL`**. A whole-catalogue sweep has not been run.
+  - ✅ **Whole-catalogue sweep run and CLEAN:** **0 shared `audioURL`** (NHM was the only instance)
+    and **1 cross-city shared image URL**, the documented deliberate `@malata.antwerp` five-pin case.
+    ⚠️ **Neither check exists as tooling** — `check-image-duplicates.py` compares image *bytes* and
+    cannot see two entries sharing ONE URL; nothing checks `audioURL` at all. Worth adding.
 
 🟡 **OPEN — NINE TIER 2 PLACE CARDS FOR THE PIN-ONLY CLUSTERS
 (branch `claude/tier2-place-cards`, commit `3569993e`).**
