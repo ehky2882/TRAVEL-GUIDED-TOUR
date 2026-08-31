@@ -244,9 +244,11 @@ unasked). Full detail: `archive/HANDOFF-260831-3.md`.
   at Yankee Stadium and its hero shows a Transit Museum carriage** (its caption is that the song
   was written on the subway). Not byte-identical, so the byte check passes; a link pin re-hosts
   only the thumbnail, so **no other frame exists**. Shipped and flagged.
-- **⚠️ #92 IS A PAID ADVERTISEMENT** — a Coca-Cola partnership, marked **`AD`** in the frame and
-  opening `AD |` in its own caption. Still a real location post (Marilyn Monroe photographs at
-  Bowling Green), so it ships, but pinning an ad is the owner's call.
+- **✅ #92 IS A PAID ADVERTISEMENT AND THE OWNER KEEPS IT — decided 2026-08-31: *"i'm fine with the
+  coca cola ad."* THE PIN STAYS; do not re-raise or quietly pull it.** A Coca-Cola partnership,
+  marked **`AD`** in the frame and opening `AD |` in its own caption, but still a real location post
+  (Marilyn Monroe photographs at Bowling Green). ⚠️ **Anyone re-running the open-every-hero audit
+  will flag this again — it is settled**, the Ministry of Enterprise / Christchurch precedent.
 - **⚠️ #35 IS THE ONE BUILDING THIS BATCH COULD NOT NAME.** A Beaux-Arts mansion near Riverside
   Drive and 86th–87th; the Isaac L. Rice Mansion was checked and is **172 m** away, so it is not
   that. It ships under the creator's own frame title, **"A Gilded Age Mansion for Sale"**,
