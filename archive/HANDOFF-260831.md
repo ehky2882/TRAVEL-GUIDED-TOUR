@@ -1,11 +1,11 @@
 # HANDOFF — 2026-08-31 (session 126, web/PM — content)
 
 **Branch:** `claude/place-cards-audit-px3z3o`, cut clean off `origin/main` at `a997860a`.
-**Scope:** an audit of un-placed place candidates, then six of them built. Content only —
+**Scope:** an audit of un-placed place candidates, then seven of them built. Content only —
 no Swift, no SQL, no build, no gh-pages push. **No PR opened** (this session's harness forbids
 opening one unasked).
 
-**Counts:** places **49 → 55** — this branch adds 6; `main` gained the Chelsea Hotel underneath it mid-session (#669). Tours **1,552**, link pins **283**, makers **206** — all unchanged,
+**Counts:** places **49 → 56** — this branch adds 7; `main` gained the Chelsea Hotel underneath it mid-session (#669). Tours **1,552**, link pins **283**, makers **206** — all unchanged,
 byte-for-byte (verified by diffing the parsed `tours` and `makers` arrays against `origin/main`).
 
 ---
@@ -147,7 +147,7 @@ already places, so each collapses to a single map pin. `TourSetMap.maxStacked` i
   fault classes, 14/14 caught**, including all seven place-layer checks.
   ⚠️ **One selftest "miss" was the test's own bug**, not the validator's — a lambda whose `or`
   short-circuited so the fault was never injected. Fixed, then 14/14.
-- **`check-place-candidates.py`: 1 EXACT / 9 NEAR**, against `origin/main`'s 3 / 12 — the survivor is the pre-existing Barcelona deferral. **NEAR fell by
+- **`check-place-candidates.py`: 0 EXACT / 9 NEAR**, against `origin/main`'s 3 / 12 — **EXACT is empty for the first time and the script exits 0.** **NEAR fell by
   exactly the three pairs resolved** (Casa Milà, Operaparken, Wave Hill; Grand Central was never
   in NEAR because of the title rule above), and **EXACT is unchanged** — the four groups this
   session made coincident are each silenced by their new place, so **no new EXACT group was
@@ -158,10 +158,10 @@ already places, so each collapses to a single map pin. `TourSetMap.maxStacked` i
   heroes equal to a member's hero, 0 place heroes shared between places, 0 unknown tag, 0 link pin
   inside `tours`.
 - **`backend/seed_from_toursjson.py` regenerates cleanly** — 206 makers / 1,835 tours / 2,207 stops
-  / **55 places** — which exercises its own `validate_places`.
+  / **56 places** — which exercises its own `validate_places`.
 - **Tours.json byte-stable under a Python re-dump before editing** (checked again before the second
   round); diff **106 insertions / 16 deletions**, which is exactly 6 places × 15 lines plus the 16 pin
-  coordinate lines.
+  coordinate lines. Final diff **121 insertions / 16 deletions**.
 - **CI has not run: no PR is open**, so the authoritative Swift validator has not seen this.
 
 ## 4. Also noticed, not acted on
@@ -243,3 +243,54 @@ tour *Pont Alexandre III & Petit Palais* **plus** the `@suzyandaustin` link pin 
 existing places are exactly that shape**, a link pin beside a single tour. It stays flagged rather
 than built for a different reason: the tour covers **two** subjects, so a place named *Petit Palais*
 would only half-cover its own member.
+
+---
+
+## 6. Third round — Casa Lleó Morera, and EXACT reaches zero
+
+**Owner: *"make casa lleo a place"*.** Places **55 → 56**, `c56f36eb-c62e-5820-8b91-6cf6c23b89d1`.
+Members: the single tour **Casa Lleó Morera** and the **Dreta de l'Eixample** walk. Diff **15
+insertions / 0 deletions** — one place and nothing else.
+
+- **🔴 THIS CLOSES THE CATALOGUE'S LAST EXACT GROUP. `check-place-candidates.py` now prints *"EXACT —
+  none. Every coincident group is already a place."* and exits 0 — the first time in its history.**
+  CLAUDE.md's session-116 entry has said since the tool was written that *"it exits 1 today and a
+  clean exit is not the expected state until Barcelona's place is written."* **That note is now
+  discharged, and has been corrected in place: a clean exit IS the expected state, so treat any
+  future EXACT group as a real finding rather than the known deferral.**
+- **Nothing moved.** The two members were already on an identical coordinate — that is *why* it was
+  the EXACT group — so the identity rule held with no marker relocated.
+- **It is the walk+single shape**, which is 24 of the pre-existing places, and it passes the stop-0
+  test cleanly: the walk's stop 0 is titled **`Casa Lleó Morera`**, not a generic
+  `"— Introduction"`. That is the whole distinction from the twelve walk neighbours ruled out in §1.
+- **⚠️ The hero is a third photograph, and the choice was constrained in a useful way.** The tour's
+  own hero is the **interior stained-glass tribune** — flagged in session 118 as arguably wrong for a
+  facade-led script and **confirmed by the owner as keep-as-is** (*"no worries about casa morera"*) —
+  and the walk's hero is an aerial of the Eixample grid. So the establishing exterior neither member
+  carries was exactly what was free: **`casa-lleo-morera_2.webp`**, the corner facade seen from
+  across Passeig de Gràcia, with the ground-floor shopfronts in frame, which is what the tour's own
+  story is about. The other four gallery images are an upper-storey crop and three interiors.
+- **⚠️ THE COORDINATE REVERSE-GEOCODES TO A METRO PASSAGEWAY, AND IT IS RIGHT.** At z18 it returns
+  `Passadís metro L3-L2/L4, Passeig de Gràcia (lateral Llobregat)` — the pavement above the metro
+  concourse, i.e. the **opposite-pavement vantage this file documents for Barcelona** (Casa Batlló
+  39 m, Casa Amatller 60 m, Casa Lleó Morera 31 m from their OSM building nodes). The forward
+  geocode names **`Casa Lleó Morera`** on Carrer del Consell de Cent at exactly that 31 m.
+  **Do not "correct" the place onto the building node.**
+- **The address is the building's published one**, `Passeig de Gràcia 35`, not OSM's side-street
+  filing under Consell de Cent — the same call made for La Pedrera, where OSM files it under
+  Carrer de Provença.
+- **Ranking falls out right with no work:** both members carry `createdAt: 2026-08-18`, so
+  `Place.ranked`'s tie-break puts the **single before the walk** — someone standing at the building
+  gets the tour about it ahead of the walk that merely begins there.
+
+### What is left after this
+
+Nothing buildable without a decision. **Monestir de Montserrat** is the one remaining genuine
+walk+single pair (31 m; the walk's stop 0 **is** the monastery; its stop 0 is `manual`, so moving it
+disturbs no geofence, and the single has three spare photographs). Beyond that: **Tribune Tower** and
+**Petit Palais**, where the Atlas tour covers two subjects, and **Walt Disney World Swan + Dolphin**
+(216 m, two pins, one Michael Graves resort but two buildings — the Grand/Petit Palais shape, so
+probably the same answer). A 500 m sweep over every pair sharing a meaningful word produced **78
+further pairs in the 150–500 m band and not one real site** — all shared generic words inside one
+district (five *Casa* pairs on Passeig de Gràcia, four *Plaza* in Madrid, six *Benesse* on Naoshima,
+three *Ginza*, three *Bondi*).

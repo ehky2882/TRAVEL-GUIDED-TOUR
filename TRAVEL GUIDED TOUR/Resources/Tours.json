@@ -79923,6 +79923,21 @@
         "959A7E8C-498A-58A0-B7D9-C182436C710E",
         "9E74571B-BDA8-565B-A510-9E4DBED23C67"
       ]
+    },
+    {
+      "id": "c56f36eb-c62e-5820-8b91-6cf6c23b89d1",
+      "name": "Casa Lleó Morera",
+      "description": "The third house of the Illa de la Discòrdia, and the easiest of the three to walk past. Around 1902 Francesca Morera hired Lluís Domènech i Montaner to remodel an older building on the corner of Passeig de Gràcia and Consell de Cent, and it was named for her son Albert Lleó i Morera, who died two years into the work. Eusebi Arnau carved the figures on its pink marble columns, Lluís Bru and Mario Maragliano filled the surfaces with mosaic, and mulberry motifs run through the whole building — morera is Catalan for mulberry, a quiet pun on the family name. It took the city's prize for the best building of the year. Then in 1943, when the ground floor was refitted as a shop, workmen took picks to the sculpted flower boxes and their figures at street level; several of the salvaged heads were sold on and ended up in Salvador Dalí's museum at Figueres. Look up and the building is intact from the first floor to the little domed temple on the roof.",
+      "latitude": 41.39134849385539,
+      "longitude": 2.16545472553582,
+      "city": "Barcelona",
+      "address": "Passeig de Gràcia 35, Barcelona",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-lleo-morera_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0ff5afed-ded8-56b3-ad3f-e851274a4f68",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a"
+      ]
     }
   ],
   "linkPins": [
