@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-30 (session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
+**Last verified:** 2026-08-31 (session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,31 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN — SEVEN PLACE CARDS FROM AN AUDIT, AND `check-place-candidates.py` REACHES ZERO
+([#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673), branch `claude/place-cards-audit-px3z3o`).**
+**places 49 → 56; tours (1,552), link pins (283) and makers (206) byte-for-byte unchanged.** Content
+only — no Swift, no SQL, no gh-pages push, no build. Built: **Casa Milà — La Pedrera**,
+**Operaparken**, **Wave Hill**, **Grand Central Terminal**, **Chichén Itzá**, **Rosewood Mayakoba**,
+**Casa Lleó Morera**. The pin moved and the tour never did, every time; nothing moved at all for the
+last three, whose members were already coincident.
+  - 🔴 **EXACT is now empty and the script exits 0 for the first time in its history.** The Barcelona
+    deferral it had reported stood since session 116. **CLAUDE.md's standing note that a clean exit
+    is NOT the expected state is corrected in place** — treat any future EXACT group as a real
+    finding. **0 EXACT / 9 NEAR** against `origin/main`'s 3 / 12.
+  - 🔴 **The checker cannot see every candidate.** Its NEAR tier matches on title containment, so
+    *The South Facade of Grand Central* and *Grand Central Terminal* never pair — run it **and** a
+    hand sweep (every pair within 40 m, plus every pair within 200 m sharing a distinctive word).
+  - ⚠️ **Two heroes are BORROWED from a member** (Chichén Itzá, Rosewood Mayakoba) — both are
+    pin-only sites with empty galleries, so no third photograph exists. The Waterlooplein case,
+    already closed by the owner: **do not go sourcing a replacement.** The other five are third
+    photographs promoted from a member tour's gallery, nothing sourced.
+  - ⚠️ **The Great Ball Court is deliberately excluded** from the Chichén Itzá place and stays its
+    own pin 224 m away. **Do not "complete" it.**
+  - **Still flagged, not built:** Monestir de Montserrat (31 m), Tribune Tower (142 m), Petit Palais
+    (276 m), Walt Disney World Swan + Dolphin (216 m). **There is no Grand Palais candidate** — it
+    has one entry in the catalogue and the pin beside it is the Petit Palais, 155 m away.
+
 
 🟢 **MERGED — SEVEN `@nikola.matus` PINS, THE CHELSEA HOTEL COORDINATE, AND THE CHELSEA PLACE
 ([#668](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/668) `a997860a`, plus the place PR).**
