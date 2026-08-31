@@ -393,7 +393,24 @@ strict decoder frozen at 18 August:
 
 **Owed, and worth doing before the next release:** ship an update, because every fix since
 18 August — the launch sequence, offline photographs, fullscreen video, the search rewrite, the
-link-pin fullscreen fix — is **not** in what the public has. Build 135 is the candidate.
+link-pin fullscreen fix — is **not** in what the public has.
+
+**✅ THE UPDATE IS PREPPED (2026-08-31).** `fastlane/metadata/en-US/release_notes.txt` is written
+(required for an update, impossible on a first release — which is why it had been deleted), the
+description's stale counts are corrected and its two missing features added, and
+`docs/launch-runbook.md` gained a **§ Shipping an update** with the two rules that only bite on an
+update: What's New is mandatory, and the version must be new (**`MARKETING_VERSION` is 1.1.1**,
+because Apple refuses builds against a released 1.1).
+
+- **The build is ready: 137**, owner device-verified. Its app code was diffed against `main` and
+  differs by **one comment block**; only its bundled seed is behind, which catches up on first
+  launch. **No new build is needed.**
+- **🔴 VERIFIED AGAINST BUILD 66'S OWN SOURCE, not assumed:** its `ToursData` decodes
+  `{makers, tours}` only and the tree carries **no `Models/Place.swift`** — so **every one of the
+  283 link pins and 49 place pages is invisible to the public today.** That is the split working as
+  designed, and it makes both the headline of the release notes.
+- **⚠️ Remaining steps are owner-only and outside the repo:** create the 1.1.1 version record, push
+  the metadata, attach build 137, submit. § Shipping an update has them in order.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -406,8 +423,8 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 |---|---|---|
 | ~~**App Store 1.1 review**~~ | ✅ **APPROVED AND LIVE** — owner-reported 2026-08-28. Submitted 2026-08-18 03:22 UTC on build 66. See § 1d. | ✅ Done |
 | **Stripe platform review** | Response submitted; account flagged under Restricted Businesses. | ❓ Awaiting Stripe reply |
-| **9 IAP tiers `MISSING_METADATA`** | Each needs a review screenshot at its real price. Deliberately blocked: every walk is $0.99 today, so a genuine $2.99 screenshot cannot exist yet. | ⏸ Blocked by design |
-| **EU trader declaration** | App declared **non-trader** while selling ten IAP tiers into EU cities. Declaring trader publishes an address. | 🔴 Decision owed |
+| ~~**IAP tiers blocked**~~ | ✅ **ALL 14 ARE READY TO SUBMIT (owner, 2026-08-31)** — the nine that had sat in `MISSING_METADATA` since August, plus four new ones (**599 / 799 / 1299 / 1799**). SQL applied, products created, screenshots uploaded, all added for review. **They ride with the 1.1.1 submission.** Two findings, both now in the docs: **the review screenshot must be 1242×2208** (the 5.5″ size — 1320×2868 and 1290×2796 were both refused, and CLAUDE.md had the wrong value recorded), and **one image covers all fourteen** — Apple wants to see where the purchase appears, not what it costs, so the per-price screenshot rule was this project's own over-caution. | ✅ Done |
+| **EU trader declaration** | App declared **non-trader** while selling IAP tiers into EU cities. Declaring trader publishes an address. | 🔴 Decision owed |
 | **LLC vs sole proprietor** | Gates the Stripe payout path, and collapses the EU-trader and the AHWY/EHKY-initials trade-offs at once. | 🔴 Decision owed |
 
 ### SQL pastes owed (Supabase SQL Editor, project **Dozent**)

@@ -32,7 +32,7 @@ final class PaidTourTests: XCTestCase {
 
     // MARK: - Product id mapping
 
-    /// These strings must match the ten products created by hand in App Store
+    /// These strings must match the fourteen products created by hand in App Store
     /// Connect. A mismatch means the payment sheet never opens, so pin every
     /// tier rather than spot-checking.
     func test_productId_matchesAppStoreConnectProducts() {
@@ -42,10 +42,14 @@ final class PaidTourTests: XCTestCase {
             299: "tour.tier.299",
             399: "tour.tier.399",
             499: "tour.tier.499",
+            599: "tour.tier.599",
             699: "tour.tier.699",
+            799: "tour.tier.799",
             899: "tour.tier.899",
             999: "tour.tier.999",
+            1299: "tour.tier.1299",
             1499: "tour.tier.1499",
+            1799: "tour.tier.1799",
             1999: "tour.tier.1999",
         ]
         for (tier, productId) in expected {
