@@ -43,9 +43,10 @@ page shares `TourSetMap` with the creator page).
     also hides while a placecard stack is up. **⚠️ My own first pass called this a harness artifact**
     after scrolling the map into view before tapping — *a tap that only works after you scroll the
     control somewhere convenient is not a passing test.*
-  - **⚠️ Needs an owner device look before merge** — this is a code change (§ Merging PRs). What a
-    device adds over the simulator is the feel of the layer teardown and the fly-to running
-    together.
+  - **📱 ON TESTFLIGHT AS 1.1.1 (138)**, cut from this branch with `main` merged in (`e0799d8c`),
+    build notes attached. **⚠️ Needs an owner device look before merge** — this is a code change
+    (§ Merging PRs). What a device adds over the simulator is the feel of the layer teardown and the
+    fly-to running together.
 
 🟢 **MERGED — SEVEN `@nikola.matus` PINS, THE CHELSEA HOTEL COORDINATE, AND THE CHELSEA PLACE
 ([#668](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/668) `a997860a`, plus the place PR).**
@@ -428,6 +429,7 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
+| **138** | `map-expand-control` | [#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671) the expand control on every inline map, `main` merged in (`e0799d8c`) | 🟡 **awaiting owner device review** |
 | **137** | `instagram-player-fit` | #662 the Instagram crop + fullscreen scrubber, `main` merged in, **marketing version 1.1.1** | ✅ **owner-verified — *"works! thank you"*; #662 merged as `845f0d86`** |
 | 136 | `instagram-player-fit` | Same code at **1.1** (`49ac5382`) | 🔴 **rejected at upload** — 1.1 is released, so Apple refuses the version string |
 | **134** | **`main`** | #622 the real fullscreen fix — the video's own window (`e22dba7`) | ✅ **install this** |
