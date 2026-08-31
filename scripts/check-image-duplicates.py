@@ -35,6 +35,43 @@ classifies each group of identical files:
 Exit codes: 0 = no errors (INFO reuse is fine), 1 = duplicates that look wrong,
 2 = file/network error.
 
+SHARED URLS — A DIFFERENT BUG, AND A WORSE ONE
+----------------------------------------------
+Everything above is about two DIFFERENT urls holding the same bytes. The
+opposite shape is two different entries pointing at the SAME url, and the byte
+checks are structurally blind to it: one file hashed once is one file, so it
+never forms a group at all.
+
+That is not hypothetical. From 2026-07-15 to 2026-08-31 the London Natural
+History Museum tour and the Los Angeles Natural History Museum of LA County
+tour carried the identical `audioURL` — a bare-slug collision predating the
+handle-suffix convention — so for six and a half weeks the London tour played
+the Los Angeles narration. Its seven images were the same file too, and the
+Albertopolis walk had been dragged in as a third victim. Nothing errored,
+nothing 404'd, every url returned 200, and `validate-tours.swift` was happy.
+It was found by hand, not by any check.
+
+So `report_shared_urls` runs over the catalog before a single byte is fetched
+(no network, so it costs nothing) and classifies each url held by two or more
+entries:
+
+  ERROR  two entries share one narration file. Audio is never legitimately
+         shared — at most one of them can be right.
+  ERROR  one image on entries in DIFFERENT cities. That is the signature of a
+         slug collision: two unrelated places that happened to share a name.
+  ERROR  two ordinary tours in one city share an image — a mis-stage.
+  INFO   a multi-stop walk reusing the imagery of a landmark it passes, in its
+         stop images or its gallery. The documented convention.
+  INFO   link pins cut from ONE source post sharing its thumbnail — the
+         @malata.antwerp "Top 5 Italian antique markets" video is five pins in
+         five cities off one frame, so this is checked BEFORE the city rule.
+
+This check is deliberately NOT scoped by --maker/--pins: a collision is a
+property of the whole catalog, and the NHM one spanned two cities and two
+makers, so scoping it would hide the exact bug it exists to find. Places stay
+out of it for the same reason they are out of the byte checks — a place hero is
+allowed to be a member's own hero at the same url, by design.
+
 LINK PINS
 ---------
 Link pins do NOT live in the `tours` array — they travel in a sibling `linkPins`
@@ -196,6 +233,117 @@ def build_index(catalog, maker_code=None, scope="tours"):
                 if tour.get("kind") == "multiStop":
                     walk_stop_urls.add(stop["imageURL"])
     return sorted(urls), slug_kind, walk_stop_urls
+
+
+# ---------------------------------------------------------------------------
+# Shared-URL checks (no network).
+#
+# WHY THESE ARE SEPARATE FROM EVERYTHING ABOVE
+# --------------------------------------------
+# Every other check in this file compares FILE BYTES, and that is structurally
+# blind to the worst version of this bug class: when two catalog entries point
+# at the SAME url there is only ever one file to hash, so nothing looks
+# duplicated. On 2026-08-31 the London Natural History Museum and the Natural
+# History Museum of LA County both used the bare slug `natural-history-museum`,
+# so both tours carried the identical `audioURL`. One file lives at one path,
+# the LA batch overwrote London's on 2026-07-15, and for six and a half weeks
+# the London tour PLAYED THE LOS ANGELES NARRATION. No error, no missing asset,
+# nothing any check we had could see. The gallery mix-up that got reported was
+# the smaller half.
+#
+# These read Tours.json and nothing else, so they cost nothing and run on every
+# invocation — including scoped ones.
+#
+# THEY ALWAYS RUN OVER THE WHOLE CATALOG, NEVER THE SCOPE. A collision is a
+# catalog-wide property: `--maker LDN` would have shown London's tour pointing
+# at one audio file and reported nothing wrong, because the LA tour that shared
+# it is out of scope. Scoping this check would hide exactly the bug it exists
+# to find.
+
+
+def asset_refs(entry):
+    """(role, url) for every asset an entry points at.
+
+    Empty strings are skipped deliberately: every link pin carries
+    `audioURL: ""`, and counting those would group all 483 pins into one
+    enormous bogus "shared audio" finding.
+    """
+    refs = []
+    if entry.get("heroImageURL"):
+        refs.append(("hero", entry["heroImageURL"]))
+    for i, url in enumerate(entry.get("additionalImageURLs") or []):
+        if url:
+            refs.append((f"gallery[{i}]", url))
+    for i, stop in enumerate(entry.get("stops") or []):
+        if stop.get("imageURL"):
+            refs.append((f"stops[{i}].imageURL", stop["imageURL"]))
+        if (stop.get("audioURL") or "").strip():
+            refs.append((f"stops[{i}].audioURL", stop["audioURL"]))
+    return refs
+
+
+def classify_shared_url(refs):
+    """-> (verdict, why) for one url held by 2+ DIFFERENT entries.
+
+    Pure, so the selftest can pin every branch without a catalog.
+    `refs` is [(entry, role)].
+    """
+    holders = list({e["id"]: e for e, _ in refs}.values())
+
+    # Audio is never legitimately shared. Two entries, one narration file, and
+    # at most one of them can be right — this is the bug above.
+    if any(role.endswith("audioURL") for _, role in refs):
+        return "error", "two entries share one narration file"
+
+    # Link pins cut from ONE source post legitimately share its thumbnail: the
+    # @malata.antwerp "Top 5 Italian antique markets" video is five pins in five
+    # cities off one frame. Checked before the city rule, which it would fail.
+    sources = {e.get("sourceURL") for e in holders}
+    if all(e.get("kind") == "link" for e in holders) and len(sources) == 1 and None not in sources:
+        return "info", "link pins cut from one source post share its thumbnail"
+
+    # Different cities is the signature of a slug collision — two unrelated
+    # places that happened to share a name.
+    if len({e.get("city") for e in holders}) > 1:
+        return "error", "one image on entries in different cities"
+
+    # A walk reusing the imagery of a landmark it passes is the documented
+    # convention, in its stop images and in its gallery alike. Note this is
+    # about a shared URL, which is deliberate reuse of a known-good file — the
+    # opposite of the byte-level checks above, where two DIFFERENT urls holding
+    # the same bytes means one of them was written by mistake.
+    if any(e.get("kind") == "multiStop" for e in holders):
+        return "info", "a walk reusing a landmark's own imagery (documented)"
+
+    return "error", "two entries share one image"
+
+
+def report_shared_urls(catalog):
+    """Print shared-URL findings; -> number of errors."""
+    entries = list(catalog.get("tours") or []) + list(catalog.get("linkPins") or [])
+    by_url = collections.defaultdict(list)
+    for entry in entries:
+        for role, url in asset_refs(entry):
+            by_url[url].append((entry, role))
+
+    errors, info = [], 0
+    for url, refs in by_url.items():
+        if len({e["id"] for e, _ in refs}) < 2:
+            continue                      # an entry reusing its own asset is fine
+        verdict, why = classify_shared_url(refs)
+        if verdict == "error":
+            errors.append((url, why, refs))
+        else:
+            info += 1
+
+    for url, why, refs in errors:
+        print(f"ERROR  {os.path.basename(url)} — {why}")
+        for entry, role in refs:
+            print(f"         {entry.get('title', '?')[:46]:46} {entry.get('city', '?')} ({role})")
+    if errors:
+        print()
+    print(f"shared-URL check: {len(errors)} error(s), {info} documented reuse(s)\n")
+    return len(errors)
 
 
 def thumbnail(data):
@@ -542,6 +690,8 @@ def selftest():
         failures += 1
     if not _selftest_fetch_guards():
         failures += 1
+    if not _selftest_shared_urls():
+        failures += 1
     print("selftest OK" if not failures else f"selftest FAILED ({failures})")
     return 0 if not failures else 1
 
@@ -624,6 +774,103 @@ def _selftest_fetch_guards():
     return ok
 
 
+def _selftest_shared_urls():
+    """Pin every branch of classify_shared_url, and prove it catches the real bug.
+
+    The cases below are the actual 2026-08-31 collision and the actual
+    documented reuses it must NOT flag — not invented shapes.
+    """
+    def E(i, title, city, kind="single", src=None):
+        e = {"id": i, "title": title, "city": city, "kind": kind}
+        if src:
+            e["sourceURL"] = src
+        return e
+
+    lon = E("t-lon", "Natural History Museum", "London")
+    lax = E("t-lax", "Natural History Museum of LA County", "Los Angeles")
+    alb = E("t-alb", "Albertopolis", "London", "multiStop")
+    col = E("t-col", "The Colosseum", "Rome")
+    anc = E("t-anc", "Ancient Rome", "Rome", "multiStop")
+    p1 = E("p-1", "Mercato Antiquario di Lucca", "Lucca", "link", "https://tiktok/x")
+    p2 = E("p-2", "Fiera Antiquaria di Arezzo", "Arezzo", "link", "https://tiktok/x")
+    q1 = E("q-1", "Rosewood Mayakoba", "Playa del Carmen", "link", "https://tiktok/a")
+    q2 = E("q-2", "The Old Cinema", "London", "link", "https://tiktok/b")
+
+    cases = [
+        # THE BUG: one narration file on two tours. This is the case that
+        # existed for six and a half weeks and that nothing could see.
+        ([(lon, "stops[0].audioURL"), (lax, "stops[0].audioURL")], "error"),
+        # its gallery half — same slug, two cities
+        ([(lon, "gallery[0]"), (lax, "gallery[0]")], "error"),
+        # ...including when a walk is caught up in it
+        ([(lon, "hero"), (alb, "stops[2].imageURL"), (lax, "hero")], "error"),
+        # DOCUMENTED: a walk reusing a landmark's imagery, as a stop image...
+        ([(col, "hero"), (anc, "stops[1].imageURL")], "info"),
+        # ...and in the walk's own gallery, which is the same convention
+        ([(col, "gallery[0]"), (anc, "gallery[0]")], "info"),
+        # DOCUMENTED: five pins off one source post share its thumbnail
+        ([(p1, "hero"), (p2, "hero")], "info"),
+        # two pins from DIFFERENT posts sharing a hero is a mis-stage
+        ([(q1, "hero"), (q2, "hero")], "error"),
+        # two single-stop tours in one city sharing an image
+        ([(col, "hero"), (E("t-x", "Other", "Rome"), "hero")], "error"),
+        # audio wins over every other rule: even one-source pins may not share it
+        ([(p1, "stops[0].audioURL"), (p2, "stops[0].audioURL")], "error"),
+    ]
+    ok = True
+    for refs, expected in cases:
+        got, why = classify_shared_url(refs)
+        if got != expected:
+            ok = False
+            names = " == ".join(f"{e['title'][:22]}({r})" for e, r in refs)
+            print(f"  FAIL  expected {expected:5} got {got:5}  {names}  [{why}]")
+
+    # An empty audioURL must never group. Every link pin carries one, so
+    # without this all 483 would land in a single bogus finding.
+    pin = {"id": "p", "title": "A pin", "city": "NY", "kind": "link",
+           "heroImageURL": "https://x/h.webp",
+           "stops": [{"audioURL": "", "imageURL": "https://x/h.webp"}]}
+    roles = [r for r, _ in asset_refs(pin)]
+    if any(r.endswith("audioURL") for r in roles):
+        print(f"  FAIL  empty audioURL was collected: {roles}"); ok = False
+    # ...and an entry reusing its OWN asset is one entry, never a finding
+    if len(asset_refs(pin)) != 2:
+        print(f"  FAIL  asset_refs: {roles}"); ok = False
+
+    # End to end: the real pre-fix shape must produce errors, the fixed one none.
+    broken = {"tours": [
+        dict(lon, heroImageURL="https://x/i/nhm_hero.webp",
+             stops=[{"audioURL": "https://x/a/nhm.mp3", "imageURL": "https://x/i/nhm_hero.webp"}]),
+        dict(lax, heroImageURL="https://x/i/nhm_hero.webp",
+             stops=[{"audioURL": "https://x/a/nhm.mp3"}])], "linkPins": []}
+    fixed = {"tours": [
+        dict(lon, heroImageURL="https://x/i/nhm-london_hero.webp",
+             stops=[{"audioURL": "https://x/a/nhm-london.mp3", "imageURL": "https://x/i/nhm-london_hero.webp"}]),
+        dict(lax, heroImageURL="https://x/i/nhm_hero.webp",
+             stops=[{"audioURL": "https://x/a/nhm.mp3"}])], "linkPins": []}
+    import io as _io, contextlib as _cl
+    with _cl.redirect_stdout(_io.StringIO()):
+        n_broken, n_fixed = report_shared_urls(broken), report_shared_urls(fixed)
+    if n_broken != 2:
+        print(f"  FAIL  pre-fix catalog should report 2 errors, got {n_broken}"); ok = False
+    if n_fixed != 0:
+        print(f"  FAIL  fixed catalog should report 0 errors, got {n_fixed}"); ok = False
+
+    # A check nothing calls is not a check. --selftest exits before main()'s
+    # body ever runs, so neutering the call site there is invisible to every
+    # case above; read main()'s own source and assert the wiring instead.
+    import inspect as _inspect
+    src = _inspect.getsource(main)
+    if "report_shared_urls(catalog)" not in src:
+        print("  FAIL  main() no longer runs report_shared_urls"); ok = False
+    elif not re.search(r"if\s+errors\s+or\s+shared_url_errors\s*:", src):
+        print("  FAIL  main() runs the check but its result cannot fail the run"); ok = False
+
+    print("  PASS  shared urls: audio, cross-city, walk reuse, one-source pins" if ok
+          else "  FAIL  shared urls")
+    return ok
+
+
 def _selftest_scope():
     """Link pins live in a sibling array; --all must actually reach them."""
     hero = "https://x/images/papaya-king-thedesigndetourist_hero.webp"
@@ -691,6 +938,11 @@ def main():
         print(f"cannot read {args.file}: {exc}", file=sys.stderr)
         sys.exit(2)
 
+    # Costs nothing (no network) and is deliberately NOT scoped — see the
+    # comment above `asset_refs`: a collision is a catalog-wide property, and
+    # scoping this would hide the very bug it exists to find.
+    shared_url_errors = report_shared_urls(catalog)
+
     urls, slug_kind, walk_stop_urls = build_index(catalog, args.maker, scope_name)
     if not urls:
         print(f"no images found{' for maker ' + args.maker if args.maker else ''}"
@@ -741,6 +993,9 @@ def main():
 
     if errors:
         print(f"{errors} duplicate group(s) need review — a dead swipe, or an image staged under the wrong name")
+    if shared_url_errors:
+        print(f"{shared_url_errors} shared-URL error(s) — two entries pointing at one file")
+    if errors or shared_url_errors:
         sys.exit(1)
     print(f"OK — no suspicious duplicates ({dupes} expected walk-reuse group(s))")
     sys.exit(0)
