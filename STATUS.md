@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-31 (session 127 — 95 link pins pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
+**Last verified:** 2026-08-31 (session 128 — 105 link pins pushed on `claude/link-tours-upload-qw2l2a`, no PR, see § 1. Earlier: session 127 — 95 link pins pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,34 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN — ONE HUNDRED AND FIVE LINK PINS FROM `@hereinnyc`
+(branch `claude/link-tours-upload-qw2l2a`, commit `4f7a881c`, pushed — NO PR).**
+**linkPins 378 → 483; tours (1,552), makers (208) and places (56) unchanged.** Content only — no
+Swift, no SQL, no build. Branch restarted clean off `origin/main` (#674 is merged). **The largest
+batch to date**, against a previous record of 95. All 105 posts alive and pinnable.
+  - **⚠️ Owner decision available, not blocking — #92 is a paid advertisement.** A Coca-Cola
+    partnership, marked **`AD`** in the frame and opening `AD |` in its own caption. It is still a
+    real location post (Marilyn Monroe photographs at Bowling Green) so it ships, but pinning an ad
+    is the owner's call. One line removes it.
+  - **🔴 Two heroes are the same vintage subway carriage, and one of them is pinned at Yankee
+    Stadium.** #15 and #83 score perceptual Hamming **6 of 256** with a thumbnail diff of **12.2**,
+    where every other pair in the batch sits at 32+/30+ — the creator reused the footage. So the
+    Yankee Stadium pin's hero is a Transit Museum carriage. A link pin re-hosts only the thumbnail,
+    so **no other frame exists**; the alternatives are keep it or pull the pin.
+  - **⚠️ #35 is the one building the batch could not name** — a Beaux-Arts mansion near Riverside
+    Drive and 86th–87th (the Isaac L. Rice Mansion was checked and is 172 m away). It ships under the
+    creator's own frame title, *"A Gilded Age Mansion for Sale"*, asserting no attribution.
+  - **⚠️ `check-place-candidates.py` goes 10 EXACT → 11, NEAR 30 → 41.** The one new EXACT group is
+    this batch's own **Gracie Mansion** pair — two posts about the same building on the same node.
+    Honest rather than manufactured; **the pins were deliberately not nudged apart to dodge the
+    checker.** The +11 NEAR are new pins beside existing Atlas tours of the same subject (Empire
+    State 92 m, MSG 19/20 m, Yankee Stadium 31 m, Riverside Church, Times Square, the Red Room).
+    **Flagged, none created.**
+  - **⚠️ A note for the next batch: `check-image-duplicates.py --pins` reports OK on this batch**,
+    because its confirmation threshold (8.0) sits below the 12.2 diff of the reused-footage pair.
+    That is the tool working as designed — it hunts byte-level re-writes — but "same footage,
+    different frame" passes it, and only a per-batch perceptual sweep catches it.
 
 🟡 **OPEN — NINETY-FIVE LINK PINS FROM ALICE LOXTON, DOMUS AND ROME ART STORIES
 (branch `claude/tour-links-upload-t5jk3n`, commit `284acbd7`, pushed — NO PR).**
