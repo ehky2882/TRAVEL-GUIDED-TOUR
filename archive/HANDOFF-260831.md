@@ -5,7 +5,7 @@
 no Swift, no SQL, no build, no gh-pages push. **No PR opened** (this session's harness forbids
 opening one unasked).
 
-**Counts:** places **48 → 52**. Tours **1,552**, link pins **283**, makers **206** — all unchanged,
+**Counts:** places **49 → 53** — this branch adds 4; `main` gained the Chelsea Hotel underneath it mid-session (#669). Tours **1,552**, link pins **283**, makers **206** — all unchanged,
 byte-for-byte (verified by diffing the parsed `tours` and `makers` arrays against `origin/main`).
 
 ---
@@ -32,9 +32,10 @@ by hand: **every marker pair within 40 m, plus every pair within 200 m sharing a
 | Wave Hill (Bronx) | 63 m | tour + `@wavehill` pin |
 | Grand Central Terminal (New York) | 88 m | *The South Facade of Grand Central* + `@lizabanks11` pin |
 
-**The Chelsea Hotel was the fifth and is deliberately NOT built here — another session is
-handling it.** It remains the catalogue's one coincident tour+pin pair with no place, and
-`check-place-candidates.py` still reports it as EXACT. That is expected, not an omission.
+**The Chelsea Hotel was the fifth and was left to the session already handling it.** It merged as
+[#669](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/669) mid-session, so this branch was
+rebuilt on top of it **the documented way: take `main`'s catalogue and re-run the idempotent
+assembler, never hand-resolve a JSON conflict.** Every check below was re-run afterwards.
 
 ### Flagged, not built
 
@@ -146,24 +147,26 @@ already places, so each collapses to a single map pin. `TourSetMap.maxStacked` i
   fault classes, 14/14 caught**, including all seven place-layer checks.
   ⚠️ **One selftest "miss" was the test's own bug**, not the validator's — a lambda whose `or`
   short-circuited so the fault was never injected. Fixed, then 14/14.
-- **`check-place-candidates.py`: 4 EXACT / 9 NEAR**, against the base's 4 / 12. **NEAR fell by
+- **`check-place-candidates.py`: 3 EXACT / 9 NEAR**, against `origin/main`'s 3 / 12. **NEAR fell by
   exactly the three pairs resolved** (Casa Milà, Operaparken, Wave Hill; Grand Central was never
   in NEAR because of the title rule above), and **EXACT is unchanged** — the four groups this
   session made coincident are each silenced by their new place, so **no new EXACT group was
-  manufactured.** The four that remain are Chelsea (another session's), the Barcelona deferral,
-  Chichén Itzá and Rosewood Mayakoba.
+  manufactured.** The three that remain are the Barcelona deferral, Chichén Itzá
+  and Rosewood Mayakoba — Chelsea is gone, resolved by #669.
 - **Structural, over the edited catalogue:** 0 duplicate place ids, 0 places with fewer than 2
   members, 0 tours claimed by two places, 0 members off their place's exact coordinate, 0 place
   heroes equal to a member's hero, 0 place heroes shared between places, 0 unknown tag, 0 link pin
   inside `tours`.
 - **`backend/seed_from_toursjson.py` regenerates cleanly** — 206 makers / 1,835 tours / 2,207 stops
-  / **52 places** — which exercises its own `validate_places`.
+  / **53 places** — which exercises its own `validate_places`.
 - **Tours.json byte-stable under a Python re-dump before editing**; diff **76 insertions /
   16 deletions**, which is exactly 4 places × 15 lines plus the 16 pin coordinate lines.
 - **CI has not run: no PR is open**, so the authoritative Swift validator has not seen this.
 
 ## 4. Also noticed, not acted on
 
-- **The `Casa Milà — La Pedrera` pin's `heroImageURL` contains a double slash** (`images//casa-mila-…`),
-  from the batch that merged in #668. **It resolves — both spellings return 200** — so it is
-  untidy rather than broken, and was left alone as another session's content.
+- **The `Casa Milà — La Pedrera` pin's `heroImageURL` contained a double slash** (`images//casa-mila-…`),
+  from the batch that merged in #668. **It resolved — both spellings return 200** — so it was untidy
+  rather than broken, and was left alone as another session's content. **#669 has since cleaned it and
+  six others**, and that fix is preserved here because the merge took `main`'s file and re-ran the
+  assembler over it.
