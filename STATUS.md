@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-31 (session 127b — ten place cards pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
+**Last verified:** 2026-08-31 (session 127b — ten place cards pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**. Earlier: session 128 — [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), verified to have actually changed files on `main` rather than trusting GitHub's success line, then [#677](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/677) `b60c2a42` recorded the owner's two decisions on it. **Both are closed — the Coca-Cola ad pin and the Yankee Stadium carriage hero both stay** — so that item has left this board; its story is in `CLAUDE.md` § Current State. Five § 1 entries were stale `OPEN` at the time (#673, #674, #675, #663, #658, all merged) and were flipped)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -51,32 +51,6 @@ London · Natural History Museum · Churchill War Rooms · The Charles Dickens M
     so `natural-history-museum_2.webp` is **the LA museum** and `_4.webp` is **LA Union Station**.
     Both galleries have been mixing cities. **The fix is new filenames, never a byte swap** (#567).
   - `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35**; the three groups it resolved are **CaixaForum Madrid**, **The National Gallery** (two coincident pins) and **Leighton House + The Arab Hall**. ⚠️ **The eight that REMAIN are not the owner's exclusions** — those sit at deliberately distinct coordinates and never appear in EXACT at all. The eight are all pin-only pairs, seven from the 95-pin batch (Harvington Hall, Hatfield House + the Elizabeth Oak, Syon Park, York Minster + Roman York, Windsor Castle ×2 groups, Hever Castle) plus **Gracie Mansion** from #675 — every one still needs an owner decision, and a place for any of them would have to borrow a member's hero.
-
-🟢 **MERGED — ONE HUNDRED AND FIVE LINK PINS FROM `@hereinnyc`
-([#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) `2bc05e30`).**
-**linkPins 378 → 483; tours (1,552), makers (208) and places (56) unchanged.** Content only — no
-Swift, no SQL, no build. CI green on all three jobs; the squash was verified to have actually
-changed files on `main` (5,072 insertions across 6 files) and the catalogue re-read from
-`origin/main` at 483 pins. **The largest batch to date**, against a previous record of 95.
-  - **✅ CLOSED — the paid-advertisement pin stays.** Owner, 2026-08-31: *"i'm fine with the coca
-    cola ad."* A Coca-Cola partnership marked **`AD`** in the frame, but a real location post
-    (Marilyn Monroe photographs at Bowling Green). **Settled — do not re-raise.**
-  - **🔴 Owner decision — two heroes are the same vintage subway carriage, and one is pinned at
-    Yankee Stadium.** They score perceptual Hamming **6 of 256** with a thumbnail diff of **12.2**,
-    where every other pair in the batch sits at 32+/30+ — the creator reused the footage. So the
-    Yankee Stadium pin's hero is a Transit Museum carriage. A link pin re-hosts only the thumbnail,
-    so **no other frame exists**; the alternatives are keep it or pull the pin.
-  - **⚠️ One building could not be named** — a Beaux-Arts mansion near Riverside Drive and 86th–87th
-    (the Isaac L. Rice Mansion was checked and is 172 m away). It ships under the creator's own frame
-    title, *"A Gilded Age Mansion for Sale"*, asserting no attribution.
-  - **⚠️ `check-place-candidates.py` goes 10 EXACT → 11, NEAR 30 → 41.** The one new EXACT group is
-    this batch's own **Gracie Mansion** pair — two posts about the same building on the same node.
-    Honest rather than manufactured; **the pins were deliberately not nudged apart to dodge the
-    checker.** **Flagged, none created.**
-  - **⚠️ A note for the next batch: `check-image-duplicates.py --pins` reports OK on this batch**,
-    because its confirmation threshold (8.0) sits below the 12.2 diff of the reused-footage pair.
-    That is the tool working as designed — it hunts byte-level re-writes — but "same footage,
-    different frame" passes it, and only a per-batch perceptual sweep catches it.
 
 🟢 **MERGED — NINETY-FIVE LINK PINS FROM ALICE LOXTON, DOMUS AND ROME ART STORIES
 ([#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674), merged 12:01 UTC).**
@@ -608,6 +582,13 @@ authority; read it from `origin/main`, never from a branch.
 Not general advice. Every entry below is a check that **returned a confident, wrong result** on this
 repo, and the correction that makes it honest.
 
+- 🔴 **`check-image-duplicates.py --pins` PASSES A REUSED-FOOTAGE HERO.** Its confirmation threshold
+  is **8.0**, and the `@hereinnyc` batch's two frames of one subway carriage scored **12.2** — so the
+  tool reported OK on a pair that is visibly the same shot. That is the tool working as designed: it
+  hunts byte-level re-writes, and "same footage, different frame" is not one. **A clean `--pins` run
+  does not mean no two heroes show the same thing — only a per-batch perceptual sweep catches that**,
+  and the pair it found put a Transit Museum carriage on the Yankee Stadium pin (owner-decided: it
+  stays).
 - 🔴 **A MERGED PR IS NOT EVIDENCE THAT NO BUILD CARRIES IT.** This board twice reported "nothing
   waiting on a build" from a list of merged PRs without re-reading the run list in the same turn, and
   was wrong within five minutes both times — another session had already built the work from its own
