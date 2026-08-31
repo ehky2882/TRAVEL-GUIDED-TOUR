@@ -25,69 +25,36 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **OPEN — THE LONDON NATURAL HISTORY MUSEUM WAS PLAYING LA'S NARRATION
-(branch `claude/nhm-gallery-fix`, commit `cf4bd2b4`; gh-pages `1e0ebee6`).**
-Asked as a gallery fix; **the gallery was the smaller half.** Both museums used the bare slug
-`natural-history-museum`, so both tours pointed at the **identical `audioURL`**. The live file
-measures **129.7 s** against LA's declared 130 and London's 160 — London has played LA's narration
-since **2026-07-15**, six and a half weeks, with no error and nothing any check would flag.
-  - **⚠️ A third tour was affected and was not in the report:** the `Albertopolis` walk shows the LA
-    *T. rex* at its NHM stop.
-  - **Everything was recoverable** from gh-pages history, byte-identically, and republished under
-    `natural-history-museum-london` — **a new address, never an overwrite** (#567). The recovered
-    audio measures **159.9 s**, matching London's declared 160.
-  - ⚠️ **The LA tour deliberately keeps the bare slug** — those URLs now serve LA content and it is
-    the tour they are correct for.
-  - ✅ **Whole-catalogue sweep run and CLEAN:** **0 shared `audioURL`** (NHM was the only instance)
-    and **1 cross-city shared image URL**, the documented deliberate `@malata.antwerp` five-pin case.
-    ⚠️ **Neither check exists as tooling** — `check-image-duplicates.py` compares image *bytes* and
-    cannot see two entries sharing ONE URL; nothing checks `audioURL` at all. Worth adding.
+🟢 **MERGED — THE THREE PLACE/NHM ITEMS THAT SAT HERE ARE ALL ON `main`.**
+[#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676) ten Tier 1 place cards (places
+56 → 66) · [#679](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/679) nine Tier 2 cards plus
+Gracie Mansion (66 → 76, and `check-place-candidates.py` reaches **0 EXACT**) ·
+[#680](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/680) the London Natural History Museum
+playing Los Angeles' narration. Their stories live in `CLAUDE.md` § Current State.
+  - **⚠️ Two owner decisions remain available and neither blocks anything.** **Windsor Castle** has
+    **no picture of the castle at all** among its members (an armour, three portraits, a drawing
+    room and a postbox), so its place hero is the weakest of the fifteen borrowed ones — one sourced
+    photograph fixes it. **The Charles Dickens Museum** ships `heroImageURL: null` deliberately (the
+    field is optional and falls back to the top-ranked tour's hero) because that tour's only spare
+    image is a 19th-century engraving.
 
-🟡 **OPEN — NINE TIER 2 PLACE CARDS FOR THE PIN-ONLY CLUSTERS
-(branch `claude/tier2-place-cards`, commit `3569993e`).**
-**places 66 → 75; `tours` and `makers` BYTE-IDENTICAL.** Windsor Castle · Hampton Court Palace ·
-Hever Castle · Harvington Hall · Syon Park · Hatfield House · York Minster · The Guild Chapel ·
-Blenheim Palace. No Atlas tour is a member of any of these, so nothing geofenced was touched.
-  - **🔴 Windsor is the point:** #674 spread six pins across three coordinates to dodge
-    `TourSetMap.maxStacked = 3`. **A place draws ONE capsule pin, so the cap stops applying** and all
-    six go back onto the castle. Same at Hampton Court and Blenheim.
-  - **🔴 The hero is borrowed in all nine, structurally** — no Atlas tour and every member has an
-    empty gallery, so no third photograph exists (the Waterlooplein case the owner has closed).
-    **Borrowed-hero warnings 6 → 15.** ⚠️ **Windsor has no picture of the castle at all** (armour,
-    portraits, a drawing room, a postbox) — its hero is the weakest of the nine.
-  - **⚠️ Owner decisions available, not blocking:** the **Tudor Kitchens** joining Hampton Court and
-    **Roman York** joining York Minster are judgement calls on the Arab Hall precedent; **the Temple
-    of Diana is excluded** from Blenheim at 262 m on the Great Ball Court precedent.
-  - ✅ **Gracie Mansion built too, on owner instruction — places 75 → 76 and `check-place-candidates.py`
-    reaches 0 EXACT.** Not part of tier 2 (it arrived in #675); a pure addition with `tours`,
-    `makers` and `linkPins` all byte-identical and nothing moved.
-
-🟡 **OPEN — TEN PLACE CARDS FOR THE TOUR-PLUS-PIN SITES
-(branch `claude/tour-links-upload-t5jk3n`, commit `6df08b8c`, pushed — NO PR).**
-**places 56 → 66; tours (1,552), link pins (483) and makers (208) byte-for-byte unchanged.** Content
-only — no Swift, no SQL, no gh-pages push, no build. Built on owner instruction from the ten Tier 1
-candidates the 95-pin batch produced: **Westminster Abbey · The National Gallery · The Tower of
-London · Natural History Museum · Churchill War Rooms · The Charles Dickens Museum · Leighton House
-· CaixaForum Madrid · Ewha Campus Complex · Houses of Parliament**.
-  - **🔴 Three owner exclusions, and a future audit will read them as unresolved — they are
-    settled.** The **Beauchamp Tower** stays its own pin; **only the two general Westminster Abbey
-    entries** join (the other four abbey posts sit on distinct verified interior points precisely so
-    the 3-card stack cap could never hide one); Houses of Parliament takes the **House of Commons**
-    pin but **not Big Ben**.
-  - **🔴 One tour moved, and it is a pre-existing error rather than a concession to its pin:
-    Leighton House sat 179 m away on Park Close**, a residential street, against its own script's
-    *"From the street, Leighton House looks like a fairly stern red-brick Victorian villa"*. It is
-    `manual`, so nothing was firing there — but at a geofence this is the IAC / Chelsea Hotel
-    failure. Radius and trigger mode byte-identical. The other nine members moved the **pin**
-    (6.1–34.7 m, all `manual`).
-  - **⚠️ Owner decision available, not blocking:** the **Charles Dickens Museum** ships
-    `heroImageURL: null` (the field is optional and falls back to the tour's hero) because that
-    tour's only spare image is a **19th-century engraving**. One sourced photograph closes it.
-  - **🔴 FOUND, FLAGGED, NOT FIXED — the London Natural History Museum tour and the LA County one
-    reference the IDENTICAL seven image URLs** (a bare-slug collision predating the handle suffix),
-    so `natural-history-museum_2.webp` is **the LA museum** and `_4.webp` is **LA Union Station**.
-    Both galleries have been mixing cities. **The fix is new filenames, never a byte swap** (#567).
-  - `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35**; the three groups it resolved are **CaixaForum Madrid**, **The National Gallery** (two coincident pins) and **Leighton House + The Arab Hall**. ⚠️ **The eight that REMAIN are not the owner's exclusions** — those sit at deliberately distinct coordinates and never appear in EXACT at all. The eight are all pin-only pairs, seven from the 95-pin batch (Harvington Hall, Hatfield House + the Elizabeth Oak, Syon Park, York Minster + Roman York, Windsor Castle ×2 groups, Hever Castle) plus **Gracie Mansion** from #675 — every one still needs an owner decision, and a place for any of them would have to borrow a member's hero.
+🟡 **OPEN — THE TWO CHECKS THAT COULD HAVE CAUGHT THE NATURAL HISTORY MUSEUM
+(branch `claude/shared-url-checks`).** Owner: *"add the two missing checks"*. Tooling only —
+`scripts/check-image-duplicates.py`, **255 insertions / 0 deletions**; no catalogue, Swift, SQL or
+build change. **Auto-merge class** (`scripts/` does not ship in the app).
+  - **🔴 The byte checker was blind to this by construction:** it compares two DIFFERENT urls
+    holding the same bytes, while the NHM case is two entries pointing at the SAME url — **one file
+    hashed once is one file, so it never forms a group** — and nothing anywhere touched `audioURL`.
+  - Shared **`audioURL` = ERROR**; **one-source-post link pins = INFO** (the `@malata.antwerp` case,
+    checked **before** the city rule because those pins are legitimately in five cities); **holders
+    in two cities = ERROR**; **any `multiStop` holder = INFO**; otherwise ERROR.
+  - **🔴 Deliberately NOT scoped by `--maker`/`--pins`** — the NHM collision spanned two cities and
+    two makers, so any convenient scope hides the bug it exists to find. Costs nothing: no network.
+  - **9 injected fault classes, 9/9 caught.** ⚠️ **The two wiring faults were MISSED first time —
+    `--selftest` exits before `main()`'s body runs**, so neutering the call site is invisible to
+    every logic case; the selftest now reads `inspect.getsource(main)` and asserts the wiring.
+  - **Regression proof:** over `521bbb5b` it reports **8 errors** (seven images + the shared
+    `natural-history-museum.mp3`); against the current catalogue **0 errors, 207 documented reuses**.
 
 🟢 **MERGED — NINETY-FIVE LINK PINS FROM ALICE LOXTON, DOMUS AND ROME ART STORIES
 ([#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674), merged 12:01 UTC).**

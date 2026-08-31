@@ -108,7 +108,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 5. **Process** — Crop selections to final 1200×900 WebP (no label). Name: `{audio-slug}_hero.webp`, `{audio-slug}_2.webp`, etc.
 6. **Upload** — Commit to `gh-pages` branch under `images/`. Pull + rebase if non-fast-forward.
 7. **Patch Tours.json** — Replace `heroImageURL` + set/update `additionalImageURLs`. Commit + push to session branch.
-8. **Verify the bytes, not the filename** — run `python3 scripts/check-image-duplicates.py --maker <CODE>`, or **`--pins`** for a link-pin batch (`--all` covers both and takes ~7 minutes). **This is not optional when staging a city or a batch of pins.** ⚠️ **`--maker <CODE>` is tours only, deliberately** — a pinned creator's handle collides with city codes as a substring (`STO` matches `@urbanstoriesyt`), so scoping a city must not sweep pins in. Two images written back-to-back can silently share content: in the Madrid batch the Thyssen hero was byte-identical to the Reina Sofía hero written 40 seconds earlier, and shipped the wrong building for a month. `validate-tours.swift` cannot see it — the URLs are distinct and all return 200. **When an owner-pasted image is the only copy, hash the written file against the decode before committing** (a fresh web-session container has no prior transcripts, so a lost paste is unrecoverable). After a gh-pages push, **confirm the live URL's hash** rather than trusting the push — Pages deploys can be cancelled and serve stale for ~10 min.
+8. **Verify the bytes, not the filename** — run `python3 scripts/check-image-duplicates.py --maker <CODE>`, or **`--pins`** for a link-pin batch (`--all` covers both and takes ~7 minutes). **This is not optional when staging a city or a batch of pins.** ⚠️ **`--maker <CODE>` is tours only, deliberately** — a pinned creator's handle collides with city codes as a substring (`STO` matches `@urbanstoriesyt`), so scoping a city must not sweep pins in. Two images written back-to-back can silently share content: in the Madrid batch the Thyssen hero was byte-identical to the Reina Sofía hero written 40 seconds earlier, and shipped the wrong building for a month. `validate-tours.swift` cannot see it — the URLs are distinct and all return 200. **⚠️ The same run ALSO reports shared URLs — two entries pointing at ONE file — which is a different bug the byte check is structurally blind to** (one file hashed once is one file, so it never forms a group): the London Natural History Museum tour played Los Angeles' narration for six and a half weeks because both used the bare slug `natural-history-museum`. That half is **catalogue-wide on every invocation and deliberately NOT scoped** (the collision spanned two cities and two makers, so any scope would hide it) and costs nothing — no network. **When an owner-pasted image is the only copy, hash the written file against the decode before committing** (a fresh web-session container has no prior transcripts, so a lost paste is unrecoverable). After a gh-pages push, **confirm the live URL's hash** rather than trusting the push — Pages deploys can be cancelled and serve stale for ~10 min.
 
 9. **🔴 CORRECTING AN IMAGE MEANS A NEW FILENAME — NEVER OVERWRITE BYTES AT A LIVE URL.** Publish the replacement as its own file (`..._hero-2.webp`) and repoint `Tours.json` at it. **A phone that has downloaded a tour reads that tour's photographs off its own disk and never asks the server again** (PR #567), and the offline fallback serves whatever `URLCache` holds for a URL (PR #568) — so bytes swapped underneath an unchanged URL reach neither. Someone who downloaded a tour would keep the wrong photograph until they deleted and re-downloaded it, which nobody would think to do. **A new filename is a new address, so every phone fetches it automatically.** This is exactly how the Thyssen hero was corrected — in place, at the same URL — and that fix would not have reached a downloaded tour. Costs nothing; the old file can stay on gh-pages, orphaned, or be deleted once nothing references it.
 
@@ -127,6 +127,59 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
 ## Current State (2026-08-31)
+
+### The duplicate checker can now see two entries pointing at ONE file (branch `claude/shared-url-checks`, session 129b — tooling)
+
+**Owner: *"add the two missing checks"*.** The Natural History Museum fix closed with a read-only
+sweep proving the catalogue was otherwise clean — and a note that **neither check that sweep
+performed existed as tooling**. Both are now in `scripts/check-image-duplicates.py`. Tooling only —
+no catalogue change, no Swift, no SQL, no build. **255 insertions, 0 deletions.** Full detail:
+`archive/HANDOFF-260831-7.md`.
+
+- **🔴 THE BYTE CHECK IS BLIND TO THIS BY CONSTRUCTION, NOT BY OVERSIGHT.** Everything the script
+  did before today is about **two different URLs holding the same bytes** (the Thyssen bug). The
+  Natural History Museum is the **opposite shape** — two entries pointing at the **same URL** — and
+  **one file hashed once is one file, so it never forms a group at all.** Nothing anywhere touched
+  `audioURL`. Cost of the blind spot, measured: **six and a half weeks** of the London tour playing
+  Los Angeles' narration, with no error, no 404, every URL 200, and `validate-tours.swift` clean.
+- **The rules, in order, and the order is load-bearing.** Any holder role being **`audioURL` is an
+  ERROR** — audio is never legitimately shared, and at most one of them can be right. Then **link
+  pins from ONE `sourceURL` are INFO** (the `@malata.antwerp` case: five pins in five cities cut
+  from one video). Then **holders spanning two cities are an ERROR** — the slug-collision signature.
+  Then **any `multiStop` holder is INFO** — a walk reusing a landmark's imagery, in its stop images
+  or its gallery. Otherwise **ERROR**. ⚠️ **The one-source-post rule MUST stay before the city rule**
+  — those pins are legitimately in five cities, so reversing the order turns the documented case
+  into five false errors, and a checker that cries wolf gets ignored (this script's founding lesson).
+- **⚠️ AN EMPTY `audioURL` MUST NEVER GROUP.** All 483 link pins carry `audioURL: ""`, so without
+  the filter every one of them lands in a single enormous bogus finding. Pinned by a selftest case,
+  as is the rule that **an entry reusing its OWN asset is one entry, never a finding** (304 tours
+  set `stops[0].imageURL` to their own hero by convention).
+- **🔴 DELIBERATELY NOT SCOPED BY `--maker` / `--pins`, and that is the point.** A collision is a
+  property of the whole catalogue — the NHM one spanned **two cities and two makers** — so any scope
+  narrow enough to be convenient would hide the exact bug it exists to find. It runs on every
+  invocation and costs nothing: pure JSON, no network. **Places stay out**, because a place hero is
+  *allowed* to be a member's own hero at the same URL (all fifteen borrowed heroes from tiers 1
+  and 2 would otherwise report).
+- **Verification — proven by breaking it. 9 injected fault classes, 9/9 caught**, after the harness
+  itself was fixed twice. **🔴 The two wiring faults were MISSED on the first attempt, and the
+  reason generalises: `--selftest` calls `sys.exit(selftest())` before `main()`'s body ever runs**,
+  so neutering the call site — or the exit path that acts on its result — is invisible to every
+  logic case. **A check nothing calls is not a check.** The selftest now reads
+  `inspect.getsource(main)` and asserts both that `report_shared_urls(catalog)` is called and that
+  `if errors or shared_url_errors:` can fail the run. ⚠️ **One "MISSED" was the HARNESS's own bug** —
+  the anchor `if stop.get("imageURL"):` appears twice in the file (the other in the pre-existing
+  `build_index`), so `str.replace(..., 1)` patched the wrong function; the harness now asserts each
+  anchor is unique.
+- **Regression proof against the real bug:** run over `521bbb5b` — the catalogue immediately before
+  #680 — it reports **8 errors**, all seven shared `natural-history-museum` images (including the one
+  the Albertopolis walk was dragged into) **and the shared `natural-history-museum.mp3`**. Against
+  the current catalogue: **0 errors, 207 documented reuses.** Selftest `OK`; `--pins` runs end to end
+  and exits 0.
+- **⚠️ What it does NOT close:** it cannot see a collision that has not reached `Tours.json` yet —
+  it does not know a gh-pages *upload* is about to overwrite a live file. That stays the job of the
+  staging-time filename check (#567) and the handle/city suffix convention, which has now prevented
+  live-hero overwrites in at least eight separate batches. **⚠️ Not in CI**, matching the rest of the
+  script; the shared-URL half alone would run in milliseconds and is a reasonable candidate later.
 
 ### The London Natural History Museum was playing Los Angeles' narration (branch `claude/nhm-gallery-fix`, session 127d — content)
 
