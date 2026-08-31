@@ -14809,14 +14809,14 @@
       "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
       "title": "Natural History Museum",
       "priceUSD": 0,
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_hero.webp",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_hero.webp",
       "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_5.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_6.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_7.webp"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_7.webp"
       ],
       "tags": [
         "Museum",
@@ -14834,11 +14834,11 @@
           "caption": "This building was designed as a cathedral — but a cathedral to nature, with monkeys climbing the arches and a blue whale where the altar would be.",
           "latitude": 51.4967,
           "longitude": -0.1764,
-          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/natural-history-museum.mp3",
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/natural-history-museum-london.mp3",
           "audioDurationSeconds": 160,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 40,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_hero.webp",
           "transcriptText": "This building was designed as a cathedral — but a cathedral to nature, with monkeys climbing the arches and a blue whale where the altar would be.\n\nYou're on Cromwell Road, looking at the Natural History Museum — a long, twin-towered building in striped blue-grey and honey-coloured terracotta, with a great rounded Romanesque entrance like the door of a cathedral. That resemblance is completely deliberate. The architect, Alfred Waterhouse, built it in the eighteen-seventies as a \"cathedral to nature,\" and the religious architecture carries a quiet argument from its founder, the great anatomist Richard Owen — the man who, incidentally, invented the word \"dinosaur\" — that the study of nature was a form of reverence.\n\nGet close to the walls before you go in, because the building itself is part of the collection. The terracotta is crawling with sculpted animals and plants — monkeys scrambling up arches, fish, birds, lizards, leaves — and there's a code: living species decorate one wing, extinct species the other. The whole facade is a catalogue of life, modelled in clay.\n\nInside, the centrepiece of the great vaulted central hall is a real blue whale skeleton, twenty-five metres of her, diving from the ceiling — she's named Hope, and she replaced the museum's famous cast diplodocus, Dippy, in 2017. The collection behind the galleries is staggering: some eighty million specimens, including ones collected by Darwin himself on the voyage of the Beagle. This is not just a display; it's one of the most important scientific research collections on the planet, with hundreds of working scientists behind the walls.\n\nThere's a good irony in the cathedral idea. Owen, who built it, was a fierce opponent of Darwin's theory of evolution. Yet the museum he created became one of the great engines and showcases of evolutionary science — his temple to creation now tells, room after room, the story he resisted.\n\nJoin the queue with the school parties and go in. Look up in the main hall — at the whale, and past her at the painted ceiling of plants. It's the grandest room in London with a skeleton in it, and it was built to make you feel exactly the awe you'll feel."
         }
       ],
@@ -18987,7 +18987,7 @@
       "additionalImageURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albertopolis_stop0.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_hero.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_hero.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_hero.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_hero.webp"
@@ -19039,7 +19039,7 @@
           "audioDurationSeconds": 133,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 40,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_hero.webp",
           "transcriptText": "This is the Natural History Museum, and the first thing to do is just stand back and look at it, because it doesn't look like a museum. It looks like a cathedral.\n\nThat was the point. The architect, Alfred Waterhouse, designed it in the 1870s as a temple — but a temple to nature instead of God. Two great towers, a vast rounded doorway, the whole front faced in pale terracotta tile. And here's the gift, once you know to look for it: the building is covered in animals. Carved and moulded into the stone, everywhere. Look at the west side, to your left, and the creatures are living ones — monkeys, birds, things still walking the earth. Look at the east side, to your right, and they're extinct — pterodactyls, ancient beasts. Living on one wing, dead on the other. The building sorts the natural world the way the collection inside does.\n\nAnd what a collection. Around eighty million specimens — plants, animals, fossils, rocks, meteorites — making this one of the most important records of life on earth anywhere.\n\nStep inside, even just into the entrance, and you're in Hintze Hall, the great central space under the arched roof. For decades a diplodocus skeleton stood here, nicknamed Dippy, and a couple of generations of British children grew up greeting him on the way in. A few years ago he was retired, and now a real blue whale skeleton hangs from the ceiling above you, diving through the air — the largest animal that has ever lived, where the dinosaur used to be.\n\nHere's the quiet thing about this building. It was finished in the same decades Britain was arguing hard about evolution — about whether nature needed God at all. And the answer the museum gave wasn't a sermon. It was this: build nature a cathedral, and give it the grandeur we used to reserve for the divine.\n\nBehind this building, on Exhibition Road, is the third of the three museums. Head round to the Science Museum."
         },
         {
@@ -37864,10 +37864,7 @@
       "additionalImageURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_2.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_5.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_6.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_7.webp"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_4.webp"
       ],
       "kind": "single",
       "stops": [
@@ -80009,7 +80006,7 @@
       "longitude": -0.1764,
       "city": "London",
       "address": "Cromwell Road, South Kensington, London SW7 5BD",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_5.webp",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum-london_5.webp",
       "additionalImageURLs": null,
       "tourIds": [
         "0eb6ec6f-cc39-4016-861b-8fee4ac64e07",

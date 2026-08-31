@@ -128,6 +128,54 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-31)
 
+### The London Natural History Museum was playing Los Angeles' narration (branch `claude/nhm-gallery-fix`, session 127d — content)
+
+**Owner: *"fix the natural history museum gallery"*** — the shared-gallery bug flagged in #676.
+gh-pages `1e0ebee6`. Content only — no Swift, no SQL, no build. Full detail:
+`archive/HANDOFF-260831-6.md`.
+
+- **🔴 IT WAS NOT ONLY THE GALLERY, AND THE REPORTED SYMPTOM WAS THE SMALLER HALF.** The London
+  **Natural History Museum** and the **Natural History Museum of LA County** both used the bare slug
+  `natural-history-museum`, so both pointed at the **identical `audioURL`** — and one file lives at
+  one path. **The live file measures 129.7 s**; LA declares 130 s, London declares 160 s. So the
+  London tour has played the **Los Angeles narration** since the LA batch overwrote the file on
+  **2026-07-15** — six and a half weeks. Stand outside the museum in South Kensington, press play,
+  hear about Los Angeles. **No error, no missing asset, nothing any check would flag.** ⚠️ **When two
+  entries share an image URL, check whether they share an AUDIO URL too** — one bare slug produces
+  both.
+- **⚠️ A THIRD TOUR WAS AFFECTED and was not in the original report: the `Albertopolis` walk** uses
+  `natural-history-museum_hero.webp` for its Natural History Museum stop, so that London walk has
+  been showing the LA *T. rex*. **Found by sweeping every reference to the eight URLs rather than
+  assuming only the two named tours were involved.**
+- **What overwrote what, from gh-pages history:** London uploaded hero + `_2`–`_7` and the audio on
+  **2026-06-16**; the LA batch overwrote **hero, `_2`, `_3`, `_4` on 2026-07-02** and **the audio on
+  2026-07-15**, and never touched `_5`–`_7`. So the bare-slug files are **LA for hero/_2/_3/_4 and
+  London for _5/_6/_7** — which is exactly why the London tour showed four LA pictures and the LA
+  tour showed three London ones. (It is also why the place hero picked in #676, `_5`, was right.)
+- **🔴 EVERYTHING WAS RECOVERABLE, AND THE FIX IS A NEW ADDRESS RATHER THAN AN OVERWRITE.** The
+  pre-overwrite blobs are still in gh-pages' object store; all eight London assets were extracted
+  **byte-identically** (the staged blob SHAs are literally London's originals) and republished under
+  **`natural-history-museum-london`**. Per #567 a phone that has downloaded a tour reads its audio
+  and photographs off its own disk, so a correction made in place would reach nobody who already has
+  it. **The recovered audio measures 159.9 s against London's declared 160 s** — the proof the right
+  file was recovered rather than a plausible one.
+- **Repointed:** the London tour (audio + hero + stop image + all 6 gallery), **Albertopolis**
+  (gallery entry + `stops[2].imageURL`), and the **place** hero (`_5` → `-london_5`). The **LA tour**
+  drops `_5`–`_7` from its gallery (6 → 3). ⚠️ **The LA tour deliberately KEEPS the bare slug** for
+  its hero, `_2`–`_4` and its audio — those URLs now serve LA content and it is the tour they are
+  correct for; the bare slug is now owned by exactly one tour, which is the normal state for
+  everything else in the catalogue.
+- **Verification.** All **11 image versions opened and identified**, not trusted by filename (London
+  is Waterhouse's terracotta building, Hintze Hall and the blue whale, the name on the railings; LA
+  is the rotunda dome, the *T. rex* mount and the Exposition Park palms). Every reference to all
+  eight URLs swept before editing — that is what found Albertopolis. gh-pages remote head **re-read
+  in the same command as the push**, tree diff **exactly 8 additions, 0 deletions**, none of the
+  eight paths pre-existing. Validator mirror **self-tested 20/20**, then **0 errors, 16 warnings —
+  unchanged**. **`makers` and `linkPins` byte-identical**; exactly **3 tours + 1 place** changed,
+  **URL fields only**, no coordinate or trigger change anywhere.
+- **✅ **SWEEP RUN AND THE CATALOGUE IS CLEAN (read-only, same session).** Across all 1,552 tours and 483 pins: **0 shared `audioURL`** — the Natural History Museum was the only instance, so no other tour is playing the wrong city's narration — and **exactly 1 cross-city shared image URL**, which is the **documented deliberate** `@malata.antwerp` case (five link pins from one *Top 5 Italian antique markets* video sharing one thumbnail by design). ⚠️ **Neither check exists as tooling** — `check-image-duplicates.py` compares image *bytes* and structurally cannot see two entries sharing ONE URL, and nothing checks `audioURL` at all. Both are ~20 lines and would be worth folding into that script.**
+
+
 ### Nine more place cards, and the stack-cap workaround a place makes unnecessary (branch `claude/tier2-place-cards`, session 127c — content)
 
 **Owner: *"do the tier 2 list"*** — the nine pin-only clusters enumerated when the place candidates
