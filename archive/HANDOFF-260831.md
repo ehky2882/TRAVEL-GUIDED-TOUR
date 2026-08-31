@@ -1,11 +1,11 @@
 # HANDOFF — 2026-08-31 (session 126, web/PM — content)
 
 **Branch:** `claude/place-cards-audit-px3z3o`, cut clean off `origin/main` at `a997860a`.
-**Scope:** an audit of un-placed place candidates, then four of them built. Content only —
+**Scope:** an audit of un-placed place candidates, then six of them built. Content only —
 no Swift, no SQL, no build, no gh-pages push. **No PR opened** (this session's harness forbids
 opening one unasked).
 
-**Counts:** places **49 → 53** — this branch adds 4; `main` gained the Chelsea Hotel underneath it mid-session (#669). Tours **1,552**, link pins **283**, makers **206** — all unchanged,
+**Counts:** places **49 → 55** — this branch adds 6; `main` gained the Chelsea Hotel underneath it mid-session (#669). Tours **1,552**, link pins **283**, makers **206** — all unchanged,
 byte-for-byte (verified by diffing the parsed `tours` and `makers` arrays against `origin/main`).
 
 ---
@@ -147,20 +147,21 @@ already places, so each collapses to a single map pin. `TourSetMap.maxStacked` i
   fault classes, 14/14 caught**, including all seven place-layer checks.
   ⚠️ **One selftest "miss" was the test's own bug**, not the validator's — a lambda whose `or`
   short-circuited so the fault was never injected. Fixed, then 14/14.
-- **`check-place-candidates.py`: 3 EXACT / 9 NEAR**, against `origin/main`'s 3 / 12. **NEAR fell by
+- **`check-place-candidates.py`: 1 EXACT / 9 NEAR**, against `origin/main`'s 3 / 12 — the survivor is the pre-existing Barcelona deferral. **NEAR fell by
   exactly the three pairs resolved** (Casa Milà, Operaparken, Wave Hill; Grand Central was never
   in NEAR because of the title rule above), and **EXACT is unchanged** — the four groups this
   session made coincident are each silenced by their new place, so **no new EXACT group was
-  manufactured.** The three that remain are the Barcelona deferral, Chichén Itzá
-  and Rosewood Mayakoba — Chelsea is gone, resolved by #669.
+  manufactured.** Chelsea is gone (resolved by #669) and Chichén Itzá and
+  Rosewood Mayakoba are gone because they are now places themselves.
 - **Structural, over the edited catalogue:** 0 duplicate place ids, 0 places with fewer than 2
   members, 0 tours claimed by two places, 0 members off their place's exact coordinate, 0 place
   heroes equal to a member's hero, 0 place heroes shared between places, 0 unknown tag, 0 link pin
   inside `tours`.
 - **`backend/seed_from_toursjson.py` regenerates cleanly** — 206 makers / 1,835 tours / 2,207 stops
-  / **53 places** — which exercises its own `validate_places`.
-- **Tours.json byte-stable under a Python re-dump before editing**; diff **76 insertions /
-  16 deletions**, which is exactly 4 places × 15 lines plus the 16 pin coordinate lines.
+  / **55 places** — which exercises its own `validate_places`.
+- **Tours.json byte-stable under a Python re-dump before editing** (checked again before the second
+  round); diff **106 insertions / 16 deletions**, which is exactly 6 places × 15 lines plus the 16 pin
+  coordinate lines.
 - **CI has not run: no PR is open**, so the authoritative Swift validator has not seen this.
 
 ## 4. Also noticed, not acted on
@@ -170,3 +171,75 @@ already places, so each collapses to a single map pin. `TourSetMap.maxStacked` i
   rather than broken, and was left alone as another session's content. **#669 has since cleaned it and
   six others**, and that fix is preserved here because the merge took `main`'s file and re-ran the
   assembler over it.
+
+---
+
+## 5. Second round — Chichén Itzá and Rosewood Mayakoba (owner instruction)
+
+**Owner: *"chichen itza - make a place card for 2 of the tours, leave the ball court out of it.
+rosewood, make a placecard"*.** Places **53 → 55**.
+
+| Place | Members | Moved |
+|---|---|---|
+| **Chichén Itzá** (`658965e6-b07e-5b08-806e-c21b15fa51d6`) | `@architectanddesign` *Temple of Kukulkán* + `@bassforge.us` *Chichén Itzá* | nothing |
+| **Rosewood Mayakoba** (`e4f60c5a-9753-5ecc-a628-5844fd25c89e`) | `@german.samvel` + the hotel's own `@rwmayakoba` | nothing |
+
+- **Nothing moved for either, which is the point.** Both pairs were already on an exactly identical
+  coordinate, so the catalogue's own identity rule held with no marker relocated to make it hold.
+  Diff is **30 insertions / 0 deletions** — 2 places × 15 lines and not one other byte.
+- **⚠️ THE GREAT BALL COURT IS DELIBERATELY EXCLUDED**, per the instruction. It stays its own pin
+  **224 m** north-west, so the map shows the place beside it. **Do not "complete" the place by adding
+  it** — and note `check-place-candidates.py` never saw that pair anyway, because its title rule
+  cannot pair `{great, ball, court, chichén, itzá}` with `{temple, kukulkán}`.
+- **🔴 BOTH HEROES ARE BORROWED FROM A MEMBER, AND THAT IS UNAVOIDABLE HERE.** The standing rule is
+  that a place hero must be a **third** photograph — but neither site has an Atlas tour, every member
+  is a link pin, and a link pin re-hosts only its post's thumbnail and carries an empty gallery. So
+  the catalogue contains no third photograph of either site. **This is the Waterlooplein / Legion of
+  Honor / Glasshouse case, which the owner has already closed: do not go sourcing a replacement.**
+  One owner-supplied or PD photograph fixes either, whenever one exists.
+  - **Chichén Itzá had exactly one usable frame.** `@bassforge.us`'s thumbnail is a **reaction
+    screen** — a black panel reading *"The Unreal Genius of the Ancient Mayans"* over waveform
+    graphics and a talking head — so `temple-of-kukulkan-architectanddesign_hero.webp` (the pyramid's
+    terraces and staircase, with the creator's head at the right edge) was the only choice, not a
+    preference.
+  - **Rosewood took the aerial over the venue's own frame.** `@german.samvel`'s is the whole
+    beachfront from the air — pools, palapa roofs, sand, jungle — an establishing shot of the site;
+    the hotel's own `@rwmayakoba` frame is a plunge pool beside a lagoon, which is more certainly
+    Rosewood but is a close-up. Establishing shot won (the session-95 criterion). ⚠️ **The venue's
+    own frame carries higher subject certainty** — Mayakoba is a shared development with several
+    resorts on it — and is a one-line swap.
+- **⚠️ NEITHER DESCRIPTION CARRIES ITS MEMBERS' CLAIMS.** `@bassforge.us`'s post is
+  pseudo-archaeological (*"synthesizing light and sound to influence biology"*) and the hotel's own
+  post is award marketing (*Travel + Leisure*, *La Liste*); both stay inside `longDescription`, which
+  is the creator's verbatim words, and neither reaches anything this catalogue authors. The Chichén
+  Itzá copy states the equinox shadow and the chirped echo plainly and attributes the
+  quetzal-mimicry reading as **argued**, not settled.
+- **Coordinates corroborated, not assumed.** `20.6829897, -88.5686416` reverse-geocodes at z18 to
+  **`Templo de Kukulkán`, Tinum, Yucatán** by name, and a forward geocode of "Chichén Itzá" lands
+  **12 m** away. `20.6936192, -87.0264003` reverse-geocodes to **`Rosewood Mayakoba`** by name and
+  the forward geocode returns the identical coordinate.
+- **Addresses invent no house number.** OSM carries none for either, so they ship
+  `Zona Arqueológica de Chichén Itzá, Tinum, Yucatán` and `Mayakoba, Playa del Carmen, Quintana Roo`
+  — corroborated at municipality level, with the development name the resort's own title carries.
+- **⚠️ Ids again confirm the no-accent-folding slug**: `Chichén Itzá` → `chich-n-itz`, so the key is
+  `atlas-place:chich-n-itz:chich-n-itz`. Ugly, and correct — it is the rule that reproduces 46 of the
+  48 pre-existing ids.
+
+### 🔴 There is no Grand Palais candidate, and there cannot be one today
+
+The owner also asked for a **Grand Palais** place. **It cannot be built:** the Grand Palais has
+exactly **one** entry in the catalogue (the Atlas tour), and a place needs at least two members —
+`validate-tours.swift` hard-errors otherwise, and the page would render a count badge reading "1".
+
+The pin beside it is the **Petit Palais**, not the Grand Palais: its own burned-in text reads
+*"Le Petit Palais"* and the frame is that building's gilded entrance gate on avenue
+Winston-Churchill. The two palais are **separate buildings 155 m apart** across that avenue —
+merging them is the LACMA / Academy Museum case the 40 m rule was rejected for. Owner's answer:
+*"nevermind"*, so nothing was built.
+
+⚠️ **Worth recording, because the owner asked it directly: "I only have one Petit Palais tour — why
+is that a candidate?"** Because a place's two members need not both be tours. The pair is the Atlas
+tour *Pont Alexandre III & Petit Palais* **plus** the `@suzyandaustin` link pin — and **19 of the
+existing places are exactly that shape**, a link pin beside a single tour. It stays flagged rather
+than built for a different reason: the tour covers **two** subjects, so a place named *Petit Palais*
+would only half-cover its own member.

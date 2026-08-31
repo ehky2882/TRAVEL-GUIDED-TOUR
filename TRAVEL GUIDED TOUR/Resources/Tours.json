@@ -79893,6 +79893,36 @@
         "17050c9f-27a2-45e2-9e69-3ae9528c66c9",
         "F4E16DB9-C6CB-5586-82E0-24C55F434947"
       ]
+    },
+    {
+      "id": "658965e6-b07e-5b08-806e-c21b15fa51d6",
+      "name": "Chichén Itzá",
+      "description": "The Maya city on the Yucatán plain, and at the centre of it El Castillo — the Temple of Kukulkán, a stepped pyramid about thirty metres high with a staircase climbing each of its four faces. Ninety-one steps to a side and the platform on top make three hundred and sixty-five, the length of the solar year, and the building is set so that on the afternoons around the spring and autumn equinoxes the terraces throw a line of triangular shadows down the northern balustrade that reads as a serpent descending to the carved head at its foot. Clap once at the base and the staircase answers with a chirped echo, high at first and falling away — an effect acousticians have argued is deliberate, and which people here have long likened to the call of the quetzal.",
+      "latitude": 20.6829897,
+      "longitude": -88.5686416,
+      "city": "Chichén Itzá",
+      "address": "Zona Arqueológica de Chichén Itzá, Tinum, Yucatán",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-of-kukulkan-architectanddesign_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "A434E3A9-C320-562C-867C-E5E488B46A4B",
+        "B86B3AF1-4498-5A34-8872-6DE5407A1BDF"
+      ]
+    },
+    {
+      "id": "e4f60c5a-9753-5ecc-a628-5844fd25c89e",
+      "name": "Rosewood Mayakoba",
+      "description": "A resort on the Riviera Maya, built into the mangrove and freshwater lagoons of the Mayakoba development between the coastal highway and the beach. Suites and villas sit along the waterways on their own plots rather than in a single block, most with a private plunge pool facing the water, and much of the site is reached by boat along the canals as well as on foot. Beyond the lagoons the ground opens onto a stretch of sand and the beach club; behind them the jungle is left standing, which is what gives the place its particular quiet.",
+      "latitude": 20.6936192,
+      "longitude": -87.0264003,
+      "city": "Playa del Carmen",
+      "address": "Mayakoba, Playa del Carmen, Quintana Roo",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rosewood-mayakoba-germansamvel_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "959A7E8C-498A-58A0-B7D9-C182436C710E",
+        "9E74571B-BDA8-565B-A510-9E4DBED23C67"
+      ]
     }
   ],
   "linkPins": [
