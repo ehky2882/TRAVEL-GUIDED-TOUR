@@ -35,6 +35,14 @@ page shares `TourSetMap` with the creator page).
   - **Owner decisions already taken, in this thread:** a **creator or list page raises no card**
     (many tours, no single subject — it frames the lot); a **place raises its own place card**, not
     a member tour's.
+  - **🔴 FIXED IN THE SAME SESSION, owner-reported: *"dozent page map expansion doesnt seem to
+    work."*** The control started **bottom-trailing**, and on the creator page the header pushes the
+    square map down far enough that **its bottom third is under the mini-player + tab bar at the
+    resting scroll position** — it rendered, sat in the accessibility tree, and the tab bar
+    hit-tested it. Now **top-trailing**, visible the moment any of the map is; in `TourSetMap` it
+    also hides while a placecard stack is up. **⚠️ My own first pass called this a harness artifact**
+    after scrolling the map into view before tapping — *a tap that only works after you scroll the
+    control somewhere convenient is not a passing test.*
   - **⚠️ Needs an owner device look before merge** — this is a code change (§ Merging PRs). What a
     device adds over the simulator is the feel of the layer teardown and the fly-to running
     together.

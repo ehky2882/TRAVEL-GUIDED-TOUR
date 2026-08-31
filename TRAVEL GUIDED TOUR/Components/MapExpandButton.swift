@@ -14,9 +14,24 @@ import SwiftUI
 /// swallowed-tap placecard stack was two copies before `TourSetMap` was.
 /// A fifth map surface should call this, not grow a fifth copy.
 ///
-/// Bottom-trailing to match the Home map's own control stack, and because the
-/// placecards these maps raise travel *upwards* from a pin sitting low in the
-/// frame — a top-trailing button would sit where the top card lands.
+/// 🔴 **TOP-trailing, and the bottom corner is a bug this already shipped once.**
+/// These maps sit inside a scrolling page, and the mini-player + tab bar render
+/// in a window *above* that page — so anything drawn low in the map is behind
+/// them. On the creator page the header (avatar, bio, follower counts) pushes
+/// the square map down far enough that **its bottom third is under the bar at
+/// the page's default scroll position**, which put the control somewhere no
+/// finger could reach it. Owner, 2026-08-30: *"dozent page map expansion
+/// doesnt seem to work."*
+///
+/// The top corner is visible the moment any of the map is, which is the state
+/// every one of these pages opens in. The mirrored failure — scrolled far
+/// enough that the map's top passes under the nav chrome — costs nothing,
+/// because by then the map is mostly off screen anyway.
+///
+/// ⚠️ Same family as the `UIPageControl` trap in #571: a control that renders,
+/// sits in the accessibility tree, and is hit-tested by something else.
+/// **Verify a new map control by tapping it at the page's RESTING scroll
+/// position, not after scrolling it into a convenient place.**
 struct MapExpandButton: View {
     let action: () -> Void
 
@@ -36,7 +51,9 @@ extension View {
     ///
     /// - Parameter isVisible: pass false where there is nothing to expand to —
     ///   a creator with no published tours yet, or a host that never wired
-    ///   `MapExpander`. **Hidden rather than disabled**, because a control that
+    ///   `MapExpander` — or where something else is using this corner, which
+    ///   for `TourSetMap` means a placecard stack (those stack *upwards* from a
+    ///   pin sitting low in the frame, so they land here). **Hidden rather than disabled**, because a control that
     ///   visibly does nothing is worse than one that is absent (the rule the
     ///   wizard's footer already follows); and hidden rather than left inert,
     ///   because an inert control is the invisible-defect class this codebase
@@ -45,7 +62,7 @@ extension View {
         isVisible: Bool = true,
         action: @escaping () -> Void
     ) -> some View {
-        overlay(alignment: .bottomTrailing) {
+        overlay(alignment: .topTrailing) {
             if isVisible {
                 MapExpandButton(action: action)
             }

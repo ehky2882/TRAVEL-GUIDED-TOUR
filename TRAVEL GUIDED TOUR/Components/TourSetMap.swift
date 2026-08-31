@@ -128,10 +128,17 @@ struct TourSetMap: View {
         }
     }
 
-    /// Whether expanding can do anything: something to frame, and something
-    /// wired to frame it with.
+    /// Whether expanding can do anything: something to frame, something wired
+    /// to frame it with, and nothing already using the top-trailing corner.
+    ///
+    /// ⚠️ The placecard clause is why this is not just a nil check. A stack
+    /// anchored to a pin at `pinFraction` grows *upwards*, so it lands in the
+    /// corner the expand control occupies — and while a card is up, expanding
+    /// is not what the reader is doing anyway.
     private var canExpand: Bool {
-        mapExpander != nil && MapExpander.regionFraming(tours) != nil
+        mapExpander != nil
+            && placecardTours.isEmpty
+            && MapExpander.regionFraming(tours) != nil
     }
 
     private var initialRegion: MKCoordinateRegion {

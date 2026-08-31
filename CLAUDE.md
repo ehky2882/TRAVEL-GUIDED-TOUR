@@ -169,9 +169,24 @@ owner to run. Full detail: `archive/HANDOFF-260830-8.md`.
 - **⚠️ ONE COMPONENT FOR ALL FOUR SURFACES, and this app has paid three times for the alternative** —
   `StopPin`/`ClusterPin` drifted to 14pt against 16pt before `MapPins` was extracted, and the
   swallowed-tap placecard stack was two copies before `TourSetMap` was. **A fifth map surface should
-  call `.atlasMapExpandControl`, not grow a fifth copy.** Bottom-trailing, matching the Home map's
-  own control stack — and because the placecards these maps raise travel *upwards* from a pin
-  sitting low in the frame, so top-trailing would sit where the top card lands.
+  call `.atlasMapExpandControl`, not grow a fifth copy.**
+- **🔴 IT IS TOP-TRAILING, AND THE BOTTOM CORNER IS A BUG THIS SHIPPED ONCE AND THE OWNER CAUGHT.**
+  First revision put it bottom-trailing, matching the Home map's control stack. Owner: *"dozent page
+  map expansion doesnt seem to work."* **These maps sit inside a scrolling page while the mini-player
+  and tab bar render in a window ABOVE it**, so anything drawn low in the map is behind them — and on
+  the creator page the header (avatar, bio, follower counts) pushes the square map down far enough
+  that **its bottom third is under the bar at the page's RESTING scroll position.** The control was
+  rendering, sitting in the accessibility tree, and being hit-tested by the tab bar: the
+  `UIPageControl` family of #571. The top corner is visible the moment any of the map is, which is
+  the state every one of these pages opens in; the mirrored failure costs nothing, because by the
+  time the map's top passes under the nav chrome the map is mostly off screen.
+  - **⚠️ AND MY OWN FIRST DIAGNOSIS WAS WRONG IN THE MOST EXPENSIVE WAY.** I hit this in the
+    simulator, scrolled the map into view, watched it work, and wrote it up as *"a harness artifact,
+    not a product bug"* — because the synthetic tap had used a coordinate a finger could not have
+    reached either. **A tap that only works after you scroll the control somewhere convenient is not
+    a passing test.** Verify a new map control **at the page's resting scroll position**.
+  - **⚠️ In `TourSetMap` the button hides while a placecard stack is up**, because those stack
+    *upwards* from a pin at `pinFraction` (0.72) and land in exactly that corner.
 - **⚠️ THE EXPAND REGION IS NOT THE REGION THE INLINE MAP FRAMES, and the two are legitimately
   different.** Tour detail's preview frames the whole route so you can read the shape of a walk; the
   place page's is ~400 m of street. Both expand to `HomeView.region(framing:)`, the same zoom Search
@@ -182,15 +197,11 @@ owner to run. Full detail: `archive/HANDOFF-260830-8.md`.
   creator with nothing published, a host that wired no layers). A control that visibly does nothing
   is worse than one that is absent; an *inert* one is the invisible-defect class this codebase keeps
   rediscovering. `@Environment(MapExpander.self)` is optional at every call site so previews render.
-- **Verified in the simulator:** tour detail (Grand Army Plaza → its card up on the Home map),
-  **place** (`dozent://place/…` Rijksmuseum → the **place** card up in Amsterdam), **creator**
-  (`dozent://maker/…` Atlas Studio AMS → Amsterdam framed, no card). **The list page was not driven**
-  — login-gated, and it renders through the same `TourSetMap` the creator page proved.
-- **⚠️ A harness artifact, not a product bug.** On the first creator-page attempt the synthetic tap
-  "landed on the Me tab": the button's accessibility frame sat at y≈808 on an 852pt screen,
-  *underneath* the bottom-module window, so the tap went to the tab bar above it. Scrolling the map
-  into view first made it work. Same class as the `UIPageControl` trap in #571 — **anything a page
-  draws at the height of that bar is unreachable.**
+- **Verified in the simulator, all three at their resting scroll position after the corner moved:**
+  tour detail (Bloemenmarkt → its card up on the Home map), **place** (`dozent://place/…`
+  Rijksmuseum → the **place** card up in Amsterdam), **creator** (`dozent://maker/…` Atlas Studio
+  AMS → Amsterdam framed, 39 tours in view, no card). **The list page was not driven** — login-gated,
+  and it renders through the same `TourSetMap` the creator page proved.
 - **⚠️ OWED: owner device review.** This is a code change, so it wants an owner OK and a look on
   device before merge (§ Merging PRs).
 
