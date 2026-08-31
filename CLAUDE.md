@@ -237,8 +237,16 @@ one unasked). Full detail: `archive/HANDOFF-260831-8.md`.
   assembler asserts it and refuses otherwise); diff **2,291 insertions / 0 deletions**. gh-pages
   `3eac368`: the remote head was **re-read in the same command as the push** — and had moved since the
   clone, so the tree was built on the current head — tree diff **exactly 50 additions, 0 deletions,
-  nothing outside `images/`**; the deploy read **`in_progress`, never `cancelled`**. **CI has not run:
-  no PR is open.**
+  nothing outside `images/`**; the deploy read **`in_progress`, never `cancelled`** and took **~40
+  minutes**, well past the usual 10–13, so the first verification pass ran against URLs still 404.
+  **After it landed all 50 live URLs were hash-verified against the uploaded bytes — 50 ok, 0 bad**,
+  with the gh-pages head re-confirmed as this batch's own commit. ⚠️ **A 404 during a slow deploy is
+  not a failed upload.** `check-image-duplicates.py --pins` over **536 pin images: `OK — no suspicious
+  duplicates`**, and its shared-URL half **0 errors / 207 documented reuses**, identical to the
+  pre-edit baseline — so these 50 pins add no shared `audioURL`, no two entries on one file and no
+  cross-city image sharing. ⚠️ **10 of 536 fetches returned HTTP 503** (1.9%, transient), under the
+  script's own 20% `COULD NOT VERIFY` threshold and **none of them from this batch**. **CI has not
+  run: no PR is open.**
 
 ### The duplicate checker can now see two entries pointing at ONE file (branch `claude/shared-url-checks`, session 129b — tooling)
 
