@@ -89,10 +89,31 @@ thing this session is most likely to disturb by accident.
 
 ## Uploading
 
-🔴 **The screenshot must be a native device size. A cropped image is
-rejected** with `IMAGE_INCORRECT_DIMENSIONS`, after uploading cleanly and going
-`FAILED` on Apple's side minutes later. **1320 × 2868** (iPhone 17 Pro Max) was
-accepted; a 1206 × 2105 crop was not.
+🔴 **The screenshot must be 1242 × 2208 — the old 5.5-inch iPhone size.**
+Owner-confirmed 2026-08-31, after 1320 × 2868 and 1290 × 2796 were both
+rejected. It is **not** a modern device size, so **a screenshot straight off a
+current iPhone is always the wrong shape** (a 16/17 Pro shoots 1206 × 2622).
+
+Scale the shot to fit inside 1242 × 2208 and pad the rest:
+
+```python
+from PIL import Image
+src = Image.open('shot.png').convert('RGB')
+tw, th = 1242, 2208
+s = min(tw / src.width, th / src.height)
+new = src.resize((round(src.width * s), round(src.height * s)), Image.LANCZOS)
+canvas = Image.new('RGB', (tw, th), (0, 0, 0))       # black — see below
+canvas.paste(new, ((tw - new.width) // 2, (th - new.height) // 2))
+canvas.save('iap-review.png', 'PNG')
+```
+
+⚠️ **Pad with pure black.** The app's background is `#000000`, so the padding is
+invisible and the result reads as a full screen rather than a letterboxed one.
+
+⚠️ **One image covers all fourteen products.** Apple wants to see *where* the
+purchase appears, not what it costs — so a single shot of the buy screen is
+enough, and the hour of re-pricing one tour through every tier is unnecessary.
+That was this project's own cautious reading, not an Apple rule.
 
 Then, per product: App Store Connect → the purchase's **own page** → the **Add
 for Review** dropdown → pick the draft submission. It is not on the version
