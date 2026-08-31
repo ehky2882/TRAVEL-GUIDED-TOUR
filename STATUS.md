@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-31 (session 127b — ten place cards pushed on `claude/tour-links-upload-t5jk3n`, no PR, see § 1. Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1**. Earlier: session 128 — [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), verified to have actually changed files on `main` rather than trusting GitHub's success line, then [#677](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/677) `b60c2a42` recorded the owner's two decisions on it. **Both are closed — the Coca-Cola ad pin and the Yankee Stadium carriage hero both stay** — so that item has left this board; its story is in `CLAUDE.md` § Current State. Five § 1 entries were stale `OPEN` at the time (#673, #674, #675, #663, #658, all merged) and were flipped)
+**Last verified:** 2026-08-31 (session 127c — nine tier 2 place cards on `claude/tier2-place-cards`, see § 1. Earlier: session 127b — ten place cards, merged as [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676). Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,25 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN — NINE TIER 2 PLACE CARDS FOR THE PIN-ONLY CLUSTERS
+(branch `claude/tier2-place-cards`, commit `3569993e`).**
+**places 66 → 75; `tours` and `makers` BYTE-IDENTICAL.** Windsor Castle · Hampton Court Palace ·
+Hever Castle · Harvington Hall · Syon Park · Hatfield House · York Minster · The Guild Chapel ·
+Blenheim Palace. No Atlas tour is a member of any of these, so nothing geofenced was touched.
+  - **🔴 Windsor is the point:** #674 spread six pins across three coordinates to dodge
+    `TourSetMap.maxStacked = 3`. **A place draws ONE capsule pin, so the cap stops applying** and all
+    six go back onto the castle. Same at Hampton Court and Blenheim.
+  - **🔴 The hero is borrowed in all nine, structurally** — no Atlas tour and every member has an
+    empty gallery, so no third photograph exists (the Waterlooplein case the owner has closed).
+    **Borrowed-hero warnings 6 → 15.** ⚠️ **Windsor has no picture of the castle at all** (armour,
+    portraits, a drawing room, a postbox) — its hero is the weakest of the nine.
+  - **⚠️ Owner decisions available, not blocking:** the **Tudor Kitchens** joining Hampton Court and
+    **Roman York** joining York Minster are judgement calls on the Arab Hall precedent; **the Temple
+    of Diana is excluded** from Blenheim at 262 m on the Great Ball Court precedent.
+  - ✅ **Gracie Mansion built too, on owner instruction — places 75 → 76 and `check-place-candidates.py`
+    reaches 0 EXACT.** Not part of tier 2 (it arrived in #675); a pure addition with `tours`,
+    `makers` and `linkPins` all byte-identical and nothing moved.
 
 🟡 **OPEN — TEN PLACE CARDS FOR THE TOUR-PLUS-PIN SITES
 (branch `claude/tour-links-upload-t5jk3n`, commit `6df08b8c`, pushed — NO PR).**
