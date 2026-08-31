@@ -128,6 +128,70 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-31)
 
+### Ten place cards, and three sites the owner deliberately did not merge (branch `claude/tour-links-upload-t5jk3n`, session 127b — content)
+
+**Owner: *"do tier 1. for tower of london, leave beauchamp tower seaprate. for westminster abbey,
+only put in the 2 tours that are general 'westminster abbey', leave out the others. for houses of
+parliament, only group 'houses of parliament and big ben' and 'house of commons'"*.** Branch
+restarted clean off `origin/main` at `308ad235` (the previous PR on this branch name, #674, is
+merged). **Places 56 → 66. Tours (1,552), link pins (378) and makers (208) all unchanged,
+byte-for-byte.** Content only — no Swift, no SQL, no gh-pages push, no build. **NO PR OPENED** (this
+session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-260831-3.md`.
+
+- **Built, each an Atlas tour plus one or two link pins of the same subject:** **Westminster
+  Abbey** · **The National Gallery** (3 members) · **The Tower of London** · **Natural History
+  Museum** · **Churchill War Rooms** · **The Charles Dickens Museum** · **Leighton House** (3) ·
+  **CaixaForum Madrid** · **Ewha Campus Complex** · **Houses of Parliament**. Eight are London;
+  CaixaForum and Ewha pair an Atlas tour with a `@domus` pin, the rest with `@history_alice`.
+- **🔴 THE THREE EXCLUSIONS ARE THE SUBSTANCE OF THIS SESSION AND A FUTURE AUDIT WILL READ THEM AS
+  UNRESOLVED — THEY ARE SETTLED.** **The Beauchamp Tower stays its own pin**, not a member of the
+  Tower of London: it is a specific building with its own story (the prisoners' carved graffiti).
+  **Only the two general Westminster Abbey entries join** — the batch had deliberately placed its
+  other four abbey posts on distinct, reverse-geocoded interior points precisely so the 3-card stack
+  cap could never hide one, and **that work is exactly what those coordinates were for**. **Houses
+  of Parliament takes the House of Commons pin but NOT Big Ben**, whose tower the tour's own title
+  (*Houses of Parliament and Big Ben*) already covers. **All three are one shape: a famous site has
+  more posts than it has subjects, and which of them are the same place is the owner's call.**
+- **The pin moved and the tour did not, nine times out of ten** — verified by diffing the parsed
+  arrays, not asserted: **0 makers changed**, 9 pins moved **6.1–34.7 m** onto their tour's
+  coordinate (Ewha's pair was already exactly coincident), every one `manual`, so no geofence is
+  disturbed.
+- **🔴 THE ONE TOUR THAT MOVED IS A PRE-EXISTING ERROR, NOT A CONCESSION TO ITS PIN.** **Leighton
+  House sat 179 m away on Park Close**, a residential street, while the tour's own script opens
+  *"From the street, Leighton House looks like a fairly stern red-brick Victorian villa"*. It is
+  `manual`, so nothing was ever firing there and nothing changed by moving it — **but at a geofence
+  this is the IAC Building / Chelsea Hotel failure again**. `triggerMode` and `triggerRadiusMeters`
+  are byte-identical; only the stop coordinate and the mirrored centroid moved.
+- **🔴 EVERY PLACE HERO IS A THIRD PHOTOGRAPH, AND THE BUILD ASSERTS IT.** All nine are promoted
+  from a member tour's own gallery — already uploaded, already verified, **nothing sourced** — and
+  `hero_url not in member_heroes` is a hard check, so the fault found across 13 of the first 24
+  places (one picture printed three times) is avoided by construction. All nine live URLs 200.
+- **⚠️ THE CHARLES DICKENS MUSEUM SHIPS `heroImageURL: null` DELIBERATELY.** The field is optional
+  by design — the place page falls back to the top-ranked tour's hero — and that tour's only spare
+  gallery image is a **19th-century engraving**, not a photograph of the house. A borrowed member
+  hero would be the Waterlooplein case; an honest fallback beats it. One sourced photograph closes
+  it.
+- **🔴 FOUND, FLAGGED, NOT FIXED: THE TWO NATURAL HISTORY MUSEUMS SHARE A GALLERY.** The London
+  **Natural History Museum** tour and the LA **Natural History Museum of LA County** tour reference
+  the **identical seven image URLs** — a bare-slug collision predating the handle-suffix convention
+  — so `natural-history-museum_2.webp` is **the LA County museum** and `_4.webp` is **Los Angeles
+  Union Station**, and both galleries have been mixing cities for some time. **That is why this
+  place's hero is `_5`**, the highest-numbered image verified to be the London building. ⚠️ **The
+  fix is not a byte swap**: per #567 a correction means a **new filename**, or a phone that has
+  downloaded either tour keeps the wrong photographs forever.
+- **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
+  Swift validator, refusing to run if they disagree or either parse is empty (they agree at **385
+  tags**) — **self-tested against 20 injected fault classes, 20/20 caught**, including all seven
+  place-layer checks; then **0 errors, 6 warnings across 1,552 tours + 378 pins + 66 places**, **all
+  six pre-existing** (the same mirror against `origin/main` reports the identical set).
+  `check-place-candidates.py` **10 EXACT → 7, 30 NEAR → 24** — the three EXACT groups that remain
+  are the owner's own exclusions above, and NEAR fell by exactly the pairs resolved.
+  `seed_from_toursjson.py` regenerates cleanly at 208 makers / 1,930 tours / 2,302 stops / **66
+  places**, exercising its own `validate_places`. `Tours.json` **byte-stable under a Python re-dump
+  before editing**; diff **192 insertions / 40 deletions**. **⚠️ Nothing compiled and CI has not
+  run: no PR is open.**
+
+
 ### Ninety-five link pins from one historian, and a thumbnail TikTok's own CDN refuses to serve (branch `claude/tour-links-upload-t5jk3n`, session 127 — content)
 
 **The owner sent 96 links — 95 TikToks and one Instagram reel.** Branch restarted clean off
