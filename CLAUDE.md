@@ -184,8 +184,7 @@ session's harness forbids opening one unasked). Full detail: `archive/HANDOFF-26
   tags**) — **self-tested against 20 injected fault classes, 20/20 caught**, including all seven
   place-layer checks; then **0 errors, 6 warnings across 1,552 tours + 483 pins + 66 places**, **all
   six pre-existing** (the same mirror against `origin/main` reports the identical set).
-  `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35** — the three EXACT groups that remain
-  are the owner's own exclusions above, and NEAR fell by exactly the pairs resolved.
+  `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35** — the three groups it resolved are **CaixaForum Madrid**, **The National Gallery** (two coincident pins) and **Leighton House + The Arab Hall**. ⚠️ **The eight that REMAIN are not the owner's exclusions** — those sit at deliberately distinct coordinates and never appear in EXACT at all. The eight are all pin-only pairs, seven from the 95-pin batch (Harvington Hall, Hatfield House + the Elizabeth Oak, Syon Park, York Minster + Roman York, Windsor Castle ×2 groups, Hever Castle) plus **Gracie Mansion** from #675 — every one still needs an owner decision, and a place for any of them would have to borrow a member's hero.
   `seed_from_toursjson.py` regenerates cleanly at 208 makers / 2,035 tours / 2,407 stops / **66
   places**, exercising its own `validate_places`. `Tours.json` **byte-stable under a Python re-dump
   before editing**; diff **192 insertions / 40 deletions**. **⚠️ Nothing compiled and CI has not

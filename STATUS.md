@@ -50,8 +50,7 @@ London · Natural History Museum · Churchill War Rooms · The Charles Dickens M
     reference the IDENTICAL seven image URLs** (a bare-slug collision predating the handle suffix),
     so `natural-history-museum_2.webp` is **the LA museum** and `_4.webp` is **LA Union Station**.
     Both galleries have been mixing cities. **The fix is new filenames, never a byte swap** (#567).
-  - `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35**; the three EXACT groups that remain
-    are the owner's own exclusions. **CI has not run — no PR is open.**
+  - `check-place-candidates.py` **11 EXACT → 8, 41 NEAR → 35**; the three groups it resolved are **CaixaForum Madrid**, **The National Gallery** (two coincident pins) and **Leighton House + The Arab Hall**. ⚠️ **The eight that REMAIN are not the owner's exclusions** — those sit at deliberately distinct coordinates and never appear in EXACT at all. The eight are all pin-only pairs, seven from the 95-pin batch (Harvington Hall, Hatfield House + the Elizabeth Oak, Syon Park, York Minster + Roman York, Windsor Castle ×2 groups, Hever Castle) plus **Gracie Mansion** from #675 — every one still needs an owner decision, and a place for any of them would have to borrow a member's hero.
 
 🟢 **MERGED — ONE HUNDRED AND FIVE LINK PINS FROM `@hereinnyc`
 ([#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) `2bc05e30`).**
