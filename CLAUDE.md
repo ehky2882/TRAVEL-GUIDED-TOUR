@@ -297,13 +297,16 @@ unasked). Full detail: `archive/HANDOFF-260831-3.md`.
   Garden (2.0 m), Riverside Church (9.0 m) and **the Merchant's House on East 4th Street
   (9.4 m)**. Nothing is unreachable. Two pins on one building is the Westin Bonaventure
   precedent — the owner sent both links, so both ship with distinct slugs.
-- **🔴 #15 AND #83 ARE TWO FRAMES OF THE SAME VINTAGE SUBWAY CARRIAGE — the creator reused the
-  footage.** Perceptual Hamming **6 of 256** with a 32×32 diff of **12.2**, where every other
-  pair in the batch sits at 32+/30+, the tonal false-positive band. Opened side by side: same
-  carriage, same camera position, differing only in the title card. **Consequence: #15 is pinned
-  at Yankee Stadium and its hero shows a Transit Museum carriage** (its caption is that the song
-  was written on the subway). Not byte-identical, so the byte check passes; a link pin re-hosts
-  only the thumbnail, so **no other frame exists**. Shipped and flagged.
+- **✅ #15 AND #83 ARE TWO FRAMES OF THE SAME VINTAGE SUBWAY CARRIAGE, AND THE OWNER KEEPS BOTH —
+  decided 2026-08-31: *"keep the yankee stadium pin."* THE PIN STAYS WITH ITS CARRIAGE HERO; do not
+  swap it or pull it.** The creator reused the footage: perceptual Hamming **6 of 256** with a 32×32
+  diff of **12.2**, where every other pair in the batch sits at 32+/30+, the tonal false-positive
+  band. Opened side by side: same carriage, same camera position, differing only in the title card.
+  **Consequence: #15 is pinned at Yankee Stadium and its hero shows a Transit Museum carriage** (its
+  caption is that the song was written on the subway). Not byte-identical, so the byte check passes;
+  a link pin re-hosts only the thumbnail, so **no other frame exists** — the choice was keep it or
+  pull the pin. ⚠️ **Anyone re-running the open-every-hero audit will flag this again — it is
+  settled**, the Ministry of Enterprise / Christchurch precedent.
 - **✅ #92 IS A PAID ADVERTISEMENT AND THE OWNER KEEPS IT — decided 2026-08-31: *"i'm fine with the
   coca cola ad."* THE PIN STAYS; do not re-raise or quietly pull it.** A Coca-Cola partnership,
   marked **`AD`** in the frame and opening `AD |` in its own caption, but still a real location post
