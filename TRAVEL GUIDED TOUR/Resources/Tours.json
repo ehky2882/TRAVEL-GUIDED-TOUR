@@ -80246,6 +80246,21 @@
         "2B0062BF-E29F-58A1-B35E-4C9766E6547A",
         "F67D28AD-C087-5C87-9CE4-53229F678507"
       ]
+    },
+    {
+      "id": "d91be234-660b-536c-8203-30a2a0f1ba82",
+      "name": "Gracie Mansion",
+      "description": "The official residence of the Mayor of New York, and one of the few eighteenth-century houses left in Manhattan. Archibald Gracie, a Scottish-born shipping merchant, built it in 1799 as a country seat on Horn's Hook, the bluff above the tidal narrows of Hell Gate — five miles north of what was then the city. The house passed to the city in the 1890s, served as the first home of the Museum of the City of New York, and became the mayor's residence in 1942 under Fiorello La Guardia. The Susan E. Wagner Wing, added in 1966, holds the reception rooms; the house is open to the public by tour.",
+      "latitude": 40.776095,
+      "longitude": -73.943079,
+      "city": "New York",
+      "address": "East End Avenue at 88th Street, New York, NY 10028",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gracie-mansion-secrets-hereinnyc_hero.webp",
+      "additionalImageURLs": [],
+      "tourIds": [
+        "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
+        "74DC814A-9510-5288-ACF6-6B39FB74AE41"
+      ]
     }
   ],
   "linkPins": [
