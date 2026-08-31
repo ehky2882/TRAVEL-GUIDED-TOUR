@@ -31,10 +31,9 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 Swift, no SQL, no build. CI green on all three jobs; the squash was verified to have actually
 changed files on `main` (5,072 insertions across 6 files) and the catalogue re-read from
 `origin/main` at 483 pins. **The largest batch to date**, against a previous record of 95.
-  - **⚠️ Owner decision available, not blocking — one pin is a paid advertisement.** A Coca-Cola
-    partnership, marked **`AD`** in the frame and opening `AD |` in its own caption. It is still a
-    real location post (Marilyn Monroe photographs at Bowling Green) so it ships, but pinning an ad
-    is the owner's call. One line removes it.
+  - **✅ CLOSED — the paid-advertisement pin stays.** Owner, 2026-08-31: *"i'm fine with the coca
+    cola ad."* A Coca-Cola partnership marked **`AD`** in the frame, but a real location post
+    (Marilyn Monroe photographs at Bowling Green). **Settled — do not re-raise.**
   - **🔴 Owner decision — two heroes are the same vintage subway carriage, and one is pinned at
     Yankee Stadium.** They score perceptual Hamming **6 of 256** with a thumbnail diff of **12.2**,
     where every other pair in the batch sits at 32+/30+ — the creator reused the footage. So the
