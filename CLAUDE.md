@@ -132,8 +132,8 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **The owner sent 51 short links, all `vm.tiktok.com`.** Branch cut clean off `main` at `1ef8870`.
 **linkPins 483 → 533 · tours unchanged at 1,552 · makers unchanged at 208 · places unchanged at 76.**
-Content only — no Swift, no SQL, no build. **NO PR OPENED** (this session's harness forbids opening
-one unasked). Full detail: `archive/HANDOFF-260831-8.md`.
+Content only — no Swift, no SQL, no build. **Opened and merged as [#682](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/682) on owner
+instruction.** Full detail: `archive/HANDOFF-260831-8.md`.
 
 - **✅ 50 DISTINCT POSTS FROM 51 LINKS, ALL PINNABLE.** One short link was pasted twice (once bare,
   once carrying a Plus Code, which `normalize_url` canonicalises identically), so the
@@ -245,8 +245,8 @@ one unasked). Full detail: `archive/HANDOFF-260831-8.md`.
   duplicates`**, and its shared-URL half **0 errors / 207 documented reuses**, identical to the
   pre-edit baseline — so these 50 pins add no shared `audioURL`, no two entries on one file and no
   cross-city image sharing. ⚠️ **10 of 536 fetches returned HTTP 503** (1.9%, transient), under the
-  script's own 20% `COULD NOT VERIFY` threshold and **none of them from this batch**. **CI has not
-  run: no PR is open.**
+  script's own 20% `COULD NOT VERIFY` threshold and **none of them from this batch**. **CI green on
+  [#682](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/682)** — the authoritative Swift validator, plus the simulator build and unit tests.
 
 ### The duplicate checker can now see two entries pointing at ONE file (branch `claude/shared-url-checks`, session 129b — tooling)
 
