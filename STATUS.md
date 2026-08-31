@@ -398,8 +398,8 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 |---|---|---|
 | ~~**App Store 1.1 review**~~ | ✅ **APPROVED AND LIVE** — owner-reported 2026-08-28. Submitted 2026-08-18 03:22 UTC on build 66. See § 1d. | ✅ Done |
 | **Stripe platform review** | Response submitted; account flagged under Restricted Businesses. | ❓ Awaiting Stripe reply |
-| **9 IAP tiers `MISSING_METADATA`** | Each needs a review screenshot at its real price. Deliberately blocked: every walk is $0.99 today, so a genuine $2.99 screenshot cannot exist yet. | ⏸ Blocked by design |
-| **EU trader declaration** | App declared **non-trader** while selling ten IAP tiers into EU cities. Declaring trader publishes an address. | 🔴 Decision owed |
+| **13 IAP tiers not submittable** | 9 existing + **4 new** (599/799/1299/1799, owner decision 2026-08-31 — the menu is 14 now). Each needs a review screenshot at its own real price, which is why they have sat since August. **No longer blocked by design: price lives in Supabase, so one tour can be walked through every tier in a sitting** — [docs/iap-tier-screenshots.md](docs/iap-tier-screenshots.md). Owed first: apply `backend/widen_price_tiers.sql`, then create the four products in ASC. | 🟡 Ready to do |
+| **EU trader declaration** | App declared **non-trader** while selling IAP tiers into EU cities. Declaring trader publishes an address. | 🔴 Decision owed |
 | **LLC vs sole proprietor** | Gates the Stripe payout path, and collapses the EU-trader and the AHWY/EHKY-initials trade-offs at once. | 🔴 Decision owed |
 
 ### SQL pastes owed (Supabase SQL Editor, project **Dozent**)

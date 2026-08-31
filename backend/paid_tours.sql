@@ -61,7 +61,7 @@
 begin;
 
 -- ---------------------------------------------------------------------------
--- tours.price_tier — NULL = free. Cents, restricted to the 10 ASC tiers.
+-- tours.price_tier — NULL = free. Cents, restricted to the 14 ASC tiers.
 -- The App Store product id is 'tour.tier.' + the cents value, zero-padded to
 -- at least 3 digits: 99 → tour.tier.099, 199 → tour.tier.199, …,
 -- 1499 → tour.tier.1499. Widening the menu later = create the ASC product,
@@ -78,7 +78,8 @@ alter table public.tours add column if not exists video_urls text[];
 alter table public.tours drop constraint if exists tours_price_tier_allowed;
 alter table public.tours add constraint tours_price_tier_allowed
     check (price_tier is null or price_tier in
-           (99, 199, 299, 399, 499, 699, 899, 999, 1499, 1999));
+           (99, 199, 299, 399, 499, 599, 699, 799, 899, 999,
+            1299, 1499, 1799, 1999));
 
 -- ---------------------------------------------------------------------------
 -- purchases — one row per Apple transaction. Insert path: record-purchase
@@ -113,7 +114,8 @@ create table if not exists public.purchases (
 -- means updating BOTH lists.
 alter table public.purchases drop constraint if exists purchases_price_tier_allowed;
 alter table public.purchases add constraint purchases_price_tier_allowed
-    check (price_tier in (99, 199, 299, 399, 499, 699, 899, 999, 1499, 1999));
+    check (price_tier in (99, 199, 299, 399, 499, 599, 699, 799, 899, 999,
+            1299, 1499, 1799, 1999));
 
 create index if not exists idx_purchases_user_id  on public.purchases (user_id);
 create index if not exists idx_purchases_maker_id on public.purchases (maker_id);

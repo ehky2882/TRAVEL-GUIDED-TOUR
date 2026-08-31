@@ -300,6 +300,15 @@ currently in state `MISSING_METADATA`** (verified 2026-08-07):
 tour.tier.099 · 199 · 299 · 399 · 499 · 699 · 899 · 999 · 1499 · 1999
 ```
 
+⚠️ **The menu is now FOURTEEN, not ten** (owner decision 2026-08-31): `599`,
+`799`, `1299` and `1799` were added to fill the working band with dollar steps
+while keeping the top end coarse. Those four products **do not exist in App
+Store Connect yet** and must be created before they can be priced or submitted,
+and `backend/widen_price_tiers.sql` must be applied before a tour can carry
+one. **The whole screenshot session is written up in
+[docs/iap-tier-screenshots.md](iap-tier-screenshots.md)** — read that rather
+than improvising it.
+
 That means none of them can be submitted yet. Each needs a **display name**, a
 **description**, and a **review screenshot** showing where it appears in the
 app. **Apple requires the first non-consumable purchase to be reviewed alongside
