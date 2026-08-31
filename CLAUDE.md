@@ -179,9 +179,13 @@ Full detail: `archive/HANDOFF-260831-5.md`.
   warnings across 1,552 tours + 483 pins + 75 places**, six pre-existing and nine the borrowed heroes
   above. **`tours` and `makers` byte-identical**; exactly 10 pins changed, in exactly the four
   coordinate fields, **all ten `manual`** — asserted, not assumed. **`check-place-candidates.py` 8
-  EXACT → 1, 35 NEAR → 21** — ⚠️ **the one EXACT left is Gracie Mansion**, which arrived in #675 and
-  was never part of tier 2. `seed_from_toursjson.py` clean at **208 / 2,035 / 2,407 / 75**; all nine
-  hero URLs live **200**; `Tours.json` byte-stable before editing, diff **180 insertions / 40
+  EXACT → 1, 35 NEAR → 21** — the one left was **Gracie Mansion**, which arrived in #675 and was
+  never part of tier 2. ✅ **The owner then asked for it too, so it is built here as well: places 75
+  → 76, and EXACT reaches ZERO.** That one is a **pure addition** — `tours`, `makers` and `linkPins`
+  all byte-identical, both members already coincident so nothing moved — and its hero is borrowed on
+  the same structural grounds, though ⚠️ **both its frames are interiors with no person in them**,
+  which is better than most of tier 2 managed. `seed_from_toursjson.py` clean at **208 / 2,035 /
+  2,407 / 76**; all ten hero URLs live **200**; `Tours.json` byte-stable before editing, diff **180 insertions / 40
   deletions**. **⚠️ Nothing compiled locally — CI on the PR is the only check.**
 
 

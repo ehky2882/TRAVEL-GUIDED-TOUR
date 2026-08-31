@@ -40,8 +40,9 @@ Blenheim Palace. No Atlas tour is a member of any of these, so nothing geofenced
   - **⚠️ Owner decisions available, not blocking:** the **Tudor Kitchens** joining Hampton Court and
     **Roman York** joining York Minster are judgement calls on the Arab Hall precedent; **the Temple
     of Diana is excluded** from Blenheim at 262 m on the Great Ball Court precedent.
-  - `check-place-candidates.py` **8 EXACT → 1** — ⚠️ **the one left is Gracie Mansion from #675**,
-    never part of tier 2 and still needing an owner call.
+  - ✅ **Gracie Mansion built too, on owner instruction — places 75 → 76 and `check-place-candidates.py`
+    reaches 0 EXACT.** Not part of tier 2 (it arrived in #675); a pure addition with `tours`,
+    `makers` and `linkPins` all byte-identical and nothing moved.
 
 🟡 **OPEN — TEN PLACE CARDS FOR THE TOUR-PLUS-PIN SITES
 (branch `claude/tour-links-upload-t5jk3n`, commit `6df08b8c`, pushed — NO PR).**
