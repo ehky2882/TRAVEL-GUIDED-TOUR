@@ -408,3 +408,112 @@ Once you are live, worth doing but not urgent:
   [docs/fastlane.md](fastlane.md).
 - **Add more languages.** The listing is English only. A second language is a
   new folder under `fastlane/metadata/`.
+
+---
+
+## Shipping an update
+
+Everything above is the **first** submission and is done. An update is a much
+shorter path. This section is the one to follow from 1.1.1 onward.
+
+**What is different from a first submission, and both bite:**
+
+- **🔴 "What's New" is now REQUIRED, where on 1.0 it was impossible.** Apple
+  rejects `whatsNew` on a first release with
+  `409 STATE_ERROR: Attribute 'whatsNew' cannot be edited at this time`, which
+  is why `release_notes.txt` was deleted from the repo in August 2026. It is
+  back, and an update without it cannot be submitted.
+- **🔴 The version number must be NEW.** 1.1 is released, so Apple refuses
+  further builds against it — that is why `MARKETING_VERSION` is **1.1.1** and
+  why build 137 reads differently from every build before it. A build uploaded
+  against a released version is rejected at upload, not at review.
+
+### Step U1 — Check what the public actually has
+
+The App Store build and `main` drift apart fast, because content ships over the
+air and code does not. Before anything else, find the released build's commit
+and diff the app code:
+
+```bash
+git diff --stat <released-build-sha> origin/main -- "TRAVEL GUIDED TOUR" "*.pbxproj" Info.plist
+```
+
+⚠️ `Tours.json` in that diff is the **bundled offline seed**, not a code change.
+It matters only for a fresh install with no signal; everything else about the
+catalogue reaches phones over the air. Judge whether an update is worth shipping
+on the *other* files.
+
+⚠️ **A key the released build does not know is invisible to it, silently.** Build
+66 ignores both `linkPins` and `places` — so every pinned post and every place
+page is missing for the public until a build that understands them ships. That is
+by design (it is what stops an old build freezing), but it means those features
+do not exist for anyone until the update lands. **Check for this before writing
+release notes: a feature the public cannot see yet is exactly what the notes are
+for.**
+
+### Step U2 — Pick the build
+
+A build cut from **any branch** is fine to submit as long as its app code matches
+`main` — verify it, never assume. Its bundled catalogue being behind is
+acceptable; that catches up on first launch from Supabase.
+
+If nothing suitable exists, cut one: Actions → **TestFlight build** → Run
+workflow on `main`, and **read the run number back** from the Actions list. Build
+numbers are `github.run_number`, shared across every branch and session, so they
+cannot be predicted.
+
+### Step U3 — Update the listing text
+
+In this repo, then push it:
+
+- **`fastlane/metadata/en-US/release_notes.txt`** — the "What's New" text.
+  Required. Write it for someone who does not read release notes: what changed
+  that they will notice, in their words, no version numbers, no internal names.
+- **`description.txt`** — re-check the catalogue numbers and the feature list.
+  They go stale quietly. Derive counts from `Tours.json` on `main`, and count
+  cities and countries over **`tours` and `linkPins` together** — the tours array
+  alone has produced a wrong number in a commit message before.
+
+Push with `bundle exec fastlane metadata`, or from a machine without a working
+Ruby, `python3 scripts/push-appstore-metadata.py`, which makes the same calls.
+
+⚠️ **The version update is atomic.** One rejected field takes every other field
+down with it, and a non-200 means nothing landed. Read the response.
+
+### Step U4 — Screenshots
+
+Optional for an update, and they stay as they are unless you replace them.
+Worth replacing when the screens in them no longer look like the app.
+
+⚠️ **After any screenshot upload, ask Apple what is on the listing.** Do not
+trust fastlane's own success line — its verification races Apple's processing and
+has re-uploaded four images that were already there, silently duplicating them up
+to the ten-image cap while reporting success. Query
+`appStoreVersionLocalizations → appScreenshotSets → appScreenshots` and count.
+
+### Step U5 — Purchases, if any are being added
+
+An in-app purchase joins a submission from **its own page** in App Store Connect
+→ the **Add for Review** dropdown → pick the existing draft submission. It is not
+on the version page, not on the App Review page, and there is **no API path** to
+it — the relationship does not exist on `reviewSubmissionItems`.
+
+⚠️ **`bundle exec fastlane release` does NOT attach purchases** — it submits the
+version and nothing else. On a paid app that ships an approved binary whose Buy
+buttons lead nowhere.
+
+### Step U6 — Submit
+
+Same as Step 15. `releaseType` stays **MANUAL** unless you decide otherwise, so
+approval does not publish — you press Release.
+
+### Standing gaps that are not blockers
+
+These do not stop an update and have not changed:
+
+- **EU trader declaration** — the app is declared non-trader while selling ten
+  purchase tiers into EU cities. Declaring trader publishes an address.
+- **Nine purchase tiers still missing metadata** — each needs a review screenshot
+  at its real price, and every walk is $0.99 today, so a genuine $2.99 screenshot
+  cannot exist. ⚠️ They **can** now be submitted independently: Apple refused them
+  with `409 STATE_ERROR` only while the app had never been released.

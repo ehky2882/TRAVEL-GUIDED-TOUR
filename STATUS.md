@@ -368,7 +368,24 @@ strict decoder frozen at 18 August:
 
 **Owed, and worth doing before the next release:** ship an update, because every fix since
 18 August — the launch sequence, offline photographs, fullscreen video, the search rewrite, the
-link-pin fullscreen fix — is **not** in what the public has. Build 135 is the candidate.
+link-pin fullscreen fix — is **not** in what the public has.
+
+**✅ THE UPDATE IS PREPPED (2026-08-31).** `fastlane/metadata/en-US/release_notes.txt` is written
+(required for an update, impossible on a first release — which is why it had been deleted), the
+description's stale counts are corrected and its two missing features added, and
+`docs/launch-runbook.md` gained a **§ Shipping an update** with the two rules that only bite on an
+update: What's New is mandatory, and the version must be new (**`MARKETING_VERSION` is 1.1.1**,
+because Apple refuses builds against a released 1.1).
+
+- **The build is ready: 137**, owner device-verified. Its app code was diffed against `main` and
+  differs by **one comment block**; only its bundled seed is behind, which catches up on first
+  launch. **No new build is needed.**
+- **🔴 VERIFIED AGAINST BUILD 66'S OWN SOURCE, not assumed:** its `ToursData` decodes
+  `{makers, tours}` only and the tree carries **no `Models/Place.swift`** — so **every one of the
+  283 link pins and 49 place pages is invisible to the public today.** That is the split working as
+  designed, and it makes both the headline of the release notes.
+- **⚠️ Remaining steps are owner-only and outside the repo:** create the 1.1.1 version record, push
+  the metadata, attach build 137, submit. § Shipping an update has them in order.
 
 ## 2. Blocked on owner — outside the repo
 
