@@ -40,6 +40,9 @@ struct PlaceView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(SavedPlacesStore.self) private var savedPlaces
+    /// Optional so a preview — which wires no layers — still renders. Nil
+    /// hides the map's expand control rather than drawing one that cannot act.
+    @Environment(MapExpander.self) private var mapExpander: MapExpander?
     @Environment(\.openURL) private var openURL
 
     let onDismiss: () -> Void
@@ -273,7 +276,25 @@ struct PlaceView: View {
         // Same sizing as the carousel it swaps with, so the page height
         // is identical on both tabs.
         .atlasHeroSizing(nil)
+        // Take the site to the Home map with its own place card up — the card
+        // the place pin raises there, not a member tour's. A place with two or
+        // more published tours draws as ONE capsule pin, so landing on a
+        // member's card would hang it over a pin that stands for the place.
+        .atlasMapExpandControl(isVisible: mapExpander != nil) {
+            mapExpander?.expand(to: expandRegion, showingPlace: place.id)
+        }
         .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// Where expanding lands: the site at the Home map's neighbourhood zoom,
+    /// which is wider than this preview's ~400 m street view.
+    ///
+    /// ⚠️ Deliberately not `mapRegion`. This preview answers "what is around
+    /// the door"; the Home map is for browsing on from, so it arrives at the
+    /// same zoom Search does — the one door in should not look different from
+    /// the other.
+    private var expandRegion: MKCoordinateRegion {
+        HomeView.region(framing: place)
     }
 
     /// ~400 m across — close enough to read the streets around the site, which

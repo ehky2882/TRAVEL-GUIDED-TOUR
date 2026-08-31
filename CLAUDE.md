@@ -149,6 +149,83 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-30)
 
+### An inline map gets an expand button — back to the one map, framed on what you were reading ([#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671), session 126 — code)
+
+**Owner: *"when i'm in a places page, or tour details page, or dozent page etc. in the 'map' view i
+want to be able to click on a button that 'expands' the map which effectively takes me back to the
+home map view at the location of that particular item … with the placecard showing, similar to if i
+were to get to a tour by searching."*** Built, `test_sim` **578/578** (+8), driven end to end in the
+simulator on all three reachable surfaces. Squash `01c70f63`, **merged**. **TestFlight 1.1.1 (138),
+owner device-verified: *"LOOKS GOOD."*** Code only — no SQL, no catalogue change, nothing for the
+owner to run. Full detail: `archive/HANDOFF-260830-8.md`.
+
+- **Every inline map in the app is a PREVIEW, and that is the problem it solves.** Tour detail, a
+  place, a creator and a list each draw a map that holds only that page's own pins — you can pan it
+  and you cannot browse on from it. `.atlasMapExpandControl` is the door back to the one map that
+  holds everything.
+- **The landing is the one Search already writes**, deliberately: `PendingMapMove` has carried a
+  region plus a `placecardTourId` since session 102, and `HomeView.flyTo` already raises the card
+  *after* the flight. **The one map should not look different depending on which door you came
+  through.**
+- **Owner decisions, taken before any code was written.** A **creator or list page raises NO card** —
+  those maps hold many tours across many cities and have no single subject, so it frames the lot,
+  which is the picture their own `SHOW ALL` gives. A **place raises its own place card, not a member
+  tour's** — a site with ≥2 published tours draws as ONE capsule pin, so a member's card would hang
+  over a pin that stands for the place. New `PendingMapMove.placecardPlaceId`; `flyTo` prefers it
+  over the tour id when both are set.
+- **🔴 SETTING STATE IS NOT ENOUGH, and `MapExpander.performExpand` exists for exactly the reason
+  `TourPresenter.performDismiss` does.** Every surface with an expand button sits inside a UIKit
+  slide-up layer that completely covers the main window, and SwiftUI can stop delivering updates to
+  a covered hierarchy — an `.onChange` in `ContentView` may simply never run. That is the dead tab
+  bar of session 74, the dead place pin (#532) and the dead X (#535). The closure tears the layers
+  down **directly**; all four `dismiss()` calls are idempotent, so calling every one is free and the
+  button works from a page reached through any stack of them.
+- **⚠️ THE MOVE IS DELIVERED ON THE NEXT MAIN-QUEUE TURN, DELIBERATELY.** Written synchronously it
+  lands while the main window is still covered and `HomeView`'s observer may never see it — a fly-to
+  that simply doesn't happen. **`DispatchQueue.main.async`, not `Task { @MainActor in }`**:
+  main-queue blocks run strictly FIFO, so it cannot overtake the dismissals. And **`HomeView`
+  consumes the move from THREE triggers, not one** — first appearance, the request landing, and
+  **`isActive` becoming true**. The third is not belt-and-braces: it is the reliable signal on the
+  path where Home was not the showing tab. `consumePendingMapMove()` clears the request, so at most
+  one of the three acts.
+- **⚠️ ONE COMPONENT FOR ALL FOUR SURFACES, and this app has paid three times for the alternative** —
+  `StopPin`/`ClusterPin` drifted to 14pt against 16pt before `MapPins` was extracted, and the
+  swallowed-tap placecard stack was two copies before `TourSetMap` was. **A fifth map surface should
+  call `.atlasMapExpandControl`, not grow a fifth copy.**
+- **🔴 IT IS TOP-TRAILING, AND THE BOTTOM CORNER IS A BUG THIS SHIPPED ONCE AND THE OWNER CAUGHT.**
+  First revision put it bottom-trailing, matching the Home map's control stack. Owner: *"dozent page
+  map expansion doesnt seem to work."* **These maps sit inside a scrolling page while the mini-player
+  and tab bar render in a window ABOVE it**, so anything drawn low in the map is behind them — and on
+  the creator page the header (avatar, bio, follower counts) pushes the square map down far enough
+  that **its bottom third is under the bar at the page's RESTING scroll position.** The control was
+  rendering, sitting in the accessibility tree, and being hit-tested by the tab bar: the
+  `UIPageControl` family of #571. The top corner is visible the moment any of the map is, which is
+  the state every one of these pages opens in; the mirrored failure costs nothing, because by the
+  time the map's top passes under the nav chrome the map is mostly off screen.
+  - **⚠️ AND MY OWN FIRST DIAGNOSIS WAS WRONG IN THE MOST EXPENSIVE WAY.** I hit this in the
+    simulator, scrolled the map into view, watched it work, and wrote it up as *"a harness artifact,
+    not a product bug"* — because the synthetic tap had used a coordinate a finger could not have
+    reached either. **A tap that only works after you scroll the control somewhere convenient is not
+    a passing test.** Verify a new map control **at the page's resting scroll position**.
+  - **⚠️ In `TourSetMap` the button hides while a placecard stack is up**, because those stack
+    *upwards* from a pin at `pinFraction` (0.72) and land in exactly that corner.
+- **⚠️ THE EXPAND REGION IS NOT THE REGION THE INLINE MAP FRAMES, and the two are legitimately
+  different.** Tour detail's preview frames the whole route so you can read the shape of a walk; the
+  place page's is ~400 m of street. Both expand to `HomeView.region(framing:)`, the same zoom Search
+  uses. **`MapExpander.regionFraming` takes the PIN coordinate** — a single tour's only stop, or
+  **stop 0** of a walk — not every stop and not the centroid, which can sit hundreds of metres from
+  any stop (Montreal's Downtown walk: 197 m — the session-102 drawer bug).
+- **⚠️ Hidden, never disabled or inert**, when there is nothing to expand to (a tour with no stops, a
+  creator with nothing published, a host that wired no layers). A control that visibly does nothing
+  is worse than one that is absent; an *inert* one is the invisible-defect class this codebase keeps
+  rediscovering. `@Environment(MapExpander.self)` is optional at every call site so previews render.
+- **Verified in the simulator, all three at their resting scroll position after the corner moved:**
+  tour detail (Bloemenmarkt → its card up on the Home map), **place** (`dozent://place/…`
+  Rijksmuseum → the **place** card up in Amsterdam), **creator** (`dozent://maker/…` Atlas Studio
+  AMS → Amsterdam framed, 39 tours in view, no card). **The list page was not driven** — login-gated,
+  and it renders through the same `TourSetMap` the creator page proved.
+
+
 ### Seven Instagram reels, one creator, and an Atlas tour that can never fire (branch `claude/links-tours-upload-zcxcfm`, session 125 — content)
 
 **The owner sent seven Instagram reels — all architecture and design, all by one creator.** Branch
