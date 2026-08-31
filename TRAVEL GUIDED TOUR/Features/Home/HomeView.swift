@@ -362,15 +362,29 @@ struct HomeView: View {
                 // camera on the user (item #1). After that the user
                 // owns the camera — pan, zoom, and the recenter
                 // button take over.
-                .onAppear { centerOnUserIfNeeded() }
+                .onAppear {
+                    centerOnUserIfNeeded()
+                    consumePendingMapMove()
+                }
                 .onChange(of: locationManager.userLocation) { _, _ in
                     centerOnUserIfNeeded()
                 }
-                // A place tapped in SearchView arrives here as a
-                // one-shot request: fly the camera there.
-                .onChange(of: sharedState.pendingMapMove) { _, move in
-                    guard let move else { return }
-                    flyTo(move.region, showing: move.placecardTourId)
+                // A place or tour tapped in SearchView, or the expand control
+                // on a detail page's inline map, arrives here as a one-shot
+                // request: fly the camera there.
+                .onChange(of: sharedState.pendingMapMove) { _, _ in
+                    consumePendingMapMove()
+                }
+                // ⚠️ SECOND TRIGGER, AND IT IS NOT BELT-AND-BRACES. The expand
+                // control writes from inside a UIKit layer that covers this
+                // window, and SwiftUI can stop delivering updates to a covered
+                // hierarchy — so the observer above can miss the write outright.
+                // Home becoming the active tab is a separate, reliable signal
+                // that this view is live again; `consumePendingMapMove` clears
+                // the request, so at most one of the two ever acts on it.
+                .onChange(of: isActive) { _, nowActive in
+                    guard nowActive else { return }
+                    consumePendingMapMove()
                 }
             }
         }
@@ -407,6 +421,20 @@ struct HomeView: View {
         }
     }
 
+    /// Take whatever one-shot map move is waiting and fly it, if any.
+    ///
+    /// Idempotent by construction — `flyTo` clears the request first — so the
+    /// three triggers that call this (first appearance, the request landing,
+    /// and Home becoming the active tab) can never fly the same move twice.
+    private func consumePendingMapMove() {
+        guard let move = sharedState.pendingMapMove else { return }
+        flyTo(
+            move.region,
+            showing: move.placecardTourId,
+            orPlace: move.placecardPlaceId
+        )
+    }
+
     /// Glide the camera to a region requested by a place search. Clears
     /// the one-shot request, retracts the drawer + any open placecard so
     /// the destination isn't hidden, and arms the no-tours check for
@@ -416,7 +444,11 @@ struct HomeView: View {
     ///   arrival — a tour tapped in Search. Applied AFTER `dismissPlacecard()`
     ///   below, which is why it is passed in rather than set by the caller:
     ///   the caller's card would be wiped by this very method.
-    private func flyTo(_ region: MKCoordinateRegion, showing placecardTourId: UUID? = nil) {
+    private func flyTo(
+        _ region: MKCoordinateRegion,
+        showing placecardTourId: UUID? = nil,
+        orPlace placecardPlaceId: UUID? = nil
+    ) {
         sharedState.pendingMapMove = nil
         showNoToursOverlay = false
         // Any card from the old location is stale at a new one.
@@ -427,9 +459,19 @@ struct HomeView: View {
         // destination and is already in place the moment the camera settles —
         // rather than appearing a beat later, which is the "assembling after
         // you arrive" feel the owner has objected to elsewhere.
-        if let placecardTourId,
-           let tour = dataService.tour(by: placecardTourId),
-           let coordinate = Self.placecardCoordinate(for: tour) {
+        //
+        // ⚠️ THE PLACE WINS WHEN BOTH ARE SET. A site with two or more tours
+        // draws as ONE place pin on this map, so a member tour's card would
+        // hang over a pin that stands for the place — a caller that knows the
+        // place id knows the more specific thing about where you are landing.
+        if let placecardPlaceId,
+           let place = dataService.place(by: placecardPlaceId) {
+            sharedState.placecardTours = []
+            sharedState.placecardPlace = place
+            sharedState.placecardCoordinate = place.coordinate
+        } else if let placecardTourId,
+                  let tour = dataService.tour(by: placecardTourId),
+                  let coordinate = Self.placecardCoordinate(for: tour) {
             sharedState.placecardPlace = nil
             sharedState.placecardTours = [tour]
             sharedState.placecardCoordinate = coordinate
@@ -463,6 +505,15 @@ struct HomeView: View {
     static func region(framing tour: Tour) -> MKCoordinateRegion? {
         guard let coordinate = placecardCoordinate(for: tour) else { return nil }
         return MKCoordinateRegion(center: coordinate, span: recenterSpan)
+    }
+
+    /// The same landing for a site, used by the place page's expand control.
+    ///
+    /// Deliberately the same span as the tour flavour above rather than the
+    /// place page's own ~400 m preview zoom: however you reach this map, you
+    /// should arrive at the same altitude.
+    static func region(framing place: Place) -> MKCoordinateRegion {
+        MKCoordinateRegion(center: place.coordinate, span: recenterSpan)
     }
 
     /// When the camera settles after a place-search fly-to, show the

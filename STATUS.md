@@ -25,6 +25,29 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🟡 **OPEN PR [#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671) — EXPAND CONTROL ON EVERY INLINE MAP
+(`claude/map-expand-control`, session 126 — CODE).** Owner ask: an expand button on the map view of a place / tour / dozent page
+that takes you back to the **Home map** at that item, placecard up, exactly like arriving from
+Search. Built for all four map surfaces (tour detail, place, creator, list). **Code only — no SQL,
+no catalogue change, nothing for the owner to run.** `build_sim` clean, `test_sim` **578/578**
+(+8), and driven end to end in the simulator on tour detail, a place and a creator page (the list
+page shares `TourSetMap` with the creator page).
+  - **Owner decisions already taken, in this thread:** a **creator or list page raises no card**
+    (many tours, no single subject — it frames the lot); a **place raises its own place card**, not
+    a member tour's.
+  - **🔴 FIXED IN THE SAME SESSION, owner-reported: *"dozent page map expansion doesnt seem to
+    work."*** The control started **bottom-trailing**, and on the creator page the header pushes the
+    square map down far enough that **its bottom third is under the mini-player + tab bar at the
+    resting scroll position** — it rendered, sat in the accessibility tree, and the tab bar
+    hit-tested it. Now **top-trailing**, visible the moment any of the map is; in `TourSetMap` it
+    also hides while a placecard stack is up. **⚠️ My own first pass called this a harness artifact**
+    after scrolling the map into view before tapping — *a tap that only works after you scroll the
+    control somewhere convenient is not a passing test.*
+  - **📱 ON TESTFLIGHT AS 1.1.1 (138)**, cut from this branch with `main` merged in (`e0799d8c`),
+    build notes attached. **⚠️ Needs an owner device look before merge** — this is a code change
+    (§ Merging PRs). What a device adds over the simulator is the feel of the layer teardown and the
+    fly-to running together.
+
 🟢 **MERGED — SEVEN `@nikola.matus` PINS, THE CHELSEA HOTEL COORDINATE, AND THE CHELSEA PLACE
 ([#668](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/668) `a997860a`, plus the place PR).**
 **linkPins 276 → 283 · makers 205 → 206 · places 48 → 49 · tours unchanged at 1,552.** CI green on
@@ -406,6 +429,7 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
+| **138** | `map-expand-control` | [#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671) the expand control on every inline map, `main` merged in (`e0799d8c`) | 🟡 **awaiting owner device review** |
 | **137** | `instagram-player-fit` | #662 the Instagram crop + fullscreen scrubber, `main` merged in, **marketing version 1.1.1** | ✅ **owner-verified — *"works! thank you"*; #662 merged as `845f0d86`** |
 | 136 | `instagram-player-fit` | Same code at **1.1** (`49ac5382`) | 🔴 **rejected at upload** — 1.1 is released, so Apple refuses the version string |
 | **134** | **`main`** | #622 the real fullscreen fix — the video's own window (`e22dba7`) | ✅ **install this** |
