@@ -62,7 +62,9 @@ pin anyway — it works offline, downloads, and fires at a geofence, none of whi
 
 
 
-🟡 **OPEN — [#698](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/698): 25 Toronto link pins (branch `claude/tours-links-upload-h6t2cs`, session 135).**
+✅ **MERGED — [#698](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/698) squashed as `0312ced5` (session 135): 25 Toronto link pins.** All four CI checks green (**Validate Tours.json**, simulator build, unit tests, Vercel), and the squash was **verified to have actually changed files on `main`** — 1,705 insertions across 5 files — rather than trusting GitHub's success line (the #629 empty-squash lesson). ⚠️ **LIVE VERIFICATION INCOMPLETE AT SESSION END:** publish run 165's **gh-pages job succeeded**, but the **Supabase seed job was still on "Apply seed" after ~13 minutes**, and at last poll **both the RPC and the mirror still served 565 pins, not 590**. **Supabase is the PRIMARY source, so this is not confirmed live until the RPC reads 590** — re-check before assuming users can see it: `POST /rest/v1/rpc/get_catalog` and count `linkPins`, and confirm **0 link pins inside `tours`** (that invariant read 0 on every poll). The original PR notes follow.
+
+🟡 **(superseded, kept for the decisions)**
 Owner sent 31 Instagram reels as "Toronto links 260901". **linkPins 565 → 590 · makers 226 → 246**;
 tours and places unchanged. **Toronto's first pin batch** — 42 Atlas tours, zero pins before.
 Committed `f62daa8c` and pushed; gh-pages `a506a5b` with all 25 heroes hash-verified live.
