@@ -165,8 +165,20 @@ detail: `archive/HANDOFF-260901-7.md`.
     a zero-byte body**. Instagram gates every profile from a logged-out datacenter reader, so "is the
     account private?" cannot be answered from here at all. A private account, embedding disabled, or an
     age/region restriction all look identical. **The one test that settles it is the owner's: open the
-    profile in a LOGGED-OUT browser (a private window). "This account is private" is the answer; a
-    normally-rendering profile means the account is public and the gate is on embedding.** The shells carry no `not available`,
+    profile in a LOGGED-OUT browser (a private window).**
+  - **✅ THE OWNER RAN THAT TEST: the profile reads as "RESTRICTED", not "private"** (owner-reported
+    2026-09-01). ⚠️ **Do not over-read the word** — Instagram publishes no precise definition and the
+    exact notice was not captured here, so which mechanism it is (an Instagram-applied limitation, an
+    age gate, a regional block) is **not established**. What IS established: the block is **applied to
+    the account rather than chosen as a privacy setting**, it gates **logged-out** viewers, and nothing
+    on our side can work around it.
+  - **🔁 THEREFORE THESE ARE "BLOCKED NOW", NOT "GONE" — A RESTRICTION IS OFTEN TEMPORARY, so they may
+    become pinnable with no work from us.** A **recheck note with the exact six shortcodes, the
+    one-field test and the wire-in path is on the STATUS board** so a future session spends two minutes
+    rather than re-deriving an afternoon. 🔴 **The test is `contextJSON` non-null on the embed — NOT
+    "the link opens on my phone", which is true today and still yields a blank card and no hero for
+    every logged-out Atlas user.** Always run a live control in the same pass, or a transient failure
+    reads as a restriction. The shells carry no `not available`,
     `removed` or `private` string, and the post page is the logged-out login wall Instagram serves for
     live and nonexistent posts alike. **If the creator handles are known, a private account says so
     publicly on its profile page** — that is the one cheap test that distinguishes the cases.
