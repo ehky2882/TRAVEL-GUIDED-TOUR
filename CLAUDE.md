@@ -134,7 +134,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 catalogue edit **redone on `main`'s file** when [#697](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/697)
 landed underneath it. **linkPins 565 → 671 · makers, tours and places all byte-identical.**
 **The largest batch to date, against a previous record of 105.** Content only — no Swift, no SQL, no
-build. **NO PR OPENED** (this session's harness forbids opening one unasked). Full detail:
+build. **Opened as [#699](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/699) on owner instruction.** Full detail:
 `archive/HANDOFF-260901-7.md`.
 
 - **✅ 106 DISTINCT POSTS FROM 108 LINKS, ALL PINNABLE — and every one is TikTok `@hereinnyc`**, the
@@ -256,7 +256,7 @@ build. **NO PR OPENED** (this session's harness forbids opening one unasked). Fu
   one link for and none was nudged together** (120 Broadway ×4, the Morgan Library ×2, the Tin
   Building ×2, Eastern State ×2, Scribner's ×2, and One Times Square, where this batch's NYE Ball pin
   converges on the same OSM node as `@whatisthis_nyc`'s existing pin); ⚠️ its exit code was read
-  **directly, not through a pipe**. ⚠️ **Nothing compiled and CI has not run: no PR is open.**
+  **directly, not through a pipe**. ⚠️ **Nothing compiled locally — CI on [#699](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/699) is the authoritative validator.**
 
 ### ✅ FOLLOW-UP, same session — 120 Broadway is a place, and the stack cap stops applying (owner instruction)
 
@@ -342,7 +342,7 @@ insertions / 0 deletions**. Content only — no Swift, no SQL, no gh-pages push,
   `seed_from_toursjson.py` clean at **226 / 2,223 / 2,595 / 88**, carrying the place, so this reaches
   Supabase on merge with **no owner SQL**. `Tours.json` **byte-stable under a Python re-dump before
   editing** (the assembler asserts it and refuses otherwise); hero live **200**. ⚠️ **Nothing
-  compiled and CI has not run: no PR is open.**
+  compiled locally — CI on [#699](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/699) is the authoritative validator.**
 
 ### Riverside Church becomes a place, and its Atlas tour stops firing on Broadway (branch `claude/place-riverside-church`, session 134b — content)
 
