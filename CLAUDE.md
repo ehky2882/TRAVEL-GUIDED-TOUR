@@ -140,8 +140,14 @@ detail: `archive/HANDOFF-260901-7.md`.
 - **🔴 SIX POSTS ARE DEAD — links 1, 2, 4, 8, 9, 10 — AND THE EVIDENCE IS A CLEAN BIMODAL SPLIT.**
   Their embed pages return **217,657–219,913 bytes with no `username` and no `display_url`**; the 25
   live ones return **257,199–264,649 with both**. Two bands, **zero overlap across 31 posts**,
-  confirmed on **three spaced passes**; three of the six are byte-identical at exactly 217,722.
-  **Nothing recovers them from our side** — only the owner re-sharing live links.
+  confirmed on **FIVE spaced passes across ~an hour** — including a retry on the alternate `/p/` path
+  form, with a live control passing alongside in the same runs. Three of the six are byte-identical at
+  exactly 217,722. **✅ OWNER DECISION 2026-09-01: DROPPED. Do NOT re-chase them, and do not re-raise
+  them in a future audit** — they were never wired, so nothing was removed. ⚠️ **Instagram gives no
+  reason**: the shells carry no `not available`, `removed` or `private` string and 0 `WatchOnInstagram`
+  markers, so *deleted* vs *private* vs *restricted* is **indistinguishable from outside**, and the
+  post page itself is just the logged-out login wall. Only the owner re-sharing a working link revives
+  a subject.
 - **🔴 A BROWSER USER-AGENT TRIPS INSTAGRAM'S CHALLENGE PAGE FROM A DATACENTER IP, AND IT COST A WRONG
   CONCLUSION DELIVERED TO THE OWNER.** The control — two Instagram pins **already live in the shipped
   catalogue** — appeared to fail too, and was reported as "decisive" proof Instagram was blocking this

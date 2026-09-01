@@ -30,8 +30,10 @@ Owner sent 31 Instagram reels as "Toronto links 260901". **linkPins 565 → 590 
 tours and places unchanged. **Toronto's first pin batch** — 42 Atlas tours, zero pins before.
 Committed `f62daa8c` and pushed; gh-pages `a506a5b` with all 25 heroes hash-verified live.
 **No PR opened — this session's harness forbids opening one unasked, so CI has not run.**
-**Four things are the owner's call:** (1) **re-send links 1, 2, 4, 8, 9, 10** — dead at Instagram,
-unrecoverable from our side; (2) the **Cube House pair** ships as two pins, which takes
+**✅ Links 1, 2, 4, 8, 9, 10 are DROPPED** (owner, 2026-09-01) after five spaced retries across ~an
+hour, including the alternate `/p/` path form, with a live control passing alongside. They were never
+wired, so nothing was removed. **Do not re-chase them.**
+**Three things remain the owner's call:** (1) the **Cube House pair** ships as two pins, which takes
 `check-place-candidates.py` **0 EXACT → 1** — honest, neither pin nudged, one line removes either;
 (3) **three weak heroes**, **One King West** sharpest (its frame is the CN Tower, not the vault);
 (4) **four place candidates** — ROM 9 m, Casa Loma 11 m, Distillery District 40 m, Osgoode Hall 57 m.
