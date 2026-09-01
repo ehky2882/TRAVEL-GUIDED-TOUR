@@ -172,7 +172,7 @@ Content only — no Swift, no SQL, no build. Full detail: `archive/HANDOFF-26090
   would have broken — but it is inconsistent with the other 533 pins and **`URLCache` keys on the exact
   string**, so the two spellings cache separately. Reverted, fixed, re-assembled; **0 introduced.**
   ⚠️ **No check catches this** — it was visible only in the generated SQL.
-  - **⚠️ AND CLAUDE.md'S CLAIM THAT SESSION 125 ALREADY FIXED THIS IS WRONG.** That entry says the
+  - **⚠️ AND CLAUDE.md'S CLAIM THAT SESSION 125 FIXED THIS IS HALF WRONG — IT FIXED THE HERO AND MISSED THE STOP.** On all seven `@nikola.matus` pins `heroImageURL` is single-slashed and **`stops[0].imageURL` still carries the double**, which is why **`check-image-duplicates.py --pins` reports SEVEN PHANTOM `INFO` GROUPS on every run** — two different URL strings, identical bytes, the same entry — and why the app caches one picture twice. That entry says the
     seven `@nikola.matus` pins were *"corrected to the single slash"* and session 126 credits #669 with
     cleaning *"it and six others"*. **All seven are still on `origin/main`** (`casa-mila-la-pedrera-`,
     `castell-gala-dali-pubol-`, `chelsea-hotel-`, `fallingwater-`, `marilyn-monroe-house-`,
