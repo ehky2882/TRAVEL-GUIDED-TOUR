@@ -89,9 +89,17 @@ SQL, no build; the seed carries `places`, so it reaches Supabase on merge with *
   - ⚠️ **One hero trade-off stated rather than hidden:** Vancouver House takes the people-free facade over
     the frame that shows the building's famous twist, because two identifiable presenters fill that one's
     bottom third. **One line swaps it.**
-  - **Still owed to the owner, none blocking:** the **five weak heroes** from #689 — the Grand Central
-    Stones (an elevated subway platform rather than the monoliths) sharpest among them — each a
-    keep-or-pull decision.
+  - **⏸️ DEFERRED BY THE OWNER, 2026-09-01: *"for now i'm fine with the things you flagged."*** The
+    **five weak heroes** from #689 — the Grand Central Stones (an elevated subway platform rather than
+    the thirteen monoliths) sharpest among them, plus Banyan `@everythingeryn`, 150 N Riverside, 87th
+    Street and Xcaret — and the **Vancouver House hero trade-off** (the people-free facade was taken
+    over the frame showing the building's famous twist, which carries two identifiable presenters in
+    its bottom third; one line swaps it). ⚠️ **"For now" is a deferral, not a decision** — unlike the
+    Ministry of Enterprise and Casa Lleó Morera heroes, which the owner settled outright, these are
+    still open questions. **Do not re-raise them as fresh findings** (they have been through the
+    open-every-hero audit and were put to the owner), and equally **do not treat them as closed** or
+    quietly source replacements. A link pin re-hosts only its thumbnail, so for each one the real
+    choice remains keep or pull.
 
 🟢 **MERGED — THE THREE PLACE/NHM ITEMS THAT SAT HERE ARE ALL ON `main`.**
 [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676) ten Tier 1 place cards (places
