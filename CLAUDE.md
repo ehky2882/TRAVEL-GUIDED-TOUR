@@ -128,6 +128,140 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-09-01)
 
+### Twenty-five Toronto link pins, and six posts Instagram no longer serves (branch `claude/tours-links-upload-h6t2cs`, session 135 — content)
+
+**The owner sent 31 Instagram reels under "Toronto links 260901"** — numbered 1–30, but **#23 carried
+two URLs run together**, so the batch is 31 distinct posts. **25 are pinnable; 6 are dead.**
+**linkPins 565 → 590 · makers 226 → 246 · tours unchanged at 1,552 · places unchanged at 87.**
+**Toronto's FIRST link-pin batch** — the city had 42 Atlas tours and **zero** pins. Content only — no
+Swift, no SQL, no build. **NO PR OPENED** (this session's harness forbids opening one unasked). Full
+detail: `archive/HANDOFF-260901-7.md`.
+
+- **🔴 SIX POSTS ARE DEAD — links 1, 2, 4, 8, 9, 10 — AND THE EVIDENCE IS A CLEAN BIMODAL SPLIT.**
+  Their embed pages return **217,657–219,913 bytes with no `username` and no `display_url`**; the 25
+  live ones return **257,199–264,649 with both**.
+
+- **🔴 CORRECTION — THOSE SIX POSTS ARE ALIVE, NOT DEAD, AND CALLING THEM DEAD WAS AN OVER-READ OF MY
+  OWN EVIDENCE. THE OWNER CHECKED THEM ON THEIR PHONE AND THEY OPEN FINE.** A clean bimodal split plus
+  a passing control proves only that **our reader cannot read them**, which has several possible causes;
+  I collapsed that to "deleted". **The actual cause, found by reading the embed page's own state:
+  `contextJSON` is `null` on all six and carries the full `gql_data.shortcode_media` payload on a live
+  post.** Instagram serves the page to a logged-out reader and withholds the media context. The owner
+  sees them because they are **signed in**.
+  - **⚠️ THE CONSEQUENCE IS WORSE THAN "WE CANNOT AUTHOR THEM", AND IT IS THE REASON THEY STILL CANNOT
+    SHIP: THEY WOULD BE BLANK IN THE APP.** `derivable_embed` (mirroring `LinkSource.embedURL`) builds
+    **exactly** `instagram.com/reel/{code}/embed` — the same URL — and the app's `WKWebView` is logged
+    out, so it receives the same null context. Both pages render **empty server-side**; the player is
+    drawn client-side *from* `contextJSON`, so with it null there is nothing to draw. There is also no
+    `display_url`, so **no hero exists either**. A pin forced in by hand would be a dead card for every
+    Atlas user.
+  - **🔴 ALL SIX ARE ONE CREATOR — `@juni.toronto` (owner-supplied). That makes this an ACCOUNT-LEVEL
+    property, not six coincidences**, and it is the strongest inference available: **25 posts from 21
+    other creators all carry a full context; all 6 from this one creator carry none.** A future batch
+    from this account will fail the same way — **check one of its posts before wiring any of it.**
+  - **⚠️ WHY the context is withheld is NOT determinable from this container, and the obvious test does
+    NOT work** — a profile page cannot distinguish it: `@juni.toronto` and `@urban_toronto` (a creator
+    whose post DID work, so certainly public) **both return an identical 302 to `/accounts/login/` with
+    a zero-byte body**. Instagram gates every profile from a logged-out datacenter reader, so "is the
+    account private?" cannot be answered from here at all. A private account, embedding disabled, or an
+    age/region restriction all look identical. **The one test that settles it is the owner's: open the
+    profile in a LOGGED-OUT browser (a private window).**
+  - **✅ THE OWNER RAN THAT TEST: the profile reads as "RESTRICTED", not "private"** (owner-reported
+    2026-09-01). ⚠️ **Do not over-read the word** — Instagram publishes no precise definition and the
+    exact notice was not captured here, so which mechanism it is (an Instagram-applied limitation, an
+    age gate, a regional block) is **not established**. What IS established: the block is **applied to
+    the account rather than chosen as a privacy setting**, it gates **logged-out** viewers, and nothing
+    on our side can work around it.
+  - **🔁 THEREFORE THESE ARE "BLOCKED NOW", NOT "GONE" — A RESTRICTION IS OFTEN TEMPORARY, so they may
+    become pinnable with no work from us.** A **recheck note with the exact six shortcodes, the
+    one-field test and the wire-in path is on the STATUS board** so a future session spends two minutes
+    rather than re-deriving an afternoon. 🔴 **The test is `contextJSON` non-null on the embed — NOT
+    "the link opens on my phone", which is true today and still yields a blank card and no hero for
+    every logged-out Atlas user.** Always run a live control in the same pass, or a transient failure
+    reads as a restriction. The shells carry no `not available`,
+    `removed` or `private` string, and the post page is the logged-out login wall Instagram serves for
+    live and nonexistent posts alike. **If the creator handles are known, a private account says so
+    publicly on its profile page** — that is the one cheap test that distinguishes the cases.
+  - **✅ NOT WIRED (owner instruction "drop those", given while they were believed dead).** Nothing was
+    removed, because they were never added. **⚠️ Do not re-wire them on the strength of "the links
+    work" alone — verify `contextJSON` is non-null first**, or the pin ships blank.
+  - **🔴 THE DURABLE RULE: an unreadable post is not a deleted post. Report what was measured — "our
+    reader gets no media context" — and let the owner, who can sign in, distinguish the cause.** Neither
+    the byte-size heuristic nor a passing control can tell deletion from a permission gate.
+- **🔴 A BROWSER USER-AGENT TRIPS INSTAGRAM'S CHALLENGE PAGE FROM A DATACENTER IP, AND IT COST A WRONG
+  CONCLUSION DELIVERED TO THE OWNER.** The control — two Instagram pins **already live in the shipped
+  catalogue** — appeared to fail too, and was reported as "decisive" proof Instagram was blocking this
+  container. **It was my own diagnostic: I had added a Chrome UA**, which returns ~625 KB with
+  `challenge` ×9, a bare `<title>Instagram</title>` and **no embed markers at all**. With the tool's
+  own `Dozent/1.0` UA the control returns a healthy 260 KB **with** the owner blob while the six still
+  return 217 KB with none. **Durable: curl's default UA and the tool's UA both work; a browser UA does
+  not — and a control that differs in one header is not a control.** The proxy reported
+  `recentRelayFailures: []` throughout, so it was never the suspect.
+- **⚠️ THE TOOL'S RETRY LOOP MAKES A DEAD-POST BATCH UNAFFORDABLY SLOW — ~200 s PER DEAD POST**
+  (4 attempts × 45 s curl + backoff). Rewritten as a **single-pass grab that caches the raw embed HTML
+  to disk** (~8 s/post, 31 in ~4 min), analysed offline, with failures re-verified separately.
+  **Reuse that shape above ~20 links.** ⚠️ **`except Exception` does NOT catch the tool's failures** —
+  `instagram_meta` raises `SystemExit`, a `BaseException`, which killed the first driver at post 1.
+- **✅ ALL 25 HEROES OPENED AND READ AGAINST THEIR CAPTIONS — ZERO WRONG SUBJECTS**, 12 naming
+  themselves in frame (*"Andrews Building, UTSC 1964 Designed by Architect John Andrews"*, *"Cube House
+  1 Sumach St"*, the MUSEUM tilework, *"Welcome to The Path."*). **⚠️ THREE WEAK HEROES, FLAGGED NOT
+  FIXED:** **One King West's frame is dominated by the CN Tower**, not the vault its caption is about
+  (the likeliest pull candidate, and the catalogue already has a CN Tower tour); the **`@vonwong` Cube
+  House** is a portrait with the interior barely readable; and **R.C. Harris clips "R.C. Harris"** off
+  its own title card. A link pin re-hosts only the thumbnail, so no other frame exists.
+- **⚠️ TWO POSTS COULD NOT BE NAMED FROM THEIR CAPTION AND THE HERO SETTLED BOTH.** `@turonno.ca`'s is
+  only *"The ugliest building in Toronto"* + `#dundaswest #bloorstreetwest`, and **no source names the
+  building** — it ships under the creator's own frame title asserting no name (the Banksy precedent),
+  anchored at Dundas West Station. **`@autodesk`'s PATH post is specifically Brookfield Place's Allen
+  Lambert Galleria**, which gave a real anchor instead of a meaningless centroid for a 30 km network.
+- **⚠️ COORDINATES: 8 NAMED EXACTLY, AND THE REST ARE DOCUMENTED SHAPES.** All geocoded bounded to
+  Toronto then **reverse-verified at zoom 18**. Named exactly: Wallace Emerson, Cube House ×2, Casa
+  Loma, Museum, **Louis B. Stewart Observatory** (the Magnetic and Meteorological Observatory's current
+  name), Donnelly Centre, One King West. The rest land on the subject's own address or an inner tenant —
+  *One Yonge Dental Office, 1 Yonge Street*; **Service Canada, 100 Queen Street West, which IS City
+  Hall's address**; *ROM Tickets*; *Court of Appeal for Ontario* (Osgoode Hall houses it). **⚠️ Four
+  failed their first query and re-querying was the whole fix; ⚠️ and one re-query returned the WRONG
+  PLACE — "Mirvish Village" is a different Mirvish project at Bathurst/Bloor**, not Forma on King West.
+- **🔴 THE HANDLE SUFFIX PREVENTED TWO LIVE-HERO OVERWRITES:** `distillery-district_hero.webp` and
+  `casa-loma_hero.webp` are **live Atlas Toronto tour heroes**. **0 collisions** with the suffixed names
+  against **6,381** existing `images/` paths — and the tree listing was **asserted non-empty before that
+  pass was believed** (the session-133 false-pass lesson).
+- **⚠️ `check-place-candidates.py` GOES 0 EXACT → 1 AND EXITS 1, AND IT IS HONEST.** The one group is
+  **this batch's own Cube House pair** — two creators on one building at its real coordinate, **neither
+  pin nudged** to manufacture it nor nudged apart to dodge the checker. A genuine place candidate;
+  **one line removes either pin.** ⚠️ **The two OCAD posts do NOT form a group** — the Sharp Centre and
+  OCAD University geocode **80 m** apart; do not "tidy" them together. **Four new NEAR pairs, flagged
+  and NOT created:** ROM **9 m**, Casa Loma **11 m**, Distillery District **40 m**, Osgoode Hall **57 m**.
+- **⚠️ ARCHITECT TAGS FOLLOW THE CAPTION, AND TWO OMISSIONS ARE DELIBERATE.** `Frank Gehry` on Forma and
+  `Jeanne Gang` on One Delisle, both named outright, each **alongside** `Designed by a Master`.
+  **🔴 DELIBERATELY NOT TAGGED though both are in the vocabulary: `Daniel Libeskind` on the ROM Crystal**
+  (its caption says only *"inspired by crystalline geometry"*) **and `Bjarke Ingels` on KING Toronto**
+  (a pun naming nobody) — the Jules Dalou rule; **do not "finish the job" here.** Same for `Santiago
+  Calatrava` on the Allen Lambert Galleria. **Verified ABSENT and shipping the generic tag: John
+  Andrews** (named in the creator's own frame — the most conspicuous absence here), **Will Alsop**,
+  **Zeidler Roberts Partnership**, **Matsui Baer Vanstone Freeman**, **Viljo Revell**.
+- **⚠️ 4 of 25 will not play inline** (three `@urban_toronto` posts and one other) — the licensed-music
+  rights gate; poster + OPEN IN INSTAGRAM is correct, not a defect.
+- **Verification.** Validator mirror — vocabulary from **both** Swift files, refusing to run on
+  disagreement or an empty parse (**385 tags**) — **self-tested against 16 injected fault classes, 16/16
+  caught, control clean**, then **0 errors, 0 warnings across 1,552 tours + 590 pins + 87 places**.
+  ⚠️ **The mirror implements the error rules comprehensively but only a SUBSET of the warnings**, so its
+  0 warnings is not comparable to the Swift validator's documented 2 pre-existing ones. Diff **purely
+  additive and asserted so** — `tours` and `places` byte-identical, existing makers and pins untouched as
+  a prefix, **1,313 insertions / 0 deletions**; `Tours.json` byte-stable under a Python re-dump before
+  editing. **0** duplicate ids, **0** already-pinned sourceURLs, **0** byte-duplicate heroes, closest
+  perceptual pair **33.7**. **`@explorecanada` already had a maker row and the uuid5 scheme reproduced its
+  id exactly**, so **20 new rows from 21 creators**; all 21 ship `avatarURL: null` by design, so **25
+  files cover 25 pins, no avatars**. gh-pages `a506a5b`: remote head **re-read in the same command as the
+  push**, tree diff **exactly 25 additions, 0 deletions, nothing outside `images/`**, push status read
+  through **`PIPESTATUS`**, deploy read **`in_progress`, never `cancelled`**, and after it landed **all 25
+  live URLs were hash-verified against the uploaded bytes — 25 ok, 0 bad**. ⚠️ **`check-image-duplicates.py
+  --pins` was RE-RUN after the deploy** — its first run reported OK with **25 × 404**, an "OK" that had not
+  seen the new files at all; the re-run reads **585 images, 0 × 404, `OK — no suspicious duplicates`**,
+  shared-URL half **0 errors / 208 documented reuses**. `seed_from_toursjson.py` clean at **246 / 2,142 /
+  2,514 / 87**. `make-link-pin.py --selftest` **71/71** (with Pillow; a fresh container reports 62/62).
+  ⚠️ **Nothing compiled and CI has not run: no PR is open.**
+
 ### Riverside Church becomes a place, and its Atlas tour stops firing on Broadway (branch `claude/place-riverside-church`, session 134b — content)
 
 **Owner: *"i have a new 'place' to report. riverside church"*.** **Places 86 → 87.** Content only — no

@@ -25,6 +25,60 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🔁 **RECHECK LATER — six `@juni.toronto` Toronto reels, blocked by an Instagram account restriction
+(not by anything in this repo).** Owner-reported 2026-09-01: the profile shows as **"restricted"** in a
+logged-out browser — *not* "private", and a restriction is often **temporary**, so these may become
+pinnable on their own with no work from us. **This note exists so a future session runs a two-minute
+test instead of re-deriving an afternoon of diagnosis.**
+
+**The test — one field decides it.** Fetch each post's embed and read `contextJSON`:
+
+```bash
+UA="Dozent/1.0 (link-pin tool; +https://dozent.world)"
+for sc in Dcrfes9p-_x DVMsHoSkfHz DbODWROJUPl Day97y6Jvya DaWJQoESt0g DaDjmywBe8U; do
+  n=$(curl -sSL --max-time 25 -A "$UA" "https://www.instagram.com/reel/$sc/embed" \
+      | grep -o 'contextJSON":null' | wc -l)
+  echo "$sc  $([ "$n" = 0 ] && echo READABLE || echo still-null)"
+  sleep 3
+done
+```
+
+**`contextJSON: null` → still blocked, change nothing.** Non-null → they are pinnable: run the normal
+link-pin flow and they join the catalogue in minutes. ⚠️ **Always run a live control in the same pass**
+(e.g. `DcTW0yzsEok`, a pin already in the catalogue) — without one, a transient failure reads as a
+restriction.
+
+🔴 **Do NOT wire them on "the links work on my phone" alone.** The owner is signed in; the app's
+`WKWebView` is not. With a null context the app's embed — `instagram.com/reel/{code}/embed`, the same
+URL — renders **blank**, and there is no `display_url` so **no hero exists either**. A forced pin looks
+right to the owner and is a dead card for every other user. **Verify the field, not the phone.**
+
+**⚠️ It is an ACCOUNT-level block, so one post answers for all six**: 25 posts from 21 other creators
+carried a full context in the same runs; all 6 from this one creator carried none.
+
+**If the subjects matter sooner:** the owner rates these as quality tours, and an Atlas tour beats a link
+pin anyway — it works offline, downloads, and fires at a geofence, none of which a link pin can do.
+⚠️ Toronto already has **42** Atlas tours, so check for overlap before drafting.
+
+
+
+🟡 **OPEN — [#698](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/698): 25 Toronto link pins (branch `claude/tours-links-upload-h6t2cs`, session 135).**
+Owner sent 31 Instagram reels as "Toronto links 260901". **linkPins 565 → 590 · makers 226 → 246**;
+tours and places unchanged. **Toronto's first pin batch** — 42 Atlas tours, zero pins before.
+Committed `f62daa8c` and pushed; gh-pages `a506a5b` with all 25 heroes hash-verified live.
+**PR #698 opened on owner instruction — CI is the authoritative validator and nothing compiled locally.**
+🔴 **Links 1, 2, 4, 8, 9, 10 are ALIVE, not dead — the owner opened them on their phone, correcting an
+over-read on my part.** The real cause is `contextJSON: null` on the embed page: Instagram withholds the
+media context from a logged-out reader. **They still cannot ship** — the app builds that same embed URL
+and is logged out, so a pin would render blank and has no hero either. **NOT WIRED**; nothing was
+removed. ⚠️ **Owner can settle WHY by sending the creator handles** — a private account says so publicly.
+**Three things remain the owner's call:** (1) the **Cube House pair** ships as two pins, which takes
+`check-place-candidates.py` **0 EXACT → 1** — honest, neither pin nudged, one line removes either;
+(3) **three weak heroes**, **One King West** sharpest (its frame is the CN Tower, not the vault);
+(4) **four place candidates** — ROM 9 m, Casa Loma 11 m, Distillery District 40 m, Osgoode Hall 57 m.
+
+
+
 🟡 **OPEN — [#691](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/691) two place cards, and seven
 slashes (branch `claude/tour-links-upload-vhsf8a`, session 134).** Owner: *"arthur ashe place page yes"*,
 then *"make banyan tree mayakoba a place page"*. **Places 80 → 82.** Content only — no Swift, no SQL, no
