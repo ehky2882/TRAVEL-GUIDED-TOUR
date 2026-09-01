@@ -80501,6 +80501,52 @@
         "B79FB938-5050-5E89-9E68-C7CD21D94B58",
         "E7F75B30-A947-569C-8841-F5FC070D76A9"
       ]
+    },
+    {
+      "id": "7194e688-9138-523d-a2f1-7de5003012f2",
+      "name": "Grove at Grand Bay",
+      "description": "Two residential towers on the Coconut Grove waterfront, completed in 2016 to a design by Bjarke Ingels Group. Each floor plate is rotated a fraction against the one below, so the buildings twist as they rise — close to forty degrees from base to top — and they turn away from one another, so that neither takes the other's view of Biscayne Bay. Between them, Raymond Jungles' landscape spirals out from a circular garden into the ramped concrete walk the building calls the ribbon, which frames the sky and the turning facades above it.",
+      "latitude": 25.7306735,
+      "longitude": -80.2371297,
+      "city": "Miami",
+      "address": "2669 South Bayshore Drive, Coconut Grove, Miami",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grove-at-grand-bay-towers-terragroupmiami_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F8D8DAEF-0764-5243-A6EB-58D030E54E4A",
+        "AB873178-46F0-5229-8446-24521971E3A7",
+        "CFEA1F77-4E2F-5321-A067-0C3F4BE6BE19"
+      ]
+    },
+    {
+      "id": "ff196f49-db8d-55fa-b228-d31b254112a9",
+      "name": "Bellevue (William O. Lockridge) Library",
+      "description": "A neighbourhood library at the far south-western edge of Washington. A branch has stood here since 1959, when it opened as the Washington Highlands Branch Library; the present building opened in 2012 to a design by Adjaye Associates, who had already built the Francis A. Gregory library across the city and would go on to design the National Museum of African American History and Culture. Boxes clad in vertical fins are stacked and cantilevered out over an open ground floor, so the reading rooms sit up among the trees rather than behind a street wall. The name is that of William O. Lockridge, a local education activist and member of the DC State Board of Education.",
+      "latitude": 38.8312611,
+      "longitude": -77.0094236,
+      "city": "Washington",
+      "address": "115 Atlantic Street SW, Washington",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bellevue-lockridge-library-longwalksdc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "FFD8BF96-8641-505C-83E0-7083433504E5",
+        "16464B1D-88E3-5327-86C2-0A94B006627A"
+      ]
+    },
+    {
+      "id": "de5bb305-a421-5d25-8873-12fb5ad54ddc",
+      "name": "Vancouver House",
+      "description": "A fifty-nine-storey residential tower on a triangular sliver of land beneath the ramps of the Granville Street Bridge, completed in 2020 to a design by Bjarke Ingels Group. The setback required from the bridge left almost nothing to build on at ground level, so the building starts as a narrow wedge and cantilevers outward as it climbs, its floor plates widening until the top is roughly twice the footprint of the bottom — the constraint turned into the shape. The leftover ground between the bridge ramps became public space at its foot.",
+      "latitude": 49.274755,
+      "longitude": -123.1309861,
+      "city": "Vancouver",
+      "address": "1480 Howe Street, Vancouver",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vancouver-house-allisonjodoin_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "580B1EF7-75C2-5827-A896-B5AD9297EC0A",
+        "2E853A9E-3B60-597F-8DED-ED7AC4433CBA"
+      ]
     }
   ],
   "linkPins": [
