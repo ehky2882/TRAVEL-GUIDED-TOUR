@@ -80469,6 +80469,38 @@
         "DC9C7B8A-FEBA-548D-9C64-9B2C06817310",
         "05C6A5B5-74D0-5B71-A445-81C2EABD6C16"
       ]
+    },
+    {
+      "id": "e3670e50-1c19-5174-bc4e-7376beab52d6",
+      "name": "Arthur Ashe Stadium",
+      "description": "The main court of the USTA Billie Jean King National Tennis Center, and the largest tennis stadium in the world: 23,771 seats, full for the fortnight of the US Open each late summer and quiet for most of the rest of the year. It opened in 1997, named for the player who won the first US Open in 1968 — at Forest Hills, across the borough — and who died in 1993, four years before the arena carrying his name was finished. The bowl is steep, and the upper tier sits a long way above the court, which is part of why the tournament sounds unlike the other three majors. A retractable roof was added in 2016 after years of rain delays, and the stadium is midway through an $800 million rebuild of its courtside bowl, suite levels and concourses, paused each August for the tournament and due to finish for 2027.",
+      "latitude": 40.7498962,
+      "longitude": -73.8470428,
+      "city": "Queens",
+      "address": "USTA Billie Jean King National Tennis Center, Flushing Meadows–Corona Park, Queens",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arthur-ashe-stadium-seelautravel_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "A04553F3-7FA4-56F8-93D9-FC71CD9638FA",
+        "B87EE43A-3EEC-5369-9C16-BA357D81D706",
+        "63ECEC13-CAE7-513E-B15F-2CDFAC2BCBB4",
+        "42A7C905-E417-5767-9976-F03058885A0F"
+      ]
+    },
+    {
+      "id": "ba6b3b6d-fd3a-5424-ba41-e38324af1843",
+      "name": "Banyan Tree Mayakoba",
+      "description": "A resort in the Mayakoba development on the Riviera Maya, set in the same system of mangrove and freshwater lagoons that runs between the coastal highway and the beach. The rooms are free-standing villas along the waterways rather than floors in a block — each walled, with its own garden and private pool — and much of the site is reached by boat along the canals as well as on foot. The lobby opens straight onto the water, with restaurant pavilions on the far bank; between the villas the jungle is left standing, so the place reads as a series of clearings rather than a single building.",
+      "latitude": 20.6830113,
+      "longitude": -87.0289163,
+      "city": "Playa del Carmen",
+      "address": "Mayakoba, Playa del Carmen, Quintana Roo",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banyan-tree-mayakoba-bentaylornyc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B79FB938-5050-5E89-9E68-C7CD21D94B58",
+        "E7F75B30-A947-569C-8841-F5FC070D76A9"
+      ]
     }
   ],
   "linkPins": [
@@ -93156,7 +93188,7 @@
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images//fallingwater-nikolamatus_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fallingwater-nikolamatus_hero.webp",
           "transcriptText": null
         }
       ],
@@ -93205,7 +93237,7 @@
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images//castell-gala-dali-pubol-nikolamatus_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castell-gala-dali-pubol-nikolamatus_hero.webp",
           "transcriptText": null
         }
       ],
@@ -93251,7 +93283,7 @@
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images//villa-e-1027-nikolamatus_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/villa-e-1027-nikolamatus_hero.webp",
           "transcriptText": null
         }
       ],
@@ -93298,7 +93330,7 @@
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images//twin-palms-nikolamatus_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twin-palms-nikolamatus_hero.webp",
           "transcriptText": null
         }
       ],
@@ -93345,7 +93377,7 @@
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images//casa-mila-la-pedrera-nikolamatus_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-mila-la-pedrera-nikolamatus_hero.webp",
           "transcriptText": null
         }
       ],
@@ -93393,7 +93425,7 @@
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images//marilyn-monroe-house-nikolamatus_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marilyn-monroe-house-nikolamatus_hero.webp",
           "transcriptText": null
         }
       ],
@@ -93437,7 +93469,7 @@
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images//chelsea-hotel-nikolamatus_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-hotel-nikolamatus_hero.webp",
           "transcriptText": null
         }
       ],

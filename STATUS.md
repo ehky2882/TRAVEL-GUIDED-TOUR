@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-31 (session 127d — the Natural History Museum audio/gallery collision fixed on `claude/nhm-gallery-fix`, see § 1. Earlier: session 127c — nine tier 2 place cards on `claude/tier2-place-cards`, see § 1. Earlier: session 127b — ten place cards, merged as [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676). Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
+**Last verified:** 2026-09-01 (session 134 — [#691](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/691) opened: two place cards, **places 80 → 82**, plus the seven `@nikola.matus` `images//` stop URLs fixed. **`gh pr list --state open` re-derived: exactly TWO open PRs, #691 and #692** — every other 🟡 in § 1 was stale and the `claude/shared-url-checks` one is flipped. ⚠️ **`main` moved mid-session** (#690, eleven Joshua Charow pins) and this branch was rebased onto it with every check re-run. ⚠️ **Two sessions both numbered themselves 133**; theirs merged first, so this one is 134. Earlier: 2026-08-31 (session 127d — the Natural History Museum audio/gallery collision fixed on `claude/nhm-gallery-fix`, see § 1. Earlier: session 127c — nine tier 2 place cards on `claude/tier2-place-cards`, see § 1. Earlier: session 127b — ten place cards, merged as [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676). Earlier: session 127 — 95 link pins, merged as [#674](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/674). Earlier: session 126 — [#673](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/673) opened, seven place cards, see § 1. Earlier: session 125 — seven `@nikola.matus` pins pushed, and a **pre-existing Chelsea Hotel coordinate defect** found, see § 1. Earlier: session 124 — [#662](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/662) merged as `845f0d86` after owner device-verification on **1.1.1 (137)**. 🔴 **The marketing version is now 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds. Session 122c: [#657](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/657) and the architect PR [#654](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/654) are both merged and re-verified on `main`, and **one dead hero image was found — see § 1** Earlier: session 128 — **`gh pr list --state open` re-derived: ZERO open PRs.** [#675](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/675) merged as `2bc05e30` (105 `@hereinnyc` link pins, linkPins 378 → 483), and the squash was verified to have actually changed files on `main` rather than trusting GitHub's success line. Five entries in § 1 were stale `OPEN` — #673, #674, #675, #663 and #658 are all merged — and have been flipped, keeping only the owner decisions that are still live. 🔴 **The marketing version is 1.1.1** — 1.1 is released and Apple refuses further builds on it, see § Builds)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -24,6 +24,29 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 ---
 
 ## 1. Awaiting owner — device review
+
+🟡 **OPEN — [#691](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/691) two place cards, and seven
+slashes (branch `claude/tour-links-upload-vhsf8a`, session 134).** Owner: *"arthur ashe place page yes"*,
+then *"make banyan tree mayakoba a place page"*. **Places 80 → 82.** Content only — no Swift, no SQL, no
+gh-pages push, no build; the seed carries `places`, so it reaches Supabase on merge with **no owner SQL**.
+  - **Both are pure additions and nothing moved** — `makers`, `tours` and `linkPins` byte-identical, both
+    member groups already exactly coincident. **🔴 Arthur Ashe was hitting `HomeView.maxStackedPlacecards`
+    with no headroom; a place collapses its members into one capsule pin, so the cap stops applying.**
+  - **🔴 Both heroes are borrowed from a member and that is structural** — every member is a link pin with
+    an empty gallery and a 5 km sweep found no third photograph of either site. **Do not go sourcing
+    replacements.** ⚠️ **The renovation pin is excluded as a hero because it is a rendering, not a
+    photograph** — it stays a member.
+  - **✅ The seven `@nikola.matus` `images//` stop URLs are fixed in the second commit** — the catalogue now
+    holds zero, and `--pins` goes **557 images with 7 phantom groups → 550 with none**. That closes the
+    item CLAUDE.md had recorded as fixed when only its hero half was.
+  - ⚠️ **Rebased onto `main` mid-session** after [#690](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/690)
+    landed underneath it; `Tours.json` auto-merged cleanly and **every check was re-run afterwards** —
+    mirror **0 errors / 2 pre-existing warnings** over 1,552 tours + 565 pins + 82 places, seed clean at
+    **226 / 2,117 / 2,489 / 82**. ⚠️ **Both sessions numbered themselves 133**; theirs was already on
+    `main`, so this one is renumbered **134** and its handoff is `archive/HANDOFF-260901-4.md`.
+  - **Still owed to the owner, none blocking:** three EXACT groups remain (**Grove at Grand Bay** ×3,
+    **Bellevue (William O. Lockridge) Library** ×2, **Vancouver House** ×2), each a real place candidate;
+    and the five weak heroes from #689 are unchanged.
 
 🟡 **OPEN — [#690](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/690) eleven link pins from Joshua Charow**
 (branch `claude/new-tour-links-wh1du0`, content only). **linkPins 554 → 565, makers 224 → 226**;
@@ -53,7 +76,7 @@ playing Los Angeles' narration. Their stories live in `CLAUDE.md` § Current Sta
     field is optional and falls back to the top-ranked tour's hero) because that tour's only spare
     image is a 19th-century engraving.
 
-🟡 **OPEN — THE TWO CHECKS THAT COULD HAVE CAUGHT THE NATURAL HISTORY MUSEUM
+🟢 **MERGED (re-derived 2026-09-01: only #691 and #692 are open) — THE TWO CHECKS THAT COULD HAVE CAUGHT THE NATURAL HISTORY MUSEUM
 (branch `claude/shared-url-checks`).** Owner: *"add the two missing checks"*. Tooling only —
 `scripts/check-image-duplicates.py`, **255 insertions / 0 deletions**; no catalogue, Swift, SQL or
 build change. **Auto-merge class** (`scripts/` does not ship in the app).
