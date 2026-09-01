@@ -30,9 +30,11 @@ Owner sent 31 Instagram reels as "Toronto links 260901". **linkPins 565 → 590 
 tours and places unchanged. **Toronto's first pin batch** — 42 Atlas tours, zero pins before.
 Committed `f62daa8c` and pushed; gh-pages `a506a5b` with all 25 heroes hash-verified live.
 **PR #698 opened on owner instruction — CI is the authoritative validator and nothing compiled locally.**
-**✅ Links 1, 2, 4, 8, 9, 10 are DROPPED** (owner, 2026-09-01) after five spaced retries across ~an
-hour, including the alternate `/p/` path form, with a live control passing alongside. They were never
-wired, so nothing was removed. **Do not re-chase them.**
+🔴 **Links 1, 2, 4, 8, 9, 10 are ALIVE, not dead — the owner opened them on their phone, correcting an
+over-read on my part.** The real cause is `contextJSON: null` on the embed page: Instagram withholds the
+media context from a logged-out reader. **They still cannot ship** — the app builds that same embed URL
+and is logged out, so a pin would render blank and has no hero either. **NOT WIRED**; nothing was
+removed. ⚠️ **Owner can settle WHY by sending the creator handles** — a private account says so publicly.
 **Three things remain the owner's call:** (1) the **Cube House pair** ships as two pins, which takes
 `check-place-candidates.py` **0 EXACT → 1** — honest, neither pin nudged, one line removes either;
 (3) **three weak heroes**, **One King West** sharpest (its frame is the CN Tower, not the vault);

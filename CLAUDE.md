@@ -139,15 +139,33 @@ detail: `archive/HANDOFF-260901-7.md`.
 
 - **🔴 SIX POSTS ARE DEAD — links 1, 2, 4, 8, 9, 10 — AND THE EVIDENCE IS A CLEAN BIMODAL SPLIT.**
   Their embed pages return **217,657–219,913 bytes with no `username` and no `display_url`**; the 25
-  live ones return **257,199–264,649 with both**. Two bands, **zero overlap across 31 posts**,
-  confirmed on **FIVE spaced passes across ~an hour** — including a retry on the alternate `/p/` path
-  form, with a live control passing alongside in the same runs. Three of the six are byte-identical at
-  exactly 217,722. **✅ OWNER DECISION 2026-09-01: DROPPED. Do NOT re-chase them, and do not re-raise
-  them in a future audit** — they were never wired, so nothing was removed. ⚠️ **Instagram gives no
-  reason**: the shells carry no `not available`, `removed` or `private` string and 0 `WatchOnInstagram`
-  markers, so *deleted* vs *private* vs *restricted* is **indistinguishable from outside**, and the
-  post page itself is just the logged-out login wall. Only the owner re-sharing a working link revives
-  a subject.
+  live ones return **257,199–264,649 with both**.
+
+- **🔴 CORRECTION — THOSE SIX POSTS ARE ALIVE, NOT DEAD, AND CALLING THEM DEAD WAS AN OVER-READ OF MY
+  OWN EVIDENCE. THE OWNER CHECKED THEM ON THEIR PHONE AND THEY OPEN FINE.** A clean bimodal split plus
+  a passing control proves only that **our reader cannot read them**, which has several possible causes;
+  I collapsed that to "deleted". **The actual cause, found by reading the embed page's own state:
+  `contextJSON` is `null` on all six and carries the full `gql_data.shortcode_media` payload on a live
+  post.** Instagram serves the page to a logged-out reader and withholds the media context. The owner
+  sees them because they are **signed in**.
+  - **⚠️ THE CONSEQUENCE IS WORSE THAN "WE CANNOT AUTHOR THEM", AND IT IS THE REASON THEY STILL CANNOT
+    SHIP: THEY WOULD BE BLANK IN THE APP.** `derivable_embed` (mirroring `LinkSource.embedURL`) builds
+    **exactly** `instagram.com/reel/{code}/embed` — the same URL — and the app's `WKWebView` is logged
+    out, so it receives the same null context. Both pages render **empty server-side**; the player is
+    drawn client-side *from* `contextJSON`, so with it null there is nothing to draw. There is also no
+    `display_url`, so **no hero exists either**. A pin forced in by hand would be a dead card for every
+    Atlas user.
+  - **⚠️ WHY the context is withheld is NOT determinable from outside** — a private account, embedding
+    disabled, or an age/region restriction all look identical. The shells carry no `not available`,
+    `removed` or `private` string, and the post page is the logged-out login wall Instagram serves for
+    live and nonexistent posts alike. **If the creator handles are known, a private account says so
+    publicly on its profile page** — that is the one cheap test that distinguishes the cases.
+  - **✅ NOT WIRED (owner instruction "drop those", given while they were believed dead).** Nothing was
+    removed, because they were never added. **⚠️ Do not re-wire them on the strength of "the links
+    work" alone — verify `contextJSON` is non-null first**, or the pin ships blank.
+  - **🔴 THE DURABLE RULE: an unreadable post is not a deleted post. Report what was measured — "our
+    reader gets no media context" — and let the owner, who can sign in, distinguish the cause.** Neither
+    the byte-size heuristic nor a passing control can tell deletion from a permission gate.
 - **🔴 A BROWSER USER-AGENT TRIPS INSTAGRAM'S CHALLENGE PAGE FROM A DATACENTER IP, AND IT COST A WRONG
   CONCLUSION DELIVERED TO THE OWNER.** The control — two Instagram pins **already live in the shipped
   catalogue** — appeared to fail too, and was reported as "decisive" proof Instagram was blocking this
