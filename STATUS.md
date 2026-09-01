@@ -628,6 +628,7 @@ three survivors present, `TikTok @thedesigndetourist` still at 19 pins, 0 pins w
 |---|---|---|
 | `backend/saved_places.sql` | Saved places syncing across devices | Saving works, stays on one device |
 | `backend/places_photos.sql` | Places serving their own photographs | Optional — the app is correct without it |
+| **`backend/private_friends_social.sql`** | A private account's **followers / following** shown to the friends it has accepted — the bug the owner hit on their own phone 2026-09-01 (their friend's lists read "No followers yet." under a count of **1**) | Both lists stay empty for every accepted follower. ⚠️ **Its own verify queries cannot confirm it** — the SQL Editor runs as the service role, where `auth.uid()` is null, so it reports hidden even once it works. **Test in the app.** Branch `claude/private-friend-account-33psch`; proven against real Postgres via `test-migrations.sh`, both fault directions injected and caught |
 
 ## 3. Builds — which run number carries what
 

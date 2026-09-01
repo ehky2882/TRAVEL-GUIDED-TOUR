@@ -84,12 +84,40 @@ insert into public.tours values
   ('11111111-1111-1111-1111-111111111111', 'Test tour', null, 'single', 299, false),
   -- A link pin, so split_link_pins.sql has something to lift out of `tours`.
   ('22222222-2222-2222-2222-222222222222', 'Test pin', null, 'link', null, false);
+
+-- The social layer private_friends_social.sql rewrites. Supabase supplies
+-- auth.uid() from the request's JWT; the stub below reads the same GUC GoTrue
+-- sets, so a test can switch identity with `set request.jwt.claim.sub`.
+create schema if not exists auth;
+create or replace function auth.uid() returns uuid language sql stable as $fn$
+  select nullif(current_setting('request.jwt.claim.sub', true), '')::uuid;
+$fn$;
+create table public.makers (
+    id uuid primary key, user_id uuid, display_name text,
+    is_private boolean not null default false
+);
+create table public.follows (
+    follower_id uuid, followee_id uuid, status text,
+    created_at timestamptz not null default now(),
+    primary key (follower_id, followee_id)
+);
+create or replace function public.owns_maker(m uuid)
+returns boolean language sql stable security definer set search_path = public as $fn$
+    select exists (select 1 from public.makers where id = m and user_id = auth.uid());
+$fn$;
+-- A private account (P), the friend it accepted (F), and a stranger (S).
+insert into public.makers (id, user_id, display_name, is_private) values
+  ('aaaaaaaa-0000-0000-0000-000000000001', 'aaaaaaaa-1111-0000-0000-000000000001', 'Private P', true),
+  ('bbbbbbbb-0000-0000-0000-000000000002', 'bbbbbbbb-1111-0000-0000-000000000002', 'Friend F',  false),
+  ('cccccccc-0000-0000-0000-000000000003', 'cccccccc-1111-0000-0000-000000000003', 'Stranger S', false);
+insert into public.follows (follower_id, followee_id, status) values
+  ('bbbbbbbb-1111-0000-0000-000000000002', 'aaaaaaaa-0000-0000-0000-000000000001', 'accepted');
 SQL
 [ -n "$AS" ] && chown postgres:postgres "$PGDIR"/*.sql
 run "$PSQL -f $PGDIR/base.sql" >/dev/null
 
 # Order matters: add_link_pins anchors on the key add_video_role inserts.
-MIGRATIONS=(add_video_role.sql add_link_pins.sql split_link_pins.sql)
+MIGRATIONS=(add_video_role.sql add_link_pins.sql split_link_pins.sql private_friends_social.sql)
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 fail=0
@@ -154,8 +182,31 @@ split=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
               where t->>'kind' = 'link');\"" 2>/dev/null | tr -d '[:space:]')
 [ "$split" = "1/1/0" ] || { echo "  x link pins NOT split correctly (tours/linkPins/strays = '${split:-nothing}', want 1/1/0)"; fail=1; }
 
+# 🔴 The reported bug: a private account had accepted a follower, and both its
+# follower lists still came back empty for that friend. Assert all three
+# viewers, because a gate that is merely OPEN is as wrong as one stuck shut -
+# the stranger case is what proves the fix did not just delete the rule.
+#   P = private maker, F = the follower it accepted, S = a stranger.
+sees() {  # sees <auth-uid> -> "<can_see_social>/<rows from list_followers>"
+    # -q so psql's "SET" command tag doesn't land in front of the answer.
+    run "$PGBIN/psql -h $PGDIR -U postgres -qtAc \
+      \"set request.jwt.claim.sub = '$1';
+        select public.can_see_social('aaaaaaaa-0000-0000-0000-000000000001')::text
+               || '/' ||
+               (select count(*) from public.list_followers(
+                    'aaaaaaaa-0000-0000-0000-000000000001'));\"" 2>/dev/null \
+      | tr -d '[:space:]'
+}
+friend=$(sees 'bbbbbbbb-1111-0000-0000-000000000002')
+owner=$(sees 'aaaaaaaa-1111-0000-0000-000000000001')
+stranger=$(sees 'cccccccc-1111-0000-0000-000000000003')
+[ "$friend" = "true/1" ] || { echo "  x accepted FOLLOWER still refused a private account's followers (got '${friend:-nothing}', want true/1)"; fail=1; }
+[ "$owner" = "true/1" ]  || { echo "  x OWNER lost access to their own followers (got '${owner:-nothing}', want true/1)"; fail=1; }
+[ "$stranger" = "false/0" ] || { echo "  x STRANGER can now read a private account's followers (got '${stranger:-nothing}', want false/0)"; fail=1; }
+
 if [ "$fail" = "0" ]; then
-    echo "MIGRATIONS OK - ${#MIGRATIONS[@]} applied, idempotent, all catalog keys and places intact"
+    echo "MIGRATIONS OK - ${#MIGRATIONS[@]} applied, idempotent, all catalog keys and places intact,"
+    echo "               private social graph visible to owner + accepted followers only"
 else
     echo "MIGRATIONS FAILED"
 fi

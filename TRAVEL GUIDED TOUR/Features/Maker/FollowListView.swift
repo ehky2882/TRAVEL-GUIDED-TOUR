@@ -5,8 +5,14 @@ import SwiftUI
 /// Reuses the shared `MakerAvatarView` + a compact row; tapping a row pushes
 /// that maker's page onto the current nav stack. The list comes from the
 /// `list_followers` / `list_following` SECURITY DEFINER RPCs, which enforce the
-/// visibility rule server-side (a private account's list is only returned to its
-/// owner) — so it returns empty when hidden.
+/// visibility rule server-side — so the list simply comes back empty when the
+/// viewer isn't allowed it. A private account's graph is returned to its owner
+/// **and to anyone it has accepted as a follower** (`backend/private_friends_social.sql`);
+/// strangers get nothing.
+///
+/// Because "hidden" and "genuinely empty" arrive from the server as the same
+/// empty array, the caller passes `hiddenBecausePrivate` so the empty state can
+/// tell the truth instead of always claiming the account has no followers.
 ///
 /// On the **own** followers list (`showsPendingRequests`), any pending follow
 /// requests render as a section at the very top with Approve / Decline actions
@@ -17,8 +23,19 @@ struct FollowListView: View {
 
         var title: String { self == .followers ? "Followers" : "Following" }
 
+        /// Shown when the list is genuinely empty and the viewer may see it.
         var emptyMessage: String {
             self == .followers ? "No followers yet." : "Not following anyone yet."
+        }
+
+        /// Shown when the server withheld the list because the account is
+        /// private and the viewer is neither its owner nor an accepted
+        /// follower. True whether the viewer is signed out, not following, or
+        /// still pending — so it must not promise that following would help.
+        var privateMessage: String {
+            self == .followers
+                ? "This account is private. Only people they've accepted can see who follows them."
+                : "This account is private. Only people they've accepted can see who they follow."
         }
     }
 
@@ -27,6 +44,15 @@ struct FollowListView: View {
     /// When true (own followers list), pending follow requests are loaded and
     /// shown as an actionable section pinned above the followers.
     var showsPendingRequests: Bool = false
+    /// True when the server is going to refuse this list: the account is
+    /// private and the viewer neither owns it nor has been accepted as a
+    /// follower. Only changes the empty-state copy — the gate itself is
+    /// server-side, so a wrong value here cannot reveal anything.
+    ///
+    /// ⚠️ Declared before `onRequestsChange` deliberately: a struct's
+    /// memberwise initialiser takes its arguments in declaration order, and
+    /// the trailing-closure-shaped callback reads last at the call site.
+    var hiddenBecausePrivate: Bool = false
     /// Called whenever a request is approved/declined so the presenting profile
     /// can refresh its header counts + the Me-tab badge.
     var onRequestsChange: () -> Void = {}
@@ -67,9 +93,10 @@ struct FollowListView: View {
                     }
 
                     if makers.isEmpty && !showsRequestSection {
-                        Text(kind.emptyMessage)
+                        Text(hiddenBecausePrivate ? kind.privateMessage : kind.emptyMessage)
                             .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.secondaryText)
+                            .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.top, AtlasSpacing.xl)
                     } else {

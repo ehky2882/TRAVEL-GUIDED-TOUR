@@ -155,7 +155,26 @@ struct MakerView: View {
     @State private var theirLikedTourIds: [UUID] = []
 
     private var isOwnProfile: Bool { mode == .ownProfile }
+
     private var isStandalone: Bool { mode == .publicStandalone }
+
+    /// True when this maker's own page is being viewed by its owner, however
+    /// they arrived — `.ownProfile` is the Me tab, but a deep link reaches your
+    /// own maker in `.publicMaker` mode.
+    private var viewerOwnsThisMaker: Bool {
+        isOwnProfile || makerProfileService?.myMaker?.id == maker.id
+    }
+
+    /// Mirrors `public.can_see_social(uuid)` so the follower / following empty
+    /// states can say "private" instead of "none yet". A private account's
+    /// graph is shown to its owner and to accepted followers; everyone else
+    /// gets an empty array from the RPC.
+    ///
+    /// ⚠️ Display only. The gate is server-side — being wrong here changes the
+    /// wording of an empty screen, never what the screen can contain.
+    private var socialListsHidden: Bool {
+        maker.isPrivateAccount && !viewerOwnsThisMaker && !followState.isFollowing
+    }
 
     /// **Every profile gets all three tabs.** Owner direction 2026-07-27:
     /// *"an atlas studio should be treated as a regular user … we should always
@@ -454,6 +473,7 @@ struct MakerView: View {
                 makerId: maker.id,
                 kind: .followers,
                 showsPendingRequests: isOwnProfile,
+                hiddenBecausePrivate: socialListsHidden,
                 onRequestsChange: {
                     Task {
                         if let followService {
@@ -493,7 +513,9 @@ struct MakerView: View {
 
     private func countLink(_ n: Int, _ label: String, _ kind: FollowListView.Kind) -> some View {
         NavigationLink {
-            FollowListView(makerId: maker.id, kind: kind)
+            FollowListView(makerId: maker.id,
+                           kind: kind,
+                           hiddenBecausePrivate: socialListsHidden)
         } label: {
             countPill(n, label)
         }
