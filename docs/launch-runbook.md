@@ -164,6 +164,11 @@ else. If you are launching free-only, skip it.
 
 ## Phase D — Screenshots
 
+> This phase covers the **CI capture path** — raw, unframed simulator images.
+> The captioned marketing set that ships on the listing is hand-captured on a real
+> device; its copy, editorial rules and capture traps are in
+> [app-store-screenshots.md](app-store-screenshots.md).
+
 ### Step 7 — Capture them
 
 **Who:** Claude.
