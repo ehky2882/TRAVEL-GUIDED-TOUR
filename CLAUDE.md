@@ -128,11 +128,11 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-09-01)
 
-### Four place cards, and the one that sits on its vantage rather than its building (branch `claude/place-cards-hereinnyc`, session 131 — content)
+### Four place cards, and the Empire State Building moved onto its own address (branch `claude/place-cards-hereinnyc`, session 131 — content)
 
 **Owner: *"Make place pages for Empire State Building, St. John divine, Rockefeller center, Morgan
 library"*** — the four EXACT groups `check-place-candidates.py` had reported since #682 merged.
-**Places 76 → 80. The `tours` and `makers` arrays are BYTE-IDENTICAL.** Content only — no Swift, no
+**Places 76 → 80. `makers` is BYTE-IDENTICAL and exactly ONE Atlas tour changed.** Content only — no Swift, no
 SQL, no gh-pages push, no build. Full detail: `archive/HANDOFF-260901.md`.
 
 - **🔴 THE CHECKER'S EXACT GROUPS WERE THE SMALLER HALF OF EACH SITE, AND READING AROUND THEM CHANGED
@@ -150,23 +150,31 @@ SQL, no gh-pages push, no build. Full detail: `archive/HANDOFF-260901.md`.
   opening sentence describes — and Rockefeller takes the tree, the rink and Prometheus together.
   ⚠️ **Rockefeller's is SEASONAL**, exactly the **Grand Central** trade-off (whose place hero carries
   a Christmas wreath), resolved the same way because the only alternative is a Prometheus close-up.
-- **🔴 THE ONE JUDGEMENT: THE EMPIRE STATE BUILDING'S PLACE SITS ON THE VANTAGE, NOT THE BUILDING.**
-  Reverse-geocoded at zoom 18 the two candidate anchors are **not** equivalent — the **pin** lands on
-  `350 5th Avenue`, the building's own address, while the **tour** lands on `Chase, 349 5th Avenue`,
-  a bank branch on the opposite pavement. The tour's coordinate is not an error: its narration opens
-  *"From 34th and Fifth, the Empire State Building rises into the frame like the postcard it became"*,
-  so it is a **deliberate vantage** — the **Grand Central** case at the same scale (88 m there, 92 m
-  here), and that one anchored on the tour with the `address` naming the building. This follows it.
-  **Cost, stated: the capsule draws ~92 m from the building, outside a Chase branch.** Anchoring on
-  the building instead is one line (place lat/lon → `40.748442, -73.985659`, pins stay put) but would
-  move the Atlas tour off its authored vantage, so it was not done unasked. **Owner's call.**
-  The other three anchors are unambiguous — St John and the Morgan reverse-geocode to their own
-  building from *either* candidate, and Rockefeller's tour sits on the Plaza.
-- **🔴 THE PIN MOVED AND THE TOUR DID NOT, ELEVEN TIMES OUT OF ELEVEN — asserted, not assumed.**
-  `tours` and `makers` are byte-identical to `origin/main`; exactly **11 link pins** changed, in
-  exactly **four fields each** (`stops[0].latitude/longitude` plus the mirrored centroid). **Every
-  entry involved is `manual`**, so no geofence is disturbed and **no `triggerRadiusMeters` changes** —
-  both checked rather than reasoned about.
+- **🔴 THE EMPIRE STATE BUILDING'S ANCHOR WAS PUT TO THE OWNER AND THEY MOVED IT ONTO THE BUILDING —
+  SETTLED, DO NOT REVERT.** Reverse-geocoded at zoom 18 the two candidates are **not** equivalent: the
+  **pin** lands on `350 5th Avenue, 10118`, the building's own address and its dedicated ZIP, while
+  the **tour** landed on `Chase, 349 5th Avenue`, a bank branch on the opposite pavement. The tour's
+  coordinate was not an error — its narration opens *"From 34th and Fifth, the Empire State Building
+  rises into the frame like the postcard it became"*, a deliberate vantage, and the **Grand Central**
+  precedent (88 m, identical shape) anchors such a place on the tour. It was built that way, flagged,
+  and the owner said **move the tour**. So the place sits on the building and **the Atlas tour moved
+  92 m onto it** — the only tour in the catalogue this branch changes; the two pins were already
+  there and are **byte-identical to `main`** again. ⚠️ **This diverges from Grand Central deliberately**
+  — do not "restore consistency" by moving it back.
+- **🔴 MOVING IT MEANT RE-DERIVING THE RADIUS, NOT INHERITING IT — the IAC / Barcelona Pavilion rule.**
+  The stop carried the 30 m city default, which from the building would **not** reach the vantage the
+  script sends you to. Radius is now **120 m**: it covers the building itself, the 92 m
+  34th-and-Fifth vantage with 28 m to spare, and is precedented (120 ×1, 100 ×2, 90 ×2). **0
+  geofenced markers sit within 500 m**, so nothing else can fire there — checked, not assumed.
+  ⚠️ **THE STOP IS STILL `manual`, AS 62 OF THE 90 NEW YORK TOURS ARE, SO THE RADIUS IS INERT** — it
+  is set correctly and ready, not active. Flipping `triggerMode` to `geofenced` is the one-line change
+  that would make this tour start firing on approach, and it was deliberately **not** made unasked,
+  because auto-playing audio at people is a behaviour change and NYC's convention is manual.
+- **🔴 EXACTLY ONE ATLAS TOUR CHANGED IN THE WHOLE CATALOGUE, AND IT IS THE EMPIRE STATE ONE ABOVE.**
+  `makers` is byte-identical to `origin/main`; **9 link pins** changed, in exactly **four coordinate
+  fields each** (`stops[0].latitude/longitude` plus the mirrored centroid), and the ESB tour changed
+  those four plus `triggerRadiusMeters`. **Every entry involved is `manual`**, so no geofence is
+  disturbed and **no other radius changes** — both checked rather than reasoned about.
 - **⚠️ MEMBERSHIP WENT PAST THE COINCIDENT PAIRS TWICE, AND BOTH ARE ONE LINE TO REVERSE.** **The
   Penn Station lamppost joins the cathedral** — its own caption reads *"A piece of the original Penn
   Station **inside** the Cathedral of St. John the Divine"* and its hero shows the post standing
