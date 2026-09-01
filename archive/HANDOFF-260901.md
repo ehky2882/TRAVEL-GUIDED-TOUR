@@ -78,11 +78,35 @@ sends the listener to. Re-derived from what the narration actually asks of them:
 catalogue). **0 geofenced markers sit within 500 m** of the anchor, so nothing else can fire there —
 checked against every stop in the catalogue, not assumed.
 
-⚠️ **THE STOP IS STILL `triggerMode: manual`, AND THE RADIUS IS THEREFORE INERT.** 62 of the 90 New
-York tours are manual — NYC launched that way — so this is consistent with its city. The radius is
-**set correctly and ready, not active**. Flipping the mode to `geofenced` is the one-line change that
-would make the tour start firing on approach, and it was deliberately **not** made unasked: audio
-that starts playing at people by itself is a behaviour change, not a tidy-up.
+### ✅ Then set to `geofenced` on owner instruction — and the finding that came out of it
+
+The stop is now `triggerMode: geofenced`, joining **1,146 of the 1,480 single-stop tours** already
+marked that way (New York 28 → 29 of 90), with **0 overlapping geofenced regions**.
+
+**🔴 IT STILL CHANGES NO BEHAVIOUR, AND THE REASON GENERALISES TO 1,146 TOURS: `triggerMode:
+geofenced` ON A SINGLE-STOP TOUR IS INERT IN THE CURRENT APP.** Traced through the code rather than
+assumed from the field:
+
+1. **There is no catalogue-wide background monitoring.** `ProximityMonitor.startMonitoring` is called
+   from exactly one site — `PlayerView.onAppear` — and its own doc says *"One active tour at a
+   time."* It registers regions for **that tour's** geofenced stops only. So no geofence can fire
+   until the user has already opened the tour.
+2. **The same `onAppear` plays the stop first.** It runs `startPlaybackIfNeeded()` before
+   `startGeofenceMonitoringIfNeeded()`; for a single-stop tour with no intro that calls
+   `playStop(at: 0)`, which sets `appShared.currentPlayingStopId`.
+3. **That id is then seeded as already-played.** `startGeofenceMonitoringIfNeeded` passes it as
+   `startedStopId`, and `startMonitoring` does `playedStopIds.insert(startedStopId)` — while
+   `handleEntry` guards `!playedStopIds.contains(stopId)` and the already-inside path subtracts
+   `playedStopIds` from its candidates.
+
+**So the only stop a single-stop tour has is marked played before its region is even registered.**
+The field is a content convention there, not a working trigger. It does real work only on
+**multi-stop walks**, where stops 1..N fire as the listener walks between them during an
+already-started tour.
+
+⚠️ **Walking up to a landmark and having its tour start by itself is a capability the app does not
+have.** It would need ambient monitoring of nearby tours — a code change, not a catalogue one, and
+one bounded by Apple's 20-region cap, which a 1,552-tour catalogue comfortably exceeds.
 
 The other three anchors are unambiguous: St John and the Morgan both reverse-geocode to their own
 building from *either* candidate (`Cathedral of Saint John the Divine, 1047 Amsterdam Avenue`;
