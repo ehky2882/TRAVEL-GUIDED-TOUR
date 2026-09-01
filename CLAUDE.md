@@ -797,6 +797,63 @@ OPENED** (this session's harness forbids opening one unasked). Full detail:
 - **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the Swift validator, refusing to run if they disagree or either parse is empty (they agree at **385 tags across 5 facets**) — **self-tested against 14 injected fault classes, 14/14 caught**, including all seven place-layer checks; then **0 errors, 2 warnings across 1,552 tours + 283 pins + 52 places**, **both pre-existing** (the same mirror against `origin/main` reports the identical pair). ⚠️ **One selftest "miss" was the TEST's own bug** — a lambda whose `or` short-circuited so the fault was never injected. `check-place-candidates.py` **0 EXACT / 9 NEAR** against `origin/main`'s **3 / 12** — **EXACT is empty for the first time in the catalogue's history, so the script exits 0**: NEAR fell by exactly the three pairs resolved, and **EXACT is unchanged, so no new coincident group was manufactured**. ⚠️ **`main` moved once mid-session** ([#669](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/669), the Chelsea place plus seven double-slash hero URLs), so the catalogue edit was **redone the documented way — take `main`'s file and re-run the idempotent assembler, never hand-resolve a JSON conflict** — and every check above was re-run afterwards. The diff against `origin/main` is still exactly **76 insertions / 16 deletions**. `seed_from_toursjson.py` regenerates cleanly at 206 makers / 1,835 tours / 2,207 stops / **56 places**, exercising its own `validate_places`. Tours.json **byte-stable under a Python re-dump before editing**; diff **121 insertions / 16 deletions** — exactly 7 places × 15 lines plus 16 pin coordinate lines. **⚠️ Nothing compiled and CI has not run: no PR is open.**
 - **⚠️ Noticed and deliberately left alone — then fixed by someone else:** the `Casa Milà — La Pedrera` pin's `heroImageURL` carried a **double slash** (`images//casa-mila-…`) from the batch that merged in #668. **Both spellings return 200**, so it was untidy rather than broken; [#669](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/669) has since cleaned it and six others, and that fix is preserved here because the merge took `main`'s file and re-ran the assembler over it.
 
+## Current State (2026-09-01)
+
+### Dozent 1.1.1 SUBMITTED — build 139, ten new screenshots, and two metadata fields that would have shipped wrong (session 127 — App Store, no code)
+
+**Version 1.1.1 is `WAITING_FOR_REVIEW`, submitted 2026-09-01 02:17 UTC, in ONE submission
+(`4130a508`) carrying 12 items — the version plus all 11 pending IAP tiers.** `releaseType` is
+**MANUAL**, so approval does not publish; the owner presses Release. No Swift, no `Tours.json`, no
+build. One metadata PR ([#684](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/684), squash
+`5cfe5c2c`). Full detail: `archive/HANDOFF-260831-9.md`.
+
+- **🔴 ADDING A VERSION FOR REVIEW LOCKS ITS SCREENSHOTS — AND NOTHING IN THE UI SAYS SO.** Deleting
+  one returns **`409 STATE_ERROR — "Can't Delete Screenshot while Ready For Review appScreenshots"`**.
+  The file inputs are not `disabled`, the fields are not `readOnly`, and the only visible hint is
+  dimmed thumbnails, which an editable version shows too. **Do screenshots BEFORE `Add for Review`**;
+  past that point the sequence is remove the version from the submission → replace → re-add, which
+  the submission survives intact. ⚠️ **Text metadata is NOT locked** — `description` and
+  `promotionalText` both PATCH `200` in that state, so copy never needs a version pulled out.
+- **🔴 `promotionalText` DOES NOT INHERIT BETWEEN VERSIONS, AND FAILS SILENTLY.** 1.1.1 inherited the
+  description and the screenshots from 1.1 and came back with **`promotionalText = None`** while the
+  live page had one — so submitting as it stood would have **blanked the promotional line on the live
+  store page** with no warning. Nobody reads that field. **Check it on every new version record.** It
+  is also **the one field Apple lets you edit on a live app with no submission**, which is why it now
+  carries the catalogue size and can be bumped the day a city lands.
+- **🔴 THE STANDING "NINE IAP TIERS ARE MISSING REVIEW SCREENSHOTS" NOTE IS WRONG ON BOTH COUNT AND
+  CAUSE.** Measured across all 14 tiers: **`images = 0` on every one, including the three Apple has
+  already APPROVED** (0.99, 1.99, 12.99) — so a review screenshot is **not** what gates them. Only
+  **one** tier was `MISSING_METADATA` (`tour.tier.999`), and its difference from healthy neighbours
+  was **no `inAppPurchaseAvailability` record**. ⚠️ **Availability was created to match the other
+  thirteen and the state did NOT clear; the owner added an image and it flipped.** The availability
+  gap was real and needed fixing, but **the image is what unblocked it** — what actually gates an IAP
+  here is still not fully characterised. **The ladder is now complete: 3 approved, 11 in review.**
+- **⚠️ BUNDLING THE VERSION WITH THE TIERS WAS CORRECT AND IS NOW OPTIONAL.** Apple appears to allow
+  one submission in flight, so splitting buys a second sequential review cycle for nothing. The old
+  hard constraint — *the first non-consumable must accompany a version* — **no longer binds**, since
+  three tiers are already approved.
+- **The description was rewritten and the count re-derived from the LIVE RPC, not a checkout.** The
+  first draft said "more than 1,500 tours" and **undercounted by 250**, because it was written against
+  a working copy `session-start.sh` had already flagged as **13 commits behind `main`**. The owner
+  caught it. Live at the time: **1,553 tours + 533 link pins = 2,086 on the map**, 80 places, 259
+  cities, 40 countries. Copy now reads **"More than 2,000 stops … on six continents"**, broken out as
+  tours plus pinned films — **the pins are deliberately NOT called "tours"**, since they are another
+  creator's video, not narrated audio. Every figure is hedged so it only gets *more* true.
+- **⚠️ THE API BEATS THE UI FOR SCREENSHOTS.** Deletion is a hover-reveal control and upload is
+  drag-drop; neither exposes a DOM handle. `POST /v1/appScreenshots` → PUT the upload operations →
+  PATCH `uploaded:true` + `sourceFileChecksum` is deterministic. **All 10 md5s matched the local
+  files**, 10 distinct hashes, no duplicates — the 2026-08-17 failure is not present. **1.1 (live) was
+  never at risk**: it holds its own set (`d1092393…`) with different asset ids.
+- **⚠️ RAW COORDINATE CLICKS IN THE BROWSER TOOL ARE UNRELIABLE HERE** — the screenshot frame is
+  scaled against the real viewport, so two clicks landed nowhere, silently. **Use `ref` from
+  `find`/`read_page`.** A long `type` into an ASC textarea also timed out mid-stream while the text
+  *did* land — **verify by checksum, never by the tool's success line.** ⚠️ **ASC relationships return
+  links, not values**: `primaryCategory` read as "NOT SET" until queried directly (it is **TRAVEL**).
+- **⚠️ Two judgements left open:** the screenshots are in filename order, verified byte-correct but
+  **nobody has judged whether that is the right narrative order**; and pinned posts are described as
+  *"playing without leaving the app"*, true of the large majority but not the Instagram pins behind
+  the licensed-music gate.
+
 ## Current State (2026-08-30)
 
 ### An inline map gets an expand button — back to the one map, framed on what you were reading ([#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671), session 126 — code)
@@ -3657,7 +3714,7 @@ Three things the previous session found and could not fix from inside a feature 
 - **⚠️ Three required fields were blank, and NOTHING else would ever have told you.** `primaryCategory` unset, `contentRightsDeclaration` null, `copyright` null — invisible in a build, in TestFlight, and on the version page's own checks; they only fail when you try to submit. Now **TRAVEL**, **USES_THIRD_PARTY_CONTENT**, **2026 Dozent**. `releaseType` was also **AFTER_APPROVAL**, silently contradicting the Fastfile's `automatic_release: false`; set to **MANUAL**.
 - **✅ Drive App Store Connect from a script when the browser fails.** Key `~/Downloads/AuthKey_5W4PB6B3W9.p8`, issuer `f34324bd-aa34-4de0-8acb-2537b0e9325e`, ES256 JWT (see the `call()` helper at the top of `scripts/push-appstore-metadata.py`). **IAP resources live on the `/v2` base** (`/v2/inAppPurchases/{id}` and its relationships); everything else is `/v1`. This is how the whole listing was audited and fixed after `read_page` timed out on ASC.
 - **⚠️ Verify ASC UI state with a SCREENSHOT, never a DOM probe.** A scripted `.click()` on "Add for Review" **did** work — it opened the dropdown — but the check looked for `[role="dialog"]`, found none, and read as a no-op. The dropdown is a plain menu with no dialog role. The screenshot showed the truth immediately. (Separately, and still true from session 94: ASC ignores programmatically-set text input *values* — use real keystrokes.)
-- **Nine price tiers remain `MISSING_METADATA`**, each missing only its review screenshot. Deliberate: every multi-stop walk is $0.99 today (§ LIVE PRICING), so a genuine screenshot for, say, `tour.tier.299` cannot exist until a real tour costs $2.99. Do not paste the $0.99 screenshot onto them — the price mismatch is a rejection risk, and it would jeopardise the one tier that matters.
+- **⚠️ SUPERSEDED 2026-09-01 — WRONG ON BOTH COUNT AND CAUSE; see the top of Current State.** It was ONE tier, not nine, and **no tier has a review screenshot, including the approved ones**. *(Original claim:)* **Nine price tiers remain `MISSING_METADATA`**, each missing only its review screenshot. Deliberate: every multi-stop walk is $0.99 today (§ LIVE PRICING), so a genuine screenshot for, say, `tour.tier.299` cannot exist until a real tour costs $2.99. Do not paste the $0.99 screenshot onto them — the price mismatch is a rejection risk, and it would jeopardise the one tier that matters.
 
 ## Current State (2026-08-17)
 
@@ -4032,7 +4089,7 @@ verified by reading back from Apple. The previous listing is backed up.
 - **The store name was read live here as `Atlas Audio Tours`** — **stale; it is
   now `Dozent` at Apple** (corrected in [PR #519](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/519)),
   which agrees with `CFBundleDisplayName = Dozent`.
-- **⚠️ All 10 paid-tour IAPs are `MISSING_METADATA`** — none can be submitted
+- **⚠️ SUPERSEDED 2026-09-01 — 3 are APPROVED and 11 are in review; the ladder is complete.** *(Original claim:)* **All 10 paid-tour IAPs are `MISSING_METADATA`** — none can be submitted
   until each has a description and a review screenshot. Previously recorded as
   merely "Prepare for Submission", which understated the work.
 - **Two working App Store Connect keys sit in `~/Downloads`** (`5W4PB6B3W9`,
