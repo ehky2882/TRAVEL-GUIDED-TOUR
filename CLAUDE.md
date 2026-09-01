@@ -202,8 +202,8 @@ link pins. **Places 88 → 91.** Content only — no Swift, no SQL, no gh-pages 
   `@hereinnyc` pins plus the 120 Broadway place), so the catalogue edit was **redone the documented way
   — take `main`'s file and re-run the idempotent assembler, never hand-resolve a JSON conflict** — and
   every check above was re-run afterwards. ⚠️ **That session also numbered itself 135**, so this one is
-  **135b** (the session-133 collision, second time). ⚠️ **Nothing compiled and CI has not run: no PR is
-  open.**
+  **135b** (the session-133 collision, second time). ⚠️ **Nothing compiled — CI on
+  [#702](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/702) is the authoritative validator.**
 
 ### One hundred and six link pins from @hereinnyc, and a Plus Code pasted twice (branch `claude/tour-links-yg5yw2`, session 135 — content)
 
