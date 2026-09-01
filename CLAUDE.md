@@ -155,8 +155,18 @@ detail: `archive/HANDOFF-260901-7.md`.
     drawn client-side *from* `contextJSON`, so with it null there is nothing to draw. There is also no
     `display_url`, so **no hero exists either**. A pin forced in by hand would be a dead card for every
     Atlas user.
-  - **⚠️ WHY the context is withheld is NOT determinable from outside** — a private account, embedding
-    disabled, or an age/region restriction all look identical. The shells carry no `not available`,
+  - **🔴 ALL SIX ARE ONE CREATOR — `@juni.toronto` (owner-supplied). That makes this an ACCOUNT-LEVEL
+    property, not six coincidences**, and it is the strongest inference available: **25 posts from 21
+    other creators all carry a full context; all 6 from this one creator carry none.** A future batch
+    from this account will fail the same way — **check one of its posts before wiring any of it.**
+  - **⚠️ WHY the context is withheld is NOT determinable from this container, and the obvious test does
+    NOT work** — a profile page cannot distinguish it: `@juni.toronto` and `@urban_toronto` (a creator
+    whose post DID work, so certainly public) **both return an identical 302 to `/accounts/login/` with
+    a zero-byte body**. Instagram gates every profile from a logged-out datacenter reader, so "is the
+    account private?" cannot be answered from here at all. A private account, embedding disabled, or an
+    age/region restriction all look identical. **The one test that settles it is the owner's: open the
+    profile in a LOGGED-OUT browser (a private window). "This account is private" is the answer; a
+    normally-rendering profile means the account is public and the gate is on embedding.** The shells carry no `not available`,
     `removed` or `private` string, and the post page is the logged-out login wall Instagram serves for
     live and nonexistent posts alike. **If the creator handles are known, a private account says so
     publicly on its profile page** — that is the one cheap test that distinguishes the cases.
