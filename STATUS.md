@@ -25,6 +25,19 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🟡 **OPEN — NO PR: 25 Toronto link pins (branch `claude/tours-links-upload-h6t2cs`, session 135).**
+Owner sent 31 Instagram reels as "Toronto links 260901". **linkPins 565 → 590 · makers 226 → 246**;
+tours and places unchanged. **Toronto's first pin batch** — 42 Atlas tours, zero pins before.
+Committed `f62daa8c` and pushed; gh-pages `a506a5b` with all 25 heroes hash-verified live.
+**No PR opened — this session's harness forbids opening one unasked, so CI has not run.**
+**Four things are the owner's call:** (1) **re-send links 1, 2, 4, 8, 9, 10** — dead at Instagram,
+unrecoverable from our side; (2) the **Cube House pair** ships as two pins, which takes
+`check-place-candidates.py` **0 EXACT → 1** — honest, neither pin nudged, one line removes either;
+(3) **three weak heroes**, **One King West** sharpest (its frame is the CN Tower, not the vault);
+(4) **four place candidates** — ROM 9 m, Casa Loma 11 m, Distillery District 40 m, Osgoode Hall 57 m.
+
+
+
 🟡 **OPEN — [#691](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/691) two place cards, and seven
 slashes (branch `claude/tour-links-upload-vhsf8a`, session 134).** Owner: *"arthur ashe place page yes"*,
 then *"make banyan tree mayakoba a place page"*. **Places 80 → 82.** Content only — no Swift, no SQL, no
