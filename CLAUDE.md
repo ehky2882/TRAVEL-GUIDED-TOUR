@@ -132,11 +132,14 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **The owner sent 34 Instagram reel links, all Chicago.** Branch cut clean off `main` at `eaa7cea`.
 **linkPins 712 → 740 · makers 247 → 262 · tours unchanged at 1,552 · places unchanged at 88.**
-  ⚠️ **These are the MERGED figures.** The branch was cut when the catalogue held 565 pins; #698, #699 and #700 landed **147** more underneath it, so the edit was **redone the documented way — take `main`'s file
-  and re-run the idempotent assembler, never hand-resolve a JSON conflict** — and every check below
-  re-run afterwards.
-Content only — no Swift, no SQL, no build. **NO PR OPENED** (this session's harness forbids opening
-one unasked). Full detail: `archive/HANDOFF-260901-7.md`.
+  ⚠️ **These are the MERGED figures, and they moved three times.** The branch was cut when the
+  catalogue held **565** pins; **#698 (25 Toronto), #699 (106 from `@hereinnyc`) and #700 (16 Hong
+  Kong) landed 147 pins underneath it** — #700 arriving *after* this PR was already open. Each time
+  the edit was **redone the documented way: take `main`'s file and re-run the idempotent assembler,
+  never hand-resolve a JSON conflict** — and every check re-run. **0 sourceURL overlap and 0 id
+  collisions** with any of the three.
+Content only — no Swift, no SQL, no build. **Merged as [#701](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/701)** (squash `5fc747fb`) on owner
+instruction. Full detail: `archive/HANDOFF-260901-10.md`.
 
 - **33 distinct posts from 34 links; 28 wired.** One pasted twice (#19/#20, byte-identical URLs);
   **#30 was already in the catalogue** (`River City`, `@abby.architecture`); **four are blocked.**
@@ -242,8 +245,22 @@ one unasked). Full detail: `archive/HANDOFF-260901-7.md`.
   additions, 0 deletions, nothing outside `images/`**, commit re-confirmed an ancestor of head
   afterwards. `seed_from_toursjson.py` clean at **243 / 2,145 / 2,517 / 87**. `make-link-pin.py
   --selftest` **71/71** — ⚠️ **with Pillow installed first**; a fresh container reports 62/62, which
-  reads as a pass and is not one. ⚠️ **Nothing compiled and CI has not run: no PR is open.**
+  reads as a pass and is not one. **CI green on [#701](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/701)** — the authoritative Swift validator,
+  plus the simulator build and unit tests. ⚠️ **Nothing compiled locally**; CI is the only compile check
+  a Linux web session gets.
 - **✅ The Pages deploy landed and every hero was verified by bytes, not by a 200: all 28 live URLs hash-verified against the uploaded blobs — 28 ok, 0 mismatch, 0 non-200.** ⚠️ It served **404 for ~30 minutes first**, which is the documented slow-deploy case and not a failed upload — the gh-pages head was re-confirmed as `10ec78bf` throughout. `check-image-duplicates.py --pins` **`OK — no suspicious duplicates`** over **588 images** (588 for 593 pins is the documented `@malata.antwerp` five-pins-one-URL case), with the shared-URL half at **0 errors / 208 documented reuses**.
+- **⚠️ POST-MERGE, VERIFIED AGAINST THE SYSTEMS RATHER THAN THE SUCCESS LINES.** The squash was
+  **checked against `main`** — #629 once reported "successfully merged" for an **empty commit** — and
+  carries **1,831 insertions across 5 files with all 28 pins present**. The **gh-pages catalogue
+  mirror job succeeded and its committed file holds all 28** (`fef9abf`, 740 pins), ⚠️ **while the
+  CDN was still serving the previous 712 for some minutes afterwards — the documented Pages
+  propagation lag, which is why the committed blob and not the served URL is what settles it.**
+  🔴 **Supabase is the PRIMARY source and its seed job was still applying when this was written**
+  (`Apply seed to Supabase`, ~12 MB of SQL, serialized behind other runs). **A merge is not live
+  until the RPC serves it** — re-poll `get_catalog` and confirm **740 link pins with 0 wrongly
+  inside `tours`**, plus the session-99 dropped-key check (`priceTier`, `isPrivate`, `country`,
+  `places`), which read **clean on the pre-seed payload** (1,553 tours with priceTier, 66 priced;
+  isPrivate on every maker; country on 1,552; 88 places).
 ### Sixteen Hong Kong link pins, and a coordinate that reverse-geocodes to a motorway tunnel (branch `claude/tour-links-9ynig6`, session 135 — content)
 
 **The owner sent sixteen Instagram reels, five carrying Hong Kong Plus Codes.** Branch cut clean off
