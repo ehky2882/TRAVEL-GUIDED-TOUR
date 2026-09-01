@@ -454,7 +454,7 @@ SQL, no gh-pages push, no build. Full detail: `archive/HANDOFF-260901.md`.
   coincident group was manufactured**. `seed_from_toursjson.py` clean at **208 / 2,085 / 2,457 / 80**.
   ⚠️ **Nothing compiled locally** — CI on the PR is the authoritative validator.
 
-### Dozent 1.1.1 SUBMITTED — build 139, ten new screenshots, and two metadata fields that would have shipped wrong (session 127 — App Store, no code)
+### Dozent 1.1.1 SUBMITTED, REJECTED, AND RESUBMITTED VERSION-ONLY — build 139, ten new screenshots, and two metadata fields that would have shipped wrong (session 127 — App Store, no code)
 
 **Version 1.1.1 is `WAITING_FOR_REVIEW`, submitted 2026-09-01 02:17 UTC, in ONE submission
 (`4130a508`) carrying 12 items — the version plus all 11 pending IAP tiers.** `releaseType` is
@@ -504,6 +504,33 @@ build. One metadata PR ([#684](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pu
   `find`/`read_page`.** A long `type` into an ASC textarea also timed out mid-stream while the text
   *did* land — **verify by checksum, never by the tool's success line.** ⚠️ **ASC relationships return
   links, not values**: `primaryCategory` read as "NOT SET" until queried directly (it is **TRAVEL**).
+- **🔴 APPLE REJECTED IT — Guideline 2.1(b), and the cause is STRUCTURAL, not a bug.** They could not
+  locate eleven of the twelve items. Measured against the live catalogue: **`priceTier 99` on 66
+  walks, NULL on 1,487 tours, and ZERO tours at 2.99–19.99.** The eleven tiers were attached to
+  nothing, so no purchase path existed. **A tier is only real once content uses it — submit each one
+  AS IT COMES INTO USE, never bank the ladder**, or review fails by construction every time.
+  ⚠️ **Deferring costs nothing:** once a version is live, tiers submit **on their own, no build,
+  ~a day**. Do not hold a release hostage to them.
+- **⚠️ THE "OPTIONS FOR CREATORS" ARGUMENT IS TRUE IN DESIGN AND FALSE IN THE BUILD.** Creators
+  cannot choose prices until tiers are approved — sound in principle, but **`MakerTourService` writes
+  `priceTier: nil` and there is NO maker pricing UI**; Phase 4 has not shipped. A reviewer accepting
+  it would ask to see the picker and find nothing. **The chicken-and-egg is tiers ↔ the pricing UI,
+  not tiers ↔ content.** ⚠️ The owner's point that price should reflect **quality, not length**, is
+  right and my length-based ladder was the wrong frame — it does not change the conclusion, because
+  the blocker is the missing UI.
+- **🔴 REPLY TO APPLE *BEFORE* CANCELLING A SUBMISSION — MY MISTAKE, AND IT COST THE REPLY.** Items
+  cannot be removed from a reviewed submission (`409 "Item was already submitted"`), so the route is
+  **cancel → new submission**; `PATCH {canceled: true}` works from `UNRESOLVED_ISSUES`. **But
+  cancelling closes the message thread's reply box** — Apple's message stays readable, the compose
+  field is gone, and their explicit *"please reply to this message"* can then only be answered via
+  Contact Us. Mitigated by putting the explanation in **App Review notes**, which the next reviewer
+  reads first.
+- **✅ RESUBMITTED VERSION-ONLY: `3e422d7d`, ONE item, submitted 2026-09-01 13:54 UTC**, build 139
+  and the whole listing unchanged. The 11 tiers are **parked at `READY_TO_SUBMIT`**, not deleted.
+  **✅ Paid Apps Agreement ACCEPTED — owner-reported 2026-09-01**; there is no API for agreement
+  state, so never assert it from this file (§ READ FIRST). ⚠️ The ASC **web session expired**
+  mid-task and only the owner can restore it; the API key path was unaffected, which is why the
+  notes update landed while the browser was locked out.
 - **⚠️ Two judgements left open:** the screenshots are in filename order, verified byte-correct but
   **nobody has judged whether that is the right narrative order**; and pinned posts are described as
   *"playing without leaving the app"*, true of the large majority but not the Instagram pins behind
