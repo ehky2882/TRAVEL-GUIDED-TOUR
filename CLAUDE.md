@@ -166,10 +166,24 @@ SQL, no gh-pages push, no build. Full detail: `archive/HANDOFF-260901.md`.
   script sends you to. Radius is now **120 m**: it covers the building itself, the 92 m
   34th-and-Fifth vantage with 28 m to spare, and is precedented (120 ×1, 100 ×2, 90 ×2). **0
   geofenced markers sit within 500 m**, so nothing else can fire there — checked, not assumed.
-  ⚠️ **THE STOP IS STILL `manual`, AS 62 OF THE 90 NEW YORK TOURS ARE, SO THE RADIUS IS INERT** — it
-  is set correctly and ready, not active. Flipping `triggerMode` to `geofenced` is the one-line change
-  that would make this tour start firing on approach, and it was deliberately **not** made unasked,
-  because auto-playing audio at people is a behaviour change and NYC's convention is manual.
+- **✅ THE EMPIRE STATE STOP IS NOW `geofenced` — owner instruction, applied as a one-line change.**
+  It joins **1,146 of the 1,480 single-stop tours** already marked that way, and takes New York from
+  28 to **29 of 90**. **0 other geofenced regions overlap it**, so nothing can double-fire.
+- **🔴 AND IT STILL CHANGES NO BEHAVIOUR, FOR A NEW REASON — `triggerMode: geofenced` ON A
+  SINGLE-STOP TOUR IS INERT IN THE CURRENT APP, AND 1,146 TOURS ARE IN THAT STATE.** Read the code
+  rather than the field: **there is no catalogue-wide background monitoring.** `startMonitoring` is
+  called from exactly one place — `PlayerView.onAppear` — and registers regions for **that tour's**
+  stops only, so a geofence cannot fire until the user has already opened the tour. Worse, the same
+  `onAppear` runs **`startPlaybackIfNeeded()` FIRST**, which for a single-stop tour with no intro
+  calls `playStop(at: 0)` and sets `appShared.currentPlayingStopId`; `startGeofenceMonitoringIfNeeded()`
+  then passes that id as `startedStopId`, which `startMonitoring` **seeds into `playedStopIds`** — and
+  `handleEntry` guards `!playedStopIds.contains(stopId)`. **So the only stop a single-stop tour has is
+  marked played before its region is even registered, and its geofence can never fire.**
+  ⚠️ **The field is therefore a content convention, not a working trigger, on every single-stop tour.**
+  It does real work only on **multi-stop walks**, where stops 1..N fire as you walk between them
+  during an already-started tour. **Walking up to a landmark and having its tour start by itself is a
+  capability the app does not have** — it needs ambient monitoring of nearby tours, which is a code
+  change, not a catalogue one.
 - **🔴 EXACTLY ONE ATLAS TOUR CHANGED IN THE WHOLE CATALOGUE, AND IT IS THE EMPIRE STATE ONE ABOVE.**
   `makers` is byte-identical to `origin/main`; **9 link pins** changed, in exactly **four coordinate
   fields each** (`stops[0].latitude/longitude` plus the mirrored centroid), and the ESB tour changed
