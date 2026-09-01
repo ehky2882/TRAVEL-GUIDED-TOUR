@@ -25,6 +25,60 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🔁 **RECHECK LATER — six `@juni.toronto` Toronto reels, blocked by an Instagram account restriction
+(not by anything in this repo).** Owner-reported 2026-09-01: the profile shows as **"restricted"** in a
+logged-out browser — *not* "private", and a restriction is often **temporary**, so these may become
+pinnable on their own with no work from us. **This note exists so a future session runs a two-minute
+test instead of re-deriving an afternoon of diagnosis.**
+
+**The test — one field decides it.** Fetch each post's embed and read `contextJSON`:
+
+```bash
+UA="Dozent/1.0 (link-pin tool; +https://dozent.world)"
+for sc in Dcrfes9p-_x DVMsHoSkfHz DbODWROJUPl Day97y6Jvya DaWJQoESt0g DaDjmywBe8U; do
+  n=$(curl -sSL --max-time 25 -A "$UA" "https://www.instagram.com/reel/$sc/embed" \
+      | grep -o 'contextJSON":null' | wc -l)
+  echo "$sc  $([ "$n" = 0 ] && echo READABLE || echo still-null)"
+  sleep 3
+done
+```
+
+**`contextJSON: null` → still blocked, change nothing.** Non-null → they are pinnable: run the normal
+link-pin flow and they join the catalogue in minutes. ⚠️ **Always run a live control in the same pass**
+(e.g. `DcTW0yzsEok`, a pin already in the catalogue) — without one, a transient failure reads as a
+restriction.
+
+🔴 **Do NOT wire them on "the links work on my phone" alone.** The owner is signed in; the app's
+`WKWebView` is not. With a null context the app's embed — `instagram.com/reel/{code}/embed`, the same
+URL — renders **blank**, and there is no `display_url` so **no hero exists either**. A forced pin looks
+right to the owner and is a dead card for every other user. **Verify the field, not the phone.**
+
+**⚠️ It is an ACCOUNT-level block, so one post answers for all six**: 25 posts from 21 other creators
+carried a full context in the same runs; all 6 from this one creator carried none.
+
+**If the subjects matter sooner:** the owner rates these as quality tours, and an Atlas tour beats a link
+pin anyway — it works offline, downloads, and fires at a geofence, none of which a link pin can do.
+⚠️ Toronto already has **42** Atlas tours, so check for overlap before drafting.
+
+
+
+🟡 **OPEN — [#698](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/698): 25 Toronto link pins (branch `claude/tours-links-upload-h6t2cs`, session 135).**
+Owner sent 31 Instagram reels as "Toronto links 260901". **linkPins 565 → 590 · makers 226 → 246**;
+tours and places unchanged. **Toronto's first pin batch** — 42 Atlas tours, zero pins before.
+Committed `f62daa8c` and pushed; gh-pages `a506a5b` with all 25 heroes hash-verified live.
+**PR #698 opened on owner instruction — CI is the authoritative validator and nothing compiled locally.**
+🔴 **Links 1, 2, 4, 8, 9, 10 are ALIVE, not dead — the owner opened them on their phone, correcting an
+over-read on my part.** The real cause is `contextJSON: null` on the embed page: Instagram withholds the
+media context from a logged-out reader. **They still cannot ship** — the app builds that same embed URL
+and is logged out, so a pin would render blank and has no hero either. **NOT WIRED**; nothing was
+removed. ⚠️ **Owner can settle WHY by sending the creator handles** — a private account says so publicly.
+**Three things remain the owner's call:** (1) the **Cube House pair** ships as two pins, which takes
+`check-place-candidates.py` **0 EXACT → 1** — honest, neither pin nudged, one line removes either;
+(3) **three weak heroes**, **One King West** sharpest (its frame is the CN Tower, not the vault);
+(4) **four place candidates** — ROM 9 m, Casa Loma 11 m, Distillery District 40 m, Osgoode Hall 57 m.
+
+
+
 🟡 **OPEN — [#691](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/691) two place cards, and seven
 slashes (branch `claude/tour-links-upload-vhsf8a`, session 134).** Owner: *"arthur ashe place page yes"*,
 then *"make banyan tree mayakoba a place page"*. **Places 80 → 82.** Content only — no Swift, no SQL, no
@@ -659,7 +713,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**⚠️ Re-derived from `Tours.json` on 2026-09-01 (session 135, this batch, NOT yet merged): 1,552 tours + 671 link pins, 226 maker rows (34 Atlas studios + 192 pinned creators — 112 TikTok, 68 Instagram, 12 YouTube), 2,595 stops, **88 places**, 265 cities across 40 countries.** Branch `claude/tour-links-yg5yw2`, open as **[#699](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/699)**. gh-pages `d6c1e75` carries its 106 heroes. **108 links → 106 distinct posts, every one TikTok `@hereinnyc`** — the largest batch to date, against a previous record of 105 — so **makers is unchanged**: the row already existed, uuid5 reproduced its id exactly, and the regenerated avatar was byte-identical to the live file and excluded rather than overwritten.
+**⚠️ Re-derived from `Tours.json` on 2026-09-01 (session 135, this batch merged onto #698's Toronto pins): 1,552 tours + 696 link pins, 246 maker rows (34 Atlas studios + 212 pinned creators — 112 TikTok, 88 Instagram, 12 YouTube), 2,620 stops, **88 places**, 265 cities across 40 countries.** Branch `claude/tour-links-yg5yw2`, open as **[#699](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/699)**. ⚠️ **`main` moved AGAIN after the PR opened** — [#698](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/698) merged Toronto's first 25 link pins and 20 creator rows, conflicting in `Tours.json`, `CLAUDE.md` and — an **add/add** — on this session's own handoff filename. Resolved the documented way: **take `main`'s file and re-run the idempotent assembler**, never hand-resolve a JSON conflict; **0 overlap** with Toronto on sourceURL, ids or hero filenames. This handoff renumbered **`-7` → `-8`** (Toronto merged first and kept `-7`). On the merged base the batch reads **linkPins 590 → 696 · makers unchanged at 246 · places 87 → 88**, and every check was re-run: mirror **47/47** then **0 errors, 2 pre-existing warnings** across 1,552 tours + 696 pins + 88 places; place faults **14/14**; seed clean at **246 / 2,248 / 2,620 / 88**; `check-place-candidates.py` **1 EXACT / 25 NEAR → 6 / 33** — the one on `main` is Toronto's own, the five added are this batch's undecided groups, and **120 Broadway is absent because the place resolved it**. gh-pages `d6c1e75` carries its 106 heroes. **108 links → 106 distinct posts, every one TikTok `@hereinnyc`** — the largest batch to date, against a previous record of 105 — so **makers is unchanged**: the row already existed, uuid5 reproduced its id exactly, and the regenerated avatar was byte-identical to the live file and excluded rather than overwritten.
   - **🔴 A supplied Plus Code was wrong and only the hero says so.** "Holy Nail in Duomo" carries **the identical code as the post before it** (the *Volto Santo* in **Lucca**) while its frame is the **Milan Duomo roof** and its caption reads `#duomodimilano` — a 280 km error that decodes cleanly and reverse-geocodes to a real square. Corrected; it now sits 26 m from the existing `Duomo di Milano` tour.
   - **✅ 120 BROADWAY IS A PLACE — owner instruction, same session. Places 87 → 88, a pure addition; the cap no longer applies.** The rest of this bullet is why it was needed. **🔴 FOUR COINCIDENT PINS AT 120 BROADWAY AND THE MAKER-PAGE CAP IS THREE.** `HomeView.maxStackedPlacecards` is 4 (Home is fine, no headroom) but **`TourSetMap.maxStacked` is 3 and every pin in this batch is one creator**, so **one of the four is permanently unreachable on `@hereinnyc`'s own page**. Session 132 flagged Arthur Ashe as safe only because its four pins had four different makers — **that mitigation does not exist here.** No coordinates were manufactured to relieve it. **A place is the fix — ✅ built.**
   - **⚠️ `check-place-candidates.py` goes 0 EXACT / 21 NEAR → 6 / 29, then 5 / 29 once 120 Broadway became a place; it still exits 1**, ending the clean-exit state #694 restored. All six are sites the owner sent more than one link for — 120 Broadway ×4, the Morgan Library ×2 (**already a place with 3 members**, so these would be a 4th and 5th), the Tin Building ×2, Eastern State ×2, Scribner's ×2, and One Times Square (this batch's NYE Ball pin converging on the same OSM node as `@whatisthis_nyc`'s existing pin). **None was nudged together.**
