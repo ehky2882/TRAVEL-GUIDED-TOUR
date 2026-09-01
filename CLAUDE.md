@@ -249,18 +249,21 @@ instruction. Full detail: `archive/HANDOFF-260901-10.md`.
   plus the simulator build and unit tests. ⚠️ **Nothing compiled locally**; CI is the only compile check
   a Linux web session gets.
 - **✅ The Pages deploy landed and every hero was verified by bytes, not by a 200: all 28 live URLs hash-verified against the uploaded blobs — 28 ok, 0 mismatch, 0 non-200.** ⚠️ It served **404 for ~30 minutes first**, which is the documented slow-deploy case and not a failed upload — the gh-pages head was re-confirmed as `10ec78bf` throughout. `check-image-duplicates.py --pins` **`OK — no suspicious duplicates`** over **588 images** (588 for 593 pins is the documented `@malata.antwerp` five-pins-one-URL case), with the shared-URL half at **0 errors / 208 documented reuses**.
-- **⚠️ POST-MERGE, VERIFIED AGAINST THE SYSTEMS RATHER THAN THE SUCCESS LINES.** The squash was
-  **checked against `main`** — #629 once reported "successfully merged" for an **empty commit** — and
-  carries **1,831 insertions across 5 files with all 28 pins present**. The **gh-pages catalogue
-  mirror job succeeded and its committed file holds all 28** (`fef9abf`, 740 pins), ⚠️ **while the
-  CDN was still serving the previous 712 for some minutes afterwards — the documented Pages
-  propagation lag, which is why the committed blob and not the served URL is what settles it.**
-  🔴 **Supabase is the PRIMARY source and its seed job was still applying when this was written**
-  (`Apply seed to Supabase`, ~12 MB of SQL, serialized behind other runs). **A merge is not live
-  until the RPC serves it** — re-poll `get_catalog` and confirm **740 link pins with 0 wrongly
-  inside `tours`**, plus the session-99 dropped-key check (`priceTier`, `isPrivate`, `country`,
-  `places`), which read **clean on the pre-seed payload** (1,553 tours with priceTier, 66 priced;
-  isPrivate on every maker; country on 1,552; 88 places).
+- **✅ POST-MERGE, VERIFIED AGAINST THE SYSTEMS RATHER THAN THE SUCCESS LINES — and all three
+  disagreed at once, which is the reusable part.** The squash was **checked against `main`** (#629
+  once reported "successfully merged" for an **empty commit**) and carries **1,831 insertions across
+  5 files with all 28 pins present**. 🔴 **Then the workflow's success line, the committed blob and
+  the served URL each said something different**: the gh-pages job reported success and its
+  committed file held all 28 (`fef9abf`, 740 pins) **while the CDN went on serving the previous 712
+  for roughly ten minutes**, and Supabase — **the source the app reads FIRST** — had not finished
+  seeding at all. **A merge is not live until the RPC serves it**, and the committed blob, never the
+  served URL, is what says a publish landed. ✅ **Both caught up and were then verified independently:
+  the live RPC serves `linkPins` 740 with all 28 present and 0 wrongly inside `tours`, and the
+  gh-pages CDN serves the same.** The session-99 dropped-key check is clean on the live payload —
+  `priceTier` on all 1,553 tours with 66 priced, `isPrivate` on every maker, `country` on 1,552,
+  `places` 88. ⚠️ **The RPC reports 274 makers against the catalogue's 262** — the documented
+  upsert-only accumulation, which is why the assertion is on link-pin counts and never on maker
+  totals.
 ### Sixteen Hong Kong link pins, and a coordinate that reverse-geocodes to a motorway tunnel (branch `claude/tour-links-9ynig6`, session 135 — content)
 
 **The owner sent sixteen Instagram reels, five carrying Hong Kong Plus Codes.** Branch cut clean off
