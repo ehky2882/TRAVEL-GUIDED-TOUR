@@ -79741,7 +79741,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
-        "0d3e20aa-bd74-524f-a147-6273f94b2355"
+        "0d3e20aa-bd74-524f-a147-6273f94b2355",
+        "E515658E-C488-5AAA-BEAC-47F76BE72B2A"
       ]
     },
     {
@@ -80738,6 +80739,51 @@
         "0f36af00-f06c-422a-af50-b176a9fb2565",
         "E920D6D5-1552-5DB3-8882-84D1FFB65A2B",
         "C7A943B1-4F64-5C14-A0DD-643B02B8814D"
+      ]
+    },
+    {
+      "id": "331dbaff-0928-5b9d-b4b0-346bfee3bfd7",
+      "name": "Casa Loma",
+      "description": "The largest house ever built in Canada: ninety-eight rooms on the ridge above Davenport, raised between 1911 and 1914 by E. J. Lennox for Sir Henry Pellatt, with secret passages, a tunnel to the stables and full electric wiring at a time when almost nothing had it. Pellatt made his fortune harnessing Niagara and lighting Toronto; when Ontario decided power that vital should not belong to one man and took it public, the money went with it. He lived here under a decade, walked away in 1923, and died with almost nothing. The castle he could not keep is now open to anyone who buys a ticket.",
+      "latitude": 43.678,
+      "longitude": -79.4094,
+      "city": "Toronto",
+      "address": "1 Austin Terrace, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-loma_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "bb96b1b1-04b8-5621-ad20-7cb335d6a4f7",
+        "312A63BC-CA2B-59D4-B3E6-5047776D60B1"
+      ]
+    },
+    {
+      "id": "ecb4c02a-5e86-5fcd-baa2-a43ca880e715",
+      "name": "Distillery District",
+      "description": "Thirteen acres of dark Victorian brick where Gooderham and Worts ran the largest distillery in the British Empire, turning out millions of gallons of whisky and paying a startling share of the whole country's taxes. Production stopped in 1990 and the buildings were too solid and too old to be worth knocking down, so they became the busiest film set in Canada instead. The lanes reopened in 2003 as a chains-free quarter of shops and studios, with the Boiler House, the Cooperage and the original configuration of the works still legible in the cobbles.",
+      "latitude": 43.6503,
+      "longitude": -79.3597,
+      "city": "Toronto",
+      "address": "55 Mill Street, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_6.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "de829d8e-c929-5435-ab5e-b910ef1c859e",
+        "D295B7BA-A723-54B9-8B68-859A685385BB"
+      ]
+    },
+    {
+      "id": "545aa12f-d179-5c93-ad20-d0f22782f2c1",
+      "name": "Osgoode Hall",
+      "description": "A pale, classically symmetric building set behind a lawn and a long iron fence, home of Ontario's law since 1797 and of its highest courts. Inside are the Great Library, which some call the most beautiful room in the country, and the courtrooms that go with it. The famous single-file gates in the Queen Street fence are usually explained as a device for keeping cattle off the grass; by the 1860s this was no pasture. They were built to slow crowds, one body at a time.",
+      "latitude": 43.6516,
+      "longitude": -79.3859,
+      "city": "Toronto",
+      "address": "130 Queen Street West, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osgoode-hall_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1b4a12de-2d1a-5292-9cc0-4c0843c615c5",
+        "A0FF670A-276C-5641-B2A6-7D0EFFA1D852"
       ]
     }
   ],
@@ -106625,8 +106671,8 @@
           "order": 0,
           "title": "The Great Library at Osgoode Hall",
           "caption": "My kind of paradise. A true hidden gem in Toronto. Have you been here before? 📍The Great Library, Osgoode Hall #todointoronto #torontolifest",
-          "latitude": 43.6521039,
-          "longitude": -79.3857945,
+          "latitude": 43.6516,
+          "longitude": -79.3859,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -106638,8 +106684,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6521039,
-      "centroidLongitude": -79.3857945,
+      "centroidLatitude": 43.6516,
+      "centroidLongitude": -79.3859,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "architecture",
@@ -106854,8 +106900,8 @@
           "order": 0,
           "title": "Inside the Distillery District",
           "caption": "Welcome to Toronto’s Distillery District! 🏭 I love that this historic distillery has found a new life and retains so much of its original co",
-          "latitude": 43.6503278,
-          "longitude": -79.3592001,
+          "latitude": 43.6503,
+          "longitude": -79.3597,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -106867,8 +106913,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6503278,
-      "centroidLongitude": -79.3592001,
+      "centroidLatitude": 43.6503,
+      "centroidLongitude": -79.3597,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "culturalHeritage",
@@ -107179,8 +107225,8 @@
           "order": 0,
           "title": "The Crystal at the Royal Ontario Museum",
           "caption": "An iconic museum extension inspired by crystalline geometry — bold, controversial, and intentionally uncomfortable. With no right angles and",
-          "latitude": 43.6676565,
-          "longitude": -79.3946988,
+          "latitude": 43.6677,
+          "longitude": -79.3948,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -107192,8 +107238,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6676565,
-      "centroidLongitude": -79.3946988,
+      "centroidLatitude": 43.6677,
+      "centroidLongitude": -79.3948,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "architecture",
@@ -107225,8 +107271,8 @@
           "order": 0,
           "title": "Inside Casa Loma",
           "caption": "Unlike my last post from Toronto, this home is not for sale, but you can visit it without an agent 😂. ——— #BestAddress #HistorySharedisHisto",
-          "latitude": 43.6781015,
-          "longitude": -79.4094159,
+          "latitude": 43.678,
+          "longitude": -79.4094,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -107238,8 +107284,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6781015,
-      "centroidLongitude": -79.4094159,
+      "centroidLatitude": 43.678,
+      "centroidLongitude": -79.4094,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "culturalHeritage",
