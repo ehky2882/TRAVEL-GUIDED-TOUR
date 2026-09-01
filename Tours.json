@@ -80433,7 +80433,8 @@
         "79FED394-1311-4446-A55C-9BEC9C772081",
         "211C1887-3A39-5A37-A48E-296110DC294C",
         "A2592733-8F10-5477-9302-E902CEDCC1C8",
-        "0DB13660-9E90-5745-96CD-28309617C93F"
+        "0DB13660-9E90-5745-96CD-28309617C93F",
+        "56235552-4650-5798-9A4D-9C5F6BAC2AAB"
       ]
     },
     {
@@ -80500,6 +80501,21 @@
       "tourIds": [
         "B79FB938-5050-5E89-9E68-C7CD21D94B58",
         "E7F75B30-A947-569C-8841-F5FC070D76A9"
+      ]
+    },
+    {
+      "id": "FCB50068-438A-58CA-B41B-BF3C8201B592",
+      "name": "The Charging Bull",
+      "description": "A three-and-a-half-ton bronze bull stands in the Broadway median at the north end of Bowling Green, head down and horns forward. Arturo Di Modica made it without a commission after the 1987 crash, paid for the bronze himself, and left it outside the New York Stock Exchange one night in December 1989 as an unsolicited gift to the city. The police towed it away the next morning; the outcry brought it back, to this spot, where it has stood ever since. It was cast across the river in Greenpoint, at a family foundry still working in a four-hundred-year-old sand-casting process — a detail almost nobody standing here knows. The bronze is polished bright where hands reach and dull everywhere else.",
+      "latitude": 40.70554,
+      "longitude": -74.01342,
+      "city": "New York",
+      "address": "Broadway at Bowling Green, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_4.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "7298da4a-bcc7-4e2a-b8b4-7b0e0b38afb4",
+        "48E91090-767E-5026-B177-16BAC6C65C55"
       ]
     }
   ],
@@ -106108,8 +106124,8 @@
           "order": 0,
           "title": "The Textile Conservation Lab",
           "caption": "F​or the past 30 years, Marlene Eidelheit & Valerie Soll have dedicated their lives to the art of conserving ​historic textiles at the The T",
-          "latitude": 40.8038125,
-          "longitude": -73.9619375,
+          "latitude": 40.8035,
+          "longitude": -73.9618,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -106121,8 +106137,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.8038125,
-      "centroidLongitude": -73.9619375,
+      "centroidLatitude": 40.8035,
+      "centroidLongitude": -73.9618,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -106247,8 +106263,8 @@
           "order": 0,
           "title": "Who Cast the Charging Bull",
           "caption": "Though he doesn’t consider himself an artist, Bill Makky ( @bedimakky ), the owner of the Bedi Makky Art Foundry has created thousands of sc",
-          "latitude": 40.7055625,
-          "longitude": -74.0134375,
+          "latitude": 40.70554,
+          "longitude": -74.01342,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -106260,8 +106276,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7055625,
-      "centroidLongitude": -74.0134375,
+      "centroidLatitude": 40.70554,
+      "centroidLongitude": -74.01342,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "visualArt",
