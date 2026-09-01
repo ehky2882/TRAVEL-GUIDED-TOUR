@@ -25,11 +25,11 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **OPEN — NO PR: 25 Toronto link pins (branch `claude/tours-links-upload-h6t2cs`, session 135).**
+🟡 **OPEN — [#698](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/698): 25 Toronto link pins (branch `claude/tours-links-upload-h6t2cs`, session 135).**
 Owner sent 31 Instagram reels as "Toronto links 260901". **linkPins 565 → 590 · makers 226 → 246**;
 tours and places unchanged. **Toronto's first pin batch** — 42 Atlas tours, zero pins before.
 Committed `f62daa8c` and pushed; gh-pages `a506a5b` with all 25 heroes hash-verified live.
-**No PR opened — this session's harness forbids opening one unasked, so CI has not run.**
+**PR #698 opened on owner instruction — CI is the authoritative validator and nothing compiled locally.**
 **✅ Links 1, 2, 4, 8, 9, 10 are DROPPED** (owner, 2026-09-01) after five spaced retries across ~an
 hour, including the alternate `/p/` path form, with a live control passing alongside. They were never
 wired, so nothing was removed. **Do not re-chase them.**
