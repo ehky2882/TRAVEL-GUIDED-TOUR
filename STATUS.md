@@ -122,16 +122,16 @@ no build; the seed carries `places`, so this reaches Supabase on merge with **no
     OSM's building node, on the Queen Street fence — which is where the cow gates are, and the gates are
     the tour's whole hook (the Grand Central / Petersen shape).
   - **Verification.** Validator mirror (vocabulary from **both** Swift files, **385 tags**) **0 errors,
-    0 warnings** across 1,552 tours + 712 pins + 91 places. ⚠️ **Eleven place-layer faults were injected
+    0 warnings** across 1,552 tours + 740 pins + 91 places. ⚠️ **Eleven place-layer faults were injected
     against the FOUR TOUCHED PLACES specifically — 11/11 caught, control clean** — because a suite
     written before the layer you changed is not evidence about it; the pin-layer suite is 16/16.
-    `check-place-candidates.py` **NEAR 37 → 33**, falling by exactly the four pairs resolved, with
-    **EXACT unchanged at 6**, so no coincident group was manufactured (all six are other sessions' or
+    `check-place-candidates.py` **NEAR 40 → 36**, falling by exactly the four pairs resolved, with
+    **EXACT unchanged at 7**, so no coincident group was manufactured (all six are other sessions' or
     the Cube House pair the owner chose to keep); ⚠️ exit code read **directly, not through a pipe**.
-    `seed_from_toursjson.py` clean at **247 / 2,264 / 2,636 / 91**. `Tours.json` **byte-stable under a
+    `seed_from_toursjson.py` clean at **262 / 2,292 / 2,664 / 91**. `Tours.json` **byte-stable under a
     Python re-dump** before and after editing; **`tours` and `makers` byte-identical to `main`**, exactly
     4 pins changed in exactly 4 fields each. All four place heroes live **200**.
-  - ⚠️ **`main` moved mid-session** **three times** (#698, #699 and #700 — the last of them **after CI had already gone green**), so each time the catalogue edit was **redone the documented
+  - ⚠️ **`main` moved mid-session** **four times** (#698, #699, #700 and #701 — the last two **after CI had already gone green**), so each time the catalogue edit was **redone the documented
     way — take `main`'s file and re-run the idempotent assembler, never hand-resolve a JSON conflict** —
     and every check above was re-run afterwards. ⚠️ **Nothing compiled — CI on
     [#702](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/702) is the authoritative validator.**
@@ -742,6 +742,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 | Branch | State |
 |---|---|
+| `claude/tour-links-26dmsx` | **Merged ([#701](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/701), squash `5fc747fb`)** — twenty-eight Chicago link pins; linkPins 712 → 740, makers 247 → 262. ⚠️ **`main` moved THREE times while it was in flight** (#698, #699, #700 — 147 pins, the last arriving after the PR was open), and the catalogue edit was **redone each time by re-running the idempotent assembler on `main`'s file**, never hand-resolved. 🔴 **That caught a real hazard: #699 created maker rows for two of this batch's creators, so new rows went 17 → 15** — uuid5 reproduced both ids exactly; a naive resolve would have emitted `duplicate maker id` twice. ⚠️ **Handoff renumbered twice, to `-10`** — `-7`, `-8` and `-9` were all claimed by parallel sessions on the same afternoon. Story in `CLAUDE.md` § Current State |
 | `claude/tour-links-upload-tbcerj` | **This session, pushed, no PR** — twenty link pins (15 × `@breatheart_hk` Hong Kong). Cut off `origin/main` `05e90f47`, **rebased onto `00a420bd`** after #640 and three doc commits landed mid-session; catalogue edit redone by re-running the idempotent assembler against the new `main`, never hand-resolved. gh-pages `a8a81767` |
 | `claude/tour-links-upload-wa3e0g` | Merged (#640, squash `cd32e293`) — 32 pins. ⚠️ **Its branch diff was 33 pins, not 32**: it carried the Instagram Zacherlhaus the owner pulled in #641. Flagged pre-merge; **checked after and the pull held** — only the TikTok Zacherlhaus is on `main` |
 | `claude/tour-links-upload-qeoxe7` | **Merged as [#648](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/648); follow-up places PR open** — twenty-three link pins from three creators (18 TikToks `@thedesigndetourist`, 4 Instagram `@shaunbirley`, 1 `@meliluu__`); linkPins 168 → 191, makers 154 → 157. Content only, images live on gh-pages at `251cf95e`. **🔴 MERGE HAZARD, NOW THE OTHER SESSION'S: this branch created the `TikTok @thedesigndetourist` maker row (uuid5 `67CA14A6-…`) and a parallel session's unmerged branch creates the identical id — that branch must drop the duplicate or the validator errors.** ⚠️ Ships two subjects twice on one coordinate each (Westin Bonaventure, Hotel Casa del Mar) — deliberate, both links were sent; `check-place-candidates.py` therefore reports 3 EXACT groups against main's 1 |
