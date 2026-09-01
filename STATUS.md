@@ -48,20 +48,18 @@ gh-pages push, no build; the seed carries `places`, so it reaches Supabase on me
     **Bellevue (William O. Lockridge) Library** ×2, **Vancouver House** ×2), each a real place candidate;
     and the five weak heroes from #689 are unchanged.
 
-🟡 **OPEN — [#690](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/690) eleven link pins from Joshua Charow**
-(branch `claude/new-tour-links-wh1du0`, content only). **linkPins 554 → 565, makers 224 → 226**;
-tours and places unchanged. Assets are already live on gh-pages (`34f64f4`) and hash-verified.
-**Two decisions are the owner's, neither blocking the merge:**
-  - **The same Instagram reel ships as TWO pins** — one at the Bedi Makky Art Foundry (14 m from its
-    own published address), one at the **Charging Bull**, 1 m from OSM's node for the sculpture that
-    foundry cast. Precedented (`@malata.antwerp`, one video → five pins), and they share one hero
-    file. ⚠️ **The cost: at Bowling Green the photograph is a foundry in Greenpoint** — inherent,
-    since a link pin re-hosts only the thumbnail. **One line removes either pin.**
-  - **Two place candidates flagged, neither created.** The Charging Bull pin is **3 m** from the
-    Atlas tour of that name — the tightest pair in the catalogue, deliberately not nudged onto it.
-    And the **Textile Conservation Lab is 37 m from the St John the Divine place**, which
-    `check-place-candidates.py` **structurally cannot see** (its NEAR tier matches on title
-    containment and the names share no distinctive word). Making the lab a fifth member is one line.
+🟢 **MERGED — [#690](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/690) eleven link pins from Joshua Charow**
+(squash `34cae196`; linkPins 554 → 565, makers 224 → 226). Verified live rather than on the
+workflow's success line: the **Supabase RPC serves all 11 pins and both maker rows, 0 pins wrongly
+inside `tours`**, and the gh-pages mirror converged byte-identical after ~3 min of CDN lag.
+**✅ Both questions it raised are CLOSED by the owner — do not re-raise either:**
+  - **The same reel ships as TWO pins** (the Bedi Makky foundry and the Charging Bull) — *"IT'S FINE
+    THERE ARE 2 OF THE SAME REELS AT DIFFERENT LOCAITONS"*. ⚠️ The Bull pin's photograph is a foundry
+    in Greenpoint; **that is the accepted cost, not an oversight**, and an open-every-hero audit will
+    flag it again.
+  - **The Charging Bull is now a place** and **the Textile Conservation Lab is the cathedral place's
+    fifth member** — [#693](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/693), on owner
+    instruction. **Places 82 → 83.**
 
 🟢 **MERGED — THE THREE PLACE/NHM ITEMS THAT SAT HERE ARE ALL ON `main`.**
 [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676) ten Tier 1 place cards (places
