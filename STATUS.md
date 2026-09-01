@@ -25,6 +25,21 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🟡 **OPEN — [#690](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/690) eleven link pins from Joshua Charow**
+(branch `claude/new-tour-links-wh1du0`, content only). **linkPins 554 → 565, makers 224 → 226**;
+tours and places unchanged. Assets are already live on gh-pages (`34f64f4`) and hash-verified.
+**Two decisions are the owner's, neither blocking the merge:**
+  - **The same Instagram reel ships as TWO pins** — one at the Bedi Makky Art Foundry (14 m from its
+    own published address), one at the **Charging Bull**, 1 m from OSM's node for the sculpture that
+    foundry cast. Precedented (`@malata.antwerp`, one video → five pins), and they share one hero
+    file. ⚠️ **The cost: at Bowling Green the photograph is a foundry in Greenpoint** — inherent,
+    since a link pin re-hosts only the thumbnail. **One line removes either pin.**
+  - **Two place candidates flagged, neither created.** The Charging Bull pin is **3 m** from the
+    Atlas tour of that name — the tightest pair in the catalogue, deliberately not nudged onto it.
+    And the **Textile Conservation Lab is 37 m from the St John the Divine place**, which
+    `check-place-candidates.py` **structurally cannot see** (its NEAR tier matches on title
+    containment and the names share no distinctive word). Making the lab a fifth member is one line.
+
 🟢 **MERGED — THE THREE PLACE/NHM ITEMS THAT SAT HERE ARE ALL ON `main`.**
 [#676](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/676) ten Tier 1 place cards (places
 56 → 66) · [#679](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/679) nine Tier 2 cards plus
