@@ -130,7 +130,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ### Fourteen Hong Kong and Macau link pins, a story highlight that can never be pinned, and a what3words in New York (branch `claude/more-tours-a1xhw4`, session 139 — content)
 
-**The owner sent sixteen links; 14 ship, 2 are structurally unpinnable.** **linkPins 905 → 919 · makers 297 → 299 · `tours` and `places` byte-identical.** Two creators, both new maker rows, matching the owner's own headings: **Instagram `@history_withjim`** (12) and **`@hongkongheritage`** (2). Content only — no Swift, no SQL, no build. **NO PR OPENED.** Detail: `archive/HANDOFF-260902-8.md`.
+**The owner sent sixteen links; 14 ship, 2 are structurally unpinnable.** **linkPins 905 → 919 · makers 297 → 299 · `tours` and `places` byte-identical.** Two creators, both new maker rows, matching the owner's own headings: **Instagram `@history_withjim`** (12) and **`@hongkongheritage`** (2). Content only — no Swift, no SQL, no build. **NO PR OPENED.** Detail: `archive/HANDOFF-260902-9.md`.
 
 - **🔴 AN INSTAGRAM STORY HIGHLIGHT (`/s/…`) CAN NEVER BE A LINK PIN, AND IT IS STRUCTURAL RATHER THAN A BLOCK.** Three independent grounds: **`LinkSource.embedURL` in `Models/Tour.swift` matches only `p`, `reel`, `tv`**, so a `/s/` path returns **nil** and the app can build **no player** (verified in the Swift itself, not just the tool's mirror — the TikTok `/photo/` class); the page carries **no `display_url`**, so there is no hero and a pin without one cannot exist; and it carries **no caption blob**, so there is no subject. ⚠️ **They are NOT dead and NOT blocked** — the page returns a healthy **476 kB** titled *"Hong Kong 🇭🇰 • Highlights by @kieranbrowntravel"* with `accounts/login` count **0**. **Do not re-try on "the link opens on my phone."** Their two Plus Codes (`75J3+FJ Central`, `76M6+MX Quarry Bay`) are **orphaned**, and the creator is a **third account** otherwise absent from the batch.
 - **✅ WHAT3WORDS IS NOW A USABLE COORDINATE SOURCE, AND IT MUST BE ANCHOR-GATED.** All twelve `@history_withjim` captions carry a `///word.word.word`. **`https://mapapi.what3words.com/api/convert-to-coordinates?words=X.Y.Z` returns 200 with no API key** — and the resolver **refuses to run** unless published anchors verify first (`filled.count.soap` → 51.520847, -0.195521 and `index.home.raft` → 51.521251, -0.203586, to 1e-5), the same discipline as the Plus Code decoder. ⚠️ **Its first answer looked like a fallback and was not** — `clip.apples.leap` returns the canonical New York City coordinate, which the anchors proved is a real answer.
@@ -599,8 +599,10 @@ and the address request drops to **47 named venues**.
 
 **The owner supplied a coordinate for 58 of the deferred posts.** Every one matched a post in this
 batch — **nothing unmatched, no duplicate codes**. **linkPins 804 → 846 · makers unchanged at 263 ·
-tours and places byte-identical.** **The batch now stands at 106 shipped and 9 deferred**, and the
-address request drops from 62 named venues to **8**.
+tours and places byte-identical.** **At this point the batch stood at 106 shipped and 9 deferred**, and
+the address request dropped from 62 named venues to **8**. ⚠️ **Both figures are a dated snapshot and
+are SUPERSEDED** — #716 removed two pins and the owner then dropped the eight, closing the batch at
+**104 shipped · 11 dropped · 1 deferred · 2 blocked of 116 pinnable**. See § BATCH CLOSED below.
 
 - **42 new pins · 15 coordinate upgrades · 1 unshippable.** The upgrades move pins shipped an hour
   earlier onto the owner's venue-precise point — **Ocean Park 1,523 m**, **Hikiniku to Come 303 m**
@@ -679,12 +681,18 @@ and #714 (42 Miami pins + 5 places) — so the merged base reads **905 pins / 10
 `Tours.json` auto-merged and the result was **verified rather than trusted**, with all ten
 notes re-asserted present and every check re-run there.
 
-- **🔴 `backend/pull_pins_260902.sql` IS OWED AND HAS NOT BEEN RUN — and that is MEASURED, not
-  assumed.** After the merge the live RPC serves **907 pins against the catalogue's 905**, and
-  `@shivanidukhandee` reads **106 against 104**. `seed_from_toursjson.py` is upsert-only by
-  design, so a deletion reaches the gh-pages mirror and the bundled seed and **never reaches
-  Postgres**, which is what the app reads first. **The two removed pins are on every phone
-  until that paste happens** — the `pull_nycunfilteredstories.sql` gap, which once ran eight days.
+- **✅ `backend/pull_pins_260902.sql` HAS BEEN RUN (owner, 2026-09-02) — nothing is owed here, do not
+  tell the owner to run it again.** **Verified against the LIVE RPC, not the SQL Editor's success
+  line:** `linkPins` **907 → 905** and `@shivanidukhandee` **106 → 104**, both now matching the
+  catalogue exactly; `Xiang Bo Bo` gone. ⚠️ **`Cheung Hing Coffee Shop` IS STILL SERVED AND THAT IS
+  CORRECT** — the file deleted the *duplicate* (`c4071953…`, the Pineapple Bun Hunt post) and kept
+  the surviving twin `d3bb855c…`, confirmed present; exactly one remains where there were two, which
+  is the whole point. ⚠️ **`Cheung Hing Tea Hong` is a DIFFERENT venue 2 km away and was untouched.**
+  Session-99 dropped-key check clean on the same payload (`priceTier` 1,553 / 66 priced, `isPrivate`
+  311/311, `country` 1,552, `videoRole` 1,553, **0 link pins inside `tours`**, places 107).
+  **Why the file was needed at all:** `seed_from_toursjson.py` is upsert-only by design, so a
+  deletion reaches the gh-pages mirror and the bundled seed and **never reaches Postgres**, which is
+  what the app reads first — the `pull_nycunfilteredstories.sql` gap, which once ran eight days.
 - **🔴 THREE COORDINATES WERE BADLY WRONG AND ONE WAS IN A DIFFERENT COUNTRY.** **Aquatic Market
   sat in Luohu District, SHENZHEN** — 25 km away across an international border, while its own
   `country` field read Hong Kong. **Min Fong Hong** sat in Tai Po, 13 km from the Tsuen Wan its
