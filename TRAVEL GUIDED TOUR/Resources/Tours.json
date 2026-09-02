@@ -80992,6 +80992,36 @@
         "3DADDCC8-0961-506C-B76C-35759D0D1CD9",
         "DB8244FA-1074-5890-9B65-770DDCE58A94"
       ]
+    },
+    {
+      "id": "a7c90ef2-0063-5c08-92d9-91fd1ab12705",
+      "name": "Cube House",
+      "description": "Three green cubes tipped onto one corner and raised on concrete stalks, at the point where Sumach Street meets Eastern Avenue on the edge of Corktown. Ben Kutner built them in 1996 with his partner Jeff Brown, taking the form directly from the cube houses Piet Blom put up in Rotterdam and Helmond in the 1970s and 80s — a tilted cube on a pole, so the floors sit at angles no rectangular room ever does and the windows look down at the road and up at the sky. They were meant as the beginning of something much larger: an affordable-housing idea for the leftover scraps of land a city cannot otherwise build on, part of a planned community called UniTri that never happened. Only these were built, and Toronto has treated them ever since as a well-loved oddity rather than architecture. The site is on the city's heritage register as a listed property, which records a building without protecting it from demolition. Block Developments bought the cubes together with six neighbouring properties in late 2023 and has said they cannot be safely kept; a permit to take them down has been filed, and the artist Benjamin Von Wong is working with the developer to rebuild their reclaimed material as a public artwork.",
+      "latitude": 43.6546346,
+      "longitude": -79.3575624,
+      "city": "Toronto",
+      "address": "1 Sumach Street, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cube-house-torontopapi_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "77F89F6B-8F09-5485-BC01-7A383CAF2E54",
+        "7BF993DA-98AF-586F-BEE8-067CE10C692A"
+      ]
+    },
+    {
+      "id": "b64f5b2a-0eef-55cf-8ded-906977182f87",
+      "name": "Tribune Tower",
+      "description": "The neo-Gothic tower on the north bank of the Chicago River, 463 feet to the roof across 36 floors, finished in 1925 to a design by John Mead Howells and Raymond Hood. The Chicago Tribune marked its seventy-fifth anniversary in 1922 by offering a prize for the most beautiful office building in the world; more than 260 entries came in from across Europe and America, and Howells and Hood won with a flying-buttressed crown modelled on the Butter Tower at Rouen. The competition mattered more than the result — Eliel Saarinen's second-place design was widely judged the better building and shaped American skyscrapers for a generation. Set into the outside walls at street level are roughly 150 fragments gathered from famous structures around the world, among them the Parthenon, the Taj Mahal, the Great Wall of China, Notre-Dame, the Alamo and the Great Pyramid, each labelled in the stone; later additions include a piece of steel from the World Trade Center and a moon rock displayed behind glass. The newspaper left in June 2018 after ninety-three years and the tower has since been converted to residences. It was made a Chicago Landmark on 1 February 1989 and is a contributing building in the Michigan-Wacker Historic District.",
+      "latitude": 41.890584,
+      "longitude": -87.6232046,
+      "city": "Chicago",
+      "address": "435 North Michigan Avenue, Chicago",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tribune-tower-aboutbuildings_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "DA7E193B-C288-534C-979F-2C35778CCBD7"
+      ]
     }
   ],
   "linkPins": [
