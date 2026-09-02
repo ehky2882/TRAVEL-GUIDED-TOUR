@@ -115403,10 +115403,10 @@
       "centroidLongitude": 114.1697505,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "culturalHeritage",
+      "primaryCategory": "foodAndDrink",
       "tags": [
-        "District",
-        "Commerce"
+        "Venue",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -115623,10 +115623,10 @@
       "centroidLongitude": 114.2059697,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "sacredSites",
+      "primaryCategory": "foodAndDrink",
       "tags": [
-        "Religious Building",
-        "Faith"
+        "Venue",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -115975,9 +115975,9 @@
       "centroidLongitude": 114.1639405,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "culturalHeritage",
+      "primaryCategory": "hiddenGems",
       "tags": [
-        "District",
+        "Venue",
         "Commerce"
       ],
       "priceUSD": 0
@@ -116151,10 +116151,10 @@
       "centroidLongitude": 114.1694008,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "natureAndParks",
+      "primaryCategory": "foodAndDrink",
       "tags": [
-        "Park",
-        "Green Escape"
+        "Venue",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -116327,10 +116327,10 @@
       "centroidLongitude": 113.9925347,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "natureAndParks",
+      "primaryCategory": "culturalHeritage",
       "tags": [
-        "Park",
-        "Green Escape"
+        "Public Square",
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -116418,7 +116418,7 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
-        "Iconic Landmark"
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -116770,6 +116770,7 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
+        "History",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -116855,10 +116856,10 @@
       "centroidLongitude": 114.1394628,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "culturalHeritage",
+      "primaryCategory": "foodAndDrink",
       "tags": [
-        "Market",
-        "Commerce"
+        "Venue",
+        "Food"
       ],
       "priceUSD": 0
     },
