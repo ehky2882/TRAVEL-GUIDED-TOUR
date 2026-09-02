@@ -601,7 +601,12 @@ the address request drops to **62 named venues**. ⚠️ **Its stated total was 
   Thong Building, To Kwa Wan · `Haeundae Galbi` — 2-8 Wellington Street, Central.** Each
   **reverse-verifies at zoom 18 onto the building the caption names**: `Sunbeam Commercial Building`
   at the **exact house range**, `捷通大廈 Chiap Thong Building` **by name**, and `Wellington Place,
-  2-8 Wellington Street`. ⚠️ **Chiap Thong's reverse lands on a neighbouring tenant on the same
+  2-8 Wellington Street`. 🔴 **THE KOWLOON HUM HALF OF THAT CLAIM DID NOT HOLD AND WAS CORRECTED
+  2026-09-02 — the shipped coordinate was 281 m from Sunbeam and reverse-geocoded to WATERLOO ROAD
+  with no house number, not even the right street.** Re-measured forward and reverse; the pin now
+  sits on Sunbeam and reverse-verifies by name *and* exact house number. **Whatever was verified when
+  that line was written, it was not the coordinate that shipped** — which is the argument for
+  reverse-verifying the point you are ABOUT TO WRITE, not the one you looked up. ⚠️ **Chiap Thong's reverse lands on a neighbouring tenant on the same
   street** — the documented nearest-addressed-node case, not a bad point; the **forward** names the
   building exactly.
 - **✅ All three heroes opened and read against their captions — zero wrong subjects**, and
@@ -835,7 +840,8 @@ notes re-asserted present and every check re-run there.
   — and re-checked after the merge. Seed clean at **297 / 2,457 / 2,829 / 105**; **0 `images//`**.
   **All seven moves and all five renames verified field-by-field on the LIVE RPC.** ⚠️ The two
   removed heroes are left **orphaned** on gh-pages, matching convention.
-- **✅ BATCH CLOSED — 104 shipped · 11 dropped · 1 deferred · 2 blocked, of 116 pinnable (118 posts).**
+- **✅ BATCH CLOSED — 105 shipped · 11 dropped · 0 deferred · 2 blocked, of 116 pinnable (118 posts)**
+  (it read 104 / 1 deferred until the owner shipped the last one; see the follow-up below).**
   Derived from the **maker row**, and it reconciles exactly: 104 + 12 not-live = 116.
 - **🔴 `drafts/hk-shivanidukhandee/analysis.json` IS NOT BATCH-SCOPED, AND COUNTING FROM IT OVERSTATES
   THIS BATCH BY TWO.** It holds **120 records**, two of which belong to other creators entirely —
@@ -862,16 +868,79 @@ notes re-asserted present and every check re-run there.
   - **⚠️ THE HAIDILAO PRECEDENT IS WHY THIS WAS CHECKED RATHER THAN ACTED ON.** Minutes earlier the same
     deferred list called **Haidilao Tsim Sha Tsui** unshipped when it was already live — so the list is
     not evidence about the catalogue. **Search `Tours.json` before removing anything a tracker names.**
-  - **⚠️ ONE POST IS STILL GENUINELY DEFERRED AND IT IS NOT AN ADDRESS PROBLEM.** `DMz6jSxy0u8`, a
-    **second Kowloon Hum Spicy Hotpot post** — the venue already carries a pin from `DBYnXEky1Cb` at
-    469-471 Nathan Road, so wiring it would put two pins for one venue under one creator, the shape the
-    owner has already ruled on twice (the duplicate Cheung Hing pin pulled, the reposted Disneyland clip
-    dropped). **Left out on that precedent rather than asked about again.** One line ships it.
+  - **✅ THE LAST DEFERRAL IS CLOSED — THE OWNER SHIPPED IT, AND THE PRECEDENT I APPLIED WAS THE WRONG
+    ONE.** `DMz6jSxy0u8` was held back as a second Kowloon Hum post because the venue already carried
+    a pin, on the duplicate-Cheung-Hing / reposted-Disneyland precedent. Owner: ***"if they are
+    different reels, then add it and make it a place"***. **Those precedents are about ONE post
+    duplicated, not TWO different posts about one venue** — the live pin is the karaoke/mahjong angle,
+    this one is the food. **Two different reels are two pins; a place is what stops them stacking.**
+    Shipped, with the venue made a place. **Batch closes at 105 shipped · 11 dropped · 0 deferred ·
+    2 blocked of 116 pinnable** — ⚠️ superseding the 104/1 recorded above.
   - **⚠️ The 11 dropped are these 8 plus three from earlier**: `Xiang Bo Bo` and the `Cheung Hing`
     pineapple-bun duplicate (both owner removals in #716) and `DViylUIjGUg`, the reposted Disneyland
     clip. `drafts/hk-shivanidukhandee/ADDRESSES-NEEDED.txt` is now a **closed record** carrying all of
     this, so a future session cannot read the file as unfinished work.
 
+
+### Kowloon Hum becomes a place, and its pin was 281 m off its own address (branch `claude/kowloon-hum-place`, session 138 — content)
+
+**Owner: *"if they are different reels, then add it and make it a place"*.** **Pins 937 → 938, places
+107 → 108**; `tours` and `makers` byte-identical. ⚠️ **Those totals are on the base after [#721](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/721)
+merged mid-flight (32 more Hong Kong pins) — re-derive rather than quoting a delta.** Content only —
+no Swift, no SQL, one gh-pages image.
+
+- **⚠️ I HAD HELD THIS REEL BACK ON THE WRONG PRECEDENT.** The duplicate-Cheung-Hing and
+  reposted-Disneyland calls are about **one post duplicated**, not **two different posts about one
+  venue**. The live pin is the karaoke/mahjong/costume angle; this one is the **food** — the signature
+  Triple-Flavor Hotpot, the handmade meatballs, the metre-long marbled meat ribbon. **Two different
+  reels are two pins; a place is what stops them stacking.** Both proved alive against **two
+  already-live controls in the same pass with the same UA** (261 KB with `contextJSON` present on all
+  three).
+- **🔴 THE EXISTING PIN WAS 281 m OFF THE ADDRESS ITS OWN CAPTION GIVES, AND THE PLACE WOULD HAVE
+  INHERITED IT.** The caption states **469-471 Nathan Road, Yau Ma Tei**; OSM has **Sunbeam
+  Commercial Building** at exactly that house range, and the corrected point **reverse-verifies by
+  name AND exact house number** (`新光商業大廈 Sunbeam Commercial Building, 469-471, 彌敦道 Nathan
+  Road`). The old coordinate reverse-geocoded to **Waterloo Road with no house number — not even the
+  right street**. **The restaurant is in no OSM record under either name** (the COSM Atlanta case), so
+  the venue's own published address is the authority. The pin is `manual`, asserted before moving, so
+  no geofence changes.
+- **⚠️ THIS CONTRADICTS WHAT THIS FILE RECORDED, AND THE CONTRADICTION IS THE FINDING.** FOLLOW-UP 1
+  says that coordinate *"reverse-verifies at zoom 18 onto the building the caption names"*. Today's
+  forward **and** reverse both say otherwise. **Whatever was verified when that line was written, it
+  was not the coordinate that shipped** — which is the argument for reverse-verifying the point you
+  are about to WRITE, not the one you looked up.
+- **🔴 A DISTINCT SUBJECT SLUG, BECAUSE THE HANDLE SUFFIX CANNOT DISAMBIGUATE TWO POSTS BY ONE CREATOR
+  ABOUT ONE VENUE.** A bare venue slug would have overwritten the live hero, which since #567 a
+  downloaded tour would never see corrected — the Rosewood Mayakoba / Apthorp precedent. It ships as
+  **`The Triple-Flavor Hotpot at Kowloon Hum`**, and **the picture confirms the title rather than only
+  the caption**: the pot in frame is genuinely three-sectioned (pale, red spicy, orange tomato).
+- **⚠️ SWEPT 400 m BEFORE BUILDING RATHER THAN TRUSTING THE PAIR** (the session-131 lesson), and
+  **re-swept after #721 landed**. Correctly excluded as different subjects: **Mido Café 56 m**,
+  **Mum's Not Home 99 m** (new with #721), Shanghai Street 177 m, the Jade Hawker Bazaar 195 m,
+  Temple Street Night Market 227 m, In's Point 328 m, Cheung Shing Fans Factory 341 m.
+- **⚠️ THE PLACE HERO IS BORROWED FROM A MEMBER AND THAT IS STRUCTURAL — do not go sourcing a
+  replacement.** Both members are link pins with **empty galleries**, so no third photograph of this
+  restaurant exists in the catalogue. Borrowed-hero count **re-derived, not carried forward: 34 of 108**.
+- **🔴 A REAL GAP FOUND IN `scripts/validate-tours-mirror.py` AND FIXED: it never checked place hero or
+  gallery URLs, or the place coordinate range**, while `validate-tours.swift` does (its line 692). **A
+  malformed place hero passed the mirror and would have failed CI.** Found by injecting the fault, not
+  by reading. Added and pinned in the mirror's own selftest so it cannot be removed silently —
+  **19/19 → 22/22**.
+- **Verification.** `Tours.json` **byte-stable under a re-dump before and after**; the moved pin
+  **asserted `manual` first** and proved to differ in **no field but its four coordinate fields**;
+  every other pin, all tours, all makers and the 107 existing places asserted **byte-identical**.
+  ⚠️ **22 place-layer faults injected against THIS place specifically — 22/22 caught, control clean.**
+  Mirror **0 errors, 0 warnings** across 1,552 tours + 938 pins + 108 places. 🎉
+  **`check-place-candidates.py` output BYTE-IDENTICAL to `origin/main`** — 0 exact, 36 near, exits 0:
+  the place absorbed the coincident pair it would otherwise have created and **nothing was
+  manufactured**; ⚠️ exit code read **directly, not through a pipe**. Seed clean at **299 / 2,490 /
+  2,862 / 108**; **0 `images//`**. gh-pages `ccf7665f`: remote head **re-read in the same command as
+  the push**, tree diff **exactly 1 addition, nothing outside `images/`**, and after the deploy the
+  live URL was **hash-verified against the uploaded bytes**. `check-image-duplicates.py --pins`
+  **`OK — no suspicious duplicates`** over 901 images, shared-URL half **0 errors / 208 documented
+  reuses**. ⚠️ **`main` moved mid-flight** (#721, 32 Hong Kong pins) and the merge was **redone the
+  documented way — take `main`'s file and re-run the idempotent assembler, never hand-resolve a JSON
+  conflict** — with **0 overlap** on sourceURL, ids or filenames and every check re-run.
 
 ## Current State (2026-09-01)
 
