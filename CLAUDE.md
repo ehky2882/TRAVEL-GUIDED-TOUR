@@ -581,8 +581,10 @@ and the address request drops to **47 named venues**.
 
 **The owner supplied a coordinate for 58 of the deferred posts.** Every one matched a post in this
 batch — **nothing unmatched, no duplicate codes**. **linkPins 804 → 846 · makers unchanged at 263 ·
-tours and places byte-identical.** **The batch now stands at 106 shipped and 9 deferred**, and the
-address request drops from 62 named venues to **8**.
+tours and places byte-identical.** **At this point the batch stood at 106 shipped and 9 deferred**, and
+the address request dropped from 62 named venues to **8**. ⚠️ **Both figures are a dated snapshot and
+are SUPERSEDED** — #716 removed two pins and the owner then dropped the eight, closing the batch at
+**104 shipped · 11 dropped · 1 deferred · 2 blocked of 116 pinnable**. See § BATCH CLOSED below.
 
 - **42 new pins · 15 coordinate upgrades · 1 unshippable.** The upgrades move pins shipped an hour
   earlier onto the owner's venue-precise point — **Ocean Park 1,523 m**, **Hikiniku to Come 303 m**
