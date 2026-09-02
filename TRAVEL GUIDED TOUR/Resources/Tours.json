@@ -80757,7 +80757,9 @@
       "tourIds": [
         "8ab32b1f-6fc4-4067-8aaf-9771f7766dfd",
         "DC9C7B8A-FEBA-548D-9C64-9B2C06817310",
-        "05C6A5B5-74D0-5B71-A445-81C2EABD6C16"
+        "05C6A5B5-74D0-5B71-A445-81C2EABD6C16",
+        "6F6AD335-48A6-5E4C-A469-568BFA2F5DBA",
+        "FC2AD99F-4B32-5EF3-8B0D-370D42746D7E"
       ]
     },
     {
@@ -80929,6 +80931,66 @@
       "tourIds": [
         "1b4a12de-2d1a-5292-9cc0-4c0843c615c5",
         "A0FF670A-276C-5641-B2A6-7D0EFFA1D852"
+      ]
+    },
+    {
+      "id": "4ab95cc0-edda-52b0-9963-a59dddd3b581",
+      "name": "One Times Square",
+      "description": "The 25-storey tower at the north end of Times Square, built in 1903–04 to a neo-Gothic design by Cyrus L. W. Eidlitz as the headquarters of The New York Times — which gave the square its name and then moved out two years later, to 229 West 43rd Street. Almost none of Eidlitz's building can be seen: the original detail has been obscured or stripped away over a century of alterations, and since the 1990s the facade has been advertising, which earns so much that the floors behind it have largely stood empty. A lighted news ticker was wrapped around the base in 1928. The New Year's Eve ball has descended from its roof since 31 December 1907, every year but 1942 and 1943, when it was suspended for wartime blackouts; the first was five feet across, wood and iron lit by a hundred incandescent bulbs, and since 1999 the ball has been faced in Waterford crystal panels. A renovation begun in 2022 has added an observation deck and a museum.",
+      "latitude": 40.7562129,
+      "longitude": -73.9865339,
+      "city": "New York",
+      "address": "1 Times Square, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/one-times-square-whatisthisnyc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "00C9C879-F5DA-5311-8FB0-FEE49AFFB5C5",
+        "81014923-08E4-5A6A-9244-2FDCB71461FB"
+      ]
+    },
+    {
+      "id": "1190bec9-512c-513a-9f82-c36def01caff",
+      "name": "The Tin Building",
+      "description": "Built in 1907 inside the Fulton Fish Market, which had traded on this shore since 1822 and was for generations the place New York bought its fish. The market left for Hunts Point in the Bronx in 2005, and of everything it occupied here only two structures remain — the Tin Building is the one that carries landmark designation. Hurricane Sandy flooded and damaged it, and the building that stands today was reconstructed and raised above the flood line. Since September 2022 it has held a food hall run by Jean-Georges Vongerichten, with market counters, restaurants and bars through the ground floor and a hidden room upstairs.",
+      "latitude": 40.7061403,
+      "longitude": -74.0022222,
+      "city": "New York",
+      "address": "96 South Street, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tin-building-hereinnyc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "7B77077D-44DA-5BB8-A7D3-D43668E7AC1E",
+        "CA72BADF-6106-574F-9729-5C41361A45A1"
+      ]
+    },
+    {
+      "id": "5f6333f6-4590-5880-bf5c-074dbb3a2e5b",
+      "name": "Eastern State Penitentiary",
+      "description": "The prison that invented the penitentiary, on eleven acres of Fairmount once known as Cherry Hill. John Haviland designed it, construction began in 1822 and it opened on 25 October 1829: seven corridors of heated, skylit cells radiating from a central hub, built to hold five hundred people each entirely alone. The separate system was meant as reform rather than punishment — a prisoner would meet no one, and would be left with nothing but penitence — and it was copied by more than three hundred prisons around the world. It was among the largest public works of the early republic and a tourist attraction almost at once; Charles Dickens and Alexis de Tocqueville both came to see it, and Dickens left appalled. Al Capone was held here in 1929 and Willie Sutton later. It closed in 1971 and stood empty and decaying for two decades; it is open today as a museum, deliberately stabilised rather than restored, so the ruin is what visitors walk through.",
+      "latitude": 39.9683406,
+      "longitude": -75.1726626,
+      "city": "Philadelphia",
+      "address": "2027 Fairmount Avenue, Philadelphia",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eastern-state-penitentiary-place_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "DE843F19-0B48-5E12-8066-B866F2E57C09",
+        "0860A5E3-BFE8-596B-9E24-F9919ECCE1EF"
+      ]
+    },
+    {
+      "id": "571fdf29-1d8a-55bc-9ec4-16daa360e094",
+      "name": "Charles Scribner's Sons Building",
+      "description": "Ernest Flagg's Beaux-Arts building at 597 Fifth Avenue, put up between 1912 and 1913 for the publisher Charles Scribner's Sons — a glass-and-iron shopfront in black and gold across the bottom two storeys, five limestone bays above it, and a mansard roof at the tenth. The bookstore filled the ground floor and the publishing house worked upstairs, so F. Scott Fitzgerald, Ernest Hemingway and Thomas Wolfe all came here to see their editors, Maxwell Perkins among them, and Theodore Roosevelt shopped here early on. The store closed in 1989 and the building has held retail tenants since. The city made the exterior a landmark in 1982 and the ground-floor interior a landmark in 1989.",
+      "latitude": 40.7574375,
+      "longitude": -73.9778125,
+      "city": "New York",
+      "address": "597 Fifth Avenue, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hemingway-at-scribners-hereinnyc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3DADDCC8-0961-506C-B76C-35759D0D1CD9",
+        "DB8244FA-1074-5890-9B65-770DDCE58A94"
       ]
     }
   ],
@@ -107970,8 +108032,8 @@
           "order": 0,
           "title": "J. P. Morgan's Yacht Bell",
           "caption": "Have you noticed this bell when you visited the Morgan Library? #nychistory #jpmorgan #nyc #morganlibrary #morganpartner",
-          "latitude": 40.7492685,
-          "longitude": -73.9814652,
+          "latitude": 40.7493,
+          "longitude": -73.9814,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -107983,8 +108045,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7492685,
-      "centroidLongitude": -73.9814652,
+      "centroidLatitude": 40.7493,
+      "centroidLongitude": -73.9814,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -108154,8 +108216,8 @@
           "order": 0,
           "title": "The Morgan Library Garden",
           "caption": "Have you visited the garden at The Morgan yet? The garden is opened until October 9th. #nychistory #jpmorgan #gildedage #morganpartner #morg",
-          "latitude": 40.7492685,
-          "longitude": -73.9814652,
+          "latitude": 40.7493,
+          "longitude": -73.9814,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -108167,8 +108229,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7492685,
-      "centroidLongitude": -73.9814652,
+      "centroidLatitude": 40.7493,
+      "centroidLongitude": -73.9814,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "natureAndParks",
