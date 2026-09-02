@@ -126,6 +126,82 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+### Forty-six Hong Kong link pins, and seven coordinates a forward geocode got wrong (branch `claude/tour-links-ujocag`, session 137 — content)
+
+**The owner sent 118 Instagram reels, all one creator — `@shivanidukhandee`, a Hong Kong food-and-venue
+account. 116 were pinnable; the owner then said "land the ones that can be located first", so 46 ship
+and 70 are deferred.** Branch cut clean off `main` at `d25670c`. **linkPins 740 → 786 · makers 262 →
+263 · tours unchanged at 1,552 · places unchanged at 88.** Content only — no Swift, no SQL, no build.
+Full detail: `archive/HANDOFF-260902.md`; the deferred set is staged in `drafts/hk-shivanidukhandee/`.
+
+- **⚠️ 118 LINKS IS THE LARGEST BATCH TO DATE**, past the 106-pin `@hereinnyc` record. 118 distinct
+  shortcodes, **0 in-batch duplicates, 0 overlap** with the 740 existing pins or the two branches ahead
+  of `main`. **One creator, one new maker row** (the 263rd), `avatarURL: null` by design.
+- **🔴 A FORWARD GEOCODE HIT IS NOT A VERIFIED COORDINATE — 7 of the 54 "venue-precise" hits were
+  WRONG, and only the reverse check found them.** Every coordinate was reverse-geocoded at zoom 18 and
+  compared against the district its own caption named: **Tung Lok Tong (Sheung Wan) → Shing Mun Tunnel
+  Road in the New Territories**; **雞蛋仔屋 (To Kwa Wan) → Tai Po**; **Chun Hing Garden (Kam Tin) → the
+  Hong Kong Jockey Club**; **Lau Kee Noodle (Aberdeen) → "Fu Kee Teochew Noodle" in Tuen Mun, a
+  different restaurant**; plus Komeda, Chagee and Lin Heung landing on the **wrong branch** of a chain.
+  All seven deferred. **At a link pin's `manual` trigger nothing would have errored** — the pin would
+  simply have sat kilometres away.
+- **⚠️ AN AUTOMATIC NAME-RESCUE RULE WAS WRITTEN AND DISCARDED AS TOO LOOSE.** Two of the nine the
+  district filter flagged were the FILTER's fault (OSM writes `Wan Chai`, the caption wrote `Wanchai`;
+  百味食品 sits on Nathan Road while the caption said Sai Yeung Choi Street — both Mong Kok). A generic
+  "rescue it if the reverse names the venue" rule recovered those two **and also rescued `Lau Kee
+  Noodle` onto `Fu Kee Teochew Noodle` on the shared word "noodle"**, and Macau's Chagee onto Hong
+  Kong's. All nine are adjudicated **explicitly, per code, with the reasoning recorded**.
+- **🔴 ONLY ~44% OF THIS BATCH GEOCODES TO ITS ACTUAL VENUE, WHICH IS WHY 70 ARE DEFERRED.** Across the
+  116: **54 venue-precise · 45 DISTRICT-ONLY · 17 unresolved.** These are small independent Hong Kong
+  food shops and most are **simply not in OSM** (the COSM Atlanta case). ⚠️ **Not a bad-query problem**
+  — a five-strategy pass was run (venue+district → venue → bare → Chinese name → district) and
+  `countrycodes=hk` was correctly avoided because **OSM files Hong Kong under `cn`**. The documented
+  fallback is the venue's own published address; that pass is **NOT done** and is the next session's job.
+- **✅ TWO POSTS ARE BLOCKED, PROVEN AGAINST LIVE CONTROLS.** `C6vyhv4NhMu` and `DW_uE17B0dW` return a
+  **218,395–218,396 byte shell with `contextJSON: null`** against **256,793–265,451 with content**;
+  **two pins already live in the catalogue were fetched in the same pass with the same UA and came back
+  healthy**. 🔁 **Blocked now, not gone.** ⚠️ Do NOT re-wire on "the link opens on my phone".
+- **✅ ALL 116 HEROES READ AGAINST THEIR CAPTIONS — ZERO WRONG SUBJECTS.** ⚠️ **Method stated honestly:
+  13 labelled contact sheets at 420 px per tile, NOT 116 full-size reads** — the creator burns a title
+  card naming the venue into nearly every frame, which is what made it tractable. Tiles keyed by
+  **shortcode**, never by slug prefix (the session-121b bug). **Six subjects were settled by the picture
+  where the caption could not**: a caption reading only *"Yau Ma Tei"* is the **Jade Market**; *"Fuk Wing
+  Street"* is the **toy street**; *"Yu Chau Street"* the **bead street**; the two captions with no `📍`
+  are **Ocean Park** (its own card) and the **Sai Kung seafood restaurant** the owner named as Hung Kee.
+  Independent corroborations: Ma Wan Tung Beach's frame carries the **Tsing Ma Bridge**; Kowloon Park's
+  is **flamingos**, and it has the flamingo aviary.
+- **🔴 TWO PAIRS SLUGGED IDENTICALLY AND ONE HERO OVERWROTE ANOTHER — caught by comparing the file count
+  against the pin count, not by any checker.** 47 pins produced **45 files**. Both were same-subject
+  pairs the owner sent twice. **The perceptual check then split them:** Cheung Hing Coffee Shop scored
+  **55.8** (two genuinely different posts — both ship, distinct slugs, the Glasshouse Theatre case) while
+  **Hong Kong Disneyland scored 2.8, i.e. the SAME CLIP reposted** — same creator, same platform, same
+  frame — so **one ships and `DViylUIjGUg` is flagged** rather than putting a visible duplicate on the
+  map. **Durable: assert `len(files) == len(pins)` after generating a batch.**
+- **⚠️ MY OWN VALIDATOR MIRROR INVENTED A RULE THE REAL VALIDATOR DOES NOT HAVE.** It reported **21
+  "title >60 chars" errors**; `validate-tours.swift` has **no title-length rule at all**, and all 21 were
+  pre-existing on `main` regardless. Rule removed. **Check a mirror's rules against the Swift before
+  believing its findings.**
+- **⚠️ KEYWORD CLASSIFICATION MISFIRED SIX TIMES AND WAS CAUGHT BY READING THE OUTPUT BACK** — **"Jade
+  Garden" is a dim sum restaurant** and matched "garden" as a park; **Kanto Hobby** is a shop *on* Fuk
+  Wing Street and matched "street"; Pak Mei Snack matched its own address. Plus **Disneyland and Kowloon
+  Park carried no Theme** (`Iconic Landmark` and `Green Escape` are *experiences*). All eight fixed.
+- **Verification.** Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` **and** the
+  Swift validator, refusing to run on disagreement or an empty parse (**385 tags**), plus the enum
+  domains for `TourKind`/`TourCategory`/`StopTriggerMode` — **self-tested against 14 injected fault
+  classes, 14/14 caught**, then **0 errors, 0 warnings across 1,552 tours + 786 pins + 88 places**, and
+  **the same mirror against `origin/main` reports 0/0**, so this batch adds neither. `make-link-pin.py
+  --selftest` **71/71** — ⚠️ **with Pillow installed first**; a fresh container reports 62/62, which
+  reads as a pass and is not one. **0** duplicate ids, **0** already-pinned sourceURLs, **0**
+  byte-duplicate heroes, **0** filename collisions against **6,557** gh-pages `images/` paths — with the
+  listing **asserted to hold >1,000 paths** before a clean result was believed (the session-123 false
+  pass). ⚠️ **The bare-slug check came back clean, so the handle suffix was not load-bearing here** — it
+  simply was not called on. `Tours.json` **byte-stable under a Python re-dump before editing**; diff
+  **2,033 insertions / 0 deletions**, with `tours` and `places` asserted **byte-identical** and the
+  existing 740 pins and 262 makers asserted untouched as a prefix. **0 `images//`**.
+  `seed_from_toursjson.py` clean at **263 / 2,338 / 2,710 / 88**. gh-pages `30ffd8af`: remote head
+  **re-read in the same command as the push**, tree diff **exactly 46 additions, 0 deletions, nothing
+  outside `images/`**. ⚠️ **Nothing compiled locally — CI on the PR is the authoritative validator.**
+
 ## Current State (2026-09-01)
 
 ### Twenty-eight Chicago link pins, and four posts Instagram will not serve (branch `claude/tour-links-26dmsx`, session 136 — content)
