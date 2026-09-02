@@ -1,0 +1,227 @@
+HONG KONG VENUES - ADDRESS NEEDED
+
+I'm putting map pins on 63 small Hong Kong places - mostly independent
+food shops, cafes and stalls featured by a local Instagram creator.
+
+I have the venue name and usually the district, but no street address.
+Most of these are too small to appear in the open map database I use,
+so I can't place the pin accurately.
+
+WHAT WOULD HELP - for as many as you can, any of:
+   * the street address
+   * a Google Maps link
+   * or just the building / block name
+
+Rough is fine. I need the right building, not the right shopfront.
+Easiest format for me is one per line:
+
+   Venue name = address
+
+If any of these have closed or moved, that's just as useful to know.
+
+====================================================================
+
+[Aberdeen]
+  Lau Kee Noodle *
+      - Noodles on a Boat in Hong Kong
+
+[Aberdeen / Wong Chuk Hang]
+  Ocean Park Hong Kong
+      - Spend a day with me at Ocean Park in Hong Kong
+
+[Causeway Bay]
+  cosme
+      - Largest Makeup & Skincare Store in Hong Kong
+  Matchbox Cafe
+      - Did you know there's a MINIBUS inside a CAFE in Hong Kong
+  Mermaid Hotpot
+      - All You Can Eat I'mmersive Live Seafood Hotpot in Hong Kong
+  Vivienne Westwood Café
+      - Trying a Vivienne Westwood Café in Hong Kong
+
+[Central]
+  Knockbox Cafe Mong Kok & Central
+      - cafe with locally roasted beans in hong kong
+
+[Fa Yuen Street]
+  Chi Ming Mahjong
+      - Custom Mahjong Tiles in Hong Kong
+
+[Hung Hom]
+  Bagel Gogo
+      - Today We Try: A Hidden Bagel Cafe in Hong Kong
+
+[Kam Tin]
+  Chun Hing Garden *
+      - Picking a REAL Christmas Tree in Hong Kong
+
+[Kennedy Town]
+  SLO WOOD
+      - Unique Grocery Store in Hong Kong
+
+[Kowloon City]
+  Ming Heung Tea Co
+      - Authentic Tea House in Hong Kong
+
+[Kwai Chung]
+  Long Run Beauty
+      - Travel Size Makeup in Hong Kong
+
+[Lai Chi Kok]
+  Handcrafter
+      - How cute is this miniature item store in Hong Kong? I'm obsessed wi
+  Hoopla
+      - Nostalgic Bags in Hong Kong
+
+[Mong Kok]
+  Cookie Quartet
+      - The Tastiest Souvenir in Hong Kong
+  Sino Center
+      - K-Pop lovers in Hong Kong this one is for you
+
+[Mui Wo]
+  The Hideout
+      - Make Your Own Coffee in Hong Kong
+  The Hideout Mui Wo
+      - Hidden Cafe in Hong Kong
+
+[North Point]
+  Natural Spices Shop
+      - Such a cool local Spice Store in Hong Kong A cooking lovers paradise
+  New Patoy
+      - Freshly made papaya salad in Hong Kong? This lady makes it fresh i
+
+[Olympic City]
+  Yoajung
+      - Viral Korean Dubai Chewy Cookie in Hong Kong
+
+[Peel Street]
+  Francis West
+      - Welcome to Episode 2 of Vegetarian Spots in Hong Kong approved by 
+
+[Quarry Bay]
+  Ice Bean
+      - Today We Try: -86 Degree Iced Coffee in Hong Kong
+
+[Sai Kung]
+  Cuit
+      - Today We Try: Loaded Sourdough Sandwiches in Hong Kong
+  Hung Kee Seafood Restaurant (Sai Kung)
+      - The BEST Seafood in Hong Kong
+
+[Sai Wan Ho]
+  Sai Wan Ho Rock Pools
+      - Cliff Jumping at Rock pools in Hong Kong
+
+[Sai Ying Pun]
+  Books & Co Sai Ying Pun
+      - Today We Try: A Magical Book Store Cafe in Hong Kong
+
+[San Po Kong]
+  Habo
+      - Fish Your Own Dinner in Hong Kong
+
+[San Tin]
+  Shun Sum Yuen Farm
+      - Sunflower Field In Hong Kong
+
+[Sham Shui Po]
+  Hang Sing LP Records
+      - Vintage Vinyl Paradise in Hong Kong
+
+[Sheung Wan]
+  commaa cafe sheung wan
+      - Today We Try: The Best Matcha Latte in Hong Kong
+  no title
+      - Draw On Your Coffee Cup in Hong Kong
+  Tung Lok Tong Sheung Wan *
+      - Trying healing herbal tea in Hong Kong
+  Yuk Kin Fast Food
+      - The BEST Curry Fried Rice in HONG KONG
+
+[Stanley]
+  Lucky 7 Stanley Market
+      - The Most Unique Souvenir in Hong Kong
+
+[Tai Hang]
+  Cookie Vission Tai Hang
+      - Trying the Best Cookies in Hong Kong
+
+[Tai Koo]
+  Kumachan Onsen
+      - Today We Try: The CUTEST Teddy Bear Hot Pot in Hong Kong
+
+[To Kwa Wan]
+  Dozy Cafe
+      - Hidden Cafe in Hong Kong
+
+[Tsim Sha Tsui]
+  Haidilao HotPot Tsim Sha Tsui
+      - Trying 24 HOUR Hot Pot in Hong Kong
+  Hara Station
+      - Did you know there's a JAPANESE train themed CAFE in Hong Kong
+  Hikiniku to Come
+      - Viral Japanese Burger in Hong Kong
+  Lin Heung Tea House *
+      - 24 Hour Dim Sum In Hong Kong
+  Milkfill
+      - Today We Try: The First Napoleon Puff in Hong Kong
+
+[Tung Chung]
+  City Gate Outlet
+      - The best shopping deals in Hong Kong
+
+[Wan Chai]
+  Chilli Club Wan Chai
+      - Come with me to my family's FAVOURITE restaurant in Hong Kong
+  Honolulu Coffee Shop
+      - Today We Try: Honolulu Cafe in Hong Kong
+
+[Whampoa]
+  Komeda Cafe *
+      - Today We Try: A GIANT soft serve in Hong Kong
+
+[Yuen Long]
+  Long Ping Strawberry Park Farm
+      - Today We Try: Grape/Strawberry Picking at A Farm in Hong Kong
+
+[district not stated]
+  Bacha Coffee
+      - The most Luxurious Coffee in Hong Kong
+  Cheung Hing Tea Hong
+      - Affordable Coffee Beans in a traditional local store Hong Kong
+  Chi Lin Nunnery & Nan Lian Gardens
+      - The Most Peaceful Place in Hong Kong
+  Chicken Egg Boy
+      - Today We Try: A Pineapple Bun Egg Waffle in Hong Kong
+  COMMUNE MAISON
+      - NEW All Day Dining Spot in Hong Kong
+  CTMA Mall
+      - The Trendiest Fashion Mall in Hong Kong
+  Kowloon Hum Spicy Hotpot
+      - Hotpot with Karaoke and Mahjong in Hong Kong
+  Kyung Yang Katsu
+      - Today We Try: The CHEESIEST Katsu in Hong Kong in Hong Kong with @
+  New Zealand Organic Farm
+      - Today We Try: Making Pizza in the Middle of a Farm in Hong Kong at
+  Nobu
+      - Today We Try: A Restaurant with the BEST view of Hong Kong
+  Nomi Ramen
+      - Today We Try: A Secret Chicken Ramen Spot in Hong Kong
+  Takimoto
+      - Today We Try: All You Can Eat Sushi & Sashimi in Hong Kong
+  Vission Bakery
+      - Trying the VIRAL Matcha Mochi Danish in Hong Kong
+  Yee Shun Milk Company
+      - Trying Local Desserts in Hong Kong Steamed Milk Pudding
+
+====================================================================
+63 venues.
+
+* = I have a location for these but it looks wrong, so please
+  double-check them rather than assuming I've got them right.
+
+NOT IN HONG KONG - ignore unless you happen to know them:
+  IONG’S Magic Shop (Macau)
+  Elco Pani Puri (Mumbai, India)
+  Chagee (Macau)

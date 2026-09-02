@@ -1,0 +1,582 @@
+[
+ {
+  "code": "C--C_5yy9dT",
+  "venue": "Lau Hing Kee",
+  "inline": true
+ },
+ {
+  "code": "C-SWfbwSimH",
+  "venue": "Long Ping Strawberry Park Farm in Yuen Long",
+  "inline": true
+ },
+ {
+  "code": "C-fMUPyyREC",
+  "venue": "Natural Spices Shop, North Point",
+  "inline": true
+ },
+ {
+  "code": "C-m11rJS6Fe",
+  "venue": "New Patoy, North Point",
+  "inline": true
+ },
+ {
+  "code": "C-ul4yHyzW8",
+  "venue": "Kumachan Onsen, Tai Koo",
+  "inline": true
+ },
+ {
+  "code": "C3kYmrPSONt",
+  "venue": "Cheung Hing Coffee Shop",
+  "inline": false
+ },
+ {
+  "code": "C4pt56xSouI",
+  "venue": "Kyung Yang Katsu",
+  "inline": true
+ },
+ {
+  "code": "C55gGJqyOeI",
+  "venue": "Sino Center, Mong Kok",
+  "inline": true
+ },
+ {
+  "code": "C7eKfZNyZny",
+  "venue": "Beyrouth Bistro",
+  "inline": false
+ },
+ {
+  "code": "C8620oRy4ao",
+  "venue": "Dragon Centre Sham Shui Po",
+  "inline": false
+ },
+ {
+  "code": "C8hPGrTy-n9",
+  "venue": "Australia Dairy Company",
+  "inline": false
+ },
+ {
+  "code": "C8zBitLSLfg",
+  "venue": "Hop Yik Tai (Sham Shui Po)",
+  "inline": false
+ },
+ {
+  "code": "C9cSek2ScTO",
+  "venue": "Lan Fong Yuen",
+  "inline": false
+ },
+ {
+  "code": "C9pM_X6yCtq",
+  "venue": "Matchbox Cafe, Causeway Bay",
+  "inline": false
+ },
+ {
+  "code": "C_K7ST4SOT3",
+  "venue": "Cheung Hing Tea Hong",
+  "inline": true
+ },
+ {
+  "code": "C_QUmsoSyP3",
+  "venue": "Nomi Ramen",
+  "inline": true
+ },
+ {
+  "code": "C_SooDSSUtJ",
+  "venue": "Chilli Club Wan Chai (🌱 Vegetarian Friendly)",
+  "inline": true
+ },
+ {
+  "code": "C_dANa4y1yH",
+  "venue": "Tung Lok Tong Sheung Wan",
+  "inline": true
+ },
+ {
+  "code": "DA3HyZFyuQv",
+  "venue": "Vission Bakery",
+  "inline": true
+ },
+ {
+  "code": "DAdgU-fBag2",
+  "venue": "Hara Station, Tsim Sha Tsui",
+  "inline": true
+ },
+ {
+  "code": "DAf9XvMywQs",
+  "venue": "Chop Alley, Sheung Wan",
+  "inline": true
+ },
+ {
+  "code": "DAnwHXaSEIF",
+  "venue": "Sun King Yuen Curry Restaurant, Wanchai",
+  "inline": true
+ },
+ {
+  "code": "DBTi0lRyZxb",
+  "venue": "In’s Point, Yau Ma Tei",
+  "inline": true
+ },
+ {
+  "code": "DBWBQezyHgN",
+  "venue": "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street",
+  "inline": true
+ },
+ {
+  "code": "DBYnXEky1Cb",
+  "venue": "九龍坎麻辣火鍋 469-471 Nathan Road, Yau Ma Tei (Kowloon Hum Hot Pot)",
+  "inline": false
+ },
+ {
+  "code": "DCEjm3IN5cl",
+  "venue": "Takimoto, Causway Bay",
+  "inline": true
+ },
+ {
+  "code": "DCMNDJ6NmMj",
+  "venue": "Yee Shun Milk Company",
+  "inline": true
+ },
+ {
+  "code": "DDo5vtsyere",
+  "venue": "Min Fong Hong Tsuen Wan (民豐粉麵行)",
+  "inline": false
+ },
+ {
+  "code": "DE2BIp_S-ZP",
+  "venue": "New Zealand Organic Farm",
+  "inline": true
+ },
+ {
+  "code": "DE909ueyDJZ",
+  "venue": "Shanghai Street Yau Ma Tei",
+  "inline": true
+ },
+ {
+  "code": "DEHxPxEyNev",
+  "venue": "Bagel Gogo, Hung Hom",
+  "inline": false
+ },
+ {
+  "code": "DEKU7c3SyFV",
+  "venue": "Kadorar Bakery, Yau Ma Tei",
+  "inline": false
+ },
+ {
+  "code": "DEUqjTxSl-5",
+  "venue": "Chi Ming Mahjong, 60 Fa Yuen Street, Mong Kok",
+  "inline": false
+ },
+ {
+  "code": "DEcbpCkSpkC",
+  "venue": "Komeda Cafe, Whampoa",
+  "inline": true
+ },
+ {
+  "code": "DEe886tyAeY",
+  "venue": "Yau Ma Tei",
+  "inline": true
+ },
+ {
+  "code": "DEkI_7pSBZc",
+  "venue": "Chi Lin Vegetarian, Chi Lin Nunnery",
+  "inline": true
+ },
+ {
+  "code": "DEmklh4Sgcu",
+  "venue": "Chi Lin Nunnery & Nan Lian Gardens",
+  "inline": true
+ },
+ {
+  "code": "DEpMD8VSH-g",
+  "venue": "Francis West, Peel Street Central",
+  "inline": true
+ },
+ {
+  "code": "DEzgWuOSgRr",
+  "venue": "Ming Wah Bakery, Mong Kok",
+  "inline": true
+ },
+ {
+  "code": "DF5Ai-mydcw",
+  "venue": "Fuk Wing Street",
+  "inline": true
+ },
+ {
+  "code": "DF7l_AAyCrS",
+  "venue": "Yu Chau Street",
+  "inline": true
+ },
+ {
+  "code": "DFIKrVtSe70",
+  "venue": "Nobu, The Regent",
+  "inline": true
+ },
+ {
+  "code": "DFKrS6EytYT",
+  "venue": "Handcrafter, D2 Place Lai Chi Kok",
+  "inline": true
+ },
+ {
+  "code": "DFNbpQxSeBF",
+  "venue": "Yuk Kin Fast Food, Sheung Wan",
+  "inline": true
+ },
+ {
+  "code": "DFVBmUZylg9",
+  "venue": "Man Mo Temple, Sheung Wan",
+  "inline": true
+ },
+ {
+  "code": "DFkcm40yU2E",
+  "venue": "Messina, The Peak",
+  "inline": false
+ },
+ {
+  "code": "DFnAVUgyX9S",
+  "venue": "Wong Tai Sin Temple",
+  "inline": true
+ },
+ {
+  "code": "DFuwX58Sdge",
+  "venue": "Duen Kee, Tsuen Wan",
+  "inline": true
+ },
+ {
+  "code": "DFz3e_nSs7D",
+  "venue": "IONG’S Magic Shop, Macau",
+  "inline": true
+ },
+ {
+  "code": "DG5c5O3SQbW",
+  "venue": "Kanto Hobby, Fuk Wing Street",
+  "inline": true
+ },
+ {
+  "code": "DG8JZFdST8G",
+  "venue": "Kung Wo Beancurd Factory, Sham Shui Po",
+  "inline": true
+ },
+ {
+  "code": "DGAsg8HyIdt",
+  "venue": "雞蛋仔屋 G/F Chiap Thong Building, To Kwa Wan",
+  "inline": true
+ },
+ {
+  "code": "DGF99BjSo-y",
+  "venue": "Books & Co Sai Ying Pun",
+  "inline": true
+ },
+ {
+  "code": "DGNps_tSXMw",
+  "venue": "Cheung Hing Coffee Shop",
+  "inline": true
+ },
+ {
+  "code": "DGSzsSiSHlq",
+  "venue": "Vivienne Westwood Café, Fashion Walk, Causeway Bay",
+  "inline": true
+ },
+ {
+  "code": "DGiSvR1SVRA",
+  "venue": "Xiang Bo Bo, 湘餑餑肉湯泡飯",
+  "inline": true
+ },
+ {
+  "code": "DGnfyQmSXP-",
+  "venue": "Jade Garden, Tsim Sha Tsui",
+  "inline": false
+ },
+ {
+  "code": "DGvE7hwSzXO",
+  "venue": "Man Hing Garment Factory - Sham Shui Po (Exit B1)",
+  "inline": true
+ },
+ {
+  "code": "DH-4EjPSnPK",
+  "venue": "SLO WOOD, Kennedy town",
+  "inline": true
+ },
+ {
+  "code": "DIWHSCxybHo",
+  "venue": "Tai Wo Tang, Kowloon City",
+  "inline": false
+ },
+ {
+  "code": "DId5QRkSesV",
+  "venue": "A Cap Coconut, Kowloon City",
+  "inline": true
+ },
+ {
+  "code": "DJ9CBV4yR98",
+  "venue": "Sai Wan Ho Rock Pools",
+  "inline": true
+ },
+ {
+  "code": "DJT-_Riyi33",
+  "venue": "Gold Coast Piazza",
+  "inline": true
+ },
+ {
+  "code": "DJooflIzJ-Z",
+  "venue": "Ma Wan Tung Beach",
+  "inline": false
+ },
+ {
+  "code": "DK65cH2SfO8",
+  "venue": "Bacha Coffee",
+  "inline": true
+ },
+ {
+  "code": "DK9Z3dQyNe8",
+  "venue": "Honolulu Coffee Shop, Wanchai",
+  "inline": true
+ },
+ {
+  "code": "DKjjYmEyybo",
+  "venue": "Hong Kong Disneyland",
+  "inline": true
+ },
+ {
+  "code": "DKtzT5VSbe2",
+  "venue": "Knockbox Cafe Mong Kok & Central",
+  "inline": false
+ },
+ {
+  "code": "DKzAegSSTqk",
+  "venue": "Chicken Egg Boy",
+  "inline": true
+ },
+ {
+  "code": "DL2Mh7mS7JD",
+  "venue": "Pane E Latte",
+  "inline": false
+ },
+ {
+  "code": "DLH6DC5S4QM",
+  "venue": "commaa cafe sheung wan",
+  "inline": true
+ },
+ {
+  "code": "DLKP_UcBUT9",
+  "venue": "Upper Lascar Row, Sheung Wan",
+  "inline": true
+ },
+ {
+  "code": "DLM6ikQyC-J",
+  "venue": "Lam Tsuen Wishing Tree, Fong Ma Village",
+  "inline": true
+ },
+ {
+  "code": "DLPtXqBSz3R",
+  "venue": "",
+  "inline": true
+ },
+ {
+  "code": "DLXOqgDyUGo",
+  "venue": "City Gate Outlet, Tung Chung",
+  "inline": true
+ },
+ {
+  "code": "DLcVFHeyPxm",
+  "venue": "Haidilao HotPot Tsim Sha Tsui",
+  "inline": true
+ },
+ {
+  "code": "DLr4OsiSUJa",
+  "venue": "Lucky 7 Stanley Market",
+  "inline": true
+ },
+ {
+  "code": "DLuaIw6y47O",
+  "venue": "Cuit, Sai Kung",
+  "inline": true
+ },
+ {
+  "code": "DLw-7zxyIgW",
+  "venue": "West Kowloon Cultural District",
+  "inline": false
+ },
+ {
+  "code": "DM-VQEBSqLx",
+  "venue": "Schoodles",
+  "inline": true
+ },
+ {
+  "code": "DMFhntMS2BY",
+  "venue": "Milkfill, Tsim Sha Tsui",
+  "inline": true
+ },
+ {
+  "code": "DMIUurSyx6o",
+  "venue": "Golden Computer Arcade, Sham Shui Po",
+  "inline": true
+ },
+ {
+  "code": "DMc8XgHytj4",
+  "venue": "CTMA Mall, Mong Kong",
+  "inline": true
+ },
+ {
+  "code": "DMz6jSxy0u8",
+  "venue": "Kowloon Hum Spicy Hotpot",
+  "inline": true
+ },
+ {
+  "code": "DQ37PkcEajI",
+  "venue": "Hang Sing LP Records, Sham Shui Po",
+  "inline": true
+ },
+ {
+  "code": "DQ6e_iOkVSL",
+  "venue": "鸿发凉茶 Hung Fa Herbal Tea, Sham Shui Po",
+  "inline": true
+ },
+ {
+  "code": "DQ9IueBEbRS",
+  "venue": "Lin Heung Tea House, Tsim Sha Tsui",
+  "inline": true
+ },
+ {
+  "code": "DQG-MC3kY09",
+  "venue": "Ice Bean, Quarry Bay Monster Building",
+  "inline": true
+ },
+ {
+  "code": "DQRYAxtkdnT",
+  "venue": "Kowloon Park, Tsim Sha Tsui",
+  "inline": true
+ },
+ {
+  "code": "DQ_t0ofkYOF",
+  "venue": "no title, sheung wan",
+  "inline": true
+ },
+ {
+  "code": "DQjVy1OEToA",
+  "venue": "Hoopla, Lai Chi Kok D2 Place",
+  "inline": true
+ },
+ {
+  "code": "DQrGXMKkdfj",
+  "venue": "Dozy Cafe, To Kwa Wan",
+  "inline": true
+ },
+ {
+  "code": "DQtqCSJkaEM",
+  "venue": "Habo, San Po Kong",
+  "inline": true
+ },
+ {
+  "code": "DRCY1a0EUna",
+  "venue": "Lau Kee Noodle, Aberdeen",
+  "inline": true
+ },
+ {
+  "code": "DRE25hIEYQ4",
+  "venue": "Shun Sum Yuen Farm, San Tin",
+  "inline": true
+ },
+ {
+  "code": "DRRn5T0EVjY",
+  "venue": "The Hideout, Mui Wo",
+  "inline": true
+ },
+ {
+  "code": "DRUYS0kEfv1",
+  "venue": "Twins Liangpi, Mong Kok",
+  "inline": true
+ },
+ {
+  "code": "DRZh0HNkfTV",
+  "venue": "The Hideout Mui Wo",
+  "inline": true
+ },
+ {
+  "code": "DRewFgLEWdR",
+  "venue": "Ming Heung Tea Co  in Kowloon City",
+  "inline": true
+ },
+ {
+  "code": "DRws9_-EW5Z",
+  "venue": "Chun Hing Garden in Kam Tin",
+  "inline": true
+ },
+ {
+  "code": "DS4mQtpEay5",
+  "venue": "Hikiniku to Come, Habour City Tsim Sha Tsui",
+  "inline": true
+ },
+ {
+  "code": "DSw-2BXEW-b",
+  "venue": "Long Run Beauty, Kwai Chung Plaza",
+  "inline": true
+ },
+ {
+  "code": "DT-Osx0Ea7r",
+  "venue": "Mermaid Hotpot, Causeway Bay",
+  "inline": true
+ },
+ {
+  "code": "DT0FgGokTZI",
+  "venue": "Yoajung, Olympic City",
+  "inline": true
+ },
+ {
+  "code": "DTFlCFBEfxM",
+  "venue": "Aquatic Market, Moko Mall",
+  "inline": true
+ },
+ {
+  "code": "DTpmGYJker2",
+  "venue": "cosme, tsim sha tsui or causeway bay",
+  "inline": true
+ },
+ {
+  "code": "DTsJ9eAET-I",
+  "venue": "Cookie Quartet, Mong Kok",
+  "inline": true
+ },
+ {
+  "code": "DTuwoG8kS-B",
+  "venue": "Matsukiyo, Tsim Sha Tsui",
+  "inline": true
+ },
+ {
+  "code": "DUIaMRxDD-N",
+  "venue": "Elco Pani Puri, Bandra",
+  "inline": false
+ },
+ {
+  "code": "DViylUIjGUg",
+  "venue": "Hong Kong Disneyland",
+  "inline": true
+ },
+ {
+  "code": "DW1KgzhEReK",
+  "venue": "Cookie Vission Tai Hang",
+  "inline": true
+ },
+ {
+  "code": "DW_ZI8GESXl",
+  "venue": "",
+  "inline": true
+ },
+ {
+  "code": "DX8-l9ERoJr",
+  "venue": "Chagee, Macau Venetian",
+  "inline": true
+ },
+ {
+  "code": "DbQLTEhRSt1",
+  "venue": "Haeundae Galbi 2-8 wellington street, central",
+  "inline": true
+ },
+ {
+  "code": "DcIzh9RR6j6",
+  "venue": "COMMUNE MAISON",
+  "inline": true
+ },
+ {
+  "code": "DcOD0MczEFI",
+  "venue": "MegaBox, Kowloon Bay",
+  "inline": true
+ }
+]

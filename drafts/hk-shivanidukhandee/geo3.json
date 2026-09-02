@@ -1,0 +1,623 @@
+[
+ {
+  "code": "C-SWfbwSimH",
+  "core": "Long Ping Strawberry Park Farm",
+  "district": "Yuen Long",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C-fMUPyyREC",
+  "core": "Natural Spices Shop",
+  "district": "North Point",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C-m11rJS6Fe",
+  "core": "New Patoy",
+  "district": "North Point",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C-ul4yHyzW8",
+  "core": "Kumachan Onsen",
+  "district": "Tai Koo",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C4pt56xSouI",
+  "core": "Kyung Yang Katsu",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C55gGJqyOeI",
+  "core": "Sino Center",
+  "district": "Mong Kok",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C9pM_X6yCtq",
+  "core": "Matchbox Cafe",
+  "district": "Causeway Bay",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C_K7ST4SOT3",
+  "core": "Cheung Hing Tea Hong",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C_QUmsoSyP3",
+  "core": "Nomi Ramen",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C_SooDSSUtJ",
+  "core": "Chilli Club Wan Chai",
+  "district": "Wan Chai",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "C_dANa4y1yH",
+  "core": "Tung Lok Tong Sheung Wan",
+  "district": "Sheung Wan",
+  "strategy": "unbounded venue+district",
+  "lat": "22.3803624",
+  "lon": "114.1657884",
+  "name": "城門隧道沙田交通控制站 Shing Mun Tunnels Sha Tin Traffic Control Station, 城門隧道公路 Shing Mun Tunnel Road, 白田 Pak Tin, 沙田區 Sha Tin District, 新界 New Territories, 香港 Hong Kong, 中国"
+ },
+ {
+  "code": "DA3HyZFyuQv",
+  "core": "Vission Bakery",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DAdgU-fBag2",
+  "core": "Hara Station",
+  "district": "Tsim Sha Tsui",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DBYnXEky1Cb",
+  "core": "九龍坎麻辣火鍋 469-471 Nathan Road",
+  "district": "Yau Ma Tei",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DCEjm3IN5cl",
+  "core": "Takimoto",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DCMNDJ6NmMj",
+  "core": "Yee Shun Milk Company",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DE2BIp_S-ZP",
+  "core": "New Zealand Organic Farm",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DEHxPxEyNev",
+  "core": "Bagel Gogo",
+  "district": "Hung Hom",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DEUqjTxSl-5",
+  "core": "Chi Ming Mahjong",
+  "district": "Fa Yuen Street",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DEcbpCkSpkC",
+  "core": "Komeda Cafe",
+  "district": "Whampoa",
+  "strategy": "unbounded venue+HK",
+  "lat": "22.3252702",
+  "lon": "114.1958209",
+  "name": "コメダ珈琲店 KOMEDA'S Coffee, 38, 承啟道 Shing Kai Road, 啟德坊 Kai Tak Grid Neighbourhood, 馬頭角 Ma Tau Kok, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国"
+ },
+ {
+  "code": "DEmklh4Sgcu",
+  "core": "Chi Lin Nunnery & Nan Lian Gardens",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DEpMD8VSH-g",
+  "core": "Francis West",
+  "district": "Peel Street",
+  "strategy": "unbounded venue+HK",
+  "lat": "-31.9470946",
+  "lon": "115.8583305",
+  "name": "Hong Kong BBQ, Francis Street, Perth Cultural Centre, Northbridge, Perth, Western Australia, 6000, Australia"
+ },
+ {
+  "code": "DFIKrVtSe70",
+  "core": "Nobu",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DFKrS6EytYT",
+  "core": "Handcrafter",
+  "district": "Lai Chi Kok",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DFNbpQxSeBF",
+  "core": "Yuk Kin Fast Food",
+  "district": "Sheung Wan",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DFz3e_nSs7D",
+  "core": "IONG’S Magic Shop",
+  "district": "Macau",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DGAsg8HyIdt",
+  "core": "雞蛋仔屋 G/F Chiap Thong Building",
+  "district": "To Kwa Wan",
+  "strategy": "chinese unbounded",
+  "lat": "22.4580862",
+  "lon": "114.1508995",
+  "name": "船灣淡水湖計劃第二期 Plover Cove Scheme Stage II, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国"
+ },
+ {
+  "code": "DGF99BjSo-y",
+  "core": "Books & Co Sai Ying Pun",
+  "district": "Sai Ying Pun",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DGSzsSiSHlq",
+  "core": "Vivienne Westwood Café",
+  "district": "Causeway Bay",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DH-4EjPSnPK",
+  "core": "SLO WOOD",
+  "district": "Kennedy Town",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DJ9CBV4yR98",
+  "core": "Sai Wan Ho Rock Pools",
+  "district": "Sai Wan Ho",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DK65cH2SfO8",
+  "core": "Bacha Coffee",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DK9Z3dQyNe8",
+  "core": "Honolulu Coffee Shop",
+  "district": "Wanchai",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DKtzT5VSbe2",
+  "core": "Knockbox Cafe Mong Kok & Central",
+  "district": "Central",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DKzAegSSTqk",
+  "core": "Chicken Egg Boy",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DLH6DC5S4QM",
+  "core": "commaa cafe sheung wan",
+  "district": "Sheung Wan",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DLPtXqBSz3R",
+  "core": "",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DLXOqgDyUGo",
+  "core": "City Gate Outlet",
+  "district": "Tung Chung",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DLcVFHeyPxm",
+  "core": "Haidilao HotPot Tsim Sha Tsui",
+  "district": "Tsim Sha Tsui",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DLr4OsiSUJa",
+  "core": "Lucky 7 Stanley Market",
+  "district": "Stanley",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DLuaIw6y47O",
+  "core": "Cuit",
+  "district": "Sai Kung",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DMFhntMS2BY",
+  "core": "Milkfill",
+  "district": "Tsim Sha Tsui",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DMc8XgHytj4",
+  "core": "CTMA Mall",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DMz6jSxy0u8",
+  "core": "Kowloon Hum Spicy Hotpot",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DQ37PkcEajI",
+  "core": "Hang Sing LP Records",
+  "district": "Sham Shui Po",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DQ9IueBEbRS",
+  "core": "Lin Heung Tea House",
+  "district": "Tsim Sha Tsui",
+  "strategy": "unbounded venue+HK",
+  "lat": "22.2843416",
+  "lon": "114.1534564",
+  "name": "蓮香樓 Lin Heung Tea House, 威靈頓街 Wellington Street, 蘇豪 SoHo, 中環 Central, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国"
+ },
+ {
+  "code": "DQG-MC3kY09",
+  "core": "Ice Bean",
+  "district": "Quarry Bay",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DQ_t0ofkYOF",
+  "core": "no title",
+  "district": "Sheung Wan",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DQjVy1OEToA",
+  "core": "Hoopla",
+  "district": "Lai Chi Kok",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DQrGXMKkdfj",
+  "core": "Dozy Cafe",
+  "district": "To Kwa Wan",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DQtqCSJkaEM",
+  "core": "Habo",
+  "district": "San Po Kong",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DRCY1a0EUna",
+  "core": "Lau Kee Noodle",
+  "district": "Aberdeen",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DRE25hIEYQ4",
+  "core": "Shun Sum Yuen Farm",
+  "district": "San Tin",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DRRn5T0EVjY",
+  "core": "The Hideout",
+  "district": "Mui Wo",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DRZh0HNkfTV",
+  "core": "The Hideout Mui Wo",
+  "district": "Mui Wo",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DRewFgLEWdR",
+  "core": "Ming Heung Tea Co",
+  "district": "Kowloon City",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DRws9_-EW5Z",
+  "core": "Chun Hing Garden",
+  "district": "Kam Tin",
+  "strategy": "unbounded venue+HK",
+  "lat": "22.2751044",
+  "lon": "114.1724266",
+  "name": "香港賽馬會 The Hong Kong Jockey Club, 59-65, 春園街 Spring Garden Lane, 灣仔南 Wan Chai South, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国"
+ },
+ {
+  "code": "DS4mQtpEay5",
+  "core": "Hikiniku to Come",
+  "district": "Tsim Sha Tsui",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DSw-2BXEW-b",
+  "core": "Long Run Beauty",
+  "district": "Kwai Chung",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DT-Osx0Ea7r",
+  "core": "Mermaid Hotpot",
+  "district": "Causeway Bay",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DT0FgGokTZI",
+  "core": "Yoajung",
+  "district": "Olympic City",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DTpmGYJker2",
+  "core": "cosme",
+  "district": "Causeway Bay",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DTsJ9eAET-I",
+  "core": "Cookie Quartet",
+  "district": "Mong Kok",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DUIaMRxDD-N",
+  "core": "Elco Pani Puri",
+  "district": "Bandra",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DW1KgzhEReK",
+  "core": "Cookie Vission Tai Hang",
+  "district": "Tai Hang",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DW_ZI8GESXl",
+  "core": "",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DX8-l9ERoJr",
+  "core": "Chagee",
+  "district": "Macau",
+  "strategy": "unbounded venue+HK",
+  "lat": "22.3318118",
+  "lon": "114.1995380",
+  "name": "霸王茶姬 Chagee, 啟德地下購物街 Kai Tak Underground Shopping Street, 天璽·天 Cullinan Sky, 啟德城中心 Kai Tak City Centre, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国"
+ },
+ {
+  "code": "DbQLTEhRSt1",
+  "core": "Haeundae Galbi 2-8 wellington street",
+  "district": "Central",
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ },
+ {
+  "code": "DcIzh9RR6j6",
+  "core": "COMMUNE MAISON",
+  "district": null,
+  "strategy": null,
+  "lat": null,
+  "lon": null,
+  "name": null
+ }
+]
