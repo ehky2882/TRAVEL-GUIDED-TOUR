@@ -3,7 +3,7 @@
 **Cube House and Tribune Tower become places.** Branch `claude/tour-links-yg5yw2`, restarted clean off
 merged `main` (`b2ffd16f`) after #703 landed. **Places 95 → 97**, and **`check-place-candidates.py`
 reaches 0 EXACT and exits 0** — the clean state last held before #674. Content only: no Swift, no SQL,
-no gh-pages push, no build.
+no gh-pages push, no build. **Opened as [#707](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/707) on owner instruction.**
 
 Owner, given the last two coincident groups:
 

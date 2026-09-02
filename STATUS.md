@@ -783,7 +783,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**⚠️ Re-derived from `Tours.json` on 2026-09-02 (session 135c, NOT yet merged): 1,552 tours + 740 link pins, 262 maker rows, 2,664 stops, **97 places**.** Branch `claude/tour-links-yg5yw2`, restarted off merged `main`. Owner: *"make both places"* — the last two coincident groups.
+**⚠️ Re-derived from `Tours.json` on 2026-09-02 (session 135c, open as **[#707](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/707)**): 1,552 tours + 740 link pins, 262 maker rows, 2,664 stops, **97 places**.** Branch `claude/tour-links-yg5yw2`, restarted off merged `main`. Owner: *"make both places"* — the last two coincident groups.
   - **✅ Cube House (Toronto) and Tribune Tower (Chicago) are places.** Both **pure additions**: nothing moved, both pairs already coincident, `makers`/`tours`/`linkPins` byte-identical.
   - 🎉 **`check-place-candidates.py` reaches 0 EXACT and exits 0** (main: 2 / 36), **NEAR unchanged at 36**. **The place backlog is EMPTY — treat any future EXACT group as a real finding.**
   - ⚠️ **The Atlas tour `The Wrigley Building & Tribune Tower` is 142 m away and correctly NOT a member** — which also closes the two-subject naming problem that pair has carried since #701.

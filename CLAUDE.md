@@ -132,7 +132,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **Owner, on being given the last two coincident groups: *"make both places"*.** Both built. **Places
 95 → 97**, and **`check-place-candidates.py` reaches 0 EXACT and exits 0** — the clean state last
-held before #674. Content only — no Swift, no SQL, no gh-pages push, no build.
+held before #674. Content only — no Swift, no SQL, no gh-pages push, no build. **Opened as [#707](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/707) on owner instruction.**
 
 - **Both are PURE ADDITIONS and nothing moved.** `makers`, `tours` and `linkPins` are **byte-identical**,
   the 95 existing places are unchanged as a prefix, and **both pairs were already exactly coincident**,
