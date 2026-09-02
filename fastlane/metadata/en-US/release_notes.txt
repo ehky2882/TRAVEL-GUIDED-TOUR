@@ -2,6 +2,8 @@ Pinned posts on the map. Alongside our own tours you will now find short videos 
 
 Place pages. When several tours cover the same building or square, they now share one page, so everything about a place sits in one spot.
 
+Expand any map. The small map on a tour, a place, a creator or one of your lists now has a button that opens the main map, already centred on what you were reading about.
+
 Photographs work offline. Download a tour before you leave and its pictures come with it. Photos you have already seen keep showing even when the signal does not.
 
 A faster start. The app now waits until it is genuinely ready, then arrives all at once instead of assembling itself in front of you.
