@@ -1,6 +1,6 @@
 HONG KONG VENUES - ADDRESS NEEDED
 
-I'm putting map pins on 63 small Hong Kong places - mostly independent
+I'm putting map pins on 62 small Hong Kong places - mostly independent
 food shops, cafes and stalls featured by a local Instagram creator.
 
 I have the venue name and usually the district, but no street address.
@@ -198,8 +198,6 @@ If any of these have closed or moved, that's just as useful to know.
       - NEW All Day Dining Spot in Hong Kong
   CTMA Mall
       - The Trendiest Fashion Mall in Hong Kong
-  Kowloon Hum Spicy Hotpot
-      - Hotpot with Karaoke and Mahjong in Hong Kong
   Kyung Yang Katsu
       - Today We Try: The CHEESIEST Katsu in Hong Kong in Hong Kong with @
   New Zealand Organic Farm
@@ -216,7 +214,7 @@ If any of these have closed or moved, that's just as useful to know.
       - Trying Local Desserts in Hong Kong Steamed Milk Pudding
 
 ====================================================================
-63 venues.
+62 venues.
 
 * = I have a location for these but it looks wrong, so please
   double-check them rather than assuming I've got them right.

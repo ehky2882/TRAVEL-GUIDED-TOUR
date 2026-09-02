@@ -280,6 +280,43 @@ places unchanged.** Content only. Detail: `archive/HANDOFF-260902-2.md`; deferre
   documented way — take `main`'s file and re-apply, never hand-resolve a JSON conflict** — and ⚠️ the
   handoff renumbered **-260902 → -260902-2** on an add/add collision with a parallel session.
 
+#### ✅ FOLLOW-UP, same session — three more pins, recovered from the deferred list with no outside help
+
+**linkPins 786 → 789 · makers unchanged at 263 · tours and places byte-identical.** Three of the
+deferred posts **state their own street address in the caption**, so the coordinate could be closed
+from the source rather than the geocoder. **The batch now stands at 49 shipped and 67 deferred**, and
+the address request drops to **62 named venues**. ⚠️ **Its stated total was off by one from the start**
+— it said "63 venues" while listing 64 — so it is now **counted from the file rather than asserted**.
+
+- **`Kowloon Hum Hot Pot` — 469-471 Nathan Road, Yau Ma Tei · `雞蛋仔屋 Egg Waffle House` — G/F Chiap
+  Thong Building, To Kwa Wan · `Haeundae Galbi` — 2-8 Wellington Street, Central.** Each
+  **reverse-verifies at zoom 18 onto the building the caption names**: `Sunbeam Commercial Building`
+  at the **exact house range**, `捷通大廈 Chiap Thong Building` **by name**, and `Wellington Place,
+  2-8 Wellington Street`. ⚠️ **Chiap Thong's reverse lands on a neighbouring tenant on the same
+  street** — the documented nearest-addressed-node case, not a bad point; the **forward** names the
+  building exactly.
+- **✅ All three heroes opened and read against their captions — zero wrong subjects**, and
+  **Kowloon Hum names itself in frame as `九龍坎麻辣火鍋`**, confirming the venue independently of the
+  caption. ⚠️ **Haeundae Galbi's frame is largely the creator rather than the room** — flagged, not
+  fixed; a link pin re-hosts only the thumbnail, so no other frame exists. ⚠️ **One will not play
+  inline** (the documented licensed-music gate) — poster + `OPEN IN INSTAGRAM` is the correct outcome.
+- **🔴 THE DEFERRED LIST WAS SEARCHED FOR THIS BEFORE ASKING ANYONE — worth doing first on any batch.**
+  A regex sweep for address shapes (`\d+ …Road/Street`, `G/F`, `號`) across every unshipped caption
+  returned exactly four hits, three of them Hong Kong (the fourth is a Tokyo hotel, out of scope).
+  **The rest genuinely need an address from outside**
+  (`drafts/hk-shivanidukhandee/ADDRESSES-NEEDED.txt`).
+- **Verification.** `Tours.json` **byte-stable under a Python re-dump before editing**; diff **132
+  insertions / 0 deletions**, asserted **purely additive** (`tours` and `places` byte-identical,
+  existing makers and pins unchanged as a prefix). The uuid5 scheme **reproduced the existing
+  `@shivanidukhandee` maker id exactly**, so it merged rather than duplicating. Mirror **self-tested
+  14/14**, then **0 errors, 0 warnings** across 1,552 tours + 789 pins + 100 places. **0** duplicate
+  ids, **0** already-pinned sourceURLs, **0** byte-duplicate heroes, closest perceptual pair **39.6**,
+  **0** filename collisions against **6,603** gh-pages `images/` paths (listing **asserted >1,000**
+  first). ⚠️ **The bare-slug check came back clean** — the handle suffix was not load-bearing here.
+  `seed_from_toursjson.py` clean at **263 / 2,341 / 2,713 / 100**; **0 `images//`** in the catalogue
+  *or* the generated SQL. gh-pages `992a7ca4`: remote head **re-read in the same command as the
+  push**, tree diff **exactly 3 additions, 0 deletions, nothing outside `images/`**.
+
 ## Current State (2026-09-01)
 
 ### Three Hong Kong places, and an address settled by fetching the venue's own page (branch `claude/tour-links-9ynig6`, session 137 — content)
