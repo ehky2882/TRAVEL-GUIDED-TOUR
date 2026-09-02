@@ -80191,7 +80191,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "28489c01-beef-41fc-82f8-f16cd4795d71",
-        "1FEF4E55-4F86-5F30-9A3D-7A284303FC7F"
+        "1FEF4E55-4F86-5F30-9A3D-7A284303FC7F",
+        "F610F8A2-2BB1-5A2C-B046-6915F55D0F48"
       ]
     },
     {
@@ -81340,6 +81341,38 @@
       "tourIds": [
         "a0c68fa5-425e-527d-8db4-cb8a0cf9c999",
         "6D149344-C83F-5007-8C39-416F275E00CC"
+      ]
+    },
+    {
+      "id": "7b38facb-329b-581a-8b39-2459cb41ba87",
+      "name": "Fairmont Mayakoba",
+      "city": "Playa del Carmen",
+      "address": "Mayakoba, Playa del Carmen, Quintana Roo",
+      "latitude": 20.686767,
+      "longitude": -87.028404,
+      "description": "A resort in the Mayakoba development on the Riviera Maya, on the same system of mangrove and freshwater lagoons that runs between the coastal highway and the beach. Rooms sit in low casitas and blocks set back among the mangrove rather than in a single tower, and the waterways that thread the site are navigable, so parts of the resort are reached by boat rather than on foot. The beach club at the seaward end, Maykana, opens onto the shore at the point where the lagoons give out.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fairmont-mayakoba-fairmontmayakoba_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "97FCDF61-AE28-5AD2-9C87-55AC356ED50C",
+        "23F4B34B-54AE-519B-BD44-8664DE1A8F3C",
+        "5820D12E-E40F-5AAF-83B2-99DE1112A0BB"
+      ]
+    },
+    {
+      "id": "ca8f39bc-8e6a-536b-81da-c96eda5da6f8",
+      "name": "Alila Mayakoba",
+      "city": "Playa del Carmen",
+      "address": "Mayakoba, Playa del Carmen, Quintana Roo",
+      "latitude": 20.694723,
+      "longitude": -87.028528,
+      "description": "The northernmost of the resorts in the Mayakoba development on the Riviera Maya, opened in late 2025 after an extensive renovation of what had been the Andaz Mayakoba — the same buildings, reworked and rebranded, which is why maps still carry the older name. It stands on the same mangrove and freshwater lagoons as its neighbours, and is built around a small number of arrival and gathering spaces — among them a circular pavilion, open to the sky through a wide oculus, that the resort uses as its entrance.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alila-mayakoba-laurenpoolside_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "A42FAC99-6C90-5621-BE1B-52DD952D5E3E",
+        "02065DB6-BAFF-53AB-8B8D-73ED7D5B7E5A",
+        "54C8C104-3363-56D9-8132-710A238853BD"
       ]
     }
   ],
@@ -117506,8 +117539,8 @@
           "order": 0,
           "title": "The Secrets Obelisk at Green-Wood",
           "caption": "This grave in NYC wants you to share your deepest, darkest secrets. 🌎 Follow @oneweirdplace for the world’s strangest places and history 📍He",
-          "latitude": 40.656806,
-          "longitude": -73.993639,
+          "latitude": 40.6580892,
+          "longitude": -73.994841,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -117519,8 +117552,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.656806,
-      "centroidLongitude": -73.993639,
+      "centroidLatitude": 40.6580892,
+      "centroidLongitude": -73.994841,
       "city": "Brooklyn",
       "country": "United States",
       "primaryCategory": "visualArt",
