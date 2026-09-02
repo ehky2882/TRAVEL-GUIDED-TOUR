@@ -448,6 +448,21 @@ address request drops from 62 named venues to **8**.
   pin count.** `seed_from_toursjson.py` clean at **263 / 2,398 / 2,770 / 100**; **0 `images//`**.
   gh-pages `dbc1a287`: remote head **re-read in the same command as the push**, tree diff **exactly 42
   additions, 0 deletions, nothing outside `images/`**.
+- **✅ MERGED as [#712](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/712) (squash `b46e354c`), and VERIFIED AGAINST THE SYSTEMS RATHER THAN THE SUCCESS LINES.** All four
+  checks green — **the Swift validator is the authoritative one and it agrees with the mirror** — and
+  the squash was **checked against `main` for real content** (the #629 empty-commit lesson): 2,105
+  insertions across 5 files. **The live RPC — the source the app reads FIRST — serves `linkPins` 846
+  with 106 on the `@shivanidukhandee` row and 0 wrongly inside `tours`**, and the session-99
+  dropped-key check is clean on that payload (`priceTier` on all 1,553 with 66 priced, `isPrivate` on
+  every maker, `country` on 1,552, `places` 100). ⚠️ **The gh-pages mirror lagged ~6 minutes at 804
+  before converging on 846** — the documented CDN lag, and the reason a merge is not live until the
+  RPC serves it. **All 42 new heroes were then hash-verified against the uploaded git blobs — 42 ok,
+  0 mismatch, 0 non-200** (a 200 is not proof). `check-image-duplicates.py --pins` **`OK — no
+  suspicious duplicates`** over 841 images (841 for 846 is the documented `@malata.antwerp`
+  five-pins-one-URL case), shared-URL half **0 errors / 208 documented reuses**. ⚠️ **The local
+  checkout is a SHALLOW clone**, so `main` looked to have diverged with ten "unmerged" commits — a
+  history-graft artifact, not lost work; `origin/main` was confirmed to carry their content (the
+  Green-Wood place among them) before resetting.
 
 ## Current State (2026-09-01)
 
