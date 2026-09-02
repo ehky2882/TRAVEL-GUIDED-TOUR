@@ -1,169 +1,151 @@
-# HANDOFF 2026-09-02 — 118 Hong Kong link pins from @shivanidukhandee (session 137)
+# HANDOFF — 2026-09-02 (session 135c, web/content)
 
-**Branch `claude/tour-links-ujocag`, cut clean off `origin/main` at `d25670c`. NOT finished — this
-session did the verification half. The catalogue is UNTOUCHED; no `Tours.json` edit, no gh-pages
-push, no PR.** Everything needed to finish is staged in `drafts/hk-shivanidukhandee/`.
+**Cube House and Tribune Tower become places.** Branch `claude/tour-links-yg5yw2`, restarted clean off
+merged `main` (`b2ffd16f`) after #703 landed. **Places 95 → 97**, and **`check-place-candidates.py`
+reaches 0 EXACT and exits 0** — the clean state last held before #674. Content only: no Swift, no SQL,
+no gh-pages push, no build. **Opened as [#707](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/707) on owner instruction.**
 
-## What the batch is
+Owner, given the last two coincident groups:
 
-The owner pasted **118 Instagram reel links** with two annotations ("Shivanidykhandee" and "Hung kee
-seafood restaurant"). Every readable post is one creator — Instagram **`@shivanidukhandee`**, a Hong
-Kong food-and-venue account. **At 116 pinnable posts this is the largest batch to date**, past the
-106-pin `@hereinnyc` record (#699).
-
-**118 links → 118 distinct shortcodes, 0 in-batch duplicates, 0 overlap** with the 740 pins on
-`main` *and* 0 against both branches sitting ahead of main (`claude/tour-links-yg5yw2`,
-`claude/tours-links-upload-h6t2cs`, both merged, checked anyway). **`@shivanidukhandee` has no maker
-row** — it would be the 263rd maker, shipping `avatarURL: null` by design.
-
-## ✅ TWO POSTS ARE BLOCKED, AND THE CONTROLS ARE WHAT MAKE THAT TRUSTWORTHY
-
-`C6vyhv4NhMu` and `DW_uE17B0dW` return a **218,395–218,396 byte shell with `contextJSON: null`**
-against **256,793–265,451 bytes with content** for the other 116. The split is cleanly bimodal with
-no overlap.
-
-**⚠️ Decisive because two LIVE CONTROLS were fetched in the same pass with the same user-agent** —
-`DcTW0yzsEok` (`@poche_space`) and `DcLpQ7yOoBU` (`@sato_stays`), both already live pins — and both
-came back healthy at ~260 KB. Without controls a transient failure reads as a restriction.
-
-🔁 **These are "blocked now", not "gone".** A restriction is often temporary. **Do NOT re-wire them
-on "the link opens on my phone"** — the owner is signed in; a logged-out Atlas user gets a blank card
-and no hero. The test is `contextJSON` non-null on the embed, run with a live control alongside.
-⚠️ `DW_uE17B0dW` is the batch's FIRST link — the owner's "Shivanidykhandee" note beside it was
-naming the creator, not flagging that post.
-
-## ✅ ALL 116 HEROES READ AGAINST THEIR CAPTIONS — ZERO WRONG SUBJECTS
-
-**Method, stated honestly:** all 116 thumbnails were downloaded and rendered as **13 labelled contact
-sheets at 420 px per tile**, each read against its caption. **Not** opened individually at full size —
-116 full-size reads would have exhausted the session's context. ⚠️ Tiles are keyed by **shortcode**
-(which is what the thumbnail file is named after, i.e. derived from `heroImageURL`) — **never by slug
-prefix**, which is the session-121b bug.
-
-**This creator burns a title card naming the venue into nearly every frame**, which is the only
-reason a batch this size was tractable. Named in frame: `百味`, `九龍坎麻辣火鍋`, `志明蔴雀 CHI MING
-MAJONG`, `明華`, `公和荳品`, `大和堂`, `citygate outlets 東薈城`, `KNOCKBOX COFFEE COMPANY`,
-`Lucky 7`, `milkfill`, `CTMA`, `matsukiyo`, `CHAGEE`, `Takimoto`, `Chop Alley`, `Man Mo Temple`.
-
-**Six subjects were settled by the picture where the caption could not settle them** — see
-`drafts/hk-shivanidukhandee/audit_verdicts.json`. Notably: a caption reading only *"Yau Ma Tei"* is
-the **Jade Market**; *"Fuk Wing Street"* is the **toy street**; *"Yu Chau Street"* is the **bead
-street**; and the two captions with no `📍` at all are **Ocean Park** (its own title card) and the
-**Sai Kung seafood restaurant** the owner named as Hung Kee (its own hashtag is `#saikung`).
-
-**Independent corroborations worth keeping:** Ma Wan Tung Beach's frame has the **Tsing Ma Bridge**
-in it, which is exactly where that beach is; Kowloon Park's frame is **pink flamingos** and Kowloon
-Park has the flamingo aviary; Wong Tai Sin's frame is people kneeling with fortune sticks.
-
-## 🔴 THE ONE REAL PROBLEM: ONLY ~44% OF THESE PINS WOULD LAND ON THEIR VENUE
-
-`drafts/hk-shivanidukhandee/GEOCODE-STATUS.md` has the per-pin list. Summary over all 116:
-
-| outcome | count | pin lands on |
-|---|---:|---|
-| venue-precise | **54** | the actual shop node in OSM |
-| DISTRICT-ONLY | **45** | the district centroid — can be hundreds of metres out |
-| unresolved | **17** | nothing |
-
-These are small independent Hong Kong food shops and most are **simply not in OpenStreetMap** — the
-documented COSM Atlanta case. ⚠️ **This was NOT a bad-query problem**: a multi-strategy pass was run
-(venue+district → venue → bare venue → Chinese name → district), and `countrycodes=hk` was correctly
-avoided because **OSM files Hong Kong under `cn`** (session-135 lesson) — a viewbox was used instead.
-Strategy is recorded per row in `geo.json`, so precision is auditable rather than assumed.
-
-**The documented fallback is the venue's own published address.** That means ~62 real per-venue
-lookups and it is **NOT DONE**. A batch whose whole value is *go to this specific shop* should not
-ship on district centroids without the owner deciding that explicitly.
-
-## Other findings, flagged not resolved
-
-- **3 pins are NOT in Hong Kong**, each confirmed by its own frame: `DFz3e_nSs7D` (**Macau** — card
-  reads "MAGIC SHOP IN MACAU") · `DX8-l9ERoJr` (**Macau** — CHAGEE cup in the Venetian's Grand Canal
-  Shoppes) · `DUIaMRxDD-N` (**Mumbai, India** — card reads "Puri Pani in Mumbai"). ⚠️ **India already
-  exists in the catalogue (Agra, Kopargaon); MACAU DOES NOT.** Hong Kong ships as its own `country`
-  across 89 entries, so filing Macau the same way is the consistent choice — **owner's call.**
-- **4 same-subject pairs inside the batch** (Cheung Hing Coffee Shop, The Hideout Mui Wo, Hong Kong
-  Disneyland, Kowloon Hum hotpot). Both of each ship on the documented precedent; they need distinct
-  slugs or one hero overwrites the other.
-- **6 place candidates against existing Atlas Hong Kong tours** — Lan Fong Yuen, Man Mo Temple, Upper
-  Lascar Row, Lau Kee Aberdeen Boat Noodle, plus Ice Bean/Monster Building and Kowloon Park/Stone
-  Columns. **Nothing was nudged** to manufacture a coincident group.
-- **6 weak heroes** (venue not visible in frame) and **3 that want a full-size look** where the title
-  card and the caption's venue disagree slightly — `DQ6e_iOkVSL` (herbal-tea shop vs "a local
-  bakery") is the sharpest. All listed in `audit_verdicts.json`.
-- **1 ambiguous location the creator never resolved**: `DTpmGYJker2`'s caption literally reads
-  *"cosme, tsim sha tsui **or** causeway bay"*.
-- **20 of 116 will not play inline** — the documented licensed-music gate. Poster +
-  OPEN IN INSTAGRAM is the correct outcome, not a defect.
-
-## Verification actually performed
-
-`make-link-pin.py --selftest` **71/71** — ⚠️ **with Pillow installed first**; a fresh container
-reports 62/62, which reads as a pass and is not one. Shortcode dedupe, catalogue dedupe and
-branch dedupe all clean. **Nothing else has been run**: no validator mirror, no filename-collision
-check against gh-pages, no byte/perceptual duplicate check, no `Tours.json` edit, no CI.
-
-## 🔴 A PROCESS TRAP THIS SESSION HIT
-
-The first geocode run **died at 103/116 and wrote no output file at all, while its launcher reported
-exit code 0.** It was caught only by checking for the output file rather than trusting the exit
-status. The rewrite (`geocode2.py`) **writes incrementally after every row** for exactly this reason.
-Same family as every other false-pass in this project's history.
-
-## What the next session should do
-
-1. Decide the geocoding question with the owner (address lookups vs district pins vs a smaller batch).
-2. Resolve Macau's `country` value.
-3. Generate entries with `scripts/make-link-pin.py`, **suffixing hero slugs with the handle** — this
-   batch contains subjects that already have live Atlas heroes (Man Mo Temple, Lan Fong Yuen, Upper
-   Lascar Row, Lau Kee) and a bare slug would overwrite them, which since #567 a downloaded tour
-   would never see corrected.
-4. Filename-collision check against gh-pages **asserting the tree listing holds >1,000 images** (the
-   session-123 false pass), byte + perceptual duplicate check, validator mirror self-tested against
-   injected faults, `Tours.json` byte-stable under a Python re-dump before editing.
+> make both places
 
 ---
 
-# ADDENDUM — owner decision: "land the ones that can be located first"
+## What was built
 
-**47 pins are cleared to wire in. 69 are deferred.** The selection is
-`drafts/hk-shivanidukhandee/keep.json`; the deferrals are `defer.json` (bad geocode) plus the
-45 DISTRICT-ONLY / 17 unresolved in `GEOCODE-STATUS.md`, plus the 2 blocked posts.
+| Place | Members | Coordinate | Hero |
+|---|---|---|---|
+| **Cube House** (Toronto) | `Cube House` (`@toronto_papi_`) + `Inside the Cube House` (`@vonwong`) | `43.6546346, -79.3575624` | borrowed — the exterior |
+| **Tribune Tower** (Chicago) | `Tribune Tower` (`@about_buildings`) + `The Artifacts in Tribune Tower` (`@kayleejochicago`) | `41.890584, -87.6232046` | borrowed — the full elevation |
 
-## 🔴 A FORWARD GEOCODE HIT IS NOT A VERIFIED COORDINATE — 7 of 54 "precise" hits were WRONG
+Both **pure additions**: `makers`, `tours` and `linkPins` byte-identical, the 95 existing places
+unchanged as a prefix, **both pairs already exactly coincident so nothing moved**. Diff **30 / 0**.
 
-Every one of the 54 venue-precise coordinates was **reverse-geocoded at zoom 18** and compared
-against the district its own caption named. Seven contradicted it and are deferred:
+---
 
-| code | venue | what the coordinate actually was |
-|---|---|---|
-| `C_dANa4y1yH` | Tung Lok Tong, Sheung Wan | **Shing Mun Tunnel Road, New Territories** |
-| `DGAsg8HyIdt` | 雞蛋仔屋, To Kwa Wan | **Tai Po Road, Tai Po** |
-| `DRws9_-EW5Z` | Chun Hing Garden, Kam Tin | **Hong Kong Jockey Club** |
-| `DRCY1a0EUna` | Lau Kee Noodle, Aberdeen | **"Fu Kee Teochew Noodle", Tuen Mun** — a different restaurant |
-| `DEcbpCkSpkC` | Komeda Cafe, Whampoa | Komeda at **Kai Tak** — wrong branch of a chain |
-| `DX8-l9ERoJr` | Chagee, Macau Venetian | Chagee at **Kai Tak, Hong Kong** — wrong branch |
-| `DQ9IueBEbRS` | Lin Heung Tea House, TST | Lin Heung on **Wellington St, Central** — creator and OSM disagree |
+## ⚠️ The sweep went past the checker's pair, and on Tribune Tower it changed the answer
 
-**Without the reverse check all seven would have shipped**, three of them kilometres out. At the
-30 m geofence a link pin fires nothing, so nothing would have errored — the pin would simply have
-sat in the wrong place.
+Each site was swept by **title full-text and by distance to 350 m** before anything was built (the
+session-131 lesson).
 
-## ⚠️ AN AUTOMATIC NAME-RESCUE RULE WAS TRIED AND REJECTED AS TOO LOOSE
+- **Cube House is clean.** Two pins, coincident, and **nothing else within 350 m at all**.
+- **Tribune Tower is not.** The Atlas tour **`The Wrigley Building & Tribune Tower` sits 142 m away**
+  and is **correctly NOT a member** — the identity rule is exact coordinate equality and 142 m is not
+  close. **That exclusion also disposes of the naming problem this pair has carried since #701**: that
+  tour covers *two* subjects, so a place named for the tower would half-cover its own member. The rule
+  settled it; no judgement was needed, and the flagged-and-not-built note can be closed.
+- Correctly excluded at close range: **Apple Michigan Avenue 68 m**, the **DuSable Bridge Riverwalk
+  101 m**, the **Magnificent Mile walk 222 m**.
 
-Two of the nine the district filter flagged were the **filter's** fault, not the data's:
-`DAnwHXaSEIF` (OSM writes "Wan Chai", the caption wrote "Wanchai") and `DBWBQezyHgN`
-(百味食品 on Nathan Road vs the caption's Sai Yeung Choi Street — both Mong Kok, adjacent). Both
-reverse-geocode onto the venue **by name**, so both are kept.
+## Coordinates
 
-A generic "rescue it if the reverse names the venue" rule was written to catch those two — and it
-**rescued `Lau Kee Noodle` onto `Fu Kee Teochew Noodle` on the shared word "noodle"**, and
-`Chagee`-Macau onto `Chagee`-Kai Tak. It was discarded; all nine are adjudicated explicitly in
-`select.py`'s FORCE_KEEP / FORCE_DEFER with the reasoning recorded per code.
+- **Cube House** reverse-geocodes **by name** to `Cube House, 1, Sumach Street, Moss Park, Toronto`,
+  **way 184346300**, `building=house`. Its own pin caption reads `📍 1 Sumach St`, so coordinate and
+  caption confirm each other independently.
+- **Tribune Tower's reverse names nothing** — it lands on an `amenity=loading_dock` node, the
+  documented nearest-addressed-node case, though the address it returns (**435 North Michigan Avenue**)
+  is the building's own. The **forward** geocode returns **`Tribune Tower`, way 150407241, at 0.0 m**
+  from the pin (`wikidata=Q2143136`, `architect=Howells & Hood`), so the pins sit on OSM's own building
+  centroid. *Fetch the other direction; don't argue with the reverse.*
 
-## Still to do for the 47
+## 🔴 The Cube House is slated for demolition, and only checking caught it
 
-Nothing has been generated or uploaded. Remaining: render heroes with `make-link-pin.py`
-(**handle-suffixed slugs — Man Mo Temple and Upper Lascar Row are live Atlas heroes**), gh-pages
-filename-collision check asserting the tree holds >1,000 images, byte + perceptual duplicate check,
-`Tours.json` assembly, validator mirror self-tested against injected faults, PR.
+The `@vonwong` caption mentions giving the building *"a second life as a public artwork made from its
+reclaimed materials"* — a demolition notice in disguise. Verified: **Block Developments bought the
+cubes with six neighbouring properties in late 2023 for $19.12M**, has said they cannot be safely
+kept, and has filed to take them down; **Benjamin Von Wong** is working with the developer to rebuild
+the reclaimed material as a public artwork.
+
+**The description is written to stay true either way** — it states the permit and the reuse project
+and asserts **no demolition date** and **no claim that the building still stands**.
+
+⚠️ Its heritage status is **`listed`, not designated** — the Ontario distinction that records a
+building without protecting it, which is exactly why this can proceed. Worth knowing before writing
+"protected" about any Toronto building.
+
+**The durable rule, one level up from Tung Po / Papaya King:** a reverse-geocode confirms a coordinate
+sits on a building of that name. It cannot tell you the business left — and it cannot tell you the
+building is coming down.
+
+## ⚠️ Sources disagree on who designed the Cube House, so neither reading is asserted
+
+**ACO Toronto** credits *Piet Blom as architect, Ben Kutner as designer*; **blogTO** credits *Kutner as
+architect, inspired by Blom*. The copy says Kutner built them in 1996 with his partner **Jeff Brown**,
+taking the form directly from Blom's cube houses in **Rotterdam and Helmond** — **true under both
+readings** (the Grove at Grand Bay rule).
+
+Uncontested and shipped: **1996 · three cubes · an affordable-housing idea for the leftover scraps of
+land a city cannot otherwise build on · part of a planned community called UniTri that never happened.**
+
+## ⚠️ Every Tribune Tower figure verified; one deliberately approximate
+
+**463 ft to the roof across 36 floors, finished 1925, John Mead Howells and Raymond Hood**, from the
+Tribune's **1922** seventy-fifth-anniversary competition, which drew **more than 260 entries**. The
+crown is modelled on the **Butter Tower at Rouen**, and **Eliel Saarinen's second-place design was the
+more influential building**. **Chicago Landmark 1 February 1989**; contributing building in the
+**Michigan–Wacker Historic District**; the newspaper left in **June 2018** after ninety-three years and
+the tower is now residences.
+
+⚠️ **The embedded-fragment count ships as "roughly 150"** — the source cites *"all 149 rocks"* without
+a definitive total in its own text, and the creator's caption says *"nearly 150"*. No precise figure is
+asserted.
+
+## ⚠️ Both heroes are borrowed, and that is structural
+
+Every member of both places is a **link pin with an empty gallery**, and neither site has an Atlas tour
+with photographs to lend (Tribune Tower's is 142 m away and not a member), so **no third photograph of
+either site exists in the catalogue** — the Waterlooplein / Legion of Honor case the owner has closed.
+**Do not go sourcing replacements.** The build asserts the hero **is** one of the members' rather than
+an invention. Borrowed-hero count **re-derived: 26 of 97** (66 third photographs, 5 none).
+
+**All four candidates were rendered and looked at, not chosen by filename.**
+
+- **Cube House → `@toronto_papi_`'s exterior**: the tilted green cubes against blue sky, naming itself
+  in frame (`Cube House / 1 Sumach St / Toronto`). ⚠️ The `@vonwong` alternative is **the creator
+  sitting in a skylight with the interior barely readable** — flagged as weak in #698, confirmed here.
+- **Tribune Tower → `@about_buildings`'s full elevation**: the whole Gothic tower with its buttressed
+  crown and **`Chicago Tribune` legible at the base**. ⚠️ **The `@kayleejochicago` alternative is
+  genuinely beautiful and was rejected on the establishing-shot criterion** — a close-up of the carved
+  entrance screen with **`TRIBUNE TOWER 435` legible on both doors**, which is what independently
+  confirms the address. **One line swaps it.**
+
+## ⚠️ Each place shares a name with a member, unavoidably
+
+`@about_buildings`' pin is titled exactly `Tribune Tower`; `@toronto_papi_`'s exactly `Cube House`.
+Both buildings have exactly one name, so the alternative is inventing one — the same call as One Times
+Square, The Tin Building and Eastern State Penitentiary. **Do not "fix" it.**
+
+## Verification
+
+- Place ids `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")` — `a7c90ef2-…` (Cube House),
+  `b64f5b2a-…` (Tribune Tower). **0 collisions.**
+- Validator mirror — vocabulary parsed from **both** `Models/Tag.swift` and the Swift validator plus the
+  enum domains, refusing to run on disagreement or an empty parse — **self-tested 47/47**, then
+  **0 errors, 2 warnings** across 1,552 tours + 740 pins + 97 places, **both pre-existing**.
+- ⚠️ **26 place-layer faults injected against the TWO new places specifically — 26/26 caught, control
+  clean.** Per place: one member; empty name; either member nudged 55 m; the place's own latitude and
+  longitude drifting off its members; a bad hero URL; an unknown tour id; a duplicate place id; a
+  member claimed by two places; the hero repeated in its own gallery; an out-of-range latitude; and
+  both members set to the same tour.
+- 🎉 **`check-place-candidates.py` reaches 0 EXACT and exits 0**, against `main`'s **2 / 36**, with
+  **NEAR unchanged at 36** — it falls by exactly the two groups resolved and gains nothing, so **no
+  coincident group was manufactured**. ⚠️ Exit code read **directly, not through a pipe**.
+- Structural sweep: **all members of all 97 places exactly on their place**, 0 tours claimed twice,
+  0 duplicate place/tour/stop ids, **0 link pins inside `tours`**, 0 `images//`.
+- `seed_from_toursjson.py` clean at **262 / 2,292 / 2,664 / 97**, carrying the places, so this reaches
+  Supabase on merge with **no owner SQL**.
+- `Tours.json` **byte-stable under a Python re-dump before editing** (the assembler asserts it and
+  refuses otherwise); diff **30 insertions / 0 deletions**, `makers`/`tours`/`linkPins` asserted
+  byte-identical and the 95 existing places asserted unchanged as a prefix. Both heroes live **200**.
+- ⚠️ **Nothing compiled locally** (no Swift toolchain in a Linux web session) — **CI is the
+  authoritative validator.**
+
+## ✅ The place backlog is empty again
+
+Every coincident group in the catalogue now has a place page. **A clean exit from
+`check-place-candidates.py` is the expected state — treat any future EXACT group as a real finding.**
+
+## Open
+
+- Nothing owed from this session. The five weak heroes flagged in #689 remain a standing keep-or-pull
+  question for the owner, unchanged.

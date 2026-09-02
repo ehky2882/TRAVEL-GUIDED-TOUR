@@ -79877,7 +79877,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
-        "0d3e20aa-bd74-524f-a147-6273f94b2355"
+        "0d3e20aa-bd74-524f-a147-6273f94b2355",
+        "E515658E-C488-5AAA-BEAC-47F76BE72B2A"
       ]
     },
     {
@@ -80764,7 +80765,9 @@
       "tourIds": [
         "8ab32b1f-6fc4-4067-8aaf-9771f7766dfd",
         "DC9C7B8A-FEBA-548D-9C64-9B2C06817310",
-        "05C6A5B5-74D0-5B71-A445-81C2EABD6C16"
+        "05C6A5B5-74D0-5B71-A445-81C2EABD6C16",
+        "6F6AD335-48A6-5E4C-A469-568BFA2F5DBA",
+        "FC2AD99F-4B32-5EF3-8B0D-370D42746D7E"
       ]
     },
     {
@@ -80891,6 +80894,186 @@
         "13DED9CB-3705-5DC3-8B96-6E41873B9BA0",
         "30271754-0BC0-5CB0-9C88-F4A6448C93D3",
         "FDC2B321-F78D-502C-8DAC-564ECCE56E71"
+      ]
+    },
+    {
+      "id": "331dbaff-0928-5b9d-b4b0-346bfee3bfd7",
+      "name": "Casa Loma",
+      "description": "The largest house ever built in Canada: ninety-eight rooms on the ridge, raised between 1911 and 1914 by E. J. Lennox for Sir Henry Pellatt, with secret passages, a tunnel to the stables and full electric wiring at a time when almost nothing had it. Pellatt made his fortune harnessing Niagara and lighting Toronto; when Ontario decided power that vital should not belong to one man and took it public, the money went with it. He lived here under a decade, walked away in 1923, and died with almost nothing. The castle he could not keep is now open to anyone who buys a ticket.",
+      "latitude": 43.678,
+      "longitude": -79.4094,
+      "city": "Toronto",
+      "address": "1 Austin Terrace, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-loma_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "bb96b1b1-04b8-5621-ad20-7cb335d6a4f7",
+        "312A63BC-CA2B-59D4-B3E6-5047776D60B1"
+      ]
+    },
+    {
+      "id": "ecb4c02a-5e86-5fcd-baa2-a43ca880e715",
+      "name": "Distillery District",
+      "description": "A pedestrian quarter of dark Victorian brick where Gooderham and Worts ran the largest distillery in the British Empire, turning out millions of gallons of whisky and paying a startling share of the whole country's taxes. Production stopped in 1990 and the buildings were too solid and too old to be worth knocking down, so they became the busiest film set in Canada instead. The lanes reopened in 2003 as a chains-free quarter of shops and studios, with the Boiler House, the Cooperage and the original configuration of the works still legible in the cobbles.",
+      "latitude": 43.6503,
+      "longitude": -79.3597,
+      "city": "Toronto",
+      "address": "55 Mill Street, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_6.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "de829d8e-c929-5435-ab5e-b910ef1c859e",
+        "D295B7BA-A723-54B9-8B68-859A685385BB"
+      ]
+    },
+    {
+      "id": "545aa12f-d179-5c93-ad20-d0f22782f2c1",
+      "name": "Osgoode Hall",
+      "description": "A pale, classically symmetric building set behind a lawn and a long iron fence, home of Ontario's law since 1797 and of its highest courts. Inside are the Great Library, which some call the most beautiful room in the country, and the courtrooms that go with it. The famous single-file gates in the Queen Street fence are usually explained as a device for keeping cattle off the grass; by the 1860s this was no pasture. They were built to slow crowds, one body at a time.",
+      "latitude": 43.6516,
+      "longitude": -79.3859,
+      "city": "Toronto",
+      "address": "130 Queen Street West, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osgoode-hall_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1b4a12de-2d1a-5292-9cc0-4c0843c615c5",
+        "A0FF670A-276C-5641-B2A6-7D0EFFA1D852"
+      ]
+    },
+    {
+      "id": "4ab95cc0-edda-52b0-9963-a59dddd3b581",
+      "name": "One Times Square",
+      "description": "The 25-storey tower at the north end of Times Square, built in 1903–04 to a neo-Gothic design by Cyrus L. W. Eidlitz as the headquarters of The New York Times — which gave the square its name and then moved out two years later, to 229 West 43rd Street. Almost none of Eidlitz's building can be seen: the original detail has been obscured or stripped away over a century of alterations, and since the 1990s the facade has been advertising, which earns so much that the floors behind it have largely stood empty. A lighted news ticker was wrapped around the base in 1928. The New Year's Eve ball has descended from its roof since 31 December 1907, every year but 1942 and 1943, when it was suspended for wartime blackouts; the first was five feet across, wood and iron lit by a hundred incandescent bulbs, and since 1999 the ball has been faced in Waterford crystal panels. A renovation begun in 2022 has added an observation deck and a museum.",
+      "latitude": 40.7562129,
+      "longitude": -73.9865339,
+      "city": "New York",
+      "address": "1 Times Square, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/one-times-square-whatisthisnyc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "00C9C879-F5DA-5311-8FB0-FEE49AFFB5C5",
+        "81014923-08E4-5A6A-9244-2FDCB71461FB"
+      ]
+    },
+    {
+      "id": "1190bec9-512c-513a-9f82-c36def01caff",
+      "name": "The Tin Building",
+      "description": "Built in 1907 inside the Fulton Fish Market, which had traded on this shore since 1822 and was for generations the place New York bought its fish. The market left for Hunts Point in the Bronx in 2005, and of everything it occupied here only two structures remain — the Tin Building is the one that carries landmark designation. Hurricane Sandy flooded and damaged it, and the building that stands today was reconstructed and raised above the flood line. Since September 2022 it has held a food hall run by Jean-Georges Vongerichten, with market counters, restaurants and bars through the ground floor and a hidden room upstairs.",
+      "latitude": 40.7061403,
+      "longitude": -74.0022222,
+      "city": "New York",
+      "address": "96 South Street, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tin-building-hereinnyc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "7B77077D-44DA-5BB8-A7D3-D43668E7AC1E",
+        "CA72BADF-6106-574F-9729-5C41361A45A1"
+      ]
+    },
+    {
+      "id": "5f6333f6-4590-5880-bf5c-074dbb3a2e5b",
+      "name": "Eastern State Penitentiary",
+      "description": "The prison that invented the penitentiary, on eleven acres of Fairmount once known as Cherry Hill. John Haviland designed it, construction began in 1822 and it opened on 25 October 1829: seven corridors of heated, skylit cells radiating from a central hub, built to hold five hundred people each entirely alone. The separate system was meant as reform rather than punishment — a prisoner would meet no one, and would be left with nothing but penitence — and it was copied by more than three hundred prisons around the world. It was among the largest public works of the early republic and a tourist attraction almost at once; Charles Dickens and Alexis de Tocqueville both came to see it, and Dickens left appalled. Al Capone was held here in 1929 and Willie Sutton later. It closed in 1971 and stood empty and decaying for two decades; it is open today as a museum, deliberately stabilised rather than restored, so the ruin is what visitors walk through.",
+      "latitude": 39.9683406,
+      "longitude": -75.1726626,
+      "city": "Philadelphia",
+      "address": "2027 Fairmount Avenue, Philadelphia",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eastern-state-penitentiary-place_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "DE843F19-0B48-5E12-8066-B866F2E57C09",
+        "0860A5E3-BFE8-596B-9E24-F9919ECCE1EF"
+      ]
+    },
+    {
+      "id": "571fdf29-1d8a-55bc-9ec4-16daa360e094",
+      "name": "Charles Scribner's Sons Building",
+      "description": "Ernest Flagg's Beaux-Arts building at 597 Fifth Avenue, put up between 1912 and 1913 for the publisher Charles Scribner's Sons — a glass-and-iron shopfront in black and gold across the bottom two storeys, five limestone bays above it, and a mansard roof at the tenth. The bookstore filled the ground floor and the publishing house worked upstairs, so F. Scott Fitzgerald, Ernest Hemingway and Thomas Wolfe all came here to see their editors, Maxwell Perkins among them, and Theodore Roosevelt shopped here early on. The store closed in 1989 and the building has held retail tenants since. The city made the exterior a landmark in 1982 and the ground-floor interior a landmark in 1989.",
+      "latitude": 40.7574375,
+      "longitude": -73.9778125,
+      "city": "New York",
+      "address": "597 Fifth Avenue, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hemingway-at-scribners-hereinnyc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3DADDCC8-0961-506C-B76C-35759D0D1CD9",
+        "DB8244FA-1074-5890-9B65-770DDCE58A94"
+      ]
+    },
+    {
+      "id": "a7c90ef2-0063-5c08-92d9-91fd1ab12705",
+      "name": "Cube House",
+      "description": "Three green cubes tipped onto one corner and raised on concrete stalks, at the point where Sumach Street meets Eastern Avenue on the edge of Corktown. Ben Kutner built them in 1996 with his partner Jeff Brown, taking the form directly from the cube houses Piet Blom put up in Rotterdam and Helmond in the 1970s and 80s — a tilted cube on a pole, so the floors sit at angles no rectangular room ever does and the windows look down at the road and up at the sky. They were meant as the beginning of something much larger: an affordable-housing idea for the leftover scraps of land a city cannot otherwise build on, part of a planned community called UniTri that never happened. Only these were built, and Toronto has treated them ever since as a well-loved oddity rather than architecture. The site is on the city's heritage register as a listed property, which records a building without protecting it from demolition. Block Developments bought the cubes together with six neighbouring properties in late 2023 and has said they cannot be safely kept; a permit to take them down has been filed, and the artist Benjamin Von Wong is working with the developer to rebuild their reclaimed material as a public artwork.",
+      "latitude": 43.6546346,
+      "longitude": -79.3575624,
+      "city": "Toronto",
+      "address": "1 Sumach Street, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cube-house-torontopapi_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "77F89F6B-8F09-5485-BC01-7A383CAF2E54",
+        "7BF993DA-98AF-586F-BEE8-067CE10C692A"
+      ]
+    },
+    {
+      "id": "b64f5b2a-0eef-55cf-8ded-906977182f87",
+      "name": "Tribune Tower",
+      "description": "The neo-Gothic tower on the north bank of the Chicago River, 463 feet to the roof across 36 floors, finished in 1925 to a design by John Mead Howells and Raymond Hood. The Chicago Tribune marked its seventy-fifth anniversary in 1922 by offering a prize for the most beautiful office building in the world; more than 260 entries came in from across Europe and America, and Howells and Hood won with a flying-buttressed crown modelled on the Butter Tower at Rouen. The competition mattered more than the result — Eliel Saarinen's second-place design was widely judged the better building and shaped American skyscrapers for a generation. Set into the outside walls at street level are roughly 150 fragments gathered from famous structures around the world, among them the Parthenon, the Taj Mahal, the Great Wall of China, Notre-Dame, the Alamo and the Great Pyramid, each labelled in the stone; later additions include a piece of steel from the World Trade Center and a moon rock displayed behind glass. The newspaper left in June 2018 after ninety-three years and the tower has since been converted to residences. It was made a Chicago Landmark on 1 February 1989 and is a contributing building in the Michigan-Wacker Historic District.",
+      "latitude": 41.890584,
+      "longitude": -87.6232046,
+      "city": "Chicago",
+      "address": "435 North Michigan Avenue, Chicago",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tribune-tower-aboutbuildings_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "DA7E193B-C288-534C-979F-2C35778CCBD7"
+      ]
+    },
+    {
+      "id": "298BE3ED-E973-5F26-8357-76E6B774F963",
+      "name": "PMQ",
+      "description": "Two seven-storey blocks facing each other across a central courtyard, linked overhead by a glass structure called Qube, with shops, studios and galleries in what used to be flats. The ground beneath held Central School from 1889 — the first government school in Hong Kong to offer Western-style education to the public, later Queen's College, where Sun Yat-sen studied as a young man. The school was badly damaged during the Japanese occupation and demolished after the war; the site sat empty until 1951, when it was rebuilt as the Police Married Quarters, the first housing of its kind for married junior Chinese officers and their families. Two future Chief Executives grew up in flats here.\n\nThe quarters were vacated in 2000 and stood empty for fourteen years — long enough for director Peter Chan to film part of the horror anthology Three in the abandoned corridors. The government planned to demolish the site; a public petition gathered more than four thousand objections, and in 2009 the buildings were preserved instead, reopening as PMQ in 2014. Almost none of that is visible from the courtyard unless you go looking: the Underground Interpretation Area, reached from the courtyard and free to enter, displays the excavated granite foundations of the original school.",
+      "latitude": 22.283717705131366,
+      "longitude": 114.15172357588767,
+      "city": "Hong Kong",
+      "address": "35 Aberdeen Street, Central, Hong Kong",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/PMQ_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "286ad678-9aa6-5b5e-abb9-bfb997f204c2",
+        "04A01BE1-4A2F-56F6-916E-4A4CCFEE9922"
+      ]
+    },
+    {
+      "id": "FC419448-1AAE-5A5A-8158-2059FF1F66B3",
+      "name": "Jamia Mosque",
+      "description": "A green-and-white prayer hall set back off Shelley Street behind an archway and a flight of stairs, carrying the only minaret on any mosque on Hong Kong Island — a single tower topped with a crescent and star. A mosque has stood on this ground since 1850, when the colonial government leased the land to the Muslim community, among the earliest formal recognitions of any non-Christian faith in the colony. The present building went up in 1915, funded entirely by a Bombay merchant, Haji Mohamed Essack Elias, to replace the earlier structure.\n\nThe first congregation mixed South Asian merchants, Muslim soldiers in the British military, and lascars — sailors on British ships docked between voyages — and the mosque was long known as the Lascar Temple. The pulpit inside was donated in 1915 by a local Chinese Muslim, Ma Chik Ting, one detail that complicates any simple picture of who worshipped here. It was declared a monument in 2022 and still fills on Fridays, many of the congregation Pakistani office workers riding the Mid-Levels Escalator up from Central — more or less the route the lascars walked, a hundred and seventy years on.",
+      "latitude": 22.28041,
+      "longitude": 114.15169,
+      "city": "Hong Kong",
+      "address": "30 Shelley Street, Mid-Levels, Hong Kong",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jamia_Mosque_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "412f51ee-1938-4f96-885a-28e93399516d",
+        "A3EF90E2-3C40-5197-9E52-77DEA90FCAE8"
+      ]
+    },
+    {
+      "id": "9D84729B-0C3A-570F-B5C4-D8587118FE97",
+      "name": "Sai Wan Swimming Shed",
+      "description": "Steps drop off Victoria Road through scrubby hillside to a green wooden shed on stilts above the water, with a narrow pier running out into the Sulphur Channel toward Green Island. This is the Chung Sing Swimming Shed — known simply as the Sai Wan Swimming Shed — and it is the only one of its kind left in the territory. The structure is plain: changing rooms, lockers, a small shrine, and the long walkway out to where swimmers enter the water, open from five in the morning until one in the afternoon for a deliberately modest fee.\n\nSheds like this were once common along the shoreline, bamboo and timber structures offering cheap harbour access at a time when public pools barely existed. The first opened in 1911 at North Point; by the 1950s there were eight or ten. Land reclamation and declining water quality finished off nearly all of them through the 1970s. This one came back in 1988 on Wan Hung-fai's application and has simply continued. The daily rhythm is telling: elderly regulars arrive at dawn for laps in the open water and are gone by midday; the pier then sits quiet until the light turns gold and the photographers arrive. The two groups barely overlap, and the shed seems to belong fully to neither.",
+      "latitude": 22.280114044064383,
+      "longitude": 114.11748779036343,
+      "city": "Hong Kong",
+      "address": "Victoria Road, Mount Davis, Hong Kong",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sai_Wan_Swimming_Shed_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "a0c68fa5-425e-527d-8db4-cb8a0cf9c999",
+        "6D149344-C83F-5007-8C39-416F275E00CC"
       ]
     }
   ],
@@ -106778,8 +106961,8 @@
           "order": 0,
           "title": "The Great Library at Osgoode Hall",
           "caption": "My kind of paradise. A true hidden gem in Toronto. Have you been here before? 📍The Great Library, Osgoode Hall #todointoronto #torontolifest",
-          "latitude": 43.6521039,
-          "longitude": -79.3857945,
+          "latitude": 43.6516,
+          "longitude": -79.3859,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -106791,8 +106974,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6521039,
-      "centroidLongitude": -79.3857945,
+      "centroidLatitude": 43.6516,
+      "centroidLongitude": -79.3859,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "architecture",
@@ -107007,8 +107190,8 @@
           "order": 0,
           "title": "Inside the Distillery District",
           "caption": "Welcome to Toronto’s Distillery District! 🏭 I love that this historic distillery has found a new life and retains so much of its original co",
-          "latitude": 43.6503278,
-          "longitude": -79.3592001,
+          "latitude": 43.6503,
+          "longitude": -79.3597,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -107020,8 +107203,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6503278,
-      "centroidLongitude": -79.3592001,
+      "centroidLatitude": 43.6503,
+      "centroidLongitude": -79.3597,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "culturalHeritage",
@@ -107332,8 +107515,8 @@
           "order": 0,
           "title": "The Crystal at the Royal Ontario Museum",
           "caption": "An iconic museum extension inspired by crystalline geometry — bold, controversial, and intentionally uncomfortable. With no right angles and",
-          "latitude": 43.6676565,
-          "longitude": -79.3946988,
+          "latitude": 43.6677,
+          "longitude": -79.3948,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -107345,8 +107528,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6676565,
-      "centroidLongitude": -79.3946988,
+      "centroidLatitude": 43.6677,
+      "centroidLongitude": -79.3948,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "architecture",
@@ -107378,8 +107561,8 @@
           "order": 0,
           "title": "Inside Casa Loma",
           "caption": "Unlike my last post from Toronto, this home is not for sale, but you can visit it without an agent 😂. ——— #BestAddress #HistorySharedisHisto",
-          "latitude": 43.6781015,
-          "longitude": -79.4094159,
+          "latitude": 43.678,
+          "longitude": -79.4094,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -107391,8 +107574,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.6781015,
-      "centroidLongitude": -79.4094159,
+      "centroidLatitude": 43.678,
+      "centroidLongitude": -79.4094,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "culturalHeritage",
@@ -107932,8 +108115,8 @@
           "order": 0,
           "title": "J. P. Morgan's Yacht Bell",
           "caption": "Have you noticed this bell when you visited the Morgan Library? #nychistory #jpmorgan #nyc #morganlibrary #morganpartner",
-          "latitude": 40.7492685,
-          "longitude": -73.9814652,
+          "latitude": 40.7493,
+          "longitude": -73.9814,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -107945,8 +108128,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7492685,
-      "centroidLongitude": -73.9814652,
+      "centroidLatitude": 40.7493,
+      "centroidLongitude": -73.9814,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -108116,8 +108299,8 @@
           "order": 0,
           "title": "The Morgan Library Garden",
           "caption": "Have you visited the garden at The Morgan yet? The garden is opened until October 9th. #nychistory #jpmorgan #gildedage #morganpartner #morg",
-          "latitude": 40.7492685,
-          "longitude": -73.9814652,
+          "latitude": 40.7493,
+          "longitude": -73.9814,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -108129,8 +108312,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7492685,
-      "centroidLongitude": -73.9814652,
+      "centroidLatitude": 40.7493,
+      "centroidLongitude": -73.9814,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "natureAndParks",
@@ -112974,8 +113157,8 @@
           "order": 0,
           "title": "PMQ",
           "caption": "Central hides a secret underground chamber that 99% of people walk right past. 🤫 Deep beneath the bustling pop-up markets and designer bouti",
-          "latitude": 22.283325,
-          "longitude": 114.1518365,
+          "latitude": 22.283717705131366,
+          "longitude": 114.15172357588767,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -112987,8 +113170,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.283325,
-      "centroidLongitude": 114.1518365,
+      "centroidLatitude": 22.283717705131366,
+      "centroidLongitude": 114.15172357588767,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "culturalHeritage",
@@ -113251,8 +113434,8 @@
           "order": 0,
           "title": "Jamia Mosque",
           "caption": "Come check out this minty green mosque in Central Hong Kong and feel minty green! #hongkong #discoverhongkong #mosque #hongkongtravel #hk",
-          "latitude": 22.2801875,
-          "longitude": 114.1518125,
+          "latitude": 22.28041,
+          "longitude": 114.15169,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -113264,8 +113447,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.2801875,
-      "centroidLongitude": 114.1518125,
+      "centroidLatitude": 22.28041,
+      "centroidLongitude": 114.15169,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "sacredSites",
@@ -113344,8 +113527,8 @@
           "order": 0,
           "title": "Sai Wan Swimming Shed",
           "caption": "Check out the famous Instagram pier in Kennedy Town and get that pose ready! #hongkong #discoverhongkong #hk #saiwanswimmingshed #hongkongtr",
-          "latitude": 22.2798456,
-          "longitude": 114.1175181,
+          "latitude": 22.280114044064383,
+          "longitude": 114.11748779036343,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -113357,8 +113540,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.2798456,
-      "centroidLongitude": 114.1175181,
+      "centroidLatitude": 22.280114044064383,
+      "centroidLongitude": 114.11748779036343,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "hiddenGems",
@@ -115220,10 +115403,10 @@
       "centroidLongitude": 114.1697505,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "foodAndDrink",
+      "primaryCategory": "culturalHeritage",
       "tags": [
-        "Venue",
-        "Food"
+        "District",
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -115440,10 +115623,10 @@
       "centroidLongitude": 114.2059697,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "foodAndDrink",
+      "primaryCategory": "sacredSites",
       "tags": [
-        "Venue",
-        "Food"
+        "Religious Building",
+        "Faith"
       ],
       "priceUSD": 0
     },
@@ -115792,9 +115975,9 @@
       "centroidLongitude": 114.1639405,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "hiddenGems",
+      "primaryCategory": "culturalHeritage",
       "tags": [
-        "Venue",
+        "District",
         "Commerce"
       ],
       "priceUSD": 0
@@ -115968,10 +116151,10 @@
       "centroidLongitude": 114.1694008,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "foodAndDrink",
+      "primaryCategory": "natureAndParks",
       "tags": [
-        "Venue",
-        "Food"
+        "Park",
+        "Green Escape"
       ],
       "priceUSD": 0
     },
@@ -116144,10 +116327,10 @@
       "centroidLongitude": 113.9925347,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "culturalHeritage",
+      "primaryCategory": "natureAndParks",
       "tags": [
-        "Public Square",
-        "Commerce"
+        "Park",
+        "Green Escape"
       ],
       "priceUSD": 0
     },
@@ -116235,7 +116418,7 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
-        "Performance"
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -116587,7 +116770,6 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
-        "History",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -116673,10 +116855,10 @@
       "centroidLongitude": 114.1394628,
       "city": "Hong Kong",
       "country": "Hong Kong",
-      "primaryCategory": "foodAndDrink",
+      "primaryCategory": "culturalHeritage",
       "tags": [
-        "Venue",
-        "Food"
+        "Market",
+        "Commerce"
       ],
       "priceUSD": 0
     },
