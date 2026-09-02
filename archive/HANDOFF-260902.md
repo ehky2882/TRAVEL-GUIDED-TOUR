@@ -121,3 +121,49 @@ Same family as every other false-pass in this project's history.
 4. Filename-collision check against gh-pages **asserting the tree listing holds >1,000 images** (the
    session-123 false pass), byte + perceptual duplicate check, validator mirror self-tested against
    injected faults, `Tours.json` byte-stable under a Python re-dump before editing.
+
+---
+
+# ADDENDUM — owner decision: "land the ones that can be located first"
+
+**47 pins are cleared to wire in. 69 are deferred.** The selection is
+`drafts/hk-shivanidukhandee/keep.json`; the deferrals are `defer.json` (bad geocode) plus the
+45 DISTRICT-ONLY / 17 unresolved in `GEOCODE-STATUS.md`, plus the 2 blocked posts.
+
+## 🔴 A FORWARD GEOCODE HIT IS NOT A VERIFIED COORDINATE — 7 of 54 "precise" hits were WRONG
+
+Every one of the 54 venue-precise coordinates was **reverse-geocoded at zoom 18** and compared
+against the district its own caption named. Seven contradicted it and are deferred:
+
+| code | venue | what the coordinate actually was |
+|---|---|---|
+| `C_dANa4y1yH` | Tung Lok Tong, Sheung Wan | **Shing Mun Tunnel Road, New Territories** |
+| `DGAsg8HyIdt` | 雞蛋仔屋, To Kwa Wan | **Tai Po Road, Tai Po** |
+| `DRws9_-EW5Z` | Chun Hing Garden, Kam Tin | **Hong Kong Jockey Club** |
+| `DRCY1a0EUna` | Lau Kee Noodle, Aberdeen | **"Fu Kee Teochew Noodle", Tuen Mun** — a different restaurant |
+| `DEcbpCkSpkC` | Komeda Cafe, Whampoa | Komeda at **Kai Tak** — wrong branch of a chain |
+| `DX8-l9ERoJr` | Chagee, Macau Venetian | Chagee at **Kai Tak, Hong Kong** — wrong branch |
+| `DQ9IueBEbRS` | Lin Heung Tea House, TST | Lin Heung on **Wellington St, Central** — creator and OSM disagree |
+
+**Without the reverse check all seven would have shipped**, three of them kilometres out. At the
+30 m geofence a link pin fires nothing, so nothing would have errored — the pin would simply have
+sat in the wrong place.
+
+## ⚠️ AN AUTOMATIC NAME-RESCUE RULE WAS TRIED AND REJECTED AS TOO LOOSE
+
+Two of the nine the district filter flagged were the **filter's** fault, not the data's:
+`DAnwHXaSEIF` (OSM writes "Wan Chai", the caption wrote "Wanchai") and `DBWBQezyHgN`
+(百味食品 on Nathan Road vs the caption's Sai Yeung Choi Street — both Mong Kok, adjacent). Both
+reverse-geocode onto the venue **by name**, so both are kept.
+
+A generic "rescue it if the reverse names the venue" rule was written to catch those two — and it
+**rescued `Lau Kee Noodle` onto `Fu Kee Teochew Noodle` on the shared word "noodle"**, and
+`Chagee`-Macau onto `Chagee`-Kai Tak. It was discarded; all nine are adjudicated explicitly in
+`select.py`'s FORCE_KEEP / FORCE_DEFER with the reasoning recorded per code.
+
+## Still to do for the 47
+
+Nothing has been generated or uploaded. Remaining: render heroes with `make-link-pin.py`
+(**handle-suffixed slugs — Man Mo Temple and Upper Lascar Row are live Atlas heroes**), gh-pages
+filename-collision check asserting the tree holds >1,000 images, byte + perceptual duplicate check,
+`Tours.json` assembly, validator mirror self-tested against injected faults, PR.
