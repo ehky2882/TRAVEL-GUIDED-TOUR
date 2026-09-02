@@ -721,7 +721,35 @@ notes re-asserted present and every check re-run there.
   — and re-checked after the merge. Seed clean at **297 / 2,457 / 2,829 / 105**; **0 `images//`**.
   **All seven moves and all five renames verified field-by-field on the LIVE RPC.** ⚠️ The two
   removed heroes are left **orphaned** on gh-pages, matching convention.
-- **Batch state: 104 shipped · 9 deferred · 2 blocked · 3 dropped** of 116 pinnable.
+- **✅ BATCH CLOSED — 106 shipped · 11 dropped · 1 deferred · 2 blocked, of 118 pinnable (120 posts).**
+  Re-derived from the catalogue's own sourceURLs, not carried forward — **every earlier figure in this
+  entry is stale**, including the "104 shipped / 9 deferred / 116 pinnable" this line used to read.
+- **🔴 THE OWNER CLOSED THE ADDRESS REQUEST BY DROPPING IT, AND NOTHING HAD TO BE DELETED.** Owner:
+  ***"TAKE OUT THESE TOURS. CANT FIND A RELIABLE ADDRESS FOR THESE SO WE'RE GOING TO OMIT"*** — Lau Kee
+  Noodle, Matchbox Cafe, Knockbox Cafe, Dozy Cafe, Hara Station, Honolulu Coffee Shop, Takimoto,
+  Vission Bakery. **All eight were deferred at authoring time and never wired**, so this costs no
+  catalogue edit and — unlike the two removals in #716 — **owes no SQL**: a post that never reached
+  `Tours.json` never reached Postgres either. Verified before answering rather than assumed: all eight
+  shortcodes are absent from every `sourceURL` across `tours` and `linkPins`.
+  - **🔴 TWO CATALOGUE ENTRIES SHARE A NAME WITH THAT LIST AND ARE NOT IT — a name sweep hits both, and
+    deleting either would be the expensive mistake.** **`Lau Kee Aberdeen Boat Noodle | 流記艇仔粉` is an
+    ATLAS STUDIO HKG NARRATED TOUR**, not a link pin — real audio, its own account of Lam Lau's licensed
+    floating kitchen at Aberdeen Pier Six since 1981 — and its coordinate reverse-geocodes to **Aberdeen
+    Praya Road**, the promenade its own script describes. **`Cookie Vission, Tai Hang` is a DIFFERENT
+    POST** from the deferred `Vission Bakery` one: that is the matcha mochi danish with no district,
+    this is the cookie shop whose caption names Tai Hang outright. Both stay.
+  - **⚠️ THE HAIDILAO PRECEDENT IS WHY THIS WAS CHECKED RATHER THAN ACTED ON.** Minutes earlier the same
+    deferred list called **Haidilao Tsim Sha Tsui** unshipped when it was already live — so the list is
+    not evidence about the catalogue. **Search `Tours.json` before removing anything a tracker names.**
+  - **⚠️ ONE POST IS STILL GENUINELY DEFERRED AND IT IS NOT AN ADDRESS PROBLEM.** `DMz6jSxy0u8`, a
+    **second Kowloon Hum Spicy Hotpot post** — the venue already carries a pin from `DBYnXEky1Cb` at
+    469-471 Nathan Road, so wiring it would put two pins for one venue under one creator, the shape the
+    owner has already ruled on twice (the duplicate Cheung Hing pin pulled, the reposted Disneyland clip
+    dropped). **Left out on that precedent rather than asked about again.** One line ships it.
+  - **⚠️ The 11 dropped are these 8 plus three from earlier**: `Xiang Bo Bo` and the `Cheung Hing`
+    pineapple-bun duplicate (both owner removals in #716) and `DViylUIjGUg`, the reposted Disneyland
+    clip. `drafts/hk-shivanidukhandee/ADDRESSES-NEEDED.txt` is now a **closed record** carrying all of
+    this, so a future session cannot read the file as unfinished work.
 
 
 ## Current State (2026-09-01)
