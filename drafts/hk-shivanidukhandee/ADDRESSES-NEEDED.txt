@@ -1,59 +1,66 @@
-HONG KONG VENUES - ADDRESS NEEDED
+HONG KONG VENUES - ADDRESS NEEDED  ***CLOSED 2026-09-02***
 
-I'm putting map pins on 8 small Hong Kong places - mostly independent
-food shops and cafes featured by a local Instagram creator. (This list was
-62 venues; you've since located the rest, so these are what's left.)
+The owner closed this request rather than answering it:
 
-I have the venue name and usually the district, but no street address.
-Most of these are too small to appear in the open map database I use,
-so I can't place the pin accurately.
+    "TAKE OUT THESE TOURS. CANT FIND A RELIABLE ADDRESS FOR
+     THESE SO WE'RE GOING TO OMIT"
 
-WHAT WOULD HELP - for as many as you can, any of:
-   * the street address
-   * a Google Maps link
-   * or just the building / block name
+All eight venues below are DROPPED. Nothing was deleted from the
+catalogue, because none of them was ever wired into it - they were
+deferred at authoring time precisely because no address could be
+found. Verified against Tours.json before closing: all eight
+shortcodes are absent from every sourceURL in `tours` and `linkPins`.
 
-Rough is fine. I need the right building, not the right shopfront.
-Easiest format for me is one per line:
+DO NOT re-raise these with the owner, and do not re-open the request
+if a future session finds one of these captions in the analysis file
+and reads it as unfinished work. It is finished.
 
-   Venue name = address
+    C9pM_X6yCtq   Matchbox Cafe            Causeway Bay
+    DA3HyZFyuQv   Vission Bakery           district not stated
+    DAdgU-fBag2   Hara Station             Tsim Sha Tsui
+    DCEjm3IN5cl   Takimoto                 Causeway Bay
+    DK9Z3dQyNe8   Honolulu Coffee Shop     Wan Chai
+    DKtzT5VSbe2   Knockbox Cafe            Mong Kok & Central
+    DQrGXMKkdfj   Dozy Cafe                To Kwa Wan
+    DRCY1a0EUna   Lau Kee Noodle           Aberdeen
 
-If any of these have closed or moved, that's just as useful to know.
+TWO CATALOGUE ENTRIES SHARE A NAME WITH THIS LIST AND ARE NOT IT.
+A future session sweeping for these names will hit both. Neither is
+a leftover; do not remove either.
+
+  * "Lau Kee Aberdeen Boat Noodle | 流記艇仔粉"
+    An ATLAS STUDIO HKG narrated tour, not a link pin - real audio,
+    real hero, its own description of Lam Lau's licensed floating
+    kitchen at Aberdeen Pier Six since 1981. Its coordinate
+    reverse-geocodes to Aberdeen Praya Road, which is the promenade
+    its own script describes. Correct where it is.
+
+  * "Cookie Vission, Tai Hang"  (DW1KgzhEReK)
+    A DIFFERENT POST from the deferred Vission Bakery one. That one
+    is the matcha mochi danish with no district; this one is the
+    cookie shop, and its caption states Tai Hang outright. Shipped
+    with a real address.
+
+ONE POST IS STILL GENUINELY DEFERRED, and it is not an address problem:
+
+    DMz6jSxy0u8   Kowloon Hum Spicy Hotpot
+
+The venue already has a pin from the creator's other post about it
+(DBYnXEky1Cb, 469-471 Nathan Road). Wiring this one would put a
+second pin for one venue on the map under one creator - the shape the
+owner has already ruled on twice, pulling the duplicate Cheung Hing
+Coffee Shop pin and dropping the reposted Disneyland clip. One line
+ships it if that reading is ever reversed.
 
 ====================================================================
+FINAL BATCH STATE (derived from the maker row, 2026-09-02)
 
-[Aberdeen]
-  Lau Kee Noodle *
-      - Noodles on a Boat in Hong Kong
+    104 shipped · 11 dropped · 1 deferred · 2 blocked   of 116 pinnable
 
-[Causeway Bay]
-  Matchbox Cafe
-      - Did you know there's a MINIBUS inside a CAFE in Hong Kong
-
-[Central]
-  Knockbox Cafe Mong Kok & Central
-      - cafe with locally roasted beans in hong kong
-
-[To Kwa Wan]
-  Dozy Cafe
-      - Hidden Cafe in Hong Kong
-
-[Tsim Sha Tsui]
-  Hara Station
-      - Did you know there's a JAPANESE train themed CAFE in Hong Kong
-
-[Wan Chai]
-  Honolulu Coffee Shop
-      - Today We Try: Honolulu Cafe in Hong Kong
-
-[district not stated]
-  Takimoto
-      - Today We Try: All You Can Eat Sushi & Sashimi in Hong Kong
-  Vission Bakery
-      - Trying the VIRAL Matcha Mochi Danish in Hong Kong
-
-====================================================================
-8 venues.
-
-* = I have a location for these but it looks wrong, so please
-  double-check them rather than assuming I've got them right.
+WARNING: this file's sibling analysis.json is NOT batch-scoped. It holds
+118 of this creator's posts PLUS two by other creators entirely -
+DcLpQ7yOoBU (@sato_stays, a Tokyo hotel) and DcTW0yzsEok (@poche_space,
+the Gilder Center in New York), both already live under their own maker
+rows. Counting live shortcodes out of that file reports 106 shipped of
+118 pinnable. Both numbers are wrong by two. Count from the
+@shivanidukhandee maker row instead; 104 + 12 not-live = 116 reconciles.
