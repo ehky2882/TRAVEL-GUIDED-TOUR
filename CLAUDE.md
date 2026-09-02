@@ -317,6 +317,63 @@ the address request drops to **62 named venues**. ⚠️ **Its stated total was 
   *or* the generated SQL. gh-pages `992a7ca4`: remote head **re-read in the same command as the
   push**, tree diff **exactly 3 additions, 0 deletions, nothing outside `images/`**.
 
+#### ✅ FOLLOW-UP 2 — fifteen more, because the venue STRING was wrong, not the query
+
+**linkPins 789 → 804 · makers unchanged at 263 · tours and places byte-identical.** Round 3 had
+concluded these venues simply are not in OpenStreetMap. **That was half right.** Re-reading the
+deferred list showed the failures were in the venue string the caption supplied, not in the queries:
+**a compound name never split** (`Chi Lin Nunnery & Nan Lian Gardens`), **an OSM spelling that
+differs** (`CTMA Mall` → **CTMA Centre**, `Sino Center` → **Sino Centre**, `City Gate Outlet` →
+**Citygate Outlets**, `Olympic City` → **Olympian City**), and **a shop whose ENCLOSING building is
+named in the caption and IS mapped** (D2 Place, Kwai Chung Plaza, Fashion Walk, Monster Building,
+Harbour City, Regent Hong Kong, Stanley Market). **The batch now stands at 64 shipped / 51 deferred**,
+and the address request drops to **47 named venues**.
+
+- **🎉 `Chi Ming Mahjong` is not an enclosing-feature pin at all.** Searching its caption's own house
+  number — **60 Fa Yuen Street** — returns OSM's node for **the shop itself**, `Chi Ming Majong Shop`,
+  **forward AND reverse**. The address had been sitting in the venue string the whole time, unparsed.
+- **🔴 NINE OF FIFTEEN SHORTCODES IN THE GEOCODING PASS WERE TYPED FROM MEMORY AND DO NOT EXIST IN
+  THIS BATCH.** Caught before anything was built, by re-deriving every code from `geo.json` by venue
+  name. **The build script now looks each one up and asserts it**, so a hand-typed code cannot reach
+  a pin. ⚠️ The six that happened to be right had been copied from a tool result; the nine invented
+  ones were not.
+- **🔴 A SIXTEENTH ENTRY WAS ALREADY LIVE AND THE COLLISION CHECK IS WHAT CAUGHT IT.** `Chi Lin
+  Vegetarian` shipped in #708 and its hero already existed on gh-pages. It was in the plan because
+  **the plan was built from a keyword query over all 116 rows rather than from the unshipped list.**
+  Dropped; the shipped set is now extracted with a regex over `sourceURL` and asserted per row.
+- **⚠️ ROUND 5 SWEPT THE REST AND MOSTLY CONFIRMED THE DEFERRAL.** Of fifteen remaining candidates,
+  seven returned something and **six of those returned a SUBURB, an MTR STATION or a ROAD** rather
+  than the venue — the same district-level fallback that deferred them originally, so they stay
+  deferred. **✅ Ocean Park ships** (OSM names it exactly, `type=resort`); ⚠️ its venue string was
+  **empty** — one of the two posts with no `📍`, identified from the picture in the hero audit, so it
+  had never been geocoded at all. It takes **Two Oceans Aquarium's exact tag set**.
+- **🔴 HAIDILAO TSIM SHA TSUI GEOCODED CLEANLY AND IS STILL DEFERRED.** Forward and reverse both name
+  a real Haidilao node in Tsim Sha Tsui — but **OSM carries TWO in that district**, Carnarvon Road and
+  Granville Road, and the caption says only *"Tsim Sha Tsui"*. Picking one would be a guess: the
+  Komeda / Chagee / Lin Heung wrong-branch case, deferred for the same reason.
+- **✅ All 15 heroes opened and read against their captions — zero wrong subjects**, and **four name
+  themselves in frame**: `CTMA CENTRE`, `citygate outlets`, `CHI MING MAJONG SHOP` and *"Spend a day
+  with me at Ocean Park Hong Kong"*. **The first two independently confirm the spelling corrections.**
+  ⚠️ Three are creator-forward with little of the venue visible (Long Run Beauty, Yoajung, Hikiniku to
+  Come) — flagged, not fixed. ⚠️ One will not play inline (the licensed-music gate).
+- **⚠️ `Handcrafter` and `Hoopla` are COINCIDENT — both are shops inside D2 Place and both take the
+  mall's coordinate.** Neither was nudged apart to dodge the checker. `check-place-candidates.py` goes
+  **1 EXACT → 2 with NEAR unchanged at 38**, and two markers is inside `TourSetMap.maxStacked`, so
+  nothing is unreachable. A real place candidate, **not created here**. ⚠️ **The 1 on `main` is this
+  batch's own Cheung Hing Coffee Shop pair** — an honest candidate #708 shipped without recording the
+  checker's reading, which is a gap in that entry's verification.
+- **⚠️ `Harbour City` is the loosest anchor in the batch** at roughly 600 m end to end; the pin is
+  inside the complex the caption names (the Evermore Bay precedent) but it is the weakest of the 15.
+- **Verification.** `Tours.json` **byte-stable under a Python re-dump before editing**; diffs **616**
+  then **44 insertions / 0 deletions**, both asserted **purely additive**. Mirror **self-tested 14/14**,
+  then **0 errors, 0 warnings** across 1,552 tours + 804 pins + 100 places. **0** duplicate ids, **0**
+  already-pinned sourceURLs, **0** byte-duplicate heroes, closest perceptual pair **29.3**. **0**
+  filename collisions against **6,620** gh-pages `images/` paths, listing **asserted >1,000** first;
+  bare-slug check clean. **File count asserted equal to pin count** after generating. `seed_from_toursjson.py`
+  clean at **263 / 2,356 / 2,728 / 100**; **0 `images//`**. gh-pages `b2903955` (**exactly 14
+  additions**) and `af01fd02` (**exactly 1**), each with the remote head **re-read in the same command
+  as the push**.
+
 ## Current State (2026-09-01)
 
 ### Three Hong Kong places, and an address settled by fetching the venue's own page (branch `claude/tour-links-9ynig6`, session 137 — content)
