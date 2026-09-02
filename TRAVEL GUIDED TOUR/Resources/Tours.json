@@ -81374,6 +81374,51 @@
         "02065DB6-BAFF-53AB-8B8D-73ED7D5B7E5A",
         "54C8C104-3363-56D9-8132-710A238853BD"
       ]
+    },
+    {
+      "id": "8cf359f8-28f4-5e6b-a215-80af5bc10d22",
+      "name": "Vizcaya Museum and Gardens",
+      "city": "Miami",
+      "address": "3251 South Miami Avenue, Miami",
+      "latitude": 25.744699,
+      "longitude": -80.211577,
+      "description": "An Italian Renaissance villa on the edge of Biscayne Bay, built from 1914 as a private winter estate and opened to the public as a museum. The house looks out across formal gardens laid out in terraces and parterres to the water, where a carved stone barge sits offshore as a breakwater — and the decoration throughout returns to the sea, with ships and seahorses worked into the stonework. Much of what survives is the interior as it was furnished, room by room, rather than a collection assembled later.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya-museum-and-gardens-kevinmu_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3CCC739B-0070-5A3F-8D90-64F35F740743",
+        "F0124B4E-65F1-5300-8B32-828A721BCA8B"
+      ]
+    },
+    {
+      "id": "f8099d37-0a87-596a-b3d5-5fc09f7bcaf8",
+      "name": "Pérez Art Museum Miami",
+      "city": "Miami",
+      "address": "1103 Biscayne Boulevard, Miami",
+      "latitude": 25.786033,
+      "longitude": -80.186339,
+      "description": "A contemporary art museum in Museum Park on the downtown waterfront, designed by Herzog & de Meuron and holding some three thousand works. The building is lifted clear of the ground on columns — a direct answer to a site on a floodplain — and covered by a deep cantilevered canopy that shades the terraces beneath it. Hanging columns of planting drop from that canopy: the landscape, by ArquitectonicaGEO, is not decoration but part of how the building keeps its own shade cool, and it is the first thing most people photograph.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/perez-art-museum-miami-archuncovered_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "8635B36F-F85A-5252-BB6F-EAA19A50F511",
+        "E780094A-8C2C-59B4-8F9E-BB867044E73E"
+      ]
+    },
+    {
+      "id": "b7056bff-0a98-5fad-9702-c00df11d0325",
+      "name": "1111 Lincoln Road",
+      "city": "Miami Beach",
+      "address": "1111 Lincoln Road, Miami Beach",
+      "latitude": 25.790764,
+      "longitude": -80.140819,
+      "description": "A car park at the western end of the Lincoln Road Mall, completed in 2010 to a design by Herzog & de Meuron, and one of the few buildings anywhere that is admired for being one. There is no facade and no cladding: the concrete frame is the whole building, its floor-to-floor heights varying deck by deck so that no two levels are alike. That openness is what makes the rest of it work — it holds shops and a public stair as well as cars, is used for events and shows, and is open around the clock, so the top deck is a free viewpoint over Miami Beach at any hour, with nothing between you and the city.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/1111-lincoln-road-herzogdemeuron_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "7A500BA4-EB29-57D6-B10A-D6AAB2CAA72B",
+        "ECBB560C-08D4-55BF-8DE9-227A66135479"
+      ]
     }
   ],
   "linkPins": [
@@ -121765,6 +121810,50 @@
         "Museum",
         "Art",
         "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26A5867F-EE0C-5703-9FFC-677B851DCE41",
+      "createdAt": "2026-09-02",
+      "title": "Open House Miami",
+      "shortDescription": "A post by @ninosbuildings on Instagram.",
+      "longDescription": "Have you ever experienced Miami’s architecture? Open House Miami is presented by the Miami Center for Architecture and Design, with support from Visit Miami Sign up and get your tickets at openhousemia.org #architecture #miami #design #paidpartnership",
+      "makerId": "18EFA062-6654-5ADB-AE9A-9BDF5C8B61F7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/open-house-miami-ninosbuildings_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DUYWdbKkZe-/",
+      "sourceAuthor": "@ninosbuildings",
+      "stops": [
+        {
+          "id": "1C4B5A15-2662-5FD8-BF8A-471871268599",
+          "order": 0,
+          "title": "Open House Miami",
+          "caption": "Have you ever experienced Miami’s architecture? Open House Miami is presented by the Miami Center for Architecture and Design, with support ",
+          "latitude": 25.7153516,
+          "longitude": -80.2534028,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/open-house-miami-ninosbuildings_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.7153516,
+      "centroidLongitude": -80.2534028,
+      "city": "Miami",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture"
       ],
       "priceUSD": 0
     }
