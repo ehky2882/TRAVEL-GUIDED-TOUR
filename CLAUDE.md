@@ -581,8 +581,10 @@ and the address request drops to **47 named venues**.
 
 **The owner supplied a coordinate for 58 of the deferred posts.** Every one matched a post in this
 batch — **nothing unmatched, no duplicate codes**. **linkPins 804 → 846 · makers unchanged at 263 ·
-tours and places byte-identical.** **The batch now stands at 106 shipped and 9 deferred**, and the
-address request drops from 62 named venues to **8**.
+tours and places byte-identical.** **At this point the batch stood at 106 shipped and 9 deferred**, and
+the address request dropped from 62 named venues to **8**. ⚠️ **Both figures are a dated snapshot and
+are SUPERSEDED** — #716 removed two pins and the owner then dropped the eight, closing the batch at
+**104 shipped · 11 dropped · 1 deferred · 2 blocked of 116 pinnable**. See § BATCH CLOSED below.
 
 - **42 new pins · 15 coordinate upgrades · 1 unshippable.** The upgrades move pins shipped an hour
   earlier onto the owner's venue-precise point — **Ocean Park 1,523 m**, **Hikiniku to Come 303 m**
@@ -661,12 +663,18 @@ and #714 (42 Miami pins + 5 places) — so the merged base reads **905 pins / 10
 `Tours.json` auto-merged and the result was **verified rather than trusted**, with all ten
 notes re-asserted present and every check re-run there.
 
-- **🔴 `backend/pull_pins_260902.sql` IS OWED AND HAS NOT BEEN RUN — and that is MEASURED, not
-  assumed.** After the merge the live RPC serves **907 pins against the catalogue's 905**, and
-  `@shivanidukhandee` reads **106 against 104**. `seed_from_toursjson.py` is upsert-only by
-  design, so a deletion reaches the gh-pages mirror and the bundled seed and **never reaches
-  Postgres**, which is what the app reads first. **The two removed pins are on every phone
-  until that paste happens** — the `pull_nycunfilteredstories.sql` gap, which once ran eight days.
+- **✅ `backend/pull_pins_260902.sql` HAS BEEN RUN (owner, 2026-09-02) — nothing is owed here, do not
+  tell the owner to run it again.** **Verified against the LIVE RPC, not the SQL Editor's success
+  line:** `linkPins` **907 → 905** and `@shivanidukhandee` **106 → 104**, both now matching the
+  catalogue exactly; `Xiang Bo Bo` gone. ⚠️ **`Cheung Hing Coffee Shop` IS STILL SERVED AND THAT IS
+  CORRECT** — the file deleted the *duplicate* (`c4071953…`, the Pineapple Bun Hunt post) and kept
+  the surviving twin `d3bb855c…`, confirmed present; exactly one remains where there were two, which
+  is the whole point. ⚠️ **`Cheung Hing Tea Hong` is a DIFFERENT venue 2 km away and was untouched.**
+  Session-99 dropped-key check clean on the same payload (`priceTier` 1,553 / 66 priced, `isPrivate`
+  311/311, `country` 1,552, `videoRole` 1,553, **0 link pins inside `tours`**, places 107).
+  **Why the file was needed at all:** `seed_from_toursjson.py` is upsert-only by design, so a
+  deletion reaches the gh-pages mirror and the bundled seed and **never reaches Postgres**, which is
+  what the app reads first — the `pull_nycunfilteredstories.sql` gap, which once ran eight days.
 - **🔴 THREE COORDINATES WERE BADLY WRONG AND ONE WAS IN A DIFFERENT COUNTRY.** **Aquatic Market
   sat in Luohu District, SHENZHEN** — 25 km away across an international border, while its own
   `country` field read Hong Kong. **Min Fong Hong** sat in Tai Po, 13 km from the Tsuen Wan its
