@@ -81022,6 +81022,51 @@
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "DA7E193B-C288-534C-979F-2C35778CCBD7"
       ]
+    },
+    {
+      "id": "298BE3ED-E973-5F26-8357-76E6B774F963",
+      "name": "PMQ",
+      "description": "Two seven-storey blocks facing each other across a central courtyard, linked overhead by a glass structure called Qube, with shops, studios and galleries in what used to be flats. The ground beneath held Central School from 1889 — the first government school in Hong Kong to offer Western-style education to the public, later Queen's College, where Sun Yat-sen studied as a young man. The school was badly damaged during the Japanese occupation and demolished after the war; the site sat empty until 1951, when it was rebuilt as the Police Married Quarters, the first housing of its kind for married junior Chinese officers and their families. Two future Chief Executives grew up in flats here.\n\nThe quarters were vacated in 2000 and stood empty for fourteen years — long enough for director Peter Chan to film part of the horror anthology Three in the abandoned corridors. The government planned to demolish the site; a public petition gathered more than four thousand objections, and in 2009 the buildings were preserved instead, reopening as PMQ in 2014. Almost none of that is visible from the courtyard unless you go looking: the Underground Interpretation Area, reached from the courtyard and free to enter, displays the excavated granite foundations of the original school.",
+      "latitude": 22.283717705131366,
+      "longitude": 114.15172357588767,
+      "city": "Hong Kong",
+      "address": "35 Aberdeen Street, Central, Hong Kong",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/PMQ_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "286ad678-9aa6-5b5e-abb9-bfb997f204c2",
+        "04A01BE1-4A2F-56F6-916E-4A4CCFEE9922"
+      ]
+    },
+    {
+      "id": "FC419448-1AAE-5A5A-8158-2059FF1F66B3",
+      "name": "Jamia Mosque",
+      "description": "A green-and-white prayer hall set back off Shelley Street behind an archway and a flight of stairs, carrying the only minaret on any mosque on Hong Kong Island — a single tower topped with a crescent and star. A mosque has stood on this ground since 1850, when the colonial government leased the land to the Muslim community, among the earliest formal recognitions of any non-Christian faith in the colony. The present building went up in 1915, funded entirely by a Bombay merchant, Haji Mohamed Essack Elias, to replace the earlier structure.\n\nThe first congregation mixed South Asian merchants, Muslim soldiers in the British military, and lascars — sailors on British ships docked between voyages — and the mosque was long known as the Lascar Temple. The pulpit inside was donated in 1915 by a local Chinese Muslim, Ma Chik Ting, one detail that complicates any simple picture of who worshipped here. It was declared a monument in 2022 and still fills on Fridays, many of the congregation Pakistani office workers riding the Mid-Levels Escalator up from Central — more or less the route the lascars walked, a hundred and seventy years on.",
+      "latitude": 22.28041,
+      "longitude": 114.15169,
+      "city": "Hong Kong",
+      "address": "30 Shelley Street, Mid-Levels, Hong Kong",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jamia_Mosque_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "412f51ee-1938-4f96-885a-28e93399516d",
+        "A3EF90E2-3C40-5197-9E52-77DEA90FCAE8"
+      ]
+    },
+    {
+      "id": "9D84729B-0C3A-570F-B5C4-D8587118FE97",
+      "name": "Sai Wan Swimming Shed",
+      "description": "Steps drop off Victoria Road through scrubby hillside to a green wooden shed on stilts above the water, with a narrow pier running out into the Sulphur Channel toward Green Island. This is the Chung Sing Swimming Shed — known simply as the Sai Wan Swimming Shed — and it is the only one of its kind left in the territory. The structure is plain: changing rooms, lockers, a small shrine, and the long walkway out to where swimmers enter the water, open from five in the morning until one in the afternoon for a deliberately modest fee.\n\nSheds like this were once common along the shoreline, bamboo and timber structures offering cheap harbour access at a time when public pools barely existed. The first opened in 1911 at North Point; by the 1950s there were eight or ten. Land reclamation and declining water quality finished off nearly all of them through the 1970s. This one came back in 1988 on Wan Hung-fai's application and has simply continued. The daily rhythm is telling: elderly regulars arrive at dawn for laps in the open water and are gone by midday; the pier then sits quiet until the light turns gold and the photographers arrive. The two groups barely overlap, and the shed seems to belong fully to neither.",
+      "latitude": 22.280114044064383,
+      "longitude": 114.11748779036343,
+      "city": "Hong Kong",
+      "address": "Victoria Road, Mount Davis, Hong Kong",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sai_Wan_Swimming_Shed_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "a0c68fa5-425e-527d-8db4-cb8a0cf9c999",
+        "6D149344-C83F-5007-8C39-416F275E00CC"
+      ]
     }
   ],
   "linkPins": [
@@ -113104,8 +113149,8 @@
           "order": 0,
           "title": "PMQ",
           "caption": "Central hides a secret underground chamber that 99% of people walk right past. 🤫 Deep beneath the bustling pop-up markets and designer bouti",
-          "latitude": 22.283325,
-          "longitude": 114.1518365,
+          "latitude": 22.283717705131366,
+          "longitude": 114.15172357588767,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -113117,8 +113162,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.283325,
-      "centroidLongitude": 114.1518365,
+      "centroidLatitude": 22.283717705131366,
+      "centroidLongitude": 114.15172357588767,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "culturalHeritage",
@@ -113381,8 +113426,8 @@
           "order": 0,
           "title": "Jamia Mosque",
           "caption": "Come check out this minty green mosque in Central Hong Kong and feel minty green! #hongkong #discoverhongkong #mosque #hongkongtravel #hk",
-          "latitude": 22.2801875,
-          "longitude": 114.1518125,
+          "latitude": 22.28041,
+          "longitude": 114.15169,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -113394,8 +113439,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.2801875,
-      "centroidLongitude": 114.1518125,
+      "centroidLatitude": 22.28041,
+      "centroidLongitude": 114.15169,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "sacredSites",
@@ -113474,8 +113519,8 @@
           "order": 0,
           "title": "Sai Wan Swimming Shed",
           "caption": "Check out the famous Instagram pier in Kennedy Town and get that pose ready! #hongkong #discoverhongkong #hk #saiwanswimmingshed #hongkongtr",
-          "latitude": 22.2798456,
-          "longitude": 114.1175181,
+          "latitude": 22.280114044064383,
+          "longitude": 114.11748779036343,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -113487,8 +113532,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.2798456,
-      "centroidLongitude": 114.1175181,
+      "centroidLatitude": 22.280114044064383,
+      "centroidLongitude": 114.11748779036343,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "hiddenGems",
