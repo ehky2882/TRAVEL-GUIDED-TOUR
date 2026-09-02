@@ -721,9 +721,16 @@ notes re-asserted present and every check re-run there.
   — and re-checked after the merge. Seed clean at **297 / 2,457 / 2,829 / 105**; **0 `images//`**.
   **All seven moves and all five renames verified field-by-field on the LIVE RPC.** ⚠️ The two
   removed heroes are left **orphaned** on gh-pages, matching convention.
-- **✅ BATCH CLOSED — 106 shipped · 11 dropped · 1 deferred · 2 blocked, of 118 pinnable (120 posts).**
-  Re-derived from the catalogue's own sourceURLs, not carried forward — **every earlier figure in this
-  entry is stale**, including the "104 shipped / 9 deferred / 116 pinnable" this line used to read.
+- **✅ BATCH CLOSED — 104 shipped · 11 dropped · 1 deferred · 2 blocked, of 116 pinnable (118 posts).**
+  Derived from the **maker row**, and it reconciles exactly: 104 + 12 not-live = 116.
+- **🔴 `drafts/hk-shivanidukhandee/analysis.json` IS NOT BATCH-SCOPED, AND COUNTING FROM IT OVERSTATES
+  THIS BATCH BY TWO.** It holds **120 records**, two of which belong to other creators entirely —
+  `DcLpQ7yOoBU` (`@sato_stays`, a Tokyo hotel) and `DcTW0yzsEok` (`@poche_space`, the Gilder Center in
+  New York) — both already live under their own maker rows. A first pass here counted every live
+  shortcode in that file and reported **106 shipped of 118 pinnable**; both figures were wrong, and the
+  error only surfaced because 106 disagreed with the 104 pins actually on `@shivanidukhandee`'s row.
+  **Count a creator's batch from the maker row, never from the analysis file** — and when two derivations
+  disagree, the disagreement is the finding.
 - **🔴 THE OWNER CLOSED THE ADDRESS REQUEST BY DROPPING IT, AND NOTHING HAD TO BE DELETED.** Owner:
   ***"TAKE OUT THESE TOURS. CANT FIND A RELIABLE ADDRESS FOR THESE SO WE'RE GOING TO OMIT"*** — Lau Kee
   Noodle, Matchbox Cafe, Knockbox Cafe, Dozy Cafe, Hara Station, Honolulu Coffee Shop, Takimoto,

@@ -51,3 +51,16 @@ second pin for one venue on the map under one creator - the shape the
 owner has already ruled on twice, pulling the duplicate Cheung Hing
 Coffee Shop pin and dropping the reposted Disneyland clip. One line
 ships it if that reading is ever reversed.
+
+====================================================================
+FINAL BATCH STATE (derived from the maker row, 2026-09-02)
+
+    104 shipped · 11 dropped · 1 deferred · 2 blocked   of 116 pinnable
+
+WARNING: this file's sibling analysis.json is NOT batch-scoped. It holds
+118 of this creator's posts PLUS two by other creators entirely -
+DcLpQ7yOoBU (@sato_stays, a Tokyo hotel) and DcTW0yzsEok (@poche_space,
+the Gilder Center in New York), both already live under their own maker
+rows. Counting live shortcodes out of that file reports 106 shipped of
+118 pinnable. Both numbers are wrong by two. Count from the
+@shivanidukhandee maker row instead; 104 + 12 not-live = 116 reconciles.
