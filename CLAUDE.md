@@ -374,6 +374,65 @@ and the address request drops to **47 named venues**.
   additions**) and `af01fd02` (**exactly 1**), each with the remote head **re-read in the same command
   as the push**.
 
+#### 🎉 FOLLOW-UP 3 — the owner sent coordinates, and the batch goes 64 → 106 shipped
+
+**The owner supplied a coordinate for 58 of the deferred posts.** Every one matched a post in this
+batch — **nothing unmatched, no duplicate codes**. **linkPins 804 → 846 · makers unchanged at 263 ·
+tours and places byte-identical.** **The batch now stands at 106 shipped and 9 deferred**, and the
+address request drops from 62 named venues to **8**.
+
+- **42 new pins · 15 coordinate upgrades · 1 unshippable.** The upgrades move pins shipped an hour
+  earlier onto the owner's venue-precise point — **Ocean Park 1,523 m**, **Hikiniku to Come 303 m**
+  (I had Harbour City's centroid), Citygate 113 m, Yoajung 87 m, Vivienne Westwood 80 m, and ten more
+  under 60 m. **Every moved pin was asserted `manual` before it moved**, so no geofence is disturbed.
+- **🔴 A SUPPLIED COORDINATE IS STILL NOT A VERIFIED COORDINATE.** All 58 were reverse-geocoded at
+  zoom 18 first. **54 land in Hong Kong**; the three that do not are exactly the three known
+  out-of-city posts and each lands correctly. ⚠️ **MACAU IS THE CATALOGUE'S 41st COUNTRY** and a new
+  city (Chagee at the Venetian, IONG'S Magic Shop); **India already existed but Mumbai is new** (Elco
+  Pani Puri).
+- **🔴 THE FIRST VERIFICATION PASS WAS WORTHLESS AND NEARLY SHIPPED AS A VERDICT.** Nominatim
+  rate-limited it and **52 of 57 came back HTTP 429** — which the check reported as *"region
+  outliers"*, because it tested only whether a country field was empty. **An errored record is now
+  excluded from the result file entirely**, so a request that never completed cannot produce a
+  verdict, and the re-run has retry-with-backoff. **Durable: a check that cannot reach the network
+  must not be able to return an answer** — the `check-image-duplicates.py` lesson, in a new place.
+- **🔴 THE CREATOR'S CAPTION IS WRONG ON ONE POST AND THE COORDINATE IS RIGHT.** *"📍Sai Wan Ho Rock
+  Pools"* is **20 km** from the owner's point, which sits in **Sai Kung country park** on MacLehose
+  Trail Section 2, **1.7 km from Sheung Luk Stream** — where Hong Kong's cliff-jumping rock pools
+  actually are. Sai Wan Ho is dense urban waterfront with none. **The hero settles it independently**:
+  someone mid-jump into a green pool ringed by rock. The creator's wording stays verbatim in their own
+  caption (the Schweizer convention) and it ships as **`Rock Pools at Tai Long, Sai Kung`**, asserting
+  only what the coordinate supports.
+- **⚠️ ONE COORDINATE ARRIVED AS A PLUS CODE.** Nobu's `75VF+9H`, decoded with an implementation
+  **self-tested first** against three published anchors (Eiffel `8FW4V75V+8Q` → 48.8583125, 2.2944375
+  and `7FG49Q00+` → 20.375, 2.775), the documented **floor-not-round** encode, **a refusal to guess
+  grid digits**, and 2,000 round-trips. It resolves to **`Lobby Lounge, 18 Salisbury Road`** — inside
+  the Regent, **52 m** from where Nobu already sat, so the two agree.
+- **⚠️ ONE OF THE 58 IS A BLOCKED POST AND CANNOT SHIP WHATEVER ITS COORDINATE** — `contextJSON` is
+  null, so Instagram exposes no handle, no caption and **no thumbnail**, and a pin with no hero cannot
+  exist. **Re-tested this session against two live controls in the same pass with the same UA**:
+  ~219 KB with the null against ~260 KB without.
+- **✅ All 42 heroes opened and read against their captions — zero wrong subjects**, many naming
+  themselves in frame. ⚠️ Two are creator-forward with little of the venue visible (Commune Maison,
+  Francis West); ⚠️ two will not play inline (the licensed-music gate).
+- **⚠️ THE PLACE CHECKER STAYS AT 2 EXACT BUT THE COMPOSITION CHANGED HONESTLY.** The owner's
+  coordinates **resolved** the D2 Place pair — Handcrafter and Hoopla are in D2 Place **One and Two**,
+  not one point — and **added** `The Hideout, Mui Wo`, where two posts about one venue correctly share
+  a coordinate. **NEAR unchanged at 38.** Neither pair was nudged; both are real place candidates,
+  not created here.
+- **⚠️ The handle suffix prevented one live-hero overwrite:** `images/bacha-coffee_hero.webp` already
+  exists on gh-pages.
+- **Verification.** `Tours.json` **byte-stable under a Python re-dump before editing**; diff **1,915
+  insertions / 60 deletions** — the 60 being **exactly 15 pins × 4 coordinate lines**, asserted:
+  `tours` and `places` byte-identical, existing makers unchanged, and **every existing pin proved to
+  differ ONLY in its four coordinate fields**. Mirror **self-tested 14/14**, then **0 errors, 0
+  warnings** across 1,552 tours + 846 pins + 100 places. **0** duplicate ids, **0** already-pinned
+  sourceURLs, **0** byte-duplicate heroes, closest perceptual pair **28.4**. **0** filename collisions
+  against **6,621** gh-pages paths, listing **asserted >1,000** first. **File count asserted equal to
+  pin count.** `seed_from_toursjson.py` clean at **263 / 2,398 / 2,770 / 100**; **0 `images//`**.
+  gh-pages `dbc1a287`: remote head **re-read in the same command as the push**, tree diff **exactly 42
+  additions, 0 deletions, nothing outside `images/`**.
+
 ## Current State (2026-09-01)
 
 ### Three Hong Kong places, and an address settled by fetching the venue's own page (branch `claude/tour-links-9ynig6`, session 137 — content)
