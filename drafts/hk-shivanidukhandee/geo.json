@@ -1,0 +1,2719 @@
+[
+ {
+  "code": "C--C_5yy9dT",
+  "venue": "Lau Hing Kee",
+  "inline": true,
+  "core": "Lau Hing Kee",
+  "district": null,
+  "strategy": "venue-bare",
+  "tried": [
+   "Lau Hing Kee, Hong Kong",
+   "Lau Hing Kee"
+  ],
+  "hits": [
+   {
+    "name": "金基大廈 Kam Kee Building, 琉璃街 Lau Li Street, 天后 Tin Hau, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2842378",
+    "lon": "114.1917696",
+    "cls": "place",
+    "type": "house"
+   },
+   {
+    "name": "李應記鐘錶行 Li Ying Kee Clock Watch & Optical Co., 綠柳路 Luk Lau Avenue, 彩虹邨 Choi Hung Estate, 牛池灣 Ngau Chi Wan, 黃大仙區 Wong Tai Sin District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3351604",
+    "lon": "114.2053853",
+    "cls": "shop",
+    "type": "watches"
+   }
+  ]
+ },
+ {
+  "code": "C-SWfbwSimH",
+  "venue": "Long Ping Strawberry Park Farm in Yuen Long",
+  "inline": true,
+  "core": "Long Ping Strawberry Park Farm",
+  "district": "Yuen Long",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Long Ping Strawberry Park Farm, Yuen Long, Hong Kong",
+   "Long Ping Strawberry Park Farm, Hong Kong",
+   "Long Ping Strawberry Park Farm",
+   "Yuen Long, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "元朗區 Yuen Long District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4566860",
+    "lon": "114.0207403",
+    "cls": "boundary",
+    "type": "administrative"
+   }
+  ]
+ },
+ {
+  "code": "C-fMUPyyREC",
+  "venue": "Natural Spices Shop, North Point",
+  "inline": true,
+  "core": "Natural Spices Shop",
+  "district": "North Point",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Natural Spices Shop, North Point, Hong Kong",
+   "Natural Spices Shop, Hong Kong",
+   "Natural Spices Shop",
+   "North Point, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "北角 North Point, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2906565",
+    "lon": "114.1989737",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "北角 North Point, 英皇道 King's Road, 丹拿山 Tanner Hill, 北角 North Point, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2911950",
+    "lon": "114.2004899",
+    "cls": "building",
+    "type": "train_station"
+   }
+  ]
+ },
+ {
+  "code": "C-m11rJS6Fe",
+  "venue": "New Patoy, North Point",
+  "inline": true,
+  "core": "New Patoy",
+  "district": "North Point",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "New Patoy, North Point, Hong Kong",
+   "New Patoy, Hong Kong",
+   "New Patoy",
+   "North Point, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "北角 North Point, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2906565",
+    "lon": "114.1989737",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "北角 North Point, 英皇道 King's Road, 丹拿山 Tanner Hill, 北角 North Point, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2911950",
+    "lon": "114.2004899",
+    "cls": "building",
+    "type": "train_station"
+   }
+  ]
+ },
+ {
+  "code": "C-ul4yHyzW8",
+  "venue": "Kumachan Onsen, Tai Koo",
+  "inline": true,
+  "core": "Kumachan Onsen",
+  "district": "Tai Koo",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Kumachan Onsen, Tai Koo, Hong Kong",
+   "Kumachan Onsen, Hong Kong",
+   "Kumachan Onsen",
+   "Tai Koo, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "太古 Tai Koo, 1-2, 康山道 Kornhill Road, 康山 Kornhill, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2846366",
+    "lon": "114.2163223",
+    "cls": "railway",
+    "type": "station"
+   },
+   {
+    "name": "太古 Tai Koo, 康山道 Kornhill Road, 康山 Kornhill, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2845712",
+    "lon": "114.2161428",
+    "cls": "railway",
+    "type": "stop"
+   }
+  ]
+ },
+ {
+  "code": "C3kYmrPSONt",
+  "venue": "Cheung Hing Coffee Shop",
+  "inline": false,
+  "core": "Cheung Hing Coffee Shop",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Cheung Hing Coffee Shop, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "祥興咖啡室 Cheung Hing Coffee Shop, 9-11, 奕蔭街 Yik Yam Street, 跑馬地 Happy Valley, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2693775",
+    "lon": "114.1849785",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "C4pt56xSouI",
+  "venue": "Kyung Yang Katsu",
+  "inline": true,
+  "core": "Kyung Yang Katsu",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Kyung Yang Katsu, Hong Kong",
+   "Kyung Yang Katsu"
+  ],
+  "hits": []
+ },
+ {
+  "code": "C55gGJqyOeI",
+  "venue": "Sino Center, Mong Kok",
+  "inline": true,
+  "core": "Sino Center",
+  "district": "Mong Kok",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Sino Center, Mong Kok, Hong Kong",
+   "Sino Center, Hong Kong",
+   "Sino Center",
+   "Mong Kok, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "旺角 Mong Kok, 亞皆老街 Argyle Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3193080",
+    "lon": "114.1698076",
+    "cls": "railway",
+    "type": "station"
+   },
+   {
+    "name": "旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3204156",
+    "lon": "114.1698105",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "C7eKfZNyZny",
+  "venue": "Beyrouth Bistro",
+  "inline": false,
+  "core": "Beyrouth Bistro",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Beyrouth Bistro, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "Beyrouth Bistro, 39, 擺花街 Lyndhurst Terrace, 蘇豪 SoHo, 中環 Central, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2826310",
+    "lon": "114.1534800",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "C8620oRy4ao",
+  "venue": "Dragon Centre Sham Shui Po",
+  "inline": false,
+  "core": "Dragon Centre Sham Shui Po",
+  "district": "Sham Shui Po",
+  "strategy": "venue+district",
+  "tried": [
+   "Dragon Centre Sham Shui Po, Sham Shui Po, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "西九龍中心 Dragon Centre, 37K, 欽州街 Yen Chow Street, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3311088",
+    "lon": "114.1597989",
+    "cls": "shop",
+    "type": "mall"
+   }
+  ]
+ },
+ {
+  "code": "C8hPGrTy-n9",
+  "venue": "Australia Dairy Company",
+  "inline": false,
+  "core": "Australia Dairy Company",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Australia Dairy Company, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "澳洲牛奶公司 Australia Dairy Company, 47, 白加士街 Parkes Street, 官涌 Kwun Chung, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3046126",
+    "lon": "114.1705943",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "C8zBitLSLfg",
+  "venue": "Hop Yik Tai (Sham Shui Po)",
+  "inline": false,
+  "core": "Hop Yik Tai",
+  "district": "Sham Shui Po",
+  "strategy": "venue+district",
+  "tried": [
+   "Hop Yik Tai, Sham Shui Po, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "合益泰小食, 121, 桂林街 Kweilin Street, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3304826",
+    "lon": "114.1612289",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "C9cSek2ScTO",
+  "venue": "Lan Fong Yuen",
+  "inline": false,
+  "core": "Lan Fong Yuen",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Lan Fong Yuen, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "蘭芳園 Lan Fong Yuen, 2, 結志街 Gage Street, 蘇豪 SoHo, 中環 Central, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2826400",
+    "lon": "114.1538000",
+    "cls": "amenity",
+    "type": "cafe"
+   },
+   {
+    "name": "兰芳园, 干諾道中 Connaught Road Central, 太平山 Tai Ping Shan, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2875623",
+    "lon": "114.1524982",
+    "cls": "amenity",
+    "type": "cafe"
+   }
+  ]
+ },
+ {
+  "code": "C9pM_X6yCtq",
+  "venue": "Matchbox Cafe, Causeway Bay",
+  "inline": false,
+  "core": "Matchbox Cafe",
+  "district": "Causeway Bay",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Matchbox Cafe, Causeway Bay, Hong Kong",
+   "Matchbox Cafe, Hong Kong",
+   "Matchbox Cafe",
+   "Causeway Bay, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "銅鑼灣 Causeway Bay, 東角 East Point, 銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2820777",
+    "lon": "114.1891587",
+    "cls": "place",
+    "type": "locality"
+   },
+   {
+    "name": "銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2809029",
+    "lon": "114.1870669",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "C_K7ST4SOT3",
+  "venue": "Cheung Hing Tea Hong",
+  "inline": true,
+  "core": "Cheung Hing Tea Hong",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Cheung Hing Tea Hong, Hong Kong",
+   "Cheung Hing Tea Hong"
+  ],
+  "hits": []
+ },
+ {
+  "code": "C_QUmsoSyP3",
+  "venue": "Nomi Ramen",
+  "inline": true,
+  "core": "Nomi Ramen",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Nomi Ramen, Hong Kong",
+   "Nomi Ramen"
+  ],
+  "hits": []
+ },
+ {
+  "code": "C_SooDSSUtJ",
+  "venue": "Chilli Club Wan Chai (🌱 Vegetarian Friendly)",
+  "inline": true,
+  "core": "Chilli Club Wan Chai",
+  "district": "Wan Chai",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Chilli Club Wan Chai, Wan Chai, Hong Kong",
+   "Chilli Club Wan Chai, Hong Kong",
+   "Chilli Club Wan Chai",
+   "Wan Chai, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "灣仔 Wan Chai, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2790146",
+    "lon": "114.1724833",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "灣仔 Wan Chai, 軒尼詩道 Hennessy Road, 灣仔 Wan Chai, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2775843",
+    "lon": "114.1728604",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "C_dANa4y1yH",
+  "venue": "Tung Lok Tong Sheung Wan",
+  "inline": true,
+  "core": "Tung Lok Tong Sheung Wan",
+  "district": "Sheung Wan",
+  "strategy": "venue+district",
+  "tried": [
+   "Tung Lok Tong Sheung Wan, Sheung Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "城門隧道沙田交通控制站 Shing Mun Tunnels Sha Tin Traffic Control Station, 城門隧道公路 Shing Mun Tunnel Road, 白田 Pak Tin, 沙田區 Sha Tin District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3803624",
+    "lon": "114.1657884",
+    "cls": "building",
+    "type": "yes"
+   }
+  ]
+ },
+ {
+  "code": "DA3HyZFyuQv",
+  "venue": "Vission Bakery",
+  "inline": true,
+  "core": "Vission Bakery",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Vission Bakery, Hong Kong",
+   "Vission Bakery"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DAdgU-fBag2",
+  "venue": "Hara Station, Tsim Sha Tsui",
+  "inline": true,
+  "core": "Hara Station",
+  "district": "Tsim Sha Tsui",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Hara Station, Tsim Sha Tsui, Hong Kong",
+   "Hara Station, Hong Kong",
+   "Hara Station",
+   "Tsim Sha Tsui, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2985604",
+    "lon": "114.1736032",
+    "cls": "place",
+    "type": "quarter"
+   },
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2988720",
+    "lon": "114.1741181",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DAf9XvMywQs",
+  "venue": "Chop Alley, Sheung Wan",
+  "inline": true,
+  "core": "Chop Alley",
+  "district": "Sheung Wan",
+  "strategy": "venue+district",
+  "tried": [
+   "Chop Alley, Sheung Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "圖章街 Chop Street, 文華里 Man Wa Lane, 蘇豪 SoHo, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2861935",
+    "lon": "114.1524641",
+    "cls": "amenity",
+    "type": "marketplace"
+   }
+  ]
+ },
+ {
+  "code": "DAnwHXaSEIF",
+  "venue": "Sun King Yuen Curry Restaurant, Wanchai",
+  "inline": true,
+  "core": "Sun King Yuen Curry Restaurant",
+  "district": "Wanchai",
+  "strategy": "venue",
+  "tried": [
+   "Sun King Yuen Curry Restaurant, Wanchai, Hong Kong",
+   "Sun King Yuen Curry Restaurant, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "新景園咖喱小廚 Sun King Yuen Curry Restaurant, 20, 春園街 Spring Garden Lane, 灣仔南 Wan Chai South, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2757977",
+    "lon": "114.1729321",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DBTi0lRyZxb",
+  "venue": "In’s Point, Yau Ma Tei",
+  "inline": true,
+  "core": "In’s Point",
+  "district": "Yau Ma Tei",
+  "strategy": "venue+district",
+  "tried": [
+   "In’s Point, Yau Ma Tei, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "In's Point, 彌敦道 Nathan Road, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3136246",
+    "lon": "114.1707004",
+    "cls": "shop",
+    "type": "toys"
+   }
+  ]
+ },
+ {
+  "code": "DBWBQezyHgN",
+  "venue": "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street",
+  "inline": true,
+  "core": "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street",
+  "district": "Sai Yeung Choi Street",
+  "strategy": "chinese",
+  "tried": [
+   "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street, Sai Yeung Choi Street, Hong Kong",
+   "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street, Hong Kong",
+   "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street",
+   "百味食品"
+  ],
+  "hits": [
+   {
+    "name": "百味食品, 688, 彌敦道 Nathan Road, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3195701",
+    "lon": "114.1697505",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DBYnXEky1Cb",
+  "venue": "九龍坎麻辣火鍋 469-471 Nathan Road, Yau Ma Tei (Kowloon Hum Hot Pot)",
+  "inline": false,
+  "core": "九龍坎麻辣火鍋 469-471 Nathan Road",
+  "district": "Yau Ma Tei",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "九龍坎麻辣火鍋 469-471 Nathan Road, Yau Ma Tei, Hong Kong",
+   "九龍坎麻辣火鍋 469-471 Nathan Road, Hong Kong",
+   "九龍坎麻辣火鍋 469-471 Nathan Road",
+   "九龍坎麻辣火鍋",
+   "Yau Ma Tei, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "油麻地 Yau Ma Tei, 窩打老道 Waterloo Road, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3123731",
+    "lon": "114.1707938",
+    "cls": "railway",
+    "type": "station"
+   },
+   {
+    "name": "油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3101454",
+    "lon": "114.1699860",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DCEjm3IN5cl",
+  "venue": "Takimoto, Causway Bay",
+  "inline": true,
+  "core": "Takimoto",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Takimoto, Hong Kong",
+   "Takimoto"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DCMNDJ6NmMj",
+  "venue": "Yee Shun Milk Company",
+  "inline": true,
+  "core": "Yee Shun Milk Company",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Yee Shun Milk Company, Hong Kong",
+   "Yee Shun Milk Company"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DDo5vtsyere",
+  "venue": "Min Fong Hong Tsuen Wan (民豐粉麵行)",
+  "inline": false,
+  "core": "Min Fong Hong Tsuen Wan",
+  "district": "Tsuen Wan",
+  "strategy": "venue+district",
+  "tried": [
+   "Min Fong Hong Tsuen Wan, Tsuen Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "民主牆 Democracy Board, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4676690",
+    "lon": "114.1939716",
+    "cls": "place",
+    "type": "locality"
+   },
+   {
+    "name": "蒙民偉圖書館, 露屏路 Lo Ping Road, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4689643",
+    "lon": "114.1941970",
+    "cls": "amenity",
+    "type": "library"
+   }
+  ]
+ },
+ {
+  "code": "DE2BIp_S-ZP",
+  "venue": "New Zealand Organic Farm",
+  "inline": true,
+  "core": "New Zealand Organic Farm",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "New Zealand Organic Farm, Hong Kong",
+   "New Zealand Organic Farm"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DE909ueyDJZ",
+  "venue": "Shanghai Street Yau Ma Tei",
+  "inline": true,
+  "core": "Shanghai Street Yau Ma Tei",
+  "district": "Shanghai Street",
+  "strategy": "venue+district",
+  "tried": [
+   "Shanghai Street Yau Ma Tei, Shanghai Street, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "油蔴地公共圖書館 Yau Ma Tei Public Library, 251, 上海街 Shanghai Street, 官涌 Kwun Chung, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3093548",
+    "lon": "114.1698278",
+    "cls": "amenity",
+    "type": "library"
+   },
+   {
+    "name": "香港賽馬會 The Hong Kong Jockey Club, 213-219,223-225, 上海街 Shanghai Street, 官涌 Kwun Chung, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3086304",
+    "lon": "114.1699513",
+    "cls": "shop",
+    "type": "bookmaker"
+   }
+  ]
+ },
+ {
+  "code": "DEHxPxEyNev",
+  "venue": "Bagel Gogo, Hung Hom",
+  "inline": false,
+  "core": "Bagel Gogo",
+  "district": "Hung Hom",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Bagel Gogo, Hung Hom, Hong Kong",
+   "Bagel Gogo, Hong Kong",
+   "Bagel Gogo",
+   "Hung Hom, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "紅磡 Hung Hom, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3068983",
+    "lon": "114.1863163",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "紅磡 Hung Hom, 8, 暢運道 Cheong Wan Road, 紅磡灣 Hung Hom Bay, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3029008",
+    "lon": "114.1822480",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DEKU7c3SyFV",
+  "venue": "Kadorar Bakery, Yau Ma Tei",
+  "inline": false,
+  "core": "Kadorar Bakery",
+  "district": "Yau Ma Tei",
+  "strategy": "venue+district",
+  "tried": [
+   "Kadorar Bakery, Yau Ma Tei, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "嘉多娜 Kadorar Bakery, 文苑街 Man Yuen Street, 渡船角 Ferry Point, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3072667",
+    "lon": "114.1671481",
+    "cls": "shop",
+    "type": "bakery"
+   }
+  ]
+ },
+ {
+  "code": "DEUqjTxSl-5",
+  "venue": "Chi Ming Mahjong, 60 Fa Yuen Street, Mong Kok",
+  "inline": false,
+  "core": "Chi Ming Mahjong",
+  "district": "Fa Yuen Street",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Chi Ming Mahjong, Fa Yuen Street, Hong Kong",
+   "Chi Ming Mahjong, Hong Kong",
+   "Chi Ming Mahjong",
+   "Fa Yuen Street, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "花園街 Fa Yuen Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3232576",
+    "lon": "114.1703263",
+    "cls": "highway",
+    "type": "residential"
+   },
+   {
+    "name": "花園街 Fa Yuen Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3176710",
+    "lon": "114.1714958",
+    "cls": "highway",
+    "type": "unclassified"
+   }
+  ]
+ },
+ {
+  "code": "DEcbpCkSpkC",
+  "venue": "Komeda Cafe, Whampoa",
+  "inline": true,
+  "core": "Komeda Cafe",
+  "district": "Whampoa",
+  "strategy": "venue",
+  "tried": [
+   "Komeda Cafe, Whampoa, Hong Kong",
+   "Komeda Cafe, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "コメダ珈琲店 KOMEDA'S Coffee, 38, 承啟道 Shing Kai Road, 啟德坊 Kai Tak Grid Neighbourhood, 馬頭角 Ma Tau Kok, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3252702",
+    "lon": "114.1958209",
+    "cls": "amenity",
+    "type": "cafe"
+   }
+  ]
+ },
+ {
+  "code": "DEe886tyAeY",
+  "venue": "Yau Ma Tei",
+  "inline": true,
+  "core": "Yau Ma Tei",
+  "district": "Yau Ma Tei",
+  "strategy": "venue+district",
+  "tried": [
+   "Yau Ma Tei, Yau Ma Tei, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "油麻地 Yau Ma Tei, 窩打老道 Waterloo Road, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3123731",
+    "lon": "114.1707938",
+    "cls": "railway",
+    "type": "station"
+   },
+   {
+    "name": "油麻地 Yau Ma Tei, 彌敦道 Nathan Road, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3130800",
+    "lon": "114.1707196",
+    "cls": "railway",
+    "type": "stop"
+   }
+  ]
+ },
+ {
+  "code": "DEkI_7pSBZc",
+  "venue": "Chi Lin Vegetarian, Chi Lin Nunnery",
+  "inline": true,
+  "core": "Chi Lin Vegetarian",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Chi Lin Vegetarian, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "志蓮素齋 Chi Lin Vegetarian, 鳳德道 Fung Tak Road, 斧山 Hammer Hill, 黃大仙區 Wong Tai Sin District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3391382",
+    "lon": "114.2059697",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DEmklh4Sgcu",
+  "venue": "Chi Lin Nunnery & Nan Lian Gardens",
+  "inline": true,
+  "core": "Chi Lin Nunnery & Nan Lian Gardens",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Chi Lin Nunnery & Nan Lian Gardens, Hong Kong",
+   "Chi Lin Nunnery & Nan Lian Gardens"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DEpMD8VSH-g",
+  "venue": "Francis West, Peel Street Central",
+  "inline": true,
+  "core": "Francis West",
+  "district": "Peel Street",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Francis West, Peel Street, Hong Kong",
+   "Francis West, Hong Kong",
+   "Francis West",
+   "Peel Street, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "卑利街 Peel Street, 蘇豪 SoHo, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2837651",
+    "lon": "114.1537724",
+    "cls": "highway",
+    "type": "pedestrian"
+   },
+   {
+    "name": "卑利街 Peel Street, 蘇豪 SoHo, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2819953",
+    "lon": "114.1519587",
+    "cls": "highway",
+    "type": "residential"
+   }
+  ]
+ },
+ {
+  "code": "DEzgWuOSgRr",
+  "venue": "Ming Wah Bakery, Mong Kok",
+  "inline": true,
+  "core": "Ming Wah Bakery",
+  "district": "Mong Kok",
+  "strategy": "venue+district",
+  "tried": [
+   "Ming Wah Bakery, Mong Kok, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "明華餅家 Ming Wah Bakery, 花園街 Fa Yuen Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3165232",
+    "lon": "114.1717729",
+    "cls": "shop",
+    "type": "bakery"
+   }
+  ]
+ },
+ {
+  "code": "DF5Ai-mydcw",
+  "venue": "Fuk Wing Street",
+  "inline": true,
+  "core": "Fuk Wing Street",
+  "district": "Fuk Wing Street",
+  "strategy": "venue+district",
+  "tried": [
+   "Fuk Wing Street, Fuk Wing Street, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "福榮街官立小學 Fuk Wing Street Government Primary School, 231, 福榮街 Fuk Wing Street, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3340732",
+    "lon": "114.1595380",
+    "cls": "amenity",
+    "type": "school"
+   },
+   {
+    "name": "福榮街238號 Fuk Wing Street 238, 238, 福榮街 Fuk Wing Street, 李鄭屋 Li Cheng Uk, 長沙灣 Cheung Sha Wan, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3353285",
+    "lon": "114.1587101",
+    "cls": "building",
+    "type": "yes"
+   }
+  ]
+ },
+ {
+  "code": "DF7l_AAyCrS",
+  "venue": "Yu Chau Street",
+  "inline": true,
+  "core": "Yu Chau Street",
+  "district": "Yu Chau Street",
+  "strategy": "venue+district",
+  "tried": [
+   "Yu Chau Street, Yu Chau Street, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "香港保護兒童會 Hong Kong Society for the Protection of Children, 汝州街 Yu Chau Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3258372",
+    "lon": "114.1666533",
+    "cls": "highway",
+    "type": "bus_stop"
+   },
+   {
+    "name": "香港賽馬會 The Hong Kong Jockey Club, 251-255, 汝州街 Yu Chau Street, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3297900",
+    "lon": "114.1614600",
+    "cls": "shop",
+    "type": "bookmaker"
+   }
+  ]
+ },
+ {
+  "code": "DFIKrVtSe70",
+  "venue": "Nobu, The Regent",
+  "inline": true,
+  "core": "Nobu",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Nobu, Hong Kong",
+   "Nobu"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DFKrS6EytYT",
+  "venue": "Handcrafter, D2 Place Lai Chi Kok",
+  "inline": true,
+  "core": "Handcrafter",
+  "district": "Lai Chi Kok",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Handcrafter, Lai Chi Kok, Hong Kong",
+   "Handcrafter, Hong Kong",
+   "Handcrafter",
+   "Lai Chi Kok, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "荔枝角 Lai Chi Kok, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3370495",
+    "lon": "114.1420691",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "荔枝角 Lai Chi Kok, 長沙灣道 Cheung Sha Wan Road, 長沙灣工業區 Cheung Sha Wan Industrial Area, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3373962",
+    "lon": "114.1484136",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DFNbpQxSeBF",
+  "venue": "Yuk Kin Fast Food, Sheung Wan",
+  "inline": true,
+  "core": "Yuk Kin Fast Food",
+  "district": "Sheung Wan",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Yuk Kin Fast Food, Sheung Wan, Hong Kong",
+   "Yuk Kin Fast Food, Hong Kong",
+   "Yuk Kin Fast Food",
+   "Sheung Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "上環 Sheung Wan, 中區 Central District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2865158",
+    "lon": "114.1502080",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "上環 Sheung Wan, 德輔道中 Des Voeux Road Central, 太平山 Tai Ping Shan, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2868490",
+    "lon": "114.1508610",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DFVBmUZylg9",
+  "venue": "Man Mo Temple, Sheung Wan",
+  "inline": true,
+  "core": "Man Mo Temple",
+  "district": "Sheung Wan",
+  "strategy": "venue+district",
+  "tried": [
+   "Man Mo Temple, Sheung Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "文武廟 Man Mo Temple, 124-126, 荷李活道 Hollywood Road, 太平山 Tai Ping Shan, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2838713",
+    "lon": "114.1501584",
+    "cls": "historic",
+    "type": "temple"
+   },
+   {
+    "name": "文武廟 Man Mo Temple, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2839512",
+    "lon": "114.1500968",
+    "cls": "landuse",
+    "type": "religious"
+   }
+  ]
+ },
+ {
+  "code": "DFkcm40yU2E",
+  "venue": "Messina, The Peak",
+  "inline": false,
+  "core": "Messina",
+  "district": "The Peak",
+  "strategy": "venue+district",
+  "tried": [
+   "Messina, The Peak, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "Messina, 山頂道 Peak Road, 爐峰峽 Victoria Gap, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2705760",
+    "lon": "114.1497007",
+    "cls": "amenity",
+    "type": "cafe"
+   }
+  ]
+ },
+ {
+  "code": "DFnAVUgyX9S",
+  "venue": "Wong Tai Sin Temple",
+  "inline": true,
+  "core": "Wong Tai Sin Temple",
+  "district": "Wong Tai Sin",
+  "strategy": "venue+district",
+  "tried": [
+   "Wong Tai Sin Temple, Wong Tai Sin, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "黃大仙祠 Wong Tai Sin Temple, 2, 黃大仙 Wong Tai Sin, 黃大仙區 Wong Tai Sin District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3428184",
+    "lon": "114.1935509",
+    "cls": "amenity",
+    "type": "place_of_worship"
+   },
+   {
+    "name": "黃大仙廟 Wong Tai Sin Temple, 龍翔道 Lung Cheung Road, 鳳凰新村 Fung Wong New Village, 黃大仙 Wong Tai Sin, 黃大仙區 Wong Tai Sin District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3415646",
+    "lon": "114.1956709",
+    "cls": "highway",
+    "type": "bus_stop"
+   }
+  ]
+ },
+ {
+  "code": "DFuwX58Sdge",
+  "venue": "Duen Kee, Tsuen Wan",
+  "inline": true,
+  "core": "Duen Kee",
+  "district": "Tsuen Wan",
+  "strategy": "venue+district",
+  "tried": [
+   "Duen Kee, Tsuen Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "端記茶樓 Duen Kee Chinese Restaurant, 荃錦公路 Route Twisk, 川龍 Chuen Lung, 荃灣區 Tsuen Wan District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3946014",
+    "lon": "114.1082559",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DFz3e_nSs7D",
+  "venue": "IONG’S Magic Shop, Macau",
+  "inline": true,
+  "core": "IONG’S Magic Shop",
+  "district": "Macau",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "IONG’S Magic Shop, Macau, Hong Kong",
+   "IONG’S Magic Shop, Hong Kong",
+   "IONG’S Magic Shop",
+   "Macau, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "港珠澳大橋香港連接路 Hong Kong-Zhuhai-Macao Bridge Hong Kong Link Road Ponte Hong Kong-Zhuhai-Macau, 赤鱲角 Chek Lap Kok, 大嶼山 Lantau, 離島區 Islands District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3145285",
+    "lon": "113.9472446",
+    "cls": "highway",
+    "type": "motorway"
+   },
+   {
+    "name": "港珠澳大橋香港連接路 Hong Kong-Zhuhai-Macao Bridge Hong Kong Link Road, 赤鱲角 Chek Lap Kok, 大嶼山 Lantau, 離島區 Islands District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3214619",
+    "lon": "113.9540057",
+    "cls": "highway",
+    "type": "motorway"
+   }
+  ]
+ },
+ {
+  "code": "DG5c5O3SQbW",
+  "venue": "Kanto Hobby, Fuk Wing Street",
+  "inline": true,
+  "core": "Kanto Hobby",
+  "district": "Fuk Wing Street",
+  "strategy": "venue+district",
+  "tried": [
+   "Kanto Hobby, Fuk Wing Street, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "Kanto Hobby, 50, 福榮街 Fuk Wing Street, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3311746",
+    "lon": "114.1639405",
+    "cls": "shop",
+    "type": "toys"
+   }
+  ]
+ },
+ {
+  "code": "DG8JZFdST8G",
+  "venue": "Kung Wo Beancurd Factory, Sham Shui Po",
+  "inline": true,
+  "core": "Kung Wo Beancurd Factory",
+  "district": "Sham Shui Po",
+  "strategy": "venue+district",
+  "tried": [
+   "Kung Wo Beancurd Factory, Sham Shui Po, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "公和荳品廠 Kung Wo Beancurd Factory, 116C, 北河街 Pei Ho Street, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3310597",
+    "lon": "114.1634810",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DGAsg8HyIdt",
+  "venue": "雞蛋仔屋 G/F Chiap Thong Building, To Kwa Wan",
+  "inline": true,
+  "core": "雞蛋仔屋 G/F Chiap Thong Building",
+  "district": "To Kwa Wan",
+  "strategy": "chinese",
+  "tried": [
+   "雞蛋仔屋 G/F Chiap Thong Building, To Kwa Wan, Hong Kong",
+   "雞蛋仔屋 G/F Chiap Thong Building, Hong Kong",
+   "雞蛋仔屋 G/F Chiap Thong Building",
+   "雞蛋仔屋"
+  ],
+  "hits": [
+   {
+    "name": "船灣淡水湖計劃第二期 Plover Cove Scheme Stage II, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4580862",
+    "lon": "114.1508995",
+    "cls": "waterway",
+    "type": "canal"
+   },
+   {
+    "name": "担水徑脊, 林村 Lam Tsuen, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4592753",
+    "lon": "114.1323141",
+    "cls": "highway",
+    "type": "path"
+   }
+  ]
+ },
+ {
+  "code": "DGF99BjSo-y",
+  "venue": "Books & Co Sai Ying Pun",
+  "inline": true,
+  "core": "Books & Co Sai Ying Pun",
+  "district": "Sai Ying Pun",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Books & Co Sai Ying Pun, Sai Ying Pun, Hong Kong",
+   "Books & Co Sai Ying Pun, Hong Kong",
+   "Books & Co Sai Ying Pun",
+   "Sai Ying Pun, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "西營盤 Sai Ying Pun, 西環 Sai Wan, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2861210",
+    "lon": "114.1420862",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "西營盤 Sai Ying Pun, 38-40, 第三街 Third Street, 西營盤 Sai Ying Pun, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2854347",
+    "lon": "114.1426424",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DGNps_tSXMw",
+  "venue": "Cheung Hing Coffee Shop",
+  "inline": true,
+  "core": "Cheung Hing Coffee Shop",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Cheung Hing Coffee Shop, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "祥興咖啡室 Cheung Hing Coffee Shop, 9-11, 奕蔭街 Yik Yam Street, 跑馬地 Happy Valley, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2693775",
+    "lon": "114.1849785",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DGSzsSiSHlq",
+  "venue": "Vivienne Westwood Café, Fashion Walk, Causeway Bay",
+  "inline": true,
+  "core": "Vivienne Westwood Café",
+  "district": "Causeway Bay",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Vivienne Westwood Café, Causeway Bay, Hong Kong",
+   "Vivienne Westwood Café, Hong Kong",
+   "Vivienne Westwood Café",
+   "Causeway Bay, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "銅鑼灣 Causeway Bay, 東角 East Point, 銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2820777",
+    "lon": "114.1891587",
+    "cls": "place",
+    "type": "locality"
+   },
+   {
+    "name": "銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2809029",
+    "lon": "114.1870669",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DGiSvR1SVRA",
+  "venue": "Xiang Bo Bo, 湘餑餑肉湯泡飯",
+  "inline": true,
+  "core": "Xiang Bo Bo",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Xiang Bo Bo, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "日立化成電子材料(香港)有限公司 Hitachi Chemical Electronic Materials (Hong Kong) Ltd., 6-8, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4574012",
+    "lon": "114.1827568",
+    "cls": "landuse",
+    "type": "industrial"
+   },
+   {
+    "name": "香港印鈔有限公司 Hong Kong Note Printing Ltd., 2-4, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4554130",
+    "lon": "114.1817323",
+    "cls": "landuse",
+    "type": "industrial"
+   }
+  ]
+ },
+ {
+  "code": "DGnfyQmSXP-",
+  "venue": "Jade Garden, Tsim Sha Tsui",
+  "inline": false,
+  "core": "Jade Garden",
+  "district": "Tsim Sha Tsui",
+  "strategy": "venue+district",
+  "tried": [
+   "Jade Garden, Tsim Sha Tsui, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "翠園 Jade Garden, 3--27, 廣東道 Canton Road, 尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2946234",
+    "lon": "114.1694008",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DGvE7hwSzXO",
+  "venue": "Man Hing Garment Factory - Sham Shui Po (Exit B1)",
+  "inline": true,
+  "core": "Man Hing Garment Factory - Sham Shui Po",
+  "district": "Sham Shui Po",
+  "strategy": "venue+district",
+  "tried": [
+   "Man Hing Garment Factory - Sham Shui Po, Sham Shui Po, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "萬興製衣, 180, 長沙灣道 Cheung Sha Wan Road, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3302648",
+    "lon": "114.1631673",
+    "cls": "shop",
+    "type": "bag"
+   }
+  ]
+ },
+ {
+  "code": "DH-4EjPSnPK",
+  "venue": "SLO WOOD, Kennedy town",
+  "inline": true,
+  "core": "SLO WOOD",
+  "district": "Kennedy Town",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "SLO WOOD, Kennedy Town, Hong Kong",
+   "SLO WOOD, Hong Kong",
+   "SLO WOOD",
+   "Kennedy Town, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "堅尼地城 Kennedy Town, 西環 Sai Wan, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2824348",
+    "lon": "114.1284168",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "堅尼地城 Kennedy Town, 12N, 士美菲路 Smithfield, 堅尼地城 Kennedy Town, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2814852",
+    "lon": "114.1291911",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DIWHSCxybHo",
+  "venue": "Tai Wo Tang, Kowloon City",
+  "inline": false,
+  "core": "Tai Wo Tang",
+  "district": "Kowloon City",
+  "strategy": "venue+district",
+  "tried": [
+   "Tai Wo Tang, Kowloon City, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "大和堂 Tai Wo Tang, 24, 衙前塱道 Nga Tsin Long Road, 靠背石 Kau Pui Shek, 九龍城 Kowloon City, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3285761",
+    "lon": "114.1893608",
+    "cls": "amenity",
+    "type": "cafe"
+   }
+  ]
+ },
+ {
+  "code": "DId5QRkSesV",
+  "venue": "A Cap Coconut, Kowloon City",
+  "inline": true,
+  "core": "A Cap Coconut",
+  "district": "Kowloon City",
+  "strategy": "venue",
+  "tried": [
+   "A Cap Coconut, Kowloon City, Hong Kong",
+   "A Cap Coconut, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "其星椰子專門店 A Cap Coconut Oil, 佐敦道 Jordan Road, 官涌 Kwun Chung, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3053878",
+    "lon": "114.1688268",
+    "cls": "shop",
+    "type": "convenience"
+   }
+  ]
+ },
+ {
+  "code": "DJ9CBV4yR98",
+  "venue": "Sai Wan Ho Rock Pools",
+  "inline": true,
+  "core": "Sai Wan Ho Rock Pools",
+  "district": "Sai Wan Ho",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Sai Wan Ho Rock Pools, Sai Wan Ho, Hong Kong",
+   "Sai Wan Ho Rock Pools, Hong Kong",
+   "Sai Wan Ho Rock Pools",
+   "Sai Wan Ho, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "西灣河 Sai Wan Ho, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2824457",
+    "lon": "114.2215064",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "西灣河 Sai Wan Ho, 111, 筲箕灣道 Shau Kei Wan Road, 西灣河 Sai Wan Ho, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2816305",
+    "lon": "114.2222887",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DJT-_Riyi33",
+  "venue": "Gold Coast Piazza",
+  "inline": true,
+  "core": "Gold Coast Piazza",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Gold Coast Piazza, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "黃金海岸商場 Gold Coast Piazza, 黃金海岸百葉徑, 掃管灘 So Kwun Tan, 屯門區 Tuen Mun District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3720182",
+    "lon": "113.9925347",
+    "cls": "shop",
+    "type": "mall"
+   }
+  ]
+ },
+ {
+  "code": "DJooflIzJ-Z",
+  "venue": "Ma Wan Tung Beach",
+  "inline": false,
+  "core": "Ma Wan Tung Beach",
+  "district": "Ma Wan",
+  "strategy": "venue+district",
+  "tried": [
+   "Ma Wan Tung Beach, Ma Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "馬灣東灣泳灘 Ma Wan Tung Wan Beach, 馬灣 Ma Wan, 荃灣區 Tsuen Wan District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3505338",
+    "lon": "114.0615458",
+    "cls": "natural",
+    "type": "beach"
+   }
+  ]
+ },
+ {
+  "code": "DK65cH2SfO8",
+  "venue": "Bacha Coffee",
+  "inline": true,
+  "core": "Bacha Coffee",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Bacha Coffee, Hong Kong",
+   "Bacha Coffee"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DK9Z3dQyNe8",
+  "venue": "Honolulu Coffee Shop, Wanchai",
+  "inline": true,
+  "core": "Honolulu Coffee Shop",
+  "district": "Wanchai",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Honolulu Coffee Shop, Wanchai, Hong Kong",
+   "Honolulu Coffee Shop, Hong Kong",
+   "Honolulu Coffee Shop",
+   "Wanchai, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "灣仔政府大樓 Wanchai Tower, 12, 港灣道 Harbour Road, 灣仔 Wan Chai, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2801880",
+    "lon": "114.1724022",
+    "cls": "office",
+    "type": "government"
+   },
+   {
+    "name": "香港灣仔帝盛酒店 Dorsett Wanchai Hong Kong Hotel, 387, 皇后大道東 Queen's Road East, 灣仔南 Wan Chai South, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2745264",
+    "lon": "114.1789425",
+    "cls": "tourism",
+    "type": "hotel"
+   }
+  ]
+ },
+ {
+  "code": "DKjjYmEyybo",
+  "venue": "Hong Kong Disneyland",
+  "inline": true,
+  "core": "Hong Kong Disneyland",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Hong Kong Disneyland, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "香港迪士尼樂園 Hong Kong Disneyland, 迎樂路 Park Promenade, 大嶼山 Lantau, 離島區 Islands District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3130698",
+    "lon": "114.0409846",
+    "cls": "tourism",
+    "type": "theme_park"
+   }
+  ]
+ },
+ {
+  "code": "DKtzT5VSbe2",
+  "venue": "Knockbox Cafe Mong Kok & Central",
+  "inline": false,
+  "core": "Knockbox Cafe Mong Kok & Central",
+  "district": "Central",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Knockbox Cafe Mong Kok & Central, Central, Hong Kong",
+   "Knockbox Cafe Mong Kok & Central, Hong Kong",
+   "Knockbox Cafe Mong Kok & Central",
+   "Central, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "中環 Central, 中區 Central District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2818286",
+    "lon": "114.1582784",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "中環 Central, 遮打道 Chater Road, 政府山 Government Hill, 中環 Central, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2819377",
+    "lon": "114.1580765",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DKzAegSSTqk",
+  "venue": "Chicken Egg Boy",
+  "inline": true,
+  "core": "Chicken Egg Boy",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Chicken Egg Boy, Hong Kong",
+   "Chicken Egg Boy"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DL2Mh7mS7JD",
+  "venue": "Pane E Latte",
+  "inline": false,
+  "core": "Pane E Latte",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Pane E Latte, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "Pane e Latte, 赤柱大街 Stanley Main Street, 赤柱村 Stanley Village, 南區 Southern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2186164",
+    "lon": "114.2117406",
+    "cls": "building",
+    "type": "apartments"
+   }
+  ]
+ },
+ {
+  "code": "DLH6DC5S4QM",
+  "venue": "commaa cafe sheung wan",
+  "inline": true,
+  "core": "commaa cafe sheung wan",
+  "district": "Sheung Wan",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "commaa cafe sheung wan, Sheung Wan, Hong Kong",
+   "commaa cafe sheung wan, Hong Kong",
+   "commaa cafe sheung wan",
+   "Sheung Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "上環 Sheung Wan, 中區 Central District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2865158",
+    "lon": "114.1502080",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "上環 Sheung Wan, 德輔道中 Des Voeux Road Central, 太平山 Tai Ping Shan, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2868490",
+    "lon": "114.1508610",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DLKP_UcBUT9",
+  "venue": "Upper Lascar Row, Sheung Wan",
+  "inline": true,
+  "core": "Upper Lascar Row",
+  "district": "Upper Lascar Row",
+  "strategy": "venue",
+  "tried": [
+   "Upper Lascar Row, Upper Lascar Row, Hong Kong",
+   "Upper Lascar Row, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "摩羅上街 Upper Lascar Row, 太平山 Tai Ping Shan, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2848893",
+    "lon": "114.1496583",
+    "cls": "highway",
+    "type": "footway"
+   }
+  ]
+ },
+ {
+  "code": "DLM6ikQyC-J",
+  "venue": "Lam Tsuen Wishing Tree, Fong Ma Village",
+  "inline": true,
+  "core": "Lam Tsuen Wishing Tree",
+  "district": "Lam Tsuen",
+  "strategy": "venue+district",
+  "tried": [
+   "Lam Tsuen Wishing Tree, Lam Tsuen, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "林村許願樹 Lam Tsuen Wishing Tree, 林村鄉公所路 Lam Tsuen Heung Kung Sho Road, 林村 Lam Tsuen, 大埔 Tai Po, 大埔區 Tai Po District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4563045",
+    "lon": "114.1426655",
+    "cls": "natural",
+    "type": "tree"
+   }
+  ]
+ },
+ {
+  "code": "DLPtXqBSz3R",
+  "venue": "",
+  "inline": true,
+  "core": "",
+  "district": null,
+  "strategy": null,
+  "tried": [],
+  "hits": []
+ },
+ {
+  "code": "DLXOqgDyUGo",
+  "venue": "City Gate Outlet, Tung Chung",
+  "inline": true,
+  "core": "City Gate Outlet",
+  "district": "Tung Chung",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "City Gate Outlet, Tung Chung, Hong Kong",
+   "City Gate Outlet, Hong Kong",
+   "City Gate Outlet",
+   "Tung Chung, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "東涌 Tung Chung, 達東路 Tat Tung Road, 東涌市中心 Tung Chung Town Centre, 大嶼山 Lantau, 離島區 Islands District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.2892449",
+    "lon": "113.9413739",
+    "cls": "railway",
+    "type": "station"
+   },
+   {
+    "name": "東涌 Tung Chung, 香港 Hong Kong, 中国",
+    "lat": "22.2871495",
+    "lon": "113.9403971",
+    "cls": "place",
+    "type": "town"
+   }
+  ]
+ },
+ {
+  "code": "DLcVFHeyPxm",
+  "venue": "Haidilao HotPot Tsim Sha Tsui",
+  "inline": true,
+  "core": "Haidilao HotPot Tsim Sha Tsui",
+  "district": "Tsim Sha Tsui",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Haidilao HotPot Tsim Sha Tsui, Tsim Sha Tsui, Hong Kong",
+   "Haidilao HotPot Tsim Sha Tsui, Hong Kong",
+   "Haidilao HotPot Tsim Sha Tsui",
+   "Tsim Sha Tsui, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2985604",
+    "lon": "114.1736032",
+    "cls": "place",
+    "type": "quarter"
+   },
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2988720",
+    "lon": "114.1741181",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DLr4OsiSUJa",
+  "venue": "Lucky 7 Stanley Market",
+  "inline": true,
+  "core": "Lucky 7 Stanley Market",
+  "district": "Stanley",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Lucky 7 Stanley Market, Stanley, Hong Kong",
+   "Lucky 7 Stanley Market, Hong Kong",
+   "Lucky 7 Stanley Market",
+   "Stanley, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "赤柱 Stanley, 南區 Southern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2143908",
+    "lon": "114.2159129",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DLuaIw6y47O",
+  "venue": "Cuit, Sai Kung",
+  "inline": true,
+  "core": "Cuit",
+  "district": "Sai Kung",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Cuit, Sai Kung, Hong Kong",
+   "Cuit, Hong Kong",
+   "Cuit",
+   "Sai Kung, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "西貢 Sai Kung, 香港 Hong Kong, 中国",
+    "lat": "22.3822489",
+    "lon": "114.2728277",
+    "cls": "place",
+    "type": "town"
+   }
+  ]
+ },
+ {
+  "code": "DLw-7zxyIgW",
+  "venue": "West Kowloon Cultural District",
+  "inline": false,
+  "core": "West Kowloon Cultural District",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "West Kowloon Cultural District, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "西九文化區 West Kowloon Cultural District, 西九龍 West Kowloon, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3017093",
+    "lon": "114.1629845",
+    "cls": "place",
+    "type": "city_block"
+   },
+   {
+    "name": "西九文化區 West Kowloon Cultural District, 博物館道 Museum Drive, 西九龍 West Kowloon, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3011015",
+    "lon": "114.1575134",
+    "cls": "highway",
+    "type": "bus_stop"
+   }
+  ]
+ },
+ {
+  "code": "DM-VQEBSqLx",
+  "venue": "Schoodles",
+  "inline": true,
+  "core": "Schoodles",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Schoodles, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "Schoodles, 新填地街 Reclamation Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3167057",
+    "lon": "114.1680530",
+    "cls": "amenity",
+    "type": "fast_food"
+   }
+  ]
+ },
+ {
+  "code": "DMFhntMS2BY",
+  "venue": "Milkfill, Tsim Sha Tsui",
+  "inline": true,
+  "core": "Milkfill",
+  "district": "Tsim Sha Tsui",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Milkfill, Tsim Sha Tsui, Hong Kong",
+   "Milkfill, Hong Kong",
+   "Milkfill",
+   "Tsim Sha Tsui, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2985604",
+    "lon": "114.1736032",
+    "cls": "place",
+    "type": "quarter"
+   },
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2988720",
+    "lon": "114.1741181",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DMIUurSyx6o",
+  "venue": "Golden Computer Arcade, Sham Shui Po",
+  "inline": true,
+  "core": "Golden Computer Arcade",
+  "district": "Sham Shui Po",
+  "strategy": "venue+district",
+  "tried": [
+   "Golden Computer Arcade, Sham Shui Po, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "黃金電腦商場 Golden Computer Arcade, 福華街 Fuk Wa Street, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3320158",
+    "lon": "114.1620314",
+    "cls": "shop",
+    "type": "mall"
+   }
+  ]
+ },
+ {
+  "code": "DMc8XgHytj4",
+  "venue": "CTMA Mall, Mong Kong",
+  "inline": true,
+  "core": "CTMA Mall",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "CTMA Mall, Hong Kong",
+   "CTMA Mall"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DMz6jSxy0u8",
+  "venue": "Kowloon Hum Spicy Hotpot",
+  "inline": true,
+  "core": "Kowloon Hum Spicy Hotpot",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "Kowloon Hum Spicy Hotpot, Hong Kong",
+   "Kowloon Hum Spicy Hotpot"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DQ37PkcEajI",
+  "venue": "Hang Sing LP Records, Sham Shui Po",
+  "inline": true,
+  "core": "Hang Sing LP Records",
+  "district": "Sham Shui Po",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Hang Sing LP Records, Sham Shui Po, Hong Kong",
+   "Hang Sing LP Records, Hong Kong",
+   "Hang Sing LP Records",
+   "Sham Shui Po, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3297570",
+    "lon": "114.1608510",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "深水埗 Sham Shui Po, 長沙灣道 Cheung Sha Wan Road, 元洲 Un Chau, 深水埗 Sham Shui Po, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3307234",
+    "lon": "114.1623212",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DQ6e_iOkVSL",
+  "venue": "鸿发凉茶 Hung Fa Herbal Tea, Sham Shui Po",
+  "inline": true,
+  "core": "鸿发凉茶 Hung Fa Herbal Tea",
+  "district": "Sham Shui Po",
+  "strategy": "chinese",
+  "tried": [
+   "鸿发凉茶 Hung Fa Herbal Tea, Sham Shui Po, Hong Kong",
+   "鸿发凉茶 Hung Fa Herbal Tea, Hong Kong",
+   "鸿发凉茶 Hung Fa Herbal Tea",
+   "鸿发凉茶"
+  ],
+  "hits": [
+   {
+    "name": "鴻發涼茶, 128, 北河街 Pei Ho Street, 元洲 Un Chau, 石硤尾 Shek Kip Mei, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3319648",
+    "lon": "114.1642693",
+    "cls": "shop",
+    "type": "tea"
+   }
+  ]
+ },
+ {
+  "code": "DQ9IueBEbRS",
+  "venue": "Lin Heung Tea House, Tsim Sha Tsui",
+  "inline": true,
+  "core": "Lin Heung Tea House",
+  "district": "Tsim Sha Tsui",
+  "strategy": "venue",
+  "tried": [
+   "Lin Heung Tea House, Tsim Sha Tsui, Hong Kong",
+   "Lin Heung Tea House, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "蓮香樓 Lin Heung Tea House, 160-164, 威靈頓街 Wellington Street, 蘇豪 SoHo, 中環 Central, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2843416",
+    "lon": "114.1534564",
+    "cls": "amenity",
+    "type": "restaurant"
+   },
+   {
+    "name": "Lin Heung Tea House, 526, 皇后大道西 Queen's Road West, 石塘咀 Shek Tong Tsui, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2861987",
+    "lon": "114.1345286",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DQG-MC3kY09",
+  "venue": "Ice Bean, Quarry Bay Monster Building",
+  "inline": true,
+  "core": "Ice Bean",
+  "district": "Quarry Bay",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Ice Bean, Quarry Bay, Hong Kong",
+   "Ice Bean, Hong Kong",
+   "Ice Bean",
+   "Quarry Bay, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "鰂魚涌 Quarry Bay, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2857950",
+    "lon": "114.2129202",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "鰂魚涌 Quarry Bay, 英皇道 King's Road, 七姊妹 Tsat Tsz Mui, 鰂魚涌 Quarry Bay, 東區 Eastern District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2881654",
+    "lon": "114.2089920",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DQRYAxtkdnT",
+  "venue": "Kowloon Park, Tsim Sha Tsui",
+  "inline": true,
+  "core": "Kowloon Park",
+  "district": "Tsim Sha Tsui",
+  "strategy": "venue+district",
+  "tried": [
+   "Kowloon Park, Tsim Sha Tsui, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "九龍公園 Kowloon Park, 22, 尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3005333",
+    "lon": "114.1701152",
+    "cls": "leisure",
+    "type": "park"
+   }
+  ]
+ },
+ {
+  "code": "DQ_t0ofkYOF",
+  "venue": "no title, sheung wan",
+  "inline": true,
+  "core": "no title",
+  "district": "Sheung Wan",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "no title, Sheung Wan, Hong Kong",
+   "no title, Hong Kong",
+   "no title",
+   "Sheung Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "上環 Sheung Wan, 中區 Central District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2865158",
+    "lon": "114.1502080",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "上環 Sheung Wan, 德輔道中 Des Voeux Road Central, 太平山 Tai Ping Shan, 上環 Sheung Wan, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2868490",
+    "lon": "114.1508610",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DQjVy1OEToA",
+  "venue": "Hoopla, Lai Chi Kok D2 Place",
+  "inline": true,
+  "core": "Hoopla",
+  "district": "Lai Chi Kok",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Hoopla, Lai Chi Kok, Hong Kong",
+   "Hoopla, Hong Kong",
+   "Hoopla",
+   "Lai Chi Kok, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "荔枝角 Lai Chi Kok, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3370495",
+    "lon": "114.1420691",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "荔枝角 Lai Chi Kok, 長沙灣道 Cheung Sha Wan Road, 長沙灣工業區 Cheung Sha Wan Industrial Area, 深水埗區 Sham Shui Po District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3373962",
+    "lon": "114.1484136",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DQrGXMKkdfj",
+  "venue": "Dozy Cafe, To Kwa Wan",
+  "inline": true,
+  "core": "Dozy Cafe",
+  "district": "To Kwa Wan",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Dozy Cafe, To Kwa Wan, Hong Kong",
+   "Dozy Cafe, Hong Kong",
+   "Dozy Cafe",
+   "To Kwa Wan, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "土瓜灣 To Kwa Wan, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3167582",
+    "lon": "114.1895402",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "土瓜灣 To Kwa Wan, 福建街 Fukien Street, 靠背壟 Kau Pui Lung, 土瓜灣 To Kwa Wan, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3168317",
+    "lon": "114.1875822",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DQtqCSJkaEM",
+  "venue": "Habo, San Po Kong",
+  "inline": true,
+  "core": "Habo",
+  "district": "San Po Kong",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Habo, San Po Kong, Hong Kong",
+   "Habo, Hong Kong",
+   "Habo",
+   "San Po Kong, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "新蒲崗 San Po Kong, 黃大仙區 Wong Tai Sin District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3366650",
+    "lon": "114.1984071",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DRCY1a0EUna",
+  "venue": "Lau Kee Noodle, Aberdeen",
+  "inline": true,
+  "core": "Lau Kee Noodle",
+  "district": "Aberdeen",
+  "strategy": "venue-bare",
+  "tried": [
+   "Lau Kee Noodle, Aberdeen, Hong Kong",
+   "Lau Kee Noodle, Hong Kong",
+   "Lau Kee Noodle"
+  ],
+  "hits": [
+   {
+    "name": "Fu Kee Teochew Noodle, 青山公路－新墟段 Castle Peak Road – San Hui, 紅橋 Hung Kiu, 頌皇台 Chung Wong Toi, 屯門區 Tuen Mun District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.4031588",
+    "lon": "113.9796182",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DRE25hIEYQ4",
+  "venue": "Shun Sum Yuen Farm, San Tin",
+  "inline": true,
+  "core": "Shun Sum Yuen Farm",
+  "district": "San Tin",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Shun Sum Yuen Farm, San Tin, Hong Kong",
+   "Shun Sum Yuen Farm, Hong Kong",
+   "Shun Sum Yuen Farm",
+   "San Tin, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "新田 San Tin, 元朗區 Yuen Long District, 新界 New Territories, 香港 Hong Kong, 518016, 中国",
+    "lat": "22.4976051",
+    "lon": "114.0770480",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "新田 San Tin, L3, 石湖圍新村 Shek Wu Wai San Tsuen, 元朗區 Yuen Long District, 新界 New Territories, 香港 Hong Kong, 518016, 中国",
+    "lat": "22.4875140",
+    "lon": "114.0720023",
+    "cls": "railway",
+    "type": "construction"
+   }
+  ]
+ },
+ {
+  "code": "DRRn5T0EVjY",
+  "venue": "The Hideout, Mui Wo",
+  "inline": true,
+  "core": "The Hideout",
+  "district": "Mui Wo",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "The Hideout, Mui Wo, Hong Kong",
+   "The Hideout, Hong Kong",
+   "The Hideout",
+   "Mui Wo, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "梅窩 Mui Wo, 香港 Hong Kong, 中国",
+    "lat": "22.2645446",
+    "lon": "114.0013059",
+    "cls": "place",
+    "type": "town"
+   }
+  ]
+ },
+ {
+  "code": "DRUYS0kEfv1",
+  "venue": "Twins Liangpi, Mong Kok",
+  "inline": true,
+  "core": "Twins Liangpi",
+  "district": "Mong Kok",
+  "strategy": "venue+district",
+  "tried": [
+   "Twins Liangpi, Mong Kok, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "兩姊妹涼皮有限公司, 15, 柏樹街 Cedar Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3253778",
+    "lon": "114.1666595",
+    "cls": "amenity",
+    "type": "restaurant"
+   }
+  ]
+ },
+ {
+  "code": "DRZh0HNkfTV",
+  "venue": "The Hideout Mui Wo",
+  "inline": true,
+  "core": "The Hideout Mui Wo",
+  "district": "Mui Wo",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "The Hideout Mui Wo, Mui Wo, Hong Kong",
+   "The Hideout Mui Wo, Hong Kong",
+   "The Hideout Mui Wo",
+   "Mui Wo, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "梅窩 Mui Wo, 香港 Hong Kong, 中国",
+    "lat": "22.2645446",
+    "lon": "114.0013059",
+    "cls": "place",
+    "type": "town"
+   }
+  ]
+ },
+ {
+  "code": "DRewFgLEWdR",
+  "venue": "Ming Heung Tea Co  in Kowloon City",
+  "inline": true,
+  "core": "Ming Heung Tea Co",
+  "district": "Kowloon City",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Ming Heung Tea Co, Kowloon City, Hong Kong",
+   "Ming Heung Tea Co, Hong Kong",
+   "Ming Heung Tea Co",
+   "Kowloon City, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "九龍城 Kowloon City, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3301595",
+    "lon": "114.1899368",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DRws9_-EW5Z",
+  "venue": "Chun Hing Garden in Kam Tin",
+  "inline": true,
+  "core": "Chun Hing Garden",
+  "district": "Kam Tin",
+  "strategy": "venue",
+  "tried": [
+   "Chun Hing Garden, Kam Tin, Hong Kong",
+   "Chun Hing Garden, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "香港賽馬會 The Hong Kong Jockey Club, 59-65, 春園街 Spring Garden Lane, 灣仔南 Wan Chai South, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2751044",
+    "lon": "114.1724266",
+    "cls": "shop",
+    "type": "bookmaker"
+   },
+   {
+    "name": "Tesla Supercharger Hopewell Centre Hong Kong, 春園街 Spring Garden Lane, 灣仔南 Wan Chai South, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2744615",
+    "lon": "114.1719528",
+    "cls": "amenity",
+    "type": "charging_station"
+   }
+  ]
+ },
+ {
+  "code": "DS4mQtpEay5",
+  "venue": "Hikiniku to Come, Habour City Tsim Sha Tsui",
+  "inline": true,
+  "core": "Hikiniku to Come",
+  "district": "Tsim Sha Tsui",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Hikiniku to Come, Tsim Sha Tsui, Hong Kong",
+   "Hikiniku to Come, Hong Kong",
+   "Hikiniku to Come",
+   "Tsim Sha Tsui, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2985604",
+    "lon": "114.1736032",
+    "cls": "place",
+    "type": "quarter"
+   },
+   {
+    "name": "尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.2988720",
+    "lon": "114.1741181",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DSw-2BXEW-b",
+  "venue": "Long Run Beauty, Kwai Chung Plaza",
+  "inline": true,
+  "core": "Long Run Beauty",
+  "district": "Kwai Chung",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Long Run Beauty, Kwai Chung, Hong Kong",
+   "Long Run Beauty, Hong Kong",
+   "Long Run Beauty",
+   "Kwai Chung, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "葵涌 Kwai Chung, 葵青區 Kwai Tsing District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3609551",
+    "lon": "114.1290095",
+    "cls": "boundary",
+    "type": "administrative"
+   }
+  ]
+ },
+ {
+  "code": "DT-Osx0Ea7r",
+  "venue": "Mermaid Hotpot, Causeway Bay",
+  "inline": true,
+  "core": "Mermaid Hotpot",
+  "district": "Causeway Bay",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Mermaid Hotpot, Causeway Bay, Hong Kong",
+   "Mermaid Hotpot, Hong Kong",
+   "Mermaid Hotpot",
+   "Causeway Bay, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "銅鑼灣 Causeway Bay, 東角 East Point, 銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2820777",
+    "lon": "114.1891587",
+    "cls": "place",
+    "type": "locality"
+   },
+   {
+    "name": "銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2809029",
+    "lon": "114.1870669",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DT0FgGokTZI",
+  "venue": "Yoajung, Olympic City",
+  "inline": true,
+  "core": "Yoajung",
+  "district": "Olympic City",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Yoajung, Olympic City, Hong Kong",
+   "Yoajung, Hong Kong",
+   "Yoajung",
+   "Olympic City, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "奧海城2、3期 Olympic City 2 & 3, 連翔道 Lin Cheung Road, 大角咀 Tai Kok Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3169601",
+    "lon": "114.1610689",
+    "cls": "railway",
+    "type": "subway_entrance"
+   }
+  ]
+ },
+ {
+  "code": "DTFlCFBEfxM",
+  "venue": "Aquatic Market, Moko Mall",
+  "inline": true,
+  "core": "Aquatic Market",
+  "district": null,
+  "strategy": "venue-bare",
+  "tried": [
+   "Aquatic Market, Hong Kong",
+   "Aquatic Market"
+  ],
+  "hits": [
+   {
+    "name": "罗湖水产批发市场, 秀东街, 新兴社区, 黄贝街道, 罗湖区, 深圳市, 广东省, 518000, 中国",
+    "lat": "22.5452612",
+    "lon": "114.1394628",
+    "cls": "amenity",
+    "type": "marketplace"
+   }
+  ]
+ },
+ {
+  "code": "DTpmGYJker2",
+  "venue": "cosme, tsim sha tsui or causeway bay",
+  "inline": true,
+  "core": "cosme",
+  "district": "Causeway Bay",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "cosme, Causeway Bay, Hong Kong",
+   "cosme, Hong Kong",
+   "cosme",
+   "Causeway Bay, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "銅鑼灣 Causeway Bay, 東角 East Point, 銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2820777",
+    "lon": "114.1891587",
+    "cls": "place",
+    "type": "locality"
+   },
+   {
+    "name": "銅鑼灣 Causeway Bay, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2809029",
+    "lon": "114.1870669",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DTsJ9eAET-I",
+  "venue": "Cookie Quartet, Mong Kok",
+  "inline": true,
+  "core": "Cookie Quartet",
+  "district": "Mong Kok",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Cookie Quartet, Mong Kok, Hong Kong",
+   "Cookie Quartet, Hong Kong",
+   "Cookie Quartet",
+   "Mong Kok, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "旺角 Mong Kok, 亞皆老街 Argyle Street, 旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3193080",
+    "lon": "114.1698076",
+    "cls": "railway",
+    "type": "station"
+   },
+   {
+    "name": "旺角 Mong Kok, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3204156",
+    "lon": "114.1698105",
+    "cls": "place",
+    "type": "suburb"
+   }
+  ]
+ },
+ {
+  "code": "DTuwoG8kS-B",
+  "venue": "Matsukiyo, Tsim Sha Tsui",
+  "inline": true,
+  "core": "Matsukiyo",
+  "district": "Tsim Sha Tsui",
+  "strategy": "venue+district",
+  "tried": [
+   "Matsukiyo, Tsim Sha Tsui, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "松本清 Matsukiyo, 金巴利道 Kimberley Road, 槍會山 Gun Club Hill, 尖沙咀 Tsim Sha Tsui, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3005270",
+    "lon": "114.1733035",
+    "cls": "amenity",
+    "type": "pharmacy"
+   }
+  ]
+ },
+ {
+  "code": "DUIaMRxDD-N",
+  "venue": "Elco Pani Puri, Bandra",
+  "inline": false,
+  "core": "Elco Pani Puri",
+  "district": "Bandra",
+  "strategy": null,
+  "tried": [
+   "Elco Pani Puri, Bandra, Hong Kong",
+   "Elco Pani Puri, Hong Kong",
+   "Elco Pani Puri",
+   "Bandra, Hong Kong"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DViylUIjGUg",
+  "venue": "Hong Kong Disneyland",
+  "inline": true,
+  "core": "Hong Kong Disneyland",
+  "district": null,
+  "strategy": "venue",
+  "tried": [
+   "Hong Kong Disneyland, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "香港迪士尼樂園 Hong Kong Disneyland, 迎樂路 Park Promenade, 大嶼山 Lantau, 離島區 Islands District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3130698",
+    "lon": "114.0409846",
+    "cls": "tourism",
+    "type": "theme_park"
+   }
+  ]
+ },
+ {
+  "code": "DW1KgzhEReK",
+  "venue": "Cookie Vission Tai Hang",
+  "inline": true,
+  "core": "Cookie Vission Tai Hang",
+  "district": "Tai Hang",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Cookie Vission Tai Hang, Tai Hang, Hong Kong",
+   "Cookie Vission Tai Hang, Hong Kong",
+   "Cookie Vission Tai Hang",
+   "Tai Hang, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "大坑 Tai Hang, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2779085",
+    "lon": "114.1931508",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "大坑 Tai Hang, 灣仔區 Wan Chai District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2791769",
+    "lon": "114.1918885",
+    "cls": "place",
+    "type": "quarter"
+   }
+  ]
+ },
+ {
+  "code": "DW_ZI8GESXl",
+  "venue": "",
+  "inline": true,
+  "core": "",
+  "district": null,
+  "strategy": null,
+  "tried": [],
+  "hits": []
+ },
+ {
+  "code": "DX8-l9ERoJr",
+  "venue": "Chagee, Macau Venetian",
+  "inline": true,
+  "core": "Chagee",
+  "district": "Macau",
+  "strategy": "venue",
+  "tried": [
+   "Chagee, Macau, Hong Kong",
+   "Chagee, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "霸王茶姬 Chagee, 啟德地下購物街 Kai Tak Underground Shopping Street, 天璽·天 Cullinan Sky, 啟德城中心 Kai Tak City Centre, 九龍城區 Kowloon City District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3318118",
+    "lon": "114.1995380",
+    "cls": "amenity",
+    "type": "cafe"
+   },
+   {
+    "name": "霸王茶姬 Chagee, 暢達路 Cheong Tat Road, 赤鱲角 Chek Lap Kok, 大嶼山 Lantau, 離島區 Islands District, 新界 New Territories, 香港 Hong Kong, 中国",
+    "lat": "22.3140685",
+    "lon": "113.9302439",
+    "cls": "amenity",
+    "type": "cafe"
+   }
+  ]
+ },
+ {
+  "code": "DbQLTEhRSt1",
+  "venue": "Haeundae Galbi 2-8 wellington street, central",
+  "inline": true,
+  "core": "Haeundae Galbi 2-8 wellington street",
+  "district": "Central",
+  "strategy": "DISTRICT-ONLY",
+  "tried": [
+   "Haeundae Galbi 2-8 wellington street, Central, Hong Kong",
+   "Haeundae Galbi 2-8 wellington street, Hong Kong",
+   "Haeundae Galbi 2-8 wellington street",
+   "Central, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "中環 Central, 中區 Central District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2818286",
+    "lon": "114.1582784",
+    "cls": "place",
+    "type": "suburb"
+   },
+   {
+    "name": "中環 Central, 遮打道 Chater Road, 政府山 Government Hill, 中環 Central, 中西區 Central and Western District, 香港島 Hong Kong Island, 香港 Hong Kong, 中国",
+    "lat": "22.2819377",
+    "lon": "114.1580765",
+    "cls": "railway",
+    "type": "station"
+   }
+  ]
+ },
+ {
+  "code": "DcIzh9RR6j6",
+  "venue": "COMMUNE MAISON",
+  "inline": true,
+  "core": "COMMUNE MAISON",
+  "district": null,
+  "strategy": null,
+  "tried": [
+   "COMMUNE MAISON, Hong Kong",
+   "COMMUNE MAISON"
+  ],
+  "hits": []
+ },
+ {
+  "code": "DcOD0MczEFI",
+  "venue": "MegaBox, Kowloon Bay",
+  "inline": true,
+  "core": "MegaBox",
+  "district": "Kowloon Bay",
+  "strategy": "venue+district",
+  "tried": [
+   "MegaBox, Kowloon Bay, Hong Kong"
+  ],
+  "hits": [
+   {
+    "name": "MegaBox, 常怡道 Sheung Yee Road, 九龍灣商貿區 Kowloon Bay Business Area, 觀塘區 Kwun Tong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3197876",
+    "lon": "114.2084895",
+    "cls": "shop",
+    "type": "mall"
+   },
+   {
+    "name": "MegaBox, 宏照道 Wang Chiu Road, 九龍灣商貿區 Kowloon Bay Business Area, 觀塘區 Kwun Tong District, 九龍 Kowloon, 香港 Hong Kong, 中国",
+    "lat": "22.3212364",
+    "lon": "114.2089755",
+    "cls": "highway",
+    "type": "bus_stop"
+   }
+  ]
+ }
+]

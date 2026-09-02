@@ -1,0 +1,55 @@
+{
+  "method": "116 hero thumbnails downloaded, rendered as 13 labelled contact sheets at 420px/tile, each read against its caption. Tiles keyed by SHORTCODE (derived from the thumbnail URL), never by slug prefix.",
+  "result": "116/116 read. ZERO wrong subjects.",
+  "named_in_frame_examples": ["百味 (Pak Mei)","九龍坎麻辣火鍋","志明蔴雀 CHI MING MAJONG","明華 (Ming Wah)","公和荳品 (Kung Wo)","大和堂 (Tai Wo Tang)","citygate outlets 東薈城","KNOCKBOX COFFEE COMPANY","Lucky 7","milkfill","CTMA","matsukiyo","CHAGEE","Takimoto","Chop Alley","Man Mo Temple"],
+  "resolved_by_the_picture": {
+    "DLPtXqBSz3R": "caption had no venue; title card reads 'Spend a day with me at Ocean Park Hong Kong'",
+    "DEe886tyAeY": "caption said only the district 'Yau Ma Tei'; frame is the JADE MARKET",
+    "DF5Ai-mydcw": "caption said only 'Fuk Wing Street'; frame confirms it is the TOY STREET",
+    "DF7l_AAyCrS": "caption said only 'Yu Chau Street'; frame confirms it is the BEAD STREET",
+    "DW_ZI8GESXl": "caption had no venue; frame is an outdoor seafood restaurant, consistent with owner's 'Hung Kee' note and the post's own #saikung hashtag",
+    "DQ_t0ofkYOF": "'no title' IS the cafe's name, Sheung Wan"
+  },
+  "corroborations": {
+    "DJooflIzJ-Z": "Ma Wan Tung Beach - TSING MA BRIDGE clearly in frame, which is exactly where that beach is",
+    "DQRYAxtkdnT": "Kowloon Park - pink flamingos, and Kowloon Park has the flamingo aviary",
+    "DFnAVUgyX9S": "Wong Tai Sin - people kneeling with fortune sticks; it IS the fortune-telling temple",
+    "DFVBmUZylg9": "Man Mo Temple - the hanging incense coils it is famous for",
+    "DE909ueyDJZ": "Shanghai Street - kitchenware shop; Shanghai Street IS HK's kitchenware street"
+  },
+  "non_hong_kong_confirmed_by_own_frame": {
+    "DFz3e_nSs7D": "card reads 'MAGIC SHOP IN MACAU'",
+    "DX8-l9ERoJr": "CHAGEE cup, Venetian Grand Canal Shoppes arcade - Macau",
+    "DUIaMRxDD-N": "card reads 'Puri Pani in Mumbai' with Indian flag"
+  },
+  "weak_heroes_flagged_not_resolved": {
+    "C7eKfZNyZny": "Beyrouth Bistro - night street shot, venue not visible",
+    "C_SooDSSUtJ": "Chilli Club - restaurant interior, venue not identifiable",
+    "DGnfyQmSXP-": "Jade Garden - dim sum flatlay, venue not identifiable",
+    "DLcVFHeyPxm": "Haidilao TST - street scene, venue not visible",
+    "DQrGXMKkdfj": "Dozy Cafe - lantern alley, venue not visible",
+    "DcIzh9RR6j6": "COMMUNE MAISON - street shot, venue not visible"
+  },
+  "needs_a_full_size_look": {
+    "DQ6e_iOkVSL": "caption venue is 鸿发凉茶 Hung Fa HERBAL TEA but the title card says 'Local Black Sesame Cake ... a local BAKERY'. HK herbal-tea shops commonly sell black sesame cake so it is plausible, but unverified at contact-sheet size.",
+    "DFkcm40yU2E": "caption venue 'Messina, The Peak' but card is about CARBONE's lemon cheesecake ice cream (a collab flavour). Plausible, unverified.",
+    "DT0FgGokTZI": "caption venue 'Yoajung, Olympic City' but card is a 'Dubai chewy cookie'. Plausible, unverified."
+  },
+  "ambiguous_location_creator_did_not_say": {
+    "DTpmGYJker2": "caption literally reads 'cosme, tsim sha tsui OR causeway bay' - the creator did not specify which branch"
+  },
+  "same_subject_pairs_inside_the_batch": [
+    ["C3kYmrPSONt","DGNps_tSXMw","Cheung Hing Coffee Shop"],
+    ["DRRn5T0EVjY","DRZh0HNkfTV","The Hideout, Mui Wo"],
+    ["DKjjYmEyybo","DViylUIjGUg","Hong Kong Disneyland"],
+    ["DBYnXEky1Cb","DMz6jSxy0u8","Kowloon Hum hotpot"]
+  ],
+  "place_candidates_vs_existing_atlas_tours": [
+    "C9cSek2ScTO Lan Fong Yuen ~ Atlas tour 'Lan Fong Yuen | 蘭芳園'",
+    "DFVBmUZylg9 Man Mo Temple ~ Atlas tour 'Man Mo Temple | 文武廟'",
+    "DLKP_UcBUT9 Upper Lascar Row ~ Atlas tour 'Upper Lascar Row Antique Street Market'",
+    "DRCY1a0EUna Lau Kee Noodle Aberdeen ~ Atlas tour 'Lau Kee Aberdeen Boat Noodle | 流記艇仔粉'",
+    "DQG-MC3kY09 Ice Bean ~ Atlas tour 'Monster Building' (shop AT the building, related not identical)",
+    "DQRYAxtkdnT Kowloon Park ~ pin 'Kowloon Park Stone Columns' (inside the park)"
+  ]
+}
