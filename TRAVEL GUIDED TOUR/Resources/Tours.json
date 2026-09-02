@@ -2391,6 +2391,38 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/history_withjim/"
+    },
+    {
+      "id": "9186BC81-2F3D-58C2-A171-D4D58B10DC2F",
+      "displayName": "Instagram @bricksbyrowan",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/bricksbyrowan/"
+    },
+    {
+      "id": "621FEEC4-B936-58F6-9B9B-9F7C84962273",
+      "displayName": "Instagram @scentsandserums",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/scentsandserums/"
+    },
+    {
+      "id": "B030677F-184F-58C6-BDF8-E192E911EF3D",
+      "displayName": "Instagram @amandastrang_",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/amandastrang_/"
+    },
+    {
+      "id": "06F49944-99EE-574D-85B5-1FCDDE47EC3F",
+      "displayName": "Instagram @hongkongd_",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/hongkongd_/"
     }
   ],
   "tours": [
@@ -123324,6 +123356,234 @@
         "War",
         "History",
         "Maritime",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7B6CE422-7497-57C3-B886-66ACC715E8A4",
+      "createdAt": "2026-09-02",
+      "title": "The Rare LEGO Sets at In's Point",
+      "shortDescription": "A post by @bricksbyrowan on Instagram.",
+      "longDescription": "I found the worlds craziest LEGO market in Hong Kong, full of amazing rare sets, sealed HOBBIT and so much more... will you be visiting? #LEGO #AFOL #LegoTikTok #LegoCommunity #HongKong",
+      "makerId": "9186BC81-2F3D-58C2-A171-D4D58B10DC2F",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rare-lego-sets-at-ins-bricksbyrowan_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaLWwpxvJ9G/",
+      "sourceAuthor": "@bricksbyrowan",
+      "stops": [
+        {
+          "id": "1CB3E42B-E4B5-55A1-A3D7-8B99140EC30E",
+          "order": 0,
+          "title": "The Rare LEGO Sets at In's Point",
+          "caption": "I found the worlds craziest LEGO market in Hong Kong, full of amazing rare sets, sealed HOBBIT and so much more... will you be visiting? #LE",
+          "latitude": 22.3133125,
+          "longitude": 114.1708125,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rare-lego-sets-at-ins-bricksbyrowan_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.3133125,
+      "centroidLongitude": 114.1708125,
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "87FCB411-9306-5F15-894C-4C4E41BB2877",
+      "createdAt": "2026-09-02",
+      "title": "The Pedder Arcade",
+      "shortDescription": "A post by @scentsandserums on Instagram.",
+      "longDescription": "a friend of mine took me here, and i think its the perfect place to spend an afternoon away from the hustle and bustle (even if you’re not planning on buying anything). gentlemen, this one’s for you, and ladies this is where you can find cool gifts for him. 🤎 #hongkong #travelwithme #luxurytravel #luxurylifestyle #travelgram",
+      "makerId": "621FEEC4-B936-58F6-9B9B-9F7C84962273",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-pedder-arcade-scentsandserums_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DblExNQvQDd/",
+      "sourceAuthor": "@scentsandserums",
+      "stops": [
+        {
+          "id": "A619BB92-A50C-52CF-B490-911CFFCCA7BB",
+          "order": 0,
+          "title": "The Pedder Arcade",
+          "caption": "a friend of mine took me here, and i think its the perfect place to spend an afternoon away from the hustle and bustle (even if you’re not p",
+          "latitude": 22.2818125,
+          "longitude": 114.1570625,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-pedder-arcade-scentsandserums_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.2818125,
+      "centroidLongitude": 114.1570625,
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "Architecture",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B01600F3-747E-5AD0-A542-D4DAAE2C173D",
+      "createdAt": "2026-09-02",
+      "title": "Louis Vuitton Lee Gardens",
+      "shortDescription": "A post by @amandastrang_ on Instagram.",
+      "longDescription": "Bar Leone x LOUIS VUITTON Come with me as we celebrate the grand expansion of Louis Vuitton’s Lee Gardens store opening and a collaboration with Bar Leone! Honoured as the World’s Best Bar 2025 by Lorenzo Antinori. Reviving the spirit of the iconic Yum Sing Bar, a cherished gem of Lee Gardens Hotel from the 1970s to 1990s, renowned for its exquisite cocktails and vibrant community. Bar Leone’s masterfully crafted selection of cocktails and mocktails pays tribute to this legacy, blending timeless tradition with modern creativity. What a fun pop up to experience the spirit of craftsmanship, history, and community. Enjoy! @louisvuitton @barleonehk @lorenzoantinori_ @leegardenshk #BarLeonehk #cocktailpopolari #BarLeonexLV #LouisVuitton #LeeGardensHK #yumsingbar",
+      "makerId": "B030677F-184F-58C6-BDF8-E192E911EF3D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/louis-vuitton-lee-gardens-amandastrang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DTxTFW_Ek37/",
+      "sourceAuthor": "@amandastrang_",
+      "stops": [
+        {
+          "id": "26544C19-937F-5B0A-9392-D2740107418E",
+          "order": 0,
+          "title": "Louis Vuitton Lee Gardens",
+          "caption": "Bar Leone x LOUIS VUITTON Come with me as we celebrate the grand expansion of Louis Vuitton’s Lee Gardens store opening and a collaboration ",
+          "latitude": 22.2785625,
+          "longitude": 114.1848125,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/louis-vuitton-lee-gardens-amandastrang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.2785625,
+      "centroidLongitude": 114.1848125,
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Fashion"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E69C1C06-AF1E-5E94-8F91-07120DF7E6D9",
+      "createdAt": "2026-09-02",
+      "title": "I Love Cake, Wan Chai",
+      "shortDescription": "A post by @amandastrang_ on Instagram.",
+      "longDescription": "帶大家一齊行下烘焙材料店🧈✨🛒 好多人都同我講 買烘焙材料好頭痕唔知點揀🤔 今次帶大家行呢間我去左起嗎十幾年嘅烘培材料店！ 同埋簡單介紹下 等你下次買材料都可以輕鬆啲 你鍾唔鍾意睇呢啲烘培相關嘅分享？留言話我知啦~ （同埋可以話埋比我知你地鍾唔鍾意睇廣東話片😝） Come along with me as we visit one of my go-to baking supply shops! 🧈✨🛒 I know choosing the right baking ingredients can feel overwhelming, so I’m sharing a quick walkthrough and a few tips at this shop I’ve been coming to for over 10 years. Hopefully, it’ll make your next ingredient shopping trip a little easier! Voila! Did you enjoy this one? Please keep me posted in the comments below. 📍I Love Cake Wanchai G/F, 201 Wan Chai Rd, Wan Chai @ilovecake_official Creative and video production @skyexpresscreationsltd #烘培 #烘培材料 #baking #bakingsupplyshop #hongkong",
+      "makerId": "B030677F-184F-58C6-BDF8-E192E911EF3D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-love-cake-wan-chai-amandastrang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DMuyyuUTlNY/",
+      "sourceAuthor": "@amandastrang_",
+      "stops": [
+        {
+          "id": "BEC3DF42-C474-5323-9BFE-C14124CE9D84",
+          "order": 0,
+          "title": "I Love Cake, Wan Chai",
+          "caption": "帶大家一齊行下烘焙材料店🧈✨🛒 好多人都同我講 買烘焙材料好頭痕唔知點揀🤔 今次帶大家行呢間我去左起嗎十幾年嘅烘培材料店！ 同埋簡單介紹下 等你下次買材料都可以輕鬆啲 你鍾唔鍾意睇呢啲烘培相關嘅分享？留言話我知啦~ （同埋可以話埋比我知你地鍾唔鍾意睇廣東話片😝） Come alo",
+          "latitude": 22.277656,
+          "longitude": 114.1787203,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-love-cake-wan-chai-amandastrang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.277656,
+      "centroidLongitude": 114.1787203,
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "032AEAF1-985F-5C9A-8205-19FD02FCEBD0",
+      "createdAt": "2026-09-02",
+      "title": "The Villain-Hitting Incantation at Canal Road",
+      "shortDescription": "A post by @hongkongd_ on Instagram.",
+      "longDescription": "驚蟄就是銅鑼灣打小人一整年中最熱鬧的一天，送上暖男唱出的情歌版打小人口訣，聽完之後你應該會更記得打小人時的每句話，聽到打你條小人腸那句我也忍不住笑了出來😂 打你個小人頭，打到你成世無出頭 打你個小人口，打到你食親飯都嘔 打你個小人嘴，打到你成世畀人隊 打你條小人頸，打到你瞓到唔知醒 打你個小人心，打到你去見葉利欽 打你個小人胸，打到你一世無老公 打你個小人肝，打到你出街無心安 打你個小人胃，打到你見人就要跪 打你條小人腸，打到你放屁特別響 打你條小人腰，打到你成日發高燒 打你隻小人手，打到你有錢唔識收 打你隻小人腳，打到你有鞋唔識著 #打小人口訣情歌版 #打小人 #香港 #驚蟄 情歌版打小人歌曲由AI生成",
+      "makerId": "06F49944-99EE-574D-85B5-1FCDDE47EC3F",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-villain-hitting-incantation-at-canal-hongkongd_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DVbHvsqgfHK/",
+      "sourceAuthor": "@hongkongd_",
+      "stops": [
+        {
+          "id": "1AFBFBBC-4222-50CF-A539-E3ACE9A8CBB8",
+          "order": 0,
+          "title": "The Villain-Hitting Incantation at Canal Road",
+          "caption": "驚蟄就是銅鑼灣打小人一整年中最熱鬧的一天，送上暖男唱出的情歌版打小人口訣，聽完之後你應該會更記得打小人時的每句話，聽到打你條小人腸那句我也忍不住笑了出來😂 打你個小人頭，打到你成世無出頭 打你個小人口，打到你食親飯都嘔 打你個小人嘴，打到你成世畀人隊 打你條小人頸，打到你瞓到唔知",
+          "latitude": 22.2790625,
+          "longitude": 114.1814375,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-villain-hitting-incantation-at-canal-hongkongd_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.2790625,
+      "centroidLongitude": 114.1814375,
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Bridge",
+        "Faith",
+        "History",
         "Hidden Gem"
       ],
       "priceUSD": 0
