@@ -25,7 +25,7 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟡 **NEW — session 139, `claude/tour-links-vcn3xc` (`87038c28`), 32 Hong Kong link pins, NO PR OPENED.** linkPins **905 → 937**, makers **297 → 299**; `tours` and `places` byte-identical. gh-pages `2baba65`, all 32 live heroes hash-verified. Three things want an owner call:
+🟡 **OPEN — [#721](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/721), session 139, `claude/tour-links-vcn3xc`, 32 Hong Kong link pins.** ⚠️ **`main` moved mid-flight** — [#719](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/719) landed and was merged in with every check re-run, so the merged base reads **107 places**, not the 105 this batch was cut against. linkPins **905 → 937**, makers **297 → 299**; `tours` and `places` byte-identical. gh-pages `2baba65`, all 32 live heroes hash-verified. Three things want an owner call:
   - **🔴 A stray Plus Code.** `75M2+9X Central` was pasted beside the EONIQ reel but decodes onto Aberdeen Street, SoHo — **13 km from the Tsuen Wan address that reel's own caption gives**, which OSM confirms to the house number. The pin ships on the caption. **The code most likely belongs to a reel that was not in the batch — was it meant for one?**
   - **⚠️ One weak hero.** `Heartwarming` is the creator walking a street with no view of the shop or its sesame desserts — the batch's weakest. (Lazy Suzy, Dieci and La Petite Maison are creator-forward but acceptable.) Keep or pull.
   - **⚠️ One soft coordinate.** `Jean-Pierre` — OSM maps no 9 Bridges Street, so the pin sits between Bridges Street Market (no. 2) and Yardbird (no. 33), which bracket it. **The batch's weakest coordinate, stated rather than hidden.**

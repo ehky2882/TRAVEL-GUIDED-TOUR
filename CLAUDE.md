@@ -133,7 +133,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **The owner sent 33 Instagram reels** — four loose (three carrying Hong Kong Plus Codes), then 29
 under a heading reading `Insidehongkong`. **32 ship, 1 is blocked.** **linkPins 905 → 937 · makers
 297 → 299 · tours unchanged at 1,552 · places unchanged at 107 (⚠️ `main` moved mid-session — [#719](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/719) added two places and moved an Atlas tour, so the merged base reads 107, not the 105 this batch was cut against).** Content only — no Swift, no SQL,
-no build. **NO PR OPENED** (this session's harness forbids opening one unasked). Detail:
+no build. **Opened as [#721](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/721) on owner instruction.** Detail:
 `archive/HANDOFF-260902-8.md`.
 
 - **Three creators, two new maker rows.** Instagram **`@insidehongkong`** (28, new), **`@notbadgalriri__`**
@@ -233,7 +233,7 @@ no build. **NO PR OPENED** (this session's harness forbids opening one unasked).
   mismatch, 0 non-200**. 🔴 **`check-image-duplicates.py --pins` was run AFTER the deploy** (the
   session-135 false-pass lesson): **`OK — no suspicious duplicates`** over **932 images with 0 × 404**,
   shared-URL half **0 errors / 208 documented reuses** — identical to baseline, so this batch adds no
-  shared URL. ⚠️ **Nothing compiled — CI is the authoritative validator, and no PR is open.**
+  shared URL. ⚠️ **Nothing compiled — CI is the authoritative validator, and it is the only compile check a Linux web session gets.**
 ### Forty-two Miami link pins, five places, and a scraped address that was a 404 page's footer (branch `claude/new-tour-links-mphq67`, session 138 — content)
 
 **The owner sent 45 Instagram reels — 19 unlabelled, 26 under "Miami links".** Branch cut clean off
