@@ -117698,6 +117698,51 @@
         "Food"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "EE92EBC4-6142-5837-A2C7-3EBD3FCAC965",
+      "createdAt": "2026-09-02",
+      "title": "Ocean Park Hong Kong",
+      "shortDescription": "A post by @shivanidukhandee on Instagram.",
+      "longDescription": "Spend a day with me at Ocean Park in Hong Kong! 🐚🪼🇭🇰 #hongkong #oceanpark #vlog",
+      "makerId": "A37EA359-FC26-5090-9308-6A41BB986210",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ocean-park-hong-kong-shivanidukhandee_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DLPtXqBSz3R/",
+      "sourceAuthor": "@shivanidukhandee",
+      "stops": [
+        {
+          "id": "DF438152-CC17-5553-A92B-C8514A6E7868",
+          "order": 0,
+          "title": "Ocean Park Hong Kong",
+          "caption": "Spend a day with me at Ocean Park in Hong Kong! 🐚🪼🇭🇰 #hongkong #oceanpark #vlog",
+          "latitude": 22.2347673,
+          "longitude": 114.1708174,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ocean-park-hong-kong-shivanidukhandee_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.2347673,
+      "centroidLongitude": 114.1708174,
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Maritime"
+      ],
+      "priceUSD": 0
     }
   ]
 }
