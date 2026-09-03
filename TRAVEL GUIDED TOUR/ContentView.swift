@@ -160,10 +160,11 @@ struct ContentView: View {
             homeDrawer(dragOffset: dragOffsetBinding)
 
             // Fallback mini-player + tab bar, rendered in THIS (main) window
-            // whenever the secondary higher-level window isn't installed.
+            // whenever the secondary higher-level window isn't painting them —
+            // never installed, or installed and left hidden.
             //
             // The bars normally live only in that window, so any failure to
-            // install it left the app with no tab bar at all for the whole
+            // show them left the app with no tab bar at all for the whole
             // session — repeatedly reported on the first launch after installing
             // a TestFlight build. Successive fixes there were all bets on scene
             // lifecycle timing, and the symptom kept coming back. This makes the
@@ -171,7 +172,7 @@ struct ContentView: View {
             // which cannot fail for scene-lifecycle reasons.
             //
             // The retry chain still promotes to the real window within seconds,
-            // at which point this disappears (`isInstalled` is observed). While
+            // at which point this disappears (`isShowingBars` is observed). While
             // it is showing, the only thing missing is z-order above UIKit
             // modals — a much better failure than an app you can't navigate.
             //
@@ -179,8 +180,27 @@ struct ContentView: View {
             // wizard, which needs their 126pt). It has to be honoured here as
             // well as on the window, or hiding one would simply reveal the
             // other.
-            if let bottomModuleWindow, !bottomModuleWindow.isInstalled,
-               !appShared.hidesBottomModule {
+            //
+            // 🔴 THE PREDICATE IS `isShowingBars`, NOT `isInstalled`, AND THAT
+            // DISTINCTION IS WHY THIS FALLBACK DIDN'T CURE THE REPORT. A window
+            // that installed and was then left hidden painted nothing AND
+            // satisfied `isInstalled`, so neither surface drew the bars — the
+            // exact "bottom module missing" screenshot, on a settled Home tab.
+            // Asking whether the bars are actually on screen covers that case
+            // too; the rule lives next to the window so it can be tested.
+            //
+            // ⚠️ Reading `isSplashVisible` here adds a body dependency on the
+            // launch PHASE, which changes exactly twice a launch — NOT on
+            // `handOffProgress`, which ticks at display rate and is read only
+            // in leaves for that reason (session 102). Keep it that way: the
+            // guard exists so this and the window's copy never co-render, which
+            // would put two `fullScreenCover`s on one `showingFullPlayer`.
+            if let bottomModuleWindow,
+               BottomModuleWindowController.rendersInlineFallback(
+                   isShowingBars: bottomModuleWindow.isShowingBars,
+                   withdrawnByScreen: appShared.hidesBottomModule,
+                   isSplashVisible: launchState?.isSplashVisible ?? false
+               ) {
                 BottomModuleRoot()
             }
         }
