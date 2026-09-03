@@ -81536,6 +81536,51 @@
         "D309DD13-3CF1-5112-8E59-766101687A5E",
         "6D0DF345-DCC6-5FB4-9E38-C700592D1F07"
       ]
+    },
+    {
+      "id": "3e6d9120-c063-553f-aa7f-a26721602e9e",
+      "name": "Hong Kong Railway Museum",
+      "city": "Hong Kong",
+      "address": "Tai Po Market, Tai Po, Hong Kong",
+      "latitude": 22.4483331,
+      "longitude": 114.1637371,
+      "description": "The former Tai Po Market railway station, built in 1913 with a Chinese-style pitched roof and green glazed ridge tiles, kept as an open-air museum since the line through it was rerouted. Historical coaches and a diesel-electric shunting engine stand on a length of track outside, and the tracks are one of the few in Hong Kong you are allowed to walk on. Entry is free. It sits a short walk from Tai Po Market and its street food.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hong-kong-railway-museum-loveinhongkong_hero.webp",
+      "additionalImageURLs": [],
+      "tourIds": [
+        "C5AAE4DF-9889-5469-8652-4F6F9E57E1E6",
+        "A98719CF-B84A-51CD-8BD9-604E955FA901"
+      ]
+    },
+    {
+      "id": "7740d1ad-a373-5a9e-8a92-775c409b4357",
+      "name": "In's Point",
+      "city": "Hong Kong",
+      "address": "530 Nathan Road, Yau Ma Tei, Hong Kong",
+      "latitude": 22.3133125,
+      "longitude": 114.1708125,
+      "description": "A multi-storey arcade on Nathan Road given over to small shops selling toys, models and collectibles — figures, model kits, trading cards and, on several floors, LEGO. Sets long out of production turn up sealed here, and the prices are set shop by shop rather than by a chain, so the same box can cost quite different amounts one floor apart. It is the sort of place people come to hunt rather than to shop.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rare-lego-sets-at-ins-bricksbyrowan_hero.webp",
+      "additionalImageURLs": [],
+      "tourIds": [
+        "D4CA063E-2B9C-5D8F-8EC9-A0C281FC1F40",
+        "7B6CE422-7497-57C3-B886-66ACC715E8A4"
+      ]
+    },
+    {
+      "id": "4a4cf9a8-b8f0-575b-855d-bb77200d70e8",
+      "name": "Bowrington Bridge Villain Hitting",
+      "city": "Hong Kong",
+      "address": "Canal Road Flyover, Bowrington, Hong Kong",
+      "latitude": 22.2790625,
+      "longitude": 114.1811875,
+      "description": "A row of stalls in the shade under the Canal Road Flyover, where practitioners perform 打小人 — villain hitting, a folk ritual from Guangdong and Hong Kong for driving off bad luck and the people causing it. A paper effigy stands in for the villain and is beaten with a shoe while an incantation is recited, line by line, over the parts of the body. Offerings and a small shrine sit beside each stall. The busiest day of the year is 驚蟄, Jingzhe, in early March, when the queues run along the pavement.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/villain-hitting-canal-road-loveinhongkong_hero.webp",
+      "additionalImageURLs": [],
+      "tourIds": [
+        "EED8095E-24B7-56AB-BCA7-D422DF6EE4B5",
+        "032AEAF1-985F-5C9A-8205-19FD02FCEBD0"
+      ]
     }
   ],
   "linkPins": [
@@ -115759,8 +115804,8 @@
           "order": 0,
           "title": "In’s Point",
           "caption": "An affordable LEGO Paradise in Hong Kong?? 🇭🇰🧱 📍In’s Point, Yau Ma Tei - #hongkong #hkig #hongkongtravel #hongkongblogger #hk #hkblogger #hk",
-          "latitude": 22.3136246,
-          "longitude": 114.1707004,
+          "latitude": 22.3133125,
+          "longitude": 114.1708125,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -115772,8 +115817,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.3136246,
-      "centroidLongitude": 114.1707004,
+      "centroidLatitude": 22.3133125,
+      "centroidLongitude": 114.1708125,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "hiddenGems",
@@ -124744,8 +124789,8 @@
           "order": 0,
           "title": "The Trains at the Hong Kong Railway Museum",
           "caption": "📍Hong Kong Railway Museum Looking for a lazy Sunday activity ? Take a stroll back in time to the Hong Kong railway museum located in Tai Po.",
-          "latitude": 22.44833,
-          "longitude": 114.16374,
+          "latitude": 22.4483331,
+          "longitude": 114.1637371,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -124757,8 +124802,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.44833,
-      "centroidLongitude": 114.16374,
+      "centroidLatitude": 22.4483331,
+      "centroidLongitude": 114.1637371,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "culturalHeritage",
@@ -125065,7 +125110,7 @@
           "title": "The Villain-Hitting Incantation at Canal Road",
           "caption": "驚蟄就是銅鑼灣打小人一整年中最熱鬧的一天，送上暖男唱出的情歌版打小人口訣，聽完之後你應該會更記得打小人時的每句話，聽到打你條小人腸那句我也忍不住笑了出來😂 打你個小人頭，打到你成世無出頭 打你個小人口，打到你食親飯都嘔 打你個小人嘴，打到你成世畀人隊 打你條小人頸，打到你瞓到唔知",
           "latitude": 22.2790625,
-          "longitude": 114.1814375,
+          "longitude": 114.1811875,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -125078,7 +125123,7 @@
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
       "centroidLatitude": 22.2790625,
-      "centroidLongitude": 114.1814375,
+      "centroidLongitude": 114.1811875,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "culturalHeritage",
