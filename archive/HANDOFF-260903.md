@@ -325,7 +325,7 @@ added, no image URL changed (proved by the byte-identity assertions).
 
 ## Open for the owner
 
-1. **The Gursky post** — supply one coordinate, or drop it.
-2. **The Koons/LACMA pin** — keep or pull?
+1. **The Koons/LACMA pin** — keep or pull?
+2. ~~The Gursky post~~ ✅ **left as-is, owner decision 2026-09-03** (*"Ok leave the gursky"*) — never wired, so no catalogue edit and no SQL owed.
 3. ~~Alwyn Court~~ ✅ built as a place. ~~Guggenheim~~ ✅ third member added.
    ~~Gilder Center~~ ✅ kept separate.

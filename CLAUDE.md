@@ -153,7 +153,11 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
   STRING**, so everything inside is escaped (`\"username\"`) and a regex for raw `"username":"`
   matches nothing. Extract the string value, `json.loads` once to unescape, then parse the result.
   **A parse that returns nothing on a healthy page is the parser's fault until proven otherwise.**
-- **🔴 ONE POST IS PARKED, NOT GUESSED AT — the Andreas Gursky reel.** Its caption names **no place
+- **✅ ONE POST WAS PARKED AND THE OWNER THEN LEFT IT — the Andreas Gursky reel. CLOSED 2026-09-03
+  (*"Ok leave the gursky"*); it ships nowhere, and because it was never wired this costs no catalogue
+  edit and owes no SQL (`CxgEBMxqcQX` verified absent from the live RPC and the mirror). Do not
+  re-raise it, and do not site it later from the raw coordinate — that reading is inference, which is
+  why it was parked.** Its caption names **no place
   at all** (a "read more on our website" artist promo), **its hero is a portrait of Gursky himself**
   against a concrete wall with `ANDREAS GURSKY` burned in — not a photograph of anywhere — and the
   **two supplied coordinates are 7,006 m apart**: the Plus Code `8QC7XPRV+JC` decodes to Yanggak in
