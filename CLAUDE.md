@@ -479,13 +479,25 @@ Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260902-11.md
   so **no third photograph of them exists in the catalogue**. The documented Waterlooplein / Legion of
   Honor case the owner has closed. Borrowed-hero count **re-derived, not carried forward: 37 of 111**
   (69 take a third photograph, 5 carry none). **All six candidates were rendered and looked at.**
-  ⚠️ **Two stated trade-offs.** **In's Point's hero is the shop's SIGN**, which names the venue twice
-  and is the arrival view but **carries none of the LEGO** the pins are about; the alternative shows
-  the LEGO, names only *"A LEGO Paradise In Hong Kong?"*, and puts the creator in shot. **The Railway
-  Museum's hero names NOTHING** — its burned-in line is *"WALKING ON TRAIN TRACKS?"* over locomotive
-  No. 60 — while the alternative carries a `📍Hong Kong Railway Museum - Tai Po` card and is a
-  creator-forward selfie; no-face won. ⚠️ **Neither Railway Museum frame shows the 1913 Tai Po Market
-  station building the place is named for**, and none exists in the catalogue. Both are one-line swaps.
+  ✅ **BOTH HERO CHOICES WERE PUT TO THE OWNER AND BOTH ARE CLOSED — decided 2026-09-03: *"keep both
+  A"*. DO NOT re-raise them and do NOT swap them.** The trade-off was the same twice: the shipped
+  frame looks better and names nothing, the alternative names the venue and is uglier. **In's Point
+  keeps the shop's SIGN**, which names the venue twice and is the arrival view but **carries none of
+  the LEGO** the pins are about — the alternative shows the LEGO, names only *"A LEGO Paradise In
+  Hong Kong?"*, and puts the creator in shot. **The Railway Museum keeps the frame that names
+  NOTHING** — its burned-in line is *"WALKING ON TRAIN TRACKS?"* over locomotive No. 60 — against an
+  alternative carrying a `📍Hong Kong Railway Museum - Tai Po` card with a face filling half of it.
+  ⚠️ **Anyone re-running the open-every-hero audit will flag both again; they are SETTLED** — the
+  Ministry of Enterprise / Casa Lleó Morera / Rednaxela Terrace precedent: honour the decision rather
+  than "fixing" it. ⚠️ **Neither Railway Museum frame shows the 1913 Tai Po Market station building
+  the place is named for**, and none exists in the catalogue — that is a gap, not a reason to swap.
+  🔴 **THE DURABLE LESSON, AND IT COST A ROUND: RENDER THE IMAGE, DO NOT DESCRIBE IT.** This was first
+  put to the owner in prose — *"two one-line hero swaps sitting ready if you'd rather have the naming
+  than the framing"* — and the answer was *"i dont understand, more clearly pls"*. Two labelled
+  side-by-side comparisons (A = live, B = alternative, one line each on what each frame does and does
+  not show) settled it in a single exchange. **This is the SECOND time this project has paid for the
+  same mistake** (the session-138 `@notbadgalriri__` hero question), and the rule was already written
+  down: **any keep-or-pull question about a picture leads with the picture.**
 - **⚠️ TWO PLACES SHARE A NAME WITH A MEMBER, unavoidably** — each site has exactly one name, so the
   alternative is inventing one (the One Times Square / Tin Building call). **Do not "fix" it.** The
   third is deliberately **`Bowrington Bridge Villain Hitting`**, OSM's own name for the node, so it
