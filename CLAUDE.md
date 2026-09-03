@@ -309,10 +309,19 @@ no build. **Opened as [#721](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull
   ***"📍EONIQ / 🗺️G02,03 Mill6, The Mills, 45 Pak Tin Par St, Tsuen Wan"*** — **13 km away in the New
   Territories**. Three independent confirmations back the caption: OSM names **南豐紗廠 The Mills**
   exactly, that point **reverse-geocodes to house number 45, Pak Tin Par Street** (the caption's own
-  number), and the hero is a watch-workshop display case with nothing of SoHo in it. **The stray code
-  most likely belongs to a reel that was not in the batch — flagged for the owner rather than guessed
-  at**; note it lands 90 m from another of this batch's codes, in the same SoHo block. The session-138
+  number), and the hero is a watch-workshop display case with nothing of SoHo in it. The session-138
   Nocturnal Stationery case exactly.
+  - **✅ THE STRAY CODE IS CLOSED, AND THE ANSWER MEANS NOTHING MOVES.** Owner, 2026-09-02: it belongs to
+    **`DTK5kAFk6Dx` — Chez Trente**, which had *already* been pasted with its own code (`75J2+WX Central`).
+    **So the venue was given TWO codes at different times and they landed under adjacent links.** Measured
+    rather than assumed: `75J2+WX` reverse-geocodes to **house number 4-6, 中和里 Chung Wo Lane, SoHo** —
+    Chez Trente's own published address is **6 Chung Wo Lane** — while `75M2+9X` lands **117 m away on 20
+    Aberdeen Street**, a different street. The forward geocode for Chung Wo Lane sits **10 m** from the
+    shipped point. **The pin already sits on the door and was deliberately NOT moved.**
+    🔴 **DO NOT "fix" Chez Trente onto Aberdeen Street on the strength of the owner's code** — a
+    hand-dropped Plus Code is a pin someone tapped on a map, and the venue's own published address
+    outranks it (the La Pedrera rule). ⚠️ **This also corrects what this entry used to claim**: the code
+    does NOT belong to a reel outside the batch, and its 90 m neighbour is Chez Trente's own better code.
 - **✅ THE OTHER FIVE CODES CHECK OUT, AND TWO ARE CONFIRMED TWICE OVER.** **Heartwarming's** lands on
   **英來大廈 Ying Loy Mansion, 19-25 Yu Chau Street** — the exact range containing its published Shop B,
   G/F, **23** Yu Chau Street; **Chez Trente's** lands 90 m from **4-6 Chung Wo Lane**, its published
@@ -359,10 +368,13 @@ no build. **Opened as [#721](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull
   **0.26**, recovering the whole neon sign. ⚠️ **Straplines clipped elsewhere were deliberately LEFT** —
   *"Hong Kong's hottest new opening"*, *"Underrated restaurant series"* are topic hooks, not the
   subject's name (the California Academy rule).
-- **⚠️ FOUR WEAK HEROES, FLAGGED NOT FIXED.** **Heartwarming is the weakest** — the creator walking a
-  street, with no view of the shop or its sesame desserts. **Lazy Suzy, Dieci and La Petite Maison** are
+- **✅ FOUR WEAK HEROES, RAISED AND CLOSED — OWNER KEEPS THEM ALL (2026-09-02: *"keep heartwarming"*).
+  DO NOT re-raise or "fix" these.** **Heartwarming is the weakest** — the creator walking a street, with
+  no view of the shop or its sesame desserts. **Lazy Suzy, Dieci and La Petite Maison** are
   creator-forward with little venue identity. A link pin re-hosts only the thumbnail, so no other frame
-  exists. ⚠️ **27 of 32 will not play inline** — the documented licensed-music gate.
+  exists — the choice was keep or pull, and the owner kept. ⚠️ **Anyone re-running the open-every-hero
+  audit will flag Heartwarming again; it is settled** (the Ministry of Enterprise / Casa Lleó Morera
+  precedent — honour the decision rather than sourcing a replacement). ⚠️ **27 of 32 will not play inline** — the documented licensed-music gate.
 - **⚠️ NO ARCHITECT TAG ANYWHERE — not one caption names an architect**, so the Jules Dalou rule leaves
   the whole batch clean. **The Ice Bath Club takes `Commerce` as its Theme**, the closest honest fit in
   the 17-term facet for a wellness club; Chez Trente is the batch's one `musicAndPerformance`.
