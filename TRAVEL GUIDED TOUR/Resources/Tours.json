@@ -80376,7 +80376,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
-        "8730E2F2-A6C7-545B-989F-AAF2CE504790"
+        "8730E2F2-A6C7-545B-989F-AAF2CE504790",
+        "36C1FE8A-13FC-57D8-A6B3-6E813EAF5CE8"
       ]
     },
     {
@@ -81580,6 +81581,22 @@
       "tourIds": [
         "EED8095E-24B7-56AB-BCA7-D422DF6EE4B5",
         "032AEAF1-985F-5C9A-8205-19FD02FCEBD0"
+      ]
+    },
+    {
+      "id": "d963f703-f114-5f11-b4d2-e02ae582bb23",
+      "name": "Alwyn Court",
+      "description": "Harde and Short's 1909 apartment house at the corner of West 58th Street and Seventh Avenue, where almost no surface is left plain: bays, piers, spandrels and window surrounds are wrapped in hand-modelled terracotta, with salamanders, dragons, putti, crests and grotesque faces repeated across twelve storeys in the French Renaissance manner. Built for a handful of very large apartments, it went from gilded-age address to Depression-era relic before the apartments were cut up and the building eventually became a co-op. It is on the National Register of Historic Places, and the facade is still the reason people stop on the corner.",
+      "latitude": 40.7658624,
+      "longitude": -73.9793414,
+      "city": "New York",
+      "address": "180 West 58th Street, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alwyn-court-archiwhisperer_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "17932428-FC62-5EF6-A4F8-F899B68916DC",
+        "673AEB2A-00F2-5937-8E80-E7C5C1BB14B3",
+        "C5DEBBCD-4F88-5A1E-85F0-E983908BFDE4"
       ]
     }
   ],
@@ -113340,8 +113357,8 @@
           "order": 0,
           "title": "Alwyn Court",
           "caption": "Have you noticed this building? #nychistory #nycrealestate #nyc #newyork",
-          "latitude": 40.7659375,
-          "longitude": -73.9794375,
+          "latitude": 40.7658624,
+          "longitude": -73.9793414,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -113353,8 +113370,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7659375,
-      "centroidLongitude": -73.9794375,
+      "centroidLatitude": 40.7658624,
+      "centroidLongitude": -73.9793414,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -125448,8 +125465,8 @@
           "order": 0,
           "title": "Alwyn Court",
           "caption": "Episode 8 • Ornament • Alwyn Court Is ornament really a crime? For many modernist architects, the answer was yes. In the early 20th century,",
-          "latitude": 40.765862,
-          "longitude": -73.979341,
+          "latitude": 40.7658624,
+          "longitude": -73.9793414,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -125461,8 +125478,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.765862,
-      "centroidLongitude": -73.979341,
+      "centroidLatitude": 40.7658624,
+      "centroidLongitude": -73.9793414,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -125684,8 +125701,8 @@
           "order": 0,
           "title": "The Guggenheim",
           "caption": "Episode 3 • Flow • Guggenheim How can architecture evoke a sense of flow? Flow happens when attention is fully absorbed — when experience un",
-          "latitude": 40.782993,
-          "longitude": -73.958925,
+          "latitude": 40.7831793289656,
+          "longitude": -73.95916598843854,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -125697,8 +125714,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.782993,
-      "centroidLongitude": -73.958925,
+      "centroidLatitude": 40.7831793289656,
+      "centroidLongitude": -73.95916598843854,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",

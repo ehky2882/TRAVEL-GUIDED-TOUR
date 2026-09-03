@@ -276,10 +276,56 @@ assembler asserts each of those, so re-running it is safe and repeatable.
 - ⚠️ **A background `nohup` needs absolute paths for its redirect** — the shell's cwd resets
   between tool calls, so `> verify.log` lands somewhere else.
 
+## Follow-up, same session — three owner decisions applied
+
+**Owner: *"Alwyn court - make place. Guggenheim - add to place. Gilder center keep separate"*.**
+**Places 111 → 112.** `tours` and `makers` byte-identical; exactly **3 link pins moved, in exactly
+their four coordinate fields each, all asserted `manual` first**. Diff **30 insertions /
+13 deletions**. Content only — no Swift, no SQL, no gh-pages push, no build.
+
+**Alwyn Court** — `d963f703-f114-5f11-b4d2-e02ae582bb23`, three members (`@dmitrynycre`,
+`@hereinnyc`, `@archiwhisperer`), anchored on **OSM way 265147967** at `40.7658624, -73.9793414`,
+which reverse-geocodes **by name** to `Alwyn Court, 180-182, West 58th Street`.
+
+- ⚠️ **One member was ALREADY exactly on the anchor and did not move.** The build's first revision
+  demanded that every member change and **correctly refused to run**; relaxed to "changes are a
+  subset of the intended set, and any member that did not change must already sit on the anchor."
+  The other two moved **0.1 m** and **11.6 m**.
+- ⚠️ **Swept 400 m before building**, not just the checker's pairs: **The Osborne 82.0 m** and
+  **Carnegie Hall 96.7 m** are correctly excluded — neighbours, not the same building.
+- 🔴 **The hero is borrowed and that is structural.** All three members are link pins with empty
+  galleries and there is **no Atlas tour at Alwyn Court**, so no third photograph exists in the
+  catalogue. **Do not go sourcing one.** Borrowed-hero count re-derived: **38 of 112**.
+- ⚠️ **All three candidates rendered and looked at.** Takes `@archiwhisperer`'s full corner
+  elevation (daylight, both oriel bays, the terracotta arch, the `7 AV` sign). **Stated trade-off:
+  `@hereinnyc`'s frame is the better picture — a close-up of the terracotta that names the building
+  in frame — and was rejected on the establishing-shot criterion** (the Tribune Tower call); it also
+  carries scaffolding netting and a TikTok-branded caption card. **One line swaps it.**
+- ⚠️ **All three members are titled exactly `Alwyn Court`**, so the place shares its name with every
+  one of them. Unavoidable — the building has one name (One Times Square / Tin Building). Do not
+  "fix" it.
+
+**Guggenheim** — a pure addition: the pin moved **29.0 m** onto the existing place's exact
+coordinate and its id was appended, **2 → 3 members**, with the two existing ones asserted unchanged
+as a prefix. Nothing here is geofenced (the Atlas tour is `manual` too), and the hero stays
+`guggenheim-museum_2.webp`, a third photograph.
+
+**Gilder Center** — no action, owner's call. It stays a separate pin 176 m from the AMNH place.
+
+**Verification.** Place id `uuid5(NAMESPACE_URL, "atlas-place:new-york:alwyn-court")`, scheme
+**reverse-verified against 109 of the 111 existing places** (the two misses are the documented
+legacy uppercase ids). Mirror **22/22 with a clean control**, then **0 errors, 0 warnings** across
+1,552 tours + 986 pins + 112 places. ⚠️ **18 place-layer faults injected against the TWO CHANGED
+places specifically — 18/18 caught, control clean before and after**, the harness reading the
+**exit code** rather than the summary. 🎉 **`check-place-candidates.py` stays 0 EXACT / exit 0 on
+both sides, NEAR 43 → 38** — and diffing the two outputs shows it fell by **exactly the five pairs
+resolved** and **gained nothing**. Seed clean at **305 / 2,538 / 2,910 / 112**; **0 `images//`**;
+both place heroes live **200**. ⚠️ **`check-image-duplicates.py` deliberately not run** — no image
+added, no image URL changed (proved by the byte-identity assertions).
+
 ## Open for the owner
 
 1. **The Gursky post** — supply one coordinate, or drop it.
-2. **Alwyn Court** — three pins on one building; make it a place?
-3. **The Guggenheim pin** — join the existing place as a third member (29 m move)?
-4. **The Gilder Center** — member of the AMNH place, or separate?
-5. **The Koons/LACMA pin** — keep or pull?
+2. **The Koons/LACMA pin** — keep or pull?
+3. ~~Alwyn Court~~ ✅ built as a place. ~~Guggenheim~~ ✅ third member added.
+   ~~Gilder Center~~ ✅ kept separate.
