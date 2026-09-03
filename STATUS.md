@@ -27,6 +27,14 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ⚠️ **`gh pr list --state open` re-derived 2026-09-02 20:25 UTC — exactly THREE open PRs: [#723](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/723) (Kowloon Hum place), [#722](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/722) (19 Hong Kong + Macau pins) and [#717](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/717) (closing the `@notbadgalriri__` decisions).** **#721, #715, #714 and #716 have all MERGED** — the entries below that still say OPEN are stale on the PR and were left alone only because each still carries an owner decision that is genuinely open. **Re-derive before trusting any line on this board.**
 
+🟡 **[#722](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/722) — branch `claude/more-tours-a1xhw4`, 19 Hong Kong + Macau link pins (session 139), sent in two waves.** `linkPins` **905 → 924** · `makers` **297 → 303** · **`places` 108 → 111** (the three candidates, built on owner instruction) · `tours` byte-identical. Content only — no Swift, no SQL, no build; the seed carries it, so it reaches Supabase on merge with nothing for the owner to run.
+  - 🔴 **Two of the first sixteen links CANNOT be pinned, ever.** They are Instagram **story highlights** (`/s/…`) by a third creator, `@kieranbrowntravel`. `LinkSource.embedURL` matches only `p`/`reel`/`tv`, so the app can build **no player**; the page also carries no `display_url` (no hero) and no caption (no subject). ⚠️ They are **NOT dead and NOT blocked** — do not re-try on "the link opens on my phone". Their two Plus Codes are orphaned.
+  - ✅ **ALL THREE PLACE CANDIDATES ARE BUILT — owner instruction *"make the 3 places"*. Places 108 → 111.** **Hong Kong Railway Museum** · **In's Point** · **Bowrington Bridge Villain Hitting**, each two pins by **different creators** on one site (the Cube House shape, not the duplicate-Cheung-Hing shape); pins moved **0.46 / 36.57 / 25.72 m**, all `manual`, `tours` and `makers` byte-identical. 🔴 **Each anchors on a different member and the EVIDENCE decided, not seniority** — the Railway Museum and villain-hitting take the older pin (they sit on OSM's own named nodes), **In's Point takes the NEW pin because OSM carries the shop twice and only that node has the house number 530** (the Jamia Mosque rule). 🔴 **`check-place-candidates.py` could see only two of the three** — the hyphen in `Villain-Hitting` breaks its title-containment rule — so **NEAR falls 38 → 36 and nothing is removed for the third**; EXACT stays 0, clean exit both sides. ⚠️ **All three heroes are borrowed and that is structural** (every member is a link pin with an empty gallery, no Atlas tour at any site); borrowed-hero count re-derived **37 of 111**.
+  - 🟡 **Three weak-ish heroes, flagged not fixed** — `The Four Columns at Kadoorie Farm` is a **historical B&W photograph of the demolished building the columns came from**; `The Rare LEGO Sets at In's Point` is the shop's **sign**, carrying none of the LEGO; `I Love Cake, Wan Chai` is **creator-forward**, though the shelves read behind her. A link pin re-hosts only the thumbnail, so no other frame exists.
+  - ⚠️ **One title is a stated compromise** — `Louis Vuitton Lee Gardens` is titled for the **venue, not the Bar Leone pop-up it hosts** (so it cannot go stale), but categorised `foodAndDrink` because the post is entirely a bar visit and the catalogue has no shopping category.
+  - ⚠️ **11 of 19 will not play inline** — the documented licensed-music gate; poster + OPEN IN INSTAGRAM is the correct outcome.
+
+
 🟡 **MERGED — [#721](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/721) (squash `51889d67`), session 139, 32 Hong Kong link pins. The PR is closed, and TWO of its three owner decisions are now closed too.** ✅ **Verified against the systems rather than the success line:** the squash genuinely changed files on `main` (1,821 insertions across 6 files, all 32 shortcodes present, the blocked post correctly absent), the **live RPC serves 937 link pins with 0 wrongly inside `tours`** and places 107, and the gh-pages **committed blob** carries 937/299/107 while the CDN was still serving 905 — the documented lag, not a failed publish. All 32 heroes confirmed still in the gh-pages head tree, which matters because a parallel session was pushing more Hong Kong heroes on top throughout. ⚠️ **`main` moved mid-flight** — [#719](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/719) landed and was merged in with every check re-run, so the merged base reads **107 places**, not the 105 this batch was cut against. linkPins **905 → 937**, makers **297 → 299**; `tours` and `places` byte-identical. gh-pages `2baba65`, all 32 live heroes hash-verified. Three things want an owner call:
   - **✅ CLOSED — the stray Plus Code, and the answer means NOTHING MOVES.** `75M2+9X Central` was pasted beside the EONIQ reel but decodes onto Aberdeen Street, SoHo, 13 km from the Tsuen Wan address that reel's own caption gives; EONIQ ships on the caption. Owner named its real post: **`DTK5kAFk6Dx` — Chez Trente**, which had *already* been pasted with its own code (`75J2+WX Central`), so **the venue was given two codes at different times under adjacent links**. Measured: `75J2+WX` reverse-geocodes to **house 4-6, Chung Wo Lane** (Chez Trente's published address is **6 Chung Wo Lane**, forward geocode 10 m away) while `75M2+9X` is **117 m off on 20 Aberdeen Street**. **The pin already sits on the door and was deliberately NOT moved.** 🔴 **Do NOT "fix" Chez Trente onto Aberdeen Street** — a hand-dropped code is a tap on a map, and the venue's published address outranks it.
   - **✅ CLOSED — `Heartwarming` STAYS (owner, 2026-09-02: *"keep heartwarming"*). Do not re-raise or replace it.** Its hero is the creator walking a street with no view of the shop or its sesame desserts — the batch's weakest — and a link pin re-hosts only the thumbnail, so keep-or-pull was the whole choice. Lazy Suzy, Dieci and La Petite Maison are creator-forward and stay too. ⚠️ **The open-every-hero audit will flag this again; it is settled** (the Ministry of Enterprise precedent).
@@ -59,7 +67,6 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
   - 🟡 **STILL OPEN — ⚠️ `Coldefy & Associés` is named in a caption and is absent from the vocabulary** — the Hong Kong Design Institute ships the generic `Designed by a Master`. Adding the name is a `Models/Tag.swift` **code** change for a future architect PR.
 
 
-
 **The test — one field decides it.** Fetch each post's embed and read `contextJSON`:
 
 ```bash
@@ -90,7 +97,6 @@ pin anyway — it works offline, downloads, and fires at a geofence, none of whi
 ⚠️ Toronto already has **42** Atlas tours, so check for overlap before drafting.
 
 
-
 ✅ **MERGED — [#698](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/698) squashed as `0312ced5` (session 135): 25 Toronto link pins.** All four CI checks green (**Validate Tours.json**, simulator build, unit tests, Vercel), and the squash was **verified to have actually changed files on `main`** — 1,705 insertions across 5 files — rather than trusting GitHub's success line (the #629 empty-squash lesson). ✅ **VERIFIED LIVE ON BOTH SOURCES, read back rather than assumed from the workflow's success line:** the **Supabase RPC** (the PRIMARY source) serves **590 link pins · 25 Toronto · 0 link pins inside `tours`**, and the **gh-pages mirror** serves **590 · 25**. ⚠️ The seed took **~15 minutes** on "Apply seed" — well past the mirror job, which finished in 12 seconds — so a content merge is not live the moment CI goes green; poll the RPC. ⚠️ **The RPC reports 1,553 tours against the catalogue's 1,552** — the long-standing `Zxxx` test tour, pre-existing; **assert on link-pin counts, not tour totals.** The original PR notes follow.
 
 🟡 **(superseded, kept for the decisions)**
@@ -108,7 +114,6 @@ removed. ⚠️ **Owner can settle WHY by sending the creator handles** — a pr
 (3) **three weak heroes**, **One King West** sharpest (its frame is the CN Tower, not the vault);
 (4) **four place candidates** — ROM 9 m, Casa Loma 11 m, Distillery District 40 m, Osgoode Hall 57 m.
 ✅ **All four are BUILT — see the entry below.**
-
 
 
 ✅ **MERGED — [#702](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/702) squashed as `855938a8`, and
@@ -929,7 +934,6 @@ mistake, then `git push -u origin <branch>` pushed the branch ref — still at a
 commit. CI went green, GitHub said "successfully merged", and nothing shipped; re-landed as #630.
 **"Successfully merged" is not evidence anything landed. Check `git log origin/main..HEAD` before
 pushing and confirm the squash changed files afterwards.**
-
 
 
 - **Supabase over-reports.** The RPC serves ~1,419 tours / 39 makers against a true 1,418 / 31.
