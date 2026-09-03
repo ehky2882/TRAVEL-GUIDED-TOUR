@@ -128,7 +128,7 @@ their text centrally rather than at the frame edges.
 
 **⚠️ Five weak heroes, flagged not fixed:**
 
-- **Jeff Koons / LACMA** — the artist holding merchandise; weakest overall (above).
+- **Jeff Koons / LACMA** — the artist holding merchandise; weakest overall (above). ✅ **Owner keeps it (2026-09-03).**
 - **Calder Gardens** — a motion-blurred sweep of Piet Oudolf planting with **no building visible**.
 - **Princeton University Art Museum** — a dim interior corridor that does not read as a museum.
 - **The Studio Museum in Harlem** — an **archival B&W** photograph of the 125th Street building,
@@ -325,7 +325,9 @@ added, no image URL changed (proved by the byte-identity assertions).
 
 ## Open for the owner
 
-1. **The Koons/LACMA pin** — keep or pull?
-2. ~~The Gursky post~~ ✅ **left as-is, owner decision 2026-09-03** (*"Ok leave the gursky"*) — never wired, so no catalogue edit and no SQL owed.
+**Nothing — both are closed.**
+
+1. ~~The Gursky post~~ ✅ **left as-is, owner decision 2026-09-03** (*"Ok leave the gursky"*) — never wired, so no catalogue edit and no SQL owed.
+2. ~~The Koons/LACMA pin~~ ✅ **kept, owner decision 2026-09-03** (*"i'm fine with the koons"*). It stays exactly as shipped. ⚠️ A future open-every-hero audit will flag it again as the batch's weakest — **it is settled**; honour the decision rather than pulling it.
 3. ~~Alwyn Court~~ ✅ built as a place. ~~Guggenheim~~ ✅ third member added.
    ~~Gilder Center~~ ✅ kept separate.
