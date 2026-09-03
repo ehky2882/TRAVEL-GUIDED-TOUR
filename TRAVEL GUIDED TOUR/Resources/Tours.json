@@ -81598,6 +81598,36 @@
         "673AEB2A-00F2-5937-8E80-E7C5C1BB14B3",
         "C5DEBBCD-4F88-5A1E-85F0-E983908BFDE4"
       ]
+    },
+    {
+      "id": "c34c44e1-e247-5da3-aec0-3e52e94c7366",
+      "name": "Depot Boijmans Van Beuningen",
+      "description": "MVRDV's art depot in Museumpark, opened in 2021 and clad entirely in mirrored glass, so the building gives Rotterdam's skyline back to the street at eye level. An art depot is normally a big box kept out of sight; this one was built to be looked at and gone into. The bowl leans outward as it rises, which means the footprint at ground level is smaller than the garden planted on the roof — birches and pines above a reflective drum, with the city curving across it whichever way you approach.",
+      "latitude": 51.9139529,
+      "longitude": 4.471132,
+      "city": "Rotterdam",
+      "address": "Museumpark 24, Rotterdam",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/depot-boijmans-van-beuningen-theworldaround_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F"
+      ]
+    },
+    {
+      "id": "df9fa4c9-b17c-5005-ae41-6c48152ed995",
+      "name": "Sayama Lakeside Cemetery",
+      "description": "A wooded cemetery in the Sayama hills west of Tokyo, holding two buildings that Hiroshi Nakamura & NAP completed here in 2013. The community hall is designed around grief rather than ceremony: its eave is set at exactly the height of a person looking down, and from a seat inside the hills reappear beyond a reflecting pool. The chapel, built second, sits in among the trees with its walls angled so that the forest is framed from within. Both are small, and both are arranged around what a person does with their eyes.",
+      "latitude": 35.7712582,
+      "longitude": 139.4245041,
+      "city": "Tokorozawa",
+      "address": "Kamiyamaguchi, Tokorozawa",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sayama-forest-chapel-archimarathon_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "992B0BE3-1072-5990-99EB-5CD5145F12D4",
+        "335C2FA7-C33D-5C05-83E0-8B06CC751B74"
+      ]
     }
   ],
   "linkPins": [

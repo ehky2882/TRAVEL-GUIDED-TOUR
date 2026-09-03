@@ -251,6 +251,80 @@ created. Detail: `archive/HANDOFF-260903-2.md`.
   reuses** — identical to the recorded baseline, so this batch adds no shared URL.
   ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
 
+#### ✅ FOLLOW-UP, same session — the two EXACT groups are places, and EXACT reaches zero again
+
+**Owner: *"Make the places. Open PR"*.** Both built. **Places 112 → 114**; `tours`, `makers` and
+`linkPins` **byte-identical**, the 112 existing places unchanged as a prefix, and **nothing moved** —
+both pairs were already exactly coincident, so the identity rule held on its own. Diff **30
+insertions / 0 deletions**. Content only — no Swift, no SQL, no gh-pages push, no build.
+
+- **Built: Depot Boijmans Van Beuningen · Sayama Lakeside Cemetery.** ⚠️ **Two different shapes, both
+  legitimate.** Depot is **two creators on one building** (`YouTube @TheWorldAround` + this batch's
+  `TikTok @archimarathon`) — the Cube House / Vizcaya case. **Sayama is ONE creator on two different
+  buildings at one site** — Hiroshi Nakamura & NAP's chapel and community hall, both 2013, both
+  inside the same cemetery — which is a place in the plainest sense: the site contains the subjects.
+- **⚠️ SWEPT 400 m AROUND EACH SITE RATHER THAN TRUSTING THE CHECKER'S PAIR** (the session-131
+  lesson, where every one of four places turned out larger than the group that flagged it). **Here
+  the pair genuinely was the whole story both times — nothing else is within 400 m of either point
+  at all**, so there is nothing to record as a deliberate exclusion.
+- **🔴 BOTH ANCHORS ARE OSM'S OWN, AND THE SAYAMA ONE ONLY LOOKS WRONG.** Depot **reverse-geocodes by
+  name** to `Depot Boijmans Van Beuningen, 24, Museumpark`. Sayama **reverse-geocodes to a bench in
+  the Belluna Dome red car park** — the documented nearest-addressed-POI case — while the *forward*
+  search on the bare name returns OSM way **1501167136, `landuse=cemetery`, named `狭山湖畔霊園`, at
+  exactly the pins' coordinate**. ⚠️ **A re-query with the district appended (`狭山湖畔霊園 所沢`)
+  returns ZERO hits**, which is how a confirmation can look like a refutation — the bare name is the
+  query that works.
+- **🔴 BOTH HEROES ARE BORROWED FROM A MEMBER AND THAT IS STRUCTURAL — do not go sourcing
+  replacements.** All four members are link pins with **empty galleries**, and there is **no Atlas
+  tour at either site**, so no third photograph of either exists in the catalogue (the documented
+  Waterlooplein / Legion of Honor case). Borrowed-hero count **re-derived, not carried forward: 40
+  of 114**.
+  - **All four candidates were rendered and looked at**, never chosen by filename. **Depot takes
+    `@TheWorldAround`'s dusk frame** — the whole mirrored bowl leaning outward, the rooftop birches,
+    Rotterdam's skyline curved across the glass, people on the plaza for scale. ⚠️ **The
+    `@archimarathon` alternative is the same building in better light and was rejected because two
+    presenters fill its bottom third.**
+  - **⚠️ Sayama takes the CHAPEL's exterior and that is a stated trade-off.** The community hall's
+    frame is the better *picture* — a radial timber ceiling over curved glazing, the banquette, the
+    reflecting pool beyond — and it is an **interior**, where a place hero wants an establishing shot
+    (the session-95 criterion). The chapel's angled stone walls meeting in timber-lined slots read as
+    a place on a map. **One line swaps it.**
+- **⚠️ ONE PLACE SHARES ITS NAME WITH A MEMBER AND THE OTHER DELIBERATELY DOES NOT.** The Depot has
+  exactly one name, so the parent matches a child (the One Times Square / Tin Building call) — **do
+  not "fix" it.** Sayama ships as **`Sayama Lakeside Cemetery`**, OSM's own name for the polygon,
+  which matches neither `Sayama Forest Chapel` nor `Sayama Lakeside Cemetery Community Hall` and
+  reads correctly for both (the Bowrington Bridge precedent).
+- **⚠️ Addresses are editorial, corroborated by geocoding rather than taken from it.** Depot ships
+  **`Museumpark 24, Rotterdam`**, which is what OSM names exactly. **Sayama ships `Kamiyamaguchi,
+  Tokorozawa` with NO house number**, because OSM's cemetery polygon carries none and none was
+  invented (the Operaparken precedent).
+- **⚠️ The descriptions assert only what the members carry.** Depot: MVRDV, 2021, Museumpark, mirrored
+  glass giving the skyline back at street level, and the footprint being smaller than the roof garden
+  above it — **no collection size and no visitor-access claim**, neither of which either member
+  states. Sayama: Hiroshi Nakamura & NAP, 2013, the hall's eave set at the height of a person looking
+  down, the hills reappearing beyond the reflecting pool from a seat inside, and the chapel built
+  second among the trees to frame the forest from within. **The register stays plain and
+  unsentimental**, matching the catalogue's convention on grief.
+- **Verification.** Place ids `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")`, the
+  scheme **reverse-verified against 110 of the 112 existing places** (the two misses are the
+  documented legacy uppercase ids), **0 collisions**. `Tours.json` **byte-stable under a Python
+  re-dump before AND after editing** (the build asserts it and refuses otherwise). Mirror
+  **self-tested 22/22 with a clean control**, then **0 errors, 0 warnings across 1,552 tours + 1,047
+  pins + 114 places**, exit code read **directly, not through a pipe**. ⚠️ **26 place-layer faults
+  injected against THESE TWO places specifically — 26/26 caught, control clean before and after**
+  (each place drifting off its members in latitude and in longitude, either member nudged 55 m, a
+  place dropped to one member, an empty name, an unknown tour id, a bad hero URL, an out-of-range
+  latitude, the hero repeated in its own gallery, both members set to the same pin, a duplicate place
+  id, a member claimed by both new places, a member claimed by a new *and* an existing place).
+  🎉 **`check-place-candidates.py` reaches 0 EXACT and exits 0**, restoring the clean-exit state this
+  batch had broken, **with NEAR unchanged at 39** — it falls by exactly the two groups resolved and
+  gains nothing, so **no coincident group was manufactured**. Seed clean at **305 / 2,599 / 2,971 /
+  114**; **0 `images//`** in the catalogue *or* the SQL. Both place heroes live **200**.
+  ⚠️ **`check-image-duplicates.py` was deliberately NOT re-run and that is not a gap** — no image was
+  added and no image URL changed (proved: `tours`, `makers` and `linkPins` all byte-identical), and
+  each place hero is now used exactly twice, in its own pin and as the place hero, which is the
+  documented tier-1 shape rather than a collision.
+
 
 ### Twenty-nine link pins, a post that names no place, and Alwyn Court going three deep (branch `claude/tour-links-tp9fwp`, session 140 — content)
 
