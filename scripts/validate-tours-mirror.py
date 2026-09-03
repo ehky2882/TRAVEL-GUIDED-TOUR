@@ -20,12 +20,12 @@ Two disciplines make it worth anything at all:
      comes back empty — a mirror that silently parses nothing passes anything.
   2. It is self-tested against injected faults before its verdict is believed.
 """
-import json, re, sys, math
+import json, os, re, sys, math
 
 ROOT = "."
 TAGSWIFT = f"{ROOT}/TRAVEL GUIDED TOUR/Models/Tag.swift"
 VALSWIFT = f"{ROOT}/scripts/validate-tours.swift"
-CATALOG  = f"{ROOT}/TRAVEL GUIDED TOUR/Resources/Tours.json"
+CATALOG  = os.environ.get("ATLAS_CATALOG") or f"{ROOT}/TRAVEL GUIDED TOUR/Resources/Tours.json"
 
 
 def _strip_comments(src):
@@ -179,11 +179,25 @@ def check(cat, facets, vocab, dom):
             if abs(s["latitude"] - pl["latitude"]) > 1e-9 or abs(s["longitude"] - pl["longitude"]) > 1e-9:
                 errors.append(f"place {pl['name']}: member not on the place coordinate")
         h = pl.get("heroImageURL")
+        # `validate-tours.swift` checks the place hero URL (its `isValidURL`);
+        # this mirror did not, so a malformed hero passed here and failed CI.
+        if h and not is_url(h):
+            errors.append(f"place {pl['name']}: heroImageURL is not a valid URL")
+        for u in (pl.get("additionalImageURLs") or []):
+            if not is_url(u):
+                errors.append(f"place {pl['name']}: gallery URL is not valid")
         if h and h in (pl.get("additionalImageURLs") or []):
             errors.append(f"place {pl['name']}: hero repeated in its own gallery")
+        if not (-90 <= pl["latitude"] <= 90) or not (-180 <= pl["longitude"] <= 180):
+            errors.append(f"place {pl['name']}: coordinate out of range")
     ids = [pl["id"].lower() for pl in places]
     if len(ids) != len(set(ids)): errors.append("duplicate place id")
     return errors, warnings
+
+
+def is_url(u):
+    """Mirrors `isValidURL` in validate-tours.swift: an absolute http(s) URL."""
+    return isinstance(u, str) and u.startswith(("http://", "https://")) and " " not in u
 
 
 def selftest(facets, vocab, dom):
@@ -208,6 +222,9 @@ def selftest(facets, vocab, dom):
     case("place with one member",  lambda c: c["places"][0].__setitem__("tourIds", c["places"][0]["tourIds"][:1]))
     case("place member off coord", lambda c: c["places"][0].__setitem__("latitude", c["places"][0]["latitude"] + 0.01))
     case("place unknown member",   lambda c: c["places"][0]["tourIds"].append("11111111-1111-1111-1111-111111111111"))
+    case("place bad hero url",     lambda c: c["places"][0].__setitem__("heroImageURL", "not a url"))
+    case("place bad gallery url",  lambda c: c["places"][0].__setitem__("additionalImageURLs", ["not a url"]))
+    case("place lat out of range", lambda c: c["places"][0].__setitem__("latitude", 999.0))
     case("zero tour duration",     lambda c: c["tours"][0].__setitem__("totalDurationSeconds", 0))
     case("zero stop duration",     lambda c: c["tours"][0]["stops"][0].__setitem__("audioDurationSeconds", 0))
     case("empty stop audioURL",    lambda c: c["tours"][0]["stops"][0].__setitem__("audioURL", ""))
