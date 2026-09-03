@@ -347,7 +347,7 @@ pins moved, in exactly their four coordinate fields each, all three asserted `ma
   added and no image URL changed (proved: `tours` byte-identical, and the 3 moved pins differ in
   **no field but their four coordinate fields**); the Alwyn hero is now used exactly twice, in its
   own pin and as the place hero, which is the documented tier-1 shape rather than a collision.
-  ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
+  ⚠️ **Nothing compiled locally — CI runs on [#726](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/726).**
 
 ## Current State (2026-09-02)
 
