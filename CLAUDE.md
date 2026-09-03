@@ -128,6 +128,130 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-09-03)
 
+### Sixty-one @archimarathon architecture pins, and a bouldering gym that nearly took The Hive (branch `claude/new-tour-links-cytwc6`, session 141 — content)
+
+**The owner sent 61 TikTok links under a heading reading "Architmarathon" — a typo; every post
+resolves to `@archimarathon`, whose maker row already exists and whose id the uuid5 scheme
+reproduced exactly, so this is 61 pins and 0 new maker rows.** **linkPins 986 → 1047 · `tours`,
+`makers` and `places` byte-identical.** Content only — no Swift, no SQL, no build, no place
+created. Detail: `archive/HANDOFF-260903-2.md`.
+
+- **✅ ALL 61 ALIVE, 0 ALREADY PINNED, 0 IN-BATCH DUPLICATES, 0 `/photo/` CAROUSELS** — every
+  oEmbed returned a full payload against **three already-live catalogue pins fetched in the same
+  pass with the same UA**. The heading was read against the payload, not trusted (the session-135
+  rule), and all 61 authors match.
+- **🎉 THE BEST-GROUNDED BATCH TO DATE: every caption names the building, its architect AND its
+  year.** That is why **44 of 61 coordinates are named exactly by OSM** and why the hero audit
+  came back with zero wrong subjects. **Estonia and China are the catalogue's 43rd and 44th
+  countries.**
+- **🔴 MY GEOCODER TURNED HTTP 429 INTO "NOT FOUND", WHICH IS THE SESSION-137 FAILURE EXACTLY.**
+  The first pass wrote `results: []` for rate-limited requests, so 30 venues read as unmapped
+  when the service had simply refused to answer. Rewritten so **a request that does not return
+  HTTP 200 writes no row at all**, then re-run. **A request that never completed must not be able
+  to produce a verdict** — and the tell was that Nominatim answered a hand-typed query fine
+  seconds later.
+- **🔴 `The Hive` RESOLVED TO A BOULDERING GYM 1.2 km AWAY, AND ONLY THE TYPE FIELD SAID SO.**
+  The forward geocode returned a confident named hit — `The Hive [leisure/sports_centre]` — but
+  Vancouver has a climbing-gym chain of that name, and the subject is the **ten-storey mass-timber
+  office at 2150 Keith Drive**. The Komeda wrong-branch trap; a distance check alone can never
+  catch it, because the wrong answer is a real place with the right name. **Read the OSM class
+  and type, not just the name.**
+- **🔴 `Sulwhasoo` RESOLVED TO THE MYEONGDONG BRANCH**, 2 km from the Neri&Hu flagship. OSM maps
+  no node for the store, so **Bukchon-ro was walked by reverse-geocode** (the Crosby Street
+  method): no. 15 is the Constitutional Court, so the caption's no. 18 sits opposite, and the pin
+  sits there. ⚠️ **`阿那亚` unbounded matched the Taipei Representative Office in the
+  NETHERLANDS** — the documented unbounded trap; UCCA Dune was then found by its own Chinese name.
+  ⚠️ **Aalto built TWO churches in Wolfsburg** and the caption's 1962 one is Heilig-Geist on
+  Klieversberg, resolved to the exact building at Röntgenstraße 81.
+- **✅ THE ONE SUPPLIED COORDINATE CHECKS OUT AND IS CONFIRMED TWICE.** `G952+C8 Berlin` decodes
+  to `52.5085625, 13.3508125`, reverse-geocodes to **1 Rauchstraße, Botschaftsviertel**, and sits
+  **7 m** from OSM's own **`Felleshus`** — the Nordic Embassies' shared house, which is exactly
+  what that post is about. `decode-plus-code.py --selftest` clean first.
+- **⚠️ DOCUMENTED SHAPES, ALL CORRECT:** Säynätsalo reverses onto a hair salon literally named
+  **"Aalto"** (nearest addressed POI; the forward names the town hall); Richmond Olympic Oval onto
+  a capoeira school at the Oval's own address; Penticton onto **The Barking Parrot**, the bar
+  inside it; Alliance Française onto a café at its own 6161 Cambie Street; the Sayama cemetery
+  onto the neighbouring **Belluna Dome car park**; KF Centre onto **Kelowna International
+  Airport**, which is where it is.
+- **✅ ALL 61 HEROES OPENED AND READ AGAINST THEIR CAPTIONS — ZERO WRONG SUBJECTS**, many
+  confirming the caption outright (Utzon's cloud ceiling, Frei Otto's tensile net, the UCCA Dune
+  opening onto the Bohai beach, the Städel's skylight grid in the lawn, Rietveld's red-blue-yellow
+  planes, Böhm's concrete rock at Neviges). **✅ NO HAND RE-CROP WAS NEEDED — the second clean run
+  in sixteen batches**, because this creator burns in **no title cards at all**, so the vertical
+  `--focus` gap never bit.
+- **⚠️ FOUR WEAK HEROES, FLAGGED NOT FIXED.** **Rozet is the sharpest mismatch** — its frame is
+  the interior stair while its caption is entirely about the **ornamented concrete facade**.
+  **Villa Mairea** has two presenters filling the frame with the kidney pool behind them;
+  **Penticton** is a man pointing at a ceiling; **Expo Green Roof** is creator-forward, though its
+  planted stadium terraces read clearly. A link pin re-hosts only the thumbnail, so no other frame
+  exists — the choice is keep or pull.
+- **⚠️ FOUR WEAK COORDINATES, STATED NOT HIDDEN.** **Taipei Roofs is the weakest** — no published
+  address exists anywhere (ArchDaily gives only "Xinyi District"), so it is pinned in Xinyi.
+  **Tsuruoka House** is a private house whose caption names no location at all, pinned on a road
+  in Nerima. **The Temple of Light** sits on Walkers Landing Road because Yasodhara Ashram is
+  unmapped — ⚠️ **its own hero corroborates that**, showing the lotus temple above Kootenay Lake,
+  which is where that road runs. **Sulwhasoo** is street-level, as above.
+- **🔴 TWO EXACT PLACE GROUPS, FLAGGED NOT CREATED — and the clean-exit state ends honestly.**
+  `check-place-candidates.py` goes **0 EXACT → 2** and exits 1. **Neither coordinate was nudged.**
+  **Depot Boijmans ×2** — the existing pin and this batch's both derive independently from OSM's
+  own museum node (convergence, the Tribune Tower case), so this one ships as **`The Mirrored
+  Facade of Depot Boijmans`** rather than putting two identically-titled pins on one point.
+  **Sayama Forest Chapel + Community Hall** — two different Hiroshi Nakamura buildings of 2013 at
+  one cemetery, where **OSM maps only the cemetery polygon**; inventing two points inside it is
+  the manufacturing session 132 rejected for Arthur Ashe. Both groups have two members, inside
+  `TourSetMap.maxStacked = 3`, so nothing is unreachable. **NEAR 38 → 39**, the one addition being
+  the Atlas **Reichstag** tour ↔ this batch's **Reichstag Dome** at **9 m** — a genuinely distinct
+  subject, since that caption is entirely about Foster's ramps and mirrored cone.
+- **🔴 THE LARGEST ARCHITECT-VOCABULARY GAP ANY BATCH HAS SURFACED, AND `Alvar Aalto` IS IN IT.**
+  Only six names here are in the vocabulary and used — `I. M. Pei`, `Sou Fujimoto`, `Jørn Utzon`,
+  `Norman Foster`, `Peter Zumthor`, `SANAA` — each **alongside** `Designed by a Master`, never
+  replacing it. **Absent and shipping the generic tag: `Alvar Aalto` ×3** (Säynätsalo, Villa
+  Mairea, Wolfsburg), **`Gottfried Böhm` ×3**, **`Arthur Erickson` ×3**, plus MVRDV, Mecanoo,
+  Neutelings Riedijk ×2, Patkau ×2, Piet Blom, Aldo van Eyck, Gerrit Rietveld, James Stirling,
+  UNStudio, Willem Dudok, MAD Architects, Frei Otto, Günther Behnisch, Neri&Hu, Akihisa Hirata,
+  Hiroshi Nakamura ×2, Kiyoaki Takeda, Mount Fuji Architects Studio, OPEN Architecture, Berger +
+  Parkkinen, Hariri Pontarini, Schneider + Schumacher, Fritz Schaller, Cornelia Oberlander ×2,
+  Peter Böhm, Shozo Uchii, Head Arhitektid, MX_SI, Pan Tianyi, Wang Da Hong, Lahznimmo,
+  CannonDesign, DIALOG, HDR, RLA, Public Architecture, McFarland Marceau, Meiklejohn. **A
+  `Models/Tag.swift` code change, deliberately kept out of a content batch.** ⚠️ **`Le Corbusier`
+  is deliberately NOT tagged on Maison Pierre Jeanneret** — the house is Jeanneret's and Corbusier
+  is named only as the cousin he worked for (the Sullivan rule); and **three pins carry no master
+  tag at all** because their captions name no architect (Expo Green Roof, The Hive, Mandarin's
+  House — the Jules Dalou rule). **Do not "finish the job."**
+- **⚠️ THREE TITLES HAD TO BE DISAMBIGUATED AGAINST THE LIVE CATALOGUE** — `The Mirrored Facade of
+  Depot Boijmans`, `The Cube Houses of Rotterdam` (Toronto's Cube House is a different building,
+  which its own caption says it borrowed the form from) and `The Reichstag Dome`.
+- **Verification.** Mirror **self-tested 22/22 with a clean control**, then **0 errors, 0 warnings
+  across 1,552 tours + 1,047 pins + 112 places**, **exit code read directly, not through a pipe**.
+  ⚠️ **21 faults injected against THIS batch's own 61 pins — 17 caught, control clean before and
+  after**; ⚠️ **two of the five apparent misses were the HARNESS's own bug** (it counted only
+  errors, and "no Place type" / "no Theme" are *warnings*) — the session-90 lesson — and **the
+  remaining three are the documented mirror blind spots** (centroid drift, negative duration,
+  empty title), the same three session 139 recorded, **each asserted directly on the 61 instead**.
+  `make-link-pin.py --selftest` **71/71** ⚠️ with Pillow installed first (a bare container reports
+  62/62, which reads as a pass and is not one). **61 heroes for 61 pins** — the check that catches
+  two pins slugging identically. **0** duplicate ids, **0** collisions with live ids, **0**
+  already-pinned sourceURLs, **0** byte-duplicate heroes, closest perceptual pair **27.51**. **0
+  filename collisions against 6,805 gh-pages `images/` paths**, the listing **asserted to hold
+  >1,000 first**; ⚠️ the bare-slug check was **clean too**, so the handle suffix was not
+  load-bearing here. ⚠️ **One file already existed and was EXCLUDED rather than overwritten** —
+  `avatar-tiktok-archimarathon.webp` regenerated **byte-identically to the live file**, compared
+  by sha256 against the served bytes (the `@urbanistariel` case, eleventh time): **62 generated,
+  61 uploaded**. `Tours.json` **byte-stable under a Python re-dump before editing**; diff **2,849
+  insertions / 0 deletions**, asserted purely additive. `seed_from_toursjson.py` clean at **305 /
+  2,599 / 2,971 / 112**; **0 `images//`** in the catalogue *or* the SQL. gh-pages `317046a`:
+  remote head **re-read in the same command as the push**, push status read through
+  **`PIPESTATUS`**, tree diff **exactly 61 additions, 0 deletions, nothing outside `images/`**.
+  ⚠️ **The Pages deploy took ~12 minutes and served 404 throughout** — checked against the Actions
+  API and found **`in_progress`, never `cancelled`** (the documented distinction), after which **all
+  61 live URLs were hash-verified against the uploaded bytes: 61 ok, 0 mismatch, 0 non-200**.
+  🔴 **`check-image-duplicates.py --pins` was run AFTER the deploy** (the session-135 false-pass
+  lesson): **`OK — no suspicious duplicates`** over **1,042 images** (1,042 for 1,047 pins is the
+  documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors / 208 documented
+  reuses** — identical to the recorded baseline, so this batch adds no shared URL.
+  ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
+
+
 ### Twenty-nine link pins, a post that names no place, and Alwyn Court going three deep (branch `claude/tour-links-tp9fwp`, session 140 — content)
 
 **Two owner batches under two headings — "Archiwhisperer" (14 TikTok links, no coordinates) and
