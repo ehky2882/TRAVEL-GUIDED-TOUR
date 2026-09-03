@@ -253,7 +253,7 @@ created. Detail: `archive/HANDOFF-260903-2.md`.
 
 #### ✅ FOLLOW-UP, same session — the two EXACT groups are places, and EXACT reaches zero again
 
-**Owner: *"Make the places. Open PR"*.** Both built. **Places 112 → 114**; `tours`, `makers` and
+**Owner: *"Make the places. Open PR"*.** Both built, and the batch is **open as [#729](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/729)**. **Places 112 → 114**; `tours`, `makers` and
 `linkPins` **byte-identical**, the 112 existing places unchanged as a prefix, and **nothing moved** —
 both pairs were already exactly coincident, so the identity rule held on its own. Diff **30
 insertions / 0 deletions**. Content only — no Swift, no SQL, no gh-pages push, no build.
