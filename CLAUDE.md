@@ -153,7 +153,11 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
   STRING**, so everything inside is escaped (`\"username\"`) and a regex for raw `"username":"`
   matches nothing. Extract the string value, `json.loads` once to unescape, then parse the result.
   **A parse that returns nothing on a healthy page is the parser's fault until proven otherwise.**
-- **🔴 ONE POST IS PARKED, NOT GUESSED AT — the Andreas Gursky reel.** Its caption names **no place
+- **✅ ONE POST WAS PARKED AND THE OWNER THEN LEFT IT — the Andreas Gursky reel. CLOSED 2026-09-03
+  (*"Ok leave the gursky"*); it ships nowhere, and because it was never wired this costs no catalogue
+  edit and owes no SQL (`CxgEBMxqcQX` verified absent from the live RPC and the mirror). Do not
+  re-raise it, and do not site it later from the raw coordinate — that reading is inference, which is
+  why it was parked.** Its caption names **no place
   at all** (a "read more on our website" artist promo), **its hero is a portrait of Gursky himself**
   against a concrete wall with `ANDREAS GURSKY` burned in — not a photograph of anywhere — and the
   **two supplied coordinates are 7,006 m apart**: the Plus Code `8QC7XPRV+JC` decodes to Yanggak in
@@ -168,7 +172,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
   Palais des Papes**; titled for the venue so it cannot go stale (the Grace Cathedral AURA rule).
   ⚠️ Its caption says the *original* Kokoro works are at **Hara Museum ARC and Mōri Garden, Tokyo** —
   the source works for the editions, **not** this coordinate; do not "correct" it to Japan. **The
-  Jeff Koons one is the batch's weakest and is flagged** — the artist holding two edition pieces,
+  Jeff Koons one is the batch's weakest and is flagged (✅ kept — owner, see below)** — the artist holding two edition pieces,
   a draw that closed on 17 March, and its only tie to a place is *"launched in support of @lacma"*;
   the supplied coordinate is exactly 5905 Wilshire, **4.3 m from the live Atlas LACMA tour**.
 - **🔴 THE STACK-CAP FINDING: ALWYN COURT IS NOW THREE DEEP, AND NOTHING WAS NUDGED.** The new pin
@@ -195,7 +199,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
   **✅ NO HAND RE-CROP WAS NEEDED ANYWHERE — the first clean run in sixteen batches**, because both
   creators place their burned-in text centrally rather than at the frame edges; the vertical
   `--focus` gap simply did not bite.
-- **⚠️ FIVE WEAK HEROES, FLAGGED NOT FIXED.** The **Koons/LACMA** pin (above) is the weakest;
+- **⚠️ FIVE WEAK HEROES, FLAGGED NOT FIXED. ✅ THE KOONS/LACMA ONE — the weakest of them — WAS RAISED AND THE OWNER KEEPS IT (2026-09-03: *"i'm fine with the koons"*). THE PIN STAYS; do not re-raise or quietly pull it** (the Coca-Cola / Heartwarming / Rednaxela precedent — a link pin re-hosts only the thumbnail, so no other frame exists and the choice was only ever keep-or-pull). ⚠️ **Anyone re-running the open-every-hero audit will flag it again; it is settled.** The other four:
   **Calder Gardens** is a motion-blurred sweep of planting with **no building visible**; **Princeton
   University Art Museum** is a dim interior corridor; **the Studio Museum in Harlem** is an
   **archival B&W** photograph of the 125th Street building rather than the new Adjaye one its
