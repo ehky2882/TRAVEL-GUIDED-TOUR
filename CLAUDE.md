@@ -179,12 +179,16 @@ created. Detail: `archive/HANDOFF-260903-2.md`.
   planes, Böhm's concrete rock at Neviges). **✅ NO HAND RE-CROP WAS NEEDED — the second clean run
   in sixteen batches**, because this creator burns in **no title cards at all**, so the vertical
   `--focus` gap never bit.
-- **⚠️ FOUR WEAK HEROES, FLAGGED NOT FIXED.** **Rozet is the sharpest mismatch** — its frame is
-  the interior stair while its caption is entirely about the **ornamented concrete facade**.
-  **Villa Mairea** has two presenters filling the frame with the kidney pool behind them;
-  **Penticton** is a man pointing at a ceiling; **Expo Green Roof** is creator-forward, though its
-  planted stadium terraces read clearly. A link pin re-hosts only the thumbnail, so no other frame
-  exists — the choice is keep or pull.
+- **✅ FOUR WEAK HEROES, RAISED AND CLOSED — OWNER KEEPS THEM ALL (2026-09-03: *"Don't worry about
+  the heroes"*). THEY SHIP AS THEY ARE; do not re-raise them or source replacements.** **Rozet was
+  the sharpest mismatch** — its frame is the interior stair while its caption is entirely about the
+  **ornamented concrete facade**. **Villa Mairea** has two presenters filling the frame with the
+  kidney pool behind them; **Penticton** is a man pointing at a ceiling; **Expo Green Roof** is
+  creator-forward, though its planted stadium terraces read clearly. A link pin re-hosts only the
+  thumbnail, so no other frame exists — the choice was only ever keep or pull, and the owner kept.
+  ⚠️ **Anyone re-running the open-every-hero audit will flag all four again; they are settled** —
+  the Ministry of Enterprise / Casa Lleó Morera / Heartwarming precedent: honour the decision
+  rather than "fixing" it.
 - **⚠️ FOUR WEAK COORDINATES, STATED NOT HIDDEN.** **Taipei Roofs is the weakest** — no published
   address exists anywhere (ArchDaily gives only "Xinyi District"), so it is pinned in Xinyi.
   **Tsuruoka House** is a private house whose caption names no location at all, pinned on a road
