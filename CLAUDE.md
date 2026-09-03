@@ -251,6 +251,86 @@ created. Detail: `archive/HANDOFF-260903-2.md`.
   reuses** — identical to the recorded baseline, so this batch adds no shared URL.
   ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
 
+#### ✅ FOLLOW-UP 2, same session — 48 architects join the vocabulary: 335 → 383, and every name is in use
+
+**Owner: *"Definitely add those architects"*.** ⚠️ **This is a CODE change** (`Models/Tag.swift` +
+`scripts/validate-tours.swift`), so unlike the two content commits before it, it wants a simulator
+look; CI is the compile check. Vocabulary **335 → 383 architects**, total tags **385 → 433**.
+**52 entries gained 62 architect tags**; diff **16 + 16 vocabulary lines and 62 tag lines, 0
+deletions** — purely additive on all three files.
+
+- **🔴 BOTH VOCABULARIES WERE EDITED, and the script asserts they agree afterwards.**
+  `Models/Tag.swift` and `scripts/validate-tours.swift` each keep their own copy, and editing one
+  alone produces **an error per tagged tour** (the session-104 lesson: 185 names added to Tag.swift
+  alone produced 193 validator errors). Asserted **identical at 383 names**, parsed out of the Swift
+  rather than retyped, with a duplicate check on each side.
+- **⚠️ Checked for near-duplicates on NORMALISED TOKEN SETS, not strings** — the session-104 rule
+  that stops the vocabulary growing two spellings that split a shelf in two. The comparison folds
+  accents and strips the practice-suffix noise (`Architects`, `Studio`, `Architekten`, `Arhitektid`,
+  `Associates`, `Partners`, `+`, `&`). **0 collisions, 0 exact matches** — all 48 were genuinely
+  absent.
+- **🔴 `Designed by a Master` IS KEPT ON EVERY ONE, NOT REPLACED.** `Tag.matches` performs **no
+  implication**, and the curated home shelf is keyed on that literal string, so dropping it would
+  take the entry off the shelf built for exactly those entries. Verified catalogue-wide after the
+  change: **593 entries name an architect and 0 are missing the shelf tag**, and **0 of the 383
+  names are unused** — no dead vocabulary. **⚠️ The build refuses to run if any new name ends up
+  unused**, so a name added speculatively cannot ship.
+- **🔴 THE CATALOGUE-WIDE SWEEP IS WHAT EARNS ITS KEEP, AND ALMOST EVERY HIT WAS A FALSE POSITIVE.**
+  12 of the 48 names appear somewhere outside this batch; **every one but two is a mention, a
+  homonym or an ordinary phrase.** `Aldo van Eyck` matched the National Gallery's *"**Van Eyck** to
+  Van Gogh"* — **Jan van Eyck, the painter, a different person entirely**. `Geoffrey Massey` matched
+  *"chef Pablo **Massey**'s restaurant"* in Buenos Aires. `Gottfried`/`Peter Böhm` matched
+  ***Böhme*** *(1993)*, a researcher cited in a Princeton caption. `Akihisa Hirata` matched
+  *"Daniel and Valéria **Hirata**"*, restaurateurs in São Paulo. `Hiroshi Nakamura` matched Kyoto's
+  **Nakamura Tokichi** tea house. **`Public Architecture` matched EIGHT tours using the ordinary
+  phrase** — a genuinely generic practice name, which is exactly why a name sweep must be read
+  rather than applied.
+- **⚠️ AND TWO MENTIONS THAT ARE NOT AUTHORSHIP, BOTH LEFT UNTAGGED (the Sullivan rule).**
+  **`Alvar Aalto` is NOT tagged on Triennale di Milano** (he *received a gold medal* at its first
+  show) **or on Stockholm Public Library** (*"architects across Scandinavia, Alvar Aalto among them,
+  spent the following decades working out what they'd learned"* — pure influence). **`James
+  Stirling` is NOT tagged on Palazzo Citterio** — his 1980s plans there *"were never built"*, which
+  is the rejection session 104 already recorded and which still stands.
+- **✅ THE SWEEP DID FIND TWO REAL ONES, both `MVRDV`.** The `@TheWorldAround` **Depot Boijmans**
+  pin names *"MVRDV's Winy Maas"* — authorship of its own subject. And the Atlas Seoul walk **Anyang
+  Art Park** ends at *"MVRDV's spiral observatory"*, which is one of its six stops — **exactly
+  parallel to the `Álvaro Siza` tag that walk already carries** for the pavilion at its other end.
+- **⚠️ FOUR OMISSIONS INSIDE THE BATCH ARE DELIBERATE AND A FUTURE SESSION WILL BE TEMPTED.**
+  **`Maison Pierre Jeanneret`** — the caption says the house was designed *for* Jeanneret and names
+  Le Corbusier only as the cousin he worked for; **`Wang Da Hong House`** — the title is the
+  building's name and the caption attributes nothing (the same shape, and the two are decided
+  consistently); **`The Hive`**, **`Expo Green Roof`**, **`Mandarin's House`** and **`The Fachwerk of
+  Marbach am Neckar`** name no architect at all, so they carry **neither a name nor the generic
+  tag** (the Jules Dalou rule). **`Frank Lloyd Wright` is deliberately NOT tagged on Setagaya Art
+  Museum** although its caption calls Uchii *"a lifelong scholar"* of him and FLW **is** in the
+  vocabulary — the most tempting single omission here. **`Gottfried Böhm` is NOT tagged on Kolumba**:
+  Zumthor wrapped his museum around a 1950 chapel of Böhm's, which is an enclosed earlier building
+  rather than part of the museum's design. **`Arthur Erickson` is NOT tagged on the Gibson Art
+  Museum**, built *"in keeping with"* his campus vision by other hands. **Do not "finish the job."**
+- **⚠️ Practice names are included where that is how the building is credited** — `MVRDV`, `SANAA`,
+  `Mecanoo`, `UNStudio`, `OPEN Architecture`, `ArchSD` (Hong Kong's Architectural Services
+  Department, the designer of record) — following the existing `3XN` / `Cobe` / `Adjaye Associates`
+  convention. ⚠️ **The project has previously REJECTED `Foster + Partners` as a duplicate of
+  `Norman Foster`**, so the practice-vs-person convention is not uniform; if a future sweep
+  normalises it, these are entries to revisit. **Landscape architects are in** (`Cornelia
+  Oberlander` ×3) on the existing Burle Marx / Piet Oudolf precedent. ⚠️ **`Spearhead` is excluded
+  from the Temple of Light** — the caption names them as the timber fabricator, not an architect.
+- **⚠️ Two co-designers were added that an earlier pass had missed**, both named outright as
+  designers by their captions: **`Truus Schröder-Schräder`** (the Schröder House, with Rietveld) and
+  **`Elissa Aalto`** ×2, whom the Säynätsalo caption records as *"chief architect on site"*.
+  **`Aino Aalto`**, **`Chi-kuan Chen`**, **`Geoffrey Massey`**, **`Iredale Architecture`** and
+  **`Allmann Sattler Wappner`** were likewise found only by re-reading the captions rather than
+  trusting the earlier note.
+- **Verification.** Both vocabularies parsed and asserted **identical at 383 names**, 0 duplicates on
+  either side; **brace, bracket and paren balance checked on both Swift files with string literals
+  stripped** (an accented or `&`-carrying name inside a literal would otherwise skew the count).
+  Mirror **self-tested 22/22 with a clean control**, then **0 errors, 0 warnings across 1,552 tours +
+  1,047 pins + 114 places** at **433 tags across 5 facets**, exit code read **directly**. `Tours.json`
+  **byte-stable under a re-dump before editing**; `makers` and `places` asserted **byte-identical**.
+  Seed clean at **305 / 2,599 / 2,971 / 114**. ⚠️ **Nothing compiled locally** — no Swift toolchain in
+  a Linux web session, so **CI on the PR is the only compile check**, and the owner's simulator look
+  is what confirms the shelves still read correctly.
+
 #### ✅ FOLLOW-UP, same session — the two EXACT groups are places, and EXACT reaches zero again
 
 **Owner: *"Make the places. Open PR"*.** Both built, and the batch is **open as [#729](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/729)**. **Places 112 → 114**; `tours`, `makers` and
