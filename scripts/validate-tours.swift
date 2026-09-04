@@ -335,6 +335,22 @@ let architectTags: Set<String> = [
     // Link pins — verified from the post's own subject
     "John Augustus Roebling", "José Ignacio Linazasoro", "KieranTimberlake",
     "Moshe Safdie", "William Henry Barlow",
+    "Alvar Aalto", "Aino Aalto", "Elissa Aalto",
+    "Aldo van Eyck", "Akihisa Hirata", "Allmann Sattler Wappner",
+    "ArchSD", "Arthur Erickson", "Berger + Parkkinen",
+    "CannonDesign", "Chi-kuan Chen", "Cornelia Oberlander",
+    "DIALOG", "Frei Otto", "Fritz Schaller",
+    "Geoffrey Massey", "Gerrit Rietveld", "Gottfried Böhm",
+    "Günther Behnisch", "Hariri Pontarini", "HDR",
+    "Head Arhitektid", "Hiroshi Nakamura", "Iredale Architecture",
+    "James Stirling", "Kiyoaki Takeda", "Lahznimmo Architects",
+    "MAD Architects", "McFarland Marceau Architects", "Mecanoo",
+    "Meiklejohn Architects", "Mount Fuji Architects Studio", "MVRDV",
+    "Neri&Hu", "Neutelings Riedijk", "MX_SI",
+    "OPEN Architecture", "Pan Tianyi", "Patkau Architects",
+    "Peter Böhm", "Piet Blom", "Public Architecture",
+    "RLA Architects", "Schneider + Schumacher", "Shozo Uchii",
+    "Truus Schröder-Schräder", "UNStudio", "Willem Dudok",
 
 ]
 let validTags: Set<String> = placeTypeTags
