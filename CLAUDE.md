@@ -251,7 +251,7 @@ record on distinct posts. **Philippines is the catalogue's 45th country**; 22 ne
   duplicates`** over **1,146 images** (1,146 for 1,151 pins is the documented `@malata.antwerp`
   five-pins-one-URL case), shared-URL half **0 errors / 208 documented reuses** — identical to the
   recorded baseline, so this batch adds no shared URL.
-  ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
+  ⚠️ **Nothing compiled locally — CI on [#730](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/730) is the only compile check a Linux web session gets.**
 
 ### Sixty-one @archimarathon architecture pins, and a bouldering gym that nearly took The Hive (branch `claude/new-tour-links-cytwc6`, session 141 — content)
 
