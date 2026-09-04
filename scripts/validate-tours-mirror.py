@@ -112,6 +112,14 @@ def check(cat, facets, vocab, dom):
     places = cat.get("places", [])
     allt = tours + pins
     makerids = {m["id"].lower() for m in cat["makers"]}
+    # `validate-tours.swift:414` errors on a duplicate maker id; this mirror did not,
+    # so two maker rows sharing an id passed here and would have failed CI.
+    if len(makerids) != len(cat["makers"]):
+        seen_m = set()
+        for m in cat["makers"]:
+            if m["id"].lower() in seen_m:
+                errors.append(f"duplicate maker id {m['id']} ({m['displayName']})")
+            seen_m.add(m["id"].lower())
 
     seen_t, seen_s = set(), set()
     for e in allt:
@@ -125,6 +133,12 @@ def check(cat, facets, vocab, dom):
             errors.append(f"{t}: bad primaryCategory {e['primaryCategory']!r}")
         if e["kind"] == "link" and e in tours: errors.append(f"{t}: link pin inside tours")
         if e["kind"] != "link" and e in pins:  errors.append(f"{t}: non-link filed under linkPins")
+        # `validate-tours.swift:572-576` requires stop `order` to pack 0..<count with no
+        # gaps or dupes; this mirror did not check it, so a stop numbered anything but 0
+        # on a single-stop entry passed here and would have failed CI.
+        orders = sorted(st.get("order") for st in e["stops"])
+        if orders != list(range(len(e["stops"]))):
+            errors.append(f"{t}: stop order values must be 0..<{len(e['stops'])}, got {orders}")
         hero = e.get("heroImageURL")
         if hero and hero in (e.get("additionalImageURLs") or []):
             errors.append(f"{t}: hero also appears in additionalImageURLs")
@@ -228,6 +242,10 @@ def selftest(facets, vocab, dom):
     case("zero tour duration",     lambda c: c["tours"][0].__setitem__("totalDurationSeconds", 0))
     case("zero stop duration",     lambda c: c["tours"][0]["stops"][0].__setitem__("audioDurationSeconds", 0))
     case("empty stop audioURL",    lambda c: c["tours"][0]["stops"][0].__setitem__("audioURL", ""))
+    # Found by session 143: both are enforced by validate-tours.swift and were NOT
+    # mirrored here, so each passed locally and would have failed CI.
+    case("duplicate maker id",     lambda c: c["makers"][1].__setitem__("id", c["makers"][0]["id"]))
+    case("stop order != 0",        lambda c: c["linkPins"][0]["stops"][0].__setitem__("order", 1))
 
     passed = 0
     for name, fn in cases:

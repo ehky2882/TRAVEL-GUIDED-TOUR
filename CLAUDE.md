@@ -213,14 +213,19 @@ on owner instruction. Detail: `archive/HANDOFF-260904-2.md`.
   precedent says the owner may keep it. ⚠️ **9 of 33 will not play inline** — the licensed-music gate.
   **✅ No hand re-crop was needed — the fourth clean run**; two heroes clip a hook line and were
   deliberately left (the California Academy rule).
-- **🔴 THREE NEW BLIND SPOTS FOUND IN THE VALIDATOR MIRROR, EACH ASSERTED DIRECTLY ON THE BATCH
-  INSTEAD.** **22 faults injected against THIS batch's own rows — 16 caught** (15 as errors, 1 as a
+- **🔴 TWO REAL BLIND SPOTS FOUND IN THE VALIDATOR MIRROR AND CLOSED — AND A THIRD THAT WAS A RULE I
+  INVENTED.** **22 faults injected against THIS batch's own rows — 16 caught** (15 as errors, 1 as a
   warning), control clean before and after; ⚠️ **the first harness run under-counted its own misses
-  by ignoring warnings** — the session-141 harness bug, live again. The six misses are `non-https
-  hero`, `duplicate maker id` and `stop order != 0` — **all three newly found** — beside the
-  documented `centroid drift` / `negative duration` / `empty title` trio. **All six asserted directly
-  on the 33: 0, 0, 0, 0, 0, 0**, plus `images//`, `triggerMode`, `kind`, city+country and
-  stop-image-equals-hero, all 0. **Worth closing in the mirror.**
+  by ignoring warnings** — the session-141 harness bug, live again. Of the six misses, **`duplicate
+  maker id` and `stop order != 0` are genuine** — `validate-tours.swift` errors on both (lines 414
+  and 572-576) and the mirror did not, so each would have passed locally and failed CI. **Both are
+  now closed and pinned in the mirror's own selftest, which goes 22/22 → 24/24 with a clean control.**
+  🔴 **`non-https hero` was NOT a blind spot — it is a rule that does not exist.** `isValidURL` in
+  the Swift requires only *a scheme and a host*, so `http://` is perfectly valid; **session 142 made
+  this exact mistake and recorded it, and it was made again here.** ⚠️ **Before calling a mirror miss
+  a blind spot, read the Swift rule** — the remaining three (`centroid drift`, `negative duration`,
+  `empty title`) are the documented trio. **All six were asserted directly on the 33 anyway: 0, 0, 0,
+  0, 0, 0**, plus `images//`, `triggerMode`, `kind`, city+country and stop-image-equals-hero, all 0.
 #### ✅ FOLLOW-UP, same session — six places built, and two architects join the vocabulary (419 → 421)
 
 **Owner: *"Make the places. Add the architects"*.** Both applied. **Places 114 → 120**; `tours` and
