@@ -132,8 +132,8 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **The owner sent 40 Instagram links under a heading reading "Toronto more 260901"; they resolve to
 34 distinct posts and 33 ship.** **linkPins 1,151 → 1,184 · makers 305 → 328 · `tours` and `places`
-byte-identical.** Content only — no Swift, no SQL, no place created, no build. **NO PR OPENED** (this
-session's harness forbids opening one unasked). Detail: `archive/HANDOFF-260904-2.md`.
+byte-identical.** Content only — no Swift, no SQL, no place created, no build. Opened as a PR on owner
+instruction. Detail: `archive/HANDOFF-260904-2.md`.
 
 - **🔴 ONE POST IS BLOCKED AND CANNOT SHIP — PROVEN AGAINST A LIVE CONTROL, NOT ASSUMED.**
   `DJUA6mbNMBi` returns Instagram's **`contextJSON: null` shell at ~215 KB** on three spaced
@@ -174,7 +174,7 @@ session's harness forbids opening one unasked). Detail: `archive/HANDOFF-260904-
   inside**. ⚠️ **The softest coordinate is Riverwood Conservancy**, on the parking node its own
   caption highlights, because OSM maps no conservancy feature.
 - **🔴 FOUR NEW EXACT GROUPS, AND TWO MORE THE CHECKER STRUCTURALLY CANNOT SEE.**
-  `check-place-candidates.py` goes **12 EXACT → 16** and **50 NEAR → 51**; **nothing was nudged
+  `check-place-candidates.py` goes **11 EXACT → 15** and **50 NEAR → 51** on the merged base; **nothing was nudged
   together to manufacture a group and nothing nudged apart to dodge one.** Three are one subject
   sent twice by different creators (**the Unfinished Arch**, **the Toronto Reference Library**,
   **Waterworks Food Hall**), and the fourth is **Biidaasige Park + its basketball tree**, where
@@ -221,6 +221,22 @@ session's harness forbids opening one unasked). Detail: `archive/HANDOFF-260904-
   documented `centroid drift` / `negative duration` / `empty title` trio. **All six asserted directly
   on the 33: 0, 0, 0, 0, 0, 0**, plus `images//`, `triggerMode`, `kind`, city+country and
   stop-image-equals-hero, all 0. **Worth closing in the mirror.**
+- **⚠️ `main` MOVED THREE COMMITS MID-FLIGHT AND THE MERGE WAS VERIFIED RATHER THAN TRUSTED.** #731
+  (the Barcelona Pavilion becomes a five-member place, plus 36 architects), #728 (the bottom-module
+  fix) and #732 landed after this branch was cut. `Tours.json` **auto-merged**, which is the case that
+  most needs checking: asserted afterwards that `tours` and `places` are **byte-identical to main's**
+  (so #731's place work survives intact), that main's 1,151 pins and 305 makers are **unchanged as a
+  prefix**, that all 33 new pins and 23 new maker rows are present, that **no array carries a
+  duplicate id**, and that the file is **byte-stable under a Python re-dump**. ⚠️ **43 of main's pins
+  differ from this branch's pre-merge copy in `tags` ALONE** — #731's architect pass — and **every one
+  matches main's version exactly, while none of this batch's 33 changed.** ⚠️ **#731 also claimed
+  `archive/HANDOFF-260904.md`, an add/add collision**, so this session's handoff renumbered to
+  **`-2`**; `STATUS.md` and `archive/README.md` conflicted and were resolved by **keeping both sides**,
+  with main's merged-#730 line superseding this branch's stale copy. ⚠️ **`Raymond Moriyama` and
+  `E. J. Lennox` are still absent** from the expanded vocabulary, so this batch's generic tags stand.
+  Every check was re-run on the merged base: mirror **0 errors, 0 warnings** across 1,552 tours +
+  1,184 pins + 114 places at **469 tags**, seed clean at **328 / 2,736 / 3,108 / 114**, **0
+  `images//`** in the catalogue *or* the SQL.
 - **Verification.** Mirror **self-tested 22/22 with a clean control**, then **0 errors, 0 warnings
   across 1,552 tours + 1,184 pins + 114 places**, exit code read **directly, not through a pipe**.
   `make-link-pin.py --selftest` **71/71** ⚠️ with Pillow installed first (a bare container reports
@@ -244,7 +260,7 @@ session's harness forbids opening one unasked). Detail: `archive/HANDOFF-260904-
   session-135 false-pass lesson): **`OK — no suspicious duplicates`** over **1,179 images** (1,179 for
   1,184 pins is the documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors /
   208 documented reuses** — identical to the recorded baseline, so this batch adds no shared URL.
-  ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
+  ⚠️ **Nothing compiled locally — CI on the PR is the only compile check a Linux web session gets.**
 - **⚠️ Process traps worth keeping.** **A missing trailing newline joined two lines of the fetch
   list** — `'\n'.join(...)` with no trailing newline meant the next `echo` appended onto the last
   line, so **link 40 and the first live control were both silently skipped**; the file count caught
@@ -610,7 +626,7 @@ created. Detail: `archive/HANDOFF-260903-2.md`.
   lesson): **`OK — no suspicious duplicates`** over **1,042 images** (1,042 for 1,047 pins is the
   documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors / 208 documented
   reuses** — identical to the recorded baseline, so this batch adds no shared URL.
-  ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
+  ⚠️ **Nothing compiled locally — CI on the PR is the only compile check a Linux web session gets.**
 
 #### ✅ FOLLOW-UP 2, same session — 48 architects join the vocabulary: 335 → 383, and every name is in use
 
