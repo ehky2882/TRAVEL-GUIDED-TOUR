@@ -199,6 +199,7 @@ enum Tag {
             "Sumner Hunt", "Tod Williams", "Vicens + Ramos",
             "BVN Architecture", "EMTB", "Hirvonen-Huttunen",
             "Kim Swoo-geun", "MGT Architects", "Shin Takamatsu",
+            "Timo Suomalainen", "Tuomo Suomalainen",
         ]),
     ]
 
