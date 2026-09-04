@@ -132,8 +132,8 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **The owner sent 40 Instagram links under a heading reading "Toronto more 260901"; they resolve to
 34 distinct posts and 33 ship.** **linkPins 1,151 → 1,184 · makers 305 → 328 · `tours` and `places`
-byte-identical.** Content only — no Swift, no SQL, no place created, no build. Opened as a PR on owner
-instruction. Detail: `archive/HANDOFF-260904-2.md`.
+byte-identical.** Content only — no Swift, no SQL, no place created, no build. Opened as [#734](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/734)
+on owner instruction. Detail: `archive/HANDOFF-260904-2.md`.
 
 - **🔴 ONE POST IS BLOCKED AND CANNOT SHIP — PROVEN AGAINST A LIVE CONTROL, NOT ASSUMED.**
   `DJUA6mbNMBi` returns Instagram's **`contextJSON: null` shell at ~215 KB** on three spaced
