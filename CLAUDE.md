@@ -133,7 +133,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **Sixteen TikTok short links and one Instagram reel, all from `@archimarathon`** — the same creator
 as sessions 141 and 142, now on two platforms. **linkPins 1,151 → 1,168 on the merged base ·
 `tours`, `makers` and `places` byte-identical · 0 new maker rows.** Content only — no Swift, no SQL,
-no build. **NO PR OPENED.** Detail: `archive/HANDOFF-260904-2.md`.
+no build. **Opened as [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) on owner instruction.** Detail: `archive/HANDOFF-260904-2.md`.
 
 - **✅ ALL 17 ALIVE, 0 ALREADY PINNED, 0 IN-BATCH DUPLICATES.** The Instagram embed returned
   **262,755 bytes with `contextJSON` present** against **three already-live catalogue pins fetched in
@@ -231,7 +231,7 @@ no build. **NO PR OPENED.** Detail: `archive/HANDOFF-260904-2.md`.
   against the Actions API, after which **all 17 live URLs were hash-verified against the uploaded
   bytes — 17 ok, 0 mismatch, 0 non-200**. 🔴 **`check-image-duplicates.py --pins` was run AFTER the
   deploy** (the session-135 false-pass lesson): shared-URL half **0 errors / 208 documented reuses**,
-  identical to the recorded baseline. ⚠️ **Nothing compiled — no PR is open, so CI has not run.**
+  identical to the recorded baseline. ⚠️ **Nothing compiled locally — CI on [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) is the only compile check a Linux web session gets.**
 - **⚠️ `main` MOVED TWICE MID-SESSION** — [#730](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/730)
   merged **104 more `@archimarathon` pins**, the same creator, and then
   [#731](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/731) took the architect vocabulary **383 →
