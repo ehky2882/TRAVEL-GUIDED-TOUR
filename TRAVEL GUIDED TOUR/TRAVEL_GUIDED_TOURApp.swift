@@ -104,6 +104,16 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// + tab bar above any UIKit modal presented in the main
     /// window. Installed once on first appearance.
     @State private var bottomModuleWindow = BottomModuleWindowController()
+    /// The launch is still holding the mini-player + tab bar back.
+    ///
+    /// 🔴 DELIBERATELY NOT `launchState.isSplashVisible`, which is the bug this
+    /// replaces. That stays true for a further 32 ms after `runLaunchGate`
+    /// unhides the window — a guaranteed suspension point — so an
+    /// `installBottomModule()` landing in the gap re-hid it with nothing left
+    /// to undo it, and the bars were gone for the whole session. This clears in
+    /// the *same* main-actor turn as the unhide, so there is no window at all.
+    /// See `BottomModuleWindowController.shouldWithdraw`.
+    @State private var launchHoldsBottomModule = true
     /// Whether the launch splash is still covering the app. Replaces the old
     /// `isLoading` Bool, which a fixed 2-second timer flipped; readiness now
     /// decides — see `LaunchGate` for why, and for the floor and ceiling that
@@ -363,7 +373,14 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // Unhide FIRST: the window is already built, so this is just a
         // visibility flip, and doing it before the hand-off means the bars are
         // simply present when the splash clears rather than arriving after it.
-        bottomModuleWindow.setHidden(false)
+        //
+        // 🔴 The flag is dropped in the SAME TURN as the flip, and the two
+        // together are what close the race: from here on every
+        // `installBottomModule()` — including the unguarded `scenePhase ==
+        // .active` one — re-derives to "don't hide" instead of re-latching a
+        // hide that nothing would ever undo.
+        launchHoldsBottomModule = false
+        syncBottomModuleVisibility()
         // 🔴 GIVE THE UNHIDDEN WINDOW ONE FRAME BEFORE THE HAND-OFF STARTS.
         // Its first render has to happen while the assembly is still at 0 —
         // bars off the bottom edge, opacity 0 — or there is no change for them
@@ -461,11 +478,15 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // is the most visible "still loading" tell there was — but keep it
         // hidden until `runLaunchGate` hands off.
         //
-        // ⚠️ Whoever hides this owns unhiding it (see `setHidden`). The gate's
-        // ceiling guarantees hand-off runs, and it unhides unconditionally.
-        if launchState.isSplashVisible {
-            bottomModuleWindow.setHidden(true)
-        }
+        // 🔴 DERIVED, NOT COMMANDED, and that is the fix for the bars going
+        // missing. This runs on every foreground for the life of the app, and
+        // it used to *latch* a hide (`if isSplashVisible { setHidden(true) }`)
+        // whose only undo was one line in `runLaunchGate` — which fires 32 ms
+        // before `isSplashVisible` goes false, so a call landing in that gap
+        // re-hid the window permanently. Asserting the current answer instead
+        // means a duplicated or mistimed call can only reach the right one, and
+        // a background round-trip becomes a guaranteed recovery.
+        syncBottomModuleVisibility()
         bottomModuleWindow.install(
             interactiveBottomInset: AtlasBottomModule.height()
         ) {
@@ -511,6 +532,19 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // Without this the second window follows SYSTEM appearance and
         // the bars render inverted when the picker disagrees with it.
         bottomModuleWindow.apply(preference: colorSchemePreference)
+    }
+
+    /// Push the current answer to "should the bars be withdrawn?" onto the
+    /// window. Safe to call at any time and as often as you like — it is a
+    /// re-derivation, not a command, which is exactly what makes it a self-heal
+    /// rather than one more thing that can be missed.
+    private func syncBottomModuleVisibility() {
+        bottomModuleWindow.setHidden(
+            BottomModuleWindowController.shouldWithdraw(
+                launchHoldsModule: launchHoldsBottomModule,
+                withdrawnByScreen: appShared.hidesBottomModule
+            )
+        )
     }
 
     // MARK: - Deep linking
