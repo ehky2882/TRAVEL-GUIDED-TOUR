@@ -33442,7 +33442,9 @@
         "Architecture",
         "History",
         "Victorian",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "E. J. Lennox",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -33725,7 +33727,8 @@
         "Victorian",
         "Iconic Landmark",
         "Richard Waite",
-        "Designed by a Master"
+        "Designed by a Master",
+        "E. J. Lennox"
       ],
       "priceUSD": 0
     },
@@ -33822,7 +33825,9 @@
         "History",
         "Fashion",
         "Contemporary",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Raymond Moriyama",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -33910,7 +33915,9 @@
         "History",
         "Power",
         "Gilded Age",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "E. J. Lennox",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -34790,7 +34797,10 @@
         "History",
         "Art",
         "Architecture",
-        "Free to Visit"
+        "Free to Visit",
+        "Raymond Moriyama",
+        "E. J. Lennox",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -34908,7 +34918,9 @@
         "Architecture",
         "Power",
         "Commerce",
-        "Free to Visit"
+        "Free to Visit",
+        "E. J. Lennox",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -81828,6 +81840,96 @@
       "tourIds": [
         "992B0BE3-1072-5990-99EB-5CD5145F12D4",
         "335C2FA7-C33D-5C05-83E0-8B06CC751B74"
+      ]
+    },
+    {
+      "id": "8f22aff0-3859-51b5-97a7-59dc96e8839a",
+      "name": "Biidaasige Park",
+      "description": "Toronto's largest new park in a generation, on made ground at the mouth of the Don. The river was given a new outlet through what had been industrial land, and the channels, islands and wetland here are the shape that took. A ten-acre expansion opened at the end of July; from the water's edge promenade and the promontory lookout the whole downtown skyline stands across the harbour. Among the planting is a tree made of basketball hoops.",
+      "latitude": 43.646281,
+      "longitude": -79.346423,
+      "city": "Toronto",
+      "address": "Commissioners Street, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/biidaasige-park-aswilliamson_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "24411E0C-C449-5625-8E3A-1E6275847DE6",
+        "78D0D350-3A76-58D4-A28E-2E07DB46A89B"
+      ]
+    },
+    {
+      "id": "c866a01b-6700-5307-8579-ff85ecd9b180",
+      "name": "The Unfinished Arch",
+      "description": "Rafael Lozano-Hemmer's arch on the Sherbourne Common lawn is deliberately left open at the top, and stays that way until somebody touches it. Reach up and the lit span closes over your head. It was commissioned by the City of Toronto and Waterfront Toronto, fabricated by Eventscape, and launched in June; the lighting that draws the arc shut is by GVA.",
+      "latitude": 43.644516,
+      "longitude": -79.364752,
+      "city": "Toronto",
+      "address": "Sherbourne Common, East Bayfront, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/completing-unfinished-arch-gvalighting_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "9D75ABE1-2B2F-5955-A0C9-00C24F6004ED",
+        "FD77028A-F866-5029-9AE7-79724B3A31DB"
+      ]
+    },
+    {
+      "id": "317fd5f9-d594-55ea-a5af-c4c2262ab6d0",
+      "name": "Toronto Reference Library",
+      "description": "Raymond Moriyama's 1977 building is Toronto's largest public library, five storeys of balconies wrapped around a skylit atrium so that every floor looks down into the same room. The plan took its cue from the Hanging Gardens of Babylon, and plants were meant to spill over each tier. It is free, it is warm, and on a wet afternoon in Yorkville it is the obvious place to be.",
+      "latitude": 43.671877,
+      "longitude": -79.386666,
+      "city": "Toronto",
+      "address": "789 Yonge Street, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toronto-reference-library-torontopapi_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0617CE88-8C2A-5179-AAD8-35E18AAD323D",
+        "507643A4-6F30-536A-BB95-D13026CD23A0"
+      ]
+    },
+    {
+      "id": "c5f6b4e5-45c1-5c34-8713-4916561119a5",
+      "name": "Waterworks Food Hall",
+      "description": "A European-style food hall in the old city works building on Brant Street, off King West. Vendors line one long aisle under the original roof structure, with counter seating down the middle. It opened to queues, and runs late — until midnight from Thursday through Saturday.",
+      "latitude": 43.646734,
+      "longitude": -79.399234,
+      "city": "Toronto",
+      "address": "50 Brant Street, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waterworks-food-hall-dishedtoronto_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "C0386E6A-76F1-53FB-A22F-7A7275D586D7",
+        "902C1CC1-6997-51C0-BB93-B13B43DE5CC0"
+      ]
+    },
+    {
+      "id": "3ba655ce-6a5b-54a7-b651-c9691d1f7c23",
+      "name": "Museum Station",
+      "description": "The subway platform below Queen's Park was rebuilt as an extension of the museum above it. The structural columns are disguised as figures drawn from the Royal Ontario Museum's own collections — an Egyptian god among them — so that the walk to the train reads as a gallery. Most people ride through without looking up.",
+      "latitude": 43.6668462,
+      "longitude": -79.3933506,
+      "city": "Toronto",
+      "address": "Queen's Park, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-station-explorewithkevs_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B8DA96B8-751C-563C-BEA6-88D011D44337",
+        "A9E7D2BE-479B-51D2-88DF-FB9C10EB56B9"
+      ]
+    },
+    {
+      "id": "fa553a6b-055f-57d8-a025-cce6135d1ac4",
+      "name": "Ripley's Aquarium of Canada",
+      "description": "Nearly six million litres of marine and freshwater life at the foot of the CN Tower, on old railway land. The Dangerous Lagoon carries you on a slow walkway through a 96-metre glass tunnel — the longest in North America — with sand tiger sharks and sea turtles passing overhead. It was meant for Niagara Falls; when that deal fell through it came here instead.",
+      "latitude": 43.6424,
+      "longitude": -79.386,
+      "city": "Toronto",
+      "address": "288 Bremner Boulevard, Toronto",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ripleys-aquarium_6.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "cafa79ed-4c0f-5f19-b4f2-b9901523eddf",
+        "927CAC1D-086D-5F41-BAD0-59AAC66EDBE3"
       ]
     }
   ],
@@ -135003,7 +135105,8 @@
         "History",
         "Beaux-Arts",
         "Hidden Gem",
-        "Designed by a Master"
+        "Designed by a Master",
+        "E. J. Lennox"
       ],
       "priceUSD": 0
     },
@@ -135285,7 +135388,8 @@
         "Architecture",
         "Modernist",
         "Free to Visit",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Raymond Moriyama"
       ],
       "priceUSD": 0
     },
@@ -135402,8 +135506,8 @@
           "order": 0,
           "title": "The Dangerous Lagoon at Ripley's Aquarium",
           "caption": "📍𝖳𝗈𝗋𝗈𝗇𝗍𝗈, 𝖢𝖺𝗇𝖺𝖽𝖺 🇨🇦 𝖱𝗂𝗉𝗅𝖾𝗒’𝗌 𝖠𝗊𝗎𝖺𝗋𝗂𝗎𝗆 𝗈𝖿 𝖢𝖺𝗇𝖺𝖽𝖺 🐠 🌊 RipleysAquarium #RipleysAquariumOfCanada #TorontoAquarium #AquariumToronto #ExploreToron",
-          "latitude": 43.642484,
-          "longitude": -79.386127,
+          "latitude": 43.6424,
+          "longitude": -79.386,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -135415,8 +135519,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.642484,
-      "centroidLongitude": -79.386127,
+      "centroidLatitude": 43.6424,
+      "centroidLongitude": -79.386,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "culturalHeritage",
@@ -135767,8 +135871,8 @@
           "order": 0,
           "title": "The Disguised Columns at Museum Station",
           "caption": "This is not your typical subway stop, it’s more like an art exhibit🤩🇨🇦 #torontosubway #ttcstation #ttc #torontotransit #publictransportation",
-          "latitude": 43.666846,
-          "longitude": -79.393351,
+          "latitude": 43.6668462,
+          "longitude": -79.3933506,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -135780,8 +135884,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.666846,
-      "centroidLongitude": -79.393351,
+      "centroidLatitude": 43.6668462,
+      "centroidLongitude": -79.3933506,
       "city": "Toronto",
       "country": "Canada",
       "primaryCategory": "visualArt",
