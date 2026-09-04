@@ -4140,13 +4140,23 @@ Full detail: `archive/HANDOFF-260830-6.md`.
   marketing version — **TestFlight included**. Build **136 compiled, signed, and was rejected at
   the upload step**: *"The value for key CFBundleShortVersionString [1.1] ... must contain a higher
   version than that of the previously approved version [1.1]. (90062)"*. **Build 135 (2026-08-26)
-  was the last one that could ever ship under 1.1.** `MARKETING_VERSION` is now **1.1.1** on both
-  app-target configurations (the test targets stay at 1.0), and **1.1.1 (137) is VALID at Apple** —
-  verified by asking App Store Connect, not by reading the workflow's green tick. **⚠️ Every future
-  build must bump again once 1.1.1 is itself released.** ⚠️ **This failure does not look like a
-  version problem:** the archive and the signing both succeed and the run goes red at the last
-  step, which is the same shape as the certificate-cap failure and the ASCII-notes failure. Read
-  the altool error before assuming either.
+  was the last one that could ever ship under 1.1.** `MARKETING_VERSION` went to **1.1.1**, and
+  **1.1.1 (137) was VALID at Apple** — verified by asking App Store Connect, not by reading the
+  workflow's green tick.
+  - **✅ IT HAPPENED AGAIN, EXACTLY AS PREDICTED, ON 2026-09-04 — 1.1.1 IS NOW APPROVED, SO IT IS
+    CLOSED TOO.** Build **140 compiled and signed cleanly (`build_app` 219 s, IPA and archive both
+    produced) and died at the upload step** with **90186 *"Invalid Pre-Release Train. The train
+    version '1.1.1' is closed for new build submissions"*** alongside the same 90062. **Build 139
+    was the last one that could ever ship under 1.1.1.** `MARKETING_VERSION` is now **1.1.2** on
+    both app-target configurations (the test targets stay at 1.0). ⚠️ **Note what this failure
+    TELLS you, beyond the fix: a closed train is proof Apple approved that version.** A web session
+    has no App Store Connect key (§ READ FIRST), so this rejection is the only signal it gets —
+    treat it as evidence 1.1.1 shipped, and **ask the owner rather than asserting a release state
+    from this file**. **⚠️ Every future build must bump again once 1.1.2 is itself released** — this
+    is now a standing per-release cost, not a one-off.
+  - ⚠️ **NEITHER FAILURE LOOKS LIKE A VERSION PROBLEM:** the archive and the signing both succeed
+    and the run goes red at the last step, which is the same shape as the certificate-cap failure
+    and the ASCII-notes failure. **Read the altool error before assuming either.**
 - **⚠️ A simulator trap that cost twenty minutes and is not a product bug:** on one launch the
   bottom-module window missed its install, and because the fullscreen cover is hosted **inside that
   window** (`BottomModuleRoot`), the expand button rendered, sat in the accessibility tree, and did
