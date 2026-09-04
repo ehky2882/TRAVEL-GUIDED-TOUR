@@ -221,6 +221,101 @@ on owner instruction. Detail: `archive/HANDOFF-260904-2.md`.
   documented `centroid drift` / `negative duration` / `empty title` trio. **All six asserted directly
   on the 33: 0, 0, 0, 0, 0, 0**, plus `images//`, `triggerMode`, `kind`, city+country and
   stop-image-equals-hero, all 0. **Worth closing in the mirror.**
+#### ✅ FOLLOW-UP, same session — six places built, and two architects join the vocabulary (419 → 421)
+
+**Owner: *"Make the places. Add the architects"*.** Both applied. **Places 114 → 120**; `tours` and
+`makers` byte-identical, and **exactly two link pins moved, in exactly their four coordinate fields
+each**. ⚠️ **This makes the batch a CODE change** (`Models/Tag.swift` + `scripts/validate-tours.swift`),
+so unlike the content commits before it, it wants a simulator look; CI is the compile check.
+
+- **🔴 FOUR PLACES RESOLVE THIS BATCH'S OWN EXACT GROUPS, AND TWO RESOLVE PAIRS THE CHECKER
+  STRUCTURALLY CANNOT SEE.** Built: **Biidaasige Park** (the park + its basketball tree) ·
+  **The Unfinished Arch** · **Toronto Reference Library** · **Waterworks Food Hall** ·
+  **Museum Station** · **Ripley's Aquarium of Canada**. The last two never appeared in
+  `check-place-candidates.py` at all — Museum Station differs from the existing `@explorewithkevs`
+  pin in the **6th decimal**, which defeats the EXACT tier's equality test while the titles defeat
+  the NEAR tier, and Ripley's sits 13.8 m from the Atlas tour under a title sharing no distinctive
+  word with it. **They reached the owner only because they were flagged by hand**, so resolving them
+  removes nothing from the report.
+- **🔴 THE PIN MOVES, NEVER THE TOUR — and only one site could have got it wrong.** **Ripley's Atlas
+  tour is `geofenced`**, so it anchors and its pin moved **13.84 m**; the Museum Station pin moved
+  **0.04 m**. Both are `manual`, asserted before anything was written — the assembler **refuses to
+  move a member that is not**. **Nothing else moved at all**: the other four groups were already
+  exactly coincident, so the identity rule held on its own.
+- **⚠️ SWEPT 400 m AROUND EACH SITE RATHER THAN TRUSTING THE CHECKER'S GROUP** (the session-131
+  lesson). Correctly excluded: **Graffiti Alley 220 m** and **KING Toronto 208 m** from Waterworks;
+  **the ROM, the Gardiner, the Museum Mile walk and the Crystal pin, all ~150 m** from Museum Station
+  (a station is not the museum above it); **the CN Tower 91 m** from Ripley's. Each pair was the
+  whole story.
+- **⚠️ FIVE OF THE SIX HEROES ARE BORROWED AND THAT IS STRUCTURAL — do not go sourcing replacements.**
+  Every member of those five is a link pin with an **empty gallery** and there is **no Atlas tour at
+  any of those sites**, so no third photograph of them exists in the catalogue (the documented
+  Waterlooplein / Legion of Honor case). **Ripley's is the exception and takes a real third
+  photograph** — `ripleys-aquarium_6.webp`, the Dangerous Lagoon tunnel head-on, empty and lit,
+  promoted from the Atlas tour's own gallery, so nothing was sourced. **All seven of its candidates
+  were rendered and looked at**, never chosen by filename: the tour's own hero is a dark silhouette,
+  the pin's is the same tunnel carrying burned-in text, and `_2`–`_5` are close-ups (a reef wall, a
+  fish swirl, a shark, jellyfish). Borrowed-hero count **re-derived, not carried forward: 45 of 120**
+  (70 take a third photograph, 5 carry none).
+- **⚠️ EVERY BORROWED HERO WAS CHOSEN ON THE ESTABLISHING-SHOT CRITERION, and two are stated
+  trade-offs.** Biidaasige takes the aerial of the whole park against the skyline over a close-up of
+  the basketball tree; the Reference Library takes the five-storey atrium over a top-down of two
+  study tables; Waterworks takes the main aisle. ⚠️ **Museum Station takes the platform with the
+  giant `MUSEUM` lettering, which names the station but does NOT show the disguised columns the
+  place is about** — the alternative does, and is one line to swap. ⚠️ **The Unfinished Arch takes
+  the vendor's frame** (`@gvalighting`), because it shows the whole lit arch in its lawn setting
+  while the artist-crediting alternative is darker and half-covered by its own title card.
+- **⚠️ ADDRESSES ARE EDITORIAL, CORROBORATED BY GEOCODING RATHER THAN TAKEN FROM IT.** OSM names
+  **`Waterworks Food Hall` at 50 Brant Street** and **`Museum` as a station** outright; Ripley's
+  reverses to **`Ripley's Café` at 288 Bremner Boulevard** and the Reference Library to the **TCAF
+  shop at 789 Yonge** — the documented inner-tenant shapes, both at the venue's own number. ⚠️ **Two
+  ship with no house number, and none was invented** (the Operaparken precedent): Biidaasige Park
+  reverses only to a cycleway, so it takes **Commissioners Street**, the road at zoom 16; the
+  Unfinished Arch reverses to an unnamed pedestrian way, so it takes **Sherbourne Common, East
+  Bayfront**, the park OSM names at **0.0 m**. ⚠️ **`Villiers Island` was NOT asserted** — OSM names
+  that island `Ookwemin Minising` and puts it 474 m away.
+- **🔴 THE ARCHITECT SWEEP IS WHAT EARNED ITS KEEP: BOTH NAMES WERE ALREADY IN EXISTING ATLAS TOURS
+  THAT CARRIED NO SUCH TAG.** The two link pins that prompted this are the smaller half. **`Raymond
+  Moriyama`** also authors the **Bata Shoe Museum** (*"Raymond Moriyama's pale limestone building"*)
+  and is named as its architect inside the **Museum Mile** walk, whose stop 2 it is. **`E. J.
+  Lennox`** authors **Old City Hall**, **Casa Loma**, and **Queen's Park's west wing, rebuilt after
+  the 1909 fire** — a major part of that building — and is named inside **both walks** whose stops
+  those are (Museum Mile stop 4, Downtown Spine stop 5). **8 entries gained 14 tags.**
+- **🔴 TWO REJECTIONS, AND THEY ARE THE VALUABLE PART.** **`The Annex` is deliberately NOT tagged**:
+  its text says the neighbourhood's style is *"often credited to E.J. Lennox"* — a hedged attribution
+  of a **style**, not authorship of a building (the Sullivan rule at its most tempting, since he
+  really did build in that idiom). And **`Jones + Kirkland` were NOT added to the vocabulary at all**
+  — the Mississauga Civic Centre caption names no architect, so the tag would be unused, and **a name
+  added speculatively cannot ship** (the build refuses). ⚠️ **`The Toronto Reference Library` pin
+  still carries no master tag** while its twin now carries Moriyama by name — correct by
+  construction; **do not finish the job.**
+- **🔴 `Designed by a Master` IS KEPT ON EVERY ONE, NOT REPLACED.** `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string. Verified catalogue-wide
+  after the change: **701 entries name an architect and 0 are missing the shelf tag**, **0 of the 421
+  names are unused**, and **0 tags fall outside `Models/Tag.swift`**.
+- **Verification.** Both vocabularies **parsed out of the Swift rather than retyped** and asserted
+  **identical at 421 names with 0 duplicates on either side**; near-duplicates checked on
+  **normalised token sets** (folding accents, stripping practice suffixes) — **0 collisions**; brace,
+  bracket and paren balance checked on both files with string literals stripped. Place ids
+  `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")`, the scheme **reverse-verified
+  against 112 of the 114 existing places** (the two misses are the documented legacy uppercase ids),
+  **0 collisions**. ⚠️ **76 faults injected against the SIX NEW PLACES and the architect tags — 74
+  caught, control clean before and after**; **the two misses are rules the mirror was never written
+  to enforce** (a named-architect entry losing the shelf tag, and a duplicate tag within an entry)
+  and **both are asserted directly instead: 0 and 0**. Mirror then **0 errors, 0 warnings across
+  1,552 tours + 1,184 pins + 120 places** at **471 tags**, exit code read **directly**. 🎉
+  **`check-place-candidates.py` EXACT 15 → 11 with NEAR unchanged at 51** — the diff proves it fell
+  by **exactly the four groups resolved and gained nothing**, and **11 is `main`'s own baseline, so
+  this batch now contributes zero EXACT groups**. `Tours.json` **byte-stable under a Python re-dump
+  before AND after editing**; diff **120 insertions / 16 deletions**, every deletion accounted for as
+  **2 pins × 4 coordinate fields plus 8 tag lines gaining a trailing comma**, and **every image URL
+  in the catalogue asserted unchanged**. Seed clean at **328 / 2,736 / 3,108 / 120**; **0
+  `images//`** in the catalogue *or* the SQL. All six place heroes live **200**. ⚠️
+  **`check-image-duplicates.py` was deliberately NOT re-run and that is not a gap** — no image was
+  added and no image URL changed (asserted), and each borrowed hero is now used exactly twice, in its
+  own pin and as the place hero, which is the documented tier-1 shape rather than a collision.
+  ⚠️ **Nothing compiled locally — CI on [#734](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/734) is the only compile check.**
+
 - **⚠️ `main` MOVED THREE COMMITS MID-FLIGHT AND THE MERGE WAS VERIFIED RATHER THAN TRUSTED.** #731
   (the Barcelona Pavilion becomes a five-member place, plus 36 architects), #728 (the bottom-module
   fix) and #732 landed after this branch was cut. `Tours.json` **auto-merged**, which is the case that
@@ -8556,7 +8651,7 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **1552 tours + 1184 link pins, 328 makers, 1924 tour stops (3108 including one per pin), 114 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 294 are pinned creators (112 TikTok, 170 Instagram, 12 YouTube) — pinned creators now outnumber the studios more than eight to one.** ⚠️ This line has gone stale eleven times already, and **three parallel sessions invalidated it on the same afternoon** — it has been rewritten inside a single session more than once because `main` moved under it every time, and not one session's own number has survived its merge; **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
+- **1552 tours + 1184 link pins, 328 makers, 1924 tour stops (3108 including one per pin), 120 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 294 are pinned creators (112 TikTok, 170 Instagram, 12 YouTube) — pinned creators now outnumber the studios more than eight to one.** ⚠️ This line has gone stale eleven times already, and **three parallel sessions invalidated it on the same afternoon** — it has been rewritten inside a single session more than once because `main` moved under it every time, and not one session's own number has survived its merge; **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
 - **1480 single-stop + 72 multi-stop** — all geofenced. Copenhagen added 40 singles with no walks; Rio launched as 46 singles with no walks; São Paulo added 41 singles + 1 walk; Berlin added 31 singles + 5 walks; Marrakech added 26 singles with no walks; Buenos Aires added 34 singles + 2 walks; Chicago added 25 singles + 5 walks; Melbourne added 34 singles + 1 walk; Sydney added 29 singles with no walks; Cape Town added 30 singles with no walks; Barcelona added 66 singles + 2 walks; Milan added 47 singles + 1 walk; **Stockholm added 42 singles + 3 walks**. Multi-stop walks by maker: London 5, Paris 5, Amsterdam 5, Rome 5, Berlin 5, Chicago 5, San Francisco 4, Toronto 4, Los Angeles 4, Madrid 4, Montreal 4, Dubai 4, Seoul 3, **Stockholm 3**, NYC 2, Naoshima 2, Buenos Aires 2, **Barcelona 2**, Bangkok 1, São Paulo 1, Melbourne 1, **Milan 1**. The 4 originally-named NYC/London walks ("American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London), "Albertopolis" (6 stops, London)) are still the reference multi-stop test cases; AMNH unblocks M-qa items 6 + 7.
 - **Bilingual titles (`English | native script`) on both tour + stop across the Asian bureaus:** Tokyo (TYO), Kyoto (KYO), Naoshima (NAO) — `日本語`; Hong Kong (HKG) — `中文`; Seoul (SEL) — `한국어`; Bangkok (BKK) — `ไทย`; Ho Chi Minh City (SGN) — `Tiếng Việt` (where a Vietnamese name exists; proper-noun venues carry a single name); and Marrakech (RAK) — `العربية` (18 of 26; same proper-noun rule).
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list. Tours may also carry an optional **`videoURLs: [String]?`** (`.mp4` on gh-pages under `videos/`) — **videos LEAD the carousel** (owner decision 2026-07-26), so a tour with one opens on it and the still hero becomes page two. **`backend/add_video_urls.sql` HAS been applied** — verified against the live `get_catalog` on 2026-08-23, which emits the key on every tour; no SQL is owed, and `seed_from_toursjson.py` carries `video_urls` so a content merge cannot wipe it. Each video is openable **fullscreen** (session 107), and a tour also carries **`videoRole: TourVideoRole?`** — `gallery` (the default: b-roll beside the photographs) or **`narration`** (the clip **is** the tour, so its play bar and picture scrub together). ⚠️ **A `narration` tour may carry exactly ONE video**, validator-enforced. **Two tours carry video:** `via-57-west` (**`narration`**, 1080×1920 vertical with audio — a generated stand-in, replace when real footage exists) and `shinsegae-media-facade` (**`gallery`**, two clips: a 1200×900 silent one, plus `landscape-test.mp4`, **a 1920×1080 test card rather than real content**, added so rotation has something to run against — one-line revert). ⚠️ **`video_role` must reach Supabase to have any effect** — `seed_from_toursjson.py` carries it and `backend/add_video_role.sql` has been applied and verified live, but a catalogue edit alone is never enough. ⚠️ An earlier Key-facts note said no tour carried video; that was already false when written.
