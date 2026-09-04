@@ -128,6 +128,91 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-09-03)
 
+### Barcelona Pavilion goes to five members, and 36 architects join the vocabulary — 383 → 419 (branch `claude/new-tour-links-cytwc6`, session 142 — content + code)
+
+**Owner: *"ADD THE ARCHITECTS AND MAKE BARCELONA PAVILION A PLACE"*.** Both applied on a branch
+**restarted clean off the merged `main` (`5763c137`)** — its previous PR (#730) had merged, and a
+merged PR is finished. ⚠️ **This is a CODE change** (`Models/Tag.swift` + `scripts/validate-tours.swift`),
+so unlike the batch before it, it wants a simulator look; CI is the compile check.
+
+- **✅ THE BARCELONA PAVILION IS THE ONE THE CAP ACTUALLY BIT, AND NOTHING MOVED TO FIX IT.** Its
+  place held 2 members while three more pins sat on the same point — **one capsule plus three loose
+  pins against `TourSetMap.maxStacked = 3`**, past the cap, which puts a marker permanently out of
+  reach on a shared list. All three were **already exactly on the place's coordinate**, so the
+  identity rule held on its own: `tourIds` **2 → 5**, diff **4 insertions / 1 deletion**, and
+  `tours`, `makers`, `linkPins` and the other 113 places are byte-identical. All three are
+  **asserted `manual` before anything was written**, so no geofence is disturbed.
+  ⚠️ **Swept 400 m rather than trusting the checker's group** (the session-131 lesson): the only
+  other marker in range is **MNAC at 372.9 m**, correctly excluded — a separate museum on the same
+  hill, the Great Ball Court rule. 🎉 **`check-place-candidates.py` goes 12 EXACT → 11 with NEAR
+  unchanged at 50**, and the report diff proves it fell by **exactly the group resolved and gained
+  nothing**, so no coincident group was manufactured.
+- **🔴 THE CATALOGUE-WIDE SWEEP EARNED ITS KEEP AGAIN — 9 real findings and 4 false positives, and
+  the false ones are why a name sweep must be READ rather than applied.** `Ellwood` matched Toronto's
+  **Trinity Bellwoods** park three times and `Elwood` a **Melbourne suburb**; `Vicens` matched
+  **Manel Vicens, the currency broker who commissioned Casa Vicens** — the client, and a different
+  person entirely from the Madrid practice Vicens + Ramos. **`Rudolph Schindler` at Hollyhock House
+  is the Sullivan rule at its most tempting**: the caption calls it *"the job that brought Rudolph
+  Schindler to LA"*, but that house is Wright's, so it stays untagged.
+  - **The 9 real ones**, each stating authorship in its own text: **Gordon Bunshaft** at Lever House
+    (*"The architect was Gordon Bunshaft of Skidmore, Owings and Merrill"*), **Kevin Roche** +
+    **John Dinkeloo** at the Ford Foundation **twice** (an Atlas tour and a link pin), **Tod
+    Williams** + **Billie Tsien** at the Obama Presidential Center, **Coldefy & Associés** at the
+    older Hong Kong Design Institute pin (*"Architect: Coldefy & Associés"* — which is also what
+    confirms this batch's `CAAU` is that firm), **George Wyman** at the Bradbury Building and the
+    Downtown LA walk that contains it (the MVRDV / Álvaro Siza walk precedent), **Greene & Greene**
+    at the Gamble House, **Junya Ishigami** at KAIT Plaza, **Sachio Otani** at the Kyoto centre, and
+    **Atelier Oslo** at the older Deichman pin — **which also names `Lund Hagem`**, a co-designer
+    that only the sweep surfaced and the 36th name added.
+- **⚠️ FOUR DELIBERATE OMISSIONS A FUTURE SESSION WILL BE TEMPTED TO "FINISH".** **`Pierre Jeanneret`
+  is NOT tagged on `Maison Pierre Jeanneret`** — that caption says the house was designed *for* him,
+  so he is the client there, not the author (and session 141 had already left Le Corbusier off it for
+  the mirror-image reason). **The Obama Presidential Center LINK PIN is NOT tagged** although the
+  Atlas tour of the same building is — its caption reads only *"Chicago needed more sculptural
+  architecture like this"* and names nobody (the Jules Dalou rule); **tag what each entry's own
+  source says.** **`Sumner Hunt` is tagged on the batch pin and NOT on the Atlas Bradbury tour**,
+  because that tour's own text says Hunt's design was **rejected** before Wyman got the job.
+  **`Frank Lloyd Wright` is NOT tagged on the Unitarian Meeting House extension** — the subject is
+  Kubala Washatko's addition and Wright's building is the enclosed earlier one (the Kolumba / Böhm
+  precedent). ⚠️ **`Mortensrud Church` gains no architect at all** — its caption is *"Nature's
+  Cathedral"* and names none.
+- **⚠️ THE PRACTICE-VS-PERSON CALL WAS MADE ONCE AND APPLIED CONSISTENTLY: tag what the caption
+  presents as the author.** A person named *"of"* a practice ships as the person — **`Gordon
+  Bunshaft`** of SOM, **`Ruben Payumo`** of Alfredo Luz and Associates — while a caption naming only
+  a practice ships as the practice (`Austin Maynard Architects`, `Atelier Oslo`, `Hodgetts + Fung`,
+  `Department of Architecture Co`, `Slow Architects`, `Greene & Greene`, `Vicens + Ramos`). ⚠️ **The
+  project has previously REJECTED `Foster + Partners` as a duplicate of `Norman Foster`**, so this
+  convention is not uniform across the vocabulary; these are the entries to revisit if it is ever
+  normalised. ⚠️ **`CAAU` ships as `Coldefy & Associés`** — an expansion of the creator's
+  abbreviation, corroborated by the older HKDI pin naming the firm in full. ⚠️ **The creator
+  misspells `Craig Elwood`**; the caption stays verbatim in `longDescription` and the tag uses the
+  published `Craig Ellwood` (the Schweizer convention).
+- **🔴 `Designed by a Master` IS KEPT ON EVERY ONE, NOT REPLACED**, and two entries that gained a
+  name had never carried it (the Kyoto centre among them) — they do now. `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string. Verified catalogue-wide
+  after the change: **693 entries name an architect and 0 are missing the shelf tag**, and **0 of the
+  419 names are unused** — no dead vocabulary. **50 entries gained 58 architect tags.**
+- **Verification.** Both vocabularies **parsed out of the Swift rather than retyped** and asserted
+  **identical at 419 names with 0 duplicates on either side**; brace, bracket and paren balance
+  checked on both files with string literals stripped. Near-duplicates checked on **normalised token
+  sets** (folding accents, stripping `Architects`/`Studio`/`Associates`/`Partners`/`+`/`&`) — **0
+  collisions, 0 exact matches**, so all 36 were genuinely absent. Mirror **self-tested 22/22 with a
+  clean control**, then **0 errors, 0 warnings across 1,552 tours + 1,151 pins + 114 places** at
+  **469 tags across 5 facets**. ⚠️ **18 faults injected against the CHANGED entries specifically —
+  17 caught, control clean before and after.**
+  🔴 **The first harness run reported 18/18 and it was a FALSE PASS: `check()` returns an
+  `(errors, warnings)` TUPLE, not an exit code**, so reading it as one made every run — including
+  the clean control — look like a failure. **The control reading DIRTY is what exposed it.**
+  ⚠️ **Two further "misses" were then the session-141 harness bug repeating** — "no Place type" and
+  "no Theme" are **warnings**, and the harness counted only errors. ⚠️ **The last miss was a rule I
+  invented**: the validator's URL check explicitly accepts `("http://", "https://")`, so a non-https
+  hero is not a fault at all — asserted directly on the 50 touched entries instead (0 non-https, 0
+  missing the shelf tag, 0 duplicate tags within an entry). `Tours.json` **byte-stable under a Python
+  re-dump before AND after editing**. `seed_from_toursjson.py` clean at **305 / 2,703 / 3,075 /
+  114**; **0 `images//`** in the catalogue *or* the SQL. ⚠️ **Nothing compiled locally** — no Swift
+  toolchain in a Linux web session, so **CI is the only compile check**, and the owner's simulator
+  look is what confirms the shelves still read correctly.
+
 ### The bottom module went missing again — it was HIDDEN, not uninstalled ([PR #728](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/728), session 141 — code)
 
 **A tester sent a screenshot with no mini-player and no tab bar**, on a settled Home tab with the drawer correctly reserving their 126pt and map showing through it. Code only — no SQL, no catalogue change. Full detail: `archive/HANDOFF-260903-4.md`.
@@ -6852,7 +6937,7 @@ where price_tier is not null group by 1,2 order by 1;
 - **⚠️ Chinatown Country Club is NOT in Chinatown** — it's a café/vintage boutique at **222 Clarence St, CBD** ("just west of Chinatown proper", per its own script). The supplied coordinate matches the address within ~20 m (Nominatim), and the hero photo literally has the "CLARENCE ST" sign and "222" in frame. Don't "fix" the coordinate toward Haymarket.
 - **Sensitivity honored downstream (the Eastland convention):** the Harbour Bridge script opens on the sixteen construction deaths, so **its caption comes from paragraph 2** (the arch-holds-everything line) instead of the opener — no mortality figure in any title/caption/description; same for Camp Cove (21 lives on the torpedoed ferry stays in the script only, the longDescription alludes without the number). The Anzac Memorial's Sacrifice sculpture is described factually, matching the script's register.
 - **✅ The open-every-image audit came back CLEAN for the first time** — all 29 heroes opened and verified against their scripts (subject-confirming details down to Pellegrino's licensee sign naming Dan Pepperell and CCC's street sign), plus 12 gallery spot-checks across the five look-alike ocean pools (each pool's tell verified — North Curl Curl's in-pool rock outcrop, Fairy Bower's triangle, Mona Vale's spit). No Thyssen/DuSable-class error in this drop. Above The Clouds' hero is an eyewear-cabinet interior rather than the sneaker wall — same store confirmed across its gallery (the steel-and-pastel fit-out signature), owner's own pick order kept.
-- **✅ RESOLVED 2026-08-12 — Jørn Utzon is now IN the tag vocabulary** (added by [#492](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/492); Schinkel followed in [#494](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/494), Niemeyer and Bo Bardi landed too, and [#493](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/493) adds 39 more). **Sydney's Opera House was re-tagged by #492 and is now correct** — it carries `Jørn Utzon` **and** `Designed by a Master`, which is the right combination, not redundancy. 🔴 **Do not "tidy" the generic tag away from a named-architect tour.** `Tag.matches` performs **no implication** (`Models/Tag.swift`), the curated home shelf **"Designed by a master"** is keyed on that literal string (`Tag.swift:151`), and the maker authoring form **auto-appends it whenever an architect is picked** (`CreateTourView.swift:228`). Stripping it would silently drop the tour off that shelf and out of its filter chip. The doc's "an Architect tag implies Designed by a Master" line is **editorial intent that no code enforces** — carry both tags. **✅ RESOLVED 2026-08-16 by [#493](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/493)** — the mirror-image defect (44 tours naming an architect but missing `Designed by a Master`, so absent from the shelf built for exactly them) is closed, along with 39 more architect names. Verified against `main`: **86 architect names in the vocabulary, 224 named-architect tours all carrying the shelf tag, 0 missing**; the shelf holds 237 tours. ⚠️ **A duplicate fix ([#501](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/501)) was opened at 01:40 and closed unmerged — #493 had landed at 01:43, three minutes later.** Two sessions independently found the same defect within the hour. Before opening a content PR, re-check `origin/main` immediately prior to pushing, not just at session start. *(Original flag: Utzon is not in the tag vocabulary — the Opera House, of all buildings, ships `Designed by a Master`.)* **SANAA IS in the vocabulary** and the Art Gallery of NSW uses it by name (Sejima + Nishizawa's Naala Badu). Also absent: George McRae (QVB), Bruce Dellit + Rayner Hoff (Anzac Memorial), Walter Liberty Vernon (MCA building). The combined `Models/Tag.swift` PR case grows a Sydney wing, with Utzon its most glaring name yet.
+- **✅ RESOLVED 2026-08-12 — Jørn Utzon is now IN the tag vocabulary** (added by [#492](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/492); Schinkel followed in [#494](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/494), Niemeyer and Bo Bardi landed too, and [#493](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/493) adds 39 more). **Sydney's Opera House was re-tagged by #492 and is now correct** — it carries `Jørn Utzon` **and** `Designed by a Master`, which is the right combination, not redundancy. 🔴 **Do not "tidy" the generic tag away from a named-architect tour.** `Tag.matches` performs **no implication** (`Models/Tag.swift`), the curated home shelf **"Designed by a master"** is keyed on that literal string (`Tag.swift:151`), and the maker authoring form **auto-appends it whenever an architect is picked** (`CreateTourView.swift:228`). Stripping it would silently drop the tour off that shelf and out of its filter chip. The doc's "an Architect tag implies Designed by a Master" line is **editorial intent that no code enforces** — carry both tags. **✅ RESOLVED 2026-08-16 by [#493](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/493)** — the mirror-image defect (44 tours naming an architect but missing `Designed by a Master`, so absent from the shelf built for exactly them) is closed, along with 39 more architect names. Verified against `main`: **86 architect names in the vocabulary, 224 named-architect tours all carrying the shelf tag, 0 missing** — ⚠️ **stale: re-derived 2026-09-04 at 419 names / 693 named-architect entries / 0 missing; re-derive rather than quoting either figure**; the shelf holds 237 tours. ⚠️ **A duplicate fix ([#501](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/501)) was opened at 01:40 and closed unmerged — #493 had landed at 01:43, three minutes later.** Two sessions independently found the same defect within the hour. Before opening a content PR, re-check `origin/main` immediately prior to pushing, not just at session start. *(Original flag: Utzon is not in the tag vocabulary — the Opera House, of all buildings, ships `Designed by a Master`.)* **SANAA IS in the vocabulary** and the Art Gallery of NSW uses it by name (Sejima + Nishizawa's Naala Badu). Also absent: George McRae (QVB), Bruce Dellit + Rayner Hoff (Anzac Memorial), Walter Liberty Vernon (MCA building). The combined `Models/Tag.swift` PR case grows a Sydney wing, with Utzon its most glaring name yet.
 - **⚠️ Sydney took the bare `luna-park` slug** (free in catalog + gh-pages + the MEL batch; the tour titles itself "Luna Park Sydney"). If a future Melbourne batch brings St Kilda's Luna Park, it gets suffixed per the `catedral-metropolitana-bue` precedent.
 - **⚠️ 3 tours ship hero-only** (Barangaroo Reserve, Fairy Bower Sea Pool, Freshwater Rockpool) — backfillable without touching audio. All other tours carry hero + 1–6.
 - **Header format:** two lines (`TITLE — AUDIO TOUR SCRIPT` + `Location: …`), TTS twin proves neither is narrated; both stripped, plus exactly one `[beat]` per script (29 total). Captions extend across sentences to clear 60 chars; shortest shipped is 65. The folder set had two naming variances handled at parse time (QVB's folder lacks the `output ` prefix; three folders' image/audio stems use short names — `CCC`, `Harbour Bridge`, `Taronga Zoo`).
