@@ -1,0 +1,234 @@
+# HANDOFF — 2026-09-04 (session 143)
+
+**Thirty-three Toronto and Mississauga link pins, a blocked post, and three subjects the
+pixels named.** Branch `claude/tour-links-ds0387`, cut clean at `main`'s tip (`5763c137`,
+the #730 batch). Content only — no Swift, no SQL, no build.
+
+**linkPins 1,151 → 1,184 · makers 305 → 328 · `tours` and `places` byte-identical.**
+
+---
+
+## What arrived
+
+Forty Instagram links under a heading reading **"Toronto more 260901"**. They resolve to
+**34 distinct posts** — six were repeat pastes and one link was pasted three times. **0 were
+already in the catalogue.** 26 creators.
+
+**33 ship. One is blocked and cannot.**
+
+---
+
+## 🔴 The blocked post, and how it was proved
+
+`DJUA6mbNMBi` returns Instagram's `contextJSON: null` shell at **~215 KB** on three spaced
+attempts, while **three already-live catalogue pins fetched in the same pass with the same
+user-agent** came back healthy every time at **255–264 KB**. With a null context there is no
+handle, no caption and **no `display_url`** — so no subject and no hero, and a pin without a
+hero cannot exist.
+
+⚠️ **It is blocked to logged-out readers, not deleted.** Do NOT re-wire it on "the link opens
+on my phone" — the owner is signed in; a logged-out Atlas user gets a blank card. The test is
+`contextJSON` non-null on the embed, run against a live control in the same pass.
+
+---
+
+## ⚠️ The heading is loose — six posts are Mississauga
+
+The session-135 *read the payload, not the heading* rule, live again. Riverwood Conservancy,
+Jim Tovey Lakeview Conservation Area, Kariya Park, the Art Gallery of Mississauga, Absolute
+World Towers and Mississauga Civic Centre all ship with **`city: "Mississauga"`** (the
+Montserrat / Ekerö convention). **Mississauga is new to the catalogue.**
+
+---
+
+## ✅ The hero audit — 33 opened, zero wrong subjects
+
+**Three vague captions were closed by the pixels alone**, which is the whole reason this pass
+is not optional:
+
+| # | Caption said | The frame said |
+|---|---|---|
+| 12 | *"Went looking for Harvey Specter in Downtown Toronto"* | **BAY ADELAIDE CENTRE** on the lobby wall |
+| 26 | *"Straight out of Diagon Alley"* | **• THIS IS CURIOSA •** burned in |
+| 24 | *"My favourite spot for Toronto sunsets"* | a hill above a running track, skyline west |
+
+⚠️ **#24 is the batch's softest identification and is an inference from the picture, not the
+caption.** The frame is Riverdale Park East's hill over the athletic field; the reverse-geocode
+lands independently on a **sports pitch on Broadview Avenue**, which is that track. Two
+independent lines of evidence, but the caption names nothing — **one line removes it.**
+
+Several others name themselves: `Kariya Park, Mississauga` · `UNFINISHED ARCH by Rafael
+Lozano-Hemmer / Sherbourne Common` · `BASKETBALL TREE` · `The Waterworks` · `Ripley's Aquarium
+of Canada` · `KIM'S CONVENIENCE` · `Edward Gardens` · `Toronto / Trillium Park` · `Graffiti
+Alley`. Postal Station G is confirmed by the **Saulter** street sign and Riverside banners in
+its own frame; Kajiken by **油そば専門店 歌志軒** on the bowl rims.
+
+---
+
+## 🔴 Two geocoding corrections
+
+- **Kim's Convenience** — the caption says Queen Street **WEST**; the store is **252 Queen
+  Street EAST**, which is what **OSM names exactly** (`shop/convenience`, "Kim's Convenience").
+  Creator's error: their words stay verbatim in `longDescription` and **nothing this catalogue
+  authors repeats the wrong street** (the Schweizer convention).
+- **Ultra** — the first geocode returned the **Padulo Building at 1 St Clair WEST**. The venue
+  is **12 St Clair Avenue East**, confirmed against the restaurant's own listing. The
+  wrong-branch trap, caught before it shipped.
+
+Two subjects needed a published address because OSM has no node: **Curiosa** (320 Harbord
+Street) and **Postal Station G** (765 Queen Street East — now the Ralph Thornton Community
+Centre, which OSM *does* name at that address, along with the Queen/Saulter library branch).
+
+⚠️ **Documented inner-tenant shapes, all correct:** the Harbour Commission Building reverses to
+**Harbour Sixty Steakhouse at its own 60 Harbour Street**; the Reference Library to the **TCAF
+shop at 789 Yonge**, the caption's own number; Ripley's to **Ripley's Café**; the Art Gallery of
+Mississauga to the **Mississauga Civic Centre**, which is the building it is inside.
+
+⚠️ **The softest coordinate is Riverwood Conservancy** — it sits on the parking node on
+Riverwood Park Lane (the caption highlights free parking) rather than a mapped conservancy
+feature, because OSM has none.
+
+---
+
+## 🔴 Five same-subject pairs, and two the checker cannot see
+
+`check-place-candidates.py` goes **12 EXACT → 16** and **50 NEAR → 51**. **Nothing was nudged
+together to manufacture a group and nothing nudged apart to dodge the checker.**
+
+New EXACT groups — three are one subject sent twice by different creators, one is a park and an
+artwork inside it:
+
+- **The Unfinished Arch at Sherbourne Common** — `@aswilliamson` + `@gvalighting`
+- **The Toronto Reference Library** — `@toronto_papi_` + `@jen.trt`
+- **Waterworks Food Hall** — `@dishedtoronto` + `@toronto_papi_`
+- **Biidaasige Park** + its **basketball tree** — ⚠️ OSM maps **no feature for the tree**, so
+  inventing a second point inside the park is the manufacturing session 132 rejected for Arthur
+  Ashe. Both sit on the park node.
+
+New NEAR: **Graffiti Alley**, 53 m from the Atlas tour.
+
+**🔴 TWO MORE ARE STRUCTURALLY INVISIBLE TO THE CHECKER and are flagged by hand:**
+
+- **Museum Station** sits **0.05 m** from the existing `@explorewithkevs` pin. Both derive from
+  OSM's own station node — convergence, not manufacturing — but they differ in the **6th
+  decimal**, so the EXACT tier (which needs exact equality) misses it, and the NEAR tier's
+  title rule misses it too. The documented CalAcademy rounding artifact meeting the Grand
+  Central title blind spot.
+- **Ripley's Aquarium** is **13.8 m** from the Atlas tour, under a title that shares no
+  distinctive word with it.
+
+**Stack cap:** every group is **two markers deep** against `TourSetMap.maxStacked = 3`, so
+nothing is unreachable. The only 3-deep groups in the catalogue are pre-existing
+`@archimarathon` ones from #730.
+
+---
+
+## ⚠️ Titles disambiguated against the live catalogue
+
+Six titles had to differ from something already live or in-batch: **The Disguised Columns at
+Museum Station**, **The Dangerous Lagoon at Ripley's Aquarium**, **Walking Graffiti Alley**,
+**Inside the Toronto Reference Library**, **Opening Day at Waterworks Food Hall**, **Completing
+the Unfinished Arch**. The Railway Museum precedent — each takes what its own post is actually
+about.
+
+---
+
+## ⚠️ Architects
+
+**`MAD Architects` IS in the vocabulary** (added by #729) and is used by name on Absolute World
+Towers, **alongside** `Designed by a Master` — never replacing it.
+
+**Absent, shipping the generic tag:** **`Raymond Moriyama`** (the Toronto Reference Library) and
+**`E. J. Lennox`** (Postal Station G) — the two most conspicuous absences here. Also absent:
+Jones + Kirkland (Mississauga Civic Centre). Adding them is a **`Models/Tag.swift` code
+change**, deliberately kept out of a content batch.
+
+**🔴 THE TWO REFERENCE LIBRARY PINS ARE DELIBERATELY TAGGED DIFFERENTLY.** `@jen.trt`'s caption
+names Moriyama, so that pin carries `Designed by a Master`; `@toronto_papi_`'s caption says only
+*"Visit The Toronto Public Library at 789 Yonge St"* and names no architect, so **its pin carries
+no master tag** (the Jules Dalou rule, and the session-140 precedent that says correct by
+construction — **do not "finish the job"**).
+
+**No artist is tagged as an architect** — Rafael Lozano-Hemmer made the Unfinished Arch and
+Martin Reis the LEGO Pole; neither designed a building (the Kiki Smith rule). Mississauga Civic
+Centre carries no master tag either, because its caption names nobody.
+
+---
+
+## ⚠️ Flagged, not fixed
+
+- **Weak heroes.** **Mississauga Civic Centre is the weakest** — mostly a precast concrete
+  column with the building small behind it. **Cherry Street Bar-B-Que** and **Ultra** are a food
+  tray and an empty patio with nothing naming the venue. **The LEGO Pole** and **Kim's
+  Convenience** are creator-forward, though both subjects read clearly. A link pin re-hosts only
+  the thumbnail, so no other frame exists.
+- **#10 is a vendor's own marketing post** — GVA Lighting posted about lighting they supplied
+  for the Unfinished Arch, logo in frame. A real post about a real artwork; the Coca-Cola
+  precedent says the owner may keep it.
+- **9 of 33 will not play inline** — the documented licensed-music gate. Poster plus
+  `OPEN IN INSTAGRAM` is the correct outcome.
+
+---
+
+## ✅ No hand re-crop was needed — the fourth clean run
+
+Every source is 9:16, so the square is width-limited and `--focus` does nothing vertically. Two
+heroes clip a line and were **deliberately left**: both lose a hook (*"right in the heart of"*,
+*"MOST PEOPLE MISS"*), never the subject's name — the California Academy rule. "Trillium Park"
+was checked at full size and reads in full.
+
+---
+
+## Verification
+
+- **Mirror self-tested 22/22 with a clean control**, then **0 errors, 0 warnings across 1,552
+  tours + 1,184 pins + 114 places**, **exit code read directly, not through a pipe**.
+- **22 faults injected against THIS batch's own rows — 16 caught** (15 as errors, 1 as a
+  warning), control clean before and after. ⚠️ **The 6 misses are mirror blind spots and THREE
+  ARE NEWLY FOUND:** `non-https hero`, `duplicate maker id` and `stop order != 0`, beside the
+  documented `centroid drift` / `negative duration` / `empty title` trio. **All six were
+  asserted directly on the 33 instead: 0, 0, 0, 0, 0, 0** — plus `images//`, `triggerMode`,
+  `kind`, city+country and stop-image-equals-hero, all 0. **Worth closing in the mirror.**
+- `make-link-pin.py --selftest` **71/71** ⚠️ with Pillow installed first (a bare container
+  reports 62/62, which reads as a pass and is not one).
+- **0** duplicate tour or stop ids, **0** collisions with live ids, **0** already-pinned
+  sourceURLs, **0** byte-duplicate heroes, closest perceptual pair **75.39** (identical
+  pictures score under 1) — and the one pair even nominated was two tall objects against sky.
+- **33 files for 33 pins** — the check that catches two pins slugging identically.
+- **0 filename collisions against 6,987 gh-pages `images/` paths**, the listing **asserted to
+  hold >1,000 first**; ⚠️ the bare-slug check was **clean too**, so the handle suffix was not
+  load-bearing here.
+- ⚠️ **The gh-pages head moved between the clone and the push** (`0b15aa4` → `a0cd018`), so the
+  tree was **rebuilt on the current head** and the remote was **re-read in the same command as
+  the push**, with the status read through **`PIPESTATUS`**. Tree diff **exactly 33 additions,
+  0 deletions, nothing outside `images/`** (`5308c563`). The deploy read **`in_progress`, never
+  `cancelled`** against the Actions API. After it landed, **all 33 live URLs were hash-verified against the
+  uploaded bytes — 33 ok, 0 mismatch, 0 non-200**.
+- 🔴 **`check-image-duplicates.py --pins` was run AFTER the deploy** (the session-135 false-pass
+  lesson — an "OK" that has not seen the new files is not a pass): **`OK — no suspicious
+  duplicates`** over **1,179 images** (1,179 for 1,184 pins is the documented `@malata.antwerp`
+  five-pins-one-URL case), shared-URL half **0 errors / 208 documented reuses** — identical to the
+  recorded baseline, so this batch adds no shared URL.
+- `Tours.json` **byte-stable under a Python re-dump before AND after editing**; diff **1,709
+  insertions / 0 deletions**, asserted **purely additive** with `tours` and `places`
+  byte-identical and the existing pins and makers unchanged as a prefix.
+- **Three maker rows already existed** (`@theinsidertoronto`, `@toronto_papi_`, `@iamshobhit`)
+  and the uuid5 scheme **reproduced their ids exactly**, so they merge: **23 new rows from 26
+  creators**. All Instagram makers ship **`avatarURL: null` by design**.
+- `seed_from_toursjson.py` clean at **328 / 2,736 / 3,108 / 114**; **0 `images//`** in the
+  catalogue *or* the SQL.
+- ⚠️ **Nothing compiled locally** — CI on the PR is the only compile check a Linux web session
+  gets.
+
+---
+
+## ⚠️ Process traps worth keeping
+
+- **A missing trailing newline joined two lines of the fetch list.** `'\n'.join(...)` written
+  with no trailing newline meant `echo "C1 ..."` appended onto line 40, so **link 40 and the
+  first control were both silently skipped** — the file count caught it. `grep -c .` and
+  `wc -l` differ by exactly one when this is present.
+- **`git fetch` and `session-start.sh` both exceed the 120 s tool timeout here.** Run them in
+  the background and read the output file.
+- **The mirror's `check()` takes `(cat, facets, vocab, dom)`**, and `load_vocab()` returns a
+  **2-tuple** with `enums()` supplying the third — two wrong guesses cost two runs.
