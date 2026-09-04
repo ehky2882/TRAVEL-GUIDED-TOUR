@@ -42,6 +42,95 @@ final class BottomModuleWindowTests: XCTestCase {
         )
     }
 
+    // MARK: - Visibility (the bars going missing on a settled Home tab)
+    //
+    // A DIFFERENT failure from the install race above, and the reason that
+    // fix didn't cure the report: the window installed fine and was then left
+    // HIDDEN. It painted nothing, and because the inline fallback keyed off
+    // `isInstalled`, it drew nothing either — bars gone for the session, on
+    // every tab, no way back but a force-quit.
+    //
+    // The launch is what hid it. `installBottomModule()` latched a hide off
+    // `isSplashVisible`, and the single matching unhide in `runLaunchGate`
+    // runs 32 ms BEFORE that turns false (a guaranteed suspension point), so
+    // any `installBottomModule()` in the gap — `scenePhase == .active` calls
+    // it unguarded — re-hid the window with nothing left to undo it.
+
+    // The launch holds the bars back while it is still holding them back —
+    // not while `isSplashVisible`, which outlives the unhide.
+    func test_withdrawn_whileLaunchHoldsModule() {
+        XCTAssertTrue(
+            BottomModuleWindowController.shouldWithdraw(
+                launchHoldsModule: true, withdrawnByScreen: false
+            )
+        )
+    }
+
+    // 🔴 THE REGRESSION TEST. Once the launch has let go, re-deriving must say
+    // "show" — even though this is exactly the moment the old code still read
+    // `isSplashVisible == true` and re-hid.
+    func test_notWithdrawn_onceLaunchLetsGo_evenBeforeHandOffBegins() {
+        XCTAssertFalse(
+            BottomModuleWindowController.shouldWithdraw(
+                launchHoldsModule: false, withdrawnByScreen: false
+            ),
+            "a repeat install in the 32ms gap after the unhide must not re-hide the bars"
+        )
+    }
+
+    // A screen that deliberately took the 126pt keeps them, launch or not.
+    func test_withdrawn_whileScreenClaimsTheSpace() {
+        XCTAssertTrue(
+            BottomModuleWindowController.shouldWithdraw(
+                launchHoldsModule: false, withdrawnByScreen: true
+            )
+        )
+        XCTAssertTrue(
+            BottomModuleWindowController.shouldWithdraw(
+                launchHoldsModule: true, withdrawnByScreen: true
+            )
+        )
+    }
+
+    // 🔴 THE CASE THE OLD FALLBACK MISSED: installed, hidden, nobody asking
+    // for it. The main window has to draw the bars itself.
+    func test_inlineFallback_whenWindowIsInstalledButHidden() {
+        XCTAssertTrue(
+            BottomModuleWindowController.rendersInlineFallback(
+                isShowingBars: false, withdrawnByScreen: false, isSplashVisible: false
+            ),
+            "an installed-but-hidden window must not suppress the fallback"
+        )
+    }
+
+    // Never both: two sets of bars in two windows is its own defect.
+    func test_noInlineFallback_whileTheWindowIsShowingThem() {
+        XCTAssertFalse(
+            BottomModuleWindowController.rendersInlineFallback(
+                isShowingBars: true, withdrawnByScreen: false, isSplashVisible: false
+            )
+        )
+    }
+
+    // Hiding one must not reveal the other — the wizard needs the 126pt.
+    func test_noInlineFallback_whenAScreenWithdrewTheModule() {
+        XCTAssertFalse(
+            BottomModuleWindowController.rendersInlineFallback(
+                isShowingBars: false, withdrawnByScreen: true, isSplashVisible: false
+            )
+        )
+    }
+
+    // Under the splash there is nothing to draw: the bars sit at opacity 0 and
+    // the overlay covers the app anyway.
+    func test_noInlineFallback_underTheSplash() {
+        XCTAssertFalse(
+            BottomModuleWindowController.rendersInlineFallback(
+                isShowingBars: false, withdrawnByScreen: false, isSplashVisible: true
+            )
+        )
+    }
+
     // MARK: - Self-heal retry schedule
     //
     // The deferred branch above only helps if something actually retries. The

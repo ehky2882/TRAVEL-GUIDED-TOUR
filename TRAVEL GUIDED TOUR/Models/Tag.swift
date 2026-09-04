@@ -185,6 +185,18 @@ enum Tag {
             "Peter Böhm", "Piet Blom", "Public Architecture",
             "RLA Architects", "Schneider + Schumacher", "Shozo Uchii",
             "Truus Schröder-Schräder", "UNStudio", "Willem Dudok",
+            "Aditya Prakash", "Arne Jacobsen", "Atelier Oslo",
+            "Austin Maynard Architects", "B. P. Mathur", "Billie Tsien",
+            "Coldefy & Associés", "Craig Ellwood", "Department of Architecture Co",
+            "Gaetano Pesce", "George Wyman", "Gordon Bunshaft",
+            "Greene & Greene", "Hendrik Petrus Berlage", "Hiroaki Misawa",
+            "Hodgetts + Fung", "John Dinkeloo", "John Ronan",
+            "Jorge Yulo", "Junya Ishigami", "Kevin Roche",
+            "Kubala Washatko", "Leandro Locsin", "Lund Hagem",
+            "Paul Rudolph", "Pierre Jeanneret", "Reima Pietilä",
+            "Ruben Payumo", "Rudolph Schindler", "Sachio Otani",
+            "Satish Gujral", "Scott Johnson", "Slow Architects",
+            "Sumner Hunt", "Tod Williams", "Vicens + Ramos",
         ]),
     ]
 
