@@ -333,6 +333,25 @@ so unlike the batch before it, it wants a simulator look; CI is the compile chec
   toolchain in a Linux web session, so **CI is the only compile check**, and the owner's simulator
   look is what confirms the shelves still read correctly.
 
+### The bottom module went missing again — it was HIDDEN, not uninstalled ([PR #728](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/728), session 141 — code)
+
+**A tester sent a screenshot with no mini-player and no tab bar**, on a settled Home tab with the drawer correctly reserving their 126pt and map showing through it. Squash `4da52445`, **merged**. **TestFlight 1.1.2 (141), owner-verified: *"BUILD IS LIVE"*.** Code only — no SQL, no catalogue change. Full detail: `archive/HANDOFF-260903-4.md`.
+
+- **🔴 THREE PREVIOUS FIXES ALL ASKED WHETHER THE WINDOW *INSTALLED*. THIS IS A DIFFERENT FAILURE: IT INSTALLS FINE AND IS THEN LEFT *HIDDEN*.** The launch hides it deliberately — that window sits at `.normal + 1`, above every window in the scene, so it would paint over the splash. But the hide was **latched** off `launchState.isSplashVisible`, against a single matching unhide buried in `runLaunchGate`:
+  ```swift
+  bottomModuleWindow.setHidden(false)             // phase is STILL .splash
+  try? await Task.sleep(for: .milliseconds(32))   // guaranteed suspension
+  await playHandOff()                             // beginHandOff() at last
+  ```
+  `phase` doesn't move until `beginHandOff()`, so **`isSplashVisible` stays true for ≥32 ms after the unhide, with the main actor yielded** — and any `installBottomModule()` landing in that gap re-hid the window **with nothing left to undo it**. `scenePhase == .active` calls exactly that, **unguarded**, on a cold launch. Bars gone for the whole session, on every tab, no way back but a force-quit. On a busy launch (catalog decode, map tiles, image warmup) the main-actor hop makes the window wider than 32 ms, which is the "sometimes".
+- **🔴 AND THE #443 INLINE FALLBACK COULD NOT CATCH IT, WHICH IS WHY THE SYMPTOM SURVIVED IT.** It asked `!isInstalled`, and the window **was** installed — so neither surface drew the bars. **`isInstalled` is the wrong question; `isShowingBars` (installed AND not hidden) is the right one.**
+- **✅ THE SCREENSHOT RULED OUT THE OBVIOUS THEORY BEFORE ANY CODE WAS READ, and the technique generalises.** The launch entrance drives the search bar in from the right and the drawer up from below off the **same `handOffProgress`** the module reads — both were settled in the frame, so `assemblyProgress` had reached 1 and the module was not merely parked off-screen at opacity 0. **The other two edges of the assembly are a free witness for the third.** ⚠️ What made the frame diagnostic at all: `ContentView.swift` passes `bottomReservedHeight: AtlasBottomModule.height()` **unconditionally** — it never reads `hidesBottomModule` — so the 126pt is reserved whether or not the bars exist.
+- **The fix is structural, not another timing bet.** (1) The App owns **`launchHoldsBottomModule`**, dropped in the **same main-actor turn** as the unhide, and `installBottomModule()` now **re-derives** visibility (`BottomModuleWindowController.shouldWithdraw`) rather than commanding a hide — so a duplicated or mistimed call can only reach the right answer, and because that site runs on **every foreground, a background round-trip becomes a guaranteed recovery**. (2) The fallback asks **`isShowingBars`** via `rendersInlineFallback(isShowingBars:withdrawnByScreen:isSplashVisible:)`; worst case is now bars *below* a UIKit modal rather than no bars. (3) **`setHidden` writes the window on every call** instead of early-returning on an unchanged flag, so a drifted window self-corrects — the *flag* is still written only on a real change, so re-asserting doesn't churn observers. Both rules are pure statics beside `installOutcome`; **7 new tests (15 total)**, the regression one pinning that re-deriving after the unhide says *show* at the exact instant the old code said *hide*.
+- **⚠️ DELIBERATELY NOT FIXED, STATED RATHER THAN BURIED: a stuck `appShared.hidesBottomModule`.** If that flag were ever left true (a missed restore from a link pin's element fullscreen) this re-derives *from* the stuck flag and cannot heal it. `LinkEmbedView` guards it with three restore paths — `dismantleUIView`, `Coordinator.deinit` (the only ARC-guaranteed one) and `TourDetailView.onDisappear` — so it was left alone rather than adding a rule that could fight the **tour wizard**, which legitimately withdraws the module from a `fullScreenCover` over the Me tab root.
+- **⚠️ `ContentView.body` now depends on the launch PHASE** (which changes exactly twice a launch), **NOT** on `handOffProgress` (60 Hz, still read only in leaves — the session-102 fix is intact). The splash guard exists so the window's copy and the inline copy **never co-render**, which would put two `fullScreenCover`s on one `showingFullPlayer`.
+- **⚠️ Nothing compiled locally** (Linux web session, no Swift toolchain) — CI's simulator build + unit tests were the `test_sim` stand-in. **✅ Device-verified by the owner on TestFlight 1.1.2 (141)**, which is the proof that matters here: the bug is intermittent, so the honest check is repeated cold launches (force-quit, relaunch) plus a background→foreground round-trip. **New behaviour: if the bars ever do go, backgrounding and returning should now bring them back** — that recovery exists because `installBottomModule()` runs on every foreground and now re-derives rather than commands.
+- **⚠️ THE BUILD COST A VERSION BUMP, AND THE REJECTION IS ITSELF INFORMATION.** Build **140** compiled and signed cleanly and died at the upload step on **90186 *"Invalid Pre-Release Train. The train version '1.1.1' is closed"*** — so **Apple has approved 1.1.1**, and `MARKETING_VERSION` moved to **1.1.2**. See § *THE VERSION TRAIN CLOSES THE MOMENT APPLE APPROVES IT* — this is now a standing per-release cost, and in a web session (no App Store Connect key) that rejection is the **only** signal that a version shipped.
+
 ### One hundred and four @archimarathon pins, twelve coincident groups, and a caption pasted onto the wrong video (branch `claude/new-tour-links-cytwc6`, session 142 — content)
 
 **The owner sent 106 links from the same creator as #729; 105 are distinct posts and 104 ship.**
@@ -4327,13 +4346,23 @@ Full detail: `archive/HANDOFF-260830-6.md`.
   marketing version — **TestFlight included**. Build **136 compiled, signed, and was rejected at
   the upload step**: *"The value for key CFBundleShortVersionString [1.1] ... must contain a higher
   version than that of the previously approved version [1.1]. (90062)"*. **Build 135 (2026-08-26)
-  was the last one that could ever ship under 1.1.** `MARKETING_VERSION` is now **1.1.1** on both
-  app-target configurations (the test targets stay at 1.0), and **1.1.1 (137) is VALID at Apple** —
-  verified by asking App Store Connect, not by reading the workflow's green tick. **⚠️ Every future
-  build must bump again once 1.1.1 is itself released.** ⚠️ **This failure does not look like a
-  version problem:** the archive and the signing both succeed and the run goes red at the last
-  step, which is the same shape as the certificate-cap failure and the ASCII-notes failure. Read
-  the altool error before assuming either.
+  was the last one that could ever ship under 1.1.** `MARKETING_VERSION` went to **1.1.1**, and
+  **1.1.1 (137) was VALID at Apple** — verified by asking App Store Connect, not by reading the
+  workflow's green tick.
+  - **✅ IT HAPPENED AGAIN, EXACTLY AS PREDICTED, ON 2026-09-04 — 1.1.1 IS NOW APPROVED, SO IT IS
+    CLOSED TOO.** Build **140 compiled and signed cleanly (`build_app` 219 s, IPA and archive both
+    produced) and died at the upload step** with **90186 *"Invalid Pre-Release Train. The train
+    version '1.1.1' is closed for new build submissions"*** alongside the same 90062. **Build 139
+    was the last one that could ever ship under 1.1.1.** `MARKETING_VERSION` is now **1.1.2** on
+    both app-target configurations (the test targets stay at 1.0). ⚠️ **Note what this failure
+    TELLS you, beyond the fix: a closed train is proof Apple approved that version.** A web session
+    has no App Store Connect key (§ READ FIRST), so this rejection is the only signal it gets —
+    treat it as evidence 1.1.1 shipped, and **ask the owner rather than asserting a release state
+    from this file**. **⚠️ Every future build must bump again once 1.1.2 is itself released** — this
+    is now a standing per-release cost, not a one-off.
+  - ⚠️ **NEITHER FAILURE LOOKS LIKE A VERSION PROBLEM:** the archive and the signing both succeed
+    and the run goes red at the last step, which is the same shape as the certificate-cap failure
+    and the ASCII-notes failure. **Read the altool error before assuming either.**
 - **⚠️ A simulator trap that cost twenty minutes and is not a product bug:** on one launch the
   bottom-module window missed its install, and because the fullscreen cover is hosted **inside that
   window** (`BottomModuleRoot`), the expand button rendered, sat in the accessibility tree, and did

@@ -100,9 +100,10 @@ enum BottomModuleInstallOutcome: Equatable {
     case deferUntilActive
 }
 
-/// `@Observable` so the main window can watch `isInstalled` and render the
-/// mini-player + tab bar inline whenever this secondary window is absent. That
-/// fallback is what makes the bars unconditional — see `isInstalled`.
+/// `@Observable` so the main window can watch `isShowingBars` and render the
+/// mini-player + tab bar inline whenever this secondary window isn't painting
+/// them — absent OR hidden. That fallback is what makes the bars
+/// unconditional — see `isShowingBars`.
 @MainActor
 @Observable
 final class BottomModuleWindowController {
@@ -124,7 +125,14 @@ final class BottomModuleWindowController {
     /// Whether the module is currently withdrawn. Stored for the same reason as
     /// `lastPreference`: a *deferred* install must not come back on screen
     /// after something already asked for it to be hidden.
-    private var isHiddenByRequest = false
+    ///
+    /// 🔴 READABLE, because "does the window exist" is not the question that
+    /// matters — "are the bars on screen" is. `ContentView`'s inline fallback
+    /// used to key off `isInstalled` alone, so an *installed but hidden* window
+    /// drew nothing and suppressed the fallback too: bars gone for the whole
+    /// session, on every tab, with no way back but a force-quit. See
+    /// `isShowingBars`.
+    private(set) var isHiddenByRequest = false
     /// Pending self-heal retry, so only one chain is ever in flight.
     private var retryWorkItem: DispatchWorkItem?
     /// How many self-heal retries have been scheduled so far.
@@ -168,6 +176,16 @@ final class BottomModuleWindowController {
     /// modals, which is a far better failure than an app with no tab bar.
     var isInstalled: Bool { window != nil }
 
+    /// Whether the bars are actually being painted by this window.
+    ///
+    /// 🔴 THIS, not `isInstalled`, is what the inline fallback must ask. The
+    /// two differ exactly when the window exists and is hidden — which is a
+    /// state the launch puts it in deliberately, and which a missed unhide then
+    /// makes permanent. Keying the fallback off `isInstalled` meant that case
+    /// rendered nothing anywhere; keying it off this means the worst outcome is
+    /// bars that sit below a UIKit modal instead of above one.
+    var isShowingBars: Bool { isInstalled && !isHiddenByRequest }
+
     /// Update the height of the bottom strip in which this window claims
     /// touches. **Must** track the module's real painted height, not a constant:
     /// content can appear *above* the mini-player (the Group Listen banner), and
@@ -196,8 +214,13 @@ final class BottomModuleWindowController {
     ///
     /// Idempotent, and survives a deferred install (see `isHiddenByRequest`).
     func setHidden(_ hidden: Bool) {
-        guard hidden != isHiddenByRequest else { return }
-        isHiddenByRequest = hidden
+        // The flag is written only on a real change, so re-asserting the same
+        // visibility (which `syncBottomModuleVisibility()` now does on every
+        // foreground) doesn't churn observers. The *window* is written every
+        // time: this is the self-heal path, and an early return would skip the
+        // one line that can correct a window whose state has drifted from the
+        // flag.
+        if hidden != isHiddenByRequest { isHiddenByRequest = hidden }
         window?.isHidden = hidden
     }
 
@@ -206,6 +229,47 @@ final class BottomModuleWindowController {
     static func installOutcome(hasWindow: Bool, hasActiveScene: Bool) -> BottomModuleInstallOutcome {
         if hasWindow { return .alreadyInstalled }
         return hasActiveScene ? .installNow : .deferUntilActive
+    }
+
+    /// Should the module be withdrawn right now?
+    ///
+    /// 🔴 DERIVED, NEVER LATCHED — and that is the whole fix. The launch used
+    /// to *command* a hide (`if isSplashVisible { setHidden(true) }`) against a
+    /// single matching unhide buried in `runLaunchGate`. Between that unhide and
+    /// `beginHandOff()` there is a guaranteed 32 ms suspension during which
+    /// `isSplashVisible` is **still true**, so any `installBottomModule()`
+    /// landing in it re-hid the window with nothing left to undo it — and
+    /// `scenePhase == .active` calls exactly that, unguarded, on a cold launch.
+    /// The bars were then gone for the session.
+    ///
+    /// Re-deriving from state instead means a duplicated or mistimed call can
+    /// only ever reach the right answer, and a foreground round-trip becomes a
+    /// guaranteed recovery rather than a coin flip.
+    ///
+    /// - Parameters:
+    ///   - launchHoldsModule: the launch is still holding the bars back. Not
+    ///     `isSplashVisible`: that stays true across the unhide, which is the
+    ///     bug. The App clears its own flag in the same turn as the unhide.
+    ///   - withdrawnByScreen: a screen has deliberately taken the 126pt — the
+    ///     tour wizard, or a link pin's player in element fullscreen. See
+    ///     `AppSharedState.hidesBottomModule`.
+    static func shouldWithdraw(launchHoldsModule: Bool, withdrawnByScreen: Bool) -> Bool {
+        launchHoldsModule || withdrawnByScreen
+    }
+
+    /// Should `ContentView` paint the bars itself, in the main window?
+    ///
+    /// Yes whenever this window isn't showing them and nothing legitimately
+    /// wants them gone. Suppressed under the splash, which covers the app
+    /// anyway — the bars are at opacity 0 there, so rendering them buys nothing
+    /// and costs a redundant follow-request refresh.
+    static func rendersInlineFallback(
+        isShowingBars: Bool,
+        withdrawnByScreen: Bool,
+        isSplashVisible: Bool
+    ) -> Bool {
+        guard !isSplashVisible else { return false }
+        return !isShowingBars && !withdrawnByScreen
     }
 
     /// Installs the secondary window. Idempotent — once installed,
