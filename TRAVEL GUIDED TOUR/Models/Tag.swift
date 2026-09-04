@@ -197,6 +197,8 @@ enum Tag {
             "Ruben Payumo", "Rudolph Schindler", "Sachio Otani",
             "Satish Gujral", "Scott Johnson", "Slow Architects",
             "Sumner Hunt", "Tod Williams", "Vicens + Ramos",
+            "BVN Architecture", "EMTB", "Hirvonen-Huttunen",
+            "Kim Swoo-geun", "MGT Architects", "Shin Takamatsu",
         ]),
     ]
 

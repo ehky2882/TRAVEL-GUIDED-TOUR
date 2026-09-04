@@ -26004,7 +26004,9 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Art"
+        "Art",
+        "Shin Takamatsu",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -28215,7 +28217,9 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Contemporary"
+        "Contemporary",
+        "Shin Takamatsu",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -81645,6 +81649,22 @@
         "992B0BE3-1072-5990-99EB-5CD5145F12D4",
         "335C2FA7-C33D-5C05-83E0-8B06CC751B74"
       ]
+    },
+    {
+      "id": "62bbabf6-5646-5b4b-8c3d-0fdfb093d2ff",
+      "name": "Serlachius Museum Gösta",
+      "description": "The lakeside campus of the Serlachius art museum at Joenniemi Manor in Mänttä, reached across a bridge that is itself the point. MX_SI, the Barcelona practice, spanned 53 metres of Lake Melasjärvi in 2014 in Corten steel and laminated timber, carrying the museum park out to the island of Taavetinsaari; the deck rises and falls under you as you walk it. The Art Sauna followed on the shore in 2022, board-formed concrete and timber by the same architects, with a jetty running out over the water. The sequence the museum intends is the one its visitors describe: look at architecture, look at art, then get in the lake.",
+      "latitude": 62.0276883,
+      "longitude": 24.574638,
+      "city": "Mänttä",
+      "address": "Joenniementie 47, Mänttä",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/serlachius-museum-bridge-archimarathon_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "E7951083-147C-5234-8C3A-EFB4CFC2162E",
+        "0E73CAF9-7740-55D6-88F3-8FE2C050A9D6",
+        "A2F07761-0C3C-5C65-BE48-4E7A09AD5445"
+      ]
     }
   ],
   "linkPins": [
@@ -134636,7 +134656,8 @@
         "Notable Building",
         "Architecture",
         "Commerce",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Shin Takamatsu"
       ],
       "priceUSD": 0
     },
@@ -134963,7 +134984,8 @@
         "Library",
         "Architecture",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "BVN Architecture"
       ],
       "priceUSD": 0
     },
@@ -135056,7 +135078,8 @@
         "Architecture",
         "Power",
         "Brutalist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "EMTB"
       ],
       "priceUSD": 0
     },
@@ -135102,7 +135125,9 @@
         "Civic",
         "Architecture",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Hirvonen-Huttunen",
+        "MGT Architects"
       ],
       "priceUSD": 0
     },
@@ -135197,7 +135222,8 @@
         "Faith",
         "Architecture",
         "Brutalist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Kim Swoo-geun"
       ],
       "priceUSD": 0
     }
