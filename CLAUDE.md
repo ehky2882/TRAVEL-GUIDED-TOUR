@@ -312,15 +312,15 @@ simulator look; CI is the compile check. **Places 114 → 115 · vocabulary 419 
 - **⚠️ FIVE OF THE SEVEN ARE THIS BATCH'S OWN PINS, each naming its architect in its own caption:**
   `BVN Architecture` (Marrickville Library), `EMTB` (High Court of Australia), **`Hirvonen-Huttunen`
   AND `MGT Architects`** (Embassy of Finland — both named, so both tagged), `Kim Swoo-geun`
-  (Kyungdong Presbyterian Church). 🔴 **`Kenzō Tange` remains deliberately untagged on Yoyogi** — its
-  caption names no architect and does not make authorship the point — and **`Temppeliaukio Church`
-  still carries no master tag at all** for the same reason. **Do not "finish the job."**
+  (Kyungdong Presbyterian Church). ⚠️ **`Kenzō Tange` on Yoyogi and a master tag on `Temppeliaukio
+  Church` were BOTH deliberately withheld here under the Jules Dalou rule — and the owner then asked
+  for them, so both now ship. See the second follow-up below; do not restore the omission.**
 - **🔴 `Designed by a Master` IS KEPT ON EVERY ONE, NOT REPLACED.** `Tag.matches` performs **no
   implication** and the curated home shelf is keyed on that literal string. Verified catalogue-wide
-  after the change: **708 entries name an architect and 0 are missing the shelf tag**, and **0 of the
-  425 names are unused** — no dead vocabulary.
+  after the change: **710 entries name an architect and 0 are missing the shelf tag**, and **0 of the
+  427 names are unused** (re-derived after the second follow-up below) — no dead vocabulary.
 - **Verification.** Mirror **self-tested 22/22 with a clean control**, then **0 errors, 0 warnings
-  across 1,552 tours + 1,168 pins + 115 places** at **475 tags**. ⚠️ **24 faults injected against THIS
+  across 1,552 tours + 1,168 pins + 115 places** at **475 tags** (477 after the follow-up below). ⚠️ **24 faults injected against THIS
   place and the SEVEN retagged entries — 23 caught, control clean before and after** (the place
   drifting off its members in latitude and longitude, each member nudged 55 m, dropped to one member,
   an unknown tour id, an empty name, a bad hero URL, an out-of-range latitude, the hero repeated in
@@ -340,6 +340,71 @@ simulator look; CI is the compile check. **Places 114 → 115 · vocabulary 419 
   / 3,092 / 115**; **0 `images//`** in the catalogue *or* the SQL. ⚠️ **Nothing compiled locally** — no
   Swift toolchain in a Linux web session, so **CI is the only compile check**, and the owner's
   simulator look is what confirms the shelves still read correctly.
+
+#### ✅ FOLLOW-UP 2, same session — the owner reverses two Jules Dalou omissions; vocabulary 425 → 427
+
+**Owner: *"Yes I would like the architect tags. Don't worry about weak heroes."*** — answering the
+offer of the two names the batch above had deliberately withheld. ⚠️ **This is an OWNER DECISION
+REVERSING THE JULES DALOU RULE FOR THESE TWO ENTRIES.** Neither caption names an architect (verified
+by re-reading both in full: Yoyogi's is *"Archimarathon Japan architecture recce tour, day 1 part 1"*,
+Temppeliaukio's is *"Temppeliaukio Church (ALa the Rock Church) in Helsinki, Finland"* plus hashtags),
+so the omission was correct under the rule and is being overridden on instruction. **Do not "restore"
+it.** Diff **7 insertions / 2 deletions**; `tours`, `makers` and `places` **byte-identical to HEAD**,
+and the **only field differing on either pin is `tags`**.
+
+- **⚠️ `Timo Suomalainen` AND `Tuomo Suomalainen` WERE VERIFIED, NOT RECALLED — the name was absent
+  from the catalogue entirely.** A full-text sweep across 1,552 tours and 1,168 pins returned **zero**
+  hits for `Suomalainen`, so there was nothing internal to lean on. Confirmed externally instead: the
+  brothers **won the 1961 competition** and the church was **consecrated in 1969** (Wikipedia,
+  Docomomo Suomi, Architectuul agreeing). Both added as individuals, following the existing
+  co-designer precedent (`Kevin Roche` + `John Dinkeloo`, `Tod Williams` + `Billie Tsien`,
+  `Elissa Aalto`). **`Kenzō Tange` was already in the vocabulary** — Yoyogi needed no new name.
+- **🎉 TAGGING YOYOGI ALSO MAKES THE PIN MATCH THE ATLAS TOUR OF THE SAME BUILDING.** `Yoyogi National
+  Stadium | 国立代々木競技場 第一体育館` sits **67.8 m** away and already carries **both** `Kenzō Tange`
+  and `Designed by a Master`, so the pair now shares shelves — the documented convention that a pin
+  matches the tour where a subject exists as both. ⚠️ **The era tags still differ and were deliberately
+  left alone** (pin `Modernist`, tour `Contemporary`, on a 1964 building): the ask was architects, and
+  widening it would be scope the owner did not request.
+- **🔴 THE CATALOGUE-WIDE SWEEP FOUND A FIFTH TANGE MENTION AND IT IS CORRECTLY NOT TAGGED.**
+  `Kyoto International Conference Center (ICC Kyoto)` names him only as the practice its architect came
+  from — *"the commission went to Sachio Otani, a former associate of Kenzo Tange"* — which is the
+  **Sullivan rule** at its plainest; `Sachio Otani` is tagged there and remains the author. ⚠️ **The
+  word-boundary matters:** an unbounded search also matched **`Red Sugar`**, a false positive on a
+  substring. The other four Tange entries (Fuji Television, St. Mary's Cathedral, Tokyo Metropolitan
+  Government Building, Yoyogi National Stadium) were already correctly tagged.
+- **🔴 `Designed by a Master` IS ADDED ALONGSIDE, NEVER INSTEAD.** `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string, so a named-architect entry
+  without it drops off the shelf built for exactly those entries (the #493 defect). **Both flagged pins
+  had NEITHER**, so each gains the name(s) and the shelf tag together.
+- **⚠️ MY FAULT HARNESS INVENTED A RULE AGAIN — SECOND SESSION RUNNING, AND WORTH RECOGNISING ON
+  SIGHT.** It reported 2 misses on *"shelf tag removed"*. **`scripts/validate-tours.swift` has NO
+  shelf-tag rule** — `Designed by a Master` appears there only as a vocabulary entry — so removing it
+  is **not a fault the validator can see**, exactly like last session's invented duplicate-tag rule.
+  Real score **22/22**. **The #493 convention is enforced by discipline and by the catalogue-wide
+  sweep, not by the validator**, so it must be **asserted directly** every time: **710 entries name an
+  architect and 0 are missing the shelf tag**, **0 of the 427 names are unused**.
+- **⚠️ THE FOUR WEAK HEROES ARE CLOSED — owner: *"Don't worry about weak heroes."* DO NOT RE-RAISE
+  THEM.** Yoyogi's talking-head frame, the Higashi Sanchome toilet pin whose hero is a building,
+  Jingu-Dori Park and the Sayamaike display model all ship exactly as delivered. ⚠️ **Anyone re-running
+  the open-every-hero audit will flag all four again; they are settled** — the Ministry of Enterprise /
+  Casa Lleó Morera precedent applies: honour the decision rather than "fixing" it.
+- **Verification.** Both vocabularies **parsed out of the Swift rather than retyped** and asserted
+  **identical at 427 with 0 duplicates on either side**; brace, bracket and paren balance checked on
+  both files **with string literals stripped**. Near-duplicates checked on **normalised token sets** —
+  **0 collisions, 0 exact matches**, so both names were genuinely absent. Mirror **self-tested 22/22
+  with a clean control**, then **0 errors, 0 warnings across 1,552 tours + 1,168 pins + 115 places** at
+  **477 tags**, ⚠️ **exit code read directly rather than through a pipe** (the first reading went
+  through `| tail`, the session-90 `PIPESTATUS` trap, and was redone). ⚠️ **24 faults injected against
+  THESE TWO ENTRIES specifically — 22 caught, control clean before and after** (an unknown architect
+  tag, Place type stripped, Theme stripped, a bad hero URL, the hero repeated in its own gallery, an
+  out-of-range latitude, a bad `triggerMode`, a bad `kind`, a bad `primaryCategory`, a duplicate id and
+  an unknown `makerId`, each on both pins); the 2 non-findings are the invented rule above.
+  `Tours.json` **byte-stable under a Python re-dump before AND after**. `seed_from_toursjson.py` clean
+  at **305 / 2,720 / 3,092 / 115**; **0 `images//`** in the catalogue *or* the SQL.
+  **`check-place-candidates.py` unchanged at 12 EXACT / 52 NEAR**, which a tag-only edit cannot move.
+  ⚠️ **Nothing compiled locally** — no Swift toolchain in a Linux web session, so **CI on
+  [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) is the only compile check**, and the
+  owner's simulator look is what confirms the shelves still read correctly.
 
 ## Current State (2026-09-03)
 
