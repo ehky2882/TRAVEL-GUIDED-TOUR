@@ -82087,6 +82087,71 @@
         "cafa79ed-4c0f-5f19-b4f2-b9901523eddf",
         "927CAC1D-086D-5F41-BAD0-59AAC66EDBE3"
       ]
+    },
+    {
+      "id": "859bd607-aee8-51ec-999a-c23ed02c3016",
+      "name": "Faena Hotel Miami Beach",
+      "description": "The Saxony, which Roy France finished in 1948 as one of the first luxury hotels on Miami Beach, reopened in November 2015 as the anchor of Alan Faena's district between the ocean and Indian Creek — its interiors reimagined by Baz Luhrmann and Catherine Martin, who brought the reds and golds of a film set indoors. Behind the Collins Avenue front are the 22,000-square-foot Tierra Santa Healing House and its hammam, the dining room of Los Fuegos under its canopy of bulb-strung lights, and a penthouse of five bedrooms across two floors, with terraces facing the Atlantic and a wall of glass the length of the beach.",
+      "latitude": 25.807378,
+      "longitude": -80.123139,
+      "city": "Miami Beach",
+      "address": "3201 Collins Avenue, Miami Beach",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/faena-penthouse-suite-faena_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "C644213D-F1E1-5EA3-AFC9-7F5377E4B7FA",
+        "FC5764AB-D8BC-52A0-96B9-F3FF95736D57",
+        "238C1D4C-2019-5D88-8A84-795F4032887B",
+        "64EE6127-3604-5629-93C6-C94ED95A1485"
+      ]
+    },
+    {
+      "id": "d23c3fdc-d0a6-5f0c-8372-bb20cd9ff249",
+      "name": "The Surf Club",
+      "description": "Russell Pancoast built the Surf Club in 1930 as a private beach club in the Mediterranean style: arched loggias on cypress beams, iron lanterns, cabanas along the sand. Richard Meier, working with Kobi Karp, wrapped it in glass eight decades later — two twelve-storey residential towers and a seventy-seven-room Four Seasons hotel that opened in March 2017 — and kept the old club at the centre of it. Its restaurant, Lido, still serves under barrel vaults, with palms growing indoors and the ocean through the far arch.",
+      "latitude": 25.877318,
+      "longitude": -80.121166,
+      "city": "Surfside",
+      "address": "9011 Collins Avenue, Surfside",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/four-seasons-surf-club-laurenpoolside_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6E71B05D-7FFE-53DF-A1ED-B94B8AFE4D52",
+        "3C72425C-4CBB-5D13-9C19-888B792042C5",
+        "84E648C9-6F64-55A7-8D2F-452293F265BE"
+      ]
+    },
+    {
+      "id": "026fef48-273a-5c6d-83c1-f7eba3cb7c2f",
+      "name": "Patch of Heaven Sanctuary",
+      "description": "Twenty acres of the Redland, at the agricultural southern end of Miami-Dade, where tropical hardwood hammock on the Miami Rock Ridge has been allowed to grow back; eleven of them are protected forest. The structures scattered through it were put up by the Matheson family in 1964. Bruce and Joyce Chesney bought the property in 2008, after it had gone to ruin, and have spent the years since restoring it; it became a nonprofit in 2018. Ferns hang over a clear pool full of koi, and there are bees and cacao trees under the canopy.",
+      "latitude": 25.562806,
+      "longitude": -80.447828,
+      "city": "Miami",
+      "address": "21900 Southwest 157th Avenue, Miami",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/patch-of-heaven-sanctuary-miamibucketlist_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "EDD300D1-5BB8-5E7B-B8DD-0C8E7D1F1C6E",
+        "9376AC2A-D5B3-513A-8916-78D228AC0C3D"
+      ]
+    },
+    {
+      "id": "576c5770-3e94-54cc-883f-d22c714f66cd",
+      "name": "Arkansas Museum of Fine Arts",
+      "description": "Eight buildings, raised in different decades and different styles, joined into one. Studio Gang's central addition runs through the middle and blossoms outward at either end under a pleated roof carried on splayed concrete columns: it keeps the 1937 Art Deco facade as the north entrance and opens a new one to the south, stepping down into MacArthur Park, where SCAPE laid out eleven acres of new landscape. The museum reopened on 22 April 2023 after four years closed for the work.",
+      "latitude": 34.7383258,
+      "longitude": -92.2663529,
+      "city": "Little Rock",
+      "address": "501 East 9th Street, Little Rock",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amfa-arkmfa_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "BE61FFC0-2E82-58D4-A5DB-DDF7B869498E",
+        "4B67B9EF-E4DE-50D5-9825-F829939458E8",
+        "05FA7AE7-7A50-5089-973B-9D037D02C66D",
+        "5AD55350-B56A-5CAC-9016-63A475BAA10F"
+      ]
     }
   ],
   "linkPins": [
