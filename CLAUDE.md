@@ -126,6 +126,286 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-09-04)
+
+### Seventeen more @archimarathon pins, a subject already pinned by the same creator, and a caption that named no building (branch `claude/tour-links-7ova6v`, session 143 — content)
+
+**Sixteen TikTok short links and one Instagram reel, all from `@archimarathon`** — the same creator
+as sessions 141 and 142, now on two platforms. **linkPins 1,151 → 1,168 on the merged base ·
+`tours`, `makers` and `places` byte-identical · 0 new maker rows.** Content only — no Swift, no SQL,
+no build. **Opened as [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) on owner instruction.** Detail: `archive/HANDOFF-260904-2.md`.
+
+- **✅ ALL 17 ALIVE, 0 ALREADY PINNED, 0 IN-BATCH DUPLICATES.** The Instagram embed returned
+  **262,755 bytes with `contextJSON` present** against **three already-live catalogue pins fetched in
+  the same pass with the same UA at 254–258 KB**. **Both maker rows already existed and the uuid5
+  scheme reproduced their ids field-for-field**, so this adds **0 rows**; the avatar regenerated
+  **byte-identically to the served file** and was **excluded rather than overwritten** (the
+  `@urbanistariel` case, twelfth time): 18 generated, **17 uploaded**.
+- **🔴 A SUBJECT WAS ALREADY PINNED BY THIS CREATOR, AND THE HANDLE SUFFIX CANNOT DISAMBIGUATE THAT.**
+  `Serlachius Museum Bridge` is `@archimarathon`'s own earlier pin, so a bare subject slug would have
+  produced **the live filename** — the Rosewood Mayakoba / Apthorp / Kowloon Hum case, where the
+  suffix names the creator and both posts share one. ⚠️ **It is NOT a repost**: the two heroes score
+  **hamming 508 / pixdiff 69.2**, where identical pictures score under 1. Ships as **`Crossing the
+  Serlachius Museum Bridge`**. ⚠️ **Two pre-existing ORPHANS were found on gh-pages** while checking
+  (`kait-plaza-workshop-archimarathon_hero.webp`, `serlachius-art-sauna-archimarathon_hero.webp`) —
+  uploaded by an earlier session, referenced by nothing; left alone per convention.
+- **🎉 A POST WHOSE CAPTION NAMES NO BUILDING WAS SETTLED BY ITS OWN FRAME.** The caption reads only
+  *"day 2 part 4 … went exploring architecture in Tokyo"*; the burned-in line reads **"The Humax
+  Pavilion by Shin Takamatsu"**, and the owner's Plus Code lands **4 m** from OSM's
+  `ヒューマックスパビリオン`. The picture settled what the metadata could not.
+- **🔴 THE BP BRIDGE GEOCODE RETURNED THE WRONG BRIDGE — 4 km SOUTH.** `BP Pedestrian Bridge, Chicago`
+  matched **`35th St Pedestrian Bridge`** in Bronzeville. **Overpass was unreachable on both mirrors**
+  (as documented) and reverse-geocoding along Columbus Drive returned only benches, waste baskets and
+  a mini-golf course — OSM prefers the nearest *addressed* feature there. 🎉 **A bounded search on the
+  bare token `BP` returns `BP Bridge`, `man_made/bridge`, named exactly**, between Jay Pritzker
+  Pavilion and Maggie Daley Park. **Re-querying was the whole fix, again.** ⚠️ `Sayamaike Museum Osaka
+  Japan` likewise returned **zero hits** while `狭山池博物館` found it instantly — in **大阪狭山市
+  (Osakasayama)**, its own municipality, so both pins ship that `city` (the Aït Benhaddou convention).
+- **✅ EVERY COORDINATE REVERSE-VERIFIED AT ZOOM 18, and two of the Plus Codes land on NAMED PUBLIC
+  TOILETS** — `東三丁目公衆便所` and `神宮通公園`, both `amenity/toilets`, which is exactly what those
+  captions are about. Also named exactly: `代々木第一体育館`, `神奈川工科大学`, and forward hits on
+  `Casa de Chá da Boa Nova`, `Piscina das Marés`, `Marrickville Library`, `Temppeliaukion kirkko`,
+  `High Court of Australia`, `Embassy of Finland`, `Kyungdong Presbyterian Church`.
+- **✅ ALL 17 HEROES OPENED AND READ AGAINST THEIR CAPTIONS — ZERO WRONG SUBJECTS**, and **#17 names
+  itself in Korean** (`경동교회` legible on the entrance pier), independently confirming its coordinate.
+- **⚠️ FOUR HAND RE-CROPS — the vertical `--focus` gap, SEVENTEENTH batch running.** Every source is
+  9:16, so the square is width-limited and `--focus` does nothing vertically. Re-rendered through a
+  mirror of the tool's own pipeline (importing its `trim_bars`, same blur/dim/quality, **same
+  filenames**, so `Tours.json` is untouched): **Leça at 0.30**, recovering the subject's own name;
+  **Humax at 0.60**, recovering *"…by Shin Takamatsu"*; **High Court at 0.15**, where the centred crop
+  had cut the presenter's head off *and* pushed the building to the top edge; and ⚠️ **Prada at 0.00 —
+  a stated trade-off**, buying back the **diamond-grid crystal** the centred crop had almost removed,
+  at the cost of the burned-in *"Prada Epicentre"* caption. **Straplines were deliberately LEFT**
+  (*"some more crazy looking buildings"*, *"I found this straggler"*) — a hook is not the subject's
+  name (the California Academy rule).
+- **⚠️ FOUR WEAK HEROES, FLAGGED NOT FIXED.** **`Yoyogi National Gymnasium` is a pure talking head**
+  with nothing of the gymnasium or Meiji Jingu in frame — the weakest. 🔴 **`Higashi Sanchome Public
+  Toilet`'s hero is a BUILDING while its caption AND its supplied coordinate are both a toilet** — the
+  reel is a compilation covering both, and the coordinate is what someone standing there will see.
+  **`Jingu-Dori Park`** is two presenters with the louvres barely readable behind; **`The Models at
+  Sayamaike Museum`** is a display model rather than the building, which is correct for its caption
+  and still reads as an interior exhibit on a map.
+- **⚠️ ARCHITECT TAGS ARE CAPTION-DRIVEN, AND TWO OMISSIONS ARE DELIBERATE.** Tagged by name, each
+  **alongside** `Designed by a Master`: `Tadao Ando` ×2, `Álvaro Siza` ×2, `Herzog & de Meuron`,
+  `Frank Gehry`, `MX_SI`, and — ⚠️ **added by [#731](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/731)
+  while this batch was mid-flight, so KAIT gained the name on the rebase rather than shipping the generic
+  tag alone** — **`Junya Ishigami`**. **Verified absent and still shipping the generic tag:** `BVN
+  Architecture`, `EMTB`, `Hirvonen-Huttunen`, `MGT Architects`, `Kim Swoo-geun`, `Shin Takamatsu`. 🔴 **`Yoyogi
+  National Gymnasium` and `Temppeliaukio Church` carry NO master tag at all** — their captions name no
+  architect and do not make authorship the point (the Jules Dalou rule), and ⚠️ **`Kenzō Tange` IS in
+  the vocabulary — with a macron a naive grep misses — and is still not tagged.** By contrast the two
+  toilet pins DO carry the generic tag, because *"architect designed toilets"* makes authorship the
+  point without naming anyone. **Do not "finish the job."**
+- **⚠️ THE CLEAN-EXIT STATE WAS ALREADY BROKEN BY #730, NOT BY THIS BATCH.** The merged base reads
+  **11 EXACT / 50 NEAR** (#731 resolved the Barcelona Pavilion group); this batch takes it to **13 / 52**. 🔴 **The one that bites: Serlachius goes
+  2 → 3 coincident members, exactly `TourSetMap.maxStacked = 3` with no headroom — and all three are
+  ONE creator**, so they stack on that creator's own maker page. **Two new groups**: **KAIT** (mine
+  coincident with `@avant.arte`'s, with #730's third marker 79 m away) and **Sayamaike Museum** (two
+  different reels from consecutive parts of one walkthrough — the Kowloon Hum precedent). **NEAR gained
+  exactly two and lost none**, so nothing was manufactured and nothing nudged apart.
+- **⚠️ FOUR SAME-SUBJECT PAIRS ARE INVISIBLE TO `check-place-candidates.py` AND ARE FLAGGED BY HAND** —
+  its NEAR tier matches on **title containment** and these share no distinctive word: **Boa Nova Tea
+  House ↔ `Casa de Chá da Boa Nova` (52 m)**, **Leça Swimming Pool ↔ `Piscina das Marés` (31.5 m)**,
+  **Yoyogi National Gymnasium ↔ `Yoyogi National Stadium` (67.8 m)**. ⚠️ **BP Bridge ↔ `Jay Pritzker
+  Pavilion` (38.9 m) is a genuinely different subject and is correctly separate.**
+- **Verification.** Mirror **self-tested 22/22 with a clean control**, then **0 errors, 0 warnings
+  across 1,552 tours + 1,168 pins + 114 places**, **exit code read directly** — ⚠️ **the first reading
+  went through `| tail`, which reports TAIL's status** (the session-90 `PIPESTATUS` trap, caught and
+  redone). ⚠️ **22 faults injected against THIS batch's own 17 pins — 18 caught, control clean before
+  and after**; the 4 misses are the documented **mirror** blind spots (centroid drift, empty title,
+  negative duration, stop order) and **each was asserted directly on the 17 instead**, along with
+  one-stop-each, `manual` trigger, empty `audioURL`, https heroes, no `images//`, city+country set,
+  ≥1 Place type and ≥1 Theme, and **17 distinct heroes for 17 pins**. ⚠️ **The harness counts errors
+  AND warnings** — "no Place type" and "no Theme" are *warnings*, and counting only errors reports
+  false misses (the session-141 bug). `make-link-pin.py --selftest` **71/71** ⚠️ with Pillow installed
+  first (a bare container reports 62/62, which reads as a pass and is not one);
+  `decode-plus-code.py --selftest` clean, and it self-tests on **every** invocation. **0** duplicate
+  ids, **0** collisions with live ids, **0** already-pinned sourceURLs, **0** byte-duplicate heroes,
+  closest perceptual pair **179 hamming / 31.3 pixdiff**. **0 filename collisions against 6,970
+  gh-pages `images/` paths**, the listing **asserted to hold >1,000 first**. `Tours.json` **byte-stable
+  under a Python re-dump before editing** on both bases; diff **797 insertions / 0 deletions**,
+  asserted purely additive. `seed_from_toursjson.py` clean at **305 / 2,720 / 3,092 / 114**; **0
+  `images//`** in the catalogue *or* the SQL. gh-pages `0b15aa4`: remote head **re-read in the same
+  command as the push**, push status read through **`PIPESTATUS`**, tree diff **exactly 17 additions,
+  0 deletions, nothing outside `images/`**; the deploy read **`in_progress`, never `cancelled`**
+  against the Actions API, after which **all 17 live URLs were hash-verified against the uploaded
+  bytes — 17 ok, 0 mismatch, 0 non-200**. 🔴 **`check-image-duplicates.py --pins` was run AFTER the
+  deploy** (the session-135 false-pass lesson): shared-URL half **0 errors / 208 documented reuses**,
+  identical to the recorded baseline. ⚠️ **Nothing compiled locally — CI on [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) is the only compile check a Linux web session gets.**
+- **⚠️ `main` MOVED TWICE MID-SESSION** — [#730](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/730)
+  merged **104 more `@archimarathon` pins**, the same creator, and then
+  [#731](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/731) took the architect vocabulary **383 →
+  419** — which is what made `Junya Ishigami` available to KAIT. ⚠️ **The second rebase discarded the
+  docs commit and `git reset --hard` said nothing about it** — the doc edits were only recovered because
+  their anchors were asserted unique and reported 0 matches instead of silently no-opping. 🔴 **And
+  restoring them with `git checkout <old-sha> -- <docs>` then CLOBBERED #731's OWN entry in this file
+  and its `archive/HANDOFF-260904.md`** — a whole-file restore of a shared doc silently discards
+  whatever landed on `main` in between, and git flags nothing. **Re-apply doc edits onto `main`'s
+  file with targeted anchored replacements; never restore a shared doc wholesale.** The handoff
+  renumbered **`-260904` → `-260904-2`** on that add/add collision. The catalogue edit was **redone the
+  documented way — reset onto `main` and re-run the idempotent assembler, never hand-resolve a JSON
+  conflict** — with every check re-run and overlap re-verified at **0 on sourceURL, ids and hero URLs**.
+
+#### ✅ FOLLOW-UP, same session — Serlachius becomes a place, and six architects join the vocabulary (419 → 425)
+
+**Owner: *"Make the place. Add the architect's."*** Both applied on the same branch, which ⚠️ **makes
+[#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) a CODE change** (`Models/Tag.swift` +
+`scripts/validate-tours.swift`) — so unlike the content batch above it wants an owner OK and a
+simulator look; CI is the compile check. **Places 114 → 115 · vocabulary 419 → 425 architects.**
+
+- **🔴 SERLACHIUS IS THE ONE THE CAP ACTUALLY BIT, AND NOTHING MOVED TO FIX IT.** Three coincident
+  markers, **all one creator**, against `TourSetMap.maxStacked = 3` with **no headroom** — so on that
+  creator's own page a fourth would have been permanently unreachable. All three were **already
+  exactly on the anchor**, so the identity rule held on its own: `tours`, `makers` and `linkPins` are
+  **byte-identical**, the 114 existing places unchanged as a prefix, diff **30 insertions / 0
+  deletions**. All three **asserted `manual` before anything was written**, so no geofence is
+  disturbed. ⚠️ **Swept 1500 m rather than trusting the checker's group** (the session-131 lesson) —
+  **nothing else is within range at all**, so unlike Alwyn Court or PMQ there is no deliberate
+  exclusion to record.
+- **✅ THE ANCHOR IS OSM'S OWN NODE, CONFIRMED BOTH WAYS.** The coordinate **reverse-geocodes by name**
+  to `Serlachius Kartano` (`tourism=museum`) at **47 Joenniementie, Mänttä**, and a **bounded** forward
+  search on the bare token `Serlachius` returns **node 1228315466 at 0.0 m** — so all three pins
+  converged on OSM's own museum node rather than being nudged together (the Tribune Tower case).
+  ⚠️ **Unbounded forward queries returned nothing at all** for four separate phrasings; the bounded
+  viewbox is what found it, the same lever the BP Bridge needed.
+- **🔴 THE HERO IS BORROWED FROM A MEMBER AND THAT IS STRUCTURAL — do not go sourcing a replacement.**
+  All three members are link pins with **empty galleries** and there is **no Atlas tour at this site**,
+  so no third photograph of it exists in the catalogue (the documented Waterlooplein / Legion of Honor
+  case). **All three candidates were rendered and looked at**, never chosen by filename: it takes the
+  **bridge across the lake** — the whole 53 m Corten span with figures on it for scale, the only frame
+  showing the crossing to Taavetinsaari that the members' own copy describes. ⚠️ **Stated trade-off:
+  the Art Sauna's board-formed concrete entrance is the finer picture and was rejected on the
+  establishing-shot criterion** — it is a close-up that could be almost anywhere; the third candidate
+  is presenter-forward. **One line swaps it.** Borrowed-hero count **re-derived, not carried forward:
+  41 of 115** (69 take a third photograph, 5 carry none).
+- **⚠️ THE PLACE IS NAMED `Serlachius Museum Gösta`, DELIBERATELY MATCHING NO MEMBER TITLE.** All three
+  members are titled for the bridge or the sauna, and "Gösta" is what distinguishes this lakeside
+  campus from the Serlachius Gustaf museum in town — **editorial, corroborated rather than taken from
+  the geocode**, which names the site `Serlachius Kartano` / `Joenniemen kartano` at the same address.
+  The address ships **`Joenniementie 47, Mänttä`**, which is exactly what the reverse geocode returns.
+  ⚠️ **The description asserts only what the members carry** — MX_SI, 2014, 53 metres of Corten steel
+  and laminated timber out to Taavetinsaari across Lake Melasjärvi, the Art Sauna on the shore, and
+  the look-at-architecture-then-get-in-the-lake sequence the captions describe. ⚠️ **One caption
+  misspells it "Serlschius"** — the creator's error stays theirs and is repeated nowhere.
+- **🔴 BOTH VOCABULARIES WERE EDITED, and the script asserts they agree afterwards.** Editing one alone
+  produces **an error per tagged entry** (the session-104 lesson). Asserted **identical at 425 with 0
+  duplicates on either side**, parsed out of the Swift rather than retyped, with brace, bracket and
+  paren balance checked on both files **with string literals stripped**. Near-duplicates checked on
+  **normalised token sets** (folding accents, stripping `Architects`/`Studio`/`Associates`/`+`/`&`) —
+  **0 collisions, 0 exact matches**, so all six were genuinely absent.
+- **🔴 THE CATALOGUE-WIDE SWEEP EARNED ITS KEEP AGAIN — IT FOUND TWO KYOTO TOURS, AND THEY CARRIED NO
+  SHELF TAG EITHER.** `Ark Building | アークビル` (*"completed in 1983 by Shin Takamatsu"*) and
+  `Pharaoh | ファラオ` (*"completed in 1984 by Shin Takamatsu"*) each state authorship in their own
+  text and had **neither an architect tag nor `Designed by a Master`** — so they named an architect
+  while sitting off the shelf built for exactly those entries. **Both gain the name AND the shelf
+  tag**, closing the #493 mirror-image defect two cities away from where this batch was working.
+  ⚠️ **The short tokens `EMTB` and `MGT` are the false-positive risk and were word-bounded and READ**:
+  1 hit each, both genuine, **0 false positives in the whole sweep** — unusual, and only because these
+  six names are unlike ordinary English (contrast `Public Architecture`, which matched eight tours).
+- **⚠️ THE HUMAX PAVILION IS A JUDGEMENT AND IS ONE LINE TO REVERSE.** Its caption names nobody — it
+  reads only *"day 2 part 4 … went exploring architecture in Tokyo"* — but **its own frame reads "The
+  Humax Pavilion by Shin Takamatsu"**, which is how the subject was identified at all. **The frame is
+  the entry's own source**, so this is the **Ewha precedent** (identified from the creator's burned-in
+  text where the caption named no building, and tagged `Dominique Perrault` on that basis), not a
+  stretch of the Jules Dalou rule. **Re-opened and re-read the hero before tagging**, rather than
+  trusting the earlier note.
+- **⚠️ FIVE OF THE SEVEN ARE THIS BATCH'S OWN PINS, each naming its architect in its own caption:**
+  `BVN Architecture` (Marrickville Library), `EMTB` (High Court of Australia), **`Hirvonen-Huttunen`
+  AND `MGT Architects`** (Embassy of Finland — both named, so both tagged), `Kim Swoo-geun`
+  (Kyungdong Presbyterian Church). ⚠️ **`Kenzō Tange` on Yoyogi and a master tag on `Temppeliaukio
+  Church` were BOTH deliberately withheld here under the Jules Dalou rule — and the owner then asked
+  for them, so both now ship. See the second follow-up below; do not restore the omission.**
+- **🔴 `Designed by a Master` IS KEPT ON EVERY ONE, NOT REPLACED.** `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string. Verified catalogue-wide
+  after the change: **710 entries name an architect and 0 are missing the shelf tag**, and **0 of the
+  427 names are unused** (re-derived after the second follow-up below) — no dead vocabulary.
+- **Verification.** Mirror **self-tested 22/22 with a clean control**, then **0 errors, 0 warnings
+  across 1,552 tours + 1,168 pins + 115 places** at **475 tags** (477 after the follow-up below). ⚠️ **24 faults injected against THIS
+  place and the SEVEN retagged entries — 23 caught, control clean before and after** (the place
+  drifting off its members in latitude and longitude, each member nudged 55 m, dropped to one member,
+  an unknown tour id, an empty name, a bad hero URL, an out-of-range latitude, the hero repeated in
+  its own gallery, a duplicate place id, two members set to the same pin, a member claimed by an
+  existing place, an unknown architect tag on each of the seven, and a retagged entry stripped of its
+  Place type / Theme). 🔴 **The one "miss" was a rule I invented, caught on myself: the Swift validator
+  has NO duplicate-tag check** — `Set(t.tags)` collapses repeats silently — **so a repeated tag is not
+  a fault at all** (the session-142 mirror-invents-a-rule class); asserted **directly on the seven**
+  instead. 🎉 **`check-place-candidates.py` 13 EXACT → 12 with NEAR unchanged at 52**, and the report
+  diff proves it fell by **exactly the group resolved and gained nothing**, so no coincident group was
+  manufactured; ⚠️ exit codes read **directly, not through a pipe**. Place id
+  `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")`, the scheme **reverse-verified against
+  112 of the 114 existing places** (the two misses are the documented legacy uppercase ids) and
+  ⚠️ **the trailing-hyphen question settled by `Chichén Itzá`, whose city slug `chich-n-itz` only
+  matches the STRIPPED variant**; minted **lowercase**, which is 108 of 114. `Tours.json` **byte-stable
+  under a Python re-dump before AND after** each edit. `seed_from_toursjson.py` clean at **305 / 2,720
+  / 3,092 / 115**; **0 `images//`** in the catalogue *or* the SQL. ⚠️ **Nothing compiled locally** — no
+  Swift toolchain in a Linux web session, so **CI is the only compile check**, and the owner's
+  simulator look is what confirms the shelves still read correctly.
+
+#### ✅ FOLLOW-UP 2, same session — the owner reverses two Jules Dalou omissions; vocabulary 425 → 427
+
+**Owner: *"Yes I would like the architect tags. Don't worry about weak heroes."*** — answering the
+offer of the two names the batch above had deliberately withheld. ⚠️ **This is an OWNER DECISION
+REVERSING THE JULES DALOU RULE FOR THESE TWO ENTRIES.** Neither caption names an architect (verified
+by re-reading both in full: Yoyogi's is *"Archimarathon Japan architecture recce tour, day 1 part 1"*,
+Temppeliaukio's is *"Temppeliaukio Church (ALa the Rock Church) in Helsinki, Finland"* plus hashtags),
+so the omission was correct under the rule and is being overridden on instruction. **Do not "restore"
+it.** Diff **7 insertions / 2 deletions**; `tours`, `makers` and `places` **byte-identical to HEAD**,
+and the **only field differing on either pin is `tags`**.
+
+- **⚠️ `Timo Suomalainen` AND `Tuomo Suomalainen` WERE VERIFIED, NOT RECALLED — the name was absent
+  from the catalogue entirely.** A full-text sweep across 1,552 tours and 1,168 pins returned **zero**
+  hits for `Suomalainen`, so there was nothing internal to lean on. Confirmed externally instead: the
+  brothers **won the 1961 competition** and the church was **consecrated in 1969** (Wikipedia,
+  Docomomo Suomi, Architectuul agreeing). Both added as individuals, following the existing
+  co-designer precedent (`Kevin Roche` + `John Dinkeloo`, `Tod Williams` + `Billie Tsien`,
+  `Elissa Aalto`). **`Kenzō Tange` was already in the vocabulary** — Yoyogi needed no new name.
+- **🎉 TAGGING YOYOGI ALSO MAKES THE PIN MATCH THE ATLAS TOUR OF THE SAME BUILDING.** `Yoyogi National
+  Stadium | 国立代々木競技場 第一体育館` sits **67.8 m** away and already carries **both** `Kenzō Tange`
+  and `Designed by a Master`, so the pair now shares shelves — the documented convention that a pin
+  matches the tour where a subject exists as both. ⚠️ **The era tags still differ and were deliberately
+  left alone** (pin `Modernist`, tour `Contemporary`, on a 1964 building): the ask was architects, and
+  widening it would be scope the owner did not request.
+- **🔴 THE CATALOGUE-WIDE SWEEP FOUND A FIFTH TANGE MENTION AND IT IS CORRECTLY NOT TAGGED.**
+  `Kyoto International Conference Center (ICC Kyoto)` names him only as the practice its architect came
+  from — *"the commission went to Sachio Otani, a former associate of Kenzo Tange"* — which is the
+  **Sullivan rule** at its plainest; `Sachio Otani` is tagged there and remains the author. ⚠️ **The
+  word-boundary matters:** an unbounded search also matched **`Red Sugar`**, a false positive on a
+  substring. The other four Tange entries (Fuji Television, St. Mary's Cathedral, Tokyo Metropolitan
+  Government Building, Yoyogi National Stadium) were already correctly tagged.
+- **🔴 `Designed by a Master` IS ADDED ALONGSIDE, NEVER INSTEAD.** `Tag.matches` performs **no
+  implication** and the curated home shelf is keyed on that literal string, so a named-architect entry
+  without it drops off the shelf built for exactly those entries (the #493 defect). **Both flagged pins
+  had NEITHER**, so each gains the name(s) and the shelf tag together.
+- **⚠️ MY FAULT HARNESS INVENTED A RULE AGAIN — SECOND SESSION RUNNING, AND WORTH RECOGNISING ON
+  SIGHT.** It reported 2 misses on *"shelf tag removed"*. **`scripts/validate-tours.swift` has NO
+  shelf-tag rule** — `Designed by a Master` appears there only as a vocabulary entry — so removing it
+  is **not a fault the validator can see**, exactly like last session's invented duplicate-tag rule.
+  Real score **22/22**. **The #493 convention is enforced by discipline and by the catalogue-wide
+  sweep, not by the validator**, so it must be **asserted directly** every time: **710 entries name an
+  architect and 0 are missing the shelf tag**, **0 of the 427 names are unused**.
+- **⚠️ THE FOUR WEAK HEROES ARE CLOSED — owner: *"Don't worry about weak heroes."* DO NOT RE-RAISE
+  THEM.** Yoyogi's talking-head frame, the Higashi Sanchome toilet pin whose hero is a building,
+  Jingu-Dori Park and the Sayamaike display model all ship exactly as delivered. ⚠️ **Anyone re-running
+  the open-every-hero audit will flag all four again; they are settled** — the Ministry of Enterprise /
+  Casa Lleó Morera precedent applies: honour the decision rather than "fixing" it.
+- **Verification.** Both vocabularies **parsed out of the Swift rather than retyped** and asserted
+  **identical at 427 with 0 duplicates on either side**; brace, bracket and paren balance checked on
+  both files **with string literals stripped**. Near-duplicates checked on **normalised token sets** —
+  **0 collisions, 0 exact matches**, so both names were genuinely absent. Mirror **self-tested 22/22
+  with a clean control**, then **0 errors, 0 warnings across 1,552 tours + 1,168 pins + 115 places** at
+  **477 tags**, ⚠️ **exit code read directly rather than through a pipe** (the first reading went
+  through `| tail`, the session-90 `PIPESTATUS` trap, and was redone). ⚠️ **24 faults injected against
+  THESE TWO ENTRIES specifically — 22 caught, control clean before and after** (an unknown architect
+  tag, Place type stripped, Theme stripped, a bad hero URL, the hero repeated in its own gallery, an
+  out-of-range latitude, a bad `triggerMode`, a bad `kind`, a bad `primaryCategory`, a duplicate id and
+  an unknown `makerId`, each on both pins); the 2 non-findings are the invented rule above.
+  `Tours.json` **byte-stable under a Python re-dump before AND after**. `seed_from_toursjson.py` clean
+  at **305 / 2,720 / 3,092 / 115**; **0 `images//`** in the catalogue *or* the SQL.
+  **`check-place-candidates.py` unchanged at 12 EXACT / 52 NEAR**, which a tag-only edit cannot move.
+  ⚠️ **Nothing compiled locally** — no Swift toolchain in a Linux web session, so **CI on
+  [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) is the only compile check**, and the
+  owner's simulator look is what confirms the shelves still read correctly.
+
 ## Current State (2026-09-03)
 
 ### Barcelona Pavilion goes to five members, and 36 architects join the vocabulary — 383 → 419 (branch `claude/new-tour-links-cytwc6`, session 142 — content + code)
@@ -8412,7 +8692,7 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **1552 tours + 1151 link pins, 305 makers, 1924 tour stops (3075 including one per pin), 114 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 271 are pinned creators (112 TikTok, 147 Instagram, 12 YouTube) — pinned creators now outnumber the studios nearly eight to one.** ⚠️ This line has gone stale ten times already, and **three parallel sessions invalidated it on the same afternoon** — this line was rewritten THREE times inside one session because `main` moved under it every time, and an earlier revision said 201 pins and 149 creators against a real 200 and 149, so **not one session's own number has survived its merge** (it has read "33 … the other 4", "34 … the other 27", "34 … the other 45", "34 … the other 56", "34 … the other 80", "34 … the other 99", "34 … the other 119", "34 … the other 157", "34 … the other 172", "34 … the other 174", "34 … the other 190" and "34 … the other 192", and one session left it at 174 while adding fifty pins — three of those within a single day, as parallel link-pin batches landed; session 135 made it thirteen, session 138 fourteen, and session 139 fifteen — it was stale AGAIN the moment #711 merged, then AGAIN on #712 forty minutes later, and a THIRD time on #715 while its own PR sat waiting on CI, then AGAIN on #723 and #724 while the branch that had just corrected it was still open, and AGAIN on #729 — which is why session 142 found it reading 986 pins and 112 places against a real 1,047 and 114 before its own batch had even landed); **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
+- **1552 tours + 1168 link pins, 305 makers, 1924 tour stops (3092 including one per pin), 115 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 271 are pinned creators (112 TikTok, 147 Instagram, 12 YouTube) — pinned creators now outnumber the studios nearly eight to one.** ⚠️ This line has gone stale ten times already, and **three parallel sessions invalidated it on the same afternoon** — this line was rewritten THREE times inside one session because `main` moved under it every time, and an earlier revision said 201 pins and 149 creators against a real 200 and 149, so **not one session's own number has survived its merge** (it has read "33 … the other 4", "34 … the other 27", "34 … the other 45", "34 … the other 56", "34 … the other 80", "34 … the other 99", "34 … the other 119", "34 … the other 157", "34 … the other 172", "34 … the other 174", "34 … the other 190" and "34 … the other 192", and one session left it at 174 while adding fifty pins — three of those within a single day, as parallel link-pin batches landed; session 135 made it thirteen, session 138 fourteen, and session 139 fifteen — it was stale AGAIN the moment #711 merged, then AGAIN on #712 forty minutes later, and a THIRD time on #715 while its own PR sat waiting on CI, then AGAIN on #723 and #724 while the branch that had just corrected it was still open, and AGAIN on #729 — which is why session 142 found it reading 986 pins and 112 places against a real 1,047 and 114 before its own batch had even landed, and AGAIN on #730 and #731, the second of which landed while session 143's own branch was open); **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
 - **1480 single-stop + 72 multi-stop** — all geofenced. Copenhagen added 40 singles with no walks; Rio launched as 46 singles with no walks; São Paulo added 41 singles + 1 walk; Berlin added 31 singles + 5 walks; Marrakech added 26 singles with no walks; Buenos Aires added 34 singles + 2 walks; Chicago added 25 singles + 5 walks; Melbourne added 34 singles + 1 walk; Sydney added 29 singles with no walks; Cape Town added 30 singles with no walks; Barcelona added 66 singles + 2 walks; Milan added 47 singles + 1 walk; **Stockholm added 42 singles + 3 walks**. Multi-stop walks by maker: London 5, Paris 5, Amsterdam 5, Rome 5, Berlin 5, Chicago 5, San Francisco 4, Toronto 4, Los Angeles 4, Madrid 4, Montreal 4, Dubai 4, Seoul 3, **Stockholm 3**, NYC 2, Naoshima 2, Buenos Aires 2, **Barcelona 2**, Bangkok 1, São Paulo 1, Melbourne 1, **Milan 1**. The 4 originally-named NYC/London walks ("American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London), "Albertopolis" (6 stops, London)) are still the reference multi-stop test cases; AMNH unblocks M-qa items 6 + 7.
 - **Bilingual titles (`English | native script`) on both tour + stop across the Asian bureaus:** Tokyo (TYO), Kyoto (KYO), Naoshima (NAO) — `日本語`; Hong Kong (HKG) — `中文`; Seoul (SEL) — `한국어`; Bangkok (BKK) — `ไทย`; Ho Chi Minh City (SGN) — `Tiếng Việt` (where a Vietnamese name exists; proper-noun venues carry a single name); and Marrakech (RAK) — `العربية` (18 of 26; same proper-noun rule).
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list. Tours may also carry an optional **`videoURLs: [String]?`** (`.mp4` on gh-pages under `videos/`) — **videos LEAD the carousel** (owner decision 2026-07-26), so a tour with one opens on it and the still hero becomes page two. **`backend/add_video_urls.sql` HAS been applied** — verified against the live `get_catalog` on 2026-08-23, which emits the key on every tour; no SQL is owed, and `seed_from_toursjson.py` carries `video_urls` so a content merge cannot wipe it. Each video is openable **fullscreen** (session 107), and a tour also carries **`videoRole: TourVideoRole?`** — `gallery` (the default: b-roll beside the photographs) or **`narration`** (the clip **is** the tour, so its play bar and picture scrub together). ⚠️ **A `narration` tour may carry exactly ONE video**, validator-enforced. **Two tours carry video:** `via-57-west` (**`narration`**, 1080×1920 vertical with audio — a generated stand-in, replace when real footage exists) and `shinsegae-media-facade` (**`gallery`**, two clips: a 1200×900 silent one, plus `landscape-test.mp4`, **a 1920×1080 test card rather than real content**, added so rotation has something to run against — one-line revert). ⚠️ **`video_role` must reach Supabase to have any effect** — `seed_from_toursjson.py` carries it and `backend/add_video_role.sql` has been applied and verified live, but a catalogue edit alone is never enough. ⚠️ An earlier Key-facts note said no tour carried video; that was already false when written.
