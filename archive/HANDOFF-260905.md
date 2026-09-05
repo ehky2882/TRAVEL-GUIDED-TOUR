@@ -1,7 +1,8 @@
 # HANDOFF 2026-09-05 (session 144) — forty-one @itshistoryonair link pins
 
-Branch `claude/new-tour-links-lze4ab`. Content only — no Swift, no SQL, no build. **NO PR OPENED**
-(the owner did not ask for one).
+Branch `claude/new-tour-links-lze4ab`. Content only — no Swift, no SQL, no build. Opened as
+[#737](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/737) on owner instruction (*"Open pr and
+merge when ready"*) — content-only, so the auto-merge class: squash on green CI, no approval gate.
 
 **Catalogue on the merged base: `linkPins` 1,201 → 1,242 · `makers` 328 → 329 · `tours` and
 `places` byte-identical at 1,552 and 121.** Diff **1,897 insertions / 0 deletions**.

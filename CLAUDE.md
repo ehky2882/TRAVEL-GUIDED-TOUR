@@ -132,9 +132,10 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **The owner sent 46 TikTok links, each with a Plus Code + locality; five are pasted twice, so 41
 distinct posts ship.** **linkPins 1,201 → 1,242 · makers 328 → 329 · `tours` and `places`
-byte-identical.** Content only — no Swift, no SQL, no place created, no build. **NO PR OPENED** —
-the owner did not ask for one. **Cyprus and Bolivia are the catalogue's 46th and 47th countries**;
-14 new cities. Detail: `archive/HANDOFF-260905.md`.
+byte-identical.** Content only — no Swift, no SQL, no place created, no build. Opened as
+[#737](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/737) on owner instruction (*"Open pr
+and merge when ready"*) — content-only, so the auto-merge class. **Cyprus and Bolivia are the
+catalogue's 46th and 47th countries**; 14 new cities. Detail: `archive/HANDOFF-260905.md`.
 
 - **✅ ALL 41 ALIVE, 0 ALREADY PINNED, 0 `/photo/` CAROUSELS, 1 NEW MAKER ROW.** Every one resolves
   to **TikTok `@itshistoryonair`**, a history-explainer account. ⚠️ **`YouTube @ITSHISTORY` already
