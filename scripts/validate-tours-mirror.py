@@ -153,6 +153,19 @@ def check(cat, facets, vocab, dom):
                 warnings.append(f"{t}: no Place type tag")
             if not (set(tags) & facets.get("theme", set())):
                 warnings.append(f"{t}: no Theme tag")
+        # A link pin's whole reason to exist is the post it points at, and its
+        # creator credit. validate-tours.swift errors on both (lines 556-562);
+        # the mirror was blind to them until session 145 injected the fault.
+        if e["kind"] == "link":
+            if not is_url(e.get("sourceURL") or ""):
+                errors.append(f"{t}: link pin with invalid sourceURL {e.get('sourceURL')!r}")
+            if not (e.get("sourceAuthor") or "").strip():
+                errors.append(f"{t}: link pin with no sourceAuthor — a pin must credit its creator")
+        else:
+            if e.get("sourceURL") is not None:
+                errors.append(f"{t}: sourceURL set on a '{e['kind']}' tour — only 'link' may carry one")
+            if e.get("sourceAuthor") is not None:
+                errors.append(f"{t}: sourceAuthor set on a '{e['kind']}' tour — only 'link' may carry one")
         stops = e["stops"]
         if e["kind"] != "link":
             for s_ in stops:
@@ -225,6 +238,12 @@ def selftest(facets, vocab, dom):
     case("duplicate stop id",      lambda c: c["linkPins"][1]["stops"][0].__setitem__("id", c["linkPins"][0]["stops"][0]["id"]))
     case("bad triggerMode",        lambda c: c["linkPins"][0]["stops"][0].__setitem__("triggerMode", "geofence"))
     case("bad kind",               lambda c: c["linkPins"][0].__setitem__("kind", "linkpin"))
+    case("link pin: invalid sourceURL",
+         lambda c: c["linkPins"][0].__setitem__("sourceURL", "not a url"))
+    case("link pin: empty sourceAuthor",
+         lambda c: c["linkPins"][0].__setitem__("sourceAuthor", ""))
+    case("sourceURL on a non-link tour",
+         lambda c: c["tours"][0].__setitem__("sourceURL", "https://example.com/x"))
     case("bad primaryCategory",    lambda c: c["linkPins"][0].__setitem__("primaryCategory", "snacks"))
     case("latitude out of range",  lambda c: c["linkPins"][0]["stops"][0].__setitem__("latitude", 991.0))
     case("longitude out of range", lambda c: c["linkPins"][0]["stops"][0].__setitem__("longitude", -900.0))

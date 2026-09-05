@@ -1,219 +1,251 @@
-# HANDOFF 2026-09-05 (session 144) — forty-one @itshistoryonair link pins
+# HANDOFF — 2026-09-05 (session 144)
 
-Branch `claude/new-tour-links-lze4ab`. Content only — no Swift, no SQL, no build. Opened as
-[#737](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/737) on owner instruction (*"Open pr and
-merge when ready"*) — content-only, so the auto-merge class: squash on green CI, no approval gate.
+**Thirteen Studio Gang link pins across eight buildings, four heroes that are not
+photographs, and two stack-cap findings.** Branch `claude/new-tour-links-nl8h63`, cut clean
+at `main`'s tip (`89bb15c8`). Content only — no Swift, no SQL, no build.
 
-**Catalogue on the merged base: `linkPins` 1,201 → 1,242 · `makers` 328 → 329 · `tours` and
-`places` byte-identical at 1,552 and 121.** Diff **1,897 insertions / 0 deletions**.
+**linkPins 1,201 → 1,214 · makers 328 → 331 · `tours` and `places` byte-identical.**
 
 ---
 
 ## What arrived
 
-The owner pasted **46 rows** — a `vm.tiktok.com` share link followed by a **Plus Code + locality**
-line. Every one resolves to **TikTok `@itshistoryonair`**, a history-explainer account: one
-creator, one new maker row (`1FAE9AD9-F1B7-5A99-A4B9-2FC221902788` =
-uuid5 `atlas-maker:tiktok:@itshistoryonair`).
+Fifteen Instagram links under a heading reading **"Studio Gang"**. Two were pasted twice, so
+**13 distinct posts**, and **0 were already in the catalogue**. Mixed paths — 9 `/reel/`,
+5 `/p/`, 1 `/tv/`.
 
-**46 links → 41 distinct posts → 41 shipped.** Five links were pasted twice
-(`ZGdQdgp4h` three times, `ZGdQdK2SE` twice, `ZGdQRqNoU` twice), which `normalize_url`
-canonicalises identically. **0 already pinned, 0 dead posts, 0 `/photo/` carousels.**
+⚠️ **All three path shapes were verified against `LinkSource.embedURL` in the Swift, not
+assumed from the doc.** It matches `p`, `reel` and `tv`, and the embed keeps the path segment
+(`/tv/{code}/embed`), so all 13 are structurally pinnable. **A TikTok `/photo/` URL still
+cannot be** — do not conflate the two.
 
-**Cyprus and Bolivia are the catalogue's 46th and 47th countries.** 14 new cities: Alang,
-Amesbury, Boulder City, Curon Venosta, Dry Tortugas, Herne Bay, Marathon, Nicosia, Niles, Rapa,
-Toruń, Uyuni, Warsaw, Łapalice.
-
----
-
-## 🔴 The headline: six sites sit EXACTLY at the stack cap, and they are all one creator
-
-`check-place-candidates.py` goes **12 EXACT → 21** and **53 NEAR → 63**. Every added group is a
-site the owner sent more than one link for; **nothing was nudged together to manufacture a group
-and nothing nudged apart to dodge the checker** — the report diff proves it removes nothing.
-
-**`TourSetMap.maxStacked = 3`**, and **all 41 pins are the same creator**, so these stack on
-`@itshistoryonair`'s own maker page. The nine new EXACT groups:
-
-| site | coincident pins | also within 6 m | at the cap? |
-|---|---:|---|---|
-| **Alcatraz** | **3** | Atlas SFO `Alcatraz` tour, **5.7 m** | **yes, no headroom** |
-| **Hoover Dam** | **3** | — | **yes, no headroom** |
-| **Fort Jefferson** | **3** | — | **yes, no headroom** |
-| **Leaning Tower of Niles** | **3** | — | **yes, no headroom** |
-| Paris Catacombs | 2 | Atlas PAR `Catacombs of Paris`, **5.7 m** | one spare |
-| Washington Monument | 2 | — | one spare |
-| Ellis Island | 2 | — | one spare |
-| Seven Mile Bridge | 2 | — | one spare |
-| Alang | 2 | — | one spare |
-
-⚠️ **A CORRECTION TO WHAT THIS SESSION FIRST BELIEVED: Alcatraz is *at* the cap, not past it.**
-An early read called it "4 markers, past the cap of 3". Measured: the three new pins are exactly
-coincident, and the Atlas SFO tour is **5.7 m away** — a *separate* marker, not part of the stack,
-because the Plus Code decodes to a cell centre at 7 decimals while the tour stores 4 (the
-documented CalAcademy rounding artifact). **Nothing in the catalogue is unreachable today.** What
-is true is that a fourth link at any of the four three-deep sites would put one marker permanently
-out of reach, invisibly. **That is the owner's call and nothing was created here** — a place needs
-its own copy, address, photograph and approval.
-
-⚠️ **Eastern State is a different shape and the checker cannot see it.** The new pin sits **1.8 m**
-from the point and **3.7 m** from the existing two-member `Eastern State Penitentiary` place, so it
-is **not coincident** and never appears in EXACT — it shows only as a 4 m NEAR pair. Joining it
-would be a deliberate move of a `manual` pin onto the place's coordinate (the Guggenheim / ROM
-Crystal precedent), which is one line.
+**All 13 alive, none blocked.** Every embed returned **256–263 KB with `contextJSON` present**,
+against **three already-live catalogue pins fetched in the same pass with the same UA at
+256–262 KB**. Byte size is only a heuristic; the verdict is `contextJSON`.
 
 ---
 
-## Coordinates
+## ⚠️ The heading is loose — again
 
-All 41 decoded with `scripts/decode-plus-code.py`, **which self-tests on every invocation** (3
-published anchors + the floor-not-round encode + a refusal to guess grid digits + 2,000
-round-trips + 18 short-code recoveries across four hemispheres). Short codes were recovered
-against **structured** city geocodes (`city=`/`country=`), which avoids the province-centroid trap.
-Every point was then **reverse-verified at zoom 18**.
+The session-135 *read the payload, not the heading* rule, live for the third batch running.
+**Eleven posts are `@studiogang`; two are not:**
 
-**🔴 RE-QUERYING WAS THE WHOLE FIX TWICE, AND BOTH TIMES THE FIRST ANSWER LOOKED LIKE A REFUTATION.**
+| Post | Account | What it is |
+|---|---|---|
+| `CmPMA9CgJUl` | **`@11hoytbk`** | 11 Hoyt's own building account |
+| `CjarNZrJrt6` | **`@arkmfa`** | the Arkansas Museum of Fine Arts' own account |
 
-- **Crystal Palace Subway** reverse-geocoded to an **unnamed pedestrian way** — no name, no
-  address, the shape of a point that has landed on nothing. A *forward* query for the subject's own
-  name returns `Crystal Palace Subway` at **11 m**. The coordinate was right the whole time.
-- **No Man's Land Fort** returned **ZERO HITS** unbounded. Dropping the apostrophe and bounding to
-  a Solent viewbox returns it **named exactly, 45 m** away. A first-pass miss is not evidence a
-  place is unmapped.
+Both are real posts about real Studio Gang buildings, so both ship (the venue's-own-account
+class — the Coca-Cola / GVA Lighting precedent). **3 new maker rows**, all Instagram, all
+shipping `avatarURL: null` by design.
 
-**⚠️ Three subjects are in no OSM record under their own name, and the REVERSE geocode is what
-named them** — the opposite of the usual direction: `Museo Abierto del Ferrocarril` for Bolivia's
-train graveyard at Uyuni, `Officers' Quarters` inside Fort Jefferson, and **`Comiskey Park Home
-Plate`** for the White Sox pins, which is a marker on the old ballpark's site and is exactly what
-those two posts are about.
-
-**⚠️ THE WEAKEST COORDINATE IN THE BATCH, STATED RATHER THAN HIDDEN: `The Sea Forts at War`.** The
-owner's full Plus Code lands **in open water, 2,657 m from Shivering Sands Fort**, and reverse-
-geocodes to "Rochester Riverside" — 40 km away, because there is no addressed feature at sea. **The
-owner's coordinate was KEPT**: the caption says *"forts"* plural and the point sits inside the
-Maunsell field, so a fort-specific coordinate would assert more than the post does. Ships
-`city: "Herne Bay"`, the nearest mainland town, and both the city and the point are approximate.
+**Denver, Little Rock and St. Louis are new to the catalogue.** No new country — all 13 are
+`United States`.
 
 ---
 
-## Heroes
+## Eight subjects, four of them pinned more than once
 
-**All 41 opened and read against their captions — zero wrong subjects.** 42 files uploaded
-(41 heroes + the creator avatar); **42 uploaded = 42 referenced, 0 orphaned, 0 missing**, and
-**41 distinct heroes for 41 pins** — the check that catches two pins slugging identically.
+| Subject | City | Posts |
+|---|---|---|
+| **Arkansas Museum of Fine Arts** | Little Rock | **4** |
+| Populus | Denver | 2 |
+| Solar Carve / 40 Tenth Avenue | New York | 2 |
+| Spelman College Center for Innovation and the Arts | Atlanta | 1 |
+| 11 Hoyt | Brooklyn | 1 |
+| The Gilder Center | New York | 1 |
+| Mira | San Francisco | 1 |
+| One Hundred | St. Louis | 1 |
 
-**⚠️ FIVE WEAK HEROES, FLAGGED NOT FIXED.** A link pin re-hosts only the thumbnail, so no other
-frame exists — the choice is only ever keep or pull.
-
-- **🔴 `Why the Cliff House Was Built` is the worst hero shipped in some time: a completely blurred,
-  unreadable smear.** Not a crop artifact — the source thumbnail itself is out of focus. The
-  likeliest pull in the batch.
-- **`George Washington's Legacy`** is a **portrait painting of Washington**, not a photograph of
-  the Washington Monument the pin sits on.
-- **`The Pyramid of Rapa`** is a dark, low-contrast interior of the mausoleum.
-- **`The Most Valuable Ships at Alang`** is a generic wrecked hull that could be any shipbreaking
-  yard.
-- **`What's Inside the Paris Catacombs`** is a historical print rather than a photograph.
-
-⚠️ **`The Oldest Photograph of Stonehenge` is ALSO a historical photograph and that one is
-CORRECT** — the post's entire subject *is* the earliest known photograph of the stones. Do not
-"fix" it by sourcing a modern frame.
-
-**⚠️ Four hand re-crops — the vertical `--focus` gap, EIGHTEENTH batch running.** Every source is
-9:16, so the square crop is width-limited and **`--focus` does nothing vertically**. Re-rendered
-through a mirror of the tool's own pipeline (`recrop.py` imports `make-link-pin`'s own `trim_bars`,
-same blur/dim/quality, **same filenames**, so `Tours.json` is untouched), and the mirror
-**self-checked against `render_hero` at focus 0.5 before being trusted**. Each re-crop recovers the
-subject's own burned-in *name*; **straplines clipped elsewhere were deliberately LEFT** — a hook is
-not the subject's name (the California Academy rule).
-
-**🔴 THREE SUBJECTS ARE COVERED BY LIVE ATLAS TOURS WHOSE HEROES SIT AT THE BARE VENUE SLUG** —
-`alcatraz_hero.webp`, `eiffel-tower_hero.webp` and `marina-city_hero.webp` are all on gh-pages
-right now. Subject-specific slugs plus the handle suffix gave **0 collisions against 7,020
-existing `images/` paths**; a bare venue slug would have written over three real tours'
-photographs, which since #567 a downloaded tour would never see corrected.
+⚠️ **The fourth AMFA post calls it the "Arkansas Arts Center"** — the museum's name before the
+2021 rename, and the post is the 2018 first-look at the transformation. It ships as
+**`Transforming the Arkansas Arts Center`**, keeping the then-name honestly rather than
+back-dating the new one onto a seven-year-old announcement.
 
 ---
 
-## Editorial
+## 🔴 TWO STACK-CAP FINDINGS — the AMFA one is where the cap actually bites
 
-**⚠️ ONE CAPTION IS FACTUALLY WRONG AND STAYS THE CREATOR'S.** The No Man's Land Fort post says the
-Solent forts were built to *"defend the United States"* — they are Palmerston forts built against a
-feared French invasion of Portsmouth. The caption is kept **verbatim** in `longDescription`, and
-**nothing this catalogue authors repeats it** (the Schweizer convention).
+Read from the Swift, not assumed: **`TourSetMap.maxStacked = 3`** (maker page, place page,
+list page) and **`HomeView.maxStackedPlacecards = 4`** (Home map).
 
-**⚠️ NO ARCHITECT TAG ANYWHERE IN THE BATCH.** Not one caption names an architect — these are
-history explainers, not architecture posts — so the Jules Dalou rule leaves all 41 clean. ⚠️ **That
-includes the Palace of Culture and Science, Łapalice Castle, Marina City and the Leaning Tower of
-Niles**, all of which have well-known authorship a general-knowledge sweep would happily supply.
-**Do not "finish the job."**
+**AMFA is FOUR markers on one coordinate.** Home renders all four with **no headroom**;
+`TourSetMap` renders **three, and the fourth is permanently unreachable** — silently, with no
+error. Three of the four are `@studiogang`, so on that creator's own maker page the stack sits
+exactly at the cap with nothing to spare.
 
-⚠️ **`YouTube @ITSHISTORY` already exists** in the catalogue (1 pin, Habitat 67) and is plausibly
-the same creator on another platform. The new `TikTok @itshistoryonair` row is **separate by
-design** — the uuid5 scheme keys on `<platform>:@handle`, the same way wienerberger and Avant Arte
-each hold two rows.
+**The Gilder Center is effectively THREE deep.** Two pins already existed there —
+`@archiwhisperer`'s *The Gilder Center* and `@archimarathon`'s *Inside the Gilder Center* —
+and this batch adds a third. ⚠️ **`check-place-candidates.py` only reports two of the three**:
+the existing pair differs in the **6th/7th decimal** (40.78158 vs 40.7815797), which defeats
+the EXACT tier's equality test — the documented CalAcademy rounding artifact, the same shape
+that hid Museum Station last session. On the map all three are 0.03 m apart.
+
+**Both are place candidates and both are the owner's call.** A place collapses its members into
+one capsule pin carrying `placeTourCount`, so the cap stops applying — the 120 Broadway /
+Alwyn Court fix. **Flagged, not created**: a place needs its own copy, address, photograph and
+approval.
+
+🔴 **Nothing was nudged together to manufacture a group, and nothing nudged apart to dodge
+one.** Every coordinate came from an independent geocode; `check-place-candidates.py` goes
+**12 EXACT → 16** with **NEAR unchanged at 53**, and the diff proves the four added groups are
+exactly Populus, AMFA, Solar Carve and the Gilder Center.
 
 ---
 
-## `main` moved mid-session, and the edit was redone the documented way
+## Coordinates — every one reverse-verified at zoom 18
 
-**[#734](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/734) merged** while this batch was
-being validated — 33 Toronto/Mississauga pins, 6 places and 2 architects, taking the base from
-1,168 → 1,201 pins, 305 → 328 makers, 115 → 121 places and the vocabulary 477 → 479.
+| Subject | Coordinate | How it was settled |
+|---|---|---|
+| Populus | `39.7403544, -104.9911197` | forward names `Populus Denver` at 240 14th St; reverse lands on **Pasque**, the restaurant inside it (inner-tenant) |
+| AMFA | `34.7383258, -92.2663529` | reverses **by name**: `Arkansas Museum of Fine Arts, 501 East 9th Street` |
+| 11 Hoyt | `40.6897869, -73.9853461` | reverses to **Taim** at **11 Hoyt Street** — inner tenant at the building's own number |
+| Gilder Center | `40.78158, -73.974641` | reverses **by name** to `Richard Gilder Center…, 200 Central Park West`; converges on the existing pins' point |
+| Mira | `37.7899673, -122.3917231` | OSM names **`MIRA`** exactly; ⚠️ reverse lands on 120 Folsom, the nearest addressed node |
+| One Hundred | `38.6427365, -90.2646384` | reverses **by name** to `100 Above the Park` — OSM's name for the building Studio Gang calls One Hundred |
+| Solar Carve | `40.7414821, -74.0084598` | reverses to the address point **40, 10th Avenue**, the caption's own number |
+| Spelman Center | `33.7446799, -84.4135812` | see below |
 
-The catalogue edit was **redone the documented way: reset onto `main` and re-run the idempotent
-assembler, never hand-resolve a JSON conflict.** The branch carried no commits, so the reset was
-clean. **Overlap with Toronto re-verified at 0 on every axis** — sourceURLs, tour ids, stop ids,
-maker id and hero filenames — and every check below was re-run on the merged base. The diff came
-out **unchanged at 1,897 / 0**.
+⚠️ **Re-querying was the whole fix twice.** `Mira, 280 Spear Street` and every Spelman phrasing
+returned **0 results** on the first pass; `Mira Tower, San Francisco` and `Spelman College`
+found both instantly. **A first-pass miss is not evidence a place is unmapped.**
+
+🔴 **Spelman was the Warehaus interpolation trap.** `350 Spelman Lane SW` returns **three**
+house points spread ~280 m — so the number is interpolated, not a mapped building. A **bounded
+viewbox** search around the campus found the real thing: **`Spelman College Center for
+Innovation and the Arts`**, `amenity/arts_centre`, named almost exactly. ⚠️ Its reverse lands
+on an unnamed **loading dock** at 407 Westview Drive — the documented nearest-addressed-node
+case (Tribune Tower had the identical shape), so it was **proved forward**.
+
+⚠️ **11 Hoyt ships `city: "Brooklyn"` and that is a judgement.** The dominant link-pin
+convention is `New York` (94 Brooklyn-coordinate pins vs 10), but the caption says *"11 Hoyt in
+Brooklyn"*, the post is about *"dense Downtown Brooklyn"*, and both pins within 400 m use
+`Brooklyn`. **One line to change.**
+
+---
+
+## ✅ The hero audit — 13 opened, zero wrong subjects
+
+**Every one was opened and read against its caption.** Several name themselves: `Studio Gang /
+Populus` ×2, `Arkansas Museum of Fine Arts`, `ARKANSAS ARTS CENTER`.
+
+🔴 **But four are not photographs of a finished building, and that is the batch's real
+weakness.** These are an architecture practice's own marketing posts, so the frames skew to
+drawings, diagrams and covers rather than street photography:
+
+| # | Pin | What the hero actually is |
+|---|---|---|
+| 5 | **Building the Arkansas Museum of Fine Arts** | a **crayon-textured plan diagram** — orange blocks and a white "blossoming" addition. **No building in frame at all.** The weakest in the batch. |
+| 11 | Solar Carve | an **axonometric drawing**, exactly as its own caption says (*"this axonometric illustration by @rodrigodamati"*) |
+| 12 | Solar Carve from the High Line | the **High Line path** — the building is not identifiable |
+| 10 | One Hundred | a **construction aerial**, crane still up; honest to a caption that says *"tops out today"* |
+| 2 | Spelman | a **magazine cover** (gb&d masthead + cover lines). The picture inside it is genuinely the atrium. |
+
+**Flagged, not fixed.** A link pin re-hosts only the thumbnail, so no other frame exists — the
+choice is keep or pull, and that is the owner's. Precedents run both ways: Mercedes-Benz
+Stadium was pulled; the Koons/LACMA and Hugo de Grootplein ones were kept.
+
+---
+
+## ⚠️ Two hand re-crops — the vertical `--focus` gap, EIGHTEENTH batch running
+
+`render_hero` crops at `centering=(focus, 0.5)` — **the vertical is hardcoded**, so `--focus`
+cannot recover text sliced off the top of a 9:16 frame.
+
+- **Populus** — the centred square cut `Studio Gang / Populus` through the letters. Re-rendered
+  at **vfocus 0.20**, recovering it whole.
+- **Transforming the Arkansas Arts Center** — a 16:9 source, so the square is *height*-limited
+  and the centred crop gave `AS ARTS CENTER` + `LITTLE ROCK, A`, both broken. Re-rendered at
+  **hfocus 0.00**, recovering **`ARKANSAS ARTS CENTER`** whole. ⚠️ **Stated trade-off:** the
+  text spans nearly the full width so no square can hold both halves (the Depot MVRDV case);
+  this buys the subject's name at the cost of `LITTLE ROCK, ARKANSAS` and pushes the museum
+  complex toward the right edge.
+
+Both re-rendered through a **mirror of the tool's own pipeline** — importing its `trim_bars`
+and constants so the two cannot drift, same blur/dim/quality, **same filenames**, so
+`Tours.json` is untouched.
+
+⚠️ **Straplines elsewhere were deliberately left.** Recovering what the crop destroyed is not
+the same as removing what the creator put there.
+
+---
+
+## Tagging
+
+**Every one of the 13 captions names Studio Gang or Jeanne Gang as the designer**, so all 13
+carry **`Jeanne Gang`** — the documented practice→person mapping; `Studio Gang` is deliberately
+absent from the vocabulary — **alongside `Designed by a Master`**, never replacing it.
+`Tag.matches` performs no implication and the curated home shelf is keyed on that literal
+string.
+
+⚠️ **The Gilder Center pin's tag set matches the two existing Gilder pins exactly**
+(`Museum, Architecture, Contemporary, Jeanne Gang, Designed by a Master`), so the trio shares
+shelves — the documented rule where one subject exists as several entries.
+
+⚠️ **Collaborators are absent from the vocabulary and ship untagged**, deliberately: **SCAPE /
+Kate Orff** (AMFA and 11 Hoyt landscape), **Michaelis Boyd** (11 Hoyt interiors), **Hollander
+Design**, **Polk Stanley Wilcox**. Adding them is a `Models/Tag.swift` **code** change, kept
+out of a content batch.
 
 ---
 
 ## Verification
 
-- **Validator mirror self-tested 24/24 with a clean control**, then **0 errors, 0 warnings across
-  1,552 tours + 1,242 pins + 121 places** at **479 tags**. ⚠️ **Exit code read directly, never
-  through a pipe** (the session-90 `PIPESTATUS` trap).
-- **⚠️ 22 faults injected against THIS batch's own 41 pins — 22/22 caught, control clean before and
-  after.** The harness **counts errors AND warnings** (the session-141 bug: "no Place type" and "no
-  Theme" are *warnings*, and counting only errors reports false misses), injects **in memory via
-  the mirror's own `check()`** rather than onto disk (the mirror draws its control from the live
-  catalogue and exits 2 rather than reporting when that file is dirty), and reads `check()`'s
-  **`(errors, warnings)` tuple** rather than mistaking it for an exit code (the session-142 false
-  pass). ⚠️ **The new-pin ids are DERIVED FROM THE DIFF against `HEAD`**, not read from a scratch
-  file, so they are exactly what the working tree adds.
-- `make-link-pin.py --selftest` **71/71** ⚠️ **with Pillow installed first** — a bare container
-  reports 62/62, which reads as a pass and is not one. `decode-plus-code.py` self-tests on every
-  invocation, clean.
-- **0** duplicate tour or stop ids, **0** collisions with live ids, **0** already-pinned
-  sourceURLs, **0** in-batch duplicate sourceURLs, **0** byte-duplicate heroes. Closest perceptual
-  pair **hamming 32 / pixdiff 57.0** (identical pictures score under 1); 3 pairs nominated at
-  hamming ≤ 45, all rejected by the thumbnail stage.
-- `Tours.json` **byte-stable under a Python re-dump before AND after editing**, on both bases; diff
-  **1,897 insertions / 0 deletions**, asserted purely additive with `tours` and `places`
-  byte-identical and the 1,201 existing pins unchanged as a prefix.
-- `seed_from_toursjson.py` clean at **329 / 2,794 / 3,166 / 121**; **0 `images//`** in the
+- **Validator mirror self-tested 24/24 with a clean control**, then **0 errors, 0 warnings
+  across 1,552 tours + 1,214 pins + 121 places** at 479 tags. **Exit code read directly, not
+  through a pipe.**
+- ⚠️ **20 faults injected against THIS batch's own 13 rows — 17 caught, control clean before
+  and after.** The 3 misses are the documented mirror blind spots (**centroid drift, empty
+  title, negative duration**) — 🔴 **and each was checked against `validate-tours.swift` before
+  being called a blind spot**, because session 142 shipped a "blind spot" that was a rule it had
+  invented. All three are real Swift rules (lines 458, 683, 616) and **all three were asserted
+  directly on the 13 instead: 0, 0, 0**, alongside 17 more direct assertions — all 0.
+- `make-link-pin.py --selftest` **71/71** ⚠️ **with Pillow installed first** (a bare container
+  reports 62/62, which reads as a pass and is not one).
+- **0** duplicate tour/stop/maker ids, **0** collisions with live ids, **0** already-pinned
+  sourceURLs, **0** byte-duplicate heroes. **13 files for 13 pins**, URL set == file set.
+- **0 filename collisions** against **7,062** gh-pages `images/` paths, the listing **asserted
+  to hold >1,000 first**. ⚠️ The bare-slug check was **clean too**, so the handle suffix was not
+  load-bearing this batch.
+- `Tours.json` **byte-stable under a Python re-dump before AND after editing**; diff **640
+  insertions / 0 deletions**, asserted purely additive — `tours` and `places` byte-identical,
+  existing makers and pins unchanged as prefixes, top-level keys unchanged.
+- `seed_from_toursjson.py` clean at **331 / 2,766 / 3,138 / 121**; **0 `images//`** in the
   catalogue *or* the generated SQL.
-- gh-pages **`94264b6c`**: remote head **re-read in the same command as the push**, push status
-  read through **`PIPESTATUS`**, tree diff **exactly 42 additions, 0 deletions, nothing outside
-  `images/`** (7,020 → 7,062 paths) — **re-verified against the remote afterwards**, with the
-  commit confirmed **still gh-pages head**. The deploy read **`in_progress`, never `cancelled`**
-  against the Actions API (run 836), after which **all 42 live URLs were hash-verified against the
-  uploaded bytes — 42 ok, 0 mismatch, 0 non-200**.
+- gh-pages `d22dca3`: remote head **re-read in the same command as the push**, push status read
+  through **`PIPESTATUS`**, tree diff **exactly 13 additions, 0 deletions, nothing outside
+  `images/`**. The deploy read **`in_progress`, never `cancelled`** against the Actions API and
+  served 404 for several minutes, after which **all 13 live URLs were hash-verified against the
+  uploaded bytes — 13 ok, 0 mismatch, 0 non-200.**
 - 🔴 **`check-image-duplicates.py --pins` was run AFTER the deploy** (the session-135 false-pass
-  lesson): **`OK — no suspicious duplicates`** over **1,237 images** (1,237 for 1,242 pins is the
-  documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors / 208 documented
-  reuses** — identical to the recorded baseline, so this batch adds no shared URL.
-- ⚠️ **Nothing compiled locally** — no Swift toolchain in a Linux web session, so **CI on a PR
-  would be the only compile check**, and no PR is open.
+  lesson): **`OK — no suspicious duplicates`** over **1,209 images** (1,209 for 1,214 pins is
+  the documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors / 208
+  documented reuses** — identical to the recorded baseline, so this batch adds no shared URL.
+- ⚠️ **Nothing compiled locally** — no Swift toolchain in a Linux web session. **No PR is open,
+  so CI has not run.**
 
 ---
 
-## Owed
+## ⚠️ A parallel session is in flight
 
-1. **The places decision (owner).** Four sites are three deep at the cap — **Alcatraz, Hoover Dam,
-   Fort Jefferson, the Leaning Tower of Niles** — and a fifth, **Eastern State**, could join the
-   place that already exists as a third member. Recommendation: **make places for the four**, since
-   all four are one creator and therefore stack on that creator's own page with no headroom.
-2. **The Cliff House hero** — the blurred one. Keep or pull is the owner's call.
-3. **No PR is open**, so nothing has compiled and nothing is live.
+While this batch was being built, another session pushed **41 `@itshistoryonair` link-pin
+heroes plus a creator avatar** to gh-pages (`94264b6c`, the commit this batch's tree was built
+on). **Their catalogue change has NOT merged** — `main` was still `89bb15c8` at the end of this
+session — so **expect a `Tours.json` conflict when it does**: both sides append to `linkPins`
+and `makers`.
+
+**Resolve it the documented way** — take `main`'s file and re-run the idempotent assembler
+(`scratchpad/sg/assemble.py`), never hand-resolve a JSON conflict — and re-check overlap on
+sourceURL, ids and hero filenames afterwards.
+
+---
+
+## Open for the owner
+
+1. **AMFA is four markers deep** — past `TourSetMap.maxStacked`. Make it a place, or drop one
+   of the four?
+2. **The Gilder Center is three deep with no headroom** — same question, and it would fold in
+   two pins that are already live.
+3. **The four non-photograph heroes** — keep or pull? The AMFA plan diagram is the one that
+   renders as an abstract graphic on the map.
+4. **11 Hoyt's `city`** — `Brooklyn` as shipped, or `New York` to match the dominant convention?
