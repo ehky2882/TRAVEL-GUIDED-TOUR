@@ -133,9 +133,10 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **The owner sent 34 Instagram links under a heading reading "Miami"; they resolve to 29
 distinct posts and 23 ship.** **linkPins 1,214 → 1,237 · makers 331 → 345 · `tours` and
 `places` byte-identical.** Content only — no Swift, no SQL, no place created, no build.
-**NO PR OPENED** (this session's harness forbids opening one unasked). ⚠️ **One `scripts/`
-file changed too** — `validate-tours-mirror.py`, developer tooling that does not ship in
-the app; see the blind-spot bullet. Detail: `archive/HANDOFF-260905-2.md`.
+**MERGED as [#738](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/738) (squash `9d7a1b7a`),
+together with the Studio Gang batch below.** ⚠️ **One `scripts/` file changed too** —
+`validate-tours-mirror.py`, developer tooling that does not ship in the app; see the blind-spot
+bullet. Detail: `archive/HANDOFF-260905-2.md`.
 
 - **✅ 29 DISTINCT POSTS FROM 34 LINKS — 5 pasted twice, 1 already pinned, 3 blocked, 2 parked, 23 shipped.**
   ⚠️ **The trailing-newline trap was live and the count is what caught it** — `grep -c .`
@@ -284,8 +285,18 @@ the app; see the blind-spot bullet. Detail: `archive/HANDOFF-260905-2.md`.
   **`OK — no suspicious duplicates`** over **1,232 images** (1,232 for 1,237 pins is the
   documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors / 208
   documented reuses** — identical to the recorded baseline.
-  ⚠️ **Nothing compiled locally, and no PR is open, so CI has not run.**
-- **⚠️ A PARALLEL SESSION IS STILL IN FLIGHT AND A `Tours.json` CONFLICT IS EXPECTED.** The
+  ⚠️ **Nothing compiled locally** — CI on [#738](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/738)
+  was the only compile check a Linux web session gets, and **all four checks were green before the
+  merge** (Validate Tours.json, Build (iOS Simulator), Run unit tests, Vercel). ✅ **Then verified
+  against the LIVE SYSTEMS rather than the merge's success line** — the squash was checked to carry
+  real content (8 files, +2,695) after #629's empty-commit lesson, and the Supabase RPC, which the
+  app reads FIRST, serves **1,237 linkPins with 0 of the branch's pins missing and 0 pins wrongly
+  inside `tours`**; the gh-pages mirror converged to the same 1,237 / 345 / 1,552 / 121. The
+  session-99 dropped-key check is clean on that payload (`priceTier` 1,553 with 66 priced,
+  `isPrivate` 366, `country` 1,552, `videoRole` 1,553, places 121). ⚠️ **The RPC reads 1,553 tours
+  / 366 makers against the catalogue's 1,552 / 345** — the documented `Zxxx` test tour and
+  upsert-only maker accumulation; **assert on link-pin counts, never on maker totals.**
+- **✅ THE EXPECTED `Tours.json` CONFLICT NEVER MATERIALISED — this branch merged clean, and the conflict is now THEIRS.** The
   `@itshistoryonair` session pushed **41 link-pin heroes plus a creator avatar** to gh-pages
   (`94264b6c`) while **its catalogue change has not merged** — `main` was still `89bb15c8`
   at the end of this session, so this branch is not behind. Both sides append to `linkPins`
@@ -297,8 +308,9 @@ the app; see the blind-spot bullet. Detail: `archive/HANDOFF-260905-2.md`.
 
 **The owner sent 15 Instagram links under a heading reading "Studio Gang"; they resolve to 13
 distinct posts and all 13 ship.** **linkPins 1,201 → 1,214 · makers 328 → 331 · `tours` and
-`places` byte-identical.** Content only — no Swift, no SQL, no place created, no build. **NO PR
-OPENED** (this session's harness forbids opening one unasked). Detail: `archive/HANDOFF-260905.md`.
+`places` byte-identical.** Content only — no Swift, no SQL, no place created, no build. **MERGED as
+[#738](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/738) (squash `9d7a1b7a`), together with the
+23 Miami pins above.** Detail: `archive/HANDOFF-260905.md`.
 
 - **✅ ALL 13 ALIVE, 0 ALREADY PINNED, 0 BLOCKED.** Every embed returned **256–263 KB with
   `contextJSON` present**, against **three already-live catalogue pins fetched in the same pass
@@ -409,8 +421,11 @@ OPENED** (this session's harness forbids opening one unasked). Detail: `archive/
   (the session-135 false-pass lesson): **`OK — no suspicious duplicates`** over **1,209 images**
   (1,209 for 1,214 pins is the documented `@malata.antwerp` five-pins-one-URL case), shared-URL
   half **0 errors / 208 documented reuses** — identical to the recorded baseline. ⚠️ **Nothing
-  compiled locally, and no PR is open, so CI has not run.**
-- **⚠️ A PARALLEL SESSION IS IN FLIGHT AND A `Tours.json` CONFLICT IS EXPECTED.** Another session
+  compiled locally** — CI on [#738](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/738) was the
+  only compile check, and all four checks were green before the merge. ✅ **Confirmed live on the
+  Supabase RPC: all four Arkansas Museum of Fine Arts pins serve on the identical coordinate
+  `34.7383258, -92.2663529`, so the four-deep group is live and the cap finding stands.**
+- **✅ THE EXPECTED `Tours.json` CONFLICT NEVER MATERIALISED — this branch merged clean at `9d7a1b7a`, and the conflict now falls to the parallel session, whose base has moved 36 pins and 17 maker rows.** Another session
   pushed **41 `@itshistoryonair` link-pin heroes plus a creator avatar** to gh-pages
   (`94264b6c`, the commit this batch's tree was built on) while **their catalogue change had not
   merged** — `main` was still `89bb15c8` at session end. Both sides append to `linkPins` and
