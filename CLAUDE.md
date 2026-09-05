@@ -376,7 +376,7 @@ so unlike the content commits before it, it wants a simulator look; CI is the co
 **Sixteen TikTok short links and one Instagram reel, all from `@archimarathon`** — the same creator
 as sessions 141 and 142, now on two platforms. **linkPins 1,151 → 1,168 on the merged base ·
 `tours`, `makers` and `places` byte-identical · 0 new maker rows.** Content only — no Swift, no SQL,
-no build. **Opened as [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) on owner instruction.** Detail: `archive/HANDOFF-260904-2.md`.
+no build. **MERGED as [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) (squash `7137d842`) on owner instruction, and VERIFIED AGAINST THE LIVE SYSTEMS rather than the merge's success line** — the Supabase RPC, which the app reads FIRST, served **1,168 linkPins / 115 places** with **0 pins wrongly inside `tours`**, and the gh-pages mirror served the same. ⚠️ **Those are a dated measurement of this merge, not the catalogue's current size** — [#734](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/734) merged 33 more pins and 6 more places within the hour; **re-derive rather than quoting them.** Detail: `archive/HANDOFF-260904-2.md`.
 
 - **✅ ALL 17 ALIVE, 0 ALREADY PINNED, 0 IN-BATCH DUPLICATES.** The Instagram embed returned
   **262,755 bytes with `contextJSON` present** against **three already-live catalogue pins fetched in
@@ -474,7 +474,7 @@ no build. **Opened as [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull
   against the Actions API, after which **all 17 live URLs were hash-verified against the uploaded
   bytes — 17 ok, 0 mismatch, 0 non-200**. 🔴 **`check-image-duplicates.py --pins` was run AFTER the
   deploy** (the session-135 false-pass lesson): shared-URL half **0 errors / 208 documented reuses**,
-  identical to the recorded baseline. ⚠️ **Nothing compiled locally — CI on [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) is the only compile check a Linux web session gets.**
+  identical to the recorded baseline. ⚠️ **Nothing compiled locally — CI on [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) was the only compile check a Linux web session gets, and all four checks were green before the merge.**
 - **⚠️ `main` MOVED TWICE MID-SESSION** — [#730](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/730)
   merged **104 more `@archimarathon` pins**, the same creator, and then
   [#731](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/731) took the architect vocabulary **383 →
@@ -493,8 +493,10 @@ no build. **Opened as [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull
 
 **Owner: *"Make the place. Add the architect's."*** Both applied on the same branch, which ⚠️ **makes
 [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) a CODE change** (`Models/Tag.swift` +
-`scripts/validate-tours.swift`) — so unlike the content batch above it wants an owner OK and a
-simulator look; CI is the compile check. **Places 114 → 115 · vocabulary 419 → 425 architects.**
+`scripts/validate-tours.swift`) — so unlike the content batch above it wanted an owner OK and a
+simulator look; CI was the compile check. ⚠️ **The owner OK was given and the PR is merged, so the
+vocabulary is live — but THE SIMULATOR LOOK IS STILL OWED**: nobody has yet confirmed on a screen
+that the architect shelves read correctly. **Places 114 → 115 · vocabulary 419 → 425 architects.**
 
 - **🔴 SERLACHIUS IS THE ONE THE CAP ACTUALLY BIT, AND NOTHING MOVED TO FIX IT.** Three coincident
   markers, **all one creator**, against `TourSetMap.maxStacked = 3` with **no headroom** — so on that
@@ -646,8 +648,9 @@ and the **only field differing on either pin is `tags`**.
   at **305 / 2,720 / 3,092 / 115**; **0 `images//`** in the catalogue *or* the SQL.
   **`check-place-candidates.py` unchanged at 12 EXACT / 52 NEAR**, which a tag-only edit cannot move.
   ⚠️ **Nothing compiled locally** — no Swift toolchain in a Linux web session, so **CI on
-  [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) is the only compile check**, and the
-  owner's simulator look is what confirms the shelves still read correctly.
+  [#733](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/733) was the only compile check** (all four
+  green before merge), and **the owner's simulator look — still owed — is what confirms the shelves
+  still read correctly.**
 
 ## Current State (2026-09-03)
 
