@@ -125,6 +125,19 @@ blend. It also ends the read-vs-seed contention behind the clustered failures.
 - The seed's guard block tested **both ways** against Postgres: with the function absent it emits a
   notice and returns 0 (an unmigrated database seeds exactly as before); with it present it calls it.
 - `Tours.json` **untouched** — asserted, not assumed.
+- ⚠️ **`main` moved TWICE while this was being written**, so every figure above was re-derived on the
+  final base rather than carried forward: [#740](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/740)
+  added four Miami/Little Rock places (**125 → 129**, which is why the seed count here is not the 125
+  an earlier draft recorded), then [#741](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/741)
+  flipped that PR's line on the board. **The `ROADMAP.md` conflict was resolved by DROPPING this
+  branch's copies of two paragraphs, not by merging them** — #740 had rewritten both, so the stashed
+  versions were the stale ones (2,598 ch against 4,849, and 2,466 against 2,642). The resolver
+  asserts the upstream copy is **at least as long** before discarding, so a resolution cannot
+  silently lose content.
+- ⚠️ **#741 was another session's docs-only PR flipping an already-merged line, and it touched exactly
+  the `STATUS.md` lines this change needed.** Merged first (Automation Rule #4's auto-merge class,
+  all four checks green) rather than hand-resolving afterwards — a conflicted PR triggers no CI at
+  all, so racing it would have cost a check run for nothing.
 
 ---
 
