@@ -128,6 +128,109 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-09-05)
 
+### Four places for the four sites at the stack cap — Alcatraz, Hoover Dam, Fort Jefferson, Niles (branch `claude/places-stack-cap-260905`, session 146 — content)
+
+**Owner: *"Make the places for the four sites."*** The four sites [#737](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/737)
+flagged as sitting **exactly at `TourSetMap.maxStacked = 3` with no headroom** are now places.
+**Places 121 → 125**; `tours` and `makers` **byte-identical**, and exactly **3 link pins moved, in
+exactly their four coordinate fields each**. Branch cut clean off `main` at `9f8bd12d` (a merged PR
+is finished — never stacked on merged history). Content only — no Swift, no SQL, no gh-pages push,
+no build; the seed carries `places`, so this reaches Supabase on merge with **no owner SQL**.
+Detail: `archive/HANDOFF-260905-4.md`.
+
+- **🔴 THE CAP IS WHY THIS EXISTS, AND IT WAS ABOUT TO BITE.** Each site had **exactly three
+  coincident markers** — rendering today, with zero headroom — and **all 41 pins in that batch are
+  one creator**, so the cap bites on that creator's own maker page as well as on every place and
+  list map. A place collapses its members into **one capsule pin** carrying `placeTourCount`, so the
+  cap stops applying. A fourth link at any of the four would otherwise have put one marker
+  permanently out of reach, invisibly.
+- **🔴 ALCATRAZ TOOK THE ATLAS TOUR AS A FOURTH MEMBER, AND THAT DECISION IS THE SUBSTANCE.** The
+  Atlas SFO `Alcatraz` tour sits **5.7 m** from the three pins — the documented **CalAcademy
+  rounding artifact** (the Plus Code decodes to a cell centre at 7 decimals, the tour stores 4) — so
+  membership was a real decision, not automatic. **The pin moves, never the tour:** the tour is
+  **`geofenced` at r=40**, so moving it would change where its audio fires, while the pins are
+  `manual` and cost nothing. **The builder asserts `triggerMode == "manual"` before relocating
+  anything and refuses otherwise**, so a future edit cannot get this backwards silently. The place
+  therefore sits on **the tour's** coordinate and the three pins moved 5.7 m onto it. ⚠️ Including
+  the tour is also **what buys a real third photograph** — its gallery holds four images, so
+  Alcatraz is the one place here whose hero is neither member's, avoiding by construction the fault
+  found across 13 of the first 24 places. It also collapses **4** markers rather than 3, and absorbs
+  the three NEAR pairs the checker was reporting at 6 m.
+- **⚠️ THREE HEROES ARE BORROWED AND IT IS STRUCTURAL — DO NOT GO SOURCING REPLACEMENTS.** Proved
+  rather than assumed, *before* the builder was allowed to accept a borrow: for Hoover Dam, Fort
+  Jefferson and Niles, **the only markers within 5 km are the members themselves, every one of their
+  galleries is empty, and no other entry in the whole catalogue mentions the subject.** There is no
+  Atlas tour at any of the three, so **no third photograph of them exists anywhere** — the
+  documented Waterlooplein / Legion of Honor case the owner has already closed. The assertion was
+  relaxed deliberately and narrowly: a borrow must name **one of the members' own heroes, never an
+  invention** (the Serlachius rule). Borrowed-hero count **re-derived, not carried forward: 49 of
+  125** (71 take a third photograph, 5 carry none). ⚠️ The full-text sweep also matched **The Leaning
+  Tower of Pisa** and **The Leaning Tower of Toruń** — different buildings in different countries,
+  matching only on the phrase; correctly excluded.
+- **⚠️ EVERY CANDIDATE WAS RENDERED AND LOOKED AT, never chosen by filename — and two are stated
+  trade-offs.** **Alcatraz** takes `alcatraz_2`, the whole island profile from the water at the scale
+  a visitor first sees from the ferry; rejected on the establishing-shot criterion were the
+  cell-house Times Square corridor (`_3`, genuinely striking, but an interior close-up), a closer
+  view of the crown (`_4`) and the island small in fog (`_5`). **Fort Jefferson's is the strongest
+  hero in the batch** — the whole hexagonal fort in turquoise water, the moat wall, Bush Key's
+  sandspit, the ferry at the dock, **no burned-in text at all**. 🔴 **Hoover Dam's is the weakest and
+  it is stated, not buried:** all three candidates are **historical black-and-white or sepia archive
+  frames carrying the creator's burned-in text**, and ⚠️ **the one chosen is titled "Today" over a
+  construction-era shot** — the creator's own irony, not something a place page can fix; there is no
+  modern photograph of Hoover Dam in the catalogue. ⚠️ **Niles takes the only modern colour frame,
+  cropped so the lean itself — the entire point of the building — is not visible.**
+- **✅ EVERY COORDINATE CORROBORATED, AND A BOUNDED QUERY WAS THE WHOLE FIX AGAIN.** 🎉 **`Fort
+  Jefferson` returned ZERO results unbounded**; bounded to a Dry Tortugas viewbox it returns the
+  locality **named at 10 m**, plus the building polygon and the enclosing `Dry Tortugas National
+  Park` — **a first-pass miss is not evidence a place is unmapped.** **Niles reverse-geocodes BY
+  NAME** to `Leaning Tower of Niles` at **6300 West Touhy Avenue**. Alcatraz's reverse lands on an
+  unnamed board on **West Road** — the island's own road — while the forward names `Alcatraz Island`
+  at 26 m. ⚠️ **Fort Jefferson's reverse returns `Officers' Quarters`, a structure INSIDE the fort**
+  (the documented inner-feature case). ⚠️ **`Garden Key` was verified before being asserted** in the
+  address — OSM names it `place/islet` 170 m away, the key's label point.
+- **⚠️ HOOVER DAM STRADDLES A STATE LINE AND THE COPY TAKES NO SIDE.** OSM files its dam node in
+  **Mohave County, Arizona** while the reverse of the members' point gives **Clark County, Nevada** —
+  both true of different parts. The members carry `city: "Boulder City"`, which the **89006** postcode
+  corroborates, so that stands and the address ships **`Hoover Dam Access Road, Boulder City`** with
+  **no house number invented** (the Operaparken precedent).
+- **⚠️ THREE CREATOR CLAIMS WERE DELIBERATELY NOT REPEATED AS OURS.** The link-pin
+  `longDescription`s are the creator's verbatim TikTok captions — hashtags, "Swipe left", emoji —
+  carrying almost no factual content, so the copy is written from established fact about the **site**
+  (the tier-2 batch's situation exactly). 🔴 **Fort Jefferson does NOT repeat *"New York brick failed
+  in the Florida heat"*** — that is the creator's causal claim and a pin's own title; the copy states
+  what is uncontested (the foundations settled, the walls cracked, rifled artillery made masonry
+  forts obsolete while it was still going up). **Hoover Dam carries no mortality figure** (the
+  Eastland / Harbour Bridge convention) and **no height or storey figure**. **Alcatraz keeps a plain,
+  unsentimental register** on both the incarceration and the 1969 Indians of All Tribes occupation,
+  grounded in the Atlas tour's own text. ⚠️ **The place is named `Alcatraz`, matching a member tour's
+  title exactly** — the island has one name, so the parent matches a child (the One Times Square /
+  Tin Building call). **Do not "fix" it.**
+- **Verification.** The **400 m sweep went past the checker's group** (the session-131 lesson):
+  three sites had **nothing else within 400 m at all**, so there is no deliberate exclusion to
+  record, and Alcatraz's only neighbour was the Atlas tour, which became a member. uuid5 scheme
+  **reverse-verified against 119 of the 121 existing places** before minting (the two misses are the
+  documented legacy uppercase ids), minted **lowercase**, **0 collisions**. 🔴 **49 place-layer
+  faults injected against THESE FOUR PLACES specifically — 49/49 caught, control clean before and
+  after** (twelve classes × four places, plus one cross-place fault); ⚠️ the harness **counts errors
+  AND warnings** (the session-141 bug), reads `check()`'s **`(errors, warnings)` TUPLE** rather than
+  mistaking it for an exit code (the session-142 false pass), and injects **in memory** rather than
+  onto disk. Mirror **self-tested 27/27 with a clean control**, then **0 errors, 0 warnings across
+  1,552 tours + 1,278 pins + 125 places** at **479 tags**, ⚠️ **exit code read directly, never
+  through a pipe**. 🎉 **`check-place-candidates.py` EXACT 28 → 24 and NEAR 63 → 60**, and the report
+  diff proves it **removes exactly the four groups plus the three Alcatraz NEAR pairs and ADDS
+  NOTHING** — no coincident group was manufactured and nothing was nudged apart; ⚠️ it still exits 1
+  on the 24 belonging to other batches, so **a clean exit is not the expected state today**.
+  `Tours.json` **byte-stable under a Python re-dump before AND after editing**; diff **77 insertions
+  / 12 deletions**, with **every one of the 12 deletions accounted for as 3 pins × 4 coordinate
+  fields** and **every image URL on every tour and pin asserted identical to `HEAD`** (nothing
+  sourced, nothing repointed). **0** duplicate tour, stop or place ids; **0** tours claimed by two
+  places; **0** places with fewer than two members; all four place heroes live **200**.
+  `seed_from_toursjson.py` clean at **346 / 2,830 / 3,202 / 125**; **0 `images//`** in the catalogue
+  *or* the SQL. ⚠️ **`check-image-duplicates.py` was deliberately NOT run and that is not a gap** —
+  no image was added and no image URL changed (asserted), and each borrowed hero is now used in its
+  own pin and as the place hero, which is the documented tier-1 shape rather than a collision.
+  ⚠️ **Nothing compiled locally — CI on the PR is the only compile check a Linux web session gets.**
+
 ### Forty-one @itshistoryonair pins, six sites at the stack cap, and a fort that never defended the United States (branch `claude/new-tour-links-lze4ab`, session 144 — content)
 
 **The owner sent 46 TikTok links, each with a Plus Code + locality; five are pasted twice, so 41
@@ -154,7 +257,7 @@ two parallel sessions that each claimed a same-day handoff name).
   Fort Jefferson · the Leaning Tower of Niles.** Two deep with one spare: Paris Catacombs,
   Washington Monument, Ellis Island, Seven Mile Bridge, Alang. **Nothing is unreachable today** —
   but a fourth link at any of the four would put one marker permanently out of reach, invisibly.
-  **Flagged, not created** — a place needs its own copy, address, photograph and owner approval.
+  **Flagged, not created** — a place needs its own copy, address, photograph and owner approval. ✅ **ALL FOUR ARE NOW PLACES — owner instruction 2026-09-05 (*"Make the places for the four sites."*); see the entry directly above. The cap no longer applies at any of them and nothing is unreachable.**
 - **⚠️ A CORRECTION THIS SESSION MADE ON ITSELF, AND THE MEASUREMENT IS THE LESSON: ALCATRAZ IS
   *AT* THE CAP, NOT PAST IT.** An early read called it "4 markers, past the cap of 3". Measured:
   the three new pins are **exactly coincident** and the Atlas SFO `Alcatraz` tour is **5.7 m
