@@ -264,6 +264,34 @@ def emit(data, out):
                 "image_url = excluded.image_url, transcript_text = excluded.transcript_text;\n"
             )
 
+    # 🔴 The catalog is MATERIALISED (backend/catalog_snapshot.sql):
+    # `get_catalog()` serves a pre-built row rather than rebuilding ~11 MB of
+    # JSON per request. Nothing above is visible to the app until the snapshot
+    # is rebuilt, so this call is what makes a seed take effect.
+    #
+    # It is the LAST statement and it is INSIDE the transaction, which is also
+    # what fixes the torn read: MVCC keeps every reader on the previous
+    # COMPLETE catalog until this commits, then moves them to the new complete
+    # one. Before this, a client landing mid-seed could be served a mixture —
+    # observed live on 2026-09-06, `tours` already updated while `places` was
+    # still the old value.
+    #
+    # `to_regprocedure` returns NULL when the function is absent, so a database
+    # that predates the migration seeds exactly as it always did rather than
+    # failing on an unknown function.
+    w(
+        "\n-- Rebuild the materialised catalog (no-op if not yet migrated).\n"
+        "do $$\n"
+        "begin\n"
+        "    if to_regprocedure('public.refresh_catalog_snapshot()') is not null then\n"
+        "        perform public.refresh_catalog_snapshot();\n"
+        "    else\n"
+        "        raise notice 'refresh_catalog_snapshot() not present -- "
+        "apply backend/catalog_snapshot.sql';\n"
+        "    end if;\n"
+        "end $$;\n"
+    )
+
     w("\ncommit;\n")
     sys.stderr.write(
         f"OK: emitted seed for {len(makers)} makers / {len(tours)} tours / "

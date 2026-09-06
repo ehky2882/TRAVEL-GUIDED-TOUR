@@ -59,8 +59,22 @@ create role anon;
 create role authenticated;
 create table public.tours (
     id uuid primary key, title text, video_urls text[], kind text,
-    price_tier int, is_private boolean
+    price_tier int, is_private boolean,
+    -- Supabase filters the catalog to published rows two ways: an explicit
+    -- `where t.status = 'published'` in the builder AND this RLS policy. The
+    -- fixture models the RLS half, because `catalog_snapshot.sql` builds the
+    -- payload once AS `anon` and the whole security argument rests on that
+    -- evaluating exactly as it does for a real anonymous reader.
+    status text not null default 'published'
 );
+alter table public.tours enable row level security;
+create policy tours_public_read on public.tours
+    for select using (status = 'published');
+-- Supabase grants anon table access and lets RLS do the filtering. Without
+-- this the catalog RPC would fail for anon in production too, so the fixture
+-- was previously modelling a database that could not have worked.
+grant usage on schema public to anon, authenticated;
+grant select on public.tours to anon, authenticated;
 create or replace function public.get_catalog_core()
 returns jsonb language sql stable as $fn$
   select jsonb_build_object(
@@ -80,16 +94,23 @@ returns jsonb language sql stable as $fn$
   select public.get_catalog_core() || jsonb_build_object('places',
     jsonb_build_array(jsonb_build_object('id', 'place-1')));
 $fn$;
-insert into public.tours values
-  ('11111111-1111-1111-1111-111111111111', 'Test tour', null, 'single', 299, false),
+insert into public.tours (id, title, video_urls, kind, price_tier, is_private, status) values
+  ('11111111-1111-1111-1111-111111111111', 'Test tour', null, 'single', 299, false, 'published'),
   -- A link pin, so split_link_pins.sql has something to lift out of `tours`.
-  ('22222222-2222-2222-2222-222222222222', 'Test pin', null, 'link', null, false);
+  ('22222222-2222-2222-2222-222222222222', 'Test pin', null, 'link', null, false, 'published'),
+  -- 🔴 An UNPUBLISHED tour. Materialising the catalog means one role builds it
+  -- and everyone is served the result, so the role it is built as decides what
+  -- the whole world can see. This row must never reach the snapshot.
+  ('33333333-3333-3333-3333-333333333333', 'SECRET DRAFT', null, 'single', null, false, 'draft');
 SQL
 [ -n "$AS" ] && chown postgres:postgres "$PGDIR"/*.sql
 run "$PSQL -f $PGDIR/base.sql" >/dev/null
 
-# Order matters: add_link_pins anchors on the key add_video_role inserts.
-MIGRATIONS=(add_video_role.sql add_link_pins.sql split_link_pins.sql)
+# Order matters: add_link_pins anchors on the key add_video_role inserts, and
+# catalog_snapshot must be LAST — it renames whatever get_catalog() is at the
+# time aside as the builder, so anything that still patches the chain has to
+# have run first.
+MIGRATIONS=(add_video_role.sql add_link_pins.sql split_link_pins.sql catalog_snapshot.sql)
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 fail=0
@@ -131,6 +152,72 @@ fi
 
 run "$PSQL -c \"update public.tours set video_role='narration',
       source_url='https://x/y', source_author='@a';\"" >/dev/null
+
+# 🔴 THE SNAPSHOT IS A SNAPSHOT — prove it in both directions.
+# The update above is now invisible until the catalog is rebuilt. That is the
+# whole point of the change, and it is also its one new failure mode: a seed
+# that upserts rows and forgets to refresh leaves every phone on stale content
+# with nothing erroring. Assert stale-before and fresh-after, so neither half
+# can rot silently.
+stale=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"select coalesce(get_catalog()->'tours'->0->>'videoRole', '<null>');\"" 2>/dev/null | tr -d '[:space:]')
+[ "$stale" = "<null>" ] || {
+    echo "  x get_catalog() is NOT a snapshot - it saw an unrefreshed write (videoRole='$stale')"; fail=1; }
+
+run "$PSQL -c \"select public.refresh_catalog_snapshot();\"" >/dev/null
+fresh=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"select coalesce(get_catalog()->'tours'->0->>'videoRole', '<null>');\"" 2>/dev/null | tr -d '[:space:]')
+[ "$fresh" = "narration" ] || {
+    echo "  x refresh_catalog_snapshot() did not take effect (videoRole='$fresh', want 'narration')"; fail=1; }
+
+# Exactly one row, ever. The single-row idiom is a primary key plus a check
+# constraint, so a second row must be impossible rather than merely unusual.
+rows=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"select count(*) from public.catalog_snapshot;\"" 2>/dev/null | tr -d '[:space:]')
+[ "$rows" = "1" ] || { echo "  x catalog_snapshot holds '$rows' rows, want exactly 1"; fail=1; }
+if run "$PSQL -c \"insert into public.catalog_snapshot (id, payload) values (false, '{}'::jsonb);\"" >/dev/null 2>&1; then
+    echo "  x a SECOND catalog_snapshot row was accepted - the single-row constraint is not doing its job"; fail=1
+fi
+
+# 🔴 The security shape. Materialising means one role builds the payload and
+# everyone is served it, so who can reach it matters more than before:
+# the table must be unreachable directly, and the function must still work.
+if run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"set local role anon; select payload from public.catalog_snapshot;\"" >/dev/null 2>&1; then
+    echo "  x anon can read catalog_snapshot DIRECTLY - it should only be reachable via get_catalog()"; fail=1
+fi
+# `set local role` prints its own SET tag first, so read the LAST line.
+anon_ok=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"set local role anon; select jsonb_array_length(get_catalog()->'tours');\"" 2>/dev/null | tail -1 | tr -d '[:space:]')
+[ "$anon_ok" = "1" ] || { echo "  x anon cannot call get_catalog() (got '${anon_ok:-nothing}')"; fail=1; }
+
+# The builder must survive under its new name, or a future migration that
+# patches get_catalog_core() would be patching something nothing calls.
+# Read it AS anon, which is how refresh_catalog_snapshot() calls it.
+built=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"set local role anon; select jsonb_array_length(public.get_catalog_built()->'tours');\"" 2>/dev/null | tail -1 | tr -d '[:space:]')
+[ "$built" = "1" ] || { echo "  x get_catalog_built() is gone or broken (got '${built:-nothing}')"; fail=1; }
+
+# 🔴 THE ONE THAT WOULD MATTER MOST IF IT REGRESSED.
+# The snapshot is built once and served to everybody, so a builder run as too
+# privileged a role publishes unpublished work to the world — with no error
+# anywhere, because a bigger catalog looks exactly like a healthy one. Assert
+# the draft is absent from what get_catalog() actually serves.
+leaked=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"select count(*) from jsonb_array_elements(get_catalog()->'tours') t
+     where t->>'title' = 'SECRET DRAFT';\"" 2>/dev/null | tr -d '[:space:]')
+[ "$leaked" = "0" ] || {
+    echo "  x UNPUBLISHED CONTENT LEAKED into the snapshot ($leaked row(s)) - the builder ran too privileged"; fail=1; }
+
+# ...and the negative control: prove that assertion could fail. Built as the
+# table OWNER, RLS does not apply and the draft DOES come through — so the
+# check above is testing the role, not just passing for free.
+owner_sees=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \
+  \"select count(*) from jsonb_array_elements(public.get_catalog_built()->'tours') t
+     where t->>'title' = 'SECRET DRAFT';\"" 2>/dev/null | tr -d '[:space:]')
+[ "$owner_sees" = "1" ] || {
+    echo "  x negative control failed: the owner-built catalog does not contain the draft either (got '${owner_sees:-nothing}'), so the leak test proves nothing"; fail=1; }
+
 missing=$(run "$PGBIN/psql -h $PGDIR -U postgres -tAc \"
   select string_agg(k, ', ') from (
     select k from unnest(array['id','title','videoURLs','videoRole','kind',

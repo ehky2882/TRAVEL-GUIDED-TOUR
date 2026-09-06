@@ -101,7 +101,8 @@ def audit_migration_files(root: Path) -> list:
     and this is what stops a new one being added quietly.
 
     Legitimate: files whose new body CALLS `get_catalog_core()` (they are the
-    wrapper), and `schema.sql`, which is the base and runs before the rename.
+    wrapper), `schema.sql`, which is the base and runs before the rename, and
+    the materialised lookup (see below).
     """
     import glob
     problems = []
@@ -115,6 +116,18 @@ def audit_migration_files(root: Path) -> list:
         name = Path(f).name
         if "get_catalog_core()" in body or name == "schema.sql":
             continue  # the wrapper itself, or the base
+        # The materialised lookup (`catalog_snapshot.sql`). It replaces
+        # get_catalog() with `select payload from catalog_snapshot`, which
+        # severs nothing: the whole builder chain is RENAMED ASIDE intact as
+        # get_catalog_built() and still produces the payload, once per seed
+        # instead of once per request. Re-running it is a no-op, so the banner
+        # this rule demands would be a lie.
+        #
+        # ⚠️ Narrow on purpose — it allows a body that READS the snapshot, not
+        # any body that merely mentions it. A file that rebuilds the catalog
+        # inline is still caught even if it refreshes the snapshot afterwards.
+        if "from public.catalog_snapshot" in body:
+            continue
         if "NO LONGER SAFE TO RE-RUN" not in raw:
             problems.append(
                 f"backend/{name} replaces get_catalog() with an inline body and "
@@ -174,7 +187,42 @@ def selftest() -> int:
         print(f"  {'PASS' if ok else 'FAIL'}  {name}  (expected {expected} problems, got {got})")
         if not ok:
             failed += 1
-    print(f"\n{len(cases) - failed}/{len(cases)} self-tests passed")
+
+    # The file audit is a separate rule from the payload check and needs its
+    # own cases — otherwise widening it (as the snapshot lookup did) is
+    # untested, and the guard could be blunted without anything going red.
+    import tempfile, os
+    audit_cases = [
+        ("an inline get_catalog() rebuild with no banner is caught",
+         "create or replace function public.get_catalog()\n"
+         "returns jsonb language sql stable as $$ select jsonb_build_object('tours','[]') $$;", 1),
+        ("...and is allowed once it carries the banner",
+         "-- NO LONGER SAFE TO RE-RUN\n"
+         "create or replace function public.get_catalog()\n"
+         "returns jsonb language sql stable as $$ select jsonb_build_object('tours','[]') $$;", 0),
+        ("the wrapper calling get_catalog_core() is allowed",
+         "create or replace function public.get_catalog()\n"
+         "returns jsonb language sql stable as $$ select public.get_catalog_core() $$;", 0),
+        ("the materialised lookup is allowed",
+         "create or replace function public.get_catalog()\n"
+         "returns jsonb language sql stable as $$ select payload from public.catalog_snapshot where id $$;", 0),
+        ("a rebuild that merely mentions the snapshot is STILL caught",
+         "create or replace function public.get_catalog()\n"
+         "returns jsonb language sql stable as $$ select jsonb_build_object('tours','[]') $$;\n"
+         "select public.refresh_catalog_snapshot();", 1),
+    ]
+    for name, sql, expected in audit_cases:
+        with tempfile.TemporaryDirectory() as d:
+            os.makedirs(Path(d) / "backend")
+            (Path(d) / "backend" / "case.sql").write_text(sql)
+            got = len(audit_migration_files(Path(d)))
+        ok = got == expected
+        print(f"  {'PASS' if ok else 'FAIL'}  {name}  (expected {expected} problems, got {got})")
+        if not ok:
+            failed += 1
+
+    total = len(cases) + len(audit_cases)
+    print(f"\n{total - failed}/{total} self-tests passed")
     return 1 if failed else 0
 
 
@@ -207,6 +255,41 @@ def fetch() -> dict:
         sys.exit(2)
 
 
+def snapshot_age() -> str | None:
+    """When the materialised catalog was last rebuilt, or None.
+
+    Staleness is the one failure mode `catalog_snapshot.sql` introduces: the
+    payload is now only as fresh as the last `refresh_catalog_snapshot()`, so
+    a seed that upserts rows and never refreshes leaves every phone reading
+    yesterday's catalog with nothing erroring. Reporting it on every run is
+    what makes that visible.
+
+    Soft by design — a database that predates the migration has no such
+    function, and that is not a failure.
+    """
+    root = Path(__file__).resolve().parent.parent
+    cfg = (root / "TRAVEL GUIDED TOUR" / "Data" / "SupabaseConfig.swift").read_text()
+    import re
+    key = re.search(r"sb_publishable_[A-Za-z0-9_-]+", cfg)
+    host = re.search(r"https://([a-z0-9]+)\.supabase\.co", cfg)
+    if not key or not host:
+        return None
+    proc = subprocess.run(
+        ["curl", "-s", "-X", "POST",
+         f"https://{host.group(1)}.supabase.co/rest/v1/rpc/catalog_snapshot_age",
+         "-H", f"apikey: {key.group(0)}",
+         "-H", "Content-Type: application/json", "-d", "{}"],
+        capture_output=True, text=True,
+    )
+    if proc.returncode != 0:
+        return None
+    try:
+        v = json.loads(proc.stdout)
+    except json.JSONDecodeError:
+        return None
+    return v if isinstance(v, str) else None
+
+
 def main() -> int:
     if "--selftest" in sys.argv:
         return selftest()
@@ -217,6 +300,11 @@ def main() -> int:
     print(f"live catalog: {len(catalog.get('tours', []))} tours, "
           f"{len(catalog.get('makers', []))} makers, "
           f"{len(catalog.get('places', []))} places")
+    age = snapshot_age()
+    if age:
+        print(f"catalog snapshot last refreshed: {age}")
+    else:
+        print("catalog snapshot: not in use (built per request)")
     if problems:
         print("\nFAIL — the catalog is missing things the app decodes:\n")
         for p in problems:
