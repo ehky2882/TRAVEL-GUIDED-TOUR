@@ -82095,6 +82095,71 @@
         "cafa79ed-4c0f-5f19-b4f2-b9901523eddf",
         "927CAC1D-086D-5F41-BAD0-59AAC66EDBE3"
       ]
+    },
+    {
+      "id": "550ec638-e87c-5f72-9704-fc2ade2dc097",
+      "name": "Alcatraz",
+      "description": "A twenty-two acre sandstone island a mile and a half offshore, fortified in the 1850s to guard the Golden Gate and used as a military prison long before it held anyone famous. From 1934 to 1963 it took the federal prisoners other prisons could not hold — Al Capone among them — until salt air, ferried-in fresh water and running costs closed it. In 1969 the activists of Indians of All Tribes occupied the island for nineteen months, a turning point in the Native American movement still marked here each Thanksgiving by a sunrise ceremony. The cell house, the gardens the prisoners planted and the graffiti of the occupation all survive.",
+      "latitude": 37.8267,
+      "longitude": -122.423,
+      "city": "San Francisco",
+      "address": "Alcatraz Island, San Francisco",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alcatraz_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "b5bdf103-b4f5-4a48-b15e-7ad1129ac768",
+        "EC2E0DC6-E2D5-56B7-8D86-BE579815C55A",
+        "ECADE604-A893-50A4-8F19-6DB1ED58A7A4",
+        "02B220CB-274C-538D-A8CD-701AB2681643"
+      ]
+    },
+    {
+      "id": "4e0ecdcd-7b06-5822-947f-86333a8ee1e7",
+      "name": "Hoover Dam",
+      "description": "The Boulder Canyon Project Act of 1928 settled how seven states would divide the Colorado and authorised a dam big enough to make the division mean something. Work began in Black Canyon in 1931 and finished in 1936, ahead of schedule, in conditions that killed men. The arch-gravity wall wedged between the canyon walls holds back Lake Mead, turns the river into stored water and electricity for the Southwest, and carries the Nevada–Arizona line across its crest. It is still among the most-visited public works in the country.",
+      "latitude": 36.0160625,
+      "longitude": -114.7376875,
+      "city": "Boulder City",
+      "address": "Hoover Dam Access Road, Boulder City",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hoover-dam-today-itshistoryonair_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F79AB9E1-0364-5547-B10D-38BEA5E41233",
+        "461B1667-A1EC-5251-85CC-20CCE56BE64D",
+        "1E2B6A27-2BA4-501F-B64C-D7CC1B9BA482"
+      ]
+    },
+    {
+      "id": "6166b613-d126-5ae9-9c03-4240b2b9c1c6",
+      "name": "Fort Jefferson",
+      "description": "A hexagonal brick fortress covering almost the whole of Garden Key, seventy miles west of Key West, begun in 1846 to command the shipping lanes into the Gulf. Every brick, every barrel of cement and every worker came by sea. Thirty years of building never finished it: the foundations settled, the walls cracked, and rifled artillery made masonry forts obsolete while this one was still going up. It served instead as a prison — Samuel Mudd was held here after Lincoln's assassination — and is now the centre of Dry Tortugas National Park, reachable only by boat or seaplane.",
+      "latitude": 24.6286875,
+      "longitude": -82.8731875,
+      "city": "Dry Tortugas",
+      "address": "Garden Key, Dry Tortugas National Park",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/building-fort-jefferson-itshistoryonair_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "74D6F61F-531F-59D8-BE39-676F7DB79E4C",
+        "79A6CAB8-BE28-5930-BC60-298262CB33CC",
+        "622F2255-C13E-5797-9D6D-18B5D778F645"
+      ]
+    },
+    {
+      "id": "1c12befc-3f17-53dd-aee1-5a839196036e",
+      "name": "Leaning Tower of Niles",
+      "description": "A half-scale copy of the campanile at Pisa, arcades and lean included, standing on a suburban avenue outside Chicago. The industrialist Robert Ilg put it up in 1934 as the centrepiece of a private recreation park for his company's employees, and it did real work: the tower hid the water tanks that fed the park's swimming pools. The park went, the tower stayed. Decades of Illinois winters got into the concrete before a restoration in the 1990s, and Niles has been twinned with Pisa ever since.",
+      "latitude": 42.0124375,
+      "longitude": -87.7840625,
+      "city": "Niles",
+      "address": "6300 West Touhy Avenue, Niles",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leaning-tower-niles-today-itshistoryonair_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "E35F494D-226E-593E-B87B-5894864085C2",
+        "553DFF50-75CB-5ED7-9A1D-DB499EB431AC",
+        "90CBBC49-A54B-50CB-B660-697281CBBD44"
+      ]
     }
   ],
   "linkPins": [
@@ -139422,8 +139487,8 @@
           "order": 0,
           "title": "Alcatraz Before It Was a Prison",
           "caption": "Secrets Unveiled: Alcatraz Before It Was a Prison! 🗝️ Swipe left to explore the hidden past. Right now, it's a free journey back in time to ",
-          "latitude": 37.8266875,
-          "longitude": -122.4230625,
+          "latitude": 37.8267,
+          "longitude": -122.423,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -139435,8 +139500,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.8266875,
-      "centroidLongitude": -122.4230625,
+      "centroidLatitude": 37.8267,
+      "centroidLongitude": -122.423,
       "city": "San Francisco",
       "country": "United States",
       "primaryCategory": "history",
@@ -139469,8 +139534,8 @@
           "order": 0,
           "title": "How Alcatraz Became a Prison",
           "caption": "Transformation Tale: How Alcatraz Became a Prison! 🏰➡️🚔 Swipe left to witness the metamorphosis. Check out the free tour and discover the ev",
-          "latitude": 37.8266875,
-          "longitude": -122.4230625,
+          "latitude": 37.8267,
+          "longitude": -122.423,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -139482,8 +139547,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.8266875,
-      "centroidLongitude": -122.4230625,
+      "centroidLatitude": 37.8267,
+      "centroidLongitude": -122.423,
       "city": "San Francisco",
       "country": "United States",
       "primaryCategory": "history",
@@ -139516,8 +139581,8 @@
           "order": 0,
           "title": "The Downfall of Alcatraz",
           "caption": "The Rise and Fall: Downfall of Alcatraz! 📉 Swipe left to witness the dramatic chapter. Right now, unravel the events that led to the fall of",
-          "latitude": 37.8266875,
-          "longitude": -122.4230625,
+          "latitude": 37.8267,
+          "longitude": -122.423,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -139529,8 +139594,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.8266875,
-      "centroidLongitude": -122.4230625,
+      "centroidLatitude": 37.8267,
+      "centroidLongitude": -122.423,
       "city": "San Francisco",
       "country": "United States",
       "primaryCategory": "history",
