@@ -25,6 +25,15 @@ sitting **on** the anon role's statement timeout, so ordinary variance decides e
 ⚠️ **My first two readings were each one sample of a flapping signal** — reported first as "down",
 then as "recovered". Neither was right. **Sample a flapping endpoint before characterising it.**
 
+🔴 **AND A LATER 8-SAMPLE WINDOW CAME BACK 8/8 CLEAN — THAT IS NOT A CONTRADICTION, AND A FUTURE
+READER WILL THINK IT IS.** Re-sampled at 13:15 while this PR's CI ran: **8 ok / 0 fail**, latencies
+**2.2–4.9s** — *the identical band as the failing run*. Nothing improved; the query still sits on
+the timeout and simply did not cross it in eight tries. **A clean window is the expected behaviour
+of a 33%-failure endpoint** (0.67⁸ ≈ 4%, so it is uncommon but unremarkable), and it is exactly the
+reading that would tempt someone to close this as "cannot reproduce". **The latency band, not the
+pass/fail count, is what says whether this is fixed** — after the migration it should be a
+sub-second lookup, and anything still measured in seconds means the snapshot is not being served.
+
 **The database is healthy** — light reads on `tours` / `places` / `makers` return 200 in 0.25–0.9s.
 It is `get_catalog` specifically.
 
