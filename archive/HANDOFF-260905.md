@@ -242,10 +242,15 @@ sourceURL, ids and hero filenames afterwards.
 
 ## Open for the owner
 
-1. **AMFA is four markers deep** — past `TourSetMap.maxStacked`. Make it a place, or drop one
-   of the four?
-2. **The Gilder Center is three deep with no headroom** — same question, and it would fold in
-   two pins that are already live.
-3. **The four non-photograph heroes** — keep or pull? The AMFA plan diagram is the one that
-   renders as an abstract graphic on the map.
-4. **11 Hoyt's `city`** — `Brooklyn` as shipped, or `New York` to match the dominant convention?
+⚠️ **THREE OF THESE FOUR ARE NOW SETTLED — see `archive/HANDOFF-260905-3.md`.** Only #2, the
+Gilder Center, and #3, the heroes, are still open.
+
+1. ✅ **AMFA is four markers deep** — past `TourSetMap.maxStacked`. **CLOSED 2026-09-05: the owner
+   made it a place** (*"Make places for all suggested"*). The cap no longer applies.
+2. 🟡 **The Gilder Center is three deep with no headroom** — STILL OPEN. Same question, and it
+   would fold in two pins that are already live.
+3. 🟡 **The four non-photograph heroes** — STILL OPEN, keep or pull? The AMFA plan diagram is the
+   one that renders as an abstract graphic on the map.
+4. ✅ **11 Hoyt's `city`** — **CLOSED 2026-09-05: `Brooklyn`, as shipped** (owner: *"11 hoyt is
+   Brooklyn"*). Do not normalise it to `New York`; a future consistency sweep will flag it again
+   and it is settled.
