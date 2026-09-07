@@ -78,8 +78,13 @@ business being in a coordinate-only change. Two hard post-conditions now sit in 
 - **every member's centroid mirrors its stop.**
 
 And because the harness below confirms the mirror misses it, the property is now **asserted
-directly** — on the three members (0 drift) and **catalogue-wide across all 2,830 single-stop
+directly** — on the three members (0 drift) and **catalogue-wide across all 2,758 single-stop
 entries (0 drift)**.
+
+⚠️ **2,830 is the TOTAL entry count, not the single-stop one.** 2,758 entries carry one stop; the
+other 72 are walks, where a centroid legitimately differs from stop 0 and this rule does not apply.
+An earlier revision of this file said "2,830 single-stop entries" — the finding was right, the label
+was not, and it is exactly the kind of number a later session quotes.
 
 ---
 
@@ -214,13 +219,49 @@ was re-run on the moved base anyway** rather than assumed: mirror **27/27 then 0
 **346 / 2,830 / 3,202 / 130**. The docs were then written against `main`'s versions, not the
 pre-merge ones.
 
+---
+
+## ✅ Merged, and verified against the live systems
+
+**[#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744) merged** (squash `f6c1815e`) on
+green CI — **Validate Tours.json** (the authoritative Swift validator), **Build (iOS Simulator)** and
+**Run unit tests**, all three. The squash was then **checked to carry real content** — 372 insertions
+/ 10 deletions across 6 files — because "Pull Request successfully merged" is not evidence anything
+landed (#629 shipped an empty commit under exactly that line).
+
+`Publish catalog` run 194 completed **success** in under three minutes, and only then was the live
+check run. **The Supabase RPC — the source the app reads FIRST — and the gh-pages mirror each serve
+130 places**, with The Gilder Center present, its **three members all on the place coordinate**,
+**0** members off their place coordinate catalogue-wide, and **0** link pins wrongly inside `tours`.
+Session-99 dropped-key check clean (`priceTier` 1,553 · `isPrivate` 368 · `country` 1,552).
+
+⚠️ **Two count differences that are both correct and both worth recognising on sight.** The RPC
+reads **1,553 tours / 368 makers** against the catalogue's 1,552 / 346 — the documented `Zxxx` test
+tour plus upsert-only maker accumulation, so **assert on link-pin counts (1,278, exact), never on
+maker totals**. And the **mirror reports `priceTier` and `isPrivate` at 0**, which is *not* a dropped
+key: both live only in Postgres by design, so a content re-seed can never wipe pricing.
+
 ### Owner action, unblocked and ordered
 
 ⚠️ **`backend/catalog_snapshot.sql` still needs the owner to paste it.** The merge landed first, so
 the ordering hazard is already satisfied — the paste is now safe.
-🔴 **Read the LATENCY, not a pass/fail count.** `get_catalog()` should return in well under a
-second; a 33%-failure endpoint comes back 8/8 clean about **4% of the time**, which is exactly how
-this gets closed as "cannot reproduce" by a later session. It already did once.
+
+🔴 **Read the LATENCY, not a pass/fail count** — and this session is the worked example. The RPC
+answered **200 on the first attempt, in 4.7 s**. One clean sample proves nothing: a 33%-failure
+endpoint comes back 8/8 clean about **4% of the time**, which is exactly how this gets closed as
+"cannot reproduce" by a later session. It already did once. **Seconds means the snapshot is not
+being served** — after the migration `get_catalog()` should be a sub-second lookup. Corroborated
+independently by `scripts/check-catalog-keys.py`, which reports **"catalog snapshot: not in use
+(built per request)"** beside its 130 places.
+
+### ⚠️ A monitor that watched for the publish job stayed silent through its own success
+
+The poll loop shelled `curl` at `api.github.com` and matched on `"completed *"`. It emitted nothing
+for fifteen minutes while the run finished in under three, because **`curl` to `api.github.com`
+returns a JSON error body from this container** — a trap already recorded in `CLAUDE.md` from
+session 99 — so the parse yielded a string no branch matched and the loop slept on. **Silence read
+as "still running".** Poll GitHub through the MCP tools; if a poll loop must be shelled, emit on
+*every* terminal state **and on the unrecognised case**, never only on success.
 
 **[#743](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/743)** (docs-only, same parallel
 session) records that on the board.

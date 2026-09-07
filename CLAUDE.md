@@ -159,7 +159,11 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
   post-conditions — **no member gains or loses a top-level key** (the key set is taken from an
   untouched pin) and **every member's centroid mirrors its stop** — and because the fault harness
   below confirms the mirror still misses it, the property is **asserted directly**: 0 drift on the
-  three members and **0 drift catalogue-wide across all 2,830 single-stop entries**.
+  three members and **0 drift catalogue-wide across all 2,758 single-stop entries**. ⚠️ **2,830 is
+  the TOTAL entry count, not the single-stop one** — 2,758 of those carry one stop and the other 72
+  are walks, where a centroid legitimately differs from stop 0 and the rule does not apply. An
+  earlier revision of this line said "2,830 single-stop entries"; the finding was right and the
+  label was not.
 - **✅ THE ANCHOR WAS PROVED, NOT ASSUMED, AND ONE MEMBER DID NOT MOVE AT ALL.**
   `40.7815797, -73.9746411` is **OSM node `10172954431`** — the forward geocode returns it at
   **0.0 m** and the reverse names the building exactly. All three markers had independently converged
@@ -226,6 +230,26 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
   the hero is now used exactly twice, in its own pin and as the place hero, which is the documented
   tier-1 shape rather than a collision. ⚠️ **Nothing compiled locally — CI on the PR is the only
   compile check a Linux web session gets.**
+- **✅ MERGED as [#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744) (squash `f6c1815e`),
+  and VERIFIED AGAINST THE LIVE SYSTEMS rather than the merge's success line.** All three CI jobs
+  green (Validate Tours.json, Build (iOS Simulator), Run unit tests), and the squash was **checked
+  to carry real content** — 372 insertions / 10 deletions across 6 files — after #629's
+  empty-commit lesson. The **Supabase RPC, which the app reads FIRST**, serves **130 places** with
+  The Gilder Center present, its **3 members all on the place coordinate**, **0** members off their
+  place coordinate catalogue-wide and **0** link pins wrongly inside `tours`; the gh-pages mirror
+  converged to the same. Session-99 dropped-key check clean on that payload (`priceTier` 1,553,
+  `isPrivate` 368, `country` 1,552). ⚠️ **The RPC reads 1,553 tours / 368 makers against the
+  catalogue's 1,552 / 346** — the documented `Zxxx` test tour and upsert-only maker accumulation;
+  **assert on link-pin counts (1,278, exact), never on maker totals.** ⚠️ **The mirror reports
+  `priceTier` and `isPrivate` at 0 and that is CORRECT, not a dropped key** — both live only in
+  Postgres by design, so a content re-seed can never wipe pricing.
+- **🔴 THE RPC ANSWERED IN 4.7 s, WHICH IS THE READING THAT MATTERS: #742's SQL IS STILL UNPASTED.**
+  It came back **200 on the first attempt**, and a pass/fail count is exactly the wrong signal here —
+  a 33%-failure endpoint returns clean often enough to be closed as *"cannot reproduce"*. **The
+  latency band is the signal**: after the migration `get_catalog()` should be a sub-second lookup, so
+  *seconds* means the snapshot is not being served. Corroborated independently by
+  `scripts/check-catalog-keys.py`, which reports **"catalog snapshot: not in use (built per
+  request)"** alongside its 130 places and *"every key the app decodes is present"*.
 - **⚠️ `main` MOVED MID-SESSION AND EVERY CHECK WAS RE-RUN ON THE MOVED BASE.**
   [#742](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/742) merged (squash `9eaabdd1`) while
   this was being verified, touching **9 files including `backend/seed_from_toursjson.py` and every
