@@ -444,7 +444,7 @@ for. Content plus one line of developer tooling — no Swift, no SQL, no gh-page
   duration); the harness counts **errors AND warnings** and reads `check()`'s **`(errors, warnings)`
   tuple**, injecting **in memory**. `Tours.json` **byte-stable under a Python re-dump before AND after
   editing**. 🎉 **`check-place-candidates.py` output is BYTE-IDENTICAL before and after at 22 EXACT /
-  62 NEAR** — correct, and worth understanding: the pin moved *between two coordinates the checker
+  61 NEAR** — correct, and worth understanding: the pin moved *between two coordinates the checker
   already ignores because both carry a place*, so no group is created and none resolved.
   `seed_from_toursjson.py` clean at **350 / 2,858 / 3,230 / 130**; **0 `images//`** in the catalogue
   *or* the SQL. ⚠️ **`check-image-duplicates.py` was deliberately NOT run and that is not a gap** — no

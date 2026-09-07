@@ -367,10 +367,12 @@ never a green seed job.** (Independently found by the session behind
 - `Tours.json` **byte-stable under a Python re-dump before AND after editing**. The builder asserts
   **no member gains or loses a top-level key**, that only the expected fields differ, and that
   exactly the two intended places changed.
-- 🎉 **`check-place-candidates.py` output is BYTE-IDENTICAL before and after at 22 EXACT / 62
+- 🎉 **`check-place-candidates.py` output is BYTE-IDENTICAL before and after at 22 EXACT / 61
   NEAR.** ⚠️ **That is the correct result and worth understanding rather than being alarmed by:**
   the pin moved *between two coordinates the checker already ignores, because both carry a place*,
-  so no group is created and none resolved.
+  so no group is created and none resolved. ⚠️ **The BASELINE moved and the delta did not** — this
+  first read 22 / **62**, and [#743](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/743)
+  merged one NEAR pair away underneath it. **Re-derive rather than quoting either figure.**
 - `seed_from_toursjson.py` clean at **350 / 2,858 / 3,230 / 130**; **0 `images//`** in the catalogue
   *or* the SQL.
 - ⚠️ **`check-image-duplicates.py` was deliberately NOT run and that is not a gap** — no image was
