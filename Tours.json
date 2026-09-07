@@ -81716,7 +81716,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "DE843F19-0B48-5E12-8066-B866F2E57C09",
-        "0860A5E3-BFE8-596B-9E24-F9919ECCE1EF"
+        "0860A5E3-BFE8-596B-9E24-F9919ECCE1EF",
+        "7D85FABB-3640-5E25-B5C4-BE30A88DD9B6"
       ]
     },
     {
@@ -139186,8 +139187,8 @@
           "order": 0,
           "title": "Inside the Abandoned Eastern State Penitentiary",
           "caption": "The Abandoned Prison That Still Haunts Philadelphia-Eastern State Penitentiary 🚓🚨 We explore the abandoned Eastern State Penitentiary, a his",
-          "latitude": 39.9683125,
-          "longitude": -75.1726875,
+          "latitude": 39.9683406,
+          "longitude": -75.1726626,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -139199,8 +139200,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 39.9683125,
-      "centroidLongitude": -75.1726875,
+      "centroidLatitude": 39.9683406,
+      "centroidLongitude": -75.1726626,
       "city": "Philadelphia",
       "country": "United States",
       "primaryCategory": "history",
