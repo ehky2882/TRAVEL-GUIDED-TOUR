@@ -327,7 +327,10 @@ repeatedly and its three new place-mates all carry **`Jeanne Gang` + `Designed b
 gap is **pre-existing on `main`** and predates this move; the owner asked for a move, not a retag.
 One line each closes it if wanted.
 
-### 🔴 #742's SQL is still unpasted — and this is now proved hard, not inferred
+### 🔴 #742's SQL was unpasted when probed — ✅ and was applied an hour later, which is the lesson
+
+⚠️ **Read the correction at the end of this section before quoting anything in it.** Everything
+below was true when measured and had expired by merge time.
 
 The 4.7 s latency reading above is an *inference*. Asking the database directly is not, and it was
 probed first-hand this session rather than taken from a parallel session's PR body:
@@ -351,6 +354,35 @@ guard is false, the seed **skips the refresh, raises a notice, and still finishe
 guarded no-op is indistinguishable from a success from the outside — ask `catalog_snapshot_age()`,
 never a green seed job.** (Independently found by the session behind
 [#747](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/747), which carries the board change.)
+
+#### ✅ CORRECTION, same evening — the SQL IS applied, and a probe is not a durable fact
+
+Re-probed immediately before merging, because § READ FIRST says a claim about live state must be
+re-measured rather than carried:
+
+| Probe | Then (this session, earlier) | Now (21:5x UTC, before merge) |
+|---|---|---|
+| `catalog_snapshot_age()` | **404 `PGRST202`** | ✅ **200 — `2026-09-07T21:44:03Z`** |
+| `check-catalog-keys.py` in-use line | *"not in use (built per request)"* | ✅ *"catalog snapshot last refreshed: …"* |
+| `get_catalog()` | **500 × 3 of 3** | ✅ **200 × 4 of 4** |
+
+**The owner pasted it at 21:44 UTC**, between the two probes. The measurement was never wrong; its
+*currency* expired — and this branch would have merged the stale claim on top of the parallel
+correction in [#748](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/748), which is precisely
+the failure § READ FIRST was written after. **Re-probe immediately before landing a live-state
+claim, not when you first draft it.**
+
+⚠️ **It is fixed, not sub-second — and session 146's criterion is too crude to use on its own.**
+That criterion says *"anything still measured in seconds means the snapshot is not being served"*,
+and total time is still **1.2–4.2 s**, which would read as unfixed. But **TTFB is 1.7–3.7 s while
+the entire 10.6 MB body transfers in the remaining 0.3–0.5 s** — the time is in the query, not the
+download, and a 10.6 MB payload was never going to be sub-second end-to-end from this container.
+**Split TTFB from total before judging this endpoint.** The honest reading is *the timeouts are
+gone and the read is still slower than hoped*, which is a different finding from *unfixed*.
+
+⚠️ **`get_catalog_built()` still returns a 500 statement timeout, and that is EXPECTED, not a
+regression** — it is the old slow builder, deliberately kept and now called once per seed rather
+than once per request. Do not report it as a fault.
 
 ### Verification
 

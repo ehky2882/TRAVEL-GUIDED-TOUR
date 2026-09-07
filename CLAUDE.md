@@ -132,9 +132,10 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 ### Twenty-eight link pins across fourteen countries, eleven of them new, and two coordinates that only LOOKED wrong (branch `claude/tour-links-6l4xq1`, session 147 — content)
 
 **The owner sent 29 lines under three loose headings; one TikTok is pasted twice, so 28 distinct
-posts ship.** Opened as [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745) — content-only, so the auto-merge class. **linkPins 1,278 → 1,306 · makers 346 → 350 · `tours` and `places` byte-identical.**
+posts ship.** **MERGED as [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745) (squash `45914d1f`)** — content-only, so the auto-merge class. **linkPins 1,278 → 1,306 · makers 346 → 350 · `tours` and `places` byte-identical.**
 Content plus one developer-tooling file (`scripts/validate-tours-mirror.py`, which does not ship in
-the app). No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF-260907.md`.
+the app). No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF-260907-2.md`
+⚠️ (written as `-260907`, renumbered on an add/add collision with #744).
 
 - **🎉 ELEVEN NEW COUNTRIES — THE LARGEST EXPANSION ANY BATCH HAS PRODUCED, against a previous
   record of three.** **47 → 58 countries and 367 → 389 cities**, re-derived over `tours` **and**
@@ -226,6 +227,29 @@ the app). No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF
   🔴 **`check-image-duplicates.py --pins` was run AFTER the deploy** (the session-135 false-pass lesson): **`OK — no suspicious duplicates`** over **1,301 images** (1,301 for 1,306 pins is the documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors / 208 documented reuses** — identical to the recorded baseline.
   ⚠️ **Nothing compiled locally — CI on the PR is the only
   compile check a Linux web session gets.**
+- **✅ VERIFIED AGAINST THE LIVE SYSTEMS AFTER THE MERGE, not against its success line.** All three
+  CI jobs green on the merge head `08342e6b`; the squash was **checked against `main` for real
+  content** (the #629 empty-commit lesson) at **1,683 insertions across 7 files**. The Supabase RPC
+  — the source the app reads **first** — serves **`linkPins` 1,306 / `places` 130** with **0 pins
+  wrongly inside `tours`**, and the gh-pages mirror serves the same at **1,552 / 1,306 / 350 / 130**.
+  Session-99 dropped-key check clean on that payload (`priceTier` 1,553 with 66 priced, `isPrivate`
+  372, `country` 1,552, `videoRole` 1,553). ⚠️ **The RPC reads 1,553 tours / 372 makers against the
+  catalogue's 1,552 / 350** — the documented `Zxxx` test tour and upsert-only maker accumulation;
+  **assert on link-pin counts, never on maker totals.**
+- **🔴 THE CATALOG RPC WAS STILL TIMING OUT WHEN THIS WAS MEASURED — ⚠️ SUPERSEDED, the SQL was
+  pasted at 21:44 UTC the same evening and `get_catalog()` now answers 200 on 4 of 4; see the
+  re-probe under the Gilder Center entry below.** Left as recorded because the measurement was
+  sound and only its *currency* expired. As measured here, not inherited from the board:
+  `backend/catalog_snapshot.sql` is an **owner paste**, and at that moment it had
+  not been run: `catalog_snapshot_age()` and `get_catalog_built()` both return **404 `PGRST202`** on
+  the live database, so `get_catalog()` is still the old builder — and it still failed **2 of 5
+  spaced calls** with **`500 / 57014 statement timeout`**. ⚠️ **A content merge cannot apply it for
+  you, and that is by design**: the seed's refresh call is guarded by
+  `to_regprocedure('public.refresh_catalog_snapshot()')`, so the seed succeeds, raises a notice and
+  leaves the slow path in place — which is exactly why this batch's content is live while the
+  timeouts continue. ✅ **The ordering gate has cleared** (#742 merged first, as its own note
+  required), so the paste is safe now. Users are not broken meanwhile — the app falls through to the
+  gh-pages mirror — but it does so on roughly a third of launches.
 - **⚠️ `main` MOVED TWICE MID-SESSION, and the second one genuinely conflicted.**
   [#742](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/742) landed the **catalog
   materialisation** while this batch was being validated; it **does not touch `Tours.json`**, so the
@@ -387,6 +411,25 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
     `catalog_snapshot_age()`, never a green seed job.** (Independently found by the session behind
     [#747](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/747), which carries the board change;
     the probe above is this session's own, not theirs.)
+  - ✅ **SUPERSEDED THE SAME EVENING — THE SQL IS APPLIED, AND THIS IS THE READ-FIRST RULE PAYING FOR
+    ITSELF.** Both probes above were true when taken; the state changed under them. The owner pasted
+    `backend/catalog_snapshot.sql` at **21:44 UTC**, between the 404s and a re-probe run before
+    merging. Re-measured, not inferred: **`catalog_snapshot_age()` → 200 with a timestamp**
+    (`2026-09-07T21:44:03Z`), and **`check-catalog-keys.py`'s own verdict flipped** from *"not in use
+    (built per request)"* to *"catalog snapshot last refreshed: …"* — that tool's in-use line is the
+    cheapest one-command check. **The timeouts are gone: `get_catalog()` returned 200 on 4 of 4**
+    spaced calls, against 3 of 3 **500s** an hour earlier.
+    ⚠️ **BUT IT IS NOT SUB-SECOND, AND SESSION 146'S "SECONDS MEANS NOT SERVED" CRITERION IS TOO
+    CRUDE TO USE ON ITS OWN.** Total time is 1.2–4.2 s — which that criterion would read as *still
+    broken* — but **TTFB is 1.7–3.7 s while the whole 10.6 MB body transfers in the remaining
+    0.3–0.5 s**, so the time is in the query, not the download, and a 10.6 MB payload was never going
+    to be sub-second end-to-end from here anyway. **Split TTFB from total before judging this
+    endpoint**; the honest reading is *fixed, and still slower than hoped*, not *unfixed*.
+    🔴 **THE DURABLE LESSON IS THE ONE § READ FIRST STATES: a probe is a MEASUREMENT WITH A
+    TIMESTAMP, not a durable fact.** Mine was hours old at merge time and would have shipped as
+    current. **Re-probe immediately before landing any claim about live state** — the parallel
+    session behind [#748](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/748) had it right and
+    this branch would otherwise have overwritten their correction with stale text.
 - **⚠️ `main` MOVED MID-SESSION AND EVERY CHECK WAS RE-RUN ON THE MOVED BASE.**
   [#742](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/742) merged (squash `9eaabdd1`) while
   this was being verified, touching **9 files including `backend/seed_from_toursjson.py` and every
