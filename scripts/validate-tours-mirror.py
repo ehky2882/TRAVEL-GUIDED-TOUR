@@ -1,6 +1,7 @@
 """A Python mirror of scripts/validate-tours.swift — for Linux web sessions.
 
     python3 scripts/validate-tours-mirror.py        # selftest, then the catalogue
+    python3 scripts/validate-tours-mirror.py --out run.txt   # stamped report file
 
 ⚠️ THIS IS A STAND-IN, NOT THE AUTHORITY. `scripts/validate-tours.swift` is what
 CI runs and what decides; this exists because a Linux web session has no Swift
@@ -21,6 +22,9 @@ Two disciplines make it worth anything at all:
   2. It is self-tested against injected faults before its verdict is believed.
 """
 import json, os, re, sys, math
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
 
 ROOT = "."
 TAGSWIFT = f"{ROOT}/TRAVEL GUIDED TOUR/Models/Tag.swift"
@@ -311,16 +315,22 @@ def selftest(facets, vocab, dom):
 
 
 if __name__ == "__main__":
+    # Stamp before any work, so a report can never be mistaken for a fresh one.
+    # Only on the direct-run path: a fault harness that imports this module via
+    # importlib never reaches here, and must not have its argv or streams
+    # touched.
+    _run = runstamp.begin(__file__, out_path=runstamp.pop_out_argument())
     facets, vocab = load_vocab()
     dom = enums()
     print(f"vocabulary: {len(vocab)} tags across {len(facets)} facets; "
           f"enums {[f'{k}:{len(v)}' for k,v in dom.items()]}")
     if not selftest(facets, vocab, dom):
-        print("SELFTEST FAILED — verdict not trustworthy"); sys.exit(2)
+        print("SELFTEST FAILED — verdict not trustworthy"); _run.close(); sys.exit(2)
     cat = json.load(open(CATALOG, encoding="utf-8"))
     e, w = check(cat, facets, vocab, dom)
     print(f"\n{len(e)} errors, {len(w)} warnings across "
           f"{len(cat['tours'])} tours + {len(cat['linkPins'])} pins + {len(cat['places'])} places")
     for x in e[:40]: print("  ERROR:", x)
     for x in w[:40]: print("  WARN :", x)
+    _run.close()
     sys.exit(1 if e else 0)

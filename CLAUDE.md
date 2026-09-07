@@ -9880,6 +9880,22 @@ as pending two days after Rome shipped). Same rule when writing: land a city's t
 via a docs-only PR **as soon as the batch is staged** — not at the end of the city, and never only
 on the staging branch.
 
+## Reading a check's result
+
+🔴 **A check that cannot run must not be able to return a pass.** Three ways that
+has already happened here, and the one habit that closes all three:
+
+| Trap | What it looks like | The habit |
+|---|---|---|
+| **The stale output file** | `sed … && grep -n "<anchor>" f.py && python3 suite.py > out.txt; cat out.txt` — the `grep` matches nothing, the `&&` short-circuits, `python3` **never runs**, and `cat` prints a file left by a run two days ago. It reads exactly like a pass. | **Confirm the stamp on the first line before believing anything under it**, and prefer a checker's own `--out` over shell redirection. Every checker in `scripts/` now prints `RUN <name> · rev <hash> · <UTC timestamp>` first (`scripts/runstamp.py`); `--out PATH` truncates and stamps the file *before* the work starts, so a previous run cannot survive underneath it. A stamped file with no verdict line under it is a run that **died**, not a run that passed. |
+| **`PIPESTATUS`** | `python3 check.py \| tail; echo "EXIT=$?"` reports **tail's** status, so a script that exited 1 reads as 0. | Read the exit code **directly**, never through a pipe — redirect to a file, or use `${PIPESTATUS[0]}`. |
+| **The checker that fetched nothing** | `check-image-duplicates.py` once printed `OK — no suspicious duplicates` having failed every fetch with an SSL error. | A checker that cannot reach the network **exits 2 — COULD NOT VERIFY** and says so; it does not exit 0. Read the counts it prints, not only its verdict (a run reporting 161 images when 173 were uploaded is a finding). |
+
+⚠️ **The 2026-09-07 stale-file case was caught only because the counts happened to
+disagree** — the stale run said 22/22 where the current suite has 20 faults. Had
+they matched, an unverified change would have shipped with an apparent clean bill
+of health. Do not rely on that.
+
 ## Merging PRs
 
 **Auto-merge (squash, no owner approval) — content/docs/assets/CI/test code:**

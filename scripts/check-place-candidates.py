@@ -36,8 +36,12 @@ and a funfair are two subjects. Read them; do not batch-approve them.
 import argparse
 import json
 import math
+import os
 import re
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
 
 DEFAULT_RADIUS_M = 500.0
 
@@ -142,7 +146,11 @@ def scan(doc, radius_m=DEFAULT_RADIUS_M):
     return exact, near
 
 
-def report(doc, radius_m=DEFAULT_RADIUS_M, out=sys.stdout):
+def report(doc, radius_m=DEFAULT_RADIUS_M, out=None):
+    # ⚠️ `out=sys.stdout` as a DEFAULT binds the stream at import time, so it
+    # keeps writing to the real stdout even after `--out` has teed it — the
+    # report would then be missing from its own report file. Resolve it here.
+    out = sys.stdout if out is None else out
     exact, near = scan(doc, radius_m)
 
     if exact:
@@ -279,11 +287,17 @@ def main():
     ap.add_argument("--radius", type=float, default=DEFAULT_RADIUS_M,
                     help=f"NEAR-tier search radius in metres (default {DEFAULT_RADIUS_M:.0f})")
     ap.add_argument("--selftest", action="store_true")
+    runstamp.add_out_argument(ap)
     a = ap.parse_args()
-    if a.selftest:
-        return selftest()
-    with open(a.catalog, encoding="utf-8") as fh:
-        return report(json.load(fh), a.radius)
+    # Stamp before any work, so a report can never be mistaken for a fresh one.
+    run = runstamp.begin(__file__, out_path=a.out)
+    try:
+        if a.selftest:
+            return selftest()
+        with open(a.catalog, encoding="utf-8") as fh:
+            return report(json.load(fh), a.radius)
+    finally:
+        run.close()
 
 
 if __name__ == "__main__":
