@@ -132,7 +132,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 ### Twenty-eight link pins across fourteen countries, eleven of them new, and two coordinates that only LOOKED wrong (branch `claude/tour-links-6l4xq1`, session 147 — content)
 
 **The owner sent 29 lines under three loose headings; one TikTok is pasted twice, so 28 distinct
-posts ship.** **linkPins 1,278 → 1,306 · makers 346 → 350 · `tours` and `places` byte-identical.**
+posts ship.** Opened as [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745) — content-only, so the auto-merge class. **linkPins 1,278 → 1,306 · makers 346 → 350 · `tours` and `places` byte-identical.**
 Content plus one developer-tooling file (`scripts/validate-tours-mirror.py`, which does not ship in
 the app). No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF-260907.md`.
 

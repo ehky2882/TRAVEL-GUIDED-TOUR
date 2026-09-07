@@ -1,7 +1,8 @@
 # HANDOFF — 2026-09-07 (session 147)
 
 **Twenty-eight link pins across fourteen countries; eleven of them new to the catalogue.**
-Branch `claude/tour-links-6l4xq1`. Content plus one developer-tooling file
+Branch `claude/tour-links-6l4xq1`, opened as [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745).
+Content plus one developer-tooling file
 (`scripts/validate-tours-mirror.py` — it does not ship in the app). No Swift, no SQL, no place
 created, no build.
 
