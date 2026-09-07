@@ -82225,6 +82225,22 @@
         "05FA7AE7-7A50-5089-973B-9D037D02C66D",
         "5AD55350-B56A-5CAC-9016-63A475BAA10F"
       ]
+    },
+    {
+      "id": "c0ffe02e-e5f7-51a7-a445-9ae80f5ac40d",
+      "name": "The Gilder Center",
+      "description": "Studio Gang's 230,000-square-foot addition to the American Museum of Natural History, open to the public since 4 May 2023. The atrium is the reason to come: concrete shaped into curved, cave-like walls and cut through with irregular openings at every level, bridges crossing the gap, daylight dropping from skylights overhead — closer to a slot canyon than a museum lobby. The building was conceived as connective tissue rather than an object, stitching together a campus that had accumulated for more than 150 years across four city blocks, and giving it a new public entrance.",
+      "latitude": 40.7815797,
+      "longitude": -73.9746411,
+      "city": "New York",
+      "address": "200 Central Park West, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gilder-center-canyon-studiogang_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F6857284-A052-5B3E-91C7-47805AE552C0",
+        "D24A34C4-2858-5C4E-A2B1-6C1AA07F8EAE",
+        "E6823469-29CB-5B09-AA79-F2D9550D7DAF"
+      ]
     }
   ],
   "linkPins": [
@@ -126383,8 +126399,8 @@
           "order": 0,
           "title": "The Gilder Center",
           "caption": "Episode 2 • Exploration • Gilder Center Why do some spaces make us want to explore them? Part of it comes down to how we process information",
-          "latitude": 40.78158,
-          "longitude": -73.974641,
+          "latitude": 40.7815797,
+          "longitude": -73.9746411,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -126396,8 +126412,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.78158,
-      "centroidLongitude": -73.974641,
+      "centroidLatitude": 40.7815797,
+      "centroidLongitude": -73.9746411,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -137624,8 +137640,8 @@
           "order": 0,
           "title": "The Gilder Center Canyon",
           "caption": "The countdown begins! Our Gilder Center for Science, Education, and Innovation at @amnh will open to the public on February 17, 2023. The 23",
-          "latitude": 40.78158,
-          "longitude": -73.974641,
+          "latitude": 40.7815797,
+          "longitude": -73.9746411,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -137637,8 +137653,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.78158,
-      "centroidLongitude": -73.974641,
+      "centroidLatitude": 40.7815797,
+      "centroidLongitude": -73.9746411,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
