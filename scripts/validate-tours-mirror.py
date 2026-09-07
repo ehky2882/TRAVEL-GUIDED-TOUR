@@ -204,6 +204,11 @@ def check(cat, facets, vocab, dom):
         if e["kind"] == "link" and e.get("totalDurationSeconds", 0) != 0:
             errors.append(f"{t}: kind 'link' must have totalDurationSeconds 0, "
                           f"got {e.get('totalDurationSeconds')}")
+        # validate-tours.swift:553-554 — a link pin's stop must be `manual`; a
+        # geofenced one would ask the app to fire audio a link pin does not have.
+        if e["kind"] == "link" and stops and stops[0].get("triggerMode") != "manual":
+            errors.append(f"{t}: kind 'link' requires its stop to be triggerMode "
+                          f"'manual', got '{stops[0].get('triggerMode')}'")
         # validate-tours.swift:683-685 — the centroid must sit inside the stops'
         # bounding box with ~1km slop. A WARNING there, so a warning here.
         if stops:
@@ -263,6 +268,7 @@ def selftest(facets, vocab, dom):
     case("duplicate tour id",      lambda c: c["linkPins"][1].__setitem__("id", c["linkPins"][0]["id"]))
     case("duplicate stop id",      lambda c: c["linkPins"][1]["stops"][0].__setitem__("id", c["linkPins"][0]["stops"][0]["id"]))
     case("bad triggerMode",        lambda c: c["linkPins"][0]["stops"][0].__setitem__("triggerMode", "geofence"))
+    case("link pin not manual",    lambda c: c["linkPins"][0]["stops"][0].__setitem__("triggerMode", "geofenced"))
     case("bad kind",               lambda c: c["linkPins"][0].__setitem__("kind", "linkpin"))
     case("link pin: invalid sourceURL",
          lambda c: c["linkPins"][0].__setitem__("sourceURL", "not a url"))
