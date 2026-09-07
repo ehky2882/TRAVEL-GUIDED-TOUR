@@ -129,6 +129,124 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-09-07)
 
+### Twenty-eight link pins across fourteen countries, eleven of them new, and two coordinates that only LOOKED wrong (branch `claude/tour-links-6l4xq1`, session 147 — content)
+
+**The owner sent 29 lines under three loose headings; one TikTok is pasted twice, so 28 distinct
+posts ship.** Opened as [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745) — content-only, so the auto-merge class. **linkPins 1,278 → 1,306 · makers 346 → 350 · `tours` and `places` byte-identical.**
+Content plus one developer-tooling file (`scripts/validate-tours-mirror.py`, which does not ship in
+the app). No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF-260907.md`.
+
+- **🎉 ELEVEN NEW COUNTRIES — THE LARGEST EXPANSION ANY BATCH HAS PRODUCED, against a previous
+  record of three.** **47 → 58 countries and 367 → 389 cities**, re-derived over `tours` **and**
+  `linkPins` together (the trap sessions 118 and 119 both fell into). New: **Turkmenistan ·
+  Madagascar · Yemen · Peru · Jordan · Uzbekistan · Turkey · Afghanistan · Singapore · Tunisia ·
+  Mongolia.** ⚠️ The base figures moved under this batch mid-session — **re-derive rather than
+  quoting them.**
+- **✅ ALL 28 ALIVE, 0 ALREADY PINNED, 0 `/photo/` CAROUSELS, 4 NEW MAKER ROWS.** 21 Instagram
+  embeds returned **263–272 KB with `contextJSON` present**, against **three already-live catalogue
+  pins fetched in the same pass with the same UA** at 265–267 KB; the 7 TikTok oEmbeds all returned
+  a full payload. **`TikTok @itshistoryonair` already existed and the uuid5 scheme reproduced its id
+  field-for-field**, so those 7 merged rather than duplicating; the four new rows are Instagram and
+  all ship `avatarURL: null` by design, so **28 files cover 28 pins**. Creators: `@iamlamlammm` 14 ·
+  `@itshistoryonair` 7 · `@historyinsider_hk` 5 · `@travpholer` 1 · `@shabnamnasimi` 1.
+- **⚠️ THE HEADING WAS LOOSE FOR THE FIFTH BATCH RUNNING, and the payload named a fifth creator.**
+  `Da-egbhlU76` sits inside the "Iamlamlam" block and is **`@travpholer`** (the Göbekli Tepe post).
+  **Read the payload, not the heading** (the session-135 rule).
+- **🔴 ONE COORDINATE WAS IN OPEN WATER AND MOVED 69 km.** The Uros floating-islands pin arrived as
+  a raw pair sitting in open Lake Titicaca; it reverse-geocodes to a bare `Perú` at zoom 12 **and**
+  zoom 14 — no name, no address, no locality, which is the signature of a point that has landed on
+  nothing (the Waterfall Bay case). Moved onto `Islas Flotantes de los Uros`, which
+  **reverse-verifies by name**. The pin is `manual`, so no geofence is disturbed.
+- **🔴 TWO COORDINATES LOOKED WRONG AND WERE RIGHT — I nearly moved both, and the reasoning is the
+  durable part.** **The baobabs:** I had concluded the point was 4.8 km off because `Allée des
+  Baobabs` is 4.8 km away — but a **bounded** forward search returns **`Baobabs Amoureux` at 26 m**,
+  and the caption names exactly that (*"Beloved Baobab / 兩棵樹相依而生"*, the two trees grown
+  together). **Distance from the OBVIOUS landmark proves nothing when the caption names a different
+  one.** **Starlodge:** OSM's `Skylodge Adventure Suites` sits **14 km** away, and the caption says
+  outright that Skylodge is a separate, older property on a higher cliff. Owner's coordinate kept in
+  both cases. ⚠️ A third was **relabelled rather than moved** — the `Kakslauttanen` code lands on the
+  **Aurora Queen Resort**, a different glass-igloo resort ~20 km away in the same municipality, so
+  the pin is titled for what the coordinate actually is.
+- **⚠️ THE SOFTEST COORDINATE IS STATED, NOT HIDDEN.** The Awaji onion-picking post arrived with
+  **no code at all**; its caption gives a published address, OSM maps no venue there, so the pin sits
+  on the named quarter **松帆志知川** that contains it (the COSM Atlanta / Evermore Bay
+  enclosing-feature case) and ships `city: "Minamiawaji"`.
+- **🔴 THREE STACK-CAP FINDINGS, FLAGGED AND NOT ACTED ON — and Griffith is the one that bites.**
+  `check-place-candidates.py` goes **19 EXACT → 22** and **59 NEAR → 62**, and the report diff proves
+  it **removes nothing**, so no coincident group was manufactured and nothing was nudged apart. All
+  three new groups are one subject the owner sent twice (the Vizcaya / Cube House shape): **Cook
+  County courthouse** ×2 and **Fort Carroll** ×2 are two deep, inside the cap — but at **Griffith
+  Observatory** the existing **place** (2 members, one capsule) plus the two new coincident pins make
+  **3 markers against `TourSetMap.maxStacked = 3`, with no headroom.** ⚠️ **Measured rather than
+  assumed:** the two new pins sit **5.4 m** from the place's coordinate — the documented CalAcademy
+  rounding artifact (the Plus Code decodes to a cell centre at 7 decimals, the place stores fewer) —
+  so they are *not* members and the checker reports them separately. **Joining both to the existing
+  place is one line each and takes it 2 → 4 members**, collapsing all four into one capsule.
+  🔴 **Nothing was nudged onto a place coordinate to tidy this up** — that manufactures an EXACT group
+  with no place behind it. ⚠️ A fourth, milder pair: the **Flatiron** pin sits **19.5 m** from the
+  Atlas `Flatiron Building` tour — not coincident, two deep, inside the cap.
+- **✅ ALL 28 HEROES OPENED AND READ AGAINST THEIR CAPTIONS — ZERO WRONG SUBJECTS**, several naming
+  themselves in frame (Naran Tuul's Cyrillic market sign, `Socotra`, the Registan's iwan, the
+  Basilica Cistern's colonnade). **⚠️ FOUR HAND RE-CROPS — the vertical `--focus` gap, TWENTIETH
+  batch running.** Every source is 9:16, so the square is width-limited and `--focus` does nothing
+  vertically; re-rendered through a mirror of the tool's own pipeline (importing its `trim_bars`,
+  same blur/dim/quality, **same filenames**, so `Tours.json` is untouched), and ⚠️ **the mirror was
+  self-checked against `render_hero` at vfocus 0.5 first — 28 identical, 0 mismatched — before being
+  trusted.**
+- **🔴 THREE REAL BLIND SPOTS FOUND IN THE VALIDATOR MIRROR AND CLOSED — AND A FOURTH THAT WAS A RULE
+  I INVENTED.** **24 faults injected against THIS batch's own 28 pins; first run 20/24**, control
+  clean before and after. I then **read `validate-tours.swift` rather than recalling it**, because
+  sessions 142, 143 and 145 each shipped a "blind spot" that was a rule they had made up. Three were
+  genuine: **an empty title** (line 458, tour or pin), **a link pin with a nonzero
+  `totalDurationSeconds`** (line 565 — checked against **0 exactly**, not merely "positive"), and
+  **centroid drift** (lines 683-685, the stops' bounding box with `slop = 0.01`). 🔴 **The fourth was
+  not a rule at all** — I had injected `city: ""`, and the Swift declares `let city: String?` with
+  **no non-empty check anywhere**. Real score: **20 of 23 real faults.** ⚠️ **Closing the centroid gap
+  needed a harness change too:** it is a **WARNING**, so an errors-only selftest reports it as MISSED
+  (the session-141 bug); `selftest()` gained `warns=True` support and all three rules are pinned there
+  so a future edit cannot remove them silently — **27/27 → 30/30**, and the batch re-run then went
+  **24/24 with a clean control both sides**.
+- **Verification.** Mirror **self-tested 30/30 with a clean control**, then **0 errors, 0 warnings
+  across 1,552 tours + 1,306 pins + 130 places** at **479 tags**, ⚠️ **exit code read directly, never
+  through a pipe**. The fault harness **counts errors AND warnings**, injects **in memory via the
+  mirror's own `check()`**, reads `check()`'s **`(errors, warnings)` TUPLE** rather than mistaking it
+  for an exit code, and **derives the batch's ids from the diff against `HEAD`**. `make-link-pin.py
+  --selftest` **71/71** ⚠️ with Pillow installed first (a bare container reports 62/62, which reads as
+  a pass and is not one); `decode-plus-code.py` self-tests on **every** invocation, clean. **0**
+  duplicate tour, stop or maker ids; **0** collisions with live ids; **0** already-pinned sourceURLs;
+  **0** byte-duplicate heroes; **28 distinct heroes for 28 pins**. **0 filename collisions against
+  7,098 gh-pages `images/` paths**, the listing **asserted to hold >1,000 first**. `Tours.json`
+  **byte-stable under a Python re-dump before AND after editing** on both bases; diff **1,301
+  insertions / 0 deletions**, asserted purely additive. `seed_from_toursjson.py` clean at **350 /
+  2,858 / 3,230 / 130**; **0 `images//`** in the catalogue *or* the SQL. gh-pages `21d82cd`: remote
+  head **re-read in the same command as the push**, push status read through **`PIPESTATUS`**, tree
+  diff **exactly 28 additions, 0 deletions, nothing outside `images/`**; the deploy read
+  **`in_progress`, never `cancelled`** and finished `success`, after which **all 28 live URLs were
+  hash-verified against the uploaded bytes — 28 ok, 0 mismatch, 0 non-200**.
+  🔴 **`check-image-duplicates.py --pins` was run AFTER the deploy** (the session-135 false-pass lesson): **`OK — no suspicious duplicates`** over **1,301 images** (1,301 for 1,306 pins is the documented `@malata.antwerp` five-pins-one-URL case), shared-URL half **0 errors / 208 documented reuses** — identical to the recorded baseline.
+  ⚠️ **Nothing compiled locally — CI on the PR is the only
+  compile check a Linux web session gets.**
+- **⚠️ `main` MOVED TWICE MID-SESSION, and the second one genuinely conflicted.**
+  [#742](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/742) landed the **catalog
+  materialisation** while this batch was being validated; it **does not touch `Tours.json`**, so the
+  branch fast-forwarded with no conflict. Then
+  [#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744) merged **while this PR's own CI was
+  green and running**, making the Gilder Center a place (**places 129 → 130**) and **moving two
+  pins** — so `Tours.json` conflicted and the merge was refused with `405 Pull Request has merge
+  conflicts`. Resolved the documented way: **main's file taken wholesale and the idempotent assembler
+  re-run on it, never hand-resolved**, with **overlap re-verified at 0 on every axis** (0 of main's 2
+  changed pins are mine; 0 of my 28 pins and 0 of my 4 maker rows were already on main). Every check
+  was re-run on the merged base — mirror **30/30 then 0 errors, 0 warnings across 1,552 tours +
+  1,306 pins + 130 places**, faults **24/24 with a clean control both sides**, seed clean at **350 /
+  2,858 / 3,230 / 130**, and the checker **19 EXACT → 22 / 59 NEAR → 62**: the same **+3/+3** delta,
+  still **removing nothing**. ⚠️ **#744 also claimed `archive/HANDOFF-260907.md`** — an add/add
+  collision — so this session's handoff is **`-2`**; and **both sides had edited the Key-facts
+  counts**, which were **merged into one line** rather than left duplicated. ✅ **A content merge
+  needs nothing extra under the new materialisation scheme, and that was verified rather than
+  assumed** — the regenerated seed SQL carries
+  `if to_regprocedure('public.refresh_catalog_snapshot()') is not null then perform
+  public.refresh_catalog_snapshot();`, so the snapshot rebuilds as the seed's last act. **Automation
+  Rule 11b applies to hand edits in the SQL Editor, not to this.**
 ### The Gilder Center becomes a place — the last stack-cap finding, and a bug the mirror cannot see (branch `claude/gilder-center-place`, session 147 — content)
 
 **Owner: *"MAKE GILDER CENTER A PLACE. DONT WORRY ABOUT WEAK HEROES."*** Both halves applied.
@@ -9719,11 +9837,11 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **1552 tours + 1278 link pins, 346 makers, 1924 tour stops (3202 including one per pin), 130 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 312 are pinned creators (113 TikTok, 187 Instagram, 12 YouTube) — pinned creators now outnumber the studios more than nine to one.** ⚠️ This line has gone stale SIXTEEN times already, and **three parallel sessions invalidated it on the same afternoon** — it has been rewritten inside a single session more than once because `main` moved under it every time, and not one session's own number has survived its merge — #733 invalidated it AGAIN during the very merge that was correcting it, while that branch sat open, and **#738 did it a fifteenth time while session 144’s own PR sat open with green CI, so it went stale inside the very merge that was correcting it — then #737 and #739 did it a sixteenth, invalidating session 145’s own number while ITS PR sat open**; **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
+- **1552 tours + 1306 link pins, 350 makers, 1924 tour stops (3230 including one per pin), 130 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 316 are pinned creators (113 TikTok, 191 Instagram, 12 YouTube) — pinned creators now outnumber the studios more than nine to one.** ⚠️ This line has gone stale SEVENTEEN times already, and **three parallel sessions invalidated it on the same afternoon** — it has been rewritten inside a single session more than once because `main` moved under it every time, and not one session's own number has survived its merge — #733 invalidated it AGAIN during the very merge that was correcting it, while that branch sat open, and **#738 did it a fifteenth time while session 144’s own PR sat open with green CI, so it went stale inside the very merge that was correcting it — then #737 and #739 did it a sixteenth, invalidating session 145’s own number while ITS PR sat open, and #742 did it a seventeenth while session 147’s batch was being validated**; **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
 - **1480 single-stop + 72 multi-stop** — all geofenced. Copenhagen added 40 singles with no walks; Rio launched as 46 singles with no walks; São Paulo added 41 singles + 1 walk; Berlin added 31 singles + 5 walks; Marrakech added 26 singles with no walks; Buenos Aires added 34 singles + 2 walks; Chicago added 25 singles + 5 walks; Melbourne added 34 singles + 1 walk; Sydney added 29 singles with no walks; Cape Town added 30 singles with no walks; Barcelona added 66 singles + 2 walks; Milan added 47 singles + 1 walk; **Stockholm added 42 singles + 3 walks**. Multi-stop walks by maker: London 5, Paris 5, Amsterdam 5, Rome 5, Berlin 5, Chicago 5, San Francisco 4, Toronto 4, Los Angeles 4, Madrid 4, Montreal 4, Dubai 4, Seoul 3, **Stockholm 3**, NYC 2, Naoshima 2, Buenos Aires 2, **Barcelona 2**, Bangkok 1, São Paulo 1, Melbourne 1, **Milan 1**. The 4 originally-named NYC/London walks ("American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London), "Albertopolis" (6 stops, London)) are still the reference multi-stop test cases; AMNH unblocks M-qa items 6 + 7.
 - **Bilingual titles (`English | native script`) on both tour + stop across the Asian bureaus:** Tokyo (TYO), Kyoto (KYO), Naoshima (NAO) — `日本語`; Hong Kong (HKG) — `中文`; Seoul (SEL) — `한국어`; Bangkok (BKK) — `ไทย`; Ho Chi Minh City (SGN) — `Tiếng Việt` (where a Vietnamese name exists; proper-noun venues carry a single name); and Marrakech (RAK) — `العربية` (18 of 26; same proper-noun rule).
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list. Tours may also carry an optional **`videoURLs: [String]?`** (`.mp4` on gh-pages under `videos/`) — **videos LEAD the carousel** (owner decision 2026-07-26), so a tour with one opens on it and the still hero becomes page two. **`backend/add_video_urls.sql` HAS been applied** — verified against the live `get_catalog` on 2026-08-23, which emits the key on every tour; no SQL is owed, and `seed_from_toursjson.py` carries `video_urls` so a content merge cannot wipe it. Each video is openable **fullscreen** (session 107), and a tour also carries **`videoRole: TourVideoRole?`** — `gallery` (the default: b-roll beside the photographs) or **`narration`** (the clip **is** the tour, so its play bar and picture scrub together). ⚠️ **A `narration` tour may carry exactly ONE video**, validator-enforced. **Two tours carry video:** `via-57-west` (**`narration`**, 1080×1920 vertical with audio — a generated stand-in, replace when real footage exists) and `shinsegae-media-facade` (**`gallery`**, two clips: a 1200×900 silent one, plus `landscape-test.mp4`, **a 1920×1080 test card rather than real content**, added so rotation has something to run against — one-line revert). ⚠️ **`video_role` must reach Supabase to have any effect** — `seed_from_toursjson.py` carries it and `backend/add_video_role.sql` has been applied and verified live, but a catalogue edit alone is never enough. ⚠️ An earlier Key-facts note said no tour carried video; that was already false when written.
-- **Every tour carries `city` AND `country`** (`country` added session 99 — **359 cities, 47 countries** across tours and link pins together, re-derived 2026-09-05 on the base carrying both the Toronto batch and session 144's; the figures this line carried before that read 274 / 41, then 250 / 40, then 203 / 37 — and the 250 was already stale against `main`'s 259 when it was written, so **re-derive rather than quoting it** — `docs/app-store-screenshots.md` § Scale figures has the one-liner). `country` is denormalised onto the tour exactly as `city` is, so it travels with the content and updates over the air; **a new city batch must author it** or that tour drops out of the Settings → About count. `Tour.country` is optional so the bundled seed, the gh-pages mirror and maker-authored tours all keep decoding. Its column + `get_catalog` key are live (`backend/add_country.sql`, applied 2026-08-19).
+- **Every tour carries `city` AND `country`** (`country` added session 99 — **389 cities, 58 countries** across tours and link pins together, re-derived 2026-09-07 on the base carrying session 147's batch, which alone added **eleven countries**, the largest single expansion; the figures this line carried before that read 359 / 47, the figures this line carried before that read 274 / 41, then 250 / 40, then 203 / 37 — and the 250 was already stale against `main`'s 259 when it was written, so **re-derive rather than quoting it** — `docs/app-store-screenshots.md` § Scale figures has the one-liner). `country` is denormalised onto the tour exactly as `city` is, so it travels with the content and updates over the air; **a new city batch must author it** or that tour drops out of the Settings → About count. `Tour.country` is optional so the bundled seed, the gh-pages mirror and maker-authored tours all keep decoding. Its column + `get_catalog` key are live (`backend/add_country.sql`, applied 2026-08-19).
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
 - AppIcon is placeholder (green sphere); AccentColor: **dark gold (brass) `#8B7535` — owner-confirmed brand color (2026-07-04)**, same value in light + dark deliberately; terracotta is fully removed
