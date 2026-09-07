@@ -299,12 +299,12 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
   excluded.** The **AMNH cluster sits 176.1 m away** with six members — and ✅ **the owner ruled in
   session 140 that the Gilder Center stays separate from it** (*"Gilder center keep separate"*); that
   decision is **closed** and a future audit will flag it again. One unrelated pin sits at 394 m.
-  ⚠️ **FLAGGED, NOT ACTED ON: the `@poche_space` pin `Poché - Studio Gang | episode 2 of 3` is
-  substantively about the Gilder Center** — its whole `longDescription` is the Gilder Center and its
-  hero file is literally `amnh-gilder-center_hero.webp` — yet it sits at the **AMNH** coordinate and
-  is one of that place's six members. Moving it would take AMNH 6 → 5, so it is **the owner's call**;
-  and since its hero is a near-black podcast title card rather than a photograph, **nothing
-  photographic is lost by leaving it.**
+  ✅ **THE `@poche_space` PIN HAS MOVED HERE — owner instruction 2026-09-07 (*"OK move the poche
+  space to the gilder center"*). `Poché - Studio Gang | episode 2 of 3` is substantively about the
+  Gilder Center** — its whole `longDescription` is the Gilder Center and its hero file is literally
+  `amnh-gilder-center_hero.webp` — yet it sat at the **AMNH** coordinate as one of that place's six
+  members. It was flagged rather than moved because it takes **AMNH 6 → 5**, which is the owner's
+  call, not a session's. **See the follow-up entry below; do not re-raise it.**
 - **⚠️ THE HERO IS BORROWED AND THAT IS STRUCTURAL — do not go sourcing a replacement.** Every member
   is a link pin with an **empty gallery** and there is no Atlas tour at this site, so no third
   photograph of it exists in the catalogue (the documented Waterlooplein / Legion of Honor case the
@@ -368,6 +368,25 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
   *seconds* means the snapshot is not being served. Corroborated independently by
   `scripts/check-catalog-keys.py`, which reports **"catalog snapshot: not in use (built per
   request)"** alongside its 130 places and *"every key the app decodes is present"*.
+  - 🔴 **PROVED HARD LATER THE SAME SESSION, AND THE ENDPOINT IS WORSE THAN SESSION 146 MEASURED.**
+    The latency reading above is an *inference*; asking the database directly is not. Probed
+    first-hand rather than taken from a parallel session's PR body: **`catalog_snapshot_age()` → 404
+    `PGRST202`** and **`get_catalog_built()` → 404** — those functions **do not exist**, so
+    `backend/catalog_snapshot.sql` has certainly not been run — and **`get_catalog()` returned 500 on
+    THREE of three spaced calls** (5.0 s, 4.0 s, 3.7 s). Session 146 measured **4 failures in 12**;
+    it is now failing far more often than that. ⚠️ **Users are not broken meanwhile** — the app falls
+    through to the gh-pages mirror — **but the primary source is down for most calls, and every one
+    of those launches pays a ~4 s timeout first.**
+  - 🔴 **AND THE SEED'S REFRESH CALL IS A GUARDED NO-OP, WHICH IS WHY THIS SURVIVED A CONTENT MERGE
+    LOOKING GREEN.** The `STATUS.md` note reading *"a content merge needs nothing extra under the new
+    materialisation scheme"* is **true and was the wrong thing to take comfort from**: the seed's
+    `perform public.refresh_catalog_snapshot()` is wrapped in
+    `if to_regprocedure('public.refresh_catalog_snapshot()') is not null`, so with the SQL unpasted
+    the guard is false, the seed **skips the refresh, raises a notice, and still finishes green**.
+    **A guarded no-op is indistinguishable from a success from the outside — ask
+    `catalog_snapshot_age()`, never a green seed job.** (Independently found by the session behind
+    [#747](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/747), which carries the board change;
+    the probe above is this session's own, not theirs.)
 - **⚠️ `main` MOVED MID-SESSION AND EVERY CHECK WAS RE-RUN ON THE MOVED BASE.**
   [#742](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/742) merged (squash `9eaabdd1`) while
   this was being verified, touching **9 files including `backend/seed_from_toursjson.py` and every
@@ -375,6 +394,62 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
   **byte-identical on both bases** (`c061b988b53b652b` either side), so the build carried over with
   nothing to redo — but the mirror, the fault suite, the checker diff and the seed were all re-run
   against `main` rather than assumed, and the docs written against `main`'s versions.
+
+#### ✅ FOLLOW-UP, same session — the @poche_space pin moves onto the Gilder Center; AMNH 6 → 5
+
+**Owner: *"OK move the poche space to the gilder center"*** — answering the question the entry above
+flagged and deliberately left open. **Gilder Center 3 → 4 members · AMNH 6 → 5.** `tours`, `makers`
+and `places` are otherwise untouched: **exactly one pin moved, in exactly its four coordinate fields,
+and exactly two `tourIds` arrays changed**. Diff **7 insertions / 7 deletions**, every line accounted
+for. Content plus one line of developer tooling — no Swift, no SQL, no gh-pages push, no build.
+
+- **⚠️ THIS IS THE OWNER'S CALL BECAUSE IT COSTS AMNH A MEMBER, AND THAT IS WHY IT WAS FLAGGED RATHER
+  THAN DONE.** A session can move a pin onto a place it plainly belongs to; it cannot decide to
+  shrink a *different* place that another session built. **AMNH stays well clear of the floor** — five
+  members against the two-member minimum — so nothing is at risk, but the arithmetic is what made it
+  a question. **Do not re-raise it: it is closed.**
+- **🔴 THE PIN MOVES, NEVER THE TOUR — asserted before anything was written.** The pin is `manual`,
+  which the builder checks and **refuses to run otherwise**, so no geofence is disturbed; it moved
+  **176.3 m** from the AMNH anchor onto the Gilder Center's. Nothing else in the catalogue moved at
+  all — the other three Gilder members and the five remaining AMNH members were already exactly on
+  their place coordinates and were asserted **byte-identical** afterwards.
+- **✅ AMNH'S HERO IS SAFE, AND THAT WAS CHECKED RATHER THAN ASSUMED.** `AMNH__Introduction_2.webp` is
+  a **third photograph** promoted from the Atlas *Four Facades* walk — which remains a member — not
+  the departing pin's hero, so the place page is unchanged. Borrowed-hero count **re-derived, not
+  carried forward: still 54 of 130** (71 take a third photograph, 5 carry none): the poché pin's own
+  hero was never either place's, and the Gilder hero (`@studiogang`'s canyon) did not change.
+- **⚠️ FLAGGED, NOT ACTED ON: the moved pin carries `Museum, Architecture` and NO architect tag**,
+  while its own text names Studio Gang repeatedly and its three new place-mates all carry
+  **`Jeanne Gang` + `Designed by a Master`**. That gap is **pre-existing on `main`** and predates this
+  move; the owner asked for a move, not a retag. One line each closes it if wanted.
+- **🔴 A REAL BLIND SPOT CLOSED IN `validate-tours-mirror.py` — found by injecting the fault, and
+  CHECKED AGAINST THE SWIFT BEFORE BEING CALLED ONE.** `validate-tours.swift:553-554` errors when a
+  `kind: "link"` entry's stop is not `manual`; the mirror checked nowhere, so flipping this pin to
+  `geofenced` would have passed locally and failed CI. Added and **pinned in the mirror's own
+  selftest** (30 → **31 cases**) so it cannot be removed silently. ⚠️ **Sessions 142, 143 and 145 each
+  shipped a "blind spot" that turned out to be a rule they had invented** — this one was read in the
+  Swift first, and the catalogue still reads **0 errors**, which independently proves **no existing
+  link pin is geofenced**.
+- **✅ AND THE CENTROID-DRIFT BLIND SPOT THE ENTRY ABOVE RECORDS AS OPEN IS NOW CLOSED** — by
+  [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745), a parallel session's mirror work.
+  **Confirmed by injection (CAUGHT), not by reading their PR body.** The direct assertion above stays
+  worth keeping, but the mirror no longer needs it as a crutch.
+- **Verification.** Mirror **self-tested 31/31 with a clean control**, then **0 errors, 0 warnings
+  across 1,552 tours + 1,306 pins + 130 places**, exit code read **directly, never through a pipe**.
+  🔴 **18 faults injected against THIS MOVE specifically — 18/18 caught, control clean before and
+  after** (the pin left at the old AMNH coordinate, nudged 55 m, its centroid drifting in latitude and
+  in longitude, claimed by both places, either place drifting off its members, AMNH dropped to one
+  member, an unknown tour id, the hero repeated in its own gallery, a bad hero URL, a duplicate place
+  id, the trigger flipped, a second stop, a latitude out of range, an empty title, a nonzero
+  duration); the harness counts **errors AND warnings** and reads `check()`'s **`(errors, warnings)`
+  tuple**, injecting **in memory**. `Tours.json` **byte-stable under a Python re-dump before AND after
+  editing**. 🎉 **`check-place-candidates.py` output is BYTE-IDENTICAL before and after at 22 EXACT /
+  62 NEAR** — correct, and worth understanding: the pin moved *between two coordinates the checker
+  already ignores because both carry a place*, so no group is created and none resolved.
+  `seed_from_toursjson.py` clean at **350 / 2,858 / 3,230 / 130**; **0 `images//`** in the catalogue
+  *or* the SQL. ⚠️ **`check-image-duplicates.py` was deliberately NOT run and that is not a gap** — no
+  image was added and **no image URL changed**, asserted. ⚠️ **Nothing compiled locally — CI on the PR
+  is the only compile check a Linux web session gets.**
 
 ## Current State (2026-09-06)
 
