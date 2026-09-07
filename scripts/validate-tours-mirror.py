@@ -192,6 +192,29 @@ def check(cat, facets, vocab, dom):
                 if s_.get("audioDurationSeconds", 0) <= 0:
                     errors.append(f"{t}: stop with non-positive audioDurationSeconds")
 
+        # ── Three rules validate-tours.swift has and this mirror did not, so a
+        # fault here passed locally and would have failed CI. Read out of the
+        # Swift (lines 458, 565, 683-685), not recalled — sessions 142 and 143
+        # each shipped a "blind spot" that was a rule they had invented.
+        # validate-tours.swift:458 — an empty title is an error, tour or pin.
+        if not (e.get("title") or "").strip():
+            errors.append(f"{e['id']}: title is empty")
+        # validate-tours.swift:565 — a link pin is 0/0 by definition, so its
+        # total is checked against 0 exactly, not merely "positive".
+        if e["kind"] == "link" and e.get("totalDurationSeconds", 0) != 0:
+            errors.append(f"{t}: kind 'link' must have totalDurationSeconds 0, "
+                          f"got {e.get('totalDurationSeconds')}")
+        # validate-tours.swift:683-685 — the centroid must sit inside the stops'
+        # bounding box with ~1km slop. A WARNING there, so a warning here.
+        if stops:
+            lats = [s_["latitude"] for s_ in stops]
+            lons = [s_["longitude"] for s_ in stops]
+            slop = 0.01
+            if not (min(lats) - slop <= e["centroidLatitude"] <= max(lats) + slop):
+                warnings.append(f"{t}: centroidLatitude outside stop range")
+            if not (min(lons) - slop <= e["centroidLongitude"] <= max(lons) + slop):
+                warnings.append(f"{t}: centroidLongitude outside stop range")
+
     byid = {e["id"].lower(): e for e in allt}
     claimed = {}
     for pl in places:
@@ -231,7 +254,10 @@ def selftest(facets, vocab, dom):
     base = json.load(open(CATALOG, encoding="utf-8"))
     def clone(): return json.loads(json.dumps(base))
     cases = []
-    def case(name, fn): cases.append((name, fn))
+    # `warns=True` marks a rule validate-tours.swift raises as a WARNING, not an
+    # error — the centroid bounding-box check is one. Without this the case reads
+    # as MISSED and the selftest under-reports its own coverage (session-141 bug).
+    def case(name, fn, warns=False): cases.append((name, fn, warns))
 
     case("unknown tag",            lambda c: c["linkPins"][0]["tags"].append("Not A Real Tag"))
     case("duplicate tour id",      lambda c: c["linkPins"][1].__setitem__("id", c["linkPins"][0]["id"]))
@@ -265,12 +291,18 @@ def selftest(facets, vocab, dom):
     # mirrored here, so each passed locally and would have failed CI.
     case("duplicate maker id",     lambda c: c["makers"][1].__setitem__("id", c["makers"][0]["id"]))
     case("stop order != 0",        lambda c: c["linkPins"][0]["stops"][0].__setitem__("order", 1))
+    # Found by session 146 by injecting against a live batch: all three are in
+    # validate-tours.swift (458, 565, 683-685) and were not mirrored here.
+    case("empty title",            lambda c: c["linkPins"][0].__setitem__("title", ""))
+    case("link pin nonzero total", lambda c: c["linkPins"][0].__setitem__("totalDurationSeconds", -5))
+    case("centroid outside stops", lambda c: c["linkPins"][0].__setitem__(
+             "centroidLatitude", c["linkPins"][0]["centroidLatitude"] + 0.5), warns=True)
 
     passed = 0
-    for name, fn in cases:
+    for name, fn, warns in cases:
         c = clone(); fn(c)
         e, w = check(c, facets, vocab, dom)
-        if e: passed += 1
+        if (w if warns else e): passed += 1
         else: print(f"  MISSED: {name}")
     e, w = check(clone(), facets, vocab, dom)
     ctrl = not e
