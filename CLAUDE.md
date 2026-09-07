@@ -237,7 +237,15 @@ the app). No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF
   catalogue's 1,552 / 350** — the documented `Zxxx` test tour and upsert-only maker accumulation;
   **assert on link-pin counts, never on maker totals.**
 - **🔴 THE CATALOG RPC IS STILL TIMING OUT, AND #742's FIX IS MERGED BUT NOT LIVE — measured here,
-  not inherited from the board.** `backend/catalog_snapshot.sql` is an **owner paste**, and it has
+  not inherited from the board.** ✅ **SUPERSEDED THE SAME DAY, AND THIS ENTRY WAS NOT WRONG WHEN IT
+  WAS WRITTEN: the owner pasted the SQL a few hours later.** Re-measured 2026-09-07 22:0x UTC —
+  `catalog_snapshot_age()` returns **200** (a refresh at 21:44 UTC, the seed from #743's own merge),
+  `refresh_catalog_snapshot()` returns **401 to anon** (correct — the seed calls it), and
+  `get_catalog_built()` exists and returns **`57014`**, which is the migration *working*: the slow
+  builder now runs once per seed and nothing serves it to a phone. `get_catalog()` itself came back
+  **200 on 14 of 14 calls**. ⚠️ **The durable lesson is not that either reading was bad — both were
+  correct at their own moment. It is that an owner-owed item can be cleared while a session is
+  mid-flight, so re-measure before repeating "still owed" from the board.** `backend/catalog_snapshot.sql` is an **owner paste**, and it has
   not been run: `catalog_snapshot_age()` and `get_catalog_built()` both return **404 `PGRST202`** on
   the live database, so `get_catalog()` is still the old builder — and it still failed **2 of 5
   spaced calls** with **`500 / 57014 statement timeout`**. ⚠️ **A content merge cannot apply it for
@@ -379,7 +387,7 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
 
 **Owner asked whether the tours were live. They are — and checking it against the live systems rather than assuming turned up a standing fault in the PRIMARY source.** `get_catalog()` returns `500 / 57014 canceling statement due to statement timeout`, **4 times in 12** sampled at 10-second intervals long after any seed. Fixed by materialising the catalog: `backend/catalog_snapshot.sql`. **No Swift, no `Tours.json`, no build.** Detail: `archive/HANDOFF-260906.md`.
 
-- **🔴 A LATER 8-SAMPLE WINDOW CAME BACK 8/8 CLEAN AT THE IDENTICAL LATENCY BAND (2.2–4.9s), AND THAT IS NOT A CONTRADICTION.** Nothing improved — the query still sits on the timeout and simply did not cross it in eight tries (0.67⁸ ≈ 4%, uncommon but unremarkable for a 33%-failure endpoint). **It is exactly the reading that would tempt a future session to close this as "cannot reproduce".** ⚠️ **The latency band, not the pass/fail count, is what says whether this is fixed:** after the migration `get_catalog()` should be a sub-second lookup, so anything still measured in **seconds** means the snapshot is not being served.
+- **🔴 A LATER 8-SAMPLE WINDOW CAME BACK 8/8 CLEAN AT THE IDENTICAL LATENCY BAND (2.2–4.9s), AND THAT IS NOT A CONTRADICTION.** Nothing improved — the query still sits on the timeout and simply did not cross it in eight tries (0.67⁸ ≈ 4%, uncommon but unremarkable for a 33%-failure endpoint). **It is exactly the reading that would tempt a future session to close this as "cannot reproduce".** ⚠️ **The latency band, not the pass/fail count, is what says whether this is fixed** — ✅ **but the "sub-second" figure was optimistic and must NOT be read as a failure signal on its own.** Measured live 2026-09-07 after the migration was applied: `get_catalog()` returns **200 on 14 of 14 calls at TTFB 1.38–2.35 s**, because the payload is **10.6 MB** (~0.5 s of that is transfer) and a single-row lookup of a 10.6 MB `jsonb` value out of TOAST is not free. **The signal that the fix landed is that `get_catalog_built` — the slow builder, renamed aside — still returns `57014` while the served `get_catalog()` does not.** That is the design working: the builder runs once per seed and nothing serves it to a phone.
 - **🔴 THE MEASUREMENT IS THE FINDING, AND TWO SINGLE READINGS GOT IT WRONG FIRST.** Successes 2.2–4.9s, failures 3.5–5.0s — the query is **sitting on** the anon role's statement timeout, so ordinary variance decides each call. ⚠️ I reported it first as "down", then as "recovered"; each was one sample of a flapping signal. **Sample a flapping endpoint before characterising it.** The database itself is healthy — light reads on `tours`/`places`/`makers` return 200 in 0.25–0.9s.
 - **Why it is slow:** the builder nests each tour's stops with a **correlated subquery per tour** (~2,830 index scans into `stops` + ~2,830 separate `jsonb_agg`s, then an outer `jsonb_agg` with ORDER BY); `split_link_pins.sql` then **explodes that finished ~11 MB blob back into rows** and **re-aggregates it twice**; `places.sql` merges on top. **The ~11 MB structure is materialised three or four times per request.**
 - **🔴 AND THE PAYLOAD IS IDENTICAL FOR EVERY CALLER — verified, not assumed.** The builder filters `where t.status = 'published'` explicitly (`schema.sql:288`), `catalog_places()` filters to places with ≥2 published tours, `makers` is public-read. Nothing varies by viewer, and it changes only when the catalog is seeded. ⚠️ **The gh-pages mirror is already the materialised version and beats the "primary" source** — same JSON, pre-built, **200 in 0.9s, every time.**
@@ -392,7 +400,7 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
 
 #### ✅ FOLLOW-UP, session 146 — Eastern State Penitentiary gains its third member (branch `claude/new-tour-links-lze4ab`)
 
-**Owner: *"eastern state already has a place. move 'inside the abandoned eastern…' into that place"*.** 🔴 **They were right and the standing note was wrong** — this file and `STATUS.md` had both been calling Eastern State a place *candidate* the checker structurally cannot see. **The place has existed with two members since the session-144 batch**; only the third pin sat outside it. `Inside the Abandoned Eastern State Penitentiary` is now its third member. **Places stay 130**; `tours` and `makers` **byte-identical**, and **exactly one pin changed, in exactly its four coordinate fields**. Diff **6 insertions / 5 deletions**. Content only — no Swift, no SQL, no gh-pages push, no build.
+**Owner: *"eastern state already has a place. move 'inside the abandoned eastern…' into that place"*.** 🔴 **They were right and the standing note was wrong** — this file and `STATUS.md` had both been calling Eastern State a place *candidate* the checker structurally cannot see. **The place has existed with two members since the session-144 batch**; only the third pin sat outside it. `Inside the Abandoned Eastern State Penitentiary` is now its third member. **Places stay 130**; `tours` and `makers` **byte-identical**, and **exactly one pin changed, in exactly its four coordinate fields**. Diff **6 insertions / 5 deletions**. Content only — no Swift, no SQL, no gh-pages push, no build. ✅ **Verified live on the Supabase RPC — the source the app reads FIRST — not on the merge's success line:** the place serves **3 members**, all three exactly on its coordinate and all three `manual`; session-99 dropped-key check clean on the same payload (`priceTier` 1553 / 66 priced, `isPrivate` 372, `country` 1552, `videoRole` 1553, **0 link pins wrongly inside `tours`**, 0 places under two members, 0 tours claimed twice). ⚠️ The RPC reads **1553 tours / 372 makers** against the catalogue's 1552 / 350 — the documented `Zxxx` test tour and upsert-only maker accumulation; **assert on place membership, never on maker totals.** Detail: `archive/HANDOFF-260907-3.md`.
 
 - **⚠️ THE PIN MOVED 3.78 m; THE PLACE DID NOT.** All three members are `manual` link pins, so no geofence is disturbed — but **the builder asserts `manual` before relocating anything and refuses otherwise**, so a future edit cannot get this backwards silently. The 3.8 m gap is the documented **Plus Code cell-centre artifact** (the code decodes to a cell centre at 7 decimals while the place sits on its members' shared coordinate), which is precisely why it never reached EXACT and showed only as a **4 m NEAR pair** — invisible to `check-place-candidates.py`, and reachable only because it had been flagged by hand.
 - **⚠️ SWEPT 400 m AROUND THE SITE rather than trusting the flagged pair** (the session-131 lesson, where every one of four places turned out larger than the group that flagged it). **Here nothing else is within 400 m at all**, so the three pins are the whole story and — unlike Alwyn Court or Blenheim — **there is no deliberate exclusion to record.**
@@ -9900,6 +9908,22 @@ copy of the tracker goes stale and contradicts reality (2026-07-28: a branch cop
 as pending two days after Rome shipped). Same rule when writing: land a city's tracker row on `main`
 via a docs-only PR **as soon as the batch is staged** — not at the end of the city, and never only
 on the staging branch.
+
+## Reading a check's result
+
+🔴 **A check that cannot run must not be able to return a pass.** Three ways that
+has already happened here, and the one habit that closes all three:
+
+| Trap | What it looks like | The habit |
+|---|---|---|
+| **The stale output file** | `sed … && grep -n "<anchor>" f.py && python3 suite.py > out.txt; cat out.txt` — the `grep` matches nothing, the `&&` short-circuits, `python3` **never runs**, and `cat` prints a file left by a run two days ago. It reads exactly like a pass. | **Confirm the stamp on the first line before believing anything under it**, and prefer a checker's own `--out` over shell redirection. Every checker in `scripts/` now prints `RUN <name> · rev <hash> · <UTC timestamp>` first (`scripts/runstamp.py`); `--out PATH` truncates and stamps the file *before* the work starts, so a previous run cannot survive underneath it. A stamped file with no verdict line under it is a run that **died**, not a run that passed. |
+| **`PIPESTATUS`** | `python3 check.py \| tail; echo "EXIT=$?"` reports **tail's** status, so a script that exited 1 reads as 0. | Read the exit code **directly**, never through a pipe — redirect to a file, or use `${PIPESTATUS[0]}`. |
+| **The checker that fetched nothing** | `check-image-duplicates.py` once printed `OK — no suspicious duplicates` having failed every fetch with an SSL error. | A checker that cannot reach the network **exits 2 — COULD NOT VERIFY** and says so; it does not exit 0. Read the counts it prints, not only its verdict (a run reporting 161 images when 173 were uploaded is a finding). |
+
+⚠️ **The 2026-09-07 stale-file case was caught only because the counts happened to
+disagree** — the stale run said 22/22 where the current suite has 20 faults. Had
+they matched, an unverified change would have shipped with an apparent clean bill
+of health. Do not rely on that.
 
 ## Merging PRs
 
