@@ -71,7 +71,7 @@ These happen **automatically, without the owner asking**.
 | 2 | After any edit to `Resources/Tours.json` | Run `swift scripts/validate-tours.swift`; fix errors before continuing |
 | 3 | Before pushing any code PR | **Local (Mac) session:** call `test_sim` (XcodeBuildMCP); fix failures before pushing. **Web/remote session (no Mac):** open the PR so `ci.yml` runs the simulator build + unit tests (the `test_sim` stand-in); fix any red before merge. |
 | 4 | Doc-only / content-only / asset PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line. Delete the merged branch. **Code PRs (anything in `*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) wait for explicit owner OK + visual simulator confirmation — see § Merging PRs for the exact boundary.** |
-| 5 | Session ends (touched code or content) | Write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` + `ROADMAP.md`. **🔴 Do NOT append a session narrative to this file.** That is what grew it to 1.5 MB — ~409,000 tokens on *every request of every session* (see § Current state). Touch `CLAUDE.md` only when a **durable rule** changes; a durable *lesson* goes in `docs/lessons.md`; everything else is the handoff's job. |
+| 5 | Session ends (touched code or content) | Write `archive/HANDOFF-YYMMDD.md`; add a **one-line** row to `archive/README.md` (it is an index — the long account belongs in the handoff itself) and update `ROADMAP.md`. **🔴 Do NOT append a session narrative to this file.** That is what grew it to 1.5 MB — ~409,000 tokens on *every request of every session* (see § Current state). Touch `CLAUDE.md` only when a **durable rule** changes; a durable *lesson* goes in `docs/lessons.md`; everything else is the handoff's job. |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | **Web/remote session (preferred, no Mac):** push the branch, then trigger `.github/workflows/testflight.yml` (Actions → Run workflow on the branch, or add the `build` label to its PR) — CI builds + signs + uploads automatically; build number = `github.run_number` → `1.1 (N)`. See `docs/testflight-ci.md`. **Local (Mac) session:** bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, `xcodebuild archive` (`docs/testflight.md`), owner uploads via Organizer. |
 | 8b | **New city drop received, BEFORE wiring anything** | **Run `python3 scripts/check-coordinates.py --drop "<folder>" --city "<City>, <Country>"`.** A wrong coordinate is the only defect that is invisible to every other check — the validator passes, CI compiles, every URL 200s, and the tour simply never fires. It has shipped twice from the same upstream pipeline (Barcelona ×10, Milan ×2), **always displaced north**. Fix every GROSS before wiring; read every UNVERIFIABLE by hand; and **check the BIAS line — if the northward offset is gone, upstream has been fixed, and if it is still ~+10 m it has not, however clean the gross list looks.** |
@@ -152,7 +152,9 @@ grep -n "^### .*Barcelona" archive/CURRENT-STATE-HISTORY.md   # a city launch
 ```
 
 Most entries name an `archive/HANDOFF-YYMMDD*.md` carrying the fuller account; 94 distinct
-handoffs are cited, and `archive/README.md` indexes all 213.
+handoffs are cited, and `archive/README.md` indexes 215 of the 221 files in `archive/` —
+**re-derive that count, never quote it** (`grep -c '^| ' archive/README.md`), and note the
+index carries one row for a handoff that was never committed, marked as such.
 
 **The rules that history taught** are lifted into **`docs/lessons.md`** — verification discipline,
 the live-systems-over-documents rule, content and geocoding traps, the image rules, the Supabase
@@ -283,6 +285,8 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `docs/design-tokens.md` | Typography/color/spacing reference |
 | `docs/lessons.md` | **Rules this project paid for** — verification discipline, live-systems-over-documents, content/geocoding/image traps, the `get_catalog` hazard, shell + gh-pages gotchas, SwiftUI patterns, how the owner works. Read before a tour batch or any `get_catalog` change |
 | `archive/CURRENT-STATE-HISTORY.md` | The dated Current State blocks moved out of `CLAUDE.md`. **Search, never load whole** |
+| `archive/ROADMAP-STATUS-HISTORY.md` | The 113 dated `**Status (…)**` blocks moved out of `ROADMAP.md` § Where we are right now, which they had grown to 86% of. **Search, never load whole** |
+| `archive/INDEX-DETAIL.md` | The long-form entries moved out of `archive/README.md`, which they had grown to 94% of. **Search, never load whole** |
 | `docs/launch-runbook.md` | **Step-by-step App Store launch walkthrough — start here to ship** |
 | `docs/fastlane.md` | How the release automation works (lanes, metadata, screenshots) |
 | `fastlane/` | The release toolchain: lanes, App Store metadata, screenshot config |

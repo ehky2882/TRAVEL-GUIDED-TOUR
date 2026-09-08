@@ -93,6 +93,27 @@ and reported opposite things; both were right at their own moment.
 
 ## 3. Content and the catalog
 
+**🔴 A section that every session appends to becomes the whole file.** Three files here caught the
+same disease independently, and in each the growth was invisible because no single session added
+much: `CLAUDE.md` § Current State (**97.7%** of a 1.5 MB file, and it was injected into every
+request), `ROADMAP.md` § "Where we are right now" (**86%**, 120 dated `**Status (…)**` blocks), and
+`archive/README.md` (**94%**, index rows averaging 2,089 characters where a line was wanted). The
+tell is a heading that promises the present tense — *current state*, *where we are right now*,
+*active handoff* — sitting on top of a log. **A per-session append needs a stated cap or a home
+that is not the live document**; the fix each time was to move the history out verbatim, keep the
+newest few, and point at the archive. And when you write the row, remember which file you are in:
+an index takes a line, the account goes in the handoff.
+
+**🔴 An index that names a file nobody can open is worse than one that omits it.** `archive/README.md`
+carried a row for `HANDOFF-260819.md` that was never committed — indexed, promised, absent. It
+survived because nothing ever checked the index against the directory. One `os.path.exists` per row
+finds it. Mark the gap rather than deleting the row: the gap is the finding.
+
+**⚠️ `ls archive/HANDOFF-*.md | tail -1` does not give you the newest handoff.** `-` sorts before
+`.`, so `HANDOFF-260908-2.md` sorts *before* `HANDOFF-260908.md` and `tail -1` discards the newer
+file. Parallel sessions produce those suffixes constantly. Order by when git first saw the file:
+`git log --diff-filter=A --name-only --pretty=format: -- 'archive/HANDOFF-*.md' | grep . | head -1`.
+
 **🔴 Bulk content must go disk to disk, never through the conversation.** A generator that
 prints entries to stdout and a session that pastes them back to write them pays for the same
 bytes twice — and because a conversation re-sends its whole history on every request, that

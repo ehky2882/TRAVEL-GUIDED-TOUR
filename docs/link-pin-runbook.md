@@ -135,6 +135,31 @@ most likely minted before its `city` was edited. **If a batch needs two pins fro
 one post in one city, there is no convention yet — pick one, write it here, and
 say so in the PR.** Do not assume the ad-hoc ids encode a rule.
 
+### ✅ The same-city convention, chosen 2026-09-08 (session 149)
+
+A batch of 83 `@urbanistariel` links hit this gap: one post about the Edinburgh
+places that inspired Harry Potter carried **two** Plus Codes, both in Edinburgh.
+The convention taken, and the one to follow from now on:
+
+| Row | Key hashed |
+|---|---|
+| pin | `atlas-tour:link:<sourceURL>#<slug(subject)>` |
+| its stop | `atlas-stop:link:<sourceURL>#<slug(subject)>` |
+
+where `slug(subject)` is the **venue**, not the city — `elephant-house` and
+`george-heriots-school`. City stays the rule when the cities differ; the subject
+slug is the tie-break when they do not, so **the city rule is a special case of
+naming whatever distinguishes the pins**.
+
+⚠️ This does **not** retro-fit the two ad-hoc Charging Bull ids. Re-minting them
+would change ids that are already live, orphaning anything a phone has saved
+against them. They stay as they are; the rule applies to new pins.
+
+⚠️ The pins in such a group **share one hero file**, because one post has one
+thumbnail — so a `len(files) == len(pins)` assertion is wrong for that batch.
+Name the shared file for what the post is about (`harry-potter-edinburgh-…`),
+not for either subject, since it serves both.
+
 ---
 
 ## Hero filenames
