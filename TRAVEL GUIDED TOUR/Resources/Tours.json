@@ -82336,6 +82336,87 @@
         "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
         "A5389D78-E011-5858-B843-922B28C15E27"
       ]
+    },
+    {
+      "id": "09ffd6d4-bae4-543b-8886-0faddbfa1957",
+      "name": "Eldridge Street Synagogue",
+      "description": "Completed in 1887, the first synagogue purpose-built in the United States by an Eastern European Jewish immigrant congregation, designed by the brothers Peter and Francis Herter. Its main sanctuary was sealed off for decades as the congregation shrank, and the restored building now holds the Museum at Eldridge Street.",
+      "latitude": 40.7147291,
+      "longitude": -73.993461,
+      "city": "New York",
+      "address": "12 Eldridge Street, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "a41d0cbf-bf41-46a6-bff7-1380ff443c18",
+        "78923C2A-94EA-5009-82BD-8B43A674F299",
+        "1C44BADA-4F82-5B8D-A211-2F212FD98FA8"
+      ]
+    },
+    {
+      "id": "0aa14b24-fa2a-58a6-9726-f51021d40d6e",
+      "name": "ParkLife",
+      "description": "A medium-density housing project in Brunswick by Austin Maynard Architects, filmed here as a three-part series: what makes it sustainable, how it was designed to give something back to the street, and the argument that denser living can be a pleasure rather than a compromise.",
+      "latitude": -37.7630625,
+      "longitude": 144.9606875,
+      "city": "Melbourne",
+      "address": "1 Duckett Street, Brunswick, Melbourne",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "76FCC307-3B6D-5FC9-8C7D-4053E1A7D0B1",
+        "4D7CE545-AB0A-5487-8A90-0C1408DFA212",
+        "98D009C3-0E8B-5B6F-BBFF-D2D5118119BA"
+      ]
+    },
+    {
+      "id": "654985ee-c528-5af6-b074-ef3e134dc8b4",
+      "name": "Awaji Yumebutai",
+      "description": "Tadao Ando's vast terraced complex on Awaji Island, stepped down a hillside in the architect's characteristic board-formed concrete — big enough that the film-maker who walks it here nicknames the place “Andoland”. Covered in three parts: arriving, going in, and the scale of the whole thing.",
+      "latitude": 34.5609763,
+      "longitude": 135.0068809,
+      "city": "Awaji",
+      "address": "Yumebutai, Awaji, Hyōgo",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5BB2B524-19D6-5421-87A2-97DCA7FC4F4B",
+        "EEB39BF2-82EC-5A57-84C1-FB5837C71E9E",
+        "5B6C59AA-97AB-5434-A31E-E2F77E7A7950"
+      ]
+    },
+    {
+      "id": "f1a72301-66e0-5125-8e64-5db3f703d317",
+      "name": "Equilateral House",
+      "description": "A contemporary Filipino house in Manila by Jorge Yulo, shot in three parts — an overview, then the concrete it is built from, then the details that the wider shots miss.",
+      "latitude": 14.5904492,
+      "longitude": 120.9803621,
+      "city": "Manila",
+      "address": "Intramuros, Manila",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4EDCC18E-74ED-590D-ACA7-E35B7D76DB8D",
+        "B00DA0E7-511B-5297-8AFE-FBB36904968D",
+        "AA757F4E-081D-58BC-9FAF-25F5AE5B8AE9"
+      ]
+    },
+    {
+      "id": "6fb6e7eb-ed85-5ac1-a060-38318072de54",
+      "name": "M+ Museum",
+      "description": "Herzog & de Meuron's museum of visual culture on the West Kowloon waterfront, opened in 2021: a long horizontal podium with a slender eighteen-storey tower rising from its centre, the tower's harbour face doubling as a screen. Four entries cover it — the exterior, the materials, the interiors, and a walk-up from the harbour.",
+      "latitude": 22.30069,
+      "longitude": 114.1595,
+      "city": "Hong Kong",
+      "address": "38 Museum Drive, West Kowloon, Hong Kong",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "324fb306-4c81-4053-bbe4-ee101132596e",
+        "06D3F0D5-6E54-56E3-B459-9811EB24F976",
+        "F49AA9B2-5D3B-5A80-97D8-C417C6DA2101",
+        "92D0B9EC-C4BC-524D-AB03-35946BBD906A"
+      ]
     }
   ],
   "linkPins": [
@@ -134307,8 +134388,8 @@
           "order": 0,
           "title": "Inside M+",
           "caption": "Part 3: Interior spaces. M+ Museum by Herzog & de Meuron in Hong Kong. Opened during the pandemic in 2021, it’s by far the best contemporary",
-          "latitude": 22.3010537,
-          "longitude": 114.1591472,
+          "latitude": 22.30069,
+          "longitude": 114.1595,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -134320,8 +134401,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.3010537,
-      "centroidLongitude": 114.1591472,
+      "centroidLatitude": 22.30069,
+      "centroidLongitude": 114.1595,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "visualArt",
@@ -134403,8 +134484,8 @@
           "order": 0,
           "title": "The Materials of M+",
           "caption": "M+ Museum by Herzog & de Meuron in Hong Kong. Part 2 - Materiality. Opened during the pandemic in 2021, it’s by far the best contemporary ar",
-          "latitude": 22.3010537,
-          "longitude": 114.1591472,
+          "latitude": 22.30069,
+          "longitude": 114.1595,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -134416,8 +134497,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.3010537,
-      "centroidLongitude": 114.1591472,
+      "centroidLatitude": 22.30069,
+      "centroidLongitude": 114.1595,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "visualArt",
@@ -134451,8 +134532,8 @@
           "order": 0,
           "title": "The Exterior of M+",
           "caption": "M+ Museum by Herzog & de Meuron in Hong Kong. Part 1 - Exterior. Opened during the pandemic in 2021, it’s by far the best contemporary art m",
-          "latitude": 22.3010537,
-          "longitude": 114.1591472,
+          "latitude": 22.30069,
+          "longitude": 114.1595,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -134464,8 +134545,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.3010537,
-      "centroidLongitude": 114.1591472,
+      "centroidLatitude": 22.30069,
+      "centroidLongitude": 114.1595,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "visualArt",
