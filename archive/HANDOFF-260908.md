@@ -73,10 +73,21 @@ exit 2). Sessions 145, 146 and 148 each rebuilt one from scratch and threw it aw
 written here. When you find a rule in `validate-tours.swift` the mirror does not mirror, add a
 `case(...)` to its `selftest()` — that is how sessions 143, 146 and 148 each found one.
 
-**The `#<fragment>` id variant does not exist.** Some session notes describe a
-`atlas-tour:link:<url>#<fragment>` scheme for one-post-many-pins. **Zero live pins use a fragment.**
-It was checked before being written down, and the runbook records its absence so the next session
-does not implement against it.
+**The one-post-many-pins fragment scheme is real, and I got it wrong first.** I recorded that it
+"does not exist" because no live pin has a `#` in its stored `sourceURL`. Wrong field: **the
+fragment lives only in the hashed key.** `archive/README.md` contradicted the claim, and checking
+properly confirmed the scheme — `atlas-tour:link:<url>#<slug(city)>`, same on `atlas-stop:`.
+Reproduced live: **1333/1333** single-URL pins from the bare key, **7/10** shared-URL pins from the
+city-fragment key on both ids.
+
+⚠️ **The other 3 are a real gap, recorded rather than smoothed over.** Two are the Charging Bull
+pair, **both in New York** — city cannot disambiguate two pins in one city, so their ids follow no
+rule. A batch needing two pins from one post in one city has **no convention yet** and must invent
+and record one.
+
+The general lesson is in `docs/lessons.md`: **before recording that something does not exist, look
+for what it would *produce*** — here, pins sharing a `sourceURL` — **not only for the spelling you
+expected.** Grepping the field name returned a clean, confident, wrong answer.
 
 ## Advice given to the owner
 
