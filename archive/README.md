@@ -256,6 +256,7 @@ not written down.
 | `HANDOFF-260905-4.md` | four places for the four sites at the stack cap. |  |
 | `HANDOFF-260908.md` | the token-cost session: `CLAUDE.md` was 1.5 MB, injected into every request of every session. |  |
 | ``HANDOFF-260908-2.md`` | ⚠️ **NOT IN THE REPO** — session 149: 83 link pins from TikTok `@urbanistariel`; a hero filename that would have overwritten open PR #749's live file, and a MOCA stack at depth 4 that… |  |
+| `HANDOFF-260908-3.md` | session 150: onboarding a non-technical contributor — a beginner guide (`docs/partner-onboarding.md`) and the repo's first `.claude/skills/` entry, `atlas-upload`, which it points at. | 2026-09-08 |
 | `HANDOFF-260906.md` | the catalog RPC was failing a third of the time; materialise it. |  |
 | `HANDOFF-260905.md` | thirteen Studio Gang link pins across eight buildings, and two stack caps hit at once. |  |
 | `HANDOFF-260907-4.md` | Thirty-seven link pins from three creators, and one post that is three pins. |  |
