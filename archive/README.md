@@ -47,6 +47,7 @@ not written down.
 
 | File | What it covers | Date |
 |---|---|---|
+| `STATUS-HISTORY.md` | The finished board items moved out of `STATUS.md` § 1 — 41 items whose PRs GitHub reports merged or closed, plus four self-declared-done sub-sections. **Search, never load whole** | 2026-09-08 |
 | `INDEX-DETAIL.md` | The long-form entries this index used to carry, verbatim. **Search, never load whole** | 2026-09-08 |
 | `ROADMAP-STATUS-HISTORY.md` | The dated `**Status (…)**` blocks moved out of `ROADMAP.md`, which they had grown to 86% of. **Search, never load whole** | 2026-09-08 |
 | `CURRENT-STATE-HISTORY.md` | The 34 dated `## Current State` blocks that accumulated in `CLAUDE.md` between 2026-05-25 (session 8) and 2026-09-07 (session 148), verbatim, newest first. | 2026-09-08 |
