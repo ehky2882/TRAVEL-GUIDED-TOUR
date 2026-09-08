@@ -441,6 +441,38 @@ shorter path. This section is the one to follow from 1.1.1 onward.
   further builds against it — that is why `MARKETING_VERSION` is **1.1.1** and
   why build 137 reads differently from every build before it. A build uploaded
   against a released version is rejected at upload, not at review.
+- **🔴 The notes describe the delta from the LAST RELEASED VERSION, so every
+  release makes the file stale — rewrite it, never amend it.**
+  `release_notes.txt` is not a changelog that accumulates. Once a version is
+  approved, its notes are **published and frozen**, and the same file must then
+  be rewritten to describe only what changed since. Editing it after a release
+  silently turns last release's copy into next release's copy.
+  ⚠️ **Worked example, and the cost is permanent:** the map expand control
+  ([#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671)) shipped in
+  **1.1.1** and its notes never mention it — the paragraph was written on a
+  branch that went stale and was still unmerged when Apple approved. Nothing
+  recovers that. **Start Step U3 by reading the LIVE notes back** (the public
+  lookup below returns them) and writing fresh copy against the diff from Step
+  U1 — do not open the file and add a line.
+
+### Step U0 — Read what is actually released (no key needed)
+
+Do this before anything else. It needs **no App Store Connect key**, so it works
+from a web container, and it is the only keyless way to know a submission
+landed:
+
+```bash
+curl -s "https://itunes.apple.com/lookup?bundleId=com.ehky.TRAVEL-GUIDED-TOUR&country=us" \
+  | python3 -m json.tool | head -40
+```
+
+`version` · `currentVersionReleaseDate` · `releaseNotes` — the live copy, which
+is what the next notes must be written *against*. `scripts/session-start.sh`
+prints the first two on every run.
+
+⚠️ **The key is only needed for an UNRELEASED version's review state.** Saying
+"I could not check the App Store version" when you mean "I could not check the
+review state" is the error this step exists to stop.
 
 ### Step U1 — Check what the public actually has
 

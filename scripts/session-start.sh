@@ -19,13 +19,22 @@ cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)" || exit 1
 REPO="ehky2882/TRAVEL-GUIDED-TOUR"
 b() { printf '\n\033[1m%s\033[0m\n' "$*"; }
 
-git fetch -q --prune origin 2>/dev/null
+# ⚠️ `git fetch --prune origin` routinely times out against this repo's git proxy — it hung
+# past 2 minutes here and the whole script produced NOTHING, which reads as a broken script
+# rather than a slow fetch. Bound it, and fall back to the narrow fetch that does work.
+FETCH_NOTE=""
+if ! timeout 45 git fetch -q --prune origin 2>/dev/null; then
+  timeout 45 git fetch -q origin main 2>/dev/null \
+    && FETCH_NOTE="⚠️  full fetch timed out; only origin/main is fresh — § 4 branch list may be stale" \
+    || FETCH_NOTE="🔴 git fetch FAILED — everything below is from your last fetch, not the remote"
+fi
 
 b "1. WHERE YOU ARE  (the shared checkout is used by every local session)"
 BR=$(git rev-parse --abbrev-ref HEAD)
 DIRTY=$(git status --porcelain | wc -l | tr -d ' ')
 printf '   branch  : %s\n   changes : %s uncommitted\n   vs main : %s ahead, %s behind\n' \
   "$BR" "$DIRTY" "$(git rev-list --count origin/main..HEAD 2>/dev/null)" "$(git rev-list --count HEAD..origin/main 2>/dev/null)"
+[ -n "$FETCH_NOTE" ] && echo "   $FETCH_NOTE"
 [ "$BR" != "main" ] && echo "   ⚠️  NOT ON main — another session may be mid-task here. Do not switch branches or"
 [ "$BR" != "main" ] && echo "       build from this folder without checking. Use a worktree for your own work."
 [ "$DIRTY" -gt 0 ] && echo "   ⚠️  UNCOMMITTED CHANGES — find out whose before touching anything."
@@ -57,6 +66,35 @@ echo "   These live outside the repo and change with no commit. CLAUDE.md CANNOT
 for u in https://dozent.world https://dozent.world/privacy/ https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json; do
   printf '   %-56s HTTP %s\n' "$u" "$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 12 "$u" 2>/dev/null)"
 done
+# The RELEASED App Store version needs no key and works from any session.
+# Only an UNRELEASED version's review state needs the ASC key below.
+printf '   %-56s ' "App Store (released, public lookup)"
+curl -s --max-time 12 "https://itunes.apple.com/lookup?bundleId=com.ehky.TRAVEL-GUIDED-TOUR&country=us" 2>/dev/null \
+  | python3 -c 'import json,sys
+try:
+    r = json.load(sys.stdin)["results"][0]
+    print(r["version"] + "  released " + r["currentVersionReleaseDate"][:10])
+except Exception:
+    print("lookup failed")' 2>/dev/null || echo "lookup failed"
+
+# The PRIMARY catalogue source is the Supabase RPC; the mirror above is only the
+# fallback. Sample it — it has been timing out (57014) on a real fraction of calls.
+if [ -f "TRAVEL GUIDED TOUR/Data/SupabaseConfig.swift" ]; then
+  _sb_url=$(grep -o 'https://[a-z0-9]*\.supabase\.co' "TRAVEL GUIDED TOUR/Data/SupabaseConfig.swift" | head -1)
+  _sb_key=$(grep -o 'sb_publishable_[A-Za-z0-9_-]*' "TRAVEL GUIDED TOUR/Data/SupabaseConfig.swift" | head -1)
+  if [ -n "$_sb_url" ] && [ -n "$_sb_key" ]; then
+    _ok=0
+    for _i in 1 2 3 4; do
+      _c=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 -X POST "$_sb_url/rest/v1/rpc/get_catalog" \
+             -H "apikey: $_sb_key" -H "Authorization: Bearer $_sb_key" \
+             -H "Content-Type: application/json" -d '{}' 2>/dev/null)
+      [ "$_c" = "200" ] && _ok=$((_ok+1))
+    done
+    printf '   %-56s %s/4 OK\n' "Supabase get_catalog (PRIMARY source)" "$_ok"
+    [ "$_ok" -lt 4 ] && echo "                      ⚠️ 57014 statement timeout — app falls back to the gh-pages mirror"
+  fi
+fi
+
 if [ -n "$(ls ~/Downloads/AuthKey_*.p8 2>/dev/null)" ] && python3 -c 'import jwt,certifi' 2>/dev/null; then
   python3 - <<'PY' 2>/dev/null || echo "   App Store Connect: query failed"
 import os,glob,time,json,ssl,urllib.request,jwt,certifi
