@@ -284,6 +284,8 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `docs/cdn-decision.md` | Audio hosting decision |
 | `docs/design-tokens.md` | Typography/color/spacing reference |
 | `docs/lessons.md` | **Rules this project paid for** — verification discipline, live-systems-over-documents, content/geocoding/image traps, the `get_catalog` hazard, shell + gh-pages gotchas, SwiftUI patterns, how the owner works. Read before a tour batch or any `get_catalog` change |
+| `docs/partner-onboarding.md` | **Zero-to-first-upload guide for a non-technical contributor** — accounts, repo access, Claude Code on the web/desktop, and the link-pin job written for someone who has never used a terminal. Send this to a new content contributor |
+| `.claude/skills/atlas-upload/SKILL.md` | The skill a content contributor loads ("use the atlas-upload skill"). Routes link pins / city drops / images / scripts and carries the guardrails a novice cannot be expected to know |
 | `archive/CURRENT-STATE-HISTORY.md` | The dated Current State blocks moved out of `CLAUDE.md`. **Search, never load whole** |
 | `archive/ROADMAP-STATUS-HISTORY.md` | The 113 dated `**Status (…)**` blocks moved out of `ROADMAP.md` § Where we are right now, which they had grown to 86% of. **Search, never load whole** |
 | `archive/INDEX-DETAIL.md` | The long-form entries moved out of `archive/README.md`, which they had grown to 94% of. **Search, never load whole** |
