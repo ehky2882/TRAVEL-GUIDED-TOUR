@@ -422,8 +422,25 @@ no Swift, no SQL, no gh-pages push, no build. Detail: `archive/HANDOFF-260907.md
     merging. Re-measured, not inferred: **`catalog_snapshot_age()` → 200 with a timestamp**
     (`2026-09-07T21:44:03Z`), and **`check-catalog-keys.py`'s own verdict flipped** from *"not in use
     (built per request)"* to *"catalog snapshot last refreshed: …"* — that tool's in-use line is the
-    cheapest one-command check. **The timeouts are gone: `get_catalog()` returned 200 on 4 of 4**
-    spaced calls, against 3 of 3 **500s** an hour earlier.
+    cheapest one-command check. `get_catalog()` returned 200 on **4 of 4** spaced calls, against
+    3 of 3 **500s** an hour earlier.
+    🔴 **BUT "THE TIMEOUTS ARE GONE" — WHICH THIS BULLET AND #748 BOTH SAID — IS AN OVERSTATEMENT,
+    AND A 4-CALL SAMPLE IS WHAT PRODUCED IT.** Re-measured 2026-09-08 after #752: **11 ok / 1 failed
+    of 12** spaced calls, plus 1 more failure in a separate 7-call pass — so roughly **1 call in 10
+    still returns `500 / 57014`**, against session 146's pre-fix **4 in 12**. The migration is a real
+    and large improvement (~33% → ~8–10%) and it is **not** a full fix. ⚠️ **This is session 146's own
+    lesson repeating: a small clean window on a flapping endpoint reads as "fixed".** That session
+    wrote *"it is exactly the reading that would tempt a future session to close this as cannot
+    reproduce"* — and two sessions then closed it as fixed off 4 and 14 calls. **Sample a flapping
+    endpoint before characterising it, and say the failure RATE rather than "gone".**
+    ⚠️ **The snapshot is genuinely in use while this happens — so a further timeout is NOT evidence
+    the paste was lost.** Measured in the same pass: `catalog_snapshot_age()` **200** with a fresh
+    timestamp and `check-catalog-keys.py` reporting *"catalog snapshot last refreshed"*. The
+    single-row lookup is itself near the anon statement timeout, because reading a **10.6 MB** `jsonb`
+    out of TOAST is not free. ⚠️ **Both failures landed within minutes of a seed's own
+    `refresh_catalog_snapshot()`, followed by 10 consecutive successes** — consistent with concurrent
+    load during the rebuild, **but two data points cannot establish that mechanism; do not report it
+    as the cause.**
     ⚠️ **BUT IT IS NOT SUB-SECOND, AND SESSION 146'S "SECONDS MEANS NOT SERVED" CRITERION IS TOO
     CRUDE TO USE ON ITS OWN.** Total time is 1.2–4.2 s — which that criterion would read as *still
     broken* — but **TTFB is 1.7–3.7 s while the whole 10.6 MB body transfers in the remaining
@@ -466,10 +483,22 @@ for. Content plus one line of developer tooling — no Swift, no SQL, no gh-page
   the departing pin's hero, so the place page is unchanged. Borrowed-hero count **re-derived, not
   carried forward: still 54 of 130** (71 take a third photograph, 5 carry none): the poché pin's own
   hero was never either place's, and the Gilder hero (`@studiogang`'s canyon) did not change.
-- **⚠️ FLAGGED, NOT ACTED ON: the moved pin carries `Museum, Architecture` and NO architect tag**,
-  while its own text names Studio Gang repeatedly and its three new place-mates all carry
-  **`Jeanne Gang` + `Designed by a Master`**. That gap is **pre-existing on `main`** and predates this
-  move; the owner asked for a move, not a retag. One line each closes it if wanted.
+- **✅ THE MOVED PIN'S ARCHITECT GAP IS CLOSED — owner instruction 2026-09-08 (*"Add the architect
+  tag to the poche space pin"*), merged as [#752](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/752)
+  (squash `bb49eedc`).** It carried `Museum, Architecture` and **no architect tag** while its own text
+  names Studio Gang repeatedly and its three place-mates all carry **`Jeanne Gang` + `Designed by a
+  Master`** — a gap that was **pre-existing on `main`** and predated the move, which is why it was
+  flagged rather than fixed alongside a move instruction. It now carries **`Museum, Architecture,
+  Jeanne Gang, Designed by a Master`**. ⚠️ **The tag is `Jeanne Gang`, NOT `Studio Gang`** (the
+  documented practice→person mapping; `Studio Gang` is deliberately absent from the vocabulary, and
+  the builder asserts that before writing), and **`Designed by a Master` rides ALONGSIDE rather than
+  instead** — `Tag.matches` performs no implication and the curated shelf is keyed on that literal
+  string, so dropping it is the #493 defect. **Do not "tidy" the generic tag away.** Verified
+  catalogue-wide after the change: **732 entries name an architect and 0 are missing the shelf tag**
+  (731 → 732 is this pin), **0 of the 429 architect names unused**. ⚠️ **Still flagged and deliberately
+  NOT done:** the three place-mates also carry the styleEra tag **`Contemporary`** and this pin does
+  not — the one remaining difference between the four members. That is an **era** tag rather than an
+  architect tag, so adding it would have widened a specific instruction; one line closes it.
 - **🔴 A REAL BLIND SPOT CLOSED IN `validate-tours-mirror.py` — found by injecting the fault, and
   CHECKED AGAINST THE SWIFT BEFORE BEING CALLED ONE.** `validate-tours.swift:553-554` errors when a
   `kind: "link"` entry's stop is not `manual`; the mirror checked nowhere, so flipping this pin to
