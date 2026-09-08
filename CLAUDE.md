@@ -129,13 +129,37 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-09-07)
 
-### Thirty-seven link pins, three creators, and one post that is three pins (branch `claude/tour-links-jydqxy`, session 148 — content)
+### Thirty-seven link pins, three creators, and one post that is three pins ([PR #751](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/751), session 148 — content)
 
 **The owner sent 37 Instagram links under three headings; they resolve to 35 distinct
-shortcodes and ship as 37 pins.** **linkPins 1,306 → 1,343 · makers 350 → 353 · `tours` and
-`places` byte-identical.** Content plus one developer-tooling file
-(`scripts/validate-tours-mirror.py`, which does not ship in the app). No Swift, no SQL, no
-place created, no build. Detail: `archive/HANDOFF-260907-4.md`.
+shortcodes and ship as 37 pins.** **MERGED as [#751](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/751)
+(squash `783f1822`)** — content plus one developer-tooling file
+(`scripts/validate-tours-mirror.py`, which does not ship in the app), so the auto-merge class.
+**linkPins 1,306 → 1,343 · makers 350 → 353 · `tours` and `places` byte-identical.**
+No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF-260907-4.md`.
+
+- **✅ VERIFIED AGAINST THE SYSTEMS AFTER THE MERGE, NOT AGAINST ITS SUCCESS LINE.** All three CI
+  jobs green on `f72e6d41`, the **authoritative Swift validator** among them, agreeing with the
+  mirror. The squash was **checked to carry real content** — **2,233 insertions / 3 deletions
+  across 7 files** — after #629's empty-commit lesson. On `main`: **353 makers / 1,552 tours / 130
+  places / 1,343 link pins**, all 37 pins on the three creator rows, **0 link pins wrongly inside
+  `tours`**, and the Zumthor group intact as **3 pins on one hero** across Los Angeles / Vals /
+  Mechernich. **All 35 hero URLs live 200, 0 non-200**, re-checked after the parallel gh-pages
+  pushes; exactly **35 new hero URLs for 37 pins**, so the shared-hero case survived four merges.
+  ⚠️ **The mirror publish is proved by BLOB IDENTITY rather than by the served URL** — gh-pages'
+  committed `Tours.json` blob is **byte-identical to `main`'s** (`ccad9922` on both sides) while
+  the CDN was still serving the pre-merge copy. **The committed blob, never the served URL, is
+  what says a publish landed.** ⚠️ **PERISHABLE, TRUE ONLY AT 09:25 UTC: the Supabase seed was
+  still mid-upsert**, so the RPC — the source the app reads FIRST — was still serving **1,306**
+  pins; it answered **200 at TTFB 2.1 s / total 2.4 s** on the 10.6 MB payload, which is the
+  materialised snapshot working. **Re-measure rather than repeating that**; the seed is
+  upsert-only and idempotent, so it lands on its own.
+- **⚠️ THE `pkill -f` TRAP FIRED AGAIN AND KILLED MY OWN SHELL** (exit 144) — `pkill -f
+  poll_live.sh` matches the **wrapping `bash -c` command line**, which contains the script name.
+  Session 140 recorded it; use **`pgrep -f "[p]oll_live\.sh$" | xargs -r kill`**. ⚠️ Also worth
+  keeping: **a background script's `echo` to a redirected stdout is BLOCK-buffered**, so a poll
+  loop can look stalled at one line while it is running fine — append to a log file per iteration
+  instead of relying on the redirect.
 
 - **✅ ALL 35 POSTS ALIVE, 0 ALREADY PINNED, 0 BLOCKED, 3 NEW MAKER ROWS.** Creators:
   `@rayisaplace` 32 · `@sarah_hsiao` 4 · `@itsblankcreative` 1 — all Instagram, all shipping
