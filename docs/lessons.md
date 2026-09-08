@@ -103,6 +103,14 @@ pins.json`); the session sees a six-line summary. Print one entry only when you 
 one. The same reasoning is why `Tours.json` is never opened whole: at 11 MB it is three context
 windows of a file nothing needs in full — query it with `python3 -c` and print the fields.
 
+**🔴 An absence you found by grepping the wrong field is not an absence.** The one-post-many-pins
+id scheme adds `#<slug(city)>` to the *hashed key*, while `sourceURL` is stored clean. Grepping
+`sourceURL` for `#` returns nothing, which reads exactly like "the scheme does not exist" — and
+that conclusion was written into a runbook before `archive/README.md` contradicted it. The scheme
+is real: 7 of the 10 live shared-URL pins reproduce from it on both the tour and the stop id.
+Before recording that something does not exist, look for the thing it would *produce* (here:
+pins sharing a `sourceURL`), not only for the spelling you expected.
+
 **A tool you are about to write may already exist.** Before building a fault harness for a
 content batch, note that `validate-tours-mirror.py` injects 32 known faults on every run and
 refuses a verdict if it misses any. Three sessions' worth of "rebuild the harness" was work

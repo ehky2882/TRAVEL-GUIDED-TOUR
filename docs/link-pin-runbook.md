@@ -105,8 +105,35 @@ version blacklisted tracking parameters and immediately missed one, so the same
 post shared twice hashed to two ids and landed as two pins. Across all three
 platforms exactly one query parameter is ever identity: YouTube's `v`.
 
-No live pin uses a URL fragment. If you ever need several pins from one post,
-that scheme does not exist yet — design it, don't assume it.
+### One post, several pins
+
+Three live posts carry more than one pin (10 pins in all) — a video naming
+several places, each of which deserves its own map location. Those ids add a
+**fragment to the hashed key**, and the fragment is the pin's **city, slugified**:
+
+| Row | Key hashed |
+|---|---|
+| pin | `atlas-tour:link:<sourceURL>#<slug(city)>` |
+| its stop | `atlas-stop:link:<sourceURL>#<slug(city)>` |
+
+⚠️ **The fragment lives only in the key. `sourceURL` is stored clean** — no live
+pin has a `#` in the stored field. Grepping `sourceURL` for `#` therefore finds
+nothing and looks like proof the scheme does not exist. It is not; check the
+ids instead, which is what `groups` of a shared `sourceURL` are for.
+
+Reproduced against the live catalogue on 2026-09-08:
+
+- **1333 / 1333** single-URL pins reproduce from the bare key. Exact.
+- **7 / 10** shared-URL pins reproduce from the `#<slug(city)>` key, on the tour
+  id *and* the stop id.
+
+🔴 **The remaining 3 are a known gap, not noise.** Two of them (`DA_8t0NPsi8`,
+the Charging Bull pair) are **both in New York** — city cannot disambiguate two
+pins in the same city, so their ids follow no reproducible rule and were minted
+ad hoc. The third (a Milan antiques-market pin) reproduces from nothing either,
+most likely minted before its `city` was edited. **If a batch needs two pins from
+one post in one city, there is no convention yet — pick one, write it here, and
+say so in the PR.** Do not assume the ad-hoc ids encode a rule.
 
 ---
 

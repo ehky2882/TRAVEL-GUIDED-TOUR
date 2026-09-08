@@ -272,6 +272,19 @@ def selftest() -> int:
     check("a clean pins file passes", validate_incoming(
         {"makers": [], "linkPins": [pin("X")]}) == [])
 
+    # One post can legitimately be several pins — a video naming several places.
+    # Three live posts do this (10 pins). Their ids add `#<slug(city)>` to the
+    # hashed key while `sourceURL` stays clean, so a shared sourceURL is NORMAL
+    # and must never be mistaken for a duplicate.
+    shared = [dict(pin("A"), sourceURL="https://x/p"),
+              dict(pin("B"), sourceURL="https://x/p")]
+    check("two pins sharing one sourceURL are valid",
+          validate_incoming({"linkPins": shared}) == [])
+    both, _ = merge({"makers": [], "tours": [], "places": [], "linkPins": []},
+                    {"linkPins": shared})
+    check("two pins sharing one sourceURL both merge",
+          [p_["id"] for p_ in both["linkPins"]] == ["A", "B"])
+
     # The formatting contract shared with split-link-pins.py
     check("dumps writes indent=2, non-ASCII verbatim, trailing newline",
           dumps({"a": "café"}) == b'{\n  "a": "caf\xc3\xa9"\n}\n')
