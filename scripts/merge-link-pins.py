@@ -45,7 +45,9 @@ source URL, so the same post always lands on the same id.
 import argparse
 import json
 import os
+import re
 import sys
+import uuid
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
@@ -93,6 +95,76 @@ def validate_incoming(payload: dict) -> list[str]:
             problems.append(f"{where}: coordinate is exactly (0, 0) — the Gulf of "
                             "Guinea, i.e. a missing coordinate that survived.")
 
+    return problems
+
+
+def slugify(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
+
+
+def derived_id(prefix: str, url: str, fragment: str = "") -> str:
+    """The id scheme, in one place. uuid5 over NAMESPACE_URL, uppercased."""
+    key = f"{prefix}:link:{url}" + (f"#{fragment}" if fragment else "")
+    return str(uuid.uuid5(uuid.NAMESPACE_URL, key)).upper()
+
+
+def expected_ids(pin: dict, siblings: list) -> tuple[str, str]:
+    """(tour id, stop id) this pin should carry, given every pin sharing its URL.
+
+    One post usually means one pin, and the bare key covers it. A post naming
+    several places means several pins, disambiguated by city — and when two of
+    them are in the SAME city, by city AND subject, because the city alone
+    collides. That last case has twice been resolved by inventing a uuid on the
+    spot, which nothing could see afterwards: a made-up id looks exactly like a
+    derived one.
+    """
+    if len(siblings) < 2:
+        frag = ""
+    else:
+        frag = slugify(pin.get("city"))
+        if sum(1 for q in siblings if slugify(q.get("city")) == frag) > 1:
+            frag = f"{frag}-{slugify(pin.get('title'))}"
+    return derived_id("atlas-tour", pin.get("sourceURL", ""), frag), \
+           derived_id("atlas-stop", pin.get("sourceURL", ""), frag)
+
+
+def check_ids(payload: dict, catalog: dict) -> list[str]:
+    """Every incoming id must be derivable. Grouping spans the catalog too: a
+    pin can share its post with one that landed in an earlier batch."""
+    incoming = payload.get("linkPins") or []
+    # 🔴 Deduplicate by id before grouping. Re-merging a pin that is already in
+    # the catalog otherwise counts it twice — the catalog copy and the incoming
+    # copy look like two pins sharing one post, so a perfectly ordinary pin is
+    # told its bare-key id should have carried a city fragment. That would break
+    # the idempotence this tool exists to guarantee.
+    groups, seen_ids = {}, set()
+    for p in list(catalog.get("linkPins") or []) + incoming:
+        pid = p.get("id")
+        if pid in seen_ids:
+            continue
+        seen_ids.add(pid)
+        groups.setdefault(p.get("sourceURL"), []).append(p)
+
+    problems = []
+    for p in incoming:
+        sib = groups.get(p.get("sourceURL"), [p])
+        want_t, want_s = expected_ids(p, sib)
+        got_t = p.get("id")
+        if got_t != want_t:
+            problems.append(
+                f"{p.get('title') or got_t!r}: id is {got_t}, but the scheme gives "
+                f"{want_t}.\n      {len(sib)} pin(s) share this post"
+                + (" — same city, so the key is #<city>-<title>"
+                   if len(sib) > 1 and sum(1 for q in sib
+                       if slugify(q.get('city')) == slugify(p.get('city'))) > 1
+                   else "")
+                + ".\n      Use the derived id: a hand-minted one cannot be "
+                  "reproduced or checked later.")
+        stops = p.get("stops") or []
+        if stops and stops[0].get("id") != want_s:
+            problems.append(
+                f"{p.get('title') or got_t!r}: stop id is {stops[0].get('id')}, "
+                f"but the scheme gives {want_s}.")
     return problems
 
 
@@ -162,6 +234,15 @@ def run(pins_path: str, catalog_path: str, write: bool) -> int:
               "  Merging would reformat the entire file and bury the pins in "
               "the diff.\n"
               "  Normalise it first, in its own commit, then merge.")
+        return 1
+
+    id_problems = check_ids(payload, catalog)
+    if id_problems:
+        print(f"\nREFUSED — {len(id_problems)} id(s) are not derivable from the "
+              "scheme. Nothing was written.")
+        for x in id_problems:
+            print(f"  - {x}")
+        print("\n  See docs/link-pin-runbook.md § the id scheme.")
         return 1
 
     merged, rep = merge(catalog, payload)
@@ -284,6 +365,67 @@ def selftest() -> int:
                     {"linkPins": shared})
     check("two pins sharing one sourceURL both merge",
           [p_["id"] for p_ in both["linkPins"]] == ["A", "B"])
+
+    # The id scheme, checked against ids that are actually live.
+    check("bare key reproduces a real single-post pin",
+          derived_id("atlas-tour", "https://www.instagram.com/reel/DFxyNa9xMSm/")
+          == "6192A9EC-C601-5145-A600-5F7E8FF6940E")
+    check("bare key reproduces its stop id",
+          derived_id("atlas-stop", "https://www.instagram.com/reel/DFxyNa9xMSm/")
+          == "3C196CA4-53B3-5148-89F5-7089953B2501")
+    check("city fragment reproduces a real multi-pin id",
+          derived_id("atlas-tour", "https://www.instagram.com/reel/DWHSGzlEZSv/",
+                     "vals")
+          == "77C43772-4724-5EE3-B291-63FE7469BAEC")
+
+    zum = "https://www.instagram.com/reel/DWHSGzlEZSv/"
+    sibs = [{"sourceURL": zum, "city": "Vals", "title": "Therme Vals"},
+            {"sourceURL": zum, "city": "Los Angeles", "title": "LACMA"},
+            {"sourceURL": zum, "city": "Mechernich", "title": "Bruder Klaus"}]
+    check("different cities -> the city key, matching the live id",
+          expected_ids(sibs[0], sibs)[0] == "77C43772-4724-5EE3-B291-63FE7469BAEC")
+
+    # The case that twice got an invented uuid instead.
+    ed = "https://x/post"
+    pair = [{"sourceURL": ed, "city": "Edinburgh", "title": "The Elephant House"},
+            {"sourceURL": ed, "city": "Edinburgh", "title": "George Heriot's School"}]
+    a, b = expected_ids(pair[0], pair)[0], expected_ids(pair[1], pair)[0]
+    check("same city -> distinct ids (the gap this rule closes)", a != b)
+    check("same city -> the key carries city AND subject",
+          a == derived_id("atlas-tour", ed, "edinburgh-the-elephant-house"))
+    check("a lone pin still uses the bare key",
+          expected_ids(pair[0], [pair[0]])[0] == derived_id("atlas-tour", ed))
+
+    # The check itself
+    def mk(pid, url, city, title, sid=None):
+        return {"id": pid, "kind": "link", "title": title, "sourceURL": url,
+                "city": city, "centroidLatitude": 1.0, "centroidLongitude": 1.0,
+                "stops": [{"id": sid or derived_id("atlas-stop", url)}]}
+    good_url = "https://x/solo"
+    good = mk(derived_id("atlas-tour", good_url), good_url, "Oslo", "A place")
+    check("a derived pin passes the id check",
+          check_ids({"linkPins": [good]}, {"linkPins": []}) == [])
+    bad = dict(good, id="00000000-0000-0000-0000-000000000000")
+    probs = check_ids({"linkPins": [bad]}, {"linkPins": []})
+    check("a hand-minted id is refused", len(probs) == 1 and "the scheme gives" in probs[0])
+    check("a wrong stop id is refused",
+          any("stop id" in x for x in check_ids(
+              {"linkPins": [dict(good, stops=[{"id": "DEAD"}])]}, {"linkPins": []})))
+
+    # Grouping must span the catalog: a sibling can already be live.
+    u = "https://x/two"
+    live = mk(derived_id("atlas-tour", u, "leeds-first"), u, "Leeds", "First",
+              derived_id("atlas-stop", u, "leeds-first"))
+    new_pin = mk(derived_id("atlas-tour", u, "leeds-second"), u, "Leeds", "Second",
+                 derived_id("atlas-stop", u, "leeds-second"))
+    check("a sibling already in the catalog is counted when deriving",
+          check_ids({"linkPins": [new_pin]}, {"linkPins": [live]}) == [])
+
+    # 🔴 Re-merging an existing pin must not look like a two-pin post.
+    solo_url = "https://x/solo2"
+    solo = mk(derived_id("atlas-tour", solo_url), solo_url, "Porto", "Only pin")
+    check("re-merging a pin already in the catalog still passes",
+          check_ids({"linkPins": [solo]}, {"linkPins": [dict(solo)]}) == [])
 
     # The formatting contract shared with split-link-pins.py
     check("dumps writes indent=2, non-ASCII verbatim, trailing newline",
