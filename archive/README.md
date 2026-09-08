@@ -47,8 +47,8 @@ not written down.
 
 | File | What it covers | Date |
 |---|---|---|
-| `INDEX-DETAIL.md` | The long-form entries this index used to carry, verbatim — 227 of them, averaging 2,089 characters. **Search, never load whole** | 2026-09-08 |
-| `ROADMAP-STATUS-HISTORY.md` | The 113 dated `**Status (…)**` blocks moved out of `ROADMAP.md`, which they had grown to 86% of. **Search, never load whole** | 2026-09-08 |
+| `INDEX-DETAIL.md` | The long-form entries this index used to carry, verbatim. **Search, never load whole** | 2026-09-08 |
+| `ROADMAP-STATUS-HISTORY.md` | The dated `**Status (…)**` blocks moved out of `ROADMAP.md`, which they had grown to 86% of. **Search, never load whole** | 2026-09-08 |
 | `CURRENT-STATE-HISTORY.md` | The 34 dated `## Current State` blocks that accumulated in `CLAUDE.md` between 2026-05-25 (session 8) and 2026-09-07 (session 148), verbatim, newest first. | 2026-09-08 |
 | `ACCOUNT-TRANSFER-260520.md` | One-time orientation doc for the successor Claude on a different account. | 2026-05-20 |
 | `HANDOFF-260901-13.md` | Session 137, 2026-09-01 (web, content) — three Hong Kong places, and an address settled by fetching the venue's own page. |  |
@@ -255,6 +255,7 @@ not written down.
 | `HANDOFF-260905-3.md` | written as `-260905`, then `-2`, and renumbered TWICE on add/add collisions with two parallel sessions. |  |
 | `HANDOFF-260905-4.md` | four places for the four sites at the stack cap. |  |
 | `HANDOFF-260908.md` | the token-cost session: `CLAUDE.md` was 1.5 MB, injected into every request of every session. |  |
+| ``HANDOFF-260908-2.md`` | ⚠️ **NOT IN THE REPO** — session 149: 83 link pins from TikTok `@urbanistariel`; a hero filename that would have overwritten open PR #749's live file, and a MOCA stack at depth 4 that… |  |
 | `HANDOFF-260906.md` | the catalog RPC was failing a third of the time; materialise it. |  |
 | `HANDOFF-260905.md` | thirteen Studio Gang link pins across eight buildings, and two stack caps hit at once. |  |
 | `HANDOFF-260907-4.md` | Thirty-seven link pins from three creators, and one post that is three pins. |  |
@@ -262,7 +263,7 @@ not written down.
 | `HANDOFF-260907-3.md` | Eastern State Penitentiary gains its third member, and the standing note calling it a place CANDIDATE was wrong. |  |
 | `HANDOFF-260907.md` | the Gilder Center becomes a place, and a bug the mirror cannot see. |  |
 
-212 entries. Full text for every one of them is in
+213 entries. Full text for every one of them is in
 [`INDEX-DETAIL.md`](INDEX-DETAIL.md), in this same order.
 
-⚠️ **1 entry names a file that is not in the repo** (`HANDOFF-260819.md`). It was indexed but never committed — a row promising a handoff nobody can open. The row is kept, marked, rather than quietly deleted: the gap is the finding.
+⚠️ **2 entry names a file that is not in the repo** (`HANDOFF-260819.md`, ``HANDOFF-260908-2.md``). It was indexed but never committed — a row promising a handoff nobody can open. The row is kept, marked, rather than quietly deleted: the gap is the finding.

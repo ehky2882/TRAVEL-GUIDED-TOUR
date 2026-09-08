@@ -152,7 +152,7 @@ grep -n "^### .*Barcelona" archive/CURRENT-STATE-HISTORY.md   # a city launch
 ```
 
 Most entries name an `archive/HANDOFF-YYMMDD*.md` carrying the fuller account; 94 distinct
-handoffs are cited, and `archive/README.md` indexes 212 of the 220 files in `archive/` —
+handoffs are cited, and `archive/README.md` indexes 215 of the 221 files in `archive/` —
 **re-derive that count, never quote it** (`grep -c '^| ' archive/README.md`), and note the
 index carries one row for a handoff that was never committed, marked as such.
 
