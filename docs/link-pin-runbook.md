@@ -127,13 +127,56 @@ Reproduced against the live catalogue on 2026-09-08:
 - **7 / 10** shared-URL pins reproduce from the `#<slug(city)>` key, on the tour
   id *and* the stop id.
 
-🔴 **The remaining 3 are a known gap, not noise.** Two of them (`DA_8t0NPsi8`,
-the Charging Bull pair) are **both in New York** — city cannot disambiguate two
-pins in the same city, so their ids follow no reproducible rule and were minted
-ad hoc. The third (a Milan antiques-market pin) reproduces from nothing either,
-most likely minted before its `city` was edited. **If a batch needs two pins from
-one post in one city, there is no convention yet — pick one, write it here, and
-say so in the PR.** Do not assume the ad-hoc ids encode a rule.
+### 🔴 Two pins from one post in ONE city — the rule
+
+The city fragment only separates pins that are **in different cities**. When one
+post yields two pins in the *same* city it does not, and both keys collide.
+
+**This has now happened twice, and both times the ids were invented on the spot**
+— the Charging Bull pair (`DA_8t0NPsi8`, both New York) and the Harry Potter pair
+(`@urbanistariel`, both Edinburgh, #758). Nothing stopped it, because a made-up
+uuid looks exactly like a derived one.
+
+**The rule: when the city collides, append the subject.**
+
+| Case | Key hashed |
+|---|---|
+| cities differ (the normal case) | `atlas-tour:link:<url>#<slug(city)>` |
+| cities collide | `atlas-tour:link:<url>#<slug(city)>-<slug(title)>` |
+
+Same on `atlas-stop:`. Checked against every multi-pin post in the catalogue: it
+yields a unique key for all of them, and it changes nothing for the pins the plain
+city key already covers, since the fallback only fires on a collision.
+
+```python
+# The whole rule.
+frag = slug(city)
+if sum(1 for q in group if slug(q.city) == frag) > 1:
+    frag = f"{frag}-{slug(title)}"
+key = f"atlas-tour:link:{url}#{frag}"
+```
+
+⚠️ **`make-link-pin.py` does not do this** — it has no fragment support at all, so
+a multi-pin post is still minted by hand. Mint the ids with the rule above rather
+than letting `uuid4` decide.
+
+🔴 **NEVER re-mint an id that is already live**, including the five below. An id
+is identity: change one and every phone treats it as a brand-new pin, so anyone
+who saved the old one loses it from their library. **The rule is for new pins
+only.** The existing five stay as they are, permanently.
+
+The five that do not reproduce (re-derived 2026-09-08 against 1426 pins):
+
+| City | Pin | Why |
+|---|---|---|
+| New York | The Bedi Makky Art Foundry | same-city pair, minted ad hoc |
+| New York | Who Cast the Charging Bull | same-city pair, minted ad hoc |
+| Edinburgh | The Elephant House | same-city pair, minted ad hoc |
+| Edinburgh | George Heriot's School | same-city pair, minted ad hoc |
+| Milan | Mercatone dell'Antiquariato | a different cause — most likely minted before its `city` was edited |
+
+Everything else reproduces exactly: **1414 / 1414** single-URL pins from the bare
+key, **7 / 7** of the remaining multi-pin ids from the city key.
 
 ### ✅ The same-city convention, chosen 2026-09-08 (session 149)
 

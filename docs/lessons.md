@@ -89,6 +89,26 @@ and reported opposite things; both were right at their own moment.
 - **The committed blob, never the served URL, says a publish landed.** The gh-pages CDN lags
   6–17 minutes routinely; compare the committed blob hash instead.
 
+🔴 **"I don't have the key" is a claim about ONE endpoint, not about the fact.** Before reporting
+that something cannot be checked, ask which part of it actually needs the credential you lack. The
+App Store row of the perishable table said a keyless session must say it could not check the
+version — so no session checked, and **STATUS.md said 1.1.1 was still awaiting owner action for a
+week after it was live on the App Store.** The **released** version, its release date and its live
+release notes come from a public endpoint that needs no key at all:
+
+```bash
+curl -s "https://itunes.apple.com/lookup?bundleId=com.ehky.TRAVEL-GUIDED-TOUR&country=us"
+```
+
+Only an **unreleased** version's review state needs the ASC key. `scripts/session-start.sh` now
+runs the public lookup unconditionally.
+
+**A failure can be positive evidence — read the error, not just the colour.** Build 140 was
+rejected at upload with **90186 `Invalid Pre-Release Train`**. A train closes because Apple
+*approved* the version, so that rejection proved 1.1.1 had shipped — five days before anyone said
+so. The same shape recurs: `get_catalog_built()` returning `57014` is the materialisation
+migration **working** (the slow builder is off the request path), not failing.
+
 ---
 
 ## 3. Content and the catalog
@@ -123,6 +143,25 @@ file and merge from the file (`make-link-pin.py … > pins.json` → `merge-link
 pins.json`); the session sees a six-line summary. Print one entry only when you mean to *read*
 one. The same reasoning is why `Tours.json` is never opened whole: at 11 MB it is three context
 windows of a file nothing needs in full — query it with `python3 -c` and print the fields.
+
+**🔴 A convention nobody checks is not a convention.** Link-pin ids are uuid5 over the source URL,
+so a post naming several places needs a fragment to separate its pins — the city. When two of them
+sit in the *same* city the city collides too, and **twice** the answer was an invented uuid, because
+a made-up id is indistinguishable from a derived one by eye. The rule (fall back to
+`#<slug(city)>-<slug(title)>`) was the easy half; the half that matters is that
+`merge-link-pins.py` now **refuses** an id it cannot derive and prints the one the scheme gives.
+Write the check in the same change as the rule, or the rule is a suggestion.
+
+**🔴 An id is identity — never re-mint a live one.** Changing an id makes every phone treat the pin
+as brand new, so anyone who saved it loses it from their library. The five existing non-derivable
+ids stay exactly as they are, permanently; a new rule applies to new pins only. "Tidying" ids is
+data loss wearing a neat haircut.
+
+**⚠️ A check that groups records must deduplicate first.** The id check grouped catalog pins and
+incoming pins by source URL — and re-merging an existing pin counted it twice, so an ordinary
+single-post pin was told its id should have carried a city fragment. That broke the idempotence the
+tool exists to guarantee, and **only a run against the real catalogue showed it**; the unit tests
+were all green. Dedupe by id before grouping, and test the re-run, not just the first run.
 
 **🔴 An absence you found by grepping the wrong field is not an absence.** The one-post-many-pins
 id scheme adds `#<slug(city)>` to the *hashed key*, while `sourceURL` is stored clean. Grepping
