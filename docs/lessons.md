@@ -89,6 +89,26 @@ and reported opposite things; both were right at their own moment.
 - **The committed blob, never the served URL, says a publish landed.** The gh-pages CDN lags
   6–17 minutes routinely; compare the committed blob hash instead.
 
+🔴 **"I don't have the key" is a claim about ONE endpoint, not about the fact.** Before reporting
+that something cannot be checked, ask which part of it actually needs the credential you lack. The
+App Store row of the perishable table said a keyless session must say it could not check the
+version — so no session checked, and **STATUS.md said 1.1.1 was still awaiting owner action for a
+week after it was live on the App Store.** The **released** version, its release date and its live
+release notes come from a public endpoint that needs no key at all:
+
+```bash
+curl -s "https://itunes.apple.com/lookup?bundleId=com.ehky.TRAVEL-GUIDED-TOUR&country=us"
+```
+
+Only an **unreleased** version's review state needs the ASC key. `scripts/session-start.sh` now
+runs the public lookup unconditionally.
+
+**A failure can be positive evidence — read the error, not just the colour.** Build 140 was
+rejected at upload with **90186 `Invalid Pre-Release Train`**. A train closes because Apple
+*approved* the version, so that rejection proved 1.1.1 had shipped — five days before anyone said
+so. The same shape recurs: `get_catalog_built()` returning `57014` is the materialisation
+migration **working** (the slow builder is off the request path), not failing.
+
 ---
 
 ## 3. Content and the catalog

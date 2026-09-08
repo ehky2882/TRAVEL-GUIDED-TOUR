@@ -14,7 +14,9 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-09-07 (session 147 — **the `@poche_space` pin now moves onto the Gilder Center on owner instruction, open as [#746](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/746): Gilder 3 → 4 members, AMNH 6 → 5. It also closes a REAL blind spot in `validate-tours-mirror.py` — `validate-tours.swift:553-554` errors when a `kind: "link"` stop is not `manual` and the mirror checked nowhere — found by injection and checked against the Swift before being called one.** ⚠️ **[#743](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/743) merged while #746 sat open with green CI, so `Tours.json` conflicted and was resolved the documented way — main's file taken wholesale and the idempotent assembler re-run on it, never hand-resolved — with #743's Eastern State place asserted byte-identical afterwards.** Also session 146 continued — **[#742](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/742) MERGED (squash `9eaabdd1`), so the catalog-materialisation SQL paste was unblocked — ✅ **and the owner has since applied it, so NO owner SQL paste is outstanding**; and **`Inside the Abandoned Eastern State Penitentiary` joined the existing Eastern State Penitentiary place as its third member** on owner instruction — the pin moved 3.8 m, the place did not. ✅ **THAT PASTE HAS SINCE HAPPENED, AND THIS HEADER SAID OTHERWISE FOR A DAY — corrected 2026-09-08 by [#750](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/750).** Every earlier reading here was honest when taken: #746 measured `catalog_snapshot_age()` and `get_catalog_built()` both returning **404 `PGRST202`** and `get_catalog()` **500 on three of three** — and #746 merged *after* [#748](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/748) had already corrected the body of this file, so the false claim outlived its own correction **in the header nobody re-read**. Re-measured live: `catalog_snapshot_age()` returns **200** with the snapshot rebuilt at **2026-09-08T03:20:30Z** (the seed from #746's own merge), and `get_catalog()` returned **200 on 3 of 3** at **TTFB 0.79–2.18 s** on a 10.6 MB payload. ⚠️ **`get_catalog_built()` still returning `57014` is the migration WORKING** — the slow builder runs once per seed and nothing serves it to a phone; see § SQL pastes owed. 🔴 **The durable lesson is § READ FIRST's own, paid for twice in one day: an owner-owed item can clear while a session is mid-flight, and a header is where a corrected fact goes to survive. Re-probe; never quote a live-system fact from this board.** ⚠️ **The seed's `refresh_catalog_snapshot()` call is guarded by `to_regprocedure`, so with the SQL unpasted it skips the refresh, raises a notice and still finishes GREEN — ask `catalog_snapshot_age()`, never a green seed job.** Earlier the same session — **both content PRs have MERGED and #744 is verified live: the Supabase RPC and the gh-pages mirror each serve 130 places with The Gilder Center present, its 3 members all on the place coordinate, 0 members off their place coordinate catalogue-wide and 0 link pins wrongly inside `tours`.** **The two: [#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744) made the Gilder Center a place (places 129 → 130, closing the last stack-cap finding from the Studio Gang batch), and [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745) added 28 link pins across 14 countries — eleven of them new to the catalogue, the largest expansion any batch has produced. #745 raises one owner decision: Griffith Observatory now sits exactly at `TourSetMap.maxStacked = 3` with no headroom.** ⚠️ **#744 claimed `archive/HANDOFF-260907.md` while #745's CI was running, so #745's handoff renumbered to `-2`, and both sides edited the Key-facts counts — re-derive rather than quoting them.** Earlier, session 146 — **the catalog RPC was found failing 4 calls in 12 with a statement timeout; the fix merged as #742 and carries an owner SQL paste that must come AFTER the merge**. Earlier the same day, session 145 — **[#740](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/740) MERGED (squash `62b662b4`): four Miami/Little Rock places, catalogue now 129 places**, after a rebuild onto the `main` that session 146's [#739](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/739) had moved. Earlier, session 146 — **four places for the sites at the stack cap (Alcatraz · Hoover Dam · Fort Jefferson · the Leaning Tower of Niles), places 121 → 125, MERGED as #739**. Earlier the same day, session 144 — **41 link pins from TikTok `@itshistoryonair` MERGED as [#737](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/737)**, after [#738](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/738) moved `main` underneath it. ⚠️ **Re-derive catalogue counts rather than quoting them — three sessions shipped content the same day.**)
+**Last verified:** 2026-09-08 (session 149 — a catch-up pass, no content. **Two findings, both measured rather than read off this board.** (1) 🔴 **1.1.1 has been LIVE on the App Store since 1 Sep 15:23 UTC** and § 1d below said the opposite for a week — machine-verified from Apple's *public* lookup endpoint, which needs **no App Store Connect key**, so no session ever had an excuse; `scripts/session-start.sh` now runs it on every start and the perishable-facts table in `CLAUDE.md` is split into released-vs-unreleased. (2) ⚠️ **The catalog RPC is failing far more than the ~1-in-8 recorded below** — see § SQL pastes owed for the fresh sample. Catalogue re-derived on `68d03a67` **after #758 merged mid-session**: **1,552 tours · 1,426 pins · 353 makers · 130 places · 414 cities · 61 countries** — ⚠️ **#758 landed 83 pins and left the `CLAUDE.md` Key-facts line reading 1,343 / 404 / 59, its nineteenth staleness, so this session counted and corrected it.** The gh-pages mirror was byte-current with `main` when measured. Open PRs: **#749** only, another session's link-pin batch.)
+
+**Previously:** 2026-09-07 (session 147 — **the `@poche_space` pin now moves onto the Gilder Center on owner instruction, open as [#746](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/746): Gilder 3 → 4 members, AMNH 6 → 5. It also closes a REAL blind spot in `validate-tours-mirror.py` — `validate-tours.swift:553-554` errors when a `kind: "link"` stop is not `manual` and the mirror checked nowhere — found by injection and checked against the Swift before being called one.** ⚠️ **[#743](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/743) merged while #746 sat open with green CI, so `Tours.json` conflicted and was resolved the documented way — main's file taken wholesale and the idempotent assembler re-run on it, never hand-resolved — with #743's Eastern State place asserted byte-identical afterwards.** Also session 146 continued — **[#742](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/742) MERGED (squash `9eaabdd1`), so the catalog-materialisation SQL paste was unblocked — ✅ **and the owner has since applied it, so NO owner SQL paste is outstanding**; and **`Inside the Abandoned Eastern State Penitentiary` joined the existing Eastern State Penitentiary place as its third member** on owner instruction — the pin moved 3.8 m, the place did not. ✅ **THAT PASTE HAS SINCE HAPPENED, AND THIS HEADER SAID OTHERWISE FOR A DAY — corrected 2026-09-08 by [#750](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/750).** Every earlier reading here was honest when taken: #746 measured `catalog_snapshot_age()` and `get_catalog_built()` both returning **404 `PGRST202`** and `get_catalog()` **500 on three of three** — and #746 merged *after* [#748](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/748) had already corrected the body of this file, so the false claim outlived its own correction **in the header nobody re-read**. Re-measured live: `catalog_snapshot_age()` returns **200** with the snapshot rebuilt at **2026-09-08T03:20:30Z** (the seed from #746's own merge), and `get_catalog()` returned **200 on 3 of 3** at **TTFB 0.79–2.18 s** on a 10.6 MB payload. ⚠️ **`get_catalog_built()` still returning `57014` is the migration WORKING** — the slow builder runs once per seed and nothing serves it to a phone; see § SQL pastes owed. 🔴 **The durable lesson is § READ FIRST's own, paid for twice in one day: an owner-owed item can clear while a session is mid-flight, and a header is where a corrected fact goes to survive. Re-probe; never quote a live-system fact from this board.** ⚠️ **The seed's `refresh_catalog_snapshot()` call is guarded by `to_regprocedure`, so with the SQL unpasted it skips the refresh, raises a notice and still finishes GREEN — ask `catalog_snapshot_age()`, never a green seed job.** Earlier the same session — **both content PRs have MERGED and #744 is verified live: the Supabase RPC and the gh-pages mirror each serve 130 places with The Gilder Center present, its 3 members all on the place coordinate, 0 members off their place coordinate catalogue-wide and 0 link pins wrongly inside `tours`.** **The two: [#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744) made the Gilder Center a place (places 129 → 130, closing the last stack-cap finding from the Studio Gang batch), and [#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745) added 28 link pins across 14 countries — eleven of them new to the catalogue, the largest expansion any batch has produced. #745 raises one owner decision: Griffith Observatory now sits exactly at `TourSetMap.maxStacked = 3` with no headroom.** ⚠️ **#744 claimed `archive/HANDOFF-260907.md` while #745's CI was running, so #745's handoff renumbered to `-2`, and both sides edited the Key-facts counts — re-derive rather than quoting them.** Earlier, session 146 — **the catalog RPC was found failing 4 calls in 12 with a statement timeout; the fix merged as #742 and carries an owner SQL paste that must come AFTER the merge**. Earlier the same day, session 145 — **[#740](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/740) MERGED (squash `62b662b4`): four Miami/Little Rock places, catalogue now 129 places**, after a rebuild onto the `main` that session 146's [#739](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/739) had moved. Earlier, session 146 — **four places for the sites at the stack cap (Alcatraz · Hoover Dam · Fort Jefferson · the Leaning Tower of Niles), places 121 → 125, MERGED as #739**. Earlier the same day, session 144 — **41 link pins from TikTok `@itshistoryonair` MERGED as [#737](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/737)**, after [#738](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/738) moved `main` underneath it. ⚠️ **Re-derive catalogue counts rather than quoting them — three sessions shipped content the same day.**)
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -838,6 +840,47 @@ because Apple refuses builds against a released 1.1).
 - **⚠️ Remaining steps are owner-only and outside the repo:** create the 1.1.1 version record, push
   the metadata, attach build 137, submit. § Shipping an update has them in order.
 
+### ✅ 1.1.1 SHIPPED — the block above is finished, and the board did not say so for a week
+
+**Machine-verified 2026-09-08, not owner-reported: `version 1.1.1`, `currentVersionReleaseDate
+2026-09-01T15:23:09Z`.** It went out on **build 139**, not the 137 named above — 1.1.1 was first
+submitted with all eleven pending IAP tiers, **rejected under Guideline 2.1(b)** because no tour was
+priced at any of them, then cancelled and **resubmitted version-only** on 1 Sep. The eleven tiers are
+parked at `READY_TO_SUBMIT`; the rule that came out of it is in `docs/lessons.md` — *a tier is only
+real once content uses it.*
+
+🔴 **This board carried "remaining steps are owner-only" for a week after the app was live, and every
+session that read it inherited the error.** The check that settles it takes one command and **needs
+no App Store Connect key**, so no session ever had an excuse:
+
+```bash
+curl -s "https://itunes.apple.com/lookup?bundleId=com.ehky.TRAVEL-GUIDED-TOUR&country=us" \
+  | python3 -c 'import json,sys; r=json.load(sys.stdin)["results"][0]; print(r["version"], r["currentVersionReleaseDate"])'
+```
+
+`scripts/session-start.sh` now runs it on every session, so a keyless container no longer has to
+say "I could not check the App Store version" — **only an UNRELEASED version's review state still
+needs the key.** The perishable-facts table in `CLAUDE.md` is corrected to match.
+
+⚠️ **A second keyless signal, already on this board and not read as one:** build 140 was rejected at
+upload with **90186 `Invalid Pre-Release Train`**. A train closes when Apple approves the version —
+so that rejection was itself proof 1.1.1 had shipped, five days before anyone said so.
+
+**What the public has now, and what it does not:**
+
+| | |
+|---|---|
+| Released | **1.1.1 (build 139)**, 1 Sep 2026 |
+| `MARKETING_VERSION` on `main` | **1.1.2** — the next update's train is already open |
+| Code on `main` the public lacks | **[#728](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/728) only** — the bottom module going missing. Owner-verified on TestFlight 1.1.2 (141). Everything else since 1 Sep is catalogue, which reaches 1.1.1 over the air |
+| Catalogue the public DOES get | 1.1.1 understands `linkPins` and `places`, so every pin and place is live to them — the thing build 66 could not see. (**1,426 pins / 130 places** when measured; it grows daily, so re-derive) |
+
+**⚠️ The map expand control shipped in 1.1.1 and its release notes never mention it.** The notes are
+published and frozen, so that is permanent; the feature is simply undocumented to the public. **Do
+not "fix" it by editing `release_notes.txt` now** — see § Shipping an update, which the same commit
+corrects: those notes describe the delta from the **last released** version, so the next edit to that
+file is a rewrite for 1.1.2, not an amendment to 1.1.1's.
+
 ## 2. Blocked on owner — outside the repo
 
 **🔴 A DEAD TIKTOK LINK NEEDS RE-SHARING (2026-08-27).** `https://www.tiktok.com/t/ZP8vkb5bP/`, the twentieth of the "SF Architecture" batch, resolves to a real id (`@aggie.sanfrancisco/video/7660328152421387534`) and then fails everywhere: an empty oEmbed shell on three spaced attempts (no `thumbnail_url`), and a 367 KB *"Video currently unavailable"* page with zero `og:` tags. No caption means no subject and no location; no thumbnail means no hero, and a pin with no hero cannot ship. **Nothing on our side recovers it — only the owner re-sharing a live link.** ⚠️ It is an ordinary `/video/` post that has gone, **not** a `/photo/` carousel; that limitation is separate and permanent.
@@ -875,6 +918,49 @@ serves it to a phone. **`get_catalog()` itself returned 200 on 14 of 14 calls**,
 failure signal on its own** — the payload is **10.6 MB**, of which ~0.5 s is transfer; a single-row
 lookup of a 10.6 MB `jsonb` value out of TOAST is not free. **The signal that the fix landed is that
 the builder times out and the served endpoint does not.** ⚠️ **The second half of that criterion does NOT hold: the served endpoint still times out on roughly 1 call in 8.** The builder moving off the request path is real; the endpoint being reliable is not yet true. ⚠️ **A second, independent 20-call sample the same morning agrees (3 failures in 20), and its latency band is what identifies this as the SAME ceiling rather than a new fault:** successes ran **0.75–5.8 s** TTFB while **every failure landed at 4.3–4.8 s**, still sitting on the anon statement timeout exactly as the pre-fix builder did.
+
+🔴 **RE-MEASURED 2026-09-08 — THE FAILURE RATE HAS GONE BACK UP, AND THERE IS A MECHANISM THAT
+PREDICTS IT WILL KEEP GOING UP.** Three unbiased samples across half an hour, all against
+`get_catalog()`, the source the app reads **first**:
+
+| Window (UTC) | Result | Failure TTFB |
+|---|---|---|
+| 21:53–21:55 (≈5 min after a snapshot refresh) | **9 fail / 20** | 4.6–9.6 s |
+| 21:59–22:00 | **5 fail / 20** | 3.7–6.0 s |
+| earlier pass | **3 fail / 8** | 4.5–5.6 s |
+
+**Pooled: 17 of 52 ≈ 33%.** Excluding the window just after a refresh (the documented transient
+class): **8 of 32 = 25%.** Either figure is far above the **~1 in 8** recorded above from earlier
+the same day, and the higher one matches the **pre-fix** rate (4 in 12). Every failure is
+`500 / 57014 canceling statement due to statement timeout`.
+
+**The snapshot is genuinely in use throughout** — `catalog_snapshot_age()` returned 200 with a
+timestamp minutes old in the same passes — so this is **not** the paste being lost, and #742 is not
+broken. ⚠️ **The mechanism is that the snapshot ROW keeps growing.** The payload measured **10.88 MB**
+today against **10.6 MB** when the fix was assessed, because the catalogue went from ~1,168 to
+**1,426 pins** in between. `get_catalog()` is a single-row lookup of one `jsonb` value out of TOAST,
+and that read is already sitting *on* the anon statement timeout — so **every content batch pushes
+it further over.** Successes have drifted later too (2.1–6.8 s TTFB today against 0.75–5.8 s before).
+
+**What this means in practice, stated plainly:** users are not stranded — `RemoteCatalogLoader`
+falls through to the gh-pages mirror, which is healthy (**11.7 MB, HTTP 200, 0.84 s**) and
+byte-current with `main`. The cost is that a third of cold launches take the slow path.
+**Do not report this as fixed.** ⚠️ **And do NOT reach for gzip — it is already on, and checking
+took one command:** with `Accept-Encoding: gzip` the same call returns **3.6 MB instead of 10.9 MB**
+(`content-encoding: gzip` in the response), and `URLSession` sends that header by default, so the
+app is already getting the compressed body. **Compression cannot help here anyway** — the failures
+are at TTFB, i.e. inside the query, before a byte is sent.
+
+The two levers that actually address it, neither attempted yet and neither a code change:
+
+1. **Raise the anon statement timeout** — `alter role anon set statement_timeout = '15s';` (currently
+   the failures cluster at 3.7–9.6 s, so the ceiling is what they are hitting). One owner paste.
+   Cheapest thing to try first, and it says immediately whether the diagnosis is right.
+2. **Serve less per request** — split `linkPins` into its own RPC, or add an `If-None-Match`/ETag
+   path so an unchanged catalogue is a 304. This is the durable fix, because (1) only buys headroom
+   that the next few content batches will eat.
+
+**Not** another attempt at the builder — that part of #742 is working.
 
 | File | Unlocks | Without it |
 |---|---|---|
@@ -946,6 +1032,7 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | `claude/tour-links-upload-tbcerj` | **This session, pushed, no PR** — twenty link pins (15 × `@breatheart_hk` Hong Kong). Cut off `origin/main` `05e90f47`, **rebased onto `00a420bd`** after #640 and three doc commits landed mid-session; catalogue edit redone by re-running the idempotent assembler against the new `main`, never hand-resolved. gh-pages `a8a81767` |
 | `claude/tour-links-upload-wa3e0g` | Merged (#640, squash `cd32e293`) — 32 pins. ⚠️ **Its branch diff was 33 pins, not 32**: it carried the Instagram Zacherlhaus the owner pulled in #641. Flagged pre-merge; **checked after and the pull held** — only the TikTok Zacherlhaus is on `main` |
 | `claude/tour-links-upload-qeoxe7` | **Merged as [#648](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/648); follow-up places PR open** — twenty-three link pins from three creators (18 TikToks `@thedesigndetourist`, 4 Instagram `@shaunbirley`, 1 `@meliluu__`); linkPins 168 → 191, makers 154 → 157. Content only, images live on gh-pages at `251cf95e`. **🔴 MERGE HAZARD, NOW THE OTHER SESSION'S: this branch created the `TikTok @thedesigndetourist` maker row (uuid5 `67CA14A6-…`) and a parallel session's unmerged branch creates the identical id — that branch must drop the duplicate or the validator errors.** ⚠️ Ships two subjects twice on one coordinate each (Westin Bonaventure, Hotel Casa del Mar) — deliberate, both links were sent; `check-place-candidates.py` therefore reports 3 EXACT groups against main's 1 |
+| `claude/project-tracking-dashboard-1kggmu` | **This session — restarted from `origin/main` `5e75112`, never stacked on merged history.** Its previous commit (`eee22bb`, one paragraph added to `release_notes.txt`) was **deliberately dropped, not landed**: 1.1.1 has since shipped, so that file is now the *published* notes and the next edit to it is a rewrite for 1.1.2 — see § 1d and `docs/launch-runbook.md` § Shipping an update, which this branch corrects instead. |
 | `claude/link-fullscreen-probe` | 🔴 **Never merged, still on the remote** — carried the temporary readout and builds 131/132/133. **Owner deletes it in the GitHub UI**; the git proxy blocks branch deletion from a session |
 | `claude/link-fullscreen-window` | Merged (#622, squash `e22dba7`) — the real fullscreen fix |
 | `claude/link-fullscreen-module-ojs556` | Merged (#617, squash `adbe3b94`) — the `onDisappear` guard. ⚠️ The designated branch name; the first attempt's work was actually on `claude/link-fullscreen-module` |
