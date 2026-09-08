@@ -78,8 +78,13 @@ business being in a coordinate-only change. Two hard post-conditions now sit in 
 - **every member's centroid mirrors its stop.**
 
 And because the harness below confirms the mirror misses it, the property is now **asserted
-directly** — on the three members (0 drift) and **catalogue-wide across all 2,830 single-stop
+directly** — on the three members (0 drift) and **catalogue-wide across all 2,758 single-stop
 entries (0 drift)**.
+
+⚠️ **2,830 is the TOTAL entry count, not the single-stop one.** 2,758 entries carry one stop; the
+other 72 are walks, where a centroid legitimately differs from stop 0 and this rule does not apply.
+An earlier revision of this file said "2,830 single-stop entries" — the finding was right, the label
+was not, and it is exactly the kind of number a later session quotes.
 
 ---
 
@@ -214,13 +219,194 @@ was re-run on the moved base anyway** rather than assumed: mirror **27/27 then 0
 **346 / 2,830 / 3,202 / 130**. The docs were then written against `main`'s versions, not the
 pre-merge ones.
 
+---
+
+## ✅ Merged, and verified against the live systems
+
+**[#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744) merged** (squash `f6c1815e`) on
+green CI — **Validate Tours.json** (the authoritative Swift validator), **Build (iOS Simulator)** and
+**Run unit tests**, all three. The squash was then **checked to carry real content** — 372 insertions
+/ 10 deletions across 6 files — because "Pull Request successfully merged" is not evidence anything
+landed (#629 shipped an empty commit under exactly that line).
+
+`Publish catalog` run 194 completed **success** in under three minutes, and only then was the live
+check run. **The Supabase RPC — the source the app reads FIRST — and the gh-pages mirror each serve
+130 places**, with The Gilder Center present, its **three members all on the place coordinate**,
+**0** members off their place coordinate catalogue-wide, and **0** link pins wrongly inside `tours`.
+Session-99 dropped-key check clean (`priceTier` 1,553 · `isPrivate` 368 · `country` 1,552).
+
+⚠️ **Two count differences that are both correct and both worth recognising on sight.** The RPC
+reads **1,553 tours / 368 makers** against the catalogue's 1,552 / 346 — the documented `Zxxx` test
+tour plus upsert-only maker accumulation, so **assert on link-pin counts (1,278, exact), never on
+maker totals**. And the **mirror reports `priceTier` and `isPrivate` at 0**, which is *not* a dropped
+key: both live only in Postgres by design, so a content re-seed can never wipe pricing.
+
 ### Owner action, unblocked and ordered
 
 ⚠️ **`backend/catalog_snapshot.sql` still needs the owner to paste it.** The merge landed first, so
 the ordering hazard is already satisfied — the paste is now safe.
-🔴 **Read the LATENCY, not a pass/fail count.** `get_catalog()` should return in well under a
-second; a 33%-failure endpoint comes back 8/8 clean about **4% of the time**, which is exactly how
-this gets closed as "cannot reproduce" by a later session. It already did once.
+
+🔴 **Read the LATENCY, not a pass/fail count** — and this session is the worked example. The RPC
+answered **200 on the first attempt, in 4.7 s**. One clean sample proves nothing: a 33%-failure
+endpoint comes back 8/8 clean about **4% of the time**, which is exactly how this gets closed as
+"cannot reproduce" by a later session. It already did once. **Seconds means the snapshot is not
+being served** — after the migration `get_catalog()` should be a sub-second lookup. Corroborated
+independently by `scripts/check-catalog-keys.py`, which reports **"catalog snapshot: not in use
+(built per request)"** beside its 130 places.
+
+### ⚠️ A monitor that watched for the publish job stayed silent through its own success
+
+The poll loop shelled `curl` at `api.github.com` and matched on `"completed *"`. It emitted nothing
+for fifteen minutes while the run finished in under three, because **`curl` to `api.github.com`
+returns a JSON error body from this container** — a trap already recorded in `CLAUDE.md` from
+session 99 — so the parse yielded a string no branch matched and the loop slept on. **Silence read
+as "still running".** Poll GitHub through the MCP tools; if a poll loop must be shelled, emit on
+*every* terminal state **and on the unrecognised case**, never only on success.
 
 **[#743](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/743)** (docs-only, same parallel
 session) records that on the board.
+
+---
+
+## FOLLOW-UP, same session — the `@poche_space` pin moves onto the Gilder Center
+
+**Owner: *"OK move the poche space to the gilder center"*** — answering the question this handoff
+flagged and deliberately left open. **Gilder Center 3 → 4 members · AMNH 6 → 5.**
+Open as [#746](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/746).
+
+`tours`, `makers` and every other place are **byte-identical**: exactly one pin moved, in exactly
+its four coordinate fields, and exactly two `tourIds` arrays changed. Diff **7 insertions / 7
+deletions**, every line accounted for. Content plus one line of developer tooling — no Swift, no
+SQL, no gh-pages push, no build.
+
+### ⚠️ Why this was flagged rather than done, which is the reusable part
+
+A session can move a pin onto a place it plainly belongs to. It **cannot decide to shrink a
+different place that another session built** — and that is what this does, taking AMNH from six
+members to five. AMNH stays well clear of the two-member floor, so nothing was ever at risk; the
+arithmetic is simply what made it a question rather than a chore. **It is closed now; do not
+re-raise it.**
+
+### 🔴 The pin moves, never the tour — asserted, not assumed
+
+The builder **asserts `manual` before relocating anything and refuses otherwise**, so a future edit
+cannot get this backwards silently. The pin moved **176.3 m** from the AMNH anchor onto the Gilder
+Center's. Nothing else in the catalogue moved: the other three Gilder members and the five
+remaining AMNH members were already exactly on their place coordinates and were asserted
+**byte-identical** afterwards.
+
+### ✅ AMNH's hero is safe, and that was checked rather than assumed
+
+`AMNH__Introduction_2.webp` is a **third photograph** promoted from the Atlas *Four Facades* walk,
+which remains a member — not the departing pin's hero — so the AMNH place page is unchanged.
+Borrowed-hero count **re-derived, not carried forward: still 54 of 130** (71 take a third
+photograph, 5 carry none): the poché pin's own hero was never either place's, and the Gilder hero
+(`@studiogang`'s canyon) did not change.
+
+### 🔴 A real blind spot closed in `validate-tours-mirror.py` — and it was checked against the Swift FIRST
+
+The fault suite flagged *"link pin trigger flipped to `geofenced`"* as a miss. **Sessions 142, 143
+and 145 each shipped a "blind spot" that turned out to be a rule they had invented**, so this one
+was read in the Swift before being called one: `validate-tours.swift:553-554` genuinely errors when
+a `kind: "link"` entry's stop is not `manual`, and the mirror checked nowhere. So flipping this
+pin's trigger would have **passed locally and failed CI**.
+
+Added, and **pinned in the mirror's own selftest** (30 → **31 cases**) so it cannot be removed
+silently. The catalogue still reads **0 errors**, which independently proves **no existing link pin
+is geofenced**.
+
+✅ **And the centroid-drift blind spot this handoff records as still-blind is now CLOSED** — by
+[#745](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/745), a parallel session's mirror work.
+**Confirmed by injection (CAUGHT)**, not by reading their PR body. The direct assertion stays worth
+keeping; the mirror no longer needs it as a crutch.
+
+### ⚠️ Flagged, not acted on — the moved pin's tags
+
+It carries `Museum, Architecture` and **no architect tag**, while its own text names Studio Gang
+repeatedly and its three new place-mates all carry **`Jeanne Gang` + `Designed by a Master`**. That
+gap is **pre-existing on `main`** and predates this move; the owner asked for a move, not a retag.
+One line each closes it if wanted.
+
+### 🔴 #742's SQL was unpasted when probed — ✅ and was applied an hour later, which is the lesson
+
+⚠️ **Read the correction at the end of this section before quoting anything in it.** Everything
+below was true when measured and had expired by merge time.
+
+The 4.7 s latency reading above is an *inference*. Asking the database directly is not, and it was
+probed first-hand this session rather than taken from a parallel session's PR body:
+
+| Probe | Result |
+|---|---|
+| `catalog_snapshot_age()` | **404 `PGRST202`** — the function does not exist |
+| `get_catalog_built()` | **404 `PGRST202`** — same |
+| `get_catalog()` × 3 spaced calls | **500 × 3 of 3** (5.0 s, 4.0 s, 3.7 s) |
+
+Session 146 measured **4 failures in 12**; it is now failing far more often than that. ⚠️ **Users
+are not broken meanwhile** — the app falls through to the gh-pages mirror — **but the primary source
+is down for most calls, and every one of those launches pays a ~4 s timeout first.**
+
+🔴 **And the seed's refresh call is a guarded no-op, which is why this survived a content merge
+looking green.** The board note reading *"a content merge needs nothing extra under the new
+materialisation scheme"* is **true and was the wrong thing to take comfort from**: the seed's
+`perform public.refresh_catalog_snapshot()` sits inside
+`if to_regprocedure('public.refresh_catalog_snapshot()') is not null`, so with the SQL unpasted the
+guard is false, the seed **skips the refresh, raises a notice, and still finishes green**. **A
+guarded no-op is indistinguishable from a success from the outside — ask `catalog_snapshot_age()`,
+never a green seed job.** (Independently found by the session behind
+[#747](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/747), which carries the board change.)
+
+#### ✅ CORRECTION, same evening — the SQL IS applied, and a probe is not a durable fact
+
+Re-probed immediately before merging, because § READ FIRST says a claim about live state must be
+re-measured rather than carried:
+
+| Probe | Then (this session, earlier) | Now (21:5x UTC, before merge) |
+|---|---|---|
+| `catalog_snapshot_age()` | **404 `PGRST202`** | ✅ **200 — `2026-09-07T21:44:03Z`** |
+| `check-catalog-keys.py` in-use line | *"not in use (built per request)"* | ✅ *"catalog snapshot last refreshed: …"* |
+| `get_catalog()` | **500 × 3 of 3** | ✅ **200 × 4 of 4** |
+
+**The owner pasted it at 21:44 UTC**, between the two probes. The measurement was never wrong; its
+*currency* expired — and this branch would have merged the stale claim on top of the parallel
+correction in [#748](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/748), which is precisely
+the failure § READ FIRST was written after. **Re-probe immediately before landing a live-state
+claim, not when you first draft it.**
+
+⚠️ **It is fixed, not sub-second — and session 146's criterion is too crude to use on its own.**
+That criterion says *"anything still measured in seconds means the snapshot is not being served"*,
+and total time is still **1.2–4.2 s**, which would read as unfixed. But **TTFB is 1.7–3.7 s while
+the entire 10.6 MB body transfers in the remaining 0.3–0.5 s** — the time is in the query, not the
+download, and a 10.6 MB payload was never going to be sub-second end-to-end from this container.
+**Split TTFB from total before judging this endpoint.** The honest reading is *the timeouts are
+gone and the read is still slower than hoped*, which is a different finding from *unfixed*.
+
+⚠️ **`get_catalog_built()` still returns a 500 statement timeout, and that is EXPECTED, not a
+regression** — it is the old slow builder, deliberately kept and now called once per seed rather
+than once per request. Do not report it as a fault.
+
+### Verification
+
+- Mirror **self-tested 31/31 with a clean control**, then **0 errors, 0 warnings across 1,552 tours
+  + 1,306 pins + 130 places**, ⚠️ exit code read **directly, never through a pipe**.
+- 🔴 **18 faults injected against THIS MOVE specifically — 18/18 caught, control clean before and
+  after**: the pin left at the old AMNH coordinate, nudged 55 m, its centroid drifting in latitude
+  and in longitude, claimed by both places, either place drifting off its members, AMNH dropped to
+  one member, an unknown tour id, the hero repeated in its own gallery, a bad hero URL, a duplicate
+  place id, the trigger flipped, a second stop, a latitude out of range, an empty title, a nonzero
+  duration. The harness counts **errors AND warnings** (the session-141 bug), reads `check()`'s
+  **`(errors, warnings)` tuple** rather than mistaking it for an exit code (the session-142 false
+  pass), and injects **in memory**.
+- `Tours.json` **byte-stable under a Python re-dump before AND after editing**. The builder asserts
+  **no member gains or loses a top-level key**, that only the expected fields differ, and that
+  exactly the two intended places changed.
+- 🎉 **`check-place-candidates.py` output is BYTE-IDENTICAL before and after at 22 EXACT / 61
+  NEAR.** ⚠️ **That is the correct result and worth understanding rather than being alarmed by:**
+  the pin moved *between two coordinates the checker already ignores, because both carry a place*,
+  so no group is created and none resolved. ⚠️ **The BASELINE moved and the delta did not** — this
+  first read 22 / **62**, and [#743](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/743)
+  merged one NEAR pair away underneath it. **Re-derive rather than quoting either figure.**
+- `seed_from_toursjson.py` clean at **350 / 2,858 / 3,230 / 130**; **0 `images//`** in the catalogue
+  *or* the SQL.
+- ⚠️ **`check-image-duplicates.py` was deliberately NOT run and that is not a gap** — no image was
+  added and **no image URL changed**, asserted.
+- ⚠️ **Nothing compiled locally — CI on the PR is the only compile check a Linux web session gets.**

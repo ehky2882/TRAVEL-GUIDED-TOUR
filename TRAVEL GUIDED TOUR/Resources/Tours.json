@@ -80661,8 +80661,7 @@
         "5bb90e3a-a81f-492d-b761-b204fa5dc405",
         "D0DB1104-7355-55BF-9493-A8C7EC0A7ED3",
         "55F0E8B9-7038-5B9C-B6C3-B618FC0EF606",
-        "C10FC91B-19F9-5FD5-BED5-9097751BF791",
-        "728E97FA-CF73-5CF4-88EB-FBBA819B8FBD"
+        "C10FC91B-19F9-5FD5-BED5-9097751BF791"
       ]
     },
     {
@@ -82296,7 +82295,8 @@
       "tourIds": [
         "F6857284-A052-5B3E-91C7-47805AE552C0",
         "D24A34C4-2858-5C4E-A2B1-6C1AA07F8EAE",
-        "E6823469-29CB-5B09-AA79-F2D9550D7DAF"
+        "E6823469-29CB-5B09-AA79-F2D9550D7DAF",
+        "728E97FA-CF73-5CF4-88EB-FBBA819B8FBD"
       ]
     }
   ],
@@ -82453,8 +82453,8 @@
           "order": 0,
           "title": "Poché - Studio Gang | episode 2 of 3 Completed in May 202…",
           "caption": "Poché - Studio Gang | episode 2 of 3 Completed in May 2023, Studio Gang’s Richard Gilder Center for Science, Education, and Innovation is a ",
-          "latitude": 40.78083090443824,
-          "longitude": -73.97279862427825,
+          "latitude": 40.7815797,
+          "longitude": -73.9746411,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -82466,14 +82466,16 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.78083090443824,
-      "centroidLongitude": -73.97279862427825,
+      "centroidLatitude": 40.7815797,
+      "centroidLongitude": -73.9746411,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
-        "Architecture"
+        "Architecture",
+        "Jeanne Gang",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
