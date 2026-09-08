@@ -281,7 +281,7 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `docs/cdn-decision.md` | Audio hosting decision |
 | `docs/design-tokens.md` | Typography/color/spacing reference |
 | `docs/lessons.md` | **Rules this project paid for** — verification discipline, live-systems-over-documents, content/geocoding/image traps, the `get_catalog` hazard, shell + gh-pages gotchas, SwiftUI patterns, how the owner works. Read before a tour batch or any `get_catalog` change |
-| `archive/CURRENT-STATE-HISTORY.md` | 34 dated Current State blocks (2026-05-25 → 2026-09-07), moved out of `CLAUDE.md`. **Search, never load whole** |
+| `archive/CURRENT-STATE-HISTORY.md` | The dated Current State blocks moved out of `CLAUDE.md`. **Search, never load whole** |
 | `docs/launch-runbook.md` | **Step-by-step App Store launch walkthrough — start here to ship** |
 | `docs/fastlane.md` | How the release automation works (lanes, metadata, screenshots) |
 | `fastlane/` | The release toolchain: lanes, App Store metadata, screenshot config |
