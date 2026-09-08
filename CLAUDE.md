@@ -149,11 +149,21 @@ No Swift, no SQL, no place created, no build. Detail: `archive/HANDOFF-260907-4.
   ⚠️ **The mirror publish is proved by BLOB IDENTITY rather than by the served URL** — gh-pages'
   committed `Tours.json` blob is **byte-identical to `main`'s** (`ccad9922` on both sides) while
   the CDN was still serving the pre-merge copy. **The committed blob, never the served URL, is
-  what says a publish landed.** ⚠️ **PERISHABLE, TRUE ONLY AT 09:25 UTC: the Supabase seed was
-  still mid-upsert**, so the RPC — the source the app reads FIRST — was still serving **1,306**
-  pins; it answered **200 at TTFB 2.1 s / total 2.4 s** on the 10.6 MB payload, which is the
-  materialised snapshot working. **Re-measure rather than repeating that**; the seed is
-  upsert-only and idempotent, so it lands on its own.
+  what says a publish landed.** ✅ **THE SUPABASE SEED THEN LANDED AND WAS RE-MEASURED RATHER
+  THAN ASSUMED** — an earlier reading at 09:25 UTC caught it mid-upsert still serving **1,306**
+  pins, and it reached **1,343 at 09:30 UTC**, ~11 minutes after the merge. On the live RPC — the
+  source the app reads FIRST — **1,343 link pins**, all 37 on the three creator rows (32/4/1),
+  the **Zumthor trio intact as 3 pins on 1 hero** across Los Angeles / Vals / Mechernich, **0 link
+  pins wrongly inside `tours`** and **0 non-link entries inside `linkPins`**. Session-99
+  dropped-key check clean on that payload: `priceTier` 1,553 with 66 priced, `isPrivate` 375,
+  `country` 1,552, `videoRole` 1,553, `places` 130. It answered **200 at TTFB 2.0 s / total 2.3 s**
+  on the 10.7 MB payload, which is the materialised snapshot working. ⚠️ **The RPC reads 1,553
+  tours / 375 makers against the catalogue's 1,552 / 353** — the documented `Zxxx` test tour and
+  upsert-only maker accumulation; **assert on link-pin counts, never on maker totals.** ⚠️ **The
+  gh-pages CDN took ~17 minutes to catch up** (still 1,306 at 09:35, converged to 1,343 at
+  09:35:51), which is the documented propagation lag and not a failed publish — **the committed
+  blob above is what proved it had landed long before the served URL agreed**, and the app reads
+  Supabase first regardless.
 - **⚠️ THE `pkill -f` TRAP FIRED AGAIN AND KILLED MY OWN SHELL** (exit 144) — `pkill -f
   poll_live.sh` matches the **wrapping `bash -c` command line**, which contains the script name.
   Session 140 recorded it; use **`pgrep -f "[p]oll_live\.sh$" | xargs -r kill`**. ⚠️ Also worth
