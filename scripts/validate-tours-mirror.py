@@ -203,6 +203,14 @@ def check(cat, facets, vocab, dom):
         # validate-tours.swift:458 — an empty title is an error, tour or pin.
         if not (e.get("title") or "").strip():
             errors.append(f"{e['id']}: title is empty")
+        # validate-tours.swift:591 — a STOP title is checked separately, and an
+        # empty one is an error too. The mirror checked only the entry title, so
+        # this passed locally and would have failed CI (found by injecting it
+        # against session 148's own 37 pins, then read out of the Swift rather
+        # than recalled — the sessions-142/143/145 invented-rule trap).
+        for s_ in stops:
+            if not (s_.get("title") or "").strip():
+                errors.append(f"{t}: stop title is empty")
         # validate-tours.swift:565 — a link pin is 0/0 by definition, so its
         # total is checked against 0 exactly, not merely "positive".
         if e["kind"] == "link" and e.get("totalDurationSeconds", 0) != 0:
@@ -307,6 +315,9 @@ def selftest(facets, vocab, dom):
     case("link pin nonzero total", lambda c: c["linkPins"][0].__setitem__("totalDurationSeconds", -5))
     case("centroid outside stops", lambda c: c["linkPins"][0].__setitem__(
              "centroidLatitude", c["linkPins"][0]["centroidLatitude"] + 0.5), warns=True)
+    # Found by session 148 the same way: validate-tours.swift:591 checks the STOP
+    # title separately from the entry title, and only the entry one was mirrored.
+    case("empty stop title",       lambda c: c["linkPins"][0]["stops"][0].__setitem__("title", ""))
 
     passed = 0
     for name, fn, warns in cases:
