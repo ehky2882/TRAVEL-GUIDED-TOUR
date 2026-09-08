@@ -166,3 +166,65 @@ other two it is prose describing **what the owner still owes**, not a log of dat
 is no mechanical cut, only editorial judgement about which items are still live. Guessing wrong
 would quietly drop something the owner is waiting on, and it is the file parallel sessions edit
 most, so a large rewrite invites conflicts. It needs the owner's eye, not a script.
+
+---
+
+## Third part: the same-city id gap (#764)
+
+While #759 was merging, **#758 landed 83 link pins including two from one post, both in
+Edinburgh** — hitting, within hours, the exact gap this session had documented that morning. It
+minted ad hoc ids, as the Charging Bull pair had. Two instances, same cause, nothing catching
+either: **a made-up uuid is indistinguishable by eye from a derived one.**
+
+**The rule.** A pin's id is `uuid5` over its source URL; a post naming several places
+disambiguates by city. When two pins share a city the city collides too, so:
+
+| Case | Key hashed |
+|---|---|
+| cities differ | `atlas-tour:link:<url>#<slug(city)>` |
+| cities collide | `atlas-tour:link:<url>#<slug(city)>-<slug(title)>` |
+
+Verified to produce a unique key for every multi-pin post in the catalogue, and to change nothing
+for pins the plain city key already covers.
+
+**The half that matters: `merge-link-pins.py` now REFUSES an id it cannot derive**, naming the one
+the scheme gives. The city rule was already written down when #758 ignored it — documentation was
+not the missing piece, enforcement was.
+
+🔴 **The five existing non-derivable ids were NOT re-minted.** An id is identity: change one and
+every phone treats the pin as new, so anyone who saved it loses it from their library. New pins
+only; the runbook lists the five with their reasons.
+
+⚠️ **A defect only the live catalogue exposed.** The check grouped catalog and incoming pins by
+source URL without deduplicating, so **re-merging an existing pin counted it twice** and an
+ordinary single-post pin was told its id should have carried a city fragment — breaking the
+idempotence the tool exists to guarantee. **Every unit test was green.** Fixed by deduplicating on
+id, with regression tests for the re-run and for a post that grows from one pin to two.
+
+## ⚠️ A near-miss on the last merge, worth inheriting
+
+The CI watcher for #764 **exited cleanly having never checked the last job** — its polling loop ran
+out of iterations and returned success. Read as "CI finished", it would have merged while unit
+tests were still running, and the exit code looked perfectly healthy. Caught by querying the job
+directly instead of trusting the watcher.
+
+That is the **third** instance in one session of something that looked like a pass without having
+run (the others: a stale output file, and a parser silently dropping an entry). **A waiting loop
+must distinguish "the thing finished" from "I stopped waiting."** The replacement prints
+`TIMED OUT — DO NOT read this as a pass` and is pinned to the exact commit SHA.
+
+## Where the four PRs left things
+
+| PR | Effect |
+|---|---|
+| #756 | `CLAUDE.md` 1.5 MB → 47 KB — **~418,000 → ~13,400 tokens on every request** |
+| #757 | pin batches go disk-to-disk, not through the conversation; runbook written |
+| #759 | `archive/README.md` −94%, `ROADMAP.md` −77% |
+| #764 | the same-city id rule, and the check that enforces it |
+
+**None of the four touched `Tours.json`** — verified per-commit, because parallel content sessions
+were merging throughout (#758, #760) and the catalogue diff would otherwise look like ours.
+
+**Still owed: `STATUS.md`** (205 KB, ~69% in § "1. Awaiting owner"). Left alone deliberately — it
+is prose about what the owner still owes, not a log of dated entries, so there is no mechanical cut
+and guessing wrong would drop something they are waiting on.
