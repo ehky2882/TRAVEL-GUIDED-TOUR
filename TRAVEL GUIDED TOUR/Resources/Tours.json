@@ -80811,7 +80811,8 @@
         "8DE4C192-A08F-5E17-A1C1-75C5CA1EF960",
         "B836ABAF-1D15-5553-9CCA-51544F081B94",
         "648FE480-279C-5CA2-9C86-64B2D336C75D",
-        "04EC9F2D-61CC-5753-BD5C-E22507CC0E50"
+        "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
+        "7859EB4D-FBE3-59D9-9EFB-46228C7A6CC2"
       ]
     },
     {
@@ -112329,8 +112330,8 @@
           "order": 0,
           "title": "The Met's Design Flaw",
           "caption": "Have you noticed this at the Metropolitan Museum of Art? #nychistory #nyc #nycmuseum #metmuseum #ues",
-          "latitude": 40.7794396,
-          "longitude": -73.9633825,
+          "latitude": 40.7793,
+          "longitude": -73.9633,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -112342,8 +112343,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7794396,
-      "centroidLongitude": -73.9633825,
+      "centroidLatitude": 40.7793,
+      "centroidLongitude": -73.9633,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
