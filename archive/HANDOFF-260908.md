@@ -101,3 +101,68 @@ For the upload: start fresh.
 of problem. None is auto-injected, so none causes the reported symptoms — but `ROADMAP.md` is read
 on instruction from `CLAUDE.md` fairly often. Worth the same treatment later; not urgent, and not
 worth bundling into a PR about something else.
+
+---
+
+## Second half: the same disease in two more files
+
+The owner said "might as well do the other cleanup while we're at it". Measuring first showed
+`CLAUDE.md` had not been unusual — it was the third instance of one pattern, not a one-off.
+
+| File | The section | Was | Now |
+|---|---|---|---|
+| `archive/README.md` | the index rows themselves | 474,582 B | **31,588 B (−94%)** |
+| `ROADMAP.md` | § "Where we are right now" | 427,655 B | **~97,000 B (−77%)** |
+
+**The shared shape.** A heading that promises the present tense — *current state*, *where we are
+right now*, *active handoff* — sitting on top of a log that every session appends one entry to and
+nobody ever prunes. No single session adds much, so nothing looks wrong from inside one.
+
+- `archive/README.md`: 227 entries averaging **2,089 characters**, longest **13,013** — essays
+  where an index line was wanted. Every session must open this file to index its own handoff.
+- `ROADMAP.md`: **120 dated `**Status (…)**` blocks**, 86% of the file, in a section read on
+  instruction from `CLAUDE.md` before implementation decisions.
+
+Both split the same way as `CLAUDE.md` was: history moved out **verbatim**, newest kept, archive
+pointed at. New files: `archive/INDEX-DETAIL.md`, `archive/ROADMAP-STATUS-HISTORY.md`.
+
+**Verification — zero loss on both, checked against `git show HEAD:<file>`, not against the
+scripts' own memory:** every line of each original is present in one of its two successors;
+227/227 index entries and 120/120 Status blocks verbatim; 212/212 filenames still reachable;
+212/212 table rows well-formed.
+
+## 🔴 Three defects the measurement turned up
+
+**1. A parser that silently dropped an entry.** The index used three bullet formats; the first
+script handled two. `HANDOFF-260902-8.md` was being dropped in silence. Caught by diffing every
+original line against the output rather than trusting the run's own count. The script now
+**asserts that every line which *looks* like an entry was parsed as one**, so an unhandled format
+fails loudly instead of vanishing.
+
+**2. A row was mangled by a pipe inside a table cell.** One description contains `Atlas Studio SGN
+| Tiếng Việt`; splitting on `' | '` and taking `cells[2]` as the date put prose in the date column
+and truncated the purpose. Now the date is the *last* cell and only if it looks like a date.
+
+**3. The index named a handoff that does not exist.** `HANDOFF-260819.md` has been indexed since
+before this session but was never committed — only `-2` … `-6` exist. **The row is kept and
+marked, not deleted: the gap is the finding.** Nothing had ever checked the index against the
+directory; one `os.path.exists` per row does it.
+
+## ⚠️ A stale pointer, and a command that was wrong
+
+`archive/README.md` carried **"Active handoff: `HANDOFF-260829.md`"** while `HANDOFF-260908.md` was
+on disk — the exact perishable-state trap § READ FIRST exists for. Replaced with the command to
+derive it.
+
+And the repo's usual idiom for that, `ls archive/HANDOFF-*.md | tail -1`, **is wrong**: `-` sorts
+before `.`, so `HANDOFF-260908-2.md` sorts *before* `HANDOFF-260908.md` and `tail -1` throws the
+newer file away. Parallel sessions produce those suffixes constantly. Use
+`git log --diff-filter=A --name-only --pretty=format: -- 'archive/HANDOFF-*.md' | grep . | head -1`.
+
+## Not done, and why
+
+**`STATUS.md` (201 KB, 69% in § "1. Awaiting owner")** was left alone deliberately. Unlike the
+other two it is prose describing **what the owner still owes**, not a log of dated entries — there
+is no mechanical cut, only editorial judgement about which items are still live. Guessing wrong
+would quietly drop something the owner is waiting on, and it is the file parallel sessions edit
+most, so a large rewrite invites conflicts. It needs the owner's eye, not a script.
