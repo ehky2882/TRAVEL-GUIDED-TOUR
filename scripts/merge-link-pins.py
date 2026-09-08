@@ -1,0 +1,307 @@
+#!/usr/bin/env python3
+"""Merge `make-link-pin.py`'s output into `Tours.json` without it passing
+through a conversation.
+
+    python3 scripts/make-link-pin.py --batch links.txt --out-dir /tmp/heroes > /tmp/pins.json
+    python3 scripts/merge-link-pins.py /tmp/pins.json
+    swift scripts/validate-tours.swift
+
+WHY THIS EXISTS
+---------------
+`make-link-pin.py` prints the entry to stdout, which is right — it keeps the
+tool pure and lets a human read one pin before committing to it. But a *batch*
+merged that way costs the session twice: once to print the JSON and once to
+paste it back in to write it. At ~1.9 KB of emitted JSON per pin that is
+roughly 10,000 tokens for a batch of 20 — and, because a conversation re-sends
+its whole history on every request, that block is then paid again on every
+turn for the rest of the session.
+
+Redirecting to a file and merging from the file costs none of it. The pins go
+disk → disk; the session sees a summary of a few lines.
+
+WHAT IT REFUSES TO DO
+---------------------
+🔴 It never writes into `tours`. A `kind: "link"` entry inside that array fails
+the WHOLE catalog decode on every build shipped before `TourKind.link` — the
+throw becomes a nil, the loader reads it as a failed fetch and keeps its last
+good copy, so the phone silently stops receiving all new content. Pins go in
+the sibling top-level `linkPins` array, which older builds simply skip. See
+`TRAVEL GUIDED TOUR/Data/ToursData.swift` and `scripts/split-link-pins.py`.
+
+🔴 It refuses a pin with no coordinate, or one at exactly (0, 0). That is the
+one defect nothing downstream catches: it validates, it uploads, and it sits in
+the Gulf of Guinea. `make-link-pin.py` guards its own input the same way; this
+is the second gate, for a hand-edited pins file.
+
+🔴 It refuses to write when `Tours.json` is not already byte-stable under
+`indent=2, ensure_ascii=False` + trailing newline — otherwise a two-pin merge
+would reformat 11 MB and bury the real change in the diff.
+
+Idempotent. A pin whose id is already in the catalog is left alone rather than
+duplicated, so re-running after a partial merge is safe. Ids are uuid5 over the
+source URL, so the same post always lands on the same id.
+"""
+
+import argparse
+import json
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TOURS_JSON = os.path.join(REPO, "TRAVEL GUIDED TOUR", "Resources", "Tours.json")
+
+
+def dumps(data: dict) -> bytes:
+    """Byte-for-byte the convention `split-link-pins.py` writes, so the two
+    tools cannot fight over formatting."""
+    return json.dumps(data, indent=2, ensure_ascii=False).encode() + b"\n"
+
+
+def validate_incoming(payload: dict) -> list[str]:
+    """Everything that must be true of a pins file. Pure, so `--selftest`
+    covers it with no catalog and no disk."""
+    problems = []
+
+    stray = payload.get("tours")
+    if stray:
+        problems.append(
+            f"the pins file has a `tours` array ({len(stray)} entries). Link pins "
+            "belong in `linkPins`; an entry in `tours` breaks the catalog decode "
+            "on older builds.")
+
+    pins = payload.get("linkPins")
+    if not pins:
+        problems.append("the pins file has no `linkPins` array, or it is empty.")
+        return problems
+
+    for i, p in enumerate(pins):
+        where = f"linkPins[{i}] {p.get('title') or p.get('id') or '?'!r}"
+        if p.get("kind") != "link":
+            problems.append(f"{where}: kind is {p.get('kind')!r}, expected 'link'.")
+        if not p.get("id"):
+            problems.append(f"{where}: no id.")
+        if not p.get("sourceURL"):
+            problems.append(f"{where}: no sourceURL — a link pin with nothing to open.")
+        lat, lon = p.get("centroidLatitude"), p.get("centroidLongitude")
+        if lat is None or lon is None:
+            problems.append(f"{where}: no coordinate. It would validate, upload, "
+                            "and never appear anywhere a person is standing.")
+        elif lat == 0 and lon == 0:
+            problems.append(f"{where}: coordinate is exactly (0, 0) — the Gulf of "
+                            "Guinea, i.e. a missing coordinate that survived.")
+
+    return problems
+
+
+def merge(catalog: dict, payload: dict) -> tuple[dict, dict]:
+    """Return (catalog, report). Pure — no I/O, so `--selftest` exercises the
+    real merge rather than an imitation of it.
+
+    Order is preserved, existing rows are never rewritten, and anything already
+    present is skipped rather than duplicated.
+    """
+    out = dict(catalog)
+    pins = list(out.get("linkPins") or [])
+    makers = list(out.get("makers") or [])
+
+    have_pins = {p.get("id") for p in pins}
+    have_makers = {m.get("id") for m in makers}
+
+    added_pins, skipped_pins = [], []
+    for p in payload.get("linkPins") or []:
+        if p.get("id") in have_pins:
+            skipped_pins.append(p)
+        else:
+            pins.append(p)
+            have_pins.add(p.get("id"))
+            added_pins.append(p)
+
+    # A maker id is uuid5 over platform + lowercased handle, so a creator who
+    # already has a row must keep it: theirs may carry edits (a corrected
+    # display name, a bio) that this run's freshly-derived row would silently
+    # revert.
+    added_makers, kept_makers = [], []
+    for m in payload.get("makers") or []:
+        if m.get("id") in have_makers:
+            kept_makers.append(m)
+        else:
+            makers.append(m)
+            have_makers.add(m.get("id"))
+            added_makers.append(m)
+
+    out["makers"] = makers
+    out["linkPins"] = pins
+    report = {"added_pins": added_pins, "skipped_pins": skipped_pins,
+              "added_makers": added_makers, "kept_makers": kept_makers}
+    return out, report
+
+
+def run(pins_path: str, catalog_path: str, write: bool) -> int:
+    with open(pins_path, encoding="utf-8") as fh:
+        payload = json.load(fh)
+
+    problems = validate_incoming(payload)
+    if problems:
+        print(f"\nREFUSED — {len(problems)} problem(s) in {pins_path}. "
+              "Nothing was written.")
+        for p in problems:
+            print(f"  - {p}")
+        return 1
+
+    raw = open(catalog_path, "rb").read()
+    catalog = json.loads(raw)
+
+    # If the catalog does not already round-trip, a 2-pin merge would rewrite
+    # the whole file and hide itself in the diff. Refuse rather than explain.
+    if dumps(catalog) != raw:
+        print("\nREFUSED — Tours.json is not byte-stable under "
+              "`indent=2, ensure_ascii=False` + trailing newline.\n"
+              "  Merging would reformat the entire file and bury the pins in "
+              "the diff.\n"
+              "  Normalise it first, in its own commit, then merge.")
+        return 1
+
+    merged, rep = merge(catalog, payload)
+
+    n_in = len(payload.get("linkPins") or [])
+    print(f"\n  pins in {os.path.basename(pins_path):<18} {n_in:>5}")
+    print(f"  new pins added                    {len(rep['added_pins']):>5}")
+    print(f"  already in catalog, skipped       {len(rep['skipped_pins']):>5}")
+    print(f"  new creators added                {len(rep['added_makers']):>5}")
+    print(f"  creators already present, kept    {len(rep['kept_makers']):>5}")
+    print(f"  catalog linkPins {len(catalog.get('linkPins') or [])} → "
+          f"{len(merged['linkPins'])}   ·   makers "
+          f"{len(catalog.get('makers') or [])} → {len(merged['makers'])}")
+
+    for m in rep["added_makers"]:
+        print(f"    + creator {m.get('displayName')}")
+
+    if not rep["added_pins"] and not rep["added_makers"]:
+        print("\nOK — nothing to add; every pin is already in the catalog.")
+        return 0
+
+    if not write:
+        print("\n--check: nothing written. Re-run without --check to merge.")
+        return 0
+
+    out = dumps(merged)
+    tmp = catalog_path + ".tmp"
+    with open(tmp, "wb") as fh:
+        fh.write(out)
+    os.replace(tmp, catalog_path)
+
+    print(f"\nOK — merged into {catalog_path}")
+    print("  Next: swift scripts/validate-tours.swift")
+    print("        python3 scripts/check-image-duplicates.py --pins")
+    print("        upload the heroes to gh-pages under images/")
+    return 0
+
+
+def selftest() -> int:
+    cases, failed = [], 0
+
+    def check(name, ok):
+        nonlocal failed
+        cases.append(name)
+        if not ok:
+            failed += 1
+        print(f"  {'PASS' if ok else 'FAIL'}  {name}")
+
+    def pin(pid, lat=41.4, lon=2.1, **kw):
+        p = {"id": pid, "kind": "link", "title": f"pin {pid}",
+             "sourceURL": f"https://example.com/{pid}",
+             "centroidLatitude": lat, "centroidLongitude": lon}
+        p.update(kw)
+        return p
+
+    cat = {"makers": [{"id": "M1", "displayName": "TikTok @a"}],
+           "tours": [{"id": "T1"}], "places": [], "linkPins": [pin("P1")]}
+
+    # The merge itself
+    merged, rep = merge(cat, {"makers": [{"id": "M2", "displayName": "TikTok @b"}],
+                              "linkPins": [pin("P2")]})
+    check("a new pin is appended to linkPins",
+          [p["id"] for p in merged["linkPins"]] == ["P1", "P2"])
+    check("a new creator is appended to makers",
+          [m["id"] for m in merged["makers"]] == ["M1", "M2"])
+    check("`tours` is untouched", merged["tours"] == [{"id": "T1"}])
+    check("the source catalog is not mutated in place",
+          [p["id"] for p in cat["linkPins"]] == ["P1"])
+
+    # Idempotence — the property that makes a re-run after a half-finished
+    # merge safe rather than duplicating.
+    once, _ = merge(cat, {"linkPins": [pin("P2")]})
+    twice, rep2 = merge(once, {"linkPins": [pin("P2")]})
+    check("re-merging the same pin adds nothing",
+          [p["id"] for p in twice["linkPins"]] == ["P1", "P2"])
+    check("a re-merged pin is reported as skipped, not added",
+          len(rep2["skipped_pins"]) == 1 and not rep2["added_pins"])
+
+    # An existing creator's row must survive: it may carry hand edits.
+    edited = {"makers": [{"id": "M1", "displayName": "Corrected Name"}],
+              "tours": [], "places": [], "linkPins": []}
+    kept, rep3 = merge(edited, {"makers": [{"id": "M1", "displayName": "TikTok @a"}],
+                                "linkPins": []})
+    check("an existing creator row is kept, not overwritten",
+          kept["makers"] == [{"id": "M1", "displayName": "Corrected Name"}]
+          and len(rep3["kept_makers"]) == 1)
+
+    # Everything the incoming file must not be
+    check("a pins file with a `tours` array is refused",
+          any("`tours` array" in p for p in
+              validate_incoming({"tours": [pin("X")], "linkPins": [pin("Y")]})))
+    check("an empty pins file is refused",
+          validate_incoming({"linkPins": []}) != [])
+    check("a pin with no coordinate is refused",
+          any("no coordinate" in p for p in validate_incoming(
+              {"linkPins": [pin("X", lat=None, lon=None)]})))
+    check("a pin at exactly (0, 0) is refused",
+          any("Gulf of Guinea" in p for p in validate_incoming(
+              {"linkPins": [pin("X", lat=0, lon=0)]})))
+    check("a pin at a real coordinate whose lon is 0 is NOT refused",
+          validate_incoming({"linkPins": [pin("X", lat=51.5, lon=0.0)]}) == [])
+    check("a pin with the wrong kind is refused",
+          any("expected 'link'" in p for p in validate_incoming(
+              {"linkPins": [pin("X", kind="audio")]})))
+    check("a pin with no sourceURL is refused",
+          any("nothing to open" in p for p in validate_incoming(
+              {"linkPins": [dict(pin("X"), sourceURL=None)]})))
+    check("a clean pins file passes", validate_incoming(
+        {"makers": [], "linkPins": [pin("X")]}) == [])
+
+    # The formatting contract shared with split-link-pins.py
+    check("dumps writes indent=2, non-ASCII verbatim, trailing newline",
+          dumps({"a": "café"}) == b'{\n  "a": "caf\xc3\xa9"\n}\n')
+
+    total = len(cases)
+    print(f"\n{total - failed}/{total} self-tests passed")
+    return 1 if failed else 0
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("pins", nargs="?",
+                    help="JSON file written by `make-link-pin.py > pins.json`")
+    ap.add_argument("--catalog", default=TOURS_JSON,
+                    help="Tours.json to merge into (default: the repo's)")
+    ap.add_argument("--check", action="store_true",
+                    help="report what would be merged; write nothing")
+    ap.add_argument("--selftest", action="store_true")
+    runstamp.add_out_argument(ap)
+    a = ap.parse_args()
+
+    runstamp.begin(__file__, out_path=a.out)
+
+    if a.selftest:
+        return selftest()
+    if not a.pins:
+        ap.error("give a pins file, or --selftest")
+    return run(a.pins, a.catalog, write=not a.check)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

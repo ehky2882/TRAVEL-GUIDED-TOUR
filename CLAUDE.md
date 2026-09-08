@@ -278,6 +278,7 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `atlas_claude_code_prompt.md` | Canonical product spec |
 | `ROADMAP.md` | Execution plan + milestone history |
 | `docs/authoring-tours.md` | Tour content authoring guide |
+| `docs/link-pin-runbook.md` | **How a batch of creator links becomes catalog entries** — the verified uuid5 id scheme, the `make-link-pin.py` → `merge-link-pins.py` flow that keeps pin JSON out of the conversation, hero-filename rules, and the traps. Read before a pin batch |
 | `docs/cdn-decision.md` | Audio hosting decision |
 | `docs/design-tokens.md` | Typography/color/spacing reference |
 | `docs/lessons.md` | **Rules this project paid for** — verification discipline, live-systems-over-documents, content/geocoding/image traps, the `get_catalog` hazard, shell + gh-pages gotchas, SwiftUI patterns, how the owner works. Read before a tour batch or any `get_catalog` change |
@@ -289,6 +290,7 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `docs/testflight.md` | Per-release upload runbook (~10 min) |
 | `docs/troubleshooting.md` | Xcode + git landmines from real incidents |
 | `scripts/validate-tours.swift` | Validates `Tours.json`; run: `swift scripts/validate-tours.swift` |
+| `scripts/merge-link-pins.py` | Merges `make-link-pin.py`'s output into `Tours.json` disk-to-disk, so a batch's JSON never passes through context. Idempotent; refuses pins in `tours`, missing coordinates, and a non-byte-stable catalog |
 | `TRAVEL GUIDED TOURTests/` | 6 XCTest classes, data/logic layer |
 | `archive/` | Dated session snapshots |
 

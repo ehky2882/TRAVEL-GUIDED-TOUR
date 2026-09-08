@@ -93,6 +93,22 @@ and reported opposite things; both were right at their own moment.
 
 ## 3. Content and the catalog
 
+**🔴 Bulk content must go disk to disk, never through the conversation.** A generator that
+prints entries to stdout and a session that pastes them back to write them pays for the same
+bytes twice — and because a conversation re-sends its whole history on every request, that
+block is paid again on *every subsequent turn*. Link pins run ~1.9 KB of JSON each, so a batch
+of 20 costs ~21,000 tokens on the turn it lands and again on each turn after. Redirect to a
+file and merge from the file (`make-link-pin.py … > pins.json` → `merge-link-pins.py
+pins.json`); the session sees a six-line summary. Print one entry only when you mean to *read*
+one. The same reasoning is why `Tours.json` is never opened whole: at 11 MB it is three context
+windows of a file nothing needs in full — query it with `python3 -c` and print the fields.
+
+**A tool you are about to write may already exist.** Before building a fault harness for a
+content batch, note that `validate-tours-mirror.py` injects 32 known faults on every run and
+refuses a verdict if it misses any. Three sessions' worth of "rebuild the harness" was work
+already committed. Grep `scripts/` and read the neighbouring script's docstring first — this
+repo's tooling is unusually well commented, and the answer is often in it.
+
 **🔴 The pin moves, never the tour.** A geofenced tour's coordinate decides where its audio
 fires; a link pin is `manual` and costs nothing to move. Assert `manual` before relocating
 anything and refuse otherwise. The one documented override was an explicit owner instruction
