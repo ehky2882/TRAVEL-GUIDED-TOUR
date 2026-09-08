@@ -138,6 +138,9 @@ except ImportError:          # perceptual checking is skipped, and SAID so
     Image = None
 from concurrent.futures import ThreadPoolExecutor
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOURS_JSON = os.path.join(REPO, "TRAVEL GUIDED TOUR", "Resources", "Tours.json")
 PHASH_TOLERANCE = 12  # bits of a 256-bit average hash - deliberately loose:
@@ -919,7 +922,12 @@ def main():
     ap.add_argument("--selftest", action="store_true", help="run classification tests, no network")
     ap.add_argument("--file", default=TOURS_JSON, help="path to Tours.json")
     ap.add_argument("--jobs", type=int, default=8, help="parallel downloads (default 8)")
+    runstamp.add_out_argument(ap)
     args = ap.parse_args()
+    # Stamp before any work, so a report can never be mistaken for a fresh one.
+    # `begin` registers its own atexit cleanup, so the many `sys.exit` paths
+    # below need no unwinding of their own.
+    runstamp.begin(__file__, out_path=args.out)
 
     if args.selftest:
         sys.exit(selftest())

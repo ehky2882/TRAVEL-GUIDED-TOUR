@@ -15,6 +15,7 @@ Run it after ANY migration that touches the catalog, and in CI if you like.
 
     python3 scripts/check-catalog-keys.py
     python3 scripts/check-catalog-keys.py --selftest   # offline, no network
+    python3 scripts/check-catalog-keys.py --out run.txt   # stamped report file
 
 ⚠️ Uses curl, not urllib: urllib fails SSL verification on the owner's Mac,
 which is how `check-image-duplicates.py` once printed "OK" having fetched
@@ -22,9 +23,13 @@ nothing at all. And a run that cannot reach the network exits 2 —
 COULD NOT VERIFY is not a pass.
 """
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
 
 # Every key the app decodes. Adding one here without adding it to the RPC
 # turns this check red, which is the point: the contract is written down.
@@ -291,6 +296,15 @@ def snapshot_age() -> str | None:
 
 
 def main() -> int:
+    # Stamp before any work, so a report can never be mistaken for a fresh one.
+    run = runstamp.begin(__file__, out_path=runstamp.pop_out_argument())
+    try:
+        return _run()
+    finally:
+        run.close()
+
+
+def _run() -> int:
     if "--selftest" in sys.argv:
         return selftest()
     root = Path(__file__).resolve().parent.parent

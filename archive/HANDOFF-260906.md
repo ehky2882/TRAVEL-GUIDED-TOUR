@@ -169,6 +169,13 @@ populating and verifying the snapshot, so "Success" means it is already serving.
 
 - **`Why the Cliff House Was Built`** — its hero is a blurred, unreadable smear in the source
   thumbnail, so the choice is keep or pull. Owner's call.
-- **Eastern State Penitentiary** — a place candidate the checker structurally cannot see: the new
-  pin is 3.7 m from the existing two-member place, so it never reaches EXACT and shows only as a 4 m
-  NEAR pair.
+- ✅ **Eastern State Penitentiary — CLOSED 2026-09-07 ([#743](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/743)), and the
+  framing below was WRONG.** Owner: *"eastern state already has a place. move 'inside the abandoned
+  eastern…' into that place"*. **The place has existed with two members since the session-144 batch** —
+  it was never a candidate; only the third pin sat outside it. That pin moved 3.78 m onto the place
+  coordinate and is now its third member. ⚠️ The original note, kept for the record: *"a place
+  candidate the checker structurally cannot see: the new pin is 3.7 m from the existing two-member
+  place, so it never reaches EXACT and shows only as a 4 m NEAR pair."* The **measurement** was right
+  and the **conclusion drawn from it** was not — 3.7 m from an existing place means a pin outside a
+  place, not a place waiting to be made. **Read what a distance is measured FROM before naming what
+  it implies.**
