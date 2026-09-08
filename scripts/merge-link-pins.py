@@ -427,6 +427,19 @@ def selftest() -> int:
     check("re-merging a pin already in the catalog still passes",
           check_ids({"linkPins": [solo]}, {"linkPins": [dict(solo)]}) == [])
 
+    # A post that GROWS from one pin to two. The pin already live keeps its bare
+    # key — ids are never re-minted — and the new one takes a city fragment, so
+    # the two cannot collide. Verified against the live catalogue before being
+    # written down here.
+    grow = "https://x/grew"
+    was_solo = mk(derived_id("atlas-tour", grow), grow, "Seville", "First place")
+    added = mk(derived_id("atlas-tour", grow, "reykjavik"), grow, "Reykjavik",
+               "Second place", derived_id("atlas-stop", grow, "reykjavik"))
+    check("a pin added to a formerly-solo post derives with a city fragment",
+          check_ids({"linkPins": [added]}, {"linkPins": [was_solo]}) == [])
+    check("and it cannot collide with the live bare-key id",
+          added["id"] != was_solo["id"])
+
     # The formatting contract shared with split-link-pins.py
     check("dumps writes indent=2, non-ASCII verbatim, trailing newline",
           dumps({"a": "café"}) == b'{\n  "a": "caf\xc3\xa9"\n}\n')
