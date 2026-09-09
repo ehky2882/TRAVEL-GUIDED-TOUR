@@ -86,3 +86,34 @@ hand-resolved. Third batch running where the hazard is a parallel session rather
 - ⚠️ **St. John the Divine is now the busiest place in the catalogue at 8 members.**
 - 🔴 **[#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) is still open** with 54
   pins, and still carries the Tower Bridge follow-up #758 left it.
+
+---
+
+## Post-merge verification (added after the squash)
+
+**Merged as `48f2574`.** Everything below was measured after the merge, not predicted before it.
+
+| System | Reading |
+|---|---|
+| `main` | 1,552 tours · **1,489 pins** · 353 makers · 137 places; all 36 present; 0 pins inside `tours` |
+| gh-pages mirror | **blob-identical to `main`** (`f47de68a` both sides) — the CDN still lagged, as always |
+| Pages deploy | run 857 completed; **36/36 hero URLs sha256-identical** to the local files |
+| Supabase `get_catalog` | 200, 10.9 MB, TTFB ~2.0 s; **1,489 pins, all 36 present**, both places at 8 and 6 members |
+| `check-image-duplicates.py --pins` | stamp from this run; 1,481 images, no suspicious duplicates; shared-URL half 0 errors / 210 documented reuses |
+
+⚠️ **The Supabase seed took 13 minutes to land** (merge 00:22 UTC, RPC still serving 1,453 pins at
+00:34, correct at 00:35). Polled to a condition rather than slept on — an interval that happened
+to end at 00:34 would have reported the batch missing from the primary source.
+
+## 🔴 A gotcha that reads exactly like "nothing shipped"
+
+Comparing pin ids against the live RPC **case-sensitively reports 0 of 36 present**, and the hero
+URL check then reports all 36 mismatched, because every lookup missed. Nothing was wrong:
+**Postgres renders `uuid` lowercase and the catalogue stores it uppercase.** Compare
+`.upper()` on both sides. Case-insensitively it is 36/36, with **0 title or hero-URL differences
+against the merged catalogue**.
+
+Same shape as `isPrivate`, checked in the same pass and also a false alarm: it is present on
+**0 of 1,553 tours** because it is a **`Maker`** field, and it is present on **375 of 375 makers**.
+Both of these look like a dropped key and neither is one — the § "Reading a check's result"
+habit applies to a check you wrote thirty seconds ago, not only to the ones in `scripts/`.

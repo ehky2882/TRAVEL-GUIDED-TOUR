@@ -348,6 +348,18 @@ error.** It cost 14 hours of a live paywall being off and every private account 
 **Patch `get_catalog_core`; raise if the anchor is missing so the transaction rolls back.**
 `backend/add_video_role.sql` is the worked example. Run `scripts/check-catalog-keys.py` after.
 
+⚠️ **The RPC lowercases uuids; the catalogue stores them uppercase.** A case-sensitive id
+comparison against `get_catalog` reports **0 of N pins present** and then reports every hero URL
+mismatched, because every lookup missed — indistinguishable from "the seed never landed".
+Compare `.upper()` on both sides. Same false-alarm shape as looking for `isPrivate` on a tour:
+it is a **`Maker`** field, so it is absent from all 1,553 tours and present on all 375 makers.
+**A check you wrote thirty seconds ago earns the same scepticism as one in `scripts/`.**
+
+⚠️ **The seed lands minutes after the merge, and how many is not fixed** — 11 minutes in one
+batch, **13 in another** (merge 00:22 UTC, RPC still serving the old count at 00:34, correct at
+00:35). **Poll to the expected count**; a single reading taken on a guess reports the batch
+missing from the primary source and is wrong.
+
 **Every key an optional Swift field decodes is invisible when dropped.** `let priceTier: Int?`
 decodes a missing key as nil and the feature just stops existing — no crash, no log, no failed CI.
 Asking the live RPC what keys it returns is the only detection.
