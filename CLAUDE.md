@@ -290,6 +290,7 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `archive/CURRENT-STATE-HISTORY.md` | The dated Current State blocks moved out of `CLAUDE.md`. **Search, never load whole** |
 | `archive/ROADMAP-STATUS-HISTORY.md` | The 113 dated `**Status (…)**` blocks moved out of `ROADMAP.md` § Where we are right now, which they had grown to 86% of. **Search, never load whole** |
 | `archive/INDEX-DETAIL.md` | The long-form entries moved out of `archive/README.md`, which they had grown to 94% of. **Search, never load whole** |
+| `archive/STATUS-HISTORY.md` | The finished items moved out of `STATUS.md` § 1, which they had grown to 72% of. **Search, never load whole** |
 | `docs/launch-runbook.md` | **Step-by-step App Store launch walkthrough — start here to ship** |
 | `docs/fastlane.md` | How the release automation works (lanes, metadata, screenshots) |
 | `fastlane/` | The release toolchain: lanes, App Store metadata, screenshot config |
