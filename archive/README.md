@@ -266,6 +266,7 @@ not written down.
 | `HANDOFF-260907-3.md` | Eastern State Penitentiary gains its third member, and the standing note calling it a place CANDIDATE was wrong. |  |
 | `HANDOFF-260907.md` | the Gilder Center becomes a place, and a bug the mirror cannot see. |  |
 | `HANDOFF-260909-3.md` | the Supabase over-quota email answered: the session-start health check was pulling the whole catalogue four times to read a status code — 44 MB/session, now 8 KB. |  |
+| `HANDOFF-260909-4.md` | 61 `@urbanistariel` link pins (#777), Greece 7 → 35; two Plus Codes labelled `Lower Town` recovered 88 km out to sea before their captions named Mystras. |  |
 | `HANDOFF-260909.md` | thirty-six `@urbanistariel` pins; four join places that already existed, and two titles were wrong until the picture was opened. |  |
 
 213 entries. Full text for every one of them is in
