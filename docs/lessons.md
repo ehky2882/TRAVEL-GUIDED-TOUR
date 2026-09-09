@@ -241,6 +241,25 @@ researcher; `Frank` matched Sinatra; `Larsson` matched a basket workshop.
 otherwise produce 40-character caption fragments. Extend across sentences — and across
 paragraphs — until the caption clears 60 chars.
 
+**Making a `Place` means MOVING its members onto its coordinate — the validator hard-errors
+otherwise.** `place … : member not on the place coordinate` fires when any member's **`stops[0]`**
+is more than `1e-9` degrees from the place, so a place cannot merely gather pins that are near each
+other. Making The Parthenon a place moved `The Parthenon: The Missing Roof` **9.7 m**; #746 moved a
+pin 3.8 m onto the Gilder Center for the same reason. Move the *pin*, never the place, and only
+with the owner's say-so — `Place.swift` records the standing rule that grouping looser than exact
+coordinate equality **must be approved by a human, never auto-created**.
+
+**Place ids are `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")`, lowercase.** It
+reproduces **131 of the 140** live places; the misses are accented names whose slug transliteration
+differs and six with uppercase ids. Re-derive before minting rather than inventing a uuid — a
+made-up id looks exactly like a derived one, which is how two link-pin ids got invented on the spot
+(§ the link-pin runbook). Nothing in `scripts/` mints a place, so this is done by hand.
+
+**A place's `heroImageURL` is optional and falling back is usually right.** With it absent the place
+page uses its top-ranked member's hero, which for a link-pin place means the creator's own
+thumbnail — better than pointing the place at a file a pin already claims, which is the "two entries,
+one file" shape `check-image-duplicates.py` exists to catch.
+
 ---
 
 ## 4. Geocoding
