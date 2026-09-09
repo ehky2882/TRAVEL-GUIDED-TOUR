@@ -82470,6 +82470,22 @@
         "F9294EDC-1588-51AB-BCC3-529FF7F292CC",
         "C8127FFE-8549-5495-8F8E-38576777EAF0"
       ]
+    },
+    {
+      "id": "c3a4e974-cfb2-59ce-a86c-6a67502cafde",
+      "name": "The Parthenon",
+      "description": "Iktinos and Kallikrates' temple to Athena, finished in 438 BC and standing on the Acropolis ever since — through a Byzantine church, an Ottoman mosque, and the 1687 powder explosion that took the roof and most of the middle. Every neoclassical portico in the world is quoting it.",
+      "latitude": 37.9715034,
+      "longitude": 23.7266177,
+      "city": "Athens",
+      "address": "Acropolis, Athens",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
+        "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
+        "5F7B1433-8BC4-5B94-88E2-255975574E26"
+      ]
     }
   ],
   "linkPins": [
@@ -152501,8 +152517,8 @@
           "order": 0,
           "title": "The Parthenon: The Missing Roof",
           "caption": "Should they rebuild the roof of the Parthenon? 🧐 Here’s the real story of why the Parthenon’s roof is no longer around. #greecetiktok #histo",
-          "latitude": 37.971532,
-          "longitude": 23.726722,
+          "latitude": 37.9715034,
+          "longitude": 23.7266177,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -152514,8 +152530,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.971532,
-      "centroidLongitude": 23.726722,
+      "centroidLatitude": 37.9715034,
+      "centroidLongitude": 23.7266177,
       "city": "Athens",
       "country": "Greece",
       "primaryCategory": "history",
