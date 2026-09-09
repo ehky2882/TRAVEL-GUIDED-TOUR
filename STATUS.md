@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-09-09 (session 149, second pass — a catch-up, no content. **`main` moved 11 commits overnight.** Catalogue re-derived on `d7254ab1`: **1,552 tours · 1,489 pins · 353 makers · 140 places · 427 cities · 63 countries** — ⚠️ **#769 added three places and left the `CLAUDE.md` Key-facts line reading 137, its twentieth staleness; counted and corrected.** App Store re-checked from Apple: still **1.1.1**, released 1 Sep. 🔴 **The Supabase over-quota email was our own tooling and the biggest line item was a check I added yesterday — owned in § 2 below, fixed by #770.** ⚠️ **My own 25–33% RPC failure figure now carries a correction** (§ SQL pastes owed): a cheap probe reads 12/12 today, but it is a *different request*, so neither number supersedes the other. Open PRs: **#749** (still conflicted, 36 hours, unchanged), **#773**, **#774**.)
+**Last verified:** 2026-09-09 (session 149, second pass — a catch-up, no content. **`main` moved 11 commits overnight.** Catalogue re-derived on `d7254ab1`: **1,552 tours · 1,489 pins · 353 makers · 140 places · 427 cities · 63 countries** — ⚠️ **#769 added three places and left the `CLAUDE.md` Key-facts line reading 137, its twentieth staleness; counted and corrected.** App Store re-checked from Apple: still **1.1.1**, released 1 Sep. 🔴 **The Supabase over-quota email was our own tooling and the biggest line item was a check I added yesterday — owned in § 2 below, fixed by #770.** ⚠️ **My own 25–33% RPC failure figure now carries a correction** (§ SQL pastes owed): a cheap probe reads 12/12 today, but it is a *different request*, so neither number supersedes the other. 🔴 **TWO PRs ARE CONFLICTED AND STUCK, and one of them is the egress fix itself:** **#776** (the 34-byte version check — built, 8 tests, no owner SQL, needs owner OK + a two-minute device check because it touches `Data/*.swift`) and **#749** (54 pins, untouched since 8 Sep 13:55). ⚠️ **Neither will look broken** — a conflicted PR never triggers CI here, so both show no checks rather than a failure.)
 
 **Previously:** 2026-09-08 (session 149 — a catch-up pass, no content. **Two findings, both measured rather than read off this board.** (1) 🔴 **1.1.1 has been LIVE on the App Store since 1 Sep 15:23 UTC** and § 1d below said the opposite for a week — machine-verified from Apple's *public* lookup endpoint, which needs **no App Store Connect key**, so no session ever had an excuse; `scripts/session-start.sh` now runs it on every start and the perishable-facts table in `CLAUDE.md` is split into released-vs-unreleased. (2) ⚠️ **The catalog RPC is failing far more than the ~1-in-8 recorded below** — see § SQL pastes owed for the fresh sample. Catalogue re-derived on `68d03a67` **after #758 merged mid-session**: **1,552 tours · 1,426 pins · 353 makers · 130 places · 414 cities · 61 countries** — ⚠️ **#758 landed 83 pins and left the `CLAUDE.md` Key-facts line reading 1,343 / 404 / 59, its nineteenth staleness, so this session counted and corrected it.** The gh-pages mirror was byte-current with `main` when measured. Open PRs: **#749** only, another session's link-pin batch.)
 
@@ -138,10 +138,22 @@ durable lesson is narrower than "be careful": **a probe that discards the respon
 it, and `-o /dev/null` hides that from you.** ⚠️ **And the quota is not fixed, only postponed** —
 #770's own arithmetic puts a daily active user at **~240 MB/month**, so roughly **20 users** are
 back over it with the fix in. The durable answer is asking **"what version is the catalogue?"**
-before downloading it. ✅ **DESIGNED 2026-09-09 in [#773](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/773)**
-(`docs/catalog-version-check-design.md`) — and the database half **already exists and needs no
-migration**: `catalog_snapshot.sql` stores the catalogue as one row and already publishes
-`catalog_snapshot_age()` to anon, measured at **34 bytes**. **The app half is not built.**
+before downloading it — **designed** in [#773](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/773)
+(`docs/catalog-version-check-design.md`) and **BUILT** in
+[#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776): a **34-byte** probe of
+`catalog_snapshot_age()` before the **3.4 MB** download, both measured live, with 8 tests and
+**no SQL for the owner** (the function already exists and is already granted to `anon`).
+
+🔴 **#776 IS CONFLICTED AND IS THE ONE TO UNBLOCK.** It is the durable fix for the thing that
+generated the quota email, it is finished, and it is sitting at `mergeable_state: dirty`. ⚠️ It
+touches `Data/*.swift`, so it is **NOT auto-merge class** — it needs owner OK plus a device check,
+and its own author says why: *"when this code goes wrong the symptom is not a crash but an app
+showing nothing or showing old content."* The device check is two minutes — reopen with nothing
+changed (content still right), then reopen after a content merge (new content arrives).
+
+⚠️ **It does not fix the size, only the frequency.** When anything changes the app still downloads
+all 1,552 tours. The larger step after it is dropping `transcriptText` (**38%** of the payload) and
+`longDescription` (**18%**) — deferred deliberately, as a breaking catalogue change.
 
 **🔴 A DEAD TIKTOK LINK NEEDS RE-SHARING (2026-08-27).** `https://www.tiktok.com/t/ZP8vkb5bP/`, the twentieth of the "SF Architecture" batch, resolves to a real id (`@aggie.sanfrancisco/video/7660328152421387534`) and then fails everywhere: an empty oEmbed shell on three spaced attempts (no `thumbnail_url`), and a 367 KB *"Video currently unavailable"* page with zero `og:` tags. No caption means no subject and no location; no thumbnail means no hero, and a pin with no hero cannot ship. **Nothing on our side recovers it — only the owner re-sharing a live link.** ⚠️ It is an ordinary `/video/` post that has gone, **not** a `/photo/` carousel; that limitation is separate and permanent.
 
