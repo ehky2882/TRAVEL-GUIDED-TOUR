@@ -421,6 +421,15 @@ on a busy workflow returns ~420 KB and blows the tool budget, so use `list_workf
 **A browser user-agent trips Instagram's challenge page from a datacenter IP.** curl's default
 and the tool's own UA both work. **A control that differs in one header is not a control.**
 
+🔴 **A probe that throws the response away still pays for it, and `-o /dev/null` hides that from
+you.** A liveness check added to `scripts/session-start.sh` called `get_catalog` four times per
+session purely to read a status code and discarded ~44 MB of body every time — on a script every
+session runs. **The owner was emailed for exceeding the Supabase free egress quota the same day.**
+Before adding any repeated network check, ask what the *response* weighs, not just how long it
+takes: `curl -w '%{size_download}'` answers it in one call. The flags that make a status probe
+cheap are `--compressed --max-filesize 2000`; ⚠️ **curl then exits 63 on success**, so read
+`%{http_code}` and never the exit code. `CLAUDE.md` § Egress has the per-question cost table.
+
 ---
 
 ## 8. Git, gh-pages, CI, builds
