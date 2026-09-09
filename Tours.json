@@ -153481,6 +153481,51 @@
         "Monument"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "5F7B1433-8BC4-5B94-88E2-255975574E26",
+      "createdAt": "2026-09-09",
+      "title": "The Parthenon: Copied Everywhere",
+      "shortDescription": "A post by @urbanistariel on TikTok.",
+      "longDescription": "🤯 Where have you seen a building that looks like The Parthenon in Athens, Greece? They’re everywhere! #greecetravel #greektiktok",
+      "makerId": "991F43EC-353B-5B70-97B9-921EB2876D24",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parthenon-copied-everywhere-urbanistariel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@urbanistariel/video/7255575696582446378",
+      "sourceAuthor": "@urbanistariel",
+      "stops": [
+        {
+          "id": "8BC53EA9-77EF-5A23-9DAF-06A5A3A3E0E4",
+          "order": 0,
+          "title": "The Parthenon: Copied Everywhere",
+          "caption": "🤯 Where have you seen a building that looks like The Parthenon in Athens, Greece? They’re everywhere! #greecetravel #greektiktok",
+          "latitude": 37.9715034,
+          "longitude": 23.7266177,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parthenon-copied-everywhere-urbanistariel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.9715034,
+      "centroidLongitude": 23.7266177,
+      "city": "Athens",
+      "country": "Greece",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Monument",
+        "Architecture",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
     }
   ]
 }
