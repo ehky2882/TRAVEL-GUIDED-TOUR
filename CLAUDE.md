@@ -122,9 +122,19 @@ cold launch always refreshes regardless. But the catalogue changes ~70×/month,
 so a daily user meets a changed catalogue on nearly every launch and still pays
 the full 3.4 MB — **~240 MB per active user per month as a floor**, which puts
 roughly 20 active users back over the quota with the fix already in.
-**The durable fix is a cheap version check** — a `catalog_version()` RPC the app
-calls before deciding to download anything — and after that, delta or
-city-scoped fetching. Neither is built.
+**The cheap version check is now built** (2026-09-09): before fetching from
+Supabase, `RemoteCatalogLoader` calls **`catalog_snapshot_age()` — 34 bytes** —
+and skips the download entirely when that token matches the one stored beside
+the on-disk cache. It is safe because `payload` and `refreshed_at` are two
+columns of the *same* row in `catalog_snapshot`, written by one upsert, so the
+token cannot disagree with the catalogue it describes; and it **fails toward
+downloading**, so a probe that errors changes nothing. Design + reasoning:
+`docs/catalog-version-check-design.md`.
+**What it does NOT fix:** when anything has changed, the app still downloads all
+1,552 tours. It cuts how *often* we pay, not how *much*. The next two steps, in
+order of value, are **dropping `stops.transcriptText` (38%) and
+`longDescription` (18%) from the payload** — a breaking catalogue change — and
+then delta or city-scoped fetching. Neither is built.
 
 ## Image Pipeline
 
