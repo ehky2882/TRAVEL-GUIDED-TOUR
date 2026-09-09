@@ -265,6 +265,7 @@ not written down.
 | `HANDOFF-260907-2.md` | written as `-260907`, renumbered on an add/add collision with [#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744). |  |
 | `HANDOFF-260907-3.md` | Eastern State Penitentiary gains its third member, and the standing note calling it a place CANDIDATE was wrong. |  |
 | `HANDOFF-260907.md` | the Gilder Center becomes a place, and a bug the mirror cannot see. |  |
+| `HANDOFF-260909-4.md` | the catalogue version check built (#776, code — owner OK pending): the app asks `catalog_snapshot_age()` for 34 bytes before downloading 3.4 MB, safe because the payload and its timestamp are one row written by one upsert; two bugs the design missed — "up to date" must STOP the source chain or the gh-pages mirror gets downloaded instead, and a mirror-written cache must CLEAR the token or a later probe pins the app to the mirror. |  |
 | `HANDOFF-260909-3.md` | the Supabase over-quota email answered: the session-start health check was pulling the whole catalogue four times to read a status code — 44 MB/session, now 8 KB. |  |
 | `HANDOFF-260909.md` | thirty-six `@urbanistariel` pins; four join places that already existed, and two titles were wrong until the picture was opened. |  |
 
