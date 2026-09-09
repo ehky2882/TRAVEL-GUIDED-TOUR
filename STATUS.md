@@ -29,15 +29,6 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🆕 **OPEN — [#769](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/769) — Trinity Church, Madison Square Garden and Penn Station become places (session 152, 2026-09-09).** Owner instruction, Penn Station added on a follow-up ask. **places 137 → 140**, `tours`/`linkPins`/`makers` otherwise byte-identical; diff **48 insertions / 16 deletions**, the deletions being the four member coordinates moved onto their place point. Content only — auto-merge class.
-  - **Trinity Church (3):** the Atlas Studio NYC tour plus `The Details Inside Trinity Church` and `Trinity Church, Older Than the United States`, which sat 26 m away **on one identical coordinate**.
-  - **Madison Square Garden (3):** the Atlas tour plus the `@hereinnyc` Knicks and Rangers pins, 19–20 m away.
-  - 🔴 **MSG's anchor is GEOFENCED**, so the place took *its* coordinate and only the two link pins moved. Both movers assert `kind == "link"` and `triggerMode == "manual"` before touching anything, and every anchor is asserted unmoved afterwards.
-  - **Penn Station (4):** `The Hidden Message in Penn Station`, `Signs of Penn Station's Glorious Past`, `A Penn Station Eagle`, `The Old Penn Station Mosaics` — kept out of MSG deliberately (same structure, different subject), then made their own place when the owner asked. **No Atlas tour here, so it is anchorless** — 57 of the live places already are — and the coordinate is OSM's own `New York Penn Station` node, which two of the four pins already sat on exactly. ⚠️ **The Eagle moves 157 m and the Mosaics 136 m**; the other two move 0. `The Red Room at One Wall Street` and `The Buttonwood Tree at the NYSE` likewise stay out of Trinity Church.
-  - ⚠️ **`Penn Station's Lamppost at St. John the Divine` is NOT a member** though its title says Penn Station — the lamppost was moved to the cathedral and the pin belongs to that place, 6 km away.
-  - 🔴 **NEITHER GROUP WAS ACTUALLY OVER THE MAP'S CAP, and the earlier claim that they were was wrong** — it came from a 65 m proximity sweep, which is a *candidate finder*, not the cap. The stack only forms for markers sharing a cluster cell (~3 m at building scale). **Catalogue-wide, exactly 0 loose groups are coincident at or over the cap.** These two places are a curation decision, not a defect fix.
-  - ✅ Place ids from `uuid5(NAMESPACE_URL, "atlas-place:<slug(city)>:<slug(name)>")`, **the scheme re-proved against 12 live places before minting**. Addresses from OSM; heroes are existing gallery images confirmed **HTTP 200**. Mirror **selftest 32/32, control clean, 0 errors / 0 warnings** across 1,552 tours + 1,489 pins + 140 places.
-
 
 🔴 **This section is for what is STILL waiting on the owner. It is not a log.**
 41 finished items — every one whose pull requests GitHub reports as
@@ -146,8 +137,11 @@ recalling the incident; it was killed a few calls in, so **some tens of MB were 
 durable lesson is narrower than "be careful": **a probe that discards the response still pays for
 it, and `-o /dev/null` hides that from you.** ⚠️ **And the quota is not fixed, only postponed** —
 #770's own arithmetic puts a daily active user at **~240 MB/month**, so roughly **20 users** are
-back over it with the fix in. The durable answer is a `catalog_version()` RPC the app can call
-before downloading anything. **Not built, and nobody is on it.**
+back over it with the fix in. The durable answer is asking **"what version is the catalogue?"**
+before downloading it. ✅ **DESIGNED 2026-09-09 in [#773](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/773)**
+(`docs/catalog-version-check-design.md`) — and the database half **already exists and needs no
+migration**: `catalog_snapshot.sql` stores the catalogue as one row and already publishes
+`catalog_snapshot_age()` to anon, measured at **34 bytes**. **The app half is not built.**
 
 **🔴 A DEAD TIKTOK LINK NEEDS RE-SHARING (2026-08-27).** `https://www.tiktok.com/t/ZP8vkb5bP/`, the twentieth of the "SF Architecture" batch, resolves to a real id (`@aggie.sanfrancisco/video/7660328152421387534`) and then fails everywhere: an empty oEmbed shell on three spaced attempts (no `thumbnail_url`), and a 367 KB *"Video currently unavailable"* page with zero `og:` tags. No caption means no subject and no location; no thumbnail means no hero, and a pin with no hero cannot ship. **Nothing on our side recovers it — only the owner re-sharing a live link.** ⚠️ It is an ordinary `/video/` post that has gone, **not** a `/photo/` carousel; that limitation is separate and permanent.
 
