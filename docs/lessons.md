@@ -276,6 +276,15 @@ Representative Office in the Netherlands**.
 **Use structured parameters for a short Plus Code reference.** A free-text reference put
 `Chuo City Tokyo` on a confectionery in **Osaka** and `Venice Italy` on a restaurant in **Graz**.
 
+**The locality printed beside a short Plus Code is a guess, and the caption outranks it.** A short
+code carries no absolute position — it recovers against whatever reference you hand it, so the
+reference *is* the answer. Two `@urbanistariel` pins arrived labelled `Lower Town, Greece`; read as
+Monemvasia, a real Peloponnesian lower town, both recovered to **37.074, 23.367 — 88 km out, in the
+Myrtoan Sea**. Both captions said *Mystras*, next to Sparta, and against a Sparta reference both
+land on the site. **Read every recovered coordinate back against what the post is actually about
+before wiring it**, and treat a vague or generic locality (`Lower Town`, `Old Town`, `Centro`) as
+unresolved rather than as a place name.
+
 **An interpolated house number is not a mapped building.** `1529 Vassar Street` and
 `165 Crosby Street` and `201 Wan Chai Road` all returned **road segments**. Reverse-geocode each
 candidate and read the **road and the number** back; the distance between candidates tells you
