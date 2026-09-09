@@ -55,10 +55,12 @@ answered: **the Parthenon itself.** It ships as **The Parthenon: Copied Everywhe
 coordinate of the existing `The Parthenon` pin, so the two form a **2-card coincident stack against
 `TourSetMap.maxStacked = 3`** — one marker, headroom kept. **linkPins 1,550 → 1,551.** All 62 of the
 batch's links are now live; nothing from it is owed.
-  - ⚠️ **`The Parthenon: The Missing Roof` sits 10 m away and does NOT join that stack** — the app
-    groups only at `MapClustering.coincidentEpsilon = 1e-7` (about a centimetre), so 10 m is two
-    markers, not one. **There are now three Parthenon pins in ~10 m and no `Parthenon` place.**
-    That is a presentation question, not a defect, and it is with the owner.
+  - ✅ **RESOLVED — the owner asked for a place, so `The Parthenon` is one** (places 140 → 141,
+    `atlas-place:athens:the-parthenon`). All three pins are its members and collapse to a single
+    marker. **Making it required moving `The Parthenon: The Missing Roof` 9.7 m onto the place
+    coordinate** — `validate-tours.swift` hard-errors on a member whose `stops[0]` is off it, so a
+    place cannot merely gather nearby pins. The Erechtheion (89 m) and the Theatre of Dionysus
+    (147 m) keep their own pins, correctly.
 
 🔴 **[#762](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/762) IS MERGED — kept here ONLY for its unresolved [#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) follow-ups below (a third Tower Bridge entry, a hero-filename collision). This item said `OPEN` for a day after it merged.**
 
