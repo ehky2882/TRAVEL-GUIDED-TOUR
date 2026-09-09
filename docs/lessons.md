@@ -558,3 +558,38 @@ is what seizes audio focus, so activating at launch stopped the user's Spotify b
 - **Check what a flagged discrepancy CHANGES in the shipped fields before raising it.** Two
   sources disagreeing is only a decision if a field we author has to pick one.
 - **A one-time "cut a build" is not standing permission.**
+
+## Never hand the owner a rendered preview beside a paste-ready template
+
+Session 150. A branded Supabase email template was delivered as two artifacts: a *rendered
+preview* (sent first, with `{{ .ConfirmationURL }}` swapped for a literal `token=EXAMPLE` so it
+would display) and the paste-ready code. The preview was the more obvious thing to copy, so it is
+what reached the dashboard — and every confirmation link in every signup email pointed at a dead
+placeholder. Five test signups and four wrong theories (scanners, prefetch, expiry) went by before
+the owner pasted the link and it read `EXAMPLE`.
+
+**Send one artifact.** If a preview genuinely helps, make its placeholder impossible to ship
+(`DO_NOT_PASTE_THIS`) and say in the same breath which of the two is the deliverable.
+
+The same shape applies to any copy-paste handoff — SQL, Edge Function code, DNS values. The moment
+there are two plausible things to copy, the wrong one will be copied eventually.
+
+## Confirm an auth state against the database, not against the page
+
+Same session. The final, working confirmation *looked* like a failure: the browser showed
+`#error=...otp_expired`, because confirmation links are single-use and the screenshot was a second
+click — the first had already succeeded. Reading the page would have sent us back to debugging
+something that was fixed.
+
+A signed-out check needs only the publishable key:
+
+```bash
+curl -sS -X POST "https://<ref>.supabase.co/auth/v1/token?grant_type=password" \
+  -H "apikey: <publishable>" -H "Content-Type: application/json" \
+  -d '{"email":"...","password":"..."}'
+# access_token present = confirmed;  "email_not_confirmed" = not
+```
+
+This is the live-systems-over-appearances rule in a new place: **ask the system that holds the
+truth.**
+
