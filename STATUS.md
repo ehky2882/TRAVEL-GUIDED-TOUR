@@ -27,6 +27,14 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🆕 **OPEN — [PR pending] — Trinity Church and Madison Square Garden become places (session 152, 2026-09-09).** Owner instruction. **places 137 → 139**, `tours`/`linkPins`/`makers` otherwise byte-identical; diff **48 insertions / 16 deletions**, the deletions being the four member coordinates moved onto their place point. Content only — auto-merge class.
+  - **Trinity Church (3):** the Atlas Studio NYC tour plus `The Details Inside Trinity Church` and `Trinity Church, Older Than the United States`, which sat 26 m away **on one identical coordinate**.
+  - **Madison Square Garden (3):** the Atlas tour plus the `@hereinnyc` Knicks and Rangers pins, 19–20 m away.
+  - 🔴 **MSG's anchor is GEOFENCED**, so the place took *its* coordinate and only the two link pins moved. Both movers assert `kind == "link"` and `triggerMode == "manual"` before touching anything, and every anchor is asserted unmoved afterwards.
+  - ⚠️ **The four Penn Station entries under MSG were deliberately left out** (`A Penn Station Eagle`, `The Hidden Message in Penn Station`, `Signs of Penn Station's Glorious Past`, `The Old Penn Station Mosaics`) — same structure, different subject. **They are a natural second place and the owner has not been asked.** Likewise `The Red Room at One Wall Street` and `The Buttonwood Tree at the NYSE` stay out of Trinity Church.
+  - 🔴 **NEITHER GROUP WAS ACTUALLY OVER THE MAP'S CAP, and the earlier claim that they were was wrong** — it came from a 65 m proximity sweep, which is a *candidate finder*, not the cap. The stack only forms for markers sharing a cluster cell (~3 m at building scale). **Catalogue-wide, exactly 0 loose groups are coincident at or over the cap.** These two places are a curation decision, not a defect fix.
+  - ✅ Place ids from `uuid5(NAMESPACE_URL, "atlas-place:<slug(city)>:<slug(name)>")`, **the scheme re-proved against 12 live places before minting**. Addresses from OSM; heroes are existing gallery images confirmed **HTTP 200**. Mirror **selftest 32/32, control clean, 0 errors / 0 warnings** across 1,552 tours + 1,489 pins + 139 places.
+
 
 🔴 **This section is for what is STILL waiting on the owner. It is not a log.**
 41 finished items — every one whose pull requests GitHub reports as
