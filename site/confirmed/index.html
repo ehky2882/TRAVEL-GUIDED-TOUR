@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dozent — Email confirmed</title>
+  <link rel="stylesheet" href="/atlas.css">
+
+  <!-- Where Supabase Auth lands people after they tap the button in the
+       confirmation email. It is the project's Site URL + this path, set in
+       Supabase → Authentication → URL Configuration.
+
+       Two states, because the same URL serves both. On success Supabase
+       redirects here with nothing in the hash. On failure it appends its own
+       error to the FRAGMENT, e.g.
+
+         /confirmed/#error=access_denied&error_code=otp_expired
+
+       so a page that only ever said "confirmed" would tell a user their
+       account was ready when it demonstrably was not. The script below reads
+       that fragment and swaps to the failure copy.
+
+       The fragment is read, never trusted: only the presence of `error` is
+       acted on, and `error_description` is deliberately NOT rendered — it is
+       attacker-controllable text in the URL bar, and echoing it into the page
+       would let any link author put arbitrary words on this domain. The
+       failure copy is fixed and written here.
+
+       Success is the default state rather than both being hidden, so the
+       common case never flashes empty. The script is inline and immediately
+       after the markup, so the swap lands before first paint. -->
+
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <p class="brand"><a href="/">Dozent</a></p>
+
+  <div id="state-ok">
+    <h1>Email confirmed</h1>
+    <p class="lede">Your email address is confirmed and your Dozent account is ready.</p>
+
+    <div class="card">
+      <strong>Next.</strong> Open Dozent on your phone and sign in with the email address and password you just used. Everything you save from now on — tours, lists, downloads — follows you between devices.
+    </div>
+
+    <p><a href="dozent://">Open Dozent</a> — works if the app is installed on the device you are reading this on. Otherwise just open it from your home screen.</p>
+  </div>
+
+  <div id="state-bad" hidden>
+    <h1>That link has expired</h1>
+    <p class="lede">The confirmation link did not work. It was either already used, or it expired before it was opened.</p>
+
+    <div class="card">
+      <strong>What to do.</strong> Open Dozent and try signing in. If it tells you the email is not confirmed, sign up again with the same address — a fresh confirmation email will be sent, and confirmation links are single-use, so always open the most recent one.
+    </div>
+
+    <p>Still stuck? Write to <a href="mailto:hello@dozent.world">hello@dozent.world</a> and we will sort it out.</p>
+  </div>
+
+  <script>
+    (function () {
+      var hash = window.location.hash || "";
+      if (hash.indexOf("error") === -1) return;
+      var ok = document.getElementById("state-ok");
+      var bad = document.getElementById("state-bad");
+      if (ok) ok.hidden = true;
+      if (bad) bad.hidden = false;
+      document.title = "Dozent — Link expired";
+    })();
+  </script>
+
+  <footer>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+    <a href="/acceptable-use/">Acceptable Use</a>
+    <a href="mailto:hello@dozent.world">Contact</a>
+    <p class="legal">Dozent is operated by AHWY/EHKY. &copy; 2026.</p>
+  </footer>
+</body>
+</html>
