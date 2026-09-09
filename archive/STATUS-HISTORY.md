@@ -847,3 +847,13 @@ file is a rewrite for 1.1.2, not an amendment to 1.1.1's.
   - ⚠️ **Two titles clashed with pins already live from the same creator** and were disambiguated rather than shipped as twins: **The Parthenon: The Missing Roof** and **Central Park: How It Was Designed**.
   - ⚠️ **`check-image-duplicates.py --pins` exited 0 on its FIRST run having 404'd all 61 new heroes** — GitHub Pages had not deployed them yet. That verdict covered nothing. **Re-run after the deploy: 1,543 images fetched, 0 failures, no duplicates** (stamp `2026-09-09T12:16:21Z`). A clean verdict from a checker that fetched nothing is exactly the trap in `CLAUDE.md` § Reading a check's result.
   - ⚠️ **No sourceURL overlap with the open #749** — verified link by link against that branch's catalogue; the two batches are disjoint. #749 remains conflicted and 1,390 pins behind.
+
+
+---
+
+### The last @urbanistariel link, placed (session 152, 2026-09-09)
+
+🟡 **OWNER OWED — one link from the `@urbanistariel` batch has nowhere to go ([#777](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/777) MERGED, squash `f73beb25`, 2026-09-09).** 61 of 62 links shipped; **linkPins 1,489 → 1,550**, Greece 7 → 35. The holdout is `https://www.tiktok.com/@urbanistariel/video/7255575696582446378` — *"buildings that look like the Parthenon — they're everywhere"* — which arrived with no location **and has none**: it is about neoclassical architecture worldwide, not a place, and it overlaps in subject with the live **The Parthenon** pin from 8 Sep. **The owner names a coordinate or it is dropped.** Everything else is wired, seeded and serving.
+  - ✅ Verified after the merge: Supabase snapshot rebuilt at **2026-09-09T12:38:22Z** (the merge's own seed), `tours` rows **3,103** (= 1,552 tours + 1,550 pins + the same 1-row offset this query has always carried), gh-pages mirror **1,552 tours + 1,550 pins**.
+  - 🔴 **The durable finding is in `docs/lessons.md` § 4: a short Plus Code recovers against its reference, so a vague locality is an unresolved reference, not a place name.** Two codes labelled `Lower Town, Greece` recovered **88 km out, into the Myrtoan Sea**; both captions said Mystras. Validator, CI and every URL were green throughout — the pin would simply never have fired.
+  - Full account: `archive/HANDOFF-260909-4.md`.

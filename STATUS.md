@@ -49,10 +49,16 @@ trusting any line here:**
 gh pr list --state open      # or the API; this board goes stale on every merge
 ```
 
-🟡 **OWNER OWED — one link from the `@urbanistariel` batch has nowhere to go ([#777](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/777) MERGED, squash `f73beb25`, 2026-09-09).** 61 of 62 links shipped; **linkPins 1,489 → 1,550**, Greece 7 → 35. The holdout is `https://www.tiktok.com/@urbanistariel/video/7255575696582446378` — *"buildings that look like the Parthenon — they're everywhere"* — which arrived with no location **and has none**: it is about neoclassical architecture worldwide, not a place, and it overlaps in subject with the live **The Parthenon** pin from 8 Sep. **The owner names a coordinate or it is dropped.** Everything else is wired, seeded and serving.
-  - ✅ Verified after the merge: Supabase snapshot rebuilt at **2026-09-09T12:38:22Z** (the merge's own seed), `tours` rows **3,103** (= 1,552 tours + 1,550 pins + the same 1-row offset this query has always carried), gh-pages mirror **1,552 tours + 1,550 pins**.
-  - 🔴 **The durable finding is in `docs/lessons.md` § 4: a short Plus Code recovers against its reference, so a vague locality is an unresolved reference, not a place name.** Two codes labelled `Lower Town, Greece` recovered **88 km out, into the Myrtoan Sea**; both captions said Mystras. Validator, CI and every URL were green throughout — the pin would simply never have fired.
-  - Full account: `archive/HANDOFF-260909-4.md`.
+✅ **CLEARED — the last `@urbanistariel` link is placed (2026-09-09).** The owner was asked where
+`7255575696582446378` ("buildings that look like the Parthenon — they're everywhere") should go and
+answered: **the Parthenon itself.** It ships as **The Parthenon: Copied Everywhere**, on the exact
+coordinate of the existing `The Parthenon` pin, so the two form a **2-card coincident stack against
+`TourSetMap.maxStacked = 3`** — one marker, headroom kept. **linkPins 1,550 → 1,551.** All 62 of the
+batch's links are now live; nothing from it is owed.
+  - ⚠️ **`The Parthenon: The Missing Roof` sits 10 m away and does NOT join that stack** — the app
+    groups only at `MapClustering.coincidentEpsilon = 1e-7` (about a centimetre), so 10 m is two
+    markers, not one. **There are now three Parthenon pins in ~10 m and no `Parthenon` place.**
+    That is a presentation question, not a defect, and it is with the owner.
 
 🔴 **[#762](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/762) IS MERGED — kept here ONLY for its unresolved [#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) follow-ups below (a third Tower Bridge entry, a hero-filename collision). This item said `OPEN` for a day after it merged.**
 
