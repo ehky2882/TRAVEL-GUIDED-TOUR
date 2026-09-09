@@ -241,8 +241,13 @@ def fetch() -> dict:
         print("COULD NOT VERIFY: no Supabase URL/key in SupabaseConfig.swift")
         sys.exit(2)
     url = f"https://{host.group(1)}.supabase.co/rest/v1/rpc/get_catalog"
+    # --compressed is an EGRESS fix, not a speed one. This check reads keys off
+    # the first row of each collection, so it genuinely needs the whole payload
+    # — but it was pulling it UNCOMPRESSED: ~10.5 MB per run against ~3.5 MB
+    # gzipped, for byte-identical JSON. Supabase bills the wire bytes.
+    # Do not remove it.
     proc = subprocess.run(
-        ["curl", "-s", "-X", "POST", url,
+        ["curl", "-s", "--compressed", "-X", "POST", url,
          "-H", f"apikey: {key.group(0)}",
          "-H", "Content-Type: application/json",
          "-d", "{}"],
@@ -280,7 +285,7 @@ def snapshot_age() -> str | None:
     if not key or not host:
         return None
     proc = subprocess.run(
-        ["curl", "-s", "-X", "POST",
+        ["curl", "-s", "--compressed", "-X", "POST",
          f"https://{host.group(1)}.supabase.co/rest/v1/rpc/catalog_snapshot_age",
          "-H", f"apikey: {key.group(0)}",
          "-H", "Content-Type: application/json", "-d", "{}"],

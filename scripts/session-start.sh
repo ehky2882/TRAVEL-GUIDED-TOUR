@@ -79,13 +79,26 @@ except Exception:
 
 # The PRIMARY catalogue source is the Supabase RPC; the mirror above is only the
 # fallback. Sample it — it has been timing out (57014) on a real fraction of calls.
+#
+# 🔴 --compressed --max-filesize 2000 is an EGRESS fix and is load-bearing.
+# get_catalog returns the WHOLE catalogue: ~10.5 MB raw, ~3.5 MB gzipped. This
+# check wants the STATUS CODE and threw all of it away to /dev/null — so four
+# samples cost ~44 MB of Supabase egress at the start of EVERY session, which
+# is a large slice of the quota the owner was emailed about. The server still
+# runs the full query (~1.7s, unchanged), the status still arrives in the
+# headers BEFORE any body, so a 57014 timeout is still caught exactly as
+# before; curl just stops reading once 2 KB has landed.
+# ⚠️ curl exits 63 ("filesize exceeded") on success here — that is expected.
+# %{http_code} is still correct, which is the only thing this test reads.
+# Do NOT "tidy" these flags away: it silently restores a 5,000x egress cost.
 if [ -f "TRAVEL GUIDED TOUR/Data/SupabaseConfig.swift" ]; then
   _sb_url=$(grep -o 'https://[a-z0-9]*\.supabase\.co' "TRAVEL GUIDED TOUR/Data/SupabaseConfig.swift" | head -1)
   _sb_key=$(grep -o 'sb_publishable_[A-Za-z0-9_-]*' "TRAVEL GUIDED TOUR/Data/SupabaseConfig.swift" | head -1)
   if [ -n "$_sb_url" ] && [ -n "$_sb_key" ]; then
     _ok=0
     for _i in 1 2 3 4; do
-      _c=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 -X POST "$_sb_url/rest/v1/rpc/get_catalog" \
+      _c=$(curl -s --compressed --max-filesize 2000 \
+             -o /dev/null -w '%{http_code}' --max-time 20 -X POST "$_sb_url/rest/v1/rpc/get_catalog" \
              -H "apikey: $_sb_key" -H "Authorization: Bearer $_sb_key" \
              -H "Content-Type: application/json" -d '{}' 2>/dev/null)
       [ "$_c" = "200" ] && _ok=$((_ok+1))

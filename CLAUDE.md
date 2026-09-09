@@ -82,6 +82,50 @@ These happen **automatically, without the owner asking**.
 | 11b | Editing catalog data BY HAND in the Supabase SQL Editor | **End with `select public.refresh_catalog_snapshot();`.** The catalog is materialised (`backend/catalog_snapshot.sql`) — `get_catalog()` serves a pre-built row, so an upsert is invisible to the app until the snapshot is rebuilt. `seed_from_toursjson.py` does this itself, so a normal content merge needs nothing. |
 | 11 | Applying ANY SQL that touches `get_catalog` — or the owner reporting a feature "missing" that the code clearly ships | Run `python3 scripts/check-catalog-contract.py`. It asks the LIVE RPC what keys it returns and diffs them against the Swift models, which is the only way to catch a dropped key: every one of them is optional in Swift, so it decodes as nil and the feature silently stops existing — no crash, no log, no failed CI. This is how `places`, `priceTier` and `isPrivate` vanished for 14 hours on 2026-08-19. **Run it after the migration, not before.** |
 
+## ⚠️ Egress — `get_catalog` is 3.4 MB and Supabase bills every byte
+
+**2026-09-08: the owner was emailed for exceeding the free egress quota.** The
+cause was not growth. `get_catalog()` returns the **whole catalogue in one
+document — ~10.5 MB raw, ~3.4 MB gzipped** — and there is no way to ask it
+"has anything changed?" (it is a POST RPC, so no ETag, no `If-None-Match`,
+no 304). **A fetch that finds nothing new costs exactly as much as one that
+finds a whole new city.** More than half of it is text no one is looking at:
+`stops.transcriptText` is **38%** of the payload and `longDescription` another
+**18%**, both sent for all 1,552 tours on every fetch.
+
+So the rules below are not micro-optimisation — they are the difference
+between a session costing 44 MB and costing 8 KB.
+
+| If you need… | Do this | Cost |
+|---|---|---|
+| the whole catalogue (keys, contract, audits) | `curl --compressed` / `Accept-Encoding: gzip` — **neither curl nor urllib asks for compression on its own** | 3.4 MB (was 10.5) |
+| only the **status code** (liveness / timeout probes) | also `--max-filesize 2000`; the status arrives in the headers before the body, so a 57014 timeout is still caught. ⚠️ curl exits **63** on success here — read `%{http_code}`, not the exit code | **2 KB** |
+| only a **row count** | `GET /rest/v1/tours?select=id&limit=1` with `Range: 0-0` + `Prefer: count=exact`; the answer is in the `content-range` response header | **47 bytes** |
+| the catalogue's **freshness** | `POST /rest/v1/rpc/catalog_snapshot_age` | **34 bytes** |
+
+⚠️ **The count query counts DB rows, not app-facing tours.** Link pins are
+`tours` rows with `kind='link'`, so it returns tours **+** pins (3,042 today
+against the RPC's 1,553 tours). Use it for "is the row count what I expect",
+never as the catalogue's tour count.
+
+**🔴 Never poll `get_catalog` in a loop.** `scripts/session-start.sh` sampled it
+**four times per session** purely to read a status code and threw all of it away
+to `/dev/null` — **44 MB of egress at the start of every session**, likely the
+single largest line item behind that email. It is now 8 KB and reports the same
+`4/4 OK`. If you add a check that touches the RPC, the flags above are
+load-bearing; do not "tidy" them off.
+
+**⚠️ The app has the same shape, and raising the debounce only buys time.**
+`DataService.foregroundRefreshInterval` is **900s** (was 60 — see the comment on
+that init, which explains why it is an egress dial and not a freshness dial). A
+cold launch always refreshes regardless. But the catalogue changes ~70×/month,
+so a daily user meets a changed catalogue on nearly every launch and still pays
+the full 3.4 MB — **~240 MB per active user per month as a floor**, which puts
+roughly 20 active users back over the quota with the fix already in.
+**The durable fix is a cheap version check** — a `catalog_version()` RPC the app
+calls before deciding to download anything — and after that, delta or
+city-scoped fetching. Neither is built.
+
 ## Image Pipeline
 
 Standard process for sourcing hero + gallery images for tours that don't have owner-supplied assets. Run this automatically whenever a new tour is added without images, or when the owner asks to improve existing images.

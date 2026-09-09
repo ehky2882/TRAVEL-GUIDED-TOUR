@@ -39,7 +39,7 @@ Exit 2 = could not check (network/parse) — NOT a pass.
 
 RUN IT: after ANY migration touching get_catalog, and on a schedule.
 """
-import json, re, sys, urllib.request, pathlib
+import gzip, json, re, sys, urllib.request, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 QUIET = "--quiet" in sys.argv
@@ -111,13 +111,25 @@ def cfg(pat):
 url = cfg(r'projectURL\s*=\s*URL\(string:\s*"([^"]+)"').rstrip("/") + "/rest/v1/rpc/get_catalog"
 key = cfg(r'anonKey\s*=\s*"([^"]+)"')
 
+# Accept-Encoding: gzip is an EGRESS fix, not a speed one. This check compares
+# the RPC's keys against the Swift models, so it genuinely needs the whole
+# payload — but it was pulling it UNCOMPRESSED: ~10.5 MB per attempt against
+# ~3.5 MB gzipped, for byte-identical JSON, and the retry loop below can make
+# that three attempts. Supabase bills the wire bytes. urllib does NOT request
+# compression on its own (curl needs --compressed for the same reason), so the
+# header and the decode below have to be explicit. Do not remove them.
 req = urllib.request.Request(url, data=b"{}", method="POST", headers={
-    "apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+    "apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json",
+    "Accept-Encoding": "gzip"})
 payload, last = None, None
 for attempt in range(3):
     try:
         with urllib.request.urlopen(req, timeout=180) as r:
             raw = r.read()              # read fully; json.load(r) can short-read 7MB
+            # Only decompress if the server actually gzipped it — asking is not
+            # the same as receiving, and a plain body must still parse.
+            if (r.headers.get("Content-Encoding") or "").lower() == "gzip":
+                raw = gzip.decompress(raw)
         payload = json.loads(raw)
         break
     except Exception as e:              # IncompleteRead is the common one
