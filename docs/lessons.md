@@ -53,6 +53,20 @@ now refuses to run otherwise, and pins each rule in its own selftest.
   once** — a fault that fails to apply otherwise passes for free.
 - Derive the batch's ids **from the diff against `HEAD`**, never from a scratch file.
 
+🔴 **A proximity sweep is a candidate finder, not the map's stack cap — they differ by
+twenty.** The 65 m sweep sessions use to spot place candidates is *not* what `TourSetMap`
+stacks on. Cards stack for markers sharing a cluster cell, and with `MapClustering.cellsAcross
+= 20` at `buildingScaleSpan` (0.0006°, ~65 m across) **a cell is about 3 m** — anything 20–85 m
+apart separates by zoom and stays reachable. Reported as the cap, the sweep told the owner that
+three groups were at or over it and that a fourth entry would be permanently untappable; on
+exact coincidence, the case no camera can separate, the catalogue has **0 groups at or over the
+cap**. **Say which test produced a finding before calling it a defect** — and a genuine one
+looks like #767's three pins on one identical derived coordinate.
+
+⚠️ **A place's member invariant is FIRST-STOP equality, never centroid.** A `multiStop` walk's
+centroid is the mean of its stops, so a centroid assertion fails for **26 live members** and is
+right to: the walk begins at its place and then leaves it.
+
 🔴 **Before calling a mirror miss a "blind spot", read the Swift rule.** Sessions 142, 143 and
 145 each shipped one that turned out to be a rule they had invented — non-https heroes
 (`isValidURL` accepts `http://`), duplicate tags (`Set(t.tags)` collapses them silently), a

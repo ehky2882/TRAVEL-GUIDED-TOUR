@@ -117,3 +117,60 @@ Same shape as `isPrivate`, checked in the same pass and also a false alarm: it i
 **0 of 1,553 tours** because it is a **`Maker`** field, and it is present on **375 of 375 makers**.
 Both of these look like a dropped key and neither is one — the § "Reading a check's result"
 habit applies to a check you wrote thirty seconds ago, not only to the ones in `scripts/`.
+
+---
+
+## Three places, on owner instruction — [#769](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/769), merged `589dc70`
+
+**places 137 → 140.** `tours`, `linkPins` and `makers` byte-identical.
+
+| Place | Members | Coordinate from |
+|---|---|---|
+| Trinity Church · Broadway at Wall Street | 3 | the Atlas tour (`manual`) |
+| Madison Square Garden · 4 Pennsylvania Plaza | 3 | the Atlas tour (**`geofenced`**) |
+| Penn Station · 234 West 31st Street | 4 | **OSM's own station node** — no Atlas tour exists |
+
+Live on the RPC at 02:43 UTC, **~10 minutes after the merge**: all three present, all ten
+members on their place's point, addresses and heroes as authored.
+
+## 🔴 The correction that mattered more than the places
+
+I told the owner that Wall Street, Trinity Church and Madison Square Garden were **at or over
+the map's stack cap**, and that a fourth entry at Wall Street would be permanently untappable.
+**That was wrong, and it was my own check that was wrong, not the data.**
+
+The reading came from a **65 m proximity sweep** — the tool earlier sessions use to *find
+candidates*. It is not the cap. `TourSetMap` stacks place cards for markers that share a
+cluster cell, and with `MapClustering.cellsAcross = 20` at `buildingScaleSpan` (0.0006°, about
+65 m across) **a cell is roughly 3 m**. Anything 20–85 m apart separates by zoom and stays
+reachable.
+
+Measured on exact coincidence — the case no camera can separate — **the catalogue has 0 loose
+groups over the cap and 0 exactly at it**, before the change and after it.
+
+⚠️ **What this does NOT retract:** the St. John the Divine and Morgan joins in #767. Those three
+pins shared one identical derived coordinate, which is the real defect.
+
+**The habit:** when a sweep says "at the cap", say which test produced it. A proximity ball is a
+candidate finder; the cap is a cluster-cell question, and the two differ by a factor of twenty.
+
+## Two smaller things worth keeping
+
+- 🔴 **A place's member invariant is FIRST-STOP equality, not centroid.** A `multiStop` walk's
+  centroid is the mean of its stops, so a centroid assertion fails for **26 live members** —
+  correctly: the walk begins at its place and then leaves it. My first builder asserted centroid
+  and refused to run, which is the assertion working.
+- **An anchorless place needs a coordinate from outside the catalogue.** Penn Station has no
+  Atlas tour (57 of the 139 live places are link pins only), so its point came from OSM's
+  `New York Penn Station` node rather than from whichever pin happened to be first — and two of
+  the four pins already sat on it exactly. ⚠️ **The Eagle moved 157 m and the Mosaics 136 m**;
+  that is the honest cost of collapsing a two-block station onto one marker, and the owner was
+  told rather than left to find it.
+
+## Left open
+
+- **`Penn Station's Lamppost at St. John the Divine`** is not a Penn Station member and should not
+  become one: the lamppost was moved to the cathedral, and the pin belongs to that place.
+- **Wall Street was left alone** — the owner said "leave it for now, we'll revisit" once the cap
+  claim was corrected. `The Red Room at One Wall Street` and `The Buttonwood Tree at the NYSE`
+  remain their own pins.
