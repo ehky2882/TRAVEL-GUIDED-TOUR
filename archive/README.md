@@ -265,6 +265,7 @@ not written down.
 | `HANDOFF-260907-2.md` | written as `-260907`, renumbered on an add/add collision with [#744](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/744). |  |
 | `HANDOFF-260907-3.md` | Eastern State Penitentiary gains its third member, and the standing note calling it a place CANDIDATE was wrong. |  |
 | `HANDOFF-260907.md` | the Gilder Center becomes a place, and a bug the mirror cannot see. |  |
+| `HANDOFF-260909.md` | thirty-six `@urbanistariel` pins; four join places that already existed, and two titles were wrong until the picture was opened. |  |
 
 213 entries. Full text for every one of them is in
 [`INDEX-DETAIL.md`](INDEX-DETAIL.md), in this same order.
