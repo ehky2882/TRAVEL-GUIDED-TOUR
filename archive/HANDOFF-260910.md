@@ -1,159 +1,130 @@
-# HANDOFF 2026-09-10 — a link pin that cannot load now says so
+# Handoff — 2026-09-10 (session 153, part 2)
 
-**Session:** 154. **Branch:** `claude/creator-tours-china-visibility-wmnho7`.
-**PR:** [#785](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/785) — app code, so it waits for
-owner OK + device review. **TestFlight run 143** dispatched from the branch with build notes
-attached.
+**The Supabase egress emergency, and the catalogue payload cut that answers it.**
+Continues `HANDOFF-260909-4.md` (the version check, PR #776 — still open, owner OK pending).
+
+Two PRs: **[#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776)** (code, owner OK
+pending, TestFlight build 142 uploaded) and **[#795](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/795)**
+(SQL + tooling + docs — **the SQL has been applied and verified live**).
 
 ---
 
-## Where it started
+## What happened
 
-The owner asked a question, not for a change: *"If we post creators tours from TikTok, IG or
-YouTube, are those tours effectively not viewable while in China?"*
+A **second** Supabase notice arrived: **11.82 GB against a 5 GB allowance**, grace period cut from
+4 October to **13 September**. The owner sent the usage dashboard, then a screen recording of the
+per-day breakdown.
 
-The answer is yes, and the code says so plainly. `LinkSource.embedURL` builds exactly three player
-URLs — `www.tiktok.com/player/v1/{id}`, `www.instagram.com/{p|reel}/{code}/embed`,
-`www.youtube.com/embed/{id}` — and mainland China blocks all three hosts. `LinkEmbedView`'s own
-header already said the rest: **the bytes stream from the platform and are never fetched, stored or
-re-served by us.** There is no copy to fall back on and there was never meant to be one.
-
-### The numbers, re-derived from `Resources/Tours.json` (not quoted)
+**The breakdown settles the cause completely, and killed two plausible theories:**
 
 | | |
 |---|---|
-| link pins | **1,588** — TikTok 1,027 · Instagram 542 · YouTube 19 |
-| hero images for those pins | **1,588 of 1,588 on `ehky2882.github.io`**, i.e. ours |
-| China-region content | Hong Kong **218 pins + 52 tours**, Macau 6, Taiwan 6, mainland **1** (Beidaihe) |
+| **PostgREST** | **100.0% — every single day** |
+| Auth | 28–64 KB/day |
+| Storage | **977 bytes**/day |
+| Edge Functions | does not appear at all |
 
-So the exposure is **not** "our China content is broken" — Hong Kong and Macau sit outside the
-firewall and are fine. It is that **a traveller physically in mainland China cannot watch any pin,
-for anywhere in the world.** The Paris pins fail there exactly as hard as the Beidaihe one.
+- ⚠️ **238,583 Edge Function invocations looked alarming and produce essentially zero egress.**
+  I raised them as suspicious in chat; that was a false alarm and I said so.
+- ⚠️ **It is not the users. MAU is 17.**
 
-## What was actually wrong, and it was worse than "blocked"
+Daily figures — the honest scoreboard for every fix here (allowance ≈ **167 MB/day**):
 
-The pin's own metadata all works — title, maker, city, map marker, search, and the hero image,
-because that is on our CDN. Only the video dies. But it died **silently**: `LinkEmbedView` sets
-`isOpaque = false` and `backgroundColor = .black` deliberately (a white flash on a dark tour page
-reads as breakage), so an unreachable player rendered as **a black rectangle at the post's aspect
-ratio, indefinitely**. No error, no retry, no hint that the network rather than the app was the
-problem. It read as a broken app.
-
-## 🔴 Why the obvious fix does not exist
-
-`LinkEmbedView` **already had a `navigationDelegate`** and it was never going to see this. Two
-reasons, and both are structural:
-
-1. The shell is handed to WebKit with `loadHTMLString(_:baseURL:)`, so **the main frame never
-   touches the network.** `didFailProvisionalNavigation` cannot fire for a blocked player.
-2. The player is inside a **cross-origin iframe** we may not script, and WebKit does not surface a
-   subframe's provisional-load failure to the navigation delegate at all.
-
-The one signal available is the **`<iframe>` element's own `load` event** — it fires for a
-cross-origin child even though the contents stay unreadable. The shell now carries a three-line
-script that relays it (and `error`) over a `WKScriptMessageHandler` named `atlasEmbed`. Failure is
-therefore inferred from the **absence** of a positive signal within a 12-second deadline.
-
-## That inference is a guess, so the design makes being wrong cheap
-
-This is the part to review, and the part worth remembering:
-
-- 🔴 **The message is an OVERLAY over a player that stays mounted and stays loading.** A
-  slow-but-working network that beats the deadline by arriving late clears the message by itself.
-  Swapping the player out for the message would have made the deadline a **final verdict** and the
-  exact number load-bearing.
-- `frameLoaded` wins from **every** state, `.failed` included.
-- A deadline that outlived the load it was measuring **cannot** unseat a player that has since come
-  up (`deadlineExpired` is ignored unless the state is still `.loading`), and it is cancelled on
-  success and on every new load anyway.
-- An unrecognised message body is **ignored**, never treated as failure — a future message on this
-  channel must not be able to blank a working player on builds that predate it.
-- A retry reloads the shell in the existing webview (`reloadToken`) rather than rebuilding it.
-
-**The only regression route is the false positive** — the message over a pin that works — and it
-cannot be tested from a Linux session. That is the one thing the owner was asked to check first.
-
-## The copy
-
-Says **"can't be reached"**, never *"is blocked"*. We observe a player that did not load; we do not
-know why, and the honest reasons are several (a country or network blocking the platform, a captive
-portal, a post gone private, the platform down). Naming one as the cause would be wrong most of the
-time — § 2 of `docs/lessons.md` pointed at the viewer instead of at the owner. The `.other` source
-names no platform at all, because it is reached exactly when `LinkSource.from` did not recognise the
-host. It also names the thing that still works: a tour downloaded before arriving.
-
-## Files
-
-| File | |
-|---|---|
-| `Components/LinkEmbedFailure.swift` | **new** — `LinkEmbedLoadState`, `LinkEmbedLoadEvent`, `LinkEmbedLoadRule` (the whole transition table), `LinkEmbedFallbackView` |
-| `Components/LinkEmbedView.swift` | shell relays the iframe's `load`/`error`; the deadline; `reloadToken`; `onLoadEvent` |
-| `Features/Tour/TourDetailView.swift` | holds the state, draws the overlay, resets per pin |
-| `Models/Tour.swift` | `LinkSource.displayName` + `unreachableHeadline` + `unreachableDetail` |
-| `TRAVEL GUIDED TOURTests/LinkEmbedFailureTests.swift` | **new** — 19 tests |
-
-### Two traps hit while writing it, both caught before pushing
-
-- **`onLoadEvent` must be declared AFTER `onFullscreenChange`.** The struct has no explicit
-  initialiser, so the memberwise one takes its arguments in declaration order; the first draft
-  declared it second and the call site read third. A compile error, and a silent one to a reader.
-- **`Coordinator` already had a `private func report(_:)`** for fullscreen state. Overloading on the
-  argument type compiles, and would have left two unrelated signals — bars-withdrawn and
-  player-came-up — reading as one function at every call site. Renamed to `reportLoad`.
-
-### One deliberate exception to the token rule
-
-`LinkEmbedFallbackView` is **light-on-dark unconditionally**. The box underneath is `black` in both
-appearances, so `AtlasColors.primaryText` (`Color.primary`) would be near-black text on a black
-panel in light mode — invisible exactly where the whole point is to be read. Documented in the file.
-
-## ⚠️ NOT answered, NOT in the PR, and bigger than the PR
-
-Neither can be measured from a session, and neither should be asserted from a document:
-
-1. **Is `ehky2882.github.io` reachable from mainland China?** It is the asset CDN — every hero
-   image, every audio file, and the catalogue mirror, with **7,713 absolute URLs in `Tours.json`**
-   pointing at it. `github.io` is historically unreliable behind the firewall. If it is not
-   reachable, **real Atlas tours break there too** (no images, no downloads), which dwarfs the pin
-   problem. Needs a mainland vantage point. Same question for
-   `apkcihljybvuyuzpbnqd.supabase.co`, the primary catalogue source.
-2. **Is Dozent on the China storefront at all?** No App Store Connect key in a web session, and a
-   mainland listing needs an ICP filing. **Owner question.** If it is not listed there, the
-   realistic audience is foreign visitors — and a visitor roaming on their home SIM usually routes
-   out of the country and never meets the firewall, which makes the practical shape *"broken on
-   Chinese wifi or a local SIM, fine on international roaming or a VPN."*
-
-## Session-start state, for the record
-
-`scripts/session-start.sh` ran clean: `dozent.world` 200, the gh-pages mirror 200, `get_catalog`
-4/4 OK, App Store **1.1.1 released 2026-09-01** (public lookup, no key). App Store Connect was
-**SKIPPED — no key in a web session**, so the unreleased/build/review state was **not checked** and
-is not reported here. The full `git fetch` timed out, so the branch list in § 4 of that output was
-stale; `origin/main` was fresh.
-
-**Catalogue counts were re-derived, not quoted:** 1,552 tours · 1,588 link pins. No content changed
-this session.
+| 8 Sep | 9 Sep (#770 lands) | 10 Sep |
+|---|---|---|
+| **1,963 MB** | **493 MB** | **241 MB** |
 
 ---
 
-## Outcome — merged the same day
+## What shipped
 
-**Owner, after installing TestFlight 1.1.2 (143):** *"Build is live. I tested (not super
-extensively), think it works."* That is the owner OK the code-PR gate requires, so
-[#785](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/785) squash-merged to `main` as
-**`6a594081`** with CI green on `6bbece0` (validator · simulator build · unit tests). Branch
-auto-deleted, PR subscription dropped, check-in trigger cancelled.
+**`stops.transcriptText` is off the wire.** 1,924 stops, 3,768,989 characters of narration script,
+**displayed by no consumer screen at all** — grep-verified across the app, not assumed: the only
+readers are `Models/Stop.swift` (the declaration), `MakerTourService`, `TourWizardRules` and
+`CreateTourWizardView`, all maker-side, and `MakerTourService` queries the `stops` table directly
+rather than the RPC. The column is untouched.
 
-⚠️ **Record what was actually verified, not what shipped.** The owner's own words were *not super
-extensively*, and the one case that matters — **the message appearing over a player that works** —
-is the only way this change can regress. Their testing very likely covered it (opening a pin at all
-exercises it), but that is an inference, not a report. It is on the board as debt in `STATUS.md`
-§ 6 rather than written up here as proven.
+**Measured on the live wire, before and after:**
 
-**If "that message on a video that plays" is ever reported, the fix is not a longer deadline.** A
-longer deadline only delays a false verdict that a missing `load` event makes inevitable. The right
-answer is a second, positive-only signal — a cheap reachability probe against the embed host, with
-failure declared only when the deadline expires **and** the probe says the host is unreachable. That
-inverts the risk: a working network could no longer produce the message at all. It was considered
-and deliberately not built here, because it doubles the mechanism and adds a request per pin view
-for a case the owner can falsify on a phone in thirty seconds.
+| | |
+|---|---|
+| before | 3,698,842 bytes |
+| after | **2,163,115 bytes** |
+| **saving** | **41.5%, every fetch, forever** |
+
+It reaches phones **already in the field with no App Store release**, because
+`Stop.transcriptText` is `String?` — an absent key decodes as nil on every build ever shipped.
+
+⚠️ **`longDescription` was considered and deliberately KEPT.** Its "18%" in older notes was a
+**raw** figure; gzipped — which is what is billed — it is **8.2%**, and unlike the transcripts it
+*is* used (`TourDetailView` renders it, `SearchView` searches it).
+
+---
+
+## 🔴 The incident inside the fix — read this one
+
+**The first version of the migration reverted the link-pin split.**
+
+It rebuilt `get_catalog_core()` by copying the body out of `backend/restore_catalog_keys.sql` and
+deleting one line. That body was superseded: `split_link_pins.sql` had renamed the builder aside to
+`get_catalog_core_base()` and made `get_catalog_core()` the **wrapper** that lifts link pins into
+their own `linkPins` key.
+
+So the paste took the live catalogue from `tours 1553 / linkPins 1712` to
+**`tours 3253 / linkPins 0`** — which fails the **whole** catalog decode on every build predating
+`TourKind.link`, silently, because the loader reads a throw as a failed fetch and keeps its last
+good copy. Live for roughly six minutes.
+
+**Caught by counting the live payload immediately after the paste.** "Success. No rows returned."
+said nothing.
+
+**The rule it taught — now in `docs/lessons.md`:**
+> **Transform what the live chain returns; never retype it.** Committed SQL records what was true
+> when it was written, not what is live underneath it now. A wrapper cannot lose a key it never
+> mentions.
+
+The repaired migration does exactly that: it calls `get_catalog_core_base()` and applies
+`- 'transcriptText'` to each stop on the way past, preserving stop order explicitly
+(`with ordinality` + `order by` — that order is the walking route).
+
+**Three durable guards came out of it:**
+
+1. **The migration verifies its own shape.** It ends in a `do $$` block that raises if `linkPins`
+   is empty, if a pin is still inside `tours`, if `places` is empty, or if any transcript survived.
+2. **The audit was looking one layer too high.** `check-catalog-keys.py` inspected only
+   `create or replace function public.get_catalog()`; the destructive statement was against
+   `get_catalog_core()`, so the bad file **passed the audit that exists for exactly this**. It now
+   audits both layers on the same rule — a body that CALLS the layer beneath it is a wrapper and is
+   fine; a body that RETYPES it is a loaded gun.
+3. **`restore_catalog_keys.sql` now carries the `NO LONGER SAFE TO RE-RUN` banner** it had always
+   warranted, plus the stronger warning that it is not safe to **copy from** either — the mistake
+   actually made.
+
+Also added: **`FORBIDDEN_STOP`** in `check-catalog-keys.py`, which fails if `transcriptText` ever
+returns to the payload. The damage runs that way — a key that comes back costs money on every fetch
+by every phone forever, and nothing else would notice.
+
+---
+
+## Verified live after the owner's paste
+
+- `check-catalog-keys.py` → **exit 0**, fresh RUN stamp, `1553 tours, 404 makers, 141 places`
+- `check-catalog-contract.py` → **exit 0**, `PASS — every key the app decodes is being served`
+  (one pre-existing known gap: `tours[].createdAt`)
+- Direct count: tours **1553** / linkPins **1712** / places **141** / makers **404**;
+  **0** strays, **0** transcripts, **0** tours with stops out of order, `longDescription` still served
+- Wire bytes **2,163,115** (from 3,698,842)
+
+---
+
+## What is owed
+
+| | |
+|---|---|
+| 🔴 **Upgrade to Supabase Pro before 13 Sep** | The 11.82 GB is already spent and cannot be un-spent. This fix governs the NEXT cycle. Advised repeatedly; owner's call |
+| **Owner OK + device check on [#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776)** | The version check. CI green, TestFlight **build 142** uploaded with notes |
+| **Merge [#795](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/795)** | SQL/tooling/docs — auto-merge class once CI is green. **The SQL is already applied live** |
+| Watch the daily egress bars | 11 Sep is the first full day carrying both the 9 Sep fixes and this cut. Expect well under 167 MB |
+
+**Not built:** when anything changes, the app still downloads all 1,552 tours. Delta or
+city-scoped fetching is the remaining step.
