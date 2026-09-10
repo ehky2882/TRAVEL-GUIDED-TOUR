@@ -50,7 +50,28 @@ REQUIRED_MAKER = {
 REQUIRED_STOP = {
     "id", "order", "title", "caption", "latitude", "longitude", "audioURL",
     "audioDurationSeconds", "triggerMode", "triggerRadiusMeters", "imageURL",
-    "transcriptText",
+}
+
+# 🔴 Keys that must NOT come back. This is the opposite of REQUIRED_* and it
+# exists because the damage runs the other way: a key that reappears costs
+# money on every fetch by every phone, forever, and nothing else would notice.
+#
+# `transcriptText` was removed from the payload on 2026-09-10
+# (backend/drop_transcript_from_catalog.sql). Measured against the live
+# catalogue it was 1.105 MB of 2.945 MB gzipped -- 37.5% of everything
+# Supabase bills -- and NO consumer screen has ever displayed it. Putting it
+# back would undo the single change that got this project inside its egress
+# allowance after the 2026-09-10 over-quota notice (11.82 GB against 5 GB,
+# 100.0% of it this payload).
+#
+# The column is untouched; the maker edit path reads `stops` directly.
+FORBIDDEN_STOP = {
+    "transcriptText":
+        "37.5% of the billed bytes and read by no consumer screen -- removed "
+        "2026-09-10 to get back inside the egress allowance. The DB column "
+        "still holds it; the maker edit path queries the table directly. If a "
+        "feature genuinely needs it, fetch it per-tour on demand -- never put "
+        "1,924 scripts back on every catalogue fetch.",
 }
 # A floor, not an assertion about content: places existing at all is what the
 # composition provides, and zero would mean the wrapper had been clobbered.
@@ -62,6 +83,11 @@ def missing(sample: dict, required: set, label: str) -> list:
     return [f"{label} is missing: {', '.join(absent)}"] if absent else []
 
 
+def forbidden(sample: dict, banned: dict, label: str) -> list:
+    return [f"{label} carries '{k}' again — {why}"
+            for k, why in sorted(banned.items()) if k in sample]
+
+
 def check(catalog: dict) -> list:
     """Pure — the whole rule, so `--selftest` can exercise it with no network."""
     problems = []
@@ -71,6 +97,7 @@ def check(catalog: dict) -> list:
         stops = catalog["tours"][0].get("stops") or []
         if stops:
             problems += missing(stops[0], REQUIRED_STOP, "tours[].stops[]")
+            problems += forbidden(stops[0], FORBIDDEN_STOP, "tours[].stops[]")
     else:
         problems.append("the catalog returned no tours at all")
     if catalog.get("makers"):
@@ -171,8 +198,17 @@ def selftest() -> int:
     cases.append(("a single dropped tour key is caught", no_role, 1))
 
     no_stop_key = json.loads(json.dumps(good))
-    no_stop_key["tours"][0]["stops"][0].pop("transcriptText")
+    no_stop_key["tours"][0]["stops"][0].pop("imageURL")
     cases.append(("a dropped stop key is caught", no_stop_key, 1))
+
+    # The reverse direction, which is what actually costs money: a key that
+    # comes BACK. Nothing else in this repo would notice transcriptText
+    # returning to the payload — the app would decode it happily and the bill
+    # would quietly rise 60%.
+    transcript_back = json.loads(json.dumps(good))
+    transcript_back["tours"][0]["stops"][0]["transcriptText"] = "..."
+    cases.append(("transcriptText back in the payload is caught",
+                  transcript_back, 1))
 
     empty = {"makers": [], "tours": [], "places": [], "linkPins": []}
     cases.append(("an empty catalog is caught", empty, 3))
