@@ -98,6 +98,18 @@ KNOWN_GAPS = {
         "2026-06-27, the original bulk seed. Emitting it would look fixed and "
         "rank wrongly. Real fix: make seed_from_toursjson.py carry the authored "
         "createdAt first, then add the key.",
+    ("stops", "transcriptText"):
+        "REMOVED ON PURPOSE, 2026-09-10 (backend/drop_transcript_from_catalog.sql). "
+        "Measured against the live catalogue it was 1.105 MB of 2.945 MB gzipped "
+        "- 37.5% of every byte Supabase bills - sent for all 1,924 stops on every "
+        "fetch and displayed by NO consumer screen. It is the change that got the "
+        "project back inside its egress allowance after the 2026-09-10 over-quota "
+        "notice (11.82 GB against 5 GB, 100.0% of it PostgREST). "
+        "Stop.transcriptText stays declared in Swift because the maker upload path "
+        "writes it, and it reads the `stops` table directly rather than this RPC, "
+        "so nothing is broken by its absence here. "
+        "DO NOT 'fix' this by putting the key back: that restores the bill. If a "
+        "reader feature ever needs transcripts, fetch them per-tour on demand.",
 }
 
 # --- the live payload ----------------------------------------------------

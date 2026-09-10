@@ -701,3 +701,65 @@ curl -sS -X POST "https://<ref>.supabase.co/auth/v1/token?grant_type=password" \
 This is the live-systems-over-appearances rule in a new place: **ask the system that holds the
 truth.**
 
+
+## Never rebuild a catalogue function from a committed file (2026-09-10)
+
+`drop_transcript_from_catalog.sql` set out to remove one field from the
+catalogue payload. It was written by copying the body of `get_catalog_core()`
+out of `backend/restore_catalog_keys.sql` and deleting one line.
+
+That body was **four days out of date at the time it was committed, and two
+weeks out of date when it was copied.** `split_link_pins.sql` had renamed the
+builder aside to `get_catalog_core_base()` and turned `get_catalog_core()` into
+a wrapper that lifts link pins out of `tours` into their own `linkPins` key.
+Retyping the old body reverted that: the live catalogue went from
+`tours 1553 / linkPins 1700` to **`tours 3253 / linkPins 0`**, which fails the
+whole catalog decode on every build predating `TourKind.link` — silently,
+because `RemoteCatalogLoader`'s `try?` reads a throw as a failed fetch and keeps
+its last good copy.
+
+**The rule: transform what the live chain returns; never retype it.** A wrapper
+cannot lose a key it never mentions. The repaired version calls
+`get_catalog_core_base()` and strips one key on the way past, so every other
+key — including ones added after it was written — rides through untouched.
+
+Three things made this survivable rather than expensive, and all three are
+worth keeping:
+
+- **Counting the live payload immediately after applying SQL.** `tours 3253`
+  against an expected 1553 was visible in the first check, about a minute after
+  the paste. "Success. No rows returned." said nothing.
+- **The migration now verifies its own shape.** It ends in a `do $$` block that
+  raises if `linkPins` is empty, if a pin is still inside `tours`, if `places`
+  is empty, or if a transcript survived. A migration that cannot fail loudly is
+  a migration you have to remember to check.
+- **The guard was widened to the layer that was actually hit.**
+  `check-catalog-keys.py`'s audit only inspected `create or replace function
+  public.get_catalog()`. The destructive statement was against
+  `get_catalog_core()`, one layer down, so the file passed the audit that exists
+  for precisely this. It now audits both, and `restore_catalog_keys.sql` carries
+  the `NO LONGER SAFE TO RE-RUN` banner it had always warranted.
+
+⚠️ **The generalisation is bigger than SQL.** Committed files record what was
+true when they were written. That is the same failure this project has paid for
+repeatedly with perishable facts in `CLAUDE.md` — here it just arrived wearing
+a `.sql` extension.
+
+## Egress is billed COMPRESSED — raw sizes overstate text badly (2026-09-10)
+
+Two payload cuts were nearly decided on raw byte counts. Measured on the live
+payload:
+
+| field | raw | gzipped (what is billed) |
+|---|---|---|
+| `stops.transcriptText` | 34.8% | **37.5%** |
+| `longDescription` | 13.3% | **8.2%** |
+
+The transcripts were removed (nothing reads them; 41.4% off the actual wire
+bytes, 3,698,842 → 2,167,209). `longDescription` was **kept** — 8% does not buy
+a visible regression, and it is rendered by `TourDetailView` and searched by
+`SearchView`. Repo notes had quoted it as "18%", which was the raw figure.
+
+**Method:** save one payload with `curl --compressed … -o catalog.json`, then in
+Python remove one key at a time and `len(gzip.compress(...))` the result. One
+saved copy answers every such question afterwards for free.
