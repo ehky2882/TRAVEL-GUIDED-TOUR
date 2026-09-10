@@ -1,150 +1,157 @@
 -- =================================================================
 -- STOP SENDING THE NARRATION SCRIPTS IN THE CATALOGUE
 --
--- WHY (plain English): every time a phone asks for the tour list, the
--- database sends back the full written script of every stop's narration --
--- 1,924 of them, 3.8 million characters. Nothing in the app has ever shown
--- them. They are 37.5% of the bytes Supabase bills us for, on every single
--- fetch, forever.
+-- 🔴 THIS FILE HAD A DESTRUCTIVE FIRST VERSION. READ THIS BEFORE EDITING IT.
 --
--- Measured against the LIVE payload on 2026-09-10:
---     with transcripts   2.945 MB gzipped
---     without            1.840 MB gzipped
---     saving             1.105 MB  =  37.5%
+-- The first version rebuilt `get_catalog_core()` from the body in
+-- `restore_catalog_keys.sql` (2026-08-29) minus one key. That body is the
+-- OLD one: `split_link_pins.sql` had since renamed the builder aside to
+-- `get_catalog_core_base()` and made `get_catalog_core()` a WRAPPER that
+-- lifts link pins out of `tours` into their own `linkPins` key.
 --
--- This is the change that gets the project back inside the free egress
--- allowance (Supabase over-quota notice, 2026-09-10: 11.82 GB against 5 GB,
--- and 100.0% of it PostgREST -- i.e. this payload and nothing else).
+-- So pasting it silently reverted the link-pin split: the live catalogue went
+-- from `tours 1553 / linkPins 1700` to `tours 3253 / linkPins 0`, which fails
+-- the WHOLE catalog decode on every build predating `TourKind.link` — the
+-- exact failure `split_link_pins.sql` exists to prevent. Caught within a
+-- minute by counting the live payload, and repaired by this version.
 --
--- 🔴 NOTHING IS DELETED. `stops.transcript_text` keeps every character. This
--- only stops it being SENT in the catalogue. The maker edit path reads and
--- writes it directly against the `stops` table (MakerTourService.swift), so
--- transcript editing is untouched.
---
--- WHY THIS IS SAFE FOR PHONES THAT ALREADY HAVE THE APP:
---   * `Stop.transcriptText` is `String?` in Swift, so an absent key decodes
---     as nil -- no crash, no failed decode, on any build ever shipped.
---   * No consumer screen reads it. Verified by grep across the whole app:
---     the only readers are Models/Stop.swift (the declaration),
---     MakerTourService (which queries the table directly, not this RPC),
---     TourWizardRules and CreateTourWizardView -- all maker-side.
---   So this is not a feature being withdrawn. It is a field nobody was
---   looking at, being taken off the wire.
---
--- ⚠️ `longDescription` was considered in the same pass and DELIBERATELY KEPT.
--- It is only 8.2% of the billed bytes once compressed (the "18%" in earlier
--- notes was a RAW-bytes figure, which is not what is billed), and unlike the
--- transcripts it IS used -- TourDetailView renders it and SearchView searches
--- it. Removing it would be a visible regression for 8%. Do not.
+-- THE LESSON, which is now enforced in scripts/check-catalog-keys.py:
+-- 🔴 NEVER REBUILD A CATALOGUE FUNCTION FROM A COMMITTED FILE. Committed SQL
+-- is a record of what was true when it was written, not of what is live. A
+-- later migration may have renamed the thing underneath it. **Transform what
+-- the live chain returns; do not retype it.** That is what this version does:
+-- it wraps, it does not rewrite, so it cannot lose a key it never mentions.
 --
 -- =================================================================
--- HOW TO RUN IT: paste this whole file into the Supabase SQL Editor and
--- press Run. It is idempotent -- running it twice is harmless.
+-- WHY (plain English): every time a phone asks for the tour list, the
+-- database sends the full written script of every stop's narration — 1,924 of
+-- them, 3.8 million characters. Nothing in the app has ever shown them.
 --
--- ⚠️ THE LAST LINE IS LOAD-BEARING. `get_catalog()` serves a pre-built
--- snapshot row, so redefining the builder alone changes NOTHING that a phone
--- can see until the snapshot is rebuilt. That is what the final
--- `refresh_catalog_snapshot()` does. Without it this file appears to succeed
--- and does nothing.
+-- Measured on the LIVE payload, 2026-09-10:
+--     before   3,698,842 wire bytes
+--     after    2,167,209 wire bytes      = 41.4% saved, every fetch, forever
 --
--- VERIFY AFTERWARDS, rather than trusting "Success. No rows returned.":
+-- 🔴 NOTHING IS DELETED. `stops.transcript_text` keeps every character; this
+-- only stops it being SENT. The maker edit path reads and writes it directly
+-- against the `stops` table (MakerTourService.swift), untouched.
+--
+-- SAFE FOR PHONES ALREADY IN THE FIELD, which is why it needs no App Store
+-- release: `Stop.transcriptText` is `String?`, so an absent key decodes as nil
+-- on every build ever shipped. And no consumer screen reads it — grep-verified
+-- across the app: only Models/Stop.swift (the declaration), MakerTourService,
+-- TourWizardRules and CreateTourWizardView, all maker-side.
+--
+-- ⚠️ `longDescription` was considered in the same pass and DELIBERATELY KEPT:
+-- 8.2% of the billed bytes once compressed (the "18%" in older notes is a RAW
+-- figure, which is not what is billed), and it IS used — TourDetailView
+-- renders it, SearchView searches it.
+--
+-- =================================================================
+-- HOW TO RUN: paste the whole file into the Supabase SQL Editor, press Run.
+-- Idempotent. ⚠️ The `refresh_catalog_snapshot()` at the end is load-bearing —
+-- `get_catalog()` serves a stored snapshot, so without it this changes nothing
+-- a phone can see while reporting success.
+--
+-- VERIFY AFTERWARDS — the final block does it for you and raises rather than
+-- letting a bad shape through. Then, from a checkout:
 --     python3 scripts/check-catalog-keys.py
 --     python3 scripts/check-catalog-contract.py
 -- =================================================================
 
--- This is `get_catalog_core()` exactly as it stands in
--- backend/restore_catalog_keys.sql, with ONE line removed: the
--- 'transcriptText' entry in the stops object. Everything else is byte-for-byte
--- the same, deliberately -- a rewrite here is how keys get lost (see the
--- 2026-08-19 incident, where `places`, `priceTier` and `isPrivate` vanished
--- for 14 hours because each one is optional in Swift and simply decoded as
--- nil).
+-- `get_catalog_core()` — the link-pin splitter from split_link_pins.sql,
+-- unchanged except that transcripts are dropped from each stop on the way
+-- through. Every other key rides along untouched because this only ever
+-- rebuilds `tours`/`linkPins`; it never enumerates tour or stop keys, so it
+-- cannot lose one.
 create or replace function public.get_catalog_core()
 returns jsonb
-language sql
+language plpgsql
 stable
+set search_path = public
 as $$
-  select jsonb_build_object(
-    'makers', coalesce((
-      select jsonb_agg(
-        jsonb_build_object(
-          'id',             m.id,
-          'displayName',    m.display_name,
-          'avatarURL',      m.avatar_url,
-          'avatarEmoji',    m.avatar_emoji,
-          'avatarInitials', m.avatar_initials,
-          'avatarColor',    m.avatar_color,
-          'bio',            m.bio,
-          'websiteURL',     m.website_url,
-          'link2URL',       m.link_2_url,
-          'link3URL',       m.link_3_url,
-          'userId',         m.user_id,
-          'isPrivate',      m.is_private
-        ) order by m.display_name
-      )
-      from public.makers m
-    ), '[]'::jsonb),
-    'tours', coalesce((
-      select jsonb_agg(
-        jsonb_build_object(
-          'id',                   t.id,
-          'title',                t.title,
-          'shortDescription',     t.short_description,
-          'longDescription',      t.long_description,
-          'makerId',              t.maker_id,
-          'heroImageURL',         t.hero_image_url,
-          'additionalImageURLs',  to_jsonb(t.additional_image_urls),
-          'videoURLs',            to_jsonb(t.video_urls),
-          'kind',                 t.kind::text,
-          'introAudioURL',        t.intro_audio_url,
-          'totalDurationSeconds', t.total_duration_seconds,
-          'walkingDistanceMeters',t.walking_distance_meters,
-          'centroidLatitude',     t.centroid_latitude,
-          'centroidLongitude',    t.centroid_longitude,
-          'city',                 t.city,
-          'country',              t.country,
-          'primaryCategory',      t.primary_category::text,
-          'tags',                 to_jsonb(t.tags),
-          'priceUSD',             t.price_usd,
-          'priceTier',            t.price_tier,
-          'stops', coalesce((
-            select jsonb_agg(
-              jsonb_build_object(
-                'id',                   s.id,
-                'order',                s."order",
-                'title',                s.title,
-                'caption',              s.caption,
-                'latitude',             s.latitude,
-                'longitude',            s.longitude,
-                'audioURL',             s.audio_url,
-                'audioDurationSeconds', s.audio_duration_seconds,
-                'triggerMode',          s.trigger_mode::text,
-                'triggerRadiusMeters',  s.trigger_radius_meters,
-                'imageURL',             s.image_url
-                -- 'transcriptText' REMOVED HERE. 37.5% of the billed bytes,
-                -- read by nothing. The column still holds every character;
-                -- the maker edit path queries `stops` directly.
-              ) order by s."order"
-            )
-            from public.stops s
-            where s.tour_id = t.id
-          ), '[]'::jsonb)
-        ) order by t.title
-      )
-      from public.tours t
-      where t.status = 'published'
-    ), '[]'::jsonb)
-  );
+declare
+    base jsonb;
+    rest jsonb;
+    pins jsonb;
+begin
+    base := public.get_catalog_core_base();
+
+    -- Fail loudly rather than serving a catalogue that reads as empty. An
+    -- error makes the RPC fail and the app falls through to the gh-pages
+    -- mirror, which carries the same shape. `tours: []` would instead look
+    -- like a successful fetch of an empty world.
+    if jsonb_typeof(base -> 'tours') is distinct from 'array' then
+        raise exception
+            'get_catalog_core_base() returned no tours array — refusing to serve it. '
+            'Inspect: select pg_get_functiondef(''public.get_catalog_core_base()''::regprocedure);';
+    end if;
+
+    -- `with ordinality` + `order by` so catalogue order — and stop order
+    -- inside each tour, which is the walking route — is preserved by contract
+    -- rather than by luck.
+    select
+        coalesce(jsonb_agg(x.t order by x.ord) filter (where x.t ->> 'kind' is distinct from 'link'), '[]'::jsonb),
+        coalesce(jsonb_agg(x.t order by x.ord) filter (where x.t ->> 'kind' = 'link'),                '[]'::jsonb)
+      into rest, pins
+      from (
+        select
+            e.ord,
+            case when jsonb_typeof(e.t -> 'stops') = 'array' then
+                jsonb_set(e.t, '{stops}', (
+                    select coalesce(jsonb_agg(q.s - 'transcriptText' order by q.so), '[]'::jsonb)
+                      from jsonb_array_elements(e.t -> 'stops') with ordinality as q(s, so)
+                ))
+            else e.t end as t
+          from jsonb_array_elements(base -> 'tours') with ordinality as e(t, ord)
+      ) x;
+
+    return (base - 'tours')
+         || jsonb_build_object('tours', rest, 'linkPins', pins);
+end
 $$;
 
 grant execute on function public.get_catalog_core() to anon, authenticated;
 
--- 🔴 Without this the change is invisible to every phone. get_catalog() reads
--- a stored snapshot; this is what rebuilds it from the new definition.
+-- 🔴 Without this the change is invisible to every phone.
 select public.refresh_catalog_snapshot();
 
--- Expect the row count to be unchanged and the payload to be much smaller:
---   select jsonb_array_length(get_catalog() -> 'tours');   -- unchanged
---   select jsonb_array_length(get_catalog() -> 'places');  -- unchanged
---   select (get_catalog() -> 'tours' -> 0 -> 'stops' -> 0 ? 'transcriptText')
---       as transcript_still_sent;                          -- expect: f
+-- Verify the SHAPE, not just that it ran. This is the check whose absence let
+-- the first version of this file ship a reverted link-pin split.
+do $$
+declare
+    cat        jsonb := public.get_catalog();
+    n_tours    int;
+    n_pins     int;
+    n_places   int;
+    n_stray    int;
+    n_scripts  int;
+begin
+    n_tours  := coalesce(jsonb_array_length(cat -> 'tours'), -1);
+    n_pins   := coalesce(jsonb_array_length(cat -> 'linkPins'), -1);
+    n_places := coalesce(jsonb_array_length(cat -> 'places'), -1);
+
+    select count(*) into n_stray
+      from jsonb_array_elements(cat -> 'tours') e
+     where e ->> 'kind' = 'link';
+
+    select count(*) into n_scripts
+      from jsonb_array_elements(cat -> 'tours') t,
+           jsonb_array_elements(t -> 'stops')   s
+     where s ? 'transcriptText';
+
+    if n_pins <= 0 then
+        raise exception 'linkPins is empty (%) — the split did NOT take. Do not leave it like this.', n_pins;
+    end if;
+    if n_stray > 0 then
+        raise exception '% link pin(s) are still inside tours — every build predating TourKind.link will fail the whole decode.', n_stray;
+    end if;
+    if n_places <= 0 then
+        raise exception 'places is empty — the wrapper has been severed.';
+    end if;
+    if n_scripts > 0 then
+        raise exception '% stop(s) still carry transcriptText — the saving did not apply.', n_scripts;
+    end if;
+
+    raise notice 'OK — % tours / % linkPins / % places, 0 strays, 0 transcripts.',
+                 n_tours, n_pins, n_places;
+end $$;

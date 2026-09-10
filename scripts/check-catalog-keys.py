@@ -141,13 +141,40 @@ def audit_migration_files(root: Path) -> list:
     for f in sorted(glob.glob(str(root / "backend" / "*.sql"))):
         raw = Path(f).read_text()
         code = "\n".join(l for l in raw.splitlines() if not l.strip().startswith("--"))
-        marker = "create or replace function public.get_catalog()"
+
+        # 🔴 `get_catalog_core()` is audited for the SAME reason as
+        # `get_catalog()`, and it was added on 2026-09-10 because leaving it
+        # out cost a live incident. `drop_transcript_from_catalog.sql` rebuilt
+        # get_catalog_core() from the body in restore_catalog_keys.sql — which
+        # `split_link_pins.sql` had long since superseded, having renamed the
+        # builder aside to get_catalog_core_base() and made get_catalog_core()
+        # the wrapper that lifts link pins into `linkPins`. Pasting it reverted
+        # the split: tours 1553 -> 3253, linkPins 1700 -> 0, which fails the
+        # WHOLE decode on every build predating TourKind.link. It passed this
+        # audit untouched, because this audit only ever looked at get_catalog().
+        #
+        # The rule is the same either way: a body that CALLS the layer beneath
+        # it is a wrapper and is fine; a body that RETYPES that layer is a
+        # loaded gun, because committed SQL records what was true when it was
+        # written, not what is live underneath it now.
+        for marker, beneath in (
+            ("create or replace function public.get_catalog()", "get_catalog_core()"),
+            ("create or replace function public.get_catalog_core()", "get_catalog_core_base()"),
+        ):
+            problems += _audit_one(f, raw, code, marker, beneath)
+    return problems
+
+
+def _audit_one(f, raw, code, marker, beneath) -> list:
+    from pathlib import Path
+    problems = []
+    if True:
         if marker not in code:
-            continue
+            return []
         body = code[code.index(marker):code.index(marker) + 900]
         name = Path(f).name
-        if "get_catalog_core()" in body or name == "schema.sql":
-            continue  # the wrapper itself, or the base
+        if beneath in body or name == "schema.sql":
+            return []  # the wrapper itself, or the base
         # The materialised lookup (`catalog_snapshot.sql`). It replaces
         # get_catalog() with `select payload from catalog_snapshot`, which
         # severs nothing: the whole builder chain is RENAMED ASIDE intact as
@@ -159,12 +186,13 @@ def audit_migration_files(root: Path) -> list:
         # any body that merely mentions it. A file that rebuilds the catalog
         # inline is still caught even if it refreshes the snapshot afterwards.
         if "from public.catalog_snapshot" in body:
-            continue
+            return []
         if "NO LONGER SAFE TO RE-RUN" not in raw:
+            target = marker.split("public.")[1].rstrip("()") + "()"
             problems.append(
-                f"backend/{name} replaces get_catalog() with an inline body and "
-                f"carries no warning — re-running it would sever get_catalog_core() "
-                f"and drop places, priceTier and isPrivate"
+                f"backend/{name} replaces {target} with an inline body and "
+                f"carries no warning — re-running it would sever {beneath} "
+                f"and drop whatever that layer adds"
             )
     return problems
 
