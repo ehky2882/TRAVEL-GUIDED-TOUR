@@ -103,6 +103,13 @@ between a session costing 44 MB and costing 8 KB.
 | only a **row count** | `GET /rest/v1/tours?select=id&limit=1` with `Range: 0-0` + `Prefer: count=exact`; the answer is in the `content-range` response header | **47 bytes** |
 | the catalogue's **freshness** | `POST /rest/v1/rpc/catalog_snapshot_age` | **34 bytes** |
 
+🔴 **Egress is billed on the COMPRESSED bytes, so measure compressed.** Raw size
+overstates text fields badly and two separate cuts here were nearly decided on
+it: `longDescription` is **13.3% raw but 8.2% gzipped**. Save one payload
+(`curl --compressed … -o catalog.json`), then in Python remove one key at a
+time and `len(gzip.compress(...))` the result — that one saved copy answers
+every such question afterwards for free.
+
 ⚠️ **The count query counts DB rows, not app-facing tours.** Link pins are
 `tours` rows with `kind='link'`, so it returns tours **+** pins (3,042 today
 against the RPC's 1,553 tours). Use it for "is the row count what I expect",
@@ -118,13 +125,55 @@ load-bearing; do not "tidy" them off.
 **⚠️ The app has the same shape, and raising the debounce only buys time.**
 `DataService.foregroundRefreshInterval` is **900s** (was 60 — see the comment on
 that init, which explains why it is an egress dial and not a freshness dial). A
-cold launch always refreshes regardless. But the catalogue changes ~70×/month,
-so a daily user meets a changed catalogue on nearly every launch and still pays
-the full 3.4 MB — **~240 MB per active user per month as a floor**, which puts
-roughly 20 active users back over the quota with the fix already in.
-**The durable fix is a cheap version check** — a `catalog_version()` RPC the app
-calls before deciding to download anything — and after that, delta or
-city-scoped fetching. Neither is built.
+cold launch always refreshes regardless.
+
+### 🔴 The 2026-09-10 escalation, and what the dashboard actually said
+
+A second notice arrived on **2026-09-10: 11.82 GB against 5 GB, grace period cut
+from 4 October to 13 September.** The per-day breakdown settles the cause for
+good, and it is worth knowing because two plausible theories were both wrong:
+
+| | |
+|---|---|
+| **PostgREST** | **100.0% — every single day** |
+| Auth | 28–64 KB/day |
+| Storage | 977 bytes – 20 KB/day |
+| Edge Functions | does not appear at all |
+
+So it is this payload and nothing else. ⚠️ **238,583 Edge Function invocations
+looked alarming and produce essentially zero egress** — do not chase that
+number. ⚠️ And **it is not the users**: MAU was **17**.
+
+The daily figures, which are the honest scoreboard for every fix here:
+
+| 8 Sep | 9 Sep (the `--compressed` / debounce fixes land) | 10 Sep |
+|---|---|---|
+| **1,963 MB** | **493 MB** | **241 MB** |
+
+The allowance is 5 GB/month ≈ **167 MB/day**. That is the number to beat.
+
+**Two fixes now exist for it:**
+1. **The cheap version check** — the app asks `catalog_snapshot_age()` (34 bytes)
+   before downloading, and skips the fetch when nothing changed. Built; see
+   `docs/catalog-version-check-design.md`. **Cuts how OFTEN we pay.**
+2. **The transcripts are off the wire** (`backend/drop_transcript_from_catalog.sql`,
+   2026-09-10). `stops.transcriptText` was **1.105 MB of 2.945 MB gzipped —
+   37.5% of every byte billed** — sent for all 1,924 stops on every fetch and
+   **displayed by no consumer screen at all** (only `Models/Stop.swift` and the
+   maker paths, which query the `stops` table directly). Not a feature
+   withdrawn; a field nobody read, taken off the wire. The column is untouched,
+   and `String?` in Swift means every build already in the field decodes its
+   absence as nil — so it needs no App Store release. **Cuts how MUCH we pay.**
+   `check-catalog-keys.py` now carries a **`FORBIDDEN_STOP`** set that fails if
+   the key ever returns: the damage runs that way, and nothing else would notice.
+
+⚠️ **`longDescription` was considered in the same pass and deliberately KEPT.**
+The "18%" once quoted here was **raw**; gzipped it is **8.2%**, and unlike the
+transcripts it is *used* — `TourDetailView` renders it, `SearchView` searches
+it. 8% does not buy a visible regression.
+
+**What is still NOT fixed:** when anything changes, the app downloads all 1,552
+tours. Delta or city-scoped fetching is the remaining step, and is not built.
 
 ## Image Pipeline
 
