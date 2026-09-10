@@ -47,6 +47,7 @@ not written down.
 
 | File | What it covers | Date |
 |---|---|---|
+| `HANDOFF-260910-4.md` | Four documents that had eaten themselves — `CLAUDE.md` 1.5 MB → 47 KB (~418k tokens **per request**), `ROADMAP.md` −77%, `archive/README.md` −93%, `STATUS.md` −68%, zero lines lost; plus MoMA PS1's dead hero, and the blobless-fetch trick for uploading to gh-pages from a web session | 2026-09-10 |
 | `STATUS-HISTORY.md` | The finished board items moved out of `STATUS.md` § 1 — 41 items whose PRs GitHub reports merged or closed, plus four self-declared-done sub-sections. **Search, never load whole** | 2026-09-08 |
 | `INDEX-DETAIL.md` | The long-form entries this index used to carry, verbatim. **Search, never load whole** | 2026-09-08 |
 | `ROADMAP-STATUS-HISTORY.md` | The dated `**Status (…)**` blocks moved out of `ROADMAP.md`, which they had grown to 86% of. **Search, never load whole** | 2026-09-08 |
