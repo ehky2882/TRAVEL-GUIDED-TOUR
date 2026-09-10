@@ -35,6 +35,14 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
+🔴 **OPEN — [#795](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/795) — transcripts off the wire: catalogue −37.5% (session 153, 2026-09-10). OWNER SQL PASTE OWED.** Second Supabase notice: **11.82 GB against 5 GB, grace period cut to 13 September**. The dashboard per-day breakdown is unambiguous — **100.0% PostgREST every day**; Storage 977 bytes, Auth ~30 KB, **Edge Functions absent entirely** (the 238,583 invocations are a red herring), and **MAU is 17**, so it is not the users.
+  - **Paste `backend/drop_transcript_from_catalog.sql` into the SQL Editor.** Idempotent. ⚠️ **Its last line, `select public.refresh_catalog_snapshot();`, is load-bearing** — `get_catalog()` serves a stored snapshot, so redefining the builder alone reports success and changes nothing a phone can see.
+  - `stops.transcriptText` = **1.105 MB of 2.945 MB gzipped, 37.5% of every billed byte**, measured on the LIVE payload; 1,924 stops, 3,768,989 characters. **No consumer screen has ever rendered it** (grep-verified: only `Models/Stop.swift` and the maker paths, and `MakerTourService` queries `stops` directly, not the RPC). Column untouched. `String?` in Swift → **reaches phones already in the field with no App Store release**.
+  - **Daily scoreboard** (allowance ≈167 MB/day): 8 Sep **1,963 MB** → 9 Sep **493 MB** (#770 lands) → 10 Sep **241 MB**. −37.5% puts today at ~**151 MB**, under the line.
+  - ⚠️ **Two figures this repo carried were RAW, not billed:** the saving is **37.5%, not 41%**, and **`longDescription` is 8.2% gzipped (not 18%) and IS used** — kept deliberately. CLAUDE.md now states: **egress is billed compressed, so measure compressed.**
+  - Guard added: `check-catalog-keys.py` **`FORBIDDEN_STOP`** fails if the key ever returns (14/14 selftests); `check-catalog-contract.py` KNOWN_GAPS entry so the deliberate absence reads as a warning, not a regression.
+  - 🔴 **Owner also advised to upgrade to Pro before 13 Sep** — the 11.82 GB is already spent and cannot be un-spent; this fix governs next cycle, not this one.
+
 
 🔴 **This section is for what is STILL waiting on the owner. It is not a log.**
 41 finished items — every one whose pull requests GitHub reports as
