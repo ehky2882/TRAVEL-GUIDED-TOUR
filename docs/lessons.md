@@ -127,6 +127,19 @@ migration **working** (the slow builder is off the request path), not failing.
 
 ## 3. Content and the catalog
 
+**⚠️ `--title` is ignored in a `--batch` run of `make-link-pin.py`** (`title=a.title if
+len(rows) == 1 else None`), so a batched pin takes its map title from the source caption, truncated
+to 60 characters. TikTok captions usually survive that. **Instagram captions are paragraphs**, so a
+batched Instagram pin gets named *"Architecture worth traveling for. 🤍☕🌿 Designed by @marlonbl…"*.
+Mint an Instagram batch as **one single-`--url` run per pin**, driven from a TSV, with outputs
+written to per-pin files and combined on disk — the conversation still never sees a pin's JSON.
+
+**The thumbnail identifies the subject when the caption will not.** A creator post often names no
+place at all (*"the coolest office ever"*, *"this tower gets wider the higher it climbs"*).
+Downloading the post's thumbnail and **looking at it** settled four of five such cases in one
+session — a carved pediment, a logo pylon, burnt-in caption text. Do that before researching, and
+before asking.
+
 **🔴 A section that every session appends to becomes the whole file.** Three files here caught the
 same disease independently, and in each the growth was invisible because no single session added
 much: `CLAUDE.md` § Current State (**97.7%** of a 1.5 MB file, and it was injected into every
@@ -277,6 +290,26 @@ offset gives +10 m at zoom 19 and +3.2 km at zoom 11.
 **A distance alone proves nothing.** Four Milan coordinates looked 200 m–9.4 km wrong and were
 correct: same-name districts, a same-name café 8 km away, street-centroid noise, and a **towpath**
 (a linear feature, where a centroid distance is meaningless).
+
+🔴 **A geocoder's rate limit can arrive dressed as an answer.** Nominatim returns **HTTP 429** as an
+HTML page; a script that only parses JSON turns that into an empty result list, and an empty result
+list prints as "no match". Session 155 got **30 "NO MATCH" out of 35 subjects — Tribune Tower among
+them** — and the only thing that exposed it was the implausibility of the list, not the code. Read
+`%{http_code}` and keep three outcomes distinct: *found*, *genuinely empty*, *did not fetch*. A
+geocoding sweep from a shared cloud IP will meet this; Photon (`photon.komoot.io`, no key) answered
+where Nominatim was throttling.
+
+🔴 **Read the returned NAME, not just the distance — the wrong building often has the right name.**
+Geocoding 35 subjects returned four confidently wrong places, and two were near-misses no distance
+check would flag: the **Banning branch** library when the post was about Huntington Beach's
+**Central** Library, and **2178 Bloor W** (the public library) when the subject was the Runnymede
+Theatre at **2225**. Both are real, both are close, both would validate, and both would leave a pin
+that never fires in front of the right building. A county-level match (`兴隆县` for a specific
+resort) and a name that misleads about its own city (**Conwell** *Coffee Hall* is in New York, not
+Philadelphia) were the other two.
+
+**Query in the local script when a place is not Western.** Aranya Wulingshan resolved only to its
+county in English and to the exact Phase 2 development as `阿那亚·雾灵山2期`.
 
 **Read the OSM class and type, never just the name or distance.** `The Hive` returned a
 confident named hit that was a **bouldering gym** 1.2 km from the mass-timber office. An Orlando
