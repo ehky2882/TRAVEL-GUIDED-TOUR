@@ -133,3 +133,27 @@ stale; `origin/main` was fresh.
 
 **Catalogue counts were re-derived, not quoted:** 1,552 tours · 1,588 link pins. No content changed
 this session.
+
+---
+
+## Outcome — merged the same day
+
+**Owner, after installing TestFlight 1.1.2 (143):** *"Build is live. I tested (not super
+extensively), think it works."* That is the owner OK the code-PR gate requires, so
+[#785](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/785) squash-merged to `main` as
+**`6a594081`** with CI green on `6bbece0` (validator · simulator build · unit tests). Branch
+auto-deleted, PR subscription dropped, check-in trigger cancelled.
+
+⚠️ **Record what was actually verified, not what shipped.** The owner's own words were *not super
+extensively*, and the one case that matters — **the message appearing over a player that works** —
+is the only way this change can regress. Their testing very likely covered it (opening a pin at all
+exercises it), but that is an inference, not a report. It is on the board as debt in `STATUS.md`
+§ 6 rather than written up here as proven.
+
+**If "that message on a video that plays" is ever reported, the fix is not a longer deadline.** A
+longer deadline only delays a false verdict that a missing `load` event makes inevitable. The right
+answer is a second, positive-only signal — a cheap reachability probe against the embed host, with
+failure declared only when the deadline expires **and** the probe says the host is unreachable. That
+inverts the risk: a working network could no longer produce the message at all. It was considered
+and deliberately not built here, because it doubles the mechanism and adds a request per pin view
+for a case the owner can falsify on a phone in thirty seconds.
