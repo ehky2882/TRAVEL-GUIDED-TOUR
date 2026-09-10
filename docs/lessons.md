@@ -77,6 +77,30 @@ non-empty `city` check (the field is `let city: String?` with no such rule), and
 
 ## 2. Live systems vs. documents
 
+🔴 **A reachability question CAN be measured from a session — and the first tool to answer it was
+wrong. Always run a known-blocked AND a known-open control through any third-party checker.**
+Asked whether `github.io` reaches mainland China, `chinafirewalltest.com` reported OK from five
+mainland nodes. It also reported **`www.google.com` as OK**, which OONI's real probes inside China
+contradict at **91% anomaly over 512 measurements**. One control passed (TikTok → BLOCKED) and one
+failed, and without the failing one the green ticks would have been written down as fact. The
+asymmetry is still usable: a checker biased toward false-OK saying **BLOCKED** is a strong signal —
+that is how `dozent.world` was found, corroborated independently by OONI putting `vercel.app` at
+100% anomaly with zero OK.
+
+**Querying a mainland DNS resolver is not a reachability check.** AliDNS and Tencent DNSPod (both
+DoH, both answering from inside China) return correct IPs for our hosts — and **also** for
+`www.tiktok.com`, which is definitively unavailable there. Clean DNS rules out DNS poisoning only;
+the GFW's usual HTTPS mechanism is an SNI-triggered TCP reset that leaves DNS untouched.
+
+**`api.ooni.io` is the primary source for this class of question** — real probes, real countries,
+free, no key: `/api/v1/aggregation?probe_cc=CN&domain=<d>&since=&until=`, plus `axis_x=input` to see
+which URLs were actually tested. ⚠️ Its `domain=` filter works on `aggregation` but silently returns
+**zero results** on `/api/v1/measurements`, which reads exactly like "no censorship found" — § 1's
+trap in a new costume. And check *what* was measured: the 38 China measurements for `github.io` are
+the **bare apex**, a parking page, not a Pages site; **no real `*.github.io` has ever been tested
+from China**, so that question stays open rather than answered.
+
+
 🔴 **Never report perishable state from a document.** This has cost real trust four times:
 an already-accepted Apple agreement reported as unaccepted by four sessions in a row; "our
 account is in test mode" nearly sent to Stripe; a "V1: no backend, no payments" line sitting
