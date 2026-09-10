@@ -51,6 +51,28 @@ trusting any line here:**
 gh pr list --state open      # or the API; this board goes stale on every merge
 ```
 
+🔴 **OPEN — [#785](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/785): a link pin that cannot
+load now says so, instead of a black rectangle. Needs owner OK + device review (it is app code).
+Shipped as TestFlight **1.1.2 (143)** (`ef108754`) — built, signed and uploaded 12:03 UTC, build notes attached. **CI green on the head (`b50ae348`): build, unit tests and validator all pass; `mergeable_state` clean.**
+
+A link pin is an embed — the video plays from TikTok, Instagram or YouTube and we hold no copy — so
+when one of those hosts is unreachable the player never appeared and the box stayed **solid black,
+forever**, with no message and no retry. Raised by an owner question about **mainland China**, which
+blocks all three, so **all 1,588 pins** are black boxes there, for pins anywhere in the world. Same
+fix covers aeroplane wifi, captive portals, deleted posts and platform outages.
+
+⚠️ **The thing to check on device is the NEGATIVE.** Failure is inferred from the *absence* of the
+iframe's own `load` event within 12 s, because `loadHTMLString` means the main frame never touches
+the network and `WKNavigationDelegate` can never see a blocked player. So the only regression route
+is a **false** failure — the message appearing over a pin that works. The message is an overlay
+above a player that stays mounted, so a late arrival clears it by itself, but that does not make the
+false positive harmless. **Open five or six working pins first.**
+
+⚠️ **Two questions this raised are NOT answered and are not in the PR** — see § 2: whether
+`ehky2882.github.io` (the asset CDN: every hero image, every audio file, the catalogue mirror) is
+reachable from mainland China at all, and whether Dozent is on the China storefront. Neither can be
+measured from a session.
+
 ✅ **CLEARED — the last `@urbanistariel` link is placed (2026-09-09).** The owner was asked where
 `7255575696582446378` ("buildings that look like the Parthenon — they're everywhere") should go and
 answered: **the Parthenon itself.** It ships as **The Parthenon: Copied Everywhere**, on the exact
@@ -274,6 +296,7 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
+| **143** | `creator-tours-china-visibility-wmnho7` | [#785](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/785) the link-pin embed failure state (`ef108754`) | ✅ **built, signed and UPLOADED 2026-09-10 12:03 UTC** — **1.1.2 (143)**, version read from the app target's `MARKETING_VERSION` (⚠️ `grep -m2` hits the *test* target, which still says 1.0). **Awaiting owner.** 🔴 Check the NEGATIVE first: no message over pins that work |
 | **141** | `bottom-module-missing-45z6ep` | The same fix at **1.1.2** (`e6570bdc`) — 140's payload plus the version bump | ✅ **owner-verified — *"BUILD IS LIVE. MERGE"*; #728 merged as `4da52445`** |
 | 140 | `bottom-module-missing-45z6ep` | [#728](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/728) the bottom module was HIDDEN, not uninstalled, with `main` merged in (`b52315f8`) | 🔴 **rejected at upload — 1.1.1 is now APPROVED, so its train is closed** (90186 *"Invalid Pre-Release Train"* + 90062). ✅ **It compiled and signed cleanly** (`build_app` 219 s); only the upload step failed. **This is the documented per-release cost, and it is also the only signal a web session gets that 1.1.1 shipped** — a closed train means Apple approved it. Superseded by 141 |
 | **138** | `map-expand-control` | [#671](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/671) the expand control on every inline map, `main` merged in (`e0799d8c`) | ✅ **owner-verified — *"LOOKS GOOD"*; #671 merged as `01c70f63`** |
