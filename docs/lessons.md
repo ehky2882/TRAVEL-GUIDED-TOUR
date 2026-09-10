@@ -540,6 +540,30 @@ and the failure summary names the file but never the reason.
 
 ## 9. App code
 
+🔴 **A cross-origin iframe cannot fail in a way `WKNavigationDelegate` can see, so a WebView
+embed needs a POSITIVE signal and a deadline — never a failure callback.** `LinkEmbedView` hands
+WebKit its shell with `loadHTMLString`, so the main frame never touches the network; the player is
+in a cross-origin iframe we may not script. It had a `navigationDelegate` the whole time and still
+rendered **a black rectangle forever** whenever TikTok, Instagram or YouTube was unreachable — the
+state every one of the catalogue's link pins is in on a network that blocks them, mainland China
+included. The only signal available is the `<iframe>` element's own `load` event (it fires for a
+cross-origin child even though the contents stay unreadable), relayed from our own shell over a
+script message handler. Failure is then the **absence** of it within a deadline (#785).
+
+**When a verdict is inferred from a timeout, make being wrong cheap — put the message in an
+OVERLAY over the thing that is still loading.** The deadline is a guess, and the only regression
+route is a *false* failure: the message over a player that works. Keeping the player mounted
+underneath means a slow-but-working network that arrives late clears the message by itself, so the
+exact number stops being load-bearing. Swapping the player out for the message would have made a
+guess final. Same shape as `withdrawsBottomModule`'s `@unknown default`: decide which of the two
+failure directions you can afford, then make the mechanism land on it.
+
+**Say what you observed, not what you infer caused it — in UI copy too.** We can see that a player
+did not load. We cannot see *why*: a country or network that blocks the platform, captive-portal
+wifi, a post gone private, the platform down. The copy says "can't be reached" and never "is
+blocked", and the unrecognised-host case names no platform at all. This is § 2's rule pointed at
+the viewer instead of at the owner.
+
 🔴 **Never put a side effect that must run in a window a modal can cover.** SwiftUI can stop
 delivering updates to a hierarchy behind a modal presentation, so the write lands and the
 `.onChange` never runs. This has produced: a dead tab bar, a dead place pin (#532), a dead X
