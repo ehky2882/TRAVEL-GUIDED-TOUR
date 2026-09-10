@@ -136,6 +136,42 @@ and where deletion is routine. Everything else Wikimedia-hosted is on Commons an
 dead image in 5,848**, found only because #659's fetch fix stopped error-page bodies being hashed
 as though they were pictures.
 
+## 1e. ⏳ IN FLIGHT — the Supabase seed for `4b07666` has not completed
+
+**Measured, not inferred (2026-09-10, session 155).** [#789](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/789)
+merged to `main` as `4b07666` and `publish-catalog.yml` run
+[34511946115](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/actions/runs/34511946115) started at
+**18:03:11Z**. Its two jobs diverged:
+
+| Job | State |
+|---|---|
+| **Publish Tours.json to gh-pages** | ✅ **success**, including its own *"Verify gh-pages now serves the same catalog"* step |
+| **Seed catalog into Supabase** | ⏳ **`Apply seed to Supabase` still running after 1h20m** — a step that normally takes minutes |
+
+🔴 **Supabase is PRIMARY, so this is the half that decides what phones see.** Probed directly rather
+than assumed, using the cheap endpoints (§ Egress):
+
+- `catalog_snapshot_age()` → **`2026-09-10T17:09:22Z`** — the *previous* merge (`887a8a7`), not this one
+- `tours` row count → **3,197**, the pre-merge figure (this merge would make it 3,231)
+
+So **the 35 pins of #789 are on `main` and on the gh-pages mirror but are NOT being served to the
+app.** Nothing is corrupted: the seed runs inside a transaction with `ON_ERROR_STOP=1`, so it either
+applies wholly or rolls back.
+
+**This self-heals — do not panic-fix it.** `publish-catalog.yml` fires on *any* push to `main`
+touching `Tours.json` and the seed script is **idempotent, seeding from `main`'s current file**. The
+next content merge therefore carries #789's pins in with its own. A deliberate re-sync is
+`workflow_dispatch` on `publish-catalog.yml` against `main`.
+
+⚠️ **Plausibly the same underlying condition as the RPC timeouts already on this board.**
+`scripts/session-start.sh` opened this session reporting `get_catalog` **3/4 OK with one 57014
+statement timeout**. A seed hanging against that same database fits, but **that is a hypothesis, not
+a measurement** — nobody has looked at `pg_stat_activity`, which the anon key cannot reach.
+
+**If you are the next session:** re-check the run and `catalog_snapshot_age()` **before** acting. If
+the snapshot has moved past `17:09:22Z`, this is closed. Cancelling a job mid-transaction against the
+production DB is safe by design but was left to the owner rather than done unilaterally.
+
 ## 2. Blocked on owner — outside the repo
 
 **🔴 THE SUPABASE OVER-QUOTA EMAIL WAS OUR OWN TOOLING, AND THE LINE ITEM WAS MINE.** The owner was
