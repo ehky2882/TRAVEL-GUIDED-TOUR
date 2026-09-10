@@ -82670,6 +82670,21 @@
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "5F7B1433-8BC4-5B94-88E2-255975574E26"
       ]
+    },
+    {
+      "id": "9187796d-593d-526f-b365-ac2a64f67311",
+      "name": "The St. Regis Kanai Resort",
+      "description": "A resort set between jungle and a protected mangrove reserve on the Riviera Maya, built to keep its footprint small — low buildings threaded through the trees rather than a wall along the beach, with a spa drawing on Mayan cosmology. Two creators filmed the same architecture from opposite angles: the buildings themselves, and the mangroves they sit above.",
+      "latitude": 20.71813,
+      "longitude": -86.98634,
+      "city": "Playa del Carmen",
+      "address": "Paseo Kanai 15, Solidaridad, Quintana Roo",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "70475EA3-5082-583F-96FF-4E45A47C8283",
+        "EDE8987D-A4FB-5CC1-8E30-C8677CB5853C"
+      ]
     }
   ],
   "linkPins": [
