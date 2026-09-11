@@ -121,6 +121,30 @@ DECLINED_GROUPS = {
         "owner: all separate — dense block, a noodle shop and two neighbours",
 }
 
+# 🔴 Declined NEAR pairs (§ 3). A separate table from DECLINED_GROUPS because a
+# near pair is never unioned into a site group — it has no `existing` place and
+# no group row — so neither mechanism above can reach it. Without this, a pair
+# the owner has already ruled on comes back as a fresh candidate on every run:
+# Tibidabo was declined in #541 and was still being offered months later.
+# Keyed by the frozen set of the two titles, never by the N-label: the labels
+# are positions in a sorted list and renumber whenever a batch lands.
+DECLINED_PAIRS = {
+    frozenset({"Tibidabo", "Tibidabo Amusement Park"}):
+        "a mountain and a funfair are two subjects (#541)",
+    frozenset({"The Red Room at One Wall Street", "Wall Street"}):
+        "owner: keep the Red Room separate — One Wall Street is a different building",
+    frozenset({"The Red Room at One Wall Street", "The Wall of Wall Street"}):
+        "owner: keep the Red Room separate — One Wall Street is a different building",
+    frozenset({"LACMA", "LACMA's David Geffen Galleries"}):
+        "owner: all different — the pins were repaired instead",
+}
+
+
+def pair_declined(r):
+    """Why this near pair is held, or None if it is still open."""
+    return DECLINED_PAIRS.get(frozenset({r["a"]["title"], r["b"]["title"]}))
+
+
 
 def load_checker():
     """Import check-place-candidates.py, whose filename is not a module name."""
@@ -213,7 +237,9 @@ def declined_reason(row):
     return DECLINED_GROUPS.get(frozenset(m["title"] for m in row["members"]))
 
 
-def render(doc, groups, pairs, rev):
+def render(doc, groups, all_pairs, rev):
+    pairs = [r for r in all_pairs if not pair_declined(r)]
+    held_pairs = [r for r in all_pairs if pair_declined(r)]
     held = [r for r in groups if declined_reason(r)]
     open_groups = [r for r in groups if not declined_reason(r)]
     zero = [r for r in open_groups if r["span"] == 0]
@@ -245,7 +271,7 @@ def render(doc, groups, pairs, rev):
     w(f"| **§ 1** | **{len(zero)} on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |")
     w(f"| **§ 2** | **{len(rest)} sites** with 2+ entries within 25 m | Owner picks |")
     w(f"| **§ 3** | {len(pairs)} same-subject pairs 25–500 m apart | Read one at a time |")
-    w(f"| **§ 4** | {len(held)} groups **already declined** | Do not re-offer |")
+    w(f"| **§ 4** | {len(held) + len(held_pairs)} groups **already declined** | Do not re-offer |")  # ⚠️ must match § 4's own heading — count both tables
     w("")
     w("## 🔴 What creating one costs — it is never just a list entry\n")
     w("A place needs its own **name, description, address and a chosen coordinate**. And because a")
@@ -283,20 +309,20 @@ def render(doc, groups, pairs, rev):
           + "<br>".join(entry(m) for m in r["members"]) + " |")
     w("")
 
+    def lab(x):
+        return f"`[{x['kind']}]` {esc(x['title'])}" + (f" *(in {esc(x['place'])})*" if x["place"] else "")
+
     w(f"## § 3 — {len(pairs)} same-subject pairs 25–500 m apart\n")
     w("Related by name but not coincident. **Never auto-create these** — picking the one coordinate")
     w("is an editorial decision, and some are deliberately two subjects.\n")
     w("| # | City | Apart | Pair |")
     w("|---|---|---|---|")
 
-    def lab(x):
-        return f"`[{x['kind']}]` {esc(x['title'])}" + (f" *(in {esc(x['place'])})*" if x["place"] else "")
-
     for i, r in enumerate(pairs, 1):
         w(f"| N{i} | {r['city']} | {r['dist']:.0f} m | {lab(r['a'])}<br>{lab(r['b'])} |")
     w("")
 
-    w(f"## § 4 — declined, standing ({len(held)} groups + 2 named cases)\n")
+    w(f"## § 4 — declined, standing ({len(held) + len(held_pairs)} groups + 1 named case)\n")
     w("🔴 **These are decided. The sweep still reports them because it cannot know a decision was")
     w("made — do not re-offer them as new candidates.**\n")
     w("| Held | The entry left out | Decided |")
@@ -312,8 +338,9 @@ def render(doc, groups, pairs, rev):
     w("| **Tai Kwun** | `[pin]` Madame Fu — a restaurant *inside* a heritage compound is not the "
       "compound. It sits 27.4 m out, just past the TIGHT radius, so the sweep does not report it "
       "| owner, 2026-09-11 |")
-    w("| **Tibidabo** / **Tibidabo Amusement Park** | 48 m apart — a mountain and a funfair are two "
-      "subjects | #541 |")
+    for r in held_pairs:
+        w(f"| *(no place)* | {lab(r['a'])}<br>{lab(r['b'])} — {esc(pair_declined(r))} "
+          f"({r['dist']:.0f} m apart) | owner |")
     w("")
     return "\n".join(o) + "\n"
 
@@ -331,6 +358,19 @@ def selftest():
         ran.append(name)
         if got != want:
             fails.append(f"{name}: got {got!r}, want {want!r}")
+
+    # 🔴 § 3's own declined table. Without it a pair the owner ruled on months
+    # ago is re-offered on every run — which is exactly what Tibidabo did.
+    def pair(a, b):
+        return {"a": {"title": a}, "b": {"title": b}}
+    check("a declined near pair is held",
+          bool(pair_declined(pair("Tibidabo", "Tibidabo Amusement Park"))), True)
+    check("order does not matter",
+          bool(pair_declined(pair("Tibidabo Amusement Park", "Tibidabo"))), True)
+    check("an open near pair is not held",
+          pair_declined(pair("The Oculus", "The Oculus")), None)
+    check("one shared title is not enough",
+          pair_declined(pair("Tibidabo", "Sagrada Família")), None)
 
     check("a plain title is untouched", esc("Grand Central"), "Grand Central")
     check("a bilingual title is escaped", esc("Museum SAN | 뮤지엄 산"), "Museum SAN \\| 뮤지엄 산")
@@ -408,7 +448,8 @@ def main():
         # and over-reports what is open.
         held = sum(1 for r in groups if declined_reason(r))
         print(f"wrote {a.menu_out}: {len(groups) - held} open groups, "
-              f"{len(pairs)} near pairs, {held} declined")
+              f"{sum(1 for r in pairs if not pair_declined(r))} near pairs open "
+              f"({sum(1 for r in pairs if pair_declined(r))} declined), {held} groups declined")
         return 0
     finally:
         run.close()
