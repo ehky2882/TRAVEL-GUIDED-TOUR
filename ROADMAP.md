@@ -729,6 +729,39 @@ That requires several large pieces of infrastructure, roughly:
 | **8. In-app search.** Once catalog grows past browsable. | |
 | **9. Social — share a tour.** Deep links into a specific tour from a shared URL. | |
 
+### Places — the sweep (2026-09-11)
+
+**Status (2026-09-11, session 3):** the place sweep, run across three bands of candidates —
+**places 142 → 288, covering 694 entries.** Both decidable tiers are closed: **0 coincident
+groups, 0 sites within 25 m** left open. 24 near pairs remain at 26–500 m, mostly neighbourhoods
+and things-inside-things rather than sites, and every one of their coordinates has been checked.
+PRs #801, #807, #808, #809, #814, #816, #818, #819, #822.
+
+🔴 **The durable finding is not the places — it is NINE WRONG COORDINATES.** The sweep was asked
+for as a way to group entries and turned out to be the only thing that can see an entry standing
+somewhere it is not: Marina City 460 m, the Obama Center 259 m, the Neue Galerie a full block,
+Dennis Severs' House 161 m, the Vasa Museum 106 m, **Lloyd's 93 m — parked on the Leadenhall
+Building**, the Gamble House 343 m, the Noguchi Museum 497 m, and **Habitat 67's PLACE 363 m,
+carrying both its members with it.** Every one was found by the same question: *which member does
+OSM agree with?*
+
+🔴 **A place propagates a coordinate error.** Habitat 67's error was in the place, not an entry —
+and because a place's coordinate *is* its identity, its members are pinned to it and **cannot
+disagree**. The check that members sit on their place passes **by construction**. Only a third pin
+*outside* the place, 10.9 m from the real building, could reveal it.
+
+⚠️ **The pattern behind the defects:** in the 26–49 m band, **fifteen of seventeen groups had the
+link pin on the OSM feature and the Atlas tour off**. Pins are geocoded per link at import; tours
+carry coordinates typed once and never checked. A 4-decimal coordinate is the signature.
+
+⚠️ **The owner found one themselves** — *"somehow a Lloyd's tour is closer to Leadenhall than to the
+other Lloyd's"* — in a pair this session had recommended **declining** as an obvious false positive.
+Declining it would have buried the bug under a decision.
+
+⚠️ `seed_from_toursjson.py` **could never DELETE a place** (#814): upsert-only, so a dissolved place
+survived as an empty row and the live count read one too many. Any derived table seeded by upsert
+needs a matching delete. Lessons in `docs/lessons.md`; narrative in `archive/HANDOFF-260911-3.md`.
+
 ### Outside content — link pins (new, 2026-08-24)
 
 **Status (2026-08-29, session 122):** content session (web) — **twenty link pins from twenty
