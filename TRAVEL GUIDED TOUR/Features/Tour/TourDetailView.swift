@@ -444,6 +444,14 @@ struct TourDetailView: View {
     @State private var instagramMedia: URL?
     @State private var resolvingInstagram = false
 
+    /// Whether this pin's embedded player has come up. See `LinkEmbedLoadRule`
+    /// for why the answer has to be inferred from a deadline rather than
+    /// reported by WebKit.
+    @State private var embedLoadState: LinkEmbedLoadState = .loading
+    /// Bumped by the retry button. Loads the shell again in the player that is
+    /// already mounted underneath the message.
+    @State private var embedReloadToken = 0
+
     /// ⚠️ Deliberately renders a plain black box while resolving rather than a
     /// spinner: the resolve is one request and usually lands before the page
     /// settles, and a spinner that flashes for 200ms reads as jank.
@@ -559,20 +567,46 @@ struct TourDetailView: View {
                 } else {
                     LinkEmbedView(
                         embedURL: embed,
+                        reloadToken: embedReloadToken,
                         onFullscreenChange: { [appShared = self.appShared,
                                                window = self.bottomModuleWindow] fullscreen in
                             Self.setBottomModuleHidden(fullscreen,
                                                        appShared: appShared,
                                                        window: window)
+                        },
+                        onLoadEvent: { event in
+                            embedLoadState = LinkEmbedLoadRule.nextState(embedLoadState,
+                                                                        on: event)
                         }
                     )
+                    // 🔴 An OVERLAY, not a replacement. The player stays
+                    // mounted and stays loading underneath, so a network that
+                    // is merely slow rather than blocked still arrives and
+                    // takes this message away — which is what makes the
+                    // deadline safe to guess at. Swapping the player out for
+                    // the message would make that guess final.
+                    .overlay {
+                        if embedLoadState == .failed {
+                            LinkEmbedFallbackView(
+                                source: LinkSource.from(urlString: sourceURL)
+                            ) {
+                                embedReloadToken += 1
+                            }
+                        }
+                    }
                 }
             }
             .aspectRatio(LinkSource.embedAspectRatio(for: sourceURL),
                          contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
             .padding(.horizontal, AtlasSpacing.lg)
-            .task(id: sourceURL) { await resolveInstagramIfNeeded(sourceURL) }
+            .task(id: sourceURL) {
+                // A different pin is a different load. Without this reset a
+                // pin opened after a failed one would show the failed one's
+                // message over its own perfectly good player.
+                embedLoadState = .loading
+                await resolveInstagramIfNeeded(sourceURL)
+            }
         } else if tour.isLink {
             // A link pin whose URL yields no player — a platform we cannot
             // derive one for. Fall back to the hero, and the action row's

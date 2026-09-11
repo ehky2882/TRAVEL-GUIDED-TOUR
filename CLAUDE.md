@@ -103,6 +103,13 @@ between a session costing 44 MB and costing 8 KB.
 | only a **row count** | `GET /rest/v1/tours?select=id&limit=1` with `Range: 0-0` + `Prefer: count=exact`; the answer is in the `content-range` response header | **47 bytes** |
 | the catalogue's **freshness** | `POST /rest/v1/rpc/catalog_snapshot_age` | **34 bytes** |
 
+🔴 **Egress is billed on the COMPRESSED bytes, so measure compressed.** Raw size
+overstates text fields badly and two separate cuts here were nearly decided on
+it: `longDescription` is **13.3% raw but 8.2% gzipped**. Save one payload
+(`curl --compressed … -o catalog.json`), then in Python remove one key at a
+time and `len(gzip.compress(...))` the result — that one saved copy answers
+every such question afterwards for free.
+
 ⚠️ **The count query counts DB rows, not app-facing tours.** Link pins are
 `tours` rows with `kind='link'`, so it returns tours **+** pins (3,042 today
 against the RPC's 1,553 tours). Use it for "is the row count what I expect",
@@ -118,23 +125,55 @@ load-bearing; do not "tidy" them off.
 **⚠️ The app has the same shape, and raising the debounce only buys time.**
 `DataService.foregroundRefreshInterval` is **900s** (was 60 — see the comment on
 that init, which explains why it is an egress dial and not a freshness dial). A
-cold launch always refreshes regardless. But the catalogue changes ~70×/month,
-so a daily user meets a changed catalogue on nearly every launch and still pays
-the full 3.4 MB — **~240 MB per active user per month as a floor**, which puts
-roughly 20 active users back over the quota with the fix already in.
-**The cheap version check is now built** (2026-09-09): before fetching from
-Supabase, `RemoteCatalogLoader` calls **`catalog_snapshot_age()` — 34 bytes** —
-and skips the download entirely when that token matches the one stored beside
-the on-disk cache. It is safe because `payload` and `refreshed_at` are two
-columns of the *same* row in `catalog_snapshot`, written by one upsert, so the
-token cannot disagree with the catalogue it describes; and it **fails toward
-downloading**, so a probe that errors changes nothing. Design + reasoning:
-`docs/catalog-version-check-design.md`.
-**What it does NOT fix:** when anything has changed, the app still downloads all
-1,552 tours. It cuts how *often* we pay, not how *much*. The next two steps, in
-order of value, are **dropping `stops.transcriptText` (38%) and
-`longDescription` (18%) from the payload** — a breaking catalogue change — and
-then delta or city-scoped fetching. Neither is built.
+cold launch always refreshes regardless.
+
+### 🔴 The 2026-09-10 escalation, and what the dashboard actually said
+
+A second notice arrived on **2026-09-10: 11.82 GB against 5 GB, grace period cut
+from 4 October to 13 September.** The per-day breakdown settles the cause for
+good, and it is worth knowing because two plausible theories were both wrong:
+
+| | |
+|---|---|
+| **PostgREST** | **100.0% — every single day** |
+| Auth | 28–64 KB/day |
+| Storage | 977 bytes – 20 KB/day |
+| Edge Functions | does not appear at all |
+
+So it is this payload and nothing else. ⚠️ **238,583 Edge Function invocations
+looked alarming and produce essentially zero egress** — do not chase that
+number. ⚠️ And **it is not the users**: MAU was **17**.
+
+The daily figures, which are the honest scoreboard for every fix here:
+
+| 8 Sep | 9 Sep (the `--compressed` / debounce fixes land) | 10 Sep |
+|---|---|---|
+| **1,963 MB** | **493 MB** | **241 MB** |
+
+The allowance is 5 GB/month ≈ **167 MB/day**. That is the number to beat.
+
+**Two fixes now exist for it:**
+1. **The cheap version check** — the app asks `catalog_snapshot_age()` (34 bytes)
+   before downloading, and skips the fetch when nothing changed. Built; see
+   `docs/catalog-version-check-design.md`. **Cuts how OFTEN we pay.**
+2. **The transcripts are off the wire** (`backend/drop_transcript_from_catalog.sql`,
+   2026-09-10). `stops.transcriptText` was **1.105 MB of 2.945 MB gzipped —
+   37.5% of every byte billed** — sent for all 1,924 stops on every fetch and
+   **displayed by no consumer screen at all** (only `Models/Stop.swift` and the
+   maker paths, which query the `stops` table directly). Not a feature
+   withdrawn; a field nobody read, taken off the wire. The column is untouched,
+   and `String?` in Swift means every build already in the field decodes its
+   absence as nil — so it needs no App Store release. **Cuts how MUCH we pay.**
+   `check-catalog-keys.py` now carries a **`FORBIDDEN_STOP`** set that fails if
+   the key ever returns: the damage runs that way, and nothing else would notice.
+
+⚠️ **`longDescription` was considered in the same pass and deliberately KEPT.**
+The "18%" once quoted here was **raw**; gzipped it is **8.2%**, and unlike the
+transcripts it is *used* — `TourDetailView` renders it, `SearchView` searches
+it. 8% does not buy a visible regression.
+
+**What is still NOT fixed:** when anything changes, the app downloads all 1,552
+tours. Delta or city-scoped fetching is the remaining step, and is not built.
 
 ## Image Pipeline
 
@@ -187,6 +226,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 🔴 **Run `bash scripts/session-start.sh` first — it prints live state; this file does not have
 it.** § READ FIRST above explains why that is not optional.
 
+**🚀 Dozent is live on the App Store at 1.1.1**, released **1 September 2026, 15:23 UTC**, on
+build 139. This is the durable fact; **the live number is not** — the released version is
+checkable from any session with no key (§ READ FIRST's table has the one-line `curl`), so
+re-derive it rather than quoting this paragraph. `MARKETING_VERSION` on `main` is **1.1.2**, and
+the only app code the public lacks is [#728](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/728),
+the bottom module going missing — everything else since is catalogue, which reaches 1.1.1 over the
+air, because **1.1.1 understands `linkPins` and `places` where build 66 could not.** ⚠️ **This
+board said the update was still owed for a week after it shipped**; the full account of how that
+happened is in `archive/STATUS-HISTORY.md` (§ "1.1.1 SHIPPED") and the rule it produced is in
+`docs/lessons.md` § 2.
+
 **Where the history went.** Every dated `## Current State` block written between 2026-05-25
 (session 8) and 2026-09-07 (session 148) — 34 of them — now lives verbatim in
 **`archive/CURRENT-STATE-HISTORY.md`**. Nothing was deleted.
@@ -218,11 +268,11 @@ it **before a tour or link-pin batch, before touching `get_catalog`, and wheneve
 you something surprising.** It is short enough to read in full.
 
 ### Key facts
-- **1552 tours + 1489 link pins, 353 makers, 1924 tour stops (3413 including one per pin), 137 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 319 are pinned creators (113 TikTok, 194 Instagram, 12 YouTube) — pinned creators now outnumber the studios more than nine to one.** ⚠️ This line has gone stale NINETEEN times already, and **three parallel sessions invalidated it on the same afternoon** — it has been rewritten inside a single session more than once because `main` moved under it every time, and not one session's own number has survived its merge — #733 invalidated it AGAIN during the very merge that was correcting it, while that branch sat open, and **#738 did it a fifteenth time while session 144’s own PR sat open with green CI, so it went stale inside the very merge that was correcting it — then #737 and #739 did it a sixteenth, invalidating session 145’s own number while ITS PR sat open, #742 did it a seventeenth while session 147’s batch was being validated, and #743 did it an eighteenth while session 148’s heroes were mid-upload, and **#758 did it a NINETEENTH inside its own merge — it landed 83 pins and left this line reading 1,343; a later session simply counted and got 1,426****; **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
+- **1552 tours + 1700 link pins, 376 makers, 1924 tour stops (3624 including one per pin), 141 places** in `Resources/Tours.json`. 🔴 **The link pins are NOT in the `tours` array — they are a sibling top-level `linkPins` array**, because one unknown `kind` inside `tours` fails the whole catalog decode on every build shipped before `TourKind.link` (see `TRAVEL GUIDED TOUR/Data/ToursData.swift`). The app merges them back at decode, so everything downstream still sees one list. **34 of the makers are Atlas studios, the other 342 are pinned creators (114 TikTok, 216 Instagram, 12 YouTube) — pinned creators now outnumber the studios ten to one, and Instagram has overtaken TikTok as the largest platform.** ⚠️ This line has gone stale TWENTY-TWO times already, and **three parallel sessions invalidated it on the same afternoon** — it has been rewritten inside a single session more than once because `main` moved under it every time, and not one session's own number has survived its merge — #733 invalidated it AGAIN during the very merge that was correcting it, while that branch sat open, and **#738 did it a fifteenth time while session 144’s own PR sat open with green CI, so it went stale inside the very merge that was correcting it — then #737 and #739 did it a sixteenth, invalidating session 145’s own number while ITS PR sat open, #742 did it a seventeenth while session 147’s batch was being validated, and #743 did it an eighteenth while session 148’s heroes were mid-upload, and **#758 did it a NINETEENTH inside its own merge — it landed 83 pins and left this line reading 1,343; a later session simply counted and got 1,426 — and a TWENTIETH time when #769 made Trinity Church, Madison Square Garden and Penn Station places and left this line reading 137 against a real 140 — and a TWENTY-FIRST time: this line read 1,551 pins while the catalogue held 1,588 — and a TWENTY-SECOND time, when it read 1,588 / 353 against a real 1,635 / 354 before session 155's own batch had added anything, because #784 and #787 both landed between the last correction and that session's start**. Session 156's own #790 (21 pins) landed cleanly on top of #789 with nothing else merging mid-flight — **re-derive it, never quote it** — `grep -c '"displayName": "TikTok \|"displayName": "YouTube \|"displayName": "Instagram '` against the catalogue is the whole check. (101 Atlas Studio NYC + 100 Atlas Studio LDN + 71 Atlas Studio KYO + **68 Atlas Studio BCN** + **48 Atlas Studio MIL** + 66 Atlas Studio LIS + 63 Atlas Studio TYO + 57 Atlas Studio BKK + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 50 Atlas Studio PAR + 46 Atlas Studio RIO + **45 Atlas Studio STO** + **40 Atlas Studio CPH** + 43 Atlas Studio CNX + 43 Atlas Studio SEL + 43 Atlas Studio SGN + 42 Atlas Studio LAX + 42 Atlas Studio SAO + 42 Atlas Studio YYZ + 38 Atlas Studio AMS + 37 Atlas Studio ROM + 36 Atlas Studio BER + 36 Atlas Studio BUE + 35 Atlas Studio MEL + 35 Atlas Studio SFO + 34 Atlas Studio MAD + **30 Atlas Studio CPT** + 30 Atlas Studio ORD + 29 Atlas Studio SYD + 29 Atlas Studio YUL + 26 Atlas Studio DXB + 26 Atlas Studio RAK + 15 Atlas Studio NAO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
 - **1480 single-stop + 72 multi-stop** — all geofenced. Copenhagen added 40 singles with no walks; Rio launched as 46 singles with no walks; São Paulo added 41 singles + 1 walk; Berlin added 31 singles + 5 walks; Marrakech added 26 singles with no walks; Buenos Aires added 34 singles + 2 walks; Chicago added 25 singles + 5 walks; Melbourne added 34 singles + 1 walk; Sydney added 29 singles with no walks; Cape Town added 30 singles with no walks; Barcelona added 66 singles + 2 walks; Milan added 47 singles + 1 walk; **Stockholm added 42 singles + 3 walks**. Multi-stop walks by maker: London 5, Paris 5, Amsterdam 5, Rome 5, Berlin 5, Chicago 5, San Francisco 4, Toronto 4, Los Angeles 4, Madrid 4, Montreal 4, Dubai 4, Seoul 3, **Stockholm 3**, NYC 2, Naoshima 2, Buenos Aires 2, **Barcelona 2**, Bangkok 1, São Paulo 1, Melbourne 1, **Milan 1**. The 4 originally-named NYC/London walks ("American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London), "Albertopolis" (6 stops, London)) are still the reference multi-stop test cases; AMNH unblocks M-qa items 6 + 7.
 - **Bilingual titles (`English | native script`) on both tour + stop across the Asian bureaus:** Tokyo (TYO), Kyoto (KYO), Naoshima (NAO) — `日本語`; Hong Kong (HKG) — `中文`; Seoul (SEL) — `한국어`; Bangkok (BKK) — `ไทย`; Ho Chi Minh City (SGN) — `Tiếng Việt` (where a Vietnamese name exists; proper-noun venues carry a single name); and Marrakech (RAK) — `العربية` (18 of 26; same proper-noun rule).
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list. Tours may also carry an optional **`videoURLs: [String]?`** (`.mp4` on gh-pages under `videos/`) — **videos LEAD the carousel** (owner decision 2026-07-26), so a tour with one opens on it and the still hero becomes page two. **`backend/add_video_urls.sql` HAS been applied** — verified against the live `get_catalog` on 2026-08-23, which emits the key on every tour; no SQL is owed, and `seed_from_toursjson.py` carries `video_urls` so a content merge cannot wipe it. Each video is openable **fullscreen** (session 107), and a tour also carries **`videoRole: TourVideoRole?`** — `gallery` (the default: b-roll beside the photographs) or **`narration`** (the clip **is** the tour, so its play bar and picture scrub together). ⚠️ **A `narration` tour may carry exactly ONE video**, validator-enforced. **Two tours carry video:** `via-57-west` (**`narration`**, 1080×1920 vertical with audio — a generated stand-in, replace when real footage exists) and `shinsegae-media-facade` (**`gallery`**, two clips: a 1200×900 silent one, plus `landscape-test.mp4`, **a 1920×1080 test card rather than real content**, added so rotation has something to run against — one-line revert). ⚠️ **`video_role` must reach Supabase to have any effect** — `seed_from_toursjson.py` carries it and `backend/add_video_role.sql` has been applied and verified live, but a catalogue edit alone is never enough. ⚠️ An earlier Key-facts note said no tour carried video; that was already false when written.
-- **Every tour carries `city` AND `country`** (`country` added session 99 — **427 cities, 63 countries** across tours and link pins together, re-derived 2026-09-09 on the base carrying #766 with #767's 36 pins applied — the figures this line carried before that read 414 / 61; the figures this line carried before that read 404 / 59 — stale within hours, because #758 added 83 pins without touching them — and before that 389 / 58 — session 147's batch alone added **eleven countries**, the largest single expansion — and before that 359 / 47, the figures this line carried before that read 274 / 41, then 250 / 40, then 203 / 37 — and the 250 was already stale against `main`'s 259 when it was written, so **re-derive rather than quoting it** — `docs/app-store-screenshots.md` § Scale figures has the one-liner). `country` is denormalised onto the tour exactly as `city` is, so it travels with the content and updates over the air; **a new city batch must author it** or that tour drops out of the Settings → About count. `Tour.country` is optional so the bundled seed, the gh-pages mirror and maker-authored tours all keep decoding. Its column + `get_catalog` key are live (`backend/add_country.sql`, applied 2026-08-19).
+- **Every tour carries `city` AND `country`** (`country` added session 99 — **466 cities, 64 countries** across tours and link pins together, re-derived 2026-09-10 on the base carrying `887a8a7`; the figures this line carried before that read 447 / 63 — the figures this line carried before that read 442 / 63 — the figures this line carried before that read 427 / 63 — the figures this line carried before that read 414 / 61; the figures this line carried before that read 404 / 59 — stale within hours, because #758 added 83 pins without touching them — and before that 389 / 58 — session 147's batch alone added **eleven countries**, the largest single expansion — and before that 359 / 47, the figures this line carried before that read 274 / 41, then 250 / 40, then 203 / 37 — and the 250 was already stale against `main`'s 259 when it was written, so **re-derive rather than quoting it** — `docs/app-store-screenshots.md` § Scale figures has the one-liner). `country` is denormalised onto the tour exactly as `city` is, so it travels with the content and updates over the air; **a new city batch must author it** or that tour drops out of the Settings → About count. `Tour.country` is optional so the bundled seed, the gh-pages mirror and maker-authored tours all keep decoding. Its column + `get_catalog` key are live (`backend/add_country.sql`, applied 2026-08-19).
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
 - AppIcon is placeholder (green sphere); AccentColor: **dark gold (brass) `#8B7535` — owner-confirmed brand color (2026-07-04)**, same value in light + dark deliberately; terracotta is fully removed

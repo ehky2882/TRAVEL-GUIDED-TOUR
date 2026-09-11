@@ -1,4 +1,28 @@
 -- =================================================================
+-- 🔴 NO LONGER SAFE TO RE-RUN — AND NOT SAFE TO COPY FROM EITHER.
+--
+-- This file rebuilds `get_catalog_core()` from an inline body. That was
+-- correct on 2026-08-29. It is not correct now: `split_link_pins.sql` renamed
+-- the builder aside to `get_catalog_core_base()` and made `get_catalog_core()`
+-- a WRAPPER that lifts link pins out of `tours` into their own `linkPins` key.
+--
+-- Running this file — or lifting its body into a new migration — reinstates
+-- the old shape and REVERTS THE LINK-PIN SPLIT. That is not cosmetic: a link
+-- pin inside `tours` fails the WHOLE catalog decode on every build predating
+-- `TourKind.link`, silently, because the loader reads a throw as a failed
+-- fetch and keeps its last good copy.
+--
+-- ⚠️ THIS HAS ALREADY HAPPENED ONCE, on 2026-09-10: the first version of
+-- `drop_transcript_from_catalog.sql` copied the body below, removed one key,
+-- and shipped `tours 3253 / linkPins 0` to the live catalogue. Caught by
+-- counting the live payload; repaired within minutes.
+--
+-- IF YOU NEED TO CHANGE WHAT THE CATALOGUE SENDS: wrap the live chain and
+-- transform what it returns. Never retype it. A wrapper cannot lose a key it
+-- never mentions — see `drop_transcript_from_catalog.sql` for the shape.
+-- =================================================================
+
+-- =================================================================
 -- restore_catalog_keys.sql
 --
 -- WHAT BROKE. add_country.sql rebuilt get_catalog() from schema.sql's body.

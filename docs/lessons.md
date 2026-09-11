@@ -53,6 +53,20 @@ now refuses to run otherwise, and pins each rule in its own selftest.
   once** — a fault that fails to apply otherwise passes for free.
 - Derive the batch's ids **from the diff against `HEAD`**, never from a scratch file.
 
+🔴 **A proximity sweep is a candidate finder, not the map's stack cap — they differ by
+twenty.** The 65 m sweep sessions use to spot place candidates is *not* what `TourSetMap`
+stacks on. Cards stack for markers sharing a cluster cell, and with `MapClustering.cellsAcross
+= 20` at `buildingScaleSpan` (0.0006°, ~65 m across) **a cell is about 3 m** — anything 20–85 m
+apart separates by zoom and stays reachable. Reported as the cap, the sweep told the owner that
+three groups were at or over it and that a fourth entry would be permanently untappable; on
+exact coincidence, the case no camera can separate, the catalogue has **0 groups at or over the
+cap**. **Say which test produced a finding before calling it a defect** — and a genuine one
+looks like #767's three pins on one identical derived coordinate.
+
+⚠️ **A place's member invariant is FIRST-STOP equality, never centroid.** A `multiStop` walk's
+centroid is the mean of its stops, so a centroid assertion fails for **26 live members** and is
+right to: the walk begins at its place and then leaves it.
+
 🔴 **Before calling a mirror miss a "blind spot", read the Swift rule.** Sessions 142, 143 and
 145 each shipped one that turned out to be a rule they had invented — non-https heroes
 (`isValidURL` accepts `http://`), duplicate tags (`Set(t.tags)` collapses them silently), a
@@ -112,6 +126,19 @@ migration **working** (the slow builder is off the request path), not failing.
 ---
 
 ## 3. Content and the catalog
+
+**⚠️ `--title` is ignored in a `--batch` run of `make-link-pin.py`** (`title=a.title if
+len(rows) == 1 else None`), so a batched pin takes its map title from the source caption, truncated
+to 60 characters. TikTok captions usually survive that. **Instagram captions are paragraphs**, so a
+batched Instagram pin gets named *"Architecture worth traveling for. 🤍☕🌿 Designed by @marlonbl…"*.
+Mint an Instagram batch as **one single-`--url` run per pin**, driven from a TSV, with outputs
+written to per-pin files and combined on disk — the conversation still never sees a pin's JSON.
+
+**The thumbnail identifies the subject when the caption will not.** A creator post often names no
+place at all (*"the coolest office ever"*, *"this tower gets wider the higher it climbs"*).
+Downloading the post's thumbnail and **looking at it** settled four of five such cases in one
+session — a carved pediment, a logo pylon, burnt-in caption text. Do that before researching, and
+before asking.
 
 **🔴 A section that every session appends to becomes the whole file.** Three files here caught the
 same disease independently, and in each the growth was invisible because no single session added
@@ -227,6 +254,25 @@ researcher; `Frank` matched Sinatra; `Larsson` matched a basket workshop.
 otherwise produce 40-character caption fragments. Extend across sentences — and across
 paragraphs — until the caption clears 60 chars.
 
+**Making a `Place` means MOVING its members onto its coordinate — the validator hard-errors
+otherwise.** `place … : member not on the place coordinate` fires when any member's **`stops[0]`**
+is more than `1e-9` degrees from the place, so a place cannot merely gather pins that are near each
+other. Making The Parthenon a place moved `The Parthenon: The Missing Roof` **9.7 m**; #746 moved a
+pin 3.8 m onto the Gilder Center for the same reason. Move the *pin*, never the place, and only
+with the owner's say-so — `Place.swift` records the standing rule that grouping looser than exact
+coordinate equality **must be approved by a human, never auto-created**.
+
+**Place ids are `uuid5(NAMESPACE_URL, "atlas-place:<city-slug>:<name-slug>")`, lowercase.** It
+reproduces **131 of the 140** live places; the misses are accented names whose slug transliteration
+differs and six with uppercase ids. Re-derive before minting rather than inventing a uuid — a
+made-up id looks exactly like a derived one, which is how two link-pin ids got invented on the spot
+(§ the link-pin runbook). Nothing in `scripts/` mints a place, so this is done by hand.
+
+**A place's `heroImageURL` is optional and falling back is usually right.** With it absent the place
+page uses its top-ranked member's hero, which for a link-pin place means the creator's own
+thumbnail — better than pointing the place at a file a pin already claims, which is the "two entries,
+one file" shape `check-image-duplicates.py` exists to catch.
+
 ---
 
 ## 4. Geocoding
@@ -245,6 +291,26 @@ offset gives +10 m at zoom 19 and +3.2 km at zoom 11.
 correct: same-name districts, a same-name café 8 km away, street-centroid noise, and a **towpath**
 (a linear feature, where a centroid distance is meaningless).
 
+🔴 **A geocoder's rate limit can arrive dressed as an answer.** Nominatim returns **HTTP 429** as an
+HTML page; a script that only parses JSON turns that into an empty result list, and an empty result
+list prints as "no match". Session 155 got **30 "NO MATCH" out of 35 subjects — Tribune Tower among
+them** — and the only thing that exposed it was the implausibility of the list, not the code. Read
+`%{http_code}` and keep three outcomes distinct: *found*, *genuinely empty*, *did not fetch*. A
+geocoding sweep from a shared cloud IP will meet this; Photon (`photon.komoot.io`, no key) answered
+where Nominatim was throttling.
+
+🔴 **Read the returned NAME, not just the distance — the wrong building often has the right name.**
+Geocoding 35 subjects returned four confidently wrong places, and two were near-misses no distance
+check would flag: the **Banning branch** library when the post was about Huntington Beach's
+**Central** Library, and **2178 Bloor W** (the public library) when the subject was the Runnymede
+Theatre at **2225**. Both are real, both are close, both would validate, and both would leave a pin
+that never fires in front of the right building. A county-level match (`兴隆县` for a specific
+resort) and a name that misleads about its own city (**Conwell** *Coffee Hall* is in New York, not
+Philadelphia) were the other two.
+
+**Query in the local script when a place is not Western.** Aranya Wulingshan resolved only to its
+county in English and to the exact Phase 2 development as `阿那亚·雾灵山2期`.
+
 **Read the OSM class and type, never just the name or distance.** `The Hive` returned a
 confident named hit that was a **bouldering gym** 1.2 km from the mass-timber office. An Orlando
 McDonald's returned `[primary]` — a road.
@@ -261,6 +327,15 @@ Representative Office in the Netherlands**.
 
 **Use structured parameters for a short Plus Code reference.** A free-text reference put
 `Chuo City Tokyo` on a confectionery in **Osaka** and `Venice Italy` on a restaurant in **Graz**.
+
+**The locality printed beside a short Plus Code is a guess, and the caption outranks it.** A short
+code carries no absolute position — it recovers against whatever reference you hand it, so the
+reference *is* the answer. Two `@urbanistariel` pins arrived labelled `Lower Town, Greece`; read as
+Monemvasia, a real Peloponnesian lower town, both recovered to **37.074, 23.367 — 88 km out, in the
+Myrtoan Sea**. Both captions said *Mystras*, next to Sparta, and against a Sparta reference both
+land on the site. **Read every recovered coordinate back against what the post is actually about
+before wiring it**, and treat a vague or generic locality (`Lower Town`, `Old Town`, `Centro`) as
+unresolved rather than as a place name.
 
 **An interpolated house number is not a mapped building.** `1529 Vassar Street` and
 `165 Crosby Street` and `201 Wan Chai Road` all returned **road segments**. Reverse-geocode each
@@ -421,6 +496,15 @@ on a busy workflow returns ~420 KB and blows the tool budget, so use `list_workf
 **A browser user-agent trips Instagram's challenge page from a datacenter IP.** curl's default
 and the tool's own UA both work. **A control that differs in one header is not a control.**
 
+🔴 **A probe that throws the response away still pays for it, and `-o /dev/null` hides that from
+you.** A liveness check added to `scripts/session-start.sh` called `get_catalog` four times per
+session purely to read a status code and discarded ~44 MB of body every time — on a script every
+session runs. **The owner was emailed for exceeding the Supabase free egress quota the same day.**
+Before adding any repeated network check, ask what the *response* weighs, not just how long it
+takes: `curl -w '%{size_download}'` answers it in one call. The flags that make a status probe
+cheap are `--compressed --max-filesize 2000`; ⚠️ **curl then exits 63 on success**, so read
+`%{http_code}` and never the exit code. `CLAUDE.md` § Egress has the per-question cost table.
+
 ---
 
 ## 8. Git, gh-pages, CI, builds
@@ -488,6 +572,30 @@ and the failure summary names the file but never the reason.
 ---
 
 ## 9. App code
+
+🔴 **A cross-origin iframe cannot fail in a way `WKNavigationDelegate` can see, so a WebView
+embed needs a POSITIVE signal and a deadline — never a failure callback.** `LinkEmbedView` hands
+WebKit its shell with `loadHTMLString`, so the main frame never touches the network; the player is
+in a cross-origin iframe we may not script. It had a `navigationDelegate` the whole time and still
+rendered **a black rectangle forever** whenever TikTok, Instagram or YouTube was unreachable — the
+state every one of the catalogue's link pins is in on a network that blocks them, mainland China
+included. The only signal available is the `<iframe>` element's own `load` event (it fires for a
+cross-origin child even though the contents stay unreadable), relayed from our own shell over a
+script message handler. Failure is then the **absence** of it within a deadline (#785).
+
+**When a verdict is inferred from a timeout, make being wrong cheap — put the message in an
+OVERLAY over the thing that is still loading.** The deadline is a guess, and the only regression
+route is a *false* failure: the message over a player that works. Keeping the player mounted
+underneath means a slow-but-working network that arrives late clears the message by itself, so the
+exact number stops being load-bearing. Swapping the player out for the message would have made a
+guess final. Same shape as `withdrawsBottomModule`'s `@unknown default`: decide which of the two
+failure directions you can afford, then make the mechanism land on it.
+
+**Say what you observed, not what you infer caused it — in UI copy too.** We can see that a player
+did not load. We cannot see *why*: a country or network that blocks the platform, captive-portal
+wifi, a post gone private, the platform down. The copy says "can't be reached" and never "is
+blocked", and the unrecognised-host case names no platform at all. This is § 2's rule pointed at
+the viewer instead of at the owner.
 
 🔴 **Never put a side effect that must run in a window a modal can cover.** SwiftUI can stop
 delivering updates to a hierarchy behind a modal presentation, so the write lands and the
@@ -593,3 +701,65 @@ curl -sS -X POST "https://<ref>.supabase.co/auth/v1/token?grant_type=password" \
 This is the live-systems-over-appearances rule in a new place: **ask the system that holds the
 truth.**
 
+
+## Never rebuild a catalogue function from a committed file (2026-09-10)
+
+`drop_transcript_from_catalog.sql` set out to remove one field from the
+catalogue payload. It was written by copying the body of `get_catalog_core()`
+out of `backend/restore_catalog_keys.sql` and deleting one line.
+
+That body was **four days out of date at the time it was committed, and two
+weeks out of date when it was copied.** `split_link_pins.sql` had renamed the
+builder aside to `get_catalog_core_base()` and turned `get_catalog_core()` into
+a wrapper that lifts link pins out of `tours` into their own `linkPins` key.
+Retyping the old body reverted that: the live catalogue went from
+`tours 1553 / linkPins 1700` to **`tours 3253 / linkPins 0`**, which fails the
+whole catalog decode on every build predating `TourKind.link` — silently,
+because `RemoteCatalogLoader`'s `try?` reads a throw as a failed fetch and keeps
+its last good copy.
+
+**The rule: transform what the live chain returns; never retype it.** A wrapper
+cannot lose a key it never mentions. The repaired version calls
+`get_catalog_core_base()` and strips one key on the way past, so every other
+key — including ones added after it was written — rides through untouched.
+
+Three things made this survivable rather than expensive, and all three are
+worth keeping:
+
+- **Counting the live payload immediately after applying SQL.** `tours 3253`
+  against an expected 1553 was visible in the first check, about a minute after
+  the paste. "Success. No rows returned." said nothing.
+- **The migration now verifies its own shape.** It ends in a `do $$` block that
+  raises if `linkPins` is empty, if a pin is still inside `tours`, if `places`
+  is empty, or if a transcript survived. A migration that cannot fail loudly is
+  a migration you have to remember to check.
+- **The guard was widened to the layer that was actually hit.**
+  `check-catalog-keys.py`'s audit only inspected `create or replace function
+  public.get_catalog()`. The destructive statement was against
+  `get_catalog_core()`, one layer down, so the file passed the audit that exists
+  for precisely this. It now audits both, and `restore_catalog_keys.sql` carries
+  the `NO LONGER SAFE TO RE-RUN` banner it had always warranted.
+
+⚠️ **The generalisation is bigger than SQL.** Committed files record what was
+true when they were written. That is the same failure this project has paid for
+repeatedly with perishable facts in `CLAUDE.md` — here it just arrived wearing
+a `.sql` extension.
+
+## Egress is billed COMPRESSED — raw sizes overstate text badly (2026-09-10)
+
+Two payload cuts were nearly decided on raw byte counts. Measured on the live
+payload:
+
+| field | raw | gzipped (what is billed) |
+|---|---|---|
+| `stops.transcriptText` | 34.8% | **37.5%** |
+| `longDescription` | 13.3% | **8.2%** |
+
+The transcripts were removed (nothing reads them; 41.4% off the actual wire
+bytes, 3,698,842 → 2,167,209). `longDescription` was **kept** — 8% does not buy
+a visible regression, and it is rendered by `TourDetailView` and searched by
+`SearchView`. Repo notes had quoted it as "18%", which was the raw figure.
+
+**Method:** save one payload with `curl --compressed … -o catalog.json`, then in
+Python remove one key at a time and `len(gzip.compress(...))` the result. One
+saved copy answers every such question afterwards for free.

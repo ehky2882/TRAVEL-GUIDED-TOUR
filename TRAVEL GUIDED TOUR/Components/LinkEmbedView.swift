@@ -25,11 +25,33 @@ import WebKit
 struct LinkEmbedView: UIViewRepresentable {
     let embedURL: URL
 
+    /// Bump to load the shell again without rebuilding the view.
+    ///
+    /// ⚠️ A retry must not be a teardown. `LinkEmbedFallbackView` sits as an
+    /// **overlay** above a player that is still mounted, so the player keeps
+    /// whatever progress it had and a late success still lands. Recreating the
+    /// `WKWebView` to retry would throw that away and make the deadline in
+    /// `LinkEmbedLoadRule` a one-shot verdict rather than a guess that can be
+    /// corrected.
+    var reloadToken: Int = 0
+
+
     /// Called with `true` while the platform's own control has the player in
     /// element fullscreen, `false` the moment it leaves — **or the moment this
     /// view is torn down while still fullscreen**, which is the case that
     /// matters. See `Coordinator.restoreIfNeeded`.
     var onFullscreenChange: @MainActor (Bool) -> Void = { _ in }
+
+    /// Every load signal, raw. The **rule** lives in `LinkEmbedLoadRule` and
+    /// the **state** lives with the owning view, deliberately: this type sees
+    /// one webview at a time and has no business deciding what a signal means
+    /// or remembering what the last one was.
+    ///
+    /// ⚠️ Declared after `onFullscreenChange`, and that ordering is load-
+    /// bearing: this struct has no explicit initialiser, so the memberwise one
+    /// takes its arguments in declaration order and a swap here is a compile
+    /// error at every call site.
+    var onLoadEvent: @MainActor (LinkEmbedLoadEvent) -> Void = { _ in }
 
     /// Is a newly-visible `UIWindow` the platform player going fullscreen?
     ///
@@ -107,11 +129,41 @@ struct LinkEmbedView: UIViewRepresentable {
         <style>html,body{margin:0;padding:0;background:#000;height:100%;overflow:hidden}
         iframe{border:0;width:100%;height:100%;display:block}</style>
         </head><body>
-        <iframe src="\(htmlAttributeEscaped(embed.absoluteString))"
+        <iframe id="p" src="\(htmlAttributeEscaped(embed.absoluteString))"
                 allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                 allowfullscreen playsinline></iframe>
+        <script>
+        (function(){
+          var f=document.getElementById('p');
+          function say(m){try{window.webkit.messageHandlers.\(messageHandlerName).postMessage(m);}catch(e){}}
+          f.addEventListener('load',function(){say('loaded');});
+          f.addEventListener('error',function(){say('error');});
+        })();
+        </script>
         </body></html>
         """
+    }
+
+    /// 🔴 THE ONLY POSITIVE SIGNAL WE GET, and it comes from our own shell
+    /// rather than from WebKit. The player is cross-origin, so we may not
+    /// script into it — but the `<iframe>` element is ours, and its `load`
+    /// event fires for a cross-origin child even though its contents stay
+    /// unreadable. That one bit is the difference between "the player came up"
+    /// and the black rectangle this file used to render forever.
+    static let messageHandlerName = "atlasEmbed"
+
+    /// Map a relayed message to an event. Pure, so the wiring is testable
+    /// without a live `WKWebView`.
+    ///
+    /// ⚠️ An unrecognised body is **not** a failure. This channel is reachable
+    /// only from our own shell, but treating anything unexpected as "dead"
+    /// would let a future message we add here blank out a working player.
+    static func loadEvent(forMessageBody body: Any) -> LinkEmbedLoadEvent? {
+        switch body as? String {
+        case "loaded": return .frameLoaded
+        case "error": return .frameError
+        default: return nil
+        }
     }
 
     /// ⚠️ The embed URL is now interpolated into an **HTML attribute**, which it
@@ -153,6 +205,12 @@ struct LinkEmbedView: UIViewRepresentable {
         // this is what lets the KVO see it. Do not read it as the fix.
         config.preferences.isElementFullscreenEnabled = true
 
+        // ⚠️ Registered on the configuration BEFORE the webview is built. The
+        // configuration is copied at init, so a handler added afterwards via a
+        // local `config` reference would be attached to an object the webview
+        // is not using.
+        config.userContentController.add(context.coordinator, name: Self.messageHandlerName)
+
         let web = WKWebView(frame: .zero, configuration: config)
         web.navigationDelegate = context.coordinator
         web.scrollView.isScrollEnabled = false
@@ -163,7 +221,7 @@ struct LinkEmbedView: UIViewRepresentable {
         web.backgroundColor = .black
         web.scrollView.backgroundColor = .black
         context.coordinator.observeFullscreen(on: web)
-        web.loadHTMLString(Self.shell(embedURL), baseURL: Self.embedOrigin)
+        context.coordinator.beginLoad(web, url: embedURL)
         return web
     }
 
@@ -172,16 +230,22 @@ struct LinkEmbedView: UIViewRepresentable {
         // once. Handing the new one over keeps the two from drifting if this
         // view is ever re-parented under a different owner.
         context.coordinator.onFullscreenChange = onFullscreenChange
-        // Reload only when the pin actually changed. A plain `load` here would
-        // restart the video on every parent re-render — and the tour page
-        // re-renders constantly while audio elsewhere is playing.
-        guard context.coordinator.loadedURL != embedURL else { return }
-        context.coordinator.loadedURL = embedURL
-        web.loadHTMLString(Self.shell(embedURL), baseURL: Self.embedOrigin)
+        context.coordinator.onLoadEvent = onLoadEvent
+        // Reload only when the pin actually changed, or a retry asked for it. A
+        // plain `load` here would restart the video on every parent re-render —
+        // and the tour page re-renders constantly while audio elsewhere is
+        // playing, which now includes every load event this view reports.
+        guard context.coordinator.loadedURL != embedURL
+                || context.coordinator.loadedToken != reloadToken else { return }
+        context.coordinator.loadedToken = reloadToken
+        context.coordinator.beginLoad(web, url: embedURL)
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(loadedURL: embedURL, onFullscreenChange: onFullscreenChange)
+        Coordinator(loadedURL: embedURL,
+                    loadedToken: reloadToken,
+                    onFullscreenChange: onFullscreenChange,
+                    onLoadEvent: onLoadEvent)
     }
 
     /// 🔴 THE TEARDOWN RESTORE, and the reason it lives here rather than only
@@ -192,10 +256,22 @@ struct LinkEmbedView: UIViewRepresentable {
     /// `Coordinator.deinit` is the third belt behind it.
     static func dismantleUIView(_ web: WKWebView, coordinator: Coordinator) {
         coordinator.restoreIfNeeded()
+        coordinator.cancelDeadline()
+        // The user content controller outlives this view inside the webview's
+        // copied configuration; a handler left registered on it keeps the
+        // coordinator alive with a page that is gone.
+        web.configuration.userContentController
+            .removeScriptMessageHandler(forName: messageHandlerName)
     }
 
-    final class Coordinator: NSObject, WKNavigationDelegate {
+    final class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
         var loadedURL: URL?
+        /// The retry counter this coordinator has already acted on.
+        var loadedToken: Int
+        /// Fires `LinkEmbedLoadEvent.deadlineExpired` if the iframe has not
+        /// reported in. Cancelled by a success and by a new load, so a stale
+        /// one cannot outlive the load it was measuring.
+        private var deadline: DispatchWorkItem?
         /// Refreshed on every `updateUIView`, so a stale closure can never be
         /// the thing holding the bars hostage.
         ///
@@ -203,6 +279,8 @@ struct LinkEmbedView: UIViewRepresentable {
         /// `@MainActor @Observable` flag; `deliver` is the only thing that
         /// calls it, and it does so from the main queue by construction.
         var onFullscreenChange: @MainActor (Bool) -> Void
+        /// Refreshed on every `updateUIView`, same reason as the one above.
+        var onLoadEvent: @MainActor (LinkEmbedLoadEvent) -> Void
         private var fullscreenObservation: NSKeyValueObservation?
         /// Observers for the window route. Removed in `deinit` — a leaked one
         /// would keep reporting for a page that is long gone.
@@ -212,9 +290,78 @@ struct LinkEmbedView: UIViewRepresentable {
         private var isFullscreen = false
 
         init(loadedURL: URL?,
-             onFullscreenChange: @escaping @MainActor (Bool) -> Void) {
+             loadedToken: Int,
+             onFullscreenChange: @escaping @MainActor (Bool) -> Void,
+             onLoadEvent: @escaping @MainActor (LinkEmbedLoadEvent) -> Void) {
             self.loadedURL = loadedURL
+            self.loadedToken = loadedToken
             self.onFullscreenChange = onFullscreenChange
+            self.onLoadEvent = onLoadEvent
+        }
+
+        // MARK: - Load reporting
+
+        /// Load the shell and start the clock.
+        func beginLoad(_ web: WKWebView, url: URL) {
+            loadedURL = url
+            reportLoad(.loadStarted)
+            cancelDeadline()
+            let work = DispatchWorkItem { [weak self] in
+                MainActor.assumeIsolated { self?.onLoadEvent(.deadlineExpired) }
+            }
+            deadline = work
+            DispatchQueue.main.asyncAfter(deadline: .now() + LinkEmbedLoadRule.deadline,
+                                          execute: work)
+            web.loadHTMLString(LinkEmbedView.shell(url), baseURL: LinkEmbedView.embedOrigin)
+        }
+
+        func cancelDeadline() {
+            deadline?.cancel()
+            deadline = nil
+        }
+
+        /// ⚠️ Named apart from the fullscreen `report(_:)` below on purpose.
+        /// Overloading on the argument type would compile, and would leave two
+        /// unrelated signals — bars-withdrawn and player-came-up — reading as
+        /// one function at every call site.
+        ///
+        /// Same main-queue dispatch as `deliver`, and for the same reason:
+        /// these are ordered against each other, and `beginLoad` runs inside
+        /// `makeUIView`, where touching the owner's `@State` synchronously is
+        /// a mutation during view update.
+        private func reportLoad(_ event: LinkEmbedLoadEvent) {
+            let callback = onLoadEvent
+            DispatchQueue.main.async {
+                MainActor.assumeIsolated { callback(event) }
+            }
+        }
+
+        /// The shell relaying its iframe's own `load` / `error`.
+        func userContentController(_ controller: WKUserContentController,
+                                   didReceive message: WKScriptMessage) {
+            guard message.name == LinkEmbedView.messageHandlerName,
+                  let event = LinkEmbedView.loadEvent(forMessageBody: message.body)
+            else { return }
+            if event == .frameLoaded { cancelDeadline() }
+            reportLoad(event)
+        }
+
+        /// The main frame dying. With `loadHTMLString` this is not the blocked
+        /// -platform case — that one never reaches the navigation delegate at
+        /// all, which is the whole reason the deadline exists — but it is free
+        /// to report and it covers a shell that somehow fails to parse.
+        func webView(_ webView: WKWebView,
+                     didFailProvisionalNavigation navigation: WKNavigation!,
+                     withError error: Error) {
+            cancelDeadline()
+            reportLoad(.mainFrameFailed)
+        }
+
+        func webView(_ webView: WKWebView,
+                     didFail navigation: WKNavigation!,
+                     withError error: Error) {
+            cancelDeadline()
+            reportLoad(.mainFrameFailed)
         }
 
         /// 🔴 `fullscreenState` (iOS 16+, KVO-observable) is the ONLY signal we
@@ -313,6 +460,7 @@ struct LinkEmbedView: UIViewRepresentable {
         /// escape `self` and `deliver` is an instance method. `restoreIfNeeded`
         /// clears the flag, so a teardown that already restored skips here.
         deinit {
+            deadline?.cancel()
             for observer in windowObservers { NotificationCenter.default.removeObserver(observer) }
             guard isFullscreen else { return }
             let callback = onFullscreenChange

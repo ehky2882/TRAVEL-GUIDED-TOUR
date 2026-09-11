@@ -67,6 +67,55 @@ enum LinkSource {
         }
     }
 
+    /// The platform's own name, for the copy shown when its player will not
+    /// load. Naming it is the whole point: "this post couldn't load" tells
+    /// someone nothing they can act on, while "Instagram can't be reached on
+    /// this network" tells them the app is fine and the network is not.
+    var displayName: String {
+        switch self {
+        case .tiktok: "TikTok"
+        case .youtube: "YouTube"
+        case .instagram: "Instagram"
+        case .other: "the platform"
+        }
+    }
+
+    /// 🔴 Deliberately says "can't be reached", NOT "is blocked". We observe a
+    /// player that did not load; we do not know why, and the honest reasons
+    /// are several — a country or network that blocks the platform, aeroplane
+    /// or captive-portal wifi, a post gone private, the platform itself down.
+    /// Naming one of them as the cause would be wrong most of the time.
+    ///
+    /// ⚠️ The `.other` case must not name a platform at all: it is reached
+    /// exactly when `LinkSource.from` did not recognise the host, so any name
+    /// here would be a guess presented as fact.
+    var unreachableHeadline: String {
+        switch self {
+        case .other: return "THIS POST WOULDN'T LOAD"
+        default: return "\(displayName.uppercased()) WOULDN'T LOAD"
+        }
+    }
+
+    /// The second line, and the one that has to do the real work: say where
+    /// the video actually comes from, because a viewer has no reason to know
+    /// that a pin is someone else's post streaming from someone else's server
+    /// rather than something Dozent holds.
+    var unreachableDetail: String {
+        // ⚠️ Explicit `return`s, unlike the single-line switch expressions
+        // elsewhere in this enum: a case body here spans lines, and a plain
+        // statement switch keeps that unambiguous.
+        switch self {
+        case .other:
+            return "This post plays from the site that hosts it, and that site "
+                + "can't be reached on this network. Downloaded tours still "
+                + "work offline."
+        default:
+            return "This post plays from \(displayName), and \(displayName) "
+                + "can't be reached on this network — some countries and "
+                + "networks block it. Downloaded tours still work offline."
+        }
+    }
+
     /// Shape of the embedded player, so the box matches the post rather than
     /// letterboxing it. TikTok and Reels are vertical by construction;
     /// YouTube's player letterboxes a Short correctly inside 16:9.
