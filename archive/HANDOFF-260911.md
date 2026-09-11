@@ -162,7 +162,7 @@ produced **a place called "The Pantheon" that excludes the Pantheon tour standin
 On the § A precedent they are snapped in (25.8 m down to 1.4 m), each move asserted inside that
 entry's own 30 m radius.
 
-### ⏸ The two held, and why holding was the answer
+### ✅ The two held — resolved by the owner the same session
 
 **Grand Central** and **Tai Kwun** each have a same-subject entry **87.9 m away — outside its own
 30 m geofence**, so it cannot be snapped without moving where that tour actually fires. For Grand
@@ -170,6 +170,38 @@ Central it is worse: the far entries are the **existing `Grand Central Terminal`
 creating this one would put a second place of the same name 88 m from the first. The choice is
 **move the far entries onto one coordinate, accepting the 88 m shift in their trigger point, or
 leave the site split in two** — editorial, not mechanical.
+
+The owner took both, and the answers were not symmetrical.
+
+**Grand Central: move them in.** The two pins joined the existing place, **88.4 m each**; it now
+has four members. This really does change where they fire — north concourse to the 42nd Street
+facade — and that was the accepted cost.
+
+**Tai Kwun: re-site the place itself.** *"Put tai kwun place in the dead center of the tai kwun
+courtyard, and madame fu try to locate more precisely on the map."* So the new **Tai Kwun** place
+sits at **22.281513, 114.154187 — the centre of OSM's 檢閱廣場 Parade Ground way** — holding *The
+Public Spaces of Tai Kwun* and the *Tai Kwun | 大館* tour (43.7 m and 45.5 m). ⚠️ Both are outside
+the 30 m geofence, and here that is the **point**: the tour fired at the Hollywood Road gate and
+will now fire when someone actually reaches the courtyard. ⚠️ **Only ONE Atlas Tai Kwun tour
+exists** — the instruction said "the atlas tours".
+
+**Madame Fu: relocated, and deliberately left out.** It was sitting on OSM's generic
+representative point for the whole compound — which is precisely why it and *The Public Spaces of
+Tai Kwun* were coincident and looked like one site. It now sits at **22.2813602, 114.1539782, the
+restaurant's OWN published `businessLocationCoordinates`**, which lands **0.3 m from OSM's 營房大樓
+Barrack Block centre** — two independent sources agreeing, with the site's address reading *3/F,
+Barrack Block, Tai Kwun*. That move is 22.9 m, **inside** its geofence, so it needed no waiver.
+
+🔴 **Madame Fu ends 27.4 m from the place — just outside the 25 m TIGHT radius, so the sweep does
+not report it, which was checked rather than assumed.** It is out because a restaurant inside a
+heritage compound is not the compound. **Standing decision, like Tibidabo — do not "fix" it.**
+
+⚠️ **Three of those four moves exceed the entry's own `triggerRadiusMeters`, so the guard that
+protected § A and § B had to be waived.** It is **not removed** — it is waived per entry, in the
+script, each with its reason, so the next move that oversteps still stops.
+
+**After: 181 places, validator 0/0, seed 181, and the sweep goes 40 exact → 0 — the checker now
+exits 0. Every coincident group in the catalogue is a place.**
 
 ### Verified
 

@@ -169,7 +169,7 @@ own 30 m trigger radius:
 | *Catacombs of Paris* (tour) | Catacombs of Paris | 5.7 m |
 | *Museum of Chinese in America* | Museum of Chinese in America | 1.4 m |
 
-### ⏸ Two held — they need a decision, and skipping them quietly would have been wrong
+### ✅ The two held are now RESOLVED (owner, 2026-09-11) — see below. The original statement of the problem:
 
 Both have a same-subject entry **87.9 m away, outside its own 30 m geofence**, so it *cannot* be
 snapped in without changing where that tour actually fires:
@@ -184,10 +184,50 @@ worse than no place. The choice is **move the far entries onto one coordinate** 
 their geofence then fires 88 m from where it does today — **or leave the site split in two.**
 That is an editorial call, not a mechanical one.
 
+### ✅ How the owner resolved them
+
+**Grand Central — *"yes move the tour into the place".*** The two coincident pins joined the
+existing `Grand Central Terminal` place, an **88.4 m move each**. That place now has four members.
+⚠️ **This genuinely changes where those two pins fire** — from the north end of the concourse to
+the 42nd Street facade — which is the cost the owner accepted.
+
+**Tai Kwun — *"'the public spaces of tai kwun' and the atlas tours belong in the place. madame fu
+should be outside of it. but maybe put tai kwun place in the dead center of the tai kwun courtyard
+and madame fu try to locate more precisely on the map".***
+
+A new place **Tai Kwun** sits at **22.281513, 114.154187 — the centre of OSM's 檢閱廣場 Parade
+Ground way**, the larger of the compound's two courtyards. Its two members are *The Public Spaces
+of Tai Kwun* (43.7 m) and the *Tai Kwun | 大館* tour (45.5 m). ⚠️ **Both moves are outside the
+30 m geofence, deliberately, and here it is an improvement**: the tour currently fires at the
+Hollywood Road gate and will now fire when the listener actually reaches the courtyard.
+
+⚠️ **There is only ONE Atlas tour for Tai Kwun**, not several — *Tai Kwun | 大館*. The instruction
+said "the atlas tours"; the catalogue has one.
+
+**Madame Fu** is relocated and **deliberately left outside the place**. It now sits at
+**22.2813602, 114.1539782 — the restaurant's own published `businessLocationCoordinates` on
+madamefu.com.hk**, which is **0.3 m from OSM's 營房大樓 Barrack Block centre**: two independent
+sources agreeing, and its address there reads *3/F, Barrack Block, Tai Kwun, 10 Hollywood Road*.
+That is a 22.9 m move — **inside** its own geofence, so no waiver was needed. It was previously
+sitting on OSM's generic representative point for the whole compound, which is why it and *The
+Public Spaces of Tai Kwun* were coincident in the first place.
+
+🔴 **Madame Fu ends up 27.4 m from the Tai Kwun place — just outside the 25 m TIGHT radius — so
+the sweep does not report it, checked.** It is out because the owner said so, not by accident:
+a restaurant inside a heritage compound is not the compound. Treat this like the Tibidabo
+precedent and do not "fix" it.
+
+### The guard had to be waived, and only per entry
+
+Three of those four moves exceed the entry's own `triggerRadiusMeters`. The assertion that
+protected § A and § B is **not removed** — it is waived per entry, in the script, with the reason
+recorded. Madame Fu's move was inside its radius and took no waiver.
+
 ### After
 
-Validator **0 errors / 0 warnings** across 1,552 tours + 1,717 pins + **180 places** (was 142).
-Seed emits 180. The sweep goes **40 exact → 2**, and those 2 are exactly the held pair.
+Validator **0 errors / 0 warnings** across 1,552 tours + 1,717 pins + **181 places** (was 142).
+Seed emits 181. The sweep goes **40 exact → 0**, and `check-place-candidates.py` now **exits 0**:
+every coincident group in the catalogue is a place.
 
 ⚠️ **The numbering below is the original sweep and is deliberately NOT renumbered** — B15 and B83
 are cited elsewhere. Re-run `check-place-candidates.py` for the live remaining menu.
