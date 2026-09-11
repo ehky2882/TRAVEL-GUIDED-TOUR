@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 17:09 UTC against `main` at `20b78c9b`.** Every number here is a reading of
+**Regenerated 2026-09-11 18:02 UTC against `main` at `46146ff5`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -11,7 +11,7 @@ python3 scripts/make-place-menu.py
 
 A `Place` is a site that more than one entry describes: the site becomes the thing on the map
 and the entries become its contents. The catalogue holds
-**287 places covering 690 entries**.
+**288 places covering 694 entries**.
 
 The 2026-09-11 sweep found 221 candidates and **45 became places** — 7 existing places gained
 the 8 entries standing on them, 38 new places came from the 0 m rows, and both held groups
@@ -23,7 +23,7 @@ the normal condition. What follows is what is open **right now**.
 
 | | Finding | Act on it? |
 |---|---|---|
-| **§ 1** | **3 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
+| **§ 1** | **0 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
 | **§ 2** | **0 sites** with 2+ entries within 25 m | Owner picks |
 | **§ 3** | 20 same-subject pairs 25–500 m apart | Read one at a time |
 | **§ 4** | 32 groups **already declined** | Do not re-offer |
@@ -32,7 +32,7 @@ the normal condition. What follows is what is open **right now**.
 
 A place needs its own **name, description, address and a chosen coordinate**. And because a
 place's identity is **exact coordinate equality** (`Place.swift`, enforced by `validate-tours`
-at 1e-9°), every member is **snapped onto that coordinate** — all 690 existing members sit
+at 1e-9°), every member is **snapped onto that coordinate** — all 694 existing members sit
 exactly on their place. Creating a place *moves things on the map*.
 
 ⚠️ **Check each move against the entry's own `triggerRadiusMeters` (30 m) first.** A move inside
@@ -49,16 +49,6 @@ trigger, and nothing else in the pipeline would object.
 Proximity is evidence, not proof. Nothing here auto-creates.
 
 ---
-
-## § 1 — on an identical coordinate (3)
-
-The catalogue's documented identity rule: provably one site, no editorial judgement.
-
-| # | City | Entries |
-|---|---|---|
-| **Z1** | Los Angeles | `[tour]` Gamble House<br>`[pin]` The Gamble House |
-| **Z2** | Montreal | `[tour]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
-| **Z3** | New York | `[tour]` The Noguchi Museum<br>`[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[pin]` The Noguchi Museum *(in The Noguchi Museum)* |
 
 ## § 2 — 0 sites with two or more entries within 25 m
 
