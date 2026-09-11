@@ -946,3 +946,40 @@ more effort would help — and note Instagram is the *largest* platform in this 
 Web search was tried as a second channel. It is a **lucky dip, not an enumerator**: one query
 returned 8 real TikTok URLs spanning 2021–2026, while topical follow-ups returned TikTok
 *discover* pages and other creators entirely.
+
+## A place propagates a coordinate error — check the place, not just its members (2026-09-11)
+
+🔴 **`Habitat 67`'s PLACE sat 363 m from the building, and both its members sat
+with it.** A place's coordinate *is* its identity, so every member is pinned to
+it — which means **one wrong coordinate silently relocated two entries, and
+neither could disagree**: sitting exactly on the place is what membership
+requires. The validator was satisfied. The sweep was satisfied. Nothing in the
+pipeline is capable of noticing.
+
+The only reason it was visible at all is that a **third pin, outside the place**,
+sat 10.9 m from the real building. Without that pin the place would have stayed
+wrong indefinitely.
+
+⚠️ **So a place is a way to PROPAGATE a coordinate error, not only a way to group
+entries.** Check a place's own coordinate against the source, not only its
+members against the place — the second check passes by construction.
+
+Found the same day as three plain entry defects (Gamble House 343 m, the Noguchi
+Museum 497 m), all by the same method: **ask which member OSM agrees with.** In
+the 26–49 m band that question showed the link pin sitting on the feature in
+**fifteen of seventeen** groups, with the Atlas tour off — pins are geocoded per
+link at import, while tours carry coordinates typed once and never checked. A
+4-decimal coordinate is the signature.
+
+⚠️ **And check a "false positive" as hard as a real one.** `Lloyd's of London /
+The Leadenhall Building at 7 m` was called an obvious two-buildings-across-a-
+street false positive and recommended for decline. It was a defect in disguise —
+the Lloyd's tour was on the Leadenhall Building — and **declining it would have
+buried the bug under a decision**, where nothing would look again. From the
+titles, a wrong coordinate and a genuine neighbour are indistinguishable; that is
+the whole reason the tight tier is distance-only.
+
+⚠️ **Before "fixing" an inconsistency, check whether it is a convention.** The
+Gamble House tour says `city: Los Angeles` while its pin says `Pasadena`, and the
+building is in Pasadena. That maker files **all 42** of its tours as Los Angeles,
+so changing this one would make it the sole exception. Flag, don't fix.
