@@ -10978,8 +10978,8 @@
           "order": 0,
           "title": "The Barbican",
           "caption": "Find your way up onto the raised walkways and look down over the lake to the concrete towers.",
-          "latitude": 51.5202,
-          "longitude": -0.0935,
+          "latitude": 51.519751,
+          "longitude": -0.094221,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/barbican.mp3",
           "audioDurationSeconds": 145,
           "triggerMode": "geofenced",
@@ -10989,8 +10989,8 @@
         }
       ],
       "primaryCategory": "architecture",
-      "centroidLatitude": 51.5202,
-      "centroidLongitude": -0.0935,
+      "centroidLatitude": 51.519751,
+      "centroidLongitude": -0.094221,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "The Barbican is a vast complex of raw concrete towers, walkways, terraces and a lake on a 35-acre site in the City — and to understand it you have to know what was here before: nothing, or rather rubble. The whole area was flattened in the Blitz, bombed so completely in a single night in 1940 that it became an open wasteland in the middle of London. The Barbican is what they built on the crater: a complete, utopian vision of how people might live in a city. Three huge towers, among the tallest residential buildings in Europe when they opened, plus long blocks of flats, all raised on a network of elevated walkways so pedestrians float above the traffic; gardens, a lake with fountains, a conservatory full of tropical plants, and at the centre an arts centre — concert hall, theatres, cinemas, galleries — one of the largest in Europe. It was designed by Chamberlin, Powell and Bon over the 1960s and 70s, all in the rough, board-marked concrete the style is named for: Brutalism, from the French for raw concrete, béton brut.\n\nHere's what people miss. The Barbican is genuinely hard to navigate — the elevated walkways confuse everyone, there are painted lines on the floor to help you find the arts centre, and residents joke that getting lost is part of living here. For years that, plus the grey concrete, made it many people's idea of an eyesore. And yet the people who live here adore it, it's now a protected listed building, and a whole generation has decided the Brutalist concrete it was once mocked for is beautiful. That's the real story: a bombed hole in the City, filled with one of the most complete and ambitious visions of urban living Britain ever attempted — too strange to love at first, slowly claimed as a masterpiece. Walk up onto the raised walkways and look down over the lake to the towers: a whole little world, sealed off from the streets, exactly as its architects intended.",
@@ -84946,6 +84946,21 @@
       "tourIds": [
         "47850BC7-D6BB-5410-9143-762B593EA124",
         "51EDB2E0-5A2E-48B2-8490-36A5622CCED7"
+      ]
+    },
+    {
+      "id": "693d1d20-ce5b-5b32-886f-51c4c1b1ce1b",
+      "name": "The Barbican",
+      "description": "Chamberlin, Powell and Bon's estate on ground the Blitz flattened: forty acres of board-marked concrete, three towers, elevated walkways and a lake, built 1965-76 and Grade II listed. The arts centre buried inside it is the largest in Europe, and the walkways are famously impossible to navigate.",
+      "latitude": 51.519751,
+      "longitude": -0.094221,
+      "city": "London",
+      "address": "Silk Street, London",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
+        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82"
       ]
     }
   ],
@@ -165953,8 +165968,8 @@
           "order": 0,
           "title": "Barbican Estate",
           "caption": "What do you think of the Barbican? #architecture #design #brutalism #blockseries #barbican #fyp",
-          "latitude": 51.519563,
-          "longitude": -0.094688,
+          "latitude": 51.519751,
+          "longitude": -0.094221,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -165966,8 +165981,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.519563,
-      "centroidLongitude": -0.094688,
+      "centroidLatitude": 51.519751,
+      "centroidLongitude": -0.094221,
       "city": "London",
       "country": "United Kingdom",
       "primaryCategory": "architecture",

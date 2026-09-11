@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 16:40 UTC against `main` at `8760b7f0`.** Every number here is a reading of
+**Regenerated 2026-09-11 16:48 UTC against `main` at `f53d4a73`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -11,7 +11,7 @@ python3 scripts/make-place-menu.py
 
 A `Place` is a site that more than one entry describes: the site becomes the thing on the map
 and the entries become its contents. The catalogue holds
-**286 places covering 688 entries**.
+**287 places covering 690 entries**.
 
 The 2026-09-11 sweep found 221 candidates and **45 became places** — 7 existing places gained
 the 8 entries standing on them, 38 new places came from the 0 m rows, and both held groups
@@ -25,14 +25,14 @@ the normal condition. What follows is what is open **right now**.
 |---|---|---|
 | **§ 1** | **0 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
 | **§ 2** | **0 sites** with 2+ entries within 25 m | Owner picks |
-| **§ 3** | 26 same-subject pairs 25–500 m apart | Read one at a time |
+| **§ 3** | 25 same-subject pairs 25–500 m apart | Read one at a time |
 | **§ 4** | 32 groups **already declined** | Do not re-offer |
 
 ## 🔴 What creating one costs — it is never just a list entry
 
 A place needs its own **name, description, address and a chosen coordinate**. And because a
 place's identity is **exact coordinate equality** (`Place.swift`, enforced by `validate-tours`
-at 1e-9°), every member is **snapped onto that coordinate** — all 688 existing members sit
+at 1e-9°), every member is **snapped onto that coordinate** — all 690 existing members sit
 exactly on their place. Creating a place *moves things on the map*.
 
 ⚠️ **Check each move against the entry's own `triggerRadiusMeters` (30 m) first.** A move inside
@@ -58,7 +58,7 @@ none is a chain of separate sites strung together.
 | # | City | Span | Entries |
 |---|---|---|---|
 
-## § 3 — 26 same-subject pairs 25–500 m apart
+## § 3 — 25 same-subject pairs 25–500 m apart
 
 Related by name but not coincident. **Never auto-create these** — picking the one coordinate
 is an editorial decision, and some are deliberately two subjects.
@@ -69,28 +69,27 @@ is an editorial decision, and some are deliberately two subjects.
 | N2 | Bronx | 31 m | `[pin]` Yankee Stadium *(in Yankee Stadium)*<br>`[pin]` Yankee Stadium and a Baseball Anthem |
 | N3 | Milan | 49 m | `[tour]` Fondazione Prada<br>`[pin]` Bar Luce at Fondazione Prada |
 | N4 | New York | 89 m | `[tour]` Little Island, Southwest Overlook<br>`[pin]` Little Island |
-| N5 | London | 109 m | `[pin]` Barbican Estate<br>`[tour]` The Barbican |
-| N6 | Hong Kong | 129 m | `[tour]` Victoria Peak \| 太平山頂<br>`[pin]` Bakehouse at Victoria Peak |
-| N7 | London | 135 m | `[pin]` Big Ben<br>`[tour]` Houses of Parliament and Big Ben *(in Houses of Parliament)* |
+| N5 | Hong Kong | 129 m | `[tour]` Victoria Peak \| 太平山頂<br>`[pin]` Bakehouse at Victoria Peak |
+| N6 | London | 135 m | `[pin]` Big Ben<br>`[tour]` Houses of Parliament and Big Ben *(in Houses of Parliament)* |
+| N7 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
 | N8 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
-| N9 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
-| N10 | New York | 147 m | `[pin]` Times Square *(in Times Square)*<br>`[tour]` Times Square — The View from the Red Steps |
-| N11 | New York | 173 m | `[pin]` The Times Square Mosaic Map<br>`[pin]` Times Square *(in Times Square)* |
-| N12 | San Francisco | 257 m | `[tour]` Chinatown: The City That Refused to Move<br>`[pin]` Chinatown |
-| N13 | Paris | 276 m | `[pin]` Petit Palais<br>`[tour]` Pont Alexandre III & Petit Palais |
-| N14 | Hong Kong | 289 m | `[pin]` Kowloon Park Stone Columns \| 九龍公園百年石柱<br>`[pin]` Kowloon Park |
-| N15 | Stockholm | 301 m | `[tour]` Gamla stan 1859<br>`[tour]` Gamla stan *(in Gamla stan)* |
-| N16 | Pasadena | 343 m | `[pin]` The Gamble House<br>`[tour]` Gamble House |
-| N17 | Montreal | 363 m | `[tour]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
-| N18 | Montreal | 363 m | `[pin]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
-| N19 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
-| N20 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
-| N21 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
-| N22 | New York | 424 m | `[pin]` Governors Island<br>`[tour]` Governors Island |
-| N23 | Brooklyn | 428 m | `[tour]` Domino Park<br>`[pin]` Domino Park |
-| N24 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
+| N9 | New York | 147 m | `[pin]` Times Square *(in Times Square)*<br>`[tour]` Times Square — The View from the Red Steps |
+| N10 | New York | 173 m | `[pin]` The Times Square Mosaic Map<br>`[pin]` Times Square *(in Times Square)* |
+| N11 | San Francisco | 257 m | `[tour]` Chinatown: The City That Refused to Move<br>`[pin]` Chinatown |
+| N12 | Paris | 276 m | `[pin]` Petit Palais<br>`[tour]` Pont Alexandre III & Petit Palais |
+| N13 | Hong Kong | 289 m | `[pin]` Kowloon Park Stone Columns \| 九龍公園百年石柱<br>`[pin]` Kowloon Park |
+| N14 | Stockholm | 301 m | `[tour]` Gamla stan 1859<br>`[tour]` Gamla stan *(in Gamla stan)* |
+| N15 | Pasadena | 343 m | `[pin]` The Gamble House<br>`[tour]` Gamble House |
+| N16 | Montreal | 363 m | `[tour]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
+| N17 | Montreal | 363 m | `[pin]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
+| N18 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
+| N19 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
+| N20 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
+| N21 | New York | 424 m | `[pin]` Governors Island<br>`[tour]` Governors Island |
+| N22 | Brooklyn | 428 m | `[tour]` Domino Park<br>`[pin]` Domino Park |
+| N23 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
+| N24 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
 | N25 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
-| N26 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
 
 ## § 4 — declined, standing (32 groups + 1 named case)
 
