@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 11:07 UTC against `main` at `cec21ea`.** Every number here is a reading of
+**Regenerated 2026-09-11 11:52 UTC against `main` at `55e9316`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -11,7 +11,7 @@ python3 scripts/make-place-menu.py
 
 A `Place` is a site that more than one entry describes: the site becomes the thing on the map
 and the entries become its contents. The catalogue holds
-**249 places covering 603 entries**.
+**250 places covering 605 entries**.
 
 The 2026-09-11 sweep found 221 candidates and **45 became places** — 7 existing places gained
 the 8 entries standing on them, 38 new places came from the 0 m rows, and both held groups
@@ -24,7 +24,7 @@ the normal condition. What follows is what is open **right now**.
 | | Finding | Act on it? |
 |---|---|---|
 | **§ 1** | **0 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
-| **§ 2** | **1 sites** with 2+ entries within 25 m | Owner picks |
+| **§ 2** | **0 sites** with 2+ entries within 25 m | Owner picks |
 | **§ 3** | 75 same-subject pairs 25–500 m apart | Read one at a time |
 | **§ 4** | 28 groups **already declined** | Do not re-offer |
 
@@ -32,7 +32,7 @@ the normal condition. What follows is what is open **right now**.
 
 A place needs its own **name, description, address and a chosen coordinate**. And because a
 place's identity is **exact coordinate equality** (`Place.swift`, enforced by `validate-tours`
-at 1e-9°), every member is **snapped onto that coordinate** — all 603 existing members sit
+at 1e-9°), every member is **snapped onto that coordinate** — all 605 existing members sit
 exactly on their place. Creating a place *moves things on the map*.
 
 ⚠️ **Check each move against the entry's own `triggerRadiusMeters` (30 m) first.** A move inside
@@ -50,14 +50,13 @@ Proximity is evidence, not proof. Nothing here auto-creates.
 
 ---
 
-## § 2 — 1 sites with two or more entries within 25 m
+## § 2 — 0 sites with two or more entries within 25 m
 
 Built only from hops of 25 m or less; the widest group is **0 m** end to end, so
 none is a chain of separate sites strung together.
 
 | # | City | Span | Entries |
 |---|---|---|---|
-| P1 | Los Angeles | 0 m | `[tour]` Academy Museum of Motion Pictures<br>`[pin]` The Walt Disney Company Piazza |
 
 ## § 3 — 75 same-subject pairs 25–500 m apart
 
