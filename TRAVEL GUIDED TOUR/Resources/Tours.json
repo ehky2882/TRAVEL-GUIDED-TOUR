@@ -43517,8 +43517,8 @@
           "order": 0,
           "title": "The Jordaan",
           "caption": "Wander the narrow canals and lanes of the Jordaan, the Westertoren always somewhere overhead.",
-          "latitude": 52.3747,
-          "longitude": 4.8839,
+          "latitude": 52.3746,
+          "longitude": 4.8819,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jordaan.mp3",
           "audioDurationSeconds": 163,
           "triggerMode": "geofenced",
@@ -43530,8 +43530,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 163,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 52.3747,
-      "centroidLongitude": 4.8839,
+      "centroidLatitude": 52.3746,
+      "centroidLongitude": 4.8819,
       "city": "Amsterdam",
       "country": "Netherlands",
       "primaryCategory": "culturalHeritage",
@@ -44541,8 +44541,8 @@
           "order": 0,
           "title": "The Jordaan — Introduction",
           "caption": "Start on the Westermarkt beside the Westerkerk, the Jordaan opening out before you.",
-          "latitude": 52.3747,
-          "longitude": 4.8839,
+          "latitude": 52.3746,
+          "longitude": 4.8819,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/amsterdam-jordaan-walk_stop0.mp3",
           "audioDurationSeconds": 103,
           "triggerMode": "manual",
@@ -80562,22 +80562,6 @@
       ]
     },
     {
-      "id": "4690687e-da8b-52d8-8a80-c87c6beb1c13",
-      "name": "Westerkerk",
-      "description": "Hendrick de Keyser's church was finished in 1631, and its tower is still the tallest in Amsterdam, crowned with the blue imperial crown of Maximilian. Rembrandt was buried somewhere inside it, poor, in a grave nobody marked.",
-      "latitude": 52.3747,
-      "longitude": 4.8839,
-      "city": "Amsterdam",
-      "address": "Prinsengracht, Amsterdam",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westerkerk_2.webp",
-      "additionalImageURLs": null,
-      "tourIds": [
-        "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
-        "0e0bbe76-3b8d-5ace-934c-991b9c8c3997",
-        "7d488e09-757f-581d-8de7-12b7a77c8067"
-      ]
-    },
-    {
       "id": "60270b85-f701-5e6f-8cd0-8118ad672de0",
       "name": "Brandenburg Gate",
       "description": "Built in 1791 as a gate of peace, and marched through, sealed off and claimed by everyone who has held the city since. Pariser Platz around it sat inside the border strip for twenty-eight years, reachable from neither side.",
@@ -84609,6 +84593,21 @@
       "tourIds": [
         "2E287638-5962-5237-9457-7DB053320841",
         "cb02350a-3b71-53c1-afc6-439356196f59"
+      ]
+    },
+    {
+      "id": "b1fbf76b-b72c-56d8-96fb-0b1943e2b077",
+      "name": "The Jordaan",
+      "description": "Amsterdam's old workers' quarter, laid out in the 17th century outside the canal ring for artisans and immigrants and packed tight enough to riot in. Gentrified now, but the narrow lanes, the hidden hofjes and the small brown cafés survived the rebuilding that was planned for it in the 1970s.",
+      "latitude": 52.3746,
+      "longitude": 4.8819,
+      "city": "Amsterdam",
+      "address": "Jordaan, Amsterdam",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
+        "7d488e09-757f-581d-8de7-12b7a77c8067"
       ]
     }
   ],

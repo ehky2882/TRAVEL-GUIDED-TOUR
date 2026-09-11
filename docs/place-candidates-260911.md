@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 12:51 UTC against `main` at `19d1e91c`.** Every number here is a reading of
+**Regenerated 2026-09-11 13:09 UTC against `main` at `ee2127cb`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -11,7 +11,7 @@ python3 scripts/make-place-menu.py
 
 A `Place` is a site that more than one entry describes: the site becomes the thing on the map
 and the entries become its contents. The catalogue holds
-**266 places covering 643 entries**.
+**266 places covering 642 entries**.
 
 The 2026-09-11 sweep found 221 candidates and **45 became places** — 7 existing places gained
 the 8 entries standing on them, 38 new places came from the 0 m rows, and both held groups
@@ -24,15 +24,15 @@ the normal condition. What follows is what is open **right now**.
 | | Finding | Act on it? |
 |---|---|---|
 | **§ 1** | **1 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
-| **§ 2** | **0 sites** with 2+ entries within 25 m | Owner picks |
-| **§ 3** | 43 same-subject pairs 25–500 m apart | Read one at a time |
+| **§ 2** | **4 sites** with 2+ entries within 25 m | Owner picks |
+| **§ 3** | 47 same-subject pairs 25–500 m apart | Read one at a time |
 | **§ 4** | 32 groups **already declined** | Do not re-offer |
 
 ## 🔴 What creating one costs — it is never just a list entry
 
 A place needs its own **name, description, address and a chosen coordinate**. And because a
 place's identity is **exact coordinate equality** (`Place.swift`, enforced by `validate-tours`
-at 1e-9°), every member is **snapped onto that coordinate** — all 643 existing members sit
+at 1e-9°), every member is **snapped onto that coordinate** — all 642 existing members sit
 exactly on their place. Creating a place *moves things on the map*.
 
 ⚠️ **Check each move against the entry's own `triggerRadiusMeters` (30 m) first.** A move inside
@@ -58,15 +58,19 @@ The catalogue's documented identity rule: provably one site, no editorial judgem
 |---|---|---|
 | **Z1** | Chicago | `[tour]` Obama Presidential Center<br>`[pin]` Obama Presidential Center *(in Obama Presidential Center)*<br>`[pin]` Obama Presidential Center *(in Obama Presidential Center)* |
 
-## § 2 — 0 sites with two or more entries within 25 m
+## § 2 — 4 sites with two or more entries within 25 m
 
-Built only from hops of 25 m or less; the widest group is **0 m** end to end, so
+Built only from hops of 25 m or less; the widest group is **19 m** end to end, so
 none is a chain of separate sites strung together.
 
 | # | City | Span | Entries |
 |---|---|---|---|
+| P1 | London | 7 m | `[tour]` Lloyd's of London<br>`[pin]` The Leadenhall Building (The Cheesegrater) |
+| P2 | London | 15 m | `[pin]` Bizarre Buildings of London - part 17: Trellick Tower (re…<br>`[pin]` Trellick Tower |
+| P3 | London | 19 m | `[pin]` Tate Modern<br>`[tour]` Tate Modern |
+| P4 | Sant Just Desvern | 0 m | `[pin]` Living in Walden 7 *(in Walden 7)*<br>`[tour]` Walden 7 *(in Walden 7)*<br>`[pin]` Walden 7 |
 
-## § 3 — 43 same-subject pairs 25–500 m apart
+## § 3 — 47 same-subject pairs 25–500 m apart
 
 Related by name but not coincident. **Never auto-create these** — picking the one coordinate
 is an editorial decision, and some are deliberately two subjects.
@@ -97,25 +101,29 @@ is an editorial decision, and some are deliberately two subjects.
 | N22 | New York | 49 m | `[pin]` The Ford Foundation Building<br>`[tour]` Ford Foundation Building |
 | N23 | Milan | 49 m | `[tour]` Fondazione Prada<br>`[pin]` Bar Luce at Fondazione Prada |
 | N24 | New York | 89 m | `[tour]` Little Island, Southwest Overlook<br>`[pin]` Little Island |
-| N25 | Hong Kong | 129 m | `[tour]` Victoria Peak \| 太平山頂<br>`[pin]` Bakehouse at Victoria Peak |
-| N26 | London | 135 m | `[pin]` Big Ben<br>`[tour]` Houses of Parliament and Big Ben *(in Houses of Parliament)* |
-| N27 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
-| N28 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
-| N29 | New York | 147 m | `[pin]` Times Square *(in Times Square)*<br>`[tour]` Times Square — The View from the Red Steps |
-| N30 | New York | 173 m | `[pin]` The Times Square Mosaic Map<br>`[pin]` Times Square *(in Times Square)* |
-| N31 | San Francisco | 257 m | `[tour]` Chinatown: The City That Refused to Move<br>`[pin]` Chinatown |
-| N32 | Paris | 276 m | `[pin]` Petit Palais<br>`[tour]` Pont Alexandre III & Petit Palais |
-| N33 | Hong Kong | 289 m | `[pin]` Kowloon Park Stone Columns \| 九龍公園百年石柱<br>`[pin]` Kowloon Park |
-| N34 | Stockholm | 301 m | `[tour]` Gamla stan 1859<br>`[tour]` Gamla stan *(in Gamla stan)* |
-| N35 | Pasadena | 343 m | `[pin]` The Gamble House<br>`[tour]` Gamble House |
-| N36 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
-| N37 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
-| N38 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
-| N39 | New York | 424 m | `[pin]` Governors Island<br>`[tour]` Governors Island |
-| N40 | Brooklyn | 428 m | `[tour]` Domino Park<br>`[pin]` Domino Park |
-| N41 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
-| N42 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
-| N43 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
+| N25 | London | 93 m | `[pin]` Lloyd's Building<br>`[tour]` Lloyd's of London |
+| N26 | London | 109 m | `[pin]` Barbican Estate<br>`[tour]` The Barbican |
+| N27 | Hong Kong | 129 m | `[tour]` Victoria Peak \| 太平山頂<br>`[pin]` Bakehouse at Victoria Peak |
+| N28 | London | 135 m | `[pin]` Big Ben<br>`[tour]` Houses of Parliament and Big Ben *(in Houses of Parliament)* |
+| N29 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
+| N30 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
+| N31 | New York | 147 m | `[pin]` Times Square *(in Times Square)*<br>`[tour]` Times Square — The View from the Red Steps |
+| N32 | New York | 173 m | `[pin]` The Times Square Mosaic Map<br>`[pin]` Times Square *(in Times Square)* |
+| N33 | San Francisco | 257 m | `[tour]` Chinatown: The City That Refused to Move<br>`[pin]` Chinatown |
+| N34 | Paris | 276 m | `[pin]` Petit Palais<br>`[tour]` Pont Alexandre III & Petit Palais |
+| N35 | Hong Kong | 289 m | `[pin]` Kowloon Park Stone Columns \| 九龍公園百年石柱<br>`[pin]` Kowloon Park |
+| N36 | Stockholm | 301 m | `[tour]` Gamla stan 1859<br>`[tour]` Gamla stan *(in Gamla stan)* |
+| N37 | Pasadena | 343 m | `[pin]` The Gamble House<br>`[tour]` Gamble House |
+| N38 | Montreal | 363 m | `[tour]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
+| N39 | Montreal | 363 m | `[pin]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
+| N40 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
+| N41 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
+| N42 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
+| N43 | New York | 424 m | `[pin]` Governors Island<br>`[tour]` Governors Island |
+| N44 | Brooklyn | 428 m | `[tour]` Domino Park<br>`[pin]` Domino Park |
+| N45 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
+| N46 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
+| N47 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
 
 ## § 4 — declined, standing (32 groups + 1 named case)
 
