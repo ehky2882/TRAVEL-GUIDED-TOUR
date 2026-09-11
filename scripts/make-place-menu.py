@@ -111,6 +111,14 @@ DECLINED_GROUPS = {
         "owner: keep separate — a building and a walk that passes it",
     frozenset({"Pellegrino 2000", "The Rover"}):
         "dense block — two separate Sydney venues",
+
+    # The last four coincident groups, decided 2026-09-11.
+    frozenset({"The Dark Secret of Wall Street", "The Red Room at One Wall Street"}):
+        "owner: the Dark Secret joined the Wall Street place; the Red Room stays separate — it is One Wall Street, a different building",
+    frozenset({"Academy Museum of Motion Pictures", "Jeff Koons' Split-Rocker Edition", "LACMA"}):
+        "owner: all different — pins improved instead; LACMA and the Academy Museum were both 4 dp and are now 175 m apart",
+    frozenset({"Dieci", "Kau Kee | 九記牛腩", "O'rm"}):
+        "owner: all separate — dense block, a noodle shop and two neighbours",
 }
 
 
