@@ -428,23 +428,30 @@ body.splash {
 /* ---------------------------------------------------------------
    The App Store badge.
 
-   🔴 APPLE'S ARTWORK, UNMODIFIED — `download-on-the-app-store.svg` is
+   🔴 APPLE'S ARTWORK, UNMODIFIED — `download-on-the-app-store-black.svg` is
    fetched from Apple's marketing toolbox and committed as delivered.
    Apple's Marketing Guidelines do not permit redrawing it, restyling
    it, changing its colours or setting the words as live text, so this
    rule sizes the badge and gives it room and does nothing else.
 
-   The WHITE variant, because every page here sits on `--bg: #000000`;
-   the black badge is for light grounds. If a light theme is ever
-   restored (see the note at the top of this file), the black badge has
-   to come with it.
+   The BLACK variant (owner, 2026-09-11). Apple supplies it with a white
+   hairline border, so on this black ground it reads as an outlined button
+   and sits with the site's other chrome — underlined links, thin type, no
+   solid fills. The white one is a solid block and was the loudest thing on
+   the site. If a light theme is ever restored (see the note at the top of
+   this file), the WHITE artwork is the one that works there — they swap.
 
-   Apple asks for clear space of at least a quarter of the badge's
-   height on all sides. At `--appstore-badge-w: 160px` the artwork is
-   ~53px tall (its viewBox is 119.66 x 40), so the quarter is ~13px and
-   the `--md` margin below clears it comfortably. **Re-check that sum if
-   the width changes.** */
-:root { --appstore-badge-w: 160px; }
+   🔴 120px IS THE FLOOR, NOT A PREFERENCE. Apple's guidelines: "Minimum
+   badge height is 10 mm for use in printed materials and 40 px for use
+   onscreen." The viewBox is 119.66 x 40, so 120px wide is exactly 40px
+   tall — the smallest compliant size. The owner asked for half of the
+   original 160px; 80px would be 27px tall and out of spec, and the render
+   showed "Download on the" going illegible. **Do not go below 120.**
+
+   Apple also asks for clear space of at least a quarter of the badge's
+   height on all sides. At 40px tall that is 10px, and the `--md` (16px)
+   margin clears it. **Re-check that sum if the width changes.** */
+:root { --appstore-badge-w: 120px; }
 
 .appstore-badge {
   display: inline-block;
