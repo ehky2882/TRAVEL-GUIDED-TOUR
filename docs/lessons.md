@@ -814,3 +814,24 @@ the pipeline would object.
 ⚠️ **This is also why a place candidate is never free.** A sweep can say "these two entries are
 4 m apart"; turning that into a place means choosing the one true coordinate and moving
 everything onto it. That is an editorial decision, which is why nothing auto-creates one.
+
+## A literal `|` in a title silently corrupts a markdown table (2026-09-11)
+
+24 entries in this catalogue carry a pipe in the title — the bilingual convention,
+`Museum SAN | 뮤지엄 산`, `Tai Kwun | 大館`. Dropped unescaped into a markdown table it **opens an
+extra column and shifts every cell after it in that row**.
+
+🔴 **It does not look broken.** There is no error and no ragged output — the row renders as a
+perfectly plausible table with the wrong data in the wrong columns. It was caught here only by
+counting columns, not by reading the page.
+
+Two habits close it, and `scripts/make-place-menu.py` carries both:
+
+- Escape once, centrally (`esc()`), on **every** field that reaches a cell — the title *and* any
+  name interpolated beside it.
+- **Count the columns before writing**, and refuse the write when they disagree. Removing `esc()`
+  makes that guard exit 2 with `inconsistent table columns [4, 5, 6, 7]`, which is how it was
+  proved to work rather than assumed.
+
+⚠️ The same hazard applies to any generated markdown built from catalogue text — titles,
+`shortDescription`, maker display names. It is not specific to places.
