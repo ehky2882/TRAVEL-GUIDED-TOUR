@@ -22,7 +22,22 @@ WHAT IT REPORTS, AND WHY THE TWO TIERS ARE DIFFERENT
    are provably one site and need no editorial judgement, so this tier exits
    non-zero: it is a thing to act on.
 
-2. **NEAR** — same-subject titles within `--radius` that are NOT coincident.
+2. **TIGHT** — markers within `--tight` metres of each other, WHATEVER their
+   titles say. Added 2026-09-11, because the subject-containment rule below is
+   structurally blind to the commonest case in the catalogue: one site that two
+   entries call by two unrelated names. "Hook & Ladder 8" and "The Ghostbusters
+   Firehouse" are one firehouse 4 m apart and share not a single word; so are
+   "Britain's Oldest Door" and "The Tomb of Elizabeth I", which are both
+   Westminster Abbey, and "Chelsea Market" and a pin about Oreos, which are the
+   same Nabisco building. None of them could ever reach the NEAR tier.
+   🔴 Proximity is evidence, not proof, so this tier is for a human and does not
+   affect the exit code. Two real false positives to expect: neighbouring but
+   genuinely separate venues in a dense block (Hong Kong's food pins sit 10–20 m
+   apart and are different restaurants), and coordinates rounded to 4 decimal
+   places, which lands El Retiro 8 m from the Puerta de Alcalá.
+
+3. **NEAR** — same-subject titles within `--radius` that are neither coincident
+   nor already caught by TIGHT.
    🔴 These must NEVER be auto-created. A place needs its own copy, address and
    photograph, and picking the coordinate is a real decision — Grace Cathedral's
    tour sits on the Great Stairs while its pin sat on the OSM building node,
@@ -44,6 +59,16 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
 
 DEFAULT_RADIUS_M = 500.0
+
+# The TIGHT tier's radius. 25 m is the distance at which two markers in the
+# real catalogue are nearly always one building: measured over all 3,269
+# markers it yields 99 groups, of which the ones that are NOT a single site are
+# a readable handful (dense restaurant blocks, and pairs whose coordinates are
+# rounded to 4 dp). Widening it to 40 m is what session 95 measured and
+# rejected for AUTO-CREATION — but this tier does not auto-create anything, so
+# the trade is different here: the cost of a loose match is one line a human
+# reads and dismisses.
+DEFAULT_TIGHT_M = 25.0
 
 # Words that carry no subject meaning, so "Chinatown" and "Chinatown Dragon
 # Gate" still compare as related while "The Jordaan" and "The Jordaan" match
@@ -119,7 +144,7 @@ def entries(doc):
     return [(kind, t) for kind, t in out if marker(t)]
 
 
-def scan(doc, radius_m=DEFAULT_RADIUS_M):
+def scan(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M):
     claimed = {tid for p in (doc.get("places") or []) for tid in p.get("tourIds", [])}
     items = entries(doc)
 
@@ -132,26 +157,54 @@ def scan(doc, radius_m=DEFAULT_RADIUS_M):
         if len(members) >= 2 and not all(t["id"] in claimed for _, t in members)
     ]
 
-    near = []
-    for i, (k1, a) in enumerate(items):
-        for k2, b in items[i + 1:]:
-            dist = haversine(marker(a), marker(b))
-            if dist == 0 or dist > radius_m:
-                continue                      # 0 is the EXACT tier's business
-            if a["id"] in claimed and b["id"] in claimed:
-                continue
-            if same_subject(a, b):
-                near.append((dist, (k1, a), (k2, b)))
+    # ⚠️ Do NOT bucket these pairs by `city`. Two markers 20 m apart can carry
+    # different city strings — the catalogue labels one side of a street
+    # "New York" and the other "Brooklyn" — and a place spans that label. Bucket
+    # on the geography instead: a grid of `radius_m`-sized cells, comparing each
+    # marker only against its own cell and the eight around it, which cannot
+    # miss a pair inside the radius and turns 5.3 million haversines into a few
+    # thousand.
+    cell = radius_m / 111_320.0               # degrees of latitude per cell
+    grid = {}
+    for kind, t in items:
+        lat, lon = marker(t)
+        grid.setdefault((int(lat // cell), int(lon // cell)), []).append((kind, t))
+
+    tight, near, seen = [], [], set()
+    for (gy, gx), bucket in grid.items():
+        neighbours = [
+            it
+            for dy in (-1, 0, 1) for dx in (-1, 0, 1)
+            for it in grid.get((gy + dy, gx + dx), ())
+        ]
+        for k1, a in bucket:
+            for k2, b in neighbours:
+                if a["id"] >= b["id"]:        # each unordered pair exactly once
+                    continue
+                key = (a["id"], b["id"])
+                if key in seen:
+                    continue
+                dist = haversine(marker(a), marker(b))
+                if dist == 0 or dist > radius_m:
+                    continue                  # 0 is the EXACT tier's business
+                if a["id"] in claimed and b["id"] in claimed:
+                    continue
+                seen.add(key)
+                if dist <= tight_m:
+                    tight.append((dist, (k1, a), (k2, b)))
+                elif same_subject(a, b):
+                    near.append((dist, (k1, a), (k2, b)))
+    tight.sort(key=lambda r: r[0])
     near.sort(key=lambda r: r[0])
-    return exact, near
+    return exact, tight, near
 
 
-def report(doc, radius_m=DEFAULT_RADIUS_M, out=None):
+def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None):
     # ⚠️ `out=sys.stdout` as a DEFAULT binds the stream at import time, so it
     # keeps writing to the real stdout even after `--out` has teed it — the
     # report would then be missing from its own report file. Resolve it here.
     out = sys.stdout if out is None else out
-    exact, near = scan(doc, radius_m)
+    exact, tight, near = scan(doc, radius_m, tight_m)
 
     if exact:
         out.write(f"\nEXACT — {len(exact)} coincident group(s) with no place page.\n")
@@ -163,8 +216,18 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, out=None):
     else:
         out.write("\nEXACT — none. Every coincident group is already a place.\n")
 
+    if tight:
+        out.write(f"\nTIGHT — {len(tight)} pair(s) within {tight_m:.0f} m, regardless of title.\n")
+        out.write("  Proximity is evidence, not proof. Read each one; a dense block of\n"
+                  "  restaurants and a coordinate rounded to 4 dp both land here.\n")
+        for dist, (k1, a), (k2, b) in tight:
+            out.write(f"  {dist:7.1f}m  [{k1}] {a['title'][:34]:<35} | "
+                      f"[{k2}] {b['title'][:34]:<35} {a.get('city')}\n")
+    else:
+        out.write(f"\nTIGHT — none within {tight_m:.0f} m.\n")
+
     if near:
-        out.write(f"\nNEAR — {len(near)} same-subject pair(s) within {radius_m:.0f} m, not coincident.\n")
+        out.write(f"\nNEAR — {len(near)} same-subject pair(s) {tight_m:.0f}–{radius_m:.0f} m apart.\n")
         out.write("  🔴 Never auto-create these. Read each one; some are deliberately separate.\n")
         for dist, (k1, a), (k2, b) in near:
             out.write(f"  {dist:7.0f}m  [{k1}] {a['title'][:34]:<35} | "
@@ -172,7 +235,7 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, out=None):
     else:
         out.write(f"\nNEAR — none within {radius_m:.0f} m.\n")
 
-    out.write(f"\n{len(exact)} exact, {len(near)} near.\n")
+    out.write(f"\n{len(exact)} exact, {len(tight)} tight, {len(near)} near.\n")
     return 1 if exact else 0
 
 
@@ -199,7 +262,7 @@ def selftest():
 
     # --- exact tier
     doc = {"tours": [t("1", "Foo", 10.0, 20.0), t("2", "Foo Museum", 10.0, 20.0)], "linkPins": [], "places": []}
-    exact, near = scan(doc)
+    exact, tight, near = scan(doc)
     check("coincident pair is EXACT", len(exact), 1)
     check("coincident pair is not also NEAR", len(near), 0)
 
@@ -215,22 +278,23 @@ def selftest():
     doc2 = {"tours": [t("1", "Grace Cathedral", 37.7919, -122.4127),
                       t("2", "Grace Cathedral", 37.79182, -122.41349)],
             "linkPins": [], "places": []}
-    e2, n2 = scan(doc2)
+    e2, g2, n2 = scan(doc2)
     check("same subject nearby is NEAR", len(n2), 1)
     check("same subject nearby is not EXACT", len(e2), 0)
+    check("71 m is beyond TIGHT, so NEAR is the only tier that sees it", len(g2), 0)
     check("distance is roughly right", 60 < n2[0][0] < 80, True)
 
     # Different subjects at the same distance must NOT be reported.
     doc3 = {"tours": [t("1", "Portsmouth Square", 37.7919, -122.4127),
                       t("2", "Waverly Place", 37.79182, -122.41349)],
             "linkPins": [], "places": []}
-    check("different subjects nearby are ignored", len(scan(doc3)[1]), 0)
+    check("different subjects nearby are ignored", len(scan(doc3)[2]), 0)
 
     # Beyond the radius, even the same subject is out of scope.
     doc4 = {"tours": [t("1", "Chinatown", 37.7919, -122.4127),
                       t("2", "Chinatown", 37.8100, -122.4127)],
             "linkPins": [], "places": []}
-    check("beyond the radius is ignored", len(scan(doc4, radius_m=500)[1]), 0)
+    check("beyond the radius is ignored", len(scan(doc4, radius_m=500)[2]), 0)
 
     # --- subject matching
     check("city name is not subject", subject_words("Chinatown", "San Francisco"), {"chinatown"})
@@ -264,6 +328,46 @@ def selftest():
           same_subject({"title": "Tibidabo", "city": "Barcelona"},
                        {"title": "Tibidabo Amusement Park", "city": "Barcelona"}), True)
 
+    # --- TIGHT tier: the case the subject rule is structurally blind to.
+    # 🔴 Hook & Ladder 8 and the Ghostbusters Firehouse are one building 4 m
+    # apart sharing not one word. NEAR can never see this pair; that is the
+    # whole reason the tier exists.
+    doc6 = {"tours": [], "places": [],
+            "linkPins": [t("1", "Hook & Ladder 8", 40.71955, -74.00661),
+                         t("2", "The Ghostbusters Firehouse", 40.71956, -74.00656)]}
+    e6, g6, n6 = scan(doc6)
+    check("unrelated titles 4 m apart are TIGHT", len(g6), 1)
+    check("...and are invisible to NEAR", len(n6), 0)
+    check("...and are not EXACT either", len(e6), 0)
+    check("TIGHT reports the distance", 3 < g6[0][0] < 6, True)
+
+    # A pair inside TIGHT must not ALSO be counted as NEAR, or the same site is
+    # two findings.
+    doc7 = {"tours": [t("1", "Centre Pompidou", 48.86070, 2.35222)],
+            "linkPins": [t("2", "Centre Pompidou", 48.86064, 2.35224)], "places": []}
+    e7, g7, n7 = scan(doc7)
+    check("a same-subject pair inside TIGHT is reported once", (len(g7), len(n7)), (1, 0))
+
+    # An existing place silences TIGHT exactly as it silences EXACT.
+    doc7["places"] = [{"id": "p", "name": "Centre Pompidou", "tourIds": ["1", "2"]}]
+    check("an existing place silences TIGHT", len(scan(doc7)[1]), 0)
+
+    # 🔴 Do NOT bucket by city: a place spans a city label. These two are 4 m
+    # apart across the East River's naming, not 4 m apart in the same string.
+    doc8 = {"tours": [t("1", "Foo", 40.71955, -74.00661, city="New York")],
+            "linkPins": [t("2", "Bar", 40.71956, -74.00656, city="Brooklyn")],
+            "places": []}
+    check("TIGHT crosses a city label", len(scan(doc8)[1]), 1)
+
+    # The grid must not miss a pair that straddles a cell boundary. Placing one
+    # marker either side of an exact multiple of the cell size is the case a
+    # naive single-cell scan drops.
+    cell = DEFAULT_RADIUS_M / 111_320.0
+    edge = cell * 1000                     # an exact cell boundary in latitude
+    doc9 = {"tours": [t("1", "Edge", edge - 0.00002, 10.0)],
+            "linkPins": [t("2", "Edge Case", edge + 0.00002, 10.0)], "places": []}
+    check("a pair across a grid boundary is still found", len(scan(doc9)[1]), 1)
+
     # --- a pin and a tour are treated alike
     doc5 = {"tours": [t("1", "Foo", 10.0, 20.0)],
             "linkPins": [t("2", "Foo", 10.0, 20.0)], "places": []}
@@ -286,6 +390,8 @@ def main():
                     default="TRAVEL GUIDED TOUR/Resources/Tours.json")
     ap.add_argument("--radius", type=float, default=DEFAULT_RADIUS_M,
                     help=f"NEAR-tier search radius in metres (default {DEFAULT_RADIUS_M:.0f})")
+    ap.add_argument("--tight", type=float, default=DEFAULT_TIGHT_M,
+                    help=f"TIGHT-tier radius in metres (default {DEFAULT_TIGHT_M:.0f})")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -295,7 +401,7 @@ def main():
         if a.selftest:
             return selftest()
         with open(a.catalog, encoding="utf-8") as fh:
-            return report(json.load(fh), a.radius)
+            return report(json.load(fh), a.radius, a.tight)
     finally:
         run.close()
 

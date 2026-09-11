@@ -763,3 +763,54 @@ a visible regression, and it is rendered by `TourDetailView` and searched by
 **Method:** save one payload with `curl --compressed … -o catalog.json`, then in
 Python remove one key at a time and `len(gzip.compress(...))` the result. One
 saved copy answers every such question afterwards for free.
+
+## A title rule cannot find a place; only the coordinate can (2026-09-11)
+
+`check-place-candidates.py` matched two entries as the same site when one title's meaningful
+words contained the other's. That rule is precise and it is **structurally blind to the
+commonest shape in this catalogue: one site that two entries call by two unrelated names.**
+
+*Hook & Ladder 8* and *The Ghostbusters Firehouse* are one firehouse **4 m** apart and share
+not one word. So are *Britain's Oldest Door* and *The Tomb of Elizabeth I* (both Westminster
+Abbey, 5 m), *Chelsea Market* and a pin about Oreos (the same Nabisco building, 8 m), and
+*The Federal Reserve Bank of New York* and *$500 Billion of Gold Under 33 Liberty Street*
+(0 m). No string comparison will ever reach any of them.
+
+Adding a **TIGHT** tier — within 25 m, whatever the titles say — found **151 pairs, 82 of
+which no title rule could have produced**, and **55 of which share no word at all**. The
+sweep it produced is `docs/place-candidates-260911.md`.
+
+🔴 **The lesson generalises past places: when the thing you are identifying is physical,
+match on the physical fact and use the text only to explain the match.** The title was never
+the evidence — the coordinate was, and the title was doing the work because it was easier to
+compare.
+
+⚠️ **And the converse still holds, which is why the tier does not auto-create anything.**
+Proximity is evidence, not proof. Two classes of false positive are real and permanent: a
+dense block of separate venues (Hong Kong's restaurant pins are 10–20 m apart and are
+different restaurants), and **coordinates rounded to four decimal places — ~11 m — which can
+round two genuinely separate sites to within a few metres** (El Retiro sits 8 m from the
+Puerta de Alcalá). Exact coincidence exits non-zero; everything looser is for a human.
+
+## Joining a place means MOVING the entry, not just listing it (2026-09-11)
+
+A place's membership looks like a list you append to. It is not. `Place.swift` makes a place's
+identity **exact coordinate equality**, and `validate-tours` enforces it at **1e-9 degrees**:
+
+```
+place Griffith Observatory: member not on the place coordinate
+```
+
+🔴 **All 362 existing place members sit EXACTLY on their place — 362 of 362.** That is not a
+coincidence, it is the schema. So adding an entry to a place also means **snapping that entry's
+stop coordinate (and its centroid, or the centroid falls outside the stop range) onto the
+place**. Session 157 added eight ids without snapping and got exactly eight errors.
+
+**Check the move against the entry's own `triggerRadiusMeters` before making it.** All eight
+moves there were 0.6–20.9 m against a 30 m radius, so nothing changed about when any tour
+fires — but a larger move would silently redefine where a tour triggers, and nothing else in
+the pipeline would object.
+
+⚠️ **This is also why a place candidate is never free.** A sweep can say "these two entries are
+4 m apart"; turning that into a place means choosing the one true coordinate and moving
+everything onto it. That is an editorial decision, which is why nothing auto-creates one.
