@@ -285,3 +285,39 @@ inside D2 Place; the site is the mall, which neither is named for).
 🔴 **The sweep cannot know a decision was made**, so all five are now in the menu's § 4 keyed by
 their member titles — `DECLINED` alone could not reach them, because they join no existing place.
 Without that they return as fresh candidates on every run until someone "fixes" them.
+
+## The coincident tier is closed
+
+**250 places. 0 exact, 0 open groups within 25 m.** Every pair of entries in this catalogue that
+stands on the same spot is now either a place or a recorded decision not to make one.
+
+The last candidate is the one worth remembering: **the Academy Museum of Motion Pictures and The
+Walt Disney Company Piazza**. It did not exist when the sweep began — it appeared *because* the
+owner asked to improve the LACMA-group pins, and re-sourcing the Academy Museum's coordinate from
+OSM landed it **exactly** on a pin whose own description reads *"at the Academy Museum of Motion
+Pictures"*, matching to seven decimal places.
+
+🔴 **A repair that lands on independent corroboration is the strongest signal in this whole sweep** —
+better than any geocode on its own, because two sources that never saw each other agreed.
+
+### The running total for the day
+
+| | Start | End |
+|---|---|---|
+| places | 142 | **250** |
+| EXACT groups | 41 | **0** |
+| TIGHT pairs | 151 | 38 (all claimed or declined) |
+| NEAR pairs | 79 | 75 |
+
+### What is left, and why it is a different problem
+
+**§ 3's 75 same-subject pairs, 25–500 m apart — never reviewed.** 24 sit at 25–50 m; the other 51
+are 50–500 m. At that range the two entries are genuinely in different spots, so making one a place
+means choosing which coordinate wins and moving the other hundreds of metres — far outside any
+30 m geofence. Every one is a Grand Central-style decision, not a tidy-up. That is why the checker
+has never auto-created them.
+
+⚠️ **And the sweep is blind to two shapes it will never find**: two entries about one site more
+than 500 m apart (which is what a wrong coordinate looks like — Marina City was 460 m out and only
+surfaced because it landed *on* something else), and two entries about one site 25–500 m apart
+whose titles share nothing. The TIGHT tier closed the second case only up to 25 m.

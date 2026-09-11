@@ -67,6 +67,58 @@ DECLINED_GROUPS = {
         "two distinct monuments that only round together — BOTH coordinates are 4 dp (~11 m)",
     frozenset({"Handcrafter, D2 Place", "Hoopla, D2 Place"}):
         "two shops inside D2 Place; the site is the mall, which neither entry is named for",
+
+    # Put to the owner with the under-25 m batch, 2026-09-11, and declined.
+    # 🔴 Keyed by TITLE, never by the P-label they were shown under: creating a
+    # batch renumbers every remaining open group, so a label read back after the
+    # fact names a different site. That mistake was made once here and caught.
+    frozenset({"Natural Spices Shop", "New Patoy"}):
+        "dense block — two separate Hong Kong shops",
+    frozenset({"Arc de Triomphe", "The Tomb of the Unknown Soldier"}):
+        "owner: keep separate",
+    frozenset({"Little Bao", "Primo Posto"}):
+        "dense block — two different Hong Kong restaurants",
+    frozenset({"Casa Amatller", "Casa Batlló"}):
+        "two separate houses side by side on the Illa de la Discòrdia — the point of that block",
+    frozenset({"The Fletcher-Sinclair House", "The Venetian Room at Albertine"}):
+        "owner: keep separate — two adjacent mansions",
+    frozenset({"Bếp Mẹ Ỉn", "STIR - Modern Classic Cocktail"}):
+        "dense block — two separate Ho Chi Minh City venues",
+    frozenset({"Haidilao Hot Pot, Carnarvon Road", "Matsukiyo"}):
+        "dense block — a hotpot restaurant and a drugstore",
+    frozenset({"Fringe Club | 藝穗會", "Ho Lan Zheng"}):
+        "dense block — two separate Hong Kong venues",
+    frozenset({"ArkDes — Swedish Centre for Architecture and Design", "Moderna Museet"}):
+        "owner: keep separate — they share a building on Skeppsholmen but are two institutions",
+    frozenset({"Lazy Suzy", "Peng Leng Zheng"}):
+        "dense block — two separate Hong Kong venues",
+    frozenset({"Blue Bottle Studio Seoul | 블루보틀 삼청 한옥", "Kukje Gallery K3 | 국제갤러리 K3"}):
+        "dense block — a coffee studio and a gallery",
+    frozenset({"Diego Iluminado", "Fundación Proa"}):
+        "owner: keep separate",
+    frozenset({"Bar Montan", "Hosoi"}):
+        "dense block — two separate Stockholm bars",
+    frozenset({"Baan Plern Jitt | บ้านเพลินจิตต์ ณ คลองบางหลวง",
+               "Khlong Bang Luang Floating Market | ตลาดชุมชนคลองบางหลวง"}):
+        "owner: keep separate",
+    frozenset({"Social Goods", "Stone Slab Street | 石板街"}):
+        "dense block — a shop on the street it stands in",
+    frozenset({"Palacio Barolo", "Salón 1923"}):
+        "owner: keep separate",
+    frozenset({"Heartwarming", "Yu Chau Street"}):
+        "dense block — a shop on the street it stands in",
+    frozenset({"The Loop — Where the Skyscraper Was Born", "The Rookery"}):
+        "owner: keep separate — a building and a walk that passes it",
+    frozenset({"Pellegrino 2000", "The Rover"}):
+        "dense block — two separate Sydney venues",
+
+    # The last four coincident groups, decided 2026-09-11.
+    frozenset({"The Dark Secret of Wall Street", "The Red Room at One Wall Street"}):
+        "owner: the Dark Secret joined the Wall Street place; the Red Room stays separate — it is One Wall Street, a different building",
+    frozenset({"Academy Museum of Motion Pictures", "Jeff Koons' Split-Rocker Edition", "LACMA"}):
+        "owner: all different — pins improved instead; LACMA and the Academy Museum were both 4 dp and are now 175 m apart",
+    frozenset({"Dieci", "Kau Kee | 九記牛腩", "O'rm"}):
+        "owner: all separate — dense block, a noodle shop and two neighbours",
 }
 
 
@@ -351,7 +403,10 @@ def main():
 
         with open(a.menu_out, "w", encoding="utf-8") as fh:
             fh.write(markdown)
-        held = sum(1 for r in groups if set(r["existing"]) & DECLINED)
+        # ⚠️ Count with declined_reason(), not DECLINED — the latter only knows
+        # the groups attached to an existing place, so it under-reports holds
+        # and over-reports what is open.
+        held = sum(1 for r in groups if declined_reason(r))
         print(f"wrote {a.menu_out}: {len(groups) - held} open groups, "
               f"{len(pairs)} near pairs, {held} declined")
         return 0
