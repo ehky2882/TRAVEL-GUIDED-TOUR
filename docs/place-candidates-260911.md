@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 16:48 UTC against `main` at `f53d4a73`.** Every number here is a reading of
+**Regenerated 2026-09-11 17:09 UTC against `main` at `20b78c9b`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -23,9 +23,9 @@ the normal condition. What follows is what is open **right now**.
 
 | | Finding | Act on it? |
 |---|---|---|
-| **§ 1** | **0 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
+| **§ 1** | **3 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
 | **§ 2** | **0 sites** with 2+ entries within 25 m | Owner picks |
-| **§ 3** | 25 same-subject pairs 25–500 m apart | Read one at a time |
+| **§ 3** | 20 same-subject pairs 25–500 m apart | Read one at a time |
 | **§ 4** | 32 groups **already declined** | Do not re-offer |
 
 ## 🔴 What creating one costs — it is never just a list entry
@@ -50,6 +50,16 @@ Proximity is evidence, not proof. Nothing here auto-creates.
 
 ---
 
+## § 1 — on an identical coordinate (3)
+
+The catalogue's documented identity rule: provably one site, no editorial judgement.
+
+| # | City | Entries |
+|---|---|---|
+| **Z1** | Los Angeles | `[tour]` Gamble House<br>`[pin]` The Gamble House |
+| **Z2** | Montreal | `[tour]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
+| **Z3** | New York | `[tour]` The Noguchi Museum<br>`[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[pin]` The Noguchi Museum *(in The Noguchi Museum)* |
+
 ## § 2 — 0 sites with two or more entries within 25 m
 
 Built only from hops of 25 m or less; the widest group is **0 m** end to end, so
@@ -58,7 +68,7 @@ none is a chain of separate sites strung together.
 | # | City | Span | Entries |
 |---|---|---|---|
 
-## § 3 — 25 same-subject pairs 25–500 m apart
+## § 3 — 20 same-subject pairs 25–500 m apart
 
 Related by name but not coincident. **Never auto-create these** — picking the one coordinate
 is an editorial decision, and some are deliberately two subjects.
@@ -79,17 +89,12 @@ is an editorial decision, and some are deliberately two subjects.
 | N12 | Paris | 276 m | `[pin]` Petit Palais<br>`[tour]` Pont Alexandre III & Petit Palais |
 | N13 | Hong Kong | 289 m | `[pin]` Kowloon Park Stone Columns \| 九龍公園百年石柱<br>`[pin]` Kowloon Park |
 | N14 | Stockholm | 301 m | `[tour]` Gamla stan 1859<br>`[tour]` Gamla stan *(in Gamla stan)* |
-| N15 | Pasadena | 343 m | `[pin]` The Gamble House<br>`[tour]` Gamble House |
-| N16 | Montreal | 363 m | `[tour]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
-| N17 | Montreal | 363 m | `[pin]` Habitat 67 *(in Habitat 67)*<br>`[pin]` Habitat 67 |
-| N18 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
-| N19 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
-| N20 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
-| N21 | New York | 424 m | `[pin]` Governors Island<br>`[tour]` Governors Island |
-| N22 | Brooklyn | 428 m | `[tour]` Domino Park<br>`[pin]` Domino Park |
-| N23 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
-| N24 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
-| N25 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
+| N15 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
+| N16 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
+| N17 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
+| N18 | New York | 424 m | `[pin]` Governors Island<br>`[tour]` Governors Island |
+| N19 | Brooklyn | 428 m | `[tour]` Domino Park<br>`[pin]` Domino Park |
+| N20 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
 
 ## § 4 — declined, standing (32 groups + 1 named case)
 
