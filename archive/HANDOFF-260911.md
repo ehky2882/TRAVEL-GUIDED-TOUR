@@ -220,3 +220,23 @@ exits 0. Every coincident group in the catalogue is a place.**
 address and a chosen coordinate — and, as above, every member then moves onto that coordinate —
 so it stays an editorial decision, not a batch job. `heroImageURL` stays optional by design, so
 none of them is blocked on sourcing an image.
+
+## Landed
+
+**Merged as [#801](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/801), squash `e553227`**,
+all three CI jobs green on `9d35f97` including the canonical `validate-tours.swift`.
+
+⚠️ **`main` moved between green CI and the merge** — #802 landed — so `mergeable_state` was
+re-checked (`clean`) rather than assumed from the earlier read. The branch auto-deleted.
+
+Re-derived on `main` at `e553227`, never quoted: **1,552 tours · 1,717 link pins · 377 makers ·
+1,924 tour stops (3,641 with pins) · 181 places · 473 cities · 64 countries · 459 place members.**
+
+`publish-catalog.yml` run 218: gh-pages mirror published and verified by the workflow's own
+read-back; the Supabase seed ran from the same commit. ⚠️ **The seed is conditional on the
+`SUPABASE_DB_URL` secret** — its credential check passed, which is the evidence that it is set.
+
+🔴 **Still worth doing on the next touch of `get_catalog`: `scripts/check-catalog-contract.py`.**
+Every key is optional in Swift, so a dropped `places` key decodes as nil and the feature silently
+stops existing — no crash, no log, no failed CI. That is exactly how `places` vanished for 14
+hours on 2026-08-19.
