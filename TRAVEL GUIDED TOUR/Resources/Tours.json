@@ -3039,6 +3039,14 @@
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.tiktok.com/@tate"
+    },
+    {
+      "id": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
+      "displayName": "TikTok @jamiepeva",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jamiepeva.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@jamiepeva"
     }
   ],
   "tours": [
@@ -165440,6 +165448,278 @@
         "Notable Building",
         "Architecture",
         "Brutalist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BF0A9F8A-50E1-5DFB-B324-635EBF383AE4",
+      "createdAt": "2026-09-11",
+      "title": "The Exorcist Stairs",
+      "shortDescription": "A post by @jamiepeva on TikTok.",
+      "longDescription": "People are always asking me about the Exorcist Stairs! I doubt you’ll catch me doing a reel on ghosts, but here is my video on those infamous stairs! Happy Fourth of July! ❤️ #ExorcistStairs #TheExorcist #GeorgetownDC #WashingtonDC #DCHistory",
+      "makerId": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/exorcist-stairs-jamiepeva_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamiepeva/video/7658416754611293454",
+      "sourceAuthor": "@jamiepeva",
+      "stops": [
+        {
+          "id": "BEDC30D7-04AE-5425-B48F-4C4FEC362850",
+          "order": 0,
+          "title": "The Exorcist Stairs",
+          "caption": "People are always asking me about the Exorcist Stairs! I doubt you’ll catch me doing a reel on ghosts, but here is my video on those infamou",
+          "latitude": 38.90552,
+          "longitude": -77.07016,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/exorcist-stairs-jamiepeva_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.90552,
+      "centroidLongitude": -77.07016,
+      "city": "Washington",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Civic",
+        "History",
+        "Iconic Landmark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "581F1578-98A2-5DFC-9F21-7EB969F78DAF",
+      "createdAt": "2026-09-11",
+      "title": "The Georgetown Metro Stop That Never Was",
+      "shortDescription": "A post by @jamiepeva on TikTok.",
+      "longDescription": "Whenever we take a closer look at a Georgetown story that’s been retold a million times, there’s usually more to it than the version that’s repeated. The Georgetown Metro stop is a perfect example. Yes, some Georgetown residents pushed back against bringing Metro into the neighborhood. But that’s only part of the story. Building a station here would have been an enormous engineering challenge and one of the most expensive parts of the system. Oh yes, my hat IS a bit much. I am trying to break in a new one….what can I say, maybe it will grow on us. 🙂 #GeorgetownDC #WashingtonDC #DCHistory #GeorgetownHistory #Metro",
+      "makerId": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgetown-metro-never-was-jamiepeva_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamiepeva/video/7671039935268572430",
+      "sourceAuthor": "@jamiepeva",
+      "stops": [
+        {
+          "id": "F488E13C-1322-5590-941E-C0BD534E596C",
+          "order": 0,
+          "title": "The Georgetown Metro Stop That Never Was",
+          "caption": "Whenever we take a closer look at a Georgetown story that’s been retold a million times, there’s usually more to it than the version that’s ",
+          "latitude": 38.90501,
+          "longitude": -77.06288,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgetown-metro-never-was-jamiepeva_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.90501,
+      "centroidLongitude": -77.06288,
+      "city": "Washington",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Engineering"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A34C8858-C42A-5288-86A6-B87361DB716E",
+      "createdAt": "2026-09-11",
+      "title": "The Harriman House on N Street",
+      "shortDescription": "A post by @jamiepeva on TikTok.",
+      "longDescription": "Colonel and Mrs. Henry Leonard and Their Georgetown Houses Before Averell and Pamela Harriman made one of Georgetown’s most famous houses their home, it belonged to another Washington power couple: Colonel Henry Leonard and Ellen Warder Leonard. He was a war hero, lawyer, and loyal friend. She founded the Sulgrave Club and helped found the Potomac School. They helped make the Georgetown we enjoy today, and thank you to the people who continue to recognize and invest in these fine properties. #GeorgetownDC #GeorgetownHistory #WashingtonDC #HistoricHomes #HistoricPreservation",
+      "makerId": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harriman-house-n-street-jamiepeva_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamiepeva/video/7661280045264145677",
+      "sourceAuthor": "@jamiepeva",
+      "stops": [
+        {
+          "id": "C5B5E21F-BDCF-538D-9935-A7023DA2253D",
+          "order": 0,
+          "title": "The Harriman House on N Street",
+          "caption": "Colonel and Mrs. Henry Leonard and Their Georgetown Houses Before Averell and Pamela Harriman made one of Georgetown’s most famous houses th",
+          "latitude": 38.90661,
+          "longitude": -77.06063,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harriman-house-n-street-jamiepeva_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.90661,
+      "centroidLongitude": -77.06063,
+      "city": "Washington",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "History",
+        "Notable Building",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6601C3AC-4546-554F-8EBC-84B9BC8C3A4E",
+      "createdAt": "2026-09-11",
+      "title": "George Washington's Mount Vernon",
+      "shortDescription": "A post by @jamiepeva on TikTok.",
+      "longDescription": "Get ready! We are celebrating the United States’ 250th anniversary. Last weekend Violet and I went to George Washington’s Mount Vernon. George Washington is in our lane and with such an auspicious date coming up, it just made sense. Oh boy! If you have never been then you must go, if you went awhile ago then you must see how it has changed, and if you have been lately, then you know there is so much more to see and do. 📍 Mount Vernon, Virginia The highlights: a new George Washington: A Revolutionary Life exhibit inside the Museum & Education Center. What can I say? It will appeal to everyone from the intellectual historian to the fired up kid, just plain fun and informative. Mount Vernon is a destination that should be on your list during the America 250 celebration, it certainly was on ours. 📝 Plan Your Visit: • Located just outside Washington, DC • Free on-site parking • Open 365 days a year • Children 5 and under are free • Admission includes access to the Museum & Education Center Have you visited Mount Vernon recently? #ad In partnership with @mount_vernon #gwmountvernon #America250 #GeorgeWashington #MountVernon VirginiaTravel WashingtonDC HistoricVirginia VisitVirginia DMVHistory DayTripFromDC",
+      "makerId": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-vernon-jamiepeva_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamiepeva/video/7655377109279460622",
+      "sourceAuthor": "@jamiepeva",
+      "stops": [
+        {
+          "id": "178CD79E-237A-5E7A-A9DA-F7342ABE3760",
+          "order": 0,
+          "title": "George Washington's Mount Vernon",
+          "caption": "Get ready! We are celebrating the United States’ 250th anniversary. Last weekend Violet and I went to George Washington’s Mount Vernon. Geor",
+          "latitude": 38.71018,
+          "longitude": -77.08882,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-vernon-jamiepeva_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71018,
+      "centroidLongitude": -77.08882,
+      "city": "Mount Vernon",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Museum",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E1DDF0D6-BFD1-5F25-B6BF-5612DC5CC8C0",
+      "createdAt": "2026-09-11",
+      "title": "The Opportunity Shop",
+      "shortDescription": "A post by @jamiepeva on TikTok.",
+      "longDescription": "The Opportunity Shop in Georgetown has a lot of unexpected history but it has always been a good idea. Here comes Father’s Day and an “opportunity” you know what I mean? 🙂 Shop online at OpShopDC.com⁠ Thank you! #GeorgetownDC #OpportunityShop #FathersDay #WashingtonDC #VintageFinds",
+      "makerId": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/opportunity-shop-georgetown-jamiepeva_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamiepeva/video/7652937358639189261",
+      "sourceAuthor": "@jamiepeva",
+      "stops": [
+        {
+          "id": "07600216-6FA8-5ADE-BCBF-16172B765F40",
+          "order": 0,
+          "title": "The Opportunity Shop",
+          "caption": "The Opportunity Shop in Georgetown has a lot of unexpected history but it has always been a good idea. Here comes Father’s Day and an “oppor",
+          "latitude": 38.90904,
+          "longitude": -77.06404,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/opportunity-shop-georgetown-jamiepeva_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.90904,
+      "centroidLongitude": -77.06404,
+      "city": "Washington",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Hidden Gem",
+        "History",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2F262219-3CC8-51BA-B956-585D767BC0C3",
+      "createdAt": "2026-09-11",
+      "title": "Stonington Food Company",
+      "shortDescription": "A post by @jamiepeva on TikTok.",
+      "longDescription": "I sweated out the first couple of months of summer in Georgetown, but now it’s time to cool off in Maine, where we go every year. I did NOT want to leave you out, so here is a little of what’s doing in Penobscot Bay. The Stonington Food Company is a great place to enjoy a fresh lobster roll while appreciating some of the best island art. Over the years, I have gone to Ron Watson for wonderful paintings by artists including Jill Hoy, Stephen Pace, and John Imber, but now he is putting much of his energy into FOOD: lobster and fish! I could make endless videos up here. It is full of history, boats, islands, and remarkable characters, including my great-grandfather, “Blind Paul Pinkham,” who astonished everyone by fishing for lobster and even building his own house, blind as a bat! I’ll be back in Georgetown shortly, ready to sell your house—or sell you a house—whichever you prefer. #JamiePeva #GeorgetownDC #GeorgetownHistory #WashingtonDCRealEstate #PenobscotBay",
+      "makerId": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonington-food-company-jamiepeva_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamiepeva/video/7673883160752491790",
+      "sourceAuthor": "@jamiepeva",
+      "stops": [
+        {
+          "id": "82A9A9C3-AF82-51F7-B343-2E1830445434",
+          "order": 0,
+          "title": "Stonington Food Company",
+          "caption": "I sweated out the first couple of months of summer in Georgetown, but now it’s time to cool off in Maine, where we go every year. I did NOT ",
+          "latitude": 44.15617,
+          "longitude": -68.66303,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonington-food-company-jamiepeva_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.15617,
+      "centroidLongitude": -68.66303,
+      "city": "Stonington",
+      "country": "United States",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }

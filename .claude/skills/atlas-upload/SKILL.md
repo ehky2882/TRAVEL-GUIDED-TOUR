@@ -62,6 +62,55 @@ the platform. Nothing is downloaded but the thumbnail.
 **Read `docs/link-pin-runbook.md` before a batch.** It is the source of truth;
 this section is the short form.
 
+## 🔴 First: triage the links, do not mint them
+
+**If the person hands you a creator's whole account — or any list longer than a
+few links they have personally vetted — TRIAGE IT FIRST.** A creator's feed is
+not uniformly pinnable. It carries podcast plugs, channel anniversaries,
+replies to commenters, and (for some creators) property listings and other
+advertising. Minting a dumped back catalogue unread puts all of it on the map.
+
+```bash
+# They pasted a pile of links:
+cat > /tmp/urls.txt <<'EOF'
+https://www.tiktok.com/@someone/video/123
+https://www.instagram.com/reel/XXXX/
+EOF
+python3 scripts/triage-account.py --urls /tmp/urls.txt --out /tmp/triage.txt
+
+# They gave only a handle (TikTok ~14 newest, YouTube ~15, Instagram: none):
+python3 scripts/triage-account.py --handle @someone --platform tiktok --out /tmp/triage.txt
+```
+
+It flags every post **LIVE** (already pinned — skip it), **SINGLE** (one
+place), **MULTI** (several places, or a route), **THIN** (probably not about a
+place) or **DEAD**, and it mints nothing.
+
+**🔴 The flags are a pre-sort, not a verdict — READ EVERY CAPTION YOURSELF.**
+They are regexes over a caption, and captions lie in both directions. Measured
+on a real account: the tool passed 9 of 11 posts as SINGLE where only 3 were
+actually pinnable, and separately binned the best post in a batch as THIN
+because the caption mentioned an "anniversary" — it was captioned
+`📍 Mount Vernon, Virginia`. Over-accepting is the safer failure *only because
+a human reads every candidate before anything is minted*. Do that reading.
+
+Then take three things back to the person, in plain English, by number:
+
+- the posts you propose to pin, with the place you would pin each to;
+- every **MULTI** — say what the several places are and propose one of: explode
+  into separate pins, pin only the lead location, or leave it out. **It is the
+  owner's call, never yours**, and "it does not fit the app" is a legitimate
+  answer: a video about a ferry line or a whole street is a *route*, and this
+  app geofences points.
+- anything you judged not place-based, so they can overrule you.
+
+⚠️ **Advertising is a policy question, not a geography one.** Some creators sell
+things — a estate agent posting listings, a shop posting stock. Do not decide
+it: ask Edward. Standing decision so far (2026-09-11): **property listings are
+judged case by case**, not banned and not auto-included.
+
+---
+
 ## What to collect from the person
 
 One line per pin. Only the URL is strictly required, but a pin with no
