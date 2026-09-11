@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 10:07 UTC against `main` at `221d22d`.** Every number here is a reading of
+**Regenerated 2026-09-11 10:57 UTC against `main` at `0a38df5`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -11,7 +11,7 @@ python3 scripts/make-place-menu.py
 
 A `Place` is a site that more than one entry describes: the site becomes the thing on the map
 and the entries become its contents. The catalogue holds
-**222 places covering 544 entries**.
+**248 places covering 599 entries**.
 
 The 2026-09-11 sweep found 221 candidates and **45 became places** — 7 existing places gained
 the 8 entries standing on them, 38 new places came from the 0 m rows, and both held groups
@@ -24,15 +24,15 @@ the normal condition. What follows is what is open **right now**.
 | | Finding | Act on it? |
 |---|---|---|
 | **§ 1** | **0 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
-| **§ 2** | **51 sites** with 2+ entries within 25 m | Owner picks |
-| **§ 3** | 79 same-subject pairs 25–500 m apart | Read one at a time |
-| **§ 4** | 8 groups **already declined** | Do not re-offer |
+| **§ 2** | **4 sites** with 2+ entries within 25 m | Owner picks |
+| **§ 3** | 77 same-subject pairs 25–500 m apart | Read one at a time |
+| **§ 4** | 27 groups **already declined** | Do not re-offer |
 
 ## 🔴 What creating one costs — it is never just a list entry
 
 A place needs its own **name, description, address and a chosen coordinate**. And because a
 place's identity is **exact coordinate equality** (`Place.swift`, enforced by `validate-tours`
-at 1e-9°), every member is **snapped onto that coordinate** — all 544 existing members sit
+at 1e-9°), every member is **snapped onto that coordinate** — all 599 existing members sit
 exactly on their place. Creating a place *moves things on the map*.
 
 ⚠️ **Check each move against the entry's own `triggerRadiusMeters` (30 m) first.** A move inside
@@ -50,66 +50,19 @@ Proximity is evidence, not proof. Nothing here auto-creates.
 
 ---
 
-## § 2 — 51 sites with two or more entries within 25 m
+## § 2 — 4 sites with two or more entries within 25 m
 
 Built only from hops of 25 m or less; the widest group is **30 m** end to end, so
 none is a chain of separate sites strung together.
 
 | # | City | Span | Entries |
 |---|---|---|---|
-| P1 | Hong Kong | 10 m | `[pin]` Natural Spices Shop<br>`[pin]` New Patoy |
-| P2 | Paris | 10 m | `[tour]` Arc de Triomphe<br>`[pin]` The Tomb of the Unknown Soldier |
-| P3 | Florence | 10 m | `[pin]` All'Antico Vinaio<br>`[pin]` All'Antico Vinaio |
-| P4 | New York | 11 m | `[tour]` Whitney Museum of American Art<br>`[pin]` Whitney Museum of American Art |
-| P5 | New York | 12 m | `[pin]` Church of St Vincent de Paul<br>`[pin]` St. Vincent de Paul Church |
-| P6 | Mechernich | 12 m | `[pin]` Bruder Klaus Field Chapel<br>`[pin]` Burning the Bruder Klaus Chapel |
-| P7 | Queens | 12 m | `[tour]` Citi Field<br>`[pin]` How the Mets Got Their Name |
-| P8 | Hong Kong | 14 m | `[pin]` Little Bao<br>`[pin]` Primo Posto |
-| P9 | Madrid | 14 m | `[tour]` Palacio Real<br>`[tour]` Royal Madrid: The Ring of Green |
-| P10 | Taipei | 14 m | `[pin]` NTU College of Social Sciences Library<br>`[pin]` NTU Social Sciences Library |
-| P11 | New York | 14 m | `[pin]` Central Park<br>`[pin]` Central Park: How It Was Designed |
-| P12 | Kyoto | 15 m | `[tour]` Face House \| フェイスハウス<br>`[pin]` The Face House of Kyoto |
-| P13 | Tokyo | 15 m | `[pin]` The Glass Wave of the National Art Center<br>`[tour]` The National Art Center, Tokyo \| 国立新美術館 |
-| P14 | New York | 15 m | `[tour]` Federal Hall<br>`[pin]` The Rotunda at Federal Hall |
-| P15 | New York | 16 m | `[pin]` The Catacombs of Old St. Patrick's<br>`[pin]` The Godfather Baptism Church |
-| P16 | Amsterdam | 16 m | `[tour]` Muntplein & the Munttoren<br>`[pin]` Munttoren |
-| P17 | Chicago | 17 m | `[tour]` Marina City<br>`[tour]` Merchandise Mart |
-| P18 | Barcelona | 17 m | `[tour]` Casa Amatller<br>`[tour]` Casa Batlló |
-| P19 | San Juan | 17 m | `[pin]` Castillo San Felipe del Morro<br>`[pin]` The Sentry Box of Old San Juan |
-| P20 | New York | 17 m | `[pin]` The Fletcher-Sinclair House<br>`[pin]` The Venetian Room at Albertine |
-| P21 | Ho Chi Minh City | 17 m | `[tour]` Bếp Mẹ Ỉn<br>`[tour]` STIR - Modern Classic Cocktail |
-| P22 | New York | 17 m | `[pin]` Conwell Coffee Hall<br>`[pin]` Inside Conwell Coffee Hall |
-| P23 | Hong Kong | 17 m | `[pin]` Haidilao Hot Pot, Carnarvon Road<br>`[pin]` Matsukiyo |
-| P24 | Hong Kong | 18 m | `[tour]` Fringe Club \| 藝穗會<br>`[pin]` Ho Lan Zheng |
-| P25 | Saint-Paul-de-Vence | 18 m | `[pin]` La Colombe d'Or<br>`[pin]` La Colombe d'Or<br>`[pin]` The Art on the Walls at La Colombe d'Or |
-| P26 | New York | 18 m | `[tour]` Apollo Theater<br>`[pin]` Inside the Apollo Theater |
-| P27 | Stockholm | 18 m | `[tour]` ArkDes — Swedish Centre for Architecture and Design<br>`[tour]` Moderna Museet |
-| P28 | New York | 20 m | `[tour]` Flatiron Building<br>`[pin]` Why the Flatiron Building Is Empty |
-| P29 | Hong Kong | 20 m | `[pin]` Lazy Suzy<br>`[pin]` Peng Leng Zheng |
-| P30 | New York | 20 m | `[pin]` The 1920 Wall Street Bombing<br>`[tour]` Wall Street |
-| P31 | Berlin | 21 m | `[tour]` East Side Gallery<br>`[pin]` Two Sides of the Berlin Wall |
-| P32 | New York | 21 m | `[pin]` The Dark Secret of Wall Street<br>`[pin]` The Red Room at One Wall Street |
-| P33 | Saint-Paul-de-Vence | 21 m | `[pin]` Fondation Maeght<br>`[pin]` Fondation Maeght<br>`[pin]` How Fondation Maeght Was Built |
-| P34 | New York | 22 m | `[tour]` Stonewall Inn<br>`[pin]` The Stonewall Inn |
-| P35 | Seoul | 22 m | `[tour]` Blue Bottle Studio Seoul \| 블루보틀 삼청 한옥<br>`[tour]` Kukje Gallery K3 \| 국제갤러리 K3 |
-| P36 | New York | 22 m | `[pin]` The Real Winnie-the-Pooh<br>`[pin]` The Wertheim Study at the New York Public Library |
-| P37 | Buenos Aires | 22 m | `[tour]` Diego Iluminado<br>`[tour]` Fundación Proa |
-| P38 | New York | 22 m | `[tour]` Bethesda Terrace<br>`[pin]` Bethesda Terrace: The Tiled Ceiling in Central Park |
-| P39 | Stockholm | 22 m | `[tour]` Bar Montan<br>`[tour]` Hosoi |
-| P40 | Bangkok | 22 m | `[tour]` Baan Plern Jitt \| บ้านเพลินจิตต์ ณ คลองบางหลวง<br>`[tour]` Khlong Bang Luang Floating Market \| ตลาดชุมชนคลองบางหลวง |
-| P41 | Barcelona | 23 m | `[tour]` Sant Pau Recinte Modernista<br>`[pin]` The Forty-Eight Pavilions of Sant Pau |
-| P42 | Hong Kong | 23 m | `[pin]` Social Goods<br>`[tour]` Stone Slab Street \| 石板街 |
-| P43 | Buenos Aires | 23 m | `[tour]` Palacio Barolo<br>`[tour]` Salón 1923 |
-| P44 | Hong Kong | 23 m | `[pin]` Heartwarming<br>`[pin]` Yu Chau Street |
-| P45 | Chicago | 24 m | `[tour]` The Loop — Where the Skyscraper Was Born<br>`[tour]` The Rookery |
-| P46 | Sydney | 24 m | `[tour]` Pellegrino 2000<br>`[tour]` The Rover |
-| P47 | Uji | 25 m | `[pin]` The Keihan Uji Station<br>`[tour]` Uji Station \| 宇治駅 |
-| P48 | New York | 25 m | `[pin]` 31 Canal Street<br>`[pin]` Loew's Canal Theater |
-| P49 | Queens | 25 m | `[pin]` The Hell Gate Bridge<br>`[pin]` The Hell Gate Sabotage Plot<br>`[pin]` Why the Hell Gate Bridge Was Built |
-| P50 | Los Angeles | 26 m | `[tour]` Academy Museum of Motion Pictures<br>`[pin]` Jeff Koons' Split-Rocker Edition<br>`[tour]` LACMA |
-| P51 | Hong Kong | 30 m | `[pin]` Dieci<br>`[tour]` Kau Kee \| 九記牛腩<br>`[pin]` O'rm |
+| P1 | New York | 21 m | `[pin]` The Dark Secret of Wall Street<br>`[pin]` The Red Room at One Wall Street |
+| P2 | Queens | 25 m | `[pin]` The Hell Gate Bridge<br>`[pin]` The Hell Gate Sabotage Plot<br>`[pin]` Why the Hell Gate Bridge Was Built |
+| P3 | Los Angeles | 26 m | `[tour]` Academy Museum of Motion Pictures<br>`[pin]` Jeff Koons' Split-Rocker Edition<br>`[tour]` LACMA |
+| P4 | Hong Kong | 30 m | `[pin]` Dieci<br>`[tour]` Kau Kee \| 九記牛腩<br>`[pin]` O'rm |
 
-## § 3 — 79 same-subject pairs 25–500 m apart
+## § 3 — 77 same-subject pairs 25–500 m apart
 
 Related by name but not coincident. **Never auto-create these** — picking the one coordinate
 is an editorial decision, and some are deliberately two subjects.
@@ -127,22 +80,22 @@ is an editorial decision, and some are deliberately two subjects.
 | N9 | Bronx | 31 m | `[pin]` Yankee Stadium *(in Yankee Stadium)*<br>`[pin]` Yankee Stadium and a Baseball Anthem |
 | N10 | Hong Kong | 31 m | `[tour]` Upper Lascar Row Antique Street Market \| 摩羅上街古董露天市集<br>`[pin]` Upper Lascar Row |
 | N11 | New York | 32 m | `[tour]` Washington Square Park *(in Washington Square Park)*<br>`[pin]` The 20,000 Skeletons Under Washington Square Park |
-| N12 | New York | 34 m | `[pin]` The Port Authority Bus Terminal<br>`[pin]` Port Authority Bus Terminal |
-| N13 | Copenhagen | 35 m | `[tour]` Frederik's Church - Marmorkirken (The Marble Church)<br>`[pin]` Frederik's Church (Marmorkirken) |
-| N14 | London | 36 m | `[pin]` Abbey Road: The Conspiracy Theories<br>`[tour]` Abbey Road |
-| N15 | New York | 39 m | `[pin]` Villa Charlotte Bronte<br>`[pin]` Villa Charlotte Bronte: English Villas in the Bronx |
-| N16 | New York | 40 m | `[pin]` The Wall of Wall Street<br>`[pin]` The 1920 Wall Street Bombing |
+| N12 | Chicago | 32 m | `[tour]` Marina City<br>`[pin]` Marina City |
+| N13 | New York | 34 m | `[pin]` The Port Authority Bus Terminal<br>`[pin]` Port Authority Bus Terminal |
+| N14 | Copenhagen | 35 m | `[tour]` Frederik's Church - Marmorkirken (The Marble Church)<br>`[pin]` Frederik's Church (Marmorkirken) |
+| N15 | London | 36 m | `[pin]` Abbey Road: The Conspiracy Theories<br>`[tour]` Abbey Road |
+| N16 | New York | 39 m | `[pin]` Villa Charlotte Bronte<br>`[pin]` Villa Charlotte Bronte: English Villas in the Bronx |
 | N17 | London | 40 m | `[tour]` Battersea Power Station<br>`[pin]` Battersea Power Station, Rebuilt |
-| N18 | Toronto | 47 m | `[pin]` The Toronto Reference Library *(in Toronto Reference Library)*<br>`[pin]` Toronto Reference Library |
-| N19 | Toronto | 47 m | `[pin]` Toronto Reference Library<br>`[pin]` Inside the Toronto Reference Library *(in Toronto Reference Library)* |
-| N20 | Chicago | 47 m | `[pin]` Building Marina City<br>`[pin]` Marina City |
-| N21 | Barcelona | 48 m | `[tour]` Tibidabo<br>`[tour]` Tibidabo Amusement Park |
-| N22 | New York | 49 m | `[pin]` The Ford Foundation Building<br>`[tour]` Ford Foundation Building |
-| N23 | Milan | 49 m | `[tour]` Fondazione Prada<br>`[pin]` Bar Luce at Fondazione Prada |
-| N24 | Paris | 51 m | `[pin]` Place des Abbesses<br>`[tour]` Place des Abbesses & the Wall of Love |
-| N25 | Chicago | 51 m | `[pin]` Obama Presidential Center<br>`[pin]` Obama Presidential Center |
-| N26 | Toronto | 53 m | `[tour]` Graffiti Alley<br>`[pin]` Walking Graffiti Alley |
-| N27 | New York | 54 m | `[pin]` The Wall of Wall Street<br>`[tour]` Wall Street |
+| N18 | Chicago | 45 m | `[tour]` Marina City<br>`[pin]` Building Marina City |
+| N19 | Toronto | 47 m | `[pin]` The Toronto Reference Library *(in Toronto Reference Library)*<br>`[pin]` Toronto Reference Library |
+| N20 | Toronto | 47 m | `[pin]` Toronto Reference Library<br>`[pin]` Inside the Toronto Reference Library *(in Toronto Reference Library)* |
+| N21 | Chicago | 47 m | `[pin]` Building Marina City<br>`[pin]` Marina City |
+| N22 | Barcelona | 48 m | `[tour]` Tibidabo<br>`[tour]` Tibidabo Amusement Park |
+| N23 | New York | 49 m | `[pin]` The Ford Foundation Building<br>`[tour]` Ford Foundation Building |
+| N24 | Milan | 49 m | `[tour]` Fondazione Prada<br>`[pin]` Bar Luce at Fondazione Prada |
+| N25 | Paris | 51 m | `[pin]` Place des Abbesses<br>`[tour]` Place des Abbesses & the Wall of Love |
+| N26 | Chicago | 51 m | `[pin]` Obama Presidential Center<br>`[pin]` Obama Presidential Center |
+| N27 | Toronto | 53 m | `[tour]` Graffiti Alley<br>`[pin]` Walking Graffiti Alley |
 | N28 | Chicago | 56 m | `[pin]` The Art Institute of Chicago *(in The Art Institute of Chicago)*<br>`[tour]` The Art Institute |
 | N29 | New York | 58 m | `[tour]` The Oculus<br>`[pin]` The Oculus |
 | N30 | New York | 62 m | `[pin]` The Apthorp<br>`[pin]` The Apthorp |
@@ -151,30 +104,30 @@ is an editorial decision, and some are deliberately two subjects.
 | N33 | Atsugi | 79 m | `[pin]` KAIT Plaza and Workshop<br>`[pin]` KAIT Plaza *(in KAIT Plaza and Workshop)* |
 | N34 | Atsugi | 79 m | `[pin]` KAIT Workshop and Plaza *(in KAIT Plaza and Workshop)*<br>`[pin]` KAIT Plaza and Workshop |
 | N35 | Chicago | 85 m | `[tour]` The Monadnock Building<br>`[pin]` Monadnock Building |
-| N36 | New York | 88 m | `[tour]` Wall Street<br>`[pin]` The Dark Secret of Wall Street |
-| N37 | New York | 89 m | `[tour]` Little Island, Southwest Overlook<br>`[pin]` Little Island |
-| N38 | Barcelona | 90 m | `[pin]` Why Millions Visit La Sagrada Família<br>`[tour]` Sagrada Família |
-| N39 | London | 99 m | `[tour]` Covent Garden<br>`[pin]` Covent Garden: London's First Public Square |
-| N40 | New York | 100 m | `[pin]` One Times Square *(in One Times Square)*<br>`[pin]` Times Square |
-| N41 | Stockholm | 105 m | `[pin]` Vasa Museum<br>`[tour]` Vasa Museum |
-| N42 | New York | 108 m | `[pin]` The Red Room at One Wall Street<br>`[tour]` Wall Street |
-| N43 | Milan | 109 m | `[tour]` Bosco Verticale<br>`[pin]` Bosco Verticale |
-| N44 | New York | 109 m | `[pin]` The Times Square Confetti Blizzard *(in Times Square)*<br>`[pin]` Times Square |
-| N45 | New York | 109 m | `[pin]` The Hidden Hum of Times Square *(in Times Square)*<br>`[pin]` Times Square |
+| N36 | New York | 89 m | `[tour]` Little Island, Southwest Overlook<br>`[pin]` Little Island |
+| N37 | Barcelona | 90 m | `[pin]` Why Millions Visit La Sagrada Família<br>`[tour]` Sagrada Família |
+| N38 | London | 99 m | `[tour]` Covent Garden<br>`[pin]` Covent Garden: London's First Public Square |
+| N39 | New York | 100 m | `[pin]` One Times Square *(in One Times Square)*<br>`[pin]` Times Square |
+| N40 | Stockholm | 105 m | `[pin]` Vasa Museum<br>`[tour]` Vasa Museum |
+| N41 | Milan | 109 m | `[tour]` Bosco Verticale<br>`[pin]` Bosco Verticale |
+| N42 | New York | 109 m | `[pin]` The Times Square Confetti Blizzard *(in Times Square)*<br>`[pin]` Times Square |
+| N43 | New York | 109 m | `[pin]` The Hidden Hum of Times Square *(in Times Square)*<br>`[pin]` Times Square |
+| N44 | New York | 115 m | `[tour]` Wall Street *(in Wall Street)*<br>`[pin]` The Dark Secret of Wall Street |
+| N45 | New York | 115 m | `[pin]` The Wall of Wall Street *(in Wall Street)*<br>`[pin]` The Dark Secret of Wall Street |
 | N46 | New York | 127 m | `[tour]` Neue Galerie<br>`[pin]` The House Behind the Neue Galerie |
 | N47 | Hong Kong | 129 m | `[tour]` Victoria Peak \| 太平山頂<br>`[pin]` Bakehouse at Victoria Peak |
 | N48 | Kyoto | 130 m | `[tour]` Gion \| 祇園<br>`[pin]` Gion Ishi Sakashita Building |
 | N49 | Queens | 135 m | `[pin]` Inside the Museum of the Moving Image *(in Museum of the Moving Image)*<br>`[tour]` Museum of the Moving Image |
 | N50 | Queens | 135 m | `[pin]` Museum of the Moving Image, Astoria *(in Museum of the Moving Image)*<br>`[tour]` Museum of the Moving Image |
 | N51 | London | 135 m | `[pin]` Big Ben<br>`[tour]` Houses of Parliament and Big Ben *(in Houses of Parliament)* |
-| N52 | Amsterdam | 136 m | `[tour]` The Jordaan *(in Westerkerk)*<br>`[tour]` The Jordaan |
-| N53 | New York | 142 m | `[pin]` The Wall of Wall Street<br>`[pin]` The Dark Secret of Wall Street |
-| N54 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
+| N52 | New York | 135 m | `[pin]` The Red Room at One Wall Street<br>`[tour]` Wall Street *(in Wall Street)* |
+| N53 | New York | 135 m | `[pin]` The Red Room at One Wall Street<br>`[pin]` The Wall of Wall Street *(in Wall Street)* |
+| N54 | Amsterdam | 136 m | `[tour]` The Jordaan *(in Westerkerk)*<br>`[tour]` The Jordaan |
 | N55 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
-| N56 | Bentonville | 152 m | `[pin]` Crystal Bridges Museum of American Art<br>`[pin]` Crystal Bridges Museum of American Art |
-| N57 | Athens | 158 m | `[pin]` The Ancient Agora of Athens<br>`[pin]` The Agora of Athens |
-| N58 | London | 161 m | `[tour]` Dennis Severs' House<br>`[pin]` Dennis Severs' House |
-| N59 | New York | 162 m | `[pin]` The Red Room at One Wall Street<br>`[pin]` The Wall of Wall Street |
+| N56 | Chicago | 142 m | `[tour]` The Wrigley Building & Tribune Tower<br>`[pin]` Tribune Tower *(in Tribune Tower)* |
+| N57 | Bentonville | 152 m | `[pin]` Crystal Bridges Museum of American Art<br>`[pin]` Crystal Bridges Museum of American Art |
+| N58 | Athens | 158 m | `[pin]` The Ancient Agora of Athens<br>`[pin]` The Agora of Athens |
+| N59 | London | 161 m | `[tour]` Dennis Severs' House<br>`[pin]` Dennis Severs' House |
 | N60 | Stockholm | 194 m | `[pin]` Stortorget, Gamla Stan<br>`[tour]` Gamla stan |
 | N61 | Los Angeles | 212 m | `[tour]` LACMA<br>`[pin]` LACMA's David Geffen Galleries |
 | N62 | Chicago | 214 m | `[tour]` Obama Presidential Center<br>`[pin]` Obama Presidential Center |
@@ -190,13 +143,11 @@ is an editorial decision, and some are deliberately two subjects.
 | N72 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
 | N73 | New York | 424 m | `[pin]` Governors Island<br>`[tour]` Governors Island |
 | N74 | Brooklyn | 428 m | `[tour]` Domino Park<br>`[pin]` Domino Park |
-| N75 | Chicago | 445 m | `[tour]` Marina City<br>`[pin]` Building Marina City |
-| N76 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
-| N77 | Chicago | 486 m | `[tour]` Marina City<br>`[pin]` Marina City |
-| N78 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
-| N79 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
+| N75 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
+| N76 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
+| N77 | New York | 497 m | `[pin]` The Noguchi Museum *(in The Noguchi Museum)*<br>`[tour]` The Noguchi Museum |
 
-## § 4 — declined, standing (8 groups + 2 named cases)
+## § 4 — declined, standing (27 groups + 2 named cases)
 
 🔴 **These are decided. The sweep still reports them because it cannot know a decision was
 made — do not re-offer them as new candidates.**
@@ -208,6 +159,25 @@ made — do not re-offer them as new candidates.**
 | *(no place)* | `[tour]` Cafè de l'Arquitecte<br>`[tour]` Hotel Casa Sagnier — one building, but is the site the hotel or the building that holds both? | owner, 2026-09-11 |
 | *(no place)* | `[tour]` El Retiro: The Garden Handed to Everyone<br>`[tour]` Puerta de Alcalá — two distinct monuments that only round together — BOTH coordinates are 4 dp (~11 m) | owner, 2026-09-11 |
 | *(no place)* | `[pin]` Handcrafter, D2 Place<br>`[pin]` Hoopla, D2 Place — two shops inside D2 Place; the site is the mall, which neither entry is named for | owner, 2026-09-11 |
+| *(no place)* | `[pin]` Natural Spices Shop<br>`[pin]` New Patoy — dense block — two separate Hong Kong shops | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Arc de Triomphe<br>`[pin]` The Tomb of the Unknown Soldier — owner: keep separate | owner, 2026-09-11 |
+| *(no place)* | `[pin]` Little Bao<br>`[pin]` Primo Posto — dense block — two different Hong Kong restaurants | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Casa Amatller<br>`[tour]` Casa Batlló — two separate houses side by side on the Illa de la Discòrdia — the point of that block | owner, 2026-09-11 |
+| *(no place)* | `[pin]` The Fletcher-Sinclair House<br>`[pin]` The Venetian Room at Albertine — owner: keep separate — two adjacent mansions | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Bếp Mẹ Ỉn<br>`[tour]` STIR - Modern Classic Cocktail — dense block — two separate Ho Chi Minh City venues | owner, 2026-09-11 |
+| *(no place)* | `[pin]` Haidilao Hot Pot, Carnarvon Road<br>`[pin]` Matsukiyo — dense block — a hotpot restaurant and a drugstore | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Fringe Club \| 藝穗會<br>`[pin]` Ho Lan Zheng — dense block — two separate Hong Kong venues | owner, 2026-09-11 |
+| *(no place)* | `[tour]` ArkDes — Swedish Centre for Architecture and Design<br>`[tour]` Moderna Museet — owner: keep separate — they share a building on Skeppsholmen but are two institutions | owner, 2026-09-11 |
+| *(no place)* | `[pin]` Lazy Suzy<br>`[pin]` Peng Leng Zheng — dense block — two separate Hong Kong venues | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Blue Bottle Studio Seoul \| 블루보틀 삼청 한옥<br>`[tour]` Kukje Gallery K3 \| 국제갤러리 K3 — dense block — a coffee studio and a gallery | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Diego Iluminado<br>`[tour]` Fundación Proa — owner: keep separate | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Bar Montan<br>`[tour]` Hosoi — dense block — two separate Stockholm bars | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Baan Plern Jitt \| บ้านเพลินจิตต์ ณ คลองบางหลวง<br>`[tour]` Khlong Bang Luang Floating Market \| ตลาดชุมชนคลองบางหลวง — owner: keep separate | owner, 2026-09-11 |
+| *(no place)* | `[pin]` Social Goods<br>`[tour]` Stone Slab Street \| 石板街 — dense block — a shop on the street it stands in | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Palacio Barolo<br>`[tour]` Salón 1923 — owner: keep separate | owner, 2026-09-11 |
+| *(no place)* | `[pin]` Heartwarming<br>`[pin]` Yu Chau Street — dense block — a shop on the street it stands in | owner, 2026-09-11 |
+| *(no place)* | `[tour]` The Loop — Where the Skyscraper Was Born<br>`[tour]` The Rookery — owner: keep separate — a building and a walk that passes it | owner, 2026-09-11 |
+| *(no place)* | `[tour]` Pellegrino 2000<br>`[tour]` The Rover — dense block — two separate Sydney venues | owner, 2026-09-11 |
 | Duddell Street Steps and Gas Lamps | `[pin]` Il Presidente | owner, 2026-09-11 |
 | Westminster Abbey | `[pin]` The Cosmati Pavement<br>`[pin]` The Shrine of Edward the Confessor | owner, 2026-09-11 |
 | Rockefeller Center | `[pin]` The Channel Gardens | owner, 2026-09-11 |
