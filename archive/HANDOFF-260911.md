@@ -139,9 +139,52 @@ is what localised it to the edit rather than to the tooling. *Read the counts, n
 - Sweep re-run: **41/151/79 → 40/132/79**; the seven groups fall silent **and the three held rows
   still report**.
 
+## § B's 0 m rows applied — 38 places, and two held on purpose
+
+The owner then asked for **the 0 m candidates in § B** — the EXACT tier, every member on an
+identical coordinate, which is the catalogue's own identity rule. There were 40.
+
+**38 are now places (142 → 180). 2 are held.**
+
+**Names, addresses and copy were written, not guessed at.** The id scheme was reverse-engineered
+from the live catalogue — `uuid5(NAMESPACE_URL, "atlas-place:{slug(city)}:{slug(name)}")`,
+lowercase, which reproduces **140 of 142** existing ids (the two misses are older
+`atlas-place:{slug(name)}` ids and, like the odd link-pin ids, are NOT re-minted) — and verified
+by reproducing the three most recently added places exactly before minting anything. **All 40
+addresses were reverse-geocoded from the exact coordinate** rather than recalled, via Photon
+(40/40 FOUND, the three outcomes kept distinct per `docs/lessons.md` § 4), and every returned
+locality was read back against the catalogue's `city`. ⚠️ **Ellis Island geocodes to Jersey City,
+New Jersey and that is correct** — most of the island's made land is legally New Jersey.
+
+🔴 **Eight groups were folded wider than 0 m, deliberately.** Each had a same-subject entry a few
+metres off the exact coordinate, and building the place from the coincident pair alone would have
+produced **a place called "The Pantheon" that excludes the Pantheon tour standing 5.8 m away.**
+On the § A precedent they are snapped in (25.8 m down to 1.4 m), each move asserted inside that
+entry's own 30 m radius.
+
+### ⏸ The two held, and why holding was the answer
+
+**Grand Central** and **Tai Kwun** each have a same-subject entry **87.9 m away — outside its own
+30 m geofence**, so it cannot be snapped without moving where that tour actually fires. For Grand
+Central it is worse: the far entries are the **existing `Grand Central Terminal` place**, so
+creating this one would put a second place of the same name 88 m from the first. The choice is
+**move the far entries onto one coordinate, accepting the 88 m shift in their trigger point, or
+leave the site split in two** — editorial, not mechanical.
+
+### Verified
+
+- Validator **0 errors / 0 warnings**, 1,552 tours + 1,717 pins + **180 places**; control clean.
+- Sweep **40 exact → 2**, and the 2 are exactly the held pair. TIGHT 132 → 117.
+- `seed_from_toursjson.py` emits 180 places cleanly.
+- Every new place has `heroImageURL: null` **by design** (the page falls back to its top tour's
+  hero) and **every one has at least one member carrying a hero**, checked — so none renders blank.
+- ⚠️ **The first attempt sorted `places` and rewrote 1,425 unchanged lines.** Reverted; the array
+  is appended to instead. Final diff is **611 insertions / 32 deletions, and the 32 deletions are
+  exactly the eight folded entries × four coordinate fields** — categorised, not eyeballed.
+
 ## What is NOT done
 
-**§ B (132 sites) and § C (79 pairs) create nothing.** A place needs its own name, description,
+**§ B's non-0 m rows and § C (79 pairs) create nothing.** A place needs its own name, description,
 address and a chosen coordinate — and, as above, every member then moves onto that coordinate —
 so it stays an editorial decision, not a batch job. `heroImageURL` stays optional by design, so
 none of them is blocked on sourcing an image.

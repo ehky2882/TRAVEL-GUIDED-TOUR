@@ -32329,8 +32329,8 @@
           "order": 0,
           "title": "Palais Garnier",
           "caption": "The most opulent opera house ever built — grand staircase, gilded foyers and the myth of the Phantom below.",
-          "latitude": 48.87197,
-          "longitude": 2.33176,
+          "latitude": 48.8719375,
+          "longitude": 2.3315625,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palais-garnier.mp3",
           "audioDurationSeconds": 133,
           "triggerMode": "geofenced",
@@ -32342,8 +32342,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 133,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.87197,
-      "centroidLongitude": 2.33176,
+      "centroidLatitude": 48.8719375,
+      "centroidLongitude": 2.3315625,
       "city": "Paris",
       "country": "France",
       "primaryCategory": "musicAndPerformance",
@@ -32809,8 +32809,8 @@
           "order": 0,
           "title": "Catacombs of Paris",
           "caption": "The underground ossuary where the bones of six million Parisians are stacked in tunnels beneath the streets.",
-          "latitude": 48.83386,
-          "longitude": 2.33241,
+          "latitude": 48.8338125,
+          "longitude": 2.3324375,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/catacombs.mp3",
           "audioDurationSeconds": 128,
           "triggerMode": "geofenced",
@@ -32822,8 +32822,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 128,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.83386,
-      "centroidLongitude": 2.33241,
+      "centroidLatitude": 48.8338125,
+      "centroidLongitude": 2.3324375,
       "city": "Paris",
       "country": "France",
       "primaryCategory": "history",
@@ -50499,8 +50499,8 @@
           "order": 0,
           "title": "The Pantheon",
           "caption": "The inscription over the entrance is a very generous credit.",
-          "latitude": 41.8986,
-          "longitude": 12.4769,
+          "latitude": 41.898616,
+          "longitude": 12.4768334,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-pantheon.mp3",
           "audioDurationSeconds": 150,
           "triggerMode": "geofenced",
@@ -50512,8 +50512,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 150,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8986,
-      "centroidLongitude": 12.4769,
+      "centroidLatitude": 41.898616,
+      "centroidLongitude": 12.4768334,
       "city": "Rome",
       "country": "Italy",
       "primaryCategory": "architecture",
@@ -82700,6 +82700,585 @@
       "tourIds": [
         "70475EA3-5082-583F-96FF-4E45A47C8283",
         "EDE8987D-A4FB-5CC1-8E30-C8677CB5853C"
+      ]
+    },
+    {
+      "id": "066e581a-ec16-588c-93ae-082ed8b86389",
+      "name": "Alang Ship-Breaking Yard",
+      "description": "The largest ship-breaking yard in the world, where retired tonnage is run aground on the tidal flats of the Gulf of Khambhat and taken apart largely by hand. The coast's extreme tidal range is the whole reason it is here: a ship can be driven up the beach at high water and left dry enough to dismantle.",
+      "latitude": 21.4070625,
+      "longitude": 72.1941875,
+      "city": "Alang",
+      "address": "Alang-Sosiya Road, Bhavnagar, Gujarat",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "58CE1C25-FF2F-56FB-BBCE-67E152CEFC9B",
+        "A1740604-00A8-5B13-90B4-5B007A7A21FD"
+      ]
+    },
+    {
+      "id": "4dbcd599-c95d-5f65-b30a-16e41e82ebe3",
+      "name": "Stonehenge",
+      "description": "A ring of sarsens raised on Salisbury Plain around 2500 BC, with the smaller bluestones brought some 200 km from the Preseli Hills in Wales. What it was for is still argued over; that it is aligned on the solstice sunrise is not.",
+      "latitude": 51.1789375,
+      "longitude": -1.8261875,
+      "city": "Amesbury",
+      "address": "Salisbury Plain, Amesbury, Wiltshire",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "597CC454-7CCF-5837-A4D6-438C57DCF482",
+        "60801D47-2C4C-50A2-9B00-D4F2C1983B24"
+      ]
+    },
+    {
+      "id": "69f8b853-8e3f-594a-86d3-cad67866e073",
+      "name": "Ancient Messene",
+      "description": "A city founded in 369 BC after Thebes broke Sparta's hold on the Peloponnese, laid out in one go to give the freed Messenians a capital. Because almost nothing was built over it afterwards, the stadium, theatre and circuit walls survive with a completeness few Greek cities can show.",
+      "latitude": 37.1788125,
+      "longitude": 21.9183125,
+      "city": "Ancient Messene",
+      "address": "Mavrommati, Messenia",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2EB4D656-FE68-5D14-AC0D-A688C35A77B9",
+        "6F4789C7-CB04-5464-A57A-0C45E7D79343"
+      ]
+    },
+    {
+      "id": "4ba5bdb6-fdad-5620-abab-56d93cf2c563",
+      "name": "Metropolitan Cathedral of Athens",
+      "description": "The Mitrópoli, consecrated in 1862 and built in part from the masonry of demolished Byzantine churches. The much older and much smaller Agios Eleftherios stands beside it, which is the comparison most visitors actually come for.",
+      "latitude": 37.9754375,
+      "longitude": 23.7298125,
+      "city": "Athens",
+      "address": "Mitropoleos Square, Athens",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "04C16975-1FED-5022-BD51-01A73346988F",
+        "19D39416-E573-5E48-81FC-A22344D0E3B4"
+      ]
+    },
+    {
+      "id": "57cff7d6-423d-55f3-85f5-e8f0f70a117b",
+      "name": "KAIT Plaza and Workshop",
+      "description": "Two buildings by Junya Ishigami on the Kanagawa Institute of Technology campus: a glass-walled workshop filled with hundreds of slender white columns set at apparently random angles, and a later plaza whose roof is so thin and so wide it sags visibly between supports. Both are arguments about how little structure a room can admit to having.",
+      "latitude": 35.4865625,
+      "longitude": 139.3431875,
+      "city": "Atsugi",
+      "address": "Kanagawa Institute of Technology, Atsugi",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "330DD923-D8C7-515B-8D89-307C5C604B5E",
+        "DD943512-9A4E-59F2-AD74-90DF0A0C5A07"
+      ]
+    },
+    {
+      "id": "ce27edd1-e900-57a6-b58b-d1125a67a4c8",
+      "name": "Fort Carroll",
+      "description": "A hexagonal artificial island in the Patapsco River, begun in 1848 under the young army engineer Robert E. Lee and never finished to its intended height. Abandoned since the Second World War, it is now largely a bird colony.",
+      "latitude": 39.2150625,
+      "longitude": -76.5189375,
+      "city": "Baltimore",
+      "address": "Patapsco River, Baltimore County, Maryland",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "40957717-B144-5A69-A90C-E9B263D91D62",
+        "868C6D61-9495-5220-961F-3204F84CC1EE"
+      ]
+    },
+    {
+      "id": "138c1c9f-5395-546e-a0a8-a9d22e09175b",
+      "name": "The Lion's Mound",
+      "description": "An earth cone raised in the 1820s over the spot where the Prince of Orange was wounded at Waterloo, topped by a cast-iron lion. Building it took the soil from the ridge Wellington's line had actually held — so the monument to the battlefield partly destroyed the battlefield.",
+      "latitude": 50.6784375,
+      "longitude": 4.4048125,
+      "city": "Braine-l'Alleud",
+      "address": "Route du Lion, Braine-l'Alleud",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5E6880A6-6139-538B-814E-52D11A90EEAD",
+        "8E3C5A09-087F-590E-8627-BFB0695A8107"
+      ]
+    },
+    {
+      "id": "58c66704-389d-5f69-a0ab-a786f7b36610",
+      "name": "FDNY Engine 226",
+      "description": "A firehouse on State Street in Boerum Hill. The city moved to close the company in 2003 and the neighbourhood fought it and won.",
+      "latitude": 40.6871875,
+      "longitude": -73.9826875,
+      "city": "Brooklyn",
+      "address": "State Street, Boerum Hill, Brooklyn",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "509EF321-87FB-5753-B7E5-22AB22B99EA3",
+        "BCFDF222-23F7-5301-B901-42776431D377"
+      ]
+    },
+    {
+      "id": "0e216822-f0d8-58ef-879b-6c3e3ab6378c",
+      "name": "The City Reliquary",
+      "description": "A storefront museum of New York ephemera in Williamsburg — subway tokens, Statue of Liberty souvenirs, the things the city threw away — run as a volunteer non-profit.",
+      "latitude": 40.7139536,
+      "longitude": -73.9557409,
+      "city": "Brooklyn",
+      "address": "370 Metropolitan Avenue, Brooklyn",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "10B12B30-456E-57E1-8A6F-B9D0B0629D91",
+        "C4B2F2ED-CBAC-5E7E-8500-39A18291B527"
+      ]
+    },
+    {
+      "id": "85130b98-7710-5d33-ba85-122fa7c18fff",
+      "name": "Metropolitan Correctional Center",
+      "description": "Harry Weese's 1975 federal jail: a 28-storey equilateral triangle in the Loop, its window slits cut narrow enough that they needed no bars. Each floor is a triangular dayroom with the cells arranged around it.",
+      "latitude": 41.8765625,
+      "longitude": -87.6304375,
+      "city": "Chicago",
+      "address": "71 West Van Buren Street, Chicago",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "122EF50A-16AE-545B-AD52-972841AB045D",
+        "640174C1-0885-5240-A60C-BE8600CDEBA1",
+        "7BB01190-6F4E-5F2F-9156-59F8E5772FBD"
+      ]
+    },
+    {
+      "id": "cd31ce38-dcc2-5d31-bd9d-ff8006ff9763",
+      "name": "Federal Reserve Bank of Chicago",
+      "description": "One of the twelve Reserve Banks, in a 1922 Graham, Anderson, Probst & White building facing the Board of Trade down LaSalle Street. Its money museum is open to the public.",
+      "latitude": 41.8784283,
+      "longitude": -87.6330264,
+      "city": "Chicago",
+      "address": "230 South LaSalle Street, Chicago",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "E6BB5113-05DA-5E6A-AC98-F48853B6AC2E",
+        "EE2A8B47-FA8B-502A-AF18-6A5513BB7213"
+      ]
+    },
+    {
+      "id": "758dc98e-7c16-51cd-9790-2a79dd3715cc",
+      "name": "Populus",
+      "description": "Studio Gang's 2024 hotel, its facade covered in lid-shaped window hoods modelled on the scars an aspen leaves behind when a branch drops. The hoods double as shades and rain deflectors.",
+      "latitude": 39.7403544,
+      "longitude": -104.9911197,
+      "city": "Denver",
+      "address": "240 14th Street, Denver",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "24A255E5-44CE-5752-9582-845BF4FD2A81",
+        "30C08566-6215-577F-A837-BC7A7B3C8CD2",
+        "CDBEEA57-0F06-5352-A6BB-980D081A6494"
+      ]
+    },
+    {
+      "id": "9606537f-c2cb-5426-b785-ca7b53626fa6",
+      "name": "Mary King's Close",
+      "description": "A warren of Old Town streets buried under the Royal Exchange in the 1750s, when the new building went up over the top of them rather than clearing them away. The closes survive underneath with their houses standing.",
+      "latitude": 55.9499375,
+      "longitude": -3.1905625,
+      "city": "Edinburgh",
+      "address": "Warriston's Close, Royal Mile, Edinburgh",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "51E1861F-5F79-5321-AC7C-4341FCFDF393",
+        "B3FADEB1-F2FF-5268-AD69-231B49574BAE"
+      ]
+    },
+    {
+      "id": "5684cf52-733c-5110-b4f7-024bacd2647c",
+      "name": "Hong Kong Design Institute",
+      "description": "Coldefy & Associés' 2010 campus: four teaching blocks lifted onto a raised white plate and reached by a long diagonal escalator, with the ground left open underneath as public space.",
+      "latitude": 22.3057698,
+      "longitude": 114.2534525,
+      "city": "Hong Kong",
+      "address": "3 King Ling Road, Tseung Kwan O, Hong Kong",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3BB39F17-D481-5269-95E8-60041B4FE2A3",
+        "5DD30AC6-342E-5CBE-B1D7-C22A70085278"
+      ]
+    },
+    {
+      "id": "c51018fa-7948-5c26-91a7-4e9b1e65197b",
+      "name": "Kyūkyodō",
+      "description": "An incense and stationery house trading on Teramachi since the 17th century, long supplying temples and the imperial court.",
+      "latitude": 35.010172,
+      "longitude": 135.767096,
+      "city": "Kyoto",
+      "address": "Teramachi, Nakagyo-ku, Kyoto",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "C5AF52F8-F85E-5D60-96DB-B598B94362DC",
+        "E379D7AE-E00C-510B-962A-A5A1647539E5"
+      ]
+    },
+    {
+      "id": "43bf4efd-5c8a-5ef8-9791-93ee45f4dc4a",
+      "name": "First National Bank of Hollywood",
+      "description": "A 1927 Gothic Revival bank tower at Hollywood and Highland by Meyer & Holler, the firm behind Grauman's Chinese Theatre. Its banking hall has spent decades as a filming location. Two separate posts by the same creator sit on it.",
+      "latitude": 34.101687,
+      "longitude": -118.338437,
+      "city": "Los Angeles",
+      "address": "Hollywood Boulevard at Highland Avenue, Los Angeles",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "57CAD837-2E86-5EA2-AA50-40380D0AF477",
+        "62ECCD3D-535D-5168-9299-54AEECE3FD16"
+      ]
+    },
+    {
+      "id": "4ade65b8-6470-5839-9248-db4ba1b04685",
+      "name": "First Unitarian Society Meeting House",
+      "description": "Frank Lloyd Wright's 1951 meeting house for the congregation his own parents had helped found, its copper roof rising to a prow meant to read as hands held in prayer. A much larger addition was built alongside it in 2008.",
+      "latitude": 43.0757306,
+      "longitude": -89.4347525,
+      "city": "Madison",
+      "address": "900 University Bay Drive, Madison, Wisconsin",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "9CB4FD5F-12BB-5B3C-B2AA-2A56DF4D3B7B",
+        "9E15A63E-75B5-594B-8D63-F10F6F074F00"
+      ]
+    },
+    {
+      "id": "93228379-9136-50b2-aeec-eec8fd2e5925",
+      "name": "Seven Mile Bridge",
+      "description": "Two crossings side by side: Henry Flagler's 1912 railway bridge, wrecked by the 1935 Labor Day hurricane and later rebuilt for cars, and the 1982 highway span that replaced it. A stretch of the old bridge has reopened as a walkway.",
+      "latitude": 24.7045625,
+      "longitude": -81.1540625,
+      "city": "Marathon",
+      "address": "Overseas Highway, Marathon, Florida",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1922E2B0-FDAC-5DD1-868F-358720E4EBE4",
+        "7E71E06B-709D-58B6-B1C6-C7CCBB58ED18"
+      ]
+    },
+    {
+      "id": "618cef2e-0852-54d5-872b-3831e413777c",
+      "name": "Mont Saint-Michel",
+      "description": "A tidal island crowned by an abbey begun in the 8th century and built upward for eight hundred years, with a village wound around its base. The causeway that silted the bay was replaced in 2014 by a bridge the tide can run under.",
+      "latitude": 48.6360625,
+      "longitude": -1.5114375,
+      "city": "Mont-Saint-Michel",
+      "address": "Le Mont-Saint-Michel, Manche, Normandy",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6AD9680F-2B0D-526B-9101-E003EAE3CF82",
+        "6F223195-AAE8-54A5-96B4-7B31EA381C3F",
+        "B34042BF-D099-5F5B-8B7B-74FDB7D768A7"
+      ]
+    },
+    {
+      "id": "9dd3b28b-d47e-533e-8c36-af667180e5c3",
+      "name": "Hofbräuhaus am Platzl",
+      "description": "The state brewery's beer hall, founded as a ducal brewhouse in 1589 and rebuilt after the war. Regulars keep their own steins in padlocked lockers on the wall.",
+      "latitude": 48.137778,
+      "longitude": 11.579861,
+      "city": "Munich",
+      "address": "Platzl 9, Munich",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0AC73F15-FADA-5670-89B7-4AFAE1B5217F",
+        "8E4BB84C-9BEC-5754-B11B-0E4BA91C0AFF",
+        "EF2A046D-3E51-5C97-9E25-C67B1FC2ED1D",
+        "F1089873-76D8-5055-A0DF-EF376C64C7FA"
+      ]
+    },
+    {
+      "id": "a963d0bd-8cd5-50fc-b453-e1b29cffaa53",
+      "name": "Frauenkirche",
+      "description": "Munich's late-Gothic brick cathedral, finished in 1488, its twin towers capped with onion domes added in the 1520s that became the city's silhouette. A mark in the entrance floor is the subject of the Devil's Footprint story.",
+      "latitude": 48.1386875,
+      "longitude": 11.5730625,
+      "city": "Munich",
+      "address": "Frauenplatz 12, Munich",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "02A89AB7-F9DE-5F4B-A23F-CC075BDC2B59",
+        "29D08E75-D519-5CD3-B3DD-B68AF66C95E3"
+      ]
+    },
+    {
+      "id": "7922d4ea-5e3a-54ff-9bd9-71381fe8a7ea",
+      "name": "Bronx Zoo",
+      "description": "265 acres in the Bronx, opened in 1899 and run by the Wildlife Conservation Society. Its early history includes the 1906 display of Ota Benga, a Congolese man, in the monkey house — which the society formally apologised for in 2020.",
+      "latitude": 40.8493045,
+      "longitude": -73.8771379,
+      "city": "New York",
+      "address": "2300 Southern Boulevard, Bronx, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "EBF3ACE6-8D0B-5DDB-9510-409F37340378",
+        "F6E87F5F-AFE2-5D2F-AA42-291552AF9EA3"
+      ]
+    },
+    {
+      "id": "8e2e44ab-8c7c-520a-a685-2ff83ee1e499",
+      "name": "Katz's Delicatessen",
+      "description": "A Lower East Side delicatessen trading since 1888 and still carving its pastrami by hand. The air rights above it were sold to the building next door, which is the reason the low corner survives.",
+      "latitude": 40.722343,
+      "longitude": -73.987353,
+      "city": "New York",
+      "address": "205 East Houston Street, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "644FE3D5-B93C-5209-8411-83C682BD33CF",
+        "76CC3701-D9CD-520A-B3EE-BB34AB14AA71"
+      ]
+    },
+    {
+      "id": "3c76eb55-697b-5ef9-aa59-90bc98acc467",
+      "name": "33 Thomas Street",
+      "description": "The Long Lines Building: a windowless concrete tower finished in 1974 to John Carl Warnecke's design, built to house AT&T's long-distance switching equipment and to keep running on its own for two weeks.",
+      "latitude": 40.7165418,
+      "longitude": -74.0059177,
+      "city": "New York",
+      "address": "33 Thomas Street, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "32FDCB92-C076-5176-B18C-5AE7B3E1DCB9",
+        "D46229A3-1177-5B61-9FBB-EF9AA07E49B0"
+      ]
+    },
+    {
+      "id": "37072921-27d6-5935-8cba-261b9d511bec",
+      "name": "Solar Carve",
+      "description": "Studio Gang's 2019 office building beside the High Line, its northeast corner cut away in faceted glass planes so the park keeps its light.",
+      "latitude": 40.7414821,
+      "longitude": -74.0084598,
+      "city": "New York",
+      "address": "40 Tenth Avenue, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2D9775A9-F265-5D5A-8995-76D87C5CC94E",
+        "A6CE55FF-7A56-5F34-93AF-A02A157B28D3"
+      ]
+    },
+    {
+      "id": "c2ad9c7b-d202-5360-8a66-6609e78a4ba1",
+      "name": "Museum of Chinese in America",
+      "description": "A museum of Chinese American history on Centre Street, in a space Maya Lin arranged around a skylit courtyard. A 2020 fire in the separate building holding its collection damaged much of the archive.",
+      "latitude": 40.7194375,
+      "longitude": -73.9990625,
+      "city": "New York",
+      "address": "215 Centre Street, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0510AEEB-5142-56B0-8953-AFFD21164A25",
+        "26A4BD5F-DEA9-5FCB-8D21-7E0FFC342A16",
+        "4CD881EC-2DF6-5913-951F-E7040DE94281"
+      ]
+    },
+    {
+      "id": "9e3d6090-46a4-5857-8e4c-6dd1a1c8d822",
+      "name": "Times Square",
+      "description": "The junction of Broadway and Seventh Avenue, named for the New York Times tower that opened there in 1904. Zoning has required the illuminated signage since 1987, so the spectacle is a legal obligation rather than an accident.",
+      "latitude": 40.7579375,
+      "longitude": -73.9855625,
+      "city": "New York",
+      "address": "Broadway at Seventh Avenue, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3D2C55F7-998B-59A6-AC52-7B8B98009ACC",
+        "76DA191A-050A-5E6B-BF34-2B4BBE3C91D3"
+      ]
+    },
+    {
+      "id": "e60dbafe-71de-5b20-b948-b9ae91a2dd63",
+      "name": "Ellis Island",
+      "description": "The federal immigration station through which some twelve million people entered the United States between 1892 and 1954. Most of the island's made land is legally New Jersey, which is why it geocodes across the river.",
+      "latitude": 40.6994375,
+      "longitude": -74.0395625,
+      "city": "New York",
+      "address": "Ellis Island, New York Harbor",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5284BAD2-36EF-5BA5-8A95-76CE4C359CBC",
+        "97DBC4D7-B94A-5B10-8C5C-49BF53DFDAF9"
+      ]
+    },
+    {
+      "id": "859e8e8d-6679-549a-9fbd-ed3dc0238e7e",
+      "name": "Sayamaike Museum",
+      "description": "Tadao Ando's museum for the Sayamaike reservoir, the oldest dam in Japan. Visitors descend between two walls of falling water before reaching a transplanted section of the embankment itself.",
+      "latitude": 34.5073921,
+      "longitude": 135.5515239,
+      "city": "Osakasayama",
+      "address": "Ikejiri-Naka, Osakasayama, Osaka",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1FEE8865-608C-54D5-A185-474435994B2E",
+        "C8734872-A1E3-54B0-A4DC-5D65E50C5573"
+      ]
+    },
+    {
+      "id": "9f09b234-5898-560a-b761-529c4e14233b",
+      "name": "Palais Garnier",
+      "description": "Charles Garnier's opera house, opened in 1875 and the definitive statement of Second Empire Paris — grand staircase, gilt, and a Chagall ceiling added in 1964. The underground water tank beneath it is the seed of the Phantom story.",
+      "latitude": 48.8719375,
+      "longitude": 2.3315625,
+      "city": "Paris",
+      "address": "Place de l'Opéra, Paris",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5B19987D-DD9D-5719-98A9-D550B1ACCF69",
+        "8C267018-6340-5696-A156-E1BD74D8B617",
+        "e8630587-812e-583a-9bd4-af283c885a85"
+      ]
+    },
+    {
+      "id": "d6a96824-69b9-5641-bc15-f53ff51214aa",
+      "name": "Catacombs of Paris",
+      "description": "Former limestone quarries under the 14th arrondissement, filled from 1786 onwards with the bones of some six million people cleared out of the city's overflowing cemeteries and stacked into walls.",
+      "latitude": 48.8338125,
+      "longitude": 2.3324375,
+      "city": "Paris",
+      "address": "1 Avenue du Colonel Henri Rol-Tanguy, Paris",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0E5C7D13-60A7-55FD-ADFE-57444895DD25",
+        "1BFE9AE7-74B9-5AB6-80AA-EE73D0DC4D3F",
+        "22f6500a-08a3-5574-8b09-71a7b3844be8"
+      ]
+    },
+    {
+      "id": "aecc2664-1658-57ac-8033-1fba7a2b1d72",
+      "name": "ArtCenter College of Design, Hillside Campus",
+      "description": "Craig Ellwood's 1976 building for the college: a long steel bridge spanning a ravine in the San Rafael Hills, so the campus sits over the landscape rather than on it.",
+      "latitude": 34.1687403,
+      "longitude": -118.1851007,
+      "city": "Pasadena",
+      "address": "1700 Lida Street, Pasadena, California",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3B286711-278B-5792-8B5A-3D83FDB6D072",
+        "DA517148-1C70-5BC2-8853-2C506A0AE328"
+      ]
+    },
+    {
+      "id": "5125a0b6-7fec-5f22-bf65-b2cc4e44d798",
+      "name": "Museum of the Moving Image",
+      "description": "A museum of film, television and digital media in Astoria, on the site of the old Paramount studios. Leeser Architecture's 2011 expansion added the blue-walled theatre.",
+      "latitude": 40.7561949,
+      "longitude": -73.9240069,
+      "city": "Queens",
+      "address": "36-01 35th Avenue, Astoria, Queens",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "042EFE79-E1D5-5A79-AFF7-98A523F0AF06",
+        "5D100AFD-2CA8-5382-899F-6B936A2267DD"
+      ]
+    },
+    {
+      "id": "532f90f4-b8fd-59a6-ad8f-8fd0740af460",
+      "name": "New York Hall of Science",
+      "description": "A science museum in Flushing Meadows built for the 1964 World's Fair, its Great Hall a curving wall of dalle de verre — cast glass set in concrete — that glows blue from inside.",
+      "latitude": 40.747377,
+      "longitude": -73.8516136,
+      "city": "Queens",
+      "address": "47-01 111th Street, Corona, Queens",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "D1C8BFA8-E946-5F9C-9267-0391485C3A42",
+        "DEE32782-BBB3-5E8B-A01E-56264F811F84"
+      ]
+    },
+    {
+      "id": "59bbaf6c-a3b1-509c-9b60-54bc0d4f0cf3",
+      "name": "The Pantheon",
+      "description": "Hadrian's rebuilding of Agrippa's temple, finished around AD 126 and still the largest unreinforced concrete dome in the world. It survived because it was made a church in 609.",
+      "latitude": 41.898616,
+      "longitude": 12.4768334,
+      "city": "Rome",
+      "address": "Piazza della Rotonda, Rome",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "137146d0-0398-5074-8c5c-484d1244172d",
+        "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
+        "AF6C10CC-E6BA-5432-A413-B869ADD6396E"
+      ]
+    },
+    {
+      "id": "e6a804e0-7c6b-5ad1-b595-73f0ee4745f1",
+      "name": "Nishi-Sando Public Toilet",
+      "description": "Sou Fujimoto's contribution to the Tokyo Toilet project, which commissioned architects to rebuild public lavatories across Shibuya. This one is a shallow white basin set into the ground.",
+      "latitude": 35.68401,
+      "longitude": 139.69145,
+      "city": "Tokyo",
+      "address": "Nishi-Sando, Shibuya, Tokyo",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2cadaeea-eebb-5e38-9a2f-92e2d35a9d25",
+        "51FDDE1F-DD10-5F15-85DF-AE8408E3E0FB"
+      ]
+    },
+    {
+      "id": "e38d3bd8-6d24-5b40-8384-69e3178b236f",
+      "name": "Kansas Museum of History",
+      "description": "The state historical society's museum on the western edge of Topeka, covering Kansas from the plains nations through Bleeding Kansas and the railroads.",
+      "latitude": 39.0564834,
+      "longitude": -95.7759806,
+      "city": "Topeka",
+      "address": "6425 Southwest 6th Avenue, Topeka, Kansas",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B9776755-59B5-50EB-850A-1FC6DB38BB3D",
+        "D623BBBF-59BC-5ED0-B31E-D0F9ED1C52EC"
+      ]
+    },
+    {
+      "id": "7f919a62-a771-5f6d-ac18-d236fd6720ce",
+      "name": "Washington Monument",
+      "description": "The obelisk on the National Mall, begun in 1848 and stalled for over twenty years by money and the Civil War — the change in marble colour a third of the way up marks where building stopped and restarted. Finished in 1884.",
+      "latitude": 38.8894375,
+      "longitude": -77.0353125,
+      "city": "Washington",
+      "address": "2 15th Street Northwest, Washington, DC",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
+        "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD"
       ]
     }
   ],
@@ -122017,8 +122596,8 @@
           "order": 0,
           "title": "Museum of Chinese in America",
           "caption": "What’s up with this building? Episode 26 #nychistory #history #chinatown #urbex #ad",
-          "latitude": 40.719441,
-          "longitude": -73.999078,
+          "latitude": 40.7194375,
+          "longitude": -73.9990625,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -122030,8 +122609,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.719441,
-      "centroidLongitude": -73.999078,
+      "centroidLatitude": 40.7194375,
+      "centroidLongitude": -73.9990625,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -145428,8 +146007,8 @@
           "order": 0,
           "title": "The Dark History of the Hofbräuhaus",
           "caption": "🍺 Whoa this famous beer hall of Munich has some dark history! Here’s the story of the Hofbräuhaus, from how it got started to how it still s",
-          "latitude": 48.1376875,
-          "longitude": 11.5796875,
+          "latitude": 48.137778,
+          "longitude": 11.579861,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -145441,8 +146020,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.1376875,
-      "centroidLongitude": 11.5796875,
+      "centroidLatitude": 48.137778,
+      "centroidLongitude": 11.579861,
       "city": "Munich",
       "country": "Germany",
       "primaryCategory": "history",
@@ -145878,8 +146457,8 @@
           "order": 0,
           "title": "The 28-Storey Prison in Downtown Chicago",
           "caption": "😵‍💫 Do massive prisons belong in cities? Here’s the story of the Metropolitan Correctional Center in Chicago, standing at 28 stories high. M",
-          "latitude": 41.8766079,
-          "longitude": -87.6304817,
+          "latitude": 41.8765625,
+          "longitude": -87.6304375,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -145891,8 +146470,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8766079,
-      "centroidLongitude": -87.6304817,
+      "centroidLatitude": 41.8765625,
+      "centroidLongitude": -87.6304375,
       "city": "Chicago",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -151412,8 +151991,8 @@
           "order": 0,
           "title": "Mont-Saint-Michel",
           "caption": "Would you walk across quicksand to reach this monastery? This is Mont-Saint-Michel in Normandy, France about 4-hour drive from Paris. Edited",
-          "latitude": 48.635833,
-          "longitude": -1.511389,
+          "latitude": 48.6360625,
+          "longitude": -1.5114375,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -151425,8 +152004,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.635833,
-      "centroidLongitude": -1.511389,
+      "centroidLatitude": 48.6360625,
+      "centroidLongitude": -1.5114375,
       "city": "Mont-Saint-Michel",
       "country": "France",
       "primaryCategory": "sacredSites",
@@ -157913,8 +158492,8 @@
           "order": 0,
           "title": "Populus Denver",
           "caption": "a 3-hour mid-day jean nap in the window would hitttt lets me honest #architecture #building #travel #architect #design",
-          "latitude": 39.7403125,
-          "longitude": -104.9909375,
+          "latitude": 39.7403544,
+          "longitude": -104.9911197,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -157926,8 +158505,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 39.7403125,
-      "centroidLongitude": -104.9909375,
+      "centroidLatitude": 39.7403544,
+      "centroidLongitude": -104.9911197,
       "city": "Denver",
       "country": "United States",
       "primaryCategory": "architecture",

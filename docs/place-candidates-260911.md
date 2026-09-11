@@ -146,7 +146,52 @@ three held rows correctly still report.
 | A9 ⏸ held | Rockefeller Center | New York | 18 m | `[pin]` The Channel Gardens |
 | A10 ✅ | Largo di Torre Argentina | Rome | 21 m | `[pin]` Where Julius Caesar Was Assassinated |
 
-## B — 132 sites with two or more entries and no place page
+## B — 132 sites with two or more entries and no place page — ✅ ALL 0 m ROWS APPLIED 2026-09-11
+
+**Owner: *"do the 0m candidates in section b".*** The 0 m rows are the EXACT tier — every member
+on an identical coordinate, the catalogue's own identity rule. There were 40. **38 are now
+places; 2 are held.**
+
+🔴 **Eight of the 38 were folded wider than 0 m, deliberately.** Each had a same-subject entry a
+few metres off the exact coordinate, and creating the place from the coincident pair alone would
+have produced **a place called "The Pantheon" that excludes the Pantheon tour standing 5.8 m
+away**. On the § A precedent they are snapped in, each move asserted to be inside that entry's
+own 30 m trigger radius:
+
+| Folded in | Onto | By |
+|---|---|---|
+| *Mont-Saint-Michel* | Mont Saint-Michel | 25.8 m |
+| *The Dark History of the Hofbräuhaus* | Hofbräuhaus am Platzl | 16.3 m |
+| *Populus Denver* | Populus | 16.3 m |
+| *Palais Garnier* (tour) | Palais Garnier | 14.9 m |
+| *The 28-Storey Prison in Downtown Chicago* | Metropolitan Correctional Center | 6.2 m |
+| *The Pantheon* (tour) | The Pantheon | 5.8 m |
+| *Catacombs of Paris* (tour) | Catacombs of Paris | 5.7 m |
+| *Museum of Chinese in America* | Museum of Chinese in America | 1.4 m |
+
+### ⏸ Two held — they need a decision, and skipping them quietly would have been wrong
+
+Both have a same-subject entry **87.9 m away, outside its own 30 m geofence**, so it *cannot* be
+snapped in without changing where that tour actually fires:
+
+| Held | The coincident pair | What sits 88 m away |
+|---|---|---|
+| **Grand Central** (New York) | *The Train Board at Grand Central* · *Grand Central: Why the Zodiac Is Reversed* | the existing **Grand Central Terminal** place, holding *The South Facade of Grand Central* and a *Grand Central Terminal* pin |
+| **Tai Kwun** (Hong Kong) | *Madame Fu* · *The Public Spaces of Tai Kwun* | the **Tai Kwun** tour |
+
+Grand Central is the sharper one: a *second* place with the same name 88 m from the first is
+worse than no place. The choice is **move the far entries onto one coordinate** — accepting that
+their geofence then fires 88 m from where it does today — **or leave the site split in two.**
+That is an editorial call, not a mechanical one.
+
+### After
+
+Validator **0 errors / 0 warnings** across 1,552 tours + 1,717 pins + **180 places** (was 142).
+Seed emits 180. The sweep goes **40 exact → 2**, and those 2 are exactly the held pair.
+
+⚠️ **The numbering below is the original sweep and is deliberately NOT renumbered** — B15 and B83
+are cited elsewhere. Re-run `check-place-candidates.py` for the live remaining menu.
+
 
 Every group below is built only from hops of 25 m or less, and the **widest of the 142
 groups is 30 m end to end** — so none of them is a chain of separate sites strung together,
