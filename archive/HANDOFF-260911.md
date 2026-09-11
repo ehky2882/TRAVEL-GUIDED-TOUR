@@ -90,9 +90,58 @@ Separately, **5 `sourceURL`s are shared by more than one pin** — one video pin
 it visits (a Zumthor reel at LACMA, Therme Vals and the Bruder Klaus Chapel; an antique-markets
 reel at five Italian markets). Also correct, also not a duplicate.
 
+## § A applied — and the claim that it was free turned out to be wrong
+
+The owner picked **all of § A except Il Presidente, Westminster Abbey and the Channel Gardens**.
+Each of those three was the *only* missing member of its row, so A4, A8 and A9 drop out entirely
+and stay open. Applied: **seven places, eight entries.**
+
+🔴 **"Adding the id to `tourIds` is the whole change" was WRONG — it is in this handoff's own
+§ A description above, and in the doc, and it is what the owner was told.** The validator caught
+it. `Place.swift` makes a place's identity **exact coordinate equality**, and `validate-tours`
+enforces it at **1e-9 degrees**. All 362 existing place members sit exactly on their place — 362
+of 362, which is the schema rather than a coincidence. The eight ids alone produced exactly eight
+errors, `place <name>: member not on the place coordinate`.
+
+So joining a place also means **snapping the entry's stop coordinate, and its centroid** (or the
+centroid falls outside the stop range), onto the place:
+
+| Moved | Onto | By |
+|---|---|---|
+| *Where Julius Caesar Was Assassinated* | Largo di Torre Argentina | 20.9 m |
+| *M+ Museum* | M+ Museum | 15.6 m |
+| *Museum at Eldridge Street* | Eldridge Street Synagogue | 11.9 m |
+| *Above the Bradbury Building's Atrium* | Bradbury Building | 8.9 m |
+| *Who Funded Griffith Observatory* · *The Crimes of Griffith J. Griffith* | Griffith Observatory | 5.4 m |
+| *Charging Bull: How It Got There* | The Charging Bull | 3.5 m |
+| *Tribune Tower* | Tribune Tower | 0.6 m |
+
+⚠️ **Every move is ASSERTED in the script to be inside the entry's own `triggerRadiusMeters`**
+(30 m for all eight), so nothing changes about when any tour fires. A larger move would silently
+redefine where a tour triggers and nothing else in the pipeline would object — which is exactly
+the class of defect `check-coordinates.py` exists for. The assertion stays.
+
+**How the failure surfaced is worth keeping.** `validate-tours-mirror.py` did not print eight
+errors; it exited **2 — "selftest 32/32 faults caught; control DIRTY … SELFTEST FAILED, verdict
+not trustworthy"** with no detail. The control is the real catalogue, and my edit had made it
+dirty. Running the same validator against `git stash`'s clean base returned **0 errors**, which
+is what localised it to the edit rather than to the tooling. *Read the counts, not the verdict.*
+
+### Verified after
+
+- Validator **0 errors / 0 warnings** across 1,552 tours + 1,717 pins + 142 places; control clean.
+- **No entity created** — every count unchanged.
+- The `Tours.json` diff is **exactly 8 entries × 4 coordinate fields + 8 ids**, categorised line
+  by line rather than eyeballed.
+- `backend/seed_from_toursjson.py` runs clean and all 8 ids reach the places SQL, so
+  `publish-catalog.yml` carries this to Supabase on merge (conditional on `SUPABASE_DB_URL`,
+  which cannot be checked from here — verify against the live RPC after merge).
+- Sweep re-run: **41/151/79 → 40/132/79**; the seven groups fall silent **and the three held rows
+  still report**.
+
 ## What is NOT done
 
-**No place was created.** A place needs its own name, description, address and a chosen
-coordinate — picking that coordinate is a decision, not an average — so § B is a menu, not a
-to-do list. The owner picks and they get written. `heroImageURL` stays optional by design, so
+**§ B (132 sites) and § C (79 pairs) create nothing.** A place needs its own name, description,
+address and a chosen coordinate — and, as above, every member then moves onto that coordinate —
+so it stays an editorial decision, not a batch job. `heroImageURL` stays optional by design, so
 none of them is blocked on sourcing an image.
