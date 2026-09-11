@@ -240,3 +240,48 @@ read-back; the Supabase seed ran from the same commit. ⚠️ **The seed is cond
 Every key is optional in Swift, so a dropped `places` key decodes as nil and the feature silently
 stops existing — no crash, no log, no failed CI. That is exactly how `places` vanished for 14
 hours on 2026-08-19.
+
+## The under-10 m batch — 41 more places, and two bugs the process caught
+
+The owner asked for every candidate site under 10 m, then excluded five by number. **41 places
+created; 181 → 222; 85 entries, 43 of them snapped onto their site.** Every move was asserted to be
+inside that entry's own 30 m trigger radius, so nothing changed about when any tour fires. Sweep
+**1 exact / 121 tight / 79 near → 0 / 75 / 79**.
+
+Names and copy were written; **ids and addresses were derived**. All 41 coordinates were
+reverse-geocoded via Photon (41/41 FOUND, the three outcomes kept distinct) and every returned
+locality read back against the catalogue's `city`. ⚠️ **Roughly a dozen returned a *neighbouring*
+feature rather than the site** — the Noguchi Museum geocoded to "Ravenswood Playground", Chelsea
+Market to a bar inside it, the Federal Reserve to a bare postcode — so the geocode is a starting
+point to read, never an answer to paste.
+
+### 🔴 Two bugs, both of the silent kind
+
+**1. A literal `|` in a title corrupts a markdown table.** 24 entries carry one (the bilingual
+convention, `Museum SAN | 뮤지엄 산`). Unescaped, each opens an extra column and **shifts every cell
+after it in that row** — no error, no ragged output, just a plausible table holding the wrong data.
+Caught by counting columns, not by reading. `make-place-menu.py` now escapes centrally and
+**refuses to write a table whose columns disagree**; deleting the escape makes it exit 2.
+
+**2. Addressing group members by TITLE picked the wrong entry.** **11 of the 41 groups hold two
+entries with the same title** — two creators covering one building, which is precisely what a place
+is for. A title lookup returns both. Fixed by carrying **ids** through the whole pipeline; ids are
+identity, titles are not.
+
+⚠️ **And one guard fired in the wrong order.** The apply script asserted "single-stop" *before*
+checking whether a move was needed, which rejected Museum SAN — a 4-stop walk sitting **exactly**
+on its place, needing no move at all. 26 existing places already hold a multi-stop member, so that
+is normal. The assert now runs only when `d > 0`, where it actually means something.
+
+### The five declined, and why recording them matters
+
+Stockholm's shopfront (two unrelated subjects) · *Britain's Oldest Door* + *Tomb of Elizabeth I*
+(**both Westminster Abbey, already a place 17 m away** — this would have created a duplicate) ·
+Barcelona's café/hotel (one building, but which is the site?) · **Madrid's *El Retiro* +
+*Puerta de Alcalá*** (two distinct monuments that only round together — ⚠️ **both coordinates are
+4 dp, ~11 m, and are worth fixing separately**) · Hong Kong's *Handcrafter* + *Hoopla* (two shops
+inside D2 Place; the site is the mall, which neither is named for).
+
+🔴 **The sweep cannot know a decision was made**, so all five are now in the menu's § 4 keyed by
+their member titles — `DECLINED` alone could not reach them, because they join no existing place.
+Without that they return as fresh candidates on every run until someone "fixes" them.

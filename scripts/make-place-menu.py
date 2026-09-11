@@ -52,6 +52,23 @@ DECLINED = {
     "Rockefeller Center",
 }
 
+# 🔴 Declined groups that join NO existing place, so `DECLINED` above cannot
+# reach them. Keyed by the frozen set of member titles — identity here is the
+# membership, not a place name that does not exist. Each was put to the owner
+# with the under-10 m batch on 2026-09-11 and turned down for the stated reason.
+DECLINED_GROUPS = {
+    frozenset({"Gamla stan 1859", "Kouthoofd Familie Winkel"}):
+        "one shopfront, two unrelated subjects",
+    frozenset({"Britain's Oldest Door", "The Tomb of Elizabeth I"}):
+        "both are Westminster Abbey, already a place 17 m away — this would duplicate it",
+    frozenset({"Cafè de l'Arquitecte", "Hotel Casa Sagnier"}):
+        "one building, but is the site the hotel or the building that holds both?",
+    frozenset({"El Retiro: The Garden Handed to Everyone", "Puerta de Alcalá"}):
+        "two distinct monuments that only round together — BOTH coordinates are 4 dp (~11 m)",
+    frozenset({"Handcrafter, D2 Place", "Hoopla, D2 Place"}):
+        "two shops inside D2 Place; the site is the mall, which neither entry is named for",
+}
+
 
 def load_checker():
     """Import check-place-candidates.py, whose filename is not a module name."""
@@ -137,9 +154,16 @@ def entry(m):
     return s + (f" *(in {esc(m['place'])})*" if m["claimed"] else "")
 
 
+def declined_reason(row):
+    """Why this group is held, or None if it is still open."""
+    if set(row["existing"]) & DECLINED:
+        return "owner, 2026-09-11"
+    return DECLINED_GROUPS.get(frozenset(m["title"] for m in row["members"]))
+
+
 def render(doc, groups, pairs, rev):
-    held = [r for r in groups if set(r["existing"]) & DECLINED]
-    open_groups = [r for r in groups if not set(r["existing"]) & DECLINED]
+    held = [r for r in groups if declined_reason(r)]
+    open_groups = [r for r in groups if not declined_reason(r)]
     zero = [r for r in open_groups if r["span"] == 0]
     rest = [r for r in open_groups if r["span"] > 0]
     n_places = len(doc["places"])
@@ -226,8 +250,13 @@ def render(doc, groups, pairs, rev):
     w("| Held | The entry left out | Decided |")
     w("|---|---|---|")
     for r in held:
-        out = "<br>".join(entry(m) for m in r["members"] if not m["claimed"])
-        w(f"| {'/'.join(esc(e) for e in r['existing'])} | {out} | owner, 2026-09-11 |")
+        reason = declined_reason(r)
+        if r["existing"]:
+            what = "<br>".join(entry(m) for m in r["members"] if not m["claimed"])
+            w(f"| {'/'.join(esc(e) for e in r['existing'])} | {what} | {reason} |")
+        else:
+            what = "<br>".join(entry(m) for m in r["members"])
+            w(f"| *(no place)* | {what} — {esc(reason)} | owner, 2026-09-11 |")
     w("| **Tai Kwun** | `[pin]` Madame Fu — a restaurant *inside* a heritage compound is not the "
       "compound. It sits 27.4 m out, just past the TIGHT radius, so the sweep does not report it "
       "| owner, 2026-09-11 |")
@@ -269,6 +298,19 @@ def selftest():
     check("an unclaimed member is not",
           entry({"kind": "pin", "title": "X", "claimed": False, "place": None}),
           "`[pin]` X")
+
+    # 🔴 A declined group that joins no existing place must still be held —
+    # DECLINED is keyed on place names these groups do not have.
+    madrid = {"existing": [], "members": [
+        {"title": "El Retiro: The Garden Handed to Everyone", "kind": "tour",
+         "claimed": False, "place": None},
+        {"title": "Puerta de Alcalá", "kind": "tour", "claimed": False, "place": None}]}
+    check("a place-less declined group is held", bool(declined_reason(madrid)), True)
+    check("an open group is not held",
+          declined_reason({"existing": [], "members": [
+              {"title": "Something", "kind": "pin", "claimed": False, "place": None}]}), None)
+    check("a declined group attached to a place is still held",
+          declined_reason({"existing": ["Westminster Abbey"], "members": []}), "owner, 2026-09-11")
 
     total = len(ran)
     if fails:
