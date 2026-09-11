@@ -855,3 +855,38 @@ from the list the person actually answered, not from a fresh derivation. `DECLIN
 holds with `DECLINED` (which only knows groups attached to an existing place) rather than
 `declined_reason()`, so it reported **28 open groups when 4 were open**. A count and the document
 it describes must be derived the same way, or the summary quietly contradicts the table under it.
+
+## An upsert-only seed cannot delete — a dissolved place leaks (2026-09-11)
+
+🔴 **`seed_from_toursjson.py` could create and update a place but never remove
+one.** So a place deleted from `Tours.json` survived in the database as an
+**empty row** — it kept its name and its point on the map while owning nothing.
+
+Splitting the Jordaan out of `Westerkerk` dissolved that place in the catalogue
+(one entry describing Westerkerk is not a place). The catalogue then held
+**266** places; the live count read **267**, with **0 tours** pointing at the
+orphan.
+
+⚠️ **Nothing downstream objects, which is the whole danger.** The row is valid
+SQL, the validator only ever reads `Tours.json`, CI is green, `get_catalog`
+serves it happily, and the only symptom is a number that is one too big —
+against a count check the runbook *relies on* to confirm a publish landed. Had
+the Jordaan split not changed the total, the leak would have been invisible.
+
+**What made it findable:** the merge was verified against the live database by
+polling the cheap 47-byte count, and the number simply disagreed with the
+catalogue. **Verify the count, and when it disagrees, find out why rather than
+assuming a race.** Two earlier readings were legitimately stale (the seed takes
+up to fourteen minutes), so "wait longer" was the tempting answer and would have
+been wrong.
+
+The fix mirrors a comment already in that file: the `place_id` reset was
+documented as *load-bearing* because membership must be able to **shrink**. The
+same is true one level up — the set of places must be able to shrink too. The
+prune is emitted **after** the `place_id` reset, because `tours.place_id`
+references `places`: clear the links, then delete.
+
+**The general rule: any derived table seeded by upsert needs a matching delete,
+or it can only ever grow.** Check for that the first time you delete a row from
+the catalogue rather than adding one — deletion is the rare operation here, and
+the path is correspondingly untested.
