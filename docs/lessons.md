@@ -763,3 +763,31 @@ a visible regression, and it is rendered by `TourDetailView` and searched by
 **Method:** save one payload with `curl --compressed … -o catalog.json`, then in
 Python remove one key at a time and `len(gzip.compress(...))` the result. One
 saved copy answers every such question afterwards for free.
+
+## A title rule cannot find a place; only the coordinate can (2026-09-11)
+
+`check-place-candidates.py` matched two entries as the same site when one title's meaningful
+words contained the other's. That rule is precise and it is **structurally blind to the
+commonest shape in this catalogue: one site that two entries call by two unrelated names.**
+
+*Hook & Ladder 8* and *The Ghostbusters Firehouse* are one firehouse **4 m** apart and share
+not one word. So are *Britain's Oldest Door* and *The Tomb of Elizabeth I* (both Westminster
+Abbey, 5 m), *Chelsea Market* and a pin about Oreos (the same Nabisco building, 8 m), and
+*The Federal Reserve Bank of New York* and *$500 Billion of Gold Under 33 Liberty Street*
+(0 m). No string comparison will ever reach any of them.
+
+Adding a **TIGHT** tier — within 25 m, whatever the titles say — found **151 pairs, 82 of
+which no title rule could have produced**, and **55 of which share no word at all**. The
+sweep it produced is `docs/place-candidates-260911.md`.
+
+🔴 **The lesson generalises past places: when the thing you are identifying is physical,
+match on the physical fact and use the text only to explain the match.** The title was never
+the evidence — the coordinate was, and the title was doing the work because it was easier to
+compare.
+
+⚠️ **And the converse still holds, which is why the tier does not auto-create anything.**
+Proximity is evidence, not proof. Two classes of false positive are real and permanent: a
+dense block of separate venues (Hong Kong's restaurant pins are 10–20 m apart and are
+different restaurants), and **coordinates rounded to four decimal places — ~11 m — which can
+round two genuinely separate sites to within a few metres** (El Retiro sits 8 m from the
+Puerta de Alcalá). Exact coincidence exits non-zero; everything looser is for a human.
