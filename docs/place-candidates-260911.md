@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 13:10 UTC against `main` at `f9be0a94`.** Every number here is a reading of
+**Regenerated 2026-09-11 15:19 UTC against `main` at `ca2e4496`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -23,8 +23,8 @@ the normal condition. What follows is what is open **right now**.
 
 | | Finding | Act on it? |
 |---|---|---|
-| **§ 1** | **1 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
-| **§ 2** | **4 sites** with 2+ entries within 25 m | Owner picks |
+| **§ 1** | **3 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
+| **§ 2** | **5 sites** with 2+ entries within 25 m | Owner picks |
 | **§ 3** | 47 same-subject pairs 25–500 m apart | Read one at a time |
 | **§ 4** | 32 groups **already declined** | Do not re-offer |
 
@@ -50,15 +50,17 @@ Proximity is evidence, not proof. Nothing here auto-creates.
 
 ---
 
-## § 1 — on an identical coordinate (1)
+## § 1 — on an identical coordinate (3)
 
 The catalogue's documented identity rule: provably one site, no editorial judgement.
 
 | # | City | Entries |
 |---|---|---|
-| **Z1** | Chicago | `[tour]` Obama Presidential Center<br>`[pin]` Obama Presidential Center *(in Obama Presidential Center)*<br>`[pin]` Obama Presidential Center *(in Obama Presidential Center)* |
+| **Z1** | Chicago | `[pin]` UIC Skyspace<br>`[pin]` UIC Skyspace |
+| **Z2** | Rotterdam | `[pin]` Kubuswoningen (Cube Houses)<br>`[pin]` The Cube Houses of Rotterdam |
+| **Z3** | Chicago | `[tour]` Obama Presidential Center<br>`[pin]` Obama Presidential Center *(in Obama Presidential Center)*<br>`[pin]` Obama Presidential Center *(in Obama Presidential Center)* |
 
-## § 2 — 4 sites with two or more entries within 25 m
+## § 2 — 5 sites with two or more entries within 25 m
 
 Built only from hops of 25 m or less; the widest group is **19 m** end to end, so
 none is a chain of separate sites strung together.
@@ -69,6 +71,7 @@ none is a chain of separate sites strung together.
 | P2 | London | 15 m | `[pin]` Bizarre Buildings of London - part 17: Trellick Tower (re…<br>`[pin]` Trellick Tower |
 | P3 | London | 19 m | `[pin]` Tate Modern<br>`[tour]` Tate Modern |
 | P4 | Sant Just Desvern | 0 m | `[pin]` Living in Walden 7 *(in Walden 7)*<br>`[tour]` Walden 7 *(in Walden 7)*<br>`[pin]` Walden 7 |
+| P5 | Niles | 2 m | `[pin]` How the Leaning Tower of Niles Began to Crumble *(in Leaning Tower of Niles)*<br>`[pin]` How the Leaning Tower of Niles Was Built *(in Leaning Tower of Niles)*<br>`[pin]` Leaning Tower of Niles<br>`[pin]` The Leaning Tower of Niles Today *(in Leaning Tower of Niles)* |
 
 ## § 3 — 47 same-subject pairs 25–500 m apart
 
