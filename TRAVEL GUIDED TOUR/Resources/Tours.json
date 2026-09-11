@@ -80729,7 +80729,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "18696d8a-c775-51c5-b9d8-4129ed1ff1a1",
-        "b898ab3b-374b-50bd-a53b-dbbacf55a12e"
+        "b898ab3b-374b-50bd-a53b-dbbacf55a12e",
+        "0401F573-1962-5BE6-B1F8-834FA3F4C1AC"
       ]
     },
     {
@@ -81113,7 +81114,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "26828f4e-9ad4-5682-b16d-327ee86439b3",
-        "F1F59415-AA33-5001-A4F4-AA0D9B696556"
+        "F1F59415-AA33-5001-A4F4-AA0D9B696556",
+        "2FC374EC-536D-5A78-A99A-E8A6DAD97444"
       ]
     },
     {
@@ -81128,7 +81130,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "395687ef-e6d6-5638-ae69-0c0bb575bdaa",
-        "990F2058-3173-5501-8AA2-709E8BC7761B"
+        "990F2058-3173-5501-8AA2-709E8BC7761B",
+        "19329E37-3F20-55AC-A7E3-2459EA82BC00",
+        "4CE0E415-E35C-50D7-9942-2E253F212694"
       ]
     },
     {
@@ -81770,7 +81774,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "7298da4a-bcc7-4e2a-b8b4-7b0e0b38afb4",
-        "48E91090-767E-5026-B177-16BAC6C65C55"
+        "48E91090-767E-5026-B177-16BAC6C65C55",
+        "FF5003D1-7DB9-54C5-BED9-2344E017938D"
       ]
     },
     {
@@ -81985,7 +81990,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "2644D271-E442-5007-85CD-8D4E57333C50",
-        "DA7E193B-C288-534C-979F-2C35778CCBD7"
+        "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
       ]
     },
     {
@@ -82546,7 +82552,8 @@
       "tourIds": [
         "a41d0cbf-bf41-46a6-bff7-1380ff443c18",
         "78923C2A-94EA-5009-82BD-8B43A674F299",
-        "1C44BADA-4F82-5B8D-A211-2F212FD98FA8"
+        "1C44BADA-4F82-5B8D-A211-2F212FD98FA8",
+        "D000C7E7-D141-5E92-AE36-C030E2C00EE8"
       ]
     },
     {
@@ -82611,7 +82618,8 @@
         "324fb306-4c81-4053-bbe4-ee101132596e",
         "06D3F0D5-6E54-56E3-B459-9811EB24F976",
         "F49AA9B2-5D3B-5A80-97D8-C417C6DA2101",
-        "92D0B9EC-C4BC-524D-AB03-35946BBD906A"
+        "92D0B9EC-C4BC-524D-AB03-35946BBD906A",
+        "2094E0D6-09DD-50DD-AA29-4127FC6F8828"
       ]
     },
     {
@@ -134092,8 +134100,8 @@
           "order": 0,
           "title": "Above the Bradbury Building's Atrium",
           "caption": "Amazing to gain access and see more than just the ground floor of the legendary Bradbury Building in Los Angeles by George Wyman and Sumner ",
-          "latitude": 34.0504755,
-          "longitude": -118.2478075,
+          "latitude": 34.0505,
+          "longitude": -118.2479,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -134105,8 +134113,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0504755,
-      "centroidLongitude": -118.2478075,
+      "centroidLatitude": 34.0505,
+      "centroidLongitude": -118.2479,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -141450,8 +141458,8 @@
           "order": 0,
           "title": "Who Funded Griffith Observatory",
           "caption": "Meet the Visionary: Griffith Observatory Founder Revealed! 👀🌌 #RightNow #CheckOut -PART 1 - Unlock the story of the mastermind behind the Gr",
-          "latitude": 34.1184375,
-          "longitude": -118.3004375,
+          "latitude": 34.1184,
+          "longitude": -118.3004,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -141463,8 +141471,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.1184375,
-      "centroidLongitude": -118.3004375,
+      "centroidLatitude": 34.1184,
+      "centroidLongitude": -118.3004,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "history",
@@ -141495,8 +141503,8 @@
           "order": 0,
           "title": "The Crimes of Griffith J. Griffith",
           "caption": "Unveiling Controversy: Crimes of Griffith J. Griffith Exposed! 🕵️‍♂️🔍 #RightNow #SwipeLeftForMore - PART 2 - Dive into the shadows of Griffi",
-          "latitude": 34.1184375,
-          "longitude": -118.3004375,
+          "latitude": 34.1184,
+          "longitude": -118.3004,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -141508,8 +141516,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.1184375,
-      "centroidLongitude": -118.3004375,
+      "centroidLatitude": 34.1184,
+      "centroidLongitude": -118.3004,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "history",
@@ -146861,8 +146869,8 @@
           "order": 0,
           "title": "Where Julius Caesar Was Assassinated",
           "caption": "😲 What do you think would have happened if Caesar was never assassinated? Here’s the story of the demise of Julius Caesar in 44 BC and how t",
-          "latitude": 41.8954375,
-          "longitude": 12.4765625,
+          "latitude": 41.8955,
+          "longitude": 12.4768,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -146874,8 +146882,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8954375,
-      "centroidLongitude": 12.4765625,
+      "centroidLatitude": 41.8955,
+      "centroidLongitude": 12.4768,
       "city": "Rome",
       "country": "Italy",
       "primaryCategory": "history",
@@ -154218,8 +154226,8 @@
           "order": 0,
           "title": "Charging Bull: How It Got There",
           "caption": "How did the Charging Bull get here and what does it mean? Visit @risenyofficial to learn more about the history of New York City’s stock mar",
-          "latitude": 40.705564,
-          "longitude": -74.013446,
+          "latitude": 40.70554,
+          "longitude": -74.01342,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -154231,8 +154239,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.705564,
-      "centroidLongitude": -74.013446,
+      "centroidLatitude": 40.70554,
+      "centroidLongitude": -74.01342,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -156006,8 +156014,8 @@
           "order": 0,
           "title": "Museum at Eldridge Street",
           "caption": "😍 I’m in love with the Eldridge Street Synagogue, its so gorgeous inside! I highly recommend heading deep into Lower East Side right by the ",
-          "latitude": 40.714776,
-          "longitude": -73.993588,
+          "latitude": 40.7147291,
+          "longitude": -73.993461,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -156019,8 +156027,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.714776,
-      "centroidLongitude": -73.993588,
+      "centroidLatitude": 40.7147291,
+      "centroidLongitude": -73.993461,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -157673,8 +157681,8 @@
           "order": 0,
           "title": "M+ Museum",
           "caption": "What are we thinkin team? Me personally, I need to go back and linger for even longer. #architecture #design #asia #travel #hongkong",
-          "latitude": 22.3005625,
-          "longitude": 114.1594375,
+          "latitude": 22.30069,
+          "longitude": 114.1595,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -157686,8 +157694,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.3005625,
-      "centroidLongitude": 114.1594375,
+      "centroidLatitude": 22.30069,
+      "centroidLongitude": 114.1595,
       "city": "Hong Kong",
       "country": "Hong Kong",
       "primaryCategory": "architecture",
@@ -159393,8 +159401,8 @@
           "order": 0,
           "title": "Tribune Tower",
           "caption": "Chicago Weird Ep13: The Tribune Tower 🛕 #chicago #travel #weird #chicagoweird #chicagogram",
-          "latitude": 41.89058,
-          "longitude": -87.6232,
+          "latitude": 41.890584,
+          "longitude": -87.6232046,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -159406,8 +159414,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.89058,
-      "centroidLongitude": -87.6232,
+      "centroidLatitude": 41.890584,
+      "centroidLongitude": -87.6232046,
       "city": "Chicago",
       "country": "United States",
       "primaryCategory": "architecture",

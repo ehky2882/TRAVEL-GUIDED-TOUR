@@ -791,3 +791,26 @@ dense block of separate venues (Hong Kong's restaurant pins are 10–20 m apart 
 different restaurants), and **coordinates rounded to four decimal places — ~11 m — which can
 round two genuinely separate sites to within a few metres** (El Retiro sits 8 m from the
 Puerta de Alcalá). Exact coincidence exits non-zero; everything looser is for a human.
+
+## Joining a place means MOVING the entry, not just listing it (2026-09-11)
+
+A place's membership looks like a list you append to. It is not. `Place.swift` makes a place's
+identity **exact coordinate equality**, and `validate-tours` enforces it at **1e-9 degrees**:
+
+```
+place Griffith Observatory: member not on the place coordinate
+```
+
+🔴 **All 362 existing place members sit EXACTLY on their place — 362 of 362.** That is not a
+coincidence, it is the schema. So adding an entry to a place also means **snapping that entry's
+stop coordinate (and its centroid, or the centroid falls outside the stop range) onto the
+place**. Session 157 added eight ids without snapping and got exactly eight errors.
+
+**Check the move against the entry's own `triggerRadiusMeters` before making it.** All eight
+moves there were 0.6–20.9 m against a 30 m radius, so nothing changed about when any tour
+fires — but a larger move would silently redefine where a tour triggers, and nothing else in
+the pipeline would object.
+
+⚠️ **This is also why a place candidate is never free.** A sweep can say "these two entries are
+4 m apart"; turning that into a place means choosing the one true coordinate and moving
+everything onto it. That is an editorial decision, which is why nothing auto-creates one.

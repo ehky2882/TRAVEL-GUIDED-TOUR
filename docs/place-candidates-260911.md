@@ -102,23 +102,49 @@ So § B is a menu, not a to-do list. Say which ones you want and they get writte
 
 ---
 
-## A — ten existing places are missing a member (10)
+## A — ten existing places are missing a member (10) — ✅ SEVEN APPLIED 2026-09-11
 
-No new place needed: the site already has a page and one more entry sits on it.
-Adding the id to that place's `tourIds` is the whole change.
+**Owner picked all of § A except Il Presidente, Westminster Abbey and the Channel Gardens.**
+Each of those three was the *only* missing member of its row, so A4, A8 and A9 drop out
+entirely and stay open candidates. The remaining seven — **A1, A2, A3, A5, A6, A7, A10, eight
+entries** — are applied.
+
+🔴 **"Adding the id is the whole change" was WRONG, and the validator caught it.** `Place.swift`
+makes a place's identity **exact coordinate equality**, and `validate-tours` enforces it at
+**1e-9 degrees** — so a member must sit *exactly* on its place. All 362 existing members do.
+Adding the eight ids alone produced **8 errors: `member not on the place coordinate`**.
+
+So joining a place also means **snapping the entry onto the place coordinate**, which is how
+the other 362 got there. Every move here is small and, importantly, **inside the entry's own
+30 m trigger radius**, so nothing changes about when it fires:
+
+| Moved | Onto | By |
+|---|---|---|
+| *Where Julius Caesar Was Assassinated* | Largo di Torre Argentina | 20.9 m |
+| *M+ Museum* | M+ Museum | 15.6 m |
+| *Museum at Eldridge Street* | Eldridge Street Synagogue | 11.9 m |
+| *Above the Bradbury Building's Atrium* | Bradbury Building | 8.9 m |
+| *Who Funded Griffith Observatory* | Griffith Observatory | 5.4 m |
+| *The Crimes of Griffith J. Griffith* | Griffith Observatory | 5.4 m |
+| *Charging Bull: How It Got There* | The Charging Bull | 3.5 m |
+| *Tribune Tower* | Tribune Tower | 0.6 m |
+
+After: validator **0 errors, 0 warnings** (selftest 32/32, control clean) and the sweep drops
+from 41/151/79 to **40 exact · 132 tight · 79 near** — the seven groups fall silent and the
+three held rows correctly still report.
 
 | # | Place | City | Span | Missing from the page |
 |---|---|---|---|---|
-| A1 | Tribune Tower | Chicago | 1 m | `[pin]` Tribune Tower |
-| A2 | The Charging Bull | New York | 3 m | `[pin]` Charging Bull: How It Got There |
-| A3 | Griffith Observatory | Los Angeles | 5 m | `[pin]` The Crimes of Griffith J. Griffith<br>`[pin]` Who Funded Griffith Observatory |
-| A4 | Duddell Street Steps and Gas Lamps | Hong Kong | 6 m | `[pin]` Il Presidente |
-| A5 | Bradbury Building | Los Angeles | 9 m | `[pin]` Above the Bradbury Building's Atrium |
-| A6 | Eldridge Street Synagogue | New York | 12 m | `[pin]` Museum at Eldridge Street |
-| A7 | M+ Museum | Hong Kong | 16 m | `[pin]` M+ Museum |
-| A8 | Westminster Abbey | London | 17 m | `[pin]` The Cosmati Pavement<br>`[pin]` The Shrine of Edward the Confessor |
-| A9 | Rockefeller Center | New York | 18 m | `[pin]` The Channel Gardens |
-| A10 | Largo di Torre Argentina | Rome | 21 m | `[pin]` Where Julius Caesar Was Assassinated |
+| A1 ✅ | Tribune Tower | Chicago | 1 m | `[pin]` Tribune Tower |
+| A2 ✅ | The Charging Bull | New York | 3 m | `[pin]` Charging Bull: How It Got There |
+| A3 ✅ | Griffith Observatory | Los Angeles | 5 m | `[pin]` The Crimes of Griffith J. Griffith<br>`[pin]` Who Funded Griffith Observatory |
+| A4 ⏸ held | Duddell Street Steps and Gas Lamps | Hong Kong | 6 m | `[pin]` Il Presidente |
+| A5 ✅ | Bradbury Building | Los Angeles | 9 m | `[pin]` Above the Bradbury Building's Atrium |
+| A6 ✅ | Eldridge Street Synagogue | New York | 12 m | `[pin]` Museum at Eldridge Street |
+| A7 ✅ | M+ Museum | Hong Kong | 16 m | `[pin]` M+ Museum |
+| A8 ⏸ held | Westminster Abbey | London | 17 m | `[pin]` The Cosmati Pavement<br>`[pin]` The Shrine of Edward the Confessor |
+| A9 ⏸ held | Rockefeller Center | New York | 18 m | `[pin]` The Channel Gardens |
+| A10 ✅ | Largo di Torre Argentina | Rome | 21 m | `[pin]` Where Julius Caesar Was Assassinated |
 
 ## B — 132 sites with two or more entries and no place page
 
