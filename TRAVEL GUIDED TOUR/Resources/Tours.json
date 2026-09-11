@@ -84325,6 +84325,21 @@
         "AE36E302-EBF5-5578-9FDB-573C7E9C2248",
         "FC7B74B7-13FE-53EC-8972-E96740D4A10A"
       ]
+    },
+    {
+      "id": "1d730eb1-4ab3-5548-acb0-b4289fdc6dc9",
+      "name": "Academy Museum of Motion Pictures",
+      "description": "The Academy's film museum, opened 2021, joining the restored 1939 May Company building on Wilshire to a Renzo Piano concrete-and-glass sphere holding a 1,000-seat theatre. The Walt Disney Company Piazza is the glazed courtyard between the two, also Piano's, and is free to walk into.",
+      "latitude": 34.063818,
+      "longitude": -118.360835,
+      "city": "Los Angeles",
+      "address": "6067 Wilshire Boulevard, Los Angeles",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "196686CE-12B9-5E8B-911F-B50CCCB482C2",
+        "c8e62eb2-b8bc-5d47-9946-00ab21c676c0"
+      ]
     }
   ],
   "linkPins": [
@@ -135727,8 +135742,8 @@
           "order": 0,
           "title": "The Walt Disney Company Piazza",
           "caption": "Walt Disney Company Piazza at the Academy Museum of Motion Pictures next to LACMA, also by Renzo Piano. #archimarathontv #architecturelovers",
-          "latitude": 34.0638179,
-          "longitude": -118.3608348,
+          "latitude": 34.063818,
+          "longitude": -118.360835,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -135740,8 +135755,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0638179,
-      "centroidLongitude": -118.3608348,
+      "centroidLatitude": 34.063818,
+      "centroidLongitude": -118.360835,
       "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "architecture",
