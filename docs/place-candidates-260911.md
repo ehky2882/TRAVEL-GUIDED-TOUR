@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-11 13:09 UTC against `main` at `ee2127cb`.** Every number here is a reading of
+**Regenerated 2026-09-11 13:10 UTC against `main` at `f9be0a94`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
