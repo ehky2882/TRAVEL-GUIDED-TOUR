@@ -10692,8 +10692,8 @@
           "order": 0,
           "title": "Lloyd's of London",
           "caption": "Stand across Lime Street and follow the steel ducts and staircases up the building's outside.",
-          "latitude": 51.5138,
-          "longitude": -0.0824,
+          "latitude": 51.512965,
+          "longitude": -0.082407,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lloyds-of-london.mp3",
           "audioDurationSeconds": 139,
           "triggerMode": "geofenced",
@@ -10703,8 +10703,8 @@
         }
       ],
       "primaryCategory": "architecture",
-      "centroidLatitude": 51.5138,
-      "centroidLongitude": -0.0824,
+      "centroidLatitude": 51.512965,
+      "centroidLongitude": -0.082407,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "The Lloyd's building on Lime Street, by Richard Rogers and finished in 1986, is a building turned inside out: stainless-steel ducts, staircases, lifts and pipework climb all over the exterior like the workings of an unzipped machine — blue cranes still fixed to the roof — so your eye doesn't know where to rest, which is the point. Rogers had done the same in Paris with the Pompidou Centre: put the services (lifts, pipes, ducts, even the loos and staircases) on the outside, leaving the inside one vast uninterrupted space, with the parts that wear out reachable by engineers without gutting the place. It's a building designed to be maintained and rewired for a century.\n\nInside that cleared space is the Room — the great trading floor of Lloyd's, the insurance market running since the 1680s, when it began in Edward Lloyd's coffee house near the river. This is where the world insures what nobody else will touch: ships, oil rigs, satellites, a footballer's legs, a singer's voice. At the centre hangs the Lutine Bell, salvaged from a wrecked ship, once rung to announce overdue vessels — once for bad news, twice for good. There's a wonderful contradiction here: one of the City's oldest institutions, three and a half centuries of bell and ledger and ritual, chose to house itself in the most radical, futuristic building London had seen in decades — the ancient business of insuring against disaster, wrapped in a machine that wears its insides on its skin. Stand across Lime Street and follow a staircase with your eye, all the way up.",
@@ -14385,8 +14385,8 @@
           "order": 0,
           "title": "Tate Modern",
           "caption": "Stand on Bankside facing the brick building and chimney, then go in to the Turbine Hall and look down from the ramp.",
-          "latitude": 51.5076,
-          "longitude": -0.0994,
+          "latitude": 51.507429,
+          "longitude": -0.099342,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tate-modern.mp3",
           "audioDurationSeconds": 131,
           "triggerMode": "geofenced",
@@ -14396,8 +14396,8 @@
         }
       ],
       "primaryCategory": "visualArt",
-      "centroidLatitude": 51.5076,
-      "centroidLongitude": -0.0994,
+      "centroidLatitude": 51.507429,
+      "centroidLongitude": -0.099342,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "On Bankside, directly across the river from St Paul's, stands Tate Modern: an enormous, austere brick building with a single tall chimney, once Bankside Power Station — designed by Giles Gilbert Scott, the architect behind Battersea Power Station and the red telephone box — switched off in 1981 and left derelict for years. The transformation, opened in 2000, was the work of Swiss architects Herzog & de Meuron, whose key decision was restraint: rather than gut the building they kept its raw industrial character. The centrepiece is the Turbine Hall, the immense, cathedral-like space five storeys high where the turbines once stood, now filled with giant commissioned installations — a giant indoor sun, a crack running the length of the floor, a field of millions of ceramic sunflower seeds. The gallery, with the Millennium Bridge built to connect it straight to St Paul's, rewired the centre of London, pulling millions across the river and turning the south bank into one of the city's great cultural promenades. A dead power station didn't just become a gallery; it dragged the whole geography of the city across the water.",
@@ -82461,9 +82461,10 @@
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leaning-tower-niles-today-itshistoryonair_hero.webp",
       "additionalImageURLs": null,
       "tourIds": [
-        "E35F494D-226E-593E-B87B-5894864085C2",
         "553DFF50-75CB-5ED7-9A1D-DB499EB431AC",
-        "90CBBC49-A54B-50CB-B660-697281CBBD44"
+        "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA",
+        "90CBBC49-A54B-50CB-B660-697281CBBD44",
+        "E35F494D-226E-593E-B87B-5894864085C2"
       ]
     },
     {
@@ -83672,7 +83673,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "6192A9EC-C601-5145-A600-5F7E8FF6940E",
-        "75e125e5-577d-5c28-a579-9a521028b0d7"
+        "75e125e5-577d-5c28-a579-9a521028b0d7",
+        "85F0B89A-FDE7-5DEA-BA0A-B121B8AA0620"
       ]
     },
     {
@@ -84413,6 +84415,7 @@
       "heroImageURL": null,
       "additionalImageURLs": null,
       "tourIds": [
+        "657228bd-23c2-5585-b34c-850169105046",
         "69A1F424-5140-5D46-9BA6-636FBEFE8A2A",
         "87253FAE-997E-5189-8BF2-221C9AA77BC5"
       ]
@@ -84640,6 +84643,81 @@
       "tourIds": [
         "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
         "7d488e09-757f-581d-8de7-12b7a77c8067"
+      ]
+    },
+    {
+      "id": "fa2adbeb-24b3-5966-8aa3-df87696f9c77",
+      "name": "UIC Skyspace",
+      "description": "A skyspace on the UIC campus at Halsted and Roosevelt: a chamber you sit inside, open to a hard-edged aperture cut through its roof, so the sky reads as a flat plane of colour rather than distance. It changes completely with the light, and is at its strongest around dawn and dusk.",
+      "latitude": 41.8669126,
+      "longitude": -87.6472136,
+      "city": "Chicago",
+      "address": "Earl Neal Plaza, University of Illinois Chicago",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "398C3177-9B54-5820-8AA9-496C13D734CB",
+        "7340A35B-D853-5225-9184-A04C876453AD"
+      ]
+    },
+    {
+      "id": "369d03dc-925d-5fd3-9daf-7d59c1a940d0",
+      "name": "Kubuswoningen (Cube Houses)",
+      "description": "Piet Blom's 1984 housing above the Blaak: thirty-eight cubes tipped onto a corner and set on hexagonal concrete stalks, each meant as a tree and the whole block as a forest — the Blaakse Bos. The floors inside are level but every wall leans, which costs about a quarter of the usable space. One cube, the Kijk-Kubus, is open to visit.",
+      "latitude": 51.9203941,
+      "longitude": 4.4901272,
+      "city": "Rotterdam",
+      "address": "Overblaak, Rotterdam",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17"
+      ]
+    },
+    {
+      "id": "48bd5ace-b65b-5e2d-af99-266e43d59d5e",
+      "name": "Lloyd's of London",
+      "description": "Richard Rogers's 1986 headquarters for the insurance market, built inside out: lifts, ducts, staircases and lavatory pods hung on the outside so the floors within could be cleared and rebuilt at will. The Underwriting Room still runs around the Lutine Bell, and the building was listed Grade I in 2011, at 25 the youngest ever.",
+      "latitude": 51.512965,
+      "longitude": -0.082407,
+      "city": "London",
+      "address": "1 Lime Street, London",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6E4E8D27-CFB4-57F1-8330-507E8ECFF4E9",
+        "f3b8d27a-5c61-4e94-8a07-2d9b6c4e1f85"
+      ]
+    },
+    {
+      "id": "d4aa2a62-ae58-5dd7-8f86-95988939f8e9",
+      "name": "Trellick Tower",
+      "description": "Ernő Goldfinger's 1972 council block in North Kensington: thirty-one storeys of board-marked concrete with the lifts and services split into a separate slotted tower, joined by walkways every third floor. Notorious for years, listed Grade II* in 1998, and now largely leaseholder-owned.",
+      "latitude": 51.52381,
+      "longitude": -0.20586,
+      "city": "London",
+      "address": "Golborne Road, London",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
+        "EC286FB1-1400-5E2C-8962-64A3FCFD15A9"
+      ]
+    },
+    {
+      "id": "66456113-1ab6-5f07-8db4-7b047ffcdc97",
+      "name": "Tate Modern",
+      "description": "Giles Gilbert Scott's Bankside Power Station, dead since 1981 and reopened in 2000 as a gallery by Herzog & de Meuron, who left the Turbine Hall as a single 35-metre void. Free to enter, and the 2016 Blavatnik extension's tenth-floor terrace looks straight into the flats next door — which ended in the Supreme Court.",
+      "latitude": 51.507429,
+      "longitude": -0.099342,
+      "city": "London",
+      "address": "Bankside, London",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4A76A295-BFFB-5CDD-B3AF-8EF28E42FF27",
+        "9932791e-1c59-4c12-8616-31bd0db64a94"
       ]
     }
   ],
@@ -165371,8 +165449,8 @@
           "order": 0,
           "title": "Walden 7",
           "caption": "What do you think of this block? 🤔#architecture #modernism #housing #design #barcelona #xybca",
-          "latitude": 41.380313,
-          "longitude": 2.067813,
+          "latitude": 41.3803125,
+          "longitude": 2.0678125,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -165384,8 +165462,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.380313,
-      "centroidLongitude": 2.067813,
+      "centroidLatitude": 41.3803125,
+      "centroidLongitude": 2.0678125,
       "city": "Sant Just Desvern",
       "country": "Spain",
       "primaryCategory": "architecture",
@@ -165695,8 +165773,8 @@
           "order": 0,
           "title": "Trellick Tower",
           "caption": "What do you think of Brutalism? #architecture #design #brutalism #trellicktower #fyp",
-          "latitude": 51.523938,
-          "longitude": -0.205938,
+          "latitude": 51.52381,
+          "longitude": -0.20586,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -165708,8 +165786,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.523938,
-      "centroidLongitude": -0.205938,
+      "centroidLatitude": 51.52381,
+      "centroidLongitude": -0.20586,
       "city": "London",
       "country": "United Kingdom",
       "primaryCategory": "architecture",
@@ -166462,8 +166540,8 @@
           "order": 0,
           "title": "Leaning Tower of Niles",
           "caption": "Do you live next to any local quirky landmarks? #leaningtowerofpisa #nilesillinois #chicago #chicagosuburbs #tiktoktravel",
-          "latitude": 42.0124225,
-          "longitude": -87.7840561,
+          "latitude": 42.0124375,
+          "longitude": -87.7840625,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -166475,8 +166553,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 42.0124225,
-      "centroidLongitude": -87.7840561,
+      "centroidLatitude": 42.0124375,
+      "centroidLongitude": -87.7840625,
       "city": "Niles",
       "country": "United States",
       "primaryCategory": "hiddenGems",
