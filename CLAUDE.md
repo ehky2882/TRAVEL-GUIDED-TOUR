@@ -402,6 +402,7 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `docs/testflight.md` | Per-release upload runbook (~10 min) |
 | `docs/troubleshooting.md` | Xcode + git landmines from real incidents |
 | `scripts/validate-tours.swift` | Validates `Tours.json`; run: `swift scripts/validate-tours.swift` |
+| `scripts/make-place-menu.py` | **Regenerates `docs/place-candidates-260911.md`, the live place-candidate menu** — re-run it, never hand-patch it: 45 of the first sweep's rows became places within hours. Escapes pipes in bilingual titles (24 entries carry one) and refuses to write a table whose columns do not line up |
 | `scripts/merge-link-pins.py` | Merges `make-link-pin.py`'s output into `Tours.json` disk-to-disk, so a batch's JSON never passes through context. Idempotent; refuses pins in `tours`, missing coordinates, and a non-byte-stable catalog |
 | `TRAVEL GUIDED TOURTests/` | 6 XCTest classes, data/logic layer |
 | `archive/` | Dated session snapshots |
