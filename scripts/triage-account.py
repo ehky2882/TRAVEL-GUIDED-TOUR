@@ -106,12 +106,27 @@ THIN_PATTERNS = [
      # livestream posts as SINGLE. A creator talking about their own channel
      # is the commonest non-place post there is, and none of the words above
      # covered it.
-     r"anniversary|livestream|live ?stream|merch|my book|out now|new video|"
+     # ⚠️ "anniversary" was tried bare and caught a Mount Vernon post about the
+     # United States' 250th. It must name the CHANNEL's own milestone.
+     r"(?:\d+[- ]?years?|\d+(?:st|nd|rd|th)) anniversary of (?:me|my|us|this)|"
+     r"anniversary of (?:me|my) (?:making|posting|filming)|"
+     r"livestream|live ?stream|merch|my book|out now|new video|"
      r"subscribe|patreon|thank you all|years of making)\b",
      "reads as non-place content"),
 ]
 
 CITY_TAG = re.compile(r"#(\w{3,})")
+
+# 🔴 A creator who writes "📍 Mount Vernon, Virginia" has told us the place
+# outright, and no keyword may overrule that. Added 2026-09-11 after the
+# @jamiepeva run binned exactly that post as THIN — the caption also opened
+# with "celebrating the United States' 250th anniversary", and "anniversary"
+# had been added the same morning to catch CHANNEL anniversaries. It was the
+# best post in the batch and the tool threw it away.
+LOCATED = re.compile(
+    r"📍|\bat\s+\d{1,5}\s+[A-Z]|\b\d{1,5}\s+[A-Z][a-z]+\s+"
+    r"(?:St|Street|Ave|Avenue|Rd|Road|Blvd|Dr|Drive|Ln|Lane|Way|Sq|Square)\b"
+    r"|\baddress:\s*\S", re.IGNORECASE | re.UNICODE)
 
 
 def names_nothing(caption: str) -> bool:
@@ -145,6 +160,9 @@ def flags_for(caption: str) -> tuple[list[str], list[str]]:
     thin = [why for pat, why in THIN_PATTERNS if re.search(pat, low, re.IGNORECASE)]
     if caption and names_nothing(caption):
         thin.append("names nothing capitalised — no place in the caption")
+    # An explicit location marker outranks every THIN signal above.
+    if caption and LOCATED.search(caption):
+        thin = []
     return multi, thin
 
 
@@ -270,6 +288,12 @@ def selftest() -> int:
     check("a bare 'both' is no longer a flag", m, [])
     _, t = flags_for("🧡 It's the 10-year anniversary of me making videos!")
     check("a channel anniversary is THIN", bool(t), True)
+    _, t = flags_for("Celebrating the United States' 250th anniversary. 📍 Mount Vernon, Virginia")
+    check("a NATIONAL anniversary is not THIN", t, [])
+    _, t = flags_for("Out now! But come see us. Address: 1427 Wisconsin Ave NW")
+    check("an explicit address outranks a THIN keyword", t, [])
+    _, t = flags_for("New video out now, subscribe!")
+    check("no location marker → the THIN keyword still bites", bool(t), True)
     _, t = flags_for("🙌 Stay curious, my friends!")
     check("a caption naming nothing is THIN", bool(t), True)
     _, t = flags_for("Westlake Daly City Doelger home, 1952 #housetour #dalycity")
