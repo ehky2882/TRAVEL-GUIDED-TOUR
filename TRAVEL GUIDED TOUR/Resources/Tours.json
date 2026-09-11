@@ -81061,7 +81061,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "4e86f35d-f610-5cee-9645-d417cf1c0247",
-        "89C1369E-1A00-507C-8C67-912F59CAE368"
+        "89C1369E-1A00-507C-8C67-912F59CAE368",
+        "929C2E6E-3A98-5953-AA1B-6E0355172533"
       ]
     },
     {
@@ -83555,7 +83556,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "387609A3-D31C-5395-8BCA-147424DF3CEE",
-        "C0636DA9-3BED-5CB0-A4C7-7D907CE84BBB"
+        "C0636DA9-3BED-5CB0-A4C7-7D907CE84BBB",
+        "d0aba09c-8a27-41a1-9850-7ea43c2761a9"
       ]
     },
     {
@@ -84961,6 +84963,21 @@
       "tourIds": [
         "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82"
+      ]
+    },
+    {
+      "id": "eecedba7-3400-57ad-ae7f-1b358e25f8d9",
+      "name": "The Gamble House",
+      "description": "Greene and Greene's 1908 house for the Procter & Gamble family: a Craftsman bungalow at the scale of a mansion, in teak, mahogany and oak joined with pegs and wedges rather than nails, with broad sleeping porches and Tiffany glass. Given to the city in 1966 and kept almost exactly as the Gambles left it.",
+      "latitude": 34.1516188,
+      "longitude": -118.1609547,
+      "city": "Pasadena",
+      "address": "4 Westmoreland Place, Pasadena",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "E68960A6-9C10-5A88-A701-284812363657",
+        "b955382c-8e13-58df-94af-1025e57ad0b1"
       ]
     }
   ],
