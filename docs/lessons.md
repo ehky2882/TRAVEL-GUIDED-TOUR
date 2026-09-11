@@ -835,3 +835,23 @@ Two habits close it, and `scripts/make-place-menu.py` carries both:
 
 ⚠️ The same hazard applies to any generated markdown built from catalogue text — titles,
 `shortDescription`, maker display names. It is not specific to places.
+
+## A generated menu's numbers renumber — never record a decision by label (2026-09-11)
+
+`docs/place-candidates-260911.md` numbers its open groups `P1…Pn`. **Those numbers are positions
+in a filtered, sorted list, not identities.** Create a batch of places and every remaining group
+shifts up.
+
+🔴 **So a decision read back by label after the batch lands names a different site.** That happened
+here: 26 places were created, then the owner's declines were looked up by their `P` numbers — and
+12 of the 19 labels no longer existed while the other 7 had silently moved onto other groups. It
+was caught only because the missing-label count was printed.
+
+**Record a decision by the thing itself** — here, the frozen set of member titles — and write it
+from the list the person actually answered, not from a fresh derivation. `DECLINED_GROUPS` in
+`scripts/make-place-menu.py` is keyed that way for exactly this reason.
+
+⚠️ **The same run turned up a second version of the fault**: the script's own summary line counted
+holds with `DECLINED` (which only knows groups attached to an existing place) rather than
+`declined_reason()`, so it reported **28 open groups when 4 were open**. A count and the document
+it describes must be derived the same way, or the summary quietly contradicts the table under it.
