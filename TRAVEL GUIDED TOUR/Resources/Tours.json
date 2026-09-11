@@ -84413,6 +84413,7 @@
       "heroImageURL": null,
       "additionalImageURLs": null,
       "tourIds": [
+        "657228bd-23c2-5585-b34c-850169105046",
         "69A1F424-5140-5D46-9BA6-636FBEFE8A2A",
         "87253FAE-997E-5189-8BF2-221C9AA77BC5"
       ]
@@ -84640,6 +84641,36 @@
       "tourIds": [
         "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
         "7d488e09-757f-581d-8de7-12b7a77c8067"
+      ]
+    },
+    {
+      "id": "fa2adbeb-24b3-5966-8aa3-df87696f9c77",
+      "name": "UIC Skyspace",
+      "description": "A skyspace on the UIC campus at Halsted and Roosevelt: a chamber you sit inside, open to a hard-edged aperture cut through its roof, so the sky reads as a flat plane of colour rather than distance. It changes completely with the light, and is at its strongest around dawn and dusk.",
+      "latitude": 41.8669126,
+      "longitude": -87.6472136,
+      "city": "Chicago",
+      "address": "Earl Neal Plaza, University of Illinois Chicago",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "398C3177-9B54-5820-8AA9-496C13D734CB",
+        "7340A35B-D853-5225-9184-A04C876453AD"
+      ]
+    },
+    {
+      "id": "369d03dc-925d-5fd3-9daf-7d59c1a940d0",
+      "name": "Kubuswoningen (Cube Houses)",
+      "description": "Piet Blom's 1984 housing above the Blaak: thirty-eight cubes tipped onto a corner and set on hexagonal concrete stalks, each meant as a tree and the whole block as a forest — the Blaakse Bos. The floors inside are level but every wall leans, which costs about a quarter of the usable space. One cube, the Kijk-Kubus, is open to visit.",
+      "latitude": 51.9203941,
+      "longitude": 4.4901272,
+      "city": "Rotterdam",
+      "address": "Overblaak, Rotterdam",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17"
       ]
     }
   ],
