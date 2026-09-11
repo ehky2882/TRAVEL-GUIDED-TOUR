@@ -424,3 +424,55 @@ body.splash {
   letter-spacing: 0.12em;
   margin: var(--sm) 0 0;
 }
+
+/* ---------------------------------------------------------------
+   The App Store badge.
+
+   🔴 APPLE'S ARTWORK, UNMODIFIED — `download-on-the-app-store.svg` is
+   fetched from Apple's marketing toolbox and committed as delivered.
+   Apple's Marketing Guidelines do not permit redrawing it, restyling
+   it, changing its colours or setting the words as live text, so this
+   rule sizes the badge and gives it room and does nothing else.
+
+   The WHITE variant, because every page here sits on `--bg: #000000`;
+   the black badge is for light grounds. If a light theme is ever
+   restored (see the note at the top of this file), the black badge has
+   to come with it.
+
+   Apple asks for clear space of at least a quarter of the badge's
+   height on all sides. At `--appstore-badge-w: 160px` the artwork is
+   ~53px tall (its viewBox is 119.66 x 40), so the quarter is ~13px and
+   the `--md` margin below clears it comfortably. **Re-check that sum if
+   the width changes.** */
+:root { --appstore-badge-w: 160px; }
+
+.appstore-badge {
+  display: inline-block;
+  /* The link is the badge; no underline, no hover colour, nothing that
+     would read as altering the artwork. */
+  text-decoration: none;
+  border: 0;
+  line-height: 0;
+  margin: var(--md) 0 0;
+}
+
+.appstore-badge img {
+  width: var(--appstore-badge-w);
+  height: auto;
+  /* Apple's minimum rendered size. Below this the wordmark inside the
+     artwork stops being legible and the badge is out of spec. */
+  min-width: 120px;
+  display: block;
+}
+
+/* 🔴 INSIDE A CARD THE BADGE MUST BE A BLOCK, NOT AN INLINE ONE.
+   `inline-block` is right on the splash, where the badge is the only thing
+   on its line. Dropped into the About card's prose it joined the text flow
+   and the sentence wrapped AROUND it — "Free to download; most tours are
+   free to listen to." broke in half across the artwork. Caught by rendering
+   the page, not by reading the markup. The card's prose is wrapped in <p>
+   for the same reason. */
+.card .appstore-badge {
+  display: block;
+  margin: var(--md) 0;
+}
