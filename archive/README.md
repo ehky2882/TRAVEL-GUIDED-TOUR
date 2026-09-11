@@ -47,6 +47,7 @@ not written down.
 
 | File | What it covers | Date |
 |---|---|---|
+| `HANDOFF-260911-2.md` | a creator's feed is triaged before any of it is minted (`scripts/triage-account.py`, #811), plus six `@jamiepeva` pins. 🔴 **The flags are a pre-sort, not a verdict** — measured both ways in one run: 9 of 11 posts passed as SINGLE where 3 were pinnable, *and* a post captioned `📍 Mount Vernon, Virginia` was binned as non-place content. Enumeration ceilings measured, not assumed: TikTok 14 from the embed (the profile is captcha-walled), YouTube ~15, **Instagram nothing — no third-party route exists at all**. |  |
 | `HANDOFF-260910-4.md` | Four documents that had eaten themselves — `CLAUDE.md` 1.5 MB → 47 KB (~418k tokens **per request**), `ROADMAP.md` −77%, `archive/README.md` −93%, `STATUS.md` −68%, zero lines lost; plus MoMA PS1's dead hero, and the blobless-fetch trick for uploading to gh-pages from a web session | 2026-09-10 |
 | `STATUS-HISTORY.md` | The finished board items moved out of `STATUS.md` § 1 — 41 items whose PRs GitHub reports merged or closed, plus four self-declared-done sub-sections. **Search, never load whole** | 2026-09-08 |
 | `INDEX-DETAIL.md` | The long-form entries this index used to carry, verbatim. **Search, never load whole** | 2026-09-08 |

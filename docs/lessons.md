@@ -855,3 +855,59 @@ from the list the person actually answered, not from a fresh derivation. `DECLIN
 holds with `DECLINED` (which only knows groups attached to an existing place) rather than
 `declined_reason()`, so it reported **28 open groups when 4 were open**. A count and the document
 it describes must be derived the same way, or the summary quietly contradicts the table under it.
+
+## A filter's green count is not a verdict — it fails in BOTH directions (2026-09-11)
+
+`scripts/triage-account.py` sorts a creator's posts by reading their captions. The temptation is
+to trust its SINGLE ("good to pin") count and mint those. Do not. Measured on `@jamiepeva`, in a
+single run:
+
+- **It over-accepted.** 9 of 11 posts came back SINGLE; exactly **3** were pinnable. The others
+  were a reply-to-commenters video, a press-mention post, a property listing, and a post about a
+  Metro station that was **never built** — a video with no place to pin at all.
+- **It over-rejected, in the same run.** It binned a post captioned **`📍 Mount Vernon, Virginia`**
+  as non-place content, because "anniversary" had been added that morning to catch a creator's own
+  channel milestone and the caption read "celebrating the United States' 250th anniversary". It
+  was the best post in the batch and the tool threw it away.
+
+Both were fixed — an explicit location marker now clears THIN outright, and "anniversary" must
+name the channel's own — but the fixes are not the lesson. **A caption is evidence, not a label**,
+and every keyword added to catch one failure creates the other. Over-accepting is the safer
+setting **only because a human reads every candidate before anything is minted.** Skip the reading
+and that safety is gone in both directions at once: junk ships, and the best post is silently
+dropped where nobody ever sees it was considered.
+
+⚠️ The over-rejection is the dangerous half, because it is **invisible**. A bad pin gets noticed on
+the map. A good post filtered into THIN leaves no trace anywhere.
+
+Corollary for anything of this shape: when a heuristic changes, re-run it against a real batch, not
+only its self-tests. Three of this tool's patterns exist because a live run contradicted what the
+tests said was fine — including one that read `🙌 Stay curious, my friends!` as naming a place
+called **Stay**, because a leading emoji shifted which word looked sentence-initial.
+
+## What a bare social handle can and cannot reach (2026-09-11)
+
+Measured from a cloud session, so nobody re-derives it or over-promises to the owner:
+
+| | |
+|---|---|
+| `tiktok.com/@handle` | 200, 371 KB, **zero** video ids, 25 mentions of captcha |
+| `tiktok.com/embed/@handle` | 200, **14 video ids**, no captcha — the usable route |
+| `instagram.com/<handle>/` | 302 to login |
+| `instagram.com/<handle>/embed/` | 200, a Facebook shell, **zero** post links |
+| `instagram.com/api/v1/users/web_profile_info` | **401 `require_login`** |
+| `youtube.com/@handle` | 200, carries `channelId` → RSS (~15 newest) |
+
+A bare handle reaches **~14 recent posts on TikTok, ~15 on YouTube, and none on Instagram**.
+⚠️ A `cursor` or `count` parameter does **not** deepen the TikTok embed — tested on two creators,
+both capped at 14. Do not add one thinking it was missed.
+
+🔴 **For Instagram the gap is the platform's, not ours.** Basic Display died December 2024, the
+Graph API only reaches accounts that authorised *you*, and Meta's oEmbed is per-post and lists
+nothing. There is no third-party post-listing route at all. Say that plainly rather than implying
+more effort would help — and note Instagram is the *largest* platform in this catalogue (216 of
+347 pinned creators), so this is the main constraint on link-pin work, not a footnote.
+
+Web search was tried as a second channel. It is a **lucky dip, not an enumerator**: one query
+returned 8 real TikTok URLs spanning 2021–2026, while topical follow-ups returned TikTok
+*discover* pages and other creators entirely.
