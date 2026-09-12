@@ -47,6 +47,7 @@ not written down.
 
 | File | What it covers | Date |
 |---|---|---|
+| `HANDOFF-260912.md` | 15 `@heyrosiedart` link pins (#828), triaged from a 30-link dump the owner pasted in unread. Five of the eventual pins named nothing in their caption at all (Le Beaujolais, Michelin House, Wilton's Music Hall, Barbican Laundrette, Turquoise Island) — identified only by pulling each post's oEmbed thumbnail and looking at the frame, not the regex flags. Owner declined the one confident ID the tool was most sure of (the Penguin Pool). | 2026-09-12 |
 | `HANDOFF-260911-4.md` | Stripe **round 5** — and two facts we had been sending them had quietly become false: "no transactions processed" (there was a sale) and "all content is first-party" (1,717 pins credit ~343 third-party accounts). 🔴 The record of what we had told a financial institution lived only on an **unmerged branch** until #802. The form reused round 3's title and had **three fields, not two** — caught only because the owner sent a screenshot. Purchase evidence closes the session-79 ES256 risk: real user tokens do reach `record-purchase`. Also 🔴 **the website had said "Coming Soon" for eleven days** while the App Store listed it as the support URL (#825). |  |
 | `HANDOFF-260911-2.md` | a creator's feed is triaged before any of it is minted (`scripts/triage-account.py`, #811), plus six `@jamiepeva` pins. 🔴 **The flags are a pre-sort, not a verdict** — measured both ways in one run: 9 of 11 posts passed as SINGLE where 3 were pinnable, *and* a post captioned `📍 Mount Vernon, Virginia` was binned as non-place content. Enumeration ceilings measured, not assumed: TikTok 14 from the embed (the profile is captcha-walled), YouTube ~15, **Instagram nothing — no third-party route exists at all**. |  |
 | `HANDOFF-260910-4.md` | Four documents that had eaten themselves — `CLAUDE.md` 1.5 MB → 47 KB (~418k tokens **per request**), `ROADMAP.md` −77%, `archive/README.md` −93%, `STATUS.md` −68%, zero lines lost; plus MoMA PS1's dead hero, and the blobless-fetch trick for uploading to gh-pages from a web session | 2026-09-10 |
@@ -278,7 +279,7 @@ not written down.
 | `HANDOFF-260909-4.md` | 61 `@urbanistariel` link pins (#777), Greece 7 → 35; two Plus Codes labelled `Lower Town` recovered 88 km out to sea before their captions named Mystras. Then #779 placed the held link and #780 made The Parthenon a place — which hard-errors unless every member's stop sits exactly on it. |  |
 | `HANDOFF-260909.md` | thirty-six `@urbanistariel` pins; four join places that already existed, and two titles were wrong until the picture was opened. |  |
 
-226 entries (re-derived via `grep -c '^| ' archive/README.md`, not quoted from the prior value).
+232 entries (re-derived via `grep -c '^| ' archive/README.md`, not quoted from the prior value).
 Full text for every one of them is in
 [`INDEX-DETAIL.md`](INDEX-DETAIL.md), in this same order.
 
