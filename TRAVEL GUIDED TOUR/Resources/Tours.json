@@ -82607,7 +82607,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
-        "A5389D78-E011-5858-B843-922B28C15E27"
+        "A5389D78-E011-5858-B843-922B28C15E27",
+        "39A2BCF0-12A1-5225-9D1A-24F08824B0EB"
       ]
     },
     {
@@ -84184,7 +84185,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "50AFCF74-6D52-5A1E-B320-EC1217283124",
-        "C91F2B1E-1DCB-59EA-BC9C-7540C09EFBE7"
+        "C91F2B1E-1DCB-59EA-BC9C-7540C09EFBE7",
+        "75B72C57-7DEB-52F0-BDC9-C4435A55FE27"
       ]
     },
     {
@@ -84306,7 +84308,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "4E95B67A-A3CA-567E-BF70-88233C14510C",
-        "77C623D9-B9E7-54D7-A664-107397840CFE"
+        "77C623D9-B9E7-54D7-A664-107397840CFE",
+        "3696AE5C-0AFD-5521-BD1D-211521DE469F"
       ]
     },
     {
@@ -168455,8 +168458,8 @@
           "order": 0,
           "title": "Castillo San Felipe del Morro",
           "caption": "For three centuries, no fleet could take El Morro. Then a signature from an invading army did. Sir Francis Drake, the Earl of Cumberland, an",
-          "latitude": 18.470687499999997,
-          "longitude": -66.1239375,
+          "latitude": 18.470833,
+          "longitude": -66.123889,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -168468,8 +168471,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 18.470687499999997,
-      "centroidLongitude": -66.1239375,
+      "centroidLatitude": 18.470833,
+      "centroidLongitude": -66.123889,
       "city": "San Juan",
       "country": "Puerto Rico",
       "primaryCategory": "history",
@@ -168819,7 +168822,7 @@
           "order": 0,
           "title": "Inside the New York Public Library",
           "caption": "What’s hidden inside New York’s largest library @nypl? 👀 Above the Rose Reading Room and below it, there’s a whole building the public never",
-          "latitude": 40.753187499999996,
+          "latitude": 40.7531875,
           "longitude": -73.9823125,
           "audioURL": "",
           "audioDurationSeconds": 0,
@@ -168832,7 +168835,7 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.753187499999996,
+      "centroidLatitude": 40.7531875,
       "centroidLongitude": -73.9823125,
       "city": "New York",
       "country": "United States",
@@ -170279,8 +170282,8 @@
           "order": 0,
           "title": "Tower Bridge",
           "caption": "🚢 London’s @Tower Bridge has to be ready to be open at any multiple times a week. Here’s how it opens and the a look into the old Engine Roo",
-          "latitude": 51.5055158,
-          "longitude": -0.0753665,
+          "latitude": 51.5055,
+          "longitude": -0.0754,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -170292,8 +170295,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5055158,
-      "centroidLongitude": -0.0753665,
+      "centroidLatitude": 51.5055,
+      "centroidLongitude": -0.0754,
       "city": "London",
       "country": "United Kingdom",
       "primaryCategory": "architecture",
