@@ -12,6 +12,61 @@ signed and expire.
 
 ---
 
+## Step zero: triage, before any of the flow below
+
+Everything below assumes a list of links somebody has already decided are
+worth pinning. When that decision has NOT been made — a creator's account, a
+dumped back catalogue — make it first:
+
+```bash
+python3 scripts/triage-account.py --urls /tmp/urls.txt --out /tmp/triage.txt
+python3 scripts/triage-account.py --handle @someone --platform tiktok --out /tmp/triage.txt
+```
+
+It flags LIVE / SINGLE / MULTI / THIN / DEAD and mints nothing. LIVE is the
+one flag you can act on unread: it re-derives the catalog's own uuid5 id, so a
+post already pinned is never proposed twice.
+
+**Enumeration ceilings, measured 2026-09-11 rather than assumed:**
+
+| From a bare handle | Reach |
+|---|---|
+| TikTok (`/embed/@handle`) | **14 newest.** The profile page itself is captcha-walled — 371 KB, zero video ids. A `cursor` parameter does NOT deepen the embed; tested on two creators |
+| YouTube (channel RSS) | ~15 newest |
+| Instagram | **nothing.** Profile 302s to login, profile embed is a Facebook shell, and the public profile API answers `require_login`. There is no third-party post-listing route on Instagram at all — Basic Display died in Dec 2024 and the Graph API only reaches accounts that authorised you |
+
+So `--urls` is the main path and `--handle` is a convenience. Do not report the
+14 as "the account"; it is the platform's ceiling.
+
+### 🔴 The flags order your attention. They do not replace the reading.
+
+They are regexes over a caption. Both failure directions are real and both are
+measured, on `@jamiepeva`, 2026-09-11:
+
+- **It over-accepts.** 9 of 11 posts came back SINGLE; exactly 3 were pinnable.
+  The other six were a reply-to-commenters video, a press-mention post, a
+  property listing, and a post about a Metro station that was never built.
+- **It over-rejects.** It binned a post captioned `📍 Mount Vernon, Virginia` as
+  THIN, because "anniversary" had been added that morning to catch *channel*
+  anniversaries and the caption said "the United States' 250th anniversary". It
+  was the best post in the batch. An explicit location marker now clears THIN
+  outright, and "anniversary" must name the channel's own.
+
+Over-accepting is the safer failure **only** because every candidate is read
+before minting. If you skip the reading, that safety is gone.
+
+### Three categories the flags cannot settle for you
+
+- **MULTI — several places.** The owner decides: explode into separate pins
+  (§ One post, several pins), pin the lead location only, or leave it out.
+- **Routes.** A ferry line, a transit route, a whole street. Neither a pin nor
+  a roundup — this app geofences points. Usually "does not fit"; always ask.
+- **Advertising.** Some creators sell things. That is a policy question for the
+  owner, not a geography one. Standing decision (2026-09-11): **property
+  listings case by case.**
+
+---
+
 ## The whole flow
 
 ```bash

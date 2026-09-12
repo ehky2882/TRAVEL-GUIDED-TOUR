@@ -791,3 +791,267 @@ a visible regression, and it is rendered by `TourDetailView` and searched by
 **Method:** save one payload with `curl --compressed … -o catalog.json`, then in
 Python remove one key at a time and `len(gzip.compress(...))` the result. One
 saved copy answers every such question afterwards for free.
+
+## A title rule cannot find a place; only the coordinate can (2026-09-11)
+
+`check-place-candidates.py` matched two entries as the same site when one title's meaningful
+words contained the other's. That rule is precise and it is **structurally blind to the
+commonest shape in this catalogue: one site that two entries call by two unrelated names.**
+
+*Hook & Ladder 8* and *The Ghostbusters Firehouse* are one firehouse **4 m** apart and share
+not one word. So are *Britain's Oldest Door* and *The Tomb of Elizabeth I* (both Westminster
+Abbey, 5 m), *Chelsea Market* and a pin about Oreos (the same Nabisco building, 8 m), and
+*The Federal Reserve Bank of New York* and *$500 Billion of Gold Under 33 Liberty Street*
+(0 m). No string comparison will ever reach any of them.
+
+Adding a **TIGHT** tier — within 25 m, whatever the titles say — found **151 pairs, 82 of
+which no title rule could have produced**, and **55 of which share no word at all**. The
+sweep it produced is `docs/place-candidates-260911.md`.
+
+🔴 **The lesson generalises past places: when the thing you are identifying is physical,
+match on the physical fact and use the text only to explain the match.** The title was never
+the evidence — the coordinate was, and the title was doing the work because it was easier to
+compare.
+
+⚠️ **And the converse still holds, which is why the tier does not auto-create anything.**
+Proximity is evidence, not proof. Two classes of false positive are real and permanent: a
+dense block of separate venues (Hong Kong's restaurant pins are 10–20 m apart and are
+different restaurants), and **coordinates rounded to four decimal places — ~11 m — which can
+round two genuinely separate sites to within a few metres** (El Retiro sits 8 m from the
+Puerta de Alcalá). Exact coincidence exits non-zero; everything looser is for a human.
+
+## Joining a place means MOVING the entry, not just listing it (2026-09-11)
+
+A place's membership looks like a list you append to. It is not. `Place.swift` makes a place's
+identity **exact coordinate equality**, and `validate-tours` enforces it at **1e-9 degrees**:
+
+```
+place Griffith Observatory: member not on the place coordinate
+```
+
+🔴 **All 362 existing place members sit EXACTLY on their place — 362 of 362.** That is not a
+coincidence, it is the schema. So adding an entry to a place also means **snapping that entry's
+stop coordinate (and its centroid, or the centroid falls outside the stop range) onto the
+place**. Session 157 added eight ids without snapping and got exactly eight errors.
+
+**Check the move against the entry's own `triggerRadiusMeters` before making it.** All eight
+moves there were 0.6–20.9 m against a 30 m radius, so nothing changed about when any tour
+fires — but a larger move would silently redefine where a tour triggers, and nothing else in
+the pipeline would object.
+
+⚠️ **This is also why a place candidate is never free.** A sweep can say "these two entries are
+4 m apart"; turning that into a place means choosing the one true coordinate and moving
+everything onto it. That is an editorial decision, which is why nothing auto-creates one.
+
+## A literal `|` in a title silently corrupts a markdown table (2026-09-11)
+
+24 entries in this catalogue carry a pipe in the title — the bilingual convention,
+`Museum SAN | 뮤지엄 산`, `Tai Kwun | 大館`. Dropped unescaped into a markdown table it **opens an
+extra column and shifts every cell after it in that row**.
+
+🔴 **It does not look broken.** There is no error and no ragged output — the row renders as a
+perfectly plausible table with the wrong data in the wrong columns. It was caught here only by
+counting columns, not by reading the page.
+
+Two habits close it, and `scripts/make-place-menu.py` carries both:
+
+- Escape once, centrally (`esc()`), on **every** field that reaches a cell — the title *and* any
+  name interpolated beside it.
+- **Count the columns before writing**, and refuse the write when they disagree. Removing `esc()`
+  makes that guard exit 2 with `inconsistent table columns [4, 5, 6, 7]`, which is how it was
+  proved to work rather than assumed.
+
+⚠️ The same hazard applies to any generated markdown built from catalogue text — titles,
+`shortDescription`, maker display names. It is not specific to places.
+
+## A generated menu's numbers renumber — never record a decision by label (2026-09-11)
+
+`docs/place-candidates-260911.md` numbers its open groups `P1…Pn`. **Those numbers are positions
+in a filtered, sorted list, not identities.** Create a batch of places and every remaining group
+shifts up.
+
+🔴 **So a decision read back by label after the batch lands names a different site.** That happened
+here: 26 places were created, then the owner's declines were looked up by their `P` numbers — and
+12 of the 19 labels no longer existed while the other 7 had silently moved onto other groups. It
+was caught only because the missing-label count was printed.
+
+**Record a decision by the thing itself** — here, the frozen set of member titles — and write it
+from the list the person actually answered, not from a fresh derivation. `DECLINED_GROUPS` in
+`scripts/make-place-menu.py` is keyed that way for exactly this reason.
+
+⚠️ **The same run turned up a second version of the fault**: the script's own summary line counted
+holds with `DECLINED` (which only knows groups attached to an existing place) rather than
+`declined_reason()`, so it reported **28 open groups when 4 were open**. A count and the document
+it describes must be derived the same way, or the summary quietly contradicts the table under it.
+
+## An upsert-only seed cannot delete — a dissolved place leaks (2026-09-11)
+
+🔴 **`seed_from_toursjson.py` could create and update a place but never remove
+one.** So a place deleted from `Tours.json` survived in the database as an
+**empty row** — it kept its name and its point on the map while owning nothing.
+
+Splitting the Jordaan out of `Westerkerk` dissolved that place in the catalogue
+(one entry describing Westerkerk is not a place). The catalogue then held
+**266** places; the live count read **267**, with **0 tours** pointing at the
+orphan.
+
+⚠️ **Nothing downstream objects, which is the whole danger.** The row is valid
+SQL, the validator only ever reads `Tours.json`, CI is green, `get_catalog`
+serves it happily, and the only symptom is a number that is one too big —
+against a count check the runbook *relies on* to confirm a publish landed. Had
+the Jordaan split not changed the total, the leak would have been invisible.
+
+**What made it findable:** the merge was verified against the live database by
+polling the cheap 47-byte count, and the number simply disagreed with the
+catalogue. **Verify the count, and when it disagrees, find out why rather than
+assuming a race.** Two earlier readings were legitimately stale (the seed takes
+up to fourteen minutes), so "wait longer" was the tempting answer and would have
+been wrong.
+
+The fix mirrors a comment already in that file: the `place_id` reset was
+documented as *load-bearing* because membership must be able to **shrink**. The
+same is true one level up — the set of places must be able to shrink too. The
+prune is emitted **after** the `place_id` reset, because `tours.place_id`
+references `places`: clear the links, then delete.
+
+**The general rule: any derived table seeded by upsert needs a matching delete,
+or it can only ever grow.** Check for that the first time you delete a row from
+the catalogue rather than adding one — deletion is the rare operation here, and
+the path is correspondingly untested.
+
+## A filter's green count is not a verdict — it fails in BOTH directions (2026-09-11)
+
+`scripts/triage-account.py` sorts a creator's posts by reading their captions. The temptation is
+to trust its SINGLE ("good to pin") count and mint those. Do not. Measured on `@jamiepeva`, in a
+single run:
+
+- **It over-accepted.** 9 of 11 posts came back SINGLE; exactly **3** were pinnable. The others
+  were a reply-to-commenters video, a press-mention post, a property listing, and a post about a
+  Metro station that was **never built** — a video with no place to pin at all.
+- **It over-rejected, in the same run.** It binned a post captioned **`📍 Mount Vernon, Virginia`**
+  as non-place content, because "anniversary" had been added that morning to catch a creator's own
+  channel milestone and the caption read "celebrating the United States' 250th anniversary". It
+  was the best post in the batch and the tool threw it away.
+
+Both were fixed — an explicit location marker now clears THIN outright, and "anniversary" must
+name the channel's own — but the fixes are not the lesson. **A caption is evidence, not a label**,
+and every keyword added to catch one failure creates the other. Over-accepting is the safer
+setting **only because a human reads every candidate before anything is minted.** Skip the reading
+and that safety is gone in both directions at once: junk ships, and the best post is silently
+dropped where nobody ever sees it was considered.
+
+⚠️ The over-rejection is the dangerous half, because it is **invisible**. A bad pin gets noticed on
+the map. A good post filtered into THIN leaves no trace anywhere.
+
+Corollary for anything of this shape: when a heuristic changes, re-run it against a real batch, not
+only its self-tests. Three of this tool's patterns exist because a live run contradicted what the
+tests said was fine — including one that read `🙌 Stay curious, my friends!` as naming a place
+called **Stay**, because a leading emoji shifted which word looked sentence-initial.
+
+## What a bare social handle can and cannot reach (2026-09-11)
+
+Measured from a cloud session, so nobody re-derives it or over-promises to the owner:
+
+| | |
+|---|---|
+| `tiktok.com/@handle` | 200, 371 KB, **zero** video ids, 25 mentions of captcha |
+| `tiktok.com/embed/@handle` | 200, **14 video ids**, no captcha — the usable route |
+| `instagram.com/<handle>/` | 302 to login |
+| `instagram.com/<handle>/embed/` | 200, a Facebook shell, **zero** post links |
+| `instagram.com/api/v1/users/web_profile_info` | **401 `require_login`** |
+| `youtube.com/@handle` | 200, carries `channelId` → RSS (~15 newest) |
+
+A bare handle reaches **~14 recent posts on TikTok, ~15 on YouTube, and none on Instagram**.
+⚠️ A `cursor` or `count` parameter does **not** deepen the TikTok embed — tested on two creators,
+both capped at 14. Do not add one thinking it was missed.
+
+🔴 **For Instagram the gap is the platform's, not ours.** Basic Display died December 2024, the
+Graph API only reaches accounts that authorised *you*, and Meta's oEmbed is per-post and lists
+nothing. There is no third-party post-listing route at all. Say that plainly rather than implying
+more effort would help — and note Instagram is the *largest* platform in this catalogue (216 of
+347 pinned creators), so this is the main constraint on link-pin work, not a footnote.
+
+Web search was tried as a second channel. It is a **lucky dip, not an enumerator**: one query
+returned 8 real TikTok URLs spanning 2021–2026, while topical follow-ups returned TikTok
+*discover* pages and other creators entirely.
+
+## A place propagates a coordinate error — check the place, not just its members (2026-09-11)
+
+🔴 **`Habitat 67`'s PLACE sat 363 m from the building, and both its members sat
+with it.** A place's coordinate *is* its identity, so every member is pinned to
+it — which means **one wrong coordinate silently relocated two entries, and
+neither could disagree**: sitting exactly on the place is what membership
+requires. The validator was satisfied. The sweep was satisfied. Nothing in the
+pipeline is capable of noticing.
+
+The only reason it was visible at all is that a **third pin, outside the place**,
+sat 10.9 m from the real building. Without that pin the place would have stayed
+wrong indefinitely.
+
+⚠️ **So a place is a way to PROPAGATE a coordinate error, not only a way to group
+entries.** Check a place's own coordinate against the source, not only its
+members against the place — the second check passes by construction.
+
+Found the same day as three plain entry defects (Gamble House 343 m, the Noguchi
+Museum 497 m), all by the same method: **ask which member OSM agrees with.** In
+the 26–49 m band that question showed the link pin sitting on the feature in
+**fifteen of seventeen** groups, with the Atlas tour off — pins are geocoded per
+link at import, while tours carry coordinates typed once and never checked. A
+4-decimal coordinate is the signature.
+
+⚠️ **And check a "false positive" as hard as a real one.** `Lloyd's of London /
+The Leadenhall Building at 7 m` was called an obvious two-buildings-across-a-
+street false positive and recommended for decline. It was a defect in disguise —
+the Lloyd's tour was on the Leadenhall Building — and **declining it would have
+buried the bug under a decision**, where nothing would look again. From the
+titles, a wrong coordinate and a genuine neighbour are indistinguishable; that is
+the whole reason the tight tier is distance-only.
+
+⚠️ **Before "fixing" an inconsistency, check whether it is a convention.** The
+Gamble House tour says `city: Los Angeles` while its pin says `Pasadena`, and the
+building is in Pasadena. That maker files **all 42** of its tours as Los Angeles,
+so changing this one would make it the sole exception. Flag, don't fix.
+
+## Merge a green content PR immediately — waiting costs a rebuild each time (2026-09-12)
+
+[#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) went green on **8 September** and
+was not merged until **12 September**. In those four days `main` moved **72 commits and 473 link
+pins**, and the branch had to be rebuilt **eight times** — seven while the session was still live,
+once more to land it.
+
+**Nothing went wrong with the content**: every rebuild reproduced the identical diff (2,483
+insertions / 0 deletions), overlap re-verified at 0 on every axis each time, and the final
+re-check found **0 repeats** among the 473 pins that had landed. The cost was pure churn — and
+each rebuild is a fresh chance to hand-resolve an 11 MB JSON wrongly.
+
+- **The rule: when CI is green on a content PR, squash it in that turn.** Do not report "I'll
+  merge on green" and then wait on a further check, a further question, or a further batch.
+- **A stale branch is not a safe branch.** The longer it waits, the more of the merge is
+  conflict resolution rather than content — and the docs conflict every time, because every
+  session edits the same `CLAUDE.md` / `STATUS.md` / `archive/README.md` header lines.
+- **Corollary on handoff filenames: pick the suffix at push time, not at write time.** This
+  session's handoff was renumbered four times — `-260907-3` → `-4` → `260908` → `260912-2` — as
+  parallel sessions claimed each one. Re-check immediately before pushing, and expect to renumber
+  on the merge anyway.
+- ⚠️ **The four-day gap also invalidated the whole structure the docs were written for**:
+  `CLAUDE.md`'s dated Current State blocks were moved to `archive/CURRENT-STATE-HISTORY.md` on
+  2026-09-08, so the entry had to be re-homed. **Re-read the file you are editing after any long
+  gap; the convention may have changed under you.**
+
+## A "first/new/Nth" claim has an expiry date — re-derive it at merge, not at write (2026-09-12)
+
+[#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) shipped documentation saying
+**"Puerto Rico is the catalogue's 59th country."** That was **true when it was written on
+7 September** — the catalogue had no Puerto Rico at all — and **false by the time it merged on the
+12th**, because another session landed 6 Puerto Rico entries during the four-day wait. Measured
+against the parent of the batch's own squash commit: **64 countries before the merge, 64 after.
+It added none.** A parallel session had meanwhile claimed the 59th slot for **Tanzania**, so two
+merged PRs each called a different country "the 59th".
+
+- **The rule: any superlative or ordinal about the catalogue — first, new, Nth, largest, only —
+  must be re-derived immediately before merge**, not carried forward from when the work was built.
+  The counts are cheap; the claim is not self-correcting.
+- **This is the same class as the Key-facts line that has gone stale eighteen times**, and the fix
+  is the same: re-derive from the merged file, never quote a number written earlier.
+- ⚠️ **It is also a second-order cost of not merging promptly** (see the lesson above). A batch
+  merged the day it goes green cannot be overtaken this way.

@@ -1,0 +1,323 @@
+# HANDOFF 2026-09-11 — the place sweep, and a rule that could not see what it was looking for
+
+One piece of work: the owner asked for a sweep of place candidates, saying *"even 2 tours at a
+location is a candidate."* The sweep found **221**. None of them is a new idea — every one was
+already in the catalogue, sitting unrecognised.
+
+## The finding behind the finding
+
+`scripts/check-place-candidates.py` already existed and already ran. It matched two entries as
+one site when **one title's meaningful words contained the other's**, within 500 m.
+
+🔴 **That rule is precise, and it is structurally blind to the commonest shape in this
+catalogue: one site that two entries call by two unrelated names.**
+
+| One site | The two names | Apart |
+|---|---|---|
+| A firehouse on North Moore Street | *Hook & Ladder 8* · *The Ghostbusters Firehouse* | 4 m |
+| Westminster Abbey | *Britain's Oldest Door* · *The Tomb of Elizabeth I* | 5 m |
+| The Nabisco building | *Chelsea Market* · *👀 Oreos were first made in NYC!* | 8 m |
+| Old St Patrick's | *The Catacombs of Old St. Patrick's* · *The Godfather Baptism Church* | 16 m |
+| 33 Liberty Street | *The Federal Reserve Bank of New York* · *$500 Billion of Gold Under 33 Liberty Street* | 0 m |
+
+Not one of those five pairs shares a single word. No string comparison reaches any of them.
+
+**The lesson generalises past places, and it is in `docs/lessons.md`: when the thing you are
+identifying is physical, match on the physical fact and use the text only to explain the match.**
+The title was never the evidence here. The coordinate was. The title was doing the work because
+it was the easier thing to compare.
+
+## What shipped
+
+A third tier, **TIGHT** — within 25 m, whatever the titles say.
+
+| | Before | After |
+|---|---|---|
+| EXACT (identical coordinate) | 41 | 41 |
+| TIGHT (≤25 m, any titles) | — | **151** |
+| NEAR (same subject, 25–500 m) | 148 | 79 |
+
+**82 of the 151 TIGHT pairs could not have reached the old NEAR tier under any title rule, and
+55 share no word at all.** Otherwise behaviour-preserving: the old NEAR tier's 148 pairs come
+back as 69 TIGHT + 79 NEAR, **exactly** — which is how the refactor was checked, rather than by
+reading the diff.
+
+The O(n²) pair loop (5.3M haversines over 3,269 markers) became a grid of radius-sized cells
+scanned nine at a time. 0.4 s. ⚠️ **Deliberately NOT bucketed by `city`** — two markers 20 m
+apart can carry different city strings (New York / Brooklyn) and a place spans that label. A
+selftest case pins it, and another pins a pair straddling a cell boundary; both were
+mutation-tested by breaking the implementation and confirming they fail.
+
+## The sweep — `docs/place-candidates-260911.md`, numbered for picking
+
+| | | |
+|---|---|---|
+| **A** | **10 existing places are missing a member already standing on them** | Additive, no new place, no judgement. Do these first |
+| **B** | **132 sites** with 2+ entries and no place page | Owner picks |
+| **C** | 79 same-subject pairs 25–500 m apart | Read one at a time |
+
+§ A is the quiet one and probably the most valuable: Rockefeller Center's page does not include
+*The Channel Gardens*, Westminster Abbey's does not include *The Cosmati Pavement* or *The
+Shrine of Edward the Confessor*, and Griffith Observatory's does not include either pin about
+Griffith J. Griffith himself. The page exists; the entry standing on it is simply absent.
+
+🔴 **The two owner decisions STATUS.md § 5 already owed are items in this list** — the First
+National Bank of Hollywood pair is **B15**, the St Vincent de Paul pair **B83**. They should be
+answered as part of it, not one at a time.
+
+## ⚠️ The false positives are named, not hidden
+
+Proximity is evidence, not proof, and two classes of wrong answer are permanent:
+
+1. **A dense block of separate venues.** Hong Kong's restaurant pins sit 10–20 m apart and are
+   different restaurants (*Little Bao* / *Primo Posto*, 14 m). Same for Stockholm's *Bar Montan*
+   / *Hosoi* and Sydney's *Pellegrino 2000* / *The Rover*.
+2. **Coordinates rounded to four decimal places** — ~11 m — which can round two genuinely
+   separate sites to within a few metres. This is what puts Madrid's *El Retiro* 8 m from the
+   *Puerta de Alcalá* and Chicago's *Marina City* 17 m from the *Merchandise Mart*.
+
+Nothing auto-creates. Exact coincidence still exits non-zero; everything looser is for a human.
+
+## ⚠️ A duplicate bug that wasn't
+
+19 of the § B groups hold two entries with an **identical title** — *Hollyhock House* twice,
+*The Noguchi Museum* twice, *Fondation Maeght* twice — which reads exactly like a merge that ran
+twice. **It was checked rather than assumed**, against `sourceURL` and `makerId`: every one is a
+different creator covering the same building, which is the precise thing a place exists to hold.
+The two sharing a maker are two separate posts with two different heroes.
+
+Separately, **5 `sourceURL`s are shared by more than one pin** — one video pinned at each place
+it visits (a Zumthor reel at LACMA, Therme Vals and the Bruder Klaus Chapel; an antique-markets
+reel at five Italian markets). Also correct, also not a duplicate.
+
+## § A applied — and the claim that it was free turned out to be wrong
+
+The owner picked **all of § A except Il Presidente, Westminster Abbey and the Channel Gardens**.
+Each of those three was the *only* missing member of its row, so A4, A8 and A9 drop out entirely
+and stay open. Applied: **seven places, eight entries.**
+
+🔴 **"Adding the id to `tourIds` is the whole change" was WRONG — it is in this handoff's own
+§ A description above, and in the doc, and it is what the owner was told.** The validator caught
+it. `Place.swift` makes a place's identity **exact coordinate equality**, and `validate-tours`
+enforces it at **1e-9 degrees**. All 362 existing place members sit exactly on their place — 362
+of 362, which is the schema rather than a coincidence. The eight ids alone produced exactly eight
+errors, `place <name>: member not on the place coordinate`.
+
+So joining a place also means **snapping the entry's stop coordinate, and its centroid** (or the
+centroid falls outside the stop range), onto the place:
+
+| Moved | Onto | By |
+|---|---|---|
+| *Where Julius Caesar Was Assassinated* | Largo di Torre Argentina | 20.9 m |
+| *M+ Museum* | M+ Museum | 15.6 m |
+| *Museum at Eldridge Street* | Eldridge Street Synagogue | 11.9 m |
+| *Above the Bradbury Building's Atrium* | Bradbury Building | 8.9 m |
+| *Who Funded Griffith Observatory* · *The Crimes of Griffith J. Griffith* | Griffith Observatory | 5.4 m |
+| *Charging Bull: How It Got There* | The Charging Bull | 3.5 m |
+| *Tribune Tower* | Tribune Tower | 0.6 m |
+
+⚠️ **Every move is ASSERTED in the script to be inside the entry's own `triggerRadiusMeters`**
+(30 m for all eight), so nothing changes about when any tour fires. A larger move would silently
+redefine where a tour triggers and nothing else in the pipeline would object — which is exactly
+the class of defect `check-coordinates.py` exists for. The assertion stays.
+
+**How the failure surfaced is worth keeping.** `validate-tours-mirror.py` did not print eight
+errors; it exited **2 — "selftest 32/32 faults caught; control DIRTY … SELFTEST FAILED, verdict
+not trustworthy"** with no detail. The control is the real catalogue, and my edit had made it
+dirty. Running the same validator against `git stash`'s clean base returned **0 errors**, which
+is what localised it to the edit rather than to the tooling. *Read the counts, not the verdict.*
+
+### Verified after
+
+- Validator **0 errors / 0 warnings** across 1,552 tours + 1,717 pins + 142 places; control clean.
+- **No entity created** — every count unchanged.
+- The `Tours.json` diff is **exactly 8 entries × 4 coordinate fields + 8 ids**, categorised line
+  by line rather than eyeballed.
+- `backend/seed_from_toursjson.py` runs clean and all 8 ids reach the places SQL, so
+  `publish-catalog.yml` carries this to Supabase on merge (conditional on `SUPABASE_DB_URL`,
+  which cannot be checked from here — verify against the live RPC after merge).
+- Sweep re-run: **41/151/79 → 40/132/79**; the seven groups fall silent **and the three held rows
+  still report**.
+
+## § B's 0 m rows applied — 38 places, and two held on purpose
+
+The owner then asked for **the 0 m candidates in § B** — the EXACT tier, every member on an
+identical coordinate, which is the catalogue's own identity rule. There were 40.
+
+**38 are now places (142 → 180). 2 are held.**
+
+**Names, addresses and copy were written, not guessed at.** The id scheme was reverse-engineered
+from the live catalogue — `uuid5(NAMESPACE_URL, "atlas-place:{slug(city)}:{slug(name)}")`,
+lowercase, which reproduces **140 of 142** existing ids (the two misses are older
+`atlas-place:{slug(name)}` ids and, like the odd link-pin ids, are NOT re-minted) — and verified
+by reproducing the three most recently added places exactly before minting anything. **All 40
+addresses were reverse-geocoded from the exact coordinate** rather than recalled, via Photon
+(40/40 FOUND, the three outcomes kept distinct per `docs/lessons.md` § 4), and every returned
+locality was read back against the catalogue's `city`. ⚠️ **Ellis Island geocodes to Jersey City,
+New Jersey and that is correct** — most of the island's made land is legally New Jersey.
+
+🔴 **Eight groups were folded wider than 0 m, deliberately.** Each had a same-subject entry a few
+metres off the exact coordinate, and building the place from the coincident pair alone would have
+produced **a place called "The Pantheon" that excludes the Pantheon tour standing 5.8 m away.**
+On the § A precedent they are snapped in (25.8 m down to 1.4 m), each move asserted inside that
+entry's own 30 m radius.
+
+### ✅ The two held — resolved by the owner the same session
+
+**Grand Central** and **Tai Kwun** each have a same-subject entry **87.9 m away — outside its own
+30 m geofence**, so it cannot be snapped without moving where that tour actually fires. For Grand
+Central it is worse: the far entries are the **existing `Grand Central Terminal` place**, so
+creating this one would put a second place of the same name 88 m from the first. The choice is
+**move the far entries onto one coordinate, accepting the 88 m shift in their trigger point, or
+leave the site split in two** — editorial, not mechanical.
+
+The owner took both, and the answers were not symmetrical.
+
+**Grand Central: move them in.** The two pins joined the existing place, **88.4 m each**; it now
+has four members. This really does change where they fire — north concourse to the 42nd Street
+facade — and that was the accepted cost.
+
+**Tai Kwun: re-site the place itself.** *"Put tai kwun place in the dead center of the tai kwun
+courtyard, and madame fu try to locate more precisely on the map."* So the new **Tai Kwun** place
+sits at **22.281513, 114.154187 — the centre of OSM's 檢閱廣場 Parade Ground way** — holding *The
+Public Spaces of Tai Kwun* and the *Tai Kwun | 大館* tour (43.7 m and 45.5 m). ⚠️ Both are outside
+the 30 m geofence, and here that is the **point**: the tour fired at the Hollywood Road gate and
+will now fire when someone actually reaches the courtyard. ⚠️ **Only ONE Atlas Tai Kwun tour
+exists** — the instruction said "the atlas tours".
+
+**Madame Fu: relocated, and deliberately left out.** It was sitting on OSM's generic
+representative point for the whole compound — which is precisely why it and *The Public Spaces of
+Tai Kwun* were coincident and looked like one site. It now sits at **22.2813602, 114.1539782, the
+restaurant's OWN published `businessLocationCoordinates`**, which lands **0.3 m from OSM's 營房大樓
+Barrack Block centre** — two independent sources agreeing, with the site's address reading *3/F,
+Barrack Block, Tai Kwun*. That move is 22.9 m, **inside** its geofence, so it needed no waiver.
+
+🔴 **Madame Fu ends 27.4 m from the place — just outside the 25 m TIGHT radius, so the sweep does
+not report it, which was checked rather than assumed.** It is out because a restaurant inside a
+heritage compound is not the compound. **Standing decision, like Tibidabo — do not "fix" it.**
+
+⚠️ **Three of those four moves exceed the entry's own `triggerRadiusMeters`, so the guard that
+protected § A and § B had to be waived.** It is **not removed** — it is waived per entry, in the
+script, each with its reason, so the next move that oversteps still stops.
+
+**After: 181 places, validator 0/0, seed 181, and the sweep goes 40 exact → 0 — the checker now
+exits 0. Every coincident group in the catalogue is a place.**
+
+### Verified
+
+- Validator **0 errors / 0 warnings**, 1,552 tours + 1,717 pins + **180 places**; control clean.
+- Sweep **40 exact → 2**, and the 2 are exactly the held pair. TIGHT 132 → 117.
+- `seed_from_toursjson.py` emits 180 places cleanly.
+- Every new place has `heroImageURL: null` **by design** (the page falls back to its top tour's
+  hero) and **every one has at least one member carrying a hero**, checked — so none renders blank.
+- ⚠️ **The first attempt sorted `places` and rewrote 1,425 unchanged lines.** Reverted; the array
+  is appended to instead. Final diff is **611 insertions / 32 deletions, and the 32 deletions are
+  exactly the eight folded entries × four coordinate fields** — categorised, not eyeballed.
+
+## What is NOT done
+
+**§ B's non-0 m rows and § C (79 pairs) create nothing.** A place needs its own name, description,
+address and a chosen coordinate — and, as above, every member then moves onto that coordinate —
+so it stays an editorial decision, not a batch job. `heroImageURL` stays optional by design, so
+none of them is blocked on sourcing an image.
+
+## Landed
+
+**Merged as [#801](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/801), squash `e553227`**,
+all three CI jobs green on `9d35f97` including the canonical `validate-tours.swift`.
+
+⚠️ **`main` moved between green CI and the merge** — #802 landed — so `mergeable_state` was
+re-checked (`clean`) rather than assumed from the earlier read. The branch auto-deleted.
+
+Re-derived on `main` at `e553227`, never quoted: **1,552 tours · 1,717 link pins · 377 makers ·
+1,924 tour stops (3,641 with pins) · 181 places · 473 cities · 64 countries · 459 place members.**
+
+`publish-catalog.yml` run 218: gh-pages mirror published and verified by the workflow's own
+read-back; the Supabase seed ran from the same commit. ⚠️ **The seed is conditional on the
+`SUPABASE_DB_URL` secret** — its credential check passed, which is the evidence that it is set.
+
+🔴 **Still worth doing on the next touch of `get_catalog`: `scripts/check-catalog-contract.py`.**
+Every key is optional in Swift, so a dropped `places` key decodes as nil and the feature silently
+stops existing — no crash, no log, no failed CI. That is exactly how `places` vanished for 14
+hours on 2026-08-19.
+
+## The under-10 m batch — 41 more places, and two bugs the process caught
+
+The owner asked for every candidate site under 10 m, then excluded five by number. **41 places
+created; 181 → 222; 85 entries, 43 of them snapped onto their site.** Every move was asserted to be
+inside that entry's own 30 m trigger radius, so nothing changed about when any tour fires. Sweep
+**1 exact / 121 tight / 79 near → 0 / 75 / 79**.
+
+Names and copy were written; **ids and addresses were derived**. All 41 coordinates were
+reverse-geocoded via Photon (41/41 FOUND, the three outcomes kept distinct) and every returned
+locality read back against the catalogue's `city`. ⚠️ **Roughly a dozen returned a *neighbouring*
+feature rather than the site** — the Noguchi Museum geocoded to "Ravenswood Playground", Chelsea
+Market to a bar inside it, the Federal Reserve to a bare postcode — so the geocode is a starting
+point to read, never an answer to paste.
+
+### 🔴 Two bugs, both of the silent kind
+
+**1. A literal `|` in a title corrupts a markdown table.** 24 entries carry one (the bilingual
+convention, `Museum SAN | 뮤지엄 산`). Unescaped, each opens an extra column and **shifts every cell
+after it in that row** — no error, no ragged output, just a plausible table holding the wrong data.
+Caught by counting columns, not by reading. `make-place-menu.py` now escapes centrally and
+**refuses to write a table whose columns disagree**; deleting the escape makes it exit 2.
+
+**2. Addressing group members by TITLE picked the wrong entry.** **11 of the 41 groups hold two
+entries with the same title** — two creators covering one building, which is precisely what a place
+is for. A title lookup returns both. Fixed by carrying **ids** through the whole pipeline; ids are
+identity, titles are not.
+
+⚠️ **And one guard fired in the wrong order.** The apply script asserted "single-stop" *before*
+checking whether a move was needed, which rejected Museum SAN — a 4-stop walk sitting **exactly**
+on its place, needing no move at all. 26 existing places already hold a multi-stop member, so that
+is normal. The assert now runs only when `d > 0`, where it actually means something.
+
+### The five declined, and why recording them matters
+
+Stockholm's shopfront (two unrelated subjects) · *Britain's Oldest Door* + *Tomb of Elizabeth I*
+(**both Westminster Abbey, already a place 17 m away** — this would have created a duplicate) ·
+Barcelona's café/hotel (one building, but which is the site?) · **Madrid's *El Retiro* +
+*Puerta de Alcalá*** (two distinct monuments that only round together — ⚠️ **both coordinates are
+4 dp, ~11 m, and are worth fixing separately**) · Hong Kong's *Handcrafter* + *Hoopla* (two shops
+inside D2 Place; the site is the mall, which neither is named for).
+
+🔴 **The sweep cannot know a decision was made**, so all five are now in the menu's § 4 keyed by
+their member titles — `DECLINED` alone could not reach them, because they join no existing place.
+Without that they return as fresh candidates on every run until someone "fixes" them.
+
+## The coincident tier is closed
+
+**250 places. 0 exact, 0 open groups within 25 m.** Every pair of entries in this catalogue that
+stands on the same spot is now either a place or a recorded decision not to make one.
+
+The last candidate is the one worth remembering: **the Academy Museum of Motion Pictures and The
+Walt Disney Company Piazza**. It did not exist when the sweep began — it appeared *because* the
+owner asked to improve the LACMA-group pins, and re-sourcing the Academy Museum's coordinate from
+OSM landed it **exactly** on a pin whose own description reads *"at the Academy Museum of Motion
+Pictures"*, matching to seven decimal places.
+
+🔴 **A repair that lands on independent corroboration is the strongest signal in this whole sweep** —
+better than any geocode on its own, because two sources that never saw each other agreed.
+
+### The running total for the day
+
+| | Start | End |
+|---|---|---|
+| places | 142 | **250** |
+| EXACT groups | 41 | **0** |
+| TIGHT pairs | 151 | 38 (all claimed or declined) |
+| NEAR pairs | 79 | 75 |
+
+### What is left, and why it is a different problem
+
+**§ 3's 75 same-subject pairs, 25–500 m apart — never reviewed.** 24 sit at 25–50 m; the other 51
+are 50–500 m. At that range the two entries are genuinely in different spots, so making one a place
+means choosing which coordinate wins and moving the other hundreds of metres — far outside any
+30 m geofence. Every one is a Grand Central-style decision, not a tidy-up. That is why the checker
+has never auto-created them.
+
+⚠️ **And the sweep is blind to two shapes it will never find**: two entries about one site more
+than 500 m apart (which is what a wrong coordinate looks like — Marina City was 460 m out and only
+surfaced because it landed *on* something else), and two entries about one site 25–500 m apart
+whose titles share nothing. The TIGHT tier closed the second case only up to 25 m.
