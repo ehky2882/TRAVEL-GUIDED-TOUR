@@ -345,31 +345,29 @@ final class HomeRailsViewModelTests: XCTestCase {
 
     // MARK: - Filtered results (§1.6 + D6/D8)
 
-    func test_filteredResults_walksOnly_keepsMultiStop() {
+    func test_filteredResults_audioWalkFormat_keepsMultiStop() {
         let single = TestFixtures.makeTour(kind: .single, stopCount: 1)
         let walk = TestFixtures.makeTour(kind: .multiStop, stopCount: 4)
         let results = HomeRailsViewModel.filteredResults(
             tours: [single, walk],
-            selectedTags: [],
-            walksOnly: true,
+            filter: TourFilter(formats: [.audioWalk]),
             userLocation: nil,
             visibleRegion: nil
         )
         XCTAssertEqual(results.map(\.id), [walk.id])
     }
 
-    func test_filteredResults_tagFilter_andWalks_combine() {
+    func test_filteredResults_tagAndFormat_combine() {
         let museumWalk = TestFixtures.makeTour(kind: .multiStop, tags: ["Museum", "Art"], stopCount: 3)
         let museumSingle = TestFixtures.makeTour(kind: .single, tags: ["Museum", "Art"])
         let parkWalk = TestFixtures.makeTour(kind: .multiStop, tags: ["Park"], stopCount: 3)
         let results = HomeRailsViewModel.filteredResults(
             tours: [museumWalk, museumSingle, parkWalk],
-            selectedTags: ["Museum"],
-            walksOnly: true,
+            filter: TourFilter(formats: [.audioWalk], tags: ["Museum"]),
             userLocation: nil,
             visibleRegion: nil
         )
-        XCTAssertEqual(results.map(\.id), [museumWalk.id], "Only the multi-stop Museum tour survives Museum + Walks")
+        XCTAssertEqual(results.map(\.id), [museumWalk.id], "Only the multi-stop Museum tour survives Museum + Audio walk")
     }
 
     func test_filteredResults_userInView_sortsByUserLocationNotViewportCenter() {
@@ -387,8 +385,7 @@ final class HomeRailsViewModelTests: XCTestCase {
         )
         let results = HomeRailsViewModel.filteredResults(
             tours: [nearCenter, nearUser],
-            selectedTags: ["Food"],
-            walksOnly: false,
+            filter: TourFilter(tags: ["Food"]),
             userLocation: CLLocation(latitude: user.latitude, longitude: user.longitude),
             visibleRegion: region
         )
@@ -408,8 +405,7 @@ final class HomeRailsViewModelTests: XCTestCase {
         )
         let results = HomeRailsViewModel.filteredResults(
             tours: [nearUser, nearCenter],
-            selectedTags: ["Food"],
-            walksOnly: false,
+            filter: TourFilter(tags: ["Food"]),
             userLocation: CLLocation(latitude: user.latitude, longitude: user.longitude),
             visibleRegion: region
         )
@@ -427,8 +423,7 @@ final class HomeRailsViewModelTests: XCTestCase {
         )
         let results = HomeRailsViewModel.filteredResults(
             tours: [far, near],
-            selectedTags: ["Food"],
-            walksOnly: false,
+            filter: TourFilter(tags: ["Food"]),
             userLocation: nil,
             visibleRegion: region
         )

@@ -19,6 +19,12 @@ struct HomeView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LocationManager.self) private var locationManager
     @Environment(HomeSharedState.self) private var sharedState
+    /// The filter lives on the CROSS-WINDOW state, not on `sharedState`,
+    /// because the panel that edits it is presented from the other window —
+    /// see `AppSharedState.filterPanel`. Optional for the same reason every
+    /// other page declares it so: previews inject nothing, and `nil` reads as
+    /// no filter, which is the right default anywhere but the real app.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(PlacePresenter.self) private var placePresenter
     /// Optional so previews and any host that doesn't inject it still build —
@@ -118,7 +124,7 @@ struct HomeView: View {
                         // genuinely changes (a place stops collapsing once the
                         // filter leaves it fewer than two tours), so the map
                         // builds them itself.
-                        precomputedMarkers: sharedState.hasActiveFilters
+                        precomputedMarkers: isFiltering
                             ? nil
                             : dataService.stopMarkers,
                         userLocation: locationManager.userLocation,
@@ -266,10 +272,7 @@ struct HomeView: View {
                         }
 
                         LaunchEntrance(part: .chips, travel: geo.size.width) {
-                            TagFilterChipRow(
-                                selectedTags: $sharedState.selectedTags,
-                                walksOnly: $sharedState.walksOnly
-                            )
+                            FilterChipRow(makers: dataService.makers)
                         }
                     }
                     .padding(.top, AtlasSpacing.sm)
@@ -747,17 +750,19 @@ struct HomeView: View {
 
     // MARK: - Derived
 
-    /// Tours after the filter-chip selection is applied. Fed to the
-    /// map's pin set. The drawer's filtered results list is computed in
-    /// `HomeDrawerContent` from the same `sharedState` filter state.
-    /// Combines per D6 (OR within a facet, AND across) plus the "Walks"
-    /// format filter (§1.6).
+    /// Whether anything in the filter row is switched on.
+    private var isFiltering: Bool { appShared?.filter.isActive ?? false }
+
+    /// Tours after the filter row's selection is applied. Fed to the map's pin
+    /// set. The drawer's filtered results list is computed in
+    /// `HomeDrawerContent` from the same `AppSharedState.filter`, so the two
+    /// halves can never disagree about what is showing.
+    ///
+    /// The rule lives in `TourFilter.matches` — any within a group, all across
+    /// groups.
     private var filteredTours: [Tour] {
-        guard sharedState.hasActiveFilters else { return dataService.tours }
-        return dataService.tours.filter { tour in
-            if sharedState.walksOnly && tour.kind != .multiStop { return false }
-            return Tag.matches(tourTags: Set(tour.tags), selection: sharedState.selectedTags)
-        }
+        guard let filter = appShared?.filter, filter.isActive else { return dataService.tours }
+        return dataService.tours.filter(filter.matches)
     }
 
     private func placeDistanceText(for place: Place) -> String? {
