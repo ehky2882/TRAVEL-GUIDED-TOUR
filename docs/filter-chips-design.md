@@ -5,17 +5,17 @@
 
 Replaces the flat multi-select row shipped in Tag Phase 2 (`Features/Home/TagFilterChipRow.swift`,
 owner decision D8). The combine rule is unchanged — **OR within a facet, AND across** (D6,
-`Tag.matches`). What changes is the row: eighteen toggles become **one door plus eight facets**,
+`Tag.matches`). What changes is the row: eighteen toggles become **one door plus nine facets**,
 each opening its own sheet.
 
 ## The row
 
 ```
-≡ All · Format ⌄ · Dozent ⌄ · Experience ⌄ · Type ⌄ · Theme ⌄ · Era ⌄ · Nearby ⌄ · Architect ⌄
+≡ All · Format ⌄ · Price ⌄ · Dozent ⌄ · Experience ⌄ · Type ⌄ · Theme ⌄ · Era ⌄ · Nearby ⌄ · Architect ⌄
 ```
 
-Left to right: what the thing is → whose it is → how it feels → what it is → what it is about →
-when → how far → by whom.
+Left to right: what the thing is → what it costs → whose it is → how it feels → what it is →
+what it is about → when → how far → by whom.
 
 | Chip | Values | Notes |
 |---|---|---|
@@ -30,12 +30,13 @@ when → how far → by whom.
 | **Nearby** | Walking distance · 5 km · 25 km | Single-select, no counts (they depend on where the viewer is). |
 | **Architect** | 429 · largest is 23 | Search. |
 
-**Counts below are from `Resources/Tours.json` in this checkout; the live catalogue is already
-ahead of it (1,796 link pins against this file's 1,717). Re-derive before building.** Counts are
-over all 3,269 pins — 1,552 tours and 1,717 link pins — because the chips filter the
+**Counts are over all 3,269 pins — 1,552 tours and 1,717 link pins — because the chips filter the
 map and the map carries both.** That denominator overturns the Phase 2 call that kept Art Deco,
 Brutalist and Bridge out of the row for being thin: against 3,269 they are 50, 51 and 44.
-Re-derive before building; they move with every content merge.
+
+⚠️ **Re-derive every number before building.** These come from `Resources/Tours.json` in this
+checkout and the live catalogue is already ahead of it — 1,796 link pins against this file's 1,717,
+counted on 2026-09-12. Price is the one that can never come from the file at all; see below.
 
 ### Not chips, and why
 
