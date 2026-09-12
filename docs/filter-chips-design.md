@@ -1,4 +1,4 @@
-# Filter chips — the four-chip row
+# Filter chips — a door and four chips
 
 **Status:** design agreed, not yet built. Canvas:
 <https://claude.ai/code/artifact/b5da2e3e-cd23-4484-807b-c8e74cb70d59>
@@ -9,7 +9,7 @@ owner decision D8). The combine rule is **unchanged** — OR within a facet, AND
 sheet.
 
 ```
-Format ⌄  ·  Price ⌄  ·  Dozent ⌄  ·  Tags ⌄
+≡ All  ·  Format ⌄  ·  Price ⌄  ·  Dozent ⌄  ·  Tags ⌄
 ```
 
 The row splits along a real seam. Three **structural fields** — `kind`, `price_tier`, `makerId` —
@@ -18,13 +18,26 @@ vocabulary** gets one chip, because it is all the same kind of question.
 
 | Chip | Values | Notes |
 |---|---|---|
+| **≡ All** | every facet below, in one scroll | A door, not a filter — never fills brass; its badge counts what is on behind it. |
 | **Format** | Audio stop 1,480 · TikTok 1,106 · Instagram 592 · Audio walk 72 · YouTube 19 | One flat list, largest first. One field, so its values OR. |
 | **Price** | Free 3,283 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
 | **Dozent** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. |
 | **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
 
-A **Clear ×** chip appears at the head of the row the moment anything is on. **Sort** sits on the
-drawer header, opposite the result count.
+**Clear** sits in each panel's header, and **Clear all** in the All panel — not in the row. **Sort**
+sits on the drawer header, opposite the result count.
+
+### The All panel
+
+Every facet in one scroll, one heading level deep: `FORMAT`, `PRICE`, `DOZENT`, then Tags' own
+groups — `PLACE`, `SUBJECT`, `WHY GO`, `ERA`, `ARCHITECT` — flattened to the same level, each with
+its `More`. It writes into exactly the same selection as the individual chips, so the two routes
+cannot disagree.
+
+**Kept because some people would rather scan one list than open four panels** (owner,
+2026-09-12) — which is how the reference app leads its row. It was briefly cut on the reasoning
+that it duplicates the chips; duplication is the point. It is a second route, not a second
+mechanism.
 
 **Counts are over all 3,269 pins — 1,552 tours and 1,717 link pins — because the chips filter the
 map and the map carries both.** That denominator overturns the Phase 2 call that kept Art Deco,
@@ -130,7 +143,6 @@ them (all Instagram gets 9:16), but the URL carries it.
 
 | | |
 |---|---|
-| An **All** door | once Tags holds the vocabulary, an All sheet would hold these same four chips again |
 | **Nearby** | the map *is* a distance filter and a continuous one; it dies without location permission; and it means nothing when planning a trip from home. Served instead by sort-by-nearest and the existing recenter button |
 | City | same reason — panning answers "where"; 116 cities is a search |
 | Duration | median audio stop is 2 min 14 s — Format already separates the stop from the 11-minute walk |
