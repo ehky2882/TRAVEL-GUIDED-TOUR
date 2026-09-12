@@ -171,6 +171,33 @@ struct BottomModuleRoot: View {
                     FullscreenVideoView(request: request)
                 }
         }
+        // 🔴 The home filter panels present from THIS window, for the third
+        // time in this file's history and the same reason both times above:
+        // these bars are at `windowLevel = .normal + 1`, so a sheet put up by
+        // the main window slides in BEHIND them, and its bottom — including the
+        // floating SHOW RESULTS pill — is simply covered.
+        //
+        // The alternative was built first: a `.sheet` on the row plus
+        // withdrawing the bars while it was up. The owner filmed the result.
+        // The module vanished **~130 ms before the sheet appeared**, so the
+        // transition ran map → hole → sheet. *"Even for a small moment it
+        // doesn't look right."* Session 24 had already paid for this lesson
+        // with `PlayerView`. Presented here there is nothing to withdraw, no
+        // ownership flag, and no moment to get wrong.
+        //
+        // ⚠️ On its OWN view, like the cover above it — two presentations of
+        // one kind on a single view silently drop the second.
+        .background {
+            Color.clear
+                .sheet(item: $appShared.filterPanel) { route in
+                    FilterPanelHost(
+                        route: route,
+                        filter: $appShared.filter,
+                        tours: dataService.tours,
+                        makers: dataService.makers
+                    )
+                }
+        }
     }
 
     /// Should the bars paint edge-to-edge rather than as a floating island?

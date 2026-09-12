@@ -283,17 +283,13 @@ took the commit pill with them. This is not a bug in the panels: the module live
 `UIWindow` at `.normal + 1`**, installed exactly so that UIKit modals in the main window pass
 behind the persistent player, the way Apple Music's does. A `.sheet` is such a modal.
 
-So a panel now withdraws the bars for as long as it is up (`AppSharedState.hidesBottomModule` plus
-`BottomModuleWindowController.setHidden`) — the established move for this collision: the tour
-wizard does it for the 126 pt, and a link pin's embedded player does it for element fullscreen.
-The other escape, presenting from inside the top window (what `PlayerView` does), is not open to a
-sheet bound to the row's own state.
-
-⚠️ **That flag is a plain Bool, not a count, so two owners must never overlap.** The filter row is
-now the third owner and cannot collide with either of the others — the wizard covers the screen
-from the Me tab, and a tour page is unreachable from inside a filter panel — and it restores only
-what it withdrew, so a panel dismissed while another screen has the bars down cannot put them back
-on top of it. **Anything added here later must re-check that.**
+⚠️ **SUPERSEDED BY ROUND 3 — the fix below was the wrong one.** It withdrew the bars for as long
+as a panel was up (`AppSharedState.hidesBottomModule` + `BottomModuleWindowController.setHidden`),
+which is what the tour wizard does for the 126 pt and what a link pin's embedded player does for
+element fullscreen. It fixed the covered pill and introduced a visible hole in the transition. The
+other escape — presenting from inside the top window, which is what `PlayerView` does — was
+dismissed here as "not open to a sheet bound to the row's own state", and that was simply wrong:
+the state moves to `AppSharedState`, and then it is. See § Device review, round 3.
 
 ⚠️ Note the side effect on the panel heights below: every panel just gained the 126 pt it was
 silently losing, so the detent fractions are now more generous than the drawings assumed.
@@ -351,6 +347,52 @@ consistency with every other sheet in the app — none of the others set detents
 already full-height and attached; the filter panels were the only floating surface in the product
 apart from the module itself. **And the whole "does Tags fit in one screen" question dissolves**,
 along with three rounds of panel-height arithmetic.
+
+### Device review, round 3 — build 148: the panel is presented from the other window
+
+**Owner, on build 148:** *"There is a visual mistake where when the sheet comes up from the bottom
+to cover the bottom module, you can see that the bottom part of the module disappears. It's quick
+and subtle but even for a small moment it doesn't look right."*
+
+They sent a screen recording, and the frames settle it. At 60 fps, cropped to the bottom of the
+screen:
+
+| Frames | What is on screen |
+|---|---|
+| 1–2 | mini-player + tab bar, normal |
+| 3 | **the whole module gone in one frame** |
+| 4–10 | **bare map where it was — ~130 ms of hole** |
+| 11 | the sheet's top edge finally enters from the bottom |
+
+So round 1's withdrawal fired the moment the state changed, and the sheet's presentation did not
+begin for another eighth of a second. The transition read **map → hole → sheet**.
+
+🔴 **The right fix was already written down in this repo, twice.** `BottomModuleRoot` carries it
+next to the fullscreen video viewer: *"Session 24 hit this with `PlayerView` — hiding the module
+around the transition made it worse; presenting from this window was the fix."* The bars sit at
+`windowLevel = .normal + 1`; anything presented by the main window goes behind them. Present from
+**their** window and the sheet slides up over them with nothing to hide.
+
+So the panel is now presented in `BottomModuleRoot`:
+
+- `AppSharedState` gains **`filterPanel: FilterPanelRoute?`** (which panel is up) and **`filter`**,
+  which moves off `HomeSharedState`. That move is the whole trick: `HomeSharedState` belongs to
+  `ContentView`, so only the main window can see it, and a panel in the other window needs a
+  binding to the filter it edits. `AppSharedState` is the state that spans both windows — this is
+  what it is for.
+- The row no longer presents anything. It sets `appShared.filterPanel` and reads `appShared.filter`
+  for its chip labels. It also no longer takes the tour catalogue: the counts are computed in the
+  panels, which are built where they are presented and read `DataService` there.
+- **`hidesBottomModule` is back to two owners**, the wizard and the link-pin fullscreen — so the
+  warning round 1 added ("anything added here later must re-check the overlap") no longer applies
+  to this feature, and the ownership record, the restore path and its backstop are all deleted.
+
+⚠️ **`PassThroughWindow` already handles the consequence**: while that window has a presented view
+controller it claims every touch rather than only the bottom strip, so the panel is fully
+interactive. That branch exists for `PlayerView` and needed no change.
+
+**Net: 99 lines added, 104 deleted.** The correct fix is smaller than the wrong one, which is
+usually the tell.
 
 ### Ordering: counts promote, the alphabet displays
 

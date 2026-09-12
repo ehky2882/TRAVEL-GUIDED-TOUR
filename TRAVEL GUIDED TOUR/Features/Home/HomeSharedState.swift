@@ -13,20 +13,11 @@ import MapKit
 /// stay in sync without prop-drilling.
 @Observable
 final class HomeSharedState {
-    /// Everything the filter row has asked for: Format, Price, Dozents and
-    /// Tags, in one value (`TourFilter`). The map filters its pin set on this;
-    /// the drawer swaps its curated shelves for a flat results list while any
-    /// of it is active.
-    ///
-    /// Replaces the pair of fields the flat chip row carried — a tag set plus a
-    /// `walksOnly` flag. Walks was never binary: it is one value of the Format
-    /// facet, alongside the audio stop and the four pinned-post kinds.
-    /// See `docs/filter-chips-design.md`.
-    var filter: TourFilter = .none
-
-    /// True when any filter is active — the drawer reads this to decide
-    /// shelves-vs-results and the header copy.
-    var hasActiveFilters: Bool { filter.isActive }
+    /// ⚠️ **The filter does NOT live here — it is `AppSharedState.filter`.**
+    /// It was here, which was the natural home until the filter PANEL had to be
+    /// presented from the other window so it could slide up over the
+    /// mini-player and tab bar. This object is `ContentView`'s, so only the
+    /// main window can see it. The reasoning is on `AppSharedState.filterPanel`.
 
     /// Tours behind the currently-tapped pin, plus the coordinate of
     /// that pin. Drives the placecard preview the map renders above it.

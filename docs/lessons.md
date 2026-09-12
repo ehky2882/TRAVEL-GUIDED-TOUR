@@ -573,6 +573,34 @@ and the failure summary names the file but never the reason.
 
 ## 9. App code
 
+🔴 **The mini-player and tab bar are in a window ABOVE the app, so anything the main window
+presents goes behind them — present it from THEIR window instead of hiding them.**
+`BottomModuleWindowController` installs a `PassThroughWindow` at `windowLevel = .normal + 1`
+deliberately, so ordinary modals slide up behind the persistent player the way Apple Music's do.
+A `.sheet` from a main-window view therefore has its bottom 126 pt covered — and for the filter
+panels that took the floating commit pill with it.
+
+Hiding the bars for the duration looks like the fix and is not. It has now been tried and
+reverted **twice**: session 24 with `PlayerView` (*"hiding the module around the transition made
+it worse; presenting from this window was the fix"*), and session 160 with the filter panels,
+where the owner filmed the result — at 60 fps the module vanished in one frame and the sheet's
+top edge did not enter for **another ~130 ms**, so the transition ran map → hole → sheet. The
+withdrawal fires on a state change; the presentation does not begin for an eighth of a second,
+and no delay tuned by hand is a fix for that.
+
+**What presenting from the module's window costs:** the state the modal edits has to be reachable
+from that window, which means `AppSharedState` (the object injected into both) rather than
+anything `ContentView` owns, such as `HomeSharedState`. That is a real refactor of where state
+lives, and it is the whole trick — session 160's first attempt talked itself out of this fix by
+asserting the state "is not open to a sheet bound to the row's own state", which was simply
+untrue once the state moved. `PassThroughWindow.hitTest` already claims every touch while that
+window has a presented view controller, so interactivity needs no work.
+
+⚠️ **And `hidesBottomModule` is a plain Bool, not a count.** Every owner it gains is a new way
+for the bars to go missing for a whole session — a failure this app has shipped three times.
+Deleting an owner is worth more than it looks.
+
+
 🔴 **A cross-origin iframe cannot fail in a way `WKNavigationDelegate` can see, so a WebView
 embed needs a POSITIVE signal and a deadline — never a failure callback.** `LinkEmbedView` hands
 WebKit its shell with `loadHTMLString`, so the main frame never touches the network; the player is
