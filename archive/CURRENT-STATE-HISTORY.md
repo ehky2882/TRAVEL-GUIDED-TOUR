@@ -43,6 +43,48 @@ For what is true now: `bash scripts/session-start.sh`, then `CLAUDE.md` § Key f
 
 ## Current State (2026-09-07)
 
+### ✅ The two Iglesia de San José pins become a place — places 289 → 290 (owner instruction, 2026-09-12)
+
+**Owner: *"make the two san josé pins a place."*** Both are `TikTok @urbanistariel`, two different
+posts about the same Old San Juan church, and they were **20.3 m apart** — the pair left behind
+when the misplaced one was corrected onto OSM's node an hour earlier. They now draw as **one
+capsule**; map markers 3,010 → 3,009, **0 groups over `maxStacked = 3`**.
+
+- **⚠️ THE ANCHOR IS OSM'S OWN NODE, NOT EITHER PIN'S HISTORY.** `18.467629, -66.118258`
+  **reverse-verifies as `Iglesia de San José, Calle del Cristo` by name.** One member was already
+  on it and **moved 0.0 m**; the other moved **20.3 m**. Both were asserted **`manual`** and
+  **not already in a place** before anything was written, so no geofence changed and no existing
+  place's identity rule was broken.
+- **🔴 THE HERO IS BORROWED AND THAT IS STRUCTURAL.** Both members are link pins with **empty
+  galleries**, and **nothing else is within 400 m** except one unrelated pin (the Walls of Old San
+  Juan, 304 m, also empty) — there is **no Atlas tour here at all**, so no third photograph exists
+  anywhere in the catalogue. The closed Waterlooplein / Legion of Honor case: **do not go sourcing
+  a replacement.** Both candidates were rendered and looked at, and it takes the **retablo** frame
+  over the painting close-up, because a detail of a haloed face could be almost any medieval panel
+  while the carved altar reads as a church on a map (the session-95 establishing-shot criterion).
+  ⚠️ **Stated costs: the creator's face occupies the lower-right quadrant, and neither candidate is
+  an exterior** — no exterior of this church exists in the catalogue.
+- **⚠️ The name takes the accent the church actually carries** (`Iglesia de San José`), not the
+  creator's unaccented spelling on the other member. The misspelling stays verbatim in that pin's
+  own `longDescription` and is repeated nowhere we author — the Schweizer convention. **The place
+  name therefore matches one member's title exactly**, which is the One Times Square / Tin Building
+  call; do not "fix" it.
+- **⚠️ The description asserts what both members support plus the dates that make them cohere** —
+  the second-oldest surviving church in the Americas and its Gothic vaulting, the Ponce de León
+  endowment, the 2021 reopening, and **both** paintings: the one uncovered during the restoration
+  (member A's *"oldest European painting in Puerto Rico"*) and the **Virgen de Belén**, stolen in
+  1972 and never recovered (member B). ⚠️ **No attribution, valuation or theft theory is asserted**
+  — member B's caption ends on an open question and the copy leaves it open.
+- **Verification.** `Tours.json` **byte-stable before editing**; diff **19 insertions / 4
+  deletions**, and **all four deletions are the moved pin's own coordinate lines**. Place id
+  `uuid5(NAMESPACE_URL, "atlas-place:san-juan:iglesia-de-san-jose")`, the scheme **reverse-verified
+  against 285 of the 289 existing places** (the four misses are the documented older hand-minted
+  ids); **0 collisions**. **0** centroid drift catalogue-wide · **0** members off their place's
+  coordinate · **0** tours claimed by two places · **0** duplicate place ids · no member gained or
+  lost a top-level key. 🎉 **`check-place-candidates.py` TIGHT 42 → 41**, and the report diff proves
+  it **removes exactly the San José pair and adds nothing**. `validate-tours.swift`: **0 errors**,
+  and its 5 warnings are **identical to `origin/main`**.
+
 ### ✅ A misplaced pin corrected — `Iglesia San Jose` was on a house, 228 m from the church (owner instruction, 2026-09-12)
 
 **Owner: *"fix that iglesia san jose coordinate."*** Found while verifying the 54-pin batch live:
