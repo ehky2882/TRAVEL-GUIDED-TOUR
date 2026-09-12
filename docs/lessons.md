@@ -1079,3 +1079,34 @@ merged PRs each called a different country "the 59th".
   is the same: re-derive from the merged file, never quote a number written earlier.
 - ⚠️ **It is also a second-order cost of not merging promptly** (see the lesson above). A batch
   merged the day it goes green cannot be overtaken this way.
+
+## A splash animation is only real if it is on screen, on a layer, and verified at real timings (2026-09-12)
+
+Restoring the splash's breathing brass circle (#836) took three TestFlight builds, and each device
+round broke for a reason the simulator check before it had hidden.
+
+- 🔴 **SwiftUI `onAppear` is not "on screen".** It fired **27 ms** after launch; the splash's first
+  frame reached the screen **~4.9 s** later, because the app behind it was still being built. A
+  minimum on-screen time counted from launch was spent behind iOS's static launch picture, and the
+  breath showed for ~0.77 s — the owner saw none. Time anything the user must *see* from its first
+  **drawn** frame (`SplashDiscView`'s `CADisplayLink` tick).
+- 🔴 **An overlay cannot draw until the view under it is built.** With `ContentView` mounted on the
+  first frame, the whole map/drawer build had to finish before the splash could appear.
+  `LaunchDeferredContent` draws the splash first and mounts the app one drawn frame later.
+- 🔴 **Anything that animates during launch belongs on Core Animation.** The main thread is blocked
+  for seconds there; a SwiftUI-driven fade was measured holding one value for 0.4–0.6 s. A layer
+  animation is run by the render server and keeps going.
+- 🔴 **One view breathes, a different view zooms.** Growing the breathing layer — even with a 50 ms
+  "settle to solid" animation — filled the screen at ~25% brass, and the owner noticed the lost
+  zoom. Swap to a solid view at hand-off, and hide the swap by timing it on the way INTO a bright
+  stretch (`breathStaysBright`: bright now and 0.35 s ahead). Checking only "now" started the zoom at
+  ~37%, because the first zoom frame lands a few hundred ms after the decision.
+- ⚠️ **Never stretch a timing to film it.** Raising the floor to 6 s made the breath visible on video
+  and hid that most of any floor ran behind the launch picture. Measure at the real timings before
+  telling the owner what to expect.
+- ⚠️ **A centre pixel cannot show the opacity of a shape that covers the centre.** The pale zoom was
+  only found by sampling off-centre points and opening the frame.
+- ⚠️ **The simulator recorder drops almost every frame of a 0.37 s hand-off**, and a launch can
+  outlast one screenshot — screenshot until the home map is visible before stopping a recording.
+- **Probe, don't reason.** Temporary logging of predicted vs actual layer brightness (0.737 vs
+  0.749) settled in one run what three theories had not. Detail: `archive/HANDOFF-260912-4.md`.
