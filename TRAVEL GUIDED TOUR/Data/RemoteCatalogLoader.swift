@@ -116,6 +116,79 @@ struct SupabaseCatalogFetcher: CatalogFetching {
     }
 }
 
+/// Abstracts the cheap "has the catalog changed?" question, so the loader can
+/// be unit-tested without hitting the network. Production uses
+/// `SupabaseCatalogVersionProbe`; tests inject a stub.
+///
+/// The returned string is an **opaque token**, never parsed. All the loader
+/// does is compare it to the token stored beside the cache.
+protocol CatalogVersionProbing: Sendable {
+    func fetchVersion() async throws -> String
+}
+
+/// Asks Supabase which catalog it is currently serving, in 34 bytes.
+///
+/// `catalog_snapshot_age()` returns the `refreshed_at` of the single stored
+/// snapshot row — the same row `get_catalog()` reads its `payload` from, written
+/// by the same upsert. So the token is exactly as fresh as the catalog it
+/// describes: it cannot say "unchanged" about content that has changed.
+///
+/// ⚠️ It *can* be wrong in the harmless direction — a re-seed that changes
+/// nothing still moves the timestamp, so the app downloads unnecessarily. That
+/// costs one download and breaks nothing. The dangerous direction is
+/// structurally unreachable.
+struct SupabaseCatalogVersionProbe: CatalogVersionProbing {
+    /// A version token is a timestamp string. Anything appreciably larger is not
+    /// the answer we asked for — treat it as a failed probe and download.
+    private static let maxTokenBytes = 4_096
+
+    private let anonKey: String
+    private let url: URL
+    private let session: URLSession
+
+    init(anonKey: String, url: URL = SupabaseConfig.catalogVersionRPCURL) {
+        self.anonKey = anonKey
+        self.url = url
+        let config = URLSessionConfiguration.ephemeral
+        // Short timeouts on purpose: this probe exists to SAVE time and bytes.
+        // If it is slow, skipping it and downloading is the better trade.
+        config.timeoutIntervalForRequest = 10
+        config.timeoutIntervalForResource = 15
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        self.session = URLSession(configuration: config)
+    }
+
+    func fetchVersion() async throws -> String {
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.timeoutInterval = 10
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        request.setValue(anonKey, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(anonKey)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = Data("{}".utf8)
+
+        let (data, response) = try await session.data(for: request)
+        guard let http = response as? HTTPURLResponse else {
+            throw URLError(.badServerResponse)
+        }
+        guard (200..<300).contains(http.statusCode) else {
+            throw CatalogFetchError.httpStatus(http.statusCode)
+        }
+        guard data.count <= Self.maxTokenBytes,
+              let token = String(data: data, encoding: .utf8)?
+                  .trimmingCharacters(in: .whitespacesAndNewlines),
+              !token.isEmpty,
+              token != "null" else {
+            // An empty snapshot row, or anything we did not expect. Say "no
+            // answer" rather than inventing a token — the loader then downloads.
+            throw URLError(.cannotParseResponse)
+        }
+        return token
+    }
+}
+
 /// One catalog source: a fetcher paired with the URL it fetches. `refresh()`
 /// tries the configured sources in order — Supabase first, gh-pages as a
 /// fallback mirror — so a backend outage transparently degrades to the last
@@ -123,6 +196,17 @@ struct SupabaseCatalogFetcher: CatalogFetching {
 struct CatalogSource: Sendable {
     let fetcher: CatalogFetching
     let url: URL
+    /// Optional cheap "has anything changed?" probe for this source. When it is
+    /// present and answers with the token already stored beside a readable
+    /// cache, the (large) fetch is skipped entirely. `nil` means "always fetch",
+    /// which is what the gh-pages mirror does — it publishes no version.
+    let versionProbe: CatalogVersionProbing?
+
+    init(fetcher: CatalogFetching, url: URL, versionProbe: CatalogVersionProbing? = nil) {
+        self.fetcher = fetcher
+        self.url = url
+        self.versionProbe = versionProbe
+    }
 }
 
 /// Loads the tour catalog with a **local-first, network-refresh** strategy.
@@ -158,7 +242,8 @@ final class RemoteCatalogLoader {
         var sources: [CatalogSource] = []
         if SupabaseConfig.isConfigured {
             sources.append(CatalogSource(fetcher: SupabaseCatalogFetcher(anonKey: SupabaseConfig.anonKey),
-                                         url: SupabaseConfig.catalogRPCURL))
+                                         url: SupabaseConfig.catalogRPCURL,
+                                         versionProbe: SupabaseCatalogVersionProbe(anonKey: SupabaseConfig.anonKey)))
         }
         sources.append(CatalogSource(fetcher: URLSessionCatalogFetcher(), url: remoteURL))
         return sources
@@ -204,6 +289,13 @@ final class RemoteCatalogLoader {
         cacheURL?.deletingLastPathComponent().appendingPathComponent("Tours.cache.version")
     }
 
+    /// Sidecar file recording which *catalog* version the cache came from — the
+    /// opaque token returned by the source's version probe. Distinct from
+    /// `versionURL`, which records the *app build* that wrote the cache.
+    private var catalogVersionURL: URL? {
+        cacheURL?.deletingLastPathComponent().appendingPathComponent("Tours.cache.catalogVersion")
+    }
+
     /// Immediately-available catalog: cached copy if valid, else bundled seed.
     ///
     /// The cache is discarded if it was written by a *different* app version, so
@@ -221,13 +313,34 @@ final class RemoteCatalogLoader {
     /// catalog. On success, writes it to the cache (stamped with the current app
     /// version) and returns it. Returns `nil` only after every source fails,
     /// leaving the local copy untouched.
+    ///
+    /// A source carrying a version probe is asked the cheap question first: if
+    /// it is still serving the catalog we already hold, this returns that copy
+    /// having transferred 34 bytes instead of ~3.4 MB. See
+    /// `docs/catalog-version-check-design.md`.
     func refresh() async -> ToursData? {
         for source in sources {
-            if let decoded = await refresh(from: source) {
+            switch await refresh(from: source) {
+            case .fetched(let decoded):
                 return decoded
+            case .upToDate(let current):
+                // ⚠️ Returning here — rather than falling through — is the whole
+                // point. Continuing to the next source would download the
+                // gh-pages mirror in full to learn what we already knew.
+                return current
+            case .unusable:
+                continue
             }
         }
         return nil
+    }
+
+    /// What one source produced. `upToDate` is not a failure: the source told us
+    /// (cheaply) that the catalog we already hold is the current one.
+    private enum RefreshOutcome {
+        case fetched(ToursData)
+        case upToDate(ToursData)
+        case unusable
     }
 
     /// The one place a catalog is turned from bytes into a `ToursData`.
@@ -256,11 +369,20 @@ final class RemoteCatalogLoader {
     private static let log = Logger(subsystem: Bundle.main.bundleIdentifier ?? "com.ehky.atlas",
                                     category: "catalog")
 
-    /// Fetches from a single source, retrying transient failures with
-    /// exponential backoff. Returns the decoded catalog (and caches it) on
-    /// success, or `nil` if this source is exhausted/unusable — the caller then
+    /// Resolves one source: probe if it offers one, otherwise fetch — retrying
+    /// transient failures with exponential backoff. Yields `.fetched` (and
+    /// caches it), `.upToDate` when the probe says we already hold this exact
+    /// catalog, or `.unusable` when the source is exhausted — the caller then
     /// falls through to the next source.
-    private func refresh(from source: CatalogSource) async -> ToursData? {
+    private func refresh(from source: CatalogSource) async -> RefreshOutcome {
+        // Ask the cheap question first (34 bytes vs ~3.4 MB). A probe that fails
+        // for any reason returns nil and we download exactly as we did before —
+        // this is an optimisation and must never be why content fails to arrive.
+        let serverVersion = await probedVersion(for: source)
+        if let serverVersion, let current = catalogAlreadyHeld(matching: serverVersion) {
+            return .upToDate(current)
+        }
+
         var attempt = 0
         while true {
             attempt += 1
@@ -270,13 +392,18 @@ final class RemoteCatalogLoader {
                     // A 2xx with undecodable bytes is a bad response, not a
                     // transient glitch — a retry returns the same bytes. Give up
                     // on this source and fall through to the next.
-                    return nil
+                    return .unusable
                 }
-                writeCache(data)
-                return decoded
+                // The token is stamped only now, on bytes we have actually
+                // decoded — and it is the token read BEFORE the download, so a
+                // snapshot rebuilt mid-download leaves us one version behind
+                // (we re-download next time) rather than one version ahead
+                // (we would never download again).
+                writeCache(data, catalogVersion: serverVersion)
+                return .fetched(decoded)
             } catch {
                 if attempt >= retryPolicy.maxAttempts || !Self.isRetryable(error) {
-                    return nil
+                    return .unusable
                 }
                 let delay = backoffDelay(forAttempt: attempt)
                 if delay > 0 {
@@ -284,6 +411,27 @@ final class RemoteCatalogLoader {
                 }
             }
         }
+    }
+
+    /// The source's current version token, or `nil` if this source has no probe
+    /// or the probe did not give a usable answer. `nil` means "download".
+    private func probedVersion(for source: CatalogSource) async -> String? {
+        guard let probe = source.versionProbe else { return nil }
+        guard let token = try? await probe.fetchVersion() else { return nil }
+        let trimmed = token.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
+    }
+
+    /// The catalog we already hold, **only if** it came from this exact version
+    /// *and* is still readable.
+    ///
+    /// ⚠️ A matching token is not enough on its own. If the cache is missing,
+    /// corrupt, or was written by a different app build, `readCache()` returns
+    /// nil here and we download — otherwise a matching version with no usable
+    /// local copy would leave the app showing nothing.
+    private func catalogAlreadyHeld(matching serverVersion: String) -> ToursData? {
+        guard let stored = storedCatalogVersion(), stored == serverVersion else { return nil }
+        return readCache()
     }
 
     /// Whether a failed fetch is worth retrying. Transport errors and transient
@@ -335,16 +483,39 @@ final class RemoteCatalogLoader {
         return stored == appVersion
     }
 
-    private func writeCache(_ data: Data) {
+    private func storedCatalogVersion() -> String? {
+        guard let catalogVersionURL,
+              let stored = try? String(contentsOf: catalogVersionURL, encoding: .utf8) else { return nil }
+        let trimmed = stored.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
+    }
+
+    /// Writes the cache and, atomically with it, the token describing what is in
+    /// it.
+    ///
+    /// ⚠️ `catalogVersion: nil` **removes** the token rather than leaving it.
+    /// A cache written from the gh-pages mirror (which publishes no version)
+    /// must not keep a Supabase token describing content it did not come from —
+    /// that stale token would then match a future probe and pin the app to the
+    /// mirror's copy.
+    private func writeCache(_ data: Data, catalogVersion: String? = nil) {
         guard let cacheURL else { return }
         try? data.write(to: cacheURL, options: .atomic)
         if let versionURL {
             try? appVersion.write(to: versionURL, atomically: true, encoding: .utf8)
+        }
+        if let catalogVersionURL {
+            if let catalogVersion {
+                try? catalogVersion.write(to: catalogVersionURL, atomically: true, encoding: .utf8)
+            } else {
+                try? FileManager.default.removeItem(at: catalogVersionURL)
+            }
         }
     }
 
     private func discardCache() {
         if let cacheURL { try? FileManager.default.removeItem(at: cacheURL) }
         if let versionURL { try? FileManager.default.removeItem(at: versionURL) }
+        if let catalogVersionURL { try? FileManager.default.removeItem(at: catalogVersionURL) }
     }
 }
