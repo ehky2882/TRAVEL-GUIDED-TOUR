@@ -24,6 +24,9 @@ struct HomeDrawerContent: View {
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(AudioPlayerService.self) private var audioPlayer
+    /// The filter is on the cross-window state — see
+    /// `AppSharedState.filterPanel` for why it is not on `sharedState`.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
 
     /// Peek-detent height — mirrors `HomeView.peekHeight`. Used to
     /// fade the scrollable rails in as the drawer opens past peek so a
@@ -34,7 +37,7 @@ struct HomeDrawerContent: View {
         GeometryReader { geo in
             let visible = drawerVisibleHeight(in: geo)
             let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
-            let filtering = sharedState.hasActiveFilters
+            let filtering = appShared?.filter.isActive ?? false
             let results = filtering ? filteredResults : []
             // The count shows at peek AND medium (every resting state
             // except fully-open); "LET'S EXPLORE" shows only once the
@@ -149,8 +152,7 @@ struct HomeDrawerContent: View {
     private var filteredResults: [Tour] {
         HomeRailsViewModel.filteredResults(
             tours: dataService.tours,
-            selectedTags: sharedState.selectedTags,
-            walksOnly: sharedState.walksOnly,
+            filter: appShared?.filter ?? .none,
             userLocation: locationManager.userLocation,
             visibleRegion: sharedState.visibleRegion
         )

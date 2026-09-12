@@ -23,29 +23,54 @@ import Observation
 ///   Past the ceiling we hand off regardless — an app with a few photos still
 ///   loading beats no app.
 enum LaunchGate {
-    /// Shortest time the splash is ever shown.
-    static let floor: TimeInterval = 1.2
-    /// Longest time the splash is ever shown, ready or not.
+    /// Shortest time the splash is ever **visibly on screen** — one full breath
+    /// of the brass mark (2 × `SplashView.breathHalfPeriod`), so it fades down
+    /// and back up and hands off at full opacity.
+    ///
+    /// 🔴 MEASURED FROM THE SPLASH'S FIRST DRAWN FRAME, NOT FROM LAUNCH. It used
+    /// to be 1.2s from when the gate started, and the splash isn't drawn until
+    /// the app behind it is built — ~4.9s later on a cold launch in the
+    /// Simulator — so the floor was spent behind iOS's static launch picture and
+    /// the breath was on screen for ~0.77s. Owner on TestFlight 1.1.2 (147):
+    /// *"i really dont see any breathing."* Owner decision 2026-09-12: one full
+    /// breath, 1.6s.
+    static let floor: TimeInterval = 1.6
+    /// How long the gate waits on loading, counted from when the gate starts.
+    /// Past it, the splash hands off as soon as the visible floor is met — so a
+    /// dead network or a fix that never arrives cannot hold anyone here.
     static let ceiling: TimeInterval = 3.0
+    /// If the splash never reports a drawn frame, stop waiting for one.
+    /// A backstop so a broken signal can never strand the user on the splash.
+    static let neverShownCeiling: TimeInterval = 8.0
     /// How often readiness is re-evaluated while the splash is up.
     static let pollInterval: TimeInterval = 0.1
 
     /// Whether the splash may hand off now.
     ///
     /// - Parameters:
-    ///   - elapsed: seconds since launch.
+    ///   - elapsed: seconds since the gate started.
+    ///   - shownFor: seconds since the splash's first frame reached the screen,
+    ///     or nil if it hasn't yet.
     ///   - catalogLoaded: the catalog has tours (cache, bundle or network).
     ///   - locationSettled: see `locationSettled(status:hasFix:)`.
     ///   - imagesReady: the first screenful of card photos is in the image
     ///     cache, or its own deadline passed. See `LaunchImageWarmup`.
+    ///   - breathIsBright: the breathing mark is bright enough that swapping it
+    ///     for the solid zoom disc cannot be seen — `SplashView.breathIsBright`.
     static func isReady(
         elapsed: TimeInterval,
+        shownFor: TimeInterval?,
+        breathIsBright: Bool,
         catalogLoaded: Bool,
         locationSettled: Bool,
         imagesReady: Bool
     ) -> Bool {
+        // The absolute backstop overrides everything, including a breath that
+        // somehow never reads bright: nobody is ever stranded on the splash.
+        if elapsed >= neverShownCeiling { return true }
+        guard let shownFor else { return false }
+        guard shownFor >= floor, breathIsBright else { return false }
         if elapsed >= ceiling { return true }
-        guard elapsed >= floor else { return false }
         return catalogLoaded && locationSettled && imagesReady
     }
 
@@ -140,6 +165,27 @@ final class LaunchState {
     }
 
     private(set) var phase: Phase = .splash
+
+    /// When the splash's first frame actually reached the screen. The gate's
+    /// floor is measured from here — see `LaunchGate.floor` for why launch time
+    /// is the wrong clock.
+    private(set) var splashShownAt: Date?
+
+    /// Record the splash's first drawn frame. Only the first call counts.
+    func markSplashShown(at date: Date = Date()) {
+        guard splashShownAt == nil else { return }
+        splashShownAt = date
+    }
+
+    /// The media time (`CACurrentMediaTime`) the mark's breath is anchored to,
+    /// so the gate can compute how bright it is and hand off on a bright moment.
+    private(set) var breathStartedAt: CFTimeInterval?
+
+    /// Record the breath's anchor. Only the first call counts.
+    func markBreathStarted(at mediaTime: CFTimeInterval) {
+        guard breathStartedAt == nil else { return }
+        breathStartedAt = mediaTime
+    }
 
     /// 0 → 1 across the hand-off. **Every part of the choreography reads this
     /// one value** — the mark's rise, the ripple, the three-edge assembly, the

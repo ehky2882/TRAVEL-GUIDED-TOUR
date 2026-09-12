@@ -1,6 +1,8 @@
 import XCTest
 import CoreLocation
 import MapKit
+import QuartzCore
+import SwiftUI
 @testable import TRAVEL_GUIDED_TOUR
 
 /// The launch splash used to end on a fixed 2-second timer that waited for
@@ -20,6 +22,8 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor - 0.01,
+                shownFor: LaunchGate.floor - 0.01,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -31,6 +35,8 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertTrue(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor,
+                shownFor: LaunchGate.floor,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -42,6 +48,8 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
+                shownFor: LaunchGate.floor + 0.5,
+                breathIsBright: true,
                 catalogLoaded: false,
                 locationSettled: true,
                 imagesReady: true
@@ -53,6 +61,8 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
+                shownFor: LaunchGate.floor + 0.5,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: false,
                 imagesReady: true
@@ -61,11 +71,13 @@ final class LaunchGateTests: XCTestCase {
     }
 
     /// The ceiling is the promise that the app always opens. Nothing below it
-    /// is loaded here and it still hands off.
+    /// is loaded here and it still hands off — once the breath has been seen.
     func test_ceilingHandsOffRegardless() {
         XCTAssertTrue(
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
+                shownFor: LaunchGate.floor,
+                breathIsBright: true,
                 catalogLoaded: false,
                 locationSettled: false,
                 imagesReady: true
@@ -75,6 +87,64 @@ final class LaunchGateTests: XCTestCase {
 
     func test_floorIsBelowCeiling() {
         XCTAssertLessThan(LaunchGate.floor, LaunchGate.ceiling)
+    }
+
+    /// 🔴 THE REGRESSION THIS PINS: the floor is counted from the splash's first
+    /// DRAWN frame. On TestFlight 1.1.2 (147) it was counted from launch, the
+    /// splash first drew ~4.9s in, and the ceiling had long passed — so it handed
+    /// off after ~0.77s and the owner saw no breathing. Everything is loaded and
+    /// the ceiling is far behind us here, and it must STILL wait out the breath.
+    func test_floorCountsFromTheFirstDrawnFrame_notFromLaunch() {
+        XCTAssertFalse(
+            LaunchGate.isReady(
+                elapsed: 5,
+                shownFor: 0.77,
+                breathIsBright: true,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+        XCTAssertTrue(
+            LaunchGate.isReady(
+                elapsed: 5 + LaunchGate.floor,
+                shownFor: LaunchGate.floor,
+                breathIsBright: true,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+    }
+
+    /// Nothing waits on a frame that never reports — the backstop opens the app.
+    func test_neverShownSplashStillHandsOffAtTheBackstop() {
+        XCTAssertFalse(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.ceiling,
+                shownFor: nil,
+                breathIsBright: true,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+        XCTAssertTrue(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.neverShownCeiling,
+                shownFor: nil,
+                breathIsBright: true,
+                catalogLoaded: false,
+                locationSettled: false,
+                imagesReady: false
+            )
+        )
+    }
+
+    /// Owner decision 2026-09-12: one full breath — down and back up, so the
+    /// hand-off starts at full opacity.
+    func test_floorIsExactlyOneFullBreath() {
+        XCTAssertEqual(LaunchGate.floor, SplashView.breathHalfPeriod * 2, accuracy: 0.0001)
     }
 
     // MARK: - Location settling
@@ -144,6 +214,8 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
+                shownFor: LaunchGate.floor + 0.5,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: false
@@ -157,6 +229,8 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertTrue(
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
+                shownFor: LaunchGate.floor,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: false
@@ -376,6 +450,125 @@ final class LaunchGateTests: XCTestCase {
         // card scrolled into view later — must see "fully arrived", never a
         // frozen mid-animation number.
         XCTAssertEqual(state.handOffProgress, 1)
+    }
+
+    /// The splash mark breathes 1.0 ↔ 0.2 every 0.8s — the original splash,
+    /// restored on owner instruction 2026-09-12 after #559 replaced it with a
+    /// size pulse. Pins the curve so it can't quietly flatten again.
+    func test_splashBreath_fadesBetweenFullAndFloor() {
+        XCTAssertEqual(SplashView.breath(elapsed: 0), 1, accuracy: 0.0001)
+        XCTAssertEqual(SplashView.breath(elapsed: 0.8), 0.2, accuracy: 0.0001)
+        XCTAssertEqual(SplashView.breath(elapsed: 1.6), 1, accuracy: 0.0001)
+        XCTAssertEqual(SplashView.breath(elapsed: 0.4), 0.6, accuracy: 0.0001)
+        for step in 0...200 {
+            let value = SplashView.breath(elapsed: Double(step) * 0.01)
+            XCTAssertGreaterThanOrEqual(value, 0.2 - 0.0001)
+            XCTAssertLessThanOrEqual(value, 1 + 0.0001)
+        }
+    }
+
+    /// The breath iOS actually renders is a Core Animation opacity animation —
+    /// pin its values to the original splash so nobody tunes it away quietly.
+    @MainActor
+    func test_splashBreath_layerAnimationMatchesOriginalSplash() {
+        let breath = SplashBreathingDisc.breathAnimation()
+        XCTAssertEqual(breath.keyPath, "opacity")
+        XCTAssertEqual((breath.fromValue as? NSNumber)?.doubleValue ?? -1, 1, accuracy: 0.0001)
+        XCTAssertEqual((breath.toValue as? NSNumber)?.doubleValue ?? -1, 0.2, accuracy: 0.0001)
+        XCTAssertEqual(breath.duration, 0.8, accuracy: 0.0001)
+        XCTAssertTrue(breath.autoreverses)
+        XCTAssertEqual(breath.repeatCount, .infinity)
+        XCTAssertFalse(breath.isRemovedOnCompletion)
+    }
+
+    /// The first drawn frame is recorded once; a later report (a re-render, a
+    /// second window) must not restart the breath's clock.
+    @MainActor
+    func test_markSplashShownKeepsTheFirstFrame() {
+        let state = LaunchState()
+        XCTAssertNil(state.splashShownAt)
+        let first = Date(timeIntervalSince1970: 100)
+        state.markSplashShown(at: first)
+        state.markSplashShown(at: Date(timeIntervalSince1970: 200))
+        XCTAssertEqual(state.splashShownAt, first)
+    }
+
+    /// 🔴 The app is built only once the splash is on screen — mounted first,
+    /// the splash could not draw until the map and drawer were built, and the
+    /// breath arrived seconds late (1.1.2 (149)). A splash that never reports
+    /// must still get the app built, and well inside the gate's ceiling.
+    @MainActor
+    func test_appMountsOnceTheSplashIsDrawn_orAfterTheFallback() {
+        typealias Deferred = LaunchDeferredContent<EmptyView>
+        XCTAssertFalse(Deferred.shouldMount(splashShown: false, fallbackElapsed: false))
+        XCTAssertTrue(Deferred.shouldMount(splashShown: true, fallbackElapsed: false))
+        XCTAssertTrue(Deferred.shouldMount(splashShown: false, fallbackElapsed: true))
+        XCTAssertLessThan(Deferred.fallbackDelay, LaunchGate.ceiling)
+    }
+
+    /// 🔴 The zoom must not start on a faint breath — the switch to the solid
+    /// disc would flash (owner: "wait for a bright moment"). Everything else is
+    /// ready here and it still waits; only the absolute backstop overrides.
+    func test_notReadyWhileTheBreathIsFaint() {
+        XCTAssertFalse(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.ceiling,
+                shownFor: LaunchGate.floor,
+                breathIsBright: false,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+        XCTAssertTrue(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.neverShownCeiling,
+                shownFor: LaunchGate.floor,
+                breathIsBright: false,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+    }
+
+    /// Bright means ≥ 80% — about a third of every breath, so the extra wait
+    /// averages ~0.5s and never exceeds the dim two-thirds (~1.07s).
+    @MainActor
+    func test_breathBrightness_isAboutAThirdOfEachBreath() {
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 0, reduceMotion: false))
+        XCTAssertFalse(SplashView.breathIsBright(sinceBreathStart: 0.8, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 1.6, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 0.8, reduceMotion: true))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: nil, reduceMotion: false))
+        let samples = (0..<1600).map { Double($0) / 1000 }
+        let bright = samples.filter { SplashView.breathIsBright(sinceBreathStart: $0, reduceMotion: false) }.count
+        XCTAssertEqual(Double(bright) / Double(samples.count), 1.0 / 3.0, accuracy: 0.02)
+    }
+
+    /// 🔴 The zoom starts only on the way INTO the bright stretch. Bright-but-
+    /// fading is refused: the zoom's first frame can land a few hundred ms after
+    /// the decision, and a decision at the end of the bright stretch was
+    /// measured drawing the zoom at ~37%.
+    @MainActor
+    func test_breathStaysBright_onlyOnTheWayIntoTheBrightWindow() {
+        // Peak at 1.6s; bright (>= 0.8) is 1.333–1.867s.
+        XCTAssertTrue(SplashView.breathStaysBright(sinceBreathStart: 1.4, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 1.7, reduceMotion: false), "bright right now…")
+        XCTAssertFalse(SplashView.breathStaysBright(sinceBreathStart: 1.7, reduceMotion: false), "…but faded by the time the zoom draws")
+        XCTAssertFalse(SplashView.breathStaysBright(sinceBreathStart: 0.8, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathStaysBright(sinceBreathStart: 0.8, reduceMotion: true))
+        XCTAssertTrue(SplashView.breathStaysBright(sinceBreathStart: nil, reduceMotion: false))
+        XCTAssertGreaterThanOrEqual(SplashView.handOffLatency, 0.3)
+    }
+
+    @MainActor
+    func test_markBreathStartedKeepsTheFirstAnchor() {
+        let state = LaunchState()
+        XCTAssertNil(state.breathStartedAt)
+        state.markBreathStarted(at: 10)
+        state.markBreathStarted(at: 20)
+        XCTAssertEqual(state.breathStartedAt, 10)
     }
 
     @MainActor

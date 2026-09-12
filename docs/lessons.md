@@ -77,6 +77,30 @@ non-empty `city` check (the field is `let city: String?` with no such rule), and
 
 ## 2. Live systems vs. documents
 
+🔴 **A reachability question CAN be measured from a session — and the first tool to answer it was
+wrong. Always run a known-blocked AND a known-open control through any third-party checker.**
+Asked whether `github.io` reaches mainland China, `chinafirewalltest.com` reported OK from five
+mainland nodes. It also reported **`www.google.com` as OK**, which OONI's real probes inside China
+contradict at **91% anomaly over 512 measurements**. One control passed (TikTok → BLOCKED) and one
+failed, and without the failing one the green ticks would have been written down as fact. The
+asymmetry is still usable: a checker biased toward false-OK saying **BLOCKED** is a strong signal —
+that is how `dozent.world` was found, corroborated independently by OONI putting `vercel.app` at
+100% anomaly with zero OK.
+
+**Querying a mainland DNS resolver is not a reachability check.** AliDNS and Tencent DNSPod (both
+DoH, both answering from inside China) return correct IPs for our hosts — and **also** for
+`www.tiktok.com`, which is definitively unavailable there. Clean DNS rules out DNS poisoning only;
+the GFW's usual HTTPS mechanism is an SNI-triggered TCP reset that leaves DNS untouched.
+
+**`api.ooni.io` is the primary source for this class of question** — real probes, real countries,
+free, no key: `/api/v1/aggregation?probe_cc=CN&domain=<d>&since=&until=`, plus `axis_x=input` to see
+which URLs were actually tested. ⚠️ Its `domain=` filter works on `aggregation` but silently returns
+**zero results** on `/api/v1/measurements`, which reads exactly like "no censorship found" — § 1's
+trap in a new costume. And check *what* was measured: the 38 China measurements for `github.io` are
+the **bare apex**, a parking page, not a Pages site; **no real `*.github.io` has ever been tested
+from China**, so that question stays open rather than answered.
+
+
 🔴 **Never report perishable state from a document.** This has cost real trust four times:
 an already-accepted Apple agreement reported as unaccepted by four sessions in a row; "our
 account is in test mode" nearly sent to Stripe; a "V1: no backend, no payments" line sitting
@@ -573,6 +597,34 @@ and the failure summary names the file but never the reason.
 
 ## 9. App code
 
+🔴 **The mini-player and tab bar are in a window ABOVE the app, so anything the main window
+presents goes behind them — present it from THEIR window instead of hiding them.**
+`BottomModuleWindowController` installs a `PassThroughWindow` at `windowLevel = .normal + 1`
+deliberately, so ordinary modals slide up behind the persistent player the way Apple Music's do.
+A `.sheet` from a main-window view therefore has its bottom 126 pt covered — and for the filter
+panels that took the floating commit pill with it.
+
+Hiding the bars for the duration looks like the fix and is not. It has now been tried and
+reverted **twice**: session 24 with `PlayerView` (*"hiding the module around the transition made
+it worse; presenting from this window was the fix"*), and session 160 with the filter panels,
+where the owner filmed the result — at 60 fps the module vanished in one frame and the sheet's
+top edge did not enter for **another ~130 ms**, so the transition ran map → hole → sheet. The
+withdrawal fires on a state change; the presentation does not begin for an eighth of a second,
+and no delay tuned by hand is a fix for that.
+
+**What presenting from the module's window costs:** the state the modal edits has to be reachable
+from that window, which means `AppSharedState` (the object injected into both) rather than
+anything `ContentView` owns, such as `HomeSharedState`. That is a real refactor of where state
+lives, and it is the whole trick — session 160's first attempt talked itself out of this fix by
+asserting the state "is not open to a sheet bound to the row's own state", which was simply
+untrue once the state moved. `PassThroughWindow.hitTest` already claims every touch while that
+window has a presented view controller, so interactivity needs no work.
+
+⚠️ **And `hidesBottomModule` is a plain Bool, not a count.** Every owner it gains is a new way
+for the bars to go missing for a whole session — a failure this app has shipped three times.
+Deleting an owner is worth more than it looks.
+
+
 🔴 **A cross-origin iframe cannot fail in a way `WKNavigationDelegate` can see, so a WebView
 embed needs a POSITIVE signal and a deadline — never a failure callback.** `LinkEmbedView` hands
 WebKit its shell with `loadHTMLString`, so the main frame never touches the network; the player is
@@ -946,3 +998,115 @@ more effort would help — and note Instagram is the *largest* platform in this 
 Web search was tried as a second channel. It is a **lucky dip, not an enumerator**: one query
 returned 8 real TikTok URLs spanning 2021–2026, while topical follow-ups returned TikTok
 *discover* pages and other creators entirely.
+
+## A place propagates a coordinate error — check the place, not just its members (2026-09-11)
+
+🔴 **`Habitat 67`'s PLACE sat 363 m from the building, and both its members sat
+with it.** A place's coordinate *is* its identity, so every member is pinned to
+it — which means **one wrong coordinate silently relocated two entries, and
+neither could disagree**: sitting exactly on the place is what membership
+requires. The validator was satisfied. The sweep was satisfied. Nothing in the
+pipeline is capable of noticing.
+
+The only reason it was visible at all is that a **third pin, outside the place**,
+sat 10.9 m from the real building. Without that pin the place would have stayed
+wrong indefinitely.
+
+⚠️ **So a place is a way to PROPAGATE a coordinate error, not only a way to group
+entries.** Check a place's own coordinate against the source, not only its
+members against the place — the second check passes by construction.
+
+Found the same day as three plain entry defects (Gamble House 343 m, the Noguchi
+Museum 497 m), all by the same method: **ask which member OSM agrees with.** In
+the 26–49 m band that question showed the link pin sitting on the feature in
+**fifteen of seventeen** groups, with the Atlas tour off — pins are geocoded per
+link at import, while tours carry coordinates typed once and never checked. A
+4-decimal coordinate is the signature.
+
+⚠️ **And check a "false positive" as hard as a real one.** `Lloyd's of London /
+The Leadenhall Building at 7 m` was called an obvious two-buildings-across-a-
+street false positive and recommended for decline. It was a defect in disguise —
+the Lloyd's tour was on the Leadenhall Building — and **declining it would have
+buried the bug under a decision**, where nothing would look again. From the
+titles, a wrong coordinate and a genuine neighbour are indistinguishable; that is
+the whole reason the tight tier is distance-only.
+
+⚠️ **Before "fixing" an inconsistency, check whether it is a convention.** The
+Gamble House tour says `city: Los Angeles` while its pin says `Pasadena`, and the
+building is in Pasadena. That maker files **all 42** of its tours as Los Angeles,
+so changing this one would make it the sole exception. Flag, don't fix.
+
+## Merge a green content PR immediately — waiting costs a rebuild each time (2026-09-12)
+
+[#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) went green on **8 September** and
+was not merged until **12 September**. In those four days `main` moved **72 commits and 473 link
+pins**, and the branch had to be rebuilt **eight times** — seven while the session was still live,
+once more to land it.
+
+**Nothing went wrong with the content**: every rebuild reproduced the identical diff (2,483
+insertions / 0 deletions), overlap re-verified at 0 on every axis each time, and the final
+re-check found **0 repeats** among the 473 pins that had landed. The cost was pure churn — and
+each rebuild is a fresh chance to hand-resolve an 11 MB JSON wrongly.
+
+- **The rule: when CI is green on a content PR, squash it in that turn.** Do not report "I'll
+  merge on green" and then wait on a further check, a further question, or a further batch.
+- **A stale branch is not a safe branch.** The longer it waits, the more of the merge is
+  conflict resolution rather than content — and the docs conflict every time, because every
+  session edits the same `CLAUDE.md` / `STATUS.md` / `archive/README.md` header lines.
+- **Corollary on handoff filenames: pick the suffix at push time, not at write time.** This
+  session's handoff was renumbered four times — `-260907-3` → `-4` → `260908` → `260912-2` — as
+  parallel sessions claimed each one. Re-check immediately before pushing, and expect to renumber
+  on the merge anyway.
+- ⚠️ **The four-day gap also invalidated the whole structure the docs were written for**:
+  `CLAUDE.md`'s dated Current State blocks were moved to `archive/CURRENT-STATE-HISTORY.md` on
+  2026-09-08, so the entry had to be re-homed. **Re-read the file you are editing after any long
+  gap; the convention may have changed under you.**
+
+## A "first/new/Nth" claim has an expiry date — re-derive it at merge, not at write (2026-09-12)
+
+[#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) shipped documentation saying
+**"Puerto Rico is the catalogue's 59th country."** That was **true when it was written on
+7 September** — the catalogue had no Puerto Rico at all — and **false by the time it merged on the
+12th**, because another session landed 6 Puerto Rico entries during the four-day wait. Measured
+against the parent of the batch's own squash commit: **64 countries before the merge, 64 after.
+It added none.** A parallel session had meanwhile claimed the 59th slot for **Tanzania**, so two
+merged PRs each called a different country "the 59th".
+
+- **The rule: any superlative or ordinal about the catalogue — first, new, Nth, largest, only —
+  must be re-derived immediately before merge**, not carried forward from when the work was built.
+  The counts are cheap; the claim is not self-correcting.
+- **This is the same class as the Key-facts line that has gone stale eighteen times**, and the fix
+  is the same: re-derive from the merged file, never quote a number written earlier.
+- ⚠️ **It is also a second-order cost of not merging promptly** (see the lesson above). A batch
+  merged the day it goes green cannot be overtaken this way.
+
+## A splash animation is only real if it is on screen, on a layer, and verified at real timings (2026-09-12)
+
+Restoring the splash's breathing brass circle (#836) took three TestFlight builds, and each device
+round broke for a reason the simulator check before it had hidden.
+
+- 🔴 **SwiftUI `onAppear` is not "on screen".** It fired **27 ms** after launch; the splash's first
+  frame reached the screen **~4.9 s** later, because the app behind it was still being built. A
+  minimum on-screen time counted from launch was spent behind iOS's static launch picture, and the
+  breath showed for ~0.77 s — the owner saw none. Time anything the user must *see* from its first
+  **drawn** frame (`SplashDiscView`'s `CADisplayLink` tick).
+- 🔴 **An overlay cannot draw until the view under it is built.** With `ContentView` mounted on the
+  first frame, the whole map/drawer build had to finish before the splash could appear.
+  `LaunchDeferredContent` draws the splash first and mounts the app one drawn frame later.
+- 🔴 **Anything that animates during launch belongs on Core Animation.** The main thread is blocked
+  for seconds there; a SwiftUI-driven fade was measured holding one value for 0.4–0.6 s. A layer
+  animation is run by the render server and keeps going.
+- 🔴 **One view breathes, a different view zooms.** Growing the breathing layer — even with a 50 ms
+  "settle to solid" animation — filled the screen at ~25% brass, and the owner noticed the lost
+  zoom. Swap to a solid view at hand-off, and hide the swap by timing it on the way INTO a bright
+  stretch (`breathStaysBright`: bright now and 0.35 s ahead). Checking only "now" started the zoom at
+  ~37%, because the first zoom frame lands a few hundred ms after the decision.
+- ⚠️ **Never stretch a timing to film it.** Raising the floor to 6 s made the breath visible on video
+  and hid that most of any floor ran behind the launch picture. Measure at the real timings before
+  telling the owner what to expect.
+- ⚠️ **A centre pixel cannot show the opacity of a shape that covers the centre.** The pale zoom was
+  only found by sampling off-centre points and opening the frame.
+- ⚠️ **The simulator recorder drops almost every frame of a 0.37 s hand-off**, and a launch can
+  outlast one screenshot — screenshot until the home map is visible before stopping a recording.
+- **Probe, don't reason.** Temporary logging of predicted vs actual layer brightness (0.737 vs
+  0.749) settled in one run what three theories had not. Detail: `archive/HANDOFF-260912-4.md`.

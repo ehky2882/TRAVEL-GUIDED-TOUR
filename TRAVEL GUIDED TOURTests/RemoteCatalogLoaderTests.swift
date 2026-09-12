@@ -76,6 +76,31 @@ final class RemoteCatalogLoaderTests: XCTestCase {
         }
     }
 
+    /// Answers with a fixed token (or throws), counting calls so tests can
+    /// assert the probe ran — and that the big fetch did not.
+    private actor StubVersionProbe: CatalogVersionProbing {
+        private let result: Result<String, Error>
+        private(set) var callCount = 0
+
+        init(_ result: Result<String, Error>) { self.result = result }
+
+        func fetchVersion() async throws -> String {
+            callCount += 1
+            return try result.get()
+        }
+    }
+
+    /// Writes the catalog-version sidecar the loader compares the probe against.
+    private func seedCatalogVersion(_ token: String, in dir: URL) throws {
+        try token.write(to: dir.appendingPathComponent("Tours.cache.catalogVersion"),
+                        atomically: true, encoding: .utf8)
+    }
+
+    private func storedCatalogVersion(in dir: URL) -> String? {
+        try? String(contentsOf: dir.appendingPathComponent("Tours.cache.catalogVersion"),
+                    encoding: .utf8)
+    }
+
     private func cacheExists(in dir: URL) -> Bool {
         FileManager.default.fileExists(atPath: dir.appendingPathComponent("Tours.cache.json").path)
     }
@@ -401,5 +426,201 @@ final class RemoteCatalogLoaderTests: XCTestCase {
         let calls = await fetcher.callCount
         XCTAssertEqual(calls, 2, "Refresh within the interval is debounced; past it runs again")
         XCTAssertEqual(service.tours.first?.title, "Foreground Tour")
+    }
+
+    // MARK: - Catalog version check (ask 34 bytes before downloading 3.4 MB)
+
+    func test_refresh_skipsFetch_whenServerVersionMatchesCachedVersion() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Already Current"), in: dir)
+        try seedCatalogVersion("2026-09-09T02:39:52.269656+00:00", in: dir)
+        // If this fetcher is ever called the test fails on the call count, and
+        // the payload it would return is deliberately a different catalog.
+        let otherPayload = try JSONEncoder().encode(catalog(titled: "Downloaded"))
+        let fetcher = SequenceFetcher(failures: 0,
+                                      error: URLError(.timedOut),
+                                      success: otherPayload)
+        let probe = StubVersionProbe(.success("2026-09-09T02:39:52.269656+00:00"))
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: fetcher,
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: probe)],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Already Current",
+                       "The cached catalog is returned, not a download")
+        let probeCalls = await probe.callCount
+        XCTAssertEqual(probeCalls, 1)
+        let fetchCalls = await fetcher.callCount
+        XCTAssertEqual(fetchCalls, 0, "A matching version must skip the catalog fetch entirely")
+    }
+
+    func test_refresh_downloads_whenVersionMatchesButCacheIsMissing() async throws {
+        let dir = makeTempDir()
+        // Version sidecar present, catalog cache absent — a matching token with
+        // nothing to show must still download, or the app renders nothing.
+        try seedCatalogVersion("v1", in: dir)
+        let payload = try JSONEncoder().encode(catalog(titled: "Downloaded"))
+        let fetcher = SequenceFetcher(failures: 0, error: URLError(.timedOut), success: payload)
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: fetcher,
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: StubVersionProbe(.success("v1")))],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Downloaded")
+        let fetchCalls = await fetcher.callCount
+        XCTAssertEqual(fetchCalls, 1)
+    }
+
+    func test_refresh_downloads_whenVersionMatchesButCacheIsCorrupt() async throws {
+        let dir = makeTempDir()
+        try Data("{ not json".utf8).write(to: dir.appendingPathComponent("Tours.cache.json"))
+        try Self.testVersion.write(to: dir.appendingPathComponent("Tours.cache.version"),
+                                   atomically: true, encoding: .utf8)
+        try seedCatalogVersion("v1", in: dir)
+        let payload = try JSONEncoder().encode(catalog(titled: "Downloaded"))
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: StubFetcher(result: .success(payload)),
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: StubVersionProbe(.success("v1")))],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Downloaded",
+                       "An unreadable cache must download despite a matching version")
+    }
+
+    func test_refresh_downloadsAndStoresVersion_whenVersionDiffers() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Stale Local"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        let payload = try JSONEncoder().encode(catalog(titled: "New Content"))
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: StubFetcher(result: .success(payload)),
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: StubVersionProbe(.success("v2")))],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "New Content")
+        XCTAssertEqual(storedCatalogVersion(in: dir), "v2",
+                       "The new version is stamped on the catalog we actually decoded")
+    }
+
+    func test_refresh_downloads_whenProbeFails() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Stale Local"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        let payload = try JSONEncoder().encode(catalog(titled: "New Content"))
+        let fetcher = SequenceFetcher(failures: 0, error: URLError(.timedOut), success: payload)
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: fetcher,
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: StubVersionProbe(.failure(URLError(.timedOut))))],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "New Content",
+                       "A failed probe must fail TOWARD downloading — never block content")
+        let fetchCalls = await fetcher.callCount
+        XCTAssertEqual(fetchCalls, 1)
+        XCTAssertNil(storedCatalogVersion(in: dir),
+                     "With no answer from the probe, no version is claimed for the new cache")
+    }
+
+    func test_refresh_doesNotAdvanceStoredVersion_whenDownloadFails() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Good Local"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: StubFetcher(result: .failure(URLError(.timedOut))),
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: StubVersionProbe(.success("v2")))],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertNil(fresh)
+        XCTAssertEqual(storedCatalogVersion(in: dir), "v1",
+                       "A version we never successfully downloaded must not be recorded")
+        XCTAssertEqual(loader.loadLocal()?.tours.first?.title, "Good Local")
+    }
+
+    func test_refresh_fallsBackToMirror_andClearsStoredVersion_whenSupabaseIsDown() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Stale Local"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        let mirrorPayload = try JSONEncoder().encode(catalog(titled: "Mirror Tour"))
+        let primary = CatalogSource(
+            fetcher: StubFetcher(result: .failure(CatalogFetchError.httpStatus(503))),
+            url: URL(string: "https://primary.example/rpc")!,
+            versionProbe: StubVersionProbe(.failure(URLError(.cannotConnectToHost))))
+        // The gh-pages mirror publishes no version — it has no probe.
+        let mirror = CatalogSource(fetcher: StubFetcher(result: .success(mirrorPayload)),
+                                   url: URL(string: "https://fallback.example/Tours.json")!)
+        let loader = RemoteCatalogLoader(sources: [primary, mirror],
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         retryPolicy: .none,
+                                         appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Mirror Tour", "The mirror path is unchanged")
+        XCTAssertNil(storedCatalogVersion(in: dir),
+                     "The mirror's copy must not inherit Supabase's token, or a later probe " +
+                     "would match it and pin the app to the mirror's content")
+    }
+
+    func test_refresh_skipsMirror_whenSupabaseSaysWeAreCurrent() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Already Current"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        let primary = CatalogSource(
+            fetcher: StubFetcher(result: .success(Data())),
+            url: URL(string: "https://primary.example/rpc")!,
+            versionProbe: StubVersionProbe(.success("v1")))
+        let mirrorFetcher = SequenceFetcher(failures: 0, error: URLError(.timedOut), success: Data())
+        let mirror = CatalogSource(fetcher: mirrorFetcher,
+                                   url: URL(string: "https://fallback.example/Tours.json")!)
+        let loader = RemoteCatalogLoader(sources: [primary, mirror],
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         retryPolicy: .none,
+                                         appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Already Current")
+        let mirrorCalls = await mirrorFetcher.callCount
+        XCTAssertEqual(mirrorCalls, 0,
+                       "\"Up to date\" must stop the source chain — falling through would " +
+                       "download the whole mirror to learn what we already knew")
     }
 }

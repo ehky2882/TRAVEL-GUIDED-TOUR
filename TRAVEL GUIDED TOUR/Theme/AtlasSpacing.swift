@@ -64,6 +64,49 @@ enum AtlasSpacing {
     /// safe-area inset) at the top so the search bar + chips stay
     /// visible when the drawer is fully expanded.
     static let searchAndChipsBlockHeight: CGFloat = sm + searchBarHeight + sm + searchBarHeight
+
+    // MARK: - Filter panel metrics
+
+    /// Height of an option chip INSIDE a filter panel — smaller than the row's
+    /// `searchBarHeight` because a panel is a deliberate, two-handed context
+    /// rather than a control floating over a map.
+    ///
+    /// 🔴 32, with `panelRowGap` at 16, is what makes the tap target 48 pt.
+    /// What a thumb feels is the **vertical pitch** — the chip plus the gap it
+    /// can absorb — not the drawn height, so these two constants are one
+    /// decision and must move together. 22 pt was tried and rejected: it
+    /// reaches a 28 pt pitch, 16 short of Apple's minimum, in an app used
+    /// one-handed while walking.
+    static let panelChipHeight: CGFloat = 32
+    /// Vertical gap between option rows. **Widen freely, never shrink** — see
+    /// `panelChipHeight`; it is half the tap target.
+    static let panelRowGap: CGFloat = 16
+    /// Horizontal gap between option chips. Smaller than the row gap on
+    /// purpose: a 60–180 pt wide chip was never hard to hit sideways, so this
+    /// one is for air rather than for aim.
+    static let panelColumnGap: CGFloat = 10
+    /// Empty run-out at the end of every panel's content.
+    ///
+    /// 🔴 The commit pill FLOATS over the panel, so without this the last
+    /// option of any scrolling panel sits underneath it and cannot be tapped.
+    /// A panel with a fixed height must also be at least its content plus this.
+    static let panelRunOut: CGFloat = 96
+    /// Side inset for panel content — wider than the app's usual `md`, because
+    /// a sheet's own rounded corners eat the first few points and headings read
+    /// as pinned to the edge at 16 (owner, on device, 2026-09-12).
+    static let panelEdgeInset: CGFloat = 24
+    /// Gap above a panel's title. The grabber sits in this space, so the title
+    /// needs clearance from it as well as from the sheet's top edge.
+    static let panelTopInset: CGFloat = 28
+    /// Lead-in above a search field that follows a heading.
+    ///
+    /// 🔴 Not a taste value — it is the air a CHIP row gets for free. A chip is
+    /// drawn at `panelChipHeight` inside a frame that also owns `panelRowGap`,
+    /// so half that gap sits above it; a bare capsule (the Dozents and
+    /// architect search fields) has no such frame and so met its heading 8 pt
+    /// tighter than every other row on the same screen. Matching it here makes
+    /// the two consistent by construction rather than by eye.
+    static let panelSearchLead: CGFloat = panelRowGap / 2
 }
 
 // MARK: - Bottom module geometry

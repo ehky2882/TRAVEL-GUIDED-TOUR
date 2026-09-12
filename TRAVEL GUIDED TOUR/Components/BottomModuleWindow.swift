@@ -71,6 +71,35 @@ final class AppSharedState {
     /// times; the wizard therefore drives it from `MakerView`'s presentation
     /// state — which always resolves — rather than from its own lifecycle.
     var hidesBottomModule: Bool = false
+
+    // MARK: - The home filter row
+
+    /// Everything the home filter row has asked for — Format, Price, Dozents
+    /// and Tags in one value. Read by `HomeView` (which filters the map's pins
+    /// on it) and by the drawer (which swaps curated shelves for a flat results
+    /// list while any of it is active).
+    ///
+    /// 🔴 **It lives HERE, on the cross-window state, because the panel that
+    /// edits it is presented in the OTHER window.** See `filterPanel` directly
+    /// below. It began on `HomeSharedState`, which `ContentView` owns and only
+    /// the main window can see.
+    var filter = TourFilter.none
+
+    /// Which filter panel is up, if any — and the reason the filter moved here.
+    ///
+    /// 🔴 **The panel is presented from `BottomModuleRoot`, i.e. from THIS
+    /// window, so that it slides up OVER the mini-player and tab bar.** The
+    /// bars sit at `windowLevel = .normal + 1`, so a sheet put up by the main
+    /// window passes behind them — and withdrawing the bars to get around that
+    /// is what session 24 already tried with `PlayerView`: it made the
+    /// transition worse, and presenting from this window was the fix.
+    ///
+    /// It was tried again here anyway, and the owner filmed the result: the
+    /// whole module vanished **~130 ms before the sheet appeared**, leaving a
+    /// hole with bare map in it. *"Even for a small moment it doesn't look
+    /// right."* Presented from this window there is nothing to withdraw and no
+    /// moment to get wrong.
+    var filterPanel: FilterPanelRoute?
 }
 
 /// Installs and tears down the secondary `UIWindow` that hosts the

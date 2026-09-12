@@ -89,17 +89,18 @@ final class DataService {
     ///   - autoRefresh: when true (production), kicks off a background network
     ///     refresh on init. Tests pass false to keep loading deterministic.
     ///   - foregroundRefreshInterval: debounce window for `refreshOnForeground`.
-    ///     🔴 This is an EGRESS dial, not a freshness dial. Every refresh pulls
-    ///     the WHOLE catalogue (~3.4 MB gzipped) — `get_catalog` has no way to
-    ///     ask "has anything changed?", so a refresh that finds nothing new
-    ///     costs exactly as much as one that does. At 60s, glancing at a map
-    ///     and coming back re-downloaded the lot; the catalogue itself changes
-    ///     two or three times a day. 900s (15 min) keeps content current
-    ///     without paying for it every time the app is reopened.
+    ///     🔴 This is an EGRESS dial, not a freshness dial. A refresh that
+    ///     *does* download pulls the WHOLE catalogue (~3.4 MB gzipped) — there
+    ///     is no delta and no city scoping. At 60s, glancing at a map and
+    ///     coming back re-downloaded the lot. 900s (15 min) keeps content
+    ///     current without paying for it every time the app is reopened.
     ///     ⚠️ A cold launch ALWAYS refreshes (see `autoRefresh` below), so this
-    ///     only governs background→foreground returns. Do not lower it to make
-    ///     content arrive faster — the real fix is a cheap version check the
-    ///     app can call before deciding to download anything.
+    ///     only governs background→foreground returns.
+    ///     Since the catalogue version check (`RemoteCatalogLoader`, 2026-09-09)
+    ///     a refresh that finds nothing new costs 34 bytes rather than 3.4 MB,
+    ///     so this dial now governs how often we ask the *cheap* question. It is
+    ///     still not a reason to lower it: the expensive half — downloading all
+    ///     1,552 tours whenever any one of them changed — is unfixed.
     init(loader: RemoteCatalogLoader = RemoteCatalogLoader(),
          autoRefresh: Bool = true,
          foregroundRefreshInterval: TimeInterval = 900) {

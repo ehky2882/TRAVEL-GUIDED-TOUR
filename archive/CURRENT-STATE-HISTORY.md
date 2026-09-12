@@ -43,6 +43,248 @@ For what is true now: `bash scripts/session-start.sh`, then `CLAUDE.md` § Key f
 
 ## Current State (2026-09-07)
 
+### ✅ The two Iglesia de San José pins become a place — places 289 → 290 (owner instruction, 2026-09-12)
+
+**Owner: *"make the two san josé pins a place."*** Both are `TikTok @urbanistariel`, two different
+posts about the same Old San Juan church, and they were **20.3 m apart** — the pair left behind
+when the misplaced one was corrected onto OSM's node an hour earlier. They now draw as **one
+capsule**; map markers 3,010 → 3,009, **0 groups over `maxStacked = 3`**.
+
+- **⚠️ THE ANCHOR IS OSM'S OWN NODE, NOT EITHER PIN'S HISTORY.** `18.467629, -66.118258`
+  **reverse-verifies as `Iglesia de San José, Calle del Cristo` by name.** One member was already
+  on it and **moved 0.0 m**; the other moved **20.3 m**. Both were asserted **`manual`** and
+  **not already in a place** before anything was written, so no geofence changed and no existing
+  place's identity rule was broken.
+- **🔴 THE HERO IS BORROWED AND THAT IS STRUCTURAL.** Both members are link pins with **empty
+  galleries**, and **nothing else is within 400 m** except one unrelated pin (the Walls of Old San
+  Juan, 304 m, also empty) — there is **no Atlas tour here at all**, so no third photograph exists
+  anywhere in the catalogue. The closed Waterlooplein / Legion of Honor case: **do not go sourcing
+  a replacement.** Both candidates were rendered and looked at, and it takes the **retablo** frame
+  over the painting close-up, because a detail of a haloed face could be almost any medieval panel
+  while the carved altar reads as a church on a map (the session-95 establishing-shot criterion).
+  ⚠️ **Stated costs: the creator's face occupies the lower-right quadrant, and neither candidate is
+  an exterior** — no exterior of this church exists in the catalogue.
+- **⚠️ The name takes the accent the church actually carries** (`Iglesia de San José`), not the
+  creator's unaccented spelling on the other member. The misspelling stays verbatim in that pin's
+  own `longDescription` and is repeated nowhere we author — the Schweizer convention. **The place
+  name therefore matches one member's title exactly**, which is the One Times Square / Tin Building
+  call; do not "fix" it.
+- **⚠️ The description asserts what both members support plus the dates that make them cohere** —
+  the second-oldest surviving church in the Americas and its Gothic vaulting, the Ponce de León
+  endowment, the 2021 reopening, and **both** paintings: the one uncovered during the restoration
+  (member A's *"oldest European painting in Puerto Rico"*) and the **Virgen de Belén**, stolen in
+  1972 and never recovered (member B). ⚠️ **No attribution, valuation or theft theory is asserted**
+  — member B's caption ends on an open question and the copy leaves it open.
+- **Verification.** `Tours.json` **byte-stable before editing**; diff **19 insertions / 4
+  deletions**, and **all four deletions are the moved pin's own coordinate lines**. Place id
+  `uuid5(NAMESPACE_URL, "atlas-place:san-juan:iglesia-de-san-jose")`, the scheme **reverse-verified
+  against 285 of the 289 existing places** (the four misses are the documented older hand-minted
+  ids); **0 collisions**. **0** centroid drift catalogue-wide · **0** members off their place's
+  coordinate · **0** tours claimed by two places · **0** duplicate place ids · no member gained or
+  lost a top-level key. 🎉 **`check-place-candidates.py` TIGHT 42 → 41**, and the report diff proves
+  it **removes exactly the San José pair and adds nothing**. `validate-tours.swift`: **0 errors**,
+  and its 5 warnings are **identical to `origin/main`**.
+
+### ✅ A misplaced pin corrected — `Iglesia San Jose` was on a house, 228 m from the church (owner instruction, 2026-09-12)
+
+**Owner: *"fix that iglesia san jose coordinate."*** Found while verifying the 54-pin batch live:
+another session's pin `Iglesia San Jose` sat at **`18.4661, -66.1197`**, which reverse-geocodes to
+**`8, Calle del Sol`** — an unnamed residential address in Old San Juan. Moved **228 m** onto
+OSM's own node for the church, **`18.467629, -66.118258`**, which reverse-verifies as
+**`Iglesia de San José, Calle del Cristo`** by name.
+
+- **⚠️ THE TELL WAS THE PRECISION, NOT THE DISTANCE.** The coordinate was stored at **four decimal
+  places** where every pin around it carries seven — the signature of a rounded or hand-typed
+  point rather than a geocoded one. It is the same creator (`TikTok @urbanistariel`) and the
+  caption names the church outright: *"This painting at Iglesia San Jose in Old San Juan."*
+- **⚠️ The pin moved, never a tour, and the move was free** — asserted **`manual`** first, and
+  asserted **not a member of any place** (moving a member would break that place's
+  exact-coordinate identity rule). Both the stop and the centroid moved. Afterwards: **0 centroid
+  drift catalogue-wide, 0 members off their place's coordinate**, no key change. The diff is
+  **exactly four lines**.
+- **🔴 IT WAS MOVED ONTO OSM'S NODE, NOT ONTO THE NEIGHBOURING PIN.** This batch's own
+  `Iglesia de San José` pin sits 20 m away and also reverse-verifies by name, so snapping the two
+  together would have been tidier — and would have **manufactured an EXACT group** out of a
+  judgement rather than a measurement. The independent authority wins.
+- **⚠️ FLAGGED, NOT ACTED ON: the two pins are now 20 m apart and are the same church**, by the
+  same creator, from two different posts. That is the documented two-posts-one-subject shape
+  (Glasshouse Theatre, Westin Bonaventure) and a legitimate **place candidate** — but a place needs
+  its own copy, address, photograph and human approval. **The owner's call.**
+
+### ✅ The Stacks joins the NYPL place too (owner instruction, 2026-09-12)
+
+**Owner: *"join the stacks too."*** `The Stacks Under Bryant Park` moved **22.06 m** onto the
+place's coordinate and joined it — **New York Public Library, Stephen A. Schwarzman Building
+goes 3 → 4 members**, and the four now draw as **one capsule**: map markers 3,011 → 3,010, with
+**0 groups over `maxStacked = 3`**.
+
+- **⚠️ THIS WAS THE ONE I FLAGGED RATHER THAN JOINED, AND THE HESITATION IS WORTH RECORDING.**
+  22 m is a real distance, not the rounding artifact the other three were, and the subject is
+  arguably distinct — the storage stacks *under Bryant Park* rather than the Schwarzman Building.
+  What settles it is the pin's own caption: *"It's all part of the New York Public Library."*
+  The stacks are that building's collection storage, extending under the park behind it.
+- **⚠️ The pin moved, never a tour, and the move was free** — asserted **`manual`** before
+  anything was written, so no geofence changed. **Both the stop and the centroid moved**, because
+  a single-stop entry's centroid must mirror its stop (the assembler bug the Python mirror is
+  blind to); asserted afterwards at **0 centroid drift catalogue-wide, 0 members off their place
+  coordinate, 0 tours claimed by two places**, and no member gained or lost a top-level key.
+- **⚠️ The diff is five deletions and none is a removal** — four are the coordinate lines being
+  rewritten, the fifth is the previous last `tourIds` entry gaining a trailing comma.
+
+### Fifty-four link pins, two creators, and a coordinate I nearly "fixed" ([PR #749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749), session 148 — content)
+
+**The owner sent 55 links — 20 Instagram reels and 35 TikToks.** Branch cut clean off
+`origin/main` at `45914d1f`. **Opened 2026-09-07, merged 2026-09-12 after eight rebuilds: linkPins 1,816 → 1,870 · makers 386 → 387 · places 288 → 289 · `tours` byte-identical at 1,552.** The largest link-pin batch this project has taken. Content only
+— no Swift, no SQL, no build. Full detail: `archive/HANDOFF-260912-2.md`.
+
+- **✅ ALL 55 RESOLVED — eighth fully-intact batch running.** No dead posts, no `/photo/`
+  carousels. **One was already pinned**, so 54 ship: `@urbanistariel/video/7638665562838600973`
+  is live as the San Francisco **"Chinatown"** pin, so the owner re-sent a link the catalogue
+  already had. **0 other already-pinned sourceURLs**, checked against `main` **and** all three
+  in-flight branches (#743, #746, #747) — zero overlap on every one.
+- **Two creators: `@arishaintokyo`** (Instagram, 6 — Japan) and **`@urbanistariel`** (14
+  Instagram + 34 TikTok = 48 — NYC, Puerto Rico, Sleepy Hollow, Tulsa, Baltimore, Belgrade,
+  Thessaloniki, Venice, London, Canterbury).
+- ⚠️ **PUERTO RICO WAS NOT NEW BY THE TIME THIS MERGED, AND THE ORIGINAL CLAIM IS A CASUALTY
+  OF THE FOUR-DAY DELAY.** When this batch was built on 7 September the catalogue had **no Puerto
+  Rico at all**, so its 5 pins (Ponce, San Juan ×3, Río Grande) would have added the country.
+  While the PR sat green and unmerged, another session landed **6 Puerto Rico entries** — verified
+  against the parent of this batch's own squash commit, not inferred — so on merge it took the
+  total to **11** and added no country. **The reasoning about the value stands and is the durable
+  part:** OSM reverse-geocodes these as `United States`, but the catalogue treats territories as
+  their own country value (`Hong Kong` 270 entries, `Macau` 6) and it is how the owner supplied
+  them. ⚠️ The catalogue also contains an unrelated **`San Juan, Philippines`**.
+- **🔴 `openlocationcode` INSTALLS ON THIS MAC — do not hand-roll a Plus Code decoder here.**
+  CLAUDE.md records two web sessions writing one by hand because `pip install` "cannot build a
+  wheel", and **both got the arithmetic wrong first time**. `pip3 install openlocationcode` just
+  works on the owner's Mac, and the published Eiffel Tower vector `8FW4V75V+8Q` decodes to
+  **`48.8583125, 2.2944375`** exactly. 33 locations were supplied (24 short codes, 7 full, 2 raw
+  lat/lon) and 22 derived from the caption.
+- **⚠️ RE-QUERYING WAS THE WHOLE FIX, SIXTH BATCH RUNNING.** Two Venice codes failed on the
+  **locality string**, not the code — `Venice, Metropolitan City of Venice, Italy` geocodes to
+  nothing while `Venice, Italy` resolves instantly. And **all four** caption-derived subjects
+  that missed first time resolved on a second query: La Collina (OSM files it as `La Collina`,
+  not the Japanese name), the **New** Fulton Fish Market, West Park Presbyterian, and NYPL's
+  `Stephen A. Schwarzman Building`.
+- **🔴 I NEARLY "CORRECTED" A COORDINATE THAT WAS EXACTLY RIGHT.** 161 Maiden Lane
+  reverse-geocodes to **34 Fletcher Street**, so it read as ~85 m off its own caption's address —
+  but a forward geocode of that address puts OSM's `161 Maiden Lane` node **3 m** from the
+  supplied point. The reverse-geocoder was preferring a neighbouring *addressed* feature, which
+  is the documented pattern (Inter&Co Stadium, Swan House). **Nothing moved.** ⚠️ **Four other
+  reverse-geocodes land on an enclosing or neighbouring feature and all four are right:** the
+  Oculus → `Apple World Trade Center` (the store inside it), Smith–Ninth Streets → `Ninth Street
+  Bridge` (the viaduct that *is* the station), Heptapyrgion → `Παπαρέσκα, Άνω Πόλη`, MICA →
+  `Main Building, 1300 West Mount Royal Avenue`.
+- **🔴 THE FREUD MUSEUM SITS EXACTLY AT `TourSetMap.maxStacked = 3`.** Three pins are coincident
+  on `51.548339, -0.177393` — all three render, and **a fourth Freud link would put one
+  permanently out of reach, invisibly.** **Flagged, not created:** a place needs its own copy,
+  address, photograph and human approval. Every other group is two deep (Canterbury ×2, One
+  Vanderbilt ×2), and the two NYPL pins pair with *different* existing `@hereinnyc` pins 22 m
+  apart — **two 2-groups, not one 4-group**. **No pin is coincident with an existing place;**
+  nearest is 137 m and a different subject.
+- **🔴 THE HANDLE SUFFIX PREVENTED TWO LIVE ATLAS HERO OVERWRITES** —
+  `images/royal-observatory-greenwich_hero.webp` and `images/tower-bridge_hero.webp` are both
+  live **Atlas tour** heroes and both subjects are in this batch. **0 of 54 target paths
+  pre-existed** against 7,126 gh-pages `images/` paths. Since #567 a downloaded tour reads its
+  photographs off its own disk, so an overwrite would never have reached a phone.
+- **⚠️ BOTH EXISTING MAKER ROWS REGENERATED BYTE-IDENTICALLY.** `@urbanistariel` already had
+  **both** rows and the uuid5 scheme reproduced both ids **and both full row objects** exactly,
+  so they merge and no existing row is modified. Their **TikTok avatar also regenerated
+  byte-identically to the live file** (sha256 against the served bytes), so it was **excluded
+  from the upload rather than overwritten** — the `@urbanistariel` case for the fifth time.
+  **54 generated, 54 uploaded, 0 avatars.** Instagram `@arishaintokyo` is the one new row and
+  ships `avatarURL: null`.
+- **✅ All 54 heroes opened and read against their captions — zero wrong subjects**, many naming
+  themselves in frame (*SEIRENSHO ART MUSEUM*, *TAKETOMI ISLAND*, *Dyckman Farmhouse Museum*,
+  *B&O Railroad Museum*, *Barbican*, *London's Cathedral of Sewage*). St Mark's shows the looted
+  bronze horses its caption is about; Smith–Ninth Streets shows the viaduct over the canal.
+- **⚠️ ONE TITLE WAS WRONG UNTIL THE HERO WAS OPENED.** `The Headless Horseman` was authored as
+  `Sleepy Hollow Cemetery` from the caption alone; the frame is the Horseman sculpture and its
+  sibling pin in the same cemetery is already `The Bronze Lady`. **Retitling changes the hero
+  slug**, so that pin was rebuilt and the stale file removed. ⚠️ **The three Freud pins need
+  three distinct titles** for the same reason — identical titles would be indistinguishable on
+  the map *and* their heroes would overwrite each other.
+- **⚠️ TWO HAND RE-CROPS — the vertical `--focus` gap, ELEVENTH batch running.** Every source is
+  vertical, so the square is width-limited and `--focus` does nothing. Re-rendered through a
+  mirror of `render_hero` at the same filenames: the **Ishigaki sculpture garden** at 0.22 and
+  **Ye Olde Cheshire Cheese** at 0.20, both recovering the creator's own full text card.
+  **Lake Saiko and Big Bang deliberately left alone** — what they clip is a hook (*"BUT QUIET"*,
+  *"CARTS"*), not the subject's name. ⚠️ **`@urbanistariel`'s house format is a presenter in
+  frame with the subject behind**, and it ships unchanged (*"dont change the heros"*).
+- **⚠️ Two creator misspellings kept verbatim in `longDescription` and repeated nowhere we
+  author** — *"The San Jaun Fortress"* and *"Saint Thomas Beckett"* (correctly Becket).
+- **⚠️ 4 of 20 Instagram reels are rights-withheld**, all four `@arishaintokyo` — the
+  licensed-music gate, verdict taken from the **absent `video_url`**, never the track name.
+  Poster + `OPEN IN INSTAGRAM` is the correct outcome. All 35 TikToks play inline.
+- **⚠️ ARCHITECTS. `Santiago Calatrava` is in the vocabulary and the Oculus caption names him
+  outright** → tagged, **alongside** `Designed by a Master`. 🔴 **`Terunobu Fujimori` is absent
+  and is this batch's most conspicuous gap** — La Collina's caption is *entirely* about him.
+  ⚠️ **`Hiroshi Sambuichi` IS in the vocabulary and is deliberately NOT tagged** on Inujima
+  Seirensho: he designed it, but the caption names no architect (the Jules Dalou rule). Same for
+  `Horace Jones` on Tower Bridge and `Joseph Bazalgette` on Crossness.
+- **✅ THE FREUD MUSEUM IS NOW A PLACE — owner instruction, places 130 → 131**
+  (`f4e64b3c-b9e6-57e4-b296-28199f5433b7` = uuid5 `atlas-place:london:freud-museum-london`, the
+  scheme reverse-verified against **127 of the 130** existing places; the three misses are the
+  documented older hand-minted ids). **Nothing moved to make it**: all three members were already
+  on the identical coordinate and all three are `manual`, so the exact-coordinate identity rule
+  held on its own and no geofence was disturbed. `check-place-candidates.py`'s report diff proves
+  it **removes the Freud group and adds nothing**, and a catalogue-wide sweep of what the map
+  actually draws — places collapsed to one capsule each — now finds **0 groups over
+  `maxStacked = 3`**.
+  - **🔴 THE HERO IS BORROWED AND THAT IS STRUCTURAL, NOT LAZINESS.** Every member is a link pin
+    with an **empty gallery**, and there is **no Atlas tour within 400 m** — nothing at all is
+    within 400 m except the three members — so **no third photograph exists anywhere in the
+    catalogue** (the closed Waterlooplein / Legion of Honor case). **Do not go sourcing a
+    replacement.** All three candidates were rendered and looked at: it takes the **couch** frame,
+    the only one composed as a room rather than a portrait, with the Persian rug, the framed
+    antiquities and the second chaise all legible. ⚠️ **Stated cost: a person is lying on the
+    couch in it** — the creator — and no unpeopled frame is available.
+  - **⚠️ The description asserts only what the members support, plus the two dates that make the
+    rest make sense** — Freud's 1938 flight from Vienna and his death here in September 1939,
+    then Anna Freud's forty years in the house and the 1986 opening, which is why it is a museum
+    at all. The Chelsea Hotel convention.
+  - **⚠️ The place name matches a member's title exactly** (`Freud Museum London`) — the
+    institution has one name, so the parent matches a child, as One Times Square and The Tin
+    Building already do. **Do not "fix" it.**
+- **✅ THREE PINS JOINED PLACES THAT APPEARED WHILE THIS PR WAITED — owner instruction.** In the
+  four days between CI going green and the merge, other sessions created places at **NYPL
+  (Stephen A. Schwarzman Building)**, **Tower Bridge** and **Castillo San Felipe del Morro** —
+  three of the sites this batch pins. Each place went **2 → 3 members**, and each now draws as
+  **one capsule instead of a capsule plus a loose pin**; map markers fall 3,014 → 3,011 and
+  **0 groups exceed `maxStacked = 3`**.
+  - **⚠️ THE PIN MOVED, NEVER THE TOUR — and all three moves were free.** Every joining pin was
+    asserted **`manual`** before anything was written, so no geofence changed. Distances: **0.00 m**
+    at NYPL (a pure float-representation artifact — `40.753187499999996` against the place's
+    `40.7531875`, the CalAcademy rounding case), **2.91 m** at Tower Bridge, **16.97 m** at El
+    Morro. ⚠️ **The Tower Bridge place contains a `geofenced` Atlas tour** — it was left untouched;
+    only the `manual` pin moved onto it.
+  - **⚠️ Both the stop AND the centroid were moved**, because a single-stop entry's centroid must
+    mirror its stop — the documented assembler bug that `validate-tours-mirror.py` is blind to.
+    Asserted afterwards: **0 centroid drift across the whole catalogue**, **0 members off their
+    place's coordinate**, and **no member gained or lost a top-level key**.
+  - **⚠️ The diff shows 3 deletions and none is a removal** — each is the last `tourIds` entry
+    being re-emitted with a trailing comma as a new id is appended. All three ids were confirmed
+    still members afterwards.
+  - **⚠️ FLAGGED, NOT JOINED: `The Stacks Under Bryant Park` sits 22 m from the NYPL place.** Its
+    caption does say the stacks are part of the New York Public Library, but the subject is the
+    underground storage under Bryant Park rather than the Schwarzman Building, and 22 m is a real
+    distance rather than a rounding artifact. **The owner's call.**
+- **Verification.** **`swift scripts/validate-tours.swift` itself** — a Mac session, so the
+  authoritative validator rather than a Python mirror: **0 errors, 2 warnings across 1,552 tours
+  + 1,360 pins + 130 places**, and the same binary against `origin/main` with this change stashed
+  reports the **identical pair**, so **both are pre-existing**. `make-link-pin.py --selftest`
+  **71/71**. **0** duplicate tour/stop/maker ids, **0** id collisions across `tours` and
+  `linkPins`, **0** orphan `makerId`s, **0** pins inside `tours`, **0** heroes in their own
+  gallery, **0** duplicate hero filenames, **0** byte-duplicate heroes; closest perceptual pair
+  **33.4** (identical pictures score under 1), all 54 at 1200×900. ⚠️ **Two shared sourceURLs
+  exist on `main` and NEITHER is mine** — the documented deliberate `@malata.antwerp` five-pin
+  case plus a pre-existing pair; the check is scoped to this batch, which has **0**. Tours.json
+  **byte-stable under a Python re-dump before editing**; diff **2,467 insertions / 0 deletions**,
+  purely additive. gh-pages `932066d5`: `git ls-remote` re-read **in the same command as the
+  push**, tree diff **exactly 54 additions, 0 deletions, nothing outside `images/`**, deploy read
+  **`in_progress`, never `cancelled`**. ⚠️ **gh-pages moved mid-session** and the tree was
+  **rebuilt on the new base** rather than force-pushed over it.
+
 ### Thirty-seven link pins, three creators, and one post that is three pins ([PR #751](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/751), session 148 — content)
 
 **The owner sent 37 Instagram links under three headings; they resolve to 35 distinct

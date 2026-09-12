@@ -152,7 +152,7 @@ everything true about the architecture. What the response could not do — then 
 **⚠️ Submitted before the app went live, and superseded within hours by round 5.** Recorded here only
 so the count is right and nobody mistakes round 5 for round 4.
 
-## Round 5 — 2026-09-11 (drafted after public release; owner submits)
+## Round 5 — 2026-09-11 (SUBMITTED by the owner)
 
 **The app went live on 2026-09-01**, and that is the whole change. Stripe had asked four times for
 "an active website link where we can view the products and services." There is now one:
@@ -187,35 +187,74 @@ map full of other people's videos — which reads *more* like a content creation
 category flagged in round 1. **Leaving that to be discovered would have been the worst outcome**, so
 round 5 names it in one sentence on our own terms.
 
-### Optional box — submitted text
+### 🔴 THE FORM GREW A THIRD FIELD — check the form, do not assume round 3's shape
 
-> Since our last response our app has been publicly released, so the product can now be viewed
-> directly: https://apps.apple.com/us/app/dozent/id6771030927
+Rounds 3 and 4 were **two fields** (Website URL + an optional "misunderstood or miscategorized"
+box). Round 5 carries the same title — *"Additional details needed about your business"* — and the
+same two fields, **plus a new required box above them**: *"Please provide any additional information
+about the products and services you'll be processing through your Stripe account."*
+
+**A single block of prose drafted for the old shape had to be split across two boxes on the spot.**
+The owner caught it by sending a screenshot before pasting. **Always ask to see the form.**
+
+### Box 1 (new, required) — "products and services you'll be processing through your Stripe account"
+
+**Answered the question literally, because the literal answer is "nothing".**
+
+> Nothing is processed through our Stripe account. We do not use Stripe to accept payment from
+> customers, and no cardholder transacts with us through Stripe.
 >
-> Dozent is a GPS-triggered audio tour app. Listeners download narrated walking tours that play
-> automatically when they reach each stop.
+> Dozent is a GPS-triggered audio tour app, released on the App Store on 1 September 2026:
+> https://apps.apple.com/us/app/dozent/id6771030927
 >
-> **Apple is the merchant of record for 100% of consumer purchases**, through In-App Purchase. The
-> App Store listing shows this directly — Apple takes the payment, handles all refunds and
-> chargebacks, and remits our share to us. Stripe never sees a cardholder and carries no chargeback
-> exposure. The app is free to download; most tours are free, and paid tours are one-time unlocks at
-> fixed Apple price tiers starting at $0.99. There are no subscriptions.
+> Listeners download narrated walking tours that play automatically when they reach each stop. The
+> app is free to download. Most tours are free, and paid tours are one-time unlocks at fixed Apple
+> price tiers starting at $0.99. There are no subscriptions and no physical goods.
 >
-> **We are not a travel reservation service.** There are no bookings, dates, seats or supplier
-> inventory, and nothing is delivered at a future date. A purchase unlocks an audio file immediately.
+> Apple is the merchant of record for 100% of consumer purchases, through In-App Purchase. Apple
+> takes the payment, handles all refunds and chargebacks, and remits our share to us. Stripe is not
+> in that path and never sees a cardholder, so there is no chargeback exposure to Stripe.
 >
-> **Stripe's role is payouts only, and no payout has ever been made.** The account exists so that if
-> third-party creators publish paid tours in future, we can pay them their share through Connect
-> Express out of revenue Apple has already remitted to us. **Today the only creator of any paid tour
-> is the account holder**, so the only money that could move through Stripe is a transfer from us to
-> ourselves. Since our release on 1 September the app has recorded a single consumer purchase, of one
-> $0.99 tour, processed entirely by Apple; Apple has not yet remitted those proceeds, as its first
-> payment cycle has not completed. Stripe, not Dozent, is the regulated party; we are not a money
-> transmitter.
+> Our Stripe account exists for one purpose: Stripe Connect Express, to pay content creators their
+> share of revenue Apple has already remitted to us. The only money that would ever move through
+> Stripe is an outbound transfer from us to a creator's own connected account.
 >
-> The app also displays publicly available social media posts pinned to map locations, credited to
-> their original creators. These are links to public posts, not paid placements — no payment of any
-> kind is involved.
+> No payout has ever been made through Stripe. Today the only creator of any paid tour is the
+> account holder, so the only transfer possible right now would be from us to ourselves. Since
+> release the app has recorded a single consumer purchase, of one $0.99 tour, processed entirely by
+> Apple; Apple has not yet remitted those proceeds, as its first payment cycle has not completed.
+
+### Box 2 — Website URL
+
+**Submitted: `https://apps.apple.com/us/app/dozent/id6771030927`**
+
+### Box 3 (optional) — "misunderstood or miscategorized"
+
+**Filled, not skipped — it is the only place the original Restricted Businesses flag gets answered.**
+
+> We believe our account was flagged against the Restricted Businesses list, and the original notice
+> was ambiguous between two entries: "Content creation platforms" and "Travel reservation services
+> and clubs." Our App Store category is Travel, so we will address both.
+>
+> We are not a travel reservation service. There are no bookings, dates, seats or supplier
+> inventory, and nothing is delivered at a future date. A purchase unlocks an audio file
+> immediately, in-app.
+>
+> On the content platform reading: Stripe is a payout rail for us, not a payment-acceptance channel,
+> and it has never carried a transaction. We are not a money transmitter — Connect Express exists
+> precisely so that Stripe, not the platform, is the regulated party.
+>
+> Every tour is reviewed by a person before it can be seen or purchased, and publishing is
+> restricted to an administrator, enforced in our database rather than only in the interface. Our
+> Acceptable Use Policy prohibits adult content, hate speech, violent extremism, illegal activity,
+> weapons, drugs, gambling, cryptocurrency and securities offerings, counterfeit goods and
+> infringing material. Users can report any tour from inside the app.
+>
+> For completeness: the app also displays publicly available social media posts pinned to map
+> locations, credited to their original creators. These are links to public posts, not paid
+> placements, and no payment of any kind is involved.
+>
+> Our app is now publicly available, so the product can be viewed directly at the link above.
 >
 > Policies: https://dozent.world/acceptable-use/ · https://dozent.world/terms/ ·
 > https://dozent.world/privacy/
@@ -269,6 +308,10 @@ none refunded:
   **Before every submission, re-verify every factual claim against the live system** — the App Store
   lookup API, `get_catalog`, and the `purchases` table — rather than copying forward what closed the
   last round.
+- **🔴 ASK TO SEE THE FORM BEFORE DRAFTING A WORD.** Round 5 reused round 3's title exactly —
+  *"Additional details needed about your business"* — and had **three fields, not two**. A response
+  drafted for the old shape had to be split across two boxes at the moment of pasting, and only
+  because the owner sent a screenshot first. **The title does not identify the form.**
 - **Save the submitted text here at the time of submission.** Round 1's wording is lost.
 
 ## Open items
