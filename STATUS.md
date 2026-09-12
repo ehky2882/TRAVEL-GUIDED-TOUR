@@ -295,6 +295,7 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 | **Apple tax / banking forms** | Complete in App Store Connect → Business → Agreements, Tax, and Banking? **No API — cannot be checked from a session.** Changes nothing at one sale (~$0.84 net, far below Apple's threshold) but would quietly block payment once volume builds. | 🟡 Owner check owed |
 | **EU trader declaration** | App declared **non-trader** while selling IAP tiers into EU cities. Declaring trader publishes an address. | 🔴 Decision owed |
 | **LLC vs sole proprietor** | Gates the Stripe payout path, and collapses the EU-trader and the AHWY/EHKY-initials trade-offs at once. | 🔴 Decision owed |
+| **Unique usernames — 9 choices** | Owner requirement 2026-09-12: *"every user [must] have a unique username."* **Design written: `docs/usernames-design.md`** — nothing built, no SQL. Recommends a `handle` beside the unchanged display name, unique per `(platform, handle)` (forced by live data: **19 creators are pinned under the same handle on two platforms**), automatic handles for all 416 rows (dry-run clean on live data), pinned handles reserved against impersonation. **No account deleted, merged or renamed.** Also corrects the `isPrivate` finding: "private" means approval-gated follows + hidden follower lists (`social.sql`), never a hidden profile; **3** private makers, not 2. "Go with the recommendations" is a complete answer. | 🟡 Owner choices owed |
 
 ### SQL pastes owed (Supabase SQL Editor, project **Dozent**)
 
