@@ -37,6 +37,26 @@ enum SupabaseConfig {
             .appendingPathComponent("get_catalog")
     }
 
+    /// The `catalog_snapshot_age()` RPC — returns the timestamp at which the
+    /// stored catalogue snapshot was last rebuilt, and nothing else.
+    ///
+    /// **34 bytes.** `get_catalog()` is ~3.4 MB gzipped and there is no way to
+    /// ask it "has anything changed?" (a POST RPC carries no ETag, so no 304),
+    /// which means a refresh that finds nothing new costs exactly as much as
+    /// one that finds a whole new city. This is the cheap question that comes
+    /// first — see `RemoteCatalogLoader` and `docs/catalog-version-check-design.md`.
+    ///
+    /// `payload` and `refreshed_at` are two columns of the *same single row* in
+    /// `public.catalog_snapshot`, written together by one upsert, so this
+    /// timestamp cannot disagree with the catalogue it describes.
+    static var catalogVersionRPCURL: URL {
+        projectURL
+            .appendingPathComponent("rest")
+            .appendingPathComponent("v1")
+            .appendingPathComponent("rpc")
+            .appendingPathComponent("catalog_snapshot_age")
+    }
+
     /// Whether real credentials have been filled in. When false, the catalog
     /// loader skips the Supabase source entirely and reads gh-pages only, so a
     /// missing key degrades gracefully rather than breaking the app.

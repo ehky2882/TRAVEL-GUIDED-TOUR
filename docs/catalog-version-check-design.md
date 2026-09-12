@@ -1,6 +1,6 @@
 # Ask before you download — the catalogue version check
 
-**Status: proposed. Nothing is built. This exists to be read and decided on.**
+**Status: BUILT 2026-09-09** (owner said "do A first"). Shipped in `TRAVEL GUIDED TOUR/Data/RemoteCatalogLoader.swift` + `SupabaseConfig.catalogVersionRPCURL`, with eight tests in `RemoteCatalogLoaderTests.swift`. No SQL was required, as predicted below. The document is kept as written — it is the reasoning the build followed. Two departures from it, both found while building, are noted at the end.
 
 Written 2026-09-09, after the Supabase over-quota email. The immediate waste was fixed in
 [#770](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/770); this is the thing that actually
@@ -180,3 +180,26 @@ structurally trustworthy — but it is why this was written down before being bu
    this afterwards?
 
 They are independent. Doing both is the eventual answer; the question is only which first.
+
+**Answered: A.** Built 2026-09-09.
+
+---
+
+## Two things the design missed, found while building
+
+**1. "Up to date" has to stop the source chain, not just skip one fetch.** The loader tries
+Supabase, then falls through to the gh-pages mirror. If the version check merely returned "no
+catalogue from this source", the loop would fall through and **download the whole 3.4 MB mirror to
+learn what it already knew** — the saving would have been exactly zero. So the outcome of a source
+is now three-valued (`fetched` / `upToDate` / `unusable`), and `upToDate` returns immediately.
+Covered by `test_refresh_skipsMirror_whenSupabaseSaysWeAreCurrent`.
+
+**2. The mirror must CLEAR the stored token, not leave it.** If Supabase is down and the cache is
+rewritten from gh-pages, a leftover Supabase token would still be sitting beside it — describing
+content it did not come from. The next probe could match that token and pin the app to the
+mirror's copy indefinitely. `writeCache(_:catalogVersion:)` therefore *removes* the sidecar when
+the source has no version to give. Covered by
+`test_refresh_fallsBackToMirror_andClearsStoredVersion_whenSupabaseIsDown`.
+
+Both are the same class of bug the design's own "fail toward downloading" rule exists to prevent —
+a cheap check quietly becoming a reason correct content does not arrive.
