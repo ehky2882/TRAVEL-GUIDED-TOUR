@@ -144,6 +144,23 @@ enum LinkSource {
         return url.pathComponents.contains("shorts")
     }
 
+    /// `instagram.com/reel/{id}` (or `/reels/`) — the same whole-path-component
+    /// match, and the same reason: a caption is not a format.
+    ///
+    /// Instagram is a reels channel with a rounding error attached — of 634
+    /// pins, **625 are reels and 9 are not** (eight `/p/` posts and one `/tv/`,
+    /// the retired IGTV) — so this exists to make those nine *reachable* from
+    /// the Format filter rather than because the split is balanced. Without it
+    /// picking "Instagram Reels" excludes them and nothing else selects them.
+    ///
+    /// ⚠️ Deliberately NOT used for the player's aspect ratio, which stays 9:16
+    /// for everything Instagram: that is right for 625 of the 634, and an IGTV
+    /// clip framed vertically is a smaller wrong than a reel letterboxed.
+    static func isInstagramReel(_ urlString: String) -> Bool {
+        guard let url = URL(string: urlString) else { return false }
+        return url.pathComponents.contains("reel") || url.pathComponents.contains("reels")
+    }
+
     /// The post's own embeddable player, derived from the share URL.
     ///
     /// 🔴 All three platforms publish a player that needs **no API key, no

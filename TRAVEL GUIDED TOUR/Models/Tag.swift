@@ -19,8 +19,8 @@ enum TagFacet: String, CaseIterable {
 /// Phase 2 uses this for three things:
 ///   1. **Curated browse shelves** (`curatedShelves`) — the hand-picked,
 ///      ordered set that replaces the old one-shelf-per-category layout.
-///   2. **Multi-select filter chips** (`filterChips`) — the strong,
-///      multi-city tags promoted to Home's filter row.
+///   2. **The Tags panel** (`panelGroups`, `searchedFacet`) — the facets as
+///      groups inside one panel behind the row's `Tags` chip.
 ///   3. **Facet-aware filtering** (`matches`) — the D6 combine rule.
 ///
 /// The `derivePrimary` helper (D5) computes one lightweight "primary"
@@ -286,35 +286,73 @@ enum Tag {
         Shelf(title: "Fashion & retail",     tag: "Fashion"),
     ]
 
-    // MARK: - Filter chips (owner decision D8 — simple multi-select)
+    // MARK: - The Tags panel (owner decisions D8, then 2026-09-12)
 
-    /// The tags promoted to Home's filter chip row, in order. Curated to
-    /// the **strong, multi-city** tags (plan §3.1): every one matches a
-    /// useful, cross-city slice. Thin tags (LGBTQ+, Library, Brutalist,
-    /// Gilded Age, Art Deco, Crime, Bridge) are deliberately kept OUT —
-    /// a chip that finds 5 tours across 1 city reads as broken. They
-    /// stay searchable / on the detail page, just not promoted here.
+    /// One group inside the **Tags** panel. The five tag facets are no longer
+    /// five chips in the row — they are five groups in one panel — but they are
+    /// still separate facets, and that is the whole point: `Place` AND `Subject`
+    /// asks "a market, about empire", which one flat list could never ask.
     ///
-    /// The "Walks" *format* filter is not a tag — it's handled alongside
-    /// these in `TagFilterChipRow` and ANDs with the tag selection.
-    static let filterChips: [String] = [
-        "Iconic Landmark",
-        "Hidden Gem",
-        "Designed by a Master",
-        "Museum",
-        "Art",
-        "Religious Building",
-        "Faith",
-        "Food",
-        "Market",
-        "Green Escape",
-        "Park",
-        "Viewpoint",
-        "Tower",
-        "Waterfront",
-        "Venue",
-        "Fashion",
+    /// The titles are the **question each group answers**, not the facet's
+    /// internal name: nobody should have to remember what "Theme" meant.
+    struct PanelGroup: Identifiable, Equatable {
+        let title: String
+        let facet: TagFacet
+        /// Shown as chips, alphabetically. Everything else in the facet is
+        /// behind `More`.
+        let promoted: [String]
+
+        var id: String { title }
+        /// How many of the facet's values are NOT promoted.
+        var moreCount: Int { Tag.tags(in: facet).count - promoted.count }
+    }
+
+    /// 🔴 **Two rules govern this list, and they are different rules.**
+    ///
+    /// **Counts decide WHICH values are promoted.** The four in each group are
+    /// the ones most of the catalogue carries, so `More` holds the tail rather
+    /// than the things people came for.
+    ///
+    /// **The alphabet decides the ORDER they appear in.** An earlier pass
+    /// displayed each group by count, biggest first. Rejected for two reasons
+    /// that generalise to any list in this app: the order was **invisible**
+    /// (nothing on screen says "these are in size order", so it reads as
+    /// arbitrary) and **unstable** (every content merge reshuffles it, so nobody
+    /// can learn where anything is).
+    ///
+    /// ⚠️ **Why only three or four per group.** The panel has to fit one screen,
+    /// and at seven promoted place types the content ran to 829 pt — 96 pt
+    /// short even with the panel at the very top of the screen. Sliding it up
+    /// could not fix that, so the promoted set is the lever. Trimming further
+    /// is the right response if the panel ever grows again; tightening
+    /// `AtlasSpacing.panelRowGap` is not, because that is the tap target.
+    ///
+    /// ⚠️ Four values are deliberately absent from the promoted sets for
+    /// duplicating a neighbouring group or matching a third of everything:
+    /// `Faith` (88% of it is also `Religious Building`), `Architecture` (82% of
+    /// `Designed by a Master` carries it, and it matches 37% of the catalogue),
+    /// `History` (42% of the catalogue — it narrows almost nothing) and
+    /// `Green Escape` (72% of it is also `Park`). All four are still selectable
+    /// under `More`.
+    static let panelGroups: [PanelGroup] = [
+        PanelGroup(title: "Place — what it is", facet: .placeType,
+                   promoted: ["District", "Monument", "Museum", "Park"]),
+        PanelGroup(title: "Subject — what it is about", facet: .theme,
+                   promoted: ["Art", "Commerce", "Engineering", "Food"]),
+        PanelGroup(title: "Why go", facet: .experience,
+                   promoted: ["Designed by a Master", "Free to Visit", "Hidden Gem"]),
+        PanelGroup(title: "Era", facet: .styleEra,
+                   promoted: ["Contemporary", "Gothic", "Modernist"]),
     ]
+
+    /// The facet shown as a **search field** rather than a grid of chips.
+    ///
+    /// The rule: over ~30 values a grid becomes a list with a search field.
+    /// Architect has 429 and the largest matches 23 pins, so every one of them
+    /// is small by construction and a wall of chips would be the worst screen
+    /// in the app. Search changes the presentation only — it stays
+    /// multi-select, like every other facet.
+    static let searchedFacet: TagFacet = .architect
 
     // MARK: - Multi-select filter logic (owner decision D6)
 

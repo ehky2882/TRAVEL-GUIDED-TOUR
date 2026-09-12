@@ -235,6 +235,27 @@ def emit(data, out):
     # longer belongs to. Clearing first is the only way membership can shrink.
     w("\n-- place membership\n")
     w("update public.tours set place_id = null where place_id is not null;\n")
+
+    # 🔴 And the places themselves have to be able to DISAPPEAR. The upsert
+    # above can create and update a place but never remove one, so a place
+    # deleted from Tours.json survived in the database as an EMPTY row — it
+    # kept its name and its point on the map while owning nothing. Nothing
+    # downstream objects: the row is valid, the count check simply reads one
+    # too many, and the app is handed a place with no contents.
+    #
+    # This is exactly how `Westerkerk` leaked on 2026-09-11. Splitting the
+    # Jordaan out of it left one entry describing Westerkerk, so the place was
+    # dissolved in the catalogue — and the live count then read 267 against a
+    # catalogue of 266, with 0 tours pointing at the orphan.
+    #
+    # ⚠️ ORDER IS LOAD-BEARING: this must come AFTER the place_id reset above,
+    # because tours.place_id references places. Clear the links, then prune.
+    w("\n-- prune places that no longer exist in the catalog\n")
+    if places:
+        keep = ", ".join(q(p["id"]) for p in places)
+        w(f"delete from public.places where id not in ({keep});\n")
+    else:
+        w("delete from public.places;\n")
     for p in places:
         ids = ", ".join(q(t) for t in p["tourIds"])
         w(f"update public.tours set place_id = {q(p['id'])} where id in ({ids});\n")

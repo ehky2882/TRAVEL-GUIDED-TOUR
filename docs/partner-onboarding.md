@@ -160,6 +160,73 @@ like a human:
 
 ---
 
+## Part 2b — When you have a pile of links and don't know which are any good
+
+Part 2 assumes you already know where each post was filmed. Often you won't —
+you'll have opened a creator's account, copied thirty links, and have no idea
+which ones belong in the app. **That is a supported job, and a different one.**
+Do not try to filter them yourself first. Dumping the lot is the point.
+
+### What to type
+
+> Use the atlas-upload skill. I've got a pile of links from one creator. I don't
+> know which are usable — please triage them first, tell me what you'd pin and
+> what you'd skip, and don't add anything until I say so.
+>
+> https://www.tiktok.com/@someone/video/123
+> https://www.instagram.com/reel/XXXX/
+> …
+
+Add a place after a link if you happen to know it (`… — Borough Market,
+London`). If you don't, say nothing — Claude looks it up and reads it back to
+you before anything is added.
+
+### What comes back
+
+A numbered list, sorted:
+
+| | |
+|---|---|
+| **Already in the app** | somebody pinned it before — skip, no work |
+| **Looks good** | one clear place, and where Claude proposes to pin it |
+| **Needs a decision** | usually a post covering several places, or a *route* — a ferry line, a whole street. The app pins **points**, so a route often does not fit at all |
+| **Probably not for us** | podcast plugs, "10 years of making videos", replies to commenters |
+| **Dead** | deleted or private |
+
+Then reply by number: `"3, 5, 8 yes. 4 skip. 9 is Lisbon not Madrid."` Nothing
+is added to the app until you do.
+
+### 🔴 The one thing to be sceptical about
+
+**A green "looks good" count is not a verdict.** These labels come from reading
+the post's caption, and captions mislead in both directions. Measured on a real
+account: **9 of 11 posts came back "looks good" when only 3 were actually
+pinnable** — and in the same run a genuinely good post was binned as "not for
+us" because its caption mentioned an anniversary.
+
+So Claude is instructed to read every caption and give you a real opinion, not
+just hand over the machine's list. **If you ever get back a clean list with no
+discussion of the individual posts, that session skipped the work — say so and
+ask it to go through them properly.**
+
+### Things that are Edward's call, not yours
+
+Some creators sell things — an estate agent posting property listings, a shop
+posting stock. Whether that belongs in the app is a policy question. Claude
+should raise it with Edward rather than decide, and so should you. (Standing
+decision, 2026-09-11: **property listings are judged case by case.**)
+
+### Why Instagram links are the valuable ones
+
+Given only a creator's *handle*, Claude can fetch roughly the 14 newest posts
+from TikTok and ~15 from YouTube by itself — **and nothing at all from
+Instagram.** Instagram switched off the ability for anyone outside the company
+to list an account's posts, so those links have to be copied by a human. Since
+Instagram is the biggest platform in this catalogue, **pasting Instagram links
+is the single most useful thing you can do.**
+
+---
+
 ## Part 3 — Once you're comfortable
 
 Same motion, bigger jobs. Say "use the atlas-upload skill" and describe what you
