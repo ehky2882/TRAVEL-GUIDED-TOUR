@@ -324,7 +324,8 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         // the choreography back out.
                         SplashView(
                             handOff: launchState.handOffProgress,
-                            reduceMotion: reduceMotion
+                            reduceMotion: reduceMotion,
+                            onShown: { launchState.markSplashShown() }
                         )
                     }
                 }
@@ -358,6 +359,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             }
             let ready = LaunchGate.isReady(
                 elapsed: Date().timeIntervalSince(startedAt),
+                shownFor: launchState.splashShownAt.map { Date().timeIntervalSince($0) },
                 catalogLoaded: !dataService.tours.isEmpty,
                 locationSettled: LaunchGate.locationSettled(
                     status: locationManager.authorizationStatus,

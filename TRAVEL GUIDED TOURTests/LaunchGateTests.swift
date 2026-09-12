@@ -21,6 +21,7 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor - 0.01,
+                shownFor: LaunchGate.floor - 0.01,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -32,6 +33,7 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertTrue(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor,
+                shownFor: LaunchGate.floor,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -43,6 +45,7 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
+                shownFor: LaunchGate.floor + 0.5,
                 catalogLoaded: false,
                 locationSettled: true,
                 imagesReady: true
@@ -54,6 +57,7 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
+                shownFor: LaunchGate.floor + 0.5,
                 catalogLoaded: true,
                 locationSettled: false,
                 imagesReady: true
@@ -62,11 +66,12 @@ final class LaunchGateTests: XCTestCase {
     }
 
     /// The ceiling is the promise that the app always opens. Nothing below it
-    /// is loaded here and it still hands off.
+    /// is loaded here and it still hands off — once the breath has been seen.
     func test_ceilingHandsOffRegardless() {
         XCTAssertTrue(
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
+                shownFor: LaunchGate.floor,
                 catalogLoaded: false,
                 locationSettled: false,
                 imagesReady: true
@@ -76,6 +81,60 @@ final class LaunchGateTests: XCTestCase {
 
     func test_floorIsBelowCeiling() {
         XCTAssertLessThan(LaunchGate.floor, LaunchGate.ceiling)
+    }
+
+    /// 🔴 THE REGRESSION THIS PINS: the floor is counted from the splash's first
+    /// DRAWN frame. On TestFlight 1.1.2 (147) it was counted from launch, the
+    /// splash first drew ~4.9s in, and the ceiling had long passed — so it handed
+    /// off after ~0.77s and the owner saw no breathing. Everything is loaded and
+    /// the ceiling is far behind us here, and it must STILL wait out the breath.
+    func test_floorCountsFromTheFirstDrawnFrame_notFromLaunch() {
+        XCTAssertFalse(
+            LaunchGate.isReady(
+                elapsed: 5,
+                shownFor: 0.77,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+        XCTAssertTrue(
+            LaunchGate.isReady(
+                elapsed: 5 + LaunchGate.floor,
+                shownFor: LaunchGate.floor,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+    }
+
+    /// Nothing waits on a frame that never reports — the backstop opens the app.
+    func test_neverShownSplashStillHandsOffAtTheBackstop() {
+        XCTAssertFalse(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.ceiling,
+                shownFor: nil,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+        XCTAssertTrue(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.neverShownCeiling,
+                shownFor: nil,
+                catalogLoaded: false,
+                locationSettled: false,
+                imagesReady: false
+            )
+        )
+    }
+
+    /// Owner decision 2026-09-12: one full breath — down and back up, so the
+    /// hand-off starts at full opacity.
+    func test_floorIsExactlyOneFullBreath() {
+        XCTAssertEqual(LaunchGate.floor, SplashView.breathHalfPeriod * 2, accuracy: 0.0001)
     }
 
     // MARK: - Location settling
@@ -145,6 +204,7 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertFalse(
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
+                shownFor: LaunchGate.floor + 0.5,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: false
@@ -158,6 +218,7 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertTrue(
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
+                shownFor: LaunchGate.floor,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: false
@@ -406,6 +467,18 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertTrue(breath.autoreverses)
         XCTAssertEqual(breath.repeatCount, .infinity)
         XCTAssertFalse(breath.isRemovedOnCompletion)
+    }
+
+    /// The first drawn frame is recorded once; a later report (a re-render, a
+    /// second window) must not restart the breath's clock.
+    @MainActor
+    func test_markSplashShownKeepsTheFirstFrame() {
+        let state = LaunchState()
+        XCTAssertNil(state.splashShownAt)
+        let first = Date(timeIntervalSince1970: 100)
+        state.markSplashShown(at: first)
+        state.markSplashShown(at: Date(timeIntervalSince1970: 200))
+        XCTAssertEqual(state.splashShownAt, first)
     }
 
     @MainActor

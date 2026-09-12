@@ -22,6 +22,10 @@ struct SplashView: View {
     var handOff: Double = 0
     /// Reduce Motion: the mark doesn't bloom, the ground simply clears.
     var reduceMotion: Bool = false
+    /// Called once, when the splash's first frame has actually reached the
+    /// screen. The launch gate times the visible breath from this — see
+    /// `LaunchState.markSplashShown`.
+    var onShown: () -> Void = {}
 
     /// When the breathing started. The breath is read off the clock, not animated.
     @State private var breathStart = Date()
@@ -219,7 +223,11 @@ struct SplashView: View {
     @ViewBuilder
     private func disc(in size: CGSize) -> some View {
         #if canImport(UIKit)
-        SplashBreathingDisc(diameter: Self.markDiameter, isBreathing: !reduceMotion && handOff == 0)
+        SplashBreathingDisc(
+            diameter: Self.markDiameter,
+            isBreathing: !reduceMotion && handOff == 0,
+            onShown: onShown
+        )
             .frame(width: Self.markDiameter, height: Self.markDiameter)
             .scaleEffect(discScale(in: size))
             .opacity(markOpacity)
@@ -232,6 +240,7 @@ struct SplashView: View {
                 .scaleEffect(discScale(in: size))
                 .opacity(markOpacity * breathOpacity(at: timeline.date))
         }
+        .onAppear(perform: onShown)
         #endif
     }
 
@@ -254,6 +263,8 @@ struct SplashBreathingDisc: UIViewRepresentable {
     /// never changes its bounds, so the corner radius is set once.
     var diameter: CGFloat
     var isBreathing: Bool
+    /// Called once, on the first frame the disc is actually on screen.
+    var onShown: () -> Void = {}
 
     static let breathKey = "atlas.splash.breath"
 
@@ -273,7 +284,8 @@ struct SplashBreathingDisc: UIViewRepresentable {
     }
 
     func makeUIView(context: Context) -> UIView {
-        let view = UIView()
+        let view = SplashDiscView()
+        view.onFirstFrame = onShown
         // `brass`, not `mapPin`: `mapPin` resolves the environment's accent,
         // which a bridged UIColor cannot follow. It is the same #8B7535.
         view.backgroundColor = UIColor(AtlasColors.brass)
@@ -298,6 +310,42 @@ struct SplashBreathingDisc: UIViewRepresentable {
             settle.duration = 0.05
             layer.add(settle, forKey: "atlas.splash.settle")
         }
+    }
+}
+
+/// The disc's view, which reports the first frame it is actually on screen.
+///
+/// 🔴 THIS IS WHAT MAKES THE BREATH VISIBLE AT ALL. SwiftUI's `onAppear` fires
+/// when the splash is *built* — measured 27ms after launch — but nothing is
+/// *drawn* until the main thread finishes building the app behind it, which on a
+/// cold launch was ~4.9s later in the Simulator. Timing the floor from launch
+/// therefore spent it behind iOS's static launch picture, and the breathing
+/// splash drew for ~0.77s: one dip, which the owner reasonably read as no
+/// breathing at all (TestFlight 1.1.2 (147), 2026-09-12).
+///
+/// A display link's first tick runs on the main run loop after the frame that
+/// put this view in a window has been committed, so it is as close to "the user
+/// can see it" as the app can observe.
+final class SplashDiscView: UIView {
+    var onFirstFrame: () -> Void = {}
+    private var displayLink: CADisplayLink?
+    private var reported = false
+
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        guard window != nil, !reported, displayLink == nil else { return }
+        let link = CADisplayLink(target: self, selector: #selector(firstTick))
+        link.add(to: .main, forMode: .common)
+        displayLink = link
+    }
+
+    @objc private func firstTick() {
+        // Invalidating releases the link's strong hold on this view.
+        displayLink?.invalidate()
+        displayLink = nil
+        guard !reported else { return }
+        reported = true
+        onFirstFrame()
     }
 }
 #endif
