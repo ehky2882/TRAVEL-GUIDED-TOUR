@@ -73,10 +73,12 @@
     /* Apple's badge artwork, committed unmodified — see the note in
        /atlas.css. This page carries its own stylesheet (it is deliberately
        self-contained so a shared join link renders with one request), so the
-       rule is repeated here rather than inherited. The white variant, because
-       this card sits on --surface-2, which is dark. */
+       rule is repeated here rather than inherited. The black variant, whose
+       white hairline border suits this dark card. 🔴 120px is Apple's floor,
+       not a preference: their minimum onscreen badge height is 40px, and the
+       119.66x40 viewBox makes 120px wide exactly 40px tall. Do not shrink it. */
     .appstore-badge { display: inline-block; text-decoration: none; line-height: 0; }
-    .appstore-badge img { width: 160px; min-width: 120px; height: auto; display: block; }
+    .appstore-badge img { width: 120px; height: auto; display: block; }
     .foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 26px; opacity: 0.8; }
     .center-state { text-align: center; padding: 60px 10px; }
     .center-state h1 { font-size: 22px; }
@@ -143,7 +145,7 @@
           '<p class="soon">Get Dozent to join</p>' +
           '<p class="soon-sub">Install the app, then open this link again and it will drop you straight into the group.</p>' +
           '<a class="appstore-badge" href="' + APP_STORE_URL + '">' +
-            '<img src="/download-on-the-app-store.svg" alt="Download Dozent on the App Store" width="160" height="53">' +
+            '<img src="/download-on-the-app-store-black.svg" alt="Download Dozent on the App Store" width="120" height="40">' +
           '</a>' +
         '</div>' +
       '</div>';
