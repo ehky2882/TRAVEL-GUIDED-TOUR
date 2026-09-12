@@ -1009,3 +1009,21 @@ each rebuild is a fresh chance to hand-resolve an 11 MB JSON wrongly.
   `CLAUDE.md`'s dated Current State blocks were moved to `archive/CURRENT-STATE-HISTORY.md` on
   2026-09-08, so the entry had to be re-homed. **Re-read the file you are editing after any long
   gap; the convention may have changed under you.**
+
+## A "first/new/Nth" claim has an expiry date — re-derive it at merge, not at write (2026-09-12)
+
+[#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) shipped documentation saying
+**"Puerto Rico is the catalogue's 59th country."** That was **true when it was written on
+7 September** — the catalogue had no Puerto Rico at all — and **false by the time it merged on the
+12th**, because another session landed 6 Puerto Rico entries during the four-day wait. Measured
+against the parent of the batch's own squash commit: **64 countries before the merge, 64 after.
+It added none.** A parallel session had meanwhile claimed the 59th slot for **Tanzania**, so two
+merged PRs each called a different country "the 59th".
+
+- **The rule: any superlative or ordinal about the catalogue — first, new, Nth, largest, only —
+  must be re-derived immediately before merge**, not carried forward from when the work was built.
+  The counts are cheap; the claim is not self-correcting.
+- **This is the same class as the Key-facts line that has gone stale eighteen times**, and the fix
+  is the same: re-derive from the merged file, never quote a number written earlier.
+- ⚠️ **It is also a second-order cost of not merging promptly** (see the lesson above). A batch
+  merged the day it goes green cannot be overtaken this way.

@@ -145,10 +145,15 @@ goes 3 → 4 members**, and the four now draw as **one capsule**: map markers 3,
 - **Two creators: `@arishaintokyo`** (Instagram, 6 — Japan) and **`@urbanistariel`** (14
   Instagram + 34 TikTok = 48 — NYC, Puerto Rico, Sleepy Hollow, Tulsa, Baltimore, Belgrade,
   Thessaloniki, Venice, London, Canterbury).
-- **🎉 PUERTO RICO IS THE CATALOGUE'S 59th COUNTRY** (5 pins). OSM reverse-geocodes them as
-  `United States`, but the catalogue's own convention gives territories their own country value
-  — `Hong Kong` (270 entries) and `Macau` (6) both do — and it is how the owner supplied them.
-  ⚠️ **The catalogue already contains a `San Juan, Philippines`**; the two are unrelated.
+- ⚠️ **PUERTO RICO WAS NOT NEW BY THE TIME THIS MERGED, AND THE ORIGINAL CLAIM IS A CASUALTY
+  OF THE FOUR-DAY DELAY.** When this batch was built on 7 September the catalogue had **no Puerto
+  Rico at all**, so its 5 pins (Ponce, San Juan ×3, Río Grande) would have added the country.
+  While the PR sat green and unmerged, another session landed **6 Puerto Rico entries** — verified
+  against the parent of this batch's own squash commit, not inferred — so on merge it took the
+  total to **11** and added no country. **The reasoning about the value stands and is the durable
+  part:** OSM reverse-geocodes these as `United States`, but the catalogue treats territories as
+  their own country value (`Hong Kong` 270 entries, `Macau` 6) and it is how the owner supplied
+  them. ⚠️ The catalogue also contains an unrelated **`San Juan, Philippines`**.
 - **🔴 `openlocationcode` INSTALLS ON THIS MAC — do not hand-roll a Plus Code decoder here.**
   CLAUDE.md records two web sessions writing one by hand because `pip install` "cannot build a
   wheel", and **both got the arithmetic wrong first time**. `pip3 install openlocationcode` just
