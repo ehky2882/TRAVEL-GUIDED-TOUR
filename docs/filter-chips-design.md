@@ -192,13 +192,18 @@ gives all Instagram a 9:16 player, which is right for 625 of 634.
    shows no counts anywhere; its values are all common, ours are not.)
 4. **A sheet holds only what its chip opened**, sized to its own content. Three shapes cover every
    chip: short grid, grouped grid, searchable list.
-5. **A brass pill floats over every panel** carrying the live count — `SHOW 118 RESULTS`, or
+5. **Every panel reserves the pill's height plus clearance at the end of its content** — 96 pt of
+   run-out. The pill floats, so without it the last option of any scrolling panel sits underneath
+   and is untappable. A panel with a fixed height must also be at least its content plus that 96:
+   `Format` was 440 pt from when it held five options, and splitting `Reels` and `Shorts` out took
+   it to seven stacked rows — 375 pt of content, so 470 pt of panel.
+6. **A brass pill floats over every panel** carrying the live count — `SHOW 118 RESULTS`, or
    `SHOW 1 RESULT` — and commits. **The noun is "results"** (owner, 2026-09-12): "pins" is our
    word for map markers and should never reach a user, and "tours" is wrong for the 1,796 pinned
    posts. It also matches copy the app already ships — `HomeDrawerContent` says `1 RESULT` /
    `N RESULTS` while filtering. The unfiltered drawer header becomes `N RESULTS IN VIEW`.
-6. **Sort lives on the drawer header**, not in the row.
-7. Chips filter **the map and the drawer together**, from one predicate.
+7. **Sort lives on the drawer header**, not in the row.
+8. Chips filter **the map and the drawer together**, from one predicate.
 
 ## Anatomy — two heights, and why
 
@@ -225,7 +230,21 @@ is **28 pt**, 16 short, and this is an app used one-handed while walking. A mis-
 harmless: with contextual counts, one wrong chip can take the result to zero, leaving you to work
 out which of forty you hit. 22 pt also cannot grow with Dynamic Type.
 
-⚠️ **The Tags panel does NOT fit one screen, and that is accepted.** ~780 px against a ~650 px
+**The Tags panel fits one screen, at a price.** The panel starts at 64 pt (just under the status
+bar) and the promoted set is trimmed to **Place 4 · Subject 4 · Why go 3 · Era 3** — 637 pt over 9
+rows, fitting with ~30 pt spare. Sliding alone could not do it: at 7·5·4·4 promoted the content was
+829 pt, which is 96 pt short even with the panel at the very top of the screen, so the lever had to
+be the promoted set rather than the spacing.
+
+⚠️ **It fits on a big phone only.** A 667 pt screen (SE) leaves ~430 pt of panel, so it scrolls
+there whatever we do — "no scrolling" is a property of large phones, not of this design, so the
+scroll behaviour and the pinned group heading still have to be right.
+
+⚠️ **`More` now carries 10 of the 14 place types and 13 of the 17 subjects.** That is a heavier bet
+on the promotion judgement than before; if a value people expect is behind `More`, swap it forward
+rather than widening the panel.
+
+⚠️ **Superseded note, kept for the reasoning:** ~780 px against a ~650 px
 budget (panel top at 96, ~96 reserved for the pill) — `Architect` and the tail of `Era` sit below
 the fold. It briefly did fit, at 12/7 spacing, and that was my argument for 32 pt over 44 pt; the
 argument survives on its own numbers (44 pt would be ~940 px). **Consequence: the pinned group
