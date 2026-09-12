@@ -92,19 +92,15 @@ enum HomeRailsViewModel {
 
     /// Flat, distance-sorted result list for when a filter is active
     /// (owner decision D8 — the drawer swaps its shelves for this).
-    /// Combines per D6 plus the "Walks" format filter (§1.6); orders by
-    /// distance from the map viewport center (§1.5). Pure + testable.
+    /// Applies `TourFilter` and orders by distance from the map viewport
+    /// center (§1.5). Pure + testable.
     static func filteredResults(
         tours: [Tour],
-        selectedTags: Set<String>,
-        walksOnly: Bool,
+        filter: TourFilter,
         userLocation: CLLocation?,
         visibleRegion: MKCoordinateRegion?
     ) -> [Tour] {
-        let matched = tours.filter { tour in
-            if walksOnly && tour.kind != .multiStop { return false }
-            return Tag.matches(tourTags: Set(tour.tags), selection: selectedTags)
-        }
+        let matched = tours.filter(filter.matches)
         let viewer = viewerLocation(userLocation: userLocation, visibleRegion: visibleRegion)
         return sortedByDistance(matched, from: viewer)
     }

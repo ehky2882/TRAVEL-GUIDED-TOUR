@@ -1,0 +1,470 @@
+# Filter chips — a door and four chips
+
+**Status:** built on `claude/filtering-chip-system-htjq7k`, open as
+[#835](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/835). **CI green** (run 2329 — simulator
+build plus 621 tests, compiled first time despite being written with no Mac in session), and
+**build 145 has been through its first device review** — the five notes it produced, and what they
+changed, are in § Device review, round 1. Canvas:
+<https://claude.ai/code/artifact/b5da2e3e-cd23-4484-807b-c8e74cb70d59>
+
+Replaces the flat multi-select row shipped in Tag Phase 2 (`Features/Home/TagFilterChipRow.swift`,
+owner decision D8). The combine rule is **unchanged** — OR within a facet, AND across (D6,
+`Tag.matches`). What changes is the row: eighteen toggles become **four chips**, each opening a
+sheet.
+
+```
+≡ All  ·  Format ⌄  ·  Price ⌄  ·  Dozents ⌄  ·  Tags ⌄
+```
+
+The row splits along a real seam. Three **structural fields** — `kind`, `price_tier`, `makerId` —
+get a chip each, because each asks a different kind of question. The **entire controlled
+vocabulary** gets one chip, because it is all the same kind of question.
+
+| Chip | Values | Notes |
+|---|---|---|
+| **≡ All** | every facet below, in one scroll | A door, not a filter — never fills brass; its badge counts what is on behind it. |
+| **Format** | Audio stop 1,481 · Audio walk 72 · Instagram posts 9 · Instagram Reels 625 · TikTok 1,235 · YouTube Shorts 3 · YouTube videos 16 | One flat list, alphabetical. One field, so its values OR. |
+| **Price** | Free 3,375 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
+| **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
+| **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
+
+**Clear** sits in every panel's header — one word everywhere, the All panel included — not in the
+row. **Sort** sits on the drawer header, opposite the result count.
+
+### The All panel
+
+Every facet in one scroll, one heading level deep: `FORMAT`, `PRICE`, `DOZENT`, then Tags' own
+groups — `PLACE`, `SUBJECT`, `WHY GO`, `ERA`, `ARCHITECT` — flattened to the same level, each with
+its `More`. It writes into exactly the same selection as the individual chips, so the two routes
+cannot disagree.
+
+**Kept because some people would rather scan one list than open four panels** (owner,
+2026-09-12) — which is how the reference app leads its row. It was briefly cut on the reasoning
+that it duplicates the chips; duplication is the point. It is a second route, not a second
+mechanism.
+
+**Counts are over every row the map carries — tours AND link pins — because the chips filter the
+map and the map shows both.** That denominator overturns the Phase 2 call that kept Art Deco,
+Brutalist and Bridge out of the row for being thin: against ~3,400 they are 50, 51 and 44.
+
+**Live, 2026-09-12 (reconciled, `kind` and `source_url` from the DB):**
+
+| | |
+|---|---|
+| All rows | **3,441** |
+| Audio stop (`single`) · Audio walk (`multiStop`) | 1,481 · 72 — **1,553 tours** |
+| Link pins | **1,888** — TikTok 1,235 · Instagram Reels 625 · Instagram posts 9 · YouTube videos 16 · YouTube Shorts 3, nothing unclassified |
+| Paid · Free | 66 · 3,375 |
+
+⚠️ 🔴 **Re-derive every number before building, and mean it.** The tag-level counts in this document
+come from `Resources/Tours.json` in one checkout, against 3,269 rows. **The live catalogue moved
+from 1,796 to 1,888 link pins during the single session that wrote this file** — 92 pins in about
+forty minutes, from other sessions merging content. Nothing here is wrong so much as perishable;
+treat every figure as an order of magnitude, not a value. The one-line count query below is the
+pattern for all of them, and price can never come from the file at all.
+
+## Why one Tags chip rather than a chip per facet
+
+Because **the number of chips is presentational, not semantic.** `Tag.matches` takes one flat
+`Set<String>` of tags and derives each tag's facet itself via `Tag.facetByTag`, then ORs within a
+facet and ANDs across. The shipped app already passes it a single `selectedTags` set. So one chip
+filters identically to five: `Place` AND `Subject` still asks "a market, about empire" — you just
+pick both from one sheet, under two headings.
+
+What the merge buys: the row stops asking anyone to know what "Theme" means. What it costs: the
+Tags sheet is the longest screen in the app, and a collapsed chip reading `Museum +2` says less
+than three chips each showing their own value. **Mitigation:** a `More` per group, and show the
+single value when exactly one is picked, otherwise `Tags · 4`.
+
+### The groups inside Tags, renamed to the question each answers
+
+| Was | Is | Asks |
+|---|---|---|
+| Type | **Place** | what it *is* — a noun you could point at |
+| Theme | **Subject** | what the narration is *about* |
+| Experience | **Why go** | what you get out of being there |
+
+Borough Market is the clean case: a **Market**, about **food · history · commerce**, promising
+nothing in particular. Notre-Dame de Paris is a **Religious Building**, about **faith · history**,
+and an **Iconic Landmark**.
+
+**Four values are demoted** into their group's `More` — still selectable, just not promoted:
+
+| Value | Why |
+|---|---|
+| `Faith` | 88% of `Religious Building` is also `Faith`, and 77% the other way — one fact, two chips |
+| `Architecture` | 82% of `Designed by a Master` carries it, and it matches 37% of the catalogue |
+| `History` | matches 42% of the catalogue, so it narrows almost nothing |
+| `Green Escape` | 72% of it is also `Park` |
+
+Two rules fall out, worth applying to any future value: **a value matching more than ~a third of
+the catalogue does not narrow anything**, and **where two groups' values overlap ~70% both ways,
+promote one.** Both changes are display-only; the tags stay on the tours.
+
+The split still earns its keep where the vocabulary is clean — `Tower` / `Viewpoint` overlap only
+19% / 9% (most towers are shut at the top), `Venue` / `Performance` 15% (most venues are bars).
+
+### 🔴 Price comes from the database, never from `Tours.json`
+
+`seed_from_toursjson.py` **omits `price_tier` deliberately** — price lives in the DB and is
+maker-set, so a content re-seed cannot reset it. `Tours.json` therefore reads `priceTier: null` for
+every tour **and always will**, however many paid tours exist. Reading the file and concluding
+"everything is free" is a false pass; this design nearly shipped without a Price chip on exactly
+that reasoning.
+
+Ask the live DB — 47 bytes, no catalogue fetch:
+
+```bash
+curl -s --compressed -D - -o /dev/null \
+  -H "apikey: $KEY" -H "Authorization: Bearer $KEY" \
+  -H "Range: 0-0" -H "Prefer: count=exact" \
+  "$PROJECT/rest/v1/tours?select=id&price_tier=not.is.null"   # content-range: 0-0/66
+```
+
+**As of 2026-09-12: 66 paid tours, every one a multi-stop walk, every one at $0.99** — 66 of the
+~72 walks in the catalogue. Fourteen tiers exist in App Store Connect; one is in use. Hence two
+values rather than bands (`Under $5 / $5–10 / Over $10` would be three options with two empty), and
+hence `Paid` returns nearly what `Audio walk` returns for now.
+
+⚠️ `Free` here means the *tour* costs nothing. `Why go` carries **`Free to Visit`** (323), which
+means the *place* costs nothing to enter. If the two read ambiguously once built, the price values
+become `Free to listen` / `Paid`.
+
+### Two lists that are deliberately NOT grouped (owner, 2026-09-12)
+
+**Dozent is one flat list.** An earlier draft split it into *Studio Dozents* (34) and *Pinned
+Dozents* (343), with brass avatars for the studios and grey for everyone else. Both are gone: a
+Dozent is a Dozent, whether they record for us or we pin their post, and the panel must not sort
+them into first and second class. Rows carry the maker's own `avatarURL` — all 377 have one — and
+are ordered by how much of the map is theirs.
+
+**Format is one flat list too.** *Audio tours* / *Pinned posts* headings earned nothing: the option
+labels already say which is which.
+
+### Format splits by platform AND by short-form — each in the platform's own words
+
+**Owner decision, 2026-09-12: the short-form formats are separately selectable.** Seven options,
+using each platform's own branding — **Reels** and **Shorts** are product names and take a capital;
+**videos** and **posts** are generic and do not. TikTok brands nothing separately, so it is one
+option.
+
+| Option | Live count | How it is detected |
+|---|---|---|
+| Audio stop | 1,481 | `kind == .single` |
+| Audio walk | 72 | `kind == .multiStop` |
+| Instagram posts | 9 | `/p/` or `/tv/` path — **needs a new one-liner** |
+| Instagram Reels | 625 | `/reel` or `/reels` path — **needs a new one-liner** |
+| TikTok | 1,235 | host |
+| YouTube Shorts | 3 | **`LinkSource.isYouTubeShort(_:)`, already shipping** |
+| YouTube videos | 16 | YouTube host, not a Short |
+
+`isYouTubeShort` matches `shorts` as a whole path component, so a video merely *titled* "shorts"
+cannot fool it, and the app already uses it to give a Short a 9:16 player instead of letterboxing
+it into 16:9. Instagram needs the equivalent: the 9 non-reel pins are eight `/p/` posts and one
+`/tv/` (IGTV, retired), so `/p/` and `/tv/` are posts and `/reel`/`/reels` are Reels.
+
+⚠️ **Two options are tiny — Shorts 3 and Instagram posts 9 — and that was weighed.** It cuts
+against the rule that an option finding a handful reads as broken (the rule that still holds
+`Video tour`, at 1, out of the list). It wins anyway because leaving them unlisted would make those
+pins **unreachable from this chip**: picking `Instagram Reels` excludes the 9 posts, and nothing
+else would select them.
+
+⚠️ Worth knowing what the numbers say about Instagram regardless: of 634,
+**625 are Reels**, so Instagram is a reels channel with a rounding error attached. The app still
+gives all Instagram a 9:16 player, which is right for 625 of 634.
+
+## Not chips, and why
+
+| | |
+|---|---|
+| **Nearby** | the map *is* a distance filter and a continuous one; it dies without location permission; and it means nothing when planning a trip from home. Served instead by sort-by-nearest and the existing recenter button |
+| City | same reason — panning answers "where"; 116 cities is a search |
+| Duration | median audio stop is 2 min 14 s — Format already separates the stop from the 11-minute walk |
+| Rating | we collect none |
+| Saved · Downloaded · Purchased | personal state, rare mid-walk — belongs in the **Library tab** |
+| Video tour | one tour (`via-57-west`). The value stays in the model; the option appears when it clears ~20 |
+
+## Rules
+
+1. **Over ~30 values a grid becomes a search.** Dozent (377) and Architect (429) are lists with a
+   search field; everything else is a grid. Search changes the presentation, never how the facet
+   combines — both stay multi-select.
+2. **A set chip becomes its own answer**: `Museum`, or `Museum +2`. Empty, it shows the chip name
+   and a chevron.
+3. **Counts sit on the option inside the sheet, and on the commit pill — never on a row chip.**
+   Ours run from 1,480 to 19, so "YouTube 19" is the whole reason not to tap it. (The reference app
+   shows no counts anywhere; its values are all common, ours are not.)
+4. **A sheet holds only what its chip opened**, sized to its own content. Three shapes cover every
+   chip: short grid, grouped grid, searchable list.
+5. **Every panel reserves the pill's height plus clearance at the end of its content** — 96 pt of
+   run-out. The pill floats, so without it the last option of any scrolling panel sits underneath
+   and is untappable. A panel with a fixed height must also be at least its content plus that 96:
+   `Format` was 440 pt from when it held five options, and splitting `Reels` and `Shorts` out took
+   it to seven stacked rows — 375 pt of content, so 470 pt of panel.
+6. **A brass pill floats over every panel** carrying the live count — `SHOW 118 RESULTS`, or
+   `SHOW 1 RESULT` — and commits. **The noun is "results"** (owner, 2026-09-12): "pins" is our
+   word for map markers and should never reach a user, and "tours" is wrong for the 1,796 pinned
+   posts. It also matches copy the app already ships — `HomeDrawerContent` says `1 RESULT` /
+   `N RESULTS` while filtering. The unfiltered drawer header becomes `N RESULTS IN VIEW`.
+7. **Sort lives on the drawer header**, not in the row.
+8. Chips filter **the map and the drawer together**, from one predicate.
+
+## Anatomy — two heights, and why
+
+Every chip is a capsule (`radius = height / 2`) in **13 pt SF Mono** (`AtlasTypography.caption`),
+`secondaryBackground` at rest, `mapPin` brass when on with `background` as the label colour, 16 pt
+gutters. Two sizes, for two different jobs:
+
+| | Height | Padding | Gaps | Effective tap target |
+|---|---|---|---|---|
+| **Row** (over the map) | **44** — `AtlasSpacing.searchBarHeight` | 0 16 | 8 | 52 pt |
+| **Panel options** | **32** | 0 13 | **row 16 · column 10** | **48 pt** |
+
+**Why 32 in the panels.** At 44 pt the Tags panel runs to ~940 px — nearly two screens. 32 brings
+it to ~780 px, about a fifth of a screen of scrolling.
+
+**Why the gaps are 16 and 10.** What a thumb cares about is the **vertical pitch** — the chip plus
+the gap it can absorb — not the drawn height. A 32 pt chip with a 16 pt row gap is a **48 pt
+target**, comfortably past the 44 pt HIG minimum rather than exactly on it.
+`.contentShape(Rectangle())` over the padded frame is what makes the absorbed gap real. Columns
+matter less (a 60–180 pt wide chip was never the problem), so 10 is for air, not for aim.
+
+⚠️ **22 pt was tried and rejected.** It reaches ~410 px — far tighter than needed — but its pitch
+is **28 pt**, 16 short, and this is an app used one-handed while walking. A mis-tap is not
+harmless: with contextual counts, one wrong chip can take the result to zero, leaving you to work
+out which of forty you hit. 22 pt also cannot grow with Dynamic Type.
+
+🔴 **Panel height is no longer ours to choose — see § Device review, round 2. Every panel is
+full-height.** The arithmetic that used to live here (panel tops, fractions per panel, whether Tags
+fits in one screen) is retired: iOS 26 draws any partial-height sheet as a floating inset card, so
+the owner's "edge to edge" and "sized to its content" could not both be had.
+
+**What survives it:** the promoted set stays trimmed to **Place 4 · Subject 4 · Why go 3 · Era 3**.
+It was chosen to make Tags fit a 0.92 panel and that reason is gone, but a shorter first screen is
+worth having on its own — `More` is one tap, and the alternative is a wall of chips.
+
+⚠️ **`More` now carries 10 of the 14 place types and 13 of the 17 subjects.** That is a heavier bet
+on the promotion judgement than before; if a value people expect is behind `More`, swap it forward
+rather than widening the panel.
+
+⚠️ **Scrolling is normal now, not a failure.** At full height Tags still scrolls on a small phone,
+so **the group heading is load-bearing rather than a nicety** — you will scroll past `PLACE` into
+`SUBJECT`, and a chip reading `Contemporary` means nothing without `ERA` above it. If the scrolling
+grates, promote fewer values per group rather than tightening the spacing back. `panelRunOut` (96)
+is still required at every panel's end: the commit pill floats over the content whatever height the
+sheet is.
+
+**Kept larger on purpose:** the `Architect` search field (40 pt — a text input, not a chip) and the
+over-filtered screen's two buttons (44 pt — pressed once, in frustration).
+
+### Panel header and layout (owner review, 2026-09-12)
+
+**The title is the caption font** — 13 pt SF Mono, uppercase, 0.06 em tracking. Not a sans
+semibold sheet title: `HomeDrawerContent`'s count header is already `AtlasTypography.caption` with
+tracking and uppercase copy, so panel chrome is mono in this app. Hierarchy comes from size and
+colour, not typeface — title 13 pt in `primaryText`, group labels 11 pt in `secondaryText`.
+
+**The title is centred; nothing else is** (owner, 2026-09-12). `Clear` is positioned absolutely at
+the right rather than as a flex sibling, so the title centres on the panel and not on the space
+left beside it. `Format`'s stacked column is centred too. **Group labels stay left-aligned** — an
+earlier pass centred them and the owner pulled it back. A chip's own label is already centred
+inside its capsule with its count beside it, so centring that pair independently would make the
+numbers wander; and the `Dozents` rows are full-width list rows with an avatar, so centring the
+name would unmoor the column.
+
+### Device review, round 1 — build 145 (owner, on device, 2026-09-12)
+
+The first round of notes from the real thing. Five, and one of them was an architecture collision
+rather than a spacing choice.
+
+🔴 **1. A panel must COVER the bottom module, and by default it cannot.** On device the sheets slid
+up *behind* the mini-player and tab bar, which painted over the bottom 126 pt of every panel and
+took the commit pill with them. This is not a bug in the panels: the module lives in a **separate
+`UIWindow` at `.normal + 1`**, installed exactly so that UIKit modals in the main window pass
+behind the persistent player, the way Apple Music's does. A `.sheet` is such a modal.
+
+⚠️ **SUPERSEDED BY ROUND 3 — the fix below was the wrong one.** It withdrew the bars for as long
+as a panel was up (`AppSharedState.hidesBottomModule` + `BottomModuleWindowController.setHidden`),
+which is what the tour wizard does for the 126 pt and what a link pin's embedded player does for
+element fullscreen. It fixed the covered pill and introduced a visible hole in the transition. The
+other escape — presenting from inside the top window, which is what `PlayerView` does — was
+dismissed here as "not open to a sheet bound to the row's own state", and that was simply wrong:
+the state moves to `AppSharedState`, and then it is. See § Device review, round 3.
+
+⚠️ Note the side effect on the panel heights below: every panel just gained the 126 pt it was
+silently losing, so the detent fractions are now more generous than the drawings assumed.
+
+**2. `Format` flows in the All panel, and stacks only in its own.** One option per row is right when
+Format *is* the subject — the seven have a real pecking order, 1,481 audio stops down to 3 Shorts,
+so a column reads like a list you work down. In the All panel it is one section of four, and seven
+full-width rows cost most of a screen before the reader reaches Price.
+
+**3. The All panel's `Dozents` section is the search field alone.** Twelve avatar rows there buried
+everything under them. 🔴 **With one exception that is not negotiable: a selected Dozent is still
+listed.** Otherwise the panel hides a filter that is switched on and the only way to turn it off is
+to guess the name — the same rule that keeps a selected-but-unpromoted tag on screen. Both halves
+live in `FilterPanelRules.listedMakers`, tested without a screen.
+
+**4. A search field met its heading 8 pt tighter than everything else** — the owner spotted it on
+`Architect`, and it was true of `Dozents` too. 🔴 The cause is worth keeping: a chip is drawn at 32
+inside a 48 pt frame, so **half the row gap sits above it for free**. A bare capsule has no such
+frame and so touched its label. `AtlasSpacing.panelSearchLead` is that half gap, named, so the two
+are consistent by construction rather than by eye.
+
+**5. Headings and `Clear` were pinned to the edges.** Side inset 16 → **24**
+(`panelEdgeInset`) and the title's top 16 → **28** (`panelTopInset`) — a sheet's own rounded
+corners eat the first few points, and the grabber sits in that top space.
+
+### Device review, round 2 — build 146: nothing but the bottom module floats
+
+**Owner, on device, 2026-09-12:** *"the only thing that should ever [be] 'floating' is the bottom
+module. these sheets should span edge to edge and also of course the bottom."*
+
+🔴 **This is an OS rule, not our layout, and it settles panel heights for good.** On iOS 26 a
+**partial-height** sheet is *drawn* as a floating card — inset from the sides, its bottom edges
+pulled in to nest into the display's curved corners, over a Liquid Glass background. A sheet
+attaches to the sides and bottom of the screen, and its background goes opaque, **only at the large
+detent**. So the two things we wanted could not both be had:
+
+| | |
+|---|---|
+| A panel sized to its content | floats, by the OS's design |
+| A panel that spans edge to edge | is full height, by the OS's design |
+
+The owner picked edge to edge, so **every panel is now `.presentationDetents([.large])`** and the
+five fractions (0.36 Price → 0.92 Tags) are gone. ⚠️ **A `.fraction` detent is not a height knob on
+iOS 26 — re-introducing one re-introduces the floating card.**
+
+**The background moved with it.** `presentationBackground(AtlasColors.secondaryBackground)` paints
+the presentation itself rather than the scroll view inside it. The inner `.background` could never
+reach the screen edge: panel content is inset by the safe area, so a strip of system material sat
+along the bottom — part of what read as "floating".
+
+**What this costs, and what it buys.** Cost: the map is no longer visible behind a panel, which the
+AllTrails reference kept, and `Price` (two options) is a full screen with two chips on it. The pill
+already reports the result count, so the map behind was informative rather than necessary. Buys:
+consistency with every other sheet in the app — none of the others set detents, so they were all
+already full-height and attached; the filter panels were the only floating surface in the product
+apart from the module itself. **And the whole "does Tags fit in one screen" question dissolves**,
+along with three rounds of panel-height arithmetic.
+
+### Device review, round 3 — build 148: the panel is presented from the other window
+
+**Owner, on build 148:** *"There is a visual mistake where when the sheet comes up from the bottom
+to cover the bottom module, you can see that the bottom part of the module disappears. It's quick
+and subtle but even for a small moment it doesn't look right."*
+
+They sent a screen recording, and the frames settle it. At 60 fps, cropped to the bottom of the
+screen:
+
+| Frames | What is on screen |
+|---|---|
+| 1–2 | mini-player + tab bar, normal |
+| 3 | **the whole module gone in one frame** |
+| 4–10 | **bare map where it was — ~130 ms of hole** |
+| 11 | the sheet's top edge finally enters from the bottom |
+
+So round 1's withdrawal fired the moment the state changed, and the sheet's presentation did not
+begin for another eighth of a second. The transition read **map → hole → sheet**.
+
+🔴 **The right fix was already written down in this repo, twice.** `BottomModuleRoot` carries it
+next to the fullscreen video viewer: *"Session 24 hit this with `PlayerView` — hiding the module
+around the transition made it worse; presenting from this window was the fix."* The bars sit at
+`windowLevel = .normal + 1`; anything presented by the main window goes behind them. Present from
+**their** window and the sheet slides up over them with nothing to hide.
+
+So the panel is now presented in `BottomModuleRoot`:
+
+- `AppSharedState` gains **`filterPanel: FilterPanelRoute?`** (which panel is up) and **`filter`**,
+  which moves off `HomeSharedState`. That move is the whole trick: `HomeSharedState` belongs to
+  `ContentView`, so only the main window can see it, and a panel in the other window needs a
+  binding to the filter it edits. `AppSharedState` is the state that spans both windows — this is
+  what it is for.
+- The row no longer presents anything. It sets `appShared.filterPanel` and reads `appShared.filter`
+  for its chip labels. It also no longer takes the tour catalogue: the counts are computed in the
+  panels, which are built where they are presented and read `DataService` there.
+- **`hidesBottomModule` is back to two owners**, the wizard and the link-pin fullscreen — so the
+  warning round 1 added ("anything added here later must re-check the overlap") no longer applies
+  to this feature, and the ownership record, the restore path and its backstop are all deleted.
+
+⚠️ **`PassThroughWindow` already handles the consequence**: while that window has a presented view
+controller it claims every touch rather than only the bottom strip, so the panel is fully
+interactive. That branch exists for `PlayerView` and needed no change.
+
+**Net: 99 lines added, 104 deleted.** The correct fix is smaller than the wrong one, which is
+usually the tell.
+
+### Ordering: counts promote, the alphabet displays
+
+**Within every group, values are in alphabetical order** — `District · Monument · Museum · Park ·
+Religious Building · Venue · Waterfront`. An earlier pass sorted each group by pin count, biggest
+first, on the reasoning that the likeliest picks come first. Rejected for two reasons, and both
+generalise: the order was **invisible** (nothing on screen says these are in size order, so it
+reads as arbitrary) and **unstable** (every content merge reshuffles it, so nobody can learn where
+anything is).
+
+**The counts still decide WHICH values are promoted** and which fall into `More` — that has to stay
+volume-based, or `More` would swallow things people actually want. Only the display order changed.
+
+⚠️ **One deliberate exception: the `Dozents` list stays in size order, most first.** It is a search
+list of 377 where "most of the map is theirs" is a real relevance ranking; alphabetically it would
+open on whichever Instagram handle happens to begin with an A.
+
+`Format` took the alphabet happily, as it happens: `Audio stop · Audio walk · Instagram · TikTok ·
+YouTube` puts the two audio kinds together, which size order split apart.
+
+**Spacing:** 24 pt between the header and the first option, 28 pt above each group label, 16 pt
+between option rows and 10 pt across. The 16 pt row gap is load-bearing (it is what makes the 48 pt
+target) — widen it freely, never shrink it.
+
+**`Format` stacks; every other panel wraps.** One option per row, left-aligned, in `Format` only.
+It has five options with a real pecking order — 1,480 audio stops down to 19 YouTube posts — so a
+column reads like a list you work down. `Tags` has thirty-odd values across five groups where
+nothing outranks anything: stacked it runs to two screens for no gain, wrapped it fits one.
+
+No new colour or type token. Two new named control heights would be worth adding beside
+`searchBarHeight`, rather than reusing `AtlasSpacing.xl` (32) and an untokenised 12, since these
+are control metrics rather than spacing. The only new drawing is one line glyph per `Place` value.
+
+## Implementation notes
+
+Every signal is already on the device — **no Supabase migration, no `get_catalog` change, no
+catalogue edit**:
+
+| Chip | Reads |
+|---|---|
+| Format | `tour.kind` + `tour.linkSource`, plus `isYouTubeShort` (ships) and a matching Instagram reel check (**new, one-liner**) |
+| Price | `tour.priceTier` (already a `get_catalog` key) |
+| Dozents | `tour.makerId` + `DataService.makers` (`toursByMakerId` already indexes it) |
+| Tags | `tour.tags` via `Tag.matches`, unchanged |
+
+Touch points: `HomeSharedState` (two filter fields become a small predicate set),
+`TagFilterChipRow` (toggles → four chips), the three sheet shapes, and the two filter sites that
+must stay in step — `HomeView.filteredTours` and `HomeRailsViewModel`.
+
+## Multi-select, and the one thing it rules out
+
+**Every chip is multi-select.** Picking several values inside a chip means *any of them*:
+`Instagram` + `TikTok` gets both platforms, `@hereinnyc` + `@urbanistariel` gets both feeds. Across
+chips it is *all of them*: `Museum` (Tags) + `Paid` (Price) gets museums that are paid. That is D6,
+unchanged — OR within a facet, AND across.
+
+`Tags` is the only chip where both halves of the rule are visible at once, and the group headings
+are what signal it: `Museum` + `Market` (both **Place**) gets either, while `Museum` + `Food`
+(**Place** + **Subject**) gets museums about food.
+
+**Settled 2026-09-12: `Audio` and `Posts` stay inside `Format` — they are not promoted to two
+chips.** The one-tap version was tempting for the commonest request, but two sibling chips would
+land on the AND side of the rule, where `Audio` AND `Posts` matches nothing — so that pair alone
+would have to OR, getting *wider* as you tap in a row where everything else gets narrower. Inside
+one chip they already OR, which is the behaviour wanted. No special case, no new rule.
+
+If the three taps ever grate, the cheap fix is to make the sheet's group headings selectable, so
+tapping **Audio tours** picks the whole group at once — no new chip and no new rule.
+
+## Where this came from
+
+An AllTrails screen recording the owner supplied (2026-09-11). Taken from it: a sheet holds only
+what its chip opened, the floating count pill, sort outside the row, icons on sheet chips.
+Deliberately not taken: sliders (our only range is duration, median 2 minutes) and the
+rounded-rectangle chip — ours is a capsule in SF Mono, which is the app's own voice.
