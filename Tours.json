@@ -85023,6 +85023,21 @@
         "9E957CD0-7932-5459-907F-1F819A7F287F",
         "E01AD5C9-4E46-5D1C-9B38-3C2DB83DD8C0"
       ]
+    },
+    {
+      "id": "d15b5e12-8c86-50aa-b75f-586a4b1e4ee7",
+      "name": "Iglesia de San José",
+      "description": "The second-oldest church still standing in the Americas, begun by Dominican friars in 1532 on the square that still carries its name. Its Gothic vaulting is the only such ceiling in the hemisphere, built by masons working from memory of a style already going out of fashion in Spain. For roughly three and a half centuries it held the remains of Juan Ponce de León, whose family endowed it, before they were moved to the cathedral a few streets away. The church was closed for decades and reopened in 2021 after a long restoration, and the paintings are what most visitors come for: one uncovered during that work after centuries behind later surfaces, and one — the Virgen de Belén — stolen one night in 1972 and never recovered.",
+      "latitude": 18.467629,
+      "longitude": -66.118258,
+      "city": "San Juan",
+      "address": "Calle del Cristo, Viejo San Juan",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iglesia-de-san-jos-urbanistariel_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4D6F1684-C8FC-53F8-9400-864E38EFB131",
+        "68429066-A1EF-522F-A351-BB354073A960"
+      ]
     }
   ],
   "linkPins": [
@@ -168777,8 +168792,8 @@
           "order": 0,
           "title": "Iglesia de San José",
           "caption": "I stood inside the second-oldest church in the Americas, where a 500-year-old painting vanished one night in 1972 and never came back. Do yo",
-          "latitude": 18.4675625,
-          "longitude": -66.1184375,
+          "latitude": 18.467629,
+          "longitude": -66.118258,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -168790,8 +168805,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 18.4675625,
-      "centroidLongitude": -66.1184375,
+      "centroidLatitude": 18.467629,
+      "centroidLongitude": -66.118258,
       "city": "San Juan",
       "country": "Puerto Rico",
       "primaryCategory": "sacredSites",
