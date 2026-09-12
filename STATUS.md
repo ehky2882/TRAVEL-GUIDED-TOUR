@@ -14,7 +14,9 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-09-12, 21:00 UTC (coordinator catch-up — **no content, no code; two findings and one merge**). `main` moved **58 commits** since this session last looked. Catalogue re-derived on `f76bfac`: **1,552 tours · 1,886 pins · 388 makers · 290 places · 1,924 tour stops (3,810 including one per pin) · 501 cities · 64 countries** — ⚠️ the `CLAUDE.md` Key-facts line read **1,870 / 387 / 499**, its **twenty-fifth** staleness, because [#834](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/834)'s 16 pins landed *after* the previous correction; counted and corrected. ✅ **[#795](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/795)'s SQL HAS been applied** — proved against the live RPC, not read off a board: stop objects come back with **no `transcriptText`**, so the 37.5% cut is real and serving. 🔴 **But a different paste is still owed and was on NO board: [#805](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/805)'s removal SQL never ran**, so the two `@pacificmodernism` Instagram pins #804 replaced are **still live on the map beside their replacements** — found by diffing the `tours` table (3,441 rows) against `Tours.json` (3,438); see § 2. The third extra row is a **private in-app maker upload** and is correct. 🔴 **[#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776) is no longer conflicted** — re-tested, merges clean; it has been waiting on the owner since 9 Sep and is the only item blocked specifically on them rather than on another session. [#798](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/798) (docs-only, China reachability) **merged** as `f76bfac` under Rule 4 after sitting two days; squash verified to carry both files. App Store re-checked from Apple: still **1.1.1**, released 1 Sep. Latest TestFlight build: **150**. Supabase snapshot rebuilt **17:37 UTC** by #834's own seed; `get_catalog` 200 at TTFB 1.58 s. **Merged since the last look, in brief:** #749 (the 54-pin batch that was stuck for a week), #795, #835 filter chips, a **places expansion 181 → 290** across #801/#806/#807/#809/#818/#822 with several real coordinate defects repaired, #785 (a link pin that cannot load now says so), and #825/#827 (the website says the app is out). **All egress probes this session used the cheap forms in `CLAUDE.md` § Egress**; the one full-catalogue read was capped at 600 KB by stopping the stream.)
+**Last verified:** 2026-09-12, 21:20 UTC (**the owner pasted the SQL — the two duplicate pins are gone.**) Verified four ways rather than taken on trust: row count **3,441 → 3,439**, both pin ids return empty, the orphaned `Instagram @pacificmodernism` maker row is gone (so the conditional delete fired and it held no other pins), and `catalog_snapshot_age()` reads **21:17:56 UTC** — the rebuild is what makes a paste reach a phone, so it is the check that matters. ✅ **Both TikTok replacements survive**; after a deletion the risk is losing the survivor, not the duplicate. § 2's item is marked cleared, with the process rule kept — **a merged PR that needs an owner paste is not finished; it moves to § 2** — because that is what let it sit live for two days. **Still open and waiting on the owner: [#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776)**, which merges cleanly and needs an OK plus a two-minute device check.
+
+**Previously:** 2026-09-12, 21:00 UTC (coordinator catch-up — **no content, no code; two findings and one merge**). `main` moved **58 commits** since this session last looked. Catalogue re-derived on `f76bfac`: **1,552 tours · 1,886 pins · 388 makers · 290 places · 1,924 tour stops (3,810 including one per pin) · 501 cities · 64 countries** — ⚠️ the `CLAUDE.md` Key-facts line read **1,870 / 387 / 499**, its **twenty-fifth** staleness, because [#834](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/834)'s 16 pins landed *after* the previous correction; counted and corrected. ✅ **[#795](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/795)'s SQL HAS been applied** — proved against the live RPC, not read off a board: stop objects come back with **no `transcriptText`**, so the 37.5% cut is real and serving. 🔴 **But a different paste is still owed and was on NO board: [#805](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/805)'s removal SQL never ran**, so the two `@pacificmodernism` Instagram pins #804 replaced are **still live on the map beside their replacements** — found by diffing the `tours` table (3,441 rows) against `Tours.json` (3,438); see § 2. The third extra row is a **private in-app maker upload** and is correct. 🔴 **[#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776) is no longer conflicted** — re-tested, merges clean; it has been waiting on the owner since 9 Sep and is the only item blocked specifically on them rather than on another session. [#798](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/798) (docs-only, China reachability) **merged** as `f76bfac` under Rule 4 after sitting two days; squash verified to carry both files. App Store re-checked from Apple: still **1.1.1**, released 1 Sep. Latest TestFlight build: **150**. Supabase snapshot rebuilt **17:37 UTC** by #834's own seed; `get_catalog` 200 at TTFB 1.58 s. **Merged since the last look, in brief:** #749 (the 54-pin batch that was stuck for a week), #795, #835 filter chips, a **places expansion 181 → 290** across #801/#806/#807/#809/#818/#822 with several real coordinate defects repaired, #785 (a link pin that cannot load now says so), and #825/#827 (the website says the app is out). **All egress probes this session used the cheap forms in `CLAUDE.md` § Egress**; the one full-catalogue read was capped at 600 KB by stopping the stream.)
 
 **Previously:** 2026-09-12 (session 160 — **CODE, awaiting owner device review.** The home map's filter row is rebuilt: the flat eighteen-toggle tag row becomes **All · Format · Price · Dozents · Tags**, each chip opening a panel, every chip multi-select. Open as [#835](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/835), on **build 145** — ⚠️ **never compiled: this session has no Mac, so CI on the PR is the first honest check and the device is the second.** Designed in Claude Design first and iterated against the owner's AllTrails reference, ~30 artboards, spec of record in `docs/filter-chips-design.md`. 🔴 **The design nearly shipped with no Price chip on a false reading of `Tours.json`** — it reads `priceTier: nil` for every tour **and always will**, because `seed_from_toursjson.py` omits the column deliberately; the live DB has **66 paid tours** (all multiStop, $0.99), read with the 47-byte count query, never the 3.4 MB RPC. Live figures the taxonomy was cut against: **1,553 tours vs 1,888 pins** (1,235 TikTok · 634 Instagram · 19 YouTube) — and the pin count moved 1,796 → 1,888 **mid-session**, which is the re-derive rule arriving on schedule. Counts beside each option are **contextual, not global** (`Contemporary` matches 401 alone and **zero** alongside four other picks), which is the part most likely to ship subtly wrong and is where the 17 tests are weighted. Chip heights are one decision: **44 pt in the row** (Apple's minimum, one-handed while walking) and **32 pt in the panels inside a 48 pt frame**, because a thumb feels the pitch rather than the drawn height. **Sort on the drawer header is designed and deliberately NOT built** — the one open item.)
 
@@ -160,27 +162,40 @@ as though they were pictures.
 
 ## 2. Blocked on owner — outside the repo
 
-**🔴 A MERGED PR LEFT AN SQL PASTE OWED AND NOBODY PUT IT ON THIS BOARD — TWO DUPLICATE PINS ARE LIVE RIGHT NOW.**
-Found 2026-09-12 by diffing the live `tours` table against `Resources/Tours.json`: the database holds
-**3,441 rows against the catalogue's 3,438**, and every catalogue entry is present, so nothing is
-*missing* — three rows are *extra*. Two of them are the `@pacificmodernism` **Instagram** pins that
+**✅ CLEARED 2026-09-12, 21:17 UTC — the owner pasted the SQL and the duplicates are gone.**
+**Verified after the paste, four ways:** the row count went **3,441 → 3,439** (exactly two fewer),
+both pin ids return empty, the orphaned `Instagram @pacificmodernism` maker row is gone — so the
+conditional delete fired, confirming it held no other pins — and **`catalog_snapshot_age()` reads
+`2026-09-12T21:17:56Z`**, which is the part that matters: the RPC serves a materialised snapshot, so
+the paste only reaches a phone because that last line rebuilt it. ✅ **Both TikTok replacements
+survive** (`145 Natoma`, `The Wind Harp`, one each on maker `537cc385`), which is the check worth
+doing after any deletion — the risk is removing the survivor, not the duplicate.
+
+**What it was.** Found the same day by diffing the live `tours` table against `Resources/Tours.json`:
+the database held **3,441 rows against the catalogue's 3,438**, and every catalogue entry was
+present, so nothing was *missing* — three rows were *extra*. Two of them are the `@pacificmodernism` **Instagram** pins that
 [#804](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/804) replaced with TikTok equivalents:
 **145 Natoma Street** and **The Wind Harp**, both San Francisco. `seed_from_toursjson.py` is
 **upsert-only**, so deleting them from `Tours.json` reached the gh-pages mirror and the bundled seed
 and **never reached Postgres — the app's primary source.** The snapshot is rebuilt from that table,
 so the map is serving the old pin and the new one on the same spot.
 
-  - **Fix: paste `backend/remove_pacificmodernism_instagram_duplicates.sql` into the Supabase SQL
-    Editor.** It was written by [#805](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/805) for
-    exactly this, names the two ids explicitly, and ends with `select public.refresh_catalog_snapshot();`
-    — **that last line is load-bearing**, or the RPC keeps serving them.
+  - **The fix was `backend/remove_pacificmodernism_instagram_duplicates.sql`**, written by
+    [#805](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/805) for exactly this. It named the two
+    ids explicitly and ended with `select public.refresh_catalog_snapshot();` — **that last line was
+    load-bearing**, and the snapshot timestamp above is the proof it ran.
   - ✅ **The third extra row is NOT a defect and must not be deleted.** `Pigalle Duperré Basketball`
     (Paris) belongs to maker **"Wes the Wanderer"**, has a real `user_id`, a Supabase Storage hero and
     `is_private = true` — an **in-app maker upload**, which lives only in Postgres by design. A
     catalogue-vs-database diff will always show maker uploads as extra; that is correct behaviour.
-  - 🔴 **The durable gap is the process, not the SQL.** #805 merged on 10 Sep carrying an owner action,
-    and no session put it in § 2 — so it sat unowed-to-anyone for two days while the defect it fixes
-    was live. **A merged PR that needs an owner paste is not finished; it moves here.**
+  - 🔴 **The durable gap was the process, not the SQL, and it outlives this item.** #805 merged on
+    10 Sep carrying an owner action, and no session put it in § 2 — so it sat owed to nobody for two
+    days while the defect it fixes was live on the map. **A merged PR that needs an owner paste is not
+    finished; it moves here.** The paste itself took the owner under a minute once it was asked for.
+  - ⚠️ **This is only findable by diffing the database against the catalogue** — `validate-tours.swift`
+    passes, CI compiles, every URL 200s, and the app shows two pins where one belongs. The diff recipe,
+    with the two traps that make it lie, is in `CLAUDE.md` § Egress. **Worth running after any content
+    removal.**
 
 **🔴 THE SUPABASE OVER-QUOTA EMAIL WAS OUR OWN TOOLING, AND THE LINE ITEM WAS MINE.** The owner was
 emailed on **2026-09-08** for exceeding the free egress quota. The largest single cause was a check
