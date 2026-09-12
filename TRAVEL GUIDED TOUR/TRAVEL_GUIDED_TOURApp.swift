@@ -335,7 +335,8 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         SplashView(
                             handOff: launchState.handOffProgress,
                             reduceMotion: reduceMotion,
-                            onShown: { launchState.markSplashShown() }
+                            onShown: { launchState.markSplashShown() },
+                            onBreathStart: { launchState.markBreathStarted(at: $0) }
                         )
                     }
                 }
@@ -370,6 +371,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
             let ready = LaunchGate.isReady(
                 elapsed: Date().timeIntervalSince(startedAt),
                 shownFor: launchState.splashShownAt.map { Date().timeIntervalSince($0) },
+                breathIsBright: SplashView.breathStaysBright(
+                    sinceBreathStart: launchState.breathStartedAt.map { CACurrentMediaTime() - $0 },
+                    reduceMotion: reduceMotion
+                ),
                 catalogLoaded: !dataService.tours.isEmpty,
                 locationSettled: LaunchGate.locationSettled(
                     status: locationManager.authorizationStatus,
@@ -400,6 +405,23 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // Simulator: a frame with the opening barely started and the module
         // fully settled.
         try? await Task.sleep(for: .milliseconds(32))
+        // 🔴 RE-CHECK THE BREATH AT THE LAST MOMENT, and only go on the way INTO
+        // the bright stretch. The gate's check happens before the unhide and the
+        // frame wait above, and the zoom's first frame can land a few hundred ms
+        // after any decision while the app is still building behind the splash.
+        // Measured in the Simulator: a hand-off approved at >= 80% started
+        // drawing at ~60%, and another at ~37% — a visible jump to the solid zoom
+        // disc. `breathStaysBright` requires brightness now AND
+        // `SplashView.handOffLatency` ahead. Capped at one full breath so a
+        // starved loop can still find a bright moment but never holds the launch.
+        let brightDeadline = Date().addingTimeInterval(1.7)
+        while Date() < brightDeadline,
+              !SplashView.breathStaysBright(
+                  sinceBreathStart: launchState.breathStartedAt.map { CACurrentMediaTime() - $0 },
+                  reduceMotion: reduceMotion
+              ) {
+            try? await Task.sleep(for: .milliseconds(8))
+        }
         await playHandOff()
         if let link = pendingDeepLink {
             pendingDeepLink = nil

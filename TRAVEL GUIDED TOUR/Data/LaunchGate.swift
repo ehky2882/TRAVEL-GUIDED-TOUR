@@ -55,15 +55,21 @@ enum LaunchGate {
     ///   - locationSettled: see `locationSettled(status:hasFix:)`.
     ///   - imagesReady: the first screenful of card photos is in the image
     ///     cache, or its own deadline passed. See `LaunchImageWarmup`.
+    ///   - breathIsBright: the breathing mark is bright enough that swapping it
+    ///     for the solid zoom disc cannot be seen — `SplashView.breathIsBright`.
     static func isReady(
         elapsed: TimeInterval,
         shownFor: TimeInterval?,
+        breathIsBright: Bool,
         catalogLoaded: Bool,
         locationSettled: Bool,
         imagesReady: Bool
     ) -> Bool {
-        guard let shownFor else { return elapsed >= neverShownCeiling }
-        guard shownFor >= floor else { return false }
+        // The absolute backstop overrides everything, including a breath that
+        // somehow never reads bright: nobody is ever stranded on the splash.
+        if elapsed >= neverShownCeiling { return true }
+        guard let shownFor else { return false }
+        guard shownFor >= floor, breathIsBright else { return false }
         if elapsed >= ceiling { return true }
         return catalogLoaded && locationSettled && imagesReady
     }
@@ -169,6 +175,16 @@ final class LaunchState {
     func markSplashShown(at date: Date = Date()) {
         guard splashShownAt == nil else { return }
         splashShownAt = date
+    }
+
+    /// The media time (`CACurrentMediaTime`) the mark's breath is anchored to,
+    /// so the gate can compute how bright it is and hand off on a bright moment.
+    private(set) var breathStartedAt: CFTimeInterval?
+
+    /// Record the breath's anchor. Only the first call counts.
+    func markBreathStarted(at mediaTime: CFTimeInterval) {
+        guard breathStartedAt == nil else { return }
+        breathStartedAt = mediaTime
     }
 
     /// 0 → 1 across the hand-off. **Every part of the choreography reads this

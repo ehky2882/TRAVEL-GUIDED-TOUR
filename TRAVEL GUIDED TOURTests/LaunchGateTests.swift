@@ -23,6 +23,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor - 0.01,
                 shownFor: LaunchGate.floor - 0.01,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -35,6 +36,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor,
                 shownFor: LaunchGate.floor,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -47,6 +49,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
                 shownFor: LaunchGate.floor + 0.5,
+                breathIsBright: true,
                 catalogLoaded: false,
                 locationSettled: true,
                 imagesReady: true
@@ -59,6 +62,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
                 shownFor: LaunchGate.floor + 0.5,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: false,
                 imagesReady: true
@@ -73,6 +77,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
                 shownFor: LaunchGate.floor,
+                breathIsBright: true,
                 catalogLoaded: false,
                 locationSettled: false,
                 imagesReady: true
@@ -94,6 +99,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: 5,
                 shownFor: 0.77,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -103,6 +109,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: 5 + LaunchGate.floor,
                 shownFor: LaunchGate.floor,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -116,6 +123,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
                 shownFor: nil,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: true
@@ -125,6 +133,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.neverShownCeiling,
                 shownFor: nil,
+                breathIsBright: true,
                 catalogLoaded: false,
                 locationSettled: false,
                 imagesReady: false
@@ -206,6 +215,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.floor + 0.5,
                 shownFor: LaunchGate.floor + 0.5,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: false
@@ -220,6 +230,7 @@ final class LaunchGateTests: XCTestCase {
             LaunchGate.isReady(
                 elapsed: LaunchGate.ceiling,
                 shownFor: LaunchGate.floor,
+                breathIsBright: true,
                 catalogLoaded: true,
                 locationSettled: true,
                 imagesReady: false
@@ -493,6 +504,71 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertTrue(Deferred.shouldMount(splashShown: true, fallbackElapsed: false))
         XCTAssertTrue(Deferred.shouldMount(splashShown: false, fallbackElapsed: true))
         XCTAssertLessThan(Deferred.fallbackDelay, LaunchGate.ceiling)
+    }
+
+    /// 🔴 The zoom must not start on a faint breath — the switch to the solid
+    /// disc would flash (owner: "wait for a bright moment"). Everything else is
+    /// ready here and it still waits; only the absolute backstop overrides.
+    func test_notReadyWhileTheBreathIsFaint() {
+        XCTAssertFalse(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.ceiling,
+                shownFor: LaunchGate.floor,
+                breathIsBright: false,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+        XCTAssertTrue(
+            LaunchGate.isReady(
+                elapsed: LaunchGate.neverShownCeiling,
+                shownFor: LaunchGate.floor,
+                breathIsBright: false,
+                catalogLoaded: true,
+                locationSettled: true,
+                imagesReady: true
+            )
+        )
+    }
+
+    /// Bright means ≥ 80% — about a third of every breath, so the extra wait
+    /// averages ~0.5s and never exceeds the dim two-thirds (~1.07s).
+    @MainActor
+    func test_breathBrightness_isAboutAThirdOfEachBreath() {
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 0, reduceMotion: false))
+        XCTAssertFalse(SplashView.breathIsBright(sinceBreathStart: 0.8, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 1.6, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 0.8, reduceMotion: true))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: nil, reduceMotion: false))
+        let samples = (0..<1600).map { Double($0) / 1000 }
+        let bright = samples.filter { SplashView.breathIsBright(sinceBreathStart: $0, reduceMotion: false) }.count
+        XCTAssertEqual(Double(bright) / Double(samples.count), 1.0 / 3.0, accuracy: 0.02)
+    }
+
+    /// 🔴 The zoom starts only on the way INTO the bright stretch. Bright-but-
+    /// fading is refused: the zoom's first frame can land a few hundred ms after
+    /// the decision, and a decision at the end of the bright stretch was
+    /// measured drawing the zoom at ~37%.
+    @MainActor
+    func test_breathStaysBright_onlyOnTheWayIntoTheBrightWindow() {
+        // Peak at 1.6s; bright (>= 0.8) is 1.333–1.867s.
+        XCTAssertTrue(SplashView.breathStaysBright(sinceBreathStart: 1.4, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathIsBright(sinceBreathStart: 1.7, reduceMotion: false), "bright right now…")
+        XCTAssertFalse(SplashView.breathStaysBright(sinceBreathStart: 1.7, reduceMotion: false), "…but faded by the time the zoom draws")
+        XCTAssertFalse(SplashView.breathStaysBright(sinceBreathStart: 0.8, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathStaysBright(sinceBreathStart: 0.8, reduceMotion: true))
+        XCTAssertTrue(SplashView.breathStaysBright(sinceBreathStart: nil, reduceMotion: false))
+        XCTAssertGreaterThanOrEqual(SplashView.handOffLatency, 0.3)
+    }
+
+    @MainActor
+    func test_markBreathStartedKeepsTheFirstAnchor() {
+        let state = LaunchState()
+        XCTAssertNil(state.breathStartedAt)
+        state.markBreathStarted(at: 10)
+        state.markBreathStarted(at: 20)
+        XCTAssertEqual(state.breathStartedAt, 10)
     }
 
     @MainActor

@@ -26,6 +26,10 @@ struct SplashView: View {
     /// screen. The launch gate times the visible breath from this — see
     /// `LaunchState.markSplashShown`.
     var onShown: () -> Void = {}
+    /// Called once with the media time (`CACurrentMediaTime`) the breath's
+    /// layer animation is anchored to, so the launch gate can tell how bright
+    /// the mark is at any instant — see `breathIsBright`.
+    var onBreathStart: (CFTimeInterval) -> Void = { _ in }
 
     /// When the breathing started. The breath is read off the clock, not animated.
     @State private var breathStart = Date()
@@ -194,6 +198,39 @@ struct SplashView: View {
         return resting + (1 - resting) * solid
     }
 
+    /// How bright the breath must be before the zoom may start, so the switch
+    /// from the breathing layer to the solid disc cannot be seen. Owner decision
+    /// 2026-09-12: wait for a bright moment — about a third of every breath, so
+    /// ~0.5s extra on average and never more than ~1.1s.
+    static let handOffBrightness: Double = 0.8
+
+    /// Whether the breath is bright enough to hand off right now. With Reduce
+    /// Motion (no breath) or before the breath has started, there is nothing to
+    /// wait for.
+    static func breathIsBright(sinceBreathStart elapsed: TimeInterval?, reduceMotion: Bool) -> Bool {
+        guard !reduceMotion, let elapsed else { return true }
+        return breath(elapsed: elapsed) >= handOffBrightness
+    }
+
+    /// How long after a hand-off decision the zoom's first frame can land.
+    ///
+    /// 🔴 Measured, not assumed: the breath's phase was exact (predicted 0.737 vs
+    /// the layer's actual 0.749 at the decision), yet a recorded launch started
+    /// the zoom at ~37% — because a decision taken at the END of the bright
+    /// stretch draws a few hundred ms later, after the breath has faded, and the
+    /// main thread is still busy building the app behind the splash.
+    static let handOffLatency: TimeInterval = 0.35
+
+    /// Whether the breath is bright now AND will still be bright when the zoom's
+    /// first frame draws — i.e. we are on the way INTO the bright stretch, not
+    /// leaving it. About a seventh of each breath, so ~0.7s extra on average and
+    /// at most ~1.4s.
+    static func breathStaysBright(sinceBreathStart elapsed: TimeInterval?, reduceMotion: Bool) -> Bool {
+        guard !reduceMotion, let elapsed else { return true }
+        return breathIsBright(sinceBreathStart: elapsed + 0.05, reduceMotion: false)
+            && breathIsBright(sinceBreathStart: elapsed + handOffLatency, reduceMotion: false)
+    }
+
     /// A cosine is an ease-in-out by construction, so this is the same curve
     /// the original `.easeInOut(duration: 0.8).repeatForever(autoreverses:)`
     /// drew, starting at full opacity.
@@ -217,20 +254,41 @@ struct SplashView: View {
 
     // MARK: - The mark
 
+    /// The solid brass disc the zoom grows — exactly the mark #559 shipped and
+    /// the owner approved.
+    private func solidDisc(in size: CGSize) -> some View {
+        Circle()
+            .fill(AtlasColors.mapPin)
+            .frame(width: Self.markDiameter, height: Self.markDiameter)
+            .scaleEffect(discScale(in: size))
+            .opacity(markOpacity)
+    }
+
     /// The brass disc: breathing while it rests, then growing and dissolving
     /// through the hand-off. The growth and dissolve stay on `handOff` exactly
     /// as before, so they still move on the same number as the ground.
     @ViewBuilder
     private func disc(in size: CGSize) -> some View {
         #if canImport(UIKit)
-        SplashBreathingDisc(
-            diameter: Self.markDiameter,
-            isBreathing: !reduceMotion && handOff == 0,
-            onShown: onShown
-        )
-            .frame(width: Self.markDiameter, height: Self.markDiameter)
-            .scaleEffect(discScale(in: size))
-            .opacity(markOpacity)
+        // 🔴 THE ZOOM IS DRAWN BY THE ORIGINAL SOLID DISC, NOT THE BREATHING
+        // LAYER. With the layer growing, the zoom started from wherever the
+        // breath happened to be — measured in the Simulator as a pale, ~25%
+        // brass circle filling the screen, the "solid as it expands" look the
+        // owner asked for in #559 undone. The swap is invisible because the gate
+        // only hands off on a bright moment of the breath (`breathIsBright`).
+        if handOff > 0 {
+            solidDisc(in: size)
+        } else {
+            SplashBreathingDisc(
+                diameter: Self.markDiameter,
+                isBreathing: !reduceMotion,
+                onShown: onShown,
+                onBreathStart: onBreathStart
+            )
+                .frame(width: Self.markDiameter, height: Self.markDiameter)
+                .scaleEffect(discScale(in: size))
+                .opacity(markOpacity)
+        }
         #else
         // No UIKit (the macOS build): read the breath off a clock instead.
         TimelineView(.animation(paused: reduceMotion)) { timeline in
@@ -250,21 +308,24 @@ struct SplashView: View {
 /// The splash mark as a layer, so its breath is a Core Animation animation the
 /// render server keeps running however busy the main thread is.
 ///
-/// ⚠️ The breath is a PRESENTATION animation only — the layer's model opacity
-/// stays 1 the whole time. That is what makes the hand-off safe, and it is the
-/// exact problem #559 cited when it dropped the fade: a SwiftUI animation's
-/// in-flight opacity was still on screen at the first frame of the hand-off, so
-/// the disc started growing half-transparent. Here, when breathing stops the
-/// animation is removed and a 50ms settle carries the layer from wherever the
-/// breath was up to solid, on the render server — long before the disc covers
-/// anything.
+/// 🔴 THIS VIEW ONLY BREATHES; IT NEVER ZOOMS. The hand-off swaps it for the
+/// solid SwiftUI disc (`SplashView.solidDisc`). An earlier revision grew this
+/// layer and tried to settle it to solid with a 50ms animation on the way in;
+/// the settle did not take, and the zoom was measured filling the screen at
+/// ~25% brass. Fading a disc and growing it solid are two jobs — keep them in
+/// two views.
+///
+/// The breath is anchored to an explicit `beginTime`, reported back through
+/// `onBreathStart`, so the gate can compute its exact phase and hand off only
+/// while it is bright.
 struct SplashBreathingDisc: UIViewRepresentable {
-    /// The resting size. The hand-off grows the disc with a transform, which
-    /// never changes its bounds, so the corner radius is set once.
+    /// The resting size. The corner radius is set once from it.
     var diameter: CGFloat
     var isBreathing: Bool
     /// Called once, on the first frame the disc is actually on screen.
     var onShown: () -> Void = {}
+    /// Called once with the media time the breath animation is anchored to.
+    var onBreathStart: (CFTimeInterval) -> Void = { _ in }
 
     static let breathKey = "atlas.splash.breath"
 
@@ -297,19 +358,16 @@ struct SplashBreathingDisc: UIViewRepresentable {
 
     func updateUIView(_ view: UIView, context: Context) {
         let layer = view.layer
-        if isBreathing {
-            if layer.animation(forKey: Self.breathKey) == nil {
-                layer.add(Self.breathAnimation(), forKey: Self.breathKey)
-            }
-        } else if layer.animation(forKey: Self.breathKey) != nil {
-            let current = layer.presentation()?.opacity ?? 1
-            layer.removeAnimation(forKey: Self.breathKey)
-            let settle = CABasicAnimation(keyPath: "opacity")
-            settle.fromValue = current
-            settle.toValue = 1.0
-            settle.duration = 0.05
-            layer.add(settle, forKey: "atlas.splash.settle")
-        }
+        guard isBreathing, layer.animation(forKey: Self.breathKey) == nil else { return }
+        let breath = Self.breathAnimation()
+        // An explicit beginTime makes the breath's phase exact against
+        // CACurrentMediaTime, however long the first commit is delayed.
+        let start = CACurrentMediaTime()
+        breath.beginTime = start
+        layer.add(breath, forKey: Self.breathKey)
+        // Reported on the next turn: this runs inside a view update, and the
+        // receiver writes observable state.
+        DispatchQueue.main.async { onBreathStart(start) }
     }
 }
 
