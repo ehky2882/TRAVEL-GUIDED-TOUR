@@ -179,41 +179,50 @@ gutters. Two sizes, for two different jobs:
 | | Height | Padding | Gaps | Effective tap target |
 |---|---|---|---|---|
 | **Row** (over the map) | **44** — `AtlasSpacing.searchBarHeight` | 0 16 | 8 | 52 pt |
-| **Panel options** | **32** | 0 13 | **row 12 · column 7** | **44 pt** |
+| **Panel options** | **32** | 0 13 | **row 16 · column 10** | **48 pt** |
 
-**Why 32 in the panels.** The 44 pt row runs the Tags panel to ~790 px, which pushes `Era` and
-`Architect` below the fold; 32 brings it to ~655 px, so the whole vocabulary is on one screen.
+**Why 32 in the panels.** At 44 pt the Tags panel runs to ~940 px — nearly two screens. 32 brings
+it to ~780 px, about a fifth of a screen of scrolling.
 
-**Why the row gap is 12 and not 8.** What a thumb cares about is the **vertical pitch** — the chip
-plus the gap it can absorb — not the drawn height. Widening only the ROW gap (columns stay at 7,
-where a 60–180 pt wide chip was never the problem) takes the target from 40 pt to **44 pt, the HIG
-minimum**, for about 30 px of panel height. `.contentShape(Rectangle())` over the padded frame is
-what makes the absorbed gap real.
+**Why the gaps are 16 and 10.** What a thumb cares about is the **vertical pitch** — the chip plus
+the gap it can absorb — not the drawn height. A 32 pt chip with a 16 pt row gap is a **48 pt
+target**, comfortably past the 44 pt HIG minimum rather than exactly on it.
+`.contentShape(Rectangle())` over the padded frame is what makes the absorbed gap real. Columns
+matter less (a 60–180 pt wide chip was never the problem), so 10 is for air, not for aim.
 
 ⚠️ **22 pt was tried and rejected.** It reaches ~410 px — far tighter than needed — but its pitch
 is **28 pt**, 16 short, and this is an app used one-handed while walking. A mis-tap is not
 harmless: with contextual counts, one wrong chip can take the result to zero, leaving you to work
 out which of forty you hit. 22 pt also cannot grow with Dynamic Type.
 
-⚠️ **"One screen" is 3 px optimistic.** 655 px against a ~652 px budget (panel top at 96, ~96
-reserved for the pill), so in practice the `Architect` row may peek under it. Starting the panel
-20 px higher closes the gap; either outcome is fine, but do not claim it fits exactly.
+⚠️ **The Tags panel does NOT fit one screen, and that is accepted.** ~780 px against a ~650 px
+budget (panel top at 96, ~96 reserved for the pill) — `Architect` and the tail of `Era` sit below
+the fold. It briefly did fit, at 12/7 spacing, and that was my argument for 32 pt over 44 pt; the
+argument survives on its own numbers (44 pt would be ~940 px). **Consequence: the pinned group
+heading is load-bearing, not a nicety** — you will scroll past `PLACE` into `SUBJECT`, and a chip
+reading `Contemporary` means nothing without `ERA` above it. If the scrolling grates, promote fewer
+values per group rather than tightening the spacing back.
 
 **Kept larger on purpose:** the `Architect` search field (40 pt — a text input, not a chip) and the
 over-filtered screen's two buttons (44 pt — pressed once, in frustration).
 
 ### Panel header and layout (owner review, 2026-09-12)
 
-**The title is the caption font** — 13 pt SF Mono, uppercase, 0.06 em tracking, left-aligned, with
-`Clear` parked on the right. Not a sans semibold sheet title: `HomeDrawerContent`'s count header is
-already `AtlasTypography.caption` with tracking and uppercase copy, so panel chrome is mono in this
-app. Hierarchy comes from size and colour, not typeface — title 13 pt in `primaryText`, group
-labels 11 pt in `secondaryText`. Centred was tried and rejected: `Clear` has to sit on the right
-regardless, so a centred title is never centred in the space it occupies.
+**The title is the caption font** — 13 pt SF Mono, uppercase, 0.06 em tracking. Not a sans
+semibold sheet title: `HomeDrawerContent`'s count header is already `AtlasTypography.caption` with
+tracking and uppercase copy, so panel chrome is mono in this app. Hierarchy comes from size and
+colour, not typeface — title 13 pt in `primaryText`, group labels 11 pt in `secondaryText`.
 
-**Spacing:** 16 pt between the header and the first option, 20 pt above each group label. The 12 pt
-gap between options is load-bearing (it is what makes the 44 pt target) — widen it freely, never
-shrink it.
+**Text is centred** (owner, 2026-09-12): the title, the group labels, and `Format`'s stacked
+column. `Clear` is positioned absolutely at the right rather than as a flex sibling, so the title
+centres on the panel and not on the space left beside it. Two exceptions: a chip's own label is
+already centred inside its capsule and its count sits beside it, so centring that pair
+independently would make the numbers wander; and the `Dozent` rows are full-width list rows with an
+avatar, so centring the name would unmoor the column.
+
+**Spacing:** 24 pt between the header and the first option, 28 pt above each group label, 16 pt
+between option rows and 10 pt across. The 16 pt row gap is load-bearing (it is what makes the 48 pt
+target) — widen it freely, never shrink it.
 
 **`Format` stacks; every other panel wraps.** One option per row, left-aligned, in `Format` only.
 It has five options with a real pecking order — 1,480 audio stops down to 19 YouTube posts — so a
