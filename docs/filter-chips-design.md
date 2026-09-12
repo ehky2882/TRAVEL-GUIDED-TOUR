@@ -1,34 +1,30 @@
-# Filter chips — the facet row
+# Filter chips — the four-chip row
 
 **Status:** design agreed, not yet built. Canvas:
 <https://claude.ai/code/artifact/b5da2e3e-cd23-4484-807b-c8e74cb70d59>
 
 Replaces the flat multi-select row shipped in Tag Phase 2 (`Features/Home/TagFilterChipRow.swift`,
-owner decision D8). The combine rule is unchanged — **OR within a facet, AND across** (D6,
-`Tag.matches`). What changes is the row: eighteen toggles become **one door plus nine facets**,
-each opening its own sheet.
-
-## The row
+owner decision D8). The combine rule is **unchanged** — OR within a facet, AND across (D6,
+`Tag.matches`). What changes is the row: eighteen toggles become **four chips**, each opening a
+sheet.
 
 ```
-≡ All · Format ⌄ · Price ⌄ · Dozent ⌄ · Experience ⌄ · Type ⌄ · Theme ⌄ · Era ⌄ · Nearby ⌄ · Architect ⌄
+Format ⌄  ·  Price ⌄  ·  Dozent ⌄  ·  Tags ⌄
 ```
 
-Left to right: what the thing is → what it costs → whose it is → how it feels → what it is →
-what it is about → when → how far → by whom.
+The row splits along a real seam. Three **structural fields** — `kind`, `price_tier`, `makerId` —
+get a chip each, because each asks a different kind of question. The **entire controlled
+vocabulary** gets one chip, because it is all the same kind of question.
 
 | Chip | Values | Notes |
 |---|---|---|
-| **≡ All** | every facet below, one scroll | Never fills brass — it is a door, not a filter. Badge counts the values switched on behind it. |
-| **Format** | Audio stop 1,480 · Audio walk 72 ‖ TikTok 1,106 · Instagram 592 · YouTube 19 | Grouped **Audio tours** / **Pinned posts**. The catalogue's real fault line and the row says nothing about it today. |
-| **Price** | Free 3,283 · Paid 66 | Two values, not bands — see below. |
+| **Format** | Audio stop 1,480 · Audio walk 72 ‖ TikTok 1,106 · Instagram 592 · YouTube 19 | Grouped **Audio tours** / **Pinned posts** — presentation only; it is one field, so its values OR. |
+| **Price** | Free 3,283 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
 | **Dozent** | 377 · 34 studios · 343 pinned | Search. Groups: Studio Dozents / Pinned Dozents. |
-| **Experience** | 8 · Designed by a Master 857 → After Dark 93 | The only facet phrased from the visitor's side, hence high in the row. |
-| **Type** | 14 · Notable Building 742 → Bridge 44 | Icons earn their place here — one line glyph per type. |
-| **Theme** | 17 · History 1,361 → LGBTQ+ 16 | Longest grid: 8 chips then More. |
-| **Era** | 11 · Contemporary 401 → Gilded Age 36 | |
-| **Nearby** | Walking distance · 5 km · 25 km | Single-select, no counts (they depend on where the viewer is). |
-| **Architect** | 429 · largest is 23 | Search. |
+| **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
+
+A **Clear ×** chip appears at the head of the row the moment anything is on. **Sort** sits on the
+drawer header, opposite the result count.
 
 **Counts are over all 3,269 pins — 1,552 tours and 1,717 link pins — because the chips filter the
 map and the map carries both.** That denominator overturns the Phase 2 call that kept Art Deco,
@@ -36,28 +32,58 @@ Brutalist and Bridge out of the row for being thin: against 3,269 they are 50, 5
 
 ⚠️ **Re-derive every number before building.** These come from `Resources/Tours.json` in this
 checkout and the live catalogue is already ahead of it — 1,796 link pins against this file's 1,717,
-counted on 2026-09-12. Price is the one that can never come from the file at all; see below.
+counted 2026-09-12. Price can never come from the file at all.
 
-### Not chips, and why
+## Why one Tags chip rather than a chip per facet
 
-| | |
+Because **the number of chips is presentational, not semantic.** `Tag.matches` takes one flat
+`Set<String>` of tags and derives each tag's facet itself via `Tag.facetByTag`, then ORs within a
+facet and ANDs across. The shipped app already passes it a single `selectedTags` set. So one chip
+filters identically to five: `Place` AND `Subject` still asks "a market, about empire" — you just
+pick both from one sheet, under two headings.
+
+What the merge buys: the row stops asking anyone to know what "Theme" means. What it costs: the
+Tags sheet is the longest screen in the app, and a collapsed chip reading `Museum +2` says less
+than three chips each showing their own value. **Mitigation:** a `More` per group, and show the
+single value when exactly one is picked, otherwise `Tags · 4`.
+
+### The groups inside Tags, renamed to the question each answers
+
+| Was | Is | Asks |
+|---|---|---|
+| Type | **Place** | what it *is* — a noun you could point at |
+| Theme | **Subject** | what the narration is *about* |
+| Experience | **Why go** | what you get out of being there |
+
+Borough Market is the clean case: a **Market**, about **food · history · commerce**, promising
+nothing in particular. Notre-Dame de Paris is a **Religious Building**, about **faith · history**,
+and an **Iconic Landmark**.
+
+**Four values are demoted** into their group's `More` — still selectable, just not promoted:
+
+| Value | Why |
 |---|---|
-| City | the map answers "where" by panning; 116 cities is a search, not a chip |
-| Duration | median audio stop is 2 min 14 s — Format already separates the stop from the 11-minute walk |
-| Rating | we collect none |
-| Purchased | entitlement state, like Saved and Downloaded — belongs in the All sheet |
-| Saved / Downloaded | personal, not editorial — lives in the All sheet |
-| Video tour | one tour (`via-57-west`). The value stays in the model; the option appears when it clears ~20 |
+| `Faith` | 88% of `Religious Building` is also `Faith`, and 77% the other way — one fact, two chips |
+| `Architecture` | 82% of `Designed by a Master` carries it, and it matches 37% of the catalogue |
+| `History` | matches 42% of the catalogue, so it narrows almost nothing |
+| `Green Escape` | 72% of it is also `Park` |
+
+Two rules fall out, worth applying to any future value: **a value matching more than ~a third of
+the catalogue does not narrow anything**, and **where two groups' values overlap ~70% both ways,
+promote one.** Both changes are display-only; the tags stay on the tours.
+
+The split still earns its keep where the vocabulary is clean — `Tower` / `Viewpoint` overlap only
+19% / 9% (most towers are shut at the top), `Venue` / `Performance` 15% (most venues are bars).
 
 ### 🔴 Price comes from the database, never from `Tours.json`
 
 `seed_from_toursjson.py` **omits `price_tier` deliberately** — price lives in the DB and is
-maker-set, so a content re-seed cannot reset it. The consequence is that `Tours.json` reads
-`priceTier: null` for every tour **and always will**, however many paid tours exist. Reading the
-file and concluding "everything is free" is a false pass; this design nearly shipped with Price
-excluded on exactly that reasoning.
+maker-set, so a content re-seed cannot reset it. `Tours.json` therefore reads `priceTier: null` for
+every tour **and always will**, however many paid tours exist. Reading the file and concluding
+"everything is free" is a false pass; this design nearly shipped without a Price chip on exactly
+that reasoning.
 
-Ask the live DB instead — 47 bytes, no catalogue fetch:
+Ask the live DB — 47 bytes, no catalogue fetch:
 
 ```bash
 curl -s --compressed -D - -o /dev/null \
@@ -67,33 +93,40 @@ curl -s --compressed -D - -o /dev/null \
 ```
 
 **As of 2026-09-12: 66 paid tours, every one a multi-stop walk, every one at $0.99** — 66 of the
-~72 walks in the catalogue. Fourteen tiers exist in App Store Connect; one is in use.
+~72 walks in the catalogue. Fourteen tiers exist in App Store Connect; one is in use. Hence two
+values rather than bands (`Under $5 / $5–10 / Over $10` would be three options with two empty), and
+hence `Paid` returns nearly what `Audio walk` returns for now.
 
-Two consequences for the chip:
+⚠️ `Free` here means the *tour* costs nothing. `Why go` carries **`Free to Visit`** (323), which
+means the *place* costs nothing to enter. If the two read ambiguously once built, the price values
+become `Free to listen` / `Paid`.
 
-- **Two values, not bands.** `Under $5 / $5–10 / Over $10` would be three options with two empty.
-  Bands earn their place when the spread widens.
-- **Price is nearly a restatement of Format today** — `Paid` returns very close to what
-  `Audio walk` returns. Not a reason to drop it, but it is why it slices little for now.
+## Not chips, and why
 
-⚠️ `Free` here means the *tour* costs nothing. Experience carries **`Free to Visit`** (323), which
-means the *place* costs nothing to enter. If the two read ambiguously side by side once built, the
-price values become `Free to listen` / `Paid`.
+| | |
+|---|---|
+| An **All** door | once Tags holds the vocabulary, an All sheet would hold these same four chips again |
+| **Nearby** | the map *is* a distance filter and a continuous one; it dies without location permission; and it means nothing when planning a trip from home. Served instead by sort-by-nearest and the existing recenter button |
+| City | same reason — panning answers "where"; 116 cities is a search |
+| Duration | median audio stop is 2 min 14 s — Format already separates the stop from the 11-minute walk |
+| Rating | we collect none |
+| Saved · Downloaded · Purchased | personal state, rare mid-walk — belongs in the **Library tab** |
+| Video tour | one tour (`via-57-west`). The value stays in the model; the option appears when it clears ~20 |
 
 ## Rules
 
 1. **Over ~30 values a grid becomes a search.** Dozent (377) and Architect (429) are lists with a
-   search field; everything else is a chip grid. Search changes the presentation, never how the
-   facet combines — both stay multi-select.
-2. **A set chip becomes its own answer**: `Museum`, or `Museum +2`. Empty, it shows the facet name
+   search field; everything else is a grid. Search changes the presentation, never how the facet
+   combines — both stay multi-select.
+2. **A set chip becomes its own answer**: `Museum`, or `Museum +2`. Empty, it shows the chip name
    and a chevron.
 3. **Counts sit on the option inside the sheet, and on the commit pill — never on a row chip.**
    Ours run from 1,480 to 19, so "YouTube 19" is the whole reason not to tap it. (The reference app
    shows no counts anywhere; its values are all common, ours are not.)
-4. **One facet, one sheet**, sized to its own content. The All sheet is the only one that stacks
-   them.
+4. **A sheet holds only what its chip opened**, sized to its own content. Three shapes cover every
+   chip: short grid, grouped grid, searchable list.
 5. **A brass pill floats over every sheet** carrying the live count — `SHOW 118 PINS` — and commits.
-6. **Sort leaves the row** for the drawer header, opposite the result count.
+6. **Sort lives on the drawer header**, not in the row.
 7. Chips filter **the map and the drawer together**, from one predicate.
 
 ## Anatomy
@@ -101,7 +134,7 @@ price values become `Free to listen` / `Paid`.
 The 44 pt capsule the search bar already uses (`AtlasSpacing.searchBarHeight`), 13 pt SF Mono
 (`AtlasTypography.caption`), `secondaryBackground` at rest, `mapPin` brass when on with
 `background` as the label colour, 8 pt gaps, 16 pt gutters. No new token. The only new drawing is
-one line glyph per place type.
+one line glyph per `Place` value.
 
 ## Implementation notes
 
@@ -111,13 +144,13 @@ catalogue edit**:
 | Chip | Reads |
 |---|---|
 | Format | `tour.kind` (`single` · `multiStop` · `link`) + `tour.linkSource` (derived from `sourceURL`) |
+| Price | `tour.priceTier` (already a `get_catalog` key) |
 | Dozent | `tour.makerId` + `DataService.makers` (`toursByMakerId` already indexes it) |
-| Experience · Type · Theme · Era · Architect | `tour.tags` via `Tag.matches` |
-| Nearby | `LocationManager.userLocation` + the tour's coordinate |
+| Tags | `tour.tags` via `Tag.matches`, unchanged |
 
 Touch points: `HomeSharedState` (two filter fields become a small predicate set),
-`TagFilterChipRow` (toggles → facet chips), two new sheets, and the two filter sites that must stay
-in step — `HomeView.filteredTours` and `HomeRailsViewModel`.
+`TagFilterChipRow` (toggles → four chips), the three sheet shapes, and the two filter sites that
+must stay in step — `HomeView.filteredTours` and `HomeRailsViewModel`.
 
 ## Open
 
@@ -127,7 +160,7 @@ is a special case in an otherwise uniform rule. Recommendation: keep them inside
 
 ## Where this came from
 
-An AllTrails screen recording the owner supplied (2026-09-11). Taken from it: the per-facet mini
-sheet, the floating count pill, sort outside the row, icons on sheet chips. Deliberately not taken:
-sliders (our only range is duration, median 2 minutes) and the rounded-rectangle chip — ours is a
-capsule in SF Mono, which is the app's own voice.
+An AllTrails screen recording the owner supplied (2026-09-11). Taken from it: a sheet holds only
+what its chip opened, the floating count pill, sort outside the row, icons on sheet chips.
+Deliberately not taken: sliders (our only range is duration, median 2 minutes) and the
+rounded-rectangle chip — ours is a capsule in SF Mono, which is the app's own voice.
