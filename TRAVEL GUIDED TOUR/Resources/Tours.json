@@ -84309,7 +84309,8 @@
       "tourIds": [
         "4E95B67A-A3CA-567E-BF70-88233C14510C",
         "77C623D9-B9E7-54D7-A664-107397840CFE",
-        "3696AE5C-0AFD-5521-BD1D-211521DE469F"
+        "3696AE5C-0AFD-5521-BD1D-211521DE469F",
+        "6730B265-6E56-59F3-BCDE-E36A32148E2A"
       ]
     },
     {
@@ -170145,8 +170146,8 @@
           "order": 0,
           "title": "The Stacks Under Bryant Park",
           "caption": "There are millions of books hidden multiple levels under Bryant Park. 📚 The stacks run below the lawn, waterproofed like a ship’s hull becau",
-          "latitude": 40.7533445,
-          "longitude": -73.9821524,
+          "latitude": 40.7531875,
+          "longitude": -73.9823125,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -170158,8 +170159,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7533445,
-      "centroidLongitude": -73.9821524,
+      "centroidLatitude": 40.7531875,
+      "centroidLongitude": -73.9823125,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "literature",

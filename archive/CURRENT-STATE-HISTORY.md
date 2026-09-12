@@ -43,6 +43,26 @@ For what is true now: `bash scripts/session-start.sh`, then `CLAUDE.md` § Key f
 
 ## Current State (2026-09-07)
 
+### ✅ The Stacks joins the NYPL place too (owner instruction, 2026-09-12)
+
+**Owner: *"join the stacks too."*** `The Stacks Under Bryant Park` moved **22.06 m** onto the
+place's coordinate and joined it — **New York Public Library, Stephen A. Schwarzman Building
+goes 3 → 4 members**, and the four now draw as **one capsule**: map markers 3,011 → 3,010, with
+**0 groups over `maxStacked = 3`**.
+
+- **⚠️ THIS WAS THE ONE I FLAGGED RATHER THAN JOINED, AND THE HESITATION IS WORTH RECORDING.**
+  22 m is a real distance, not the rounding artifact the other three were, and the subject is
+  arguably distinct — the storage stacks *under Bryant Park* rather than the Schwarzman Building.
+  What settles it is the pin's own caption: *"It's all part of the New York Public Library."*
+  The stacks are that building's collection storage, extending under the park behind it.
+- **⚠️ The pin moved, never a tour, and the move was free** — asserted **`manual`** before
+  anything was written, so no geofence changed. **Both the stop and the centroid moved**, because
+  a single-stop entry's centroid must mirror its stop (the assembler bug the Python mirror is
+  blind to); asserted afterwards at **0 centroid drift catalogue-wide, 0 members off their place
+  coordinate, 0 tours claimed by two places**, and no member gained or lost a top-level key.
+- **⚠️ The diff is five deletions and none is a removal** — four are the coordinate lines being
+  rewritten, the fifth is the previous last `tourIds` entry gaining a trailing comma.
+
 ### Fifty-four link pins, two creators, and a coordinate I nearly "fixed" ([PR #749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749), session 148 — content)
 
 **The owner sent 55 links — 20 Instagram reels and 35 TikToks.** Branch cut clean off
