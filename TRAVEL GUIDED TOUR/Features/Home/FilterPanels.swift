@@ -39,30 +39,32 @@ struct FilterPanelHost: View {
                 TagsBody(filter: $filter, tours: tours)
             }
         }
-        .presentationDetents([.fraction(detent)])
+        // 🔴 FULL HEIGHT, AND NOT A MATTER OF TASTE ANY MORE.
+        //
+        // iOS 26 draws a PARTIAL-height sheet as a floating card: inset from
+        // the sides, bottom edges pulled in to nest into the display's curved
+        // corners, over a Liquid Glass background. Only at the LARGE detent
+        // does that background go opaque and the sheet attach to the sides and
+        // bottom of the screen. So "sized to its content" and "spans edge to
+        // edge" cannot both be had — the owner chose edge to edge (on device,
+        // 2026-09-12): **the only thing in this app that floats is the bottom
+        // module.**
+        //
+        // ⚠️ Re-introducing a `.fraction` detent here re-introduces the
+        // floating card. It is not a height knob on iOS 26.
+        .presentationDetents([.large])
         .presentationDragIndicator(.visible)
+        // Full-bleed, so the panel's own colour reaches the screen edges and
+        // runs under the home indicator. The inner `.background` could not:
+        // panel content is inset by the safe area, which left a strip of
+        // system material along the bottom.
+        .presentationBackground(AtlasColors.secondaryBackground)
     }
 
     private var title: String {
         switch route {
         case .all: return "All filters"
         case .group(let g): return g.title
-        }
-    }
-
-    /// Fractions rather than the absolute heights the design was drawn at
-    /// (552 pt for Format, 780 for Tags), so the panels keep their proportions
-    /// on a phone that is not 844 pt tall. ⚠️ On a 667 pt screen the Tags panel
-    /// scrolls whatever we do — "fits one screen" is a property of large
-    /// phones, not of this design, which is why the group heading pins and
-    /// every panel carries `AtlasSpacing.panelRunOut`.
-    private var detent: CGFloat {
-        switch route {
-        case .all: return 0.92
-        case .group(.format): return 0.65
-        case .group(.price): return 0.36
-        case .group(.dozents): return 0.82
-        case .group(.tags): return 0.92
         }
     }
 
@@ -95,7 +97,8 @@ struct FilterPanel<Content: View>: View {
             }
             .padding(.horizontal, AtlasSpacing.panelEdgeInset)
         }
-        .background(AtlasColors.secondaryBackground)
+        // The background belongs to the PRESENTATION, not to this scroll view
+        // — see `presentationBackground` on the host.
         .overlay(alignment: .bottom) { pill }
     }
 

@@ -234,27 +234,25 @@ is **28 pt**, 16 short, and this is an app used one-handed while walking. A mis-
 harmless: with contextual counts, one wrong chip can take the result to zero, leaving you to work
 out which of forty you hit. 22 pt also cannot grow with Dynamic Type.
 
-**The Tags panel fits one screen, at a price.** The panel starts at 64 pt (just under the status
-bar) and the promoted set is trimmed to **Place 4 · Subject 4 · Why go 3 · Era 3** — 637 pt over 9
-rows, fitting with ~30 pt spare. Sliding alone could not do it: at 7·5·4·4 promoted the content was
-829 pt, which is 96 pt short even with the panel at the very top of the screen, so the lever had to
-be the promoted set rather than the spacing.
+🔴 **Panel height is no longer ours to choose — see § Device review, round 2. Every panel is
+full-height.** The arithmetic that used to live here (panel tops, fractions per panel, whether Tags
+fits in one screen) is retired: iOS 26 draws any partial-height sheet as a floating inset card, so
+the owner's "edge to edge" and "sized to its content" could not both be had.
 
-⚠️ **It fits on a big phone only.** A 667 pt screen (SE) leaves ~430 pt of panel, so it scrolls
-there whatever we do — "no scrolling" is a property of large phones, not of this design, so the
-scroll behaviour and the pinned group heading still have to be right.
+**What survives it:** the promoted set stays trimmed to **Place 4 · Subject 4 · Why go 3 · Era 3**.
+It was chosen to make Tags fit a 0.92 panel and that reason is gone, but a shorter first screen is
+worth having on its own — `More` is one tap, and the alternative is a wall of chips.
 
 ⚠️ **`More` now carries 10 of the 14 place types and 13 of the 17 subjects.** That is a heavier bet
 on the promotion judgement than before; if a value people expect is behind `More`, swap it forward
 rather than widening the panel.
 
-⚠️ **Superseded note, kept for the reasoning:** ~780 px against a ~650 px
-budget (panel top at 96, ~96 reserved for the pill) — `Architect` and the tail of `Era` sit below
-the fold. It briefly did fit, at 12/7 spacing, and that was my argument for 32 pt over 44 pt; the
-argument survives on its own numbers (44 pt would be ~940 px). **Consequence: the pinned group
-heading is load-bearing, not a nicety** — you will scroll past `PLACE` into `SUBJECT`, and a chip
-reading `Contemporary` means nothing without `ERA` above it. If the scrolling grates, promote fewer
-values per group rather than tightening the spacing back.
+⚠️ **Scrolling is normal now, not a failure.** At full height Tags still scrolls on a small phone,
+so **the group heading is load-bearing rather than a nicety** — you will scroll past `PLACE` into
+`SUBJECT`, and a chip reading `Contemporary` means nothing without `ERA` above it. If the scrolling
+grates, promote fewer values per group rather than tightening the spacing back. `panelRunOut` (96)
+is still required at every panel's end: the commit pill floats over the content whatever height the
+sheet is.
 
 **Kept larger on purpose:** the `Architect` search field (40 pt — a text input, not a chip) and the
 over-filtered screen's two buttons (44 pt — pressed once, in frustration).
@@ -320,6 +318,39 @@ are consistent by construction rather than by eye.
 **5. Headings and `Clear` were pinned to the edges.** Side inset 16 → **24**
 (`panelEdgeInset`) and the title's top 16 → **28** (`panelTopInset`) — a sheet's own rounded
 corners eat the first few points, and the grabber sits in that top space.
+
+### Device review, round 2 — build 146: nothing but the bottom module floats
+
+**Owner, on device, 2026-09-12:** *"the only thing that should ever [be] 'floating' is the bottom
+module. these sheets should span edge to edge and also of course the bottom."*
+
+🔴 **This is an OS rule, not our layout, and it settles panel heights for good.** On iOS 26 a
+**partial-height** sheet is *drawn* as a floating card — inset from the sides, its bottom edges
+pulled in to nest into the display's curved corners, over a Liquid Glass background. A sheet
+attaches to the sides and bottom of the screen, and its background goes opaque, **only at the large
+detent**. So the two things we wanted could not both be had:
+
+| | |
+|---|---|
+| A panel sized to its content | floats, by the OS's design |
+| A panel that spans edge to edge | is full height, by the OS's design |
+
+The owner picked edge to edge, so **every panel is now `.presentationDetents([.large])`** and the
+five fractions (0.36 Price → 0.92 Tags) are gone. ⚠️ **A `.fraction` detent is not a height knob on
+iOS 26 — re-introducing one re-introduces the floating card.**
+
+**The background moved with it.** `presentationBackground(AtlasColors.secondaryBackground)` paints
+the presentation itself rather than the scroll view inside it. The inner `.background` could never
+reach the screen edge: panel content is inset by the safe area, so a strip of system material sat
+along the bottom — part of what read as "floating".
+
+**What this costs, and what it buys.** Cost: the map is no longer visible behind a panel, which the
+AllTrails reference kept, and `Price` (two options) is a full screen with two chips on it. The pill
+already reports the result count, so the map behind was informative rather than necessary. Buys:
+consistency with every other sheet in the app — none of the others set detents, so they were all
+already full-height and attached; the filter panels were the only floating surface in the product
+apart from the module itself. **And the whole "does Tags fit in one screen" question dissolves**,
+along with three rounds of panel-height arithmetic.
 
 ### Ordering: counts promote, the alphabet displays
 
