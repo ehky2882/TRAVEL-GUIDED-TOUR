@@ -156,13 +156,23 @@ struct TRAVEL_GUIDED_TOURApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // ContentView is mounted from the FIRST frame and the splash sits
-            // over it, rather than the two being the arms of an `if`. That one
-            // change is where the snappiness comes from: MKMapView's creation,
-            // the first clustering pass over the whole catalog, the drawer, and
-            // the mini-player window's install all happen while the brass dot
-            // is still pulsing, instead of in front of the user afterwards.
-            ContentView()
+            // The splash sits over ContentView rather than the two being the
+            // arms of an `if` — that is where #559's snappiness comes from:
+            // MKMapView's creation, the first clustering pass over the whole
+            // catalog, the drawer, and the mini-player window's install all
+            // happen behind the brass mark, not in front of the user afterwards.
+            //
+            // 🔴 BUT CONTENTVIEW MOUNTS ONE FRAME AFTER THE SPLASH IS DRAWN, not
+            // on the first frame. Mounted first, all of that work had to finish
+            // before the splash overlay could draw at all, so the user sat on
+            // iOS's static launch picture for seconds and the breathing arrived
+            // late (owner on 1.1.2 (149): "i had to wait a long time for it").
+            // See `LaunchDeferredContent`. Every modifier below still applies —
+            // the environment, the tasks and the splash overlay itself sit on
+            // the wrapper, which exists from the first frame.
+            LaunchDeferredContent(launchState: launchState) {
+                ContentView()
+            }
                 .environment(dataService)
                 .environment(instagramResolver)
                 .environment(authService)
@@ -324,7 +334,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         // the choreography back out.
                         SplashView(
                             handOff: launchState.handOffProgress,
-                            reduceMotion: reduceMotion
+                            reduceMotion: reduceMotion,
+                            onShown: { launchState.markSplashShown() },
+                            onBreathStart: { launchState.markBreathStarted(at: $0) }
                         )
                     }
                 }
@@ -358,6 +370,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
             }
             let ready = LaunchGate.isReady(
                 elapsed: Date().timeIntervalSince(startedAt),
+                shownFor: launchState.splashShownAt.map { Date().timeIntervalSince($0) },
+                breathIsBright: SplashView.breathStaysBright(
+                    sinceBreathStart: launchState.breathStartedAt.map { CACurrentMediaTime() - $0 },
+                    reduceMotion: reduceMotion
+                ),
                 catalogLoaded: !dataService.tours.isEmpty,
                 locationSettled: LaunchGate.locationSettled(
                     status: locationManager.authorizationStatus,
@@ -388,6 +405,23 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // Simulator: a frame with the opening barely started and the module
         // fully settled.
         try? await Task.sleep(for: .milliseconds(32))
+        // 🔴 RE-CHECK THE BREATH AT THE LAST MOMENT, and only go on the way INTO
+        // the bright stretch. The gate's check happens before the unhide and the
+        // frame wait above, and the zoom's first frame can land a few hundred ms
+        // after any decision while the app is still building behind the splash.
+        // Measured in the Simulator: a hand-off approved at >= 80% started
+        // drawing at ~60%, and another at ~37% — a visible jump to the solid zoom
+        // disc. `breathStaysBright` requires brightness now AND
+        // `SplashView.handOffLatency` ahead. Capped at one full breath so a
+        // starved loop can still find a bright moment but never holds the launch.
+        let brightDeadline = Date().addingTimeInterval(1.7)
+        while Date() < brightDeadline,
+              !SplashView.breathStaysBright(
+                  sinceBreathStart: launchState.breathStartedAt.map { CACurrentMediaTime() - $0 },
+                  reduceMotion: reduceMotion
+              ) {
+            try? await Task.sleep(for: .milliseconds(8))
+        }
         await playHandOff()
         if let link = pendingDeepLink {
             pendingDeepLink = nil
