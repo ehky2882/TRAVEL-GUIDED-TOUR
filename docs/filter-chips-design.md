@@ -24,8 +24,8 @@ vocabulary** gets one chip, because it is all the same kind of question.
 | **Dozent** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. |
 | **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
 
-**Clear** sits in each panel's header, and **Clear all** in the All panel — not in the row. **Sort**
-sits on the drawer header, opposite the result count.
+**Clear** sits in every panel's header — one word everywhere, the All panel included — not in the
+row. **Sort** sits on the drawer header, opposite the result count.
 
 ### The All panel
 
@@ -201,6 +201,24 @@ reserved for the pill), so in practice the `Architect` row may peek under it. St
 
 **Kept larger on purpose:** the `Architect` search field (40 pt — a text input, not a chip) and the
 over-filtered screen's two buttons (44 pt — pressed once, in frustration).
+
+### Panel header and layout (owner review, 2026-09-12)
+
+**The title is the caption font** — 13 pt SF Mono, uppercase, 0.06 em tracking, left-aligned, with
+`Clear` parked on the right. Not a sans semibold sheet title: `HomeDrawerContent`'s count header is
+already `AtlasTypography.caption` with tracking and uppercase copy, so panel chrome is mono in this
+app. Hierarchy comes from size and colour, not typeface — title 13 pt in `primaryText`, group
+labels 11 pt in `secondaryText`. Centred was tried and rejected: `Clear` has to sit on the right
+regardless, so a centred title is never centred in the space it occupies.
+
+**Spacing:** 16 pt between the header and the first option, 20 pt above each group label. The 12 pt
+gap between options is load-bearing (it is what makes the 44 pt target) — widen it freely, never
+shrink it.
+
+**`Format` stacks; every other panel wraps.** One option per row, left-aligned, in `Format` only.
+It has five options with a real pecking order — 1,480 audio stops down to 19 YouTube posts — so a
+column reads like a list you work down. `Tags` has thirty-odd values across five groups where
+nothing outranks anything: stacked it runs to two screens for no gain, wrapped it fits one.
 
 No new colour or type token. Two new named control heights would be worth adding beside
 `searchBarHeight`, rather than reusing `AtlasSpacing.xl` (32) and an untokenised 12, since these
