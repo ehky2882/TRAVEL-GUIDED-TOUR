@@ -166,12 +166,41 @@ them (all Instagram gets 9:16), but the URL carries it.
 6. **Sort lives on the drawer header**, not in the row.
 7. Chips filter **the map and the drawer together**, from one predicate.
 
-## Anatomy
+## Anatomy — two heights, and why
 
-The 44 pt capsule the search bar already uses (`AtlasSpacing.searchBarHeight`), 13 pt SF Mono
-(`AtlasTypography.caption`), `secondaryBackground` at rest, `mapPin` brass when on with
-`background` as the label colour, 8 pt gaps, 16 pt gutters. No new token. The only new drawing is
-one line glyph per `Place` value.
+Every chip is a capsule (`radius = height / 2`) in **13 pt SF Mono** (`AtlasTypography.caption`),
+`secondaryBackground` at rest, `mapPin` brass when on with `background` as the label colour, 16 pt
+gutters. Two sizes, for two different jobs:
+
+| | Height | Padding | Gaps | Effective tap target |
+|---|---|---|---|---|
+| **Row** (over the map) | **44** — `AtlasSpacing.searchBarHeight` | 0 16 | 8 | 52 pt |
+| **Panel options** | **32** | 0 13 | **row 12 · column 7** | **44 pt** |
+
+**Why 32 in the panels.** The 44 pt row runs the Tags panel to ~790 px, which pushes `Era` and
+`Architect` below the fold; 32 brings it to ~655 px, so the whole vocabulary is on one screen.
+
+**Why the row gap is 12 and not 8.** What a thumb cares about is the **vertical pitch** — the chip
+plus the gap it can absorb — not the drawn height. Widening only the ROW gap (columns stay at 7,
+where a 60–180 pt wide chip was never the problem) takes the target from 40 pt to **44 pt, the HIG
+minimum**, for about 30 px of panel height. `.contentShape(Rectangle())` over the padded frame is
+what makes the absorbed gap real.
+
+⚠️ **22 pt was tried and rejected.** It reaches ~410 px — far tighter than needed — but its pitch
+is **28 pt**, 16 short, and this is an app used one-handed while walking. A mis-tap is not
+harmless: with contextual counts, one wrong chip can take the result to zero, leaving you to work
+out which of forty you hit. 22 pt also cannot grow with Dynamic Type.
+
+⚠️ **"One screen" is 3 px optimistic.** 655 px against a ~652 px budget (panel top at 96, ~96
+reserved for the pill), so in practice the `Architect` row may peek under it. Starting the panel
+20 px higher closes the gap; either outcome is fine, but do not claim it fits exactly.
+
+**Kept larger on purpose:** the `Architect` search field (40 pt — a text input, not a chip) and the
+over-filtered screen's two buttons (44 pt — pressed once, in frustration).
+
+No new colour or type token. Two new named control heights would be worth adding beside
+`searchBarHeight`, rather than reusing `AtlasSpacing.xl` (32) and an untokenised 12, since these
+are control metrics rather than spacing. The only new drawing is one line glyph per `Place` value.
 
 ## Implementation notes
 
