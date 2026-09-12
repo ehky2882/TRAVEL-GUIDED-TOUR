@@ -149,8 +149,7 @@ struct HomeDrawerContent: View {
     private var filteredResults: [Tour] {
         HomeRailsViewModel.filteredResults(
             tours: dataService.tours,
-            selectedTags: sharedState.selectedTags,
-            walksOnly: sharedState.walksOnly,
+            filter: sharedState.filter,
             userLocation: locationManager.userLocation,
             visibleRegion: sharedState.visibleRegion
         )

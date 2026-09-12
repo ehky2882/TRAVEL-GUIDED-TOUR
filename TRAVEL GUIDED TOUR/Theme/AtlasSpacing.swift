@@ -64,6 +64,33 @@ enum AtlasSpacing {
     /// safe-area inset) at the top so the search bar + chips stay
     /// visible when the drawer is fully expanded.
     static let searchAndChipsBlockHeight: CGFloat = sm + searchBarHeight + sm + searchBarHeight
+
+    // MARK: - Filter panel metrics
+
+    /// Height of an option chip INSIDE a filter panel — smaller than the row's
+    /// `searchBarHeight` because a panel is a deliberate, two-handed context
+    /// rather than a control floating over a map.
+    ///
+    /// 🔴 32, with `panelRowGap` at 16, is what makes the tap target 48 pt.
+    /// What a thumb feels is the **vertical pitch** — the chip plus the gap it
+    /// can absorb — not the drawn height, so these two constants are one
+    /// decision and must move together. 22 pt was tried and rejected: it
+    /// reaches a 28 pt pitch, 16 short of Apple's minimum, in an app used
+    /// one-handed while walking.
+    static let panelChipHeight: CGFloat = 32
+    /// Vertical gap between option rows. **Widen freely, never shrink** — see
+    /// `panelChipHeight`; it is half the tap target.
+    static let panelRowGap: CGFloat = 16
+    /// Horizontal gap between option chips. Smaller than the row gap on
+    /// purpose: a 60–180 pt wide chip was never hard to hit sideways, so this
+    /// one is for air rather than for aim.
+    static let panelColumnGap: CGFloat = 10
+    /// Empty run-out at the end of every panel's content.
+    ///
+    /// 🔴 The commit pill FLOATS over the panel, so without this the last
+    /// option of any scrolling panel sits underneath it and cannot be tapped.
+    /// A panel with a fixed height must also be at least its content plus this.
+    static let panelRunOut: CGFloat = 96
 }
 
 // MARK: - Bottom module geometry

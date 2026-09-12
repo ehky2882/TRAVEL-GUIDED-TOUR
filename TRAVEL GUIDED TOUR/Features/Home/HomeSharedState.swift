@@ -13,20 +13,20 @@ import MapKit
 /// stay in sync without prop-drilling.
 @Observable
 final class HomeSharedState {
-    /// Active multi-select tag filter (owner decision D8). Empty = no
-    /// tag filter. Chips combine per D6 (OR within a facet, AND across).
-    /// The map filters its pin set on this; the drawer swaps its curated
-    /// shelves for a flat results list while any filter is active.
-    var selectedTags: Set<String> = []
+    /// Everything the filter row has asked for: Format, Price, Dozents and
+    /// Tags, in one value (`TourFilter`). The map filters its pin set on this;
+    /// the drawer swaps its curated shelves for a flat results list while any
+    /// of it is active.
+    ///
+    /// Replaces the pair of fields the flat chip row carried — a tag set plus a
+    /// `walksOnly` flag. Walks was never binary: it is one value of the Format
+    /// facet, alongside the audio stop and the four pinned-post kinds.
+    /// See `docs/filter-chips-design.md`.
+    var filter: TourFilter = .none
 
-    /// "Walks" format filter (§1.6) — narrows to multi-stop tours. A
-    /// *format* filter (the tour's shape), distinct from the content-tag
-    /// filters above, but it ANDs with them in the same chip row.
-    var walksOnly: Bool = false
-
-    /// True when any filter (tags or Walks) is active — the drawer reads
-    /// this to decide shelves-vs-results and the header copy.
-    var hasActiveFilters: Bool { !selectedTags.isEmpty || walksOnly }
+    /// True when any filter is active — the drawer reads this to decide
+    /// shelves-vs-results and the header copy.
+    var hasActiveFilters: Bool { filter.isActive }
 
     /// Tours behind the currently-tapped pin, plus the coordinate of
     /// that pin. Drives the placecard preview the map renders above it.

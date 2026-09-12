@@ -266,9 +266,10 @@ struct HomeView: View {
                         }
 
                         LaunchEntrance(part: .chips, travel: geo.size.width) {
-                            TagFilterChipRow(
-                                selectedTags: $sharedState.selectedTags,
-                                walksOnly: $sharedState.walksOnly
+                            FilterChipRow(
+                                filter: $sharedState.filter,
+                                tours: dataService.tours,
+                                makers: dataService.makers
                             )
                         }
                     }
@@ -747,17 +748,16 @@ struct HomeView: View {
 
     // MARK: - Derived
 
-    /// Tours after the filter-chip selection is applied. Fed to the
-    /// map's pin set. The drawer's filtered results list is computed in
-    /// `HomeDrawerContent` from the same `sharedState` filter state.
-    /// Combines per D6 (OR within a facet, AND across) plus the "Walks"
-    /// format filter (§1.6).
+    /// Tours after the filter row's selection is applied. Fed to the map's pin
+    /// set. The drawer's filtered results list is computed in
+    /// `HomeDrawerContent` from the same `sharedState.filter`, so the two
+    /// halves can never disagree about what is showing.
+    ///
+    /// The rule lives in `TourFilter.matches` — any within a group, all across
+    /// groups.
     private var filteredTours: [Tour] {
         guard sharedState.hasActiveFilters else { return dataService.tours }
-        return dataService.tours.filter { tour in
-            if sharedState.walksOnly && tour.kind != .multiStop { return false }
-            return Tag.matches(tourTags: Set(tour.tags), selection: sharedState.selectedTags)
-        }
+        return dataService.tours.filter(sharedState.filter.matches)
     }
 
     private func placeDistanceText(for place: Place) -> String? {

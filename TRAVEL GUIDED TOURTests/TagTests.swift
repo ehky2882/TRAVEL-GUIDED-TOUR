@@ -19,9 +19,32 @@ final class TagTests: XCTestCase {
         }
     }
 
-    func test_filterChipsAreInVocabulary() {
-        for tag in Tag.filterChips {
-            XCTAssertTrue(Tag.allValid.contains(tag), "Filter chip \(tag) must be a valid vocabulary tag")
+    func test_panelGroupPromotedTagsAreInTheirOwnFacet() {
+        for group in Tag.panelGroups {
+            for tag in group.promoted {
+                XCTAssertEqual(
+                    Tag.facet(for: tag), group.facet,
+                    "\(tag) is promoted under \(group.title) but belongs to a different facet"
+                )
+            }
+        }
+    }
+
+    func test_panelGroupsPromoteFewEnoughToFitOneScreen() {
+        // The Tags panel fits one 844pt screen at 9 rows; it stopped fitting at
+        // 13. Promoting more than four per group is what took it there, so this
+        // guards the fit rather than the taste.
+        for group in Tag.panelGroups {
+            XCTAssertLessThanOrEqual(group.promoted.count, 4, "\(group.title) promotes too many to fit")
+        }
+    }
+
+    func test_moreCountAccountsForEveryUnpromotedValue() {
+        for group in Tag.panelGroups {
+            XCTAssertEqual(
+                group.promoted.count + group.moreCount, Tag.tags(in: group.facet).count,
+                "\(group.title)'s More would hide or double-count values"
+            )
         }
     }
 
@@ -32,11 +55,20 @@ final class TagTests: XCTestCase {
         XCTAssertFalse(shelfTags.contains("History"))
     }
 
-    func test_thinTagsAreNotFilterChips() {
-        // Plan §3.1: these read as broken chips (5 tours / 1 city).
-        let chips = Set(Tag.filterChips)
-        for thin in ["LGBTQ+", "Library", "Brutalist", "Gilded Age", "Art Deco", "Crime", "Bridge"] {
-            XCTAssertFalse(chips.contains(thin), "\(thin) is too thin to be a filter chip")
+    func test_duplicatingValuesAreNotPromoted() {
+        // Measured overlaps, not taste: Faith is 88% Religious Building, Green
+        // Escape 72% Park, and Architecture/History each match a third or more
+        // of the catalogue. All four stay reachable under More.
+        let promoted = Set(Tag.panelGroups.flatMap(\.promoted))
+        for duplicating in ["Faith", "Green Escape", "Architecture", "History"] {
+            XCTAssertFalse(promoted.contains(duplicating), "\(duplicating) duplicates a neighbour or narrows nothing")
+        }
+    }
+
+    func test_searchedFacetIsTheOneTooLongForAGrid() {
+        XCTAssertGreaterThan(Tag.tags(in: Tag.searchedFacet).count, 30)
+        for group in Tag.panelGroups {
+            XCTAssertLessThanOrEqual(Tag.tags(in: group.facet).count, 30, "\(group.title) should be a search, not a grid")
         }
     }
 

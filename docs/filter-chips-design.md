@@ -1,6 +1,8 @@
 # Filter chips — a door and four chips
 
-**Status:** design agreed, not yet built. Canvas:
+**Status:** built on `claude/filtering-chip-system-htjq7k`, **not yet run** — no Mac in the session
+that wrote it, so it has never been compiled or seen in a simulator. CI on the PR is the first real
+check. Canvas:
 <https://claude.ai/code/artifact/b5da2e3e-cd23-4484-807b-c8e74cb70d59>
 
 Replaces the flat multi-select row shipped in Tag Phase 2 (`Features/Home/TagFilterChipRow.swift`,
