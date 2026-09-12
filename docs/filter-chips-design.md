@@ -21,6 +21,7 @@ when → how far → by whom.
 |---|---|---|
 | **≡ All** | every facet below, one scroll | Never fills brass — it is a door, not a filter. Badge counts the values switched on behind it. |
 | **Format** | Audio stop 1,480 · Audio walk 72 ‖ TikTok 1,106 · Instagram 592 · YouTube 19 | Grouped **Audio tours** / **Pinned posts**. The catalogue's real fault line and the row says nothing about it today. |
+| **Price** | Free 3,283 · Paid 66 | Two values, not bands — see below. |
 | **Dozent** | 377 · 34 studios · 343 pinned | Search. Groups: Studio Dozents / Pinned Dozents. |
 | **Experience** | 8 · Designed by a Master 857 → After Dark 93 | The only facet phrased from the visitor's side, hence high in the row. |
 | **Type** | 14 · Notable Building 742 → Bridge 44 | Icons earn their place here — one line glyph per type. |
@@ -29,7 +30,9 @@ when → how far → by whom.
 | **Nearby** | Walking distance · 5 km · 25 km | Single-select, no counts (they depend on where the viewer is). |
 | **Architect** | 429 · largest is 23 | Search. |
 
-**Counts are over all 3,269 pins — 1,552 tours and 1,717 link pins — because the chips filter the
+**Counts below are from `Resources/Tours.json` in this checkout; the live catalogue is already
+ahead of it (1,796 link pins against this file's 1,717). Re-derive before building.** Counts are
+over all 3,269 pins — 1,552 tours and 1,717 link pins — because the chips filter the
 map and the map carries both.** That denominator overturns the Phase 2 call that kept Art Deco,
 Brutalist and Bridge out of the row for being thin: against 3,269 they are 50, 51 and 44.
 Re-derive before building; they move with every content merge.
@@ -40,10 +43,41 @@ Re-derive before building; they move with every content merge.
 |---|---|
 | City | the map answers "where" by panning; 116 cities is a search, not a chip |
 | Duration | median audio stop is 2 min 14 s — Format already separates the stop from the 11-minute walk |
-| Price | every tour is free today |
 | Rating | we collect none |
+| Purchased | entitlement state, like Saved and Downloaded — belongs in the All sheet |
 | Saved / Downloaded | personal, not editorial — lives in the All sheet |
 | Video tour | one tour (`via-57-west`). The value stays in the model; the option appears when it clears ~20 |
+
+### 🔴 Price comes from the database, never from `Tours.json`
+
+`seed_from_toursjson.py` **omits `price_tier` deliberately** — price lives in the DB and is
+maker-set, so a content re-seed cannot reset it. The consequence is that `Tours.json` reads
+`priceTier: null` for every tour **and always will**, however many paid tours exist. Reading the
+file and concluding "everything is free" is a false pass; this design nearly shipped with Price
+excluded on exactly that reasoning.
+
+Ask the live DB instead — 47 bytes, no catalogue fetch:
+
+```bash
+curl -s --compressed -D - -o /dev/null \
+  -H "apikey: $KEY" -H "Authorization: Bearer $KEY" \
+  -H "Range: 0-0" -H "Prefer: count=exact" \
+  "$PROJECT/rest/v1/tours?select=id&price_tier=not.is.null"   # content-range: 0-0/66
+```
+
+**As of 2026-09-12: 66 paid tours, every one a multi-stop walk, every one at $0.99** — 66 of the
+~72 walks in the catalogue. Fourteen tiers exist in App Store Connect; one is in use.
+
+Two consequences for the chip:
+
+- **Two values, not bands.** `Under $5 / $5–10 / Over $10` would be three options with two empty.
+  Bands earn their place when the spread widens.
+- **Price is nearly a restatement of Format today** — `Paid` returns very close to what
+  `Audio walk` returns. Not a reason to drop it, but it is why it slices little for now.
+
+⚠️ `Free` here means the *tour* costs nothing. Experience carries **`Free to Visit`** (323), which
+means the *place* costs nothing to enter. If the two read ambiguously side by side once built, the
+price values become `Free to listen` / `Paid`.
 
 ## Rules
 
