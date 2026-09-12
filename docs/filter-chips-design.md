@@ -19,7 +19,7 @@ vocabulary** gets one chip, because it is all the same kind of question.
 | Chip | Values | Notes |
 |---|---|---|
 | **≡ All** | every facet below, in one scroll | A door, not a filter — never fills brass; its badge counts what is on behind it. |
-| **Format** | Audio stop 1,481 · Audio walk 72 · Instagram 634 · TikTok 1,235 · YouTube 19 | One flat list, alphabetical. One field, so its values OR. |
+| **Format** | Audio stop 1,481 · Audio walk 72 · Instagram posts 9 · Instagram Reels 625 · TikTok 1,235 · YouTube Shorts 3 · YouTube videos 16 | One flat list, alphabetical. One field, so its values OR. |
 | **Price** | Free 3,375 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
 | **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
 | **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
@@ -49,7 +49,7 @@ Brutalist and Bridge out of the row for being thin: against ~3,400 they are 50, 
 |---|---|
 | All rows | **3,441** |
 | Audio stop (`single`) · Audio walk (`multiStop`) | 1,481 · 72 — **1,553 tours** |
-| Link pins | **1,888** — TikTok 1,235 · Instagram 634 · YouTube 19, nothing unclassified |
+| Link pins | **1,888** — TikTok 1,235 · Instagram Reels 625 · Instagram posts 9 · YouTube videos 16 · YouTube Shorts 3, nothing unclassified |
 | Paid · Free | 66 · 3,375 |
 
 ⚠️ 🔴 **Re-derive every number before building, and mean it.** The tag-level counts in this document
@@ -137,19 +137,37 @@ are ordered by how much of the map is theirs.
 **Format is one flat list too.** *Audio tours* / *Pinned posts* headings earned nothing: the option
 labels already say which is which.
 
-### YouTube videos vs Shorts — detectable, deliberately not split
+### Format splits by platform AND by short-form — each in the platform's own words
 
-`LinkSource.isYouTubeShort(_:)` already reads it off the URL (`youtube.com/shorts/{id}`, matched as
-a whole path component so a video merely *titled* "shorts" cannot fool it), and the app uses it
-today to give a Short a 9:16 player instead of letterboxing it into 16:9.
+**Owner decision, 2026-09-12: the short-form formats are separately selectable.** Seven options,
+using each platform's own branding — **Reels** and **Shorts** are product names and take a capital;
+**videos** and **posts** are generic and do not. TikTok brands nothing separately, so it is one
+option.
 
-It stays one `YouTube` option because the split is **16 videos against 3 Shorts** — below the line
-where an option stops being useful and starts looking broken, the same line that holds `Video tour`
-(1) back. Past ~20 Shorts it is a one-line change; the detection exists.
+| Option | Live count | How it is detected |
+|---|---|---|
+| Audio stop | 1,481 | `kind == .single` |
+| Audio walk | 72 | `kind == .multiStop` |
+| Instagram posts | 9 | `/p/` or `/tv/` path — **needs a new one-liner** |
+| Instagram Reels | 625 | `/reel` or `/reels` path — **needs a new one-liner** |
+| TikTok | 1,235 | host |
+| YouTube Shorts | 3 | **`LinkSource.isYouTubeShort(_:)`, already shipping** |
+| YouTube videos | 16 | YouTube host, not a Short |
 
-⚠️ The same is true of Instagram, and more so: of 592, about **583 are reels and 9 are ordinary
-posts**, so `Instagram` already means "Instagram reels" in practice. The app does not distinguish
-them (all Instagram gets 9:16), but the URL carries it.
+`isYouTubeShort` matches `shorts` as a whole path component, so a video merely *titled* "shorts"
+cannot fool it, and the app already uses it to give a Short a 9:16 player instead of letterboxing
+it into 16:9. Instagram needs the equivalent: the 9 non-reel pins are eight `/p/` posts and one
+`/tv/` (IGTV, retired), so `/p/` and `/tv/` are posts and `/reel`/`/reels` are Reels.
+
+⚠️ **Two options are tiny — Shorts 3 and Instagram posts 9 — and that was weighed.** It cuts
+against the rule that an option finding a handful reads as broken (the rule that still holds
+`Video tour`, at 1, out of the list). It wins anyway because leaving them unlisted would make those
+pins **unreachable from this chip**: picking `Instagram Reels` excludes the 9 posts, and nothing
+else would select them.
+
+⚠️ Worth knowing what the numbers say about Instagram regardless: of 634,
+**625 are Reels**, so Instagram is a reels channel with a rounding error attached. The app still
+gives all Instagram a 9:16 player, which is right for 625 of 634.
 
 ## Not chips, and why
 
@@ -272,7 +290,7 @@ catalogue edit**:
 
 | Chip | Reads |
 |---|---|
-| Format | `tour.kind` (`single` · `multiStop` · `link`) + `tour.linkSource` (derived from `sourceURL`) |
+| Format | `tour.kind` + `tour.linkSource`, plus `isYouTubeShort` (ships) and a matching Instagram reel check (**new, one-liner**) |
 | Price | `tour.priceTier` (already a `get_catalog` key) |
 | Dozents | `tour.makerId` + `DataService.makers` (`toursByMakerId` already indexes it) |
 | Tags | `tour.tags` via `Tag.matches`, unchanged |
