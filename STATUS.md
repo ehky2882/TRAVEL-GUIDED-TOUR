@@ -14,7 +14,9 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-09-12, 21:20 UTC (**the owner pasted the SQL — the two duplicate pins are gone.**) Verified four ways rather than taken on trust: row count **3,441 → 3,439**, both pin ids return empty, the orphaned `Instagram @pacificmodernism` maker row is gone (so the conditional delete fired and it held no other pins), and `catalog_snapshot_age()` reads **21:17:56 UTC** — the rebuild is what makes a paste reach a phone, so it is the check that matters. ✅ **Both TikTok replacements survive**; after a deletion the risk is losing the survivor, not the duplicate. § 2's item is marked cleared, with the process rule kept — **a merged PR that needs an owner paste is not finished; it moves to § 2** — because that is what let it sit live for two days. **Still open and waiting on the owner: [#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776)**, which merges cleanly and needs an OK plus a two-minute device check.
+**Last verified:** 2026-09-12, 22:00 UTC (**two corrections to this session's own findings, and a new owner requirement.**) 🔴 **I called 27 accounts "abandoned maker signups" and that was wrong twice over.** `handle_new_user()` creates a `makers` row for **every signup**, consumer or maker — an owner decision from 2026-07-05 that the Settings count depends on — so nothing was abandoned; and I counted their tours through the **anon, published-only view**, the exact trap `remove_test_creators.sql` was written about after two failed pastes, so the count may understate. **Owner decision, restated: never delete a user account — "0 tours doesn't mean anything"**, matching the standing 2026-08-25 decision this session had ignored. § 6 is rewritten and the real issue is narrower: Search lists every account holder as a creator, and two `isPrivate: true` makers are served regardless with `userId`, `avatarURL` and `bio`, a flag no consumer code reads. **New owner requirement in § 2: every user needs a unique username** — there is no handle column today and `display_name` has no unique constraint; recommended shape is a `handle` beside `display_name`, unique on `(platform, handle)`, **design doc not yet written.** Earlier: **[#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776) MERGED** (`ae804f4f`) on owner OK — rebuilt on current `main` first, because its green was from 9 Sep against a base 58 commits stale; validator, simulator build and full suite green on `a8f5e36`. ⚠️ **It merged on CI alone, with no device check** — a weaker bar than this repo's norm for launch-path code, named rather than glossed.
+
+**Previously:** 2026-09-12, 21:20 UTC (**the owner pasted the SQL — the two duplicate pins are gone.**) Verified four ways rather than taken on trust: row count **3,441 → 3,439**, both pin ids return empty, the orphaned `Instagram @pacificmodernism` maker row is gone (so the conditional delete fired and it held no other pins), and `catalog_snapshot_age()` reads **21:17:56 UTC** — the rebuild is what makes a paste reach a phone, so it is the check that matters. ✅ **Both TikTok replacements survive**; after a deletion the risk is losing the survivor, not the duplicate. § 2's item is marked cleared, with the process rule kept — **a merged PR that needs an owner paste is not finished; it moves to § 2** — because that is what let it sit live for two days. **Still open and waiting on the owner: [#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776)**, which merges cleanly and needs an OK plus a two-minute device check.
 
 **Previously:** 2026-09-12, 21:00 UTC (coordinator catch-up — **no content, no code; two findings and one merge**). `main` moved **58 commits** since this session last looked. Catalogue re-derived on `f76bfac`: **1,552 tours · 1,886 pins · 388 makers · 290 places · 1,924 tour stops (3,810 including one per pin) · 501 cities · 64 countries** — ⚠️ the `CLAUDE.md` Key-facts line read **1,870 / 387 / 499**, its **twenty-fifth** staleness, because [#834](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/834)'s 16 pins landed *after* the previous correction; counted and corrected. ✅ **[#795](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/795)'s SQL HAS been applied** — proved against the live RPC, not read off a board: stop objects come back with **no `transcriptText`**, so the 37.5% cut is real and serving. 🔴 **But a different paste is still owed and was on NO board: [#805](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/805)'s removal SQL never ran**, so the two `@pacificmodernism` Instagram pins #804 replaced are **still live on the map beside their replacements** — found by diffing the `tours` table (3,441 rows) against `Tours.json` (3,438); see § 2. The third extra row is a **private in-app maker upload** and is correct. 🔴 **[#776](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/776) is no longer conflicted** — re-tested, merges clean; it has been waiting on the owner since 9 Sep and is the only item blocked specifically on them rather than on another session. [#798](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/798) (docs-only, China reachability) **merged** as `f76bfac` under Rule 4 after sitting two days; squash verified to carry both files. App Store re-checked from Apple: still **1.1.1**, released 1 Sep. Latest TestFlight build: **150**. Supabase snapshot rebuilt **17:37 UTC** by #834's own seed; `get_catalog` 200 at TTFB 1.58 s. **Merged since the last look, in brief:** #749 (the 54-pin batch that was stuck for a week), #795, #835 filter chips, a **places expansion 181 → 290** across #801/#806/#807/#809/#818/#822 with several real coordinate defects repaired, #785 (a link pin that cannot load now says so), and #825/#827 (the website says the app is out). **All egress probes this session used the cheap forms in `CLAUDE.md` § Egress**; the one full-catalogue read was capped at 600 KB by stopping the stream.)
 
@@ -178,6 +180,39 @@ dead image in 5,848**, found only because #659's fetch fix stopped error-page bo
 as though they were pictures.
 
 ## 2. Blocked on owner — outside the repo
+
+**🔴 STANDING OWNER DECISION — NEVER DELETE A USER ACCOUNT. "0 tours doesn't mean anything."**
+Stated 2026-09-12, and it restates the decision of **2026-08-25** already recorded in
+`backend/remove_test_creators.sql` (*"clear the test creators, keep the real accounts"*). Every
+`makers` row carrying a `user_id` is a person with an account. A maker row is created for **every
+signup** by `handle_new_user()` in `backend/accounts.sql` — consumer or maker alike — so **"no tours"
+carries no information about intent**, and the apparent count is read through a published-only view
+that hides `taken_down` and draft rows anyway. **No session may delete, merge or "tidy up" accounts.**
+Presentation is the only lever: decide what a creator search should list.
+
+**🟡 OWNER REQUIREMENT, 2026-09-12 — every user needs a unique username. NOT YET DESIGNED.**
+There is **no username/handle column at all** today: `display_name` is the only name, it has **no
+unique constraint**, and `ProfileEditorView` lets anyone set it to anything with no availability
+check. 416 makers, 401 distinct names, one collision (`New Creator` ×16 — the no-name-supplied
+fallback).
+  - ✅ **Additive, not a migration:** nothing in the app resolves a maker by name — every reference
+    goes through the UUID.
+  - **Recommended shape: a new `handle` (unique) BESIDE `display_name` (free text, duplicates fine)**,
+    as Instagram/TikTok/GitHub do. Making `display_name` itself unique is the wrong fix — it would
+    tell the second real person of the same name that they cannot use it.
+  - 🔴 **The open question is the namespace.** The 319 pinned creators already carry handles, but
+    inside the display-name string (`TikTok @pacificmodernism`); their uniqueness is enforced only
+    structurally, by `uuid5(platform + lowercased handle)` in `make-link-pin.py`. The same handle on
+    two platforms is legitimately two rows — `@pacificmodernism` was exactly that until today.
+    Proposal: a real `platform` column, unique on **`(platform, handle)`**, Atlas accounts on
+    `dozent`. That also ends parsing the platform out of a name prefix.
+  - ⚠️ **Impersonation is the reason not to defer it:** nothing today stops a signup setting its
+    display name to `Instagram @urbanistariel`, byte-identical to a real pinned creator in the
+    catalogue.
+  - **Next step: a design doc for the owner to choose from** (the pattern of
+    `docs/catalog-version-check-design.md` and `docs/filter-chips-design.md`) covering the namespace,
+    handle rules, backfill for the 16 unnamed rows, and whether pinned handles are reserved. **Not
+    written yet.**
 
 **✅ CLEARED 2026-09-12, 21:17 UTC — the owner pasted the SQL and the duplicates are gone.**
 **Verified after the paste, four ways:** the row count went **3,441 → 3,439** (exactly two fewer),
@@ -569,29 +604,51 @@ repo, and the correction that makes it honest.
 
 ## 6. Known debt — real, not urgent
 
-**🔴 SEARCH LISTS 27 EMPTY MAKER ROWS, 20 OF THEM CALLED "New Creator" (found 2026-09-12).**
-The live `get_catalog` serves **417 makers** where `Tours.json` has 388. Twenty-nine are
-database-only; **twenty-seven of those have zero tours and zero pins**, and `SearchView.filteredMakers`
-filters on **display-name substring alone** — no content filter, no privacy filter:
+**⚠️ SEARCH LISTS EVERY ACCOUNT HOLDER AS A CREATOR (found 2026-09-12; ORIGINAL FRAMING WAS WRONG, corrected same day).**
+🔴 **These are not abandoned maker signups, and I called them that. `backend/accounts.sql`'s
+`handle_new_user()` trigger creates a `makers` row for EVERY account at signup** — consumer or
+maker, no distinction — and that file's own comment records the reason: *"why the Settings 'Makers'
+count (get_catalog returns all maker rows) counts every account. **(Owner decision 2026-07-05.)**"*
+`New Creator` is simply the fallback when Apple/Google/email supplied no name. So someone who signed
+up only to save tours is listed in Search as a creator. **Nothing here was abandoned and nothing is
+owed by these people.**
+
+🔴 **AND THE COUNT ITSELF IS SUSPECT, by a trap this repo has already paid for.** I counted tours
+per maker through PostgREST on the anon key, which serves **published rows only** — exactly what
+`backend/remove_test_creators.sql` warns against in capitals: *"Anything that reasons about 'does
+this maker have tours' must query the table as `postgres`, or it is reading a filtered view and will
+conclude the opposite of the truth."* That file was written after two failed pastes caused by this
+same mistake, where four creators looked tourless and each in fact owned a `taken_down` tour. **So
+"27 with nothing" means "27 with nothing an anonymous reader can see."** The real figure needs a
+query as `postgres` and has not been run.
+
+🔴 **OWNER DECISION, RESTATED 2026-09-12: DO NOT DELETE ANY USER. "0 tours doesn't mean anything."**
+This matches the standing decision of **2026-08-25** already recorded in `remove_test_creators.sql`
+— *"clear the test creators, keep the real accounts"* — which today's finding ignored. Every one of
+these rows carries a `user_id`; they are people with accounts.
+
+**What IS real** is narrower: `SearchView.filteredMakers` filters on **display-name substring alone**
+— no content filter, no privacy filter:
 
 ```swift
 dataService.makers.filter { $0.displayName.lowercased().contains(q) }
 ```
 
-So typing `new` returns **twenty rows reading "New Creator · 0 tours"**. The rest are real people's
-names and one `EHKY-APPL`. They are abandoned maker signups — someone opened the maker flow and
-never finished — and **25 of the 27 carry `isPrivate: false`**, so nothing downstream suppresses them.
-⚠️ **Two carry `isPrivate: true` and are served anyway**, which is the part worth a second look: the
-payload contains `isPrivate`, `userId`, `avatarURL` and `bio` for every one of them, and no consumer
-code reads the flag.
+So typing `new` returns **sixteen rows reading "New Creator · 0 tours"** — the only display-name
+collision in the whole table (416 makers, 401 distinct names). ⚠️ **Two makers carry
+`isPrivate: true` and are served regardless**, and the payload carries `isPrivate`, `userId`,
+`avatarURL` and `bio` for every account; **no consumer code reads that flag at all.** That is the
+half worth a decision rather than a patch.
 
-  - **Not fixed here** — it is `Features/Search/` + possibly `Data/`, so code-class, and the right
-    shape is a decision: filter client-side, or stop the RPC emitting content-less makers (cheaper —
-    it is also payload nobody can use). The second is the better fix and is a one-function change to
-    `get_catalog_core`.
-  - ⚠️ **Adjacent to [#820](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/820)**, which is open
-    and fixes the *counts* on these same rows. Whoever takes that PR should see this first: #820 makes
-    the "0 tours" subtitle refresh correctly, which is right, but the rows should not be there at all.
+  - **Not fixed here** — `Features/Search/` is code-class. And the fix is **presentation, not
+    deletion**: decide who belongs in a creator search. Serving every account is a deliberate owner
+    decision from 2026-07-05 (the Settings count depends on it), so **changing what the RPC emits
+    would silently move that number** — check before touching it.
+  - ⚠️ **Adjacent to [#820](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/820)**, which fixes
+    the *counts* on these same rows and is right to.
+  - 🔴 **`backend/remove_test_creators.sql` is a live hazard against the standing decision.** It is
+    idempotent and its four targets are long gone, but it is a deletion script sitting in the repo
+    naming real accounts in its comments. **Do not re-run it. Do not adapt it to "clean up" accounts.**
 
 
 **The link-pin failure overlay's false-positive case is watched, not proven (#785, 2026-09-10).**
