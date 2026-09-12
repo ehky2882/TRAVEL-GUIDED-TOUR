@@ -983,3 +983,29 @@ the whole reason the tight tier is distance-only.
 Gamble House tour says `city: Los Angeles` while its pin says `Pasadena`, and the
 building is in Pasadena. That maker files **all 42** of its tours as Los Angeles,
 so changing this one would make it the sole exception. Flag, don't fix.
+
+## Merge a green content PR immediately — waiting costs a rebuild each time (2026-09-12)
+
+[#749](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/749) went green on **8 September** and
+was not merged until **12 September**. In those four days `main` moved **72 commits and 473 link
+pins**, and the branch had to be rebuilt **eight times** — seven while the session was still live,
+once more to land it.
+
+**Nothing went wrong with the content**: every rebuild reproduced the identical diff (2,483
+insertions / 0 deletions), overlap re-verified at 0 on every axis each time, and the final
+re-check found **0 repeats** among the 473 pins that had landed. The cost was pure churn — and
+each rebuild is a fresh chance to hand-resolve an 11 MB JSON wrongly.
+
+- **The rule: when CI is green on a content PR, squash it in that turn.** Do not report "I'll
+  merge on green" and then wait on a further check, a further question, or a further batch.
+- **A stale branch is not a safe branch.** The longer it waits, the more of the merge is
+  conflict resolution rather than content — and the docs conflict every time, because every
+  session edits the same `CLAUDE.md` / `STATUS.md` / `archive/README.md` header lines.
+- **Corollary on handoff filenames: pick the suffix at push time, not at write time.** This
+  session's handoff was renumbered four times — `-260907-3` → `-4` → `260908` → `260912-2` — as
+  parallel sessions claimed each one. Re-check immediately before pushing, and expect to renumber
+  on the merge anyway.
+- ⚠️ **The four-day gap also invalidated the whole structure the docs were written for**:
+  `CLAUDE.md`'s dated Current State blocks were moved to `archive/CURRENT-STATE-HISTORY.md` on
+  2026-09-08, so the entry had to be re-homed. **Re-read the file you are editing after any long
+  gap; the convention may have changed under you.**
