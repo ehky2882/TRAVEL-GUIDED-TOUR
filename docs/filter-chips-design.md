@@ -19,8 +19,8 @@ vocabulary** gets one chip, because it is all the same kind of question.
 | Chip | Values | Notes |
 |---|---|---|
 | **≡ All** | every facet below, in one scroll | A door, not a filter — never fills brass; its badge counts what is on behind it. |
-| **Format** | Audio stop 1,480 · TikTok 1,106 · Instagram 592 · Audio walk 72 · YouTube 19 | One flat list, largest first. One field, so its values OR. |
-| **Price** | Free 3,283 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
+| **Format** | Audio stop 1,481 · Audio walk 72 · Instagram 634 · TikTok 1,235 · YouTube 19 | One flat list, alphabetical. One field, so its values OR. |
+| **Price** | Free 3,375 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
 | **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
 | **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
 
@@ -39,13 +39,25 @@ cannot disagree.
 that it duplicates the chips; duplication is the point. It is a second route, not a second
 mechanism.
 
-**Counts are over all 3,269 pins — 1,552 tours and 1,717 link pins — because the chips filter the
-map and the map carries both.** That denominator overturns the Phase 2 call that kept Art Deco,
-Brutalist and Bridge out of the row for being thin: against 3,269 they are 50, 51 and 44.
+**Counts are over every row the map carries — tours AND link pins — because the chips filter the
+map and the map shows both.** That denominator overturns the Phase 2 call that kept Art Deco,
+Brutalist and Bridge out of the row for being thin: against ~3,400 they are 50, 51 and 44.
 
-⚠️ **Re-derive every number before building.** These come from `Resources/Tours.json` in this
-checkout and the live catalogue is already ahead of it — 1,796 link pins against this file's 1,717,
-counted 2026-09-12. Price can never come from the file at all.
+**Live, 2026-09-12 (reconciled, `kind` and `source_url` from the DB):**
+
+| | |
+|---|---|
+| All rows | **3,441** |
+| Audio stop (`single`) · Audio walk (`multiStop`) | 1,481 · 72 — **1,553 tours** |
+| Link pins | **1,888** — TikTok 1,235 · Instagram 634 · YouTube 19, nothing unclassified |
+| Paid · Free | 66 · 3,375 |
+
+⚠️ 🔴 **Re-derive every number before building, and mean it.** The tag-level counts in this document
+come from `Resources/Tours.json` in one checkout, against 3,269 rows. **The live catalogue moved
+from 1,796 to 1,888 link pins during the single session that wrote this file** — 92 pins in about
+forty minutes, from other sessions merging content. Nothing here is wrong so much as perishable;
+treat every figure as an order of magnitude, not a value. The one-line count query below is the
+pattern for all of them, and price can never come from the file at all.
 
 ## Why one Tags chip rather than a chip per facet
 
