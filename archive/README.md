@@ -47,6 +47,7 @@ not written down.
 
 | File | What it covers | Date |
 |---|---|---|
+| `HANDOFF-260912-3.md` | The home map's filter row rebuilt as a door and four chips — **All · Format · Price · Dozents · Tags**, multi-select, contextual counts, designed in Claude Design against the owner's AllTrails reference before any code (#835, build 145, **never compiled**); 🔴 Price was nearly cut on `Tours.json` reading `priceTier: nil` for every tour, which it always will — the live DB has 66 paid | 2026-09-12 |
 | `HANDOFF-260910-4.md` | Four documents that had eaten themselves — `CLAUDE.md` 1.5 MB → 47 KB (~418k tokens **per request**), `ROADMAP.md` −77%, `archive/README.md` −93%, `STATUS.md` −68%, zero lines lost; plus MoMA PS1's dead hero, and the blobless-fetch trick for uploading to gh-pages from a web session | 2026-09-10 |
 | `STATUS-HISTORY.md` | The finished board items moved out of `STATUS.md` § 1 — 41 items whose PRs GitHub reports merged or closed, plus four self-declared-done sub-sections. **Search, never load whole** | 2026-09-08 |
 | `INDEX-DETAIL.md` | The long-form entries this index used to carry, verbatim. **Search, never load whole** | 2026-09-08 |
