@@ -128,3 +128,92 @@ by every phone forever, and nothing else would notice.
 
 **Not built:** when anything changes, the app still downloads all 1,552 tours. Delta or
 city-scoped fetching is the remaining step.
+
+---
+
+## Follow-up the same day — the China reachability question, actually measured
+
+The owner asked whether `github.io` reachability from China could be checked "somehow". It can, from
+here, with no mainland contact — and **the first tool that answered was wrong**, which is the whole
+lesson.
+
+### Method 1 — mainland DNS resolvers (AliDNS, Tencent DNSPod) over DoH
+
+Both answer from inside China and both return the **correct** GitHub Pages IPs for
+`ehky2882.github.io` (`185.199.108–111.153`), identical to a Google-DNS control. Same for
+`dozent.world` and the Supabase host.
+
+🔴 **And this proves nothing**, which is why the control matters: `www.tiktok.com` **also** resolves
+cleanly from both, and TikTok is definitively unavailable in mainland China. Clean DNS rules out
+**DNS poisoning only**; the GFW's usual HTTPS mechanism today is an SNI-triggered TCP reset, which
+leaves DNS untouched. A resolver check that "passes" is not a reachability check.
+
+### Method 2 — `chinafirewalltest.com` (5 mainland nodes, powered by ViewDNS)
+
+| Host | Beijing · Shenzhen · Inner Mongolia · Heilongjiang · Yunnan |
+|---|---|
+| `www.tiktok.com` | BLOCKED ×5 — ✅ control passes |
+| **`www.google.com`** | **OK ×5 — ❌ CONTROL FAILS** |
+| `ehky2882.github.io` | OK ×5 |
+| `apkcihljybvuyuzpbnqd.supabase.co` | OK ×5 |
+| **`dozent.world`** | **BLOCKED ×5** |
+
+Stable across re-runs. 🔴 **Because it calls Google reachable, its `OK` verdict is worthless** — the
+tool is biased toward false-OK. That asymmetry is usable, though: a tool that under-reports blocking
+saying **BLOCKED** is a *strong* signal, so `dozent.world` is the finding here, not `github.io`.
+
+### Method 3 — OONI, real probes inside China (2026-03-01 → 2026-09-11)
+
+| Domain | measurements | anomaly rate |
+|---|---|---|
+| `www.google.com` | 512 | **91%** |
+| **`vercel.app`** | 47 | **100%** (0 OK) |
+| `github.io` (bare apex only) | 38 | 47% |
+| `github.com` | 1,701 | 36% |
+| `raw.githubusercontent.com` | 421 | **14%** |
+| `apps.apple.com` | 439 | 3% |
+| **any real `*.github.io` Pages site** | **0** | — |
+| `supabase.co` | 0 | — |
+
+OONI is what disqualified method 2: 512 measurements at 91% anomaly is Google being blocked, exactly
+as expected, against the checker's five green ticks.
+
+### So: is `ehky2882.github.io` reachable from China?
+
+**Still not proven, and it must not be written down as proven.** No OONI probe has ever tested a real
+Pages subdomain from China; the 38 `github.io` measurements are the **bare apex**, which is a parking
+page and not a Pages site at all.
+
+The indirect evidence leans *"works, degraded"*: DNS is clean, and GitHub's other hosts are mostly
+reachable — **`raw.githubusercontent.com` at 86% OK is the closest analogue we have**, being a static
+asset host on shared infrastructure exactly like ours. Every `*.github.io` site shares the same four
+anycast IPs, so blocking ours specifically would require someone to target our hostname by name,
+which is implausible for an unknown travel app. Call it *probably fine, occasionally flaky, not
+guaranteed* — and note the app already degrades correctly, because a downloaded tour reads its audio
+and photographs off local disk.
+
+### 🔴 The finding nobody went looking for: `dozent.world` looks unreachable from mainland China
+
+Two **independent** sources agree, which neither did alone: the checker reports BLOCKED from all five
+mainland nodes (and it under-reports blocking), and OONI puts **`vercel.app` at 100% anomaly over 47
+measurements with zero OK**. `dozent.world` is served by Vercel (`64.29.17.65`).
+
+This is worse than the link-pin problem in one respect: **it is our own surface, not a third party's.**
+
+1. **`Theme/AtlasLegalLinks.swift`** — Privacy, Terms and Acceptable Use in Settings all point at
+   `dozent.world`. In China they open nothing. The same three URLs are the App Store listing's
+   support/privacy/marketing URLs (`fastlane/metadata/en-US/`).
+2. 🔴 **`https://dozent.world/confirmed/` is where Supabase Auth lands someone after they tap the
+   button in a signup email.** A user in mainland China would tap it, Supabase would verify the token
+   server-side, and then redirect them to **a page that cannot load**. The account is most likely
+   confirmed; the person has every reason to believe signup failed.
+
+**Not fixed here, and it is a product decision rather than a bug with one obvious patch** — the
+options (a mainland-reachable mirror of the legal pages, moving `/confirmed/` off Vercel, or
+accepting it) trade against each other and were put to the owner rather than chosen.
+
+### What none of this is
+
+**Not a phone on a Chinese consumer network.** Every node above is a datacenter; China Mobile,
+Unicom and Telecom mobile routing differ, and GFW behaviour varies by province, ISP and hour. These
+are three independent remote measurements with their controls stated, not a device test.
