@@ -2,6 +2,7 @@ import XCTest
 import CoreLocation
 import MapKit
 import QuartzCore
+import SwiftUI
 @testable import TRAVEL_GUIDED_TOUR
 
 /// The launch splash used to end on a fixed 2-second timer that waited for
@@ -479,6 +480,19 @@ final class LaunchGateTests: XCTestCase {
         state.markSplashShown(at: first)
         state.markSplashShown(at: Date(timeIntervalSince1970: 200))
         XCTAssertEqual(state.splashShownAt, first)
+    }
+
+    /// 🔴 The app is built only once the splash is on screen — mounted first,
+    /// the splash could not draw until the map and drawer were built, and the
+    /// breath arrived seconds late (1.1.2 (149)). A splash that never reports
+    /// must still get the app built, and well inside the gate's ceiling.
+    @MainActor
+    func test_appMountsOnceTheSplashIsDrawn_orAfterTheFallback() {
+        typealias Deferred = LaunchDeferredContent<EmptyView>
+        XCTAssertFalse(Deferred.shouldMount(splashShown: false, fallbackElapsed: false))
+        XCTAssertTrue(Deferred.shouldMount(splashShown: true, fallbackElapsed: false))
+        XCTAssertTrue(Deferred.shouldMount(splashShown: false, fallbackElapsed: true))
+        XCTAssertLessThan(Deferred.fallbackDelay, LaunchGate.ceiling)
     }
 
     @MainActor

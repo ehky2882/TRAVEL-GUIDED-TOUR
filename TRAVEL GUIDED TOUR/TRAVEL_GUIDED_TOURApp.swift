@@ -156,13 +156,23 @@ struct TRAVEL_GUIDED_TOURApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // ContentView is mounted from the FIRST frame and the splash sits
-            // over it, rather than the two being the arms of an `if`. That one
-            // change is where the snappiness comes from: MKMapView's creation,
-            // the first clustering pass over the whole catalog, the drawer, and
-            // the mini-player window's install all happen while the brass dot
-            // is still pulsing, instead of in front of the user afterwards.
-            ContentView()
+            // The splash sits over ContentView rather than the two being the
+            // arms of an `if` — that is where #559's snappiness comes from:
+            // MKMapView's creation, the first clustering pass over the whole
+            // catalog, the drawer, and the mini-player window's install all
+            // happen behind the brass mark, not in front of the user afterwards.
+            //
+            // 🔴 BUT CONTENTVIEW MOUNTS ONE FRAME AFTER THE SPLASH IS DRAWN, not
+            // on the first frame. Mounted first, all of that work had to finish
+            // before the splash overlay could draw at all, so the user sat on
+            // iOS's static launch picture for seconds and the breathing arrived
+            // late (owner on 1.1.2 (149): "i had to wait a long time for it").
+            // See `LaunchDeferredContent`. Every modifier below still applies —
+            // the environment, the tasks and the splash overlay itself sit on
+            // the wrapper, which exists from the first frame.
+            LaunchDeferredContent(launchState: launchState) {
+                ContentView()
+            }
                 .environment(dataService)
                 .environment(instagramResolver)
                 .environment(authService)
