@@ -162,7 +162,11 @@ them (all Instagram gets 9:16), but the URL carries it.
    shows no counts anywhere; its values are all common, ours are not.)
 4. **A sheet holds only what its chip opened**, sized to its own content. Three shapes cover every
    chip: short grid, grouped grid, searchable list.
-5. **A brass pill floats over every sheet** carrying the live count — `SHOW 118 PINS` — and commits.
+5. **A brass pill floats over every panel** carrying the live count — `SHOW 118 RESULTS`, or
+   `SHOW 1 RESULT` — and commits. **The noun is "results"** (owner, 2026-09-12): "pins" is our
+   word for map markers and should never reach a user, and "tours" is wrong for the 1,796 pinned
+   posts. It also matches copy the app already ships — `HomeDrawerContent` says `1 RESULT` /
+   `N RESULTS` while filtering. The unfiltered drawer header becomes `N RESULTS IN VIEW`.
 6. **Sort lives on the drawer header**, not in the row.
 7. Chips filter **the map and the drawer together**, from one predicate.
 
