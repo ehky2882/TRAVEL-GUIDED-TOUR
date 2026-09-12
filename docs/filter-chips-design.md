@@ -152,11 +152,25 @@ Touch points: `HomeSharedState` (two filter fields become a small predicate set)
 `TagFilterChipRow` (toggles → four chips), the three sheet shapes, and the two filter sites that
 must stay in step — `HomeView.filteredTours` and `HomeRailsViewModel`.
 
-## Open
+## Multi-select, and the one thing it rules out
 
-**Whether `Audio` and `Posts` should be one-tap chips** instead of living inside Format. Faster for
-the common case, but the pair would have to **OR** where every other pair of chips **ANDs**, which
-is a special case in an otherwise uniform rule. Recommendation: keep them inside Format.
+**Every chip is multi-select.** Picking several values inside a chip means *any of them*:
+`Instagram` + `TikTok` gets both platforms, `@hereinnyc` + `@urbanistariel` gets both feeds. Across
+chips it is *all of them*: `Museum` (Tags) + `Paid` (Price) gets museums that are paid. That is D6,
+unchanged — OR within a facet, AND across.
+
+`Tags` is the only chip where both halves of the rule are visible at once, and the group headings
+are what signal it: `Museum` + `Market` (both **Place**) gets either, while `Museum` + `Food`
+(**Place** + **Subject**) gets museums about food.
+
+**Settled 2026-09-12: `Audio` and `Posts` stay inside `Format` — they are not promoted to two
+chips.** The one-tap version was tempting for the commonest request, but two sibling chips would
+land on the AND side of the rule, where `Audio` AND `Posts` matches nothing — so that pair alone
+would have to OR, getting *wider* as you tap in a row where everything else gets narrower. Inside
+one chip they already OR, which is the behaviour wanted. No special case, no new rule.
+
+If the three taps ever grate, the cheap fix is to make the sheet's group headings selectable, so
+tapping **Audio tours** picks the whole group at once — no new chip and no new rule.
 
 ## Where this came from
 
