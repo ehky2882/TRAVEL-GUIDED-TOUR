@@ -9,7 +9,7 @@ owner decision D8). The combine rule is **unchanged** — OR within a facet, AND
 sheet.
 
 ```
-≡ All  ·  Format ⌄  ·  Price ⌄  ·  Dozent ⌄  ·  Tags ⌄
+≡ All  ·  Format ⌄  ·  Price ⌄  ·  Dozents ⌄  ·  Tags ⌄
 ```
 
 The row splits along a real seam. Three **structural fields** — `kind`, `price_tier`, `makerId` —
@@ -21,7 +21,7 @@ vocabulary** gets one chip, because it is all the same kind of question.
 | **≡ All** | every facet below, in one scroll | A door, not a filter — never fills brass; its badge counts what is on behind it. |
 | **Format** | Audio stop 1,480 · TikTok 1,106 · Instagram 592 · Audio walk 72 · YouTube 19 | One flat list, largest first. One field, so its values OR. |
 | **Price** | Free 3,283 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
-| **Dozent** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. |
+| **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
 | **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
 
 **Clear** sits in every panel's header — one word everywhere, the All panel included — not in the
@@ -213,12 +213,32 @@ semibold sheet title: `HomeDrawerContent`'s count header is already `AtlasTypogr
 tracking and uppercase copy, so panel chrome is mono in this app. Hierarchy comes from size and
 colour, not typeface — title 13 pt in `primaryText`, group labels 11 pt in `secondaryText`.
 
-**Text is centred** (owner, 2026-09-12): the title, the group labels, and `Format`'s stacked
-column. `Clear` is positioned absolutely at the right rather than as a flex sibling, so the title
-centres on the panel and not on the space left beside it. Two exceptions: a chip's own label is
-already centred inside its capsule and its count sits beside it, so centring that pair
-independently would make the numbers wander; and the `Dozent` rows are full-width list rows with an
-avatar, so centring the name would unmoor the column.
+**The title is centred; nothing else is** (owner, 2026-09-12). `Clear` is positioned absolutely at
+the right rather than as a flex sibling, so the title centres on the panel and not on the space
+left beside it. `Format`'s stacked column is centred too. **Group labels stay left-aligned** — an
+earlier pass centred them and the owner pulled it back. A chip's own label is already centred
+inside its capsule with its count beside it, so centring that pair independently would make the
+numbers wander; and the `Dozents` rows are full-width list rows with an avatar, so centring the
+name would unmoor the column.
+
+### Ordering: counts promote, the alphabet displays
+
+**Within every group, values are in alphabetical order** — `District · Monument · Museum · Park ·
+Religious Building · Venue · Waterfront`. An earlier pass sorted each group by pin count, biggest
+first, on the reasoning that the likeliest picks come first. Rejected for two reasons, and both
+generalise: the order was **invisible** (nothing on screen says these are in size order, so it
+reads as arbitrary) and **unstable** (every content merge reshuffles it, so nobody can learn where
+anything is).
+
+**The counts still decide WHICH values are promoted** and which fall into `More` — that has to stay
+volume-based, or `More` would swallow things people actually want. Only the display order changed.
+
+⚠️ **One deliberate exception: the `Dozents` list stays in size order, most first.** It is a search
+list of 377 where "most of the map is theirs" is a real relevance ranking; alphabetically it would
+open on whichever Instagram handle happens to begin with an A.
+
+`Format` took the alphabet happily, as it happens: `Audio stop · Audio walk · Instagram · TikTok ·
+YouTube` puts the two audio kinds together, which size order split apart.
 
 **Spacing:** 24 pt between the header and the first option, 28 pt above each group label, 16 pt
 between option rows and 10 pt across. The 16 pt row gap is load-bearing (it is what makes the 48 pt
@@ -242,7 +262,7 @@ catalogue edit**:
 |---|---|
 | Format | `tour.kind` (`single` · `multiStop` · `link`) + `tour.linkSource` (derived from `sourceURL`) |
 | Price | `tour.priceTier` (already a `get_catalog` key) |
-| Dozent | `tour.makerId` + `DataService.makers` (`toursByMakerId` already indexes it) |
+| Dozents | `tour.makerId` + `DataService.makers` (`toursByMakerId` already indexes it) |
 | Tags | `tour.tags` via `Tag.matches`, unchanged |
 
 Touch points: `HomeSharedState` (two filter fields become a small predicate set),
