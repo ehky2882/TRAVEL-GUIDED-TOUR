@@ -111,6 +111,21 @@ struct SearchView: View {
         .onChange(of: query) { _, newValue in
             placeSearch.search(newValue)
         }
+        // `buildIndexIfNeeded()` at `.onAppear` alone left a real gap:
+        // `filteredMakers` reads `dataService.makers` live, so a
+        // background catalog refresh landing WHILE this screen is
+        // already on screen makes a brand-new maker appear instantly —
+        // but `makerTourCounts` (and `searchIndex`) stayed frozen at
+        // whatever the catalog held when the screen last appeared,
+        // since nothing re-ran the guard until the next push. That
+        // showed newly-pinned creators with a "0 tours" subtitle, and
+        // starved every other maker's count, until Search was fully
+        // backed out of and reopened. Watching the same count the
+        // guard already checks keeps this cheap — it only re-fires
+        // when the catalog has actually changed size, not per keystroke.
+        .onChange(of: dataService.tours.count) { _, _ in
+            buildIndexIfNeeded()
+        }
     }
 
     // MARK: - Subviews
@@ -724,7 +739,9 @@ struct SearchView: View {
     /// Build the lowercased search index + the tour→maker and
     /// maker→count maps once. Guards on catalog size so a background
     /// remote-catalog refresh (which changes `dataService.tours.count`)
-    /// rebuilds the index next time Search appears.
+    /// triggers a rebuild — both next time Search appears (`.onAppear`)
+    /// and immediately if the refresh lands while Search is already on
+    /// screen (`.onChange(of: dataService.tours.count)` above).
     private func buildIndexIfNeeded() {
         guard searchIndex.count != dataService.tours.count else { return }
 
