@@ -18,9 +18,9 @@ vocabulary** gets one chip, because it is all the same kind of question.
 
 | Chip | Values | Notes |
 |---|---|---|
-| **Format** | Audio stop 1,480 · Audio walk 72 ‖ TikTok 1,106 · Instagram 592 · YouTube 19 | Grouped **Audio tours** / **Pinned posts** — presentation only; it is one field, so its values OR. |
+| **Format** | Audio stop 1,480 · TikTok 1,106 · Instagram 592 · Audio walk 72 · YouTube 19 | One flat list, largest first. One field, so its values OR. |
 | **Price** | Free 3,283 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
-| **Dozent** | 377 · 34 studios · 343 pinned | Search. Groups: Studio Dozents / Pinned Dozents. |
+| **Dozent** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. |
 | **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
 
 A **Clear ×** chip appears at the head of the row the moment anything is on. **Sort** sits on the
@@ -100,6 +100,31 @@ hence `Paid` returns nearly what `Audio walk` returns for now.
 ⚠️ `Free` here means the *tour* costs nothing. `Why go` carries **`Free to Visit`** (323), which
 means the *place* costs nothing to enter. If the two read ambiguously once built, the price values
 become `Free to listen` / `Paid`.
+
+### Two lists that are deliberately NOT grouped (owner, 2026-09-12)
+
+**Dozent is one flat list.** An earlier draft split it into *Studio Dozents* (34) and *Pinned
+Dozents* (343), with brass avatars for the studios and grey for everyone else. Both are gone: a
+Dozent is a Dozent, whether they record for us or we pin their post, and the panel must not sort
+them into first and second class. Rows carry the maker's own `avatarURL` — all 377 have one — and
+are ordered by how much of the map is theirs.
+
+**Format is one flat list too.** *Audio tours* / *Pinned posts* headings earned nothing: the option
+labels already say which is which.
+
+### YouTube videos vs Shorts — detectable, deliberately not split
+
+`LinkSource.isYouTubeShort(_:)` already reads it off the URL (`youtube.com/shorts/{id}`, matched as
+a whole path component so a video merely *titled* "shorts" cannot fool it), and the app uses it
+today to give a Short a 9:16 player instead of letterboxing it into 16:9.
+
+It stays one `YouTube` option because the split is **16 videos against 3 Shorts** — below the line
+where an option stops being useful and starts looking broken, the same line that holds `Video tour`
+(1) back. Past ~20 Shorts it is a one-line change; the detection exists.
+
+⚠️ The same is true of Instagram, and more so: of 592, about **583 are reels and 9 are ordinary
+posts**, so `Instagram` already means "Instagram reels" in practice. The app does not distinguish
+them (all Instagram gets 9:16), but the URL carries it.
 
 ## Not chips, and why
 
