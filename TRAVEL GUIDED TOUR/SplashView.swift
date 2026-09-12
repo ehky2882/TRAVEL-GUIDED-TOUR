@@ -23,7 +23,8 @@ struct SplashView: View {
     /// Reduce Motion: the mark doesn't bloom, the ground simply clears.
     var reduceMotion: Bool = false
 
-    @State private var pulse: Double = 1.0
+    /// When the breathing started. The breath is read off the clock, not animated.
+    @State private var breathStart = Date()
 
     var body: some View {
         GeometryReader { geo in
@@ -90,21 +91,24 @@ struct SplashView: View {
                 // becomes a ring and that there's blue behind it. it should
                 // stay as a solid as it expands."* A disc over black needs
                 // neither a mask nor a hole, and costs two shape fills a frame.
-                Circle()
-                    .fill(AtlasColors.mapPin)
-                    .frame(width: Self.markDiameter, height: Self.markDiameter)
-                    .scaleEffect(discScale(in: geo.size))
-                    .opacity(markOpacity)
+                //
+                // 🔴 THE RESTING MARK BREATHES — it fades 1.0 ↔ 0.2 every 0.8s,
+                // exactly the splash it has had since the first build, and the
+                // same pulse `site/atlas.css` draws on dozent.world. Owner,
+                // 2026-09-12: *"i want the 'breathing' icon to come back on the
+                // splash screen. i never wanted it to go away."* #559 had swapped
+                // it for a 10% size pulse nobody could see. **Do not remove it
+                // again, or swap it for a scale.**
+                //
+                // 🔴 THE BREATH RUNS ON CORE ANIMATION, NOT SWIFTUI — see
+                // `SplashBreathingDisc`. The resting splash is exactly when the
+                // main thread is busiest (the map, the first clustering pass and
+                // the drawer are all built behind it), and a SwiftUI-driven fade
+                // measured in the Simulator held one value for up to half a
+                // second at a time: a breath that stutters. A layer animation is
+                // run by the render server and keeps breathing through all of it.
+                disc(in: geo.size)
                     .position(origin)
-                    // The resting pulse breathes the SIZE, not the opacity — a
-                    // half-faded disc is exactly the "solid" this is not
-                    // supposed to be, and the pulse's in-flight opacity was
-                    // still on screen at the first frame of the hand-off.
-                    .scaleEffect(handOff > 0 ? 1 : pulse)
-                    .animation(
-                        handOff > 0 ? nil : .easeInOut(duration: 0.8).repeatForever(autoreverses: true),
-                        value: pulse
-                    )
                     .ignoresSafeArea()
             }
         }
@@ -117,7 +121,6 @@ struct SplashView: View {
         // marker would be so it is as if the brass circle becomes the location
         // marker."*
         .ignoresSafeArea()
-        .onAppear { pulse = 1.10 }
         .allowsHitTesting(false)
     }
 
@@ -172,6 +175,30 @@ struct SplashView: View {
             * Self.coverageOvershoot / LaunchZoom.startRadius
     }
 
+    /// The resting breath: 1.0 → 0.2 → 1.0, one half-cycle every 0.8s.
+    static let breathHalfPeriod: TimeInterval = 0.8
+    static let breathFloor: Double = 0.2
+
+    /// The breath at a moment, eased back to solid across the hand-off's
+    /// opening beat (the wordmark-lift window, the first ~50ms) so the disc
+    /// starts growing from wherever the breath was and is opaque by the time
+    /// it matters. Reduce Motion holds it solid, as the website does.
+    private func breathOpacity(at date: Date) -> Double {
+        guard !reduceMotion else { return 1 }
+        let resting = Self.breath(elapsed: date.timeIntervalSince(breathStart))
+        let solid = LaunchBloom.ramp(handOff, delay: 0, window: LaunchBloom.wordmarkLift.window)
+        return resting + (1 - resting) * solid
+    }
+
+    /// A cosine is an ease-in-out by construction, so this is the same curve
+    /// the original `.easeInOut(duration: 0.8).repeatForever(autoreverses:)`
+    /// drew, starting at full opacity.
+    static func breath(elapsed: TimeInterval) -> Double {
+        let mid = (1 + breathFloor) / 2
+        let amplitude = (1 - breathFloor) / 2
+        return mid + amplitude * cos(.pi * elapsed / breathHalfPeriod)
+    }
+
     private var markOpacity: Double {
         // Reduce Motion: no growth and no dissolve — the black simply clears
         // over the splash-cut window, and the mark clears with it.
@@ -184,4 +211,93 @@ struct SplashView: View {
         return 1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.markDissolve.delay, window: LaunchBloom.markDissolve.window)
     }
 
+    // MARK: - The mark
+
+    /// The brass disc: breathing while it rests, then growing and dissolving
+    /// through the hand-off. The growth and dissolve stay on `handOff` exactly
+    /// as before, so they still move on the same number as the ground.
+    @ViewBuilder
+    private func disc(in size: CGSize) -> some View {
+        #if canImport(UIKit)
+        SplashBreathingDisc(diameter: Self.markDiameter, isBreathing: !reduceMotion && handOff == 0)
+            .frame(width: Self.markDiameter, height: Self.markDiameter)
+            .scaleEffect(discScale(in: size))
+            .opacity(markOpacity)
+        #else
+        // No UIKit (the macOS build): read the breath off a clock instead.
+        TimelineView(.animation(paused: reduceMotion)) { timeline in
+            Circle()
+                .fill(AtlasColors.mapPin)
+                .frame(width: Self.markDiameter, height: Self.markDiameter)
+                .scaleEffect(discScale(in: size))
+                .opacity(markOpacity * breathOpacity(at: timeline.date))
+        }
+        #endif
+    }
+
 }
+
+#if canImport(UIKit)
+/// The splash mark as a layer, so its breath is a Core Animation animation the
+/// render server keeps running however busy the main thread is.
+///
+/// ⚠️ The breath is a PRESENTATION animation only — the layer's model opacity
+/// stays 1 the whole time. That is what makes the hand-off safe, and it is the
+/// exact problem #559 cited when it dropped the fade: a SwiftUI animation's
+/// in-flight opacity was still on screen at the first frame of the hand-off, so
+/// the disc started growing half-transparent. Here, when breathing stops the
+/// animation is removed and a 50ms settle carries the layer from wherever the
+/// breath was up to solid, on the render server — long before the disc covers
+/// anything.
+struct SplashBreathingDisc: UIViewRepresentable {
+    /// The resting size. The hand-off grows the disc with a transform, which
+    /// never changes its bounds, so the corner radius is set once.
+    var diameter: CGFloat
+    var isBreathing: Bool
+
+    static let breathKey = "atlas.splash.breath"
+
+    /// 1.0 → 0.2 → 1.0, a half-cycle every 0.8s, eased — the original splash's
+    /// `.easeInOut(duration: 0.8).repeatForever(autoreverses: true)`, and the
+    /// same pulse `site/atlas.css` draws on dozent.world.
+    static func breathAnimation() -> CABasicAnimation {
+        let breath = CABasicAnimation(keyPath: "opacity")
+        breath.fromValue = 1.0
+        breath.toValue = SplashView.breathFloor
+        breath.duration = SplashView.breathHalfPeriod
+        breath.autoreverses = true
+        breath.repeatCount = .infinity
+        breath.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        breath.isRemovedOnCompletion = false
+        return breath
+    }
+
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
+        // `brass`, not `mapPin`: `mapPin` resolves the environment's accent,
+        // which a bridged UIColor cannot follow. It is the same #8B7535.
+        view.backgroundColor = UIColor(AtlasColors.brass)
+        view.isUserInteractionEnabled = false
+        view.layer.cornerCurve = .circular
+        view.layer.cornerRadius = diameter / 2
+        return view
+    }
+
+    func updateUIView(_ view: UIView, context: Context) {
+        let layer = view.layer
+        if isBreathing {
+            if layer.animation(forKey: Self.breathKey) == nil {
+                layer.add(Self.breathAnimation(), forKey: Self.breathKey)
+            }
+        } else if layer.animation(forKey: Self.breathKey) != nil {
+            let current = layer.presentation()?.opacity ?? 1
+            layer.removeAnimation(forKey: Self.breathKey)
+            let settle = CABasicAnimation(keyPath: "opacity")
+            settle.fromValue = current
+            settle.toValue = 1.0
+            settle.duration = 0.05
+            layer.add(settle, forKey: "atlas.splash.settle")
+        }
+    }
+}
+#endif

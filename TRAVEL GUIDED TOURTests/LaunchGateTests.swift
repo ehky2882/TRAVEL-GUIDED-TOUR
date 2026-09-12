@@ -1,6 +1,7 @@
 import XCTest
 import CoreLocation
 import MapKit
+import QuartzCore
 @testable import TRAVEL_GUIDED_TOUR
 
 /// The launch splash used to end on a fixed 2-second timer that waited for
@@ -376,6 +377,35 @@ final class LaunchGateTests: XCTestCase {
         // card scrolled into view later — must see "fully arrived", never a
         // frozen mid-animation number.
         XCTAssertEqual(state.handOffProgress, 1)
+    }
+
+    /// The splash mark breathes 1.0 ↔ 0.2 every 0.8s — the original splash,
+    /// restored on owner instruction 2026-09-12 after #559 replaced it with a
+    /// size pulse. Pins the curve so it can't quietly flatten again.
+    func test_splashBreath_fadesBetweenFullAndFloor() {
+        XCTAssertEqual(SplashView.breath(elapsed: 0), 1, accuracy: 0.0001)
+        XCTAssertEqual(SplashView.breath(elapsed: 0.8), 0.2, accuracy: 0.0001)
+        XCTAssertEqual(SplashView.breath(elapsed: 1.6), 1, accuracy: 0.0001)
+        XCTAssertEqual(SplashView.breath(elapsed: 0.4), 0.6, accuracy: 0.0001)
+        for step in 0...200 {
+            let value = SplashView.breath(elapsed: Double(step) * 0.01)
+            XCTAssertGreaterThanOrEqual(value, 0.2 - 0.0001)
+            XCTAssertLessThanOrEqual(value, 1 + 0.0001)
+        }
+    }
+
+    /// The breath iOS actually renders is a Core Animation opacity animation —
+    /// pin its values to the original splash so nobody tunes it away quietly.
+    @MainActor
+    func test_splashBreath_layerAnimationMatchesOriginalSplash() {
+        let breath = SplashBreathingDisc.breathAnimation()
+        XCTAssertEqual(breath.keyPath, "opacity")
+        XCTAssertEqual((breath.fromValue as? NSNumber)?.doubleValue ?? -1, 1, accuracy: 0.0001)
+        XCTAssertEqual((breath.toValue as? NSNumber)?.doubleValue ?? -1, 0.2, accuracy: 0.0001)
+        XCTAssertEqual(breath.duration, 0.8, accuracy: 0.0001)
+        XCTAssertTrue(breath.autoreverses)
+        XCTAssertEqual(breath.repeatCount, .infinity)
+        XCTAssertFalse(breath.isRemovedOnCompletion)
     }
 
     @MainActor
