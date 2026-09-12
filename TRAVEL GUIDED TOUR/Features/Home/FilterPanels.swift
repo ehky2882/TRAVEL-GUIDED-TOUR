@@ -93,7 +93,7 @@ struct FilterPanel<Content: View>: View {
                 // underneath it and cannot be tapped.
                 Spacer(minLength: AtlasSpacing.panelRunOut)
             }
-            .padding(.horizontal, AtlasSpacing.md)
+            .padding(.horizontal, AtlasSpacing.panelEdgeInset)
         }
         .background(AtlasColors.secondaryBackground)
         .overlay(alignment: .bottom) { pill }
@@ -122,7 +122,7 @@ struct FilterPanel<Content: View>: View {
                     .buttonStyle(.plain)
             }
         }
-        .padding(.top, AtlasSpacing.md)
+        .padding(.top, AtlasSpacing.panelTopInset)
         .padding(.bottom, AtlasSpacing.lg)
     }
 
@@ -180,18 +180,32 @@ private struct GroupLabel: View {
 private struct FormatBody: View {
     @Binding var filter: TourFilter
     let tours: [Tour]
+    /// One option per row. True in the Format panel, whose whole job is these
+    /// seven; **false in the All panel** (owner, on device, 2026-09-12), where
+    /// Format is one section among four and seven full-width rows cost most of
+    /// a screen before the reader reaches Price. The pecking order that earns
+    /// the column is worth reading when Format is the subject and not worth a
+    /// screen when it is a heading.
+    var stacked: Bool = true
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            ForEach(FormatOption.allCases) { option in
-                let choice = FilterOption.format(option)
-                FilterOptionChip(
-                    label: option.label,
-                    count: filter.count(adding: choice, in: tours),
-                    isSelected: filter.formats.contains(option)
-                ) {
-                    filter.toggle(choice)
-                }
+        if stacked {
+            VStack(alignment: .leading, spacing: 0) { chips }
+        } else {
+            FilterFlowLayout() { chips }
+        }
+    }
+
+    @ViewBuilder
+    private var chips: some View {
+        ForEach(FormatOption.allCases) { option in
+            let choice = FilterOption.format(option)
+            FilterOptionChip(
+                label: option.label,
+                count: filter.count(adding: choice, in: tours),
+                isSelected: filter.formats.contains(option)
+            ) {
+                filter.toggle(choice)
             }
         }
     }
@@ -233,6 +247,14 @@ private struct DozentsBody: View {
     @Binding var filter: TourFilter
     let tours: [Tour]
     let makers: [Maker]
+    /// Whether an empty search box still lists the busiest Dozents. True in the
+    /// Dozents panel, where a list is the whole point; **false in the All
+    /// panel** (owner, on device, 2026-09-12) — there the search field alone
+    /// says what the section does, and twelve avatar rows buried Tags below
+    /// them. Selected Dozents stay visible either way, by the same rule that
+    /// keeps a selected-but-unpromoted tag on screen: a panel must never hide a
+    /// filter that is switched on.
+    var showsUnsearchedList: Bool = true
 
     @State private var query = ""
 
@@ -243,19 +265,13 @@ private struct DozentsBody: View {
     }
 
     private func listed(by counts: [UUID: Int]) -> [Maker] {
-        let matching = query.isEmpty
-            ? makers
-            : makers.filter { $0.displayName.localizedCaseInsensitiveContains(query) }
-        return matching
-            .sorted { left, right in
-                let l = counts[left.id] ?? 0
-                let r = counts[right.id] ?? 0
-                // Most of the map first; ties fall back to the alphabet so the
-                // order is at least stable among the 252 with a single pin.
-                return l == r ? left.displayName < right.displayName : l > r
-            }
-            .prefix(query.isEmpty ? 12 : 30)
-            .map { $0 }
+        FilterPanelRules.listedMakers(
+            makers,
+            query: query,
+            selected: filter.makerIds,
+            counts: counts,
+            showsUnsearchedList: showsUnsearchedList
+        )
     }
 
     var body: some View {
@@ -273,6 +289,10 @@ private struct DozentsBody: View {
             .padding(.horizontal, AtlasSpacing.md)
             .frame(height: AtlasSpacing.xl + AtlasSpacing.sm)
             .background(AtlasColors.background, in: Capsule())
+            // See `AtlasSpacing.panelSearchLead` — a bare capsule has none of
+            // the absorbed row gap a chip carries, so without this it met its
+            // heading tighter than everything else on the screen.
+            .padding(.top, AtlasSpacing.panelSearchLead)
 
             ForEach(listed(by: counts)) { maker in
                 row(maker, count: counts[maker.id] ?? 0)
@@ -420,6 +440,10 @@ private struct ArchitectSearch: View {
             .padding(.horizontal, AtlasSpacing.md)
             .frame(height: AtlasSpacing.xl + AtlasSpacing.sm)
             .background(AtlasColors.background, in: Capsule())
+            // Same lead-in as the Dozents field; this is the one the owner
+            // spotted, and fixing only this one would have left the other
+            // inconsistent. See `AtlasSpacing.panelSearchLead`.
+            .padding(.top, AtlasSpacing.panelSearchLead)
 
             FilterFlowLayout() {
                 ForEach(results, id: \.self) { name in
@@ -454,12 +478,85 @@ private struct AllFiltersBody: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             GroupLabel(text: FilterGroup.format.title)
-            FormatBody(filter: $filter, tours: tours)
+            // Flowed rather than stacked here — see `FormatBody.stacked`.
+            FormatBody(filter: $filter, tours: tours, stacked: false)
             GroupLabel(text: FilterGroup.price.title)
             PriceBody(filter: $filter, tours: tours)
             GroupLabel(text: FilterGroup.dozents.title)
-            DozentsBody(filter: $filter, tours: tours, makers: makers)
+            // Search field only until something is typed — see
+            // `DozentsBody.showsUnsearchedList`.
+            DozentsBody(
+                filter: $filter,
+                tours: tours,
+                makers: makers,
+                showsUnsearchedList: false
+            )
             TagsBody(filter: $filter, tours: tours)
         }
     }
+}
+
+// MARK: - Rules worth testing without a screen
+
+/// Panel behaviour that is a **decision** rather than a layout, lifted out of
+/// the private view structs so it can be tested without a `View`.
+enum FilterPanelRules {
+
+    /// Which Dozents a panel lists, given what has been typed and where the
+    /// panel is.
+    ///
+    /// Three rules, in order of how surprising they are:
+    ///
+    /// 1. **Typing searches all 377 of them**, capped at 30 — a search that
+    ///    stops at the first dozen matches is a search that lies.
+    /// 2. **An empty box lists the busiest twelve** in the Dozents panel, and
+    ///    in the All panel lists nothing (`showsUnsearchedList: false`). The
+    ///    field alone says what the section does; twelve avatar rows there
+    ///    pushed Tags off the screen.
+    /// 3. 🔴 **A selected Dozent is always listed while the box is empty**,
+    ///    whichever panel it is, even if they are not in the busiest twelve.
+    ///    Otherwise the panel would hide a filter that is switched on and the
+    ///    only way to turn it off would be to guess the name.
+    ///
+    /// Ordered by how much of the map is theirs, ties alphabetical — the one
+    /// place in this design where size order beats the alphabet, because it is
+    /// a relevance ranking (see `DozentsBody`).
+    static func listedMakers(
+        _ makers: [Maker],
+        query: String,
+        selected: Set<UUID>,
+        counts: [UUID: Int],
+        showsUnsearchedList: Bool
+    ) -> [Maker] {
+        let typed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        func busiestFirst(_ left: Maker, _ right: Maker) -> Bool {
+            let l = counts[left.id] ?? 0
+            let r = counts[right.id] ?? 0
+            return l == r ? left.displayName < right.displayName : l > r
+        }
+
+        guard typed.isEmpty else {
+            return makers
+                .filter { $0.displayName.localizedCaseInsensitiveContains(typed) }
+                .sorted(by: busiestFirst)
+                .prefix(searchedLimit)
+                .map { $0 }
+        }
+
+        let opening = showsUnsearchedList
+            ? Array(makers.sorted(by: busiestFirst).prefix(unsearchedLimit))
+            : []
+        let shown = Set(opening.map(\.id))
+        // Rule 3. In the All panel `opening` is empty, so this IS the list.
+        let selectedButUnlisted = makers.filter { selected.contains($0.id) && !shown.contains($0.id) }
+        guard !selectedButUnlisted.isEmpty else { return opening }
+        return (opening + selectedButUnlisted).sorted(by: busiestFirst)
+    }
+
+    /// The busiest few, when nothing has been typed and the panel lists.
+    static let unsearchedLimit = 12
+    /// Matches for something typed. Capped only so a one-letter query does not
+    /// build 377 rows.
+    static let searchedLimit = 30
 }

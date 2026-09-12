@@ -91,6 +91,22 @@ enum AtlasSpacing {
     /// option of any scrolling panel sits underneath it and cannot be tapped.
     /// A panel with a fixed height must also be at least its content plus this.
     static let panelRunOut: CGFloat = 96
+    /// Side inset for panel content — wider than the app's usual `md`, because
+    /// a sheet's own rounded corners eat the first few points and headings read
+    /// as pinned to the edge at 16 (owner, on device, 2026-09-12).
+    static let panelEdgeInset: CGFloat = 24
+    /// Gap above a panel's title. The grabber sits in this space, so the title
+    /// needs clearance from it as well as from the sheet's top edge.
+    static let panelTopInset: CGFloat = 28
+    /// Lead-in above a search field that follows a heading.
+    ///
+    /// 🔴 Not a taste value — it is the air a CHIP row gets for free. A chip is
+    /// drawn at `panelChipHeight` inside a frame that also owns `panelRowGap`,
+    /// so half that gap sits above it; a bare capsule (the Dozents and
+    /// architect search fields) has no such frame and so met its heading 8 pt
+    /// tighter than every other row on the same screen. Matching it here makes
+    /// the two consistent by construction rather than by eye.
+    static let panelSearchLead: CGFloat = panelRowGap / 2
 }
 
 // MARK: - Bottom module geometry

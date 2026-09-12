@@ -28,6 +28,38 @@ struct FilterChipRow: View {
     /// Which panel is up, if any. `nil` is the resting state.
     @State private var presented: FilterPanelRoute?
 
+    /// 🔴 **Why a filter panel has to switch the bottom module off.**
+    ///
+    /// The mini-player and tab bar do not live in this window.
+    /// `BottomModuleWindowController` installs a separate `UIWindow` at
+    /// `.normal + 1` — deliberately, so that UIKit modals in the main window
+    /// slide up *behind* the persistent player, the way Apple Music's does. A
+    /// `.sheet` is exactly such a modal, so the module painted over the bottom
+    /// 126 pt of every panel, taking the commit pill with it (owner, on device,
+    /// 2026-09-12).
+    ///
+    /// So the panel withdraws the bars for as long as it is up. That is the
+    /// established move for this collision: the tour wizard does it for the
+    /// height, and a link pin's embedded player does it for element fullscreen
+    /// (`TourDetailView.setBottomModuleHidden`). ⚠️ The other escape —
+    /// presenting from inside the top window, which is what `PlayerView` does —
+    /// is not available to a sheet bound to this row's state.
+    ///
+    /// ⚠️ `hidesBottomModule` is a plain Bool, not a count, so **two owners
+    /// must never overlap.** This one cannot overlap either existing owner: the
+    /// wizard covers the screen from the Me tab, and a tour page (where the
+    /// embed's fullscreen lives) is not reachable from inside a filter panel.
+    /// And this row restores only what it withdrew — `withdrewModule` is the
+    /// ownership record, so a panel dismissed while some other screen has the
+    /// bars withdrawn cannot put them back on top of it.
+    @State private var withdrewModule = false
+
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    /// Optional for the same reason `appShared` is: this row renders in
+    /// previews and tests where neither window nor shared state exists.
+    @Environment(BottomModuleWindowController.self)
+    private var bottomModuleWindow: BottomModuleWindowController?
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: AtlasSpacing.sm) {
@@ -38,9 +70,47 @@ struct FilterChipRow: View {
             }
             .padding(.horizontal, AtlasSpacing.md)
         }
-        .sheet(item: $presented) { route in
+        .sheet(item: $presented, onDismiss: { restoreBottomModule() }) { route in
             FilterPanelHost(route: route, filter: $filter, tours: tours, makers: makers)
         }
+        .onChange(of: presented != nil) { _, isUp in
+            if isUp { withdrawBottomModule() }
+        }
+        // Backstop. `onDismiss` covers both a swipe and the pill's own
+        // `dismiss()` — and it fires when the slide FINISHES, which is what
+        // keeps the bars from popping in behind a sheet still on its way down.
+        // This second path exists because the bars going missing for a whole
+        // session is a failure this app has shipped three times, and
+        // `syncBottomModuleVisibility()` cannot heal it: on every foreground it
+        // re-derives from `hidesBottomModule`, so it re-asserts a stuck flag
+        // rather than clearing it. A tab torn down under an open panel fires
+        // this while the ownership record is still intact.
+        .onDisappear { restoreBottomModule() }
+    }
+
+    // MARK: - The bottom module
+
+    @MainActor
+    private func withdrawBottomModule() {
+        guard !withdrewModule else { return }
+        withdrewModule = true
+        setBottomModuleHidden(true)
+    }
+
+    @MainActor
+    private func restoreBottomModule() {
+        guard withdrewModule else { return }
+        withdrewModule = false
+        setBottomModuleHidden(false)
+    }
+
+    /// Both, deliberately: hiding the window stops it painting AND hit-testing,
+    /// while the flag stops `ContentView`'s inline fallback drawing the same
+    /// bars in the main window on a launch where that window never installed.
+    @MainActor
+    private func setBottomModuleHidden(_ hidden: Bool) {
+        appShared?.hidesBottomModule = hidden
+        bottomModuleWindow?.setHidden(hidden)
     }
 
     // MARK: - Chips

@@ -1,8 +1,10 @@
 # Filter chips — a door and four chips
 
-**Status:** built on `claude/filtering-chip-system-htjq7k`, **not yet run** — no Mac in the session
-that wrote it, so it has never been compiled or seen in a simulator. CI on the PR is the first real
-check. Canvas:
+**Status:** built on `claude/filtering-chip-system-htjq7k`, open as
+[#835](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/835). **CI green** (run 2329 — simulator
+build plus 621 tests, compiled first time despite being written with no Mac in session), and
+**build 145 has been through its first device review** — the five notes it produced, and what they
+changed, are in § Device review, round 1. Canvas:
 <https://claude.ai/code/artifact/b5da2e3e-cd23-4484-807b-c8e74cb70d59>
 
 Replaces the flat multi-select row shipped in Tag Phase 2 (`Features/Home/TagFilterChipRow.swift`,
@@ -271,6 +273,53 @@ earlier pass centred them and the owner pulled it back. A chip's own label is al
 inside its capsule with its count beside it, so centring that pair independently would make the
 numbers wander; and the `Dozents` rows are full-width list rows with an avatar, so centring the
 name would unmoor the column.
+
+### Device review, round 1 — build 145 (owner, on device, 2026-09-12)
+
+The first round of notes from the real thing. Five, and one of them was an architecture collision
+rather than a spacing choice.
+
+🔴 **1. A panel must COVER the bottom module, and by default it cannot.** On device the sheets slid
+up *behind* the mini-player and tab bar, which painted over the bottom 126 pt of every panel and
+took the commit pill with them. This is not a bug in the panels: the module lives in a **separate
+`UIWindow` at `.normal + 1`**, installed exactly so that UIKit modals in the main window pass
+behind the persistent player, the way Apple Music's does. A `.sheet` is such a modal.
+
+So a panel now withdraws the bars for as long as it is up (`AppSharedState.hidesBottomModule` plus
+`BottomModuleWindowController.setHidden`) — the established move for this collision: the tour
+wizard does it for the 126 pt, and a link pin's embedded player does it for element fullscreen.
+The other escape, presenting from inside the top window (what `PlayerView` does), is not open to a
+sheet bound to the row's own state.
+
+⚠️ **That flag is a plain Bool, not a count, so two owners must never overlap.** The filter row is
+now the third owner and cannot collide with either of the others — the wizard covers the screen
+from the Me tab, and a tour page is unreachable from inside a filter panel — and it restores only
+what it withdrew, so a panel dismissed while another screen has the bars down cannot put them back
+on top of it. **Anything added here later must re-check that.**
+
+⚠️ Note the side effect on the panel heights below: every panel just gained the 126 pt it was
+silently losing, so the detent fractions are now more generous than the drawings assumed.
+
+**2. `Format` flows in the All panel, and stacks only in its own.** One option per row is right when
+Format *is* the subject — the seven have a real pecking order, 1,481 audio stops down to 3 Shorts,
+so a column reads like a list you work down. In the All panel it is one section of four, and seven
+full-width rows cost most of a screen before the reader reaches Price.
+
+**3. The All panel's `Dozents` section is the search field alone.** Twelve avatar rows there buried
+everything under them. 🔴 **With one exception that is not negotiable: a selected Dozent is still
+listed.** Otherwise the panel hides a filter that is switched on and the only way to turn it off is
+to guess the name — the same rule that keeps a selected-but-unpromoted tag on screen. Both halves
+live in `FilterPanelRules.listedMakers`, tested without a screen.
+
+**4. A search field met its heading 8 pt tighter than everything else** — the owner spotted it on
+`Architect`, and it was true of `Dozents` too. 🔴 The cause is worth keeping: a chip is drawn at 32
+inside a 48 pt frame, so **half the row gap sits above it for free**. A bare capsule has no such
+frame and so touched its label. `AtlasSpacing.panelSearchLead` is that half gap, named, so the two
+are consistent by construction rather than by eye.
+
+**5. Headings and `Clear` were pinned to the edges.** Side inset 16 → **24**
+(`panelEdgeInset`) and the title's top 16 → **28** (`panelTopInset`) — a sheet's own rounded
+corners eat the first few points, and the grabber sits in that top space.
 
 ### Ordering: counts promote, the alphabet displays
 
