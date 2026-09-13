@@ -38,6 +38,70 @@ not check it. This rule has cost the owner real trust; see `CLAUDE.md`
 
 Then read the newest `archive/HANDOFF-*.md` the script names.
 
+## 🔴 Check the environment BEFORE starting a pin or image batch
+
+Two environment defaults break the pipeline, both invisible until the work is
+half done. Check them first — it costs seconds and has already cost a session.
+
+**1. Network access.** A cloud environment starts on the **Trusted** access
+level: package registries and GitHub, nothing else. The pin pipeline needs
+`tiktok.com`, `instagram.com` and `ehky2882.github.io`, and none of them is on
+that list. Check before minting anything:
+
+```bash
+for u in https://www.tiktok.com https://www.instagram.com \
+         https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json; do
+  printf "%-50s %s\n" "$u" "$(curl -s -o /dev/null -w '%{http_code}' --max-time 15 "$u")"
+done
+```
+
+Anything other than `200`/`3xx` means the environment is walled in. **Do not
+work around it and do not half-do the batch** — a batch minted without
+thumbnails leaves `Tours.json` pointing at hero files that do not exist, which
+validates clean and ships broken. Tell the person plainly, in these words:
+
+> Your environment can only reach an approved list of websites, and TikTok /
+> Instagram aren't on it. Fix: at claude.ai/code, click the cloud icon showing
+> your environment name (just above the message box) → hover it → settings icon
+> → change **Network access** from **Trusted** to **Full** → save. Then start a
+> **new** session; this one keeps the old setting.
+
+If they cannot change it, the fallback that worked (2026-09-10): mint what you
+can, commit the pins plus a `pins.tsv` and a README handoff to the branch, and
+let a session with network reproduce the images. Never leave the catalog
+pointing at files nobody uploaded without saying so loudly in the handoff.
+
+**2. Pillow.** `make-link-pin.py` needs it to crop. Without it the selftest
+reports **62/62 and reads as a pass**; with it, **71/71**. Install first, then
+confirm the number:
+
+```bash
+pip install --quiet --timeout 120 --retries 5 Pillow
+python3 scripts/make-link-pin.py --selftest   # must say 71/71
+```
+
+**3. `gh` may be absent too.** `upload-images.py` shells out to it. When it is
+missing, build the gh-pages commit with plumbing rather than checking out the
+~4 GB branch — one tree, one commit, one ref move, which is the single-rebuild
+property that script exists to protect:
+
+```bash
+export GIT_INDEX_FILE=/tmp/ghp.index; rm -f "$GIT_INDEX_FILE"
+git read-tree origin/gh-pages
+for f in /tmp/heroes/*.webp; do
+  git update-index --add --cacheinfo 100644,"$(git hash-object -w "$f")","images/$(basename "$f")"
+done
+tree=$(git write-tree)
+git diff --name-status origin/gh-pages "$tree" | awk '{print $1}' | sort | uniq -c   # expect only A
+commit=$(git commit-tree "$tree" -p origin/gh-pages -m "Heroes for …")
+git push origin "$commit:gh-pages"
+```
+
+⚠️ **Never `git checkout` the gh-pages branch to do this.** It is ~4 GB; a
+checkout that dies partway leaves a tree where `git add` stages thousands of
+deletions, and committing that wipes live images. This nearly happened on
+2026-09-10 and was caught only by reading the diff before pushing.
+
 ## How work ships
 
 Always: **new branch → commit → open a PR → CI green → merge.** Never push to
@@ -150,6 +214,37 @@ python3 scripts/upload-images.py --dir /tmp/heroes --message "Heroes for <creato
 ```
 
 Then commit `Tours.json` on a branch, open the PR, let CI go green, merge.
+
+⚠️ **Two checks in that list are worth doing properly, because both have a way
+of reading like a pass when they are not.**
+
+- **Match the generated filenames against the catalog before uploading.** This
+  is the check that decides whether the pins ship pointing at nothing:
+
+  ```bash
+  git diff origin/main...HEAD -- "TRAVEL GUIDED TOUR/Resources/Tours.json" \
+    | grep '^+' | grep -o 'images/[A-Za-z0-9._-]*\.webp' | sort -u > /tmp/expected.txt
+  ls /tmp/heroes/*.webp | xargs -n1 basename | sed 's|^|images/|' | sort > /tmp/got.txt
+  diff /tmp/expected.txt /tmp/got.txt && echo "filenames align"
+  ```
+
+- **`check-image-duplicates.py --pins` prints `OK — no suspicious duplicates`
+  even when it fetched none of the new files.** A gh-pages push takes ~10
+  minutes to deploy, so a run started straight after the push 404s on every new
+  hero and still reports OK. Read the WARN lines, not the verdict, and confirm
+  the live URLs separately once the Pages build finishes:
+
+  ```bash
+  for f in /tmp/heroes/*.webp; do b=$(basename "$f")
+    curl -s -o /tmp/dl -w "%{http_code} $b\n" --max-time 30 \
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/$b"
+    [ "$(git hash-object /tmp/dl)" = "$(git hash-object "$f")" ] || echo "HASH MISMATCH $b"
+  done
+  ```
+
+  The Pages build state is readable from the Actions run list on branch
+  `gh-pages` (`pages build and deployment`); `in_progress` explains a 404 and
+  means wait, not fail.
 
 ## The five things that bite
 
