@@ -4,7 +4,8 @@ import XCTest
 /// The rule that keeps a reused `HeroImageView` from showing the previous
 /// tour's photograph.
 ///
-/// Reported from a device: the "Continue listening" row read VIA 57 WEST
+/// Reported from a device: the home drawer's "Continue listening" row (since
+/// removed — the rule outlived the screen) read VIA 57 WEST
 /// while showing the Colosseum. Title and image come from the *same* `Tour`
 /// value, so the data could not disagree — the image was stale view state.
 final class HeroImageCacheRuleTests: XCTestCase {

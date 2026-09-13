@@ -82,12 +82,13 @@ struct HeroImageView: View {
     /// reuse. So "already cached, nothing to do" is wrong: it leaves the old
     /// picture sitting under the new title, forever, with no error anywhere.
     ///
-    /// The "Continue listening" row is exactly that shape — a single view
-    /// whose tour changes — which is why it showed a previous tour's
-    /// photograph while the rails beside it, keyed per tour by `ForEach`, were
-    /// right. Any singleton that swaps tours (the map placecard, a resume
-    /// banner) inherits this; anything inside a `ForEach` keyed by tour does
-    /// not.
+    /// The home drawer's old "Continue listening" row was exactly that shape —
+    /// a single view whose tour changes — which is why it showed a previous
+    /// tour's photograph while the rails beside it, keyed per tour by
+    /// `ForEach`, were right. ⚠️ That row was removed on 2026-09-13, so the
+    /// example is historical; **the rule is not.** Any singleton that swaps
+    /// tours (the map placecard is the live one) inherits this; anything inside
+    /// a `ForEach` keyed by tour does not.
     enum CacheAction: Equatable {
         /// The cache holds this URL's image — show it now, no fetch.
         case adopt
