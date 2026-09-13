@@ -1110,3 +1110,53 @@ round broke for a reason the simulator check before it had hidden.
   outlast one screenshot — screenshot until the home map is visible before stopping a recording.
 - **Probe, don't reason.** Temporary logging of predicted vs actual layer brightness (0.737 vs
   0.749) settled in one run what three theories had not. Detail: `archive/HANDOFF-260912-4.md`.
+
+## A walled-in environment breaks the batch halfway, not at the start (2026-09-13)
+
+A new contributor's first link-pin batch stalled with `COULD NOT VERIFY — could
+not resolve https://vm.tiktok.com/…`. Nothing was wrong with the tool, the
+links, or the catalogue. A cloud environment starts on the **Trusted** network
+access level — package registries and GitHub, nothing else — and the pin
+pipeline needs `tiktok.com`, `instagram.com` and `ehky2882.github.io`, none of
+which is on that list.
+
+**The shape of the failure is what matters.** GitHub *is* reachable, so the
+session could resolve coordinates, mint ids, write entries and commit them. It
+could do everything except fetch a thumbnail. So the batch fails **half done**,
+with `Tours.json` already pointing at hero files nobody has uploaded — which
+`validate-tours.swift` passes, because the URLs are well-formed and it does not
+fetch them. Left alone, that ships pins whose photographs 404 forever.
+
+Three rules, in order of how much they cost:
+
+1. **Probe the three hosts before minting anything.** Three `curl -o /dev/null
+   -w '%{http_code}'` calls. A wall discovered before the work is a config
+   change; discovered after, it is a two-session handoff.
+2. **When walled in, stop and hand off — never half-ship.** The session that hit
+   this did the right thing: committed the pins plus a `pins.tsv` and a README
+   naming exactly what was missing, and said plainly that nothing must merge
+   until the heroes existed. A session with network reproduced the 20 images
+   from that file in minutes. The research was never redone.
+3. **The fix is the environment, not the code.** claude.ai/code → the cloud icon
+   above the message box → settings → **Network access: Trusted → Full**. A
+   session already open keeps the old setting; it takes a new one.
+
+⚠️ **Two neighbouring defaults bite the same way — invisibly, and only in the
+image path.** `Pillow` is often absent, and without it `make-link-pin.py
+--selftest` reports **62/62, which reads as a pass**, against **71/71** with it
+installed. And `gh` may be missing, which `upload-images.py` shells out to.
+
+⚠️ **Do not solve a missing `gh` by checking out gh-pages.** That branch is
+~4 GB. A checkout killed partway leaves a working tree where `git add` stages
+**thousands of deletions**, and committing it would wipe live images — this came
+within one command of happening. Build the commit with plumbing instead
+(`read-tree` → `update-index` → `write-tree` → `commit-tree` → push a ref), which
+is also the one-rebuild property `upload-images.py` exists to protect. Read the
+tree diff before pushing: it must be additions only, nothing outside `images/`.
+
+⚠️ **And `check-image-duplicates.py --pins` will tell you it is fine when it
+fetched nothing.** A gh-pages deploy takes ~10 minutes; a run started right
+after the push 404s on every new hero and still prints `OK — no suspicious
+duplicates`. That is §1 of this document with a fresh costume: read the WARN
+lines and the counts, never the verdict, and confirm the live URLs and their
+hashes once the Pages build reports success.
