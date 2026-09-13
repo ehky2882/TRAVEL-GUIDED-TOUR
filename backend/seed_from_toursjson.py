@@ -144,13 +144,20 @@ def emit(data, out):
     for m in makers:
         w(
             "insert into public.makers "
-            "(id, display_name, avatar_url, avatar_emoji, bio, website_url) values ("
+            "(id, display_name, avatar_url, avatar_emoji, bio, website_url, platform, handle) values ("
             f"{q(m['id'])}, {q(m['displayName'])}, {q(m.get('avatarURL'))}, "
-            f"{q(m.get('avatarEmoji'))}, {q(m['bio'])}, {q(m.get('websiteURL'))})\n"
+            f"{q(m.get('avatarEmoji'))}, {q(m['bio'])}, {q(m.get('websiteURL'))}, "
+            f"{q(m.get('platform'))}, {q(m.get('handle'))})\n"
             "on conflict (id) do update set "
             "display_name = excluded.display_name, avatar_url = excluded.avatar_url, "
             "avatar_emoji = excluded.avatar_emoji, bio = excluded.bio, "
-            "website_url = excluded.website_url, updated_at = now();\n"
+            "website_url = excluded.website_url, "
+            # platform/handle (backend/usernames.sql): a maker the catalogue
+            # carries without them keeps what the database already holds —
+            # the guard trigger derives one on insert — so a seed can never
+            # blank a handle.
+            "platform = coalesce(excluded.platform, makers.platform), "
+            "handle = coalesce(excluded.handle, makers.handle), updated_at = now();\n"
         )
 
     # NOTE (paid tours, V2 Step 6): price_tier is deliberately absent from

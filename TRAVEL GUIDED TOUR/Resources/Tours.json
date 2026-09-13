@@ -3,6 +3,8 @@
     {
       "id": "00000000-0000-0000-0000-000000000001",
       "displayName": "Atlas Studio NYC",
+      "platform": "dozent",
+      "handle": "atlas.nyc",
       "avatarURL": null,
       "avatarEmoji": "🍎",
       "bio": "Atlas Studio is the in-house team producing the audio tours that ship with Atlas at launch. Founding makers join after V1.",
@@ -11,6 +13,8 @@
     {
       "id": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
       "displayName": "Atlas Studio OPO",
+      "platform": "dozent",
+      "handle": "atlas.opo",
       "avatarURL": null,
       "avatarEmoji": "🇵🇹",
       "bio": "Atlas Studio's Porto bureau — audio tours of the city's architecture and culture.",
@@ -19,6 +23,8 @@
     {
       "id": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
       "displayName": "Atlas Studio LIS",
+      "platform": "dozent",
+      "handle": "atlas.lis",
       "avatarURL": null,
       "avatarEmoji": "🇵🇹",
       "bio": "Atlas Studio's Lisbon bureau — audio tours of the city's architecture and culture.",
@@ -27,6 +33,8 @@
     {
       "id": "9c40396a-74ed-49d2-9796-a41edb9e4105",
       "displayName": "Atlas Studio LDN",
+      "platform": "dozent",
+      "handle": "atlas.ldn",
       "avatarURL": null,
       "avatarEmoji": "🇬🇧",
       "bio": "Atlas Studio's London bureau — audio tours of the city's architecture and history.",
@@ -35,6 +43,8 @@
     {
       "id": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
       "displayName": "Atlas Studio HKG",
+      "platform": "dozent",
+      "handle": "atlas.hkg",
       "avatarURL": null,
       "avatarEmoji": "🇭🇰",
       "bio": "Atlas Studio's Hong Kong bureau — audio tours of the city's architecture, markets, and harbour.",
@@ -43,6 +53,8 @@
     {
       "id": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
       "displayName": "Atlas Studio SFO",
+      "platform": "dozent",
+      "handle": "atlas.sfo",
       "avatarURL": null,
       "avatarEmoji": "🌉",
       "bio": "Atlas Studio's San Francisco bureau — audio tours across the city by the bay, from the Ferry Building to Lands End.",
@@ -51,6 +63,8 @@
     {
       "id": "be5797bb-8d86-5b3f-99d4-09b2ffac65bd",
       "displayName": "Atlas Studio TYO",
+      "platform": "dozent",
+      "handle": "atlas.tyo",
       "avatarURL": null,
       "avatarEmoji": "🇯🇵",
       "bio": "Atlas Studio's Tokyo bureau — audio tours of the city's temples, towers, backstreets, and design landmarks.",
@@ -59,6 +73,8 @@
     {
       "id": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
       "displayName": "Atlas Studio YYZ",
+      "platform": "dozent",
+      "handle": "atlas.yyz",
       "avatarURL": null,
       "avatarEmoji": "🇨🇦",
       "bio": "Atlas Studio's Toronto bureau — audio tours of the city's towers, markets, waterfront, and neighbourhoods.",
@@ -67,6 +83,8 @@
     {
       "id": "50b53af5-68ac-5e6e-8185-ae367326632d",
       "displayName": "Atlas Studio KYO",
+      "platform": "dozent",
+      "handle": "atlas.kyo",
       "avatarURL": null,
       "avatarEmoji": "🇯🇵",
       "bio": "Atlas Studio's Kyoto bureau — audio tours of the old capital's temples, gardens, machiya, teahouses, and design landmarks.",
@@ -75,6 +93,8 @@
     {
       "id": "58b5e216-086c-56fb-8367-884edbf23b6a",
       "displayName": "Atlas Studio NAO",
+      "platform": "dozent",
+      "handle": "atlas.nao",
       "avatarURL": null,
       "avatarEmoji": "🇯🇵",
       "bio": "Atlas Studio's Naoshima bureau — audio tours of the Seto Inland Sea's art island: its museums, pavilions, and installations.",
@@ -83,6 +103,8 @@
     {
       "id": "6d667fb0-736b-5962-995d-df9427c1b8bb",
       "displayName": "Atlas Studio PAR",
+      "platform": "dozent",
+      "handle": "atlas.par",
       "avatarURL": null,
       "avatarEmoji": "🇫🇷",
       "bio": "Atlas Studio's Paris bureau — audio tours of the city's monuments, museums, churches, gardens and quartiers, from the Île de la Cité to Montmartre.",
@@ -91,6 +113,8 @@
     {
       "id": "9232abae-1cc5-5058-b33b-bcaf605263fc",
       "displayName": "Atlas Studio SEL",
+      "platform": "dozent",
+      "handle": "atlas.sel",
       "avatarURL": null,
       "avatarEmoji": "🇰🇷",
       "bio": "Atlas Studio's Seoul bureau — audio tours of the city's palaces, markets, galleries, and the design flagships remaking greater Seoul and Korea.",
@@ -99,6 +123,8 @@
     {
       "id": "b1b8e1dc-459f-53be-8640-bbf88d94101a",
       "displayName": "Atlas Studio LAX",
+      "platform": "dozent",
+      "handle": "atlas.lax",
       "avatarURL": null,
       "avatarEmoji": "🇺🇸",
       "bio": "Atlas Studio's Los Angeles bureau — audio tours of the city's studios, boulevards, beaches and museums, from Bunker Hill to the Pacific.",
@@ -107,6 +133,8 @@
     {
       "id": "451ac0a8-d850-50ac-adc7-45bf20bf15c5",
       "displayName": "Atlas Studio BKK",
+      "platform": "dozent",
+      "handle": "atlas.bkk",
       "avatarURL": null,
       "avatarEmoji": "🇹🇭",
       "bio": "Atlas Studio's Bangkok bureau — audio tours of the city's temples, markets, canals, and cafés, and the design landmarks, sacred sites, and wild places across greater Bangkok and beyond.",
@@ -115,6 +143,8 @@
     {
       "id": "946d6338-4459-5061-8206-4dc57784629f",
       "displayName": "Atlas Studio AMS",
+      "platform": "dozent",
+      "handle": "atlas.ams",
       "bio": "Atlas Studio's Amsterdam bureau — audio walks through the canals, the Golden Age, and the living city.",
       "avatarEmoji": "🇳🇱",
       "avatarURL": null,
@@ -123,6 +153,8 @@
     {
       "id": "40a6f268-82f9-53f0-8f30-91015633cfaf",
       "displayName": "Atlas Studio SGN",
+      "platform": "dozent",
+      "handle": "atlas.sgn",
       "bio": "Atlas Studio's Ho Chi Minh City bureau — audio walks through Saigon's colonial landmarks, Cholon's temples and markets, and one of Asia's most restless food scenes.",
       "avatarEmoji": "🇻🇳",
       "avatarURL": null,
@@ -131,6 +163,8 @@
     {
       "id": "72e33638-9ae5-5fa5-b516-d6870455c92f",
       "displayName": "Atlas Studio CNX",
+      "platform": "dozent",
+      "handle": "atlas.cnx",
       "avatarURL": null,
       "avatarEmoji": "🇹🇭",
       "bio": "Atlas Studio's Chiang Mai bureau — audio tours of the north: its Lanna temples and mountain forests, its markets and khao soi shops, and the cafés, craft villages and festivals spread across Chiang Mai, Mae Hong Son and Chiang Rai.",
@@ -139,6 +173,8 @@
     {
       "id": "980300bd-fc2c-56cc-8960-bcf90414c206",
       "displayName": "Atlas Studio MAD",
+      "platform": "dozent",
+      "handle": "atlas.mad",
       "avatarURL": null,
       "avatarEmoji": "🇪🇸",
       "bio": "Atlas Studio's Madrid bureau — audio tours of the Spanish capital: its Habsburg old town and royal palace, the golden triangle of art along the Paseo del Prado, and the markets, plazas and neighbourhoods where the city actually spends its evenings.",
@@ -147,6 +183,8 @@
     {
       "id": "d5939cce-c156-5316-984a-6259aadd8be2",
       "displayName": "Atlas Studio ROM",
+      "platform": "dozent",
+      "handle": "atlas.rom",
       "avatarURL": null,
       "avatarEmoji": "🇮🇹",
       "bio": "Atlas Studio's Rome bureau — audio tours of a city that never demolishes so much as re-uses: imperial ruins turned quarries turned churches, Baroque squares built over stadiums, and the piazzas, river islands and hilltop terraces where Romans still spend their evenings.",
@@ -155,6 +193,8 @@
     {
       "id": "4f7241f0-9392-54a4-8807-24fd959e61fe",
       "displayName": "Atlas Studio YUL",
+      "platform": "dozent",
+      "handle": "atlas.yul",
       "avatarURL": null,
       "avatarEmoji": "🇨🇦",
       "bio": "Atlas Studio's Montreal bureau — audio tours of a city built on a traffic jam in the river: French and English staring at each other across a boulevard, a mountain that gave the place its name, and the outdoor staircases Montrealers chose as their own truest symbol.",
@@ -163,6 +203,8 @@
     {
       "id": "e94b8814-2c31-5113-963c-1743e6c86b4b",
       "displayName": "Atlas Studio DXB",
+      "platform": "dozent",
+      "handle": "atlas.dxb",
       "avatarURL": null,
       "avatarEmoji": "🇦🇪",
       "bio": "Atlas's Dubai bureau. Wind towers and wharfage, souks and skyline — the city that built its harbour before the trade arrived, and never stopped building ahead of the need.",
@@ -171,6 +213,8 @@
     {
       "id": "016bddbe-c759-56fd-8558-869df74b179b",
       "displayName": "Atlas Studio RIO",
+      "platform": "dozent",
+      "handle": "atlas.rio",
       "avatarURL": null,
       "avatarEmoji": "🇧🇷",
       "bio": "Atlas Studio's Rio de Janeiro bureau — audio tours of a city wedged between granite and sea: Niemeyer's curves and Reidy's hillside slabs, an aqueduct that became a tramway, and the botecos, samba corners and Saturday markets where Rio actually spends its evenings.",
@@ -179,6 +223,8 @@
     {
       "id": "b366d042-881b-5226-aaa8-1dce36c7a2cb",
       "displayName": "Atlas Studio SAO",
+      "platform": "dozent",
+      "handle": "atlas.sao",
       "avatarURL": null,
       "avatarEmoji": "🇧🇷",
       "bio": "Atlas Studio's São Paulo bureau — audio tours of a city that builds in raw concrete and argues in public: Niemeyer's curves and Lina Bo Bardi's suspended museums, factories turned into culture centres, unmarked houses serving some of the continent's best food, and a park that doubles as an open-air museum of Brazilian modernism.",
@@ -187,6 +233,8 @@
     {
       "id": "a0717b10-a295-5ab5-a875-d5a9587d0274",
       "displayName": "Atlas Studio BER",
+      "platform": "dozent",
+      "handle": "atlas.ber",
       "avatarURL": null,
       "avatarEmoji": "🇩🇪",
       "bio": "Atlas Studio's Berlin bureau — audio tours of a city that keeps its scars where you can read them: a parliament that preserved its conquerors' graffiti, a double line of cobblestones tracing the Wall through squares and traffic, memorials that refuse to console, and an old border strip that the city filled with flea markets and Sunday singing.",
@@ -195,6 +243,8 @@
     {
       "id": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
       "displayName": "Atlas Studio RAK",
+      "platform": "dozent",
+      "handle": "atlas.rak",
       "avatarURL": null,
       "avatarEmoji": "🇲🇦",
       "bio": "Atlas Studio's Marrakech bureau — audio tours of the red city: a minaret nothing is allowed to rise above, palaces stripped bare by the dynasties that followed, a square UNESCO protects for what happens in it rather than what stands on it, and the gardens, rooftops and open kitchens where the city actually lives.",
@@ -203,6 +253,8 @@
     {
       "id": "64f37bdd-7cb4-5727-b525-6a801162ff9a",
       "displayName": "Atlas Studio BUE",
+      "platform": "dozent",
+      "handle": "atlas.bue",
       "avatarURL": null,
       "avatarEmoji": "🇦🇷",
       "bio": "Atlas Studio's Buenos Aires bureau — audio tours of the city the River Plate built: an opera house that outlived its architects, a bank that argued in raw concrete, the street a painter invented, the balcony Evita spoke from, and the cafés, bars and dining rooms where porteños do their real arguing.",
@@ -211,6 +263,8 @@
     {
       "id": "f34cd76e-1e41-5c38-865d-d8eccd775cd3",
       "displayName": "Atlas Studio ORD",
+      "platform": "dozent",
+      "handle": "atlas.ord",
       "avatarURL": null,
       "avatarEmoji": "🇺🇸",
       "bio": "Atlas Studio's Chicago bureau — audio tours of the city that invented the tall building and kept the receipts: a bean of polished steel, a river running backward on purpose, the block where walls stopped holding buildings up, and a lakefront kept forever open, clear and free by a mail-order man with very good lawyers.",
@@ -219,6 +273,8 @@
     {
       "id": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
       "displayName": "Atlas Studio MEL",
+      "platform": "dozent",
+      "handle": "atlas.mel",
       "avatarURL": null,
       "avatarEmoji": "🇦🇺",
       "bio": "Atlas Studio's Melbourne bureau — audio tours of a city that does its best work at close range: the clocks everyone still meets under, a square Melbourne argued about and then adopted, unmarked doors hiding some of the world's best bars, gin distilled by amateurs who became the world's best, and the espresso counter that started it all in 1954.",
@@ -227,6 +283,8 @@
     {
       "id": "e676aade-c4c6-53dd-9141-48c46d3fe743",
       "displayName": "Atlas Studio SYD",
+      "platform": "dozent",
+      "handle": "atlas.syd",
       "avatarURL": null,
       "avatarEmoji": "🇦🇺",
       "bio": "Atlas Studio's Sydney bureau — audio tours of the harbour city where a Dane's white sails cost him his career, an arch was riveted shut over open water, surfing came ashore on a sugar-pine board, and the neighbourhoods carved their own pools into the ocean's edge.",
@@ -235,6 +293,8 @@
     {
       "id": "38456828-e395-5fd7-9525-a10329fabb15",
       "displayName": "Atlas Studio CPT",
+      "platform": "dozent",
+      "handle": "atlas.cpt",
       "avatarURL": null,
       "avatarEmoji": "🇿🇦",
       "bio": "Atlas Studio's Cape Town bureau — audio tours of the city under the mountain, where a grain silo was carved into a museum, a garden was planted to stop sailors dying of scurvy, two penguins founded a colony, and a neighbourhood painted itself bright enough to say it was still there.",
@@ -243,6 +303,8 @@
     {
       "id": "79ad2022-a58c-52d0-b41a-814f9ac29323",
       "displayName": "Atlas Studio BCN",
+      "platform": "dozent",
+      "handle": "atlas.bcn",
       "avatarURL": null,
       "avatarEmoji": "🇪🇸",
       "bio": "Atlas Studio's Barcelona bureau — audio tours of the city Gaudí never finished, where three architects spent a decade arguing across one block of pavement, a cement factory became a home, dockworkers carried a cathedral uphill on their backs, and a mountain named after the devil's best offer holds a thousand-year-old choir.",
@@ -251,6 +313,8 @@
     {
       "id": "a875e649-d154-5f8c-b9fc-540691f0960a",
       "displayName": "Atlas Studio MIL",
+      "platform": "dozent",
+      "handle": "atlas.mil",
       "avatarURL": null,
       "avatarEmoji": "🇮🇹",
       "bio": "Atlas Studio's Milan bureau — audio tours of the city that spent six hundred years finishing its cathedral and still hauls the argument about what comes next into every new building: a tower whose top is wider than its bottom, nine hundred trees growing sideways off a balcony, a distillery wrapped in gold leaf, and a canal towpath where the marble arrived by barge.",
@@ -259,6 +323,8 @@
     {
       "id": "f2a33936-ad47-5787-a9ea-526c7daf475f",
       "displayName": "Atlas Studio STO",
+      "platform": "dozent",
+      "handle": "atlas.sto",
       "avatarURL": null,
       "avatarEmoji": "🇸🇪",
       "bio": "Atlas Studio's Stockholm bureau — audio tours of a city built across fourteen islands and straight into the bedrock beneath them: a metro whose platforms were left as blasted rock and painted, a warship that sank in twenty minutes and taught us everything, a cemetery two thirty-year-olds designed by refusing to level the ground, and a hill made entirely of the city's own rubbish.",
@@ -267,6 +333,8 @@
     {
       "id": "be4e2519-c59b-5a56-84a5-2781aea95ece",
       "displayName": "Atlas Studio CPH",
+      "platform": "dozent",
+      "handle": "atlas.cph",
       "avatarURL": null,
       "avatarEmoji": "🇩🇰",
       "bio": "Atlas Studio's Copenhagen bureau — audio tours of a city that put a ski slope on its rubbish incinerator, cleaned its harbour until people swim in it, buried a museum nine metres down so it wouldn't block a castle, and built a park out of objects its residents nominated from sixty countries.",
@@ -275,6 +343,8 @@
     {
       "id": "F9ADCC3C-E22E-55BC-914F-2B344617FD93",
       "displayName": "TikTok @naturalhistorymuseum",
+      "platform": "tiktok",
+      "handle": "naturalhistorymuseum",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-naturalhistorymuseum.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -283,6 +353,8 @@
     {
       "id": "CC4C84F8-9CC9-5174-B343-CCB82CBC0A98",
       "displayName": "YouTube @TheMeganDaily",
+      "platform": "youtube",
+      "handle": "themegandaily",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-themegandaily.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -291,6 +363,8 @@
     {
       "id": "07A3F2E2-E464-5820-91E6-B9E6314F5896",
       "displayName": "YouTube @CruisingAddicts",
+      "platform": "youtube",
+      "handle": "cruisingaddicts",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-cruisingaddicts.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -299,6 +373,8 @@
     {
       "id": "02A82B20-3588-53D1-AF46-CF23D3568125",
       "displayName": "Instagram @poche_space",
+      "platform": "instagram",
+      "handle": "poche_space",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -307,6 +383,8 @@
     {
       "id": "74F3CAE3-EAED-5C9C-8A17-3FB8CA388141",
       "displayName": "TikTok @urbanstoriesyt",
+      "platform": "tiktok",
+      "handle": "urbanstoriesyt",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-urbanstoriesyt.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -315,6 +393,8 @@
     {
       "id": "EE3F68FE-7A6A-5FE1-BB16-37D8DD652B6F",
       "displayName": "TikTok @brandino.wang",
+      "platform": "tiktok",
+      "handle": "brandino.wang",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-brandino-wang.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -323,6 +403,8 @@
     {
       "id": "2141E89E-D45A-5DEF-9D3C-91949B3A018C",
       "displayName": "YouTube @archiwhisperer",
+      "platform": "youtube",
+      "handle": "archiwhisperer",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-archiwhisperer.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -331,6 +413,8 @@
     {
       "id": "1553FE0E-9D2D-52FE-ACCB-11A8DF632107",
       "displayName": "TikTok @itsezcape",
+      "platform": "tiktok",
+      "handle": "itsezcape",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-itsezcape.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -339,6 +423,8 @@
     {
       "id": "D3BA8519-87EF-5E43-B8A1-98511510E90A",
       "displayName": "TikTok @japan.explore",
+      "platform": "tiktok",
+      "handle": "japan.explore",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-japan-explore.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -347,6 +433,8 @@
     {
       "id": "5B4DCA48-69E1-5E61-A33B-72BAB006BA9C",
       "displayName": "TikTok @jetsettimes",
+      "platform": "tiktok",
+      "handle": "jetsettimes",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jetsettimes.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -355,6 +443,8 @@
     {
       "id": "62278A0B-D06A-5C29-A4A1-29B67BEE7A4B",
       "displayName": "TikTok @myles_toes",
+      "platform": "tiktok",
+      "handle": "myles_toes",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-myles-toes.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -363,6 +453,8 @@
     {
       "id": "1A2DC2C9-6ECF-5970-A699-776DE05E8F24",
       "displayName": "TikTok @portugal.journeys",
+      "platform": "tiktok",
+      "handle": "portugal.journeys",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-portugal-journeys.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -371,6 +463,8 @@
     {
       "id": "81878FDB-212F-5853-A1ED-7AA710092093",
       "displayName": "TikTok @travelih",
+      "platform": "tiktok",
+      "handle": "travelih",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-travelih.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -379,6 +473,8 @@
     {
       "id": "31FF40A4-090C-5C62-B74A-01B15C6952C0",
       "displayName": "YouTube @lectec",
+      "platform": "youtube",
+      "handle": "lectec",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-lectec.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -387,6 +483,8 @@
     {
       "id": "3DBA4E0E-AEB5-5D48-9348-D2FC2D15BC82",
       "displayName": "TikTok @jaekicho",
+      "platform": "tiktok",
+      "handle": "jaekicho",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jaekicho.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -395,6 +493,8 @@
     {
       "id": "47356C54-7D57-535D-8415-7A90E372BDBE",
       "displayName": "TikTok @erekosima43",
+      "platform": "tiktok",
+      "handle": "erekosima43",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-erekosima43.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -403,6 +503,8 @@
     {
       "id": "74E1373F-74E7-5F10-B9B2-6F57542928DB",
       "displayName": "TikTok @travelezee",
+      "platform": "tiktok",
+      "handle": "travelezee",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-travelezee.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -411,6 +513,8 @@
     {
       "id": "AC062EB2-0FFD-5854-959C-033A4B043CA1",
       "displayName": "TikTok @matthewolivierx",
+      "platform": "tiktok",
+      "handle": "matthewolivierx",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-matthewolivierx.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -419,6 +523,8 @@
     {
       "id": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
       "displayName": "TikTok @ninosbuildings",
+      "platform": "tiktok",
+      "handle": "ninosbuildings",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-ninosbuildings.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -427,6 +533,8 @@
     {
       "id": "004CA74B-834B-5833-A6D5-D84AE625D05F",
       "displayName": "TikTok @aahrtshop",
+      "platform": "tiktok",
+      "handle": "aahrtshop",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-aahrtshop.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -435,6 +543,8 @@
     {
       "id": "D593F289-CF4F-5042-B38B-DE279D1A3A63",
       "displayName": "TikTok @michaelmotamedi",
+      "platform": "tiktok",
+      "handle": "michaelmotamedi",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-michaelmotamedi.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -443,6 +553,8 @@
     {
       "id": "05A34772-F0AB-57B0-9850-131F156A1273",
       "displayName": "YouTube @TheFoodFetishist",
+      "platform": "youtube",
+      "handle": "thefoodfetishist",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-thefoodfetishist.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -451,6 +563,8 @@
     {
       "id": "75112BB1-1729-5F41-A709-EF99815C957A",
       "displayName": "TikTok @malata.antwerp",
+      "platform": "tiktok",
+      "handle": "malata.antwerp",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-malata-antwerp.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -459,6 +573,8 @@
     {
       "id": "DA6225D8-82D3-5FF7-A65B-68D9401FBF21",
       "displayName": "YouTube @gastropico",
+      "platform": "youtube",
+      "handle": "gastropico",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-gastropico.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -467,6 +583,8 @@
     {
       "id": "4D03AA37-F990-58F0-B074-79405A3C91A0",
       "displayName": "YouTube @WienerbergerAG",
+      "platform": "youtube",
+      "handle": "wienerbergerag",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-wienerbergerag.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -475,6 +593,8 @@
     {
       "id": "9FC8D21E-319C-58D3-8D0C-33E630B515E8",
       "displayName": "YouTube @WienerbergerOfficial",
+      "platform": "youtube",
+      "handle": "wienerbergerofficial",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-wienerbergerofficial.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -483,6 +603,8 @@
     {
       "id": "128B5644-6F4C-5F71-80AA-F125679EA455",
       "displayName": "TikTok @quadajahwhitley",
+      "platform": "tiktok",
+      "handle": "quadajahwhitley",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-quadajahwhitley.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -491,6 +613,8 @@
     {
       "id": "9F250FF9-03A9-589B-BAEB-35427A90EC0E",
       "displayName": "TikTok @oceanfront.stays",
+      "platform": "tiktok",
+      "handle": "oceanfront.stays",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-oceanfront-stays.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -499,6 +623,8 @@
     {
       "id": "3C0F7132-6AD6-5D55-A873-03AFA387F8E8",
       "displayName": "TikTok @magicallymadisen",
+      "platform": "tiktok",
+      "handle": "magicallymadisen",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-magicallymadisen.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -507,6 +633,8 @@
     {
       "id": "5C21DD71-C96A-5FC2-B21C-FE9EBDFE4CD3",
       "displayName": "TikTok @codiendrew",
+      "platform": "tiktok",
+      "handle": "codiendrew",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-codiendrew.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -515,6 +643,8 @@
     {
       "id": "2661642D-1B8A-51EE-BFB1-37FCC1152810",
       "displayName": "TikTok @lemonhearted",
+      "platform": "tiktok",
+      "handle": "lemonhearted",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-lemonhearted.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -523,6 +653,8 @@
     {
       "id": "6F5E9C0D-5CF6-5045-AF3E-0A257220F8B1",
       "displayName": "TikTok @amidlifetravelcrisis",
+      "platform": "tiktok",
+      "handle": "amidlifetravelcrisis",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-amidlifetravelcrisis.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -531,6 +663,8 @@
     {
       "id": "A0C4F90B-D657-5DFD-BF1C-05AFEADA98A9",
       "displayName": "TikTok @universalorlando",
+      "platform": "tiktok",
+      "handle": "universalorlando",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-universalorlando.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -539,6 +673,8 @@
     {
       "id": "4A77C464-02DD-5312-998B-27ED9B0BBC1F",
       "displayName": "TikTok @showmelovejete",
+      "platform": "tiktok",
+      "handle": "showmelovejete",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-showmelovejete.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -547,6 +683,8 @@
     {
       "id": "C3EAF976-6ADA-5EA1-A80C-E06A21A7401A",
       "displayName": "TikTok @melschewychow",
+      "platform": "tiktok",
+      "handle": "melschewychow",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-melschewychow.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -555,6 +693,8 @@
     {
       "id": "2EEC1D20-021C-5621-836E-9ABCD0D1E187",
       "displayName": "TikTok @franklinandrewcruz",
+      "platform": "tiktok",
+      "handle": "franklinandrewcruz",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-franklinandrewcruz.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -563,6 +703,8 @@
     {
       "id": "60B003D0-ABA3-5FBC-87A2-85B65B017A6F",
       "displayName": "TikTok @airamdphoto",
+      "platform": "tiktok",
+      "handle": "airamdphoto",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-airamdphoto.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -571,6 +713,8 @@
     {
       "id": "397E82CA-A8DB-5774-9753-6F08B59C0CFD",
       "displayName": "TikTok @readphiles",
+      "platform": "tiktok",
+      "handle": "readphiles",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-readphiles.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -579,6 +723,8 @@
     {
       "id": "9FF140AA-0306-5E88-B244-CC56A897EA7D",
       "displayName": "TikTok @como.laflores",
+      "platform": "tiktok",
+      "handle": "como.laflores",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-como-laflores.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -587,6 +733,8 @@
     {
       "id": "F53E79C8-0D93-5259-9D7D-462C53C8BBE1",
       "displayName": "TikTok @where2nextorlando",
+      "platform": "tiktok",
+      "handle": "where2nextorlando",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-where2nextorlando.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -595,6 +743,8 @@
     {
       "id": "470E5D4F-0113-5BB5-A4C8-0BC2EE2FC7C9",
       "displayName": "TikTok @social_barbi",
+      "platform": "tiktok",
+      "handle": "social_barbi",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-social-barbi.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -603,6 +753,8 @@
     {
       "id": "EBEEBFEB-490C-5D1D-A794-F618895C419C",
       "displayName": "TikTok @shecreatescontentforyou",
+      "platform": "tiktok",
+      "handle": "shecreatescontentforyou",
       "avatarURL": null,
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -611,6 +763,8 @@
     {
       "id": "F3EFE30E-F75E-5535-A479-E66D6869C33F",
       "displayName": "TikTok @ycapaz",
+      "platform": "tiktok",
+      "handle": "ycapaz",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-ycapaz.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -619,6 +773,8 @@
     {
       "id": "08DD0524-FB64-5DE2-8A4A-75E4FC9C49F1",
       "displayName": "TikTok @gwynethyuma",
+      "platform": "tiktok",
+      "handle": "gwynethyuma",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-gwynethyuma.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -627,6 +783,8 @@
     {
       "id": "16108844-1BF2-55D3-983C-F4145B496ACF",
       "displayName": "TikTok @fieldassessment",
+      "platform": "tiktok",
+      "handle": "fieldassessment",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-fieldassessment.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -635,6 +793,8 @@
     {
       "id": "02B3E70F-83D5-57B6-A5A4-61EF1B4DC74C",
       "displayName": "TikTok @andrewtourssf",
+      "platform": "tiktok",
+      "handle": "andrewtourssf",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-andrewtourssf.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -643,6 +803,8 @@
     {
       "id": "FBFD3A52-2DED-5BF1-BD18-89FE7259B08D",
       "displayName": "TikTok @austin.klar",
+      "platform": "tiktok",
+      "handle": "austin.klar",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-austin-klar.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -651,6 +813,8 @@
     {
       "id": "B43F44EE-7368-59CA-B7AB-B688DD3B3B57",
       "displayName": "TikTok @hollywoodhistory",
+      "platform": "tiktok",
+      "handle": "hollywoodhistory",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-hollywoodhistory.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -659,6 +823,8 @@
     {
       "id": "F23B78CF-E3F7-55DB-A817-DDB6C3FB40A0",
       "displayName": "TikTok @flowang",
+      "platform": "tiktok",
+      "handle": "flowang",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-flowang.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -667,6 +833,8 @@
     {
       "id": "6208423B-4E45-54AB-A3CD-72F81D5FE438",
       "displayName": "TikTok @lyndsielocks",
+      "platform": "tiktok",
+      "handle": "lyndsielocks",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-lyndsielocks.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -675,6 +843,8 @@
     {
       "id": "DB96F83A-DA73-5CB4-BBB8-6B61543FF7E5",
       "displayName": "TikTok @theluriegroup",
+      "platform": "tiktok",
+      "handle": "theluriegroup",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-theluriegroup.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -683,6 +853,8 @@
     {
       "id": "991F43EC-353B-5B70-97B9-921EB2876D24",
       "displayName": "TikTok @urbanistariel",
+      "platform": "tiktok",
+      "handle": "urbanistariel",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-urbanistariel.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -691,6 +863,8 @@
     {
       "id": "D031D232-36E2-5506-9950-1DBF5E93BCAA",
       "displayName": "TikTok @worthyourwallet",
+      "platform": "tiktok",
+      "handle": "worthyourwallet",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-worthyourwallet.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -699,6 +873,8 @@
     {
       "id": "0E43A7BD-506A-5334-83E9-62B195029C5C",
       "displayName": "TikTok @cristinaviseu",
+      "platform": "tiktok",
+      "handle": "cristinaviseu",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-cristinaviseu.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -707,6 +883,8 @@
     {
       "id": "37115EDB-A208-55B8-B867-287930DE122B",
       "displayName": "TikTok @wanderingcreator_meghana",
+      "platform": "tiktok",
+      "handle": "wanderingcreator_meghana",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-wanderingcreator-meghana.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -715,6 +893,8 @@
     {
       "id": "BA417B38-F84B-5319-B581-C59638DBBC20",
       "displayName": "TikTok @jr.enrile",
+      "platform": "tiktok",
+      "handle": "jr.enrile",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jr-enrile.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -723,6 +903,8 @@
     {
       "id": "D52787BB-2597-5FA8-B3FD-09C892766E9B",
       "displayName": "TikTok @sahiltnt",
+      "platform": "tiktok",
+      "handle": "sahiltnt",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-sahiltnt.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -731,6 +913,8 @@
     {
       "id": "E046427F-030F-57ED-98F2-7EADA3205622",
       "displayName": "TikTok @erininatlanta",
+      "platform": "tiktok",
+      "handle": "erininatlanta",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-erininatlanta.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -739,6 +923,8 @@
     {
       "id": "5A2FD083-2A96-52A9-9707-F4DE6EDA9E5B",
       "displayName": "TikTok @wheresdonnanow",
+      "platform": "tiktok",
+      "handle": "wheresdonnanow",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-wheresdonnanow.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -747,6 +933,8 @@
     {
       "id": "5C3715DB-5D4A-5ECE-AECF-833070B3ADD5",
       "displayName": "TikTok @gloriandjustin",
+      "platform": "tiktok",
+      "handle": "gloriandjustin",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-gloriandjustin.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -755,6 +943,8 @@
     {
       "id": "E9E8DA82-C0E7-56EF-ADCD-14BAD8752C10",
       "displayName": "TikTok @lifebyculture",
+      "platform": "tiktok",
+      "handle": "lifebyculture",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-lifebyculture.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -763,6 +953,8 @@
     {
       "id": "37EF9F87-068B-5195-8B5C-29BE09B3773E",
       "displayName": "TikTok @divyadiscovers",
+      "platform": "tiktok",
+      "handle": "divyadiscovers",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-divyadiscovers.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -771,6 +963,8 @@
     {
       "id": "CE731F0A-FCC4-5AB5-B957-D0B9A98B2833",
       "displayName": "TikTok @fernbankmuseum",
+      "platform": "tiktok",
+      "handle": "fernbankmuseum",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-fernbankmuseum.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -779,6 +973,8 @@
     {
       "id": "E3F94172-34CA-5834-BD9B-769EABAF8520",
       "displayName": "TikTok @itsjanasoli.co",
+      "platform": "tiktok",
+      "handle": "itsjanasoli.co",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-itsjanasoli-co.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -787,6 +983,8 @@
     {
       "id": "B8E80A5F-5F2F-589C-B7CF-0604F78882EC",
       "displayName": "TikTok @viajar_emportugal",
+      "platform": "tiktok",
+      "handle": "viajar_emportugal",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-viajar-emportugal.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -795,6 +993,8 @@
     {
       "id": "8066672A-9A87-58AC-8447-A01CD2AF7C47",
       "displayName": "TikTok @simplehistory_",
+      "platform": "tiktok",
+      "handle": "simplehistory_",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-simplehistory.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -803,6 +1003,8 @@
     {
       "id": "9F7D4798-10CF-54E1-91F6-5AE711BEAB99",
       "displayName": "TikTok @jetsetgabrielle",
+      "platform": "tiktok",
+      "handle": "jetsetgabrielle",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jetsetgabrielle.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -811,6 +1013,8 @@
     {
       "id": "62AAA5B7-A9AC-5A11-B499-6967473F60C4",
       "displayName": "TikTok @norbertobriceno",
+      "platform": "tiktok",
+      "handle": "norbertobriceno",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-norbertobriceno.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -819,6 +1023,8 @@
     {
       "id": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
       "displayName": "TikTok @sashi_trip_tip",
+      "platform": "tiktok",
+      "handle": "sashi_trip_tip",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-sashi-trip-tip.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -827,6 +1033,8 @@
     {
       "id": "04A9A86D-A10F-5E8D-A742-C695A39F7FDB",
       "displayName": "TikTok @archimarathon",
+      "platform": "tiktok",
+      "handle": "archimarathon",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-archimarathon.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -835,6 +1043,8 @@
     {
       "id": "A127BB21-3142-52FE-880E-011A3FE5F893",
       "displayName": "TikTok @industrythotleader",
+      "platform": "tiktok",
+      "handle": "industrythotleader",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-industrythotleader.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -843,6 +1053,8 @@
     {
       "id": "05DC2AFC-D68F-5048-83D4-5B55F2DF2627",
       "displayName": "TikTok @worldarchinspo",
+      "platform": "tiktok",
+      "handle": "worldarchinspo",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-worldarchinspo.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -851,6 +1063,8 @@
     {
       "id": "E71A7DE0-D866-5D7B-99A9-C3FB949D3ABA",
       "displayName": "YouTube @Archdigest",
+      "platform": "youtube",
+      "handle": "archdigest",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-archdigest.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -859,6 +1073,8 @@
     {
       "id": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
       "displayName": "TikTok @suzyandaustin",
+      "platform": "tiktok",
+      "handle": "suzyandaustin",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-suzyandaustin.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -867,6 +1083,8 @@
     {
       "id": "F46FA521-4263-519D-93F8-0033CF6C6511",
       "displayName": "TikTok @blessedarch",
+      "platform": "tiktok",
+      "handle": "blessedarch",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-blessedarch.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -875,6 +1093,8 @@
     {
       "id": "9EBFBE74-DEC0-55FF-B270-E5153C0569D9",
       "displayName": "YouTube @TheWorldAround",
+      "platform": "youtube",
+      "handle": "theworldaround",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-theworldaround.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -883,6 +1103,8 @@
     {
       "id": "AFE9D7A8-0DB3-5423-A96E-93EB86C640B9",
       "displayName": "TikTok @archiwhisperer",
+      "platform": "tiktok",
+      "handle": "archiwhisperer",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-archiwhisperer.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -891,6 +1113,8 @@
     {
       "id": "22D5B2D8-D50F-5169-86F9-55C147851A70",
       "displayName": "TikTok @jononamara",
+      "platform": "tiktok",
+      "handle": "jononamara",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jononamara.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -899,6 +1123,8 @@
     {
       "id": "AB48EBAF-5682-5F0A-9233-936620156FA9",
       "displayName": "TikTok @girlandgallery",
+      "platform": "tiktok",
+      "handle": "girlandgallery",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-girlandgallery.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -907,6 +1133,8 @@
     {
       "id": "80244594-B3D1-5321-B29D-5D0829F22A76",
       "displayName": "TikTok @lectec.science",
+      "platform": "tiktok",
+      "handle": "lectec.science",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-lectec-science.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -915,6 +1143,8 @@
     {
       "id": "34769928-B96B-5333-9654-D55D7DB79598",
       "displayName": "TikTok @cutterlakind",
+      "platform": "tiktok",
+      "handle": "cutterlakind",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-cutterlakind.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -923,6 +1153,8 @@
     {
       "id": "556041C7-9444-5C29-83B0-6BCD22F94163",
       "displayName": "TikTok @talkingcities",
+      "platform": "tiktok",
+      "handle": "talkingcities",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-talkingcities.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -931,6 +1163,8 @@
     {
       "id": "E33F559E-CECD-5397-BF2C-9BEA8600E6E7",
       "displayName": "TikTok @natgeo",
+      "platform": "tiktok",
+      "handle": "natgeo",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-natgeo.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -939,6 +1173,8 @@
     {
       "id": "9A9F4DB6-41DF-561B-B94D-C18E91478A47",
       "displayName": "TikTok @spacesofmydreams",
+      "platform": "tiktok",
+      "handle": "spacesofmydreams",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-spacesofmydreams.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -947,6 +1183,8 @@
     {
       "id": "33A32C15-07A2-5F16-B9FD-10A1D105EFDC",
       "displayName": "Instagram @sato_stays",
+      "platform": "instagram",
+      "handle": "sato_stays",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -955,6 +1193,8 @@
     {
       "id": "8F8DCD22-E4AE-52A5-8439-613E8E0D1A89",
       "displayName": "Instagram @japanbyfood",
+      "platform": "instagram",
+      "handle": "japanbyfood",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -963,6 +1203,8 @@
     {
       "id": "20A13348-E627-56DD-90B4-34330D97EF93",
       "displayName": "TikTok @dmitrynycre",
+      "platform": "tiktok",
+      "handle": "dmitrynycre",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-dmitrynycre.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -971,6 +1213,8 @@
     {
       "id": "048FFB41-CD9A-5BAD-B524-31218280F6C4",
       "displayName": "TikTok @jeffreyinnyc",
+      "platform": "tiktok",
+      "handle": "jeffreyinnyc",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jeffreyinnyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -979,6 +1223,8 @@
     {
       "id": "6AD51BAF-B6D5-5C2D-8E6E-03654FB2A574",
       "displayName": "TikTok @darlene_liebman",
+      "platform": "tiktok",
+      "handle": "darlene_liebman",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-darlene-liebman.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -987,6 +1233,8 @@
     {
       "id": "19C8C09C-E410-5BFE-96F9-605ACCC96EA9",
       "displayName": "TikTok @akn.re",
+      "platform": "tiktok",
+      "handle": "akn.re",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-akn-re.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -995,6 +1243,8 @@
     {
       "id": "CF4425C1-D9D8-5261-9AD4-242D4FCBE59A",
       "displayName": "TikTok @francisyork",
+      "platform": "tiktok",
+      "handle": "francisyork",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-francisyork.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1003,6 +1253,8 @@
     {
       "id": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
       "displayName": "Instagram @pasttworld",
+      "platform": "instagram",
+      "handle": "pasttworld",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1011,6 +1263,8 @@
     {
       "id": "1005EBAE-9DA4-5043-B282-971AEA88044C",
       "displayName": "TikTok @whatisthis_nyc",
+      "platform": "tiktok",
+      "handle": "whatisthis_nyc",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-whatisthis-nyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1019,6 +1273,8 @@
     {
       "id": "16130A54-8281-5CB1-BBAE-822EFC7C3EA1",
       "displayName": "TikTok @donmawsey",
+      "platform": "tiktok",
+      "handle": "donmawsey",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-donmawsey.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1027,6 +1283,8 @@
     {
       "id": "BB3B53C5-1ADB-51A2-B584-4CEB848B59C0",
       "displayName": "TikTok @justurbanplanning",
+      "platform": "tiktok",
+      "handle": "justurbanplanning",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-justurbanplanning.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1035,6 +1293,8 @@
     {
       "id": "51C82EE3-C6BA-5130-976D-5424F71FC8A3",
       "displayName": "TikTok @bestaddress",
+      "platform": "tiktok",
+      "handle": "bestaddress",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-bestaddress.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1043,6 +1303,8 @@
     {
       "id": "05B41A52-5345-564F-91EB-C8010CE8E1A9",
       "displayName": "TikTok @landmarksofny",
+      "platform": "tiktok",
+      "handle": "landmarksofny",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-landmarksofny.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1051,6 +1313,8 @@
     {
       "id": "45BF06CD-D852-5E3B-8911-A5BE90788848",
       "displayName": "Instagram @sashi_trip_tip",
+      "platform": "instagram",
+      "handle": "sashi_trip_tip",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1059,6 +1323,8 @@
     {
       "id": "64D35343-9353-5D81-A92D-6CAB2878ACA8",
       "displayName": "Instagram @lectec.science",
+      "platform": "instagram",
+      "handle": "lectec.science",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1067,6 +1333,8 @@
     {
       "id": "6E66774A-8849-5CA1-AA78-0094CB53A5D2",
       "displayName": "Instagram @explorewithnino",
+      "platform": "instagram",
+      "handle": "explorewithnino",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1075,6 +1343,8 @@
     {
       "id": "5560DEA1-0799-5B1A-9B10-E3F4B3E992B6",
       "displayName": "Instagram @urbanstorieschannel",
+      "platform": "instagram",
+      "handle": "urbanstorieschannel",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1083,6 +1353,8 @@
     {
       "id": "F63BBD9D-E4E8-5760-A743-7213028B02F9",
       "displayName": "TikTok @nickcabotrodriguez",
+      "platform": "tiktok",
+      "handle": "nickcabotrodriguez",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-nickcabotrodriguez.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1091,6 +1363,8 @@
     {
       "id": "5C323C7E-AA60-5E03-993A-5CCE7B52D9B3",
       "displayName": "TikTok @johnnymurtaugh",
+      "platform": "tiktok",
+      "handle": "johnnymurtaugh",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-johnnymurtaugh.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1099,6 +1373,8 @@
     {
       "id": "98B8BB84-7215-564E-AB81-7A57E6A05EE0",
       "displayName": "TikTok @nerdingoutonnyc",
+      "platform": "tiktok",
+      "handle": "nerdingoutonnyc",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-nerdingoutonnyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1107,6 +1383,8 @@
     {
       "id": "A13D1A5B-BD27-531F-93D1-D5BD2BF96B7E",
       "displayName": "YouTube @ITSHISTORY",
+      "platform": "youtube",
+      "handle": "itshistory",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-itshistory.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1115,6 +1393,8 @@
     {
       "id": "36C97210-A958-5077-B1EE-96302E7398CD",
       "displayName": "TikTok @secretnyc_",
+      "platform": "tiktok",
+      "handle": "secretnyc_",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-secretnyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1123,6 +1403,8 @@
     {
       "id": "8CEC68F9-A72D-5E0C-AD8E-0254570D154F",
       "displayName": "TikTok @__dreamspaces",
+      "platform": "tiktok",
+      "handle": "__dreamspaces",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-dreamspaces.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1131,6 +1413,8 @@
     {
       "id": "0AA1E773-1C13-5342-AA72-4C6FCD31B5C1",
       "displayName": "TikTok @danielanddesign",
+      "platform": "tiktok",
+      "handle": "danielanddesign",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-danielanddesign.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1139,6 +1423,8 @@
     {
       "id": "AE63515A-ED3C-5C30-A9C8-BC42D60AA667",
       "displayName": "Instagram @breatheart_hk",
+      "platform": "instagram",
+      "handle": "breatheart_hk",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1147,6 +1433,8 @@
     {
       "id": "1C32C8D3-240A-5789-B763-844A8D63E380",
       "displayName": "TikTok @history_alice",
+      "platform": "tiktok",
+      "handle": "history_alice",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-history-alice.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1155,6 +1443,8 @@
     {
       "id": "9CD0099E-313C-5DF3-BB9B-D0B0B991A626",
       "displayName": "TikTok @lizabanks11",
+      "platform": "tiktok",
+      "handle": "lizabanks11",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-lizabanks11.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1163,6 +1453,8 @@
     {
       "id": "84FAC4F3-798F-53C8-9762-06675D70E52D",
       "displayName": "TikTok @livinglondonhistory",
+      "platform": "tiktok",
+      "handle": "livinglondonhistory",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-livinglondonhistory.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1171,6 +1463,8 @@
     {
       "id": "5B6883A1-AA1D-58C1-91F0-BE0A60CC6A11",
       "displayName": "TikTok @truetalesnyc",
+      "platform": "tiktok",
+      "handle": "truetalesnyc",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-truetalesnyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1179,6 +1473,8 @@
     {
       "id": "5657EA40-DA53-552F-823A-D040F31FF526",
       "displayName": "TikTok @hereinnyc",
+      "platform": "tiktok",
+      "handle": "hereinnyc",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-hereinnyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1187,6 +1483,8 @@
     {
       "id": "D6EC084F-2E18-5C16-BBE5-197D5170162C",
       "displayName": "TikTok @about_buildings",
+      "platform": "tiktok",
+      "handle": "about_buildings",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-about-buildings.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1195,6 +1493,8 @@
     {
       "id": "0F7BD69D-C125-5280-ACE0-37AD0BBF7E95",
       "displayName": "TikTok @travel.deeper",
+      "platform": "tiktok",
+      "handle": "travel.deeper",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-travel-deeper.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1203,6 +1503,8 @@
     {
       "id": "3799EFE5-10DC-57A8-9170-02FC53B1ABF6",
       "displayName": "Instagram @thearquidea",
+      "platform": "instagram",
+      "handle": "thearquidea",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1211,6 +1513,8 @@
     {
       "id": "0E15B79B-D7CE-5E22-8C9A-C0ADCF5F957D",
       "displayName": "TikTok @london.curiosity",
+      "platform": "tiktok",
+      "handle": "london.curiosity",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-london-curiosity.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1219,6 +1523,8 @@
     {
       "id": "9AA4659B-4FEE-586A-926D-0A9264CAD908",
       "displayName": "Instagram @about_buildings",
+      "platform": "instagram",
+      "handle": "about_buildings",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1227,6 +1533,8 @@
     {
       "id": "9ACC7F34-F324-5443-B4BB-EC618E437731",
       "displayName": "Instagram @abby.architecture",
+      "platform": "instagram",
+      "handle": "abby.architecture",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1235,6 +1543,8 @@
     {
       "id": "DFCE2EC6-C787-5B81-A45B-FDCFE9BA55C9",
       "displayName": "Instagram @wavehill",
+      "platform": "instagram",
+      "handle": "wavehill",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1243,6 +1553,8 @@
     {
       "id": "4DACB525-12D4-5E37-942A-44CE5D7156B5",
       "displayName": "Instagram @nerdingoutonnyc",
+      "platform": "instagram",
+      "handle": "nerdingoutonnyc",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1251,6 +1563,8 @@
     {
       "id": "061939A9-1E4D-5FB3-8822-FD4501C2E877",
       "displayName": "Instagram @iammikaeljohansson",
+      "platform": "instagram",
+      "handle": "iammikaeljohansson",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1259,6 +1573,8 @@
     {
       "id": "5C33045D-3020-5480-A3BA-2AF8EB512775",
       "displayName": "Instagram @donmawsey.nyctours",
+      "platform": "instagram",
+      "handle": "donmawsey.nyctours",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1267,6 +1583,8 @@
     {
       "id": "3311846C-5F93-523D-8C09-ACA0EB138BCA",
       "displayName": "Instagram @archimarathon",
+      "platform": "instagram",
+      "handle": "archimarathon",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1275,6 +1593,8 @@
     {
       "id": "18EFA062-6654-5ADB-AE9A-9BDF5C8B61F7",
       "displayName": "Instagram @ninosbuildings",
+      "platform": "instagram",
+      "handle": "ninosbuildings",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1283,6 +1603,8 @@
     {
       "id": "DEB7C152-F4E4-5AE1-83CC-3D1CE25ABFB3",
       "displayName": "Instagram @celinaprentiss",
+      "platform": "instagram",
+      "handle": "celinaprentiss",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1291,6 +1613,8 @@
     {
       "id": "57225D97-D0F7-5B32-86ED-E4D107BBC7E7",
       "displayName": "Instagram @speccles_",
+      "platform": "instagram",
+      "handle": "speccles_",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1299,6 +1623,8 @@
     {
       "id": "7F6E7AD9-48EC-54EC-B51C-1ACAD51038CC",
       "displayName": "Instagram @insightcities",
+      "platform": "instagram",
+      "handle": "insightcities",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1307,6 +1633,8 @@
     {
       "id": "0639E500-1F3F-5B75-A6FC-1CAC2A3115E0",
       "displayName": "Instagram @guide2disney",
+      "platform": "instagram",
+      "handle": "guide2disney",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1315,6 +1643,8 @@
     {
       "id": "9D3F6753-06EC-54F6-850E-66BDC753FF6A",
       "displayName": "Instagram @architectanddesign",
+      "platform": "instagram",
+      "handle": "architectanddesign",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1323,6 +1653,8 @@
     {
       "id": "ACA58BB0-84DA-5E18-9C42-2E79D2A842CA",
       "displayName": "Instagram @bassforge.us",
+      "platform": "instagram",
+      "handle": "bassforge.us",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1331,6 +1663,8 @@
     {
       "id": "9FF874F9-34D3-5F8F-81F2-D2B8D5B0057E",
       "displayName": "Instagram @german.samvel",
+      "platform": "instagram",
+      "handle": "german.samvel",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1339,6 +1673,8 @@
     {
       "id": "34BE32FE-02C7-557F-81FD-5B0EBFCBE0EE",
       "displayName": "Instagram @rwmayakoba",
+      "platform": "instagram",
+      "handle": "rwmayakoba",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1347,6 +1683,8 @@
     {
       "id": "1FE9AC90-4B1D-5D62-B566-735FC00CFE02",
       "displayName": "Instagram @hotelsguide_",
+      "platform": "instagram",
+      "handle": "hotelsguide_",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1355,6 +1693,8 @@
     {
       "id": "E3E0B6F1-6AF4-59BB-A843-53914EB840F9",
       "displayName": "Instagram @urbanistariel",
+      "platform": "instagram",
+      "handle": "urbanistariel",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1363,6 +1703,8 @@
     {
       "id": "9444CEF8-7A09-5AC5-9772-8C42B4850FD9",
       "displayName": "Instagram @anthonymian",
+      "platform": "instagram",
+      "handle": "anthonymian",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1371,6 +1713,8 @@
     {
       "id": "A4BFCC01-56BF-555C-8228-17580F793CB5",
       "displayName": "Instagram @untappedny",
+      "platform": "instagram",
+      "handle": "untappedny",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1379,6 +1723,8 @@
     {
       "id": "21BB3A3D-32E0-5711-8C24-493201016CAB",
       "displayName": "Instagram @noguchimuseum",
+      "platform": "instagram",
+      "handle": "noguchimuseum",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1387,6 +1733,8 @@
     {
       "id": "302FDCE7-44CD-54A8-9D4F-77166C3D2046",
       "displayName": "Instagram @goanniewhere",
+      "platform": "instagram",
+      "handle": "goanniewhere",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1395,6 +1743,8 @@
     {
       "id": "A1D72874-632E-516E-A2A4-C71EB3B84532",
       "displayName": "Instagram @cty.visuals",
+      "platform": "instagram",
+      "handle": "cty.visuals",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1403,6 +1753,8 @@
     {
       "id": "256D2F5B-D0A9-5835-BA25-4D4500B47EEE",
       "displayName": "Instagram @nyctourism",
+      "platform": "instagram",
+      "handle": "nyctourism",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1411,6 +1763,8 @@
     {
       "id": "F38930A1-27E3-5113-A77E-D652F604A82F",
       "displayName": "Instagram @mark_around.the.world",
+      "platform": "instagram",
+      "handle": "mark_around.the.world",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1419,6 +1773,8 @@
     {
       "id": "9BD647A3-B3A6-56AF-A6A3-FBE8EBA8CB74",
       "displayName": "Instagram @cameronguzzo",
+      "platform": "instagram",
+      "handle": "cameronguzzo",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1427,6 +1783,8 @@
     {
       "id": "4C9A57DC-C673-5C38-A75F-3FF641DA6B28",
       "displayName": "Instagram @jeremyjacobowitz",
+      "platform": "instagram",
+      "handle": "jeremyjacobowitz",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1435,6 +1793,8 @@
     {
       "id": "568A9730-AC4D-546A-BC67-A4CFE5FA7434",
       "displayName": "Instagram @yankees",
+      "platform": "instagram",
+      "handle": "yankees",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1443,6 +1803,8 @@
     {
       "id": "22566F7D-3A97-535A-A015-7FDEEF046E64",
       "displayName": "Instagram @karyna.y",
+      "platform": "instagram",
+      "handle": "karyna.y",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1451,6 +1813,8 @@
     {
       "id": "23727395-6E07-530F-9B9C-FF8F392F2E56",
       "displayName": "YouTube @wdwswandolphin",
+      "platform": "youtube",
+      "handle": "wdwswandolphin",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-youtube-wdwswandolphin.webp",
       "avatarEmoji": "▶️",
       "bio": "YouTube creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1459,6 +1823,8 @@
     {
       "id": "FB2E3A20-D7F4-5CD5-82F9-657A470AF4CC",
       "displayName": "Instagram @nickytoursnyc",
+      "platform": "instagram",
+      "handle": "nickytoursnyc",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1467,6 +1833,8 @@
     {
       "id": "E6CD0CFB-EF74-50D1-A79A-D2A4474E759F",
       "displayName": "Instagram @meliluu__",
+      "platform": "instagram",
+      "handle": "meliluu__",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1475,6 +1843,8 @@
     {
       "id": "C4C2D3F7-F0D5-55B1-BC04-33A0DB965ECA",
       "displayName": "Instagram @shaunbirley",
+      "platform": "instagram",
+      "handle": "shaunbirley",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1483,6 +1853,8 @@
     {
       "id": "67CA14A6-3350-5C91-842F-81D05800D035",
       "displayName": "TikTok @thedesigndetourist",
+      "platform": "tiktok",
+      "handle": "thedesigndetourist",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-thedesigndetourist.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1491,6 +1863,8 @@
     {
       "id": "C61427E0-1C6D-5E96-8B6C-BE88856343D0",
       "displayName": "Instagram @history_alice",
+      "platform": "instagram",
+      "handle": "history_alice",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1499,6 +1873,8 @@
     {
       "id": "7613E583-8F12-55FB-8B5F-0BCC46D878C8",
       "displayName": "Instagram @domusweb",
+      "platform": "instagram",
+      "handle": "domusweb",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1507,6 +1883,8 @@
     {
       "id": "F408444A-8885-5FAD-9174-C99EFCF31F60",
       "displayName": "Instagram @avant.arte",
+      "platform": "instagram",
+      "handle": "avant.arte",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1515,6 +1893,8 @@
     {
       "id": "5E6BBD8F-2E8A-5F11-A274-93716B7C05F8",
       "displayName": "TikTok @mckernarchitecture",
+      "platform": "tiktok",
+      "handle": "mckernarchitecture",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-mckernarchitecture.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1523,6 +1903,8 @@
     {
       "id": "C4BB09F8-609F-5249-AFEE-87EA5B83FE3E",
       "displayName": "TikTok @avant_arte",
+      "platform": "tiktok",
+      "handle": "avant_arte",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-avant-arte.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1531,6 +1913,8 @@
     {
       "id": "E685AD86-00C6-53E4-AE2D-BDE03FF1CC92",
       "displayName": "Instagram @downtown_la",
+      "platform": "instagram",
+      "handle": "downtown_la",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1539,6 +1923,8 @@
     {
       "id": "23B6967C-91C8-553E-8EBC-254ED152058F",
       "displayName": "Instagram @darlene_liebman",
+      "platform": "instagram",
+      "handle": "darlene_liebman",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1547,6 +1933,8 @@
     {
       "id": "07037DCE-3273-5B10-B1B3-8901DE264E26",
       "displayName": "Instagram @kyletillyer",
+      "platform": "instagram",
+      "handle": "kyletillyer",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1555,6 +1943,8 @@
     {
       "id": "0D0D2E75-84BF-572F-A90B-9E55ECD36FD1",
       "displayName": "Instagram @devourdc",
+      "platform": "instagram",
+      "handle": "devourdc",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1563,6 +1953,8 @@
     {
       "id": "33709975-45EF-5E45-A980-84B0083ACB05",
       "displayName": "Instagram @dmitrynycre",
+      "platform": "instagram",
+      "handle": "dmitrynycre",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1571,6 +1963,8 @@
     {
       "id": "40BC6CD7-7B6D-5EC6-A49F-9E6BA54E43CF",
       "displayName": "TikTok @thedivtimes",
+      "platform": "tiktok",
+      "handle": "thedivtimes",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-thedivtimes.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1579,6 +1973,8 @@
     {
       "id": "6DFDFB03-3F30-5E13-A0BA-1F842FBC5470",
       "displayName": "Instagram @norbertobriceno",
+      "platform": "instagram",
+      "handle": "norbertobriceno",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1587,6 +1983,8 @@
     {
       "id": "1133E033-0C4D-575A-AEA0-519FAE86B485",
       "displayName": "Instagram @atlasobscura",
+      "platform": "instagram",
+      "handle": "atlasobscura",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1595,6 +1993,8 @@
     {
       "id": "53998C86-82B3-5CF8-AB19-027D05DDCCAE",
       "displayName": "Instagram @explorecanada",
+      "platform": "instagram",
+      "handle": "explorecanada",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1603,6 +2003,8 @@
     {
       "id": "0E3F0F71-4D8E-5346-9B82-E62558A8B798",
       "displayName": "Instagram @jakejamie",
+      "platform": "instagram",
+      "handle": "jakejamie",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1611,6 +2013,8 @@
     {
       "id": "695FC3E9-562B-5ED3-A4B1-F30C9201361B",
       "displayName": "Instagram @thekrystalpalace_",
+      "platform": "instagram",
+      "handle": "thekrystalpalace_",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1619,6 +2023,8 @@
     {
       "id": "D87A6503-419F-5786-B738-9F2BC855A57F",
       "displayName": "Instagram @aiotfamily",
+      "platform": "instagram",
+      "handle": "aiotfamily",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1627,6 +2033,8 @@
     {
       "id": "6F83D2D5-AFC3-5429-9E02-7C0A604EFB96",
       "displayName": "Instagram @buildingst0ries",
+      "platform": "instagram",
+      "handle": "buildingst0ries",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1635,6 +2043,8 @@
     {
       "id": "6781DA22-3276-5BA4-96FA-9EC094E9FA8B",
       "displayName": "TikTok @ian_in_nyc",
+      "platform": "tiktok",
+      "handle": "ian_in_nyc",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-ian-in-nyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1643,6 +2053,8 @@
     {
       "id": "81C34594-3D6E-58A3-8A67-5AA7CB46A0E1",
       "displayName": "Instagram @nikola.matus",
+      "platform": "instagram",
+      "handle": "nikola.matus",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1651,6 +2063,8 @@
     {
       "id": "9F09C668-76C5-5744-BA37-F43F17176C76",
       "displayName": "Instagram @romeartstories",
+      "platform": "instagram",
+      "handle": "romeartstories",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1659,6 +2073,8 @@
     {
       "id": "B7AF4E9A-6311-56B1-9FD0-1E160D7C5A0F",
       "displayName": "TikTok @domus",
+      "platform": "tiktok",
+      "handle": "domus",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-domus.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1667,6 +2083,8 @@
     {
       "id": "ED144739-C208-5849-B0E5-C52116C6A9FE",
       "displayName": "TikTok @seelautravel",
+      "platform": "tiktok",
+      "handle": "seelautravel",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-seelautravel.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1675,6 +2093,8 @@
     {
       "id": "808DF1DF-3359-5397-859B-AB3C5E51E515",
       "displayName": "TikTok @_melamour",
+      "platform": "tiktok",
+      "handle": "_melamour",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-melamour.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1683,6 +2103,8 @@
     {
       "id": "AD0B48B7-FDC5-5710-BE4C-53106D5C332A",
       "displayName": "TikTok @jacksdiningroom",
+      "platform": "tiktok",
+      "handle": "jacksdiningroom",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jacksdiningroom.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1691,6 +2113,8 @@
     {
       "id": "CC9D97BD-631D-5A6C-9548-1E4851FFD47E",
       "displayName": "TikTok @suitehop",
+      "platform": "tiktok",
+      "handle": "suitehop",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-suitehop.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1699,6 +2123,8 @@
     {
       "id": "C27DC905-46F4-58EE-8D8F-215E8BE424A4",
       "displayName": "Instagram @isabeldohse",
+      "platform": "instagram",
+      "handle": "isabeldohse",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1707,6 +2133,8 @@
     {
       "id": "5DCEF715-8A6B-51AB-B22E-EC77DF8BB1F4",
       "displayName": "Instagram @terragroupmiami",
+      "platform": "instagram",
+      "handle": "terragroupmiami",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1715,6 +2143,8 @@
     {
       "id": "598D233B-D867-5610-A9C3-8D3FDE254D3B",
       "displayName": "Instagram @austinkgraff",
+      "platform": "instagram",
+      "handle": "austinkgraff",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1723,6 +2153,8 @@
     {
       "id": "A9ECE981-277F-57F7-A19D-3EA5FF2662F9",
       "displayName": "Instagram @longwalksdc",
+      "platform": "instagram",
+      "handle": "longwalksdc",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1731,6 +2163,8 @@
     {
       "id": "E0BD7C2D-F828-5FA3-B3FF-A3767EDA9780",
       "displayName": "Instagram @allison_jodoin",
+      "platform": "instagram",
+      "handle": "allison_jodoin",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1739,6 +2173,8 @@
     {
       "id": "3A21B11D-F180-5138-91A0-78DBF3DE2368",
       "displayName": "Instagram @dan__asher",
+      "platform": "instagram",
+      "handle": "dan__asher",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1747,6 +2183,8 @@
     {
       "id": "6E957D45-C32E-5EAD-8F66-C7E02EB75BA1",
       "displayName": "Instagram @thearchitectscookbook",
+      "platform": "instagram",
+      "handle": "thearchitectscookbook",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1755,6 +2193,8 @@
     {
       "id": "918CCBDB-8ED3-54A4-8E9C-F47A7BDC66A6",
       "displayName": "Instagram @rhlinkon",
+      "platform": "instagram",
+      "handle": "rhlinkon",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1763,6 +2203,8 @@
     {
       "id": "B0C365B6-D611-5B41-B7FB-1CFD1D95F43C",
       "displayName": "TikTok @bentaylor_nyc",
+      "platform": "tiktok",
+      "handle": "bentaylor_nyc",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-bentaylor-nyc.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1771,6 +2213,8 @@
     {
       "id": "A0416DB7-63F3-5E97-9EEA-B22A528493E2",
       "displayName": "TikTok @everythingeryn",
+      "platform": "tiktok",
+      "handle": "everythingeryn",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-everythingeryn.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1779,6 +2223,8 @@
     {
       "id": "7920433E-F3E2-515C-850C-402B1A8406E7",
       "displayName": "TikTok @lifesrad",
+      "platform": "tiktok",
+      "handle": "lifesrad",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-lifesrad.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1787,6 +2233,8 @@
     {
       "id": "165100CD-AC50-533E-9A89-CB72FD28AFB8",
       "displayName": "TikTok @cozumelprivatetours",
+      "platform": "tiktok",
+      "handle": "cozumelprivatetours",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-cozumelprivatetours.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1795,6 +2243,8 @@
     {
       "id": "10640038-B45F-5031-A35A-7352D15AFDA1",
       "displayName": "Instagram @joshuacharow",
+      "platform": "instagram",
+      "handle": "joshuacharow",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1803,6 +2253,8 @@
     {
       "id": "A715A78E-CEB5-5674-B20D-7F2EA8224D93",
       "displayName": "TikTok @joshuacharow",
+      "platform": "tiktok",
+      "handle": "joshuacharow",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-joshuacharow.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1811,6 +2263,8 @@
     {
       "id": "8E169F02-ABC2-5DA3-AF08-9BAEC14138FA",
       "displayName": "Instagram @paragonet",
+      "platform": "instagram",
+      "handle": "paragonet",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1819,6 +2273,8 @@
     {
       "id": "BFB7AC99-943B-5DA3-9D20-1BD1331A9496",
       "displayName": "Instagram @cherstravels",
+      "platform": "instagram",
+      "handle": "cherstravels",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1827,6 +2283,8 @@
     {
       "id": "F56D18FE-1E36-503D-A35E-4E1744D20E07",
       "displayName": "Instagram @park.estudio",
+      "platform": "instagram",
+      "handle": "park.estudio",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1835,6 +2293,8 @@
     {
       "id": "25A6BC53-FE4A-55AB-A228-1C49504C442B",
       "displayName": "Instagram @mvvvc_",
+      "platform": "instagram",
+      "handle": "mvvvc_",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1843,6 +2303,8 @@
     {
       "id": "65C99815-3309-5C16-B4D4-DA0445935194",
       "displayName": "Instagram @damileearch",
+      "platform": "instagram",
+      "handle": "damileearch",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1851,6 +2313,8 @@
     {
       "id": "82DB40F0-2CF9-5F77-9C92-32CC59445746",
       "displayName": "Instagram @urban_toronto",
+      "platform": "instagram",
+      "handle": "urban_toronto",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1859,6 +2323,8 @@
     {
       "id": "B0E58550-7476-57DD-84A4-C17C3C376A8D",
       "displayName": "Instagram @bestaddress",
+      "platform": "instagram",
+      "handle": "bestaddress",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1867,6 +2333,8 @@
     {
       "id": "97542A4A-388B-5432-BD67-4A80D7775A86",
       "displayName": "Instagram @realtor.kenan",
+      "platform": "instagram",
+      "handle": "realtor.kenan",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1875,6 +2343,8 @@
     {
       "id": "478765C1-171A-557B-A8D5-C13550EF29A4",
       "displayName": "Instagram @traveleat.drink",
+      "platform": "instagram",
+      "handle": "traveleat.drink",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1883,6 +2353,8 @@
     {
       "id": "937DAA85-F294-5E56-B98D-95BB15AD7299",
       "displayName": "Instagram @theinsidertoronto",
+      "platform": "instagram",
+      "handle": "theinsidertoronto",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1891,6 +2363,8 @@
     {
       "id": "ABF8F22E-CD6D-5D8A-B200-EFDFFAAE5D52",
       "displayName": "Instagram @toronto_papi_",
+      "platform": "instagram",
+      "handle": "toronto_papi_",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1899,6 +2373,8 @@
     {
       "id": "908A6073-FBFA-54B4-920C-3062E748D262",
       "displayName": "Instagram @sophia_architecture",
+      "platform": "instagram",
+      "handle": "sophia_architecture",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1907,6 +2383,8 @@
     {
       "id": "675DC435-2D2D-5B7A-A990-DC0BCDFE6734",
       "displayName": "Instagram @explorewithkevs",
+      "platform": "instagram",
+      "handle": "explorewithkevs",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1915,6 +2393,8 @@
     {
       "id": "8FCF05A9-9D6D-5AE0-AC9B-EBC5CE9BA338",
       "displayName": "Instagram @iamshobhit",
+      "platform": "instagram",
+      "handle": "iamshobhit",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1923,6 +2403,8 @@
     {
       "id": "268603F3-E709-58D7-9EB2-F0CD85E508EA",
       "displayName": "Instagram @vonwong",
+      "platform": "instagram",
+      "handle": "vonwong",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1931,6 +2413,8 @@
     {
       "id": "B680ED62-D696-5539-8885-32A77B24A0FF",
       "displayName": "Instagram @turonno.ca",
+      "platform": "instagram",
+      "handle": "turonno.ca",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1939,6 +2423,8 @@
     {
       "id": "4B287FB9-CC1E-55D9-97E8-3D402BAA0D9C",
       "displayName": "Instagram @itshimboris",
+      "platform": "instagram",
+      "handle": "itshimboris",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1947,6 +2433,8 @@
     {
       "id": "C5EF213A-91D1-5FB6-8AD7-48DC3B669471",
       "displayName": "Instagram @historyhypegirl",
+      "platform": "instagram",
+      "handle": "historyhypegirl",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1955,6 +2443,8 @@
     {
       "id": "C6C58306-D69A-526D-84E8-166A2E268F5A",
       "displayName": "Instagram @autodesk",
+      "platform": "instagram",
+      "handle": "autodesk",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1963,6 +2453,8 @@
     {
       "id": "51464E7F-6206-5AD0-B025-144C46B78858",
       "displayName": "Instagram @tosoarch",
+      "platform": "instagram",
+      "handle": "tosoarch",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1971,6 +2463,8 @@
     {
       "id": "7515572C-C41F-58C4-8A13-C2DB0EC9D962",
       "displayName": "Instagram @love.in.hongkong",
+      "platform": "instagram",
+      "handle": "love.in.hongkong",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1979,6 +2473,8 @@
     {
       "id": "2E87DC53-3497-59B7-90E0-7C041A6BDFEC",
       "displayName": "Instagram @seeingcoolplaces",
+      "platform": "instagram",
+      "handle": "seeingcoolplaces",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1987,6 +2483,8 @@
     {
       "id": "8D21E209-0ED3-5F8A-89CF-FD07D6841549",
       "displayName": "Instagram @kayleejochicago",
+      "platform": "instagram",
+      "handle": "kayleejochicago",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -1995,6 +2493,8 @@
     {
       "id": "D84ECB60-6E37-5377-8AC8-2A02656E916E",
       "displayName": "Instagram @olafinchicago",
+      "platform": "instagram",
+      "handle": "olafinchicago",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2003,6 +2503,8 @@
     {
       "id": "27A80B87-95F9-5EF2-92C7-C970269A0422",
       "displayName": "Instagram @chiarchitecture",
+      "platform": "instagram",
+      "handle": "chiarchitecture",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2011,6 +2513,8 @@
     {
       "id": "762F0267-E1FD-51F9-B51A-90EF13E55418",
       "displayName": "Instagram @homeswithmax",
+      "platform": "instagram",
+      "handle": "homeswithmax",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2019,6 +2523,8 @@
     {
       "id": "D7BF636D-A483-53FE-B9ED-97F0DA2AB2B9",
       "displayName": "Instagram @fugroupchicago",
+      "platform": "instagram",
+      "handle": "fugroupchicago",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2027,6 +2533,8 @@
     {
       "id": "3865B073-EC61-5FDA-B645-A5AD0257A551",
       "displayName": "Instagram @nic__white",
+      "platform": "instagram",
+      "handle": "nic__white",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2035,6 +2543,8 @@
     {
       "id": "A65CAF61-0938-5537-8B7B-3A4CBB74189A",
       "displayName": "Instagram @77flavorschi",
+      "platform": "instagram",
+      "handle": "77flavorschi",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2043,6 +2553,8 @@
     {
       "id": "D85CDAB3-BFDA-5667-A83A-9E6F771820F6",
       "displayName": "Instagram @2passports1dream",
+      "platform": "instagram",
+      "handle": "2passports1dream",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2051,6 +2563,8 @@
     {
       "id": "81E04987-4738-567F-B3E9-2DFC348F0D03",
       "displayName": "Instagram @tsvetkov_architect",
+      "platform": "instagram",
+      "handle": "tsvetkov_architect",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2059,6 +2573,8 @@
     {
       "id": "76F72E35-5DD8-525D-BE29-7A047EA5E3AC",
       "displayName": "Instagram @sydney_emily__",
+      "platform": "instagram",
+      "handle": "sydney_emily__",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2067,6 +2583,8 @@
     {
       "id": "6764612F-FD9E-531C-862B-7D02F3175BC3",
       "displayName": "Instagram @mad.rose.chi",
+      "platform": "instagram",
+      "handle": "mad.rose.chi",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2075,6 +2593,8 @@
     {
       "id": "126CABC8-BE66-5B9F-9A3F-77577DF96D60",
       "displayName": "Instagram @via_chicago",
+      "platform": "instagram",
+      "handle": "via_chicago",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2083,6 +2603,8 @@
     {
       "id": "B5F7D3CE-58F8-5858-94E3-D090F20F0E2A",
       "displayName": "Instagram @chicagoland_explorer",
+      "platform": "instagram",
+      "handle": "chicagoland_explorer",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2091,6 +2613,8 @@
     {
       "id": "2DEEC3B5-5A9E-5606-9558-68B5CE59DC8C",
       "displayName": "Instagram @mrsouthloop",
+      "platform": "instagram",
+      "handle": "mrsouthloop",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2099,6 +2623,8 @@
     {
       "id": "A37EA359-FC26-5090-9308-6A41BB986210",
       "displayName": "Instagram @shivanidukhandee",
+      "platform": "instagram",
+      "handle": "shivanidukhandee",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2107,6 +2633,8 @@
     {
       "id": "B87BC541-FE27-5831-B356-6E42AC4D055E",
       "displayName": "Instagram @notbadgalriri__",
+      "platform": "instagram",
+      "handle": "notbadgalriri__",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2115,6 +2643,8 @@
     {
       "id": "299D0BA5-37D6-5B94-8378-85C8DA80712D",
       "displayName": "Instagram @nickcabotrodriguez",
+      "platform": "instagram",
+      "handle": "nickcabotrodriguez",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2123,6 +2653,8 @@
     {
       "id": "DB5F2BF7-F261-5D03-9AF8-D0BD6B8044D9",
       "displayName": "Instagram @janez_vermeiren",
+      "platform": "instagram",
+      "handle": "janez_vermeiren",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2131,6 +2663,8 @@
     {
       "id": "A0BFCA02-980E-590A-9571-CE945FEFC560",
       "displayName": "Instagram @oneweirdplace",
+      "platform": "instagram",
+      "handle": "oneweirdplace",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2139,6 +2673,8 @@
     {
       "id": "8BDD12C8-EA4A-555F-9615-A6A145D1B2D3",
       "displayName": "Instagram @truetalesnyc",
+      "platform": "instagram",
+      "handle": "truetalesnyc",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2147,6 +2683,8 @@
     {
       "id": "A3B39D30-8E3A-5741-8D33-90E0C8AF3D3D",
       "displayName": "Instagram @living.pdx",
+      "platform": "instagram",
+      "handle": "living.pdx",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2155,6 +2693,8 @@
     {
       "id": "AFDF0F17-682D-5E0A-8564-B963F3F03D51",
       "displayName": "Instagram @wanderinginyyc",
+      "platform": "instagram",
+      "handle": "wanderinginyyc",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2163,6 +2703,8 @@
     {
       "id": "C787EE2D-FE9E-5BDD-9C25-5BBCACC3B9AF",
       "displayName": "Instagram @fairmontmayakoba",
+      "platform": "instagram",
+      "handle": "fairmontmayakoba",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2171,6 +2713,8 @@
     {
       "id": "DC52443C-3ADB-5739-836C-F9E5C5E68BC1",
       "displayName": "Instagram @parenthood.adventures",
+      "platform": "instagram",
+      "handle": "parenthood.adventures",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2179,6 +2723,8 @@
     {
       "id": "50FB8370-3062-570C-A396-DA64C5CD6A7B",
       "displayName": "Instagram @alannapanday",
+      "platform": "instagram",
+      "handle": "alannapanday",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2187,6 +2733,8 @@
     {
       "id": "982140F0-65E5-5325-8681-8A1AADDFCB71",
       "displayName": "Instagram @alilamayakoba",
+      "platform": "instagram",
+      "handle": "alilamayakoba",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2195,6 +2743,8 @@
     {
       "id": "94D263F2-9C09-5D78-B4D4-F77B9DCE49C2",
       "displayName": "Instagram @lauren.poolside",
+      "platform": "instagram",
+      "handle": "lauren.poolside",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2203,6 +2753,8 @@
     {
       "id": "9E167915-DD0C-5299-AA00-F09556C9D635",
       "displayName": "Instagram @silviavives.f",
+      "platform": "instagram",
+      "handle": "silviavives.f",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2211,6 +2763,8 @@
     {
       "id": "87CD0062-315B-519B-A005-8EDFC31B0968",
       "displayName": "Instagram @followmeawaytravel",
+      "platform": "instagram",
+      "handle": "followmeawaytravel",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2219,6 +2773,8 @@
     {
       "id": "BDEE25AF-C5BC-57DA-9890-7A0136E55708",
       "displayName": "Instagram @kevinmu",
+      "platform": "instagram",
+      "handle": "kevinmu",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2227,6 +2783,8 @@
     {
       "id": "A12B7B04-191D-57AD-B3B1-CDB14244C6FA",
       "displayName": "Instagram @heysouthbeach",
+      "platform": "instagram",
+      "handle": "heysouthbeach",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2235,6 +2793,8 @@
     {
       "id": "97966EDA-4900-5D62-8E3B-B5F7C328700B",
       "displayName": "Instagram @kgf365",
+      "platform": "instagram",
+      "handle": "kgf365",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2243,6 +2803,8 @@
     {
       "id": "53D2F006-BBC7-51E8-8FC4-21700494A96C",
       "displayName": "Instagram @themiamiblueprint",
+      "platform": "instagram",
+      "handle": "themiamiblueprint",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2251,6 +2813,8 @@
     {
       "id": "C66A1FC9-BF57-5F61-A557-17B41E054E31",
       "displayName": "Instagram @miamidesigndistrict",
+      "platform": "instagram",
+      "handle": "miamidesigndistrict",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2259,6 +2823,8 @@
     {
       "id": "D27EF14D-AFDB-522B-8B82-4EED616F70A6",
       "displayName": "Instagram @miamibucketlist",
+      "platform": "instagram",
+      "handle": "miamibucketlist",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2267,6 +2833,8 @@
     {
       "id": "A88709D8-8C28-5362-8713-19208460D63E",
       "displayName": "Instagram @magnoeng",
+      "platform": "instagram",
+      "handle": "magnoeng",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2275,6 +2843,8 @@
     {
       "id": "74E1B33B-F93B-5CB2-AC41-23EDE1D20D01",
       "displayName": "Instagram @lovefl",
+      "platform": "instagram",
+      "handle": "lovefl",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2283,6 +2853,8 @@
     {
       "id": "7ED94C65-30B4-5772-9DF8-2FE0E29B16E5",
       "displayName": "Instagram @archuncovered",
+      "platform": "instagram",
+      "handle": "archuncovered",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2291,6 +2863,8 @@
     {
       "id": "D142692A-76E9-54C7-9132-9C8CF1FCD8C3",
       "displayName": "Instagram @lippieliciouss",
+      "platform": "instagram",
+      "handle": "lippieliciouss",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2299,6 +2873,8 @@
     {
       "id": "50B8DDD7-C3CC-502F-BC6B-9D576A939EB5",
       "displayName": "Instagram @jacksdiningroom",
+      "platform": "instagram",
+      "handle": "jacksdiningroom",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2307,6 +2883,8 @@
     {
       "id": "2A80505A-77EB-5204-8BBF-B395F8D4BB72",
       "displayName": "Instagram @foodguyjack",
+      "platform": "instagram",
+      "handle": "foodguyjack",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2315,6 +2893,8 @@
     {
       "id": "D204BACD-3B61-5B8E-994D-EFC7355B7D6C",
       "displayName": "Instagram @rileysmithgroup",
+      "platform": "instagram",
+      "handle": "rileysmithgroup",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2323,6 +2903,8 @@
     {
       "id": "F80786AF-8B6B-5931-B3C2-E34DAE3FEFDA",
       "displayName": "Instagram @legendaryproductions",
+      "platform": "instagram",
+      "handle": "legendaryproductions",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2331,6 +2913,8 @@
     {
       "id": "030EF9EC-EF9D-5A5B-869E-F93394D30A3B",
       "displayName": "Instagram @playdabeat",
+      "platform": "instagram",
+      "handle": "playdabeat",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2339,6 +2923,8 @@
     {
       "id": "94ADADB9-7E4F-5B86-9BBE-F7B8CEF9F2BB",
       "displayName": "Instagram @herzogdemeuron",
+      "platform": "instagram",
+      "handle": "herzogdemeuron",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2347,6 +2933,8 @@
     {
       "id": "4841A8D7-F925-5609-B40A-E4197B653545",
       "displayName": "Instagram @alyciaviola",
+      "platform": "instagram",
+      "handle": "alyciaviola",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2355,6 +2943,8 @@
     {
       "id": "890AA8BC-2C70-53C6-AF55-694490A9524F",
       "displayName": "Instagram @miami_wonderful",
+      "platform": "instagram",
+      "handle": "miami_wonderful",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2363,6 +2953,8 @@
     {
       "id": "DD0C696C-AFA5-5A78-A66C-CF40AC8E0631",
       "displayName": "Instagram @peakacity",
+      "platform": "instagram",
+      "handle": "peakacity",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2371,6 +2963,8 @@
     {
       "id": "72357B98-4BD0-5E2B-9131-FE8C2E5DAAA5",
       "displayName": "Instagram @broadcastingwatches",
+      "platform": "instagram",
+      "handle": "broadcastingwatches",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2379,6 +2973,8 @@
     {
       "id": "7F24E46E-504A-5E0E-B2CA-03672189C73A",
       "displayName": "Instagram @insidehongkong",
+      "platform": "instagram",
+      "handle": "insidehongkong",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2387,6 +2983,8 @@
     {
       "id": "C63D931E-F88D-569A-AA4C-7883A5D44DE8",
       "displayName": "Instagram @hongkongheritage",
+      "platform": "instagram",
+      "handle": "hongkongheritage",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2395,6 +2993,8 @@
     {
       "id": "292D8757-638B-5FA7-A8BE-498D3A592A9E",
       "displayName": "Instagram @history_withjim",
+      "platform": "instagram",
+      "handle": "history_withjim",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2403,6 +3003,8 @@
     {
       "id": "9186BC81-2F3D-58C2-A171-D4D58B10DC2F",
       "displayName": "Instagram @bricksbyrowan",
+      "platform": "instagram",
+      "handle": "bricksbyrowan",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2411,6 +3013,8 @@
     {
       "id": "621FEEC4-B936-58F6-9B9B-9F7C84962273",
       "displayName": "Instagram @scentsandserums",
+      "platform": "instagram",
+      "handle": "scentsandserums",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2419,6 +3023,8 @@
     {
       "id": "B030677F-184F-58C6-BDF8-E192E911EF3D",
       "displayName": "Instagram @amandastrang_",
+      "platform": "instagram",
+      "handle": "amandastrang_",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2427,6 +3033,8 @@
     {
       "id": "06F49944-99EE-574D-85B5-1FCDDE47EC3F",
       "displayName": "Instagram @hongkongd_",
+      "platform": "instagram",
+      "handle": "hongkongd_",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2435,6 +3043,8 @@
     {
       "id": "6B56A030-9710-52E2-8368-301B0FBD4C18",
       "displayName": "Instagram @archiseeker",
+      "platform": "instagram",
+      "handle": "archiseeker",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2443,6 +3053,8 @@
     {
       "id": "8F21DA85-3672-5FFA-A08A-339972C448C0",
       "displayName": "Instagram @arjsun",
+      "platform": "instagram",
+      "handle": "arjsun",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2451,6 +3063,8 @@
     {
       "id": "A2C0B672-F94B-56E4-B71F-897643C0FB58",
       "displayName": "Instagram @aswilliamson",
+      "platform": "instagram",
+      "handle": "aswilliamson",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2459,6 +3073,8 @@
     {
       "id": "81EBFC7E-4438-5366-9B21-0BE2F164B156",
       "displayName": "Instagram @devinglowi",
+      "platform": "instagram",
+      "handle": "devinglowi",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2467,6 +3083,8 @@
     {
       "id": "12DBC653-F9C5-5339-9E8D-4C7AB0F1375A",
       "displayName": "Instagram @dishedtoronto",
+      "platform": "instagram",
+      "handle": "dishedtoronto",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2475,6 +3093,8 @@
     {
       "id": "EAE4E7D0-C64D-513B-974C-CEA4EDAAF75B",
       "displayName": "Instagram @dontoverthinkitchip",
+      "platform": "instagram",
+      "handle": "dontoverthinkitchip",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2483,6 +3103,8 @@
     {
       "id": "1716E3C5-3DFF-59D9-AE3E-46734486F217",
       "displayName": "Instagram @eatsconnoisseur",
+      "platform": "instagram",
+      "handle": "eatsconnoisseur",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2491,6 +3113,8 @@
     {
       "id": "E904438E-9EB2-52EA-AA50-334BDBA8956D",
       "displayName": "Instagram @erhunabbasli",
+      "platform": "instagram",
+      "handle": "erhunabbasli",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2499,6 +3123,8 @@
     {
       "id": "7571934E-F309-5F29-A8D1-A538C8BD6CE4",
       "displayName": "Instagram @gvalighting",
+      "platform": "instagram",
+      "handle": "gvalighting",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2507,6 +3133,8 @@
     {
       "id": "9FD0152F-198E-5408-846F-EFAC08819FFF",
       "displayName": "Instagram @heigijeong",
+      "platform": "instagram",
+      "handle": "heigijeong",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2515,6 +3143,8 @@
     {
       "id": "F2C4A3E5-AB0A-55F0-A891-EB6AF58E97EF",
       "displayName": "Instagram @jasminekharoud02",
+      "platform": "instagram",
+      "handle": "jasminekharoud02",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2523,6 +3153,8 @@
     {
       "id": "90CBECC3-16BA-5932-A039-E6B1CF87D540",
       "displayName": "Instagram @jen.trt",
+      "platform": "instagram",
+      "handle": "jen.trt",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2531,6 +3163,8 @@
     {
       "id": "DC821DAF-C4F9-5437-832B-9C8505C24AC1",
       "displayName": "Instagram @katchmyparty",
+      "platform": "instagram",
+      "handle": "katchmyparty",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2539,6 +3173,8 @@
     {
       "id": "E22BE522-F744-575B-8881-9DEBD7E8FE6B",
       "displayName": "Instagram @kate.ontario",
+      "platform": "instagram",
+      "handle": "kate.ontario",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2547,6 +3183,8 @@
     {
       "id": "59F20BC0-B646-593D-875B-698AE4A78435",
       "displayName": "Instagram @kurt.wang",
+      "platform": "instagram",
+      "handle": "kurt.wang",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2555,6 +3193,8 @@
     {
       "id": "F0D8A0CD-552F-50D5-BBEF-00E748D53A00",
       "displayName": "Instagram @lens_witch",
+      "platform": "instagram",
+      "handle": "lens_witch",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2563,6 +3203,8 @@
     {
       "id": "92A2ED06-CB29-5052-B378-C2C62A94D981",
       "displayName": "Instagram @littleexplorersontario",
+      "platform": "instagram",
+      "handle": "littleexplorersontario",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2571,6 +3213,8 @@
     {
       "id": "44580B4F-FAAE-5826-87E4-7AE0381F8BF1",
       "displayName": "Instagram @mississaugalib",
+      "platform": "instagram",
+      "handle": "mississaugalib",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2579,6 +3223,8 @@
     {
       "id": "C248378C-5B03-584E-9E39-99596D3DBB9D",
       "displayName": "Instagram @streetsoftorontodo",
+      "platform": "instagram",
+      "handle": "streetsoftorontodo",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2587,6 +3233,8 @@
     {
       "id": "F5341307-0506-5837-9823-5F09E596C25C",
       "displayName": "Instagram @todotoronto",
+      "platform": "instagram",
+      "handle": "todotoronto",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2595,6 +3243,8 @@
     {
       "id": "6CF353F1-B60A-548E-8D37-5DEA444BB2F7",
       "displayName": "Instagram @torbucketlist",
+      "platform": "instagram",
+      "handle": "torbucketlist",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2603,6 +3253,8 @@
     {
       "id": "2B69A393-C378-5433-AF96-EB3DE40B1823",
       "displayName": "Instagram @travelsruben",
+      "platform": "instagram",
+      "handle": "travelsruben",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2611,6 +3263,8 @@
     {
       "id": "D5DFE4C3-3ABD-5F99-93A4-A79A22F860BD",
       "displayName": "Instagram @yourcitywithin",
+      "platform": "instagram",
+      "handle": "yourcitywithin",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2619,6 +3273,8 @@
     {
       "id": "83C3DB13-798E-5694-8CBB-329354DB973F",
       "displayName": "Instagram @11hoytbk",
+      "platform": "instagram",
+      "handle": "11hoytbk",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2627,6 +3283,8 @@
     {
       "id": "4F67AD09-B540-58EF-BEE5-CE1D1B493672",
       "displayName": "Instagram @studiogang",
+      "platform": "instagram",
+      "handle": "studiogang",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2635,6 +3293,8 @@
     {
       "id": "887E0460-4026-50BA-BC88-2EF9E688AF51",
       "displayName": "Instagram @arkmfa",
+      "platform": "instagram",
+      "handle": "arkmfa",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2643,6 +3303,8 @@
     {
       "id": "23AEAF88-AD85-5F75-BD34-8EDF52D81CFC",
       "displayName": "Instagram @detroithalaleats",
+      "platform": "instagram",
+      "handle": "detroithalaleats",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2651,6 +3313,8 @@
     {
       "id": "82BB27A7-C65A-5AE3-879E-D4339E64DE68",
       "displayName": "Instagram @curatedbyindiaashley",
+      "platform": "instagram",
+      "handle": "curatedbyindiaashley",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2659,6 +3323,8 @@
     {
       "id": "A0573FFD-374D-5FD0-8248-D561BDBD7C4F",
       "displayName": "Instagram @miamifriendors",
+      "platform": "instagram",
+      "handle": "miamifriendors",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2667,6 +3333,8 @@
     {
       "id": "C8CFB775-0939-53D8-A7CB-BAF7AE7642FF",
       "displayName": "Instagram @leilaslist",
+      "platform": "instagram",
+      "handle": "leilaslist",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2675,6 +3343,8 @@
     {
       "id": "1A77A3B1-3D1E-5A8E-A2BF-709C24A4A66C",
       "displayName": "Instagram @pastis_miami",
+      "platform": "instagram",
+      "handle": "pastis_miami",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2683,6 +3353,8 @@
     {
       "id": "8C5A51B3-97D9-5BA2-9D81-BD747971FAA7",
       "displayName": "Instagram @fashion.eat.travel",
+      "platform": "instagram",
+      "handle": "fashion.eat.travel",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2691,6 +3363,8 @@
     {
       "id": "9A13CA74-A369-5025-A461-3787BC983DA0",
       "displayName": "Instagram @travelwithlivii",
+      "platform": "instagram",
+      "handle": "travelwithlivii",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2699,6 +3373,8 @@
     {
       "id": "429E9DE5-EB83-58CA-9FA2-CB5C768444E3",
       "displayName": "Instagram @faena",
+      "platform": "instagram",
+      "handle": "faena",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2707,6 +3383,8 @@
     {
       "id": "693534D2-4BAA-5F00-9854-C016FE0D71B6",
       "displayName": "Instagram @luxtravelsinsider",
+      "platform": "instagram",
+      "handle": "luxtravelsinsider",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2715,6 +3393,8 @@
     {
       "id": "03D00713-08CC-59CD-B5A5-3E3D9669DF62",
       "displayName": "Instagram @reginagmiami",
+      "platform": "instagram",
+      "handle": "reginagmiami",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2723,6 +3403,8 @@
     {
       "id": "51CEC443-2E86-5965-996F-E4D8C075C48C",
       "displayName": "Instagram @codiendrew",
+      "platform": "instagram",
+      "handle": "codiendrew",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2731,6 +3413,8 @@
     {
       "id": "244AEC13-2B21-5181-AF8B-50AAEDA5DF41",
       "displayName": "Instagram @jeremyaustiin",
+      "platform": "instagram",
+      "handle": "jeremyaustiin",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2739,6 +3423,8 @@
     {
       "id": "B6A1057D-EFDE-516D-BAE4-64A90D05713A",
       "displayName": "Instagram @katihaim",
+      "platform": "instagram",
+      "handle": "katihaim",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2747,6 +3433,8 @@
     {
       "id": "DB1EC9BF-C959-5F2B-B067-91B1FEAE3E96",
       "displayName": "Instagram @libbywemhoff",
+      "platform": "instagram",
+      "handle": "libbywemhoff",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2755,6 +3443,8 @@
     {
       "id": "1FAE9AD9-F1B7-5A99-A4B9-2FC221902788",
       "displayName": "TikTok @itshistoryonair",
+      "platform": "tiktok",
+      "handle": "itshistoryonair",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-itshistoryonair.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2763,6 +3453,8 @@
     {
       "id": "6EE99B32-565B-537F-A87A-9FB6AA058154",
       "displayName": "Instagram @iamlamlammm",
+      "platform": "instagram",
+      "handle": "iamlamlammm",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2771,6 +3463,8 @@
     {
       "id": "204BDACB-5F7A-5982-A8EA-CBBCDEEB60F7",
       "displayName": "Instagram @travpholer",
+      "platform": "instagram",
+      "handle": "travpholer",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2779,6 +3473,8 @@
     {
       "id": "AA8582D3-112F-55EE-85DA-C569BE224A54",
       "displayName": "Instagram @shabnamnasimi",
+      "platform": "instagram",
+      "handle": "shabnamnasimi",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2787,6 +3483,8 @@
     {
       "id": "92705A37-EE88-5E94-84C7-1E7E8509E467",
       "displayName": "Instagram @historyinsider_hk",
+      "platform": "instagram",
+      "handle": "historyinsider_hk",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2795,6 +3493,8 @@
     {
       "id": "337274DE-0A83-5BF2-A0C8-D67A0669C80F",
       "displayName": "Instagram @sarah_hsiao",
+      "platform": "instagram",
+      "handle": "sarah_hsiao",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2803,6 +3503,8 @@
     {
       "id": "3342CEFD-A97D-562F-AB44-E4B0AC07D130",
       "displayName": "Instagram @itsblankcreative",
+      "platform": "instagram",
+      "handle": "itsblankcreative",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2811,6 +3513,8 @@
     {
       "id": "33756F34-2AC5-52F9-BDA6-6F525A06F056",
       "displayName": "Instagram @rayisaplace",
+      "platform": "instagram",
+      "handle": "rayisaplace",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2819,6 +3523,8 @@
     {
       "id": "C943F7E0-9E13-5569-AFE7-5AAFAFD72578",
       "displayName": "Instagram @littlecommunication.jp",
+      "platform": "instagram",
+      "handle": "littlecommunication.jp",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2827,6 +3533,8 @@
     {
       "id": "18BB278C-10E3-5103-9437-F14928C5B5D0",
       "displayName": "TikTok @abbyhappel",
+      "platform": "tiktok",
+      "handle": "abbyhappel",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-abbyhappel.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2835,6 +3543,8 @@
     {
       "id": "875D1693-8ED4-55E4-884B-56B74F4FC907",
       "displayName": "Instagram @thearchfix",
+      "platform": "instagram",
+      "handle": "thearchfix",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2843,6 +3553,8 @@
     {
       "id": "87C21C0A-B634-532D-AB97-90549DE31C87",
       "displayName": "Instagram @mariin.berlin",
+      "platform": "instagram",
+      "handle": "mariin.berlin",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2851,6 +3563,8 @@
     {
       "id": "54499D45-1897-534B-9B1E-B89CAE2716D1",
       "displayName": "Instagram @davetheserboslav",
+      "platform": "instagram",
+      "handle": "davetheserboslav",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2859,6 +3573,8 @@
     {
       "id": "D88AF247-A845-5B1D-80DA-066DD8B22406",
       "displayName": "Instagram @sdamiani",
+      "platform": "instagram",
+      "handle": "sdamiani",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2867,6 +3583,8 @@
     {
       "id": "B124024B-ED6C-577E-BFB4-0C9B7BB2C6A5",
       "displayName": "Instagram @whattoseenyc",
+      "platform": "instagram",
+      "handle": "whattoseenyc",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2875,6 +3593,8 @@
     {
       "id": "1CA7CF52-1F37-51F3-B4F5-3259AF31CD31",
       "displayName": "Instagram @nadirataniaa",
+      "platform": "instagram",
+      "handle": "nadirataniaa",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2883,6 +3603,8 @@
     {
       "id": "92F62752-2E86-5027-8AF2-DF2387B14B0E",
       "displayName": "Instagram @alaybowker",
+      "platform": "instagram",
+      "handle": "alaybowker",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2891,6 +3613,8 @@
     {
       "id": "6A820677-656B-5F60-8029-4753D4B73A40",
       "displayName": "Instagram @askvivii",
+      "platform": "instagram",
+      "handle": "askvivii",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2899,6 +3623,8 @@
     {
       "id": "2D9DACE1-F75D-5A4F-8E48-58B5C081B03D",
       "displayName": "Instagram @blessedarch",
+      "platform": "instagram",
+      "handle": "blessedarch",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2907,6 +3633,8 @@
     {
       "id": "A3AD9761-9F35-5237-94D8-B3EBCC4BD2AC",
       "displayName": "Instagram @joinsocialbrick",
+      "platform": "instagram",
+      "handle": "joinsocialbrick",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2915,6 +3643,8 @@
     {
       "id": "426B1AD2-F21D-54C9-A0C6-03E880071B4A",
       "displayName": "Instagram @emi.eats.to",
+      "platform": "instagram",
+      "handle": "emi.eats.to",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2923,6 +3653,8 @@
     {
       "id": "200E1C6F-A818-5D8A-94D0-3D778650739C",
       "displayName": "Instagram @artsteps.london",
+      "platform": "instagram",
+      "handle": "artsteps.london",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2931,6 +3663,8 @@
     {
       "id": "B567A326-9A1C-5A3A-B6A9-5F1CF00FAF36",
       "displayName": "Instagram @youlaled",
+      "platform": "instagram",
+      "handle": "youlaled",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2939,6 +3673,8 @@
     {
       "id": "CA1344EE-62DC-5FB6-83B2-4FDE8D21AA83",
       "displayName": "Instagram @holidayinteriorsgardens",
+      "platform": "instagram",
+      "handle": "holidayinteriorsgardens",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2947,6 +3683,8 @@
     {
       "id": "CFFD79BA-5C0D-5E26-A435-888257E76C30",
       "displayName": "Instagram @brockwunder",
+      "platform": "instagram",
+      "handle": "brockwunder",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2955,6 +3693,8 @@
     {
       "id": "EAAD2F6D-F9AC-5521-BEAC-F6FB278D66EB",
       "displayName": "Instagram @denniscusack",
+      "platform": "instagram",
+      "handle": "denniscusack",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2963,6 +3703,8 @@
     {
       "id": "2C4545CF-A102-5795-B394-D04E4CDFB173",
       "displayName": "Instagram @socalarchitecture",
+      "platform": "instagram",
+      "handle": "socalarchitecture",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2971,6 +3713,8 @@
     {
       "id": "1E7336D6-3E8A-53C0-AAA3-AD6ECF077E8C",
       "displayName": "Instagram @monsieur.jim",
+      "platform": "instagram",
+      "handle": "monsieur.jim",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2979,6 +3723,8 @@
     {
       "id": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
       "displayName": "Instagram @vitavenute",
+      "platform": "instagram",
+      "handle": "vitavenute",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2987,6 +3733,8 @@
     {
       "id": "97A302C4-C91F-5580-9047-1EE7744B5B14",
       "displayName": "Instagram @theconwellcocktailhall",
+      "platform": "instagram",
+      "handle": "theconwellcocktailhall",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -2995,6 +3743,8 @@
     {
       "id": "0259FA9F-9A9C-53A8-9307-E51E0B5FCAFC",
       "displayName": "Instagram @stylelinguistics",
+      "platform": "instagram",
+      "handle": "stylelinguistics",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3003,6 +3753,8 @@
     {
       "id": "433005AD-AB6E-5268-A5B8-254C26EA50F9",
       "displayName": "Instagram @benlookingatart",
+      "platform": "instagram",
+      "handle": "benlookingatart",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3011,6 +3763,8 @@
     {
       "id": "537CC385-389F-5499-B1C5-14CF6DA77082",
       "displayName": "TikTok @pacificmodernism",
+      "platform": "tiktok",
+      "handle": "pacificmodernism",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-pacificmodernism.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3019,6 +3773,8 @@
     {
       "id": "1E6AFFB3-4BF9-571F-9CF8-169CA975DA94",
       "displayName": "TikTok @thedesignssuite",
+      "platform": "tiktok",
+      "handle": "thedesignssuite",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-thedesignssuite.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3027,6 +3783,8 @@
     {
       "id": "14963796-6244-5C39-94C7-A87B6A8169FC",
       "displayName": "TikTok @vamuseum",
+      "platform": "tiktok",
+      "handle": "vamuseum",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-vamuseum.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3035,6 +3793,8 @@
     {
       "id": "DE2A7058-0675-5703-9F3B-D01FB5EA3486",
       "displayName": "TikTok @tate",
+      "platform": "tiktok",
+      "handle": "tate",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-tate.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3043,6 +3803,8 @@
     {
       "id": "0B942E13-6F28-5E62-991A-A6BF5236A2AE",
       "displayName": "TikTok @jamiepeva",
+      "platform": "tiktok",
+      "handle": "jamiepeva",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jamiepeva.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3051,6 +3813,8 @@
     {
       "id": "0829F716-07E6-5431-ACAB-EB1265D4C17A",
       "displayName": "TikTok @janez.vermeiren",
+      "platform": "tiktok",
+      "handle": "janez.vermeiren",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-janez-vermeiren.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3059,6 +3823,8 @@
     {
       "id": "A83B9DAD-3717-5A43-971A-14D178AB2626",
       "displayName": "TikTok @carty.docs",
+      "platform": "tiktok",
+      "handle": "carty.docs",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-carty-docs.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3067,6 +3833,8 @@
     {
       "id": "18668F35-4043-5662-AB7A-B242EF435962",
       "displayName": "TikTok @phineasharper",
+      "platform": "tiktok",
+      "handle": "phineasharper",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-phineasharper.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3075,6 +3843,8 @@
     {
       "id": "490F1A41-F4FA-59E8-8898-91E2D93685D3",
       "displayName": "TikTok @heyrosiedart",
+      "platform": "tiktok",
+      "handle": "heyrosiedart",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-heyrosiedart.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3083,6 +3853,8 @@
     {
       "id": "FCE99C18-C829-555B-BFB3-63F8878EFF5E",
       "displayName": "TikTok @kylewilliamdesign",
+      "platform": "tiktok",
+      "handle": "kylewilliamdesign",
       "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-kylewilliamdesign.webp",
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3091,6 +3863,8 @@
     {
       "id": "24D7437D-DF9B-5209-B4D7-B4F532C9CDF6",
       "displayName": "Instagram @arishaintokyo",
+      "platform": "instagram",
+      "handle": "arishaintokyo",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3099,6 +3873,8 @@
     {
       "id": "75B3A531-168D-5D1A-BDC7-1EC4B3EBA5AA",
       "displayName": "Instagram @alvinzhuxiyao",
+      "platform": "instagram",
+      "handle": "alvinzhuxiyao",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
@@ -3107,6 +3883,8 @@
     {
       "id": "E0C6039F-9CC0-595D-86AD-32FC11E87A1A",
       "displayName": "Instagram @__dreamspaces",
+      "platform": "instagram",
+      "handle": "__dreamspaces",
       "avatarURL": null,
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
