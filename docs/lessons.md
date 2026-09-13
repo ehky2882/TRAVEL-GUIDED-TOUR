@@ -495,6 +495,37 @@ resurrected on the next sign-in. Write a custom `encode(to:)` emitting explicit 
 
 ---
 
+### A filtered view answers a different question than the one you asked
+
+🔴 **Twice in one day, 2026-09-13.** Both times the fact read was correct and the
+conclusion drawn from it was false, because the read went through a filter that
+the conclusion forgot about.
+
+**Instance 1 — counting.** Tours per maker were counted through PostgREST on the
+anon key, which serves `status = 'published'` only. 27 accounts came back with
+zero tours and were reported as "content-less". A maker owning nothing but drafts
+or `taken_down` work is indistinguishable from one owning nothing at all through
+that view. `backend/remove_test_creators.sql` already warned about exactly this,
+in capitals, after two failed pastes: *"Anything that reasons about 'does this
+maker have tours' must query the table as `postgres`, or it is reading a filtered
+view and will conclude the opposite of the truth."*
+
+**Instance 2 — access.** Account deletion was going to set a departing maker's
+tours to `taken_down`, on the reasoning that the rows survive and `purchases`
+rows are untouched, so **buyers keep access**. They do not. The catalogue builder
+and the tours RLS **both** filter `status = 'published'`, and a purchaser reaches
+tour content through that same path — so an intact `purchases` row grants access
+to something invisible. The reasoning even quoted the RLS filter and did not
+follow it through. Caught by the build session (#853); had it shipped it would
+have silently revoked access from the exact people the decision existed to
+protect.
+
+**The habit:** when a fact comes from a query, name the filter that query applies
+and ask whether the conclusion survives it. *"These rows exist"* is not *"this
+user can see them."* *"This query returned nothing"* is not *"nothing is there."*
+Where it matters, read as `postgres` or through the same path the user's request
+takes — and if you cannot, say the answer is bounded by the view you used.
+
 ## 7. Shell and environment
 
 **`pkill -f <script>` kills your own shell** (exit 144) — the pattern matches the wrapping
