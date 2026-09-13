@@ -13,3 +13,11 @@ a live link.**
 
 ⚠️ An ordinary `/video/` post that has gone, **not** a `/photo/` carousel; that
 limitation is separate and permanent.
+
+---
+
+**Re-verified 2026-09-13** (17 days open): the link is still dead — the page
+returns *"Video currently unavailable"* with no real `og:` tags — and **no pin
+for it exists in the catalogue**, so nothing is broken by leaving it. It is an
+optional addition, not a defect. Close it whenever you like; it is only here
+because nobody else can recover that post.
