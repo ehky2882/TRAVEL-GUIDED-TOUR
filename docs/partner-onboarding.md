@@ -63,7 +63,25 @@ GitHub is where the project's files live. It's free.
    **Say yes / install it** — it lets Claude fix problems on its own later. (If
    you clicked **Skip**, that's fine too, nothing breaks.)
 5. On a Pro or Max plan, Claude sets up your working environment automatically.
-   Nothing to do.
+
+### Step 3b — 🔴 Open up the network. Don't skip this one.
+
+Your environment starts out able to reach only an approved list of websites.
+GitHub is on that list. **TikTok, Instagram and our own image server are not** —
+and those are exactly the three the link-pin job needs. Left alone, your very
+first batch will stall partway through, and it won't look like a network
+problem; it'll look like the tool is broken.
+
+Thirty seconds, once, and it never bothers you again:
+
+1. At **claude.ai/code**, click the **cloud icon** showing your environment's
+   name (`Default`), in the row just above the message box.
+2. Hover over **Default** and click the **settings icon** on the right.
+3. Change **Network access** from **Trusted** to **Full**.
+4. Save.
+
+⚠️ **A session already open keeps the old setting** — it only picks up the
+change when you start a new one. So do this before Step 4, not after.
 
 **If you'd rather have a proper app than a browser tab**, download the Claude
 desktop app for Mac or Windows from **claude.ai/download**, sign in, and click
@@ -117,8 +135,9 @@ will look it up and read the answer back to you to confirm.
 Start a new session (repository selected, **Accept edits** mode) and paste
 something like this:
 
-> Use the atlas-upload skill. I want to add these link pins. For each one, look
-> up the coordinates and read them back to me before you add anything.
+> Use the atlas-upload skill, and install Pillow first. I want to add these
+> link pins. For each one, look up the coordinates and read them back to me
+> before you add anything.
 >
 > https://www.instagram.com/reel/XXXXXXX/ — Sagrada Família, Barcelona
 > https://www.tiktok.com/@someone/video/123456 — Borough Market, London
@@ -128,6 +147,11 @@ That's it. The mention of **the atlas-upload skill** is the important part — i
 loads a detailed instruction sheet that lives in the project and tells Claude
 exactly how this project does things, including a dozen mistakes that have been
 made before and shouldn't be made again.
+
+**Pillow** is the tool that crops the photos. It's often missing, and when it
+is, the pipeline's own self-check still reports a pass while quietly skipping
+all the picture work — so it's worth naming up front rather than finding out
+later.
 
 ### What happens next
 
@@ -270,6 +294,9 @@ Five things. They exist because each one has already gone wrong.
 | What you see | What to do |
 |---|---|
 | Claude asks a question you don't understand | Say "explain that like I'm not a developer" — it will |
+| **Claude says it can't reach TikTok, Instagram, or our image server** | **It's the network setting, not you.** Go do Step 3b, then start a new session. The one you're in keeps the old setting |
+| Claude stalls partway through a batch with "could not verify" or "could not resolve" | Same thing — Step 3b. It's refusing to guess, which is correct behaviour |
+| Photos come out wrong, or the image step is skipped | Pillow is probably missing. Say "install Pillow and try again" |
 | The repository doesn't appear in the list | The GitHub invitation isn't accepted yet, or you connected a different GitHub account |
 | A check is red / tests failing | Say "the tests are failing, please look at why and fix it". It's usually Claude's own to fix |
 | The session seems stuck | Sessions keep running when you close the tab. Reopen it from the sidebar at claude.ai/code |
