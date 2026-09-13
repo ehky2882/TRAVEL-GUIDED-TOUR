@@ -39,6 +39,11 @@ struct HomeDrawerContent: View {
             let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
             let filtering = appShared?.filter.isActive ?? false
             let results = filtering ? filteredResults : []
+            // The header counts what is UNDER THE MAP, filtered or not — see
+            // `HomeRailsViewModel.countInView`. The list below stays the full
+            // match set, nearest first, so panning past the edge of the view
+            // still leaves somewhere to scroll to.
+            let inView = HomeRailsViewModel.countInView(results, region: sharedState.visibleRegion)
             // The count shows at peek AND medium (every resting state
             // except fully-open); "LET'S EXPLORE" shows only once the
             // drawer has SETTLED at .large with NO filter active. Keyed
@@ -52,7 +57,11 @@ struct HomeDrawerContent: View {
 
             VStack(alignment: .leading, spacing: 0) {
                 ZStack {
-                    countHeader(filtering: filtering, resultCount: results.count)
+                    countHeader(
+                        filtering: filtering,
+                        matchCount: results.count,
+                        inViewCount: inView
+                    )
                         .opacity(showExplore ? 0 : 1)
                     Text("LET'S EXPLORE TOGETHER!")
                         .opacity(showExplore ? 1 : 0)
@@ -67,24 +76,36 @@ struct HomeDrawerContent: View {
 
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                        if filtering {
-                            // Filter active → a single flat results list
-                            // (owner decision D8), sorted by map-view
-                            // center distance.
-                            if results.isEmpty {
-                                noResultsState
-                            } else {
-                                ForEach(results) { tour in
-                                    FilterResultCard(tour: tour)
-                                }
-                            }
+                        // 🔴 **The shelves stay when a filter is on** — they
+                        // are simply built from the matching tours instead of
+                        // the whole catalogue, and `HomeRailsViewModel.rails`
+                        // already drops a shelf with nothing in it. Owner, on
+                        // device, 2026-09-13: *"within the drawer the
+                        // scrollable rails went away after you filter."*
+                        //
+                        // ⚠️ They went away because filtering swapped them for
+                        // a flat list of full-width cards — **itself an owner
+                        // direction, 2026-07-05**, for results that read as "a
+                        // rich, scannable vertical feed". This reverses that,
+                        // and the card view goes with it (it was unreferenced
+                        // afterwards; git has it if the feed ever returns).
+                        //
+                        // ⚠️ The comment that stood here credited the swap to
+                        // "owner decision D8", which it never was: D8 was about
+                        // the CHIP ROW being multi-select rather than a faceted
+                        // sheet, and had nothing to say about the drawer. The
+                        // real direction was recorded on the card, not here.
+                        if filtering, results.isEmpty {
+                            noResultsState
                         } else {
-                            // No filter → the curated tag shelves. The
-                            // resume entry renders as a compact single
-                            // ROW, not a shelf — you don't browse
-                            // "continue listening," you tap it. One line
-                            // keeps the top location rail above the fold.
-                            if let resumeTour = continueListeningTour {
+                            // The resume entry renders as a compact single
+                            // ROW, not a shelf — you don't browse "continue
+                            // listening," you tap it. One line keeps the top
+                            // location rail above the fold. ⚠️ Hidden while
+                            // filtering: it is the one row on this screen that
+                            // ignores the filter, and a card that does not
+                            // match what you asked for reads as a bug.
+                            if !filtering, let resumeTour = continueListeningTour {
                                 quickResumeBanner(tour: resumeTour, label: "Continue listening")
                             }
 
@@ -93,7 +114,7 @@ struct HomeDrawerContent: View {
                             // same frame the map lands on a searched place.
                             // Same "derive once, use many" trap as
                             // `filteredTours` in SearchView.
-                            let rails = railList
+                            let rails = railList(matching: filtering ? results : nil)
                             if rails.isEmpty {
                                 emptyState
                             } else {
@@ -134,16 +155,23 @@ struct HomeDrawerContent: View {
     /// (Continue listening / Recently viewed) are dropped here — Continue
     /// renders as a compact banner above the shelves; Recently viewed
     /// lives in Library.
-    private var railList: [HomeRail] {
+    /// - Parameter matching: the filter's matches, or `nil` when no filter is
+    ///   on. Non-nil narrows every shelf to that set; shelves left with nothing
+    ///   are dropped by `rails` itself, so a filter thins the drawer rather
+    ///   than emptying it.
+    private func railList(matching: [Tour]?) -> [HomeRail] {
         HomeRailsViewModel.rails(
-            tours: dataService.tours,
+            tours: matching ?? dataService.tours,
             libraryEntries: libraryStore.entries,
             recentlyViewedIds: recentlyViewedStore.tourIds,
             userLocation: locationManager.userLocation,
             visibleRegion: sharedState.visibleRegion,
             // Prebuilt tag index — without it each shelf filters the whole
-            // catalog, thirteen times, on every frame of a camera move.
-            toursByTag: dataService.toursByTagIndex
+            // catalog, thirteen times, on every frame of a camera move. ⚠️ The
+            // prebuilt one covers the WHOLE catalogue, so it is wrong for a
+            // filtered set; that case builds its own in one pass, from the
+            // array the header already computed.
+            toursByTag: matching.map(HomeRailsViewModel.tagIndex(for:)) ?? dataService.toursByTagIndex
         )
         .filter { $0.id != "continueListening" && $0.id != "recentlyViewed" }
     }
@@ -223,6 +251,16 @@ struct HomeDrawerContent: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
+    /// Shown in place of any count while the map is moving. Both the filtered
+    /// and unfiltered headers use it: a number that is about to change is worse
+    /// than no number, and a zero mid-pan reads as a dead end.
+    private var movingDots: some View {
+        TimelineView(.periodic(from: .now, by: 0.4)) { context in
+            let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1
+            Text(String(repeating: ".", count: tick))
+        }
+    }
+
     /// Count of tours with at least one stop inside the current map
     /// view — drives the peek/medium "N TOURS IN VIEW" header. Stays a
     /// map-context stat even though the rails browse the whole catalog;
@@ -248,24 +286,32 @@ struct HomeDrawerContent: View {
         return max(peekHeight, baseHeight - sharedState.sheetDragOffset)
     }
 
-    /// The drawer header line. When a filter is active it reports the
-    /// **result count**; otherwise the map-context "N TOURS IN VIEW".
-    /// While the map is mid-pan/-fling (and not filtering) it shows an
-    /// animated *ELLIPSIS* rather than letting the count flicker through
-    /// 0, which reads as "no results."
+    /// The drawer header line: **"N TOURS IN VIEW"** unfiltered, **"N RESULTS
+    /// IN VIEW"** filtered. While the map is mid-pan or mid-fling it shows an
+    /// animated ellipsis instead, rather than letting the count flicker through
+    /// 0 — which reads as "nothing here" at exactly the moment it is not true.
+    ///
+    /// 🔴 **Always a map stat.** `matchCount` is the whole catalogue's answer
+    /// to the filter and `inViewCount` is how much of it is under the map right
+    /// now; the header reads the second, so it keeps live-updating as you pan
+    /// (owner, on device, 2026-09-13). The two are distinguished in one place
+    /// only, and deliberately: **nothing matches anywhere** is a different
+    /// problem from **nothing matches HERE**, and the second is solved by
+    /// moving the map rather than by clearing a chip.
     @ViewBuilder
-    private func countHeader(filtering: Bool, resultCount: Int) -> some View {
-        if filtering {
-            switch resultCount {
-            case 0: Text("NO MATCHES")
-            case 1: Text("1 RESULT")
-            default: Text("\(resultCount) RESULTS")
+    private func countHeader(filtering: Bool, matchCount: Int, inViewCount: Int) -> some View {
+        if filtering, matchCount == 0 {
+            Text("NO MATCHES")
+        } else if filtering, sharedState.isMapMoving {
+            movingDots
+        } else if filtering {
+            switch inViewCount {
+            case 0: Text("NO RESULTS IN VIEW")
+            case 1: Text("1 RESULT IN VIEW")
+            default: Text("\(inViewCount) RESULTS IN VIEW")
             }
         } else if sharedState.isMapMoving {
-            TimelineView(.periodic(from: .now, by: 0.4)) { context in
-                let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1
-                Text(String(repeating: ".", count: tick))
-            }
+            movingDots
         } else {
             let count = toursInViewCount
             switch count {
@@ -313,104 +359,5 @@ struct HomeDrawerContent: View {
         .frame(maxWidth: .infinity)
         .padding(.top, AtlasSpacing.xl)
         .padding(.horizontal, AtlasSpacing.lg)
-    }
-}
-
-// MARK: - Filter result card
-
-/// One **full-width** card in the filtered results list (drawer, filter
-/// active). Same big 4:3 hero as the rail cards, but the frame spans the
-/// drawer width instead of scrolling in a rail — so filtered results read
-/// as a rich, scannable vertical feed (owner direction 2026-07-05).
-/// Title / maker / meta below, bookmark AFFORDANCE on the hero corner.
-private struct FilterResultCard: View {
-    let tour: Tour
-
-    @Environment(DataService.self) private var dataService
-    @Environment(LocationManager.self) private var locationManager
-    @Environment(TourPresenter.self) private var tourPresenter
-
-    var body: some View {
-        Button {
-            tourPresenter.present(tour)
-        } label: {
-            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                heroSection
-
-                // Uniform xs between title → maker → meta, matching the
-                // rail card so the two card families read identically.
-                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                    Text(tour.title)
-                        .font(AtlasTypography.body)
-                        .textCase(.uppercase)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .lineLimit(1)
-
-                    if let maker = dataService.maker(for: tour) {
-                        Text(maker.displayName)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                            .lineLimit(1)
-                    }
-
-                    HStack(spacing: AtlasSpacing.xs) {
-                        Image(systemName: "clock")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                        Text(metaLine)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                            .lineLimit(1)
-                    }
-                }
-                .padding(.horizontal, AtlasSpacing.xs)
-            }
-        }
-        .buttonStyle(.plain)
-        .padding(.horizontal, AtlasSpacing.lg)
-    }
-
-    /// Full-width 4:3 hero with the paired download + bookmark
-    /// AFFORDANCES in the top-right corner (shared `CardHeroControls`,
-    /// same control as the rail card) and — for multi-stop tours only —
-    /// a decorative route mini-map in the bottom-right corner. A chip
-    /// fires its own action; a tap anywhere else on the card opens the
-    /// tour. The mini-map has no tap target of its own.
-    private var heroSection: some View {
-        HeroImageView(
-            imageName: tour.heroImageURL,
-            height: Self.heroHeight,
-            cornerRadius: 0,
-            category: tour.primaryCategory
-        )
-        .overlay(alignment: .bottomTrailing) {
-            RouteMiniMapView(tour: tour)
-                .padding(AtlasSpacing.sm)
-        }
-        .overlay(alignment: .topLeading) {
-            TourPriceBadge(tour: tour, size: .heroControl)
-                .padding(AtlasSpacing.sm)
-        }
-        .overlay(alignment: .topTrailing) {
-            CardHeroControls(tour: tour)
-        }
-    }
-
-    /// Height for the full-width hero. Pinned to the rail card's hero
-    /// height (260pt wide × 3/4 = 195pt) so the filtered cards match the
-    /// rail exactly — a wider-than-4:3 banner, so the 1200×900 heroes are
-    /// lightly cropped top/bottom (vs the full uncropped 4:3 the rail
-    /// gets at its narrower width).
-    private static let heroHeight: CGFloat = 195
-
-    /// "3 min" alone, or "3 min · 1.2 mi away" when the user's location
-    /// is known — the same shape the rail cards + placecard use. Walks
-    /// (multi-stop) surface their stop count as a cue.
-    private var metaLine: String {
-        let duration = AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-        let base = tour.kind == .multiStop ? "\(duration) · \(tour.stops.count) stops" : duration
-        guard let user = locationManager.userLocation else { return base }
-        let away = AtlasFormatters.distanceAway(meters: tour.distance(from: user))
-        return "\(base) · \(away)"
     }
 }

@@ -13,20 +13,26 @@ owner decision D8). The combine rule is **unchanged** — OR within a facet, AND
 sheet.
 
 ```
-≡ All  ·  Format ⌄  ·  Price ⌄  ·  Dozents ⌄  ·  Tags ⌄
+≡ All  ·  Tags ⌄  ·  Dozents ⌄  ·  Format ⌄  ·  Price ⌄
 ```
 
 The row splits along a real seam. Three **structural fields** — `kind`, `price_tier`, `makerId` —
 get a chip each, because each asks a different kind of question. The **entire controlled
 vocabulary** gets one chip, because it is all the same kind of question.
 
+**The row runs richest-first** (owner, 2026-09-13): `Tags` has thirty-odd values and the most
+reasons to be opened, `Price` has two and the fewest. The first version led with the two structural
+pairs and left the vocabulary at the end — furthest from the thumb, first to scroll off the edge.
+🔴 **`FilterGroup`'s declaration IS the row order**, and the All panel repeats it by hand, so the
+two have to be changed together or the door and the chips disagree.
+
 | Chip | Values | Notes |
 |---|---|---|
 | **≡ All** | every facet below, in one scroll | A door, not a filter — never fills brass; its badge counts what is on behind it. |
+| **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
+| **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
 | **Format** | Audio stop 1,481 · Audio walk 72 · Instagram posts 9 · Instagram Reels 625 · TikTok 1,235 · YouTube Shorts 3 · YouTube videos 16 | One flat list, alphabetical. One field, so its values OR. |
 | **Price** | Free 3,375 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
-| **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
-| **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
 
 **Clear** sits in every panel's header — one word everywhere, the All panel included — not in the
 row. **Sort** sits on the drawer header, opposite the result count.
@@ -393,6 +399,76 @@ interactive. That branch exists for `PlayerView` and needed no change.
 
 **Net: 99 lines added, 104 deleted.** The correct fix is smaller than the wrong one, which is
 usually the tell.
+
+### The drawer header counts what is under the MAP (owner, on device, 2026-09-13)
+
+Filtered, the header reported the **whole catalogue's** match count: `District` read
+**270 RESULTS** while the map showed the US east coast, and panning changed nothing. Unfiltered it
+had always read `N TOURS IN VIEW` and updated live, so filtering silently swapped a map stat for a
+catalogue stat.
+
+It now reads **`N RESULTS IN VIEW`**, from the same region test the unfiltered count uses —
+membership by **stop**, matching the map's pins: a walk is in view when any of its stops is.
+
+Two things it deliberately does NOT do:
+
+- **The list below stays the full match set**, nearest-first from the map centre. The header
+  describes what you can see; the list is what you can reach. That split is not new — the
+  unfiltered header has always been a map stat while the rails browse the whole catalogue.
+- **`NO MATCHES` and `NO RESULTS IN VIEW` stay different sentences.** Nothing matching *anywhere*
+  is a filter to clear; nothing matching *here* is a map to move. Collapsing them would send people
+  to undo a chip that was never the problem.
+
+⚠️ The animated ellipsis while the map is moving now covers the filtered header too. A count that
+is about to change is worse than no count, and a zero mid-pan reads as a dead end.
+
+### Filtering narrows the drawer's shelves; it no longer replaces them
+
+**Owner, on device, 2026-09-13:** *"within the drawer the scrollable rails went away after you
+filter."*
+
+They had. A filter swapped the curated shelves for a flat vertical list of full-width cards — which
+was **itself an owner direction (2026-07-05)**, for filtered results that read as "a rich,
+scannable vertical feed". That direction is now reversed: the shelves stay and are simply built
+from the matching tours, and `HomeRailsViewModel.rails` already drops a shelf with nothing left in
+it, so a filter **thins** the drawer instead of emptying it.
+
+⚠️ **The comment in the code credited the swap to "owner decision D8", and that was never true.**
+D8 was about the chip row being multi-select rather than a faceted sheet; it had nothing to say
+about the drawer. The real direction was recorded on the card component, where nobody reading the
+drawer would find it. Corrected in place.
+
+**Two consequences worth knowing:**
+
+- **`FilterResultCard` is deleted** — 100 lines, unreferenced once the flat list went. Git has it
+  if the feed ever comes back.
+- **Continue listening is hidden while filtering.** It is the one row on that screen that ignores
+  the filter, and a card that does not match what you asked for reads as a bug.
+
+⚠️ **Performance.** `DataService.toursByTagIndex` is prebuilt for the WHOLE catalogue, so it is
+wrong for a filtered set — thirteen shelves each re-filtering the matches on every camera settle is
+the exact hitch that index was added to remove. `HomeRailsViewModel.tagIndex(for:)` builds a
+one-pass index over the match set instead, from the array the header has already computed.
+
+### Expanding a Dozent's map lands on the Home map filtered to them
+
+**Owner, 2026-09-13.** A creator page's inline map has an expand control that returns you to the one
+Home map, framed on their tours (owner direction, 2026-08-30). It framed them and stopped there, so
+you arrived with their pins mixed into everyone else's — having just asked to see theirs.
+
+The filter now crosses with the move: `PendingMapMove` carries an optional `TourFilter`, and
+`HomeView` applies it **before** the fly-to, so the pins the camera lands on are already the
+filtered set rather than flickering from everyone's to one Dozent's.
+
+- 🔴 **It REPLACES the filter rather than adding to it.** A `Format` or `Price` chip left on from
+  earlier browsing would silently hide most of the creator you just asked for, and the row would
+  explain itself in a chip nobody was looking at. One chip on — their name — is a state you can
+  read at a glance and clear in one tap.
+- **A list's expand still carries nothing.** There is no list facet to filter by, so it lands
+  framed on the list with the filter untouched. `nil` means *leave it alone*, never *clear it*.
+- ⚠️ Carried through the move for the same reason the placecard ids are: set beforehand it would
+  apply while the covering layer is still up, and the map would filter behind a screen nobody can
+  see.
 
 ### Ordering: counts promote, the alphabet displays
 

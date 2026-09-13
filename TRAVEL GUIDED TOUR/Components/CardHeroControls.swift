@@ -1,7 +1,8 @@
 import SwiftUI
 
-/// The top-right control cluster shared by the home tour cards
-/// (`RailCarousel`'s rail card + the filter-results `FilterResultCard`).
+/// The top-right control cluster on the home tour cards
+/// (`RailCarousel`'s rail card; `FilterResultCard` used it too until the
+/// drawer stopped swapping its shelves for a flat list, 2026-09-13).
 /// Renders a **download** chip beside the existing **bookmark** chip —
 /// the AllTrails layout (download-arrow + heart). Both chips are the
 /// same 36pt circular material treatment so they read as one paired

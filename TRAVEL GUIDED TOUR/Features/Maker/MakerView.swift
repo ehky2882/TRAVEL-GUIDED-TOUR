@@ -775,7 +775,11 @@ struct MakerView: View {
             // a lookup. A list page passes a real lookup instead.
             makerForTour: { _ in maker },
             onOpenTour: openTourFromMap,
-            onOpenPlace: openPlaceFromMap
+            onOpenPlace: openPlaceFromMap,
+            // Expanding lands on the Home map with THIS Dozent filtered in —
+            // owner, 2026-09-13. Without it you arrive at their pins mixed into
+            // everyone else's, having just asked to see theirs.
+            expandsFilteredTo: TourFilter(makerIds: [maker.id])
         )
     }
 

@@ -116,6 +116,26 @@ struct PendingMapMove: Equatable, Identifiable {
     /// thing about where you are landing.
     var placecardPlaceId: UUID? = nil
 
+    /// The filter the Home map should be wearing when it arrives, or nil to
+    /// leave the filter alone.
+    ///
+    /// Owner, 2026-09-13: expanding a **creator's** map should land on the Home
+    /// map *showing that creator* — otherwise you arrive at their pins mixed
+    /// into everyone else's and have to find the Dozents chip to get back what
+    /// you were just looking at.
+    ///
+    /// 🔴 It REPLACES the filter rather than adding to it, and that is
+    /// deliberate: a Format or Price chip left on from earlier browsing would
+    /// silently hide most of the creator you just asked to see, and the row
+    /// would truthfully say why in a chip nobody was looking at. Arriving with
+    /// exactly one chip on — their name — is a state you can read at a glance
+    /// and clear with one tap.
+    ///
+    /// ⚠️ Carried through the move for the same reason the placecard ids are:
+    /// set beforehand it would be applied while the covering layer is still up,
+    /// and the map would filter behind a screen nobody can see.
+    var filter: TourFilter? = nil
+
     static func == (lhs: PendingMapMove, rhs: PendingMapMove) -> Bool {
         lhs.id == rhs.id
     }

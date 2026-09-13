@@ -430,3 +430,54 @@ final class HomeRailsViewModelTests: XCTestCase {
         XCTAssertEqual(results.map(\.id), [near.id, far.id])
     }
 }
+
+// MARK: - The drawer header's count
+
+/// 🔴 The header is a **map** stat, filtered or not. Filtered it used to report
+/// the whole catalogue's match count, so panning changed nothing and `District`
+/// read **270 RESULTS** over a map of the US east coast — a number about
+/// everywhere, printed over somewhere (owner, on device, 2026-09-13).
+final class CountInViewTests: XCTestCase {
+
+    /// Manhattan, roughly — wide enough for the fixtures' default 40.7484 /
+    /// -73.9857 and nothing in another city.
+    private let manhattan = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 40.75, longitude: -73.99),
+        span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+    )
+
+    func test_countsOnlyToursWithAStopInsideTheRegion() {
+        let here = TestFixtures.makeTour()
+        let paris = TestFixtures.makeTour(latitude: 48.8584, longitude: 2.2945)
+        XCTAssertEqual(HomeRailsViewModel.countInView([here, paris], region: manhattan), 1)
+    }
+
+    /// Membership is by STOP, matching the map's own pins: a walk is in view
+    /// when ANY of its stops is, even if its centroid is elsewhere.
+    func test_aWalkCountsWhenOneStopIsInView() {
+        let walk = TestFixtures.makeTour(
+            kind: .multiStop,
+            stopCoordinates: [
+                (latitude: 40.7484, longitude: -73.9857),   // in view
+                (latitude: 48.8584, longitude: 2.2945),     // Paris
+            ]
+        )
+        XCTAssertEqual(HomeRailsViewModel.countInView([walk], region: manhattan), 1)
+    }
+
+    func test_noneInView_isZeroRatherThanTheWholeList() {
+        let paris = TestFixtures.makeTour(latitude: 48.8584, longitude: 2.2945)
+        XCTAssertEqual(HomeRailsViewModel.countInView([paris], region: manhattan), 0)
+    }
+
+    /// ⚠️ A nil region means the map has not reported one YET — count
+    /// everything, so the header cannot flash a zero it does not mean.
+    func test_nilRegionCountsEverything() {
+        let tours = [TestFixtures.makeTour(), TestFixtures.makeTour(latitude: 48.8584, longitude: 2.2945)]
+        XCTAssertEqual(HomeRailsViewModel.countInView(tours, region: nil), 2)
+    }
+
+    func test_emptyListIsZero() {
+        XCTAssertEqual(HomeRailsViewModel.countInView([], region: manhattan), 0)
+    }
+}

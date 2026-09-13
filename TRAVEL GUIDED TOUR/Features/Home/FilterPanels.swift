@@ -479,12 +479,19 @@ private struct AllFiltersBody: View {
     let makers: [Maker]
 
     var body: some View {
+        // 🔴 Same order as the row — Tags · Dozents · Format · Price (owner,
+        // 2026-09-13). The row reads `FilterGroup.allCases`; this list is by
+        // hand because each section has its own body, so **the two have to be
+        // kept in step deliberately.** A reader who opens `All` after using the
+        // chips should meet the same sequence, or the door and the chips
+        // disagree about what the row is.
         VStack(alignment: .leading, spacing: 0) {
-            GroupLabel(text: FilterGroup.format.title)
-            // Flowed rather than stacked here — see `FormatBody.stacked`.
-            FormatBody(filter: $filter, tours: tours, stacked: false)
-            GroupLabel(text: FilterGroup.price.title)
-            PriceBody(filter: $filter, tours: tours)
+            // ⚠️ No `TAGS` heading above this one, deliberately: `TagsBody`
+            // brings its own five (`PLACE — WHAT IT IS`, `SUBJECT`, …), and a
+            // heading over headings is the "too wordy" the owner already cut
+            // from this panel once. It now opens the sheet, where it reads as
+            // the first section rather than a loose tail.
+            TagsBody(filter: $filter, tours: tours)
             GroupLabel(text: FilterGroup.dozents.title)
             // Search field only until something is typed — see
             // `DozentsBody.showsUnsearchedList`.
@@ -494,7 +501,11 @@ private struct AllFiltersBody: View {
                 makers: makers,
                 showsUnsearchedList: false
             )
-            TagsBody(filter: $filter, tours: tours)
+            GroupLabel(text: FilterGroup.format.title)
+            // Flowed rather than stacked here — see `FormatBody.stacked`.
+            FormatBody(filter: $filter, tours: tours, stacked: false)
+            GroupLabel(text: FilterGroup.price.title)
+            PriceBody(filter: $filter, tours: tours)
         }
     }
 }

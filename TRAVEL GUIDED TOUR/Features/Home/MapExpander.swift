@@ -66,9 +66,14 @@ final class MapExpander {
     /// Returns without acting when there is nothing to frame, so a creator with
     /// no published tours yet gets a control that is hidden rather than inert
     /// (see `regionFraming`).
-    func expand(framing tours: [Tour]) {
+    /// - Parameter filter: what the Home map should be filtered to on arrival.
+    ///   A **creator** page passes its own Dozent, so expanding their map lands
+    ///   on their pins rather than on everyone's (owner, 2026-09-13). A list
+    ///   passes nothing: there is no list facet to filter by, so its expand
+    ///   still shows the whole map framed on the list.
+    func expand(framing tours: [Tour], filteredTo filter: TourFilter? = nil) {
         guard let region = Self.regionFraming(tours) else { return }
-        performExpand?(PendingMapMove(region: region))
+        performExpand?(PendingMapMove(region: region, filter: filter))
     }
 
     /// The region covering every tour in `tours`, or nil when none can be

@@ -149,13 +149,23 @@ struct TourFilter: Equatable {
 
 // MARK: - Groups
 
-/// The four chips, in row order: what it is · what it costs · whose it is ·
-/// what it is tagged. The first three are **structural fields** on `Tour`
-/// (`kind`, `priceTier`, `makerId`) and get a chip each because each asks a
-/// different kind of question; the fourth is the entire vocabulary, because
-/// that is all one kind of question.
+/// The four chips, in row order: **Tags · Dozents · Format · Price** — what
+/// it is about, whose it is, what it is, what it costs.
+///
+/// Three of them are **structural fields** on `Tour` (`kind`, `priceTier`,
+/// `makerId`) and get a chip each because each asks a different kind of
+/// question; `Tags` is the entire controlled vocabulary, because that is all
+/// one kind of question.
+///
+/// 🔴 **This declaration IS the row order** — `allCases` feeds the `ForEach`,
+/// and the All panel lists its sections in the same order by hand. Owner
+/// decision, 2026-09-13: the row now runs richest-first. `Tags` is the chip
+/// with thirty-odd values and the most reasons to be opened; `Price` is two
+/// values and the least. The old order put the two structural pairs first and
+/// buried the vocabulary at the end, where it was furthest from the thumb and
+/// most likely to be scrolled past.
 enum FilterGroup: String, CaseIterable, Identifiable {
-    case format, price, dozents, tags
+    case tags, dozents, format, price
 
     var id: String { rawValue }
 
