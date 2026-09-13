@@ -150,8 +150,11 @@ final class FollowService {
     }
 
     /// The profiles following this maker. The `list_followers` RPC enforces the
-    /// visibility rule (a private account's list is only returned to its owner);
-    /// returns `[]` on error or when hidden.
+    /// visibility rule server-side: a private account's graph is returned to its
+    /// owner **and to anyone it has accepted as a follower**, and withheld from
+    /// everyone else (`backend/private_friends_social.sql`). Returns `[]` on
+    /// error or when hidden — the two are indistinguishable from here, which is
+    /// why `FollowListView` is told separately whether to say "private".
     func followers(of makerId: UUID) async -> [Maker] {
         (try? await fetchMakerList("list_followers", makerId)) ?? []
     }
@@ -169,7 +172,8 @@ final class FollowService {
         return followingList[makerId] ?? []
     }
 
-    /// The makers this profile follows. Same visibility rule via `list_following`.
+    /// The makers this profile follows. Same visibility rule via `list_following`
+    /// — owner + accepted followers see it, strangers get `[]`.
     /// Write-through to memory + disk on success (including an empty result —
     /// genuinely following nobody — so an unfollow-to-zero eventually clears the
     /// warm list); on a network error, returns the last-known cached list rather
