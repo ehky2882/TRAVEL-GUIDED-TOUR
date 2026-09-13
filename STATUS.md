@@ -73,6 +73,13 @@ information about intent** — and an anon read shows published rows only, hidin
 draft and taken-down work. **No session may delete, merge or "tidy up" accounts.**
 ⚠️ `backend/remove_test_creators.sql` must not be re-run or adapted.
 
+🔴 **A DOZENT WITH 0 TOURS STAYS LISTED — NEVER HIDE THEM.** Owner, 2026-09-13: *"i
+think it's fine that a "dozent" has 0 tours. dont hide them"*. Every account
+appears in Search and in the Settings Dozents count, published or not. **Do not
+propose filtering Search to accounts with published content**, and do not stop
+`get_catalog` serving content-less makers. This closes choice 9 of
+`docs/usernames-design.md` as **"leave it"**.
+
 🔴 **A MERGED PR THAT NEEDS AN OWNER PASTE IS NOT FINISHED.** It becomes a
 `status/owner/` item. #805 merged carrying an SQL paste that no board recorded, so
 it was owed to nobody for two days while two duplicate pins sat live on the map.
@@ -223,10 +230,12 @@ collision in the whole table (416 makers, 401 distinct names). ⚠️ **Two make
 `avatarURL` and `bio` for every account; **no consumer code reads that flag at all.** That is the
 half worth a decision rather than a patch.
 
-  - **Not fixed here** — `Features/Search/` is code-class. And the fix is **presentation, not
-    deletion**: decide who belongs in a creator search. Serving every account is a deliberate owner
-    decision from 2026-07-05 (the Settings count depends on it), so **changing what the RPC emits
-    would silently move that number** — check before touching it.
+  - ✅ **RESOLVED 2026-09-13 — nothing to fix. The owner decided every Dozent stays listed, 0 tours
+    included:** *"i think it's fine that a "dozent" has 0 tours. dont hide them"* (see § Standing
+    decisions). The 16 `New Creator` rows are now named after their usernames (`@user.…`), so
+    that search no longer returns a block of identical names. ⚠️ `isPrivate` was misread above: it
+    means approval-gated follows and hidden follower lists (`backend/social.sql`), never a hidden
+    profile — there are 3 private makers, and serving their name is what the flag promises.
   - ⚠️ **Adjacent to [#820](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/820)**, which fixes
     the *counts* on these same rows and is right to.
   - 🔴 **`backend/remove_test_creators.sql` is a live hazard against the standing decision.** It is
