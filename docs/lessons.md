@@ -736,6 +736,29 @@ is what seizes audio focus, so activating at launch stopped the user's Spotify b
 
 ## 10. Working with the owner
 
+### Any keep-or-pull question about a picture leads with the picture
+
+🔴 **Paid for twice.** Session 138 hit it on the `@notbadgalriri__` Rednaxela Terrace hero and wrote
+the rule down; it was then repeated on 2026-09-02 with the In's Point and Hong Kong Railway Museum
+heroes.
+
+Both times the question went to the owner **in prose** — *"two one-line hero swaps sitting ready if
+you'd rather have the naming than the framing"* — and both times the answer was a version of
+***"i dont understand, more clearly pls"***. Reasonably so: it turned on jargon that means nothing
+outside this repo (hero, place page, framing-vs-naming), and it described two photographs the owner
+could not see.
+
+**What settled it in a single exchange:** two labelled side-by-side comparison images, one per place,
+each panel captioned `A — USING THIS NOW` / `B — THE OTHER OPTION`, one plain line per panel saying
+what that frame does and does not show, sent with `SendUserFile`, plus an explicit *"you don't have
+to do anything"*.
+
+⚠️ The same shape applies past images: **if a decision turns on something the owner can be shown,
+show it.** A description of a picture is not a picture, and a paragraph of internal vocabulary is not
+a question.
+
+
+
 - **Not a Terminal user.** Claude does all shell and git work. Supabase/SQL/infra needs
   copy-paste-ready blocks and click-by-click dashboard walkthroughs.
 - **Show, don't describe.** *"can you show me first before i decide?"* Mockups and rendered images
