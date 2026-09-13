@@ -98,8 +98,12 @@ struct Maker: Codable, Identifiable, Hashable {
     /// `Instagram @urbanistariel`, so repeating it underneath would say it twice.
     /// Same when the display name IS the handle — the accounts once called
     /// `New Creator` were renamed to theirs (owner, 2026-09-13, one time).
+    /// And not for a deleted account: its row is kept as "Former creator" with
+    /// a placeholder `former.…` handle (account deletion, 2026-09-13), which
+    /// is bookkeeping, not an address anyone should be shown.
     var profileHandleLine: String? {
         guard platform == "dozent", let at = atHandle,
+              !at.hasPrefix("@former."),
               displayName.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() != at
         else { return nil }
         return at

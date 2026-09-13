@@ -95,6 +95,13 @@ final class UsernameTests: XCTestCase {
         XCTAssertNil(renamed.profileHandleLine)
     }
 
+    /// A deleted account is kept as "Former creator" with a placeholder handle.
+    func test_profileHandleLine_hiddenForADeletedAccountsPlaceholder() {
+        let former = Maker(id: UUID(), displayName: "Former creator", avatarURL: nil, avatarEmoji: nil,
+                           bio: "", websiteURL: nil, platform: "dozent", handle: "former.1a2b3c4d5e6f")
+        XCTAssertNil(former.profileHandleLine)
+    }
+
     // MARK: - MakerRow: the profile upsert must never carry the username
 
     func test_makerRowEncode_neverSendsHandlePlatformOrHandleAuto() throws {
