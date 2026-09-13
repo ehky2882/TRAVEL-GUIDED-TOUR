@@ -55,6 +55,10 @@ struct Maker: Codable {
     let avatarEmoji: String?
     let bio: String
     let websiteURL: String?
+    // backend/usernames.sql — mirrors Models/Maker.swift. Optional there for old
+    // payloads; REQUIRED here, because this file is the catalogue's source.
+    let platform: String?
+    let handle: String?
 }
 
 struct Stop: Codable {
@@ -411,6 +415,7 @@ do {
 
 // Makers: ID uniqueness, required text, optional-URL validity.
 var seenMakerIds = Set<UUID>()
+var seenMakerHandles = Set<String>()
 for (i, m) in file.makers.enumerated() {
     let loc = "makers[\(i)] '\(m.displayName)'"
     if !seenMakerIds.insert(m.id).inserted {
@@ -420,6 +425,28 @@ for (i, m) in file.makers.enumerated() {
     if !isNonEmpty(m.bio)         { err(loc, "bio is empty") }
     if let u = m.avatarURL, !isValidURL(u)  { err(loc, "avatarURL '\(u)' is not a valid URL") }
     if let u = m.websiteURL, !isValidURL(u) { err(loc, "websiteURL '\(u)' is not a valid URL") }
+
+    // Usernames (backend/usernames.sql): unique as a (platform, handle) PAIR.
+    guard let platform = m.platform, let handle = m.handle else {
+        err(loc, "missing platform/handle — every maker carries both (see docs/usernames-design.md)")
+        continue
+    }
+    if !["dozent", "instagram", "tiktok", "youtube"].contains(platform) {
+        err(loc, "platform '\(platform)' is not dozent / instagram / tiktok / youtube")
+    }
+    if handle.isEmpty || handle != handle.lowercased() || handle.hasPrefix("@")
+        || handle.contains(where: { $0.isWhitespace }) {
+        err(loc, "handle '\(handle)' must be lowercase, non-empty, with no @ or spaces")
+    }
+    if !seenMakerHandles.insert("\(platform)/\(handle)").inserted {
+        err(loc, "duplicate handle \(platform)/\(handle) — the pair must be unique")
+    }
+    // A pinned creator's display name must agree with its platform and handle,
+    // or the page would name one account and link another.
+    let pinLabels = ["instagram": "Instagram", "tiktok": "TikTok", "youtube": "YouTube"]
+    if let label = pinLabels[platform], m.displayName.lowercased() != "\(label) @\(handle)".lowercased() {
+        err(loc, "displayName should read '\(label) @\(handle)' for this platform + handle")
+    }
 }
 
 let makerById = Dictionary(uniqueKeysWithValues: file.makers.map { ($0.id, $0) })
