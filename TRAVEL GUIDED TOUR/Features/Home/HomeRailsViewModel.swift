@@ -94,6 +94,29 @@ enum HomeRailsViewModel {
     /// (owner decision D8 — the drawer swaps its shelves for this).
     /// Applies `TourFilter` and orders by distance from the map viewport
     /// center (§1.5). Pure + testable.
+    /// A tag → tours index over an arbitrary tour set.
+    ///
+    /// `DataService.toursByTagIndex` is the prebuilt one for the WHOLE
+    /// catalogue, and it exists because thirteen shelves each filtering 1,552
+    /// tours on every camera settle made the map hitch. With a filter on, the
+    /// shelves are built from the matching set instead, which has no prebuilt
+    /// index — so this builds one, once, from a list the drawer has already
+    /// computed for its header.
+    ///
+    /// ⚠️ It is a **one-pass** build (tours × their own tags) rather than
+    /// thirteen passes over the set, which is the whole point: a weak filter
+    /// like `Free` matches most of the catalogue, so the naive version would
+    /// reinstate exactly the hitch the index was added to remove.
+    static func tagIndex(for tours: [Tour]) -> [String: [Tour]] {
+        var index: [String: [Tour]] = [:]
+        for tour in tours {
+            for tag in tour.tags {
+                index[tag, default: []].append(tour)
+            }
+        }
+        return index
+    }
+
     /// How many of `tours` have at least one stop inside the map's current
     /// view.
     ///

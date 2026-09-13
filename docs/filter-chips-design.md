@@ -422,6 +422,34 @@ Two things it deliberately does NOT do:
 ⚠️ The animated ellipsis while the map is moving now covers the filtered header too. A count that
 is about to change is worse than no count, and a zero mid-pan reads as a dead end.
 
+### Filtering narrows the drawer's shelves; it no longer replaces them
+
+**Owner, on device, 2026-09-13:** *"within the drawer the scrollable rails went away after you
+filter."*
+
+They had. A filter swapped the curated shelves for a flat vertical list of full-width cards — which
+was **itself an owner direction (2026-07-05)**, for filtered results that read as "a rich,
+scannable vertical feed". That direction is now reversed: the shelves stay and are simply built
+from the matching tours, and `HomeRailsViewModel.rails` already drops a shelf with nothing left in
+it, so a filter **thins** the drawer instead of emptying it.
+
+⚠️ **The comment in the code credited the swap to "owner decision D8", and that was never true.**
+D8 was about the chip row being multi-select rather than a faceted sheet; it had nothing to say
+about the drawer. The real direction was recorded on the card component, where nobody reading the
+drawer would find it. Corrected in place.
+
+**Two consequences worth knowing:**
+
+- **`FilterResultCard` is deleted** — 100 lines, unreferenced once the flat list went. Git has it
+  if the feed ever comes back.
+- **Continue listening is hidden while filtering.** It is the one row on that screen that ignores
+  the filter, and a card that does not match what you asked for reads as a bug.
+
+⚠️ **Performance.** `DataService.toursByTagIndex` is prebuilt for the WHOLE catalogue, so it is
+wrong for a filtered set — thirteen shelves each re-filtering the matches on every camera settle is
+the exact hitch that index was added to remove. `HomeRailsViewModel.tagIndex(for:)` builds a
+one-pass index over the match set instead, from the array the header has already computed.
+
 ### Ordering: counts promote, the alphabet displays
 
 **Within every group, values are in alphabetical order** — `District · Monument · Museum · Park ·
