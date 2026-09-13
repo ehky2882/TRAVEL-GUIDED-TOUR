@@ -1,8 +1,10 @@
 # Unique usernames — design
 
-**Status: DESIGN ONLY, 2026-09-12. Nothing is built, no SQL has been written or pasted.** This
-document exists so the owner can choose; the build follows the choices. Same pattern as
-`docs/catalog-version-check-design.md` and `docs/filter-chips-design.md`.
+**Status: DECIDED 2026-09-12 — all nine recommendations, not yet built.** Owner: *"i'll go with
+your recommendation so long as they are aligned with 'industry standards'."* Each was checked
+against that condition: see § Industry check at the end. Nothing is built and no SQL has been
+written or pasted. Same pattern as `docs/catalog-version-check-design.md` and
+`docs/filter-chips-design.md`.
 
 **The requirement, in the owner's words (2026-09-12):**
 
@@ -356,3 +358,35 @@ Each has a recommendation; "go with the recommendations" is a complete answer.
 
 Once answered, the build is the three pieces above in that order: one SQL paste, one auto-merge
 content PR, one app PR for device review.
+
+---
+
+## Industry check — the condition the owner attached
+
+**Answered 2026-09-12: the recommendations, on condition they match industry standards.** Checked
+one by one:
+
+| # | Recommendation | Precedent | Standard? |
+|---|---|---|---|
+| 1 | Handle beside a free display name | Instagram, TikTok, X, YouTube, GitHub | ✅ |
+| 2 | Unique per platform | How any app stores accounts from other services (provider + name). Ours are pinned creators | ✅ |
+| 3 | 3–24 chars, `a–z 0–9 . _`, lowercase | Instagram: same characters, up to 30. TikTok: same characters, up to 24 | ✅ |
+| 4 | Change once per 30 days, old handle held | TikTok: once per 30 days. Instagram holds a released handle for 14 days | ✅ |
+| 5 | Reserved words; no imitating a platform or studio | Every major platform reserves official names and bans impersonation | ✅ Reserving pinned creators' handles goes slightly further than most, in the same direction |
+| 6 | Automatic handles for existing and new accounts | TikTok assigns `user` + digits by default | ✅ |
+| 7 | Studio handles `atlas.nyc` | No standard applies — a brand choice | ➖ Defaulted to match the studios' current public names |
+| 8 | Assigned at signup, editable, prompt before first publish | TikTok | ✅ |
+| 9 | Public-account question handled separately | A process choice | ➖ |
+
+### 🔴 Found while checking: no way for a user to delete their own account
+
+**Apple requires it** (App Review Guideline 5.1.1(v), since 2022): an app that lets people create
+an account must let them start deleting it from inside the app. A search of the app, the backend
+SQL, the Edge Functions and the website on 2026-09-12 found **no such feature**. It may exist under
+wording the search missed; **re-check before acting on this.**
+
+It matters here because it meets the owner's rule *"never delete any users"* head-on. The likely
+reading — and the industry-standard one — is that **we** never delete anyone, while **a person** can
+always delete **their own** account. That is an owner decision, not something to assume, and it is
+outside this design. If a person deletes their account, their handle is held for 30 days like any
+released handle, then freed.
