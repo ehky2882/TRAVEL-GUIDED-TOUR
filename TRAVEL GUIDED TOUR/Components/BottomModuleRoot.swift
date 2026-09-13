@@ -198,6 +198,18 @@ struct BottomModuleRoot: View {
                     )
                 }
         }
+        // Delete account, from THIS window for the fourth time's reason: opened
+        // from Settings (a main-window sheet) it slid in behind the bars, which
+        // covered its Delete button — owner-filmed on build 154. Its own view,
+        // for the same one-presentation-per-view rule.
+        .background {
+            Color.clear
+                .sheet(isPresented: $appShared.showingDeleteAccount) {
+                    NavigationStack {
+                        DeleteAccountView()
+                    }
+                }
+        }
     }
 
     /// Should the bars paint edge-to-edge rather than as a floating island?

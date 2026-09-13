@@ -40,6 +40,9 @@ struct SettingsView: View {
     @Environment(DataService.self) private var dataService
     @Environment(AuthService.self) private var authService
     @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
+    /// Optional, like every other main-window reader: Settings is also built in
+    /// previews and tests where no cross-window state is injected.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
     @State private var showingSignIn = false
 
     var body: some View {
@@ -108,6 +111,26 @@ struct SettingsView: View {
                         } label: {
                             Label("Sign out", systemImage: "rectangle.portrait.and.arrow.right")
                         }
+                        // Apple Guideline 5.1.1(v). Opens as a sheet presented from
+                        // the bottom module's window (`AppSharedState.showingDeleteAccount`)
+                        // so it covers the mini-player and tab bar rather than
+                        // sliding in behind them. Not a NavigationLink either way:
+                        // this row vanishes the moment the account is deleted (we
+                        // sign out), and a link would take the "your account has
+                        // been deleted" confirmation Apple asks for with it.
+                        Button {
+                            appShared?.showingDeleteAccount = true
+                        } label: {
+                            HStack {
+                                Label("Delete account", systemImage: "person.crop.circle.badge.xmark")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(AtlasTypography.caption)
+                                    .foregroundStyle(AtlasColors.secondaryText)
+                            }
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
                     } else {
                         Button {
                             showingSignIn = true
