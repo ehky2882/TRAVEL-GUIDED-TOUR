@@ -329,6 +329,10 @@ worse. An automatic `user.3f9a2c` publishes nothing new, and a handle made from 
 publishes nothing the display name did not already. B is worth raising again if the owner wants
 non-creators to be invisible, but that is a different requirement from unique usernames.
 
+✅ **Decided 2026-09-13: C, leave it.** Owner: *"i think it's fine that a "dozent" has 0 tours. dont
+hide them."* The recommendation (A) was declined. Every account stays in Search and in the Dozents
+count, and this is recorded as a standing decision in `STATUS.md`. Do not re-propose A or B.
+
 ## What is explicitly NOT being done
 
 - **No account is deleted, merged, renamed or reclaimed.** Not the 16 `New Creator` rows, not any
@@ -354,7 +358,7 @@ Each has a recommendation; "go with the recommendations" is a complete answer.
 6. **Existing accounts:** handles derived from their names (recommended), or neutral `user.` handles for all 28?
 7. **Studio handles:** `atlas.nyc` (recommended) or `atlasstudio.nyc`?
 8. **Where the handle is chosen:** automatically at signup, editable, with a prompt before first publish (A)? — *recommend A*
-9. **The public-account question:** separately, as a Search-only fix (A)? — *recommend A, not in this build*
+9. **The public-account question:** separately, as a Search-only fix (A)? — *recommend A, not in this build* — ✅ **decided 2026-09-13: C, leave it; 0-tour Dozents stay listed**
 
 Once answered, the build is the three pieces above in that order: one SQL paste, one auto-merge
 content PR, one app PR for device review.

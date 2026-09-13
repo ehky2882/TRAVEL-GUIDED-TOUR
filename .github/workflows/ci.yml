@@ -24,6 +24,23 @@ jobs:
       - name: Run Tours.json validator
         run: swift scripts/validate-tours.swift
 
+  # In-app account deletion: the SQL runs against a throwaway Postgres (the
+  # Ubuntu runner ships one) and the Edge Function is type-checked, because
+  # both reach production by the owner pasting them into Supabase — the worst
+  # place to find a mistake. See backend/test-account-deletion.sh.
+  account-deletion:
+    name: Account deletion (SQL + Edge Function)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run account_deletion.sql against Postgres
+        run: bash backend/test-account-deletion.sh
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Type-check the delete-account Edge Function
+        run: deno check backend/functions/delete-account/index.ts
+
   build:
     name: Build (iOS Simulator)
     runs-on: macos-26
