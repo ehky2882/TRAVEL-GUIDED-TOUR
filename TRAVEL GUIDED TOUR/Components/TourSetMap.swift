@@ -43,6 +43,10 @@ struct TourSetMap: View {
     }
     let onOpenTour: (UUID) -> Void
     let onOpenPlace: (Place) -> Void
+    /// What the Home map should be filtered to when this map is expanded. A
+    /// creator page passes its own Dozent; a list passes nothing, because there
+    /// is no list facet to filter by. See `MapExpander.expand(framing:)`.
+    var expandsFilteredTo: TourFilter? = nil
 
     @Environment(LocationManager.self) private var locationManager
     /// Optional so a preview — which wires no layers — still renders. Nil hides
@@ -123,7 +127,7 @@ struct TourSetMap: View {
             // map you can browse on from. Hidden when there is nothing to
             // frame, so an empty creator page shows no control at all.
             .atlasMapExpandControl(isVisible: canExpand) {
-                mapExpander?.expand(framing: tours)
+                mapExpander?.expand(framing: tours, filteredTo: expandsFilteredTo)
             }
         }
     }

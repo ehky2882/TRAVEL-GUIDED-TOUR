@@ -175,4 +175,68 @@ final class MapExpandTests: XCTestCase {
         XCTAssertNil(delivered.last?.placecardPlaceId)
         XCTAssertNil(delivered.last?.placecardTourId)
     }
+
+    // MARK: - Landing already filtered
+
+    /// 🔴 Expanding a **creator's** map lands on the Home map already showing
+    /// that creator (owner, 2026-09-13). Without the filter crossing with the
+    /// move you arrive at their pins mixed into everyone else's, having just
+    /// asked to see theirs — and the fix would be to go and find the Dozents
+    /// chip yourself.
+    func test_expandingACreatorsMap_carriesTheFilterAcross() {
+        let expander = MapExpander()
+        var delivered: PendingMapMove?
+        expander.performExpand = { delivered = $0 }
+
+        let maker = UUID()
+        expander.expand(
+            framing: [TestFixtures.makeTour(title: "A", makerId: maker)],
+            filteredTo: TourFilter(makerIds: [maker])
+        )
+
+        XCTAssertEqual(delivered?.filter?.makerIds, [maker])
+    }
+
+    /// A list page passes none — there is no list facet to filter by — and nil
+    /// has to mean "leave the filter alone", never "clear it".
+    func test_expandingWithoutAFilter_carriesNone() {
+        let expander = MapExpander()
+        var delivered: PendingMapMove?
+        expander.performExpand = { delivered = $0 }
+
+        expander.expand(framing: [TestFixtures.makeTour(title: "A")])
+
+        XCTAssertNotNil(delivered, "The move still happens")
+        XCTAssertNil(delivered?.filter)
+    }
+
+    /// Nothing to frame still means nothing happens, filter or no filter — a
+    /// creator with no placeable tours must not land you somewhere arbitrary
+    /// with a chip switched on.
+    func test_nothingToFrame_doesNotMoveEvenWithAFilter() {
+        let expander = MapExpander()
+        var delivered: [PendingMapMove] = []
+        expander.performExpand = { delivered.append($0) }
+
+        expander.expand(framing: [], filteredTo: TourFilter(makerIds: [UUID()]))
+
+        XCTAssertTrue(delivered.isEmpty)
+    }
+
+    /// The single-subject door — a tour or a place — is untouched by all this.
+    func test_expandingToARegion_carriesNoFilter() {
+        let expander = MapExpander()
+        var delivered: PendingMapMove?
+        expander.performExpand = { delivered = $0 }
+
+        expander.expand(
+            to: MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: 1, longitude: 2),
+                span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+            ),
+            showingTour: UUID()
+        )
+
+        XCTAssertNil(delivered?.filter)
+    }
 }

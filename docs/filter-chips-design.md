@@ -450,6 +450,26 @@ wrong for a filtered set — thirteen shelves each re-filtering the matches on e
 the exact hitch that index was added to remove. `HomeRailsViewModel.tagIndex(for:)` builds a
 one-pass index over the match set instead, from the array the header has already computed.
 
+### Expanding a Dozent's map lands on the Home map filtered to them
+
+**Owner, 2026-09-13.** A creator page's inline map has an expand control that returns you to the one
+Home map, framed on their tours (owner direction, 2026-08-30). It framed them and stopped there, so
+you arrived with their pins mixed into everyone else's — having just asked to see theirs.
+
+The filter now crosses with the move: `PendingMapMove` carries an optional `TourFilter`, and
+`HomeView` applies it **before** the fly-to, so the pins the camera lands on are already the
+filtered set rather than flickering from everyone's to one Dozent's.
+
+- 🔴 **It REPLACES the filter rather than adding to it.** A `Format` or `Price` chip left on from
+  earlier browsing would silently hide most of the creator you just asked for, and the row would
+  explain itself in a chip nobody was looking at. One chip on — their name — is a state you can
+  read at a glance and clear in one tap.
+- **A list's expand still carries nothing.** There is no list facet to filter by, so it lands
+  framed on the list with the filter untouched. `nil` means *leave it alone*, never *clear it*.
+- ⚠️ Carried through the move for the same reason the placecard ids are: set beforehand it would
+  apply while the covering layer is still up, and the map would filter behind a screen nobody can
+  see.
+
 ### Ordering: counts promote, the alphabet displays
 
 **Within every group, values are in alphabetical order** — `District · Monument · Museum · Park ·

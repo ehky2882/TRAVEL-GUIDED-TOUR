@@ -431,6 +431,11 @@ struct HomeView: View {
     /// and Home becoming the active tab) can never fly the same move twice.
     private func consumePendingMapMove() {
         guard let move = sharedState.pendingMapMove else { return }
+        // Before the fly-to, so the pins the camera lands on are already the
+        // filtered set rather than flickering from everyone's to one Dozent's.
+        if let filter = move.filter {
+            appShared?.filter = filter
+        }
         flyTo(
             move.region,
             showing: move.placecardTourId,
