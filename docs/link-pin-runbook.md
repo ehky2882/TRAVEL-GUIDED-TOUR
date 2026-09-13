@@ -154,6 +154,22 @@ print(str(uuid.uuid5(uuid.NAMESPACE_URL,f'atlas-stop:link:{u}')).upper()=='3C196
 print(str(uuid.uuid5(uuid.NAMESPACE_URL,'atlas-maker:instagram:@rayisaplace')).upper()=='33756F34-2AC5-52F9-BDA6-6F525A06F056')"
 ```
 
+### A new creator whose handle a Dozent account already holds
+
+Usernames are unique as a **(platform, handle) pair** (`docs/usernames-design.md`),
+so TikTok `@joe` and a Dozent account `@joe` can both exist, and that is allowed.
+`merge-link-pins.py` asks the live database, for each **new** creator, whether a
+Dozent account already holds that handle. If one does, it prints
+`⚠️ … MATCH AN EXISTING DOZENT ACCOUNT — not blocked`. It runs under `--check`
+too, so you see it before anything is written.
+
+- **It is a warning, never a refusal.** The same handle is not proof of the same
+  person. **Tell the owner before shipping** so they can decide.
+- 🔴 **Never rename or remove the Dozent account to make room.** Accounts are
+  never deleted, merged or renamed.
+- `⚠️ COULD NOT CHECK` means the database could not be asked (offline). It is
+  **not** an all-clear; re-run `--check` once online.
+
 Because the id is keyed on the URL, **URL normalisation is identity**. The tool
 keeps only the parameters that identify a post — a whitelist, because the first
 version blacklisted tracking parameters and immediately missed one, so the same
