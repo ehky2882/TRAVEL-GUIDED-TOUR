@@ -624,8 +624,13 @@ struct SearchView: View {
     private var filteredMakers: [Maker] {
         let q = trimmedQuery.lowercased()
         guard !q.isEmpty else { return [] }
+        // Also the username, so `@kathyng` and `kathyng` both find Kathy Ng.
+        // A leading @ is dropped for that half only — pinned creators' display
+        // names contain one, so the name half still matches it as typed.
+        let bare = q.hasPrefix("@") ? String(q.dropFirst()) : q
         return dataService.makers.filter {
             $0.displayName.lowercased().contains(q)
+                || (!bare.isEmpty && ($0.handle?.contains(bare) ?? false))
         }
     }
 

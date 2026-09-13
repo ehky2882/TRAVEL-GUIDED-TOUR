@@ -154,6 +154,8 @@ struct CreateTourWizardView: View {
     /// an enum rather than two `confirmationDialog`s on the same view: stacking
     /// them makes them fight over a single presentation slot.
     @State private var confirming: Confirmation?
+    /// Asked at most once per wizard: after "Not now", Submit just submits.
+    @State private var usernamePromptShown = false
     @State private var outcome: Outcome?
     /// Where the narration upload has got to. Submit waits on it; walking to
     /// Review does not.
@@ -180,6 +182,9 @@ struct CreateTourWizardView: View {
     private enum Outcome { case submitted, savedDraft }
     private enum Confirmation: Identifiable {
         case leaving, deleting
+        /// The one-time "submit with this username?" before a first publish,
+        /// while the username is still the automatic one.
+        case username
         var id: Self { self }
     }
 
@@ -303,6 +308,9 @@ struct CreateTourWizardView: View {
             case .deleting:
                 Button("Delete tour", role: .destructive) { deleteTour() }
                 Button("Cancel", role: .cancel) {}
+            case .username:
+                Button("Submit as \(makerProfileService.myMaker?.atHandle ?? "")") { submit() }
+                Button("Not now", role: .cancel) {}
             case .none:
                 EmptyView()
             }
@@ -1752,12 +1760,23 @@ struct CreateTourWizardView: View {
                 set: { if !$0 { confirming = nil } })
     }
     private var confirmTitle: String {
-        confirming == .deleting ? "Delete this tour?" : "Keep this tour?"
+        switch confirming {
+        case .deleting: return "Delete this tour?"
+        case .username: return "Submit with this username?"
+        default:        return "Keep this tour?"
+        }
     }
     private var confirmMessage: String {
-        confirming == .deleting
-            ? "This can't be undone. Its audio and photos go with it."
-            : "A draft stays in your tours, so you can pick it up where you left off."
+        switch confirming {
+        case .deleting:
+            return "This can't be undone. Its audio and photos go with it."
+        case .username:
+            let handle = makerProfileService.myMaker?.atHandle ?? "your username"
+            return "\(handle) was given to you automatically and shows under your name on your page. "
+                + "You can change it any time in Edit Profile."
+        default:
+            return "A draft stays in your tours, so you can pick it up where you left off."
+        }
     }
 
     /// Whether closing now would lose something. **The swipe guard and the
@@ -1792,6 +1811,15 @@ struct CreateTourWizardView: View {
         focused = nil
         errorMessage = nil
         if step == .review {
+            // Before a first publish, once: the moment a username starts being
+            // seen is the moment to ask whether the automatic one will do.
+            // docs/usernames-design.md, Decision 4.
+            if makerProfileService.usernameIsAutomatic, !usernamePromptShown,
+               makerProfileService.myMaker?.atHandle != nil {
+                usernamePromptShown = true
+                confirming = .username
+                return
+            }
             submit()
         } else {
             advance()
