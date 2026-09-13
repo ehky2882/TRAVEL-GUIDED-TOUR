@@ -122,4 +122,38 @@ final class AuthService {
         await preSignOut?()
         try await client.auth.signOut()
     }
+
+    /// Whether this account signs in with Apple. Deleting such an account also
+    /// revokes Dozent's Apple tokens, which needs a fresh authorization code.
+    var usesSignInWithApple: Bool {
+        user?.identities?.contains { $0.provider == "apple" } ?? false
+    }
+
+    /// Permanently delete the signed-in person's own account, then sign out on
+    /// this device.
+    ///
+    /// The `delete-account` Edge Function takes no user id: it acts only on the
+    /// account whose session makes this call. What it removes and keeps is
+    /// documented there and in `backend/account_deletion.sql`, and matches the
+    /// privacy policy.
+    ///
+    /// No `preSignOut` flush: there is no longer an account to push to. The
+    /// sign-out is `.local` because the server session died with the account.
+    func deleteAccount(appleAuthorizationCode: String?) async throws {
+        guard let uid = user?.id.uuidString else {
+            throw AccountDeletionError(status: 401, body: Data())
+        }
+        do {
+            _ = try await client.functions.invoke(
+                "delete-account",
+                options: FunctionInvokeOptions(
+                    body: AccountDeletionRequest(appleAuthorizationCode: appleAuthorizationCode)
+                )
+            ) { data, _ in data }
+        } catch let FunctionsError.httpError(code, data) {
+            throw AccountDeletionError(status: code, body: data)
+        }
+        LocalAccountData.forget(uid: uid)
+        try? await client.auth.signOut(scope: .local)
+    }
 }
