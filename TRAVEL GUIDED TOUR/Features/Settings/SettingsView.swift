@@ -41,6 +41,7 @@ struct SettingsView: View {
     @Environment(AuthService.self) private var authService
     @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
     @State private var showingSignIn = false
+    @State private var showingDeleteAccount = false
 
     var body: some View {
         NavigationStack {
@@ -108,6 +109,24 @@ struct SettingsView: View {
                         } label: {
                             Label("Sign out", systemImage: "rectangle.portrait.and.arrow.right")
                         }
+                        // Apple Guideline 5.1.1(v). A button + `navigationDestination`
+                        // rather than a NavigationLink: this row vanishes the moment
+                        // the account is deleted (we sign out), and a NavigationLink
+                        // would pop its destination with it — taking the "your account
+                        // has been deleted" confirmation Apple asks for along too.
+                        Button {
+                            showingDeleteAccount = true
+                        } label: {
+                            HStack {
+                                Label("Delete account", systemImage: "person.crop.circle.badge.xmark")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(AtlasTypography.caption)
+                                    .foregroundStyle(AtlasColors.secondaryText)
+                            }
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
                     } else {
                         Button {
                             showingSignIn = true
@@ -304,6 +323,9 @@ struct SettingsView: View {
             }
             .sheet(isPresented: $showingSignIn) {
                 SignInView()
+            }
+            .navigationDestination(isPresented: $showingDeleteAccount) {
+                DeleteAccountView()
             }
             // Declare the scheme on the sheet itself. The app root sets
             // `.preferredColorScheme`, but a `.sheet` doesn't reliably pick up
