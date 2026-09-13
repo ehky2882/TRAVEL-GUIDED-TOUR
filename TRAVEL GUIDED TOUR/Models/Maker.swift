@@ -42,6 +42,17 @@ struct Maker: Codable, Identifiable, Hashable {
     /// genuinely have `user_id = NULL` — nobody logs in as them. A nil id means
     /// "no lists to show", which is correct in both cases.
     let userId: UUID?
+    /// Where this maker's handle lives: `dozent` for accounts and studios,
+    /// `instagram` / `tiktok` / `youtube` for pinned creators.
+    ///
+    /// Unique as a PAIR with `handle` (`backend/usernames.sql`), which is why
+    /// the same handle on two platforms is two creators. Optional so the
+    /// bundled seed, an older mirror, and builds before 2026-09-13 all decode.
+    let platform: String?
+    /// The maker's username, lowercase and without the `@`. Every row in the
+    /// live database has one; nothing in the app resolves a maker by it —
+    /// references still go through `id`.
+    let handle: String?
 
     init(
         id: UUID,
@@ -55,7 +66,9 @@ struct Maker: Codable, Identifiable, Hashable {
         avatarInitials: String? = nil,
         avatarColor: String? = nil,
         isPrivate: Bool? = nil,
-        userId: UUID? = nil
+        userId: UUID? = nil,
+        platform: String? = nil,
+        handle: String? = nil
     ) {
         self.id = id
         self.displayName = displayName
@@ -69,6 +82,31 @@ struct Maker: Codable, Identifiable, Hashable {
         self.link3URL = link3URL
         self.isPrivate = isPrivate
         self.userId = userId
+        self.platform = platform
+        self.handle = handle
+    }
+
+    /// `@kathyng`, or nil when this maker carries no handle.
+    var atHandle: String? {
+        guard let h = handle?.trimmingCharacters(in: .whitespacesAndNewlines), !h.isEmpty
+        else { return nil }
+        return "@" + h
+    }
+
+    /// The handle shown under the display name. Only for Dozent accounts and
+    /// studios: a pinned creator's display name already reads
+    /// `Instagram @urbanistariel`, so repeating it underneath would say it twice.
+    /// Same when the display name IS the handle — the accounts once called
+    /// `New Creator` were renamed to theirs (owner, 2026-09-13, one time).
+    /// And not for a deleted account: its row is kept as "Former creator" with
+    /// a placeholder `former.…` handle (account deletion, 2026-09-13), which
+    /// is bookkeeping, not an address anyone should be shown.
+    var profileHandleLine: String? {
+        guard platform == "dozent", let at = atHandle,
+              !at.hasPrefix("@former."),
+              displayName.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() != at
+        else { return nil }
+        return at
     }
 
     /// Whether this profile is private (defaults to public when unset).

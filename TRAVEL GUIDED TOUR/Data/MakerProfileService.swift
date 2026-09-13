@@ -20,6 +20,10 @@ final class MakerProfileService {
     /// The current user's maker profile, or nil when signed out / not yet
     /// created. Drives the Me-tab profile once real.
     private(set) var myMaker: Maker?
+    /// True while the current user's username was given out automatically
+    /// (`makers.handle_auto`) and never chosen. Drives the one-time prompt
+    /// before first publish, and the first change does not start the 30 days.
+    private(set) var usernameIsAutomatic = false
 
     private let auth: AuthService
     private let client: SupabaseClient
@@ -73,6 +77,7 @@ final class MakerProfileService {
                 .execute()
                 .value
             myMaker = rows.first?.asMaker
+            usernameIsAutomatic = rows.first?.handleAuto ?? false
             loadedUid = uid
             // Keep the cached snapshot in step with server truth (write-through
             // on a real row; clear it if the account has no maker row).
@@ -122,7 +127,10 @@ final class MakerProfileService {
             avatarInitials: clean(avatarInitials),
             avatarColor: clean(avatarColor),
             // Keep the existing privacy setting unless the caller changes it.
-            isPrivate: isPrivate ?? myMaker?.isPrivateAccount ?? false
+            isPrivate: isPrivate ?? myMaker?.isPrivateAccount ?? false,
+            // Carried for `asMaker` only — `MakerRow.encode` never sends them.
+            platform: myMaker?.platform,
+            handle: myMaker?.handle
         )
         try await client
             .from("makers")
@@ -131,6 +139,48 @@ final class MakerProfileService {
         myMaker = row.asMaker
         loadedUid = uid
         snapshot.save(row.asMaker, uid: uid)
+        // A first save creates the row, and the database gives it its
+        // username — which this device has not seen yet. Read it back.
+        if row.handle == nil { await loadMyMaker() }
+    }
+
+    /// Ask the database whether a username is free. Format problems are
+    /// answered on the device, instantly and in the server's own words; the
+    /// rest (reserved, taken, held) needs `handle_available()`. A failed ask
+    /// is `.unknown`, never a refusal — the save still decides.
+    func checkUsername(_ raw: String) async -> Username.Availability {
+        let h = Username.normalise(raw)
+        if let problem = Username.formatProblem(h) { return .invalid(problem) }
+        do {
+            let answer: String = try await client
+                .rpc("handle_available", params: ["p_handle": h])
+                .execute()
+                .value
+            return Username.Availability(server: answer)
+        } catch {
+            return .unknown
+        }
+    }
+
+    /// Change the current user's username. Its own UPDATE, on purpose: the
+    /// profile upsert never carries a handle, so an ordinary save — from this
+    /// build or any older one — can never change or erase it. Every rule is
+    /// enforced by the database trigger; its refusal comes back as words.
+    func changeUsername(_ raw: String) async throws {
+        guard auth.user != nil, let id = myMaker?.id else {
+            throw MakerProfileError.notSignedIn
+        }
+        do {
+            try await client
+                .from("makers")
+                .update(["handle": Username.normalise(raw)])
+                .eq("id", value: id.uuidString.lowercased())
+                .execute()
+        } catch let error as PostgrestError {
+            throw MakerProfileError.username(
+                Username.friendlyMessage(code: error.code, message: error.message))
+        }
+        await loadMyMaker()
     }
 
     /// Upload a square avatar JPEG to Storage and return its public URL. The
@@ -164,9 +214,11 @@ final class MakerProfileService {
 
     enum MakerProfileError: LocalizedError {
         case notSignedIn
+        case username(String)
         var errorDescription: String? {
             switch self {
             case .notSignedIn: return "You need to be signed in to save your profile."
+            case .username(let message): return message
             }
         }
     }
@@ -189,6 +241,10 @@ struct MakerRow: Codable {
     let link2Url: String?
     let link3Url: String?
     let isPrivate: Bool?
+    /// Read from the row, NEVER written by `encode` — see the note there.
+    let platform: String?
+    let handle: String?
+    let handleAuto: Bool?
 
     init(
         id: UUID,
@@ -202,7 +258,10 @@ struct MakerRow: Codable {
         link3Url: String? = nil,
         avatarInitials: String? = nil,
         avatarColor: String? = nil,
-        isPrivate: Bool? = nil
+        isPrivate: Bool? = nil,
+        platform: String? = nil,
+        handle: String? = nil,
+        handleAuto: Bool? = nil
     ) {
         self.id = id
         self.userId = userId
@@ -216,6 +275,9 @@ struct MakerRow: Codable {
         self.link2Url = link2Url
         self.link3Url = link3Url
         self.isPrivate = isPrivate
+        self.platform = platform
+        self.handle = handle
+        self.handleAuto = handleAuto
     }
 
     enum CodingKeys: String, CodingKey {
@@ -230,6 +292,8 @@ struct MakerRow: Codable {
         case link2Url = "link_2_url"
         case link3Url = "link_3_url"
         case isPrivate = "is_private"
+        case platform, handle
+        case handleAuto = "handle_auto"
     }
 
     /// Custom encode so the nullable link columns are written as explicit JSON
@@ -252,6 +316,12 @@ struct MakerRow: Codable {
         try c.encode(link2Url, forKey: .link2Url)
         try c.encode(link3Url, forKey: .link3Url)
         try c.encode(isPrivate ?? false, forKey: .isPrivate)
+        // 🔴 platform / handle / handle_auto are deliberately NOT encoded. This
+        // body is the profile UPSERT, and PostgREST updates exactly the columns
+        // it is sent: leaving the username out is what guarantees a profile
+        // save can never change or blank it. Changing it is
+        // `MakerProfileService.changeUsername`, its own UPDATE.
+        // Guarded by `MakerRowEncodingTests`.
     }
 
     var asMaker: Maker {
@@ -269,7 +339,9 @@ struct MakerRow: Codable {
             isPrivate: isPrivate,
             // The DTO carries it as a string; `Maker` wants the real type.
             // Nil for the Atlas studios, which nobody logs in as.
-            userId: userId.flatMap(UUID.init(uuidString:))
+            userId: userId.flatMap(UUID.init(uuidString:)),
+            platform: platform,
+            handle: handle
         )
     }
 }

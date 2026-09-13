@@ -387,6 +387,14 @@ struct MakerView: View {
                 .foregroundStyle(AtlasColors.primaryText)
                 .multilineTextAlignment(.center)
 
+            // The username — unique, where the name above need not be.
+            // Dozent accounts and studios only; see `Maker.profileHandleLine`.
+            if let handleLine = maker.profileHandleLine {
+                Text(handleLine)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+            }
+
             if !maker.bio.isEmpty {
                 Text(maker.bio)
                     .font(AtlasTypography.caption)
