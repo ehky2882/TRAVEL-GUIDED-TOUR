@@ -96,8 +96,13 @@ struct Maker: Codable, Identifiable, Hashable {
     /// The handle shown under the display name. Only for Dozent accounts and
     /// studios: a pinned creator's display name already reads
     /// `Instagram @urbanistariel`, so repeating it underneath would say it twice.
+    /// Same when the display name IS the handle — the accounts once called
+    /// `New Creator` were renamed to theirs (owner, 2026-09-13, one time).
     var profileHandleLine: String? {
-        platform == "dozent" ? atHandle : nil
+        guard platform == "dozent", let at = atHandle,
+              displayName.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() != at
+        else { return nil }
+        return at
     }
 
     /// Whether this profile is private (defaults to public when unset).

@@ -87,6 +87,14 @@ final class UsernameTests: XCTestCase {
         XCTAssertEqual(pinned.atHandle, "@urbanistariel")
     }
 
+    /// The former `New Creator` accounts are named after their username; the
+    /// line under the name would otherwise repeat it.
+    func test_profileHandleLine_hiddenWhenTheNameIsTheUsername() {
+        let renamed = Maker(id: UUID(), displayName: "@user.f15619", avatarURL: nil, avatarEmoji: nil,
+                            bio: "", websiteURL: nil, platform: "dozent", handle: "user.f15619")
+        XCTAssertNil(renamed.profileHandleLine)
+    }
+
     // MARK: - MakerRow: the profile upsert must never carry the username
 
     func test_makerRowEncode_neverSendsHandlePlatformOrHandleAuto() throws {
