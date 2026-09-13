@@ -18,12 +18,10 @@ struct HomeDrawerContent: View {
     @Binding var sheetDetent: BottomSheetDetent
 
     @Environment(DataService.self) private var dataService
-    @Environment(LibraryStore.self) private var libraryStore
     @Environment(LocationManager.self) private var locationManager
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
-    @Environment(AudioPlayerService.self) private var audioPlayer
     /// The filter is on the cross-window state — see
     /// `AppSharedState.filterPanel` for why it is not on `sharedState`.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
@@ -98,17 +96,6 @@ struct HomeDrawerContent: View {
                         if filtering, results.isEmpty {
                             noResultsState
                         } else {
-                            // The resume entry renders as a compact single
-                            // ROW, not a shelf — you don't browse "continue
-                            // listening," you tap it. One line keeps the top
-                            // location rail above the fold. ⚠️ Hidden while
-                            // filtering: it is the one row on this screen that
-                            // ignores the filter, and a card that does not
-                            // match what you asked for reads as a bug.
-                            if !filtering, let resumeTour = continueListeningTour {
-                                quickResumeBanner(tour: resumeTour, label: "Continue listening")
-                            }
-
                             // Derived ONCE. `railList` builds thirteen shelves,
                             // and reading it twice built them twice — in the
                             // same frame the map lands on a searched place.
@@ -151,10 +138,13 @@ struct HomeDrawerContent: View {
     /// prebuilt index; only the ORDER is derived live.
     /// **Read it once per body** (see the call site).
     ///
-    /// The personalized rails the view-model also produces
-    /// (Continue listening / Recently viewed) are dropped here — Continue
-    /// renders as a compact banner above the shelves; Recently viewed
-    /// lives in Library.
+    /// The personalized rail the view-model also produces (Recently viewed) is
+    /// dropped here — it lives in Library.
+    ///
+    /// ⚠️ **Continue listening is gone entirely** (owner, 2026-09-13), banner
+    /// and rail both. Listening PROGRESS is untouched — it still drives the
+    /// resume position and Library's in-progress state; what went was the two
+    /// places this screen offered to resume from.
     /// - Parameter matching: the filter's matches, or `nil` when no filter is
     ///   on. Non-nil narrows every shelf to that set; shelves left with nothing
     ///   are dropped by `rails` itself, so a filter thins the drawer rather
@@ -162,7 +152,6 @@ struct HomeDrawerContent: View {
     private func railList(matching: [Tour]?) -> [HomeRail] {
         HomeRailsViewModel.rails(
             tours: matching ?? dataService.tours,
-            libraryEntries: libraryStore.entries,
             recentlyViewedIds: recentlyViewedStore.tourIds,
             userLocation: locationManager.userLocation,
             visibleRegion: sharedState.visibleRegion,
@@ -173,7 +162,7 @@ struct HomeDrawerContent: View {
             // array the header already computed.
             toursByTag: matching.map(HomeRailsViewModel.tagIndex(for:)) ?? dataService.toursByTagIndex
         )
-        .filter { $0.id != "continueListening" && $0.id != "recentlyViewed" }
+        .filter { $0.id != "recentlyViewed" }
     }
 
     /// The flat, distance-sorted results shown when a filter is active.
@@ -186,74 +175,6 @@ struct HomeDrawerContent: View {
         )
     }
 
-    /// The tour for the compact "Continue listening" row. Priority:
-    /// whatever is CURRENTLY loaded in the player (it is literally the
-    /// thing you'd continue listening to — same signal the mini-player
-    /// keys on), falling back to the most-recently-listened unfinished
-    /// library entry when the player is idle.
-    private var continueListeningTour: Tour? {
-        if let loaded = nowPlayingTour { return loaded }
-        return libraryStore.entries
-            .filter { $0.listenedSeconds > 0 && $0.completedAt == nil }
-            .sorted { ($0.lastListenedAt ?? .distantPast) > ($1.lastListenedAt ?? .distantPast) }
-            .compactMap { dataService.tour(by: $0.tourId) }
-            .first
-    }
-
-    /// The tour whose audio is loaded in the player, or `nil` when idle.
-    private var nowPlayingTour: Tour? {
-        guard audioPlayer.state != .idle,
-              let sourceId = audioPlayer.currentSourceId,
-              let uuid = UUID(uuidString: sourceId) else {
-            return nil
-        }
-        return dataService.tour(by: uuid)
-    }
-
-    // MARK: - Quick-resume banner
-
-    private func quickResumeBanner(tour: Tour, label: String) -> some View {
-        Button {
-            tourPresenter.present(tour)
-        } label: {
-            HStack(spacing: AtlasSpacing.md) {
-                HeroImageView(
-                    imageName: tour.heroImageURL,
-                    height: 48,
-                    cornerRadius: 0,
-                    category: tour.primaryCategory
-                )
-                .frame(width: 48)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(label)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                    Text(tour.title)
-                        .font(AtlasTypography.body)
-                        .textCase(.uppercase)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .lineLimit(1)
-                }
-
-                Spacer()
-
-                Image(systemName: "chevron.right")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-            .padding(.leading, AtlasSpacing.sm)
-            .padding(.trailing, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.sm)
-            .background(.regularMaterial)
-        }
-        .buttonStyle(.plain)
-        .padding(.horizontal, AtlasSpacing.lg)
-    }
-
-    /// Shown in place of any count while the map is moving. Both the filtered
-    /// and unfiltered headers use it: a number that is about to change is worse
-    /// than no number, and a zero mid-pan reads as a dead end.
     private var movingDots: some View {
         TimelineView(.periodic(from: .now, by: 0.4)) { context in
             let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1

@@ -10,7 +10,6 @@ final class HomeRailsViewModelTests: XCTestCase {
     func test_emptyInputs_returnsNoRails() {
         let rails = HomeRailsViewModel.rails(
             tours: [],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: nil
@@ -24,7 +23,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let tour = TestFixtures.makeTour(tags: ["Iconic Landmark"])
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: nil
@@ -36,7 +34,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let tour = TestFixtures.makeTour(tags: ["Iconic Landmark"])
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: nil
@@ -52,7 +49,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let food = TestFixtures.makeTour(tags: ["Food"])
         let rails = HomeRailsViewModel.rails(
             tours: [food, iconic],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: nil
@@ -71,67 +67,12 @@ final class HomeRailsViewModelTests: XCTestCase {
         let tour = TestFixtures.makeTour(tags: ["Architecture", "History"])
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: nil
         )
         XCTAssertFalse(rails.contains { $0.id == "shelf.Architecture" })
         XCTAssertFalse(rails.contains { $0.id == "shelf.History" })
-    }
-
-    // MARK: - Continue listening
-
-    func test_continueListening_excludesEntriesWithoutProgress() {
-        let tour = TestFixtures.makeTour()
-        let savedOnly = LibraryEntry(
-            tourId: tour.id,
-            savedAt: Date(),
-            listenedSeconds: 0
-        )
-        let rails = HomeRailsViewModel.rails(
-            tours: [tour],
-            libraryEntries: [savedOnly],
-            recentlyViewedIds: [],
-            userLocation: nil,
-            visibleRegion: nil
-        )
-        XCTAssertFalse(rails.contains { $0.id == "continueListening" })
-    }
-
-    func test_continueListening_includesInProgressTours() {
-        let tour = TestFixtures.makeTour()
-        let inProgress = LibraryEntry(
-            tourId: tour.id,
-            savedAt: Date(),
-            listenedSeconds: 60
-        )
-        let rails = HomeRailsViewModel.rails(
-            tours: [tour],
-            libraryEntries: [inProgress],
-            recentlyViewedIds: [],
-            userLocation: nil,
-            visibleRegion: nil
-        )
-        XCTAssertTrue(rails.contains { $0.id == "continueListening" })
-    }
-
-    func test_continueListening_excludesCompletedTours() {
-        let tour = TestFixtures.makeTour()
-        let completed = LibraryEntry(
-            tourId: tour.id,
-            savedAt: Date(),
-            listenedSeconds: 120,
-            completedAt: Date()
-        )
-        let rails = HomeRailsViewModel.rails(
-            tours: [tour],
-            libraryEntries: [completed],
-            recentlyViewedIds: [],
-            userLocation: nil,
-            visibleRegion: nil
-        )
-        XCTAssertFalse(rails.contains { $0.id == "continueListening" })
     }
 
     // MARK: - Recently viewed
@@ -141,7 +82,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let tour2 = TestFixtures.makeTour()
         let rails = HomeRailsViewModel.rails(
             tours: [tour1, tour2],
-            libraryEntries: [],
             recentlyViewedIds: [tour1.id],
             userLocation: nil,
             visibleRegion: nil
@@ -157,7 +97,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let missingId = UUID()
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [missingId, tour.id],
             userLocation: nil,
             visibleRegion: nil
@@ -173,7 +112,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let tour = TestFixtures.makeTour()
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: nil
@@ -186,7 +124,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let tour = TestFixtures.makeTour()
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: CLLocation(latitude: 40.75, longitude: -73.99),
             visibleRegion: nil
@@ -199,7 +136,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         let tour = TestFixtures.makeTour()
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: CLLocation(latitude: 40.75, longitude: -73.99),
             visibleRegion: nil
@@ -220,7 +156,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         )
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: CLLocation(latitude: userCoord.latitude, longitude: userCoord.longitude),
             visibleRegion: region
@@ -239,7 +174,6 @@ final class HomeRailsViewModelTests: XCTestCase {
         )
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: CLLocation(latitude: 40.75, longitude: -73.99),
             visibleRegion: region
@@ -285,7 +219,6 @@ final class HomeRailsViewModelTests: XCTestCase {
 
         let rails = HomeRailsViewModel.rails(
             tours: [walk, single],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: region
@@ -321,7 +254,6 @@ final class HomeRailsViewModelTests: XCTestCase {
 
         let rails = HomeRailsViewModel.rails(
             tours: [walk],
-            libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: region

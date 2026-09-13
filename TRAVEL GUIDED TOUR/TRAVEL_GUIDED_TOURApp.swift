@@ -363,7 +363,6 @@ struct TRAVEL_GUIDED_TOURApp: App {
             if !dataService.tours.isEmpty {
                 imageWarmup.start(
                     tours: dataService.tours,
-                    libraryEntries: libraryStore.entries,
                     recentlyViewedIds: recentlyViewed.tourIds,
                     userLocation: locationManager.userLocation
                 )

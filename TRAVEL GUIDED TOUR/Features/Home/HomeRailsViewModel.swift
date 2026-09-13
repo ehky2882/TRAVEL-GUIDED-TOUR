@@ -29,9 +29,13 @@ enum HomeRailsViewModel {
     ///   working; when it is nil each shelf falls back to filtering the whole
     ///   catalog, which is correct but is what made the map hitch on arrival.
     ///   Pass it from anything that re-renders when the map region changes.
+    /// ⚠️ No `libraryEntries` any more. It existed only to build the
+    /// **Continue listening** rail, which the owner removed outright on
+    /// 2026-09-13 — so the parameter went with it rather than sitting here
+    /// unread. Listening PROGRESS is untouched: it still drives the resume
+    /// position and Library's in-progress state.
     static func rails(
         tours: [Tour],
-        libraryEntries: [LibraryEntry],
         recentlyViewedIds: [UUID],
         userLocation: CLLocation?,
         visibleRegion: MKCoordinateRegion?,
@@ -40,9 +44,6 @@ enum HomeRailsViewModel {
         var rails: [HomeRail] = []
 
         // Personalized
-        if let rail = continueListeningRail(tours: tours, libraryEntries: libraryEntries) {
-            rails.append(rail)
-        }
         if let rail = recentlyViewedRail(tours: tours, recentlyViewedIds: recentlyViewedIds) {
             rails.append(rail)
         }
@@ -226,27 +227,6 @@ enum HomeRailsViewModel {
     }
 
     // MARK: - Rail builders
-
-    private static func continueListeningRail(
-        tours: [Tour],
-        libraryEntries: [LibraryEntry]
-    ) -> HomeRail? {
-        let inProgressIds = libraryEntries
-            .filter { $0.listenedSeconds > 0 && $0.completedAt == nil }
-            .sorted { ($0.lastListenedAt ?? .distantPast) > ($1.lastListenedAt ?? .distantPast) }
-            .map { $0.tourId }
-
-        let matched = inProgressIds.compactMap { id in
-            tours.first { $0.id == id }
-        }
-
-        guard !matched.isEmpty else { return nil }
-        return HomeRail(
-            id: "continueListening",
-            title: "Continue listening",
-            tours: Array(matched.prefix(maxPerRail))
-        )
-    }
 
     private static func recentlyViewedRail(
         tours: [Tour],

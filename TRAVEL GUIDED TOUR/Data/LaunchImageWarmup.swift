@@ -47,7 +47,6 @@ final class LaunchImageWarmup {
     /// photos nobody is about to see.
     func start(
         tours: [Tour],
-        libraryEntries: [LibraryEntry],
         recentlyViewedIds: [UUID],
         userLocation: CLLocation?
     ) {
@@ -56,7 +55,6 @@ final class LaunchImageWarmup {
 
         let rails = HomeRailsViewModel.rails(
             tours: tours,
-            libraryEntries: libraryEntries,
             recentlyViewedIds: recentlyViewedIds,
             userLocation: userLocation,
             // No settled region yet at launch — the map has not reported one.
