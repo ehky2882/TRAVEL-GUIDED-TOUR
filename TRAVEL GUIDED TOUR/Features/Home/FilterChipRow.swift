@@ -3,7 +3,7 @@ import SwiftUI
 /// The home map's filter row: a door and four chips.
 ///
 /// ```
-/// ≡ All  ·  Format ⌄  ·  Price ⌄  ·  Dozents ⌄  ·  Tags ⌄
+/// ≡ All  ·  Tags ⌄  ·  Dozents ⌄  ·  Format ⌄  ·  Price ⌄
 /// ```
 ///
 /// Replaces the flat eighteen-toggle row (`TagFilterChipRow`, owner decision

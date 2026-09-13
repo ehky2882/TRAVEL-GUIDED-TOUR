@@ -13,20 +13,26 @@ owner decision D8). The combine rule is **unchanged** — OR within a facet, AND
 sheet.
 
 ```
-≡ All  ·  Format ⌄  ·  Price ⌄  ·  Dozents ⌄  ·  Tags ⌄
+≡ All  ·  Tags ⌄  ·  Dozents ⌄  ·  Format ⌄  ·  Price ⌄
 ```
 
 The row splits along a real seam. Three **structural fields** — `kind`, `price_tier`, `makerId` —
 get a chip each, because each asks a different kind of question. The **entire controlled
 vocabulary** gets one chip, because it is all the same kind of question.
 
+**The row runs richest-first** (owner, 2026-09-13): `Tags` has thirty-odd values and the most
+reasons to be opened, `Price` has two and the fewest. The first version led with the two structural
+pairs and left the vocabulary at the end — furthest from the thumb, first to scroll off the edge.
+🔴 **`FilterGroup`'s declaration IS the row order**, and the All panel repeats it by hand, so the
+two have to be changed together or the door and the chips disagree.
+
 | Chip | Values | Notes |
 |---|---|---|
 | **≡ All** | every facet below, in one scroll | A door, not a filter — never fills brass; its badge counts what is on behind it. |
+| **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
+| **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
 | **Format** | Audio stop 1,481 · Audio walk 72 · Instagram posts 9 · Instagram Reels 625 · TikTok 1,235 · YouTube Shorts 3 · YouTube videos 16 | One flat list, alphabetical. One field, so its values OR. |
 | **Price** | Free 3,375 · Paid 66 | Two values, not bands. **Read from the DB** — see below. |
-| **Dozents** | 377, largest first — @urbanistariel 292 → 252 with a single pin | Search. One flat list. **Plural**, as Settings and the empty state already say. |
-| **Tags** | PLACE 14 · SUBJECT 17 · WHY GO 8 · ERA 11 · ARCHITECT 429 | One chip, five groups. Any within a group, all across groups. |
 
 **Clear** sits in every panel's header — one word everywhere, the All panel included — not in the
 row. **Sort** sits on the drawer header, opposite the result count.

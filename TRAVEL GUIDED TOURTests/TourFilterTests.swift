@@ -156,6 +156,17 @@ final class TourFilterTests: XCTestCase {
         XCTAssertEqual(filter.count(adding: .tag("Museum"), in: tours), 1)
     }
 
+    // MARK: - Row order
+
+    /// 🔴 The row's order is an owner decision (2026-09-13, richest-first), and
+    /// it lives in TWO places: `allCases` feeds the row's `ForEach`, and
+    /// `AllFiltersBody` lists the same four sections by hand because each has
+    /// its own body. This locks the half a test can see, so a reordering that
+    /// forgets the other half at least fails loudly here.
+    func test_rowOrderIsTagsDozentsFormatPrice() {
+        XCTAssertEqual(FilterGroup.allCases, [.tags, .dozents, .format, .price])
+    }
+
     // MARK: - Badge and labels
 
     func test_valueCountCountsValuesNotGroups() {
