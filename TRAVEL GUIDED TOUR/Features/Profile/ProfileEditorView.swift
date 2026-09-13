@@ -17,6 +17,12 @@ struct ProfileEditorView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var displayName: String
+    /// The username as typed (shown after a fixed `@`). Saved by its own
+    /// request — see `MakerProfileService.changeUsername`.
+    @State private var username: String
+    /// The latest answer to "is this free?" for `username`; nil while asking
+    /// or when it is unchanged.
+    @State private var usernameStatus: Username.Availability?
     @State private var bio: String
     @State private var website: String
     @State private var link2: String
@@ -35,7 +41,7 @@ struct ProfileEditorView: View {
     @State private var errorMessage: String?
     @FocusState private var focused: Field?
 
-    private enum Field { case name, bio, website, link2, link3, initials }
+    private enum Field { case name, username, bio, website, link2, link3, initials }
 
     /// Max lengths — kept well short of one line (name) / three lines (bio) on
     /// the narrowest device, with a live "N left" countdown by each field.
@@ -45,6 +51,7 @@ struct ProfileEditorView: View {
     init(currentMaker: Maker) {
         self.currentMaker = currentMaker
         _displayName = State(initialValue: currentMaker.displayName)
+        _username = State(initialValue: currentMaker.handle ?? "")
         _bio = State(initialValue: currentMaker.bio)
         _website = State(initialValue: currentMaker.websiteURL ?? "")
         _link2 = State(initialValue: currentMaker.link2URL ?? "")
@@ -74,12 +81,66 @@ struct ProfileEditorView: View {
             || avatarURL != currentMaker.avatarURL
             || pickedImageData != nil
             || isPrivate != currentMaker.isPrivateAccount
+            || usernameChanged
     }
 
     private var trimmedName: String {
         displayName.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    private var canSave: Bool { !isSaving && !trimmedName.isEmpty }
+    private var canSave: Bool { !isSaving && !trimmedName.isEmpty && usernameAcceptable }
+
+    // MARK: - Username
+
+    private var usernameChanged: Bool {
+        Username.normalise(username) != (currentMaker.handle ?? "")
+    }
+
+    /// Save is allowed for an unchanged username, a free one, or one we could
+    /// not check (the server decides). A known "no" blocks it.
+    private var usernameAcceptable: Bool {
+        guard usernameChanged else { return true }
+        switch usernameStatus {
+        case .available, .yours, .unknown: return true
+        case .taken, .reserved, .invalid, .none: return false
+        }
+    }
+
+    private var usernameHint: String {
+        guard usernameChanged else {
+            if currentMaker.handle == nil { return "You'll get a username when you save." }
+            return service.usernameIsAutomatic
+                ? "Given to you automatically. Change it any time."
+                : "You can change your username once every 30 days."
+        }
+        switch usernameStatus {
+        case .none:               return "Checking…"
+        case .available, .yours:  return "Available"
+        case .taken:              return "That username is taken. Try another."
+        case .reserved:           return "That username is reserved."
+        case .invalid(let why):   return "Username \(why)."
+        case .unknown:            return "Couldn't check right now. We'll check when you save."
+        }
+    }
+
+    private var usernameHintIsProblem: Bool {
+        guard usernameChanged else { return false }
+        switch usernameStatus {
+        case .taken, .reserved, .invalid: return true
+        default: return false
+        }
+    }
+
+    /// Ask about the username about half a second after typing stops. The
+    /// `.task(id:)` driving this cancels the previous ask on every keystroke.
+    private func refreshUsernameStatus() async {
+        usernameStatus = nil
+        guard usernameChanged else { return }
+        try? await Task.sleep(for: .milliseconds(450))
+        guard !Task.isCancelled else { return }
+        let answer = await service.checkUsername(username)
+        guard !Task.isCancelled else { return }
+        usernameStatus = answer
+    }
 
     var body: some View {
         NavigationStack {
@@ -92,7 +153,7 @@ struct ProfileEditorView: View {
                         TextField("Your creator name", text: $displayName)
                             .focused($focused, equals: .name)
                             .submitLabel(.next)
-                            .onSubmit { focused = .bio }
+                            .onSubmit { focused = .username }
                             .onChange(of: displayName) { _, new in
                                 if new.count > Self.nameLimit {
                                     displayName = String(new.prefix(Self.nameLimit))
@@ -100,6 +161,32 @@ struct ProfileEditorView: View {
                             }
                             .fieldStyle()
                     }
+
+                    // The username: unique, where the display name above need
+                    // not be. docs/usernames-design.md.
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("USERNAME")
+                        HStack(spacing: 0) {
+                            Text("@")
+                                .foregroundStyle(AtlasColors.secondaryText)
+                            TextField("username", text: $username)
+                                .textInputAutocapitalization(.never)
+                                .autocorrectionDisabled()
+                                .keyboardType(.asciiCapable)
+                                .focused($focused, equals: .username)
+                                .submitLabel(.next)
+                                .onSubmit { focused = .bio }
+                                .onChange(of: username) { _, new in
+                                    let capped = String(new.lowercased().prefix(Username.maxLength))
+                                    if capped != new { username = capped }
+                                }
+                        }
+                        .fieldStyle()
+                        Text(usernameHint)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(usernameHintIsProblem ? AtlasColors.mapPin : AtlasColors.tertiaryText)
+                    }
+                    .task(id: username) { await refreshUsernameStatus() }
 
                     VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                         fieldLabel("BIO", remaining: Self.bioLimit - bio.count)
@@ -395,6 +482,12 @@ struct ProfileEditorView: View {
                     avatarColor: hasPhoto ? nil : avatarColorHex,
                     isPrivate: isPrivate
                 )
+                // After the profile, so a brand-new row exists to change. If the
+                // database refuses (taken in the same second, the 30-day limit),
+                // the rest is already saved and the sheet stays open with why.
+                if usernameChanged {
+                    try await service.changeUsername(username)
+                }
                 dismiss()
             } catch {
                 errorMessage = error.localizedDescription

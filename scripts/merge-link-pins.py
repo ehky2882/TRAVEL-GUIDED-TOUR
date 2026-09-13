@@ -46,7 +46,9 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
+import urllib.parse
 import uuid
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -211,6 +213,114 @@ def merge(catalog: dict, payload: dict) -> tuple[dict, dict]:
     return out, report
 
 
+PIN_NAME = re.compile(r"^(TikTok|Instagram|YouTube) @(.+)$")
+
+
+def pinned_handle(maker: dict) -> tuple[str, str] | None:
+    """(platform, handle) for a pinned creator, or None for anything else.
+
+    Reads the `platform` / `handle` keys `make-link-pin.py` writes, falling back
+    to the `Platform @handle` display name for a pins file made before those
+    keys existed. Dozent accounts and studios are not pinned creators."""
+    platform, handle = maker.get("platform"), maker.get("handle")
+    if not (platform and handle):
+        m = PIN_NAME.match(maker.get("displayName") or "")
+        if not m:
+            return None
+        platform, handle = m.group(1).lower(), m.group(2)
+    if platform == "dozent":
+        return None
+    return platform, handle.lstrip("@").lower()
+
+
+def dozent_clashes(new_makers: list, dozent_handles: set) -> list[tuple[str, str]]:
+    """New pinned creators whose handle an existing Dozent account already uses.
+
+    Pure, so `--selftest` covers it. Both are allowed — they are different
+    platforms, unique as a (platform, handle) PAIR — which is exactly why it is
+    a WARNING and never a refusal: the same handle is not proof of the same
+    person, and an account is never renamed to make room
+    (docs/usernames-design.md, Decision 5)."""
+    out = []
+    for m in new_makers:
+        ph = pinned_handle(m)
+        if ph and ph[1] in dozent_handles:
+            out.append((m.get("displayName") or ph[1], ph[1]))
+    return out
+
+
+def dozent_handles_url(host: str, handles: list[str]) -> str:
+    """PostgREST query for which of `handles` a Dozent account holds. Each value
+    double-quoted, because a handle may contain `.` and `in.(…)` is a list."""
+    quoted = ",".join('"' + h.replace('"', "") + '"' for h in sorted(set(handles)))
+    return (f"https://{host}.supabase.co/rest/v1/makers?select=handle"
+            f"&platform=eq.dozent&handle=in.({urllib.parse.quote(quoted, safe=',')})")
+
+
+def live_dozent_handles(handles: list[str]) -> set | None:
+    """Ask the live database which of these handles Dozent accounts hold.
+    None = could not ask, which the caller must say out loud, never read as
+    "no clash". A handful of bytes: only the matching handles come back.
+
+    Accounts live only in Postgres (never in Tours.json), so this is the one
+    place the answer exists. curl, not urllib, because urllib's SSL fails on
+    the local Mac (see CLAUDE.md § Reading a check's result)."""
+    if not handles:
+        return set()
+    try:
+        cfg = open(os.path.join(REPO, "TRAVEL GUIDED TOUR", "Data",
+                                "SupabaseConfig.swift"), encoding="utf-8").read()
+    except OSError:
+        return None
+    key = re.search(r"sb_publishable_[A-Za-z0-9_-]+", cfg)
+    host = re.search(r"https://([a-z0-9]+)\.supabase\.co", cfg)
+    if not key or not host:
+        return None
+    try:
+        proc = subprocess.run(
+            ["curl", "-s", "--compressed", "--max-time", "20",
+             "-w", "\n%{http_code}",
+             dozent_handles_url(host.group(1), handles),
+             "-H", f"apikey: {key.group(0)}",
+             "-H", f"Authorization: Bearer {key.group(0)}"],
+            capture_output=True, text=True)
+    except OSError:
+        return None
+    body, _, status = proc.stdout.rpartition("\n")
+    if proc.returncode != 0 or status.strip() != "200":
+        return None
+    try:
+        return {row["handle"] for row in json.loads(body)}
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return None
+
+
+def report_dozent_clashes(new_makers: list, fetch=live_dozent_handles) -> None:
+    """Print the warning. Never changes the exit code."""
+    handles = [ph[1] for ph in map(pinned_handle, new_makers) if ph]
+    if not handles:
+        return
+    held = fetch(handles)
+    if held is None:
+        print("\n⚠️  COULD NOT CHECK new creators' handles against Dozent accounts "
+              "(no network or no answer).")
+        print("    This is NOT an all-clear. Re-run with --check once online.")
+        return
+    clashes = dozent_clashes(new_makers, held)
+    if not clashes:
+        print(f"\n  handles checked against Dozent accounts: {len(set(handles))}, no match")
+        return
+    print(f"\n⚠️  {len(clashes)} NEW CREATOR HANDLE(S) MATCH AN EXISTING DOZENT ACCOUNT "
+          "— not blocked:")
+    for name, handle in clashes:
+        print(f"    {name}  ↔  Dozent @{handle}")
+    print("    Both are allowed (different platforms). The same handle is not proof of "
+          "the same person.\n"
+          "    🔴 Never rename or remove the Dozent account to make room. Tell the owner "
+          "before shipping,\n"
+          "    so they can decide whether it is one person or a lookalike.")
+
+
 def run(pins_path: str, catalog_path: str, write: bool) -> int:
     with open(pins_path, encoding="utf-8") as fh:
         payload = json.load(fh)
@@ -259,6 +369,11 @@ def run(pins_path: str, catalog_path: str, write: bool) -> int:
 
     for m in rep["added_makers"]:
         print(f"    + creator {m.get('displayName')}")
+
+    # Usernames: a new pinned creator whose handle a Dozent account already
+    # holds. Warn only — see `dozent_clashes`. Runs under --check too, so the
+    # warning arrives before anything is written.
+    report_dozent_clashes(rep["added_makers"])
 
     if not rep["added_pins"] and not rep["added_makers"]:
         print("\nOK — nothing to add; every pin is already in the catalog.")
@@ -439,6 +554,37 @@ def selftest() -> int:
           check_ids({"linkPins": [added]}, {"linkPins": [was_solo]}) == [])
     check("and it cannot collide with the live bare-key id",
           added["id"] != was_solo["id"])
+
+    # Usernames — a new pinned creator whose handle a Dozent account holds.
+    ig = {"id": "M9", "displayName": "Instagram @KathyNg",
+          "platform": "instagram", "handle": "kathyng"}
+    check("a new pinned creator matching a Dozent handle is flagged",
+          dozent_clashes([ig], {"kathyng"}) == [("Instagram @KathyNg", "kathyng")])
+    check("no Dozent match, no flag", dozent_clashes([ig], {"someoneelse"}) == [])
+    check("a pins file without platform/handle keys still parses the display name",
+          pinned_handle({"displayName": "TikTok @Joe.Smith"}) == ("tiktok", "joe.smith"))
+    check("a Dozent account or studio is never treated as a pinned creator",
+          pinned_handle({"displayName": "Atlas Studio NYC",
+                         "platform": "dozent", "handle": "atlas.nyc"}) is None)
+    url = dozent_handles_url("abc", ["b.c", "a"])
+    check("the query double-quotes each handle, so a dot cannot break the list",
+          'in.(%22a%22,%22b.c%22)' in url and "platform=eq.dozent" in url)
+
+    # 🔴 A failed lookup must never print as "no match".
+    printed = []
+    import builtins
+    real_print = builtins.print
+    builtins.print = lambda *a, **k: printed.append(" ".join(map(str, a)))
+    try:
+        report_dozent_clashes([ig], fetch=lambda hs: None)
+        could_not = any("COULD NOT CHECK" in s for s in printed)
+        printed.clear()
+        report_dozent_clashes([ig], fetch=lambda hs: {"kathyng"})
+        warned = any("MATCH AN EXISTING DOZENT ACCOUNT" in s for s in printed)
+    finally:
+        builtins.print = real_print
+    check("an unreachable database is reported as COULD NOT CHECK, not all-clear", could_not)
+    check("a clash prints the warning", warned)
 
     # The formatting contract shared with split-link-pins.py
     check("dumps writes indent=2, non-ASCII verbatim, trailing newline",
