@@ -39,6 +39,11 @@ struct HomeDrawerContent: View {
             let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
             let filtering = appShared?.filter.isActive ?? false
             let results = filtering ? filteredResults : []
+            // The header counts what is UNDER THE MAP, filtered or not — see
+            // `HomeRailsViewModel.countInView`. The list below stays the full
+            // match set, nearest first, so panning past the edge of the view
+            // still leaves somewhere to scroll to.
+            let inView = HomeRailsViewModel.countInView(results, region: sharedState.visibleRegion)
             // The count shows at peek AND medium (every resting state
             // except fully-open); "LET'S EXPLORE" shows only once the
             // drawer has SETTLED at .large with NO filter active. Keyed
@@ -52,7 +57,11 @@ struct HomeDrawerContent: View {
 
             VStack(alignment: .leading, spacing: 0) {
                 ZStack {
-                    countHeader(filtering: filtering, resultCount: results.count)
+                    countHeader(
+                        filtering: filtering,
+                        matchCount: results.count,
+                        inViewCount: inView
+                    )
                         .opacity(showExplore ? 0 : 1)
                     Text("LET'S EXPLORE TOGETHER!")
                         .opacity(showExplore ? 1 : 0)
@@ -223,6 +232,16 @@ struct HomeDrawerContent: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
+    /// Shown in place of any count while the map is moving. Both the filtered
+    /// and unfiltered headers use it: a number that is about to change is worse
+    /// than no number, and a zero mid-pan reads as a dead end.
+    private var movingDots: some View {
+        TimelineView(.periodic(from: .now, by: 0.4)) { context in
+            let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1
+            Text(String(repeating: ".", count: tick))
+        }
+    }
+
     /// Count of tours with at least one stop inside the current map
     /// view — drives the peek/medium "N TOURS IN VIEW" header. Stays a
     /// map-context stat even though the rails browse the whole catalog;
@@ -248,24 +267,32 @@ struct HomeDrawerContent: View {
         return max(peekHeight, baseHeight - sharedState.sheetDragOffset)
     }
 
-    /// The drawer header line. When a filter is active it reports the
-    /// **result count**; otherwise the map-context "N TOURS IN VIEW".
-    /// While the map is mid-pan/-fling (and not filtering) it shows an
-    /// animated *ELLIPSIS* rather than letting the count flicker through
-    /// 0, which reads as "no results."
+    /// The drawer header line: **"N TOURS IN VIEW"** unfiltered, **"N RESULTS
+    /// IN VIEW"** filtered. While the map is mid-pan or mid-fling it shows an
+    /// animated ellipsis instead, rather than letting the count flicker through
+    /// 0 — which reads as "nothing here" at exactly the moment it is not true.
+    ///
+    /// 🔴 **Always a map stat.** `matchCount` is the whole catalogue's answer
+    /// to the filter and `inViewCount` is how much of it is under the map right
+    /// now; the header reads the second, so it keeps live-updating as you pan
+    /// (owner, on device, 2026-09-13). The two are distinguished in one place
+    /// only, and deliberately: **nothing matches anywhere** is a different
+    /// problem from **nothing matches HERE**, and the second is solved by
+    /// moving the map rather than by clearing a chip.
     @ViewBuilder
-    private func countHeader(filtering: Bool, resultCount: Int) -> some View {
-        if filtering {
-            switch resultCount {
-            case 0: Text("NO MATCHES")
-            case 1: Text("1 RESULT")
-            default: Text("\(resultCount) RESULTS")
+    private func countHeader(filtering: Bool, matchCount: Int, inViewCount: Int) -> some View {
+        if filtering, matchCount == 0 {
+            Text("NO MATCHES")
+        } else if filtering, sharedState.isMapMoving {
+            movingDots
+        } else if filtering {
+            switch inViewCount {
+            case 0: Text("NO RESULTS IN VIEW")
+            case 1: Text("1 RESULT IN VIEW")
+            default: Text("\(inViewCount) RESULTS IN VIEW")
             }
         } else if sharedState.isMapMoving {
-            TimelineView(.periodic(from: .now, by: 0.4)) { context in
-                let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1
-                Text(String(repeating: ".", count: tick))
-            }
+            movingDots
         } else {
             let count = toursInViewCount
             switch count {

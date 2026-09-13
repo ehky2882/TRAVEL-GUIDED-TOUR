@@ -94,6 +94,29 @@ enum HomeRailsViewModel {
     /// (owner decision D8 — the drawer swaps its shelves for this).
     /// Applies `TourFilter` and orders by distance from the map viewport
     /// center (§1.5). Pure + testable.
+    /// How many of `tours` have at least one stop inside the map's current
+    /// view.
+    ///
+    /// 🔴 **The drawer's header is a MAP stat, filtered or not.** Unfiltered it
+    /// has always read "N TOURS IN VIEW"; filtered it read the whole
+    /// catalogue's match count, so panning changed nothing and `District` said
+    /// **270 RESULTS** over the US east coast — a number about everywhere,
+    /// printed over a map of somewhere (owner, on device, 2026-09-13).
+    ///
+    /// ⚠️ A `nil` region means the map has not reported one yet — count
+    /// everything rather than nothing, so the header cannot flash a zero it
+    /// does not mean.
+    ///
+    /// ⚠️ Membership is by STOP, matching `toursInViewCount` and the map's own
+    /// pins: a walk is in view when any of its stops is, which is the only
+    /// reading that agrees with what you can see.
+    static func countInView(_ tours: [Tour], region: MKCoordinateRegion?) -> Int {
+        guard let region else { return tours.count }
+        return tours.reduce(into: 0) { total, tour in
+            if tour.stops.contains(where: { region.contains($0.coordinate) }) { total += 1 }
+        }
+    }
+
     static func filteredResults(
         tours: [Tour],
         filter: TourFilter,

@@ -400,6 +400,28 @@ interactive. That branch exists for `PlayerView` and needed no change.
 **Net: 99 lines added, 104 deleted.** The correct fix is smaller than the wrong one, which is
 usually the tell.
 
+### The drawer header counts what is under the MAP (owner, on device, 2026-09-13)
+
+Filtered, the header reported the **whole catalogue's** match count: `District` read
+**270 RESULTS** while the map showed the US east coast, and panning changed nothing. Unfiltered it
+had always read `N TOURS IN VIEW` and updated live, so filtering silently swapped a map stat for a
+catalogue stat.
+
+It now reads **`N RESULTS IN VIEW`**, from the same region test the unfiltered count uses —
+membership by **stop**, matching the map's pins: a walk is in view when any of its stops is.
+
+Two things it deliberately does NOT do:
+
+- **The list below stays the full match set**, nearest-first from the map centre. The header
+  describes what you can see; the list is what you can reach. That split is not new — the
+  unfiltered header has always been a map stat while the rails browse the whole catalogue.
+- **`NO MATCHES` and `NO RESULTS IN VIEW` stay different sentences.** Nothing matching *anywhere*
+  is a filter to clear; nothing matching *here* is a map to move. Collapsing them would send people
+  to undo a chip that was never the problem.
+
+⚠️ The animated ellipsis while the map is moving now covers the filtered header too. A count that
+is about to change is worse than no count, and a zero mid-pan reads as a dead end.
+
 ### Ordering: counts promote, the alphabet displays
 
 **Within every group, values are in alphabetical order** — `District · Monument · Museum · Park ·
