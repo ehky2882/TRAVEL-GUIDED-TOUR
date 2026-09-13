@@ -46,6 +46,8 @@ REQUIRED_MAKER = {
     "id", "displayName", "avatarURL", "avatarEmoji", "avatarInitials",
     "avatarColor", "bio", "websiteURL", "link2URL", "link3URL", "userId",
     "isPrivate",
+    # backend/usernames.sql, 2026-09-13 — unique as a pair.
+    "platform", "handle",
 }
 REQUIRED_STOP = {
     "id", "order", "title", "caption", "latitude", "longitude", "audioURL",

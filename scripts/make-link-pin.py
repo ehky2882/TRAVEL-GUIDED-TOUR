@@ -279,6 +279,12 @@ def maker_for(platform: str, handle: str, author_url: str | None,
         # "@name" only when it really is a handle; a display name is shown as
         # given, so we never invent an @ that leads nowhere.
         "displayName": f"{label} @{bare}" if handled else f"{label} — {bare}",
+        # Unique as a PAIR in `public.makers` (backend/usernames.sql), which is
+        # why the same handle on two platforms is two creators. The handle is
+        # omitted when there is no real one, so the database derives it rather
+        # than this script inventing an @ that leads nowhere.
+        "platform": platform,
+        **({"handle": bare.lower()} if handled else {}),
         "avatarURL": avatar_url,
         # The platform mark stays as the FALLBACK even when a photo is set:
         # MakerAvatarView resolves photo -> emoji -> initials, so a photo that
@@ -851,6 +857,11 @@ def selftest() -> int:
     m_upper = maker_for("tiktok", "NASA", None)
     check("maker id ignores handle case", m_lower["id"], m_upper["id"])
     check("maker display name", m_lower["displayName"], "TikTok @nasa")
+    check("maker platform", m_lower["platform"], "tiktok")
+    # Handles are case-insensitive on all three platforms; stored lowercase.
+    check("maker handle is lowercased", m_upper["handle"], "nasa")
+    check("maker without a real handle carries none",
+          "handle" in maker_for("youtube", "Some Channel", None), False)
     if maker_for("youtube", "@nasa", None)["id"] == m_lower["id"]:
         fails.append("same handle on two platforms collapsed to one maker")
 

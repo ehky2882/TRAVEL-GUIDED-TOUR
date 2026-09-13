@@ -136,5 +136,17 @@ echo "   Cannot be checked from here — ask the owner, never assert:"
 echo "     • EU Digital Services Act trader declaration"
 echo "     • Stripe account standing"
 echo "     • Tax / banking / agreements in ASC Business (Apple exposes no API)"
+b "What the owner owes right now:"
+if [ -f scripts/status.py ]; then
+  python3 scripts/status.py --owner 2>/dev/null | sed 's/^/   /' \
+    || echo "   (scripts/status.py failed — read status/owner/ directly)"
+else
+  echo "   (scripts/status.py missing — read status/owner/ directly)"
+fi
+echo
+echo "   Full board: python3 scripts/status.py"
+echo "   🔴 Record what happened with scripts/status.py, NEVER by editing STATUS.md —"
+echo "      that is what blocked #776, #820 and #843 behind documentation conflicts."
+
 b "Now read the newest handoff:"
 ls archive/HANDOFF-*.md 2>/dev/null | tail -1 | sed 's/^/   /'
