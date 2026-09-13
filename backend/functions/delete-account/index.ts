@@ -37,7 +37,12 @@
 //      saved places, lists, follows; purchases survive with user_id nulled.
 //   5. Creator page: delete the row if nothing restricts it; otherwise release
 //      the username (the row is already anonymised).
-//   6. Rebuild the catalogue snapshot so the tours and name stop being served.
+//   (No step 6.) The catalogue snapshot is NOT rebuilt here: the rebuild runs
+//   longer than Supabase lets one API request run, and was cut off with
+//   57014 "statement timeout" on the first real deletion (2026-09-13). Owner
+//   decision: the next content publish rebuilds it (publish-catalog.yml, as the
+//   database owner, no time limit) — and no deletion forces every phone to
+//   re-download the catalogue.
 //
 // Setup (owner, dashboards):
 //   1. SQL Editor: run backend/account_deletion.sql.
@@ -302,19 +307,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
     if (!patch.ok) {
       // Not fatal: the row carries no personal name, photo, bio or links.
       console.error("maker handle release failed", makerId, patch.status, await patch.text());
-    }
-  }
-
-  // 6. Stop serving what was removed. Not fatal — the next content merge
-  //    rebuilds the snapshot anyway — but log it.
-  if (makerIds.length > 0) {
-    const refresh = await fetch(`${SUPABASE_URL}/rest/v1/rpc/refresh_catalog_snapshot`, {
-      method: "POST",
-      headers: svcHeaders,
-      body: "{}",
-    });
-    if (!refresh.ok) {
-      console.error("catalog snapshot refresh failed", refresh.status, await refresh.text());
     }
   }
 

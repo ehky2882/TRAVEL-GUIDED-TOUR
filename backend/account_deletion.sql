@@ -3,7 +3,8 @@
 -- The database half of "Delete my account" (Settings → Account). The other
 -- half is the `delete-account` Edge Function (backend/functions/delete-account),
 -- which calls this AS THE SIGNED-IN PERSON, then removes their uploaded files,
--- deletes their login, and rebuilds the catalogue snapshot.
+-- and deletes their login. (The catalogue snapshot is rebuilt by the next
+-- content publish, not by deletion — see the note above the grant below.)
 --
 -- WHY IT EXISTS
 -- -------------
@@ -159,10 +160,13 @@ end $$;
 revoke all on function public.delete_my_account_content() from public, anon;
 grant execute on function public.delete_my_account_content() to authenticated;
 
--- The Edge Function rebuilds the catalogue snapshot afterwards, as service
--- role, so a deleted tour or creator name stops being served. catalog_snapshot.sql
--- revokes this from anon/authenticated only; say the service-role grant
--- explicitly rather than relying on Supabase's default privileges.
+-- ⚠️ NOT USED BY DELETION ANY MORE, kept because it is applied live and is
+-- harmless. The Edge Function first rebuilt the snapshot itself, as service
+-- role; on the first real deletion (2026-09-13) the rebuild was cut off with
+-- 57014 "canceling statement due to statement timeout" — it runs longer than
+-- Supabase lets one API request run. Owner decision: the next content publish
+-- (publish-catalog.yml, as the database owner, no time limit) rebuilds it.
+-- 🔴 So do not "fix" this by calling the rebuild over the API again.
 grant execute on function public.refresh_catalog_snapshot() to service_role;
 
 -- Receipt. Expect: is_security_definer = true, anon_can_run = false,

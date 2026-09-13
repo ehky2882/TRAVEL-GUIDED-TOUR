@@ -56,7 +56,7 @@ their own, so nothing in it can name a user:
 | File | Role |
 |---|---|
 | `backend/account_deletion.sql` | The database function, plus grants and a receipt row |
-| `backend/functions/delete-account/index.ts` | The Edge Function: runs the SQL as the user → removes uploads → revokes Apple → deletes the login → deletes or releases the creator page → rebuilds the catalogue snapshot |
+| `backend/functions/delete-account/index.ts` | The Edge Function: runs the SQL as the user → removes uploads → revokes Apple → deletes the login → deletes or releases the creator page |
 | `backend/test-account-deletion.sh` | Proves the SQL against a throwaway Postgres; run by `ci.yml` |
 | `Features/Settings/DeleteAccountView.swift` | Explanation → confirmation dialog → (Apple accounts: Continue with Apple) → done |
 | `Data/AccountDeletion.swift` | The request body, error messages, and the on-device cache sweep |
@@ -64,9 +64,19 @@ their own, so nothing in it can name a user:
 **Order matters:** the login is deleted **last**, so a failure at any earlier step leaves the
 person signed in and able to retry, and every step is safe to repeat.
 
-⚠️ **Egress:** each deletion rebuilds the catalogue snapshot, so every phone downloads the
-catalogue again on its next launch (~2.3 MB each). Deletions are rare, so this is acceptable, but it
-is the reason not to call the function in a loop.
+⚠️ **The downloadable catalogue lags a deletion.** The login, profile, library and creator page are
+gone at once, but the catalogue every phone downloads is a pre-built snapshot, so a deleted person's
+name stays in it until it is next rebuilt. **Owner decision 2026-09-13: the next content publish
+rebuilds it** (`publish-catalog.yml`, which ran 10 times in the day before this was written, with gaps
+of up to ~7 hours, but has no schedule).
+
+🔴 **Do not add the rebuild back into the function.** It was built that way first, and the first real
+deletion logged `catalog snapshot refresh failed 500 … 57014 canceling statement due to statement
+timeout`: the rebuild runs longer than Supabase lets one API request run. It is not a permission
+problem (`service_role` not being a member of `anon` was checked and is beside the point; the role
+switch checks the connecting login). The rejected alternatives were a daily scheduled rebuild (every
+phone re-downloads ~2.3 MB a day even when nothing changed) and raising `service_role`'s time limit
+(loosens a limit on every server-side request).
 
 ## Owner setup (Supabase dashboard — about 10 minutes)
 
