@@ -49,10 +49,20 @@ struct DeleteAccountView: View {
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.primaryText)
             }
+            // Presented as a sheet (from the bottom module's window — see
+            // `AppSharedState.showingDeleteAccount`), so it needs its own way
+            // out. Hidden once the request is in flight: there is no backing
+            // out of a deletion that may already have happened, and the
+            // finished state has its own Done button.
+            if phase == .explaining || phase == .confirmingWithApple {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Close") { dismiss() }
+                        .font(AtlasTypography.caption)
+                        .tint(AtlasColors.primaryText)
+                }
+            }
         }
-        // Once the request is in flight there is no going back to a screen
-        // for an account that may already be gone.
-        .navigationBarBackButtonHidden(phase == .deleting || phase == .deleted)
+        .interactiveDismissDisabled(phase == .deleting)
         .confirmationDialog(
             "Delete your account?",
             isPresented: $showingConfirmation,

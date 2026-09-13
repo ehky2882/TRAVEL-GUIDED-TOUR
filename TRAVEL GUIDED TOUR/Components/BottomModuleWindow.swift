@@ -100,6 +100,15 @@ final class AppSharedState {
     /// right."* Presented from this window there is nothing to withdraw and no
     /// moment to get wrong.
     var filterPanel: FilterPanelRoute?
+
+    /// Settings → Account → Delete account is up.
+    ///
+    /// Presented from `BottomModuleRoot` — THIS window — for the same reason as
+    /// `filterPanel`. It was first pushed inside the Settings sheet, which lives
+    /// in the main window, and the owner filmed the bars covering its bottom,
+    /// Delete button included (build 154, 2026-09-13). Asked for: *"make the
+    /// sheet come up over the bottom module."*
+    var showingDeleteAccount = false
 }
 
 /// Installs and tears down the secondary `UIWindow` that hosts the
