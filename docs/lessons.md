@@ -1110,3 +1110,21 @@ round broke for a reason the simulator check before it had hidden.
   outlast one screenshot — screenshot until the home map is visible before stopping a recording.
 - **Probe, don't reason.** Temporary logging of predicted vs actual layer brightness (0.737 vs
   0.749) settled in one run what three theories had not. Detail: `archive/HANDOFF-260912-4.md`.
+
+## A merge watcher that waits on ALL checks never merges while an unrelated check is down (2026-09-13)
+
+On 2026-09-13 **Vercel was rate-limited on every PR** (`Deployment rate limited — retry in 24 hours`). Vercel only deploys `site/`, but `gh pr checks --watch` exits non-zero if **any** check fails. So three "wait for green, then merge" background jobs (#846, #851, #854) each **finished, reported exit 0 for the job, and merged nothing.** Their PRs sat open with every real check passing.
+
+- **Gate a merge on the checks that matter, by name, and say which one you are ignoring.** The watcher that worked excluded only `Vercel` and still refused on any other failing or cancelled check. `main` has **no branch protection** (`GET …/branches/main/protection` → 404), so GitHub will not block a merge for you; the script is the gate.
+- **Read the PR's state after a watcher finishes, never its exit code.** A job that "completed" is not a merged PR.
+- **Polling checks immediately after `gh pr create` reads "no checks reported" and exits 1.** Wait until at least one check has registered before watching.
+
+## `check-catalog-contract.py` needs `SSL_CERT_FILE` on the local Mac, or it cannot run (2026-09-13)
+
+Run bare on the owner's Mac, it fails every fetch with `SSL: CERTIFICATE_VERIFY_FAILED` and **exits 2 — COULD NOT VERIFY**. Given `--out`, it wrote no file at all. That is correct behaviour, and it is **not a pass**.
+
+```bash
+SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/check-catalog-contract.py
+```
+
+That one prefix is the fix (python.org's Python ships without the system CA bundle). Scripts that shell out to `curl` (`check-catalog-keys.py`, `merge-link-pins.py`) are unaffected.
