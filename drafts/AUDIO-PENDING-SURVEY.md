@@ -97,11 +97,19 @@ catalogue (`OAKLAND_CEMETARY`; `GEORGIA_CAPITAL` for the Capitol).
 frame while the APEX Museum is on Auburn Avenue ~1.5 km west, so it reads as the wrong
 neighbourhood on sight. Queried on exactly that basis and **owner-confirmed**.
 
-🔴 **Stop 02's narration contradicts its own photographs and is UNRESOLVED.** The script
-describes a replica with the original Zero Mile Post eight miles north; every image shows the
-**original, indoors at the Atlanta History Center**, where it moved in 2019. The shipped
-coordinate is the downtown Freight Depot site, which keeps the walk coherent. **Only the owner
-can settle which the script should say.**
+✅ **Stop 02's image was wrong; the narration was never wrong. RESOLVED.** An earlier version of
+this note claimed the two contradicted each other. They did not. The script opens *"The stone in
+front of you is a stand-in. The real one left town in 2018"* and closes by placing the original in
+a museum eight miles north — it is about the replica throughout, and the downtown coordinate is
+correct. **Only the sourced photograph was wrong**: it showed the original indoors at the Atlanta
+History Center. The owner supplied the correct frame (the replica carved `W&A / R R / 138`, the
+Georgia marker and the *Zero Milepost* panel, under the Central Avenue bridge deck) and it shipped
+as `zero-mile-post_hero-2.webp`.
+
+**The lesson is the note, not the image.** The contradiction was asserted from the photographs and
+the shortDescription without reading the narration, and it reached `main` as a 🔴 owner-blocked
+item that nothing blocked. **Read the script before declaring content wrong**, and prefer a
+corrected note over an appended one — a stale 🔴 costs a later session real time.
 
 ⚠️ **Two artwork rights ship OPEN, not cleared** — Krog Street Tunnel's graffiti and Woodruff
 Park's *Atlanta from the Ashes* (1969) — both owner-directed; see `drafts/CREDITS.md`. 65 image
