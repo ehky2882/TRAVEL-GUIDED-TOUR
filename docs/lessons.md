@@ -1347,3 +1347,11 @@ A catalogue-wide OpenStreetMap sweep (2026-09-12) found **13 locations, 20 entri
 - **Repair to where the script stands you, not to the OSM centroid**: the parvis at Point Zéro, the Redcross Way gates, the corner of Park Avenue and 66th.
 - **Moving a walk's stop 0 can dissolve a place.** Hackesche Höfe was a place only because the Scheunenviertel walk's intro sat on it; correcting the intro left one member, and the owner dropped the place (2026-09-13).
 - The same sweep found the **drop pipeline's northward offset in every city it made**: 208 of 262 building-level matches north, median +20 m, p = 1.7e-22. Those entries are still unrepaired.
+
+## Two posts on one exact point can be a mislabel, not a place (2026-09-14)
+
+The **First National Bank of Hollywood** place page held the **Westlake Theatre**. `@nickcabotrodriguez` titles every video *"What's up with this building? Part N"*, so the subject exists only in the thumbnail. #790 read most thumbnails and caught several mislabels, but not Part 5's, which says **"The Westlake Theatre"** in large type. It was titled and placed as a second First National Bank of Hollywood, 10 km from MacArthur Park. #790 then noticed both posts sat on *the exact same coordinate* and filed it as a place question; #801 made the place page, whose description reads *"Two separate posts by the same creator sit on it."*
+
+- **An exact coincidence is evidence two entries were geocoded from the same assumption, not only that they describe one site.** Before grouping two posts from one creator, look at both thumbnails.
+- **Coordinates that match to the last digit are suspicious when they came from a title.** Two independently geocoded posts about one building land metres apart, not on the same six decimal places.
+- **A place's own description can record its doubt and nobody reads it.** "Two separate posts by the same creator" was the whole case for this page.
