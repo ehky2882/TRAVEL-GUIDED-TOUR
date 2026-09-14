@@ -90,8 +90,10 @@ document**, and there is no way to ask it "has anything changed?" (it is a
 POST RPC, so no ETag, no `If-None-Match`, no 304). **A fetch that finds
 nothing new costs exactly as much as one that finds a whole new city.**
 
-**Measured on the live RPC, 2026-09-12: 2,276,264 bytes on the wire
-(7.87 MB raw), TTFB 2.3 s.** ⚠️ **Egress is billed COMPRESSED, so measure
+**Measured on the live RPC, 2026-09-14: 2,426,870 bytes on the wire,
+TTFB 0.51 s** (was 2,276,264 bytes / **2.3 s** on 2026-09-12 — the payload grew
+with content, and the TTFB fell 4.5x because the database moved off `t4g.nano`;
+see the outage note below). ⚠️ **Egress is billed COMPRESSED, so measure
 compressed** — take the wire bytes by sending `Accept-Encoding: gzip` by hand
 rather than `--compressed`, which decompresses and reports the raw figure.
 This file said **3.4 MB** until #795 dropped `stops.transcriptText`
