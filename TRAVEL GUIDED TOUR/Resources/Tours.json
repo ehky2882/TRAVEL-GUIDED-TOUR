@@ -4139,6 +4139,16 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/buzzwordboy/"
+    },
+    {
+      "id": "632DCC65-C481-5EFE-A480-E37B2CAAB3A9",
+      "displayName": "Instagram @tourtimenyc",
+      "platform": "instagram",
+      "handle": "tourtimenyc",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/tourtimenyc/"
     }
   ],
   "tours": [
@@ -180722,6 +180732,51 @@
         "Architecture",
         "Modernist",
         "Tower"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0A9900AB-96A8-5DBF-841D-0C308F128E90",
+      "createdAt": "2026-09-14",
+      "title": "The Nighthawks Diner Site",
+      "shortDescription": "A post by @tourtimenyc on Instagram.",
+      "longDescription": "Edward Hopper's iconic 1942 painting Nighthawks was inspired by a real-life all-night diner where two streets meet at 📍70 Greenwich Avenue in Greenwich Village. Hopper's studio building is located nearby at 📍3 Washington Square North. #edwardhopper #nychistory #newyorkcity #art# #nyctour",
+      "makerId": "632DCC65-C481-5EFE-A480-E37B2CAAB3A9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nighthawks-diner-site-tourtimenyc_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdFgT_duwOb/",
+      "sourceAuthor": "@tourtimenyc",
+      "stops": [
+        {
+          "id": "071BF5D2-93EC-53E5-BB6C-AD780B892397",
+          "order": 0,
+          "title": "The Nighthawks Diner Site",
+          "caption": "Edward Hopper's iconic 1942 painting Nighthawks was inspired by a real-life all-night diner where two streets meet at 📍70 Greenwich Avenue i",
+          "latitude": 40.7363026,
+          "longitude": -74.0007932,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nighthawks-diner-site-tourtimenyc_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7363026,
+      "centroidLongitude": -74.0007932,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "History"
       ],
       "priceUSD": 0
     }
