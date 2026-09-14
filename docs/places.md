@@ -92,10 +92,22 @@ entries in it.**
 A plausible line is *"the part that IS the draw"* versus *"a nameable component"*
 — but the Channel Gardens cut against it.
 
-### ✅ Decided 2026-09-14: a part inside a whole IS the same place
+### ⚠️ 2026-09-14: four decided one way — but still a JUDGEMENT CALL
 
-**Owner, asked to choose on four such pairs at once: *"DO ALL OF #2 ALSO."***
-Every one of them became a place:
+🔴 **The owner was explicit that this is NOT a settled rule.** Asked to choose on
+four such pairs at once they said *"DO ALL OF #2 ALSO"*, and then, immediately
+after: **"I THINK THE PART AND WHOLE IS A JUDGEMENT CALL. I WOULD LEAVE THE 3
+FROM MY BATCH."** So four went one way and three identical-looking cases were
+deliberately left alone in the same breath. **Do not infer a rule from the four.
+Keep putting these to the owner individually.**
+
+The three left alone, for the record: Keith Haring's Carmine Street Mural vs the
+Tony Dapolito Recreation Center; The Blue Ribbon Garden vs Walt Disney Concert
+Hall; Hoyt–Schermerhorn Streets Station vs a pin about the street's name.
+
+What the four that *were* made have in common — a component with no independent
+identity, inside a site whose name everybody already knows — may be the shape of
+it, but the owner has not said so and the three above are not obviously different:
 
 | Place | The "part" that joined it |
 |---|---|
@@ -104,9 +116,8 @@ Every one of them became a place:
 | **Kulturpalast Dresden** | its mural, *Der Weg der roten Fahne* |
 | **Strahov Library** | the Philosophical Hall, its fresco, the Forbidden Books, the Theological Hall |
 
-**The rule now: a nameable component of a site belongs to that site's place.**
-Name the place for the **whole**, not the component — `One Vanderbilt`, not
-`Summit`.
+**When one IS made, name it for the whole, not the component** — `One
+Vanderbilt`, not `Summit`. That part is consistent across all four.
 
 🔴 **This does NOT overturn Rules 3 and 4, which remain the harder constraint.**
 A part is *inside* the whole; the rules below are about things merely *beside*
@@ -124,8 +135,9 @@ each other:
 
 ⚠️ The earlier precedents this section lists (`Big Ben` / `Houses of
 Parliament`, `Bar Luce` / `Fondazione Prada`, `The Channel Gardens`) were
-declined **before** this decision and were not revisited. They are inconsistent
-with the rule above; raise them with the owner rather than assuming either way.
+declined earlier and were not revisited. Given the owner's "judgement call"
+framing they are **not** in conflict with the four above — they are simply other
+judgements. Leave them.
 
 ---
 
