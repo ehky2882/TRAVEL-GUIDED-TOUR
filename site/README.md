@@ -112,3 +112,34 @@ point there**. That host is deliberately left alone. Do not attach
 `/privacy/` must agree with the App Privacy answers in App Store Connect, and
 `/acceptable-use/` is cited in Dozent's Stripe platform review. Update the
 "Last updated" date in a page when its substance changes.
+
+## Preview deployments are off for branches (2026-09-14)
+
+`vercel.json` carries:
+
+```json
+"git": { "deploymentEnabled": { "**": false, "main": true } }
+```
+
+**Only `main` deploys.** Pushing a branch or opening a PR no longer builds a
+preview.
+
+**Why.** On 2026-09-14 Vercel returned *"Deployment rate limited — retry in 24
+hours"* on an open PR. Eight PRs had merged that day and every push on every
+branch was triggering its own preview build, none of which anyone looked at —
+most PRs in this repo are `Tours.json` content and never touch `site/` at all.
+A red Vercel status on an unrelated content PR costs a session real time working
+out that it is not their failure.
+
+**Two details in that config are load-bearing — do not "tidy" them:**
+
+- **`**`, not `*`.** Vercel matches with [minimatch](https://github.com/isaacs/minimatch),
+  where `*` does **not** cross a `/`. Every working branch here is named
+  `claude/…`, so `"*": false` would match none of them and do nothing.
+- **`"main": true` is the safety net.** Vercel's rule is that when a branch
+  matches several patterns and *any* of them is `true`, the deployment happens.
+  `main` matches both `**` (false) and `main` (true), so production deploys
+  regardless. Remove that line and the site stops updating.
+
+**If you ever want a preview of a site change**, deploy it by hand with the
+Vercel CLI, or temporarily add that branch as `"my-branch": true`.
