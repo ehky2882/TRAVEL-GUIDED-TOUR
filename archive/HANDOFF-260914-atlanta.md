@@ -86,13 +86,26 @@ Extracted per format; beat markers stripped in both bare `[beat]` and asterisked
 
 ---
 
-## 🔴 Still unresolved — owner decision
+## ✅ Resolved after this handoff was filed — stop 02
 
-**Stop 02's narration contradicts its own photographs.** The script describes a *replica* with the
-original Zero Mile Post eight miles north. Every image shows **the original, indoors at the
-Atlanta History Center**, where it moved in 2019. The shipped coordinate is the downtown Georgia
-Railroad Freight Depot site, which keeps the walk coherent with the other 29 stops. **Only the
-owner can settle which the script should say.**
+This section originally read *"Stop 02's narration contradicts its own photographs — only the
+owner can settle which the script should say."* **That was wrong, and it is worth knowing why.**
+
+The narration never contradicted anything. It opens *"The stone in front of you is a stand-in. The
+real one left town in 2018"* and closes by placing the original in a museum eight miles north — it
+is about the replica from first line to last, and the downtown Freight Depot coordinate is
+correct. The contradiction was inferred from the photographs and the shortDescription **without
+reading the script**, and it was filed here as a red owner-blocked item that nothing blocked.
+
+Only the **photograph** was wrong: it showed the original indoors at the Atlanta History Center.
+The owner supplied the correct frame — the replica carved `W&A / R R / 138`, the Georgia
+historical marker and the *Zero Milepost* interpretive panel, under the Central Avenue bridge deck
+— and it shipped as **`zero-mile-post_hero-2.webp`**, a new filename rather than a byte swap at
+the old URL, so phones that had already downloaded Atlanta pick it up (Image Pipeline step 9).
+
+**Two rules earned:** read the script before declaring content wrong, and when a note like this
+turns out to be mistaken, correct it in place — a stale 🔴 costs the next session real time
+whether it is in a tracker or in an archived handoff.
 
 ## 🔴 Do not "correct" the APEX hero
 
