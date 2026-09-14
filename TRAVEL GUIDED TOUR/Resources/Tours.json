@@ -83153,7 +83153,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "03c0f1c1-0a74-521c-88b3-87927f33f954",
-        "76127777-fee0-53a2-809c-d00386c0f2fe"
+        "76127777-fee0-53a2-809c-d00386c0f2fe",
+        "687F4A2B-9D33-5C72-B67C-7BFA5BDD8F5E"
       ]
     },
     {
@@ -86425,7 +86426,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "5BA18838-6721-564E-ADEF-7AFF3D46A483",
-        "7c71d31b-4dc9-5ae8-a30a-38114d13b31e"
+        "7c71d31b-4dc9-5ae8-a30a-38114d13b31e",
+        "B0AE8151-2127-5B92-BC69-CF29F4BB962C"
       ]
     },
     {
@@ -87747,6 +87749,21 @@
       "tourIds": [
         "AF9EAD7B-089F-5D09-A18D-19521FCA1E15",
         "591A2058-B8CB-5319-A41A-B9E97DD514CB"
+      ]
+    },
+    {
+      "id": "e1307752-0251-5b98-9b3b-c992ce9c356b",
+      "name": "L.D. Institute of Indology",
+      "description": "Balkrishna Doshi's 1962 building for the study and conservation of ancient Indian manuscripts, raised on pilotis with a sunken courtyard and a north-lit upper hall. The Lalbhai Dalpatbhai Museum occupies the same building and shows the collection it was built to hold, so the two names describe one address.",
+      "latitude": 23.0331715,
+      "longitude": 72.5498983,
+      "city": "Ahmedabad",
+      "address": "St. Xavier's College Road, Navrangpura, Ahmedabad",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "25BF4825-C07F-5D0B-99D5-E38F9B1C83A0",
+        "0F67F899-4342-5E32-9CEF-D71DB9199575"
       ]
     }
   ],
@@ -187675,8 +187692,8 @@
           "order": 0,
           "title": "Reichstag — Bowie's 1987 Wall-Facing Concert",
           "caption": "🎤 We Can Be Heroes 👆 Meet one of our Insight Cities' Bowie in Berlin Tour guides, Lee, as he explains David Bowie's influence on the fall of",
-          "latitude": 52.5186753,
-          "longitude": 13.3731249,
+          "latitude": 52.5186,
+          "longitude": 13.3762,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -187688,8 +187705,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 52.5186753,
-      "centroidLongitude": 13.3731249,
+      "centroidLatitude": 52.5186,
+      "centroidLongitude": 13.3762,
       "city": "Berlin",
       "country": "Germany",
       "primaryCategory": "history",
