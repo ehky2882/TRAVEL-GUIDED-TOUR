@@ -186243,6 +186243,100 @@
         "Food"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "5B59EADC-D73A-5C3D-A634-822F30D90C35",
+      "createdAt": "2026-09-14",
+      "title": "Tempelhof Airport & the Berlin Airlift",
+      "shortDescription": "A post by @insightcities on Instagram.",
+      "longDescription": "This huge open space is Berlin's most direct link to World War II and the Cold War. The curved terminal of Tempelhof Airport, begun by the Nazis in the 1930s, was originally intended to be a centerpiece of their \"world capital\" of Germania. Its historical legacy was redeemed during the Berlin Airlift (1948–49), when Allied \"Candy Bombers\" landed here repeatedly to supply a blockaded West Berlin, transforming the Nazi architecture into the ultimate symbol of freedom for the city. Today, this vast area is preserved as Tempelhofer Feld. Berliners now use the original runways for biking, skating, and grilling, turning the strips that delivered freedom into a thriving, modern park that embodies the democratic spirit. #insightcities #Tempelhof #BerlinHistory #BerlinAirlift #TempelhoferFeld #SymbolOfFreedom #travelerslovetolearn",
+      "makerId": "7F6E7AD9-48EC-54EC-B51C-1ACAD51038CC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tempelhof-airport-the-berlin-airlift-insightcities_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DP00XQ5Crh9/",
+      "sourceAuthor": "@insightcities",
+      "stops": [
+        {
+          "id": "366E3F4E-705E-5CC0-B4B4-BB0D50B8319E",
+          "order": 0,
+          "title": "Tempelhof Airport & the Berlin Airlift",
+          "caption": "This huge open space is Berlin's most direct link to World War II and the Cold War. The curved terminal of Tempelhof Airport, begun by the N",
+          "latitude": 52.4797376,
+          "longitude": 13.3885579,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tempelhof-airport-the-berlin-airlift-insightcities_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.4797376,
+      "centroidLongitude": 13.3885579,
+      "city": "Berlin",
+      "country": "Germany",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "War",
+        "Notable Building",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B0AE8151-2127-5B92-BC69-CF29F4BB962C",
+      "createdAt": "2026-09-14",
+      "title": "Reichstag — Bowie's 1987 Wall-Facing Concert",
+      "shortDescription": "A post by @insightcities on Instagram.",
+      "longDescription": "🎤 We Can Be Heroes 👆 Meet one of our Insight Cities' Bowie in Berlin Tour guides, Lee, as he explains David Bowie's influence on the fall of the Berlin Wall. 🕷️ In June 1987, David Bowie's Glass Spider Tour performed in front of the Reichstag in West Berlin. He deliberately set the concert to face the Berlin Wall. 🇩🇪 🔊 The Sound of Freedom: Bowie and the organizers intentionally positioned powerful speakers toward the East, sending the sound of rock and roll across the concrete barrier. On the Eastern side, thousands of young Berliners gathered to listen to the forbidden music. 🧱 The Response: When Bowie sang the city's anthem, \"Heroes,\" the crowd in the West and the thousands pressed against the Wall in the East began singing along. Bowie later recalled the moment: \"It was like a double concert where the wall was the division... I'd never done anything like that in my life.\" ⚡ The Catalyst: The East German Volkspolizei (People's Police) cracked down violently on the crowds, leading to clashes and protests. #insightcities #DavidBowie #Heroes #BowieBerlin #BowieTour #BowieBerlinTour #BerlinTour #BerlinWall #BerlinHistory #ColdWar #Reichstag #1987 #GlassSpiderTour #travelerslovetolearn Archival photo/video credits: Berlin Wall photos dated 1989: RIA Novosti archive, image #475738 / Yuriy Somov / CC-BY-SA 3.0, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons © Yann Forget / Wikimedia Commons Vietinghoff, CC0, via Wikimedia Commons © Yann Forget / Wikimedia Commons Footage of concert and Berlin Wall: https://www.youtube.com/watch?v=g54IGaVsv24 1987 Interview with David Bowie: https://www.youtube.com/watch?v=0889--udY4w&list=PL23r0skX39zEVryOfJ0WlUZy8C6967YZG",
+      "makerId": "7F6E7AD9-48EC-54EC-B51C-1ACAD51038CC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reichstag-bowie-s-1987-wall-facing-insightcities_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DRUBBZaCfQA/",
+      "sourceAuthor": "@insightcities",
+      "stops": [
+        {
+          "id": "C777B3FD-0B40-5B4E-B019-50CA46A2DCE2",
+          "order": 0,
+          "title": "Reichstag — Bowie's 1987 Wall-Facing Concert",
+          "caption": "🎤 We Can Be Heroes 👆 Meet one of our Insight Cities' Bowie in Berlin Tour guides, Lee, as he explains David Bowie's influence on the fall of",
+          "latitude": 52.5186753,
+          "longitude": 13.3731249,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reichstag-bowie-s-1987-wall-facing-insightcities_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.5186753,
+      "centroidLongitude": 13.3731249,
+      "city": "Berlin",
+      "country": "Germany",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Power",
+        "Performance",
+        "Public Square",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
     }
   ]
 }
