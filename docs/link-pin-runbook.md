@@ -320,6 +320,45 @@ new address, so every phone fetches it automatically.
 
 ---
 
+## Uploading heroes from a web container (no `gh`, no 4 GB fetch)
+
+`scripts/upload-images.py` shells out to `gh api`, and **a Claude-on-the-web
+container has no `gh` CLI**. The obvious fallback is worse: a plain
+`git fetch origin gh-pages` pulls every audio blob — **~4 GB** — and times out.
+
+The route that works, and still produces **one commit and one Pages rebuild**:
+
+```bash
+git fetch --filter=blob:none --depth=1 origin gh-pages    # tree only, seconds
+
+# Refuse to overwrite: every target path must be new (the Thyssen rule).
+git ls-tree -r --name-only FETCH_HEAD -- images/ > /tmp/have.txt
+for f in heroes/*; do grep -qx "images/$(basename "$f")" /tmp/have.txt \
+    && echo "COLLIDES: $f"; done
+
+export GIT_INDEX_FILE=/tmp/ghidx; rm -f "$GIT_INDEX_FILE"
+git read-tree FETCH_HEAD
+for f in heroes/*; do
+  sha=$(git hash-object -w "$f")
+  git update-index --add --cacheinfo 100644,$sha,"images/$(basename "$f")"
+done
+TREE=$(git write-tree)
+C=$(git commit-tree $TREE -p FETCH_HEAD -m "Add N link-pin heroes")
+git push origin "$C:refs/heads/gh-pages"
+unset GIT_INDEX_FILE      # 🔴 or every later `git add` writes the wrong index
+```
+
+`git ls-files | wc -l` before and after the loop must differ by exactly the file
+count — that is the check that every blob actually landed.
+
+⚠️ **Then wait for Pages before believing any checker.** The push puts blobs in
+the branch; it does not deploy them. `check-image-duplicates.py` will fetch the
+new URLs, get **404**, and still print `OK — no suspicious duplicates`, because
+that verdict covers the images it managed to hash. **Poll one new URL until it
+returns 200, then re-run.** Read the WARN count, never the verdict alone.
+
+---
+
 ## Checking a check
 
 Every script in `scripts/` prints `RUN <name> · rev <hash> · <UTC time>` as its
