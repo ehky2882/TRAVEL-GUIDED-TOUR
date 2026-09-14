@@ -15,8 +15,10 @@ Then run the output against Supabase (SQL editor, or `psql < seed.sql`).
 Audio/image URLs are copied as-is — blob storage is out of scope here.
 """
 import argparse
+import io
 import json
 import os
+import re
 import sys
 
 DEFAULT_INPUT = os.path.join(
@@ -157,7 +159,22 @@ def emit(data, out):
             # the guard trigger derives one on insert — so a seed can never
             # blank a handle.
             "platform = coalesce(excluded.platform, makers.platform), "
-            "handle = coalesce(excluded.handle, makers.handle), updated_at = now();\n"
+            "handle = coalesce(excluded.handle, makers.handle), updated_at = now()\n"
+            # PHASE 0 (docs/delta-catalog-fetch-design.md § 6). Without this
+            # guard `updated_at = now()` fires on every row of every seed, so
+            # the column means "when the seed last ran", not "when this row
+            # last changed" — and every changed-since cursor returns the whole
+            # catalogue. Compare the columns this statement actually ASSIGNS,
+            # against their assigned VALUES: platform/handle are coalesced
+            # above, so they are coalesced here too or a maker the catalogue
+            # carries without them looks changed on every seed.
+            "  where (makers.display_name, makers.avatar_url, makers.avatar_emoji, "
+            "makers.bio, makers.website_url, makers.platform, makers.handle)\n"
+            "     is distinct from\n"
+            "        (excluded.display_name, excluded.avatar_url, excluded.avatar_emoji, "
+            "excluded.bio, excluded.website_url, "
+            "coalesce(excluded.platform, makers.platform), "
+            "coalesce(excluded.handle, makers.handle));\n"
         )
 
     # NOTE (paid tours, V2 Step 6): price_tier is deliberately absent from
@@ -189,7 +206,15 @@ def emit(data, out):
                 "city = excluded.city, address = excluded.address, "
                 "hero_image_url = excluded.hero_image_url, "
                 "additional_image_urls = excluded.additional_image_urls, "
-                "updated_at = now();\n"
+                "updated_at = now()\n"
+                # PHASE 0 — see the makers upsert above.
+                "  where (places.name, places.description, places.latitude, "
+                "places.longitude, places.city, places.address, "
+                "places.hero_image_url, places.additional_image_urls)\n"
+                "     is distinct from\n"
+                "        (excluded.name, excluded.description, excluded.latitude, "
+                "excluded.longitude, excluded.city, excluded.address, "
+                "excluded.hero_image_url, excluded.additional_image_urls);\n"
             )
 
     w("\n-- tours\n")
@@ -231,7 +256,38 @@ def emit(data, out):
             "centroid_longitude = excluded.centroid_longitude, city = excluded.city, "
             "country = excluded.country, "
             "primary_category = excluded.primary_category, tags = excluded.tags, "
-            "price_usd = excluded.price_usd, updated_at = now();\n"
+            "price_usd = excluded.price_usd, updated_at = now()\n"
+            # PHASE 0 (docs/delta-catalog-fetch-design.md § 6, lines 440-449).
+            #
+            # 🔴 The column list below is EXACTLY the DO UPDATE set above, and
+            # must stay that way. Four columns this statement writes on INSERT
+            # are deliberately absent from both: `status` and `published_at`
+            # (insert-only), `price_tier` (owned by the maker in the app, see
+            # the note above) and `place_id` (cleared and re-set by its own
+            # statements below). Comparing the whole ROW instead would make
+            # every seed look like a change and silently undo this entire fix.
+            #
+            # ⚠️ Add a column to the DO UPDATE set and you MUST add it here.
+            # That coupling is the reason this is a row comparison rather than
+            # a content-hash column: a hash computed in Python can drift out of
+            # sync with the SQL and a field then stops reaching Postgres
+            # forever, which is this repo's known failure mode (2026-08-19).
+            "  where (tours.title, tours.short_description, tours.long_description, "
+            "tours.maker_id, tours.hero_image_url, tours.additional_image_urls, "
+            "tours.video_urls, tours.video_role, tours.source_url, tours.source_author, "
+            "tours.kind, tours.intro_audio_url, tours.total_duration_seconds, "
+            "tours.walking_distance_meters, tours.centroid_latitude, "
+            "tours.centroid_longitude, tours.city, tours.country, "
+            "tours.primary_category, tours.tags, tours.price_usd)\n"
+            "     is distinct from\n"
+            "        (excluded.title, excluded.short_description, "
+            "excluded.long_description, excluded.maker_id, excluded.hero_image_url, "
+            "excluded.additional_image_urls, excluded.video_urls, excluded.video_role, "
+            "excluded.source_url, excluded.source_author, excluded.kind, "
+            "excluded.intro_audio_url, excluded.total_duration_seconds, "
+            "excluded.walking_distance_meters, excluded.centroid_latitude, "
+            "excluded.centroid_longitude, excluded.city, excluded.country, "
+            "excluded.primary_category, excluded.tags, excluded.price_usd);\n"
         )
 
     # Membership, re-derived from the catalog on every seed.
@@ -241,7 +297,26 @@ def emit(data, out):
     # the stale link behind and the tour keeps showing on a place page it no
     # longer belongs to. Clearing first is the only way membership can shrink.
     w("\n-- place membership\n")
-    w("update public.tours set place_id = null where place_id is not null;\n")
+    # PHASE 0. The blanket reset rewrote every member tour twice per seed —
+    # once to null, once back to the same place — so membership alone cost
+    # 2 × 735 row versions on a catalogue that had not moved.
+    #
+    # ⚠️ Narrowing it must not break the prune below, which deletes places and
+    # is blocked by the tours.place_id foreign key. So a tour keeps its link
+    # only when BOTH hold: it is still a member of something, and the place it
+    # currently points at survives this seed. Anything else is cleared, exactly
+    # as before. A tour that moves from one surviving place to another is left
+    # alone here and corrected by its membership statement further down.
+    member_ids = [tid for p in places for tid in p["tourIds"]]
+    if places and member_ids:
+        keep_tours = ", ".join(q(t) for t in member_ids)
+        keep_places = ", ".join(q(p["id"]) for p in places)
+        w("update public.tours set place_id = null\n"
+          " where place_id is not null\n"
+          f"   and (id not in ({keep_tours})\n"
+          f"        or place_id not in ({keep_places}));\n")
+    else:
+        w("update public.tours set place_id = null where place_id is not null;\n")
 
     # 🔴 And the places themselves have to be able to DISAPPEAR. The upsert
     # above can create and update a place but never remove one, so a place
@@ -265,7 +340,11 @@ def emit(data, out):
         w("delete from public.places;\n")
     for p in places:
         ids = ", ".join(q(t) for t in p["tourIds"])
-        w(f"update public.tours set place_id = {q(p['id'])} where id in ({ids});\n")
+        # PHASE 0 — `is distinct from` rather than `<>` so a tour whose
+        # place_id is NULL (the common case: brand new, or just cleared above)
+        # still matches and gets set.
+        w(f"update public.tours set place_id = {q(p['id'])} "
+          f"where id in ({ids}) and place_id is distinct from {q(p['id'])};\n")
 
     w("\n-- stops (clear then re-insert per tour, in order)\n")
     for t in tours:
@@ -327,6 +406,66 @@ def emit(data, out):
     )
 
 
+def verify_conditional_upserts(sql: str) -> None:
+    """Every DO UPDATE set must be matched, column for column, by its guard.
+
+    🔴 PHASE 0's one failure mode, made impossible rather than documented.
+
+    The `where (...) is distinct from (...)` guards exist so `updated_at` marks
+    a row that CHANGED rather than a row the seed touched. They only work while
+    the guard lists exactly the columns the DO UPDATE assigns. Add a column to
+    one and not the other and the damage is silent in both directions:
+
+      * column in the SET but not the guard  → the seed stops propagating it
+        whenever nothing else on the row moved. A field quietly stops reaching
+        Postgres — this repo's known failure mode (2026-08-19, `places` /
+        `priceTier` / `isPrivate`).
+      * column in the guard but not the SET  → every seed looks like a change
+        again and Phase 0 is undone, with nothing to show for it.
+
+    Neither produces an error, a failed CI run, or a visible symptom. So this
+    runs on every generation instead of trusting a comment above the SQL.
+    """
+    for table in ("makers", "places", "tours"):
+        m = re.search(
+            r"insert into public\." + table + r" .*?on conflict \(id\) do update set "
+            r"(.*?)\n  where \((.*?)\)\n     is distinct from\n        \((.*?)\);",
+            sql, re.S)
+        if not m:
+            raise SystemExit(
+                f"COULD NOT VERIFY: no guarded upsert found for public.{table}.\n"
+                "  Either the guard was removed (Phase 0 is undone — see\n"
+                "  docs/delta-catalog-fetch-design.md § 6) or the statement was\n"
+                "  reformatted and this check can no longer read it. Fix one or\n"
+                "  the other; do not delete this check.")
+        set_clause, lhs, rhs = m.groups()
+        assigned = [a.split("=")[0].strip() for a in set_clause.split(",") if "=" in a]
+        assigned = [a for a in assigned if a != "updated_at"]
+        guard = [c.strip().split(".", 1)[1]
+                 for c in re.split(r",\s*", lhs.replace("\n", " "))]
+        if assigned != guard:
+            only_set = [c for c in assigned if c not in guard]
+            only_grd = [c for c in guard if c not in assigned]
+            raise SystemExit(
+                f"public.{table}: the conditional-upsert guard does not match the "
+                "DO UPDATE set.\n"
+                + (f"  assigned but NOT guarded: {', '.join(only_set)}\n"
+                   "    → the seed will stop propagating these columns.\n" if only_set else "")
+                + (f"  guarded but NOT assigned: {', '.join(only_grd)}\n"
+                   "    → every seed will look like a change; Phase 0 undone.\n" if only_grd else "")
+                + (f"  same columns, different order: set={assigned} guard={guard}\n"
+                   if not only_set and not only_grd else "")
+                + "  Both lists live in emit(); edit them together.")
+        # The two sides of `is distinct from` must be the same width, or
+        # Postgres compares rows of different degree and rejects it at runtime.
+        rhs_cols = re.split(r",\s*(?![^()]*\))", rhs.replace("\n", " "))
+        if len(rhs_cols) != len(guard):
+            raise SystemExit(
+                f"public.{table}: guard compares {len(guard)} columns against "
+                f"{len(rhs_cols)} values. Both sides of `is distinct from` must "
+                "have the same width.")
+
+
 def main():
     p = argparse.ArgumentParser(description="Generate Atlas catalog seed SQL from Tours.json")
     p.add_argument("--input", default=DEFAULT_INPUT, help="path to Tours.json")
@@ -338,11 +477,19 @@ def main():
     merge_link_pins(data)
     validate(data)
 
+    # Emit into memory first so the Phase 0 guards can be verified BEFORE
+    # anything is written. A failed check then leaves no half-written seed for
+    # a later step to pick up and apply.
+    buf = io.StringIO()
+    emit(data, buf)
+    sql = buf.getvalue()
+    verify_conditional_upserts(sql)
+
     if args.output:
         with open(args.output, "w") as out:
-            emit(data, out)
+            out.write(sql)
     else:
-        emit(data, sys.stdout)
+        sys.stdout.write(sql)
 
 
 if __name__ == "__main__":
