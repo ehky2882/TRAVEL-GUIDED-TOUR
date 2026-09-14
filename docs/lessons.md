@@ -1231,3 +1231,22 @@ SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/check-catalog-contract.py
 ```
 
 That one prefix is the fix (python.org's Python ships without the system CA bundle). Scripts that shell out to `curl` (`check-catalog-keys.py`, `merge-link-pins.py`) are unaffected.
+
+## "Centred on average" is not "correct" — hand-typed coordinates were never checked one by one (2026-09-13)
+
+A catalogue-wide OpenStreetMap sweep (2026-09-12) found **13 locations, 20 entries, standing 135 m to 1 km from where their own scripts put the listener.** Every one carried a 4-decimal coordinate typed once at a city launch (Los Angeles #390, Madrid #435, Berlin #479, the NYC and London batches) and never looked up at the spot.
+
+**The errors have one shape: right neighbourhood, wrong building.** Bebelplatz sat on Gendarmenmarkt. Park Avenue Armory sat at 64th Street while the script says *"You're at Park Avenue and 66th Street."* The Egyptian Theatre was a kilometre east on the same boulevard, the Rosaleda at another corner of the Retiro, Notre-Dame at the apse instead of the square in front. A coordinate for *the area* was written down as the coordinate for *the place*.
+
+**Nothing could catch it, and one check looked as though it had:**
+- `validate-tours` checks that a coordinate is a coordinate, not that it is the place.
+- `check-coordinates.py` runs on **new drops only** (Rule 8b). Its 2026-08-22 measurement found the hand-typed cities *"dead centred"* (London −0.4 m, New York −1.4 m) and that was read as clean. It is a **bias** test: random errors in every direction average to zero. It proved the method unbiased and said nothing about any single entry.
+- A geofence that never fires produces no error anywhere. Only someone standing at 1,500 venues would notice.
+
+**And one wrong number was copied, not retyped.** A walk stop reused its single tour's coordinate (Egyptian Theatre, Magere Brug, Rosaleda, Bebelplatz), a walk's intro reused its first stop, and a place took its members' point (Square Saint-Louis). One mistake became up to four wrong entries.
+
+**The rules:**
+- **Check a coordinate against the entry's own words.** The script names the street, the gate, the square; a distance alone proves nothing (§ 4).
+- **Repair to where the script stands you, not to the OSM centroid**: the parvis at Point Zéro, the Redcross Way gates, the corner of Park Avenue and 66th.
+- **Moving a walk's stop 0 can dissolve a place.** Hackesche Höfe was a place only because the Scheunenviertel walk's intro sat on it; correcting the intro left one member, and the owner dropped the place (2026-09-13).
+- The same sweep found the **drop pipeline's northward offset in every city it made**: 208 of 262 building-level matches north, median +20 m, p = 1.7e-22. Those entries are still unrepaired.
