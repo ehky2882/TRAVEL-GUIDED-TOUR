@@ -55,41 +55,58 @@ the branches to answer "what's left?".
 
 ## PENDING — staged, awaiting narration audio
 
-**The queue is no longer empty.** It was empty from 2026-08-09 (Chicago) to 2026-08-24, when
-Atlanta was script- and image-staged. Five singles the Chicago master list marks as drafted
-(18 Wrigley Field, 19 Lincoln Park, 22 Gold Coast/Astor, 26 Wicker Park, 27 The 606) were
-never delivered as scripts, images or audio — **if they ever arrive they are a second batch**
-and get a fresh row here, per the staging rule below.
+**🎉 NOTHING IS PENDING. The queue is empty again** — Atlanta was the last staged city and it
+went live 2026-09-14. Five singles the Chicago master list marks as drafted (18 Wrigley Field,
+19 Lincoln Park, 22 Gold Coast/Astor, 26 Wicker Park, 27 The 606) were never delivered as
+scripts, images or audio — **if they ever arrive they are a second batch** and get a fresh row
+here, per the staging rule below.
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| 🇺🇸 Atlanta | 30 | 30 single-stop, **no walks staged** · ✅ **images 30/30** | 30 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ATL |
-| **TOTAL PENDING** | **30** | | **30** | | |
+| **TOTAL PENDING** | **0** | | **0** | | |
 
-> ✅ **Atlanta is now image-complete — 30 of 30**, verified 2026-09-14 by requesting each tour
-> slug's `_hero.webp` from gh-pages and counting 200s. **Audio is the only thing outstanding.**
-> This note previously read "21 of 30" and listed nine gaps; that was true on 2026-08-26 and was
-> closed the following day. The correction did not reach `main` at the time — it landed only on
-> the staging branch's `drafts/atlanta-batch1/README.md`, which is exactly the drift this file
-> exists to prevent.
->
-> The last four were closed differently from the rest and it is worth knowing which: **APEX,
-> Spelman Oval and Student Movement Boulevard are owner-supplied photographs**, and none of the
-> three was solvable by sourcing at any effort — `Category:Spelman College` holds 59 files and
-> not one is architecture, and exactly one Giles Hall image exists across Commons *and* the
-> Library of Congress, an 1893 halftone at 778×548. **65 files, 34 credit rows.** Two artwork
-> rights ship **open, not cleared** — Krog Street Tunnel's graffiti and Woodruff Park's *Atlanta
-> from the Ashes* (1969) — both owner-directed, both detailed in `drafts/CREDITS.md`.
->
-> 🔴 **`apex-auburn_hero.webp` must not be "corrected".** A WELCOME / INMAN PARK banner hangs in
-> frame while the APEX Museum's own address is 135 Auburn Avenue in Sweet Auburn, ~1.5 km west,
-> so it reads as the wrong neighbourhood on sight. It was queried on that basis and the owner
-> confirmed it is correct.
->
-> ⚠️ **Stop 02's premise contradicts its own photographs.** Every image shows the original Zero
-> Mile Post indoors at the Atlanta History Center, where it moved in 2019; the batch README's
-> tour table says "replica; original is 8 mi north". Resolve against the delivered script before
-> recording. Full per-tour detail: `drafts/atlanta-batch1/README.md` on the staging branch.
+_(✅ 🇺🇸 **Atlanta = DONE (2026-09-14, PR #900): 30 tours LIVE** — 30 single-stop, geofenced at
+30 m, no walks, under new maker **Atlas Studio ATL** (`ccaab715-2f29-597e-8b3a-0d38e8d370da`) —
+the **35th maker**. 30 MP3s, 4,049 s (67m29s). Catalogue 1552 → 1582 tours / 1924 → 1954 stops.
+**This one DID come from this table** — staged 2026-08-17, imaged over 2026-08-24/27, narration
+delivered 2026-09-14 and wired the same day. **The audio arrived as 15 direct uploads rather
+than a folder link**: the owner first sent a Dropbox **Transfer** (`/t/…`) link, which unlike
+the usual `/scl/fo/` shared-folder form has **no direct-download URL** — its bytes come out only
+through a JavaScript flow, and Chromium cannot reach Dropbox through the session proxy at all
+(immediate connection reset, three ways tried). **Ask for `/scl/fo/`, not Transfer.**
+
+🔴 **ELEVEN COORDINATES WERE WRONG and were fixed at wire-in** — The Temple 719 m, APEX Museum
+566 m, Jackson Street Bridge 512 m, the Flatiron 431 m, Student Movement Blvd 358 m, Historic
+Fourth Ward Park 202 m, Zero Mile Post 195 m, the Candler 147 m, MLK Birth Home 142 m, Woodruff
+Park 119 m, Oakland Cemetery 62 m. At the 30 m geofence not one would ever have fired. **These
+were transcription errors made when the batch README was authored, not an upstream drop-pipeline
+fault** — the Atlanta scripts carry a prose `Position:` line and no coordinates at all, so
+somebody had to derive them. ✅ **The systematic northward bias is absent** (12/22 north, median
++9.1 m, p = 0.83), statistically indistinguishable from the hand-sourced NYC/London baseline.
+
+⚠️ **The coordinate checker exited 2 — COULD NOT VERIFY — on its first run**, 29 of 82 calls
+failing at its built-in 1.1 s pacing through the session proxy. That is not a pass. Re-running
+at **2.6 s** produced a real result. Consider raising `SLEEP` when running it from a web session.
+
+⚠️ **Audio is 128 kbps mono at 48 kHz, not the documented 44.1**, shipped as delivered rather
+than re-encoded: a lossy-to-lossy pass costs quality for no functional gain, and the catalogue
+already serves several 128/48000/mono files. Filenames carried two typos that never reached the
+catalogue (`OAKLAND_CEMETARY`; `GEORGIA_CAPITAL` for the Capitol).
+
+🔴 **`apex-auburn_hero.webp` must not be "corrected"** — a WELCOME / INMAN PARK banner sits in
+frame while the APEX Museum is on Auburn Avenue ~1.5 km west, so it reads as the wrong
+neighbourhood on sight. Queried on exactly that basis and **owner-confirmed**.
+
+🔴 **Stop 02's narration contradicts its own photographs and is UNRESOLVED.** The script
+describes a replica with the original Zero Mile Post eight miles north; every image shows the
+**original, indoors at the Atlanta History Center**, where it moved in 2019. The shipped
+coordinate is the downtown Freight Depot site, which keeps the walk coherent. **Only the owner
+can settle which the script should say.**
+
+⚠️ **Two artwork rights ship OPEN, not cleared** — Krog Street Tunnel's graffiti and Woodruff
+Park's *Atlanta from the Ashes* (1969) — both owner-directed; see `drafts/CREDITS.md`. 65 image
+files, 34 credit rows; three of the last four subjects were owner photographs because sourcing
+could not solve them.)_
 
 _(✅ 🇪🇸 **Barcelona = DONE (2026-08-18): 68 tours LIVE** — 66 single-stop (geofenced 30 m) + **2 walks** (`barcelona-dreta-eixample-walk` "Dreta de l'Eixample", intro+6, 1.4 km — seven Modernista houses on and around the Illa de la Discòrdia; `barcelona-rosari-montserrat-walk` "The Monumental Rosary of Montserrat", intro+4, 1.0 km — down the Camí de la Santa Cova) under new maker **Atlas Studio BCN** (`79ad2022-a58c-52d0-b41a-814f9ac29323`) — the **31st maker**. 78 MP3s, 10,517 s (~2h55m), **the largest narration drop to date**. **Never in this table** — arrived complete and wired the same day. Neither walk shipped an intro track, so stop 01 became the manual stop 0 in each (the Melbourne Federation Square precedent). 🔴 **TEN supplied coordinates were wrong and every one was displaced due north** — Nau Gaudí by 3.2 km, Hotel Porta Fira 1.26 km, Tibidabo 1.14 km (over the ridge into Sant Cugat), Mercantic 964 m, Walden 7 604 m, Torre Bellesguard 488 m, Col·legi de les Teresianes 339 m, Portal Miralles 309 m, Xavier Corberó 248 m, Casa Costa 203 m. All corrected against OSM and reverse-verified onto the named venue. The systematic northward bias is an upstream data-generation problem, not random error — **check it before the next city**. ⚠️ Eight tours ship outside Barcelona with their own `city`: Montserrat ×5, Sant Just Desvern ×2 (Walden 7, La Fábrica), plus El Prat de Llobregat, Santa Coloma de Cervelló, Sant Cugat del Vallès, Mataró, Esplugues de Llobregat, L'Hospitalet de Llobregat and Sant Adrià de Besòs. ⚠️ **Antoni Gaudí is NOT in the tag vocabulary** and 16 tours here are his — the strongest case yet for a `Models/Tag.swift` addition; those tours ship `Designed by a Master`.)_
 

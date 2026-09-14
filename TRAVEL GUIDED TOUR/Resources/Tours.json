@@ -4239,6 +4239,16 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/kristofooro/"
+    },
+    {
+      "id": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "displayName": "Atlas Studio ATL",
+      "platform": "dozent",
+      "handle": "atlas.atl",
+      "avatarURL": null,
+      "avatarEmoji": "🇺🇸",
+      "bio": "Atlas Studio's Atlanta bureau — audio tours of a city built where two footpaths crossed and a surveyor drove a stake: the mile post that every address still counts outward from, the avenue that was called the richest Negro street in the world, a tunnel repainted every week by whoever turns up, and a bronze woman lifting a phoenix over the place that burned.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -81698,6 +81708,1346 @@
         "After Dark"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "ee8d0f0d-0110-5048-8fd6-e28cc78c9087",
+      "createdAt": "2026-09-14",
+      "title": "Five Points",
+      "shortDescription": "This is Five Points. Every street address in Atlanta — every house number on every mailbox in the city — is measured outward from the ground under…",
+      "longDescription": "Every street address in Atlanta — every house number on every mailbox in the city — is measured outward from the ground under your feet. Around the plaza, construction fencing wraps the rail station, and there may be crews working above it — the station's concrete canopy is being taken down piece by piece, a job that runs for years, so expect noise and expect the view to keep changing. They refuse to meet squarely, and nothing downtown does — the whole grid sits about thirty degrees off true north, because these streets were never drawn on paper first. They followed the rail lines, and the rail lines followed the land, which is why North Peachtree famously points somewhere other than north. And the pattern is older than the rails: two Muscogee footpaths crossed near this spot, the Peachtree Trail and the Sandtown Trail, long before anyone here spoke English.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/five-points_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "527a22ee-8b31-52be-a76a-9f2dda1613d5",
+          "order": 0,
+          "title": "Five Points",
+          "caption": "You should be standing in the open plaza where Peachtree Street crosses Marietta, with Edgewood and Decatur Street angling in behind you.",
+          "latitude": 33.75373,
+          "longitude": -84.39189,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/five-points.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/five-points_hero.webp",
+          "transcriptText": "This is Five Points. Every street address in Atlanta — every house number on every mailbox in the city — is measured outward from the ground under your feet.\n\nYou should be standing in the open plaza where Peachtree Street crosses Marietta, with Edgewood and Decatur Street angling in behind you. Around the plaza, construction fencing wraps the rail station, and there may be crews working above it — the station's concrete canopy is being taken down piece by piece, a job that runs for years, so expect noise and expect the view to keep changing.\n\nStart with the streets themselves. They refuse to meet squarely, and nothing downtown does — the whole grid sits about thirty degrees off true north, because these streets were never drawn on paper first. They followed the rail lines, and the rail lines followed the land, which is why North Peachtree famously points somewhere other than north. And the pattern is older than the rails: two Muscogee footpaths crossed near this spot, the Peachtree Trail and the Sandtown Trail, long before anyone here spoke English.\n\nOne more layer down: in 1875 the city sank three wells into this intersection and piped its first public drinking water out through hollowed wooden logs. Atlanta's original waterworks are still somewhere beneath the asphalt you're standing on.\n\nMost American cities keep something ceremonial at their center — a courthouse square, a cathedral, a green. Atlanta keeps a junction. This was never a place that happened to grow a crossroads; it was a crossroads that grew a place, chosen by railroad surveyors because lines could meet here, and everything else — the towers, the streetcar, the name on the map — came afterward.\n\nSo the demolition around you is not an interruption. It is closer to a tradition: Atlanta has been rebuilding its own front door for as long as it has had one, and not everyone wanted the old concrete roof gone — some people admired it, and said so. The city listened, and took it down anyway.\n\nStay a moment before you move on. Underneath the fencing, the paving, the wells and the rails, two footpaths are still quietly doing what they have always done here — deciding where everything else goes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.75373,
+      "centroidLongitude": -84.39189,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ae9a1d9f-9bda-53a0-9737-259cf6f0820a",
+      "createdAt": "2026-09-14",
+      "title": "Zero Mile Post replica",
+      "shortDescription": "The stone in front of you is a stand-in. The real one left town in 2018 — and the argument about whether it should have is half the reason to come…",
+      "longDescription": "The real one left town in 2018 — and the argument about whether it should have is half the reason to come down here. The original was a surveyor's marker set to fix the end of a state railroad, carved with a zero on one face and one hundred thirty-eight on another — zero miles from here, one hundred thirty-eight to Chattanooga. Some American cities began as forts, some as missions, some as harbors. This one began as an arithmetic problem, and the answer was a stake in the ground. When the settlement that gathered around it needed a name, it tried a few before landing on Atlanta. These shadowed lanes were open-air streets until the 1920s, when the city, tired of waiting at rail crossings, bridged over the whole district and lifted its traffic one story into the air.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zero-mile-post_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1b97f9d8-f7fe-580d-aef9-2ddcd207af5b",
+          "order": 0,
+          "title": "Zero Mile Post replica",
+          "caption": "You should be under the Central Avenue bridge deck near Wall Street, a level below the downtown you walked in from, with rail lines running past in the dark and an interpretive panel beside a squat stone post.",
+          "latitude": 33.75295,
+          "longitude": -84.3894,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/zero-mile-post.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zero-mile-post_hero.webp",
+          "transcriptText": "The stone in front of you is a stand-in. The real one left town in 2018 — and the argument about whether it should have is half the reason to come down here.\n\nYou should be under the Central Avenue bridge deck near Wall Street, a level below the downtown you walked in from, with rail lines running past in the dark and an interpretive panel beside a squat stone post. It is dim down here, and quieter than the streets above, which is fitting — you are standing on the original surface of Atlanta.\n\nLook at the stone first. The original was a surveyor's marker set to fix the end of a state railroad, carved with a zero on one face and one hundred thirty-eight on another — zero miles from here, one hundred thirty-eight to Chattanooga. Some American cities began as forts, some as missions, some as harbors. This one began as an arithmetic problem, and the answer was a stake in the ground. When the settlement that gathered around it needed a name, it tried a few before landing on Atlanta.\n\nNow look around, because the floor you're on is the real exhibit. These shadowed lanes were open-air streets until the 1920s, when the city, tired of waiting at rail crossings, bridged over the whole district and lifted its traffic one story into the air. Ground floors became basements, merchants moved their doors up a level, and the original street level was simply left behind — the layer people mean when they say underground Atlanta. Nothing was ever buried. The city just moved upstairs.\n\nAs for the stone itself: the original stands in a museum eight miles north, safe indoors beside a Civil War locomotive. Preservationists will tell you it would not have survived down here; others answer that a zero mile post has exactly one job, which is to stand at mile zero. Both sides have a point, and the replica in front of you — set by survey on the precise original spot — is the city's way of splitting the difference.\n\nBefore you head back up to the daylight, stand by the old grade a moment. Every address, every mile marker, every skyline photograph of this city measures out from a stone that is no longer here — and somehow the spot still holds."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.75295,
+      "centroidLongitude": -84.3894,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3ee18b7c-4ea0-5cb8-926c-06413e943ad5",
+      "createdAt": "2026-09-14",
+      "title": "Georgia State Capitol",
+      "shortDescription": "The gold on the dome above you arrived by mule wagon.",
+      "longDescription": "When Georgia budgeted a million dollars for a new capitol in 1883, the builders finished the job in 1889 and handed back the change — the winning bid came in at eight hundred sixty-two thousand, seven hundred fifty-six dollars and seventy-five cents. A government building delivered under budget is its own kind of monument. The walls tell you what the state could and couldn't afford. The outside is Indiana limestone — imported, because it was cheaper. The Georgia marble the state was proud of went indoors, and the interior marble alone cost more than all the limestone wrapping the entire exterior. In 1958 the town of Dahlonega, up in the north Georgia mountains where an early American gold rush ran, decided the dome ought to shine and collected forty-three ounces from its own hills. Seven covered wagons hauled the gold to Atlanta over three days — mules, children, a dog, and two state patrol cars bringing up the rear.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgia-state-capitol_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgia-state-capitol_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgia-state-capitol_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgia-state-capitol_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgia-state-capitol_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b16880a5-40e1-5a7a-bacb-39da0aaa4992",
+          "order": 0,
+          "title": "Georgia State Capitol",
+          "caption": "You should be on Washington Street at the Capitol's west front — a long limestone facade behind a portico of columns, a lawn of statues around you, and the gilded dome high above, topped by a copper figure holding a torch and…",
+          "latitude": 33.7492,
+          "longitude": -84.3884,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/georgia-state-capitol.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgia-state-capitol_hero.webp",
+          "transcriptText": "The gold on the dome above you arrived by mule wagon. Twice.\n\nYou should be on Washington Street at the Capitol's west front — a long limestone facade behind a portico of columns, a lawn of statues around you, and the gilded dome high above, topped by a copper figure holding a torch and a sword.\n\nBegin with the price tag. When Georgia budgeted a million dollars for a new capitol in 1883, the builders finished the job in 1889 and handed back the change — the winning bid came in at eight hundred sixty-two thousand, seven hundred fifty-six dollars and seventy-five cents. A government building delivered under budget is its own kind of monument.\n\nThe walls tell you what the state could and couldn't afford. The outside is Indiana limestone — imported, because it was cheaper. The Georgia marble the state was proud of went indoors, and the interior marble alone cost more than all the limestone wrapping the entire exterior.\n\nNow the gold. In 1958 the town of Dahlonega, up in the north Georgia mountains where an early American gold rush ran, decided the dome ought to shine and collected forty-three ounces from its own hills. Seven covered wagons hauled the gold to Atlanta over three days — mules, children, a dog, and two state patrol cars bringing up the rear. The leaf went on in winter, and winter won: the gilding never properly stuck, and within twenty years half of it had weathered away. So in 1979 Dahlonega did the whole thing again — another wagon train, sixty ounces this time — and the coat applied in 1981 is the one catching the light above you.\n\nStatehouses usually wear their gold as a boast. This one wears a favor from a small mountain town, done twice because the first try peeled. The roof on Georgia's postcards is not a story about wealth — it is a story about neighbors who redid the job by mule until it held.\n\nBefore you go, find the newest figure on the grounds: a statue of Martin Luther King Jr., added in 2017, a short walk from where he was born and preached. The lawn has been argued over for generations, and it keeps changing — which may be the most honest thing about it.\n\nTake one more look up. Somewhere in that shine is the patience of forty-three ounces that didn't stick, and sixty that did."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7492,
+      "centroidLongitude": -84.3884,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Architecture",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8487e3de-5c3b-552d-a635-8fe807625c2f",
+      "createdAt": "2026-09-14",
+      "title": "Woodruff Park & the Phoenix",
+      "shortDescription": "Look at the bird. You should be at the south tip of Woodruff Park, where Peachtree meets Edgewood, at a bronze of a woman held aloft by a phoenix…",
+      "longDescription": "The sculpture is called Atlanta from the Ashes, and the streetcar rattles past on one side while the lawn opens north on the other. Atlanta's city seal shows the same bird over a single Latin word, Resurgens — rising again — because this city has burned more than once: in 1864, in war, and again in 1917, by accident, when a fire nobody ever explained took block after block of the east side. Only one of those fires made it onto the seal. Myths get built on the fire you can name an enemy for. Now the statue's own story, because it is very Atlanta. It was commissioned in the 1960s not by the city but by a department store's foundation — Rich's, the great local emporium — cast in Italy, and dedicated in 1969. It stood near the store for years, and only moved to this corner in 1995, just in time for the Olympics.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/woodruff-park_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5327ed3f-5fd9-5a8d-917e-6fc1d67af9c0",
+          "order": 0,
+          "title": "Woodruff Park & the Phoenix",
+          "caption": "You should be at the south tip of Woodruff Park, where Peachtree meets Edgewood, at a bronze of a woman held aloft by a phoenix — wings spread beneath her, her arms thrown back.",
+          "latitude": 33.75447,
+          "longitude": -84.3879,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/woodruff-park.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/woodruff-park_hero.webp",
+          "transcriptText": "Look at the bird.\n\nYou should be at the south tip of Woodruff Park, where Peachtree meets Edgewood, at a bronze of a woman held aloft by a phoenix — wings spread beneath her, her arms thrown back. The sculpture is called Atlanta from the Ashes, and the streetcar rattles past on one side while the lawn opens north on the other.\n\nThe phoenix is official. Atlanta's city seal shows the same bird over a single Latin word, Resurgens — rising again — because this city has burned more than once: in 1864, in war, and again in 1917, by accident, when a fire nobody ever explained took block after block of the east side. Only one of those fires made it onto the seal. Myths get built on the fire you can name an enemy for.\n\nNow the statue's own story, because it is very Atlanta. It was commissioned in the 1960s not by the city but by a department store's foundation — Rich's, the great local emporium — cast in Italy, and dedicated in 1969. It stood near the store for years, and only moved to this corner in 1995, just in time for the Olympics.\n\nAnd the park it landed in has the same plot. In 1971 a buyer quietly assembled these blocks of expensive downtown land and gave them to the city as a park — anonymously. The buyer turned out to be Robert Woodruff, the man who ran Coca-Cola for decades, and the city only renamed the place for him in 1985, once the secret was out. For fourteen years, Atlantans ate lunch on grass a very rich man had bought them without leaving a name.\n\nSo read this corner honestly: a civic myth commissioned by a store, a commons donated in secret by a soda executive. Public spirit in this town has always worn private clothes — and the point isn't the money, it's the modesty. Whatever else you make of it, the bird and the lawn were both gifts.\n\nThe park has been Atlanta's arguing ground for decades — rallies, marches, encampments, lunch breaks. Sit a minute and watch it work. A city rising again, over and over, is mostly just this: people coming back to the same green patch and starting over."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.75447,
+      "centroidLongitude": -84.3879,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Park",
+        "Art",
+        "History",
+        "Public Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f7692bb7-2ebe-5d63-bbeb-c26735667964",
+      "createdAt": "2026-09-14",
+      "title": "MLK Birth Home",
+      "shortDescription": "Five hundred and one Auburn Avenue is a two-story wooden house on a street of two-story wooden houses.",
+      "longDescription": "That is the most important thing about it. Queen Anne, built in 1895, low iron fence out front. The rooms inside are ranger-led only, free, first come first served, fifteen people at a time, and they go fast; tickets come from the temporary visitor center up at Fire Station Number Six. If you didn't get one, you haven't missed the stop. In 1909 a Baptist preacher named Adam Daniel Williams bought it, and his daughter and her husband moved in with him, and on the fifteenth of January, 1929, at noon, their second child — Martin Luther King Jr. — was born upstairs in the front bedroom. Nearly every house on this block is about the same size, about the same age, built for about the same kind of household — a teacher, a mail carrier, a pharmacist, a preacher. When the federal government moved to preserve this place in 1980, it did not buy the house and put a fence around it.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "05e8fbb0-845b-5d98-9b51-3cf69285b903",
+          "order": 0,
+          "title": "MLK Birth Home",
+          "caption": "You should be on the sidewalk on the north side of Auburn, east of Ebenezer and the King Center — the street numbers climb as you walk away from downtown.",
+          "latitude": 33.7557,
+          "longitude": -84.3726,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mlk-birth-home.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mlk-birth-home_hero.webp",
+          "transcriptText": "Five hundred and one Auburn Avenue is a two-story wooden house on a street of two-story wooden houses. That is the most important thing about it.\n\nYou should be on the sidewalk on the north side of Auburn, east of Ebenezer and the King Center — the street numbers climb as you walk away from downtown. Look for the yellow house with the porch that runs across the front and turns the corner. Queen Anne, built in 1895, low iron fence out front. The rooms inside are ranger-led only, free, first come first served, fifteen people at a time, and they go fast; tickets come from the temporary visitor center up at Fire Station Number Six. If you didn't get one, you haven't missed the stop. The block is the stop.\n\nStart with the porch.\n\nA white family built this house. In 1909 a Baptist preacher named Adam Daniel Williams bought it, and his daughter and her husband moved in with him, and on the fifteenth of January, 1929, at noon, their second child — Martin Luther King Jr. — was born upstairs in the front bedroom. He lived here until he was twelve.\n\nNow widen out. Look left, look right. Nearly every house on this block is about the same size, about the same age, built for about the same kind of household — a teacher, a mail carrier, a pharmacist, a preacher. When the federal government moved to preserve this place in 1980, it did not buy the house and put a fence around it. It took the whole block.\n\nThat decision is the argument. A single preserved house tells you a great man came from somewhere. A preserved street tells you what that somewhere actually was: a working Black middle class with its own mortgages, its own front porches, and its own church a couple of minutes down the sidewalk.\n\nThe porches here are all doing the same thing, which is facing each other. That's not really architecture, it's a way of living on a street: you sat out front in the evening, and the street sat out front with you, and everybody's business was conducted about fifteen feet from everybody else's. The government could have bought one house and put a shrine in it. It bought the neighbors."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7557,
+      "centroidLongitude": -84.3726,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0c89260f-3744-5a69-aca7-5e2528b8d3ee",
+      "createdAt": "2026-09-14",
+      "title": "Ebenezer Baptist & Behold",
+      "shortDescription": "The bronze figure on the lawn is not Martin Luther King Jr.",
+      "longDescription": "People assume it is, take the photo, and walk on. The sculpture is a man holding an infant straight up over his head, arms locked, the child's body small against the sky. Patrick Morelli made it, and Coretta Scott King unveiled it on the eleventh of January, 1990. The gesture comes from an African naming ritual — a father lifting a newborn toward the sky and presenting the child to creation. Morelli built the piece around that moment instead of around a portrait. Which means the monument to a man whose face is known everywhere contains no likeness of him at all. It's someone you don't know, holding someone you don't know, in a posture about beginnings. Ebenezer's congregation dates to 1886, and this sanctuary — the one the Park Service calls the Heritage Sanctuary — was finished in 1922, built in stages while the congregation worshipped in a storefront and paid for the walls as they went up.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ebenezer-baptist_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ebenezer-baptist_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3f9a302d-05e0-5415-b804-baf29d56d09a",
+          "order": 0,
+          "title": "Ebenezer Baptist & Behold",
+          "caption": "Stand so you have the statue in front of you and the church behind it, both in one view.",
+          "latitude": 33.7554,
+          "longitude": -84.3736,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ebenezer-baptist.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ebenezer-baptist_hero.webp",
+          "transcriptText": "The bronze figure on the lawn is not Martin Luther King Jr. People assume it is, take the photo, and walk on.\n\nStand so you have the statue in front of you and the church behind it, both in one view. The sculpture is a man holding an infant straight up over his head, arms locked, the child's body small against the sky. It's called Behold. Patrick Morelli made it, and Coretta Scott King unveiled it on the eleventh of January, 1990.\n\nSo.\n\nThe gesture comes from an African naming ritual — a father lifting a newborn toward the sky and presenting the child to creation. Morelli built the piece around that moment instead of around a portrait. Which means the monument to a man whose face is known everywhere contains no likeness of him at all. It's someone you don't know, holding someone you don't know, in a posture about beginnings.\n\nNow the church. Ebenezer's congregation dates to 1886, and this sanctuary — the one the Park Service calls the Heritage Sanctuary — was finished in 1922, built in stages while the congregation worshipped in a storefront and paid for the walls as they went up. King's grandfather preached from that pulpit. Then his father. Then, for eight years, he did, as co-pastor alongside him. The Park Service restored the room to the way it looked in the nineteen sixties, down to the woodwork and the light fixtures. It's open daily, and it is still a room people worship in — if a service is happening, this stop can wait.\n\nHere is what the block does to the story. The house where he was born is up the street. This pulpit is here. His tomb is across the road. Those three points sit inside a five-minute walk.\n\nMost monumental lives spread out — a birthplace in one state, a career in another, a grave somewhere symbolic. This one folded back on itself. And the statue out front, refusing to be a portrait, is oddly honest about that. What's being marked here isn't one man's face. It's the block that produced him, and got him back."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7554,
+      "centroidLongitude": -84.3736,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98161213-ce2d-5d51-8fab-59c09a798f2b",
+      "createdAt": "2026-09-14",
+      "title": "The King Center",
+      "shortDescription": "You can walk a full circle around Martin Luther King Jr.",
+      "longDescription": "and Coretta Scott King and never get closer to them than the width of this water. The crypt sits on its own island in the middle of a long reflecting pool — Georgia marble, no bridge, no path, nothing to walk up to. At the near end, set into the plaza, an eternal flame. Behind you is Freedom Hall — galleries, a theater, a bookstore — and off to one side a meditation garden named for Mrs. Admission and parking are free, ten to five, seven days a week, and the outdoor part of this is visible whether or not the buildings are open. He was buried in 1968 at South-View Cemetery, in south Atlanta — the burying ground Black Atlantans founded for themselves when the city's other grounds were closed to them. The tomb was rebuilt in 2006 so that Mrs.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/king-center_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "299bdce2-11fd-5e86-86ba-4a669908a785",
+          "order": 0,
+          "title": "The King Center",
+          "caption": "There's an inscription cut into the marble; read it yourself, standing there.",
+          "latitude": 33.7553,
+          "longitude": -84.3718,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/king-center.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/king-center_hero.webp",
+          "transcriptText": "You can walk a full circle around Martin Luther King Jr. and Coretta Scott King and never get closer to them than the width of this water.\n\nThe crypt sits on its own island in the middle of a long reflecting pool — Georgia marble, no bridge, no path, nothing to walk up to. At the near end, set into the plaza, an eternal flame. Behind you is Freedom Hall — galleries, a theater, a bookstore — and off to one side a meditation garden named for Mrs. King. Admission and parking are free, ten to five, seven days a week, and the outdoor part of this is visible whether or not the buildings are open.\n\nHe was buried in 1968 at South-View Cemetery, in south Atlanta — the burying ground Black Atlantans founded for themselves when the city's other grounds were closed to them. Two years later he was moved here. The tomb was rebuilt in 2006 so that Mrs. King could be interred beside him. There's an inscription cut into the marble; read it yourself, standing there. It lands better that way.\n\nNow look across Auburn Avenue. That side is the National Park Service — Ebenezer, the visitor center, the Birth Home. Federal land, federal rangers, a federal account of what happened here. This side, the pool and the crypt and Freedom Hall, is not that. The King Center was founded by Coretta Scott King in 1968, out of the family's own basement, and the family has run it ever since. Two institutions, one street apart, telling the same story, neither answering to the other.\n\nThat seam is worth standing on for a second. There is a long argument in this country about who gets to hold a legacy — the family or the public. It has produced real friction here, in both directions, and neither position is foolish. A family knows things a government never will. A government outlasts a family.\n\nThe design settles none of that, but it says something. They put him in the water, on an island, with no way to reach him and nothing at all between you and the sight of him. Everybody gets to look. Nobody gets to touch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7553,
+      "centroidLongitude": -84.3718,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Remembrance",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "19924a0d-ecca-57bf-8179-932a9f085415",
+      "createdAt": "2026-09-14",
+      "title": "Sweet Auburn Curb Market",
+      "shortDescription": "They called it the Curb Market because the Black vendors sold at the curb.",
+      "longDescription": "It isn't a nickname or a piece of local color; it's a plain description of an arrangement, and once you know it you can't hear the phrase any other way. Low, wide, more warehouse than civic monument, big square-headed openings, flat roofline. It looks slightly unfinished at the ends, and it is — two towers once bookended the building and they're gone. The ground under it was cleared by fire. In 1917 a fire burned through the Old Fourth Ward and put a great many people out of their homes, and in the aftermath, in 1918, a farmers' market opened here in a tent. The Atlanta Woman's Club raised roughly three hundred thousand dollars for something permanent and fireproof, hired the architect A. Ten Eyck Brown, and the market opened on the first of May, 1924. Atlanta built a whole civic identity out of the fire of 1864.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sweet-auburn-curb-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sweet-auburn-curb-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sweet-auburn-curb-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sweet-auburn-curb-market_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d9e9e211-4bef-578e-9867-05a09268f9f8",
+          "order": 0,
+          "title": "Sweet Auburn Curb Market",
+          "caption": "Stand on Edgewood Avenue with the long brick front of the building across from you.",
+          "latitude": 33.754,
+          "longitude": -84.3796,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sweet-auburn-curb-market.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sweet-auburn-curb-market_hero.webp",
+          "transcriptText": "They called it the Curb Market because the Black vendors sold at the curb.\n\nThat's the whole name. It isn't a nickname or a piece of local color; it's a plain description of an arrangement, and once you know it you can't hear the phrase any other way.\n\nStand on Edgewood Avenue with the long brick front of the building across from you. Low, wide, more warehouse than civic monument, big square-headed openings, flat roofline. It looks slightly unfinished at the ends, and it is — two towers once bookended the building and they're gone.\n\nWalk the length of the building first, then come back to the middle.\n\nThe ground under it was cleared by fire. In 1917 a fire burned through the Old Fourth Ward and put a great many people out of their homes, and in the aftermath, in 1918, a farmers' market opened here in a tent. It worked immediately. The Atlanta Woman's Club raised roughly three hundred thousand dollars for something permanent and fireproof, hired the architect A. Ten Eyck Brown, and the market opened on the first of May, 1924. Atlanta built a whole civic identity out of the fire of 1864. Out of this one, it built a grocery.\n\nThen the arrangement. Inside the building, white merchants. Outside, along the curb, Black merchants — same market, same customers walking between them, one wall deciding who rented a stall and who stood in the weather. Black shoppers could buy on either side of that wall. Black sellers could not cross it.\n\nThat is the shape of this whole street. Auburn Avenue is a second version of a city, built on the outside of the first one, by people who were told the first one was full.\n\nIn 1973 the city declined to renew the market's lease, and a Save the Market campaign talked it back open.\n\nIn 2018, for its hundredth birthday, the building went back to its original name: the Municipal Market. Some people use it. Plenty of people still say Curb Market and mean it as an honor. The two names sit on the same building without agreeing, and that argument isn't settled, and probably shouldn't be."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.754,
+      "centroidLongitude": -84.3796,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "History",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b16a508b-17d4-5ba8-9d4d-cce0d553f714",
+      "createdAt": "2026-09-14",
+      "title": "Centennial Olympic Park",
+      "shortDescription": "It's the summer of 1996. The ground you're standing on is not a park — it's a tangle of aging warehouses and vacant lots that most of the city…",
+      "longDescription": "Then Atlanta talks its way into hosting the Olympic Games, and decides mid-preparation that what the Games really need is a front yard. The plaza around you is the park the Games left behind, ringed now by museums and towers. Walk the eastern edge and you'll find five square plazas paved like quilt squares — the Quilt Plazas, each stitched to a different memory of that summer. One holds the story of the bid itself: a local lawyer named Billy Payne talked the world into bringing the Games to Atlanta, an idea his own city initially found improbable. Another, the Quilt of Remembrance, is the hard one — it keeps a light burning for Alice Hawthorne, killed when a bomb went off in this park on a July night in 1996, a night remembered now alongside Richard Jewell, the security guard wrongly suspected in public after he had in fact spotted the bag and moved people away from it.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centennial-olympic-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centennial-olympic-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centennial-olympic-park_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d5e299e5-a839-5f8c-bf5c-b1d6365df82c",
+          "order": 0,
+          "title": "Centennial Olympic Park",
+          "caption": "The ground you're standing on is not a park — it's a tangle of aging warehouses and vacant lots that most of the city walks around, not through.",
+          "latitude": 33.7603,
+          "longitude": -84.3931,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/centennial-olympic-park.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centennial-olympic-park_hero.webp",
+          "transcriptText": "It's the summer of 1996. The ground you're standing on is not a park — it's a tangle of aging warehouses and vacant lots that most of the city walks around, not through. Then Atlanta talks its way into hosting the Olympic Games, and decides mid-preparation that what the Games really need is a front yard.\n\nYou should be at the Fountain of Rings, where jets of water trace the five-ring emblem flush with the plaza floor — children usually mark the spot better than any sign could. The plaza around you is the park the Games left behind, ringed now by museums and towers.\n\nWalk the eastern edge and you'll find five square plazas paved like quilt squares — the Quilt Plazas, each stitched to a different memory of that summer. One holds the story of the bid itself: a local lawyer named Billy Payne talked the world into bringing the Games to Atlanta, an idea his own city initially found improbable. Another, the Quilt of Remembrance, is the hard one — it keeps a light burning for Alice Hawthorne, killed when a bomb went off in this park on a July night in 1996, a night remembered now alongside Richard Jewell, the security guard wrongly suspected in public after he had in fact spotted the bag and moved people away from it.\n\nThe park's other legacy is quieter and bigger. To host the world, Atlanta remade whole blocks — and the remaking had an address book. Techwood Homes, the first public housing built in the United States, stood a short walk north of here; it became the Olympic Village, and afterward a mixed-income neighborhood where only seventy-eight of the original residents ever returned. Every host city buys its renovation with somebody's move, and Atlanta signed that deal in plain sight.\n\nSo the honest reading of this park is both things at once. The gamble worked — though on a thirty-year delay, since almost everything gleaming around you arrived a decade or more after the flame left. And the bill was real, and specific, and mostly paid by people who never saw a closing ceremony.\n\nStand by the rings a moment. When the fountain runs, the water rises and falls exactly where the world once stood — and the children playing in it now are the one renovation nobody argues about."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7603,
+      "centroidLongitude": -84.3931,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Park",
+        "History",
+        "Free to Visit",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "85b3d187-9d43-5927-9a09-7449eb23a53b",
+      "createdAt": "2026-09-14",
+      "title": "Fox Theatre",
+      "shortDescription": "Nobody built this to be a theater. The Shriners built it to be a Shriners' temple, and then they ran out of money.",
+      "longDescription": "The Yaarab Temple Shriners had five thousand members and an appetite for a headquarters, and in the late twenties they commissioned this at a price that ran to about two and three-quarter million dollars — which was more than they had. So they leased the auditorium to a movie man named William Fox and stayed on as tenants in their own building, paying rent here until 1949. Olivier Vinour, of Marye, Alger and Vinour, drew it. It opened on Christmas Day, 1929, two months after the stock market crashed, and by 1932 it had gone bankrupt. Inside — and you should get inside, on a tour or for a show — the auditorium is built as a Moorish courtyard under an open sky: false parapets, a canvas awning, and a ceiling of small bulbs shining through crystals to make stars. Roughly forty-six hundred seats, and an organ with more than three thousand pipes that can imitate a locomotive whistle.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fox-theatre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fox-theatre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fox-theatre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fox-theatre_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7ac106b2-3a0d-5d23-ac3d-8a267968459c",
+          "order": 0,
+          "title": "Fox Theatre",
+          "caption": "Stand on the west sidewalk of Peachtree, at Ponce de Leon, with the whole front of the building across from you: a city block of buff and cream striping, arched doorways, onion domes and minarets, with a marquee bolted onto…",
+          "latitude": 33.7724,
+          "longitude": -84.3852,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fox-theatre.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fox-theatre_hero.webp",
+          "transcriptText": "Nobody built this to be a theater. The Shriners built it to be a Shriners' temple, and then they ran out of money.\n\nStand on the west sidewalk of Peachtree, at Ponce de Leon, with the whole front of the building across from you: a city block of buff and cream striping, arched doorways, onion domes and minarets, with a marquee bolted onto the front of it.\n\nTake the minarets first.\n\nThe Yaarab Temple Shriners had five thousand members and an appetite for a headquarters, and in the late twenties they commissioned this at a price that ran to about two and three-quarter million dollars — which was more than they had. So they leased the auditorium to a movie man named William Fox and stayed on as tenants in their own building, paying rent here until 1949. Olivier Vinour, of Marye, Alger and Vinour, drew it. It opened on Christmas Day, 1929, two months after the stock market crashed, and by 1932 it had gone bankrupt.\n\nInside — and you should get inside, on a tour or for a show — the auditorium is built as a Moorish courtyard under an open sky: false parapets, a canvas awning, and a ceiling of small bulbs shining through crystals to make stars. Roughly forty-six hundred seats, and an organ with more than three thousand pipes that can imitate a locomotive whistle.\n\nNow the part that matters. In 1974, Southern Bell offered to buy the Fox and take it down for a parking deck.\n\nWhat happened next is most of the reason Atlanta has a preservation movement at all. A campaign called Save the Fox went public and got loud — benefit concerts, Liberace on one bill and Lynyrd Skynyrd on another, a fundraising drive that reached ordinary people who had never bought a ticket here. The city refused to issue the demolition permit. A deal got cut: the phone company put its tower up next door instead, a nonprofit bought the theater in 1975, and the mortgage was clear by 1978. This city has taken down a great deal of itself, and mostly nobody stopped it. Here, once, somebody did — and this is what winning looks like."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7724,
+      "centroidLongitude": -84.3852,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Architecture",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2827b9b3-1e5f-5303-b12d-0ce3d55b52ac",
+      "createdAt": "2026-09-14",
+      "title": "Ponce City Market",
+      "shortDescription": "For fifty years, nothing that arrived at this building was meant to stay in it.",
+      "longDescription": "Behind it, out of sight, the BeltLine crosses. When this opened in 1926 it was a Sears, Roebuck mail-order house — about two million square feet of floor, most of it a machine for filling catalog orders across the Southeast. Everything else in here was headed out the back, in a box, to somebody's farm. Sears closed the store in 1979 and was gone by 1987. In 1990 the city bought it for twelve million dollars, moved police and fire offices into one corner, and called the whole thing City Hall East. For twenty years a building this size sat mostly as empty rooms with a municipal parking permit taped to the glass. The city sold it in 2011 for twenty-seven million, and the market opened in 2014. It was built to send things away from Atlanta, it now exists to bring Atlanta to it, and it turned a hundred years old this month without altering a brick to manage the switch.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ponce-city-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ponce-city-market_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fb46f90a-45ae-5393-8cd4-c768ee5efadc",
+          "order": 0,
+          "title": "Ponce City Market",
+          "caption": "Stand on the north side of Ponce de Leon Avenue, on the sidewalk, far enough back to take in the whole face of it: brick running most of a city block, a tower at the western end, arched windows at street level, the sign up on…",
+          "latitude": 33.7722,
+          "longitude": -84.3656,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ponce-city-market.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ponce-city-market_hero.webp",
+          "transcriptText": "For fifty years, nothing that arrived at this building was meant to stay in it.\n\nStand on the north side of Ponce de Leon Avenue, on the sidewalk, far enough back to take in the whole face of it: brick running most of a city block, a tower at the western end, arched windows at street level, the sign up on the roof. Behind it, out of sight, the BeltLine crosses.\n\nTwo things about the front of it.\n\nFirst, the size is not decoration. When this opened in 1926 it was a Sears, Roebuck mail-order house — about two million square feet of floor, most of it a machine for filling catalog orders across the Southeast. The store on Ponce was the small part. Everything else in here was headed out the back, in a box, to somebody's farm.\n\nSecond, what came after. Sears closed the store in 1979 and was gone by 1987. In 1990 the city bought it for twelve million dollars, moved police and fire offices into one corner, and called the whole thing City Hall East. For twenty years a building this size sat mostly as empty rooms with a municipal parking permit taped to the glass. The city sold it in 2011 for twenty-seven million, and the market opened in 2014.\n\nThe building itself never changed. What changed is the direction it faces. It was built to send things away from Atlanta, it now exists to bring Atlanta to it, and it turned a hundred years old this month without altering a brick to manage the switch.\n\nOne thing to carry with you, because it follows this corridor the whole way around. Atlanta BeltLine Incorporated counts four thousand four hundred and twenty-five affordable homes built or preserved against a goal of five thousand six hundred by 2030. Dan Immergluck, who studies housing at Georgia State, counts something different: prices along the corridor rose faster than prices away from it, and they started rising years before most of those homes existed. Both counts are accurate, and what they add up to is still being argued here.\n\nGo in when you're ready; the food hall is the obvious move, and a good one. But stay out here a minute first. A hundred years of this building's life happened before anybody thought to invite the public in, and the wall in front of you is the same wall."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7722,
+      "centroidLongitude": -84.3656,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "92fe323e-ccd1-5aea-ac88-c0edbf98c1ee",
+      "createdAt": "2026-09-14",
+      "title": "Jackson Street Bridge",
+      "shortDescription": "This bridge gets photographed constantly, and almost none of the reason is the bridge.",
+      "longDescription": "Downtown is directly ahead of you — the whole cluster of it, stacked and unobstructed, close enough to pick out individual towers. Under your feet, the interstate, running in a trench wide enough that it takes a moment to look across. The view is genuinely good, and it's good for one specific reason: nothing is in the way. Most cities can't hand you a clean frontal sightline to their own skyline from half a mile out, because most cities have several hundred buildings in between. The ditch is the Downtown Connector, where two interstates run through the middle of town as a single road, and it was cut through occupied blocks in the 1950s and 60s. The gap it opened is the gap you're photographing. This bridge is simply the place where a sidewalk happens to cross that gap at the right angle.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jackson-street-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jackson-street-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jackson-street-bridge_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jackson-street-bridge_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ccf7b49a-9a26-5e37-beee-81bdaf12378c",
+          "order": 0,
+          "title": "Jackson Street Bridge",
+          "caption": "Get yourself somewhere near the middle of the span, on the sidewalk, facing southwest.",
+          "latitude": 33.7579,
+          "longitude": -84.3696,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jackson-street-bridge.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jackson-street-bridge_hero.webp",
+          "transcriptText": "This bridge gets photographed constantly, and almost none of the reason is the bridge.\n\nGet yourself somewhere near the middle of the span, on the sidewalk, facing southwest. Downtown is directly ahead of you — the whole cluster of it, stacked and unobstructed, close enough to pick out individual towers. Under your feet, the interstate, running in a trench wide enough that it takes a moment to look across.\n\nThe view first, then what's holding it up.\n\nThe view is genuinely good, and it's good for one specific reason: nothing is in the way. Most cities can't hand you a clean frontal sightline to their own skyline from half a mile out, because most cities have several hundred buildings in between. Atlanta has a ditch.\n\nThe ditch is the Downtown Connector, where two interstates run through the middle of town as a single road, and it was cut through occupied blocks in the 1950s and 60s. The gap it opened is the gap you're photographing. This bridge is simply the place where a sidewalk happens to cross that gap at the right angle.\n\nThe rest of the fame arrived later, and it arrived through a camera. The pilot of a zombie series shot its empty-Atlanta sequence up here in 2010, and the shot has been re-staged by strangers ever since — most of them, understandably, with no particular interest in what's underneath them.\n\nSo this is a viewing platform that nobody designed as one, aimed at a skyline that is only this visible because a neighborhood isn't.\n\nThe city has finally conceded what the bridge is actually for. There's work underway to widen the walking area, add a protected bike lane, put in planters and some seating — around six hundred thousand dollars, timed to land before the World Cup summer. If it's done by the time you get here, what you'll mostly notice is that you're no longer standing in traffic to take the picture.\n\nEither way, give it a few minutes. The light gets better the later you leave it, and the trucks below never stop, and after a while you start hearing the view instead of just looking at it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7579,
+      "centroidLongitude": -84.3696,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Bridge",
+        "History",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ecdca9fd-4b78-56c7-91e6-70085a1d8018",
+      "createdAt": "2026-09-14",
+      "title": "Piedmont Park & Lake Clara Meer",
+      "shortDescription": "Almost everything built here was designed to be thrown away.",
+      "longDescription": "In 1895 Piedmont Park was a world's fair. The Cotton States and International Exposition ran for a hundred days and drew something like eight hundred thousand people, and nearly every hall put up for it — Georgia pine with moss-green roofs, a Woman's Building, a Machinery Hall, a Ferris wheel on the midway — came down again afterward. If you can see them reflected, you're in the right place. It's about twelve acres of hole that somebody dug for the fair, filled, and lit with a colored electric fountain — electricity being, in 1895, a thing worth buying a ticket to look at. The terraces, the granite steps and the shape of the ground around you are fair leftovers too. The city bought the grounds in 1904 and made them a public park, and the Olmsted firm was brought in about a decade later to shape what came next.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piedmont-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piedmont-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piedmont-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piedmont-park_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piedmont-park_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5763797d-7bb5-564d-936f-89f8ad642cc7",
+          "order": 0,
+          "title": "Piedmont Park & Lake Clara Meer",
+          "caption": "You want the path along the north edge of the lake, with the Midtown towers standing up behind the water.",
+          "latitude": 33.785,
+          "longitude": -84.373,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piedmont-park.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piedmont-park_hero.webp",
+          "transcriptText": "Almost everything built here was designed to be thrown away.\n\nIn 1895 Piedmont Park was a world's fair. The Cotton States and International Exposition ran for a hundred days and drew something like eight hundred thousand people, and nearly every hall put up for it — Georgia pine with moss-green roofs, a Woman's Building, a Machinery Hall, a Ferris wheel on the midway — came down again afterward.\n\nYou want the path along the north edge of the lake, with the Midtown towers standing up behind the water. If you can see them reflected, you're in the right place.\n\nHead for the water.\n\nLake Clara Meer isn't a lake. It's about twelve acres of hole that somebody dug for the fair, filled, and lit with a colored electric fountain — electricity being, in 1895, a thing worth buying a ticket to look at. The terraces, the granite steps and the shape of the ground around you are fair leftovers too. The city bought the grounds in 1904 and made them a public park, and the Olmsted firm was brought in about a decade later to shape what came next.\n\nOne building at that fair outlasted the rest in argument, if not in lumber. The Negro Building was the first hall at a major American exposition given over entirely to Black exhibits — built by Black contractors, filled with work from Atlanta University, Spelman, Morehouse, Howard and Tuskegee. And on the fair's opening day, Booker T. Washington gave the speech that made him nationally famous, arguing that Black advancement should come through work and skill rather than through demands for social equality.\n\nPeople have been arguing about that speech ever since. W.E.B. Du Bois, who moved to Atlanta two years later, came to read it as an acceptance of inferiority. Others have read it as the only sayable thing, in that room, in that year, to that audience. The argument has never closed, and this ground is where it opened.\n\nThe fair lasted a hundred days. The lake is still here. The argument is still here. The building the argument started in is gone — which is a fairly Atlanta set of things to survive."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.785,
+      "centroidLongitude": -84.373,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "Free to Visit",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1d2b75ab-7646-5a36-827b-a0e70f6fb084",
+      "createdAt": "2026-09-14",
+      "title": "Oakland Cemetery",
+      "shortDescription": "Twenty-seven of this city's mayors are buried behind this wall.",
+      "longDescription": "So are six governors of Georgia, and a fair number of the people Atlanta named things after. The tower just inside, with the steep roof, went up three years later and was the sexton's house before it was an office. Oakland opened in 1850 as six acres called Atlanta Cemetery and grew to forty-eight. Something like seventy thousand people are in here. By 1884 every ordinary plot had been sold, which is why the city stopped burying most of its dead here well over a century ago. It was laid out as a garden cemetery, meant to be walked in, at a time when Atlanta had almost nothing else of the kind. Inside, toward the south, are the African American Grounds. People were buried there under segregation, in a section set apart, and many of the markers were wood, so many of the graves are unmarked today. She founded Georgia's first orphanage for Black children, and then ran it.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oakland-cemetery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oakland-cemetery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oakland-cemetery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oakland-cemetery_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oakland-cemetery_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oakland-cemetery_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8d2db8e8-8b08-592f-a479-4627b577aae6",
+          "order": 0,
+          "title": "Oakland Cemetery",
+          "caption": "Stand at the Memorial Drive gate, with the brick wall running off in both directions and the downtown towers over your shoulder.",
+          "latitude": 33.7492,
+          "longitude": -84.3719,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/oakland-cemetery.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oakland-cemetery_hero.webp",
+          "transcriptText": "Twenty-seven of this city's mayors are buried behind this wall. So are six governors of Georgia, and a fair number of the people Atlanta named things after.\n\nStand at the Memorial Drive gate, with the brick wall running off in both directions and the downtown towers over your shoulder. The wall and the gates date to 1896. The tower just inside, with the steep roof, went up three years later and was the sexton's house before it was an office.\n\nGive this a minute.\n\nOakland opened in 1850 as six acres called Atlanta Cemetery and grew to forty-eight. Something like seventy thousand people are in here. By 1884 every ordinary plot had been sold, which is why the city stopped burying most of its dead here well over a century ago. It was laid out as a garden cemetery, meant to be walked in, at a time when Atlanta had almost nothing else of the kind.\n\nInside, toward the south, are the African American Grounds. People were buried there under segregation, in a section set apart, and many of the markers were wood, so many of the graves are unmarked today. Carrie Steele Logan is in that ground. She founded Georgia's first orphanage for Black children, and then ran it.\n\nThen there's what isn't here. From 1894 until a few years ago, a marble lion lay on the grass in the Confederate section, carved by a sculptor named Brady for the Ladies Memorial Association, marking the graves of unknown Confederate dead. After repeated vandalism, the city removed it in August of 2021. One argument held that a marker over unknown graves belongs with the graves. Another held that a Confederate monument in a public cemetery honors a cause rather than the men under it. The city took it out; it has not been on public display since; the ground where it lay is sod. The sixty-five-foot obelisk a short walk away, raised in 1874, is still standing.\n\nThat's the city's habit, and once you've noticed it you'll see it everywhere. Atlanta rarely keeps a thing where it is and rarely destroys it outright. It moves it — and sometimes doesn't say where.\n\nThe gate is open through the day and you can walk in. People run in here, which sounds wrong for about ten seconds, until you're inside and realize it's the largest quiet ground for a mile in any direction."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7492,
+      "centroidLongitude": -84.3719,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Remembrance",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7ee0901d-52a2-5b65-94a5-f074a348476c",
+      "createdAt": "2026-09-14",
+      "title": "Mercedes-Benz Stadium",
+      "shortDescription": "The building that stood on this ground before this one lasted twenty-five years.",
+      "longDescription": "The Georgia Dome opened in 1992, held two Super Bowls and part of an Olympic Games, and was brought down with explosives in November of 2017, three months after this stadium opened beside it. The park on its footprint opened the following year. A Black working-class neighborhood, roughly between Vine City and downtown, and it came apart in stages rather than all at once: the Georgia World Congress Center began acquiring blocks here in 1973, and the Dome finished the job about twenty years later. There is a historical marker on this site for the Georgia Dome. The last pieces to go were two churches. Mount Vernon Baptist sold for something close to fifteen. The ground gets cleared for events, and each time, what goes up is larger, costs more and lasts less time than the thing it replaced. The neighborhood outlasted the dome that replaced it by decades.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercedes-benz-stadium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercedes-benz-stadium_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercedes-benz-stadium_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "147c7c17-5527-5869-8549-ed52d1474a98",
+          "order": 0,
+          "title": "Mercedes-Benz Stadium",
+          "caption": "Stand on the plaza on the north side of Mercedes-Benz Stadium, Northside Drive behind you.",
+          "latitude": 33.7555,
+          "longitude": -84.4008,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mercedes-benz-stadium.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercedes-benz-stadium_hero.webp",
+          "transcriptText": "The building that stood on this ground before this one lasted twenty-five years.\n\nStand on the plaza on the north side of Mercedes-Benz Stadium, Northside Drive behind you. Look for the open lawn along the side of the building — about thirteen acres of grass, with a walking path around the edge of it. That lawn is a footprint.\n\nTwo minutes, facing north.\n\nThe Georgia Dome opened in 1992, held two Super Bowls and part of an Olympic Games, and was brought down with explosives in November of 2017, three months after this stadium opened beside it. The park on its footprint opened the following year.\n\nBefore the Dome, this was Lightning. A Black working-class neighborhood, roughly between Vine City and downtown, and it came apart in stages rather than all at once: the Georgia World Congress Center began acquiring blocks here in 1973, and the Dome finished the job about twenty years later. There is a historical marker on this site for the Georgia Dome. It does not mention Lightning.\n\nThe last pieces to go were two churches. Friendship Baptist, founded in 1862 and standing on Mitchell Street since the 1870s, sold for just under twenty million dollars. Mount Vernon Baptist sold for something close to fifteen. Both buildings came down in 2014. Both congregations are still meeting, in newer buildings, a few miles from where you're standing.\n\nWhich is the shape of this whole site. The ground gets cleared for events, and each time, what goes up is larger, costs more and lasts less time than the thing it replaced. The neighborhood outlasted the dome that replaced it by decades. In 2026 this stadium held eight World Cup matches, thirty years after the games that rebuilt the far end of downtown — the same instinct, thirty years apart, at the two ends of the same downtown.\n\nThe lawn is the honest part of the site, if you want one. It's the only piece of this ground not holding anything up, and on a weekday afternoon it's mostly people eating lunch on grass that used to be a street with an address."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7555,
+      "centroidLongitude": -84.4008,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Engineering"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d91b27a6-b1ba-5a7f-839d-b0696510b3ea",
+      "createdAt": "2026-09-14",
+      "title": "Historic Fourth Ward Park",
+      "shortDescription": "The requirement was four million gallons. Everything you're looking at came second.",
+      "longDescription": "Below you: the reeds along the edge, a path running the whole way around. Behind you, if you came from Ponce de Leon Avenue, the long brick side of the Sears building. Clear Creek runs under this neighborhood in a pipe, and has for well over a century, and when enough rain falls the pipe stops behaving like one and the ward floods. The city's answer, drawn up in the early nineties, was a storage tunnel — dig a hole nobody would ever see and pipe the overflow into it. What got built instead is what you're sitting in. Same job: the pond takes on up to four million gallons and lets it out slowly. Around twenty-three million dollars, which left something like seventeen million on the table and produced seventeen acres of park.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/historic-fourth-ward-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/historic-fourth-ward-park_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c7087613-908b-546a-b46f-5c6631deb250",
+          "order": 0,
+          "title": "Historic Fourth Ward Park",
+          "caption": "Find a spot on the grass steps above the pond, facing the water.",
+          "latitude": 33.7668,
+          "longitude": -84.3666,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/historic-fourth-ward-park.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/historic-fourth-ward-park_hero.webp",
+          "transcriptText": "The requirement was four million gallons. Everything you're looking at came second.\n\nFind a spot on the grass steps above the pond, facing the water. Below you: the reeds along the edge, a path running the whole way around. Past that, the skyline. Behind you, if you came from Ponce de Leon Avenue, the long brick side of the Sears building.\n\nWork outward from the water.\n\nClear Creek runs under this neighborhood in a pipe, and has for well over a century, and when enough rain falls the pipe stops behaving like one and the ward floods. The city's answer, drawn up in the early nineties, was a storage tunnel — dig a hole nobody would ever see and pipe the overflow into it. Roughly forty million dollars.\n\nWhat got built instead is what you're sitting in. Same job: the pond takes on up to four million gallons and lets it out slowly. Around twenty-three million dollars, which left something like seventeen million on the table and produced seventeen acres of park. The first phase opened in 2011.\n\nThat's the whole argument of this place, and it isn't a sentimental one: the nicer answer was also the cheaper one. Cities are rarely handed that choice, and this one nearly didn't take it.\n\nOne more thing about this ground. In 1917 a fire ran north through here and burned a large piece of the ward out, and the city rebuilt without ever making a story of it. Atlanta has a myth about the other fire; it never built one out of this. What it eventually put here, a century on, was a hole dug on purpose to hold water.\n\nOne thing to carry with you, because it follows this corridor the whole way around. Atlanta BeltLine Incorporated counts four thousand four hundred and twenty-five affordable homes built or preserved against a goal of five thousand six hundred by 2030. Dan Immergluck, who studies housing at Georgia State, counts something different: prices along the corridor rose faster than prices away from it, and they started rising years before most of those homes existed. Both counts are accurate, and what they add up to is still being argued here.\n\nCome back in a real storm sometime. The pond fills, the low path goes under, and the whole thing does precisely what it was drawn to do. Not many parks have a job."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7668,
+      "centroidLongitude": -84.3666,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Engineering",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "36419894-2689-50ee-a394-e17fab71198d",
+      "createdAt": "2026-09-14",
+      "title": "Krog Street Tunnel",
+      "shortDescription": "There's one rule in here, and nobody wrote it down.",
+      "longDescription": "This is Krog Street, and it runs under a working rail yard, which is the only reason the tunnel exists: the road needed to cross the tracks, and the tracks weren't moving. Behind you on the west is Cabbagetown; east of you, Reynoldstown and Inman Park. The tunnel was cut just before the First World War, for freight, and has done that dull job ever since. It has also been, for about forty years, a wall the neighborhood repaints constantly. I'll leave it at that, because whatever is on these walls today won't be by the time this recording is a year old, and describing it would be a way of lying. The impermanence isn't a flaw the tunnel has; it's the arrangement. The walls belong to whoever showed up last, which means they belong to nobody — a difficult thing for a city to leave alone.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/krog-street-tunnel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/krog-street-tunnel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/krog-street-tunnel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/krog-street-tunnel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/krog-street-tunnel_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7aeee9ff-c579-5d1d-817e-4b5d0a7bd34d",
+          "order": 0,
+          "title": "Krog Street Tunnel",
+          "caption": "Stand at one of the two mouths — better, a few steps inside, where the daylight stops and your own footsteps change.",
+          "latitude": 33.7541,
+          "longitude": -84.3632,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/krog-street-tunnel.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/krog-street-tunnel_hero.webp",
+          "transcriptText": "There's one rule in here, and nobody wrote it down. Nothing stays.\n\nStand at one of the two mouths — better, a few steps inside, where the daylight stops and your own footsteps change. This is Krog Street, and it runs under a working rail yard, which is the only reason the tunnel exists: the road needed to cross the tracks, and the tracks weren't moving. Behind you on the west is Cabbagetown; east of you, Reynoldstown and Inman Park.\n\nWalk in before you decide anything about it.\n\nThe tunnel was cut just before the First World War, for freight, and has done that dull job ever since. It has also been, for about forty years, a wall the neighborhood repaints constantly. I'll leave it at that, because whatever is on these walls today won't be by the time this recording is a year old, and describing it would be a way of lying.\n\nThe impermanence isn't a flaw the tunnel has; it's the arrangement. The walls belong to whoever showed up last, which means they belong to nobody — a difficult thing for a city to leave alone.\n\nIn October 2014 somebody tried not to. A private, ticketed party was permitted down here over the local planning unit's objection, and the night before, roughly a hundred people came with rollers and gray paint and covered it end to end. By morning there was nothing to sell tickets to. Within days it had started coming back.\n\nThat's the clearest thing anyone has said about this place, and it was said by erasing it.\n\nOne thing to carry with you, because it follows this corridor the whole way around. Atlanta BeltLine Incorporated counts four thousand four hundred and twenty-five affordable homes built or preserved against a goal of five thousand six hundred by 2030. Dan Immergluck, who studies housing at Georgia State, counts something different: prices along the corridor rose faster than prices away from it, and they started rising years before most of those homes existed. Both counts are accurate, and what they add up to is still being argued here.\n\nThis tunnel floods, and closes without warning for stormwater work. If you find it shut, walk up to the edge of the yard — the view along the tracks explains why the road had to go under. And whatever you did see in here, take the picture. It won't be there long."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7541,
+      "centroidLongitude": -84.3632,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "District",
+        "Art",
+        "Public Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e8173443-3ffd-5073-8ef0-cc17113437cf",
+      "createdAt": "2026-09-14",
+      "title": "BeltLine Eastside Trail",
+      "shortDescription": "Notice what your legs aren't doing. Be on the Eastside Trail itself, anywhere between Ponce de Leon Avenue and North Avenue, with the cut walls…",
+      "longDescription": "Be on the Eastside Trail itself, anywhere between Ponce de Leon Avenue and North Avenue, with the cut walls rising on either side and street bridges crossing overhead. A loaded freight train can climb almost nothing, so the men who cut this line through the city in the late 1800s took the hills out, and the trail inherited the result. You are walking on somebody's decision about torque. Which is, more or less, Atlanta's biography. No river worth the name, no harbor, no fort — the place began as a mark on a map where a railroad was meant to end, and has taken its shape from track ever since. Four freight lines, built by four companies for four unrelated reasons, happened to trace a rough ring around the city center.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beltline-eastside-trail_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beltline-eastside-trail_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beltline-eastside-trail_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beltline-eastside-trail_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beltline-eastside-trail_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0801cb23-e294-50fc-bd15-8d07c667620e",
+          "order": 0,
+          "title": "BeltLine Eastside Trail",
+          "caption": "Look up at one, then back down at the ground you're on.",
+          "latitude": 33.7719,
+          "longitude": -84.3642,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/beltline-eastside-trail.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beltline-eastside-trail_hero.webp",
+          "transcriptText": "Notice what your legs aren't doing.\n\nBe on the Eastside Trail itself, anywhere between Ponce de Leon Avenue and North Avenue, with the cut walls rising on either side and street bridges crossing overhead. Look up at one, then back down at the ground you're on. The streets go up and down. This doesn't.\n\nEverything here used to be one thing.\n\nThat flatness isn't landscaping. It's a railroad grade. A loaded freight train can climb almost nothing, so the men who cut this line through the city in the late 1800s took the hills out, and the trail inherited the result. You are walking on somebody's decision about torque.\n\nWhich is, more or less, Atlanta's biography. No river worth the name, no harbor, no fort — the place began as a mark on a map where a railroad was meant to end, and has taken its shape from track ever since. Four freight lines, built by four companies for four unrelated reasons, happened to trace a rough ring around the city center. Nobody planned the ring. It was a leftover.\n\nIn 1999 a Georgia Tech graduate student named Ryan Gravel wrote a master's thesis proposing the leftover become a loop of transit and parks — twenty-two miles of it — then mailed copies to people who could do something about it. The piece you're standing on, the Eastside Trail, opened in 2012. Close to seventeen of those twenty-two miles are continuous now, with the rest scheduled by 2030.\n\nSo Atlanta's newest public space is, for something like the fourth time, a railroad.\n\nOne thing to carry with you, because it follows this corridor the whole way around. Atlanta BeltLine Incorporated counts four thousand four hundred and twenty-five affordable homes built or preserved against a goal of five thousand six hundred by 2030. Dan Immergluck, who studies housing at Georgia State, counts something different: prices along the corridor rose faster than prices away from it, and they started rising years before most of those homes existed. Both counts are accurate, and what they add up to is still being argued here.\n\nKeep going whichever way you were headed. The grade stays flat, the walls drop away, and somewhere in the next mile you'll pass over a street you've driven a hundred times and never once seen from above. That's the trade the railroad made with this city, and you've inherited a piece of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7719,
+      "centroidLongitude": -84.3642,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "District",
+        "Engineering",
+        "Free to Visit",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3220af15-815a-5f5c-b976-9c9be5dba3f3",
+      "createdAt": "2026-09-14",
+      "title": "The Temple",
+      "shortDescription": "In 1947, on the holiest day of the Jewish year, the rabbi of this congregation stood up in front of it and said segregation was wrong.",
+      "longDescription": "Eleven years later, somebody bombed the building. Philip Trammell Shutze designed it; it opened in 1931. The congregation is much older than the building. The Hebrew Benevolent Congregation was organized in 1867, which makes it Atlanta's first Jewish institution, and by the early twentieth century it was prosperous, established, and extremely careful. In 1913 a member of this congregation, Leo Frank, was convicted of the murder of thirteen-year-old Mary Phagan in a trial saturated with antisemitism, and in 1915, after his sentence was commuted, he was taken from custody and lynched. Georgia issued a pardon in 1986 — a procedural one, for the state's failure to protect him. It was not a finding that he was innocent.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-temple_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-temple_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-temple_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-temple_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5ea95317-0c2c-5c3a-ac96-d6a8527121b0",
+          "order": 0,
+          "title": "The Temple",
+          "caption": "You're on Peachtree Street, north of the arts center, in front of a wide limestone temple set back behind a lawn — columns across the front, a broad flat face, the whole thing pale and horizontal where everything near it is…",
+          "latitude": 33.7902,
+          "longitude": -84.3861,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-temple.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-temple_hero.webp",
+          "transcriptText": "In 1947, on the holiest day of the Jewish year, the rabbi of this congregation stood up in front of it and said segregation was wrong. Eleven years later, somebody bombed the building.\n\nYou're on Peachtree Street, north of the arts center, in front of a wide limestone temple set back behind a lawn — columns across the front, a broad flat face, the whole thing pale and horizontal where everything near it is vertical. Philip Trammell Shutze designed it; it opened in 1931.\n\nRead the front of it.\n\nThe congregation is much older than the building. The Hebrew Benevolent Congregation was organized in 1867, which makes it Atlanta's first Jewish institution, and by the early twentieth century it was prosperous, established, and extremely careful. It had reason to be. In 1913 a member of this congregation, Leo Frank, was convicted of the murder of thirteen-year-old Mary Phagan in a trial saturated with antisemitism, and in 1915, after his sentence was commuted, he was taken from custody and lynched. Georgia issued a pardon in 1986 — a procedural one, for the state's failure to protect him. It was not a finding that he was innocent.\n\nAfter that, this congregation kept its head down for a generation. Then Jacob Rothschild took the pulpit, and didn't.\n\nHe preached against segregation from 1947 onward. After Little Rock, he helped write the Ministers' Manifesto, which asked white Atlanta clergy for communication between the races and obedience to the law. On the twelfth of October, 1958, the Temple was bombed. Nobody was inside. Five men were arrested; one was tried twice and acquitted, and no one was ever convicted of it.\n\nThe response came fast and it came from everywhere — the mayor, business leaders, churches, and a great many people who had never once been inside this building. Other congregations offered their own buildings to a congregation that suddenly didn't have one. Ralph McGill wrote a front-page editorial about it the same morning, and won a Pulitzer the following year. Rothschild kept this pulpit for another fifteen years. What you're standing in front of is a congregation that learned precisely what visibility costs, and then chose it a second time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7902,
+      "centroidLongitude": -84.3861,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5d496a49-e919-5a0e-9062-858447a49eb4",
+      "createdAt": "2026-09-14",
+      "title": "High Museum & Woodruff Arts",
+      "shortDescription": "This stop starts at an airport outside Paris.",
+      "longDescription": "On the third of June, 1962, a chartered jet carrying a tour group home from a month of European museums crashed on takeoff at Orly. One hundred and six of the dead were Atlantans — the core of the city's art association, the people who ran it, funded it, and had spent decades trying to build Atlanta a museum worth the name. Thirty-three children lost both parents on the same afternoon. What the city did next is why this campus exists. The Memorial Arts Center broke ground on the fourth anniversary, to the day, and opened in 1968 — one complex holding a museum, a symphony, a theater and a school, built as a memorial to the people who had died trying to get a museum built. The French government sent a casting of Rodin's The Shade as a gesture of sympathy. It stands out here on the grounds: a bronze figure bent forward, head turned down and away.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/high-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/high-museum_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f211b698-c2df-5f54-a7ee-5b5b5f618ed3",
+          "order": 0,
+          "title": "High Museum & Woodruff Arts",
+          "caption": "You're on the Peachtree Street sidewalk in front of the Woodruff Arts Center, with the white porcelain-paneled museum to your north and the darker concrete of the theater and the symphony hall beside it.",
+          "latitude": 33.7902,
+          "longitude": -84.3852,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/high-museum.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/high-museum_hero.webp",
+          "transcriptText": "This stop starts at an airport outside Paris.\n\nOn the third of June, 1962, a chartered jet carrying a tour group home from a month of European museums crashed on takeoff at Orly. One hundred and six of the dead were Atlantans — the core of the city's art association, the people who ran it, funded it, and had spent decades trying to build Atlanta a museum worth the name. Thirty-three children lost both parents on the same afternoon.\n\nYou're on the Peachtree Street sidewalk in front of the Woodruff Arts Center, with the white porcelain-paneled museum to your north and the darker concrete of the theater and the symphony hall beside it.\n\nRight.\n\nWhat the city did next is why this campus exists. The Memorial Arts Center broke ground on the fourth anniversary, to the day, and opened in 1968 — one complex holding a museum, a symphony, a theater and a school, built as a memorial to the people who had died trying to get a museum built. The French government sent a casting of Rodin's The Shade as a gesture of sympathy. It stands out here on the grounds: a bronze figure bent forward, head turned down and away. Walk over to it.\n\nThe museum's name comes from further back still. In 1926 a woman named Harriet High handed the art association her family's house on Peachtree to use as a gallery, and the institution has carried her surname ever since — which is why Atlanta's art museum is named for a person almost nobody can tell you anything else about.\n\nThe building you actually see came later. Richard Meier's white museum opened in 1983, and Renzo Piano's addition in 2005 more than doubled it — which is why this complex reads as three or four different arguments about what a museum should look like, all standing next to each other and not agreeing.\n\nMost American cities got their art museum from one wealthy family, or one industrialist's second thoughts, or a world's fair. Atlanta got this one because a plane went off a runway in France, and a city decided the response was to finish what those people had started. That's an unusual thing to build a cultural district out of, and it's why the word Memorial was in the original name."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7902,
+      "centroidLongitude": -84.3852,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2f2539f4-587f-5cd4-8f67-73f68fa4c24e",
+      "createdAt": "2026-09-14",
+      "title": "Georgian Terrace",
+      "shortDescription": "In 1935 a woman walked into the lobby behind you and handed a stranger a manuscript she had very nearly not shown him.",
+      "longDescription": "The stranger was Harold Latham, an editor from Macmillan, in town scouting for something to publish. The woman was Peggy Marsh, a former newspaper reporter who wrote under her maiden name, Margaret Mitchell. The stack was unfinished, out of order, and enormous. Gone with the Wind came out the following year and won a Pulitzer. Butter-colored brick with limestone and marble, turreted corners, terraces stacked up the front — William Lee Stoddart designed it to look like it belonged in Paris, and it opened on the second of October, 1911. For its first fifty years this is where Atlanta put the people it wanted to impress. Enrico Caruso and the Metropolitan Opera company made it their headquarters every spring from 1913 on. So did Clark Gable, and Walt Disney, and F. Scott Fitzgerald, who was in and out of Atlanta for years and had opinions about all of it.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgian-terrace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgian-terrace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgian-terrace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgian-terrace_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgian-terrace_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8eea86e4-7889-5eae-8f93-a49e9ba7f2a1",
+          "order": 0,
+          "title": "Georgian Terrace",
+          "caption": "You're on Peachtree at Ponce, east side, across from the Fox.",
+          "latitude": 33.772,
+          "longitude": -84.3855,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/georgian-terrace.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/georgian-terrace_hero.webp",
+          "transcriptText": "In 1935 a woman walked into the lobby behind you and handed a stranger a manuscript she had very nearly not shown him.\n\nThe stranger was Harold Latham, an editor from Macmillan, in town scouting for something to publish. The woman was Peggy Marsh, a former newspaper reporter who wrote under her maiden name, Margaret Mitchell. The stack was unfinished, out of order, and enormous. Gone with the Wind came out the following year and won a Pulitzer.\n\nYou're on Peachtree at Ponce, east side, across from the Fox. Butter-colored brick with limestone and marble, turreted corners, terraces stacked up the front — William Lee Stoddart designed it to look like it belonged in Paris, and it opened on the second of October, 1911.\n\nStep back to the curb.\n\nFor its first fifty years this is where Atlanta put the people it wanted to impress. Enrico Caruso and the Metropolitan Opera company made it their headquarters every spring from 1913 on. Calvin Coolidge stayed here. So did Clark Gable, and Walt Disney, and F. Scott Fitzgerald, who was in and out of Atlanta for years and had opinions about all of it.\n\nAnd on the fifteenth of December, 1939, the Grand Ballroom upstairs held the reception for the premiere of the film — Vivien Leigh, Laurence Olivier, Clark Gable, Margaret Mitchell, and most of white Atlanta's leadership, at the end of three days of parades and parties for a movie about a South that had largely been invented.\n\nThe film's Black cast were at none of it. Hattie McDaniel, who would win an Academy Award for that performance a few months later, did not come to Atlanta. The city was segregated and so was the premiere, and that fact belongs in the same paragraph as the ballroom, not in a footnote under it.\n\nThe hotel closed in 1981 and came back in the nineties with a tower added onto the back. Stand at the curb and you can hold both halves at once: a lobby where a reporter nobody had heard of handed over a manuscript, and a ballroom where, four years later, the party thrown for it had a guest list the city enforced."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.772,
+      "centroidLongitude": -84.3855,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "06c23128-ddce-5c2f-b727-ddd2c286871f",
+      "createdAt": "2026-09-14",
+      "title": "The Flatiron Building",
+      "shortDescription": "The building in front of you is eleven stories of triangle, and at the sharp end there is barely room for a desk.",
+      "longDescription": "Step back far enough and you can see both long sides at once, tapering to the prow. The shape is not a flourish — it's a scar. Downtown Atlanta is what happens when a railroad's curving corridors and a farm town's wagon roads refuse to agree, and where the two systems collide they leave lots like this one: triangular leftovers that only an ambitious architect would touch. Bradford Gilbert, a New Yorker who specialized in early steel-frame towers, raised eleven stories on this scrap of land and called it the English-American Building. Hold the date loosely and the sequence firmly. New York's famous Flatiron — the one on the postcards, the one this building forever gets compared to — went up in 1902. New York got the name and the fame; Atlanta quietly got there first.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2ff35cef-fbbb-5eae-b9d8-a404c20aa6dd",
+          "order": 0,
+          "title": "The Flatiron Building",
+          "caption": "You should be where Peachtree Street meets Broad, looking at a narrow stone wedge that splits the two streets like a ship's bow.",
+          "latitude": 33.7553,
+          "longitude": -84.389,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/atlanta-flatiron.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlanta-flatiron_hero.webp",
+          "transcriptText": "The building in front of you is eleven stories of triangle, and at the sharp end there is barely room for a desk.\n\nYou should be where Peachtree Street meets Broad, looking at a narrow stone wedge that splits the two streets like a ship's bow. Step back far enough and you can see both long sides at once, tapering to the prow.\n\nThe shape is not a flourish — it's a scar. Downtown Atlanta is what happens when a railroad's curving corridors and a farm town's wagon roads refuse to agree, and where the two systems collide they leave lots like this one: triangular leftovers that only an ambitious architect would touch. In the late 1890s one did. Bradford Gilbert, a New Yorker who specialized in early steel-frame towers, raised eleven stories on this scrap of land and called it the English-American Building.\n\nHold the date loosely and the sequence firmly. New York's famous Flatiron — the one on the postcards, the one this building forever gets compared to — went up in 1902. Atlanta's was already standing, watching. New York got the name and the fame; Atlanta quietly got there first.\n\nBut the better story is survival. This is the oldest skyscraper Atlanta has left — and in this particular city, age is not a passive achievement. Atlanta clears its own landmarks the way other cities dust theirs, and nearly everything downtown from this building's generation is gone, replaced once or twice over. A tower from the 1890s still standing on Peachtree Street is not a leftover; it is a survivor of a demolition habit that would have taken it at almost any point in the last century, if the wrong owner had held it at the wrong time.\n\nSo give the little wedge its due. It watched the buildings around it come down and the towers behind you go up; it has outlasted the fame it never got. And the crooked lot lines that made it — the railroad arguing with the wagon roads — are still down there under the asphalt, still refusing to agree, still deciding the shape of everything built on top of them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7553,
+      "centroidLongitude": -84.389,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a4b03a0f-0494-564e-b708-60967e476b45",
+      "createdAt": "2026-09-14",
+      "title": "Candler Building",
+      "shortDescription": "Walk up close to the marble — close enough to see the faces.",
+      "longDescription": "Take your time with the portraits, because some of these faces are the builder's own family. The builder was Asa Candler, and the money was Coca-Cola. Candler had bought the formula for a headache tonic and turned it into a soft-drink empire sold for a nickel a glass, and when he wanted a monument in 1906, he didn't build a bottling plant. He built the tallest tower the city had yet seen, wrapped its base in marble hauled down from the Amicalola hills, and hired a sculptor named F.B. Miles to spend years carving it — science, art, industry, and, in among the allegories, his own parents rendered in stone. A family album, published in marble, on the city's main street.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/candler-building_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4181834e-5648-5747-b9ff-d42eacd62353",
+          "order": 0,
+          "title": "Candler Building",
+          "caption": "You should be at the base of a white seventeen-story tower on Peachtree Street, its lower floors carved like a jewelry box: vines, figures, medallions, and portrait heads worked into north Georgia marble.",
+          "latitude": 33.7582,
+          "longitude": -84.3876,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/candler-building.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/candler-building_hero.webp",
+          "transcriptText": "Walk up close to the marble — close enough to see the faces.\n\nYou should be at the base of a white seventeen-story tower on Peachtree Street, its lower floors carved like a jewelry box: vines, figures, medallions, and portrait heads worked into north Georgia marble. Take your time with the portraits, because some of these faces are the builder's own family.\n\nThe builder was Asa Candler, and the money was Coca-Cola. Candler had bought the formula for a headache tonic and turned it into a soft-drink empire sold for a nickel a glass, and when he wanted a monument in 1906, he didn't build a bottling plant. He built the tallest tower the city had yet seen, wrapped its base in marble hauled down from the Amicalola hills, and hired a sculptor named F.B. Miles to spend years carving it — science, art, industry, and, in among the allegories, his own parents rendered in stone. A family album, published in marble, on the city's main street.\n\nInside went Candler's own bank — the Central Bank and Trust, holding the fortune the tower advertised — along with a grand marble staircase, chandeliers, a pair of Tiffany glass windows, even baths down below — a private economy under one roof: the fortune, the bank that held it, and the family faces guarding the door. A century later the tower became a hotel, the staircase and the Tiffany glass still in place, and the carvings simply switched from advertising a fortune to advertising room rates.\n\nLook closest at how unnecessary all of it is. A steel frame doesn't need vines or portrait medallions; every flourish on this facade is pure announcement. Atlanta's first great fortune wasn't old money and didn't pretend to be — it was syrup and nickels, brand new, and it bought itself the oldest trick in architecture: permanence by decoration. The nickels are long spent. The announcement is still running.\n\nBefore you walk on, pick one face and really look at it. Somebody's mother, somebody's father, carved five stories above a street that has torn down nearly everything else from their lifetime — still here, still watching Peachtree, still part of the pitch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7582,
+      "centroidLongitude": -84.3876,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2dfc0523-e48f-5d4c-98a7-2ae9dee423b0",
+      "createdAt": "2026-09-14",
+      "title": "Hurt Building",
+      "shortDescription": "Thirty feet of this building is missing, and the missing part is the best thing about it.",
+      "longDescription": "Look at the point of the wedge: instead of running out to a knife edge, the tower stops thirty feet short, and the corner opens into a curved, columned entrance with air and daylight around it. The missing footage was a choice, and the man who made it is a name worth keeping: Joel Hurt. An engineer and developer, Hurt had already given the city its first skyscraper — the Equitable Building of 1892, eight stories, the building that taught Atlanta to look up. When he came back to build his masterpiece here in 1913, he owned a prime triangle of downtown land, every square foot of it rentable — and he sliced thirty feet off the sharpest, most visible corner and gave it back to the street, so the intersection could breathe and his tower could meet Five Points with a rounded classical bow instead of a blade.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_8.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_9.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_10.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_11.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_12.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7f7996b1-b92b-5aea-968c-b973f9bb91cd",
+          "order": 0,
+          "title": "Hurt Building",
+          "caption": "You should be at the sharp end of a great stone triangle just east of Five Points, where Edgewood Avenue splits from Exchange Place.",
+          "latitude": 33.7545,
+          "longitude": -84.3862,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hurt-building.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hurt-building_hero.webp",
+          "transcriptText": "Thirty feet of this building is missing, and the missing part is the best thing about it.\n\nYou should be at the sharp end of a great stone triangle just east of Five Points, where Edgewood Avenue splits from Exchange Place. Look at the point of the wedge: instead of running out to a knife edge, the tower stops thirty feet short, and the corner opens into a curved, columned entrance with air and daylight around it.\n\nThe missing footage was a choice, and the man who made it is a name worth keeping: Joel Hurt. An engineer and developer, Hurt had already given the city its first skyscraper — the Equitable Building of 1892, eight stories, the building that taught Atlanta to look up. When he came back to build his masterpiece here in 1913, he owned a prime triangle of downtown land, every square foot of it rentable — and he sliced thirty feet off the sharpest, most visible corner and gave it back to the street, so the intersection could breathe and his tower could meet Five Points with a rounded classical bow instead of a blade. Behind those curved columns sits a domed rotunda three stories high, finished with its original chandelier — a hidden formal heart placed exactly where the building gave up its most valuable ground.\n\nRentable space traded away for civic manners: in any city it would be rare, and in this one it borders on scandalous. Developers here have mostly treated the street as whatever is left over once the floor plate is drawn. Hurt worked the equation backwards, and the proof has stood for over a century.\n\nAs for his first tower, the Equitable — the building that started Atlanta's whole skyward habit — the city knocked it down in 1971. The father of the Atlanta skyscraper survives only in his second draft, the one whose best feature is the part he chose not to build.\n\nSo stand right at the apex, in the thirty feet that isn't there. You're occupying the gift — a small permanent donation of downtown air, made by a man whose other landmark is gone. In Atlanta, what a builder declines to take can outlast everything he builds."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7545,
+      "centroidLongitude": -84.3862,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e770e701-85f3-535b-93e7-01ccda269ad7",
+      "createdAt": "2026-09-14",
+      "title": "Big Bethel A.M.E.",
+      "shortDescription": "Start with a sound you can't hear from out here.",
+      "longDescription": "A full choir, in the room behind this wall, performing a play that people crossed state lines to see. This is an active congregation, so this is an exterior stop; the sidewalk is the vantage. Two words up there, in light: Jesus Saves. They read from a long way off and they have been part of this skyline for generations. The congregation goes back to 1847, when enslaved men and women were permitted to worship at a church called Union Church — which makes this, by most accounts, the oldest Black congregation in Atlanta. They took their own name in the eighteen fifties, joined the AME denomination after emancipation, and built. An earlier building of theirs housed a school for Black children and, in 1881, the beginnings of Morris Brown College.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/big-bethel-ame_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9f29b655-4e9e-575f-95f3-7c5aa25e084f",
+          "order": 0,
+          "title": "Big Bethel A.M.E.",
+          "caption": "You're on Auburn Avenue in front of Big Bethel A.M.E., a Romanesque church in rough-cut stone — arched openings, a corner tower that rises well above anything near it.",
+          "latitude": 33.7547,
+          "longitude": -84.3787,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/big-bethel-ame.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/big-bethel-ame_hero.webp",
+          "transcriptText": "Start with a sound you can't hear from out here. A full choir, in the room behind this wall, performing a play that people crossed state lines to see.\n\nYou're on Auburn Avenue in front of Big Bethel A.M.E., a Romanesque church in rough-cut stone — arched openings, a corner tower that rises well above anything near it. This is an active congregation, so this is an exterior stop; the sidewalk is the vantage.\n\nFind the steeple.\n\nTwo words up there, in light: Jesus Saves. They read from a long way off and they have been part of this skyline for generations. Now the timing.\n\nThe congregation goes back to 1847, when enslaved men and women were permitted to worship at a church called Union Church — which makes this, by most accounts, the oldest Black congregation in Atlanta. They took their own name in the eighteen fifties, joined the AME denomination after emancipation, and built. An earlier building of theirs housed a school for Black children and, in 1881, the beginnings of Morris Brown College.\n\nThen, in 1923, the church burned.\n\nWhat went up afterward is what you're looking at — designed by the architect John Anderson Lankford and built by Alexander Hamilton, both of them Black professionals working in a segregated city. And on top of it, facing outward, in light, a two-word statement of belief. Much of the money was raised by the congregation itself: members wrote a religious folk drama called Heaven Bound, sold tickets to it, and kept performing it year after year, for decades, in and out of the Depression. The room behind that stone has since held Presidents, and Nelson Mandela, and Mary McLeod Bethune, and it is still a working sanctuary on a Sunday morning.\n\nThink about what that takes. Your building is gone. The money is your own congregation's money. You could rebuild quietly and low and nobody on earth would blame you. Instead you put up a tower, and on the tower you put two words in light, aimed at the entire city. That isn't decoration. It's a position, taken at the worst possible moment, in the most visible way available."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7547,
+      "centroidLongitude": -84.3787,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "638ca621-147d-5bcb-b065-732835ffd5be",
+      "createdAt": "2026-09-14",
+      "title": "APEX Museum & Auburn Avenue",
+      "shortDescription": "In 1956, Fortune magazine printed a description of this street.",
+      "longDescription": "It called Auburn Avenue the richest Negro street in the world. Those are the magazine's words, from that year, and they're worth hearing exactly once — because nearly everything else about this block is a response to them. You're in front of the APEX Museum, a low brick storefront in a row of them. The church, the tomb and the birth home are ahead of you, to the east. Until 1893 it was Wheat Street, and the name changed at the request of white petitioners who wanted something that sounded more cosmopolitan. The Sweet part came later, and came from inside — John Wesley Dobbs, a railway postal clerk turned civic organizer who was the closest thing this avenue had to a mayor, and whose nickname for it stuck. His own name is on the street one block north.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apex-auburn_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3ddcc6d5-424e-51d6-8cd7-c1d67f009e4c",
+          "order": 0,
+          "title": "APEX Museum & Auburn Avenue",
+          "caption": "It called Auburn Avenue the richest Negro street in the world.",
+          "latitude": 33.755,
+          "longitude": -84.377,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/apex-auburn.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apex-auburn_hero.webp",
+          "transcriptText": "In 1956, Fortune magazine printed a description of this street. It called Auburn Avenue the richest Negro street in the world. Those are the magazine's words, from that year, and they're worth hearing exactly once — because nearly everything else about this block is a response to them.\n\nYou're in front of the APEX Museum, a low brick storefront in a row of them. Downtown is behind you, to the west. The church, the tomb and the birth home are ahead of you, to the east.\n\nLook down the block.\n\nThe street wasn't always called this. Until 1893 it was Wheat Street, and the name changed at the request of white petitioners who wanted something that sounded more cosmopolitan. The Sweet part came later, and came from inside — John Wesley Dobbs, a railway postal clerk turned civic organizer who was the closest thing this avenue had to a mayor, and whose nickname for it stuck. His own name is on the street one block north.\n\nWhat made the avenue rich is the same thing that made it necessary. Alonzo Herndon was born enslaved in Walton County in 1858, learned to cut hair, and ran a barbershop on Peachtree Street that served the city's white establishment. In 1905 he started an insurance company — the one that became Atlanta Life — because Black Atlantans could not buy policies from the firms downtown. By his death in 1927 he was the wealthiest Black citizen in the city, and his company's building is a short way west of where you're standing.\n\nBanks, insurers, a newspaper, a radio station, churches, colleges, a hospital's worth of doctors: a full parallel economy inside a handful of blocks, built because there was no door into the other one.\n\nThen integration opened those doors and the money walked out through them, and then the interstate came through in the fifties and sixties and cut the avenue in half. The APEX Museum, which tells this story, is open five days a week, eleven to three. That's a fact about funding, not about interest. But listen to the tense people use here. Nobody on this block talks about Auburn Avenue as something that happened. They talk about it as something that's owed."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.755,
+      "centroidLongitude": -84.377,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Immigration",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "722ece7b-41f5-5ea0-a6a4-e00155cdf7d6",
+      "createdAt": "2026-09-14",
+      "title": "Prince Hall Masonic Temple",
+      "shortDescription": "A beauty shop on the first floor, a radio station above it, and above that an office with no window in it — same building, same decade, one address.",
+      "longDescription": "You're looking at the Prince Hall Masonic Temple — a tall brick block on Auburn Avenue, stone trim, a Masonic emblem cut above the entrance. It went up between 1937 and 1940, built by Georgia's Black Masons under the leadership of John Wesley Dobbs, whose name is on the street one block north. Walker salon — the national brand, franchised, Black women's money moving through Black women's businesses. Above it was WERD, which at the end of the nineteen forties became the first radio station in the country owned by an African American, after a professor and bank president named Jesse Blayton bought it and replaced the entire staff. And higher up, from 1957, the Southern Christian Leadership Conference kept its headquarters, with Martin Luther King Jr. working out of a small interior office for years.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prince-hall-masonic-temple_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prince-hall-masonic-temple_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prince-hall-masonic-temple_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "09bdf65a-256a-51aa-9d4f-aa1fa0f8a1e3",
+          "order": 0,
+          "title": "Prince Hall Masonic Temple",
+          "caption": "You're looking at the Prince Hall Masonic Temple — a tall brick block on Auburn Avenue, stone trim, a Masonic emblem cut above the entrance.",
+          "latitude": 33.7551,
+          "longitude": -84.3761,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/prince-hall-masonic-temple.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prince-hall-masonic-temple_hero.webp",
+          "transcriptText": "A beauty shop on the first floor, a radio station above it, and above that an office with no window in it — same building, same decade, one address.\n\nYou're looking at the Prince Hall Masonic Temple — a tall brick block on Auburn Avenue, stone trim, a Masonic emblem cut above the entrance. It went up between 1937 and 1940, built by Georgia's Black Masons under the leadership of John Wesley Dobbs, whose name is on the street one block north.\n\nCount the floors.\n\nThe beauty shop was a Madam C.J. Walker salon — the national brand, franchised, Black women's money moving through Black women's businesses. Above it was WERD, which at the end of the nineteen forties became the first radio station in the country owned by an African American, after a professor and bank president named Jesse Blayton bought it and replaced the entire staff. And higher up, from 1957, the Southern Christian Leadership Conference kept its headquarters, with Martin Luther King Jr. working out of a small interior office for years.\n\nSo: cosmetics, broadcasting, a fraternal order, and a civil rights organization, stacked vertically, paying rent to one another. That isn't a charming coincidence. A movement needs a landlord who will rent to it, a printer who will print for it, and a station that will put it on the air — and on this street all three existed, and two of them were in this building.\n\nIt nearly didn't survive. The temple sat empty and deteriorating for years; one preservation group called it among the most significant unprotected buildings in the region. Restoration finished in early 2026, and on the eleventh of February, 2026, it was formally brought into the Martin Luther King Jr. National Historical Park. Public programming began that spring. It is the newest piece of the park and the schedule is still settling, so check before you count on getting inside.\n\nLook up at the top floors once more. Whatever you picture when you picture the movement — the marches, the cameras, the pulpit — a great deal of the actual work was mimeographs, phone bills, and a windowless room above a hair salon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7551,
+      "centroidLongitude": -84.3761,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c9431a16-1547-5e38-ae89-019ff33cceca",
+      "createdAt": "2026-09-14",
+      "title": "Graves Hall, Morehouse",
+      "shortDescription": "One building on this hill had to be the dormitory, the library, the laboratory, the classrooms, the kitchen, the dining room and the chapel, all…",
+      "longDescription": "The college was founded in 1867 in Augusta, to train preachers and teachers. It moved to Atlanta in 1879, and in 1885 it bought fourteen acres out here in the West End. The building carries the name of Samuel Graves, the president who raised the money for it. The ground came with something on it: the ridge you're looking up at had been part of the line the Confederate army dug around the city in 1864. Preachers and teachers sounds like a narrow ambition until you notice it was the whole of the available ground. Those were the two professions a Black man in Georgia could hold without a white employer's permission. Train a preacher and you have a man with a building, a budget and a congregation that answers to nobody downtown. Train a teacher and you have a room full of children every morning.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graves-hall_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4d92cbac-3ea4-50d1-a063-9dc5ad6bc56b",
+          "order": 0,
+          "title": "Graves Hall, Morehouse",
+          "caption": "You want to be on Westview Drive, at the front edge of the Morehouse campus, looking up the slope.",
+          "latitude": 33.746,
+          "longitude": -84.4131,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/graves-hall.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graves-hall_hero.webp",
+          "transcriptText": "One building on this hill had to be the dormitory, the library, the laboratory, the classrooms, the kitchen, the dining room and the chapel, all at once — because for a while it was the only building the college had.\n\nYou want to be on Westview Drive, at the front edge of the Morehouse campus, looking up the slope. Find the oldest building on the rise: dark red brick, a squared tower at one corner, terra cotta trim around the windows. That's Graves Hall. It went up in 1889.\n\nDon't start with the tower.\n\nThe college was founded in 1867 in Augusta, to train preachers and teachers. It moved to Atlanta in 1879, and in 1885 it bought fourteen acres out here in the West End. Four years later it had this. The building carries the name of Samuel Graves, the president who raised the money for it.\n\nThe ground came with something on it: the ridge you're looking up at had been part of the line the Confederate army dug around the city in 1864. The college built on top of it.\n\nPreachers and teachers sounds like a narrow ambition until you notice it was the whole of the available ground. Those were the two professions a Black man in Georgia could hold without a white employer's permission. Train a preacher and you have a man with a building, a budget and a congregation that answers to nobody downtown. Train a teacher and you have a room full of children every morning. In 1906 the college made John Hope its president, the first Black man to hold the job; from 1940 to 1967 Benjamin Mays ran the place and was explicit that its purpose was to produce leaders.\n\nSo the crowding in this building isn't a charming detail about a poor start. It's the shape of the arithmetic. When the institutions across town are closed to you, you don't get to build a campus one specialized building at a time — you build one building, make it do seven jobs, and train people for the two positions nobody can fire them out of.\n\nGraves Hall still houses students, a bit over a hundred of them, in an honors residence. Whoever has the room up in the tower is sleeping in the middle of the oldest thing on this campus, which is a respectable place to be getting your reading done."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.746,
+      "centroidLongitude": -84.4131,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c852ff7d-7511-5a22-a8e1-cb37de231bfa",
+      "createdAt": "2026-09-14",
+      "title": "Spelman College Oval",
+      "shortDescription": "The school here opened in 1881. Emancipation was sixteen years earlier.",
+      "longDescription": "Do the arithmetic, because it tells you who walked in on day one: most of the first students had been born enslaved, and a number of them were grown women who had come to learn to read. What you want is the Oval, the long green at the center of the Spelman campus, with the older brick buildings around the edge. If the campus is open to visitors, come in from the gate on Spelman Lane and stop where the lawn opens out. If it isn't, the gate does most of this stop's work on its own. It began in the basement of Friendship Baptist Church, downtown, run by two women from Massachusetts — Sophia Packard and Harriet Giles — on money collected a few dollars at a time. Rockefeller, who gave them two hundred and fifty dollars on the spot, and far more later. Two years after that, the school took a new name in honor of his wife's family. Packard and Giles got buildings on this lawn. The Rockefellers got the name over the whole institution.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spelman-oval_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a833d58e-04e0-557d-b288-6b8327eb4d57",
+          "order": 0,
+          "title": "Spelman College Oval",
+          "caption": "Do the arithmetic, because it tells you who walked in on day one: most of the first students had been born enslaved, and a number of them were grown women who had come to learn to read.",
+          "latitude": 33.7456,
+          "longitude": -84.4119,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/spelman-oval.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spelman-oval_hero.webp",
+          "transcriptText": "The school here opened in 1881. Emancipation was sixteen years earlier. Do the arithmetic, because it tells you who walked in on day one: most of the first students had been born enslaved, and a number of them were grown women who had come to learn to read.\n\nWhat you want is the Oval, the long green at the center of the Spelman campus, with the older brick buildings around the edge. If the campus is open to visitors, come in from the gate on Spelman Lane and stop where the lawn opens out. If it isn't, the gate does most of this stop's work on its own.\n\nIgnore the newest buildings for a minute.\n\nIt began in the basement of Friendship Baptist Church, downtown, run by two women from Massachusetts — Sophia Packard and Harriet Giles — on money collected a few dollars at a time. In 1882 they were introduced to John D. Rockefeller, who gave them two hundred and fifty dollars on the spot, and far more later. Two years after that, the school took a new name in honor of his wife's family. Packard and Giles got buildings on this lawn. The Rockefellers got the name over the whole institution.\n\nRockefeller Hall was dedicated in 1886, the same year the school began training nurses. Fifteen years later it dedicated a hospital — MacVicar, on the campus. A women's college with a hospital on its own quad, because Black nurses had almost nowhere in this city to train, and Black patients had little care that wasn't segregated, scarce, or both.\n\nThe first two college degrees came in 1901, to Jane Anna Granderson and Claudia White. Twenty years, church basement to bachelor's degree.\n\nThat stack of dates is describing something specific. When the institutions around you are closed, you don't get to specialize. This school trained teachers, and then had to supply the schools that hired them. It trained nurses, and then had to build the hospital they could train in. Every gap in the city outside showed up on this campus as another building. The Oval isn't a quad in the decorative sense — it's an inventory of what the city declined to provide.\n\nIt's also just a lawn that works: people cutting across it to class, somebody asleep under a tree. Ordinary use of a place that had to be argued into existence, which is what everyone involved was after."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7456,
+      "centroidLongitude": -84.4119,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3aecb9c4-1914-5ae8-bad1-40bd5ce8a23a",
+      "createdAt": "2026-09-14",
+      "title": "Student Movement Boulevard",
+      "shortDescription": "This street has carried the name Atlanta Student Movement Boulevard since 2010.",
+      "longDescription": "What it's named for happened in 1960 — fifty years between the event and the sign. There's a Georgia Historical Society marker at the curb, dark metal with gold lettering. This corner had a drugstore — Yates and Milton, Black-owned, a meeting room with a soda fountain. In February of 1960, three Morehouse students in it — Lonnie King, Joseph Pierce and Julian Bond — worked out how to reach every campus at once. What came out of that first wasn't a protest. On the ninth of March they bought a full page in the city's daily papers and ran a document called An Appeal for Human Rights, drafted mostly by a Spelman senior named Roslyn Pope, which set out what the state was denying them, point by point, and made clear they weren't going to wait. Six days later, some two hundred students sat down at eleven eating places downtown; seventy-seven were arrested. The lunch counters were desegregated the next year.",
+      "makerId": "ccaab715-2f29-597e-8b3a-0d38e8d370da",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/student-movement-blvd_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "13bb7400-45f5-5bf3-89e0-f92d4ce84ccc",
+          "order": 0,
+          "title": "Student Movement Boulevard",
+          "caption": "Stand at the corner of Atlanta Student Movement Boulevard and Chestnut Street, the Clark Atlanta campus behind you.",
+          "latitude": 33.7516,
+          "longitude": -84.412,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/student-movement-blvd.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/student-movement-blvd_hero.webp",
+          "transcriptText": "This street has carried the name Atlanta Student Movement Boulevard since 2010. What it's named for happened in 1960 — fifty years between the event and the sign.\n\nStand at the corner of Atlanta Student Movement Boulevard and Chestnut Street, the Clark Atlanta campus behind you. There's a Georgia Historical Society marker at the curb, dark metal with gold lettering.\n\nDon't read the marker yet.\n\nThis corner had a drugstore — Yates and Milton, Black-owned, a meeting room with a soda fountain. In February of 1960, three Morehouse students in it — Lonnie King, Joseph Pierce and Julian Bond — worked out how to reach every campus at once.\n\nWhat came out of that first wasn't a protest. It was a purchase. On the ninth of March they bought a full page in the city's daily papers and ran a document called An Appeal for Human Rights, drafted mostly by a Spelman senior named Roslyn Pope, which set out what the state was denying them, point by point, and made clear they weren't going to wait. Six days later, some two hundred students sat down at eleven eating places downtown; seventy-seven were arrested. The lunch counters were desegregated the next year.\n\nHere's the part you can only see from this corner. Six institutions sit within a few blocks of it, and they sit here because the rest of the city was closed to them. Nobody planned that density as an organizing tool. But it meant a decision made in a drugstore on a Tuesday could reach every Black college student in Atlanta by Thursday, on foot.\n\nThe older argument was still running on these campuses the whole time — whether to build your own institutions or force the doors of everyone else's. It had been going since the 1890s and it never closed. These students didn't settle it; they stopped waiting for it to be settled.\n\nTwo years after the Appeal a new mayor took office. On his first day, Ivan Allen Junior had the signs reading white and colored taken down at City Hall. That December, in 1962, his administration put a barricade across Peyton Road to stop Black families buying houses past it. A court ordered it down seventy-two days later.\n\nNow read the marker. Then watch the crosswalk: students cross between campuses all day, the same few blocks somebody walked in 1960 to get a room full of people to agree."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7516,
+      "centroidLongitude": -84.412,
+      "city": "Atlanta",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Remembrance",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
     }
   ],
   "places": [
@@ -84134,21 +85484,6 @@
       ]
     },
     {
-      "id": "43bf4efd-5c8a-5ef8-9791-93ee45f4dc4a",
-      "name": "First National Bank of Hollywood",
-      "description": "A 1927 Gothic Revival bank tower at Hollywood and Highland by Meyer & Holler, the firm behind Grauman's Chinese Theatre. Its banking hall has spent decades as a filming location. Two separate posts by the same creator sit on it.",
-      "latitude": 34.101687,
-      "longitude": -118.338437,
-      "city": "Los Angeles",
-      "address": "Hollywood Boulevard at Highland Avenue, Los Angeles",
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "57CAD837-2E86-5EA2-AA50-40380D0AF477",
-        "62ECCD3D-535D-5168-9299-54AEECE3FD16"
-      ]
-    },
-    {
       "id": "4ade65b8-6470-5839-9248-db4ba1b04685",
       "name": "First Unitarian Society Meeting House",
       "description": "Frank Lloyd Wright's 1951 meeting house for the congregation his own parents had helped found, its copper roof rising to a prow meant to read as hands held in prayer. A much larger addition was built alongside it in 2008.",
@@ -86382,6 +87717,21 @@
         "8E0B80FA-9993-53FD-8819-3A9BEDC7A75A",
         "CD771D90-43A0-52BF-BDB4-A963192808A6",
         "27321CAD-72EA-5328-816F-3F114183DD0A"
+      ]
+    },
+    {
+      "id": "ef757419-a4b7-54a9-b105-60be584b105b",
+      "name": "Maison Pierre Jeanneret",
+      "description": "The house Pierre Jeanneret, Le Corbusier's cousin and collaborator, lived in during the nearly two decades he spent building Chandigarh. It is often called the first house built in the city, and is kept today as a museum.",
+      "latitude": 30.744817,
+      "longitude": 76.807566,
+      "city": "Chandigarh",
+      "address": "Uttar Marg, Sector 5, Chandigarh",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "657C1195-F0F1-5535-929A-9C2D0C91268A",
+        "62B2EAC9-F99D-5DE9-B0DF-0EAAB47EBB2A"
       ]
     }
   ],
@@ -135365,8 +136715,8 @@
           "order": 0,
           "title": "The Fine Arts Museum at Panjab University",
           "caption": "Fine Art Musuem at Panjab University, Chandigarh by Pierre Jeanneret and BP Mathur. #archimarathontv . . . . . #architecture #architectures ",
-          "latitude": 30.7602415,
-          "longitude": 76.7664916,
+          "latitude": 30.762347,
+          "longitude": 76.7722,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -135378,8 +136728,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 30.7602415,
-      "centroidLongitude": 76.7664916,
+      "centroidLatitude": 30.762347,
+      "centroidLongitude": 76.7722,
       "city": "Chandigarh",
       "country": "India",
       "primaryCategory": "visualArt",
@@ -163599,7 +164949,7 @@
     {
       "id": "62ECCD3D-535D-5168-9299-54AEECE3FD16",
       "createdAt": "2026-09-10",
-      "title": "First National Bank of Hollywood",
+      "title": "Westlake Theatre",
       "shortDescription": "A post by @nickcabotrodriguez on TikTok.",
       "longDescription": "What’s up with this building? Part 5 of my LA micro-documentary series #losangeles",
       "makerId": "F63BBD9D-E4E8-5760-A743-7213028B02F9",
@@ -163614,10 +164964,10 @@
         {
           "id": "877A1DF7-8C4E-565B-B376-3D37DB0A5639",
           "order": 0,
-          "title": "First National Bank of Hollywood",
+          "title": "Westlake Theatre",
           "caption": "What’s up with this building? Part 5 of my LA micro-documentary series #losangeles",
-          "latitude": 34.101687,
-          "longitude": -118.338437,
+          "latitude": 34.058286,
+          "longitude": -118.27523,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -163629,14 +164979,13 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.101687,
-      "centroidLongitude": -118.338437,
+      "centroidLatitude": 34.058286,
+      "centroidLongitude": -118.27523,
       "city": "Los Angeles",
       "country": "United States",
-      "primaryCategory": "architecture",
+      "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Commerce",
         "History"
       ],
       "priceUSD": 0
@@ -174534,8 +175883,8 @@
           "order": 0,
           "title": "Gandhi Bhawan",
           "caption": "The Gandhi Bhawan in Chandigarh Videography assist by @dhruv.ns and @notohok #blessedarch #design #architecture #chandigarh",
-          "latitude": 30.7602415,
-          "longitude": 76.7664916,
+          "latitude": 30.761821,
+          "longitude": 76.771367,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -174547,8 +175896,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 30.7602415,
-      "centroidLongitude": 76.7664916,
+      "centroidLatitude": 30.761821,
+      "centroidLongitude": 76.771367,
       "city": "Chandigarh",
       "country": "India",
       "primaryCategory": "architecture",
@@ -176531,7 +177880,7 @@
           "order": 0,
           "title": "House of Pierre Jeanneret",
           "caption": "The house of Pierre Jeanneret. It was the first house ever built in the city. #blessedarch #architecture #design #chandigarh",
-          "latitude": 30.7448179,
+          "latitude": 30.744817,
           "longitude": 76.807566,
           "audioURL": "",
           "audioDurationSeconds": 0,
@@ -176544,7 +177893,7 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 30.7448179,
+      "centroidLatitude": 30.744817,
       "centroidLongitude": 76.807566,
       "city": "Chandigarh",
       "country": "India",
@@ -186241,6 +187590,100 @@
         "Notable Building",
         "History",
         "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5B59EADC-D73A-5C3D-A634-822F30D90C35",
+      "createdAt": "2026-09-14",
+      "title": "Tempelhof Airport & the Berlin Airlift",
+      "shortDescription": "A post by @insightcities on Instagram.",
+      "longDescription": "This huge open space is Berlin's most direct link to World War II and the Cold War. The curved terminal of Tempelhof Airport, begun by the Nazis in the 1930s, was originally intended to be a centerpiece of their \"world capital\" of Germania. Its historical legacy was redeemed during the Berlin Airlift (1948–49), when Allied \"Candy Bombers\" landed here repeatedly to supply a blockaded West Berlin, transforming the Nazi architecture into the ultimate symbol of freedom for the city. Today, this vast area is preserved as Tempelhofer Feld. Berliners now use the original runways for biking, skating, and grilling, turning the strips that delivered freedom into a thriving, modern park that embodies the democratic spirit. #insightcities #Tempelhof #BerlinHistory #BerlinAirlift #TempelhoferFeld #SymbolOfFreedom #travelerslovetolearn",
+      "makerId": "7F6E7AD9-48EC-54EC-B51C-1ACAD51038CC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tempelhof-airport-the-berlin-airlift-insightcities_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DP00XQ5Crh9/",
+      "sourceAuthor": "@insightcities",
+      "stops": [
+        {
+          "id": "366E3F4E-705E-5CC0-B4B4-BB0D50B8319E",
+          "order": 0,
+          "title": "Tempelhof Airport & the Berlin Airlift",
+          "caption": "This huge open space is Berlin's most direct link to World War II and the Cold War. The curved terminal of Tempelhof Airport, begun by the N",
+          "latitude": 52.4797376,
+          "longitude": 13.3885579,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tempelhof-airport-the-berlin-airlift-insightcities_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.4797376,
+      "centroidLongitude": 13.3885579,
+      "city": "Berlin",
+      "country": "Germany",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "War",
+        "Notable Building",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B0AE8151-2127-5B92-BC69-CF29F4BB962C",
+      "createdAt": "2026-09-14",
+      "title": "Reichstag — Bowie's 1987 Wall-Facing Concert",
+      "shortDescription": "A post by @insightcities on Instagram.",
+      "longDescription": "🎤 We Can Be Heroes 👆 Meet one of our Insight Cities' Bowie in Berlin Tour guides, Lee, as he explains David Bowie's influence on the fall of the Berlin Wall. 🕷️ In June 1987, David Bowie's Glass Spider Tour performed in front of the Reichstag in West Berlin. He deliberately set the concert to face the Berlin Wall. 🇩🇪 🔊 The Sound of Freedom: Bowie and the organizers intentionally positioned powerful speakers toward the East, sending the sound of rock and roll across the concrete barrier. On the Eastern side, thousands of young Berliners gathered to listen to the forbidden music. 🧱 The Response: When Bowie sang the city's anthem, \"Heroes,\" the crowd in the West and the thousands pressed against the Wall in the East began singing along. Bowie later recalled the moment: \"It was like a double concert where the wall was the division... I'd never done anything like that in my life.\" ⚡ The Catalyst: The East German Volkspolizei (People's Police) cracked down violently on the crowds, leading to clashes and protests. #insightcities #DavidBowie #Heroes #BowieBerlin #BowieTour #BowieBerlinTour #BerlinTour #BerlinWall #BerlinHistory #ColdWar #Reichstag #1987 #GlassSpiderTour #travelerslovetolearn Archival photo/video credits: Berlin Wall photos dated 1989: RIA Novosti archive, image #475738 / Yuriy Somov / CC-BY-SA 3.0, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons © Yann Forget / Wikimedia Commons Vietinghoff, CC0, via Wikimedia Commons © Yann Forget / Wikimedia Commons Footage of concert and Berlin Wall: https://www.youtube.com/watch?v=g54IGaVsv24 1987 Interview with David Bowie: https://www.youtube.com/watch?v=0889--udY4w&list=PL23r0skX39zEVryOfJ0WlUZy8C6967YZG",
+      "makerId": "7F6E7AD9-48EC-54EC-B51C-1ACAD51038CC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reichstag-bowie-s-1987-wall-facing-insightcities_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DRUBBZaCfQA/",
+      "sourceAuthor": "@insightcities",
+      "stops": [
+        {
+          "id": "C777B3FD-0B40-5B4E-B019-50CA46A2DCE2",
+          "order": 0,
+          "title": "Reichstag — Bowie's 1987 Wall-Facing Concert",
+          "caption": "🎤 We Can Be Heroes 👆 Meet one of our Insight Cities' Bowie in Berlin Tour guides, Lee, as he explains David Bowie's influence on the fall of",
+          "latitude": 52.5186753,
+          "longitude": 13.3731249,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reichstag-bowie-s-1987-wall-facing-insightcities_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.5186753,
+      "centroidLongitude": 13.3731249,
+      "city": "Berlin",
+      "country": "Germany",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Power",
+        "Performance",
+        "Public Square",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
