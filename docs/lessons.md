@@ -526,6 +526,64 @@ user can see them."* *"This query returned nothing"* is not *"nothing is there."
 Where it matters, read as `postgres` or through the same path the user's request
 takes — and if you cannot, say the answer is bounded by the view you used.
 
+### A dead database: read the SHAPE of the failure, not the calendar
+
+**2026-09-14, ~11h45m of total outage.** Supabase returned HTTP 522 on PostgREST
+*and* Auth. Cause: the Postgres instance was **`t4g.nano` — 512 MB RAM, shared
+CPU** — with memory at 79%. `get_catalog()` builds the whole catalogue as one
+in-memory document on every call, and the instance ran out of room.
+
+🔴 **Two sessions independently guessed "egress restriction" and both were
+wrong.** The dates fitted beautifully — the egress grace period had ended the day
+before — so nobody checked. **The owner had been on Pro since 10 September**, four
+days earlier, so that grace period could never have applied. A hypothesis that
+fits the calendar is not evidence; the owner was one question away the whole time.
+
+**The shape told the truth, and it was in hand before either guess:**
+
+| Time | State |
+|---|---|
+| 01:07 | `get_catalog` → **57014 statement timeout** (queries ran, too slowly) |
+| 01:18 | **522** on everything |
+| 12:44 | still **522** |
+
+**An administrative block flips instantly. Resource exhaustion decays** — slow,
+then timing out, then refusing connections. When a failure *degrades* rather than
+switching, look at capacity, not at billing.
+
+### 🔴 Upgrading to Pro raises EGRESS, not COMPUTE
+
+The trap that made this invisible. The project was upgraded to Pro on 10
+September to fix the egress overage — and **stayed on `t4g.nano` throughout**,
+because compute size is a separate per-project setting. The plan upgrade fixed
+the billing problem and left the hardware that would cause the next outage
+completely untouched.
+
+**Nano → Micro was FREE**: both `$0.01344/hour`, and Supabase itself labels Micro
+a "Free Upgrade". It doubles memory to 1 GB and swaps a *shared* CPU for a
+dedicated 2-core. Measured immediately after: `get_catalog` **TTFB 2.3 s → 0.51 s**.
+There was never a reason to be on Nano.
+
+**Check compute size whenever the database is slow, and before assuming a
+plan upgrade changed anything about performance.**
+
+### The diagnostic order that would have got there in minutes
+
+Three cheap reads, none of which needs the dashboard:
+
+1. **Does *auth* fail too?** Auth is a separate service. Both down = the whole
+   project, not one bad query.
+2. **Does a 47-byte row count fail?** `?select=id&limit=1` with `Range: 0-0`
+   cannot time out on query cost. If *that* fails, it is not the query.
+3. **Then the dashboard**, in this order: **compute size and memory** first,
+   disk second, billing last. Disk was 22% and the whole database 132.7 MB —
+   ruled out in one glance.
+
+⚠️ **And the same root cause had already caused a different incident.** The
+8–10 September egress overage (11.82 GB against 5 GB) and this outage are both
+`get_catalog` shipping the entire catalogue on every fetch. One design decision,
+two production incidents, two weeks apart. Delta fetching is still not built.
+
 ## 7. Shell and environment
 
 **`pkill -f <script>` kills your own shell** (exit 144) — the pattern matches the wrapping
