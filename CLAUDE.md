@@ -265,16 +265,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 🔴 **Run `bash scripts/session-start.sh` first — it prints live state; this file does not have
 it.** § READ FIRST above explains why that is not optional.
 
-**🚀 Dozent is live on the App Store at 1.1.1**, released **1 September 2026, 15:23 UTC**, on
-build 139. This is the durable fact; **the live number is not** — the released version is
-checkable from any session with no key (§ READ FIRST's table has the one-line `curl`), so
-re-derive it rather than quoting this paragraph. `MARKETING_VERSION` on `main` is **1.1.2**, and
-the only app code the public lacks is [#728](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/728),
-the bottom module going missing — everything else since is catalogue, which reaches 1.1.1 over the
-air, because **1.1.1 understands `linkPins` and `places` where build 66 could not.** ⚠️ **This
-board said the update was still owed for a week after it shipped**; the full account of how that
-happened is in `archive/STATUS-HISTORY.md` (§ "1.1.1 SHIPPED") and the rule it produced is in
-`docs/lessons.md` § 2.
+**🚀 Dozent 1.1.2 is live on the App Store**, released **14 September 2026** on build 160
+(ASC `READY_FOR_SALE`, no phased release), after 1.1.1 on build 139 (1 September). This is the
+durable fact; **the live number is not** — the released version is checkable from any session with
+no key (§ READ FIRST's table has the one-line `curl`), so re-derive it rather than quoting this
+paragraph. ⚠️ **That public lookup lags App Store Connect by hours** — on release day it still
+said 1.1.1 while ASC said `READY_FOR_SALE`. ⚠️ **`MARKETING_VERSION` on `main` is still 1.1.2,
+whose train is now closed**: the next TestFlight upload is refused with 90186 `Invalid Pre-Release
+Train` until it is bumped. ⚠️ The board once said 1.1.1 was still owed for a week after it
+shipped; the account is in `archive/STATUS-HISTORY.md` (§ "1.1.1 SHIPPED") and the rule it
+produced is in `docs/lessons.md` § 2.
 
 **Where the history went.** Every dated `## Current State` block written between 2026-05-25
 (session 8) and 2026-09-07 (session 148) — 34 of them — now lives verbatim in
