@@ -1,5 +1,167 @@
 # Scaling pinned tours to 100,000 — industrial ingestion
 
+---
+
+# PART 2 — What to build NOW (owner not ready for creator outreach)
+
+All four items below were approved. None needs a single creator to say yes. Two findings from
+this session's audit **reorder the priorities** — they are live defects, not scaling concerns.
+
+## 🔴 Finding 1: ~32 pins are already live and invisible
+
+`TourSetMap.swift:243` sets `maxStacked = 3`, applied at L206 as `placecardTours.prefix(3)`.
+
+**502 pins (22.9%) share an exact coordinate with another pin, across 205 groups.** Nineteen of
+those groups are bigger than 3, covering 87 pins — so **at least 32 pins are silently truncated
+out of the placecard stack and cannot be reached from the map at all.** The largest is a 7-pin
+group at the Strahov Library in Prague.
+
+This is content you already have, already paid for, that no user can see. It needs no network, no
+creators and no App Store release to find.
+
+## 🔴 Finding 2: the mandatory place check is currently failing
+
+`check-place-candidates.py` on this checkout (stamp `rev 78e69c22 · 2026-09-14T18:53:28Z`):
+**15 EXACT · 75 TIGHT · 42 NEAR, exit code 1.** CLAUDE.md Rule 8c makes every EXACT group an
+owner decision, and 15 are outstanding.
+
+Also offline and actionable now: **34 pins at ≤3 dp** (~110 m — neighbourhood centroid, not a
+building); **~44 pins across 13 cities where every pin shares one coordinate** (Windsor 6 pins/1
+coordinate, Denver, Little Rock — unambiguous centroid dumps); **197 pins carrying the
+known-unrepaired +20 m northward pipeline bias**; and **30 Japan pins already itemised in PR #893**
+as owing a precision pass.
+
+---
+
+## The order of work
+
+### 1. Backend Phase 0 — conditional seed writes · half a day · no app release
+
+Fully specified in `docs/delta-catalog-fetch-design.md:438-468`, traps included. **Confirmed not
+started**: unconditional `updated_at = now()` at `backend/seed_from_toursjson.py:160, 192, 234`;
+no `rev` column anywhere in `backend/*.sql`; `stops` has no `updated_at` (only `makers`
+`schema.sql:61` and `tours` `schema.sql:95` do).
+
+- Add `where <table> is distinct from excluded` to the `on conflict do update` clauses for
+  `tours`, `makers`, `places`.
+- ⚠️ **Compare only the column list the upsert actually writes** — `place_id` is cleared and
+  re-set by a separate statement and `published_at` is `now()` on insert, so a whole-row compare
+  makes every seed still look like a change.
+- Give `stops` a change signal — preferred: upsert on `(id)`, delete only vanished ids, add
+  `updated_at`. (The doc's simpler option 2 — treat a tour as changed if any stop changed — is
+  acceptable.)
+- Add a monotonic `rev bigint` from one sequence. `refreshed_at` stays as the public token.
+
+🔴 **The design doc understates its own payoff by ~4×, and its preference order is wrong.**
+Measured this session by generating the seed (`seed.sql` = **18,556,620 bytes, 12,645 statements**,
+applied to production in **one transaction ~5.2×/day**):
+
+| statement | row versions per seed |
+|---|---:|
+| makers · places · tours upserts | 4,472 |
+| `place_id` reset + 303 membership updates | 1,470 |
+| **stop deletes + inserts** | **8,234** |
+| **total** | **≈ 14,176 — about 73,700 a day, essentially all no-ops** |
+
+The doc counts only the 3,745 tour upserts. **The stops delete-and-reinsert is the single biggest
+win at 8,234 writes, and the doc's *preferred* option 3b — keep the cursor on `tours` only — does
+not fix it at all.** If the goal is instance relief today rather than a delta cursor, do stops.
+
+⚠️ **The one genuine hazard:** `stops` has `unique (tour_id, "order")` (`schema.sql:116`). Deleting
+everything first makes reordering trivially safe; a conditional upsert that renumbers two stops in
+one tour hits a unique violation mid-statement unless the constraint is made `deferrable initially
+deferred`. This is the part that is not a half-day edit.
+
+**Use row comparison, not a content hash.** A hash column is cheaper on the wire (~80 bytes vs
+~1,400 per statement) but it can drift silently — add a column to the INSERT list, forget the hash
+input, and that field stops reaching Postgres forever. In a repo whose scar tissue is exactly "a
+field silently vanished" (2026-08-19), the row comparison cannot drift, because the `where` clause
+and the `set` clause are the same column list. The extra ~5 MB of generated SQL costs nothing —
+`backend/seed.sql` is built in CI and never committed.
+
+**Bonus, ~1 hour, worth bundling:** move the snapshot refresh *outside* the seed transaction
+(`seed_from_toursjson.py:310-321`). Today it rebuilds an 8.0 MB jsonb inside a transaction already
+holding 14,176 row writes open — that is the peak-memory window.
+
+**Realistic effort: 1–1.5 days**, not the doc's half day. The first two rows of the table above are
+genuinely half a day and deliver ~40% of the write reduction.
+
+**Why first:** it is the only item that helps the *outage* before any app release exists. ⚠️ Worth
+knowing: the 2026-09-14 outage was resolved by a **free** instance bump (t4g.nano → micro, 512 MB →
+1 GB, TTFB 2.3 s → 0.51 s). **No code fix landed.** Both root causes are still unbuilt.
+
+⚠️ **One number nobody has measured**: what `refresh_catalog_snapshot()` costs *now* — the 2.2–5.0 s
+figure predates both the hardware change and today's entry count. One
+`select public.refresh_catalog_snapshot();` settles it and it is the cheapest missing fact here.
+
+### 2. Per-pin fields in `make-link-pin.py` · small · scripts/ auto-merges
+
+Confirmed at `scripts/make-link-pin.py:1117-1118`: `slug=a.slug if len(rows) == 1 else None`,
+`title=a.title if len(rows) == 1 else None`. `category`, `tags` and `focus` are batch-wide.
+
+- Extend `parse_batch` (L1021) beyond `url | lat,lon | city | country` to carry `title`, `slug`,
+  `category`, `tags`, `focus` per line — a `key=value` tail is cleaner than more positional pipes,
+  and stays backwards compatible with every existing batch file.
+- Thread per-row values through the loop at L1111-1120.
+- **Add a hero-filename collision guard**: refuse (or disambiguate) when two rows in one batch
+  derive the same hero path. Two captions both opening `"Comment 'SUSHI' below…"` once silently
+  overwrote each other's image, and fixing it needed two fields patched per entry.
+- Extend `--selftest` to cover all of it.
+
+**Why:** a 38-pin batch has had to run as **25 grouped invocations**. This is friction on the work
+being done by hand today, and it ships with no owner review gate and no app release.
+
+### 3. The invisible-pin repair · offline · reaches phones over the air
+
+Driven by Finding 1. For each group over `maxStacked = 3`: either create a place (which collapses
+members to one capsule) or separate the coordinates where the pins are genuinely different
+subjects. **Blocked on `status/owner/auto-created-places.md`** for the auto-create half — but the
+19 groups can be triaged and put to the owner as a single batch decision now, exactly as the
+`@japanbyfood` affiliate network was escalated as one policy call rather than 70.
+
+Same pass clears the 15 outstanding EXACT groups and the 13 single-coordinate cities.
+
+### 4. The place spine · weeks · no creators needed
+
+As designed in Part 1 § A1 — but note it pays off **before** any creator work:
+
+- Today's paste-links workflow stops needing four hand-typed fields per pin.
+- It gives `check-coordinates.py` something to audit pins *against* without Nominatim.
+- ⚠️ **A network audit is not the cheap route.** 2,193 pins at `SLEEP = 1.1` s and ≥2 calls per
+  point is **2–3 hours of wall clock**, and `names_resemble` (L145) has a Milan-specific stop-word
+  set that will dump creator-caption titles into UNVERIFIABLE. A spine join is offline and exact.
+- `--pins` mode still needs writing: `from_catalog` (L255) reads `d["tours"]` only and matches
+  `displayName == "Atlas Studio XXX"`, so **no pin can ever match it**. Needs a `from_pins`, a
+  per-city `region_viewbox` (L273), and a pin-aware name gate.
+
+### 5. App performance · needs an App Store release + owner simulator review
+
+Lowest priority only because it is slowest to reach users, not least valuable. Precedent: a prior
+PR indexed `DataService`'s by-id lookups — "linear scans over 1,418 tours read per row on every
+body evaluation" — and it was recorded as "an app-wide win, not only Library."
+
+Targets: `SearchView.swift:745` (full lowercased index rebuild on the main thread; the
+`count != count` guard also misses a refresh that changes content but not count — a real
+correctness bug), `SearchView.swift:650` (full scan per keystroke), `MapClustering.swift` +
+`HomeMapSection.swift:264` (O(N) cull and bucket per render; cull disabled above 30° span;
+`precomputedMarkers` nil whenever a filter is active), `DataService.swift:275` (`toursNearby`
+sorts with `distance(from:)` in the comparator).
+
+---
+
+## Verification
+
+- **1** — prove a content merge now changes `updated_at` on only the rows that actually changed;
+  confirm the snapshot still rebuilds; `check-catalog-contract.py` after the migration, not before.
+- **2** — `make-link-pin.py --selftest` must read **71/71** (62/62 means Pillow is missing and is
+  not a pass); re-run an existing batch file unchanged to prove backwards compatibility.
+- **3** — `check-place-candidates.py` EXACT count must fall from 15; re-run the
+  over-`maxStacked` sweep and confirm zero groups above 3.
+- **5** — `test_sim` locally, or `ci.yml` on the PR from a web session; owner reviews on device.
+- Everywhere: read the **run stamp and the counts**, never the verdict line.
+
+---
+
 ## 0. In plain English — for the owner
 
 ### Why it's slow now

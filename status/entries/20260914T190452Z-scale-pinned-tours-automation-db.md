@@ -1,0 +1,118 @@
+# Scaling design + 4 approved now-items; 32 pins found invisible behind maxStacked=3
+
+_2026-09-14 19:04 UTC · branch `scale-pinned-tours-automation-db`_
+
+# Handoff 2026-09-14 — Scaling pinned tours to 100,000, and what to build first
+
+**Branch:** `claude/scale-pinned-tours-automation-dba3lx` · web session (no Mac, no ASC key).
+**Design:** `docs/scaling-to-100k-design.md` — plain-English section first, technical below.
+
+## What this session did
+
+Design and measurement only. **No app code, no catalogue change, no PR.** The owner asked how to
+reach 100,000 quality link pins without doing it by hand, then — not being ready for creator
+outreach — asked what could be built now that helps regardless. Both are answered in the design doc.
+
+## The three findings that shape everything
+
+1. **There is no discovery step at all.** The owner pastes links; `docs/link-pin-runbook.md:17`
+   says the tooling starts at "a list somebody already decided is worth pinning." And crawling is
+   not available: Instagram enumeration is impossible, TikTok caps at 14/handle, YouTube RSS ~15.
+2. **Four human-typed fields gate every batch** — `lat,lon`, `city`, `country`, `category`/`tags`.
+   `make-link-pin.py` has no geocoder (`grep -c "nominatim\|geocod"` → 0).
+3. 🔴 **100,000 entries breaks the product in three FATAL places.** App OOMs inside
+   `DataService.init` before first frame; `get_catalog` ~60 MB gz/fetch = 83 fetches/month against
+   the 5 GB quota; snapshot becomes a ~320 MB jsonb row on an instance that OOM'd at 8 MB.
+
+## Owner decisions taken
+
+Creator OAuth portal as the supply engine · densify to ~25–30k places × 3–4 creators · ingest to an
+unserved staging table in parallel with the architecture work · **build all four "now" items**.
+
+## 🔴 Two live defects found while sizing the work
+
+- **~32 pins are already live and INVISIBLE.** `TourSetMap.swift:243` `maxStacked = 3`, applied at
+  L206 as `placecardTours.prefix(3)`. 502 pins (22.9%) share an exact coordinate across 205 groups;
+  **19 groups exceed 3, covering 87 pins**, so at least 32 are truncated out of the placecard stack
+  and unreachable from the map. Largest is a 7-pin group at the Strahov Library, Prague.
+- **`check-place-candidates.py` currently exits 1** — `RUN · rev 78e69c22 · 2026-09-14T18:53:28Z`:
+  **15 EXACT · 75 TIGHT · 42 NEAR.** CLAUDE.md Rule 8c makes every EXACT an owner decision.
+
+Also offline and actionable: 34 pins at ≤3 dp (~110 m); ~44 pins across 13 cities where every pin
+shares one coordinate (Windsor 6 pins/1 coord, Denver, Little Rock); 197 pins carrying the
+unrepaired +20 m northward bias; 30 Japan pins itemised in PR #893 as owing a precision pass.
+
+## 🔴 The delta doc understates its own payoff by ~4×, and its preference order is wrong
+
+Measured by generating the seed: `seed.sql` = **18,556,620 bytes, 12,645 statements**, applied to
+production **in one transaction ~5.2×/day**.
+
+| statement | row versions per seed |
+|---|---:|
+| makers · places · tours upserts | 4,472 |
+| `place_id` reset + 303 membership updates | 1,470 |
+| **stop deletes + inserts** | **8,234** |
+| **total** | **≈ 14,176 — ~73,700/day, essentially all no-ops** |
+
+`docs/delta-catalog-fetch-design.md` counts only the 3,745 tour upserts. **Stops are the biggest
+single win, and the doc's PREFERRED option 3b does not fix them.**
+
+⚠️ **The one real hazard:** `stops` has `unique (tour_id, "order")` (`schema.sql:116`). Delete-first
+makes reordering trivially safe; a conditional upsert renumbering two stops in one tour hits a
+unique violation unless the constraint is `deferrable initially deferred`.
+
+⚠️ **Use row comparison, not a content hash.** A hash column is cheaper on the wire but drifts
+silently — add a column to the INSERT list, forget the hash input, and the field stops reaching
+Postgres forever. Row comparison cannot drift: the `where` and `set` clauses are the same list.
+
+⚠️ **Phase 0 is NOT started**: unconditional `updated_at = now()` at
+`seed_from_toursjson.py:160, 192, 234`; no `rev` column in `backend/*.sql`; `stops` has no
+`updated_at`. Realistic effort **1–1.5 days**, not the doc's "half a day"; the first two rows of
+the table are genuinely half a day and deliver ~40%.
+
+⚠️ **The 2026-09-14 outage was fixed by a FREE instance bump** (t4g.nano → micro, TTFB 2.3 s →
+0.51 s). **No code fix landed.** Both root causes remain unbuilt.
+
+⚠️ **Unmeasured, and the cheapest missing fact here:** what `refresh_catalog_snapshot()` costs now.
+The 2.2–5.0 s figure predates both the hardware change and today's entry count. One
+`select public.refresh_catalog_snapshot();` settles it.
+
+## Other measurements worth not re-deriving
+
+- One pin costs **~1,867 B raw / ~410 B gzip-1**; one tour ~5,174 B raw. Catalogue 3,745 entries =
+  **2,258,643 B gzip-1** (~603 B/entry).
+- **279 of 390 creators have exactly one pin; the top 10 hold 1,258 — 57%.** `@urbanistariel` 326.
+  **Depth per creator is the proven pattern**, and the 14-post ceiling is the only thing blocking it.
+- Platform split TikTok 1,253 · Instagram 921 · **YouTube 19 (0.9%)** — YouTube is near-untapped and
+  is the only platform with an official public search API.
+- 1.03 pins per subject (2,131 distinct titles of 2,193).
+- `make-link-pin.py:1117-1118`: `slug`/`title` are literally `if len(rows) == 1 else None`;
+  `category`/`tags`/`focus` are batch-wide. A 38-pin batch has run as **25 grouped invocations**.
+- `check-coordinates.py` **cannot reach pins at all** — `from_catalog` (L255) reads `d["tours"]` and
+  matches `displayName == "Atlas Studio XXX"`, so no creator-handle maker can ever match. A network
+  audit of 2,193 pins is **2–3 h** at `SLEEP = 1.1`, and `names_resemble` (L145) has a Milan-specific
+  stop-word set that would dump creator captions into UNVERIFIABLE.
+
+## Next session: start here
+
+1. **Backend Phase 0** — conditional upserts (row comparison), conditional `place_id`, conditional
+   stops (mind the unique constraint), `rev` sequence, snapshot refresh outside the transaction.
+   Half a day for the first two; no app release; cannot regress the app.
+2. **Per-pin fields in `make-link-pin.py`** — extend `parse_batch` (L1021) with a `key=value` tail,
+   thread per-row values through L1111-1120, add a hero-filename collision guard. `--selftest` must
+   read **71/71** (62/62 means Pillow is missing and is not a pass). `scripts/` auto-merges.
+3. **The invisible-pin repair** — triage the 19 over-`maxStacked` groups as ONE owner decision.
+4. **The place spine** — § A1. No creators needed; speeds up today's workflow too.
+5. **App performance** — `SearchView.swift:745, 650`, `MapClustering.swift`, `DataService.swift:275`.
+   Needs an App Store release + owner simulator review, so slowest to reach users.
+
+⚠️ **Blocked on the owner:** `status/owner/auto-created-places.md` — `Place.swift` forbids
+auto-created places, and densifying cannot ship without that rule changing. `docs/places.md` also
+leaves part-vs-whole explicitly undecided, which a gazetteer does not settle.
+
+## Not verified
+
+- No live Supabase or App Store Connect check ran this session (web container, no key).
+- The 100k extrapolations are linear from measured per-entry costs, not simulated.
+- The "3 s per review item" figure in § A5 is an assumption; measure it before trusting the 16-hour
+  total.
