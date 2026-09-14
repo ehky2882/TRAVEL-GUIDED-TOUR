@@ -63,19 +63,33 @@ and get a fresh row here, per the staging rule below.
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| 🇺🇸 Atlanta | 30 | 30 single-stop, **no walks staged** | 30 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ATL |
+| 🇺🇸 Atlanta | 30 | 30 single-stop, **no walks staged** · ✅ **images 30/30** | 30 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ATL |
 | **TOTAL PENDING** | **30** | | **30** | | |
 
-> ⚠️ **Atlanta breaks this table's standing assumption that every pending tour is
-> image-complete.** It is **21 of 30** (verified against `origin/gh-pages` by slug, not by
-> arithmetic). Wiring it when audio arrives means either shipping 21 and holding 9, or sourcing
-> the last 9 first. The nine without images are **01 Five Points,
-> 02 Zero Mile Post, 04 Woodruff Park, 08 Sweet Auburn Curb Market, 18 BeltLine Eastside Trail,
-> 26 APEX / Auburn Avenue, 28 Graves Hall, 29 Spelman Oval, 30 Student Movement Boulevard** —
-> of which Five Points, Zero Mile, BeltLine, Auburn Avenue and Graves Hall have **verified
-> candidate pools already staged locally and awaiting owner picks**, and Woodruff, Spelman,
-> the Curb Market and Student Movement are the genuinely thin ones. Full detail and the
-> per-tour pick-map: `drafts/atlanta-batch1/README.md`.
+> ✅ **Atlanta is now image-complete — 30 of 30**, verified 2026-09-14 by requesting each tour
+> slug's `_hero.webp` from gh-pages and counting 200s. **Audio is the only thing outstanding.**
+> This note previously read "21 of 30" and listed nine gaps; that was true on 2026-08-26 and was
+> closed the following day. The correction did not reach `main` at the time — it landed only on
+> the staging branch's `drafts/atlanta-batch1/README.md`, which is exactly the drift this file
+> exists to prevent.
+>
+> The last four were closed differently from the rest and it is worth knowing which: **APEX,
+> Spelman Oval and Student Movement Boulevard are owner-supplied photographs**, and none of the
+> three was solvable by sourcing at any effort — `Category:Spelman College` holds 59 files and
+> not one is architecture, and exactly one Giles Hall image exists across Commons *and* the
+> Library of Congress, an 1893 halftone at 778×548. **65 files, 34 credit rows.** Two artwork
+> rights ship **open, not cleared** — Krog Street Tunnel's graffiti and Woodruff Park's *Atlanta
+> from the Ashes* (1969) — both owner-directed, both detailed in `drafts/CREDITS.md`.
+>
+> 🔴 **`apex-auburn_hero.webp` must not be "corrected".** A WELCOME / INMAN PARK banner hangs in
+> frame while the APEX Museum's own address is 135 Auburn Avenue in Sweet Auburn, ~1.5 km west,
+> so it reads as the wrong neighbourhood on sight. It was queried on that basis and the owner
+> confirmed it is correct.
+>
+> ⚠️ **Stop 02's premise contradicts its own photographs.** Every image shows the original Zero
+> Mile Post indoors at the Atlanta History Center, where it moved in 2019; the batch README's
+> tour table says "replica; original is 8 mi north". Resolve against the delivered script before
+> recording. Full per-tour detail: `drafts/atlanta-batch1/README.md` on the staging branch.
 
 _(✅ 🇪🇸 **Barcelona = DONE (2026-08-18): 68 tours LIVE** — 66 single-stop (geofenced 30 m) + **2 walks** (`barcelona-dreta-eixample-walk` "Dreta de l'Eixample", intro+6, 1.4 km — seven Modernista houses on and around the Illa de la Discòrdia; `barcelona-rosari-montserrat-walk` "The Monumental Rosary of Montserrat", intro+4, 1.0 km — down the Camí de la Santa Cova) under new maker **Atlas Studio BCN** (`79ad2022-a58c-52d0-b41a-814f9ac29323`) — the **31st maker**. 78 MP3s, 10,517 s (~2h55m), **the largest narration drop to date**. **Never in this table** — arrived complete and wired the same day. Neither walk shipped an intro track, so stop 01 became the manual stop 0 in each (the Melbourne Federation Square precedent). 🔴 **TEN supplied coordinates were wrong and every one was displaced due north** — Nau Gaudí by 3.2 km, Hotel Porta Fira 1.26 km, Tibidabo 1.14 km (over the ridge into Sant Cugat), Mercantic 964 m, Walden 7 604 m, Torre Bellesguard 488 m, Col·legi de les Teresianes 339 m, Portal Miralles 309 m, Xavier Corberó 248 m, Casa Costa 203 m. All corrected against OSM and reverse-verified onto the named venue. The systematic northward bias is an upstream data-generation problem, not random error — **check it before the next city**. ⚠️ Eight tours ship outside Barcelona with their own `city`: Montserrat ×5, Sant Just Desvern ×2 (Walden 7, La Fábrica), plus El Prat de Llobregat, Santa Coloma de Cervelló, Sant Cugat del Vallès, Mataró, Esplugues de Llobregat, L'Hospitalet de Llobregat and Sant Adrià de Besòs. ⚠️ **Antoni Gaudí is NOT in the tag vocabulary** and 16 tours here are his — the strongest case yet for a `Models/Tag.swift` addition; those tours ship `Designed by a Master`.)_
 
