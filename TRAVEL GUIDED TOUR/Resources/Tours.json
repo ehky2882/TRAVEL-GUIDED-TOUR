@@ -82884,7 +82884,8 @@
         "05C6A5B5-74D0-5B71-A445-81C2EABD6C16",
         "6F6AD335-48A6-5E4C-A469-568BFA2F5DBA",
         "FC2AD99F-4B32-5EF3-8B0D-370D42746D7E",
-        "D89D49C1-D2AC-58B9-8AFA-C3AF53A93930"
+        "D89D49C1-D2AC-58B9-8AFA-C3AF53A93930",
+        "4CBD75B2-F15E-5FBC-8F56-D368BE1B3804"
       ]
     },
     {
@@ -86126,6 +86127,96 @@
       "tourIds": [
         "4D6F1684-C8FC-53F8-9400-864E38EFB131",
         "68429066-A1EF-522F-A351-BB354073A960"
+      ]
+    },
+    {
+      "id": "3a55b93e-4a76-5f75-92b3-7d70d1aa3df7",
+      "name": "La Piscine",
+      "description": null,
+      "latitude": 50.6925142,
+      "longitude": 3.1679469,
+      "city": "Roubaix",
+      "address": "23 Rue de l'Espérance, Roubaix",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "719A19AF-30F2-5A74-9AEF-FD8CE17E70FB",
+        "ECF3AA10-F175-5E8E-B2E8-1A19C7B73055"
+      ]
+    },
+    {
+      "id": "8aab9a75-0dd4-54c9-b7dd-d2bc5c9515d2",
+      "name": "Edith Farnsworth House",
+      "description": null,
+      "latitude": 41.635019,
+      "longitude": -88.5357167,
+      "city": "Plano",
+      "address": "14520 River Road, Plano, Illinois",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "74961A80-B1D7-50CB-B16E-4B9C60CEF216",
+        "3870A932-289A-55C6-AC61-EEFA63384E87"
+      ]
+    },
+    {
+      "id": "e2e3e1e6-2d0a-55c7-b933-27210329326a",
+      "name": "Walkway Over the Hudson",
+      "description": null,
+      "latitude": 41.7106438,
+      "longitude": -73.949931,
+      "city": "Poughkeepsie",
+      "address": "87 Haviland Road, Highland, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1805B4C2-961F-5A53-82F9-67DEB6659788",
+        "F29E8474-AE36-58D1-9945-BE3D00CFD8A9"
+      ]
+    },
+    {
+      "id": "70df0eff-080a-5375-be88-f23ab9d5ee33",
+      "name": "Fondazione Querini Stampalia",
+      "description": null,
+      "latitude": 45.4364575,
+      "longitude": 12.3410349,
+      "city": "Venice",
+      "address": "Castello 5252, Venice",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "BB0A995A-399D-5D1F-9C6E-C82E59EDCD62",
+        "D4B29073-C63C-5542-9233-F427F7C7ED4D"
+      ]
+    },
+    {
+      "id": "71791063-0ee2-53fb-94b2-8714ed7533c1",
+      "name": "National Geographic Museum of Exploration",
+      "description": null,
+      "latitude": 38.9049611,
+      "longitude": -77.0375484,
+      "city": "Washington",
+      "address": "1145 17th Street NW, Washington, DC",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "9925C243-7BAE-537E-B8AE-739A24E2268C",
+        "F1BE576C-C701-5101-B26A-566BDD59B0CC"
+      ]
+    },
+    {
+      "id": "5cc1de0b-3356-516a-8d4c-028a4038d500",
+      "name": "Fremont Lenin Statue",
+      "description": null,
+      "latitude": 47.6512,
+      "longitude": -122.3506,
+      "city": "Seattle",
+      "address": "Fremont Place North & North 36th Street, Seattle",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B122989F-BE1F-5588-A73E-5AEFAAEA4E9A",
+        "53E1D109-33F1-5B75-9EA5-BED241F12A6E"
       ]
     }
   ],
@@ -98075,8 +98166,8 @@
           "order": 0,
           "title": "National Geographic Museum of Exploration",
           "caption": "@natgeomuseum is finally opening June 26! After a four-year renovation, the National Geographic Museum of Exploration (MOE) is back and bett",
-          "latitude": 38.9053449,
-          "longitude": -77.0372106,
+          "latitude": 38.9049611,
+          "longitude": -77.0375484,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -98088,8 +98179,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 38.9053449,
-      "centroidLongitude": -77.0372106,
+      "centroidLatitude": 38.9049611,
+      "centroidLongitude": -77.0375484,
       "city": "Washington",
       "country": "United States",
       "primaryCategory": "culturalHeritage",
@@ -108111,7 +108202,7 @@
           "order": 0,
           "title": "Walkway Over the Hudson",
           "caption": "Have you heard of the Walkway Over the Hudson in Poughkeepsie? It’s not that long of train ride MetroNorth from NYC. Take it to Poughkeepsie",
-          "latitude": 41.710644,
+          "latitude": 41.7106438,
           "longitude": -73.949931,
           "audioURL": "",
           "audioDurationSeconds": 0,
@@ -108124,7 +108215,7 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.710644,
+      "centroidLatitude": 41.7106438,
       "centroidLongitude": -73.949931,
       "city": "Poughkeepsie",
       "country": "United States",
@@ -130473,8 +130564,8 @@
           "order": 0,
           "title": "Musee La Piscine",
           "caption": "@museelapiscine in Roubaix, northern France, is a truly remarkable setting to experience art. Set inside an Art Deco building that used to h",
-          "latitude": 50.6926875,
-          "longitude": 3.1675625,
+          "latitude": 50.6925142,
+          "longitude": 3.1679469,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -130486,8 +130577,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 50.6926875,
-      "centroidLongitude": 3.1675625,
+      "centroidLatitude": 50.6925142,
+      "centroidLongitude": 3.1679469,
       "city": "Roubaix",
       "country": "France",
       "primaryCategory": "visualArt",
@@ -158907,8 +158998,8 @@
           "order": 0,
           "title": "👀 Should this statue stay up or should it be taken down l…",
           "caption": "👀 Should this statue stay up or should it be taken down like they did with Robert E. Lee? #socialissues #historytiktok",
-          "latitude": 47.6513125,
-          "longitude": -122.3506875,
+          "latitude": 47.6512,
+          "longitude": -122.3506,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -158920,8 +159011,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 47.6513125,
-      "centroidLongitude": -122.3506875,
+      "centroidLatitude": 47.6512,
+      "centroidLongitude": -122.3506,
       "city": "Seattle",
       "country": "United States",
       "primaryCategory": "history",
@@ -180328,8 +180419,8 @@
           "order": 0,
           "title": "The Morgan Library & Museum",
           "caption": "Just a few steps away from fifth Avenue you will find the stunning library filled with artifacts, archives, murals, and books all here becau",
-          "latitude": 40.7492685,
-          "longitude": -73.9814652,
+          "latitude": 40.7493,
+          "longitude": -73.9814,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -180341,8 +180432,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7492685,
-      "centroidLongitude": -73.9814652,
+      "centroidLatitude": 40.7493,
+      "centroidLongitude": -73.9814,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "literature",
