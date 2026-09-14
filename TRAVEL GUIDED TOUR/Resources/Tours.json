@@ -87733,6 +87733,21 @@
         "657C1195-F0F1-5535-929A-9C2D0C91268A",
         "62B2EAC9-F99D-5DE9-B0DF-0EAAB47EBB2A"
       ]
+    },
+    {
+      "id": "a7645e3f-7e71-547e-bdf3-8f44682f68da",
+      "name": "Gandhi Bhawan",
+      "description": "Pierre Jeanneret's Gandhi Bhawan on the Panjab University campus, its folded concrete roof rising to points above plain block walls. The entrance beneath it reads \"Truth is God.\"",
+      "latitude": 30.761821,
+      "longitude": 76.7713672,
+      "city": "Chandigarh",
+      "address": "Panjab University, Chandigarh",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AF9EAD7B-089F-5D09-A18D-19521FCA1E15",
+        "591A2058-B8CB-5319-A41A-B9E97DD514CB"
+      ]
     }
   ],
   "linkPins": [
@@ -175884,7 +175899,7 @@
           "title": "Gandhi Bhawan",
           "caption": "The Gandhi Bhawan in Chandigarh Videography assist by @dhruv.ns and @notohok #blessedarch #design #architecture #chandigarh",
           "latitude": 30.761821,
-          "longitude": 76.771367,
+          "longitude": 76.7713672,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -175897,7 +175912,7 @@
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
       "centroidLatitude": 30.761821,
-      "centroidLongitude": 76.771367,
+      "centroidLongitude": 76.7713672,
       "city": "Chandigarh",
       "country": "India",
       "primaryCategory": "architecture",
