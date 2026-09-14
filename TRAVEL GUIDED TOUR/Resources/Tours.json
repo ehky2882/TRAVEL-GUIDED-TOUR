@@ -84134,21 +84134,6 @@
       ]
     },
     {
-      "id": "43bf4efd-5c8a-5ef8-9791-93ee45f4dc4a",
-      "name": "First National Bank of Hollywood",
-      "description": "A 1927 Gothic Revival bank tower at Hollywood and Highland by Meyer & Holler, the firm behind Grauman's Chinese Theatre. Its banking hall has spent decades as a filming location. Two separate posts by the same creator sit on it.",
-      "latitude": 34.101687,
-      "longitude": -118.338437,
-      "city": "Los Angeles",
-      "address": "Hollywood Boulevard at Highland Avenue, Los Angeles",
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "57CAD837-2E86-5EA2-AA50-40380D0AF477",
-        "62ECCD3D-535D-5168-9299-54AEECE3FD16"
-      ]
-    },
-    {
       "id": "4ade65b8-6470-5839-9248-db4ba1b04685",
       "name": "First Unitarian Society Meeting House",
       "description": "Frank Lloyd Wright's 1951 meeting house for the congregation his own parents had helped found, its copper roof rising to a prow meant to read as hands held in prayer. A much larger addition was built alongside it in 2008.",
@@ -163599,7 +163584,7 @@
     {
       "id": "62ECCD3D-535D-5168-9299-54AEECE3FD16",
       "createdAt": "2026-09-10",
-      "title": "First National Bank of Hollywood",
+      "title": "Westlake Theatre",
       "shortDescription": "A post by @nickcabotrodriguez on TikTok.",
       "longDescription": "What’s up with this building? Part 5 of my LA micro-documentary series #losangeles",
       "makerId": "F63BBD9D-E4E8-5760-A743-7213028B02F9",
@@ -163614,10 +163599,10 @@
         {
           "id": "877A1DF7-8C4E-565B-B376-3D37DB0A5639",
           "order": 0,
-          "title": "First National Bank of Hollywood",
+          "title": "Westlake Theatre",
           "caption": "What’s up with this building? Part 5 of my LA micro-documentary series #losangeles",
-          "latitude": 34.101687,
-          "longitude": -118.338437,
+          "latitude": 34.058286,
+          "longitude": -118.27523,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -163629,14 +163614,13 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.101687,
-      "centroidLongitude": -118.338437,
+      "centroidLatitude": 34.058286,
+      "centroidLongitude": -118.27523,
       "city": "Los Angeles",
       "country": "United States",
-      "primaryCategory": "architecture",
+      "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Commerce",
         "History"
       ],
       "priceUSD": 0
