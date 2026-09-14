@@ -99,9 +99,16 @@ compressed** — take the wire bytes by sending `Accept-Encoding: gzip` by hand
 rather than `--compressed`, which decompresses and reports the raw figure.
 This file said **3.4 MB** until #795 dropped `stops.transcriptText`
 (3.77 M characters, **37.5% of every billed byte**, rendered by no consumer
-screen). `longDescription` is **8.2% compressed — not the 18% once recorded
-here, and it IS used**, so it stays. 🔴 **Both stale figures were RAW where
-the bill is compressed; re-measure rather than quoting this paragraph.**
+screen). 🔴 `longDescription` is **43.9% compressed — the largest single thing we send.**
+The **8.2% this file carried was simply WRONG**, at every compression level
+(re-measured twice on 2026-09-14: 43.9% at gzip level 1, which is what PostgREST
+uses, 44.4% at level 9, against 29.4% raw). **It is still KEPT** — `TourDetailView`
+renders it, `SearchView` searches it — and 🔴 **dropping it would be catastrophic
+rather than a mere regression: `Tour.longDescription` is NON-OPTIONAL in
+`Models/Tour.swift`, so a payload without it decodes `tours` as ZERO elements while
+`ToursData` still succeeds, and `RemoteCatalogLoader` then overwrites the good
+cache with the empty result.** See `docs/delta-catalog-fetch-design.md`.
+🔴 **Re-measure rather than quoting this paragraph — it has been wrong twice.**
 
 So the rules below are not micro-optimisation — they are the difference
 between a session costing 44 MB and costing 8 KB.
@@ -115,7 +122,11 @@ between a session costing 44 MB and costing 8 KB.
 
 🔴 **Egress is billed on the COMPRESSED bytes, so measure compressed.** Raw size
 overstates text fields badly and two separate cuts here were nearly decided on
-it: `longDescription` is **13.3% raw but 8.2% gzipped**. Save one payload
+it — **and the example this file used for years was itself wrong**:
+`longDescription` is **29.4% raw and 43.9% gzipped**, so compression made it a
+*bigger* share, not a smaller one. ⚠️ **Compress at level 1, not Python's default
+9** — PostgREST uses level 1, and level 9 understates the bill and mis-ranks
+fields. Save one payload
 (`curl --compressed … -o catalog.json`), then in Python remove one key at a
 time and `len(gzip.compress(...))` the result — that one saved copy answers
 every such question afterwards for free.
@@ -193,9 +204,12 @@ The allowance is 5 GB/month ≈ **167 MB/day**. That is the number to beat.
    the key ever returns: the damage runs that way, and nothing else would notice.
 
 ⚠️ **`longDescription` was considered in the same pass and deliberately KEPT.**
-The "18%" once quoted here was **raw**; gzipped it is **8.2%**, and unlike the
-transcripts it is *used* — `TourDetailView` renders it, `SearchView` searches
-it. 8% does not buy a visible regression.
+⚠️ **The reasoning recorded here was wrong on its numbers.** It said the "18%"
+was raw and that gzipped it was only **8.2%**. Re-measured twice independently on
+2026-09-14: **43.9% gzipped** at level 1 (which is what PostgREST uses) and 44.4%
+at level 9, against **29.4% raw**. It is *used* — `TourDetailView` renders it,
+`SearchView` searches it — so the KEEP decision stands, but it stands on being
+load-bearing, not on being small.
 
 **What is still NOT fixed:** when anything changes, the app downloads all 1,552
 tours. Delta or city-scoped fetching is the remaining step, and is not built.
