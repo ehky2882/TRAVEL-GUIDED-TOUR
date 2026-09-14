@@ -1,5 +1,29 @@
 # Stripe account review — questions and submitted answers
 
+# ✅ CLOSED — APPROVED 2026-09-14
+
+> *"Thank you for providing additional information about your business, DOZENT (Stripe account ID:
+> acct_1TwlCdPpgiu1XU6P). We have successfully completed our review, and you are welcome to continue
+> processing payments with Stripe."* — Stripe, 2026-09-14
+
+**Five rounds, 2026-08-18 to 2026-09-14.** Round 5 was submitted on 11 September and the review
+closed three days later. **Nothing further is owed.**
+
+🔴 **WHAT CLOSED IT WAS THE APP STORE LINK, NOT A BETTER ARGUMENT.** Rounds 1–4 were correct and did
+not move it. Stripe asked four times for *"an active website link where we can view the products and
+services"*, and until the app was released on 2026-09-01 there was nothing that answered it — the
+apex read COMING SOON, `/about/` described the product without showing it, and there was no public
+listing. **The durable lesson is not about wording: when a reviewer asks to see the thing, argument
+is not a substitute, and the fastest close is giving them the thing.**
+
+**⚠️ This file stays useful and should not be deleted.** A closed review can be reopened, and the
+business model it describes is still being built out — the moment a third-party creator is paid
+through Connect, the central fact in every answer below (*"the only creator of any paid tour is the
+account holder"*) stops being true. **If Stripe ever writes again, read this whole file first, and
+re-verify every claim against the live system before repeating any of it.**
+
+---
+
 Record of Stripe's Restricted Businesses review of the Dozent account, so that any
 follow-up answers stay consistent with what has already been filed. **Read this before
 answering anything further from Stripe.**
@@ -152,7 +176,7 @@ everything true about the architecture. What the response could not do — then 
 **⚠️ Submitted before the app went live, and superseded within hours by round 5.** Recorded here only
 so the count is right and nobody mistakes round 5 for round 4.
 
-## Round 5 — 2026-09-11 (SUBMITTED by the owner)
+## Round 5 — 2026-09-11 (SUBMITTED by the owner) → ✅ APPROVED 2026-09-14
 
 **The app went live on 2026-09-01**, and that is the whole change. Stripe had asked four times for
 "an active website link where we can view the products and services." There is now one:
