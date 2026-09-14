@@ -109,3 +109,11 @@ duller reason: `--tags` is comma-separated and the firm's name contains commas.
   upload, which is the Thyssen failure mode).
 - All 40 gh-pages paths confirmed **new** before the push, so nothing was
   overwritten at a live URL.
+- Pages deployed **01:41 UTC**, ~6 min after the push. All **33 live URLs then
+  hashed byte-identical to the local files** — the push puts blobs in the branch,
+  it does not prove the CDN serves them.
+- `check-image-duplicates.py --pins`, re-run at **01:41:38** once deployed:
+  **2066 images, 0 WARN, exit 0**, `OK — no suspicious duplicates`, and the
+  shared-URL half **0 errors** across 211 documented reuses. The earlier run's
+  34 WARNs are gone. **This is the run that counts**; the pre-deploy one is not
+  evidence of anything.
