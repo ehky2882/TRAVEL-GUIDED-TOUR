@@ -90,8 +90,54 @@ entries in it.**
 `The Channel Gardens` / Rockefeller Center did not.
 
 A plausible line is *"the part that IS the draw"* versus *"a nameable component"*
-— but the Channel Gardens cut against it. **There is no settled rule here. Put
-these to the owner individually and do not infer one.**
+— but the Channel Gardens cut against it.
+
+### ⚠️ 2026-09-14: four decided one way — but still a JUDGEMENT CALL
+
+🔴 **The owner was explicit that this is NOT a settled rule.** Asked to choose on
+four such pairs at once they said *"DO ALL OF #2 ALSO"*, and then, immediately
+after: **"I THINK THE PART AND WHOLE IS A JUDGEMENT CALL. I WOULD LEAVE THE 3
+FROM MY BATCH."** So four went one way and three identical-looking cases were
+deliberately left alone in the same breath. **Do not infer a rule from the four.
+Keep putting these to the owner individually.**
+
+The three left alone, for the record: Keith Haring's Carmine Street Mural vs the
+Tony Dapolito Recreation Center; The Blue Ribbon Garden vs Walt Disney Concert
+Hall; Hoyt–Schermerhorn Streets Station vs a pin about the street's name.
+
+What the four that *were* made have in common — a component with no independent
+identity, inside a site whose name everybody already knows — may be the shape of
+it, but the owner has not said so and the three above are not obviously different:
+
+| Place | The "part" that joined it |
+|---|---|
+| **One Vanderbilt** | Summit One Vanderbilt — the observation deck inside the tower |
+| **Canterbury Cathedral** | The Shrine of Thomas Becket |
+| **Kulturpalast Dresden** | its mural, *Der Weg der roten Fahne* |
+| **Strahov Library** | the Philosophical Hall, its fresco, the Forbidden Books, the Theological Hall |
+
+**When one IS made, name it for the whole, not the component** — `One
+Vanderbilt`, not `Summit`. That part is consistent across all four.
+
+🔴 **This does NOT overturn Rules 3 and 4, which remain the harder constraint.**
+A part is *inside* the whole; the rules below are about things merely *beside*
+each other:
+
+- **Rule 3 (co-location is not identity)** still stands. `MOCA Grand Avenue`
+  was declined against the Blue Ribbon Garden 20 m away — a different
+  institution is not a component.
+- **Rule 4 (a tenant is not the site)** still stands, and it decided the fifth
+  Strahov entry: the **Strahov Monastery Brewery** shares the library's exact
+  coordinate and was **left out**. A brewery is not a component of a library.
+  Had the place been named *Strahov Monastery* the answer might differ — which
+  is why the **name you choose decides the membership**, and is worth choosing
+  before minting.
+
+⚠️ The earlier precedents this section lists (`Big Ben` / `Houses of
+Parliament`, `Bar Luce` / `Fondazione Prada`, `The Channel Gardens`) were
+declined earlier and were not revisited. Given the owner's "judgement call"
+framing they are **not** in conflict with the four above — they are simply other
+judgements. Leave them.
 
 ---
 
