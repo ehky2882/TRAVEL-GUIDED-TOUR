@@ -85794,7 +85794,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
-        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17"
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "7354C765-DAF5-5B08-91DE-2749969CC0BA"
       ]
     },
     {
@@ -86050,7 +86051,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
-        "60944363-58DF-54B1-90A4-EC2018EB3D19"
+        "60944363-58DF-54B1-90A4-EC2018EB3D19",
+        "9FE0FC12-0930-567A-82C1-F97AFA8A8450"
       ]
     },
     {
@@ -86217,6 +86219,129 @@
       "tourIds": [
         "B122989F-BE1F-5588-A73E-5AEFAAEA4E9A",
         "53E1D109-33F1-5B75-9EA5-BED241F12A6E"
+      ]
+    },
+    {
+      "id": "5459f4b4-fd2a-5298-9602-d05b12ad56d4",
+      "name": "Memento Park",
+      "description": null,
+      "latitude": 47.4276,
+      "longitude": 18.9847,
+      "city": "Budapest",
+      "address": "Balatoni út – Szabadkai utca, Budapest",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B016A73B-2437-504E-B9CE-0992B7A68360",
+        "AA41DCD3-D243-5514-9A3F-639DF499F6DA"
+      ]
+    },
+    {
+      "id": "8b6d6f5e-8fb8-52d7-9c7a-ddfca3547039",
+      "name": "Gotokuji Temple",
+      "description": null,
+      "latitude": 35.653543,
+      "longitude": 139.646851,
+      "city": "Tokyo",
+      "address": "2-24-7 Gotokuji, Setagaya, Tokyo",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0A34008F-A4DC-57DA-A449-65BF50BC3804",
+        "ABBBF0B7-52D8-576B-A2E9-BE5457200AB3"
+      ]
+    },
+    {
+      "id": "4d1c758b-a114-530b-a958-66ba3e9068c0",
+      "name": "Todoroki Valley",
+      "description": null,
+      "latitude": 35.605057,
+      "longitude": 139.645742,
+      "city": "Tokyo",
+      "address": "1-22 Todoroki, Setagaya, Tokyo",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "229250B1-051D-50EA-8137-B507542EF57D",
+        "BDD3C4C1-BE27-5F92-90CE-AF28E89694DE"
+      ]
+    },
+    {
+      "id": "96c23548-fb5c-5bff-9a26-02ccc2507025",
+      "name": "Michelin House",
+      "description": null,
+      "latitude": 51.4931005,
+      "longitude": -0.1684098,
+      "city": "London",
+      "address": "81 Fulham Road, Chelsea, London",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F8D1440B-271A-5692-9A43-845FA8199353",
+        "FD605710-195B-5C0C-80B2-98B455DFB595"
+      ]
+    },
+    {
+      "id": "ea3ca547-bfd0-5897-9813-43f8e79ce0b5",
+      "name": "One Vanderbilt",
+      "description": null,
+      "latitude": 40.752974,
+      "longitude": -73.97854,
+      "city": "New York",
+      "address": "One Vanderbilt Avenue, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2D1B3869-BADB-53F2-9443-1F07FD5A2A68",
+        "6784A052-4129-5161-B31C-834BC60EE8E0"
+      ]
+    },
+    {
+      "id": "8c266cf1-cf63-5d51-828f-38f30f191a6d",
+      "name": "Canterbury Cathedral",
+      "description": null,
+      "latitude": 51.2798,
+      "longitude": 1.082766,
+      "city": "Canterbury",
+      "address": "Cathedral House, 11 The Precincts, Canterbury",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AADAB26A-2C4B-5DC1-8C67-015656D249DB",
+        "88E8F64E-4845-5E08-A500-591C22AB5EA1",
+        "B77BCEF8-E697-526B-9C4D-C05C2A1B112F"
+      ]
+    },
+    {
+      "id": "24a66b96-9151-5407-95ca-f210480db97e",
+      "name": "Kulturpalast Dresden",
+      "description": null,
+      "latitude": 51.0511,
+      "longitude": 13.7385,
+      "city": "Dresden",
+      "address": "Schloßstraße 2, Dresden",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "A32850BC-0E99-5740-8325-40D4C89D37E2",
+        "2CB6F5EB-1851-52F3-8515-8AC18702BAAC"
+      ]
+    },
+    {
+      "id": "d8418d33-28a2-5c9c-b531-a49263bf6717",
+      "name": "Strahov Library",
+      "description": null,
+      "latitude": 50.085,
+      "longitude": 14.3843,
+      "city": "Prague",
+      "address": "Strahovské nádvoří 1/132, Prague",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F6602F34-DA30-52C4-A3BD-B70628181EB2",
+        "8E0B80FA-9993-53FD-8819-3A9BEDC7A75A",
+        "CD771D90-43A0-52BF-BDB4-A963192808A6",
+        "27321CAD-72EA-5328-816F-3F114183DD0A"
       ]
     }
   ],
@@ -99967,8 +100092,8 @@
           "order": 0,
           "title": "Canterbury Cathedral",
           "caption": "The delights of Canterbury! #history #britishhistory #canterbury #historylesson",
-          "latitude": 51.2793125,
-          "longitude": 1.0811875,
+          "latitude": 51.2798,
+          "longitude": 1.082766,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -99980,8 +100105,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.2793125,
-      "centroidLongitude": 1.0811875,
+      "centroidLatitude": 51.2798,
+      "centroidLongitude": 1.082766,
       "city": "Canterbury",
       "country": "United Kingdom",
       "primaryCategory": "sacredSites",
@@ -170383,8 +170508,8 @@
           "order": 0,
           "title": "One Vanderbilt",
           "caption": "1,401 feet tall, built right over Grand Central, and the trains never stopped once. 🏙️ I got inside @one_vanderbilt with SL Green’s Robert S",
-          "latitude": 40.7529739,
-          "longitude": -73.9785396,
+          "latitude": 40.752974,
+          "longitude": -73.97854,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -170396,8 +170521,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7529739,
-      "centroidLongitude": -73.9785396,
+      "centroidLatitude": 40.752974,
+      "centroidLongitude": -73.97854,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -170746,8 +170871,8 @@
           "order": 0,
           "title": "Summit One Vanderbilt",
           "caption": "A glass elevator climbs the outside of One Vanderbilt, and it feels like floating. 🌫️ That’s Ascent, the finale of Summit One Vanderbilt @su",
-          "latitude": 40.7529739,
-          "longitude": -73.9785396,
+          "latitude": 40.752974,
+          "longitude": -73.97854,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -170759,8 +170884,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7529739,
-      "centroidLongitude": -73.9785396,
+      "centroidLatitude": 40.752974,
+      "centroidLongitude": -73.97854,
       "city": "New York",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -181423,8 +181548,8 @@
           "order": 0,
           "title": "Gotokuji Temple",
           "caption": "A temple surrounded by thousands of lucky cats… 🐱 This is Gotokuji — one of the birthplaces of Maneki-neko, right here in Tokyo. You can buy",
-          "latitude": 35.6535429,
-          "longitude": 139.6468507,
+          "latitude": 35.653543,
+          "longitude": 139.646851,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -181436,8 +181561,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.6535429,
-      "centroidLongitude": 139.6468507,
+      "centroidLatitude": 35.653543,
+      "centroidLongitude": 139.646851,
       "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "sacredSites",
@@ -181468,8 +181593,8 @@
           "order": 0,
           "title": "Gotokuji Temple",
           "caption": "There's a temple in Tokyo where people leave cats as offerings, and you can take one home for less than $3. If you love cats, Tokyo might ho",
-          "latitude": 35.6535429,
-          "longitude": 139.6468507,
+          "latitude": 35.653543,
+          "longitude": 139.646851,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -181481,8 +181606,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.6535429,
-      "centroidLongitude": 139.6468507,
+      "centroidLatitude": 35.653543,
+      "centroidLongitude": 139.646851,
       "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "sacredSites",
@@ -182561,7 +182686,7 @@
           "order": 0,
           "title": "Todoroki Valley",
           "caption": "After three years closed to the public, the only natural valley in central Tokyo has finally reopened. This is Todoroki Valley, about 20 min",
-          "latitude": 35.6050567,
+          "latitude": 35.605057,
           "longitude": 139.645742,
           "audioURL": "",
           "audioDurationSeconds": 0,
@@ -182574,7 +182699,7 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.6050567,
+      "centroidLatitude": 35.605057,
       "centroidLongitude": 139.645742,
       "city": "Tokyo",
       "country": "Japan",
@@ -182607,7 +182732,7 @@
           "order": 0,
           "title": "Todoroki Valley",
           "caption": "I'm Tokyo local,I never go to Shibuya Instead I go to a secret oasis This is \"Todoroki Valley\" the only natural valley across all 23 wards o",
-          "latitude": 35.6050567,
+          "latitude": 35.605057,
           "longitude": 139.645742,
           "audioURL": "",
           "audioDurationSeconds": 0,
@@ -182620,7 +182745,7 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.6050567,
+      "centroidLatitude": 35.605057,
       "centroidLongitude": 139.645742,
       "city": "Tokyo",
       "country": "Japan",

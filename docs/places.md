@@ -90,8 +90,42 @@ entries in it.**
 `The Channel Gardens` / Rockefeller Center did not.
 
 A plausible line is *"the part that IS the draw"* versus *"a nameable component"*
-— but the Channel Gardens cut against it. **There is no settled rule here. Put
-these to the owner individually and do not infer one.**
+— but the Channel Gardens cut against it.
+
+### ✅ Decided 2026-09-14: a part inside a whole IS the same place
+
+**Owner, asked to choose on four such pairs at once: *"DO ALL OF #2 ALSO."***
+Every one of them became a place:
+
+| Place | The "part" that joined it |
+|---|---|
+| **One Vanderbilt** | Summit One Vanderbilt — the observation deck inside the tower |
+| **Canterbury Cathedral** | The Shrine of Thomas Becket |
+| **Kulturpalast Dresden** | its mural, *Der Weg der roten Fahne* |
+| **Strahov Library** | the Philosophical Hall, its fresco, the Forbidden Books, the Theological Hall |
+
+**The rule now: a nameable component of a site belongs to that site's place.**
+Name the place for the **whole**, not the component — `One Vanderbilt`, not
+`Summit`.
+
+🔴 **This does NOT overturn Rules 3 and 4, which remain the harder constraint.**
+A part is *inside* the whole; the rules below are about things merely *beside*
+each other:
+
+- **Rule 3 (co-location is not identity)** still stands. `MOCA Grand Avenue`
+  was declined against the Blue Ribbon Garden 20 m away — a different
+  institution is not a component.
+- **Rule 4 (a tenant is not the site)** still stands, and it decided the fifth
+  Strahov entry: the **Strahov Monastery Brewery** shares the library's exact
+  coordinate and was **left out**. A brewery is not a component of a library.
+  Had the place been named *Strahov Monastery* the answer might differ — which
+  is why the **name you choose decides the membership**, and is worth choosing
+  before minting.
+
+⚠️ The earlier precedents this section lists (`Big Ben` / `Houses of
+Parliament`, `Bar Luce` / `Fondazione Prada`, `The Channel Gardens`) were
+declined **before** this decision and were not revisited. They are inconsistent
+with the rule above; raise them with the owner rather than assuming either way.
 
 ---
 
