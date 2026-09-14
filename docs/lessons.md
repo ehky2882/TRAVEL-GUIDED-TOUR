@@ -909,7 +909,7 @@ true when they were written. That is the same failure this project has paid for
 repeatedly with perishable facts in `CLAUDE.md` — here it just arrived wearing
 a `.sql` extension.
 
-## Egress is billed COMPRESSED — raw sizes overstate text badly (2026-09-10)
+## Measure the payload at gzip LEVEL 1, and prose does not shrink (2026-09-10, corrected 2026-09-14)
 
 Two payload cuts were nearly decided on raw byte counts. Measured on the live
 payload:
@@ -917,16 +917,55 @@ payload:
 | field | raw | gzipped (what is billed) |
 |---|---|---|
 | `stops.transcriptText` | 34.8% | **37.5%** |
-| `longDescription` | 13.3% | **8.2%** |
+| `longDescription` | **29.4%** | **43.9%** |
 
 The transcripts were removed (nothing reads them; 41.4% off the actual wire
-bytes, 3,698,842 → 2,167,209). `longDescription` was **kept** — 8% does not buy
-a visible regression, and it is rendered by `TourDetailView` and searched by
-`SearchView`. Repo notes had quoted it as "18%", which was the raw figure.
+bytes, 3,698,842 → 2,167,209). `longDescription` is **kept** — it is rendered by
+`TourDetailView` and searched by `SearchView` — but on being load-bearing, not
+on being small.
 
-**Method:** save one payload with `curl --compressed … -o catalog.json`, then in
-Python remove one key at a time and `len(gzip.compress(...))` the result. One
-saved copy answers every such question afterwards for free.
+🔴 **This entry said `longDescription` was 8.2% gzipped, and that was wrong by a
+factor of five.** Re-measured on 2026-09-14 by two independent methods (delete
+the key; keep the key and blank the value) at three compression levels, it is
+**43.9%** — the single largest thing the catalogue sends. Part of the raw shift
+is legitimate: these shares were taken while transcripts were still on the wire,
+so removing 37.5% of the payload raised everything else's share. **That explains
+13.3% → 29.4% raw. It does not explain 8.2% → 43.9%**, which was simply a bad
+measurement that then sat in two files being quoted as settled.
+
+🔴 **And the heading this entry used to carry — "raw sizes overstate text
+badly" — is BACKWARDS for prose.** It holds for repetitive text like the
+transcripts. `longDescription` is 29.4% raw and 43.9% compressed: its share went
+*up*. The catalogue is otherwise UUIDs, repeated JSON keys, coordinates and URLs
+off a single host, all of which gzip flattens almost to nothing, while distinct
+prose (1,553 of 1,553 tour values are unique) survives compression nearly
+intact. **Prose is the part that is left after gzip, not the part that
+disappears.**
+
+**Method — and the method is where the error came from.** Save one payload with
+`Accept-Encoding: gzip` (never `--compressed`, which decompresses and reports
+the raw figure), then in Python remove one key at a time and re-compress. But
+⚠️ **`gzip.compress(...)` defaults to LEVEL 9 and PostgREST serves LEVEL 1.**
+Level 9 understates the bill by ~15% and, far worse, *mis-ranks* fields —
+high-entropy prose compresses much better at 9 than at 1, so measuring at the
+default makes exactly the fields that dominate the bill look cheap. Calibrate
+first: recompress the saved payload at each level and take the one that matches
+the bytes actually served.
+
+```python
+def gz(o):                                    # what is billed
+    b = io.BytesIO()
+    with gzip.GzipFile(fileobj=b, mode="wb", compresslevel=1, mtime=0) as f:
+        f.write(json.dumps(o, separators=(",", ":"), ensure_ascii=False).encode())
+    return len(b.getvalue())
+```
+
+⚠️ **Knowing a field is 44% is not permission to drop it.** `longDescription` is
+**non-optional** in `Models/Tour.swift`, and `ToursData` decodes element by
+element — so a payload without it decodes `tours` as ZERO elements, succeeds,
+and `RemoteCatalogLoader` overwrites the good cache with the empty result. The
+size of a field and the safety of removing it are unrelated questions.
+`docs/delta-catalog-fetch-design.md` § 4.2 has the full walk-through.
 
 ## A title rule cannot find a place; only the coordinate can (2026-09-11)
 

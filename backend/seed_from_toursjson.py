@@ -130,6 +130,44 @@ def validate(data):
         sys.exit(1)
 
 
+def upsert_tail(table, pairs, touch_updated_at=True):
+    """Render the `on conflict (id) do update` tail of an idempotent upsert.
+
+    `pairs` is [(column, new_value_expression)] — normally
+    ('title', 'excluded.title'), occasionally a coalesce that keeps what the
+    database already holds.
+
+    🔴 THE `where` GUARD IS THE POINT, AND IT IS GENERATED FROM THE SAME LIST
+    AS THE `set`. Without it every upsert rewrote every row on every seed,
+    whether or not anything had changed — measured against the real catalogue,
+    an identical re-seed touched 3,745 of 3,745 tours, 424 of 424 makers and
+    303 of 303 places. That is pure WAL, pure bloat and pure autovacuum work on
+    an instance that ran out of memory for 11h45m on 2026-09-14, and it also
+    made `updated_at` useless as a "what changed?" signal, because the answer
+    was always "everything". See `docs/delta-catalog-fetch-design.md` § 6.
+
+    ⚠️ Generating both halves from one list is deliberate. A hand-maintained
+    `where` clause beside a hand-maintained `set` clause drifts the first time
+    someone adds a column — and it drifts SILENTLY, in the dangerous direction:
+    the new column changes, the guard does not notice, and the edit never
+    reaches a phone. This is the same rotting-checklist failure
+    `scripts/check-catalog-contract.py` exists to catch.
+
+    ⚠️ Compare against `excluded.<col>`, never the raw literal. `excluded` has
+    already been coerced to the column's type, so `numeric` meets `numeric` and
+    an enum meets its own enum rather than an untyped string.
+    """
+    sets = ", ".join(f"{c} = {e}" for c, e in pairs)
+    if touch_updated_at:
+        sets += ", updated_at = now()"
+    olds = ", ".join(f"{table}.{c}" for c, _ in pairs)
+    news = ", ".join(e for _, e in pairs)
+    return (
+        f"on conflict (id) do update set {sets}\n"
+        f"where ({olds}) is distinct from ({news});\n"
+    )
+
+
 def emit(data, out):
     makers, tours = data["makers"], data["tours"]
     places = validate_places(data)
@@ -140,6 +178,31 @@ def emit(data, out):
     w(f"-- Source catalog: {len(makers)} makers / {len(tours)} tours / {stop_count} stops\n")
     w("begin;\n\n")
 
+    # 🔴 Stops are upserted row by row now (they used to be deleted and
+    # re-inserted wholesale), so inserting a stop into the middle of a walk
+    # renumbers the ones after it and transiently collides with
+    # `unique (tour_id, "order")`. Deferring the check to COMMIT judges the
+    # final state instead of each intermediate step.
+    #
+    # ⚠️ This only has an effect once `backend/catalog_rev.sql` has made that
+    # constraint DEFERRABLE; on a database that predates it the statement is a
+    # harmless no-op, so the warning below is the only thing that would tell
+    # anyone. A seed is otherwise unaffected — the single failure it prevents
+    # is a stop REORDER, which is why this does not refuse to run.
+    w("set constraints all deferred;\n")
+    w(
+        "do $$\n"
+        "begin\n"
+        "    if not exists (select 1 from pg_constraint\n"
+        "                    where conrelid = 'public.stops'::regclass\n"
+        "                      and conname = 'stops_tour_id_order_key'\n"
+        "                      and condeferrable) then\n"
+        "        raise notice 'stops_tour_id_order_key is not DEFERRABLE -- "
+        "apply backend/catalog_rev.sql; reordering a walk''s stops would fail until then';\n"
+        "    end if;\n"
+        "end $$;\n\n"
+    )
+
     w("-- makers\n")
     for m in makers:
         w(
@@ -148,16 +211,25 @@ def emit(data, out):
             f"{q(m['id'])}, {q(m['displayName'])}, {q(m.get('avatarURL'))}, "
             f"{q(m.get('avatarEmoji'))}, {q(m['bio'])}, {q(m.get('websiteURL'))}, "
             f"{q(m.get('platform'))}, {q(m.get('handle'))})\n"
-            "on conflict (id) do update set "
-            "display_name = excluded.display_name, avatar_url = excluded.avatar_url, "
-            "avatar_emoji = excluded.avatar_emoji, bio = excluded.bio, "
-            "website_url = excluded.website_url, "
-            # platform/handle (backend/usernames.sql): a maker the catalogue
-            # carries without them keeps what the database already holds —
-            # the guard trigger derives one on insert — so a seed can never
-            # blank a handle.
-            "platform = coalesce(excluded.platform, makers.platform), "
-            "handle = coalesce(excluded.handle, makers.handle), updated_at = now();\n"
+            + upsert_tail("makers", [
+                ("display_name", "excluded.display_name"),
+                ("avatar_url", "excluded.avatar_url"),
+                ("avatar_emoji", "excluded.avatar_emoji"),
+                ("bio", "excluded.bio"),
+                ("website_url", "excluded.website_url"),
+                # platform/handle (backend/usernames.sql): a maker the catalogue
+                # carries without them keeps what the database already holds —
+                # the guard trigger derives one on insert — so a seed can never
+                # blank a handle.
+                #
+                # ⚠️ The coalesce has to appear on BOTH sides, which is exactly
+                # why the guard is generated from this list rather than written
+                # out again by hand: comparing against a bare
+                # `excluded.platform` would read every maker the catalogue
+                # carries without a platform as changed, on every seed, forever.
+                ("platform", "coalesce(excluded.platform, makers.platform)"),
+                ("handle", "coalesce(excluded.handle, makers.handle)"),
+            ])
         )
 
     # NOTE (paid tours, V2 Step 6): price_tier is deliberately absent from
@@ -182,14 +254,17 @@ def emit(data, out):
                 f"values ({q(p['id'])}, {q(p['name'])}, {q(p.get('description'))}, "
                 f"{p['latitude']}, {p['longitude']}, {q(p.get('city'))}, "
                 f"{q(p.get('address'))}, {q(p.get('heroImageURL'))}, "
-                f"{text_array(p.get('additionalImageURLs'))}) "
-                "on conflict (id) do update set "
-                "name = excluded.name, description = excluded.description, "
-                "latitude = excluded.latitude, longitude = excluded.longitude, "
-                "city = excluded.city, address = excluded.address, "
-                "hero_image_url = excluded.hero_image_url, "
-                "additional_image_urls = excluded.additional_image_urls, "
-                "updated_at = now();\n"
+                f"{text_array(p.get('additionalImageURLs'))})\n"
+                + upsert_tail("places", [
+                    ("name", "excluded.name"),
+                    ("description", "excluded.description"),
+                    ("latitude", "excluded.latitude"),
+                    ("longitude", "excluded.longitude"),
+                    ("city", "excluded.city"),
+                    ("address", "excluded.address"),
+                    ("hero_image_url", "excluded.hero_image_url"),
+                    ("additional_image_urls", "excluded.additional_image_urls"),
+                ])
             )
 
     w("\n-- tours\n")
@@ -216,22 +291,35 @@ def emit(data, out):
             f"{q(t['primaryCategory'])}, "
             f"{text_array(t.get('tags', []))}, {q(t.get('priceUSD', 0))}, "
             "'published', now())\n"
-            "on conflict (id) do update set "
-            "title = excluded.title, short_description = excluded.short_description, "
-            "long_description = excluded.long_description, maker_id = excluded.maker_id, "
-            "hero_image_url = excluded.hero_image_url, "
-            "additional_image_urls = excluded.additional_image_urls, "
-            "video_urls = excluded.video_urls, video_role = excluded.video_role, "
-            "source_url = excluded.source_url, source_author = excluded.source_author, "
-            "kind = excluded.kind, "
-            "intro_audio_url = excluded.intro_audio_url, "
-            "total_duration_seconds = excluded.total_duration_seconds, "
-            "walking_distance_meters = excluded.walking_distance_meters, "
-            "centroid_latitude = excluded.centroid_latitude, "
-            "centroid_longitude = excluded.centroid_longitude, city = excluded.city, "
-            "country = excluded.country, "
-            "primary_category = excluded.primary_category, tags = excluded.tags, "
-            "price_usd = excluded.price_usd, updated_at = now();\n"
+            # ⚠️ `status`, `published_at`, `place_id` and `price_tier` are
+            # deliberately absent from this list. The first two are written on
+            # INSERT only; `place_id` is maintained by the membership pass
+            # below; `price_tier` is set by the maker in the app and must
+            # survive a content re-seed (see the NOTE above). Including any of
+            # them in the guard would read as a change on every seed.
+            + upsert_tail("tours", [
+                ("title", "excluded.title"),
+                ("short_description", "excluded.short_description"),
+                ("long_description", "excluded.long_description"),
+                ("maker_id", "excluded.maker_id"),
+                ("hero_image_url", "excluded.hero_image_url"),
+                ("additional_image_urls", "excluded.additional_image_urls"),
+                ("video_urls", "excluded.video_urls"),
+                ("video_role", "excluded.video_role"),
+                ("source_url", "excluded.source_url"),
+                ("source_author", "excluded.source_author"),
+                ("kind", "excluded.kind"),
+                ("intro_audio_url", "excluded.intro_audio_url"),
+                ("total_duration_seconds", "excluded.total_duration_seconds"),
+                ("walking_distance_meters", "excluded.walking_distance_meters"),
+                ("centroid_latitude", "excluded.centroid_latitude"),
+                ("centroid_longitude", "excluded.centroid_longitude"),
+                ("city", "excluded.city"),
+                ("country", "excluded.country"),
+                ("primary_category", "excluded.primary_category"),
+                ("tags", "excluded.tags"),
+                ("price_usd", "excluded.price_usd"),
+            ])
         )
 
     # Membership, re-derived from the catalog on every seed.
@@ -241,7 +329,21 @@ def emit(data, out):
     # the stale link behind and the tour keeps showing on a place page it no
     # longer belongs to. Clearing first is the only way membership can shrink.
     w("\n-- place membership\n")
-    w("update public.tours set place_id = null where place_id is not null;\n")
+    # ⚠️ The clear is now scoped to tours that are NOT about to be re-linked.
+    # Clearing every place_id and immediately setting it back again was ~700
+    # tours rewritten twice on every seed — a real change to those rows as far
+    # as Postgres and any change-tracking trigger is concerned, so it would have
+    # defeated the whole point of the guards above for exactly the tours that
+    # belong to a place.
+    member_ids = [tid for p in places for tid in p["tourIds"]]
+    if member_ids:
+        keep = ", ".join(q(t) for t in member_ids)
+        w(
+            "update public.tours set place_id = null\n"
+            f" where place_id is not null and id not in ({keep});\n"
+        )
+    else:
+        w("update public.tours set place_id = null where place_id is not null;\n")
 
     # 🔴 And the places themselves have to be able to DISAPPEAR. The upsert
     # above can create and update a place but never remove one, so a place
@@ -265,11 +367,37 @@ def emit(data, out):
         w("delete from public.places;\n")
     for p in places:
         ids = ", ".join(q(t) for t in p["tourIds"])
-        w(f"update public.tours set place_id = {q(p['id'])} where id in ({ids});\n")
+        w(
+            f"update public.tours set place_id = {q(p['id'])}\n"
+            f" where id in ({ids}) and place_id is distinct from {q(p['id'])};\n"
+        )
 
-    w("\n-- stops (clear then re-insert per tour, in order)\n")
+    # 🔴 STOPS ARE NO LONGER DELETED AND RE-INSERTED WHOLESALE.
+    #
+    # They used to be: `delete from stops where tour_id = X` followed by an
+    # insert per stop, for EVERY tour, on EVERY seed — 4,117 deletes and 4,117
+    # inserts five times a day to express, almost always, no change at all. It
+    # also meant `stops` could not be dated even in principle, which is half of
+    # why a delta cursor was impossible (docs/delta-catalog-fetch-design.md § 5).
+    #
+    # Now: remove only the stops that have actually gone, then upsert the rest
+    # behind the same guard the other tables use. A tour whose stops are
+    # unchanged costs one `delete ... where id not in (...)` that matches
+    # nothing, and nothing else.
+    #
+    # ⚠️ A stop edit must still move its parent TOUR, or a cursor reading
+    # `tours.rev` would never learn a coordinate had moved. That is a trigger,
+    # not something this script can do — `backend/catalog_rev.sql` § 5.
+    w("\n-- stops (remove what is gone, upsert what changed, per tour in order)\n")
     for t in tours:
-        w(f"delete from public.stops where tour_id = {q(t['id'])};\n")
+        if t["stops"]:
+            ids = ", ".join(q(s["id"]) for s in t["stops"])
+            w(
+                f"delete from public.stops where tour_id = {q(t['id'])}\n"
+                f" and id not in ({ids});\n"
+            )
+        else:
+            w(f"delete from public.stops where tour_id = {q(t['id'])};\n")
         for s in t["stops"]:
             w(
                 "insert into public.stops "
@@ -281,15 +409,24 @@ def emit(data, out):
                 f"{q(s['audioURL'])}, {q(s['audioDurationSeconds'])}, {q(s['triggerMode'])}, "
                 f"{q(s.get('triggerRadiusMeters', 30))}, {q(s.get('imageURL'))}, "
                 f"{q(s.get('transcriptText'))})\n"
-                "on conflict (id) do update set "
-                "tour_id = excluded.tour_id, \"order\" = excluded.\"order\", "
-                "title = excluded.title, caption = excluded.caption, "
-                "latitude = excluded.latitude, longitude = excluded.longitude, "
-                "audio_url = excluded.audio_url, "
-                "audio_duration_seconds = excluded.audio_duration_seconds, "
-                "trigger_mode = excluded.trigger_mode, "
-                "trigger_radius_meters = excluded.trigger_radius_meters, "
-                "image_url = excluded.image_url, transcript_text = excluded.transcript_text;\n"
+                # `stops.updated_at` only exists once catalog_rev.sql has been
+                # applied, so it is not written here — the trigger that file
+                # installs maintains it, and a database that predates the
+                # migration seeds exactly as it otherwise would.
+                + upsert_tail("stops", [
+                    ("tour_id", "excluded.tour_id"),
+                    ('"order"', 'excluded."order"'),
+                    ("title", "excluded.title"),
+                    ("caption", "excluded.caption"),
+                    ("latitude", "excluded.latitude"),
+                    ("longitude", "excluded.longitude"),
+                    ("audio_url", "excluded.audio_url"),
+                    ("audio_duration_seconds", "excluded.audio_duration_seconds"),
+                    ("trigger_mode", "excluded.trigger_mode"),
+                    ("trigger_radius_meters", "excluded.trigger_radius_meters"),
+                    ("image_url", "excluded.image_url"),
+                    ("transcript_text", "excluded.transcript_text"),
+                ], touch_updated_at=False)
             )
 
     # 🔴 The catalog is MATERIALISED (backend/catalog_snapshot.sql):
