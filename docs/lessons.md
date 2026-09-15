@@ -632,6 +632,26 @@ Three cheap reads, none of which needs the dashboard:
 `get_catalog` shipping the entire catalogue on every fetch. One design decision,
 two production incidents, two weeks apart. Delta fetching is still not built.
 
+### Searching changes the JUSTIFICATION even when it does not change the pin (2026-09-15)
+
+After the rule-8d failure above, the remaining three coarse pins were searched properly. **None of
+them moved — and the exercise was still worth it**, because "we could not find it" became "we
+looked, and here is why the current point stands":
+
+| pin | what the search found | why it stays |
+|---|---|---|
+| **Horizons**, Auckland | Neil Dawson's sculpture at **Gibbs Farm**, 2421 Kaipara Coast Highway — identified only because the creator is `@avant.arte`, an **art** account | the address geocodes to the farm **gate**, 979 m away; the sculpture sits on the property's highest point across ~400 ha. Moving the pin a kilometre toward the entrance would probably make it worse |
+| **St Pancras International** | Wikidata's own point is `51.53, -0.125278` | that is **2 dp — coarser than the pin already is** |
+| **Maiden Lane Estate** | Wikidata's own point is `51.542, -0.128` | **byte-identical to the pin**; nothing to change |
+
+🔴 **Read the pin's own record before choosing search terms.** "Horizons" alone returns nothing
+useful. The creator handle was the key: an art account means the subject is an artwork, not a
+building. The maker, the city and the caption are free context and the search fails without them.
+
+⚠️ **A large site has no single right point, and an address is not it.** A farm gate, a 400 m
+station concourse and a 479-home estate all resist a single coordinate. For these, ~110 m is not a
+defect to be fixed — it is the honest precision of the subject.
+
 ### 🔴 Rule 8d was violated the same day it was written (2026-09-15)
 
 A session concluded three Tokyo pins could not be placed because **Wikidata had never heard of the
