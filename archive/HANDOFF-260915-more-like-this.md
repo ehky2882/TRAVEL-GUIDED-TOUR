@@ -9,6 +9,15 @@ none of the Core ML risk — **the phone runs no model at all.**
 
 ---
 
+> **⚠️ Superseded the next day, on one point.** This session excluded link pins
+> from "More like this", on the stated grounds that a pin has no transcript so
+> its vector is near-meaningless. That was never measured, and it was **wrong**:
+> all 2,318 pins carry title, both descriptions, tags, city, country and a stop
+> caption, median 540 characters. Pins were let in — in **both** directions, on
+> the owner's decision — the following day; see that session's handoff. The
+> figure below that *"0 references point at a link pin"* was true of this
+> session's run and is no longer true of the catalogue.
+
 ## What shipped
 
 **`relatedTourIds` on every tour.** Up to 8 neighbour ids, generated offline

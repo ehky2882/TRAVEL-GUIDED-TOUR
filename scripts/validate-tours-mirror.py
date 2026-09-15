@@ -259,6 +259,36 @@ def check(cat, facets, vocab, dom):
             errors.append(f"place {pl['name']}: coordinate out of range")
     ids = [pl["id"].lower() for pl in places]
     if len(ids) != len(set(ids)): errors.append("duplicate place id")
+
+    # More like this. These rules were added to validate-tours.swift in #915 and
+    # were never mirrored here, so every one of them passed locally and only CI
+    # could see them — the same gap sessions 143, 146 and 148 each found in turn.
+    # A dangling id renders a SHORTER section with no error anywhere.
+    for e in allt:
+        rel = e.get("relatedTourIds")
+        if rel is None: continue
+        t = e["id"]
+        if len(rel) > 8:
+            errors.append(f"{t}: relatedTourIds has {len(rel)} entries, more than the 8 the generator writes")
+        seen_r = set()
+        for raw in rel:
+            k = raw.lower()
+            if k == t.lower(): errors.append(f"{t}: relatedTourIds names the entry itself")
+            if k in seen_r:    errors.append(f"{t}: relatedTourIds repeats {raw} — it would render twice")
+            seen_r.add(k)
+            other = byid.get(k)
+            if other is None:
+                errors.append(f"{t}: relatedTourIds names unknown entry {raw}")
+                continue
+            # A PIN TAKES NO CROSS-CITY FILL — the only mechanical guard on that
+            # rule. Without it a bad generation run ships a Prague pin pointing
+            # at a Vienna walk and nothing else in the pipeline looks.
+            if e["kind"] == "link":
+                here = (e.get("city") or "").strip().lower()
+                there = (other.get("city") or "").strip().lower()
+                if here != there:
+                    errors.append(f"{t}: pin suggests {raw} in {there!r}, not {here!r} — pins take same-city matches only")
+
     return errors, warnings
 
 
@@ -318,6 +348,18 @@ def selftest(facets, vocab, dom):
     # Found by session 148 the same way: validate-tours.swift:591 checks the STOP
     # title separately from the entry title, and only the entry one was mirrored.
     case("empty stop title",       lambda c: c["linkPins"][0]["stops"][0].__setitem__("title", ""))
+    # Session 114: the "more like this" rules from #915 were never mirrored here.
+    case("related: unknown id",    lambda c: c["tours"][0].__setitem__(
+             "relatedTourIds", ["11111111-1111-1111-1111-111111111111"]))
+    case("related: self-reference", lambda c: c["tours"][0].__setitem__(
+             "relatedTourIds", [c["tours"][0]["id"]]))
+    case("related: duplicate",     lambda c: c["tours"][0].__setitem__(
+             "relatedTourIds", [c["tours"][1]["id"], c["tours"][1]["id"]]))
+    case("related: over the cap",  lambda c: c["tours"][0].__setitem__(
+             "relatedTourIds", [t["id"] for t in c["tours"][1:10]]))
+    case("related: pin fills cross-city", lambda c: c["linkPins"][0].__setitem__(
+             "relatedTourIds", [next(t["id"] for t in c["tours"]
+                                     if (t.get("city") or "") != (c["linkPins"][0].get("city") or ""))]))
 
     passed = 0
     for name, fn, warns in cases:
