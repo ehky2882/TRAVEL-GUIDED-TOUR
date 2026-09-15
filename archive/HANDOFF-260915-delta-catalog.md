@@ -177,6 +177,20 @@ as SHARED-POINT, almost all correctly placed. Teaching it about `place.tourIds` 
 Pin titles are **editorial** — *"The Security Council Chamber"* — so there is nothing for a matcher
 to grab. **The place name is the signal that works.**
 
+🔴 **And then the same table produced the opposite error, which is worse.** Having been burned by
+six bad matches, I refused a *good* one: `Fíkovna & New Orangery` matched a Wikidata entry labelled
+simply **"orangery"** — lowercase, generic, 5 sitelinks — 66 m away, and I could not tell a real hit
+from noise, so I handed it to the owner as a judgement call.
+
+It was not a judgement call. **One search settled it:** cs.wikipedia's
+[Oranžérie (Královská zahrada)](https://cs.wikipedia.org/wiki/Oran%C5%BE%C3%A9rie_(Kr%C3%A1lovsk%C3%A1_zahrada))
+gives `50.0927, 14.4022` — the identical point, Eva Jiřičná's 2001 building. **A useless label is
+not an absent fact**, precisely as a blocked scrape is not an absent fact. This is rule 8d for the
+**third** time in one day, and the only one where the data was already in hand and I distrusted it.
+
+⚠️ Distrusting the matcher is not the wrong instinct — six of seven really were wrong. **The
+mistake was stopping at distrust instead of spending one query to resolve it.**
+
 **3. Stop at the cheap check when it is conclusive.** A 407-byte column select answered "did the
 migration reach production"; a redundant second confirmation through `get_catalog_since` cost
 **2.75 MB** in a session whose subject is egress. Recorded in `docs/lessons.md`.
@@ -193,11 +207,25 @@ replace that does not name its target function is a loaded gun in a 568-line fil
 
 ## Still open
 
-- **13 low-precision pins** remain, and they are the ones no gazetteer can fix — Hotel Siro,
-  Gyukatsu Ichi Ni San, The Bellwood: venues Wikidata has never heard of. Route:
-  `parse-caption-address.py` + GSI, or the owner.
-- **East Side Gallery** (moves 420 m along a ~1.3 km wall) and **Fíkovna** (matched a generic entry
-  named *"orangery"*) await an owner decision.
+- **10 low-precision pins** remain — not 13, and not for the reason recorded above. The three
+  named there as *"venues no gazetteer can fix"* were fixed the same evening by **searching their
+  names**, which is what rule 8d says to do first (#932). ⚠️ **Two of the three were already
+  correct**, merely written at 3 dp — Hotel Siro moved 203 m, The Bellwood 4 m, Gyukatsu Ichi Ni San
+  **0 m**. *"These are broken"* was as wrong as *"these cannot be found"*.
+- **Three of the ten remaining are on the right feature already**: Wikidata's own coordinate for
+  Riga Central Market, House of the Black Madonna and Invalidovna is itself 3 dp. Gyukatsu's correct
+  coordinate is `35.702`, a genuinely round number. **The flag measures how a number is written, not
+  whether it is right** — read it, then check.
+- **Both pending decisions were made** (#932, recorded in `docs/places.md`):
+  **East Side Gallery** stays at `52.505, 13.4394` — the owner's address is a *street*, because the
+  Gallery is a 1.3 km wall with no number; it geocodes to three points ~800 m apart and the pin
+  already sits among them, nearer mid-wall than any one.
+  **Fíkovna** moved to `50.09295, 14.40365`, the midpoint of the two buildings the pin actually
+  describes — 107 m from each, and nothing in Wikidata is nearer to it than they are.
+- ⚠️ **`Míčovna (Ball Game Hall)` was 58 m off its own Wikidata point and carried NO flag**, because
+  4 dp reads as precise. It was found only because it sits 44 m from a pin the owner asked about.
+  **The audit does not catch this class at all** — a wrong coordinate written precisely is invisible
+  to it. That is the gap worth closing next, not the remaining ten.
 - **Phase 3 of the delta work — removals — is not built.**
 - 🔴 **1.1.3 is not released.** Nothing from the delta work reaches a phone until it is.
 - **The spine covers two cities.** Widening it, and wiring `--spine-id` into `make-link-pin.py`,
