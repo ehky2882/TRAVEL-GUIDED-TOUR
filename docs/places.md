@@ -141,6 +141,49 @@ judgements. Leave them.
 
 ---
 
+### 2026-09-15: Westminster Abbey — the owner's REASON, which is new
+
+Two pins, **The Coronation Chair** and **The Tomb of Elizabeth I**, are deliberately **NOT** members
+of the Westminster Abbey place. In the owner's words:
+
+> *"i kept [them] outside of the 'place page' because they were specific to things inside the
+> church and i didnt want it to be comingled with things dealing with the more general building"*
+
+🔴 **This is the first time the reason has been stated, and it is not the same as the 2026-09-14
+judgement calls above.** Those were about whether a component is "the draw". This one is about
+**what a place page is FOR**: a page whose members are all about the building itself reads
+differently from one that mixes the building with its furniture. Comingling is the cost the owner
+is avoiding, not similarity.
+
+⚠️ **The consequence for coordinates, which is the part that bites.** Wikidata has items for both
+(`Q1751063`, `Q113709229`) and **neither carries a coordinate** — both say only *"located in:
+Westminster Abbey"*. So the only precise point available is the Abbey's own. **Putting them there
+would undo the decision in the only place a user can see it:** they would sit on the identical map
+dot as the Abbey and start surfacing as EXACT candidates in `check-place-candidates.py`.
+Mechanically separate, visibly comingled.
+
+**So both pins keep their current, deliberately imprecise coordinates** (`51.49943,-0.128` and
+`51.49908,-0.127`), which already sit inside the Abbey footprint. **Imprecise-and-distinct beats
+precise-and-merged here.** Do not "fix" them.
+
+⚠️ Note that the pattern IS supported where the data exists — **Poets' Corner has its own Wikidata
+coordinate**, separate from the Abbey. If either of these two ever gains one, a precise interior
+point is the right answer and still requires no place membership.
+
+### 2026-09-15: East Side Gallery — a site with no single honest point
+
+`Two Sides of the Berlin Wall` stays at `52.505, 13.4394`, and the place stays with it.
+
+The owner supplied the Google Maps address, **Mühlenstraße, 10243 Berlin** — which is a *street*,
+because the Gallery is a 1.3 km wall beside it and has no building number. Geocoding it returns
+**three results spread ~800 m apart** (`52.5029,13.4460` · `52.5073,13.4364` · `52.5062,13.4385`),
+and the pin already sits among them, nearer mid-Gallery than any one of them. Wikidata's own point
+(`52.5031,13.4447`) is a fourth candidate at the eastern end, 420 m away and no better justified.
+
+**The subject is the whole wall** — the video contrasts the painted east face with the plain west
+one — so a mid-Gallery point is the honest answer. Rule 5 says a place is a coordinate and one
+point must be honest for everyone; here that point is deliberately the middle, not an endpoint.
+
 ## 🔴 Before deciding anything: check the coordinate
 
 `Lloyd's of London` / `The Leadenhall Building` sat 7 m apart and looked like a
