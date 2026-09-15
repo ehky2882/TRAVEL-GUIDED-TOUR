@@ -734,6 +734,25 @@ That requires several large pieces of infrastructure, roughly:
 | **8. In-app search.** Once catalog grows past browsable. | |
 | **9. Social — share a tour.** Deep links into a specific tour from a shared URL. | |
 
+### Discovery — on-device AI (2026-09-15)
+
+Owner asked whether semantic search was the next big win. Answer taken: it is the
+right target but the wrong next step, because the expensive half is Core ML on
+device plus a silent-failure mode (CI and device must produce identical vectors
+or it returns confident nonsense). **"More like this" gets most of the discovery
+value with none of that — the phone runs no model at all.**
+
+| | |
+|---|---|
+| ✅ **Offline embeddings.** `scripts/build-embeddings.py` — all tours embedded in ~3.5 min; `all-MiniLM-L6-v2` (Apache 2.0, 384 dims) over ONNX Runtime, deliberately not sentence-transformers. | done |
+| ✅ **More like this.** `relatedTourIds` shipped in the catalogue, rendered on the tour detail page. Same city first, then cross-city fill. **1,580 of 1,582 tours have a neighbour.** | done |
+| ⏭ **Semantic search.** Core ML conversion → `QueryEmbedder` + `TourEmbeddingStore` → an additive RELATED section in `SearchView` with exact matches still ranked first → a CI job publishing `embeddings.bin`. 🔴 Needs an equality test pinning CI and device to the same vectors. Measured: 7 of 12 ordinary queries are strong; abstract ones ("somewhere to take my kids") fail because transcripts rarely discuss who a place suits. | next |
+| ⏭ **A tour companion.** Deliberately last — grounded in bad retrieval it is worse than no companion. | later |
+
+⚠️ **Transcript quality is now user-facing.** These features read `transcriptText`,
+which has been an optional nicety (`TourWizardRules` never blocks on one), so a
+tour without one becomes less discoverable. Arguably correct; worth telling makers.
+
 ### Places — the sweep (2026-09-11)
 
 **Status (2026-09-11, session 3):** the place sweep, run across three bands of candidates —

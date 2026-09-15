@@ -1355,3 +1355,72 @@ The **First National Bank of Hollywood** place page held the **Westlake Theatre*
 - **An exact coincidence is evidence two entries were geocoded from the same assumption, not only that they describe one site.** Before grouping two posts from one creator, look at both thumbnails.
 - **Coordinates that match to the last digit are suspicious when they came from a title.** Two independently geocoded posts about one building land metres apart, not on the same six decimal places.
 - **A place's own description can record its doubt and nobody reads it.** "Two separate posts by the same creator" was the whole case for this page.
+
+## A new catalogue key still lands in `get_catalog_core_base` — and one cannot be `created_at` (2026-09-15)
+
+Adding `relatedTourIds` ("More like this") and `createdAt` in one migration, two
+traps, both of which have already cost this repo a live outage in another form.
+
+**The tour keys have moved again.** `split_link_pins.sql` renamed
+`get_catalog_core` to **`get_catalog_core_base`** and wrapped it, so the live
+chain is `get_catalog()` → `get_catalog_core()` → `get_catalog_core_base()`.
+**`add_video_role.sql` — the file this repo's own notes call the worked example
+— predates that rename** and searches only
+`proname in ('get_catalog_core','get_catalog')`. Copied verbatim it finds
+nothing and raises. It fails closed, so the cost is a rolled-back transaction
+rather than a silent regression, but the finder list has to be updated every
+time that chain grows a layer. Read `split_link_pins.sql`'s own "FOR THE NEXT
+MIGRATION" paragraph before writing one.
+
+**🔴 `createdAt` CANNOT be served from `tours.created_at`, and the reason
+generalises to any audit column.** That column is
+`timestamptz not null default now()` — it records when the ROW was written, and
+every row in it holds the moment of a seed run. Serving it would have lit up
+four sort controls that do nothing today (Newest/Oldest on maker pages, date
+ordering on places and lists) and ordered them **by seed sequence**: fixed-
+looking and wrong, which is strictly worse than visibly doing nothing. The
+editorial date got its own nullable `authored_on date` column instead.
+
+**Nullable was the point, not an oversight.** 36 tours genuinely have no
+authored date, and `Tour.createdAt` is optional precisely so those sort last. A
+`coalesce(..., now())` to satisfy the not-null constraint would have reinvented
+the bug in one character.
+
+**And they could not be backfilled here.** 35 of the 36 are Atlas Studio SFO —
+*the whole maker*, so no sibling carries a date to borrow — and **this checkout
+is a shallow clone whose history stops at 2026-08-17**, which is why a
+`git log -S <id>` pickaxe returns that same date for every id and looks like an
+answer. Validate a git-archaeology method against rows whose value you already
+know before trusting 36 you don't.
+
+**A seed change and its migration are ordered, and the order is load-bearing.**
+`seed_from_toursjson.py` writes the new columns and `publish-catalog.yml` runs
+it under `ON_ERROR_STOP=1` in one transaction — so on a database without them
+the entire seed aborts and **every content merge stops reaching Supabase**.
+Apply the migration BEFORE merging. It is free to apply early: until a re-seed
+both columns are NULL, both keys are emitted as null, and the app decodes them
+as nil, which is what it already does.
+
+## A similarity between two documents is not the similarity between a query and one (2026-09-15)
+
+`tour_scores` blends `0.6 × best-chunk + 0.4 × mean`, tuned so a *query* —
+"art deco lobby" — finds the one paragraph that is about that. Reused for
+tour-to-tour similarity that rule pairs two tours because they each spend one
+sentence on brickwork. "More like this" asks whether two tours are **about the
+same kind of place**, so it compares mean vectors and nothing else. The two
+functions look like they should agree and must not.
+
+- **Do not loop a per-query scorer over the catalogue.** `tour_scores`' `owners
+  == index` mask is a full pass over every chunk per call — ~10^10 operations at
+  1,582 tours. Grouping with `reduceat` over the offsets array that already
+  existed is one matmul.
+- **A relevance floor has to sit UNDER the thin cities, not over them.** 0.50
+  looked better on paper and was rejected on the data: it evicts *good*
+  same-city matches where a city is small — Fisherman's Wharf loses "Pier 39 Sea
+  Lions" (0.477) and is handed a fishing village in Hong Kong (0.592), which is
+  thematically apt and useless to someone standing on the wharf. 0.45 keeps the
+  first and still cuts Boulders Beach's 0.395-and-below tail.
+- **A test can pass for the wrong reason.** The first same-city-first fixture
+  ranked the same-city candidate highest anyway, so it would have passed with
+  the rule deleted. The cross-city candidate now scores *higher*, which is what
+  makes the assertion mean anything.

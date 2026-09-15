@@ -70,6 +70,114 @@ final class DataServiceLookupTests: XCTestCase {
               tourIds: tourIds)
     }
 
+    // MARK: - More like this
+
+    func test_relatedTours_resolvesIdsInCatalogOrder() throws {
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio LDN")
+        let barbican = TestFixtures.makeTour(title: "The Barbican", makerId: maker.id)
+        let theatre = TestFixtures.makeTour(title: "The National Theatre", makerId: maker.id)
+        let shard = TestFixtures.makeTour(title: "The Shard", makerId: maker.id)
+        // The order the catalog ships is the order that renders — same city
+        // first, then cross-city — so this must NOT be re-sorted on the way out.
+        let subject = TestFixtures.makeTour(
+            title: "Subject", makerId: maker.id,
+            relatedTourIds: [theatre.id.uuidString, barbican.id.uuidString, shard.id.uuidString]
+        )
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [barbican, theatre, shard, subject])
+        )
+
+        XCTAssertEqual(service.relatedTours(for: subject).map(\.title),
+                       ["The National Theatre", "The Barbican", "The Shard"])
+    }
+
+    func test_relatedTours_isEmptyWhenTheTourCarriesNoList() throws {
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio LDN")
+        let tour = TestFixtures.makeTour(title: "Alone", makerId: maker.id)
+        let service = try makeService(local: ToursData(makers: [maker], tours: [tour]))
+
+        XCTAssertTrue(service.relatedTours(for: tour).isEmpty)
+    }
+
+    func test_relatedTours_dropsIdsTheCatalogNoLongerCarries() throws {
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio LDN")
+        let kept = TestFixtures.makeTour(title: "Kept", makerId: maker.id)
+        let retired = UUID()
+        // The lists are generated offline over one snapshot, so a tour retired
+        // afterwards leaves a dangling id in every list that named it. That is
+        // the ordinary case, not an error — it must shorten the section, never
+        // put a hole in it.
+        let subject = TestFixtures.makeTour(
+            title: "Subject", makerId: maker.id,
+            relatedTourIds: [retired.uuidString, kept.id.uuidString]
+        )
+        let service = try makeService(local: ToursData(makers: [maker], tours: [kept, subject]))
+
+        XCTAssertEqual(service.relatedTours(for: subject).map(\.title), ["Kept"])
+    }
+
+    func test_relatedTours_resolvesRegardlessOfIdCase() throws {
+        // 🔴 103 of the catalog's ids are stored uppercase and the rest are
+        // not, and Postgres hands them back lowercased. Comparing these as
+        // text would silently drop exactly those tours, on a real phone only.
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio NYC")
+        let target = TestFixtures.makeTour(title: "Chrysler Building", makerId: maker.id)
+        let subject = TestFixtures.makeTour(
+            title: "Empire State Building", makerId: maker.id,
+            relatedTourIds: [target.id.uuidString.lowercased()]
+        )
+        let service = try makeService(local: ToursData(makers: [maker], tours: [target, subject]))
+
+        XCTAssertEqual(target.id.uuidString, target.id.uuidString.uppercased(),
+                       "UUID.uuidString is uppercase, so the lowercased form above is a real difference")
+        XCTAssertEqual(service.relatedTours(for: subject).map(\.title), ["Chrysler Building"])
+    }
+
+    func test_relatedTours_dropsMalformedIdsWithoutFailingTheRest() throws {
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio NYC")
+        let good = TestFixtures.makeTour(title: "Good", makerId: maker.id)
+        let subject = TestFixtures.makeTour(
+            title: "Subject", makerId: maker.id,
+            relatedTourIds: ["not-a-uuid", good.id.uuidString]
+        )
+        let service = try makeService(local: ToursData(makers: [maker], tours: [good, subject]))
+
+        XCTAssertEqual(service.relatedTours(for: subject).map(\.title), ["Good"])
+    }
+
+    func test_relatedTours_stillResolveAfterARefresh() async throws {
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio LDN")
+        let old = TestFixtures.makeTour(title: "Old", makerId: maker.id)
+        let fresh = TestFixtures.makeTour(title: "Fresh", makerId: maker.id)
+        let subject = TestFixtures.makeTour(
+            title: "Subject", makerId: maker.id, relatedTourIds: [fresh.id.uuidString]
+        )
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [old]),
+            remote: ToursData(makers: [maker], tours: [fresh, subject])
+        )
+
+        await service.refresh()
+
+        XCTAssertEqual(service.relatedTours(for: subject).map(\.title), ["Fresh"])
+    }
+
+    func test_relatedTours_surviveAFailedRefresh() async throws {
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio LDN")
+        let target = TestFixtures.makeTour(title: "Target", makerId: maker.id)
+        let subject = TestFixtures.makeTour(
+            title: "Subject", makerId: maker.id, relatedTourIds: [target.id.uuidString]
+        )
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [target, subject]), remote: nil
+        )
+
+        await service.refresh()   // the stub fetcher throws
+
+        XCTAssertEqual(service.relatedTours(for: subject).map(\.title), ["Target"],
+                       "a failed refresh must leave the loaded catalog — and its lookups — intact")
+    }
+
     // MARK: - Lookups resolve
 
     func test_lookups_resolveEveryEntityInTheLoadedCatalog() throws {

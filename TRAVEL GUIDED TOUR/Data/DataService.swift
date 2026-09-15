@@ -243,6 +243,25 @@ final class DataService {
         tourById[id]
     }
 
+    /// The tours behind "More like this", in the order the catalog ships them
+    /// — same city first, then cross-city.
+    ///
+    /// Needs no index: `relatedTourIds` is already the answer, and this only
+    /// resolves it. Ids that no longer name a tour are dropped silently, which
+    /// is the ordinary case rather than an error — the lists are generated
+    /// offline over one snapshot of the catalog, so a tour retired afterwards
+    /// leaves a dangling id in every list that named it until the next run.
+    ///
+    /// ⚠️ Resolution goes through `UUID(uuidString:)` rather than comparing
+    /// text. **103 of the catalog's ids are uppercase and the rest are not**,
+    /// and Postgres hands them back lowercased, so a string comparison would
+    /// quietly drop exactly those. `UUID` normalises case; a malformed id
+    /// falls out of the same `compactMap`.
+    func relatedTours(for tour: Tour) -> [Tour] {
+        guard let ids = tour.relatedTourIds else { return [] }
+        return ids.compactMap { UUID(uuidString: $0).flatMap(self.tour(by:)) }
+    }
+
     func maker(by id: UUID) -> Maker? {
         makerById[id]
     }

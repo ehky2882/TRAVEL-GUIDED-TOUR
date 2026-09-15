@@ -88,16 +88,13 @@ EXEMPT = {
 # nothing. Each entry carries its reason and is printed as a warning every run,
 # so it cannot be quietly forgotten either.
 KNOWN_GAPS = {
-    ("tours", "createdAt"):
-        "NEVER served by the RPC - pre-existing, not a regression. Place.ranked "
-        "sorts NEWEST FIRST on it, so that rule has no dates to sort on and falls "
-        "through to its tiebreaks (single before walk, then title). "
-        "DO NOT 'fix' by adding tours.created_at to get_catalog: that column is "
-        "`default now()` and the seed never carries the authored date from "
-        "Tours.json, so it holds SEED time - most of the catalog shares "
-        "2026-06-27, the original bulk seed. Emitting it would look fixed and "
-        "rank wrongly. Real fix: make seed_from_toursjson.py carry the authored "
-        "createdAt first, then add the key.",
+    # ("tours", "createdAt") WAS a known gap and is deliberately no longer one.
+    # It is now served, in the order that note prescribed: seed_from_toursjson.py
+    # carries the authored date into a NEW nullable `authored_on` column, and
+    # backend/add_related_tours.sql emits that as `createdAt`. The audit column
+    # `created_at` is untouched and still holds seed time - serving THAT was the
+    # trap. Until the migration has been applied and the catalog re-seeded, this
+    # script reports createdAt as genuinely MISSING, which is correct: it is owed.
     ("stops", "transcriptText"):
         "REMOVED ON PURPOSE, 2026-09-10 (backend/drop_transcript_from_catalog.sql). "
         "Measured against the live catalogue it was 1.105 MB of 2.945 MB gzipped "

@@ -1539,6 +1539,7 @@ struct CreateTourWizardView: View {
             centroidLongitude: coordinate.longitude,
             city: tour.city,
             country: tour.country,
+            relatedTourIds: tour.relatedTourIds,
             primaryCategory: tour.primaryCategory,
             tags: tour.tags,
             priceUSD: tour.priceUSD,

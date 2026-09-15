@@ -86,6 +86,17 @@ create table if not exists public.tours (
     city                    text,
     -- Denormalised alongside city, exactly as the client model has it.
     country                 text,
+    -- "More like this" neighbours, generated offline by
+    -- scripts/build-embeddings.py --write-related. Ids only; the phone runs
+    -- no model. See Tour.relatedTourIds.
+    related_tour_ids        text[],
+    -- 🔴 The EDITORIAL date a tour entered the catalogue, served to the app as
+    -- `createdAt`. Deliberately NOT `created_at` below, which is an audit
+    -- column (`not null default now()`) holding the moment the row was seeded
+    -- — serving that as the catalogue date would rank by seed order while
+    -- looking correct. Nullable, so a tour with no authored date has none and
+    -- sorts last, rather than being given a fabricated one.
+    authored_on             date,
     primary_category        tour_category not null,
     tags                    text[] not null default '{}',
     price_usd               numeric(10,2) not null default 0,
