@@ -382,6 +382,54 @@ returned the right market building, confidently, 3 km from where the restaurant 
 
 ---
 
+🔴 **Nominatim CANNOT geocode a Japanese address, and fails in a way that reads as success.**
+Asked in romaji it returns a **postcode centroid** at full decimal precision, indistinguishable
+from a venue hit — **20 of 23 addresses** on 2026-09-15. Japan addresses by chōme-banchi, not
+by street, and OSM's coverage of those numbers is thin. Use the **Geospatial Information
+Authority of Japan** instead — free, no key:
+
+```
+https://msearch.gsi.go.jp/address-search/AddressSearch?q=東京都台東区上野6-9-17
+→ 35.710045, 139.775467   東京都台東区上野六丁目９番１７号
+```
+
+It echoes the matched 丁目/番/号, so **the precision of its own answer is readable**: an answer
+ending 号 or 番地 is building-level; one stopping at 丁目 is coarser and says so. Cross-validate
+before trusting a new geocoder — GSI's Mizutani Camera point agreed with the OSM venue node to
+**~1 m** and Cafe de l'Ambre to **~3 m**, which is what earned it.
+
+🔴 **A venue's address is findable by SEARCHING ITS NAME. Exhaust search before declaring data
+unobtainable.** On 2026-09-15 a session needed 42 Tokyo restaurant addresses, tried scraping
+byFood.com (403, Cloudflare), Tabelog search (403), Overpass (blocked by this environment) and
+Instagram embeds (no location tag), concluded the data was out of reach, and handed the owner a
+list to source by hand. The owner replied: *"the txt list all have names you can look up. you
+really think my brother can do a better job than you?"* Searching each **Japanese name plus
+住所** returned every address, corroborated across the restaurant's own site, Gurunavi, Navitime,
+Hitosara and Ikyu. A blocked scrape is not an absent fact.
+
+⚠️ **Automated venue-name matching produced 3 false positives in 8**, all caught only by reading
+each: "Yakiniku Kappo Note" matched **焼肉花** (Yakiniku *Hana*) at **0 m** on the generic word
+*yakiniku* — and 0 m means it matched something already sitting on the bad centroid, which should
+be read as a red flag rather than a perfect hit; "Kiwamiya" matched a ramen shop **3.3 km** away;
+"Saryo Tsujiri" matched a different branch of the same chain. **A chain name, a cuisine word and
+a neighbouring branch each defeat it.** Never ship its output unread.
+
+🔴 **Reverse-geocoding a stored coordinate cannot tell you whether it is right.** In a dense city
+the nearest mapped feature is rarely the venue even when the pin is correct — 92 Tokyo pins came
+back sitting on a brothel, a bench, a vending machine, a blood-donation centre and a kindergarten.
+Name-matching that result is worse than useless: three Ginza restaurants "matched" a watch shop
+called GINZA NJ TIME on the word *Ginza*.
+
+✅ **The check that DOES hold is ward agreement.** Geocode the address, then confirm the ward
+matches the pin's own stated neighbourhood — 赤坂 for an Akasaka pin, 銀座 for Ginza, 北沢 for
+Shimokitazawa. That is what caught **Yakushu Bar**, where the supplied address was 愛知県豊橋市,
+**229 km away**, while the post's caption placed the bar in Sangenjaya — where the pin already
+sat. A different branch of the same bar, and the pin was left alone.
+
+⚠️ **Two pins sharing one coordinate is usually a shared fallback, but not always.** After the
+2026-09-15 pass, Kiwamiya and Saryo Tsujiri still share a point and are **correct**: both are
+inside 丸の内1-9-1, the Daimaru Tokyo / Gransta building. Check the addresses before "fixing" it.
+
 ## 5. Images
 
 🔴 **Correcting an image means a NEW filename — never overwrite bytes at a live URL.** A phone
