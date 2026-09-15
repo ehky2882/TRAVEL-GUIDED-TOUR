@@ -86,3 +86,147 @@ could not have failed is not a result.**
   download. Compounds the upsert-only deletion gap: `seed_from_toursjson.py` never deletes.
 - **First-sync cost** — a new install still pulls 2.4 MB. City-scoped fetching, not delta, is the
   answer to that, and it is unbuilt.
+
+---
+
+# Second half of the day: the place spine, and the first pin audit
+
+The owner asked what remained to build **before approaching content creators**. Re-derived rather
+than quoted, the answer was the place spine — so step 1 of it got built, and it immediately
+contradicted the spec written an hour earlier.
+
+## #924 — `scripts/spine-build.py`
+
+**Three measurements changed the design:**
+
+1. **The data source had to change.** The spec said Geofabrik `.osm.pbf`. From a web session
+   `download.geofabrik.de` returns **http=000** and Overpass is blocked too (as #913 recorded).
+   `query.wikidata.org` answers. Wikidata is a smaller universe than OSM but it is the one that is
+   **reachable** — a different claim from better.
+2. 🔴 **Admin containment undercounts 49×.** "Things whose `P131*` chain reaches this city" gives
+   London **557**; `wikibase:around` at 15 km gives **27,295**. Cities model hierarchies
+   differently, so containment returns a plausible-looking wrong number and a spine built on it
+   would have left London near-empty **with nothing downstream to flag it**. The selftest now
+   asserts `P131*` is absent from the query.
+3. 🔴 **The match rate splits by CREATOR, not by city.** Harvested Tokyo (1,204 features) and
+   midtown Manhattan (4,244) and matched against all 415 catalogue pins inside those boxes:
+
+   | creator | rate |
+   |---|---:|
+   | `@archimarathon` · `@archiwhisperer` (architecture) | **83%** · **78%** |
+   | `@hereinnyc` · `@urbanistariel` (urbanism) | **59%** · **54%** |
+   | `@japanbyfood` · `@nom_life` (food) | **25%** · **14%** |
+
+   Wikidata knows buildings, not restaurants. **It lands where the volume is** — the two deepest
+   creators in the catalogue, `@urbanistariel` (326 pins) and `@hereinnyc` (262), are exactly the
+   urbanism profile. **The design therefore gets a routing rule, not one geocoder:** spine for
+   architecture/urbanism creators, `parse-caption-address.py` + GSI for food and retail.
+
+⚠️ **The incompleteness guard earned its place on first use.** The first Manhattan harvest used
+4 km tiles, hit one WDQS timeout, printed **COULD NOT VERIFY** and exited 2 — and had found **640
+fewer** features than the complete 2 km run. A partial harvest reporting success would have
+silently understated coverage.
+
+## #927 — `check-coordinates.py --pins`
+
+**The 2,318 link pins had never been machine-audited as a set.** The existing Nominatim path could
+not do it: `from_catalog` reads `d["tours"]` and matches `Atlas Studio {CODE}`, so **no pin can
+ever match it**. So `--pins` asks a different question offline — *is this point inconsistent with
+its own neighbours and its own stated city* — and runs over every pin in about a second.
+
+**CITY-OUTLIER: 0.** No pin is in the wrong city; #913/#917/#920's Tokyo precision work closed that
+class entirely.
+
+## #930 — 26 owner-approved coordinate fixes
+
+| | before | after |
+|---|---:|---:|
+| LOW-PRECISION | 36 | **13** |
+| SHARED-POINT | 11 | **6** |
+| any flag | 42 (1.8%) | **19 (0.8%)** |
+
+One targeted Wikidata radius query per pin, matched on the **place name** where the pin has one.
+34 entries moved, not 26: **a place IS a coordinate**, so moving one moves all its members — the
+extra 8 are Atlas studio tours that sat on the same coarse point. 9 places moved.
+
+---
+
+## 🔴 What this half cost, and the rules it bought
+
+**1. Two retractions in one afternoon, both from checks I wrote myself.**
+The stop-reorder crash (above), and **"~32 link pins are invisible on the map"** — false: 18 of the
+19 oversized coordinate groups were **already collapsed into place pages**, and the real residue
+was **2 pins**. I had counted raw coordinate groups without checking the mechanism built to solve
+them. A follow-up check then looked for a `placeId` field on pins **which does not exist**
+(membership is `place.tourIds`) and nearly produced the opposite wrong answer.
+
+> **A finding that contradicts a mechanism the repo already built is probably wrong about the
+> mechanism.**
+
+The same error appeared a third time inside `--pins` itself: the first version flagged **210 pins**
+as SHARED-POINT, almost all correctly placed. Teaching it about `place.tourIds` took it to **11**.
+
+**2. Proximity is not a match.** Six candidates were refused for landing on the wrong building:
+
+| pin | matched | |
+|---|---|---|
+| The Tomb of Elizabeth I | Queen Elizabeth **Hall** | a concert venue 1.1 km away |
+| Hotel Siro | Hotel Resol **Ikebukuro** | different hotel |
+| The Bellwood / Gyukatsu Ichi Ni San | **"Shibuya"** / **"Akihabara"** | bare district names |
+
+Pin titles are **editorial** — *"The Security Council Chamber"* — so there is nothing for a matcher
+to grab. **The place name is the signal that works.**
+
+🔴 **And then the same table produced the opposite error, which is worse.** Having been burned by
+six bad matches, I refused a *good* one: `Fíkovna & New Orangery` matched a Wikidata entry labelled
+simply **"orangery"** — lowercase, generic, 5 sitelinks — 66 m away, and I could not tell a real hit
+from noise, so I handed it to the owner as a judgement call.
+
+It was not a judgement call. **One search settled it:** cs.wikipedia's
+[Oranžérie (Královská zahrada)](https://cs.wikipedia.org/wiki/Oran%C5%BE%C3%A9rie_(Kr%C3%A1lovsk%C3%A1_zahrada))
+gives `50.0927, 14.4022` — the identical point, Eva Jiřičná's 2001 building. **A useless label is
+not an absent fact**, precisely as a blocked scrape is not an absent fact. This is rule 8d for the
+**third** time in one day, and the only one where the data was already in hand and I distrusted it.
+
+⚠️ Distrusting the matcher is not the wrong instinct — six of seven really were wrong. **The
+mistake was stopping at distrust instead of spending one query to resolve it.**
+
+**3. Stop at the cheap check when it is conclusive.** A 407-byte column select answered "did the
+migration reach production"; a redundant second confirmation through `get_catalog_since` cost
+**2.75 MB** in a session whose subject is egress. Recorded in `docs/lessons.md`.
+
+**4. A miscount in my own summary.** I asked the owner to approve "the 24 confident ones" from a
+list that held **26**. Caught before applying; what landed is exactly what they read.
+
+**5. A find-and-replace clobbered an existing function.** Patching `--pins` in, a
+`total = len(rows)` replacement matched the drop/maker `report()` instead of `report_pins()`.
+Repaired, and verified by `git diff --stat` reading **193 insertions, 0 deletions**. A string
+replace that does not name its target function is a loaded gun in a 568-line file.
+
+---
+
+## Still open
+
+- **10 low-precision pins** remain — not 13, and not for the reason recorded above. The three
+  named there as *"venues no gazetteer can fix"* were fixed the same evening by **searching their
+  names**, which is what rule 8d says to do first (#932). ⚠️ **Two of the three were already
+  correct**, merely written at 3 dp — Hotel Siro moved 203 m, The Bellwood 4 m, Gyukatsu Ichi Ni San
+  **0 m**. *"These are broken"* was as wrong as *"these cannot be found"*.
+- **Three of the ten remaining are on the right feature already**: Wikidata's own coordinate for
+  Riga Central Market, House of the Black Madonna and Invalidovna is itself 3 dp. Gyukatsu's correct
+  coordinate is `35.702`, a genuinely round number. **The flag measures how a number is written, not
+  whether it is right** — read it, then check.
+- **Both pending decisions were made** (#932, recorded in `docs/places.md`):
+  **East Side Gallery** stays at `52.505, 13.4394` — the owner's address is a *street*, because the
+  Gallery is a 1.3 km wall with no number; it geocodes to three points ~800 m apart and the pin
+  already sits among them, nearer mid-wall than any one.
+  **Fíkovna** moved to `50.09295, 14.40365`, the midpoint of the two buildings the pin actually
+  describes — 107 m from each, and nothing in Wikidata is nearer to it than they are.
+- ⚠️ **`Míčovna (Ball Game Hall)` was 58 m off its own Wikidata point and carried NO flag**, because
+  4 dp reads as precise. It was found only because it sits 44 m from a pin the owner asked about.
+  **The audit does not catch this class at all** — a wrong coordinate written precisely is invisible
+  to it. That is the gap worth closing next, not the remaining ten.
+- **Phase 3 of the delta work — removals — is not built.**
+- 🔴 **1.1.3 is not released.** Nothing from the delta work reaches a phone until it is.
+- **The spine covers two cities.** Widening it, and wiring `--spine-id` into `make-link-pin.py`,
+  are the next steps in `docs/place-spine-design.md`.
