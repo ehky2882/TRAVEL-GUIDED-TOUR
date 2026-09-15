@@ -10,7 +10,14 @@ name: Publish catalog
 #
 # It only ever touches Tours.json on gh-pages — audio/, images/, privacy/,
 # index.html etc. are uploaded by content sessions and are left untouched.
-# It pushes only to gh-pages (never main), so it cannot retrigger itself.
+#
+# ⚠️ THE `rebuild-related` JOB BELOW DOES PUSH TO MAIN, which this comment used
+# to promise never happened. It is what stops "More like this" going stale: a
+# new tour has no neighbours until the suggestions are regenerated, and that
+# was a manual step nobody was going to remember after a city launch. The loop
+# it could cause is closed by `[skip ci]` in its commit message, which stops
+# GitHub raising a new run for it; the publish and seed jobs below then read
+# the commit it just made, in this same run.
 #
 # Second destination (since the V2 Supabase cutover, PR #255): the app now
 # reads its catalog from the Supabase `get_catalog` RPC FIRST, with gh-pages
@@ -28,12 +35,148 @@ on:
   workflow_dispatch: # allow a manual force-resync from the Actions tab
 
 permissions:
-  contents: write # push the published file to gh-pages with the built-in GITHUB_TOKEN
+  contents: write # push to gh-pages, and the regenerated catalog to main
+
+# Two content merges in quick succession would otherwise both regenerate and
+# both try to push to main. Serialized, never cancelled: a cancelled run leaves
+# the mirror stale, which is the failure this workflow exists to prevent.
+concurrency:
+  group: publish-catalog
+  cancel-in-progress: false
 
 jobs:
+  # Regenerate the "More like this" neighbour lists before anything is
+  # published, so a newly added tour ships WITH its suggestions rather than
+  # waiting for someone to remember the command.
+  #
+  # 🔴 THE VECTORS ARE DELIBERATELY NOT CACHED, and that is not an oversight.
+  # Caching them means reusing a saved answer whenever an entry "looks
+  # unchanged", and the day that check is wrong — a field added to the text, a
+  # hash that misses an edit — the affected tours keep a stale neighbour list
+  # silently, with no error and no red build. Recomputing costs ~15 minutes of
+  # free runner time and cannot be wrong. Only the MODEL download is cached,
+  # because that is the slow, flaky, network-dependent part and its contents
+  # are pinned by name.
+  rebuild-related:
+    name: Rebuild "More like this" suggestions
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.regenerate.outputs.changed }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements-embeddings.txt
+
+      # Is a rebuild owed at all? Needs no model and no network, and answers in
+      # under a second. MOST CONTENT MERGES CHANGE NO EMBEDDED TEXT — #930 moved
+      # 34 entries' coordinates across 170 changed lines and the digest did not
+      # move a single bit, because `tour_text` reads titles, descriptions, tags,
+      # city, country and stop captions, and never a coordinate or an image URL.
+      # Without this check every such merge would delay the mirror and the
+      # Supabase seed by ~15 minutes to produce an empty diff.
+      - name: Is a rebuild owed?
+        id: owed
+        run: |
+          set -euo pipefail
+          CURRENT=$(python3 scripts/build-embeddings.py --text-digest)
+          RECORDED=$(cat scripts/related-text.digest 2>/dev/null || echo "")
+          echo "current:  $CURRENT"
+          echo "recorded: $RECORDED"
+          if [ "$CURRENT" = "$RECORDED" ]; then
+            echo "No embedded text changed — skipping the rebuild."
+            echo "owed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "owed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Keyed by the model id the script pins, so a model change misses the
+      # cache and refetches rather than silently running the old weights.
+      - name: Cache the embedding model
+        if: steps.owed.outputs.owed == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/atlas-embed
+          key: atlas-embed-all-MiniLM-L6-v2-v1
+
+      - name: Install dependencies
+        if: steps.owed.outputs.owed == 'true'
+        run: pip install -r scripts/requirements-embeddings.txt
+
+      # Model-free and fast. If the generator itself is broken, fail here
+      # rather than after writing 15,000 lines into the catalog.
+      - name: Generator self-tests
+        run: python3 scripts/build-embeddings.py --selftest
+
+      - name: Regenerate neighbour lists
+        if: steps.owed.outputs.owed == 'true'
+        id: regenerate
+        run: |
+          set -euo pipefail
+          python3 scripts/build-embeddings.py --write-related
+          # ⚠️ BOTH paths, and the digest is the one that matters. A rebuild can
+          # legitimately leave the catalog untouched — a new tour whose matches
+          # all fall under the floor and which displaces nobody — while the
+          # digest HAS moved, because its text is new. Checking only the catalog
+          # would skip the commit, leave the digest unadvanced, and make every
+          # future merge re-run the 15-minute rebuild forever, finding nothing.
+          if git diff --quiet -- "TRAVEL GUIDED TOUR/Resources/Tours.json" scripts/related-text.digest; then
+            echo "Neither the catalog nor the digest moved — nothing to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # The catalog is about to be pushed to main unreviewed, so it gets the
+      # same gate a human would have run. The mirror is the Python stand-in for
+      # validate-tours.swift (no Swift on this runner); it self-tests against
+      # injected faults before its verdict counts, and it enforces the rule
+      # nothing else can see — a link pin's neighbours must all share its city.
+      - name: Validate the regenerated catalog
+        if: steps.regenerate.outputs.changed == 'true'
+        run: python3 scripts/validate-tours-mirror.py
+
+      - name: Commit the regenerated catalog to main
+        if: steps.regenerate.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # The digest goes in the SAME commit as the catalog it describes. If
+          # they ever disagree, either a rebuild is suppressed that was owed, or
+          # one is forced that was not.
+          git add "TRAVEL GUIDED TOUR/Resources/Tours.json" scripts/related-text.digest
+          # [skip ci] is load-bearing: without it this push retriggers this very
+          # workflow, which regenerates, finds nothing to change, and stops —
+          # but only after burning another 15 minutes on every content merge.
+          git commit -m "chore(catalog): rebuild More like this suggestions [skip ci]"
+
+          if git push origin HEAD:main; then
+            echo "Pushed the regenerated catalog to main."
+            exit 0
+          fi
+
+          # main moved while we were embedding. Do NOT fight it: the publish and
+          # seed jobs below still ship whatever main holds, so content reaches
+          # phones either way, and the next content merge regenerates from
+          # scratch. Loud, visible, and self-healing beats a forced push.
+          echo "::warning::main moved during the rebuild — suggestions not updated this run. The next content merge will regenerate them."
+
   publish:
     name: Publish Tours.json to gh-pages
     runs-on: ubuntu-latest
+    # Waits for the rebuild so the mirror carries the regenerated suggestions,
+    # but is NOT gated on it succeeding: if embedding fails, content must still
+    # reach phones. `!cancelled()` rather than `always()` so a cancelled run
+    # does not push a half-finished catalog.
+    needs: rebuild-related
+    if: ${{ !cancelled() }}
     steps:
       # main — the source of truth. We only need the one file, so sparse-checkout it.
       - name: Checkout main
@@ -164,6 +307,11 @@ jobs:
   seed-supabase:
     name: Seed catalog into Supabase
     runs-on: ubuntu-latest
+    # Same reasoning as `publish` above — ordered after the rebuild, never
+    # blocked by it. Supabase is the app's PRIMARY source, so this job failing
+    # to run is worse than it running against yesterday's suggestions.
+    needs: rebuild-related
+    if: ${{ !cancelled() }}
     concurrency:
       group: seed-supabase
       cancel-in-progress: false

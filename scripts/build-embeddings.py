@@ -141,6 +141,12 @@ RELATED_COUNT = 8
 # that 0.45 still separates the two.
 RELATED_FLOOR = 0.45
 
+# Where the digest of the embedded text lives. It answers one question — "has
+# anything the MODEL reads changed since the last rebuild?" — so CI can skip a
+# 15-minute run on the many content merges that touch only coordinates, image
+# URLs or other fields `tour_text` never sees.
+TEXT_DIGEST = REPO_ROOT / "scripts" / "related-text.digest"
+
 # --- Binary format ----------------------------------------------------------
 #
 # magic "ATLSEMB2" | u32 version | u32 tours | u32 chunks | u32 dims
@@ -230,6 +236,33 @@ def tour_text(tour: dict) -> str:
                 parts.append(value)
 
     return "\n".join(parts)
+
+
+def text_digest(tours: list[dict]) -> str:
+    """
+    One sha256 over exactly what the model reads, in catalog order.
+
+    🔴 THIS IS NOT THE VECTOR CACHE THAT WAS REJECTED, and the difference is the
+    failure mode. A per-entry cache decides for each tour whether a saved answer
+    is still good; one wrong decision leaves that tour's neighbours stale
+    FOREVER, with no error. This digest is written ONLY by a rebuild that
+    actually succeeded and committed — so a run that is skipped, fails, or loses
+    its push race leaves the old value in place and the next run rebuilds.
+    Its worst case is a redundant 15-minute run, never a stale list.
+
+    The id is included so that reordering or renaming an entry counts as a
+    change even when the prose is untouched, and the count is prefixed so a
+    truncated catalog can never collide with a whole one.
+    """
+    import hashlib
+    digest = hashlib.sha256()
+    digest.update(f"{len(tours)}\n".encode("utf-8"))
+    for tour in tours:
+        digest.update(tour["id"].lower().encode("utf-8"))
+        digest.update(b"\x00")
+        digest.update(tour_text(tour).encode("utf-8"))
+        digest.update(b"\x00")
+    return digest.hexdigest()
 
 
 def chunk_ids(ids: list[int], max_tokens: int = MAX_TOKENS, stride: int = CHUNK_STRIDE) -> list[list[int]]:
@@ -771,6 +804,42 @@ def selftest() -> int:
               float(pin_means[3] @ pin_means[2]) > float(pin_means[3] @ pin_means[0]))
         check("a tour still takes cross-city fill", "c" in pin_related["a"])
 
+        # The digest exists to let CI skip a rebuild, so the test that matters is
+        # the NEGATIVE one: a coordinate edit must NOT change it. Most content
+        # merges are coordinate fixes (#930 moved 34 entries and touched no
+        # embedded text at all), and if the digest moved for those it would buy
+        # nothing.
+        base_entry = {"id": "a", "title": "A", "city": "Lisbon", "country": "Portugal",
+                      "tags": ["x"], "shortDescription": "S", "longDescription": "L",
+                      "centroidLatitude": 1.0, "centroidLongitude": 2.0,
+                      "stops": [{"order": 0, "title": "T", "caption": "C",
+                                 "latitude": 1.0, "longitude": 2.0}]}
+        def with_change(**kw):
+            import copy
+            entry = copy.deepcopy(base_entry)
+            entry.update(kw)
+            return [entry]
+        original = text_digest([base_entry])
+        check("the digest is stable across calls", text_digest([base_entry]) == original)
+        check("a coordinate edit does NOT move the digest",
+              text_digest(with_change(centroidLatitude=9.9)) == original)
+        moved = copy_stop = json.loads(json.dumps(base_entry))
+        moved["stops"][0]["latitude"] = 9.9
+        check("a STOP coordinate edit does NOT move the digest",
+              text_digest([moved]) == original)
+        check("an image edit does NOT move the digest",
+              text_digest(with_change(heroImageURL="https://example.com/x.webp")) == original)
+        check("a title edit DOES move the digest",
+              text_digest(with_change(title="B")) != original)
+        check("a description edit DOES move the digest",
+              text_digest(with_change(longDescription="different")) != original)
+        check("an id change DOES move the digest",
+              text_digest(with_change(id="b")) != original)
+        check("the digest is case-insensitive on ids",
+              text_digest(with_change(id="A")) == original)
+        check("an added entry moves the digest",
+              text_digest([base_entry, base_entry]) != original)
+
         # A pin in a city with no tours at all gets nothing rather than filler.
         stranded = sample[:2] + [{"id": "far", "city": "Prague", "title": "F", "kind": "link"}]
         far_means = l2_normalize(np, np.array(
@@ -844,11 +913,19 @@ def main() -> int:
                         help="print the neighbours of every tour whose title contains TEXT (repeatable)")
     parser.add_argument("--related-floor", type=float, default=RELATED_FLOOR, metavar="F",
                         help=f"drop neighbours scoring below F (default {RELATED_FLOOR})")
+    parser.add_argument("--text-digest", action="store_true",
+                        help="print the sha256 of the embedded text and exit (no model, no network)")
     parser.add_argument("--selftest", action="store_true", help="logic only, no model, no network")
     args = parser.parse_args()
 
     if args.selftest:
         return selftest()
+
+    # Before anything expensive: this needs no model and no network, so CI can
+    # ask "is a rebuild owed?" in under a second.
+    if args.text_digest:
+        print(text_digest(load_catalog()))
+        return 0
 
     want_related = args.related or args.write_related or args.related_of
     if args.limit and (args.write or args.write_related):
@@ -932,6 +1009,14 @@ def main() -> int:
         if args.write_related:
             changed, seen = apply_related(related)
             print(f"\n  Patched {TOURS_JSON.name}: {changed:,} of {seen:,} tours changed")
+            # Written AFTER the patch, and only here: this file is the record
+            # that a rebuild actually completed. Commit it in the same commit as
+            # the catalog — a digest that disagrees with the catalog beside it
+            # either forces one redundant rebuild or, far worse, suppresses an
+            # owed one. Re-read from disk rather than reusing `tours`, so the
+            # digest describes the bytes that were written.
+            TEXT_DIGEST.write_text(text_digest(load_catalog()) + "\n", encoding="utf-8")
+            print(f"  Wrote {TEXT_DIGEST.relative_to(REPO_ROOT)}")
         else:
             print("\n  Dry run — pass --write-related to patch Tours.json.")
 
