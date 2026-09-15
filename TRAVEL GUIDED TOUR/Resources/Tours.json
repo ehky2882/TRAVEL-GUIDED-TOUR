@@ -29767,8 +29767,8 @@
           "order": 0,
           "title": "Nishiki Market | 錦市場",
           "caption": "A 400-metre covered arcade known as Kyoto's Kitchen, supplying the city's fish, pickles and produce for four centuries on cold, clean groundwater.",
-          "latitude": 35.00518292382546,
-          "longitude": 135.76470037348545,
+          "latitude": 35.0050244,
+          "longitude": 135.7655699,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nishiki-market.mp3",
           "audioDurationSeconds": 123,
           "triggerMode": "geofenced",
@@ -29780,8 +29780,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 123,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.00518292382546,
-      "centroidLongitude": 135.76470037348545,
+      "centroidLatitude": 35.0050244,
+      "centroidLongitude": 135.7655699,
       "city": "Kyoto",
       "country": "Japan",
       "primaryCategory": "culturalHeritage",
@@ -87804,6 +87804,37 @@
       "tourIds": [
         "25BF4825-C07F-5D0B-99D5-E38F9B1C83A0",
         "0F67F899-4342-5E32-9CEF-D71DB9199575"
+      ]
+    },
+    {
+      "id": "d8980bcb-47d3-53e2-a8fa-7df0cf33efeb",
+      "name": "Nishiki Market",
+      "description": "Kyoto's central food market since the early 1600s: a covered arcade running roughly 400 m from Teramachi to Takakura, about 130 stalls deep in pickles, tofu, knives and fish. Known as Kyoto's Kitchen.",
+      "latitude": 35.0050244,
+      "longitude": 135.7655699,
+      "city": "Kyoto",
+      "address": "Nishikikoji-dori, Nakagyo-ku, Kyoto",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "818e9a7d-77ae-5e7f-abb7-1f8de8aee2c1",
+        "E09748F2-5AB7-5C8F-B804-EC7231594A06",
+        "68F6D4AB-494E-57D2-B8F5-F29A74D9EA0E"
+      ]
+    },
+    {
+      "id": "5f4b32cf-946c-512d-b69c-a3308ce5d48b",
+      "name": "Matcha Stand Ippuku",
+      "description": "A small matcha counter in the Tsukiji outer market, serving stone-ground tea in bamboo cups. Two creators found it independently within weeks of it opening.",
+      "latitude": 35.665501,
+      "longitude": 139.769943,
+      "city": "Tokyo",
+      "address": "4-9-7 Tsukiji, Chuo City, Tokyo",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "72F43EED-2BCE-53A9-96B6-AD929D147F76",
+        "10191E60-8FF3-5C34-B643-93CEDA0CF0CD"
       ]
     }
   ],
@@ -189034,8 +189065,8 @@
           "order": 0,
           "title": "Matcha Stand IPPUKU",
           "caption": "I didn’t know matcha came in bamboo cups until I found this hidden spot in Tsukiji 🍵 Matcha Stand IPPUKU just opened in Tsukiji and it’s alr",
-          "latitude": 35.665676,
-          "longitude": 139.7698721,
+          "latitude": 35.665501,
+          "longitude": 139.769943,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -189047,8 +189078,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.665676,
-      "centroidLongitude": 139.7698721,
+      "centroidLatitude": 35.665501,
+      "centroidLongitude": 139.769943,
       "city": "Tokyo (Tsukiji)",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
