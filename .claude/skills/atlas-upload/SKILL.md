@@ -248,6 +248,21 @@ of reading like a pass when they are not.**
 
 ## The five things that bite
 
+0. **🔴 "I can't find the address" is almost always wrong — SEARCH THE NAME
+   FIRST.** On 2026-09-15 a session needed 42 Tokyo restaurant addresses, tried
+   scraping byFood (403), Tabelog (403), Overpass (blocked) and Instagram
+   embeds (no location), declared the data unobtainable and asked the owner to
+   source all 42 by hand. Owner: *"the txt list all have names you can look up.
+   you really think my brother can do a better job than you?"* Searching each
+   venue's name — in its own language — found 41 of 42, and the day went from
+   4 pins fixed to 85. **A blocked scrape is not an absent fact.** Search the
+   name, look for the venue's own site in the results, check OSM by name, and
+   only then ask the owner — naming which routes you actually tried.
+   ⚠️ **For Japan, Nominatim cannot do addresses at all**: in romaji it returns
+   a postcode centroid that looks exactly like a real hit. Use
+   `https://msearch.gsi.go.jp/address-search/AddressSearch?q=<japanese address>`.
+   Full detail: `docs/link-pin-runbook.md` § Getting the coordinate right.
+
 1. **🔴 Keep the JSON out of the chat.** `make-link-pin.py` prints ~1.9 KB per
    pin to stdout, and a conversation re-sends its whole history every turn — a
    batch of 20 pasted into chat costs ~21,000 tokens *on every later turn*.
