@@ -40,6 +40,34 @@ probably right.** Only the MODEL download is cached — the slow, flaky,
 network-dependent part, keyed by the model id so a model change misses the
 cache rather than silently running old weights.
 
+## The cheap check that makes it affordable
+
+Added after watching a real merge. **#930 (26 owner-approved coordinate fixes)
+landed while this was in review**, and it exposed the flaw: `tour_text()` reads
+titles, descriptions, tags, city, country and stop captions — **never a
+coordinate, never an image URL**. So #930 would have run the model for 15
+minutes, produced nothing, and delayed the mirror and the Supabase seed by that
+long. Most content merges look like #930.
+
+`scripts/related-text.digest` is a sha256 over exactly what the model reads. The
+job computes it, compares, and skips everything when it matches. **Verified
+against the real event: the digest is byte-identical across #930's 170 changed
+lines.**
+
+🔴 **This is NOT the vector cache rejected above**, and the difference is the
+failure mode. A per-entry cache decides for each tour whether a saved answer is
+still valid; one wrong decision leaves that tour stale forever, silently. The
+digest is written **only by a rebuild that actually succeeded and committed**, so
+a run that is skipped, fails, or loses its push race leaves the old value and the
+next run rebuilds. Worst case: one redundant run. Never a stale list.
+
+⚠️ **A flaw in the first wiring, caught before it shipped.** The commit step was
+gated on the *catalogue* changing. But a rebuild can legitimately leave the
+catalogue untouched while the digest has moved — a new tour whose matches all
+fall under the 0.45 floor and which displaces nobody. That would have skipped the
+commit, left the digest unadvanced, and made **every future merge re-run the
+15-minute rebuild forever**. The gate now checks both paths.
+
 ## The invariant that was broken, deliberately
 
 The workflow header used to promise it *"pushes only to gh-pages (never main),
@@ -73,6 +101,12 @@ second 15-minute run that finds nothing to change.
   made the whole design a silent no-op.
 - The workflow parses, and the job graph is
   `rebuild-related → {publish, seed-supabase}`.
+- **The digest is byte-identical across #930** — a real merge of 26 coordinate
+  fixes, 170 changed lines — so that merge would correctly have skipped. Checked
+  by computing it at `0d17b7a8` and at `HEAD`, not by reasoning about it.
+- 39 generator self-tests green, including the **negative** ones that carry the
+  whole idea: a coordinate edit, a stop-coordinate edit and an image edit must
+  NOT move the digest, while a title, a description and an id must.
 - **The first real run will be a no-op**: the catalogue has not changed since
   this afternoon's regeneration (`git log 0d17b7a8..origin/main -- Tours.json`
   is empty), and that run was verified idempotent — 0 of 3,900 entries changed,
@@ -87,8 +121,10 @@ the new entries have neighbours.
 
 ## Cost
 
-~15 minutes of free runner time added to every content merge, before the mirror
-and the seed run. The catalogue also churns slightly more — a new tour can bump
-into existing entries' top eight, so a handful of other rows change too, and
-every changed row is re-downloaded by phones. Small today; delta fetching
-(1.1.3) shrinks it further.
+**Seconds on a merge that changes no embedded text**, which is most of them —
+the digest check needs no model and no network. ~15 minutes of free runner time
+on a merge that adds or edits real content, before the mirror and the seed run.
+
+The catalogue churns slightly more on those — a new tour can bump into existing
+entries' top eight, so a handful of other rows change too, and every changed row
+is re-downloaded by phones. Small today; delta fetching (1.1.3) shrinks it.

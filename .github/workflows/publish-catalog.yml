@@ -74,15 +74,39 @@ jobs:
           cache: pip
           cache-dependency-path: scripts/requirements-embeddings.txt
 
+      # Is a rebuild owed at all? Needs no model and no network, and answers in
+      # under a second. MOST CONTENT MERGES CHANGE NO EMBEDDED TEXT — #930 moved
+      # 34 entries' coordinates across 170 changed lines and the digest did not
+      # move a single bit, because `tour_text` reads titles, descriptions, tags,
+      # city, country and stop captions, and never a coordinate or an image URL.
+      # Without this check every such merge would delay the mirror and the
+      # Supabase seed by ~15 minutes to produce an empty diff.
+      - name: Is a rebuild owed?
+        id: owed
+        run: |
+          set -euo pipefail
+          CURRENT=$(python3 scripts/build-embeddings.py --text-digest)
+          RECORDED=$(cat scripts/related-text.digest 2>/dev/null || echo "")
+          echo "current:  $CURRENT"
+          echo "recorded: $RECORDED"
+          if [ "$CURRENT" = "$RECORDED" ]; then
+            echo "No embedded text changed — skipping the rebuild."
+            echo "owed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "owed=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # Keyed by the model id the script pins, so a model change misses the
       # cache and refetches rather than silently running the old weights.
       - name: Cache the embedding model
+        if: steps.owed.outputs.owed == 'true'
         uses: actions/cache@v4
         with:
           path: ~/.cache/atlas-embed
           key: atlas-embed-all-MiniLM-L6-v2-v1
 
       - name: Install dependencies
+        if: steps.owed.outputs.owed == 'true'
         run: pip install -r scripts/requirements-embeddings.txt
 
       # Model-free and fast. If the generator itself is broken, fail here
@@ -91,12 +115,19 @@ jobs:
         run: python3 scripts/build-embeddings.py --selftest
 
       - name: Regenerate neighbour lists
+        if: steps.owed.outputs.owed == 'true'
         id: regenerate
         run: |
           set -euo pipefail
           python3 scripts/build-embeddings.py --write-related
-          if git diff --quiet -- "TRAVEL GUIDED TOUR/Resources/Tours.json"; then
-            echo "No suggestion changed — nothing to commit."
+          # ⚠️ BOTH paths, and the digest is the one that matters. A rebuild can
+          # legitimately leave the catalog untouched — a new tour whose matches
+          # all fall under the floor and which displaces nobody — while the
+          # digest HAS moved, because its text is new. Checking only the catalog
+          # would skip the commit, leave the digest unadvanced, and make every
+          # future merge re-run the 15-minute rebuild forever, finding nothing.
+          if git diff --quiet -- "TRAVEL GUIDED TOUR/Resources/Tours.json" scripts/related-text.digest; then
+            echo "Neither the catalog nor the digest moved — nothing to commit."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -117,7 +148,10 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "TRAVEL GUIDED TOUR/Resources/Tours.json"
+          # The digest goes in the SAME commit as the catalog it describes. If
+          # they ever disagree, either a rebuild is suppressed that was owed, or
+          # one is forced that was not.
+          git add "TRAVEL GUIDED TOUR/Resources/Tours.json" scripts/related-text.digest
           # [skip ci] is load-bearing: without it this push retriggers this very
           # workflow, which regenerates, finds nothing to change, and stops —
           # but only after burning another 15 minutes on every content merge.
