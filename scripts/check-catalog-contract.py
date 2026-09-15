@@ -202,5 +202,73 @@ if problems:
           file=sys.stderr)
     sys.exit(1)
 
+# ---------------------------------------------------------------------------
+# The delta RPC (backend/catalog_since.sql).
+#
+# ⚠️ WHY THIS IS SHORTER THAN THE CHECK ABOVE. `get_catalog_since` does not
+# shape anything — it filters the snapshot `get_catalog()` already serves and
+# returns those elements byte for byte, so it CANNOT emit a different tour
+# shape from the one just verified. That is enforced two other ways as well:
+# scripts/check-catalog-keys.py fails any file that redefines the function
+# without calling `catalog_pick`, and backend/test-catalog-since.sh asserts
+# every delta row is byte-identical to the full catalogue's row for that id.
+# So what is left to check here is the ENVELOPE — that the four sections and
+# the cursor are present and named as the client expects.
+#
+# ⚠️ Deliberately does NOT fetch a full catalogue again. This script's own
+# problem is egress; a second full pull to check the delta path would add
+# ~2.4 MB per run. It asks for an EMPTY delta (a ~139-byte envelope) and
+# checks the shape of that.
+def _rpc(name, body):
+    u = url.rsplit("/", 1)[0] + "/" + name
+    rq = urllib.request.Request(u, data=json.dumps(body).encode(), method="POST",
+                                headers={"apikey": key, "Authorization": f"Bearer {key}",
+                                         "Content-Type": "application/json",
+                                         "Accept-Encoding": "gzip"})
+    with urllib.request.urlopen(rq, timeout=60) as r:
+        raw = r.read()
+        if (r.headers.get("Content-Encoding") or "").lower() == "gzip":
+            raw = gzip.decompress(raw)
+    return json.loads(raw)
+
+REQUIRED_DELTA_TOP = {"tours", "linkPins", "makers", "places", "rev", "removedIds"}
+try:
+    # A cursor above any real rev, so the answer is "nothing" and the envelope
+    # comes back near-empty.
+    env = _rpc("get_catalog_since", {"client_rev": 9223372036854775000})
+except urllib.error.HTTPError as e:
+    if e.code in (404, 400):
+        if not QUIET:
+            print("\n!  get_catalog_since not deployed yet — "
+                  "apply backend/catalog_since.sql. Not a failure.")
+        env = None
+    else:
+        fail(f"get_catalog_since: HTTP {e.code} {e.reason}")
+except Exception as e:
+    # 🔴 Not reachable is NOT the same as fine. Exit 2, never 0.
+    fail(f"get_catalog_since: {type(e).__name__}: {e}")
+
+if env is not None:
+    missing = REQUIRED_DELTA_TOP - set(env)
+    if missing:
+        print("\nFAIL — get_catalog_since is missing envelope keys: "
+              + ", ".join(sorted(missing)), file=sys.stderr)
+        print("  A client cannot merge a delta whose shape it cannot rely on.\n"
+              "  Fix: re-apply backend/catalog_since.sql.", file=sys.stderr)
+        sys.exit(1)
+    for sec in ("tours", "linkPins", "makers", "places", "removedIds"):
+        if not isinstance(env.get(sec), list):
+            print(f"\nFAIL — get_catalog_since.{sec} is "
+                  f"{type(env.get(sec)).__name__}, expected a list.", file=sys.stderr)
+            sys.exit(1)
+    if not isinstance(env.get("rev"), int):
+        print("\nFAIL — get_catalog_since.rev is not an integer; a client "
+              "cannot use it as a cursor.", file=sys.stderr)
+        sys.exit(1)
+    if not QUIET:
+        print(f"\n   delta envelope OK (rev {env['rev']}, "
+              f"{sum(len(env[s]) for s in ('tours','linkPins','makers','places'))} rows "
+              "at a max cursor, as expected)")
+
 if not QUIET:
     print("\nPASS — every key the app decodes is being served.")
