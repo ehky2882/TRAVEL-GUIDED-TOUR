@@ -557,6 +557,15 @@ final class RemoteCatalogLoader {
     /// 4. **A merge must not shrink the catalogue** by more than `removedIds`
     ///    accounted for. Cheap, and it catches a whole class of merge bug that
     ///    would otherwise be invisible until a user noticed missing content.
+    ///
+    /// ⚠️ **This decodes the whole catalogue twice** — once here for the
+    /// baseline the two guards below compare against, and once more on the
+    /// merged bytes — where a full download decodes once. That is a real cost,
+    /// not a free win, and it is paid on every refresh that reaches this path.
+    /// It buys skipping a ~2.4 MB transfer, which is seconds against tens of
+    /// milliseconds, so the trade is not close — but it should be understood
+    /// rather than discovered. There is no cheaper way to get the baseline:
+    /// both `losses` and `tours.count` only exist after a decode.
     private func mergedCatalog(for source: CatalogSource, serverVersion: String?) async -> ToursData? {
         guard let deltaFetcher = source.deltaFetcher,
               let rev = storedCatalogRev(),
