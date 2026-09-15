@@ -178,6 +178,7 @@ def pop_out_argument(argv=None):
 
 
 def selftest() -> int:
+    import re
     import tempfile
 
     cases, failed = [], 0
@@ -234,6 +235,30 @@ def selftest() -> int:
     check("pop_out_argument handles --out=PATH", pop_out_argument(argv2) == "/tmp/y.txt"
           and argv2 == ["prog"])
     check("no --out → None", pop_out_argument(["prog", "--selftest"]) is None)
+
+    # 🔴 CLAUDE.md § "Reading a check's result" tells every session that EVERY
+    # checker in scripts/ stamps its output. That claim was FALSE for weeks --
+    # check-coordinates.py (automation rule 8b, run on every city drop) and
+    # check-catalog-contract.py (rule 11, run after every get_catalog migration)
+    # were never wired up, and `--out` on the first was silently rejected by
+    # argparse. Nobody noticed, because a doc cannot fail. This one can.
+    # ⚠️ Match a real import STATEMENT, not the substring: the first version of
+    # this test read `"import runstamp" not in source`, and a commented-out
+    # `# import runstamp` satisfied it. The check passed on a file it was
+    # supposed to catch -- a check that cannot fail, in the module whose whole
+    # subject is checks that cannot fail.
+    imports_runstamp = re.compile(r"^\s*(?:import runstamp\b|from runstamp import)",
+                                  re.MULTILINE)
+    here = os.path.dirname(os.path.abspath(__file__))
+    unstamped = sorted(
+        f for f in os.listdir(here)
+        if (f.startswith("check-") or f.startswith("validate-")) and f.endswith(".py")
+        and not imports_runstamp.search(
+            open(os.path.join(here, f), encoding="utf-8", errors="replace").read())
+    )
+    check("every checker in scripts/ imports runstamp"
+          + (f" — MISSING: {', '.join(unstamped)}" if unstamped else ""),
+          not unstamped)
 
     total = len(cases)
     print(f"\n{total - failed}/{total} self-tests passed")

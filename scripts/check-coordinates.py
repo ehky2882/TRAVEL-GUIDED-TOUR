@@ -67,6 +67,9 @@ import sys
 import time
 from math import comb
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import runstamp  # noqa: E402
+
 NOMINATIM = "https://nominatim.openstreetmap.org"
 UA = "Dozent-Atlas-catalog-check/1.0 (edward.yung@gmail.com)"
 SLEEP = 1.1               # Nominatim asks for <= 1 req/sec
@@ -730,7 +733,17 @@ def main():
     ap.add_argument("--catalog",
                     default="TRAVEL GUIDED TOUR/Resources/Tours.json")
     ap.add_argument("--limit", type=int, default=0, help="audit only the first N")
+    runstamp.add_out_argument(ap)
     a = ap.parse_args()
+
+    # Stamp BEFORE any branch, --selftest included: a run that cannot be dated
+    # cannot be believed, and `--out` must truncate the report before the work
+    # starts so a previous run's verdict cannot survive underneath this one.
+    # `begin` registers its own atexit close, so every `sys.exit` below is safe;
+    # do NOT close the handle by hand (see `runstamp.Run.close` -- streams must
+    # be restored first, or the interpreter fails its shutdown flush and exits
+    # 120, replacing this checker's verdict with a meaningless status).
+    runstamp.begin(__file__, out_path=a.out)
 
     if a.selftest:
         sys.exit(selftest())
