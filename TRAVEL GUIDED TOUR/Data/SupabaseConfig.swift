@@ -57,6 +57,24 @@ enum SupabaseConfig {
             .appendingPathComponent("catalog_snapshot_age")
     }
 
+    /// The `get_catalog_since(client_rev)` RPC — the rows whose `rev` exceeds
+    /// the cursor the client already holds, and nothing else.
+    ///
+    /// Measured 2026-09-14: a full fetch is 2,427,222 compressed bytes to
+    /// deliver a median 7,019 bytes of new content, about 345x more than
+    /// needed. This is the endpoint that closes that gap.
+    ///
+    /// ⚠️ It returns rows **filtered out of the same snapshot `get_catalog()`
+    /// serves**, byte for byte, so a delta row cannot have a different shape
+    /// from a fetched one. See `backend/catalog_since.sql`.
+    static var catalogDeltaRPCURL: URL {
+        projectURL
+            .appendingPathComponent("rest")
+            .appendingPathComponent("v1")
+            .appendingPathComponent("rpc")
+            .appendingPathComponent("get_catalog_since")
+    }
+
     /// Whether real credentials have been filled in. When false, the catalog
     /// loader skips the Supabase source entirely and reads gh-pages only, so a
     /// missing key degrades gracefully rather than breaking the app.
