@@ -1,7 +1,29 @@
 # Sending only what changed — delta catalogue fetching
 
-**Status: SCOPE AND DESIGN ONLY. Nothing here is built.** No app code and no migration was
-written for this document. It is the argument, the measurements, and a phased plan for a decision.
+**Status (2026-09-15): Phases 0 and 1 are SHIPPED AND LIVE. Phase 2 is built. Phase 3 is not.**
+This file was written as scope-and-design only; three of its four phases have since been built, so
+read § 6 as a record of what exists, not as a proposal.
+
+| phase | what it is | state |
+|---|---|---|
+| **0** | conditional seed writes — an unchanged re-seed writes **0 rows** instead of ~14,176 | **shipped** (#904), applied |
+| **1** | `get_catalog_since(rev)` — the RPC that returns only changed rows | **shipped** (#912), **applied to production** |
+| **2** | the client merges a delta into the catalogue on disk | **built**, PR #914 |
+| **3** | **removals** — `removedIds` is always empty, so content *deleted* from the catalogue still needs a full download | **NOT built** |
+
+🔴 **Nothing above has reached a single phone.** Phase 2 ships with the next App Store release;
+until then every build in the field downloads the whole catalogue on every change. The egress
+problem this file exists for is **not solved yet** — the machinery to solve it merely exists now.
+
+⚠️ **Do not quote the phase table without checking it** — the same rule this file already applies
+to its measurements. `git log --oneline -- backend/catalog_since.sql backend/catalog_rev.sql` and
+the live RPC are the sources; a `get_catalog_since` call with a sentinel cursor returns a
+**131-byte** envelope if it is live and a 404 if it is not, for effectively no egress.
+
+**Measured on production 2026-09-15**, on a real delta (3 tours + 40 link pins whose coordinates
+had just been corrected by #917): **43 changed rows in 19,496 bytes**, against **2,427,222 bytes**
+for the full catalogue — **124× smaller**. On the common case, nothing changed, the envelope is
+**131 bytes**: about **19,000× smaller**. Those two numbers are the whole argument for Phase 2.
 
 Written 2026-09-14, the morning after the Supabase project was unreachable for ~11h45m, and six
 days after the second egress-overage notice. **One design decision caused both incidents, two

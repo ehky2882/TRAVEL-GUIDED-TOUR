@@ -211,8 +211,24 @@ at level 9, against **29.4% raw**. It is *used* — `TourDetailView` renders it,
 `SearchView` searches it — so the KEEP decision stands, but it stands on being
 load-bearing, not on being small.
 
-**What is still NOT fixed:** when anything changes, the app downloads all 1,552
-tours. Delta or city-scoped fetching is the remaining step, and is not built.
+**Delta fetching: the server half is LIVE, the client half is not released.**
+`get_catalog_since(rev)` (`backend/catalog_since.sql`, #912) is applied to
+production and returns **only the rows whose `rev` exceeds the cursor** — measured
+2026-09-15 on a real change: **43 rows in 19,496 bytes against 2,427,222 for the
+full catalogue**, and a **131-byte** envelope when nothing has changed. The client
+that consumes it is #914.
+
+🔴 **This changes NOTHING for any phone until 1.1.3 ships.** Every build in the
+field still downloads the entire catalogue whenever anything changes, so the
+egress arithmetic above is still what you are paying today. **Re-derive the state
+rather than quoting this paragraph** — one `get_catalog_since` call with a sentinel
+cursor costs 131 bytes and answers it (404 = not live), and the released version
+comes from the `itunes.apple.com/lookup` one-liner in § READ FIRST.
+
+**What is still NOT built:** **removals.** `removedIds` is always empty, so content
+*deleted* from the catalogue reaches phones only via a full download — which
+compounds the upsert-only deletion gap described above. City-scoped fetching is
+also unbuilt, and is the separate answer to first-sync cost.
 
 ## Image Pipeline
 
