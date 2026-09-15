@@ -92,13 +92,41 @@ Every stacked cluster is cleared — Ginza, Akasaka, Shimokitazawa, Hatagaya, Ni
 Kaminarimon, Shinjuku Gyoen. ⚠️ **Kiwamiya and Saryo Tsujiri still share a coordinate and that
 is CORRECT** — both are inside 丸の内1-9-1, the Daimaru Tokyo / Gransta building.
 
-## Still open
+## Nothing is still open — and note what this section said first
 
-- **"Sushi Hajime, Shibuya"** — unresolvable without guessing. 鮨 はじめ is in Roppongi;
-  鮨 一, read the same way, is at 渋谷区渋谷3-15-5. Needs a human to read the post.
-- **Yakushu Bar** — owner to confirm the Sangenjaya pin is the intended branch.
-- **The 45 byFood pins that passed both tests** were never individually verified. Passing is
-  not proof of correctness.
+⚠️ **This section originally read "Still open" and listed three items. All three were
+closed within the hour, in #917, #918 and #920, while this file said otherwise.** It is
+corrected here rather than rewritten, because a handoff going stale hours after it merged
+is the same failure the § READ FIRST rule exists for.
+
+What those three turned into:
+
+- **"Sushi Hajime, Shibuya"** — filed as unresolvable (鮨 はじめ in Roppongi vs 鮨 一 in
+  Shibuya, homophones). The owner supplied *Gleme Building B1F, 3-15-5 Shibuya*, which is
+  鮨 一's. Moved **649 m** (#918).
+- **Yakushu Bar** — confirmed correct as it stood. The address supplied was 愛知県豊橋市,
+  **229 km** away; the post's caption places the bar in Sangenjaya, where the pin already
+  sat. A different branch. Not moved.
+- **The 45 byFood pins that passed both tests** — verified in #917. 🔴 **37 of the 45 were
+  wrong**, the worst by **3,778 m**. Only 5 were actually correct. They passed because the
+  two tests detect a SHARED fallback point and a caption with NO address; a pin alone on
+  its own wrong coordinate trips neither.
+
+**The byFood cluster is closed: 85 corrected, 7 verified correct, 0 outstanding, across all
+92 pins.** `status/owner/` is empty.
+
+Two further rules came out of finishing it, both in `docs/link-pin-runbook.md`:
+
+- 🔴 **A district-level geocode proves nothing in either direction.** The three pins that
+  could only be resolved to a district came out 11 m right, 220 m wrong and 100 m wrong —
+  having read as 269 m, 144 m and unparseable against those centroids. Moving the first on
+  the strength of its 269 m would have introduced the error it appeared to have.
+- 🔴 **A parser that drops the chome number builds a plausible NONEXISTENT address**, which
+  geocodes to the district centre rather than failing. That bug reported 20 correct pins as
+  >300 m wrong, one at 3,913 m; Park Side Donuts went from "186 m off" to 0 m once fixed.
+  `scripts/parse-caption-address.py` exists, with a selftest, so it is not re-written badly.
+  **The tell was GSI reporting its own answers as district-level** — a geocoder that states
+  its precision is worth more than a confident one.
 
 ## Also in this session
 
