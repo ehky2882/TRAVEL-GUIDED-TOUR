@@ -292,6 +292,91 @@ new address, so every phone fetches it automatically.
 
 ---
 
+## Getting the coordinate right
+
+A pin's coordinate is the whole product: the app fires on it. It is also the
+only field where **being wrong and being right look identical** — the validator
+passes, CI compiles, every URL 200s, and the pin simply never triggers where
+anyone is standing. On 2026-09-15 a single sweep moved **110 pins**, the worst
+**4.3 km** out, all of which had shipped green.
+
+### 🔴 Exhaust search before saying an address cannot be found
+
+**This is the rule that cost the most.** That sweep needed 42 Tokyo restaurant
+addresses. The session tried scraping byFood.com (403, Cloudflare), Tabelog
+search (403), Overpass (blocked by the web-session egress proxy) and Instagram
+embeds (no location tag), concluded the data was unobtainable, and handed the
+owner a list of 42 to source by hand. The owner replied:
+
+> *"the txt list all have names you can look up. you really think my brother can
+> do a better job than you?"*
+
+**They were right.** Searching each venue's name — for Japan, the Japanese name
+plus 住所 — returned every address, corroborated across the venue's own site,
+Gurunavi, Navitime, Hitosara and Ikyu. It went from 4 pins fixed to 85.
+
+**A blocked scrape is not an absent fact.** Before telling anyone a coordinate
+or address is unavailable:
+
+1. **Search the venue's name.** In its own language. This alone resolved 41 of 42.
+2. **Look for the venue's own website** in those results — it prints its address.
+3. **Check OSM by name** — a well-known venue is often a named node (T.Y. Harbor,
+   Conrad Tokyo). Two independent sources agreeing is what makes either usable.
+4. **Only then** ask the owner, and say precisely which routes you tried.
+
+### Pick the geocoder for the country
+
+⚠️ **Nominatim CANNOT geocode a Japanese address, and fails like a success** —
+asked in romaji it returns a **postcode centroid** at full decimal precision,
+indistinguishable from a venue hit (20 of 23 addresses). Japan addresses by
+chōme-banchi, not by street. Use the **Geospatial Information Authority of
+Japan**, free and keyless:
+
+```
+https://msearch.gsi.go.jp/address-search/AddressSearch?q=東京都台東区上野6-9-17
+→ 35.710045, 139.775467   東京都台東区上野六丁目９番１７号
+```
+
+It echoes the matched 丁目/番/号, so **the precision of its own answer is
+readable**: ending 号 or 番地 is building-level, stopping at 丁目 is coarser and
+says so. **A geocoder that reports its own precision is worth more than a
+confident one** — that is what exposed a parser bug that would otherwise have
+moved 20 correct pins onto centroids.
+
+### Verify by ward, never by distance alone
+
+Geocode the address, then check the **result's ward against the neighbourhood the
+pin itself names** — 赤坂 for an Akasaka pin, 銀座 for Ginza. Two catches from
+one sweep:
+
+- A supplied address was 愛知県豊橋市 — **229 km** from Tokyo. A different branch
+  of the same bar; the pin was already right.
+- A caption read `Yoyogi, 3 Chome-39-15` under postcode `151-0071`, which is
+  本町, not 代々木. Trusting the postcode would have moved that pin **1,296 m the
+  wrong way**; the place name was the correct half.
+
+🔴 **An unverifiable pin is neither right nor wrong until it is checked.** Three
+pins that geocoded only to district level came out three ways once real
+addresses existed: one already correct at 11 m, one 220 m off, one 100 m. Against
+the district centroids they had read as 269 m, 144 m and unparseable. **Never
+move a pin on a district-centroid distance** — that is how you introduce the
+error it appeared to have.
+
+### Automated name matching needs reading
+
+Nominatim name search gave 8 candidates for 47 pins and **3 were wrong**:
+`Yakiniku Kappo Note` matched 焼肉花 at **0 m** on the generic word *yakiniku*
+(and 0 m means it matched something already on the bad centroid — read that as a
+red flag, not a perfect hit); `Kiwamiya` matched a ramen shop 3.3 km away;
+`Saryo Tsujiri` matched a different branch of the same chain. **A chain name, a
+cuisine word and a neighbouring branch each defeat it.**
+
+`scripts/parse-caption-address.py` extracts an address from a caption — note its
+header, since a naive `\d+-\d+-\d+` match drops the chome number and builds a
+plausible but nonexistent address.
+
+---
+
 ## Traps
 
 - **A pin with no coordinate is the one defect nothing downstream catches.** It
