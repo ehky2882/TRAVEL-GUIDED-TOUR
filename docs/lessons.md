@@ -1494,6 +1494,37 @@ functions look like they should agree and must not.
   ranked the same-city candidate highest anyway, so it would have passed with
   the rule deleted. The cross-city candidate now scores *higher*, which is what
   makes the assertion mean anything.
+- 🔴 **An exclusion needs a measurement, not a plausible reason.** #915 kept
+  link pins out of "More like this" on the stated grounds that *"a pin has no
+  transcript, so its vector is near-meaningless"*, and that sentence was
+  repeated into a code comment, this file, the PR body and the handoff without
+  anyone measuring it. Measured a day later: **all 2,318 pins carry title, both
+  descriptions, tags, city, country and a stop caption — median 540 characters,
+  p10 311.** Only `transcriptText` is missing, and #795 took that field off the
+  wire for *tours* too. The matches were good wherever Atlas had local coverage
+  (a Tempelhof pin → Tempelhofer Feld, 0.644) and correctly silent where it did
+  not (a Toronto BBQ pin's best match was a Sydney restaurant at 0.413, under
+  the floor). The cost of the guess was a whole feature withheld from 2,318
+  entries. **It is cheaper to run the probe than to write the justification.**
+- **The real limit was coverage, and only counting found it.** 978 of 2,318
+  pins sit in a city where Atlas has no tours at all. That is why pins take
+  same-city matches only and no cross-city fill: the alternative offers someone
+  standing in Prague a walk in Vienna, and it is the 978 that would have made
+  the egress bill large (~447 KB against ~253 KB).
+- **Letting two kinds of thing match each other creates a THIRD direction, and
+  it will be the biggest one.** "Pins can suggest tours and tours can suggest
+  pins" sounds like two directions; it is three, because a pin's same-city
+  candidates include other pins. That third one dominated: of 1,902 pins that
+  gained a section, **1,322 saw only other creators' posts and no Atlas audio
+  at all**, and only 580 got a real tour. The run had to be priced and put back
+  to the owner rather than shipped as "what they asked for". Enumerate the
+  pairs — A→A, A→B, B→A, B→B — before quoting a number for "both directions".
+- **Price a content decision on the real payload, not on an estimate.**
+  Measured at gzip level 1 on the live RPC body: 2,885,384 bytes as shipped,
+  2,932,051 with pins restricted to naming tours, 3,176,601 with pins naming
+  pins too. The estimate made beforehand from average id length was ~253 KB;
+  the answer was **+291 KB**. Close enough to sound right, far enough to have
+  argued the wrong case.
 
 ## A correctly-applied migration is not evidence either — the snapshot in front of it (2026-09-15)
 

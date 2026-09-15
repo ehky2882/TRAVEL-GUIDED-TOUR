@@ -730,17 +730,20 @@ for (tloc0, t) in file.locatedTours {
 // error anywhere, and a self-reference renders the tour you are already
 // reading. Nothing else in the pipeline can see either.
 do {
-    // `tours`, deliberately NOT `allTours`. A link pin has no transcript, so
-    // its vector is near-meaningless and one offered as "more like this" is a
-    // category error — the generator excludes them on both sides, and this is
-    // what proves it stayed that way.
-    let realTourIds = Set(file.tours.map { $0.id })
-    let pinIds = Set((file.linkPins ?? []).map { $0.id })
+    // `allTours`, deliberately NOT `tours`. Link pins take part in "more like
+    // this" in BOTH directions (owner decision 2026-09-15): a pin can suggest
+    // tours and a tour can suggest pins. #915 excluded them on the stated
+    // grounds that a pin has no transcript to be similar to; that was measured
+    // afterwards and was wrong — see `related_tours` in build-embeddings.py.
+    let entries = file.allTours
+    let byId = Dictionary(entries.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
     let cap = 8   // RELATED_COUNT in scripts/build-embeddings.py
 
-    for (i, t) in file.tours.enumerated() {
+    func place(_ t: Tour) -> String { (t.city ?? "").trimmingCharacters(in: .whitespaces).lowercased() }
+
+    for t in entries {
         guard let related = t.relatedTourIds else { continue }
-        let loc = "tours[\(i)] '\(t.title)'"
+        let loc = "\(t.kind == .link ? "pin" : "tour") '\(t.title)'"
 
         if related.count > cap {
             err(loc, "relatedTourIds has \(related.count) entries, more than the \(cap) the generator writes")
@@ -753,24 +756,24 @@ do {
                 continue
             }
             if id == t.id {
-                err(loc, "relatedTourIds[\(j)] is the tour itself")
+                err(loc, "relatedTourIds[\(j)] is the entry itself")
             }
             if !seen.insert(id).inserted {
                 err(loc, "relatedTourIds[\(j)] repeats \(raw) — it would render twice")
             }
-            if pinIds.contains(id) {
-                err(loc, "relatedTourIds[\(j)] names link pin \(raw); a pin has no transcript to be similar to")
-            } else if !realTourIds.contains(id) {
-                err(loc, "relatedTourIds[\(j)] names unknown tour \(raw)")
+            guard let other = byId[id] else {
+                err(loc, "relatedTourIds[\(j)] names unknown entry \(raw)")
+                continue
+            }
+            // A PIN TAKES NO CROSS-CITY FILL. This is the only mechanical guard
+            // on that rule: without it a bad generation run ships a Prague pin
+            // pointing at a Vienna walk, and nothing else in the pipeline looks.
+            if t.kind == .link, place(other) != place(t) {
+                err(loc, "relatedTourIds[\(j)] '\(other.title)' is in \(other.city ?? "?"), not \(t.city ?? "?") — a pin takes same-city matches only")
             }
         }
     }
 
-    for (i, pin) in (file.linkPins ?? []).enumerated() {
-        if pin.relatedTourIds != nil {
-            err("linkPins[\(i)] '\(pin.title)'", "a link pin must not carry relatedTourIds")
-        }
-    }
 }
 
 // MARK: - Places

@@ -1433,13 +1433,20 @@ struct TourDetailView: View {
     /// centroid (the section's anchor), not from the user.
     /// `distanceAway`'s "away" suffix reads naturally in the
     /// "Nearby Tours" section context.
+    ///
+    /// A LINK PIN HAS NO DURATION and must not claim one: every pin in the
+    /// catalog carries `totalDurationSeconds: 0`, because a pin is a creator's
+    /// post rather than something you listen to. Formatting that anyway
+    /// produced a dangling separator on a row that has been live in "Nearby
+    /// Tours" all along — pins were never filtered out of `toursNearby`.
     private func nearbySubtitleText(_ other: Tour) -> String {
-        let duration = AtlasFormatters.duration(seconds: other.totalDurationSeconds)
         let here = CLLocation(
             latitude: tour.centroidLatitude,
             longitude: tour.centroidLongitude
         )
         let distance = AtlasFormatters.distanceAway(meters: other.distance(from: here))
+        guard !other.isLink else { return distance }
+        let duration = AtlasFormatters.duration(seconds: other.totalDurationSeconds)
         return "\(duration) · \(distance)"
     }
 

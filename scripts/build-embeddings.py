@@ -422,7 +422,11 @@ def tour_means(np, chunks, owners, count: int):
 
 def related_tours(np, means, tours, count: int = RELATED_COUNT, floor: float = RELATED_FLOOR):
     """
-    Nearest neighbours per tour, same city first, then cross-city to fill.
+    Nearest neighbours per entry, same city first, then cross-city to fill.
+
+    Tours and link pins both take part, in both directions: a pin can suggest
+    tours and a tour can suggest pins. The one asymmetry is the cross-city
+    tail, which pins do not get — see the comment on that branch below.
 
     🔴 MEAN-TO-MEAN, DELIBERATELY NOT `tour_scores`' BLEND, AND THE DIFFERENCE
     IS THE POINT. `tour_scores` weights the single best-matching chunk at 0.6
@@ -446,25 +450,24 @@ def related_tours(np, means, tours, count: int = RELATED_COUNT, floor: float = R
     if n == 0:
         return {}
 
-    # A link pin has no transcript, so its vector is near-meaningless, and one
-    # offered as "more like this" is a category error. They live in a sibling
-    # `linkPins` array so they are already absent — this is belt and braces
-    # against a pin ever landing back in `tours`.
-    eligible = np.array([t.get("kind") != "link" for t in tours])
+    # ⚠️ Link pins were excluded here when this shipped (#915), on the stated
+    # grounds that "a pin has no transcript, so its vector is near-meaningless".
+    # That was a guess and it was WRONG. Measured 2026-09-15: all 2,318 pins
+    # carry title, both descriptions, tags, city, country and a stop caption —
+    # median 540 characters, p10 311. Only `transcriptText` is absent, and #795
+    # took that field off the wire for tours too. The matches are good where
+    # Atlas has local coverage and correctly silent where it has none.
+    is_pin = np.array([t.get("kind") == "link" for t in tours])
 
     cities = [(t.get("city") or "").strip().casefold() for t in tours]
     city_codes = {}
     coded = np.array([city_codes.setdefault(c, len(city_codes)) if c else -1 for c in cities])
 
     similarity = means @ means.T
-    np.fill_diagonal(similarity, -1.0)          # a tour is never its own neighbour
-    similarity[:, ~eligible] = -1.0             # never suggest a pin
-    similarity[~eligible, :] = -1.0             # never give a pin neighbours
+    np.fill_diagonal(similarity, -1.0)          # nothing is its own neighbour
 
     related: dict[str, list[str]] = {}
     for index in range(n):
-        if not eligible[index]:
-            continue
         row = similarity[index]
         above = row >= floor
         # A city of -1 is "unknown", which must never match another unknown.
@@ -477,7 +480,21 @@ def related_tours(np, means, tours, count: int = RELATED_COUNT, floor: float = R
             return list(picks[np.argsort(-row[picks], kind="stable")][:limit])
 
         chosen = best(same_city, count)
-        if len(chosen) < count:
+        # A PIN TAKES NO CROSS-CITY FILL, and a tour does. 978 of 2,318 pins
+        # sit in a city where Atlas has no tours at all; filling their eight
+        # slots from elsewhere offers someone standing in Prague a walk in
+        # Vienna. A pin with no local match shows no section. Owner decision
+        # 2026-09-15 — one line to reverse.
+        #
+        # A pin's same-city candidates DO include other pins, and that was also
+        # put to the owner and taken: it is what carries pin coverage from 580
+        # to 1,902, at the cost of 1,322 of those seeing only other creators'
+        # posts and no Atlas audio. Measured on the live payload at gzip level 1
+        # (which is what PostgREST uses): 2,885,384 bytes today, 2,932,051 if a
+        # pin could only name a tour, 3,176,601 as chosen — +291 KB. 🔴 That is
+        # real money on an account that has had two egress overage notices;
+        # re-measure rather than quoting these, and see § Egress in CLAUDE.md.
+        if len(chosen) < count and not is_pin[index]:
             chosen += best(above & ~same_city, count - len(chosen))
 
         if chosen:
@@ -496,26 +513,34 @@ def apply_related(related: dict, path=TOURS_JSON) -> tuple[int, int]:
     """
     data = json.loads(path.read_text(encoding="utf-8"))
     changed = 0
-    for position, tour in enumerate(data["tours"]):
-        ids = related.get(tour["id"])
-        if tour.get("relatedTourIds") == ids or (not ids and "relatedTourIds" not in tour):
+    total = 0
+    # Both arrays, because a link pin carries the key too. They are separate on
+    # the wire only to keep old builds decoding — see `load_catalog`.
+    for array in ("tours", "linkPins"):
+        entries = data.get(array)
+        if not entries:
             continue
-        rebuilt = {}
-        for key, value in tour.items():
-            if key == "relatedTourIds":
+        total += len(entries)
+        for position, tour in enumerate(entries):
+            ids = related.get(tour["id"])
+            if tour.get("relatedTourIds") == ids or (not ids and "relatedTourIds" not in tour):
                 continue
-            rebuilt[key] = value
-            if key == "country" and ids:
-                rebuilt["relatedTourIds"] = ids
-        if ids and "relatedTourIds" not in rebuilt:
-            rebuilt["relatedTourIds"] = ids     # a tour with no `country` key
-        data["tours"][position] = rebuilt
-        changed += 1
+            rebuilt = {}
+            for key, value in tour.items():
+                if key == "relatedTourIds":
+                    continue
+                rebuilt[key] = value
+                if key == "country" and ids:
+                    rebuilt["relatedTourIds"] = ids
+            if ids and "relatedTourIds" not in rebuilt:
+                rebuilt["relatedTourIds"] = ids     # an entry with no `country` key
+            entries[position] = rebuilt
+            changed += 1
 
     # indent=2 + ensure_ascii=False + trailing newline reproduces the file
     # byte for byte; anything else rewrites all 14 MB as one diff.
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    return changed, len(data["tours"])
+    return changed, total
 
 
 def l2_normalize(np, matrix):
@@ -528,10 +553,20 @@ def l2_normalize(np, matrix):
 
 
 def load_catalog() -> list[dict]:
+    """
+    Every entry the app sees, tours and link pins in one list.
+
+    Pins live in a sibling `linkPins` array on the wire — not because they are
+    a different kind of thing, but because one unknown `kind` inside `tours`
+    fails the whole catalog decode on every build shipped before
+    `TourKind.link`. `ToursData` folds them back together at decode and
+    everything downstream sees one list; this mirrors that.
+    """
     if not TOURS_JSON.exists():
         raise SystemExit(f"ERROR: {TOURS_JSON} not found")
     with TOURS_JSON.open(encoding="utf-8") as handle:
-        return json.load(handle)["tours"]
+        data = json.load(handle)
+    return list(data["tours"]) + list(data.get("linkPins") or [])
 
 
 def substring_search(tours: list[dict], query: str, limit: int) -> list[dict]:
@@ -715,13 +750,33 @@ def selftest() -> int:
         check("a cross-city match trails a weaker same-city one",
               float(means[0] @ means[by_id["c"]]) > min(same))
 
+        # Pins take part in both directions (#915 excluded them on a wrong guess
+        # about transcripts; see the comment in `related_tours`). The fixture is
+        # built so the CROSS-CITY tour "c" scores HIGHER against the pin than the
+        # same-city "a" does — otherwise "no cross-city fill" would pass for the
+        # wrong reason, ranking having satisfied it anyway.
         pinned = sample[:3] + [{"id": "pin", "city": "Lisbon", "title": "P", "kind": "link"}]
         pin_means = l2_normalize(np, np.array(
-            [[1.0, 0.0], [0.99, 0.10], [0.97, 0.20], [1.0, 0.0]], dtype=np.float32))
+            [[0.97, 0.20],     # a, Lisbon — same city as the pin, WEAKER
+             [0.00, 1.00],     # b, Lisbon — unrelated, below the floor
+             [1.00, 0.00],     # c, Porto  — cross city, STRONGER
+             [0.99, 0.10]],    # pin, Lisbon
+            dtype=np.float32))
         pin_related = related_tours(np, pin_means, pinned, count=3, floor=0.5)
-        check("a link pin is never suggested",
-              all("pin" not in ids for ids in pin_related.values()))
-        check("a link pin gets no neighbours of its own", "pin" not in pin_related)
+        check("a link pin can be suggested under a tour",
+              any("pin" in ids for ids in pin_related.values()))
+        check("a link pin gets neighbours of its own", "pin" in pin_related)
+        check("a pin takes no cross-city fill", pin_related["pin"] == ["a"])
+        check("the cross-city tour really was the pin's stronger match",
+              float(pin_means[3] @ pin_means[2]) > float(pin_means[3] @ pin_means[0]))
+        check("a tour still takes cross-city fill", "c" in pin_related["a"])
+
+        # A pin in a city with no tours at all gets nothing rather than filler.
+        stranded = sample[:2] + [{"id": "far", "city": "Prague", "title": "F", "kind": "link"}]
+        far_means = l2_normalize(np, np.array(
+            [[1.0, 0.0], [0.99, 0.10], [1.0, 0.0]], dtype=np.float32))
+        check("a pin with no local match gets no section",
+              "far" not in related_tours(np, far_means, stranded, count=3, floor=0.5))
 
         # Tour 0 owns two chunks, tour 1 owns one. The mean must group by owner.
         grouped = tour_means(
@@ -737,19 +792,29 @@ def selftest() -> int:
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             fixture = Path(tmp) / "Tours.json"
-            payload = {"tours": [
-                {"id": "a", "title": "A", "country": "Portugal", "stops": []},
-                {"id": "b", "title": "B", "stops": []},
-            ]}
+            payload = {
+                "tours": [
+                    {"id": "a", "title": "A", "country": "Portugal", "stops": []},
+                    {"id": "b", "title": "B", "stops": []},
+                ],
+                "linkPins": [
+                    {"id": "p", "title": "P", "country": "Portugal",
+                     "kind": "link", "stops": []},
+                ],
+            }
             fixture.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
-            first, _ = apply_related({"a": ["b"]}, fixture)
-            again, _ = apply_related({"a": ["b"]}, fixture)
-            written = json.loads(fixture.read_text())["tours"]
+            patch = {"a": ["b"], "p": ["a"]}
+            first, _ = apply_related(patch, fixture)
+            again, _ = apply_related(patch, fixture)
+            reloaded = json.loads(fixture.read_text())
+            written = reloaded["tours"]
+            check("patch writes a pin's ids too",
+                  reloaded["linkPins"][0].get("relatedTourIds") == ["a"])
             check("patch writes the ids", written[0].get("relatedTourIds") == ["b"])
             check("patch sits after country",
                   list(written[0]).index("relatedTourIds") == list(written[0]).index("country") + 1)
             check("a tour with no neighbours gets no key", "relatedTourIds" not in written[1])
-            check("patching is idempotent", first == 1 and again == 0)
+            check("patching is idempotent", first == 2 and again == 0)
 
     print()
     if failures:
@@ -828,7 +893,8 @@ def main() -> int:
         related = related_tours(np, means, tours, floor=args.related_floor)
 
         by_id = {t["id"]: t for t in tours}
-        eligible = [t for t in tours if t.get("kind") != "link"]
+        pins = [t for t in tours if t.get("kind") == "link"]
+        pins_with = sum(1 for t in pins if related.get(t["id"]))
         full = sum(1 for ids in related.values() if len(ids) >= RELATED_COUNT)
         cross = sum(
             1 for tid, ids in related.items()
@@ -838,12 +904,16 @@ def main() -> int:
         total = sum(len(ids) for ids in related.values())
         print(f"\n=== more like this (floor {args.related_floor:.2f}, "
               f"up to {RELATED_COUNT} each)")
-        print(f"  {len(related):,} of {len(eligible):,} tours have at least one neighbour "
-              f"({100.0 * len(related) / max(len(eligible), 1):.0f}%)")
+        print(f"  {len(related):,} of {len(tours):,} entries have at least one neighbour "
+              f"({100.0 * len(related) / max(len(tours), 1):.0f}%)")
         print(f"  {full:,} have a full {RELATED_COUNT}; "
-              f"{len(eligible) - len(related):,} have none and will hide the section")
+              f"{len(tours) - len(related):,} have none and will hide the section")
         print(f"  {total:,} links, {cross:,} of them cross-city "
               f"({100.0 * cross / max(total, 1):.0f}%)")
+        # Pins are reported separately because they take no cross-city fill, so
+        # a low share here is city coverage, not a bad floor.
+        print(f"  pins: {pins_with:,} of {len(pins):,} have a neighbour "
+              f"({100.0 * pins_with / max(len(pins), 1):.0f}%) — same-city only")
 
         for needle in (args.related_of or []):
             for tour in tours:
