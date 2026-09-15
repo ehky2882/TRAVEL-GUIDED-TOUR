@@ -1,0 +1,15 @@
+# Dependencies for scripts/export-coreml.py and verify-coreml-parity.py.
+#
+# 🔴 SEPARATE FROM requirements-embeddings.txt ON PURPOSE. That file is
+# deliberately light — no PyTorch — because it runs on EVERY content merge.
+# This one pulls torch (~800 MB) and runs in a single manual job on a macOS
+# runner, roughly never. Merging the two would put 800 MB into the hot path.
+#
+#   pip install -r scripts/requirements-coreml.txt
+
+coremltools>=8.0
+torch>=2.2
+transformers>=4.40
+numpy>=1.24
+tokenizers>=0.15
+onnxruntime>=1.17
