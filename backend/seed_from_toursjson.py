@@ -346,9 +346,37 @@ def emit(data, out):
         w(f"update public.tours set place_id = {q(p['id'])} "
           f"where id in ({ids}) and place_id is distinct from {q(p['id'])};\n")
 
-    w("\n-- stops (clear then re-insert per tour, in order)\n")
+    # PHASE 0, the largest item: this block used to delete and re-insert EVERY
+    # stop of EVERY tour on every seed — 8,234 row writes here against 5,942 in
+    # all three upserts combined, ~5.2 times a day, none of it changing anything.
+    #
+    # 🔴 WHY THE DELETE IS BY (id, "order") AND NOT JUST id.
+    # `stops` has `unique (tour_id, "order")` (schema.sql). Deleting every stop
+    # first made reordering trivially safe: nothing was there to collide with.
+    # A plain guarded upsert loses that — swap two stops within a tour and
+    # setting the first one's order hits the second one's row, mid-statement,
+    # before the second has moved. Postgres checks a unique constraint per row,
+    # not at commit, unless it is DEFERRABLE — and making it so would need a
+    # migration the owner has to paste by hand.
+    #
+    # Deleting every row whose (id, "order") pair is not exactly one we are
+    # about to write removes that possibility instead, with no migration and no
+    # deferral: afterwards the only surviving rows for this tour already hold
+    # their final order under their final id, so no insert can collide with
+    # one. A reorder simply deletes both rows and re-inserts them.
+    #
+    # And when nothing changed, the delete matches nothing and every upsert is
+    # suppressed by its guard, so an unchanged tour writes zero rows.
+    # backend/test-seed.sh measures exactly this.
+    w("\n-- stops (delete only what moved, then upsert only what changed)\n")
     for t in tours:
-        w(f"delete from public.stops where tour_id = {q(t['id'])};\n")
+        if t["stops"]:
+            pairs = ", ".join(f"({q(s['id'])}, {q(s['order'])})" for s in t["stops"])
+            w(f"delete from public.stops where tour_id = {q(t['id'])} "
+              f"and (id, \"order\") not in ({pairs});\n")
+        else:
+            # No target pairs to keep, and `not in ()` is a syntax error.
+            w(f"delete from public.stops where tour_id = {q(t['id'])};\n")
         for s in t["stops"]:
             w(
                 "insert into public.stops "
@@ -368,7 +396,19 @@ def emit(data, out):
                 "audio_duration_seconds = excluded.audio_duration_seconds, "
                 "trigger_mode = excluded.trigger_mode, "
                 "trigger_radius_meters = excluded.trigger_radius_meters, "
-                "image_url = excluded.image_url, transcript_text = excluded.transcript_text;\n"
+                "image_url = excluded.image_url, transcript_text = excluded.transcript_text\n"
+                # Same shape as the other three guards, and checked by the same
+                # verify_conditional_upserts() — add a column above, add it here.
+                "  where (stops.tour_id, stops.\"order\", stops.title, stops.caption, "
+                "stops.latitude, stops.longitude, stops.audio_url, "
+                "stops.audio_duration_seconds, stops.trigger_mode, "
+                "stops.trigger_radius_meters, stops.image_url, stops.transcript_text)\n"
+                "     is distinct from\n"
+                "        (excluded.tour_id, excluded.\"order\", excluded.title, "
+                "excluded.caption, excluded.latitude, excluded.longitude, "
+                "excluded.audio_url, excluded.audio_duration_seconds, "
+                "excluded.trigger_mode, excluded.trigger_radius_meters, "
+                "excluded.image_url, excluded.transcript_text);\n"
             )
 
     # 🔴 The catalog is MATERIALISED (backend/catalog_snapshot.sql):
@@ -426,7 +466,7 @@ def verify_conditional_upserts(sql: str) -> None:
     Neither produces an error, a failed CI run, or a visible symptom. So this
     runs on every generation instead of trusting a comment above the SQL.
     """
-    for table in ("makers", "places", "tours"):
+    for table in ("makers", "places", "tours", "stops"):
         m = re.search(
             r"insert into public\." + table + r" .*?on conflict \(id\) do update set "
             r"(.*?)\n  where \((.*?)\)\n     is distinct from\n        \((.*?)\);",
@@ -443,6 +483,11 @@ def verify_conditional_upserts(sql: str) -> None:
         assigned = [a for a in assigned if a != "updated_at"]
         guard = [c.strip().split(".", 1)[1]
                  for c in re.split(r",\s*", lhs.replace("\n", " "))]
+        # `"order"` is a reserved word and is quoted on both sides; compare the
+        # bare names so the quoting does not read as a mismatch.
+        strip_q = lambda c: c.strip().strip('"')
+        guard = [strip_q(c) for c in guard]
+        assigned = [strip_q(c) for c in assigned]
         if assigned != guard:
             only_set = [c for c in assigned if c not in guard]
             only_grd = [c for c in guard if c not in assigned]

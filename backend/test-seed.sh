@@ -126,12 +126,87 @@ echo
 echo "  catalogue intact: $rows tours · $stops stops · $placed tours in a place"
 [ "$rows" = 0 ] && { echo "COULD NOT VERIFY - the seed loaded nothing."; exit 2; }
 
-if [ "$fail" = 0 ]; then
-    echo "SEED OK - an unchanged re-seed rewrote no tour, maker or place row."
-    echo "  (stops still rewrites every row; that is the next Phase 0 item.)"
-else
+if [ "$fail" != 0 ]; then
     echo "FAIL - an unchanged re-seed rewrote rows. The conditional upserts in"
     echo "  backend/seed_from_toursjson.py are not doing their job; updated_at"
     echo "  no longer means 'this row changed'. See docs/delta-catalog-fetch-design.md § 6."
     exit 1
 fi
+echo "  an unchanged re-seed rewrote nothing."
+
+# ---------------------------------------------------------------------------
+# Phase 2 — the changes that MUST still work.
+#
+# 🔴 Writing nothing is only half the requirement, and it is the half that is
+# easy to pass by accident: a seed that wrote nothing AT ALL would sail through
+# Phase 1. So mutate the catalogue and prove each path still lands.
+#
+# The reorder case is the one the design turns on. `stops` has
+# unique (tour_id, "order"), and reversing a tour's stops gives every order to
+# a different id. The seed deletes by (id, "order") pair precisely so the
+# colliding rows are gone before any insert runs — without that this test fails
+# with a unique violation, which is exactly what it is here to catch.
+# ---------------------------------------------------------------------------
+echo
+echo "  --- seed run 3 (mutated: reorder, remove, edit) ---"
+python3 - "$CATALOG" "$PGDIR/mutated.json" > "$PGDIR/ids.json" <<'PY'
+import json, sys
+d = json.load(open(sys.argv[1]))
+multi = [t for t in d["tours"] if len(t["stops"]) >= 4]
+if len(multi) < 3:
+    sys.exit("COULD NOT VERIFY - fewer than 3 multi-stop tours to mutate")
+a = multi[0]; n = len(a["stops"])          # 1. reverse the order values
+for i, s in enumerate(a["stops"]):
+    s["order"] = n - 1 - i
+a["stops"].sort(key=lambda s: s["order"])
+b = multi[1]                                # 2. remove a stop, renumber the rest
+removed = b["stops"][1]["id"]; del b["stops"][1]
+for i, s in enumerate(b["stops"]):
+    s["order"] = i
+c = multi[2]                                # 3. edit content only
+c["stops"][0]["title"] = "MUTATED STOP TITLE"
+json.dump({"reorder": a["id"], "first_id": a["stops"][0]["id"],
+           "removed_tour": b["id"], "removed_stop": removed,
+           "edited_stop": c["stops"][0]["id"], "kept": len(b["stops"])},
+          open("/dev/stdout", "w"))
+json.dump(d, open(sys.argv[2], "w"), indent=2, ensure_ascii=False)
+PY
+REORDER=$(python3 -c "import json;print(json.load(open('$PGDIR/ids.json'))['reorder'])")
+FIRST=$(python3 -c "import json;print(json.load(open('$PGDIR/ids.json'))['first_id'])")
+RMSTOP=$(python3 -c "import json;print(json.load(open('$PGDIR/ids.json'))['removed_stop'])")
+EDSTOP=$(python3 -c "import json;print(json.load(open('$PGDIR/ids.json'))['edited_stop'])")
+KEPT=$(python3 -c "import json;print(json.load(open('$PGDIR/ids.json'))['kept'])")
+RMTOUR=$(python3 -c "import json;print(json.load(open('$PGDIR/ids.json'))['removed_tour'])")
+
+python3 "$GEN" --input "$PGDIR/mutated.json" -o "$PGDIR/seed3.sql" 2>/dev/null
+[ -n "$AS" ] && chown postgres:postgres "$PGDIR/seed3.sql"
+run "$PSQL -c 'select pg_stat_reset()'" >/dev/null
+if run "$PSQL -f $PGDIR/seed3.sql" >/dev/null 2>"$PGDIR/e3"; then
+    echo "  applied cleanly - no unique (tour_id, \"order\") violation"
+else
+    echo "FAIL - the mutated seed was rejected:"; grep -iE "ERROR" "$PGDIR/e3" | head -3
+    echo "  If this is a duplicate-key error on stops_tour_id_order_key, the"
+    echo "  (id, \"order\") delete in seed_from_toursjson.py has been weakened."
+    exit 1
+fi
+
+mfail=0
+got=$(run "$Q \"select id::text from public.stops where tour_id='$REORDER' order by \\\"order\\\" limit 1\"")
+[ "$got" = "$FIRST" ] || { echo "FAIL reorder: stop at order 0 is $got, expected $FIRST"; mfail=1; }
+got=$(run "$Q \"select count(*) from public.stops where id='$RMSTOP'\"")
+[ "$got" = 0 ] || { echo "FAIL removal: deleted stop still present"; mfail=1; }
+got=$(run "$Q \"select count(*) from public.stops where tour_id='$RMTOUR'\"")
+[ "$got" = "$KEPT" ] || { echo "FAIL removal: tour has $got stops, expected $KEPT"; mfail=1; }
+got=$(run "$Q \"select title from public.stops where id='$EDSTOP'\"")
+[ "$got" = "MUTATED STOP TITLE" ] || { echo "FAIL edit: title is '$got'"; mfail=1; }
+[ "$mfail" = 0 ] || exit 1
+echo "  reorder, removal and content edit all landed correctly."
+
+# The mutation touches three tours. If this is in the thousands the guards have
+# stopped discriminating and every row is being rewritten again.
+w=$(run "$Q \"select coalesce(sum(n_tup_upd+n_tup_ins+n_tup_del),0) from pg_stat_user_tables where relname in ('tours','stops','makers','places')\"")
+echo "  row writes for a 3-tour change: $w"
+[ "$w" -gt 200 ] && { echo "FAIL - $w writes for a 3-tour change; the guards are not discriminating."; exit 1; }
+
+echo
+echo "SEED OK - unchanged content writes nothing; reorder, removal and edits still land."
