@@ -39,6 +39,17 @@ CATEGORIES = {
 }
 
 
+# ⚠️ `rev` is MONOTONIC BUT SPARSE. nextval() sits in the VALUES list, so it is
+# evaluated once per row the seed considers, not once per row it writes — a
+# seed that changes nothing still burns ~14,000 values. That is harmless (it is
+# a bigint; at 5.2 seeds a day it would take longer than the universe has run
+# to exhaust) and it is exactly why a cursor must compare `rev` values rather
+# than count them. What matters is the ordering, and that holds: _seed_mark is
+# taken before any of this seed's nextval calls, so every row this seed writes
+# lands strictly above it and every row it does not write stays below.
+NEXTVAL = "nextval('public.catalog_rev')"
+
+
 def q(value):
     """Quote a scalar as a SQL literal (text/number/bool/None)."""
     if value is None:
@@ -142,14 +153,41 @@ def emit(data, out):
     w(f"-- Source catalog: {len(makers)} makers / {len(tours)} tours / {stop_count} stops\n")
     w("begin;\n\n")
 
+    # PHASE 0. Emitted rather than left as a migration the owner pastes: CI
+    # seeds on every content merge, so a hand-applied migration that had not
+    # landed yet would break the seed and stop content reaching the app. Every
+    # statement is `if not exists`, and `add column ... default` is metadata
+    # only on PostgreSQL 11+, so this is free after the first run.
+    # backend/add_catalog_rev.sql is the same thing, reviewable on its own.
+    w("-- Phase 0 schema (idempotent; see backend/add_catalog_rev.sql)\n"
+      "create sequence if not exists public.catalog_rev as bigint start 1;\n")
+    for tbl in ("tours", "makers", "places", "stops"):
+        w(f"alter table public.{tbl} add column if not exists rev bigint not null default 1;\n")
+        w(f"create index if not exists {tbl}_rev_idx on public.{tbl} (rev);\n")
+
+    # Where the catalog stood before this seed touched anything.
+    #
+    # `rev` alone cannot answer "did the catalog change", because a DELETION
+    # leaves no row to carry one — a pruned place or a removed stop would look
+    # like nothing happened. The row counts catch exactly that, and an INSERT is
+    # caught by rev, so between them every change is covered.
+    w("\n-- What the catalog looked like before this seed (see the refresh below).\n"
+      "create temp table _seed_mark on commit drop as select\n"
+      "    (case when is_called then last_value else last_value - 1 end) as rev,\n"
+      "    (select count(*) from public.tours)  as n_tours,\n"
+      "    (select count(*) from public.makers) as n_makers,\n"
+      "    (select count(*) from public.places) as n_places,\n"
+      "    (select count(*) from public.stops)  as n_stops\n"
+      "  from public.catalog_rev;\n\n")
+
     w("-- makers\n")
     for m in makers:
         w(
             "insert into public.makers "
-            "(id, display_name, avatar_url, avatar_emoji, bio, website_url, platform, handle) values ("
+            "(id, display_name, avatar_url, avatar_emoji, bio, website_url, platform, handle, rev) values ("
             f"{q(m['id'])}, {q(m['displayName'])}, {q(m.get('avatarURL'))}, "
             f"{q(m.get('avatarEmoji'))}, {q(m['bio'])}, {q(m.get('websiteURL'))}, "
-            f"{q(m.get('platform'))}, {q(m.get('handle'))})\n"
+            f"{q(m.get('platform'))}, {q(m.get('handle'))}, " + NEXTVAL + ")\n"
             "on conflict (id) do update set "
             "display_name = excluded.display_name, avatar_url = excluded.avatar_url, "
             "avatar_emoji = excluded.avatar_emoji, bio = excluded.bio, "
@@ -159,7 +197,8 @@ def emit(data, out):
             # the guard trigger derives one on insert — so a seed can never
             # blank a handle.
             "platform = coalesce(excluded.platform, makers.platform), "
-            "handle = coalesce(excluded.handle, makers.handle), updated_at = now()\n"
+            "handle = coalesce(excluded.handle, makers.handle), updated_at = now(), "
+            "rev = " + NEXTVAL + "\n"
             # PHASE 0 (docs/delta-catalog-fetch-design.md § 6). Without this
             # guard `updated_at = now()` fires on every row of every seed, so
             # the column means "when the seed last ran", not "when this row
@@ -195,18 +234,18 @@ def emit(data, out):
             w(
                 "insert into public.places "
                 "(id, name, description, latitude, longitude, city, address, "
-                "hero_image_url, additional_image_urls) "
+                "hero_image_url, additional_image_urls, rev) "
                 f"values ({q(p['id'])}, {q(p['name'])}, {q(p.get('description'))}, "
                 f"{p['latitude']}, {p['longitude']}, {q(p.get('city'))}, "
                 f"{q(p.get('address'))}, {q(p.get('heroImageURL'))}, "
-                f"{text_array(p.get('additionalImageURLs'))}) "
+                f"{text_array(p.get('additionalImageURLs'))}, " + NEXTVAL + ") "
                 "on conflict (id) do update set "
                 "name = excluded.name, description = excluded.description, "
                 "latitude = excluded.latitude, longitude = excluded.longitude, "
                 "city = excluded.city, address = excluded.address, "
                 "hero_image_url = excluded.hero_image_url, "
                 "additional_image_urls = excluded.additional_image_urls, "
-                "updated_at = now()\n"
+                "updated_at = now(), rev = " + NEXTVAL + "\n"
                 # PHASE 0 — see the makers upsert above.
                 "  where (places.name, places.description, places.latitude, "
                 "places.longitude, places.city, places.address, "
@@ -225,7 +264,7 @@ def emit(data, out):
             "additional_image_urls, video_urls, video_role, source_url, source_author, "
             "kind, intro_audio_url, total_duration_seconds, "
             "walking_distance_meters, centroid_latitude, centroid_longitude, city, country, "
-            "primary_category, tags, price_usd, status, published_at) values ("
+            "primary_category, tags, price_usd, status, published_at, rev) values ("
             f"{q(t['id'])}, {q(t['title'])}, {q(t['shortDescription'])}, "
             f"{q(t['longDescription'])}, {q(t['makerId'])}, {q(t['heroImageURL'])}, "
             f"{text_array(t.get('additionalImageURLs'))}, {text_array(t.get('videoURLs'))}, "
@@ -240,7 +279,7 @@ def emit(data, out):
             f"{q(t['centroidLongitude'])}, {q(t.get('city'))}, {q(t.get('country'))}, "
             f"{q(t['primaryCategory'])}, "
             f"{text_array(t.get('tags', []))}, {q(t.get('priceUSD', 0))}, "
-            "'published', now())\n"
+            "'published', now(), " + NEXTVAL + ")\n"
             "on conflict (id) do update set "
             "title = excluded.title, short_description = excluded.short_description, "
             "long_description = excluded.long_description, maker_id = excluded.maker_id, "
@@ -256,7 +295,7 @@ def emit(data, out):
             "centroid_longitude = excluded.centroid_longitude, city = excluded.city, "
             "country = excluded.country, "
             "primary_category = excluded.primary_category, tags = excluded.tags, "
-            "price_usd = excluded.price_usd, updated_at = now()\n"
+            "price_usd = excluded.price_usd, updated_at = now(), rev = " + NEXTVAL + "\n"
             # PHASE 0 (docs/delta-catalog-fetch-design.md § 6, lines 440-449).
             #
             # 🔴 The column list below is EXACTLY the DO UPDATE set above, and
@@ -382,12 +421,12 @@ def emit(data, out):
                 "insert into public.stops "
                 "(id, tour_id, \"order\", title, caption, latitude, longitude, audio_url, "
                 "audio_duration_seconds, trigger_mode, trigger_radius_meters, image_url, "
-                "transcript_text) values ("
+                "transcript_text, rev) values ("
                 f"{q(s['id'])}, {q(t['id'])}, {q(s['order'])}, {q(s['title'])}, "
                 f"{q(s.get('caption'))}, {q(s['latitude'])}, {q(s['longitude'])}, "
                 f"{q(s['audioURL'])}, {q(s['audioDurationSeconds'])}, {q(s['triggerMode'])}, "
                 f"{q(s.get('triggerRadiusMeters', 30))}, {q(s.get('imageURL'))}, "
-                f"{q(s.get('transcriptText'))})\n"
+                f"{q(s.get('transcriptText'))}, " + NEXTVAL + ")\n"
                 "on conflict (id) do update set "
                 "tour_id = excluded.tour_id, \"order\" = excluded.\"order\", "
                 "title = excluded.title, caption = excluded.caption, "
@@ -396,7 +435,8 @@ def emit(data, out):
                 "audio_duration_seconds = excluded.audio_duration_seconds, "
                 "trigger_mode = excluded.trigger_mode, "
                 "trigger_radius_meters = excluded.trigger_radius_meters, "
-                "image_url = excluded.image_url, transcript_text = excluded.transcript_text\n"
+                "image_url = excluded.image_url, transcript_text = excluded.transcript_text, "
+                "rev = " + NEXTVAL + "\n"
                 # Same shape as the other three guards, and checked by the same
                 # verify_conditional_upserts() — add a column above, add it here.
                 "  where (stops.tour_id, stops.\"order\", stops.title, stops.caption, "
@@ -426,11 +466,45 @@ def emit(data, out):
     # `to_regprocedure` returns NULL when the function is absent, so a database
     # that predates the migration seeds exactly as it always did rather than
     # failing on an unknown function.
+    # PHASE 0, final piece. The rebuild is the expensive half of a seed: it
+    # materialises the whole ~8 MB catalog three or four times over
+    # (backend/catalog_snapshot.sql explains why) on an instance that ran out
+    # of memory on 2026-09-14. Now that the writes above are conditional, we
+    # can tell when a seed changed nothing at all — and then there is nothing
+    # to rebuild.
+    #
+    # ⚠️ It also leaves `refreshed_at` alone, which matters more than the CPU:
+    # that timestamp is the token the app polls, so bumping it on a seed that
+    # changed nothing tells every phone to re-download 2.4 MB for no reason.
+    #
+    # 🔴 IT STAYS INSIDE THE TRANSACTION. Moving it out was considered and
+    # rejected. The gain would be releasing the seed's row locks during the
+    # rebuild — which was worth something when a seed wrote 14,176 rows and is
+    # worth nothing now that an unchanged one writes zero. The cost would be
+    # real: the seed could commit and the rebuild then fail, leaving the tables
+    # ahead of the catalog the app is served, silently, until the next merge.
+    # Keeping both in one transaction means a seed either lands completely or
+    # not at all.
     w(
-        "\n-- Rebuild the materialised catalog (no-op if not yet migrated).\n"
+        "\n-- Rebuild the materialised catalog, but only if this seed changed\n"
+        "-- something. `rev` catches writes; the counts catch deletions, which\n"
+        "-- bump no rev because there is no row left to carry one.\n"
         "do $$\n"
+        "declare m record; changed boolean;\n"
         "begin\n"
-        "    if to_regprocedure('public.refresh_catalog_snapshot()') is not null then\n"
+        "    select * into m from _seed_mark;\n"
+        "    changed :=\n"
+        "           exists (select 1 from public.tours  where rev > m.rev)\n"
+        "        or exists (select 1 from public.makers where rev > m.rev)\n"
+        "        or exists (select 1 from public.places where rev > m.rev)\n"
+        "        or exists (select 1 from public.stops  where rev > m.rev)\n"
+        "        or (select count(*) from public.tours)  <> m.n_tours\n"
+        "        or (select count(*) from public.makers) <> m.n_makers\n"
+        "        or (select count(*) from public.places) <> m.n_places\n"
+        "        or (select count(*) from public.stops)  <> m.n_stops;\n"
+        "    if not changed then\n"
+        "        raise notice 'catalog unchanged -- snapshot and refreshed_at left alone';\n"
+        "    elsif to_regprocedure('public.refresh_catalog_snapshot()') is not null then\n"
         "        perform public.refresh_catalog_snapshot();\n"
         "    else\n"
         "        raise notice 'refresh_catalog_snapshot() not present -- "
@@ -480,7 +554,7 @@ def verify_conditional_upserts(sql: str) -> None:
                 "  the other; do not delete this check.")
         set_clause, lhs, rhs = m.groups()
         assigned = [a.split("=")[0].strip() for a in set_clause.split(",") if "=" in a]
-        assigned = [a for a in assigned if a != "updated_at"]
+        assigned = [a for a in assigned if a not in ("updated_at", "rev")]
         guard = [c.strip().split(".", 1)[1]
                  for c in re.split(r",\s*", lhs.replace("\n", " "))]
         # `"order"` is a reserved word and is quoted on both sides; compare the

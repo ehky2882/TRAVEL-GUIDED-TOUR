@@ -99,8 +99,26 @@ done
 run "$PSQL -c 'alter table public.makers add column if not exists platform text'" >/dev/null
 run "$PSQL -c 'alter table public.makers add column if not exists handle text'" >/dev/null
 
+# refresh_catalog_snapshot() stands in for backend/catalog_snapshot.sql, whose
+# real definition needs the whole builder chain ahead of it. All this test needs
+# is to know WHETHER the seed called it — and whether it moved refreshed_at,
+# which is the token the app polls to decide about a 2.4 MB download.
+# Written to a file rather than -c: dollar-quoting does not survive `su -c`.
+cat > "$PGDIR/snapstub.sql" <<'SQL'
+create table public.catalog_snapshot (id boolean primary key default true,
+    payload jsonb, refreshed_at timestamptz not null default now());
+insert into public.catalog_snapshot (id) values (true);
+create function public.refresh_catalog_snapshot() returns void language plpgsql
+as $fn$ begin update public.catalog_snapshot set refreshed_at = clock_timestamp(); end $fn$;
+SQL
+[ -n "$AS" ] && chown postgres:postgres "$PGDIR/snapstub.sql"
+run "$PSQL -f $PGDIR/snapstub.sql" >/dev/null
+
 echo "  --- seed run 1 (populate) ---"
 run "$PSQL -f $PGDIR/seed.sql" >/dev/null
+
+REF1=$(run "$Q \"select refreshed_at::text from public.catalog_snapshot\"")
+REV1=$(run "$Q \"select greatest((select max(rev) from public.tours),(select max(rev) from public.stops))\"")
 run "$PSQL -c 'select pg_stat_reset()'" >/dev/null
 echo "  --- seed run 2 (byte-identical input; must write nothing) ---"
 run "$PSQL -f $PGDIR/seed.sql" >/dev/null
@@ -132,7 +150,16 @@ if [ "$fail" != 0 ]; then
     echo "  no longer means 'this row changed'. See docs/delta-catalog-fetch-design.md § 6."
     exit 1
 fi
-echo "  an unchanged re-seed rewrote nothing."
+REF2=$(run "$Q \"select refreshed_at::text from public.catalog_snapshot\"")
+REV2=$(run "$Q \"select greatest((select max(rev) from public.tours),(select max(rev) from public.stops))\"")
+if [ "$REF2" != "$REF1" ]; then
+    echo "FAIL - an unchanged seed rebuilt the snapshot and moved refreshed_at."
+    echo "  That token is what the app polls; moving it tells every phone to"
+    echo "  re-download the whole catalogue for nothing."
+    exit 1
+fi
+[ "$REV2" = "$REV1" ] || { echo "FAIL - rev advanced ($REV1 -> $REV2) on an unchanged seed."; exit 1; }
+echo "  an unchanged re-seed rewrote nothing, left rev at $REV2, and did not rebuild the snapshot."
 
 # ---------------------------------------------------------------------------
 # Phase 2 — the changes that MUST still work.
@@ -206,6 +233,11 @@ echo "  reorder, removal and content edit all landed correctly."
 # stopped discriminating and every row is being rewritten again.
 w=$(run "$Q \"select coalesce(sum(n_tup_upd+n_tup_ins+n_tup_del),0) from pg_stat_user_tables where relname in ('tours','stops','makers','places')\"")
 echo "  row writes for a 3-tour change: $w"
+REF3=$(run "$Q \"select refreshed_at::text from public.catalog_snapshot\"")
+REV3=$(run "$Q \"select greatest((select max(rev) from public.tours),(select max(rev) from public.stops))\"")
+[ "$REF3" != "$REF2" ] || { echo "FAIL - a CHANGED seed did not rebuild the snapshot. Content would never reach the app."; exit 1; }
+[ "$REV3" != "$REV2" ] || { echo "FAIL - a CHANGED seed did not advance rev; no cursor could find it."; exit 1; }
+  echo "  changed seed: rev $REV2 -> $REV3, snapshot rebuilt."
 [ "$w" -gt 200 ] && { echo "FAIL - $w writes for a 3-tour change; the guards are not discriminating."; exit 1; }
 
 echo
