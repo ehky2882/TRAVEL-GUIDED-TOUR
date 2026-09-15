@@ -1,6 +1,7 @@
 # The place spine — turning four hand-typed fields into a join
 
-**Status: SPEC ONLY. Nothing here is built.** Written 2026-09-15 for the owner's decision to build
+**Status: `scripts/spine-build.py` IS BUILT and measured against production data. The rest is
+spec.** The measurements in § 2a changed the design materially — read them before building more. Written 2026-09-15 for the owner's decision to build
 this before approaching content creators. Every figure below was re-derived on `main` @ `ec734bf`,
 not quoted from an earlier audit — see § 7 for why that distinction matters here.
 
@@ -114,6 +115,80 @@ The distribution is heavily concentrated, which makes a staged build sensible:
 **The first five cities cover 1,342 of 3,900 entries.** Build those, prove the join, then widen.
 
 ---
+
+## 2a. 🔴 MEASURED 2026-09-15 — three findings that change the design
+
+`scripts/spine-build.py` is built, `--selftest` is 13/13, and it harvested **1,204 distinct
+features from an 8 km square of Tokyo with zero tile failures**. Then it was validated against the
+60 catalogue pins inside that square. The results are not what this document assumed.
+
+### (a) The data source had to change: OSM is unreachable, Wikidata is not
+
+| source | result |
+|---|---|
+| `download.geofabrik.de` (`.osm.pbf`) | **http=000 — blocked by the egress proxy** |
+| `overpass-api.de` | **no response — blocked** (also recorded by #913) |
+| `query.wikidata.org` | **http=200** ✅ |
+
+So the spine is built from the Wikidata Query Service. A local OSM extract is still the better
+long-run source for *precision*; Wikidata is the one that is **reachable**, which is a different
+claim and the operative one.
+
+### (b) Admin containment undercounts by 49x — use the radius service
+
+The natural query is "things whose `P131*` chain reaches this city". Measured, same nine types,
+same day:
+
+| city | `wdt:P131*` containment | `wikibase:around` 15 km |
+|---|---:|---:|
+| **London** | **557** | **27,295** |
+| New York | 6,093 | 7,294 |
+
+Cities model their hierarchies differently, so containment returns a plausible-looking number that
+is mostly wrong. **A spine built that way would have left London near-empty and nothing downstream
+would have flagged it** — pins would simply have failed to match, looking like thin coverage.
+`spine-build.py`'s selftest asserts `P131*` is absent from the query for this reason.
+
+⚠️ Also: WDQS enforces a **60 s** timeout and a 15 km radius over a dense city exceeds it. The
+script walks overlapping tiles and unions them; a failed tile makes it print **COULD NOT VERIFY**
+and exit 2, because a silently empty tile is precisely this project's recurring failure shape.
+
+### (c) 🔴 THE BIG ONE: the spine fits landmark pins and does NOT fit food/retail pins
+
+Against the 60 Tokyo pins in the harvested square:
+
+| | pins | |
+|---|---:|---|
+| a spine feature within 150 m | **48 (80%)** | looks encouraging |
+| …**and the names agree** | **20 (33%)** | **usable matches** |
+| near something, names disagree | **28 (47%)** | **proximity alone would MIS-MATCH these** |
+
+**Proximity is not a match.** The clearest case: *"Sou Fujimoto's Nishisando Toilet"* sits **19 m**
+from *Shōshun-ji Temple* — a very close, completely wrong subject. Others: *Cream or Cruller* →
+Kitaya Park (24 m), *Motohashi (watch dealer)* → Karasumori Inari Shrine (57 m), *Live Haus* →
+Shimokitazawa Tollywood (69 m).
+
+Read what those wrong matches **are**: donut shops, ramen counters, an onigiri vendor, a watch
+dealer, a music venue. **They are not in Wikidata at all**, so the matcher attached them to
+whatever landmark happened to be nearby. Wikidata is strong on museums, shrines, parks and
+stadiums — and it is the recent byFood/`@nom_life`-style food pins that dominate new batches.
+
+**Consequences, and they are structural:**
+
+1. **The gate is name agreement AND proximity, never either alone.** Proximity alone mis-matches
+   47%; the repo already records that name matching alone gave **3 false positives in 8**. Both
+   together is the only defensible gate, and a pin that fails either goes to review, not to a
+   guess.
+2. **The spine is an assist for landmark content, not a universal geocoder.** Expect it to carry
+   roughly a third of pins of this mix — far more for an architecture creator like
+   `@archimarathon`, far less for a food creator.
+3. **Food and retail pins need the other path, which already exists.** #917 built
+   `scripts/parse-caption-address.py`: captions carry the address, and GSI geocodes Japanese
+   addresses to banchi level. **The two are complementary, not competing** — spine for landmarks,
+   caption-address for venues. Any plan that expected the spine to do both is wrong.
+
+⚠️ These figures are one city and 60 pins. Re-run the same validation on New York (landmark-heavy)
+and on a pure food batch before sizing the remaining work.
 
 ## 3. What it replaces
 
