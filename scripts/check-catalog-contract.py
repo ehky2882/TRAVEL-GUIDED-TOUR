@@ -39,9 +39,20 @@ Exit 2 = could not check (network/parse) — NOT a pass.
 
 RUN IT: after ANY migration touching get_catalog, and on a schedule.
 """
-import gzip, json, re, sys, urllib.request, pathlib
+import gzip, json, os, re, sys, urllib.request, pathlib
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import runstamp  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+# This script has no argparse -- it reads sys.argv directly -- so `--out` comes
+# off by hand before QUIET is computed. Stamp FIRST, before the first `fail()`
+# can fire: a CANNOT CHECK has to be dated too, or it is indistinguishable from
+# a stale report left by an earlier run. `fail` writes to stderr, which the
+# stamp's tee captures.
+runstamp.begin(__file__, out_path=runstamp.pop_out_argument())
+
 QUIET = "--quiet" in sys.argv
 
 def fail(msg, code=2):
