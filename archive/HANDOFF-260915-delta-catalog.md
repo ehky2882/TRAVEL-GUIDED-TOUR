@@ -20,7 +20,7 @@ is exactly what it was.
 |---|---|
 | **Phase 0** | shipped by a *parallel* session as #904 while this one built its own. Theirs merged; **this session's duplicate on `claude/scale-pinned-tours-automation-dba3lx` must never be merged** |
 | **Phase 1** | `backend/catalog_since.sql` + `backend/test-catalog-since.sh` → **#912**, merged, and pasted into the Supabase SQL Editor by the owner |
-| **Phase 2** | `Data/CatalogDeltaMerge.swift`, `RemoteCatalogLoader` changes, 24 unit tests → **#914** |
+| **Phase 2** | `Data/CatalogDeltaMerge.swift`, `RemoteCatalogLoader` changes, 24 unit tests → **#914**, merged `24903b8` |
 | **Board** | **#916**, merged |
 
 ### The design decision worth keeping
@@ -81,7 +81,7 @@ could not have failed is not a result.**
 
 ## Still open
 
-- **#914** — merges on a 3,901 device reading. Not merged as of this writing.
+- ~~**#914**~~ — **MERGED** (`24903b8`) on a 3,901 device reading, confirmed by the owner.
 - **Phase 3, removals** — `removedIds` is always empty, so a *deletion* still needs a full
   download. Compounds the upsert-only deletion gap: `seed_from_toursjson.py` never deletes.
 - **First-sync cost** — a new install still pulls 2.4 MB. City-scoped fetching, not delta, is the

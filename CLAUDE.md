@@ -216,7 +216,9 @@ load-bearing, not on being small.
 production and returns **only the rows whose `rev` exceeds the cursor** — measured
 2026-09-15 on a real change: **43 rows in 19,496 bytes against 2,427,222 for the
 full catalogue**, and a **131-byte** envelope when nothing has changed. The client
-that consumes it is #914.
+that consumes it is merged (#914) and **device-verified on build 161** — a real
+43-row delta applied on the owner's phone and the catalogue count came back
+exactly right. It ships in **1.1.3**.
 
 🔴 **This changes NOTHING for any phone until 1.1.3 ships.** Every build in the
 field still downloads the entire catalogue whenever anything changes, so the

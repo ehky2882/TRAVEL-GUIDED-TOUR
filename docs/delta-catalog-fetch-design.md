@@ -1,6 +1,6 @@
 # Sending only what changed — delta catalogue fetching
 
-**Status (2026-09-15): Phases 0 and 1 are SHIPPED AND LIVE. Phase 2 is built. Phase 3 is not.**
+**Status (2026-09-15): Phases 0, 1 and 2 are MERGED. Phase 3 is not built.**
 This file was written as scope-and-design only; three of its four phases have since been built, so
 read § 6 as a record of what exists, not as a proposal.
 
@@ -8,7 +8,7 @@ read § 6 as a record of what exists, not as a proposal.
 |---|---|---|
 | **0** | conditional seed writes — an unchanged re-seed writes **0 rows** instead of ~14,176 | **shipped** (#904), applied |
 | **1** | `get_catalog_since(rev)` — the RPC that returns only changed rows | **shipped** (#912), **applied to production** |
-| **2** | the client merges a delta into the catalogue on disk | **built**, PR #914 |
+| **2** | the client merges a delta into the catalogue on disk | **shipped** (#914), device-verified; **not released** |
 | **3** | **removals** — `removedIds` is always empty, so content *deleted* from the catalogue still needs a full download | **NOT built** |
 
 🔴 **Nothing above has reached a single phone.** Phase 2 ships with the next App Store release;
