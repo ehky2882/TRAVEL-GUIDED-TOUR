@@ -34,6 +34,14 @@ import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
 # Every key the app decodes. Adding one here without adding it to the RPC
 # turns this check red, which is the point: the contract is written down.
 REQUIRED_TOP = {"makers", "tours", "places", "linkPins"}
+
+# The delta envelope (backend/catalog_since.sql). Same four sections, plus the
+# cursor the client stores and the deletion list.
+# ⚠️ `removedIds` is ALWAYS EMPTY today and that is deliberate, not a bug — the
+# seed is upsert-only, so a catalogue deletion never reaches Postgres anyway.
+# It is required to be PRESENT so a client can rely on the shape; a future
+# tombstone table fills it without another contract change.
+REQUIRED_DELTA_TOP = REQUIRED_TOP | {"rev", "removedIds"}
 REQUIRED_TOUR = {
     "id", "title", "shortDescription", "longDescription", "makerId",
     "heroImageURL", "additionalImageURLs", "videoURLs", "videoRole", "kind",
@@ -162,6 +170,20 @@ def audit_migration_files(root: Path) -> list:
         for marker, beneath in (
             ("create or replace function public.get_catalog()", "get_catalog_core()"),
             ("create or replace function public.get_catalog_core()", "get_catalog_core_base()"),
+            # 🔴 The delta RPC is audited for a DIFFERENT reason, and it is the
+            # reason docs/delta-catalog-fetch-design.md § Phase 1 gives for the
+            # whole design: there must be ONE shaper, not two.
+            #
+            # `get_catalog_since` does not shape anything. It filters the
+            # snapshot `get_catalog()` already serves, through `catalog_pick`,
+            # and returns those elements byte for byte — so a key added to the
+            # builder appears in the delta the same day, with no second copy to
+            # keep in step. A rewrite that drops the `catalog_pick` call is a
+            # rewrite that started shaping rows itself, and the drift would be
+            # invisible: new builds quietly receiving a different tour shape
+            # from old ones, which is the 2026-08-19 incident restricted to
+            # whichever rows changed that day.
+            ("create or replace function public.get_catalog_since(", "catalog_pick("),
         ):
             problems += _audit_one(f, raw, code, marker, beneath)
     return problems
@@ -173,7 +195,17 @@ def _audit_one(f, raw, code, marker, beneath) -> list:
     if True:
         if marker not in code:
             return []
-        body = code[code.index(marker):code.index(marker) + 900]
+        # The body is read to the END of the function definition, not to a
+        # fixed offset. It used to stop at 900 characters, which was fine while
+        # every audited function was a short `language sql` wrapper that called
+        # the layer beneath on its first line — and wrong the moment one was
+        # `language plpgsql`, where a declare block and its argument checks push
+        # the real call well past 900 and a correct wrapper reads as a rewrite.
+        # Widening cannot let a rewrite through: a body that never names the
+        # layer beneath is still caught, at any length.
+        start = code.index(marker)
+        end = code.find("$$;", start)
+        body = code[start:(end + 3) if end != -1 else start + 900]
         name = Path(f).name
         if beneath in body or name == "schema.sql":
             return []  # the wrapper itself, or the base
