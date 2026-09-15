@@ -621,6 +621,23 @@ is worth something without Phase 2. **Start there, this week, and decide about t
    not the same thing. That remains a separate job.
 6. **It does not reduce audio or image egress** — those are on gh-pages and are not billed by
    Supabase. This is the PostgREST line item only, which is 100.0% of Supabase egress every day.
+6b. 🔴 **A BULK MIGRATION TURNS THE NEXT DELTA INTO A FULL DOWNLOAD FOR EVERY USER — AND CHARGES
+   A PREMIUM FOR IT.** Observed, not theorised, on 2026-09-15: #915's migration wrote
+   `related_tour_ids` and `authored_on` onto **every tour row**, so the `rev` trigger correctly
+   bumped **all 1,582 tours**. A `get_catalog_since` call from a cursor older than that migration
+   then returned **2,752,051 bytes — larger than the entire `get_catalog` payload (2,427,222)**,
+   because it is the whole catalogue *plus* the delta envelope.
+
+   This is correct behaviour, not a bug: every one of those rows genuinely changed. But it has a
+   consequence nothing else in this document implies — **once 1.1.3 is in the field, any
+   catalogue-wide rewrite is an egress event costing more than a full fetch per user**, where
+   before it cost exactly the same as any other day. Backfills that used to be free now have a
+   price, so batch them, do them rarely, and prefer a migration that touches only affected rows.
+
+   ⚠️ It also means **a cursor's age determines its cost**: a phone that has not opened the app
+   since before a backfill pays full price on its next launch, however little real content
+   changed. Not worth engineering around today, but it is why measuring "typical delta size" from
+   one sample is misleading.
 7. **It does not remove the need for the version check or the 900 s debounce.** Both stay; the
    delta composes with them rather than replacing them.
 8. **It adds a new way to be silently wrong.** A merge bug leaves a phone holding a catalogue that
