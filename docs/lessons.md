@@ -1424,3 +1424,39 @@ functions look like they should agree and must not.
   ranked the same-city candidate highest anyway, so it would have passed with
   the rule deleted. The cross-city candidate now scores *higher*, which is what
   makes the assertion mean anything.
+
+## A correctly-applied migration is not evidence either — the snapshot in front of it (2026-09-15)
+
+`backend/add_related_tours.sql` patched the catalogue builder exactly as
+intended, the owner got **"Success. No rows returned."**, and the live RPC went
+on serving neither new key for another 25 minutes.
+
+**`get_catalog()` has not been a live composition since `catalog_snapshot.sql`.**
+It is `select payload from catalog_snapshot` — a lookup at a **pre-built row** —
+and the chain `get_catalog_core_base → get_catalog_core → get_catalog_built` is
+kept wholesale as the *builder*, run once per seed rather than once per request
+(the live build was sitting on the anon statement timeout: 4 calls in 12 failed
+with `57014`). **So patching the builder changes nothing a phone can see until
+`refresh_catalog_snapshot()` runs.**
+
+This repo already knew that — it is Automation Rule 11b, and six migrations in
+`backend/` end with the line. The migration was written without it anyway.
+
+**The sharper version of the existing rule.** "Success. No rows returned." was
+already known to lie one way: a `create or replace get_catalog()` that severs
+the wrapper prints it while dropping every place. This is a second, opposite
+way — the SQL was *right*, and the result was still invisible. **Neither the
+message nor the correctness of the patch is evidence. Only the served payload
+is.**
+
+**How to tell the two apart in one cheap call.** `catalog_snapshot_age()` costs
+**34 bytes** and answers it outright: a timestamp *older* than the paste means
+the snapshot is stale and the migration is probably fine; a *fresh* timestamp
+with keys still missing means the patch itself did not take. That is the first
+thing to ask, before spending 2.3 MB on the whole catalogue.
+
+**And a key can be present while every value is null.** After the refresh but
+before a re-seed, `relatedTourIds` and `createdAt` were served as `null` on all
+1,583 rows. `check-catalog-contract.py` reads key *presence*, so that is a PASS
+and correctly so — but "the contract passes" and "the feature works" are two
+different statements, and only a seed makes the second true.

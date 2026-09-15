@@ -65,6 +65,21 @@
 -- new columns are NULL for every row, both keys are emitted as null, and the
 -- app decodes them as nil — which is exactly what it does today.
 --
+-- 🔴 THE `refresh_catalog_snapshot()` AT THE END IS LOAD-BEARING, AND LEAVING IT
+-- OFF IS EXACTLY THE FAILURE THIS FILE ALREADY CAUSED ONCE (2026-09-15).
+--
+-- `get_catalog()` is no longer a live composition. Since `catalog_snapshot.sql`
+-- it is `select payload from catalog_snapshot` — a lookup at a PRE-BUILT row —
+-- and the whole chain below it is kept as the *builder*, run once per seed
+-- instead of once per request (the live build was timing out: 4 calls in 12
+-- failed with 57014). So patching the builder changes NOTHING a phone can see
+-- until the snapshot is rebuilt.
+--
+-- The first run of this file did exactly that: it patched correctly, printed
+-- "Success. No rows returned.", and the live RPC went on serving neither key
+-- for another 25 minutes. **A correctly-applied patch is not evidence either.**
+-- Verify with `catalog_snapshot_age()` (34 bytes) and the contract checker.
+--
 -- Idempotent: safe to re-run. Each block returns early if its key is already
 -- emitted, and both `alter table` statements are `if not exists`.
 --
@@ -199,3 +214,10 @@ end
 $migration$;
 
 commit;
+
+
+-- 🔴 Without this the change is invisible to every phone: `get_catalog()`
+-- serves a stored snapshot, so the two new keys do not appear until it is
+-- rebuilt. Both come back NULL on every tour until a catalogue re-seed fills
+-- the columns, which is correct — the keys exist, the values do not yet.
+select public.refresh_catalog_snapshot();
