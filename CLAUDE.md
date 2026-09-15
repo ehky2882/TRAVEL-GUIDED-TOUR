@@ -270,9 +270,10 @@ it.** § READ FIRST above explains why that is not optional.
 durable fact; **the live number is not** — the released version is checkable from any session with
 no key (§ READ FIRST's table has the one-line `curl`), so re-derive it rather than quoting this
 paragraph. ⚠️ **That public lookup lags App Store Connect by hours** — on release day it still
-said 1.1.1 while ASC said `READY_FOR_SALE`. ⚠️ **`MARKETING_VERSION` on `main` is still 1.1.2,
-whose train is now closed**: the next TestFlight upload is refused with 90186 `Invalid Pre-Release
-Train` until it is bumped. ⚠️ The board once said 1.1.1 was still owed for a week after it
+said 1.1.1 while ASC said `READY_FOR_SALE`. `MARKETING_VERSION` was bumped to **1.1.3** the same
+day, because a released version's train closes: an upload on it is refused with 90186 `Invalid
+Pre-Release Train`. **Bump it again after every release** — re-derive the current value from
+`project.pbxproj`, never from this line. ⚠️ The board once said 1.1.1 was still owed for a week after it
 shipped; the account is in `archive/STATUS-HISTORY.md` (§ "1.1.1 SHIPPED") and the rule it
 produced is in `docs/lessons.md` § 2.
 
