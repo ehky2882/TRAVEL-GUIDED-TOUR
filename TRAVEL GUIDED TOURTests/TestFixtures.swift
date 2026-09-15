@@ -74,7 +74,10 @@ enum TestFixtures {
         /// Centroid override. Defaults to `latitude`/`longitude`, which
         /// is right for a single-stop tour but not for a walk.
         centroidLatitude: Double? = nil,
-        centroidLongitude: Double? = nil
+        centroidLongitude: Double? = nil,
+        /// "More like this" ids. Defaults to nil — the overwhelmingly common
+        /// case, since these are generated offline over the whole catalog.
+        relatedTourIds: [String]? = nil
     ) -> Tour {
         let stops: [Stop]
         if let stopCoordinates {
@@ -119,6 +122,7 @@ enum TestFixtures {
             centroidLongitude: centroidLongitude ?? longitude,
             city: "Test City",
             country: "Test Country",
+            relatedTourIds: relatedTourIds,
             primaryCategory: category,
             tags: tags,
             priceUSD: 0,

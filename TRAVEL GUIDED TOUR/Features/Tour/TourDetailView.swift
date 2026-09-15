@@ -73,8 +73,9 @@ struct TourDetailView: View {
     ///   has its own header.
     /// - **buttonRow** — Start tour, Buy, Download, Save. Live controls on an
     ///   unpublished draft, all of them wrong before the tour exists.
-    /// - **stopsSection**, **placeSection**, **nearbyToursSection** — read
-    ///   `dataService` for a tour the catalogue has never heard of.
+    /// - **stopsSection**, **placeSection**, **nearbyToursSection**,
+    ///   **moreLikeThisSection** — read `dataService` for a tour the catalogue
+    ///   has never heard of.
     /// - **`.onAppear`** — 🔴 it calls `recentlyViewedStore.record(tour.id)`,
     ///   which would put the maker's own unpublished draft in the Home rail,
     ///   and `navState.push()`, which would leave the app believing a detail
@@ -366,8 +367,22 @@ struct TourDetailView: View {
                     } else {
                         stopsSection
                     }
-                    placeSection
-                    nearbyToursSection
+                    // 🔴 DERIVED ONCE, USED THREE TIMES. These three sections
+                    // overlap by design — each excludes what the one before it
+                    // showed — so every one of them needs the other two's
+                    // results. Left as computed properties, `nearbyTours`
+                    // (an O(n log n) sort over the whole catalog) and
+                    // `siblingTours` would each re-run several times per body
+                    // evaluation, because SwiftUI re-evaluates a computed
+                    // property at EVERY reference. That is the same shape as
+                    // `filteredTours` in Search (#605), `railList` in the home
+                    // drawer, and `savedTours` in Library before it — the
+                    // fourth time this repo has paid for it. Deriving here is
+                    // what stops a fifth.
+                    let sections = relatedSections
+                    placeSection(sections.siblings)
+                    nearbyToursSection(sections.nearby)
+                    moreLikeThisSection(sections.related)
                 }
             }
             .padding(.horizontal, AtlasSpacing.lg)
@@ -1206,8 +1221,7 @@ struct TourDetailView: View {
     ///
     /// Hidden when the catalog has no other tours.
     @ViewBuilder
-    private var nearbyToursSection: some View {
-        let nearby = nearbyTours
+    private func nearbyToursSection(_ nearby: [Tour]) -> some View {
         if !nearby.isEmpty {
             VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
                 Text("Nearby Tours")
@@ -1271,8 +1285,7 @@ struct TourDetailView: View {
     /// slide-up layer over the tour layer is a bigger change than the
     /// destination warrants. X still closes the whole thing; back pops one.
     @ViewBuilder
-    private var placeSection: some View {
-        let siblings = siblingTours
+    private func placeSection(_ siblings: [Tour]) -> some View {
         if let place, !siblings.isEmpty {
             VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
                 Text("Also at \(place.name)")
@@ -1298,7 +1311,23 @@ struct TourDetailView: View {
         }
     }
 
-    private var nearbyTours: [Tour] {
+    /// The three overlapping tail sections, resolved in one pass.
+    ///
+    /// They cascade: "Also at …" is the strongest claim (same site), so it
+    /// takes what it wants first; "Nearby Tours" excludes that; "More like
+    /// this" excludes both. One direction, so a tour can never appear twice on
+    /// one screen.
+    private struct TailSections {
+        let siblings: [Tour]
+        let nearby: [Tour]
+        let related: [Tour]
+    }
+
+    private var relatedSections: TailSections {
+        let siblings = siblingTours
+        var shown = Set(siblings.map(\.id))
+        shown.insert(tour.id)
+
         let here = CLLocation(
             latitude: tour.centroidLatitude,
             longitude: tour.centroidLongitude
@@ -1306,11 +1335,63 @@ struct TourDetailView: View {
         // Anything already listed under "Also at …" is excluded, or a tour
         // sharing this exact coordinate would appear twice on one screen —
         // it is by definition the nearest thing there is.
-        let alreadyShown = Set(siblingTours.map(\.id))
-        return dataService.toursNearby(here, limit: 8)
-            .filter { $0.id != tour.id && !alreadyShown.contains($0.id) }
+        let nearby = dataService.toursNearby(here, limit: 8)
+            .filter { !shown.contains($0.id) }
             .prefix(5)
             .map { $0 }
+        shown.formUnion(nearby.map(\.id))
+
+        // ⚠️ THE OVERLAP WITH NEARBY IS HEAVY IN A DENSE CITY, AND THAT IS WHY
+        // THE CATALOG STORES EIGHT AND THIS RENDERS FIVE. Same-city neighbours
+        // lead the stored list, and in London or New York the nearest tours
+        // often ARE the most similar ones — so the surplus is what keeps this
+        // section from collapsing to nothing there. Do not trim the stored
+        // count to what appears.
+        let related = dataService.relatedTours(for: tour)
+            .filter { !shown.contains($0.id) }
+            .prefix(5)
+            .map { $0 }
+
+        return TailSections(siblings: siblings, nearby: nearby, related: related)
+    }
+
+    /// "More like this" — tours about the same KIND of place, which is a
+    /// different question from the two sections above it: one asks what shares
+    /// this exact site, the other what is within walking distance, and neither
+    /// can reach the brutalist block in another borough.
+    ///
+    /// The similarity is computed offline from sentence embeddings and shipped
+    /// in the catalog as ids (`Tour.relatedTourIds`), so **the phone runs no
+    /// model at all** — this is a dictionary lookup, not inference.
+    ///
+    /// Pushes in-stack for the same reason the two sections above do: X closes
+    /// the whole layer, back pops one, and a second slide-up layer stacked
+    /// over the first makes neither mean anything.
+    @ViewBuilder
+    private func moreLikeThisSection(_ related: [Tour]) -> some View {
+        if !related.isEmpty {
+            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+                Text("More Like This")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .padding(.top, AtlasSpacing.md)
+
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    ForEach(related) { other in
+                        NavigationLink {
+                            TourDetailView(tour: other)
+                        } label: {
+                            nearbyTourRow(other)
+                        }
+                        .buttonStyle(.plain)
+
+                        if other.id != related.last?.id {
+                            Divider()
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /// Mirrors `MakerView.tourRow` exactly so list density is

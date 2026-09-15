@@ -116,6 +116,31 @@ CHUNK_STRIDE = 192        # Overlap, so a sentence split across chunks survives 
 # Chrysler's art deco lobby vanishes under five other paragraphs.
 BEST_CHUNK_WEIGHT = 0.6
 
+# --- "More like this" -------------------------------------------------------
+#
+# How many neighbours to store per tour. The page renders about five after it
+# has dropped whatever the Place and Nearby sections already showed, so this is
+# deliberately larger than what appears: the overlap with Nearby is heavy in a
+# dense city, and the surplus is what keeps the section from collapsing there.
+RELATED_COUNT = 8
+
+# Below this cosine, ship nothing rather than something weak. An empty section
+# hides; a bad suggestion sits on screen under a heading promising it is
+# similar.
+#
+# MEASURED at 1,582 tours, not chosen for roundness. What it cuts: Boulders
+# Beach's tail ran 0.395 down to 0.321 — Battery Park, a restaurant, the
+# Company's Garden, i.e. "other things in Cape Town", which is not what the
+# heading claims. What it KEEPS, and why 0.50 was rejected: a thin city's best
+# matches are genuinely weaker, and at 0.50 Fisherman's Wharf loses "Pier 39
+# Sea Lions" (0.477) and is given a fishing village in Hong Kong (0.592)
+# instead. Thematically apt, useless to someone standing on the wharf. The
+# floor has to sit under the thin cities, not over them.
+#
+# Re-do this with --related-of when the catalog grows, rather than trusting
+# that 0.45 still separates the two.
+RELATED_FLOOR = 0.45
+
 # --- Binary format ----------------------------------------------------------
 #
 # magic "ATLSEMB2" | u32 version | u32 tours | u32 chunks | u32 dims
@@ -372,6 +397,127 @@ def tour_scores(np, chunks, owners, query_vector, count: int, best_weight: float
     return scores
 
 
+def tour_means(np, chunks, owners, count: int):
+    """
+    One unit-length vector per tour: the mean of its chunks.
+
+    `owners` is non-decreasing (embed_chunks walks tours in order), so the
+    chunks of a tour are contiguous and `reduceat` sums each run in one pass.
+    Looping instead is what makes the obvious implementation unusable at
+    catalog scale — see the warning on `related_tours`.
+    """
+    if count == 0:
+        return np.zeros((0, DIMS), dtype=np.float32)
+    offsets = np.searchsorted(owners, np.arange(count), side="left")
+    # reduceat on a zero-length run returns the row AT the offset rather than a
+    # zero sum, so a tour with no chunks would silently borrow its neighbour's
+    # vector. Every tour has at least one chunk (chunk_ids never returns []),
+    # so this is a guard against a future change, not a live case.
+    if not np.all(np.diff(offsets) > 0):
+        raise ValueError("a tour has no chunks; tour_means cannot group them")
+    sums = np.add.reduceat(chunks, offsets, axis=0)
+    counts = np.diff(np.append(offsets, len(chunks))).astype(np.float32)
+    return l2_normalize(np, sums / counts[:, None])
+
+
+def related_tours(np, means, tours, count: int = RELATED_COUNT, floor: float = RELATED_FLOOR):
+    """
+    Nearest neighbours per tour, same city first, then cross-city to fill.
+
+    🔴 MEAN-TO-MEAN, DELIBERATELY NOT `tour_scores`' BLEND, AND THE DIFFERENCE
+    IS THE POINT. `tour_scores` weights the single best-matching chunk at 0.6
+    because a QUERY is a narrow thing that should find the one paragraph about
+    art deco lobbies. A whole tour is not narrow. Scored best-chunk against
+    best-chunk, two tours pair up because they each spend one sentence on
+    brickwork, which is not what "more like this" promises. The mean asks
+    whether they are ABOUT the same kind of place. If you are here to make the
+    two functions agree, this is the comment that exists to stop you.
+
+    Same city leads because it is measured: cross-city matches are thematically
+    fine and geographically useless — Casa Batllo's best cross-city neighbour
+    is a Madrid park, which is a correct answer to a question nobody asked.
+    Cross-city still fills the tail, or a tour in a thin city gets nothing.
+
+    ⚠️ Do NOT reach for `tour_scores` in a loop here. Its `owners == index`
+    mask is a full pass over every chunk per call; at catalog scale that is
+    ~10^10 operations. The mean matrix is one matmul.
+    """
+    n = len(tours)
+    if n == 0:
+        return {}
+
+    # A link pin has no transcript, so its vector is near-meaningless, and one
+    # offered as "more like this" is a category error. They live in a sibling
+    # `linkPins` array so they are already absent — this is belt and braces
+    # against a pin ever landing back in `tours`.
+    eligible = np.array([t.get("kind") != "link" for t in tours])
+
+    cities = [(t.get("city") or "").strip().casefold() for t in tours]
+    city_codes = {}
+    coded = np.array([city_codes.setdefault(c, len(city_codes)) if c else -1 for c in cities])
+
+    similarity = means @ means.T
+    np.fill_diagonal(similarity, -1.0)          # a tour is never its own neighbour
+    similarity[:, ~eligible] = -1.0             # never suggest a pin
+    similarity[~eligible, :] = -1.0             # never give a pin neighbours
+
+    related: dict[str, list[str]] = {}
+    for index in range(n):
+        if not eligible[index]:
+            continue
+        row = similarity[index]
+        above = row >= floor
+        # A city of -1 is "unknown", which must never match another unknown.
+        same_city = above & (coded == coded[index]) & (coded[index] >= 0)
+
+        def best(mask, limit):
+            picks = np.flatnonzero(mask)
+            if len(picks) == 0:
+                return []
+            return list(picks[np.argsort(-row[picks], kind="stable")][:limit])
+
+        chosen = best(same_city, count)
+        if len(chosen) < count:
+            chosen += best(above & ~same_city, count - len(chosen))
+
+        if chosen:
+            related[tours[index]["id"]] = [tours[j]["id"] for j in chosen]
+    return related
+
+
+def apply_related(related: dict, path=TOURS_JSON) -> tuple[int, int]:
+    """
+    Patch `relatedTourIds` into Tours.json in place, idempotently.
+
+    The key is inserted immediately after `country` rather than appended, so
+    the diff is one added line per tour instead of a reshuffle, and so the file
+    matches the order the field sits in on `Tour`. Re-running over the script's
+    own output is a no-op.
+    """
+    data = json.loads(path.read_text(encoding="utf-8"))
+    changed = 0
+    for position, tour in enumerate(data["tours"]):
+        ids = related.get(tour["id"])
+        if tour.get("relatedTourIds") == ids or (not ids and "relatedTourIds" not in tour):
+            continue
+        rebuilt = {}
+        for key, value in tour.items():
+            if key == "relatedTourIds":
+                continue
+            rebuilt[key] = value
+            if key == "country" and ids:
+                rebuilt["relatedTourIds"] = ids
+        if ids and "relatedTourIds" not in rebuilt:
+            rebuilt["relatedTourIds"] = ids     # a tour with no `country` key
+        data["tours"][position] = rebuilt
+        changed += 1
+
+    # indent=2 + ensure_ascii=False + trailing newline reproduces the file
+    # byte for byte; anything else rewrites all 14 MB as one diff.
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return changed, len(data["tours"])
+
+
 def l2_normalize(np, matrix):
     """Unit-length rows, so cosine similarity is a plain dot product."""
     norms = np.linalg.norm(matrix, axis=-1, keepdims=True)
@@ -529,6 +675,82 @@ def selftest() -> int:
         quantized = np.clip(np.rint(chunks * QUANT_SCALE), -127, 127).astype(np.int8)
         check("int8 round-trip stays close", float(np.abs(quantized / QUANT_SCALE - chunks).max()) < 0.01)
 
+        print("More like this")
+        # Four tours on two axes. The CROSS-city match "c" deliberately scores
+        # HIGHER than the same-city "b", so ranking on score alone would put it
+        # first — that is what makes this a real test of the same-city rule
+        # rather than one the scores happen to satisfy anyway.
+        means = l2_normalize(np, np.array(
+            [[1.00, 0.00],     # a, Lisbon
+             [0.97, 0.20],     # b, Lisbon  — same city, LOWER score than c
+             [0.99, 0.10],     # c, Porto   — cross city, HIGHER score
+             [0.00, 1.00],     # d, Lisbon  — unrelated
+             [0.93, 0.30]],    # e, Lisbon  — same city, weaker than b
+            dtype=np.float32,
+        ))
+        sample = [
+            {"id": "a", "city": "Lisbon", "title": "A"},
+            {"id": "b", "city": "Lisbon", "title": "B"},
+            {"id": "c", "city": "Porto", "title": "C"},
+            {"id": "d", "city": "Lisbon", "title": "D"},
+            {"id": "e", "city": "Lisbon", "title": "E"},
+        ]
+        related = related_tours(np, means, sample, count=3, floor=0.5)
+        check("a tour is never its own neighbour",
+              all(tid not in ids for tid, ids in related.items()))
+        check("same city leads even when cross-city scores higher",
+              related["a"] == ["b", "e", "c"])
+        check("cross-city really was the stronger match",
+              float(means[0] @ means[2]) > float(means[0] @ means[1]))
+        check("the unrelated tour is below the floor", "d" not in related.get("a", []))
+        check("an isolated tour gets nothing", "d" not in related)
+
+        # The list is descending WITHIN each group, not globally — a weaker
+        # same-city match outranking a stronger cross-city one is the rule
+        # working, not a sort bug.
+        by_id = {s["id"]: i for i, s in enumerate(sample)}
+        same = [float(means[0] @ means[by_id[i]]) for i in related["a"]
+                if sample[by_id[i]]["city"] == "Lisbon"]
+        check("same-city neighbours are sorted descending", same == sorted(same, reverse=True))
+        check("a cross-city match trails a weaker same-city one",
+              float(means[0] @ means[by_id["c"]]) > min(same))
+
+        pinned = sample[:3] + [{"id": "pin", "city": "Lisbon", "title": "P", "kind": "link"}]
+        pin_means = l2_normalize(np, np.array(
+            [[1.0, 0.0], [0.99, 0.10], [0.97, 0.20], [1.0, 0.0]], dtype=np.float32))
+        pin_related = related_tours(np, pin_means, pinned, count=3, floor=0.5)
+        check("a link pin is never suggested",
+              all("pin" not in ids for ids in pin_related.values()))
+        check("a link pin gets no neighbours of its own", "pin" not in pin_related)
+
+        # Tour 0 owns two chunks, tour 1 owns one. The mean must group by owner.
+        grouped = tour_means(
+            np,
+            np.array([[1.0, 0.0], [0.0, 1.0], [1.0, 0.0]], dtype=np.float32),
+            np.array([0, 0, 1]),
+            2,
+        )
+        check("means group by owner", abs(float(grouped[0] @ grouped[1]) - 0.7071) < 0.01)
+        check("means are unit length",
+              float(np.abs(np.linalg.norm(grouped, axis=1) - 1.0).max()) < 1e-5)
+
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            fixture = Path(tmp) / "Tours.json"
+            payload = {"tours": [
+                {"id": "a", "title": "A", "country": "Portugal", "stops": []},
+                {"id": "b", "title": "B", "stops": []},
+            ]}
+            fixture.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+            first, _ = apply_related({"a": ["b"]}, fixture)
+            again, _ = apply_related({"a": ["b"]}, fixture)
+            written = json.loads(fixture.read_text())["tours"]
+            check("patch writes the ids", written[0].get("relatedTourIds") == ["b"])
+            check("patch sits after country",
+                  list(written[0]).index("relatedTourIds") == list(written[0]).index("country") + 1)
+            check("a tour with no neighbours gets no key", "relatedTourIds" not in written[1])
+            check("patching is idempotent", first == 1 and again == 0)
+
     print()
     if failures:
         print(f"{len(failures)} FAILED: {', '.join(failures)}")
@@ -549,11 +771,23 @@ def main() -> int:
     parser.add_argument("--limit", type=int, metavar="N", help="only embed the first N tours (fast iteration)")
     parser.add_argument("--verify-quantization", action="store_true",
                         help="measure how far int8 storage moves a similarity score")
+    parser.add_argument("--related", action="store_true",
+                        help="compute \"more like this\" neighbours and report coverage")
+    parser.add_argument("--write-related", action="store_true",
+                        help="patch relatedTourIds into Tours.json (implies --related)")
+    parser.add_argument("--related-of", action="append", metavar="TEXT",
+                        help="print the neighbours of every tour whose title contains TEXT (repeatable)")
+    parser.add_argument("--related-floor", type=float, default=RELATED_FLOOR, metavar="F",
+                        help=f"drop neighbours scoring below F (default {RELATED_FLOOR})")
     parser.add_argument("--selftest", action="store_true", help="logic only, no model, no network")
     args = parser.parse_args()
 
     if args.selftest:
         return selftest()
+
+    want_related = args.related or args.write_related or args.related_of
+    if args.limit and (args.write or args.write_related):
+        raise SystemExit("ERROR: --limit with --write/--write-related would ship a partial catalog")
 
     tours = load_catalog()
     if args.limit:
@@ -588,6 +822,48 @@ def main() -> int:
                 print("    (nothing)")
             for rank, tour in enumerate(hits, 1):
                 print(f"    {rank}. {tour['title']}  — {tour.get('city', '?')}")
+
+    if want_related:
+        means = tour_means(np, chunks, owners, len(tours))
+        related = related_tours(np, means, tours, floor=args.related_floor)
+
+        by_id = {t["id"]: t for t in tours}
+        eligible = [t for t in tours if t.get("kind") != "link"]
+        full = sum(1 for ids in related.values() if len(ids) >= RELATED_COUNT)
+        cross = sum(
+            1 for tid, ids in related.items()
+            for other in ids
+            if (by_id[other].get("city") or "") != (by_id[tid].get("city") or "")
+        )
+        total = sum(len(ids) for ids in related.values())
+        print(f"\n=== more like this (floor {args.related_floor:.2f}, "
+              f"up to {RELATED_COUNT} each)")
+        print(f"  {len(related):,} of {len(eligible):,} tours have at least one neighbour "
+              f"({100.0 * len(related) / max(len(eligible), 1):.0f}%)")
+        print(f"  {full:,} have a full {RELATED_COUNT}; "
+              f"{len(eligible) - len(related):,} have none and will hide the section")
+        print(f"  {total:,} links, {cross:,} of them cross-city "
+              f"({100.0 * cross / max(total, 1):.0f}%)")
+
+        for needle in (args.related_of or []):
+            for tour in tours:
+                if needle.casefold() not in (tour.get("title") or "").casefold():
+                    continue
+                print(f"\n  {tour['title']} — {tour.get('city', '?')}")
+                ids = related.get(tour["id"], [])
+                if not ids:
+                    print("    (nothing above the floor)")
+                for rank, other in enumerate(ids, 1):
+                    o = by_id[other]
+                    score = float(means[tours.index(tour)] @ means[tours.index(o)])
+                    mark = " " if o.get("city") == tour.get("city") else "*"
+                    print(f"    {rank}.{mark} {score:.3f}  {o['title']} — {o.get('city', '?')}")
+
+        if args.write_related:
+            changed, seen = apply_related(related)
+            print(f"\n  Patched {TOURS_JSON.name}: {changed:,} of {seen:,} tours changed")
+        else:
+            print("\n  Dry run — pass --write-related to patch Tours.json.")
 
     if args.verify_quantization:
         probes = queries or ["art deco lobby", "brutalist concrete", "quiet water", "market food"]

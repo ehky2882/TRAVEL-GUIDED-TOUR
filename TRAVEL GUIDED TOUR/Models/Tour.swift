@@ -339,6 +339,32 @@ struct Tour: Codable, Identifiable, Hashable {
     /// maker-authored tours (`MakerTourService`) carry no country at all,
     /// so every one of those must keep decoding.
     let country: String?
+    /// Tours this one is *about the same kind of place* as — the "More like
+    /// this" section on the detail page. Ids only; the app resolves them.
+    ///
+    /// Computed offline from sentence embeddings by
+    /// `scripts/build-embeddings.py --write-related` and shipped in the
+    /// catalog, which is the whole point: **the phone runs no model.** It is
+    /// denormalised onto the tour for the same reason `country` above is —
+    /// content reaches phones over the air with no build, so a relationship
+    /// derived in Swift would go stale the moment a city launched.
+    ///
+    /// Same-city matches lead, then cross-city fills — measured, not a guess:
+    /// cross-city neighbours are thematically right and geographically
+    /// useless on their own.
+    ///
+    /// `[String]` rather than `[UUID]` deliberately. **103 of the catalog's
+    /// ids are uppercase and the rest are not**, and Postgres returns them
+    /// lowercased, so these are resolved through `UUID(uuidString:)` — which
+    /// normalises case — rather than compared as text. That also gives the
+    /// dropped-id case (a tour retired since this was generated) and the
+    /// malformed-id case one code path instead of two. See
+    /// `DataService.relatedTours(for:)`.
+    ///
+    /// Optional, and load-bearing for the same reasons as `country`: the
+    /// bundled seed, the gh-pages mirror and every maker-authored tour carry
+    /// no value here and must all keep decoding.
+    let relatedTourIds: [String]?
     let primaryCategory: TourCategory
     let tags: [String]
     let priceUSD: Decimal

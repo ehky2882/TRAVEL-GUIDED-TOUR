@@ -50,6 +50,7 @@ final class TourDownloadPlanTests: XCTestCase {
             centroidLongitude: -73.9,
             city: "New York",
             country: "United States",
+            relatedTourIds: nil,
             primaryCategory: .history,
             tags: [],
             priceUSD: 0,

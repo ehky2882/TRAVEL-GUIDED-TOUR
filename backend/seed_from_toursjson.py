@@ -275,6 +275,7 @@ def emit(data, out):
             "additional_image_urls, video_urls, video_role, source_url, source_author, "
             "kind, intro_audio_url, total_duration_seconds, "
             "walking_distance_meters, centroid_latitude, centroid_longitude, city, country, "
+            "related_tour_ids, authored_on, "
             "primary_category, tags, price_usd, status, published_at) values ("
             f"{q(t['id'])}, {q(t['title'])}, {q(t['shortDescription'])}, "
             f"{q(t['longDescription'])}, {q(t['makerId'])}, {q(t['heroImageURL'])}, "
@@ -288,6 +289,14 @@ def emit(data, out):
             f"{q(t.get('introAudioURL'))}, {q(t['totalDurationSeconds'])}, "
             f"{q(t.get('walkingDistanceMeters'))}, {q(t['centroidLatitude'])}, "
             f"{q(t['centroidLongitude'])}, {q(t.get('city'))}, {q(t.get('country'))}, "
+            f"{text_array(t.get('relatedTourIds'))}, "
+            # 🔴 `authored_on`, NOT `created_at`. The audit column is
+            # `not null default now()` and holds the moment the row was
+            # SEEDED, so serving it as the catalogue's `createdAt` would look
+            # fixed and rank by seed order — which is worse than the four sort
+            # controls plainly doing nothing. This one is nullable on purpose:
+            # a tour with no authored date has none, and sorts last.
+            f"{q(t.get('createdAt'))}, "
             f"{q(t['primaryCategory'])}, "
             f"{text_array(t.get('tags', []))}, {q(t.get('priceUSD', 0))}, "
             "'published', now())\n"
@@ -316,6 +325,12 @@ def emit(data, out):
                 ("centroid_longitude", "excluded.centroid_longitude"),
                 ("city", "excluded.city"),
                 ("country", "excluded.country"),
+                ("related_tour_ids", "excluded.related_tour_ids"),
+                # ⚠️ coalesce on BOTH sides, the platform/handle pattern: a
+                # tour the catalogue carries without an authored date keeps
+                # whatever the database already holds, so a seed run from an
+                # older Tours.json can never blank one that has been backfilled.
+                ("authored_on", "coalesce(excluded.authored_on, tours.authored_on)"),
                 ("primary_category", "excluded.primary_category"),
                 ("tags", "excluded.tags"),
                 ("price_usd", "excluded.price_usd"),

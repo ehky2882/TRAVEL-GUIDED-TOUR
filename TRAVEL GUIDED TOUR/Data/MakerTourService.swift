@@ -529,6 +529,10 @@ private struct NewTourRow: Encodable {
             // catalogue has never carried one.
             city: city,
             country: nil,
+            // Maker-authored tours get no related list: it is computed offline
+            // over the whole catalog, so one arrives only once this tour has
+            // been published and the next build-embeddings run has seen it.
+            relatedTourIds: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? category,
             tags: tags,
             priceUSD: 0,
@@ -719,6 +723,7 @@ private struct TourRow: Decodable {
             // point on a map, not a country. Catalog tours get theirs from
             // Tours.json / get_catalog instead.
             country: nil,
+            relatedTourIds: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? .hiddenGems,
             tags: tags,
             priceUSD: 0,

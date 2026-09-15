@@ -40,6 +40,7 @@ REQUIRED_TOUR = {
     "sourceURL", "sourceAuthor",
     "introAudioURL", "totalDurationSeconds", "walkingDistanceMeters",
     "centroidLatitude", "centroidLongitude", "city", "country",
+    "relatedTourIds", "createdAt",
     "primaryCategory", "tags", "priceUSD", "priceTier", "stops",
 }
 REQUIRED_MAKER = {
