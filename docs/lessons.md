@@ -632,6 +632,38 @@ Three cheap reads, none of which needs the dashboard:
 `get_catalog` shipping the entire catalogue on every fetch. One design decision,
 two production incidents, two weeks apart. Delta fetching is still not built.
 
+### 🔴 Rule 8d was violated the same day it was written (2026-09-15)
+
+A session concluded three Tokyo pins could not be placed because **Wikidata had never heard of the
+venues**, and told the owner so. The owner replied with Hotel Siro's address and:
+
+> *"why weren't you able to find this?! it was practically the first result on google"*
+
+**One web search found each of the three immediately.** This is the identical failure recorded in
+CLAUDE.md automation rule 8d **earlier that same day**, when another session tried byFood (403),
+Tabelog (403), Overpass (blocked) and Instagram embeds, declared 42 addresses unobtainable, and
+searching the names found 41 of them.
+
+🔴 **The failure is not "I used the wrong source". It is treating ONE source's silence as the
+absence of the fact.** Wikidata not having a ramen counter is a statement about Wikidata. Rule 8d
+exists precisely to stop that inference, and it was not applied because the search was never run
+at all — the conclusion "not in the gazetteer" felt like a finished investigation.
+
+⚠️ **And the outcome corrected the diagnosis too.** Once geocoded with GSI and ward-checked:
+
+| pin | move | |
+|---|---:|---|
+| Hotel Siro | **203 m** | genuinely misplaced |
+| The Bellwood | **4 m** | already correct, merely written at 3 dp |
+| Gyukatsu Ichi Ni San | **0 m** | already exactly right |
+
+So "these three are broken" was also wrong. **An unverifiable pin is not a wrong pin** — the same
+rule #917 recorded when three "unresolvable" pins came out 11 m right, 220 m wrong and 100 m wrong.
+
+⚠️ **A decimal-places heuristic has a blind spot worth knowing:** Gyukatsu's correct coordinate is
+`35.702`, a genuinely round number, so it still reads as LOW-PRECISION after being verified. The
+flag measures how a number is *written*, not whether it is *right*. Read the flag, then check.
+
 ### Stop at the cheap check when it is conclusive (2026-09-15)
 
 Asked whether a migration had reached production, I ran the right query first:
