@@ -48,6 +48,34 @@ def q(value):
     return "'" + str(value).replace("'", "''") + "'"
 
 
+def date_or_null(value):
+    """
+    Quote a date for a `date` column, treating blank as NULL.
+
+    🔴 `q("")` renders `''`, and Postgres accepts that for `text` and REJECTS it
+    for `date` — `invalid input syntax for type date: ""`. The whole seed runs in
+    one transaction under ON_ERROR_STOP=1, so one blank aborts the lot and the
+    catalogue stops reaching the app.
+
+    That is not hypothetical: **104 link pins carry `createdAt: ""`** rather than
+    omitting the key, and the seed folds pins into `tours`, so they land in this
+    column. An audit of `data["tours"]` alone does not see them — which is
+    exactly how this shipped and broke the catalogue publish on 2026-09-15.
+
+    ⚠️ The catalogue carries THREE shapes for this key, not two, and only one is
+    fatal. Measured over 3,900 rows: 3,737 plain `"YYYY-MM-DD"`, 140 absent or
+    blank, and **23 full ISO timestamps** (`"2026-09-05T00:00:00Z"`). Postgres
+    accepts a timestamp for a `date` and truncates it, and `add_related_tours.sql`
+    reads the column back out through `to_char(..., 'YYYY-MM-DD')`, so those 23
+    normalise on their own and reach the app in the one format
+    `Tour.createdAt` sorts by. They are passed through deliberately.
+    """
+    if value is None:
+        return "NULL"
+    text = str(value).strip()
+    return q(text) if text else "NULL"
+
+
 def text_array(values):
     """Render a Python list[str] as a Postgres text[] literal, or NULL."""
     if values is None:
@@ -296,7 +324,7 @@ def emit(data, out):
             # fixed and rank by seed order — which is worse than the four sort
             # controls plainly doing nothing. This one is nullable on purpose:
             # a tour with no authored date has none, and sorts last.
-            f"{q(t.get('createdAt'))}, "
+            f"{date_or_null(t.get('createdAt'))}, "
             f"{q(t['primaryCategory'])}, "
             f"{text_array(t.get('tags', []))}, {q(t.get('priceUSD', 0))}, "
             "'published', now())\n"
