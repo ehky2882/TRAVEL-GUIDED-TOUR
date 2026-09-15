@@ -532,6 +532,189 @@ def selftest():
     return 0
 
 
+
+# --- pins: the offline audit that has never existed -------------------------
+#
+# 🔴 WHY THIS IS SEPARATE FROM `audit()`. The Nominatim path above forward-
+# geocodes a NAME and compares the result to the stored point. For studio tours
+# that works: their titles are landmark names. For link pins it does not — a pin
+# title is a creator's caption ("Comment 'SUSHI' below…", "Cream or Cruller,
+# Shibuya"), `names_resemble` carries a Milan-specific stop-word set, and
+# 2,318 pins at SLEEP=1.1 s with >=2 calls each is 2-3 hours of wall clock.
+#
+# So this path asks a different question, and asks it OFFLINE: not "is this
+# point where the name says" but "is this point inconsistent with its OWN
+# neighbours and its own stated city". That catches the defects this project has
+# actually shipped, needs no network, and runs over every pin in about a second.
+
+PIN_PRECISION_DP = 3          # <=3 dp is ~110 m: a neighbourhood, not a door
+PIN_OUTLIER_KM = 75.0         # beyond this from its city's centre, a pin is
+                              # probably in a different city than it claims
+PIN_SHARED_MIN = 3            # this many pins on ONE point is a fallback dump
+
+
+def from_pins(catalog):
+    """Every link pin, with its first stop's coordinate.
+
+    ⚠️ Pins are a SIBLING `linkPins` array, never inside `tours` — which is
+    exactly why `from_catalog` above can never see one.
+    """
+    with open(catalog) as fh:
+        d = json.load(fh)
+    # 🔴 Membership is `place.tourIds`, NOT a `placeId` on the pin. Looking for
+    # a placeId returns None for every pin and makes every group look orphaned
+    # — which is how an earlier audit concluded ~32 pins were unreachable on
+    # the map when 18 of 19 groups were already collapsed into a place.
+    member = {}
+    for pl in d.get("places") or []:
+        for tid in pl.get("tourIds") or []:
+            member[tid.lower()] = pl.get("name", "?")
+    out = []
+    for p in d.get("linkPins") or []:
+        stops = p.get("stops") or []
+        if not stops:
+            continue
+        lat, lon = stops[0].get("latitude"), stops[0].get("longitude")
+        if lat is None or lon is None:
+            continue
+        out.append({
+            "id": p.get("id", ""),
+            "name": (p.get("title") or "").split("|")[0].strip(),
+            "lat": float(lat),
+            "lon": float(lon),
+            "city": p.get("city") or "",
+            "country": p.get("country") or "",
+            "maker": p.get("makerId") or "",
+            "place": member.get((p.get("id") or "").lower()),
+        })
+    return out
+
+
+def dp_of(value):
+    """Decimal places actually present. 35.68 -> 2, 35.680000 -> 2."""
+    t = repr(float(value)).rstrip("0")
+    return len(t.split(".")[1]) if "." in t else 0
+
+
+def city_centres(pins):
+    """Median point per city. Median, not mean: one pin 229 km away in the
+    wrong prefecture would drag a mean far enough to hide itself."""
+    by = {}
+    for p in pins:
+        by.setdefault((p["city"], p["country"]), []).append(p)
+    out = {}
+    for key, group in by.items():
+        lats = sorted(g["lat"] for g in group)
+        lons = sorted(g["lon"] for g in group)
+        mid = len(group) // 2
+        out[key] = (lats[mid], lons[mid], len(group))
+    return out
+
+
+def audit_pins(pins):
+    """Offline findings. Returns (rows, summary) — never raises on odd data."""
+    centres = city_centres(pins)
+    shared = {}
+    for p in pins:
+        shared.setdefault((round(p["lat"], 6), round(p["lon"], 6)), []).append(p)
+
+    rows = []
+    for p in pins:
+        flags = []
+        lat_dp, lon_dp = dp_of(p["lat"]), dp_of(p["lon"])
+        if min(lat_dp, lon_dp) <= PIN_PRECISION_DP:
+            flags.append(f"LOW-PRECISION({min(lat_dp, lon_dp)}dp)")
+
+        key = (p["city"], p["country"])
+        clat, clon, n = centres.get(key, (None, None, 0))
+        dist_km = None
+        if clat is not None and n >= 3:
+            dist_km = haversine(p["lat"], p["lon"], clat, clon) / 1000.0
+            if dist_km > PIN_OUTLIER_KM:
+                flags.append(f"CITY-OUTLIER({dist_km:.0f}km)")
+
+        group = shared[(round(p["lat"], 6), round(p["lon"], 6))]
+        if len(group) >= PIN_SHARED_MIN:
+            # ⚠️ A shared point is EXPECTED when the pins are members of one
+            # place — that is the mechanism the catalogue uses to stop them
+            # stacking on the map. Flagging those is crying wolf. Only an
+            # UNCOLLAPSED group is a finding.
+            places = {g.get("place") for g in group}
+            if len(places) == 1 and None not in places:
+                flags.append(f"shared-but-placed(x{len(group)})")
+            else:
+                n_out = sum(1 for g in group if not g.get("place"))
+                flags.append(f"SHARED-POINT(x{len(group)},{n_out} unplaced)")
+
+        if flags:
+            rows.append({"pin": p, "flags": flags, "dist_km": dist_km,
+                         "shared": len(group)})
+    return rows
+
+
+def report_pins(pins, rows):
+    """Print findings grouped by class. Exit code says whether to act."""
+    by_flag = {}
+    for r in rows:
+        for f in r["flags"]:
+            by_flag.setdefault(f.split("(")[0], []).append(r)
+
+    print(f"audited {len(pins)} link pins across "
+          f"{len({(p['city'], p['country']) for p in pins})} city/country pairs "
+          f"— offline, no geocoder\n")
+
+    order = ["CITY-OUTLIER", "SHARED-POINT", "LOW-PRECISION",
+             "shared-but-placed"]
+    for flag in order:
+        hits = by_flag.get(flag, [])
+        print(f"{flag}: {len(hits)} pin(s)")
+        if flag == "CITY-OUTLIER":
+            for r in sorted(hits, key=lambda x: -(x["dist_km"] or 0))[:15]:
+                p = r["pin"]
+                print(f"   {r['dist_km']:6.0f} km from the rest of "
+                      f"{p['city']}  {p['name'][:40]}")
+        elif flag == "shared-but-placed":
+            pts = {(round(r["pin"]["lat"], 6), round(r["pin"]["lon"], 6))
+                   for r in hits}
+            print(f"   {len(pts)} point(s) — EXPECTED: every pin on them belongs "
+                  f"to one place page,\n   which is what stops them stacking on "
+                  f"the map. Not a defect.")
+        elif flag == "LOW-PRECISION":
+            for r in sorted(hits, key=lambda x: x["pin"]["city"])[:40]:
+                p = r["pin"]
+                print(f"   {p['lat']:.4f},{p['lon']:.4f}  {p['city'][:20]:20s} "
+                      f"{p['name'][:40]}")
+        elif flag == "SHARED-POINT":
+            seen = set()
+            groups = []
+            for r in hits:
+                k = (round(r["pin"]["lat"], 6), round(r["pin"]["lon"], 6))
+                if k not in seen:
+                    seen.add(k)
+                    groups.append((r["shared"], k, r["pin"]))
+            for n, k, p in sorted(groups, reverse=True)[:12]:
+                print(f"   x{n:<3d} {k[0]:.5f},{k[1]:.5f}  {p['city'][:18]:18s} "
+                      f"{p['name'][:34]}")
+            print(f"   ({len(groups)} distinct point(s) carrying "
+                  f"{PIN_SHARED_MIN}+ pins)")
+        print()
+
+    # Count only real findings: a point shared by pins that all belong to one
+    # place is the mechanism working, not a defect.
+    total = sum(1 for r in rows
+                if any(not f.startswith("shared-but-placed") for f in r["flags"]))
+    print(f"{total} pin(s) carry at least one flag "
+          f"({100 * total / max(len(pins), 1):.1f}% of the catalogue)")
+    # ⚠️ A flag is a READING, not a verdict. This project has already moved
+    # three pins on a district-centroid distance and got 11 m right, 220 m
+    # wrong and 100 m wrong. Exit 1 means "read these", never "fix these".
+    print("\n⚠️  A flag is something to READ, not a defect to auto-fix. "
+          "SHARED-POINT is\n    occasionally correct (two venues inside one "
+          "building); CITY-OUTLIER can be\n    a correctly-pinned suburb. "
+          "Never move a pin on a distance alone.")
+    return 1 if total else 0
+
+
 # --- main -------------------------------------------------------------------
 
 def main():
@@ -540,6 +723,8 @@ def main():
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--drop", help="unzipped drop folder to audit before wiring")
     g.add_argument("--maker", help="maker code already live in Tours.json, e.g. MIL")
+    g.add_argument("--pins", action="store_true",
+                   help="audit every link pin OFFLINE (no geocoder, no network)")
     g.add_argument("--selftest", action="store_true", help="offline, no network")
     ap.add_argument("--city", default="", help="city hint for the forward geocode")
     ap.add_argument("--catalog",
@@ -549,6 +734,14 @@ def main():
 
     if a.selftest:
         sys.exit(selftest())
+
+    if a.pins:
+        pins = from_pins(a.catalog)
+        if a.limit:
+            pins = pins[:a.limit]
+        if not pins:
+            sys.exit('no link pins found - wrong --catalog?')
+        sys.exit(report_pins(pins, audit_pins(pins)))
 
     items = from_drop(a.drop) if a.drop else from_catalog(a.maker, a.catalog)
     if a.limit:
