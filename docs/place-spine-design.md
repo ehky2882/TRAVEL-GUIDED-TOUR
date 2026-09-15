@@ -190,6 +190,44 @@ stadiums — and it is the recent byFood/`@nom_life`-style food pins that domina
 ⚠️ These figures are one city and 60 pins. Re-run the same validation on New York (landmark-heavy)
 and on a pure food batch before sizing the remaining work.
 
+### (d) Validated on two cities and 415 pins — and it splits by CREATOR, not by city
+
+Harvested midtown Manhattan (**4,244 features, 0 tile failures**; a first attempt at 4 km tiles hit
+one timeout, correctly reported COULD NOT VERIFY, exited 2, and found **640 fewer** features — the
+guard earns its place) and re-ran the match against every catalogue pin inside each box.
+
+| | New York (360 pins) | Tokyo (55 pins) |
+|---|---:|---:|
+| **usable match** (near **and** name agrees) | **56%** | **33%** |
+| near something, name disagrees | 42% | 47% |
+| nothing within 150 m | 1% | 20% |
+
+**The city is not the variable. The creator is:**
+
+| creator | matched | rate |
+|---|---:|---:|
+| `@archimarathon` (architecture) | 5/6 | **83%** |
+| `@archiwhisperer` (architecture) | 7/9 | **78%** |
+| `@hereinnyc` (urbanism) | 94/160 | **59%** |
+| `@urbanistariel` (urbanism) | 45/84 | **54%** |
+| `@japanbyfood` (food) | 7/28 | **25%** |
+| `@nom_life` (food) | 3/21 · 1/5 | **14% · 20%** |
+
+🔴 **This is the number that should size the work.** Architecture and urbanism creators land
+**54–83%**; food creators land **14–25%**. Wikidata knows buildings, not restaurants, and no amount
+of tuning changes that — it is a coverage fact about the source, not a matcher weakness.
+
+**And it lands where the volume is.** The two deepest creators in the catalogue — `@urbanistariel`
+(326 pins) and `@hereinnyc` (262) — are exactly the urbanism profile, at 54% and 59%. The top ten
+creators hold 57% of all pins. So the spine's usable fraction is concentrated in the accounts that
+matter most for reaching 100k, which is the opposite of the usual "works on the easy cases" result.
+
+**Therefore, the routing rule:** send a pin to the spine when the creator's history is
+architecture/urbanism/landmarks, and to `scripts/parse-caption-address.py` + GSI when it is food or
+retail. Measure per-creator match rate once and let it pick the path — do not run one geocoder over
+everything and read the average, which is how a 56% and a 14% become a meaningless 40%.
+
+
 ## 3. What it replaces
 
 | field | today | with the spine |
