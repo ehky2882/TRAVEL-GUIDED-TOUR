@@ -632,6 +632,28 @@ Three cheap reads, none of which needs the dashboard:
 `get_catalog` shipping the entire catalogue on every fetch. One design decision,
 two production incidents, two weeks apart. Delta fetching is still not built.
 
+### Stop at the cheap check when it is conclusive (2026-09-15)
+
+Asked whether a migration had reached production, I ran the right query first:
+
+```
+GET /rest/v1/tours?select=id,related_tour_ids,authored_on&limit=1     ->  407 bytes, answered it
+```
+
+and then ran a second, redundant confirmation through `get_catalog_since` — **2,752,051 bytes**,
+larger than a full `get_catalog`, in a session whose entire subject was egress. ~1.6% of a day's
+allowance spent proving something already proven.
+
+🔴 **The failure is not "I used an expensive call". It is "I kept checking after the question was
+answered."** A second confirmation feels like rigour and is only rigour when the first check could
+have been wrong. Decide what would change your conclusion *before* making another call; if nothing
+would, the call is decoration.
+
+⚠️ And **a delta call is not automatically cheap.** Its size is the size of everything that changed
+since the cursor, so an old cursor after a backfill is the whole catalogue plus overhead. For
+liveness use a sentinel cursor (131 bytes); for a row count use `content-range` (47 bytes); for
+"does this column exist" select the column directly.
+
 ## 7. Shell and environment
 
 **`pkill -f <script>` kills your own shell** (exit 144) — the pattern matches the wrapping
