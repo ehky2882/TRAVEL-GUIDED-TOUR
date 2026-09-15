@@ -95,6 +95,55 @@ and done nothing on every real phone since #600/#601.
   back lowercased — a string comparison would drop exactly those, on a device
   only. Pinned by a test.
 
+## 🔴 What happened AFTER the SQL was pasted — two sequencing errors, both mine
+
+**1. "Success. No rows returned." meant nothing, and the migration was right.**
+The owner pasted the file, got the success message, and the live RPC served
+neither key. The migration had patched the builder correctly — but
+`get_catalog()` has not been a live composition since `catalog_snapshot.sql`:
+it serves a **pre-built row**, and the chain behind it is the *builder*, run
+once per seed. `catalog_snapshot_age()` (34 bytes) settled it in one call —
+the snapshot was from **11:04 UTC**, hours before the paste.
+
+**The fix was one line, `select public.refresh_catalog_snapshot();`, and it is
+Automation Rule 11b.** Six other migrations in `backend/` end with it. I wrote
+this one without it. Now added, with the reasoning in the header so the next
+migration copied from this file inherits the step rather than the bug.
+
+**The durable form** (now in `docs/lessons.md`): that success message was
+already known to lie one way — a `create or replace get_catalog()` that severs
+the wrapper prints it while dropping every place. This is the opposite: the SQL
+was **right** and the result was still invisible. Neither the message nor the
+correctness of the patch is evidence. Only the served payload is.
+
+**2. TestFlight 162 was cut before the data could possibly reach a phone.**
+`RemoteCatalogLoader` tries **Supabase first** and takes the first source that
+decodes; the branch's own `Tours.json` is a fallback a phone with signal never
+reaches. The columns were empty until the seed, so the build rendered nothing —
+**verified against the database: 0 rows carried either value.** The owner
+installed it and asked whether they were looking in the wrong place. They were
+not.
+
+**This is the session-95 trap verbatim** — *adding a key to `Tours.json` does
+not put it in front of users; Supabase is primary* — and I walked into it while
+having quoted it earlier the same session. ⚠️ **The first draft of
+`status/builds/162.md` even asserted the opposite**, that the bundled catalogue
+would make the section appear; corrected in place.
+
+**The consequence for the gate:** the data can only reach a device *after* the
+merge, so the device check follows the merge rather than preceding it, which
+inverts the rule for a code PR. Put to the owner with the reasoning; they chose
+to merge. What makes it acceptable is that the section is **data-gated** —
+`relatedTourIds` nil means it does not render — so clearing the key is a content
+edit that switches the feature off with no app release. Build 162 picks the data
+up over the air on next launch; no rebuild.
+
+⚠️ **`main` moved three times during this** — #912 (the `get_catalog_since`
+delta RPC), #913, #917, then #916 and #918 — and the merge into the branch
+conflicted once, on the `CLAUDE.md` Key-facts line, against that line's own
+28th correction. **The delta RPC needed no accommodation**: it reads from the
+snapshot and picks elements out of it, so it inherits both new keys.
+
 ## ⚠️ Owed, and not done
 
 - **The 36 undated tours could NOT be backfilled and were deliberately not
