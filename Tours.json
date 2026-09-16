@@ -100190,7 +100190,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "13D93ACF-C9D2-5FBF-A925-7894A5A11887",
-        "D67377AF-317D-51D2-9426-E3BD191A65CF"
+        "D67377AF-317D-51D2-9426-E3BD191A65CF",
+        "02A65B10-0AED-5E24-9A20-CFE5A195726F"
       ]
     },
     {
@@ -100636,7 +100637,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "47850BC7-D6BB-5410-9143-762B593EA124",
-        "51EDB2E0-5A2E-48B2-8490-36A5622CCED7"
+        "51EDB2E0-5A2E-48B2-8490-36A5622CCED7",
+        "2CE5500A-78B5-5481-89B4-BB551374E3F9"
       ]
     },
     {
@@ -102749,7 +102751,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "E11BB9C7-2DB2-5501-9D42-631DC1B80787",
-        "fbb1f03d-ab94-5ad1-89a0-8083d740a0b5"
+        "fbb1f03d-ab94-5ad1-89a0-8083d740a0b5",
+        "02A9BF1D-7CBA-59A2-8981-E3D9D1AD2C65"
       ]
     },
     {
@@ -103069,7 +103072,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
-        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82"
+        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
+        "400914D0-98AA-5357-B789-B59ACE861F50"
       ]
     },
     {
@@ -103084,7 +103088,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "98839203-72B3-50BE-9915-740D87B7B260",
-        "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6"
+        "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6",
+        "1620278E-DF2D-5045-9659-7737223BE762"
       ]
     },
     {
@@ -203307,8 +203312,8 @@
           "order": 0,
           "title": "Sagrada Família",
           "caption": "100 years on this very day, Antoni Gaudi tragically passed away. To mark this anniversary of his passing, the tallest tower of the church wa",
-          "latitude": 41.4035046,
-          "longitude": 2.1744283,
+          "latitude": 41.403505,
+          "longitude": 2.174428,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -203320,8 +203325,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.4035046,
-      "centroidLongitude": 2.1744283,
+      "centroidLatitude": 41.403505,
+      "centroidLongitude": 2.174428,
       "city": "Barcelona",
       "country": "Spain",
       "relatedTourIds": [
@@ -227469,8 +227474,8 @@
           "order": 0,
           "title": "Crystal Bridges Museum of American Art",
           "caption": "Did you know about this museum? #fyp #architecture #design #museum",
-          "latitude": 36.3826132,
-          "longitude": -94.2040631,
+          "latitude": 36.382613,
+          "longitude": -94.204063,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -227482,8 +227487,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 36.3826132,
-      "centroidLongitude": -94.2040631,
+      "centroidLatitude": 36.382613,
+      "centroidLongitude": -94.204063,
       "city": "Bentonville",
       "country": "United States",
       "relatedTourIds": [
@@ -227938,8 +227943,8 @@
           "order": 0,
           "title": "Ford Foundation Building",
           "caption": "Should more buildings incorporate nature? #fyp #architecture #design #nyc",
-          "latitude": 40.7498787,
-          "longitude": -73.9711586,
+          "latitude": 40.749879,
+          "longitude": -73.971159,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -227951,8 +227956,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7498787,
-      "centroidLongitude": -73.9711586,
+      "centroidLatitude": 40.749879,
+      "centroidLongitude": -73.971159,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -229052,8 +229057,8 @@
           "order": 0,
           "title": "Barbican Estate",
           "caption": "Do you guys like brutalism ? I love it ! #fyp #architecture #design #brutalism",
-          "latitude": 51.5197514,
-          "longitude": -0.0942207,
+          "latitude": 51.519751,
+          "longitude": -0.094221,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -229065,8 +229070,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5197514,
-      "centroidLongitude": -0.0942207,
+      "centroidLatitude": 51.519751,
+      "centroidLongitude": -0.094221,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -230397,8 +230402,8 @@
           "order": 0,
           "title": "The Met Breuer (Breuer Building)",
           "caption": "Brutalism, love it or hate it? #fyp #architecture #design",
-          "latitude": 40.7734071,
-          "longitude": -73.9638183,
+          "latitude": 40.773407,
+          "longitude": -73.963818,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -230410,8 +230415,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7734071,
-      "centroidLongitude": -73.9638183,
+      "centroidLatitude": 40.773407,
+      "centroidLongitude": -73.963818,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
