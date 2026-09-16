@@ -1,0 +1,179 @@
+name: Export search model
+
+# Converts all-MiniLM-L6-v2 to Core ML, PROVES it agrees with the catalog's
+# vectors, and only then publishes it to gh-pages for the app to download.
+#
+# 🔴 WHY macOS. Conversion runs anywhere; Core ML **prediction** runs only on an
+# Apple platform. A converted-but-never-executed model is an assumption, and the
+# assumption it hides is the expensive one: a model that produces subtly
+# different vectors doesn't crash, it just ranks the catalog subtly wrongly,
+# forever, with nothing to say so. So the job that builds it is also the job
+# that runs it, on a real Mac, against fixtures dumped from the Python pipeline.
+#
+# 🔴 WHY PUBLISH RATHER THAN BUNDLE. Owner decision, 2026-09-16: the model is
+# downloaded on first search rather than shipped inside the app, so the App
+# Store download does not grow by ~45 MB. gh-pages is already the asset CDN
+# (audio, images), so this costs no Supabase egress. Reversible later — it
+# changes only where the loader looks.
+#
+# Manual by design. The model changes roughly never; the catalog changes daily.
+# Tying this to content merges would burn a Mac runner for nothing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish to gh-pages (otherwise build + verify only)"
+        type: boolean
+        default: false
+      int8:
+        description: "Quantize to int8 (~23 MB instead of ~45 MB) — only ships if parity still passes"
+        type: boolean
+        default: false
+      skip_ranking:
+        description: "Skip the catalog ranking check (faster, does NOT clear the model to ship)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write     # publish the model to gh-pages
+
+concurrency:
+  group: export-search-model
+  cancel-in-progress: false
+
+jobs:
+  export:
+    name: Convert, verify, publish
+    runs-on: macos-26
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # torch is ~800 MB and this is the only job that needs it. Cached by the
+      # requirements file so a re-run does not re-download it.
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Caches/pip
+          key: coreml-export-${{ hashFiles('scripts/requirements-coreml.txt') }}
+
+      - name: Install
+        run: pip install -r scripts/requirements-coreml.txt
+
+      # Keyed by model id: a model change must refetch rather than silently
+      # convert the old weights.
+      - name: Cache the source model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/atlas-embed
+          key: atlas-embed-all-MiniLM-L6-v2-v1
+
+      - name: Convert to Core ML
+        run: |
+          python3 scripts/export-coreml.py \
+            --out build/AtlasQueryEmbedder.mlpackage \
+            ${{ inputs.int8 && '--int8' || '' }}
+
+      # 🔴 THE GATE. Nothing below runs if this fails, and it exits 2 — never 0 —
+      # when it cannot check rather than when it disagrees.
+      - name: Verify it matches the catalog's vectors
+        run: |
+          python3 scripts/verify-coreml-parity.py \
+            --model build/AtlasQueryEmbedder.mlpackage \
+            ${{ inputs.skip_ranking && '--skip-ranking' || '' }}
+
+      # A .mlpackage is a directory; the app downloads one file and compiles it
+      # with MLModel.compileModel(at:). Deterministic zip so an unchanged model
+      # produces an unchanged artifact.
+      - name: Package
+        id: package
+        run: |
+          set -euo pipefail
+          cd build
+          find AtlasQueryEmbedder.mlpackage -exec touch -t 200001010000 {} +
+          zip -qrX AtlasQueryEmbedder.mlpackage.zip AtlasQueryEmbedder.mlpackage
+          SIZE=$(stat -f%z AtlasQueryEmbedder.mlpackage.zip)
+          echo "size=$SIZE" >> "$GITHUB_OUTPUT"
+          echo "sha256=$(shasum -a 256 AtlasQueryEmbedder.mlpackage.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          echo "Packaged $SIZE bytes ($(echo "scale=1; $SIZE/1000000" | bc) MB)"
+
+      # Always kept, published or not — so a verify-only run still leaves
+      # something a human can inspect.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AtlasQueryEmbedder
+          path: build/AtlasQueryEmbedder.mlpackage.zip
+          retention-days: 14
+
+      # Same Contents API approach as publish-catalog.yml, and for the same
+      # reason: gh-pages carries thousands of audio and image files, so cloning
+      # it to add one file times out and fails in ways that look like success.
+      - name: Publish to gh-pages
+        if: inputs.publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          SRC=build/AtlasQueryEmbedder.mlpackage.zip
+          NEW_SHA=$(git hash-object "$SRC")
+          OLD_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
+                      --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.zip") | .sha' \
+                    2>/dev/null || echo "")
+          if [ "$NEW_SHA" = "$OLD_SHA" ]; then
+            echo "gh-pages already serves this exact model — nothing to publish."
+            exit 0
+          fi
+
+          OLD_SHA="$OLD_SHA" python3 - "$SRC" > /tmp/payload.json <<'PYEOF'
+          import base64, json, os, sys
+          payload = {
+              "message": "chore(search): publish Core ML query embedder [skip ci]",
+              "content": base64.b64encode(open(sys.argv[1], "rb").read()).decode(),
+              "branch": "gh-pages",
+          }
+          old = os.environ.get("OLD_SHA", "")
+          if old:
+              payload["sha"] = old
+          json.dump(payload, sys.stdout)
+          PYEOF
+
+          gh api -X PUT \
+            "repos/$GITHUB_REPOSITORY/contents/search/AtlasQueryEmbedder.mlpackage.zip" \
+            --input /tmp/payload.json --jq .commit.sha
+
+      # Ask what is actually being served rather than trusting the step above —
+      # publish-catalog.yml was rewritten because a green-looking publish left a
+      # stale mirror for sixteen hours.
+      - name: Verify gh-pages serves it
+        if: inputs.publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          NEW_SHA=$(git hash-object build/AtlasQueryEmbedder.mlpackage.zip)
+          LIVE_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
+                       --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.zip") | .sha')
+          if [ "$NEW_SHA" != "$LIVE_SHA" ]; then
+            echo "::error::gh-pages has $LIVE_SHA but we built $NEW_SHA — the publish did not land."
+            exit 1
+          fi
+          echo "gh-pages serves $LIVE_SHA"
+
+      - name: Summary
+        run: |
+          {
+            echo "### Search model"
+            echo ""
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Precision | ${{ inputs.int8 && 'int8' || 'fp16' }} |"
+            echo "| Size | ${{ steps.package.outputs.size }} bytes |"
+            echo "| SHA-256 | \`${{ steps.package.outputs.sha256 }}\` |"
+            echo "| Published | ${{ inputs.publish && 'yes' || 'no — build + verify only' }} |"
+            echo "| Ranking checked | ${{ inputs.skip_ranking && '**NO — not cleared to ship**' || 'yes' }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
