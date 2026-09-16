@@ -1647,3 +1647,62 @@ before a re-seed, `relatedTourIds` and `createdAt` were served as `null` on all
 1,583 rows. `check-catalog-contract.py` reads key *presence*, so that is a PASS
 and correctly so — but "the contract passes" and "the feature works" are two
 different statements, and only a seed makes the second true.
+
+## "The server has it" is not "the phone has it" (2026-09-16)
+
+The owner reported a place missing from their map. It was verified present in the
+live `get_catalog`, in the gh-pages mirror, with valid members and a working hero.
+**On the strength of that, they were twice told to go and look — and twice the
+phone still did not have it.**
+
+The error was reading `catalog_snapshot_age` as proof of *delivery*. It is proof
+of *publication*. Every server-side check answers "did we publish it", and not one
+of them answers "did that device receive it". Those are different claims and the
+second is the one a person reporting a bug is making.
+
+🔴 **What settled it was a screenshot, not a query.** The marker was a **circle**,
+and `MapPins.swift` draws `ClusterPin` as a circle and `PlacePin` as a capsule —
+so the place was not being applied at all, on a device that had other places from
+the same merge. **One picture of the actual screen outranked five server checks.**
+Ask for one early.
+
+⚠️ **And the first check should have been rule 11's.** `CLAUDE.md` says an owner
+reporting a feature missing that the code clearly ships is the trigger to ask the
+**live RPC what keys it returns**. That was run fifth, after three rounds of
+reading timestamps.
+
+**The cause was never found.** Deleting the app fixed it; a partial publish was
+ruled out (the seed is one transaction and `refresh_catalog_snapshot()` is its
+last statement, so no reader sees a half-written catalogue).
+
+### The design lesson, which is the durable half
+
+`RemoteCatalogLoader` asks a 34-byte "anything new?" question and, on a match,
+returns the cache without downloading. That saving is real and worth keeping. But
+**a token match is a claim about the server, not evidence about the disk** — so
+believing it without bound means a cache that goes wrong for *any* reason stays
+wrong forever, silently, with no recovery but reinstalling. The owner restarted
+the app for an hour and never got out.
+
+Fixed in #955 by bounding it (`maxCacheAge`, 7 days) rather than by explaining it.
+**A catch-all beats a targeted fix when the cause is unknown.** Two details worth
+copying:
+
+- the guards **decline rather than discard**, so a *failed* download still leaves
+  the existing cache serving — discarding first would make an offline device
+  strictly worse off than the staleness being guarded against
+- a test asserts the 34-byte path **still** fires for a fresh cache, because
+  guards like these are an easy way to silently re-inflate an egress bill that has
+  already drawn two overage notices
+
+### A fix nobody can see is a fix nobody can trust
+
+The owner's verdict on the first build: *"honestly hard to test any of it."* They
+were right. The self-heal fires after seven days and the length check only on a
+truncated file, so it shipped with nothing observable — **the same property that
+let the original bug survive an hour of restarts.**
+
+The answer was one row in Settings → About: **"Updated"**, when the catalogue last
+arrived. It makes Clear Cache provable (tap it, read "just now") and would have
+turned that hour into a glance. **When shipping a fix for something invisible, ship
+the thing that makes it visible in the same change.**

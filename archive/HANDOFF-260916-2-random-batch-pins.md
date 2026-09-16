@@ -110,3 +110,85 @@ before this batch added anything (#938, #940 and #941 landed in the hours after 
 last correction): **2,318 / 429 / 305 against a real 2,474 / 469 / 323**, cities
 579 → 600 and countries 68 → **69** — the third country move in four days, on the
 figure that line keeps calling the one that never moves.
+
+---
+
+# PART TWO — what the owner found after the batch merged
+
+The pin work above was finished and merged. Everything below started because the
+owner **watched one of the videos.**
+
+## 🔴 A pin was in the wrong city, and the evidence was already in the catalogue
+
+`The Hudson Yards platform` (@ninosbuildings, from #940) is actually **1111
+Lincoln Road** — Herzog & de Meuron's Miami Beach car park. The owner spotted it
+in seconds. What makes it worth recording is that **nothing needed to be fetched
+to catch it**: the stored caption reads *"Would you want to live in a parking
+garage?"* beside a title saying Hudson Yards. Caption and title contradicted each
+other in the same row and no check compares them.
+
+Auditing that creator's other 69 pins on exactly that signal found a second:
+a pin still titled with its raw caption (`How do you like niemeyer? …`), whose own
+hero filename read `palacio-itamaraty` — so the subject *had* been identified and
+only `--title` was omitted. Its coordinate was wrong too, on **N1** where the
+palace is on **S1**. Both fixed in #948.
+
+⚠️ A parallel session (#952) then found two more in the same batch — a pair filed
+as **The Glass House** that were **Grace Farms, 6 km away**, and **Geisel Library**
+on the wrong branch library, 5.4 km out. **Five wrong locations in one 70-pin
+batch**, all of it identified from thumbnails. That method's failure rate is the
+finding.
+
+**32 pins catalogue-wide still carry a raw caption as their map label**, across
+seven creators. Left alone on the owner's instruction; recorded on the board.
+
+## My own error, from Part One
+
+Five titles and three cities went in as plain ASCII — `Musée`, `Archéologie`,
+`Besançon`, `São Paulo`, `San José del Cabo`, `Café`, `Residenzstraße`. I wrote
+the batch table by hand and stripped the diacritics. **`Sao Paulo` became a
+separate city** from the 48 entries spelled `São Paulo`. An accent-folded check
+found it and the pre-existing `Zurich`/`Zürich` pair, so the city count went
+**down by two** — the first time that line has ever decreased.
+
+## The cache bug, and how badly I diagnosed it
+
+The owner then reported 1111 Lincoln Road not showing as a **place** on their
+phone. It took far too long, and the way it went wrong is the lesson:
+
+🔴 **I twice told them to go and look, on the strength of SERVER state.** "The
+data exists" and "the phone has it" are different claims. I read
+`catalog_snapshot_age` as proof of delivery; it is proof of publication. Two
+wasted round trips.
+
+🔴 **The check that finally gave hard data is the one `CLAUDE.md` rule 11 names
+first** — ask the live RPC what keys it returns. I ran it fifth.
+
+What settled it was a **screenshot**: the marker was a **circle**, and
+`MapPins.swift` has `ClusterPin` as a circle and `PlacePin` as a capsule. So the
+place was not being applied at all. The catalogue was then exonerated end to end
+(334 places, valid members, mirror identical, hero 200, place object
+structurally identical to one working on the same phone). **Delete and reinstall
+fixed it. The mechanism was never found**, and a partial publish was ruled out —
+the seed is one transaction with `refresh_catalog_snapshot()` as its last
+statement.
+
+## What shipped because of it (#955, build 165)
+
+1. **Settings → Clear Cache now clears the catalogue.** It cleared `URLCache` and
+   the image cache only — so the one cache a user might need to clear was the one
+   it left alone. `discardCache()` already did the right thing; nothing could
+   reach it.
+2. **A token match no longer buys unlimited trust** — bounded by `maxCacheAge`
+   (7 days) plus a length check. ⚠️ Both guards **decline rather than discard**,
+   so a failed download leaves the existing copy serving.
+3. **Settings → About shows "Updated"** — when the catalogue last arrived. Added
+   after the owner's verdict on build 164: *"honestly hard to test any of it."*
+   They were right; the fix had shipped with nothing observable, which is the
+   same property that let the original bug survive an hour of restarts.
+
+**Merged on the owner's OK after build 165.** ⚠️ The device could not prove the
+recovery works — nobody knows how to reproduce the bad cache. The four unit tests
+are the real verification, including one asserting the 34-byte probe still
+short-circuits, because guards like these are an easy way to silently re-inflate
+the egress bill.
