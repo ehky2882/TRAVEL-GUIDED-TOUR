@@ -103490,6 +103490,21 @@
       ]
     },
     {
+      "id": "a2100ec3-bb40-5d57-b976-7dfdf0ffbaa0",
+      "name": "The Skunk Train",
+      "description": "A logging railway of 1885 that never stopped running, climbing from the Fort Bragg depot into the redwoods along Pudding Creek. It took its name from the fume-belching gas motorcars of the 1920s, which locals said you could smell before you could see. Today the same track carries both the heritage excursion train and pedal-powered railbikes.",
+      "latitude": 39.4454814,
+      "longitude": -123.8068995,
+      "city": "Fort Bragg",
+      "address": "100 West Laurel Street, Fort Bragg, CA 95437",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-skunk-train-lornaryan_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0397353D-A418-578A-BADB-35D763B203F6",
+        "34FAEDDD-D149-5D2C-B82E-1A42A403ED1A"
+      ]
+    },
+    {
       "id": "9187796d-593d-526f-b365-ac2a64f67311",
       "name": "The St. Regis Kanai Resort",
       "description": "A resort set between jungle and a protected mangrove reserve on the Riviera Maya, built to keep its footprint small — low buildings threaded through the trees rather than a wall along the beach, with a spa drawing on Mayan cosmology. Two creators filmed the same architecture from opposite angles: the buildings themselves, and the mangroves they sit above.",
