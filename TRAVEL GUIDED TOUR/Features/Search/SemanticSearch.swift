@@ -103,7 +103,11 @@ final class SemanticSearch {
     }
 
     private func run(_ query: String, catalog: [Tour]) async {
-        let needsPreparing = embedder == nil || !(await store.isLoaded)
+        // ⚠️ Not `embedder == nil || !(await store.isLoaded)`. `||` takes its
+        // right side as an autoclosure, which cannot await — and the
+        // short-circuit is worthless here anyway.
+        let indexReady = await store.isLoaded
+        let needsPreparing = embedder == nil || !indexReady
         state = needsPreparing ? .preparing : .searching
 
         do {
@@ -286,16 +290,15 @@ enum AppleArchiveUnpacker {
         }
         defer { try? decoded.close() }
 
-        // The field set has to include the ones that make a directory tree a
-        // directory tree: without PAT (path) and TYP (entry type) the extractor
-        // has nothing to rebuild.
-        guard let selection = ArchiveHeader.FieldKeySet("TYP,PAT,LNK,DEV,DAT,UID,GID,MOD,FLG,MTM,BTM,CTM") else {
-            throw SearchModelLoader.Failure.unpack("could not build the field selection")
-        }
+        // ⚠️ NO FIELD SELECTION. A `FieldKeySet` belongs to `encodeStream`,
+        // which chooses what to WRITE; extraction's `selectUsing` is an entry
+        // filter closure, and every field the archive carries is one the
+        // package needs. `.ignoreOperationNotPermitted` is what lets the
+        // extraction survive an owner or permission field it cannot honour in
+        // the app's sandbox, which is every one of them.
         guard let extractor = ArchiveStream.extractStream(
             extractingTo: FilePath(destination.path),
-            flags: [.ignoreOperationNotPermitted],
-            selectUsing: selection
+            flags: [.ignoreOperationNotPermitted]
         ) else {
             throw SearchModelLoader.Failure.unpack("could not open the destination")
         }
