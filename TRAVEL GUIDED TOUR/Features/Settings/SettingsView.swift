@@ -205,11 +205,19 @@ struct SettingsView: View {
                         Label("Manage downloads", systemImage: "arrow.down.circle")
                     }
 
+                    // 🔴 The catalogue is cleared here too, and that is the
+                    // point of this button existing. Until 2026-09-16 it
+                    // cleared only URLCache and the image cache, so a device
+                    // holding a wrong catalogue could tap "Clear Cache",
+                    // see nothing change, and reasonably conclude the problem
+                    // lay elsewhere. The owner hit exactly that and had to
+                    // delete the app to recover.
                     Button {
                         URLCache.shared.removeAllCachedResponses()
                         #if canImport(UIKit)
                         ImageCache.shared.clear()
                         #endif
+                        Task { await dataService.clearCachedCatalogAndRefresh() }
                     } label: {
                         Label("Clear Cache", systemImage: "trash")
                     }
@@ -234,6 +242,20 @@ struct SettingsView: View {
                 }
 
                 Section(header: sectionHeader("About")) {
+                    // 🔴 The one line that would have saved an hour. On
+                    // 2026-09-16 the owner's phone held a catalogue that was
+                    // quietly wrong, and neither they nor the session working
+                    // with them could tell whether the device had taken new
+                    // content — the server was checked five different ways
+                    // instead. "Updated" answers it at a glance, and after
+                    // Settings → Clear Cache it is the visible proof the
+                    // reload actually happened.
+                    HStack {
+                        Label("Updated", systemImage: "clock.arrow.circlepath")
+                        Spacer()
+                        Text(catalogUpdatedText)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
                     HStack {
                         Label("Tours", systemImage: "headphones")
                         Spacer()
@@ -407,6 +429,15 @@ struct SettingsView: View {
     /// Section header styled to match the rest of the screen: caption
     /// mono, ALL CAPS, secondary tint — instead of the system grey
     /// Title-Case header.
+    /// "just now" / "2 hours ago" / "yesterday", or "—" before any download.
+    private var catalogUpdatedText: String {
+        guard let updated = dataService.catalogUpdatedAt else { return "—" }
+        if Date().timeIntervalSince(updated) < 60 { return "just now" }
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter.localizedString(for: updated, relativeTo: Date())
+    }
+
     private func sectionHeader(_ title: String) -> some View {
         Text(title)
             .font(AtlasTypography.caption)
