@@ -4289,6 +4289,26 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/nom_life/"
+    },
+    {
+      "id": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "displayName": "TikTok @asamapov",
+      "platform": "tiktok",
+      "handle": "asamapov",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-asamapov.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@asamapov"
+    },
+    {
+      "id": "85916FB9-B922-5DA2-B07D-BD14D76AC931",
+      "displayName": "Instagram @the.watchphile",
+      "platform": "instagram",
+      "handle": "the.watchphile",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/the.watchphile/"
     }
   ],
   "tours": [
@@ -28716,7 +28736,7 @@
         "3CC5BE63-2B9F-5762-8AEA-F6F3B8DEEC64",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "01b9b8d8-7e73-576d-b9e4-04bc358d7d68",
-        "511e0071-e33f-5533-8337-c0ca23488cff"
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -30022,10 +30042,10 @@
         "acf1d709-1b60-5069-8e5d-bc001e1587fd",
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
         "25b59ce2-cbcf-5975-8ef4-fb65a16b4f0c",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "3535426b-5531-514f-924b-eb72e9a1c3e5",
-        "8c90b9f7-8300-575c-8e5f-66cd3cefcd3d",
-        "8f1bae74-890d-5910-95f2-f26a5fc908d4",
-        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5"
+        "8c90b9f7-8300-575c-8e5f-66cd3cefcd3d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -82804,10 +82824,10 @@
         "ca135f56-0930-502e-8696-a1e5264741ab",
         "627c44b2-6dca-5e36-888a-b5016d747214",
         "C5AB955F-0F6B-5DA2-AD52-EF315E63D5E1",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
         "78839D3C-9E75-50C2-91FA-ACEB63D86376",
         "893d851c-15b1-50b5-9572-0b43a723b1c3",
-        "6193ddd8-73ef-5866-8fbe-cbd3540f882f",
-        "b36072b2-2d64-505c-aa5e-93f8b72c4fa3"
+        "54E19E19-B485-5CD0-B48B-C52AD566DCA8"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -104056,7 +104076,7 @@
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
         "9757C81E-088E-5540-A5BB-92D8B5FC5B12",
         "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
-        "0A34008F-A4DC-57DA-A449-65BF50BC3804"
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -159723,9 +159743,9 @@
         "8D4439F1-4A24-54AB-B1BD-D314243B4A7E",
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
         "3B62F7E4-4340-50C8-87F9-DA48DE135A71",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
         "6bc636ce-93b2-5655-8b03-9db466b7fed2",
-        "13A47D23-4B42-56D5-B7A9-D278DF551054",
-        "240206C6-7AC0-5ED0-B68D-4A9BFA528109"
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -212679,11 +212699,11 @@
         "3535426b-5531-514f-924b-eb72e9a1c3e5",
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "56C9B6DD-38B8-5227-8E11-AE6EAFFC083C",
+        "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
-        "72F43EED-2BCE-53A9-96B6-AD929D147F76",
-        "A105CEF1-6A1C-508B-8D60-7026F595D962",
-        "E3E19249-703B-5AF6-A88F-3077D955EA24"
+        "72F43EED-2BCE-53A9-96B6-AD929D147F76"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -212795,7 +212815,7 @@
         "01b9b8d8-7e73-576d-b9e4-04bc358d7d68",
         "8c90b9f7-8300-575c-8e5f-66cd3cefcd3d",
         "448685D6-C7B5-5699-A345-B39A68490449",
-        "303DA889-828E-5325-AF4F-568656CA4F89"
+        "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -213401,9 +213421,9 @@
         "A2E1EBE1-21F0-55F6-AAF1-7DB1C0CF6464",
         "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
         "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
+        "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345",
         "3535426b-5531-514f-924b-eb72e9a1c3e5",
-        "8c90b9f7-8300-575c-8e5f-66cd3cefcd3d",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
+        "8c90b9f7-8300-575c-8e5f-66cd3cefcd3d"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -213452,6 +213472,7 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345",
         "9757C81E-088E-5540-A5BB-92D8B5FC5B12",
         "ccda9933-558b-5739-9162-16cc68721d8b",
         "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
@@ -213563,12 +213584,12 @@
       "relatedTourIds": [
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "0E6BF83D-E164-5CD3-99D4-4BF76E52108F",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "0457F251-0920-593D-85C3-1AA6B78C06AA",
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
-        "13A47D23-4B42-56D5-B7A9-D278DF551054",
-        "EAFB18D0-A2C3-5F67-BA91-11401D054727",
-        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38"
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "13A47D23-4B42-56D5-B7A9-D278DF551054"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -213619,11 +213640,11 @@
         "03DDD431-E79D-5C58-B540-F59A8F7FC405",
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "9757C81E-088E-5540-A5BB-92D8B5FC5B12",
         "75467889-B05B-536A-98EF-AC00E4ACFA45",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
-        "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD",
-        "E3E19249-703B-5AF6-A88F-3077D955EA24"
+        "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -213726,14 +213747,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
         "3CC5BE63-2B9F-5762-8AEA-F6F3B8DEEC64",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
         "249FA2B5-EE0D-5213-AA7C-7E1BD651047F",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "721EA196-A5FD-5FCB-A648-9DE42B4487C3",
         "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
-        "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
-        "97DC172B-7509-509B-8B43-EA3D51EC61B4"
+        "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -213899,9 +213920,9 @@
         "3CC5BE63-2B9F-5762-8AEA-F6F3B8DEEC64",
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
         "13A47D23-4B42-56D5-B7A9-D278DF551054",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
         "3B24430F-2B47-52A7-8186-869DBA92B9C2",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
-        "D4901F42-A6AE-58BB-81E3-75B0E791B85B"
+        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -214008,11 +214029,11 @@
         "13A47D23-4B42-56D5-B7A9-D278DF551054",
         "0457F251-0920-593D-85C3-1AA6B78C06AA",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD",
         "79E94196-6BEE-5CE1-B7E9-E05839CB8AC0",
-        "511e0071-e33f-5533-8337-c0ca23488cff",
-        "97DC172B-7509-509B-8B43-EA3D51EC61B4",
-        "044B4EE6-5C21-568B-A1C4-303CB35BE306"
+        "511e0071-e33f-5533-8337-c0ca23488cff"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214234,7 +214255,7 @@
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "3CC5BE63-2B9F-5762-8AEA-F6F3B8DEEC64",
         "B17CF8BD-5558-51E1-B05C-B2FFCFD4ACDA",
-        "DD46B2BB-B21D-57A6-A73E-F5DE131A373D"
+        "ACF4C54D-ECC4-57E0-AFCE-15D896D613E6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214284,11 +214305,11 @@
         "8C840628-7968-5060-8DE8-AF84B8AC25C8",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "9918630C-03B6-54C0-B1B3-A692102903E7",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
         "78839D3C-9E75-50C2-91FA-ACEB63D86376",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
         "8f1bae74-890d-5910-95f2-f26a5fc908d4",
-        "13A47D23-4B42-56D5-B7A9-D278DF551054",
-        "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD"
+        "13A47D23-4B42-56D5-B7A9-D278DF551054"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214338,11 +214359,11 @@
         "74AB2A77-C7ED-5534-8557-E8AE900C444F",
         "511e0071-e33f-5533-8337-c0ca23488cff",
         "92C69ED8-BBA7-53F2-B3D8-1D6C930C91B2",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
         "B17CF8BD-5558-51E1-B05C-B2FFCFD4ACDA",
         "1DDD060F-CD20-5600-8D05-6022A476E4E1",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
-        "044B4EE6-5C21-568B-A1C4-303CB35BE306"
+        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214501,10 +214522,10 @@
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "0E284BC4-6963-574E-A5E3-1486E53BC494",
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "0E6BF83D-E164-5CD3-99D4-4BF76E52108F",
-        "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
-        "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
-        "78839D3C-9E75-50C2-91FA-ACEB63D86376"
+        "DD46B2BB-B21D-57A6-A73E-F5DE131A373D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214554,11 +214575,11 @@
         "8c90b9f7-8300-575c-8e5f-66cd3cefcd3d",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "DE77E4FB-E343-5544-A763-0BC24E27D914",
         "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
         "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD",
-        "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214656,7 +214677,7 @@
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
         "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
-        "0E284BC4-6963-574E-A5E3-1486E53BC494"
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214707,10 +214728,10 @@
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
         "72F43EED-2BCE-53A9-96B6-AD929D147F76",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "0E284BC4-6963-574E-A5E3-1486E53BC494",
-        "595E19F1-68C3-5E0F-A0A3-562118C77205",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
-        "DE77E4FB-E343-5544-A763-0BC24E27D914"
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "595E19F1-68C3-5E0F-A0A3-562118C77205"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214812,13 +214833,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
         "9918630C-03B6-54C0-B1B3-A692102903E7",
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
-        "044B4EE6-5C21-568B-A1C4-303CB35BE306",
-        "0E284BC4-6963-574E-A5E3-1486E53BC494",
-        "EAFB18D0-A2C3-5F67-BA91-11401D054727"
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "044B4EE6-5C21-568B-A1C4-303CB35BE306"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214866,13 +214887,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "7D6406B2-6E52-53E9-88D0-846677EFD928",
         "3AF22375-6042-55EC-863D-24F1E56144DB",
         "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
         "469BB885-39A6-51D1-A47A-6379A5B68D4B",
-        "F24E96BA-2291-51C4-939D-81460DD1C5F3",
-        "721EA196-A5FD-5FCB-A648-9DE42B4487C3"
+        "F24E96BA-2291-51C4-939D-81460DD1C5F3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214973,14 +214994,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "56C9B6DD-38B8-5227-8E11-AE6EAFFC083C",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "07040EB2-EA63-5341-8DC0-AACF247F68C3",
         "8DBE5099-D3E9-5AB0-B361-78580B68530D",
-        "97DC172B-7509-509B-8B43-EA3D51EC61B4",
-        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
-        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC"
+        "97DC172B-7509-509B-8B43-EA3D51EC61B4"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215028,13 +215049,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
         "3AF22375-6042-55EC-863D-24F1E56144DB",
         "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
         "402A59AC-EC01-5908-B32D-05B30D4C632E",
-        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
-        "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
-        "7D6406B2-6E52-53E9-88D0-846677EFD928"
+        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215247,10 +215268,10 @@
         "0E6BF83D-E164-5CD3-99D4-4BF76E52108F",
         "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
-        "9918630C-03B6-54C0-B1B3-A692102903E7",
-        "97DC172B-7509-509B-8B43-EA3D51EC61B4"
+        "448946F1-25C9-5FCF-8026-291CDFE283DF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215304,7 +215325,7 @@
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
         "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
         "F5FDA7CB-A9AE-5CF1-B8B6-848BBB9BA6F6",
-        "0E6BF83D-E164-5CD3-99D4-4BF76E52108F"
+        "448946F1-25C9-5FCF-8026-291CDFE283DF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215356,9 +215377,9 @@
         "B065FA79-D0A9-5A25-B07E-F642CE4A026E",
         "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38",
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
+        "ACF4C54D-ECC4-57E0-AFCE-15D896D613E6",
         "081392A5-7C74-58DD-B5AE-47E5C0AD33F5",
-        "7401FF11-992D-5D70-8627-40C174CD3C8B",
-        "2013D096-038A-5AE6-9DB2-1B0538B8A94C"
+        "9B8123D2-9902-5E30-814D-0ADE308677EB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215568,13 +215589,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "78839D3C-9E75-50C2-91FA-ACEB63D86376",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
         "3B24430F-2B47-52A7-8186-869DBA92B9C2",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
-        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38",
-        "90F7C175-A454-51E4-BCA6-0C291D2D4E63"
+        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215624,11 +215645,11 @@
         "DD434A9B-646F-5BDF-A37C-5A25DF36632B",
         "DE77E4FB-E343-5544-A763-0BC24E27D914",
         "581FB85F-5792-5C31-825E-C5099B914253",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "F5FDA7CB-A9AE-5CF1-B8B6-848BBB9BA6F6",
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
-        "9918630C-03B6-54C0-B1B3-A692102903E7",
-        "52B088B7-AF41-57A3-A6A3-C398A17413EC"
+        "9918630C-03B6-54C0-B1B3-A692102903E7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215732,7 +215753,10 @@
         "4A5A6FBC-F145-56B7-BEB2-FD424ED6B268",
         "D5ABB283-F307-5593-816F-846B4759D7DA",
         "20EBDBF9-FC51-5AEB-BA3D-BD72508C409B",
-        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0"
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "E0142550-AC28-5780-970B-7BC24DEA421B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -215782,7 +215806,10 @@
         "4A5A6FBC-F145-56B7-BEB2-FD424ED6B268",
         "9587ADF3-AEA4-5498-AA43-D61A2637E5AB",
         "20EBDBF9-FC51-5AEB-BA3D-BD72508C409B",
-        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0"
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "E0142550-AC28-5780-970B-7BC24DEA421B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -216046,13 +216073,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "081392A5-7C74-58DD-B5AE-47E5C0AD33F5",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "3B24430F-2B47-52A7-8186-869DBA92B9C2",
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
         "90F7C175-A454-51E4-BCA6-0C291D2D4E63",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
-        "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
-        "992884D6-5002-5D0F-B5E6-8F8C45C68CD5"
+        "AF3C03FA-BE74-547D-A254-CB159D0A8FF2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -216264,7 +216291,11 @@
         "20EBDBF9-FC51-5AEB-BA3D-BD72508C409B",
         "9587ADF3-AEA4-5498-AA43-D61A2637E5AB",
         "D5ABB283-F307-5593-816F-846B4759D7DA",
-        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0"
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0",
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -216588,7 +216619,7 @@
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "3B24430F-2B47-52A7-8186-869DBA92B9C2",
-        "13A47D23-4B42-56D5-B7A9-D278DF551054"
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -216694,9 +216725,9 @@
         "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
         "9CA15C03-B1EE-5E51-8B9D-C1384E811F13",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "3AF22375-6042-55EC-863D-24F1E56144DB",
-        "2BA6CB8A-99F8-54C3-9DA0-24E3EC70AF95",
-        "7D6406B2-6E52-53E9-88D0-846677EFD928"
+        "2BA6CB8A-99F8-54C3-9DA0-24E3EC70AF95"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -216744,13 +216775,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
         "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
         "469BB885-39A6-51D1-A47A-6379A5B68D4B",
         "3AF22375-6042-55EC-863D-24F1E56144DB",
-        "3BF00763-D9BB-5C02-9992-F6E069CFFEDF",
-        "402A59AC-EC01-5908-B32D-05B30D4C632E"
+        "3BF00763-D9BB-5C02-9992-F6E069CFFEDF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -216910,9 +216941,9 @@
         "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD",
         "DD434A9B-646F-5BDF-A37C-5A25DF36632B",
         "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
-        "3B24430F-2B47-52A7-8186-869DBA92B9C2",
-        "595E19F1-68C3-5E0F-A0A3-562118C77205"
+        "3B24430F-2B47-52A7-8186-869DBA92B9C2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217016,11 +217047,11 @@
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "01b9b8d8-7e73-576d-b9e4-04bc358d7d68",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
         "081392A5-7C74-58DD-B5AE-47E5C0AD33F5",
-        "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD",
-        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC"
+        "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217074,7 +217105,7 @@
         "615365F4-7BA0-5111-A9E7-91863F3851E1",
         "F5FDA7CB-A9AE-5CF1-B8B6-848BBB9BA6F6",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
-        "07040EB2-EA63-5341-8DC0-AACF247F68C3"
+        "448946F1-25C9-5FCF-8026-291CDFE283DF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217122,13 +217153,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "469BB885-39A6-51D1-A47A-6379A5B68D4B",
         "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
         "3AF22375-6042-55EC-863D-24F1E56144DB",
         "7D6406B2-6E52-53E9-88D0-846677EFD928",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
-        "402A59AC-EC01-5908-B32D-05B30D4C632E",
-        "2BA6CB8A-99F8-54C3-9DA0-24E3EC70AF95"
+        "402A59AC-EC01-5908-B32D-05B30D4C632E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217231,12 +217262,12 @@
       "relatedTourIds": [
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "9A49FD4D-89CA-5E33-9E1C-8655FEE46DB5",
         "992884D6-5002-5D0F-B5E6-8F8C45C68CD5",
         "0E6BF83D-E164-5CD3-99D4-4BF76E52108F",
-        "EAFB18D0-A2C3-5F67-BA91-11401D054727",
-        "044B4EE6-5C21-568B-A1C4-303CB35BE306",
-        "90F7C175-A454-51E4-BCA6-0C291D2D4E63"
+        "EAFB18D0-A2C3-5F67-BA91-11401D054727"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217392,13 +217423,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "25013644-EE30-5293-B35E-EDFF9902495B",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "B636E965-D5AF-5345-8904-0AE861A0D40D",
         "23A18095-A91D-54D3-B568-195EB039880B",
         "3B56F182-B41E-5124-B0FD-59CF494AEF5C",
         "90F7C175-A454-51E4-BCA6-0C291D2D4E63",
         "B17CF8BD-5558-51E1-B05C-B2FFCFD4ACDA",
-        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
-        "1DDD060F-CD20-5600-8D05-6022A476E4E1"
+        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217499,14 +217530,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "DE77E4FB-E343-5544-A763-0BC24E27D914",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
-        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38",
-        "DD434A9B-646F-5BDF-A37C-5A25DF36632B",
-        "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
-        "13A47D23-4B42-56D5-B7A9-D278DF551054",
-        "74AB2A77-C7ED-5534-8557-E8AE900C444F"
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217557,10 +217588,10 @@
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
         "3AF22375-6042-55EC-863D-24F1E56144DB",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
         "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
-        "7D6406B2-6E52-53E9-88D0-846677EFD928",
-        "402A59AC-EC01-5908-B32D-05B30D4C632E",
-        "0E284BC4-6963-574E-A5E3-1486E53BC494"
+        "7D6406B2-6E52-53E9-88D0-846677EFD928"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217608,13 +217639,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "9A49FD4D-89CA-5E33-9E1C-8655FEE46DB5",
         "79E94196-6BEE-5CE1-B7E9-E05839CB8AC0",
         "9918630C-03B6-54C0-B1B3-A692102903E7",
-        "52B088B7-AF41-57A3-A6A3-C398A17413EC",
-        "DD46B2BB-B21D-57A6-A73E-F5DE131A373D"
+        "52B088B7-AF41-57A3-A6A3-C398A17413EC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217717,12 +217748,12 @@
       "relatedTourIds": [
         "DD434A9B-646F-5BDF-A37C-5A25DF36632B",
         "DE77E4FB-E343-5544-A763-0BC24E27D914",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "56C9B6DD-38B8-5227-8E11-AE6EAFFC083C",
         "581FB85F-5792-5C31-825E-C5099B914253",
-        "97DC172B-7509-509B-8B43-EA3D51EC61B4",
-        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
-        "F5FDA7CB-A9AE-5CF1-B8B6-848BBB9BA6F6"
+        "97DC172B-7509-509B-8B43-EA3D51EC61B4"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -217922,13 +217953,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
         "8DBE5099-D3E9-5AB0-B361-78580B68530D",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "303DA889-828E-5325-AF4F-568656CA4F89",
-        "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
-        "23A18095-A91D-54D3-B568-195EB039880B",
-        "90F7C175-A454-51E4-BCA6-0C291D2D4E63"
+        "D4901F42-A6AE-58BB-81E3-75B0E791B85B"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -218354,13 +218385,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
         "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
         "90F7C175-A454-51E4-BCA6-0C291D2D4E63",
-        "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
-        "3535426b-5531-514f-924b-eb72e9a1c3e5",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -218569,7 +218600,7 @@
         "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
         "DE77E4FB-E343-5544-A763-0BC24E27D914",
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
-        "044B4EE6-5C21-568B-A1C4-303CB35BE306"
+        "9B8123D2-9902-5E30-814D-0ADE308677EB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -218618,12 +218649,12 @@
       "relatedTourIds": [
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
         "908EBB83-17C2-51D6-8BB8-1E83532D0D9B",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
         "90F7C175-A454-51E4-BCA6-0C291D2D4E63",
-        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
-        "97DC172B-7509-509B-8B43-EA3D51EC61B4",
-        "24865C60-7C18-5775-8CBD-819A25C77BAF"
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -218670,14 +218701,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "8BA651AA-75A3-5D32-857A-B4197D29A6FE",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
         "CAD34610-AD6C-547B-9592-4BEB474BCEA2",
+        "1FD8A29A-04D3-50FE-97A7-00C82CAEF087",
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
-        "DE77E4FB-E343-5544-A763-0BC24E27D914",
-        "72F43EED-2BCE-53A9-96B6-AD929D147F76",
-        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
-        "726AB861-8269-51C3-AAE8-2D23395974A5",
-        "8DBE5099-D3E9-5AB0-B361-78580B68530D",
-        "79E94196-6BEE-5CE1-B7E9-E05839CB8AC0"
+        "88ED8824-81D0-54C0-A16C-2A6261DF04AA"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -218893,9 +218924,9 @@
         "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
-        "DD434A9B-646F-5BDF-A37C-5A25DF36632B",
-        "2BA6CB8A-99F8-54C3-9DA0-24E3EC70AF95"
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -219003,9 +219034,9 @@
         "B22EA98A-C566-5DA9-B642-AD9700AC7BDB",
         "EAFB18D0-A2C3-5F67-BA91-11401D054727",
         "0E6BF83D-E164-5CD3-99D4-4BF76E52108F",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
-        "044B4EE6-5C21-568B-A1C4-303CB35BE306",
-        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38"
+        "044B4EE6-5C21-568B-A1C4-303CB35BE306"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -219109,13 +219140,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "2013D096-038A-5AE6-9DB2-1B0538B8A94C",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "DD434A9B-646F-5BDF-A37C-5A25DF36632B",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
-        "52B088B7-AF41-57A3-A6A3-C398A17413EC",
-        "469BB885-39A6-51D1-A47A-6379A5B68D4B",
-        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38",
-        "113D8966-5620-5394-A190-C2A40D8D6BA3"
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "52B088B7-AF41-57A3-A6A3-C398A17413EC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -219164,13 +219195,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
         "469BB885-39A6-51D1-A47A-6379A5B68D4B",
-        "7D6406B2-6E52-53E9-88D0-846677EFD928",
-        "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
-        "B231886D-417F-5006-B9F3-2C6993DF56C0",
-        "3AF22375-6042-55EC-863D-24F1E56144DB",
-        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38"
+        "7D6406B2-6E52-53E9-88D0-846677EFD928"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -219219,12 +219250,12 @@
       "relatedTourIds": [
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
         "90F7C175-A454-51E4-BCA6-0C291D2D4E63",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "B231886D-417F-5006-B9F3-2C6993DF56C0",
         "74AB2A77-C7ED-5534-8557-E8AE900C444F",
         "0E284BC4-6963-574E-A5E3-1486E53BC494",
-        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
-        "24865C60-7C18-5775-8CBD-819A25C77BAF",
-        "9C98D9BB-2566-5648-AA7F-BBF1CE45E806"
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -220066,14 +220097,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "24865C60-7C18-5775-8CBD-819A25C77BAF",
-        "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC",
-        "044B4EE6-5C21-568B-A1C4-303CB35BE306",
-        "EAFB18D0-A2C3-5F67-BA91-11401D054727",
-        "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
-        "595E19F1-68C3-5E0F-A0A3-562118C77205",
-        "DD46B2BB-B21D-57A6-A73E-F5DE131A373D",
-        "90F986E4-F998-5B13-84C6-FD825688052D"
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "88ED8824-81D0-54C0-A16C-2A6261DF04AA",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -221318,8 +221349,12 @@
       "country": "Japan",
       "relatedTourIds": [
         "4A5A6FBC-F145-56B7-BEB2-FD424ED6B268",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
         "D5ABB283-F307-5593-816F-846B4759D7DA",
         "9587ADF3-AEA4-5498-AA43-D61A2637E5AB",
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
         "20EBDBF9-FC51-5AEB-BA3D-BD72508C409B"
       ],
       "primaryCategory": "foodAndDrink",
@@ -222224,7 +222259,11 @@
         "4A5A6FBC-F145-56B7-BEB2-FD424ED6B268",
         "9587ADF3-AEA4-5498-AA43-D61A2637E5AB",
         "D5ABB283-F307-5593-816F-846B4759D7DA",
-        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0"
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0",
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "E0142550-AC28-5780-970B-7BC24DEA421B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224294,6 +224333,2071 @@
         "Food",
         "Venue",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
+      "createdAt": "2026-09-16",
+      "title": "went back to my favorite sushi place in Tokyo and found @…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "went back to my favorite sushi place in Tokyo and found @officialdrpepperman 📍(Fujisaku) 〒130-0013 東京都墨田区錦糸４丁目５−6 越後屋ビル １０２ #japanesefood #sushi #mukbang #foodreview #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/went-back-to-my-favorite-sushi-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7612297099178282254",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "D26202C0-1348-55D1-A3ED-33C2D67267EC",
+          "order": 0,
+          "title": "went back to my favorite sushi place in Tokyo and found @…",
+          "caption": "went back to my favorite sushi place in Tokyo and found @officialdrpepperman 📍(Fujisaku) 〒130-0013 東京都墨田区錦糸４丁目５−6 越後屋ビル １０２ #japanesefood #s",
+          "latitude": 35.698602,
+          "longitude": 139.817174,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/went-back-to-my-favorite-sushi-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.698602,
+      "centroidLongitude": 139.817174,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "CCDB04F2-E668-5358-B766-177513956FD7",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "469BB885-39A6-51D1-A47A-6379A5B68D4B",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54E19E19-B485-5CD0-B48B-C52AD566DCA8",
+      "createdAt": "2026-09-16",
+      "title": "POV: Finding Empty Grandma Restaurant in Japan 📍Kariyushi…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Finding Empty Grandma Restaurant in Japan 📍Kariyushi かりゆし Japan, 〒337-0051 Saitama, Minuma Ward, Higashiomiya, 4 Chome−２７−1 #wholesome #mukbang #exploringjapan",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-finding-empty-grandma-restaurant-in-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7674635706827853069",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "123EE4FE-FFEB-5268-97C0-99A2CBF8BD65",
+          "order": 0,
+          "title": "POV: Finding Empty Grandma Restaurant in Japan 📍Kariyushi…",
+          "caption": "POV: Finding Empty Grandma Restaurant in Japan 📍Kariyushi かりゆし Japan, 〒337-0051 Saitama, Minuma Ward, Higashiomiya, 4 Chome−２７−1 #wholesome ",
+          "latitude": 35.9507407,
+          "longitude": 139.6405855,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-finding-empty-grandma-restaurant-in-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.9507407,
+      "centroidLongitude": 139.6405855,
+      "city": "Saitama",
+      "country": "Japan",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+      "createdAt": "2026-09-16",
+      "title": "POV: Supporting Empty Local Restaurants in Tokyo, Japan 📍…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Supporting Empty Local Restaurants in Tokyo, Japan 📍 三勇鮨 Japan, 〒151-0072 Tokyo, Shibuya, Hatagaya, 3 Chome−21−3 三勇ずし #foodreview #japanesefood #sushi #mukbang",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-supporting-empty-local-restaurants-in-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7644592795159760141",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "5C0449C9-09BF-52DB-BD74-C80E05037A03",
+          "order": 0,
+          "title": "POV: Supporting Empty Local Restaurants in Tokyo, Japan 📍…",
+          "caption": "POV: Supporting Empty Local Restaurants in Tokyo, Japan 📍 三勇鮨 Japan, 〒151-0072 Tokyo, Shibuya, Hatagaya, 3 Chome−21−3 三勇ずし #foodreview #japa",
+          "latitude": 35.6798841,
+          "longitude": 139.6735301,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-supporting-empty-local-restaurants-in-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6798841,
+      "centroidLongitude": 139.6735301,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+      "createdAt": "2026-09-16",
+      "title": "POV: Going to mom n pop restaurant with no customers in J…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Going to mom n pop restaurant with no customers in Japan Restaurant 📍 Bistrot Lyon レストラン リヨン #foodreview #japanesefood #mukbang #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-going-to-mom-n-pop-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7642365607383469326",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "F90E5F91-DE8B-5948-B48B-A492284F7C25",
+          "order": 0,
+          "title": "POV: Going to mom n pop restaurant with no customers in J…",
+          "caption": "POV: Going to mom n pop restaurant with no customers in Japan Restaurant 📍 Bistrot Lyon レストラン リヨン #foodreview #japanesefood #mukbang #wholes",
+          "latitude": 35.7355627,
+          "longitude": 139.820369,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-going-to-mom-n-pop-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7355627,
+      "centroidLongitude": 139.820369,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+      "createdAt": "2026-09-16",
+      "title": "POV: I Walked Into the Most Beautiful Cafe in Osaka, Japa…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: I Walked Into the Most Beautiful Cafe in Osaka, Japan 📍 8-15 Obasecho, Tennoji Ward, Osaka, 543-0028, Japan #exploringjapan #foodreview #mukbang #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-walked-into-the-most-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7639025430506278157",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "02C64D58-EFC7-5286-840F-4C1A7007F9EC",
+          "order": 0,
+          "title": "POV: I Walked Into the Most Beautiful Cafe in Osaka, Japa…",
+          "caption": "POV: I Walked Into the Most Beautiful Cafe in Osaka, Japan 📍 8-15 Obasecho, Tennoji Ward, Osaka, 543-0028, Japan #exploringjapan #foodreview",
+          "latitude": 34.6664772,
+          "longitude": 135.525411,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-walked-into-the-most-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.6664772,
+      "centroidLongitude": 135.525411,
+      "city": "Osaka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "A9E9FAA5-C650-5E9A-B064-2111E3A9FC54",
+        "7B586F37-2057-5677-8045-6D240F5D723F",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+        "9587ADF3-AEA4-5498-AA43-D61A2637E5AB",
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4A883783-4A4B-5561-8564-49D5652089F2",
+      "createdAt": "2026-09-16",
+      "title": "POV: Trying Grandma’s Empty Restaurant in Tokyo, Japan Sh…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Trying Grandma’s Empty Restaurant in Tokyo, Japan Shop name: Aletta アレッタ 📍 〒152-0003 東京都目黒区碑文谷１丁目１３−18 #exploringjapan #foodreview #mukbang #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-grandma-s-empty-restaurant-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7633093611843783949",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "7806C397-547B-5C23-A0F5-6557E754A3AA",
+          "order": 0,
+          "title": "POV: Trying Grandma’s Empty Restaurant in Tokyo, Japan Sh…",
+          "caption": "POV: Trying Grandma’s Empty Restaurant in Tokyo, Japan Shop name: Aletta アレッタ 📍 〒152-0003 東京都目黒区碑文谷１丁目１３−18 #exploringjapan #foodreview #muk",
+          "latitude": 35.6220438,
+          "longitude": 139.6855136,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-grandma-s-empty-restaurant-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6220438,
+      "centroidLongitude": 139.6855136,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "FF117D9D-48DE-515C-9D1B-C9C5542CF536",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7B586F37-2057-5677-8045-6D240F5D723F",
+      "createdAt": "2026-09-16",
+      "title": "POV: Ordering Food From a Deaf Chef in Japan Shop: Italia…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Ordering Food From a Deaf Chef in Japan Shop: Italian Bar Bere Bene (Osaka, Tenma) 📍 10-10 Ikedacho, Kita Ward, Osaka #exploringjapan #foodreview #mukbang #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-ordering-food-from-a-deaf-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7626041466833423630",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "B4BCAC8E-4213-53A6-A411-A195E476F9A5",
+          "order": 0,
+          "title": "POV: Ordering Food From a Deaf Chef in Japan Shop: Italia…",
+          "caption": "POV: Ordering Food From a Deaf Chef in Japan Shop: Italian Bar Bere Bene (Osaka, Tenma) 📍 10-10 Ikedacho, Kita Ward, Osaka #exploringjapan #",
+          "latitude": 34.7071255,
+          "longitude": 135.5137954,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-ordering-food-from-a-deaf-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.7071255,
+      "centroidLongitude": 135.5137954,
+      "city": "Osaka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "A9E9FAA5-C650-5E9A-B064-2111E3A9FC54",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "20899139-EC03-5B8F-9FCA-03CCFB286039",
+      "createdAt": "2026-09-16",
+      "title": "POV: A hidden Japanese restaurant with dogs inside Restau…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: A hidden Japanese restaurant with dogs inside Restaurant Name: 70 NAGOMI 📍: 3 Chome-8-12 Motomachi, Naniwa Ward, Osaka, 556-0016, Japan #exploringjapan #japanesefood #foodreview #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-a-hidden-japanese-restaurant-with-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7621215858378984717",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "1FFD3102-CDEA-5260-96EB-0E31CAC18D99",
+          "order": 0,
+          "title": "POV: A hidden Japanese restaurant with dogs inside Restau…",
+          "caption": "POV: A hidden Japanese restaurant with dogs inside Restaurant Name: 70 NAGOMI 📍: 3 Chome-8-12 Motomachi, Naniwa Ward, Osaka, 556-0016, Japan",
+          "latitude": 34.6650776,
+          "longitude": 135.496897,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-a-hidden-japanese-restaurant-with-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.6650776,
+      "centroidLongitude": 135.496897,
+      "city": "Osaka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
+        "7B586F37-2057-5677-8045-6D240F5D723F",
+        "A9E9FAA5-C650-5E9A-B064-2111E3A9FC54",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+        "20EBDBF9-FC51-5AEB-BA3D-BD72508C409B",
+        "9587ADF3-AEA4-5498-AA43-D61A2637E5AB"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "494C8896-F6B6-5337-8994-47E6CA433DD8",
+      "createdAt": "2026-09-16",
+      "title": "The kindest father-daughter restaurant in Japan 📍(Tobita)…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "The kindest father-daughter restaurant in Japan 📍(Tobita) 〒135-0013 東京都江東区千田６−2 #japanesefood #mukbang #foodreview #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-kindest-father-daughter-restaurant-in-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7614175165265628429",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "3D170A0E-DB80-5BDF-8735-481205A4B66E",
+          "order": 0,
+          "title": "The kindest father-daughter restaurant in Japan 📍(Tobita)…",
+          "caption": "The kindest father-daughter restaurant in Japan 📍(Tobita) 〒135-0013 東京都江東区千田６−2 #japanesefood #mukbang #foodreview #wholesome",
+          "latitude": 35.681155,
+          "longitude": 139.815615,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-kindest-father-daughter-restaurant-in-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.681155,
+      "centroidLongitude": 139.815615,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "232C29BB-21E1-50D1-8C85-C8B48D133073",
+        "09B791DC-EB8B-5E86-9C37-05C622C6E575",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+      "createdAt": "2026-09-16",
+      "title": "This owner runs this Restaurant all by himself in Tokyo,…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "This owner runs this Restaurant all by himself in Tokyo, Japan 📍 Japan, 〒160-0021 Tokyo, Shinjuku City, Kabukicho, 2 Chome−22−1 ホテルシェーナ 2F ##japanesefood##mukbang##foodreview##wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-owner-runs-this-restaurant-all-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7604883868583349517",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "05D54111-2FE9-5373-9798-8AC0647286DA",
+          "order": 0,
+          "title": "This owner runs this Restaurant all by himself in Tokyo,…",
+          "caption": "This owner runs this Restaurant all by himself in Tokyo, Japan 📍 Japan, 〒160-0021 Tokyo, Shinjuku City, Kabukicho, 2 Chome−22−1 ホテルシェーナ 2F #",
+          "latitude": 35.6945429,
+          "longitude": 139.7027105,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-owner-runs-this-restaurant-all-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6945429,
+      "centroidLongitude": 139.7027105,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "8B17681D-CE62-5FE3-85CF-5C261E9433AA"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+      "createdAt": "2026-09-16",
+      "title": "Finding the best family owned restaurants in Japan 📍 〒130…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "Finding the best family owned restaurants in Japan 📍 〒130-0013 東京都墨田区錦糸２丁目４−3 #japanesefood #wholesome #mukbang #foodreview",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/finding-the-best-family-owned-restaurants-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7603435927188425997",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "F2218346-D6BD-5607-B3A6-F61295FDE055",
+          "order": 0,
+          "title": "Finding the best family owned restaurants in Japan 📍 〒130…",
+          "caption": "Finding the best family owned restaurants in Japan 📍 〒130-0013 東京都墨田区錦糸２丁目４−3 #japanesefood #wholesome #mukbang #foodreview",
+          "latitude": 35.698388,
+          "longitude": 139.812637,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/finding-the-best-family-owned-restaurants-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.698388,
+      "centroidLongitude": 139.812637,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "494C8896-F6B6-5337-8994-47E6CA433DD8",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "09B791DC-EB8B-5E86-9C37-05C622C6E575"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+      "createdAt": "2026-09-16",
+      "title": "I found this Mom n Pop Restaurant in Tokyo 📍 3 Chome-6-14…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "I found this Mom n Pop Restaurant in Tokyo 📍 3 Chome-6-14 Yanaka, Taito City, Tokyo 110-0001, Japan #mukbang #japanesefood #foodreview #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-found-this-mom-n-pop-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7597466090008038670",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "2158A9A6-E503-5709-8756-9741F4D19241",
+          "order": 0,
+          "title": "I found this Mom n Pop Restaurant in Tokyo 📍 3 Chome-6-14…",
+          "caption": "I found this Mom n Pop Restaurant in Tokyo 📍 3 Chome-6-14 Yanaka, Taito City, Tokyo 110-0001, Japan #mukbang #japanesefood #foodreview #whol",
+          "latitude": 35.726835,
+          "longitude": 139.7658348,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-found-this-mom-n-pop-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.726835,
+      "centroidLongitude": 139.7658348,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "09B791DC-EB8B-5E86-9C37-05C622C6E575",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "4A883783-4A4B-5561-8564-49D5652089F2"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9B8123D2-9902-5E30-814D-0ADE308677EB",
+      "createdAt": "2026-09-16",
+      "title": "Mom N Pop Restaurant In Japan 📍 3 Chome-20-2 Taito, Taito…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "Mom N Pop Restaurant In Japan 📍 3 Chome-20-2 Taito, Taito City, Tokyo 110-0016, Japan (Matsuyama Sushi) #foodreview #mukbang #sushi #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mom-n-pop-restaurant-in-japan-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7593134724667788599",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "45EDEC6A-3002-50E4-B9A7-EF41B624E067",
+          "order": 0,
+          "title": "Mom N Pop Restaurant In Japan 📍 3 Chome-20-2 Taito, Taito…",
+          "caption": "Mom N Pop Restaurant In Japan 📍 3 Chome-20-2 Taito, Taito City, Tokyo 110-0016, Japan (Matsuyama Sushi) #foodreview #mukbang #sushi #wholeso",
+          "latitude": 35.7048147,
+          "longitude": 139.779156,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mom-n-pop-restaurant-in-japan-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7048147,
+      "centroidLongitude": 139.779156,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "CCDB04F2-E668-5358-B766-177513956FD7",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "448946F1-25C9-5FCF-8026-291CDFE283DF",
+      "createdAt": "2026-09-16",
+      "title": "Finding the best local sushi in Tokyo 📍 2 Chome-28-38 Hon…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "Finding the best local sushi in Tokyo 📍 2 Chome-28-38 Honkomagome, Bunkyo City, Tokyo 113-0021, Japan #mukbang #japanesefood #sushi #exploringjapan",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/finding-the-best-local-sushi-in-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7583688932877995319",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "4433E865-4291-545F-A526-55C5A48F769A",
+          "order": 0,
+          "title": "Finding the best local sushi in Tokyo 📍 2 Chome-28-38 Hon…",
+          "caption": "Finding the best local sushi in Tokyo 📍 2 Chome-28-38 Honkomagome, Bunkyo City, Tokyo 113-0021, Japan #mukbang #japanesefood #sushi #explori",
+          "latitude": 35.728664,
+          "longitude": 139.7483723,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/finding-the-best-local-sushi-in-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.728664,
+      "centroidLongitude": 139.7483723,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
+        "97DC172B-7509-509B-8B43-EA3D51EC61B4",
+        "CCDB04F2-E668-5358-B766-177513956FD7",
+        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
+        "469BB885-39A6-51D1-A47A-6379A5B68D4B",
+        "D4901F42-A6AE-58BB-81E3-75B0E791B85B"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1FD8A29A-04D3-50FE-97A7-00C82CAEF087",
+      "createdAt": "2026-09-16",
+      "title": "美ら菜苑 (ChuraSaien) hidden gem restaurant in Tokyo is amazi…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "美ら菜苑 (ChuraSaien) hidden gem restaurant in Tokyo is amazing #mukbang #foodreview #japanesefood #mypov",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churasaien-hidden-gem-restaurant-in-tokyo-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7573712844680596750",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "1F29E595-34F7-53CC-8836-6F38B4E748DE",
+          "order": 0,
+          "title": "美ら菜苑 (ChuraSaien) hidden gem restaurant in Tokyo is amazi…",
+          "caption": "美ら菜苑 (ChuraSaien) hidden gem restaurant in Tokyo is amazing #mukbang #foodreview #japanesefood #mypov",
+          "latitude": 35.668438,
+          "longitude": 139.763386,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churasaien-hidden-gem-restaurant-in-tokyo-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.668438,
+      "centroidLongitude": 139.763386,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "90F986E4-F998-5B13-84C6-FD825688052D",
+        "8BA651AA-75A3-5D32-857A-B4197D29A6FE",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "4A883783-4A4B-5561-8564-49D5652089F2"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8BA651AA-75A3-5D32-857A-B4197D29A6FE",
+      "createdAt": "2026-09-16",
+      "title": "POV: I found a hidden steak restaurant in Tokyo, Japan #e…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: I found a hidden steak restaurant in Tokyo, Japan #exploringjapan #TokyoFood #wholesome #mukbang",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-found-a-hidden-steak-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7681308232303906061",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "F8E5E76C-9ED4-559C-87FA-E82CD8EB9293",
+          "order": 0,
+          "title": "POV: I found a hidden steak restaurant in Tokyo, Japan #e…",
+          "caption": "POV: I found a hidden steak restaurant in Tokyo, Japan #exploringjapan #TokyoFood #wholesome #mukbang",
+          "latitude": 35.7089474,
+          "longitude": 139.7659555,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-found-a-hidden-steak-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7089474,
+      "centroidLongitude": 139.7659555,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "88ED8824-81D0-54C0-A16C-2A6261DF04AA",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "6AEE7FDE-3A43-57D5-9A00-33933C62CD1A",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4105B1AE-54C9-57B8-8F14-0F9C77798D60",
+      "createdAt": "2026-09-16",
+      "title": "POV: Trying Random Japanese Shops in Japan Countryside #f…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Trying Random Japanese Shops in Japan Countryside #foodreview #wholesome #mukbang #japanlife",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-random-japanese-shops-in-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7661289902885178637",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "1AF0032D-9231-5AB5-96CE-D1AF88D81775",
+          "order": 0,
+          "title": "POV: Trying Random Japanese Shops in Japan Countryside #f…",
+          "caption": "POV: Trying Random Japanese Shops in Japan Countryside #foodreview #wholesome #mukbang #japanlife",
+          "latitude": 35.418902,
+          "longitude": 136.761462,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-random-japanese-shops-in-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.418902,
+      "centroidLongitude": 136.761462,
+      "city": "Gifu",
+      "country": "Japan",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "18E6D880-7DCC-5828-87F6-91A71877BADC",
+      "createdAt": "2026-09-16",
+      "title": "80-Year-Old Grandpa Runs This Food Truck Alone in Japan #…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "80-Year-Old Grandpa Runs This Food Truck Alone in Japan #exploringjapan #japanesefood #foodreview #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/80-year-old-grandpa-runs-this-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7623447406310362382",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "C7033D3E-0EB4-5B3A-8E85-2C007DBCBDD1",
+          "order": 0,
+          "title": "80-Year-Old Grandpa Runs This Food Truck Alone in Japan #…",
+          "caption": "80-Year-Old Grandpa Runs This Food Truck Alone in Japan #exploringjapan #japanesefood #foodreview #wholesome",
+          "latitude": 33.5933251,
+          "longitude": 130.3840401,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/80-year-old-grandpa-runs-this-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.5933251,
+      "centroidLongitude": 130.3840401,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
+      "createdAt": "2026-09-16",
+      "title": "The best family owned sushi restaurant in Tokyo ##japanes…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "The best family owned sushi restaurant in Tokyo ##japanesefood##foodreview##sushi##mukbang##exploringjapan",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-best-family-owned-sushi-restaurant-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7569988406265122062",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "0286AB8B-7B67-5D31-9561-C61079CE0F7A",
+          "order": 0,
+          "title": "The best family owned sushi restaurant in Tokyo ##japanes…",
+          "caption": "The best family owned sushi restaurant in Tokyo ##japanesefood##foodreview##sushi##mukbang##exploringjapan",
+          "latitude": 35.6828746,
+          "longitude": 139.8037452,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-best-family-owned-sushi-restaurant-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6828746,
+      "centroidLongitude": 139.8037452,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
+        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CCDB04F2-E668-5358-B766-177513956FD7",
+      "createdAt": "2026-09-16",
+      "title": "Going to 80-year-old grandpa sushi shop in Japan 📍 〒160-0…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "Going to 80-year-old grandpa sushi shop in Japan 📍 〒160-0004 東京都新宿区四谷４丁目28 #japanesefood #sushi #mukbang #foodreview #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/going-to-80-year-old-grandpa-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7614528915473730830",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "5F2DB0EF-6D73-539F-BA0B-E200BFF584F2",
+          "order": 0,
+          "title": "Going to 80-year-old grandpa sushi shop in Japan 📍 〒160-0…",
+          "caption": "Going to 80-year-old grandpa sushi shop in Japan 📍 〒160-0004 東京都新宿区四谷４丁目28 #japanesefood #sushi #mukbang #foodreview #wholesome",
+          "latitude": 35.6861404,
+          "longitude": 139.7286558,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/going-to-80-year-old-grandpa-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6861404,
+      "centroidLongitude": 139.7286558,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "232C29BB-21E1-50D1-8C85-C8B48D133073",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "FF117D9D-48DE-515C-9D1B-C9C5542CF536"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+      "createdAt": "2026-09-16",
+      "title": "I Found an 80 Year Old Udon Chef in Japan 🇯🇵 📍 Fukusushi…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "I Found an 80 Year Old Udon Chef in Japan 🇯🇵 📍 Fukusushi (福寿し) 1 Chome-11-4 Sanno, Nishinari Ward, Osaka #wholesome #mukbang #exploringjapan",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-found-an-80-year-old-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7675389346874166541",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "7DC68BEB-69AF-5C2E-A79C-8560548D37CE",
+          "order": 0,
+          "title": "I Found an 80 Year Old Udon Chef in Japan 🇯🇵 📍 Fukusushi…",
+          "caption": "I Found an 80 Year Old Udon Chef in Japan 🇯🇵 📍 Fukusushi (福寿し) 1 Chome-11-4 Sanno, Nishinari Ward, Osaka #wholesome #mukbang #exploringjapan",
+          "latitude": 34.6472991,
+          "longitude": 135.5069965,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-found-an-80-year-old-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.6472991,
+      "centroidLongitude": 135.5069965,
+      "city": "Osaka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "A9E9FAA5-C650-5E9A-B064-2111E3A9FC54",
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "7B586F37-2057-5677-8045-6D240F5D723F",
+        "4A5A6FBC-F145-56B7-BEB2-FD424ED6B268"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+      "createdAt": "2026-09-16",
+      "title": "POV: Trying an Empty 80 Year Old Restaurant in Tokyo, Jap…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Trying an Empty 80 Year Old Restaurant in Tokyo, Japan Shop: Iga 📍 3 Chome-8-2 Nakano, Nakano City, Tokyo 164-0001, Japan #wholesome #exploringjapan #mukbang #mypov",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-an-empty-80-year-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7663882069797391630",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "69821A2A-DC9E-5FA9-AFDB-0A48245FAA1A",
+          "order": 0,
+          "title": "POV: Trying an Empty 80 Year Old Restaurant in Tokyo, Jap…",
+          "caption": "POV: Trying an Empty 80 Year Old Restaurant in Tokyo, Japan Shop: Iga 📍 3 Chome-8-2 Nakano, Nakano City, Tokyo 164-0001, Japan #wholesome #e",
+          "latitude": 35.7029121,
+          "longitude": 139.6637258,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-an-empty-80-year-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7029121,
+      "centroidLongitude": 139.6637258,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "09B791DC-EB8B-5E86-9C37-05C622C6E575",
+      "createdAt": "2026-09-16",
+      "title": "I Found One of The Most Oldest soba Restaurant in Tokyo,…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "I Found One of The Most Oldest soba Restaurant in Tokyo, Japan 📍 Futaba そば処 冨多葉 〒101-0064 東京都千代田区神田猿楽町２丁目２−9 #foodreview #wholesome #mukbang #japanesefood",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-found-one-of-the-most-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7654980872352926989",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "D7BFC575-20AA-5BD4-A408-354205EAA756",
+          "order": 0,
+          "title": "I Found One of The Most Oldest soba Restaurant in Tokyo,…",
+          "caption": "I Found One of The Most Oldest soba Restaurant in Tokyo, Japan 📍 Futaba そば処 冨多葉 〒101-0064 東京都千代田区神田猿楽町２丁目２−9 #foodreview #wholesome #mukbang",
+          "latitude": 35.6990047,
+          "longitude": 139.7593897,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/i-found-one-of-the-most-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6990047,
+      "centroidLongitude": 139.7593897,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "232C29BB-21E1-50D1-8C85-C8B48D133073",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E0142550-AC28-5780-970B-7BC24DEA421B",
+      "createdAt": "2026-09-16",
+      "title": "POV: I Found an Empty 50 Year Old Cafe in Japan 📍 Japan,…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: I Found an Empty 50 Year Old Cafe in Japan 📍 Japan, 〒558-0031 Osaka, Sumiyoshi Ward, Sawanocho, 2 Chome−8−18 眉山マンション #exploringjapan #foodreview #japanesefood #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-found-an-empty-50-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7638284297262157069",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "1C2C7994-C403-5052-A445-71B6E0F2BFF7",
+          "order": 0,
+          "title": "POV: I Found an Empty 50 Year Old Cafe in Japan 📍 Japan,…",
+          "caption": "POV: I Found an Empty 50 Year Old Cafe in Japan 📍 Japan, 〒558-0031 Osaka, Sumiyoshi Ward, Sawanocho, 2 Chome−8−18 眉山マンション #exploringjapan #f",
+          "latitude": 34.604413,
+          "longitude": 135.4986231,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-found-an-empty-50-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.604413,
+      "centroidLongitude": 135.4986231,
+      "city": "Osaka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "A9E9FAA5-C650-5E9A-B064-2111E3A9FC54",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "7B586F37-2057-5677-8045-6D240F5D723F",
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0",
+        "4A5A6FBC-F145-56B7-BEB2-FD424ED6B268"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+      "createdAt": "2026-09-16",
+      "title": "POV: I Tried A 60-Year-Old Restaurant In Tokyo With Zero…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: I Tried A 60-Year-Old Restaurant In Tokyo With Zero Customers 📍 〒120-0041 東京都足立区千住元町３８−1 (Mocha coffee モカ) #exploringjapan #foodreview #wholesome #mukbang #japanlife",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-tried-a-60-year-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7634208184101621006",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "ECA276FD-5E10-556E-AEF0-B71ED4ACC2FC",
+          "order": 0,
+          "title": "POV: I Tried A 60-Year-Old Restaurant In Tokyo With Zero…",
+          "caption": "POV: I Tried A 60-Year-Old Restaurant In Tokyo With Zero Customers 📍 〒120-0041 東京都足立区千住元町３８−1 (Mocha coffee モカ) #exploringjapan #foodreview ",
+          "latitude": 35.7547144,
+          "longitude": 139.7923001,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-tried-a-60-year-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7547144,
+      "centroidLongitude": 139.7923001,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "232C29BB-21E1-50D1-8C85-C8B48D133073",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+      "createdAt": "2026-09-16",
+      "title": "POV: Eating at a Family Restaurant That Survived 60 Years…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Eating at a Family Restaurant That Survived 60 Years in Japan 📍 1 Chome-37-15 Oimazato, Higashinari Ward, Osaka, 537-0012, Japan (中華料理 幸太楼) #exploringjapan #foodreview #mukbang #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-eating-at-a-family-restaurant-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7631985831523257613",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "F4A45DD3-146A-5693-BF0E-2145A28F7975",
+          "order": 0,
+          "title": "POV: Eating at a Family Restaurant That Survived 60 Years…",
+          "caption": "POV: Eating at a Family Restaurant That Survived 60 Years in Japan 📍 1 Chome-37-15 Oimazato, Higashinari Ward, Osaka, 537-0012, Japan (中華料理 ",
+          "latitude": 34.6725659,
+          "longitude": 135.5456128,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-eating-at-a-family-restaurant-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.6725659,
+      "centroidLongitude": 135.5456128,
+      "city": "Osaka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
+        "A9E9FAA5-C650-5E9A-B064-2111E3A9FC54",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "7B586F37-2057-5677-8045-6D240F5D723F",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+        "5CCA3277-F9D4-5695-9CE7-2DE662121DF0",
+        "20EBDBF9-FC51-5AEB-BA3D-BD72508C409B"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+      "createdAt": "2026-09-16",
+      "title": "POV: Eating Sushi Alone at a 90-Year-Old Hidden Restauran…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Eating Sushi Alone at a 90-Year-Old Hidden Restaurant in Tokyo 📍 Kogane Sushi 小金寿司 〒170-0005 東京都豊島区南大塚３丁目５４−6 #exploringjapan #foodreview #sushi #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-eating-sushi-alone-at-a-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7627169916935834894",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "0FEE491A-4151-5697-847D-513FC3644E04",
+          "order": 0,
+          "title": "POV: Eating Sushi Alone at a 90-Year-Old Hidden Restauran…",
+          "caption": "POV: Eating Sushi Alone at a 90-Year-Old Hidden Restaurant in Tokyo 📍 Kogane Sushi 小金寿司 〒170-0005 東京都豊島区南大塚３丁目５４−6 #exploringjapan #foodrevi",
+          "latitude": 35.7285534,
+          "longitude": 139.7299292,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-eating-sushi-alone-at-a-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7285534,
+      "centroidLongitude": 139.7299292,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "CCDB04F2-E668-5358-B766-177513956FD7",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "232C29BB-21E1-50D1-8C85-C8B48D133073",
+      "createdAt": "2026-09-16",
+      "title": "Going to 54 year old restaurant in Japan 📍 〒166-0001 東京都杉…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "Going to 54 year old restaurant in Japan 📍 〒166-0001 東京都杉並区阿佐谷北１丁目９−2 ニュー阿佐谷マンション #exploringjapan #japanesefood #foodreview #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/going-to-54-year-old-restaurant-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7606739050120219918",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "0173132A-8633-5BC2-B985-C85A8E1BA457",
+          "order": 0,
+          "title": "Going to 54 year old restaurant in Japan 📍 〒166-0001 東京都杉…",
+          "caption": "Going to 54 year old restaurant in Japan 📍 〒166-0001 東京都杉並区阿佐谷北１丁目９−2 ニュー阿佐谷マンション #exploringjapan #japanesefood #foodreview #wholesome",
+          "latitude": 35.7105571,
+          "longitude": 139.636261,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/going-to-54-year-old-restaurant-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7105571,
+      "centroidLongitude": 139.636261,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "CCDB04F2-E668-5358-B766-177513956FD7",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "09B791DC-EB8B-5E86-9C37-05C622C6E575",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8B17681D-CE62-5FE3-85CF-5C261E9433AA",
+      "createdAt": "2026-09-16",
+      "title": "This owner has been running the shop for 53 years in Toky…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "This owner has been running the shop for 53 years in Tokyo 📍 〒130-0022 東京都墨田区江東橋４丁目２６−13 ##japanesefood##foodreview##exploringjapan##wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-owner-has-been-running-the-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7605277137171401998",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "C9177751-8B73-5621-8FCC-D99390056B98",
+          "order": 0,
+          "title": "This owner has been running the shop for 53 years in Toky…",
+          "caption": "This owner has been running the shop for 53 years in Tokyo 📍 〒130-0022 東京都墨田区江東橋４丁目２６−13 ##japanesefood##foodreview##exploringjapan##wholeso",
+          "latitude": 35.695011,
+          "longitude": 139.817372,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-owner-has-been-running-the-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.695011,
+      "centroidLongitude": 139.817372,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "CCDB04F2-E668-5358-B766-177513956FD7",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "232C29BB-21E1-50D1-8C85-C8B48D133073",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "88ED8824-81D0-54C0-A16C-2A6261DF04AA",
+      "createdAt": "2026-09-16",
+      "title": "POV: I Found the Real Cafe From an Anime in Japan #wholes…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: I Found the Real Cafe From an Anime in Japan #wholesome #exploringjapan #mukbang #mypov",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-found-the-real-cafe-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7666104122122243342",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "F06096C4-C37E-53BE-90F9-5FEDBFDBF5CB",
+          "order": 0,
+          "title": "POV: I Found the Real Cafe From an Anime in Japan #wholes…",
+          "caption": "POV: I Found the Real Cafe From an Anime in Japan #wholesome #exploringjapan #mukbang #mypov",
+          "latitude": 35.6527369,
+          "longitude": 139.6630633,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-found-the-real-cafe-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6527369,
+      "centroidLongitude": 139.6630633,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "8BA651AA-75A3-5D32-857A-B4197D29A6FE",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "743603F2-6AB6-5959-AC8D-D799F69539D4",
+      "createdAt": "2026-09-16",
+      "title": "POV: Eating at 85 year old Chef restaurant in Tokyo with…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Eating at 85 year old Chef restaurant in Tokyo with no voice #foodreview #japanesefood #mukbang #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-eating-at-85-year-old-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7646815158714600717",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "5E6CBBC3-97B0-5B50-AE5B-66B2670E1D42",
+          "order": 0,
+          "title": "POV: Eating at 85 year old Chef restaurant in Tokyo with…",
+          "caption": "POV: Eating at 85 year old Chef restaurant in Tokyo with no voice #foodreview #japanesefood #mukbang #wholesome",
+          "latitude": 35.7285534,
+          "longitude": 139.7299292,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-eating-at-85-year-old-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.7285534,
+      "centroidLongitude": 139.7299292,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "CCD8ECB4-CDF6-5825-BED2-26F97D051262",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "FF117D9D-48DE-515C-9D1B-C9C5542CF536"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FF117D9D-48DE-515C-9D1B-C9C5542CF536",
+      "createdAt": "2026-09-16",
+      "title": "POV: Going To 75 yo Grandma’s Traditional Ramen Shop in J…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Going To 75 yo Grandma’s Traditional Ramen Shop in Japan #exploringjapan #foodreview #mukbang #ramen",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-going-to-75-yo-grandma-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7641631439297023245",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "CACFA61A-2BFF-5BC9-9BCC-B411A8E90184",
+          "order": 0,
+          "title": "POV: Going To 75 yo Grandma’s Traditional Ramen Shop in J…",
+          "caption": "POV: Going To 75 yo Grandma’s Traditional Ramen Shop in Japan #exploringjapan #foodreview #mukbang #ramen",
+          "latitude": 35.6343107,
+          "longitude": 139.6874566,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-going-to-75-yo-grandma-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6343107,
+      "centroidLongitude": 139.6874566,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "CCDB04F2-E668-5358-B766-177513956FD7",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A9E9FAA5-C650-5E9A-B064-2111E3A9FC54",
+      "createdAt": "2026-09-16",
+      "title": "POV: I Came Back to a 93 Year Old Grandma’s Restaurant Wi…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: I Came Back to a 93 Year Old Grandma’s Restaurant With Gifts in Japan #exploringjapan #foodreview #mukbang #wholesome",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-came-back-to-a-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7639762014537010445",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "737DCFAB-E807-57F7-B9B3-676FF3659C8F",
+          "order": 0,
+          "title": "POV: I Came Back to a 93 Year Old Grandma’s Restaurant Wi…",
+          "caption": "POV: I Came Back to a 93 Year Old Grandma’s Restaurant With Gifts in Japan #exploringjapan #foodreview #mukbang #wholesome",
+          "latitude": 34.6863813,
+          "longitude": 135.5680169,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-i-came-back-to-a-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.6863813,
+      "centroidLongitude": 135.5680169,
+      "city": "Osaka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B",
+        "E0142550-AC28-5780-970B-7BC24DEA421B",
+        "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB",
+        "20899139-EC03-5B8F-9FCA-03CCFB286039",
+        "3BFB241D-2649-5318-8EDB-7CC00E7D5435",
+        "7B586F37-2057-5677-8045-6D240F5D723F"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+      "createdAt": "2026-09-16",
+      "title": "This local Yakiniku restaurant was good 📍 Japan, 〒160-002…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "This local Yakiniku restaurant was good 📍 Japan, 〒160-0022 Tokyo, Shinjuku City, Shinjuku, 2 Chome−15−28 2F #mukbang #japanesefood #foodreview #japan",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-local-yakiniku-restaurant-was-good-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7586379579531529527",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "6C61677A-4450-550E-9C3B-06F1AC1E40EF",
+          "order": 0,
+          "title": "This local Yakiniku restaurant was good 📍 Japan, 〒160-002…",
+          "caption": "This local Yakiniku restaurant was good 📍 Japan, 〒160-0022 Tokyo, Shinjuku City, Shinjuku, 2 Chome−15−28 2F #mukbang #japanesefood #foodrevi",
+          "latitude": 35.6900255,
+          "longitude": 139.7089198,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-local-yakiniku-restaurant-was-good-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6900255,
+      "centroidLongitude": 139.7089198,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "044B4EE6-5C21-568B-A1C4-303CB35BE306",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "90F7C175-A454-51E4-BCA6-0C291D2D4E63"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ACF4C54D-ECC4-57E0-AFCE-15D896D613E6",
+      "createdAt": "2026-09-16",
+      "title": "Trying omakase for the first time in Ginza with @Mike Nou…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "Trying omakase for the first time in Ginza with @Mike Nouveau 📍 Sushi Ariji in Ginza, Tokyo ##mukbang##japanesefood##sushi##omakase",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-omakase-for-the-first-time-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7584882538250849549",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "3A8BF2DC-82DF-54EB-A5AF-0D8B29BDB92D",
+          "order": 0,
+          "title": "Trying omakase for the first time in Ginza with @Mike Nou…",
+          "caption": "Trying omakase for the first time in Ginza with @Mike Nouveau 📍 Sushi Ariji in Ginza, Tokyo ##mukbang##japanesefood##sushi##omakase",
+          "latitude": 35.6720135,
+          "longitude": 139.7647202,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-omakase-for-the-first-time-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6720135,
+      "centroidLongitude": 139.7647202,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "97DC172B-7509-509B-8B43-EA3D51EC61B4",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6AEE7FDE-3A43-57D5-9A00-33933C62CD1A",
+      "createdAt": "2026-09-16",
+      "title": "Trying the Nana Restaurant in #tokyo #mukbang #exploringj…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "Trying the Nana Restaurant in #tokyo #mukbang #exploringjapan #nana #jacksonhole",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-the-nana-restaurant-in-tokyo-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7553783856353021197",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "4C77D80C-B703-5F72-8EF5-4950ABDAA7C5",
+          "order": 0,
+          "title": "Trying the Nana Restaurant in #tokyo #mukbang #exploringj…",
+          "caption": "Trying the Nana Restaurant in #tokyo #mukbang #exploringjapan #nana #jacksonhole",
+          "latitude": 35.653183,
+          "longitude": 139.545652,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-the-nana-restaurant-in-tokyo-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.653183,
+      "centroidLongitude": 139.545652,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "937875B4-2598-5B5D-963B-A0E75F386C9C",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "8BA651AA-75A3-5D32-857A-B4197D29A6FE",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
+        "5770930D-1D33-5B3C-A7E5-D5709F96FC2A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "937875B4-2598-5B5D-963B-A0E75F386C9C",
+      "createdAt": "2026-09-16",
+      "title": "POV: Trying Random local Restaurants in Tokyo, Japan #who…",
+      "shortDescription": "A post by @asamapov on TikTok.",
+      "longDescription": "POV: Trying Random local Restaurants in Tokyo, Japan #wholesome #mukbang #exploringjapan #",
+      "makerId": "28CCC922-316E-5C9F-B7B9-35C55E19D9CD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-random-local-restaurants-in-asamapov_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@asamapov/video/7676487350867758349",
+      "sourceAuthor": "@asamapov",
+      "stops": [
+        {
+          "id": "D16E2CA2-BC34-5916-B353-83C8750A5BC9",
+          "order": 0,
+          "title": "POV: Trying Random local Restaurants in Tokyo, Japan #who…",
+          "caption": "POV: Trying Random local Restaurants in Tokyo, Japan #wholesome #mukbang #exploringjapan #",
+          "latitude": 35.6075605,
+          "longitude": 139.7108887,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pov-trying-random-local-restaurants-in-asamapov_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6075605,
+      "centroidLongitude": 139.7108887,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "4A883783-4A4B-5561-8564-49D5652089F2",
+        "02CBE8C6-2542-592E-B56E-89E32C3DB059",
+        "88ED8824-81D0-54C0-A16C-2A6261DF04AA",
+        "8BA651AA-75A3-5D32-857A-B4197D29A6FE",
+        "D2D4A212-765E-51FD-B7AD-C71B37EBCFC6",
+        "6AEE7FDE-3A43-57D5-9A00-33933C62CD1A",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345",
+      "createdAt": "2026-09-16",
+      "title": "A hidden gem in Tokyo, the Seiko Museum in Ginza! It’s co…",
+      "shortDescription": "A post by @the.watchphile on Instagram.",
+      "longDescription": "A hidden gem in Tokyo, the Seiko Museum in Ginza! It’s completely free (just make sure to book beforehand). Covering the entire history of the brand (and Grand Seiko), it’s a must see when going to Tokyo! From historical pieces, other brands, how watches work, and more - it has everything. With over 6 floors, there are ton of cool watches (& pocket watches) to see! Follow along as I share the top places in Tokyo for watch enthusiasts! • • • #watches #watchesofinstagram #seiko #wotd #tokyo",
+      "makerId": "85916FB9-B922-5DA2-B07D-BD14D76AC931",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/a-hidden-gem-in-tokyo-the-thewatchphile_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc2D2mPBBTQ/",
+      "sourceAuthor": "@the.watchphile",
+      "stops": [
+        {
+          "id": "C63D7FC3-B5F8-5202-956F-2384CF57A027",
+          "order": 0,
+          "title": "A hidden gem in Tokyo, the Seiko Museum in Ginza! It’s co…",
+          "caption": "A hidden gem in Tokyo, the Seiko Museum in Ginza! It’s completely free (just make sure to book beforehand). Covering the entire history of t",
+          "latitude": 35.6723712,
+          "longitude": 139.7644242,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/a-hidden-gem-in-tokyo-the-thewatchphile_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.6723712,
+      "centroidLongitude": 139.7644242,
+      "city": "Tokyo",
+      "country": "Japan",
+      "relatedTourIds": [
+        "6E492576-6765-5CAA-9D38-FE8A14A68B51",
+        "9757C81E-088E-5540-A5BB-92D8B5FC5B12",
+        "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
+        "7c53e4fa-c0ed-5016-a731-ea51a3828866",
+        "B0E98764-9FE3-5C85-A6D3-384DAF0F48B3",
+        "f2605a06-195a-59b3-9b52-ab380b96023c",
+        "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
+        "cac9c233-c4b1-584e-beef-00a045408049"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
       ],
       "priceUSD": 0
     }
