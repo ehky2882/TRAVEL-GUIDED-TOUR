@@ -99833,7 +99833,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "fe998574-0b42-5a2a-99a2-00bb46c0ec08",
-        "4B656F40-F340-5781-817B-47A4A1B2067C"
+        "4B656F40-F340-5781-817B-47A4A1B2067C",
+        "E6649886-1F1A-5882-A0A9-AB981CECEF67"
       ]
     },
     {
@@ -101085,7 +101086,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "6883A947-1F9F-5B28-8A6F-878C3966DE19",
-        "E58C1109-23E7-5D7E-AB86-233AB930A6A8"
+        "E58C1109-23E7-5D7E-AB86-233AB930A6A8",
+        "11F7DFB1-AF93-522D-A927-DBCE3DA4C9D7"
       ]
     },
     {
@@ -101434,7 +101436,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "719A19AF-30F2-5A74-9AEF-FD8CE17E70FB",
-        "ECF3AA10-F175-5E8E-B2E8-1A19C7B73055"
+        "ECF3AA10-F175-5E8E-B2E8-1A19C7B73055",
+        "0CF4192D-231B-5440-B16B-55366A6450BB"
       ]
     },
     {
@@ -101545,7 +101548,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "6E4E8D27-CFB4-57F1-8330-507E8ECFF4E9",
-        "f3b8d27a-5c61-4e94-8a07-2d9b6c4e1f85"
+        "f3b8d27a-5c61-4e94-8a07-2d9b6c4e1f85",
+        "8C8EC604-3F5F-5F82-A00B-A1AECC28FC6D",
+        "FFA76F71-2FF7-5FDB-9EEA-D8E5037E3C72"
       ]
     },
     {
@@ -103439,7 +103444,8 @@
       "tourIds": [
         "137146d0-0398-5074-8c5c-484d1244172d",
         "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
-        "AF6C10CC-E6BA-5432-A413-B869ADD6396E"
+        "AF6C10CC-E6BA-5432-A413-B869ADD6396E",
+        "04A23295-DC9A-527A-824F-038B0C4CF7A1"
       ]
     },
     {
@@ -103637,7 +103643,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "9E5F8CF8-0F41-5E25-9931-8891A3057672",
-        "871828DC-B6CB-5132-8C13-6CBAB27CB966"
+        "871828DC-B6CB-5132-8C13-6CBAB27CB966",
+        "3F4AEF87-81F7-5D1D-A090-EF9CF945E424"
       ]
     },
     {
@@ -104185,6 +104192,157 @@
       "tourIds": [
         "BE650C0A-D1E9-5E8A-AC45-37CD49ED8555",
         "FA2B222B-CE86-50A5-BA96-45A695D7CDB7"
+      ]
+    },
+    {
+      "id": "16044193-050d-5e7b-950e-df5482278948",
+      "name": "Gaylord Palms Resort",
+      "description": "A resort built around a four-and-a-half-acre glass atrium that keeps three Florida landscapes -- the Everglades, Key West and St Augustine -- indoors and in weather nobody has to tolerate.",
+      "latitude": 28.3424991,
+      "longitude": -81.5279262,
+      "city": "Kissimmee",
+      "address": "6000 West Osceola Parkway, Kissimmee, FL 34746",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gaylord-palms-resort-magicallymadisen_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5BAF8339-2EC5-5655-9FD3-8D9C97415FA9",
+        "74E3AD87-5941-5E62-BA4B-1D448132A24E"
+      ]
+    },
+    {
+      "id": "cda7d801-2159-5fbf-8254-a8e21e8f28e1",
+      "name": "Museum of Ethnography",
+      "description": "Napur Architect's 2022 building bends a glass block into a shallow U and pulls a public park up over both arms, so the roof is a walkable hillside and the museum is mostly underneath it.",
+      "latitude": 47.5121673,
+      "longitude": 19.0806567,
+      "city": "Budapest",
+      "address": "Dózsa György út 35, 1146 Budapest",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-ethnography-insightcities_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF"
+      ]
+    },
+    {
+      "id": "b5a9df6c-89d6-5366-a674-e01fb3404d86",
+      "name": "TWA Flight Center",
+      "description": "Eero Saarinen's 1962 terminal for Trans World Airlines, four concrete shells meeting at the centre. It sat empty for sixteen years after TWA folded and reopened in 2019 as a hotel, the head house kept intact.",
+      "latitude": 40.6457688,
+      "longitude": -73.777674,
+      "city": "New York",
+      "address": "1 Idlewild Drive, JFK Airport, New York 11430",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-flight-center-archimarathon_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "203DE419-0056-58D0-8A97-A0357E1808D6",
+        "CCA55540-D608-5275-A25B-E06803AB708D"
+      ]
+    },
+    {
+      "id": "32347454-c2c2-5afd-8fca-96588488b86f",
+      "name": "Kyoto International Conference Center",
+      "description": "Sachio Otani's 1966 hall, built from trapezoids that lean in and out like the frame of a traditional gasshō roof rendered in raw concrete. The Kyoto Protocol was signed in it in 1997.",
+      "latitude": 35.0610839,
+      "longitude": 135.7831473,
+      "city": "Kyoto",
+      "address": "Takaragaike, Sakyo-ku, Kyoto 606-8505",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-protocol-hall-archimarathon_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "35DC5B25-D967-5B10-9ABF-A850532E5324",
+        "980CF450-B8AB-5F92-92F9-BDA5D7ED153B"
+      ]
+    },
+    {
+      "id": "1ac97b90-df90-50c7-813e-4c0caff5ab4d",
+      "name": "Piscina das Marés",
+      "description": "Álvaro Siza's tidal pools, finished in 1966, set into the rock below the coast road so that almost nothing shows from above. Concrete walls complete what the outcrops start; the sea fills the rest.",
+      "latitude": 41.1930765,
+      "longitude": -8.7072863,
+      "city": "Leça da Palmeira",
+      "address": "Avenida da Liberdade, 4450-718 Leça da Palmeira",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leca-swimming-pool-archimarathon_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "491C8A2D-F975-5C10-84FB-1F4459001177",
+        "AB267B0E-7169-52F0-8E39-9F0F0C520460"
+      ]
+    },
+    {
+      "id": "ebf6c272-4002-5208-ad96-554d09c61b27",
+      "name": "MAXXI",
+      "description": "Zaha Hadid's national museum of 21st-century art, opened 2010 on a former barracks. The galleries are bands of poured concrete that overlap and run past each other, so the route through is a choice rather than a sequence.",
+      "latitude": 41.9288233,
+      "longitude": 12.4666714,
+      "city": "Rome",
+      "address": "Via Guido Reni 4A, 00196 Rome",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maxxi-museum-blessedarch_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AC83F010-C9F0-5E4F-AC7F-A231575BE931",
+        "027561D7-DF07-55E6-9F06-E6147FCB8BA9"
+      ]
+    },
+    {
+      "id": "29a9291e-2543-5e1e-ac78-d2402c30c7fb",
+      "name": "Rainier Tower",
+      "description": "Minoru Yamasaki's 1977 tower stands on an eleven-storey concrete pedestal that narrows towards the ground, so the building appears to balance on a stem. Seattle calls it the beaver building.",
+      "latitude": 47.6088172,
+      "longitude": -122.3343526,
+      "city": "Seattle",
+      "address": "1301 5th Avenue, Seattle, WA 98101",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rainier-tower-buzzwordboy_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "29C7C3C4-908D-5F45-B575-952465D9F42C",
+        "65E95374-8E2E-5DDA-B2B6-526518BEF1F0"
+      ]
+    },
+    {
+      "id": "49307d3f-ec08-544a-8818-90d158f39f22",
+      "name": "Papa Da Mour",
+      "description": "Dominique Ansel's bakery on University Place, where the salt bread and the bagel arrived at the same counter and became one thing.",
+      "latitude": 40.7331118,
+      "longitude": -73.9938497,
+      "city": "New York",
+      "address": "64 University Place, New York, NY 10003",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/papa-da-mour-by-dominique-ansel-nomlife_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0CB92DA2-C2D2-58F5-9FFA-2151CEA7BF8A",
+        "386E0B2C-272F-5078-971E-30E92700474E"
+      ]
+    },
+    {
+      "id": "fd2c3077-4f9e-5154-9e3b-eedbdb28fbc4",
+      "name": "Grace Farms",
+      "description": "SANAA's River Building follows the slope in one continuous curve, its roof a thin ribbon on slender columns with the glazed volumes hung beneath it. Eighty acres of meadow and pond around it are the point, not the setting.",
+      "latitude": 41.196273,
+      "longitude": -73.512642,
+      "city": "New Canaan",
+      "address": "Lukes Wood Road, New Canaan, CT",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-glass-house-ninosbuildings_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "86B587FA-58B7-540B-B337-74E036D0258F",
+        "FF01D80B-17E1-569B-AA99-E07022709F76"
+      ]
+    },
+    {
+      "id": "b7056bff-0a98-5fad-9702-c00df11d0325",
+      "name": "1111 Lincoln Road",
+      "description": "Herzog & de Meuron's 2010 car park, built as slabs on splayed columns with no cladding at all -- the floor heights vary so wildly that the upper levels hold shops, a restaurant and weddings. A garage designed on the assumption that parking is temporary and the frame is not.",
+      "latitude": 25.790764,
+      "longitude": -80.140819,
+      "city": "Miami Beach",
+      "address": "1111 Lincoln Road, Miami Beach, FL 33139",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/1111-lincoln-road-playdabeat_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "7A500BA4-EB29-57D6-B10A-D6AAB2CAA72B",
+        "ECBB560C-08D4-55BF-8DE9-227A66135479",
+        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7"
       ]
     }
   ],
@@ -206244,8 +206402,8 @@
           "order": 0,
           "title": "Lloyd's Building",
           "caption": "The Lloyds building in London #blessedarch #architecture #design #london #lloyds",
-          "latitude": 51.5129645,
-          "longitude": -0.0824073,
+          "latitude": 51.512965,
+          "longitude": -0.082407,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -206257,8 +206415,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5129645,
-      "centroidLongitude": -0.0824073,
+      "centroidLatitude": 51.512965,
+      "centroidLongitude": -0.082407,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -227138,8 +227296,8 @@
           "order": 0,
           "title": "Geisel Library, UC San Diego",
           "caption": "Does your college library look like this? #architecture #design #brutalism #sandiego",
-          "latitude": 32.8456029,
-          "longitude": -117.2778153,
+          "latitude": 32.88114,
+          "longitude": -117.23758,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -227151,8 +227309,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 32.8456029,
-      "centroidLongitude": -117.2778153,
+      "centroidLatitude": 32.88114,
+      "centroidLongitude": -117.23758,
       "city": "La Jolla",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -228612,8 +228770,8 @@
           "order": 0,
           "title": "Lloyd's Building",
           "caption": "Which one is your favorite ? #fyp #architecture #skyscraper #london",
-          "latitude": 51.5129645,
-          "longitude": -0.0824073,
+          "latitude": 51.512965,
+          "longitude": -0.082407,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -228625,8 +228783,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5129645,
-      "centroidLongitude": -0.0824073,
+      "centroidLatitude": 51.512965,
+      "centroidLongitude": -0.082407,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -228650,7 +228808,7 @@
     {
       "id": "86B587FA-58B7-540B-B337-74E036D0258F",
       "createdAt": "2026-09-16",
-      "title": "The Glass House",
+      "title": "Grace Farms",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Glass houses were quite the trend ! Would you live in one ? #fyp #architecture #design",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -228665,10 +228823,10 @@
         {
           "id": "36627F80-C72A-5011-8986-528EE0D03221",
           "order": 0,
-          "title": "The Glass House",
+          "title": "Grace Farms",
           "caption": "Glass houses were quite the trend ! Would you live in one ? #fyp #architecture #design",
-          "latitude": 41.1967582,
-          "longitude": -73.5157461,
+          "latitude": 41.196273,
+          "longitude": -73.512642,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -228680,8 +228838,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.1967582,
-      "centroidLongitude": -73.5157461,
+      "centroidLatitude": 41.196273,
+      "centroidLongitude": -73.512642,
       "city": "New Canaan",
       "country": "United States",
       "relatedTourIds": [
@@ -230307,7 +230465,7 @@
     {
       "id": "FF01D80B-17E1-569B-AA99-E07022709F76",
       "createdAt": "2026-09-16",
-      "title": "Pavilion in the Pond, The Glass House",
+      "title": "Grace Farms — River Building",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Do you guys enjoy Japanese architecture ? #fyp #architecture #design",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -230322,10 +230480,10 @@
         {
           "id": "77C9BB1B-28E2-56A8-A1D1-0018A14EB803",
           "order": 0,
-          "title": "Pavilion in the Pond, The Glass House",
+          "title": "Grace Farms — River Building",
           "caption": "Do you guys enjoy Japanese architecture ? #fyp #architecture #design",
-          "latitude": 41.1967582,
-          "longitude": -73.5157461,
+          "latitude": 41.196273,
+          "longitude": -73.512642,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -230337,8 +230495,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.1967582,
-      "centroidLongitude": -73.5157461,
+      "centroidLatitude": 41.196273,
+      "centroidLongitude": -73.512642,
       "city": "New Canaan",
       "country": "United States",
       "relatedTourIds": [
