@@ -9,7 +9,24 @@
 
 coremltools>=8.0
 torch>=2.2
-transformers>=4.40
+# 🔴 PINNED BELOW 4.46 ON PURPOSE, and the reason is specific.
+#
+# From ~4.53 BertModel routes every attention mask through the shared
+# `masking_utils`, which builds them with `Tensor.new_ones` — and coremltools
+# has no converter for that op, so tracing dies with:
+#
+#     NotImplementedError: PyTorch convert function for op 'new_ones' not
+#     implemented.
+#
+# It is NOT reachable by passing an attention_mask or by choosing eager
+# attention; the mask is rebuilt internally either way. 4.44 predates the
+# refactor and traces cleanly.
+#
+# ⚠️ Pinning a model library is only safe because a gate checks the OUTPUT:
+# verify-coreml-parity.py compares the converted model against vectors from the
+# ONNX pipeline, so a version that quietly computed something different would
+# fail rather than ship. Do not raise this pin without re-running that gate.
+transformers>=4.40,<4.46
 numpy>=1.24
 tokenizers>=0.15
 onnxruntime>=1.17

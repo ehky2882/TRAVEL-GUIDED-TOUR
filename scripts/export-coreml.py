@@ -71,26 +71,66 @@ def build_wrapper(torch, transformers, model_id: str):
             super().__init__()
             self.backbone = backbone
 
-        def forward(self, input_ids, attention_mask):
-            # token_type_ids omitted: this model is single-segment, and the
-            # Python path feeds zeros, which is what the default produces.
+        def forward(self, input_ids):
+            # 🔴 THE MASK ARITHMETIC IS GONE FROM THE GRAPH — see the override
+            # installed on the backbone below. This is what fixes the NaN, and
+            # the obvious version of the fix does NOT work:
+            #
+            #   `attention_mask = torch.ones_like(input_ids)` looks like it
+            #   folds to a constant. It does not. `input_ids` is a graph INPUT,
+            #   so `ones_like` is a dynamic op and the whole mask computation
+            #   stays traced — including `(1 - mask) * torch.finfo(dtype).min`.
+            #   That constant is ~-3.4e38, overflows fp16 to -inf, and
+            #   `0 * -inf` is NaN. Removing the INPUT did not remove the
+            #   ARITHMETIC, and every output was still NaN.
+            attention_mask = torch.ones_like(input_ids)
+
+            # token_type_ids PASSED EXPLICITLY, not left to default.
+            # Omitting them sends BertModel down a branch that fabricates them
+            # from a registered buffer via `new_ones`/`expand` — and coremltools
+            # has no converter for `new_ones`, so the trace fails with
+            # "PyTorch convert function for op 'new_ones' not implemented".
+            # Zeros is also exactly what the ONNX path feeds
+            # (`build-embeddings.py`: `feed["token_type_ids"] = zeros_like(ids)`),
+            # so this matches the catalog rather than merely compiling.
             hidden = self.backbone(
-                input_ids=input_ids, attention_mask=attention_mask
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                token_type_ids=torch.zeros_like(input_ids),
             ).last_hidden_state
 
-            # 🔴 Masked mean. Summing over ALL positions and dividing by the
-            # sequence length would pull every short query toward zero by
-            # however much padding it happened to carry — the exact bug the
-            # Python comment warns about.
-            mask = attention_mask.unsqueeze(-1).to(hidden.dtype)
-            summed = (hidden * mask).sum(dim=1)
-            counts = mask.sum(dim=1).clamp(min=1e-9)
-            pooled = summed / counts
+            # Mean over every position. Equivalent to `embed_chunks`' masked
+            # mean because there is no padding here — see the note above.
+            pooled = hidden.mean(dim=1)
 
             return pooled / pooled.norm(p=2, dim=1, keepdim=True).clamp(min=1e-12)
 
-    backbone = transformers.AutoModel.from_pretrained(model_id)
+    # ⚠️ `attn_implementation="eager"` is load-bearing for conversion. The
+    # default (SDPA) routes through transformers' mask utilities, which build
+    # masks with dynamic ops coremltools cannot convert. Eager attention is the
+    # same arithmetic written plainly — the numbers are identical, the graph is
+    # traceable.
+    backbone = transformers.AutoModel.from_pretrained(
+        model_id, attn_implementation="eager"
+    )
     backbone.eval()
+
+    # 🔴 THE FIX. `get_extended_attention_mask` turns a 0/1 mask into an
+    # ADDITIVE one by computing `(1 - mask) * torch.finfo(dtype).min`. That
+    # constant cannot survive fp16, and multiplying it by zero — which is what
+    # every unmasked position does — yields NaN rather than 0.
+    #
+    # A query is one window with no padding, so the correct additive mask is
+    # all zeros. Building it as zeros DIRECTLY is the same arithmetic the fp32
+    # graph performs, without the overflowing constant ever existing.
+    #
+    # ⚠️ Do not "fix" a future NaN here by restoring the mask input. The mask is
+    # genuinely unnecessary for this model's use; the bug is the constant.
+    def _additive_mask_of_zeros(attention_mask, input_shape, *args, **kwargs):
+        batch, length = input_shape[0], input_shape[1]
+        return torch.zeros((batch, 1, 1, length), dtype=torch.float32)
+
+    backbone.get_extended_attention_mask = _additive_mask_of_zeros
     wrapper = SentenceEmbedder(backbone)
     wrapper.eval()
     return wrapper
@@ -99,6 +139,11 @@ def build_wrapper(torch, transformers, model_id: str):
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, help="destination .mlpackage path")
+    parser.add_argument("--fp32", action="store_true",
+                        help="convert at full precision (~90 MB instead of ~45 MB). "
+                             "The fallback if fp16 ever produces non-finite output "
+                             "again — -3.4e38 is representable in fp32, so the "
+                             "mask constant cannot overflow.")
     parser.add_argument("--int8", action="store_true",
                         help="quantize to int8 (~23 MB). Only ship this if the "
                              "parity check still passes — see the module docstring.")
@@ -127,11 +172,15 @@ def main() -> int:
     # exercise the graph.
     trace_length = 16
     example_ids = torch.ones((1, trace_length), dtype=torch.int32)
-    example_mask = torch.ones((1, trace_length), dtype=torch.int32)
 
     with torch.no_grad():
-        reference = wrapper(example_ids, example_mask)
-        traced = torch.jit.trace(wrapper, (example_ids, example_mask))
+        reference = wrapper(example_ids)
+        traced = torch.jit.trace(wrapper, (example_ids,))
+
+    # 🔴 A model that outputs NaN passed every check once already, because every
+    # comparison against NaN is false. Refuse to even save one.
+    if not torch.isfinite(reference).all():
+        raise SystemExit("ERROR: the traced model produced non-finite output")
 
     if reference.shape[-1] != dims:
         raise SystemExit(
@@ -142,18 +191,16 @@ def main() -> int:
     # queries are short. So a single flexible-length input covers the whole
     # query path — no chunking on device.
     sequence = ct.RangeDim(lower_bound=1, upper_bound=max_tokens, default=trace_length)
-    inputs = [
-        ct.TensorType(name="input_ids", shape=(1, sequence), dtype=np.int32),
-        ct.TensorType(name="attention_mask", shape=(1, sequence), dtype=np.int32),
-    ]
+    inputs = [ct.TensorType(name="input_ids", shape=(1, sequence), dtype=np.int32)]
 
-    print("Converting to Core ML (fp16) …")
+    precision = ct.precision.FLOAT32 if args.fp32 else ct.precision.FLOAT16
+    print(f"Converting to Core ML ({'fp32' if args.fp32 else 'fp16'}) …")
     mlmodel = ct.convert(
         traced,
         inputs=inputs,
         outputs=[ct.TensorType(name="embedding")],
         minimum_deployment_target=ct.target.iOS17,
-        compute_precision=ct.precision.FLOAT16,
+        compute_precision=precision,
         convert_to="mlprogram",
     )
 
@@ -178,7 +225,9 @@ def main() -> int:
     mlmodel.user_defined_metadata["atlas.model_id"] = model_id
     mlmodel.user_defined_metadata["atlas.dims"] = str(dims)
     mlmodel.user_defined_metadata["atlas.max_tokens"] = str(max_tokens)
-    mlmodel.user_defined_metadata["atlas.precision"] = "int8" if args.int8 else "fp16"
+    mlmodel.user_defined_metadata["atlas.precision"] = (
+        "int8" if args.int8 else ("fp32" if args.fp32 else "fp16")
+    )
 
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -188,7 +237,7 @@ def main() -> int:
     print(f"\nWrote {out}")
     print(f"  {total:,} bytes ({total / 1e6:.1f} MB)")
     print(f"  model_id  {model_id}")
-    print(f"  precision {'int8' if args.int8 else 'fp16'}")
+    print(f"  precision {mlmodel.user_defined_metadata['atlas.precision']}")
     print("\n🔴 NOT YET PROVEN. Run scripts/verify-coreml-parity.py against this "
           "package on macOS before it goes anywhere near a phone.")
     return 0

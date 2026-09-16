@@ -83,14 +83,27 @@ jobs:
       # Supabase seed by ~15 minutes to produce an empty diff.
       - name: Is a rebuild owed?
         id: owed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           CURRENT=$(python3 scripts/build-embeddings.py --text-digest)
           RECORDED=$(cat scripts/related-text.digest 2>/dev/null || echo "")
-          echo "current:  $CURRENT"
-          echo "recorded: $RECORDED"
-          if [ "$CURRENT" = "$RECORDED" ]; then
-            echo "No embedded text changed — skipping the rebuild."
+          # 🔴 TWO CONSUMERS, TWO DIGESTS, AND BOTH MUST BE CURRENT. The
+          # committed digest says whether the neighbour lists in the catalog are
+          # fresh. The one published beside the sidecar on gh-pages says whether
+          # the SEARCH INDEX is — and they can disagree, most obviously on the
+          # very first run, when the catalog's digest already matches and no
+          # sidecar has ever been published. Gating on the committed digest
+          # alone would skip that run, and every run after it, forever.
+          PUBLISHED=$(curl -fsSL --max-time 30 \
+            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/search/embeddings.digest" \
+            2>/dev/null | tr -d '[:space:]' || echo "")
+          echo "current:   $CURRENT"
+          echo "recorded:  $RECORDED"
+          echo "published: ${PUBLISHED:-(none)}"
+          if [ "$CURRENT" = "$RECORDED" ] && [ "$CURRENT" = "$PUBLISHED" ]; then
+            echo "No embedded text changed and the index is current — skipping."
             echo "owed=false" >> "$GITHUB_OUTPUT"
           else
             echo "owed=true" >> "$GITHUB_OUTPUT"
@@ -119,7 +132,11 @@ jobs:
         id: regenerate
         run: |
           set -euo pipefail
-          python3 scripts/build-embeddings.py --write-related
+          # BOTH outputs from ONE model run. The neighbour lists and the search
+          # sidecar are computed from the same chunks; splitting them into two
+          # invocations would embed the whole catalog twice for identical
+          # numbers, and leave a window where the two disagree.
+          python3 scripts/build-embeddings.py --write-related --write
           # ⚠️ BOTH paths, and the digest is the one that matters. A rebuild can
           # legitimately leave the catalog untouched — a new tour whose matches
           # all fall under the floor and which displaces nobody — while the
@@ -167,6 +184,67 @@ jobs:
           # phones either way, and the next content merge regenerates from
           # scratch. Loud, visible, and self-healing beats a forced push.
           echo "::warning::main moved during the rebuild — suggestions not updated this run. The next content merge will regenerate them."
+
+      # The search index goes to gh-pages, not to main and not to Supabase.
+      # It is ~3.8 MB of int8 vectors — a build artifact, not content — and
+      # gh-pages is already the asset CDN, so serving it there costs no
+      # Supabase egress. That is the same reasoning that put the Core ML model
+      # there in export-search-model.yml.
+      #
+      # ⚠️ PUBLISHED EVEN IF THE CATALOG COMMIT LOST ITS RACE. The sidecar
+      # describes the text that was embedded, and that text is on main whether
+      # or not our neighbour-list commit landed. Withholding it would leave the
+      # index stale for a reason that has nothing to do with the index.
+      - name: Publish the search index to gh-pages
+        if: steps.owed.outputs.owed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          SRC=build/embeddings.bin
+          ls -l "$SRC"
+
+          # The digest is published LAST, after the bytes it describes. If the
+          # run dies between the two, the digest still names the OLD index, so
+          # the next run sees a mismatch and republishes. The other order would
+          # record success for an index that never landed.
+          publish_file() {
+            local path="$1" src="$2" message="$3"
+            local new_sha old_sha
+            new_sha=$(git hash-object "$src")
+            # The `search` SUBTREE, not a recursive listing of the branch.
+            # gh-pages carries 6,500+ audio and image files; asking for all of
+            # them to read one blob SHA is the same mistake that made the old
+            # clone-and-push approach time out. A missing subtree (first run)
+            # 404s, which the fallback turns into an empty SHA — a mismatch,
+            # which is correct.
+            old_sha=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages:search" \
+                        --jq ".tree[] | select(.path==\"${path#search/}\") | .sha" 2>/dev/null || echo "")
+            if [ "$new_sha" = "$old_sha" ]; then
+              echo "gh-pages already serves $path — nothing to do."
+              return 0
+            fi
+            OLD_SHA="$old_sha" MESSAGE="$message" python3 - "$src" > /tmp/payload.json <<'PYEOF'
+          import base64, json, os, sys
+          payload = {
+              "message": os.environ["MESSAGE"],
+              "content": base64.b64encode(open(sys.argv[1], "rb").read()).decode(),
+              "branch": "gh-pages",
+          }
+          old = os.environ.get("OLD_SHA", "")
+          if old:
+              payload["sha"] = old
+          json.dump(payload, sys.stdout)
+          PYEOF
+            gh api -X PUT "repos/$GITHUB_REPOSITORY/contents/$path" \
+              --input /tmp/payload.json --jq .commit.sha
+          }
+
+          publish_file "search/embeddings.bin" "$SRC" \
+            "chore(search): publish embeddings index [skip ci]"
+          cp scripts/related-text.digest /tmp/embeddings.digest
+          publish_file "search/embeddings.digest" /tmp/embeddings.digest \
+            "chore(search): publish embeddings digest [skip ci]"
 
   publish:
     name: Publish Tours.json to gh-pages
