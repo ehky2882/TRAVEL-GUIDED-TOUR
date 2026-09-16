@@ -12,11 +12,13 @@ model is published.
 
 WHAT IS ASSERTED, IN ORDER OF HOW MUCH IT MATTERS
 --------------------------------------------------
-1. **Ranking is unchanged.** The real question is never "how close are the
-   numbers" — it is "does the phone put the same tours at the top". Asserted
-   directly against the live catalog, because a vector can drift in the sixth
-   decimal and still rank identically, and that is the property search depends
-   on.
+1. **Ranking is unchanged, along the path the device actually takes.** The real
+   question is never "how close are the numbers" — it is "does the phone put the
+   same tours at the top". So the comparison is Python-full-precision against
+   **Core ML query + int8-quantized index**, because that pairing is what runs on
+   a phone. Testing Core ML against full-precision chunks would leave index
+   quantization unmeasured, and quantization is an independent source of drift:
+   ~0.9990 cosine per vector, which is small but not nothing.
 2. **Meaning is unchanged.** The measured relations from `vector-parity.json`:
    "brutalist concrete tower" must stay nearer "concrete apartment block" than
    "a restaurant". A cosine number tells you vectors moved; this tells you the
@@ -165,13 +167,31 @@ def main() -> int:
     texts = [module.tour_text(t) for t in tours]
     chunks, owners = embedder.embed_chunks(texts, progress=True)
 
+    # 🔴 THE PHONE DOES NOT SEE THESE CHUNKS. It sees the SIDECAR, whose vectors
+    # `write_embeddings` stores int8-quantized at scale 127. Comparing Core ML
+    # against Python using full-precision chunks on both sides would test a path
+    # nothing runs, and would leave index quantization — a second, independent
+    # source of drift — entirely unmeasured.
+    #
+    # So the "device" side below ranks against DEQUANTIZED chunks, which is what
+    # TourEmbeddingStore will read. Measured on the parity fixture, quantization
+    # costs ~0.9990 cosine per vector; the question this answers is whether that
+    # is enough to reorder anything that matters.
+    quantized = (
+        np.clip(np.rint(chunks * module.QUANT_SCALE), -127, 127).astype(np.int8)
+        .astype(np.float32) / module.QUANT_SCALE
+    )
+    norms = np.linalg.norm(quantized, axis=1, keepdims=True)
+    quantized = quantized / np.maximum(norms, 1e-12)
+
     mismatches = 0
     for query in RANK_QUERIES:
         python_top = module.tour_scores(
             np, chunks, owners, embedder.embed_one(query), len(tours)
         ).argsort()[::-1][:RANK_DEPTH]
+        # Core ML query + quantized index = exactly what happens on the device.
         coreml_top = module.tour_scores(
-            np, chunks, owners, core_ml_vector(query), len(tours)
+            np, quantized, owners, core_ml_vector(query), len(tours)
         ).argsort()[::-1][:RANK_DEPTH]
 
         if list(python_top) == list(coreml_top):
