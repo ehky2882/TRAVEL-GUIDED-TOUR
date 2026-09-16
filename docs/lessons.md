@@ -1647,3 +1647,47 @@ before a re-seed, `relatedTourIds` and `createdAt` were served as `null` on all
 1,583 rows. `check-catalog-contract.py` reads key *presence*, so that is a PASS
 and correctly so — but "the contract passes" and "the feature works" are two
 different statements, and only a seed makes the second true.
+
+## A threshold only means something for the measurement it was calibrated on
+
+Semantic search shipped in build 166 with a quality floor of **0.45**, copied
+from `RELATED_FLOOR` — the number "More like this" uses. The owner's first
+query, *"quiet garden away"*, returned nothing.
+
+The two floors gate different comparisons:
+
+| | compares | typical good score |
+|---|---|---|
+| `RELATED_FLOOR` | **tour ↔ tour** — mean-to-mean, two long documents | high |
+| search floor | **short query ↔ long document** | much lower |
+
+A four-word query has far less in common with a 600-word description than two
+descriptions have with each other, *for the same quality of match*. Reusing the
+constant looked like consistency and was a category error. Measured on the live
+index, it silenced three of nine natural queries — including two of the four
+written into the build notes as things to try.
+
+**The near-miss is the part worth remembering.** "quiet garden away" topped out
+at **0.4498** against a floor of 0.45. It failed by two ten-thousandths, and the
+result was a feature that looked completely broken rather than slightly strict.
+A threshold that is wrong by a hair does not degrade; it disappears.
+
+⚠️ **A cleverer rule was looked for and does not exist.** "quiet garden away"
+(good results) and "stained glass windows" (weak ones) top out at 0.4498 and
+0.4479 — indistinguishable. What separates them is whether the catalogue
+actually contains the thing, which no score can see, and a relative rule
+("within 0.08 of the best") fires identically on both. It is one absolute
+number, chosen by measurement.
+
+**Two habits that would have caught it:**
+
+1. **Calibrate on the real input.** The floor was never once tested against a
+   typed query — only against the tour pairs it came from.
+2. **Read your own verification output.** `verify-coreml-parity.py` printed
+   `top score 0.4136` for "quiet garden away from crowds" in every ranking run.
+   The number that proves the floor is wrong was on screen, repeatedly, and was
+   read as a ranking check rather than as a distribution.
+
+And a process one: the fix was a Swift constant, so it needed a **new build**,
+after the owner had been told this sort of thing was a content-side change. A
+tuning knob compiled into the app is not a knob you can turn.
