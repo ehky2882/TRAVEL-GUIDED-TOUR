@@ -103104,7 +103104,8 @@
       "tourIds": [
         "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
-        "400914D0-98AA-5357-B789-B59ACE861F50"
+        "400914D0-98AA-5357-B789-B59ACE861F50",
+        "5BE5FDC8-5659-57B7-966C-FDE5002F7931"
       ]
     },
     {
@@ -201354,8 +201355,8 @@
           "order": 0,
           "title": "The Barbican Estate",
           "caption": "😳 Should this style of housing complex be used as an example to building more needed housing? Here’s the story of the Barbican Estate in the",
-          "latitude": 51.5195625,
-          "longitude": -0.09468750000000001,
+          "latitude": 51.519751,
+          "longitude": -0.094221,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -201367,8 +201368,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5195625,
-      "centroidLongitude": -0.09468750000000001,
+      "centroidLatitude": 51.519751,
+      "centroidLongitude": -0.094221,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
