@@ -186,13 +186,25 @@ def main() -> int:
 
     mismatches = 0
     for query in RANK_QUERIES:
-        python_top = module.tour_scores(
-            np, chunks, owners, embedder.embed_one(query), len(tours)
-        ).argsort()[::-1][:RANK_DEPTH]
-        # Core ML query + quantized index = exactly what happens on the device.
-        coreml_top = module.tour_scores(
-            np, quantized, owners, core_ml_vector(query), len(tours)
-        ).argsort()[::-1][:RANK_DEPTH]
+        # 🔴 DIAGNOSTICS, because run 4 produced a result that cannot happen.
+        # Every ranking query is also a fixture string, and all 69 matched
+        # Python to >= 0.999 cosine minutes earlier — yet the top-10 came back
+        # completely disjoint (markets vs Sydney beaches for "food market").
+        # Two vectors 0.999 apart cannot do that, so one of those facts is
+        # false. These lines say which, instead of guessing:
+        python_query = embedder.embed_one(query)
+        coreml_query = core_ml_vector(query)
+        agreement = float(python_query @ coreml_query)
+
+        python_scores = module.tour_scores(np, chunks, owners, python_query, len(tours))
+        coreml_scores = module.tour_scores(np, quantized, owners, coreml_query, len(tours))
+        python_top = python_scores.argsort()[::-1][:RANK_DEPTH]
+        coreml_top = coreml_scores.argsort()[::-1][:RANK_DEPTH]
+
+        print(f"    query/query cosine {agreement:.6f} · "
+              f"python top score {python_scores.max():.4f} "
+              f"(spread over top 10: {python_scores[python_top].ptp():.4f}) · "
+              f"coreml top score {coreml_scores.max():.4f}")
 
         if list(python_top) == list(coreml_top):
             print(f"  ok   {query!r}")
