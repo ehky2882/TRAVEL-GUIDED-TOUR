@@ -409,7 +409,13 @@ struct SearchView: View {
             .padding(.horizontal, AtlasSpacing.lg)
             .padding(.vertical, AtlasSpacing.md)
         } else if !matches.isEmpty {
-            sectionHeader("Related")
+            // ⚠️ THE SAME WORDS AS THE TOUR PAGE, deliberately — owner
+            // decision, 2026-09-16. `TourDetailView` renders Text("More Like
+            // This") over the same mechanism, and two names for one idea only
+            // teaches people they are two things. The header style uppercases
+            // it, so this reads MORE LIKE THIS beside PLACES / MAKERS / TOURS.
+            // If one label ever changes, change both.
+            sectionHeader("More Like This")
             ForEach(matches) { tour in
                 Button {
                     recentSearchStore.record(query: trimmedQuery)

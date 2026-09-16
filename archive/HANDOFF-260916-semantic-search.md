@@ -24,7 +24,7 @@ Checked by fetching the public URL from a separate session and hashing the
 bytes, not by reading the workflow's green tick.
 
 **The index is NOT published and cannot be from here.** It ships from the
-`rebuild-related` job on the next content merge. ⚠️ **Until then the Related
+`rebuild-related` job on the next content merge. ⚠️ **Until then the "More Like This"
 section is empty on every build** — expected, not a regression.
 
 ## The three seams, and why each has an alarm
@@ -127,7 +127,7 @@ needs a new index and the two must move together.
 | `Features/Search/QueryEmbedder.swift` | Core ML wrapper. Pooling and L2 are **inside the graph**, not reimplemented here |
 | `Features/Search/TourEmbeddingStore.swift` | Reads `ATLSEMB2`, ports `tour_scores`. Validates the header and every length before trusting a number |
 | `Features/Search/SemanticSearch.swift` | State, debounce, download, `AppleArchive` unpack |
-| `Features/Search/SearchView.swift` | The Related section. Exclusion happens here, where the keyword list is in hand |
+| `Features/Search/SearchView.swift` | The "More Like This" section. Exclusion happens here, where the keyword list is in hand |
 | `scripts/verify-coreml-parity.py` | The gate |
 | `scripts/export-coreml.py` | The conversion, and the NaN fix |
 | `scripts/dump-ranking-fixture.py` | 48 entries / 122 chunks, sampled every 81st |
