@@ -6237,7 +6237,8 @@
         "67423DEA-A03C-53E1-9439-55E0B997E2B1",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
         "0c54e6d4-03f5-4550-a8e9-78c7224d4def",
-        "bd4d95e6-403e-4b9b-a894-efbc205668a5"
+        "bd4d95e6-403e-4b9b-a894-efbc205668a5",
+        "AF13873B-D1F4-4B82-B2A4-CF16D379771E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -105302,7 +105303,13 @@
       "centroidLongitude": -47.8672925,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "E9F9BB96-F64C-5609-BA0C-CEBDF931CB63",
+        "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
+        "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
+        "3EE92385-D8C1-50DE-9AC4-11666B374E78",
+        "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -126216,7 +126223,8 @@
         "60CCDB28-B24F-5960-B225-94C11301903F",
         "65993891-DFCF-526C-986B-59EAF7BB9458",
         "EBF3ACE6-8D0B-5DDB-9510-409F37340378",
-        "9DD40A18-5224-5F7A-9431-3FB31C4BD015"
+        "9DD40A18-5224-5F7A-9431-3FB31C4BD015",
+        "540613ee-b72f-4460-95ff-a03d921681ae"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -151557,6 +151565,7 @@
       "city": "Miami Beach",
       "country": "United States",
       "relatedTourIds": [
+        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7",
         "FC5764AB-D8BC-52A0-96B9-F3FF95736D57",
         "238C1D4C-2019-5D88-8A84-795F4032887B",
         "73D3176F-4C27-5FF9-BB90-7F704F2F06B1"
@@ -151817,6 +151826,7 @@
       "country": "United States",
       "relatedTourIds": [
         "ECBB560C-08D4-55BF-8DE9-227A66135479",
+        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7",
         "64EE6127-3604-5629-93C6-C94ED95A1485"
       ],
       "primaryCategory": "architecture",
@@ -151867,6 +151877,7 @@
       "city": "Miami Beach",
       "country": "United States",
       "relatedTourIds": [
+        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7",
         "7A500BA4-EB29-57D6-B10A-D6AAB2CAA72B"
       ],
       "primaryCategory": "architecture",
@@ -169160,7 +169171,8 @@
         "C644213D-F1E1-5EA3-AFC9-7F5377E4B7FA",
         "64EE6127-3604-5629-93C6-C94ED95A1485",
         "238C1D4C-2019-5D88-8A84-795F4032887B",
-        "61E00612-61EB-5FA3-AB73-4C51116FE26D"
+        "61E00612-61EB-5FA3-AB73-4C51116FE26D",
+        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -190087,6 +190099,9 @@
       "centroidLongitude": 8.5509375,
       "city": "Zürich",
       "country": "Switzerland",
+      "relatedTourIds": [
+        "375623DD-FA4B-5F70-AEF2-6E861A86974A"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -190693,6 +190708,9 @@
       "centroidLongitude": 8.51028,
       "city": "Zürich",
       "country": "Switzerland",
+      "relatedTourIds": [
+        "D1F18A3C-D400-5F2F-91B7-C33E58AC4BF8"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -227944,7 +227962,8 @@
         "CCA55540-D608-5275-A25B-E06803AB708D",
         "BBE88DE6-2830-56D4-9C4B-876C67FC9ADD",
         "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74",
-        "1C3D7D11-4592-5746-947E-86550ACD1363"
+        "1C3D7D11-4592-5746-947E-86550ACD1363",
+        "04EC9F2D-61CC-5753-BD5C-E22507CC0E50"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -227995,7 +228014,8 @@
         "E9F9BB96-F64C-5609-BA0C-CEBDF931CB63",
         "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
         "3EE92385-D8C1-50DE-9AC4-11666B374E78",
-        "9CB7665B-B9DF-580D-8E7E-342B4CAA973A"
+        "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
+        "53C5F4E5-FCB1-529E-A74D-DE616516C278"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -228046,6 +228066,7 @@
       "relatedTourIds": [
         "E9F9BB96-F64C-5609-BA0C-CEBDF931CB63",
         "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
+        "53C5F4E5-FCB1-529E-A74D-DE616516C278",
         "3EE92385-D8C1-50DE-9AC4-11666B374E78",
         "9CB7665B-B9DF-580D-8E7E-342B4CAA973A"
       ],
@@ -229164,7 +229185,8 @@
         "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
         "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
         "D3C29780-34E6-57D5-8872-C8A7C899D98C",
-        "3396CA2F-7227-5782-84AF-D775B186B1B3"
+        "3396CA2F-7227-5782-84AF-D775B186B1B3",
+        "F70F0376-C237-5610-BA05-94F6478775E4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -229988,6 +230010,7 @@
       "city": "Brasília",
       "country": "Brazil",
       "relatedTourIds": [
+        "53C5F4E5-FCB1-529E-A74D-DE616516C278",
         "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
         "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
         "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
@@ -230039,6 +230062,7 @@
       "city": "Brasília",
       "country": "Brazil",
       "relatedTourIds": [
+        "53C5F4E5-FCB1-529E-A74D-DE616516C278",
         "E9F9BB96-F64C-5609-BA0C-CEBDF931CB63",
         "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
         "3EE92385-D8C1-50DE-9AC4-11666B374E78",
@@ -230136,6 +230160,7 @@
         "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
         "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
         "E9F9BB96-F64C-5609-BA0C-CEBDF931CB63",
+        "53C5F4E5-FCB1-529E-A74D-DE616516C278",
         "9CB7665B-B9DF-580D-8E7E-342B4CAA973A"
       ],
       "primaryCategory": "architecture",
@@ -230600,7 +230625,13 @@
       "centroidLongitude": -80.140819,
       "city": "Miami Beach",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ECBB560C-08D4-55BF-8DE9-227A66135479",
+        "7A500BA4-EB29-57D6-B10A-D6AAB2CAA72B",
+        "61E00612-61EB-5FA3-AB73-4C51116FE26D",
+        "FC5764AB-D8BC-52A0-96B9-F3FF95736D57",
+        "73D3176F-4C27-5FF9-BB90-7F704F2F06B1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -234371,7 +234402,8 @@
         "03e5c64c-8ea5-57b5-8d9d-0ec003b4f1ed",
         "B5A1446C-64F1-5B68-AB40-6482475D01A6",
         "5a785271-81bb-52db-bf2f-2ca084f5e81c",
-        "32DC7EE6-8D6C-5D56-A7FC-8BA893F5D726"
+        "32DC7EE6-8D6C-5D56-A7FC-8BA893F5D726",
+        "d1997162-06ab-52b7-b7b3-b2e1de3a7bf8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -235714,6 +235746,16 @@
       "centroidLongitude": -46.6339157,
       "city": "São Paulo",
       "country": "Brazil",
+      "relatedTourIds": [
+        "b344b334-4402-55c1-808a-a192e52effc7",
+        "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
+        "04413D73-0775-5D97-8946-7FAE009DC00B",
+        "f4ce5978-958d-572f-8280-f4b06e9266b1",
+        "62ce120d-8f20-514c-b657-fcf679eab005",
+        "d45f87a0-f5ae-5b56-9521-ab36ac1ebe57",
+        "efb1cd84-1608-5b75-b8b3-0550a40ddca4",
+        "926F7B70-4A38-5CCB-810B-0F368C70BE1E"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -236044,7 +236086,8 @@
       "relatedTourIds": [
         "D7A09063-CB4D-5F64-BCDE-CDD1B9766822",
         "D0DD25C4-4699-5030-80CE-2F8B0D0D4BF9",
-        "61E00612-61EB-5FA3-AB73-4C51116FE26D"
+        "61E00612-61EB-5FA3-AB73-4C51116FE26D",
+        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7"
       ],
       "primaryCategory": "history",
       "tags": [
