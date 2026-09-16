@@ -483,6 +483,40 @@ hand-building a `/thumb/` path (a constructed one returns 400).
 **rawpixel serves `editor_1024` whatever Openverse advertises.** Two images advertised at
 7000×5249 delivered 1024×768. Download and measure.
 
+### A creator's cover frame is not a picture of the venue (2026-09-16)
+
+`make-link-pin.py` takes a pin's hero from the post's own `display_url`, so the hero is whatever
+frame the creator chose. **Creators routinely open with an establishing shot of the
+neighbourhood**, which produces a hero that is atmospheric, on-brand, and not the place the pin
+points at. Four @nom_life pins in the 103-pin batch (#910) got Manhattan Chinatown streetscapes:
+King's Kitchen and Phoenix Palace both the pagoda at Canal/Bowery, QQ Cafe and **The Monkey King
+NYC — a Bushwick restaurant** — both 59 Bayard Market.
+
+🔴 **The duplicate check can only see this when the same shot is REUSED.** Two pairs happened to
+share an establishing frame, which is the only reason any of it surfaced; a pin with its *own*
+generic streetscape is invisible to every check in the repo. The existing rule above —
+*open every hero and read it against its script* — is the only thing that finds those, and it
+does not scale to a 103-pin batch.
+
+⚠️ **This is not a pipeline fault, so do not "fix" the extractor.** The other 80 pins in the same
+batch were correct on inspection (a Paris bakery counter for Boulangerie Mamiche, dumplings and
+peanut noodles for Shu Jiao Fu Zhou). The tool faithfully fetched what the creator published.
+
+**Why these four were left as they are** (owner decision, 2026-09-16): every route needed an
+image nobody had.
+
+- **Instagram's embed is LOGIN-WALLED from a web container** — `/embed` returns HTTP 200 with
+  624 KB of HTML containing **zero** post metadata (no `display_url`, no `username`, no
+  `og:image`, no `scontent` URL) and 17 hits for `login`. `make-link-pin.py` raises
+  `COULD NOT VERIFY` on this correctly. ⚠️ **That is an environment block, not a broken tool and
+  not a renamed key** — do not "repair" the extractor on this evidence; try from elsewhere first.
+- **No public-domain photography of a small restaurant exists.** Openverse `license=cc0,pdm`
+  returned `result_count=0` for all four venues. Searched, not assumed.
+
+Three of the four are at least in the neighbourhood they depict; only The Monkey King is
+factually wrong, and correcting it needs one owner-supplied frame. **If a fix is ever made it is a
+NEW filename** (`..._hero-2.webp`) plus a repoint — never bytes at the live URL.
+
 ---
 
 ## 6. Backend and Supabase
