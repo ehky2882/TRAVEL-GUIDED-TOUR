@@ -49,6 +49,7 @@ and a funfair are two subjects. Read them; do not batch-approve them.
 """
 
 import argparse
+import io
 import json
 import math
 import os
@@ -69,6 +70,13 @@ DEFAULT_RADIUS_M = 500.0
 # the trade is different here: the cost of a loose match is one line a human
 # reads and dismisses.
 DEFAULT_TIGHT_M = 25.0
+
+# The NAME tier's radius, and it is deliberately WIDE. docs/places.md Rule 1 is
+# about identity, not proximity: Domino Park's pair sat 201 m apart and Asakusa
+# Underground Street's 662 m, so a tight radius misses exactly the cases the
+# tier exists for. What keeps `Chinatown` in London, Montreal and San Francisco
+# apart is this distance, not a rule.
+NAME_RADIUS_M = 1500.0
 
 # Words that carry no subject meaning, so "Chinatown" and "Chinatown Dragon
 # Gate" still compare as related while "The Jordaan" and "The Jordaan" match
@@ -138,6 +146,44 @@ def same_subject(a, b):
     return bool(smaller - GENERIC)
 
 
+def display_stem(title):
+    """The name a reader would say, stripped of the catalogue's decorations.
+
+    Titles carry a bilingual tail (`English | 日本語`) and parentheticals
+    (`Wat Arun (Temple of Dawn)`). Both are presentation, not identity, and
+    leaving them in breaks equality against the same place written plainly —
+    which is how four of the nine places minted in #941 stayed invisible.
+    """
+    head = (title or "").split("|")[0]
+    return re.sub(r"\(.*?\)", " ", head)
+
+
+def same_name(a, b):
+    """The two titles ARE the same name — set EQUALITY, not containment.
+
+    🔴 This is the whole design, and the distinction is load-bearing.
+    `same_subject` above tests containment, which is right for the NEAR tier
+    and wrong here: containment matches `Akihabara` to `Gyukatsu Ichi Ni San,
+    Akihabara`, a district against a restaurant inside it. Equality cannot.
+
+    `GENERIC` is reused unchanged — without it a title reduced to one generic
+    noun (`{"museum"}`) would pair every museum in a city with every other.
+
+    ⚠️ The city words are dropped SYMMETRICALLY, from the UNION of both
+    entries' cities. Dropping each side's own city is asymmetric and silently
+    loses real pairs: `Asakusa Underground Street` is labelled "Tokyo" on the
+    tour and "Tokyo (Asakusa)" on the pin, so a per-side drop removes "asakusa"
+    from one title only and the sets stop matching. That pair is one this tier
+    was built for, and the first version of this function missed it.
+    """
+    both = f"{a.get('city') or ''} {b.get('city') or ''}"
+    wa = subject_words(display_stem(a.get("title")), both)
+    wb = subject_words(display_stem(b.get("title")), both)
+    if not wa or wa != wb:
+        return False
+    return bool(wa - GENERIC)
+
+
 def entries(doc):
     out = [("tour", t) for t in doc.get("tours", [])]
     out += [("pin", t) for t in (doc.get("linkPins") or [])]
@@ -199,12 +245,70 @@ def scan(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M):
     return exact, tight, near
 
 
-def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None):
+def scan_names(doc, name_radius_m=NAME_RADIUS_M):
+    """Unplaced pairs that carry the SAME NAME, within `name_radius_m`.
+
+    Its own pass rather than a branch inside `scan`, because it runs at a much
+    wider radius than the NEAR tier and would otherwise force that tier's grid
+    to 1.5 km cells for no benefit.
+    """
+    claimed = {tid for p in (doc.get("places") or []) for tid in p.get("tourIds", [])}
+    items = [(k, t) for k, t in entries(doc) if t["id"] not in claimed]
+
+    cell = name_radius_m / 111_320.0
+    grid = {}
+    for kind, t in items:
+        lat, lon = marker(t)
+        grid.setdefault((int(lat // cell), int(lon // cell)), []).append((kind, t))
+
+    out, seen = [], set()
+    for (gy, gx), bucket in grid.items():
+        neighbours = [it for dy in (-1, 0, 1) for dx in (-1, 0, 1)
+                      for it in grid.get((gy + dy, gx + dx), ())]
+        for k1, a in bucket:
+            for k2, b in neighbours:
+                if a["id"] >= b["id"]:
+                    continue
+                key = (a["id"], b["id"])
+                if key in seen:
+                    continue
+                dist = haversine(marker(a), marker(b))
+                if dist > name_radius_m or not same_name(a, b):
+                    continue
+                seen.add(key)
+                out.append((dist, (k1, a), (k2, b)))
+    out.sort(key=lambda r: r[0])
+    return out
+
+
+def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
+           name_radius_m=NAME_RADIUS_M):
     # ⚠️ `out=sys.stdout` as a DEFAULT binds the stream at import time, so it
     # keeps writing to the real stdout even after `--out` has teed it — the
     # report would then be missing from its own report file. Resolve it here.
     out = sys.stdout if out is None else out
+    names = scan_names(doc, name_radius_m)
     exact, tight, near = scan(doc, radius_m, tight_m)
+
+    # A NAME pair that also lands in TIGHT or NEAR is reported ONCE, in NAME.
+    # Suppressing it there is the point of the tier: Rothko Chapel spent weeks
+    # invisible inside a 57-row TIGHT list. EXACT is deliberately NOT filtered —
+    # it reports a coordinate GROUP, a different unit, and it is already short.
+    named_pairs = {(a["id"], b["id"]) for _, (_, a), (_, b) in names}
+    tight = [r for r in tight if (r[1][1]["id"], r[2][1]["id"]) not in named_pairs]
+    near = [r for r in near if (r[1][1]["id"], r[2][1]["id"]) not in named_pairs]
+
+    if names:
+        out.write(f"\nNAME — {len(names)} unplaced pair(s) carrying the SAME NAME "
+                  f"within {name_radius_m:.0f} m.\n")
+        out.write("  🔴 docs/places.md Rule 1: two names for one thing is always a place,\n"
+                  "  and it has never once been declined. Put every row to the owner.\n")
+        for dist, (k1, a), (k2, b) in names:
+            out.write(f"  {dist:7.0f}m  [{k1}] {a['title'][:34]:<35} | "
+                      f"[{k2}] {b['title'][:34]:<35} {a.get('city')}\n")
+    else:
+        out.write(f"\nNAME — none. No unplaced pair shares a name within "
+                  f"{name_radius_m:.0f} m.\n")
 
     if exact:
         out.write(f"\nEXACT — {len(exact)} coincident group(s) with no place page.\n")
@@ -235,8 +339,9 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None):
     else:
         out.write(f"\nNEAR — none within {radius_m:.0f} m.\n")
 
-    out.write(f"\n{len(exact)} exact, {len(tight)} tight, {len(near)} near.\n")
-    return 1 if exact else 0
+    out.write(f"\n{len(names)} name, {len(exact)} exact, {len(tight)} tight, "
+              f"{len(near)} near.\n")
+    return 1 if (names or exact) else 0
 
 
 def selftest():
@@ -295,6 +400,69 @@ def selftest():
                       t("2", "Chinatown", 37.8100, -122.4127)],
             "linkPins": [], "places": []}
     check("beyond the radius is ignored", len(scan(doc4, radius_m=500)[2]), 0)
+
+    # --- NAME tier. Every case below is a REAL miss this tier was built for.
+    def nm(tid, title, lat, lon, city="Testville"):
+        return t(tid, title, lat, lon, city)
+
+    def names_of(a, b, **kw):
+        return scan_names({"tours": [a, b], "linkPins": [], "places": []}, **kw)
+
+    # The leading article. Two pins 6 m apart, same name, sat unreported for
+    # weeks inside the TIGHT list; the owner found them on the map.
+    check("a leading 'The' does not break identity",
+          len(names_of(nm("1", "The Rothko Chapel", 29.7375625, -95.3961875),
+                       nm("2", "Rothko Chapel", 29.7376165, -95.3962018))), 1)
+
+    # Bilingual tail plus parenthetical, both on one side.
+    check("bilingual tail and parenthetical are stripped",
+          len(names_of(nm("1", "Wat Arun (Temple of Dawn) | วัดอรุณ", 13.7438, 100.4885),
+                       nm("2", "Wat Arun", 13.7439, 100.4886))), 1)
+
+    # 🔴 Containment must NOT fire. This is the bug that scored a bare district
+    # name 0.95 against a restaurant standing in it.
+    check("containment is NOT identity",
+          len(names_of(nm("1", "Akihabara", 35.7020, 139.7710),
+                       nm("2", "Gyukatsu Ichi Ni San, Akihabara", 35.7021, 139.7711))), 0)
+
+    # 🔴 The GENERIC guard must survive the new tier.
+    check("a generic-only name does not pair",
+          len(names_of(nm("1", "The Museum", 51.5, -0.1),
+                       nm("2", "Museum", 51.5001, -0.1001))), 0)
+
+    # Same name, different continent: separated by distance, not by a rule.
+    check("same name far apart is not a pair",
+          len(names_of(nm("1", "Chinatown", 51.5117, -0.1310, "London"),
+                       nm("2", "Chinatown", 45.5075, -73.5605, "Montreal"))), 0)
+
+    # 🔴 Asymmetric city-dropping. Found by a REGRESSION CHECK against the
+    # catalogue as it stood before #941: the tier named 8 of the 9 places that
+    # PR minted and silently lost Asakusa Underground Street, because the tour
+    # is labelled "Tokyo" and the pin "Tokyo (Asakusa)" — so "asakusa" was
+    # stripped from one title and not the other.
+    check("a city label on one side only does not break identity",
+          len(names_of(nm("1", "Asakusa Underground Street | 浅草地下街",
+                          35.711148, 139.797884, "Tokyo"),
+                       nm("2", "Asakusa Underground Street",
+                          35.7175966, 139.7975626, "Tokyo (Asakusa)"))), 1)
+
+    # An existing place silences it, exactly as it does for EXACT.
+    placed = {"tours": [nm("1", "The Rothko Chapel", 29.73756, -95.39618),
+                        nm("2", "Rothko Chapel", 29.73761, -95.39620)],
+              "linkPins": [], "places": [{"id": "p", "name": "Rothko Chapel",
+                                          "tourIds": ["1", "2"]}]}
+    check("an existing place silences NAME", len(scan_names(placed)), 0)
+
+    # A NAME pair must be REMOVED from TIGHT — leaving it there is the whole
+    # failure this tier exists to end.
+    doc_n = {"tours": [nm("1", "The Rothko Chapel", 29.7375625, -95.3961875),
+                       nm("2", "Rothko Chapel", 29.7376165, -95.3962018)],
+             "linkPins": [], "places": []}
+    buf = io.StringIO()
+    report(doc_n, out=buf)
+    body = buf.getvalue()
+    check("NAME is reported", "NAME — 1 unplaced pair" in body, True)
+    check("and it is not ALSO in TIGHT", "TIGHT — none" in body, True)
 
     # --- subject matching
     check("city name is not subject", subject_words("Chinatown", "San Francisco"), {"chinatown"})
@@ -392,6 +560,8 @@ def main():
                     help=f"NEAR-tier search radius in metres (default {DEFAULT_RADIUS_M:.0f})")
     ap.add_argument("--tight", type=float, default=DEFAULT_TIGHT_M,
                     help=f"TIGHT-tier radius in metres (default {DEFAULT_TIGHT_M:.0f})")
+    ap.add_argument("--name-radius", type=float, default=NAME_RADIUS_M,
+                    help=f"NAME-tier radius in metres (default {NAME_RADIUS_M:.0f})")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -401,7 +571,8 @@ def main():
         if a.selftest:
             return selftest()
         with open(a.catalog, encoding="utf-8") as fh:
-            return report(json.load(fh), a.radius, a.tight)
+            return report(json.load(fh), a.radius, a.tight,
+                          name_radius_m=a.name_radius)
     finally:
         run.close()
 
