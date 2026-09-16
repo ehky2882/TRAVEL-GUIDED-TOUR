@@ -83,9 +83,29 @@ jobs:
       # when it cannot check rather than when it disagrees.
       - name: Verify it matches the catalog's vectors
         run: |
+          set -uo pipefail
           python3 scripts/verify-coreml-parity.py \
             --model build/AtlasQueryEmbedder.mlpackage \
-            ${{ inputs.skip_ranking && '--skip-ranking' || '' }}
+            ${{ inputs.skip_ranking && '--skip-ranking' || '' }} \
+            2>&1 | tee /tmp/verify.txt
+          # 🔴 PIPESTATUS, not $?. Through a pipe, `$?` is tee's status, so a
+          # script that exited 1 would read as 0 — the exact trap CLAUDE.md
+          # § "Reading a check's result" documents.
+          exit ${PIPESTATUS[0]}
+
+      # The verdict alone is not enough: "read the counts it prints, not only
+      # its verdict". Without this the numbers scroll past the end of the
+      # retrievable log window and a green tick has to be taken on trust.
+      - name: Publish what the check actually said
+        if: always()
+        run: |
+          {
+            echo "### Parity check"
+            echo ""
+            echo '```'
+            cat /tmp/verify.txt 2>/dev/null || echo "(the check produced no output — it did not run)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       # A .mlpackage is a directory; the app downloads one file and compiles it
       # with MLModel.compileModel(at:). Deterministic zip so an unchanged model
