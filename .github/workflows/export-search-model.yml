@@ -132,9 +132,14 @@ jobs:
           set -euo pipefail
           cd build
           find AtlasQueryEmbedder.mlpackage -exec touch -t 200001010000 {} +
-          aa archive -d AtlasQueryEmbedder.mlpackage \
+          # ⚠️ `-subdir` RESOLVES RELATIVE TO `-d`. Passing the package to both
+          # sent it looking for AtlasQueryEmbedder.mlpackage inside itself. `-d .`
+          # is the parent (this step has already cd'd into build/), so the
+          # package stays a top-level directory INSIDE the archive — which is
+          # what SearchModelLoader looks for after extracting.
+          aa archive -d . -subdir AtlasQueryEmbedder.mlpackage \
                      -o AtlasQueryEmbedder.mlpackage.aar \
-                     -a lzfse -subdir AtlasQueryEmbedder.mlpackage
+                     -a lzfse
           SIZE=$(stat -f%z AtlasQueryEmbedder.mlpackage.aar)
           echo "size=$SIZE" >> "$GITHUB_OUTPUT"
           echo "sha256=$(shasum -a 256 AtlasQueryEmbedder.mlpackage.aar | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
