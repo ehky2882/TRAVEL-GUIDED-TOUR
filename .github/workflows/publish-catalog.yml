@@ -122,9 +122,27 @@ jobs:
         if: steps.owed.outputs.owed == 'true'
         run: pip install -r scripts/requirements-embeddings.txt
 
-      # Model-free and fast. If the generator itself is broken, fail here
-      # rather than after writing 15,000 lines into the catalog.
+      # If the generator itself is broken, fail here rather than after writing
+      # 15,000 lines into the catalog.
+      #
+      # 🔴 GATED ON `owed`, AND IT HAS TO BE. This step used to run
+      # unconditionally, on the reasoning that the self-tests are "model-free
+      # and take seconds". They are model-free. They are not NUMPY-free — and
+      # the install above is gated — so on every merge that changed no embedded
+      # text this failed with `FAIL numpy available (skipping scoring checks)`,
+      # which is the self-test behaving exactly as designed: a check that cannot
+      # run must not report a pass.
+      #
+      # It broke three content merges before anyone noticed, and the only reason
+      # it was not worse is that `publish` and `seed-supabase` carry
+      # `if: ${{ !cancelled() }}` — so the mirror and Supabase kept shipping
+      # while this job went red beside them.
+      #
+      # Gating is the right fix rather than installing unconditionally: these
+      # tests exist to protect the rebuild, and when no rebuild is owed there is
+      # nothing to protect and nothing gets written.
       - name: Generator self-tests
+        if: steps.owed.outputs.owed == 'true'
         run: python3 scripts/build-embeddings.py --selftest
 
       - name: Regenerate neighbour lists
