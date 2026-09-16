@@ -37654,10 +37654,10 @@
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "030d8630-4c0a-5965-9758-5243a0074df9",
+        "C075CEAB-D14D-5C4E-8320-D08A9AF55E3C",
         "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00",
         "33a95e17-5676-5a41-89e1-69114fd03a40",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "d33678f8-be71-5b09-ad93-33a4310ee064"
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -39101,9 +39101,9 @@
         "9754fa56-2e06-57f3-9b89-3eedff1a470d",
         "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
         "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "30300459-7c37-5aba-a5c7-b204827f4139",
-        "a4561c4b-07ec-538a-a129-4a03c569ee88",
-        "280948c0-b59f-50d6-b237-2bb87253dede"
+        "a4561c4b-07ec-538a-a129-4a03c569ee88"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -39916,7 +39916,7 @@
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "10169772-6B9B-50FE-B5A4-F13D77068BED",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
-        "16f26669-acc3-5ab8-9732-1041bf61921f"
+        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -108467,10 +108467,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
-        "9615AE86-F5D1-5043-80E0-0D6BEAB9B136",
-        "10169772-6B9B-50FE-B5A4-F13D77068BED"
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "DEC0DDD0-47C8-57A6-A571-2DC90B72B57F",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -108517,14 +108521,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "F8BF9977-CDF0-5A9F-AFA4-71891FE1164A",
         "10169772-6B9B-50FE-B5A4-F13D77068BED",
         "1CA4297B-C597-582E-8263-90422B6446B9",
         "2e894f42-7142-5739-b7cf-9c702494e4b4",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
-        "9754fa56-2e06-57f3-9b89-3eedff1a470d",
-        "33a95e17-5676-5a41-89e1-69114fd03a40"
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -108902,6 +108906,7 @@
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
         "C9499965-405F-58DB-A1A9-139678987B20",
+        "386E0B2C-272F-5078-971E-30E92700474E",
         "5C77BAF3-288A-5ADC-8E60-412718D2CDA5",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74"
       ],
@@ -110247,6 +110252,7 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
@@ -114158,8 +114164,8 @@
         "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
         "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
         "F3579E9F-B19D-554F-B337-827DF1FF1588",
-        "C9499965-405F-58DB-A1A9-139678987B20",
-        "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A"
+        "386E0B2C-272F-5078-971E-30E92700474E",
+        "C9499965-405F-58DB-A1A9-139678987B20"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -114463,11 +114469,11 @@
         "31EC0DA2-81C2-5FAE-B67F-C6B561673CF3",
         "95988889-a1a8-5223-91f2-4670f26396b5",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
         "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
         "1CA4297B-C597-582E-8263-90422B6446B9",
-        "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "9754fa56-2e06-57f3-9b89-3eedff1a470d"
+        "0334472C-2E52-5A9D-A921-6D09B847C116"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -126449,13 +126455,13 @@
       "country": "United States",
       "relatedTourIds": [
         "C9499965-405F-58DB-A1A9-139678987B20",
+        "386E0B2C-272F-5078-971E-30E92700474E",
         "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7"
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -157769,6 +157775,9 @@
       "centroidLongitude": 121.5240299,
       "city": "Taipei",
       "country": "Taiwan",
+      "relatedTourIds": [
+        "AED402F2-901A-560D-B52E-1EB7CEE7963C"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -169602,10 +169611,10 @@
         "22f6500a-08a3-5574-8b09-71a7b3844be8",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "30300459-7c37-5aba-a5c7-b204827f4139",
+        "4FCF119D-B2EB-5C12-A572-9127045B4994",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "B5D1670D-63CA-5420-AE6D-102DADDB1945",
-        "95104ff5-7467-5439-94a3-49282747578a"
+        "B5D1670D-63CA-5420-AE6D-102DADDB1945"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -177865,14 +177874,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "2740C78C-FDE8-545F-B30D-56D793A6A9C3",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
         "7BEC05D8-5BAE-55F5-99B2-719E2B638408",
-        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "1D843F05-61E6-5C1E-9640-81375BCD6E8E"
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -182131,12 +182140,12 @@
       "relatedTourIds": [
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
         "775EC7F0-9C41-5072-86BD-EDF51AC0131C",
         "DC4BEC9E-D0E3-529E-805C-76A27C257C2F",
-        "F3579E9F-B19D-554F-B337-827DF1FF1588",
-        "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA"
+        "F3579E9F-B19D-554F-B337-827DF1FF1588"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -182185,11 +182194,13 @@
       "country": "France",
       "relatedTourIds": [
         "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
         "1CA4297B-C597-582E-8263-90422B6446B9",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
         "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
-        "0334472C-2E52-5A9D-A921-6D09B847C116"
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -182242,10 +182253,10 @@
         "5E8A80CD-BA84-59F5-860A-D9AAB7A15D29",
         "389a13e5-48b2-5027-874e-772e193dd158",
         "33a95e17-5676-5a41-89e1-69114fd03a40",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
         "3851D982-58C7-5840-89C4-DB748835B989",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "1CA4297B-C597-582E-8263-90422B6446B9",
-        "280948c0-b59f-50d6-b237-2bb87253dede"
+        "1CA4297B-C597-582E-8263-90422B6446B9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -182297,11 +182308,11 @@
         "9f048578-4538-5dec-ab87-406d4eed58c7",
         "26414503-e43b-53a9-98b8-89ee80def03c",
         "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
+        "C075CEAB-D14D-5C4E-8320-D08A9AF55E3C",
         "a4561c4b-07ec-538a-a129-4a03c569ee88",
         "eef8a099-2f7a-5883-9c02-35c0e1836bbd",
-        "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00",
-        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "8e8cfd3d-279e-5d8c-ac59-0134465d123e"
+        "ACA37B66-E001-52A9-8CB9-3E6DC7510141",
+        "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -186432,6 +186443,7 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "386E0B2C-272F-5078-971E-30E92700474E",
         "6D5F3871-CA8C-5F47-8A01-DBA1D30F29A4",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
         "5A89C565-9A24-53AA-8E42-CAA544B053D3",
@@ -189216,12 +189228,12 @@
       "relatedTourIds": [
         "389a13e5-48b2-5027-874e-772e193dd158",
         "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
         "554213fa-0593-5e69-b2dd-e95d10940097",
         "3FCE5F42-BB6D-5D1A-AD39-9D60B46BEB21",
         "3851D982-58C7-5840-89C4-DB748835B989",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "1CA4297B-C597-582E-8263-90422B6446B9",
-        "89EFF81F-C049-5076-BC30-E8853C639C16"
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -191485,14 +191497,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "A45805AB-F0E2-5D32-9E37-98A450A4F391",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "3B7D447F-55D7-586F-88C9-73EAD75ACA09",
-        "3BBDE9E7-969D-54AF-9468-791A679DCF69"
+        "3B7D447F-55D7-586F-88C9-73EAD75ACA09"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -191757,14 +191769,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
         "4BDCA974-DD0D-536F-BB83-175659EC83C2",
-        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
-        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
+        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -191818,8 +191830,8 @@
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
-        "64260E73-2972-5F47-B4F3-6995097ECD5E",
-        "BE8B80BD-771D-5CE4-801F-B81125261722"
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
+        "64260E73-2972-5F47-B4F3-6995097ECD5E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222331,7 +222343,7 @@
         "AC06CAD0-D862-57A7-BEB0-913BB59037E6",
         "B56CF802-89CB-5829-889E-7E83D0E528F7",
         "50CFB5A0-E6C2-54B0-952F-702397DBE263",
-        "775EC7F0-9C41-5072-86BD-EDF51AC0131C"
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222829,13 +222841,13 @@
       "country": "France",
       "relatedTourIds": [
         "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "9615AE86-F5D1-5043-80E0-0D6BEAB9B136",
-        "45DC77F1-CAA3-576E-9939-53908497459C",
-        "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19",
-        "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
-        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7",
-        "10169772-6B9B-50FE-B5A4-F13D77068BED",
-        "4ccf3929-1965-523d-b81c-8ac7f2228aeb"
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "71B33011-F8FE-5C09-94C7-6810F68F5514",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222882,12 +222894,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "71B33011-F8FE-5C09-94C7-6810F68F5514",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "10169772-6B9B-50FE-B5A4-F13D77068BED",
-        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7",
-        "45DC77F1-CAA3-576E-9939-53908497459C",
-        "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19"
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223028,13 +223042,13 @@
       "country": "France",
       "relatedTourIds": [
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
         "45DC77F1-CAA3-576E-9939-53908497459C",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19",
-        "9615AE86-F5D1-5043-80E0-0D6BEAB9B136",
-        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7",
-        "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
-        "10169772-6B9B-50FE-B5A4-F13D77068BED",
-        "31EC0DA2-81C2-5FAE-B67F-C6B561673CF3"
+        "79702152-6A98-54BA-9795-803F93ECAD50"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223081,11 +223095,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
-        "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19",
-        "9615AE86-F5D1-5043-80E0-0D6BEAB9B136",
-        "D8BC953A-5CC8-5DBA-AFFB-DE2BEFDA1790"
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223132,10 +223149,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
         "45DC77F1-CAA3-576E-9939-53908497459C",
-        "9615AE86-F5D1-5043-80E0-0D6BEAB9B136"
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223398,10 +223419,10 @@
         "50CFB5A0-E6C2-54B0-952F-702397DBE263",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "386E0B2C-272F-5078-971E-30E92700474E",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
-        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
-        "AC1B13CC-977C-5853-9E5B-17FAB53F9D13"
+        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223503,10 +223524,14 @@
       "city": "Taipei",
       "country": "Taiwan",
       "relatedTourIds": [
-        "DE9CF736-C03D-5B67-9403-0D7F255C12BD",
-        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
-        "23E0B0EF-9D7C-5E96-B34A-FF0EBC2694B0",
-        "EFBE619A-9915-5A71-BDE8-474A9FC41A00"
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "97708375-EBDC-5771-BF32-0583BE6D2960",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223555,9 +223580,13 @@
       "country": "Taiwan",
       "relatedTourIds": [
         "EFBE619A-9915-5A71-BDE8-474A9FC41A00",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
         "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
-        "DE9CF736-C03D-5B67-9403-0D7F255C12BD",
-        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435"
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "0FB50DA8-303B-5526-9B48-52EF03AB2FEF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224260,10 +224289,14 @@
       "city": "Taipei",
       "country": "Taiwan",
       "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
         "23E0B0EF-9D7C-5E96-B34A-FF0EBC2694B0",
-        "DE9CF736-C03D-5B67-9403-0D7F255C12BD",
-        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
-        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91"
+        "0FB50DA8-303B-5526-9B48-52EF03AB2FEF",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224311,10 +224344,14 @@
       "city": "Taipei",
       "country": "Taiwan",
       "relatedTourIds": [
+        "0FB50DA8-303B-5526-9B48-52EF03AB2FEF",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
         "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
-        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
-        "EFBE619A-9915-5A71-BDE8-474A9FC41A00",
-        "23E0B0EF-9D7C-5E96-B34A-FF0EBC2694B0"
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224362,10 +224399,14 @@
       "city": "Taipei",
       "country": "Taiwan",
       "relatedTourIds": [
-        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
-        "DE9CF736-C03D-5B67-9403-0D7F255C12BD",
-        "EFBE619A-9915-5A71-BDE8-474A9FC41A00",
-        "23E0B0EF-9D7C-5E96-B34A-FF0EBC2694B0"
+        "D2B4FD02-1787-5702-A037-760888088C1F",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "8B2D99AD-BF9E-58B3-A0B9-A7493AD673A2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -226618,8 +226659,8 @@
         "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
         "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
         "10169772-6B9B-50FE-B5A4-F13D77068BED",
-        "0E5C7D13-60A7-55FD-ADFE-57444895DD25",
-        "89EFF81F-C049-5076-BC30-E8853C639C16"
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -227508,9 +227549,9 @@
         "3851D982-58C7-5840-89C4-DB748835B989",
         "3FCE5F42-BB6D-5D1A-AD39-9D60B46BEB21",
         "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
+        "ACA37B66-E001-52A9-8CB9-3E6DC7510141",
         "4FD3764D-84A9-5E3E-94CD-1F762D62DD3E",
-        "E72854DC-1A73-5966-A32F-53A3D4CED78A",
-        "10169772-6B9B-50FE-B5A4-F13D77068BED"
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -227620,7 +227661,7 @@
         "CCBA4C5E-84EF-5813-85A9-F4CAE81B990D",
         "10169772-6B9B-50FE-B5A4-F13D77068BED",
         "89EFF81F-C049-5076-BC30-E8853C639C16",
-        "1E5796D2-82A4-52A1-819E-6C0E3812C63A"
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -227718,9 +227759,9 @@
         "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
         "3851D982-58C7-5840-89C4-DB748835B989",
         "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
+        "ACA37B66-E001-52A9-8CB9-3E6DC7510141",
         "1BFE9AE7-74B9-5AB6-80AA-EE73D0DC4D3F",
-        "0E5C7D13-60A7-55FD-ADFE-57444895DD25",
-        "E72854DC-1A73-5966-A32F-53A3D4CED78A"
+        "0E5C7D13-60A7-55FD-ADFE-57444895DD25"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -227773,9 +227814,9 @@
         "3FCE5F42-BB6D-5D1A-AD39-9D60B46BEB21",
         "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
         "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
-        "CCBA4C5E-84EF-5813-85A9-F4CAE81B990D",
-        "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8"
+        "CCBA4C5E-84EF-5813-85A9-F4CAE81B990D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -228354,8 +228395,8 @@
         "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
         "CCBA4C5E-84EF-5813-85A9-F4CAE81B990D",
         "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
-        "10169772-6B9B-50FE-B5A4-F13D77068BED",
-        "0c99c91e-e39b-5c28-98c1-b3186c325122"
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "10169772-6B9B-50FE-B5A4-F13D77068BED"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -229971,6 +230012,3442 @@
       "tags": [
         "Notable Building",
         "Engineering"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5315D723-4FA4-5D19-8BFC-14976A6AC629",
+      "createdAt": "2026-09-16",
+      "title": "This bookstore in Chengdu is absolutely surreal. This two…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "This bookstore in Chengdu is absolutely surreal. This two-story space almost feels like a cathedral with its mirrored ceilings, which reflect the bookcases. For a book lover, this is a bookstore dream but also just a beautiful space for photos 😆 #bookstore #chinatravel #explorechina #chengdu #architecturaldesign",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-bookstore-in-chengdu-is-absolutely-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7293149652076023072",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "9D190E2C-1C84-5DDB-BDF1-8DE84E5FD483",
+          "order": 0,
+          "title": "This bookstore in Chengdu is absolutely surreal. This two…",
+          "caption": "This bookstore in Chengdu is absolutely surreal. This two-story space almost feels like a cathedral with its mirrored ceilings, which reflec",
+          "latitude": 30.8064687,
+          "longitude": 103.8846087,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-bookstore-in-chengdu-is-absolutely-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 30.8064687,
+      "centroidLongitude": 103.8846087,
+      "city": "Chengdu",
+      "country": "China",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ACA37B66-E001-52A9-8CB9-3E6DC7510141",
+      "createdAt": "2026-09-16",
+      "title": "Is this the most beautiful bathroom in the world? This ar…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Is this the most beautiful bathroom in the world? This art noveau public restroom by Madeleine is classified as a historic monument in Paris. Built in 1905, it was closed for some time before being renovated and reopen in 2023! It costs 2€ to use but is free to take a look! #paristravel #uniquethingstodoinparis",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/is-this-the-most-beautiful-bathroom-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7482472297572404502",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "1DEE99D6-42A0-535C-B47C-EB7D002CADD0",
+          "order": 0,
+          "title": "Is this the most beautiful bathroom in the world? This ar…",
+          "caption": "Is this the most beautiful bathroom in the world? This art noveau public restroom by Madeleine is classified as a historic monument in Paris",
+          "latitude": 48.8694836,
+          "longitude": 2.3247334,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/is-this-the-most-beautiful-bathroom-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8694836,
+      "centroidLongitude": 2.3247334,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "9b93d74b-505a-5886-9cf7-a5ca235c12de",
+        "33a95e17-5676-5a41-89e1-69114fd03a40",
+        "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
+        "1CA4297B-C597-582E-8263-90422B6446B9",
+        "1BFE9AE7-74B9-5AB6-80AA-EE73D0DC4D3F"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4FCF119D-B2EB-5C12-A572-9127045B4994",
+      "createdAt": "2026-09-16",
+      "title": "Did you know you can visit the Louvre for free? #louvre #…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Did you know you can visit the Louvre for free? #louvre #paristravelguide #paristips",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/did-you-know-you-can-visit-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7497236639245208854",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "8C660AC0-DE86-5D0B-A800-8C5C5ED1A03D",
+          "order": 0,
+          "title": "Did you know you can visit the Louvre for free? #louvre #…",
+          "caption": "Did you know you can visit the Louvre for free? #louvre #paristravelguide #paristips",
+          "latitude": 48.8611473,
+          "longitude": 2.3380277,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/did-you-know-you-can-visit-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8611473,
+      "centroidLongitude": 2.3380277,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "1BFE9AE7-74B9-5AB6-80AA-EE73D0DC4D3F",
+        "3FCE5F42-BB6D-5D1A-AD39-9D60B46BEB21",
+        "0E5C7D13-60A7-55FD-ADFE-57444895DD25"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Iconic Landmark",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F8BF9977-CDF0-5A9F-AFA4-71891FE1164A",
+      "createdAt": "2026-09-16",
+      "title": "a fun lil expo at @le_grand_palais from Leandro Erlich, f…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "a fun lil expo at @le_grand_palais from Leandro Erlich, full of optical illusions. Open until the 26th of July!",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/a-fun-lil-expo-at-le-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7657173860848176416",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "4E16DEE4-C256-5E7B-B67C-00B0E0884348",
+          "order": 0,
+          "title": "a fun lil expo at @le_grand_palais from Leandro Erlich, f…",
+          "caption": "a fun lil expo at @le_grand_palais from Leandro Erlich, full of optical illusions. Open until the 26th of July!",
+          "latitude": 48.8661614,
+          "longitude": 2.3122229,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/a-fun-lil-expo-at-le-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8661614,
+      "centroidLongitude": 2.3122229,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "89EFF81F-C049-5076-BC30-E8853C639C16",
+        "2e894f42-7142-5739-b7cf-9c702494e4b4",
+        "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8",
+        "1CA4297B-C597-582E-8263-90422B6446B9",
+        "39e4f325-e903-51dd-8032-aea6bb824ed1",
+        "10169772-6B9B-50FE-B5A4-F13D77068BED",
+        "7059efa5-1166-55d6-99e6-903769fecfb8"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Iconic Landmark",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "55C8DFA3-0352-5255-9796-4C5947788BD5",
+      "createdAt": "2026-09-16",
+      "title": "Have you ever been to Lukang Old Street in Changhua? #tai…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Have you ever been to Lukang Old Street in Changhua? #taiwantravel",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-ever-been-to-lukang-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7348802209921928481",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "E61FF9E6-3359-5047-864B-DA6FCBF3ED8D",
+          "order": 0,
+          "title": "Have you ever been to Lukang Old Street in Changhua? #tai…",
+          "caption": "Have you ever been to Lukang Old Street in Changhua? #taiwantravel",
+          "latitude": 24.0541699,
+          "longitude": 120.4361729,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-ever-been-to-lukang-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.0541699,
+      "centroidLongitude": 120.4361729,
+      "city": "Changhua",
+      "country": "Taiwan",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "History",
+        "District"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+      "createdAt": "2026-09-16",
+      "title": "checking out one of paris's most iconic cafes, Cafe de la…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "checking out one of paris's most iconic cafes, Cafe de la Paix!",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/checking-out-one-of-paris-s-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7664972368477031713",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "F964CF20-DCD7-53A1-95D4-72E1DE9290E0",
+          "order": 0,
+          "title": "checking out one of paris's most iconic cafes, Cafe de la…",
+          "caption": "checking out one of paris's most iconic cafes, Cafe de la Paix!",
+          "latitude": 48.8707685,
+          "longitude": 2.3316957,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/checking-out-one-of-paris-s-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8707685,
+      "centroidLongitude": 2.3316957,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "10169772-6B9B-50FE-B5A4-F13D77068BED",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "3851D982-58C7-5840-89C4-DB748835B989",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "DEC0DDD0-47C8-57A6-A571-2DC90B72B57F",
+        "D89F4304-22E0-5461-90E7-90EC6649C227"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Iconic Landmark",
+        "History",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+      "createdAt": "2026-09-16",
+      "title": "For episode 2 of Worth the Wait, we visited one of the mo…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "For episode 2 of Worth the Wait, we visited one of the most iconic cafés in Paris— Cafe de Flore! We arrived around 8:30 and there was no wait! So if you wanna avoid the lines, come early for breakfast! Even though we did have a nice breakfast on the terrace, we wouldn’t say it’s really worth waiting for. The food was good, nothing crazy and the prices were a bit high. But given the cafe’s history, it’s worth experiencing if you’re really interested! We just feel like there’s a lot of other better options in Paris. But that’s just our opinion! What do you guys think? #parisfoodie #cafedeflore #worththewait",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/for-episode-2-of-worth-the-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7499831943953943830",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "0FF39DE2-421E-544D-96EA-445826F3ADF3",
+          "order": 0,
+          "title": "For episode 2 of Worth the Wait, we visited one of the mo…",
+          "caption": "For episode 2 of Worth the Wait, we visited one of the most iconic cafés in Paris— Cafe de Flore! We arrived around 8:30 and there was no wa",
+          "latitude": 48.8541444,
+          "longitude": 2.3326307,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/for-episode-2-of-worth-the-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8541444,
+      "centroidLongitude": 2.3326307,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "e1e5e09b-36e0-51ff-bde3-e8b2b7f65187",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Iconic Landmark",
+        "History",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52015879-C185-5DAB-BBB2-1559DD675A33",
+      "createdAt": "2026-09-16",
+      "title": "trying some local food spots in Taichung! This street sid…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "trying some local food spots in Taichung! This street side stall just sells pan fried buns or 水煎包 (shui jian bao) and we saw that its a really popular spot for locals! Nice and crispy and delicious! Definitely worth checking out in Taichung! No. 150號, Section 3, Hankou Rd, North District, Taichung City, 404",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-some-local-food-spots-in-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7605227605305920790",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "5CB24DDB-F613-51D5-98BE-EEA97ABA9212",
+          "order": 0,
+          "title": "trying some local food spots in Taichung! This street sid…",
+          "caption": "trying some local food spots in Taichung! This street side stall just sells pan fried buns or 水煎包 (shui jian bao) and we saw that its a real",
+          "latitude": 24.1668096,
+          "longitude": 120.6670513,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-some-local-food-spots-in-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.1668096,
+      "centroidLongitude": 120.6670513,
+      "city": "Taichung",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "303BF98E-599F-5867-85CA-4B04F01C2E06",
+        "854CD4C4-5737-520A-B0EE-D6A047A1B874"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Market"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6B30105D-1205-5C24-9D62-E9020DE40CA9",
+      "createdAt": "2026-09-16",
+      "title": "Here’s one of our favorite night markets in Taiwan, Keelu…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s one of our favorite night markets in Taiwan, Keelung night market! From Taipei Main Station take bus 2088A to Taiwan Power Company and then 5 minute walk to the night market! #taiwanfoodie #taiwantravel #exploretaiwan",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/keelung-night-market-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7421168040869498144",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "A101F123-EB79-5B35-BF98-ED35458DA368",
+          "order": 0,
+          "title": "Here’s one of our favorite night markets in Taiwan, Keelu…",
+          "caption": "Here’s one of our favorite night markets in Taiwan, Keelung night market! From Taipei Main Station take bus 2088A to Taiwan Power Company an",
+          "latitude": 25.1290607,
+          "longitude": 121.74391,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-one-of-our-favorite-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.1290607,
+      "centroidLongitude": 121.74391,
+      "city": "Keelung",
+      "country": "Taiwan",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Market"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "303BF98E-599F-5867-85CA-4B04F01C2E06",
+      "createdAt": "2026-09-16",
+      "title": "Everything we ate at Fengchia night market in Taichung!",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Everything we ate at Fengchia night market in Taichung!",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/everything-we-ate-at-fengchia-night-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7625272809622637846",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "28464FD6-0CFC-52C8-96E4-FA7704173A82",
+          "order": 0,
+          "title": "Everything we ate at Fengchia night market in Taichung!",
+          "caption": "Everything we ate at Fengchia night market in Taichung!",
+          "latitude": 24.1773506,
+          "longitude": 120.6466003,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/everything-we-ate-at-fengchia-night-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.1773506,
+      "centroidLongitude": 120.6466003,
+      "city": "Taichung",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "52015879-C185-5DAB-BBB2-1559DD675A33",
+        "854CD4C4-5737-520A-B0EE-D6A047A1B874"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Market",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
+      "createdAt": "2026-09-16",
+      "title": "The History of Restaurants - Episode 5: Isle of Capri #ny…",
+      "shortDescription": "A post by @nickcabotrodriguez on TikTok.",
+      "longDescription": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nyc #nychistory #history #restaurant @Jetta Juriansz @Isle of Capri",
+      "makerId": "F63BBD9D-E4E8-5760-A743-7213028B02F9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-history-of-restaurants-episode-5-nickcabotrodriguez_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@nickcabotrodriguez/video/7685810831052786957",
+      "sourceAuthor": "@nickcabotrodriguez",
+      "stops": [
+        {
+          "id": "D0AC80B1-8AB1-5539-AA07-F244A1078EDB",
+          "order": 0,
+          "title": "The History of Restaurants - Episode 5: Isle of Capri #ny…",
+          "caption": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nyc #nychistory #history #restaurant @Jetta Juriansz @Isle of Capri",
+          "latitude": 40.7627893,
+          "longitude": -73.9659429,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-history-of-restaurants-episode-5-nickcabotrodriguez_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7627893,
+      "centroidLongitude": -73.9659429,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "866EE87D-8E08-514D-B67F-5B9268257DF0",
+        "4BDCA974-DD0D-536F-BB83-175659EC83C2",
+        "06C7250D-1112-5D87-A67E-097CA96C0311",
+        "A90AECAF-CA4C-5FA5-9DD7-4C870F196AB9",
+        "BE8B80BD-771D-5CE4-801F-B81125261722",
+        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
+        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
+        "FB2E598B-3244-5B6C-84DA-E97F4E444088"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D89F4304-22E0-5461-90E7-90EC6649C227",
+      "createdAt": "2026-09-16",
+      "title": "trying one of the best rated burger spots in paris! Speci…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "trying one of the best rated burger spots in paris! Specimen Burger",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-one-of-the-best-rated-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7681293116233501984",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "F5F4C68F-25CB-5D0D-97FC-CC2532F501CC",
+          "order": 0,
+          "title": "trying one of the best rated burger spots in paris! Speci…",
+          "caption": "trying one of the best rated burger spots in paris! Specimen Burger",
+          "latitude": 48.8823233,
+          "longitude": 2.333044,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-one-of-the-best-rated-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8823233,
+      "centroidLongitude": 2.333044,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "DEC0DDD0-47C8-57A6-A571-2DC90B72B57F",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D2B4FD02-1787-5702-A037-760888088C1F",
+      "createdAt": "2026-09-16",
+      "title": "think we found our new favorite beef noodle spot in taipe…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "think we found our new favorite beef noodle spot in taipei 😋 Lao Shandong Homemade Noodles 108, Taiwan, Taipei City, Wanhua District, Xining Rd, 70號B1之15室 #taipei #taipeifood",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/think-we-found-our-new-favorite-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7630458879406558486",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "7753940A-6F58-58B9-A21B-3C9FB7CE7C55",
+          "order": 0,
+          "title": "think we found our new favorite beef noodle spot in taipe…",
+          "caption": "think we found our new favorite beef noodle spot in taipei 😋 Lao Shandong Homemade Noodles 108, Taiwan, Taipei City, Wanhua District, Xining",
+          "latitude": 25.0434526,
+          "longitude": 121.5057481,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/think-we-found-our-new-favorite-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0434526,
+      "centroidLongitude": 121.5057481,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "386E0B2C-272F-5078-971E-30E92700474E",
+      "createdAt": "2026-09-16",
+      "title": "trying the salt bread bagel at papa damour in nyc! #saltb…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "trying the salt bread bagel at papa damour in nyc! #saltbread #nycfood #papadamour",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-the-salt-bread-bagel-at-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7628970893426904342",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "71CD25B8-0BE9-58CA-B6CF-BCE37F6B62BB",
+          "order": 0,
+          "title": "trying the salt bread bagel at papa damour in nyc! #saltb…",
+          "caption": "trying the salt bread bagel at papa damour in nyc! #saltbread #nycfood #papadamour",
+          "latitude": 40.7331118,
+          "longitude": -73.9938497,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-the-salt-bread-bagel-at-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7331118,
+      "centroidLongitude": -73.9938497,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "C9499965-405F-58DB-A1A9-139678987B20",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
+        "F04B3E13-259A-5041-ACA6-689145DF3252",
+        "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
+        "B56CF802-89CB-5829-889E-7E83D0E528F7",
+        "90893488-3531-526F-BED7-FCEF827C3F46"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
+      "createdAt": "2026-09-16",
+      "title": "finally got to try the crispy milk donut in Taipei! Suzy…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "finally got to try the crispy milk donut in Taipei! Suzy loves it lmao Definitely worth trying out!! Crispy Milk Donuts No. 61號, Chengdu Rd, Wanhua District, Taipei City, Taiwan 108",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/finally-got-to-try-the-crispy-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7615633325306219798",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "5FB04736-3F2B-51C0-9802-1AA3DF4C2EB2",
+          "order": 0,
+          "title": "finally got to try the crispy milk donut in Taipei! Suzy…",
+          "caption": "finally got to try the crispy milk donut in Taipei! Suzy loves it lmao Definitely worth trying out!! Crispy Milk Donuts No. 61號, Chengdu Rd,",
+          "latitude": 25.0437276,
+          "longitude": 121.5017469,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/finally-got-to-try-the-crispy-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0437276,
+      "centroidLongitude": 121.5017469,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "DE9CF736-C03D-5B67-9403-0D7F255C12BD",
+        "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+        "47D6BE4A-0E3B-5472-BFC2-D4583994AF31",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "854CD4C4-5737-520A-B0EE-D6A047A1B874",
+      "createdAt": "2026-09-16",
+      "title": "Did you know the only Michelin starred ice cream shop is…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Did you know the only Michelin starred ice cream shop is in Taiwan? Took a trip to Taichung to try Minimal! Honestly, in our opinion, it was worth it! Really interesting combination of flavors that we would've never imagined to work together but, they do! 😆 Definitely recommend checking out if you're ever in Taichung! Would you try this spot?",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/did-you-know-the-only-michelin-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7612654268931247382",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "4B540245-0AD0-5476-BF60-6FE4A9BD17FE",
+          "order": 0,
+          "title": "Did you know the only Michelin starred ice cream shop is…",
+          "caption": "Did you know the only Michelin starred ice cream shop is in Taiwan? Took a trip to Taichung to try Minimal! Honestly, in our opinion, it was",
+          "latitude": 24.1516767,
+          "longitude": 120.6623214,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/did-you-know-the-only-michelin-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.1516767,
+      "centroidLongitude": 120.6623214,
+      "city": "Taichung",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "52015879-C185-5DAB-BBB2-1559DD675A33",
+        "303BF98E-599F-5867-85CA-4B04F01C2E06"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "87B0C008-CC85-5328-8284-13BF4887FF03",
+      "createdAt": "2026-09-16",
+      "title": "This is one of our favorite spots for taiwanese style bbq…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "This is one of our favorite spots for taiwanese style bbq skewers! Theres usually always a wait but its definitely worth it! Theres a lot of different skewers to choose from and they're all good lol. Heres the address if you wanna try it out! 品都串燒攤 忠孝 No. 299號, Section 4, Zhongxiao E Rd, Da’an District, Taipei City, 106",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-one-of-our-favorite-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7601882280487079190",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "62D2D9C5-6CCB-548F-8303-8AF0149E993F",
+          "order": 0,
+          "title": "This is one of our favorite spots for taiwanese style bbq…",
+          "caption": "This is one of our favorite spots for taiwanese style bbq skewers! Theres usually always a wait but its definitely worth it! Theres a lot of",
+          "latitude": 25.0413623,
+          "longitude": 121.5533626,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-one-of-our-favorite-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0413623,
+      "centroidLongitude": 121.5533626,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+      "createdAt": "2026-09-16",
+      "title": "trying a local Taiwanese spot in Taipei! Suzy came here w…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "trying a local Taiwanese spot in Taipei! Suzy came here with her family a couple weeks ago and really liked it so here we are! To be honest, we didn't really know what to order so we just ordered a bunch of random stuff. But I believe their beef ofal soup is their most popular dish. Anyways, its busy and yummy! 老李牛雜 No. 8號, Lane 59, Section 2, Anhe Rd, Da’an District, Taipei City, 106",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-a-local-taiwanese-spot-in-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7597057279191420182",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "03E0BE12-59C3-5587-8910-0A54C440C175",
+          "order": 0,
+          "title": "trying a local Taiwanese spot in Taipei! Suzy came here w…",
+          "caption": "trying a local Taiwanese spot in Taipei! Suzy came here with her family a couple weeks ago and really liked it so here we are! To be honest,",
+          "latitude": 25.0309339,
+          "longitude": 121.5528686,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-a-local-taiwanese-spot-in-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0309339,
+      "centroidLongitude": 121.5528686,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AED402F2-901A-560D-B52E-1EB7CEE7963C",
+      "createdAt": "2026-09-16",
+      "title": "Recently had the chance to stay at @mo_tpe ! Everything f…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Recently had the chance to stay at @mo_tpe ! Everything from the service, food, design of the hotel was beyond expected! We also loved rediscovering the National Palace Museum, which is only a 10min drive from the hotel. You can book this package including a private visit of the museum and lunch at Silk Palace until the end of 2025! If you’re looking for somewhere to treat yourself in Taiwan, definitely check out Mandarin Oriental Taipei!",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/recently-had-the-chance-to-stay-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7583333830879137046",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "56F91EAA-15C7-5B86-B098-B0D8C063F0CD",
+          "order": 0,
+          "title": "Recently had the chance to stay at @mo_tpe ! Everything f…",
+          "caption": "Recently had the chance to stay at @mo_tpe ! Everything from the service, food, design of the hotel was beyond expected! We also loved redis",
+          "latitude": 25.0556686,
+          "longitude": 121.5482403,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/recently-had-the-chance-to-stay-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0556686,
+      "centroidLongitude": 121.5482403,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "64027A52-09AF-5332-9F76-B09AF90F2C8D",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3CD61831-C4FB-5821-B59B-54783CC605DD",
+      "createdAt": "2026-09-16",
+      "title": "Would you try this? So suzy's mom recommended this shop l…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Would you try this? So suzy's mom recommended this shop last year but we never got the chance to try it so, here we are! And wow, this is probably one of the best things we ate this year 🤣 Its 皮蛋 (pi-dan)/ preserved egg wonton noodles and we know it might look a lil wild but we really enjoyed it. All the flavors blended so well together and the chili oil, 🤌 Do y'all like preserved egg or have you ever tried it? Cha Kee Noodle House 查記麵館 No. 37號, Wuxing St, Xinyi District, Taipei City, 110",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/would-you-try-this-so-suzy-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7577028943128169751",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "A3AD01AA-39F8-5909-AAC8-724EE7DD84A7",
+          "order": 0,
+          "title": "Would you try this? So suzy's mom recommended this shop l…",
+          "caption": "Would you try this? So suzy's mom recommended this shop last year but we never got the chance to try it so, here we are! And wow, this is pr",
+          "latitude": 25.0266197,
+          "longitude": 121.5640817,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/would-you-try-this-so-suzy-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0266197,
+      "centroidLongitude": 121.5640817,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "97708375-EBDC-5771-BF32-0583BE6D2960",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "D2B4FD02-1787-5702-A037-760888088C1F",
+        "EFBE619A-9915-5A71-BDE8-474A9FC41A00"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+      "createdAt": "2026-09-16",
+      "title": "We saw this place on IG and had to go try it out. Basical…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "We saw this place on IG and had to go try it out. Basically, a Taiwanese version of Ichiran, but with 牛肉麵 (beef noodle soup). Suzy really liked it and said the side dishes were good too! I thought it was not bad, pretty decent bowl of beef noodle. But let us know what you think! Would you try this spot? 門前隱味牛肉麵 西門漢口 No. 7號, Lane 20, Section 2, Hankou St, Wanhua District, Taipei City, 108",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/we-saw-this-place-on-ig-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7574049095061458198",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "E14EA66A-1518-5DF5-922A-A00A6096758F",
+          "order": 0,
+          "title": "We saw this place on IG and had to go try it out. Basical…",
+          "caption": "We saw this place on IG and had to go try it out. Basically, a Taiwanese version of Ichiran, but with 牛肉麵 (beef noodle soup). Suzy really li",
+          "latitude": 25.0451924,
+          "longitude": 121.5080004,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/we-saw-this-place-on-ig-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0451924,
+      "centroidLongitude": 121.5080004,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "D2B4FD02-1787-5702-A037-760888088C1F",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "64027A52-09AF-5332-9F76-B09AF90F2C8D",
+      "createdAt": "2026-09-16",
+      "title": "Here's a hotel to check out on your next trip to Taipei!…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here's a hotel to check out on your next trip to Taipei! 5-star stays without breaking the bank? Yes, please 🥹 Recently stayed at Grand Hilai Hotel in Nangang and had a fantastic experience. Super spacious, super cozy & clean with plenty of amenities (gym, spa & sauna, rooftop pool) We found nights starting at $146 usd, so definitely worth it! You can find this hotel along with all our favorite stays on our @expedia travel shop (link in bio)",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-a-hotel-to-check-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7571084722789469462",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "79783D65-0012-5495-9F93-61F31FCF984A",
+          "order": 0,
+          "title": "Here's a hotel to check out on your next trip to Taipei!…",
+          "caption": "Here's a hotel to check out on your next trip to Taipei! 5-star stays without breaking the bank? Yes, please 🥹 Recently stayed at Grand Hila",
+          "latitude": 25.0578505,
+          "longitude": 121.619913,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-a-hotel-to-check-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0578505,
+      "centroidLongitude": 121.619913,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "AED402F2-901A-560D-B52E-1EB7CEE7963C",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "47D6BE4A-0E3B-5472-BFC2-D4583994AF31",
+      "createdAt": "2026-09-16",
+      "title": "back in taiwan and the jetlag is hittin hard so theres on…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "back in taiwan and the jetlag is hittin hard so theres only one thing to do.. get some taiwanese breakfast 😋 this spot is Yonghe Soy Milk, a popular local spot for traditional taiwanese breakfast! Address below if you wanna try it out! No. 63, Section 4, Ren'ai Rd, Da’an District, Taipei City, 106",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/back-in-taiwan-and-the-jetlag-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7552525786771639574",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "B5080594-AA8E-5E09-A020-B35FC18D7B64",
+          "order": 0,
+          "title": "back in taiwan and the jetlag is hittin hard so theres on…",
+          "caption": "back in taiwan and the jetlag is hittin hard so theres only one thing to do.. get some taiwanese breakfast 😋 this spot is Yonghe Soy Milk, a",
+          "latitude": 25.0376912,
+          "longitude": 121.5541982,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/back-in-taiwan-and-the-jetlag-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0376912,
+      "centroidLongitude": 121.5541982,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DEC0DDD0-47C8-57A6-A571-2DC90B72B57F",
+      "createdAt": "2026-09-16",
+      "title": "our favorite spot for matcha in paris! Kura-ge 2 Rue du R…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "our favorite spot for matcha in paris! Kura-ge 2 Rue du Roi de Sicile, 75004 Paris, France",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/our-favorite-spot-for-matcha-in-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7549196297090338070",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "3BC1AF69-0BBC-5DFA-82BA-39973EF62278",
+          "order": 0,
+          "title": "our favorite spot for matcha in paris! Kura-ge 2 Rue du R…",
+          "caption": "our favorite spot for matcha in paris! Kura-ge 2 Rue du Roi de Sicile, 75004 Paris, France",
+          "latitude": 48.8555627,
+          "longitude": 2.3609565,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/our-favorite-spot-for-matcha-in-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8555627,
+      "centroidLongitude": 2.3609565,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "D89F4304-22E0-5461-90E7-90EC6649C227",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7",
+        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3916CE65-DC32-533A-98A7-E313AD8D553B",
+      "createdAt": "2026-09-16",
+      "title": "another day, another boulangerie today we're trying a spo…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "another day, another boulangerie today we're trying a spot we had saved for a while and was actually recommended by one of you guys! La Panifacture is a small shop in the 11th but has some beautiful looking bread and pastries! We really enjoyed the chausson aux pommes and pain suisse! Address below if you wanna check it out 🫶 La Panifacture 104 Rue Saint-Maur, 75011 Paris, France",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/another-day-another-boulangerie-today-we-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7545104449975356694",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "6AB5CDE5-71D7-5B87-B49A-20A05DC90E17",
+          "order": 0,
+          "title": "another day, another boulangerie today we're trying a spo…",
+          "caption": "another day, another boulangerie today we're trying a spot we had saved for a while and was actually recommended by one of you guys! La Pani",
+          "latitude": 48.8661975,
+          "longitude": 2.3770012,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/another-day-another-boulangerie-today-we-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8661975,
+      "centroidLongitude": 2.3770012,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
+        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+      "createdAt": "2026-09-16",
+      "title": "passed by this little cozy taiwanese restaurant one day i…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "passed by this little cozy taiwanese restaurant one day in paris and we've been missing taiwan so we had to try it out! Here's the address if you wanna check it out! Le goût de Taïwan 21 Rue des Grands Augustins, 75006 Paris",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/passed-by-this-little-cozy-taiwanese-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7542143750974246166",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "5536F7B1-7CE6-50BC-8808-6E8A5D202DF3",
+          "order": 0,
+          "title": "passed by this little cozy taiwanese restaurant one day i…",
+          "caption": "passed by this little cozy taiwanese restaurant one day in paris and we've been missing taiwan so we had to try it out! Here's the address i",
+          "latitude": 48.8539894,
+          "longitude": 2.3404672,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/passed-by-this-little-cozy-taiwanese-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8539894,
+      "centroidLongitude": 2.3404672,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "F955C997-0310-56D0-B02F-416C9913B224",
+        "71B33011-F8FE-5C09-94C7-6810F68F5514",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "9615AE86-F5D1-5043-80E0-0D6BEAB9B136",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98452AC5-AB44-5E88-B38F-C123A91594D5",
+      "createdAt": "2026-09-16",
+      "title": "trying out another taiwanese restaurant in paris! today w…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "trying out another taiwanese restaurant in paris! today we’re checking out Chez Ajia in the 4th! This is a spot a lot you guys have been recommending to us and we finally got around to trying it. A nice homey spot with the best guabao we’ve had in paris! Definitely a solid choice if you’re looking for Taiwanese food here! 4 Rue du Roi de Sicile, 75004 Paris, France #paristravel #parisfoodie #taiwanesefood",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-out-another-taiwanese-restaurant-in-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7494267360187043094",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "80B21EE5-4E91-57B8-BCD1-2D54FDB34615",
+          "order": 0,
+          "title": "trying out another taiwanese restaurant in paris! today w…",
+          "caption": "trying out another taiwanese restaurant in paris! today we’re checking out Chez Ajia in the 4th! This is a spot a lot you guys have been rec",
+          "latitude": 48.8556281,
+          "longitude": 2.3607903,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trying-out-another-taiwanese-restaurant-in-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8556281,
+      "centroidLongitude": 2.3607903,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+        "71B33011-F8FE-5C09-94C7-6810F68F5514",
+        "F955C997-0310-56D0-B02F-416C9913B224",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F955C997-0310-56D0-B02F-416C9913B224",
+      "createdAt": "2026-09-16",
+      "title": "Which flavor would you get? 😆 We were taking a walk in pa…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Which flavor would you get? 😆 We were taking a walk in paris and passed by this cute shop with taiwanese wheelcake so we had to stop and try it out! Here’s the address if you wanna try it out! L’INFINI 无限 @linfini_cafeparis 3 Rue de Montmorency, 75003 Paris, France #paristravel #parisfoodie #taiwanesedessert",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/which-flavor-would-you-get-we-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7485382069107821846",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "674C622F-E4AA-53CA-8BA4-6C660FA9CC3F",
+          "order": 0,
+          "title": "Which flavor would you get? 😆 We were taking a walk in pa…",
+          "caption": "Which flavor would you get? 😆 We were taking a walk in paris and passed by this cute shop with taiwanese wheelcake so we had to stop and try",
+          "latitude": 48.8624504,
+          "longitude": 2.357026,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/which-flavor-would-you-get-we-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8624504,
+      "centroidLongitude": 2.357026,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "71B33011-F8FE-5C09-94C7-6810F68F5514",
+        "0334472C-2E52-5A9D-A921-6D09B847C116"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "79702152-6A98-54BA-9795-803F93ECAD50",
+      "createdAt": "2026-09-16",
+      "title": "Have you tried Best Tofu in Paris? We’ve been craving som…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Have you tried Best Tofu in Paris? We’ve been craving some soymilk and youtiao breakfast and we heard this spot in Belleville is really good so we came to try it out! We would recommend the salty tofu pudding and the youtiao! The soymilk was a bit too light for us but still great if you’re craving it in paris! Best Tofu 9 Bd de la Villette, 75010 Paris #paris #exploreparis #parisfoodie",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-tried-best-tofu-in-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7481313043163385110",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "83D8AD4B-11D0-5085-BBF3-EDCD9B9FADD2",
+          "order": 0,
+          "title": "Have you tried Best Tofu in Paris? We’ve been craving som…",
+          "caption": "Have you tried Best Tofu in Paris? We’ve been craving some soymilk and youtiao breakfast and we heard this spot in Belleville is really good",
+          "latitude": 48.872697,
+          "longitude": 2.3759497,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-tried-best-tofu-in-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.872697,
+      "centroidLongitude": 2.3759497,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "D89F4304-22E0-5461-90E7-90EC6649C227",
+        "F955C997-0310-56D0-B02F-416C9913B224",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
+      "createdAt": "2026-09-16",
+      "title": "Have you been to Rue du Montparnasse? This street in Pari…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Have you been to Rue du Montparnasse? This street in Paris is lined with creperies and today we’re trying Creperie de Josselin! Hands down, one of the best, if not the best, crepe we’ve ever had 😋 But try it for yourself and let us know what you think! La Creperie de Josselin 67 Rue du Montparnasse, 75014 Paris #parisfoodie #paristravel",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-been-to-rue-du-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7467238827103374614",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "44BBBEAD-723F-5004-99AE-A7CB77B2E8FB",
+          "order": 0,
+          "title": "Have you been to Rue du Montparnasse? This street in Pari…",
+          "caption": "Have you been to Rue du Montparnasse? This street in Paris is lined with creperies and today we’re trying Creperie de Josselin! Hands down, ",
+          "latitude": 48.8416772,
+          "longitude": 2.3253642,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-been-to-rue-du-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8416772,
+      "centroidLongitude": 2.3253642,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "554213fa-0593-5e69-b2dd-e95d10940097"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0FB50DA8-303B-5526-9B48-52EF03AB2FEF",
+      "createdAt": "2026-09-16",
+      "title": "If you’re looking to try some traditional Taiwanese desse…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "If you’re looking to try some traditional Taiwanese dessert, definitely check out Dongqu Fenyuan (Eastern Ice Store) This shop has been around for a long time and is one of our favorites. You can either get it hot or iced and then select your toppings like grass jelly, taro ball and tapioca! Eastern Ice Store 東區粉圓 No. 38, Lane 216, Section 4, Zhongxiao E Rd, Da’an District, Taipei City, 106 #exploretaipei #taipeifoodie",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-looking-to-try-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7419306655034248481",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "1BE46FE7-73E8-5B0A-B99F-CE7DFFAF44D8",
+          "order": 0,
+          "title": "If you’re looking to try some traditional Taiwanese desse…",
+          "caption": "If you’re looking to try some traditional Taiwanese dessert, definitely check out Dongqu Fenyuan (Eastern Ice Store) This shop has been arou",
+          "latitude": 25.0404706,
+          "longitude": 121.5529652,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-looking-to-try-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0404706,
+      "centroidLongitude": 121.5529652,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "DE9CF736-C03D-5B67-9403-0D7F255C12BD",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+      "createdAt": "2026-09-16",
+      "title": "Whats your go-to order for taiwanese breakfast? Breakfast…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Whats your go-to order for taiwanese breakfast? Breakfast shop: Lao Jiang’s House 106, Taipei City, Da’an District, Yanji St, 110號1F #exploretaipei #taiwantravel #travelvlog",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whats-your-go-to-order-for-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7416717618037509408",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "D0674CEB-3902-5D3A-9A80-785CF63867C0",
+          "order": 0,
+          "title": "Whats your go-to order for taiwanese breakfast? Breakfast…",
+          "caption": "Whats your go-to order for taiwanese breakfast? Breakfast shop: Lao Jiang’s House 106, Taipei City, Da’an District, Yanji St, 110號1F #explor",
+          "latitude": 25.0447925,
+          "longitude": 121.5537481,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whats-your-go-to-order-for-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0447925,
+      "centroidLongitude": 121.5537481,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "47D6BE4A-0E3B-5472-BFC2-D4583994AF31",
+        "AED402F2-901A-560D-B52E-1EB7CEE7963C",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "97708375-EBDC-5771-BF32-0583BE6D2960",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+      "createdAt": "2026-09-16",
+      "title": "Would you try this sandwich? This is definitely one of ou…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Would you try this sandwich? This is definitely one of our favorites! There’s a good reason why everyone says this is the best sandwich in Paris. Chez Alain Miam Miam 26 Rue Charlot, 75003 Paris, France #parisfoodie #paristravel",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/would-you-try-this-sandwich-this-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7414483048416185632",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "96CD615F-5C64-5214-9E23-4B98BD09DDAE",
+          "order": 0,
+          "title": "Would you try this sandwich? This is definitely one of ou…",
+          "caption": "Would you try this sandwich? This is definitely one of our favorites! There’s a good reason why everyone says this is the best sandwich in P",
+          "latitude": 48.8622884,
+          "longitude": 2.3620039,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/would-you-try-this-sandwich-this-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8622884,
+      "centroidLongitude": 2.3620039,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "45DC77F1-CAA3-576E-9939-53908497459C",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "D89F4304-22E0-5461-90E7-90EC6649C227",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "79702152-6A98-54BA-9795-803F93ECAD50"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+      "createdAt": "2026-09-16",
+      "title": "#creatorsearchinsights here’s one of the best bakeries in…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "#creatorsearchinsights here’s one of the best bakeries in Paris! Du Pain et Des Idees! #parisfoodie",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/creatorsearchinsights-here-s-one-of-the-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7409662845597519137",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "4A73631C-593A-511D-871F-C227D0B4FBA5",
+          "order": 0,
+          "title": "#creatorsearchinsights here’s one of the best bakeries in…",
+          "caption": "#creatorsearchinsights here’s one of the best bakeries in Paris! Du Pain et Des Idees! #parisfoodie",
+          "latitude": 48.8712472,
+          "longitude": 2.3629042,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/creatorsearchinsights-here-s-one-of-the-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8712472,
+      "centroidLongitude": 2.3629042,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "79702152-6A98-54BA-9795-803F93ECAD50"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "71B33011-F8FE-5C09-94C7-6810F68F5514",
+      "createdAt": "2026-09-16",
+      "title": "Back with another @michelinguide spot! If you’re looking…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Back with another @michelinguide spot! If you’re looking for some good chinese food in Paris, you definitely need to check out Imperial Choisy, a Michelin recommended restaurant in the 13th, specializing in classic Cantonese dishes. But try it out for yourself and let us know what you think! #michelinguide #parisfoodie #paristravel",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/back-with-another-michelinguide-spot-if-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7381835788155145504",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "8C56E18E-E30B-5968-9147-C39E136CECEF",
+          "order": 0,
+          "title": "Back with another @michelinguide spot! If you’re looking…",
+          "caption": "Back with another @michelinguide spot! If you’re looking for some good chinese food in Paris, you definitely need to check out Imperial Choi",
+          "latitude": 48.8221895,
+          "longitude": 2.3632536,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/back-with-another-michelinguide-spot-if-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8221895,
+      "centroidLongitude": 2.3632536,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "9615AE86-F5D1-5043-80E0-0D6BEAB9B136",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "536911AD-0C02-565A-9C13-295A41C7B487",
+      "createdAt": "2026-09-16",
+      "title": "Have you ever had Tainan beef soup? Took a trip from Taip…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Have you ever had Tainan beef soup? Took a trip from Taipei just to eat this.. 🤣 this is one of, if not, Tainan’s most famous specialty, 牛肉湯 (niu rou tang) Usually eaten during breakfast, beef soup consists of a clear broth and pieces of beef, thats it. But don’t be fooled, this bowl of beef is packed with flavor and the meat is super fresh, which gives it even more flavor. But try it for yourself and let us know what you think! Xiluodian Beef Soup 西羅殿牛肉湯 No. 98號, Gongyuan S Rd, North District, Tainan City, Taiwan 704 #exploretaiwan #tainan #taiwanfoodie #michelinguide",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-ever-had-tainan-beef-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7366244348964457760",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "5D3A475B-6D6C-5A6D-B1B0-453C967D6996",
+          "order": 0,
+          "title": "Have you ever had Tainan beef soup? Took a trip from Taip…",
+          "caption": "Have you ever had Tainan beef soup? Took a trip from Taipei just to eat this.. 🤣 this is one of, if not, Tainan’s most famous specialty, 牛肉湯",
+          "latitude": 23.0021666,
+          "longitude": 120.2044118,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-ever-had-tainan-beef-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 23.0021666,
+      "centroidLongitude": 120.2044118,
+      "city": "Tainan",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "ED3F481B-CDB2-5673-B41F-A8CCDEDD1BD5",
+        "CE18A31D-6000-584D-BF6E-4BC178A4D2FA",
+        "19C26A5F-1470-5D7F-9F10-CAF5C926A077"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "19C26A5F-1470-5D7F-9F10-CAF5C926A077",
+      "createdAt": "2026-09-16",
+      "title": "Have you ever had milkfish congee? Here’s another @michel…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Have you ever had milkfish congee? Here’s another @michelinguide spot you gotta try! Another Tainan specialty, 虱目魚粥, or milkfish congee A Hsing Congee No. 289號, Section 3, Minzu Rd, West Central District, Tainan City, Taiwan 700 #michelinguide #taiwanesefood #exploretaiwan #tainan",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-ever-had-milkfish-congee-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7363271705466359072",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "AABF0763-BB68-5E52-B227-8E6874D9B64B",
+          "order": 0,
+          "title": "Have you ever had milkfish congee? Here’s another @michel…",
+          "caption": "Have you ever had milkfish congee? Here’s another @michelinguide spot you gotta try! Another Tainan specialty, 虱目魚粥, or milkfish congee A Hs",
+          "latitude": 22.9996641,
+          "longitude": 120.1936126,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/have-you-ever-had-milkfish-congee-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.9996641,
+      "centroidLongitude": 120.1936126,
+      "city": "Tainan",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "CE18A31D-6000-584D-BF6E-4BC178A4D2FA",
+        "ED3F481B-CDB2-5673-B41F-A8CCDEDD1BD5",
+        "536911AD-0C02-565A-9C13-295A41C7B487"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "25C2FB7B-19D4-5912-A712-58AED08B3FFF",
+      "createdAt": "2026-09-16",
+      "title": "Who’s down for a douhua 豆花 date? 😋 Douhua or Tofu Pudding…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Who’s down for a douhua 豆花 date? 😋 Douhua or Tofu Pudding is one of our favorite desserts in Taiwan. You can find it in shops all over the country but, Chiayi might have the best! Theirs is made with soy milk which brings out the soy flavor even more. We had it almost every day while we were there.. 😅 桃城豆花-光華路 No. 65號, Guanghua Rd, East District, Chiayi City, Taiwan 600 #exploretaiwan #taiwantravel #chiayi",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/who-s-down-for-a-douhua-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7360317967361428769",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "9BE10073-F67D-5F7F-80D4-9532D9ED0F80",
+          "order": 0,
+          "title": "Who’s down for a douhua 豆花 date? 😋 Douhua or Tofu Pudding…",
+          "caption": "Who’s down for a douhua 豆花 date? 😋 Douhua or Tofu Pudding is one of our favorite desserts in Taiwan. You can find it in shops all over the c",
+          "latitude": 23.4772087,
+          "longitude": 120.454694,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/who-s-down-for-a-douhua-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 23.4772087,
+      "centroidLongitude": 120.454694,
+      "city": "Chiayi",
+      "country": "Taiwan",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ED3F481B-CDB2-5673-B41F-A8CCDEDD1BD5",
+      "createdAt": "2026-09-16",
+      "title": "Here’s another @michelinguide spot you have to try! This…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s another @michelinguide spot you have to try! This time, we’re in Tainan. Home to some of the best food in Taiwan (arguably THE best), and today we’re trying a Tainan specialty, Stir-Fried Eel Noodles Address: Eastern Castle Noodles 城邊真味鱔魚意麵 No. 235號, Section 1, Dongmen Rd, East District, Tainan City, 701 Have you had Tainan Eel Noodles before? #michelinguide #taiwanesefood #tainan",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eastern-castle-noodles-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7353998759979765025",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "CEF5F774-DB3E-5DD7-8563-329C6122B783",
+          "order": 0,
+          "title": "Here’s another @michelinguide spot you have to try! This…",
+          "caption": "Here’s another @michelinguide spot you have to try! This time, we’re in Tainan. Home to some of the best food in Taiwan (arguably THE best),",
+          "latitude": 22.9876336,
+          "longitude": 120.2156349,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-another-michelinguide-spot-you-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.9876336,
+      "centroidLongitude": 120.2156349,
+      "city": "Tainan",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "CE18A31D-6000-584D-BF6E-4BC178A4D2FA",
+        "19C26A5F-1470-5D7F-9F10-CAF5C926A077",
+        "536911AD-0C02-565A-9C13-295A41C7B487"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CE18A31D-6000-584D-BF6E-4BC178A4D2FA",
+      "createdAt": "2026-09-16",
+      "title": "Here’s another @michelinguide spot you have to try! This…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s another @michelinguide spot you have to try! This time, we’re in Tainan. Home to some of the best food in Taiwan (arguably THE best), and today we’re trying a Tainan specialty, migao 米糕 Address: Bao An Road Rice Cake 保安路米糕 700, Tainan City, West Central District, 保安路16號 Have you had Tainan migao before? #michelinguide #taiwanesefood #tainan",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bao-an-road-rice-cake-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7350283060069354784",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "119F808C-D7FF-5B06-BD56-A60061C0B955",
+          "order": 0,
+          "title": "Here’s another @michelinguide spot you have to try! This…",
+          "caption": "Here’s another @michelinguide spot you have to try! This time, we’re in Tainan. Home to some of the best food in Taiwan (arguably THE best),",
+          "latitude": 22.9908046,
+          "longitude": 120.1966023,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-another-michelinguide-spot-you-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.9908046,
+      "centroidLongitude": 120.1966023,
+      "city": "Tainan",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "ED3F481B-CDB2-5673-B41F-A8CCDEDD1BD5",
+        "19C26A5F-1470-5D7F-9F10-CAF5C926A077",
+        "536911AD-0C02-565A-9C13-295A41C7B487"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+      "createdAt": "2026-09-16",
+      "title": "Here’s another place perfect for date night. We recently…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s another place perfect for date night. We recently had the opportunity to try @circum1005 and it was such an enjoyable experience. Taking Chinese flavors and incorporating French cooking techniques to create something truly unique, from start to finish, we enjoyed every dish. Not only was the food great but we really appreciated the service and interior design as well. Definitely recommend! Circum- 10491, Taipei City, Zhongshan District, Lane 39, Section 2, Zhongshan N Rd, 3號B2 #taipeifoodie #exploretaipei #datenight",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-another-place-perfect-for-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7344720240745499937",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "4CE51D8A-D2FB-5EB7-AAE6-E91225815308",
+          "order": 0,
+          "title": "Here’s another place perfect for date night. We recently…",
+          "caption": "Here’s another place perfect for date night. We recently had the opportunity to try @circum1005 and it was such an enjoyable experience. Tak",
+          "latitude": 25.0564571,
+          "longitude": 121.5228956,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-another-place-perfect-for-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0564571,
+      "centroidLongitude": 121.5228956,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "AED402F2-901A-560D-B52E-1EB7CEE7963C",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F8C20260-5176-5532-8E47-E8B219C53D80",
+      "createdAt": "2026-09-16",
+      "title": "How does this michelin recommended shop compare with Din…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "How does this michelin recommended shop compare with Din Tai Fung? Let’s find out! Come with us to Hang Zhou Xiao Long Bao, another @michelinguide shop, specializing in soup dumplings! Address: No. 19, Section 2, Hangzhou S Rd, Da’an District, Taipei City, 106 #michelinguide #taipeifoodie #taiwanfood",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/how-does-this-michelin-recommended-shop-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7343618220848352544",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "6DCE9DA3-DA31-55F1-8134-896ED3EB0C04",
+          "order": 0,
+          "title": "How does this michelin recommended shop compare with Din…",
+          "caption": "How does this michelin recommended shop compare with Din Tai Fung? Let’s find out! Come with us to Hang Zhou Xiao Long Bao, another @micheli",
+          "latitude": 25.0288814,
+          "longitude": 121.521875,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/how-does-this-michelin-recommended-shop-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0288814,
+      "centroidLongitude": 121.521875,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "97708375-EBDC-5771-BF32-0583BE6D2960",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+        "87B0C008-CC85-5328-8284-13BF4887FF03",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+      "createdAt": "2026-09-16",
+      "title": "Here’s another @michelinguide spot you have to try! This…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s another @michelinguide spot you have to try! This time we’re checking out Wang’s Broth in Taipei. This spot specializes in Lu Rou Fan, a Taiwanese comfort food classic, consisting of fatty braised pork belly over rice. Surprisingly, this wasn’t our favorite but the minced pork soup and stewed pork over rice were. But try it for yourself and let us know what you think! Wang’s Broth 108, Taipei City, Wanhua District, Huaxi St, 17之4號攤位153號 #michelinguide #exploretaipei #taipeifoodie #taiwanesefood",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wangs-broth-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7340266978650721568",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "51BB5164-98DC-5683-BA85-32836202D957",
+          "order": 0,
+          "title": "Here’s another @michelinguide spot you have to try! This…",
+          "caption": "Here’s another @michelinguide spot you have to try! This time we’re checking out Wang’s Broth in Taipei. This spot specializes in Lu Rou Fan",
+          "latitude": 25.0383906,
+          "longitude": 121.4984114,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-another-michelinguide-spot-you-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0383906,
+      "centroidLongitude": 121.4984114,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A",
+        "87B0C008-CC85-5328-8284-13BF4887FF03",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+      "createdAt": "2026-09-16",
+      "title": "Here’s another @michelinguide spot you have to try! This…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s another @michelinguide spot you have to try! This time we’re checking out Shih Chia Tangyuan in Taipei. This spot specializes in tangyuan, a rice ball similar to mochi, which is traditionally served sweet, but they’re doing something different and making it savory. We gotta admit we had our doubts at first.. but it turned out to be so delicious. The outer layer is soft and chewy while the inside is super flavorful. A little weird but in the best way 🤣 But try it for yourself and let us know what you think! Shih Chia Big Rice Ball 施家鮮肉湯圓 No. 58號, Section 3, Yanping N Rd, Datong District, Taipei City, 103 #michelinguide #exploretaipei #taipeifoodie #taiwanesefood",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shih-chia-tangyuan-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7325051203719630112",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "03297C27-D0BB-53A4-A9CF-CA00B8C9476E",
+          "order": 0,
+          "title": "Here’s another @michelinguide spot you have to try! This…",
+          "caption": "Here’s another @michelinguide spot you have to try! This time we’re checking out Shih Chia Tangyuan in Taipei. This spot specializes in tang",
+          "latitude": 25.0639595,
+          "longitude": 121.5112925,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-another-michelinguide-spot-you-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0639595,
+      "centroidLongitude": 121.5112925,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "0FB50DA8-303B-5526-9B48-52EF03AB2FEF",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "D2B4FD02-1787-5702-A037-760888088C1F",
+        "97708375-EBDC-5771-BF32-0583BE6D2960"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "97708375-EBDC-5771-BF32-0583BE6D2960",
+      "createdAt": "2026-09-16",
+      "title": "This restaurant has been @michelinguide recommended for t…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "This restaurant has been @michelinguide recommended for the past 6 years. Come with us to Shuang Yue (Moon Moon) Food, a shop specializing in homestyle Taiwanese cuisine! Moon Moon Food Qingdao Branch 雙月食品社 青島店 No. 6之2號, Qingdao E Rd, Zhongzheng District, Taipei City, 100 #michelinguide #taipeifoodie #taiwanesefood #exploretaipei",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-restaurant-has-been-michelinguide-recommended-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7315031651233402145",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "462B8F36-A0B4-5D67-ADE1-438CED1C2134",
+          "order": 0,
+          "title": "This restaurant has been @michelinguide recommended for t…",
+          "caption": "This restaurant has been @michelinguide recommended for the past 6 years. Come with us to Shuang Yue (Moon Moon) Food, a shop specializing i",
+          "latitude": 25.0431738,
+          "longitude": 121.5247426,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-restaurant-has-been-michelinguide-recommended-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0431738,
+      "centroidLongitude": 121.5247426,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "F8C20260-5176-5532-8E47-E8B219C53D80",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+      "createdAt": "2026-09-16",
+      "title": "Heres another @michelinguide spot you have to try.. for d…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Heres another @michelinguide spot you have to try.. for dessert! Have you ever had tangyuan before? Similar to mochi, tangyuan is a glutinous rice ball with a sweet filling usually served in a hot broth. This particular shop does something a little more unique by serving it on ice. What you get is a mix of hot tangyuan over a bed of osmanthus ice that is the perfect dessert for that Taiwan heat. But try it out for yourself and let us know what you think! Save this and follow for more! Yu Pin Yuan Iced and Hot Tangyuan 御品元冰火湯圓 No. 31, Alley 50, Lane 39, Tonghua St, Da’an District, Taipei City, 106 #taipei #taipeifoodie #taiwanesefood #michelinguide #exploretaipei",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heres-another-michelinguide-spot-you-have-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7283129289137081633",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "6E928698-6FA2-5DC1-BE20-7BA3F9EFEF17",
+          "order": 0,
+          "title": "Heres another @michelinguide spot you have to try.. for d…",
+          "caption": "Heres another @michelinguide spot you have to try.. for dessert! Have you ever had tangyuan before? Similar to mochi, tangyuan is a glutinou",
+          "latitude": 25.0317652,
+          "longitude": 121.5557351,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heres-another-michelinguide-spot-you-have-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0317652,
+      "centroidLongitude": 121.5557351,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "0FB50DA8-303B-5526-9B48-52EF03AB2FEF",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "DE9CF736-C03D-5B67-9403-0D7F255C12BD",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "AED402F2-901A-560D-B52E-1EB7CEE7963C"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A",
+      "createdAt": "2026-09-16",
+      "title": "This is one more Michelin recommended restaurant you have…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "This is one more Michelin recommended restaurant you have to try! Located in Daan District is Halal Chinese Beef Noodle, a Michelin recommended restaurant specializing in Beef noodle soup. This might be the best beef noodle in Taipei 🫢 but check it out yourself and let us know what you think! So save this post for the next time you’re in Taipei and follow for more! Halal Chinese Beef Noodles (Da’an) 清真中國牛肉麵食館 (大安) No. 1號, Alley 7, Lane 137, Yanji St, Da’an District, Taipei City, 106 #taipei #taiwanesefood #exploretaipei #taipeifoodie #michelinguide",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-one-more-michelin-recommended-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7280894465059949856",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "6F874619-20F7-5954-AA39-6BBE668E7988",
+          "order": 0,
+          "title": "This is one more Michelin recommended restaurant you have…",
+          "caption": "This is one more Michelin recommended restaurant you have to try! Located in Daan District is Halal Chinese Beef Noodle, a Michelin recommen",
+          "latitude": 25.0423649,
+          "longitude": 121.5550508,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-one-more-michelin-recommended-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0423649,
+      "centroidLongitude": 121.5550508,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "D2B4FD02-1787-5702-A037-760888088C1F",
+        "97708375-EBDC-5771-BF32-0583BE6D2960",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+      "createdAt": "2026-09-16",
+      "title": "With Chinese Valentines Day/Qixi Festival coming up, we’l…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "With Chinese Valentines Day/Qixi Festival coming up, we’ll be giving y’all some of our favorite date night options! This is Suzy’s favorite Omakase in Taipei. We love how unique the entire dining experience is, from the sushi to its presentation and decor. The chef is also super nice. Its really a perfect spot for a date. 濟安鮨 日本料理 No. 72號, Lane 161, Section 1, Dunhua S Rd, Da’an District, Taipei City, 106 Save this for your next special occasion! #taipei #omakase #taipeisushi #taipeifoodie",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/with-chinese-valentines-day-qixi-festival-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7266781958254988576",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "CE9F1FC4-721F-5864-A291-3F4A78C7A547",
+          "order": 0,
+          "title": "With Chinese Valentines Day/Qixi Festival coming up, we’l…",
+          "caption": "With Chinese Valentines Day/Qixi Festival coming up, we’ll be giving y’all some of our favorite date night options! This is Suzy’s favorite ",
+          "latitude": 25.0340129,
+          "longitude": 121.5493832,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/with-chinese-valentines-day-qixi-festival-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0340129,
+      "centroidLongitude": 121.5493832,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "97708375-EBDC-5771-BF32-0583BE6D2960",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9386C08F-FCCB-561D-8054-61BB658CA69C",
+      "createdAt": "2026-09-16",
+      "title": "Here’s a gem if you’re looking for a great sushi spot but…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s a gem if you’re looking for a great sushi spot but not looking to break the bank! They have a lunch set omakase for 800$NT/$25USD. The place is modern with a clean aesthetic and its easy to book. For the freshness and quality/variety of sushi, we’d say its well worth it. Save this post for your next sushi craving! 旨樂 - 握壽司專賣店 No. 16號, Alley 4, Lane 217, Section 3, Zhongxiao E Rd, Da’an District, Taipei City, 106 #taipeifoodie #taipei #exploretaipei #visittaiwan #omakase #sushilover",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-a-gem-if-you-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7258269076156370203",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "BE8F2475-43BE-50BF-8E05-8BC486612C08",
+          "order": 0,
+          "title": "Here’s a gem if you’re looking for a great sushi spot but…",
+          "caption": "Here’s a gem if you’re looking for a great sushi spot but not looking to break the bank! They have a lunch set omakase for 800$NT/$25USD. Th",
+          "latitude": 25.041818,
+          "longitude": 121.5368389,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-a-gem-if-you-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.041818,
+      "centroidLongitude": 121.5368389,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "0BE05D85-2AD2-55FF-B5BA-4F1B9A5CAD28",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+      "createdAt": "2026-09-16",
+      "title": "This is one Michelin recommended restaurant you have to t…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "This is one Michelin recommended restaurant you have to try and all for less than 300$NT so you know CP值很高! 😆 We recently made a trip to Wanhua to try Yi Jia Zi, a shop specializing in Tainan style braised pork belly. And honestly, I don’t know if its cause we were hungry or what but it was probably one of the best meals we had in Taiwan. But try it for yourself and let us know what you think! #taipei #taiwanesefood #exploretaipei #visittaiwan #taipeifoodie",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-one-michelin-recommended-restaurant-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7255676677718560026",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "15C65F1D-C313-569A-A2BA-E0C06C08FFBF",
+          "order": 0,
+          "title": "This is one Michelin recommended restaurant you have to t…",
+          "caption": "This is one Michelin recommended restaurant you have to try and all for less than 300$NT so you know CP值很高! 😆 We recently made a trip to Wan",
+          "latitude": 25.040378,
+          "longitude": 121.5021902,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-one-michelin-recommended-restaurant-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.040378,
+      "centroidLongitude": 121.5021902,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "97708375-EBDC-5771-BF32-0583BE6D2960",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "F8C20260-5176-5532-8E47-E8B219C53D80",
+        "87B0C008-CC85-5328-8284-13BF4887FF03"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0BE05D85-2AD2-55FF-B5BA-4F1B9A5CAD28",
+      "createdAt": "2026-09-16",
+      "title": "This might be the best sushi in Taiwan.. come with us to…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "This might be the best sushi in Taiwan.. come with us to a Michelin starred omakase at Nomura Sushi in Taipei! Located in Daan District, Nomura has been on the want-to-go list for quite some time. So, to celebrate 1 year, we decided to treat ourselves to some good sushi and let us tell you, it did not disappoint. Not only was the food amazing but we really enjoyed the entire experience! #taipei #omakase #sushilover #taipeiguide #taipeifoodie #exploretaipei #foodietok",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-might-be-the-best-sushi-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7237851746784038171",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "5D9C850A-6A37-5322-B86A-90AC6BE728C6",
+          "order": 0,
+          "title": "This might be the best sushi in Taiwan.. come with us to…",
+          "caption": "This might be the best sushi in Taiwan.. come with us to a Michelin starred omakase at Nomura Sushi in Taipei! Located in Daan District, Nom",
+          "latitude": 25.0370418,
+          "longitude": 121.5536953,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-might-be-the-best-sushi-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0370418,
+      "centroidLongitude": 121.5536953,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "9386C08F-FCCB-561D-8054-61BB658CA69C",
+        "682CC3DE-0E3F-57A9-82C6-09D77DDEA61A",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "97708375-EBDC-5771-BF32-0583BE6D2960"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8B2D99AD-BF9E-58B3-A0B9-A7493AD673A2",
+      "createdAt": "2026-09-16",
+      "title": "If you’re in Taiwan, you have to go to KTV! But you also…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "If you’re in Taiwan, you have to go to KTV! But you also have to get beef noodle soup — so why not have them together 😆 We went to ONCOR, known for their Michelin chef beef noodle soup, which was delicious! They also have some of the comfiest KTV suites and an extensive song playlist (yes, you don’t have to sing the Titanic song all night long anymore lol) It’s perfect for a night out with friends or even family gatherings! 📍 ONCOR 1073, Taipei City, Xinyi District, Songren Rd, 101號 B2 Have you ever had beef noodle soup at a Taiwanese KTV? #ONCOR #PrivateEntertainmentSuite #ONCOR信義",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-in-taiwan-you-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7600027285361675542",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "5F401AE0-5A7D-5768-8E44-9F45B2D8A786",
+          "order": 0,
+          "title": "If you’re in Taiwan, you have to go to KTV! But you also…",
+          "caption": "If you’re in Taiwan, you have to go to KTV! But you also have to get beef noodle soup — so why not have them together 😆 We went to ONCOR, kn",
+          "latitude": 25.0374513,
+          "longitude": 121.5684833,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-in-taiwan-you-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0374513,
+      "centroidLongitude": 121.5684833,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "87B0C008-CC85-5328-8284-13BF4887FF03",
+        "47D6BE4A-0E3B-5472-BFC2-D4583994AF31",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+      "createdAt": "2026-09-16",
+      "title": "Here’s one of our favorite speakeasy in Paris! Located in…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s one of our favorite speakeasy in Paris! Located inside @pinkmamma_paris , on the bottom floor, inside a freezer is @noentryspeakeasy . A cool and cozy bar with lots of creative cocktails, perfect for date night! No Entry 20 bis Rue de Douai, 75009 Paris #exploreparis #paristravel",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/no-entry-speakeasy-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7392956883444763936",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "4EAE39BA-2926-58F6-A249-F355D59EFE92",
+          "order": 0,
+          "title": "Here’s one of our favorite speakeasy in Paris! Located in…",
+          "caption": "Here’s one of our favorite speakeasy in Paris! Located inside @pinkmamma_paris , on the bottom floor, inside a freezer is @noentryspeakeasy ",
+          "latitude": 48.8819128,
+          "longitude": 2.3344849,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-one-of-our-favorite-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8819128,
+      "centroidLongitude": 2.3344849,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FE76D566-2F46-5EE3-8095-8A63A17B1DE4",
+      "createdAt": "2026-09-16",
+      "title": "@ossutw is the first open-faced temaki handroll bar in Ta…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "@ossutw is the first open-faced temaki handroll bar in Taiwan. Newly opened, this place has been on our list (we love temaki handrolls 😆) and we got lucky with a last minute reservation! To say we enjoyed our experience is an understatement. From the food to the overall atmosphere, everything was perfect! Mixing Japanese and American flavors, their handrolls are unique and the nori is crisp. The staff is friendly and the music is strictly 2000s hip hop/r&b (austin’s favorite lol) but check it out for yourself and let us know what you think! Save this for your next date night and follow for more! Ossu Handroll & Bar No. 58, Lane 233, Section 1, Dunhua S Rd, Da’an District, Taipei City, 106 #taipei #taipeifoodie #omakase #handroll #temaki",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ossutw-is-the-first-open-faced-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7288284324326165793",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "B4A00CF7-57F4-5B79-8B3E-487CD8FE738D",
+          "order": 0,
+          "title": "@ossutw is the first open-faced temaki handroll bar in Ta…",
+          "caption": "@ossutw is the first open-faced temaki handroll bar in Taiwan. Newly opened, this place has been on our list (we love temaki handrolls 😆) an",
+          "latitude": 25.0403846,
+          "longitude": 121.5510332,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ossutw-is-the-first-open-faced-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0403846,
+      "centroidLongitude": 121.5510332,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "AED402F2-901A-560D-B52E-1EB7CEE7963C",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "0BE05D85-2AD2-55FF-B5BA-4F1B9A5CAD28",
+        "9386C08F-FCCB-561D-8054-61BB658CA69C",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4A123D99-DEEC-5CF4-9BAE-06E7F218C49C",
+      "createdAt": "2026-09-16",
+      "title": "So we've passed by this spot so many times, and whenever…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "So we've passed by this spot so many times, and whenever we do, its ALWAYS packed. And we've always been curious as to why this pizza spot was so popular so this time, we finally tried it! From what we know, Aunt Su's pizza has been around for a while, at least 30 years (please correct is if we're wrong) its got an old school feel inside and feels like you're getting pizza in Taipei in the 90's, which we love haha. The pizza they serve is PACKED with ingredients, half the menu has pineapple included 😆 and served on a pan, a little like Chicago deep dish or a pie! Honestly, we enjoyed it and the auntie's sitting next to us seemed to enjoy it too so thats all that matters! 🤣 Aunt Su's Pizza House No. 300, Guangfu S Rd, Da’an District, Taipei City, Taiwan 106",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/so-we-ve-passed-by-this-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7618967095719726338",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "AB785820-19E6-548C-9301-4C3895F3DCCC",
+          "order": 0,
+          "title": "So we've passed by this spot so many times, and whenever…",
+          "caption": "So we've passed by this spot so many times, and whenever we do, its ALWAYS packed. And we've always been curious as to why this pizza spot w",
+          "latitude": 25.0432029,
+          "longitude": 121.5576586,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/so-we-ve-passed-by-this-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0432029,
+      "centroidLongitude": 121.5576586,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "9386C08F-FCCB-561D-8054-61BB658CA69C",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "3CD61831-C4FB-5821-B59B-54783CC605DD",
+        "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+      "createdAt": "2026-09-16",
+      "title": "this is suzys all time favorite ice cream shop and from w…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "this is suzys all time favorite ice cream shop and from what she says, the best in france 😆 i dont know about the best, but its definitely really good! but what do you think, have you guys tried Berthillon? 31 Rue Saint-Louis en l'Île, 75004 Paris, France",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-suzys-all-time-favorite-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7547715190565899542",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "FCD016E1-F997-5DB8-8F49-06E60102E0A6",
+          "order": 0,
+          "title": "this is suzys all time favorite ice cream shop and from w…",
+          "caption": "this is suzys all time favorite ice cream shop and from what she says, the best in france 😆 i dont know about the best, but its definitely r",
+          "latitude": 48.8517084,
+          "longitude": 2.356718,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-is-suzys-all-time-favorite-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8517084,
+      "centroidLongitude": 2.356718,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+      "createdAt": "2026-09-16",
+      "title": "If you're looking for a classic french meal in paris, you…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "If you're looking for a classic french meal in paris, you can definitely check out @drouantparis ! Its been around since 1880 and they have a semainier, which is a rotating lunch menu where they have a different dish for every day of the week! Save this spot for your next trip to paris! invitation* #parisfood #frenchfood",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-looking-for-a-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7526557344621219094",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "B5CAE08E-F2FC-5E26-BBB7-C4FFD9F89C4F",
+          "order": 0,
+          "title": "If you're looking for a classic french meal in paris, you…",
+          "caption": "If you're looking for a classic french meal in paris, you can definitely check out @drouantparis ! Its been around since 1880 and they have ",
+          "latitude": 48.8687508,
+          "longitude": 2.3345042,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-looking-for-a-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8687508,
+      "centroidLongitude": 2.3345042,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "7B2B370B-758A-5D2C-A318-2DBA97813986",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "71B33011-F8FE-5C09-94C7-6810F68F5514",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+      "createdAt": "2026-09-16",
+      "title": "We’re super excited to give y’all Worth the Wait, where w…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "We’re super excited to give y’all Worth the Wait, where we line up to try some of the most popular spots to see if they’re actually worth waiting for 😮‍💨 Today, we’re checking out Bouillon Chartier! Its been around since 1896, and is known for its affordable French dishes and Belle Époque dining room. We waited 40 minutes, on a weekday night and ordered 2 apps, 2 main dishes, and dessert for €45. But was it worth it? we’d say yes - if you’re looking for a decent, affordable French meal in a unique setting. The food is solid and prices are hard to beat! But let us know what you think! And where should we go next? Bouillon 7 Rue du Faubourg Montmartre, 75009 Paris, France #paris #bouillonchartier #parisfoodie #worththewait",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/we-re-super-excited-to-give-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7490186530028342550",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "29AC996B-F96D-5413-A20E-A30952C3B83D",
+          "order": 0,
+          "title": "We’re super excited to give y’all Worth the Wait, where w…",
+          "caption": "We’re super excited to give y’all Worth the Wait, where we line up to try some of the most popular spots to see if they’re actually worth wa",
+          "latitude": 48.8719356,
+          "longitude": 2.3430137,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/we-re-super-excited-to-give-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8719356,
+      "centroidLongitude": 2.3430137,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19",
+        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+      "createdAt": "2026-09-16",
+      "title": "Did you know about the oldest pastry shop in Paris? Not o…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Did you know about the oldest pastry shop in Paris? Not only is it the oldest, it also used to be the king’s patisserie! @stohrer is a paris institution located on rue de montorgeuil. They’re known to be the creators of the baba au rhum and also well known for their puits d’amour, which is one of suzys favorite pastries, along with St. Honore 😋 Whats your favorite pastry shop in Paris? #paristravel #parisfoodie",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/did-you-know-about-the-oldest-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7483523579011714326",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "C126F22E-1B7B-53BE-9805-991924D985E2",
+          "order": 0,
+          "title": "Did you know about the oldest pastry shop in Paris? Not o…",
+          "caption": "Did you know about the oldest pastry shop in Paris? Not only is it the oldest, it also used to be the king’s patisserie! @stohrer is a paris",
+          "latitude": 48.8652493,
+          "longitude": 2.3468171,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/did-you-know-about-the-oldest-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8652493,
+      "centroidLongitude": 2.3468171,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "1CA4297B-C597-582E-8263-90422B6446B9",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7B2B370B-758A-5D2C-A318-2DBA97813986",
+      "createdAt": "2026-09-16",
+      "title": "Breakfast at Carette! A classic Parisian tea house thats…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Breakfast at Carette! A classic Parisian tea house thats been around since 1927. Known for its hot chocolate, pastries and breakfast, its a spot you gotta try if you want to experience a typical french breakfast. Carette 25 Pl. des Vosges, 75003 Paris, France #paris #carette #parisfoodie #lifeinparis",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/breakfast-at-carette-a-classic-parisian-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7372524341877034273",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "83BE2DB1-3455-5708-8A90-CAEBF41C0779",
+          "order": 0,
+          "title": "Breakfast at Carette! A classic Parisian tea house thats…",
+          "caption": "Breakfast at Carette! A classic Parisian tea house thats been around since 1927. Known for its hot chocolate, pastries and breakfast, its a ",
+          "latitude": 48.8563455,
+          "longitude": 2.3654726,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/breakfast-at-carette-a-classic-parisian-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8563455,
+      "centroidLongitude": 2.3654726,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "88B6FE57-B29F-5FB0-AAFA-75BAF58851ED",
+      "createdAt": "2026-09-16",
+      "title": "We’ve been hearing a lot about this new buffet at the top…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "We’ve been hearing a lot about this new buffet at the top of 101, so we had to come try it out! We came here on a weekday night for dinner and for 3.5 hours you can eat and drink as much you want. The views and atmosphere is great and service was super nice! A Joy 110, Taipei City, Xinyi District, Section 5, Xinyi Rd, 7號86樓",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/we-ve-been-hearing-a-lot-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7451617373603466519",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "4C9741CB-5393-55FE-BB3A-11ACB534F7B4",
+          "order": 0,
+          "title": "We’ve been hearing a lot about this new buffet at the top…",
+          "caption": "We’ve been hearing a lot about this new buffet at the top of 101, so we had to come try it out! We came here on a weekday night for dinner a",
+          "latitude": 25.0337553,
+          "longitude": 121.5643036,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/we-ve-been-hearing-a-lot-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0337553,
+      "centroidLongitude": 121.5643036,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "03C7EBB9-1C45-5F0F-AACD-ADA83016445A",
+        "FFAB71AF-00DC-5AD3-B400-ED1B1867CCB3",
+        "A19ED734-A8F3-5B66-9D02-FBFE4F28DF08",
+        "A3774A02-6097-556F-B57A-9F47DF8F1B7A",
+        "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "87B0C008-CC85-5328-8284-13BF4887FF03"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B0149CCC-68ED-5787-ABFF-4F934D3A2892",
+      "createdAt": "2026-09-16",
+      "title": "If this is what dinner looks like in the south of france,…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "If this is what dinner looks like in the south of france, i'm moving -austin 🤣 had a beautiful dinner in Villefranche sur Mer at Casa Soleia",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-this-is-what-dinner-looks-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7532492956767456534",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "848662A7-FD79-55BE-9641-9F4C81D59C68",
+          "order": 0,
+          "title": "If this is what dinner looks like in the south of france,…",
+          "caption": "If this is what dinner looks like in the south of france, i'm moving -austin 🤣 had a beautiful dinner in Villefranche sur Mer at Casa Soleia",
+          "latitude": 43.7069401,
+          "longitude": 7.3141855,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-this-is-what-dinner-looks-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7069401,
+      "centroidLongitude": 7.3141855,
+      "city": "Villefranche-sur-Mer",
+      "country": "France",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+      "createdAt": "2026-09-16",
+      "title": "Here’s a souvenir shop to check out in Paris! Marin Monta…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Here’s a souvenir shop to check out in Paris! Marin Montagut is a small and charming shop selling handmade home goods with Parisian designs! Its a great spot if you’re looking for cute souvenirs to bring back from Paris! 48 Rue Madame, 75006 Paris, France #paris #souvenirshop #paristravelguide",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-a-souvenir-shop-to-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7490964107915463958",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "B6CB042E-1DF9-54FB-874C-21866C9DB296",
+          "order": 0,
+          "title": "Here’s a souvenir shop to check out in Paris! Marin Monta…",
+          "caption": "Here’s a souvenir shop to check out in Paris! Marin Montagut is a small and charming shop selling handmade home goods with Parisian designs!",
+          "latitude": 48.8481999,
+          "longitude": 2.3315629,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/here-s-a-souvenir-shop-to-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8481999,
+      "centroidLongitude": 2.3315629,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "31EC0DA2-81C2-5FAE-B67F-C6B561673CF3",
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+        "10169772-6B9B-50FE-B5A4-F13D77068BED",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Commerce",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B8C3AE82-D00C-5BCA-BCC4-487E00D3B37C",
+      "createdAt": "2026-09-16",
+      "title": "If you’re looking for something fun to do in Taipei, you…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "If you’re looking for something fun to do in Taipei, you definitely have to check out @comode.rug , a DIY tufting shop where you make your own rug from scratch! This was our first time trying tufting and it was super fun, perfect for a date or a day out with friends/family. We decided on a mini Totoro rug and we think it came out pretty good 😆 but let us know what you think, save this for your next trip and follow for more! Comode 104054, Taipei City, Zhongshan District, Minzu E Rd, 210號2樓 #taipei #exploretaipei #thingstodointaipei #dateideas #tufting",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-looking-for-something-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7286460050934172961",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "E2960632-D74F-5E9A-877E-C2FF7DDAE4EF",
+          "order": 0,
+          "title": "If you’re looking for something fun to do in Taipei, you…",
+          "caption": "If you’re looking for something fun to do in Taipei, you definitely have to check out @comode.rug , a DIY tufting shop where you make your o",
+          "latitude": 25.0683686,
+          "longitude": 121.5292576,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/if-you-re-looking-for-something-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0683686,
+      "centroidLongitude": 121.5292576,
+      "city": "Taipei",
+      "country": "Taiwan",
+      "relatedTourIds": [
+        "AED402F2-901A-560D-B52E-1EB7CEE7963C",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "540F1884-2069-5F7C-AE17-2A47D2970BD3",
+        "AB2EFA25-867B-59EF-B624-9EF7D0E9F015",
+        "E072CB68-BB8B-5C5E-B852-AC270011BEE9",
+        "64027A52-09AF-5332-9F76-B09AF90F2C8D",
+        "87B0C008-CC85-5328-8284-13BF4887FF03",
+        "0FB50DA8-303B-5526-9B48-52EF03AB2FEF"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Commerce",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C075CEAB-D14D-5C4E-8320-D08A9AF55E3C",
+      "createdAt": "2026-09-16",
+      "title": "Save this for your next trip to Paris! Here’s a travel ti…",
+      "shortDescription": "A post by @suzyandaustin on TikTok.",
+      "longDescription": "Save this for your next trip to Paris! Here’s a travel tip if you’re planning to visit Notre Dame in Paris! Since Notre Dame reopened late last year, tickets have been nearly impossible to redeem and the line everyday has been crazy.. BUT! If you visit in the morning, around the time it opens 8am or on Thursday night (closes at 10pm), you can completely avoid the line and walk right in! No ticket reservation needed! #paris #notredame #paristravel",
+      "makerId": "AB68BB6F-929C-5014-B2D0-67BC536B4F41",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/save-this-for-your-next-trip-suzyandaustin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suzyandaustin/video/7475377455574912278",
+      "sourceAuthor": "@suzyandaustin",
+      "stops": [
+        {
+          "id": "80DDBC8D-8F17-554A-8202-ED0E3EE7E9DB",
+          "order": 0,
+          "title": "Save this for your next trip to Paris! Here’s a travel ti…",
+          "caption": "Save this for your next trip to Paris! Here’s a travel tip if you’re planning to visit Notre Dame in Paris! Since Notre Dame reopened late l",
+          "latitude": 48.8529371,
+          "longitude": 2.3500501,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/save-this-for-your-next-trip-suzyandaustin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8529371,
+      "centroidLongitude": 2.3500501,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "eef8a099-2f7a-5883-9c02-35c0e1836bbd",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+        "5FBEA733-240C-58D2-B7EB-189C8BF36493",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "0334472C-2E52-5A9D-A921-6D09B847C116"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Iconic Landmark",
+        "Religious Building",
+        "Faith"
       ],
       "priceUSD": 0
     }
