@@ -52,9 +52,15 @@ final class SemanticSearch {
     private let loader = SearchModelLoader()
     private var embedder: QueryEmbedder?
     private var searchTask: Task<Void, Never>?
-    /// Set once a load has failed, so a failing download is attempted once per
-    /// session rather than once per keystroke.
-    private var loadFailure: String?
+    /// The last load failure and when it happened.
+    ///
+    /// ⚠️ A COOLDOWN, NOT A LATCH. Retrying a 42 MB download on every keystroke
+    /// would be the worst version of failing; never retrying it would be almost
+    /// as bad, because the commonest reason to fail is being briefly offline,
+    /// and that resolves on its own. So a failure is remembered for a minute
+    /// and then allowed to try again.
+    private var loadFailure: (why: String, at: Date)?
+    private static let retryAfter: TimeInterval = 60
 
     // MARK: - Driving it
 
@@ -73,9 +79,12 @@ final class SemanticSearch {
             state = .idle
             return
         }
-        if let loadFailure {
-            state = .unavailable(loadFailure)
-            return
+        if let failure = loadFailure {
+            if Date().timeIntervalSince(failure.at) < Self.retryAfter {
+                state = .unavailable(failure.why)
+                return
+            }
+            loadFailure = nil
         }
 
         searchTask = Task { [weak self] in
@@ -100,11 +109,8 @@ final class SemanticSearch {
         do {
             try await prepare()
         } catch {
-            // Recorded once. A download that is failing will keep failing for
-            // the same reason, and retrying it per keystroke would be the
-            // worst version of that.
             let why = "\(error)"
-            loadFailure = why
+            loadFailure = (why, Date())
             state = .unavailable(why)
             return
         }
@@ -146,7 +152,7 @@ final class SemanticSearch {
             let tokenizer = try WordPieceTokenizer.bundled()
             embedder = try QueryEmbedder(model: model, tokenizer: tokenizer)
         }
-        if await !store.isLoaded {
+        if !(await store.isLoaded) {
             // Cache first: the index is ~3.8 MB and re-downloading it on every
             // launch would be the kind of quiet cost this project has twice
             // been emailed about.
