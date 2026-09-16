@@ -30,6 +30,10 @@ on:
         description: "Quantize to int8 (~23 MB instead of ~45 MB) — only ships if parity still passes"
         type: boolean
         default: false
+      fp32:
+        description: "Full precision (~90 MB) — the fallback if fp16 produces non-finite output"
+        type: boolean
+        default: false
       skip_ranking:
         description: "Skip the catalog ranking check (faster, does NOT clear the model to ship)"
         type: boolean
@@ -77,7 +81,8 @@ jobs:
         run: |
           python3 scripts/export-coreml.py \
             --out build/AtlasQueryEmbedder.mlpackage \
-            ${{ inputs.int8 && '--int8' || '' }}
+            ${{ inputs.int8 && '--int8' || '' }} \
+            ${{ inputs.fp32 && '--fp32' || '' }}
 
       # 🔴 THE GATE. Nothing below runs if this fails, and it exits 2 — never 0 —
       # when it cannot check rather than when it disagrees.
@@ -191,7 +196,7 @@ jobs:
             echo ""
             echo "| | |"
             echo "|---|---|"
-            echo "| Precision | ${{ inputs.int8 && 'int8' || 'fp16' }} |"
+            echo "| Precision | ${{ inputs.int8 && 'int8' || (inputs.fp32 && 'fp32' || 'fp16') }} |"
             echo "| Size | ${{ steps.package.outputs.size }} bytes |"
             echo "| SHA-256 | \`${{ steps.package.outputs.sha256 }}\` |"
             echo "| Published | ${{ inputs.publish && 'yes' || 'no — build + verify only' }} |"
