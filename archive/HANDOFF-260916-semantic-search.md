@@ -149,3 +149,66 @@ needs a new index and the two must move together.
   Measure, do not assume.
 - **Multilingual** — the model is English-centric; Thai largely `[UNK]`.
 - `nearbySubtitleText` fix from #926 still rides the next build cut.
+
+---
+
+## The floor was wrong, and the owner found it in one query (#963)
+
+Build 166 shipped with `scoreFloor = 0.45`, **copied from `RELATED_FLOOR`**. The
+owner's first search, *"quiet garden away"*, returned nothing.
+
+The two floors gate different comparisons. `RELATED_FLOOR` scores **tour ↔ tour**
+— mean-to-mean, two long documents, high by construction. The search floor scores
+a **short typed query ↔ a long document**, far lower for the same quality of
+match. Reusing the constant looked like consistency and was a category error.
+
+Measured on the live index at 0.45: **three of nine natural queries returned
+nothing**, including two of the four written into build 166's own notes.
+
+    quiet garden away              0.4498   ← missed by 0.0002
+    quiet garden away from crowds  0.4136
+    stained glass windows          0.4479
+    somewhere romantic for a date  0.4323
+    art deco lobby                 0.5444   (6 results)
+    brutalist concrete tower       0.6455   (46 results)
+
+🔴 **A floor wrong by a hair does not degrade — it disappears.** 0.4498 against
+0.45 produced something that looked completely broken rather than slightly
+strict.
+
+**Now 0.35**, measured in both directions: nonsense (`asdfgh qwerty zxcvb`,
+0.3361), "my tax return" (0.2392) and "how do i reset my password" (0.1376) all
+still return nothing.
+
+⚠️ **A cleverer rule was looked for and does not exist — do not re-attempt it.**
+"quiet garden away" (good) and "stained glass windows" (weak) top out at 0.4498
+and 0.4479, indistinguishable. What separates them is whether the catalogue
+contains the thing, which no score can see; a relative rule fires identically on
+both.
+
+**The number was in our own output all along.** `verify-coreml-parity.py` printed
+`top score 0.4136` for "quiet garden away from crowds" on every ranking run. It
+was read as a ranking check rather than as a distribution.
+
+### ✅ Device-verified on build 166 and 167
+
+The owner's screenshot of *"brutalist concrete tower"* on 166 settled the one
+thing that could not be checked remotely — **a failed model download and "nothing
+above the floor" render identically**. It returned Trellick Tower, the Barbican,
+Balfron Tower, Glenkerry House and Robarts Library, across two creators and an
+Atlas tour, **with no keyword section above it at all** (no tour contains those
+words). The model loads and runs on real hardware.
+
+On **167** the owner confirmed the previously-silenced queries work.
+
+### Open
+
+- **The floor is a Swift constant, so every adjustment costs a build.** The owner
+  was told at one point that this kind of change was content-side; it is not.
+- **"stained glass windows" is the weak case to watch** — the catalogue has
+  little stained glass, so 0.35 reaches for glass-adjacent entries instead. If
+  that reads as clutter, the answer is a floor between 0.35 and 0.45, set on what
+  the owner sees rather than on arithmetic.
+- **Two identical "Glasshouse Theatre" link pins, Brisbane, same coordinate** —
+  a true duplicate, not a place candidate. Found while investigating; left for
+  the owner. A deletion needs an SQL paste too, since the seed is upsert-only.
