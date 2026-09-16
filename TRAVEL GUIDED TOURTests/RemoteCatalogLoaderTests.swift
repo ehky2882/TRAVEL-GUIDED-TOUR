@@ -623,4 +623,120 @@ final class RemoteCatalogLoaderTests: XCTestCase {
                        "\"Up to date\" must stop the source chain — falling through would " +
                        "download the whole mirror to learn what we already knew")
     }
+
+    // MARK: - Self-heal: a token match must not be believed forever
+    //
+    // 🔴 These cover the 2026-09-16 incident: a device held a cache the probe
+    // called current while its contents were not, and restarting the app never
+    // recovered it because `.upToDate` handed the same cache back every time.
+    // The cause was never found, so the guards are bounds, not a targeted fix —
+    // and the last test here is the one that keeps the 34-byte optimisation
+    // those bounds could so easily have thrown away.
+
+    /// Seeds a cache whose file modification date is `age` in the past.
+    private func seedAgedCache(_ data: ToursData, in dir: URL, age: TimeInterval) throws {
+        try seedCache(data, in: dir)
+        let url = dir.appendingPathComponent("Tours.cache.json")
+        try FileManager.default.setAttributes([.modificationDate: Date().addingTimeInterval(-age)],
+                                              ofItemAtPath: url.path)
+    }
+
+    func test_refresh_downloadsInFull_whenCacheIsOlderThanTheSelfHealWindow() async throws {
+        let dir = makeTempDir()
+        try seedAgedCache(catalog(titled: "Pinned Stale"), in: dir, age: 60 * 60 * 24 * 30)
+        try seedCatalogVersion("v1", in: dir)
+        let payload = try JSONEncoder().encode(catalog(titled: "Healed"))
+        let fetcher = SequenceFetcher(failures: 0, error: URLError(.timedOut), success: payload)
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: fetcher,
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: StubVersionProbe(.success("v1")))],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion,
+            maxCacheAge: 60 * 60 * 24 * 7)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Healed",
+                       "A cache past the window must be re-downloaded even though the token still matches")
+        let fetchCalls = await fetcher.callCount
+        XCTAssertEqual(fetchCalls, 1, "The whole point is that the big fetch DOES happen here")
+    }
+
+    func test_refresh_downloadsInFull_whenCacheLengthDisagreesWithWhatWasWritten() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Truncated"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        // A length that cannot be right for the bytes on disk — what a short
+        // write would leave behind.
+        try "999999".write(to: dir.appendingPathComponent("Tours.cache.length"),
+                           atomically: true, encoding: .utf8)
+        let payload = try JSONEncoder().encode(catalog(titled: "Healed"))
+        let fetcher = SequenceFetcher(failures: 0, error: URLError(.timedOut), success: payload)
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: fetcher,
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: StubVersionProbe(.success("v1")))],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Healed")
+        let fetchCalls = await fetcher.callCount
+        XCTAssertEqual(fetchCalls, 1)
+    }
+
+    func test_refresh_stillShortCircuits_whenCacheIsFreshAndIntact() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Current"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        let payload = try JSONEncoder().encode(catalog(titled: "Should Not Be Fetched"))
+        let fetcher = SequenceFetcher(failures: 0, error: URLError(.timedOut), success: payload)
+        let probe = StubVersionProbe(.success("v1"))
+        let loader = RemoteCatalogLoader(
+            sources: [CatalogSource(fetcher: fetcher,
+                                    url: URL(string: "https://primary.example/rpc")!,
+                                    versionProbe: probe)],
+            bundle: emptyBundle,
+            cacheDirectory: dir,
+            retryPolicy: .none,
+            appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Current")
+        let probeCalls = await probe.callCount
+        XCTAssertEqual(probeCalls, 1)
+        let fetchCalls = await fetcher.callCount
+        XCTAssertEqual(fetchCalls, 0,
+                       "🔴 The 34-bytes-instead-of-2.3-MB saving must survive the self-heal guards")
+    }
+
+    func test_clearCachedCatalog_removesTheCacheAndEverySidecar() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Cached"), in: dir)
+        try seedCatalogVersion("v1", in: dir)
+        try "123".write(to: dir.appendingPathComponent("Tours.cache.length"),
+                        atomically: true, encoding: .utf8)
+        let loader = RemoteCatalogLoader(fetcher: StubFetcher(result: .failure(URLError(.timedOut))),
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         appVersion: Self.testVersion)
+        XCTAssertEqual(loader.loadLocal()?.tours.first?.title, "Cached")
+
+        loader.clearCachedCatalog()
+
+        XCTAssertNil(loader.loadLocal(),
+                     "After clearing, there is no cache to read and no bundle in this test")
+        for name in ["Tours.cache.json", "Tours.cache.version",
+                     "Tours.cache.catalogVersion", "Tours.cache.rev", "Tours.cache.length"] {
+            XCTAssertFalse(FileManager.default.fileExists(atPath: dir.appendingPathComponent(name).path),
+                           "\(name) must not survive a clear — a surviving token is what pins a bad cache")
+        }
+    }
 }

@@ -136,6 +136,22 @@ final class DataService {
         applyCatalog(tours: fresh.tours, makers: fresh.makers, places: fresh.places ?? [])
     }
 
+    /// Throw away the cached catalogue and download a fresh one.
+    ///
+    /// Backs Settings → Clear Cache. The order is load-bearing: discarding
+    /// first removes the stored version token, so the refresh that follows
+    /// cannot take the `.upToDate` short-circuit and hand back the very cache
+    /// we just decided not to trust.
+    ///
+    /// A failed download leaves the in-memory catalogue untouched, exactly as
+    /// any other refresh does — the user keeps seeing content, and the next
+    /// launch reads the bundled seed rather than nothing.
+    @MainActor
+    func clearCachedCatalogAndRefresh() async {
+        loader.clearCachedCatalog()
+        await refresh()
+    }
+
     /// Re-run the network refresh when the app returns to the foreground.
     /// Debounced so simply reopening the app within `foregroundRefreshInterval`
     /// of the last refresh — or while one is already in flight — is a no-op.

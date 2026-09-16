@@ -205,11 +205,19 @@ struct SettingsView: View {
                         Label("Manage downloads", systemImage: "arrow.down.circle")
                     }
 
+                    // 🔴 The catalogue is cleared here too, and that is the
+                    // point of this button existing. Until 2026-09-16 it
+                    // cleared only URLCache and the image cache, so a device
+                    // holding a wrong catalogue could tap "Clear Cache",
+                    // see nothing change, and reasonably conclude the problem
+                    // lay elsewhere. The owner hit exactly that and had to
+                    // delete the app to recover.
                     Button {
                         URLCache.shared.removeAllCachedResponses()
                         #if canImport(UIKit)
                         ImageCache.shared.clear()
                         #endif
+                        Task { await dataService.clearCachedCatalogAndRefresh() }
                     } label: {
                         Label("Clear Cache", systemImage: "trash")
                     }

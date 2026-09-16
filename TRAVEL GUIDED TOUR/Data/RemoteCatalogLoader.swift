@@ -298,6 +298,10 @@ final class RemoteCatalogLoader {
 
     /// The running app's build number (`CFBundleVersion`), used to stamp the
     /// cache so an update can discard a cache written by the previous build.
+    /// Seven days. Long enough that the cheap-probe saving is untouched in
+    /// normal use, short enough that nobody lives with a bad cache.
+    static let defaultMaxCacheAge: TimeInterval = 7 * 24 * 60 * 60
+
     static var currentAppVersion: String {
         (Bundle.main.infoDictionary?["CFBundleVersion"] as? String) ?? "unknown"
     }
@@ -324,16 +328,44 @@ final class RemoteCatalogLoader {
     private let retryPolicy: CatalogRetryPolicy
     private let appVersion: String
 
+    /// How long a cache may go unre-downloaded while the version probe keeps
+    /// saying "you already hold this".
+    ///
+    /// 🔴 **This is the catch-all, and it is deliberately not a fix for a known
+    /// cause.** On 2026-09-16 a device held a cache the probe called current
+    /// while its contents were not: one place was missing, the map drew a
+    /// cluster where it should have drawn a place, and **the owner restarted
+    /// the app repeatedly over an hour without recovering.** Only deleting the
+    /// app fixed it. The mechanism was never found — a partial publish was
+    /// ruled out (the seed is one transaction and `refresh_catalog_snapshot()`
+    /// is its last statement, so no reader can see a half-written catalogue).
+    ///
+    /// `catalogAlreadyHeld` returning the cache on a token match is what makes
+    /// a refresh cost 34 bytes instead of 2.3 MB, and it is worth keeping. But
+    /// a token match is a claim about the *server*, not evidence about what is
+    /// on this disk — so believing it forever means a cache that goes wrong for
+    /// ANY reason stays wrong forever, silently, with no user-visible symptom
+    /// and no recovery short of reinstalling. Bounding it means the app heals
+    /// itself within a known window whether or not anyone understands why it
+    /// broke.
+    ///
+    /// The cost is one full download per device per window, and only when
+    /// nothing has changed for that entire window — which, at this catalogue's
+    /// rate of change, is close to never.
+    private let maxCacheAge: TimeInterval
+
     /// Designated initializer — takes the ordered list of catalog sources.
     init(sources: [CatalogSource] = RemoteCatalogLoader.defaultSources,
          bundle: Bundle = .main,
          cacheDirectory: URL? = nil,
          retryPolicy: CatalogRetryPolicy = .default,
-         appVersion: String = RemoteCatalogLoader.currentAppVersion) {
+         appVersion: String = RemoteCatalogLoader.currentAppVersion,
+         maxCacheAge: TimeInterval = RemoteCatalogLoader.defaultMaxCacheAge) {
         self.sources = sources
         self.bundle = bundle
         self.retryPolicy = retryPolicy
         self.appVersion = appVersion
+        self.maxCacheAge = maxCacheAge
         let dir = cacheDirectory
             ?? FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
         self.cacheURL = dir?.appendingPathComponent("Tours.cache.json")
@@ -345,12 +377,14 @@ final class RemoteCatalogLoader {
                      bundle: Bundle = .main,
                      cacheDirectory: URL? = nil,
                      retryPolicy: CatalogRetryPolicy = .default,
-                     appVersion: String = RemoteCatalogLoader.currentAppVersion) {
+                     appVersion: String = RemoteCatalogLoader.currentAppVersion,
+                     maxCacheAge: TimeInterval = RemoteCatalogLoader.defaultMaxCacheAge) {
         self.init(sources: [CatalogSource(fetcher: fetcher, url: RemoteCatalogLoader.remoteURL)],
                   bundle: bundle,
                   cacheDirectory: cacheDirectory,
                   retryPolicy: retryPolicy,
-                  appVersion: appVersion)
+                  appVersion: appVersion,
+                  maxCacheAge: maxCacheAge)
     }
 
     /// Sidecar file recording which app version wrote the cache.
@@ -374,6 +408,13 @@ final class RemoteCatalogLoader {
     /// document to record something the document does not describe.
     private var catalogRevURL: URL? {
         cacheURL?.deletingLastPathComponent().appendingPathComponent("Tours.cache.rev")
+    }
+
+    /// Sidecar recording the byte length of the cache as written, so a short
+    /// write can be detected without decoding ~3 MB of JSON. See
+    /// `cacheLengthMatches()`.
+    private var cacheLengthURL: URL? {
+        cacheURL?.deletingLastPathComponent().appendingPathComponent("Tours.cache.length")
     }
 
     /// Immediately-available catalog: cached copy if valid, else bundled seed.
@@ -638,7 +679,61 @@ final class RemoteCatalogLoader {
     /// local copy would leave the app showing nothing.
     private func catalogAlreadyHeld(matching serverVersion: String) -> ToursData? {
         guard let stored = storedCatalogVersion(), stored == serverVersion else { return nil }
-        return readCache()
+
+        // 🔴 A token match says the SERVER has not changed. It is not evidence
+        // that this disk holds what that token describes, and treating it as
+        // such is how a cache that has gone wrong stays wrong forever — see
+        // `maxCacheAge`.
+        //
+        // ⚠️ Both guards RETURN NIL RATHER THAN DISCARDING. Returning nil only
+        // declines the short-circuit, so the full download below still runs and
+        // overwrites the cache on success — while a download that FAILS leaves
+        // the existing copy untouched and still serving. Discarding here would
+        // mean a device that is offline, or hitting a bad source, loses a
+        // complete catalogue and falls back to the bundled seed: strictly worse
+        // than the stale cache we were worried about. The pinning this fixes
+        // comes from believing the token, not from the bytes being present.
+        guard cacheIsFresh() else {
+            Self.log.notice("Cache matches the server token but is past the self-heal window; downloading in full instead of trusting it.")
+            return nil
+        }
+        guard let cached = readCache(), cacheLengthMatches() else {
+            Self.log.error("Cache matches the server token but failed its length check; downloading in full instead of trusting it.")
+            return nil
+        }
+        return cached
+    }
+
+    /// Whether the cache is young enough to be trusted on a bare token match.
+    /// A cache with no readable timestamp is treated as NOT fresh: unknown age
+    /// is exactly the case this guard exists for, and a full download is the
+    /// safe direction.
+    private func cacheIsFresh() -> Bool {
+        guard maxCacheAge > 0 else { return true }
+        guard let cacheURL,
+              let written = (try? FileManager.default.attributesOfItem(atPath: cacheURL.path))?[.modificationDate] as? Date
+        else { return false }
+        return Date().timeIntervalSince(written) < maxCacheAge
+    }
+
+    /// Cheap integrity check: the cache file is the length it was when written.
+    ///
+    /// ⚠️ **This catches a truncated or partially-written cache and nothing
+    /// else.** A cache that is complete but describes older content has a
+    /// consistent length and passes — which is why `cacheIsFresh()` above, not
+    /// this, is the guard that actually bounds the damage. Kept because a short
+    /// write is a real and otherwise-silent failure, and the check costs one
+    /// `stat`.
+    ///
+    /// No recorded length (a cache written by a build before this shipped) is
+    /// not a failure — there is nothing to disagree with.
+    private func cacheLengthMatches() -> Bool {
+        guard let cacheURL, let cacheLengthURL,
+              let recorded = try? String(contentsOf: cacheLengthURL, encoding: .utf8),
+              let expected = Int(recorded.trimmingCharacters(in: .whitespacesAndNewlines))
+        else { return true }
+        let actual = (try? FileManager.default.attributesOfItem(atPath: cacheURL.path))?[.size] as? Int
+        return actual == expected
     }
 
     /// Whether a failed fetch is worth retrying. Transport errors and transient
@@ -717,6 +812,11 @@ final class RemoteCatalogLoader {
     private func writeCache(_ data: Data, catalogVersion: String? = nil, rev: Int64? = nil) {
         guard let cacheURL else { return }
         try? data.write(to: cacheURL, options: .atomic)
+        // Written AFTER the bytes: a length recorded for a write that then
+        // failed would be a false all-clear, which is worse than none.
+        if let cacheLengthURL {
+            try? String(data.count).write(to: cacheLengthURL, atomically: true, encoding: .utf8)
+        }
         // ⚠️ A full fetch passes `rev: nil` and therefore CLEARS the cursor,
         // for the same reason `catalogVersion: nil` clears the token: the bytes
         // just written did not come from a delta exchange and no cursor
@@ -747,5 +847,17 @@ final class RemoteCatalogLoader {
         if let versionURL { try? FileManager.default.removeItem(at: versionURL) }
         if let catalogVersionURL { try? FileManager.default.removeItem(at: catalogVersionURL) }
         if let catalogRevURL { try? FileManager.default.removeItem(at: catalogRevURL) }
+        if let cacheLengthURL { try? FileManager.default.removeItem(at: cacheLengthURL) }
+    }
+
+    /// Throw away the cached catalogue and every sidecar that describes it, so
+    /// the next refresh is a full download with nothing to short-circuit on.
+    ///
+    /// Exposed for Settings → Clear Cache. Until 2026-09-16 that button cleared
+    /// `URLCache` and the image cache only, so the one cache a user might
+    /// actually need to clear was the one it left alone — and the owner, whose
+    /// map was wrong, had no way to fix it but to delete the app.
+    func clearCachedCatalog() {
+        discardCache()
     }
 }
