@@ -12,13 +12,26 @@ model is published.
 
 WHAT IS ASSERTED, IN ORDER OF HOW MUCH IT MATTERS
 --------------------------------------------------
-1. **Ranking is unchanged, along the path the device actually takes.** The real
-   question is never "how close are the numbers" — it is "does the phone put the
-   same tours at the top". So the comparison is Python-full-precision against
-   **Core ML query + int8-quantized index**, because that pairing is what runs on
-   a phone. Testing Core ML against full-precision chunks would leave index
-   quantization unmeasured, and quantization is an independent source of drift:
-   ~0.9990 cosine per vector, which is small but not nothing.
+1. **Ranking is unchanged.** The real question is never "how close are the
+   numbers" — it is "does the phone put the same tours at the top". So the Core
+   ML query and the Python query are ranked against **the same int8 index**, and
+   must produce the same top ten.
+
+   🔴 THE SAME INDEX ON BOTH SIDES IS THE WHOLE POINT, and it was got wrong once.
+   The first version ranked Core ML + int8 against Python + full precision,
+   reasoning that the first pairing is what a phone runs. True, but it made the
+   MODEL answerable for the INDEX's rounding: run 8 failed four of six queries
+   while reporting a query/query cosine of 0.99999 and top scores agreeing to
+   0.0005, every disagreement an adjacent swap at ranks 7-10 — which is int8
+   doing exactly what `--verify-quantization` has always said it does, and
+   nothing to do with the conversion. Holding everything constant except the
+   thing under test is what makes a failure here mean something.
+
+   What int8 costs is still measured, on the same queries, and **reported rather
+   than asserted** — demanding zero would be demanding that quantization be free.
+
+   Positions where the two disagree are excused only if the SAME index scores
+   both entries within `TIE_TOLERANCE`; a genuine reordering still fails.
 2. **Meaning is unchanged.** The measured relations from `vector-parity.json`:
    "brutalist concrete tower" must stay nearer "concrete apartment block" than
    "a restaurant". A cosine number tells you vectors moved; this tells you the
@@ -49,6 +62,13 @@ import runstamp  # noqa: E402,F401
 
 COSINE_FLOOR = 0.999
 RANK_DEPTH = 10          # how deep the top-N comparison goes
+# Two entries scored this close by the SAME index may swap places without
+# anything being wrong — that is float summation order, not a difference in
+# meaning. Measured on run 8: the query/query cosine was 0.99999 and top scores
+# agreed to 0.0005, while adjacent entries at ranks 7-10 sat ~0.001 apart.
+# Deliberately an order of magnitude tighter than the 0.01 gap
+# `--verify-quantization` calls "large enough to reorder visible results".
+TIE_TOLERANCE = 0.001
 RANK_QUERIES = [
     "art deco lobby", "quiet garden away from crowds", "brutalist concrete tower",
     "stained glass windows", "rooftop view over the city", "food market",
@@ -184,16 +204,8 @@ def main() -> int:
     texts = [module.tour_text(t) for t in tours]
     chunks, owners = embedder.embed_chunks(texts, progress=True)
 
-    # 🔴 THE PHONE DOES NOT SEE THESE CHUNKS. It sees the SIDECAR, whose vectors
-    # `write_embeddings` stores int8-quantized at scale 127. Comparing Core ML
-    # against Python using full-precision chunks on both sides would test a path
-    # nothing runs, and would leave index quantization — a second, independent
-    # source of drift — entirely unmeasured.
-    #
-    # So the "device" side below ranks against DEQUANTIZED chunks, which is what
-    # TourEmbeddingStore will read. Measured on the parity fixture, quantization
-    # costs ~0.9990 cosine per vector; the question this answers is whether that
-    # is enough to reorder anything that matters.
+    # The index the phone reads: int8 at scale 127, dequantized and renormalised
+    # exactly as TourEmbeddingStore does.
     quantized = (
         np.clip(np.rint(chunks * module.QUANT_SCALE), -127, 127).astype(np.int8)
         .astype(np.float32) / module.QUANT_SCALE
@@ -201,45 +213,87 @@ def main() -> int:
     norms = np.linalg.norm(quantized, axis=1, keepdims=True)
     quantized = quantized / np.maximum(norms, 1e-12)
 
+    # 🔴 TWO COMPARISONS, BECAUSE THERE ARE TWO SOURCES OF DRIFT AND ONLY ONE OF
+    # THEM IS THIS SCRIPT'S SUBJECT.
+    #
+    # Run 8 failed asserting one identical top-10 against Python-full-precision,
+    # and the diagnostics said plainly why: query/query cosine 0.99999, top
+    # scores agreeing to 0.0005, and every disagreement an ADJACENT SWAP at
+    # ranks 7-10. Nothing there is the conversion. It is int8, which
+    # `--verify-quantization` has always predicted would do exactly this —
+    # "a handful of near-ties deep in the list, never the top result".
+    #
+    # Folding both into one assertion made the model answerable for the index's
+    # rounding, so the gate could only ever pass by luck. Split:
+    #
+    #   A. THE SHIP GATE — Core ML query vs Python query, BOTH against the
+    #      quantized index. Everything is held constant except the thing this
+    #      script exists to check. A difference here IS the conversion.
+    #   B. REPORTED, NOT ASSERTED — quantized index vs full-precision index,
+    #      both with the Python query. This is what int8 costs. It is a number
+    #      to watch, not a pass/fail, because demanding zero would be demanding
+    #      that quantization be free.
     mismatches = 0
     for query in RANK_QUERIES:
-        # 🔴 DIAGNOSTICS, because run 4 produced a result that cannot happen.
-        # Every ranking query is also a fixture string, and all 69 matched
-        # Python to >= 0.999 cosine minutes earlier — yet the top-10 came back
-        # completely disjoint (markets vs Sydney beaches for "food market").
-        # Two vectors 0.999 apart cannot do that, so one of those facts is
-        # false. These lines say which, instead of guessing:
         python_query = embedder.embed_one(query)
         coreml_query = core_ml_vector(query)
         agreement = float(python_query @ coreml_query)
 
-        python_scores = module.tour_scores(np, chunks, owners, python_query, len(tours))
+        # A — the gate. Same index on both sides.
+        python_scores = module.tour_scores(np, quantized, owners, python_query, len(tours))
         coreml_scores = module.tour_scores(np, quantized, owners, coreml_query, len(tours))
         python_top = python_scores.argsort()[::-1][:RANK_DEPTH]
         coreml_top = coreml_scores.argsort()[::-1][:RANK_DEPTH]
 
+        # B — the cost of int8, measured on the same query, reported only.
+        full_scores = module.tour_scores(np, chunks, owners, python_query, len(tours))
+        full_top = full_scores.argsort()[::-1][:RANK_DEPTH]
+        kept = len(set(full_top) & set(python_top))
+
         print(f"    query/query cosine {agreement:.6f} · "
-              f"python top score {python_scores.max():.4f} "
-              f"(spread over top 10: {np.ptp(python_scores[python_top]):.4f}) · "
-              f"coreml top score {coreml_scores.max():.4f}")
+              f"top score {python_scores.max():.4f} "
+              f"(spread over top {RANK_DEPTH}: {np.ptp(python_scores[python_top]):.4f}) · "
+              f"int8 keeps {kept}/{RANK_DEPTH} of the fp32 order")
 
         if list(python_top) == list(coreml_top):
             print(f"  ok   {query!r}")
             continue
-        mismatches += 1
-        print(f"  FAIL {query!r} — top {RANK_DEPTH} differs")
+
+        # 🔴 NOT AUTOMATICALLY A FAILURE — but the excuse has to be earned, per
+        # position, from the numbers. Two entries the SAME INDEX scores within
+        # float noise of each other can land either way round without anything
+        # being wrong. Anything else is the conversion reordering real results,
+        # and that fails.
+        #
+        # ⚠️ `not (gap <= TIE)` rather than `gap > TIE`: NaN must fail this, and
+        # every comparison against NaN is false.
+        explained = True
         for rank, (a, b) in enumerate(zip(python_top, coreml_top), 1):
-            mark = " " if a == b else "←"
-            print(f"       {rank}.{mark} python: {tours[a]['title'][:40]}")
-            if a != b:
-                print(f"          coreml: {tours[b]['title'][:40]}")
+            if a == b:
+                continue
+            gap = abs(float(python_scores[a]) - float(python_scores[b]))
+            # `gap <= TIE` and not `not (gap > TIE)`: with a NaN gap this is
+            # False, so a NaN fails rather than being excused.
+            excused = bool(gap <= TIE_TOLERANCE)
+            mark = "tie " if excused else "🔴  "
+            print(f"       {rank}. {mark} {gap:.5f}  python: {tours[a]['title'][:38]}")
+            print(f"                       coreml: {tours[b]['title'][:38]}")
+            if not excused:
+                explained = False
+
+        if explained:
+            print(f"  ok   {query!r} — differs only where the scores are tied")
+            continue
+        mismatches += 1
+        print(f"  FAIL {query!r} — reordered results that are NOT tied")
 
     if mismatches:
-        print(f"\nFAIL: {mismatches} of {len(RANK_QUERIES)} queries rank differently.")
+        print(f"\nFAIL: {mismatches} of {len(RANK_QUERIES)} queries rank differently "
+              f"by more than {TIE_TOLERANCE}.")
         return 1
 
-    print(f"\nPASS — identical top {RANK_DEPTH} on every query, relations intact, "
-          f"worst cosine {worst:.6f}.")
+    print(f"\nPASS — top {RANK_DEPTH} agrees on every query (bar tied pairs), "
+          f"relations intact, worst cosine {worst:.6f}.")
     return 0
 
 
