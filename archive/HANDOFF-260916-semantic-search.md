@@ -136,11 +136,14 @@ needs a new index and the two must move together.
 
 ## Open
 
-- 🔴 **Unverified: the `rebuild-related` commit-and-push path AND the new sidecar
-  publish.** Both need a real content merge on a real runner; the manual trigger
-  runs `main`'s copy, not the branch's. **Watch the next city launch or pin batch**
-  for `chore(catalog): rebuild More like this suggestions [skip ci]` on `main` and
-  `search/embeddings.bin` + `search/embeddings.digest` on gh-pages.
+- ✅ **The `rebuild-related` commit-and-push path is VERIFIED** — it was the open
+  unknown here and on the board, and by 2026-09-16 afternoon it had run **five
+  times on `main`** (latest `4d6c0bf9`). #929's automation works; nothing is owed.
+- 🔴 **Still unverified: the sidecar publish beside it.** It lives in this
+  branch's `publish-catalog.yml`, so it cannot run until #949 merges. `main` sees
+  content merges several times a day, so **check `search/embeddings.bin` and
+  `search/embeddings.digest` on gh-pages after the first content merge following
+  the merge of #949** — both 404 as of this writing, which is correct.
 - **Blending** the two lists — deferred to device evidence by the owner.
 - **int8 for the model** — halves the download, but only if it re-passes the gate.
   Measure, do not assume.
