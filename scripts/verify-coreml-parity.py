@@ -115,12 +115,24 @@ def main() -> int:
         # query is short. Specials are re-added exactly as chunk_ids does.
         window = ids[: fixture["maxTokens"] - 2]
         wrapped = [tokenizer.token_to_id("[CLS]"), *window, tokenizer.token_to_id("[SEP]")]
-        prediction = mlmodel.predict({
-            "input_ids": np.array([wrapped], dtype=np.int32),
-            "attention_mask": np.ones((1, len(wrapped)), dtype=np.int32),
-        })
+        prediction = mlmodel.predict({"input_ids": np.array([wrapped], dtype=np.int32)})
         vector = np.array(prediction["embedding"], dtype=np.float32).reshape(-1)
-        return vector / max(float(np.linalg.norm(vector)), 1e-12)
+
+        # 🔴 CAUGHT AT THE SOURCE, because NaN defeats every check downstream:
+        # `nan < floor` is False, so a cosine floor PASSES it; `near <= far` is
+        # False, so a relation guard passes it too. A model emitting pure NaN
+        # therefore scored a clean run once already. Nothing that is not finite
+        # gets to travel any further than this line.
+        if not np.isfinite(vector).all():
+            raise ValueError(
+                f"model returned non-finite output for {text[:40]!r} — "
+                f"{int((~np.isfinite(vector)).sum())} of {vector.size} values"
+            )
+
+        norm = float(np.linalg.norm(vector))
+        if not np.isfinite(norm) or norm <= 1e-12:
+            raise ValueError(f"model output has unusable norm {norm} for {text[:40]!r}")
+        return vector / norm
 
     # --- 3. Per-string closeness (weakest, so reported first and trusted least)
     print(f"\nComparing {len(fixture['cases'])} vectors …")
@@ -131,9 +143,11 @@ def main() -> int:
         actual = core_ml_vector(case["text"])
         produced[case["text"]] = actual
         cosine = float(expected @ actual)
-        if cosine < worst:
+        # ⚠️ `>=`, NEGATED — not `<`. `nan < floor` is False and would pass;
+        # `not (nan >= floor)` is True and fails. Same for the running worst.
+        if not (cosine >= worst):
             worst, worst_text = cosine, case["text"]
-        if cosine < COSINE_FLOOR:
+        if not (cosine >= COSINE_FLOOR):
             failures.append((case["text"], cosine))
 
     print(f"  worst cosine {worst:.6f}  on {worst_text[:48]!r}")
@@ -148,9 +162,12 @@ def main() -> int:
     for relation in fixture["relations"]:
         near = float(produced[relation["anchor"]] @ produced[relation["near"]])
         far = float(produced[relation["anchor"]] @ produced[relation["far"]])
-        status = "ok  " if near > far else "FAIL"
-        print(f"  {status} {near:.3f} vs {far:.3f}  {relation['anchor'][:34]!r}")
-        if near <= far:
+        # `not (near > far)` rather than `near <= far`: with NaN the latter is
+        # False, so the guard did not fire even though it printed FAIL — the
+        # run carried on to ranking with NaN vectors.
+        ok = bool(near > far)
+        print(f"  {'ok  ' if ok else 'FAIL'} {near:.3f} vs {far:.3f}  {relation['anchor'][:34]!r}")
+        if not ok:
             print(f"\nFAIL: through Core ML, {relation['anchor']!r} is no longer "
                   f"closer to {relation['near']!r} than to {relation['far']!r}. "
                   "The conversion changed what the model MEANS, not just its "
@@ -203,7 +220,7 @@ def main() -> int:
 
         print(f"    query/query cosine {agreement:.6f} · "
               f"python top score {python_scores.max():.4f} "
-              f"(spread over top 10: {python_scores[python_top].ptp():.4f}) · "
+              f"(spread over top 10: {np.ptp(python_scores[python_top]):.4f}) · "
               f"coreml top score {coreml_scores.max():.4f}")
 
         if list(python_top) == list(coreml_top):

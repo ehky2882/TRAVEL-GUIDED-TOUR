@@ -71,8 +71,24 @@ def build_wrapper(torch, transformers, model_id: str):
             super().__init__()
             self.backbone = backbone
 
-        def forward(self, input_ids, attention_mask):
-            # 🔴 token_type_ids PASSED EXPLICITLY, not left to default.
+        def forward(self, input_ids):
+            # 🔴 NO RUNTIME ATTENTION MASK, and this is what fixes the NaN.
+            #
+            # With `attention_mask` as a graph INPUT, BertModel builds an
+            # additive mask as `(1 - mask) * torch.finfo(dtype).min`. That
+            # constant is about -3.4e38, which does not fit in fp16 and becomes
+            # -inf on conversion — and for an unmasked position the graph then
+            # computes `0 * -inf`, which is **NaN**. Every output was NaN.
+            #
+            # A query is ONE window with no padding, so the mask is all ones and
+            # contributes nothing. Passing ones as a CONSTANT lets the trace fold
+            # the whole term to zeros before fp16 ever sees it. The pooling below
+            # is then a plain mean, which for an all-ones mask is exactly the
+            # masked mean `embed_chunks` computes — identical arithmetic, no
+            # overflow, and one less input for the Swift side to get wrong.
+            attention_mask = torch.ones_like(input_ids)
+
+            # token_type_ids PASSED EXPLICITLY, not left to default.
             # Omitting them sends BertModel down a branch that fabricates them
             # from a registered buffer via `new_ones`/`expand` — and coremltools
             # has no converter for `new_ones`, so the trace fails with
@@ -86,14 +102,9 @@ def build_wrapper(torch, transformers, model_id: str):
                 token_type_ids=torch.zeros_like(input_ids),
             ).last_hidden_state
 
-            # 🔴 Masked mean. Summing over ALL positions and dividing by the
-            # sequence length would pull every short query toward zero by
-            # however much padding it happened to carry — the exact bug the
-            # Python comment warns about.
-            mask = attention_mask.unsqueeze(-1).to(hidden.dtype)
-            summed = (hidden * mask).sum(dim=1)
-            counts = mask.sum(dim=1).clamp(min=1e-9)
-            pooled = summed / counts
+            # Mean over every position. Equivalent to `embed_chunks`' masked
+            # mean because there is no padding here — see the note above.
+            pooled = hidden.mean(dim=1)
 
             return pooled / pooled.norm(p=2, dim=1, keepdim=True).clamp(min=1e-12)
 
@@ -142,11 +153,15 @@ def main() -> int:
     # exercise the graph.
     trace_length = 16
     example_ids = torch.ones((1, trace_length), dtype=torch.int32)
-    example_mask = torch.ones((1, trace_length), dtype=torch.int32)
 
     with torch.no_grad():
-        reference = wrapper(example_ids, example_mask)
-        traced = torch.jit.trace(wrapper, (example_ids, example_mask))
+        reference = wrapper(example_ids)
+        traced = torch.jit.trace(wrapper, (example_ids,))
+
+    # 🔴 A model that outputs NaN passed every check once already, because every
+    # comparison against NaN is false. Refuse to even save one.
+    if not torch.isfinite(reference).all():
+        raise SystemExit("ERROR: the traced model produced non-finite output")
 
     if reference.shape[-1] != dims:
         raise SystemExit(
@@ -157,10 +172,7 @@ def main() -> int:
     # queries are short. So a single flexible-length input covers the whole
     # query path — no chunking on device.
     sequence = ct.RangeDim(lower_bound=1, upper_bound=max_tokens, default=trace_length)
-    inputs = [
-        ct.TensorType(name="input_ids", shape=(1, sequence), dtype=np.int32),
-        ct.TensorType(name="attention_mask", shape=(1, sequence), dtype=np.int32),
-    ]
+    inputs = [ct.TensorType(name="input_ids", shape=(1, sequence), dtype=np.int32)]
 
     print("Converting to Core ML (fp16) …")
     mlmodel = ct.convert(

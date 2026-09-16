@@ -82,18 +82,18 @@ actor QueryEmbedder {
 
         let shape: [NSNumber] = [1, NSNumber(value: wrapped.count)]
         let inputIDs = try MLMultiArray(shape: shape, dataType: .int32)
-        let mask = try MLMultiArray(shape: shape, dataType: .int32)
         for (index, id) in wrapped.enumerated() {
             inputIDs[index] = NSNumber(value: id)
-            // Every position is real: this is one window with no padding, so
-            // the mask is all ones. Padding only appears in the batched Python
-            // path, which is why the masked mean matters there and not here.
-            mask[index] = 1
         }
 
+        // 🔴 NO ATTENTION MASK INPUT, deliberately. It used to be one, and it
+        // made every output NaN: BertModel folds the mask in as
+        // `(1 - mask) * finfo.min`, that constant overflows fp16 to -inf, and
+        // `0 * -inf` is NaN. A query is one window with no padding, so the mask
+        // was all ones and contributed nothing anyway — the export now bakes it
+        // in as a constant. See scripts/export-coreml.py.
         let output = try model.prediction(from: try MLDictionaryFeatureProvider(dictionary: [
             "input_ids": MLFeatureValue(multiArray: inputIDs),
-            "attention_mask": MLFeatureValue(multiArray: mask),
         ]))
 
         guard let embedding = output.featureValue(for: "embedding")?.multiArrayValue else {
@@ -107,7 +107,17 @@ actor QueryEmbedder {
 
         var vector = [Float](repeating: 0, count: Self.dimensions)
         for index in 0..<Self.dimensions {
-            vector[index] = embedding[index].floatValue
+            let value = embedding[index].floatValue
+            // 🔴 NaN must never reach the scorer. Every comparison against NaN
+            // is false, so a NaN vector does not produce bad results — it
+            // produces results no threshold can reject, and no test that uses
+            // `<` can catch. A converted model emitted pure NaN once and passed
+            // the parity gate clean; this is the app-side equivalent of the
+            // guard that now catches it.
+            guard value.isFinite else {
+                throw Failure.unexpectedOutput("non-finite value at \(index)")
+            }
+            vector[index] = value
         }
         return vector
     }
