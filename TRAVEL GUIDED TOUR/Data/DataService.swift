@@ -11,6 +11,11 @@ final class DataService {
     /// as the normal case rather than an error.
     private(set) var places: [Place] = []
 
+    /// When the catalogue on screen was last downloaded. Nil before any cache
+    /// exists (first launch, showing the bundled seed). Shown in Settings so
+    /// "is my content current?" is answerable without a support round trip.
+    private(set) var catalogUpdatedAt: Date?
+
     // MARK: - Lookup indexes
     //
     // Every `by id` accessor below is read **per row, per body evaluation**,
@@ -188,6 +193,11 @@ final class DataService {
     /// arrays and rebuilds every lookup index in the same step, so the two can
     /// never disagree.
     private func applyCatalog(tours newTours: [Tour], makers newMakers: [Maker], places newPlaces: [Place]) {
+        // Read here rather than passed in: `applyCatalog` is the single door
+        // every catalog comes through, and the cache's own write time is the
+        // honest answer for all of them — a fresh download has just rewritten
+        // it, and a cache-backed launch reports when those bytes arrived.
+        catalogUpdatedAt = loader.cacheWrittenAt
         tours = newTours
         var byId: [UUID: Tour] = [:]
         byId.reserveCapacity(newTours.count)

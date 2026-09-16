@@ -710,10 +710,21 @@ final class RemoteCatalogLoader {
     /// safe direction.
     private func cacheIsFresh() -> Bool {
         guard maxCacheAge > 0 else { return true }
-        guard let cacheURL,
-              let written = (try? FileManager.default.attributesOfItem(atPath: cacheURL.path))?[.modificationDate] as? Date
-        else { return false }
+        guard let written = cacheWrittenAt else { return false }
         return Date().timeIntervalSince(written) < maxCacheAge
+    }
+
+    /// When the cached catalogue was last written — i.e. when the content the
+    /// app is showing actually arrived from the network.
+    ///
+    /// Surfaced in Settings. On 2026-09-16 the owner spent an hour unable to
+    /// tell whether their phone had taken new content, and neither could this
+    /// session: "the server has it" and "the phone has it" are different
+    /// claims, and nothing in the app answered the second. One line of text
+    /// answers it, and would have turned that hour into a glance.
+    var cacheWrittenAt: Date? {
+        guard let cacheURL else { return nil }
+        return (try? FileManager.default.attributesOfItem(atPath: cacheURL.path))?[.modificationDate] as? Date
     }
 
     /// Cheap integrity check: the cache file is the length it was when written.

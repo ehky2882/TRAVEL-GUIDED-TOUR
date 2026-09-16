@@ -739,4 +739,24 @@ final class RemoteCatalogLoaderTests: XCTestCase {
                            "\(name) must not survive a clear — a surviving token is what pins a bad cache")
         }
     }
+
+    func test_cacheWrittenAt_reportsWhenTheContentOnScreenArrived() async throws {
+        let dir = makeTempDir()
+        let loader = RemoteCatalogLoader(fetcher: StubFetcher(result: .failure(URLError(.timedOut))),
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         appVersion: Self.testVersion)
+        XCTAssertNil(loader.cacheWrittenAt,
+                     "Before anything is downloaded there is no arrival time to report")
+
+        try seedCache(catalog(titled: "Cached"), in: dir)
+
+        let written = try XCTUnwrap(loader.cacheWrittenAt)
+        XCTAssertLessThan(abs(written.timeIntervalSinceNow), 60,
+                          "A cache just written reports as having arrived just now")
+
+        loader.clearCachedCatalog()
+        XCTAssertNil(loader.cacheWrittenAt,
+                     "Clearing removes the cache, so there is nothing to date")
+    }
 }
