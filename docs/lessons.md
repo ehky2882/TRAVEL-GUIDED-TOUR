@@ -1612,6 +1612,53 @@ functions look like they should agree and must not.
   the answer was **+291 KB**. Close enough to sound right, far enough to have
   argued the wrong case.
 
+### 🔴 And then the THRESHOLD was reused in the other direction — a day later (2026-09-16)
+
+**The section you are reading already said this, and it still happened.** The
+scoring *function* was kept apart correctly. The *floor* was not: semantic search
+shipped in build 166 with `scoreFloor = 0.45`, copied from `RELATED_FLOOR` above.
+
+0.45 is right where it sits — it gates **tour ↔ tour**, mean-to-mean, two long
+documents that score high against each other by construction. Search gates a
+**short typed query ↔ a long document**, which scores far lower for the same
+quality of match. Reusing the number looked like consistency and silenced three
+of nine natural queries on the live index:
+
+    quiet garden away              0.4498   ← the owner's first search
+    quiet garden away from crowds  0.4136
+    stained glass windows          0.4479
+    somewhere romantic for a date  0.4323
+    art deco lobby                 0.5444   (6 results)
+    brutalist concrete tower       0.6455   (46 results)
+
+**A floor wrong by a hair does not degrade — it disappears.** 0.4498 against 0.45
+fails by two ten-thousandths and produces something that looks completely broken
+rather than slightly strict. Now 0.35, measured in both directions: nonsense
+(`asdfgh qwerty zxcvb`, 0.3361), "my tax return" (0.2392) and "how do i reset my
+password" (0.1376) all still return nothing.
+
+⚠️ **A cleverer rule was looked for and does not exist — do not re-attempt it.**
+"quiet garden away" (good) and "stained glass windows" (weak) top out at 0.4498
+and 0.4479, indistinguishable. What separates them is whether the catalogue
+contains the thing, which no score can see; a relative rule ("within 0.08 of the
+best") fires identically on both.
+
+**The number was in our own output all along.** `verify-coreml-parity.py` printed
+`top score 0.4136` for "quiet garden away from crowds" on every ranking run, for
+days. It was read as a ranking check rather than as a distribution — the figure
+that disproves a threshold can sit in a passing report, because the report was
+asked a different question.
+
+**So the habit, stated as a rule:** a constant carries the measurement it was
+calibrated on. Moving it to a different comparison is a new calibration, not a
+reuse — and calibrating means running it against the real input at least once.
+The floor was never tested against a single typed query before it shipped.
+
+⚠️ **And it is compiled in.** The floor is a Swift constant, so every adjustment
+costs a TestFlight build. A tuning knob inside the app is not a knob you can
+turn; if a number is expected to move on judgement, it belongs in the catalogue.
+
+
 ## A correctly-applied migration is not evidence either — the snapshot in front of it (2026-09-15)
 
 `backend/add_related_tours.sql` patched the catalogue builder exactly as

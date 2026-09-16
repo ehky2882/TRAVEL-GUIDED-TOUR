@@ -43,10 +43,36 @@ final class SemanticSearch {
     /// How many smart matches to show. Deliberately short: this section is a
     /// second opinion under a full keyword list, not a second list.
     static let resultLimit = 6
-    /// `RELATED_FLOOR` in build-embeddings.py. The same number that decides
-    /// whether "More like this" shows a neighbour decides whether a smart
-    /// match is worth showing — it was chosen by looking at real pairs.
-    static let scoreFloor: Float = 0.45
+    /// 🔴 NOT `RELATED_FLOOR`, AND THE DIFFERENCE IS THE WHOLE POINT.
+    ///
+    /// This was 0.45, copied from the floor "More like this" uses — and that was
+    /// a category error that shipped. `RELATED_FLOOR` compares **two tours**:
+    /// mean-to-mean, two long documents, which score high against each other by
+    /// construction. This compares a **short typed query** against a long
+    /// document, which scores far lower for the same quality of match. Same
+    /// number, different measurement, and reusing it looked like consistency.
+    ///
+    /// At 0.45, measured on the live index, three of nine natural queries
+    /// returned NOTHING — including the owner's own first try on build 166:
+    ///
+    ///     quiet garden away              top 0.4498   (missed by 0.0002)
+    ///     quiet garden away from crowds  top 0.4136
+    ///     stained glass windows          top 0.4479
+    ///     somewhere romantic for a date  top 0.4323
+    ///     art deco lobby                 top 0.5444   (6 results)
+    ///     brutalist concrete tower       top 0.6455   (46 results)
+    ///
+    /// ⚠️ A CLEVERER RULE WAS TRIED AND DOES NOT EXIST — do not re-attempt it.
+    /// "quiet garden away" (good results) and "stained glass windows" (weak
+    /// ones) top out at 0.4498 and 0.4479: indistinguishable. What separates
+    /// them is what the catalogue contains, which no score can see, and a
+    /// relative rule ("within 0.08 of the best") fires identically on both.
+    ///
+    /// 0.35 is measured too — a lower floor still has to stay quiet when it
+    /// should. Nonsense ("asdfgh qwerty zxcvb", top 0.3361), "my tax return"
+    /// (0.2392) and "how do i reset my password" (0.1376) all return nothing,
+    /// while "somewhere romantic for a date" starts working.
+    static let scoreFloor: Float = 0.35
 
     private let store = TourEmbeddingStore()
     private let loader = SearchModelLoader()
