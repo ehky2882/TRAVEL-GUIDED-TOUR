@@ -72,10 +72,18 @@ def build_wrapper(torch, transformers, model_id: str):
             self.backbone = backbone
 
         def forward(self, input_ids, attention_mask):
-            # token_type_ids omitted: this model is single-segment, and the
-            # Python path feeds zeros, which is what the default produces.
+            # 🔴 token_type_ids PASSED EXPLICITLY, not left to default.
+            # Omitting them sends BertModel down a branch that fabricates them
+            # from a registered buffer via `new_ones`/`expand` — and coremltools
+            # has no converter for `new_ones`, so the trace fails with
+            # "PyTorch convert function for op 'new_ones' not implemented".
+            # Zeros is also exactly what the ONNX path feeds
+            # (`build-embeddings.py`: `feed["token_type_ids"] = zeros_like(ids)`),
+            # so this matches the catalog rather than merely compiling.
             hidden = self.backbone(
-                input_ids=input_ids, attention_mask=attention_mask
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                token_type_ids=torch.zeros_like(input_ids),
             ).last_hidden_state
 
             # 🔴 Masked mean. Summing over ALL positions and dividing by the
@@ -89,7 +97,14 @@ def build_wrapper(torch, transformers, model_id: str):
 
             return pooled / pooled.norm(p=2, dim=1, keepdim=True).clamp(min=1e-12)
 
-    backbone = transformers.AutoModel.from_pretrained(model_id)
+    # ⚠️ `attn_implementation="eager"` is load-bearing for conversion. The
+    # default (SDPA) routes through transformers' mask utilities, which build
+    # masks with dynamic ops coremltools cannot convert. Eager attention is the
+    # same arithmetic written plainly — the numbers are identical, the graph is
+    # traceable.
+    backbone = transformers.AutoModel.from_pretrained(
+        model_id, attn_implementation="eager"
+    )
     backbone.eval()
     wrapper = SentenceEmbedder(backbone)
     wrapper.eval()
