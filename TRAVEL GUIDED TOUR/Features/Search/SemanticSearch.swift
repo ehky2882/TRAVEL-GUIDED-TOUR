@@ -204,8 +204,22 @@ actor SearchModelLoader {
         }
     }
 
+    /// 🔴 THE VERSION IN THIS URL IS LOAD-BEARING, AND IT IS PINNED ON PURPOSE.
+    /// The model is fetched once, compiled once, and then read off this phone's
+    /// own disk forever — so swapping the bytes behind an unchanged URL would
+    /// reach nobody who had already searched. That is the same rule
+    /// CLAUDE.md § Image Pipeline step 9 was written for, and paid for.
+    ///
+    /// A new model therefore means a new tag AND a change to this line, which
+    /// is correct rather than inconvenient: a new model needs a new index, and
+    /// the two must move together or every ranking is quietly wrong.
+    ///
+    /// ⚠️ A RELEASE ASSET, NOT gh-pages. Both are free of Supabase egress, but
+    /// a git branch keeps what it is given: 42 MB per export would accumulate
+    /// in gh-pages history forever, on a branch whose clone already times out.
     static let remoteURL = URL(
-        string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/search/AtlasQueryEmbedder.mlpackage.aar"
+        string: "https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/releases/download/"
+            + "search-model-v1/AtlasQueryEmbedder.mlpackage.aar"
     )!
 
     private var loaded: MLModel?

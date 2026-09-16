@@ -1,7 +1,7 @@
 name: Export search model
 
 # Converts all-MiniLM-L6-v2 to Core ML, PROVES it agrees with the catalog's
-# vectors, and only then publishes it to gh-pages for the app to download.
+# vectors, and only then publishes it as a release asset for the app to download.
 #
 # 🔴 WHY macOS. Conversion runs anywhere; Core ML **prediction** runs only on an
 # Apple platform. A converted-but-never-executed model is an assumption, and the
@@ -12,9 +12,11 @@ name: Export search model
 #
 # 🔴 WHY PUBLISH RATHER THAN BUNDLE. Owner decision, 2026-09-16: the model is
 # downloaded on first search rather than shipped inside the app, so the App
-# Store download does not grow by ~45 MB. gh-pages is already the asset CDN
-# (audio, images), so this costs no Supabase egress. Reversible later — it
-# changes only where the loader looks.
+# Store download does not grow by ~42 MB. It ships as a RELEASE ASSET rather
+# than on gh-pages: both are free of Supabase egress, but a git branch is
+# forever, and 42 MB per export would accumulate in gh-pages history on a
+# branch whose clone already times out. Reversible later — it changes only
+# where the loader looks.
 #
 # Manual by design. The model changes roughly never; the catalog changes daily.
 # Tying this to content merges would burn a Mac runner for nothing.
@@ -23,7 +25,7 @@ on:
   workflow_dispatch:
     inputs:
       publish:
-        description: "Publish to gh-pages (otherwise build + verify only)"
+        description: "Publish the release asset (otherwise build + verify only)"
         type: boolean
         default: false
       int8:
@@ -40,7 +42,7 @@ on:
         default: false
 
 permissions:
-  contents: write     # publish the model to gh-pages
+  contents: write     # create the release and upload the model to it
 
 concurrency:
   group: export-search-model
@@ -174,59 +176,58 @@ jobs:
           path: build/AtlasQueryEmbedder.mlpackage.aar
           retention-days: 14
 
-      # Same Contents API approach as publish-catalog.yml, and for the same
-      # reason: gh-pages carries thousands of audio and image files, so cloning
-      # it to add one file times out and fails in ways that look like success.
-      - name: Publish to gh-pages
+      # 🔴 A RELEASE ASSET, NOT gh-pages — and not only because the Contents
+      # API 502s on it. A 42 MB base64 body is at the edge of what that
+      # endpoint will take, but the deeper problem is that a git branch is
+      # forever: every export would add another 42 MB to gh-pages history that
+      # can never be removed, on a branch whose 6,500+ files already make a
+      # full clone time out (see publish-catalog.yml's note on that). Releases
+      # exist for exactly this — large binaries, CDN-served, outside the tree.
+      #
+      # It costs no Supabase egress either, which was the whole reason for not
+      # serving the model from there.
+      #
+      # ⚠️ THE TAG IS VERSIONED, AND THE APP PINS IT. Overwriting bytes at a URL
+      # a phone has already fetched does not reach that phone — it compiled the
+      # model once and reads it off its own disk (the same rule CLAUDE.md
+      # § Image Pipeline step 9 was written for, and paid for). A NEW model
+      # means a NEW tag and a matching change in SearchModelLoader, which is
+      # right: a new model needs a new index, and the two must move together.
+      #
+      # `--clobber` is safe only while nothing shipped reads this tag. Once a
+      # build in the field points at it, this tag is frozen — cut the next one.
+      - name: Publish as a release asset
         if: inputs.publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          SRC=build/AtlasQueryEmbedder.mlpackage.aar
-          NEW_SHA=$(git hash-object "$SRC")
-          OLD_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
-                      --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.aar") | .sha' \
-                    2>/dev/null || echo "")
-          if [ "$NEW_SHA" = "$OLD_SHA" ]; then
-            echo "gh-pages already serves this exact model — nothing to publish."
-            exit 0
-          fi
+          TAG=search-model-v1
+          gh release view "$TAG" >/dev/null 2>&1 || \
+            gh release create "$TAG" \
+              --title "Search query embedder (all-MiniLM-L6-v2, fp16)" \
+              --notes "Core ML query embedder for semantic search. Verified against the catalog's vectors by scripts/verify-coreml-parity.py before publication. Consumed by SearchModelLoader." \
+              --latest=false
+          gh release upload "$TAG" build/AtlasQueryEmbedder.mlpackage.aar --clobber
+          echo "Uploaded to release $TAG."
 
-          OLD_SHA="$OLD_SHA" python3 - "$SRC" > /tmp/payload.json <<'PYEOF'
-          import base64, json, os, sys
-          payload = {
-              "message": "chore(search): publish Core ML query embedder [skip ci]",
-              "content": base64.b64encode(open(sys.argv[1], "rb").read()).decode(),
-              "branch": "gh-pages",
-          }
-          old = os.environ.get("OLD_SHA", "")
-          if old:
-              payload["sha"] = old
-          json.dump(payload, sys.stdout)
-          PYEOF
-
-          gh api -X PUT \
-            "repos/$GITHUB_REPOSITORY/contents/search/AtlasQueryEmbedder.mlpackage.aar" \
-            --input /tmp/payload.json --jq .commit.sha
-
-      # Ask what is actually being served rather than trusting the step above —
-      # publish-catalog.yml was rewritten because a green-looking publish left a
-      # stale mirror for sixteen hours.
-      - name: Verify gh-pages serves it
+      # Ask what is actually being SERVED rather than trusting the upload —
+      # publish-catalog.yml was rewritten because a green-looking publish left
+      # a stale mirror for sixteen hours. This fetches the public URL the app
+      # will use and checks the bytes, not the API's word for it.
+      - name: Verify the published asset is the one we built
         if: inputs.publish
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          NEW_SHA=$(git hash-object build/AtlasQueryEmbedder.mlpackage.aar)
-          LIVE_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
-                       --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.aar") | .sha')
-          if [ "$NEW_SHA" != "$LIVE_SHA" ]; then
-            echo "::error::gh-pages has $LIVE_SHA but we built $NEW_SHA — the publish did not land."
+          URL="https://github.com/$GITHUB_REPOSITORY/releases/download/search-model-v1/AtlasQueryEmbedder.mlpackage.aar"
+          curl -fsSL --retry 3 --retry-delay 5 "$URL" -o /tmp/served.aar
+          LOCAL=$(shasum -a 256 build/AtlasQueryEmbedder.mlpackage.aar | cut -d' ' -f1)
+          SERVED=$(shasum -a 256 /tmp/served.aar | cut -d' ' -f1)
+          if [ "$LOCAL" != "$SERVED" ]; then
+            echo "::error::the URL serves $SERVED but we built $LOCAL"
             exit 1
           fi
-          echo "gh-pages serves $LIVE_SHA"
+          echo "Serving $SERVED ($(stat -f%z /tmp/served.aar) bytes)"
 
       # Repeated at the very END of the job, on purpose. The step summary is
       # for a human in the GitHub UI; this is for anyone reading the job log
@@ -251,6 +252,6 @@ jobs:
             echo "| Precision | ${{ inputs.int8 && 'int8' || (inputs.fp32 && 'fp32' || 'fp16') }} |"
             echo "| Size | ${{ steps.package.outputs.size }} bytes |"
             echo "| SHA-256 | \`${{ steps.package.outputs.sha256 }}\` |"
-            echo "| Published | ${{ inputs.publish && 'yes' || 'no — build + verify only' }} |"
+            echo "| Published | ${{ inputs.publish && 'yes — release search-model-v1' || 'no — build + verify only' }} |"
             echo "| Ranking checked | ${{ inputs.skip_ranking && '**NO — not cleared to ship**' || 'yes' }} |"
           } >> "$GITHUB_STEP_SUMMARY"
