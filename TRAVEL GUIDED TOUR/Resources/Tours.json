@@ -99195,7 +99195,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "7A500BA4-EB29-57D6-B10A-D6AAB2CAA72B",
-        "ECBB560C-08D4-55BF-8DE9-227A66135479"
+        "ECBB560C-08D4-55BF-8DE9-227A66135479",
+        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7"
       ]
     },
     {
@@ -104327,22 +104328,6 @@
       "tourIds": [
         "86B587FA-58B7-540B-B337-74E036D0258F",
         "FF01D80B-17E1-569B-AA99-E07022709F76"
-      ]
-    },
-    {
-      "id": "b7056bff-0a98-5fad-9702-c00df11d0325",
-      "name": "1111 Lincoln Road",
-      "description": "Herzog & de Meuron's 2010 car park, built as slabs on splayed columns with no cladding at all -- the floor heights vary so wildly that the upper levels hold shops, a restaurant and weddings. A garage designed on the assumption that parking is temporary and the frame is not.",
-      "latitude": 25.790764,
-      "longitude": -80.140819,
-      "city": "Miami Beach",
-      "address": "1111 Lincoln Road, Miami Beach, FL 33139",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/1111-lincoln-road-playdabeat_hero.webp",
-      "additionalImageURLs": null,
-      "tourIds": [
-        "7A500BA4-EB29-57D6-B10A-D6AAB2CAA72B",
-        "ECBB560C-08D4-55BF-8DE9-227A66135479",
-        "C131CEA7-D632-57F9-A2C6-4A33FBA87DE7"
       ]
     }
   ],
