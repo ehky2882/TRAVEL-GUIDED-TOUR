@@ -42,6 +42,11 @@ struct SearchView: View {
     /// re-lowercasing every tour's (long) text and re-resolving its
     /// maker on the main thread every character. Re-lowercasing the whole
     /// catalog per keystroke was the typing lag once it passed ~350 tours.
+    /// Semantic search, which is ADDITIVE and must stay so: it runs after the
+    /// keyword results are already on screen, and every way it can fail ends
+    /// with its section simply absent.
+    @State private var semantic = SemanticSearch()
+
     @State private var searchIndex: [SearchEntry] = []
     /// Tour → maker, resolved once (avoids per-row linear `maker(for:)`).
     @State private var makerByTourID: [Tour.ID: Maker] = [:]
@@ -58,6 +63,14 @@ struct SearchView: View {
             Divider()
 
             contentArea
+                // ⚠️ DRIVEN FROM THE QUERY, NOT FROM THE RESULTS. Putting this
+                // inside `contentArea` would make it run on every body
+                // evaluation — including ones caused by its own state changing,
+                // which is a loop. `SemanticSearch` debounces on its own, so a
+                // keystroke here costs one cancelled task.
+                .onChange(of: trimmedQuery) { _, new in
+                    semantic.update(query: new, catalog: dataService.tours)
+                }
                 // Pin content area to fill available space, top-aligned.
                 // Without this the outer VStack collapses to fit small
                 // empty-state content and SwiftUI centers it vertically,
@@ -191,7 +204,7 @@ struct SearchView: View {
                 cap: Self.resultCap
             )
             if found.isEmpty && placeSearch.suggestions.isEmpty
-                && !placeSearch.isSearching {
+                && !placeSearch.isSearching && smartMatches(excluding: found).isEmpty {
                 emptyResults
             } else {
                 resultsList(found)
@@ -351,8 +364,65 @@ struct SearchView: View {
                             .padding(.vertical, AtlasSpacing.md)
                     }
                 }
+
+                smartSection(excluding: found)
             }
             .padding(.vertical, AtlasSpacing.sm)
+        }
+    }
+
+    // MARK: - Smart matches
+
+    /// Tours that MEAN what was typed, under the ones that contain it.
+    ///
+    /// 🔴 ADDITIVE, BELOW, AND SEPARATELY LABELLED — owner decision, 2026-09-16
+    /// ("two sections now, blend later"). Today's keyword results stay exactly
+    /// where they are and exactly as they are; this is a second opinion, not a
+    /// replacement. Whether the two lists should eventually merge is a decision
+    /// to make on device evidence, not in advance.
+    ///
+    /// ⚠️ ABSENT ON EVERY FAILURE. No model, no index, no network, a download
+    /// that will not come — all of them end here, rendering nothing. Search
+    /// falling back to precisely what it does today is a working outcome; a
+    /// spinner that never resolves is not.
+    private func smartMatches(excluding found: SearchResults) -> [Tour] {
+        guard case .results(let tours) = semantic.state else { return [] }
+        // The keyword list is directly above. Repeating it would make the
+        // section look broken rather than clever.
+        let shown = Set(found.tours.map(\.id))
+        return Array(tours.filter { !shown.contains($0.id) }.prefix(SemanticSearch.resultLimit))
+    }
+
+    @ViewBuilder
+    private func smartSection(excluding found: SearchResults) -> some View {
+        let matches = smartMatches(excluding: found)
+        if case .preparing = semantic.state {
+            // Said only on the FIRST search, when ~42 MB is genuinely being
+            // fetched. Silence for that long reads as breakage; a spinner with
+            // no explanation reads as worse.
+            HStack(spacing: AtlasSpacing.sm) {
+                ProgressView()
+                Text("Getting smart results ready…")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.vertical, AtlasSpacing.md)
+        } else if !matches.isEmpty {
+            sectionHeader("Related")
+            ForEach(matches) { tour in
+                Button {
+                    recentSearchStore.record(query: trimmedQuery)
+                    goToTour(tour)
+                } label: {
+                    resultRow(tour)
+                }
+                .buttonStyle(.plain)
+
+                if tour.id != matches.last?.id {
+                    Divider().padding(.leading, AtlasSpacing.lg)
+                }
+            }
         }
     }
 

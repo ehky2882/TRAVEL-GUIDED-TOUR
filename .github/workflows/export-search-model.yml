@@ -112,27 +112,61 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      # A .mlpackage is a directory; the app downloads one file and compiles it
-      # with MLModel.compileModel(at:). Deterministic zip so an unchanged model
-      # produces an unchanged artifact.
+      # 🔴 APPLE ARCHIVE, NOT ZIP, AND THE APP IS WHY. A .mlpackage is a
+      # DIRECTORY, so it has to travel as one file — and iOS has no public API
+      # for reading a zip. This project allows Apple frameworks only
+      # (CLAUDE.md § Conventions), so a third-party unzip is out and
+      # hand-rolling one over `Compression` would put a few hundred lines of
+      # format parsing between the app and its search index.
+      #
+      # `aa` ships with macOS and `AppleArchive` ships with iOS. Same format,
+      # both ends, nothing added to the app.
+      #
+      # Timestamps are flattened first so an unchanged model produces an
+      # unchanged artifact — that is what lets the publish step below skip a
+      # no-op write, and what makes "already serves this exact model" true
+      # rather than merely likely.
       - name: Package
         id: package
         run: |
           set -euo pipefail
           cd build
           find AtlasQueryEmbedder.mlpackage -exec touch -t 200001010000 {} +
-          zip -qrX AtlasQueryEmbedder.mlpackage.zip AtlasQueryEmbedder.mlpackage
-          SIZE=$(stat -f%z AtlasQueryEmbedder.mlpackage.zip)
+          aa archive -d AtlasQueryEmbedder.mlpackage \
+                     -o AtlasQueryEmbedder.mlpackage.aar \
+                     -a lzfse -subdir AtlasQueryEmbedder.mlpackage
+          SIZE=$(stat -f%z AtlasQueryEmbedder.mlpackage.aar)
           echo "size=$SIZE" >> "$GITHUB_OUTPUT"
-          echo "sha256=$(shasum -a 256 AtlasQueryEmbedder.mlpackage.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          echo "sha256=$(shasum -a 256 AtlasQueryEmbedder.mlpackage.aar | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
           echo "Packaged $SIZE bytes ($(echo "scale=1; $SIZE/1000000" | bc) MB)"
+
+      # Unpack it again and load the result. The archive is the thing the app
+      # actually receives, and "it compressed without error" is not the same
+      # claim as "what comes back out is still a loadable model" — the gap
+      # between those two is where a -subdir flag or a dropped field would
+      # hide, and it would surface as a first search that fails on a phone.
+      - name: Prove the archive round-trips
+        run: |
+          set -euo pipefail
+          cd build
+          rm -rf roundtrip && mkdir roundtrip
+          aa extract -i AtlasQueryEmbedder.mlpackage.aar -d roundtrip
+          python3 - <<'PY'
+          import coremltools as ct
+          import numpy as np
+          model = ct.models.MLModel("roundtrip/AtlasQueryEmbedder.mlpackage")
+          out = model.predict({"input_ids": np.array([[101, 2028, 102]], dtype=np.int32)})
+          vector = np.array(out["embedding"], dtype=np.float32).reshape(-1)
+          assert np.isfinite(vector).all(), "unpacked model returned non-finite output"
+          print(f"Round-trip OK — {vector.size} dims, norm {np.linalg.norm(vector):.6f}")
+          PY
 
       # Always kept, published or not — so a verify-only run still leaves
       # something a human can inspect.
       - uses: actions/upload-artifact@v4
         with:
           name: AtlasQueryEmbedder
-          path: build/AtlasQueryEmbedder.mlpackage.zip
+          path: build/AtlasQueryEmbedder.mlpackage.aar
           retention-days: 14
 
       # Same Contents API approach as publish-catalog.yml, and for the same
@@ -144,10 +178,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          SRC=build/AtlasQueryEmbedder.mlpackage.zip
+          SRC=build/AtlasQueryEmbedder.mlpackage.aar
           NEW_SHA=$(git hash-object "$SRC")
           OLD_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
-                      --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.zip") | .sha' \
+                      --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.aar") | .sha' \
                     2>/dev/null || echo "")
           if [ "$NEW_SHA" = "$OLD_SHA" ]; then
             echo "gh-pages already serves this exact model — nothing to publish."
@@ -168,7 +202,7 @@ jobs:
           PYEOF
 
           gh api -X PUT \
-            "repos/$GITHUB_REPOSITORY/contents/search/AtlasQueryEmbedder.mlpackage.zip" \
+            "repos/$GITHUB_REPOSITORY/contents/search/AtlasQueryEmbedder.mlpackage.aar" \
             --input /tmp/payload.json --jq .commit.sha
 
       # Ask what is actually being served rather than trusting the step above —
@@ -180,9 +214,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          NEW_SHA=$(git hash-object build/AtlasQueryEmbedder.mlpackage.zip)
+          NEW_SHA=$(git hash-object build/AtlasQueryEmbedder.mlpackage.aar)
           LIVE_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
-                       --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.zip") | .sha')
+                       --jq '.tree[] | select(.path=="search/AtlasQueryEmbedder.mlpackage.aar") | .sha')
           if [ "$NEW_SHA" != "$LIVE_SHA" ]; then
             echo "::error::gh-pages has $LIVE_SHA but we built $NEW_SHA — the publish did not land."
             exit 1

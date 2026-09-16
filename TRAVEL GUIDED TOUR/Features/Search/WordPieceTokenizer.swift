@@ -47,8 +47,26 @@ struct WordPieceTokenizer {
 
     var vocabularySize: Int { vocabulary.count }
 
+    /// The vocabulary shipped inside the app.
+    ///
+    /// ⚠️ BUNDLED, NOT DOWNLOADED, unlike the model beside it. It is ~230 KB,
+    /// so it costs the app download almost nothing — and the ids in it ARE the
+    /// contract with every vector in the catalogue. A vocabulary that could
+    /// arrive separately is a vocabulary that could arrive mismatched, and a
+    /// vocabulary off by one line anywhere produces vectors that are quietly
+    /// wrong with nothing to say so.
+    static func bundled() throws -> WordPieceTokenizer {
+        guard let url = Bundle.main.url(forResource: "vocab", withExtension: "txt") else {
+            throw Failure.vocabularyUnreadable("vocab.txt is not in the app bundle")
+        }
+        return try WordPieceTokenizer(
+            vocabularyText: try String(contentsOf: url, encoding: .utf8)
+        )
+    }
+
     /// Builds from a `vocab.txt` — one token per line, id = line number, which
-    /// is the format `scripts/export-coreml.py` writes out of `tokenizer.json`.
+    /// is the format `scripts/export-tokenizer-vocab.py` writes out of
+    /// `tokenizer.json`.
     init(vocabularyText: String) throws {
         var table: [String: Int32] = [:]
         // `split(omittingEmptySubsequences: false)` matters: an empty line in a
