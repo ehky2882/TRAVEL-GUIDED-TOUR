@@ -222593,8 +222593,7 @@
       "city": "New York (Brooklyn)",
       "country": "United States",
       "relatedTourIds": [
-        "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
-        "A0BB99C9-B680-530B-85F1-B26D6A1296EA"
+        "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224152,8 +224151,8 @@
           "order": 0,
           "title": "Pecking House",
           "caption": "The fried chicken that had a 10K+ waiting list! 🍗🤩 You can’t miss this nashville fried chicken x taiwanese fried chicken crossover from @pec",
-          "latitude": 40.6796635,
-          "longitude": -73.9745065,
+          "latitude": 40.7132144,
+          "longitude": -73.9934677,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -224165,13 +224164,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.6796635,
-      "centroidLongitude": -73.9745065,
-      "city": "New York (Brooklyn)",
+      "centroidLatitude": 40.7132144,
+      "centroidLongitude": -73.9934677,
+      "city": "New York",
       "country": "United States",
-      "relatedTourIds": [
-        "975359B1-D931-56CF-8C08-A8F958EEB5E6"
-      ],
+      "relatedTourIds": null,
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
