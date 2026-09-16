@@ -24,6 +24,52 @@ jobs:
       - name: Run Tours.json validator
         run: swift scripts/validate-tours.swift
 
+  # Place candidates, surfaced on the PR that creates them.
+  #
+  # 🔴 WHY THIS EXISTS. Rule 8c told sessions to run check-place-candidates.py
+  # after a batch, and it was a manual step nobody had time for: the backlog
+  # was cleared to zero at 02:25 on 2026-09-16 and by 14:00 — after 286 pins
+  # across FOUR batches from several sessions and a second contributor — it was
+  # back to 17 NAME and 18 EXACT. The owner was finding these on the map.
+  #
+  # ⚠️ It REPORTS, it does not fail. Content PRs auto-merge under CLAUDE.md
+  # rule 4, and minting a place needs an anchor decision only the owner can
+  # make — failing here would stall somebody else's pin batch on a judgement
+  # call. It fails ONLY if the checker could not run, which is this repo's own
+  # "a check that cannot run must not return a pass".
+  place-candidates:
+    name: Place candidates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Scan for place candidates
+        run: |
+          # ⚠️ GitHub runs `run:` under `bash -e`, so a bare non-zero exit would
+          # kill the step before the code could be read — and exit 1 here means
+          # "candidates found", which is NOT a failure. `|| code=$?` is what
+          # keeps this job reporting rather than blocking.
+          code=0
+          python3 scripts/check-place-candidates.py --out candidates.txt || code=$?
+          # 0 = nothing found, 1 = candidates found (both fine), >=2 = the
+          # check itself failed. Read DIRECTLY, never through a pipe.
+          if [ "$code" -ge 2 ]; then
+            echo "::error::check-place-candidates.py could not run (exit $code)"
+            cat candidates.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Place candidates"
+            echo
+            echo '```'
+            sed -n '/^NAME —/,/^TIGHT —/p' candidates.txt | sed '$d'
+            echo '```'
+            tail -2 candidates.txt
+          } >> "$GITHUB_STEP_SUMMARY"
+          n=$(tail -2 candidates.txt | grep -oE '^[0-9]+ name' | grep -oE '^[0-9]+' || echo 0)
+          if [ "${n:-0}" -gt 0 ]; then
+            echo "::warning::$n unplaced pair(s) share a name — docs/places.md Rule 1 says every one is a place. See the job summary."
+          fi
+
   # In-app account deletion: the SQL runs against a throwaway Postgres (the
   # Ubuntu runner ships one) and the Edge Function is type-checked, because
   # both reach production by the owner pasting them into Supabase — the worst
