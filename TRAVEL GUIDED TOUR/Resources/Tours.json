@@ -7563,8 +7563,8 @@
           "order": 0,
           "title": "The Unisphere",
           "caption": "Flushing Meadows Corona Park, Queens — walk through the whole plaza after.",
-          "latitude": 40.74664,
-          "longitude": -73.84569,
+          "latitude": 40.7463838,
+          "longitude": -73.8450748,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/The_Unisphere.mp3",
           "audioDurationSeconds": 133,
           "triggerMode": "geofenced",
@@ -7576,8 +7576,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 133,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.74664,
-      "centroidLongitude": -73.84569,
+      "centroidLatitude": 40.7463838,
+      "centroidLongitude": -73.8450748,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -8246,6 +8246,7 @@
       "relatedTourIds": [
         "DD15BB9B-45E2-525A-8573-0DC63242CB51",
         "5CC23395-E76C-4CBE-8041-7B81E9886030",
+        "63A41A3E-F816-5AA7-8BC1-94F8B95FDE2E",
         "C91F1A29-04C1-5D5D-B6E4-4916B7C5C30B",
         "13c93799-efad-5b2b-b76e-b0002d14aa2a"
       ],
@@ -16594,8 +16595,8 @@
         "421D7599-EBF8-4898-9F80-14B63783C74E",
         "5604CD42-2DCE-4041-8045-A1A12DCBB026",
         "4488A2E8-4FB2-48D6-9EF8-72C892627298",
-        "03A50FE4-0B29-470E-820F-95EA3905A7D1",
-        "a2e83e1e-21f6-5f2f-8416-f58e23f61fd7"
+        "5283D40F-854A-5450-B874-88A6BAADC810",
+        "03A50FE4-0B29-470E-820F-95EA3905A7D1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -33877,8 +33878,8 @@
           "order": 0,
           "title": "Ippodo Tea Kyoto | 一保堂茶舗 京都本店",
           "caption": "A tea merchant on Teramachi since 1717 — house blends built from centuries-old recipes, with a tearoom that shows you how to drink them.",
-          "latitude": 35.01463097821509,
-          "longitude": 135.7674482954094,
+          "latitude": 35.0144633,
+          "longitude": 135.7673552,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ippodo-tea-kyoto.mp3",
           "audioDurationSeconds": 108,
           "triggerMode": "geofenced",
@@ -33890,8 +33891,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 108,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.01463097821509,
-      "centroidLongitude": 135.7674482954094,
+      "centroidLatitude": 35.0144633,
+      "centroidLongitude": 135.7673552,
       "city": "Kyoto",
       "country": "Japan",
       "relatedTourIds": [
@@ -34269,8 +34270,8 @@
           "order": 0,
           "title": "La Collina Ōmi-Hachiman | ラ コリーナ近江八幡",
           "caption": "Terunobu Fujimori's grass-roofed building for the Taneya sweets group — a structure built to read as a continuation of the hill behind it.",
-          "latitude": 35.16193158768842,
-          "longitude": 136.0888024520477,
+          "latitude": 35.149159,
+          "longitude": 136.0914491,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/la-collina-omi-hachiman.mp3",
           "audioDurationSeconds": 128,
           "triggerMode": "geofenced",
@@ -34282,8 +34283,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 128,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.16193158768842,
-      "centroidLongitude": 136.0888024520477,
+      "centroidLatitude": 35.149159,
+      "centroidLongitude": 136.0914491,
       "city": "Ōmi-Hachiman",
       "country": "Japan",
       "relatedTourIds": [
@@ -48398,8 +48399,8 @@
           "order": 0,
           "title": "The Getty Center",
           "caption": "Ride the tram up to the travertine plaza and its grand staircase.",
-          "latitude": 34.078,
-          "longitude": -118.4741,
+          "latitude": 34.0770168,
+          "longitude": -118.47401,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/getty-center.mp3",
           "audioDurationSeconds": 135,
           "triggerMode": "geofenced",
@@ -48411,8 +48412,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 135,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.078,
-      "centroidLongitude": -118.4741,
+      "centroidLatitude": 34.0770168,
+      "centroidLongitude": -118.47401,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -70059,8 +70060,8 @@
           "order": 0,
           "title": "Casa de Vidro",
           "caption": "In 1951, an Italian-born architect became a Brazilian citizen, and finished building her first house in the same year.",
-          "latitude": -23.605492340072445,
-          "longitude": -46.7118436871028,
+          "latitude": -23.613051,
+          "longitude": -46.711899,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/casa-de-vidro.mp3",
           "audioDurationSeconds": 98,
           "triggerMode": "geofenced",
@@ -70072,8 +70073,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 98,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -23.605492340072445,
-      "centroidLongitude": -46.7118436871028,
+      "centroidLatitude": -23.613051,
+      "centroidLongitude": -46.711899,
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [
@@ -71704,8 +71705,8 @@
           "order": 0,
           "title": "Pinacoteca de São Paulo",
           "caption": "The main entrance to this museum used to face the wrong way — toward a busy road instead of a quiet square.",
-          "latitude": -23.534574,
-          "longitude": -46.634331,
+          "latitude": -23.534274,
+          "longitude": -46.6339157,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pinacoteca-sao-paulo.mp3",
           "audioDurationSeconds": 107,
           "triggerMode": "geofenced",
@@ -71717,8 +71718,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 107,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -23.534574,
-      "centroidLongitude": -46.634331,
+      "centroidLatitude": -23.534274,
+      "centroidLongitude": -46.6339157,
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [
@@ -71727,9 +71728,9 @@
         "c4c7d771-94ff-5abc-94e7-0e4f6fe09924",
         "f4ce5978-958d-572f-8280-f4b06e9266b1",
         "efb1cd84-1608-5b75-b8b3-0550a40ddca4",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "e2392648-1a1b-5a86-a069-4aea887ddb73",
-        "d45f87a0-f5ae-5b56-9521-ab36ac1ebe57",
-        "35372ae3-7c41-5daf-9be4-b7f51fa04562"
+        "d45f87a0-f5ae-5b56-9521-ab36ac1ebe57"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -82951,10 +82952,10 @@
         "121c5e14-92d3-524f-a947-cc7751d93a00",
         "5c3fd907-141d-5d71-97bb-f3c4a542ebc7",
         "27c19d0d-1922-5ab4-8882-719201aa04ed",
+        "0B6EAEED-6F9E-58DF-B3BD-4DC6F3281C36",
         "65087606-b1f8-5989-bb06-f40d0bafd514",
         "0088f787-a41e-57be-98d6-159905160fb7",
-        "0fb3060c-c89f-5b94-9896-5ffbe01905bb",
-        "9b06ec4a-8e0d-59af-af1c-3a8cf6870342"
+        "0fb3060c-c89f-5b94-9896-5ffbe01905bb"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -86129,9 +86130,9 @@
         "81677f55-371a-548b-be68-1573d302bef2",
         "f96346b3-d5be-5ba4-8fa2-5bd3b0c11af2",
         "7e2ca3d9-5c55-5da2-a546-9e3d729a3475",
+        "2F40F514-C655-551D-8507-66C1DF92BBE8",
         "0d1ef7fb-f18b-5db1-b4ff-461266593353",
-        "36cda7d9-25ce-5f6d-845f-e27803e6d5ea",
-        "70a01d74-8edf-5f78-9d8b-a05850c0299a"
+        "36cda7d9-25ce-5f6d-845f-e27803e6d5ea"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -103103,7 +103104,8 @@
       "tourIds": [
         "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
-        "400914D0-98AA-5357-B789-B59ACE861F50"
+        "400914D0-98AA-5357-B789-B59ACE861F50",
+        "5BE5FDC8-5659-57B7-966C-FDE5002F7931"
       ]
     },
     {
@@ -104379,6 +104381,157 @@
       "tourIds": [
         "86B587FA-58B7-540B-B337-74E036D0258F",
         "FF01D80B-17E1-569B-AA99-E07022709F76"
+      ]
+    },
+    {
+      "id": "fee02839-c85f-50c1-8d87-eb4301644a15",
+      "name": "Wagyu Ramen Goku",
+      "description": "A Shibuya counter that puts wagyu in ramen, which sounds like a gimmick and is mostly a question of fat: the beef renders into the broth rather than sitting on top of it.",
+      "latitude": 35.6601115,
+      "longitude": 139.7043954,
+      "city": "Tokyo",
+      "address": "宮益坂 12-12, Shibuya, Tokyo 150-0002",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wagyu-ramen-goku-camdyerjapan_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "350527D0-AA44-565B-914A-E20161C470A0",
+        "19A31B5F-3565-5F69-8D75-F4D7FB03EF05"
+      ]
+    },
+    {
+      "id": "0046db9b-a0ca-51ee-a44e-2c840fb6fb94",
+      "name": "Ippodo Tea",
+      "description": "A tea merchant on Teramachi since 1717, still selling by the same grades and still measuring into paper. The tasting room at the back is where most people first taste gyokuro brewed properly.",
+      "latitude": 35.0144633,
+      "longitude": 135.7673552,
+      "city": "Kyoto",
+      "address": "52 Tokiwagicho, Nakagyo-ku, Kyoto 604-0915",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ippodo-tea-kyoto_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3D46970A-25C9-5600-9599-735378974C93",
+        "d5370182-ff11-5c75-ab35-306c902c2db8"
+      ]
+    },
+    {
+      "id": "9601926e-28cf-5fdb-9ac2-88e276cdbda3",
+      "name": "Pinacoteca de São Paulo",
+      "description": "Paulo Mendes da Rocha stripped a 1900 brick school back to its structure in 1998, roofed the courtyards in glass and crossed them with steel walkways. The unrendered brick was never meant to be seen.",
+      "latitude": -23.534274,
+      "longitude": -46.6339157,
+      "city": "São Paulo",
+      "address": "Praça da Luz 2, São Paulo 01120-010",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pinacoteca-sao-paulo_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2AAEFBE6-C682-5C6D-9473-2AA5447C4A06",
+        "b344b334-4402-55c1-808a-a192e52effc7"
+      ]
+    },
+    {
+      "id": "8a8176a0-88c9-593f-992e-3023d3f1b340",
+      "name": "The Unisphere",
+      "description": "Twelve storeys of stainless steel built by U.S. Steel for the 1964 World's Fair, themed Peace Through Understanding. Three rings orbit it for the satellites that had just started going up.",
+      "latitude": 40.7463838,
+      "longitude": -73.8450748,
+      "city": "New York",
+      "address": "Flushing Meadows–Corona Park, Queens, New York 11368",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-unisphere-lectecscience_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "E80DAFED-B14D-5B38-9B34-43E74536362A",
+        "c7052e56-8a06-4e35-ba64-4a65f2f5e11c"
+      ]
+    },
+    {
+      "id": "d56d3ec9-a4d6-56bd-bec1-b2310ce8c22a",
+      "name": "Therme Vals",
+      "description": "Peter Zumthor's 1996 baths, cut into the hillside from 60,000 slabs of local Valser quartzite laid in courses a few centimetres thick. The building is the mountain it was quarried from.",
+      "latitude": 46.6220041,
+      "longitude": 9.181271,
+      "city": "Vals",
+      "address": "Soladürastrasse, 7132 Vals",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/therme-vals-francescobeggio_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F81C1E26-C8FE-541F-B03F-A52A5F694BFC",
+        "77C43772-4724-5EE3-B291-63FE7469BAEC"
+      ]
+    },
+    {
+      "id": "3fe3eadc-ab5a-5ec1-b5a1-9e71936cc842",
+      "name": "MASP",
+      "description": "Lina Bo Bardi hung the galleries from four red beams so the ground beneath stays a public square — a condition of the land's donation was that the view to the city below be kept open.",
+      "latitude": -23.561498,
+      "longitude": -46.655967,
+      "city": "São Paulo",
+      "address": "Av. Paulista 1578, São Paulo 01310-200",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/masp_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5e78d185-f167-5bb9-bfe2-9106957897ac",
+        "88303108-7CBE-5F31-B1A4-555A857DA5EE"
+      ]
+    },
+    {
+      "id": "2e01bb5d-74fa-54ab-b364-121ea1e80fac",
+      "name": "The Getty Center",
+      "description": "Richard Meier's hilltop campus, opened 1997, clad in 16,000 tonnes of travertine split rather than sawn so the fossils show. A tram carries visitors up because cars were kept off the ridge.",
+      "latitude": 34.0770168,
+      "longitude": -118.47401,
+      "city": "Los Angeles",
+      "address": "1200 Getty Center Drive, Los Angeles, CA 90049",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/getty-center_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "E04A360B-973E-5389-8F26-3629D864FC6D",
+        "6d2aaa7e-e502-57cd-8af0-64eabc39acde"
+      ]
+    },
+    {
+      "id": "9a5a03aa-de13-5908-8286-88330f65860f",
+      "name": "SESC Pompéia",
+      "description": "Lina Bo Bardi kept the drum factory and added two concrete towers beside it, linked by walkways and punctured with windows broken open by hand so no two are alike.",
+      "latitude": -23.525809,
+      "longitude": -46.683498,
+      "city": "São Paulo",
+      "address": "Rua Clélia 93, São Paulo 05042-000",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sesc-pompeia_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "63260916-2551-5ee5-8e04-94ed9133cb1d",
+        "04413D73-0775-5D97-8946-7FAE009DC00B"
+      ]
+    },
+    {
+      "id": "e510384b-3527-5c6a-8376-0d68d30339fc",
+      "name": "Casa de Vidro",
+      "description": "Lina Bo Bardi's own house, 1951, a glass box on slim pilotis in what was then bare hillside. The forest that now presses against the glass was planted after it was built, which inverts the whole idea.",
+      "latitude": -23.613051,
+      "longitude": -46.711899,
+      "city": "São Paulo",
+      "address": "Rua General Almério de Moura, São Paulo 05690-080",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-de-vidro_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6D37E1F5-0083-5F5C-9364-EE17AC1C5CCB",
+        "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
+        "5e175184-b0b0-5b1d-a2a5-a705c9e106cd"
+      ]
+    },
+    {
+      "id": "bd916126-960f-5e29-8209-1bba90c48ddc",
+      "name": "La Collina",
+      "description": "Terunobu Fujimori's headquarters for the confectioner Taneya, its main hall roofed in living turf and its walls hand-finished with charcoal flecks. Rice paddies are farmed on the site as part of it.",
+      "latitude": 35.149159,
+      "longitude": 136.0914491,
+      "city": "Ōmi-Hachiman",
+      "address": "Kitanoshocho, Ōmi-Hachiman, Shiga 523-8501",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-collina-omi-hachiman_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "032E19B5-6B70-5DEE-9D1C-9C0A3D1321FC",
+        "47eb923c-23d4-55ee-8fda-458508c72b91"
       ]
     }
   ],
@@ -105726,6 +105879,9 @@
       "centroidLongitude": 10.290048912263904,
       "city": "Parma",
       "country": "Italy",
+      "relatedTourIds": [
+        "3D4DC649-5209-54F2-B07D-2FBA6EA6D276"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -107410,8 +107566,8 @@
         "9F641AAA-3A1B-5C37-9296-CE3817D9E9B5",
         "3D70E334-7AF2-50A0-BD4F-2EDDF67B2B26",
         "67356A8E-49CC-5A9C-B071-22C992619048",
-        "944A027D-8F3D-5749-B3D2-E5FD4EE7F55D",
-        "24F46972-BC7C-5BBE-85BC-E5EFB99723F3"
+        "B4BF8EFF-19B2-53E0-9A92-82A7F616E317",
+        "DB25CF8C-A8BC-5BE0-861F-C186EBC0D9EC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -109139,7 +109295,7 @@
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "30335E60-DCB4-59A1-B6E3-25FDBB872557",
-        "004770A3-5393-5AB0-B1F7-4C5FA2769C13"
+        "F303882C-62A3-5BF6-9B14-632A13E83B56"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -109516,10 +109672,10 @@
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
-        "C9499965-405F-58DB-A1A9-139678987B20",
-        "386E0B2C-272F-5078-971E-30E92700474E",
-        "5C77BAF3-288A-5ADC-8E60-412718D2CDA5",
-        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74"
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "C9499965-405F-58DB-A1A9-139678987B20"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -111928,6 +112084,7 @@
         "05222115-7F54-5AFE-921F-4B0B920DA6BA",
         "62cca756-02e7-5848-ace4-502800c37005",
         "962093e8-2777-5053-b9f2-fa72590c5b96",
+        "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
         "44bb3a6d-09d3-5763-8e20-4c129fc5e27c",
         "3619ca6e-f14c-50a3-a659-14ac5216160d"
       ],
@@ -114772,12 +114929,12 @@
       "relatedTourIds": [
         "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
         "50CFB5A0-E6C2-54B0-952F-702397DBE263",
         "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
-        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
-        "F3579E9F-B19D-554F-B337-827DF1FF1588",
-        "386E0B2C-272F-5078-971E-30E92700474E",
-        "C9499965-405F-58DB-A1A9-139678987B20"
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -114879,7 +115036,10 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD"
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -118662,10 +118822,10 @@
         "CA72BADF-6106-574F-9729-5C41361A45A1",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
         "C9499965-405F-58DB-A1A9-139678987B20",
         "48328CC1-B4B7-5F73-99C4-20FE2212ED93",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "8A02259E-3632-570E-BCB3-69AF19EAFED1"
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -125869,13 +126029,13 @@
       "country": "United States",
       "relatedTourIds": [
         "21586B61-6113-5CF6-96D2-465E1F8BE07E",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
         "FE7FC774-F309-50B6-BC22-57B1284675E0",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "F1D10EA6-DD51-5A68-B670-A5805A04A107",
-        "92334BD4-F823-500E-AD33-3A0D8073D9D5",
-        "E1093C06-1CD8-54EE-AC83-51A2C975F88F",
-        "C9499965-405F-58DB-A1A9-139678987B20",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7"
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -127015,12 +127175,12 @@
       "relatedTourIds": [
         "7C702C1A-D85B-5786-8A40-BB385D06C21A",
         "265BD389-9861-5FC3-AE33-FFCA862C83E4",
+        "1087BD31-E151-5B68-9019-7D47361DE692",
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
         "6D5F3871-CA8C-5F47-8A01-DBA1D30F29A4",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "DC4BEC9E-D0E3-529E-805C-76A27C257C2F",
-        "9AA2406A-6C3A-518B-A2BF-95690D036AAF",
-        "b8b71d88-7dfc-4ff9-af2f-1fc195c6f175"
+        "9AA2406A-6C3A-518B-A2BF-95690D036AAF"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -127072,10 +127232,10 @@
         "386E0B2C-272F-5078-971E-30E92700474E",
         "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
+        "1087BD31-E151-5B68-9019-7D47361DE692",
         "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88"
+        "01DDF36A-F835-5475-AF84-7908E12E9680"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -129135,8 +129295,8 @@
         "50CFB5A0-E6C2-54B0-952F-702397DBE263",
         "7C702C1A-D85B-5786-8A40-BB385D06C21A",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
-        "DCDFEA23-23F1-5488-8B7F-5DBCC2CE65A6",
-        "5C77BAF3-288A-5ADC-8E60-412718D2CDA5"
+        "51B592D6-66C4-5DD3-B362-FADCD4F32D92",
+        "DCDFEA23-23F1-5488-8B7F-5DBCC2CE65A6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -129850,12 +130010,12 @@
       "relatedTourIds": [
         "C9499965-405F-58DB-A1A9-139678987B20",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
         "21586B61-6113-5CF6-96D2-465E1F8BE07E",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "775EC7F0-9C41-5072-86BD-EDF51AC0131C",
-        "50CFB5A0-E6C2-54B0-952F-702397DBE263",
-        "1433B333-4647-5FC3-8AB1-5E12671669AE",
-        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74"
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "01DDF36A-F835-5475-AF84-7908E12E9680"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -130017,12 +130177,12 @@
       "relatedTourIds": [
         "1433B333-4647-5FC3-8AB1-5E12671669AE",
         "775EC7F0-9C41-5072-86BD-EDF51AC0131C",
+        "B14B2377-C7F5-5CBD-8126-42954CF9601D",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "B56CF802-89CB-5829-889E-7E83D0E528F7",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "08FDBA46-7ECF-58A8-BF02-F977CE5C1BE7",
-        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
-        "591DDDEB-C8D0-5309-890D-9E657D6F325B",
-        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -130508,9 +130668,12 @@
       "relatedTourIds": [
         "1433B333-4647-5FC3-8AB1-5E12671669AE",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C",
         "21586B61-6113-5CF6-96D2-465E1F8BE07E",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
         "8A02259E-3632-570E-BCB3-69AF19EAFED1",
-        "9E9D0B37-963D-5D6F-B445-FD4EF803956F"
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -130617,7 +130780,8 @@
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -130724,12 +130888,12 @@
       "relatedTourIds": [
         "1433B333-4647-5FC3-8AB1-5E12671669AE",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "21586B61-6113-5CF6-96D2-465E1F8BE07E",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "92334BD4-F823-500E-AD33-3A0D8073D9D5",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7",
-        "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "775EC7F0-9C41-5072-86BD-EDF51AC0131C"
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "21586B61-6113-5CF6-96D2-465E1F8BE07E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -130835,12 +130999,12 @@
       "relatedTourIds": [
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "591DDDEB-C8D0-5309-890D-9E657D6F325B",
+        "0B22ED28-340F-5970-B463-B9C53FBEF71E",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
         "C9499965-405F-58DB-A1A9-139678987B20",
         "21586B61-6113-5CF6-96D2-465E1F8BE07E",
-        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "1433B333-4647-5FC3-8AB1-5E12671669AE",
-        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48"
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -131001,10 +131165,12 @@
       "relatedTourIds": [
         "B2A4AA42-A6DC-54BD-9F97-30AFEB51C90A",
         "C4B2F2ED-CBAC-5E7E-8500-39A18291B527",
+        "A01C7C81-4325-5D05-BC4C-0FD57ED0D34E",
         "6B02CC64-CB0C-5415-8766-16209FFE0CBD",
         "108BE285-6D3C-5EBB-B79B-4B6AAED1881E",
         "DA29C832-AE1A-5A23-8A8B-F1D68FC9142B",
-        "BE535C45-7EC7-5629-B125-04951583B6C6"
+        "BE535C45-7EC7-5629-B125-04951583B6C6",
+        "EA0FFB01-0F14-5658-A0CE-F636606A581A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132360,7 +132526,10 @@
       "relatedTourIds": [
         "63ECEC13-CAE7-513E-B15F-2CDFAC2BCBB4",
         "A04553F3-7FA4-56F8-93D9-FC71CD9638FA",
-        "B87EE43A-3EEC-5369-9C16-BA357D81D706"
+        "3500BC6E-C179-5DB6-9B57-39F0A23687D8",
+        "B87EE43A-3EEC-5369-9C16-BA357D81D706",
+        "DE0C3204-4A42-513D-8CA4-75531EC20864",
+        "19D89582-70EA-552E-8E00-15D01EA87E83"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -137307,7 +137476,8 @@
       "country": "Italy",
       "relatedTourIds": [
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -137361,6 +137531,7 @@
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD"
       ],
       "primaryCategory": "history",
@@ -137414,8 +137585,10 @@
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD"
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137466,8 +137639,10 @@
       "relatedTourIds": [
         "91D1E21B-AAA0-500A-8624-3CCBF3FACE06",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214"
       ],
@@ -137520,11 +137695,12 @@
       "relatedTourIds": [
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "A876901E-52ED-5357-8514-2C448BC23840"
+        "BE068749-30D5-57E4-A5AC-6246FEB72058"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -137574,12 +137750,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "91D1E21B-AAA0-500A-8624-3CCBF3FACE06"
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -137628,12 +137805,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "63166E79-D792-588E-8179-6328F82FD06C",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -138347,12 +138526,12 @@
       "relatedTourIds": [
         "1433B333-4647-5FC3-8AB1-5E12671669AE",
         "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
         "C9499965-405F-58DB-A1A9-139678987B20",
+        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "BE8B80BD-771D-5CE4-801F-B81125261722",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "FE7FC774-F309-50B6-BC22-57B1284675E0",
-        "64260E73-2972-5F47-B4F3-6995097ECD5E"
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "BE8B80BD-771D-5CE4-801F-B81125261722"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -139509,7 +139688,7 @@
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "6E9A627F-657C-5BA8-BAAB-6B7DC755B085",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
-        "F3579E9F-B19D-554F-B337-827DF1FF1588"
+        "51B592D6-66C4-5DD3-B362-FADCD4F32D92"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -139894,9 +140073,9 @@
         "C9499965-405F-58DB-A1A9-139678987B20",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7",
-        "1433B333-4647-5FC3-8AB1-5E12671669AE",
-        "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA"
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "B56CF802-89CB-5829-889E-7E83D0E528F7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -140447,12 +140626,12 @@
       "relatedTourIds": [
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
         "21586B61-6113-5CF6-96D2-465E1F8BE07E",
         "CA72BADF-6106-574F-9729-5C41361A45A1",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
         "C9499965-405F-58DB-A1A9-139678987B20",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7",
-        "E1093C06-1CD8-54EE-AC83-51A2C975F88F"
+        "B56CF802-89CB-5829-889E-7E83D0E528F7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -169413,7 +169592,8 @@
       "relatedTourIds": [
         "34783B26-FF76-5137-B8DB-AEE04BCCD8ED",
         "F15EFC27-0EC8-5668-9025-C9F809E47942",
-        "FF29E360-E7F8-56A0-8909-178A8259DD2E"
+        "FF29E360-E7F8-56A0-8909-178A8259DD2E",
+        "51423A57-D03C-5620-B400-1211C7F42385"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -173805,8 +173985,8 @@
           "order": 0,
           "title": "Lina Bo Bardi's Casa de Vidro",
           "caption": "There is a glass house in the Brazilian rainforest where the trees grow up through the middle of it. Lina Bo Bardi, an Italian architect who",
-          "latitude": -23.6130625,
-          "longitude": -46.7119375,
+          "latitude": -23.613051,
+          "longitude": -46.711899,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -173818,8 +173998,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -23.6130625,
-      "centroidLongitude": -46.7119375,
+      "centroidLatitude": -23.613051,
+      "centroidLongitude": -46.711899,
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [
@@ -174160,8 +174340,8 @@
           "order": 0,
           "title": "Therme Vals",
           "caption": "In a world that builds fast, Peter Zumthor spent 17 years on a single building. Zumthor won the Pritzker Prize in 2009 and still runs a stud",
-          "latitude": 46.6225625,
-          "longitude": 9.1811875,
+          "latitude": 46.6220041,
+          "longitude": 9.181271,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -174173,8 +174353,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 46.6225625,
-      "centroidLongitude": 9.1811875,
+      "centroidLatitude": 46.6220041,
+      "centroidLongitude": 9.181271,
       "city": "Vals",
       "country": "Switzerland",
       "relatedTourIds": [
@@ -175512,9 +175692,9 @@
         "108BE285-6D3C-5EBB-B79B-4B6AAED1881E",
         "B2A4AA42-A6DC-54BD-9F97-30AFEB51C90A",
         "B1F1506E-36C4-5227-8CF0-4409DC2F3469",
+        "EA0FFB01-0F14-5658-A0CE-F636606A581A",
         "082189BD-0B6A-57D8-BFA7-86E70BAD9152",
-        "DA29C832-AE1A-5A23-8A8B-F1D68FC9142B",
-        "1FEF4E55-4F86-5F30-9A3D-7A284303FC7F"
+        "DA29C832-AE1A-5A23-8A8B-F1D68FC9142B"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -178502,14 +178682,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "06A6A1EF-628F-5777-896D-7722FFA641E4",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
-        "866EE87D-8E08-514D-B67F-5B9268257DF0",
-        "06C7250D-1112-5D87-A67E-097CA96C0311",
-        "2740C78C-FDE8-545F-B30D-56D793A6A9C3",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "7BEC05D8-5BAE-55F5-99B2-719E2B638408",
-        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
+        "866EE87D-8E08-514D-B67F-5B9268257DF0"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -179099,6 +179279,7 @@
         "385B56DD-DA4B-5EDB-824C-C24059855542",
         "18B793D2-A4B3-5645-9561-F103DF6E1908",
         "108BE285-6D3C-5EBB-B79B-4B6AAED1881E",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
         "28489c01-beef-41fc-82f8-f16cd4795d71"
       ],
       "primaryCategory": "natureAndParks",
@@ -181358,12 +181539,12 @@
       "relatedTourIds": [
         "E6649886-1F1A-5882-A0A9-AB981CECEF67",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "2F40F514-C655-551D-8507-66C1DF92BBE8",
         "8F2514E6-1BDE-5CB1-9C0F-04DB765258F7",
         "8F6C96FB-40D1-59C6-AD45-64D06D1CF9C5",
         "f96346b3-d5be-5ba4-8fa2-5bd3b0c11af2",
         "fbb1f03d-ab94-5ad1-89a0-8083d740a0b5",
-        "a945386e-27f0-5994-9deb-7a8f878a395b",
-        "02A9BF1D-7CBA-59A2-8981-E3D9D1AD2C65"
+        "a945386e-27f0-5994-9deb-7a8f878a395b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -181416,10 +181597,10 @@
         "E0B4B77D-CC41-58CE-A5CA-478919365F98",
         "4393BAC1-C747-5696-912A-29765B3B48E3",
         "FAE69E82-3D75-55E5-ACD8-DF31479EBD56",
+        "63A41A3E-F816-5AA7-8BC1-94F8B95FDE2E",
         "DEE1789D-7659-58BC-81D5-6C6CD8354F2B",
         "BF248DAA-FD61-54E5-B83C-6E094089AC0E",
-        "2670C277-20D9-5A9B-A8F9-14C72A1C2B0D",
-        "CF128FD5-4AE9-5E9F-BC34-A593BD84C749"
+        "2670C277-20D9-5A9B-A8F9-14C72A1C2B0D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -182768,13 +182949,13 @@
       "country": "United States",
       "relatedTourIds": [
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
         "775EC7F0-9C41-5072-86BD-EDF51AC0131C",
-        "DC4BEC9E-D0E3-529E-805C-76A27C257C2F",
-        "F3579E9F-B19D-554F-B337-827DF1FF1588"
+        "DC4BEC9E-D0E3-529E-805C-76A27C257C2F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -182827,9 +183008,9 @@
         "1CA4297B-C597-582E-8263-90422B6446B9",
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
         "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
         "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
-        "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+        "7D273F60-65E9-5765-8DBA-5485BB4BEF8B"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -185918,6 +186099,16 @@
       "centroidLongitude": -73.9534375,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "32512416-6254-5728-8CA2-696A1FF95D57",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "E71651AA-684C-56DF-A0C4-14A80F6FBAD8",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "3C3A71CF-7169-59DF-81A3-963A3802CA58"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -186982,8 +187173,13 @@
       "country": "United States",
       "relatedTourIds": [
         "652FC55F-4E77-568B-9AEB-E1FF9847A7BB",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
-        "50CFB5A0-E6C2-54B0-952F-702397DBE263"
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "50CFB5A0-E6C2-54B0-952F-702397DBE263",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "86447C28-30E1-544D-95C8-B5367D0E0416"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -187075,14 +187271,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "63A41A3E-F816-5AA7-8BC1-94F8B95FDE2E",
         "386E0B2C-272F-5078-971E-30E92700474E",
         "6D5F3871-CA8C-5F47-8A01-DBA1D30F29A4",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
         "5A89C565-9A24-53AA-8E42-CAA544B053D3",
         "2A2EFC11-5DF9-5CCD-8CA8-01DD8791FAFE",
-        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
-        "274E532A-CC69-552D-9F76-98B5DEC09AF9",
-        "0391E058-8880-5FFD-B6DE-9FF3FAA5810B"
+        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -187443,9 +187639,9 @@
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "C9499965-405F-58DB-A1A9-139678987B20",
         "7C702C1A-D85B-5786-8A40-BB385D06C21A",
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
-        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20"
+        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -191413,7 +191609,7 @@
         "0c99c91e-e39b-5c28-98c1-b3186c325122",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "45DC77F1-CAA3-576E-9939-53908497459C",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -192034,9 +192230,9 @@
         "C45ADD33-FA2D-5582-A175-DD3A725F7FE5",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "48328CC1-B4B7-5F73-99C4-20FE2212ED93",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
         "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
-        "CA72BADF-6106-574F-9729-5C41361A45A1",
-        "775EC7F0-9C41-5072-86BD-EDF51AC0131C"
+        "CA72BADF-6106-574F-9729-5C41361A45A1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -192413,12 +192609,12 @@
       "relatedTourIds": [
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
-        "4BDCA974-DD0D-536F-BB83-175659EC83C2",
-        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8"
+        "4BDCA974-DD0D-536F-BB83-175659EC83C2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -201159,8 +201355,8 @@
           "order": 0,
           "title": "The Barbican Estate",
           "caption": "😳 Should this style of housing complex be used as an example to building more needed housing? Here’s the story of the Barbican Estate in the",
-          "latitude": 51.5195625,
-          "longitude": -0.09468750000000001,
+          "latitude": 51.519751,
+          "longitude": -0.094221,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -201172,8 +201368,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5195625,
-      "centroidLongitude": -0.09468750000000001,
+      "centroidLatitude": 51.519751,
+      "centroidLongitude": -0.094221,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -212732,13 +212928,13 @@
       "country": "United States",
       "relatedTourIds": [
         "F3579E9F-B19D-554F-B337-827DF1FF1588",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
         "E1093C06-1CD8-54EE-AC83-51A2C975F88F",
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
-        "C9499965-405F-58DB-A1A9-139678987B20",
-        "8A02259E-3632-570E-BCB3-69AF19EAFED1"
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -212788,11 +212984,13 @@
       "country": "United States",
       "relatedTourIds": [
         "2A1FEF6D-418A-56D2-BADA-DA2E0FBAA172",
+        "0B1E77D1-0289-5CFF-8B6A-F942527B91F7",
         "FA9A589A-7099-5ECB-BD07-36165710FA95",
+        "E90F34C8-0000-5BB9-AC9F-C3C472A4704C",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "775EC7F0-9C41-5072-86BD-EDF51AC0131C",
         "E1093C06-1CD8-54EE-AC83-51A2C975F88F",
-        "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA"
+        "3A6167CC-67B5-50BC-81BC-B5331DDD4DFA"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -213541,10 +213739,10 @@
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
         "044B4EE6-5C21-568B-A1C4-303CB35BE306",
         "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D",
         "56C9B6DD-38B8-5227-8E11-AE6EAFFC083C",
         "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345",
-        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
-        "72F43EED-2BCE-53A9-96B6-AD929D147F76"
+        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -214151,8 +214349,8 @@
         "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
         "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
         "51FDDE1F-DD10-5F15-85DF-AE8408E3E0FB",
-        "B231886D-417F-5006-B9F3-2C6993DF56C0",
-        "726AB861-8269-51C3-AAE8-2D23395974A5"
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D",
+        "B231886D-417F-5006-B9F3-2C6993DF56C0"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -216787,8 +216985,8 @@
           "order": 0,
           "title": "Wagyu Ramen Goku, Shibuya",
           "caption": "Yes, wagyu ramen exists — and it’s right here in Shibuya. 🍜🥩 At Wagyu Ramen Goku, both the broth and chashu are made entirely from 100% Wagy",
-          "latitude": 35.66007,
-          "longitude": 139.70439,
+          "latitude": 35.6601115,
+          "longitude": 139.7043954,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -216800,8 +216998,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.66007,
-      "centroidLongitude": 139.70439,
+      "centroidLatitude": 35.6601115,
+      "centroidLongitude": 139.7043954,
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
@@ -218432,7 +218630,7 @@
         "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
         "98BDF087-F0C0-598D-89BD-AF470FB5C9D2",
-        "7D6406B2-6E52-53E9-88D0-846677EFD928"
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -219493,9 +219691,9 @@
         "02CBE8C6-2542-592E-B56E-89E32C3DB059",
         "908EBB83-17C2-51D6-8BB8-1E83532D0D9B",
         "52B088B7-AF41-57A3-A6A3-C398A17413EC",
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D",
         "90F7C175-A454-51E4-BCA6-0C291D2D4E63",
-        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
-        "448946F1-25C9-5FCF-8026-291CDFE283DF"
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -220042,7 +220240,7 @@
         "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
         "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
         "469BB885-39A6-51D1-A47A-6379A5B68D4B",
-        "7D6406B2-6E52-53E9-88D0-846677EFD928"
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -221702,10 +221900,10 @@
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
         "C9499965-405F-58DB-A1A9-139678987B20",
         "8A02259E-3632-570E-BCB3-69AF19EAFED1",
+        "3A6167CC-67B5-50BC-81BC-B5331DDD4DFA",
         "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "0CB92DA2-C2D2-58F5-9FFA-2151CEA7BF8A"
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -221854,14 +222052,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
         "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
-        "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7",
-        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
-        "FB2E598B-3244-5B6C-84DA-E97F4E444088",
-        "90893488-3531-526F-BED7-FCEF827C3F46"
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222493,11 +222691,11 @@
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
         "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
         "F3579E9F-B19D-554F-B337-827DF1FF1588",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "51B592D6-66C4-5DD3-B362-FADCD4F32D92",
         "DE731329-7927-55CF-81D5-E7933BDD7B0D",
         "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "AC06CAD0-D862-57A7-BEB0-913BB59037E6",
-        "3ECFA69C-5633-5D90-B974-9DA606315C92"
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222792,14 +222990,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
         "90893488-3531-526F-BED7-FCEF827C3F46",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "51B592D6-66C4-5DD3-B362-FADCD4F32D92",
         "50CFB5A0-E6C2-54B0-952F-702397DBE263",
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
-        "C9499965-405F-58DB-A1A9-139678987B20",
-        "21586B61-6113-5CF6-96D2-465E1F8BE07E",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7"
+        "C9499965-405F-58DB-A1A9-139678987B20"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222847,13 +223045,13 @@
       "country": "United States",
       "relatedTourIds": [
         "DE731329-7927-55CF-81D5-E7933BDD7B0D",
+        "3A6167CC-67B5-50BC-81BC-B5331DDD4DFA",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
         "C9499965-405F-58DB-A1A9-139678987B20",
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
-        "8A02259E-3632-570E-BCB3-69AF19EAFED1",
-        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20"
+        "8A02259E-3632-570E-BCB3-69AF19EAFED1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222992,14 +223190,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
         "8A02259E-3632-570E-BCB3-69AF19EAFED1",
         "3ECFA69C-5633-5D90-B974-9DA606315C92",
         "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
-        "AC06CAD0-D862-57A7-BEB0-913BB59037E6",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7",
-        "50CFB5A0-E6C2-54B0-952F-702397DBE263",
-        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549"
+        "AC06CAD0-D862-57A7-BEB0-913BB59037E6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223754,14 +223952,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
-        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
-        "98452AC5-AB44-5E88-B38F-C123A91594D5",
-        "3916CE65-DC32-533A-98A7-E313AD8D553B",
-        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
-        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223814,8 +224012,8 @@
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
         "45DC77F1-CAA3-576E-9939-53908497459C",
-        "79702152-6A98-54BA-9795-803F93ECAD50",
-        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA"
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "79702152-6A98-54BA-9795-803F93ECAD50"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223862,14 +224060,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "9DE6006D-9F88-5EF4-AB91-F9E010DA1C7F",
         "AC1B13CC-977C-5853-9E5B-17FAB53F9D13",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "3A6167CC-67B5-50BC-81BC-B5331DDD4DFA",
         "8A02259E-3632-570E-BCB3-69AF19EAFED1",
-        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
-        "AC06CAD0-D862-57A7-BEB0-913BB59037E6",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7",
-        "775EC7F0-9C41-5072-86BD-EDF51AC0131C",
-        "57A286A5-7D1F-5759-B504-80870B35D6D7",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88"
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224022,11 +224220,11 @@
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
         "AC06CAD0-D862-57A7-BEB0-913BB59037E6",
         "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
+        "3A6167CC-67B5-50BC-81BC-B5331DDD4DFA",
+        "145E7C7B-B41F-59ED-B6E8-2E458CE8EEC0",
         "8A02259E-3632-570E-BCB3-69AF19EAFED1",
         "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
-        "775EC7F0-9C41-5072-86BD-EDF51AC0131C",
-        "AC1B13CC-977C-5853-9E5B-17FAB53F9D13",
-        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20"
+        "775EC7F0-9C41-5072-86BD-EDF51AC0131C"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224075,13 +224273,13 @@
       "country": "United States",
       "relatedTourIds": [
         "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
-        "50CFB5A0-E6C2-54B0-952F-702397DBE263",
-        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
-        "386E0B2C-272F-5078-971E-30E92700474E",
-        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "FB2E598B-3244-5B6C-84DA-E97F4E444088",
-        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175"
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "D4118CA9-F1D0-5D7B-9A81-6A87101B222E",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "444BC62F-8662-54FD-AE86-8F0FD4CD401E",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "5F279D1B-FF35-57AE-AA6C-5CD44DEBD667"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224130,12 +224328,12 @@
       "relatedTourIds": [
         "F3579E9F-B19D-554F-B337-827DF1FF1588",
         "FB2E598B-3244-5B6C-84DA-E97F4E444088",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
         "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
-        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
-        "8A02259E-3632-570E-BCB3-69AF19EAFED1",
-        "9E9D0B37-963D-5D6F-B445-FD4EF803956F",
-        "E1093C06-1CD8-54EE-AC83-51A2C975F88F"
+        "3A6167CC-67B5-50BC-81BC-B5331DDD4DFA",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -226212,7 +226410,7 @@
         "52441CEC-6B91-53BE-ADE4-F5454FF68DF1",
         "F2426F26-EF93-5BE2-8944-A0A22F2DABC9",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
-        "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B"
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -227096,14 +227294,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D",
         "97DC172B-7509-509B-8B43-EA3D51EC61B4",
         "448946F1-25C9-5FCF-8026-291CDFE283DF",
         "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
         "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B",
         "9B8123D2-9902-5E30-814D-0ADE308677EB",
         "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
-        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
-        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9"
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -227394,8 +227592,8 @@
           "order": 0,
           "title": "SESC Pompéia",
           "caption": "Have you seen a factory like this? #fyp #architecture #design #brasil",
-          "latitude": -23.5272216,
-          "longitude": -46.6832928,
+          "latitude": -23.525809,
+          "longitude": -46.683498,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -227407,19 +227605,19 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -23.5272216,
-      "centroidLongitude": -46.6832928,
+      "centroidLatitude": -23.525809,
+      "centroidLongitude": -46.683498,
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [
         "404749A2-C5F1-505E-9305-10A9E07E0642",
         "926F7B70-4A38-5CCB-810B-0F368C70BE1E",
         "678E9EB5-7B0E-5527-A3FA-E6ED3E4E6095",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
         "88303108-7CBE-5F31-B1A4-555A857DA5EE",
         "a9e4d343-8115-57ff-a68b-e5fa3cbda6f9",
-        "efb1cd84-1608-5b75-b8b3-0550a40ddca4",
-        "04a567ab-e385-5151-a939-5984fd7430a5"
+        "efb1cd84-1608-5b75-b8b3-0550a40ddca4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -227474,7 +227672,7 @@
         "8F2514E6-1BDE-5CB1-9C0F-04DB765258F7",
         "d505bd4e-138a-56db-b8f4-31e14a4894b7",
         "654F6BF6-CF34-5F0A-B830-78FA9AFAB904",
-        "a945386e-27f0-5994-9deb-7a8f878a395b"
+        "2F40F514-C655-551D-8507-66C1DF92BBE8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -228771,8 +228969,8 @@
           "order": 0,
           "title": "MASP – Museu de Arte de São Paulo",
           "caption": "Should more buildings float? #fyp #architecture #design #brazil",
-          "latitude": -23.5616836,
-          "longitude": -46.6565685,
+          "latitude": -23.561498,
+          "longitude": -46.655967,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -228784,19 +228982,19 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -23.5616836,
-      "centroidLongitude": -46.6565685,
+      "centroidLatitude": -23.561498,
+      "centroidLongitude": -46.655967,
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [
         "926F7B70-4A38-5CCB-810B-0F368C70BE1E",
         "04413D73-0775-5D97-8946-7FAE009DC00B",
         "404749A2-C5F1-505E-9305-10A9E07E0642",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "678E9EB5-7B0E-5527-A3FA-E6ED3E4E6095",
         "5e78d185-f167-5bb9-bfe2-9106957897ac",
         "efb1cd84-1608-5b75-b8b3-0550a40ddca4",
-        "f4ce5978-958d-572f-8280-f4b06e9266b1",
-        "62ce120d-8f20-514c-b657-fcf679eab005"
+        "f4ce5978-958d-572f-8280-f4b06e9266b1"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -228929,8 +229127,8 @@
           "order": 0,
           "title": "Casa de Vidro (Instituto Bardi)",
           "caption": "Would you live in a glass treehouse? #fyp #design #architecture",
-          "latitude": -23.6129834,
-          "longitude": -46.7118386,
+          "latitude": -23.613051,
+          "longitude": -46.711899,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -228942,19 +229140,19 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -23.6129834,
-      "centroidLongitude": -46.7118386,
+      "centroidLatitude": -23.613051,
+      "centroidLongitude": -46.711899,
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [
         "6D37E1F5-0083-5F5C-9364-EE17AC1C5CCB",
         "5e175184-b0b0-5b1d-a2a5-a705c9e106cd",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "926F7B70-4A38-5CCB-810B-0F368C70BE1E",
         "f6522bbd-ca9b-5fba-9596-ef255c2ce6b0",
         "04413D73-0775-5D97-8946-7FAE009DC00B",
         "35372ae3-7c41-5daf-9be4-b7f51fa04562",
-        "5e78d185-f167-5bb9-bfe2-9106957897ac",
-        "404749A2-C5F1-505E-9305-10A9E07E0642"
+        "5e78d185-f167-5bb9-bfe2-9106957897ac"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -229939,11 +230137,11 @@
         "04413D73-0775-5D97-8946-7FAE009DC00B",
         "404749A2-C5F1-505E-9305-10A9E07E0642",
         "678E9EB5-7B0E-5527-A3FA-E6ED3E4E6095",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
         "88303108-7CBE-5F31-B1A4-555A857DA5EE",
         "f6522bbd-ca9b-5fba-9596-ef255c2ce6b0",
-        "04a567ab-e385-5151-a939-5984fd7430a5",
-        "a9e4d343-8115-57ff-a68b-e5fa3cbda6f9"
+        "04a567ab-e385-5151-a939-5984fd7430a5"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -230354,12 +230552,12 @@
       "relatedTourIds": [
         "04413D73-0775-5D97-8946-7FAE009DC00B",
         "926F7B70-4A38-5CCB-810B-0F368C70BE1E",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "678E9EB5-7B0E-5527-A3FA-E6ED3E4E6095",
         "88303108-7CBE-5F31-B1A4-555A857DA5EE",
         "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
         "35372ae3-7c41-5daf-9be4-b7f51fa04562",
-        "d9553133-f19c-5246-af3b-35214ddde5fe",
-        "a9e4d343-8115-57ff-a68b-e5fa3cbda6f9"
+        "d9553133-f19c-5246-af3b-35214ddde5fe"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -230610,11 +230808,11 @@
         "04413D73-0775-5D97-8946-7FAE009DC00B",
         "404749A2-C5F1-505E-9305-10A9E07E0642",
         "926F7B70-4A38-5CCB-810B-0F368C70BE1E",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "88303108-7CBE-5F31-B1A4-555A857DA5EE",
         "a6c9a6ee-0ccd-5d9e-a69e-582e3aa7395b",
         "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
-        "d9553133-f19c-5246-af3b-35214ddde5fe",
-        "a9e4d343-8115-57ff-a68b-e5fa3cbda6f9"
+        "d9553133-f19c-5246-af3b-35214ddde5fe"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -230965,10 +231163,10 @@
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "98452AC5-AB44-5E88-B38F-C123A91594D5",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "82BF7C63-3145-51AC-848A-EACD3011E555",
         "3851D982-58C7-5840-89C4-DB748835B989",
         "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
-        "DEC0DDD0-47C8-57A6-A571-2DC90B72B57F",
-        "D89F4304-22E0-5461-90E7-90EC6649C227"
+        "DEC0DDD0-47C8-57A6-A571-2DC90B72B57F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -231221,7 +231419,7 @@
         "BE8B80BD-771D-5CE4-801F-B81125261722",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
-        "FB2E598B-3244-5B6C-84DA-E97F4E444088"
+        "01DDF36A-F835-5475-AF84-7908E12E9680"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -231270,12 +231468,12 @@
       "relatedTourIds": [
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
         "79702152-6A98-54BA-9795-803F93ECAD50",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
         "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "40550E25-6721-534E-8AD6-08A61EE8EAA0",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
-        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
-        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
-        "DEC0DDD0-47C8-57A6-A571-2DC90B72B57F",
-        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA"
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -231377,13 +231575,13 @@
       "country": "United States",
       "relatedTourIds": [
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "D4118CA9-F1D0-5D7B-9A81-6A87101B222E",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
         "C9499965-405F-58DB-A1A9-139678987B20",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
         "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "F04B3E13-259A-5041-ACA6-689145DF3252",
-        "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
-        "B56CF802-89CB-5829-889E-7E83D0E528F7",
-        "90893488-3531-526F-BED7-FCEF827C3F46"
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "63A41A3E-F816-5AA7-8BC1-94F8B95FDE2E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -232131,7 +232329,7 @@
         "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "71B33011-F8FE-5C09-94C7-6810F68F5514",
-        "0334472C-2E52-5A9D-A921-6D09B847C116"
+        "F303882C-62A3-5BF6-9B14-632A13E83B56"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -232394,14 +232592,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
         "45DC77F1-CAA3-576E-9939-53908497459C",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
         "D89F4304-22E0-5461-90E7-90EC6649C227",
-        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
-        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
-        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
-        "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "79702152-6A98-54BA-9795-803F93ECAD50"
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -232449,13 +232647,13 @@
       "country": "France",
       "relatedTourIds": [
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "D2BBEC2C-1458-59D0-ADA8-472152BDE283",
+        "99D816F4-ACA4-5D64-851E-2DA8E5952041",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
-        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
-        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
-        "98452AC5-AB44-5E88-B38F-C123A91594D5",
-        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
-        "79702152-6A98-54BA-9795-803F93ECAD50"
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -233669,10 +233867,10 @@
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
         "71B33011-F8FE-5C09-94C7-6810F68F5514",
-        "79702152-6A98-54BA-9795-803F93ECAD50",
-        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
-        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -233727,7 +233925,7 @@
         "98452AC5-AB44-5E88-B38F-C123A91594D5",
         "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19",
         "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
-        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D"
+        "0625BE5F-A845-5E87-B7CC-E61B1D40CC0D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -233779,10 +233977,10 @@
         "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
         "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+        "82BF7C63-3145-51AC-848A-EACD3011E555",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
         "3916CE65-DC32-533A-98A7-E313AD8D553B",
-        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
-        "1CA4297B-C597-582E-8263-90422B6446B9",
-        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -233831,13 +234029,13 @@
       "country": "France",
       "relatedTourIds": [
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
         "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "2E5F923F-B2EC-5078-937E-F109D4DF2954",
+        "AC13C3B9-81DA-5BCC-A7DF-CA065A62221E",
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
-        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
-        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
-        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
-        "3916CE65-DC32-533A-98A7-E313AD8D553B"
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -234816,13 +235014,13 @@
       "country": "United States",
       "relatedTourIds": [
         "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
         "A2048A0C-7607-5340-AA22-14ACD262FE11",
         "4E378097-7165-59A5-9DB2-358BC581B750",
-        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
-        "8A02259E-3632-570E-BCB3-69AF19EAFED1",
-        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
+        "B14B2377-C7F5-5CBD-8126-42954CF9601D",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -235782,14 +235980,14 @@
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73",
         "b344b334-4402-55c1-808a-a192e52effc7",
         "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
         "04413D73-0775-5D97-8946-7FAE009DC00B",
         "f4ce5978-958d-572f-8280-f4b06e9266b1",
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "d45f87a0-f5ae-5b56-9521-ab36ac1ebe57",
-        "efb1cd84-1608-5b75-b8b3-0550a40ddca4",
-        "926F7B70-4A38-5CCB-810B-0F368C70BE1E"
+        "efb1cd84-1608-5b75-b8b3-0550a40ddca4"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -235843,7 +236041,7 @@
         "0510AEEB-5142-56B0-8953-AFFD21164A25",
         "60CCDB28-B24F-5960-B225-94C11301903F",
         "540613ee-b72f-4460-95ff-a03d921681ae",
-        "26A4BD5F-DEA9-5FCB-8D21-7E0FFC342A16"
+        "3A6167CC-67B5-50BC-81BC-B5331DDD4DFA"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -236718,6 +236916,11 @@
       "centroidLongitude": -73.9309419,
       "city": "Queens",
       "country": "United States",
+      "relatedTourIds": [
+        "DE0C3204-4A42-513D-8CA4-75531EC20864",
+        "3500BC6E-C179-5DB6-9B57-39F0A23687D8",
+        "42A7C905-E417-5767-9976-F03058885A0F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -236759,6 +236962,16 @@
       "centroidLongitude": -73.9864531,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "A5A24EDA-8BDB-5AC6-8E2E-CC36EAE5E3A4",
+        "0B22ED28-340F-5970-B463-B9C53FBEF71E",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -236800,6 +237013,16 @@
       "centroidLongitude": -73.9293593,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
+        "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "8A0F9BB8-698C-5F96-90E4-0F006AC65795",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -236841,6 +237064,16 @@
       "centroidLongitude": -73.971744,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "8A27D7E6-5613-516B-961D-D0F07AB05410",
+        "3C3A71CF-7169-59DF-81A3-963A3802CA58",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "A1E35701-C30B-5D73-BE91-157A45960A17"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -236882,6 +237115,16 @@
       "centroidLongitude": -73.9883002,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "DE731329-7927-55CF-81D5-E7933BDD7B0D",
+        "79066170-3472-57DA-BF1D-A737D7C69273",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "AC1B13CC-977C-5853-9E5B-17FAB53F9D13",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -236923,6 +237166,16 @@
       "centroidLongitude": -73.9554283,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "8A27D7E6-5613-516B-961D-D0F07AB05410",
+        "006117B3-C5AD-598F-9C2B-3DD9276C890A",
+        "A1E35701-C30B-5D73-BE91-157A45960A17"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -236964,6 +237217,16 @@
       "centroidLongitude": -73.9830979,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "8A27D7E6-5613-516B-961D-D0F07AB05410",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "F01A943D-A06E-5EF7-AE92-5CC55E5E41ED"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237005,6 +237268,16 @@
       "centroidLongitude": -73.9862953,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "E2666976-FF4A-5EE8-849B-F4E65333D2D0",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "79066170-3472-57DA-BF1D-A737D7C69273",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "B56CF802-89CB-5829-889E-7E83D0E528F7"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237046,6 +237319,16 @@
       "centroidLongitude": -73.985116,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "9DE6006D-9F88-5EF4-AB91-F9E010DA1C7F",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237087,6 +237370,16 @@
       "centroidLongitude": -73.9838832,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "0B1E77D1-0289-5CFF-8B6A-F942527B91F7",
+        "444BC62F-8662-54FD-AE86-8F0FD4CD401E",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237128,6 +237421,16 @@
       "centroidLongitude": -74.0040346,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6DF9DC05-B319-5BDF-90A8-65DD3EAC1F34",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "0B22ED28-340F-5970-B463-B9C53FBEF71E",
+        "D4118CA9-F1D0-5D7B-9A81-6A87101B222E",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237169,6 +237472,16 @@
       "centroidLongitude": -74.004245,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "90893488-3531-526F-BED7-FCEF827C3F46"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237210,6 +237523,16 @@
       "centroidLongitude": -73.9481969,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "D251C14F-9B99-516E-B86B-504FF05BE265",
+        "79066170-3472-57DA-BF1D-A737D7C69273",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Hidden Gem"
@@ -237253,6 +237576,12 @@
       "centroidLongitude": -73.9094624,
       "city": "Queens",
       "country": "United States",
+      "relatedTourIds": [
+        "DE0C3204-4A42-513D-8CA4-75531EC20864",
+        "42A7C905-E417-5767-9976-F03058885A0F",
+        "19D89582-70EA-552E-8E00-15D01EA87E83",
+        "2AAE50E9-82B4-5029-8901-DE9F7A394ABB"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237294,6 +237623,16 @@
       "centroidLongitude": -73.9954001,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "79066170-3472-57DA-BF1D-A737D7C69273"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237335,6 +237674,16 @@
       "centroidLongitude": -74.0080666,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "386E0B2C-272F-5078-971E-30E92700474E",
+        "F04B3E13-259A-5041-ACA6-689145DF3252",
+        "DD15BB9B-45E2-525A-8573-0DC63242CB51",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "5A89C565-9A24-53AA-8E42-CAA544B053D3",
+        "903B3EA6-3D34-552C-B599-B252102CBF62"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -237378,6 +237727,16 @@
       "centroidLongitude": -74.0006431,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "DF9507E7-690E-55A8-A0AF-882459FD5D00",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237419,6 +237778,9 @@
       "centroidLongitude": -72.1831331,
       "city": "East Hampton",
       "country": "United States",
+      "relatedTourIds": [
+        "D195F283-1470-5A89-B8F1-1D6CB6AEFBA0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237460,6 +237822,15 @@
       "centroidLongitude": -73.9537043,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "3C330899-7E75-5B63-A4DE-FFD14BCE7B29",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237501,6 +237872,16 @@
       "centroidLongitude": -73.9862985,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237542,6 +237923,16 @@
       "centroidLongitude": -73.9384429,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "79066170-3472-57DA-BF1D-A737D7C69273",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "D4118CA9-F1D0-5D7B-9A81-6A87101B222E",
+        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Hidden Gem"
@@ -237585,6 +237976,16 @@
       "centroidLongitude": -73.9835434,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "5F279D1B-FF35-57AE-AA6C-5CD44DEBD667"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237626,6 +238027,16 @@
       "centroidLongitude": -73.949073,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "06A6A1EF-628F-5777-896D-7722FFA641E4",
+        "A15A6292-6A43-5A20-9403-50205217F5F3",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237667,6 +238078,16 @@
       "centroidLongitude": -73.9509307,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "A5A24EDA-8BDB-5AC6-8E2E-CC36EAE5E3A4",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "D4118CA9-F1D0-5D7B-9A81-6A87101B222E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237708,6 +238129,16 @@
       "centroidLongitude": -73.9522298,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "A01C7C81-4325-5D05-BC4C-0FD57ED0D34E",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -237792,6 +238223,16 @@
       "centroidLongitude": -73.9989119,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A",
+        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "AC1B13CC-977C-5853-9E5B-17FAB53F9D13",
+        "DE731329-7927-55CF-81D5-E7933BDD7B0D",
+        "4CD881EC-2DF6-5913-951F-E7040DE94281",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Hidden Gem"
@@ -237835,6 +238276,16 @@
       "centroidLongitude": -74.0005291,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237876,6 +238327,16 @@
       "centroidLongitude": -73.9884995,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "5F279D1B-FF35-57AE-AA6C-5CD44DEBD667",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237917,6 +238378,16 @@
       "centroidLongitude": -73.9893996,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "51B592D6-66C4-5DD3-B362-FADCD4F32D92",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "FB2E598B-3244-5B6C-84DA-E97F4E444088",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237958,6 +238429,12 @@
       "centroidLongitude": -73.9759078,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "AAC96399-AC4F-54F7-9EAD-099250D15380",
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -237999,6 +238476,16 @@
       "centroidLongitude": -73.9040375,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "E93942F9-8995-5165-9243-E5DDB68B72AC",
+        "1433B333-4647-5FC3-8AB1-5E12671669AE",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "0B1E77D1-0289-5CFF-8B6A-F942527B91F7",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238040,6 +238527,16 @@
       "centroidLongitude": -73.9829662,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "E90F34C8-0000-5BB9-AC9F-C3C472A4704C",
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57",
+        "D12890C1-A314-5D77-BA7F-A23192B9D944",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "90893488-3531-526F-BED7-FCEF827C3F46",
+        "D4118CA9-F1D0-5D7B-9A81-6A87101B222E",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238081,6 +238578,16 @@
       "centroidLongitude": -73.9971335,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "A15A6292-6A43-5A20-9403-50205217F5F3",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238122,6 +238629,16 @@
       "centroidLongitude": -73.9960952,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "5F279D1B-FF35-57AE-AA6C-5CD44DEBD667",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238163,6 +238680,16 @@
       "centroidLongitude": -74.0034057,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "386E0B2C-272F-5078-971E-30E92700474E",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238204,6 +238731,16 @@
       "centroidLongitude": -74.002447,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238245,6 +238782,16 @@
       "centroidLongitude": -73.9625564,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "006117B3-C5AD-598F-9C2B-3DD9276C890A",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "B1F1506E-36C4-5227-8CF0-4409DC2F3469",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "B2A4AA42-A6DC-54BD-9F97-30AFEB51C90A",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "9D019D20-3599-5502-8B01-F8FE798378AA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -238288,6 +238835,16 @@
       "centroidLongitude": -73.9886952,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "FB2E598B-3244-5B6C-84DA-E97F4E444088",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238329,6 +238886,16 @@
       "centroidLongitude": -74.0041784,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "AAC96399-AC4F-54F7-9EAD-099250D15380",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "08FDBA46-7ECF-58A8-BF02-F977CE5C1BE7",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238370,6 +238937,12 @@
       "centroidLongitude": -73.929788,
       "city": "Queens",
       "country": "United States",
+      "relatedTourIds": [
+        "3500BC6E-C179-5DB6-9B57-39F0A23687D8",
+        "19D89582-70EA-552E-8E00-15D01EA87E83",
+        "42A7C905-E417-5767-9976-F03058885A0F",
+        "2AAE50E9-82B4-5029-8901-DE9F7A394ABB"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238411,6 +238984,10 @@
       "centroidLongitude": -73.8876193,
       "city": "Queens",
       "country": "United States",
+      "relatedTourIds": [
+        "3500BC6E-C179-5DB6-9B57-39F0A23687D8",
+        "DE0C3204-4A42-513D-8CA4-75531EC20864"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238452,6 +239029,16 @@
       "centroidLongitude": -74.0056977,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57",
+        "E90F34C8-0000-5BB9-AC9F-C3C472A4704C",
+        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
+        "A2048A0C-7607-5340-AA22-14ACD262FE11",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238493,6 +239080,16 @@
       "centroidLongitude": -74.0056919,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "006117B3-C5AD-598F-9C2B-3DD9276C890A",
+        "05CD9331-ADEB-5FFD-BB43-1492020E3A93",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238534,6 +239131,16 @@
       "centroidLongitude": -73.9942216,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "E90F34C8-0000-5BB9-AC9F-C3C472A4704C",
+        "0B1E77D1-0289-5CFF-8B6A-F942527B91F7",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "D4118CA9-F1D0-5D7B-9A81-6A87101B222E",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238575,6 +239182,16 @@
       "centroidLongitude": -73.9267006,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "1433B333-4647-5FC3-8AB1-5E12671669AE",
+        "08FDBA46-7ECF-58A8-BF02-F977CE5C1BE7"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238616,6 +239233,16 @@
       "centroidLongitude": -74.0024906,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "A15A6292-6A43-5A20-9403-50205217F5F3",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238657,6 +239284,16 @@
       "centroidLongitude": -118.3093345,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "8CB30130-6D47-53CB-9782-40770AE3A830",
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4",
+        "ADC82085-CB5B-5719-A6B9-1FE632321E66",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238698,6 +239335,16 @@
       "centroidLongitude": -118.2185772,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198",
+        "E8712A04-F32F-5F29-A0FA-6FB0CA44B01D",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238739,6 +239386,16 @@
       "centroidLongitude": -118.2261527,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "EDD0EB6F-8479-5DF7-B81E-5F36B0DDE1F6",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238780,6 +239437,12 @@
       "centroidLongitude": -118.2851337,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238821,6 +239484,16 @@
       "centroidLongitude": -118.4474991,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "C11AE0E0-344E-5867-9B2F-12180F0DA893",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238862,6 +239535,16 @@
       "centroidLongitude": -118.2586779,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "B58C3ABB-41FE-53EB-8342-1289DF91672F",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4",
+        "ADC82085-CB5B-5719-A6B9-1FE632321E66",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "EDD0EB6F-8479-5DF7-B81E-5F36B0DDE1F6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -238903,6 +239586,16 @@
       "centroidLongitude": -118.2489349,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "8CB30130-6D47-53CB-9782-40770AE3A830",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "C11AE0E0-344E-5867-9B2F-12180F0DA893",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -238987,6 +239680,16 @@
       "centroidLongitude": -118.2768344,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "8CB30130-6D47-53CB-9782-40770AE3A830",
+        "C11AE0E0-344E-5867-9B2F-12180F0DA893",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -239030,6 +239733,16 @@
       "centroidLongitude": -118.3142013,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "EDD0EB6F-8479-5DF7-B81E-5F36B0DDE1F6",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "8CB30130-6D47-53CB-9782-40770AE3A830",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "E8712A04-F32F-5F29-A0FA-6FB0CA44B01D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239112,6 +239825,16 @@
       "centroidLongitude": -118.2324885,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "E8712A04-F32F-5F29-A0FA-6FB0CA44B01D",
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "8CB30130-6D47-53CB-9782-40770AE3A830",
+        "EDD0EB6F-8479-5DF7-B81E-5F36B0DDE1F6",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239153,6 +239876,9 @@
       "centroidLongitude": -118.407235,
       "city": "Beverly Hills",
       "country": "United States",
+      "relatedTourIds": [
+        "F6EA582F-DADA-545B-96D4-0F198E269962"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239194,6 +239920,16 @@
       "centroidLongitude": -118.1344264,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "EDD0EB6F-8479-5DF7-B81E-5F36B0DDE1F6",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "E8712A04-F32F-5F29-A0FA-6FB0CA44B01D",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239235,6 +239971,16 @@
       "centroidLongitude": -118.453886,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "C11AE0E0-344E-5867-9B2F-12180F0DA893",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239276,6 +240022,16 @@
       "centroidLongitude": -118.291743,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "E8712A04-F32F-5F29-A0FA-6FB0CA44B01D",
+        "ADC82085-CB5B-5719-A6B9-1FE632321E66",
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB",
+        "8CB30130-6D47-53CB-9782-40770AE3A830"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239317,6 +240073,9 @@
       "centroidLongitude": -118.3760675,
       "city": "Beverly Hills",
       "country": "United States",
+      "relatedTourIds": [
+        "AFC7C731-B22F-5602-B1CD-693036E7C876"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -239401,6 +240160,16 @@
       "centroidLongitude": -118.291699,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "8CB30130-6D47-53CB-9782-40770AE3A830",
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "C11AE0E0-344E-5867-9B2F-12180F0DA893",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "E8712A04-F32F-5F29-A0FA-6FB0CA44B01D",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239442,6 +240211,9 @@
       "centroidLongitude": -80.1929449,
       "city": "Miami",
       "country": "United States",
+      "relatedTourIds": [
+        "3516BB91-3E4B-5DA2-AC86-BB5A9D3974FD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239483,6 +240255,10 @@
       "centroidLongitude": -97.7176089,
       "city": "Austin",
       "country": "United States",
+      "relatedTourIds": [
+        "649CE60F-C44B-5519-B963-AD6C381E1DAD",
+        "820CFBA3-D7DF-59A6-9915-425FA7C321FF"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239524,6 +240300,9 @@
       "centroidLongitude": -115.1694006,
       "city": "Las Vegas",
       "country": "United States",
+      "relatedTourIds": [
+        "8D914EC0-9BA0-5BBE-8C86-B812AA383500"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239565,6 +240344,13 @@
       "centroidLongitude": -122.4225436,
       "city": "San Francisco",
       "country": "United States",
+      "relatedTourIds": [
+        "40EB17E2-C5E8-5C40-AE14-B53281A505E6",
+        "B4BF8EFF-19B2-53E0-9A92-82A7F616E317",
+        "D8501E48-A082-5565-A31D-6931B28EC75C",
+        "3D70E334-7AF2-50A0-BD4F-2EDDF67B2B26",
+        "B67FD032-25D5-5B20-A7ED-32D5E9D4FF7F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -239733,6 +240519,10 @@
       "centroidLongitude": -122.418158,
       "city": "San Francisco",
       "country": "United States",
+      "relatedTourIds": [
+        "F42357E1-507A-597F-BF5A-C58D69B31F9B",
+        "B67FD032-25D5-5B20-A7ED-32D5E9D4FF7F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -239776,6 +240566,16 @@
       "centroidLongitude": -118.2743481,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE",
+        "06E26048-0691-5A9F-8A70-EF56F089EBA3",
+        "2D5CEE42-2B99-5BC8-9C3C-803641E027EE",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4",
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "53E5C693-9A25-5C99-966F-9320C9A9AF1C",
+        "8CB30130-6D47-53CB-9782-40770AE3A830",
+        "58209D88-6431-5D22-8F8E-E3E73A5222BB"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239858,6 +240658,16 @@
       "centroidLongitude": 2.2851108,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "A0289D43-368D-5B65-8555-52A0BD5E30ED",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "99D816F4-ACA4-5D64-851E-2DA8E5952041",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239899,6 +240709,16 @@
       "centroidLongitude": 2.3706,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "D89F4304-22E0-5461-90E7-90EC6649C227",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "99D816F4-ACA4-5D64-851E-2DA8E5952041",
+        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239940,6 +240760,16 @@
       "centroidLongitude": 2.3388104,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "40550E25-6721-534E-8AD6-08A61EE8EAA0",
+        "A0289D43-368D-5B65-8555-52A0BD5E30ED",
+        "09071FFB-B94D-5D6D-877D-7CEBD7CA9490"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -239981,6 +240811,16 @@
       "centroidLongitude": 2.3467259,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "40550E25-6721-534E-8AD6-08A61EE8EAA0",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "D89F4304-22E0-5461-90E7-90EC6649C227",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240022,6 +240862,16 @@
       "centroidLongitude": 2.3419899,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "D2BBEC2C-1458-59D0-ADA8-472152BDE283",
+        "AC13C3B9-81DA-5BCC-A7DF-CA065A62221E",
+        "7258520B-426F-5444-B303-17C500918BB4",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240063,6 +240913,16 @@
       "centroidLongitude": 2.361973,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "45DC77F1-CAA3-576E-9939-53908497459C",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market"
@@ -240106,6 +240966,16 @@
       "centroidLongitude": 2.2872368,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "AC13C3B9-81DA-5BCC-A7DF-CA065A62221E",
+        "2E5F923F-B2EC-5078-937E-F109D4DF2954",
+        "8429E1F7-E692-55B3-9AB6-3A012B272B9A",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "7B2B370B-758A-5D2C-A318-2DBA97813986",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "40550E25-6721-534E-8AD6-08A61EE8EAA0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240147,6 +241017,16 @@
       "centroidLongitude": 2.3482673,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "45DC77F1-CAA3-576E-9939-53908497459C",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "99D816F4-ACA4-5D64-851E-2DA8E5952041"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240188,6 +241068,16 @@
       "centroidLongitude": 2.3297124,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA",
+        "45DC77F1-CAA3-576E-9939-53908497459C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240229,6 +241119,16 @@
       "centroidLongitude": 2.2916906,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "99D816F4-ACA4-5D64-851E-2DA8E5952041",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "D2BBEC2C-1458-59D0-ADA8-472152BDE283"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240270,6 +241170,16 @@
       "centroidLongitude": 2.3635149,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "A0289D43-368D-5B65-8555-52A0BD5E30ED",
+        "8429E1F7-E692-55B3-9AB6-3A012B272B9A",
+        "99D816F4-ACA4-5D64-851E-2DA8E5952041"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240311,6 +241221,16 @@
       "centroidLongitude": 2.3862469,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "8429E1F7-E692-55B3-9AB6-3A012B272B9A",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "D2BBEC2C-1458-59D0-ADA8-472152BDE283",
+        "2E5F923F-B2EC-5078-937E-F109D4DF2954",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "AC13C3B9-81DA-5BCC-A7DF-CA065A62221E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240352,6 +241272,16 @@
       "centroidLongitude": 2.3497527,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "40550E25-6721-534E-8AD6-08A61EE8EAA0",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240393,6 +241323,16 @@
       "centroidLongitude": 2.3249961,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "AC13C3B9-81DA-5BCC-A7DF-CA065A62221E",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "8429E1F7-E692-55B3-9AB6-3A012B272B9A",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "7258520B-426F-5444-B303-17C500918BB4",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240434,6 +241374,16 @@
       "centroidLongitude": 2.3672138,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "AC13C3B9-81DA-5BCC-A7DF-CA065A62221E",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "7258520B-426F-5444-B303-17C500918BB4",
+        "8429E1F7-E692-55B3-9AB6-3A012B272B9A",
+        "45DC77F1-CAA3-576E-9939-53908497459C",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "0334472C-2E52-5A9D-A921-6D09B847C116"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240475,6 +241425,16 @@
       "centroidLongitude": 2.3372106,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "2E5F923F-B2EC-5078-937E-F109D4DF2954",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "D2BBEC2C-1458-59D0-ADA8-472152BDE283",
+        "8429E1F7-E692-55B3-9AB6-3A012B272B9A",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2",
+        "7258520B-426F-5444-B303-17C500918BB4",
+        "0334472C-2E52-5A9D-A921-6D09B847C116"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240516,6 +241476,11 @@
       "centroidLongitude": -0.1414863,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "5C0815ED-3403-576A-A010-911147D2B888",
+        "F19163D5-1926-5A96-84A2-E684D94EE26D",
+        "930EE9C8-119A-50C8-8ADC-90957D7BC207"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240557,6 +241522,11 @@
       "centroidLongitude": -0.1367147,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "F19163D5-1926-5A96-84A2-E684D94EE26D",
+        "DDC05B2A-EF6E-52F2-B0A0-CE2E6495F8EA",
+        "8B4DEE3D-F69C-5B9B-9285-E1BF873C07F3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240598,6 +241568,10 @@
       "centroidLongitude": -0.1251805,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "5C0815ED-3403-576A-A010-911147D2B888",
+        "DDC05B2A-EF6E-52F2-B0A0-CE2E6495F8EA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -240641,6 +241615,12 @@
       "centroidLongitude": -0.2084452,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "8B4DEE3D-F69C-5B9B-9285-E1BF873C07F3",
+        "F19163D5-1926-5A96-84A2-E684D94EE26D",
+        "1F699A2E-E536-5513-A78B-5B3BF5D22DBA",
+        "DDC05B2A-EF6E-52F2-B0A0-CE2E6495F8EA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240682,6 +241662,13 @@
       "centroidLongitude": -0.1230293,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "930EE9C8-119A-50C8-8ADC-90957D7BC207",
+        "DDC05B2A-EF6E-52F2-B0A0-CE2E6495F8EA",
+        "5C0815ED-3403-576A-A010-911147D2B888",
+        "1989eb1b-8d1a-43ca-b565-fbabd373c5fc",
+        "8B4DEE3D-F69C-5B9B-9285-E1BF873C07F3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240723,6 +241710,13 @@
       "centroidLongitude": -0.1190716,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "F19163D5-1926-5A96-84A2-E684D94EE26D",
+        "930EE9C8-119A-50C8-8ADC-90957D7BC207",
+        "5C0815ED-3403-576A-A010-911147D2B888",
+        "1F699A2E-E536-5513-A78B-5B3BF5D22DBA",
+        "9A2D1B28-3AF3-5F96-8220-5D92D9B9AEF6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240764,6 +241758,16 @@
       "centroidLongitude": 11.2557393,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "63166E79-D792-588E-8179-6328F82FD06C",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240805,6 +241809,16 @@
       "centroidLongitude": 11.249624,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -240846,6 +241860,16 @@
       "centroidLongitude": 11.2482219,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "63166E79-D792-588E-8179-6328F82FD06C",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -240930,6 +241954,16 @@
       "centroidLongitude": 11.2602037,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -240973,6 +242007,16 @@
       "centroidLongitude": 11.2459508,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241014,6 +242058,9 @@
       "centroidLongitude": 10.3243677,
       "city": "Parma",
       "country": "Italy",
+      "relatedTourIds": [
+        "6C401DFD-E635-55F0-9B87-AC1625FA2ACE"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241182,6 +242229,12 @@
       "centroidLongitude": -3.706803,
       "city": "Madrid",
       "country": "Spain",
+      "relatedTourIds": [
+        "60A203C5-1369-5E72-9B93-F2AD1373E92C",
+        "783129EA-C200-54B7-891C-1A7108E9DAAF",
+        "2b792f2c-e508-545b-ae53-8cc6521258c5",
+        "BB77667E-DF93-572E-83C8-FB24A2E70D17"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -241225,6 +242278,11 @@
       "centroidLongitude": -3.7175511,
       "city": "Madrid",
       "country": "Spain",
+      "relatedTourIds": [
+        "60A203C5-1369-5E72-9B93-F2AD1373E92C",
+        "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "1c43d008-386e-5413-b3de-cbda28a52381"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241266,6 +242324,13 @@
       "centroidLongitude": -3.707981,
       "city": "Madrid",
       "country": "Spain",
+      "relatedTourIds": [
+        "783129EA-C200-54B7-891C-1A7108E9DAAF",
+        "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "2b792f2c-e508-545b-ae53-8cc6521258c5",
+        "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
+        "62cca756-02e7-5848-ace4-502800c37005"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -241475,6 +242540,16 @@
       "centroidLongitude": 2.1765082,
       "city": "Barcelona",
       "country": "Spain",
+      "relatedTourIds": [
+        "E11BB9C7-2DB2-5501-9D42-631DC1B80787",
+        "a2e83e1e-21f6-5f2f-8416-f58e23f61fd7",
+        "E6649886-1F1A-5882-A0A9-AB981CECEF67",
+        "7e2ca3d9-5c55-5da2-a546-9e3d729a3475",
+        "84a874f6-f0d0-5d70-9e75-633d49deedb0",
+        "f96346b3-d5be-5ba4-8fa2-5bd3b0c11af2",
+        "306384D5-58ED-5768-8B8C-B51621EA609C",
+        "654F6BF6-CF34-5F0A-B830-78FA9AFAB904"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -241518,6 +242593,16 @@
       "centroidLongitude": 139.7652988,
       "city": "Tokyo",
       "country": "Japan",
+      "relatedTourIds": [
+        "79E94196-6BEE-5CE1-B7E9-E05839CB8AC0",
+        "57B0427C-D63A-5504-8A39-CE112C6BFD72",
+        "9F9772A7-9270-5AE8-9323-C1E745E0224D",
+        "9A49FD4D-89CA-5E33-9E1C-8655FEE46DB5",
+        "5578D0E0-F0F7-5EAE-A6C1-5476E314EBCB",
+        "24865C60-7C18-5775-8CBD-819A25C77BAF",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "78839D3C-9E75-50C2-91FA-ACEB63D86376"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241559,6 +242644,16 @@
       "centroidLongitude": 139.7713002,
       "city": "Tokyo",
       "country": "Japan",
+      "relatedTourIds": [
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "EBD51DA1-98C1-586C-99A2-E744B8E9F200",
+        "78839D3C-9E75-50C2-91FA-ACEB63D86376",
+        "CC0130C6-79D1-5E43-9603-9514F2E6899A",
+        "743603F2-6AB6-5959-AC8D-D799F69539D4",
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "AF3C03FA-BE74-547D-A254-CB159D0A8FF2",
+        "CCDB04F2-E668-5358-B766-177513956FD7"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241600,6 +242695,16 @@
       "centroidLongitude": 139.7357942,
       "city": "Tokyo",
       "country": "Japan",
+      "relatedTourIds": [
+        "448946F1-25C9-5FCF-8026-291CDFE283DF",
+        "ACF4C54D-ECC4-57E0-AFCE-15D896D613E6",
+        "9B8123D2-9902-5E30-814D-0ADE308677EB",
+        "D4901F42-A6AE-58BB-81E3-75B0E791B85B",
+        "97DC172B-7509-509B-8B43-EA3D51EC61B4",
+        "EC4F90D6-FE0A-533B-89E6-98920A1DBBE5",
+        "42AD70AB-C451-5F78-BCBB-DB4E9BBF78BD",
+        "F2426F26-EF93-5BE2-8944-A0A22F2DABC9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241641,6 +242746,16 @@
       "centroidLongitude": 121.5247742,
       "city": "Taipei",
       "country": "Taiwan",
+      "relatedTourIds": [
+        "EFBE619A-9915-5A71-BDE8-474A9FC41A00",
+        "47D6BE4A-0E3B-5472-BFC2-D4583994AF31",
+        "84CAFF4D-7E8C-5188-B0E2-66B8C41B1D9A",
+        "6CB6EE7D-4D91-5153-B22B-FA7511C30CDE",
+        "F0BD78FA-5BEE-5E6E-8764-8651B4E11435",
+        "CCD6F73B-44AA-5F30-B4CE-7647B941010C",
+        "0BE05D85-2AD2-55FF-B5BA-4F1B9A5CAD28",
+        "D2B4FD02-1787-5702-A037-760888088C1F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241682,6 +242797,11 @@
       "centroidLongitude": 151.279407,
       "city": "Sydney",
       "country": "Australia",
+      "relatedTourIds": [
+        "d865d08e-350d-5fd0-8a89-9e2bdddb436c",
+        "98961661-f2c5-5118-957f-7b2ae1f87a97",
+        "FDB096BD-43F1-503A-99FD-3677E81055E5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241723,6 +242843,9 @@
       "centroidLongitude": 145.0046452,
       "city": "Melbourne",
       "country": "Australia",
+      "relatedTourIds": [
+        "3A2AEB51-D089-5C26-9163-04E1D5845CDF"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241764,6 +242887,9 @@
       "centroidLongitude": 145.0202154,
       "city": "Melbourne",
       "country": "Australia",
+      "relatedTourIds": [
+        "1B1F1DC7-7127-52A0-9136-CDB27FE4EEF2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241846,6 +242972,9 @@
       "centroidLongitude": 151.241543,
       "city": "Sydney",
       "country": "Australia",
+      "relatedTourIds": [
+        "0B6EAEED-6F9E-58DF-B3BD-4DC6F3281C36"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
       "priceUSD": 0
@@ -241928,6 +243057,16 @@
       "centroidLongitude": -46.6339157,
       "city": "São Paulo",
       "country": "Brazil",
+      "relatedTourIds": [
+        "2AAEFBE6-C682-5C6D-9473-2AA5447C4A06",
+        "04413D73-0775-5D97-8946-7FAE009DC00B",
+        "404749A2-C5F1-505E-9305-10A9E07E0642",
+        "926F7B70-4A38-5CCB-810B-0F368C70BE1E",
+        "C8333E05-A5E0-5C56-AB37-9CB5299E8057",
+        "b344b334-4402-55c1-808a-a192e52effc7",
+        "efb1cd84-1608-5b75-b8b3-0550a40ddca4",
+        "678E9EB5-7B0E-5527-A3FA-E6ED3E4E6095"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -241973,6 +243112,9 @@
       "centroidLongitude": -115.161172,
       "city": "Las Vegas",
       "country": "United States",
+      "relatedTourIds": [
+        "8B698E66-80CD-5166-B8B6-C440A71E1F2F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Iconic Landmark"
@@ -242016,6 +243158,16 @@
       "centroidLongitude": -73.9860977,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "F3579E9F-B19D-554F-B337-827DF1FF1588",
+        "50CFB5A0-E6C2-54B0-952F-702397DBE263",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242060,6 +243212,16 @@
       "centroidLongitude": -73.9568049,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "E521D0AB-D7AA-5AA0-8422-B155AD1F83F0",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "9D019D20-3599-5502-8B01-F8FE798378AA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242104,6 +243266,16 @@
       "centroidLongitude": -74.0055756,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "B56CF802-89CB-5829-889E-7E83D0E528F7",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242148,6 +243320,16 @@
       "centroidLongitude": -74.0075665,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "A5C3DA3C-8DE5-5A7E-99A8-E5978675A55F",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242236,6 +243418,9 @@
       "centroidLongitude": -73.9627821,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242280,6 +243465,16 @@
       "centroidLongitude": -73.985483,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "FB2E598B-3244-5B6C-84DA-E97F4E444088",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "3ECFA69C-5633-5D90-B974-9DA606315C92",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242324,6 +243519,16 @@
       "centroidLongitude": -73.9578034,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "006117B3-C5AD-598F-9C2B-3DD9276C890A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242412,6 +243617,16 @@
       "centroidLongitude": -73.9585415,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "3C3A71CF-7169-59DF-81A3-963A3802CA58",
+        "65C77F66-6E60-5559-B1AC-F42E7D20F3E5",
+        "AB5276F3-433B-5063-8141-E6DC008BA1C8",
+        "9D019D20-3599-5502-8B01-F8FE798378AA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242456,6 +243671,11 @@
       "centroidLongitude": -73.9585956,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "65C77F66-6E60-5559-B1AC-F42E7D20F3E5",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242544,6 +243764,16 @@
       "centroidLongitude": -73.9881357,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "6E764EF9-C270-5530-8013-9319DDE71319",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242588,6 +243818,16 @@
       "centroidLongitude": -74.0046079,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "069CCB91-A959-5995-82EA-3A2A295829D3",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242632,6 +243872,16 @@
       "centroidLongitude": -73.9835235,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
+        "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
+        "644FE3D5-B93C-5209-8411-83C682BD33CF",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "E93942F9-8995-5165-9243-E5DDB68B72AC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242720,6 +243970,16 @@
       "centroidLongitude": -73.9452219,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "E521D0AB-D7AA-5AA0-8422-B155AD1F83F0",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "3C3A71CF-7169-59DF-81A3-963A3802CA58",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "E71651AA-684C-56DF-A0C4-14A80F6FBAD8"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242764,6 +244024,16 @@
       "centroidLongitude": -73.9452219,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "4E5F210A-7F59-537D-A0F5-4964471F8BAA",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "3C3A71CF-7169-59DF-81A3-963A3802CA58",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242808,6 +244078,16 @@
       "centroidLongitude": -73.9887865,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "6E764EF9-C270-5530-8013-9319DDE71319",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "860DFF80-A544-5CA0-A6EB-ACB11293D539"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242852,6 +244132,14 @@
       "centroidLongitude": -73.9862953,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "E2666976-FF4A-5EE8-849B-F4E65333D2D0",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "BBD1F25E-770A-5AF5-9EF5-D8B0A52CE583"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242896,6 +244184,16 @@
       "centroidLongitude": -73.9759841,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242940,6 +244238,10 @@
       "centroidLongitude": -73.9653382,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -242984,6 +244286,16 @@
       "centroidLongitude": -73.9745065,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "46B31B71-1544-5D8E-A041-1E337465E1AA",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243028,6 +244340,16 @@
       "centroidLongitude": -73.9862953,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "1FF4B51B-5BB3-5440-B966-DCA36619C23D",
+        "069CCB91-A959-5995-82EA-3A2A295829D3",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "7A186015-B30A-58AB-941E-DC7BA61A3CB6",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243072,6 +244394,16 @@
       "centroidLongitude": -73.9916826,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "6E764EF9-C270-5530-8013-9319DDE71319",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "86447C28-30E1-544D-95C8-B5367D0E0416"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243116,6 +244448,16 @@
       "centroidLongitude": -73.9891428,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "06A6A1EF-628F-5777-896D-7722FFA641E4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243160,6 +244502,16 @@
       "centroidLongitude": -73.962588,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "AB5276F3-433B-5063-8141-E6DC008BA1C8",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243204,6 +244556,16 @@
       "centroidLongitude": -73.9954744,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "2E602867-67E8-5379-A577-388BB55E68DC",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "86447C28-30E1-544D-95C8-B5367D0E0416"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243248,6 +244610,16 @@
       "centroidLongitude": -74.0020328,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243292,6 +244664,16 @@
       "centroidLongitude": -73.9886362,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "F3579E9F-B19D-554F-B337-827DF1FF1588",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243336,6 +244718,16 @@
       "centroidLongitude": -73.9566853,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "8A27D7E6-5613-516B-961D-D0F07AB05410",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243424,6 +244816,16 @@
       "centroidLongitude": -74.0040853,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "E2666976-FF4A-5EE8-849B-F4E65333D2D0",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "F2BD8B37-AF7B-5AC0-9037-D2A6C7BC9129",
+        "98031BFE-B380-5D8C-BB40-0A4C572119BF",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243468,6 +244870,16 @@
       "centroidLongitude": -73.9781533,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "90893488-3531-526F-BED7-FCEF827C3F46",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243512,6 +244924,16 @@
       "centroidLongitude": -73.9721247,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243556,6 +244978,16 @@
       "centroidLongitude": -73.9802703,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6E764EF9-C270-5530-8013-9319DDE71319",
+        "F3FA00B0-F388-50F6-891D-49C987DC9986",
+        "2BE58723-AF2B-598D-B52F-EF6C6B3C5F89",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243600,6 +245032,16 @@
       "centroidLongitude": -73.974641,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "50CFB5A0-E6C2-54B0-952F-702397DBE263",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243688,6 +245130,10 @@
       "centroidLongitude": -73.9937902,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "0B1E77D1-0289-5CFF-8B6A-F942527B91F7",
+        "E90F34C8-0000-5BB9-AC9F-C3C472A4704C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243776,6 +245222,16 @@
       "centroidLongitude": -73.987672,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243820,6 +245276,16 @@
       "centroidLongitude": -73.9626861,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "B14B2377-C7F5-5CBD-8126-42954CF9601D",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243908,6 +245374,15 @@
       "centroidLongitude": -73.9700441,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "E2666976-FF4A-5EE8-849B-F4E65333D2D0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -243996,6 +245471,9 @@
       "centroidLongitude": -75.1337114,
       "city": "Philadelphia",
       "country": "United States",
+      "relatedTourIds": [
+        "0FCE3474-75C0-539F-82A6-43524AA8D8F1"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244040,6 +245518,14 @@
       "centroidLongitude": -74.0003712,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "736D0BCE-DAE6-5177-B0E1-04BD8E0015B6",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "05CD9331-ADEB-5FFD-BB43-1492020E3A93",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "9D019D20-3599-5502-8B01-F8FE798378AA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244084,6 +245570,16 @@
       "centroidLongitude": -73.9576479,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "2C3EF290-6073-54B8-BE8E-2EB85D77DB57"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244128,6 +245624,16 @@
       "centroidLongitude": -73.9873238,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "86882472-40F2-5C01-B382-D2D86D609E60",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "9E36397C-323D-5E25-A4C5-919FAC3009D0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244172,6 +245678,9 @@
       "centroidLongitude": -75.1704471,
       "city": "Philadelphia",
       "country": "United States",
+      "relatedTourIds": [
+        "59F6B321-1189-5C4C-A6C4-C10C8B5E1BA4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244216,6 +245725,16 @@
       "centroidLongitude": -73.9927504,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "98031BFE-B380-5D8C-BB40-0A4C572119BF",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "FB2E598B-3244-5B6C-84DA-E97F4E444088",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "06A6A1EF-628F-5777-896D-7722FFA641E4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244304,6 +245823,16 @@
       "centroidLongitude": -73.9924913,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "21586B61-6113-5CF6-96D2-465E1F8BE07E",
+        "15514D02-CB9F-55C2-8BE1-3F15570004DC",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "F3579E9F-B19D-554F-B337-827DF1FF1588",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "FA9A589A-7099-5ECB-BD07-36165710FA95"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244348,6 +245877,10 @@
       "centroidLongitude": -118.2603791,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198",
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244392,6 +245925,16 @@
       "centroidLongitude": -73.9928878,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "53D11AC0-59F0-531C-8B5F-71461A5AA4D4",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244436,6 +245979,9 @@
       "centroidLongitude": -118.2397115,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "5DC9C2F6-609C-522D-AF3B-4DCB0D2234F4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244480,6 +246026,11 @@
       "centroidLongitude": -118.3480591,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "E6BEF8CC-A5E9-5E69-B6D4-FB0CA285D925",
+        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F",
+        "8CB30130-6D47-53CB-9782-40770AE3A830"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244524,6 +246075,9 @@
       "centroidLongitude": -118.3565176,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "57CAD837-2E86-5EA2-AA50-40380D0AF477"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244656,6 +246210,9 @@
       "centroidLongitude": -118.2870615,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "4BE3D12D-166C-5BE3-AAC4-FB5CBC0539EE"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244700,6 +246257,10 @@
       "centroidLongitude": -122.4225436,
       "city": "San Francisco",
       "country": "United States",
+      "relatedTourIds": [
+        "2CC3C76E-15F1-5598-AED1-08C627AB02BE",
+        "F42357E1-507A-597F-BF5A-C58D69B31F9B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244832,6 +246393,9 @@
       "centroidLongitude": -122.3891883,
       "city": "San Francisco",
       "country": "United States",
+      "relatedTourIds": [
+        "40EB17E2-C5E8-5C40-AE14-B53281A505E6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244876,6 +246440,16 @@
       "centroidLongitude": -73.9849409,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "0B22ED28-340F-5970-B463-B9C53FBEF71E",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "D8F4E8A9-009C-59C7-A68E-F46184A63CAA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -244964,6 +246538,11 @@
       "centroidLongitude": -122.392177,
       "city": "San Francisco",
       "country": "United States",
+      "relatedTourIds": [
+        "B67FD032-25D5-5B20-A7ED-32D5E9D4FF7F",
+        "7EF3272A-4A66-5612-BBC9-AA22A1E8BD62",
+        "9F641AAA-3A1B-5C37-9296-CE3817D9E9B5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245052,6 +246631,16 @@
       "centroidLongitude": -73.991673,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "E2666976-FF4A-5EE8-849B-F4E65333D2D0",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "50CFB5A0-E6C2-54B0-952F-702397DBE263",
+        "F138F30D-C2FC-56B7-AED3-F4847ECC769F",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245096,6 +246685,12 @@
       "centroidLongitude": -74.0054238,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "0B22ED28-340F-5970-B463-B9C53FBEF71E",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245140,6 +246735,9 @@
       "centroidLongitude": -74.0048973,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2F9F119B-F3CA-5216-86C3-1D908D543853"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245184,6 +246782,16 @@
       "centroidLongitude": -74.0054436,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "4E5F210A-7F59-537D-A0F5-4964471F8BAA",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "E521D0AB-D7AA-5AA0-8422-B155AD1F83F0",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245228,6 +246836,16 @@
       "centroidLongitude": -73.9700441,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "D54920F3-0EDF-55CF-B39B-A0D53BE0CDA9",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "6E764EF9-C270-5530-8013-9319DDE71319",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "EF21AA82-4142-511E-A68F-10840F3C6A06"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245272,6 +246890,16 @@
       "centroidLongitude": -74.0013305,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245316,6 +246944,12 @@
       "centroidLongitude": -73.9989439,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "1E74EC59-B20B-50BA-B20C-6F5C7BD7EEC2",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245360,6 +246994,16 @@
       "centroidLongitude": -74.0014144,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "90893488-3531-526F-BED7-FCEF827C3F46",
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "B56CF802-89CB-5829-889E-7E83D0E528F7",
+        "E90F34C8-0000-5BB9-AC9F-C3C472A4704C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245404,6 +247048,16 @@
       "centroidLongitude": -74.0000977,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "8EC93489-08F1-5998-9982-A9732336BE81",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "EDE509C5-A02C-5829-961C-DFDB3B82D145"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245492,6 +247146,16 @@
       "centroidLongitude": -74.0161261,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "32512416-6254-5728-8CA2-696A1FF95D57",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "F01A943D-A06E-5EF7-AE92-5CC55E5E41ED",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "A1E35701-C30B-5D73-BE91-157A45960A17"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245536,6 +247200,16 @@
       "centroidLongitude": -74.0053247,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "EDABD84A-63A7-5F4E-9925-C17169884E58",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245624,6 +247298,16 @@
       "centroidLongitude": -74.0045373,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "FC26754D-7BB1-5A9C-94B2-D26D885C2D74",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "6DF9DC05-B319-5BDF-90A8-65DD3EAC1F34",
+        "90893488-3531-526F-BED7-FCEF827C3F46",
+        "7A186015-B30A-58AB-941E-DC7BA61A3CB6",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "386E0B2C-272F-5078-971E-30E92700474E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245668,6 +247352,14 @@
       "centroidLongitude": -73.9405413,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "4E5F210A-7F59-537D-A0F5-4964471F8BAA",
+        "3C3A71CF-7169-59DF-81A3-963A3802CA58",
+        "3B84BA04-3AC0-5DAA-888D-877F63DBF82A",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "172AA5E7-A791-525A-9587-04A465F46C4D",
+        "EA0FFB01-0F14-5658-A0CE-F636606A581A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245756,6 +247448,9 @@
       "centroidLongitude": -80.1929449,
       "city": "Miami",
       "country": "United States",
+      "relatedTourIds": [
+        "D79E50B9-0941-5C62-930E-B8660215FF8B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -245800,6 +247495,9 @@
       "centroidLongitude": -80.1906481,
       "city": "Miami",
       "country": "United States",
+      "relatedTourIds": [
+        "3E84380C-CEB1-5854-9EF1-5B208F9513DB"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246020,6 +247718,9 @@
       "centroidLongitude": -73.9824413,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "903B3EA6-3D34-552C-B599-B252102CBF62"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246064,6 +247765,16 @@
       "centroidLongitude": -73.956968,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "C4B2F2ED-CBAC-5E7E-8500-39A18291B527",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246108,6 +247819,11 @@
       "centroidLongitude": -73.9631216,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "E71651AA-684C-56DF-A0C4-14A80F6FBAD8",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246152,6 +247868,9 @@
       "centroidLongitude": -73.9617324,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "3C330899-7E75-5B63-A4DE-FFD14BCE7B29"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246196,6 +247915,16 @@
       "centroidLongitude": -73.9171262,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246240,6 +247969,10 @@
       "centroidLongitude": -74.0002357,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "53D11AC0-59F0-531C-8B5F-71461A5AA4D4",
+        "F3FA00B0-F388-50F6-891D-49C987DC9986"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246284,6 +248017,13 @@
       "centroidLongitude": -73.9862985,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "1FF4B51B-5BB3-5440-B966-DCA36619C23D",
+        "2E602867-67E8-5379-A577-388BB55E68DC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246328,6 +248068,16 @@
       "centroidLongitude": -73.9502915,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246372,6 +248122,15 @@
       "centroidLongitude": -73.9919894,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "46B31B71-1544-5D8E-A041-1E337465E1AA",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "3B84BA04-3AC0-5DAA-888D-877F63DBF82A",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "F01A943D-A06E-5EF7-AE92-5CC55E5E41ED"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246416,6 +248175,16 @@
       "centroidLongitude": -73.9843786,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "53D11AC0-59F0-531C-8B5F-71461A5AA4D4",
+        "2BE58723-AF2B-598D-B52F-EF6C6B3C5F89",
+        "6E764EF9-C270-5530-8013-9319DDE71319",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246460,6 +248229,16 @@
       "centroidLongitude": -73.9934677,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "37EF118A-9C8E-5E44-B734-B2C0D1181F28",
+        "B90E38B1-8141-5009-96B1-CD52B46204B9",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246504,6 +248283,9 @@
       "centroidLongitude": -72.1831331,
       "city": "East Hampton",
       "country": "United States",
+      "relatedTourIds": [
+        "4D69C025-7703-5371-A55A-EC95DB985F11"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246548,6 +248330,16 @@
       "centroidLongitude": -73.952816,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "1433B333-4647-5FC3-8AB1-5E12671669AE",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "B14B2377-C7F5-5CBD-8126-42954CF9601D",
+        "FE7FC774-F309-50B6-BC22-57B1284675E0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246592,6 +248384,13 @@
       "centroidLongitude": -73.9588832,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "5D31B31D-FC2D-55FC-9FA0-F85C0B56508F",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "51B592D6-66C4-5DD3-B362-FADCD4F32D92",
+        "386E0B2C-272F-5078-971E-30E92700474E",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246636,6 +248435,16 @@
       "centroidLongitude": -73.98218,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "D32004C1-B83C-58E8-BD1B-BFA6241F6A69",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "06A6A1EF-628F-5777-896D-7722FFA641E4",
+        "FB2E598B-3244-5B6C-84DA-E97F4E444088",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246680,6 +248489,16 @@
       "centroidLongitude": -73.9762437,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
+        "06A6A1EF-628F-5777-896D-7722FFA641E4",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "E93942F9-8995-5165-9243-E5DDB68B72AC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246724,6 +248543,16 @@
       "centroidLongitude": 2.3328274,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "40550E25-6721-534E-8AD6-08A61EE8EAA0",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "D89F4304-22E0-5461-90E7-90EC6649C227",
+        "09071FFB-B94D-5D6D-877D-7CEBD7CA9490",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246768,6 +248597,16 @@
       "centroidLongitude": -73.9880227,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "111F551A-DFC2-5ACA-B4D4-02C2473EB559",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "32DD4500-1C7F-5957-8543-9254952FD02C",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246812,6 +248651,16 @@
       "centroidLongitude": 2.3590682,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "09071FFB-B94D-5D6D-877D-7CEBD7CA9490",
+        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "F303882C-62A3-5BF6-9B14-632A13E83B56",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246856,6 +248705,16 @@
       "centroidLongitude": -74.0019638,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "F06D0627-7BB4-5E9B-8B92-E38AD5B96799",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "B189ACE7-322E-5643-ACCB-765D4EC28B4A",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "A15A6292-6A43-5A20-9403-50205217F5F3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246900,6 +248759,16 @@
       "centroidLongitude": 2.3370466,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246944,6 +248813,16 @@
       "centroidLongitude": -73.9405413,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "46B31B71-1544-5D8E-A041-1E337465E1AA",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "32512416-6254-5728-8CA2-696A1FF95D57",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -246988,6 +248867,16 @@
       "centroidLongitude": 2.3387505,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247032,6 +248921,11 @@
       "centroidLongitude": 11.2541775,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247076,6 +248970,9 @@
       "centroidLongitude": -9.1534271,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "52187B20-0857-4F93-AF49-CA085BDF288D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247164,6 +249061,16 @@
       "centroidLongitude": -73.967649,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "AAC96399-AC4F-54F7-9EAD-099250D15380",
+        "F2BD8B37-AF7B-5AC0-9037-D2A6C7BC9129",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "328E5BDB-CAE8-5C3C-83F3-ACA18265FA4D",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247208,6 +249115,16 @@
       "centroidLongitude": -74.0006348,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
+        "50C7E08D-8F44-552A-9FA6-D3A7B7341B53",
+        "2F9F119B-F3CA-5216-86C3-1D908D543853",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "0D6B9878-7609-541F-940E-27EDBDEE1458"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247252,6 +249169,16 @@
       "centroidLongitude": 11.2619946,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247296,6 +249223,10 @@
       "centroidLongitude": -97.7548768,
       "city": "Austin",
       "country": "United States",
+      "relatedTourIds": [
+        "820CFBA3-D7DF-59A6-9915-425FA7C321FF",
+        "29C9887F-A743-5311-A15B-8664253E4494"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247340,6 +249271,10 @@
       "centroidLongitude": -97.7051802,
       "city": "Austin",
       "country": "United States",
+      "relatedTourIds": [
+        "649CE60F-C44B-5519-B963-AD6C381E1DAD",
+        "29C9887F-A743-5311-A15B-8664253E4494"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247384,6 +249319,16 @@
       "centroidLongitude": -74.0102925,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "AB5276F3-433B-5063-8141-E6DC008BA1C8",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "E521D0AB-D7AA-5AA0-8422-B155AD1F83F0",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247428,6 +249373,14 @@
       "centroidLongitude": -73.962588,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "3C3A71CF-7169-59DF-81A3-963A3802CA58"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247472,6 +249425,16 @@
       "centroidLongitude": -74.0102925,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "C01B5FB7-9698-58E2-A392-9419631EFD65",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "22E1BCB0-95B8-5B26-BBA0-C43838D2E420",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247516,6 +249479,16 @@
       "centroidLongitude": -73.9760866,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "0D6B9878-7609-541F-940E-27EDBDEE1458",
+        "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "72996712-5291-5458-9C28-4ADEF517B586",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "86447C28-30E1-544D-95C8-B5367D0E0416",
+        "79066170-3472-57DA-BF1D-A737D7C69273",
+        "6F2E7151-503A-554E-BB1F-34C09E937F9A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247560,6 +249533,10 @@
       "centroidLongitude": -73.9973743,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "444BC62F-8662-54FD-AE86-8F0FD4CD401E",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247604,6 +249581,16 @@
       "centroidLongitude": -73.9575142,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "F01A943D-A06E-5EF7-AE92-5CC55E5E41ED",
+        "9D019D20-3599-5502-8B01-F8FE798378AA",
+        "3E96B258-580B-57A1-B44A-4FBFF4DABD59",
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "46B31B71-1544-5D8E-A041-1E337465E1AA",
+        "F94C3ED9-1F67-540C-A502-26692AE663BD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247648,6 +249635,9 @@
       "centroidLongitude": -73.9949921,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "F3FA00B0-F388-50F6-891D-49C987DC9986"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247736,6 +249726,16 @@
       "centroidLongitude": -73.9622746,
       "city": "Brooklyn",
       "country": "United States",
+      "relatedTourIds": [
+        "4E5F210A-7F59-537D-A0F5-4964471F8BAA",
+        "CD6C37F7-29C7-5D2C-BC39-2A531DDEF906",
+        "3F16A6A6-2E44-5113-8D81-96198521FE82",
+        "04D4D14C-D7EA-53A4-B189-D4A5310FC4F2",
+        "E71651AA-684C-56DF-A0C4-14A80F6FBAD8",
+        "05CD9331-ADEB-5FFD-BB43-1492020E3A93",
+        "34AE18DE-D5B4-5072-B890-1B5FA274AA26",
+        "E521D0AB-D7AA-5AA0-8422-B155AD1F83F0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -247780,6 +249780,16 @@
       "centroidLongitude": -73.9873238,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "6E764EF9-C270-5530-8013-9319DDE71319",
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
+        "06A6A1EF-628F-5777-896D-7722FFA641E4",
+        "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "9E36397C-323D-5E25-A4C5-919FAC3009D0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",

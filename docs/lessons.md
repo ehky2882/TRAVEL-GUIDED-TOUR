@@ -1612,6 +1612,53 @@ functions look like they should agree and must not.
   the answer was **+291 KB**. Close enough to sound right, far enough to have
   argued the wrong case.
 
+### 🔴 And then the THRESHOLD was reused in the other direction — a day later (2026-09-16)
+
+**The section you are reading already said this, and it still happened.** The
+scoring *function* was kept apart correctly. The *floor* was not: semantic search
+shipped in build 166 with `scoreFloor = 0.45`, copied from `RELATED_FLOOR` above.
+
+0.45 is right where it sits — it gates **tour ↔ tour**, mean-to-mean, two long
+documents that score high against each other by construction. Search gates a
+**short typed query ↔ a long document**, which scores far lower for the same
+quality of match. Reusing the number looked like consistency and silenced three
+of nine natural queries on the live index:
+
+    quiet garden away              0.4498   ← the owner's first search
+    quiet garden away from crowds  0.4136
+    stained glass windows          0.4479
+    somewhere romantic for a date  0.4323
+    art deco lobby                 0.5444   (6 results)
+    brutalist concrete tower       0.6455   (46 results)
+
+**A floor wrong by a hair does not degrade — it disappears.** 0.4498 against 0.45
+fails by two ten-thousandths and produces something that looks completely broken
+rather than slightly strict. Now 0.35, measured in both directions: nonsense
+(`asdfgh qwerty zxcvb`, 0.3361), "my tax return" (0.2392) and "how do i reset my
+password" (0.1376) all still return nothing.
+
+⚠️ **A cleverer rule was looked for and does not exist — do not re-attempt it.**
+"quiet garden away" (good) and "stained glass windows" (weak) top out at 0.4498
+and 0.4479, indistinguishable. What separates them is whether the catalogue
+contains the thing, which no score can see; a relative rule ("within 0.08 of the
+best") fires identically on both.
+
+**The number was in our own output all along.** `verify-coreml-parity.py` printed
+`top score 0.4136` for "quiet garden away from crowds" on every ranking run, for
+days. It was read as a ranking check rather than as a distribution — the figure
+that disproves a threshold can sit in a passing report, because the report was
+asked a different question.
+
+**So the habit, stated as a rule:** a constant carries the measurement it was
+calibrated on. Moving it to a different comparison is a new calibration, not a
+reuse — and calibrating means running it against the real input at least once.
+The floor was never tested against a single typed query before it shipped.
+
+⚠️ **And it is compiled in.** The floor is a Swift constant, so every adjustment
+costs a TestFlight build. A tuning knob inside the app is not a knob you can
+turn; if a number is expected to move on judgement, it belongs in the catalogue.
+
+
 ## A correctly-applied migration is not evidence either — the snapshot in front of it (2026-09-15)
 
 `backend/add_related_tours.sql` patched the catalogue builder exactly as
@@ -1648,46 +1695,61 @@ before a re-seed, `relatedTourIds` and `createdAt` were served as `null` on all
 and correctly so — but "the contract passes" and "the feature works" are two
 different statements, and only a seed makes the second true.
 
-## A threshold only means something for the measurement it was calibrated on
+## "The server has it" is not "the phone has it" (2026-09-16)
 
-Semantic search shipped in build 166 with a quality floor of **0.45**, copied
-from `RELATED_FLOOR` — the number "More like this" uses. The owner's first
-query, *"quiet garden away"*, returned nothing.
+The owner reported a place missing from their map. It was verified present in the
+live `get_catalog`, in the gh-pages mirror, with valid members and a working hero.
+**On the strength of that, they were twice told to go and look — and twice the
+phone still did not have it.**
 
-The two floors gate different comparisons:
+The error was reading `catalog_snapshot_age` as proof of *delivery*. It is proof
+of *publication*. Every server-side check answers "did we publish it", and not one
+of them answers "did that device receive it". Those are different claims and the
+second is the one a person reporting a bug is making.
 
-| | compares | typical good score |
-|---|---|---|
-| `RELATED_FLOOR` | **tour ↔ tour** — mean-to-mean, two long documents | high |
-| search floor | **short query ↔ long document** | much lower |
+🔴 **What settled it was a screenshot, not a query.** The marker was a **circle**,
+and `MapPins.swift` draws `ClusterPin` as a circle and `PlacePin` as a capsule —
+so the place was not being applied at all, on a device that had other places from
+the same merge. **One picture of the actual screen outranked five server checks.**
+Ask for one early.
 
-A four-word query has far less in common with a 600-word description than two
-descriptions have with each other, *for the same quality of match*. Reusing the
-constant looked like consistency and was a category error. Measured on the live
-index, it silenced three of nine natural queries — including two of the four
-written into the build notes as things to try.
+⚠️ **And the first check should have been rule 11's.** `CLAUDE.md` says an owner
+reporting a feature missing that the code clearly ships is the trigger to ask the
+**live RPC what keys it returns**. That was run fifth, after three rounds of
+reading timestamps.
 
-**The near-miss is the part worth remembering.** "quiet garden away" topped out
-at **0.4498** against a floor of 0.45. It failed by two ten-thousandths, and the
-result was a feature that looked completely broken rather than slightly strict.
-A threshold that is wrong by a hair does not degrade; it disappears.
+**The cause was never found.** Deleting the app fixed it; a partial publish was
+ruled out (the seed is one transaction and `refresh_catalog_snapshot()` is its
+last statement, so no reader sees a half-written catalogue).
 
-⚠️ **A cleverer rule was looked for and does not exist.** "quiet garden away"
-(good results) and "stained glass windows" (weak ones) top out at 0.4498 and
-0.4479 — indistinguishable. What separates them is whether the catalogue
-actually contains the thing, which no score can see, and a relative rule
-("within 0.08 of the best") fires identically on both. It is one absolute
-number, chosen by measurement.
+### The design lesson, which is the durable half
 
-**Two habits that would have caught it:**
+`RemoteCatalogLoader` asks a 34-byte "anything new?" question and, on a match,
+returns the cache without downloading. That saving is real and worth keeping. But
+**a token match is a claim about the server, not evidence about the disk** — so
+believing it without bound means a cache that goes wrong for *any* reason stays
+wrong forever, silently, with no recovery but reinstalling. The owner restarted
+the app for an hour and never got out.
 
-1. **Calibrate on the real input.** The floor was never once tested against a
-   typed query — only against the tour pairs it came from.
-2. **Read your own verification output.** `verify-coreml-parity.py` printed
-   `top score 0.4136` for "quiet garden away from crowds" in every ranking run.
-   The number that proves the floor is wrong was on screen, repeatedly, and was
-   read as a ranking check rather than as a distribution.
+Fixed in #955 by bounding it (`maxCacheAge`, 7 days) rather than by explaining it.
+**A catch-all beats a targeted fix when the cause is unknown.** Two details worth
+copying:
 
-And a process one: the fix was a Swift constant, so it needed a **new build**,
-after the owner had been told this sort of thing was a content-side change. A
-tuning knob compiled into the app is not a knob you can turn.
+- the guards **decline rather than discard**, so a *failed* download still leaves
+  the existing cache serving — discarding first would make an offline device
+  strictly worse off than the staleness being guarded against
+- a test asserts the 34-byte path **still** fires for a fresh cache, because
+  guards like these are an easy way to silently re-inflate an egress bill that has
+  already drawn two overage notices
+
+### A fix nobody can see is a fix nobody can trust
+
+The owner's verdict on the first build: *"honestly hard to test any of it."* They
+were right. The self-heal fires after seven days and the length check only on a
+truncated file, so it shipped with nothing observable — **the same property that
+let the original bug survive an hour of restarts.**
+
+The answer was one row in Settings → About: **"Updated"**, when the catalogue last
+arrived. It makes Clear Cache provable (tap it, read "just now") and would have
+turned that hour into a glance. **When shipping a fix for something invisible, ship
+the thing that makes it visible in the same change.**
