@@ -189,6 +189,19 @@ jobs:
           fi
           echo "gh-pages serves $LIVE_SHA"
 
+      # Repeated at the very END of the job, on purpose. The step summary is
+      # for a human in the GitHub UI; this is for anyone reading the job log
+      # through the API, where only the last few KB are retrievable and the
+      # artifact upload pushes everything earlier out of reach. Run 3 went green
+      # with a model emitting pure NaN and the numbers proving it were already
+      # unreadable by then.
+      - name: The verdict, again, where the log can still be read
+        if: always()
+        run: |
+          echo "───────── parity check output ─────────"
+          tail -40 /tmp/verify.txt 2>/dev/null || echo "(no output — the check did not run)"
+          echo "───────────────────────────────────────"
+
       - name: Summary
         run: |
           {
