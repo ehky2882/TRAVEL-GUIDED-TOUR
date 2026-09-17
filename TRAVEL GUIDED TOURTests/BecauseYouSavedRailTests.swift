@@ -67,7 +67,10 @@ final class BecauseYouSavedRailTests: XCTestCase {
     // MARK: - 🔴 It stays away
 
     func testAbsentWhenNothingIsSaved() {
-        let result = rails([tour("A")], saved: [], related: { _ in [tour("B")] })
+        // Hoisted out of the closure: calling the helper inside one would need
+        // an explicit `self`, which says nothing useful here.
+        let suggestion = tour("B")
+        let result = rails([tour("A")], saved: [], related: { _ in [suggestion] })
         XCTAssertNil(savedRail(result))
     }
 
