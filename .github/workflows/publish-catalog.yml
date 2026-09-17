@@ -99,11 +99,22 @@ jobs:
           PUBLISHED=$(curl -fsSL --max-time 30 \
             "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/search/embeddings.digest" \
             2>/dev/null | tr -d '[:space:]' || echo "")
+          # 🔴 A THIRD THING TO BE CURRENT, for the same reason as the second.
+          # The snippet file is only written by the rebuild, so on the run after
+          # it was introduced the digests all match, nothing is owed, and it
+          # would never be produced at all — the exact bootstrap trap the
+          # published digest above was added to close. Its absence is itself a
+          # reason to rebuild.
+          SNIPPETS=$(curl -fsS -o /dev/null -w "%{http_code}" --max-time 30 \
+            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/search/search-snippets.bin" \
+            2>/dev/null || echo "000")
           echo "current:   $CURRENT"
           echo "recorded:  $RECORDED"
           echo "published: ${PUBLISHED:-(none)}"
-          if [ "$CURRENT" = "$RECORDED" ] && [ "$CURRENT" = "$PUBLISHED" ]; then
-            echo "No embedded text changed and the index is current — skipping."
+          echo "snippets:  HTTP $SNIPPETS"
+          if [ "$CURRENT" = "$RECORDED" ] && [ "$CURRENT" = "$PUBLISHED" ] \
+             && [ "$SNIPPETS" = "200" ]; then
+            echo "No embedded text changed and both files are current — skipping."
             echo "owed=false" >> "$GITHUB_OUTPUT"
           else
             echo "owed=true" >> "$GITHUB_OUTPUT"
