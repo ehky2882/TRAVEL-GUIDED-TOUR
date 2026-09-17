@@ -4931,14 +4931,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "aca59342-5146-44d7-9ed1-b273edce0ad6",
         "b0ef546a-db5c-4b27-8eb3-be4dd6665e61",
         "7E4C1263-6FBA-49C1-A275-E462A449DDE9",
         "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0",
         "1E9B33C8-A4FE-5A2B-93B6-19200A7E60A9",
         "5bb90e3a-a81f-492d-b761-b204fa5dc405",
-        "b89039a0-c87d-4fc2-b8b9-5c27b72e8949",
-        "b2c6204c-50be-4a99-adf6-163c39dcff15"
+        "b89039a0-c87d-4fc2-b8b9-5c27b72e8949"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -5398,14 +5398,14 @@
       "city": "Porto",
       "country": "Portugal",
       "relatedTourIds": [
+        "CCA80413-9052-5CC3-944E-6A37C23B410F",
         "8efa1abc-1274-475f-89ee-c506bb72f1ea",
         "0aa26daf-e710-4eea-b08c-160ff35a71ee",
         "aaf11e1b-619b-49b7-99ab-7af06c549903",
         "47ffc329-a973-4f8f-a642-d8050e0ae6d8",
         "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
         "ED02F95F-D033-459B-941D-1ED4266DC6A6",
-        "c1301b25-646f-4a9a-9de9-87f0f73273eb",
-        "1d6d5a22-19bf-45d3-87bb-ae0e7d5f1496"
+        "c1301b25-646f-4a9a-9de9-87f0f73273eb"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -5639,13 +5639,13 @@
       "country": "United States",
       "relatedTourIds": [
         "f71ced9c-bd9a-45da-a39c-74869ce8db65",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "FA8DC5F0-1A0D-535D-B137-9943E8701DA2",
         "5bb90e3a-a81f-492d-b761-b204fa5dc405",
         "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0",
         "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
         "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
-        "bd4d95e6-403e-4b9b-a894-efbc205668a5",
-        "D7797624-EA83-57DD-ADE4-09540672DEB0"
+        "bd4d95e6-403e-4b9b-a894-efbc205668a5"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -7717,7 +7717,7 @@
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
         "868AE974-7EE5-4C95-9259-005771357CBA",
         "BCB89D70-6E55-456F-87BA-42AACE25096E",
-        "6ACC3176-A4EF-4009-A772-E4085B4C2EA2"
+        "506C5269-03A3-5A73-A087-52A3A0151FAC"
       ],
       "walkingDistanceMeters": null
     },
@@ -7770,14 +7770,14 @@
       "city": "Matosinhos",
       "country": "Portugal",
       "relatedTourIds": [
+        "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
         "00bc47f9-639f-44d9-9735-65c8ac608144",
         "defeef28-4159-4ad2-813a-111c64720889",
         "A03FFA2D-6F9F-4BBD-9A32-43273D95D44C",
         "633b095c-207f-4ccb-8936-920993e8793a",
         "57330DDF-BEBB-4218-AD87-DEB1A4D2647C",
-        "491C8A2D-F975-5C10-84FB-1F4459001177",
-        "364fbc84-62fe-590d-acbe-71fa035d5b87"
+        "491C8A2D-F975-5C10-84FB-1F4459001177"
       ],
       "walkingDistanceMeters": null
     },
@@ -8189,11 +8189,11 @@
         "ae287886-2c55-4c3e-b8c2-e2389323aec6",
         "AB267B0E-7169-52F0-8E39-9F0F0C520460",
         "491C8A2D-F975-5C10-84FB-1F4459001177",
+        "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
         "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
         "8618f79f-cc8d-4177-9bcb-bc9b2b5c92bd",
         "121c5e14-92d3-524f-a947-cc7751d93a00",
-        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
-        "364fbc84-62fe-590d-acbe-71fa035d5b87"
+        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1"
       ],
       "walkingDistanceMeters": null
     },
@@ -9997,8 +9997,8 @@
         "E05080DD-9C96-410E-908D-8DD60D2B666C",
         "6bf08919-87f8-469c-9418-1fd13396f435",
         "9645858A-2A4C-55B6-AE89-6B5503AA3630",
-        "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0",
-        "32d39027-caf6-4b14-96c4-8ab8981f1675"
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+        "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -10196,12 +10196,12 @@
       "relatedTourIds": [
         "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
         "00bc47f9-639f-44d9-9735-65c8ac608144",
+        "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
         "9d7c66f0-1c4a-4f00-966c-4f5bb41615de",
         "5a01f367-5ded-54b3-9f65-6587be265184",
         "6b30022e-2630-489d-80ea-02e6931b4ae0",
         "63b7938f-7011-53b8-9dae-47d17a36910b",
-        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0",
-        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0"
       ],
       "walkingDistanceMeters": null
     },
@@ -12913,10 +12913,10 @@
         "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
         "8B42129E-7831-5F35-A453-2DFA3F0E05BD",
         "83090c8c-ab5d-4311-a881-519b1e36183e",
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "51EDB2E0-5A2E-48B2-8490-36A5622CCED7",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
-        "434932e4-9c75-452e-a83b-5ef3ae0cb995",
-        "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe"
+        "434932e4-9c75-452e-a83b-5ef3ae0cb995"
       ],
       "walkingDistanceMeters": null
     },
@@ -13837,14 +13837,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "419547F3-2828-5B49-8800-C3F3683A2CE0",
         "f2e248ef-1b00-49a1-b27e-e31172641815",
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
         "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
         "aa22f015-7b43-41ca-9fe3-282519b7f5d3",
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
         "b829e156-a654-493a-a8c8-bc9d18855ba1",
-        "b9d6f3a2-1c84-4e07-9a35-2d8b7e1f6c04",
-        "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61"
+        "b9d6f3a2-1c84-4e07-9a35-2d8b7e1f6c04"
       ],
       "walkingDistanceMeters": null
     },
@@ -15330,14 +15330,14 @@
       "city": "Matosinhos",
       "country": "Portugal",
       "relatedTourIds": [
+        "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
         "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
         "00bc47f9-639f-44d9-9735-65c8ac608144",
         "11B4526D-530F-4792-B2A0-CBBB23065AA0",
         "EB123E68-A754-458A-9D1C-F9920DC1D18B",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
         "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
-        "2DDA0046-686D-440B-8EEF-1E40E399CC34",
-        "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF"
+        "2DDA0046-686D-440B-8EEF-1E40E399CC34"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -15386,14 +15386,14 @@
       "city": "Matosinhos",
       "country": "Portugal",
       "relatedTourIds": [
+        "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
         "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
         "defeef28-4159-4ad2-813a-111c64720889",
         "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
         "0aa26daf-e710-4eea-b08c-160ff35a71ee",
         "47ffc329-a973-4f8f-a642-d8050e0ae6d8",
-        "aaf11e1b-619b-49b7-99ab-7af06c549903",
-        "70a01d74-8edf-5f78-9d8b-a05850c0299a"
+        "aaf11e1b-619b-49b7-99ab-7af06c549903"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -15901,13 +15901,13 @@
       "country": "Portugal",
       "relatedTourIds": [
         "3CD5FE07-FE45-40D4-B0D3-233397ED1F0E",
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
         "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
         "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
         "5F39B500-3A5D-528D-84D8-A476943D0592",
         "C4F1A8D6-3E92-4B47-8C05-2A7D69E1F3B0",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "421D7599-EBF8-4898-9F80-14B63783C74E"
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -16362,14 +16362,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "77FC2E1C-51EB-507F-A29A-A2F1E0BCA83A",
         "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
         "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
         "CAB7F0DE-0884-4B42-ACCA-AC3C8C878C68",
         "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
         "79A79A2C-DC49-4C42-8FD0-4C2B0ADF54E5",
         "F1F109E7-BCE2-4AFE-98B1-844DCC77A56D",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "868AE974-7EE5-4C95-9259-005771357CBA"
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -18599,7 +18599,7 @@
         "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
         "b829e156-a654-493a-a8c8-bc9d18855ba1",
         "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
-        "88b44354-87c7-402f-99a2-778c1dd1e889"
+        "419547F3-2828-5B49-8800-C3F3683A2CE0"
       ],
       "walkingDistanceMeters": null
     },
@@ -19441,11 +19441,11 @@
         "3CD5FE07-FE45-40D4-B0D3-233397ED1F0E",
         "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
         "868AE974-7EE5-4C95-9259-005771357CBA",
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
         "8883E508-7593-4216-919B-976B840D4B94",
         "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
-        "421D7599-EBF8-4898-9F80-14B63783C74E",
-        "B2A1573B-88F2-4235-864B-21AB2DAE9F73"
+        "421D7599-EBF8-4898-9F80-14B63783C74E"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -21916,7 +21916,7 @@
         "B2A1573B-88F2-4235-864B-21AB2DAE9F73",
         "CAB7F0DE-0884-4B42-ACCA-AC3C8C878C68",
         "2DDA0046-686D-440B-8EEF-1E40E399CC34",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
+        "77FC2E1C-51EB-507F-A29A-A2F1E0BCA83A"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -22086,7 +22086,7 @@
         "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
         "9283D1D6-A58F-43A4-BF69-8BBBE41C1735",
         "CAB7F0DE-0884-4B42-ACCA-AC3C8C878C68",
-        "FE2C76C3-3A27-46B8-8DB5-89C718B311AA"
+        "77FC2E1C-51EB-507F-A29A-A2F1E0BCA83A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -27718,14 +27718,14 @@
       "city": "San Francisco",
       "country": "United States",
       "relatedTourIds": [
+        "C4D4C9FF-FEC3-5408-A0E5-B10107E207C5",
         "c9dbb40c-74ff-4990-b732-93f0600239ba",
         "46614e30-0164-4089-9e0e-412a3351f3f2",
         "51be2e93-47af-4eff-904b-1c8f2e54dd8f",
         "18e6594c-310c-48c2-9e07-7e8ed0ea2b7b",
         "ceeba1e6-3910-4c72-b5ab-8331cbdf04c6",
         "0b630034-6ee5-4940-a70a-0aec90884dd5",
-        "1EE64FCC-09C6-520C-A387-F2CF4DA5856E",
-        "e057ed4e-38ee-406a-a557-80d32a7ccdf2"
+        "1EE64FCC-09C6-520C-A387-F2CF4DA5856E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -39918,7 +39918,7 @@
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "29e01aee-c177-552b-aba8-4533f3ed2935",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8"
+        "E753DE1F-6327-5FAC-877B-26DA39F26935"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -46994,6 +46994,7 @@
         "70b24693-7ea5-5dee-a4e7-16a0733f4273",
         "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44",
         "6F5BB18A-7321-5B23-B3C0-08BAD7BF7BE7",
+        "1498F951-C96B-5A63-B76C-543B0DAA488F",
         "de3e074a-dfc1-51d1-a1ad-437aad4f1ad8"
       ],
       "primaryCategory": "culturalHeritage",
@@ -47160,13 +47161,13 @@
       "country": "United States",
       "relatedTourIds": [
         "6F5BB18A-7321-5B23-B3C0-08BAD7BF7BE7",
+        "1498F951-C96B-5A63-B76C-543B0DAA488F",
         "13c93799-efad-5b2b-b76e-b0002d14aa2a",
         "395687ef-e6d6-5638-ae69-0c0bb575bdaa",
         "de3e074a-dfc1-51d1-a1ad-437aad4f1ad8",
         "5b11d725-84f2-5b43-94c9-6a5dc95262dd",
         "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
-        "85bfcf5a-af16-545a-b690-60f95bc100fb",
-        "112ad69f-7233-5b6f-8ef3-089b66ecedff"
+        "85bfcf5a-af16-545a-b690-60f95bc100fb"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -83794,9 +83795,9 @@
         "5b61699f-7df4-50bc-92de-d249bb9bd15b",
         "03f76815-3768-59f7-a0f6-8c10e25b994e",
         "24a3b3ef-9ae7-5d1f-bcc3-e28cb0aa65a2",
+        "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
         "d1a5e1a2-6619-52fc-9f47-786cfc951713",
-        "F3D92B35-E088-5DEA-902E-D970DB9363E5",
-        "8f22b9f9-0040-5c81-a482-b6690af06479"
+        "F3D92B35-E088-5DEA-902E-D970DB9363E5"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -90027,8 +90028,8 @@
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "30cd96fc-8b3d-566a-bc88-f7d02f8873fb",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
-        "16729030-54d1-5d85-a169-262bbd7ccce8",
-        "221df301-bbf0-5288-be84-4a8da8410e32"
+        "248632A6-ECFC-59DD-8602-7D6FDE205900",
+        "16729030-54d1-5d85-a169-262bbd7ccce8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -90575,14 +90576,14 @@
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
+        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "4a2a2c6c-1274-5be4-b873-cfd4a18979ce",
         "9d0433ff-5d6d-5324-93c7-89d577809253",
         "30cd96fc-8b3d-566a-bc88-f7d02f8873fb",
-        "f35bc6f5-d60f-5f6d-845e-069e02de20fa",
-        "03023be8-eaa8-50c4-a879-27755a370487"
+        "f35bc6f5-d60f-5f6d-845e-069e02de20fa"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -105274,6 +105275,7 @@
         "141B9F48-F18B-5A95-AA24-0E8D6C4A32F5",
         "D431DBC8-A477-586B-89C5-62ACD65B3988",
         "DEE1789D-7659-58BC-81D5-6C6CD8354F2B",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
         "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74"
@@ -108428,6 +108430,7 @@
       "city": "Atlanta",
       "country": "United States",
       "relatedTourIds": [
+        "C50C25B1-26F6-5E8D-A563-AE89FFC84960",
         "90911D9E-A2F8-5A37-A666-0C36D913F406"
       ],
       "primaryCategory": "architecture",
@@ -108670,7 +108673,8 @@
       "relatedTourIds": [
         "9AD98FC2-1525-5C30-A2D6-3DD41A89D9EB",
         "3DE32E13-E41B-500D-B4E1-5DD34236D2AA",
-        "7FE20CF4-9C8C-5E98-8C4D-FB7832A3AC2C"
+        "7FE20CF4-9C8C-5E98-8C4D-FB7832A3AC2C",
+        "C50C25B1-26F6-5E8D-A563-AE89FFC84960"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -108720,7 +108724,8 @@
       "relatedTourIds": [
         "6F5C26D6-5702-51A3-AEA7-D4F06290B4A4",
         "AE3CDCC9-53BF-58AC-B924-C25643C866E5",
-        "5d496a49-e919-5a0e-9062-858447a49eb4"
+        "5d496a49-e919-5a0e-9062-858447a49eb4",
+        "C50C25B1-26F6-5E8D-A563-AE89FFC84960"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -109006,14 +109011,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "4869C445-B103-5494-A5D3-22C47A83B781",
         "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
         "868AE974-7EE5-4C95-9259-005771357CBA",
         "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
         "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
         "C6D74828-2FC9-40AE-A70F-318F1B812AB7",
-        "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
-        "FDE50398-FFF7-48BA-8119-BEAB09A95650"
+        "9C1AE735-FD91-5C13-8D96-3AC695A9839E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -110532,8 +110537,8 @@
         "4E62DBD9-23DD-5F10-9617-3A00514F260F",
         "b794fa21-1665-4f09-bf8f-ce6ce68fff9b",
         "81014923-08E4-5A6A-9244-2FDCB71461FB",
-        "148658CE-C082-5D88-AC1E-4A1A2CDDCA75",
-        "1D2D5C81-BDE3-577A-9420-AE29C6E16B54"
+        "E8D23E76-983D-5164-8227-3021A7885322",
+        "148658CE-C082-5D88-AC1E-4A1A2CDDCA75"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -110891,10 +110896,12 @@
       "country": "United States",
       "relatedTourIds": [
         "91c9fd6a-8423-4519-9b03-df764850dc9b",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "F70F0376-C237-5610-BA05-94F6478775E4",
         "3722D8CA-AC92-5525-8BD6-4BC7A1E49BE4",
         "285885D8-4650-5433-9EC3-C31B301A8704",
-        "4E11A31C-7095-5D45-8438-1B2469A5D5C9"
+        "4E11A31C-7095-5D45-8438-1B2469A5D5C9",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -112209,11 +112216,11 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "DA7E193B-C288-534C-979F-2C35778CCBD7",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
         "4391E119-E608-579A-89C4-293BB6077D6E",
-        "15616CA4-9188-599D-82EC-9CB0EC713F91",
-        "00b933d6-ea4e-5897-93e0-d1bd46622369"
+        "15616CA4-9188-599D-82EC-9CB0EC713F91"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113154,7 +113161,7 @@
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "87253FAE-997E-5189-8BF2-221C9AA77BC5"
+        "35225803-38D9-5C05-9272-6AF04A20C0A4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -114672,9 +114679,9 @@
         "0ECBEEF5-2F3A-5ECD-A12D-ACF2DA4629D9",
         "3639287C-B7A8-5879-B456-9D66DDF34211",
         "7FD5854F-65E7-5AAF-9B60-261989BC4374",
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "C6001D21-FA42-55D4-9B0C-C75D7F4C1838",
-        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
-        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8"
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -118727,7 +118734,7 @@
         "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
         "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
-        "E05080DD-9C96-410E-908D-8DD60D2B666C"
+        "45596643-A2D4-5564-8BF4-08B3F6E08144"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -118783,8 +118790,8 @@
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
         "74338039-7AA9-5073-A1E8-933576D8D0BE",
         "3396CA2F-7227-5782-84AF-D775B186B1B3",
-        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
-        "2D9775A9-F265-5D5A-8995-76D87C5CC94E"
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -119704,13 +119711,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "027561D7-DF07-55E6-9F06-E6147FCB8BA9",
         "EAD9A3AA-0BC3-5F2B-990A-FCB3D63E0653",
         "97E68647-734B-5394-818E-D19C7B638413",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "2A7C8EAA-6CF9-50DE-8FEC-D8E61B418F0F",
-        "B468E53C-5AA8-5C29-B047-499E7C7DC24D",
-        "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445"
+        "B468E53C-5AA8-5C29-B047-499E7C7DC24D"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -124424,14 +124431,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "051957C8-9EAC-5882-B79D-89AAE7996A29",
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
         "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74",
         "454E3047-53DA-501F-AEB5-ABEBA197F4F6",
         "3396CA2F-7227-5782-84AF-D775B186B1B3",
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
-        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
-        "D4B20FCC-8A00-5048-A4F9-CB7ED253DFFA"
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -129419,8 +129426,8 @@
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
         "3B7D447F-55D7-586F-88C9-73EAD75ACA09",
         "051957C8-9EAC-5882-B79D-89AAE7996A29",
-        "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74",
-        "211C1887-3A39-5A37-A48E-296110DC294C"
+        "E8D23E76-983D-5164-8227-3021A7885322",
+        "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -129738,14 +129745,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "FA8DC5F0-1A0D-535D-B137-9943E8701DA2",
         "f71ced9c-bd9a-45da-a39c-74869ce8db65",
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
         "C3BE5960-C13B-5686-BABA-A27F9FEED746",
         "051957C8-9EAC-5882-B79D-89AAE7996A29",
         "98a1348c-467a-4572-984c-345a8be66d95",
-        "510855AC-7F71-510B-98AB-05B3E1D5F7B5",
-        "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0"
+        "510855AC-7F71-510B-98AB-05B3E1D5F7B5"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -133063,11 +133070,11 @@
         "F6509A47-05EB-5646-BDB9-40862B6DE011",
         "3639287C-B7A8-5879-B456-9D66DDF34211",
         "231358B0-D525-54E6-9B85-45620B1F091B",
+        "13BE40A3-B80B-5CE2-BFE2-CEBFEA84A2C2",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
         "b8b71d88-7dfc-4ff9-af2f-1fc195c6f175",
         "284BBDF4-30D5-560C-ABD8-EA33C666AA48",
-        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
-        "0ECBEEF5-2F3A-5ECD-A12D-ACF2DA4629D9"
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136646,13 +136653,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
+        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "8B00C9C0-030E-5343-AF6A-EFA27EE80605",
-        "aa04a89a-8231-54db-984b-198e33c14ffd",
-        "10a6ae4d-cdd6-554d-a950-a4291489ba66"
+        "aa04a89a-8231-54db-984b-198e33c14ffd"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142429,9 +142436,9 @@
         "00b933d6-ea4e-5897-93e0-d1bd46622369",
         "31C62BBC-CA52-5C76-88CC-058A077D07F1",
         "3dd57e77-d4fe-509e-a552-daf4d97c146c",
-        "993900D5-8F6E-5195-BBB3-9CF024934D09",
-        "34A7E90A-8A6C-52F2-B090-CEF5F85948DF",
-        "4A662900-5E8A-5B78-A8AA-8ADFCDE6ECE5"
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
+        "993900D5-8F6E-5195-BBB3-9CF024934D09"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -142480,6 +142487,7 @@
       "country": "United States",
       "relatedTourIds": [
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4",
         "2C45E28C-9941-5126-9998-685A0E9BC5C3",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D"
@@ -142534,11 +142542,11 @@
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
         "274364F2-9835-5B40-957F-243E11F271E6",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "69A1F424-5140-5D46-9BA6-636FBEFE8A2A",
-        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
-        "1e347268-7628-573b-a386-67dbb79c991a"
+        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142690,9 +142698,9 @@
         "69A1F424-5140-5D46-9BA6-636FBEFE8A2A",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
         "1e347268-7628-573b-a386-67dbb79c991a",
+        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
         "87253FAE-997E-5189-8BF2-221C9AA77BC5",
-        "4D01F2E0-96B7-52C9-B08A-E6C39DE50E8B",
-        "53399B54-7F35-5B05-B68D-05CF48E59BCB"
+        "4D01F2E0-96B7-52C9-B08A-E6C39DE50E8B"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142898,9 +142906,9 @@
         "87253FAE-997E-5189-8BF2-221C9AA77BC5",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB",
-        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "69A1F424-5140-5D46-9BA6-636FBEFE8A2A"
+        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142952,6 +142960,7 @@
         "DA7E193B-C288-534C-979F-2C35778CCBD7",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "2644D271-E442-5007-85CD-8D4E57333C50",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D"
       ],
@@ -143658,8 +143667,8 @@
         "1e347268-7628-573b-a386-67dbb79c991a",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
-        "8D3764A4-7D4D-5B30-A0E4-9EA542BEB248",
-        "7BB01190-6F4E-5F2F-9156-59F8E5772FBD"
+        "1328F132-7D89-556A-A116-5DE3E6C89324",
+        "8D3764A4-7D4D-5B30-A0E4-9EA542BEB248"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -164716,6 +164725,7 @@
       "city": "Bilbao",
       "country": "Spain",
       "relatedTourIds": [
+        "D67840C8-7492-53E3-BCFF-EB2F03544600",
         "F8D83CDC-BC1E-523F-80AC-7F86F3F692DC"
       ],
       "primaryCategory": "visualArt",
@@ -166507,6 +166517,7 @@
       "relatedTourIds": [
         "28BE346A-0FD6-55E3-BF04-C19316519B8B",
         "448FAE72-611F-59A6-AD71-831F6AAEA291",
+        "0D409207-D8DD-5258-B986-EE78B6E95990",
         "3D0A8FC3-6633-5229-AC3D-D87FD41381BE"
       ],
       "primaryCategory": "visualArt",
@@ -166555,6 +166566,9 @@
       "centroidLongitude": -79.635741,
       "city": "Mississauga",
       "country": "Canada",
+      "relatedTourIds": [
+        "0D409207-D8DD-5258-B986-EE78B6E95990"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -170427,11 +170441,11 @@
         "0E5C7D13-60A7-55FD-ADFE-57444895DD25",
         "22f6500a-08a3-5574-8b09-71a7b3844be8",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "4FCF119D-B2EB-5C12-A572-9127045B4994",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "B5D1670D-63CA-5420-AE6D-102DADDB1945"
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -171856,14 +171870,14 @@
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
+        "35225803-38D9-5C05-9272-6AF04A20C0A4",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "89C2B84E-2353-56B4-AA9F-835A22C8F4B0",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
-        "15616CA4-9188-599D-82EC-9CB0EC713F91",
-        "2C45E28C-9941-5126-9998-685A0E9BC5C3"
+        "15616CA4-9188-599D-82EC-9CB0EC713F91"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -172011,6 +172025,7 @@
       "country": "United States",
       "relatedTourIds": [
         "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "640174C1-0885-5240-A60C-BE8600CDEBA1"
       ],
       "primaryCategory": "history",
@@ -172061,12 +172076,12 @@
       "relatedTourIds": [
         "640174C1-0885-5240-A60C-BE8600CDEBA1",
         "122EF50A-16AE-545B-AD52-972841AB045D",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "274364F2-9835-5B40-957F-243E11F271E6",
-        "DA7E193B-C288-534C-979F-2C35778CCBD7",
-        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "8E89E2EB-7DC2-57BA-A3BE-F54F865389BB"
+        "35225803-38D9-5C05-9272-6AF04A20C0A4",
+        "274364F2-9835-5B40-957F-243E11F271E6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -175049,6 +175064,7 @@
       "relatedTourIds": [
         "39e4f325-e903-51dd-8032-aea6bb824ed1",
         "29e01aee-c177-552b-aba8-4533f3ed2935",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00"
       ],
@@ -176948,12 +176964,12 @@
       "relatedTourIds": [
         "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
         "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "5f8ecfcf-6841-5878-a76f-fa63c55b6d25",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "122EF50A-16AE-545B-AD52-972841AB045D",
-        "651683A3-B3E5-5C32-9F81-D7F2523431F5",
-        "2644D271-E442-5007-85CD-8D4E57333C50"
+        "122EF50A-16AE-545B-AD52-972841AB045D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -177890,10 +177906,10 @@
         "0401F573-1962-5BE6-B1F8-834FA3F4C1AC",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
         "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
-        "54bf1d1a-5468-578f-bbbf-13616836c322",
-        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F"
+        "54bf1d1a-5468-578f-bbbf-13616836c322"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -179823,7 +179839,7 @@
         "24DA376F-9B8B-53DF-B89B-E5D6D21E912D",
         "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
         "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
-        "8B42129E-7831-5F35-A453-2DFA3F0E05BD"
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -179986,11 +180002,11 @@
         "B8B80D4C-A3E5-5B12-8947-B4889463C2FF",
         "8B42129E-7831-5F35-A453-2DFA3F0E05BD",
         "239E3759-DD45-5FB3-B33F-5AB6AF29FC0A",
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "b0ef546a-db5c-4b27-8eb3-be4dd6665e61",
         "735832B6-E1A0-5C91-83BD-C44F2B919D04",
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
-        "D7797624-EA83-57DD-ADE4-09540672DEB0",
-        "540613ee-b72f-4460-95ff-a03d921681ae"
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -180292,14 +180308,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "D3C29780-34E6-57D5-8872-C8A7C899D98C",
         "9645858A-2A4C-55B6-AE89-6B5503AA3630",
         "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
         "7FD5854F-65E7-5AAF-9B60-261989BC4374",
         "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
         "B588557F-110A-59A3-9BCF-CA1EEE07A67C",
-        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
-        "231358B0-D525-54E6-9B85-45620B1F091B"
+        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -181719,8 +181735,8 @@
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "274364F2-9835-5B40-957F-243E11F271E6",
-        "34A7E90A-8A6C-52F2-B090-CEF5F85948DF",
-        "31C62BBC-CA52-5C76-88CC-058A077D07F1"
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -190133,7 +190149,7 @@
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "69A1F424-5140-5D46-9BA6-636FBEFE8A2A"
+        "35225803-38D9-5C05-9272-6AF04A20C0A4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -190654,12 +190670,12 @@
       "relatedTourIds": [
         "508B9C20-A52C-5FB2-B167-8ABBC2096F7B",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
         "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
         "231358B0-D525-54E6-9B85-45620B1F091B",
-        "E05080DD-9C96-410E-908D-8DD60D2B666C",
-        "4E11A31C-7095-5D45-8438-1B2469A5D5C9",
-        "67423DEA-A03C-53E1-9439-55E0B997E2B1",
-        "C4179D5E-A494-5ED8-A5F3-55D8E2079737"
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+        "E05080DD-9C96-410E-908D-8DD60D2B666C"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -191617,14 +191633,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "1CA4297B-C597-582E-8263-90422B6446B9",
         "4FD3764D-84A9-5E3E-94CD-1F762D62DD3E",
         "30335E60-DCB4-59A1-B6E3-25FDBB872557",
         "0FB132C0-9F5B-52BC-98AA-1B5741B32B00",
         "0c99c91e-e39b-5c28-98c1-b3186c325122",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
-        "45DC77F1-CAA3-576E-9939-53908497459C",
-        "D51D97B2-9814-533A-9D9A-90292B89E5F5"
+        "45DC77F1-CAA3-576E-9939-53908497459C"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -192187,12 +192203,12 @@
       "relatedTourIds": [
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "4391E119-E608-579A-89C4-293BB6077D6E",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4",
         "274364F2-9835-5B40-957F-243E11F271E6",
-        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
-        "00b933d6-ea4e-5897-93e0-d1bd46622369",
-        "31C62BBC-CA52-5C76-88CC-058A077D07F1"
+        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -199413,6 +199429,7 @@
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
+        "1498F951-C96B-5A63-B76C-543B0DAA488F",
         "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
         "5b11d725-84f2-5b43-94c9-6a5dc95262dd",
@@ -206086,7 +206103,7 @@
         "d266002e-5084-59c7-ad42-66dfdbabeae4",
         "398425bf-adad-567f-b0cc-2b68980da1a3",
         "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
-        "63b7938f-7011-53b8-9dae-47d17a36910b"
+        "F95346EB-63A0-5C2E-91CE-E4B5BF810A6C"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -206227,11 +206244,11 @@
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
+        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "9005F077-0DBF-5E22-BAE8-20CB3EDDA1CA",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
         "ea0cf211-37a9-50db-b1f8-8d21176d4793",
-        "A8025FB7-569E-5E7E-AB82-EE0509A49D28",
-        "3a204992-9c15-5d46-849a-8b5ec49e3729"
+        "A8025FB7-569E-5E7E-AB82-EE0509A49D28"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -211642,11 +211659,11 @@
         "BF959358-F583-53DE-B608-312E42CB3910",
         "868AE974-7EE5-4C95-9259-005771357CBA",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
         "3CD5FE07-FE45-40D4-B0D3-233397ED1F0E",
         "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
         "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
-        "C6D74828-2FC9-40AE-A70F-318F1B812AB7",
-        "804543FB-1E9C-5F70-9074-A0260645C638"
+        "C6D74828-2FC9-40AE-A70F-318F1B812AB7"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -211903,12 +211920,12 @@
       "relatedTourIds": [
         "B588557F-110A-59A3-9BCF-CA1EEE07A67C",
         "7FD5854F-65E7-5AAF-9B60-261989BC4374",
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "24DA376F-9B8B-53DF-B89B-E5D6D21E912D",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
         "231358B0-D525-54E6-9B85-45620B1F091B",
         "D3C29780-34E6-57D5-8872-C8A7C899D98C",
-        "69440E09-7F58-5388-8EEE-D4AFB49A247B",
-        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
+        "69440E09-7F58-5388-8EEE-D4AFB49A247B"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -221253,6 +221270,7 @@
       "city": "Shanghai",
       "country": "China",
       "relatedTourIds": [
+        "82374C09-578C-5D35-9244-76E7741D8FD2",
         "01C9B328-1C76-5819-9FB1-E5035DD7A6A7",
         "CBF47EEA-7405-5351-8DE2-AE0F5FD7A667",
         "6C4E500A-0C27-54F9-8DF8-05A54C2946EF"
@@ -227899,9 +227917,9 @@
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "21382EC3-24C6-547D-A3DA-7DF8FCAD4C54",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
+        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "A8025FB7-569E-5E7E-AB82-EE0509A49D28",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
-        "3a204992-9c15-5d46-849a-8b5ec49e3729"
+        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -228479,12 +228497,12 @@
       "relatedTourIds": [
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
+        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "21382EC3-24C6-547D-A3DA-7DF8FCAD4C54",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
-        "03023be8-eaa8-50c4-a879-27755a370487"
+        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -228694,10 +228712,10 @@
         "3851D982-58C7-5840-89C4-DB748835B989",
         "3FCE5F42-BB6D-5D1A-AD39-9D60B46BEB21",
         "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
         "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
-        "9b93d74b-505a-5886-9cf7-a5ca235c12de",
-        "CCBA4C5E-84EF-5813-85A9-F4CAE81B990D"
+        "9b93d74b-505a-5886-9cf7-a5ca235c12de"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -228849,8 +228867,8 @@
         "B468E53C-5AA8-5C29-B047-499E7C7DC24D",
         "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
         "7F813653-AA6A-5EF6-8FBA-7D0FAC395101",
-        "137146d0-0398-5074-8c5c-484d1244172d",
-        "c9611436-6e6a-526c-ad3d-e34b9bfe6117"
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
+        "137146d0-0398-5074-8c5c-484d1244172d"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -229944,10 +229962,10 @@
         "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
         "C70C7BF7-32D3-57FA-85D5-FB722094CD8F",
         "868AE974-7EE5-4C95-9259-005771357CBA",
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
         "D8B0A233-57B2-5F10-977D-7A0F9FECB799",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
-        "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
+        "4869C445-B103-5494-A5D3-22C47A83B781"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -229996,12 +230014,12 @@
       "relatedTourIds": [
         "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
         "BF959358-F583-53DE-B608-312E42CB3910",
+        "4869C445-B103-5494-A5D3-22C47A83B781",
         "D8B0A233-57B2-5F10-977D-7A0F9FECB799",
+        "506C5269-03A3-5A73-A087-52A3A0151FAC",
         "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "7D7BB92F-5208-5540-88C2-366BD50EBA64",
-        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
-        "868AE974-7EE5-4C95-9259-005771357CBA",
-        "3B78F99C-A031-4EF7-A55B-10D9D7C550A4"
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
+        "7D7BB92F-5208-5540-88C2-366BD50EBA64"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -230048,13 +230066,13 @@
       "country": "Portugal",
       "relatedTourIds": [
         "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
+        "4869C445-B103-5494-A5D3-22C47A83B781",
         "BF959358-F583-53DE-B608-312E42CB3910",
         "C70C7BF7-32D3-57FA-85D5-FB722094CD8F",
         "4488A2E8-4FB2-48D6-9EF8-72C892627298",
         "C6D74828-2FC9-40AE-A70F-318F1B812AB7",
-        "804543FB-1E9C-5F70-9074-A0260645C638",
-        "421D7599-EBF8-4898-9F80-14B63783C74E",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
+        "804543FB-1E9C-5F70-9074-A0260645C638"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -230105,11 +230123,11 @@
         "C70C7BF7-32D3-57FA-85D5-FB722094CD8F",
         "BF959358-F583-53DE-B608-312E42CB3910",
         "D8B0A233-57B2-5F10-977D-7A0F9FECB799",
+        "4869C445-B103-5494-A5D3-22C47A83B781",
+        "506C5269-03A3-5A73-A087-52A3A0151FAC",
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
         "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "804543FB-1E9C-5F70-9074-A0260645C638",
-        "7D7BB92F-5208-5540-88C2-366BD50EBA64",
-        "868AE974-7EE5-4C95-9259-005771357CBA",
-        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2"
+        "804543FB-1E9C-5F70-9074-A0260645C638"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -230976,14 +230994,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "33a95e17-5676-5a41-89e1-69114fd03a40",
         "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
         "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
         "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
-        "1CA4297B-C597-582E-8263-90422B6446B9",
-        "1BFE9AE7-74B9-5AB6-80AA-EE73D0DC4D3F"
+        "1CA4297B-C597-582E-8263-90422B6446B9"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -231086,6 +231104,7 @@
         "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8",
         "1CA4297B-C597-582E-8263-90422B6446B9",
         "39e4f325-e903-51dd-8032-aea6bb824ed1",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "10169772-6B9B-50FE-B5A4-F13D77068BED",
         "7059efa5-1166-55d6-99e6-903769fecfb8"
       ],
@@ -235336,12 +235355,12 @@
       "relatedTourIds": [
         "c7052e56-8a06-4e35-ba64-4a65f2f5e11c",
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
+        "E8D23E76-983D-5164-8227-3021A7885322",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
         "FB11F2BF-7AAF-5C1A-96CA-FF34BE6EB056",
         "D7797624-EA83-57DD-ADE4-09540672DEB0",
         "1CDA55C8-4CD3-5735-B5AE-CAA77AA55303",
-        "EBF3ACE6-8D0B-5DDB-9510-409F37340378",
-        "b0ef546a-db5c-4b27-8eb3-be4dd6665e61",
-        "F9294EDC-1588-51AB-BCC3-529FF7F292CC"
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -236389,13 +236408,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "137146d0-0398-5074-8c5c-484d1244172d",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
         "595609f3-77f0-5c4e-8168-3ba0fd34b228",
         "c7d6db46-7c8a-59a3-92af-7f3429d719df",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
         "69d08739-f300-56b7-8c41-67f1e08b745b",
-        "675cff67-7f73-543a-8339-61b55d4a8ec8",
-        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2"
+        "675cff67-7f73-543a-8339-61b55d4a8ec8"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -236442,14 +236461,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "8B42129E-7831-5F35-A453-2DFA3F0E05BD",
         "D3C29780-34E6-57D5-8872-C8A7C899D98C",
         "3639287C-B7A8-5879-B456-9D66DDF34211",
         "4E11A31C-7095-5D45-8438-1B2469A5D5C9",
         "b8b71d88-7dfc-4ff9-af2f-1fc195c6f175",
         "F70F0376-C237-5610-BA05-94F6478775E4",
-        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
-        "B588557F-110A-59A3-9BCF-CA1EEE07A67C"
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -243134,7 +243153,8 @@
       "city": "Las Vegas",
       "country": "United States",
       "relatedTourIds": [
-        "8B698E66-80CD-5166-B8B6-C440A71E1F2F"
+        "8B698E66-80CD-5166-B8B6-C440A71E1F2F",
+        "410887F3-61F4-5D68-9F79-BAB9B2D63FF8"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -249817,6 +249837,2877 @@
       "tags": [
         "Venue",
         "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A18526B6-C854-5AD0-AF75-5ECCF30628DC",
+      "createdAt": "2026-09-16",
+      "title": "Cité de Refuge",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "In 1933, Le Corbusier sealed an entire building in glass. The residents couldn't bear the heat. Cité de Refuge. Paris, 1933. A Salvation Army shelter, still functioning today. Le Corbusier's theory: \"exact air.\" A sealed building. No windows. Clean air by machine. The budget ran out. Single layer of glass. No climate system. In summer become a greenhouse. Two years after opening they cut the windows open. August 25, 1944, liberation day, a German bomb shattered the entire facade. What replaced it changed the building forever. Listed as UNESCO World Heritage in 2016. Restored for €31.7 million. Still a shelter. 90 years later. Follow for the parts of Europe most travelers walk straight past. 📍 12 Rue Cantagrel, Paris 13e #lecorbusier #paris #parisarchitecture #modernarchitecture #architecturelovers",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cit-de-refuge-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7685395974650383638",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "A032AF18-A5A0-5417-997C-1E7A845C9187",
+          "order": 0,
+          "title": "Cité de Refuge",
+          "caption": "In 1933, Le Corbusier sealed an entire building in glass. The residents couldn't bear the heat. Cité de Refuge. Paris, 1933. A Salvation Arm",
+          "latitude": 48.8268,
+          "longitude": 2.3769,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cit-de-refuge-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8268,
+      "centroidLongitude": 2.3769,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "280948c0-b59f-50d6-b237-2bb87253dede",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
+        "eef8a099-2f7a-5883-9c02-35c0e1836bbd",
+        "33a95e17-5676-5a41-89e1-69114fd03a40",
+        "4FD3764D-84A9-5E3E-94CD-1F762D62DD3E",
+        "30335E60-DCB4-59A1-B6E3-25FDBB872557",
+        "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Le Corbusier",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E753DE1F-6327-5FAC-877B-26DA39F26935",
+      "createdAt": "2026-09-16",
+      "title": "Bibliothèque Nationale de France",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "The French president personally chose an unknown 36-year-old. 244 proposals. 19 jury votes. All 19 for Perrault. This is the Bibliothèque Nationale de France. Paris, 1995. Four glass towers shaped like open books. Built on a former industrial wasteland along the Seine. The brief: build a library for the 21st century. One problem: glass lets in sunlight. Sunlight destroys paper. So the books went underground. The towers became offices. The most visible part holds almost none of the collection. At the centre — a forest. 250 trees in an enclosed courtyard. Visitors cannot enter it. Cost: €500 million. The most expensive of Mitterrand's Grand Travaux — which also gave Paris the Louvre Pyramid and the Grande Arche. After opening — immediate criticism. Wind-exposed esplanade. Uncomfortable towers. Unreachable garden. Follow for the parts of Europe most travelers walk straight past. bnf | paris | frencharchitecture | dominiqueperrault | modernarchitecture | bibliothequenationaledefrance | architecturelovers | hiddeneurope | europetravel | architecturefacts | parisarchitecture | grandstravaux | mitterrand | contemporaryarchitecture | unexpectedeurope",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/biblioth-que-nationale-de-france-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7681265934799080726",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "63FC2DE8-581D-5741-9A38-98A8B0039F1F",
+          "order": 0,
+          "title": "Bibliothèque Nationale de France",
+          "caption": "The French president personally chose an unknown 36-year-old. 244 proposals. 19 jury votes. All 19 for Perrault. This is the Bibliothèque Na",
+          "latitude": 48.835,
+          "longitude": 2.376,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/biblioth-que-nationale-de-france-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.835,
+      "centroidLongitude": 2.376,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "33a95e17-5676-5a41-89e1-69114fd03a40",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "9b93d74b-505a-5886-9cf7-a5ca235c12de",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "fe851682-ace4-5556-ae62-956ea14e0e66",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "39e4f325-e903-51dd-8032-aea6bb824ed1",
+        "95104ff5-7467-5439-94a3-49282747578a"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Architecture",
+        "Literature",
+        "Contemporary",
+        "Dominique Perrault"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C16669E8-FC9D-5C28-B9D7-C0A1ED0CE98A",
+      "createdAt": "2026-09-16",
+      "title": "Philharmonie Luxembourg",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "827 columns. Not one decorative. Every single one has a job. Philharmonie Luxembourg. Christian de Portzamparc. 2005. First French architect to win the Pritzker Prize. Surrounded by EU institutions — the European Commission, the Court of Justice. A concert hall in the middle of a bureaucratic quarter. Portzamparc wanted a forest. No room for trees. So he built 827 steel columns instead. From a distance — geometry. Step between them — the city disappears. At night the columns light up from within. The building becomes a lantern. 400 performances a year. Population: less than 700,000. Follow for the parts of Europe most travelers walk straight past. philharmonieluxembourg | luxembourg | luxembourgcity | christiandeportzamparc | modernarchitecture | concerthall | architecturelovers | hiddeneurope | europetravel | architecturefacts | pritzkerprize | contemporaryarchitecture | unexpectedeurope | luxembourgarchitecture | acoustics",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/philharmonie-luxembourg-tiktok-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7678482315386932502",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "C9D993A9-270C-5C40-AF39-CEC289DA1F15",
+          "order": 0,
+          "title": "Philharmonie Luxembourg",
+          "caption": "827 columns. Not one decorative. Every single one has a job. Philharmonie Luxembourg. Christian de Portzamparc. 2005. First French architect",
+          "latitude": 49.6184,
+          "longitude": 6.1425,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/philharmonie-luxembourg-tiktok-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 49.6184,
+      "centroidLongitude": 6.1425,
+      "city": "Luxembourg City",
+      "country": "Luxembourg",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Performance",
+        "Contemporary",
+        "Christian de Portzamparc",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "77FC2E1C-51EB-507F-A29A-A2F1E0BCA83A",
+      "createdAt": "2026-09-16",
+      "title": "MAAT",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "You've seen photos of Lisbon. You haven't seen this. MAAT, Belém. Amanda Levete. 2016. The river at sunset looked \"like the sea was on fire\" — and that moment defined everything. Almost 15,000 tiles reflect the Tagus light into the gallery below. The building uses the river as a light source. Next door — a power station from 1908. Same riverbank. Different century. During the opening weekend — 22,000 people came. The roof became a public square overnight. Save this for your next trip to Lisbon. Follow for the parts of Europe most travelers walk straight past. YouTube Shorts Lisbon has a museum that uses the Tagus River as a light source. MAAT — Belém, Lisbon. Amanda Levete, 2016. Almost 15,000 ceramic tiles reflect sunlight from the river through skylights into the main gallery below. When Levete first saw the site at sunset — \"the sea was on fire,\" she said. That moment defined everything. Next door: Central Tejo power station, 1908. Same riverbank. Different century. What the video doesn't show — during the opening weekend, 22,000 people arrived. The roof became a public square overnight. Save this for your next trip to Lisbon. Follow for the parts of Europe most travelers walk straight past. maat | lisbon | lisbonarchitecture | amandalevete | modernarchitecture | hiddenlisbon | architecturelovers | europetravel | hiddeneurope | lisbonmuseums | thingstodoinlisbon | belemLisbon | contemporaryarchitecture | portugaltavel | unexpectedeurope",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maat-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7673792034280344854",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "813D7190-1303-55D1-9CBB-29CCA8DFAE83",
+          "order": 0,
+          "title": "MAAT",
+          "caption": "You've seen photos of Lisbon. You haven't seen this. MAAT, Belém. Amanda Levete. 2016. The river at sunset looked \"like the sea was on fire\"",
+          "latitude": 38.6959,
+          "longitude": -9.1936,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maat-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.6959,
+      "centroidLongitude": -9.1936,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "FE2C76C3-3A27-46B8-8DB5-89C718B311AA",
+        "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
+        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
+        "F1F109E7-BCE2-4AFE-98B1-844DCC77A56D",
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
+        "2DDA0046-686D-440B-8EEF-1E40E399CC34",
+        "CAB7F0DE-0884-4B42-ACCA-AC3C8C878C68",
+        "4C6C8B8E-7A27-49D2-AF16-F9CCD0C9CD20"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Waterfront",
+        "Architecture",
+        "Art",
+        "Contemporary",
+        "Amanda Levete",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D67840C8-7492-53E3-BCFF-EB2F03544600",
+      "createdAt": "2026-09-16",
+      "title": "Guggenheim Museum Bilbao",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "Gehry wanted stainless steel. It looked dead in Bilbao's grey sky. He found titanium by accident in his office. Nailed it to a telephone pole outside. It rained that day in LA. The metal turned golden. \"I had one of those Eureka moments.\" 33,000 panels. Each 0.38mm thin. No two identical. Cloudy day — silver grey. Sunny day — liquid gold. Same building. Gehry had been obsessed with fish since childhood. His grandmother kept a live carp in the bathtub every Thursday. The scales. The movement. The way they catch light. It's all there. In every panel. Follow for the parts of Europe most travelers walk straight past. guggenheimbilbao | bilbao | frankgehry | titanium | modernarchitecture | architecturelovers | hiddeneurope | europetravel | deconstructivism | architecturefacts | bilbaomuseum | gehry | pritzkerprize | contemporaryarchitecture | unexpectedeurope",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guggenheim-museum-bilbao-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7668092049266150678",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "44B4697A-2D3A-54B7-9900-CCA088ED916A",
+          "order": 0,
+          "title": "Guggenheim Museum Bilbao",
+          "caption": "Gehry wanted stainless steel. It looked dead in Bilbao's grey sky. He found titanium by accident in his office. Nailed it to a telephone pol",
+          "latitude": 43.2684,
+          "longitude": -2.9341,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guggenheim-museum-bilbao-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.2684,
+      "centroidLongitude": -2.9341,
+      "city": "Bilbao",
+      "country": "Spain",
+      "relatedTourIds": [
+        "DAF17ECC-DD42-51BD-8B12-987373717A05"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Contemporary",
+        "Frank Gehry",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "73387EF4-3706-5B72-9668-61B6A618F8B8",
+      "createdAt": "2026-09-16",
+      "title": "Gare do Oriente",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "75 million people a year. Most staring at their phones. Gare do Oriente. Santiago Calatrava. 1998. More passengers than Grand Central in New York. Steel columns that branch like trees. A glass canopy 238 by 78 metres. Built on abandoned wasteland that cut two neighbourhoods apart — Calatrava connected them. Won the highest prize for railway architecture. Then a shopping mall was built in front of the entrance. Álvaro Siza publicly criticised the decision. The forest is still there. You just have to walk past the mall. Calatrava designed this so people would stop. Look up. Put the phone away. Follow for the parts of Europe most travelers walk straight past. garedooriente | lisbon | lisbonarchitecture | calatrava | santiagocalatrava | modernarchitecture | architecturelovers | hiddeneurope | europetravel | lisbontravel | trainstation | concreteforest | unexpectedeurope | portugaltavel | brunelaward",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gare-do-oriente-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7662536026883198230",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "807AFA3F-5606-5E79-897C-D6CE0EFD8CFA",
+          "order": 0,
+          "title": "Gare do Oriente",
+          "caption": "75 million people a year. Most staring at their phones. Gare do Oriente. Santiago Calatrava. 1998. More passengers than Grand Central in New",
+          "latitude": 38.7678,
+          "longitude": -9.0992,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gare-do-oriente-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7678,
+      "centroidLongitude": -9.0992,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "2418E4CC-7611-4FC9-A915-4DC596D5D9C7",
+        "C4415E25-892D-4FFA-8B73-BB24676BD0FB",
+        "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA",
+        "F9DA8019-F0D3-4FFE-9F72-1FAD231BD191",
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
+        "9283D1D6-A58F-43A4-BF69-8BBBE41C1735",
+        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
+        "02DDDD4C-4A56-48B8-8326-185746E8837B"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Contemporary",
+        "Santiago Calatrava",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CCA80413-9052-5CC3-944E-6A37C23B410F",
+      "createdAt": "2026-09-16",
+      "title": "Casa da Música",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "Porto needed a concert hall. Koolhaas gave them a converted house. The design was originally a private residence for a Rotterdam client who dropped the project. Koolhaas scaled it up five times, replaced bedrooms with concert halls, and submitted it to Porto in under two weeks. He beat Zaha Hadid, Norman Foster, and Peter Zumthor. The jury included Álvaro Siza. Koolhaas researched the best concert halls in the world — and concluded the shoebox shape has the best acoustics. So he kept it. But added two glass walls so you can watch Porto while the orchestra plays. Four years late. 100 million euros. Opening concert by Lou Reed. Built on a demolished tram terminus. Follow for the parts of Europe most travelers walk straight past. casadamusica | remkoolhaas | oma | porto | portoportugal | portuguesearchitecture | modernarchitecture | concerthall | architecturelovers | hiddeneurope | europetravel | architecturehistory | unexpectedeurope | portohiddengems | pritzkerprize",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-da-m-sica-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7657583701739506966",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "F767264F-1584-5F9B-ADE5-ACDEFB2C604C",
+          "order": 0,
+          "title": "Casa da Música",
+          "caption": "Porto needed a concert hall. Koolhaas gave them a converted house. The design was originally a private residence for a Rotterdam client who ",
+          "latitude": 41.1589,
+          "longitude": -8.6308,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-da-m-sica-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.1589,
+      "centroidLongitude": -8.6308,
+      "city": "Porto",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "b66f9ad2-0562-4038-a5c0-ba198f0bc2de",
+        "8efa1abc-1274-475f-89ee-c506bb72f1ea",
+        "0aa26daf-e710-4eea-b08c-160ff35a71ee",
+        "aaf11e1b-619b-49b7-99ab-7af06c549903",
+        "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
+        "96b369ab-e962-4916-884d-e7459ff3da59",
+        "c1301b25-646f-4a9a-9de9-87f0f73273eb",
+        "da803a7d-61a5-44c7-a1b0-7c9f35994e64"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Performance",
+        "Contemporary",
+        "Rem Koolhaas",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
+      "createdAt": "2026-09-16",
+      "title": "Piscina das Marés",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "Most people walking the Camino from Porto walk straight past this. A pool carved into the Atlantic coastline. Designed by Álvaro Siza in 1961, when he was 28. The city council wanted a water tank. He gave them a National Monument. You don't see it until you're almost inside it. First you hear the ocean. Then you feel the wind. Then water. Framed by the original rocks he refused to remove. Most architects ask: what can I build here? Siza asked: what is already here? Still operating as a public pool every summer. Still a National Monument. Same building. Part 1 — An Architect on the Camino de Santiago. I",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piscina-das-mar-s-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7649764823554657569",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "0AEB6F06-3AB4-5DA7-8AF8-BAE56F7ACED4",
+          "order": 0,
+          "title": "Piscina das Marés",
+          "caption": "Most people walking the Camino from Porto walk straight past this. A pool carved into the Atlantic coastline. Designed by Álvaro Siza in 196",
+          "latitude": 41.1928,
+          "longitude": -8.7075,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piscina-das-mar-s-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.1928,
+      "centroidLongitude": -8.7075,
+      "city": "Matosinhos",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
+        "defeef28-4159-4ad2-813a-111c64720889",
+        "00bc47f9-639f-44d9-9735-65c8ac608144",
+        "8F9BB8DE-8222-4616-B65A-6193F393EE9A"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Waterfront",
+        "Architecture",
+        "Modernist",
+        "Álvaro Siza",
+        "Hidden Gem",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
+      "createdAt": "2026-09-16",
+      "title": "CAM – Centro de Arte Moderna Gulbenkian",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "this is Lisbon, not Japan 🇵🇹🇯🇵 would you walk through this? 👇 #lisbon #portugal #architecture #travel #hiddenarch",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cam-centro-de-arte-moderna-gulbenkian-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7644582908434386208",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "C524F462-A433-5AE8-A589-7270AC4E3258",
+          "order": 0,
+          "title": "CAM – Centro de Arte Moderna Gulbenkian",
+          "caption": "this is Lisbon, not Japan 🇵🇹🇯🇵 would you walk through this? 👇 #lisbon #portugal #architecture #travel #hiddenarch",
+          "latitude": 38.7373,
+          "longitude": -9.1548,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cam-centro-de-arte-moderna-gulbenkian-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7373,
+      "centroidLongitude": -9.1548,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "868AE974-7EE5-4C95-9259-005771357CBA",
+        "4869C445-B103-5494-A5D3-22C47A83B781",
+        "BF959358-F583-53DE-B608-312E42CB3910",
+        "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
+        "3CD5FE07-FE45-40D4-B0D3-233397ED1F0E",
+        "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
+        "BE32E1B7-FCBA-4ED8-B599-92F9FE09BB3D",
+        "3B78F99C-A031-4EF7-A55B-10D9D7C550A4"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Contemporary",
+        "Kengo Kuma",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "506C5269-03A3-5A73-A087-52A3A0151FAC",
+      "createdAt": "2026-09-16",
+      "title": "Pavilhão de Portugal",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "1,400 tonnes of concrete… that looks like paper 🏛 how is this even possible? 👇 #lisbon #portugal #architecture #travel #expo98",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pavilh-o-de-portugal-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7642032207590100256",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "2BD54F25-4951-5F79-9E67-45D28CA11474",
+          "order": 0,
+          "title": "Pavilhão de Portugal",
+          "caption": "1,400 tonnes of concrete… that looks like paper 🏛 how is this even possible? 👇 #lisbon #portugal #architecture #travel #expo98",
+          "latitude": 38.7663,
+          "longitude": -9.095,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pavilh-o-de-portugal-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7663,
+      "centroidLongitude": -9.095,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "4869C445-B103-5494-A5D3-22C47A83B781",
+        "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
+        "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
+        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
+        "BF959358-F583-53DE-B608-312E42CB3910",
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
+        "C70C7BF7-32D3-57FA-85D5-FB722094CD8F"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Álvaro Siza",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4869C445-B103-5494-A5D3-22C47A83B781",
+      "createdAt": "2026-09-16",
+      "title": "Torre do Tombo",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "a building designed to fall… on purpose 🏛 would you visit? 👇 #l#lisbonp#portugalt#travelbrutalism #architecture",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torre-do-tombo-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7639380556408442144",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "6EEFB100-D531-5BEF-BAC6-0E7412DF82B6",
+          "order": 0,
+          "title": "Torre do Tombo",
+          "caption": "a building designed to fall… on purpose 🏛 would you visit? 👇 #l#lisbonp#portugalt#travelbrutalism #architecture",
+          "latitude": 38.7545,
+          "longitude": -9.1564,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torre-do-tombo-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7545,
+      "centroidLongitude": -9.1564,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
+        "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
+        "506C5269-03A3-5A73-A087-52A3A0151FAC",
+        "C70C7BF7-32D3-57FA-85D5-FB722094CD8F",
+        "D8B0A233-57B2-5F10-977D-7A0F9FECB799",
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
+        "804543FB-1E9C-5F70-9074-A0260645C638",
+        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Brutalist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "13BE40A3-B80B-5CE2-BFE2-CEBFEA84A2C2",
+      "createdAt": "2026-09-16",
+      "title": "262 Fifth Avenue",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "New York's Most Hated Skyscraper 😱 @fu2625thave",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/262-fifth-avenue-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DXwUo9iIhbz/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "85DFBFD3-4149-5377-A446-B0CFA73E693C",
+          "order": 0,
+          "title": "262 Fifth Avenue",
+          "caption": "New York's Most Hated Skyscraper 😱 @fu2625thave",
+          "latitude": 40.7448,
+          "longitude": -73.9878,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/262-fifth-avenue-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7448,
+      "centroidLongitude": -73.9878,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
+        "8B42129E-7831-5F35-A453-2DFA3F0E05BD",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
+        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
+        "F70F0376-C237-5610-BA05-94F6478775E4",
+        "F6509A47-05EB-5646-BDB9-40862B6DE011"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E8D23E76-983D-5164-8227-3021A7885322",
+      "createdAt": "2026-09-16",
+      "title": "One World Trade Center",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "How One World Trade Center Honors the Twin Towers",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/one-world-trade-center-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdTcbNnhTqU/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "207D47CD-7965-5417-8D1E-1C9962583604",
+          "order": 0,
+          "title": "One World Trade Center",
+          "caption": "How One World Trade Center Honors the Twin Towers",
+          "latitude": 40.7127,
+          "longitude": -74.0134,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/one-world-trade-center-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7127,
+      "centroidLongitude": -74.0134,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+        "C3BE5960-C13B-5686-BABA-A27F9FEED746",
+        "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
+        "b0ef546a-db5c-4b27-8eb3-be4dd6665e61",
+        "1CDA55C8-4CD3-5735-B5AE-CAA77AA55303",
+        "704193A9-9CF6-5472-B3C5-1BA914A5A53E",
+        "D7797624-EA83-57DD-ADE4-09540672DEB0"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "History",
+        "Contemporary",
+        "Iconic Landmark",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
+      "createdAt": "2026-09-16",
+      "title": "Crown Sydney",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why this building twists 60 degrees 🤯",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/crown-sydney-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdQsJgxBwwh/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "9DB9EDEA-2C5A-5BA5-BE94-64737EE3012C",
+          "order": 0,
+          "title": "Crown Sydney",
+          "caption": "Why this building twists 60 degrees 🤯",
+          "latitude": -33.8577,
+          "longitude": 151.1996,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/crown-sydney-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.8577,
+      "centroidLongitude": 151.1996,
+      "city": "Sydney",
+      "country": "Australia",
+      "relatedTourIds": [
+        "4f107980-4256-546b-9b85-07a73fa3cc7b"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52F24385-548C-54FB-8060-F198D8ADCF0E",
+      "createdAt": "2026-09-16",
+      "title": "CCTV Headquarters",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why This Chinese Building Look Like That😭",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cctv-headquarters-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdJK_1FBzVY/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "33ABFB71-FEC2-5836-BDF6-A4A56225E7B6",
+          "order": 0,
+          "title": "CCTV Headquarters",
+          "caption": "Why This Chinese Building Look Like That😭",
+          "latitude": 39.9146,
+          "longitude": 116.4623,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cctv-headquarters-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.9146,
+      "centroidLongitude": 116.4623,
+      "city": "Beijing",
+      "country": "China",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Rem Koolhaas",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+      "createdAt": "2026-09-16",
+      "title": "The Spiral",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This NYC Skyscraper Has a Garden That Climbs to the Top😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-spiral-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdEmyz0BbeN/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "711C9164-9014-5773-BDAD-85DC720769F5",
+          "order": 0,
+          "title": "The Spiral",
+          "caption": "This NYC Skyscraper Has a Garden That Climbs to the Top😱",
+          "latitude": 40.7541,
+          "longitude": -74.0021,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-spiral-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7541,
+      "centroidLongitude": -74.0021,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
+        "13BE40A3-B80B-5CE2-BFE2-CEBFEA84A2C2",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
+        "b0ef546a-db5c-4b27-8eb3-be4dd6665e61",
+        "8B42129E-7831-5F35-A453-2DFA3F0E05BD",
+        "9645858A-2A4C-55B6-AE89-6B5503AA3630",
+        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0CB4DF32-21AF-59B5-BD8A-959806F29358",
+      "createdAt": "2026-09-16",
+      "title": "Seminole Hard Rock Guitar Hotel",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Florida's $1.5 Billion Dollar Guitar 🎸😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seminole-hard-rock-guitar-hotel-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdBwISbhzKf/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "C1ECF006-80BB-5B98-B0AE-D3D386943ECD",
+          "order": 0,
+          "title": "Seminole Hard Rock Guitar Hotel",
+          "caption": "Florida's $1.5 Billion Dollar Guitar 🎸😱",
+          "latitude": 26.0489,
+          "longitude": -80.2065,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seminole-hard-rock-guitar-hotel-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 26.0489,
+      "centroidLongitude": -80.2065,
+      "city": "Hollywood",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5F89D2BF-6D0E-50B2-9FCA-E4A4E593481E",
+      "createdAt": "2026-09-16",
+      "title": "Tour Odéon",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why Monaco Only Has One Major Skyscraper🤔",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-od-on-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc_E8iPhZ1e/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "A5767071-5620-59E7-BF88-F4B506946F90",
+          "order": 0,
+          "title": "Tour Odéon",
+          "caption": "Why Monaco Only Has One Major Skyscraper🤔",
+          "latitude": 43.7346,
+          "longitude": 7.4218,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-od-on-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7346,
+      "centroidLongitude": 7.4218,
+      "city": "Monaco",
+      "country": "Monaco",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "825E1E3C-CE2E-5733-B1F5-AEE279AEC66D",
+      "createdAt": "2026-09-16",
+      "title": "Petronas Twin Towers",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "How They Built the Petronas Twin Towers in Record Time😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/petronas-twin-towers-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc589HWBSgZ/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "51D8BCC4-07BE-5367-A074-105E4BA693A2",
+          "order": 0,
+          "title": "Petronas Twin Towers",
+          "caption": "How They Built the Petronas Twin Towers in Record Time😱",
+          "latitude": 3.1579,
+          "longitude": 101.7116,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/petronas-twin-towers-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 3.1579,
+      "centroidLongitude": 101.7116,
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "78643AFE-CB37-58B3-ACF2-B5678FD178D8",
+      "createdAt": "2026-09-16",
+      "title": "The Leonardo",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "South Africa’s Tallest Skyscraper Was Built by Women 😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-leonardo-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc0pi4QB_Hy/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "13AEA0D8-4B45-50EE-A561-A810416AB371",
+          "order": 0,
+          "title": "The Leonardo",
+          "caption": "South Africa’s Tallest Skyscraper Was Built by Women 😱",
+          "latitude": -26.1067,
+          "longitude": 28.0567,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-leonardo-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -26.1067,
+      "centroidLongitude": 28.0567,
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3D71F38A-3A4B-53CA-8795-4E11A96476C9",
+      "createdAt": "2026-09-16",
+      "title": "Waterline",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Texas Just Built a Super Skyscraper After 40 Years😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waterline-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcyWlopBnOV/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "743972CB-2B87-5DFA-B86C-35E5AEFEE1A9",
+          "order": 0,
+          "title": "Waterline",
+          "caption": "Texas Just Built a Super Skyscraper After 40 Years😱",
+          "latitude": 30.2616,
+          "longitude": -97.7391,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waterline-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 30.2616,
+      "centroidLongitude": -97.7391,
+      "city": "Austin",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E0171F51-4FF5-5A35-BB86-ACD8262D967E",
+      "createdAt": "2026-09-16",
+      "title": "Bahrain World Trade Center",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Skyscraper Have Wind Turbines😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bahrain-world-trade-center-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dcnt2DzB1d2/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "9CEE29F0-63FB-5754-B926-3F999BF13653",
+          "order": 0,
+          "title": "Bahrain World Trade Center",
+          "caption": "This Skyscraper Have Wind Turbines😱",
+          "latitude": 26.2285,
+          "longitude": 50.586,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bahrain-world-trade-center-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 26.2285,
+      "centroidLongitude": 50.586,
+      "city": "Manama",
+      "country": "Bahrain",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Engineering",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0FA06627-6620-50CC-B0F5-A8547F477773",
+      "createdAt": "2026-09-16",
+      "title": "Intempo",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Skyscraper Shaped Like a Giant M😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/intempo-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DclGiVAhrex/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "6F451D3F-E2E0-50D0-A95B-D35F4AD8FC3C",
+          "order": 0,
+          "title": "Intempo",
+          "caption": "This Skyscraper Shaped Like a Giant M😳",
+          "latitude": 38.5462,
+          "longitude": -0.1225,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/intempo-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.5462,
+      "centroidLongitude": -0.1225,
+      "city": "Benidorm",
+      "country": "Spain",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
+      "createdAt": "2026-09-16",
+      "title": "Chicago Temple Building",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Church Found a Loophole to Become Chicago's Tallest😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-temple-building-loophole-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dcf__UUPBKY/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "88176AF7-20FA-5BD8-BD28-7C26EBCFAB86",
+          "order": 0,
+          "title": "Chicago Temple Building",
+          "caption": "This Church Found a Loophole to Become Chicago's Tallest😱",
+          "latitude": 41.8827,
+          "longitude": -87.6298,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-temple-building-loophole-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8827,
+      "centroidLongitude": -87.6298,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "1328F132-7D89-556A-A116-5DE3E6C89324",
+        "274364F2-9835-5B40-957F-243E11F271E6",
+        "34A7E90A-8A6C-52F2-B090-CEF5F85948DF",
+        "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB",
+        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Tower",
+        "Architecture",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "82374C09-578C-5D35-9244-76E7741D8FD2",
+      "createdAt": "2026-09-16",
+      "title": "InterContinental Shanghai Wonderland",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Hotel Built Inside a Quarry😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/intercontinental-shanghai-wonderland-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcdZHe5h43_/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "E7FE4116-05C8-506A-8752-2D2D689D142E",
+          "order": 0,
+          "title": "InterContinental Shanghai Wonderland",
+          "caption": "This Hotel Built Inside a Quarry😱",
+          "latitude": 31.0326,
+          "longitude": 121.1913,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/intercontinental-shanghai-wonderland-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.0326,
+      "centroidLongitude": 121.1913,
+      "city": "Shanghai",
+      "country": "China",
+      "relatedTourIds": [
+        "65A7FC7A-3A69-57E3-B368-3D4597DD1CD5"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ADAE63CA-3B3A-5803-89C1-D445C34F0592",
+      "createdAt": "2026-09-16",
+      "title": "Belgrade Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Serbia's Tallest Skyscraper 70% Empty?😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/belgrade-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcbAlzfBIzP/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "E335E016-9F17-5A11-9A10-331357882577",
+          "order": 0,
+          "title": "Belgrade Tower",
+          "caption": "Serbia's Tallest Skyscraper 70% Empty?😱",
+          "latitude": 44.8125,
+          "longitude": 20.4189,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/belgrade-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.8125,
+      "centroidLongitude": 20.4189,
+      "city": "Belgrade",
+      "country": "Serbia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D882F272-9734-59D1-8DD3-B662E591DED6",
+      "createdAt": "2026-09-16",
+      "title": "Vittoriano",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Italy's Ugliest Building Became a National Monument😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcYPwrFBEQe/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "361BDD80-B94F-59B0-8799-DE33EAA8F04A",
+          "order": 0,
+          "title": "Vittoriano",
+          "caption": "Italy's Ugliest Building Became a National Monument😱",
+          "latitude": 41.8955,
+          "longitude": 12.4823,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8955,
+      "centroidLongitude": 12.4823,
+      "city": "Rome",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
+        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
+        "A266DE94-CA58-536A-AE6A-FBCD39C359A4",
+        "04A23295-DC9A-527A-824F-038B0C4CF7A1",
+        "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
+        "137146d0-0398-5074-8c5c-484d1244172d",
+        "AF6C10CC-E6BA-5432-A413-B869ADD6396E",
+        "595609f3-77f0-5c4e-8168-3ba0fd34b228"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Monument",
+        "Architecture",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5257FA18-27ED-5CAE-A06B-46BE062B2579",
+      "createdAt": "2026-09-16",
+      "title": "American Radiator Building",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Building Designed to Look Like a Radiator😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/american-radiator-building-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcVukNmBqbU/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "F29C7D33-60D4-5E78-862E-A8FE476FDA20",
+          "order": 0,
+          "title": "American Radiator Building",
+          "caption": "This Building Designed to Look Like a Radiator😱",
+          "latitude": 40.7527,
+          "longitude": -73.9819,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/american-radiator-building-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7527,
+      "centroidLongitude": -73.9819,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "F70F0376-C237-5610-BA05-94F6478775E4",
+        "C5E7B706-1FBF-59A5-BE17-DBC6A933838F",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
+        "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+        "3396CA2F-7227-5782-84AF-D775B186B1B3",
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Art Deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "410887F3-61F4-5D68-9F79-BAB9B2D63FF8",
+      "createdAt": "2026-09-16",
+      "title": "MSG Sphere",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Building Looks Like a Spaceship😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/msg-sphere-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcTBH-Jhzto/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "F50F4281-0378-58F1-A64E-A16504D07772",
+          "order": 0,
+          "title": "MSG Sphere",
+          "caption": "This Building Looks Like a Spaceship😱",
+          "latitude": 36.1211,
+          "longitude": -115.1619,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/msg-sphere-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.1211,
+      "centroidLongitude": -115.1619,
+      "city": "Las Vegas",
+      "country": "United States",
+      "relatedTourIds": [
+        "8D914EC0-9BA0-5BBE-8C86-B812AA383500"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Contemporary",
+        "Performance",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F5F66069-EC53-5182-902A-C3B13ED4DDA3",
+      "createdAt": "2026-09-16",
+      "title": "The Wrapper",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why do people hate this building so much 🤔",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-wrapper-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcN98_0BldC/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "3F131D8A-5753-58CE-BDB5-F337CE562A71",
+          "order": 0,
+          "title": "The Wrapper",
+          "caption": "Why do people hate this building so much 🤔",
+          "latitude": 34.0211,
+          "longitude": -118.3965,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-wrapper-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.0211,
+      "centroidLongitude": -118.3965,
+      "city": "Culver City",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1498F951-C96B-5A63-B76C-543B0DAA488F",
+      "createdAt": "2026-09-16",
+      "title": "Hollywood Sign",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "The Hollywood Sign Used to Say THIS 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hollywood-sign-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcIy-yqSMnl/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "6AB6278C-C4D0-546C-8850-5F6B54D2181F",
+          "order": 0,
+          "title": "Hollywood Sign",
+          "caption": "The Hollywood Sign Used to Say THIS 😳",
+          "latitude": 34.1341,
+          "longitude": -118.3215,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hollywood-sign-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1341,
+      "centroidLongitude": -118.3215,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "6F5BB18A-7321-5B23-B3C0-08BAD7BF7BE7",
+        "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44",
+        "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
+        "5b11d725-84f2-5b43-94c9-6a5dc95262dd",
+        "57CAD837-2E86-5EA2-AA50-40380D0AF477",
+        "13c93799-efad-5b2b-b76e-b0002d14aa2a",
+        "85bfcf5a-af16-545a-b690-60f95bc100fb",
+        "DF1C65F9-DF16-5573-855E-FB85673EE668"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Monument",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1328F132-7D89-556A-A116-5DE3E6C89324",
+      "createdAt": "2026-09-16",
+      "title": "Chicago Board of Trade Building",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Batman's Wayne Tower Is Based on This Building😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-board-of-trade-building-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcGUZqfBPhU/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "87EA8432-50C2-5304-A348-268069D9504B",
+          "order": 0,
+          "title": "Chicago Board of Trade Building",
+          "caption": "Batman's Wayne Tower Is Based on This Building😱",
+          "latitude": 41.8781,
+          "longitude": -87.6298,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-board-of-trade-building-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8781,
+      "centroidLongitude": -87.6298,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "651683A3-B3E5-5C32-9F81-D7F2523431F5",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB",
+        "EE2A8B47-FA8B-502A-AF18-6A5513BB7213",
+        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5",
+        "2644D271-E442-5007-85CD-8D4E57333C50"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Art Deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FE75D07B-D2A8-5E95-81F9-38F4B73FD4EF",
+      "createdAt": "2026-09-16",
+      "title": "Abraj Al Bait",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "World's Most Expensive Skyscraper Complex 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abraj-al-bait-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcDncrOBzwn/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "997CAFDA-FF8C-5806-BE1D-90F679670EAB",
+          "order": 0,
+          "title": "Abraj Al Bait",
+          "caption": "World's Most Expensive Skyscraper Complex 😳",
+          "latitude": 21.4185,
+          "longitude": 39.8262,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abraj-al-bait-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.4185,
+      "centroidLongitude": 39.8262,
+      "city": "Mecca",
+      "country": "Saudi Arabia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Religious Building",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
+      "createdAt": "2026-09-16",
+      "title": "Empire State Building",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Empire State Building’s Original Design😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-state-building-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Db-c26wh6q4/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "11444DBC-9178-5A4A-ACF5-9ED895101D1F",
+          "order": 0,
+          "title": "Empire State Building",
+          "caption": "Empire State Building’s Original Design😱",
+          "latitude": 40.7484,
+          "longitude": -73.9857,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-state-building-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7484,
+      "centroidLongitude": -73.9857,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "FA8DC5F0-1A0D-535D-B137-9943E8701DA2",
+        "1E9B33C8-A4FE-5A2B-93B6-19200A7E60A9",
+        "f71ced9c-bd9a-45da-a39c-74869ce8db65",
+        "E8D23E76-983D-5164-8227-3021A7885322",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+        "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+        "051957C8-9EAC-5882-B79D-89AAE7996A29"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "History",
+        "Art Deco",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DBB3A2F7-7CB5-5F2D-8F88-118E7E88AEC9",
+      "createdAt": "2026-09-16",
+      "title": "Prora",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "The World's Longest Building Has a Dark History😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prora-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Db70wM4BTn5/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "44ED5249-1CD4-5CFA-9557-61ACF72B1F31",
+          "order": 0,
+          "title": "Prora",
+          "caption": "The World's Longest Building Has a Dark History😱",
+          "latitude": 54.43,
+          "longitude": 13.61,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prora-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 54.43,
+      "centroidLongitude": 13.61,
+      "city": "Rügen",
+      "country": "Germany",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1052EE5C-FFBC-53DB-AF02-8958E74D2648",
+      "createdAt": "2026-09-16",
+      "title": "Yachthouse Residence Club",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "The Tallest Twin Towers in the Americas😱 #brazil",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yachthouse-residence-club-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Db5aFr6h2gL/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "85573A56-797F-5420-AEF2-FB7596E9B831",
+          "order": 0,
+          "title": "Yachthouse Residence Club",
+          "caption": "The Tallest Twin Towers in the Americas😱 #brazil",
+          "latitude": -26.993,
+          "longitude": -48.6318,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yachthouse-residence-club-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -26.993,
+      "centroidLongitude": -48.6318,
+      "city": "Balneário Camboriú",
+      "country": "Brazil",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2542920A-1ABC-5BC7-B837-FF9652464E19",
+      "createdAt": "2026-09-16",
+      "title": "Downtown One Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Building Is a Giant Map😱 #albania",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/downtown-one-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbvB5xnBHEW/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "32E9BAD5-1390-5D43-8CE4-C3E0DBEE791E",
+          "order": 0,
+          "title": "Downtown One Tower",
+          "caption": "This Building Is a Giant Map😱 #albania",
+          "latitude": 41.3241,
+          "longitude": 19.8239,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/downtown-one-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.3241,
+      "centroidLongitude": 19.8239,
+      "city": "Tirana",
+      "country": "Albania",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "248632A6-ECFC-59DD-8602-7D6FDE205900",
+      "createdAt": "2026-09-16",
+      "title": "Bosco Verticale",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "These Skyscrapers Are Covered in Real Plants 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bosco-verticale-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dbp9bqkBnYJ/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "03B3EAC7-B32A-536A-862A-EFDEEBEBDD73",
+          "order": 0,
+          "title": "Bosco Verticale",
+          "caption": "These Skyscrapers Are Covered in Real Plants 😳",
+          "latitude": 45.4841,
+          "longitude": 9.1919,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bosco-verticale-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4841,
+      "centroidLongitude": 9.1919,
+      "city": "Milan",
+      "country": "Italy",
+      "relatedTourIds": [
+        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
+        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
+        "16729030-54d1-5d85-a169-262bbd7ccce8",
+        "66944438-2c5b-5f4a-9c58-0cd74c05c062",
+        "12FA3550-1C7E-523A-88D9-7E818937F3E5",
+        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
+        "342f8679-0906-5c61-a0ea-31a56b4309b0",
+        "fd5f496b-16ee-56c4-83c2-0050cf4c8957"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Green Escape",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "39781B11-5C7E-57A1-87AF-140CF5066487",
+      "createdAt": "2026-09-16",
+      "title": "Alvear Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why Argentina's Tallest Skyscraper Is Empty 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alvear-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbnfaraBMyf/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "841C3696-DAA7-5FAB-B3A6-BBA8432653AD",
+          "order": 0,
+          "title": "Alvear Tower",
+          "caption": "Why Argentina's Tallest Skyscraper Is Empty 😳",
+          "latitude": -34.6122,
+          "longitude": -58.3603,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alvear-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -34.6122,
+      "centroidLongitude": -58.3603,
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "relatedTourIds": [
+        "7098bf1f-89cd-550a-90ee-6f1a7839a53d",
+        "12cb1aa6-51d0-5867-9956-9f52dfc8b68f",
+        "affd41b0-a978-5626-91ec-e884f2827c35"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C50C25B1-26F6-5E8D-A563-AE89FFC84960",
+      "createdAt": "2026-09-16",
+      "title": "Bank of America Plaza",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why Atlanta's Tallest Building Looks So Old 🤔",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-of-america-plaza-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbiM1u0B-uk/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "BE3B7C77-A51D-57FA-9284-BDD26628CB33",
+          "order": 0,
+          "title": "Bank of America Plaza",
+          "caption": "Why Atlanta's Tallest Building Looks So Old 🤔",
+          "latitude": 33.7702,
+          "longitude": -84.3855,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-of-america-plaza-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7702,
+      "centroidLongitude": -84.3855,
+      "city": "Atlanta",
+      "country": "United States",
+      "relatedTourIds": [
+        "06c23128-ddce-5c2f-b727-ddd2c286871f",
+        "CD067A56-7E89-58D9-97FA-92706C677C6D",
+        "a4b03a0f-0494-564e-b708-60967e476b45",
+        "AE3CDCC9-53BF-58AC-B924-C25643C866E5",
+        "9AD98FC2-1525-5C30-A2D6-3DD41A89D9EB"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+      "createdAt": "2026-09-16",
+      "title": "Steinway Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "New York's Newest Ultra-Skinny Skyscraper 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/steinway-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbaclaOh2I-/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "ABF5D103-255B-52AB-888B-29168737848E",
+          "order": 0,
+          "title": "Steinway Tower",
+          "caption": "New York's Newest Ultra-Skinny Skyscraper 😳",
+          "latitude": 40.7658,
+          "longitude": -73.9787,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/steinway-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7658,
+      "centroidLongitude": -73.9787,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
+        "E8D23E76-983D-5164-8227-3021A7885322",
+        "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
+        "13BE40A3-B80B-5CE2-BFE2-CEBFEA84A2C2",
+        "45596643-A2D4-5564-8BF4-08B3F6E08144",
+        "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
+        "9645858A-2A4C-55B6-AE89-6B5503AA3630"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C4D4C9FF-FEC3-5408-A0E5-B10107E207C5",
+      "createdAt": "2026-09-16",
+      "title": "Transamerica Pyramid",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "San Francisco Hated This Skyscraper 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/transamerica-pyramid-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbVUqSCBlvM/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "6F43D6A2-5784-5766-B430-3B3D6137191F",
+          "order": 0,
+          "title": "Transamerica Pyramid",
+          "caption": "San Francisco Hated This Skyscraper 😳",
+          "latitude": 37.7952,
+          "longitude": -122.4028,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/transamerica-pyramid-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7952,
+      "centroidLongitude": -122.4028,
+      "city": "San Francisco",
+      "country": "United States",
+      "relatedTourIds": [
+        "fd7e6fc1-5753-4dce-8aa5-5663a3a64879",
+        "3D70E334-7AF2-50A0-BD4F-2EDDF67B2B26",
+        "1EE64FCC-09C6-520C-A387-F2CF4DA5856E",
+        "18D83429-F940-53C6-9343-80F39F481379",
+        "169452D0-F222-5C0D-9EC3-5D8427EE93CB",
+        "24F46972-BC7C-5BBE-85BC-E5EFB99723F3",
+        "E62858C2-B1A8-57F2-B229-4C02FB06BD95",
+        "ceeba1e6-3910-4c72-b5ab-8331cbdf04c6"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CF1E4E0C-5FDF-5BEF-B62F-8D90A3FE8B0A",
+      "createdAt": "2026-09-16",
+      "title": "Prysmian Sky",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why is Finland's tallest building... a cable factory😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prysmian-sky-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbSvaZxBo6s/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "060445A0-0DBF-50AE-9DA6-4AF451E09B93",
+          "order": 0,
+          "title": "Prysmian Sky",
+          "caption": "Why is Finland's tallest building... a cable factory😳",
+          "latitude": 60.1153,
+          "longitude": 24.3536,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prysmian-sky-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.1153,
+      "centroidLongitude": 24.3536,
+      "city": "Kirkkonummi",
+      "country": "Finland",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Engineering",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4",
+      "createdAt": "2026-09-16",
+      "title": "Washington Monument",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Washington Monument Almost Looked Like This 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-monument-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbQFNAvhrQh/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "1BBE4EC9-FB9A-5A42-BD93-950DB9E5CCB7",
+          "order": 0,
+          "title": "Washington Monument",
+          "caption": "Washington Monument Almost Looked Like This 😳",
+          "latitude": 38.8895,
+          "longitude": -77.0353,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-monument-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.8895,
+      "centroidLongitude": -77.0353,
+      "city": "Washington, D.C.",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Monument",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "419547F3-2828-5B49-8800-C3F3683A2CE0",
+      "createdAt": "2026-09-16",
+      "title": "The Gherkin",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "London's Skyscraper Shaped Like an Egg 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbLEtaahbdy/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "C12E19AD-3323-51DD-95B7-6DA2D06EF145",
+          "order": 0,
+          "title": "The Gherkin",
+          "caption": "London's Skyscraper Shaped Like an Egg 😳",
+          "latitude": 51.5144,
+          "longitude": -0.0803,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5144,
+      "centroidLongitude": -0.0803,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "e7a2d9c4-1b86-4f30-8a75-2c9e6b3d8f41",
+        "F8D1440B-271A-5692-9A43-845FA8199353",
+        "0CA51A97-EDCC-53DB-89D5-6891E48080FF",
+        "FFA76F71-2FF7-5FDB-9EEA-D8E5037E3C72",
+        "ACAA56A8-1D7C-55D5-A65B-4D28DBB7A5E6",
+        "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
+        "39A2BCF0-12A1-5225-9D1A-24F08824B0EB",
+        "C2833E4A-405E-5788-8952-ACE0B1F78611"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Norman Foster",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "09BA54A0-1FF6-5F19-ABD8-F410C735A0E3",
+      "createdAt": "2026-09-16",
+      "title": "Djamaa el Djazaïr",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Is Algeria's Tallest Building 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/djamaa-el-djaza-r-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbF28jmBRO6/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "FE6FD179-A8BC-5C4A-9278-F560A0116E34",
+          "order": 0,
+          "title": "Djamaa el Djazaïr",
+          "caption": "This Is Algeria's Tallest Building 😳",
+          "latitude": 36.7358,
+          "longitude": 3.1381,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/djamaa-el-djaza-r-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.7358,
+      "centroidLongitude": 3.1381,
+      "city": "Algiers",
+      "country": "Algeria",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "35225803-38D9-5C05-9272-6AF04A20C0A4",
+      "createdAt": "2026-09-16",
+      "title": "Marina City",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Skyscraper Has 19 Floors of just Parking 😳 Marina City isn't just one of Chicago's most famous skyscrapers—it was designed to be an entire city in the sky. Here's why nearly a third of each tower is nothing but parking. #chicago #marinacity #skyscraper #architecture",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-city-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbDSLsOBeKC/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "29DAA17A-FC29-519F-8A71-50B89FF5946C",
+          "order": 0,
+          "title": "Marina City",
+          "caption": "This Skyscraper Has 19 Floors of just Parking 😳 Marina City isn't just one of Chicago's most famous skyscrapers—it was designed to be an ent",
+          "latitude": 41.8882,
+          "longitude": -87.6285,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-city-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8882,
+      "centroidLongitude": -87.6285,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "4391E119-E608-579A-89C4-293BB6077D6E",
+        "89C2B84E-2353-56B4-AA9F-835A22C8F4B0",
+        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "651683A3-B3E5-5C32-9F81-D7F2523431F5",
+        "2644D271-E442-5007-85CD-8D4E57333C50"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "17F9411A-7868-5393-A254-CDB8E8C79C6B",
+      "createdAt": "2026-09-16",
+      "title": "Goldin Finance 117",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "The Skyscraper China Wouldn't Let Finish 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goldin-finance-117-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbAtgq_h6Le/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "A4132683-5F63-5B8B-949E-C3AAD3131906",
+          "order": 0,
+          "title": "Goldin Finance 117",
+          "caption": "The Skyscraper China Wouldn't Let Finish 😳",
+          "latitude": 39.0892,
+          "longitude": 117.0808,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goldin-finance-117-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.0892,
+      "centroidLongitude": 117.0808,
+      "city": "Tianjin",
+      "country": "China",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F95346EB-63A0-5C2E-91CE-E4B5BF810A6C",
+      "createdAt": "2026-09-16",
+      "title": "Torre de Cristal",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Spain's Tallest Skyscraper Built on a Football Field 😱 Before Torre de Cristal became Spain's tallest skyscraper, this land was home to Real Madrid's famous training ground. Here's the incredible story behind one of Madrid's biggest transformations. #realmadrid #TorreDeCristal #spain #football",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torre-de-cristal-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Da7odPYhrL3/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "597D654C-15A7-5660-ACF4-0FAF65912230",
+          "order": 0,
+          "title": "Torre de Cristal",
+          "caption": "Spain's Tallest Skyscraper Built on a Football Field 😱 Before Torre de Cristal became Spain's tallest skyscraper, this land was home to Real",
+          "latitude": 40.4782,
+          "longitude": -3.6875,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torre-de-cristal-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.4782,
+      "centroidLongitude": -3.6875,
+      "city": "Madrid",
+      "country": "Spain",
+      "relatedTourIds": [
+        "5F1FBE72-0EE7-5250-84D2-8873C2B69C87",
+        "05222115-7F54-5AFE-921F-4B0B920DA6BA",
+        "62cca756-02e7-5848-ace4-502800c37005",
+        "398425bf-adad-567f-b0cc-2b68980da1a3"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+      "createdAt": "2026-09-16",
+      "title": "Chicago Temple Building",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "The Chicago Skyscraper That Beat the Law 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-temple-building-law-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Da45XykhoSg/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "FC089031-4E90-5B55-8D62-222FAF899E43",
+          "order": 0,
+          "title": "Chicago Temple Building",
+          "caption": "The Chicago Skyscraper That Beat the Law 😳",
+          "latitude": 41.8822,
+          "longitude": -87.6283,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-temple-building-law-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8822,
+      "centroidLongitude": -87.6283,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
+        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
+        "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Tower",
+        "Architecture",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "45596643-A2D4-5564-8BF4-08B3F6E08144",
+      "createdAt": "2026-09-16",
+      "title": "432 Park Avenue",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Skyscraper Has So Many Problems 😳 #432parkavenue",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/432-park-avenue-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Daz3cjUPRdc/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "1442997F-2A6F-5B91-BB92-2CD390F08EBD",
+          "order": 0,
+          "title": "432 Park Avenue",
+          "caption": "This Skyscraper Has So Many Problems 😳 #432parkavenue",
+          "latitude": 40.7617,
+          "longitude": -73.9719,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/432-park-avenue-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7617,
+      "centroidLongitude": -73.9719,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "8B42129E-7831-5F35-A453-2DFA3F0E05BD",
+        "13BE40A3-B80B-5CE2-BFE2-CEBFEA84A2C2",
+        "D3C29780-34E6-57D5-8872-C8A7C899D98C",
+        "7FD5854F-65E7-5AAF-9B60-261989BC4374",
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
+        "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
+        "B588557F-110A-59A3-9BCF-CA1EEE07A67C"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1381AC18-F154-56AC-91F4-5316EAF85B16",
+      "createdAt": "2026-09-16",
+      "title": "Smáratorg Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "The Tallest Building in Iceland Will Surprise You 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sm-ratorg-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaxYQw_B96I/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "A204E5BF-1FCC-50C5-9EF5-91EE1B23565A",
+          "order": 0,
+          "title": "Smáratorg Tower",
+          "caption": "The Tallest Building in Iceland Will Surprise You 😳",
+          "latitude": 64.1025,
+          "longitude": -21.8806,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sm-ratorg-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 64.1025,
+      "centroidLongitude": -21.8806,
+      "city": "Kópavogur",
+      "country": "Iceland",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "295220B2-A36D-52B9-9A0E-B673616A818A",
+      "createdAt": "2026-09-16",
+      "title": "Jeddah Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "You Won't Believe How Tall Jeddah Tower Will Be 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jeddah-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dau15_JB1Uj/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "00AC5830-E5F7-5558-92C7-550869A89C71",
+          "order": 0,
+          "title": "Jeddah Tower",
+          "caption": "You Won't Believe How Tall Jeddah Tower Will Be 😳",
+          "latitude": 21.734,
+          "longitude": 39.0829,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jeddah-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.734,
+      "centroidLongitude": 39.0829,
+      "city": "Jeddah",
+      "country": "Saudi Arabia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "578B27F4-56D7-53C7-9098-F4660EDB2ACC",
+      "createdAt": "2026-09-16",
+      "title": "Tour Triangle",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "They Waited 50 Years For This Tower 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-triangle-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DasZ-vBhXR4/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "51EB7F7A-A214-5CD4-8DE5-75BF59A7E719",
+          "order": 0,
+          "title": "Tour Triangle",
+          "caption": "They Waited 50 Years For This Tower 😳",
+          "latitude": 48.8317,
+          "longitude": 2.2858,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-triangle-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8317,
+      "centroidLongitude": 2.2858,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "389a13e5-48b2-5027-874e-772e193dd158",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
+        "030d8630-4c0a-5965-9758-5243a0074df9",
+        "E72854DC-1A73-5966-A32F-53A3D4CED78A",
+        "33a95e17-5676-5a41-89e1-69114fd03a40"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Herzog & de Meuron"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D81C8ECD-B3B1-5281-8FDD-9928E48A05CA",
+      "createdAt": "2026-09-16",
+      "title": "Çamlıca Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Tower Lets You See Two Continents at Once 😳 From the top of Türkiye's tallest tower, you can see both Europe and Asia at the same time. 🌍 Here's the incredible story behind Çamlıca Tower in Istanbul. And This incredible tower was designed by architect @melikealtinisikarchitects",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aml-ca-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dam7a8UhqAU/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "1085C488-CD10-57B5-BC53-935ACCE66D6D",
+          "order": 0,
+          "title": "Çamlıca Tower",
+          "caption": "This Tower Lets You See Two Continents at Once 😳 From the top of Türkiye's tallest tower, you can see both Europe and Asia at the same time.",
+          "latitude": 41.0164,
+          "longitude": 29.0655,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aml-ca-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.0164,
+      "centroidLongitude": 29.0655,
+      "city": "Istanbul",
+      "country": "Turkey",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0D409207-D8DD-5258-B986-EE78B6E95990",
+      "createdAt": "2026-09-16",
+      "title": "Absolute World",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Tower Looks Completely Different Every Angle 😵",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/absolute-world-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaaJAflhPPP/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "2F4488DE-ED52-508D-84E4-CC90BF985FC8",
+          "order": 0,
+          "title": "Absolute World",
+          "caption": "This Tower Looks Completely Different Every Angle 😵",
+          "latitude": 43.5947,
+          "longitude": -79.6353,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/absolute-world-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.5947,
+      "centroidLongitude": -79.6353,
+      "city": "Mississauga",
+      "country": "Canada",
+      "relatedTourIds": [
+        "18789A3C-BB14-5C07-8F88-FC1CF91699FD",
+        "2A7D2212-2349-5F01-AB77-29232B84392D"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
       ],
       "priceUSD": 0
     }
