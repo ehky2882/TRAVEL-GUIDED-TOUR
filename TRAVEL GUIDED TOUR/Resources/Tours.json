@@ -99757,6 +99757,21 @@
       ]
     },
     {
+      "id": "6643f8c3-32aa-5d28-a303-b4dcc2b16665",
+      "name": "Anthony & Son Panini Shoppe",
+      "description": null,
+      "latitude": 40.7179315,
+      "longitude": -73.9452219,
+      "city": "Brooklyn",
+      "address": "433 Graham Avenue, Brooklyn",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4E5F210A-7F59-537D-A0F5-4964471F8BAA",
+        "E521D0AB-D7AA-5AA0-8422-B155AD1F83F0"
+      ]
+    },
+    {
       "id": "0a135a45-583e-50e6-82c9-1b8f3c3ef66f",
       "name": "Domino Park",
       "description": "A quarter-mile of East River waterfront on the old Domino Sugar Refinery site, opened in 2018 to James Corner Field Operations' design. The syrup tanks, gantry cranes and twenty-odd salvaged columns were left standing where they worked.",
@@ -99803,6 +99818,21 @@
       ]
     },
     {
+      "id": "14b1a16a-0742-551b-b6ce-4dffcabb6a1c",
+      "name": "L'Industrie Pizzeria",
+      "description": null,
+      "latitude": 40.7115764,
+      "longitude": -73.9578034,
+      "city": "Brooklyn",
+      "address": "254 South 2nd Street, Brooklyn",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "A1E35701-C30B-5D73-BE91-157A45960A17",
+        "CB2C191D-888C-525E-8CA0-833AA808CBC6"
+      ]
+    },
+    {
       "id": "2b491ffc-924c-5cc5-a99d-3d15cf4a1f6a",
       "name": "Mount Prospect Park",
       "description": "One of the highest points in Brooklyn, used as a lookout during the Battle of Brooklyn in 1776 and later as a reservoir. The water tower is gone; the hill and its view are not.",
@@ -99818,6 +99848,21 @@
       ]
     },
     {
+      "id": "f73ac866-9cfd-536b-b8ce-7e0916f543fd",
+      "name": "Namkeen",
+      "description": null,
+      "latitude": 40.7128869,
+      "longitude": -73.962588,
+      "city": "Brooklyn",
+      "address": "338 Bedford Avenue, Brooklyn",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6E8F87E1-7668-593D-9F55-D45ECF580DE3",
+        "7F36B0B0-A4E0-532A-A458-38F37BF6D065"
+      ]
+    },
+    {
       "id": "d7a2a185-9ffc-526c-84cd-80486fc86700",
       "name": "New York Transit Museum",
       "description": "A museum in the decommissioned Court Street subway station, closed to traffic in 1946. Its platform holds a line of vintage cars from a century of the system, which visitors can walk through.",
@@ -99830,6 +99875,21 @@
       "tourIds": [
         "082189BD-0B6A-57D8-BFA7-86E70BAD9152",
         "BE535C45-7EC7-5629-B125-04951583B6C6"
+      ]
+    },
+    {
+      "id": "b435b825-063a-501f-920a-4d9d54f716f6",
+      "name": "Red Hook Lobster Pound",
+      "description": null,
+      "latitude": 40.6797691,
+      "longitude": -74.0102925,
+      "city": "Brooklyn",
+      "address": "284 Van Brunt Street, Brooklyn",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F94C3ED9-1F67-540C-A502-26692AE663BD",
+        "AB5276F3-433B-5063-8141-E6DC008BA1C8"
       ]
     },
     {
@@ -102158,6 +102218,21 @@
       ]
     },
     {
+      "id": "d3fd878f-e9cc-56a5-9fd3-89bee6a86453",
+      "name": "Little Kirin",
+      "description": null,
+      "latitude": 40.7278071,
+      "longitude": -73.985483,
+      "city": "New York",
+      "address": "81 St Marks Place, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "145E7C7B-B41F-59ED-B6E8-2E458CE8EEC0",
+        "74BD8D66-8C63-5FE6-AE5C-A231877F650B"
+      ]
+    },
+    {
       "id": "e3df2fee-7c28-570a-9409-0922735e1050",
       "name": "Loew's Canal Street Theatre",
       "description": "A 1927 Thomas Lamb movie palace on the Lower East Side, its terracotta facade intact and its auditorium shut since the 1950s. A designated landmark waiting on a use.",
@@ -102482,6 +102557,21 @@
         "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
         "8730E2F2-A6C7-545B-989F-AAF2CE504790",
         "36C1FE8A-13FC-57D8-A6B3-6E813EAF5CE8"
+      ]
+    },
+    {
+      "id": "bfeb1c91-2f31-5dc1-b57a-eb7847017e20",
+      "name": "Soothr",
+      "description": null,
+      "latitude": 40.7323273,
+      "longitude": -73.9873238,
+      "city": "New York",
+      "address": "204 East 13th Street, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6FA50C6D-A906-5096-BED0-D2978D688DD0",
+        "32DD4500-1C7F-5957-8543-9254952FD02C"
       ]
     },
     {
