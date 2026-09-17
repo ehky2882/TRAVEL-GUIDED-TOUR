@@ -246,8 +246,20 @@ check was made on whether the #966 rename had triggered its rebuild; the red job
 was sitting on *other sessions'* merges, not on anything this session was
 watching. A job that fails on somebody else's merge has no owner.
 
-🔴 **Merging the fix is NOT the proof.** The failure only appears on a content
-merge where **no embedded text changed** — exactly the case now skipped. A merge
-that *does* change text (like #966's rename) installs numpy and would have
-passed either way. **Watch the next pin batch, place edit or coordinate fix on
-`main` and confirm `rebuild-related` comes back green or skipped, not red.**
+✅ **PROVEN 2026-09-17 by the case that used to fail.** Run `35170220696` on
+`5a80849e` (#972, a coordinate fix — no embedded text changed):
+
+    Is a rebuild owed?             success
+    Install dependencies           skipped
+    Generator self-tests           skipped     ← the fix
+    Regenerate neighbour lists     skipped
+    job                            success     ← was FAILURE before #967
+
+⚠️ **Two earlier "confirmations" were worthless, and both looked convincing.**
+The first was a merge that *did* change embedded text: numpy got installed, so
+the self-test would have passed with or without the fix. The second was a
+watcher that scanned recent runs without a time filter and matched `c4d1c79a` —
+a known failure from five hours BEFORE the fix — reporting it as a fresh
+finding. Taken at face value it would have sent the next session hunting a
+second bug that does not exist. **A check that can match history is not a
+check.**
