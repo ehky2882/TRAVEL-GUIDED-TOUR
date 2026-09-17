@@ -1,0 +1,3 @@
+# PR #985: search snippets + 'Because you saved' rail. Build dispatched. NOTE for the next session: the snippet file is NOT on gh-pages yet - a direct API publish from a web session returns 403, only workflows can write there. That forced finding a real gap: the snippet file is only written when a rebuild is owed, so it would never bootstrap. The owed gate now also treats a missing search-snippets.bin as a reason to rebuild. After #985 merges, the first publish-catalog run should produce and publish it - CHECK that search/search-snippets.bin returns 200, then tell the owner the sentences are live (no new build needed).
+
+_2026-09-17 14:12 UTC · branch `search-snippets-pxuxdh`_
