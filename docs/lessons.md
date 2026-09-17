@@ -1842,3 +1842,45 @@ it cannot crop to 1200×900 without upscaling. The **untransformed original is 7
 Strip the transformation segment from any `/cdn-cgi/image/`, `/_next/image`, `?w=`,
 `/thumb/` or similar URL and re-fetch before concluding a source is too small. The
 dimensions you measure are the ones the resizer was asked for, not the ones the file has.
+
+## A concept with a named home must not be restated somewhere else (2026-09-17)
+
+A "Because you saved …" rail shipped to TestFlight and showed nothing at all
+for the owner, who had tours saved in their account *and* saved a fresh one
+while testing.
+
+**This app stores saves in two places.** Liked is backed by `LibraryStore`;
+named lists are backed by `TourListService`. The rail read the first only, so
+anyone who files tours into lists was invisible to it.
+
+🔴 **`Data/SaveState.swift` exists to prevent precisely this, and says so in
+its opening lines:**
+
+> *"a tour is saved when it belongs to at least one list … There is no separate
+> saved flag living alongside list membership — that split … is exactly what
+> this replaces."*
+
+The rule already had one implementation — `TourSaveActions.isSaved`, used by
+every bookmark surface in the app, one line long. Writing a second one
+recreated the split that file was written to remove.
+
+**Seven unit tests passed.** They all shared the wrong premise, so they
+confirmed each other rather than the behaviour. Testing thoroughly *around* a
+mistaken assumption produces confidence, not correctness — and the volume of
+green makes it feel like the opposite. The two tests that mattered were the
+ones nobody had written: a tour saved **only** in a named list, and a
+suggestion excluded because it lives in one.
+
+**The habit:** before writing a predicate about a domain concept — saved,
+liked, downloaded, visible, published — grep for it. If a type or a file is
+named after the rule, it owns the rule. A second definition is not a
+convenience; it is a fork that will disagree with the first one eventually, and
+the disagreement will be invisible until someone uses the half you did not
+implement.
+
+⚠️ **A related trap in the same feature, worth knowing when testing saves:**
+`SaveState.tapAction` returns `.chooseLists` for a tour that is already saved
+somewhere, so tapping the bookmark a second time **opens the list sheet rather
+than re-saving**. Testing the Liked path therefore needs a tour that is
+currently saved nowhere — otherwise the tap files it into a named list and the
+Liked path is never exercised at all.
