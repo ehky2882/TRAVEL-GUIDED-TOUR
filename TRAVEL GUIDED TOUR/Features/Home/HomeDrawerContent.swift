@@ -20,6 +20,11 @@ struct HomeDrawerContent: View {
     @Environment(DataService.self) private var dataService
     @Environment(LocationManager.self) private var locationManager
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
+    @Environment(LibraryStore.self) private var libraryStore
+    /// ⚠️ Optional, deliberately. `TourSaveActions` documents that a surface can
+    /// legitimately have no list service — and a signed-out user has none,
+    /// since named lists need an account. Liked still works without it.
+    @Environment(TourListService.self) private var listService: TourListService?
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
     /// The filter is on the cross-window state — see
@@ -160,9 +165,43 @@ struct HomeDrawerContent: View {
             // prebuilt one covers the WHOLE catalogue, so it is wrong for a
             // filtered set; that case builds its own in one pass, from the
             // array the header already computed.
-            toursByTag: matching.map(HomeRailsViewModel.tagIndex(for:)) ?? dataService.toursByTagIndex
+            toursByTag: matching.map(HomeRailsViewModel.tagIndex(for:)) ?? dataService.toursByTagIndex,
+            savedTourIds: seedCandidates,
+            savedTourIdSet: allSavedTourIds,
+            relatedTours: dataService.relatedTours(for:)
         )
         .filter { $0.id != "recentlyViewed" }
+    }
+
+    /// Everything the user has saved, from BOTH stores.
+    ///
+    /// 🔴 "Saved" means Liked **or** any named list — `SaveState` is explicit
+    /// that there is no separate saved flag beside list membership, and that
+    /// the split "is exactly what this replaces". The first version of this
+    /// rail read `LibraryStore` alone and so was invisible to anyone who files
+    /// tours into lists, which is what the owner hit on build 169.
+    ///
+    /// `TourSaveActions.isSaved` is the same rule; this is the set form of it,
+    /// because a rail needs the whole membership rather than one lookup.
+    private var allSavedTourIds: Set<UUID> {
+        var ids = Set(libraryStore.entries.filter { $0.savedAt != nil }.map(\.tourId))
+        ids.formUnion(listService?.allListedTourIds ?? [])
+        return ids
+    }
+
+    /// Seeds for the "Because you saved …" rail, best first.
+    ///
+    /// ⚠️ ONLY LIKED CAN BE ORDERED. `savedAt` is the one real timestamp here;
+    /// named-list membership carries none locally, so those follow in catalogue
+    /// order rather than in a fabricated one. The rail names whichever seed it
+    /// actually uses, so an honest order matters more than a complete one.
+    private var seedCandidates: [UUID] {
+        let liked = libraryStore.entries
+            .compactMap { entry in entry.savedAt.map { (entry.tourId, $0) } }
+            .sorted { $0.1 > $1.1 }
+            .map(\.0)
+        let seen = Set(liked)
+        return liked + (listService?.allListedTourIds ?? []).filter { !seen.contains($0) }
     }
 
     /// The flat, distance-sorted results shown when a filter is active.

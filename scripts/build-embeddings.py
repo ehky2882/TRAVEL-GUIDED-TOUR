@@ -89,6 +89,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import struct
 import sys
 import urllib.request
@@ -100,6 +101,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TOURS_JSON = REPO_ROOT / "TRAVEL GUIDED TOUR" / "Resources" / "Tours.json"
 OUTPUT = REPO_ROOT / "build" / "embeddings.bin"
+SNIPPETS_OUTPUT = REPO_ROOT / "build" / "search-snippets.bin"
 
 MODEL_ID = "sentence-transformers/all-MiniLM-L6-v2"
 MODEL_DIR = Path(os.environ.get("ATLAS_EMBED_CACHE", Path.home() / ".cache" / "atlas-embed"))
@@ -165,6 +167,152 @@ FLAG_INT8 = 1
 HEADER_STRUCT = "<8sIIIIIf64s"
 HEADER_SIZE = struct.calcsize(HEADER_STRUCT)
 QUANT_SCALE = 127.0
+
+# --- Snippets ---------------------------------------------------------------
+# magic "ATLSNIP1" | u32 version | u32 count | 64-byte model id
+# | (count + 1) x u32 byte offset into the blob | utf8 blob
+#
+# One readable sentence per chunk, in EXACTLY the order `embed_chunks` emits
+# them, so snippet[i] explains chunk[i]. That is what lets a search result say
+# why it matched instead of just asserting that it did.
+#
+# 🔴 A SIBLING FILE, NOT A NEW VERSION OF THE SIDECAR. Bumping ATLSEMB2's
+# format version would make every build already in the field reject the index
+# and lose search entirely. A file older builds never request cannot hurt them.
+#
+# ⚠️ DELIBERATELY UNCOMPRESSED, at ~1 MB rather than ~400 KB. Compressing it
+# would mean pairing Python's deflate with Foundation's, whose framing differs
+# (raw DEFLATE vs zlib-wrapped), and that pairing cannot be tested from a Linux
+# session — it would surface on a phone. It is a one-time download from
+# gh-pages, beside a 4 MB index and a 42 MB model, and costs no Supabase
+# egress. Not worth a class of failure nobody here can see.
+SNIPPETS_MAGIC = b"ATLSNIP1"
+SNIPPETS_VERSION = 1
+SNIPPETS_HEADER_STRUCT = "<8sII64s"
+SNIPPETS_HEADER_SIZE = struct.calcsize(SNIPPETS_HEADER_STRUCT)
+
+SNIPPET_MIN_CHARS = 30
+SNIPPET_MAX_CHARS = 200
+# Every link pin carries this as its shortDescription — 2,979 of 2,984 of them.
+# It is true and it explains nothing, so it is never the reason a result
+# matched and must never be offered as one.
+# ⚠️ A PREFIX MATCH, not a whole-string one. The boilerplate is its own line in
+# `tour_text`, so a snippet can legitimately span it AND the caption after it —
+# which slipped past a full-string check as
+# "A post by @someone on TikTok. The last four working gas lamps…". Anchored at
+# the start only, so such a candidate is skipped and the next boundary (the
+# caption itself) is tried instead.
+BOILERPLATE_SNIPPET = re.compile(r"^A post by @[\w.\-]+ on \w+\.?(?:\s|$)")
+# A caption that is mostly hashtags and handles (15% of pins) is poor but still
+# the creator's own words, so it is DEPRIORITISED rather than rejected: a
+# mediocre snippet beats an empty row.
+TAG_HEAVY_RATIO = 0.35
+
+
+def metadata_prefix_length(tour: dict) -> int:
+    """
+    Where `tour_text` stops being metadata and starts being prose.
+
+    Mirrors `tour_text`'s own opening order. Snippets never quote this region:
+    it is title, place and tags, all of which the result row already shows, and
+    none of which is a sentence — so it reads as a broken caption rather than
+    an explanation.
+    """
+    parts: list[str] = []
+    if title := tour.get("title"):
+        parts.append(title)
+    place = " ".join(p for p in (tour.get("city"), tour.get("country")) if p)
+    if place:
+        parts.append(place)
+    if tags := tour.get("tags"):
+        parts.append(", ".join(tags))
+    return len("\n".join(parts)) + 1 if parts else 0
+
+
+def chunk_snippet(text: str, lo: int, hi: int, skip_to: int = 0) -> str:
+    """
+    One readable sentence from `text[lo:hi]`, or "" when there is none.
+
+    🔴 IT MUST NEVER START MID-WORD. A chunk boundary falls wherever the
+    tokenizer put it, so the naive slice produces things like
+    "n 1904 as the headquarters of the New York Times" — which reads as a bug,
+    and no test would catch it. So a snippet may only begin where a sentence
+    genuinely begins: at a boundary found INSIDE the span, or at the span's own
+    start when the character before it was already one.
+    """
+    lo = max(lo, skip_to)
+    if lo >= hi:
+        return ""
+    span = text[lo:hi]
+
+    starts = [match.end() for match in re.finditer(r"[.!?][\"')]?\s+|\n", span)]
+    if lo == 0 or text[lo - 1] in ".!?\n":
+        starts.insert(0, 0)
+
+    fallback = ""
+    for start in starts:
+        rest = span[start:].strip()
+        # Captions routinely open with an emoji; drop leading non-letters so the
+        # sentence starts on a word and the capitalisation check still means
+        # something.
+        rest = re.sub(r"^[^\w\u00C0-\u024F]+", "", rest).strip()
+        if len(rest) < SNIPPET_MIN_CHARS:
+            continue
+        match = re.match(
+            r".{%d,%d}?[.!?](?:[\"')]?)(?:\s|$)" % (SNIPPET_MIN_CHARS, SNIPPET_MAX_CHARS),
+            rest, re.S,
+        )
+        candidate = re.sub(r"\s+", " ", (match.group(0) if match else rest[:150]).strip())
+        if not candidate or candidate[0].isdigit():
+            continue
+        if not (candidate[0].isupper() or not candidate[0].isascii()):
+            continue
+        if BOILERPLATE_SNIPPET.match(candidate):
+            continue
+        words = candidate.split()
+        tagged = sum(1 for word in words if word.startswith(("#", "@")))
+        if words and tagged / len(words) > TAG_HEAVY_RATIO:
+            fallback = fallback or candidate
+            continue
+        return candidate
+    return fallback
+
+
+def write_snippets(snippets: list[str], path: Path) -> int:
+    blob = bytearray()
+    offsets = [0]
+    for snippet in snippets:
+        blob += snippet.encode("utf-8")
+        offsets.append(len(blob))
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("wb") as handle:
+        handle.write(struct.pack(
+            SNIPPETS_HEADER_STRUCT, SNIPPETS_MAGIC, SNIPPETS_VERSION,
+            len(snippets), MODEL_ID.encode("utf-8")[:64].ljust(64, b"\0"),
+        ))
+        handle.write(struct.pack(f"<{len(offsets)}I", *offsets))
+        handle.write(bytes(blob))
+    return path.stat().st_size
+
+
+def parse_snippets_header(raw: bytes):
+    if len(raw) < SNIPPETS_HEADER_SIZE:
+        raise ValueError("file is shorter than its own header")
+    magic, version, count, model = struct.unpack(
+        SNIPPETS_HEADER_STRUCT, raw[:SNIPPETS_HEADER_SIZE]
+    )
+    if magic != SNIPPETS_MAGIC:
+        raise ValueError(f"not an Atlas snippets file (magic was {magic!r})")
+    if version != SNIPPETS_VERSION:
+        raise ValueError(f"format version {version}, expected {SNIPPETS_VERSION}")
+    return {
+        "version": version,
+        "count": count,
+        "model": model.rstrip(b"\0").decode("utf-8"),
+        "header_size": SNIPPETS_HEADER_SIZE,
+    }
+
 
 
 def header_bytes(tours: int, chunks: int, dims: int, scale: float = QUANT_SCALE) -> bytes:
@@ -377,6 +525,31 @@ class Embedder:
         pooled = (hidden * expanded).sum(axis=1) / np.clip(expanded.sum(axis=1), 1e-9, None)
         return l2_normalize(np, pooled)
 
+    def _windows(self, texts: list[str]):
+        """
+        Every chunk, as (owner index, token ids, character span).
+
+        🔴 THE ONE PLACE CHUNKING HAPPENS. `embed_chunks` and `chunk_spans` both
+        consume this, so a vector and its snippet cannot drift apart: chunk N is
+        chunk N because there is only one loop deciding what chunk N is. Two
+        loops agreeing today is not the same promise.
+        """
+        for index, text in enumerate(texts):
+            encoding = self.tokenizer.encode(text, add_special_tokens=False)
+            offsets = encoding.offsets
+            # `chunk_ids` slices by position, so windowing the POSITIONS gives
+            # exactly the windows it would give the ids themselves.
+            for positions in chunk_ids(list(range(len(encoding.ids)))):
+                if not positions:
+                    yield index, [], (0, 0)
+                    continue
+                window = [encoding.ids[p] for p in positions]
+                yield index, window, (offsets[positions[0]][0], offsets[positions[-1]][1])
+
+    def chunk_spans(self, texts: list[str]) -> list[tuple[int, int, int]]:
+        """(owner index, start, end) per chunk, in `embed_chunks` order."""
+        return [(index, span[0], span[1]) for index, _ids, span in self._windows(texts)]
+
     def embed_chunks(self, texts: list[str], batch_size: int = 64, progress: bool = False):
         """
         Per-chunk vectors plus the map saying which tour each chunk came from.
@@ -389,11 +562,9 @@ class Embedder:
         windows: list[list[int]] = []
         owners: list[int] = []
 
-        for index, text in enumerate(texts):
-            ids = self.tokenizer.encode(text, add_special_tokens=False).ids
-            for window in chunk_ids(ids):
-                windows.append([self.cls_id, *window, self.sep_id])
-                owners.append(index)
+        for index, window, _span in self._windows(texts):
+            windows.append([self.cls_id, *window, self.sep_id])
+            owners.append(index)
 
         vectors = np.zeros((len(windows), DIMS), dtype=np.float32)
         for start in range(0, len(windows), batch_size):
@@ -676,6 +847,44 @@ def selftest() -> int:
     check("model id survives", parsed["model"] == MODEL_ID)
     check("int8 flag set", parsed["flags"] == FLAG_INT8)
     check("scale survives", parsed["scale"] == QUANT_SCALE)
+
+    print("Snippets — the failures the prototype actually hit")
+    header = metadata_prefix_length(
+        {"title": "Grand Central", "city": "New York", "country": "United States",
+         "tags": ["Notable Building", "Architecture"]}
+    )
+    text = ("Grand Central\nNew York United States\nNotable Building, Architecture\n"
+            "Two minutes on the south facade. You will know the place by its clock.")
+    check("skips the metadata header",
+          chunk_snippet(text, 0, len(text), header).startswith("Two minutes"))
+    # 🔴 The one that produced "n 1904 as the headquarters of the New York Times".
+    mid = text.index("the south facade")
+    check("never starts mid-sentence",
+          chunk_snippet(text, mid, len(text), 0) != ""
+          and chunk_snippet(text, mid, len(text), 0)[0].isupper())
+    check("a chunk with no whole sentence yields nothing",
+          chunk_snippet("no terminator here at all", 0, 25, 0) == "")
+    pin = "A post by @someone on TikTok.\nThe last four working gas lamps in Hong Kong, still lit."
+    check("never quotes the pin boilerplate",
+          not BOILERPLATE_SNIPPET.match(chunk_snippet(pin, 0, len(pin), 0)))
+    check("reaches the caption past the boilerplate",
+          chunk_snippet(pin, 0, len(pin), 0).startswith("The last four"))
+    emoji = "\U0001F991 The whale and squid diorama is the museum's most captivating room."
+    check("drops a leading emoji rather than failing the capital check",
+          chunk_snippet(emoji, 0, len(emoji), 0).startswith("The whale"))
+    tagged = ("#tokyo #cafe #coffee #latte @someplace #art\n"
+              "Latte Art Mania is a tiny counter in Shibuya with astonishing coffee.")
+    check("prefers prose over a hashtag pile",
+          chunk_snippet(tagged, 0, len(tagged), 0).startswith("Latte Art Mania is"))
+
+    print("Snippet file round-trip")
+    raw_path = REPO_ROOT / "build" / "_selftest-snippets.bin"
+    write_snippets(["first one.", "", "third one."], raw_path)
+    parsed_snips = parse_snippets_header(raw_path.read_bytes())
+    check("count survives", parsed_snips["count"] == 3)
+    check("model id survives", parsed_snips["model"] == MODEL_ID)
+    check("an empty snippet is still a slot", parsed_snips["count"] == 3)
+    raw_path.unlink(missing_ok=True)
 
     print("Header rejects bad input")
     for name, raw in (
@@ -1042,6 +1251,29 @@ def main() -> int:
         parsed = parse_header(OUTPUT.read_bytes()[:HEADER_SIZE])
         print(f"Verified header: {parsed['tours']:,} tours, {parsed['chunks']:,} chunks "
               f"x {parsed['dims']} dims, model {parsed['model']}")
+
+        # Snippets are written in the SAME invocation as the vectors, never on
+        # their own. They are only meaningful paired with that exact index, and
+        # the app refuses a pair whose chunk counts disagree — so producing one
+        # without the other just yields a file nothing will load.
+        spans = embedder.chunk_spans(texts)
+        if len(spans) != len(chunks):
+            raise SystemExit(
+                f"ERROR: {len(spans)} spans for {len(chunks)} chunks — the "
+                "snippet and vector paths have diverged, which would attach "
+                "confident, wrong sentences to every result"
+            )
+        prefixes = [metadata_prefix_length(tour) for tour in tours]
+        snippets = [
+            chunk_snippet(texts[owner], start, end, prefixes[owner])
+            for owner, start, end in spans
+        ]
+        snippet_size = write_snippets(snippets, SNIPPETS_OUTPUT)
+        empty = sum(1 for snippet in snippets if not snippet)
+        print(f"Wrote {SNIPPETS_OUTPUT.relative_to(REPO_ROOT)} — {snippet_size:,} bytes "
+              f"({snippet_size / 1e6:.2f} MB)")
+        print(f"  {len(snippets):,} snippets, {empty:,} empty "
+              f"({100.0 * empty / max(len(snippets), 1):.1f}%)")
     else:
         size = HEADER_SIZE + len(tours) * 20 + len(chunks) * DIMS
         print(f"Dry run — would write {size:,} bytes ({size / 1e6:.2f} MB). Pass --write to do it.")

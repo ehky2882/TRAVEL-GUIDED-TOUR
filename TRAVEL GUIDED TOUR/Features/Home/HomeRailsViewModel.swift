@@ -39,7 +39,23 @@ enum HomeRailsViewModel {
         recentlyViewedIds: [UUID],
         userLocation: CLLocation?,
         visibleRegion: MKCoordinateRegion?,
-        toursByTag: [String: [Tour]]? = nil
+        toursByTag: [String: [Tour]]? = nil,
+        /// Candidate seeds, best first. Defaulted empty so every existing
+        /// caller and test is untouched — and so that removing this rail later
+        /// means deleting one function and one call, the way *Continue
+        /// listening* was removed on 2026-09-13.
+        savedTourIds: [UUID] = [],
+        /// 🔴 EVERYTHING SAVED, from BOTH stores — not just `savedTourIds`.
+        /// A tour is saved when it is in Liked **or** any named list
+        /// (`SaveState`), and the first version of this rail read only Liked.
+        /// It is passed in rather than derived from `savedTourIds` because the
+        /// seed order and the full membership are different questions: only
+        /// Liked carries a timestamp, so only Liked can be ordered.
+        savedTourIdSet: Set<UUID> = [],
+        /// `relatedTourIds`, already in the catalogue and already on the phone.
+        /// Passed as a closure so this stays a pure function over its inputs —
+        /// `DataService.relatedTours(for:)` is the real implementation.
+        relatedTours: ((Tour) -> [Tour])? = nil
     ) -> [HomeRail] {
         var rails: [HomeRail] = []
 
@@ -47,7 +63,6 @@ enum HomeRailsViewModel {
         if let rail = recentlyViewedRail(tours: tours, recentlyViewedIds: recentlyViewedIds) {
             rails.append(rail)
         }
-
         // Location-anchored — one top rail, context-aware (§1.5):
         //   • Near mode (map over the user): "Near you".
         //   • Far mode (panned to another area): "In view", and "Near
@@ -60,6 +75,18 @@ enum HomeRailsViewModel {
             if let rail = nearYouRail(tours: tours, userLocation: userLocation) {
                 rails.append(rail)
             }
+        }
+
+        // Second, directly under the location rail — owner placement,
+        // 2026-09-17. Where you are beats what you saved; what you saved beats
+        // the editorial shelves.
+        if let rail = becauseYouSavedRail(
+            tours: tours,
+            savedTourIds: savedTourIds,
+            savedTourIdSet: savedTourIdSet.isEmpty ? Set(savedTourIds) : savedTourIdSet,
+            relatedTours: relatedTours
+        ) {
+            rails.append(rail)
         }
 
         // Interest-based — the curated tag shelves (owner decision D7),
@@ -227,6 +254,58 @@ enum HomeRailsViewModel {
     }
 
     // MARK: - Rail builders
+
+    /// Stable, so the rail keeps its view identity when the seed changes —
+    /// which it does the moment anything new is saved.
+    static let savedRailID = "moreLikeYourSaves"
+
+    /// "More like what you saved" — neighbours of something already saved.
+    ///
+    /// 🔴 THE HEADING NAMES NO TOUR, and that is measured rather than stylistic.
+    /// The rail title renders in all-caps SF Mono, about 32 characters to a
+    /// line. "BECAUSE YOU SAVED " alone eats 18 of them, leaving 14 for a title
+    /// whose median is 22 and whose maximum is 86 — so only 22% of titles fit
+    /// on one line, and the owner does not want a two-line heading. Even the
+    /// shortest sensible prefix only reached 67%. No wording can guarantee it,
+    /// so the heading stops promising specificity it cannot keep (owner
+    /// decision, 2026-09-17).
+    ///
+    /// 🔴 NO MODEL AND NO DOWNLOAD. `relatedTourIds` is computed offline and
+    /// already ships in the catalogue, so this is a dictionary lookup. An
+    /// earlier sketch of this rail proposed scoring it on the device from the
+    /// search embeddings, which would have meant an async actor and a 4 MB
+    /// file inside a pure synchronous function recomputed on every render.
+    ///
+    /// ⚠️ SEEDED FROM ONE TOUR, not a blend of everything saved, so the title
+    /// can name it honestly. A rail headed "Because you saved Trellick Tower"
+    /// that is secretly an average of nine tours is a small lie that makes
+    /// every suggestion in it unexplainable.
+    private static func becauseYouSavedRail(
+        tours: [Tour],
+        savedTourIds: [UUID],
+        savedTourIdSet: Set<UUID>,
+        relatedTours: ((Tour) -> [Tour])?
+    ) -> HomeRail? {
+        guard let relatedTours, !savedTourIds.isEmpty else { return nil }
+        // ⚠️ The exclusion set is the UNION, not the seed list. Suggesting a
+        // tour the user already has in a named list is the same mistake as
+        // suggesting one they Liked — it just hid behind a different store.
+        let saved = savedTourIdSet
+
+        // Most recent first, and skip anything with no neighbours rather than
+        // rendering an empty rail under a confident heading.
+        for id in savedTourIds {
+            guard let seed = tours.first(where: { $0.id == id }) else { continue }
+            let suggestions = relatedTours(seed).filter { !saved.contains($0.id) }
+            guard !suggestions.isEmpty else { continue }
+            return HomeRail(
+                id: Self.savedRailID,
+                title: "More like what you saved",
+                tours: Array(suggestions.prefix(maxPerRail))
+            )
+        }
+        return nil
+    }
 
     private static func recentlyViewedRail(
         tours: [Tour],
