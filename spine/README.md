@@ -29,3 +29,20 @@ bandwidth as much as ours.
 which is the correct answer and a permanently red check. Wire the CI job in the
 same change that commits the *finished* sweep, never before: a red check nobody
 can fix reads as coverage and gets ignored, which is how a check stops being one.
+
+## `features.json.gz` — what KIND of thing each matched item is
+
+`scripts/spine-features.py` asks Wikidata for each matched item's `instance of`
+and `area`, ~300 QIDs to a query. **It is not a re-sweep**: the 4,566 lookups
+took about an hour, this takes well under a minute, and it only asks about items
+that were actually matched.
+
+It exists because the first full audit produced **145 DISAGREES** and reading
+them showed the list was dominated by one class that is not an error at all — a
+four-mile boulevard, a 2,168 km² national park, a 12 km bridge. A site with no
+single point has no single coordinate: ours sits at the entrance or the famous
+view, the gazetteer's at a centroid, and neither is wrong. Separating those took
+the list to **86**.
+
+⚠️ The types are a **reporting aid, never a verdict**. An extended site is still
+listed, under a heading that says what it is.

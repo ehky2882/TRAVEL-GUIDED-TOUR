@@ -104,6 +104,41 @@ DISAGREE_M = 250.0      # at or over this, a finding worth acting on
 # is what it is: we did not find this entry's subject.
 MAX_ERROR_M = 30000.0
 
+FEATURES = os.path.join(REPO, "spine", "features.json.gz")
+
+# 🔴 A SITE WITH NO SINGLE POINT HAS NO SINGLE COORDINATE, so a distance to its
+# centroid is not evidence of anything. Ours sits at the entrance, or the famous
+# view, or the stop the tour begins at; the gazetteer's sits in the middle.
+#
+# These are the `instance of` values that actually dominated the first full
+# audit's 145 DISAGREES — **read off the data, not guessed** — with their
+# Wikidata labels confirmed rather than assumed:
+#
+#   Q123705 neighborhood · Q22698 park · Q22746 urban park · Q167346 botanical
+#   garden · Q1759852 sculpture garden · Q8502 mountain · Q54050 hill ·
+#   Q79007 street · Q83620 thoroughfare · Q34442 road · Q95080679 national park
+#   of Thailand · Q644371 international airport · Q94993988 commercial traffic
+#   aerodrome · Q1576693 gondola lift · Q142031 funicular · Q40080 beach ·
+#   Q23442 island · Q12280 bridge · Q537127 road bridge · Q158218 truss bridge
+#
+# ⚠️ Bridges and lifts are here because they are LINEAR, not because they are
+# large: the Vasco da Gama Bridge is 12 km end to end, so its midpoint is
+# kilometres from any viewpoint a tour would send someone to.
+#
+# ⚠️ Buildings, museums, hotels, houses, monuments and churches are deliberately
+# ABSENT. Those have an honest single point, so a disagreement about one is a
+# finding.
+EXTENDED_TYPES = {
+    "Q123705", "Q22698", "Q22746", "Q167346", "Q1759852",
+    "Q8502", "Q54050", "Q23442", "Q40080",
+    "Q79007", "Q83620", "Q34442",
+    "Q95080679", "Q46169", "Q1377575",
+    "Q644371", "Q94993988", "Q1248784",
+    "Q1576693", "Q142031",
+    "Q12280", "Q537127", "Q158218",
+    "Q4022", "Q12284", "Q39614", "Q174782",
+}
+
 
 def _load_candidates_module():
     path = os.path.join(HERE, "check-place-candidates.py")
@@ -236,7 +271,19 @@ def head_word(title, city, meaningful):
     return None
 
 
-def band(distance_m, *, related=True):
+def is_extended(qid, features):
+    """Is the matched item a site with no single honest point?
+
+    ⚠️ Reporting aid, never a verdict: such an entry is still listed, under a
+    heading that says what it is, so a reader sees "a four-mile boulevard, of
+    course the centroid differs" rather than "4,486 m, something is broken".
+    An absent features file simply means nothing is reclassified.
+    """
+    row = (features or {}).get(qid) or {}
+    return any(t in EXTENDED_TYPES for t in row.get("types") or [])
+
+
+def band(distance_m, *, related=True, extended=False):
     """The band for a distance.
 
     `related` is whether the matched label is plausibly the same name. An
@@ -248,14 +295,17 @@ def band(distance_m, *, related=True):
     if distance_m > MAX_ERROR_M:
         # Not an error about this entry — a same-name item somewhere else.
         return "UNMATCHED"
+    if distance_m <= CONFIRM_M:
+        return "CONFIRMS"
+    if extended:
+        # An area or a line, not a point. Reported, but never as a finding.
+        return "EXTENDED"
     if distance_m >= DISAGREE_M:
         return "DISAGREES" if related else "REVIEW"
-    if distance_m > CONFIRM_M:
-        return "REVIEW"
-    return "CONFIRMS"
+    return "REVIEW"
 
 
-def classify(catalog, cache):
+def classify(catalog, cache, features=None):
     """One record per entry: its band, its best candidate, and why."""
     out = []
     for entry in entries(catalog):
@@ -269,9 +319,11 @@ def classify(catalog, cache):
             continue
         best = best_candidate(entry, record.get("candidates") or [])
         related = bool(best) and label_related(entry, best)
+        extended = bool(best) and is_extended(best["qid"], features)
         out.append({
             "entry": entry,
-            "band": band(best["distance_m"] if best else None, related=related),
+            "band": band(best["distance_m"] if best else None,
+                         related=related, extended=extended),
             "best": best,
             "named": bool(best) and label_matches(entry, best),
         })
@@ -290,12 +342,15 @@ def report(rows, catalog, *, limit=40):
 
     print(f"audited {total} catalogue entries against Wikidata\n")
 
-    for name in ("DISAGREES", "REVIEW"):
+    for name in ("DISAGREES", "REVIEW", "EXTENDED"):
         hits = sorted((r for r in rows if r["band"] == name and r["best"]),
                       key=lambda r: -r["best"]["distance_m"])
-        headline = ("🔴 DISAGREES — our coordinate is not where the subject is"
-                    if name == "DISAGREES"
-                    else "REVIEW — near, but further out than a correct entry usually sits")
+        headline = {
+            "DISAGREES": "🔴 DISAGREES — our coordinate is not where the subject is",
+            "REVIEW": "REVIEW — near, but further out than a correct entry usually sits",
+            "EXTENDED": ("EXTENDED SITE — a park, street, bridge, island or district. "
+                         "NOT a finding: no single point is honest for these"),
+        }[name]
         print(f"{headline}: {len(hits)}")
         for row in hits[:limit]:
             entry, best = row["entry"], row["best"]
@@ -307,6 +362,7 @@ def report(rows, catalog, *, limit=40):
         print()
 
     print(f"CONFIRMS: {by_band['CONFIRMS']}   "
+          f"EXTENDED: {by_band['EXTENDED']}   "
           f"UNMATCHED: {by_band['UNMATCHED']}   "
           f"NOT-ASKED: {by_band['NOT-ASKED']}")
 
@@ -328,10 +384,10 @@ def report(rows, catalog, *, limit=40):
     print("\n⚠️  UNMATCHED is NOT a clean bill of health — it means Wikidata has")
     print("    never heard of the subject. Coverage runs 78-83% for architecture")
     print("    creators and 14-25% for food. An unmatched entry is UNEXAMINED.")
-    print("⚠️  A LARGE SITE reads as a disagreement and is usually not one. A")
-    print("    cemetery, a linear park or a whole town has no single point, so our")
-    print("    coordinate and the gazetteer's centroid differ by hundreds of metres")
-    print("    with neither being wrong. Read the subject before reading the number.")
+    print("⚠️  EXTENDED SITE entries are separated out, not fixed: a park, a")
+    print("    street, a long bridge or a district has no single honest point, so")
+    print("    the distance to a centroid means nothing. They are listed so you")
+    print("    can see them, never because they are wrong.")
     print("⚠️  Nothing here is auto-fixed. A distance is evidence, not a verdict:")
     print("    three pins moved on a distance alone came out 11 m right, 220 m")
     print("    wrong and 100 m wrong. Every line goes to the owner individually.")
@@ -369,6 +425,19 @@ def selftest():
           band(MAX_ERROR_M - 1) == "DISAGREES")
     check("🔴 an UNRELATED distant match is offered for reading, not asserted",
           band(900.0, related=False) == "REVIEW")
+    # 🔴 The extended-site band. A park's centroid is not evidence.
+    check("🔴 an EXTENDED site is never a finding, however far",
+          band(4486.0, related=True, extended=True) == "EXTENDED")
+    check("...but a close extended site still CONFIRMS",
+          band(50.0, related=True, extended=True) == "CONFIRMS")
+    check("a POINT-type match at the same distance IS a finding",
+          band(4486.0, related=True, extended=False) == "DISAGREES")
+    feats = {"Q1": {"types": ["Q22698"]}, "Q2": {"types": ["Q41176"]}, "Q3": {}}
+    check("is_extended: a park is extended", is_extended("Q1", feats))
+    check("🔴 is_extended: a BUILDING is not", not is_extended("Q2", feats))
+    check("is_extended: an untyped item is not", not is_extended("Q3", feats))
+    check("is_extended: no features file means nothing is reclassified",
+          not is_extended("Q1", None))
     check("a related distant match IS a finding", band(900.0, related=True) == "DISAGREES")
 
     santa = {"title": "Church of Santa Maria", "city": "Porto"}
@@ -472,7 +541,7 @@ def selftest():
     check("an entry missing from the cache is NOT-ASKED, never CONFIRMS",
           [r["band"] for r in rows] == ["NOT-ASKED", "NOT-ASKED"])
 
-    total = 45
+    total = 52
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
@@ -481,6 +550,9 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--catalog", default=CATALOG)
     ap.add_argument("--cache", default=CACHE)
+    ap.add_argument("--features", default=FEATURES,
+                    help="item types from spine-features.py; optional — without "
+                         "it nothing is reclassified as an extended site")
     ap.add_argument("--limit", type=int, default=40,
                     help="how many findings to print per band")
     ap.add_argument("--selftest", action="store_true")
@@ -503,7 +575,14 @@ def main():
         with gzip.open(a.cache, "rt", encoding="utf-8") as fh:
             cache = json.load(fh)
 
-        rows = classify(catalog, cache)
+        features = {}
+        if os.path.exists(a.features):
+            with gzip.open(a.features, "rt", encoding="utf-8") as fh:
+                features = json.load(fh)
+        else:
+            print(f"⚠️  no {a.features} — parks, streets and bridges will be "
+                  f"reported as findings. Run scripts/spine-features.py.")
+        rows = classify(catalog, cache, features)
         counts = report(rows, catalog, limit=a.limit)
 
         if counts["NOT-ASKED"]:

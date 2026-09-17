@@ -1,0 +1,115 @@
+RUN spine-match.py · rev 89cdafdc · 2026-09-17T15:50:13Z · args: --limit 25 --out spine/audit.txt
+audited 4566 catalogue entries against Wikidata
+
+🔴 DISAGREES — our coordinate is not where the subject is: 86
+      16276 m   Hōrin-ji Temple | 法輪寺                    Tokyo            -> Hōrin-ji Temple
+      11921 m   Govind Dev Ji Temple                     Jaipur           -> Govind Dev Ji Temple
+      11479 m   Palácio da Justiça                       Lisbon           -> Palácio da Justiça
+      10643 m   Prada Aoyama | プラダ 青山店                   Tokyo            -> Prada Aoyama
+       9830 m   Wat Phra That Doi Kong Mu | วัดพระธาตุดอ Mae Hong Son     -> Wat Phra That Doi Kong Mu
+       9562 m   Casa Costa                               Barcelona        -> Casa Costa
+       7966 m   Les Tres Xemeneies                       Sant Adrià de Be -> Les Tres Xemeneies
+       6901 m ~ MahaNakhon                               Bangkok          -> King Power Mahanakhon
+       6460 m ~ Sardar Vallabhbhai Patel (SVP) Stadium   Ahmedabad        -> Sardar Vallabhbhai Patel Stadi
+       5086 m   InterContinental Shanghai Wonderland     Shanghai         -> InterContinental Shanghai Wond
+       4660 m ~ Carette                                  Paris            -> Carette Place du Tertre
+       3647 m   Q1 Tower                                 Gold Coast       -> Q1 Tower
+       3388 m   Anyang Art Park | 안양예술공원                 Anyang           -> Anyang Art Park
+       2939 m ~ Intempo                                  Benidorm         -> Residential Intempo
+       2880 m   Fondation Cartier pour l'art contemporai Paris            -> Fondation Cartier pour l'art c
+       2634 m ~ Asahi Group Ōyamazaki Villa Museum of Ar Ōyamazaki        -> Asahi Group Oyamazaki Villa Mu
+       2329 m   Belgrade Tower                           Belgrade         -> Belgrade Tower
+       2292 m   Prora                                    Rügen            -> Prora
+       1664 m   Hollywood Walk of Fame                   Los Angeles      -> Hollywood Walk of Fame
+       1642 m   Pérez Art Museum Miami                   Miami            -> Pérez Art Museum Miami
+       1642 m   Pérez Art Museum Miami                   Miami            -> Pérez Art Museum Miami
+       1589 m   Navi Mumbai International Airport        Navi Mumbai      -> Navi Mumbai International Airp
+       1545 m   Míčovna (Ball Game Hall)                 Prague           -> Míčovna
+       1544 m ~ Queen Street West                        Toronto          -> Queen Street West Heritage Con
+       1477 m   Amanohashidate | 天橋立                     Miyazu           -> Amanohashidate
+  … and 61 more (raise --limit to see them)
+
+REVIEW — near, but further out than a correct entry usually sits: 192
+      13601 m ~ The Stone Forest of Tsingy               Antsalova        -> Tsingy de Bemaraha National Pa
+      12269 m ~ Cu Chi Tunnels – Bến Dược | Địa Đạo Củ C Ho Chi Minh City -> Củ Chi tunnels
+       7411 m ~ Pai Canyon | ปายแคนยอน                   Pai              -> Q49097134
+       6583 m ~ Tung Po                                  Hong Kong        -> TungPo
+       6520 m ~ White Temple (Wat Rong Khun) | วัดร่องขุ Chiang Rai       -> Wat Rong Khun
+       5237 m ~ The Fairy Tale Castle of Filiatra        Filiatra         -> Filiatra Eiffel Tower
+       5077 m ~ Natural History Museum of LA County      Los Angeles      -> Los Angeles County
+       4818 m ~ The Terracotta Garden at Lamphun | สวนไม Lamphun          -> Lamphun
+       3566 m ~ Instituto Central de Ciências, Universit Brasília         -> Brasília
+       2930 m ~ Yachthouse Residence Club                Balneário Cambor -> Yachthouse by Pininfarina
+       2398 m ~ Inside the Museum of the City of New Yor New York         -> New York Historical
+       2278 m ~ The Wertheim Study at the New York Publi New York         -> New York Public Library for th
+       2244 m   Naarden (star fort town)                 Naarden          -> Naarden
+       2154 m   Austin (Ellsworth Kelly)                 Austin           -> Austin
+       2029 m ~ The Most Valuable Ships at Alang         Alang            -> Alang
+       1650 m ~ Tour Odéon                               Monaco           -> Odeon Tower
+       1287 m   Machu Picchu                             Machu Picchu     -> Machu Picchu
+       1280 m ~ Hong Kong Tram | 香港電車                    Hong Kong        -> Hong Kong Tramways
+       1230 m ~ The Berber Village of Chenini            Chenini          -> Chenini
+       1212 m ~ Kasárna Karlín                           Prague           -> Karlínská kasárna
+       1208 m ~ Cable Cars                               San Francisco    -> San Francisco cable car system
+       1174 m ~ The Bell Tower of Lake Reschen           Curon Venosta    -> Reschensee
+       1042 m   Palmanova (star-shaped fortress town)    Palmanova        -> Palmanova
+       1003 m ~ The Silk Weavers of Lucca                Lucca            -> Lucca
+        880 m ~ Nhiêu Lộc–Thị Nghè Canal | Kênh Nhiêu Lộ Ho Chi Minh City -> Nhieu Loc–Thi Nghe Canal
+  … and 167 more (raise --limit to see them)
+
+EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no single point is honest for these: 114
+      20689 m ~ The Train Carriage Hotel at Khao Yai     Pak Chong        -> Khao Yai National Park
+      11846 m ~ The Baobabs of Morondava                 Morondava        -> Morondava Airport
+      10731 m ~ The Dragon Blood Trees of Socotra        Hadibu           -> Socotra
+      10644 m ~ A History of the Florida Keys            Marathon         -> Florida Keys Marathon Airport
+      10394 m   Khao Yai National Park | อุทยานแห่งชาติเ Nakhon Ratchasim -> Khao Yai National Park
+       9124 m   Doi Inthanon National Park | อุทยานแห่งช Chom Thong       -> Doi Inthanon National Park
+       7189 m ~ The Sanctuary of Truth Museum | ปราสาทสั Pattaya          -> Sanctuary of Truth
+       5372 m   Ngong Ping 360 | 昂坪360                   Hong Kong        -> Ngong Ping 360
+       4677 m   Vasco da Gama Bridge                     Lisbon           -> Vasco da Gama Bridge
+       4486 m   Grand Concourse                          Bronx            -> Grand Concourse
+       4175 m ~ The Wizard of Park Avenue                New York         -> Park Avenue
+       3714 m   Mae Wang National Park | อุทยานแห่งชาติแ Mae Wang         -> Mae Wang National Park
+       2870 m ~ The West Side Cowboys of Tenth Avenue    New York         -> Tenth Avenue
+       2532 m ~ The Monumental Rosary of Montserrat      Montserrat       -> Montserrat
+       1913 m   Takase River | 高瀬川                       Kyoto            -> Takase River
+       1595 m ~ Pilsen — Eighteenth Street, East to West Chicago          -> Lower West Side
+       1577 m   Alzaia Naviglio Grande                   Milan            -> Alzaia naviglio grande
+       1277 m   Jackson Street Bridge                    Atlanta          -> Jackson Street Bridge (Atlanta
+       1209 m   Taketomi Island                          Taketomi         -> Taketomi Island
+       1146 m ~ First National Bank of Hollywood         Los Angeles      -> Hollywood
+       1078 m   Memento Park                             Budapest         -> Memento Park
+       1078 m   Memento Park                             Budapest         -> Memento Park
+        957 m ~ TWA Hotel at JFK                         New York         -> John F. Kennedy International 
+        941 m ~ Mount Royal — the Climb                  Montreal         -> Mount Royal
+        862 m ~ The Magnificent Mile — DuSable Bridge to Chicago          -> Magnificent Mile
+  … and 89 more (raise --limit to see them)
+
+CONFIRMS: 1667   EXTENDED: 114   UNMATCHED: 2507   NOT-ASKED: 0
+
+coverage by creator (matched / asked) — where this method works:
+   35%   116/326   TikTok @urbanistariel
+   33%    87/262   TikTok @hereinnyc
+    7%    18/256   Instagram @jacksdiningroom
+   35%    64/182   TikTok @archimarathon
+   85%   152/177   Instagram @pasttworld
+   17%    18/105   Instagram @shivanidukhandee
+   54%    56/103   Instagram @blessedarch
+   75%    76/101   Atlas Studio NYC
+   86%    86/100   Atlas Studio LDN
+   67%    64/95    TikTok @history_alice
+    1%     1/88    Instagram @japanbyfood
+    7%     6/84    Instagram @nom_life
+
+⚠️  UNMATCHED is NOT a clean bill of health — it means Wikidata has
+    never heard of the subject. Coverage runs 78-83% for architecture
+    creators and 14-25% for food. An unmatched entry is UNEXAMINED.
+⚠️  EXTENDED SITE entries are separated out, not fixed: a park, a
+    street, a long bridge or a district has no single honest point, so
+    the distance to a centroid means nothing. They are listed so you
+    can see them, never because they are wrong.
+⚠️  Nothing here is auto-fixed. A distance is evidence, not a verdict:
+    three pins moved on a distance alone came out 11 m right, 220 m
+    wrong and 100 m wrong. Every line goes to the owner individually.
+
+86 entries to put to the owner
