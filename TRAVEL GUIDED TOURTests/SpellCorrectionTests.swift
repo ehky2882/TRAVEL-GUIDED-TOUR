@@ -38,7 +38,12 @@ final class SpellCorrectionTests: XCTestCase {
             "The Japanese Hill-and-Pond Garden", "Japanese Garden Walk",
             "Soho Square", "Gion", "Naoshima", "Barbican Estate",
             "Borough Market", "Food Market Walk",
-            "Brutalist Concrete Tower", "Concrete Housing",
+            // ⚠️ "Brutalist" TWICE. Every word a test expects as a correction
+            // TARGET must clear `minimumTargetCount`, and at one use this
+            // silently was not a candidate at all — the assertion failed
+            // against a corpus problem, not a code one. The live catalog has
+            // it many times over, so the behaviour was always right there.
+            "Brutalist Concrete Tower", "Brutalist London", "Concrete Housing",
             "Saint Paul's Cathedral", "Cathedral Quarter",
             "A Good Restaurant", "Restaurant Row",
             "Stained Glass Windows", "Glass House", "Windows on the World",
@@ -56,6 +61,26 @@ final class SpellCorrectionTests: XCTestCase {
             )
         }
         return SearchSpellCorrector(tours: tours, makerNames: ["Atlas Studio LDN"])
+    }
+
+    /// 🔴 GUARDS THE CORPUS, NOT THE CODE. Every word the tests below expect a
+    /// typo to land on has to occur at least `minimumTargetCount` times, or it
+    /// is not an eligible target and the assertion fails for a reason that has
+    /// nothing to do with the corrector. That happened once: "Brutalist"
+    /// appeared in a single title.
+    func testTheCorpusMakesEveryExpectedTargetEligible() {
+        let corrector = makeCorrector()
+        // If a word is a valid target, a one-edit typo of it must resolve back.
+        let targets = ["museum": "musuem", "tower": "towr", "deco": "deko",
+                       "cathedral": "cathedrel", "restaurant": "resturant",
+                       "japanese": "japanees", "garden": "gardn",
+                       "brutalist": "brutalst", "lobby": "loby"]
+        for (word, typo) in targets {
+            XCTAssertEqual(corrector.corrected(typo), word,
+                           "\(word) is not an eligible correction target in the "
+                           + "test corpus — it needs at least "
+                           + "\(SearchSpellCorrector.minimumTargetCount) uses")
+        }
     }
 
     // MARK: - It fixes what it should
