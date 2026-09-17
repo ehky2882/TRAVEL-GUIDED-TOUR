@@ -6,7 +6,7 @@ import CryptoKit
 /// A tour downloaded for offline keeps its photographs beside its audio, in
 /// `Documents/atlas-tours/<tourId>/` — **not** in `URLCache` or `ImageCache`.
 /// Both of those are caches in the real sense: the system evicts them under
-/// pressure, and Settings has a Clear Cache button that empties them. Neither
+/// pressure, and Settings → Check for new content empties them. Neither
 /// should be able to strip the pictures off a tour the user deliberately saved
 /// for a journey with no signal.
 ///

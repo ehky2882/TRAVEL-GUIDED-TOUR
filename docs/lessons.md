@@ -1750,9 +1750,34 @@ truncated file, so it shipped with nothing observable — **the same property th
 let the original bug survive an hour of restarts.**
 
 The answer was one row in Settings → About: **"Updated"**, when the catalogue last
-arrived. It makes Clear Cache provable (tap it, read "just now") and would have
-turned that hour into a glance. **When shipping a fix for something invisible, ship
-the thing that makes it visible in the same change.**
+arrived. It makes the refresh button provable (tap it, read "just now") and would
+have turned that hour into a glance. **When shipping a fix for something invisible,
+ship the thing that makes it visible in the same change.** (That button was called
+**Clear Cache** at the time; it is **"Check for new content"** since 2026-09-17 —
+see the entry below.)
+
+### Name a control for its outcome, not its mechanism (2026-09-17)
+
+Settings carried a button labelled **"Clear Cache"** under a **trash** icon. It was
+the only control that made new content appear on demand, and it was wrong twice over:
+
+- **It named the mechanism.** Nobody who wanted the newest tours would go looking for
+  a cache. The owner used it constantly and said plainly that *"most people wont know
+  about it"* — which is not a discoverability problem to be solved with a tooltip, it
+  is the name being about the implementation rather than the result.
+- **It read as destructive, and was not.** Downloaded tours live in Documents under
+  `TourDownloader`; the button touches `URLCache`, the image cache and the stored
+  catalogue, and **cannot reach a download**. Someone abroad with tours saved for the
+  trip had every reason to avoid the one control that would have fixed them.
+
+Now **"Check for new content"** over `arrow.clockwise`, with a footer that says
+downloads are not removed. 🔴 **The real fix is elsewhere**: the app already refreshes
+on cold launch and on foreground after 900 s, so this button should be a repair hatch
+rather than the normal path. Once **1.1.3** ships delta fetching the download falls
+from ~2.4 MB to ~19 KB, and `foregroundRefreshInterval` can drop far below 900 s at
+almost no egress cost — **that** is what stops an ordinary listener ever needing this
+row. ⚠️ Pull-to-refresh is the obvious idiom and does **not** fit Home: Home is a map,
+and a downward drag pans it.
 
 ## A proxy is not the rule, and it fails silently forever (2026-09-17)
 
