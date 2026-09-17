@@ -328,6 +328,39 @@ Of the six known errors it knows four and has never heard of two (`La Collina`,
 **14–25% for food**, and food is a large part of this catalogue. An unmatched entry is
 **unexamined**, and the report says so in those words.
 
+### Known limitation: a large site reads as a disagreement
+
+The first live findings were `Grand Concourse` (a four-mile boulevard, 4,486 m),
+`Green-Wood Cemetery` (478 acres, 741 m) and `Brooklyn Bridge Park` (a linear waterfront strip,
+634 m). **None is an error.** A site with no single point puts our coordinate and the gazetteer's
+centroid hundreds of metres apart with neither being wrong — the same blind spot `docs/places.md`
+records from the other direction: *"A forty-acre site cannot be found by a metre-scale sweep."*
+
+The report warns about this in so many words rather than guessing. **The fix, when it is worth
+doing, is to fetch Wikidata's `P2046` (area) in `spine-lookup.py`'s query and scale the bands by
+the site's own radius** — a bigger place earns a bigger tolerance. It needs a re-sweep, so it waits
+for a reason to re-sweep.
+
+### Two false positives caught during the build, both from containment
+
+Both appeared in the first 125 entries of the live sweep and both are now regressions in the
+selftest:
+
+- **`Municipal Library of Viana do Castelo` matched the TOWN `Viana do Castelo`**, 464 m away, and
+  was promoted to a finding about the library. Plain containment reintroduces exactly the bug
+  `check-place-candidates.same_name` uses equality to avoid — `Akihabara` matching
+  `Gyukatsu Ichi Ni San, Akihabara`. Fixed by dropping the entry's city words from both sides.
+- **The city drop alone is not enough**, because the containing thing is not always the `city`
+  field: `Gyukatsu Ichi Ni San, Akihabara` is recorded in `Tokyo`. Fixed by a second rule — an
+  English title names its subject FIRST and its locator LAST, so a candidate that is a *subset* of
+  our title must carry our title's **head word**. `Geisel Library` carries `geisel`; `Akihabara`
+  does not carry `gyukatsu`.
+
+⚠️ The city drop is **not** redundant behind the head-word rule, though it looks it: a title that
+*leads* with its city (`Brooklyn Botanic Garden`) has the city AS its head word, and without the
+drop the borough matches the garden inside it. Mutation-testing is what surfaced that — the
+obvious regression passed with the drop deleted.
+
 ### What it does not do
 
 **It moves nothing.** `docs/lessons.md`: *"Move the pin, never the place, and only with the owner's

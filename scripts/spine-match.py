@@ -75,6 +75,7 @@ import gzip
 import importlib.util
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -191,12 +192,48 @@ def label_related(entry, candidate):
     Containment still rejects the case this guards: `Church of Santa Maria`
     against `Igreja de Santa Maria (Celorico de Basto)` shares `santa maria`
     but neither contains the other, and that match was 88 km away.
+
+    🔴 THE ENTRY'S CITY WORDS ARE DROPPED FROM BOTH SIDES FIRST, and without
+    that this reintroduces a bug the project has already paid for once.
+    `Municipal Library of Viana do Castelo` contains `Viana do Castelo` — so
+    plain containment promotes a match against **the town itself**, 464 m away,
+    into a finding about the library. It is the same shape as `Akihabara`
+    matching `Gyukatsu Ichi Ni San, Akihabara`, which is why
+    `check-place-candidates.same_name` uses equality rather than containment.
+
+    Dropping the city leaves `{municipal, library}` against `{}` — empty, so
+    rejected — while `Geisel Library, UC San Diego` against `Geisel Library`
+    still leaves `{geisel, library}` inside `{geisel, library, uc, san, diego}`
+    and is still accepted. The distinctive word is what has to survive.
+
+    ⚠️ Dropping the city is not enough on its own, because the containing thing
+    is not always the `city` field. `Gyukatsu Ichi Ni San, Akihabara` sits in a
+    city recorded as `Tokyo`, so `Akihabara` survives the drop and is still a
+    subset. The second rule below is what rejects it: an English title names its
+    subject FIRST and its locator LAST, so a candidate that is a subset of our
+    title must contain our title's HEAD word to be about the same thing.
+    `Geisel Library` carries `geisel`; `Akihabara` does not carry `gyukatsu`.
     """
-    ours = subject_words(display_stem(entry.get("title")))
-    theirs = subject_words(display_stem(candidate.get("label")))
+    city = entry.get("city")
+    ours = subject_words(display_stem(entry.get("title")), city)
+    theirs = subject_words(display_stem(candidate.get("label")), city)
     if not ours or not theirs:
         return False
-    return ours <= theirs or theirs <= ours
+    if ours <= theirs:
+        return True                     # they name our subject and then some
+    if theirs <= ours:
+        head = head_word(entry.get("title"), city, ours)
+        return head is not None and head in theirs
+    return False
+
+
+def head_word(title, city, meaningful):
+    """The first meaningful word of a title — the subject, not the locator."""
+    normalised = re.sub(r"[^a-z0-9 ]", " ", display_stem(title or "").lower())
+    for word in normalised.split():
+        if word in meaningful:
+            return word
+    return None
 
 
 def band(distance_m, *, related=True):
@@ -291,6 +328,10 @@ def report(rows, catalog, *, limit=40):
     print("\n⚠️  UNMATCHED is NOT a clean bill of health — it means Wikidata has")
     print("    never heard of the subject. Coverage runs 78-83% for architecture")
     print("    creators and 14-25% for food. An unmatched entry is UNEXAMINED.")
+    print("⚠️  A LARGE SITE reads as a disagreement and is usually not one. A")
+    print("    cemetery, a linear park or a whole town has no single point, so our")
+    print("    coordinate and the gazetteer's centroid differ by hundreds of metres")
+    print("    with neither being wrong. Read the subject before reading the number.")
     print("⚠️  Nothing here is auto-fixed. A distance is evidence, not a verdict:")
     print("    three pins moved on a distance alone came out 11 m right, 220 m")
     print("    wrong and 100 m wrong. Every line goes to the owner individually.")
@@ -337,6 +378,30 @@ def selftest():
     check("🔴 label_related ACCEPTS Geisel, which equality would have demoted",
           label_related(geisel, {"label": "Geisel Library"})
           and not label_matches(geisel, {"label": "Geisel Library"}))
+    # 🔴 The containment trap, live-caught: the TOWN is not the library in it.
+    viana = {"title": "Municipal Library of Viana do Castelo",
+             "city": "Viana do Castelo"}
+    check("🔴 label_related REJECTS the containing town",
+          not label_related(viana, {"label": "Viana do Castelo"}))
+    check("...while still accepting the library itself",
+          label_related(viana, {"label": "Municipal Library of Viana do Castelo"}))
+    # The same shape one level down: a venue inside a named district.
+    akiba = {"title": "Gyukatsu Ichi Ni San, Akihabara", "city": "Tokyo"}
+    check("🔴 label_related REJECTS the containing district",
+          not label_related(akiba, {"label": "Akihabara"}))
+    check("...and the head-word rule keeps a trailing qualifier working",
+          label_related({"title": "Times Square — The View from the Red Steps",
+                         "city": "New York"}, {"label": "Times Square"}))
+    check("head_word is the first MEANINGFUL word, not the first word",
+          head_word("The Brooklyn Museum", "Brooklyn", {"museum"}) == "museum")
+    # 🔴 The city drop, tested where the head-word rule does NOT already cover
+    # it: a title that LEADS with its city. Without the drop the head word is
+    # the city itself, so the borough matches the botanic garden inside it.
+    bbg = {"title": "Brooklyn Botanic Garden", "city": "Brooklyn"}
+    check("🔴 a title leading with its city does not match the city",
+          not label_related(bbg, {"label": "Brooklyn"}))
+    check("...and still matches its own name",
+          label_related(bbg, {"label": "Brooklyn Botanic Garden"}))
     for correct in (6.0, 7.0, 67.0, 75.0, 85.0, 88.0):
         check(f"ground truth: a known-correct entry at {correct:.0f} m confirms",
               band(correct) == "CONFIRMS")
@@ -407,7 +472,7 @@ def selftest():
     check("an entry missing from the cache is NOT-ASKED, never CONFIRMS",
           [r["band"] for r in rows] == ["NOT-ASKED", "NOT-ASKED"])
 
-    total = 38
+    total = 45
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
