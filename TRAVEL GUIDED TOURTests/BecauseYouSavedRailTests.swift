@@ -14,9 +14,12 @@ final class BecauseYouSavedRailTests: XCTestCase {
         TestFixtures.makeTour(title: title)
     }
 
+    /// - Parameter savedSet: everything saved, from BOTH stores. Defaults to
+    ///   the seed list, which is what a caller with only Liked would pass.
     private func rails(
         _ tours: [Tour],
         saved: [UUID],
+        savedSet: Set<UUID>? = nil,
         related: @escaping (Tour) -> [Tour]
     ) -> [HomeRail] {
         HomeRailsViewModel.rails(
@@ -25,6 +28,7 @@ final class BecauseYouSavedRailTests: XCTestCase {
             userLocation: nil,
             visibleRegion: nil,
             savedTourIds: saved,
+            savedTourIdSet: savedSet ?? Set(saved),
             relatedTours: related
         )
     }
@@ -62,6 +66,40 @@ final class BecauseYouSavedRailTests: XCTestCase {
             related: { $0.id == seed.id ? [suggestion] : [] }
         )
         XCTAssertEqual(savedRail(result)?.title, "Because you saved Trellick Tower")
+    }
+
+    // MARK: - 🔴 The bug the owner found on build 169
+
+    /// A tour filed into a NAMED LIST is saved just as much as a Liked one —
+    /// `SaveState`: "a tour is saved when it belongs to at least one list".
+    /// The first version of this rail read `LibraryStore` alone, so someone who
+    /// files tours into lists saw no rail at all, which is exactly what
+    /// happened on a real phone.
+    func testSeedsFromATourSavedOnlyInANamedList() {
+        let seed = tour("Trellick Tower")
+        let suggestion = tour("Balfron Tower")
+        let result = rails(
+            [seed, suggestion],
+            // Nothing in Liked; the seed comes from the list store.
+            saved: [seed.id],
+            savedSet: [seed.id],
+            related: { $0.id == seed.id ? [suggestion] : [] }
+        )
+        XCTAssertEqual(savedRail(result)?.title, "Because you saved Trellick Tower")
+    }
+
+    /// The other half of the same mistake: the exclusion must span both stores,
+    /// or the rail suggests a tour the user already keeps in a list.
+    func testExcludesASuggestionSavedOnlyInANamedList() {
+        let seed = tour("Trellick Tower")
+        let inAList = tour("Balfron Tower")
+        let result = rails(
+            [seed, inAList],
+            saved: [seed.id],                       // only the seed is a candidate seed
+            savedSet: [seed.id, inAList.id],        // but BOTH are saved somewhere
+            related: { $0.id == seed.id ? [inAList] : [] }
+        )
+        XCTAssertNil(savedRail(result), "it suggested something already saved in a list")
     }
 
     // MARK: - 🔴 It stays away

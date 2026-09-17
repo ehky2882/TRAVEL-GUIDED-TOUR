@@ -40,11 +40,18 @@ enum HomeRailsViewModel {
         userLocation: CLLocation?,
         visibleRegion: MKCoordinateRegion?,
         toursByTag: [String: [Tour]]? = nil,
-        /// Saved tour ids, most recently saved FIRST. Defaulted empty so every
-        /// existing caller and test is untouched — and so that removing this
-        /// rail later means deleting one function and one call, the way
-        /// *Continue listening* was removed on 2026-09-13.
+        /// Candidate seeds, best first. Defaulted empty so every existing
+        /// caller and test is untouched — and so that removing this rail later
+        /// means deleting one function and one call, the way *Continue
+        /// listening* was removed on 2026-09-13.
         savedTourIds: [UUID] = [],
+        /// 🔴 EVERYTHING SAVED, from BOTH stores — not just `savedTourIds`.
+        /// A tour is saved when it is in Liked **or** any named list
+        /// (`SaveState`), and the first version of this rail read only Liked.
+        /// It is passed in rather than derived from `savedTourIds` because the
+        /// seed order and the full membership are different questions: only
+        /// Liked carries a timestamp, so only Liked can be ordered.
+        savedTourIdSet: Set<UUID> = [],
         /// `relatedTourIds`, already in the catalogue and already on the phone.
         /// Passed as a closure so this stays a pure function over its inputs —
         /// `DataService.relatedTours(for:)` is the real implementation.
@@ -57,7 +64,10 @@ enum HomeRailsViewModel {
             rails.append(rail)
         }
         if let rail = becauseYouSavedRail(
-            tours: tours, savedTourIds: savedTourIds, relatedTours: relatedTours
+            tours: tours,
+            savedTourIds: savedTourIds,
+            savedTourIdSet: savedTourIdSet.isEmpty ? Set(savedTourIds) : savedTourIdSet,
+            relatedTours: relatedTours
         ) {
             rails.append(rail)
         }
@@ -257,10 +267,14 @@ enum HomeRailsViewModel {
     private static func becauseYouSavedRail(
         tours: [Tour],
         savedTourIds: [UUID],
+        savedTourIdSet: Set<UUID>,
         relatedTours: ((Tour) -> [Tour])?
     ) -> HomeRail? {
         guard let relatedTours, !savedTourIds.isEmpty else { return nil }
-        let saved = Set(savedTourIds)
+        // ⚠️ The exclusion set is the UNION, not the seed list. Suggesting a
+        // tour the user already has in a named list is the same mistake as
+        // suggesting one they Liked — it just hid behind a different store.
+        let saved = savedTourIdSet
 
         // Most recent first, and skip anything with no neighbours rather than
         // rendering an empty rail under a confident heading.
