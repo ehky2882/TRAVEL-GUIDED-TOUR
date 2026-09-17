@@ -317,6 +317,65 @@ SELECT ?item ?itemLabel ?coord ?sitelinks WHERE {{
 """
 
 
+def escape_search(name):
+    """Escape a name for a SPARQL string literal."""
+    return name.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def batch_query(asks, limit=SEARCH_LIMIT):
+    """One query answering SEVERAL searches, each tagged so results map back.
+
+    🔴 THIS IS WHAT MAKES A FULL SWEEP POSSIBLE AT ALL. Measured 2026-09-17:
+    one query per name costs ~3 s (1 s courtesy sleep + ~2 s round trip), which
+    is **4.5 hours** for this catalogue — and a background process does not
+    survive an idle session here (the first attempt died five minutes after the
+    turn ended, at 316 of 4,566), so a sweep that cannot finish inside one
+    active turn does not finish at all. Eight searches UNION'd into one query
+    cost a median 1.5 s, i.e. **0.31 s per name**, and the whole sweep becomes
+    roughly 22 minutes of foreground work.
+
+    ⚠️ The obvious alternative is the wrong one, and it was measured before
+    being rejected. Wikidata's `wbsearchentities` action API answers a single
+    search faster (~0.3 s against ~2 s) and **429s hard in bulk** — 5 of 15
+    succeeded at a 0.5 s sleep, 9 of 15 at 0.25 s — while WDQS ran 316
+    consecutive entries with zero failures. The win is batching the permissive
+    endpoint, not switching to the fast one.
+
+    `asks` is a list of `(tag, name, language)`. `mwapi:language` sits inside
+    each branch, so one batch may mix English and native-script names freely.
+    """
+    branches = []
+    for tag, name, language in asks:
+        branches.append(
+            f'  {{ SELECT ?item ?coord ?sitelinks ("{tag}" AS ?tag) WHERE {{\n'
+            f'    SERVICE wikibase:mwapi {{\n'
+            f'      bd:serviceParam wikibase:endpoint "www.wikidata.org" .\n'
+            f'      bd:serviceParam wikibase:api "EntitySearch" .\n'
+            f'      bd:serviceParam mwapi:search "{escape_search(name)}" .\n'
+            f'      bd:serviceParam mwapi:language "{language}" .\n'
+            f'      bd:serviceParam mwapi:limit "{limit}" .\n'
+            f'      ?item wikibase:apiOutputItem mwapi:item .\n'
+            f'    }}\n'
+            f'    ?item wdt:P625 ?coord .\n'
+            f'    OPTIONAL {{ ?item wikibase:sitelinks ?sitelinks }}\n'
+            f'  }} }}'
+        )
+    return ("SELECT ?tag ?item ?itemLabel ?coord ?sitelinks WHERE {\n"
+            + "\n  UNION\n".join(branches)
+            + '\n  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,mul" }\n}\n')
+
+
+def split_by_tag(bindings):
+    """Group a batched result's rows by their branch tag."""
+    out = {}
+    for binding in bindings:
+        tag = binding.get("tag", {}).get("value")
+        if tag is None:
+            continue
+        out.setdefault(tag, []).append(binding)
+    return out
+
+
 def parse_point(wkt):
     """`Point(lon lat)` -> (lat, lon). None on anything unexpected."""
     if not wkt or not wkt.startswith("Point(") or not wkt.endswith(")"):
@@ -326,6 +385,54 @@ def parse_point(wkt):
         return float(lat_s), float(lon_s)
     except ValueError:
         return None
+
+
+def sparql_with_retry(query):
+    """`sparql` with backoff. Raises if every attempt fails — never returns {}."""
+    last = None
+    for attempt in range(1, MAX_RETRY + 1):
+        try:
+            return sparql(query)
+        except Exception as exc:                            # noqa: BLE001
+            last = exc
+            if attempt < MAX_RETRY:
+                time.sleep(SLEEP_S * 2 * attempt)
+    raise RuntimeError(f"{type(last).__name__}: {last}")
+
+
+def ask_batch(asks, points, *, bound_km=BOUND_KM, log=print):
+    """Run one batched query. Returns `(results_by_tag, errors_by_tag)`.
+
+    🔴 A BATCH FAILURE MUST NOT LOSE THE OTHER SEVEN ENTRIES. If the batched
+    query fails for any reason — one unescapable name, one timeout — every name
+    in it is asked again individually before anything is recorded. Without this
+    the seven innocents cache as "nothing found", which is indistinguishable
+    from a real miss forever after, because the cache is the resume state. It is
+    the hazard `sparql()` guards at the single-query level, one layer up.
+    """
+    if not asks:
+        return {}, {}
+    try:
+        payload = sparql_with_retry(batch_query(asks))
+        grouped = split_by_tag(payload["results"]["bindings"])
+        return ({tag: candidates_from_bindings(grouped.get(tag, []), points[tag], bound_km)
+                 for tag, _, _ in asks}, {})
+    except Exception as exc:                                # noqa: BLE001
+        log(f"    batch of {len(asks)} failed ({type(exc).__name__}) — "
+            f"asking individually so one bad name cannot lose the rest")
+
+    results, errors = {}, {}
+    for ask in asks:
+        tag = ask[0]
+        try:
+            payload = sparql_with_retry(batch_query([ask]))
+            grouped = split_by_tag(payload["results"]["bindings"])
+            results[tag] = candidates_from_bindings(
+                grouped.get(tag, []), points[tag], bound_km)
+        except Exception as exc:                            # noqa: BLE001
+            errors[tag] = f"{type(exc).__name__}: {exc}"
+        time.sleep(SLEEP_S)
+    return results, errors
 
 
 def candidates_for(name, at, *, country=None, bound_km=BOUND_KM, log=print):
@@ -421,6 +528,124 @@ def save_cache(path, cache):
     os.replace(tmp, path)
 
 
+def chunked(items, size):
+    for start in range(0, len(items), size):
+        yield items[start:start + size]
+
+
+def run_sweep(todo, cache, opts, *, save=None, log=print):
+    """Fill the cache for `todo`, in three batched passes.
+
+    The passes are an economy, not a refinement: pass 1 answers most entries, so
+    passes 2 and 3 run over the shrinking remainder rather than the whole
+    catalogue.
+
+    1. the **primary name** for everything
+    2. the **native-script name**, only where pass 1 found nothing or nothing
+       close — the second opinion is worth a query exactly when we are about to
+       report a problem
+    3. the **editorial reductions**, only where there is still nothing. An Atlas
+       tour titled for an angle on a site (`The South Facade of Grand Central`)
+       is not a site Wikidata has never heard of; it is a site asked for by the
+       wrong name.
+
+    Returns counters. `save` is called periodically so an interrupted sweep
+    keeps its progress — the cache is the resume state.
+    """
+    batch_size = max(1, opts.batch)
+    work = {}
+    for entry, at, digest in todo:
+        work[entry["id"]] = {"entry": entry, "at": at, "digest": digest,
+                             "merged": {}, "langs": [], "error": None}
+
+    stats = {"asked": 0, "failed": 0, "queries": 0}
+
+    def run_pass(number, label, pick_name, select):
+        pending = [state for state in work.values()
+                   if state["error"] is None and select(state)]
+        jobs = []
+        for state in pending:
+            name = pick_name(state)
+            if name:
+                jobs.append((state, name))
+        if not jobs:
+            return
+        log(f"\npass {number} — {label}: {len(jobs)} entr"
+            f"{'y' if len(jobs) == 1 else 'ies'}")
+        done = 0
+        for chunk in chunked(jobs, batch_size):
+            asks, points = [], {}
+            for index, (state, name) in enumerate(chunk):
+                tag = f"t{index}"
+                asks.append((tag, name, search_language(
+                    name, state["entry"].get("country"))))
+                points[tag] = state["at"]
+            results, errors = ask_batch(asks, points,
+                                        bound_km=opts.bound_km, log=log)
+            stats["queries"] += 1
+            for index, (state, name) in enumerate(chunk):
+                tag = f"t{index}"
+                if tag in errors:
+                    # 🔴 Never cache a network failure as "nothing found".
+                    state["error"] = errors[tag]
+                    continue
+                state["langs"].append(asks[index][2])
+                for candidate in results.get(tag, []):
+                    previous = state["merged"].get(candidate["qid"])
+                    if previous is None or candidate["distance_m"] < previous["distance_m"]:
+                        state["merged"][candidate["qid"]] = candidate
+                state.setdefault("asked", []).append(name)
+            done += len(chunk)
+            if done % (batch_size * 10) < batch_size:
+                log(f"  {done}/{len(jobs)}")
+            time.sleep(SLEEP_S)
+
+    def best_so_far(state):
+        return min((c["distance_m"] for c in state["merged"].values()), default=None)
+
+    run_pass(1, "primary name",
+             lambda s: (query_names(s["entry"].get("title")) or [None])[0],
+             lambda s: True)
+
+    def native_name(state):
+        names = query_names(state["entry"].get("title"))
+        return names[1] if len(names) > 1 else None
+
+    run_pass(2, "native-script second opinion", native_name,
+             lambda s: (best_so_far(s) is None or best_so_far(s) >= REVIEW_M))
+
+    def fallback_name(state):
+        options = fallback_names(state["entry"].get("title"))
+        return options[0] if options else None
+
+    run_pass(3, "editorial reduction", fallback_name,
+             lambda s: not s["merged"])
+
+    for state in work.values():
+        entry = state["entry"]
+        if state["error"] is not None:
+            stats["failed"] += 1
+            log(f"  FAILED {(entry.get('title') or '')[:40]}: {state['error']}")
+            continue
+        if not state.get("asked"):
+            continue
+        cache[entry["id"]] = {
+            "digest": state["digest"],
+            "version": RECORD_VERSION,
+            "title": entry.get("title"),
+            "asked": state["asked"],
+            "languages": state["langs"],
+            "at": [round(state["at"][0], 6), round(state["at"][1], 6)],
+            "bound_km": opts.bound_km,
+            "candidates": sorted(state["merged"].values(),
+                                 key=lambda c: c["distance_m"]),
+        }
+        stats["asked"] += 1
+    if save:
+        save()
+    return stats
+
+
 def selftest():
     """Offline checks only — no network, so this can gate a commit."""
     fails = []
@@ -512,13 +737,79 @@ def selftest():
               [{"item": {"value": ".../Q9"}, "coord": {"value": "MULTIPOINT(1 2)"}}],
               (0.0, 0.0), BOUND_KM) == [])
 
+    # --- batching -----------------------------------------------------------
+    asks = [("t0", "Domino Park", "en"), ("t1", "浅草地下街", "ja")]
+    q = batch_query(asks)
+    check("batch_query emits one branch per ask", q.count("wikibase:mwapi") == 2)
+    check("batch_query tags every branch",
+          '("t0" AS ?tag)' in q and '("t1" AS ?tag)' in q)
+    check("🔴 batch_query keeps the language PER branch, so a batch may mix them",
+          '"en"' in q and '"ja"' in q)
+    check("batch_query escapes an embedded quote",
+          '\\"' in batch_query([("t0", 'the "best" bar', "en")]))
+    check("batch_query still requires a coordinate", "wdt:P625 ?coord" in q)
+
+    rows = [{"tag": {"value": "t0"}, "x": 1}, {"tag": {"value": "t1"}, "x": 2},
+            {"tag": {"value": "t0"}, "x": 3}, {"no_tag": True}]
+    grouped = split_by_tag(rows)
+    check("split_by_tag groups by branch",
+          len(grouped["t0"]) == 2 and len(grouped["t1"]) == 1)
+    check("split_by_tag drops an untagged row", set(grouped) == {"t0", "t1"})
+
+    check("chunked splits evenly", list(chunked([1, 2, 3, 4, 5], 2)) == [[1, 2], [3, 4], [5]])
+    check("chunked of an empty list is empty", list(chunked([], 3)) == [])
+
+    # 🔴 THE BATCH-FAILURE FALLBACK. This is the check that matters most about
+    # batching: without it one bad name caches seven innocents as "nothing
+    # found", permanently, because the cache is the resume state.
+    global sparql_with_retry
+    real = sparql_with_retry
+
+    def one_row(tag, lat, lon):
+        return {"results": {"bindings": [
+            {"tag": {"value": tag},
+             "item": {"value": "http://www.wikidata.org/entity/Q1"},
+             "itemLabel": {"value": "X"},
+             "coord": {"value": f"Point({lon} {lat})"}}]}}
+
+    calls = []
+
+    def fail_batch_pass_single(query):
+        calls.append(query)
+        if query.count("wikibase:mwapi") > 1:
+            raise RuntimeError("simulated batch failure")
+        return one_row("t0", 0.0, 0.0)
+
+    try:
+        sparql_with_retry = fail_batch_pass_single
+        three = [("t0", "a", "en"), ("t1", "b", "en"), ("t2", "c", "en")]
+        points = {"t0": (0.0, 0.0), "t1": (0.0, 0.0), "t2": (0.0, 0.0)}
+        results, errors = ask_batch(three, points, log=lambda *_: None)
+        check("🔴 a failed batch falls back to asking each name individually",
+              len(calls) == 4 and errors == {})
+        check("🔴 and the other names still get their answers",
+              set(results) == {"t0", "t1", "t2"})
+
+        calls.clear()
+
+        def always_fail(query):
+            calls.append(query)
+            raise RuntimeError("simulated total failure")
+
+        sparql_with_retry = always_fail
+        results, errors = ask_batch(three, points, log=lambda *_: None)
+        check("🔴 a name that fails even alone is an ERROR, never an empty result",
+              set(errors) == {"t0", "t1", "t2"} and results == {})
+    finally:
+        sparql_with_retry = real
+
     d1 = ask_digest("A", (1.0, 2.0), 100.0)
     check("digest is stable", d1 == ask_digest("A", (1.0, 2.0), 100.0))
     check("digest moves when the title changes", d1 != ask_digest("B", (1.0, 2.0), 100.0))
     check("digest moves when the entry moves", d1 != ask_digest("A", (1.5, 2.0), 100.0))
     check("digest moves when the bound changes", d1 != ask_digest("A", (1.0, 2.0), 50.0))
 
-    total = 32
+    total = 43
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
@@ -534,6 +825,9 @@ def main():
                          "the resume state, so a slice is safe to repeat.")
     ap.add_argument("--only", default="",
                     help="substring filter on the title, for probing one subject")
+    ap.add_argument("--batch", type=int, default=8,
+                    help="names per SPARQL query. 8 measured at 0.31 s/name "
+                         "against ~3 s unbatched; 1 disables batching.")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -568,92 +862,13 @@ def main():
             print("\nOK — cache is complete for this catalogue")
             return 0
 
-        asked = failed = 0
-        for index, (entry, at, digest) in enumerate(todo, 1):
-            names = query_names(entry.get("title"))
-            if not names:
-                continue
-            merged, langs, error = {}, [], None
-            for position, name in enumerate(names):
-                # ⚠️ The native-script name is a SECOND opinion, not a routine
-                # one. Asking it for every bilingual title doubles a sweep that
-                # already runs for hours. Ask it only when the first answer is
-                # one we would act on being wrong about: nothing found, or a
-                # hit far enough away to be reported as a problem.
-                if position > 0:
-                    best_so_far = min((c["distance_m"] for c in merged.values()),
-                                      default=None)
-                    if best_so_far is not None and best_so_far < REVIEW_M:
-                        break
-                try:
-                    got = candidates_for(name, at,
-                                         country=entry.get("country"),
-                                         bound_km=a.bound_km)
-                except Exception as exc:                    # noqa: BLE001
-                    error = str(exc)
-                    break
-                langs.append(got["language"])
-                for candidate in got["candidates"]:
-                    prev = merged.get(candidate["qid"])
-                    if prev is None or candidate["distance_m"] < prev["distance_m"]:
-                        merged[candidate["qid"]] = candidate
-                time.sleep(SLEEP_S)
-
-            if not merged and error is None:
-                # Nothing under the title as written. Try the editorial
-                # reductions before giving up — a tour named for an angle on a
-                # site is not a site Wikidata has never heard of, it is a site
-                # asked for by the wrong name.
-                for name in fallback_names(entry.get("title")):
-                    try:
-                        got = candidates_for(name, at,
-                                             country=entry.get("country"),
-                                             bound_km=a.bound_km)
-                    except Exception as exc:                # noqa: BLE001
-                        error = str(exc)
-                        break
-                    langs.append(got["language"])
-                    for candidate in got["candidates"]:
-                        candidate = dict(candidate, via=name)
-                        prev = merged.get(candidate["qid"])
-                        if prev is None or candidate["distance_m"] < prev["distance_m"]:
-                            merged[candidate["qid"]] = candidate
-                    time.sleep(SLEEP_S)
-                    if merged:
-                        break
-
-            if error is not None:
-                # 🔴 Never cache a network failure as "nothing found".
-                failed += 1
-                print(f"  {index}/{len(todo)} FAILED {entry.get('title','')[:40]}: {error}")
-                continue
-
-            ranked = sorted(merged.values(), key=lambda c: c["distance_m"])
-            cache[entry["id"]] = {
-                "digest": digest,
-                "version": RECORD_VERSION,
-                "title": entry.get("title"),
-                "asked": names,
-                "languages": langs,
-                "at": [round(at[0], 6), round(at[1], 6)],
-                "bound_km": a.bound_km,
-                "candidates": ranked,
-            }
-            asked += 1
-            if ranked:
-                best = ranked[0]
-                print(f"  {index}/{len(todo)} {entry.get('title','')[:38]:38} -> "
-                      f"{best['label'][:26]:26} {best['distance_m']:8.0f} m")
-            else:
-                print(f"  {index}/{len(todo)} {entry.get('title','')[:38]:38} -> "
-                      f"no candidate within {a.bound_km:.0f} km")
-            if asked % 25 == 0:
-                save_cache(a.cache, cache)
+        stats = run_sweep(todo, cache, a, save=lambda: save_cache(a.cache, cache))
 
         save_cache(a.cache, cache)
-        print(f"\nasked {asked} · failed {failed} · cache now {len(cache)} entries")
+        print(f"\nasked {stats['asked']} \u00b7 failed {stats['failed']} "
+              f"\u00b7 queries {stats['queries']} \u00b7 cache now {len(cache)} entries")
         print(f"wrote {a.cache}")
-        if failed:
+        if stats["failed"]:
             # 🔴 A partial sweep must not read as a complete one.
             print("COULD NOT VERIFY — some lookups failed; re-run to finish them")
             return 2
