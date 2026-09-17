@@ -37,6 +37,19 @@ CATEGORIES = {
 }
 
 
+# How many tours one seed may delete before it refuses. A real content removal
+# is a handful of rows; anything near this is a truncated or mis-parsed
+# catalogue, and the right answer to that is to abort rather than empty the
+# table. Generous enough for a whole city (the largest bureau is ~101 tours)
+# and nowhere near the 4,000+ rows that are live.
+PRUNE_CEILING = 300
+
+# Below this many entries the catalogue is not small, it is BROKEN. Nothing
+# legitimate shrinks it by an order of magnitude, and a partially-read file
+# must never be allowed to author a delete.
+MIN_SANE_TOURS = 1000
+
+
 def q(value):
     """Quote a scalar as a SQL literal (text/number/bool/None)."""
     if value is None:
@@ -142,6 +155,18 @@ def validate_places(data):
 
 def validate(data):
     errors = []
+    # 🔴 THE FIRST CHECK, BECAUSE THE SEED NOW DELETES. Every other error here
+    # stops a bad row; this one stops a bad FILE from authoring a mass delete.
+    # A truncated read, a half-written catalogue or a merge that dropped an
+    # array all look like "a smaller catalogue" to the code below, and the
+    # prune would faithfully remove the difference. Nothing legitimate shrinks
+    # the catalogue by an order of magnitude — a whole city is ~100 entries.
+    if len(data["tours"]) < MIN_SANE_TOURS:
+        sys.exit(
+            f"ERROR: catalogue holds only {len(data['tours'])} entries, under the "
+            f"{MIN_SANE_TOURS} floor. Refusing to seed: the prune would treat "
+            "everything missing as deleted. Check the file before retrying."
+        )
     maker_ids = {m["id"] for m in data["makers"]}
     for t in data["tours"]:
         if t["kind"] not in KINDS:
@@ -364,6 +389,61 @@ def emit(data, out):
                 ("price_usd", "excluded.price_usd"),
             ])
         )
+
+    # --- prune tours and pins that have left the catalogue ---------------
+    #
+    # 🔴 Until this existed the seed was UPSERT-ONLY, so deleting content from
+    # Tours.json reached the gh-pages mirror and the bundled seed and NEVER
+    # reached Postgres -- which is the app's PRIMARY source. The app went on
+    # serving it. CLAUDE.md § Egress documented this as a known two-part manual
+    # change; this is the missing half.
+    #
+    # 🔴 THE GUARD KEYS ON THE MAKER, NOT THE TOUR, AND THAT IS THE DESIGN.
+    # `status` cannot tell a seeded tour from a maker's own upload -- measured
+    # against production on 2026-09-17, ALL 4,382 rows are 'published'. What
+    # does separate them is ownership: a seeded tour always belongs to a maker
+    # that is in Tours.json, an in-app upload belongs to an account that is not
+    # (500 makers live against 472 in the catalogue -- 28 real accounts). So
+    # restricting the delete to catalogue makers cannot touch a user's work.
+    #
+    # ⚠️ Verified the same day: exactly ONE tour row was absent from the
+    # catalogue -- "Pigalle Duperré Basketball" by "Wes the Wanderer", whose
+    # maker row is NOT in Tours.json. This prune therefore deletes nothing
+    # today, which is the right state in which to ship a destructive statement.
+    #
+    # ⚠️ ids are compared LOWERCASED ON BOTH SIDES. Pin ids are UPPERCASE in
+    # Tours.json and lowercase out of Postgres; CLAUDE.md records that a naive
+    # comparison "reports every pin as missing", and here that would mean
+    # DELETING EVERY PIN.
+    #
+    # `stops`, library entries and journey rows are `on delete cascade`, so a
+    # pruned tour takes its own dependents with it.
+    w("\n-- prune tours and pins that no longer exist in the catalog\n")
+    keep_tours = ", ".join(q(t["id"].lower()) for t in data["tours"])
+    keep_makers = ", ".join(q(m["id"].lower()) for m in data["makers"])
+    w(
+        "do $$\n"
+        "declare doomed int;\n"
+        "begin\n"
+        "    select count(*) into doomed from public.tours\n"
+        f"     where lower(id::text) not in ({keep_tours})\n"
+        f"       and lower(maker_id::text) in ({keep_makers});\n"
+        # 🔴 A ceiling checked against the REAL table, inside the transaction.
+        # The Python guard cannot see the database; this can. Under
+        # ON_ERROR_STOP=1 a raise here aborts the whole seed, so a catalogue
+        # that passed validation and would still gut the table takes nothing
+        # with it.
+        f"    if doomed > {PRUNE_CEILING} then\n"
+        "        raise exception 'prune would delete % tours (ceiling %); "
+        "refusing -- read the catalogue before retrying', doomed, "
+        f"{PRUNE_CEILING};\n"
+        "    end if;\n"
+        "    delete from public.tours\n"
+        f"     where lower(id::text) not in ({keep_tours})\n"
+        f"       and lower(maker_id::text) in ({keep_makers});\n"
+        "    raise notice 'pruned % tour row(s)', doomed;\n"
+        "end $$;\n"
+    )
 
     # Membership, re-derived from the catalog on every seed.
     #
