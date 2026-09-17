@@ -1753,3 +1753,92 @@ The answer was one row in Settings → About: **"Updated"**, when the catalogue 
 arrived. It makes Clear Cache provable (tap it, read "just now") and would have
 turned that hour into a glance. **When shipping a fix for something invisible, ship
 the thing that makes it visible in the same change.**
+
+## A proxy is not the rule, and it fails silently forever (2026-09-17)
+
+`docs/places.md` Rule 1 is *two names for one thing is always a place*.
+`check-place-candidates.py` tested **whether two entries sat on the same coordinate**.
+Coincidence is a good proxy for identity and it found plenty — but it is not the rule,
+and **everything the proxy missed stayed invisible however many times the catalogue was
+scanned**. The owner kept finding candidates by eye and asking, reasonably, why a
+system built for exactly this kept missing them.
+
+🔴 The specific case, Rothko Chapel, **was in the tool's own output.** An ad-hoc scan run
+beside the checker dropped it because `"therothkochapel" != "rothkochapel"`. Two failures
+in one: a proxy standing in for the rule, and a hand-rolled scan trusted over the
+checker that had already answered correctly.
+
+The fix (#950) tests names, and three details of it are load-bearing:
+
+- **Set equality, not containment.** Containment matched *"Akihabara"* to *"Gyukatsu Ichi
+  Ni San, Akihabara"* — a restaurant in a district, not two names for one thing.
+- **Drop the UNION of both entries' city words.** Dropping each side's own words stripped
+  `asakusa` from `Tokyo (Asakusa)` but not from `Tokyo`, and the tier lost Asakusa
+  Underground Street. **Caught only by re-running against the pre-#941 catalogue** — the
+  tier recovered 8 of the 9 places that had just been minted, not 9. Any change to a
+  matcher deserves that regression: run it against a base where the answer is already known.
+- **CI-wire it.** A rule that depends on a session remembering rule 8c will be missed; it
+  had been, twice. ⚠️ Actions runs `run:` under `bash -e`, so `|| code=$?` is what lets the
+  report be written before a non-zero exit kills the step.
+
+## A place candidate can be two WRONG names for one right place (2026-09-17)
+
+"Pavilion in the Pond" and "The Glass House" came up as a group, and I filed it as
+**part-vs-whole** — which `docs/places.md` records as explicitly undecided, so a question
+for the owner. That framing questioned the *relationship between the two titles while
+assuming both were true.* The owner: *"IT'S AT GRACE FARMS!"* — 6.1 km away. Neither
+title was right.
+
+**A candidate group is not only a question about whether to merge.** It is evidence that
+at least one of the two entries is describing something else. Check what each one *is*
+before reasoning about how they relate.
+
+## The tour is usually the thing in the wrong place (2026-09-17)
+
+Clearing the place backlog turned up coordinate errors in **13 of 15** groups, and in
+almost every one it was the **Atlas tour** that was displaced, not the pin: Grace Farms
+6.1 km, Geisel Library 5.4 km, La Collina 1,440 m, Casa de Vidro 833 m, Asakusa
+Underground Street 718 m, Domino Park 201 m.
+
+🔴 **Every one was precise, plausible and in the right city** — which is exactly why no
+check has ever caught them. `check-coordinates.py` finds gross displacement and city
+outliers; a hand-typed coordinate that lands on the wrong building in the right
+neighbourhood passes everything. A place group is currently the only mechanism that
+surfaces them at all, because it puts two independent opinions about one subject side by side.
+
+**Corollaries paid for the same day:**
+
+- **A pin 0 m from an OSM hit can still be wrong.** SESC Pompéia: the tour sat exactly on
+  the community centre, the pin exactly on the *railway station* of the same name, 158 m
+  apart. Both "verified" against a named node.
+- **Wikidata's own coordinate can be the neighbouring building.** Casa Batlló's lands on
+  Casa Amatller — the house `docs/places.md` records the owner deliberately keeping
+  separate. Domino Park's lands on a restaurant. **Reverse-geocode every anchor before
+  minting a place**, because a place is a coordinate and minting one MOVES every member onto it.
+- **Moving a map pin is not moving the tour.** #930 changed 26 coordinates and **zero**
+  centroid lines; `Tour.coordinate` and the "distance away" label read `centroidLatitude`,
+  not stop 0 (`Models/Tour.swift:393,448`). 36 entries were left with the pin in one place
+  and every distance calculation in another — worst 366 m, 4,270 m of total drift (#936).
+
+## An EXACT group reporting does NOT mean no place exists (2026-09-17)
+
+`check-place-candidates.py` reports a group when **a member** is unplaced. A place for
+that subject may already exist with other members. Reading the report as "no place here"
+minted a duplicate for 1111 Lincoln Road and turned CI red on `duplicate place id` — the
+membership query had the matching omission, not excluding already-placed entries.
+
+🔴 **And the process failure underneath it is the more general one: re-run the WHOLE check
+after every mutation.** The full invariant check had been run, *then* a group was added,
+and only the candidate scan re-run. Both bugs sat inside what had been verified and
+outside what was re-verified. A check is a statement about a state, and every edit
+retires it.
+
+## A CDN resizer URL is not the image (2026-09-17)
+
+The owner pasted a `popmenucloud.com/cdn-cgi/image/width=1200,height=1200,fit=scale-down/...`
+URL for the Monkey King hero. It serves **1200×800** — under the pipeline's 900 floor, so
+it cannot crop to 1200×900 without upscaling. The **untransformed original is 7200×4802**.
+
+Strip the transformation segment from any `/cdn-cgi/image/`, `/_next/image`, `?w=`,
+`/thumb/` or similar URL and re-fetch before concluding a source is too small. The
+dimensions you measure are the ones the resizer was asked for, not the ones the file has.
