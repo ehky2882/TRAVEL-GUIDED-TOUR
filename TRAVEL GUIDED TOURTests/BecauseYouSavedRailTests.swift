@@ -1,7 +1,7 @@
 import XCTest
 @testable import TRAVEL_GUIDED_TOUR
 
-/// The "Because you saved …" rail.
+/// The "More like what you saved" rail.
 ///
 /// ⚠️ MOST OF THIS FILE IS ABOUT THE RAIL **NOT** APPEARING. A personalised
 /// rail that shows up empty, or under a heading naming a tour whose
@@ -34,12 +34,12 @@ final class BecauseYouSavedRailTests: XCTestCase {
     }
 
     private func savedRail(_ rails: [HomeRail]) -> HomeRail? {
-        rails.first { $0.id.hasPrefix("becauseYouSaved.") }
+        rails.first { $0.id == HomeRailsViewModel.savedRailID }
     }
 
     // MARK: - It appears, and names the right tour
 
-    func testNamesTheMostRecentlySavedTourThatHasSuggestions() {
+    func testSeedsFromTheMostRecentlySavedTourThatHasSuggestions() {
         let seed = tour("Trellick Tower")
         let older = tour("Something Saved Long Ago")
         let suggestion = tour("Balfron Tower")
@@ -50,7 +50,10 @@ final class BecauseYouSavedRailTests: XCTestCase {
             related: { $0.id == seed.id ? [suggestion] : [] }
         )
         let rail = savedRail(result)
-        XCTAssertEqual(rail?.title, "Because you saved Trellick Tower")
+        XCTAssertEqual(rail?.title, "More like what you saved")
+        // ⚠️ The heading no longer names the seed, so the seed's identity is
+        // only observable through WHICH suggestions came back. That is the
+        // thing worth asserting anyway.
         XCTAssertEqual(rail?.tours.map(\.title), ["Balfron Tower"])
     }
 
@@ -65,7 +68,8 @@ final class BecauseYouSavedRailTests: XCTestCase {
             saved: [barren.id, seed.id],
             related: { $0.id == seed.id ? [suggestion] : [] }
         )
-        XCTAssertEqual(savedRail(result)?.title, "Because you saved Trellick Tower")
+        XCTAssertEqual(savedRail(result)?.tours.map(\.title), ["Balfron Tower"],
+                       "it should have fallen through to the seed that has neighbours")
     }
 
     // MARK: - 🔴 The bug the owner found on build 169
@@ -85,7 +89,8 @@ final class BecauseYouSavedRailTests: XCTestCase {
             savedSet: [seed.id],
             related: { $0.id == seed.id ? [suggestion] : [] }
         )
-        XCTAssertEqual(savedRail(result)?.title, "Because you saved Trellick Tower")
+        XCTAssertEqual(savedRail(result)?.tours.map(\.title), ["Balfron Tower"],
+                       "a tour saved only in a named list must still seed the rail")
     }
 
     /// The other half of the same mistake: the exclusion must span both stores,
@@ -150,6 +155,7 @@ final class BecauseYouSavedRailTests: XCTestCase {
             saved: [UUID(), seed.id],          // a stale id from an older catalogue
             related: { $0.id == seed.id ? [suggestion] : [] }
         )
-        XCTAssertEqual(savedRail(result)?.title, "Because you saved Trellick Tower")
+        XCTAssertEqual(savedRail(result)?.tours.map(\.title), ["Balfron Tower"],
+                       "a saved id with no matching tour must be skipped, not fatal")
     }
 }

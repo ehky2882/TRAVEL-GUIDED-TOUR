@@ -63,15 +63,6 @@ enum HomeRailsViewModel {
         if let rail = recentlyViewedRail(tours: tours, recentlyViewedIds: recentlyViewedIds) {
             rails.append(rail)
         }
-        if let rail = becauseYouSavedRail(
-            tours: tours,
-            savedTourIds: savedTourIds,
-            savedTourIdSet: savedTourIdSet.isEmpty ? Set(savedTourIds) : savedTourIdSet,
-            relatedTours: relatedTours
-        ) {
-            rails.append(rail)
-        }
-
         // Location-anchored — one top rail, context-aware (§1.5):
         //   • Near mode (map over the user): "Near you".
         //   • Far mode (panned to another area): "In view", and "Near
@@ -84,6 +75,18 @@ enum HomeRailsViewModel {
             if let rail = nearYouRail(tours: tours, userLocation: userLocation) {
                 rails.append(rail)
             }
+        }
+
+        // Second, directly under the location rail — owner placement,
+        // 2026-09-17. Where you are beats what you saved; what you saved beats
+        // the editorial shelves.
+        if let rail = becauseYouSavedRail(
+            tours: tours,
+            savedTourIds: savedTourIds,
+            savedTourIdSet: savedTourIdSet.isEmpty ? Set(savedTourIds) : savedTourIdSet,
+            relatedTours: relatedTours
+        ) {
+            rails.append(rail)
         }
 
         // Interest-based — the curated tag shelves (owner decision D7),
@@ -252,7 +255,20 @@ enum HomeRailsViewModel {
 
     // MARK: - Rail builders
 
-    /// "Because you saved …" — neighbours of something already in the library.
+    /// Stable, so the rail keeps its view identity when the seed changes —
+    /// which it does the moment anything new is saved.
+    static let savedRailID = "moreLikeYourSaves"
+
+    /// "More like what you saved" — neighbours of something already saved.
+    ///
+    /// 🔴 THE HEADING NAMES NO TOUR, and that is measured rather than stylistic.
+    /// The rail title renders in all-caps SF Mono, about 32 characters to a
+    /// line. "BECAUSE YOU SAVED " alone eats 18 of them, leaving 14 for a title
+    /// whose median is 22 and whose maximum is 86 — so only 22% of titles fit
+    /// on one line, and the owner does not want a two-line heading. Even the
+    /// shortest sensible prefix only reached 67%. No wording can guarantee it,
+    /// so the heading stops promising specificity it cannot keep (owner
+    /// decision, 2026-09-17).
     ///
     /// 🔴 NO MODEL AND NO DOWNLOAD. `relatedTourIds` is computed offline and
     /// already ships in the catalogue, so this is a dictionary lookup. An
@@ -283,8 +299,8 @@ enum HomeRailsViewModel {
             let suggestions = relatedTours(seed).filter { !saved.contains($0.id) }
             guard !suggestions.isEmpty else { continue }
             return HomeRail(
-                id: "becauseYouSaved.\(id.uuidString)",
-                title: "Because you saved \(seed.title)",
+                id: Self.savedRailID,
+                title: "More like what you saved",
                 tours: Array(suggestions.prefix(maxPerRail))
             )
         }
