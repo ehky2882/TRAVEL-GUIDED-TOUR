@@ -184,6 +184,116 @@ def same_name(a, b):
     return bool(wa - GENERIC)
 
 
+# --- the venue-handle tier ------------------------------------------------
+
+VENUE_HANDLE = re.compile(r"@([A-Za-z0-9._]{3,30})")
+
+
+def _norm_handle(h):
+    """Fold the spelling variants one venue gets written in.
+
+    `@eatnamkeen` and `@eat.namkeen` are one restaurant; so are `@allantico`
+    and `@allanticovinaionyc`. Punctuation carries no meaning in a handle, and
+    creators shorten them freely, so compare on letters and digits only and
+    accept a prefix relationship.
+    """
+    return re.sub(r"[^a-z0-9]", "", (h or "").lower())
+
+
+def venue_handles(tour):
+    """Every @handle the caption names EXCEPT the creator's own.
+
+    🔴 `sourceAuthor` is the CREATOR, and it appears in most captions. Leaving
+    it in would make every pair of pins by one creator look like the same
+    venue — which is the opposite of a useful signal, and would fire on the
+    entire catalogue of a food reviewer.
+    """
+    text = " ".join([tour.get("title") or "",
+                     tour.get("shortDescription") or "",
+                     tour.get("longDescription") or ""])
+    creator = _norm_handle(tour.get("sourceAuthor"))
+    found = {_norm_handle(h) for h in VENUE_HANDLE.findall(text)}
+    return {h for h in found if h and h != creator}
+
+
+def proven_same_venue(members):
+    """Is a coincident group provably ONE venue, with no judgement needed?
+
+    🔴 THIS IS THE LINE BETWEEN "ACT" AND "ASK", so it is deliberately narrow.
+    An identical coordinate alone is NOT proof — a centroid dump puts six
+    unrelated pins on one point (CLAUDE.md § Egress records Windsor at 6 pins
+    on 1 coordinate). What makes a group provable is a SECOND, independent
+    signal that the two entries are about the same subject:
+
+      1. the same display name, or
+      2. both captions naming the same venue @handle, or
+      3. one entry's name written out inside the other's caption.
+
+    ⚠️ Owner, 2026-09-17: *"when it is super-clear and doesnt need input, just
+    go ahead and do it"*. This function is what "super-clear" means, and it is
+    safe to automate for a measured reason rather than an optimistic one:
+    **every part-vs-whole case the owner has ever declined sits between 6.9 m
+    and 290 m apart — not one is coincident** (measured across the six recorded
+    in `docs/places.md`). A coincidence requirement cannot reach them.
+
+    Returns (True, reason) or (False, "").
+    """
+    tours = [t for _, t in members]
+
+    def stem(t):
+        """The readable name, lower-cased, order preserved.
+
+        ⚠️ NOT `" ".join(subject_words(...))` — that returns a SET, so the
+        join order is arbitrary and a containment test against it fails at
+        random. The first version of this function did exactly that and the
+        selftest caught it.
+        """
+        return re.sub(r"\s+", " ", display_stem(t.get("title")).lower()).strip()
+
+    names = {stem(t) for t in tours}
+    names.discard("")
+    if len(names) == 1:
+        return True, "identical name"
+
+    handle_sets = [venue_handles(t) for t in tours]
+
+    # A name can BE the handle: "Mark's Off Madison" is @marksoffmadison, so an
+    # entry that carries the plain name and one that carries only the handle
+    # are the same venue. Without this, the commonest real shape -- one titled
+    # entry beside one caption -- is missed.
+    effective = []
+    for t, hs in zip(tours, handle_sets):
+        e = set(hs)
+        n = _norm_handle(stem(t))
+        if len(n) >= 6:
+            e.add(n)
+        effective.append(e)
+
+    if all(effective):
+        shared = set.intersection(*effective)
+        if shared:
+            return True, f"every entry names @{sorted(shared)[0]}"
+        first = effective[0]
+        if all(any(h.startswith(g) or g.startswith(h)
+                   for h in first for g in other if min(len(h), len(g)) >= 6)
+               for other in effective[1:]):
+            return True, "the same venue handle, spelled differently"
+
+    # One entry named in prose inside the other's caption: "Pecking House"
+    # beside "the fried chicken from Pecking House".
+    for t in tours:
+        needle = stem(t)
+        if len(needle) < 6:
+            continue
+        others = [o for o in tours if o is not t]
+        blobs = [" ".join([(o.get("title") or ""), (o.get("shortDescription") or "")]).lower()
+                 for o in others]
+        if all(needle in b for b in blobs):
+            return True, f"every other caption says {needle!r}"
+
+    return False, ""
+
+
 def entries(doc):
     out = [("tour", t) for t in doc.get("tours", [])]
     out += [("pin", t) for t in (doc.get("linkPins") or [])]
@@ -311,12 +421,32 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
                   f"{name_radius_m:.0f} m.\n")
 
     if exact:
-        out.write(f"\nEXACT — {len(exact)} coincident group(s) with no place page.\n")
-        out.write("  These meet the catalogue's own identity rule. Put them to the owner.\n")
+        # 🔴 The split is the point. Owner, 2026-09-17: "when it is super-clear
+        # and doesnt need input, just go ahead and do it". Everything above the
+        # line carries a second, independent proof that it is one venue; the
+        # rest is a coordinate and nothing else, which a centroid dump also is.
+        proven, unproven = [], []
         for coord, members in exact:
-            out.write(f"\n  {coord[0]}, {coord[1]}\n")
-            for kind, t in members:
-                out.write(f"     [{kind:<4}] {t['title'][:56]:<57} {t.get('city')}\n")
+            ok, why = proven_same_venue(members)
+            (proven if ok else unproven).append((coord, members, why))
+
+        if proven:
+            out.write(f"\nEXACT · PROVEN — {len(proven)} group(s) that need no judgement.\n")
+            out.write("  Coincident AND independently shown to be one venue. Safe to act on\n"
+                      "  without asking: create the place, then tell the owner it was done.\n")
+            for coord, members, why in proven:
+                out.write(f"\n  {coord[0]}, {coord[1]}   — {why}\n")
+                for kind, t in members:
+                    out.write(f"     [{kind:<4}] {t['title'][:56]:<57} {t.get('city')}\n")
+
+        if unproven:
+            out.write(f"\nEXACT · ASK — {len(unproven)} coincident group(s) with no second signal.\n")
+            out.write("  🔴 An identical coordinate ALONE is not proof. A centroid dump puts\n"
+                      "  unrelated pins on one point. Put these to the owner.\n")
+            for coord, members, _ in unproven:
+                out.write(f"\n  {coord[0]}, {coord[1]}\n")
+                for kind, t in members:
+                    out.write(f"     [{kind:<4}] {t['title'][:56]:<57} {t.get('city')}\n")
     else:
         out.write("\nEXACT — none. Every coincident group is already a place.\n")
 
@@ -388,6 +518,46 @@ def selftest():
     check("same subject nearby is not EXACT", len(e2), 0)
     check("71 m is beyond TIGHT, so NEAR is the only tier that sees it", len(g2), 0)
     check("distance is roughly right", 60 < n2[0][0] < 80, True)
+
+    # --- the venue-handle tier: what "super-clear" is allowed to mean --------
+    # 🔴 These guard the ONE place this tool says "act without asking". A
+    # regression here does not fail loudly; it quietly widens what gets created
+    # without the owner seeing it, which is the worst direction.
+    def pin(tid, title, *, author=None, desc=""):
+        return ("pin", {"id": tid, "title": title, "city": "Testville",
+                        "sourceAuthor": author, "shortDescription": desc})
+
+    ok, why = proven_same_venue([pin("a", "Mark's Off Madison"),
+                                 pin("b", "This steak 📍@marksoffmadison", author="@jack")])
+    check("a caption naming the venue handle proves the group", ok, True)
+
+    ok, _ = proven_same_venue([pin("a", "Did I squeeze this too hard 📍@eatnamkeen", author="@jack"),
+                               pin("b", "Illegal chicken @eat.namkeen", author="@jack")])
+    check("one venue handle spelled two ways still proves it", ok, True)
+
+    # 🔴 THE TRAP. sourceAuthor appears in most captions; counting it would
+    # make every pair of pins by one creator look like one venue.
+    ok, _ = proven_same_venue([pin("a", "Best slice in town @jack", author="@jack"),
+                               pin("b", "Best bagel in town @jack", author="@jack")])
+    check("the CREATOR's own handle proves nothing", ok, False)
+
+    ok, _ = proven_same_venue([pin("a", "Some restaurant"), pin("b", "A different restaurant")])
+    check("a shared coordinate alone is NOT proof", ok, False)
+
+    ok, why = proven_same_venue([pin("a", "Pecking House"),
+                                 pin("b", "the fried chicken from Pecking House is unreal")])
+    check("one entry named inside the other's caption proves it", ok, True)
+
+    ok, _ = proven_same_venue([pin("a", "Round Swamp Farm"), pin("b", "Round Swamp Farm")])
+    check("identical names prove it", ok, True)
+
+    # ⚠️ Every part-vs-whole case the owner has declined sits 6.9-290 m apart.
+    # This tier only ever sees COINCIDENT groups, so it cannot reach them --
+    # assert the boundary rather than trusting the prose above.
+    e7, g7, n7 = scan({"tours": [t("p1", "The Barbican", 51.519751, -0.094221),
+                                 t("p2", "Barbican Centre", 51.5200363, -0.0921246)],
+                       "linkPins": [], "places": []})
+    check("a 149 m part-vs-whole pair is never EXACT", len(e7), 0)
 
     # Different subjects at the same distance must NOT be reported.
     doc3 = {"tours": [t("1", "Portsmouth Square", 37.7919, -122.4127),
