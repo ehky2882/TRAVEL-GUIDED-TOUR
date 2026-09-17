@@ -6,7 +6,7 @@ import CryptoKit
 /// cell recycling — unlike `AsyncImage`, which restarts the fetch
 /// every time the containing view is recreated. `NSCache` evicts
 /// automatically under memory pressure, so this never needs manual
-/// trimming beyond the user-facing "Clear Cache" action.
+/// trimming beyond the user-facing "Check for new content" action.
 ///
 /// **Avatar disk layer.** Hero images survive relaunch via `URLCache` (see the
 /// app init), but avatars need to render on the *very first frame* — a memory
@@ -80,7 +80,7 @@ final class ImageCache {
 
     func clear() {
         cache.removeAllObjects()
-        // Also wipe persisted avatars so "Clear Cache" is honest.
+        // Also wipe persisted avatars so "Check for new content" is honest.
         if let dir = avatarDir {
             let fm = FileManager.default
             try? fm.removeItem(at: dir)

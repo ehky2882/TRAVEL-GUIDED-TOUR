@@ -288,7 +288,7 @@ struct SettingsView: View {
                     // with them could tell whether the device had taken new
                     // content — the server was checked five different ways
                     // instead. "Updated" answers it at a glance, and after
-                    // Settings → Clear Cache it is the visible proof the
+                    // Settings → Check for new content it is the visible proof the
                     // reload actually happened.
                     HStack {
                         Label("Updated", systemImage: "clock.arrow.circlepath")
