@@ -65,6 +65,33 @@ not the compound."* Also `Il Presidente`, `Bar Luce at Fondazione Prada`,
 
 A business that occupies a site is not the site.
 
+## 🔴 How a place id is minted — the formula, written down at last
+
+```python
+uuid5(NAMESPACE_URL, f"atlas-place:{slug(city)}:{slug(name)}")   # lower-case
+slug = lambda s: re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+```
+
+**Verified against the live catalogue on 2026-09-17: it reproduces 339 of 344
+existing place ids.** The five it does not are places RENAMED after minting —
+the id keeps the original name — plus one minted by a session that
+transliterated accents.
+
+⚠️ **`slug` DROPS non-ASCII, it does not transliterate.** `Sagrada Família` →
+`sagrada-fam-lia`, not `sagrada-familia`. Transliterating instead scores
+**320/344**, so the stripping behaviour is the real one however wrong it looks.
+
+🔴 **WHY THIS BEING WRITTEN DOWN MATTERS.** The scheme existed only inside
+`archive/CURRENT-STATE-HISTORY.md`, which `CLAUDE.md` explicitly tells every
+session to *search, never load whole* — so in practice nobody found it. On
+2026-09-17 a session spent an hour brute-forcing a dozen key shapes, failed, and
+nearly invented a second scheme. **A second scheme is how you get two place
+pages for one site**, which is exactly what #952 hit from the other direction.
+
+Determinism is the protection: the same city and name always produce the same
+id, so a second attempt at one site **collides instead of duplicating**. Mint
+with anything else and that guarantee is gone.
+
 ## ⚠️ Rule 5 — A place is a COORDINATE, so one point must be honest for everyone
 
 Creating a place **moves every member onto a single point**. A candidate only
