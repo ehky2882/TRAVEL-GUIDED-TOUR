@@ -39,12 +39,26 @@ enum HomeRailsViewModel {
         recentlyViewedIds: [UUID],
         userLocation: CLLocation?,
         visibleRegion: MKCoordinateRegion?,
-        toursByTag: [String: [Tour]]? = nil
+        toursByTag: [String: [Tour]]? = nil,
+        /// Saved tour ids, most recently saved FIRST. Defaulted empty so every
+        /// existing caller and test is untouched — and so that removing this
+        /// rail later means deleting one function and one call, the way
+        /// *Continue listening* was removed on 2026-09-13.
+        savedTourIds: [UUID] = [],
+        /// `relatedTourIds`, already in the catalogue and already on the phone.
+        /// Passed as a closure so this stays a pure function over its inputs —
+        /// `DataService.relatedTours(for:)` is the real implementation.
+        relatedTours: ((Tour) -> [Tour])? = nil
     ) -> [HomeRail] {
         var rails: [HomeRail] = []
 
         // Personalized
         if let rail = recentlyViewedRail(tours: tours, recentlyViewedIds: recentlyViewedIds) {
+            rails.append(rail)
+        }
+        if let rail = becauseYouSavedRail(
+            tours: tours, savedTourIds: savedTourIds, relatedTours: relatedTours
+        ) {
             rails.append(rail)
         }
 
@@ -227,6 +241,41 @@ enum HomeRailsViewModel {
     }
 
     // MARK: - Rail builders
+
+    /// "Because you saved …" — neighbours of something already in the library.
+    ///
+    /// 🔴 NO MODEL AND NO DOWNLOAD. `relatedTourIds` is computed offline and
+    /// already ships in the catalogue, so this is a dictionary lookup. An
+    /// earlier sketch of this rail proposed scoring it on the device from the
+    /// search embeddings, which would have meant an async actor and a 4 MB
+    /// file inside a pure synchronous function recomputed on every render.
+    ///
+    /// ⚠️ SEEDED FROM ONE TOUR, not a blend of everything saved, so the title
+    /// can name it honestly. A rail headed "Because you saved Trellick Tower"
+    /// that is secretly an average of nine tours is a small lie that makes
+    /// every suggestion in it unexplainable.
+    private static func becauseYouSavedRail(
+        tours: [Tour],
+        savedTourIds: [UUID],
+        relatedTours: ((Tour) -> [Tour])?
+    ) -> HomeRail? {
+        guard let relatedTours, !savedTourIds.isEmpty else { return nil }
+        let saved = Set(savedTourIds)
+
+        // Most recent first, and skip anything with no neighbours rather than
+        // rendering an empty rail under a confident heading.
+        for id in savedTourIds {
+            guard let seed = tours.first(where: { $0.id == id }) else { continue }
+            let suggestions = relatedTours(seed).filter { !saved.contains($0.id) }
+            guard !suggestions.isEmpty else { continue }
+            return HomeRail(
+                id: "becauseYouSaved.\(id.uuidString)",
+                title: "Because you saved \(seed.title)",
+                tours: Array(suggestions.prefix(maxPerRail))
+            )
+        }
+        return nil
+    }
 
     private static func recentlyViewedRail(
         tours: [Tour],

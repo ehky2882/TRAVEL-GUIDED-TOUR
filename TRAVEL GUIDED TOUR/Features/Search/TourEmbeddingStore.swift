@@ -63,6 +63,21 @@ actor TourEmbeddingStore {
 
     private var index: Index?
 
+    /// One sentence per chunk, aligned with `index.chunks`.
+    ///
+    /// ⚠️ OPTIONAL BY DESIGN AT EVERY LEVEL. Absent file, older file,
+    /// mismatched pair — all of them mean "no snippets", never an error.
+    /// Search without explanations is exactly what shipped before this, so
+    /// degrading to it is a working outcome.
+    private var snippets: Snippets?
+
+    struct Snippets {
+        /// `bounds[i]..<bounds[i+1]` is snippet `i` inside `blob`.
+        let bounds: [Int]
+        let blob: [UInt8]
+        var count: Int { max(bounds.count - 1, 0) }
+    }
+
     // MARK: - Loading
 
     /// Where the sidecar is cached. gh-pages is the asset CDN, so this costs no
@@ -75,7 +90,24 @@ actor TourEmbeddingStore {
         URL.cachesDirectory.appending(path: "atlas-embeddings.bin")
     }
 
+    static let snippetsURL = URL(
+        string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/search/search-snippets.bin"
+    )!
+
+    static var snippetsCacheURL: URL {
+        URL.cachesDirectory.appending(path: "atlas-search-snippets.bin")
+    }
+
     var isLoaded: Bool { index != nil }
+
+    /// The sentence for a chunk, if there is one.
+    private func snippet(at chunk: Int) -> String? {
+        guard let snippets, chunk >= 0, chunk + 1 < snippets.bounds.count else { return nil }
+        let start = snippets.bounds[chunk], end = snippets.bounds[chunk + 1]
+        guard end > start, end <= snippets.blob.count else { return nil }
+        let text = String(decoding: snippets.blob[start..<end], as: UTF8.self)
+        return text.isEmpty ? nil : text
+    }
 
     /// Adopt an already-in-memory sidecar. The parse is the same one every
     /// other path uses, so a test exercising this exercises the real reader.
@@ -90,6 +122,24 @@ actor TourEmbeddingStore {
             throw Failure.notDownloaded
         }
         index = try Self.parse(try Data(contentsOf: url, options: .mappedIfSafe))
+        adoptCachedSnippets()
+    }
+
+    /// Snippets from the cache, if a usable pair is there.
+    ///
+    /// Silent on every failure by design — see `parseSnippets`. Search works
+    /// without them, and that is the outcome this degrades to.
+    private func adoptCachedSnippets() {
+        guard let index else { return }
+        let url = Self.snippetsCacheURL
+        guard FileManager.default.fileExists(atPath: url.path),
+              let data = try? Data(contentsOf: url, options: .mappedIfSafe)
+        else { return }
+        snippets = Self.parseSnippets(
+            data,
+            expectedChunks: index.chunks.count / max(index.dims, 1),
+            modelID: index.modelID
+        )
     }
 
     /// Fetch the sidecar and cache it. Parsed BEFORE it is written, so a
@@ -102,9 +152,82 @@ actor TourEmbeddingStore {
         let parsed = try Self.parse(data)
         try data.write(to: Self.cacheURL, options: .atomic)
         index = parsed
+        await downloadSnippets(using: session)
+    }
+
+    /// Fetch the snippet file. **Never throws.**
+    ///
+    /// 🔴 A FAILURE HERE MUST NOT FAIL THE SEARCH. The index has already been
+    /// downloaded and adopted by the time this runs; letting a second request
+    /// throw would throw away a working search index because an explanation
+    /// could not be fetched. Parsed before it is cached, so a bad file never
+    /// replaces a good one.
+    private func downloadSnippets(using session: URLSession) async {
+        guard let index else { return }
+        guard let (data, response) = try? await session.data(from: Self.snippetsURL),
+              (response as? HTTPURLResponse)?.statusCode ?? 200 == 200,
+              let parsed = Self.parseSnippets(
+                  data,
+                  expectedChunks: index.chunks.count / max(index.dims, 1),
+                  modelID: index.modelID
+              )
+        else { return }
+        try? data.write(to: Self.snippetsCacheURL, options: .atomic)
+        snippets = parsed
     }
 
     // MARK: - Parsing
+
+    /// `ATLSNIP1` — magic, version, count, 64-byte model id, then count+1
+    /// offsets and the utf8 blob.
+    ///
+    /// 🔴 RETURNS nil RATHER THAN THROWING, and that is the whole contract.
+    /// Snippets are an explanation layered on top of search; a bad one must
+    /// cost the explanation, never the search. Every rejection below is a
+    /// reason to show no snippet, and none of them is a reason to fail.
+    ///
+    /// ⚠️ `expectedChunks` is the pairing guard. Snippet N describes chunk N,
+    /// so a file built from a different catalogue attaches confident, wrong
+    /// sentences to every result — plausible, unfalsifiable and completely
+    /// wrong, with nothing to say so. Matching counts is not a proof of
+    /// identity, but the two are published by the same job in the same run, so
+    /// a count mismatch is the realistic way they diverge.
+    static func parseSnippets(_ data: Data, expectedChunks: Int, modelID: String) -> Snippets? {
+        let headerSize = 8 + 4 + 4 + 64
+        guard data.count >= headerSize else { return nil }
+        let bytes = [UInt8](data)
+        guard Array(bytes[0..<8]) == Array("ATLSNIP1".utf8) else { return nil }
+
+        func word(_ offset: Int) -> Int {
+            Int(UInt32(bytes[offset]) | UInt32(bytes[offset + 1]) << 8
+                | UInt32(bytes[offset + 2]) << 16 | UInt32(bytes[offset + 3]) << 24)
+        }
+        guard word(8) == 1 else { return nil }               // format version
+        let count = word(12)
+        guard count == expectedChunks else { return nil }
+
+        let declared = String(
+            decoding: bytes[16..<80].prefix(while: { $0 != 0 }), as: UTF8.self
+        )
+        guard declared == modelID else { return nil }
+
+        let offsetsStart = headerSize
+        let blobStart = offsetsStart + (count + 1) * 4
+        guard bytes.count >= blobStart else { return nil }
+
+        var bounds: [Int] = []
+        bounds.reserveCapacity(count + 1)
+        for index in 0...count {
+            bounds.append(word(offsetsStart + index * 4))
+        }
+        // Offsets must ascend and must land inside the blob, or a lookup reads
+        // whatever follows in memory.
+        let blob = Array(bytes[blobStart...])
+        guard bounds.last == blob.count else { return nil }
+        for index in 0..<count where bounds[index] > bounds[index + 1] { return nil }
+
+        return Snippets(bounds: bounds, blob: blob)
+    }
 
     static func parse(_ data: Data) throws -> Index {
         guard data.count >= headerSize else {
@@ -218,6 +341,11 @@ actor TourEmbeddingStore {
     struct Match {
         let tourID: UUID
         let score: Float
+        /// The sentence from the chunk that scored best, when snippets are
+        /// loaded and that chunk has one. nil is ordinary, not an error: an
+        /// older index has no snippet file, and ~0.6% of chunks contain no
+        /// whole sentence to quote.
+        let snippet: String?
     }
 
     /// The `limit` best-scoring tours above `floor`.
@@ -242,6 +370,7 @@ actor TourEmbeddingStore {
             guard end > start else { continue }
 
             var best = -Float.greatestFiniteMagnitude
+            var bestChunk = start
             var total: Float = 0
             for chunk in start..<end {
                 var similarity: Float = 0
@@ -249,7 +378,12 @@ actor TourEmbeddingStore {
                 for component in 0..<dims {
                     similarity += index.chunks[base + component] * query[component]
                 }
-                best = max(best, similarity)
+                if similarity > best {
+                    best = similarity
+                    // The chunk that won is the one worth quoting — it is the
+                    // part of the narration the query actually matched.
+                    bestChunk = chunk
+                }
                 total += similarity
             }
             let mean = total / Float(end - start)
@@ -261,7 +395,11 @@ actor TourEmbeddingStore {
             // refuses a non-finite query, but a score is a second chance for
             // one to appear and the cost of the guard is nothing.
             if score >= floor {
-                matches.append(Match(tourID: index.tourIDs[tour], score: score))
+                matches.append(Match(
+                    tourID: index.tourIDs[tour],
+                    score: score,
+                    snippet: snippet(at: bestChunk)
+                ))
             }
         }
 

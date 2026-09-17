@@ -20,6 +20,7 @@ struct HomeDrawerContent: View {
     @Environment(DataService.self) private var dataService
     @Environment(LocationManager.self) private var locationManager
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
+    @Environment(LibraryStore.self) private var libraryStore
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
     /// The filter is on the cross-window state — see
@@ -160,7 +161,14 @@ struct HomeDrawerContent: View {
             // prebuilt one covers the WHOLE catalogue, so it is wrong for a
             // filtered set; that case builds its own in one pass, from the
             // array the header already computed.
-            toursByTag: matching.map(HomeRailsViewModel.tagIndex(for:)) ?? dataService.toursByTagIndex
+            toursByTag: matching.map(HomeRailsViewModel.tagIndex(for:)) ?? dataService.toursByTagIndex,
+            // Most recently saved first, so the rail names the tour they
+            // reached for last rather than the one they saved a year ago.
+            savedTourIds: libraryStore.entries
+                .compactMap { entry in entry.savedAt.map { (entry.tourId, $0) } }
+                .sorted { $0.1 > $1.1 }
+                .map(\.0),
+            relatedTours: dataService.relatedTours(for:)
         )
         .filter { $0.id != "recentlyViewed" }
     }

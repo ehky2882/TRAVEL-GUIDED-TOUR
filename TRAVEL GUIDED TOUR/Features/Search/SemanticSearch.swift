@@ -28,11 +28,22 @@ final class SemanticSearch {
         /// Fetching the model or the index. First search only.
         case preparing
         case searching
-        case results([Tour])
+        case results([Result])
         /// 🔴 A FAILURE IS A STATE THE VIEW SHOWS NOTHING FOR. It is kept
         /// rather than discarded so it can be logged and so a retry knows not
         /// to hammer a download that is failing, not so it can be displayed.
         case unavailable(String)
+    }
+
+    /// A tour, plus the sentence that explains why it matched.
+    ///
+    /// ⚠️ `snippet` is optional and its absence is ordinary — an older index
+    /// has no snippet file, and a small share of chunks contain no whole
+    /// sentence worth quoting. The row simply renders without one.
+    struct Result: Identifiable {
+        let tour: Tour
+        let snippet: String?
+        var id: Tour.ID { tour.id }
     }
 
     private(set) var state: State = .idle
@@ -163,12 +174,14 @@ final class SemanticSearch {
             guard !Task.isCancelled else { return }
 
             let byID = Dictionary(catalog.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
-            let tours = matches
+            let results = matches
                 // ⚠️ An id in the index that is not in the catalogue is normal,
                 // not an error: the index is rebuilt on a content merge and a
                 // phone may hold an older catalogue for a while. Skip it.
-                .compactMap { byID[$0.tourID] }
-            state = .results(tours)
+                .compactMap { match in
+                    byID[match.tourID].map { Result(tour: $0, snippet: match.snippet) }
+                }
+            state = .results(results)
         } catch {
             state = .unavailable("\(error)")
         }

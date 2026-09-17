@@ -433,12 +433,15 @@ struct SearchView: View {
     /// that will not come — all of them end here, rendering nothing. Search
     /// falling back to precisely what it does today is a working outcome; a
     /// spinner that never resolves is not.
-    private func smartMatches(excluding found: SearchResults) -> [Tour] {
-        guard case .results(let tours) = semantic.state else { return [] }
+    private func smartMatches(excluding found: SearchResults) -> [SemanticSearch.Result] {
+        guard case .results(let results) = semantic.state else { return [] }
         // The keyword list is directly above. Repeating it would make the
         // section look broken rather than clever.
         let shown = Set(found.tours.map(\.id))
-        return Array(tours.filter { !shown.contains($0.id) }.prefix(SemanticSearch.resultLimit))
+        return Array(
+            results.filter { !shown.contains($0.tour.id) }
+                .prefix(SemanticSearch.resultLimit)
+        )
     }
 
     @ViewBuilder
@@ -464,16 +467,32 @@ struct SearchView: View {
             // it, so this reads MORE LIKE THIS beside PLACES / MAKERS / TOURS.
             // If one label ever changes, change both.
             sectionHeader("More Like This")
-            ForEach(matches) { tour in
+            ForEach(matches) { match in
                 Button {
                     recentSearchStore.record(query: trimmedQuery)
-                    goToTour(tour)
+                    goToTour(match.tour)
                 } label: {
-                    resultRow(tour)
+                    VStack(alignment: .leading, spacing: 0) {
+                        resultRow(match.tour)
+                        // 🔴 THE POINT OF THE SECTION. Without this the row is
+                        // a title and a creator, and a tour that matched on
+                        // something said only in the narration looks arbitrary.
+                        // This is the sentence that actually matched.
+                        if let snippet = match.snippet {
+                            Text("\u{201C}\(snippet)\u{201D}")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                                .italic()
+                                .lineLimit(2)
+                                .padding(.horizontal, AtlasSpacing.lg)
+                                .padding(.bottom, AtlasSpacing.sm)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                    }
                 }
                 .buttonStyle(.plain)
 
-                if tour.id != matches.last?.id {
+                if match.id != matches.last?.id {
                     Divider().padding(.leading, AtlasSpacing.lg)
                 }
             }

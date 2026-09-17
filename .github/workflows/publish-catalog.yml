@@ -260,6 +260,11 @@ jobs:
 
           publish_file "search/embeddings.bin" "$SRC" \
             "chore(search): publish embeddings index [skip ci]"
+          # The snippets that explain WHY a result matched. Published from the
+          # same run that wrote the index, because snippet N describes chunk N
+          # and the app refuses a pair whose counts disagree.
+          publish_file "search/search-snippets.bin" build/search-snippets.bin \
+            "chore(search): publish search snippets [skip ci]"
           cp scripts/related-text.digest /tmp/embeddings.digest
           publish_file "search/embeddings.digest" /tmp/embeddings.digest \
             "chore(search): publish embeddings digest [skip ci]"
