@@ -44,6 +44,10 @@ struct SettingsView: View {
     /// previews and tests where no cross-window state is injected.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
     @State private var showingSignIn = false
+    /// Drives the "Checking…" label while the catalogue refresh runs.
+    /// `DataService.isRefreshing` is private and un-observed, so the only
+    /// honest way to show the tap did something is to track it here.
+    @State private var isCheckingForContent = false
 
     var body: some View {
         NavigationStack {
@@ -198,7 +202,7 @@ struct SettingsView: View {
                     }
                 }
 
-                Section(header: sectionHeader("Data")) {
+                Section {
                     NavigationLink {
                         ManageDownloadsView()
                     } label: {
@@ -208,19 +212,55 @@ struct SettingsView: View {
                     // 🔴 The catalogue is cleared here too, and that is the
                     // point of this button existing. Until 2026-09-16 it
                     // cleared only URLCache and the image cache, so a device
-                    // holding a wrong catalogue could tap "Clear Cache",
-                    // see nothing change, and reasonably conclude the problem
-                    // lay elsewhere. The owner hit exactly that and had to
-                    // delete the app to recover.
+                    // holding a wrong catalogue could tap it, see nothing
+                    // change, and reasonably conclude the problem lay
+                    // elsewhere. The owner hit exactly that and had to delete
+                    // the app to recover.
+                    //
+                    // 🔴 It was called "Clear Cache" until 2026-09-17, which
+                    // was wrong twice over. It described the MECHANISM, not
+                    // the outcome, so nobody who wanted new content would
+                    // think to look for it — and it read as DESTRUCTIVE, over
+                    // a trash icon, when it cannot touch a downloaded tour:
+                    // downloads live in Documents under `TourDownloader`,
+                    // and nothing on this path goes near them. Someone
+                    // abroad with tours saved for the trip had every reason
+                    // to avoid the one control that would have fixed them.
+                    // The name now states the outcome and the footer states
+                    // what is safe; keep both true if this action changes.
                     Button {
+                        guard !isCheckingForContent else { return }
+                        isCheckingForContent = true
                         URLCache.shared.removeAllCachedResponses()
                         #if canImport(UIKit)
                         ImageCache.shared.clear()
                         #endif
-                        Task { await dataService.clearCachedCatalogAndRefresh() }
+                        Task {
+                            await dataService.clearCachedCatalogAndRefresh()
+                            isCheckingForContent = false
+                        }
                     } label: {
-                        Label("Clear Cache", systemImage: "trash")
+                        // The row keeps its leading label and gains a
+                        // trailing spinner rather than swapping text, so it
+                        // does not reflow — and VoiceOver reads the changed
+                        // label rather than only seeing a spinner appear.
+                        HStack {
+                            Label(isCheckingForContent ? "Checking…" : "Check for new content",
+                                  systemImage: "arrow.clockwise")
+                            if isCheckingForContent {
+                                Spacer()
+                                ProgressView()
+                            }
+                        }
                     }
+                    .disabled(isCheckingForContent)
+                } header: {
+                    sectionHeader("Data")
+                } footer: {
+                    // Says the thing the old name made people fear. The
+                    // "Updated" row it points at is directly below in About,
+                    // and is what makes the tap provable rather than hopeful.
+                    Text("Checking downloads the newest tours and images. Your downloaded tours are not removed — see Updated, below, for when the catalogue last arrived.")
                 }
 
                 // Apple expects an app carrying user-generated content and
