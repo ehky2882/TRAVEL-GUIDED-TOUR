@@ -143,7 +143,7 @@ final class DataService {
 
     /// Throw away the cached catalogue and download a fresh one.
     ///
-    /// Backs Settings → Clear Cache. The order is load-bearing: discarding
+    /// Backs Settings → Check for new content. The order is load-bearing: discarding
     /// first removes the stored version token, so the refresh that follows
     /// cannot take the `.upToDate` short-circuit and hand back the very cache
     /// we just decided not to trust.
