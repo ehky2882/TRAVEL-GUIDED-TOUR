@@ -239,14 +239,151 @@ everything and read the average, which is how a 56% and a 14% become a meaningle
 
 ---
 
+## 3a. 🔴 BUILT 2026-09-17 — the audit, and why it is a NAME lookup not a tiled harvest
+
+**Shipped: `scripts/spine-lookup.py` (network, cached) + `scripts/spine-match.py` (offline).**
+Together they answer, for every tour and every link pin: *is our coordinate where the thing this
+entry is named after actually stands?*
+
+### The design changed, and the reason is structural
+
+§ 4 below specifies harvesting a gazetteer by walking tiles around each city and joining pins to
+it. Tiling the whole catalogue turns out to be affordable — **1,612 tiles of 2 km, ~67 minutes**,
+measured, covering every entry rather than the five cities originally scoped. It was still the
+wrong first build, because it **cannot catch the errors the audit exists for**:
+
+> a tile is drawn around the coordinate the entry ALREADY HAS.
+> **If that coordinate is wrong, the right feature is outside the tile.**
+
+Grace Farms' pin sat **6.1 km** from Grace Farms. No tile drawn around the wrong point contains the
+right answer. Asking by NAME has no such blind spot: the answer is wherever Wikidata says it is,
+and the distance from our stored point **is** the finding.
+
+⚠️ A tiled harvest is still right for the *other* jobs in § 4 — autofilling a NEW pin (step 3,
+where there is no coordinate to be wrong yet) and an AMBIGUOUS band ("something is near this point
+but it is not what the title says"). It is step 2 that this supersedes.
+
+### Identity: `wd:` and not `osm:node/…`
+
+Both this document and `docs/scaling-to-100k-design.md` § A1 specify `spine_id` as an OSM feature
+id, and § 2a (a) already records that OSM is unreachable — **re-verified 2026-09-17: Overpass HTTP
+000, Geofabrik blocked, WDQS 200.** `spine-build.py` has always emitted `wd:Q…`. Resolved in
+favour of what answers: **the Wikidata QID is the identity, with P402 carried as an optional
+secondary key.**
+
+⚠️ **This weakens the later auto-creation argument and should not be glossed.** "Same OSM feature
+= same place" becomes "same Wikidata item" — a smaller, differently-shaped universe that omits most
+food and retail entirely. See § 6.
+
+### Where it lives: a committed artefact, not Supabase
+
+`spine/lookups.json.gz`, one record per entry, committed. Not `backend/place_spine.sql`, because
+**the audit needs no database** and a SQL paste is an owner-blocking step in a project whose own
+`CLAUDE.md` says Supabase work is beyond the owner's comfort. The table can come later, when the
+matching in § 4 step 4 needs pgvector.
+
+The cache is also the **resume state** — the sweep takes hours and is interruptible — and it makes
+the analysis free to re-run: `spine-match.py` touches no network, so it runs in CI and on every
+content change.
+
+### The bands, and the numbers behind them
+
+| Band | Test | Meaning |
+|---|---|---|
+| **DISAGREES** | a match ≥ 250 m away | 🔴 the finding |
+| **REVIEW** | a match 120–250 m away | read it by hand |
+| **CONFIRMS** | a match within 120 m | good |
+| **UNMATCHED** | no geolocated item by that name | **not a verdict** — see below |
+
+Calibrated on this catalogue's own ground truth rather than picked: entries known to be **correct**
+read 6, 7, 67, 75, 85 and 88 m (our point and Wikidata's are rarely the same point), and entries
+known to be **wrong** read 242 m (Domino Park, a 201 m error), 844 m (Casa de Vidro) and 5,451 m
+(Geisel Library).
+
+⚠️ **242 and 88 are close together.** That is this method's honest resolution limit, not a
+threshold worth tuning — which is why there are two bands rather than one. A single cut would
+either lose Domino Park or drown the report.
+
+### Four guards, every one of them paid for by a real failure
+
+1. 🔴 **Bound the answer by distance.** An unbounded label search for `La Collina` returns an item
+   in Italy, **9,570 km** from the Japanese bakery of the same name, and it looks exactly like a
+   confident hit. Everything beyond `--bound-km` (100) is discarded — far wider than any error on
+   record (6.1 km), far narrower than a same-name collision on another continent.
+2. 🔴 **Nearest is not best.** `Brooklyn Museum` returns `Brooklyn Museum Art School` 75 m away
+   *alongside* the museum. Distance-only ranking answers a question about the museum with a fact
+   about its art school — and where our coordinate is wrong, the sibling makes it look right.
+   Label agreement outranks proximity.
+3. 🔴 **Han does not name its own language.** `浅草地下街` is Japanese and `文武廟` is Chinese, and
+   nothing in their codepoints says so. EntitySearch ranks by the language asked for, so a
+   codepoint-only rule silently asks in the wrong one. The entry's **country** decides.
+4. ⚠️ **The label that comes back need not be the name asked for, and that is correct.**
+   `Casa de Vidro` resolves to an item labelled `Glass House`, 6 m away, matched through an alias.
+   A strict label-equality *gate* would throw away a right answer — the name is the SEARCH, the
+   distance is the finding. Label equality only ranks.
+
+🔴 **UNMATCHED IS NOT A CLEAN BILL OF HEALTH.** It means Wikidata has never heard of the subject.
+Of the six known errors it knows four and has never heard of two (`La Collina`,
+`Asakusa Underground Street`); measured coverage is 78–83% for architecture creators and
+**14–25% for food**, and food is a large part of this catalogue. An unmatched entry is
+**unexamined**, and the report says so in those words.
+
+### Known limitation: a large site reads as a disagreement
+
+The first live findings were `Grand Concourse` (a four-mile boulevard, 4,486 m),
+`Green-Wood Cemetery` (478 acres, 741 m) and `Brooklyn Bridge Park` (a linear waterfront strip,
+634 m). **None is an error.** A site with no single point puts our coordinate and the gazetteer's
+centroid hundreds of metres apart with neither being wrong — the same blind spot `docs/places.md`
+records from the other direction: *"A forty-acre site cannot be found by a metre-scale sweep."*
+
+The report warns about this in so many words rather than guessing. **The fix, when it is worth
+doing, is to fetch Wikidata's `P2046` (area) in `spine-lookup.py`'s query and scale the bands by
+the site's own radius** — a bigger place earns a bigger tolerance. It needs a re-sweep, so it waits
+for a reason to re-sweep.
+
+### Two false positives caught during the build, both from containment
+
+Both appeared in the first 125 entries of the live sweep and both are now regressions in the
+selftest:
+
+- **`Municipal Library of Viana do Castelo` matched the TOWN `Viana do Castelo`**, 464 m away, and
+  was promoted to a finding about the library. Plain containment reintroduces exactly the bug
+  `check-place-candidates.same_name` uses equality to avoid — `Akihabara` matching
+  `Gyukatsu Ichi Ni San, Akihabara`. Fixed by dropping the entry's city words from both sides.
+- **The city drop alone is not enough**, because the containing thing is not always the `city`
+  field: `Gyukatsu Ichi Ni San, Akihabara` is recorded in `Tokyo`. Fixed by a second rule — an
+  English title names its subject FIRST and its locator LAST, so a candidate that is a *subset* of
+  our title must carry our title's **head word**. `Geisel Library` carries `geisel`; `Akihabara`
+  does not carry `gyukatsu`.
+
+⚠️ The city drop is **not** redundant behind the head-word rule, though it looks it: a title that
+*leads* with its city (`Brooklyn Botanic Garden`) has the city AS its head word, and without the
+drop the borough matches the garden inside it. Mutation-testing is what surfaced that — the
+obvious regression passed with the drop deleted.
+
+### What it does not do
+
+**It moves nothing.** `docs/lessons.md`: *"Move the pin, never the place, and only with the owner's
+say-so"*, and three pins moved on a district-centroid distance came out 11 m right, 220 m wrong and
+100 m wrong. The output is a report the owner approves from one line at a time, exactly as #930's
+31 fixes went.
+
+---
+
 ## 4. Build order — each step independently useful
 
-1. **`scripts/spine-build.py`** — PBF → filtered, ranked rows → `backend/place_spine.sql`.
-   Start with the five cities above. Offline; no egress.
-2. **`scripts/check-coordinates.py --pins`** — the missing audit. Needs a `from_pins` beside
-   `from_catalog` (L255), a pin-aware name gate (not `names_resemble`'s studio-tour stop-words),
-   and the spine as the reference instead of Nominatim. **This is the first real payoff** and it
-   audits content already shipped.
+⚠️ **Steps 1 and 2 are superseded — see § 3a.** Kept here because steps 3 and 4 still build on
+them, and because the reasoning that replaced them is worth not re-deriving.
+
+1. ~~**`scripts/spine-build.py`** — PBF → `backend/place_spine.sql`, five cities~~ — ✅ **the
+   harvester exists** (Wikidata, not PBF; § 2a (a)), but nothing is committed from it and the
+   audit did not need it. A tiled harvest is still the right shape for step 3.
+2. ~~**`scripts/check-coordinates.py --pins` with the spine as reference**~~ — ✅ **DONE
+   DIFFERENTLY, 2026-09-17.** `--pins` shipped in #927 as an *offline neighbour-consistency*
+   check, and the spine half became **`scripts/spine-lookup.py` + `scripts/spine-match.py`**, a
+   NAME lookup rather than a tile join. 🔴 The reason is structural and is in § 3a: a tile is drawn
+   around the coordinate the entry already has, so a wrong coordinate puts the right feature
+   outside the tile. This was indeed **the first real payoff**, and it audits shipped content.
 3. **`make-link-pin.py --spine-id`** — derive all four fields from one id. Fold in the per-pin
    `key=value` tail at the same time, since both touch `parse_batch` (L1021) and the loop at
    L1111-1120.
@@ -289,6 +426,25 @@ belongs *after* the spine exists and can be judged on real output — not now.
 
 ⚠️ `docs/places.md` leaves part-vs-whole explicitly undecided, and that will surface hard once a
 spine offers both a building and its rooms as separate features.
+
+### 🔴 The contradiction with `scaling-to-100k-design.md` § A1, resolved (2026-09-17)
+
+That document says owner sign-off on auto-created places is needed **before A1 ships**; this
+section says the decision belongs **after** the spine exists. Both were written before anything was
+built, and the built thing settles it: **the audit in § 3a creates no place, changes no rule and
+moves no coordinate**, so the question does not arise for it at all. `Place.swift:18` stands
+untouched.
+
+What the audit does is produce the evidence the decision actually needs — per-creator coverage,
+measured on real content — rather than the unmeasured guess the board item was resting on. ⚠️ And
+the identity change in § 3a is part of that evidence: the argument for auto-creation was "same OSM
+feature = same place", and the reachable source makes it "same **Wikidata** item", which is a
+weaker claim over a much thinner universe. That belongs in front of the owner before, not after,
+they are asked to lift the rule.
+
+⚠️ `status/owner/auto-created-places.md` still describes the pre-2026-09-16 state in places; its
+own header records that its "46 invisible pins" evidence was **false** (the measured figure is 0).
+Read the correction, not the body.
 
 ---
 
