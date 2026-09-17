@@ -100322,21 +100322,6 @@
       ]
     },
     {
-      "id": "bdeebc71-f137-5513-be44-c5f49638182e",
-      "name": "Round Swamp Farm",
-      "description": null,
-      "latitude": 40.9853229,
-      "longitude": -72.1831331,
-      "city": "East Hampton",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "4D69C025-7703-5371-A55A-EC95DB985F11",
-        "D195F283-1470-5A89-B8F1-1D6CB6AEFBA0"
-      ]
-    },
-    {
       "id": "9606537f-c2cb-5426-b785-ca7b53626fa6",
       "name": "Mary King's Close",
       "description": "A warren of Old Town streets buried under the Royal Exchange in the 1750s, when the new building went up over the top of them rather than clearing them away. The closes survive underneath with their houses standing.",
@@ -101842,6 +101827,21 @@
       ]
     },
     {
+      "id": "4303b5c2-5cdc-5727-b624-7bce3eb927f0",
+      "name": "All'Antico Vinaio on Sullivan Street",
+      "description": null,
+      "latitude": 40.7295949,
+      "longitude": -73.9996291,
+      "city": "New York",
+      "address": "225 Sullivan Street, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "89BB0A71-6C26-5C96-AA09-A022C8802E01",
+        "1E74EC59-B20B-50BA-B20C-6F5C7BD7EEC2"
+      ]
+    },
+    {
       "id": "d963f703-f114-5f11-b4d2-e02ae582bb23",
       "name": "Alwyn Court",
       "description": "Harde and Short's 1909 apartment house at the corner of West 58th Street and Seventh Avenue, where almost no surface is left plain: bays, piers, spandrels and window surrounds are wrapped in hand-modelled terracotta, with salamanders, dragons, putti, crests and grotesque faces repeated across twelve storeys in the French Renaissance manner. Built for a handful of very large apartments, it went from gilded-age address to Depression-era relic before the apartments were cut up and the building eventually became a co-op. It is on the National Register of Historic Places, and the facade is still the reason people stop on the corner.",
@@ -102158,21 +102158,6 @@
       ]
     },
     {
-      "id": "3051b68b-7719-5420-8484-a7d986593691",
-      "name": "Hawksmoor NYC",
-      "description": null,
-      "latitude": 40.7393841,
-      "longitude": -73.9862985,
-      "city": "New York",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
-        "BBD1F25E-770A-5AF5-9EF5-D8B0A52CE583"
-      ]
-    },
-    {
       "id": "d8b86cb9-cb5a-585a-83f1-076fa253c8e1",
       "name": "Hook & Ladder 8",
       "description": "An 1903 Tribeca firehouse, reduced to a single bay when Varick Street was widened. It is the Ghostbusters firehouse, and the company was saved from closure in 2011 after a neighbourhood campaign.",
@@ -102276,22 +102261,6 @@
       "tourIds": [
         "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74",
         "A29F7EAF-42BB-557B-A505-713705E311D5"
-      ]
-    },
-    {
-      "id": "94da36ea-570c-5e58-9496-de5b0aac36d0",
-      "name": "Mark's Off Madison",
-      "description": null,
-      "latitude": 40.7424702,
-      "longitude": -73.9862953,
-      "city": "New York",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
-        "1FF4B51B-5BB3-5440-B966-DCA36619C23D",
-        "E2666976-FF4A-5EE8-849B-F4E65333D2D0"
       ]
     },
     {
@@ -102433,21 +102402,6 @@
       ]
     },
     {
-      "id": "c281b93f-ba5e-5075-99b9-52771222f3d1",
-      "name": "Pecking House",
-      "description": null,
-      "latitude": 40.7132144,
-      "longitude": -73.9934677,
-      "city": "New York",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "A0BB99C9-B680-530B-85F1-B26D6A1296EA",
-        "D251C14F-9B99-516E-B86B-504FF05BE265"
-      ]
-    },
-    {
       "id": "17dcfa69-dc78-5c4c-80d4-11a79a4b9ad7",
       "name": "Penn Station",
       "description": "The busiest railway station in the western hemisphere, rebuilt underground after McKim, Mead & White's 1910 Beaux-Arts original was demolished between 1963 and 1966 to make way for Madison Square Garden. That loss produced New York's landmarks law; fragments of the old station survive above ground, and Moynihan Train Hall opened across Eighth Avenue in 2021.",
@@ -102462,21 +102416,6 @@
         "C7DDC012-78F7-534D-9968-80658A2A0841",
         "F9294EDC-1588-51AB-BCC3-529FF7F292CC",
         "C8127FFE-8549-5495-8F8E-38576777EAF0"
-      ]
-    },
-    {
-      "id": "a43e25bf-bd49-5d04-b1e1-ee378618d6ec",
-      "name": "Peter Pan Donut & Pastry Shop",
-      "description": null,
-      "latitude": 40.7260665,
-      "longitude": -73.9522298,
-      "city": "New York",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA",
-        "006117B3-C5AD-598F-9C2B-3DD9276C890A"
       ]
     },
     {
@@ -103709,21 +103648,6 @@
       "tourIds": [
         "ee0f9fbe-25b2-4aa6-ba15-590e1e26402c",
         "D732C712-D982-5AF4-9EE5-76AD34C9DBDA"
-      ]
-    },
-    {
-      "id": "5ea487d0-a904-5ffa-a8c2-90d38e2d8c43",
-      "name": "House of Prime Rib",
-      "description": null,
-      "latitude": 37.7933913,
-      "longitude": -122.4225436,
-      "city": "San Francisco",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "F42357E1-507A-597F-BF5A-C58D69B31F9B",
-        "40EB17E2-C5E8-5C40-AE14-B53281A505E6"
       ]
     },
     {
@@ -222743,7 +222667,7 @@
       "shortDescription": "A post by @nom_life on Instagram.",
       "longDescription": "where to have your next dinner in brooklyn at this celebration of cultures all through the menu 🫰🥡 📍: @themonkeykingnyc 1329 Willoughby Ave, Brooklyn #NomLifeNYC #brooklyn #bushwick",
       "makerId": "CD88C51E-DA9E-5566-AB16-EB5EF3D4D35C",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monkey-king-nyc-nomlife_hero.webp",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monkey-king-nyc-nomlife_hero-2.webp",
       "additionalImageURLs": null,
       "videoURLs": null,
       "videoRole": null,
@@ -245527,7 +245451,7 @@
     {
       "id": "89BB0A71-6C26-5C96-AA09-A022C8802E01",
       "createdAt": "2026-09-16",
-      "title": "We have sorority girls to thank for this one 📍@allanticov…",
+      "title": "All'Antico Vinaio on Sullivan Street",
       "shortDescription": "A post by @jacksdiningroom on Instagram.",
       "longDescription": "We have sorority girls to thank for this one 📍@allanticovinaionyc",
       "makerId": "50B8DDD7-C3CC-502F-BC6B-9D576A939EB5",
@@ -245542,10 +245466,10 @@
         {
           "id": "72C271D3-DB4D-5E84-9029-FE779B2B7297",
           "order": 0,
-          "title": "We have sorority girls to thank for this one 📍@allanticov…",
+          "title": "All'Antico Vinaio on Sullivan Street",
           "caption": "We have sorority girls to thank for this one 📍@allanticovinaionyc",
-          "latitude": 40.7636814,
-          "longitude": -73.9700441,
+          "latitude": 40.7295949,
+          "longitude": -73.9996291,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -245557,8 +245481,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7636814,
-      "centroidLongitude": -73.9700441,
+      "centroidLatitude": 40.7295949,
+      "centroidLongitude": -73.9996291,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -246989,7 +246913,7 @@
     {
       "id": "1E74EC59-B20B-50BA-B20C-6F5C7BD7EEC2",
       "createdAt": "2026-09-16",
-      "title": "What’s better than charcuterie??? 📍@allanticovinaionyc",
+      "title": "All'Antico Vinaio on Sullivan Street",
       "shortDescription": "A post by @jacksdiningroom on Instagram.",
       "longDescription": "What’s better than charcuterie??? 📍@allanticovinaionyc",
       "makerId": "50B8DDD7-C3CC-502F-BC6B-9D576A939EB5",
@@ -247004,10 +246928,10 @@
         {
           "id": "A85C1923-BD29-5931-A0D9-716B83D1AB9B",
           "order": 0,
-          "title": "What’s better than charcuterie??? 📍@allanticovinaionyc",
+          "title": "All'Antico Vinaio on Sullivan Street",
           "caption": "What’s better than charcuterie??? 📍@allanticovinaionyc",
-          "latitude": 40.7636814,
-          "longitude": -73.9700441,
+          "latitude": 40.7295949,
+          "longitude": -73.9996291,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -247019,8 +246943,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7636814,
-      "centroidLongitude": -73.9700441,
+      "centroidLatitude": 40.7295949,
+      "centroidLongitude": -73.9996291,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -247201,7 +247125,7 @@
     {
       "id": "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
       "createdAt": "2026-09-16",
-      "title": "Did you know the people behind @allanticovinaionyc also h…",
+      "title": "Lupa Osteria Romana",
       "shortDescription": "A post by @jacksdiningroom on Instagram.",
       "longDescription": "Did you know the people behind @allanticovinaionyc also have an Italian restaurant?!? 📍@lupaosteria",
       "makerId": "50B8DDD7-C3CC-502F-BC6B-9D576A939EB5",
@@ -247216,7 +247140,7 @@
         {
           "id": "C9ABF363-1431-5D04-A4DB-BE773AE8784D",
           "order": 0,
-          "title": "Did you know the people behind @allanticovinaionyc also h…",
+          "title": "Lupa Osteria Romana",
           "caption": "Did you know the people behind @allanticovinaionyc also have an Italian restaurant?!? 📍@lupaosteria",
           "latitude": 40.7275849,
           "longitude": -74.0000977,
