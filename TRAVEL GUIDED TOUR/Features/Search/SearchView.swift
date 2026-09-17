@@ -47,6 +47,9 @@ struct SearchView: View {
     /// with its section simply absent.
     @State private var semantic = SemanticSearch()
 
+    /// Built alongside `searchIndex`, from the same catalog.
+    @State private var speller: SearchSpellCorrector?
+
     @State private var searchIndex: [SearchEntry] = []
     /// Tour → maker, resolved once (avoids per-row linear `maker(for:)`).
     @State private var makerByTourID: [Tour.ID: Maker] = [:]
@@ -69,7 +72,21 @@ struct SearchView: View {
                 // which is a loop. `SemanticSearch` debounces on its own, so a
                 // keystroke here costs one cancelled task.
                 .onChange(of: trimmedQuery) { _, new in
-                    semantic.update(query: new, catalog: dataService.tours)
+                    // ⚠️ THE SEMANTIC HALF TAKES THE CORRECTION UNCONDITIONALLY,
+                    // unlike the keyword half, and the asymmetry is deliberate.
+                    // A typo does not make this half return nothing — it makes
+                    // it return something subtly wrong, by chopping the unknown
+                    // word into fragments that resemble a different word. There
+                    // is no empty result to use as the trigger, so correcting
+                    // up front is the only point at which it can help.
+                    //
+                    // Safe because the corrector never touches a word the
+                    // catalog knows: a query that was spelled correctly reaches
+                    // the model exactly as typed.
+                    semantic.update(
+                        query: speller?.corrected(new) ?? new,
+                        catalog: dataService.tours
+                    )
                 }
                 // Pin content area to fill available space, top-aligned.
                 // Without this the outer VStack collapses to fit small
@@ -198,16 +215,32 @@ struct SearchView: View {
             // Third time this shape has been paid for: `toursInViewCount`
             // (session 60) and `savedTours` / `rankedTours(at:)` (session 99)
             // were the same "derive once, use many" fix.
-            let found = SearchResults(
+            let typed = SearchResults(
                 makers: filteredMakers,
                 tours: filteredTours,
                 cap: Self.resultCap
             )
+            // 🔴 SPELLING IS A FALLBACK, NEVER AN OVERRIDE. The correction is
+            // only even computed when what was typed found nothing, so a query
+            // that already works is untouched by it — the feature can add
+            // results and can never take one away. That is also why the second
+            // scan is affordable: it happens only on an empty screen.
+            let correction = typed.isEmpty ? speller?.corrected(trimmedQuery) : nil
+            let found = correction.map {
+                SearchResults(
+                    makers: makers(matching: $0),
+                    tours: tours(matching: $0),
+                    cap: Self.resultCap
+                )
+            } ?? typed
+
             if found.isEmpty && placeSearch.suggestions.isEmpty
                 && !placeSearch.isSearching && smartMatches(excluding: found).isEmpty {
                 emptyResults
             } else {
-                resultsList(found)
+                // ⚠️ Passed down, never re-derived — `correction` costs a full
+                // catalog scan to compute.
+                resultsList(found, correction: found.isEmpty ? nil : correction)
             }
         }
     }
@@ -281,7 +314,9 @@ struct SearchView: View {
         .padding(.vertical, AtlasSpacing.sm)
     }
 
-    private func resultsList(_ found: SearchResults) -> some View {
+    private func resultsList(
+        _ found: SearchResults, correction: String? = nil
+    ) -> some View {
         // Show section headers whenever there's more than tours to
         // label. Tours-only keeps its clean headerless list (existing
         // behavior); any Places or Makers section turns headers on for
@@ -289,6 +324,19 @@ struct SearchView: View {
         let showHeaders = !placeSearch.suggestions.isEmpty || !found.makers.isEmpty
         return ScrollView {
             LazyVStack(alignment: .leading, spacing: 0) {
+                // 🔴 NEVER SILENT. Answering a different question than the one
+                // asked, without saying so, is worse than answering nothing —
+                // the results would look simply wrong. Shown only when a
+                // correction actually produced something.
+                if let correction {
+                    Text("Showing results for \u{201C}\(correction)\u{201D}")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .padding(.horizontal, AtlasSpacing.lg)
+                        .padding(.top, AtlasSpacing.md)
+                        .padding(.bottom, AtlasSpacing.sm)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
                 // Places section — autocomplete suggestions from Apple's
                 // geocoder. Tapping one resolves its coordinate, closes
                 // Search, and flies the Home map there (owner direction
@@ -697,8 +745,10 @@ struct SearchView: View {
     /// cap needed — unlike tours, which cap at `resultCap`.
     ///
     /// ⚠️ Read this ONCE, via `SearchResults` — see that type's note.
-    private var filteredMakers: [Maker] {
-        let q = trimmedQuery.lowercased()
+    private var filteredMakers: [Maker] { makers(matching: trimmedQuery) }
+
+    private func makers(matching query: String) -> [Maker] {
+        let q = query.lowercased()
         guard !q.isEmpty else { return [] }
         // Also the username, so `@kathyng` and `kathyng` both find Kathy Ng.
         // A leading @ is dropped for that half only — pinned creators' display
@@ -723,8 +773,13 @@ struct SearchView: View {
     /// tour appears at most once, in the highest-ranked bucket it hits
     /// (audit P3-8). docs/authoring-tours.md already promises tags
     /// feed the search index; this implements that promise.
-    private var filteredTours: [Tour] {
-        let q = trimmedQuery.lowercased()
+    private var filteredTours: [Tour] { tours(matching: trimmedQuery) }
+
+    /// ⚠️ Takes the query rather than reading `trimmedQuery`, so a corrected
+    /// spelling can be run through the identical matcher. There is exactly one
+    /// keyword matcher; the speller changes the input to it, never the rules.
+    private func tours(matching query: String) -> [Tour] {
+        let q = query.lowercased()
         guard !q.isEmpty else { return [] }
 
         var titleHits: [Tour] = []
@@ -846,5 +901,57 @@ struct SearchView: View {
         }
         makerByTourID = byTour
         makerTourCounts = counts
+        speller = SearchSpellCorrector(
+            tours: dataService.tours,
+            makerNames: dataService.makers.map(\.displayName)
+        )
+    }
+
+    // MARK: - Search index
+
+    /// One tour's searchable fields, lowercased once up front.
+    private struct SearchEntry {
+        let tour: Tour
+        let title: String
+        let category: String
+        let makerName: String   // "" when the tour has no maker
+        let tags: [String]
+        let shortDescription: String
+        let longDescription: String
+    }
+
+    /// Build the lowercased search index + the tour→maker and
+    /// maker→count maps once. Guards on catalog size so a background
+    /// remote-catalog refresh (which changes `dataService.tours.count`)
+    /// triggers a rebuild — both next time Search appears (`.onAppear`)
+    /// and immediately if the refresh lands while Search is already on
+    /// screen (`.onChange(of: dataService.tours.count)` above).
+    private func buildIndexIfNeeded() {
+        guard searchIndex.count != dataService.tours.count else { return }
+
+        var byTour: [Tour.ID: Maker] = [:]
+        var counts: [Maker.ID: Int] = [:]
+        searchIndex = dataService.tours.map { tour in
+            let maker = dataService.maker(for: tour)
+            if let maker {
+                byTour[tour.id] = maker
+                counts[maker.id, default: 0] += 1
+            }
+            return SearchEntry(
+                tour: tour,
+                title: tour.title.lowercased(),
+                category: tour.primaryCategory.displayName.lowercased(),
+                makerName: maker?.displayName.lowercased() ?? "",
+                tags: tour.tags.map { $0.lowercased() },
+                shortDescription: tour.shortDescription.lowercased(),
+                longDescription: tour.longDescription.lowercased()
+            )
+        }
+        makerByTourID = byTour
+        makerTourCounts = counts
+        speller = SearchSpellCorrector(
+            tours: dataService.tours,
+            makerNames: dataService.makers.map(\.displayName)
+        )
     }
 }
