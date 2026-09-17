@@ -105,6 +105,38 @@ The three left alone, for the record: Keith Haring's Carmine Street Mural vs the
 Tony Dapolito Recreation Center; The Blue Ribbon Garden vs Walt Disney Concert
 Hall; Hoyt–Schermerhorn Streets Station vs a pin about the street's name.
 
+### 2026-09-16: two more left alone at the Barbican — and a THIRD signal
+
+Asked about three neighbours of `The Barbican`, the owner took one and declined
+the other two:
+
+| entry | dist | decision |
+|---|---|---|
+| **The Barbican Estate** (@urbanistariel) | 39 m | **JOINED** (#964) — not part-vs-whole at all: its title is *identical* to two pins already in the place |
+| **Barbican Centre** (@blessedarch) | 149 m | **left alone** — owner: *"the barbican center is fine. what's on device now is correct, no need to do anything."* |
+| **a 1970s laundrette inside the estate** (@heyrosiedart) | 243 m | **left alone** — *"laundrettee is fine too."* |
+
+🔴 **This is the fifth and sixth case left alone against four taken, so the
+"judgement call" verdict above is reinforced, not weakened.** Note especially
+that the laundrette closely matches the shape of the four that WERE made — a
+component with no independent identity, inside a site whose name everyone knows
+— and was still declined. **Do not build a rule out of the Strahov pattern.**
+
+⚠️ **Do not re-offer these two.** They were put to the owner on 2026-09-16 and
+answered. `Golden Lane Estate` (290 m) was declined separately under Rule 3 — the
+same architects and immediately adjacent, but a *different* listed estate.
+
+### ⚠️ A forty-acre site cannot be found by a metre-scale sweep
+
+The Barbican Estate pin sat **39 m** out and was invisible to a sweep that had
+just cleared every orphan within **5 m** catalogue-wide. **The owner found it by
+looking at the map.**
+
+Exactness is the wrong axis for a large site — Rule 5's own entry for this place
+says it is forty acres and anchored on the estate polygon. A **name** match would
+have found it in one pass. Any coordinate-only candidate scan has this blind spot
+for every large site in the catalogue.
+
 What the four that *were* made have in common — a component with no independent
 identity, inside a site whose name everybody already knows — may be the shape of
 it, but the owner has not said so and the three above are not obviously different:
