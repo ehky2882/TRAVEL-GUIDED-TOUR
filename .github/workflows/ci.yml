@@ -70,6 +70,42 @@ jobs:
             echo "::warning::$n unplaced pair(s) share a name — docs/places.md Rule 1 says every one is a place. See the job summary."
           fi
 
+  # The spine audit asks a question no other check here asks: not "is this
+  # coordinate plausible?" but "is it where the thing this entry is NAMED AFTER
+  # actually stands?" Offline — it reads a committed cache, never the network.
+  spine-match:
+    name: Spine coordinate audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Band every entry against Wikidata
+        run: |
+          # ⚠️ GitHub runs `run:` under `bash -e`, so a bare non-zero exit would
+          # kill the step before the code could be read — and exit 1 here means
+          # "findings to review", which is NOT a failure. `|| code=$?` is what
+          # keeps this job reporting rather than blocking.
+          code=0
+          python3 scripts/spine-match.py --out spine-audit.txt || code=$?
+          # 0 = nothing disagrees, 1 = findings (both fine), >=2 = the check
+          # could not run — a missing or incomplete cache. Read the code
+          # DIRECTLY, never through a pipe.
+          if [ "$code" -ge 2 ]; then
+            echo "::error::spine-match.py could not run (exit $code) — the lookup cache is missing or incomplete; run scripts/spine-lookup.py"
+            cat spine-audit.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Spine coordinate audit"
+            echo
+            echo '```'
+            sed -n '/^🔴 DISAGREES/,/^CONFIRMS:/p' spine-audit.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          n=$(grep -oE '^🔴 DISAGREES[^:]*: [0-9]+' spine-audit.txt | grep -oE '[0-9]+$' || echo 0)
+          if [ "${n:-0}" -gt 0 ]; then
+            echo "::warning::$n entr(y/ies) sit somewhere other than where Wikidata says their subject is. A LARGE SITE (a park, a cemetery, a whole town) reads this way and is usually not an error — read the subject before the number."
+          fi
+
   # In-app account deletion: the SQL runs against a throwaway Postgres (the
   # Ubuntu runner ships one) and the Edge Function is type-checked, because
   # both reach production by the owner pasting them into Supabase — the worst

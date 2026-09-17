@@ -1842,3 +1842,53 @@ it cannot crop to 1200×900 without upscaling. The **untransformed original is 7
 Strip the transformation segment from any `/cdn-cgi/image/`, `/_next/image`, `?w=`,
 `/thumb/` or similar URL and re-fetch before concluding a source is too small. The
 dimensions you measure are the ones the resizer was asked for, not the ones the file has.
+
+## A background process does not outlive an idle session (2026-09-17)
+
+A 4.5-hour Wikidata sweep was started with `nohup … &`, checkpointed to a
+committed file, and left to run while the session went idle. A scheduled
+check-in found it **dead**: it had stopped at 316 of 4,566 entries,
+**about five minutes after the turn ended.** The container suspends when the
+session goes idle, and nothing in the process outlives that.
+
+🔴 **So "start it in the background and check back later" is not a strategy in
+this environment**, however carefully the check-in is re-armed. Work that must
+finish has to fit inside an active turn.
+
+Two things follow, and the second is the one worth keeping:
+
+- **Bound each foreground run** (`--limit`) so it completes and saves rather
+  than being cut off mid-flight. A resumable cache makes the chunking free.
+- **Make the work fast enough to fit.** The sweep was 3 s per entry because it
+  sent one query per name. Batching eight searches into one query took it to
+  **0.31 s per entry — 22 minutes instead of 4.5 hours** — which is the
+  difference between a job that can be finished and one that cannot.
+
+⚠️ The scheduled check-in was still worth having: it is what *discovered* the
+death. A job you cannot supervise is not the same as a job you should not check.
+
+## The faster endpoint was the wrong one, and only measuring showed it (2026-09-17)
+
+Wikidata offers two ways to search: the `wbsearchentities` **action API**, and
+the same search wrapped in SPARQL via `SERVICE wikibase:mwapi` on WDQS. The
+action API is obviously the faster of the two — **~0.3 s against ~2 s** per
+call — and obviously the one to switch a slow sweep to.
+
+Measured in bulk it is unusable: **5 of 15 requests succeeded at a 0.5 s sleep,
+9 of 15 at 0.25 s**, the rest HTTP 429. WDQS, meanwhile, had just run **316
+consecutive entries with zero failures** at the same politeness. The shared
+egress proxy means the rate limit is not ours alone to spend.
+
+**The win was batching the permissive endpoint, not switching to the fast one**
+— eight searches UNION'd into one WDQS query, each branch tagged so results map
+back, which is 10× on the measure that mattered.
+
+🔴 **Per-call latency is not throughput.** Benchmark the thing you will actually
+do — a burst, sustained, from this network — not a single call from `curl`. The
+single call looked fine; three of them in a row looked fine; ten in a row did not.
+
+⚠️ And when a batch can fail, **one bad member must not lose the others**. A
+failed batch here re-asks every name individually before recording anything,
+because the alternative caches seven innocent entries as "nothing found" — which
+is indistinguishable from a real miss forever after, since the cache is also the
+resume state.

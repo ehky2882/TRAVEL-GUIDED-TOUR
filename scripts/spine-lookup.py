@@ -534,7 +534,36 @@ def chunked(items, size):
 
 
 def run_sweep(todo, cache, opts, *, save=None, log=print):
-    """Fill the cache for `todo`, in three batched passes.
+    """Fill the cache for `todo`, saving as it goes.
+
+    🔴 THE SLICING IS WHAT MAKES PROGRESS DURABLE, and it was added after a run
+    was killed at 320 of 1,000 having written nothing. An entry is only cacheable
+    once all three passes have finished with it, so a sweep that ran the passes
+    over the WHOLE list kept everything in memory until the very end — and a
+    foreground run here has a hard time budget. Slicing runs the three passes
+    over a few hundred entries at a time and saves after each slice, so the cost
+    of being interrupted is bounded by the slice, not by the run.
+
+    ⚠️ It costs nothing in queries: batching happens inside a pass, and a slice
+    of 200 still fills batches of 8.
+    """
+    total = {"asked": 0, "failed": 0, "queries": 0}
+    slice_size = max(opts.batch, opts.save_every)
+    slices = list(chunked(todo, slice_size))
+    for number, part in enumerate(slices, 1):
+        if len(slices) > 1:
+            log(f"\n=== slice {number}/{len(slices)} · {len(part)} entries ===")
+        stats = sweep_slice(part, cache, opts, log=log)
+        for key in total:
+            total[key] += stats[key]
+        if save:
+            save()
+            log(f"  saved — {len(cache)} entries cached")
+    return total
+
+
+def sweep_slice(todo, cache, opts, *, log=print):
+    """Fill the cache for one slice of entries, in three batched passes.
 
     The passes are an economy, not a refinement: pass 1 answers most entries, so
     passes 2 and 3 run over the shrinking remainder rather than the whole
@@ -641,8 +670,6 @@ def run_sweep(todo, cache, opts, *, save=None, log=print):
                                  key=lambda c: c["distance_m"]),
         }
         stats["asked"] += 1
-    if save:
-        save()
     return stats
 
 
@@ -828,6 +855,9 @@ def main():
     ap.add_argument("--batch", type=int, default=8,
                     help="names per SPARQL query. 8 measured at 0.31 s/name "
                          "against ~3 s unbatched; 1 disables batching.")
+    ap.add_argument("--save-every", type=int, default=200,
+                    help="write the cache after this many entries. Bounds what "
+                         "an interrupted run loses; costs no extra queries.")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
