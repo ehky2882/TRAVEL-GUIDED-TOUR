@@ -1,0 +1,3 @@
+# Spelling fix for search: SearchSpellCorrector builds a dictionary from the catalogue's own words (titles, cities, countries, tags, categories, maker names, shortDescription) and corrects unknown query tokens via bounded Damerau-Levenshtein. Keyword half: correction is a FALLBACK, only when the typed query found nothing, and it says so on screen. Semantic half: corrected unconditionally, since a typo there returns something subtly wrong rather than nothing. Prototyped in Python against the live catalogue first, which caught deko->deno, loby->lobo and towr->tour before any of it shipped.
+
+_2026-09-17 00:57 UTC · branch `search-spelling-pxuxdh`_

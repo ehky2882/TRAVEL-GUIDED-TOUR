@@ -77,7 +77,13 @@ enum TestFixtures {
         centroidLongitude: Double? = nil,
         /// "More like this" ids. Defaults to nil — the overwhelmingly common
         /// case, since these are generated offline over the whole catalog.
-        relatedTourIds: [String]? = nil
+        relatedTourIds: [String]? = nil,
+        /// Defaulted to today's values so every existing caller is untouched.
+        /// Overridable for the spell corrector, which builds its dictionary
+        /// out of exactly these fields.
+        city: String? = nil,
+        country: String? = nil,
+        shortDescription: String = "Test short description"
     ) -> Tour {
         let stops: [Stop]
         if let stopCoordinates {
@@ -104,7 +110,7 @@ enum TestFixtures {
         return Tour(
             id: id,
             title: title,
-            shortDescription: "Test short description",
+            shortDescription: shortDescription,
             longDescription: "Test long description",
             makerId: makerId,
             heroImageURL: heroImageURL,
@@ -120,8 +126,8 @@ enum TestFixtures {
             walkingDistanceMeters: kind == .multiStop ? 500 : nil,
             centroidLatitude: centroidLatitude ?? latitude,
             centroidLongitude: centroidLongitude ?? longitude,
-            city: "Test City",
-            country: "Test Country",
+            city: city ?? "Test City",
+            country: country ?? "Test Country",
             relatedTourIds: relatedTourIds,
             primaryCategory: category,
             tags: tags,
