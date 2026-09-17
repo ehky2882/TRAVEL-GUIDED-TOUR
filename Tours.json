@@ -18592,14 +18592,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "6DB9D6CD-E536-5713-B176-63E61A7CCA49",
         "333F2585-E958-5906-8BCC-FA8043FF775E",
         "e7a2d9c4-1b86-4f30-8a75-2c9e6b3d8f41",
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
         "aa22f015-7b43-41ca-9fe3-282519b7f5d3",
         "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
-        "b829e156-a654-493a-a8c8-bc9d18855ba1",
-        "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61"
+        "b829e156-a654-493a-a8c8-bc9d18855ba1"
       ],
       "walkingDistanceMeters": null
     },
@@ -78646,8 +78646,8 @@
         "dbbb16d4-4eb8-550e-b3f9-77d0a79b0f9f",
         "996b8d38-5432-5429-835c-7482bfc4dbb9",
         "445d80b8-919e-5007-8d9d-e159dc23958a",
-        "6b441ec3-c06f-539b-beea-07d93f4b0dc6",
-        "27639583-596a-5938-9644-93a5c55440e1"
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
+        "6b441ec3-c06f-539b-beea-07d93f4b0dc6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -110896,13 +110896,13 @@
       "country": "United States",
       "relatedTourIds": [
         "91c9fd6a-8423-4519-9b03-df764850dc9b",
+        "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753",
         "6EB67F82-506E-58E6-817E-782D9B665F42",
         "556D7D3D-D043-5C0A-A362-1B879FF8758B",
         "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "F70F0376-C237-5610-BA05-94F6478775E4",
         "3722D8CA-AC92-5525-8BD6-4BC7A1E49BE4",
-        "285885D8-4650-5433-9EC3-C31B301A8704",
-        "4E11A31C-7095-5D45-8438-1B2469A5D5C9"
+        "285885D8-4650-5433-9EC3-C31B301A8704"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -112105,11 +112105,11 @@
         "68E4C588-A3A3-5993-9E1F-709399828E69",
         "5F1FBE72-0EE7-5250-84D2-8873C2B69C87",
         "05222115-7F54-5AFE-921F-4B0B920DA6BA",
+        "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "62cca756-02e7-5848-ace4-502800c37005",
         "962093e8-2777-5053-b9f2-fa72590c5b96",
         "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
-        "44bb3a6d-09d3-5763-8e20-4c129fc5e27c",
-        "3619ca6e-f14c-50a3-a659-14ac5216160d"
+        "44bb3a6d-09d3-5763-8e20-4c129fc5e27c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -112220,8 +112220,8 @@
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "4391E119-E608-579A-89C4-293BB6077D6E",
-        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B"
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
+        "4391E119-E608-579A-89C4-293BB6077D6E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113161,8 +113161,8 @@
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
         "2644D271-E442-5007-85CD-8D4E57333C50",
-        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "35225803-38D9-5C05-9272-6AF04A20C0A4"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113681,6 +113681,7 @@
         "B016A73B-2437-504E-B9CE-0992B7A68360",
         "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "AA41DCD3-D243-5514-9A3F-639DF499F6DA",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
         "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C"
       ],
@@ -118000,6 +118001,7 @@
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
         "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "6E682EA2-B07F-5505-B5FB-A74F9B7241EF"
       ],
       "primaryCategory": "architecture",
@@ -118797,7 +118799,7 @@
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
         "1B62FA84-2346-5771-B155-9DF65757BE26",
         "74338039-7AA9-5073-A1E8-933576D8D0BE",
-        "3396CA2F-7227-5782-84AF-D775B186B1B3"
+        "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -119375,6 +119377,7 @@
         "05222115-7F54-5AFE-921F-4B0B920DA6BA",
         "7368f7d7-389e-5dc2-b683-828dacf35e12",
         "BB77667E-DF93-572E-83C8-FB24A2E70D17",
+        "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "238ec847-822c-5112-8d87-8817489de3fd"
       ],
       "primaryCategory": "architecture",
@@ -130585,10 +130588,10 @@
         "2A1FEF6D-418A-56D2-BADA-DA2E0FBAA172",
         "C3BE5960-C13B-5686-BABA-A27F9FEED746",
         "F1211A99-562E-5022-8584-74ADDF54C127",
+        "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
         "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
-        "3D4B6A06-78F0-5824-ADA3-9ECE57ACBECC",
-        "FA8DC5F0-1A0D-535D-B137-9943E8701DA2"
+        "3D4B6A06-78F0-5824-ADA3-9ECE57ACBECC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142333,7 +142336,7 @@
         "274364F2-9835-5B40-957F-243E11F271E6",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "4D01F2E0-96B7-52C9-B08A-E6C39DE50E8B",
-        "31C62BBC-CA52-5C76-88CC-058A077D07F1"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142389,7 +142392,7 @@
         "6138172D-F7B0-5CB2-998D-9558115DCA28",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
-        "2cdee541-79d1-519d-9a02-76aa8b0ac43d"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142444,9 +142447,9 @@
         "00b933d6-ea4e-5897-93e0-d1bd46622369",
         "31C62BBC-CA52-5C76-88CC-058A077D07F1",
         "3dd57e77-d4fe-509e-a552-daf4d97c146c",
-        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
-        "993900D5-8F6E-5195-BBB3-9CF024934D09"
+        "993900D5-8F6E-5195-BBB3-9CF024934D09",
+        "34A7E90A-8A6C-52F2-B090-CEF5F85948DF"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -142758,6 +142761,7 @@
       "relatedTourIds": [
         "6138172D-F7B0-5CB2-998D-9558115DCA28",
         "4A662900-5E8A-5B78-A8AA-8ADFCDE6ECE5",
+        "BEBA922B-2F46-52C8-A2CD-33BFD3FF83FD",
         "A946E2F8-D401-50AB-9BFF-69865A336F3B",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5"
       ],
@@ -142809,14 +142813,14 @@
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "2cdee541-79d1-519d-9a02-76aa8b0ac43d",
         "2590ce9c-9cdf-509b-bc88-6608c629fb56",
         "274364F2-9835-5B40-957F-243E11F271E6",
         "ab59f8da-db2a-5a73-bfad-80fef03f70ce",
         "d20a68e1-3625-5592-8671-f00dea506ed5",
         "27da43c9-6287-545f-adb5-d754a570ae31",
-        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "F642295C-F85C-575D-ABAD-34293E7A3E0C"
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -142913,9 +142917,9 @@
         "2C45E28C-9941-5126-9998-685A0E9BC5C3",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "87253FAE-997E-5189-8BF2-221C9AA77BC5",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D"
       ],
@@ -142970,8 +142974,8 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
-        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "4391E119-E608-579A-89C4-293BB6077D6E",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D"
       ],
       "primaryCategory": "history",
@@ -166585,7 +166589,8 @@
       "city": "Mississauga",
       "country": "Canada",
       "relatedTourIds": [
-        "0D409207-D8DD-5258-B986-EE78B6E95990"
+        "0D409207-D8DD-5258-B986-EE78B6E95990",
+        "173088E4-4D66-5BAA-A312-B30A95AFE3A3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -166750,7 +166755,8 @@
       "city": "Mississauga",
       "country": "Canada",
       "relatedTourIds": [
-        "2A7D2212-2349-5F01-AB77-29232B84392D"
+        "2A7D2212-2349-5F01-AB77-29232B84392D",
+        "173088E4-4D66-5BAA-A312-B30A95AFE3A3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -171896,7 +171902,7 @@
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
-        "15616CA4-9188-599D-82EC-9CB0EC713F91"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -172044,7 +172050,6 @@
       "country": "United States",
       "relatedTourIds": [
         "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
-        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "640174C1-0885-5240-A60C-BE8600CDEBA1"
       ],
       "primaryCategory": "history",
@@ -172100,7 +172105,7 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "35225803-38D9-5C05-9272-6AF04A20C0A4"
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -176932,6 +176937,7 @@
         "EE2A8B47-FA8B-502A-AF18-6A5513BB7213",
         "3dd57e77-d4fe-509e-a552-daf4d97c146c",
         "996b8d38-5432-5429-835c-7482bfc4dbb9",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "1e347268-7628-573b-a386-67dbb79c991a",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
       ],
@@ -176986,9 +176992,9 @@
         "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
         "35225803-38D9-5C05-9272-6AF04A20C0A4",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
-        "5f8ecfcf-6841-5878-a76f-fa63c55b6d25",
-        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D"
+        "5f8ecfcf-6841-5878-a76f-fa63c55b6d25"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -181751,12 +181757,12 @@
       "relatedTourIds": [
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "2644D271-E442-5007-85CD-8D4E57333C50",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "4391E119-E608-579A-89C4-293BB6077D6E",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "274364F2-9835-5B40-957F-243E11F271E6",
-        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
-        "35225803-38D9-5C05-9272-6AF04A20C0A4"
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -190170,8 +190176,8 @@
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
-        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "35225803-38D9-5C05-9272-6AF04A20C0A4"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -192228,12 +192234,12 @@
       "relatedTourIds": [
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "DA7E193B-C288-534C-979F-2C35778CCBD7",
-        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "4391E119-E608-579A-89C4-293BB6077D6E",
-        "35225803-38D9-5C05-9272-6AF04A20C0A4",
-        "274364F2-9835-5B40-957F-243E11F271E6"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "4391E119-E608-579A-89C4-293BB6077D6E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -205928,11 +205934,11 @@
         "5F1FBE72-0EE7-5250-84D2-8873C2B69C87",
         "05222115-7F54-5AFE-921F-4B0B920DA6BA",
         "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
+        "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "7368f7d7-389e-5dc2-b683-828dacf35e12",
         "d266002e-5084-59c7-ad42-66dfdbabeae4",
         "398425bf-adad-567f-b0cc-2b68980da1a3",
-        "3619ca6e-f14c-50a3-a659-14ac5216160d",
-        "962093e8-2777-5053-b9f2-fa72590c5b96"
+        "3619ca6e-f14c-50a3-a659-14ac5216160d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -206128,12 +206134,12 @@
       "relatedTourIds": [
         "05222115-7F54-5AFE-921F-4B0B920DA6BA",
         "6E198A5E-5762-5399-A8CF-11DDA63CE526",
+        "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "68E4C588-A3A3-5993-9E1F-709399828E69",
         "7368f7d7-389e-5dc2-b683-828dacf35e12",
         "d266002e-5084-59c7-ad42-66dfdbabeae4",
         "398425bf-adad-567f-b0cc-2b68980da1a3",
-        "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
-        "F95346EB-63A0-5C2E-91CE-E4B5BF810A6C"
+        "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -206422,12 +206428,12 @@
       "relatedTourIds": [
         "5F1FBE72-0EE7-5250-84D2-8873C2B69C87",
         "6E198A5E-5762-5399-A8CF-11DDA63CE526",
+        "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
         "68E4C588-A3A3-5993-9E1F-709399828E69",
         "62cca756-02e7-5848-ace4-502800c37005",
         "d266002e-5084-59c7-ad42-66dfdbabeae4",
-        "3619ca6e-f14c-50a3-a659-14ac5216160d",
-        "7368f7d7-389e-5dc2-b683-828dacf35e12"
+        "3619ca6e-f14c-50a3-a659-14ac5216160d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -208667,7 +208673,8 @@
       "relatedTourIds": [
         "AA41DCD3-D243-5514-9A3F-639DF499F6DA",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
-        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF"
+        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -208716,7 +208723,8 @@
       "relatedTourIds": [
         "B016A73B-2437-504E-B9CE-0992B7A68360",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
-        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF"
+        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -211850,7 +211858,7 @@
         "98839203-72B3-50BE-9915-740D87B7B260",
         "F947F40D-CBDC-57D7-8C90-5F5A124CFA68",
         "C91F1A29-04C1-5D5D-B6E4-4916B7C5C30B",
-        "3639287C-B7A8-5879-B456-9D66DDF34211"
+        "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -218957,6 +218965,7 @@
       "country": "Hungary",
       "relatedTourIds": [
         "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD"
       ],
       "primaryCategory": "architecture",
@@ -219007,6 +219016,7 @@
       "relatedTourIds": [
         "E93072A5-8A63-5D76-8935-CF362AEA963B",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "0A326FE5-2356-5E03-B707-835067B5DA8D"
       ],
       "primaryCategory": "musicAndPerformance",
@@ -234814,14 +234824,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "6DB9D6CD-E536-5713-B176-63E61A7CCA49",
         "F8D1440B-271A-5692-9A43-845FA8199353",
         "7BE5CEA6-9A30-5DE9-8DB4-EBF71037B2B2",
         "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
         "C1AF6B81-ADC0-57B8-AD1B-5497EBE0A663",
         "4EBD4A3A-A347-5186-8D72-EFC95E4C69EB",
         "176E3CA4-3A8F-510D-AEC7-3A6AB1497AD1",
-        "C2833E4A-405E-5788-8952-ACE0B1F78611",
-        "D2112F93-FDF7-5B32-960F-41EABF20463C"
+        "C2833E4A-405E-5788-8952-ACE0B1F78611"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -236359,6 +236369,7 @@
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "B016A73B-2437-504E-B9CE-0992B7A68360",
         "AA41DCD3-D243-5514-9A3F-639DF499F6DA",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "E93072A5-8A63-5D76-8935-CF362AEA963B"
       ],
       "primaryCategory": "architecture",
@@ -242322,6 +242333,7 @@
         "60A203C5-1369-5E72-9B93-F2AD1373E92C",
         "783129EA-C200-54B7-891C-1A7108E9DAAF",
         "2b792f2c-e508-545b-ae53-8cc6521258c5",
+        "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "BB77667E-DF93-572E-83C8-FB24A2E70D17"
       ],
       "primaryCategory": "foodAndDrink",
@@ -250762,8 +250774,8 @@
         "95AF005B-A086-59C3-8F77-62AD43740C23",
         "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
-        "13BE40A3-B80B-5CE2-BFE2-CEBFEA84A2C2",
-        "2DEA2C83-A7BB-500C-A30B-B8A107D6FCED"
+        "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753",
+        "13BE40A3-B80B-5CE2-BFE2-CEBFEA84A2C2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -251148,10 +251160,10 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "DA7E193B-C288-534C-979F-2C35778CCBD7",
         "1328F132-7D89-556A-A116-5DE3E6C89324",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "274364F2-9835-5B40-957F-243E11F271E6",
         "34A7E90A-8A6C-52F2-B090-CEF5F85948DF",
-        "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB",
-        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D"
+        "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -251353,14 +251365,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753",
         "F70F0376-C237-5610-BA05-94F6478775E4",
         "C5E7B706-1FBF-59A5-BE17-DBC6A933838F",
         "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
         "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
         "556D7D3D-D043-5C0A-A362-1B879FF8758B",
-        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
-        "3396CA2F-7227-5782-84AF-D775B186B1B3"
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -251560,14 +251572,14 @@
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
         "A946E2F8-D401-50AB-9BFF-69865A336F3B",
+        "BEBA922B-2F46-52C8-A2CD-33BFD3FF83FD",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
-        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
-        "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB",
-        "EE2A8B47-FA8B-502A-AF18-6A5513BB7213",
-        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5"
+        "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -252219,11 +252231,11 @@
         "333F2585-E958-5906-8BCC-FA8043FF775E",
         "e7a2d9c4-1b86-4f30-8a75-2c9e6b3d8f41",
         "F8D1440B-271A-5692-9A43-845FA8199353",
+        "6DB9D6CD-E536-5713-B176-63E61A7CCA49",
         "0CA51A97-EDCC-53DB-89D5-6891E48080FF",
         "FFA76F71-2FF7-5FDB-9EEA-D8E5037E3C72",
         "ACAA56A8-1D7C-55D5-A65B-4D28DBB7A5E6",
-        "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
-        "39A2BCF0-12A1-5225-9D1A-24F08824B0EB"
+        "143DD9ED-3F09-575B-8357-FD0AF0D7612A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -252321,13 +252333,13 @@
       "country": "United States",
       "relatedTourIds": [
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "89C2B84E-2353-56B4-AA9F-835A22C8F4B0",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
-        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
-        "A946E2F8-D401-50AB-9BFF-69865A336F3B",
-        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7"
+        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -252421,6 +252433,7 @@
       "city": "Madrid",
       "country": "Spain",
       "relatedTourIds": [
+        "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "5F1FBE72-0EE7-5250-84D2-8873C2B69C87",
         "05222115-7F54-5AFE-921F-4B0B920DA6BA",
         "62cca756-02e7-5848-ace4-502800c37005",
@@ -252437,11 +252450,11 @@
     {
       "id": "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
       "createdAt": "2026-09-16",
-      "title": "Chicago Temple Building",
+      "title": "Lake Point Tower",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "The Chicago Skyscraper That Beat the Law 😳",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-temple-building-law-pasttworld_hero.webp",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lake-point-tower-chicago-beat-law-pasttworld_hero.webp",
       "additionalImageURLs": null,
       "videoURLs": null,
       "videoRole": null,
@@ -252452,41 +252465,40 @@
         {
           "id": "FC089031-4E90-5B55-8D62-222FAF899E43",
           "order": 0,
-          "title": "Chicago Temple Building",
+          "title": "Lake Point Tower",
           "caption": "The Chicago Skyscraper That Beat the Law 😳",
-          "latitude": 41.8822,
-          "longitude": -87.6283,
+          "latitude": 41.891527,
+          "longitude": -87.613249,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-temple-building-law-pasttworld_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lake-point-tower-chicago-beat-law-pasttworld_hero.webp",
           "transcriptText": null
         }
       ],
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8822,
-      "centroidLongitude": -87.6283,
+      "centroidLatitude": 41.891527,
+      "centroidLongitude": -87.613249,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
-        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
-        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "34A7E90A-8A6C-52F2-B090-CEF5F85948DF",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
-        "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
-        "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "2644D271-E442-5007-85CD-8D4E57333C50",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D"
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
+        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3"
       ],
       "primaryCategory": "architecture",
       "tags": [
-        "Religious Building",
         "Tower",
         "Architecture",
-        "History"
+        "Modernist"
       ],
       "priceUSD": 0
     },
@@ -252775,6 +252787,7 @@
       "country": "Canada",
       "relatedTourIds": [
         "18789A3C-BB14-5C07-8F88-FC1CF91699FD",
+        "173088E4-4D66-5BAA-A312-B30A95AFE3A3",
         "2A7D2212-2349-5F01-AB77-29232B84392D"
       ],
       "primaryCategory": "architecture",
@@ -253879,13 +253892,13 @@
       "country": "USA",
       "relatedTourIds": [
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
         "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
+        "BEBA922B-2F46-52C8-A2CD-33BFD3FF83FD",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "35225803-38D9-5C05-9272-6AF04A20C0A4",
-        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5",
-        "1328F132-7D89-556A-A116-5DE3E6C89324",
-        "2644D271-E442-5007-85CD-8D4E57333C50"
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254127,6 +254140,7 @@
       "city": "Budapest",
       "country": "Hungary",
       "relatedTourIds": [
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "E93072A5-8A63-5D76-8935-CF362AEA963B",
@@ -255563,13 +255577,13 @@
       "country": "USA",
       "relatedTourIds": [
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "A946E2F8-D401-50AB-9BFF-69865A336F3B",
         "35225803-38D9-5C05-9272-6AF04A20C0A4",
-        "4391E119-E608-579A-89C4-293BB6077D6E",
-        "274364F2-9835-5B40-957F-243E11F271E6"
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -255820,8 +255834,8 @@
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
         "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
-        "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
-        "9FA94AD4-B710-5815-81DF-41E7FE4B4607"
+        "6DB9D6CD-E536-5713-B176-63E61A7CCA49",
+        "EF41CFCC-79D9-5549-AB85-2705A9D380A7"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -256763,14 +256777,14 @@
       "city": "London",
       "country": "UK",
       "relatedTourIds": [
+        "6DB9D6CD-E536-5713-B176-63E61A7CCA49",
         "F8D1440B-271A-5692-9A43-845FA8199353",
         "f2e248ef-1b00-49a1-b27e-e31172641815",
         "419547F3-2828-5B49-8800-C3F3683A2CE0",
         "FFA76F71-2FF7-5FDB-9EEA-D8E5037E3C72",
         "634E7A45-3154-5017-90B8-8D6B871361E2",
         "B522B7A5-C0A9-505E-808E-4E649A4F9D1E",
-        "0CA51A97-EDCC-53DB-89D5-6891E48080FF",
-        "ACAA56A8-1D7C-55D5-A65B-4D28DBB7A5E6"
+        "0CA51A97-EDCC-53DB-89D5-6891E48080FF"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -258260,6 +258274,903 @@
       "tags": [
         "Hidden Gem",
         "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
+      "createdAt": "2026-09-17",
+      "title": "Willis Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why Chicago Built this Tower So Tall 🤔",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/willis-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdWY9VhhAqB/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "C1E67212-4CA8-58AB-B588-F98BE99EC251",
+          "order": 0,
+          "title": "Willis Tower",
+          "caption": "Why Chicago Built this Tower So Tall 🤔",
+          "latitude": 41.8789,
+          "longitude": -87.6359,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/willis-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8789,
+      "centroidLongitude": -87.6359,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "A946E2F8-D401-50AB-9BFF-69865A336F3B",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "BEBA922B-2F46-52C8-A2CD-33BFD3FF83FD",
+        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9D77934D-EDD7-50A8-948D-E494262BC3D7",
+      "createdAt": "2026-09-17",
+      "title": "AZ Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why The AZ Tower Looks Like A Sandwich 🥪🤔 #czechia",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/az-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdG1gzBhiug/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "8028874A-6F8A-5CA8-8B56-67C9AC6E2DD3",
+          "order": 0,
+          "title": "AZ Tower",
+          "caption": "Why The AZ Tower Looks Like A Sandwich 🥪🤔 #czechia",
+          "latitude": 49.1815,
+          "longitude": 16.6116,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/az-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 49.1815,
+      "centroidLongitude": 16.6116,
+      "city": "Brno",
+      "country": "Czechia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DB5BA7C3-3062-5D87-8DC8-4643200FFC25",
+      "createdAt": "2026-09-17",
+      "title": "Nördlingen",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This Entire Town Is Inside a Circle😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/n-rdlingen-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc8gEWgBxnq/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "7F81C144-49DE-591A-A143-29EDD5F7FAA3",
+          "order": 0,
+          "title": "Nördlingen",
+          "caption": "This Entire Town Is Inside a Circle😱",
+          "latitude": 48.8517,
+          "longitude": 10.4886,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/n-rdlingen-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8517,
+      "centroidLongitude": 10.4886,
+      "city": "Nördlingen",
+      "country": "Germany",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "District",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EBDEF792-4816-5EBA-97F4-BDCB3BB61753",
+      "createdAt": "2026-09-17",
+      "title": "Katara Towers",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "$600 Million Skyscraper Look Like a Moon🤯",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/katara-towers-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc3K-vIB3kb/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "E3AC6731-EA22-54A1-A808-4419068966BE",
+          "order": 0,
+          "title": "Katara Towers",
+          "caption": "$600 Million Skyscraper Look Like a Moon🤯",
+          "latitude": 25.389333,
+          "longitude": 51.531472,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/katara-towers-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.389333,
+      "centroidLongitude": 51.531472,
+      "city": "Lusail",
+      "country": "Qatar",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753",
+      "createdAt": "2026-09-17",
+      "title": "New York by Gehry",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why this skyscraper look like it's melting?🤯",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-by-gehry-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcvXW3DBKM7/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "410A5434-CE93-508B-96F8-4A6F2B68C635",
+          "order": 0,
+          "title": "New York by Gehry",
+          "caption": "Why this skyscraper look like it's melting?🤯",
+          "latitude": 40.710849,
+          "longitude": -74.005619,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-by-gehry-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.710849,
+      "centroidLongitude": -74.005619,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "556D7D3D-D043-5C0A-A362-1B879FF8758B",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+        "1B62FA84-2346-5771-B155-9DF65757BE26",
+        "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
+        "2DEA2C83-A7BB-500C-A30B-B8A107D6FCED",
+        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Frank Gehry",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DFD9E53F-2438-5685-8AF5-BCB26FCFACE8",
+      "createdAt": "2026-09-17",
+      "title": "Dalmatia Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Croatia's Tallest Building Was Called Illegal?😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dalmatia-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcqfY57Be3a/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "160BB09E-0594-5580-8341-518482387CAB",
+          "order": 0,
+          "title": "Dalmatia Tower",
+          "caption": "Croatia's Tallest Building Was Called Illegal?😱",
+          "latitude": 43.5203,
+          "longitude": 16.4511,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dalmatia-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.5203,
+      "centroidLongitude": 16.4511,
+      "city": "Split",
+      "country": "Croatia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5C5E2709-53C3-56D3-9C89-B75AD4061616",
+      "createdAt": "2026-09-17",
+      "title": "Commercial Bank of Ethiopia HQ",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "The Dark Secret of East Africa's Tallest Building😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/commercial-bank-of-ethiopia-hq-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcirjFxBRKh/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "F8C3D094-6165-5016-A40A-F51E50E7F0F0",
+          "order": 0,
+          "title": "Commercial Bank of Ethiopia HQ",
+          "caption": "The Dark Secret of East Africa's Tallest Building😱",
+          "latitude": 9.0166,
+          "longitude": 38.7543,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/commercial-bank-of-ethiopia-hq-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 9.0166,
+      "centroidLongitude": 38.7543,
+      "city": "Addis Ababa",
+      "country": "Ethiopia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "537599D4-D46D-5830-BC96-EA3338E62CE9",
+      "createdAt": "2026-09-17",
+      "title": "MOL Campus",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Hungary's Weirdest Skyscraper😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mol-campus-weirdest-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcQwaJmB03g/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "0C56D188-4A08-5F23-ACFA-6B3F5B5989FE",
+          "order": 0,
+          "title": "MOL Campus",
+          "caption": "Hungary's Weirdest Skyscraper😱",
+          "latitude": 47.4677,
+          "longitude": 19.0601,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mol-campus-weirdest-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 47.4677,
+      "centroidLongitude": 19.0601,
+      "city": "Budapest",
+      "country": "Hungary",
+      "relatedTourIds": [
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C",
+        "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
+        "E93072A5-8A63-5D76-8935-CF362AEA963B",
+        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
+        "B016A73B-2437-504E-B9CE-0992B7A68360",
+        "AA41DCD3-D243-5514-9A3F-639DF499F6DA"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "691281BE-1BCB-5B8A-A9D6-B1E24A657529",
+      "createdAt": "2026-09-17",
+      "title": "Key Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "America's Most Underrated Skyscraper 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/key-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Db0Jub2hj02/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "791FAEF0-C36D-50BD-84D0-324EA560BAFB",
+          "order": 0,
+          "title": "Key Tower",
+          "caption": "America's Most Underrated Skyscraper 😳",
+          "latitude": 41.501021,
+          "longitude": -81.693827,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/key-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.501021,
+      "centroidLongitude": -81.693827,
+      "city": "Cleveland",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BEBA922B-2F46-52C8-A2CD-33BFD3FF83FD",
+      "createdAt": "2026-09-17",
+      "title": "Tre Dita",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why This Building Looks Like 3 Towers Stacked 😱",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tre-dita-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dbs0PzRhGcy/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "9AD8A21A-659E-55C9-8E91-B8BA1A95DF31",
+          "order": 0,
+          "title": "Tre Dita",
+          "caption": "Why This Building Looks Like 3 Towers Stacked 😱",
+          "latitude": 41.887264,
+          "longitude": -87.617133,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tre-dita-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.887264,
+      "centroidLongitude": -87.617133,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
+        "A946E2F8-D401-50AB-9BFF-69865A336F3B",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5",
+        "274364F2-9835-5B40-957F-243E11F271E6",
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
+        "1328F132-7D89-556A-A116-5DE3E6C89324"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
+      "createdAt": "2026-09-17",
+      "title": "Torre Picasso",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Spain's Insane Twin Towers Lookalike 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torre-picasso-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbkwjJPByR3/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "3AC5FF78-3AF4-58E0-AED3-708B3B7AF7AE",
+          "order": 0,
+          "title": "Torre Picasso",
+          "caption": "Spain's Insane Twin Towers Lookalike 😳",
+          "latitude": 40.450343,
+          "longitude": -3.693025,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torre-picasso-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.450343,
+      "centroidLongitude": -3.693025,
+      "city": "Madrid",
+      "country": "Spain",
+      "relatedTourIds": [
+        "05222115-7F54-5AFE-921F-4B0B920DA6BA",
+        "5F1FBE72-0EE7-5250-84D2-8873C2B69C87",
+        "F95346EB-63A0-5C2E-91CE-E4B5BF810A6C",
+        "3619ca6e-f14c-50a3-a659-14ac5216160d",
+        "7368f7d7-389e-5dc2-b683-828dacf35e12",
+        "6E198A5E-5762-5399-A8CF-11DDA63CE526",
+        "b4f87483-ebae-567e-896f-b7b4042ca34a",
+        "68E4C588-A3A3-5993-9E1F-709399828E69"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2D3DE5C0-FB0D-54B9-A083-2C875C9074EF",
+      "createdAt": "2026-09-17",
+      "title": "Karlatornet",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why this skyscraper looks like it's twisting 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/karlatornet-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbX1oKtBlUi/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "1C663D0F-8B5C-57D3-9DAA-CA177E3371C7",
+          "order": 0,
+          "title": "Karlatornet",
+          "caption": "Why this skyscraper looks like it's twisting 😳",
+          "latitude": 57.70985,
+          "longitude": 11.9393,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/karlatornet-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 57.70985,
+      "centroidLongitude": 11.9393,
+      "city": "Gothenburg",
+      "country": "Sweden",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5524D308-3961-5263-9092-FACB38819B14",
+      "createdAt": "2026-09-17",
+      "title": "The Link",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "France Rewrote Its Own Rules for This Skyscraper 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-link-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Da2fdMIBTPk/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "24CF55EE-C832-52C2-B53D-7195AA76F8E7",
+          "order": 0,
+          "title": "The Link",
+          "caption": "France Rewrote Its Own Rules for This Skyscraper 😳",
+          "latitude": 48.887929,
+          "longitude": 2.247437,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-link-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.887929,
+      "centroidLongitude": 2.247437,
+      "city": "Puteaux",
+      "country": "France",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "173088E4-4D66-5BAA-A312-B30A95AFE3A3",
+      "createdAt": "2026-09-17",
+      "title": "M City",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Why Do These Twin Towers Look Like This 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/m-city-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DafgB-OBBiW/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "714C8EB1-0536-5AFF-84CC-14BB1E0FED50",
+          "order": 0,
+          "title": "M City",
+          "caption": "Why Do These Twin Towers Look Like This 😳",
+          "latitude": 43.591,
+          "longitude": -79.6445,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/m-city-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.591,
+      "centroidLongitude": -79.6445,
+      "city": "Mississauga",
+      "country": "Canada",
+      "relatedTourIds": [
+        "0D409207-D8DD-5258-B986-EE78B6E95990",
+        "18789A3C-BB14-5C07-8F88-FC1CF91699FD",
+        "448FAE72-611F-59A6-AD71-831F6AAEA291"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+      "createdAt": "2026-09-17",
+      "title": "Aqua Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "Chicago's Melting Skyscraper 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aqua-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DacsBrCB37P/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "E633E2E4-DB18-5E13-A847-02101D6BAD65",
+          "order": 0,
+          "title": "Aqua Tower",
+          "caption": "Chicago's Melting Skyscraper 😳",
+          "latitude": 41.886336,
+          "longitude": -87.619906,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aqua-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.886336,
+      "centroidLongitude": -87.619906,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
+        "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
+        "4391E119-E608-579A-89C4-293BB6077D6E",
+        "2644D271-E442-5007-85CD-8D4E57333C50"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Jeanne Gang",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6DB9D6CD-E536-5713-B176-63E61A7CCA49",
+      "createdAt": "2026-09-17",
+      "title": "The Shard",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "London Hated This Skyscraper 😳",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard-london-hated-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaXYfcUBIVS/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "06228AE2-92A0-5560-97E7-9DFA6FF75A1D",
+          "order": 0,
+          "title": "The Shard",
+          "caption": "London Hated This Skyscraper 😳",
+          "latitude": 51.504366,
+          "longitude": -0.086474,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard-london-hated-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.504366,
+      "centroidLongitude": -0.086474,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "333F2585-E958-5906-8BCC-FA8043FF775E",
+        "f2e248ef-1b00-49a1-b27e-e31172641815",
+        "419547F3-2828-5B49-8800-C3F3683A2CE0",
+        "F8D1440B-271A-5692-9A43-845FA8199353",
+        "2B3330D2-4F43-5120-A306-59FCDA15B837",
+        "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
+        "603B4E85-458F-5577-B3D2-9C04B415DDB1",
+        "EC286FB1-1400-5E2C-8962-64A3FCFD15A9"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Renzo Piano",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A7BD08A8-73E1-57F0-823C-25D4A9E149C0",
+      "createdAt": "2026-09-17",
+      "title": "Iconic Tower",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "This $3 Billion Tower Has No One Inside 😲",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iconic-tower-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaU7Tbshjop/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "BDBE9F5E-CDF5-596C-9E34-EBD1126F512D",
+          "order": 0,
+          "title": "Iconic Tower",
+          "caption": "This $3 Billion Tower Has No One Inside 😲",
+          "latitude": 30.01278,
+          "longitude": 31.69389,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iconic-tower-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 30.01278,
+      "centroidLongitude": 31.69389,
+      "city": "Cairo",
+      "country": "Egypt",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "196D5B94-5B08-5845-A7AB-ADE47CDB059A",
+      "createdAt": "2026-09-17",
+      "title": "BD Bacatá",
+      "shortDescription": "A post by @pasttworld on Instagram.",
+      "longDescription": "4,000 People Lost Everything on This Skyscraper 😬",
+      "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bd-bacat-pasttworld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaK247lBQuo/",
+      "sourceAuthor": "@pasttworld",
+      "stops": [
+        {
+          "id": "C990FE13-3CD0-5097-BBCA-021EB1AAC213",
+          "order": 0,
+          "title": "BD Bacatá",
+          "caption": "4,000 People Lost Everything on This Skyscraper 😬",
+          "latitude": 4.604915,
+          "longitude": -74.070361,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bd-bacat-pasttworld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 4.604915,
+      "centroidLongitude": -74.070361,
+      "city": "Bogotá",
+      "country": "Colombia",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "History"
       ],
       "priceUSD": 0
     }
