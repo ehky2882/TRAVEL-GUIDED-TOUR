@@ -139,11 +139,13 @@ needs a new index and the two must move together.
 - ✅ **The `rebuild-related` commit-and-push path is VERIFIED** — it was the open
   unknown here and on the board, and by 2026-09-16 afternoon it had run **five
   times on `main`** (latest `4d6c0bf9`). #929's automation works; nothing is owed.
-- 🔴 **Still unverified: the sidecar publish beside it.** It lives in this
-  branch's `publish-catalog.yml`, so it cannot run until #949 merges. `main` sees
-  content merges several times a day, so **check `search/embeddings.bin` and
-  `search/embeddings.digest` on gh-pages after the first content merge following
-  the merge of #949** — both 404 as of this writing, which is correct.
+- ✅ **The sidecar publish is VERIFIED too** (2026-09-17). It has run for real on
+  content merges since #949 landed: the index on gh-pages is **3,983,396 bytes**,
+  up from the 3,878,356 first published, and its digest
+  (`f8b7c3bb…`) **equals `scripts/related-text.digest` on `main`**. The digest has
+  moved several times as content merged, and the published copy tracked it each
+  time — which is the whole contract. Both halves of #929 + #949 are now proven
+  by real events rather than by reasoning.
 - **Blending** the two lists — deferred to device evidence by the owner.
 - **int8 for the model** — halves the download, but only if it re-passes the gate.
   Measure, do not assume.
@@ -212,3 +214,40 @@ On **167** the owner confirmed the previously-silenced queries work.
 - **Two identical "Glasshouse Theatre" link pins, Brisbane, same coordinate** —
   a true duplicate, not a place candidate. Found while investigating; left for
   the owner. A deletion needs an SQL paste too, since the seed is upsert-only.
+
+---
+
+## A regression the automation caused, and the guard that contained it (#967)
+
+`rebuild-related`'s **Generator self-tests** step ran unconditionally while its
+`pip install` was gated on *"is a rebuild owed?"*. Both halves came from #929,
+on the reasoning written into the comment that the tests are *"model-free and
+take seconds"*. They are model-free. They are **not numpy-free**.
+
+So every content merge that changed no embedded text — the common case — failed
+with `FAIL numpy available (skipping scoring checks)`. Three merges hit it
+(`771d4ac4`, `2dc80d48`, `c4d1c79a`) before anyone looked.
+
+🔴 **The self-test was right and the workflow was wrong**, which is the part to
+remember. `--selftest` refuses to pass when numpy is missing precisely because a
+check that cannot run must not return a pass (CLAUDE.md § Reading a check's
+result). The failure was the safety net working; the bug was asking it to run at
+all. The fix gates it identically to the three steps around it.
+
+**No content was ever affected, and not by luck.** `publish` and
+`seed-supabase` carry `if: ${{ !cancelled() }}`, added so that a rebuild failure
+could never hold up the mirror or the database. They kept shipping while this
+job went red beside them — a guard earning its keep for a reason other than the
+one it was written for. The missed rebuilds are self-correcting as designed: the
+digest advances only after a rebuild that actually succeeded.
+
+⚠️ **How it was found matters.** Nothing flagged it. It surfaced only because a
+check was made on whether the #966 rename had triggered its rebuild; the red job
+was sitting on *other sessions'* merges, not on anything this session was
+watching. A job that fails on somebody else's merge has no owner.
+
+🔴 **Merging the fix is NOT the proof.** The failure only appears on a content
+merge where **no embedded text changed** — exactly the case now skipped. A merge
+that *does* change text (like #966's rename) installs numpy and would have
+passed either way. **Watch the next pin batch, place edit or coordinate fix on
+`main` and confirm `rebuild-related` comes back green or skipped, not red.**
