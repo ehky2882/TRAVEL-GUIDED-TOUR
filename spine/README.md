@@ -16,11 +16,16 @@ whose title and coordinate have not changed is skipped.
 Move an entry or rename it and the answer is re-asked automatically — a cached
 candidate list is only valid for the point it was measured from.
 
-## Not committed yet
+## The cache is committed, including while it is still partial
 
-`lookups.json.gz` is `.gitignore`d until the first sweep completes. A partial
-cache is worse than none in the one way that matters: `spine-match.py` reports
-`NOT-ASKED` and exits 2 (COULD NOT VERIFY) for every entry missing from it, so
-committing a half-finished one would put a permanently red check in CI while
-looking like coverage. Commit it, drop these lines, and wire the CI job in the
-same change.
+A full sweep is ~4.5 hours and this session's container is not guaranteed to
+outlive it, so `lookups.json.gz` is committed as it fills rather than only at the
+end. It projects to **~0.4 MB complete** — measured at 225 entries, not guessed —
+so a checkpoint costs almost nothing and protects hours of other people's
+bandwidth as much as ours.
+
+🔴 **A partial cache must not be wired into CI.** `spine-match.py` reports
+`NOT-ASKED` for every entry missing from it and exits **2 — COULD NOT VERIFY**,
+which is the correct answer and a permanently red check. Wire the CI job in the
+same change that commits the *finished* sweep, never before: a red check nobody
+can fix reads as coverage and gets ignored, which is how a check stops being one.
