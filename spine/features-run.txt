@@ -1,0 +1,16 @@
+RUN spine-features.py · rev 238d9de1 · 2026-09-17T15:47:59Z · args: --out spine/features-run.txt
+2828 distinct matched items to classify
+  batch 1/10 · 300 items so far
+  batch 2/10 · 600 items so far
+  batch 3/10 · 900 items so far
+  batch 4/10 · 1200 items so far
+  batch 5/10 · 1500 items so far
+  batch 6/10 · 1800 items so far
+  batch 7/10 · 2100 items so far
+  batch 8/10 · 2400 items so far
+  batch 9/10 · 2700 items so far
+  batch 10/10 · 2828 items so far
+
+classified 2828 · failed 0
+wrote /home/user/TRAVEL-GUIDED-TOUR/spine/features.json.gz
+OK — every matched item classified

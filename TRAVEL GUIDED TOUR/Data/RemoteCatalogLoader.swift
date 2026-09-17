@@ -864,7 +864,7 @@ final class RemoteCatalogLoader {
     /// Throw away the cached catalogue and every sidecar that describes it, so
     /// the next refresh is a full download with nothing to short-circuit on.
     ///
-    /// Exposed for Settings → Clear Cache. Until 2026-09-16 that button cleared
+    /// Exposed for Settings → Check for new content. Until 2026-09-16 that button cleared
     /// `URLCache` and the image cache only, so the one cache a user might
     /// actually need to clear was the one it left alone — and the owner, whose
     /// map was wrong, had no way to fix it but to delete the app.

@@ -1750,9 +1750,34 @@ truncated file, so it shipped with nothing observable — **the same property th
 let the original bug survive an hour of restarts.**
 
 The answer was one row in Settings → About: **"Updated"**, when the catalogue last
-arrived. It makes Clear Cache provable (tap it, read "just now") and would have
-turned that hour into a glance. **When shipping a fix for something invisible, ship
-the thing that makes it visible in the same change.**
+arrived. It makes the refresh button provable (tap it, read "just now") and would
+have turned that hour into a glance. **When shipping a fix for something invisible,
+ship the thing that makes it visible in the same change.** (That button was called
+**Clear Cache** at the time; it is **"Check for new content"** since 2026-09-17 —
+see the entry below.)
+
+### Name a control for its outcome, not its mechanism (2026-09-17)
+
+Settings carried a button labelled **"Clear Cache"** under a **trash** icon. It was
+the only control that made new content appear on demand, and it was wrong twice over:
+
+- **It named the mechanism.** Nobody who wanted the newest tours would go looking for
+  a cache. The owner used it constantly and said plainly that *"most people wont know
+  about it"* — which is not a discoverability problem to be solved with a tooltip, it
+  is the name being about the implementation rather than the result.
+- **It read as destructive, and was not.** Downloaded tours live in Documents under
+  `TourDownloader`; the button touches `URLCache`, the image cache and the stored
+  catalogue, and **cannot reach a download**. Someone abroad with tours saved for the
+  trip had every reason to avoid the one control that would have fixed them.
+
+Now **"Check for new content"** over `arrow.clockwise`, with a footer that says
+downloads are not removed. 🔴 **The real fix is elsewhere**: the app already refreshes
+on cold launch and on foreground after 900 s, so this button should be a repair hatch
+rather than the normal path. Once **1.1.3** ships delta fetching the download falls
+from ~2.4 MB to ~19 KB, and `foregroundRefreshInterval` can drop far below 900 s at
+almost no egress cost — **that** is what stops an ordinary listener ever needing this
+row. ⚠️ Pull-to-refresh is the obvious idiom and does **not** fit Home: Home is a map,
+and a downward drag pans it.
 
 ## A proxy is not the rule, and it fails silently forever (2026-09-17)
 
@@ -1842,6 +1867,87 @@ it cannot crop to 1200×900 without upscaling. The **untransformed original is 7
 Strip the transformation segment from any `/cdn-cgi/image/`, `/_next/image`, `?w=`,
 `/thumb/` or similar URL and re-fetch before concluding a source is too small. The
 dimensions you measure are the ones the resizer was asked for, not the ones the file has.
+
+## A background process does not outlive an idle session (2026-09-17)
+
+A 4.5-hour Wikidata sweep was started with `nohup … &`, checkpointed to a
+committed file, and left to run while the session went idle. A scheduled
+check-in found it **dead**: it had stopped at 316 of 4,566 entries,
+**about five minutes after the turn ended.** The container suspends when the
+session goes idle, and nothing in the process outlives that.
+
+🔴 **So "start it in the background and check back later" is not a strategy in
+this environment**, however carefully the check-in is re-armed. Work that must
+finish has to fit inside an active turn.
+
+Two things follow, and the second is the one worth keeping:
+
+- **Bound each foreground run** (`--limit`) so it completes and saves rather
+  than being cut off mid-flight. A resumable cache makes the chunking free.
+- **Make the work fast enough to fit.** The sweep was 3 s per entry because it
+  sent one query per name. Batching eight searches into one query took it to
+  **0.31 s per entry — 22 minutes instead of 4.5 hours** — which is the
+  difference between a job that can be finished and one that cannot.
+
+⚠️ The scheduled check-in was still worth having: it is what *discovered* the
+death. A job you cannot supervise is not the same as a job you should not check.
+
+## The faster endpoint was the wrong one, and only measuring showed it (2026-09-17)
+
+Wikidata offers two ways to search: the `wbsearchentities` **action API**, and
+the same search wrapped in SPARQL via `SERVICE wikibase:mwapi` on WDQS. The
+action API is obviously the faster of the two — **~0.3 s against ~2 s** per
+call — and obviously the one to switch a slow sweep to.
+
+Measured in bulk it is unusable: **5 of 15 requests succeeded at a 0.5 s sleep,
+9 of 15 at 0.25 s**, the rest HTTP 429. WDQS, meanwhile, had just run **316
+consecutive entries with zero failures** at the same politeness. The shared
+egress proxy means the rate limit is not ours alone to spend.
+
+**The win was batching the permissive endpoint, not switching to the fast one**
+— eight searches UNION'd into one WDQS query, each branch tagged so results map
+back, which is 10× on the measure that mattered.
+
+🔴 **Per-call latency is not throughput.** Benchmark the thing you will actually
+do — a burst, sustained, from this network — not a single call from `curl`. The
+single call looked fine; three of them in a row looked fine; ten in a row did not.
+
+⚠️ And when a batch can fail, **one bad member must not lose the others**. A
+failed batch here re-asks every name individually before recording anything,
+because the alternative caches seven innocent entries as "nothing found" — which
+is indistinguishable from a real miss forever after, since the cache is also the
+resume state.
+
+## The gazetteer can be the wrong one (2026-09-17)
+
+An audit that checks our coordinates against Wikidata produced 86 findings. Five
+of the top ones were opened by hand, and **none was a catalogue error**:
+
+- **Prada Aoyama** — ours is correctly in Minami-Aoyama; Wikidata's point is
+  10.6 km east. **Wikidata is wrong.**
+- **Pérez Art Museum Miami** — ours is correctly at Museum Park; Wikidata's is
+  1.6 km southwest. **Wikidata is wrong.**
+- **Hōrin-ji Temple** — a *different* Hōrin-ji, 16 km away in Katsushika.
+- **Palácio da Justiça** — a different one; every Portuguese district has one.
+
+🔴 **An external reference is evidence, not an oracle.** This is the same shape
+as the earlier finding that *Wikidata's own coordinate can be the neighbouring
+building* (Casa Batlló → Casa Amatller) — but one step further: there the
+reference was imprecise, here it is simply wrong, and a check that trusted it
+would have "fixed" four correct entries into wrong ones.
+
+⚠️ **And the base rate moves with the work.** The six errors that motivated this
+audit had already been fixed, and the catalogue had been through coordinate
+sweeps — so the true-error rate was low enough that the false-positive classes
+dominated the top of the list. **A detector's precision is not a property of the
+detector alone**; it falls as the thing it detects gets rarer. Report the sample,
+not the count, and never hand over a findings list as a worklist without opening
+some of it first.
+
+The tool was right to build: **1,667 entries independently confirmed** is a fact
+about the catalogue nobody had, and per-creator coverage (86% for one studio
+against **1%** for a food creator) settles a routing question that had been
+argued from guesses. Those were the durable outputs — not the findings.
 
 ## A concept with a named home must not be restated somewhere else (2026-09-17)
 
