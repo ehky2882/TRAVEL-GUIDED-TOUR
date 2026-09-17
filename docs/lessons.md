@@ -1917,3 +1917,34 @@ failed batch here re-asks every name individually before recording anything,
 because the alternative caches seven innocent entries as "nothing found" — which
 is indistinguishable from a real miss forever after, since the cache is also the
 resume state.
+
+## The gazetteer can be the wrong one (2026-09-17)
+
+An audit that checks our coordinates against Wikidata produced 86 findings. Five
+of the top ones were opened by hand, and **none was a catalogue error**:
+
+- **Prada Aoyama** — ours is correctly in Minami-Aoyama; Wikidata's point is
+  10.6 km east. **Wikidata is wrong.**
+- **Pérez Art Museum Miami** — ours is correctly at Museum Park; Wikidata's is
+  1.6 km southwest. **Wikidata is wrong.**
+- **Hōrin-ji Temple** — a *different* Hōrin-ji, 16 km away in Katsushika.
+- **Palácio da Justiça** — a different one; every Portuguese district has one.
+
+🔴 **An external reference is evidence, not an oracle.** This is the same shape
+as the earlier finding that *Wikidata's own coordinate can be the neighbouring
+building* (Casa Batlló → Casa Amatller) — but one step further: there the
+reference was imprecise, here it is simply wrong, and a check that trusted it
+would have "fixed" four correct entries into wrong ones.
+
+⚠️ **And the base rate moves with the work.** The six errors that motivated this
+audit had already been fixed, and the catalogue had been through coordinate
+sweeps — so the true-error rate was low enough that the false-positive classes
+dominated the top of the list. **A detector's precision is not a property of the
+detector alone**; it falls as the thing it detects gets rarer. Report the sample,
+not the count, and never hand over a findings list as a worklist without opening
+some of it first.
+
+The tool was right to build: **1,667 entries independently confirmed** is a fact
+about the catalogue nobody had, and per-creator coverage (86% for one studio
+against **1%** for a food creator) settles a routing question that had been
+argued from guesses. Those were the durable outputs — not the findings.
