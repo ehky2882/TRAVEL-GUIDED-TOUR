@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create places from a shared Wikidata id — the first auto-creation path.
+"""Create places automatically, from whichever signal can prove one.
 
 WHY THIS IS ALLOWED TO CREATE WITHOUT ASKING
 ---------------------------------------------
@@ -84,7 +84,9 @@ def _load(name, alias):
 
 _sm = _load("spine-match.py", "_spine_match")
 _menu = _load("make-place-menu.py", "_place_menu")
-haversine = _sm._cpc.haversine
+_cpc = _sm._cpc
+haversine = _cpc.haversine
+display_stem = _cpc.display_stem
 
 
 def slug(text):
@@ -120,6 +122,175 @@ def declined(titles):
     return None
 
 
+def propose_proven(catalog, *, max_move_m=MAX_MOVE_M):
+    """Coincident entries that are PROVABLY one venue. Returns (make, skip).
+
+    🔴 THIS IS THE SIGNAL THAT COVERS FOOD, and it is why a gazetteer alone was
+    never enough. Kossar's sits at **0.0 m** from a pin whose title is a caption
+    ("Someone fact check my bialy claim 📍@kossars"); Wikidata has never heard of
+    either, and no name lookup could match that string. What proves them one
+    venue is the coordinate PLUS the shared `@kossars` handle.
+
+    The proof test is `check-place-candidates.proven_same_venue`, reused
+    unchanged — identical name, or a shared venue handle (the creator's own
+    handle excluded, or every pin by one food reviewer would pair), or one
+    entry's name written in the other's caption. ⚠️ A coincident coordinate
+    ALONE is not proof: a centroid dump puts unrelated pins on one point.
+
+    ⚠️ Members do not move — they are already on the same point — so the
+    `--max-move` guard is inert here by construction, not by omission.
+    """
+    claimed = {t for p in (catalog.get("places") or []) for t in p.get("tourIds", [])}
+    by_point = proven_groups(_cpc.entries(catalog), TIGHT_M)
+
+    make, skip = [], []
+    for point, (members, proof) in sorted(by_point.items()):
+        if len(members) < 2:
+            continue
+        entries_only = [e for _, e in members]
+        titles = [e.get("title") or "" for e in entries_only]
+        item = {
+            "signal": "PROVEN", "name": place_name(entries_only), "titles": titles,
+            "city": next((e.get("city") for e in entries_only if e.get("city")), None),
+            "lat": point[0], "lon": point[1],
+            "members": [e["id"] for e in entries_only], "max_move_m": 0.0,
+        }
+        if any(e["id"] in claimed for e in entries_only):
+            item["why"] = "a member already belongs to a place"
+            skip.append(item)
+            continue
+        item["proof"] = proof
+        blocked = declined(titles)
+        if blocked:
+            item["why"] = f"REFUSED — {blocked}"
+            skip.append(item)
+            continue
+        make.append(item)
+    return make, skip
+
+
+# 🔴 NOT exact coordinate equality, and the reason is a real miss.
+# Kossar's sits 0.0 m from its caption pin BY DISTANCE, but the two coordinates
+# differ below a centimetre — so bucketing on rounded equality put them in
+# different buckets and the first version of this signal did not propose them.
+# Una Pizza Napoletana is 12.4 m from its caption pin, so equality could never
+# have reached it at all.
+#
+# ⚠️ THE RADIUS IS NOT THE PROOF. `docs/places.md` records a 40 m proximity rule
+# being measured and rejected (43 places, 19 wrong), and the nearest
+# owner-declined part-vs-whole case sits **6.9 m apart** — inside this radius.
+# What keeps those out is `proven_same_venue` AND the declined record, not the
+# distance. The radius only decides who is even considered.
+#
+# 25 m is the repo's existing reviewed TIGHT threshold, and the chain length is
+# capped at one hop for the reason session 95 found: transitive linking at 40 m
+# chained three separate La Boca venues into one site.
+TIGHT_M = 25.0
+
+
+def proven_groups(entries_in, radius_m):
+    """Groups built from PAIRS THAT PASS PROOF, then unioned.
+
+    🔴 PROOF DRIVES THE GROUPING. PROXIMITY ONLY BOUNDS THE SEARCH — and the
+    first version had it the other way round, with a real cost. It clustered by
+    distance and then tested proof, so an arbitrary anchor decided everything:
+    **Saigon Social** grabbed **Una Pizza Napoletana** 23.8 m away, the pair
+    correctly failed proof, and Una Pizza was consumed — so its true partner,
+    its own caption pin 12.4 m off, never formed a group at all. A wrong anchor
+    silently destroyed a right answer.
+
+    Testing pairs first cannot do that: Saigon Social and Una Pizza never pair
+    because nothing proves them one venue, and Una Pizza stays free to pair
+    with the caption that names `@unapizzanapoletana`.
+
+    ⚠️ Union of proven PAIRS, so a chain is only ever built from links that were
+    each independently proven. That is not the transitive proximity chaining
+    session 95 rejected, where three separate La Boca venues merged through
+    links nothing had verified.
+    """
+    items = [(kind, e, _cpc.marker(e)) for kind, e in entries_in]
+    items = [(k, e, p) for k, e, p in items if p]
+
+    parent = {}
+
+    def find(x):
+        while parent.get(x, x) != x:
+            parent[x] = parent.get(parent[x], parent[x])
+            x = parent[x]
+        return x
+
+    def union(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    by_id = {e["id"]: (k, e) for k, e, _ in items}
+    proofs = {}
+    for index, (kind, entry, point) in enumerate(items):
+        parent.setdefault(entry["id"], entry["id"])
+        for other_kind, other, other_point in items[index + 1:]:
+            parent.setdefault(other["id"], other["id"])
+            if haversine(point, other_point) > radius_m:
+                continue
+            ok, reason = _cpc.proven_same_venue([(kind, entry), (other_kind, other)])
+            if ok:
+                union(entry["id"], other["id"])
+                proofs.setdefault(find(entry["id"]), reason)
+
+    grouped = collections.defaultdict(list)
+    for entry_id in parent:
+        grouped[find(entry_id)].append(by_id[entry_id])
+
+    out = {}
+    for root, members in grouped.items():
+        if len(members) < 2:
+            continue
+        point = _cpc.marker(members[0][1])
+        out[(round(point[0], 7), round(point[1], 7))] = (members, proofs.get(root, "proven"))
+    return out
+
+
+def dedupe_across_signals(proposals):
+    """A member may be claimed by exactly ONE place. Returns (kept, rejected).
+
+    🔴 Whichever signal named it first wins, and the loser is REPORTED rather
+    than dropped. Two signals proposing the same member is not a bug — the
+    gazetteer and the proof tier legitimately see overlapping subjects — but
+    minting both would put one entry in two places, which `validate-tours`
+    rejects with "already belongs to place".
+    """
+    taken, kept, rejected = set(), [], []
+    for item in proposals:
+        if any(member in taken for member in item["members"]):
+            item = dict(item, why="a member was already claimed by another signal")
+            rejected.append(item)
+            continue
+        taken.update(item["members"])
+        kept.append(item)
+    return kept, rejected
+
+
+def place_name(entries_only):
+    """The place's editorial name: the shortest non-caption member title.
+
+    ⚠️ A caption is long and a name is short, so the shortest title is almost
+    always the venue ("Una Pizza Napoletana" over "This place is special
+    📍@unapizzana"). `docs/places.md`: name it for the WHOLE, not a component.
+    """
+    stems = []
+    for e in entries_only:
+        stem = display_stem(e.get("title") or "").strip()
+        # "Kossar's: How a New York Bagel Is Made" -> "Kossar's". An editorial
+        # tail after a colon is a framing, and `docs/places.md` Rule 2 says a
+        # framing never names the site.
+        head = stem.split(":")[0].strip()
+        if len(head) >= 3:
+            stem = head
+        if stem:
+            stems.append(stem)
+    return min(stems, key=len) if stems else "Unnamed place"
+
+
 def propose(catalog, cache, features, *, max_move_m=MAX_MOVE_M):
     """Groups of entries that resolve to one Wikidata item. Returns (make, skip)."""
     rows = _sm.classify(catalog, cache, features)
@@ -140,7 +311,8 @@ def propose(catalog, cache, features, *, max_move_m=MAX_MOVE_M):
         moves = [haversine(_sm.entry_marker(r["entry"]), point) for r in group]
         cities = [r["entry"].get("city") for r in group if r["entry"].get("city")]
         item = {
-            "qid": qid, "name": anchor["label"], "titles": titles,
+            "signal": "GAZETTEER", "qid": qid,
+            "name": anchor["label"], "titles": titles,
             "city": cities[0] if cities else None,
             "lat": point[0], "lon": point[1],
             "members": [r["entry"]["id"] for r in group],
@@ -269,6 +441,106 @@ def selftest():
     check("🔴 a group that would drag a member too far is SKIPPED, not minted",
           make2 == [] and len(skip2) == 1 and "would move" in skip2[0]["why"])
 
+    # --- signal A: proof drives grouping -----------------------------------
+    def pin(pid, title, lat, lon, author=None, desc=""):
+        return {"id": pid, "title": title, "city": "New York", "kind": "link",
+                "sourceAuthor": author, "shortDescription": desc,
+                "stops": [{"order": 0, "latitude": lat, "longitude": lon}]}
+
+    # 🔴 The Una Pizza case. Saigon Social sits 23.8 m away and is a DIFFERENT
+    # restaurant; an anchor-first cluster swallowed Una Pizza into it, the pair
+    # failed proof, and the true pair never formed. Proof-first cannot.
+    kossar = {"tours": [], "places": [], "linkPins": [
+        pin("u1", "Una Pizza Napoletana", 40.72100, -73.98800, "@a",
+            "the best 📍@unapizzanapoletana"),
+        pin("u2", "This place is special 📍@unapizzanapoletana", 40.72111, -73.98800, "@b"),
+        pin("s1", "Saigon Social", 40.72120, -73.98800, "@c", "📍@saigonsocialnyc"),
+    ]}
+    made, held = propose_proven(kossar)
+    names = {i["name"] for i in made}
+    check("🔴 proof-first pairs Una Pizza with its caption, not its neighbour",
+          names == {"Una Pizza Napoletana"})
+    check("🔴 and the unrelated neighbour 23.8 m away is NOT absorbed",
+          all("Saigon Social" not in t for i in made for t in i["titles"]))
+
+    check("a shared venue handle is proof",
+          made and "unapizzanapoletana" in made[0]["proof"])
+    check("a PROVEN group moves nobody", made and made[0]["max_move_m"] == 0.0)
+
+    # 🔴 The creator's own handle must never be the proof, or every pin by one
+    # food reviewer would pair with every other.
+    same_author = {"tours": [], "places": [], "linkPins": [
+        pin("c1", "Some Diner", 40.75, -73.98, "@jacksdiningroom", "📍@jacksdiningroom"),
+        pin("c2", "Another Diner", 40.75001, -73.98, "@jacksdiningroom", "📍@jacksdiningroom"),
+    ]}
+    check("🔴 the CREATOR's own handle is not proof",
+          propose_proven(same_author)[0] == [])
+
+    # Proximity alone is never proof.
+    bare = {"tours": [], "places": [], "linkPins": [
+        pin("b1", "Alpha Bar", 40.76, -73.98, "@x"),
+        pin("b2", "Beta Cafe", 40.760005, -73.98, "@y"),
+    ]}
+    check("🔴 two different venues on one point are NOT proposed",
+          propose_proven(bare)[0] == [])
+
+    check("place_name drops an editorial tail after a colon",
+          place_name([{"title": "Kossar's: How a New York Bagel Is Made"},
+                      {"title": "Someone fact check my bialy claim"}]) == "Kossar's")
+    check("place_name keeps a plain venue name",
+          place_name([{"title": "Una Pizza Napoletana"},
+                      {"title": "This place is special"}]) == "Una Pizza Napoletana")
+
+    far_apart = {"tours": [], "places": [], "linkPins": [
+        pin("f1", "Same Venue", 40.77, -73.98, "@x", "📍@samevenue"),
+        pin("f2", "Same Venue", 40.7710, -73.98, "@y", "📍@samevenue"),
+    ]}
+    check("🔴 proven but 111 m apart is outside the radius, so not proposed",
+          propose_proven(far_apart)[0] == [])
+
+    # 🔴 A declined pair that IS coincident and IS proven must still be refused.
+    # This is the Bar Luce shape reaching signal A rather than signal B.
+    a_pair = sorted(_menu.DECLINED_PAIRS)[0]
+    t1, t2 = sorted(a_pair)
+    dpair = {"tours": [], "places": [], "linkPins": [
+        pin("d1", t1, 40.78, -73.98, "@x", f"see {t2}"),
+        pin("d2", t2, 40.780005, -73.98, "@y", f"see {t1}"),
+    ]}
+    made_d, held_d = propose_proven(dpair)
+    check("🔴 signal A refuses an owner-declined pair, even when proven",
+          made_d == [] and any("REFUSED" in i["why"] for i in held_d))
+
+    placed = {"tours": [], "linkPins": [
+        pin("p1", "Shared Venue", 40.79, -73.98, "@x", "📍@sharedvenue"),
+        pin("p2", "Shared Venue", 40.790005, -73.98, "@y", "📍@sharedvenue"),
+    ], "places": [{"id": "zz", "name": "X", "latitude": 0, "longitude": 0,
+                   "tourIds": ["p1"]}]}
+    check("🔴 signal A skips a group whose member is already placed",
+          propose_proven(placed)[0] == [])
+
+    lone = {"tours": [], "places": [], "linkPins": [
+        pin("l1", "Solo Venue", 40.80, -73.98, "@x", "📍@solovenue")]}
+    check("🔴 a lone entry never becomes a place", propose_proven(lone)[0] == [])
+    # ⚠️ Tested on `proven_groups` DIRECTLY as well. `propose_proven` also
+    # checks the minimum, so breaking either one alone is masked by the other
+    # and a test that only goes through the outer function cannot tell.
+    check("🔴 proven_groups itself never emits a group of one",
+          proven_groups(_cpc.entries(lone), TIGHT_M) == {})
+
+    check("🔴 place_name picks the SHORTEST name, not the first",
+          place_name([{"title": "A Very Long Descriptive Caption Indeed"},
+                      {"title": "Brief"}]) == "Brief")
+
+    kept, rejected = dedupe_across_signals([
+        {"signal": "PROVEN", "members": ["m1", "m2"], "name": "first"},
+        {"signal": "GAZETTEER", "members": ["m2", "m3"], "name": "second"},
+        {"signal": "GAZETTEER", "members": ["m4", "m5"], "name": "third"},
+    ])
+    check("🔴 a member claimed twice is minted ONCE",
+          [i["name"] for i in kept] == ["first", "third"])
+    check("...and the loser is reported, not dropped",
+          len(rejected) == 1 and "already claimed" in rejected[0]["why"])
+
     cat3 = json.loads(json.dumps(cat))
     check("an already-placed member is skipped",
           propose(cat3, cache, {})[0] == [])
@@ -298,7 +570,7 @@ def selftest():
     check("🔴 an UNCONFIRMED match never groups, even when nothing else stops it",
           propose(far, far_cache, {}, max_move_m=1000.0)[0] == [])
 
-    total = 20
+    total = 36
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
@@ -330,11 +602,25 @@ def main():
         with gzip.open(a.features, "rt", encoding="utf-8") as fh:
             features = json.load(fh)
 
-        make, skip = propose(catalog, cache, features, max_move_m=a.max_move)
-        print(f"{len(make)} place(s) to create · {len(skip)} skipped\n")
+        # 🔴 SIGNAL ORDER IS NOT A QUALITY RANKING. PROVEN runs first only
+        # because a coincident group moves nobody, so it cannot be spoiled by a
+        # gazetteer group claiming a member first. Neither signal subsumes the
+        # other: Grace Farms' pin sat 6.1 km from Grace Farms (no coordinate
+        # test reaches it) and Kossar's is in no gazetteer at all.
+        make_a, skip_a = propose_proven(catalog, max_move_m=a.max_move)
+        make_b, skip_b = propose(catalog, cache, features, max_move_m=a.max_move)
+
+        make, extra = dedupe_across_signals(make_a + make_b)
+        skip = list(skip_a) + list(skip_b) + extra
+
+        by_signal = collections.Counter(i["signal"] for i in make)
+        print(f"{len(make)} place(s) to create "
+              f"({by_signal['PROVEN']} proven-coincident, {by_signal['GAZETTEER']} gazetteer) "
+              f"· {len(skip)} skipped\n")
         for item in sorted(make, key=lambda i: -len(i["members"])):
-            print(f"  {len(item['members'])}x  {item['name'][:34]:34} "
-                  f"{(item['city'] or '')[:14]:14} move<={item['max_move_m']:.0f} m")
+            print(f"  {len(item['members'])}x  {item['signal'][:9]:9} {item['name'][:30]:30} "
+                  f"{(item['city'] or '')[:13]:13} move<={item['max_move_m']:.0f} m"
+                  + (f"  [{item['proof']}]" if item.get("proof") else ""))
             for title in item["titles"]:
                 print(f"        · {title[:60]}")
         refused = [i for i in skip if i["why"].startswith("REFUSED")]
@@ -342,6 +628,14 @@ def main():
             print(f"\n🔴 REFUSED — the owner has already decided these:")
             for item in refused:
                 print(f"  {item['name'][:34]:34} {item['why']}")
+
+        ask = [i for i in skip if i["why"].startswith("coincident but NOT proven")]
+        if ask:
+            print(f"\n{len(ask)} coincident group(s) with NO second signal — these need you:")
+            for item in ask[:15]:
+                print(f"  {item['name'][:34]:34} {(item['city'] or '')[:14]}")
+                for t in item["titles"][:3]:
+                    print(f"        · {t[:58]}")
 
         if not a.apply:
             print("\n(proposal only — pass --apply to write them)")

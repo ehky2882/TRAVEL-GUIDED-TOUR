@@ -104996,6 +104996,217 @@
         "207D677D-C2DA-505A-9BF3-48B676F688FB",
         "C16669E8-FC9D-5C28-B9D7-C0A1ED0CE98A"
       ]
+    },
+    {
+      "id": "5ea487d0-a904-5ffa-a8c2-90d38e2d8c43",
+      "name": "House of Prime Rib",
+      "description": null,
+      "latitude": 37.7933913,
+      "longitude": -122.4225436,
+      "city": "San Francisco",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F42357E1-507A-597F-BF5A-C58D69B31F9B",
+        "40EB17E2-C5E8-5C40-AE14-B53281A505E6"
+      ]
+    },
+    {
+      "id": "c281b93f-ba5e-5075-99b9-52771222f3d1",
+      "name": "Pecking House",
+      "description": null,
+      "latitude": 40.7132144,
+      "longitude": -73.9934677,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "A0BB99C9-B680-530B-85F1-B26D6A1296EA",
+        "D251C14F-9B99-516E-B86B-504FF05BE265"
+      ]
+    },
+    {
+      "id": "82a99d04-0df0-5df9-ae19-a9d178989f80",
+      "name": "Kossar's",
+      "description": null,
+      "latitude": 40.716407,
+      "longitude": -73.988787,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F04B3E13-259A-5041-ACA6-689145DF3252",
+        "9E36397C-323D-5E25-A4C5-919FAC3009D0"
+      ]
+    },
+    {
+      "id": "e6529570-a299-5bf6-9a99-44fa92305c82",
+      "name": "Una Pizza Napoletana",
+      "description": null,
+      "latitude": 40.7217167,
+      "longitude": -73.9884995,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6920C8AC-4667-5DA1-919F-CC6FB2D8816C",
+        "3E5A6A63-A971-5187-BF35-C0D09B9FAED7"
+      ]
+    },
+    {
+      "id": "a43e25bf-bd49-5d04-b1e1-ee378618d6ec",
+      "name": "Peter Pan Donut & Pastry Shop",
+      "description": null,
+      "latitude": 40.7260665,
+      "longitude": -73.9522298,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "EE969A92-3A1A-55D0-A7CE-1FBAEA5239BA",
+        "006117B3-C5AD-598F-9C2B-3DD9276C890A"
+      ]
+    },
+    {
+      "id": "3051b68b-7719-5420-8484-a7d986593691",
+      "name": "Hawksmoor NYC",
+      "description": null,
+      "latitude": 40.7393841,
+      "longitude": -73.9862985,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "33A179D0-5377-5635-B9E7-E0F0ED0A8C8E",
+        "BBD1F25E-770A-5AF5-9EF5-D8B0A52CE583"
+      ]
+    },
+    {
+      "id": "94da36ea-570c-5e58-9496-de5b0aac36d0",
+      "name": "Mark's Off Madison",
+      "description": null,
+      "latitude": 40.7424702,
+      "longitude": -73.9862953,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "BBF4E808-1033-599B-A905-D8FC66AE9C00",
+        "1FF4B51B-5BB3-5440-B966-DCA36619C23D",
+        "E2666976-FF4A-5EE8-849B-F4E65333D2D0"
+      ]
+    },
+    {
+      "id": "bdeebc71-f137-5513-be44-c5f49638182e",
+      "name": "Round Swamp Farm",
+      "description": null,
+      "latitude": 40.9853229,
+      "longitude": -72.1831331,
+      "city": "East Hampton",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4D69C025-7703-5371-A55A-EC95DB985F11",
+        "D195F283-1470-5A89-B8F1-1D6CB6AEFBA0"
+      ]
+    },
+    {
+      "id": "e5fdb0ca-04d9-5f85-9b8a-8928f1f747b6",
+      "name": "St. Peter's Basilica",
+      "description": null,
+      "latitude": 41.9021569,
+      "longitude": 12.4537105,
+      "city": "Vatican City",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "99B77670-2E72-5193-8EE7-1F26E2D3408C",
+        "0DDB900E-36DD-5C72-8484-FAC4675570EA"
+      ]
+    },
+    {
+      "id": "4a41b52c-271d-513c-ad81-b9b72dc8f054",
+      "name": "Turda Salt Mine",
+      "description": null,
+      "latitude": 46.5877045,
+      "longitude": 23.787327,
+      "city": "Turda",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "83963FBF-B96B-57AC-9508-AB2F69690353",
+        "2497CD05-A0BB-50B0-B101-7B386DCC38D6"
+      ]
+    },
+    {
+      "id": "deb71ac8-f5cb-5c60-9710-65c3e9b39d2d",
+      "name": "Szabó Ervin Library",
+      "description": null,
+      "latitude": 47.4894505,
+      "longitude": 19.0648989,
+      "city": "Budapest",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F1BC4BAB-A5D7-5783-B6F2-46DE1E16B12E",
+        "B4A3B36F-6E5A-5830-A89C-53DA2DF25262"
+      ]
+    },
+    {
+      "id": "f82fea73-444d-5c2b-8396-99e4df350f18",
+      "name": "OTI building",
+      "description": null,
+      "latitude": 47.4955556,
+      "longitude": 19.0830556,
+      "city": "Budapest",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753"
+      ]
+    },
+    {
+      "id": "43216dc4-4ca0-519e-ac0c-08374890a3f0",
+      "name": "Hungarian University of Fine Arts",
+      "description": null,
+      "latitude": 47.5071743,
+      "longitude": 19.0670281,
+      "city": "Budapest",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041"
+      ]
+    },
+    {
+      "id": "e3631bff-690f-537d-b689-f512f0232723",
+      "name": "Rijksmuseum van Oudheden",
+      "description": null,
+      "latitude": 52.1584375,
+      "longitude": 4.4859375,
+      "city": "Leiden",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F7AEC12F-E226-50D8-8C79-04AA05683DBF",
+        "96DDFBD2-B835-5B4E-9394-B7A0B9F2F370"
+      ]
     }
   ],
   "linkPins": [
@@ -244650,8 +244861,8 @@
           "order": 0,
           "title": "Someone fact check my bialy claim 📍@kossars",
           "caption": "Someone fact check my bialy claim 📍@kossars",
-          "latitude": 40.7164072,
-          "longitude": -73.9887865,
+          "latitude": 40.716407,
+          "longitude": -73.988787,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -244663,8 +244874,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7164072,
-      "centroidLongitude": -73.9887865,
+      "centroidLatitude": 40.716407,
+      "centroidLongitude": -73.988787,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -245237,8 +245448,8 @@
           "order": 0,
           "title": "This place is special 📍@unapizzanapoletana",
           "caption": "This place is special 📍@unapizzanapoletana",
-          "latitude": 40.7217577,
-          "longitude": -73.9886362,
+          "latitude": 40.7217167,
+          "longitude": -73.9884995,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -245250,8 +245461,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7217577,
-      "centroidLongitude": -73.9886362,
+      "centroidLatitude": 40.7217167,
+      "centroidLongitude": -73.9884995,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -260129,8 +260340,8 @@
           "order": 0,
           "title": "Temple of Taffeh, Rijksmuseum van Oudheden",
           "caption": "The Temple of Taffeh is an Egyptian temple now housed in the Netherlands. In the 1960s, a UNESCO campaign saved the structure, along with ot",
-          "latitude": 52.1584403,
-          "longitude": 4.4856243,
+          "latitude": 52.1584375,
+          "longitude": 4.4859375,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -260142,8 +260353,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 52.1584403,
-      "centroidLongitude": 4.4856243,
+      "centroidLatitude": 52.1584375,
+      "centroidLongitude": 4.4859375,
       "city": "Leiden",
       "country": "Netherlands",
       "relatedTourIds": [
@@ -261783,8 +261994,8 @@
           "order": 0,
           "title": "OTI building (former Europe's tallest, demolished crown)",
           "caption": "I visited the OTI building during the Heritage Days back in September and it’s a beauty. However, it’s also an architectural curiosity as it",
-          "latitude": 47.49555556,
-          "longitude": 19.08305556,
+          "latitude": 47.4955556,
+          "longitude": 19.0830556,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -261796,8 +262007,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 47.49555556,
-      "centroidLongitude": 19.08305556,
+      "centroidLatitude": 47.4955556,
+      "centroidLongitude": 19.0830556,
       "city": "Budapest",
       "country": "Hungary",
       "relatedTourIds": [
@@ -263354,8 +263565,8 @@
           "order": 0,
           "title": "OTI building (Budapest's 'first skyscraper')",
           "caption": "From the archives: Heritage Days are coming up, and this is a curiosity worth visiting. This building was once Budapest’s first skyscraper. ",
-          "latitude": 47.49555556,
-          "longitude": 19.08305556,
+          "latitude": 47.4955556,
+          "longitude": 19.0830556,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -263367,8 +263578,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 47.49555556,
-      "centroidLongitude": 19.08305556,
+      "centroidLatitude": 47.4955556,
+      "centroidLongitude": 19.0830556,
       "city": "Budapest",
       "country": "Hungary",
       "relatedTourIds": [
