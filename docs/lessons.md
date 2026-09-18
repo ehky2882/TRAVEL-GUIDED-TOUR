@@ -2040,3 +2040,44 @@ filter can consume a candidate, it can veto the test's correct answer.
 same as zero distance.** Kossar's sits 0.0 m from its caption pin *by distance*
 while the two stored coordinates differ below a centimetre, so an equality
 bucket filed them apart. Cluster on the distance you actually mean.
+
+## A title is an assertion, and 466 pins have nothing that can contradict it (2026-09-18)
+
+The owner found a pin titled **"Vittoriano"**, in Rome, sitting on the Vittoriano's
+real coordinate. It was **Torre Velasca — a building in Milan, 476 km away.**
+
+**Every check we own passed it.** `validate-tours` saw a well-formed entry.
+`check-coordinates.py --pins` saw a point consistent with its neighbours and its
+own stated city. `spine-match.py` confirmed it, because the coordinate *did*
+belong to the thing the title named. The caption —
+
+> Italy's Ugliest Building Became a National Monument😱
+
+— names no building at all, so nothing in the record disagreed with anything.
+
+🔴 **Every check in this repo verifies INTERNAL CONSISTENCY or EXTERNAL
+POSITION. Not one verified that a title matches the content it links to.**
+
+Measured on the catalogue: **466 of 3,083 link pins (15%) carry no venue
+`@handle` and a caption sharing no word with their title.** For those, the title
+is unfalsifiable from anything we store. `@pasttworld` holds 119 of them — and
+`@pasttworld` is the creator whose pin was 476 km out of place.
+
+The project had already solved this shape once, for images, and the answer was
+the same both times: **when no metadata check can reach a class of error, open
+the artefact and read it.** `scripts/check-pin-subject.py` asks the hero image,
+through two independent Gemini calls, whether the place shown is the place
+claimed.
+
+⚠️ Two properties that are the whole point, and both were mutation-tested:
+
+- **Two calls, never one compound question.** A single "is this the subject AND
+  a usable photo" gets answered on subject match alone — that is what shipped
+  Rijksmuseum prints as photographs (§ Image Pipeline).
+- **UNUSABLE is not a pass.** A frame showing a person, a plate of food or a
+  title card cannot testify about a title. It means *unexamined*, exactly as
+  `spine-match.py`'s UNMATCHED does.
+
+⚠️ It **cannot run in CI** — it needs the owner's Gemini key, which is pasted per
+session and never stored. With no key it exits **2, COULD NOT VERIFY**, and says
+so; it never returns a pass it did not earn.
