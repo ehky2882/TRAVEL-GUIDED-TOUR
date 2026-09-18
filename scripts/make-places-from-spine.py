@@ -197,7 +197,12 @@ def apply(catalog, make):
         })
         existing.add(pid)
         minted += 1
-    places.sort(key=lambda p: p["id"])
+    # 🔴 DO NOT SORT `places`. An earlier version did, "for tidiness", and
+    # reordering the 351 existing entries turned a 23-place addition into a
+    # 4,048-insertion / 3,701-deletion diff that touched 1,570 coordinate
+    # lines — indistinguishable, on review, from a change that had moved
+    # content it should not have. New places are APPENDED; the array's order
+    # is not meaningful to anything, and a reviewable diff is.
     return minted
 
 
