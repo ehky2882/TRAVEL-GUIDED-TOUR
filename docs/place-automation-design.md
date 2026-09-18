@@ -1,6 +1,7 @@
 # One place-creation system, covering everything
 
-**Status: SPEC. Nothing here is built except signal B, which shipped in #993.**
+**Status: signals A and B are BUILT (#993, and this change). Signal C is still spec —
+see "Signal C cannot be fully automated" below.**
 
 ## Why this exists
 
@@ -110,3 +111,33 @@ dangerous, not less.
   member actually sits on its place.
 - **Read the diff shape**: N places should mean N new `tourIds` blocks and at most
   2 coordinate lines per member. Anything larger means something was reordered.
+
+---
+
+## 🔴 Signal C cannot be fully automated, and that is a finding not a gap
+
+A and B both carry an honest coordinate with them: A's members are already on one
+point, and B's comes from the gazetteer item both entries matched. **C has
+neither.** Domino Park's pair sat 201 m apart and Asakusa's 662 m — same name,
+two different points, and nothing in the signal says which is right.
+
+`docs/places.md` is explicit: *"If you cannot name the single point, it is not a
+place — it is an area with entries in it."*
+
+So C stays a **proposal** tier: report the pair, suggest the anchor if a
+gazetteer match exists, and let the owner choose. Automating it would mean
+inventing a coordinate, which is the one thing this whole system exists to stop.
+
+## What signal A actually taught us
+
+Two design errors, both caught by real data rather than by reasoning:
+
+1. **Exact coordinate equality is the wrong bucket.** Kossar's sits 0.0 m from
+   its caption pin *by distance*, but the coordinates differ below a centimetre.
+   Equality put them in different buckets. Una Pizza is 12.4 m away and equality
+   could never have reached it.
+2. 🔴 **Proof must drive the grouping, not follow it.** Clustering by distance
+   first let an arbitrary anchor decide: **Saigon Social** absorbed **Una Pizza
+   Napoletana** 23.8 m away, the pair correctly failed proof, and Una Pizza was
+   consumed — so its real partner never formed a group. A wrong anchor silently
+   destroyed a right answer. Testing pairs first cannot do that.
