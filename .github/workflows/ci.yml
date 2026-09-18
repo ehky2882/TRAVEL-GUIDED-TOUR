@@ -70,6 +70,42 @@ jobs:
             echo "::warning::$n unplaced pair(s) share a name — docs/places.md Rule 1 says every one is a place. See the job summary."
           fi
 
+  audit-board:
+    name: Audit board
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      # 🔴 This job exists because a class with NO check is invisible. The board
+      # prints every defect class, covered or not, so an uncovered one shows up
+      # on every PR instead of waiting for the owner to notice it on a map.
+      - name: Selftest the board before believing a number it prints
+        run: python3 scripts/audit-board.py --selftest
+      - name: Prove every guard can still fail
+        run: python3 scripts/mutate-audit-board.py
+      - name: Print the board
+        run: |
+          # ⚠️ `bash -e` again: the board exits 0 today, but a check that cannot
+          # run must be able to say so without the step dying first.
+          code=0
+          python3 scripts/audit-board.py --out board.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::audit-board.py could not run (exit $code)"
+            cat board.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Audit board"
+            echo
+            echo '```'
+            cat board.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          # An ERR row means a check broke, which a count of 0 would hide.
+          if grep -q "ERR:" board.txt; then
+            echo "::error::a check on the audit board could not run — see the summary"
+            exit 2
+          fi
+
   # The spine audit asks a question no other check here asks: not "is this
   # coordinate plausible?" but "is it where the thing this entry is NAMED AFTER
   # actually stands?" Offline — it reads a committed cache, never the network.

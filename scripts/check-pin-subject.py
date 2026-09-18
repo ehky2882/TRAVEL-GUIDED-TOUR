@@ -98,7 +98,7 @@ ENDPOINT = ("https://generativelanguage.googleapis.com/v1beta/models/"
             f"{MODEL}:generateContent")
 SLEEP_S = 0.4
 MAX_RETRY = 3
-RECORD_VERSION = 1
+RECORD_VERSION = 2
 
 
 def _load(name, alias):
@@ -131,6 +131,26 @@ def uncorroborated(catalog):
         if title_words & caption_words:
             continue
         out.append(pin)
+    return out
+
+
+def by_creator(catalog, pins, needle):
+    """Pins by one creator, matched on the creator's own handle.
+
+    ⚠️ Matched against `sourceAuthor` and the maker's `handle` — NOT against a
+    substring of the whole record, which would sweep in any pin whose caption
+    happened to mention them.
+    """
+    want = needle.strip().lstrip("@").lower()
+    if not want:
+        return pins
+    makers = {m["id"]: (m.get("handle") or "").strip().lstrip("@").lower()
+              for m in (catalog.get("makers") or [])}
+    out = []
+    for pin in pins:
+        author = (pin.get("sourceAuthor") or "").strip().lstrip("@").lower()
+        if author == want or makers.get(pin.get("makerId")) == want:
+            out.append(pin)
     return out
 
 
@@ -169,26 +189,74 @@ def gate_c_prompt():
             "cannot identify it, reply exactly: UNKNOWN.")
 
 
+def gate_d_prompt(title, named, city):
+    """Do the title and what gate C named denote the SAME thing?
+
+    🔴 WHY THIS GATE EXISTS. The first real run produced 23 CONTRADICTS on
+    @pasttworld and at least seven were the check arguing with itself:
+    gate B answered "not the title's subject" while gate C named the very same
+    building — `Hearst Tower` -> "Hearst Tower", `Mohammed VI Tower` ->
+    "Mohammed VI Tower", `Exchange 106` -> "The Exchange 106".
+
+    ⚠️ And a STRING comparison cannot fix it, which is the whole reason this is
+    a model call and not `subject_words`. Three of the seven share no word at
+    all with the title and are still the same building:
+
+        Steinway Tower   == 111 West 57th Street   (two names, one tower)
+        MetLife Building == Pan Am Building        (a former name)
+        Tianducheng      -> Eiffel Tower           (the replica IS the subject)
+
+    So it is asked as its own question, about names alone, with no image: the
+    model is good at "are these two names for one building" and that is all it
+    is asked. A yes means the two gates disagree, which is a fact about the
+    CHECK, not a finding about the catalogue.
+    """
+    return (
+        f"Do these two names refer to the SAME building, monument or place?\n\n"
+        f"  A: {title!r}" + (f" (in {city})" if city else "") + "\n"
+        f"  B: {named!r}\n\n"
+        "Answer YES if they are the same thing under two names, a former and "
+        "current name, a formal name and a nickname, an address and a building "
+        "name, or if one is a replica or copy that the other is a copy OF.\n"
+        "Answer NO if they are genuinely different buildings or places.\n\n"
+        "Reply with exactly one word: YES or NO.")
+
+
 def fetch_image(url, *, timeout=30):
     request = urllib.request.Request(url, headers={"User-Agent": "Atlas/1.0"})
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read(), response.headers.get("Content-Type", "image/jpeg")
 
 
+def build_payload(prompt, image_bytes, mime):
+    """The request body. Its own function so a test can look inside it.
+
+    🔴 A mutation that sends the image on EVERY call read as caught by nothing
+    until this was extracted: the prompt text was asserted, the wire format was
+    not. Gate D shown a picture answers about the picture, which is exactly the
+    disagreement it exists to settle.
+    """
+    parts = [{"text": prompt}]
+    if image_bytes:
+        parts.append({"inline_data": {
+            "mime_type": mime,
+            "data": base64.b64encode(image_bytes).decode()}})
+    return {"contents": [{"parts": parts}],
+            "generationConfig": {"temperature": 0, "maxOutputTokens": 40}}
+
+
 def ask(prompt, image_bytes, mime, key, *, timeout=60):
-    """One question about one image. Raises on failure — never returns ''.
+    """One question, optionally about one image. Raises on failure.
+
+    ⚠️ `image_bytes=None` sends NO image part at all, rather than an empty one.
+    Gate D is a question about two NAMES and must not be shown a picture: given
+    one, the model answers about the picture again, which is the very
+    disagreement gate D exists to adjudicate.
 
     🔴 An empty answer and a failed call must not be indistinguishable: a caller
     that cannot tell them apart caches a network error as "the model said no".
     """
-    payload = {
-        "contents": [{"parts": [
-            {"text": prompt},
-            {"inline_data": {"mime_type": mime,
-                             "data": base64.b64encode(image_bytes).decode()}},
-        ]}],
-        "generationConfig": {"temperature": 0, "maxOutputTokens": 40},
-    }
+    payload = build_payload(prompt, image_bytes, mime)
     request = urllib.request.Request(
         f"{ENDPOINT}?key={urllib.parse.quote(key)}",
         data=json.dumps(payload).encode(),
@@ -222,12 +290,20 @@ def yes_no(answer):
     return None
 
 
-def verdict(gate_a, gate_b):
+def verdict(gate_a, gate_b, gate_d=None):
+    """`gate_d` is asked only when B says no, and can only WITHDRAW a finding.
+
+    🔴 It is never allowed to create one: an unanswered D (None) leaves
+    CONTRADICTS standing, because a reconciliation that did not run must not
+    quietly excuse a disagreement.
+    """
     if gate_a is None or (gate_a and gate_b is None):
         return "UNCHECKED"
     if not gate_a:
         return "UNUSABLE"
-    return "CONFIRMS" if gate_b else "CONTRADICTS"
+    if gate_b:
+        return "CONFIRMS"
+    return "DISPUTED" if gate_d else "CONTRADICTS"
 
 
 def neighbours(catalog, pin, limit=6):
@@ -315,6 +391,37 @@ def selftest():
     check("gate C is open-ended and offers an out",
           "UNKNOWN" in gate_c_prompt())
 
+    check("🔴 gate B no + gate D yes -> DISPUTED, not a finding",
+          verdict(True, False, True) == "DISPUTED")
+    check("🔴 gate B no + gate D no -> CONTRADICTS stands",
+          verdict(True, False, False) == "CONTRADICTS")
+    check("🔴 an UNANSWERED gate D leaves CONTRADICTS standing",
+          verdict(True, False, None) == "CONTRADICTS")
+    check("🔴 gate D can never turn a CONFIRMS into anything else",
+          verdict(True, True, False) == "CONFIRMS"
+          and verdict(True, True, True) == "CONFIRMS")
+    check("🔴 gate D can never rescue an UNUSABLE",
+          verdict(False, None, True) == "UNUSABLE")
+    check("gate D defaults to absent, so old callers still get CONTRADICTS",
+          verdict(True, False) == "CONTRADICTS")
+
+    dp = gate_d_prompt("Hearst Tower", "Hearst Tower, New York City", "New York")
+    check("gate D names both candidates", "'Hearst Tower'" in dp
+          and "'Hearst Tower, New York City'" in dp)
+    check("🔴 gate D covers former names, nicknames and addresses",
+          all(w in dp.lower() for w in ("former", "nickname", "address")))
+    check("🔴 gate D covers the replica case (Tianducheng)",
+          "replica" in dp.lower())
+    check("gate D asks about NAMES and never mentions an image",
+          "image" not in dp.lower() and "photo" not in dp.lower())
+    check("🔴 a call with no image SENDS no image part",
+          len(build_payload("q", None, None)["contents"][0]["parts"]) == 1)
+    check("a call with an image sends two parts",
+          len(build_payload("q", b"xy", "image/jpeg")["contents"][0]["parts"]) == 2)
+    check("the image part carries base64 of the bytes given",
+          build_payload("q", b"xy", "image/jpeg")["contents"][0]["parts"][1]
+          ["inline_data"]["data"] == base64.b64encode(b"xy").decode())
+
     # The selection: exactly the class Torre Velasca was in.
     cat = {"tours": [], "linkPins": [
         {"id": "p1", "title": "Torre Velasca", "city": "Milan",
@@ -332,6 +439,24 @@ def selftest():
     check("🔴 the Torre Velasca shape IS selected", "p1" in picked)
     check("a pin with a venue handle is NOT selected", "p2" not in picked)
     check("a caption naming the title is NOT selected", "p3" not in picked)
+
+    mk_cat = {"makers": [{"id": "m1", "handle": "pasttworld"},
+                         {"id": "m2", "handle": "hereinnyc"}]}
+    pins = [{"id": "a", "sourceAuthor": "@pasttworld", "makerId": "m1"},
+            {"id": "b", "sourceAuthor": "@hereinnyc", "makerId": "m2"},
+            {"id": "c", "sourceAuthor": "", "makerId": "m1"},
+            {"id": "d", "sourceAuthor": "@someoneelse", "makerId": "m2",
+             "longDescription": "as seen on @pasttworld"}]
+    got = [p["id"] for p in by_creator(mk_cat, pins, "pasttworld")]
+    check("--maker matches the sourceAuthor", "a" in got)
+    check("--maker matches via the maker's handle", "c" in got)
+    check("--maker tolerates a leading @", got == [p["id"] for p in
+          by_creator(mk_cat, pins, "@pasttworld")])
+    check("--maker excludes another creator", "b" not in got)
+    check("🔴 --maker does NOT match a MENTION in someone else's caption",
+          "d" not in got)
+    check("an empty --maker changes nothing",
+          by_creator(mk_cat, pins, "") == pins)
 
     d1 = digest({"title": "A", "heroImageURL": "u", "city": "c"})
     check("digest is stable", d1 == digest({"title": "A", "heroImageURL": "u", "city": "c"}))
@@ -361,6 +486,8 @@ def main():
                          "is never stored in the repo.")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--only", default="", help="substring filter on the title")
+    ap.add_argument("--maker", default="",
+                    help="one creator's handle, e.g. pasttworld (the @ is optional)")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -374,6 +501,8 @@ def main():
             catalog = json.load(fh)
         cache = load_cache(a.cache)
         targets = uncorroborated(catalog)
+        if a.maker:
+            targets = by_creator(catalog, targets, a.maker)
         if a.only:
             targets = [p for p in targets
                        if a.only.lower() in (p.get("title") or "").lower()]
@@ -391,7 +520,8 @@ def main():
         if a.limit:
             todo = todo[:a.limit]
 
-        counts = {"CONTRADICTS": 0, "CONFIRMS": 0, "UNUSABLE": 0, "UNCHECKED": 0}
+        counts = {"CONTRADICTS": 0, "CONFIRMS": 0, "DISPUTED": 0,
+                  "UNUSABLE": 0, "UNCHECKED": 0}
         findings = []
         for index, pin in enumerate(todo, 1):
             title = _cpc.display_stem(pin.get("title")).strip()
@@ -399,7 +529,7 @@ def main():
                 blob, mime = fetch_image(pin["heroImageURL"])
                 ans_a = ask(gate_a_prompt(), blob, mime, a.key)
                 gate_a = yes_no(ans_a)
-                gate_b = named = None
+                gate_b = gate_d = named = None
                 if gate_a:
                     # ⚠️ Separate call. Never folded into gate A.
                     gate_b = yes_no(ask(gate_b_prompt(
@@ -407,18 +537,26 @@ def main():
                         blob, mime, a.key))
                     if gate_b is False:
                         named = ask(gate_c_prompt(), blob, mime, a.key)
+                        if named and named.strip().upper() != "UNKNOWN":
+                            # ⚠️ No image: a question about NAMES, on its own.
+                            gate_d = yes_no(ask(gate_d_prompt(
+                                title, named.strip(), pin.get("city")),
+                                None, None, a.key))
             except Exception as exc:                        # noqa: BLE001
                 counts["UNCHECKED"] += 1
                 print(f"  {index}/{len(todo)} UNCHECKED {title[:34]}: "
                       f"{type(exc).__name__}")
                 continue
 
-            call = verdict(gate_a, gate_b)
+            call = verdict(gate_a, gate_b, gate_d)
             counts[call] += 1
             if call != "UNCHECKED":
                 cache[pin["id"]] = {"digest": digest(pin), "version": RECORD_VERSION,
                                     "title": pin.get("title"), "verdict": call,
                                     "identified_as": named}
+            if call == "DISPUTED":
+                print(f"  {index}/{len(todo)} ~ DISPUTED    {title[:30]:30} "
+                      f"= {(named or '?')[:36]}")
             if call == "CONTRADICTS":
                 findings.append((title, pin.get("city"), named))
                 print(f"  {index}/{len(todo)} 🔴 CONTRADICTS {title[:30]:30} "
@@ -428,12 +566,18 @@ def main():
 
         save_cache(a.cache, cache)
         print(f"\nCONTRADICTS {counts['CONTRADICTS']} · CONFIRMS {counts['CONFIRMS']}"
-              f" · UNUSABLE {counts['UNUSABLE']} · UNCHECKED {counts['UNCHECKED']}")
+              f" · DISPUTED {counts['DISPUTED']} · UNUSABLE {counts['UNUSABLE']}"
+              f" · UNCHECKED {counts['UNCHECKED']}")
         if findings:
             print("\n🔴 the picture disagrees with the title:")
             for title, city, named in findings:
                 print(f"  {title[:34]:34} {(city or '')[:14]:14} looks like: "
                       f"{(named or 'unidentified')[:40]}")
+        if counts["DISPUTED"]:
+            print(f"\n⚠️  {counts['DISPUTED']} DISPUTED — gate B said 'not the "
+                  "title's subject' while\n    gate C named the same thing "
+                  "under another name. That is the CHECK\n    disagreeing with "
+                  "itself, not a finding about the catalogue.")
         print("\n⚠️  UNUSABLE is NOT clean — it means the frame shows no")
         print("    identifiable place (a person, a plate, a title card), so the")
         print("    check could not speak. Those titles remain unverified.")
