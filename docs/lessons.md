@@ -2081,3 +2081,92 @@ claimed.
 ⚠️ It **cannot run in CI** — it needs the owner's Gemini key, which is pasted per
 session and never stored. With no key it exits **2, COULD NOT VERIFY**, and says
 so; it never returns a pass it did not earn.
+
+## Creating a place makes the next entry on it invisible (2026-09-18)
+
+The owner found the **Washington Monument**: a place with two members, and a
+third entry sitting **7.0 m outside it**, carrying the place's exact name.
+
+Every tier of `check-place-candidates.py` — EXACT, TIGHT, NEAR, NAME — hunts for
+*sites that have no place page*. `scan_names` drops every already-placed entry
+outright. **So the moment a place exists, that site is treated as finished, and
+an entry landing on it afterwards is never questioned again.**
+
+🔴 **A creation operation with no matching JOIN operation leaves a growing
+blind spot**, and it grows precisely where the content is densest — the sites
+popular enough to have earned a place are the ones most likely to get another
+entry. Measured the day it was found: **20 entries within 25 m of an existing
+place, 10 carrying the place's exact name.**
+
+The pair *was* in the report, as a 7.0 m row among 91 TIGHT ones, with nothing
+saying one side was already a place. **Reported is not surfaced.**
+
+## Asserting what a function says is not asserting what it does (2026-09-18)
+
+`check-pin-subject.py`'s gate D must never be shown the image — given one, it
+answers about the picture again, which is the disagreement it exists to settle.
+There was a selftest for it, and it was green, and it was worthless: it asserted
+the **prompt text** never mentions an image. Nothing asserted the request body.
+
+A mutation that sent the image on *every* call was **MISSED**.
+
+The fix was to extract `build_payload()` so a test can look inside the wire
+format. ⚠️ **The pattern generalises:** a test that reads a function's prose, its
+docstring, or the string it builds is testing the description, not the
+behaviour. Test the thing that goes out.
+
+## A fixture that stops being able to fail is a dead test (2026-09-18)
+
+`audit-board.py` has a test that a check which raises reports `ERR`, never `0`.
+Its fixture was a malformed entry that made one function raise — **because of a
+signature bug elsewhere**. The moment that signature was fixed, nothing raised,
+the assertion became vacuous, and it kept printing green.
+
+⚠️ **A test written against an incidental failure dies silently when the
+incident is fixed.** The fixture must cause the failure *on purpose* — here, a
+deliberately malformed catalogue.
+
+⚠️ And the same run showed the flip side: **two of the first sixteen mutants
+were no-ops**, so they "passed" while exercising nothing. A mutation that cannot
+change behaviour is not a test of the guard; it is a test of nothing.
+
+## A guard masked by another guard cannot be tested by a realistic fixture (2026-09-18)
+
+`audit-board.city_spelled_twice` has four rules: a prefix test, a country test,
+a proximity test and a fold. Mutation testing found **four of them unable to
+fail**, every one masked by a different rule.
+
+The clearest: `York` / `New York` was chosen to prove proximity separates two
+far-apart cities. It proves nothing — **York is a SUFFIX of New York**, so the
+prefix rule excludes the pair before proximity is ever consulted.
+
+🔴 **Every fixture must isolate exactly one rule**: the pair has to be excluded
+by the rule under test *and by nothing else*. A realistic example usually fails
+several rules at once, which is exactly what makes it useless as a test.
+
+## A check that says where it runs can be lying (2026-09-18)
+
+`audit-board.py`'s own rows said three new classes `run: CI`. **Nothing ran it.**
+
+A checklist that misstates where it runs is worse than no checklist: it answers
+*"is this covered?"* with a yes that nothing backs. If a tool reports its own
+coverage, something must verify that claim — here, the CI job that actually runs
+it, added in the same change.
+
+## The accent check that was asked for, and silently skipped the accents (2026-09-18)
+
+`CLAUDE.md` asks for an accent-folded duplicate check on city names, after
+`Sao Paulo`/`São Paulo` and `Zurich`/`Zürich` were found merged. Nothing
+implemented it for two months.
+
+Then the first implementation **skipped exactly those pairs**: two spellings
+that fold to the same string hit a `fa == fb` guard meant to stop a city pairing
+with itself, and were dropped — while the docstring claimed to catch them.
+
+Selftests were green. **Mutation testing found it.** The fix is that only an
+identical *raw* name is a non-event; two different spellings that fold together
+are the strongest finding the check can make.
+
+⚠️ It also turned up a convention nobody had questioned: **`City (District)`**,
+applied to Tokyo (nineteen variants), New York, Osaka, Bangkok and Los Angeles.
+Not typos — a deliberate style, each variant counting as a separate city.
