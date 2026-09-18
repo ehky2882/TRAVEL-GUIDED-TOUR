@@ -43899,7 +43899,7 @@
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
-        "28427603-2539-5712-8d8f-33e5261fdc2a"
+        "1C39542B-E87B-5215-A595-F7FF21D14545"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -44005,13 +44005,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
+        "1C39542B-E87B-5215-A595-F7FF21D14545",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "17d77b0d-070f-5414-b79b-5a22e78644ba",
         "7c9541b3-d162-5655-8da1-de0286f43d21",
-        "2c9fb701-2063-5c14-a418-c42f60e6dce0",
-        "cf833db1-9801-5f5a-95c9-50355c243b71"
+        "2c9fb701-2063-5c14-a418-c42f60e6dce0"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -58154,14 +58154,14 @@
       "city": "Pang Mapha",
       "country": "Thailand",
       "relatedTourIds": [
+        "2B5B8402-E164-55B9-994B-E665328E77CD",
         "3f477a80-420e-58ff-abe7-fa21825abcfd",
         "39da967e-ad82-5ab0-ad37-fa31cccb060b",
         "A8B58E21-ECDC-5BC6-99CB-E5BC3E88EB0F",
         "ee2b411b-3308-5837-b424-2e7b80bc0073",
         "aa4cffca-ea34-5706-9b59-2c96da3189be",
         "5fdd4da6-c43b-5496-9637-4c759ab0b392",
-        "c4d28dda-65d8-58c3-ba4a-b35f8be7f0b0",
-        "F610F8A2-2BB1-5A2C-B046-6915F55D0F48"
+        "c4d28dda-65d8-58c3-ba4a-b35f8be7f0b0"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -85800,9 +85800,9 @@
         "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
         "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
         "b2959033-0af9-5dc4-b2d3-29251878f4b9",
-        "39e4f325-e903-51dd-8032-aea6bb824ed1",
-        "2435729f-f5d0-53d1-be5d-30c57bc2bc78"
+        "39e4f325-e903-51dd-8032-aea6bb824ed1"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -109889,6 +109889,9 @@
       "centroidLongitude": 5.1150426,
       "city": "Utrecht",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "34C1D56A-CD4F-50B4-88FD-18FC1FA843CF"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Waterfront",
@@ -113776,14 +113779,14 @@
       "city": "Budapest",
       "country": "Hungary",
       "relatedTourIds": [
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
         "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
         "E93072A5-8A63-5D76-8935-CF362AEA963B",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
         "B016A73B-2437-504E-B9CE-0992B7A68360",
         "0A326FE5-2356-5E03-B707-835067B5DA8D",
-        "AA41DCD3-D243-5514-9A3F-639DF499F6DA",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
-        "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C"
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "AA41DCD3-D243-5514-9A3F-639DF499F6DA"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -118100,9 +118103,12 @@
       "relatedTourIds": [
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
         "0A326FE5-2356-5E03-B707-835067B5DA8D",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF"
+        "537599D4-D46D-5830-BC96-EA3338E62CE9"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -159548,6 +159554,9 @@
       "centroidLongitude": 5.1475754,
       "city": "Utrecht",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "34C1D56A-CD4F-50B4-88FD-18FC1FA843CF"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -160059,6 +160068,9 @@
       "centroidLongitude": 5.1113125,
       "city": "Utrecht",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "34C1D56A-CD4F-50B4-88FD-18FC1FA843CF"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -189294,6 +189306,9 @@
       "centroidLongitude": 4.8175625,
       "city": "Zaandam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "BC568205-5F4E-503E-B553-F95D3FBFCCD5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -189340,6 +189355,7 @@
       "city": "Leiden",
       "country": "Netherlands",
       "relatedTourIds": [
+        "96DDFBD2-B835-5B4E-9394-B7A0B9F2F370",
         "7E276D67-14BC-5BA7-B4DC-0AD007AAF593"
       ],
       "primaryCategory": "history",
@@ -189476,6 +189492,9 @@
       "centroidLongitude": 5.6963125,
       "city": "Maastricht",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "BF5DDFC7-AC87-5587-9DE8-E763C21F9067"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
@@ -202500,14 +202519,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "1C39542B-E87B-5215-A595-F7FF21D14545",
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
         "be6af98d-156a-5a62-9b18-ea7ed90b8686",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "89fa0677-9165-5507-9d25-a769338ed8df",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba"
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -208773,8 +208792,12 @@
       "relatedTourIds": [
         "AA41DCD3-D243-5514-9A3F-639DF499F6DA",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
         "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9"
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -208823,8 +208846,12 @@
       "relatedTourIds": [
         "B016A73B-2437-504E-B9CE-0992B7A68360",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
         "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9"
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "B5631277-742B-5686-B185-79A34432ED13"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -219065,8 +219092,13 @@
       "country": "Hungary",
       "relatedTourIds": [
         "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "8C44FB2A-E6E9-5086-9A72-BB85562EDBC4",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD"
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -219114,10 +219146,14 @@
       "city": "Budapest",
       "country": "Hungary",
       "relatedTourIds": [
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
         "E93072A5-8A63-5D76-8935-CF362AEA963B",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D"
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "12971089-F2E7-56BA-92E6-F8A896DACCA1"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -236467,10 +236503,13 @@
       "country": "Hungary",
       "relatedTourIds": [
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
         "B016A73B-2437-504E-B9CE-0992B7A68360",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
         "AA41DCD3-D243-5514-9A3F-639DF499F6DA",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "E93072A5-8A63-5D76-8935-CF362AEA963B"
+        "27A4AA5E-D736-55B1-8259-78E4F39E0B12"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254241,10 +254280,13 @@
       "country": "Hungary",
       "relatedTourIds": [
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
         "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
-        "E93072A5-8A63-5D76-8935-CF362AEA963B",
-        "7930383E-9ABF-5A00-8DF1-D60AD0104A56"
+        "D4668703-90AD-5722-B366-B61F62810CB1",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -255336,7 +255378,8 @@
         "468739B5-7B6F-5EAB-B6EF-447E24934478",
         "263171C7-3532-53DC-9A32-3D270280FA06",
         "3AA3354F-A875-554F-9EAA-09AFF75D0A83",
-        "B79F4C27-F3BF-5EB4-BADE-04A404CC9445"
+        "B79F4C27-F3BF-5EB4-BADE-04A404CC9445",
+        "9252D3D8-EF69-53E0-920D-BEFED414C0A5"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -256571,8 +256614,8 @@
         "11be7466-08dc-5a7f-88b7-5da15afdcf9b",
         "03e5c64c-8ea5-57b5-8d9d-0ec003b4f1ed",
         "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
-        "F76E67BF-5FA4-5445-A987-1327A18426F4",
-        "B5A1446C-64F1-5B68-AB40-6482475D01A6"
+        "6AD137CA-4C30-5ED6-B02F-28E8AB52ACC2",
+        "F76E67BF-5FA4-5445-A987-1327A18426F4"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -257809,6 +257852,7 @@
         "2AD65DBA-39C4-5639-B97D-6EAA85B3FFA5",
         "8667FC23-A98F-5958-9F82-04FD14BC5AFB",
         "263171C7-3532-53DC-9A32-3D270280FA06",
+        "9252D3D8-EF69-53E0-920D-BEFED414C0A5",
         "B79F4C27-F3BF-5EB4-BADE-04A404CC9445"
       ],
       "primaryCategory": "architecture",
@@ -258755,13 +258799,13 @@
       "country": "Hungary",
       "relatedTourIds": [
         "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
-        "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C",
-        "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
-        "E93072A5-8A63-5D76-8935-CF362AEA963B",
-        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
-        "B016A73B-2437-504E-B9CE-0992B7A68360",
-        "AA41DCD3-D243-5514-9A3F-639DF499F6DA"
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "D4668703-90AD-5722-B366-B61F62810CB1",
+        "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -259355,6 +259399,16 @@
       "centroidLongitude": 13.4094214,
       "city": "Berlin",
       "country": "Germany",
+      "relatedTourIds": [
+        "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
+        "d1997162-06ab-52b7-b7b3-b2e1de3a7bf8",
+        "32DC7EE6-8D6C-5D56-A7FC-8BA893F5D726",
+        "687F4A2B-9D33-5C72-B67C-7BFA5BDD8F5E",
+        "17b809c4-9de8-564c-ab43-c09a9c9cc2c9",
+        "F76E67BF-5FA4-5445-A987-1327A18426F4",
+        "76127777-fee0-53a2-809c-d00386c0f2fe",
+        "c307eabb-fb36-57ce-8be7-c30d5093b561"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -259745,6 +259799,9 @@
       "centroidLongitude": 4.4856243,
       "city": "Leiden",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "F7AEC12F-E226-50D8-8C79-04AA05683DBF"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -259789,6 +259846,16 @@
       "centroidLongitude": 127.0367285,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
+        "545368f1-0c52-56e9-8721-9c0b8e75c138",
+        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
+        "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "89fa0677-9165-5507-9d25-a769338ed8df",
+        "7c9541b3-d162-5655-8da1-de0286f43d21"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -259833,6 +259900,9 @@
       "centroidLongitude": 23.787327,
       "city": "Turda",
       "country": "Romania",
+      "relatedTourIds": [
+        "2497CD05-A0BB-50B0-B101-7B386DCC38D6"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -259876,6 +259946,9 @@
       "centroidLongitude": 5.6899453,
       "city": "Maastricht",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "2E7F1262-5C25-5DFE-ACE5-8AD6A07E4BED"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -259920,6 +259993,10 @@
       "centroidLongitude": 103.9949824,
       "city": "Singapore",
       "country": "Singapore",
+      "relatedTourIds": [
+        "2AD65DBA-39C4-5639-B97D-6EAA85B3FFA5",
+        "3AA3354F-A875-554F-9EAA-09AFF75D0A83"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -260007,6 +260084,9 @@
       "centroidLongitude": 23.787327,
       "city": "Turda",
       "country": "Romania",
+      "relatedTourIds": [
+        "83963FBF-B96B-57AC-9508-AB2F69690353"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -260138,6 +260218,11 @@
       "centroidLongitude": 5.1475754,
       "city": "Utrecht",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "6038E55E-1080-583E-B71E-E1E1A3900DDA",
+        "E374F114-1062-538A-A4B2-52AFE23B6BA8",
+        "CF620AE8-674F-5987-802D-9C9AE635A7E0"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -260269,6 +260354,9 @@
       "centroidLongitude": 4.8178602,
       "city": "Zaandam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "830624A1-1B51-5E77-88A1-D6A6CF7ABDC1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -260312,6 +260400,16 @@
       "centroidLongitude": 19.0459186,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "3CD6864C-85E9-5643-9584-E4DC6E4307EE",
+        "E93072A5-8A63-5D76-8935-CF362AEA963B"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -260400,6 +260498,10 @@
       "centroidLongitude": 19.0573578,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "12EB6CC9-1D6B-5239-AFE5-42A5404D3DDF",
+        "893E8AD1-82FF-5787-9736-AA627A3C4B03"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -260444,6 +260546,16 @@
       "centroidLongitude": 19.0648989,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "B4A3B36F-6E5A-5830-A89C-53DA2DF25262",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "3BA1A797-5FC3-5E45-9B1A-ED16BDF6011C",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -260488,6 +260600,14 @@
       "centroidLongitude": 19.0476241,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "3CD6864C-85E9-5643-9584-E4DC6E4307EE",
+        "D4668703-90AD-5722-B366-B61F62810CB1",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "43AB37E8-1948-5432-B52A-7CADF06CEF4C",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -260531,6 +260651,16 @@
       "centroidLongitude": 19.0568649,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "F1BC4BAB-A5D7-5783-B6F2-46DE1E16B12E",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -260575,6 +260705,16 @@
       "centroidLongitude": 19.0670281,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -260618,6 +260758,16 @@
       "centroidLongitude": 19.1122233,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -260662,6 +260812,12 @@
       "centroidLongitude": 19.0990632,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "BB448AE2-E3E6-5C95-B381-439987100F92",
+        "51904F6B-9B48-5CAA-9D3F-2FFBD016D242",
+        "B5631277-742B-5686-B185-79A34432ED13",
+        "0AEF9178-7A42-50E4-BC28-042A06DB1C17"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Remembrance"
@@ -260705,6 +260861,16 @@
       "centroidLongitude": 19.0582821,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -260748,6 +260914,16 @@
       "centroidLongitude": 19.147326,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "EB6F3FA7-857E-5F3C-814B-C96A76AD2219",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -260792,6 +260968,16 @@
       "centroidLongitude": 19.0699974,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "27A4AA5E-D736-55B1-8259-78E4F39E0B12",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -260835,6 +261021,16 @@
       "centroidLongitude": 19.0702097,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "866506B7-FE3A-5B81-9211-B2934A0391DC",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -260879,6 +261075,16 @@
       "centroidLongitude": 19.0951214,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "37ADD14A-5DD3-5A25-91E1-A950695D7CB5",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB",
+        "CB6AC72D-AF3A-51A0-9A74-CB4D6D2B089B",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -260922,6 +261128,16 @@
       "centroidLongitude": 19.0375558,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "12971089-F2E7-56BA-92E6-F8A896DACCA1",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "8C44FB2A-E6E9-5086-9A72-BB85562EDBC4",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "D4668703-90AD-5722-B366-B61F62810CB1",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "37ADD14A-5DD3-5A25-91E1-A950695D7CB5",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building"
@@ -260965,6 +261181,16 @@
       "centroidLongitude": 19.0927205,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "BB448AE2-E3E6-5C95-B381-439987100F92",
+        "2D4E1DA3-D7B7-54EB-BE54-CD06EC6EC114",
+        "B5631277-742B-5686-B185-79A34432ED13",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "15C4DA37-9388-5E81-BBB2-B889F0A12148",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Remembrance"
@@ -261008,6 +261234,16 @@
       "centroidLongitude": 19.0338075,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "60177B27-992B-5CDA-9C6E-FF63375EC7ED",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "EA6E9A93-7E87-5F20-A710-35902D92D513",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -261052,6 +261288,16 @@
       "centroidLongitude": 19.18416667,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "2D4E1DA3-D7B7-54EB-BE54-CD06EC6EC114",
+        "51904F6B-9B48-5CAA-9D3F-2FFBD016D242",
+        "EA6E9A93-7E87-5F20-A710-35902D92D513",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "B5631277-742B-5686-B185-79A34432ED13",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "43AB37E8-1948-5432-B52A-7CADF06CEF4C",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Remembrance"
@@ -261095,6 +261341,16 @@
       "centroidLongitude": 19.0395462,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "F1BC4BAB-A5D7-5783-B6F2-46DE1E16B12E",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "B4A3B36F-6E5A-5830-A89C-53DA2DF25262"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -261139,6 +261395,16 @@
       "centroidLongitude": 19.0520496,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "CB6AC72D-AF3A-51A0-9A74-CB4D6D2B089B",
+        "4B674D2C-AF5E-5815-8701-F568C1AEAA02",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "12971089-F2E7-56BA-92E6-F8A896DACCA1",
+        "27A4AA5E-D736-55B1-8259-78E4F39E0B12"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -261183,6 +261449,16 @@
       "centroidLongitude": 19.08305556,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "CB6AC72D-AF3A-51A0-9A74-CB4D6D2B089B",
+        "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -261269,6 +261545,16 @@
       "centroidLongitude": 19.0646241,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -261313,6 +261599,9 @@
       "centroidLongitude": 19.0803511,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "8ED0B227-4601-512C-B2EF-39E41516A178"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -261356,6 +261645,16 @@
       "centroidLongitude": 19.06164,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "317D0A89-A54D-5660-BB7B-5F86FA570FF8"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -261400,6 +261699,16 @@
       "centroidLongitude": 19.1235958,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "27A4AA5E-D736-55B1-8259-78E4F39E0B12",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "12EB6CC9-1D6B-5239-AFE5-42A5404D3DDF",
+        "D4668703-90AD-5722-B366-B61F62810CB1",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -261443,6 +261752,16 @@
       "centroidLongitude": 19.0397733,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -261487,6 +261806,16 @@
       "centroidLongitude": 19.0596474,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "CB6AC72D-AF3A-51A0-9A74-CB4D6D2B089B",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -261530,6 +261859,16 @@
       "centroidLongitude": 19.0589936,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB",
+        "EB6F3FA7-857E-5F3C-814B-C96A76AD2219",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "43AB37E8-1948-5432-B52A-7CADF06CEF4C",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Market",
@@ -261574,6 +261913,16 @@
       "centroidLongitude": 19.0640029,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "75702E65-97C9-59DE-9163-B14B5A274B65",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -261617,6 +261966,16 @@
       "centroidLongitude": 19.0342109,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "43AB37E8-1948-5432-B52A-7CADF06CEF4C",
+        "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -261661,6 +262020,10 @@
       "centroidLongitude": 19.0818753,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "317D0A89-A54D-5660-BB7B-5F86FA570FF8",
+        "BB448AE2-E3E6-5C95-B381-439987100F92"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -261704,6 +262067,16 @@
       "centroidLongitude": 19.0491793,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -261748,6 +262121,9 @@
       "centroidLongitude": 19.0347212,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -261791,6 +262167,13 @@
       "centroidLongitude": 19.0341437,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "317D0A89-A54D-5660-BB7B-5F86FA570FF8",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "B5631277-742B-5686-B185-79A34432ED13",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -261834,6 +262217,16 @@
       "centroidLongitude": 19.0650758,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "7930383E-9ABF-5A00-8DF1-D60AD0104A56",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "E93072A5-8A63-5D76-8935-CF362AEA963B",
+        "B4A3B36F-6E5A-5830-A89C-53DA2DF25262"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -261877,6 +262270,15 @@
       "centroidLongitude": 18.9706551,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "0AEF9178-7A42-50E4-BC28-042A06DB1C17",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "3BA1A797-5FC3-5E45-9B1A-ED16BDF6011C"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -261920,6 +262322,16 @@
       "centroidLongitude": 19.0825223,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "F72F47FB-F06C-5F17-B723-50E49DF462F0",
+        "2B5B8402-E164-55B9-994B-E665328E77CD",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -261963,6 +262375,14 @@
       "centroidLongitude": 19.0707931,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -262006,6 +262426,16 @@
       "centroidLongitude": 19.0648989,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "F1BC4BAB-A5D7-5783-B6F2-46DE1E16B12E",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B",
+        "3BA1A797-5FC3-5E45-9B1A-ED16BDF6011C",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "8331C09E-A7F0-578C-BB89-39AC6E4AC6C1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -262050,6 +262480,11 @@
       "centroidLongitude": 19.0359332,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "75702E65-97C9-59DE-9163-B14B5A274B65",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "8C44FB2A-E6E9-5086-9A72-BB85562EDBC4"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Green Escape"
@@ -262093,6 +262528,16 @@
       "centroidLongitude": 19.0646184,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "84F52114-565A-5D57-927E-0E00C33D5E39",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "D092055B-6319-50D2-B291-1A9BBD18D1FB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -262136,6 +262581,16 @@
       "centroidLongitude": 19.0742258,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "CB6AC72D-AF3A-51A0-9A74-CB4D6D2B089B",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -262179,6 +262634,16 @@
       "centroidLongitude": 19.0670281,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "15C4DA37-9388-5E81-BBB2-B889F0A12148"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -262222,6 +262687,16 @@
       "centroidLongitude": 19.062451,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "EB6F3FA7-857E-5F3C-814B-C96A76AD2219"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum"
@@ -262265,6 +262740,16 @@
       "centroidLongitude": 19.068202,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "A2407528-9314-5F18-B5E9-71CAFAB28847",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
+        "6E682EA2-B07F-5505-B5FB-A74F9B7241EF",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -262309,6 +262794,16 @@
       "centroidLongitude": 19.0544434,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "A810958C-7F38-5EFB-8A2E-C863B99C327B",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "F1BC4BAB-A5D7-5783-B6F2-46DE1E16B12E",
+        "B4A3B36F-6E5A-5830-A89C-53DA2DF25262",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "15C4DA37-9388-5E81-BBB2-B889F0A12148"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -262353,6 +262848,15 @@
       "centroidLongitude": 19.0459186,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "37ADD14A-5DD3-5A25-91E1-A950695D7CB5",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "8C44FB2A-E6E9-5086-9A72-BB85562EDBC4",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F",
+        "3BA1A797-5FC3-5E45-9B1A-ED16BDF6011C",
+        "75702E65-97C9-59DE-9163-B14B5A274B65"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic"
@@ -262396,6 +262900,16 @@
       "centroidLongitude": 19.0624543,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "E7A05E7A-F3ED-5EB2-B81D-CC737FB5E73B"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -262440,6 +262954,16 @@
       "centroidLongitude": 19.0404506,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "43AB37E8-1948-5432-B52A-7CADF06CEF4C",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
+        "3CD6864C-85E9-5643-9584-E4DC6E4307EE",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "12971089-F2E7-56BA-92E6-F8A896DACCA1"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -262483,6 +263007,16 @@
       "centroidLongitude": 19.08305556,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "8B152F2F-B4B4-5115-B193-E04EB029130B",
+        "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
+        "9FF8ADC5-0E0A-5A95-AE62-7E555A8716C8",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -262613,6 +263147,9 @@
       "centroidLongitude": 6.9456632,
       "city": "Montreux",
       "country": "Switzerland",
+      "relatedTourIds": [
+        "CB48686C-1EE3-5B9B-A53F-E6145D0563E1"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -262657,6 +263194,9 @@
       "centroidLongitude": 6.9044235,
       "city": "Montreux",
       "country": "Switzerland",
+      "relatedTourIds": [
+        "6A6C898F-F58E-5B8E-B161-35286A710184"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food"
@@ -262743,6 +263283,16 @@
       "centroidLongitude": 19.0897591,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "537599D4-D46D-5830-BC96-EA3338E62CE9",
+        "0A326FE5-2356-5E03-B707-835067B5DA8D",
+        "B4A3B36F-6E5A-5830-A89C-53DA2DF25262",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "38DF0452-689A-5463-AEC8-D1DB7DE29E2A",
+        "E93072A5-8A63-5D76-8935-CF362AEA963B",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -262787,6 +263337,16 @@
       "centroidLongitude": 19.0320513,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "60177B27-992B-5CDA-9C6E-FF63375EC7ED",
+        "51904F6B-9B48-5CAA-9D3F-2FFBD016D242",
+        "977D1E69-32A3-524B-854D-D1ABD40070DE",
+        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "2D4E1DA3-D7B7-54EB-BE54-CD06EC6EC114",
+        "57A8B3B3-DDA0-54B0-9380-DCF68258F7BC",
+        "A56E5270-868B-5BAD-A732-AE4EEC28F31E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -262830,6 +263390,10 @@
       "centroidLongitude": 19.1022839,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "8E2327D9-D81F-5ECF-A025-A1FA5FFC723D",
+        "2D4E1DA3-D7B7-54EB-BE54-CD06EC6EC114"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
@@ -262873,6 +263437,16 @@
       "centroidLongitude": 19.0393469,
       "city": "Budapest",
       "country": "Hungary",
+      "relatedTourIds": [
+        "60177B27-992B-5CDA-9C6E-FF63375EC7ED",
+        "317D0A89-A54D-5660-BB7B-5F86FA570FF8",
+        "8ED0B227-4601-512C-B2EF-39E41516A178",
+        "8C44FB2A-E6E9-5086-9A72-BB85562EDBC4",
+        "419D5862-BD3D-5731-B74F-920E4C6F8753",
+        "26D135D8-A87C-55A0-BBAB-26C9C5BD46DB",
+        "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
+        "D18C69A5-9FE6-5D0B-9AE9-844843F3BA3F"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building"
