@@ -8175,8 +8175,8 @@
           "order": 0,
           "title": "Piscina das Marés",
           "caption": "Start at the entrance on Avenida da Liberdade — black wooden door at the top of the descending ramp.",
-          "latitude": 41.1929577598942,
-          "longitude": -8.70762830145992,
+          "latitude": 41.1930765,
+          "longitude": -8.7072863,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piscina-das-mares.mp3",
           "audioDurationSeconds": 141,
           "triggerMode": "manual",
@@ -8186,8 +8186,8 @@
         }
       ],
       "primaryCategory": "architecture",
-      "centroidLatitude": 41.1929577598942,
-      "centroidLongitude": -8.70762830145992,
+      "centroidLatitude": 41.1930765,
+      "centroidLongitude": -8.7072863,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "Álvaro Siza's tidal swimming pools at Leça da Palmeira, completed 1966 — two pools, one for adults and one for children, cut into the granite outcrop right at the edge of the Atlantic. The water in them is the same water as the ocean, because it is the ocean: pools fill with the tides and drain with them, no pipes or pumps involved, the sea doing the work through openings in the rock walls Siza designed to allow exactly the right exchange. The approach is choreographed in the same way as the Tea House at Boa Nova a few years earlier just up the coast — a descending ramp from Avenida da Liberdade where the concrete walls rise around you, the road disappears behind you, and the horizon drops away until all you can hear is the sea without yet seeing it. Where the concrete ends and the rock begins, the central architectural idea is the absence of a boundary: with no topographical survey of the site available, Siza came out and mapped every rock formation by hand before he drew anything, then designed the concrete walls to sit in the gaps between the outcrops rather than over them. The complex became a national monument in 2006 while continuing to operate as a public pool every summer — families, children, sandwiches on the terrace. Nobody is treating it like a monument.",
@@ -78632,8 +78632,8 @@
           "order": 0,
           "title": "Willis Tower",
           "caption": "The name on the building is Willis. Almost nobody who lives here says it.",
-          "latitude": 41.8786,
-          "longitude": -87.6376,
+          "latitude": 41.87861,
+          "longitude": -87.63583,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/willis-tower.mp3",
           "audioDurationSeconds": 119,
           "triggerMode": "geofenced",
@@ -78645,8 +78645,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 119,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8786,
-      "centroidLongitude": -87.6376,
+      "centroidLatitude": 41.87861,
+      "centroidLongitude": -87.63583,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
@@ -82276,8 +82276,8 @@
           "order": 0,
           "title": "Victor Churchill",
           "caption": "Somewhere behind that curved glass screen, a wall of Himalayan salt bricks is quietly ageing someone's dinner.",
-          "latitude": -37.855063313820665,
-          "longitude": 145.02003869112255,
+          "latitude": -37.85526,
+          "longitude": 145.020215,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/victor-churchill.mp3",
           "audioDurationSeconds": 124,
           "triggerMode": "geofenced",
@@ -82289,8 +82289,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 124,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -37.855063313820665,
-      "centroidLongitude": 145.02003869112255,
+      "centroidLatitude": -37.85526,
+      "centroidLongitude": 145.020215,
       "city": "Melbourne",
       "country": "Australia",
       "relatedTourIds": [
@@ -90035,11 +90035,11 @@
         "03023be8-eaa8-50c4-a879-27755a370487",
         "fd5f496b-16ee-56c4-83c2-0050cf4c8957",
         "4a2a2c6c-1274-5be4-b873-cfd4a18979ce",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "30cd96fc-8b3d-566a-bc88-f7d02f8873fb",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
-        "16729030-54d1-5d85-a169-262bbd7ccce8"
+        "248632A6-ECFC-59DD-8602-7D6FDE205900"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -100828,7 +100828,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "491C8A2D-F975-5C10-84FB-1F4459001177",
-        "AB267B0E-7169-52F0-8E39-9F0F0C520460"
+        "AB267B0E-7169-52F0-8E39-9F0F0C520460",
+        "A03FFA2D-6F9F-4BBD-9A32-43273D95D44C",
+        "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2"
       ]
     },
     {
@@ -101647,7 +101649,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "16729030-54d1-5d85-a169-262bbd7ccce8",
-        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE"
+        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
+        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
+        "248632A6-ECFC-59DD-8602-7D6FDE205900"
       ]
     },
     {
@@ -101834,7 +101838,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "32FDCB92-C076-5176-B18C-5AE7B3E1DCB9",
-        "D46229A3-1177-5B61-9FBB-EF9AA07E49B0"
+        "D46229A3-1177-5B61-9FBB-EF9AA07E49B0",
+        "74338039-7AA9-5073-A1E8-933576D8D0BE",
+        "9DBFEB11-F8D9-5507-8A3E-D9C5E81827C2"
       ]
     },
     {
@@ -105206,6 +105212,66 @@
       "tourIds": [
         "F7AEC12F-E226-50D8-8C79-04AA05683DBF",
         "96DDFBD2-B835-5B4E-9394-B7A0B9F2F370"
+      ]
+    },
+    {
+      "id": "a45c3aa9-f68e-5f42-9251-f08780d3579c",
+      "name": "Willis Tower",
+      "description": null,
+      "latitude": 41.87861,
+      "longitude": -87.63583,
+      "city": "Chicago",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
+      ]
+    },
+    {
+      "id": "fdb5f38d-688f-5809-8639-80ce310650f6",
+      "name": "150 North Riverside",
+      "description": null,
+      "latitude": 41.88511,
+      "longitude": -87.63867,
+      "city": "Chicago",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "651683A3-B3E5-5C32-9F81-D7F2523431F5",
+        "A946E2F8-D401-50AB-9BFF-69865A336F3B"
+      ]
+    },
+    {
+      "id": "26e1b2d1-ddb7-5f12-af94-be7248c65c01",
+      "name": "Victor Churchill",
+      "description": null,
+      "latitude": -37.85526,
+      "longitude": 145.020215,
+      "city": "Melbourne",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "20193c7e-ba9e-587b-89de-84b32d3b78c6",
+        "3A2AEB51-D089-5C26-9163-04E1D5845CDF"
+      ]
+    },
+    {
+      "id": "c67081f2-6237-5baf-af54-05a01cffe707",
+      "name": "Chez Alain Miam Miam",
+      "description": null,
+      "latitude": 48.8622884,
+      "longitude": 2.3620039,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "45DC77F1-CAA3-576E-9939-53908497459C",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5"
       ]
     }
   ],
@@ -120385,13 +120451,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "027561D7-DF07-55E6-9F06-E6147FCB8BA9",
         "EAD9A3AA-0BC3-5F2B-990A-FCB3D63E0653",
         "97E68647-734B-5394-818E-D19C7B638413",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "2A7C8EAA-6CF9-50DE-8FEC-D8E61B418F0F",
-        "B468E53C-5AA8-5C29-B047-499E7C7DC24D"
+        "B468E53C-5AA8-5C29-B047-499E7C7DC24D",
+        "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -133778,8 +133844,8 @@
           "order": 0,
           "title": "150 North Riverside",
           "caption": "This skyscraper appears to break the rules of gravity! 150 N Riverside is a 54 story high-rise in Downtown Chicago built at the confluence o",
-          "latitude": 41.8852889,
-          "longitude": -87.6384544,
+          "latitude": 41.88511,
+          "longitude": -87.63867,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -133791,8 +133857,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8852889,
-      "centroidLongitude": -87.6384544,
+      "centroidLatitude": 41.88511,
+      "centroidLongitude": -87.63867,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
@@ -136862,8 +136928,8 @@
           "order": 0,
           "title": "33 Thomas Street",
           "caption": "Have you noticed this mysterious buildng in Tribeca? #nychistory #tribeca #fbi #nyc #topsecret",
-          "latitude": 40.7168125,
-          "longitude": -74.0060625,
+          "latitude": 40.7165418,
+          "longitude": -74.0059177,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -136875,8 +136941,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7168125,
-      "centroidLongitude": -74.0060625,
+      "centroidLatitude": 40.7165418,
+      "centroidLongitude": -74.0059177,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -137330,10 +137396,10 @@
         "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
-        "8B00C9C0-030E-5343-AF6A-EFA27EE80605",
-        "aa04a89a-8231-54db-984b-198e33c14ffd"
+        "8B00C9C0-030E-5343-AF6A-EFA27EE80605"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137495,6 +137561,7 @@
       "relatedTourIds": [
         "5a1a7f28-59dd-58bd-896c-2ddcc346cb55",
         "A8025FB7-569E-5E7E-AB82-EE0509A49D28",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "B0074652-7C97-5474-8899-D66AD49295EB"
       ],
@@ -178601,10 +178668,10 @@
         "0401F573-1962-5BE6-B1F8-834FA3F4C1AC",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
         "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
-        "54bf1d1a-5468-578f-bbbf-13616836c322"
+        "54bf1d1a-5468-578f-bbbf-13616836c322",
+        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -204249,10 +204316,10 @@
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "21382EC3-24C6-547D-A3DA-7DF8FCAD4C54",
         "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
-        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "8B00C9C0-030E-5343-AF6A-EFA27EE80605"
+        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -206954,14 +207021,14 @@
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "9005F077-0DBF-5E22-BAE8-20CB3EDDA1CA",
         "78C02AE2-E103-5426-AA76-6827AEE246BA",
-        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
-        "ea0cf211-37a9-50db-b1f8-8d21176d4793"
+        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -224706,8 +224773,8 @@
           "order": 0,
           "title": "Chez Alain Miam Miam",
           "caption": "best sandwich ever. and chef called me a princess 💁🏻‍♀️😂 10/10 day lol 📍: @chezalainmiammiam 26 Rue Charlot, 75003 Paris, France 💶: ~ €11 pe",
-          "latitude": 48.8611184,
-          "longitude": 2.3605252,
+          "latitude": 48.8622884,
+          "longitude": 2.3620039,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -224719,8 +224786,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8611184,
-      "centroidLongitude": 2.3605252,
+      "centroidLatitude": 48.8622884,
+      "centroidLongitude": 2.3620039,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -228656,10 +228723,10 @@
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "21382EC3-24C6-547D-A3DA-7DF8FCAD4C54",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "248632A6-ECFC-59DD-8602-7D6FDE205900",
-        "A8025FB7-569E-5E7E-AB82-EE0509A49D28",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
+        "A8025FB7-569E-5E7E-AB82-EE0509A49D28"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -229217,8 +229284,8 @@
           "order": 0,
           "title": "Bosco Verticale",
           "caption": "Should more towers look like this? #architecture #design #fyp #milan",
-          "latitude": 45.4867373,
-          "longitude": 9.1912629,
+          "latitude": 45.485828,
+          "longitude": 9.19075,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -229230,8 +229297,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.4867373,
-      "centroidLongitude": 9.1912629,
+      "centroidLatitude": 45.485828,
+      "centroidLongitude": 9.19075,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
@@ -229242,7 +229309,7 @@
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "21382EC3-24C6-547D-A3DA-7DF8FCAD4C54",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
+        "D882F272-9734-59D1-8DD3-B662E591DED6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -229607,8 +229674,8 @@
         "B468E53C-5AA8-5C29-B047-499E7C7DC24D",
         "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
         "7F813653-AA6A-5EF6-8FBA-7D0FAC395101",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
-        "137146d0-0398-5074-8c5c-484d1244172d"
+        "137146d0-0398-5074-8c5c-484d1244172d",
+        "c9611436-6e6a-526c-ad3d-e34b9bfe6117"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -230982,7 +231049,8 @@
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "9005F077-0DBF-5E22-BAE8-20CB3EDDA1CA",
         "EDCCDA28-C3D5-54BD-8314-3D908EB8D814",
-        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE"
+        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
+        "D882F272-9734-59D1-8DD3-B662E591DED6"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -231236,7 +231304,7 @@
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
         "EDCCDA28-C3D5-54BD-8314-3D908EB8D814",
         "9005F077-0DBF-5E22-BAE8-20CB3EDDA1CA",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
+        "D882F272-9734-59D1-8DD3-B662E591DED6"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -237165,13 +237233,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "137146d0-0398-5074-8c5c-484d1244172d",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
         "595609f3-77f0-5c4e-8168-3ba0fd34b228",
         "c7d6db46-7c8a-59a3-92af-7f3429d719df",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
         "69d08739-f300-56b7-8c41-67f1e08b745b",
-        "675cff67-7f73-543a-8339-61b55d4a8ec8"
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -241693,8 +241761,8 @@
           "order": 0,
           "title": "Chez Alain Miam Miam",
           "caption": "Is this the best sandwich in Paris? 📍 @chezalainmiammiam , Paris #sandwich #sandwiches #paris #frenchbread #parisfood #cheese",
-          "latitude": 48.8627951,
-          "longitude": 2.361973,
+          "latitude": 48.8622884,
+          "longitude": 2.3620039,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -241706,8 +241774,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8627951,
-      "centroidLongitude": 2.361973,
+      "centroidLatitude": 48.8622884,
+      "centroidLongitude": 2.3620039,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -243668,8 +243736,8 @@
           "order": 0,
           "title": "Victor Churchill",
           "caption": "This is my favorite steakhouse in the world right now. 📍 @victorchurchill.melbourne , Australia #steakhouse #ribeye #butchershop #steak",
-          "latitude": -37.8552602,
-          "longitude": 145.0202154,
+          "latitude": -37.85526,
+          "longitude": 145.020215,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -243681,8 +243749,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -37.8552602,
-      "centroidLongitude": 145.0202154,
+      "centroidLatitude": -37.85526,
+      "centroidLongitude": 145.020215,
       "city": "Melbourne",
       "country": "Australia",
       "relatedTourIds": [
@@ -251008,8 +251076,8 @@
           "order": 0,
           "title": "Piscina das Marés",
           "caption": "Most people walking the Camino from Porto walk straight past this. A pool carved into the Atlantic coastline. Designed by Álvaro Siza in 196",
-          "latitude": 41.1928,
-          "longitude": -8.7075,
+          "latitude": 41.1930765,
+          "longitude": -8.7072863,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -251021,8 +251089,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.1928,
-      "centroidLongitude": -8.7075,
+      "centroidLatitude": 41.1930765,
+      "centroidLongitude": -8.7072863,
       "city": "Matosinhos",
       "country": "Portugal",
       "relatedTourIds": [
@@ -251971,7 +252039,7 @@
     {
       "id": "D882F272-9734-59D1-8DD3-B662E591DED6",
       "createdAt": "2026-09-16",
-      "title": "Vittoriano",
+      "title": "Torre Velasca",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Italy's Ugliest Building Became a National Monument😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -251988,8 +252056,8 @@
           "order": 0,
           "title": "Vittoriano",
           "caption": "Italy's Ugliest Building Became a National Monument😱",
-          "latitude": 41.8955,
-          "longitude": 12.4823,
+          "latitude": 45.45991,
+          "longitude": 9.19074,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252001,19 +252069,19 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8955,
-      "centroidLongitude": 12.4823,
-      "city": "Rome",
+      "centroidLatitude": 45.45991,
+      "centroidLongitude": 9.19074,
+      "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
-        "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
-        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
-        "A266DE94-CA58-536A-AE6A-FBCD39C359A4",
-        "04A23295-DC9A-527A-824F-038B0C4CF7A1",
-        "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
-        "137146d0-0398-5074-8c5c-484d1244172d",
-        "AF6C10CC-E6BA-5432-A413-B869ADD6396E",
-        "595609f3-77f0-5c4e-8168-3ba0fd34b228"
+        "66944438-2c5b-5f4a-9c58-0cd74c05c062",
+        "78C02AE2-E103-5426-AA76-6827AEE246BA",
+        "12FA3550-1C7E-523A-88D9-7E818937F3E5",
+        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
+        "248632A6-ECFC-59DD-8602-7D6FDE205900",
+        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
+        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
+        "aaa7a518-6a57-516d-83fc-7ad3f75324d9"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -252546,8 +252614,8 @@
           "order": 0,
           "title": "Bosco Verticale",
           "caption": "These Skyscrapers Are Covered in Real Plants 😳",
-          "latitude": 45.4841,
-          "longitude": 9.1919,
+          "latitude": 45.485828,
+          "longitude": 9.19075,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252559,8 +252627,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.4841,
-      "centroidLongitude": 9.1919,
+      "centroidLatitude": 45.485828,
+      "centroidLongitude": 9.19075,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
@@ -252569,9 +252637,9 @@
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "78C02AE2-E103-5426-AA76-6827AEE246BA",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
-        "342f8679-0906-5c61-a0ea-31a56b4309b0"
+        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254032,14 +254100,14 @@
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
+        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "4a2a2c6c-1274-5be4-b873-cfd4a18979ce",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "A8025FB7-569E-5E7E-AB82-EE0509A49D28",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
-        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE"
+        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254570,8 +254638,8 @@
           "order": 0,
           "title": "150 North Riverside",
           "caption": "How Is This Skyscraper Standing 😱",
-          "latitude": 41.8825427,
-          "longitude": -87.638745,
+          "latitude": 41.88511,
+          "longitude": -87.63867,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -254583,8 +254651,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8825427,
-      "centroidLongitude": -87.638745,
+      "centroidLatitude": 41.88511,
+      "centroidLongitude": -87.63867,
       "city": "Chicago",
       "country": "USA",
       "relatedTourIds": [
@@ -258999,8 +259067,8 @@
           "order": 0,
           "title": "Willis Tower",
           "caption": "Why Chicago Built this Tower So Tall 🤔",
-          "latitude": 41.8789,
-          "longitude": -87.6359,
+          "latitude": 41.87861,
+          "longitude": -87.63583,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -259012,8 +259080,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8789,
-      "centroidLongitude": -87.6359,
+      "centroidLatitude": 41.87861,
+      "centroidLongitude": -87.63583,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
