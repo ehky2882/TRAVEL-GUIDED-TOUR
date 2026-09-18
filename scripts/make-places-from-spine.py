@@ -222,6 +222,14 @@ def selftest():
     check("🔴 an owner-declined pairing is REFUSED", declined(luce) is not None)
     check("an ordinary pairing is not refused",
           declined(["The Shard", "The Shard"]) is None)
+    # Each of the three declined records is consulted, and each is tested
+    # against a REAL entry in it — a mutation test showed that checking only
+    # the pair list left the other two able to be deleted unnoticed.
+    a_group = sorted(_menu.DECLINED_GROUPS)[0]
+    check("🔴 a declined GROUP is refused", declined(list(a_group)) is not None)
+    an_entry = sorted(_menu.DECLINED)[0]
+    check("🔴 a declined ENTRY is refused",
+          declined([an_entry, "Something Else Entirely"]) is not None)
     check("the declined record is actually loaded, not an empty set",
           len(_menu.DECLINED_GROUPS) > 10 and len(_menu.DECLINED_PAIRS) > 0)
 
@@ -260,7 +268,32 @@ def selftest():
     check("an already-placed member is skipped",
           propose(cat3, cache, {})[0] == [])
 
-    total = 16
+    # 🔴 A place needs TWO members. validate-tours errors below that, and a
+    # one-member "place" renders a count badge reading "1".
+    solo = {"tours": [entry("s1", "Lone Tower", 1.0, 2.0)], "linkPins": [],
+            "places": []}
+    solo_cache = {"s1": {"candidates": [{"qid": "Q1", "label": "Lone Tower",
+                                         "lat": 1.0, "lon": 2.0,
+                                         "distance_m": 4.0, "sitelinks": 3}]}}
+    check("🔴 a single entry on an item proposes NOTHING",
+          propose(solo, solo_cache, {})[0] == [])
+
+    # 🔴 Only a CONFIRMED match may group. A far match means we are not sure
+    # the entry is even at that subject, so it cannot decide identity.
+    # ⚠️ The match sits in the REVIEW band (200 m), and `max_move_m` is raised
+    # so the move guard CANNOT also reject it. With both able to fire, deleting
+    # the band check changed nothing and this test passed against a mutant.
+    far = {"tours": [entry("f1", "Far Hall", 1.0, 2.0),
+                     entry("f2", "Far Hall", 1.0, 2.0)],
+           "linkPins": [], "places": []}
+    far_cache = {eid: {"candidates": [{"qid": "Q2", "label": "Far Hall",
+                                       "lat": 1.0018, "lon": 2.0,
+                                       "distance_m": 200.0, "sitelinks": 3}]}
+                 for eid in ("f1", "f2")}
+    check("🔴 an UNCONFIRMED match never groups, even when nothing else stops it",
+          propose(far, far_cache, {}, max_move_m=1000.0)[0] == [])
+
+    total = 20
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 

@@ -137,6 +137,38 @@ DECLINED_PAIRS = {
         "owner: keep the Red Room separate — One Wall Street is a different building",
     frozenset({"LACMA", "LACMA's David Geffen Galleries"}):
         "owner: all different — the pins were repaired instead",
+
+    # 🔴 THESE WERE DECIDED BY THE OWNER AND RECORDED ONLY IN PROSE.
+    # `docs/places.md` Rule 4 (a tenant is not the site) and its part-vs-whole
+    # section name each of them as declined, but none was ever written here —
+    # so every tool that reads this record, rather than the document, believed
+    # they were still open. That gap was found on 2026-09-18 by
+    # `make-places-from-spine.py`, whose whole safety argument is that it
+    # refuses what the owner has already refused: it proposed Bar Luce and
+    # Fondazione Prada as one place, and this record had nothing to stop it.
+    # A gazetteer cannot know that Bar Luce is a café INSIDE the foundation;
+    # it resolves both to the foundation and is correct on its own terms.
+    # ⚠️ Keyed by the EXACT catalogue title, taken from the catalogue rather
+    # than from the prose, because that is what a proposal carries.
+    frozenset({"Bar Luce at Fondazione Prada", "Fondazione Prada"}):
+        "owner: a restaurant inside a heritage compound is not the compound (Rule 4)",
+    frozenset({"Madame Fu", "Tai Kwun | 大館"}):
+        "owner: a restaurant inside a heritage compound is not the compound (Rule 4)",
+    frozenset({"Madame Fu", "The Public Spaces of Tai Kwun"}):
+        "owner: a restaurant inside a heritage compound is not the compound (Rule 4)",
+    frozenset({"Bakehouse at Victoria Peak", "Victoria Peak | 太平山頂"}):
+        "owner: a tenant is not the site (Rule 4)",
+    frozenset({"Big Ben", "Houses of Parliament and Big Ben"}):
+        "owner: declined as part-vs-whole",
+    frozenset({"The Channel Gardens", "Rockefeller Center"}):
+        "owner: declined as part-vs-whole",
+    frozenset({"Keith Haring's Carmine Street Mural",
+               "Tony Dapolito Recreation Center"}):
+        "owner: declined as part-vs-whole",
+    frozenset({"The Blue Ribbon Garden", "Walt Disney Concert Hall"}):
+        "owner: declined as part-vs-whole",
+    frozenset({"11 Hoyt", "Hoyt–Schermerhorn Streets Station"}):
+        "owner: declined as part-vs-whole",
 }
 
 

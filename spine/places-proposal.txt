@@ -1,0 +1,79 @@
+RUN make-places-from-spine.py · rev 975b3894 · 2026-09-18T13:11:43Z · args: --out spine/places-proposal.txt
+23 place(s) to create · 125 skipped
+
+  3x  The Shard                          London         move<=16 m
+        · The Shard
+        · The Shard
+        · The Shard
+  3x  56 Leonard Street                  New York       move<=39 m
+        · 56 Leonard Street
+        · The Bean at 56 Leonard
+        · 56 Leonard Street (Jenga Building)
+  2x  Yoyogi National Gymnasium          Tokyo          move<=45 m
+        · Yoyogi National Stadium | 国立代々木競技場 第一体育館
+        · Yoyogi National Gymnasium
+  2x  Toei Kyoto Studio Park             Kyoto          move<=27 m
+        · Uzumasa Kyoto Village | 太秦映画村
+        · Toei Kyoto Studio Park (Uzumasa)
+  2x  One World Trade Center             New York       move<=34 m
+        · One World Trade Center
+        · One World Trade Center
+  2x  Chrysler Building                  New York       move<=47 m
+        · Chrysler Building
+        · Chrysler Building
+  2x  Burj Khalifa                       Dubai          move<=24 m
+        · Burj Khalifa
+        · Burj Khalifa
+  2x  Guggenheim Museum Bilbao           Bilbao         move<=48 m
+        · Guggenheim Bilbao
+        · Guggenheim Museum Bilbao
+  2x  Lake Point Tower                   Chicago        move<=86 m
+        · Lake Point Tower
+        · Lake Point Tower
+  2x  30 St Mary Axe                     London         move<=5 m
+        · The Gherkin
+        · The Gherkin
+  2x  20 Fenchurch Street                London         move<=1 m
+        · 20 Fenchurch Street (The Walkie Talkie)
+        · 20 Fenchurch Street (Walkie-Talkie)
+  2x  Transamerica Pyramid               San Francisco  move<=9 m
+        · Transamerica Pyramid
+        · Transamerica Pyramid
+  2x  432 Park Avenue                    New York       move<=7 m
+        · 432 Park Avenue
+        · 432 Park Avenue
+  2x  Rio de Janeiro Cathedral           Rio de Janeiro move<=52 m
+        · Catedral Metropolitana
+        · Catedral Metropolitana de São Sebastião
+  2x  Absolute World                     Mississauga    move<=41 m
+        · Absolute World Towers
+        · Absolute World
+  2x  Leaning Tower of Pisa              Pisa           move<=1 m
+        · The Leaning Tower of Pisa
+        · Leaning Tower of Pisa
+  2x  MetLife Building                   New York       move<=32 m
+        · MetLife Building
+        · MetLife Building (200 Park Avenue)
+  2x  MOL Campus                         Budapest       move<=37 m
+        · MOL Campus
+        · MOL Campus
+  2x  One Yonge Street                   Toronto        move<=14 m
+        · The Architecture of One Yonge
+        · One Yonge Street
+  2x  Petronas Towers                    Kuala Lumpur   move<=55 m
+        · Petronas Twin Towers
+        · Petronas Towers
+  2x  Hearst Tower                       New York       move<=15 m
+        · Hearst Tower
+        · Hearst Tower
+  2x  Casa da Música                     Porto          move<=67 m
+        · Casa da Música
+        · Casa da Música
+  2x  Philharmonie Luxembourg            Luxembourg     move<=31 m
+        · Philharmonie Luxembourg
+        · Philharmonie Luxembourg
+
+🔴 REFUSED — the owner has already decided these:
+  Fondazione Prada                   REFUSED — an owner-declined pair
+
+(proposal only — pass --apply to write them)
