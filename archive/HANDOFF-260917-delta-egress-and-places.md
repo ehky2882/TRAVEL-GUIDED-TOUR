@@ -202,8 +202,10 @@ API via `curl` with `$GH_TOKEN` works, and needs an explicit `Content-Type: appl
 
 1. 🔴 **Lower `foregroundRefreshInterval` once 1.1.3 ships.** This is the real answer to the
    owner's refresh question; the rename is cosmetic beside it.
-2. **#984/#986 are not on any device.** They ship with the next TestFlight build. Owner OK was
-   given for the merge, not for a build.
+2. ~~**#984/#986 are not on any device.**~~ ✅ **CLOSED 2026-09-18** — the owner built from `main`
+   and confirmed it end to end: the row shows **"Checking…"** while the refresh runs and **Updated**
+   reads **"just now"** afterwards. That was the only claim in #984 with compiler evidence and no
+   eyes on it.
 3. **1.1.3 itself — owner said explicitly "DONT START ON 1.1.3".** Do not.
 4. **`status/owner/auto-created-places.md`** — the owner's decision on minting places in bulk.
    Gates section A1 of `docs/scaling-to-100k-design.md`. ⚠️ Its "invisible pins" evidence is

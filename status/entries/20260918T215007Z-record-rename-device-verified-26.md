@@ -1,0 +1,3 @@
+# DEVICE-VERIFIED (owner, 2026-09-18, own build from main): Settings 'Check for new content' (#984/#986) works end to end — the row shows Checking… while the refresh runs and the Updated row in About reads 'just now' afterwards. That closes the only claim in #984 that had compiler evidence but no eyes on it. The label, icon and footer were confirmed first; this adds the in-flight state and the proof-of-effect. STILL OPEN and unaffected: the button is a repair hatch, and the actual fix is lowering DataService.foregroundRefreshInterval (900s) once 1.1.3 ships delta fetching.
+
+_2026-09-18 21:50 UTC · branch `record-rename-device-verified-26`_
