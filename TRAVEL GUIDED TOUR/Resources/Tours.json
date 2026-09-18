@@ -82276,8 +82276,8 @@
           "order": 0,
           "title": "Victor Churchill",
           "caption": "Somewhere behind that curved glass screen, a wall of Himalayan salt bricks is quietly ageing someone's dinner.",
-          "latitude": -37.855063313820665,
-          "longitude": 145.02003869112255,
+          "latitude": -37.85526,
+          "longitude": 145.020215,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/victor-churchill.mp3",
           "audioDurationSeconds": 124,
           "triggerMode": "geofenced",
@@ -82289,8 +82289,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 124,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -37.855063313820665,
-      "centroidLongitude": 145.02003869112255,
+      "centroidLatitude": -37.85526,
+      "centroidLongitude": 145.020215,
       "city": "Melbourne",
       "country": "Australia",
       "relatedTourIds": [
@@ -105243,6 +105243,36 @@
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
         "A946E2F8-D401-50AB-9BFF-69865A336F3B"
       ]
+    },
+    {
+      "id": "26e1b2d1-ddb7-5f12-af94-be7248c65c01",
+      "name": "Victor Churchill",
+      "description": null,
+      "latitude": -37.85526,
+      "longitude": 145.020215,
+      "city": "Melbourne",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "20193c7e-ba9e-587b-89de-84b32d3b78c6",
+        "3A2AEB51-D089-5C26-9163-04E1D5845CDF"
+      ]
+    },
+    {
+      "id": "c67081f2-6237-5baf-af54-05a01cffe707",
+      "name": "Chez Alain Miam Miam",
+      "description": null,
+      "latitude": 48.8622884,
+      "longitude": 2.3620039,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "45DC77F1-CAA3-576E-9939-53908497459C",
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5"
+      ]
     }
   ],
   "linkPins": [
@@ -120421,7 +120451,6 @@
       "country": "Italy",
       "relatedTourIds": [
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "027561D7-DF07-55E6-9F06-E6147FCB8BA9",
         "EAD9A3AA-0BC3-5F2B-990A-FCB3D63E0653",
         "97E68647-734B-5394-818E-D19C7B638413",
@@ -178637,7 +178666,6 @@
         "0401F573-1962-5BE6-B1F8-834FA3F4C1AC",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
         "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
         "54bf1d1a-5468-578f-bbbf-13616836c322"
@@ -224742,8 +224770,8 @@
           "order": 0,
           "title": "Chez Alain Miam Miam",
           "caption": "best sandwich ever. and chef called me a princess 💁🏻‍♀️😂 10/10 day lol 📍: @chezalainmiammiam 26 Rue Charlot, 75003 Paris, France 💶: ~ €11 pe",
-          "latitude": 48.8611184,
-          "longitude": 2.3605252,
+          "latitude": 48.8622884,
+          "longitude": 2.3620039,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -224755,8 +224783,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8611184,
-      "centroidLongitude": 2.3605252,
+      "centroidLatitude": 48.8622884,
+      "centroidLongitude": 2.3620039,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -229643,7 +229671,6 @@
         "B468E53C-5AA8-5C29-B047-499E7C7DC24D",
         "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
         "7F813653-AA6A-5EF6-8FBA-7D0FAC395101",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "137146d0-0398-5074-8c5c-484d1244172d"
       ],
       "primaryCategory": "history",
@@ -237201,7 +237228,6 @@
       "country": "Italy",
       "relatedTourIds": [
         "137146d0-0398-5074-8c5c-484d1244172d",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
         "595609f3-77f0-5c4e-8168-3ba0fd34b228",
         "c7d6db46-7c8a-59a3-92af-7f3429d719df",
@@ -241729,8 +241755,8 @@
           "order": 0,
           "title": "Chez Alain Miam Miam",
           "caption": "Is this the best sandwich in Paris? 📍 @chezalainmiammiam , Paris #sandwich #sandwiches #paris #frenchbread #parisfood #cheese",
-          "latitude": 48.8627951,
-          "longitude": 2.361973,
+          "latitude": 48.8622884,
+          "longitude": 2.3620039,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -241742,8 +241768,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8627951,
-      "centroidLongitude": 2.361973,
+      "centroidLatitude": 48.8622884,
+      "centroidLongitude": 2.3620039,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -243704,8 +243730,8 @@
           "order": 0,
           "title": "Victor Churchill",
           "caption": "This is my favorite steakhouse in the world right now. 📍 @victorchurchill.melbourne , Australia #steakhouse #ribeye #butchershop #steak",
-          "latitude": -37.8552602,
-          "longitude": 145.0202154,
+          "latitude": -37.85526,
+          "longitude": 145.020215,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -243717,8 +243743,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -37.8552602,
-      "centroidLongitude": 145.0202154,
+      "centroidLatitude": -37.85526,
+      "centroidLongitude": 145.020215,
       "city": "Melbourne",
       "country": "Australia",
       "relatedTourIds": [
@@ -252007,7 +252033,7 @@
     {
       "id": "D882F272-9734-59D1-8DD3-B662E591DED6",
       "createdAt": "2026-09-16",
-      "title": "Vittoriano",
+      "title": "Torre Velasca",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Italy's Ugliest Building Became a National Monument😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -252024,8 +252050,8 @@
           "order": 0,
           "title": "Vittoriano",
           "caption": "Italy's Ugliest Building Became a National Monument😱",
-          "latitude": 41.8955,
-          "longitude": 12.4823,
+          "latitude": 45.45991,
+          "longitude": 9.19074,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252037,20 +252063,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8955,
-      "centroidLongitude": 12.4823,
-      "city": "Rome",
+      "centroidLatitude": 45.45991,
+      "centroidLongitude": 9.19074,
+      "city": "Milan",
       "country": "Italy",
-      "relatedTourIds": [
-        "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
-        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
-        "A266DE94-CA58-536A-AE6A-FBCD39C359A4",
-        "04A23295-DC9A-527A-824F-038B0C4CF7A1",
-        "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
-        "137146d0-0398-5074-8c5c-484d1244172d",
-        "AF6C10CC-E6BA-5432-A413-B869ADD6396E",
-        "595609f3-77f0-5c4e-8168-3ba0fd34b228"
-      ],
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Monument",
