@@ -1990,3 +1990,53 @@ somewhere, so tapping the bookmark a second time **opens the list sheet rather
 than re-saving**. Testing the Liked path therefore needs a tour that is
 currently saved nowhere — otherwise the tap files it into a named list and the
 Liked path is never exercised at all.
+
+## A guard is only as complete as the record it reads (2026-09-18)
+
+Auto-creating places needed one safety property: never mint a pairing the owner
+has already declined. The check consulted `make-place-menu.py`'s `DECLINED`,
+`DECLINED_GROUPS` and `DECLINED_PAIRS`, and on its first real run it **failed**
+on *Bar Luce at Fondazione Prada* — declined under Rule 4, a tenant is not the
+site.
+
+**The code was correct. The data was missing.** That decision and **eight
+others existed only as prose in `docs/places.md`** and had never been written
+into the machine-readable record. Every tool that read the record rather than
+the document believed nine owner decisions were still open.
+
+🔴 **A decision recorded only in prose is not a decision any tool can honour.**
+When a rule is written down for humans and separately encoded for scripts, the
+two drift, and the drift is invisible until something tries to act on it. Before
+automating anything that must respect past decisions, **diff the prose against
+the encoding** — do not assume the encoding is the prose.
+
+⚠️ And the direction of the risk is the wrong way round from intuition: **a
+signal that fires more often makes an incomplete record more dangerous, not
+less.** Widening what a tool can decide raises the cost of every gap in what it
+has been told not to decide.
+
+## Proof must drive the grouping, not follow it (2026-09-18)
+
+Grouping catalogue entries into places by "cluster on proximity, then test
+whether the cluster is really one venue" has a failure mode that no amount of
+threshold-tuning reaches: **an arbitrary anchor decides the outcome.**
+
+Measured: **Saigon Social** — a different restaurant — absorbed **Una Pizza
+Napoletana** 23.8 m away. That pair then correctly failed the proof test, so
+nothing was minted, which looks like the guard working. But Una Pizza had been
+**consumed** by the rejected cluster, so its true partner — its own caption pin
+12.4 m off, naming `@unapizzanapoletana` — never formed a group at all.
+
+🔴 **A wrong anchor silently destroyed a right answer**, and the only visible
+symptom was an absence. Testing candidate PAIRS first and unioning the ones that
+pass cannot do it: Saigon Social and Una Pizza never pair, so Una Pizza stays
+free.
+
+**The general rule: when a cheap filter and an expensive test are combined, the
+filter must only ever narrow the search, never decide membership.** If the
+filter can consume a candidate, it can veto the test's correct answer.
+
+⚠️ Related, and easy to get backwards: **exact coordinate equality is not the
+same as zero distance.** Kossar's sits 0.0 m from its caption pin *by distance*
+while the two stored coordinates differ below a centimetre, so an equality
+bucket filed them apart. Cluster on the distance you actually mean.
