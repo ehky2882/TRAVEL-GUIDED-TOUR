@@ -101342,7 +101342,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44",
-        "6F5BB18A-7321-5B23-B3C0-08BAD7BF7BE7"
+        "6F5BB18A-7321-5B23-B3C0-08BAD7BF7BE7",
+        "1498F951-C96B-5A63-B76C-543B0DAA488F"
       ]
     },
     {
@@ -101698,7 +101699,8 @@
       "tourIds": [
         "4e86f35d-f610-5cee-9645-d417cf1c0247",
         "89C1369E-1A00-507C-8C67-912F59CAE368",
-        "929C2E6E-3A98-5953-AA1B-6E0355172533"
+        "929C2E6E-3A98-5953-AA1B-6E0355172533",
+        "FCFD1EE7-004A-59E9-AEFC-D614D9D5415F"
       ]
     },
     {
@@ -102078,7 +102080,8 @@
       "tourIds": [
         "f71ced9c-bd9a-45da-a39c-74869ce8db65",
         "FA8DC5F0-1A0D-535D-B137-9943E8701DA2",
-        "1E9B33C8-A4FE-5A2B-93B6-19200A7E60A9"
+        "1E9B33C8-A4FE-5A2B-93B6-19200A7E60A9",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE"
       ]
     },
     {
@@ -102108,7 +102111,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "01EF9E24-B23D-5B66-80D2-61335FA52C99",
-        "bd4d95e6-403e-4b9b-a894-efbc205668a5"
+        "bd4d95e6-403e-4b9b-a894-efbc205668a5",
+        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D"
       ]
     },
     {
@@ -102850,7 +102854,8 @@
         "0BCE4F3F-3998-54A5-B27F-B4D2E476A2F9",
         "31132AE9-CD33-5DAE-859B-02AC1AB85166",
         "285885D8-4650-5433-9EC3-C31B301A8704",
-        "FE86358F-A339-5D28-97E6-608D035122A7"
+        "FE86358F-A339-5D28-97E6-608D035122A7",
+        "6EB67F82-506E-58E6-817E-782D9B665F42"
       ]
     },
     {
@@ -103022,7 +103027,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "0FB132C0-9F5B-52BC-98AA-1B5741B32B00",
-        "0c99c91e-e39b-5c28-98c1-b3186c325122"
+        "0c99c91e-e39b-5c28-98c1-b3186c325122",
+        "3851D982-58C7-5840-89C4-DB748835B989"
       ]
     },
     {
@@ -103441,7 +103447,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "675cff67-7f73-543a-8339-61b55d4a8ec8",
-        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2"
+        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2",
+        "EAD9A3AA-0BC3-5F2B-990A-FCB3D63E0653"
       ]
     },
     {
@@ -103819,7 +103826,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "29C7C3C4-908D-5F45-B575-952465D9F42C",
-        "65E95374-8E2E-5DDA-B2B6-526518BEF1F0"
+        "65E95374-8E2E-5DDA-B2B6-526518BEF1F0",
+        "AB299A85-E7B0-5D65-BDF2-F59D39ADA1F1"
       ]
     },
     {
@@ -103956,7 +103964,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "2AAEFBE6-C682-5C6D-9473-2AA5447C4A06",
-        "b344b334-4402-55c1-808a-a192e52effc7"
+        "b344b334-4402-55c1-808a-a192e52effc7",
+        "DC1A8FF9-868F-58C5-B2FB-1B7544DF6F73"
       ]
     },
     {
@@ -104574,7 +104583,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
-        "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD"
+        "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD",
+        "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4"
       ]
     },
     {
@@ -204397,8 +204407,8 @@
           "order": 0,
           "title": "Piazza del Popolo",
           "caption": "Piazza del Popolo is one of the most famous squares in Rome and It has a very strange secret. Find out what it is. #blessedarch #architectur",
-          "latitude": 41.9107477,
-          "longitude": 12.4763594,
+          "latitude": 41.9109,
+          "longitude": 12.4763,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -204410,8 +204420,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.9107477,
-      "centroidLongitude": 12.4763594,
+      "centroidLatitude": 41.9109,
+      "centroidLongitude": 12.4763,
       "city": "Rome",
       "country": "Italy",
       "relatedTourIds": [
@@ -228962,8 +228972,8 @@
           "order": 0,
           "title": "Habitat 67",
           "caption": "How do you like this concrete concept? #fyp #architecture #design #brutalism",
-          "latitude": 45.4998779,
-          "longitude": -73.5437925,
+          "latitude": 45.499813,
+          "longitude": -73.543688,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -228975,8 +228985,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.4998779,
-      "centroidLongitude": -73.5437925,
+      "centroidLatitude": 45.499813,
+      "centroidLongitude": -73.543688,
       "city": "Montreal",
       "country": "Canada",
       "relatedTourIds": [
@@ -230077,8 +230087,8 @@
           "order": 0,
           "title": "Centre Pompidou",
           "caption": "Do you love it or hate it? #fyp #architecture #design #paris",
-          "latitude": 48.8604964,
-          "longitude": 2.3524221,
+          "latitude": 48.860642,
+          "longitude": 2.352245,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -230090,8 +230100,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8604964,
-      "centroidLongitude": 2.3524221,
+      "centroidLatitude": 48.860642,
+      "centroidLongitude": 2.352245,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -252264,8 +252274,8 @@
           "order": 0,
           "title": "Hollywood Sign",
           "caption": "The Hollywood Sign Used to Say THIS 😳",
-          "latitude": 34.1341,
-          "longitude": -118.3215,
+          "latitude": 34.1340991,
+          "longitude": -118.321652,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252277,8 +252287,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.1341,
-      "centroidLongitude": -118.3215,
+      "centroidLatitude": 34.1340991,
+      "centroidLongitude": -118.321652,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -252421,8 +252431,8 @@
           "order": 0,
           "title": "Empire State Building",
           "caption": "Empire State Building’s Original Design😱",
-          "latitude": 40.7484,
-          "longitude": -73.9857,
+          "latitude": 40.748442,
+          "longitude": -73.985659,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252434,8 +252444,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7484,
-      "centroidLongitude": -73.9857,
+      "centroidLatitude": 40.748442,
+      "centroidLongitude": -73.985659,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -252930,8 +252940,8 @@
           "order": 0,
           "title": "Washington Monument",
           "caption": "Washington Monument Almost Looked Like This 😳",
-          "latitude": 38.8895,
-          "longitude": -77.0353,
+          "latitude": 38.8894375,
+          "longitude": -77.0353125,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252943,8 +252953,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 38.8895,
-      "centroidLongitude": -77.0353,
+      "centroidLatitude": 38.8894375,
+      "centroidLongitude": -77.0353125,
       "city": "Washington, D.C.",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -253686,8 +253696,8 @@
           "order": 0,
           "title": "Flatiron Building",
           "caption": "This Building Had an Unexpected Problem 😨 #newyork #flatironbuilding",
-          "latitude": 40.7410592,
-          "longitude": -73.9896416,
+          "latitude": 40.7409,
+          "longitude": -73.9896,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -253699,8 +253709,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7410592,
-      "centroidLongitude": -73.9896416,
+      "centroidLatitude": 40.7409,
+      "centroidLongitude": -73.9896,
       "city": "New York",
       "country": "USA",
       "relatedTourIds": [
@@ -256524,7 +256534,7 @@
           "order": 0,
           "title": "United Nations Headquarters",
           "caption": "This Building in NYC Belongs to the Entire World",
-          "latitude": 40.7496292,
+          "latitude": 40.749629,
           "longitude": -73.96739,
           "audioURL": "",
           "audioDurationSeconds": 0,
@@ -256537,7 +256547,7 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7496292,
+      "centroidLatitude": 40.749629,
       "centroidLongitude": -73.96739,
       "city": "New York",
       "country": "USA",
