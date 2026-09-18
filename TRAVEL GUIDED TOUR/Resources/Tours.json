@@ -8175,8 +8175,8 @@
           "order": 0,
           "title": "Piscina das Marés",
           "caption": "Start at the entrance on Avenida da Liberdade — black wooden door at the top of the descending ramp.",
-          "latitude": 41.1929577598942,
-          "longitude": -8.70762830145992,
+          "latitude": 41.1930765,
+          "longitude": -8.7072863,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piscina-das-mares.mp3",
           "audioDurationSeconds": 141,
           "triggerMode": "manual",
@@ -8186,8 +8186,8 @@
         }
       ],
       "primaryCategory": "architecture",
-      "centroidLatitude": 41.1929577598942,
-      "centroidLongitude": -8.70762830145992,
+      "centroidLatitude": 41.1930765,
+      "centroidLongitude": -8.7072863,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "Álvaro Siza's tidal swimming pools at Leça da Palmeira, completed 1966 — two pools, one for adults and one for children, cut into the granite outcrop right at the edge of the Atlantic. The water in them is the same water as the ocean, because it is the ocean: pools fill with the tides and drain with them, no pipes or pumps involved, the sea doing the work through openings in the rock walls Siza designed to allow exactly the right exchange. The approach is choreographed in the same way as the Tea House at Boa Nova a few years earlier just up the coast — a descending ramp from Avenida da Liberdade where the concrete walls rise around you, the road disappears behind you, and the horizon drops away until all you can hear is the sea without yet seeing it. Where the concrete ends and the rock begins, the central architectural idea is the absence of a boundary: with no topographical survey of the site available, Siza came out and mapped every rock formation by hand before he drew anything, then designed the concrete walls to sit in the gaps between the outcrops rather than over them. The complex became a national monument in 2006 while continuing to operate as a public pool every summer — families, children, sandwiches on the terrace. Nobody is treating it like a monument.",
@@ -78632,8 +78632,8 @@
           "order": 0,
           "title": "Willis Tower",
           "caption": "The name on the building is Willis. Almost nobody who lives here says it.",
-          "latitude": 41.8786,
-          "longitude": -87.6376,
+          "latitude": 41.87861,
+          "longitude": -87.63583,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/willis-tower.mp3",
           "audioDurationSeconds": 119,
           "triggerMode": "geofenced",
@@ -78645,8 +78645,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 119,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8786,
-      "centroidLongitude": -87.6376,
+      "centroidLatitude": 41.87861,
+      "centroidLongitude": -87.63583,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
@@ -100828,7 +100828,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "491C8A2D-F975-5C10-84FB-1F4459001177",
-        "AB267B0E-7169-52F0-8E39-9F0F0C520460"
+        "AB267B0E-7169-52F0-8E39-9F0F0C520460",
+        "A03FFA2D-6F9F-4BBD-9A32-43273D95D44C",
+        "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2"
       ]
     },
     {
@@ -101647,7 +101649,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "16729030-54d1-5d85-a169-262bbd7ccce8",
-        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE"
+        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
+        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
+        "248632A6-ECFC-59DD-8602-7D6FDE205900"
       ]
     },
     {
@@ -101834,7 +101838,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "32FDCB92-C076-5176-B18C-5AE7B3E1DCB9",
-        "D46229A3-1177-5B61-9FBB-EF9AA07E49B0"
+        "D46229A3-1177-5B61-9FBB-EF9AA07E49B0",
+        "74338039-7AA9-5073-A1E8-933576D8D0BE",
+        "9DBFEB11-F8D9-5507-8A3E-D9C5E81827C2"
       ]
     },
     {
@@ -105206,6 +105212,36 @@
       "tourIds": [
         "F7AEC12F-E226-50D8-8C79-04AA05683DBF",
         "96DDFBD2-B835-5B4E-9394-B7A0B9F2F370"
+      ]
+    },
+    {
+      "id": "a45c3aa9-f68e-5f42-9251-f08780d3579c",
+      "name": "Willis Tower",
+      "description": null,
+      "latitude": 41.87861,
+      "longitude": -87.63583,
+      "city": "Chicago",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
+      ]
+    },
+    {
+      "id": "fdb5f38d-688f-5809-8639-80ce310650f6",
+      "name": "150 North Riverside",
+      "description": null,
+      "latitude": 41.88511,
+      "longitude": -87.63867,
+      "city": "Chicago",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "651683A3-B3E5-5C32-9F81-D7F2523431F5",
+        "A946E2F8-D401-50AB-9BFF-69865A336F3B"
       ]
     }
   ],
@@ -133778,8 +133814,8 @@
           "order": 0,
           "title": "150 North Riverside",
           "caption": "This skyscraper appears to break the rules of gravity! 150 N Riverside is a 54 story high-rise in Downtown Chicago built at the confluence o",
-          "latitude": 41.8852889,
-          "longitude": -87.6384544,
+          "latitude": 41.88511,
+          "longitude": -87.63867,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -133791,8 +133827,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8852889,
-      "centroidLongitude": -87.6384544,
+      "centroidLatitude": 41.88511,
+      "centroidLongitude": -87.63867,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
@@ -136862,8 +136898,8 @@
           "order": 0,
           "title": "33 Thomas Street",
           "caption": "Have you noticed this mysterious buildng in Tribeca? #nychistory #tribeca #fbi #nyc #topsecret",
-          "latitude": 40.7168125,
-          "longitude": -74.0060625,
+          "latitude": 40.7165418,
+          "longitude": -74.0059177,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -136875,8 +136911,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7168125,
-      "centroidLongitude": -74.0060625,
+      "centroidLatitude": 40.7165418,
+      "centroidLongitude": -74.0059177,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -229217,8 +229253,8 @@
           "order": 0,
           "title": "Bosco Verticale",
           "caption": "Should more towers look like this? #architecture #design #fyp #milan",
-          "latitude": 45.4867373,
-          "longitude": 9.1912629,
+          "latitude": 45.485828,
+          "longitude": 9.19075,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -229230,8 +229266,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.4867373,
-      "centroidLongitude": 9.1912629,
+      "centroidLatitude": 45.485828,
+      "centroidLongitude": 9.19075,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
@@ -251008,8 +251044,8 @@
           "order": 0,
           "title": "Piscina das Marés",
           "caption": "Most people walking the Camino from Porto walk straight past this. A pool carved into the Atlantic coastline. Designed by Álvaro Siza in 196",
-          "latitude": 41.1928,
-          "longitude": -8.7075,
+          "latitude": 41.1930765,
+          "longitude": -8.7072863,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -251021,8 +251057,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.1928,
-      "centroidLongitude": -8.7075,
+      "centroidLatitude": 41.1930765,
+      "centroidLongitude": -8.7072863,
       "city": "Matosinhos",
       "country": "Portugal",
       "relatedTourIds": [
@@ -252546,8 +252582,8 @@
           "order": 0,
           "title": "Bosco Verticale",
           "caption": "These Skyscrapers Are Covered in Real Plants 😳",
-          "latitude": 45.4841,
-          "longitude": 9.1919,
+          "latitude": 45.485828,
+          "longitude": 9.19075,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252559,8 +252595,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.4841,
-      "centroidLongitude": 9.1919,
+      "centroidLatitude": 45.485828,
+      "centroidLongitude": 9.19075,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
@@ -254570,8 +254606,8 @@
           "order": 0,
           "title": "150 North Riverside",
           "caption": "How Is This Skyscraper Standing 😱",
-          "latitude": 41.8825427,
-          "longitude": -87.638745,
+          "latitude": 41.88511,
+          "longitude": -87.63867,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -254583,8 +254619,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8825427,
-      "centroidLongitude": -87.638745,
+      "centroidLatitude": 41.88511,
+      "centroidLongitude": -87.63867,
       "city": "Chicago",
       "country": "USA",
       "relatedTourIds": [
@@ -258999,8 +259035,8 @@
           "order": 0,
           "title": "Willis Tower",
           "caption": "Why Chicago Built this Tower So Tall 🤔",
-          "latitude": 41.8789,
-          "longitude": -87.6359,
+          "latitude": 41.87861,
+          "longitude": -87.63583,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -259012,8 +259048,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8789,
-      "centroidLongitude": -87.6359,
+      "centroidLatitude": 41.87861,
+      "centroidLongitude": -87.63583,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
