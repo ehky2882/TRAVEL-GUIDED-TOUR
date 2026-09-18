@@ -134,6 +134,26 @@ def uncorroborated(catalog):
     return out
 
 
+def by_creator(catalog, pins, needle):
+    """Pins by one creator, matched on the creator's own handle.
+
+    ⚠️ Matched against `sourceAuthor` and the maker's `handle` — NOT against a
+    substring of the whole record, which would sweep in any pin whose caption
+    happened to mention them.
+    """
+    want = needle.strip().lstrip("@").lower()
+    if not want:
+        return pins
+    makers = {m["id"]: (m.get("handle") or "").strip().lstrip("@").lower()
+              for m in (catalog.get("makers") or [])}
+    out = []
+    for pin in pins:
+        author = (pin.get("sourceAuthor") or "").strip().lstrip("@").lower()
+        if author == want or makers.get(pin.get("makerId")) == want:
+            out.append(pin)
+    return out
+
+
 def gate_a_prompt():
     return (
         "Does this image show ONE specific, identifiable real-world PLACE — a "
@@ -333,6 +353,24 @@ def selftest():
     check("a pin with a venue handle is NOT selected", "p2" not in picked)
     check("a caption naming the title is NOT selected", "p3" not in picked)
 
+    mk_cat = {"makers": [{"id": "m1", "handle": "pasttworld"},
+                         {"id": "m2", "handle": "hereinnyc"}]}
+    pins = [{"id": "a", "sourceAuthor": "@pasttworld", "makerId": "m1"},
+            {"id": "b", "sourceAuthor": "@hereinnyc", "makerId": "m2"},
+            {"id": "c", "sourceAuthor": "", "makerId": "m1"},
+            {"id": "d", "sourceAuthor": "@someoneelse", "makerId": "m2",
+             "longDescription": "as seen on @pasttworld"}]
+    got = [p["id"] for p in by_creator(mk_cat, pins, "pasttworld")]
+    check("--maker matches the sourceAuthor", "a" in got)
+    check("--maker matches via the maker's handle", "c" in got)
+    check("--maker tolerates a leading @", got == [p["id"] for p in
+          by_creator(mk_cat, pins, "@pasttworld")])
+    check("--maker excludes another creator", "b" not in got)
+    check("🔴 --maker does NOT match a MENTION in someone else's caption",
+          "d" not in got)
+    check("an empty --maker changes nothing",
+          by_creator(mk_cat, pins, "") == pins)
+
     d1 = digest({"title": "A", "heroImageURL": "u", "city": "c"})
     check("digest is stable", d1 == digest({"title": "A", "heroImageURL": "u", "city": "c"}))
     check("digest moves when the title changes",
@@ -361,6 +399,8 @@ def main():
                          "is never stored in the repo.")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--only", default="", help="substring filter on the title")
+    ap.add_argument("--maker", default="",
+                    help="one creator's handle, e.g. pasttworld (the @ is optional)")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -374,6 +414,8 @@ def main():
             catalog = json.load(fh)
         cache = load_cache(a.cache)
         targets = uncorroborated(catalog)
+        if a.maker:
+            targets = by_creator(catalog, targets, a.maker)
         if a.only:
             targets = [p for p in targets
                        if a.only.lower() in (p.get("title") or "").lower()]
