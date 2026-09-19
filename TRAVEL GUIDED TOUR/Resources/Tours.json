@@ -120530,8 +120530,8 @@
         "97E68647-734B-5394-818E-D19C7B638413",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "1394E226-7767-54F5-BC0E-5D3576409C07",
-        "2A7C8EAA-6CF9-50DE-8FEC-D8E61B418F0F",
-        "B468E53C-5AA8-5C29-B047-499E7C7DC24D"
+        "3DA74EAD-CE5E-524A-A80D-77FA13D04B93",
+        "2A7C8EAA-6CF9-50DE-8FEC-D8E61B418F0F"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -137693,6 +137693,7 @@
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
         "1394E226-7767-54F5-BC0E-5D3576409C07",
         "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
+        "3DA74EAD-CE5E-524A-A80D-77FA13D04B93",
         "027561D7-DF07-55E6-9F06-E6147FCB8BA9"
       ],
       "primaryCategory": "culturalHeritage",
@@ -194848,6 +194849,9 @@
       "centroidLongitude": -1.565277,
       "city": "West Bretton",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "E142EE8B-4196-5F35-A0FE-B7D605D849C5"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Park",
@@ -205346,12 +205350,12 @@
       "relatedTourIds": [
         "027561D7-DF07-55E6-9F06-E6147FCB8BA9",
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
+        "3DA74EAD-CE5E-524A-A80D-77FA13D04B93",
         "AC83F010-C9F0-5E4F-AC7F-A231575BE931",
         "de735b9e-65ed-53f7-bb75-db34d5d660de",
         "4e9a4a35-8415-576c-a828-fbf0d4adb3b6",
         "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
-        "2A7C8EAA-6CF9-50DE-8FEC-D8E61B418F0F",
-        "23AFE0B0-89B8-53AC-BCFD-36E7CD20884C"
+        "2A7C8EAA-6CF9-50DE-8FEC-D8E61B418F0F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -230008,6 +230012,7 @@
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
         "7F813653-AA6A-5EF6-8FBA-7D0FAC395101",
         "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
+        "3DA74EAD-CE5E-524A-A80D-77FA13D04B93",
         "23AFE0B0-89B8-53AC-BCFD-36E7CD20884C",
         "25F66290-F755-5A66-90B8-9144D418259C",
         "B468E53C-5AA8-5C29-B047-499E7C7DC24D"
@@ -267426,6 +267431,7 @@
       "relatedTourIds": [
         "1394E226-7767-54F5-BC0E-5D3576409C07",
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
+        "3DA74EAD-CE5E-524A-A80D-77FA13D04B93",
         "027561D7-DF07-55E6-9F06-E6147FCB8BA9",
         "7F813653-AA6A-5EF6-8FBA-7D0FAC395101"
       ],
@@ -269613,6 +269619,16 @@
       "centroidLongitude": 12.4824664,
       "city": "Rome",
       "country": "Italy",
+      "relatedTourIds": [
+        "04A23295-DC9A-527A-824F-038B0C4CF7A1",
+        "7F813653-AA6A-5EF6-8FBA-7D0FAC395101",
+        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
+        "027561D7-DF07-55E6-9F06-E6147FCB8BA9",
+        "23AFE0B0-89B8-53AC-BCFD-36E7CD20884C",
+        "1394E226-7767-54F5-BC0E-5D3576409C07",
+        "B468E53C-5AA8-5C29-B047-499E7C7DC24D",
+        "c9611436-6e6a-526c-ad3d-e34b9bfe6117"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Notable Building",
@@ -269659,6 +269675,9 @@
       "centroidLongitude": -1.5682205854040838,
       "city": "West Bretton",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "EAC8D7F5-9371-5F14-941E-5A87D93530E0"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Park",
