@@ -158,19 +158,41 @@ def city_spelled_twice(doc, near_km=CITY_NEAR_KM):
     return out
 
 
+def is_walk(entry):
+    """A multi-stop walk, whose hero is legitimately ONE of its stops."""
+    return (entry.get("kind") == "walk") or len(entry.get("stops") or []) > 1
+
+
 def hero_shared_across_subjects(doc):
-    """🔴 Two entries, ONE image file, different subjects and different posts.
+    """🔴 One image file standing in for MORE THAN ONE subject.
 
     The London Natural History Museum tour played Los Angeles' narration for
     six and a half weeks because both used the bare slug
-    `natural-history-museum`. `check-image-duplicates.py` reports shared URLs —
-    but it reports ALL of them, and most are legitimate: a walk and a
-    single-stop tour sharing one hero is editorial, and ONE creator post pinned
-    to five antique markets is the designed shape of a link pin.
+    `natural-history-museum`. `check-image-duplicates.py` reports every shared
+    URL, and most are fine, so the question is which sharing is a defect.
 
-    ⚠️ So the discriminator is not "shared" — it is **shared with no shared
-    source post**. That is what separates one image reused on purpose from one
-    image reused by accident.
+    🔴 THE FIRST ANSWER HERE WAS WRONG, AND THE VISION CHECK PROVED IT.
+    This excused a shared hero whenever the entries came from ONE creator post
+    — "the designed shape of a link pin". The sharing is indeed by design. The
+    RESULT is not: one video about five Italian antique markets became five
+    pins in five cities sharing one photograph, and that photograph shows the
+    **Duomo di Lucca**. Four of the five show a different city's market. Worth
+    Monument is the same shape — one post, three New York obelisks, one photo,
+    and the photo is Cleopatra's Needle.
+
+    **A photograph can depict at most ONE subject, whatever it was attached
+    to.** Where the file came from says nothing about how many entries it can
+    honestly serve.
+
+    So the rule is about subjects, not provenance:
+
+      * a **walk** legitimately shows one of its own stops, so a group with at
+        most one non-walk entry is fine — that is the Trevi Fountain pin beside
+        "The Baroque Heart" walk;
+      * entries about the **same subject** may share a photograph — the Empire
+        State Building tour and the Empire State Building pin;
+      * **two or more standalone entries with different subjects cannot all be
+        right**, and that is the finding, in one city or five.
     """
     by_hero = collections.defaultdict(list)
     for entry in entries(doc):
@@ -178,13 +200,18 @@ def hero_shared_across_subjects(doc):
             by_hero[entry["heroImageURL"]].append(entry)
     out = []
     for url, group in by_hero.items():
-        if len(group) < 2:
-            continue
-        sources = {e.get("sourceURL") for e in group}
-        if len(sources) == 1 and None not in sources:
-            continue                      # one post, several pins — by design
-        if len({fold(e.get("city")) for e in group}) > 1:
-            out.append((url, group))
+        standalone = [e for e in group if not is_walk(e)]
+        # ⚠️ No `len(group) < 2` guard: a one-entry group yields at most one
+        # standalone, which this rejects anyway. Mutation testing showed
+        # deleting it changed nothing, which is what a dead guard looks like.
+        # This one is NOT dead — it is the only thing stopping a group of two
+        # WALKS sharing a hero from being reported, where the title set is
+        # empty and the same-subject test below cannot fire.
+        if len(standalone) < 2:
+            continue                  # a walk may show one of its own stops
+        if len({fold(e.get("title")) for e in standalone}) == 1:
+            continue                  # one subject, two entries — fine
+        out.append((url, group))
     return out
 
 
@@ -228,8 +255,8 @@ ROWS = [
      "same name AND coincident — very likely a missed join"),
     ("🔴 One city spelled two ways", "audit-board.py (NEW)", "CI", city_spelled_twice,
      "spelling pairs — each splits one city into two"),
-    ("🔴 One hero image, two subjects, two posts", "audit-board.py (NEW)", "CI", hero_shared_across_subjects,
-     "every one is a defect — this shipped for 6.5 weeks once"),
+    ("🔴 One image standing in for two subjects", "audit-board.py (NEW)", "CI", hero_shared_across_subjects,
+     "a photo depicts ONE subject — the rest are wrong, same post or not"),
     ("Title nothing stored can corroborate", "check-pin-subject.py", "by hand (needs a key)", unverifiable_titles,
      "the reachable-only-by-vision set; a count, not a defect count"),
 ]
@@ -360,23 +387,59 @@ def selftest():
               pin("1", "x", "Springfield", 39.800, -89.600, country="United States"),
               pin("2", "y", "Springfield", 39.806, -89.606, country="United States")]}) == [])
 
-    # --- hero shared across subjects
-    heroes = {"tours": [], "linkPins": [
-        pin("1", "Le Relais de Venise", "New York", 40.7, -74.0,
-            heroURL=None, heroImageURL="h1", sourceURL="postA"),
-        pin("2", "Le Relais de Venise", "Paris", 48.8, 2.3,
-            heroImageURL="h1", sourceURL="postB"),
-        pin("3", "Market A", "Lucca", 43.8, 10.5,
-            heroImageURL="h2", sourceURL="onepost"),
-        pin("4", "Market B", "Arezzo", 43.4, 11.8,
-            heroImageURL="h2", sourceURL="oneost".replace("ost", "post")),
-        pin("5", "Tour", "Rome", 41.9, 12.5, heroImageURL="h3", sourceURL="p1"),
-        pin("6", "Walk", "Rome", 41.9, 12.5, heroImageURL="h3", sourceURL="p2")],
-        "places": []}
+    # --- one image standing in for more than one subject
+    # 🔴 These fixtures encode the correction the vision check forced: sharing
+    # a source post does NOT excuse a shared photograph, because a photograph
+    # depicts one subject whatever it was attached to.
+    heroes = {"tours": [], "places": [], "linkPins": [
+        # one post, five markets, five cities, one photo of Lucca
+        pin("1", "Mercato Antiquario di Lucca", "Lucca", 43.84, 10.50,
+            heroImageURL="h1", sourceURL="onepost"),
+        pin("2", "Fiera Antiquaria di Arezzo", "Arezzo", 43.46, 11.88,
+            heroImageURL="h1", sourceURL="onepost"),
+        # one post, three NYC obelisks, one photo — SAME city
+        pin("3", "Worth Monument", "New York", 40.74, -73.99,
+            heroImageURL="h2", sourceURL="obelisks"),
+        pin("4", "Cleopatra's Needle", "New York", 40.77, -73.96,
+            heroImageURL="h2", sourceURL="obelisks"),
+        # a walk and the landmark it contains — legitimate
+        dict(pin("5", "The Trevi Fountain", "Rome", 41.90, 12.48,
+                 heroImageURL="h3", sourceURL="p1")),
+        {"id": "6", "title": "The Baroque Heart", "city": "Rome", "kind": "walk",
+         "heroImageURL": "h3", "sourceURL": "p2",
+         "stops": [{"order": 0, "latitude": 41.90, "longitude": 12.48},
+                   {"order": 1, "latitude": 41.91, "longitude": 12.47}]},
+        # the same subject twice — a tour and a pin
+        pin("7", "Empire State Building", "New York", 40.748, -73.985,
+            heroImageURL="h4", sourceURL="p3"),
+        pin("8", "Empire State Building", "New York", 40.748, -73.985,
+            heroImageURL="h4", sourceURL="p4")]}
     found = [u for u, _ in hero_shared_across_subjects(heroes)]
-    check("🔴 one hero, two cities, two posts IS reported", "h1" in found)
-    check("🔴 one POST pinned to several venues is NOT reported", "h2" not in found)
-    check("one hero shared inside a single city is not reported", "h3" not in found)
+    check("🔴 one post, five markets, five cities IS now reported",
+          "h1" in found)
+    check("🔴 one post, two obelisks in ONE city is reported too — the city "
+          "was never the point", "h2" in found)
+    check("🔴 a walk sharing its own stop's photo is NOT reported",
+          "h3" not in found)
+    check("🔴 the SAME subject twice may share a photo", "h4" not in found)
+    # 🔴 Two WALKS sharing a hero: the title set is EMPTY, so the same-subject
+    # test cannot fire and only the standalone minimum stops a false finding.
+    two_walks = {"tours": [], "places": [], "linkPins": [
+        {"id": "w1", "title": "Walk A", "city": "Rome", "kind": "walk",
+         "heroImageURL": "hw", "stops": [{"order": 0, "latitude": 41.9,
+                                          "longitude": 12.5}, {"order": 1,
+                                          "latitude": 41.91, "longitude": 12.51}]},
+        {"id": "w2", "title": "Walk B", "city": "Rome", "kind": "walk",
+         "heroImageURL": "hw", "stops": [{"order": 0, "latitude": 41.9,
+                                          "longitude": 12.5}, {"order": 1,
+                                          "latitude": 41.92, "longitude": 12.52}]}]}
+    check("🔴 two WALKS sharing a hero are not reported — only the standalone "
+          "minimum can stop this one", hero_shared_across_subjects(two_walks) == [])
+    check("is_walk sees an explicit kind",
+          is_walk({"kind": "walk", "stops": []}) is True)
+    check("is_walk sees a multi-stop entry with no kind",
+          is_walk({"stops": [{}, {}]}) is True)
+    check("a single-stop entry is not a walk", is_walk({"stops": [{}]}) is False)
 
     # --- the board itself
     import io
