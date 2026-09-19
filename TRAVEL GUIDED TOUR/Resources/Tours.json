@@ -104990,21 +104990,6 @@
       ]
     },
     {
-      "id": "af1cf0d1-ce8b-5570-9cf0-429ea7dbe9f4",
-      "name": "MOL Campus",
-      "description": null,
-      "latitude": 47.467777777,
-      "longitude": 19.059722222,
-      "city": "Budapest",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9"
-      ]
-    },
-    {
       "id": "ed419fb7-e8d7-5298-94ad-ae8df06e3ff3",
       "name": "One Yonge Street",
       "description": null,
