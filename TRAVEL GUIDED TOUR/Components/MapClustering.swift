@@ -110,11 +110,14 @@ enum MapClustering {
     // MARK: - Tuning
 
     /// Two pins closer than this on screen, in points, merge. Sized to the
-    /// pins themselves: a cluster badge is 36–44pt across and a place
-    /// capsule ~50pt wide, so anything tighter lets them overlap. Seeds end
+    /// pins themselves: a cluster badge's core is 26–38pt across (36–48pt
+    /// with its halo), so anything much tighter lets them overlap. Seeds end
     /// up at least this far apart; a cluster is then drawn at its members'
-    /// centroid, which can pull two badges somewhat closer, hence the margin.
-    static let defaultClusterRadius: Double = 56
+    /// centroid, which can pull two badges somewhat closer.
+    ///
+    /// Owner-tuned 2026-09-19: 56 on TestFlight 175 read slightly too
+    /// clumped ("a touch less, a little more circles"), so 48.
+    static let defaultClusterRadius: Double = 48
 
     /// Map width assumed before the real one has been measured — an
     /// iPhone's portrait width. Only matters for the first frame.
@@ -375,7 +378,7 @@ enum MapClustering {
         // intent (no single tap drops you into a one-block view) while
         // guaranteeing every tap makes progress.
         //
-        // A cluster's bounding box is at most two radii (~110pt) across,
+        // A cluster's bounding box is at most two radii (~100pt) across,
         // so on a phone-width map the padded framing can exceed half the
         // current span and the clamp binds — that is fine: every tap still
         // at least doubles the zoom, which doubles the on-screen distance
