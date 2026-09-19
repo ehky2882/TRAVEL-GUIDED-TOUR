@@ -46527,8 +46527,8 @@
           "order": 0,
           "title": "MOCA Grand Avenue",
           "caption": "Find the red-sandstone entrance and the pyramid skylights over the sunken court.",
-          "latitude": 34.0556,
-          "longitude": -118.25,
+          "latitude": 34.053288,
+          "longitude": -118.250623,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/moca-grand-avenue.mp3",
           "audioDurationSeconds": 136,
           "triggerMode": "geofenced",
@@ -46540,8 +46540,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 136,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0556,
-      "centroidLongitude": -118.25,
+      "centroidLatitude": 34.053288,
+      "centroidLongitude": -118.250623,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -99636,7 +99636,8 @@
       "tourIds": [
         "E11BB9C7-2DB2-5501-9D42-631DC1B80787",
         "fbb1f03d-ab94-5ad1-89a0-8083d740a0b5",
-        "02A9BF1D-7CBA-59A2-8981-E3D9D1AD2C65"
+        "02A9BF1D-7CBA-59A2-8981-E3D9D1AD2C65",
+        "F6F89258-D6EC-5B50-8754-74F1A41D3534"
       ]
     },
     {
@@ -102576,7 +102577,8 @@
       "tourIds": [
         "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
         "8730E2F2-A6C7-545B-989F-AAF2CE504790",
-        "36C1FE8A-13FC-57D8-A6B3-6E813EAF5CE8"
+        "36C1FE8A-13FC-57D8-A6B3-6E813EAF5CE8",
+        "4419BA6B-E9B9-5867-AD1D-44A272E6F380"
       ]
     },
     {
@@ -103088,7 +103090,8 @@
       "tourIds": [
         "0FB132C0-9F5B-52BC-98AA-1B5741B32B00",
         "0c99c91e-e39b-5c28-98c1-b3186c325122",
-        "3851D982-58C7-5840-89C4-DB748835B989"
+        "3851D982-58C7-5840-89C4-DB748835B989",
+        "5A33F232-E07D-51BA-89C5-589B897EA1AB"
       ]
     },
     {
@@ -103492,7 +103495,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "20f2428b-aff3-54f6-af9c-bf6d60fdfe98",
-        "90678150-2AB5-5255-9937-8C6AB677ECEA"
+        "90678150-2AB5-5255-9937-8C6AB677ECEA",
+        "1394E226-7767-54F5-BC0E-5D3576409C07"
       ]
     },
     {
@@ -104191,7 +104195,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "7c53e4fa-c0ed-5016-a731-ea51a3828866",
-        "F298ECD1-84CA-5806-A234-5C2707E294CA"
+        "F298ECD1-84CA-5806-A234-5C2707E294CA",
+        "4CC98F15-08E5-5E75-8D59-AC65C27AB0F2"
       ]
     },
     {
@@ -104813,7 +104818,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "DAF17ECC-DD42-51BD-8B12-987373717A05",
-        "D67840C8-7492-53E3-BCFF-EB2F03544600"
+        "D67840C8-7492-53E3-BCFF-EB2F03544600",
+        "7DC75C85-5B6F-5E06-A774-4FDE59E8B6D0"
       ]
     },
     {
@@ -105341,7 +105347,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "45DC77F1-CAA3-576E-9939-53908497459C",
-        "D51D97B2-9814-533A-9D9A-90292B89E5F5"
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
       ]
     }
   ],
@@ -268844,8 +268851,8 @@
           "order": 0,
           "title": "Critics didn’t like the Guggenheim’s design when it first…",
           "caption": "Critics didn’t like the Guggenheim’s design when it first opened, so how did it turn into one of the world’s most famous museums? Watch my f",
-          "latitude": 40.7831793,
-          "longitude": -73.95916599,
+          "latitude": 40.7831793289656,
+          "longitude": -73.95916598843854,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -268857,8 +268864,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7831793,
-      "centroidLongitude": -73.95916599,
+      "centroidLatitude": 40.7831793289656,
+      "centroidLongitude": -73.95916598843854,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
