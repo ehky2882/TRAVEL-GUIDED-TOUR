@@ -370,4 +370,17 @@ final class MapClusteringSeparationTests: XCTestCase {
         XCTAssertEqual(ids.count, markers.count)
         XCTAssertEqual(Set(ids), Set(markers.map(\.id)))
     }
+
+    // MARK: - Cluster badge label
+
+    /// Four digits don't fit the badge, so thousands abbreviate — and round
+    /// down, so the badge never claims more tours than there are.
+    func test_clusterLabel_abbreviatesThousands() {
+        XCTAssertEqual(ClusterPin.label(for: 7), "7")
+        XCTAssertEqual(ClusterPin.label(for: 999), "999")
+        XCTAssertEqual(ClusterPin.label(for: 1000), "1k")
+        XCTAssertEqual(ClusterPin.label(for: 1960), "1.9k")
+        XCTAssertEqual(ClusterPin.label(for: 2043), "2k")
+        XCTAssertEqual(ClusterPin.label(for: 12_480), "12k")
+    }
 }
