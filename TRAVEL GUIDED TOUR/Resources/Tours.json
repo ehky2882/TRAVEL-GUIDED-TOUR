@@ -83866,7 +83866,6 @@
         "5b61699f-7df4-50bc-92de-d249bb9bd15b",
         "03f76815-3768-59f7-a0f6-8c10e25b994e",
         "24a3b3ef-9ae7-5d1f-bcc3-e28cb0aa65a2",
-        "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
         "d1a5e1a2-6619-52fc-9f47-786cfc951713"
       ],
       "primaryCategory": "architecture",
@@ -251856,7 +251855,7 @@
     {
       "id": "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
       "createdAt": "2026-09-16",
-      "title": "Crown Sydney",
+      "title": "Avaz Twist Tower",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Why this building twists 60 degrees 🤯",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -251873,8 +251872,8 @@
           "order": 0,
           "title": "Crown Sydney",
           "caption": "Why this building twists 60 degrees 🤯",
-          "latitude": -33.8577,
-          "longitude": 151.1996,
+          "latitude": 43.861082,
+          "longitude": 18.40202,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -251886,14 +251885,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -33.8577,
-      "centroidLongitude": 151.1996,
-      "city": "Sydney",
-      "country": "Australia",
-      "relatedTourIds": [
-        "F9D0F11F-0EC1-51F6-825F-5CB9E0297F15",
-        "4f107980-4256-546b-9b85-07a73fa3cc7b"
-      ],
+      "centroidLatitude": 43.861082,
+      "centroidLongitude": 18.40202,
+      "city": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -256925,7 +256921,7 @@
     {
       "id": "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
       "createdAt": "2026-09-17",
-      "title": "Britam Tower (likely)",
+      "title": "Britam Tower",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Fake Africa’s World Trade Center 🤯",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -257214,7 +257210,6 @@
       "country": "Australia",
       "relatedTourIds": [
         "4f107980-4256-546b-9b85-07a73fa3cc7b",
-        "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
         "FDB096BD-43F1-503A-99FD-3677E81055E5",
         "6BC4FC9B-05AE-58C9-82BA-FA0189AFB9A9",
         "5b61699f-7df4-50bc-92de-d249bb9bd15b",
