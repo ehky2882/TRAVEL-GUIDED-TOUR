@@ -258126,7 +258126,7 @@
     {
       "id": "C3CFBBE2-8C24-56C7-AA7C-9142BFFECF10",
       "createdAt": "2026-09-17",
-      "title": "Guangzhou CTF Finance Centre",
+      "title": "Tianjin CTF Finance Centre",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "China's $3 Billion Skyscraper Almost Empty 😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -258143,8 +258143,8 @@
           "order": 0,
           "title": "Guangzhou CTF Finance Centre",
           "caption": "China's $3 Billion Skyscraper Almost Empty 😱",
-          "latitude": 23.1205531,
-          "longitude": 113.3208773,
+          "latitude": 39.021374,
+          "longitude": 117.698459,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -258156,13 +258156,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 23.1205531,
-      "centroidLongitude": 113.3208773,
-      "city": "Guangzhou",
+      "centroidLatitude": 39.021374,
+      "centroidLongitude": 117.698459,
+      "city": "Tianjin",
       "country": "China",
-      "relatedTourIds": [
-        "EC3570E8-8E5E-5DAC-A47B-FE44D489ECA7"
-      ],
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -258263,9 +258261,7 @@
       "centroidLongitude": 113.2539607,
       "city": "Guangzhou",
       "country": "China",
-      "relatedTourIds": [
-        "C3CFBBE2-8C24-56C7-AA7C-9142BFFECF10"
-      ],
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",

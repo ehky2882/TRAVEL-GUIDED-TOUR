@@ -1,4 +1,9 @@
 {
+ "Autograph Tower": {
+  "date": "2026-09-19",
+  "note": "owner: correct — the check named Suzhou IFS and was wrong",
+  "verdict": "correct"
+ },
  "Avaz Twist Tower": {
   "date": "2026-09-19",
   "note": "was titled 'Crown Sydney' in Sydney; owner confirmed the photo is Avaz Twist Tower. Retitled and moved to Sarajevo",
@@ -13,5 +18,10 @@
   "date": "2026-09-19",
   "note": "owner: correct, NOT Burj Al Arab — the check was wrong",
   "verdict": "correct"
+ },
+ "Tianjin CTF Finance Centre": {
+  "date": "2026-09-19",
+  "note": "was titled 'Guangzhou CTF Finance Centre'; owner identified it as the Tianjin tower. Retitled and relocated to Tianjin",
+  "verdict": "fixed"
  }
 }
