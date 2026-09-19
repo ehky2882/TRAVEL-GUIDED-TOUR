@@ -6695,8 +6695,8 @@
         "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
         "0c54e6d4-03f5-4550-a8e9-78c7224d4def",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "f09d323b-6d6f-5c9a-b8ba-0bf025a82895",
-        "D64D5B8D-50F4-580E-ACAA-810CB51F7401"
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "f09d323b-6d6f-5c9a-b8ba-0bf025a82895"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -83536,8 +83536,8 @@
         "4e64ff24-e07b-5ebd-aedf-d562499e0899",
         "87e27455-674a-4ec6-bad5-3fa2b790b38d",
         "cf1036ca-7f9e-56b0-9181-3bb8ae043f46",
-        "76FCC307-3B6D-5FC9-8C7D-4053E1A7D0B1",
-        "2590ce9c-9cdf-509b-bc88-6608c629fb56"
+        "368610E5-7E7C-5DFF-9F63-664D82AD2DB5",
+        "76FCC307-3B6D-5FC9-8C7D-4053E1A7D0B1"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -85311,7 +85311,7 @@
         "ff7f458d-87c4-5648-8bd9-6abd493cfc95",
         "94d76582-c137-52c7-8992-afdde8c00806",
         "67e9b98e-5294-5457-a883-d95cd67ab0f9",
-        "460ceef0-c1ba-5f88-9bd5-b61dd3296059"
+        "4AD36E66-5D93-543D-BEB7-CB3BCFE34CE9"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -113182,6 +113182,8 @@
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
         "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
         "52A835F2-F314-5A02-A4AC-2412823306F8",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
         "E3914BBB-9F11-5064-ABD2-755BF49DDE38"
       ],
       "primaryCategory": "sacredSites",
@@ -113235,10 +113237,10 @@
         "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
         "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
         "52A835F2-F314-5A02-A4AC-2412823306F8",
         "E3914BBB-9F11-5064-ABD2-755BF49DDE38",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D"
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -120242,6 +120244,9 @@
       "centroidLongitude": -2.3686875,
       "city": "Bath",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "368610E5-7E7C-5DFF-9F63-664D82AD2DB5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -182323,8 +182328,11 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
         "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C"
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -182373,12 +182381,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
         "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
         "53CBF691-42E6-5297-B170-FDB50A2F5828",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
         "9FBA6174-676B-5E6C-A095-96F965D11D1C",
         "23F99407-E1A5-54E5-B612-D109362FFA16",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E"
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -210510,7 +210520,9 @@
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
         "8DD8CA83-4F88-5372-8B5C-C9823383C689",
         "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
-        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D"
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -210607,7 +210619,8 @@
       "relatedTourIds": [
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
         "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
-        "E3914BBB-9F11-5064-ABD2-755BF49DDE38"
+        "E3914BBB-9F11-5064-ABD2-755BF49DDE38",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -210706,7 +210719,9 @@
         "E3914BBB-9F11-5064-ABD2-755BF49DDE38",
         "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
         "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E",
-        "EFA4CCCE-A501-56D6-9874-613F647CD8EC"
+        "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -210754,14 +210769,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
         "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
         "52A835F2-F314-5A02-A4AC-2412823306F8",
         "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
         "23F99407-E1A5-54E5-B612-D109362FFA16",
         "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
         "D64D5B8D-50F4-580E-ACAA-810CB51F7401",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E"
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -210808,7 +210823,10 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
         "23F99407-E1A5-54E5-B612-D109362FFA16",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
       ],
       "primaryCategory": "history",
@@ -210970,9 +210988,10 @@
         "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E",
         "9FBA6174-676B-5E6C-A095-96F965D11D1C",
         "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
         "23F99407-E1A5-54E5-B612-D109362FFA16",
-        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
-        "52A835F2-F314-5A02-A4AC-2412823306F8"
+        "77A0C66E-2530-5F56-9D32-73B139B5FA64",
+        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -211019,8 +211038,13 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D"
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -211071,6 +211095,7 @@
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
         "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
         "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
         "53CBF691-42E6-5297-B170-FDB50A2F5828",
         "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E"
       ],
@@ -269733,6 +269758,16 @@
       "centroidLongitude": 16.3658,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
+        "8DD8CA83-4F88-5372-8B5C-C9823383C689"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Art",
@@ -269822,6 +269857,16 @@
       "centroidLongitude": 16.3618,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -269955,6 +270000,10 @@
       "centroidLongitude": -81.0997,
       "city": "Savannah",
       "country": "United States",
+      "relatedTourIds": [
+        "AC6D08C9-39D3-5D65-9E39-7509844CC3F9",
+        "BC72EEC8-02FE-595A-B763-3E673F45E1CF"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -269999,6 +270048,10 @@
       "centroidLongitude": -2.3445,
       "city": "Bath",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "4AD36E66-5D93-543D-BEB7-CB3BCFE34CE9",
+        "BD105361-3778-5F7A-923E-A4AEC3AB2D83"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -270044,6 +270097,16 @@
       "centroidLongitude": 16.3659,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "77A0C66E-2530-5F56-9D32-73B139B5FA64",
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270089,6 +270152,9 @@
       "centroidLongitude": -83.197,
       "city": "Highlands",
       "country": "United States",
+      "relatedTourIds": [
+        "F693C0D3-9FA3-5212-B559-48783A150194"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270133,6 +270199,9 @@
       "centroidLongitude": -83.0973,
       "city": "Cashiers",
       "country": "United States",
+      "relatedTourIds": [
+        "9D7686AC-8A6E-54BD-9871-413B40325031"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270177,6 +270246,9 @@
       "centroidLongitude": -83.1978,
       "city": "Highlands",
       "country": "United States",
+      "relatedTourIds": [
+        "5CF6EFBC-CC96-54F4-BD00-8E497F4788E3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270221,6 +270293,9 @@
       "centroidLongitude": -83.0997,
       "city": "Cashiers",
       "country": "United States",
+      "relatedTourIds": [
+        "CF424BFC-33F3-5EAA-A608-5B9C62476FB5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -270309,6 +270384,16 @@
       "centroidLongitude": 16.3116,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "77A0C66E-2530-5F56-9D32-73B139B5FA64",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "8DD8CA83-4F88-5372-8B5C-C9823383C689"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "History",
@@ -270354,6 +270439,9 @@
       "centroidLongitude": -2.36,
       "city": "Bath",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "368610E5-7E7C-5DFF-9F63-664D82AD2DB5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270399,6 +270487,9 @@
       "centroidLongitude": -1.6305,
       "city": "Burford",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "4CD9667C-DEC3-59A6-90D2-0AB68B0AD4A4"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Commerce",
@@ -270444,6 +270535,9 @@
       "centroidLongitude": -1.7575,
       "city": "Bourton-on-the-Water",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "64DEC5D7-8019-5696-A860-FD22E1DE0D64"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270488,6 +270582,9 @@
       "centroidLongitude": -1.763,
       "city": "Bourton-on-the-Water",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "01892CA8-50D1-5412-BF8A-F12AABA76106"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270532,6 +270629,9 @@
       "centroidLongitude": -1.8605,
       "city": "Guiting Power",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "6B300C46-027F-59AE-8907-A497FE3B897A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270576,6 +270676,9 @@
       "centroidLongitude": -1.8636,
       "city": "Guiting Power",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "99DA8D4D-A480-52DD-9CF9-148DAC896280"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270664,6 +270767,10 @@
       "centroidLongitude": -81.0869,
       "city": "Savannah",
       "country": "United States",
+      "relatedTourIds": [
+        "BC72EEC8-02FE-595A-B763-3E673F45E1CF",
+        "7A4869E2-B3C8-52EB-A797-A1E4B3F0EC3D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270753,6 +270860,9 @@
       "centroidLongitude": -1.6394,
       "city": "Burford",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "06C545DE-A1FD-50C0-9856-4076B4885FA0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270798,6 +270908,10 @@
       "centroidLongitude": -81.0956,
       "city": "Savannah",
       "country": "United States",
+      "relatedTourIds": [
+        "AC6D08C9-39D3-5D65-9E39-7509844CC3F9",
+        "7A4869E2-B3C8-52EB-A797-A1E4B3F0EC3D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270842,6 +270956,16 @@
       "centroidLongitude": 16.3667,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "77A0C66E-2530-5F56-9D32-73B139B5FA64",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Library",
@@ -270887,6 +271011,16 @@
       "centroidLongitude": 16.3892,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "53CBF691-42E6-5297-B170-FDB50A2F5828",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -270975,6 +271109,15 @@
       "centroidLongitude": 16.3029,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Green Escape",
