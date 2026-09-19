@@ -269575,6 +269575,97 @@
         "History"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "3DA74EAD-CE5E-524A-A80D-77FA13D04B93",
+      "createdAt": "2026-09-19",
+      "title": "What does this sculpture make you think of? 📍Villa Medici…",
+      "shortDescription": "A post by @lucymcorban on Instagram.",
+      "longDescription": "What does this sculpture make you think of? 📍Villa Medici in Rome @villa_medici #romeart #villamedici #girlandgallery #rome #sculpture",
+      "makerId": "D7132F6E-4777-51F7-8D9C-AE435E2FFFE3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/what-does-this-sculpture-make-you-lucymcorban_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/CvsVymgql6l/",
+      "sourceAuthor": "@lucymcorban",
+      "stops": [
+        {
+          "id": "AD931168-7E5F-5548-8B05-08B07BAF9AA3",
+          "order": 0,
+          "title": "What does this sculpture make you think of? 📍Villa Medici…",
+          "caption": "What does this sculpture make you think of? 📍Villa Medici in Rome @villa_medici #romeart #villamedici #girlandgallery #rome #sculpture",
+          "latitude": 41.9083045,
+          "longitude": 12.4824664,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/what-does-this-sculpture-make-you-lucymcorban_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9083045,
+      "centroidLongitude": 12.4824664,
+      "city": "Rome",
+      "country": "Italy",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Public Art",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E142EE8B-4196-5F35-A0FE-B7D605D849C5",
+      "createdAt": "2026-09-19",
+      "title": "This artwork took 13 years to make! 🌤️ @jamesturell never…",
+      "shortDescription": "A post by @lucymcorban on Instagram.",
+      "longDescription": "This artwork took 13 years to make! 🌤️ @jamesturell never disappoints! You can visit this artwork yourself at the @yspsculpture",
+      "makerId": "D7132F6E-4777-51F7-8D9C-AE435E2FFFE3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-artwork-took-13-years-to-lucymcorban_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdWycNRAean/",
+      "sourceAuthor": "@lucymcorban",
+      "stops": [
+        {
+          "id": "9549574A-8DA9-54A2-BF7C-DCC419D4D9DC",
+          "order": 0,
+          "title": "This artwork took 13 years to make! 🌤️ @jamesturell never…",
+          "caption": "This artwork took 13 years to make! 🌤️ @jamesturell never disappoints! You can visit this artwork yourself at the @yspsculpture",
+          "latitude": 53.61193164210265,
+          "longitude": -1.5682205854040838,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/this-artwork-took-13-years-to-lucymcorban_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 53.61193164210265,
+      "centroidLongitude": -1.5682205854040838,
+      "city": "West Bretton",
+      "country": "United Kingdom",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Park",
+        "Art",
+        "Public Art"
+      ],
+      "priceUSD": 0
     }
   ]
 }
