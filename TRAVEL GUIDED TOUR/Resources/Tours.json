@@ -46527,8 +46527,8 @@
           "order": 0,
           "title": "MOCA Grand Avenue",
           "caption": "Find the red-sandstone entrance and the pyramid skylights over the sunken court.",
-          "latitude": 34.0556,
-          "longitude": -118.25,
+          "latitude": 34.053288,
+          "longitude": -118.250623,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/moca-grand-avenue.mp3",
           "audioDurationSeconds": 136,
           "triggerMode": "geofenced",
@@ -46540,8 +46540,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 136,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0556,
-      "centroidLongitude": -118.25,
+      "centroidLatitude": 34.053288,
+      "centroidLongitude": -118.250623,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -83866,7 +83866,6 @@
         "5b61699f-7df4-50bc-92de-d249bb9bd15b",
         "03f76815-3768-59f7-a0f6-8c10e25b994e",
         "24a3b3ef-9ae7-5d1f-bcc3-e28cb0aa65a2",
-        "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
         "d1a5e1a2-6619-52fc-9f47-786cfc951713"
       ],
       "primaryCategory": "architecture",
@@ -90098,8 +90097,7 @@
         "D882F272-9734-59D1-8DD3-B662E591DED6",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "30cd96fc-8b3d-566a-bc88-f7d02f8873fb",
-        "6169243c-cc0b-5e2c-839a-608d63268c90",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900"
+        "6169243c-cc0b-5e2c-839a-608d63268c90"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -90646,7 +90644,6 @@
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
@@ -99636,7 +99633,8 @@
       "tourIds": [
         "E11BB9C7-2DB2-5501-9D42-631DC1B80787",
         "fbb1f03d-ab94-5ad1-89a0-8083d740a0b5",
-        "02A9BF1D-7CBA-59A2-8981-E3D9D1AD2C65"
+        "02A9BF1D-7CBA-59A2-8981-E3D9D1AD2C65",
+        "F6F89258-D6EC-5B50-8754-74F1A41D3534"
       ]
     },
     {
@@ -100282,7 +100280,8 @@
       "additionalImageURLs": [],
       "tourIds": [
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
-        "0A6EED99-1771-5220-9CCC-59FF7C7803E0"
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "34C2B094-CB95-5C25-B832-90AFDF7FF5F8"
       ]
     },
     {
@@ -101711,8 +101710,7 @@
       "tourIds": [
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
-        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900"
+        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3"
       ]
     },
     {
@@ -101839,21 +101837,6 @@
         "E7951083-147C-5234-8C3A-EFB4CFC2162E",
         "0E73CAF9-7740-55D6-88F3-8FE2C050A9D6",
         "A2F07761-0C3C-5C65-BE48-4E7A09AD5445"
-      ]
-    },
-    {
-      "id": "fd2c3077-4f9e-5154-9e3b-eedbdb28fbc4",
-      "name": "Grace Farms",
-      "description": "SANAA's River Building follows the slope in one continuous curve, its roof a thin ribbon on slender columns with the glazed volumes hung beneath it. Eighty acres of meadow and pond around it are the point, not the setting.",
-      "latitude": 41.196273,
-      "longitude": -73.512642,
-      "city": "New Canaan",
-      "address": "Lukes Wood Road, New Canaan, CT",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-glass-house-ninosbuildings_hero.webp",
-      "additionalImageURLs": null,
-      "tourIds": [
-        "86B587FA-58B7-540B-B337-74E036D0258F",
-        "FF01D80B-17E1-569B-AA99-E07022709F76"
       ]
     },
     {
@@ -102576,7 +102559,8 @@
       "tourIds": [
         "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
         "8730E2F2-A6C7-545B-989F-AAF2CE504790",
-        "36C1FE8A-13FC-57D8-A6B3-6E813EAF5CE8"
+        "36C1FE8A-13FC-57D8-A6B3-6E813EAF5CE8",
+        "4419BA6B-E9B9-5867-AD1D-44A272E6F380"
       ]
     },
     {
@@ -103088,7 +103072,8 @@
       "tourIds": [
         "0FB132C0-9F5B-52BC-98AA-1B5741B32B00",
         "0c99c91e-e39b-5c28-98c1-b3186c325122",
-        "3851D982-58C7-5840-89C4-DB748835B989"
+        "3851D982-58C7-5840-89C4-DB748835B989",
+        "5A33F232-E07D-51BA-89C5-589B897EA1AB"
       ]
     },
     {
@@ -103492,7 +103477,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "20f2428b-aff3-54f6-af9c-bf6d60fdfe98",
-        "90678150-2AB5-5255-9937-8C6AB677ECEA"
+        "90678150-2AB5-5255-9937-8C6AB677ECEA",
+        "1394E226-7767-54F5-BC0E-5D3576409C07"
       ]
     },
     {
@@ -104191,7 +104177,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "7c53e4fa-c0ed-5016-a731-ea51a3828866",
-        "F298ECD1-84CA-5806-A234-5C2707E294CA"
+        "F298ECD1-84CA-5806-A234-5C2707E294CA",
+        "4CC98F15-08E5-5E75-8D59-AC65C27AB0F2"
       ]
     },
     {
@@ -104813,7 +104800,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "DAF17ECC-DD42-51BD-8B12-987373717A05",
-        "D67840C8-7492-53E3-BCFF-EB2F03544600"
+        "D67840C8-7492-53E3-BCFF-EB2F03544600",
+        "7DC75C85-5B6F-5E06-A774-4FDE59E8B6D0"
       ]
     },
     {
@@ -104981,21 +104969,6 @@
       "tourIds": [
         "1B62FA84-2346-5771-B155-9DF65757BE26",
         "B31C6CD5-7903-5839-9C51-CE18F4331C20"
-      ]
-    },
-    {
-      "id": "af1cf0d1-ce8b-5570-9cf0-429ea7dbe9f4",
-      "name": "MOL Campus",
-      "description": null,
-      "latitude": 47.467777777,
-      "longitude": 19.059722222,
-      "city": "Budapest",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
-        "537599D4-D46D-5830-BC96-EA3338E62CE9"
       ]
     },
     {
@@ -105341,7 +105314,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "45DC77F1-CAA3-576E-9939-53908497459C",
-        "D51D97B2-9814-533A-9D9A-90292B89E5F5"
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
       ]
     }
   ],
@@ -106616,7 +106590,7 @@
       "shortDescription": "One of five Italian antique markets recommended by @malata.antwerp.",
       "longDescription": "Top 5 Italian antique markets, we recommend as vintage dealers !!!",
       "makerId": "75112BB1-1729-5F41-A709-EF99815C957A",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/italian-antique-markets-malata_hero.webp",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercatino-piazzola-malata_hero.webp",
       "additionalImageURLs": null,
       "videoURLs": null,
       "videoRole": null,
@@ -114481,7 +114455,6 @@
         "E93072A5-8A63-5D76-8935-CF362AEA963B",
         "419D5862-BD3D-5731-B74F-920E4C6F8753",
         "B016A73B-2437-504E-B9CE-0992B7A68360",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "A59EA11F-4031-5C30-BE06-7163FAC0695E",
         "A2407528-9314-5F18-B5E9-71CAFAB28847"
       ],
@@ -137469,7 +137442,6 @@
       "country": "Italy",
       "relatedTourIds": [
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "D882F272-9734-59D1-8DD3-B662E591DED6",
@@ -190862,7 +190834,7 @@
     {
       "id": "3D440B48-A8BF-5318-9708-839F3BE46225",
       "createdAt": "2026-09-10",
-      "title": "King Street, Canterbury",
+      "title": "The Crooked House (Sir John Boys House), Canterbury",
       "shortDescription": "A post by @urbanistariel on TikTok.",
       "longDescription": "😳 So much funky architecture in UK due to avoiding taxes… #uktiktok",
       "makerId": "991F43EC-353B-5B70-97B9-921EB2876D24",
@@ -207122,7 +207094,6 @@
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "53132EDF-A0B1-5657-8665-E4783982190D",
         "9005F077-0DBF-5E22-BAE8-20CB3EDDA1CA",
         "78C02AE2-E103-5426-AA76-6827AEE246BA"
@@ -219821,7 +219792,6 @@
       "city": "Budapest",
       "country": "Hungary",
       "relatedTourIds": [
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "8C44FB2A-E6E9-5086-9A72-BB85562EDBC4",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "0C0044EC-E6BC-5080-B91F-5B2ED9E57B12",
@@ -229163,7 +229133,6 @@
         "21382EC3-24C6-547D-A3DA-7DF8FCAD4C54",
         "D882F272-9734-59D1-8DD3-B662E591DED6",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "A8025FB7-569E-5E7E-AB82-EE0509A49D28"
       ],
       "primaryCategory": "architecture",
@@ -229742,7 +229711,6 @@
       "relatedTourIds": [
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
@@ -230348,7 +230316,7 @@
     {
       "id": "86B587FA-58B7-540B-B337-74E036D0258F",
       "createdAt": "2026-09-16",
-      "title": "Grace Farms",
+      "title": "The Glass House",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Glass houses were quite the trend ! Would you live in one ? #fyp #architecture #design",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -230365,8 +230333,8 @@
           "order": 0,
           "title": "Grace Farms",
           "caption": "Glass houses were quite the trend ! Would you live in one ? #fyp #architecture #design",
-          "latitude": 41.196273,
-          "longitude": -73.512642,
+          "latitude": 41.142432,
+          "longitude": -73.529267,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -230378,8 +230346,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.196273,
-      "centroidLongitude": -73.512642,
+      "centroidLatitude": 41.142432,
+      "centroidLongitude": -73.529267,
       "city": "New Canaan",
       "country": "United States",
       "relatedTourIds": [
@@ -244428,8 +244396,7 @@
       "city": "Las Vegas",
       "country": "United States",
       "relatedTourIds": [
-        "8B698E66-80CD-5166-B8B6-C440A71E1F2F",
-        "410887F3-61F4-5D68-9F79-BAB9B2D63FF8"
+        "8B698E66-80CD-5166-B8B6-C440A71E1F2F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -251848,7 +251815,7 @@
     {
       "id": "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
       "createdAt": "2026-09-16",
-      "title": "Crown Sydney",
+      "title": "Avaz Twist Tower",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Why this building twists 60 degrees 🤯",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -251865,8 +251832,8 @@
           "order": 0,
           "title": "Crown Sydney",
           "caption": "Why this building twists 60 degrees 🤯",
-          "latitude": -33.8577,
-          "longitude": 151.1996,
+          "latitude": 43.861082,
+          "longitude": 18.40202,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -251878,14 +251845,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -33.8577,
-      "centroidLongitude": 151.1996,
-      "city": "Sydney",
-      "country": "Australia",
-      "relatedTourIds": [
-        "F9D0F11F-0EC1-51F6-825F-5CB9E0297F15",
-        "4f107980-4256-546b-9b85-07a73fa3cc7b"
-      ],
+      "centroidLatitude": 43.861082,
+      "centroidLongitude": 18.40202,
+      "city": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -252528,7 +252492,6 @@
         "78C02AE2-E103-5426-AA76-6827AEE246BA",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "53132EDF-A0B1-5657-8665-E4783982190D",
         "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE"
@@ -252601,7 +252564,7 @@
     {
       "id": "410887F3-61F4-5D68-9F79-BAB9B2D63FF8",
       "createdAt": "2026-09-16",
-      "title": "MSG Sphere",
+      "title": "Lucas Museum of Narrative Art",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "This Building Looks Like a Spaceship😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -252618,8 +252581,8 @@
           "order": 0,
           "title": "MSG Sphere",
           "caption": "This Building Looks Like a Spaceship😱",
-          "latitude": 36.1211,
-          "longitude": -115.1619,
+          "latitude": 34.015739,
+          "longitude": -118.29079,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252631,13 +252594,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 36.1211,
-      "centroidLongitude": -115.1619,
-      "city": "Las Vegas",
+      "centroidLatitude": 34.015739,
+      "centroidLongitude": -118.29079,
+      "city": "Los Angeles",
       "country": "United States",
-      "relatedTourIds": [
-        "8D914EC0-9BA0-5BBE-8C86-B812AA383500"
-      ],
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -253047,7 +253008,7 @@
     {
       "id": "248632A6-ECFC-59DD-8602-7D6FDE205900",
       "createdAt": "2026-09-16",
-      "title": "Bosco Verticale",
+      "title": "Le Nouvel KLCC",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "These Skyscrapers Are Covered in Real Plants 😳",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -253064,8 +253025,8 @@
           "order": 0,
           "title": "Bosco Verticale",
           "caption": "These Skyscrapers Are Covered in Real Plants 😳",
-          "latitude": 45.485828,
-          "longitude": 9.19075,
+          "latitude": 3.159525,
+          "longitude": 101.712496,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -253077,20 +253038,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.485828,
-      "centroidLongitude": 9.19075,
-      "city": "Milan",
-      "country": "Italy",
-      "relatedTourIds": [
-        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
-        "16729030-54d1-5d85-a169-262bbd7ccce8",
-        "78C02AE2-E103-5426-AA76-6827AEE246BA",
-        "66944438-2c5b-5f4a-9c58-0cd74c05c062",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
-        "12FA3550-1C7E-523A-88D9-7E818937F3E5",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
-      ],
+      "centroidLatitude": 3.159525,
+      "centroidLongitude": 101.712496,
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -253317,7 +253269,7 @@
     {
       "id": "CF1E4E0C-5FDF-5BEF-B62F-8D90A3FE8B0A",
       "createdAt": "2026-09-16",
-      "title": "Prysmian Sky",
+      "title": "Prysmian Cable Tower",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Why is Finland's tallest building... a cable factory😳",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -254556,7 +254508,6 @@
       "country": "Italy",
       "relatedTourIds": [
         "D882F272-9734-59D1-8DD3-B662E591DED6",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "53132EDF-A0B1-5657-8665-E4783982190D",
@@ -254932,7 +254883,7 @@
     {
       "id": "D5D6C86B-B852-5B2D-94F3-9C5F3E1BD8D8",
       "createdAt": "2026-09-17",
-      "title": "Facility at Knivsoveien 70",
+      "title": "Nexans Halden",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "The Weird Truth About Norway’s Tallest Building😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -254949,8 +254900,8 @@
           "order": 0,
           "title": "Facility at Knivsoveien 70",
           "caption": "The Weird Truth About Norway’s Tallest Building😱",
-          "latitude": 59.1193824,
-          "longitude": 11.3192708,
+          "latitude": 59.11779,
+          "longitude": 11.32885,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -254962,8 +254913,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 59.1193824,
-      "centroidLongitude": 11.3192708,
+      "centroidLatitude": 59.11779,
+      "centroidLongitude": 11.32885,
       "city": "Berg i Østfold",
       "country": "Norway",
       "primaryCategory": "architecture",
@@ -255325,7 +255276,7 @@
     {
       "id": "0A326FE5-2356-5E03-B707-835067B5DA8D",
       "createdAt": "2026-09-17",
-      "title": "MOL Campus",
+      "title": "Eurovea Tower",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Europe’s Most Underrated Skyscraper 😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -255342,8 +255293,8 @@
           "order": 0,
           "title": "MOL Campus",
           "caption": "Europe’s Most Underrated Skyscraper 😱",
-          "latitude": 47.467777777,
-          "longitude": 19.059722222,
+          "latitude": 48.139779,
+          "longitude": 17.127156,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -255355,20 +255306,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 47.467777777,
-      "centroidLongitude": 19.059722222,
-      "city": "Budapest",
-      "country": "Hungary",
-      "relatedTourIds": [
-        "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "419D5862-BD3D-5731-B74F-920E4C6F8753",
-        "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
-        "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
-        "D9D1B0A7-8BC1-5B52-865E-11CB6941A14C",
-        "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
-        "0C0044EC-E6BC-5080-B91F-5B2ED9E57B12",
-        "D4668703-90AD-5722-B366-B61F62810CB1"
-      ],
+      "centroidLatitude": 48.139779,
+      "centroidLongitude": 17.127156,
+      "city": "Bratislava",
+      "country": "Slovakia",
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -256917,7 +256859,7 @@
     {
       "id": "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
       "createdAt": "2026-09-17",
-      "title": "Britam Tower (likely)",
+      "title": "Britam Tower",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "Fake Africa’s World Trade Center 🤯",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -257206,7 +257148,6 @@
       "country": "Australia",
       "relatedTourIds": [
         "4f107980-4256-546b-9b85-07a73fa3cc7b",
-        "35AF042E-21C8-5C15-A4BA-29D9EFC6C403",
         "FDB096BD-43F1-503A-99FD-3677E81055E5",
         "6BC4FC9B-05AE-58C9-82BA-FA0189AFB9A9",
         "5b61699f-7df4-50bc-92de-d249bb9bd15b",
@@ -257770,8 +257711,8 @@
           "order": 0,
           "title": "Residential towers at Dybbolsbro",
           "caption": "Europe’s Weirdest Twin Towers",
-          "latitude": 55.663365,
-          "longitude": 12.560334,
+          "latitude": 55.663510015423974,
+          "longitude": 12.560377282200308,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -257783,8 +257724,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 55.663365,
-      "centroidLongitude": 12.560334,
+      "centroidLatitude": 55.663510015423974,
+      "centroidLongitude": 12.560377282200308,
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
@@ -258123,7 +258064,7 @@
     {
       "id": "C3CFBBE2-8C24-56C7-AA7C-9142BFFECF10",
       "createdAt": "2026-09-17",
-      "title": "Guangzhou CTF Finance Centre",
+      "title": "Tianjin CTF Finance Centre",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "China's $3 Billion Skyscraper Almost Empty 😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -258140,8 +258081,8 @@
           "order": 0,
           "title": "Guangzhou CTF Finance Centre",
           "caption": "China's $3 Billion Skyscraper Almost Empty 😱",
-          "latitude": 23.1205531,
-          "longitude": 113.3208773,
+          "latitude": 39.021374,
+          "longitude": 117.698459,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -258153,13 +258094,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 23.1205531,
-      "centroidLongitude": 113.3208773,
-      "city": "Guangzhou",
+      "centroidLatitude": 39.021374,
+      "centroidLongitude": 117.698459,
+      "city": "Tianjin",
       "country": "China",
-      "relatedTourIds": [
-        "EC3570E8-8E5E-5DAC-A47B-FE44D489ECA7"
-      ],
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -258260,9 +258199,7 @@
       "centroidLongitude": 113.2539607,
       "city": "Guangzhou",
       "country": "China",
-      "relatedTourIds": [
-        "C3CFBBE2-8C24-56C7-AA7C-9142BFFECF10"
-      ],
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -259889,7 +259826,6 @@
       "city": "Budapest",
       "country": "Hungary",
       "relatedTourIds": [
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
         "A59EA11F-4031-5C30-BE06-7163FAC0695E",
         "419D5862-BD3D-5731-B74F-920E4C6F8753",
@@ -260111,7 +260047,7 @@
     {
       "id": "5524D308-3961-5263-9092-FACB38819B14",
       "createdAt": "2026-09-17",
-      "title": "The Link",
+      "title": "The Link in La Défense",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "France Rewrote Its Own Rules for This Skyscraper 😳",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -261804,7 +261740,6 @@
         "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
         "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "A810958C-7F38-5EFB-8A2E-C863B99C327B",
         "A56E5270-868B-5BAD-A732-AE4EEC28F31E",
@@ -261959,7 +261894,6 @@
       "relatedTourIds": [
         "A810958C-7F38-5EFB-8A2E-C863B99C327B",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "45E737D9-BF78-5FFB-817C-5CDD82BCBB60",
         "0C0044EC-E6BC-5080-B91F-5B2ED9E57B12",
         "419D5862-BD3D-5731-B74F-920E4C6F8753",
@@ -262173,7 +262107,6 @@
       "relatedTourIds": [
         "5763E638-426E-5373-A5BB-8264A850D7F8",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "0C0044EC-E6BC-5080-B91F-5B2ED9E57B12",
         "37ADD14A-5DD3-5A25-91E1-A950695D7CB5",
         "419D5862-BD3D-5731-B74F-920E4C6F8753",
@@ -262546,7 +262479,6 @@
       "country": "Hungary",
       "relatedTourIds": [
         "419D5862-BD3D-5731-B74F-920E4C6F8753",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
@@ -263169,7 +263101,6 @@
         "419D5862-BD3D-5731-B74F-920E4C6F8753",
         "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
         "977D1E69-32A3-524B-854D-D1ABD40070DE",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "B57A53C9-B280-51F2-BFC4-7D784C479BEB",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
@@ -264013,7 +263944,6 @@
         "75DEA19C-0126-509E-A5FB-34C593A0315A",
         "711C471E-54C9-5BC0-89EE-B8D2FF5E99AA",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "BB19E245-E0AF-54F6-AA5A-121E3DB58041",
         "977D1E69-32A3-524B-854D-D1ABD40070DE",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD"
@@ -264117,7 +264047,6 @@
       "country": "Hungary",
       "relatedTourIds": [
         "76FDAF29-0896-58F5-A8C1-0C719DC0671D",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "85965BA9-EFDC-5A81-A88F-E24D560C6CCD",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "60B62C32-DBD7-5275-8305-6985E68B8375",
@@ -264396,7 +264325,6 @@
         "8CB9E9A6-F1B0-5FD6-91DF-87836E541078",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "A59EA11F-4031-5C30-BE06-7163FAC0695E",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "B4A3B36F-6E5A-5830-A89C-53DA2DF25262",
         "8ED0B227-4601-512C-B2EF-39E41516A178",
         "38DF0452-689A-5463-AEC8-D1DB7DE29E2A"
@@ -264916,7 +264844,6 @@
         "A59EA11F-4031-5C30-BE06-7163FAC0695E",
         "537599D4-D46D-5830-BC96-EA3338E62CE9",
         "8CB9E9A6-F1B0-5FD6-91DF-87836E541078",
-        "0A326FE5-2356-5E03-B707-835067B5DA8D",
         "6701BCCB-7D69-5144-A0A4-C3FFC3CAA709",
         "419D5862-BD3D-5731-B74F-920E4C6F8753"
       ],
@@ -268844,8 +268771,8 @@
           "order": 0,
           "title": "Critics didn’t like the Guggenheim’s design when it first…",
           "caption": "Critics didn’t like the Guggenheim’s design when it first opened, so how did it turn into one of the world’s most famous museums? Watch my f",
-          "latitude": 40.7831793,
-          "longitude": -73.95916599,
+          "latitude": 40.7831793289656,
+          "longitude": -73.95916598843854,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -268857,8 +268784,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7831793,
-      "centroidLongitude": -73.95916599,
+      "centroidLatitude": 40.7831793289656,
+      "centroidLongitude": -73.95916598843854,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [

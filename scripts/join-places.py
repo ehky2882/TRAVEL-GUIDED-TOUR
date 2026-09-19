@@ -100,6 +100,68 @@ def marker_stop(entry):
     return None
 
 
+# Words that name a CATEGORY rather than a subject. A caption saying "museum"
+# proves nothing about WHICH museum.
+GENERIC_NAME_WORDS = {
+    "the", "of", "and", "a", "an", "de", "la", "le", "el", "di", "du", "des",
+    "museum", "gallery", "centre", "center", "national", "art", "house",
+    "building", "tower", "park", "garden", "church", "cathedral", "hotel",
+    "restaurant", "cafe", "bar", "shop", "store", "market", "square",
+}
+
+
+def distinctive_words(place_name, city):
+    """The words in a place's name that actually identify it.
+
+    🔴 The CITY is dropped, and that is load-bearing rather than tidy. "The
+    National Art Center, Tokyo" reduces to nothing but `tokyo` once the
+    category words go, and a caption reading "the coolest cafe in a museum"
+    contains `tokyo` in its own city field — so keeping it would let a caption
+    that names NOTHING prove a join. An empty result must never count as
+    "every word present".
+    """
+    folded_city = fold(city)
+    out = []
+    for word in re.split(r"[^\w]+", (place_name or "").lower()):
+        if not word or len(word) < 2:
+            continue                       # "R." in "Solomon R. Guggenheim"
+        if word in GENERIC_NAME_WORDS:
+            continue
+        if fold(word) and fold(word) == folded_city:
+            continue
+        out.append(word)
+    return out
+
+
+def caption_names_place(entry, place):
+    """Does the entry's own caption name this place? Returns a reason or "".
+
+    🔴 WHY THIS EXISTS. The first join rule matched on TITLE equality, which
+    joined ten entries and left seven that were never judgement calls -- they
+    are pins TITLED WITH THE CREATOR'S CAPTION rather than a name, so no title
+    test could ever see them. `@centrepompidou is the coolest museum ever` is
+    not a name, and it is unmistakably about the Centre Pompidou.
+
+    ⚠️ Folding removes spaces and punctuation, so an @handle matches the name
+    it is built from: `@centrepompidou` folds to the same string as
+    `Centre Pompidou`. That is deliberate, and it is how most of these read.
+    """
+    blob = " ".join([(entry.get("shortDescription") or ""),
+                     (entry.get("longDescription") or "")])
+    folded = fold(blob)
+    if not folded:
+        return ""
+    name = place.get("name") or ""
+    if fold(name) and fold(name) in folded:
+        return "caption contains the whole name"
+    words = distinctive_words(name, place.get("city"))
+    if not words:
+        return ""                          # 🔴 never "vacuously all present"
+    if all(fold(w) in folded for w in words):
+        return "caption contains every distinctive word"
+    return ""
+
+
 def declined_pairs():
     """Every pairing the owner has refused, from the machine-readable record.
 
@@ -119,7 +181,12 @@ def declined_pairs():
 
 
 def candidates(doc, max_move_m=MAX_MOVE_M):
-    """Entries that should join a place: coincident AND same name."""
+    """Entries that should join a place: coincident AND named, by title or caption.
+
+    Two independent signals, either sufficient, both narrow:
+      * the entry's TITLE equals the place's name, or
+      * the entry's CAPTION names the place.
+    """
     board = _load("audit-board.py", "_audit_board")
     refused = declined_pairs()
     out = []
@@ -127,7 +194,10 @@ def candidates(doc, max_move_m=MAX_MOVE_M):
     # board's default 25 m result would let `--max-move` narrow and never
     # widen — a flag that silently ignores half its range. A selftest asking
     # for 5,000 m is what found that.
-    rows = board.same_name_as_place(doc, board.unjoined_places(doc, max_move_m))
+    near = board.unjoined_places(doc, max_move_m)
+    by_title = {id(r[1]) for r in board.same_name_as_place(doc, near)}
+    rows = [r for r in near
+            if id(r[1]) in by_title or caption_names_place(r[1], r[2])]
     for gap, entry, place in rows:
         # ⚠️ No second distance filter here. `unjoined_places` already bounds
         # the search at `max_move_m`, so a filter after it could never fire —
@@ -234,6 +304,24 @@ def selftest():
     check("🔴 the same-named coincident entry IS a candidate", "a" in got)
     check("a differently-named neighbour is NOT", "b" not in got)
     check("🔴 a same-named entry too far away is NOT", "c" not in got)
+    # 🔴 A pin whose TITLE proves nothing and whose CAPTION proves everything.
+    # Without this, `candidates` could drop the caption signal entirely and
+    # every test still passed — the unit tests covered caption_names_place,
+    # nothing covered its use.
+    caption_only = {"tours": [], "linkPins": [
+        dict(single("cap", "@centrepompidou is the coolest museum ever",
+                    48.8607, 2.3522),
+             longDescription="@centrepompidou is the coolest museum ever")],
+        "places": [{"id": "p", "name": "Centre Pompidou", "city": "Paris",
+                    "latitude": 48.8607, "longitude": 2.3522,
+                    "tourIds": ["m"]}]}
+    check("🔴 a pin proved ONLY by its caption is a candidate",
+          [e["id"] for _, e, _ in candidates(caption_only)] == ["cap"])
+    no_proof = json.loads(json.dumps(caption_only))
+    no_proof["linkPins"][0]["longDescription"] = "the coolest cafe in a museum"
+    check("🔴 the same pin with a caption naming nothing is NOT",
+          candidates(no_proof) == [])
+
     check("🔴 --max-move is what excludes it, and it is honoured",
           "c" in [e["id"] for _, e, _ in candidates(doc, max_move_m=5000)])
 
@@ -244,6 +332,34 @@ def selftest():
                     "longitude": -46.6336, "tourIds": ["m"]}]}
     check("🔴 an accent difference does not defeat the name match",
           len(candidates(accented)) == 1)
+
+    # --- the caption signal
+    pl = {"name": "Centre Pompidou", "city": "Paris"}
+    def cap(text):
+        return {"id": "x", "title": "whatever", "longDescription": text}
+    check("🔴 an @handle names the place — folding removes the space",
+          caption_names_place(cap("@centrepompidou is the coolest museum"), pl))
+    check("the written-out name works too",
+          caption_names_place(cap("we visited the Centre Pompidou"), pl))
+    check("🔴 a caption naming NOTHING proves nothing",
+          caption_names_place(cap("the coolest cafe in a museum"), pl) == "")
+    check("an empty caption proves nothing", caption_names_place(cap(""), pl) == "")
+
+    tokyo = {"name": "The National Art Center, Tokyo", "city": "Tokyo"}
+    check("🔴 a name that is ONLY category words plus its city can never be "
+          "proved — an empty word list is not 'all present'",
+          caption_names_place(cap("the coolest cafe in a museum in Tokyo"),
+                              tokyo) == "")
+    check("distinctive_words drops the city",
+          "tokyo" not in distinctive_words("The National Art Center, Tokyo", "Tokyo"))
+    check("distinctive_words drops category words",
+          distinctive_words("The Guggenheim Museum", "New York") == ["guggenheim"])
+    check("🔴 distinctive_words drops a one-letter initial",
+          "r" not in distinctive_words("Solomon R. Guggenheim Museum", "New York"))
+    check("every distinctive word must be present, not merely one",
+          caption_names_place(cap("the Guggenheim reopened"),
+                              {"name": "Solomon R. Guggenheim Museum",
+                               "city": "New York"}) == "")
 
     refused = declined_pairs()
     check("🔴 the declined record is non-empty — a guard reading an empty "
