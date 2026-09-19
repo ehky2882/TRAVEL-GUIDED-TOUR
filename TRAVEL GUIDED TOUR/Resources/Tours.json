@@ -180307,7 +180307,9 @@
       "city": "Seville",
       "country": "Spain",
       "relatedTourIds": [
-        "EA32C2B8-5457-505D-9923-C731C3D4A521"
+        "0974DF6D-085B-542A-BC90-C724F9C19B92",
+        "EA32C2B8-5457-505D-9923-C731C3D4A521",
+        "8B195924-7F89-5094-9DD3-F9BF30BE09A0"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -181728,7 +181730,9 @@
       "city": "Seville",
       "country": "Spain",
       "relatedTourIds": [
-        "E9337ABF-85AE-5F1A-9BCE-2BE73647285E"
+        "0974DF6D-085B-542A-BC90-C724F9C19B92",
+        "E9337ABF-85AE-5F1A-9BCE-2BE73647285E",
+        "1A97D292-3D0E-522A-B8A6-4996A090C11B"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -181966,7 +181970,8 @@
         "137087D6-8A24-501E-9072-B74F125AE5BB",
         "B3FADEB1-F2FF-5268-AD69-231B49574BAE",
         "7811F4E8-C308-53C0-85EF-BCC3A39FA3A6",
-        "51E1861F-5F79-5321-AC7C-4341FCFDF393"
+        "51E1861F-5F79-5321-AC7C-4341FCFDF393",
+        "D7617C05-6FAA-513C-A66F-7D78E0948487"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -182358,7 +182363,9 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
         "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
         "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
         "9FBA6174-676B-5E6C-A095-96F965D11D1C",
@@ -182415,10 +182422,10 @@
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
         "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
         "53CBF691-42E6-5297-B170-FDB50A2F5828",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
+        "EFCE3664-84BF-5615-A593-968D7EDD8B2D",
         "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "23F99407-E1A5-54E5-B612-D109362FFA16",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -190896,6 +190903,7 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "7811F4E8-C308-53C0-85EF-BCC3A39FA3A6",
+        "D7617C05-6FAA-513C-A66F-7D78E0948487",
         "EB342381-1F96-50CE-954F-BD61D670F584",
         "EC258C38-D815-5811-BF38-60F8DCEA7161",
         "B3FADEB1-F2FF-5268-AD69-231B49574BAE",
@@ -211070,11 +211078,12 @@
       "relatedTourIds": [
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
         "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
-        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
-        "592F0737-559E-5077-B4BB-A5F5739D77D2",
-        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E"
+        "8F14C3F2-F85E-573F-881D-A074D1F24847",
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -212978,6 +212987,7 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "137087D6-8A24-501E-9072-B74F125AE5BB",
+        "D7617C05-6FAA-513C-A66F-7D78E0948487",
         "9A385977-8651-5647-B550-4CB9B0372224",
         "EC9B5942-5070-5081-B021-D9AAA75524C9",
         "EB342381-1F96-50CE-954F-BD61D670F584",
@@ -236833,6 +236843,7 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "7811F4E8-C308-53C0-85EF-BCC3A39FA3A6",
+        "D7617C05-6FAA-513C-A66F-7D78E0948487",
         "137087D6-8A24-501E-9072-B74F125AE5BB",
         "EB342381-1F96-50CE-954F-BD61D670F584",
         "B3FADEB1-F2FF-5268-AD69-231B49574BAE"
@@ -243610,7 +243621,9 @@
       "relatedTourIds": [
         "60A203C5-1369-5E72-9B93-F2AD1373E92C",
         "783129EA-C200-54B7-891C-1A7108E9DAAF",
+        "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
         "2b792f2c-e508-545b-ae53-8cc6521258c5",
+        "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
         "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "BB77667E-DF93-572E-83C8-FB24A2E70D17"
       ],
@@ -243659,7 +243672,9 @@
       "country": "Spain",
       "relatedTourIds": [
         "60A203C5-1369-5E72-9B93-F2AD1373E92C",
+        "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
         "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
         "1c43d008-386e-5413-b3de-cbda28a52381"
       ],
       "primaryCategory": "foodAndDrink",
@@ -243706,8 +243721,10 @@
       "relatedTourIds": [
         "783129EA-C200-54B7-891C-1A7108E9DAAF",
         "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
         "2b792f2c-e508-545b-ae53-8cc6521258c5",
         "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
+        "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
         "62cca756-02e7-5848-ace4-502800c37005"
       ],
       "primaryCategory": "foodAndDrink",
@@ -269795,8 +269812,8 @@
         "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
         "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
-        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
-        "8DD8CA83-4F88-5372-8B5C-C9823383C689"
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
+        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -269893,9 +269910,9 @@
         "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
         "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
         "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "EFCE3664-84BF-5615-A593-968D7EDD8B2D",
         "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
-        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -269941,6 +269958,9 @@
       "centroidLongitude": -6.5901,
       "city": "Isle of Skye",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "D4B662A7-CE49-53CA-A6BA-2C76CE048BB5"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "History",
@@ -270130,12 +270150,12 @@
       "relatedTourIds": [
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
         "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
         "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
         "77A0C66E-2530-5F56-9D32-73B139B5FA64",
-        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
-        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
-        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644"
+        "EFCE3664-84BF-5615-A593-968D7EDD8B2D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -270183,7 +270203,8 @@
       "city": "Highlands",
       "country": "United States",
       "relatedTourIds": [
-        "F693C0D3-9FA3-5212-B559-48783A150194"
+        "F693C0D3-9FA3-5212-B559-48783A150194",
+        "876FFE36-A336-541F-BC85-211CD2BC4CA1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -270277,6 +270298,7 @@
       "city": "Highlands",
       "country": "United States",
       "relatedTourIds": [
+        "876FFE36-A336-541F-BC85-211CD2BC4CA1",
         "5CF6EFBC-CC96-54F4-BD00-8E497F4788E3"
       ],
       "primaryCategory": "foodAndDrink",
@@ -270420,9 +270442,9 @@
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
         "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "8DD8CA83-4F88-5372-8B5C-C9823383C689"
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -270799,7 +270821,8 @@
       "country": "United States",
       "relatedTourIds": [
         "BC72EEC8-02FE-595A-B763-3E673F45E1CF",
-        "7A4869E2-B3C8-52EB-A797-A1E4B3F0EC3D"
+        "7A4869E2-B3C8-52EB-A797-A1E4B3F0EC3D",
+        "86558F0B-4448-505A-8840-BD5127CA6199"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -270940,7 +270963,8 @@
       "country": "United States",
       "relatedTourIds": [
         "AC6D08C9-39D3-5D65-9E39-7509844CC3F9",
-        "7A4869E2-B3C8-52EB-A797-A1E4B3F0EC3D"
+        "7A4869E2-B3C8-52EB-A797-A1E4B3F0EC3D",
+        "86558F0B-4448-505A-8840-BD5127CA6199"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -271042,14 +271066,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "EFCE3664-84BF-5615-A593-968D7EDD8B2D",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
         "592F0737-559E-5077-B4BB-A5F5739D77D2",
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "53CBF691-42E6-5297-B170-FDB50A2F5828",
-        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
-        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
-        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+        "8F14C3F2-F85E-573F-881D-A074D1F24847"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -271146,7 +271170,8 @@
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
         "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
-        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80"
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -271192,6 +271217,9 @@
       "centroidLongitude": -80.054335,
       "city": "West Palm Beach",
       "country": "United States",
+      "relatedTourIds": [
+        "3F9CFE71-0CAA-5061-B50A-E3CE59DDBD0F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271236,6 +271264,16 @@
       "centroidLongitude": 16.3500333,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "EFCE3664-84BF-5615-A593-968D7EDD8B2D",
+        "9C26A8B5-6B06-5964-828B-E28E7AC276B6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271280,6 +271318,16 @@
       "centroidLongitude": 16.3725327,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "8F14C3F2-F85E-573F-881D-A074D1F24847",
+        "53CBF691-42E6-5297-B170-FDB50A2F5828",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271324,6 +271372,10 @@
       "centroidLongitude": 13.0413172,
       "city": "Salzburg",
       "country": "Austria",
+      "relatedTourIds": [
+        "2DB00E99-E156-56F2-89D1-481AB9F0507C",
+        "71EB5A4F-01BD-5569-A70B-757813BFD083"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271368,6 +271420,16 @@
       "centroidLongitude": 16.3485376,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271412,6 +271474,16 @@
       "centroidLongitude": 16.3733832,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
+        "53CBF691-42E6-5297-B170-FDB50A2F5828",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "EFCE3664-84BF-5615-A593-968D7EDD8B2D",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271456,6 +271528,10 @@
       "centroidLongitude": -83.1977736,
       "city": "Highlands",
       "country": "United States",
+      "relatedTourIds": [
+        "F693C0D3-9FA3-5212-B559-48783A150194",
+        "5CF6EFBC-CC96-54F4-BD00-8E497F4788E3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271500,6 +271576,10 @@
       "centroidLongitude": -81.0909947,
       "city": "Savannah",
       "country": "United States",
+      "relatedTourIds": [
+        "AC6D08C9-39D3-5D65-9E39-7509844CC3F9",
+        "BC72EEC8-02FE-595A-B763-3E673F45E1CF"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271544,6 +271624,9 @@
       "centroidLongitude": -4.7815207,
       "city": "Córdoba",
       "country": "Spain",
+      "relatedTourIds": [
+        "7AA88D06-1B9C-5635-B3A1-53BF6B3557A6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271588,6 +271671,13 @@
       "centroidLongitude": -3.7068326,
       "city": "Madrid",
       "country": "Spain",
+      "relatedTourIds": [
+        "783129EA-C200-54B7-891C-1A7108E9DAAF",
+        "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
+        "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "1c43d008-386e-5413-b3de-cbda28a52381",
+        "60A203C5-1369-5E72-9B93-F2AD1373E92C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271632,6 +271722,11 @@
       "centroidLongitude": -5.9969781,
       "city": "Seville",
       "country": "Spain",
+      "relatedTourIds": [
+        "1A97D292-3D0E-522A-B8A6-4996A090C11B",
+        "0974DF6D-085B-542A-BC90-C724F9C19B92",
+        "E9337ABF-85AE-5F1A-9BCE-2BE73647285E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271720,6 +271815,12 @@
       "centroidLongitude": 13.0338412,
       "city": "Salzburg",
       "country": "Austria",
+      "relatedTourIds": [
+        "2DB00E99-E156-56F2-89D1-481AB9F0507C",
+        "26DE384A-B2A8-56BC-99D1-6FF1B9E56D54",
+        "B3D517BE-AFA9-5172-B77F-F86A43A35F1B",
+        "681B0D48-E315-59FE-9D13-38DEFC9A88BA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271765,6 +271866,12 @@
       "centroidLongitude": 13.0459558,
       "city": "Salzburg",
       "country": "Austria",
+      "relatedTourIds": [
+        "681B0D48-E315-59FE-9D13-38DEFC9A88BA",
+        "71EB5A4F-01BD-5569-A70B-757813BFD083",
+        "26DE384A-B2A8-56BC-99D1-6FF1B9E56D54",
+        "B3D517BE-AFA9-5172-B77F-F86A43A35F1B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271810,6 +271917,10 @@
       "centroidLongitude": 13.0440673,
       "city": "Salzburg",
       "country": "Austria",
+      "relatedTourIds": [
+        "2DB00E99-E156-56F2-89D1-481AB9F0507C",
+        "71EB5A4F-01BD-5569-A70B-757813BFD083"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271855,6 +271966,14 @@
       "centroidLongitude": 16.367211,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
+        "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
+        "8F14C3F2-F85E-573F-881D-A074D1F24847",
+        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271900,6 +272019,15 @@
       "centroidLongitude": -3.7059265,
       "city": "Madrid",
       "country": "Spain",
+      "relatedTourIds": [
+        "FF7DDD8C-A2D6-524C-910E-B3B1B5789AED",
+        "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
+        "783129EA-C200-54B7-891C-1A7108E9DAAF",
+        "60A203C5-1369-5E72-9B93-F2AD1373E92C",
+        "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "1c43d008-386e-5413-b3de-cbda28a52381",
+        "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -271990,6 +272118,9 @@
       "centroidLongitude": -80.0567254,
       "city": "West Palm Beach",
       "country": "United States",
+      "relatedTourIds": [
+        "17A35ECC-6438-5399-9D33-162B5C226D27"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -272034,6 +272165,10 @@
       "centroidLongitude": 13.0495972,
       "city": "Salzburg",
       "country": "Austria",
+      "relatedTourIds": [
+        "2DB00E99-E156-56F2-89D1-481AB9F0507C",
+        "71EB5A4F-01BD-5569-A70B-757813BFD083"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -272169,6 +272304,9 @@
       "centroidLongitude": -6.1732737,
       "city": "Isle of Skye",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "03035654-CC5F-52F9-85FC-9D0124E572DD"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Bridge",
@@ -272213,6 +272351,9 @@
       "centroidLongitude": -4.7767175,
       "city": "Córdoba",
       "country": "Spain",
+      "relatedTourIds": [
+        "21C45B3D-AD77-5923-89E7-2F9A365428D2"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -272303,6 +272444,12 @@
       "centroidLongitude": -5.9931406,
       "city": "Seville",
       "country": "Spain",
+      "relatedTourIds": [
+        "1A97D292-3D0E-522A-B8A6-4996A090C11B",
+        "EA32C2B8-5457-505D-9923-C731C3D4A521",
+        "E9337ABF-85AE-5F1A-9BCE-2BE73647285E",
+        "8B195924-7F89-5094-9DD3-F9BF30BE09A0"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -272349,6 +272496,9 @@
       "centroidLongitude": -3.7099503,
       "city": "Madrid",
       "country": "Spain",
+      "relatedTourIds": [
+        "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -272439,6 +272589,11 @@
       "centroidLongitude": -5.9918532,
       "city": "Seville",
       "country": "Spain",
+      "relatedTourIds": [
+        "8B195924-7F89-5094-9DD3-F9BF30BE09A0",
+        "0974DF6D-085B-542A-BC90-C724F9C19B92",
+        "EA32C2B8-5457-505D-9923-C731C3D4A521"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -272485,6 +272640,12 @@
       "centroidLongitude": -3.1885303,
       "city": "Edinburgh",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "137087D6-8A24-501E-9072-B74F125AE5BB",
+        "7811F4E8-C308-53C0-85EF-BCC3A39FA3A6",
+        "9A385977-8651-5647-B550-4CB9B0372224",
+        "EC258C38-D815-5811-BF38-60F8DCEA7161"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
