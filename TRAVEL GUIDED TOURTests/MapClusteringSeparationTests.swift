@@ -57,17 +57,14 @@ final class MapClusteringSeparationTests: XCTestCase {
             center: CLLocationCoordinate2D(latitude: 45.50, longitude: -73.57),
             span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         )
-        // One place holding 2 tours, plus 2 ordinary tours, all in one cell.
-        // ⚠️ Keep these inside a single grid cell. Buckets are keyed off an
-        // ABSOLUTE (lat 0, lon 0) origin, so at this span the row boundary
-        // falls on lat 45.5 exactly — an earlier revision used 45.5001 for the
-        // third marker and it bucketed one row up, making this read 3.
+        // One place holding 2 tours, plus 2 ordinary tours, all within a
+        // couple of points of each other at this span.
         let markers = [
             placeMarker(45.4990, -73.5710, tours: 2),
             marker(45.4992, -73.5712),
             marker(45.4994, -73.5708)
         ]
-        let items = MapClustering.cluster(markers: markers, in: region, cellsAcross: 12)
+        let items = MapClustering.cluster(markers: markers, in: region, mapWidth: 390)
 
         let counts = items.compactMap { item -> Int? in
             if case .cluster(let count, _) = item.kind { return count }
@@ -89,7 +86,7 @@ final class MapClusteringSeparationTests: XCTestCase {
             placeMarker(45.4997, -73.5710),
             marker(45.4999, -73.5712)
         ]
-        let items = MapClustering.cluster(markers: markers, in: region, cellsAcross: 12)
+        let items = MapClustering.cluster(markers: markers, in: region, mapWidth: 390)
         XCTAssertEqual(items.count, 1, "a place near another pin merges like any other marker")
     }
 
@@ -104,7 +101,7 @@ final class MapClusteringSeparationTests: XCTestCase {
             placeMarker(45.4997, -73.5710),
             marker(45.4999, -73.5712)
         ]
-        let items = MapClustering.cluster(markers: markers, in: tight, cellsAcross: 12)
+        let items = MapClustering.cluster(markers: markers, in: tight, mapWidth: 390)
         let places = items.compactMap { item -> MapClustering.StopMarker? in
             if case .single(let m) = item.kind, m.isPlace { return m }
             return nil
@@ -290,7 +287,7 @@ final class MapClusteringSeparationTests: XCTestCase {
                 center: CLLocationCoordinate2D(latitude: 45.4997, longitude: -73.5710),
                 span: MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
             )
-            let items = MapClustering.cluster(markers: stops, in: region)
+            let items = MapClustering.cluster(markers: stops, in: region, mapWidth: 390)
             XCTAssertEqual(items.count, 1, "expected one cluster at span \(span)")
             guard let kind = items.first?.kind else {
                 return XCTFail("expected a cluster item at span \(span)")
@@ -302,5 +299,75 @@ final class MapClusteringSeparationTests: XCTestCase {
                 XCTFail("coincident markers must never render as separate pins (span \(span))")
             }
         }
+    }
+
+    // MARK: - Screen-space clustering
+
+    /// 390pt-wide map showing 0.039° of longitude: 1pt = 0.0001°.
+    private func screenRegion(center: CLLocationCoordinate2D) -> MKCoordinateRegion {
+        MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.06, longitudeDelta: 0.039))
+    }
+
+    /// The grid's defect: two pins a few points apart on either side of a
+    /// cell line never merged, and drew on top of each other. On the
+    /// equator, lon 0 is a boundary of every absolute grid.
+    func test_pinsAFewPointsApart_mergeEvenAcrossAnOldGridLine() {
+        let markers = [marker(0, -0.0002), marker(0, 0.0002)] // ~4pt apart
+        let items = MapClustering.cluster(
+            markers: markers, in: screenRegion(center: .init(latitude: 0, longitude: 0)), mapWidth: 390
+        )
+        XCTAssertEqual(items.count, 1)
+    }
+
+    func test_pinsWellApartOnScreen_staySeparate() {
+        let markers = [marker(0, -0.006), marker(0, 0.006)] // ~120pt apart
+        let items = MapClustering.cluster(
+            markers: markers, in: screenRegion(center: .init(latitude: 0, longitude: 0)), mapWidth: 390
+        )
+        XCTAssertEqual(items.count, 2)
+    }
+
+    /// The radius is in points, so the same pair merges on a narrow map
+    /// and separates on a wide one showing the same region.
+    func test_radiusIsInScreenPoints() {
+        let markers = [marker(0, -0.002), marker(0, 0.002)]
+        let region = screenRegion(center: .init(latitude: 0, longitude: 0))
+        XCTAssertEqual(MapClustering.cluster(markers: markers, in: region, mapWidth: 390).count, 1)
+        XCTAssertEqual(MapClustering.cluster(markers: markers, in: region, mapWidth: 2000).count, 2)
+    }
+
+    /// A pan with no zoom change must leave every cluster — and its ID —
+    /// exactly as it was, or SwiftUI tears annotations down and rebuilds them.
+    func test_pan_keepsClusterIDsStable() {
+        var markers: [MapClustering.StopMarker] = []
+        for i in 0..<40 {
+            markers.append(marker(40.75 + Double(i % 8) * 0.0013, -73.98 + Double(i / 8) * 0.0017))
+        }
+        let a = MapClustering.cluster(
+            markers: markers, in: screenRegion(center: .init(latitude: 40.753, longitude: -73.977)), mapWidth: 390
+        )
+        let b = MapClustering.cluster(
+            markers: markers, in: screenRegion(center: .init(latitude: 40.756, longitude: -73.972)), mapWidth: 390
+        )
+        XCTAssertEqual(Set(a.map(\.id)), Set(b.map(\.id)))
+    }
+
+    /// Every marker lands in exactly one item — nothing dropped, nothing doubled.
+    func test_everyMarkerAppearsOnce() {
+        var markers: [MapClustering.StopMarker] = []
+        for i in 0..<200 {
+            markers.append(marker(40.70 + Double(i % 20) * 0.0011, -74.00 + Double(i / 20) * 0.0009))
+        }
+        let items = MapClustering.cluster(
+            markers: markers, in: screenRegion(center: .init(latitude: 40.71, longitude: -73.995)), mapWidth: 390
+        )
+        let ids = items.flatMap { item -> [UUID] in
+            switch item.kind {
+            case .single(let m): return [m.id]
+            case .cluster(_, let stops): return stops.map(\.id)
+            }
+        }
+        XCTAssertEqual(ids.count, markers.count)
+        XCTAssertEqual(Set(ids), Set(markers.map(\.id)))
     }
 }

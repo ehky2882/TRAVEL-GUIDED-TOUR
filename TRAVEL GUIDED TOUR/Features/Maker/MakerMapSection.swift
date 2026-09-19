@@ -56,11 +56,8 @@ struct MakerMapSection: View {
     /// mid-gesture flickers.
     @State private var currentRegion: MKCoordinateRegion?
 
-    /// Cells across the visible region. Lower than the home map's 20
-    /// because `cellsAcross` counts cells across the **region**, not the
-    /// screen: in a hero-sized frame the same 20 cells would span far fewer
-    /// points, so visually adjacent pins would refuse to merge.
-    private static let cellsAcross: Double = 12
+    /// The map's width in points — clustering merges by on-screen distance.
+    @State private var mapWidth: CGFloat = 0
 
     var body: some View {
         Map(position: $cameraPosition) {
@@ -98,6 +95,7 @@ struct MakerMapSection: View {
         // No `.mapControls` — the scale overlay wants more vertical room
         // than this frame has.
         .onTapGesture { onMapTapped() }
+        .onGeometryChange(for: CGFloat.self, of: { $0.size.width }) { mapWidth = $0 }
         // Re-cluster only when the gesture settles. Annotations are
         // positioned by lat/lon, so they pan smoothly with the map even
         // while clusters stay frozen from the prior region.
@@ -180,11 +178,7 @@ struct MakerMapSection: View {
     }
 
     private var clusterItems: [MapClustering.ClusterItem] {
-        MapClustering.cluster(
-            markers: stopMarkers,
-            in: currentRegion,
-            cellsAcross: Self.cellsAcross
-        )
+        MapClustering.cluster(markers: stopMarkers, in: currentRegion, mapWidth: mapWidth)
     }
 
     /// Passing the live span keeps a cluster tap from ever *widening*

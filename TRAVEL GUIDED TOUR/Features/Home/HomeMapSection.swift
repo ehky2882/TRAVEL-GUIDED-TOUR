@@ -100,8 +100,13 @@ struct HomeMapSection: View {
     /// clustering math reacts to live pans and pinches.
     @State private var currentRegion: MKCoordinateRegion?
 
+    /// The map's width in points. Clustering merges pins by on-screen
+    /// distance, so it needs to know how many points the region spans.
+    @State private var mapWidth: CGFloat = 0
+
     var body: some View {
         styledMap
+        .onGeometryChange(for: CGFloat.self, of: { $0.size.width }) { mapWidth = $0 }
         // Map taps that don't hit an annotation propagate here —
         // SwiftUI prefers the inner annotation gestures, so pin and
         // placecard taps still fire. Parent uses this to dismiss the
@@ -271,12 +276,12 @@ struct HomeMapSection: View {
         precomputedMarkers ?? MapMarkers.markers(for: tours, places: places)
     }
 
-    /// Bucket markers into the current visible region's grid, collapsing
-    /// any cell that holds 2+ pins into a cluster. Grid resolution
-    /// scales with `region.span`, so a city-wide view groups aggressively
-    /// while a block-level view leaves everything individual.
+    /// Merge pins that would sit within one cluster radius of each other
+    /// on screen. The radius is fixed in points, so a city-wide view
+    /// groups aggressively while a block-level view leaves everything
+    /// individual.
     private var clusterItems: [MapClustering.ClusterItem] {
-        MapClustering.cluster(markers: allStopMarkers, in: currentRegion)
+        MapClustering.cluster(markers: allStopMarkers, in: currentRegion, mapWidth: mapWidth)
     }
 
     /// Curated allowlist of Apple Maps POI categories — only the
@@ -306,11 +311,8 @@ struct HomeMapSection: View {
         .airport, .publicTransport, .hotel, .parking, .evCharger
     ])
 
-    // The clustering pipeline — viewport cull, snapped span, absolute
-    // grid bucketing — moved to `Components/MapClustering.swift` on
-    // 2026-07-27 so the maker page's map could share it instead of
-    // reimplementing it. Behaviour is unchanged; Home still uses the
-    // default 20-cells-across density.
+    // The clustering pipeline lives in `Components/MapClustering.swift`,
+    // shared with the maker page's map.
 
     /// Tighten the camera around a cluster's bounding box so it breaks
     /// apart on the next render. Mirrors MKMapView's default

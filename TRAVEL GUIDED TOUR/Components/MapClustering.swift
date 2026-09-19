@@ -2,27 +2,33 @@ import CoreLocation
 import Foundation
 import MapKit
 
-/// Grid clustering for map pins, shared by every map surface.
+/// Screen-space clustering for map pins, shared by every map surface.
 ///
 /// Extracted from `HomeMapSection` on 2026-07-27 so the maker page's map
-/// could reuse it rather than reimplement it. Everything here is pure
-/// and `static` — it was already written that way, which is why the move
-/// was a straight lift.
+/// could reuse it rather than reimplement it.
 ///
-/// The two subtle properties this pipeline exists to preserve, both
-/// hard-won on the home map and easy to break by "simplifying":
+/// **Rewritten 2026-09-19** from a lat/lon grid to greedy radius clustering
+/// in projected (Mercator) space, because the grid could not keep up with a
+/// catalogue of ~3,600 markers: at 20 cells across a 390pt map a cell was
+/// ~20pt wide while a cluster badge is 36–44pt, so neighbouring clusters
+/// drew on top of each other across the whole of Manhattan, and two pins a
+/// hair apart on either side of a cell line never merged at all.
 ///
-///  1. **Absolute grid origin.** Buckets are keyed off (lat 0, lon 0),
-///     never off the visible region's corner, so a marker's bucket —
-///     and therefore its SwiftUI annotation ID — depends only on its
-///     coordinate and the current cell pitch. A pan with no zoom change
-///     keeps every cluster ID stable, so SwiftUI updates annotations in
-///     place instead of removing and re-adding them.
-///  2. **Snapped span.** Cell pitch derives from a span rounded to two
-///     significant figures, because MapKit reports sub-percent drift on
-///     the span when a pan settles — and any pitch change re-buckets
-///     markers near a cell boundary, which looks like clusters shifting
-///     on a pure pan.
+/// The properties this pipeline exists to preserve — easy to break by
+/// "simplifying":
+///
+///  1. **The radius is in screen points.** A pin merges with anything
+///     within `defaultClusterRadius` points of it on screen, whatever the
+///     map's size — which is why callers pass the map's width. (The grid
+///     counted cells across the *region*, so a short map needed its own
+///     hand-tuned density; the maker map's `cellsAcross: 12` is gone.)
+///  2. **Zoom is quantised, and the whole set is clustered.** The radius is
+///     derived from a zoom level snapped to half-steps, and clustering runs
+///     over every marker, not only the ones near the viewport. So the
+///     grouping depends on the zoom level alone: a pan with no zoom change
+///     yields identical clusters with identical IDs, and SwiftUI updates
+///     annotations in place instead of removing and re-adding them. The
+///     viewport cull is applied to the *output*.
 enum MapClustering {
 
     // MARK: - A marker
@@ -62,35 +68,34 @@ enum MapClustering {
         func hash(into hasher: inout Hasher) { hasher.combine(id) }
     }
 
-    struct BucketKey: Hashable {
-        let row: Int
-        let col: Int
-    }
-
     /// Either a single marker or a merged group, with a stable `id` for
     /// SwiftUI's annotation diffing.
     struct ClusterItem: Identifiable {
         let coordinate: CLLocationCoordinate2D
         let kind: Kind
-        private let bucketKey: BucketKey?
+        /// The zoom step the cluster was formed at. Part of a cluster's ID,
+        /// because the same seed gathers different members at another zoom.
+        private let zoomStep: Int
 
-        init(coordinate: CLLocationCoordinate2D, kind: Kind, bucketKey: BucketKey? = nil) {
+        init(coordinate: CLLocationCoordinate2D, kind: Kind, zoomStep: Int = 0) {
             self.coordinate = coordinate
             self.kind = kind
-            self.bucketKey = bucketKey
+            self.zoomStep = zoomStep
         }
 
         enum Kind {
             case single(StopMarker)
+            /// `stops.first` is the cluster's seed — the marker that gathered
+            /// the rest — which is what keeps its ID stable.
             case cluster(count: Int, stops: [StopMarker])
         }
 
         var id: String {
             switch kind {
             case .single(let m): return "s-\(m.id.uuidString)"
-            case .cluster(let count, _):
-                let key = bucketKey.map { "\($0.row),\($0.col)" } ?? "n"
-                return "c-\(key)-\(count)"
+            case .cluster(let count, let stops):
+                let seed = stops.first?.id.uuidString ?? "n"
+                return "c-\(seed)-z\(zoomStep)-\(count)"
             }
         }
 
@@ -104,15 +109,21 @@ enum MapClustering {
 
     // MARK: - Tuning
 
-    /// Cells across the visible region at the default density. Finer
-    /// than the original 14 so pins only cluster when they're very close
-    /// together — reduces false merges at neighbourhood zoom.
-    ///
-    /// ⚠️ This counts cells across the **region**, not the screen, so a
-    /// physically shorter map covers the same 20 cells in far fewer
-    /// points and visually adjacent pins refuse to merge. Small maps
-    /// should pass a lower value.
-    static let defaultCellsAcross: Double = 20
+    /// Two pins closer than this on screen, in points, merge. Sized to the
+    /// pins themselves: a cluster badge is 36–44pt across and a place
+    /// capsule ~50pt wide, so anything tighter lets them overlap. Seeds end
+    /// up at least this far apart; a cluster is then drawn at its members'
+    /// centroid, which can pull two badges somewhat closer, hence the margin.
+    static let defaultClusterRadius: Double = 56
+
+    /// Map width assumed before the real one has been measured — an
+    /// iPhone's portrait width. Only matters for the first frame.
+    static let fallbackMapWidth: Double = 390
+
+    /// Zoom quantisation, in steps per doubling of scale. 2 = half-steps, so
+    /// the on-screen radius wanders at most ±19% between steps, and a pan's
+    /// sub-percent span drift almost never lands on a step boundary.
+    static let zoomStepsPerDoubling: Double = 2
 
     /// Above this span (in degrees) the viewport cull is switched off:
     /// the expanded window would approach global, so culling saves
@@ -162,8 +173,8 @@ enum MapClustering {
     }
 
     /// Span (in degrees) at which the camera has reached building scale —
-    /// about 65 m across, where the cluster grid's cells are only a few
-    /// metres wide. Past this, asking the user to pinch further to tease
+    /// about 65 m across, where the cluster radius covers only
+    /// about ten metres. Past this, asking the user to pinch further to tease
     /// two pins apart stops being a reasonable ask.
     static let buildingScaleSpan: Double = 0.0006
 
@@ -188,20 +199,19 @@ enum MapClustering {
 
     // MARK: - Geometry helpers
 
-    /// Round `span` to two significant figures so MapKit's
-    /// sub-percent settle drift on pure pans doesn't perturb the
-    /// derived cluster cell pitch. A real pinch step changes span
-    /// by at least several percent — well above this snap precision
-    /// — so legitimate zoom changes still cross a snap boundary.
-    /// E.g. 0.0050 / 0.005001 / 0.00499 all snap to 0.0050; 0.006
-    /// remains 0.006.
-    static func snappedSpan(_ span: Double) -> Double {
-        guard span > 0, span.isFinite else { return span }
-        // Scale so the first two sig figs become the integer part,
-        // round, then scale back.
-        let exponent = floor(log10(span)) - 1
-        let unit = pow(10.0, exponent)
-        return (span / unit).rounded() * unit
+    /// The zoom step for a camera: log2 of degrees-per-point, quantised.
+    /// Depends only on the span and the map's width, never on where the
+    /// camera is, so a pure pan keeps the same step.
+    static func zoomStep(lonSpan: Double, mapWidth: Double) -> Int {
+        let width = mapWidth > 0 ? mapWidth : fallbackMapWidth
+        let degreesPerPoint = min(360, max(lonSpan, 1e-9)) / width
+        return Int((log2(degreesPerPoint) * zoomStepsPerDoubling).rounded())
+    }
+
+    /// Mercator map points per screen point at a zoom step.
+    static func mapPointsPerPoint(atZoomStep step: Int) -> Double {
+        let degreesPerPoint = pow(2, Double(step) / zoomStepsPerDoubling)
+        return degreesPerPoint / 360 * MKMapSize.world.width
     }
 
     /// The visible region grown by `byViewports` viewports on every
@@ -220,100 +230,110 @@ enum MapClustering {
 
     // MARK: - Clustering
 
+    /// Cluster `markers` for a map showing `region` at `mapWidth` points
+    /// wide. Returns only what falls near the viewport.
     static func cluster(
         markers: [StopMarker],
         in region: MKCoordinateRegion?,
-        cellsAcross: Double = defaultCellsAcross
+        mapWidth: Double,
+        radius: Double = defaultClusterRadius
     ) -> [ClusterItem] {
         guard let region else {
             return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
         }
 
-        // Viewport cull. Drop markers that are far outside the visible
-        // region before doing any bucketing so the annotation set the
-        // map builds/diffs scales with what's near the viewport, not
-        // with the whole (multi-city, ~1,000-stop) catalog. MapKit
-        // already culls off-screen annotations from *drawing*, but
-        // SwiftUI still builds + diffs an annotation for every one on
-        // each recompute — wasted work once the catalog spans continents.
-        // The margin (see `cullMarginViewports`) keeps a generous ring of
-        // off-screen markers so pins never visibly "pop in" at the edges
-        // during a normal pan. Bucketing uses an absolute grid origin
-        // (below), so culling never changes a surviving marker's bucket
-        // key — cluster IDs stay stable and pans still update in place.
-        let visibleMarkers: [StopMarker]
-        if region.span.latitudeDelta < cullDisableSpan,
-           region.span.longitudeDelta < cullDisableSpan {
-            let window = expandedWindow(region, byViewports: cullMarginViewports)
-            visibleMarkers = markers.filter { window.contains($0.coordinate) }
-        } else {
-            visibleMarkers = markers
+        let step = zoomStep(lonSpan: region.span.longitudeDelta, mapWidth: mapWidth)
+        let items = clusterAll(markers: markers, zoomStep: step, radius: radius)
+
+        // Viewport cull, on the OUTPUT. SwiftUI builds and diffs an
+        // annotation for every item on each recompute, so the set handed
+        // to the map must scale with what is near the viewport rather than
+        // with the whole multi-continent catalogue. Culling after
+        // clustering (not before) is what keeps a pan from changing any
+        // cluster's membership — see the type's doc comment.
+        guard region.span.latitudeDelta < cullDisableSpan,
+              region.span.longitudeDelta < cullDisableSpan else { return items }
+        let window = expandedWindow(region, byViewports: cullMarginViewports)
+        return items.filter { window.contains($0.coordinate) }
+    }
+
+    /// Last full clustering, reused while the zoom step and markers are
+    /// unchanged — i.e. across every pan, and every re-render that is not
+    /// a zoom or a filter change.
+    private static var memo: (markers: [StopMarker], step: Int, radius: Double, items: [ClusterItem])?
+
+    /// Greedy radius clustering over every marker, in Mercator space.
+    ///
+    /// Each unclaimed marker, in input order, becomes a seed and gathers
+    /// every unclaimed marker within `radius` screen points of it. A grid
+    /// of `radius`-sized cells means each seed checks only its 3×3
+    /// neighbourhood, so a pass over the whole catalogue is linear.
+    /// Input order is the catalogue's, so the result is deterministic.
+    static func clusterAll(markers: [StopMarker], zoomStep step: Int, radius: Double) -> [ClusterItem] {
+        if let memo, memo.step == step, memo.radius == radius, memo.markers == markers {
+            return memo.items
         }
 
-        // Snap span to two significant figures BEFORE deriving cell
-        // pitch. MapKit reports sub-percent drift on the span when a
-        // pan gesture settles (even when the user didn't zoom), and
-        // ANY change in pitch re-buckets markers that sit near a
-        // cell boundary — the visible symptom is clusters appearing
-        // to shift / reform on pure pans. Two sig figs is coarse
-        // enough to absorb that drift, fine enough that real zoom
-        // changes (always at least several percent per pinch step)
-        // still cross a snap boundary and re-cluster as expected.
-        let snappedLatSpan = snappedSpan(region.span.latitudeDelta)
-        let snappedLonSpan = snappedSpan(region.span.longitudeDelta)
-        let cellSpanLat = snappedLatSpan / cellsAcross
-        let cellSpanLon = snappedLonSpan / cellsAcross
-        guard cellSpanLat > 0, cellSpanLon > 0 else {
-            return visibleMarkers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
+        let cell = radius * mapPointsPerPoint(atZoomStep: step)
+        guard cell > 0, cell.isFinite else {
+            return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
+        }
+        let points = markers.map { MKMapPoint($0.coordinate) }
+
+        struct Cell: Hashable { let x: Int; let y: Int }
+        func cellOf(_ p: MKMapPoint) -> Cell {
+            Cell(x: Int(floor(p.x / cell)), y: Int(floor(p.y / cell)))
+        }
+        var grid: [Cell: [Int]] = [:]
+        grid.reserveCapacity(markers.count)
+        for (i, p) in points.enumerated() {
+            grid[cellOf(p), default: []].append(i)
         }
 
-        // Bucket by an ABSOLUTE (lat=0, lon=0) grid origin rather
-        // than the visible region's southwest corner. With a
-        // region-relative origin every pan would re-index every
-        // pin (the origin shifts with the camera), so a marker's
-        // bucket key — and therefore its cluster's SwiftUI
-        // annotation ID — would change on every recompute. With
-        // an absolute origin the bucket assignment depends only
-        // on the marker's coordinate and the current zoom level
-        // (cell pitch), so a pan with no zoom change keeps every
-        // cluster's ID stable across recomputes: SwiftUI updates
-        // the existing annotation in place instead of removing +
-        // re-adding it.
-        // Places bucket like anything else. An earlier revision kept them out
-        // of clustering entirely, on the theory that a clustered place pin was
-        // unreachable — that was wrong. A place sits at a distinct coordinate
-        // from its neighbours (it REPLACES its own tours, so what surrounds it
-        // is other tours elsewhere), which means zooming separates it normally.
-        // The bug that theory was chasing turned out to be a dismissal/
-        // presentation problem in a covered window (#532), not clustering.
-        //
-        // Keeping them out also made the map lie: at continental zoom a lone
-        // "2" capsule floated beside a "100" cluster, reading as though a
-        // whole region held two tours.
-        var buckets: [BucketKey: [StopMarker]] = [:]
-        for marker in visibleMarkers {
-            let row = Int(floor(marker.coordinate.latitude / cellSpanLat))
-            let col = Int(floor(marker.coordinate.longitude / cellSpanLon))
-            buckets[BucketKey(row: row, col: col), default: []].append(marker)
-        }
+        var claimed = [Bool](repeating: false, count: markers.count)
+        var items: [ClusterItem] = []
+        let radiusSquared = cell * cell
 
-        return buckets.map { key, stops in
-            if stops.count == 1, let only = stops.first {
-                return ClusterItem(coordinate: only.coordinate, kind: .single(only))
+        for seed in markers.indices where !claimed[seed] {
+            claimed[seed] = true
+            var members = [seed]
+            let home = cellOf(points[seed])
+            for dx in -1...1 {
+                for dy in -1...1 {
+                    guard let candidates = grid[Cell(x: home.x + dx, y: home.y + dy)] else { continue }
+                    for j in candidates where !claimed[j] {
+                        let ddx = points[j].x - points[seed].x
+                        let ddy = points[j].y - points[seed].y
+                        if ddx * ddx + ddy * ddy <= radiusSquared {
+                            claimed[j] = true
+                            members.append(j)
+                        }
+                    }
+                }
             }
+
+            if members.count == 1 {
+                items.append(ClusterItem(coordinate: markers[seed].coordinate, kind: .single(markers[seed])))
+                continue
+            }
+            let stops = members.map { markers[$0] }
             let avgLat = stops.reduce(0) { $0 + $1.coordinate.latitude } / Double(stops.count)
             let avgLon = stops.reduce(0) { $0 + $1.coordinate.longitude } / Double(stops.count)
             // Count TOURS, not markers. A place marker stands for every tour
-            // at that site, so counting it as 1 would under-report a region —
-            // the same dishonesty, in the other direction, as leaving places
-            // out of clustering altogether.
+            // at that site, so counting it as 1 would under-report a region.
+            // Places cluster like anything else: a place sits at a distinct
+            // coordinate from its neighbours (it REPLACES its own tours), so
+            // zooming separates it normally (#536).
             let tourCount = stops.reduce(0) { $0 + ($1.isPlace ? $1.placeTourCount : 1) }
-            return ClusterItem(
+            items.append(ClusterItem(
                 coordinate: CLLocationCoordinate2D(latitude: avgLat, longitude: avgLon),
                 kind: .cluster(count: tourCount, stops: stops),
-                bucketKey: key
-            )
+                zoomStep: step
+            ))
         }
+
+        memo = (markers, step, radius, items)
+        return items
     }
 
     // MARK: - Camera
@@ -346,8 +366,8 @@ enum MapClustering {
         var lonDelta = max((maxLon - minLon) * 2.5, 0.01)
 
         // 🔴 A cluster tap must always TIGHTEN the camera. Markers merge
-        // whenever they sit closer together than one cell (span /
-        // cellsAcross), so a cluster can form at a span far below the
+        // whenever they sit within the cluster radius on screen, so a
+        // cluster can form at a span far below the
         // 0.01° (~1.1 km) floor above — and framing it then *widened*
         // the camera. The user tapped a pin, got zoomed out, and saw the
         // same cluster re-render: indistinguishable from the tap doing
@@ -355,10 +375,11 @@ enum MapClustering {
         // intent (no single tap drops you into a one-block view) while
         // guaranteeing every tap makes progress.
         //
-        // The clamp only ever binds when the floor was the thing
-        // widening the camera: a real cluster's bounding box is at most
-        // one cell across, so its padded span is ~span/8 — already well
-        // inside half the current span.
+        // A cluster's bounding box is at most two radii (~110pt) across,
+        // so on a phone-width map the padded framing can exceed half the
+        // current span and the clamp binds — that is fine: every tap still
+        // at least doubles the zoom, which doubles the on-screen distance
+        // between members and splits any pair further apart than one radius.
         if let current, current.latitudeDelta > 0, current.longitudeDelta > 0 {
             latDelta = min(latDelta, current.latitudeDelta / 2)
             lonDelta = min(lonDelta, current.longitudeDelta / 2)
