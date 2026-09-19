@@ -34,6 +34,11 @@
   "note": "was 'Facility at Knivsoveien 70'. Owner was unsure whether the two names are the same site; OSM names a node 'Knivsoveien 46, Nexans Halden' and the caption calls it Norway's tallest building, which is the Nexans cable tower. Same site, retitled and the coordinate refined ~580 m onto Knivsoveien 70",
   "verdict": "fixed"
  },
+ "Prysmian Cable Tower": {
+  "date": "2026-09-19",
+  "note": "was 'Prysmian Sky'; owner gave the real name. Retitle only — the coordinate in Kirkkonummi (Pikkala) is where the cable tower stands, so nothing was moved",
+  "verdict": "fixed"
+ },
  "Tianjin CTF Finance Centre": {
   "date": "2026-09-19",
   "note": "was titled 'Guangzhou CTF Finance Centre'; owner identified it as the Tianjin tower. Retitled and relocated to Tianjin",
