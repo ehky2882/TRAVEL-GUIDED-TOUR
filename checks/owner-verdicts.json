@@ -14,6 +14,11 @@
   "note": "owner: correct; the '(likely)' hedge in the title was dropped",
   "verdict": "correct"
  },
+ "Eurovea Tower": {
+  "date": "2026-09-19",
+  "note": "was titled 'MOL Campus' in Budapest; owner identified it as Eurovea Tower, Bratislava. Retitled and relocated to Slovakia",
+  "verdict": "fixed"
+ },
  "Karlatornet": {
   "date": "2026-09-19",
   "note": "owner: correct, NOT Burj Al Arab — the check was wrong",
