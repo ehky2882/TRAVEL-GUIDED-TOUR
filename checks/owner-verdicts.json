@@ -39,11 +39,6 @@
   "note": "owner: correct, NOT Burj Al Arab — the check was wrong",
   "verdict": "correct"
  },
- "King Street, Canterbury": {
-  "date": "2026-09-19",
-  "note": "owner (with some hedging): correct — the check named the Crooked House in Wolverhampton. Canterbury has its own crooked building on Palace Street just off King Street, which is the likely source of the confusion",
-  "verdict": "correct"
- },
  "Le Nouvel KLCC": {
   "date": "2026-09-19",
   "note": "was titled 'Bosco Verticale' in Milan; owner identified it as Le Nouvel KLCC, Kuala Lumpur",
@@ -57,6 +52,11 @@
  "Prysmian Cable Tower": {
   "date": "2026-09-19",
   "note": "was 'Prysmian Sky'; owner gave the real name. Retitle only — the coordinate in Kirkkonummi (Pikkala) is where the cable tower stands, so nothing was moved",
+  "verdict": "fixed"
+ },
+ "The Crooked House (Sir John Boys House), Canterbury": {
+  "date": "2026-09-19",
+  "note": "SUPERSEDES the earlier 'King Street, Canterbury is correct'. The owner revised: the post IS about the crooked house -- Canterbury's own, at 28 Palace Street, not Wolverhampton's. So the check was RIGHT that the title was wrong and wrong about which crooked house. Title was wrong twice over: the building unnamed and the street wrong (Palace, not King). The coordinate was already correct, so nothing moved",
   "verdict": "fixed"
  },
  "The Link in La Défense": {
