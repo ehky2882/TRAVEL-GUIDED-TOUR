@@ -24,6 +24,11 @@
   "note": "owner: correct; the '(likely)' hedge in the title was dropped",
   "verdict": "correct"
  },
+ "Casa de Vidro (Instituto Bardi)": {
+  "date": "2026-09-19",
+  "note": "owner: all correct. The check named Casa das Canoas in Rio -- another modernist glass house on a wooded slope, by Niemeyer rather than Bo Bardi. Same failure mode as Grace Farms/Glass House, but here the catalogue was right",
+  "verdict": "correct"
+ },
  "Dayabumi Complex": {
   "date": "2026-09-19",
   "note": "owner (hedged): correct, Kuala Lumpur. The check named Bank Negara Malaysia -- also a KL landmark with Islamic-modernist geometry, which is the likely source of the confusion. NOT re-verified against the pixels",
