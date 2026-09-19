@@ -51,6 +51,11 @@ def _get(url):
 
 
 def search(term, limit=8):
+    """⚠️ Spaced like every other call. The SEARCH endpoint rate-limits too —
+    a sweep that spaced only the file-info calls took HTTP 429 on two of
+    eleven searches, and two subjects were reported as "nothing found" when
+    nothing had actually been asked."""
+    time.sleep(SLEEP_S)
     url = API + "?" + urllib.parse.urlencode({
         "action": "query", "list": "search", "srsearch": f"{term} filetype:bitmap",
         "srnamespace": "6", "srlimit": str(limit), "format": "json"})
