@@ -100283,7 +100283,8 @@
       "additionalImageURLs": [],
       "tourIds": [
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
-        "0A6EED99-1771-5220-9CCC-59FF7C7803E0"
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "34C2B094-CB95-5C25-B832-90AFDF7FF5F8"
       ]
     },
     {
@@ -257777,8 +257778,8 @@
           "order": 0,
           "title": "Residential towers at Dybbolsbro",
           "caption": "Europe’s Weirdest Twin Towers",
-          "latitude": 55.663365,
-          "longitude": 12.560334,
+          "latitude": 55.663510015423974,
+          "longitude": 12.560377282200308,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -257790,8 +257791,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 55.663365,
-      "centroidLongitude": 12.560334,
+      "centroidLatitude": 55.663510015423974,
+      "centroidLongitude": 12.560377282200308,
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
