@@ -208289,7 +208289,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 37.998027,
       "centroidLongitude": -122.530657,
-      "city": "San Rafael, California",
+      "city": "San Rafael",
       "country": "United States",
       "primaryCategory": "architecture",
       "tags": [
@@ -221308,7 +221308,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.7094593,
       "centroidLongitude": 139.6665304,
-      "city": "Tokyo (Nakano)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -221354,7 +221354,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.709577,
       "centroidLongitude": 139.803174,
-      "city": "Tokyo (Azumabashi)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -221399,7 +221399,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6482209,
       "centroidLongitude": 139.6970724,
-      "city": "Tokyo (Nakameguro)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "D89DE4C5-7873-5F06-81A7-10ECC84AE618"
@@ -221446,7 +221446,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6975859,
       "centroidLongitude": 139.7723891,
-      "city": "Tokyo (Akihabara)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "38A345DC-BFB6-50CB-B70C-C474963481CC",
@@ -221495,7 +221495,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.7011217,
       "centroidLongitude": 139.7711004,
-      "city": "Tokyo (Akihabara)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "B70632C6-27FE-5012-8D36-590633D4A06A"
@@ -221542,7 +221542,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.7013312,
       "centroidLongitude": 139.7720404,
-      "city": "Tokyo (Akihabara)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "B70632C6-27FE-5012-8D36-590633D4A06A"
@@ -221590,7 +221590,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.665501,
       "centroidLongitude": 139.769943,
-      "city": "Tokyo (Tsukiji)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -221635,7 +221635,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6601115,
       "centroidLongitude": 139.7043954,
-      "city": "Tokyo (Shibuya)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "156A7408-534D-5CBE-98E8-44FD801F3927"
@@ -221682,7 +221682,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.7051575,
       "centroidLongitude": 139.6662118,
-      "city": "Tokyo (Nakano)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -221727,7 +221727,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.711148,
       "centroidLongitude": 139.797884,
-      "city": "Tokyo (Asakusa)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "878F7B3E-544E-5361-A162-B1BBE95E4784"
@@ -221775,7 +221775,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.7119904,
       "centroidLongitude": 139.7929779,
-      "city": "Tokyo (Asakusa)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "34C7F2FA-77CF-5280-BC69-DF231D6E2BF4"
@@ -221823,7 +221823,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.648498,
       "centroidLongitude": 139.647263,
-      "city": "Tokyo (Setagaya)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "sacredSites",
       "tags": [
@@ -221869,7 +221869,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6443063,
       "centroidLongitude": 139.7083068,
-      "city": "Tokyo (Ebisu)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -221913,7 +221913,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6114502,
       "centroidLongitude": 139.6675812,
-      "city": "Tokyo (Jiyugaoka)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -222056,7 +222056,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6428011,
       "centroidLongitude": 139.6930849,
-      "city": "Tokyo (Nakameguro)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "876A4370-C3D6-56A5-8BE1-FA5DA8A23142"
@@ -222874,7 +222874,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.692291,
       "centroidLongitude": -73.9106643,
-      "city": "New York (Bushwick)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "EBE45797-87BC-5D11-8139-E0D35455EC60",
@@ -223023,7 +223023,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.7164176,
       "centroidLongitude": -73.9978158,
-      "city": "New York (Chinatown)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "4735A7C7-26CF-5192-904C-A5AA31F52915"
@@ -223114,7 +223114,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.757465,
       "centroidLongitude": -73.9847632,
-      "city": "New York (Times Square)",
+      "city": "New York",
       "country": "United States",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223213,7 +223213,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 13.726325,
       "centroidLongitude": 100.5253145,
-      "city": "Bangkok (Bang Rak)",
+      "city": "Bangkok",
       "country": "Thailand",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223463,7 +223463,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.7063004,
       "centroidLongitude": -73.9211101,
-      "city": "New York (Brooklyn)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD"
@@ -223510,7 +223510,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.6866581,
       "centroidLongitude": -73.947706,
-      "city": "New York (Brooklyn)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD"
@@ -223660,7 +223660,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.7168271,
       "centroidLongitude": -73.9953117,
-      "city": "New York (Chinatown)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
@@ -223710,7 +223710,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.717438,
       "centroidLongitude": -73.9943959,
-      "city": "New York (Chinatown)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
@@ -223761,7 +223761,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6507318,
       "centroidLongitude": 139.7046751,
-      "city": "Tokyo (Daikanyama)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -223967,7 +223967,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.6992358,
       "centroidLongitude": -73.9315525,
-      "city": "New York (Bushwick)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "46E8FEBF-1CEF-5E1E-9FDC-843589951C2F"
@@ -224014,7 +224014,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.7246106,
       "centroidLongitude": -73.95359,
-      "city": "New York (Brooklyn)",
+      "city": "New York",
       "country": "United States",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224274,7 +224274,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 34.6690306,
       "centroidLongitude": 135.5015715,
-      "city": "Osaka (Dotonbori)",
+      "city": "Osaka",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224366,7 +224366,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.5697726,
       "centroidLongitude": -74.1296932,
-      "city": "New York (Chinatown)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "2DF23FCE-3D77-5F4D-A9E2-B8005BF90514",
@@ -224416,7 +224416,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.713556,
       "centroidLongitude": -73.9947941,
-      "city": "New York (Chinatown)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "2DF23FCE-3D77-5F4D-A9E2-B8005BF90514",
@@ -224468,7 +224468,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.6940626,
       "centroidLongitude": -73.9267385,
-      "city": "New York (Bushwick)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "46E8FEBF-1CEF-5E1E-9FDC-843589951C2F"
@@ -224515,7 +224515,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.7127386,
       "centroidLongitude": -73.9950666,
-      "city": "New York (Chinatown)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
@@ -224674,7 +224674,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.6899221,
       "centroidLongitude": -73.9379295,
-      "city": "New York (Brooklyn)",
+      "city": "New York",
       "country": "United States",
       "relatedTourIds": [
         "314F76BB-AC22-5A19-8322-742434761B86",
@@ -224723,7 +224723,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 34.1053975,
       "centroidLongitude": -118.0691092,
-      "city": "Los Angeles (Temple City)",
+      "city": "Los Angeles",
       "country": "United States",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -225367,7 +225367,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6555701,
       "centroidLongitude": 139.7373819,
-      "city": "Tokyo (Azabujuban)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -225411,7 +225411,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6663568,
       "centroidLongitude": 139.7152957,
-      "city": "Tokyo (Minami-Aoyama)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -225455,7 +225455,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.61543748955502,
       "centroidLongitude": 139.71684189647252,
-      "city": "Tokyo (Shinagawa)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -225500,7 +225500,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6579413,
       "centroidLongitude": 139.698329,
-      "city": "Tokyo (Shibuya)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "156A7408-534D-5CBE-98E8-44FD801F3927"
@@ -225547,7 +225547,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.662741,
       "centroidLongitude": 139.6952744,
-      "city": "Tokyo (Shibuya)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "156A7408-534D-5CBE-98E8-44FD801F3927"
@@ -225594,7 +225594,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6618126,
       "centroidLongitude": 139.7050733,
-      "city": "Tokyo (Shibuya)",
+      "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
         "A323D6ED-3522-5A09-859E-9CAC4DCB413F",
@@ -225644,7 +225644,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.7641042,
       "centroidLongitude": -73.8211638,
-      "city": "New York (Flushing)",
+      "city": "New York",
       "country": "United States",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -225933,7 +225933,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.670113,
       "centroidLongitude": 139.765481,
-      "city": "Tokyo (Ginza)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -226186,7 +226186,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.69285,
       "centroidLongitude": 139.69958,
-      "city": "Tokyo (Shinjuku)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -226232,7 +226232,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6818994,
       "centroidLongitude": 139.7004533,
-      "city": "Tokyo (Yoyogi)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -226276,7 +226276,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 40.7174009,
       "centroidLongitude": -73.9920828,
-      "city": "New York (Manhattan)",
+      "city": "New York",
       "country": "United States",
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -252978,7 +252978,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 38.8894375,
       "centroidLongitude": -77.0353125,
-      "city": "Washington, D.C.",
+      "city": "Washington",
       "country": "United States",
       "primaryCategory": "architecture",
       "tags": [
@@ -257781,7 +257781,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 35.6915791,
       "centroidLongitude": 139.6969354,
-      "city": "Tokyo (Shinjuku)",
+      "city": "Tokyo",
       "country": "Japan",
       "primaryCategory": "architecture",
       "tags": [
@@ -259071,7 +259071,7 @@
       "walkingDistanceMeters": null,
       "centroidLatitude": 49.0786599,
       "centroidLongitude": -119.5676102,
-      "city": "Osoyoos, British Columbia",
+      "city": "Osoyoos",
       "country": "Canada",
       "primaryCategory": "natureAndParks",
       "tags": [
