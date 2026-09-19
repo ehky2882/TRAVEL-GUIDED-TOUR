@@ -101840,21 +101840,6 @@
       ]
     },
     {
-      "id": "fd2c3077-4f9e-5154-9e3b-eedbdb28fbc4",
-      "name": "Grace Farms",
-      "description": "SANAA's River Building follows the slope in one continuous curve, its roof a thin ribbon on slender columns with the glazed volumes hung beneath it. Eighty acres of meadow and pond around it are the point, not the setting.",
-      "latitude": 41.196273,
-      "longitude": -73.512642,
-      "city": "New Canaan",
-      "address": "Lukes Wood Road, New Canaan, CT",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-glass-house-ninosbuildings_hero.webp",
-      "additionalImageURLs": null,
-      "tourIds": [
-        "86B587FA-58B7-540B-B337-74E036D0258F",
-        "FF01D80B-17E1-569B-AA99-E07022709F76"
-      ]
-    },
-    {
       "id": "7101987d-8d86-55ef-8536-9df5ac0ac987",
       "name": "120 Broadway",
       "description": "The office building at 120 Broadway, filling the whole block between Broadway, Cedar, Nassau and Pine Streets in the Financial District. Ernest R. Graham designed it in the Neoclassical style with Peirce Anderson as architect-in-charge, on the site of the Equitable Life Building that burned down in 1912; work ran from 1913 to 1915. It opened as the largest office building in the world by floor area — about 1.2 million square feet raised straight up from a lot of some 49,000, with no setback beyond the depth of the pavement, throwing a shadow more than six times the area of its own block. The outcry produced the 1916 Zoning Resolution, the first citywide zoning code in the United States, which made buildings step back as they rose and held a tower to a quarter of its lot — the rule behind New York's wedding-cake skyline. Inside, the ground floor is two marble arcades crossing at right angles, Broadway to Nassau and Pine to Cedar, under a vaulted and coffered ceiling; the cellars hold the safe-deposit vaults, and the New York Law Institute, the oldest circulating law library in the city, still keeps its library in the building. It has been a National Historic Landmark since 1978 and a New York City landmark since 1996.",
@@ -230331,7 +230316,7 @@
     {
       "id": "86B587FA-58B7-540B-B337-74E036D0258F",
       "createdAt": "2026-09-16",
-      "title": "Grace Farms",
+      "title": "The Glass House",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Glass houses were quite the trend ! Would you live in one ? #fyp #architecture #design",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -230348,8 +230333,8 @@
           "order": 0,
           "title": "Grace Farms",
           "caption": "Glass houses were quite the trend ! Would you live in one ? #fyp #architecture #design",
-          "latitude": 41.196273,
-          "longitude": -73.512642,
+          "latitude": 41.142432,
+          "longitude": -73.529267,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -230361,8 +230346,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.196273,
-      "centroidLongitude": -73.512642,
+      "centroidLatitude": 41.142432,
+      "centroidLongitude": -73.529267,
       "city": "New Canaan",
       "country": "United States",
       "relatedTourIds": [

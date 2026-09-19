@@ -59,6 +59,11 @@
   "note": "SUPERSEDES the earlier 'King Street, Canterbury is correct'. The owner revised: the post IS about the crooked house -- Canterbury's own, at 28 Palace Street, not Wolverhampton's. So the check was RIGHT that the title was wrong and wrong about which crooked house. Title was wrong twice over: the building unnamed and the street wrong (Palace, not King). The coordinate was already correct, so nothing moved",
   "verdict": "fixed"
  },
+ "The Glass House": {
+  "date": "2026-09-19",
+  "note": "was one of TWO 'Grace Farms' pins by @ninosbuildings on the same coordinate. Its caption reads 'Glass houses were quite the trend' -- Philip Johnson's Glass House. The other says 'Do you guys enjoy Japanese architecture', which is SANAA's River Building and correctly Grace Farms",
+  "verdict": "fixed"
+ },
  "The Link in La Défense": {
   "date": "2026-09-19",
   "note": "was 'The Link'; owner disambiguated it. Retitle only — the pin already sits in Puteaux, which is La Défense, so nothing was moved",
