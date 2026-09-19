@@ -138,6 +138,29 @@ DECLINED_PAIRS = {
     frozenset({"LACMA", "LACMA's David Geffen Galleries"}):
         "owner: all different — the pins were repaired instead",
 
+    # 🔴 GROUP D, 2026-09-19. The audit board's new "sits on a place but is
+    # not a member" class reported these three as coincident with an existing
+    # place; the owner read all three and said "ALL CORRECT TO BE SEPARATE".
+    # Written here the same day rather than left in the conversation, because
+    # a decision that lives only in a transcript is invisible to every other
+    # session — which is exactly how nine earlier decisions went missing.
+    frozenset({"Il Presidente", "Duddell Street Steps and Gas Lamps"}):
+        "owner 2026-09-19: a restaurant near the steps is not the steps",
+    frozenset({"Eve's Hangout", "All'Antico Vinaio on Sullivan Street"}):
+        "owner 2026-09-19: two different venues that merely coincide",
+    frozenset({"Saigon Social", "Una Pizza Napoletana"}):
+        "owner 2026-09-19: different restaurants 23.9 m apart — this is the "
+        "pair whose wrong anchor destroyed a right answer in #995",
+
+    # Group C, same day: the owner left these separate as open part-vs-whole
+    # questions, and joined only Dybbolsbro -> Kaktus Towers.
+    frozenset({"The Cosmati Pavement", "Westminster Abbey"}):
+        "owner 2026-09-19: part-vs-whole, left separate",
+    frozenset({"The Shrine of Edward the Confessor", "Westminster Abbey"}):
+        "owner 2026-09-19: part-vs-whole, left separate",
+    frozenset({"Relics of the World's Fairs", "The Unisphere"}):
+        "owner 2026-09-19: part-vs-whole, left separate",
+
     # 🔴 THESE WERE DECIDED BY THE OWNER AND RECORDED ONLY IN PROSE.
     # `docs/places.md` Rule 4 (a tenant is not the site) and its part-vs-whole
     # section name each of them as declined, but none was ever written here —
