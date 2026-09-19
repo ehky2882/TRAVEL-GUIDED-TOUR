@@ -90097,8 +90097,7 @@
         "D882F272-9734-59D1-8DD3-B662E591DED6",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "30cd96fc-8b3d-566a-bc88-f7d02f8873fb",
-        "6169243c-cc0b-5e2c-839a-608d63268c90",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900"
+        "6169243c-cc0b-5e2c-839a-608d63268c90"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -90645,7 +90644,6 @@
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
@@ -101712,8 +101710,7 @@
       "tourIds": [
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
-        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900"
+        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3"
       ]
     },
     {
@@ -137460,7 +137457,6 @@
       "country": "Italy",
       "relatedTourIds": [
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "D882F272-9734-59D1-8DD3-B662E591DED6",
@@ -207113,7 +207109,6 @@
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "53132EDF-A0B1-5657-8665-E4783982190D",
         "9005F077-0DBF-5E22-BAE8-20CB3EDDA1CA",
         "78C02AE2-E103-5426-AA76-6827AEE246BA"
@@ -229153,7 +229148,6 @@
         "21382EC3-24C6-547D-A3DA-7DF8FCAD4C54",
         "D882F272-9734-59D1-8DD3-B662E591DED6",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "A8025FB7-569E-5E7E-AB82-EE0509A49D28"
       ],
       "primaryCategory": "architecture",
@@ -229732,7 +229726,6 @@
       "relatedTourIds": [
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "645AA6F7-E695-52E6-8B72-D59CECF48597",
         "16729030-54d1-5d85-a169-262bbd7ccce8",
@@ -252515,7 +252508,6 @@
         "78C02AE2-E103-5426-AA76-6827AEE246BA",
         "12FA3550-1C7E-523A-88D9-7E818937F3E5",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "53132EDF-A0B1-5657-8665-E4783982190D",
         "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8",
         "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE"
@@ -253034,7 +253026,7 @@
     {
       "id": "248632A6-ECFC-59DD-8602-7D6FDE205900",
       "createdAt": "2026-09-16",
-      "title": "Bosco Verticale",
+      "title": "Le Nouvel KLCC",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "These Skyscrapers Are Covered in Real Plants 😳",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -253051,8 +253043,8 @@
           "order": 0,
           "title": "Bosco Verticale",
           "caption": "These Skyscrapers Are Covered in Real Plants 😳",
-          "latitude": 45.485828,
-          "longitude": 9.19075,
+          "latitude": 3.159525,
+          "longitude": 101.712496,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -253064,20 +253056,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.485828,
-      "centroidLongitude": 9.19075,
-      "city": "Milan",
-      "country": "Italy",
-      "relatedTourIds": [
-        "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
-        "F2FC86CA-CF8E-5F27-8BFC-7F8AD785FEBE",
-        "16729030-54d1-5d85-a169-262bbd7ccce8",
-        "78C02AE2-E103-5426-AA76-6827AEE246BA",
-        "66944438-2c5b-5f4a-9c58-0cd74c05c062",
-        "D882F272-9734-59D1-8DD3-B662E591DED6",
-        "12FA3550-1C7E-523A-88D9-7E818937F3E5",
-        "FAF12D4A-2926-5D6D-BBA7-E285FAFC21B8"
-      ],
+      "centroidLatitude": 3.159525,
+      "centroidLongitude": 101.712496,
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -254543,7 +254526,6 @@
       "country": "Italy",
       "relatedTourIds": [
         "D882F272-9734-59D1-8DD3-B662E591DED6",
-        "248632A6-ECFC-59DD-8602-7D6FDE205900",
         "66944438-2c5b-5f4a-9c58-0cd74c05c062",
         "093113CC-6A3E-50F0-B8C5-0AC3B04F61E3",
         "53132EDF-A0B1-5657-8665-E4783982190D",

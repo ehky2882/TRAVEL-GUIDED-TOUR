@@ -24,6 +24,11 @@
   "note": "owner: correct, NOT Burj Al Arab — the check was wrong",
   "verdict": "correct"
  },
+ "Le Nouvel KLCC": {
+  "date": "2026-09-19",
+  "note": "was titled 'Bosco Verticale' in Milan; owner identified it as Le Nouvel KLCC, Kuala Lumpur",
+  "verdict": "fixed"
+ },
  "Tianjin CTF Finance Centre": {
   "date": "2026-09-19",
   "note": "was titled 'Guangzhou CTF Finance Centre'; owner identified it as the Tianjin tower. Retitled and relocated to Tianjin",
