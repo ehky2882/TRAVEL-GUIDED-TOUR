@@ -24,6 +24,11 @@
   "note": "owner: correct; the '(likely)' hedge in the title was dropped",
   "verdict": "correct"
  },
+ "Dayabumi Complex": {
+  "date": "2026-09-19",
+  "note": "owner (hedged): correct, Kuala Lumpur. The check named Bank Negara Malaysia -- also a KL landmark with Islamic-modernist geometry, which is the likely source of the confusion. NOT re-verified against the pixels",
+  "verdict": "correct"
+ },
  "Eurovea Tower": {
   "date": "2026-09-19",
   "note": "was titled 'MOL Campus' in Budapest; owner identified it as Eurovea Tower, Bratislava. Retitled and relocated to Slovakia",
