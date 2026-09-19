@@ -18724,10 +18724,10 @@
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
         "38A46ED5-F653-5051-AFF5-59DB7C772790",
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
+        "C6DE249D-9645-5DEE-A0E9-7B5A72BA0D03",
         "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
         "e73c0bde-55b6-4233-a278-b51268a821d4",
-        "b829e156-a654-493a-a8c8-bc9d18855ba1",
-        "02b511fd-d7e8-4571-8b25-c680da651476"
+        "b829e156-a654-493a-a8c8-bc9d18855ba1"
       ],
       "walkingDistanceMeters": null
     },
@@ -128671,7 +128671,8 @@
       "city": "Bologna",
       "country": "Italy",
       "relatedTourIds": [
-        "F2E60434-1E58-596C-AB77-EA3CF847919D"
+        "F2E60434-1E58-596C-AB77-EA3CF847919D",
+        "3BC40A49-8142-5321-A89A-343A6BF60A7F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -176164,11 +176165,11 @@
         "9FE0FC12-0930-567A-82C1-F97AFA8A8450",
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
         "9932791e-1c59-4c12-8616-31bd0db64a94",
+        "E16440DF-6177-5D98-B2CA-05483B2445D7",
         "39A2BCF0-12A1-5225-9D1A-24F08824B0EB",
         "0CA51A97-EDCC-53DB-89D5-6891E48080FF",
         "61A2C149-FD52-54AB-BDBC-A78D047EB773",
-        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
-        "D45302A2-12CC-56DD-9CC8-C8F2F2B6CEBE"
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -207777,11 +207778,11 @@
         "1F7C8B15-EF98-59F2-8D70-3314BCB26770",
         "8C8EC604-3F5F-5F82-A00B-A1AECC28FC6D",
         "4EBD4A3A-A347-5186-8D72-EFC95E4C69EB",
+        "B5387365-CD89-57F7-A589-B07292218EE6",
         "603B4E85-458F-5577-B3D2-9C04B415DDB1",
         "26864225-A1CC-5A26-BA16-61DED77C156A",
         "3EE590DE-AF5B-5194-9D02-8EA11637E8A1",
-        "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2",
-        "3D739E82-5C7D-541E-B9AF-A1EDD2969682"
+        "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -207832,10 +207833,10 @@
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
         "3EE590DE-AF5B-5194-9D02-8EA11637E8A1",
         "F0A53ABF-BA6B-5B13-8D1B-901A4A8118BD",
+        "E16440DF-6177-5D98-B2CA-05483B2445D7",
         "3D739E82-5C7D-541E-B9AF-A1EDD2969682",
         "9932791e-1c59-4c12-8616-31bd0db64a94",
-        "176E3CA4-3A8F-510D-AEC7-3A6AB1497AD1",
-        "8C8EC604-3F5F-5F82-A00B-A1AECC28FC6D"
+        "176E3CA4-3A8F-510D-AEC7-3A6AB1497AD1"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -265322,6 +265323,7 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "1BCD75BD-D1B4-50AD-BA26-8C64FD2D6D54",
+        "EFADE0A9-1B93-5414-8FEC-DC43061BFC79",
         "D2C1CA8A-253C-5D3F-AC51-70C0D6F1503D",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6"
       ],
@@ -265377,8 +265379,8 @@
         "419547F3-2828-5B49-8800-C3F3683A2CE0",
         "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2",
         "4EBD4A3A-A347-5186-8D72-EFC95E4C69EB",
-        "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
-        "26864225-A1CC-5A26-BA16-61DED77C156A"
+        "B5387365-CD89-57F7-A589-B07292218EE6",
+        "B5F01975-BD69-5748-BFE8-D7D0D619A2E6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -265584,6 +265586,7 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "B5387365-CD89-57F7-A589-B07292218EE6",
         "14f26785-46df-42cb-a280-5be806d70b93"
       ],
       "primaryCategory": "sacredSites",
@@ -265743,13 +265746,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "C6DE249D-9645-5DEE-A0E9-7B5A72BA0D03",
         "e7a2d9c4-1b86-4f30-8a75-2c9e6b3d8f41",
         "B2340D29-2C0E-5730-92DE-6C1742BBCA2E",
+        "B5387365-CD89-57F7-A589-B07292218EE6",
         "419547F3-2828-5B49-8800-C3F3683A2CE0",
         "6E4E8D27-CFB4-57F1-8330-507E8ECFF4E9",
-        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
-        "f2e248ef-1b00-49a1-b27e-e31172641815",
-        "2B3330D2-4F43-5120-A306-59FCDA15B837"
+        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -265802,9 +265805,9 @@
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
         "7DD8FCCE-0712-5560-96BF-74B8674741D3",
         "74AF8AE5-4367-53D7-B3EB-6C0B934AE8D5",
+        "F712C313-D51A-5EE8-AADF-DF25F00EF50E",
         "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
-        "aa22f015-7b43-41ca-9fe3-282519b7f5d3",
-        "F0A53ABF-BA6B-5B13-8D1B-901A4A8118BD"
+        "aa22f015-7b43-41ca-9fe3-282519b7f5d3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -265941,7 +265944,8 @@
       "city": "Bologna",
       "country": "Italy",
       "relatedTourIds": [
-        "F2E60434-1E58-596C-AB77-EA3CF847919D"
+        "F2E60434-1E58-596C-AB77-EA3CF847919D",
+        "3BC40A49-8142-5321-A89A-343A6BF60A7F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -268782,6 +268786,16 @@
       "centroidLongitude": -0.1306515,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "B2340D29-2C0E-5730-92DE-6C1742BBCA2E",
+        "e73c0bde-55b6-4233-a278-b51268a821d4",
+        "419547F3-2828-5B49-8800-C3F3683A2CE0",
+        "79CD5910-FD3F-5D09-87A1-9D43B716267B",
+        "85009773-DC8A-51E1-96AB-D1751AEBC168",
+        "5562cbd9-473a-4112-9a4d-badc7c549f43",
+        "14f26785-46df-42cb-a280-5be806d70b93",
+        "5BE5FDC8-5659-57B7-966C-FDE5002F7931"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Edwin Lutyens",
@@ -268827,6 +268841,13 @@
       "centroidLongitude": -0.1796745,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "60944363-58DF-54B1-90A4-EC2018EB3D19",
+        "9FE0FC12-0930-567A-82C1-F97AFA8A8450",
+        "9932791e-1c59-4c12-8616-31bd0db64a94",
+        "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
+        "F0A53ABF-BA6B-5B13-8D1B-901A4A8118BD"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Power",
@@ -268872,6 +268893,16 @@
       "centroidLongitude": -0.1112588,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "A4501309-29DF-57BC-94E5-394AAF64E688",
+        "CC720DB6-1A77-530F-9D99-D35BBE1D608D",
+        "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
+        "7DD8FCCE-0712-5560-96BF-74B8674741D3",
+        "3C9D0B11-EFFC-53F8-9B43-375F40311F53",
+        "2B3330D2-4F43-5120-A306-59FCDA15B837",
+        "26826453-4AC0-5D78-A942-C82189EAE53C"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Daniel Libeskind",
@@ -268917,6 +268948,9 @@
       "centroidLongitude": -0.125416,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "59B43747-4D32-5EA1-9601-070699ABF9A5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Art Deco",
@@ -268962,6 +268996,16 @@
       "centroidLongitude": -0.1300201,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "88b44354-87c7-402f-99a2-778c1dd1e889",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
+        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
+        "CC720DB6-1A77-530F-9D99-D35BBE1D608D",
+        "5BE5FDC8-5659-57B7-966C-FDE5002F7931",
+        "74AF8AE5-4367-53D7-B3EB-6C0B934AE8D5",
+        "9A2D1B28-3AF3-5F96-8220-5D92D9B9AEF6",
+        "2B3330D2-4F43-5120-A306-59FCDA15B837"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Contemporary",
@@ -269052,6 +269096,10 @@
       "centroidLongitude": 11.3454529,
       "city": "Bologna",
       "country": "Italy",
+      "relatedTourIds": [
+        "80AB6E70-05D6-558F-B2FB-06666EFDE200",
+        "957C8E91-1B51-5E2B-A8EB-7E9A251E238C"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Carlo Scarpa",
@@ -269097,6 +269145,9 @@
       "centroidLongitude": 12.2322684,
       "city": "Borca di Cadore",
       "country": "Italy",
+      "relatedTourIds": [
+        "5BCD1EC2-6092-571E-973F-BD6DD15E4716"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Carlo Scarpa",
@@ -269142,6 +269193,9 @@
       "centroidLongitude": 12.235161,
       "city": "Borca di Cadore",
       "country": "Italy",
+      "relatedTourIds": [
+        "58D0398F-4E41-59FD-9B07-106020DC268D"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Modernist",
