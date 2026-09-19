@@ -49,6 +49,11 @@
   "note": "was titled 'Bosco Verticale' in Milan; owner identified it as Le Nouvel KLCC, Kuala Lumpur",
   "verdict": "fixed"
  },
+ "Maison du Brésil": {
+  "date": "2026-09-19",
+  "note": "owner: correct. The check named Unité d'Habitation in Marseille -- also Le Corbusier, also béton brut with coloured loggias. Same architect, same vocabulary; the pixels cannot separate them",
+  "verdict": "correct"
+ },
  "Nexans Halden": {
   "date": "2026-09-19",
   "note": "was 'Facility at Knivsoveien 70'. Owner was unsure whether the two names are the same site; OSM names a node 'Knivsoveien 46, Nexans Halden' and the caption calls it Norway's tallest building, which is the Nexans cable tower. Same site, retitled and the coordinate refined ~580 m onto Knivsoveien 70",
