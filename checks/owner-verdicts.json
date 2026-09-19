@@ -74,6 +74,11 @@
   "note": "was 'Prysmian Sky'; owner gave the real name. Retitle only — the coordinate in Kirkkonummi (Pikkala) is where the cable tower stands, so nothing was moved",
   "verdict": "fixed"
  },
+ "Smáratorg Tower": {
+  "date": "2026-09-19",
+  "note": "owner: correct — the building's top reads 'Deloitte', which is why the check named 'Deloitte Building, Reykjavik'. Smaratorg 3 IS the Deloitte building (Turninn), in Kopavogur rather than Reykjavik proper. The check read the SIGNAGE and reported a tenant's name as a different building",
+  "verdict": "correct"
+ },
  "The Crooked House (Sir John Boys House), Canterbury": {
   "date": "2026-09-19",
   "note": "SUPERSEDES the earlier 'King Street, Canterbury is correct'. The owner revised: the post IS about the crooked house -- Canterbury's own, at 28 Palace Street, not Wolverhampton's. So the check was RIGHT that the title was wrong and wrong about which crooked house. Title was wrong twice over: the building unnamed and the street wrong (Palace, not King). The coordinate was already correct, so nothing moved",
