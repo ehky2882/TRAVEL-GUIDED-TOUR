@@ -244396,8 +244396,7 @@
       "city": "Las Vegas",
       "country": "United States",
       "relatedTourIds": [
-        "8B698E66-80CD-5166-B8B6-C440A71E1F2F",
-        "410887F3-61F4-5D68-9F79-BAB9B2D63FF8"
+        "8B698E66-80CD-5166-B8B6-C440A71E1F2F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -252565,7 +252564,7 @@
     {
       "id": "410887F3-61F4-5D68-9F79-BAB9B2D63FF8",
       "createdAt": "2026-09-16",
-      "title": "MSG Sphere",
+      "title": "Lucas Museum of Narrative Art",
       "shortDescription": "A post by @pasttworld on Instagram.",
       "longDescription": "This Building Looks Like a Spaceship😱",
       "makerId": "92F882E0-0684-59AC-A0DE-AB8894CEDECE",
@@ -252582,8 +252581,8 @@
           "order": 0,
           "title": "MSG Sphere",
           "caption": "This Building Looks Like a Spaceship😱",
-          "latitude": 36.1211,
-          "longitude": -115.1619,
+          "latitude": 34.015739,
+          "longitude": -118.29079,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -252595,13 +252594,11 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 36.1211,
-      "centroidLongitude": -115.1619,
-      "city": "Las Vegas",
+      "centroidLatitude": 34.015739,
+      "centroidLongitude": -118.29079,
+      "city": "Los Angeles",
       "country": "United States",
-      "relatedTourIds": [
-        "8D914EC0-9BA0-5BBE-8C86-B812AA383500"
-      ],
+      "relatedTourIds": [],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",

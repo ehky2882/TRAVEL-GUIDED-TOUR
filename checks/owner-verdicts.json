@@ -49,6 +49,11 @@
   "note": "was titled 'Bosco Verticale' in Milan; owner identified it as Le Nouvel KLCC, Kuala Lumpur",
   "verdict": "fixed"
  },
+ "Lucas Museum of Narrative Art": {
+  "date": "2026-09-19",
+  "note": "was titled 'MSG Sphere' in Las Vegas. Owner identified it as the Lucas Museum in Los Angeles. Caption 'This Building Looks Like a Spaceship' names nothing, the @pasttworld pattern. Retitled and moved to Exposition Park",
+  "verdict": "fixed"
+ },
  "Maison du Brésil": {
   "date": "2026-09-19",
   "note": "owner: correct. The check named Unité d'Habitation in Marseille -- also Le Corbusier, also béton brut with coloured loggias. Same architect, same vocabulary; the pixels cannot separate them",
