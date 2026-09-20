@@ -22150,8 +22150,8 @@
           "order": 0,
           "title": "Wilton's Music Hall",
           "caption": "Down an alley in the East End stands the oldest surviving grand music hall in the world — and the reason it survived is that everyone forgot it was there.",
-          "latitude": 51.5109,
-          "longitude": -0.067,
+          "latitude": 51.51064,
+          "longitude": -0.06689,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wiltons-music-hall.mp3",
           "audioDurationSeconds": 153,
           "triggerMode": "geofenced",
@@ -22161,8 +22161,8 @@
         }
       ],
       "primaryCategory": "musicAndPerformance",
-      "centroidLatitude": 51.5109,
-      "centroidLongitude": -0.067,
+      "centroidLatitude": 51.51064,
+      "centroidLongitude": -0.06689,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "Built behind a row of houses off Graces Alley in the 1850s, Wilton's is the oldest surviving grand music hall in the world — a single balconied room carried on slender barley-twist iron columns. Rescued from dereliction and conserved rather than restored, its distressed walls and worn grandeur make it one of London's most atmospheric stages.",
@@ -25119,8 +25119,8 @@
           "order": 0,
           "title": "Coal Drops Yard",
           "caption": "You're standing in the middle of what used to be one of the dirtiest places in London.",
-          "latitude": 51.5355,
-          "longitude": -0.126,
+          "latitude": 51.5358,
+          "longitude": -0.12667,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/coal-drops-yard.mp3",
           "audioDurationSeconds": 145,
           "triggerMode": "manual",
@@ -25132,8 +25132,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 145,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5355,
-      "centroidLongitude": -0.126,
+      "centroidLatitude": 51.5358,
+      "centroidLongitude": -0.12667,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -105766,6 +105766,36 @@
       "tourIds": [
         "749410f9-a828-5d13-a57f-955dc119287b",
         "82EDD10F-CBB8-5940-85A7-E65EEB1E4592"
+      ]
+    },
+    {
+      "id": "44d2ca02-524c-528a-947e-93bb0e0e0ba4",
+      "name": "Coal Drops Yard",
+      "description": null,
+      "latitude": 51.5358,
+      "longitude": -0.12667,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "d3da65f8-885c-4807-a1f8-50dc2bb0494b",
+        "DB711008-1153-5C12-8D7D-08656D3E226C"
+      ]
+    },
+    {
+      "id": "2d9b85b9-dec6-5ba8-b160-0ce36cf5a4cc",
+      "name": "Wilton's Music Hall",
+      "description": null,
+      "latitude": 51.51064,
+      "longitude": -0.06689,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "9265f932-1e88-4077-b7a2-c8ec783a85cc",
+        "075C48A9-57F7-5E1C-B5FE-0C9DCA95AD94"
       ]
     }
   ],
