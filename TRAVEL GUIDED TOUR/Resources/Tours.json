@@ -44209,7 +44209,7 @@
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "aaeec061-64f1-5126-bed6-95716f9fd00e",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686"
+        "FED40890-5ADF-5CD0-8751-732232799E8A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -44769,14 +44769,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
         "89fa0677-9165-5507-9d25-a769338ed8df",
         "1d402527-2285-55a7-97db-67ed5071efc4",
-        "2489b022-457b-5927-b73e-82fa367b5e76",
-        "cf833db1-9801-5f5a-95c9-50355c243b71"
+        "2489b022-457b-5927-b73e-82fa367b5e76"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -45169,13 +45169,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "89fa0677-9165-5507-9d25-a769338ed8df"
+        "be6af98d-156a-5a62-9b18-ea7ed90b8686"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -45282,14 +45282,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
-        "d82d2f32-2f5d-537f-9819-3ddf16b700f1",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
+        "d82d2f32-2f5d-537f-9819-3ddf16b700f1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -46071,8 +46071,8 @@
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
-        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4"
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -164597,7 +164597,8 @@
       "city": "Pasadena",
       "country": "United States",
       "relatedTourIds": [
-        "DA517148-1C70-5BC2-8853-2C506A0AE328"
+        "DA517148-1C70-5BC2-8853-2C506A0AE328",
+        "ACB29B95-1F69-593A-B838-D3034AAB93DC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -275951,6 +275952,10 @@
       "centroidLongitude": -118.1264255,
       "city": "Pasadena",
       "country": "United States",
+      "relatedTourIds": [
+        "9B9C153B-DB06-5804-9679-A9AC2F446715",
+        "3B286711-278B-5792-8B5A-3D83FDB6D072"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -276085,6 +276090,9 @@
       "centroidLongitude": -118.1492695,
       "city": "Pasadena",
       "country": "United States",
+      "relatedTourIds": [
+        "ACB29B95-1F69-593A-B838-D3034AAB93DC"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -276129,6 +276137,9 @@
       "centroidLongitude": -104.9229048,
       "city": "Denver",
       "country": "United States",
+      "relatedTourIds": [
+        "34DEEA5A-C265-52F0-AC1E-B4D132E0EFC4"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -276219,6 +276230,9 @@
       "centroidLongitude": -104.952022,
       "city": "Denver",
       "country": "United States",
+      "relatedTourIds": [
+        "EF69CE2A-6E73-5F2F-9D74-365E156F2238"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -276487,6 +276501,16 @@
       "centroidLongitude": 127.0006548,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "bc042fda-60f8-560f-92d4-3d478816d9ee",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
+        "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
+        "6b48cbd2-3f97-5887-9060-fde4750001d0",
+        "8b8be0d5-7647-56a9-ac0d-1eb786a08ac1",
+        "2489b022-457b-5927-b73e-82fa367b5e76",
+        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
