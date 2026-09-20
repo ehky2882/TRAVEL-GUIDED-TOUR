@@ -64,6 +64,11 @@
   "note": "owner: certainly fine. caption 'local quirky landmarks' — it is the Pisa replica, so naming Pisa is agreement. Gate D's replica clause did not fire",
   "verdict": "correct"
  },
+ "Lincoln Heights Jail": {
+  "date": "2026-09-20",
+  "note": "was titled 'The 14th Factory'. Owner: it is Lincoln Heights Jail in East LA. The check named it and was RIGHT. Retitle only -- the pin already sat 49 m from the jail, so the coordinate was correct all along. The 14th Factory was an art installation staged in that building, so the title named an EVENT that happened at the site rather than the site",
+  "verdict": "fixed"
+ },
  "Lucas Museum of Narrative Art": {
   "date": "2026-09-19",
   "note": "was titled 'MSG Sphere' in Las Vegas. Owner identified it as the Lucas Museum in Los Angeles. Caption 'This Building Looks Like a Spaceship' names nothing, the @pasttworld pattern. Retitled and moved to Exposition Park",
