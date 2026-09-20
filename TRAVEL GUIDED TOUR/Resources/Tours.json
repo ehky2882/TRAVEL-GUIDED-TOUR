@@ -242143,7 +242143,8 @@
       "city": "Las Vegas",
       "country": "United States",
       "relatedTourIds": [
-        "8D914EC0-9BA0-5BBE-8C86-B812AA383500"
+        "8D914EC0-9BA0-5BBE-8C86-B812AA383500",
+        "5548BE0D-62A7-508B-BD5D-D5113C08B4A8"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -244967,7 +244968,8 @@
       "city": "Las Vegas",
       "country": "United States",
       "relatedTourIds": [
-        "8B698E66-80CD-5166-B8B6-C440A71E1F2F"
+        "8B698E66-80CD-5166-B8B6-C440A71E1F2F",
+        "5548BE0D-62A7-508B-BD5D-D5113C08B4A8"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -276555,6 +276557,10 @@
       "centroidLongitude": -115.1470854,
       "city": "Las Vegas",
       "country": "United States",
+      "relatedTourIds": [
+        "8D914EC0-9BA0-5BBE-8C86-B812AA383500",
+        "8B698E66-80CD-5166-B8B6-C440A71E1F2F"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
