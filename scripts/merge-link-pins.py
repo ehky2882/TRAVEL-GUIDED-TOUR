@@ -215,6 +215,70 @@ def title_problems(pins, catalog, allow_unverifiable=False):
     return problems, warnings
 
 
+def vision_warnings(pins, catalog, key):
+    """Ask each incoming pin's hero whether it shows what the title claims.
+
+    🔴 THIS WARNS. IT NEVER REFUSES, and the reason is measured rather than
+    cautious: across all 33 CONTRADICTS the owner reviewed, **19 were the check
+    being wrong and 14 were real** -- 42% precision. A gate refusing on that
+    would block more good pins than bad ones and be switched off inside a week.
+    What it buys is a question asked at the moment the pin is cheap to fix,
+    instead of months later after a coordinate, relatedTourIds and possibly a
+    place have been built on top of a wrong title.
+
+    ⚠️ A hero that cannot be FETCHED is reported as unverified, never as clean.
+    At authoring time the image may not have reached gh-pages yet, and "the URL
+    404s" must not read the same as "the picture matched".
+    """
+    import importlib.util
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "check-pin-subject.py")
+    spec = importlib.util.spec_from_file_location("_pin_subject", path)
+    vision = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(vision)
+
+    out = []
+    for pin in pins:
+        title = (pin.get("title") or "").strip()
+        url = pin.get("heroImageURL")
+        where = f"{title[:40]!r}"
+        if not url:
+            out.append(f"{where}: no hero image — the picture cannot be asked")
+            continue
+        try:
+            blob, mime = vision.fetch_image(url)
+        except Exception as exc:                            # noqa: BLE001
+            out.append(f"{where}: hero not fetchable yet ({type(exc).__name__}) "
+                       f"— UNVERIFIED, not clean. Re-run after the image is live")
+            continue
+        try:
+            gate_a = vision.yes_no(vision.ask(vision.gate_a_prompt(), blob, mime, key))
+            if not gate_a:
+                out.append(f"{where}: the hero shows no identifiable place, so "
+                           f"nothing can verify this title (UNUSABLE)")
+                continue
+            gate_b = vision.yes_no(vision.ask(
+                vision.gate_b_prompt(title, pin.get("city"),
+                                     vision.neighbours(catalog, pin)),
+                blob, mime, key))
+            if gate_b is not False:
+                continue
+            named = vision.ask(vision.gate_c_prompt(), blob, mime, key)
+            if named and named.strip().upper() != "UNKNOWN":
+                # ⚠️ Gate D can only WITHDRAW. An unanswered D leaves the doubt.
+                same = vision.yes_no(vision.ask(
+                    vision.gate_d_prompt(title, named.strip(), pin.get("city")),
+                    None, None, key))
+                if same:
+                    continue
+            out.append(f"{where}: the hero looks like {(named or 'something else').strip()[:44]!r}"
+                       f" — CHECK THIS BEFORE MERGING. 42% of such findings were real")
+        except Exception as exc:                            # noqa: BLE001
+            out.append(f"{where}: vision check failed ({type(exc).__name__}) "
+                       f"— UNVERIFIED, not clean")
+    return out
+
+
 def merge(catalog: dict, payload: dict) -> tuple[dict, dict]:
     """Return (catalog, report). Pure — no I/O, so `--selftest` exercises the
     real merge rather than an imitation of it.
@@ -367,7 +431,8 @@ def report_dozent_clashes(new_makers: list, fetch=live_dozent_handles) -> None:
 
 
 def run(pins_path: str, catalog_path: str, write: bool,
-        allow_unverifiable: bool = False) -> int:
+        allow_unverifiable: bool = False,
+        vision_key: str = "") -> int:
     with open(pins_path, encoding="utf-8") as fh:
         payload = json.load(fh)
 
@@ -414,6 +479,12 @@ def run(pins_path: str, catalog_path: str, write: bool,
         for x in bad_titles:
             print(f"  - {x}")
         return 1
+
+    if vision_key:
+        print("\n  asking each hero what it shows …")
+        for warning in vision_warnings(payload.get("linkPins") or [],
+                                       catalog, vision_key):
+            print(f"  👁  {warning}")
 
     merged, rep = merge(catalog, payload)
 
@@ -546,6 +617,21 @@ def selftest() -> int:
           not bad and len(warn) == 1)
     check("...and the warning is phrased as a question, not a verdict",
           "if they are different subjects" in warn[0])
+
+    # --- the vision step: it WARNS, and a hero it cannot read is UNVERIFIED
+    def vw(pin, key="k"):
+        return vision_warnings([pin], {"tours": [], "linkPins": []}, key)
+
+    check("🔴 a pin with no hero is reported, not silently passed",
+          len(vw({"title": "X", "heroImageURL": None})) == 1)
+    check("...and the message says the picture cannot be asked",
+          "cannot be asked" in vw({"title": "X", "heroImageURL": None})[0])
+    unreachable = vw({"title": "X",
+                      "heroImageURL": "https://127.0.0.1:1/nope.webp"})
+    check("🔴 an unfetchable hero is UNVERIFIED, never clean",
+          len(unreachable) == 1 and "UNVERIFIED" in unreachable[0])
+    check("...and it says to re-run once the image is live",
+          "Re-run after the image is live" in unreachable[0])
 
     check("a pin at a real coordinate whose lon is 0 is NOT refused",
           validate_incoming({"linkPins": [pin("X", lat=51.5, lon=0.0)]}) == [])
@@ -698,6 +784,10 @@ def main() -> int:
                     help="permit a caption or description as a title. Use only "
                          "when the subject truly has no name; the reason is "
                          "printed either way.")
+    ap.add_argument("--vision", action="store_true",
+                    help="ask each hero whether it shows what the title claims. "
+                         "Needs GEMINI_API_KEY. WARNS, never refuses — 42%% of "
+                         "such findings were real when the owner reviewed them.")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -708,8 +798,15 @@ def main() -> int:
         return selftest()
     if not a.pins:
         ap.error("give a pins file, or --selftest")
+    key = os.environ.get("GEMINI_API_KEY", "") if a.vision else ""
+    if a.vision and not key:
+        # 🔴 A check that cannot run must not look like one that passed.
+        print("REFUSED — --vision needs GEMINI_API_KEY. Running without it "
+              "would print a clean report that verified nothing.")
+        return 2
     return run(a.pins, a.catalog, write=not a.check,
-               allow_unverifiable=a.allow_unverifiable_title)
+               allow_unverifiable=a.allow_unverifiable_title,
+               vision_key=key)
 
 
 if __name__ == "__main__":
