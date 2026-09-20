@@ -54,18 +54,38 @@ struct ClusterPin: View {
                 .fill(AtlasColors.mapPin)
                 .frame(width: innerDiameter, height: innerDiameter)
                 .overlay(Circle().stroke(Color.white, lineWidth: 1.5))
-            Text("\(count)")
+            Text(label)
                 .font(.system(size: 12, weight: .regular, design: .monospaced))
                 .foregroundStyle(.white)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
         .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+    }
+
+    /// The count as drawn. Four digits don't fit a map badge, so from 1,000
+    /// it abbreviates the way Apple Maps does — "1.2k", "12k" — never more
+    /// than four characters. The exact figure stays in the accessibility
+    /// label, which the call sites build from `count` directly.
+    var label: String { Self.label(for: count) }
+
+    static func label(for count: Int) -> String {
+        guard count >= 1000 else { return "\(count)" }
+        let thousands = Double(count) / 1000
+        if thousands < 10 {
+            // Round DOWN, so 1,960 reads "1.9k" and never overstates.
+            let tenths = (thousands * 10).rounded(.down) / 10
+            return tenths == tenths.rounded() ? "\(Int(tenths))k" : String(format: "%.1fk", tenths)
+        }
+        return "\(Int(thousands.rounded(.down)))k"
     }
 
     private var innerDiameter: CGFloat {
         switch count {
         case ..<10: return 26
         case ..<100: return 30
-        default: return 34
+        case ..<1000: return 34
+        default: return 38
         }
     }
 
