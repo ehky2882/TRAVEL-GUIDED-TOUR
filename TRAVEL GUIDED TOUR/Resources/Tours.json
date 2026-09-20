@@ -276517,6 +276517,51 @@
         "Market"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "5548BE0D-62A7-508B-BD5D-D5113C08B4A8",
+      "createdAt": "2026-09-20",
+      "title": "Plaza Hotel & Casino",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "The Plaza in Las Vegas opened in 1971! I love its original Showroom and the fabulous Oscar’s Steakhouse + Carousel Bar!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/plaza-hotel-casino-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Daswx4joG4y/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "2385DEC0-6E7F-5E40-BBDB-E738BB3FA8B5",
+          "order": 0,
+          "title": "Plaza Hotel & Casino",
+          "caption": "The Plaza in Las Vegas opened in 1971! I love its original Showroom and the fabulous Oscar’s Steakhouse + Carousel Bar!",
+          "latitude": 36.1715877,
+          "longitude": -115.1470854,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/plaza-hotel-casino-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.1715877,
+      "centroidLongitude": -115.1470854,
+      "city": "Las Vegas",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
     }
   ]
 }
