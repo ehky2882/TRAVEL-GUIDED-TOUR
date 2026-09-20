@@ -1,0 +1,9 @@
+images/old-spitalfields-market_hero-2.webp
+  Old Spitalfields Market Panorama, London, UK
+  Photo: Diliff (David Iliff), via Wikimedia Commons
+  Licence: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+  Source: https://commons.wikimedia.org/wiki/File:Old_Spitalfields_Market_Panorama,_London,_UK_-_Diliff.jpg
+
+  NOTE: this licence REQUIRES attribution, and the app has no credit field.
+  The credit is therefore burned into the bottom-right of the image itself.
+  Do not crop it out, and do not re-encode this file without preserving it.
