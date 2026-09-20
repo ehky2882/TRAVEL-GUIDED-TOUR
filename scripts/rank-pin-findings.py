@@ -54,7 +54,16 @@ BANDS = ("cross-country", "cross-city", "same-area")
 
 
 def fold(s):
-    """Accent- and case-insensitive key. Zurich and Zürich are one city."""
+    """Accent- and case-insensitive key. Zurich and Zürich are one city.
+
+    ⚠️ The combining-mark filter below is BELT-AND-BRACES, not the guard: the
+    `[^a-z0-9 ]` regex already strips combining marks, so removing the filter
+    changes nothing (verified over Zürich / São Paulo / Málaga / Ōsaka). The
+    mutation harness lists that sabotage as EQUIVALENT for this reason.
+    ⚠️ A letter that does not DECOMPOSE is deleted outright, so "Køge" folds to
+    "kge". Harmless while both sides fold the same way; it would matter if a
+    fold were ever compared against something folded another way.
+    """
     s = unicodedata.normalize("NFKD", s or "")
     s = "".join(c for c in s if not unicodedata.combining(c))
     return re.sub(r"[^a-z0-9 ]", "", s.lower()).strip()
@@ -158,11 +167,40 @@ def selftest():
     check("an unrecognised place bands same-area",
           band_of("Nowhere At All", "London", "United Kingdom",
                   cc, countries)[0] == "same-area")
-    # 🔴 The accent case is the one the fold exists for: a naive == would band
-    # Zurich/Zürich as a different city and invent a finding.
-    check("an accent variant is not a different city",
-          band_of("A bank, Zürich", "Zurich", "Switzerland",
-                  {"zurich": {"Switzerland"}}, {"switzerland"})[0] == "same-area")
+    # 🔴 The accent case is the one the fold exists for. This must be written so
+    # that LOSING the fold CHANGES the band -- an earlier version asserted
+    # "same-area" and passed even with accent-stripping removed, because an
+    # unfoldable token matches nothing and falls to same-area anyway. That test
+    # was decorative: the mutation harness caught it, the selftest never could.
+    accent = {"zurich": {"Switzerland"}}
+    # The ACCENT must sit on the token being looked up, not on the key: the
+    # gazetteer key is already folded, so an unfolded token is what fails to
+    # match. Writing it the other way round tests nothing.
+    check("an accented answer still resolves to its unaccented city",
+          band_of("a bank, Zürich", "Paris", "France",
+                  accent, {"france"})[0] == "cross-country")
+    check("and a city is never foreign to its own accented spelling",
+          band_of("a bank, Zurich", "Zürich", "Switzerland",
+                  accent, {"switzerland"})[0] == "same-area")
+
+    # 🔴 A BARE COUNTRY NAME is the first branch of band_of and had NO test at
+    # all -- three separate mutants disabling or breaking it went undetected.
+    check("a bare country name bands cross-country",
+          band_of("Montmartre, France", "London", "United Kingdom",
+                  cc, countries)[0] == "cross-country")
+    check("the entry's OWN country named does not band cross-country",
+          band_of("a pub, United Kingdom", "London", "United Kingdom",
+                  cc, countries)[0] == "same-area")
+
+    # gazetteer() is what every band is computed against; a city carrying no
+    # country must not enter it, or a None country compares against everything.
+    g_cities, g_countries = gazetteer([
+        {"city": "Lisbon", "country": "Portugal"},
+        {"city": "Nowhere", "country": None},
+    ])
+    check("a city with a country enters the gazetteer", "lisbon" in g_cities)
+    check("a city with NO country does not", "nowhere" not in g_cities)
+    check("and no empty country name is admitted", "" not in g_countries)
     check("gate C saying nothing bands same-area",
           band_of(None, "London", "United Kingdom", cc, countries)[0] == "same-area")
     # 🔴 "somewhere in France" does NOT band: the split is on commas and
