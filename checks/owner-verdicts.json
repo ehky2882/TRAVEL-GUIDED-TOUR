@@ -1,0 +1,167 @@
+{
+ "1 Spadina Crescent (Daniels Building)": {
+  "date": "2026-09-19",
+  "note": "owner: certainly fine. caption 'A Gothic Revival building from 1875' — it IS a University of Toronto building, so the model named the parent institution, not a different place",
+  "verdict": "correct"
+ },
+ "520 West 28th Street": {
+  "date": "2026-09-19",
+  "note": "owner: correct — the check named Via 57 West and was wrong",
+  "verdict": "correct"
+ },
+ "Apple Michigan Avenue": {
+  "date": "2026-09-19",
+  "note": "owner: correct — the check named Wolf Point East and was wrong",
+  "verdict": "correct"
+ },
+ "Autograph Tower": {
+  "date": "2026-09-19",
+  "note": "owner: correct — the check named Suzhou IFS and was wrong",
+  "verdict": "correct"
+ },
+ "Avaz Twist Tower": {
+  "date": "2026-09-19",
+  "note": "was titled 'Crown Sydney' in Sydney; owner confirmed the photo is Avaz Twist Tower. Retitled and moved to Sarajevo",
+  "verdict": "fixed"
+ },
+ "Britam Tower": {
+  "date": "2026-09-19",
+  "note": "owner: correct; the '(likely)' hedge in the title was dropped",
+  "verdict": "correct"
+ },
+ "Canterbury Cathedral": {
+  "date": "2026-09-19",
+  "note": "owner: certainly fine. the photo is the cathedral's own Christ Church Gate; caption 'The delights of Canterbury!'. A part of the subject is not a different subject",
+  "verdict": "correct"
+ },
+ "Casa de Vidro (Instituto Bardi)": {
+  "date": "2026-09-19",
+  "note": "owner: all correct. The check named Casa das Canoas in Rio -- another modernist glass house on a wooded slope, by Niemeyer rather than Bo Bardi. Same failure mode as Grace Farms/Glass House, but here the catalogue was right",
+  "verdict": "correct"
+ },
+ "Chiesa di San Giovanni Bono": {
+  "date": "2026-09-20",
+  "note": "was 'A brutalist church, Via San Paolino' — a description, not a name. Owner named it: San Giovanni Bono by Arrigo Arrighetti. The church stands on Piazza Arrigo Arrighetti, named for its own architect, which corroborates the attribution. The check had said 'Basilica of Our Lady of Peace' and was wrong. Coordinate nudged 48 m onto the church",
+  "verdict": "fixed"
+ },
+ "Chiesa di San Nicolao della Flüe": {
+  "date": "2026-09-20",
+  "note": "was 'A brutalist church, Via Dalmazia' — a DESCRIPTION, not a name, which is why gate B's question was malformed. Owner named it. The check had said 'Chiesa di San Giovanni Battista, Mogliano', a different brutalist church. Title now names the building and the coordinate moved 210 m onto it. City unchanged, not a place member",
+  "verdict": "fixed"
+ },
+ "Dayabumi Complex": {
+  "date": "2026-09-19",
+  "note": "owner (hedged): correct, Kuala Lumpur. The check named Bank Negara Malaysia -- also a KL landmark with Islamic-modernist geometry, which is the likely source of the confusion. NOT re-verified against the pixels",
+  "verdict": "correct"
+ },
+ "Eurovea Tower": {
+  "date": "2026-09-19",
+  "note": "was titled 'MOL Campus' in Budapest; owner identified it as Eurovea Tower, Bratislava. Retitled and relocated to Slovakia",
+  "verdict": "fixed"
+ },
+ "Karlatornet": {
+  "date": "2026-09-19",
+  "note": "owner: correct, NOT Burj Al Arab — the check was wrong",
+  "verdict": "correct"
+ },
+ "Le Nouvel KLCC": {
+  "date": "2026-09-19",
+  "note": "was titled 'Bosco Verticale' in Milan; owner identified it as Le Nouvel KLCC, Kuala Lumpur",
+  "verdict": "fixed"
+ },
+ "Leaning Tower of Niles": {
+  "date": "2026-09-19",
+  "note": "owner: certainly fine. caption 'local quirky landmarks' — it is the Pisa replica, so naming Pisa is agreement. Gate D's replica clause did not fire",
+  "verdict": "correct"
+ },
+ "Lincoln Heights Jail": {
+  "date": "2026-09-20",
+  "note": "was titled 'The 14th Factory'. Owner: it is Lincoln Heights Jail in East LA. The check named it and was RIGHT. Retitle only -- the pin already sat 49 m from the jail, so the coordinate was correct all along. The 14th Factory was an art installation staged in that building, so the title named an EVENT that happened at the site rather than the site",
+  "verdict": "fixed"
+ },
+ "Lucas Museum of Narrative Art": {
+  "date": "2026-09-19",
+  "note": "was titled 'MSG Sphere' in Las Vegas. Owner identified it as the Lucas Museum in Los Angeles. Caption 'This Building Looks Like a Spaceship' names nothing, the @pasttworld pattern. Retitled and moved to Exposition Park",
+  "verdict": "fixed"
+ },
+ "Maison du Brésil": {
+  "date": "2026-09-19",
+  "note": "owner: correct. The check named Unité d'Habitation in Marseille -- also Le Corbusier, also béton brut with coloured loggias. Same architect, same vocabulary; the pixels cannot separate them",
+  "verdict": "correct"
+ },
+ "Mercatino delle Cose d'altri Tempi": {
+  "date": "2026-09-19",
+  "note": "owner: certainly fine. STALE record: this pin was given its own hero (Villa Contarini) earlier today, so the cached verdict predates the fix and clears on a re-run",
+  "verdict": "correct"
+ },
+ "Nexans Halden": {
+  "date": "2026-09-19",
+  "note": "was 'Facility at Knivsoveien 70'. Owner was unsure whether the two names are the same site; OSM names a node 'Knivsoveien 46, Nexans Halden' and the caption calls it Norway's tallest building, which is the Nexans cable tower. Same site, retitled and the coordinate refined ~580 m onto Knivsoveien 70",
+  "verdict": "fixed"
+ },
+ "Palika Kendra (NDMC HQ)": {
+  "date": "2026-09-19",
+  "note": "owner: correct — Palika Kendra IS the NDMC headquarters, and the title already says so. The check named Jatiya Sangsad Bhaban in Dhaka: another monumental South Asian brutalist civic block, Kahn rather than Rewal",
+  "verdict": "correct"
+ },
+ "Prysmian Cable Tower": {
+  "date": "2026-09-19",
+  "note": "was 'Prysmian Sky'; owner gave the real name. Retitle only — the coordinate in Kirkkonummi (Pikkala) is where the cable tower stands, so nothing was moved",
+  "verdict": "fixed"
+ },
+ "Queen Eleanor Memorial Cross, Charing Cross": {
+  "date": "2026-09-20",
+  "note": "owner: seems correct. The check named Holborn Bars -- another red-stone Victorian Gothic pile a mile away. The caption is about the creator's book, not the monument, which is why nothing in the record could corroborate it",
+  "verdict": "correct"
+ },
+ "Rainier Tower": {
+  "date": "2026-09-20",
+  "note": "owner: all three Rainier entries correct. The check named 'The Union Station, Seattle'. Rainier Tower's pedestal is its famous feature and the check appears to have latched onto a different Seattle landmark",
+  "verdict": "correct"
+ },
+ "Smáratorg Tower": {
+  "date": "2026-09-19",
+  "note": "owner: correct — the building's top reads 'Deloitte', which is why the check named 'Deloitte Building, Reykjavik'. Smaratorg 3 IS the Deloitte building (Turninn), in Kopavogur rather than Reykjavik proper. The check read the SIGNAGE and reported a tenant's name as a different building",
+  "verdict": "correct"
+ },
+ "The Crooked House (Sir John Boys House), Canterbury": {
+  "date": "2026-09-19",
+  "note": "SUPERSEDES the earlier 'King Street, Canterbury is correct'. The owner revised: the post IS about the crooked house -- Canterbury's own, at 28 Palace Street, not Wolverhampton's. So the check was RIGHT that the title was wrong and wrong about which crooked house. Title was wrong twice over: the building unnamed and the street wrong (Palace, not King). The coordinate was already correct, so nothing moved",
+  "verdict": "fixed"
+ },
+ "The Erechtheion": {
+  "date": "2026-09-19",
+  "note": "owner: certainly fine. caption 'olive tree or salty water' is the Athena/Poseidon contest, which is the Erechtheion's own myth; the sacred olive stands at it",
+  "verdict": "correct"
+ },
+ "The Four Columns at Kadoorie Farm": {
+  "date": "2026-09-19",
+  "note": "owner: assume correct — the coordinates were supplied by the owner's brother, i.e. a human who knew the site, not a geocoder. The check named 'Former Dairy Farm Building', and the Chinese caption itself says the four columns' past is tied to a beautiful Hong Kong building -- so the model may well be naming that OTHER building correctly while the pin is also correct. ⚠️ ASSUMED on provenance, NOT re-verified against the pixels",
+  "verdict": "correct"
+ },
+ "The Glass House": {
+  "date": "2026-09-19",
+  "note": "was one of TWO 'Grace Farms' pins by @ninosbuildings on the same coordinate. Its caption reads 'Glass houses were quite the trend' -- Philip Johnson's Glass House. The other says 'Do you guys enjoy Japanese architecture', which is SANAA's River Building and correctly Grace Farms",
+  "verdict": "fixed"
+ },
+ "The Link in La Défense": {
+  "date": "2026-09-19",
+  "note": "was 'The Link'; owner disambiguated it. Retitle only — the pin already sits in Puteaux, which is La Défense, so nothing was moved",
+  "verdict": "fixed"
+ },
+ "Tianducheng (replica Eiffel Tower)": {
+  "date": "2026-09-19",
+  "note": "owner: certainly fine. caption 'China's $1 Billion dollar Fake Paris' — the replica IS the subject, and the title says so. Gate D should have withdrawn this and did not",
+  "verdict": "correct"
+ },
+ "Tianjin CTF Finance Centre": {
+  "date": "2026-09-19",
+  "note": "was titled 'Guangzhou CTF Finance Centre'; owner identified it as the Tianjin tower. Retitled and relocated to Tianjin",
+  "verdict": "fixed"
+ },
+ "Westminster Underground Station": {
+  "date": "2026-09-20",
+  "note": "was titled 'Portcullis House'. Owner: the post is about the Underground station. The check named Westminster Station and was RIGHT. Retitle only -- the station is 41 m from the existing coordinate and sits directly beneath Portcullis House, so nothing moved; city unchanged, no place membership",
+  "verdict": "fixed"
+ }
+}
