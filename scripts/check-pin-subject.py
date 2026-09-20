@@ -154,6 +154,22 @@ def by_creator(catalog, pins, needle):
     return out
 
 
+def every_entry(catalog):
+    """Every entry with a hero — tours as well as pins.
+
+    🔴 `uncorroborated()` is the 466 whose titles nothing stored can check, and
+    it was the right place to START, not the whole job. A caption that names
+    the venue says nothing about whether the PHOTOGRAPH is right: Grace Farms
+    was corroborated by its own caption and was still Philip Johnson's Glass
+    House. This is the rest of the catalogue.
+    """
+    out = []
+    for entry in (catalog.get("tours") or []) + (catalog.get("linkPins") or []):
+        if entry.get("heroImageURL"):
+            out.append(entry)
+    return out
+
+
 def gate_a_prompt():
     return (
         "Does this image show ONE specific, identifiable real-world PLACE — a "
@@ -472,6 +488,14 @@ def selftest():
     ]}, {"id": "a", "title": "Torre Velasca", "city": "Milan"})
     check("distractors come from the same city only", nb == ["Duomo di Milano"])
 
+    every = {"tours": [{"id": "t", "title": "T", "heroImageURL": "h"}],
+             "linkPins": [{"id": "p", "title": "P", "heroImageURL": "h"},
+                          {"id": "n", "title": "N"}]}
+    ids = [e["id"] for e in every_entry(every)]
+    check("🔴 --all covers TOURS as well as pins", "t" in ids and "p" in ids)
+    check("🔴 an entry with no hero is skipped — there is nothing to ask",
+          "n" not in ids)
+
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — "
           f"{len(ran) - len(fails)}/{len(ran)}")
     return 1 if fails else 0
@@ -488,6 +512,9 @@ def main():
     ap.add_argument("--only", default="", help="substring filter on the title")
     ap.add_argument("--maker", default="",
                     help="one creator's handle, e.g. pasttworld (the @ is optional)")
+    ap.add_argument("--all", action="store_true",
+                    help="check EVERY entry with a hero, not only the "
+                         "uncorroborated ones. ~4,800 entries, ~2 calls each.")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -500,7 +527,7 @@ def main():
         with open(a.catalog, encoding="utf-8") as fh:
             catalog = json.load(fh)
         cache = load_cache(a.cache)
-        targets = uncorroborated(catalog)
+        targets = every_entry(catalog) if a.all else uncorroborated(catalog)
         if a.maker:
             targets = by_creator(catalog, targets, a.maker)
         if a.only:
@@ -508,7 +535,8 @@ def main():
                        if a.only.lower() in (p.get("title") or "").lower()]
 
         todo = [p for p in targets if (cache.get(p["id"]) or {}).get("digest") != digest(p)]
-        print(f"{len(targets)} uncorroborated pin(s) · {len(cache)} cached · "
+        scope = "entries with a hero" if a.all else "uncorroborated pin(s)"
+        print(f"{len(targets)} {scope} · {len(cache)} cached · "
               f"{len(todo)} to check")
 
         if not a.key:
