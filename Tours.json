@@ -4829,6 +4829,316 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/interluke/"
+    },
+    {
+      "id": "EC7334D7-0529-5919-B2AF-9293AEF7B521",
+      "displayName": "TikTok @laurendrury_",
+      "platform": "tiktok",
+      "handle": "laurendrury_",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-laurendrury.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@laurendrury_"
+    },
+    {
+      "id": "8FBA25F9-8573-59B9-816D-D81BF60C38DE",
+      "displayName": "TikTok @keeganseason",
+      "platform": "tiktok",
+      "handle": "keeganseason",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-keeganseason.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@keeganseason"
+    },
+    {
+      "id": "72123909-324A-58B1-B2F1-2FAECDD29051",
+      "displayName": "Instagram @_sattom",
+      "platform": "instagram",
+      "handle": "_sattom",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/_sattom/"
+    },
+    {
+      "id": "D3F6A7D3-FB0A-56A1-95BD-8DACAC4BAB6D",
+      "displayName": "Instagram @bloombergconnects",
+      "platform": "instagram",
+      "handle": "bloombergconnects",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/bloombergconnects/"
+    },
+    {
+      "id": "A2361260-D43C-5181-9AD2-5CD750BFCFFC",
+      "displayName": "Instagram @erinparro_travel",
+      "platform": "instagram",
+      "handle": "erinparro_travel",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/erinparro_travel/"
+    },
+    {
+      "id": "8CC7FDFC-1DE5-54F9-8601-13ADA9AA7A06",
+      "displayName": "Instagram @landmarksofny",
+      "platform": "instagram",
+      "handle": "landmarksofny",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/landmarksofny/"
+    },
+    {
+      "id": "E4754AEE-CC14-5F86-82DB-3D58BAA41C66",
+      "displayName": "Instagram @victoriaverbainteriors",
+      "platform": "instagram",
+      "handle": "victoriaverbainteriors",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/victoriaverbainteriors/"
+    },
+    {
+      "id": "FF7ACF99-8D2B-5B03-B066-8FA01734E9DF",
+      "displayName": "Instagram @nyc",
+      "platform": "instagram",
+      "handle": "nyc",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/nyc/"
+    },
+    {
+      "id": "CB0627E2-FFF0-5B9C-BBAA-6AD08987FF8B",
+      "displayName": "Instagram @onefinedaynyc",
+      "platform": "instagram",
+      "handle": "onefinedaynyc",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/onefinedaynyc/"
+    },
+    {
+      "id": "5C5C59CE-2C91-58AF-9B81-F3862426521F",
+      "displayName": "Instagram @markvenaglia",
+      "platform": "instagram",
+      "handle": "markvenaglia",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/markvenaglia/"
+    },
+    {
+      "id": "938736AF-E7A9-5DC3-B49E-006681102B17",
+      "displayName": "TikTok @neverboredinorlando",
+      "platform": "tiktok",
+      "handle": "neverboredinorlando",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-neverboredinorlando.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@neverboredinorlando"
+    },
+    {
+      "id": "3D2EF797-88DE-53C1-B59A-ACAC05D9C66E",
+      "displayName": "TikTok @irina.newyork",
+      "platform": "tiktok",
+      "handle": "irina.newyork",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-irina-newyork.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@irina.newyork"
+    },
+    {
+      "id": "EBA8729F-4033-52CF-AC42-4268773FA3FB",
+      "displayName": "TikTok @juulialand",
+      "platform": "tiktok",
+      "handle": "juulialand",
+      "avatarURL": null,
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@juulialand"
+    },
+    {
+      "id": "BF21D782-0981-5607-A6CC-A1B985A003D9",
+      "displayName": "TikTok @bradenjstanley",
+      "platform": "tiktok",
+      "handle": "bradenjstanley",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-bradenjstanley.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@bradenjstanley"
+    },
+    {
+      "id": "49649398-740B-518F-967A-C92A39975371",
+      "displayName": "Instagram @carty.docs",
+      "platform": "instagram",
+      "handle": "carty.docs",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/carty.docs/"
+    },
+    {
+      "id": "1CBE7AFE-7571-5ACF-B70C-292A37FEAD60",
+      "displayName": "Instagram @charleytalks",
+      "platform": "instagram",
+      "handle": "charleytalks",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/charleytalks/"
+    },
+    {
+      "id": "1134AFE0-9566-50E3-93FC-563FCB977245",
+      "displayName": "TikTok @descubriendoconcelia",
+      "platform": "tiktok",
+      "handle": "descubriendoconcelia",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-descubriendoconcelia.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@descubriendoconcelia"
+    },
+    {
+      "id": "F6BA9A87-05AA-5C5D-9C74-195F30AFD582",
+      "displayName": "TikTok @us.hiddengems",
+      "platform": "tiktok",
+      "handle": "us.hiddengems",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-us-hiddengems.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@us.hiddengems"
+    },
+    {
+      "id": "1C170437-049C-5FB7-848F-003DF7E522BC",
+      "displayName": "TikTok @californiabucketlists",
+      "platform": "tiktok",
+      "handle": "californiabucketlists",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-californiabucketlists.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@californiabucketlists"
+    },
+    {
+      "id": "8035D5E1-75B0-511D-A73D-76877CCBF36A",
+      "displayName": "TikTok @somewherebeautiful3777",
+      "platform": "tiktok",
+      "handle": "somewherebeautiful3777",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-somewherebeautiful3777.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@somewherebeautiful3777"
+    },
+    {
+      "id": "0A0FB79B-039A-5600-90D9-33C6FD18A532",
+      "displayName": "Instagram @amazingamericatv",
+      "platform": "instagram",
+      "handle": "amazingamericatv",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/amazingamericatv/"
+    },
+    {
+      "id": "162FAE86-D2DE-561A-A09D-08D99B7953BF",
+      "displayName": "Instagram @lahistorygirl",
+      "platform": "instagram",
+      "handle": "lahistorygirl",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/lahistorygirl/"
+    },
+    {
+      "id": "7ECFA97C-D70C-53CA-ABC4-9AB667E373D9",
+      "displayName": "Instagram @greatbritisharchitecture",
+      "platform": "instagram",
+      "handle": "greatbritisharchitecture",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/greatbritisharchitecture/"
+    },
+    {
+      "id": "4BED9089-DCC5-553E-B469-71F77F767206",
+      "displayName": "Instagram @historicengland",
+      "platform": "instagram",
+      "handle": "historicengland",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/historicengland/"
+    },
+    {
+      "id": "5F726A8D-840D-5F67-9E50-8FDC8C4C97F2",
+      "displayName": "Instagram @hypebeast",
+      "platform": "instagram",
+      "handle": "hypebeast",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/hypebeast/"
+    },
+    {
+      "id": "6F8AF9E0-1CD9-52CD-A89B-10213A440CCF",
+      "displayName": "TikTok @mskelseygraves",
+      "platform": "tiktok",
+      "handle": "mskelseygraves",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-mskelseygraves.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@mskelseygraves"
+    },
+    {
+      "id": "E20E34FB-DA3B-5ACC-BF0A-E8A506E80A1E",
+      "displayName": "TikTok @carolinewimberly",
+      "platform": "tiktok",
+      "handle": "carolinewimberly",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-carolinewimberly.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@carolinewimberly"
+    },
+    {
+      "id": "B8C0EAF3-23C9-5F62-B23D-E702A0721AB2",
+      "displayName": "Instagram @lylasmind",
+      "platform": "instagram",
+      "handle": "lylasmind",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/lylasmind/"
+    },
+    {
+      "id": "9DE2A47A-D64D-532D-9C61-B7BC601741D7",
+      "displayName": "TikTok @marionsworldd",
+      "platform": "tiktok",
+      "handle": "marionsworldd",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-marionsworldd.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@marionsworldd"
+    },
+    {
+      "id": "D5BB70B0-8EA4-5C88-8419-8D0FFAAE7C59",
+      "displayName": "TikTok @suhyrswrld",
+      "platform": "tiktok",
+      "handle": "suhyrswrld",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-suhyrswrld.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@suhyrswrld"
+    },
+    {
+      "id": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "displayName": "Instagram @imjennychang",
+      "platform": "instagram",
+      "handle": "imjennychang",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/imjennychang/"
     }
   ],
   "tours": [
@@ -6086,8 +6396,8 @@
         "E71ED72C-3F73-5146-9E8F-12A606A2BC20",
         "9AA2406A-6C3A-518B-A2BF-95690D036AAF",
         "454E3047-53DA-501F-AEB5-ABEBA197F4F6",
-        "DCFAF7EC-3149-53AB-9121-A524108E7B3A",
-        "D7797624-EA83-57DD-ADE4-09540672DEB0"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
+        "DCFAF7EC-3149-53AB-9121-A524108E7B3A"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -10532,7 +10842,7 @@
         "284BBDF4-30D5-560C-ABD8-EA33C666AA48",
         "664a707a-ef01-4014-8ee5-c0b7100db2c1",
         "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6",
-        "21c1b7e3-b8fb-413b-83b7-0fa67693155c"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -13020,13 +13330,13 @@
       "country": "United States",
       "relatedTourIds": [
         "540613ee-b72f-4460-95ff-a03d921681ae",
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
         "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
         "8B42129E-7831-5F35-A453-2DFA3F0E05BD",
         "83090c8c-ab5d-4311-a881-519b1e36183e",
         "45596643-A2D4-5564-8BF4-08B3F6E08144",
         "51EDB2E0-5A2E-48B2-8490-36A5622CCED7",
-        "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
-        "434932e4-9c75-452e-a83b-5ef3ae0cb995"
+        "21c1b7e3-b8fb-413b-83b7-0fa67693155c"
       ],
       "walkingDistanceMeters": null
     },
@@ -47328,11 +47638,11 @@
         "7cc87aaf-5e52-582e-a4ef-6115ec73389d",
         "13c93799-efad-5b2b-b76e-b0002d14aa2a",
         "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "26828f4e-9ad4-5682-b16d-327ee86439b3",
         "DF1C65F9-DF16-5573-855E-FB85673EE668",
         "4754C562-061B-582E-82AC-A09CE93C6098",
-        "49424a7b-75a0-5675-8a6c-3b0213c9ab15",
-        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB"
+        "49424a7b-75a0-5675-8a6c-3b0213c9ab15"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -96515,13 +96825,13 @@
       "country": "Denmark",
       "relatedTourIds": [
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "67b1cf33-4405-57fc-a9ba-9ab81f549f90",
         "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
         "310fac17-247d-507b-9637-503685b7af85",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "ef82854f-c559-524c-a45f-ebb32d95ec4f",
-        "ad55caf6-07fd-5034-b10d-0b66deb6fcfd"
+        "ef82854f-c559-524c-a45f-ebb32d95ec4f"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -106082,14 +106392,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "41F8D2E8-FBCC-5B79-8876-EAD28FF01E77",
         "24DA376F-9B8B-53DF-B89B-E5D6D21E912D",
         "141B9F48-F18B-5A95-AA24-0E8D6C4A32F5",
         "D431DBC8-A477-586B-89C5-62ACD65B3988",
         "DEE1789D-7659-58BC-81D5-6C6CD8354F2B",
         "D3FD149D-D825-536C-9B4D-687EF5979CD8",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
-        "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
-        "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74"
+        "1F17BE53-4450-53B6-84BC-4DC79B0ECB73"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -107217,9 +107527,9 @@
         "210B9379-830A-5B77-A390-F8E7EA7DBBE4",
         "7FFE776E-9B5D-5E9D-87E5-986081940F6C",
         "02E1FBE1-36CA-5558-89B6-BD89BE6118DE",
+        "72CB3475-B4C3-59EB-9151-539E63F1A721",
         "BA6B21F6-5565-5D12-A17B-60D1F00E82CE",
-        "150DA42D-4F99-590B-967B-03232DCFD6D5",
-        "82EDAC91-8D0E-5C4F-9853-0E36E087528C"
+        "150DA42D-4F99-590B-967B-03232DCFD6D5"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -107275,7 +107585,7 @@
         "7FFE776E-9B5D-5E9D-87E5-986081940F6C",
         "150DA42D-4F99-590B-967B-03232DCFD6D5",
         "FF7C8FE0-E773-51D9-83A0-0A32404CB144",
-        "0EE0D317-110E-5CB7-ADB4-9055C502192E"
+        "72CB3475-B4C3-59EB-9151-539E63F1A721"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -107927,6 +108237,7 @@
         "BA6B21F6-5565-5D12-A17B-60D1F00E82CE",
         "7FFE776E-9B5D-5E9D-87E5-986081940F6C",
         "4315AE2A-0E10-585D-BE97-18DB0BF4C3DA",
+        "72CB3475-B4C3-59EB-9151-539E63F1A721",
         "150DA42D-4F99-590B-967B-03232DCFD6D5"
       ],
       "primaryCategory": "visualArt",
@@ -111131,14 +111442,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
         "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
         "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0",
         "ad6ebad4-5b69-4a08-86ed-c5090fbc5e32",
         "1B62FA84-2346-5771-B155-9DF65757BE26",
         "51EDB2E0-5A2E-48B2-8490-36A5622CCED7",
         "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
-        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
-        "B31C6CD5-7903-5839-9C51-CE18F4331C20"
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -111192,10 +111503,10 @@
         "3639287C-B7A8-5879-B456-9D66DDF34211",
         "5A89C565-9A24-53AA-8E42-CAA544B053D3",
         "13AA77B6-8052-55C8-B88D-1F5799808089",
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
         "C6001D21-FA42-55D4-9B0C-C75D7F4C1838",
         "1D2D5C81-BDE3-577A-9420-AE29C6E16B54",
-        "5D16EE65-88D3-5B12-A803-7F524475200F",
-        "EF63AB80-370A-5B48-800F-C4BD6713B3D7"
+        "5D16EE65-88D3-5B12-A803-7F524475200F"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -111562,9 +111873,9 @@
         "65993891-DFCF-526C-986B-59EAF7BB9458",
         "704193A9-9CF6-5472-B3C5-1BA914A5A53E",
         "510855AC-7F71-510B-98AB-05B3E1D5F7B5",
+        "CB3491AC-4B14-541D-A766-B9A7D06AD748",
         "81014923-08E4-5A6A-9244-2FDCB71461FB",
-        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
-        "A0B50432-3203-5101-92E6-734B95E7068D"
+        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -111862,7 +112173,8 @@
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "BE8B80BD-771D-5CE4-801F-B81125261722"
+        "BE8B80BD-771D-5CE4-801F-B81125261722",
+        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -113033,12 +113345,12 @@
       "relatedTourIds": [
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
-        "4391E119-E608-579A-89C4-293BB6077D6E"
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113727,6 +114039,7 @@
       "city": "Woodstock",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "96CA40E4-E80B-5BDE-B213-80917A7E953D",
         "F67D28AD-C087-5C87-9CE4-53229F678507",
         "4B74BA9D-49D5-57FB-BF6A-6970839C4E86"
       ],
@@ -113978,11 +114291,11 @@
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
         "15616CA4-9188-599D-82EC-9CB0EC713F91",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
         "2644D271-E442-5007-85CD-8D4E57333C50",
-        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
-        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -114197,14 +114510,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "41F8D2E8-FBCC-5B79-8876-EAD28FF01E77",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
         "B6BDB140-4BD0-5A36-8067-1E136D439F01",
         "3BC11DF5-1443-570B-8688-8039241B8F34",
         "24DA376F-9B8B-53DF-B89B-E5D6D21E912D",
         "B588557F-110A-59A3-9BCF-CA1EEE07A67C",
         "A9D65A5C-327E-5A89-AC05-3310869161A7",
-        "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
-        "231358B0-D525-54E6-9B85-45620B1F091B"
+        "1F17BE53-4450-53B6-84BC-4DC79B0ECB73"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -115664,10 +115977,10 @@
         "3BBDE9E7-969D-54AF-9468-791A679DCF69",
         "944113F6-42D1-56A2-9DF2-5A80980EC9BB",
         "4D1B2F5C-617E-5A31-BA46-4C74396457D6",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085",
         "60CCDB28-B24F-5960-B225-94C11301903F",
         "FC2AD99F-4B32-5EF3-8B0D-370D42746D7E",
-        "D431DBC8-A477-586B-89C5-62ACD65B3988",
-        "116CAF98-20D5-5665-B111-09886DCF2BAC"
+        "D431DBC8-A477-586B-89C5-62ACD65B3988"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -116349,10 +116662,10 @@
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "DF1C65F9-DF16-5573-855E-FB85673EE668",
         "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "BFE4FED1-4A1E-5397-BE8A-61EF0989E081",
         "638caa09-33bc-510e-a77a-2137e87fc671",
-        "4754C562-061B-582E-82AC-A09CE93C6098",
-        "62ECCD3D-535D-5168-9299-54AEECE3FD16"
+        "4754C562-061B-582E-82AC-A09CE93C6098"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -118653,10 +118966,10 @@
         "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
         "85bfcf5a-af16-545a-b690-60f95bc100fb",
         "7cc87aaf-5e52-582e-a4ef-6115ec73389d",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "638caa09-33bc-510e-a77a-2137e87fc671",
         "49424a7b-75a0-5675-8a6c-3b0213c9ab15",
-        "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44",
-        "F1F59415-AA33-5001-A4F4-AA0D9B696556"
+        "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -118931,7 +119244,7 @@
         "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
         "156860AA-3221-5E9A-A934-4368244E2710",
         "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
-        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -119445,12 +119758,12 @@
       "relatedTourIds": [
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
         "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
         "310fac17-247d-507b-9637-503685b7af85",
         "67b1cf33-4405-57fc-a9ba-9ab81f549f90",
-        "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
-        "9addc742-68a7-597f-a246-d419f8628fc5"
+        "640C4BEC-C30D-5A93-A47E-39F86E8EC668"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -121636,6 +121949,7 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "F67D28AD-C087-5C87-9CE4-53229F678507",
+        "96CA40E4-E80B-5BDE-B213-80917A7E953D",
         "2B0062BF-E29F-58A1-B35E-4C9766E6547A"
       ],
       "primaryCategory": "history",
@@ -123625,6 +123939,7 @@
       "city": "Woodstock",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "96CA40E4-E80B-5BDE-B213-80917A7E953D",
         "2B0062BF-E29F-58A1-B35E-4C9766E6547A",
         "4B74BA9D-49D5-57FB-BF6A-6970839C4E86"
       ],
@@ -125807,14 +126122,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "3838498C-4F6B-5D6E-9415-41ABCC072CD9",
         "14f26785-46df-42cb-a280-5be806d70b93",
         "C7934243-8A39-5E68-82FE-91B18D01E5D6",
         "1BCD75BD-D1B4-50AD-BA26-8C64FD2D6D54",
         "2D5C9958-DB17-56CF-BBC6-2E397D11827A",
         "B19263EA-1F04-5A03-B52E-343638E6D43B",
         "1696A8BF-762D-5DD6-B6EA-CFFF5B1F1B4A",
-        "5B35C771-97E1-5A21-BB34-BBC41D6B606F",
-        "FFA76F71-2FF7-5FDB-9EEA-D8E5037E3C72"
+        "5B35C771-97E1-5A21-BB34-BBC41D6B606F"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -126563,11 +126878,11 @@
         "CFEC4A34-94D6-5ADE-B689-AF3D3518EB7F",
         "0D031E29-DBA4-5A13-9630-327DDBF26789",
         "E1516B43-BB08-519E-86B2-4CC166F5F2E0",
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
         "673AEB2A-00F2-5937-8E80-E7C5C1BB14B3",
         "1EDC717C-BE6C-51A8-904A-0E56133582DE",
         "051957C8-9EAC-5882-B79D-89AAE7996A29",
-        "0793C80C-D04F-5E57-A396-EE04FA02B852",
-        "5A89C565-9A24-53AA-8E42-CAA544B053D3"
+        "0793C80C-D04F-5E57-A396-EE04FA02B852"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -134549,7 +134864,7 @@
         "1D2D5C81-BDE3-577A-9420-AE29C6E16B54",
         "A4DF0BAF-BAEC-5344-A2B3-F260BE2D3CEE",
         "CF18A4C3-D185-53EF-9992-EF1905D80F83",
-        "C7D2E5E7-6BB8-58DE-A9D1-3114D9D4A945"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -138845,8 +139160,8 @@
         "60CCDB28-B24F-5960-B225-94C11301903F",
         "65993891-DFCF-526C-986B-59EAF7BB9458",
         "051957C8-9EAC-5882-B79D-89AAE7996A29",
-        "116CAF98-20D5-5665-B111-09886DCF2BAC",
-        "265BD389-9861-5FC3-AE33-FFCA862C83E4"
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085",
+        "116CAF98-20D5-5665-B111-09886DCF2BAC"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -141944,7 +142259,7 @@
         "5849FED5-D760-5331-A796-BBDF7FB0DB5D",
         "E1093C06-1CD8-54EE-AC83-51A2C975F88F",
         "114E099F-5291-55F2-A63C-B6B7A335294C",
-        "7E43727D-44CB-53B2-BA75-9DDEC30D3383"
+        "75291164-F569-556D-A548-032E1185796A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -143279,11 +143594,11 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "00b933d6-ea4e-5897-93e0-d1bd46622369",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "31C62BBC-CA52-5C76-88CC-058A077D07F1",
         "3dd57e77-d4fe-509e-a552-daf4d97c146c",
         "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3",
-        "993900D5-8F6E-5195-BBB3-9CF024934D09",
-        "34A7E90A-8A6C-52F2-B090-CEF5F85948DF"
+        "993900D5-8F6E-5195-BBB3-9CF024934D09"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -143808,6 +144123,7 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D"
@@ -144138,7 +144454,7 @@
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "3dd57e77-d4fe-509e-a552-daf4d97c146c",
-        "6138172D-F7B0-5CB2-998D-9558115DCA28"
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -144403,12 +144719,12 @@
       "relatedTourIds": [
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "2C45E28C-9941-5126-9998-685A0E9BC5C3",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "4A662900-5E8A-5B78-A8AA-8ADFCDE6ECE5",
         "15616CA4-9188-599D-82EC-9CB0EC713F91",
         "3dd57e77-d4fe-509e-a552-daf4d97c146c",
-        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "274364F2-9835-5B40-957F-243E11F271E6"
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -156283,7 +156599,7 @@
         "2D0AD7AE-9053-5E90-A316-C42CA3FA844E",
         "5782C759-50FA-57A2-883A-0A25DD984DAC",
         "47850BC7-D6BB-5410-9143-762B593EA124",
-        "540613ee-b72f-4460-95ff-a03d921681ae"
+        "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -163886,10 +164202,10 @@
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "310fac17-247d-507b-9637-503685b7af85",
-        "a25df491-7cb5-5aea-bf3e-21efae47956a",
-        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787"
+        "a25df491-7cb5-5aea-bf3e-21efae47956a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -164094,7 +164410,8 @@
       "country": "United States",
       "relatedTourIds": [
         "6883A947-1F9F-5B28-8A6F-878C3966DE19",
-        "11F7DFB1-AF93-522D-A927-DBCE3DA4C9D7"
+        "11F7DFB1-AF93-522D-A927-DBCE3DA4C9D7",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -169326,9 +169643,9 @@
         "fceeb6bf-89a6-40c9-81c4-4b8efc781dcd",
         "5bb90e3a-a81f-492d-b761-b204fa5dc405",
         "F6857284-A052-5B3E-91C7-47805AE552C0",
+        "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
         "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
-        "2D0AD7AE-9053-5E90-A316-C42CA3FA844E",
-        "21c1b7e3-b8fb-413b-83b7-0fa67693155c"
+        "2D0AD7AE-9053-5E90-A316-C42CA3FA844E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -169593,9 +169910,9 @@
         "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
         "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
+        "1F09AE6A-6E92-5EB8-9DB5-357E5B215B55",
         "D3C29780-34E6-57D5-8872-C8A7C899D98C",
-        "32FDCB92-C076-5176-B18C-5AE7B3E1DCB9",
-        "E1D5E7F1-D44C-5294-8941-3EE27F65B4B8"
+        "32FDCB92-C076-5176-B18C-5AE7B3E1DCB9"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -172492,7 +172809,8 @@
       "relatedTourIds": [
         "553DFF50-75CB-5ED7-9A1D-DB499EB431AC",
         "90CBBC49-A54B-50CB-B660-697281CBBD44",
-        "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA"
+        "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA",
+        "DF4C98F4-AD93-5220-8586-817D5B49BEF4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -172543,6 +172861,7 @@
       "relatedTourIds": [
         "E35F494D-226E-593E-B87B-5894864085C2",
         "90CBBC49-A54B-50CB-B660-697281CBBD44",
+        "DF4C98F4-AD93-5220-8586-817D5B49BEF4",
         "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA"
       ],
       "primaryCategory": "architecture",
@@ -172594,7 +172913,8 @@
       "relatedTourIds": [
         "553DFF50-75CB-5ED7-9A1D-DB499EB431AC",
         "E35F494D-226E-593E-B87B-5894864085C2",
-        "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA"
+        "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA",
+        "DF4C98F4-AD93-5220-8586-817D5B49BEF4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -172847,7 +173167,8 @@
       "country": "United States",
       "relatedTourIds": [
         "79A4010A-248B-5174-8630-F274C8A06FCB",
-        "2590ce9c-9cdf-509b-bc88-6608c629fb56"
+        "2590ce9c-9cdf-509b-bc88-6608c629fb56",
+        "5C4127D3-C6DF-5253-B018-47E1009CE445"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -172896,7 +173217,8 @@
       "country": "United States",
       "relatedTourIds": [
         "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
-        "640174C1-0885-5240-A60C-BE8600CDEBA1"
+        "640174C1-0885-5240-A60C-BE8600CDEBA1",
+        "5C4127D3-C6DF-5253-B018-47E1009CE445"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -173002,7 +173324,8 @@
         "395687ef-e6d6-5638-ae69-0c0bb575bdaa",
         "990F2058-3173-5501-8AA2-709E8BC7761B",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
-        "DD11D46E-CB44-5D18-B526-6E3B5E967AFE"
+        "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -182616,14 +182939,14 @@
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "4391E119-E608-579A-89C4-293BB6077D6E",
         "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
-        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -183716,13 +184039,13 @@
       "country": "United States",
       "relatedTourIds": [
         "B8B80D4C-A3E5-5B12-8947-B4889463C2FF",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085",
         "9645858A-2A4C-55B6-AE89-6B5503AA3630",
         "59EC4BC8-1055-54F5-B7A7-4C7C240B8A29",
         "84B72FA0-F7B7-5930-9C04-F33ED8EEE4FA",
         "735832B6-E1A0-5C91-83BD-C44F2B919D04",
         "333EB30B-6B5A-5229-9C6B-FE4AFB35E177",
-        "434932e4-9c75-452e-a83b-5ef3ae0cb995",
-        "65993891-DFCF-526C-986B-59EAF7BB9458"
+        "434932e4-9c75-452e-a83b-5ef3ae0cb995"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -183873,8 +184196,8 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "4735A7C7-26CF-5192-904C-A5AA31F52915",
-        "775EC7F0-9C41-5072-86BD-EDF51AC0131C"
+        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
+        "4735A7C7-26CF-5192-904C-A5AA31F52915"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -186920,7 +187243,7 @@
         "EDE509C5-A02C-5829-961C-DFDB3B82D145",
         "A4C34753-1868-5C27-A1E5-B91B649A5EED",
         "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
-        "8B42129E-7831-5F35-A453-2DFA3F0E05BD"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -186973,7 +187296,8 @@
         "B8B80D4C-A3E5-5B12-8947-B4889463C2FF",
         "239E3759-DD45-5FB3-B33F-5AB6AF29FC0A",
         "48328CC1-B4B7-5F73-99C4-20FE2212ED93",
-        "59EC4BC8-1055-54F5-B7A7-4C7C240B8A29"
+        "59EC4BC8-1055-54F5-B7A7-4C7C240B8A29",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -187220,7 +187544,7 @@
         "4E62DBD9-23DD-5F10-9617-3A00514F260F",
         "5A89C565-9A24-53AA-8E42-CAA544B053D3",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
-        "7E43727D-44CB-53B2-BA75-9DDEC30D3383"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -187937,8 +188261,8 @@
         "46D6F0F6-C617-5EB5-957C-BDDDC92F9DB5",
         "B9E7EE4D-8EA7-419A-A345-F43CE996916E",
         "8D1B2658-2F28-5301-9E65-47FBDF78F368",
-        "1C44BADA-4F82-5B8D-A211-2F212FD98FA8",
-        "24407183-DDAB-5421-A96C-7AF566FF325A"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
+        "1C44BADA-4F82-5B8D-A211-2F212FD98FA8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -188904,10 +189228,10 @@
         "EF63AB80-370A-5B48-800F-C4BD6713B3D7",
         "D4B20FCC-8A00-5048-A4F9-CB7ED253DFFA",
         "74338039-7AA9-5073-A1E8-933576D8D0BE",
+        "CB3491AC-4B14-541D-A766-B9A7D06AD748",
         "265BD389-9861-5FC3-AE33-FFCA862C83E4",
         "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
-        "7B77077D-44DA-5BB8-A7D3-D43668E7AC1E",
-        "C4179D5E-A494-5ED8-A5F3-55D8E2079737"
+        "7B77077D-44DA-5BB8-A7D3-D43668E7AC1E"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -191044,10 +191368,10 @@
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
         "15616CA4-9188-599D-82EC-9CB0EC713F91",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "651683A3-B3E5-5C32-9F81-D7F2523431F5",
-        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
-        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -192016,12 +192340,12 @@
       "relatedTourIds": [
         "31C62BBC-CA52-5C76-88CC-058A077D07F1",
         "84981C62-902A-527A-8317-422A75E0786D",
+        "68C1D6CE-FDD8-5B6B-A82E-2F66D6426884",
         "445d80b8-919e-5007-8d9d-e159dc23958a",
         "996b8d38-5432-5429-835c-7482bfc4dbb9",
         "6b441ec3-c06f-539b-beea-07d93f4b0dc6",
         "1e347268-7628-573b-a386-67dbb79c991a",
-        "3dd57e77-d4fe-509e-a552-daf4d97c146c",
-        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
+        "3dd57e77-d4fe-509e-a552-daf4d97c146c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -192591,12 +192915,12 @@
       "relatedTourIds": [
         "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
         "b8b71d88-7dfc-4ff9-af2f-1fc195c6f175",
         "30254375-b208-4a41-a3c8-28aa9d0bb4d8",
         "9F7DBF2A-F96B-55DE-B79C-FD696BB52CEB",
         "B588557F-110A-59A3-9BCF-CA1EEE07A67C",
-        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
-        "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6"
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -192804,13 +193128,13 @@
       "country": "United States",
       "relatedTourIds": [
         "c0bf2e44-8ce4-481f-bc9f-561237fbb21c",
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
         "24407183-DDAB-5421-A96C-7AF566FF325A",
         "468612AC-4C14-52C9-B8E7-3DB77356AB1E",
         "231358B0-D525-54E6-9B85-45620B1F091B",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
         "B588557F-110A-59A3-9BCF-CA1EEE07A67C",
-        "B9E7EE4D-8EA7-419A-A345-F43CE996916E",
-        "21c1b7e3-b8fb-413b-83b7-0fa67693155c"
+        "B9E7EE4D-8EA7-419A-A345-F43CE996916E"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -193103,13 +193427,13 @@
       "country": "United States",
       "relatedTourIds": [
         "2644D271-E442-5007-85CD-8D4E57333C50",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "DA7E193B-C288-534C-979F-2C35778CCBD7",
         "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
-        "4391E119-E608-579A-89C4-293BB6077D6E"
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -193218,8 +193542,8 @@
         "C91F1A29-04C1-5D5D-B6E4-4916B7C5C30B",
         "C7D2E5E7-6BB8-58DE-A9D1-3114D9D4A945",
         "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
-        "08EC1F00-10C1-57D8-8BB1-F0196F30403F",
-        "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe"
+        "1F09AE6A-6E92-5EB8-9DB5-357E5B215B55",
+        "08EC1F00-10C1-57D8-8BB1-F0196F30403F"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -193270,11 +193594,11 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
+        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "A45805AB-F0E2-5D32-9E37-98A450A4F391",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "3B7D447F-55D7-586F-88C9-73EAD75ACA09"
+        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -193543,10 +193867,10 @@
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
+        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "FB2E598B-3244-5B6C-84DA-E97F4E444088"
+        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -193655,8 +193979,8 @@
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "FC0298CF-65AB-5508-A446-67DBA1E663D3",
         "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
-        "57CAD837-2E86-5EA2-AA50-40380D0AF477",
-        "4754C562-061B-582E-82AC-A09CE93C6098"
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
+        "57CAD837-2E86-5EA2-AA50-40380D0AF477"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -193707,10 +194031,10 @@
         "62ECCD3D-535D-5168-9299-54AEECE3FD16",
         "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "2DB2AEF6-4300-56B7-ABC5-CAADA26799E8",
         "6F762F18-8968-56BD-9C27-446B178A664A",
-        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB",
-        "FC0298CF-65AB-5508-A446-67DBA1E663D3"
+        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -193762,9 +194086,9 @@
         "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
         "FC0298CF-65AB-5508-A446-67DBA1E663D3",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "2DB2AEF6-4300-56B7-ABC5-CAADA26799E8",
-        "6F762F18-8968-56BD-9C27-446B178A664A",
-        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB"
+        "6F762F18-8968-56BD-9C27-446B178A664A"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -193811,14 +194135,14 @@
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
         "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
         "7FC6D5C3-FB76-583B-B035-391AE49FD850",
         "62ECCD3D-535D-5168-9299-54AEECE3FD16",
         "FC0298CF-65AB-5508-A446-67DBA1E663D3",
-        "2DB2AEF6-4300-56B7-ABC5-CAADA26799E8",
-        "6F762F18-8968-56BD-9C27-446B178A664A"
+        "2DB2AEF6-4300-56B7-ABC5-CAADA26799E8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -193926,8 +194250,8 @@
         "2DB2AEF6-4300-56B7-ABC5-CAADA26799E8",
         "6F762F18-8968-56BD-9C27-446B178A664A",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
-        "FC0298CF-65AB-5508-A446-67DBA1E663D3",
-        "4d829f4f-0398-5289-acc8-cc2eac02df81"
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
+        "FC0298CF-65AB-5508-A446-67DBA1E663D3"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -193980,8 +194304,8 @@
         "6F762F18-8968-56BD-9C27-446B178A664A",
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
-        "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
-        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB"
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
+        "DD11D46E-CB44-5D18-B526-6E3B5E967AFE"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -195707,13 +196031,13 @@
       "country": "United States",
       "relatedTourIds": [
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "3F4AEF87-81F7-5D1D-A090-EF9CF945E424",
         "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB",
         "DF1C65F9-DF16-5573-855E-FB85673EE668",
         "BFE4FED1-4A1E-5397-BE8A-61EF0989E081",
         "11F7DFB1-AF93-522D-A927-DBCE3DA4C9D7",
-        "4754C562-061B-582E-82AC-A09CE93C6098",
-        "FC0298CF-65AB-5508-A446-67DBA1E663D3"
+        "4754C562-061B-582E-82AC-A09CE93C6098"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -199115,6 +199439,7 @@
       "city": "Niles",
       "country": "United States",
       "relatedTourIds": [
+        "DF4C98F4-AD93-5220-8586-817D5B49BEF4",
         "90CBBC49-A54B-50CB-B660-697281CBBD44",
         "E35F494D-226E-593E-B87B-5894864085C2",
         "553DFF50-75CB-5ED7-9A1D-DB499EB431AC"
@@ -200339,6 +200664,7 @@
         "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
         "5b11d725-84f2-5b43-94c9-6a5dc95262dd",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "13c93799-efad-5b2b-b76e-b0002d14aa2a",
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "B979272D-42C9-578F-882C-F5DCAB4E8D6D"
@@ -200531,6 +200857,9 @@
       "centroidLongitude": -74.0048125,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -201277,10 +201606,10 @@
         "83090c8c-ab5d-4311-a881-519b1e36183e",
         "771c68bd-a100-482b-ba7d-cd4bbad137d3",
         "84B72FA0-F7B7-5930-9C04-F33ED8EEE4FA",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085",
         "03AD1C89-9562-5923-B68A-1183E75D9DBE",
         "65993891-DFCF-526C-986B-59EAF7BB9458",
-        "4D1B2F5C-617E-5A31-BA46-4C74396457D6",
-        "A0B50432-3203-5101-92E6-734B95E7068D"
+        "4D1B2F5C-617E-5A31-BA46-4C74396457D6"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -201767,7 +202096,7 @@
         "74338039-7AA9-5073-A1E8-933576D8D0BE",
         "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
         "556D7D3D-D043-5C0A-A362-1B879FF8758B",
-        "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -201905,6 +202234,9 @@
       "centroidLongitude": -73.8993697,
       "city": "Yonkers",
       "country": "United States",
+      "relatedTourIds": [
+        "1DA2D5C3-32C8-5528-A048-10AFB62837F7"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -203331,6 +203663,7 @@
       "relatedTourIds": [
         "17C46B7F-66B5-5C1E-8BF0-D6F718B1C115",
         "08268B65-5035-51DA-9DC8-D804B911AAA3",
+        "627EE546-C1B6-51FF-80AC-22D5B91570B9",
         "641723B0-9810-5FEF-A6F5-C52B27A5E17F",
         "478C4501-D63D-5CCE-BF6A-3B88FCB4F9C1",
         "05FCB821-70CE-530E-B3BF-3D1FC21A7E7C"
@@ -208341,14 +208674,14 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53",
         "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
         "4A25A149-8D4C-5505-BA58-8F3830F4F45D",
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "ad55caf6-07fd-5034-b10d-0b66deb6fcfd"
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -212508,8 +212841,8 @@
         "CF18A4C3-D185-53EF-9992-EF1905D80F83",
         "B5FE34D0-0271-5DC9-B82C-E469B7849607",
         "C6001D21-FA42-55D4-9B0C-C75D7F4C1838",
-        "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6",
-        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D"
+        "246AC093-B65B-52A1-860F-EF4C7D8A6506",
+        "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -229110,6 +229443,7 @@
       "country": "United States",
       "relatedTourIds": [
         "17C46B7F-66B5-5C1E-8BF0-D6F718B1C115",
+        "627EE546-C1B6-51FF-80AC-22D5B91570B9",
         "3A881BB6-344C-5AD2-AAD9-388AD496A181"
       ],
       "primaryCategory": "architecture",
@@ -232767,14 +233101,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "4BDCA974-DD0D-536F-BB83-175659EC83C2",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "A90AECAF-CA4C-5FA5-9DD7-4C870F196AB9",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
+        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -235756,6 +236090,7 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
         "B02C4073-7DD9-598C-9D8D-1D27ABAD7D29",
         "c7052e56-8a06-4e35-ba64-4a65f2f5e11c",
         "875C9B86-0246-5783-8C4D-1075D59B2DB1",
@@ -236432,7 +236767,7 @@
         "F3579E9F-B19D-554F-B337-827DF1FF1588",
         "460EFECF-3451-570C-9DB5-9018B501895D",
         "84EBBE5D-56B4-5EAF-8408-0F94CE75E07B",
-        "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7"
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -236974,6 +237309,7 @@
       "city": "Boston",
       "country": "United States",
       "relatedTourIds": [
+        "627EE546-C1B6-51FF-80AC-22D5B91570B9",
         "17C46B7F-66B5-5C1E-8BF0-D6F718B1C115",
         "478C4501-D63D-5CCE-BF6A-3B88FCB4F9C1",
         "3A881BB6-344C-5AD2-AAD9-388AD496A181",
@@ -237250,11 +237586,11 @@
         "FCD15E21-EDFE-51A2-8200-74C97C3CBC44",
         "4315AE2A-0E10-585D-BE97-18DB0BF4C3DA",
         "150DA42D-4F99-590B-967B-03232DCFD6D5",
+        "72CB3475-B4C3-59EB-9151-539E63F1A721",
         "FF7C8FE0-E773-51D9-83A0-0A32404CB144",
         "45DE065A-2C34-5E75-935D-CE117CFDF9A3",
         "210B9379-830A-5B77-A390-F8E7EA7DBBE4",
-        "02E1FBE1-36CA-5558-89B6-BD89BE6118DE",
-        "BA6B21F6-5565-5D12-A17B-60D1F00E82CE"
+        "02E1FBE1-36CA-5558-89B6-BD89BE6118DE"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -237403,10 +237739,10 @@
         "48328CC1-B4B7-5F73-99C4-20FE2212ED93",
         "4CD881EC-2DF6-5913-951F-E7040DE94281",
         "FC2AD99F-4B32-5EF3-8B0D-370D42746D7E",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085",
         "2DFCC005-BA39-5DE2-8C34-1B0BE711239A",
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
-        "875C9B86-0246-5783-8C4D-1075D59B2DB1",
-        "3BBDE9E7-969D-54AF-9468-791A679DCF69"
+        "875C9B86-0246-5783-8C4D-1075D59B2DB1"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -238138,7 +238474,7 @@
         "7F7FD4CC-DC66-5BBA-A74C-CE15EE3B0EDE",
         "0EE0D317-110E-5CB7-ADB4-9055C502192E",
         "A09D99E1-DB30-5C0C-90C2-D88962EE98EA",
-        "150DA42D-4F99-590B-967B-03232DCFD6D5"
+        "72CB3475-B4C3-59EB-9151-539E63F1A721"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -238235,11 +238571,11 @@
         "7FFE776E-9B5D-5E9D-87E5-986081940F6C",
         "FCD15E21-EDFE-51A2-8200-74C97C3CBC44",
         "4315AE2A-0E10-585D-BE97-18DB0BF4C3DA",
+        "72CB3475-B4C3-59EB-9151-539E63F1A721",
         "210B9379-830A-5B77-A390-F8E7EA7DBBE4",
         "FF7C8FE0-E773-51D9-83A0-0A32404CB144",
         "02E1FBE1-36CA-5558-89B6-BD89BE6118DE",
-        "45DE065A-2C34-5E75-935D-CE117CFDF9A3",
-        "7F7FD4CC-DC66-5BBA-A74C-CE15EE3B0EDE"
+        "45DE065A-2C34-5E75-935D-CE117CFDF9A3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -250866,12 +251202,12 @@
       "relatedTourIds": [
         "0D6B9878-7609-541F-940E-27EDBDEE1458",
         "7D3A2D97-A829-5CAC-A9BB-14A092AD2286",
+        "75291164-F569-556D-A548-032E1185796A",
         "72996712-5291-5458-9C28-4ADEF517B586",
         "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
         "6FA50C6D-A906-5096-BED0-D2978D688DD0",
         "86447C28-30E1-544D-95C8-B5367D0E0416",
-        "79066170-3472-57DA-BF1D-A737D7C69273",
-        "6F2E7151-503A-554E-BB1F-34C09E937F9A"
+        "79066170-3472-57DA-BF1D-A737D7C69273"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -252807,11 +253143,11 @@
         "6F5BB18A-7321-5B23-B3C0-08BAD7BF7BE7",
         "02fe98a4-06ad-5f8f-b9fa-8c459a0eba44",
         "410887F3-61F4-5D68-9F79-BAB9B2D63FF8",
+        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "5b11d725-84f2-5b43-94c9-6a5dc95262dd",
         "57CAD837-2E86-5EA2-AA50-40380D0AF477",
-        "13c93799-efad-5b2b-b76e-b0002d14aa2a",
-        "85bfcf5a-af16-545a-b690-60f95bc100fb"
+        "13c93799-efad-5b2b-b76e-b0002d14aa2a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -253786,8 +254122,8 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
-        "4EEEDAE8-B828-5060-8180-3BCBBF3EEBD3"
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -256870,10 +257206,10 @@
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "7BB01190-6F4E-5F2F-9156-59F8E5772FBD",
         "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "A946E2F8-D401-50AB-9BFF-69865A336F3B",
-        "35225803-38D9-5C05-9272-6AF04A20C0A4",
-        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
+        "35225803-38D9-5C05-9272-6AF04A20C0A4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -257856,12 +258192,12 @@
       "relatedTourIds": [
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
         "4A25A149-8D4C-5505-BA58-8F3830F4F45D",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "310fac17-247d-507b-9637-503685b7af85",
-        "67b1cf33-4405-57fc-a9ba-9ab81f549f90"
+        "310fac17-247d-507b-9637-503685b7af85"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -259621,11 +259957,11 @@
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "A946E2F8-D401-50AB-9BFF-69865A336F3B",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "2644D271-E442-5007-85CD-8D4E57333C50",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
-        "BEBA922B-2F46-52C8-A2CD-33BFD3FF83FD",
-        "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5"
+        "BEBA922B-2F46-52C8-A2CD-33BFD3FF83FD"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -260063,9 +260399,9 @@
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "63667CBD-EA15-5CB0-A491-DF1D78F57049",
         "f3cf1cb9-1218-5bca-93fa-fb3a4113d4a5",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "274364F2-9835-5B40-957F-243E11F271E6",
-        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
-        "1328F132-7D89-556A-A116-5DE3E6C89324"
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -260310,14 +260646,14 @@
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
         "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
         "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
         "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D",
         "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
         "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "4391E119-E608-579A-89C4-293BB6077D6E",
-        "2644D271-E442-5007-85CD-8D4E57333C50"
+        "4391E119-E608-579A-89C4-293BB6077D6E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -266804,6 +267140,7 @@
         "04C67CEC-A0A0-52E9-BD04-B8F8B11468A8",
         "B5663D4E-2E63-5121-9E54-9A386EB07A11",
         "08268B65-5035-51DA-9DC8-D804B911AAA3",
+        "627EE546-C1B6-51FF-80AC-22D5B91570B9",
         "3A881BB6-344C-5AD2-AAD9-388AD496A181"
       ],
       "primaryCategory": "architecture",
@@ -267404,6 +267741,7 @@
         "478C4501-D63D-5CCE-BF6A-3B88FCB4F9C1",
         "04C67CEC-A0A0-52E9-BD04-B8F8B11468A8",
         "B5663D4E-2E63-5121-9E54-9A386EB07A11",
+        "627EE546-C1B6-51FF-80AC-22D5B91570B9",
         "3A881BB6-344C-5AD2-AAD9-388AD496A181"
       ],
       "primaryCategory": "hiddenGems",
@@ -268344,7 +268682,8 @@
       "relatedTourIds": [
         "04C67CEC-A0A0-52E9-BD04-B8F8B11468A8",
         "478C4501-D63D-5CCE-BF6A-3B88FCB4F9C1",
-        "641723B0-9810-5FEF-A6F5-C52B27A5E17F"
+        "641723B0-9810-5FEF-A6F5-C52B27A5E17F",
+        "627EE546-C1B6-51FF-80AC-22D5B91570B9"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -268396,6 +268735,7 @@
         "478C4501-D63D-5CCE-BF6A-3B88FCB4F9C1",
         "B5663D4E-2E63-5121-9E54-9A386EB07A11",
         "641723B0-9810-5FEF-A6F5-C52B27A5E17F",
+        "627EE546-C1B6-51FF-80AC-22D5B91570B9",
         "08268B65-5035-51DA-9DC8-D804B911AAA3"
       ],
       "primaryCategory": "architecture",
@@ -271801,6 +272141,7 @@
       "city": "Salzburg",
       "country": "Austria",
       "relatedTourIds": [
+        "3506C727-F498-5BDE-B8E8-FEF84621B070",
         "2DB00E99-E156-56F2-89D1-481AB9F0507C",
         "26DE384A-B2A8-56BC-99D1-6FF1B9E56D54",
         "B3D517BE-AFA9-5172-B77F-F86A43A35F1B",
@@ -271855,6 +272196,7 @@
         "681B0D48-E315-59FE-9D13-38DEFC9A88BA",
         "71EB5A4F-01BD-5569-A70B-757813BFD083",
         "26DE384A-B2A8-56BC-99D1-6FF1B9E56D54",
+        "3506C727-F498-5BDE-B8E8-FEF84621B070",
         "B3D517BE-AFA9-5172-B77F-F86A43A35F1B"
       ],
       "primaryCategory": "foodAndDrink",
@@ -271904,6 +272246,7 @@
       "country": "Austria",
       "relatedTourIds": [
         "2DB00E99-E156-56F2-89D1-481AB9F0507C",
+        "3506C727-F498-5BDE-B8E8-FEF84621B070",
         "71EB5A4F-01BD-5569-A70B-757813BFD083"
       ],
       "primaryCategory": "foodAndDrink",
@@ -272151,6 +272494,7 @@
       "city": "Salzburg",
       "country": "Austria",
       "relatedTourIds": [
+        "3506C727-F498-5BDE-B8E8-FEF84621B070",
         "2DB00E99-E156-56F2-89D1-481AB9F0507C",
         "71EB5A4F-01BD-5569-A70B-757813BFD083"
       ],
@@ -272728,6 +273072,2719 @@
         "Modernist",
         "Le Corbusier",
         "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9A7C7989-E715-5487-9D74-72835848B710",
+      "createdAt": "2026-09-20",
+      "title": "Avalon, Catalina Island",
+      "shortDescription": "A post by @laurendrury_ on TikTok.",
+      "longDescription": "📍CATALINA ISLAND Views from Avalon on Catalina Island #catalinaisland #summer #avalon #oceanview #daytrip",
+      "makerId": "EC7334D7-0529-5919-B2AF-9293AEF7B521",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avalon-catalina-island-laurendrury_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@laurendrury_/video/7668075685667147028",
+      "sourceAuthor": "@laurendrury_",
+      "stops": [
+        {
+          "id": "B9B2597B-2125-5EA7-893A-36ED06D7AEFE",
+          "order": 0,
+          "title": "Avalon, Catalina Island",
+          "caption": "📍CATALINA ISLAND Views from Avalon on Catalina Island #catalinaisland #summer #avalon #oceanview #daytrip",
+          "latitude": 33.34221,
+          "longitude": -118.32726,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avalon-catalina-island-laurendrury_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.34221,
+      "centroidLongitude": -118.32726,
+      "city": "Avalon",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Viewpoint",
+        "Hidden Gem",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75291164-F569-556D-A548-032E1185796A",
+      "createdAt": "2026-09-20",
+      "title": "Yawning Cobra",
+      "shortDescription": "A post by @keeganseason on TikTok.",
+      "longDescription": "Let’s go to the Yawning Cobra in NYC @Rukshana @YAWNINGCOBRA #speakeasy #bar #nyc #nycbars #nycspeakeasy",
+      "makerId": "8FBA25F9-8573-59B9-816D-D81BF60C38DE",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yawning-cobra-keeganseason_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@keeganseason/video/7678020641299156255",
+      "sourceAuthor": "@keeganseason",
+      "stops": [
+        {
+          "id": "1E1F6E88-8B2E-5144-9DBA-EE7427DCC00A",
+          "order": 0,
+          "title": "Yawning Cobra",
+          "caption": "Let’s go to the Yawning Cobra in NYC @Rukshana @YAWNINGCOBRA #speakeasy #bar #nyc #nycbars #nycspeakeasy",
+          "latitude": 40.72692,
+          "longitude": -73.99195,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yawning-cobra-keeganseason_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.72692,
+      "centroidLongitude": -73.99195,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
+        "F3579E9F-B19D-554F-B337-827DF1FF1588",
+        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
+        "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
+        "EF21AA82-4142-511E-A68F-10840F3C6A06",
+        "EE907D0F-DF2E-5A8B-B3DD-D4CE9EA35175",
+        "831C19CB-0697-5B83-A9DE-DBA167ED90DC",
+        "86447C28-30E1-544D-95C8-B5367D0E0416"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9E20EAAB-03B4-5EA0-8FFC-502B33DDA394",
+      "createdAt": "2026-09-20",
+      "title": "Arcosanti",
+      "shortDescription": "A post by @_sattom on Instagram.",
+      "longDescription": "Sometimes staying at futuristic city prototype sounds better than a boutique hotel @arcosanti_arizona #architecturetour #brutalism #arizona",
+      "makerId": "72123909-324A-58B1-B2F1-2FAECDD29051",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcosanti-sattom_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYnFbAMp1ZJ/",
+      "sourceAuthor": "@_sattom",
+      "stops": [
+        {
+          "id": "6D06C036-5EB4-51E8-BF30-86E55847C8F4",
+          "order": 0,
+          "title": "Arcosanti",
+          "caption": "Sometimes staying at futuristic city prototype sounds better than a boutique hotel @arcosanti_arizona #architecturetour #brutalism #arizona",
+          "latitude": 34.34278,
+          "longitude": -112.10063,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcosanti-sattom_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.34278,
+      "centroidLongitude": -112.10063,
+      "city": "Mayer",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Brutalist",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3838498C-4F6B-5D6E-9415-41ABCC072CD9",
+      "createdAt": "2026-09-20",
+      "title": "The Painted Hall",
+      "shortDescription": "A post by @bloombergconnects on Instagram.",
+      "longDescription": "If these walls could talk, they’d confirm the facts. Discover the secrets of the Painted Hall by Sir James Thornhill with the help of an Old Royal Naval College tour guide. Bloomberg Connects is the free app that turns your phone into a personal guide – unlocking expert-led videos, exclusive audio tours, and behind-the-scenes stories at over 1,350 arts and cultural institutions worldwide.",
+      "makerId": "D3F6A7D3-FB0A-56A1-95BD-8DACAC4BAB6D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/painted-hall-greenwich-bloombergconnects_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/p/Dbddgh-gyBH/",
+      "sourceAuthor": "@bloombergconnects",
+      "stops": [
+        {
+          "id": "978F8B1C-5155-5303-B499-22225B8B6051",
+          "order": 0,
+          "title": "The Painted Hall",
+          "caption": "If these walls could talk, they’d confirm the facts. Discover the secrets of the Painted Hall by Sir James Thornhill with the help of an Old",
+          "latitude": 51.48291,
+          "longitude": -0.00609,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/painted-hall-greenwich-bloombergconnects_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.48291,
+      "centroidLongitude": -0.00609,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "D100E0D7-A6D0-51F8-B69C-C7C096C0CCF5",
+        "14f26785-46df-42cb-a280-5be806d70b93",
+        "f24f565f-efcd-4631-b20b-211e326996e7",
+        "2D5C9958-DB17-56CF-BBC6-2E397D11827A",
+        "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
+        "C53131BC-6A79-5075-9F0C-D7499CEADC7F",
+        "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Art",
+        "Baroque"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "07B60E19-7615-5738-AE4F-B63A2FCA5613",
+      "createdAt": "2026-09-20",
+      "title": "Botany Pond, University of Chicago",
+      "shortDescription": "A post by @erinparro_travel on Instagram.",
+      "longDescription": "One of the prettiest corners of the University of Chicago Botany Pond sits in the heart of the University of Chicago campus, surrounded by historic buildings and greenery. It was originally designed in 1902 as an outdoor research laboratory, and after a major restoration, the pond reopened with a new filtration system, native plants, and a healthier ecosystem Save this spot for your next walk around Hyde Park #chicago #chicagoarchitecture #universityofchicago #hydeparkchicago #hydepark Botany Pond sits among historic University of Chicago buildings and greenery in Hyde Park. The restored pond includes a pedestrian bridge, aquatic plants, and water surrounded by campus landscaping.",
+      "makerId": "A2361260-D43C-5181-9AD2-5CD750BFCFFC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botany-pond-chicago-erinparrotravel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdWe8_DNx3K/",
+      "sourceAuthor": "@erinparro_travel",
+      "stops": [
+        {
+          "id": "5D7DAD8C-9F28-53E8-8A29-9FEE53739A82",
+          "order": 0,
+          "title": "Botany Pond, University of Chicago",
+          "caption": "One of the prettiest corners of the University of Chicago Botany Pond sits in the heart of the University of Chicago campus, surrounded by h",
+          "latitude": 41.79088,
+          "longitude": -87.5994,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botany-pond-chicago-erinparrotravel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.79088,
+      "centroidLongitude": -87.5994,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "2cdee541-79d1-519d-9a02-76aa8b0ac43d",
+        "2590ce9c-9cdf-509b-bc88-6608c629fb56"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "Hidden Gem",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "896CC558-9872-56E6-8E95-FA517939C828",
+      "createdAt": "2026-09-20",
+      "title": "The Breakers",
+      "shortDescription": "A post by @landmarksofny on Instagram.",
+      "longDescription": "Back in May I finally got to visit the Breakers, the Vanderbilt 70 room 130,000 square foot “cottage.” It is the largest mansion built in Newport Rhode Island and is the most visited. Have you ever been?",
+      "makerId": "8CC7FDFC-1DE5-54F9-8601-13ADA9AA7A06",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-breakers-newport-landmarksofny_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbqBvBCRkIb/",
+      "sourceAuthor": "@landmarksofny",
+      "stops": [
+        {
+          "id": "E49937A3-83D7-55F8-9FCE-D521D11CCA72",
+          "order": 0,
+          "title": "The Breakers",
+          "caption": "Back in May I finally got to visit the Breakers, the Vanderbilt 70 room 130,000 square foot “cottage.” It is the largest mansion built in Ne",
+          "latitude": 41.46974,
+          "longitude": -71.29821,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-breakers-newport-landmarksofny_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.46974,
+      "centroidLongitude": -71.29821,
+      "city": "Newport",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Gilded Age",
+        "Richard Morris Hunt"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3445091A-37FF-57F0-A7FD-D986A2CA7754",
+      "createdAt": "2026-09-20",
+      "title": "La Miniatura",
+      "shortDescription": "A post by @victoriaverbainteriors on Instagram.",
+      "longDescription": "An experiment in concrete. Completed in 1924 in Pasadena, California, La Miniatura was Frank Lloyd Wright’s first Textile Block house. Instead of treating concrete as something plain and industrial, he developed a new system of patterned blocks that could be reinforced, assembled, and woven together like fabric. Over the next few years, Wright designed just three more homes using the Textile Block system, creating some of the most distinctive spaces of his career.",
+      "makerId": "E4754AEE-CC14-5F86-82DB-3D58BAA41C66",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-miniatura-millard-house-victoriaverbainteriors_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaibK8uM2NM/",
+      "sourceAuthor": "@victoriaverbainteriors",
+      "stops": [
+        {
+          "id": "9FF0B007-12F5-5415-A708-FDD5210C7C81",
+          "order": 0,
+          "title": "La Miniatura",
+          "caption": "An experiment in concrete. Completed in 1924 in Pasadena, California, La Miniatura was Frank Lloyd Wright’s first Textile Block house. Inste",
+          "latitude": 34.15544,
+          "longitude": -118.16172,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-miniatura-millard-house-victoriaverbainteriors_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.15544,
+      "centroidLongitude": -118.16172,
+      "city": "Pasadena",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Frank Lloyd Wright"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
+      "createdAt": "2026-09-20",
+      "title": "Centre 360 at the Municipal Building",
+      "shortDescription": "A post by @nyc on Instagram.",
+      "longDescription": "NYC has a new viewing platform, and it’s completely free to visit! I checked out Centre 360 inside the historic Municipal Building in Lower Manhattan this morning, and you get a whole new perspective of New York. You’re taken over 500 feet above the city for breathtaking panoramic views. The experience feels extra special since each session is limited to just 5 people. You get to spend 15 minutes on the platform. Reservations are required in advance (no walk-ins) and fill up quickly. Additional dates are released at the beginning of each month, so definitely plan ahead. Here is the link to book tickets: https://a856-centre360.nyc.gov/Book Save this for your next NYC day out 🗽, and share it with someone who’d love to visit!",
+      "makerId": "FF7ACF99-8D2B-5B03-B066-8FA01734E9DF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centre-360-municipal-building-nyc_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DZqGspeA3Mt/",
+      "sourceAuthor": "@nyc",
+      "stops": [
+        {
+          "id": "DCB97656-2D8C-59DA-BA2F-6F97B4DD0431",
+          "order": 0,
+          "title": "Centre 360 at the Municipal Building",
+          "caption": "NYC has a new viewing platform, and it’s completely free to visit! I checked out Centre 360 inside the historic Municipal Building in Lower ",
+          "latitude": 40.71303,
+          "longitude": -74.00347,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centre-360-municipal-building-nyc_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.71303,
+      "centroidLongitude": -74.00347,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
+        "711331CC-CDAA-5777-8902-BBF257F5E36C",
+        "1F09AE6A-6E92-5EB8-9DB5-357E5B215B55",
+        "A3EF2693-A7FB-54E3-A042-AE0E2F582D84",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085",
+        "F3579E9F-B19D-554F-B337-827DF1FF1588",
+        "FB11F2BF-7AAF-5C1A-96CA-FF34BE6EB056",
+        "E6823469-29CB-5B09-AA79-F2D9550D7DAF"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Viewpoint",
+        "Free to Visit",
+        "Beaux-Arts",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F1EE8AA8-D2B0-5BCA-A306-A01F62F1ED53",
+      "createdAt": "2026-09-20",
+      "title": "Apex Electronics",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Travel Weird: Apex Electronics in LA ☎️ #travel #weird #history #losangeles #la",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apex-electronics-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdOdiyAx259/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "73656C58-9AEC-5589-AA3C-40AFA84FACF6",
+          "order": 0,
+          "title": "Apex Electronics",
+          "caption": "Travel Weird: Apex Electronics in LA ☎️ #travel #weird #history #losangeles #la",
+          "latitude": 34.23032,
+          "longitude": -118.38469,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apex-electronics-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.23032,
+      "centroidLongitude": -118.38469,
+      "city": "Los Angeles",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "11E6E554-B3AD-50EB-89D4-54478115FFAB",
+      "createdAt": "2026-09-20",
+      "title": "Fordham University, Rose Hill",
+      "shortDescription": "A post by @speccles_ on Instagram.",
+      "longDescription": "One of the most beautiful campuses in all of New York City located in the Bronx I was fortunate enough to earn my first degree here.",
+      "makerId": "57225D97-D0F7-5B32-86ED-E4D107BBC7E7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fordham-university-rose-hill-speccles_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdW85TqJVtK/",
+      "sourceAuthor": "@speccles_",
+      "stops": [
+        {
+          "id": "787B5319-954B-557B-A0EA-59E707C9441D",
+          "order": 0,
+          "title": "Fordham University, Rose Hill",
+          "caption": "One of the most beautiful campuses in all of New York City located in the Bronx I was fortunate enough to earn my first degree here.",
+          "latitude": 40.86173,
+          "longitude": -73.88603,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fordham-university-rose-hill-speccles_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.86173,
+      "centroidLongitude": -73.88603,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Gothic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
+      "createdAt": "2026-09-20",
+      "title": "Isle of Capri",
+      "shortDescription": "A post by @nickcabotrodriguez on Instagram.",
+      "longDescription": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
+      "makerId": "299D0BA5-37D6-5B94-8378-85C8DA80712D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdUObmTs77_/",
+      "sourceAuthor": "@nickcabotrodriguez",
+      "stops": [
+        {
+          "id": "43C49B91-A808-5244-8292-DA1D6AFC9379",
+          "order": 0,
+          "title": "Isle of Capri",
+          "caption": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
+          "latitude": 40.76279,
+          "longitude": -73.96594,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.76279,
+      "centroidLongitude": -73.96594,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
+        "866EE87D-8E08-514D-B67F-5B9268257DF0",
+        "1433B333-4647-5FC3-8AB1-5E12671669AE",
+        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
+        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
+        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
+        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
+        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
+      "createdAt": "2026-09-20",
+      "title": "Chicago Water Tower",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Chicago Weird Ep34: Chicago Water Tower 💧 #chicago #weird #chicagoweird #travel #haunted",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-water-tower-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbYEHhsxGkd/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "39FF2418-8B97-5DDA-AE28-99F792447216",
+          "order": 0,
+          "title": "Chicago Water Tower",
+          "caption": "Chicago Weird Ep34: Chicago Water Tower 💧 #chicago #weird #chicagoweird #travel #haunted",
+          "latitude": 41.89718,
+          "longitude": -87.62444,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chicago-water-tower-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.89718,
+      "centroidLongitude": -87.62444,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "63667CBD-EA15-5CB0-A491-DF1D78F57049",
+        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "4391E119-E608-579A-89C4-293BB6077D6E",
+        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
+        "F89272C3-6D1D-509B-B9AF-4A49B484C81A",
+        "C0F5D41A-40EE-51F2-BFE6-A4D8FB6B8D0D"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Iconic Landmark",
+        "History",
+        "Gothic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1C45D0BE-B1E8-58D4-A38D-D85F5D126085",
+      "createdAt": "2026-09-20",
+      "title": "Conservatory Garden, Central Park",
+      "shortDescription": "A post by @onefinedaynyc on Instagram.",
+      "longDescription": "This is your sign to visit the Conservatory Garden in Central Park this spring! 🌷✨🌿 Follow @onefinedaynyc for all things NYC . . . #centralparknyc #nycgarden #nychiddengems #secretnyc #nyccontentcreator",
+      "makerId": "CB0627E2-FFF0-5B9C-BBAA-6AD08987FF8B",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/conservatory-garden-central-park-onefinedaynyc_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DXu3PzVEWlK/",
+      "sourceAuthor": "@onefinedaynyc",
+      "stops": [
+        {
+          "id": "BD5DE879-E249-5B89-BE82-117944C56EFD",
+          "order": 0,
+          "title": "Conservatory Garden, Central Park",
+          "caption": "This is your sign to visit the Conservatory Garden in Central Park this spring! 🌷✨🌿 Follow @onefinedaynyc for all things NYC . . . #centralp",
+          "latitude": 40.79368,
+          "longitude": -73.95257,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/conservatory-garden-central-park-onefinedaynyc_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.79368,
+      "centroidLongitude": -73.95257,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "84EBBE5D-56B4-5EAF-8408-0F94CE75E07B",
+        "239E3759-DD45-5FB3-B33F-5AB6AF29FC0A",
+        "3BBDE9E7-969D-54AF-9468-791A679DCF69",
+        "4D1B2F5C-617E-5A31-BA46-4C74396457D6",
+        "03AD1C89-9562-5923-B68A-1183E75D9DBE",
+        "84B72FA0-F7B7-5930-9C04-F33ED8EEE4FA",
+        "333EB30B-6B5A-5229-9C6B-FE4AFB35E177",
+        "48328CC1-B4B7-5F73-99C4-20FE2212ED93"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1F09AE6A-6E92-5EB8-9DB5-357E5B215B55",
+      "createdAt": "2026-09-20",
+      "title": "David N. Dinkins Municipal Building",
+      "shortDescription": "A post by @nerdingoutonnyc on Instagram.",
+      "longDescription": "Side quest to the top of the David N. Dinkins Municipal Building - dreams do come true. And it’s free!! @citystorenyc @nycgov @nycmayor @nycmayorsoffice @nyctourism #newyork #thingstodoinnyc #fyp #nyc #reels",
+      "makerId": "4DACB525-12D4-5E37-942A-44CE5D7156B5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dinkins-municipal-building-nerdingoutonnyc_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdTuECEuh-H/",
+      "sourceAuthor": "@nerdingoutonnyc",
+      "stops": [
+        {
+          "id": "D34FBEA2-671B-5062-87BF-A12549037826",
+          "order": 0,
+          "title": "David N. Dinkins Municipal Building",
+          "caption": "Side quest to the top of the David N. Dinkins Municipal Building - dreams do come true. And it’s free!! @citystorenyc @nycgov @nycmayor @nyc",
+          "latitude": 40.71303,
+          "longitude": -74.00347,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dinkins-municipal-building-nerdingoutonnyc_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.71303,
+      "centroidLongitude": -74.00347,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "74338039-7AA9-5073-A1E8-933576D8D0BE",
+        "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74",
+        "BBE88DE6-2830-56D4-9C4B-876C67FC9ADD",
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
+        "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
+        "051957C8-9EAC-5882-B79D-89AAE7996A29",
+        "2BCE9C92-AF1A-5F3A-A356-786E066F6323",
+        "652FC55F-4E77-568B-9AEB-E1FF9847A7BB"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Viewpoint",
+        "Free to Visit",
+        "Beaux-Arts",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F1B3FB52-3E13-5DE5-AEBD-DCFFAD62D74C",
+      "createdAt": "2026-09-20",
+      "title": "Essanay Studios",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Chicago Weird Ep57: Essanay Studios 🎩 #chicago #weird #history #haunted #travel",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/essanay-studios-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcyPtbsRzCX/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "A9C04D0E-E253-58AF-A9F5-602DF8AC5457",
+          "order": 0,
+          "title": "Essanay Studios",
+          "caption": "Chicago Weird Ep57: Essanay Studios 🎩 #chicago #weird #history #haunted #travel",
+          "latitude": 41.97212,
+          "longitude": -87.66383,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/essanay-studios-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.97212,
+      "centroidLongitude": -87.66383,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "5C4127D3-C6DF-5253-B018-47E1009CE445",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "3619F5E5-2AC4-5316-8647-41832300413D",
+        "274364F2-9835-5B40-957F-243E11F271E6",
+        "31C62BBC-CA52-5C76-88CC-058A077D07F1",
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0B60D5C1-868E-5E95-A92D-D2F24375DA68",
+      "createdAt": "2026-09-20",
+      "title": "Electrical Audio",
+      "shortDescription": "A post by @seeingcoolplaces on Instagram.",
+      "longDescription": "There’s a rock music landmark in Chicago that looks like just a normal, plain brick building, and there’s a key clue to its significance at the nearest intersection. It was first a dairy barn, but in 1995, musician and recording engineer Steve Albini bought the building to turn into his independent studio, Electrical Audio. He founded bands like Big Black and Shellac, but Albini is still probably most well-known for producing some of alternative rock’s greatest albums. But, he rejected that term: “producer,” insisting he was instead, an engineer, doing a job for a flat rate, trying to capture a band’s authentic sound. He only recorded using analog tape and didn’t take royalties on an artist’s work. Electricial Audio studio opened in 1997, fully gutted and rebuilt to Albini’s sonic specifications, featuring two analog studios, although digital recording setups were eventually installed. His recording output at the studio was prolific, and when he wasn’t winning WSOP bracelets, he was recording hundreds of local artists and bringing worldwide talent into his Avondale studio. Sadly, in May 2024, Albini unexpectedly passed away. Just a few months later, this stretch of Belmont Avenue was given the honorary name Steve Albini Way. He was an iconic figure of alternative rock, and his work in Chicago played a big role in the city’s cultural history. Between this honor and Electrical Audio still in operation, Albini’s life and musical impact won’t soon be forgotten. #chicagomusic #altrock #musichistory #stevealbini #landmark",
+      "makerId": "2E87DC53-3497-59B7-90E0-7C041A6BDFEC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/electrical-audio-seeingcoolplaces_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcsFiUmRCAV/",
+      "sourceAuthor": "@seeingcoolplaces",
+      "stops": [
+        {
+          "id": "1C44599A-E595-56F6-8083-6110C40618DC",
+          "order": 0,
+          "title": "Electrical Audio",
+          "caption": "There’s a rock music landmark in Chicago that looks like just a normal, plain brick building, and there’s a key clue to its significance at ",
+          "latitude": 41.93919,
+          "longitude": -87.69379,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/electrical-audio-seeingcoolplaces_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.93919,
+      "centroidLongitude": -87.69379,
+      "city": "Chicago",
+      "country": "United States",
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5C4127D3-C6DF-5253-B018-47E1009CE445",
+      "createdAt": "2026-09-20",
+      "title": "Wooden Alley",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Chicago Weird Ep38: Wooden Alley 🪵 #weird #chicago #travel #chicagoweird #history",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wooden-alley-chicago-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dbk4NRjRwM0/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "69E85AEA-44D1-56A5-9F33-58F7B913EEDF",
+          "order": 0,
+          "title": "Wooden Alley",
+          "caption": "Chicago Weird Ep38: Wooden Alley 🪵 #weird #chicago #travel #chicagoweird #history",
+          "latitude": 41.91032,
+          "longitude": -87.62825,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wooden-alley-chicago-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.91032,
+      "centroidLongitude": -87.62825,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "A5F34F28-1022-547A-ADD6-3D507EF8B60B",
+        "F1B3FB52-3E13-5DE5-AEBD-DCFFAD62D74C",
+        "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "68C1D6CE-FDD8-5B6B-A82E-2F66D6426884",
+        "FE07C96A-1FEC-5102-8CC4-253DFDA52F13",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
+        "84981C62-902A-527A-8317-422A75E0786D",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "District",
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6BFF8453-B8DD-516F-A752-5C2792AAC6D6",
+      "createdAt": "2026-09-20",
+      "title": "Hollywood First National Bank Building",
+      "shortDescription": "A post by @nickcabotrodriguez on Instagram.",
+      "longDescription": "What’s up with this building? Part 6 of my LA micro-documentary series #losangeles #history",
+      "makerId": "299D0BA5-37D6-5B94-8378-85C8DA80712D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hollywood-first-national-bank-nickcabotrodriguez_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYQ2aOVMQC-/",
+      "sourceAuthor": "@nickcabotrodriguez",
+      "stops": [
+        {
+          "id": "6410397C-54A2-5F9C-8812-A02F5582AE0E",
+          "order": 0,
+          "title": "Hollywood First National Bank Building",
+          "caption": "What’s up with this building? Part 6 of my LA micro-documentary series #losangeles #history",
+          "latitude": 34.10186,
+          "longitude": -118.33842,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hollywood-first-national-bank-nickcabotrodriguez_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.10186,
+      "centroidLongitude": -118.33842,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "57CAD837-2E86-5EA2-AA50-40380D0AF477",
+        "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
+        "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
+        "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
+        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB",
+        "2DB2AEF6-4300-56B7-ABC5-CAADA26799E8",
+        "62ECCD3D-535D-5168-9299-54AEECE3FD16",
+        "FC0298CF-65AB-5508-A446-67DBA1E663D3"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Gothic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4A53FF64-895E-5BFD-8BD5-80978C931888",
+      "createdAt": "2026-09-20",
+      "title": "The Hill House",
+      "shortDescription": "A post by @victoriaverbainteriors on Instagram.",
+      "longDescription": "Designed from the inside out. Completed in 1904 in Helensburgh, Scotland, Hill House was designed by Charles Rennie Mackintosh and Margaret Macdonald Mackintosh. Together, they turned the traditional architectural process on its head by meticulously planning the home’s interiors before the exterior was even drawn. Working across architecture, furniture, and decorative arts, the married couple created a home where every element was conceived as part of a single artistic vision. Today, the house is protected by a “second roof” enclosure, helping preserve it after decades of moisture damage.",
+      "makerId": "E4754AEE-CC14-5F86-82DB-3D58BAA41C66",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-hill-house-helensburgh-victoriaverbainteriors_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaOB_iksCnR/",
+      "sourceAuthor": "@victoriaverbainteriors",
+      "stops": [
+        {
+          "id": "A12356B0-607A-55FF-99EC-061C5053EEA8",
+          "order": 0,
+          "title": "The Hill House",
+          "caption": "Designed from the inside out. Completed in 1904 in Helensburgh, Scotland, Hill House was designed by Charles Rennie Mackintosh and Margaret ",
+          "latitude": 56.01702,
+          "longitude": -4.72811,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-hill-house-helensburgh-victoriaverbainteriors_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 56.01702,
+      "centroidLongitude": -4.72811,
+      "city": "Helensburgh",
+      "country": "United Kingdom",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DF4C98F4-AD93-5220-8586-817D5B49BEF4",
+      "createdAt": "2026-09-20",
+      "title": "Leaning Tower of Niles",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Chicago Weird Ep4: Leaning Tower of Niles 🇮🇹 #chicago #travel #weird #chicagotravel #chicagoweird",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leaning-tower-of-niles-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DZ96i32R8NN/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "5BB65EBD-ADCC-5871-AAB2-3EE10C7CC1B9",
+          "order": 0,
+          "title": "Leaning Tower of Niles",
+          "caption": "Chicago Weird Ep4: Leaning Tower of Niles 🇮🇹 #chicago #travel #weird #chicagotravel #chicagoweird",
+          "latitude": 42.01242,
+          "longitude": -87.78406,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leaning-tower-of-niles-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 42.01242,
+      "centroidLongitude": -87.78406,
+      "city": "Niles",
+      "country": "United States",
+      "relatedTourIds": [
+        "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA",
+        "90CBBC49-A54B-50CB-B660-697281CBBD44",
+        "E35F494D-226E-593E-B87B-5894864085C2",
+        "553DFF50-75CB-5ED7-9A1D-DB499EB431AC"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Tower",
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "246AC093-B65B-52A1-860F-EF4C7D8A6506",
+      "createdAt": "2026-09-20",
+      "title": "351 Riverside Drive",
+      "shortDescription": "A post by @markvenaglia on Instagram.",
+      "longDescription": "How many people walk right past one of NYC’s most incredible mansions without realizing what they’re looking at? 👀 📍 Upper West Side, NYC — 351 Riverside Drive This is the Schinasi Mansion, built for tobacco magnate Morris Schinasi and now considered Manhattan’s only freestanding single-family mansion. No building attached on either side. Just a Gilded Age mansion sitting above Riverside Park like something from another city entirely. And that glowing exterior? White Vermont marble. When the sunlight reflects off the Hudson, the marble almost looks illuminated from within. It’s one of those New York details you could pass 100 times and never know the story behind it. That’s why I love showing people NYC. 🗽 Follow Mark for the New York stories hiding in plain sight.",
+      "makerId": "5C5C59CE-2C91-58AF-9B81-F3862426521F",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/351-riverside-drive-markvenaglia_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc9GWYcPFb5/",
+      "sourceAuthor": "@markvenaglia",
+      "stops": [
+        {
+          "id": "818E673C-0455-5A58-8C70-37BC446E3012",
+          "order": 0,
+          "title": "351 Riverside Drive",
+          "caption": "How many people walk right past one of NYC’s most incredible mansions without realizing what they’re looking at? 👀 📍 Upper West Side, NYC — ",
+          "latitude": 40.80298,
+          "longitude": -73.96936,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/351-riverside-drive-markvenaglia_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.80298,
+      "centroidLongitude": -73.96936,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "8AB27AD7-DC6B-55A1-96E8-F915BADE6FDC",
+        "051957C8-9EAC-5882-B79D-89AAE7996A29",
+        "9DBFEB11-F8D9-5507-8A3E-D9C5E81827C2",
+        "B588557F-110A-59A3-9BCF-CA1EEE07A67C",
+        "74338039-7AA9-5073-A1E8-933576D8D0BE",
+        "C4179D5E-A494-5ED8-A5F3-55D8E2079737",
+        "bc45f93d-016b-455c-ac94-e5c82f60d77c",
+        "D3C29780-34E6-57D5-8872-C8A7C899D98C"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "72CB3475-B4C3-59EB-9151-539E63F1A721",
+      "createdAt": "2026-09-20",
+      "title": "NOIR Bar",
+      "shortDescription": "A post by @neverboredinorlando on TikTok.",
+      "longDescription": "Looking for a hidden speakeasy in Orlando? NOIR Bar is tucked behind a secret door inside Talay restaurant in Downtown Orlando. NOIR serves craft cocktails and Thai tapas, making it a great spot for a date night or your next night out. We visited during a World Cup event, and every detail was beautifully executed. If you’re planning a luxury event, Erdeneus Design is definitely worth keeping on your radar. Event planning & design: @erdeneus_design on IG Event production: @littlegatheringsbyed on IG Florals: @dlr_floral on IG 📍 NOIR Bar 861 N Orange Ave Orlando, FL 32801 Follow @neverboredinorlando for more fun things to do in Orlando. #stufftodoinorlando #orlandofoodie #orlandoflorida #orlandorestaurants #thingstodoinorlando",
+      "makerId": "938736AF-E7A9-5DC3-B49E-006681102B17",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/noir-bar-orlando-neverboredinorlando_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@neverboredinorlando/video/7666079196636056845",
+      "sourceAuthor": "@neverboredinorlando",
+      "stops": [
+        {
+          "id": "07AB8973-52F8-50E2-80B6-E8843E726AC6",
+          "order": 0,
+          "title": "NOIR Bar",
+          "caption": "Looking for a hidden speakeasy in Orlando? NOIR Bar is tucked behind a secret door inside Talay restaurant in Downtown Orlando. NOIR serves ",
+          "latitude": 28.55603,
+          "longitude": -81.37913,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/noir-bar-orlando-neverboredinorlando_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 28.55603,
+      "centroidLongitude": -81.37913,
+      "city": "Orlando",
+      "country": "United States",
+      "relatedTourIds": [
+        "7FFE776E-9B5D-5E9D-87E5-986081940F6C",
+        "FCD15E21-EDFE-51A2-8200-74C97C3CBC44",
+        "150DA42D-4F99-590B-967B-03232DCFD6D5",
+        "210B9379-830A-5B77-A390-F8E7EA7DBBE4",
+        "45DE065A-2C34-5E75-935D-CE117CFDF9A3",
+        "4315AE2A-0E10-585D-BE97-18DB0BF4C3DA",
+        "7F7FD4CC-DC66-5BBA-A74C-CE15EE3B0EDE"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1DA2D5C3-32C8-5528-A048-10AFB62837F7",
+      "createdAt": "2026-09-20",
+      "title": "Untermyer Gardens",
+      "shortDescription": "A post by @irina.newyork on TikTok.",
+      "longDescription": "One of the prettiest hidden gems just outside NYC ✨🌿 Untermyer Gardens in Yonkers feels like stepping into another world — beautiful architecture, fountains, gardens, and views of the Hudson River. It’s such a peaceful place to walk around, take photos, or just spend a few hours away from the city. 🤍 📍 Untermyer Gardens, Yonkers, NY 🎟 Free admission 🌿 Open daily Definitely worth adding to your weekend list. ✨ #untermyergardens #yonkersny #WestchesterCounty #HudsonValley #explorenewyork",
+      "makerId": "3D2EF797-88DE-53C1-B59A-ACAC05D9C66E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/untermyer-gardens-irinanewyork_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@irina.newyork/video/7685512743654329613",
+      "sourceAuthor": "@irina.newyork",
+      "stops": [
+        {
+          "id": "4771647C-2CA6-5C13-9CA5-CB117624E6BD",
+          "order": 0,
+          "title": "Untermyer Gardens",
+          "caption": "One of the prettiest hidden gems just outside NYC ✨🌿 Untermyer Gardens in Yonkers feels like stepping into another world — beautiful archite",
+          "latitude": 40.9666,
+          "longitude": -73.88747,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/untermyer-gardens-irinanewyork_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.9666,
+      "centroidLongitude": -73.88747,
+      "city": "Yonkers",
+      "country": "United States",
+      "relatedTourIds": [
+        "E8916558-80E3-529C-A375-0D353765E20D"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E0C281D8-8F51-5D82-98F6-63E4A215EB53",
+      "createdAt": "2026-09-20",
+      "title": "Deer Mountain Inn",
+      "shortDescription": "A post by @juulialand on TikTok.",
+      "longDescription": "the deer mountain inn in tannersville new york is truly heaven on earth!! had the absolute best stay there this past weekend. the hudson valley is so beautiful this time of year and this is the perfect hotel to soak it all in and relax #upstateny #upstatenewyork #hudsonvalley #hotels #newyork",
+      "makerId": "EBA8729F-4033-52CF-AC42-4268773FA3FB",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/deer-mountain-inn-juulialand_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@juulialand/video/7683270059212557598",
+      "sourceAuthor": "@juulialand",
+      "stops": [
+        {
+          "id": "90266D7C-DCA0-50A9-86F6-C1BDDE5E4D0D",
+          "order": 0,
+          "title": "Deer Mountain Inn",
+          "caption": "the deer mountain inn in tannersville new york is truly heaven on earth!! had the absolute best stay there this past weekend. the hudson val",
+          "latitude": 42.22082,
+          "longitude": -74.11932,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/deer-mountain-inn-juulialand_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 42.22082,
+      "centroidLongitude": -74.11932,
+      "city": "Tannersville",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Green Escape",
+        "Hidden Gem",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3D0B802F-2C73-5BC7-B7FE-7E5FAA142786",
+      "createdAt": "2026-09-20",
+      "title": "Fairmont Banff Springs",
+      "shortDescription": "A post by @bradenjstanley on TikTok.",
+      "longDescription": "The whole family here, for Christmas? 🌲 📍 Fairmont Banff Springs",
+      "makerId": "BF21D782-0981-5607-A6CC-A1B985A003D9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fairmont-banff-springs-bradenjstanley_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@bradenjstanley/video/7673909741491457300",
+      "sourceAuthor": "@bradenjstanley",
+      "stops": [
+        {
+          "id": "42DD0668-2B1C-57BD-856B-38250794A596",
+          "order": 0,
+          "title": "Fairmont Banff Springs",
+          "caption": "The whole family here, for Christmas? 🌲 📍 Fairmont Banff Springs",
+          "latitude": 51.16408,
+          "longitude": -115.56177,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fairmont-banff-springs-bradenjstanley_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.16408,
+      "centroidLongitude": -115.56177,
+      "city": "Banff",
+      "country": "Canada",
+      "relatedTourIds": [
+        "EF97C81C-B77F-597B-BF3E-2957D10FAC14"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F4703494-1CBC-54F3-B2B0-E4A556C4F47D",
+      "createdAt": "2026-09-20",
+      "title": "Lake Louise",
+      "shortDescription": "A post by @bradenjstanley on TikTok.",
+      "longDescription": "You, me & winter in Lake Louise? ❄️",
+      "makerId": "BF21D782-0981-5607-A6CC-A1B985A003D9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lake-louise-bradenjstanley_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@bradenjstanley/video/7674382897628859669",
+      "sourceAuthor": "@bradenjstanley",
+      "stops": [
+        {
+          "id": "699FA1E5-2619-5D29-B122-A44F69C1ACF3",
+          "order": 0,
+          "title": "Lake Louise",
+          "caption": "You, me & winter in Lake Louise? ❄️",
+          "latitude": 51.41768,
+          "longitude": -116.21705,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lake-louise-bradenjstanley_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.41768,
+      "centroidLongitude": -116.21705,
+      "city": "Lake Louise",
+      "country": "Canada",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Green Escape",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2284BBD3-34B4-5B57-B341-9F01914209BA",
+      "createdAt": "2026-09-20",
+      "title": "The Sullivan Center",
+      "shortDescription": "A post by @carty.docs on Instagram.",
+      "longDescription": "Maybe I should stick to saying Goth Target since I can’t pronounce anything in French 😅 #gothtarget #target #chicago #architecture #art",
+      "makerId": "49649398-740B-518F-967A-C92A39975371",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sullivan-center-goth-target-cartydocs_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdWr3GNhxO-/",
+      "sourceAuthor": "@carty.docs",
+      "stops": [
+        {
+          "id": "1262963D-3643-593E-B9F3-984CA3286835",
+          "order": 0,
+          "title": "The Sullivan Center",
+          "caption": "Maybe I should stick to saying Goth Target since I can’t pronounce anything in French 😅 #gothtarget #target #chicago #architecture #art",
+          "latitude": 41.88146,
+          "longitude": -87.62727,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sullivan-center-goth-target-cartydocs_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.88146,
+      "centroidLongitude": -87.62727,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "1790ABAA-DF94-5E22-8470-764F53580C62",
+        "87253FAE-997E-5189-8BF2-221C9AA77BC5",
+        "15616CA4-9188-599D-82EC-9CB0EC713F91",
+        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "AA3995B3-01D7-5B57-A6DF-A09F6A5EEC8B",
+        "4391E119-E608-579A-89C4-293BB6077D6E",
+        "69A1F424-5140-5D46-9BA6-636FBEFE8A2A",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A5F34F28-1022-547A-ADD6-3D507EF8B60B",
+      "createdAt": "2026-09-20",
+      "title": "Couch Tomb",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Chicago Weird Ep31: Couch Tomb 🛋️ #travel #travel #weird #chicagoweird #chicagogram",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/couch-tomb-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbNtxBpRc44/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "D004A29D-679F-5F72-A016-8C99F6479F84",
+          "order": 0,
+          "title": "Couch Tomb",
+          "caption": "Chicago Weird Ep31: Couch Tomb 🛋️ #travel #travel #weird #chicagoweird #chicagogram",
+          "latitude": 41.91293,
+          "longitude": -87.63142,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/couch-tomb-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.91293,
+      "centroidLongitude": -87.63142,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "5C4127D3-C6DF-5253-B018-47E1009CE445",
+        "FE07C96A-1FEC-5102-8CC4-253DFDA52F13",
+        "274364F2-9835-5B40-957F-243E11F271E6",
+        "3dd57e77-d4fe-509e-a552-daf4d97c146c",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
+        "1790ABAA-DF94-5E22-8470-764F53580C62",
+        "F1B3FB52-3E13-5DE5-AEBD-DCFFAD62D74C"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Remembrance",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3D760F76-DBB3-523B-AACA-DBFCC213D86F",
+      "createdAt": "2026-09-20",
+      "title": "Lincoln Park Zoo",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Chicago Weird Ep12: Lincoln Park Zoo 🦁 #Chicago #travel #chicagogram #chicagoweird #weird",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincoln-park-zoo-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaScMe3RDnO/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "58BBF4D8-D29F-5E3C-9C70-EEBB93685B7B",
+          "order": 0,
+          "title": "Lincoln Park Zoo",
+          "caption": "Chicago Weird Ep12: Lincoln Park Zoo 🦁 #Chicago #travel #chicagogram #chicagoweird #weird",
+          "latitude": 41.92126,
+          "longitude": -87.63377,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincoln-park-zoo-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.92126,
+      "centroidLongitude": -87.63377,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "3DFEFDFE-E304-56E0-ABBB-E4D67189CEEB"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Free to Visit",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "68C1D6CE-FDD8-5B6B-A82E-2F66D6426884",
+      "createdAt": "2026-09-20",
+      "title": "Pullman Historic District",
+      "shortDescription": "A post by @charleytalks on Instagram.",
+      "longDescription": "Pullman",
+      "makerId": "1CBE7AFE-7571-5ACF-B70C-292A37FEAD60",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pullman-historic-district-charleytalks_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdayLkpOaUI/",
+      "sourceAuthor": "@charleytalks",
+      "stops": [
+        {
+          "id": "9E79409F-C4F9-55B7-AA84-F28E0080729F",
+          "order": 0,
+          "title": "Pullman Historic District",
+          "caption": "Pullman",
+          "latitude": 41.6924,
+          "longitude": -87.6088,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pullman-historic-district-charleytalks_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.6924,
+      "centroidLongitude": -87.6088,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "8E89E2EB-7DC2-57BA-A3BE-F54F865389BB",
+        "5C4127D3-C6DF-5253-B018-47E1009CE445",
+        "2644D271-E442-5007-85CD-8D4E57333C50",
+        "4391E119-E608-579A-89C4-293BB6077D6E",
+        "DA7E193B-C288-534C-979F-2C35778CCBD7",
+        "FEC0D812-D6AB-56A4-A7AD-3B99AFA5EE6D",
+        "6DA3ECC2-0EBB-54E9-AD0B-F425A06D39A2",
+        "3dd57e77-d4fe-509e-a552-daf4d97c146c"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3619F5E5-2AC4-5316-8647-41832300413D",
+      "createdAt": "2026-09-20",
+      "title": "Essanay Studios",
+      "shortDescription": "A post by @seeingcoolplaces on Instagram.",
+      "longDescription": "Chicago had one of the most important film studios in the world, and was the place that first made Charlie Chaplin a cultural phenomenon. The building and its entranceway are preserved, but looking at the structure from Argyle Street just doesn’t convey the importance of Essanay Studios. Combining their initials “S” and “A,” George K. Spoor and actor Gilbert M. Anderson founded Essanay in 1907. The company’s hundreds of western films basically set the narrative template for the entire genre, and launched Anderson to fame as the first-ever cowboy film star, “Broncho Billy.” The Chicago Park District commemorated his influence by opening Broncho Billy Park in 1999. Essanay is probably best known, though, for their success with comedies, especially their 14 films with Charlie Chaplin, whose character The Tramp became a worldwide hit. But, Chaplin didn’t renew his contract with Essanay, and by 1915, they were already in financial trouble. They closed their Chicago studios for good in 1918, after making 1400 films. After that, the building was sold multiple times, and today, its St. Augustine College, part of Lewis University. Their meeting hall’s called Charlie Chaplin Auditorium. From the street, only this terra cotta entranceway and Chicago Landmark plaque give any indication that important cinematic history happened just behind this brick wall. #chicagohistory #landmark #documentary #charliechaplin #filmhistory",
+      "makerId": "2E87DC53-3497-59B7-90E0-7C041A6BDFEC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/essanay-studios-seeingcoolplaces_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Db8NOaPxZnC/",
+      "sourceAuthor": "@seeingcoolplaces",
+      "stops": [
+        {
+          "id": "48D8452D-A61C-58EC-93EA-12123F9AB618",
+          "order": 0,
+          "title": "Essanay Studios",
+          "caption": "Chicago had one of the most important film studios in the world, and was the place that first made Charlie Chaplin a cultural phenomenon. Th",
+          "latitude": 41.97212,
+          "longitude": -87.66383,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/essanay-studios-seeingcoolplaces_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.97212,
+      "centroidLongitude": -87.66383,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "F1B3FB52-3E13-5DE5-AEBD-DCFFAD62D74C"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CB3491AC-4B14-541D-A766-B9A7D06AD748",
+      "createdAt": "2026-09-20",
+      "title": "Fort Tryon Park",
+      "shortDescription": "A post by @speccles_ on Instagram.",
+      "longDescription": "The hidden cow history of Fort Tryon park 🐄",
+      "makerId": "57225D97-D0F7-5B32-86ED-E4D107BBC7E7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fort-tryon-park-speccles_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbMW_ozJptX/",
+      "sourceAuthor": "@speccles_",
+      "stops": [
+        {
+          "id": "7D902661-E3A7-532A-B422-3BD332530B30",
+          "order": 0,
+          "title": "Fort Tryon Park",
+          "caption": "The hidden cow history of Fort Tryon park 🐄",
+          "latitude": 40.86181,
+          "longitude": -73.93239,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fort-tryon-park-speccles_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.86181,
+      "centroidLongitude": -73.93239,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "EBF3ACE6-8D0B-5DDB-9510-409F37340378",
+        "3BBDE9E7-969D-54AF-9468-791A679DCF69",
+        "84EBBE5D-56B4-5EAF-8408-0F94CE75E07B",
+        "116CAF98-20D5-5665-B111-09886DCF2BAC",
+        "860DFF80-A544-5CA0-A6EB-ACB11293D539",
+        "03AD1C89-9562-5923-B68A-1183E75D9DBE",
+        "65993891-DFCF-526C-986B-59EAF7BB9458",
+        "4D1B2F5C-617E-5A31-BA46-4C74396457D6"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FE07C96A-1FEC-5102-8CC4-253DFDA52F13",
+      "createdAt": "2026-09-20",
+      "title": "Thalia Hall",
+      "shortDescription": "A post by @vitavenute on Instagram.",
+      "longDescription": "Chicago Weird Ep64: Thalia Hall 🎤 #chicago #weird #haunted #history #chicagotiktok",
+      "makerId": "3EB9BBA8-27BE-5389-BA89-FB2C65C77ACC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/thalia-hall-vitavenute_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdYuwSDR-12/",
+      "sourceAuthor": "@vitavenute",
+      "stops": [
+        {
+          "id": "B2B1D627-06F6-50AF-BFED-70CA7368DACE",
+          "order": 0,
+          "title": "Thalia Hall",
+          "caption": "Chicago Weird Ep64: Thalia Hall 🎤 #chicago #weird #haunted #history #chicagotiktok",
+          "latitude": 41.85772,
+          "longitude": -87.65729,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/thalia-hall-vitavenute_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.85772,
+      "centroidLongitude": -87.65729,
+      "city": "Chicago",
+      "country": "United States",
+      "relatedTourIds": [
+        "A5F34F28-1022-547A-ADD6-3D507EF8B60B",
+        "5C4127D3-C6DF-5253-B018-47E1009CE445",
+        "3dd57e77-d4fe-509e-a552-daf4d97c146c",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
+        "F1B3FB52-3E13-5DE5-AEBD-DCFFAD62D74C"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4829E41A-50D9-5523-A97C-EBB110F4FC77",
+      "createdAt": "2026-09-20",
+      "title": "Cheeca Lodge",
+      "shortDescription": "A post by @descubriendoconcelia on TikTok.",
+      "longDescription": "Florida really has places that don’t feel like Florida. 🌴🤍 Cheeca Lodge completely surprised us. Beautiful grounds, so much to do on property, and perfect for both couples and families. ⭐️ One tip before you book: call ahead and ask about the current sargassum (seaweed) conditions, especially in late summer. It changes throughout the Keys and can make a big difference to your beach experience. We’d absolutely stay here again. Have you been to Islamorada? #floridakeys #familytravel #weekendgetaway #cheecalodge #islamorada",
+      "makerId": "1134AFE0-9566-50E3-93FC-563FCB977245",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cheeca-lodge-descubriendoconcelia_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@descubriendoconcelia/video/7657518657622314270",
+      "sourceAuthor": "@descubriendoconcelia",
+      "stops": [
+        {
+          "id": "A14016C2-78F8-5450-9936-88DA7D8F0CDE",
+          "order": 0,
+          "title": "Cheeca Lodge",
+          "caption": "Florida really has places that don’t feel like Florida. 🌴🤍 Cheeca Lodge completely surprised us. Beautiful grounds, so much to do on propert",
+          "latitude": 24.91556,
+          "longitude": -80.63386,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cheeca-lodge-descubriendoconcelia_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.91556,
+      "centroidLongitude": -80.63386,
+      "city": "Islamorada",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Green Escape",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "29F3DEBC-A803-5BD4-B9C6-1540E95C6E9C",
+      "createdAt": "2026-09-20",
+      "title": "Lake Placid Lodge",
+      "shortDescription": "A post by @us.hiddengems on TikTok.",
+      "longDescription": "#lakeplacid #newyork #luxurytravel #hotelgoals #bucketlist",
+      "makerId": "F6BA9A87-05AA-5C5D-9C74-195F30AFD582",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lake-placid-lodge-ushiddengems_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@us.hiddengems/video/7662531992633822495",
+      "sourceAuthor": "@us.hiddengems",
+      "stops": [
+        {
+          "id": "BAF3E4ED-E3CB-5CED-ABAB-C940EF610C1B",
+          "order": 0,
+          "title": "Lake Placid Lodge",
+          "caption": "#lakeplacid #newyork #luxurytravel #hotelgoals #bucketlist",
+          "latitude": 44.30933,
+          "longitude": -74.00269,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lake-placid-lodge-ushiddengems_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.30933,
+      "centroidLongitude": -74.00269,
+      "city": "Lake Placid",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Green Escape",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5503BDB1-98ED-557A-81CE-9073D493DF6D",
+      "createdAt": "2026-09-20",
+      "title": "Shadowbrook",
+      "shortDescription": "A post by @californiabucketlists on TikTok.",
+      "longDescription": "Hidden away in California is a magical restaurant where the journey is part of the experience—you ride a little train down before stepping into what feels like a real-life fairytale.Yes, we waited almost 3 hours for a table, and we’d do it all over again. Every bite was incredible, the setting was unbelievably romantic, and it truly felt like we had wandered into a Disney movie. If you’re looking for the perfect date night or a one-of-a-kind dining experience, this hidden gem belongs at the top of your bucket list",
+      "makerId": "1C170437-049C-5FB7-848F-003DF7E522BC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shadowbrook-capitola-californiabucketlists_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@californiabucketlists/video/7671363863039855903",
+      "sourceAuthor": "@californiabucketlists",
+      "stops": [
+        {
+          "id": "D948F2F7-7F15-5543-AE20-613021D5A26B",
+          "order": 0,
+          "title": "Shadowbrook",
+          "caption": "Hidden away in California is a magical restaurant where the journey is part of the experience—you ride a little train down before stepping i",
+          "latitude": 36.97464,
+          "longitude": -121.95544,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shadowbrook-capitola-californiabucketlists_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.97464,
+      "centroidLongitude": -121.95544,
+      "city": "Capitola",
+      "country": "United States",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EF97C81C-B77F-597B-BF3E-2957D10FAC14",
+      "createdAt": "2026-09-20",
+      "title": "Fairmont Banff Springs",
+      "shortDescription": "A post by @somewherebeautiful3777 on TikTok.",
+      "longDescription": "The Fairmont Banff Springs is one of Canada’s most iconic luxury hotels—often called “Canada’s Castle in the Rockies.” It sits inside Banff National Park in Alberta, surrounded by the Canadian Rockies and overlooking the Bow River/Bow Falls area. The historic resort first opened in 1888. ✨ Why it’s such a good travel TikTok * 🏰 Looks like a real-life castle * 🏔️ Dramatic Rocky Mountain setting * 💦 Close to Bow Falls * ♨️ Luxury spa and pools * 🍽️ 12 restaurants and bars on the property * ⛳ Championship golf course * ❄️ Skiing and winter scenery * ☕ Afternoon tea * 👑 Fairmont Gold offers a hotel-within-a-hotel experience with private lounge access, breakfast, canapés and a dedicated concierge. It has 724 guest rooms and suites according to the current Fairmont site. #BanffChristmas #FairmontBanffSprings #ChristmasTravel #BanffCanada #WinterWonderland",
+      "makerId": "8035D5E1-75B0-511D-A73D-76877CCBF36A",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fairmont-banff-springs-somewherebeautiful3777_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@somewherebeautiful3777/video/7685126461979774221",
+      "sourceAuthor": "@somewherebeautiful3777",
+      "stops": [
+        {
+          "id": "FAE9A9CA-2841-57B8-AD48-61A248BC9FFD",
+          "order": 0,
+          "title": "Fairmont Banff Springs",
+          "caption": "The Fairmont Banff Springs is one of Canada’s most iconic luxury hotels—often called “Canada’s Castle in the Rockies.” It sits inside Banff ",
+          "latitude": 51.16408,
+          "longitude": -115.56177,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fairmont-banff-springs-somewherebeautiful3777_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.16408,
+      "centroidLongitude": -115.56177,
+      "city": "Banff",
+      "country": "Canada",
+      "relatedTourIds": [
+        "3D0B802F-2C73-5BC7-B7FE-7E5FAA142786"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "02A8408C-753A-5106-ACD3-22165BCA5C88",
+      "createdAt": "2026-09-20",
+      "title": "Wok and Roll",
+      "shortDescription": "A post by @amazingamericatv on Instagram.",
+      "longDescription": "They planned to assassinate Abe Lincoln in this Chinese restaurant?? Wok and Roll in DC's Chinatown is the exact location where conspirators met to plot the kidnapping, and later the assassination, of President Abraham Lincoln. But the story behind it goes way deeper. Here's the Hidden History of Wok and Roll in DC.",
+      "makerId": "0A0FB79B-039A-5600-90D9-33C6FD18A532",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wok-and-roll-surratt-house-amazingamericatv_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaV69XfAQWc/",
+      "sourceAuthor": "@amazingamericatv",
+      "stops": [
+        {
+          "id": "75CB876C-9867-514A-8B50-0A1AD1884D46",
+          "order": 0,
+          "title": "Wok and Roll",
+          "caption": "They planned to assassinate Abe Lincoln in this Chinese restaurant?? Wok and Roll in DC's Chinatown is the exact location where conspirators",
+          "latitude": 38.89963,
+          "longitude": -77.0204,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wok-and-roll-surratt-house-amazingamericatv_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.89963,
+      "centroidLongitude": -77.0204,
+      "city": "Washington",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Venue",
+        "History",
+        "Crime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "627EE546-C1B6-51FF-80AC-22D5B91570B9",
+      "createdAt": "2026-09-20",
+      "title": "First Spiritual Temple",
+      "shortDescription": "A post by @lahistorygirl on Instagram.",
+      "longDescription": "Boston has no shortage of historic landmarks. But how many of them have ghosts carved into the facade because the building was literally created for people trying to communicate with the dead? 👻 Exactly. Hidden in plain sight on Newbury Street, the First Spiritual Temple is one of those places that makes me love Boston so much: gorgeous architecture, wildly important history, a slightly unhinged Victorian backstory, and thousands of people casually walking past it every day without having a clue what they’re looking at. If you love spooky history, Victorian weirdness, occult history, spooky travel, or simply finding the stories hiding in plain sight, add this one to your Boston list immediately. And with spooky season creeping closer, consider this your reminder that some of the best haunted-feeling places aren’t haunted attractions at all. They’re just history. Save this for your next Boston trip — and for the love of all things gothic, look up. #bostonhistory #spookytravel #macabrehistory #historicaltravel lahistorygirl Boston spooky things to do, Boston hidden gems, First Spiritualist Temple Boston, Newbury Street history, Boston history, spooky Boston, Halloween in Boston, spooky season travel, macabre travel, dark tourism Boston, Victorian Spiritualism, séance history, occult history Boston, historic Boston architecture, Boston travel blogger, history travel blogger, female travel creator, historian travel, LA History Girl, unusual things to do in Boston",
+      "makerId": "162FAE86-D2DE-561A-A09D-08D99B7953BF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/first-spiritual-temple-lahistorygirl_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc8-tG7xQW9/",
+      "sourceAuthor": "@lahistorygirl",
+      "stops": [
+        {
+          "id": "1F5B8C6A-1995-5A7F-869D-1FFBD36D1F0A",
+          "order": 0,
+          "title": "First Spiritual Temple",
+          "caption": "Boston has no shortage of historic landmarks. But how many of them have ghosts carved into the facade because the building was literally cre",
+          "latitude": 42.35064,
+          "longitude": -71.07964,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/first-spiritual-temple-lahistorygirl_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 42.35064,
+      "centroidLongitude": -71.07964,
+      "city": "Boston",
+      "country": "United States",
+      "relatedTourIds": [
+        "08268B65-5035-51DA-9DC8-D804B911AAA3",
+        "478C4501-D63D-5CCE-BF6A-3B88FCB4F9C1",
+        "04C67CEC-A0A0-52E9-BD04-B8F8B11468A8",
+        "3A881BB6-344C-5AD2-AAD9-388AD496A181",
+        "05FCB821-70CE-530E-B3BF-3D1FC21A7E7C",
+        "641723B0-9810-5FEF-A6F5-C52B27A5E17F",
+        "B5663D4E-2E63-5121-9E54-9A386EB07A11"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Victorian"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "96CA40E4-E80B-5BDE-B213-80917A7E953D",
+      "createdAt": "2026-09-20",
+      "title": "Blenheim Palace",
+      "shortDescription": "A post by @greatbritisharchitecture on Instagram.",
+      "longDescription": "A Magnificent Glow-Up for a Magnificent Place Blenheim Palace in Oxfordshire is the most magnificent non-royal palace in Britain. It is arguably the finest example of English Baroque architecture, designed by Sir John Vanbrugh. Thankfully, this treasure of a building has now been protected with the completion of these vital roof repairs. Prior to the repairs, the almost one acre roof was served by just six downpipes. However, now the roof is suitable to preserve the palace for future generations to come. The palace is open daily for visitors and is a must see attraction for anyone visiting England.",
+      "makerId": "7ECFA97C-D70C-53CA-ABC4-9AB667E373D9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blenheim-palace-greatbritisharchitecture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DddiBoJKd6j/",
+      "sourceAuthor": "@greatbritisharchitecture",
+      "stops": [
+        {
+          "id": "83673159-6DF8-5E29-A958-AE18530D4BD1",
+          "order": 0,
+          "title": "Blenheim Palace",
+          "caption": "A Magnificent Glow-Up for a Magnificent Place Blenheim Palace in Oxfordshire is the most magnificent non-royal palace in Britain. It is argu",
+          "latitude": 51.84136,
+          "longitude": -1.36095,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blenheim-palace-greatbritisharchitecture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.84136,
+      "centroidLongitude": -1.36095,
+      "city": "Woodstock",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "F67D28AD-C087-5C87-9CE4-53229F678507",
+        "2B0062BF-E29F-58A1-B35E-4C9766E6547A",
+        "4B74BA9D-49D5-57FB-BF6A-6970839C4E86"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Iconic Landmark",
+        "Baroque"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "41F8D2E8-FBCC-5B79-8876-EAD28FF01E77",
+      "createdAt": "2026-09-20",
+      "title": "Fillmore Place Historic District",
+      "shortDescription": "A post by @donmawsey.nyctours on Instagram.",
+      "longDescription": "NYC's Smallest Historic Districts Volume 18 - Fillmore Place Historic District #williamsburg #brooklynhistory #historicdistrict #landmarks #italianatearchitecture",
+      "makerId": "5C33045D-3020-5480-A3BA-2AF8EB512775",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fillmore-place-historic-district-donmawseynyctours_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Ddb9cgtzLs3/",
+      "sourceAuthor": "@donmawsey.nyctours",
+      "stops": [
+        {
+          "id": "5371ED45-2DE5-52A1-B8AC-AF0AD2B5F814",
+          "order": 0,
+          "title": "Fillmore Place Historic District",
+          "caption": "NYC's Smallest Historic Districts Volume 18 - Fillmore Place Historic District #williamsburg #brooklynhistory #historicdistrict #landmarks #",
+          "latitude": 40.71408,
+          "longitude": -73.95867,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fillmore-place-historic-district-donmawseynyctours_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.71408,
+      "centroidLongitude": -73.95867,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "432EBBB0-F3EA-5596-B6F3-D9C339BD25A9",
+        "CB3769AE-1151-5846-830B-C1815D9D0EC1",
+        "DEE1789D-7659-58BC-81D5-6C6CD8354F2B",
+        "24DA376F-9B8B-53DF-B89B-E5D6D21E912D",
+        "704193A9-9CF6-5472-B3C5-1BA914A5A53E"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
+      "createdAt": "2026-09-20",
+      "title": "Kaktus Towers",
+      "shortDescription": "A post by @blessedarch on Instagram.",
+      "longDescription": "The kaktus towers designed by Bjarke Ingels Group in Copenhagen. #blessedarch #architecture #design #copenhagen #housing",
+      "makerId": "2D9DACE1-F75D-5A4F-8E48-58B5C081B03D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kaktus-towers-blessedarch_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdUMJqBgvBY/",
+      "sourceAuthor": "@blessedarch",
+      "stops": [
+        {
+          "id": "9F2EF87B-CB1D-578B-9BC3-5F79AECBD799",
+          "order": 0,
+          "title": "Kaktus Towers",
+          "caption": "The kaktus towers designed by Bjarke Ingels Group in Copenhagen. #blessedarch #architecture #design #copenhagen #housing",
+          "latitude": 55.66375,
+          "longitude": 12.56034,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kaktus-towers-blessedarch_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.66375,
+      "centroidLongitude": 12.56034,
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "relatedTourIds": [
+        "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
+        "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
+        "cdefd343-5849-51d5-bd99-5a9399656006",
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "310fac17-247d-507b-9637-503685b7af85",
+        "B3CC1B62-7371-5BA2-AE69-E3C4F9BD284A"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Bjarke Ingels"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AC9CB953-F833-5DA0-B4AB-E51B28C9BEB3",
+      "createdAt": "2026-09-20",
+      "title": "Trailside Museum of Natural History",
+      "shortDescription": "A post by @nic__white on Instagram.",
+      "longDescription": "Trailside Museum Of Natural History is one of my FAVORITE places in Chicagoland! A beautiful historic building built right into the surrounding woodlands! Next time you are in Oak Park for a Frank Lloyd Wright Tour, check this place out! #chicago #travel #chicagogram #chitown #explorechicago",
+      "makerId": "3865B073-EC61-5FDA-B645-A5AD0257A551",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trailside-museum-natural-history-nicwhite_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdPasI7phWh/",
+      "sourceAuthor": "@nic__white",
+      "stops": [
+        {
+          "id": "A593C30E-396C-50D6-8E6C-77D5264AA8DB",
+          "order": 0,
+          "title": "Trailside Museum of Natural History",
+          "caption": "Trailside Museum Of Natural History is one of my FAVORITE places in Chicagoland! A beautiful historic building built right into the surround",
+          "latitude": 41.89302,
+          "longitude": -87.82618,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trailside-museum-natural-history-nicwhite_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.89302,
+      "centroidLongitude": -87.82618,
+      "city": "River Forest",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Museum",
+        "Green Escape",
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "30433818-E7A6-5651-8C3A-EC87DF236056",
+      "createdAt": "2026-09-20",
+      "title": "Papplewick Pumping Station",
+      "shortDescription": "A post by @historicengland on Instagram.",
+      "longDescription": "Why is this water pumping station so gloriously grand and decoratively rich? 🤩 Papplewick Pumping Station was built between 1882 and 1886. It provided clean water to Nottingham until it was decommissioned in 1969. It remains the only pumping station in England to retain all its original features, including the machinery and the reservoir. A major £500,000 restoration project was completed at Papplewick Pumping Station, thanks to grants from ourselves and @aceagrams's Museum Estate and Development Fund, allowing it to be removed from our #HeritageAtRisk Register last year! Thank you to @greatbritisharchitecture for telling its story 🙌 📍 Papplewick Pumping Station, Nottingham | Grade II listed.",
+      "makerId": "4BED9089-DCC5-553E-B469-71F77F767206",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/papplewick-pumping-station-historicengland_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdYKqWBjKje/",
+      "sourceAuthor": "@historicengland",
+      "stops": [
+        {
+          "id": "26659366-4B20-5401-BE97-994383786AA2",
+          "order": 0,
+          "title": "Papplewick Pumping Station",
+          "caption": "Why is this water pumping station so gloriously grand and decoratively rich? 🤩 Papplewick Pumping Station was built between 1882 and 1886. I",
+          "latitude": 53.0632,
+          "longitude": -1.13136,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/papplewick-pumping-station-historicengland_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 53.0632,
+      "centroidLongitude": -1.13136,
+      "city": "Papplewick",
+      "country": "United Kingdom",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Engineering",
+        "History",
+        "Victorian"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EA433FFE-2571-5886-A5EA-9CD51E588797",
+      "createdAt": "2026-09-20",
+      "title": "Oberon at the New Museum",
+      "shortDescription": "A post by @hypebeast on Instagram.",
+      "longDescription": "@oberon_nyc has arrived at the New Museum. Designed by Shohei Shigematsu, the new Bowery restaurant brings together seasonal Hudson Valley cooking, a sustainability-first ethos, and a live digital artwork by Ian Cheng that never repeats. Art, food, and a reason to stay awhile. 📍 7 Freeman Alley, New York, NY 10002",
+      "makerId": "5F726A8D-840D-5F67-9E50-8FDC8C4C97F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oberon-new-museum-hypebeast_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdW_KeyhnRO/",
+      "sourceAuthor": "@hypebeast",
+      "stops": [
+        {
+          "id": "AB388792-7F9B-5095-AC19-CC4272D7E637",
+          "order": 0,
+          "title": "Oberon at the New Museum",
+          "caption": "@oberon_nyc has arrived at the New Museum. Designed by Shohei Shigematsu, the new Bowery restaurant brings together seasonal Hudson Valley c",
+          "latitude": 40.72235,
+          "longitude": -73.99284,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oberon-new-museum-hypebeast_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.72235,
+      "centroidLongitude": -73.99284,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
+        "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
+        "5D16EE65-88D3-5B12-A803-7F524475200F",
+        "04EC9F2D-61CC-5753-BD5C-E22507CC0E50",
+        "D000C7E7-D141-5E92-AE36-C030E2C00EE8",
+        "13AA77B6-8052-55C8-B88D-1F5799808089",
+        "68D77EFF-F702-5BA5-A166-56D16F3DE3EA",
+        "cc251534-28cb-4f9b-bded-24602cef3a95"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "240E14A8-4670-599A-BC70-1696B43C2DAE",
+      "createdAt": "2026-09-20",
+      "title": "Marco Island",
+      "shortDescription": "A post by @mskelseygraves on TikTok.",
+      "longDescription": "Before we dive into the details, follow me for more family-friendly vacation destinations and free guides! 🩵 Marco Island is a little slice of heaven! Vacationing here feels like you’ve left the US, no passport needed! 🏝️ I created a free guide with hotels, restaurants, beach access and more - it’s linked in my bio!",
+      "makerId": "6F8AF9E0-1CD9-52CD-A89B-10213A440CCF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marco-island-mskelseygraves_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@mskelseygraves/video/7671342872473373966",
+      "sourceAuthor": "@mskelseygraves",
+      "stops": [
+        {
+          "id": "2AE359CC-D244-57FE-8935-D0379E7BBBF2",
+          "order": 0,
+          "title": "Marco Island",
+          "caption": "Before we dive into the details, follow me for more family-friendly vacation destinations and free guides! 🩵 Marco Island is a little slice ",
+          "latitude": 25.93725,
+          "longitude": -81.71573,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marco-island-mskelseygraves_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.93725,
+      "centroidLongitude": -81.71573,
+      "city": "Marco Island",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3506C727-F498-5BDE-B8E8-FEF84621B070",
+      "createdAt": "2026-09-20",
+      "title": "Schloss Leopoldskron",
+      "shortDescription": "A post by @carolinewimberly on TikTok.",
+      "longDescription": "Living out my Sound of Music fantasy in Salzburg🎶🏔️ If you’re planning a trip to Salzburg, Schloss Leopoldskron deserves a spot on the itinerary. A very niche dream come true for anyone who loves historic hotels, beautiful architecture and pretending they live in a movie!! ——- Sound of music palace, sound of music hotel, sound of music hotel breakfast, Salzburg travel, Salzburg bucket list, sound of music tour #soundofmusic #salzburgaustria #austriatravel #soundofmusictour #salzburgtravel @schlossleopoldskron",
+      "makerId": "E20E34FB-DA3B-5ACC-BF0A-E8A506E80A1E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/schloss-leopoldskron-carolinewimberly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@carolinewimberly/video/7685206971162643743",
+      "sourceAuthor": "@carolinewimberly",
+      "stops": [
+        {
+          "id": "FA8A7678-128E-556B-AD66-575753A22B94",
+          "order": 0,
+          "title": "Schloss Leopoldskron",
+          "caption": "Living out my Sound of Music fantasy in Salzburg🎶🏔️ If you’re planning a trip to Salzburg, Schloss Leopoldskron deserves a spot on the itine",
+          "latitude": 47.78835,
+          "longitude": 13.03868,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/schloss-leopoldskron-carolinewimberly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 47.78835,
+      "centroidLongitude": 13.03868,
+      "city": "Salzburg",
+      "country": "Austria",
+      "relatedTourIds": [
+        "71EB5A4F-01BD-5569-A70B-757813BFD083",
+        "26DE384A-B2A8-56BC-99D1-6FF1B9E56D54",
+        "681B0D48-E315-59FE-9D13-38DEFC9A88BA",
+        "2DB00E99-E156-56F2-89D1-481AB9F0507C"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Baroque"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EB75C914-C356-5370-B51F-83CC0836EA40",
+      "createdAt": "2026-09-20",
+      "title": "Irish Hunger Memorial",
+      "shortDescription": "A post by @lylasmind on Instagram.",
+      "longDescription": "Outlook spot for sunset",
+      "makerId": "B8C0EAF3-23C9-5F62-B23D-E702A0721AB2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/irish-hunger-memorial-lylasmind_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DccRKxtvK7D/",
+      "sourceAuthor": "@lylasmind",
+      "stops": [
+        {
+          "id": "CC3BF82B-AEF6-5EBD-931B-DAF9F4C4D704",
+          "order": 0,
+          "title": "Irish Hunger Memorial",
+          "caption": "Outlook spot for sunset",
+          "latitude": 40.71514,
+          "longitude": -74.01651,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/irish-hunger-memorial-lylasmind_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.71514,
+      "centroidLongitude": -74.01651,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "84B72FA0-F7B7-5930-9C04-F33ED8EEE4FA",
+        "A0B50432-3203-5101-92E6-734B95E7068D",
+        "1CDA55C8-4CD3-5735-B5AE-CAA77AA55303",
+        "9DD40A18-5224-5F7A-9431-3FB31C4BD015",
+        "704193A9-9CF6-5472-B3C5-1BA914A5A53E",
+        "063348B4-80C3-50D1-B874-C3239C2DC114",
+        "81014923-08E4-5A6A-9244-2FDCB71461FB",
+        "F9294EDC-1588-51AB-BCC3-529FF7F292CC"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Monument",
+        "Remembrance",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "96D24F42-DE42-591A-A338-81570BD78B09",
+      "createdAt": "2026-09-20",
+      "title": "The St. Regis Cap Cana",
+      "shortDescription": "A post by @marionsworldd on TikTok.",
+      "longDescription": "St. Regis Cap Cana📍 def on my list of Caribbean favorites 🤍🇩🇴✨ #stregiscapcana #capcana #dominicanrepublic #luxurytravel #puntacana",
+      "makerId": "9DE2A47A-D64D-532D-9C61-B7BC601741D7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-regis-cap-cana-marionsworldd_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@marionsworldd/video/7668104546660453663",
+      "sourceAuthor": "@marionsworldd",
+      "stops": [
+        {
+          "id": "734554F8-5517-5B9C-943B-699EFCAEC015",
+          "order": 0,
+          "title": "The St. Regis Cap Cana",
+          "caption": "St. Regis Cap Cana📍 def on my list of Caribbean favorites 🤍🇩🇴✨ #stregiscapcana #capcana #dominicanrepublic #luxurytravel #puntacana",
+          "latitude": 18.456149,
+          "longitude": -68.415118,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-regis-cap-cana-marionsworldd_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.456149,
+      "centroidLongitude": -68.415118,
+      "city": "Punta Cana",
+      "country": "Dominican Republic",
+      "relatedTourIds": [
+        "EF6E2238-8168-5E91-BEF5-1264D77EBF63"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Green Escape",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EF6E2238-8168-5E91-BEF5-1264D77EBF63",
+      "createdAt": "2026-09-20",
+      "title": "W Punta Cana",
+      "shortDescription": "A post by @explorewithdasom on TikTok.",
+      "longDescription": "JUST 4 hrs away from nyc...🫢🧉 take @Arajet from Newark airport & in ~4 hours, you'll land in 📍Punta Cana, Dominican Republic where W Punta Cana is a 45-min drive away 🏝️ SEND THIS to who you’d go with... #whotel #puntacana #allinclusive #nycgetaway #travelblogger",
+      "makerId": "2476F985-2374-564C-9628-5FC3DB8C9ED7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/w-punta-cana-explorewithdasom_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@explorewithdasom/video/7655427525585292557",
+      "sourceAuthor": "@explorewithdasom",
+      "stops": [
+        {
+          "id": "9E94D09D-2BB5-57F3-8425-0662936DB791",
+          "order": 0,
+          "title": "W Punta Cana",
+          "caption": "JUST 4 hrs away from nyc...🫢🧉 take @Arajet from Newark airport & in ~4 hours, you'll land in 📍Punta Cana, Dominican Republic where W Punta C",
+          "latitude": 18.836325,
+          "longitude": -68.606867,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/w-punta-cana-explorewithdasom_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.836325,
+      "centroidLongitude": -68.606867,
+      "city": "Punta Cana",
+      "country": "Dominican Republic",
+      "relatedTourIds": [
+        "96D24F42-DE42-591A-A338-81570BD78B09"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Contemporary",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6B4B2779-DC1E-53A8-B726-D24C98E55B14",
+      "createdAt": "2026-09-20",
+      "title": "The Ritz-Carlton O'ahu, Turtle Bay",
+      "shortDescription": "A post by @suhyrswrld on TikTok.",
+      "longDescription": "everyday should look like this",
+      "makerId": "D5BB70B0-8EA4-5C88-8419-8D0FFAAE7C59",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ritz-carlton-oahu-turtle-bay-suhyrswrld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suhyrswrld/video/7677286594407042318",
+      "sourceAuthor": "@suhyrswrld",
+      "stops": [
+        {
+          "id": "4968B2D2-5D18-55F2-80EF-B65F0F914F4B",
+          "order": 0,
+          "title": "The Ritz-Carlton O'ahu, Turtle Bay",
+          "caption": "everyday should look like this",
+          "latitude": 21.70533,
+          "longitude": -157.9986,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ritz-carlton-oahu-turtle-bay-suhyrswrld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.70533,
+      "centroidLongitude": -157.9986,
+      "city": "Kahuku",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Green Escape",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B80E35DE-8EA2-50A5-8E33-CA8F7FCC0104",
+      "createdAt": "2026-09-20",
+      "title": "Island Beach, Sherwood Island State Park",
+      "shortDescription": "A post by @imjennychang on Instagram.",
+      "longDescription": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+      "makerId": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdFkMJZMBd8/",
+      "sourceAuthor": "@imjennychang",
+      "stops": [
+        {
+          "id": "CFDCB103-E7BF-5A20-AA3E-96C153400B44",
+          "order": 0,
+          "title": "Island Beach, Sherwood Island State Park",
+          "caption": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+          "latitude": 41.11507,
+          "longitude": -73.32978,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.11507,
+      "centroidLongitude": -73.32978,
+      "city": "Westport",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5366BBCF-183A-5848-ADDC-CDFF810EBD18",
+      "createdAt": "2026-09-20",
+      "title": "Canopus Beach, Fahnestock State Park",
+      "shortDescription": "A post by @imjennychang on Instagram.",
+      "longDescription": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+      "makerId": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdFkMJZMBd8/",
+      "sourceAuthor": "@imjennychang",
+      "stops": [
+        {
+          "id": "FCDC45B5-D958-5DD5-BB62-38D056F3AE79",
+          "order": 0,
+          "title": "Canopus Beach, Fahnestock State Park",
+          "caption": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+          "latitude": 41.45852,
+          "longitude": -73.83398,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.45852,
+      "centroidLongitude": -73.83398,
+      "city": "Kent",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "41BDAF7B-09FA-5AC3-99A3-50AD1E081700",
+      "createdAt": "2026-09-20",
+      "title": "Brighton Beach",
+      "shortDescription": "A post by @imjennychang on Instagram.",
+      "longDescription": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+      "makerId": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdFkMJZMBd8/",
+      "sourceAuthor": "@imjennychang",
+      "stops": [
+        {
+          "id": "F4809B67-F883-53FE-BBBD-29CA21FDD66F",
+          "order": 0,
+          "title": "Brighton Beach",
+          "caption": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+          "latitude": 40.57964,
+          "longitude": -73.96111,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.57964,
+      "centroidLongitude": -73.96111,
+      "city": "Brooklyn",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "Green Escape"
       ],
       "priceUSD": 0
     }
