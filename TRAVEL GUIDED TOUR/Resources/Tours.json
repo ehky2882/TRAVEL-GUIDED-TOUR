@@ -92509,8 +92509,8 @@
           "order": 0,
           "title": "Pinacoteca di Brera",
           "caption": "The gallery and the statue in its courtyard opened on exactly the same day.",
-          "latitude": 45.47213429948129,
-          "longitude": 9.187825546087025,
+          "latitude": 45.4721343,
+          "longitude": 9.1878255,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pinacoteca-di-brera.mp3",
           "audioDurationSeconds": 145,
           "triggerMode": "geofenced",
@@ -92522,8 +92522,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 145,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.47213429948129,
-      "centroidLongitude": 9.187825546087025,
+      "centroidLatitude": 45.4721343,
+      "centroidLongitude": 9.1878255,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
@@ -105706,6 +105706,36 @@
       "tourIds": [
         "3D0B802F-2C73-5BC7-B7FE-7E5FAA142786",
         "EF97C81C-B77F-597B-BF3E-2957D10FAC14"
+      ]
+    },
+    {
+      "id": "a6d3edc1-825b-5b75-b83e-091fbf7c7779",
+      "name": "Pinacoteca di Brera",
+      "description": null,
+      "latitude": 45.4721343,
+      "longitude": 9.1878255,
+      "city": "Milan",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "b1fb37af-feb1-5d87-be76-7540c2768cc1",
+        "26B5F07E-22A8-5F64-8754-892EE962314E"
+      ]
+    },
+    {
+      "id": "86cd851d-49f8-5752-ac89-7e6502c6d74c",
+      "name": "Stedelijk Museum",
+      "description": null,
+      "latitude": 52.358,
+      "longitude": 4.8799,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "d8111f1a-3093-56b6-951d-84358df67e2d",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
       ]
     }
   ],
@@ -267533,8 +267563,8 @@
           "order": 0,
           "title": "Would you visit? 📍Pinacoteca di Brera Milan Italy @pinaco…",
           "caption": "Would you visit? 📍Pinacoteca di Brera Milan Italy @pinacotecabrera #pinacotecadibrera #pinacoteca #brera #milan #milano #girlandgallery #ita",
-          "latitude": 45.47213429948129,
-          "longitude": 9.187825546087025,
+          "latitude": 45.4721343,
+          "longitude": 9.1878255,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267546,8 +267576,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.47213429948129,
-      "centroidLongitude": 9.187825546087025,
+      "centroidLatitude": 45.4721343,
+      "centroidLongitude": 9.1878255,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
