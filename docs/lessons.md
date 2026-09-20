@@ -781,6 +781,13 @@ cheap are `--compressed --max-filesize 2000`; ⚠️ **curl then exits 63 on suc
 **A merged PR is finished.** Restart the branch from the latest `main`; never stack new commits
 on merged history.
 
+🔴 **Branch from `origin/main`, never the local `main`** — this checkout is shared and routinely
+behind, and a stale base reaches Apple. On 2026-09-19 a branch cut from a local `main` still at
+`MARKETING_VERSION = 1.1.2` built and signed fine, then died at upload with **90186, "train 1.1.2
+is closed"** — 1.1.2 had released on 2026-09-14 and `origin/main` was already 1.1.3. **The fix is
+`git rebase origin/main`, never a hand-edited version**; see the 90186 entry below for why that
+rejection is also evidence the version shipped.
+
 **A conflicted PR triggers NO CI at all** — 0 check runs. Read `mergeable_state`; don't wait.
 
 **Resolve a `Tours.json` conflict by taking `main`'s file and re-running the idempotent
@@ -841,6 +848,33 @@ and the failure summary names the file but never the reason.
 ---
 
 ## 9. App code
+
+### A visual unit on screen must be tuned in SCREEN units (2026-09-19)
+
+🔴 **Map clustering bucketed pins into a lat/lon grid of "20 cells across the region".
+On a 390pt phone that is a ~20pt cell, under a badge 36–44pt wide** — so neighbouring
+badges necessarily overlapped, and the defect grew with the catalogue until Manhattan was
+unreadable at ~3,600 markers. No value of `cellsAcross` fixes it: a grid bucket answers
+"same cell?", never "how far apart on screen?", so two pins a few points apart either side
+of a cell line stayed separate at **every** zoom.
+
+**The tell was already in the repo.** The maker map passed `cellsAcross: 12` with a comment
+explaining that 20 cells across a *short* frame span too few points. A constant that has to
+be re-tuned per surface is a unit error, not a taste setting. The fix (#1010) was greedy
+radius clustering in `MKMapPoint` space with the radius **in points** — one number that
+means the same thing on every surface, so both maps deleted their local tuning.
+
+**Degrees are not screen distance.** `latSpan/20 × lonSpan/20` cells are not square on
+screen and stretch with latitude; Mercator map-point distance is proportional to screen
+distance at any zoom, which is the only reason a points radius is meaningful.
+
+**Keep what the old design was protecting.** The grid's absolute (lat 0, lon 0) origin
+existed so a pan could not re-key a bucket and churn SwiftUI's annotation IDs. The
+replacement earns the same property differently: quantise zoom to half-steps, cluster the
+**whole** set, and cull the **output** to the viewport. Cluster *before* culling and a
+marker entering the window can re-form clusters mid-pan — the exact bug the original
+comments were written about.
+
 
 🔴 **The mini-player and tab bar are in a window ABOVE the app, so anything the main window
 presents goes behind them — present it from THEIR window instead of hiding them.**
