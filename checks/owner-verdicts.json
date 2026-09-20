@@ -39,6 +39,11 @@
   "note": "owner: all correct. The check named Casa das Canoas in Rio -- another modernist glass house on a wooded slope, by Niemeyer rather than Bo Bardi. Same failure mode as Grace Farms/Glass House, but here the catalogue was right",
   "verdict": "correct"
  },
+ "Chiesa di San Nicolao della Flüe": {
+  "date": "2026-09-20",
+  "note": "was 'A brutalist church, Via Dalmazia' — a DESCRIPTION, not a name, which is why gate B's question was malformed. Owner named it. The check had said 'Chiesa di San Giovanni Battista, Mogliano', a different brutalist church. Title now names the building and the coordinate moved 210 m onto it. City unchanged, not a place member",
+  "verdict": "fixed"
+ },
  "Dayabumi Complex": {
   "date": "2026-09-19",
   "note": "owner (hedged): correct, Kuala Lumpur. The check named Bank Negara Malaysia -- also a KL landmark with Islamic-modernist geometry, which is the likely source of the confusion. NOT re-verified against the pixels",
