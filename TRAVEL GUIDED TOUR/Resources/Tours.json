@@ -5109,6 +5109,26 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/lylasmind/"
+    },
+    {
+      "id": "9DE2A47A-D64D-532D-9C61-B7BC601741D7",
+      "displayName": "TikTok @marionsworldd",
+      "platform": "tiktok",
+      "handle": "marionsworldd",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-marionsworldd.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@marionsworldd"
+    },
+    {
+      "id": "D5BB70B0-8EA4-5C88-8419-8D0FFAAE7C59",
+      "displayName": "TikTok @suhyrswrld",
+      "platform": "tiktok",
+      "handle": "suhyrswrld",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-suhyrswrld.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@suhyrswrld"
     }
   ],
   "tours": [
@@ -272994,7 +273014,8 @@
       "tags": [
         "Waterfront",
         "Viewpoint",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Maritime"
       ],
       "priceUSD": 0
     },
@@ -273176,7 +273197,8 @@
       "tags": [
         "Park",
         "Green Escape",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Architecture"
       ],
       "priceUSD": 0
     },
@@ -273313,7 +273335,8 @@
         "Notable Building",
         "Viewpoint",
         "Free to Visit",
-        "Beaux-Arts"
+        "Beaux-Arts",
+        "Architecture"
       ],
       "priceUSD": 0
     },
@@ -273539,7 +273562,8 @@
       "tags": [
         "Park",
         "Green Escape",
-        "Hidden Gem"
+        "Hidden Gem",
+        "History"
       ],
       "priceUSD": 0
     },
@@ -273585,7 +273609,8 @@
         "Notable Building",
         "Viewpoint",
         "Free to Visit",
-        "Beaux-Arts"
+        "Beaux-Arts",
+        "Architecture"
       ],
       "priceUSD": 0
     },
@@ -273992,7 +274017,8 @@
       "tags": [
         "Park",
         "Green Escape",
-        "Hidden Gem"
+        "Hidden Gem",
+        "History"
       ],
       "priceUSD": 0
     },
@@ -274037,7 +274063,8 @@
       "tags": [
         "Venue",
         "Green Escape",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -274488,7 +274515,8 @@
       "tags": [
         "Venue",
         "Waterfront",
-        "Green Escape"
+        "Green Escape",
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -274533,7 +274561,8 @@
       "tags": [
         "Venue",
         "Waterfront",
-        "Green Escape"
+        "Green Escape",
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -274896,7 +274925,8 @@
       "tags": [
         "Museum",
         "Green Escape",
-        "Hidden Gem"
+        "Hidden Gem",
+        "History"
       ],
       "priceUSD": 0
     },
@@ -275124,6 +275154,144 @@
         "Remembrance",
         "Viewpoint",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "96D24F42-DE42-591A-A338-81570BD78B09",
+      "createdAt": "2026-09-20",
+      "title": "The St. Regis Cap Cana",
+      "shortDescription": "A post by @marionsworldd on TikTok.",
+      "longDescription": "St. Regis Cap Cana📍 def on my list of Caribbean favorites 🤍🇩🇴✨ #stregiscapcana #capcana #dominicanrepublic #luxurytravel #puntacana",
+      "makerId": "9DE2A47A-D64D-532D-9C61-B7BC601741D7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-regis-cap-cana-marionsworldd_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@marionsworldd/video/7668104546660453663",
+      "sourceAuthor": "@marionsworldd",
+      "stops": [
+        {
+          "id": "734554F8-5517-5B9C-943B-699EFCAEC015",
+          "order": 0,
+          "title": "The St. Regis Cap Cana",
+          "caption": "St. Regis Cap Cana📍 def on my list of Caribbean favorites 🤍🇩🇴✨ #stregiscapcana #capcana #dominicanrepublic #luxurytravel #puntacana",
+          "latitude": 18.456149,
+          "longitude": -68.415118,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-regis-cap-cana-marionsworldd_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.456149,
+      "centroidLongitude": -68.415118,
+      "city": "Punta Cana",
+      "country": "Dominican Republic",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Green Escape",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EF6E2238-8168-5E91-BEF5-1264D77EBF63",
+      "createdAt": "2026-09-20",
+      "title": "W Punta Cana",
+      "shortDescription": "A post by @explorewithdasom on TikTok.",
+      "longDescription": "JUST 4 hrs away from nyc...🫢🧉 take @Arajet from Newark airport & in ~4 hours, you'll land in 📍Punta Cana, Dominican Republic where W Punta Cana is a 45-min drive away 🏝️ SEND THIS to who you’d go with... #whotel #puntacana #allinclusive #nycgetaway #travelblogger",
+      "makerId": "2476F985-2374-564C-9628-5FC3DB8C9ED7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/w-punta-cana-explorewithdasom_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@explorewithdasom/video/7655427525585292557",
+      "sourceAuthor": "@explorewithdasom",
+      "stops": [
+        {
+          "id": "9E94D09D-2BB5-57F3-8425-0662936DB791",
+          "order": 0,
+          "title": "W Punta Cana",
+          "caption": "JUST 4 hrs away from nyc...🫢🧉 take @Arajet from Newark airport & in ~4 hours, you'll land in 📍Punta Cana, Dominican Republic where W Punta C",
+          "latitude": 18.836325,
+          "longitude": -68.606867,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/w-punta-cana-explorewithdasom_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.836325,
+      "centroidLongitude": -68.606867,
+      "city": "Punta Cana",
+      "country": "Dominican Republic",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Contemporary",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6B4B2779-DC1E-53A8-B726-D24C98E55B14",
+      "createdAt": "2026-09-20",
+      "title": "The Ritz-Carlton O'ahu, Turtle Bay",
+      "shortDescription": "A post by @suhyrswrld on TikTok.",
+      "longDescription": "everyday should look like this",
+      "makerId": "D5BB70B0-8EA4-5C88-8419-8D0FFAAE7C59",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ritz-carlton-oahu-turtle-bay-suhyrswrld_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@suhyrswrld/video/7677286594407042318",
+      "sourceAuthor": "@suhyrswrld",
+      "stops": [
+        {
+          "id": "4968B2D2-5D18-55F2-80EF-B65F0F914F4B",
+          "order": 0,
+          "title": "The Ritz-Carlton O'ahu, Turtle Bay",
+          "caption": "everyday should look like this",
+          "latitude": 21.70533,
+          "longitude": -157.9986,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ritz-carlton-oahu-turtle-bay-suhyrswrld_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.70533,
+      "centroidLongitude": -157.9986,
+      "city": "Kahuku",
+      "country": "United States",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Green Escape",
+        "Commerce"
       ],
       "priceUSD": 0
     }
