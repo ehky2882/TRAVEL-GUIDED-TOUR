@@ -1,20 +1,28 @@
-# HANDOFF 2026-09-20 (2) — twenty places, and a work queue for 301 findings
+# HANDOFF 2026-09-20 (2) — ten places, and a work queue for 301 findings
 
 Follows `archive/HANDOFF-260920-vision-sweep.md`, which covers the sweep itself.
 
 ## What shipped
 
-**Places 390 → 410**, in two commits on `claude/scale-pinned-tours-automation-dba3lx`
+**Places 398 → 408** on `claude/scale-pinned-tours-automation-dba3lx`
 ([#1023](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1023)).
 
-**Nine auto-created** by `make-places.py --apply` — the band it is allowed to act on
+🔴 **This started as nine auto-minted places and ended as ten owner-approved ones.** While
+the branch was open, another session shipped **#1024 and minted EIGHT of the same nine from
+the same candidates**, naming them locally where this branch used the gazetteer's English
+(`Cirkelbroen` / Circle Bridge, `Jardin Majorelle` / Majorelle Garden). Theirs merged first,
+so theirs won and the duplicate work was **dropped, not resolved**. `make-places.py` now
+proposes **0** — every proven and gazetteer candidate is already placed.
+
+**What the duplicated run WOULD have created** (kept for the record, all now on `main` under
+other names) by `make-places.py --apply` — the band it is allowed to act on
 alone, because each has two coincident members **plus an independent second signal**:
 Isle of Capri, Essanay Studios, Pinacoteca di Brera, Fairmont Banff Springs, Stedelijk
 Museum (all 0 m); Circle Bridge, Majorelle Garden, Coal Drops Yard, Wilton's Music Hall
 (gazetteer, ≤98 m). It **refused** Salón 1923 and Fondazione Prada, which the owner had
 already declined — that refusal list is what stops a re-run re-proposing them.
 
-**Eleven owner-approved** from the EXACT·ASK band — coincident but with no second signal,
+**Ten owner-approved** (of eleven put to the owner) from the EXACT·ASK band — coincident but with no second signal,
 so the script correctly would not mint them: MoMA, The Royal Academy, Louvre, Pont
 Alexandre III & Petit Palais, Rietveld Schröder House, Isabella Stewart Gardner Museum,
 Miami Slice, Taste of Heaven, Hungarian Parliament Building, Budafok Cellars, David N.
@@ -22,9 +30,13 @@ Dinkins Municipal Building.
 
 Minted through `make-places.apply()` rather than by hand, so the marker stop (`order == 0`,
 not `stops[0]`) and the centroid move together and `places` is appended, never sorted.
-Every group was already coincident, so **nothing moved: 165 insertions, 0 deletions**.
-`validate-tours-mirror`: 0 errors, **511 warnings before and after**, compared by stashing
-and re-running rather than by reading one number.
+Every group was already coincident, so **nothing moved**: `git diff origin/main` shows ten
+place objects appended and nothing else.
+
+⚠️ **The first warning comparison in this branch was WRONG.** `git stash` restored the
+branch's own pre-merge state rather than `main`, so it compared this work against itself and
+reported a reassuring "511 before and after". The honest check is to run the validator **back
+to back on main's catalogue and on this tree**: **0 errors and 514 warnings both times.**
 
 ### Two names came from the posts, not the pin titles
 - **"Chef Tony's" is the chef.** Both Brooklyn pins point at **Taste of Heaven**
@@ -41,6 +53,19 @@ The Hungarian Parliament library/tunnels pair, the Budafok pair and the Municipa
 pair were all put to the owner **as likely part-vs-whole or co-location traps**, and the
 owner approved all three. That is now precedent on a question `docs/places.md` records as
 undecided.
+
+## 🔴 Merging two sessions' place runs — do not hand-resolve it
+
+Merging `main` produced **17 conflict hunks in `Tours.json`, every one a pair of coordinates**
+for an entry that both runs had moved onto its own place point. Hand-resolving that inside a
+100k-line JSON is exactly the edit nobody can review. **Take `main`'s catalogue whole and
+re-run the place creation against it** — re-derive, never merge. The residual merge then
+resolves to `ours` correctly, and the proof is that `git diff origin/main` shows only the
+appended places.
+
+The apply step **refused to write anything** when a group it expected to hold 2 members held
+0, rather than minting a partial set. It now also refuses an entry that already belongs to a
+place — the guard that stops two sessions double-placing one pin.
 
 ## 🔴 The stale-branch near-miss — read this before trusting any proposal
 
@@ -104,6 +129,10 @@ them correct. The ruling reached only one of the three, because matching is per-
 
 ## State
 
-- `claude/scale-pinned-tours-automation-dba3lx` → #1023, two commits, CI not yet read.
+- `claude/scale-pinned-tours-automation-dba3lx` → #1023, five commits, CI not yet read.
+- **Isle of Capri is NOT a place**: another session found the two entries are an Instagram
+  duplicate and opened `status/owner/remove-isle-of-capri-instagram-dup.md` plus
+  `backend/remove_nickcabotrodriguez_instagram_duplicate.sql`. It was in this branch's first
+  nine and is correctly absent now.
 - #1021 (the sweep) merged as `d6438455`; its branch is deleted.
 - The Gemini key lived in the session scratchpad and **dies with the container**.
