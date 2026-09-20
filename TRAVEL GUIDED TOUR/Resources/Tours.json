@@ -5099,6 +5099,16 @@
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.tiktok.com/@carolinewimberly"
+    },
+    {
+      "id": "B8C0EAF3-23C9-5F62-B23D-E702A0721AB2",
+      "displayName": "Instagram @lylasmind",
+      "platform": "instagram",
+      "handle": "lylasmind",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/lylasmind/"
     }
   ],
   "tours": [
@@ -275068,6 +275078,52 @@
         "Architecture",
         "History",
         "Baroque"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EB75C914-C356-5370-B51F-83CC0836EA40",
+      "createdAt": "2026-09-20",
+      "title": "Irish Hunger Memorial",
+      "shortDescription": "A post by @lylasmind on Instagram.",
+      "longDescription": "Outlook spot for sunset",
+      "makerId": "B8C0EAF3-23C9-5F62-B23D-E702A0721AB2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/irish-hunger-memorial-lylasmind_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DccRKxtvK7D/",
+      "sourceAuthor": "@lylasmind",
+      "stops": [
+        {
+          "id": "CC3BF82B-AEF6-5EBD-931B-DAF9F4C4D704",
+          "order": 0,
+          "title": "Irish Hunger Memorial",
+          "caption": "Outlook spot for sunset",
+          "latitude": 40.71514,
+          "longitude": -74.01651,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/irish-hunger-memorial-lylasmind_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.71514,
+      "centroidLongitude": -74.01651,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Monument",
+        "Remembrance",
+        "Viewpoint",
+        "Free to Visit"
       ],
       "priceUSD": 0
     }
