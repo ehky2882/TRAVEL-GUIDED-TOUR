@@ -5139,6 +5139,16 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/imjennychang/"
+    },
+    {
+      "id": "6CA49FDC-F6EC-58F8-9AB9-9E6FAA71B1A6",
+      "displayName": "Instagram @mapsbyjess",
+      "platform": "instagram",
+      "handle": "mapsbyjess",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/mapsbyjess/"
     }
   ],
   "tours": [
@@ -22150,8 +22160,8 @@
           "order": 0,
           "title": "Wilton's Music Hall",
           "caption": "Down an alley in the East End stands the oldest surviving grand music hall in the world — and the reason it survived is that everyone forgot it was there.",
-          "latitude": 51.5107,
-          "longitude": -0.06693,
+          "latitude": 51.51064,
+          "longitude": -0.06689,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wiltons-music-hall.mp3",
           "audioDurationSeconds": 153,
           "triggerMode": "geofenced",
@@ -22161,8 +22171,8 @@
         }
       ],
       "primaryCategory": "musicAndPerformance",
-      "centroidLatitude": 51.5107,
-      "centroidLongitude": -0.06693,
+      "centroidLatitude": 51.51064,
+      "centroidLongitude": -0.06689,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "Built behind a row of houses off Graces Alley in the 1850s, Wilton's is the oldest surviving grand music hall in the world — a single balconied room carried on slender barley-twist iron columns. Rescued from dereliction and conserved rather than restored, its distressed walls and worn grandeur make it one of London's most atmospheric stages.",
@@ -25119,8 +25129,8 @@
           "order": 0,
           "title": "Coal Drops Yard",
           "caption": "You're standing in the middle of what used to be one of the dirtiest places in London.",
-          "latitude": 51.536339196,
-          "longitude": -0.126433968,
+          "latitude": 51.5358,
+          "longitude": -0.12667,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/coal-drops-yard.mp3",
           "audioDurationSeconds": 145,
           "triggerMode": "manual",
@@ -25132,8 +25142,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 145,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.536339196,
-      "centroidLongitude": -0.126433968,
+      "centroidLatitude": 51.5358,
+      "centroidLongitude": -0.12667,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -44199,7 +44209,7 @@
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "aaeec061-64f1-5126-bed6-95716f9fd00e",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686"
+        "FED40890-5ADF-5CD0-8751-732232799E8A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -44759,14 +44769,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
         "89fa0677-9165-5507-9d25-a769338ed8df",
         "1d402527-2285-55a7-97db-67ed5071efc4",
-        "2489b022-457b-5927-b73e-82fa367b5e76",
-        "cf833db1-9801-5f5a-95c9-50355c243b71"
+        "2489b022-457b-5927-b73e-82fa367b5e76"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -45159,13 +45169,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "89fa0677-9165-5507-9d25-a769338ed8df"
+        "be6af98d-156a-5a62-9b18-ea7ed90b8686"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -45272,14 +45282,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
-        "d82d2f32-2f5d-537f-9819-3ddf16b700f1",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
+        "d82d2f32-2f5d-537f-9819-3ddf16b700f1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -46061,8 +46071,8 @@
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
-        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4"
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -75715,8 +75725,8 @@
           "order": 0,
           "title": "Jardin Majorelle | حديقة ماجوريل",
           "caption": "Cobalt walls, bamboo forty feet overhead, and somewhere beneath it all, several hundred species of plant gathered from five continents.",
-          "latitude": 31.6415,
-          "longitude": -8.0029,
+          "latitude": 31.64147,
+          "longitude": -8.00291,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardin-majorelle.mp3",
           "audioDurationSeconds": 117,
           "triggerMode": "geofenced",
@@ -75728,8 +75738,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 117,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 31.6415,
-      "centroidLongitude": -8.0029,
+      "centroidLatitude": 31.64147,
+      "centroidLongitude": -8.00291,
       "city": "Marrakech",
       "country": "Morocco",
       "relatedTourIds": [
@@ -95996,7 +96006,7 @@
           "title": "Cirkelbroen (The Circle Bridge)",
           "caption": "From a distance, this looks less like a bridge than a small fleet of boats moored mid-canal.",
           "latitude": 55.67243,
-          "longitude": 12.5838,
+          "longitude": 12.58379,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cirkelbroen.mp3",
           "audioDurationSeconds": 142,
           "triggerMode": "geofenced",
@@ -96009,7 +96019,7 @@
       "totalDurationSeconds": 142,
       "walkingDistanceMeters": null,
       "centroidLatitude": 55.67243,
-      "centroidLongitude": 12.5838,
+      "centroidLongitude": 12.58379,
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
@@ -100417,7 +100427,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "996b8d38-5432-5429-835c-7482bfc4dbb9",
-        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7"
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF"
       ]
     },
     {
@@ -101785,7 +101796,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "25F5C368-3CE1-5E32-81F4-A7C6DDB4D028",
-        "E898F878-14E3-5202-8B9D-5FA9F93DC252"
+        "E898F878-14E3-5202-8B9D-5FA9F93DC252",
+        "410887F3-61F4-5D68-9F79-BAB9B2D63FF8"
       ]
     },
     {
@@ -102677,7 +102689,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74",
-        "A29F7EAF-42BB-557B-A505-713705E311D5"
+        "A29F7EAF-42BB-557B-A505-713705E311D5",
+        "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
+        "1F09AE6A-6E92-5EB8-9DB5-357E5B215B55"
       ]
     },
     {
@@ -102723,7 +102737,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "5782C759-50FA-57A2-883A-0A25DD984DAC",
-        "fb824f29-4d1a-4e39-bdf2-881da8665cbc"
+        "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
+        "EA433FFE-2571-5886-A5EA-9CD51E588797"
       ]
     },
     {
@@ -103362,7 +103377,8 @@
         "553DFF50-75CB-5ED7-9A1D-DB499EB431AC",
         "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA",
         "90CBBC49-A54B-50CB-B660-697281CBBD44",
-        "E35F494D-226E-593E-B87B-5894864085C2"
+        "E35F494D-226E-593E-B87B-5894864085C2",
+        "DF4C98F4-AD93-5220-8586-817D5B49BEF4"
       ]
     },
     {
@@ -105033,7 +105049,8 @@
       "additionalImageURLs": [],
       "tourIds": [
         "2B0062BF-E29F-58A1-B35E-4C9766E6547A",
-        "F67D28AD-C087-5C87-9CE4-53229F678507"
+        "F67D28AD-C087-5C87-9CE4-53229F678507",
+        "96CA40E4-E80B-5BDE-B213-80917A7E953D"
       ]
     },
     {
@@ -105672,21 +105689,6 @@
       ]
     },
     {
-      "id": "644c5aa4-29ea-5fa7-8a12-0fb4e76e1b1a",
-      "name": "Isle of Capri",
-      "description": null,
-      "latitude": 40.7627893,
-      "longitude": -73.9659429,
-      "city": "New York",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52"
-      ]
-    },
-    {
       "id": "a972c1a5-ea58-5cba-8f20-e2a2a77c5d39",
       "name": "Essanay Studios",
       "description": null,
@@ -105699,21 +105701,6 @@
       "tourIds": [
         "F1B3FB52-3E13-5DE5-AEBD-DCFFAD62D74C",
         "3619F5E5-2AC4-5316-8647-41832300413D"
-      ]
-    },
-    {
-      "id": "a6d3edc1-825b-5b75-b83e-091fbf7c7779",
-      "name": "Pinacoteca di Brera",
-      "description": null,
-      "latitude": 45.4721343,
-      "longitude": 9.1878255,
-      "city": "Milan",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "b1fb37af-feb1-5d87-be76-7540c2768cc1",
-        "26B5F07E-22A8-5F64-8754-892EE962314E"
       ]
     },
     {
@@ -105732,6 +105719,21 @@
       ]
     },
     {
+      "id": "a6d3edc1-825b-5b75-b83e-091fbf7c7779",
+      "name": "Pinacoteca di Brera",
+      "description": null,
+      "latitude": 45.4721343,
+      "longitude": 9.1878255,
+      "city": "Milan",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "b1fb37af-feb1-5d87-be76-7540c2768cc1",
+        "26B5F07E-22A8-5F64-8754-892EE962314E"
+      ]
+    },
+    {
       "id": "86cd851d-49f8-5752-ac89-7e6502c6d74c",
       "name": "Stedelijk Museum",
       "description": null,
@@ -105747,11 +105749,11 @@
       ]
     },
     {
-      "id": "dac4ac41-f653-5cae-ab86-9c3a7e23148b",
-      "name": "Circle Bridge",
+      "id": "750f83d5-1f0f-5060-86c1-0440b44b2c3f",
+      "name": "Cirkelbroen",
       "description": null,
       "latitude": 55.67243,
-      "longitude": 12.5838,
+      "longitude": 12.58379,
       "city": "Copenhagen",
       "address": null,
       "heroImageURL": null,
@@ -105762,11 +105764,11 @@
       ]
     },
     {
-      "id": "756f91bd-89b2-548b-956b-eb3dd9d541f3",
-      "name": "Majorelle Garden",
+      "id": "0de69908-2a9b-5aed-b252-c777c7b0b893",
+      "name": "Jardin Majorelle",
       "description": null,
-      "latitude": 31.6415,
-      "longitude": -8.0029,
+      "latitude": 31.64147,
+      "longitude": -8.00291,
       "city": "Marrakech",
       "address": null,
       "heroImageURL": null,
@@ -105780,8 +105782,8 @@
       "id": "44d2ca02-524c-528a-947e-93bb0e0e0ba4",
       "name": "Coal Drops Yard",
       "description": null,
-      "latitude": 51.536339196,
-      "longitude": -0.126433968,
+      "latitude": 51.5358,
+      "longitude": -0.12667,
       "city": "London",
       "address": null,
       "heroImageURL": null,
@@ -105795,8 +105797,8 @@
       "id": "2d9b85b9-dec6-5ba8-b160-0ce36cf5a4cc",
       "name": "Wilton's Music Hall",
       "description": null,
-      "latitude": 51.5107,
-      "longitude": -0.06693,
+      "latitude": 51.51064,
+      "longitude": -0.06689,
       "city": "London",
       "address": null,
       "heroImageURL": null,
@@ -105954,21 +105956,6 @@
       "tourIds": [
         "9F2BCD06-44A5-55F6-8982-BCF63A0A785D",
         "28EBDF0F-37C2-5A90-AD84-8E6B591F1911"
-      ]
-    },
-    {
-      "id": "7e284eda-d9b3-5eee-a017-62c794877bea",
-      "name": "David N. Dinkins Municipal Building",
-      "description": null,
-      "latitude": 40.71303,
-      "longitude": -74.00347,
-      "city": "New York",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
-        "1F09AE6A-6E92-5EB8-9DB5-357E5B215B55"
       ]
     }
   ],
@@ -112473,8 +112460,7 @@
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "BE8B80BD-771D-5CE4-801F-B81125261722",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52"
+        "BE8B80BD-771D-5CE4-801F-B81125261722"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -164761,7 +164747,8 @@
       "city": "Pasadena",
       "country": "United States",
       "relatedTourIds": [
-        "DA517148-1C70-5BC2-8853-2C506A0AE328"
+        "DA517148-1C70-5BC2-8853-2C506A0AE328",
+        "ACB29B95-1F69-593A-B838-D3034AAB93DC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -184496,8 +184483,8 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
-        "4735A7C7-26CF-5192-904C-A5AA31F52915"
+        "4735A7C7-26CF-5192-904C-A5AA31F52915",
+        "775EC7F0-9C41-5072-86BD-EDF51AC0131C"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -193894,11 +193881,11 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "A45805AB-F0E2-5D32-9E37-98A450A4F391",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
+        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
+        "3B7D447F-55D7-586F-88C9-73EAD75ACA09"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -194167,10 +194154,10 @@
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
+        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
+        "FB2E598B-3244-5B6C-84DA-E97F4E444088"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -233401,14 +233388,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "4BDCA974-DD0D-536F-BB83-175659EC83C2",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "A90AECAF-CA4C-5FA5-9DD7-4C870F196AB9",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
+        "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
+        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -253319,8 +253306,8 @@
           "order": 0,
           "title": "MSG Sphere",
           "caption": "This Building Looks Like a Spaceship😱",
-          "latitude": 34.015739,
-          "longitude": -118.29079,
+          "latitude": 34.0157394,
+          "longitude": -118.2907898,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -253332,8 +253319,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.015739,
-      "centroidLongitude": -118.29079,
+      "centroidLatitude": 34.0157394,
+      "centroidLongitude": -118.2907898,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -266226,8 +266213,8 @@
           "order": 0,
           "title": "Wilton's Music Hall",
           "caption": "Buildings of London - Ep 2: Wilton’s Music Hall This little hidden gem is tucked down Graces Alley in Whitechapel and is the worlds oldest m",
-          "latitude": 51.5107,
-          "longitude": -0.06693,
+          "latitude": 51.51064,
+          "longitude": -0.06689,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -266239,8 +266226,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.5107,
-      "centroidLongitude": -0.06693,
+      "centroidLatitude": 51.51064,
+      "centroidLongitude": -0.06689,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -266544,8 +266531,8 @@
           "order": 0,
           "title": "Coal Drops Yard",
           "caption": "Buildings of London - Episode 10: Coal Drops Yard x Classic Car Boot Sale Coal drops Yard has a fascinating history, originally designed by ",
-          "latitude": 51.536339196,
-          "longitude": -0.126433968,
+          "latitude": 51.5358,
+          "longitude": -0.12667,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -266557,8 +266544,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.536339196,
-      "centroidLongitude": -0.126433968,
+      "centroidLatitude": 51.5358,
+      "centroidLongitude": -0.12667,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -267146,7 +267133,7 @@
           "title": "Cirkelbroen",
           "caption": "Shared Copenhagen - Ep 1: Cirkelbroen Designed by Danish Icelandic artist Olafur Eliasson and completed in 2015, this bridge acts as a place",
           "latitude": 55.67243,
-          "longitude": 12.5838,
+          "longitude": 12.58379,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267159,7 +267146,7 @@
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
       "centroidLatitude": 55.67243,
-      "centroidLongitude": 12.5838,
+      "centroidLongitude": 12.58379,
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
@@ -267200,8 +267187,8 @@
           "order": 0,
           "title": "Jardin Majorelle",
           "caption": "Villa Oasis and Jardin Majorelle This is possibly one of the most beautiful places I’ve ever been! It’s the iconic Jardin Majorelle in Marra",
-          "latitude": 31.6415,
-          "longitude": -8.0029,
+          "latitude": 31.64147,
+          "longitude": -8.00291,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267213,8 +267200,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 31.6415,
-      "centroidLongitude": -8.0029,
+      "centroidLatitude": 31.64147,
+      "centroidLongitude": -8.00291,
       "city": "Marrakech",
       "country": "Morocco",
       "relatedTourIds": [
@@ -273739,8 +273726,8 @@
           "order": 0,
           "title": "Centre 360 at the Municipal Building",
           "caption": "NYC has a new viewing platform, and it’s completely free to visit! I checked out Centre 360 inside the historic Municipal Building in Lower ",
-          "latitude": 40.71303,
-          "longitude": -74.00347,
+          "latitude": 40.7130272,
+          "longitude": -74.0034742,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -273752,8 +273739,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.71303,
-      "centroidLongitude": -74.00347,
+      "centroidLatitude": 40.7130272,
+      "centroidLongitude": -74.0034742,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -273867,61 +273854,6 @@
       "priceUSD": 0
     },
     {
-      "id": "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
-      "createdAt": "2026-09-20",
-      "title": "Isle of Capri",
-      "shortDescription": "A post by @nickcabotrodriguez on Instagram.",
-      "longDescription": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
-      "makerId": "299D0BA5-37D6-5B94-8378-85C8DA80712D",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DdUObmTs77_/",
-      "sourceAuthor": "@nickcabotrodriguez",
-      "stops": [
-        {
-          "id": "43C49B91-A808-5244-8292-DA1D6AFC9379",
-          "order": 0,
-          "title": "Isle of Capri",
-          "caption": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
-          "latitude": 40.7627893,
-          "longitude": -73.9659429,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7627893,
-      "centroidLongitude": -73.9659429,
-      "city": "New York",
-      "country": "United States",
-      "relatedTourIds": [
-        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
-        "866EE87D-8E08-514D-B67F-5B9268257DF0",
-        "1433B333-4647-5FC3-8AB1-5E12671669AE",
-        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
-        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
-        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
-        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
-        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95"
-      ],
-      "primaryCategory": "foodAndDrink",
-      "tags": [
-        "Venue",
-        "Food",
-        "History"
-      ],
-      "priceUSD": 0
-    },
-    {
       "id": "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
       "createdAt": "2026-09-20",
       "title": "Chicago Water Tower",
@@ -273941,8 +273873,8 @@
           "order": 0,
           "title": "Chicago Water Tower",
           "caption": "Chicago Weird Ep34: Chicago Water Tower 💧 #chicago #weird #chicagoweird #travel #haunted",
-          "latitude": 41.89718,
-          "longitude": -87.62444,
+          "latitude": 41.8971757,
+          "longitude": -87.6244367,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -273954,8 +273886,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.89718,
-      "centroidLongitude": -87.62444,
+      "centroidLatitude": 41.8971757,
+      "centroidLongitude": -87.6244367,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
@@ -274053,8 +273985,8 @@
           "order": 0,
           "title": "David N. Dinkins Municipal Building",
           "caption": "Side quest to the top of the David N. Dinkins Municipal Building - dreams do come true. And it’s free!! @citystorenyc @nycgov @nycmayor @nyc",
-          "latitude": 40.71303,
-          "longitude": -74.00347,
+          "latitude": 40.7130272,
+          "longitude": -74.0034742,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -274066,8 +273998,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.71303,
-      "centroidLongitude": -74.00347,
+      "centroidLatitude": 40.7130272,
+      "centroidLongitude": -74.0034742,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -274366,8 +274298,8 @@
           "order": 0,
           "title": "Leaning Tower of Niles",
           "caption": "Chicago Weird Ep4: Leaning Tower of Niles 🇮🇹 #chicago #travel #weird #chicagotravel #chicagoweird",
-          "latitude": 42.01242,
-          "longitude": -87.78406,
+          "latitude": 42.0124375,
+          "longitude": -87.7840625,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -274379,8 +274311,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 42.01242,
-      "centroidLongitude": -87.78406,
+      "centroidLatitude": 42.0124375,
+      "centroidLongitude": -87.7840625,
       "city": "Niles",
       "country": "United States",
       "relatedTourIds": [
@@ -275371,8 +275303,8 @@
           "order": 0,
           "title": "Blenheim Palace",
           "caption": "A Magnificent Glow-Up for a Magnificent Place Blenheim Palace in Oxfordshire is the most magnificent non-royal palace in Britain. It is argu",
-          "latitude": 51.84136,
-          "longitude": -1.36095,
+          "latitude": 51.841517,
+          "longitude": -1.360983,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -275384,8 +275316,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.84136,
-      "centroidLongitude": -1.36095,
+      "centroidLatitude": 51.841517,
+      "centroidLongitude": -1.360983,
       "city": "Woodstock",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -275622,8 +275554,8 @@
           "order": 0,
           "title": "Oberon at the New Museum",
           "caption": "@oberon_nyc has arrived at the New Museum. Designed by Shohei Shigematsu, the new Bowery restaurant brings together seasonal Hudson Valley c",
-          "latitude": 40.72235,
-          "longitude": -73.99284,
+          "latitude": 40.7224,
+          "longitude": -73.9928,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -275635,8 +275567,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.72235,
-      "centroidLongitude": -73.99284,
+      "centroidLatitude": 40.7224,
+      "centroidLongitude": -73.9928,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -276085,6 +276017,654 @@
         "Waterfront",
         "Park",
         "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4594F29F-3B25-5105-BF8E-54328E4344EA",
+      "createdAt": "2026-09-20",
+      "title": "Wigwam Motel",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "The Wigwam Motel in Holbrook, Arizona on Route 66",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wigwam-motel-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dabb5i8Ivn2/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "262565E1-B931-5B2F-8B62-9F4B856C8CFB",
+          "order": 0,
+          "title": "Wigwam Motel",
+          "caption": "The Wigwam Motel in Holbrook, Arizona on Route 66",
+          "latitude": 34.9025742,
+          "longitude": -110.1688323,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wigwam-motel-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.9025742,
+      "centroidLongitude": -110.1688323,
+      "city": "Holbrook",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ACB29B95-1F69-593A-B838-D3034AAB93DC",
+      "createdAt": "2026-09-20",
+      "title": "Michael's (former Art Deco theater)",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "Michael’s in Pasadena, and some of the interesting architecture nearby!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/michaels-art-deco-theater-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdEwTKTIh19/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "194EEE2A-5A00-5D4A-87D3-6945C83FE13D",
+          "order": 0,
+          "title": "Michael's (former Art Deco theater)",
+          "caption": "Michael’s in Pasadena, and some of the interesting architecture nearby!",
+          "latitude": 34.1462803,
+          "longitude": -118.1264255,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/michaels-art-deco-theater-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1462803,
+      "centroidLongitude": -118.1264255,
+      "city": "Pasadena",
+      "country": "United States",
+      "relatedTourIds": [
+        "9B9C153B-DB06-5804-9679-A9AC2F446715",
+        "3B286711-278B-5792-8B5A-3D83FDB6D072"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Art Deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BFC23995-C433-5824-A3F4-0FFEFA6451DF",
+      "createdAt": "2026-09-20",
+      "title": "Museum of Neon Art",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "The Chinese Theatre’s neon dragon on display at @museumofneonart",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-neon-art-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc6TL-Io8XR/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "E939BFFC-05F8-5CE8-B60C-8BFEF21EA24A",
+          "order": 0,
+          "title": "Museum of Neon Art",
+          "caption": "The Chinese Theatre’s neon dragon on display at @museumofneonart",
+          "latitude": 34.1437162,
+          "longitude": -118.2545819,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-neon-art-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1437162,
+      "centroidLongitude": -118.2545819,
+      "city": "Glendale",
+      "country": "United States",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Art",
+        "Museum"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1A291130-ECD5-53EE-896B-0D23F0C71C7E",
+      "createdAt": "2026-09-20",
+      "title": "Hall of the Crucifixion-Resurrection",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "Hall of Crucifixion-Resurrection at Forest Lawn in Glendale",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hall-of-crucifixion-resurrection-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc3u7opoSrU/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "F4A4C7BC-F58C-5B03-A8FC-E00B81419F31",
+          "order": 0,
+          "title": "Hall of the Crucifixion-Resurrection",
+          "caption": "Hall of Crucifixion-Resurrection at Forest Lawn in Glendale",
+          "latitude": 34.1245374,
+          "longitude": -118.2454971,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hall-of-crucifixion-resurrection-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1245374,
+      "centroidLongitude": -118.2454971,
+      "city": "Glendale",
+      "country": "United States",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Art",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9B9C153B-DB06-5804-9679-A9AC2F446715",
+      "createdAt": "2026-09-20",
+      "title": "Royal Laundry Complex",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "Royal Laundry Complex in Pasadena!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-laundry-complex-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcwKwVlIyRi/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "C7209411-A525-55CA-A26C-33C038AF66B7",
+          "order": 0,
+          "title": "Royal Laundry Complex",
+          "caption": "Royal Laundry Complex in Pasadena!",
+          "latitude": 34.1379041,
+          "longitude": -118.1492695,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-laundry-complex-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1379041,
+      "centroidLongitude": -118.1492695,
+      "city": "Pasadena",
+      "country": "United States",
+      "relatedTourIds": [
+        "ACB29B95-1F69-593A-B838-D3034AAB93DC"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EF69CE2A-6E73-5F2F-9D74-365E156F2238",
+      "createdAt": "2026-09-20",
+      "title": "La Vista Motel",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "La Vista Motel in Denver, Colorado - built in 1956!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-vista-motel-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Da8Hgt_ou4J/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "8C208C3B-E749-596A-AC17-4D6348DAAB92",
+          "order": 0,
+          "title": "La Vista Motel",
+          "caption": "La Vista Motel in Denver, Colorado - built in 1956!",
+          "latitude": 39.7399156,
+          "longitude": -104.9229048,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-vista-motel-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.7399156,
+      "centroidLongitude": -104.9229048,
+      "city": "Denver",
+      "country": "United States",
+      "relatedTourIds": [
+        "34DEEA5A-C265-52F0-AC1E-B4D132E0EFC4"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "582E27E3-3D69-589F-B53E-699C266646F1",
+      "createdAt": "2026-09-20",
+      "title": "Siesta Motel",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "The Siesta Motel in Durango, Colorado! 🌵",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/siesta-motel-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Da0fc_5oBEE/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "77C17EBF-4FB1-5334-BAE8-91913206BD07",
+          "order": 0,
+          "title": "Siesta Motel",
+          "caption": "The Siesta Motel in Durango, Colorado! 🌵",
+          "latitude": 37.3039565,
+          "longitude": -107.869378,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/siesta-motel-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.3039565,
+      "centroidLongitude": -107.869378,
+      "city": "Durango",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "34DEEA5A-C265-52F0-AC1E-B4D132E0EFC4",
+      "createdAt": "2026-09-20",
+      "title": "The All Inn Hotel",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "The All Inn Hotel in Denver, Colorado! Originally built in 1959!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/all-inn-hotel-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Davha_nqPfV/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "B2F8E6DC-47FD-5F2A-81BB-056D9817804A",
+          "order": 0,
+          "title": "The All Inn Hotel",
+          "caption": "The All Inn Hotel in Denver, Colorado! Originally built in 1959!",
+          "latitude": 39.7403719,
+          "longitude": -104.952022,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/all-inn-hotel-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.7403719,
+      "centroidLongitude": -104.952022,
+      "city": "Denver",
+      "country": "United States",
+      "relatedTourIds": [
+        "EF69CE2A-6E73-5F2F-9D74-365E156F2238"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "28CA82E7-E30A-5590-AC51-31B1374E8FBC",
+      "createdAt": "2026-09-20",
+      "title": "Pioneer Village",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "Pioneer Village in Minden, Nebraska!!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pioneer-village-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYU6IW2o4YH/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "FE86F296-5AEA-53DF-A3E5-21AA557975FB",
+          "order": 0,
+          "title": "Pioneer Village",
+          "caption": "Pioneer Village in Minden, Nebraska!!",
+          "latitude": 40.5040928,
+          "longitude": -98.9511427,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pioneer-village-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.5040928,
+      "centroidLongitude": -98.9511427,
+      "city": "Minden",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Museum"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "307410EC-3B2D-5624-9A3B-A3C669B79BC1",
+      "createdAt": "2026-09-20",
+      "title": "Magic Lamp Inn",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "Magic Lamp Inn 70th Celebration! Tomorrow, December 6th!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magic-lamp-inn-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DR5KoB_kapI/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "D8E5DECB-7A9B-5342-8D51-74A91EC0EF17",
+          "order": 0,
+          "title": "Magic Lamp Inn",
+          "caption": "Magic Lamp Inn 70th Celebration! Tomorrow, December 6th!",
+          "latitude": 34.1059426,
+          "longitude": -117.6266895,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magic-lamp-inn-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1059426,
+      "centroidLongitude": -117.6266895,
+      "city": "Rancho Cucamonga",
+      "country": "United States",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8889E4CC-C839-5DEA-B68A-C254C307A349",
+      "createdAt": "2026-09-20",
+      "title": "Buffett's Candies",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "Buffett’s Candies in Albuquerque, since 1956!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buffetts-candies-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DQcJ7U8icMM/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "AD6832DA-31E2-59CE-862B-69509F686DDD",
+          "order": 0,
+          "title": "Buffett's Candies",
+          "caption": "Buffett’s Candies in Albuquerque, since 1956!",
+          "latitude": 35.087036,
+          "longitude": -106.5696451,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buffetts-candies-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.087036,
+      "centroidLongitude": -106.5696451,
+      "city": "Albuquerque",
+      "country": "United States",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D0E32B30-B000-58D9-ABF7-58A9E2755964",
+      "createdAt": "2026-09-20",
+      "title": "Crest Theatre",
+      "shortDescription": "A post by @merchmotel on Instagram.",
+      "longDescription": "The Crest Theatre in Fresno, since 1949!",
+      "makerId": "76AEAB2E-C61E-5ED0-8F43-5BA967F90493",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/crest-theatre-merchmotel_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DPwdnsOD-dL/",
+      "sourceAuthor": "@merchmotel",
+      "stops": [
+        {
+          "id": "DCF49379-52A3-54BA-9E86-1F7DA7256C39",
+          "order": 0,
+          "title": "Crest Theatre",
+          "caption": "The Crest Theatre in Fresno, since 1949!",
+          "latitude": 36.735294,
+          "longitude": -119.7929868,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/crest-theatre-merchmotel_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.735294,
+      "centroidLongitude": -119.7929868,
+      "city": "Fresno",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Performance",
+        "Art Deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4212828A-1D7B-58D5-9691-60D298F36F07",
+      "createdAt": "2026-09-20",
+      "title": "Daljib (postcard shop), Gamcheon Culture Village",
+      "shortDescription": "A post by @mapsbyjess on Instagram.",
+      "longDescription": "Some of my favourite travel souvenirs are the ones that don’t stay with me 💌 Whenever I visit a place that leaves a lasting impression, I send three postcards - one to each of my grandmothers and one to my parents. It’s a tradition I’ve kept for years, and one that makes every trip feel a little more special Thats why I was so happy to find a shop that specializes in postcards while exploring Gamcheon Culture Village! I loved all the colours and general atmosphere of the village first thing in the morning, so I wanted to share a piece of that experience with my family Total visiting time here was about 30 minutes and my postcards arrived at their new homes in Canada about 10 days later. As someone living in Vienna now, Austrian post could never 💌 Fun fact: South Korea has one of the world’s fastest postal services, with domestic mail often arriving the next business day and international mail reaching many countries in under two weeks 📍Daljib (달집), Gamnae 2-ro, Gamcheon Culture Village, Busan Follow @mapmy.travels for more food and travel recommendations 👉🏻 Busan | Gamcheon Culture Village | Postcard shop Korea | Busan itinerary | Unique souvenirs Korea | Things to do in Busan | Busan travel | South Korea travel | Korea itinerary | Hidden gems Busan | Korean travel tips | Travel traditions | Busan attractions | Korea travel guide",
+      "makerId": "6CA49FDC-F6EC-58F8-9AB9-9E6FAA71B1A6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/daljib-postcard-shop-mapsbyjess_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbX_fdWiF_O/",
+      "sourceAuthor": "@mapsbyjess",
+      "stops": [
+        {
+          "id": "9FC62563-B4AA-5256-AFBB-845BDC6C934C",
+          "order": 0,
+          "title": "Daljib (postcard shop), Gamcheon Culture Village",
+          "caption": "Some of my favourite travel souvenirs are the ones that don’t stay with me 💌 Whenever I visit a place that leaves a lasting impression, I se",
+          "latitude": 35.0963371,
+          "longitude": 129.0087897,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/daljib-postcard-shop-mapsbyjess_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.0963371,
+      "centroidLongitude": 129.0087897,
+      "city": "Busan",
+      "country": "South Korea",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FED40890-5ADF-5CD0-8751-732232799E8A",
+      "createdAt": "2026-09-20",
+      "title": "Mrs. Cho's Noodles, Gwangjang Market",
+      "shortDescription": "A post by @mapsbyjess on Instagram.",
+      "longDescription": "Famous food that’s not overrated 🙅🏻‍♀️ Mrs. Cho’s knife-cut noodles stand became famous after appearing on Street Food: Asia on Netflix The atmosphere is fast-paced, with customers constantly coming and going, so don’t be put off if you see a queue. We visited just before closing and only waited a couple of minutes for a seat. Even though the serving staff was trying to close the stall, Mrs. Cho kept telling visitors to sit and order The knife-cut noodles are famous for a reason - comforting, good portion size, and served with unlimited kimchi refills. But the surprise favourite for me was the dumplings. They were so good that I genuinely could have eaten them every day I was in Seoul 🥟 After your meal, make sure to wander through the rest of Gwangjang Market and grab a hotteok for dessert. It was the perfect way to end a day of exploring 😋 ✨Fun fact: Gwangjang Market opened in 1905, making it Korea’s oldest continuously operating traditional market. Today, it’s home to hundreds of vendors selling everything from textiles to some of Seoul’s most iconic street food Follow @mapmy.travels for more food and travel recommendations 👉🏻 Gwangjang Market | Mrs Cho’s Noodle | Cho Yonsoon Kalguksu | Kalguksu | Knife-cut noodles | Korean dumplings | Seoul food | Seoul restaurants | Traditional Korean market | Street Food Asia | Netflix food locations | Where to eat in Seoul | Seoul itinerary | South Korea travel | Korea food guide | Best food in Seoul | Korean street food",
+      "makerId": "6CA49FDC-F6EC-58F8-9AB9-9E6FAA71B1A6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mrs-chos-noodles-mapsbyjess_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbQHmlVid0b/",
+      "sourceAuthor": "@mapsbyjess",
+      "stops": [
+        {
+          "id": "5774C98B-F349-541C-ABCC-116045DC4817",
+          "order": 0,
+          "title": "Mrs. Cho's Noodles, Gwangjang Market",
+          "caption": "Famous food that’s not overrated 🙅🏻‍♀️ Mrs. Cho’s knife-cut noodles stand became famous after appearing on Street Food: Asia on Netflix The ",
+          "latitude": 37.5697826,
+          "longitude": 127.0006548,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mrs-chos-noodles-mapsbyjess_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.5697826,
+      "centroidLongitude": 127.0006548,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "bc042fda-60f8-560f-92d4-3d478816d9ee",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
+        "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
+        "6b48cbd2-3f97-5887-9060-fde4750001d0",
+        "8b8be0d5-7647-56a9-ac0d-1eb786a08ac1",
+        "2489b022-457b-5927-b73e-82fa367b5e76",
+        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Market"
       ],
       "priceUSD": 0
     }
