@@ -2248,3 +2248,25 @@ fresh — and the thing being looked for was simply never printed.
 
 **The habit:** before concluding "none of mine are in here", check that the file could have
 contained them. `grep -c WARN file` against the header's own total answers it in one command.
+
+## A check keyed on a non-unique field silently tests half its subject (2026-09-20)
+
+Four places were created from pairs of entries. The guard that was supposed to
+refuse a member being dragged too far built `{title[:30]: distance}` — but both
+members of each pair carry the **same title**, which is why they are a place at
+all. The dict collapsed to one key per pair, the assertion tested one entry
+instead of two, and it printed `moves 0.0 m` for every pair: the pin's distance,
+never the tour's.
+
+The result happened to be sound. That was established afterwards by a different
+method — diffing every entry's coordinate against `origin/main`, which reported
+4 moved, max 62.9 m, all tours, no pin touched. **That is the number the guard
+should have produced and did not.**
+
+🔴 **Keying a check by a field that is not unique reduces its sample without
+saying so.** It is the same shape as the truncated-output trap above: a check
+that cannot see its whole subject returns a pass for the part it saw. Both read
+exactly like success.
+
+**The habit:** key a per-entry check by `id`, never by a display field — and when
+a check reports N results, assert N is the number you expected to test.
