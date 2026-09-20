@@ -136,3 +136,37 @@ them correct. The ruling reached only one of the three, because matching is per-
   nine and is correctly absent now.
 - #1021 (the sweep) merged as `d6438455`; its branch is deleted.
 - The Gemini key lived in the session scratchpad and **dies with the container**.
+
+## 🔴 CORRECTION: the cross-country band is NOT the dense one
+
+Eight of the 23 cross-country findings were checked by opening the hero image and
+looking at it. The result contradicts the hypothesis this branch was built on:
+
+| finding | verdict |
+|---|---|
+| Green-Wood Cemetery → "St. Stephen's, Vienna" | check wrong — it is the Upjohn gate, monk-parakeet nest visible |
+| DZ Bank → "Experience Music Project, Seattle" | check wrong — Gehry's Berlin atrium; SIBLING BY THE SAME ARCHITECT |
+| The Valley → "The Interlace, Singapore" | check wrong — MVRDV Amsterdam |
+| The Sistine Chapel → "Pantheon, Rome" | check wrong — the chapel's plain exterior, which is the post's point |
+| Ba Son Bridge → "Lupu Bridge, Shanghai" | check wrong — Lupu is an arch, this is cable-stayed |
+| Reiyūkai Shakaden → "National Taichung Theater" | check wrong — 霊友会 is legible ON the building |
+| **Old Spitalfields Market → "La Grande Halle de la Villette"** | **🔴 REAL — the hero is a vast iron hall with cobbles, interior pavilions and a vendor sign reading YVONNE. Not Spitalfields** |
+| Kaktus Towers → "Esplanade, Singapore" | **undecided** — spiky surfaces curve like a dome; could be either |
+
+**One real error in eight, possibly two.** That is **12–25%, against the 42% baseline for
+findings overall** — so cross-country is, if anything, WORSE than an unranked list.
+
+**Why the hypothesis failed.** When gate C cannot identify a building it names a *famous*
+one of the same type, and famous buildings are spread across the world — so "a different
+country" is the DEFAULT SHAPE OF THE NOISE, not a signal. The owner's real errors were
+cross-country (MSG Sphere → Lucas Museum), but so is almost all the noise, and the band
+cannot separate them. Two of the eight are the sharper pattern: **the same architect's other
+building** (Gehry, and arguably MVRDV/OMA).
+
+🔴 **Do not spend the owner's attention on the remaining 15 cross-country rows on the
+strength of the band alone.** The banding still has value as a *reading order*, but the
+claim that it concentrates real errors is **withdrawn**.
+
+**What actually worked** was looking at the picture directly — eight settled in minutes,
+six of them decisively, without asking the owner anything. That is the method to scale:
+the checker should present the image, not the label.
