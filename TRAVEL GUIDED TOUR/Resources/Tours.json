@@ -92509,8 +92509,8 @@
           "order": 0,
           "title": "Pinacoteca di Brera",
           "caption": "The gallery and the statue in its courtyard opened on exactly the same day.",
-          "latitude": 45.47213429948129,
-          "longitude": 9.187825546087025,
+          "latitude": 45.4721343,
+          "longitude": 9.1878255,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pinacoteca-di-brera.mp3",
           "audioDurationSeconds": 145,
           "triggerMode": "geofenced",
@@ -92522,8 +92522,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 145,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.47213429948129,
-      "centroidLongitude": 9.187825546087025,
+      "centroidLatitude": 45.4721343,
+      "centroidLongitude": 9.1878255,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
@@ -100417,7 +100417,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "996b8d38-5432-5429-835c-7482bfc4dbb9",
-        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7"
+        "A7298714-B6EB-5C1E-B1CB-D5DD5BB1E4A7",
+        "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF"
       ]
     },
     {
@@ -101785,7 +101786,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "25F5C368-3CE1-5E32-81F4-A7C6DDB4D028",
-        "E898F878-14E3-5202-8B9D-5FA9F93DC252"
+        "E898F878-14E3-5202-8B9D-5FA9F93DC252",
+        "410887F3-61F4-5D68-9F79-BAB9B2D63FF8"
       ]
     },
     {
@@ -102677,7 +102679,9 @@
       "additionalImageURLs": null,
       "tourIds": [
         "0CF39D30-5E83-5C2B-8C26-4ED150EDAD74",
-        "A29F7EAF-42BB-557B-A505-713705E311D5"
+        "A29F7EAF-42BB-557B-A505-713705E311D5",
+        "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
+        "1F09AE6A-6E92-5EB8-9DB5-357E5B215B55"
       ]
     },
     {
@@ -102723,7 +102727,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "5782C759-50FA-57A2-883A-0A25DD984DAC",
-        "fb824f29-4d1a-4e39-bdf2-881da8665cbc"
+        "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
+        "EA433FFE-2571-5886-A5EA-9CD51E588797"
       ]
     },
     {
@@ -103362,7 +103367,8 @@
         "553DFF50-75CB-5ED7-9A1D-DB499EB431AC",
         "6EB44610-9F67-59CA-AD0F-02F6B11DD3CA",
         "90CBBC49-A54B-50CB-B660-697281CBBD44",
-        "E35F494D-226E-593E-B87B-5894864085C2"
+        "E35F494D-226E-593E-B87B-5894864085C2",
+        "DF4C98F4-AD93-5220-8586-817D5B49BEF4"
       ]
     },
     {
@@ -105033,7 +105039,8 @@
       "additionalImageURLs": [],
       "tourIds": [
         "2B0062BF-E29F-58A1-B35E-4C9766E6547A",
-        "F67D28AD-C087-5C87-9CE4-53229F678507"
+        "F67D28AD-C087-5C87-9CE4-53229F678507",
+        "96CA40E4-E80B-5BDE-B213-80917A7E953D"
       ]
     },
     {
@@ -105669,6 +105676,66 @@
         "45DC77F1-CAA3-576E-9939-53908497459C",
         "D51D97B2-9814-533A-9D9A-90292B89E5F5",
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
+      ]
+    },
+    {
+      "id": "a972c1a5-ea58-5cba-8f20-e2a2a77c5d39",
+      "name": "Essanay Studios",
+      "description": null,
+      "latitude": 41.97212,
+      "longitude": -87.66383,
+      "city": "Chicago",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F1B3FB52-3E13-5DE5-AEBD-DCFFAD62D74C",
+        "3619F5E5-2AC4-5316-8647-41832300413D"
+      ]
+    },
+    {
+      "id": "f25744f3-ba0f-5dd4-aae8-fb590db8757b",
+      "name": "Fairmont Banff Springs",
+      "description": null,
+      "latitude": 51.16408,
+      "longitude": -115.56177,
+      "city": "Banff",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3D0B802F-2C73-5BC7-B7FE-7E5FAA142786",
+        "EF97C81C-B77F-597B-BF3E-2957D10FAC14"
+      ]
+    },
+    {
+      "id": "a6d3edc1-825b-5b75-b83e-091fbf7c7779",
+      "name": "Pinacoteca di Brera",
+      "description": null,
+      "latitude": 45.4721343,
+      "longitude": 9.1878255,
+      "city": "Milan",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "b1fb37af-feb1-5d87-be76-7540c2768cc1",
+        "26B5F07E-22A8-5F64-8754-892EE962314E"
+      ]
+    },
+    {
+      "id": "86cd851d-49f8-5752-ac89-7e6502c6d74c",
+      "name": "Stedelijk Museum",
+      "description": null,
+      "latitude": 52.358,
+      "longitude": 4.8799,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "d8111f1a-3093-56b6-951d-84358df67e2d",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
       ]
     }
   ],
@@ -112173,8 +112240,7 @@
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "BE8B80BD-771D-5CE4-801F-B81125261722",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52"
+        "BE8B80BD-771D-5CE4-801F-B81125261722"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -184196,7 +184262,6 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "4735A7C7-26CF-5192-904C-A5AA31F52915"
       ],
       "primaryCategory": "foodAndDrink",
@@ -193594,7 +193659,6 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "A45805AB-F0E2-5D32-9E37-98A450A4F391",
@@ -193867,7 +193931,6 @@
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
@@ -233101,7 +233164,6 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "4BDCA974-DD0D-536F-BB83-175659EC83C2",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
@@ -253019,8 +253081,8 @@
           "order": 0,
           "title": "MSG Sphere",
           "caption": "This Building Looks Like a Spaceship😱",
-          "latitude": 34.015739,
-          "longitude": -118.29079,
+          "latitude": 34.0157394,
+          "longitude": -118.2907898,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -253032,8 +253094,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.015739,
-      "centroidLongitude": -118.29079,
+      "centroidLatitude": 34.0157394,
+      "centroidLongitude": -118.2907898,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -267501,8 +267563,8 @@
           "order": 0,
           "title": "Would you visit? 📍Pinacoteca di Brera Milan Italy @pinaco…",
           "caption": "Would you visit? 📍Pinacoteca di Brera Milan Italy @pinacotecabrera #pinacotecadibrera #pinacoteca #brera #milan #milano #girlandgallery #ita",
-          "latitude": 45.47213429948129,
-          "longitude": 9.187825546087025,
+          "latitude": 45.4721343,
+          "longitude": 9.1878255,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267514,8 +267576,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.47213429948129,
-      "centroidLongitude": 9.187825546087025,
+      "centroidLatitude": 45.4721343,
+      "centroidLongitude": 9.1878255,
       "city": "Milan",
       "country": "Italy",
       "relatedTourIds": [
@@ -273439,8 +273501,8 @@
           "order": 0,
           "title": "Centre 360 at the Municipal Building",
           "caption": "NYC has a new viewing platform, and it’s completely free to visit! I checked out Centre 360 inside the historic Municipal Building in Lower ",
-          "latitude": 40.71303,
-          "longitude": -74.00347,
+          "latitude": 40.7130272,
+          "longitude": -74.0034742,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -273452,8 +273514,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.71303,
-      "centroidLongitude": -74.00347,
+      "centroidLatitude": 40.7130272,
+      "centroidLongitude": -74.0034742,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -273567,61 +273629,6 @@
       "priceUSD": 0
     },
     {
-      "id": "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
-      "createdAt": "2026-09-20",
-      "title": "Isle of Capri",
-      "shortDescription": "A post by @nickcabotrodriguez on Instagram.",
-      "longDescription": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
-      "makerId": "299D0BA5-37D6-5B94-8378-85C8DA80712D",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DdUObmTs77_/",
-      "sourceAuthor": "@nickcabotrodriguez",
-      "stops": [
-        {
-          "id": "43C49B91-A808-5244-8292-DA1D6AFC9379",
-          "order": 0,
-          "title": "Isle of Capri",
-          "caption": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
-          "latitude": 40.76279,
-          "longitude": -73.96594,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 40.76279,
-      "centroidLongitude": -73.96594,
-      "city": "New York",
-      "country": "United States",
-      "relatedTourIds": [
-        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
-        "866EE87D-8E08-514D-B67F-5B9268257DF0",
-        "1433B333-4647-5FC3-8AB1-5E12671669AE",
-        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
-        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
-        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
-        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
-        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95"
-      ],
-      "primaryCategory": "foodAndDrink",
-      "tags": [
-        "Venue",
-        "Food",
-        "History"
-      ],
-      "priceUSD": 0
-    },
-    {
       "id": "50FCB79D-EB37-5C02-AF85-8EA27DCCA1CF",
       "createdAt": "2026-09-20",
       "title": "Chicago Water Tower",
@@ -273641,8 +273648,8 @@
           "order": 0,
           "title": "Chicago Water Tower",
           "caption": "Chicago Weird Ep34: Chicago Water Tower 💧 #chicago #weird #chicagoweird #travel #haunted",
-          "latitude": 41.89718,
-          "longitude": -87.62444,
+          "latitude": 41.8971757,
+          "longitude": -87.6244367,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -273654,8 +273661,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.89718,
-      "centroidLongitude": -87.62444,
+      "centroidLatitude": 41.8971757,
+      "centroidLongitude": -87.6244367,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
@@ -273753,8 +273760,8 @@
           "order": 0,
           "title": "David N. Dinkins Municipal Building",
           "caption": "Side quest to the top of the David N. Dinkins Municipal Building - dreams do come true. And it’s free!! @citystorenyc @nycgov @nycmayor @nyc",
-          "latitude": 40.71303,
-          "longitude": -74.00347,
+          "latitude": 40.7130272,
+          "longitude": -74.0034742,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -273766,8 +273773,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.71303,
-      "centroidLongitude": -74.00347,
+      "centroidLatitude": 40.7130272,
+      "centroidLongitude": -74.0034742,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -274066,8 +274073,8 @@
           "order": 0,
           "title": "Leaning Tower of Niles",
           "caption": "Chicago Weird Ep4: Leaning Tower of Niles 🇮🇹 #chicago #travel #weird #chicagotravel #chicagoweird",
-          "latitude": 42.01242,
-          "longitude": -87.78406,
+          "latitude": 42.0124375,
+          "longitude": -87.7840625,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -274079,8 +274086,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 42.01242,
-      "centroidLongitude": -87.78406,
+      "centroidLatitude": 42.0124375,
+      "centroidLongitude": -87.7840625,
       "city": "Niles",
       "country": "United States",
       "relatedTourIds": [
@@ -275071,8 +275078,8 @@
           "order": 0,
           "title": "Blenheim Palace",
           "caption": "A Magnificent Glow-Up for a Magnificent Place Blenheim Palace in Oxfordshire is the most magnificent non-royal palace in Britain. It is argu",
-          "latitude": 51.84136,
-          "longitude": -1.36095,
+          "latitude": 51.841517,
+          "longitude": -1.360983,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -275084,8 +275091,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.84136,
-      "centroidLongitude": -1.36095,
+      "centroidLatitude": 51.841517,
+      "centroidLongitude": -1.360983,
       "city": "Woodstock",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -275322,8 +275329,8 @@
           "order": 0,
           "title": "Oberon at the New Museum",
           "caption": "@oberon_nyc has arrived at the New Museum. Designed by Shohei Shigematsu, the new Bowery restaurant brings together seasonal Hudson Valley c",
-          "latitude": 40.72235,
-          "longitude": -73.99284,
+          "latitude": 40.7224,
+          "longitude": -73.9928,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -275335,8 +275342,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.72235,
-      "centroidLongitude": -73.99284,
+      "centroidLatitude": 40.7224,
+      "centroidLongitude": -73.9928,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
