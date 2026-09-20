@@ -112210,8 +112210,7 @@
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "BE8B80BD-771D-5CE4-801F-B81125261722",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52"
+        "BE8B80BD-771D-5CE4-801F-B81125261722"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -184233,7 +184232,6 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
         "79AC7FF9-C5C2-52A6-B1EF-942AA94CCE88",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "4735A7C7-26CF-5192-904C-A5AA31F52915"
       ],
       "primaryCategory": "foodAndDrink",
@@ -193631,7 +193629,6 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "A45805AB-F0E2-5D32-9E37-98A450A4F391",
@@ -193904,7 +193901,6 @@
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
@@ -233138,7 +233134,6 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
-        "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "4BDCA974-DD0D-536F-BB83-175659EC83C2",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
@@ -273600,61 +273595,6 @@
         "Notable Building",
         "Architecture",
         "Gothic"
-      ],
-      "priceUSD": 0
-    },
-    {
-      "id": "0A3CF38F-EA7C-58D9-9AC7-D8DCFCA99A52",
-      "createdAt": "2026-09-20",
-      "title": "Isle of Capri",
-      "shortDescription": "A post by @nickcabotrodriguez on Instagram.",
-      "longDescription": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
-      "makerId": "299D0BA5-37D6-5B94-8378-85C8DA80712D",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
-      "additionalImageURLs": null,
-      "videoURLs": null,
-      "videoRole": null,
-      "kind": "link",
-      "sourceURL": "https://www.instagram.com/reel/DdUObmTs77_/",
-      "sourceAuthor": "@nickcabotrodriguez",
-      "stops": [
-        {
-          "id": "43C49B91-A808-5244-8292-DA1D6AFC9379",
-          "order": 0,
-          "title": "Isle of Capri",
-          "caption": "The History of Restaurants - Episode 5: Isle of Capri #nycfood #nychistory #restaurant #nyc #italian",
-          "latitude": 40.76279,
-          "longitude": -73.96594,
-          "audioURL": "",
-          "audioDurationSeconds": 0,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/isle-of-capri-nyc-nickcabotrodriguez_hero.webp",
-          "transcriptText": null
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 0,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": 40.76279,
-      "centroidLongitude": -73.96594,
-      "city": "New York",
-      "country": "United States",
-      "relatedTourIds": [
-        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
-        "866EE87D-8E08-514D-B67F-5B9268257DF0",
-        "1433B333-4647-5FC3-8AB1-5E12671669AE",
-        "14B166DF-FE67-5D16-AD76-4724ECBF28E5",
-        "4F8188FC-1180-5D45-A7CE-106F5F4A97A4",
-        "553EBE9B-7750-55A1-AB37-5AF764F9F577",
-        "48CC9C85-F7DF-51D8-BD1A-7F9A99E23AD2",
-        "AB7C6CDA-88E8-5709-B9BC-672C8153DA95"
-      ],
-      "primaryCategory": "foodAndDrink",
-      "tags": [
-        "Venue",
-        "Food",
-        "History"
       ],
       "priceUSD": 0
     },
