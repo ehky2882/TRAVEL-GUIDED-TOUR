@@ -2204,3 +2204,47 @@ are the strongest finding the check can make.
 ⚠️ It also turned up a convention nobody had questioned: **`City (District)`**,
 applied to Tokyo (nineteen variants), New York, Osaka, Bangkok and Los Angeles.
 Not typos — a deliberate style, each variant counting as a separate city.
+
+## Search the ADDRESS, not the coordinate (2026-09-20)
+
+Two 2025-opened resorts — the St. Regis Cap Cana and W Punta Cana — were reported to
+the owner as having no obtainable coordinate. Neither is in OpenStreetMap or Wikidata,
+and Marriott returns **403** to WebFetch *and* to curl with a browser user-agent. Every
+route tried had been a route to a **coordinate**: Nominatim by name in three spellings,
+bounded OSM hotel sweeps of both areas, Wikidata, two booking aggregators.
+
+The owner asked: *"why can't you search for the address for those properties?"*
+
+Both fell within minutes. The venues publish a street address — "Punta Espada, Cap Cana",
+"Carretera Uvero Alto" — and that address then geocodes, or places the venue against a
+neighbour that **is** mapped (the Punta Espada driving range 2.4 km north; Zoetry Agua
+0.4 km west).
+
+🔴 **"Search the name" and "search the address" are different searches, and for a venue too
+new to be mapped only the second one works.** `docs/link-pin-runbook.md` § "Exhaust search
+before saying an address cannot be found" was read this session and then not applied,
+because the search that felt exhaustive was exhaustive *of coordinate lookups*.
+
+⚠️ **And a distance that corroborates is not a location that corroborates.**
+`godominicanrepublic.com` offered 18.4459845, −68.4261917 for the St. Regis. It matched
+Cvent's independently-published "9.32 miles from the airport" to within **0.03 mi** — as
+convincing as a cross-check gets. It is **2.3 km from the real point** and reverse-geocodes
+to bare scrub. What actually settled it was a **named OSM feature agreeing with the street
+address the venue itself publishes**: two statements about *where*, not two about *how far*.
+
+## A truncated checker output cannot be grepped for your own work (2026-09-20)
+
+A PR claimed its batch added no validator warnings. It had added fifteen.
+
+`validate-tours-mirror.py` prints a header count — `0 errors, 518 warnings` — and then only
+the **first 40 warning lines**. Grepping the saved output for the batch's titles returned
+nothing, which read exactly like a clean bill of health. The truth came from recomputing the
+facet rules directly against the catalogue.
+
+🔴 **A checker's summary count and its printed detail are two different artefacts.** When the
+detail is truncated, absence from it is not evidence. This is the stale-output-file trap
+(§ 1) wearing different clothes: the run was real, the stamp was current, the file was
+fresh — and the thing being looked for was simply never printed.
+
+**The habit:** before concluding "none of mine are in here", check that the file could have
+contained them. `grep -c WARN file` against the header's own total answers it in one command.
