@@ -84,8 +84,17 @@ def looks_like_caption(title):
     # ⚠️ Emoji are the single most reliable caption tell in this catalogue.
     if any(unicodedata.category(c) == "So" for c in text):
         return "contains an emoji — that is a caption, not a name"
-    if len(text.split()) > MAX_TITLE_WORDS:
-        return f"{len(text.split())} words — too long to be a name"
+    # 🔴 COUNT ONE LANGUAGE, NOT TWO. The Asian bureaus title bilingually as
+    # "English | native script" (CLAUDE.md § Key facts), so counting the whole
+    # string counts the name TWICE and every such title reads as a caption.
+    # This gate REFUSES in merge-link-pins.py, so the unsplit count would have
+    # blocked the next Tokyo / Seoul / Bangkok / Saigon batch outright -- and
+    # it already flags hundreds of shipped titles, e.g. "Saigon Central Post
+    # Office | Bưu điện trung tâm Sài Gòn" at 11 words, which is 4 and 7.
+    longest = max((part.split() for part in text.split("|")),
+                  key=len, default=[])
+    if len(longest) > MAX_TITLE_WORDS:
+        return f"{len(longest)} words — too long to be a name"
     return ""
 
 
@@ -167,6 +176,28 @@ def selftest():
     check("an ellipsis is caught", looks_like_caption("Would you try this sandwich…"))
     check("a long sentence is caught",
           looks_like_caption("We love a good art history legend the fountain is called that"))
+
+    # --- 🔴 BILINGUAL titles: the Asian bureaus write "English | native
+    # script", and counting the whole string counts the name TWICE. This gate
+    # REFUSES in merge-link-pins.py, so an unsplit count blocks a whole city
+    # batch. These are real shipped titles.
+    check("🔴 a bilingual title is NOT a caption",
+          not looks_like_caption(
+              "Saigon Central Post Office | Bưu điện trung tâm Sài Gòn"))
+    check("🔴 nor is a long bilingual museum name",
+          not looks_like_caption(
+              "Ho Chi Minh City Fine Arts Museum | Bảo tàng Mỹ thuật"))
+    check("a bilingual title whose ENGLISH half is a sentence is still caught",
+          looks_like_caption(
+              "We love a good art history legend and the fountain is called "
+              "that | 噴水"))
+    check("and a caption tell still fires across the separator",
+          looks_like_caption("Cool place | すごい場所?"))
+    # Taking only the FIRST half would let a sentence hide in the second.
+    check("a long SECOND half is caught too, not just the first",
+          looks_like_caption(
+              "Cafe | we absolutely love this little place by the river and "
+              "you will too"))
     check("an empty title is caught", looks_like_caption(""))
 
     # --- real names must survive, or the gate is useless
