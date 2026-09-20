@@ -28,7 +28,18 @@ MUTANTS = [
  ("🔴 caption: the word limit is so tight it eats real names",
   'MAX_TITLE_WORDS = 9', 'MAX_TITLE_WORDS = 2'),
  ("caption: the word limit is dropped",
-  'if len(text.split()) > MAX_TITLE_WORDS:', 'if False:'),
+  'if len(longest) > MAX_TITLE_WORDS:', 'if False:'),
+ # 🔴 The bilingual split. Counting the whole "English | native script" string
+ # counts the name twice, so EVERY Tokyo/Seoul/Bangkok/Saigon title reads as a
+ # caption -- and this gate REFUSES in merge-link-pins.py, so that mistake
+ # blocks a whole city batch. It shipped that way and flagged hundreds of live
+ # titles before anyone ran the gate over the existing catalogue.
+ ("🔴 caption: the bilingual halves are counted together again",
+  'longest = max((part.split() for part in text.split("|")),\n                  key=len, default=[])',
+  'longest = text.split()'),
+ ("caption: only the FIRST half is counted, so a long native name escapes",
+  'longest = max((part.split() for part in text.split("|")),\n                  key=len, default=[])',
+  'longest = text.split("|")[0].split()'),
  ("🔴 description: 'The' is treated as an indefinite article, killing real names",
   'if first in ("a", "an"):', 'if first in ("a", "an", "the"):'),
  ("description: the rule is dropped", 'if first in ("a", "an"):', 'if False:'),
