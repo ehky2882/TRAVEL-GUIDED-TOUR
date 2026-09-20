@@ -1,3 +1,13 @@
-Filters, rebuilt. The row above the map is now four panels — Tags, Dozents, Format and Price. Choose as many options as you like in each, and every option shows how many results it will leave you with.
+Search that understands what you mean.
 
-General improvements and bug fixes.
+Ask for "somewhere quiet to walk" or "a building with a strange roof" and Dozent finds it — even when no tour uses those words. Search now reads meaning rather than matching text, and it runs on your phone. Mistype something and it works that out too. Each result quotes the line that matched, so you can see why it came up.
+
+More like this. Open any tour and find others about the same kind of place.
+
+More like what you saved. The home screen now suggests tours based on what you have saved — whether you liked it or filed it into a list.
+
+A clearer map. Pins that used to pile on top of each other at wide zoom now gather into a single circle with a count, and separate again as you zoom in.
+
+Faster, lighter updates. The app now fetches only what has actually changed instead of re-downloading the whole catalogue, so new tours arrive quicker and use far less data.
+
+Plus: a catalogue that repairs itself if it ever downloads badly, a Clear Cache button that genuinely clears it, and a fix for date sorting on creator pages, places and lists.
