@@ -75715,8 +75715,8 @@
           "order": 0,
           "title": "Jardin Majorelle | حديقة ماجوريل",
           "caption": "Cobalt walls, bamboo forty feet overhead, and somewhere beneath it all, several hundred species of plant gathered from five continents.",
-          "latitude": 31.64134844707811,
-          "longitude": -8.003203400951744,
+          "latitude": 31.64147,
+          "longitude": -8.00291,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardin-majorelle.mp3",
           "audioDurationSeconds": 117,
           "triggerMode": "geofenced",
@@ -75728,8 +75728,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 117,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 31.64134844707811,
-      "centroidLongitude": -8.003203400951744,
+      "centroidLatitude": 31.64147,
+      "centroidLongitude": -8.00291,
       "city": "Marrakech",
       "country": "Morocco",
       "relatedTourIds": [
@@ -105751,6 +105751,21 @@
       "tourIds": [
         "330654ef-6d56-5883-9f64-0734e3b8d5b6",
         "CC61D1EF-B5E4-568F-A6E3-FD530ACFAC96"
+      ]
+    },
+    {
+      "id": "0de69908-2a9b-5aed-b252-c777c7b0b893",
+      "name": "Jardin Majorelle",
+      "description": null,
+      "latitude": 31.64147,
+      "longitude": -8.00291,
+      "city": "Marrakech",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "749410f9-a828-5d13-a57f-955dc119287b",
+        "82EDD10F-CBB8-5940-85A7-E65EEB1E4592"
       ]
     }
   ],
