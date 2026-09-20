@@ -2270,3 +2270,56 @@ exactly like success.
 
 **The habit:** key a per-entry check by `id`, never by a display field — and when
 a check reports N results, assert N is the number you expected to test.
+
+## The release lane BUILDS — it cannot submit a build you already tested (2026-09-20)
+
+1.1.3 was ready to submit with nothing left to write: build **176** was uploaded, `VALID`,
+tested on the owner's device and approved — *"looks good! merge it"* — and
+`git diff a0671e39 HEAD` over `*.swift`, `*.pbxproj`, `Info.plist` and `Assets.xcassets`
+was **empty**, so the code on `main` was that binary.
+
+The documented way to ship is Actions → **App Store release** → type `RELEASE`
+(`docs/launch-runbook.md` Step 15, and Step U6 for an update, which says *"same as Step 15"*).
+
+🔴 **That workflow runs `bundle exec fastlane release`, and the lane's first real action is
+`build_ipa`.** It compiles a *fresh* binary from the checkout and submits that. Pressing the
+button named "App Store release" on a release whose build is already approved therefore
+**throws away the tested artifact and submits an untested one with the same source** — same
+code, different binary, never run on a device, with a new build number the owner has never
+seen. Nothing in the workflow name, its description or the runbook says so.
+
+⚠️ **And the same lane pushes metadata.** `upload_to_app_store` runs with `force: true` and
+skips **screenshots only, not metadata**, so `fastlane/metadata/` goes to Apple with no
+confirmation prompt. On the same day, `release_notes.txt` still held **1.1.2's text verbatim**
+(fixed hours earlier in #1028) — the lane would have shipped an update whose What's New
+described the *previous* update.
+
+**When the build already exists, submit it through the App Store Connect REST API instead.**
+Six calls, each verifiable before the next, with the key at `~/Downloads/AuthKey_*.p8`:
+
+```
+POST /v1/appStoreVersions                       versionString, platform IOS, releaseType MANUAL
+PATCH /v1/appStoreVersionLocalizations/{en-US}  whatsNew
+PATCH /v1/appStoreVersions/{id}/relationships/build   → the build you tested
+POST /v1/appStoreVersionPhasedReleases          phasedReleaseState INACTIVE
+POST /v1/reviewSubmissions  +  /v1/reviewSubmissionItems
+PATCH /v1/reviewSubmissions/{id}                submitted: true
+```
+
+✅ **Creating the version this way copies the previous version's localization AND its
+media**, exactly as the UI's *"+ Version"* button does — all ten screenshots appeared on
+1.1.3 with an **identical `sourceFileChecksum` to 1.1.2**, which is the check worth making
+rather than trusting the copy. That matters because `fastlane/screenshots` is empty and
+gitignored on purpose: any lane that "uploads screenshots" replaces the live set with
+nothing. They only ever go via `.github/workflows/upload-screenshots.yml`.
+
+⚠️ Pulling the current screenshots down first as insurance needs **`curl`, not `urllib`** —
+`urllib` fails certificate verification on this Mac. Substitute `{w}`/`{h}`/`{f}` in each
+`imageAsset.templateUrl`, and read the tab-separated filename properly: *"App Store
+Preview-01.png"* contains spaces, so a bare `read fn w h url` splits it and curl answers
+`(3) URL rejected`.
+
+🔴 **The general shape: a workflow named after the OUTCOME can be named after a path to it
+that no longer applies.** "App Store release" is the right name for the case where the build
+does not exist yet, and the wrong tool for every release after a TestFlight cycle the owner
+has already signed off. Read what the lane does, not what it is called.
