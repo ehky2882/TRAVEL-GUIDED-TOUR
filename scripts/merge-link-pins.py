@@ -170,6 +170,51 @@ def check_ids(payload: dict, catalog: dict) -> list[str]:
     return problems
 
 
+def _title_gate():
+    """`check-pin-title`, loaded lazily so this tool still runs without it."""
+    import importlib.util
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "check-pin-title.py")
+    spec = importlib.util.spec_from_file_location("_pin_title", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def title_problems(pins, catalog, allow_unverifiable=False):
+    """🔴 REFUSE a caption or a description used as a title. WARN on a duplicate.
+
+    The split is not squeamishness, it is measurement. On the live catalogue
+    the duplicate rule fires 319 times and most are CORRECT -- three Rainier
+    Tower pins share one point and the owner confirmed all three. The caption
+    and description rules describe shapes a real name never has, so those are
+    refusals.
+
+    ⚠️ `allow_unverifiable` exists because a creator's own venue sometimes has
+    no other name. It must be passed deliberately, per run, and the reason is
+    printed -- a flag nobody sees is a flag nobody thinks about.
+    """
+    gate = _title_gate()
+    problems, warnings = [], []
+    for i, pin in enumerate(pins):
+        where = f"linkPins[{i}] {pin.get('title') or pin.get('id') or '?'!r}"
+        for rule in (gate.looks_like_caption, gate.looks_like_description):
+            reason = rule(pin.get("title"))
+            if not reason:
+                continue
+            if allow_unverifiable:
+                warnings.append(f"{where}: {reason} (allowed by --allow-unverifiable-title)")
+            else:
+                problems.append(
+                    f"{where}: {reason}. A title nothing can verify is how Torre "
+                    f"Velasca sat in Rome for months. Give it the building's name, "
+                    f"or pass --allow-unverifiable-title if it truly has none.")
+        near = gate.duplicate_nearby(pin, catalog)
+        if near:
+            warnings.append(f"{where}: {near}")
+    return problems, warnings
+
+
 def merge(catalog: dict, payload: dict) -> tuple[dict, dict]:
     """Return (catalog, report). Pure — no I/O, so `--selftest` exercises the
     real merge rather than an imitation of it.
@@ -321,7 +366,8 @@ def report_dozent_clashes(new_makers: list, fetch=live_dozent_handles) -> None:
           "    so they can decide whether it is one person or a lookalike.")
 
 
-def run(pins_path: str, catalog_path: str, write: bool) -> int:
+def run(pins_path: str, catalog_path: str, write: bool,
+        allow_unverifiable: bool = False) -> int:
     with open(pins_path, encoding="utf-8") as fh:
         payload = json.load(fh)
 
@@ -353,6 +399,20 @@ def run(pins_path: str, catalog_path: str, write: bool) -> int:
         for x in id_problems:
             print(f"  - {x}")
         print("\n  See docs/link-pin-runbook.md § the id scheme.")
+        return 1
+
+    # 🔴 The title gate, AFTER the id check and BEFORE anything is written.
+    # Ordering matters: a refusal here must leave the catalogue untouched, and
+    # the warnings must be seen even when nothing is refused.
+    bad_titles, title_warnings = title_problems(
+        payload.get("linkPins") or [], catalog, allow_unverifiable)
+    for warning in title_warnings:
+        print(f"  ⚠️  {warning}")
+    if bad_titles:
+        print(f"\nREFUSED — {len(bad_titles)} title(s) nothing could ever verify. "
+              "Nothing was written.")
+        for x in bad_titles:
+            print(f"  - {x}")
         return 1
 
     merged, rep = merge(catalog, payload)
@@ -457,6 +517,36 @@ def selftest() -> int:
     check("a pin at exactly (0, 0) is refused",
           any("Gulf of Guinea" in p for p in validate_incoming(
               {"linkPins": [pin("X", lat=0, lon=0)]})))
+    # --- the title gate
+    # 🔴 A caption or a description as a title is REFUSED; a duplicate title
+    # nearby is only a WARNING, because most duplicates are legitimate.
+    def tp(title, cat=None, allow=False):
+        entry = {"id": "X", "title": title, "kind": "link",
+                 "stops": [{"order": 0, "latitude": 51.5, "longitude": 0.1}]}
+        return title_problems([entry], cat or {"tours": [], "linkPins": []}, allow)
+
+    bad, warn = tp("@centrepompidou is the coolest museum ever")
+    check("🔴 a caption used as a title is REFUSED", len(bad) == 1 and not warn)
+    check("...and the refusal names Torre Velasca, so the reason is legible",
+          "Torre Velasca" in bad[0])
+    check("🔴 a description used as a title is REFUSED",
+          len(tp("A brutalist church, Via Dalmazia")[0]) == 1)
+    check("a real name passes the gate", tp("Centre Pompidou") == ([], []))
+    bad, warn = tp("Hungary's Weirdest Skyscraper😱", allow=True)
+    check("🔴 --allow-unverifiable-title downgrades a refusal to a warning",
+          not bad and len(warn) == 1)
+    check("...and the warning says the flag was used, so it cannot pass unseen",
+          "--allow-unverifiable-title" in warn[0])
+
+    near = {"tours": [], "linkPins": [
+        {"id": "other", "title": "Grace Farms", "kind": "link",
+         "stops": [{"order": 0, "latitude": 51.5, "longitude": 0.1}]}]}
+    bad, warn = tp("Grace Farms", near)
+    check("🔴 a duplicate title nearby WARNS and does not refuse",
+          not bad and len(warn) == 1)
+    check("...and the warning is phrased as a question, not a verdict",
+          "if they are different subjects" in warn[0])
+
     check("a pin at a real coordinate whose lon is 0 is NOT refused",
           validate_incoming({"linkPins": [pin("X", lat=51.5, lon=0.0)]}) == [])
     check("a pin with the wrong kind is refused",
@@ -604,6 +694,10 @@ def main() -> int:
                     help="Tours.json to merge into (default: the repo's)")
     ap.add_argument("--check", action="store_true",
                     help="report what would be merged; write nothing")
+    ap.add_argument("--allow-unverifiable-title", action="store_true",
+                    help="permit a caption or description as a title. Use only "
+                         "when the subject truly has no name; the reason is "
+                         "printed either way.")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -614,7 +708,8 @@ def main() -> int:
         return selftest()
     if not a.pins:
         ap.error("give a pins file, or --selftest")
-    return run(a.pins, a.catalog, write=not a.check)
+    return run(a.pins, a.catalog, write=not a.check,
+               allow_unverifiable=a.allow_unverifiable_title)
 
 
 if __name__ == "__main__":
