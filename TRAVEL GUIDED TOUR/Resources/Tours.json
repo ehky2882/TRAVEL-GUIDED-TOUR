@@ -95995,8 +95995,8 @@
           "order": 0,
           "title": "Cirkelbroen (The Circle Bridge)",
           "caption": "From a distance, this looks less like a bridge than a small fleet of boats moored mid-canal.",
-          "latitude": 55.672989293228724,
-          "longitude": 12.583635175454745,
+          "latitude": 55.67243,
+          "longitude": 12.58379,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cirkelbroen.mp3",
           "audioDurationSeconds": 142,
           "triggerMode": "geofenced",
@@ -96008,8 +96008,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 142,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 55.672989293228724,
-      "centroidLongitude": 12.583635175454745,
+      "centroidLatitude": 55.67243,
+      "centroidLongitude": 12.58379,
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
@@ -105736,6 +105736,21 @@
       "tourIds": [
         "d8111f1a-3093-56b6-951d-84358df67e2d",
         "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
+      ]
+    },
+    {
+      "id": "750f83d5-1f0f-5060-86c1-0440b44b2c3f",
+      "name": "Cirkelbroen",
+      "description": null,
+      "latitude": 55.67243,
+      "longitude": 12.58379,
+      "city": "Copenhagen",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "330654ef-6d56-5883-9f64-0734e3b8d5b6",
+        "CC61D1EF-B5E4-568F-A6E3-FD530ACFAC96"
       ]
     }
   ],
