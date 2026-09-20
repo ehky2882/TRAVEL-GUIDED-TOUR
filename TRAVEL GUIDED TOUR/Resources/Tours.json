@@ -5129,6 +5129,16 @@
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.tiktok.com/@suhyrswrld"
+    },
+    {
+      "id": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "displayName": "Instagram @imjennychang",
+      "platform": "instagram",
+      "handle": "imjennychang",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/imjennychang/"
     }
   ],
   "tours": [
@@ -275292,6 +275302,141 @@
         "Waterfront",
         "Green Escape",
         "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B80E35DE-8EA2-50A5-8E33-CA8F7FCC0104",
+      "createdAt": "2026-09-20",
+      "title": "Island Beach, Sherwood Island State Park",
+      "shortDescription": "A post by @imjennychang on Instagram.",
+      "longDescription": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+      "makerId": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdFkMJZMBd8/",
+      "sourceAuthor": "@imjennychang",
+      "stops": [
+        {
+          "id": "CFDCB103-E7BF-5A20-AA3E-96C153400B44",
+          "order": 0,
+          "title": "Island Beach, Sherwood Island State Park",
+          "caption": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+          "latitude": 41.11507,
+          "longitude": -73.32978,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.11507,
+      "centroidLongitude": -73.32978,
+      "city": "Westport",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5366BBCF-183A-5848-ADDC-CDFF810EBD18",
+      "createdAt": "2026-09-20",
+      "title": "Canopus Beach, Fahnestock State Park",
+      "shortDescription": "A post by @imjennychang on Instagram.",
+      "longDescription": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+      "makerId": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdFkMJZMBd8/",
+      "sourceAuthor": "@imjennychang",
+      "stops": [
+        {
+          "id": "FCDC45B5-D958-5DD5-BB62-38D056F3AE79",
+          "order": 0,
+          "title": "Canopus Beach, Fahnestock State Park",
+          "caption": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+          "latitude": 41.45852,
+          "longitude": -73.83398,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.45852,
+      "centroidLongitude": -73.83398,
+      "city": "Kent",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "41BDAF7B-09FA-5AC3-99A3-50AD1E081700",
+      "createdAt": "2026-09-20",
+      "title": "Brighton Beach",
+      "shortDescription": "A post by @imjennychang on Instagram.",
+      "longDescription": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+      "makerId": "BEF81D50-0223-595F-8110-3B9EF60D02E6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdFkMJZMBd8/",
+      "sourceAuthor": "@imjennychang",
+      "stops": [
+        {
+          "id": "F4809B67-F883-53FE-BBBD-29CA21FDD66F",
+          "order": 0,
+          "title": "Brighton Beach",
+          "caption": "This is definitely gonna be one of the last 80 degree weekends of the summer so I’m definitely going to take advantage while I can.",
+          "latitude": 40.57964,
+          "longitude": -73.96111,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/three-northeast-beaches-imjennychang_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.57964,
+      "centroidLongitude": -73.96111,
+      "city": "Brooklyn",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "Green Escape"
       ],
       "priceUSD": 0
     }
