@@ -133,5 +133,10 @@
   "date": "2026-09-19",
   "note": "was titled 'Guangzhou CTF Finance Centre'; owner identified it as the Tianjin tower. Retitled and relocated to Tianjin",
   "verdict": "fixed"
+ },
+ "Westminster Underground Station": {
+  "date": "2026-09-20",
+  "note": "was titled 'Portcullis House'. Owner: the post is about the Underground station. The check named Westminster Station and was RIGHT. Retitle only -- the station is 41 m from the existing coordinate and sits directly beneath Portcullis House, so nothing moved; city unchanged, no place membership",
+  "verdict": "fixed"
  }
 }
