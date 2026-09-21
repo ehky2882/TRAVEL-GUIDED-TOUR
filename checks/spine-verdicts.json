@@ -395,6 +395,15 @@
     "note": "Wikidata places Q1874734 in Dejvice (hotel building in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Hotel Negresco": {
+    "at": [
+      43.69471,
+      7.257752
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=hotel, 57 m from an independent geocode of 37 Promenade des Anglais and 56 m from Wikidata (20 sitelinks).",
+    "verdict": "fixed"
+  },
   "Hotel Riu Palace Pacifico": {
     "at": [
       20.7386293,
@@ -683,6 +692,15 @@
     "note": "Wikidata places Q575616 in Gooise Meren (railway station in the Netherlands), not Naarden. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "National Library of Latvia": {
+    "at": [
+      56.941038,
+      24.096772
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=library, 'Latvijas Nacionala biblioteka, 3, Mukusalas iela, Tornakalns'. Confirmed by an independent Latvian-language lookup landing on the same node, and 35 m from Wikidata (41 sitelinks).",
+    "verdict": "fixed"
+  },
   "Natural History Museum of LA County": {
     "at": [
       34.0175,
@@ -727,6 +745,15 @@
     "date": "2026-09-21",
     "note": "Wikidata matched a different real entity of the same name. Q7083689 is in GUELPH, Ontario — verified; ours is Toronto's. Our coordinate sits inside its own city's cluster. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Palika Kendra (NDMC HQ)": {
+    "at": [
+      28.62848,
+      77.21545
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=government, 13 m from Wikidata. ⚠️ The address geocode landed on a BUS STOP named after the building 136 m away -- the Belgrade Tower trap -- so it corroborates the area, not the point; the government-building node is what the coordinate follows.",
+    "verdict": "fixed"
   },
   "Palácio da Justiça": {
     "at": [
@@ -826,6 +853,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q125846 in Queensland (skyscraper in Australia), not Gold Coast. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Queen Anne's Summer Palace": {
+    "at": [
+      50.093808,
+      14.405312
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=civic, 0 m from an independent geocode of Marianske hradby 1 and 23 m from Wikidata (20 sitelinks).",
+    "verdict": "fixed"
   },
   "Queen Street West": {
     "at": [
@@ -1105,6 +1141,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q47554 in Kuyavian-Pomeranian Voivodeship (city in north-central Poland), not Toruń. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "The Leonardo": {
+    "at": [
+      -26.104216,
+      28.055564
+    ],
+    "date": "2026-09-21",
+    "note": "OSM building, 0 m from an independent geocode of 75 Maude Street, Sandton, and 2 m from Wikidata (12 sitelinks).",
+    "verdict": "fixed"
   },
   "The Magnificent Mile — DuSable Bridge to the Water Tower": {
     "at": [

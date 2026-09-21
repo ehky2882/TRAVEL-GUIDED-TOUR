@@ -1,19 +1,16 @@
-RUN spine-match.py · rev c0555f6f · 2026-09-21T13:38:45Z · args: --limit 25 --out spine/audit.txt
+RUN spine-match.py · rev c0555f6f · 2026-09-21T14:01:59Z · args: --limit 25 --out spine/audit.txt
 audited 5122 catalogue entries against Wikidata
 
-🔴 DISAGREES — our coordinate is not where the subject is: 28 unexamined (62 already ruled — 41 wikidata-elsewhere, 8 name-collision, 7 extended-feature, 3 wikidata-wrong, 1 undecided, 1 institution-moved, 1 part-vs-whole)
+🔴 DISAGREES — our coordinate is not where the subject is: 22 unexamined (63 already ruled — 41 wikidata-elsewhere, 9 name-collision, 7 extended-feature, 3 wikidata-wrong, 1 undecided, 1 institution-moved, 1 part-vs-whole)
        7966 m   Les Tres Xemeneies                       Sant Adrià de Be -> Les Tres Xemeneies
        1477 m   Amanohashidate | 天橋立                     Miyazu           -> Amanohashidate
-        872 m   National Library of Latvia               Riga             -> National Library of Latvia
         811 m   Navy Pier                                Chicago          -> Navy Pier
         708 m   Chiesa di Nostra Signora del Cadore      Borca di Cadore  -> Chiesa di Nostra Signora del C
         646 m   Al Seef                                  Dubai            -> Al Seef
         594 m   Avenida da Liberdade                     Lisbon           -> Avenida da Liberdade
-        587 m   Hotel Negresco                           Nice             -> Hotel Negresco
         502 m   Cholon | Chợ Lớn                         Ho Chi Minh City -> Cholon
         480 m   Károlyi Palace (Petőfi Literary Museum)  Budapest         -> Károlyi Palace
         453 m   Three Gorges Dam                         Yichang (Yangtze -> Three Gorges Dam
-        441 m   Queen Anne's Summer Palace               Prague           -> Queen Anne's Summer Palace
         412 m   Keage Incline | 蹴上インクライン                 Kyoto            -> Keage Incline
         411 m   Alton Estate                             London           -> Alton Estate
         388 m   Hotel Nacional                           Rio de Janeiro   -> Hotel Nacional
@@ -22,12 +19,11 @@ audited 5122 catalogue entries against Wikidata
         347 m   Quartier des Spectacles                  Montreal         -> Quartier des Spectacles
         331 m   Toronto Islands                          Toronto          -> Toronto Islands
         323 m ~ Imperial Palace | 皇居                     Tokyo            -> Tokyo Imperial Palace
-        299 m   The Leonardo                             Johannesburg     -> The Leonardo
         295 m   Menara Gardens | حدائق المنارة           Marrakech        -> Menara gardens
         282 m   Ginza Kojyu                              Tokyo            -> Ginza Kojyu
         277 m   Church of the Most Sacred Heart of Our L Prague           -> Church of the Most Sacred Hear
-        276 m   Drottningholm                            Ekerö            -> Drottningholm
-  … and 3 more (raise --limit to see them)
+        272 m   Inokashira Park | 井の頭恩賜公園                Tokyo            -> Inokashira Park
+        256 m   Château La Coste                         Le Puy-Sainte-Ré -> Château La Coste
 
 REVIEW — near, but further out than a correct entry usually sits: 172 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
       12639 m ~ Redhouse                                 Newcastle upon T -> Hylton Red House
@@ -85,7 +81,7 @@ EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no 
         941 m ~ Mount Royal — the Climb                  Montreal         -> Mount Royal
   … and 90 more (raise --limit to see them)
 
-CONFIRMS: 1812   EXTENDED: 115   UNMATCHED: 2901   STALE: 0   NOT-ASKED: 0
+CONFIRMS: 1817   EXTENDED: 115   UNMATCHED: 2901   STALE: 0   NOT-ASKED: 0
 
 coverage by creator (matched / asked) — where this method works:
    35%   116/326   TikTok @urbanistariel
@@ -112,9 +108,9 @@ coverage by creator (matched / asked) — where this method works:
     three pins moved on a distance alone came out 11 m right, 220 m
     wrong and 100 m wrong. Every line goes to the owner individually.
 
-RULED: 162 entries carry a recorded verdict that still applies — checks/spine-verdicts.json
+RULED: 168 entries carry a recorded verdict that still applies — checks/spine-verdicts.json
 ⚠️  A verdict is stamped with the coordinate it was reached against and
     STOPS APPLYING the moment that coordinate moves: nobody has judged
     the new point, and silence would look exactly like agreement.
 
-28 entries to put to the owner
+22 entries to put to the owner
