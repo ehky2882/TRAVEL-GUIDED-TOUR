@@ -2703,3 +2703,171 @@ empty string. The edit reported success and the committed index row read
 the quoted delimiter stops bash touching the body at all. And when a command
 prints something odd to stderr but still exits 0, read what it actually wrote
 rather than trusting the exit code.
+
+## The wrong WORD, matched confidently (2026-09-21)
+
+`"Great Court, British Museum"` sat **58 km from London**, in a business park.
+Reverse-geocoding our own point named the error outright:
+
+> *Horizon Boulevard, Horizon 120, **Great Notley**, Braintree, Essex*
+
+***GREAT** Court* → ***GREAT** Notley*. Some geocoder, at some point, matched one
+word of the title and returned a confident answer in the wrong county.
+
+🔴 **Neither gazetteer check could ever have found it.** `spine-match.py` asks
+Wikidata where a name is — and had no record, so the entry was `UNMATCHED` and
+contributed nothing but a silence. `check-same-name.py` needs a second entry of
+the same name, and there is none. **Both were working correctly and both had
+nothing to say.**
+
+What found it was the catalogue asking itself: *this claims to be in London, and
+it is 58 km from every other London entry.* No external source involved.
+
+**The general shape: a lookup can only speak about what the source knows, and its
+blind spot is not random.** 2,901 entries are unknown to Wikidata, and 83% of a
+sampled sweep had no OSM result either — because many of those titles are not
+names at all. `@hereinnyc` and `@urbanistariel` title pins *The Million Dollar
+Corner*, *Breakfast at Tiffany's Townhouse*, *A Greek Goddess on Fifth Avenue*.
+**Adding sources will never reach them.** When a check's coverage stalls, ask
+what question could be answered *without* the source, rather than looking for a
+better source.
+
+### And three things that make such a check honest rather than noisy
+
+- **MEDIAN, never mean.** A mean centre is dragged toward the very entry being
+  hunted — and with *two* bad entries in the same place, it hides both. That is
+  the silent failure: not a wrong number, **no number**.
+- **An entry must not vote on its own centre.**
+- **Scale to the city's own spread.** A flat threshold flags a sprawling city
+  wholesale. Of 76 flagged, most are genuinely far-out sights: Cape Point is
+  48 km from Cape Town and correct. **The output is a question, never a verdict.**
+
+## A guard that withholds an answer is not automatically the defect (2026-09-21)
+
+After a week of finding checks that silently suppressed real findings, the
+instinct was that any guard declining to answer is a bug. `check-city-outliers.py`
+holds out a city whose *other* entries sit on one exact point — no spread, no
+scale, no opinion. Is that the same defect?
+
+**It was measured instead of argued.** Catalogue-wide it withholds **exactly two
+rows of 4,174**, and both are noise: Denver holds five entries, **three of them
+the same building**, so its median spread is 0 and two ordinary motels 3.3 and
+5.8 km from that building would read as outliers.
+
+Two minutes of arithmetic separates *"this guard is hiding real errors"* from
+*"this guard is the only thing keeping two motels out of the report"* — and
+nothing about the guard's shape distinguishes them. **Measure the rows a guard
+removes before deciding what it is.**
+
+## Two copies of one rule are two EQUIVALENT mutants, not two guards (2026-09-21)
+
+A mutation run reported 16/17 with one `MISSED`, and the miss was correct: the
+`min_others` rule is written twice — `len(members) <= min_others` outside the
+loop and `len(others) < min_others` inside it — and since `others` is `members`
+minus one, **they are the same predicate**. Breaking either copy alone changes
+nothing, because the other still skips the city.
+
+The temptation is to delete one copy, or to call the miss a selftest gap and
+write a test that cannot exist. The honest move is a third category: **assert the
+equivalence rather than trust it.** The harness now runs both single-copy mutants
+and requires them to stay *green*, so a later edit that makes the two predicates
+differ is caught as loudly as a missed mutant would be. Removing **both** is the
+real mutant, and is tested as one.
+
+## We cut the caption at 140 characters, and creators put the address last (2026-09-21)
+
+**"Modern Coffee House", New York, was 22.9 km out — on Staten Island.** What
+settled it was the creator's own caption, which ends:
+
+> 📍 105 E BROADWAY, NY, NY 10002
+
+Geocoding that returns **three** results, and the **third is our exact stored
+point**: a semidetached house at *105 East Broadway, **Staten Island**, 10306*.
+**Staten Island has an East Broadway too**, and the only thing separating the two
+is the postcode.
+
+🔴 **The postcode was in our own data and we had thrown it away.** Our stored
+copy of that caption stops mid-word at 140 characters, immediately before the 📍.
+`scripts/make-link-pin.py:621` is `caption[:140]`.
+
+Measured across the catalogue: **2,375 of 5,463 captions are exactly 140
+characters, and 2,320 of those end mid-sentence.** Only 535 carry a 📍 — which is
+a **floor, not a count**, because the cut lands precisely where the address is.
+
+**A truncation is not neutral about what it removes.** Cutting the *tail* of a
+caption sounds like dropping hashtags; in this corpus it is dropping the address,
+because that is the convention creators follow. Before truncating any field, ask
+what convention governs its *end* — that is what a fixed-length cut actually
+deletes.
+
+⚠️ And the fix is **not** a quiet tooling change: the caption is what a user
+reads on the pin, so altering it is the owner's decision, not a checker's.
+
+## The address-only geocode that would have moved a CORRECT pin (2026-09-21)
+
+Having used the creator's own 📍 address to settle *The Grapes* and *Modern
+Coffee House*, the obvious next move was to run it across every caption that
+carries one. Thirteen survive the 140-character cut with a real street number.
+**Nine agreed to within 38 m. Four did not — and not one was a catalogue error.**
+
+| flagged | what it actually was |
+|---|---|
+| House of the Redeemer, 20 km | my extractor took `95th Street` — the **house number was in the truncated tail** |
+| Mexican Seafood, 16 km | `107 St`, no number; the title itself says 107th St |
+| Barker Road Station, 665 m | `1919 Barker Road` — **1919 is a year**: *"Built in 1919 Barker Road Station sits…"* |
+| **Cube House, Toronto, 1,421 m** | 🔴 **the method itself was wrong** |
+
+Cube House is the one worth keeping. Its caption is unambiguous — `Cube House.
+📍 1 Sumach St` — and geocoding that address put it **1,421 m from our pin**.
+But searching the **name** returns an OSM node, `Cube House, 1, Sumach Street,
+Toronto`, at **exactly our stored coordinate**. The pin was right. Acting on the
+address alone would have moved a correct pin 1.4 km.
+
+**An address string and a named venue are not the same query**, even when the
+address is the venue's own. *Modern Coffee House* looked like a counter-example
+and is not: what settled it was the **named `cafe` node** at that address, with
+the address geocode only confirming which of two East Broadways was meant.
+
+🔴 So the rule already in this file — *search the venue's NAME* — is not a
+fallback for when an address is unavailable. **It outranks the address.** Use the
+address to disambiguate between candidates of the same name; use the name to find
+the thing.
+
+⚠️ **And this is why the sweep was not turned into a check.** Thirteen rows, nine
+trivially right, four false positives: the population is too small and too noisy
+to automate — *because the truncation destroyed it*. The check becomes worth
+building only if the caption decision goes the other way.
+
+### The counter-case, in the same afternoon: when the address IS the answer
+
+*Ginza Kojyu* was 258 m out, and the address settled it — but only because the
+order was right:
+
+1. **Search the NAME.** Nominatim returns **nothing at all** for `Ginza Kojyu`;
+   the restaurant's own listings give `4F Carioca Bldg, 5-4-8 Ginza, Chuo-ku`.
+2. **Geocode that with the authoritative service.** Rule 8d already says
+   Nominatim cannot geocode a Japanese address. **GSI** resolves 東京都中央区銀座
+   五丁目４番８号 to `35.671429, 139.763138`.
+3. **Check it against an independent source.** That is **33 m** from Wikidata's
+   point and **258 m** from ours.
+
+⚠️ **Reverse geocoding settled nothing here** — both points return 銀座五丁目, the
+same chōme. By rule 8d's *verify by ward, not by distance*, this was **not
+actionable at all** until the street address existed. The tool that beat
+everything last week was the wrong tool this time.
+
+### And when two sources agreeing IS corroboration
+
+*Chiesa di Nostra Signora del Cadore* was 675 m out. OSM holds a way named
+exactly `Nostra Signora del Cadore`, `building=church`, **34 m from Wikidata's
+independent point**.
+
+This looks like the London pubs — two lookups of one string, agreeing — and is
+the opposite, for one reason: **the name is unique to one building.** Five pubs
+called *The Royal Oak* let OSM and Wikidata resolve to the *same namesake* and
+agree at 10 m while both being wrong. There is no second Nostra Signora del
+Cadore to land on.
+
+🔴 **Independence is a property of the NAME, not of the number of sources.** Ask
+whether the two could have made the same mistake before treating their agreement
+as evidence.

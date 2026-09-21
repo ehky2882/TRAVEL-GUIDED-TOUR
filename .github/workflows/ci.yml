@@ -98,6 +98,46 @@ jobs:
             echo "::warning::$n repeated name(s) sit in more than one place. NOT a verdict — an extended site and a chain with two branches both span legitimately; what matters is a group where most members agree and one does not."
           fi
 
+      # 🔴 The only check in this job that asks NO external source, which is the
+      # point. The two above and the spine audit are all lookups, so they are
+      # silent on the 2,901 entries Wikidata does not know — and that blind spot
+      # is not random: many of those titles are not names at all ("The Million
+      # Dollar Corner", "A Greek Goddess on Fifth Avenue"), so no amount of extra
+      # sources will ever reach them. This one asks the catalogue about itself,
+      # and it is how "Great Court, British Museum" was found sitting 58 km away
+      # in a business park in GREAT NOTLEY, Essex — the entry was UNMATCHED, so
+      # every lookup here had nothing to say about it.
+      # ⚠️ This one is selftested before it is believed, where the two above are
+      # not, and the reason is specific: they compare a coordinate to something
+      # external, so a broken guard shows up as a wrong number. This one derives
+      # its centre, its scale and its threshold from the catalogue itself, and
+      # every way of breaking those produces NO finding rather than a wrong one.
+      # An outlier check that silently flags nothing reads exactly like a clean
+      # catalogue.
+      - name: Selftest the outlier check before believing a number it prints
+        run: python3 scripts/check-city-outliers.py --selftest
+      - name: Prove every guard in it can still fail
+        run: python3 scripts/mutate-check-city-outliers.py
+      - name: Scan for entries far from their own city
+        run: |
+          # Same exit contract: 1 means "findings to read", not a failure. This
+          # one especially — most of what it flags is CORRECT (Cape Point is
+          # 48 km from Cape Town), so it must never gate a merge.
+          code=0
+          python3 scripts/check-city-outliers.py --out city-outliers.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::check-city-outliers.py could not run (exit $code)"
+            cat city-outliers.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Far from its own city"
+            echo
+            echo '```'
+            sed -n '/entries scored against/,$p' city-outliers.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
   audit-board:
     name: Audit board
     runs-on: ubuntu-latest

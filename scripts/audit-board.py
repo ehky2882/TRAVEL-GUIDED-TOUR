@@ -248,6 +248,14 @@ ROWS = [
     # two branches both span legitimately, so it is never a defect count.
     ("Same name, different place", "check-same-name.py", "CI", None,
      "groups spanning >100 m — a stream or a chain spans legitimately"),
+    # 🔴 The only row here covered by a check that asks NO external source. Every
+    # lookup above is silent on the 2,901 entries Wikidata does not know, and
+    # that blind spot is not random — many of those titles are stories, not
+    # names ("A Greek Goddess on Fifth Avenue"), so more sources never reach
+    # them. This asks the catalogue about itself, and found "Great Court,
+    # British Museum" 58 km away in Great Notley, Essex, while UNMATCHED.
+    ("Coordinate far from its own city", "check-city-outliers.py", "CI", None,
+     "flagged — a question, not a defect count; Cape Point is 48 km out and right"),
     ("Coordinate implausible for its city", "check-coordinates.py", "by hand, on a drop", None,
      "GROSS — every one is a defect"),
     ("Image written under the wrong name", "check-image-duplicates.py", "by hand (network)", None,

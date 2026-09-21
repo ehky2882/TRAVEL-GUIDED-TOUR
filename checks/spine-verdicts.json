@@ -224,6 +224,15 @@
     "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours at the Queen's Road Central foot, theirs at Caine Road partway up; an 800 m escalator system.",
     "verdict": "extended-feature"
   },
+  "Chiesa di Nostra Signora del Cadore": {
+    "at": [
+      46.429176,
+      12.2390948
+    ],
+    "date": "2026-09-21",
+    "note": "675 m out. OSM holds a WAY named exactly 'Nostra Signora del Cadore', building=church, at 46.429176, 12.2390948 -- 34 m from Wikidata's independent point. 🔴 Two sources agreeing IS corroboration here, unlike the London pubs: the name is unique to one building, so OSM and Wikidata cannot have resolved it to the same namesake. Our point reverse-geocoded to 127a Via Metanopoli and Wikidata's to Via Ravenna, both inside the same ENI Village at Corte di Cadore, so reverse geocoding could not separate them either -- the named OSM geometry is what did.",
+    "verdict": "fixed"
+  },
   "Children's Railway (Gyermekvasút)": {
     "at": [
       47.5004125,
@@ -377,6 +386,15 @@
     "note": "Wikidata places Q714828 in Fushimi-ku (Shinto shrines in Kyoto, Japan), not Kyoto. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Ginza Kojyu": {
+    "at": [
+      35.671429,
+      139.763138
+    ],
+    "date": "2026-09-21",
+    "note": "258 m out. Rule 8d done in the right ORDER: searched the NAME first, which gives the restaurant's published address -- 4F Carioca Bldg, 5-4-8 Ginza, Chuo-ku -- then geocoded THAT with the GSI API, which is authoritative for a Japanese address where Nominatim is not (Nominatim returns nothing at all for 'Ginza Kojyu'). GSI resolves 東京都中央区銀座五丁目４番８号 to 35.671429, 139.763138 -- 33 m from Wikidata's independent point, against 258 m for ours. ⚠️ Reverse-geocoding settled NOTHING here: both points return 銀座五丁目, the same chome, so by rule 8d's 'verify by ward, not by distance' this was NOT actionable until the street address existed.",
+    "verdict": "fixed"
+  },
   "Govind Dev Ji Temple": {
     "at": [
       26.9289189,
@@ -394,6 +412,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q69968588 in The Bronx (public library in the Bronx, New York, USA), not Bronx. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Great Court, British Museum": {
+    "at": [
+      51.519312,
+      -0.126705
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 58 km OUT, in Essex. Our point reverse-geocoded to 'Horizon Boulevard, Horizon 120, GREAT NOTLEY, Braintree, Essex' -- a business park. Note the tell: the entry is 'GREAT Court' and the pin landed in 'GREAT Notley', so a geocoder matched the wrong word. Moved to the British Museum, Great Russell Street (OSM type=museum). 🔴 Found by NEITHER gazetteer check -- it was UNMATCHED -- but by comparing it against the other London entries: 58 km from their median where London's own median spread is 2.8 km.",
+    "verdict": "fixed"
   },
   "Green-Wood Cemetery": {
     "at": [
@@ -808,6 +835,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q3314040 in Le Plateau-Mont-Royal (neighbourhood in the borough of Plateau-Mont-Royal, Montreal, Quebec, ), not Montreal. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Modern Coffee House": {
+    "at": [
+      40.7136888,
+      -73.993096
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 22.9 km OUT, on Staten Island. Found by check-city-outliers.py, not by any lookup. The creator's own caption carries the address -- 105 E BROADWAY, NY, NY 10002 -- but OUR stored copy of that caption is TRUNCATED and cuts off before the pin emoji, so the address was invisible here; it was read off the same creator's TikTok post of the same reel. Nominatim on that address returns THREE results and its THIRD is our exact stored point: a semidetached house at 105 East Broadway, Oakwood Heights, Staten Island 10306. Staten Island has an East Broadway too, and the postcode that separates them was in the truncated tail. Moved to the OSM cafe node named Modern Coffee House at 105 East Broadway, Two Bridges, Manhattan.",
+    "verdict": "fixed"
   },
   "Mount Royal — the Climb": {
     "at": [
