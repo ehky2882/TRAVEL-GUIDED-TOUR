@@ -138,6 +138,29 @@ outlier. They are held out of the scoring.
 
 ---
 
+## The sweep that found nothing, and was worth running
+
+If the 📍 address settled two pins, run it across every caption that has one.
+**Thirteen survive the cut with a real street number. Nine agreed within 38 m,
+four did not, and none of the four was a catalogue error** — three were my
+extractor (a street with no house number twice; `1919 Barker Road`, where 1919
+is the year the station was built), and the fourth was the method itself:
+
+**Cube House, Toronto.** Caption: `Cube House. 📍 1 Sumach St`. Geocoding that
+address put it **1,421 m from our pin**. Searching the **name** returns an OSM
+node — `Cube House, 1, Sumach Street, Toronto` — at **exactly our stored
+coordinate**. 🔴 **Acting on the address alone would have moved a correct pin.**
+
+An address string and a named venue are different queries even when the address
+is the venue's own. *Modern Coffee House* is not a counter-example: what settled
+it was the **named `cafe` node**, with the address only disambiguating which
+East Broadway was meant.
+
+⚠️ **Deliberately NOT turned into a check.** Thirteen rows, nine trivially right,
+four false positives — too small and too noisy to automate, **because the
+truncation destroyed the population**. It becomes worth building only if the
+caption decision goes the other way.
+
 ## State
 
 | | |

@@ -2802,3 +2802,38 @@ deletes.
 
 ⚠️ And the fix is **not** a quiet tooling change: the caption is what a user
 reads on the pin, so altering it is the owner's decision, not a checker's.
+
+## The address-only geocode that would have moved a CORRECT pin (2026-09-21)
+
+Having used the creator's own 📍 address to settle *The Grapes* and *Modern
+Coffee House*, the obvious next move was to run it across every caption that
+carries one. Thirteen survive the 140-character cut with a real street number.
+**Nine agreed to within 38 m. Four did not — and not one was a catalogue error.**
+
+| flagged | what it actually was |
+|---|---|
+| House of the Redeemer, 20 km | my extractor took `95th Street` — the **house number was in the truncated tail** |
+| Mexican Seafood, 16 km | `107 St`, no number; the title itself says 107th St |
+| Barker Road Station, 665 m | `1919 Barker Road` — **1919 is a year**: *"Built in 1919 Barker Road Station sits…"* |
+| **Cube House, Toronto, 1,421 m** | 🔴 **the method itself was wrong** |
+
+Cube House is the one worth keeping. Its caption is unambiguous — `Cube House.
+📍 1 Sumach St` — and geocoding that address put it **1,421 m from our pin**.
+But searching the **name** returns an OSM node, `Cube House, 1, Sumach Street,
+Toronto`, at **exactly our stored coordinate**. The pin was right. Acting on the
+address alone would have moved a correct pin 1.4 km.
+
+**An address string and a named venue are not the same query**, even when the
+address is the venue's own. *Modern Coffee House* looked like a counter-example
+and is not: what settled it was the **named `cafe` node** at that address, with
+the address geocode only confirming which of two East Broadways was meant.
+
+🔴 So the rule already in this file — *search the venue's NAME* — is not a
+fallback for when an address is unavailable. **It outranks the address.** Use the
+address to disambiguate between candidates of the same name; use the name to find
+the thing.
+
+⚠️ **And this is why the sweep was not turned into a check.** Thirteen rows, nine
+trivially right, four false positives: the population is too small and too noisy
+to automate — *because the truncation destroyed it*. The check becomes worth
+building only if the caption decision goes the other way.
