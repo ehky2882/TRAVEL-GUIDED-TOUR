@@ -678,5 +678,10 @@
   "verdict": "part-vs-whole",
   "date": "2026-09-21",
   "note": "Wikidata Q5855114 is 'Universidad de Buenos Aires. Facultad de …' -- ONE FACULTY BUILDING, not the university. A university has many buildings across a city, so a 1,027 m gap says nothing about whether our point is wrong. NOT MOVED."
+ },
+ "Sun Tower": {
+  "verdict": "undecided",
+  "date": "2026-09-21",
+  "note": "23.5 km gap and NOTHING can settle it. Wikidata Q137310064 has one sitelink, no description and no stated municipality. OSM has no matching feature in a Yantai bbox under 'Sun Tower', '阳光塔' or '陽光塔'. English Wikipedia's 'Sun Tower' is VANCOUVER'S heritage building (49.281,-123.108) -- a different thing with the same name. Both coordinates fall in the Yantai region, so this is not a cross-city collision either. I have an opinion about which is right; an opinion is not a source. NOT MOVED -- needs the creator's post or the architect's own page."
  }
 }
