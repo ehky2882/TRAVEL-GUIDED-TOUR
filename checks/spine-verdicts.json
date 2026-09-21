@@ -125,6 +125,15 @@
     "note": "Wikidata describes Q374956 as \"cable car system in San Francisco, California, United States\" — not a point. A 1208 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Canal Saint-Martin": {
+    "at": [
+      48.8713,
+      2.3659
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED FINE. Wikidata's match is typed 'panel Histoire de Paris' -- an information PLAQUE about the canal, not the canal. Also a 4.5 km waterway, so no single point is honest.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Carette": {
     "at": [
       48.8637238,
@@ -214,6 +223,15 @@
     "date": "2026-09-21",
     "note": "Our point is Jean Nouvel's Boulevard Raspail building; Wikidata's is Place du Palais-Royal, where the foundation moved in 2025. Both are real. Which one the tour describes is a content question. NOT MOVED.",
     "verdict": "institution-moved"
+  },
+  "Four Freedoms Park": {
+    "at": [
+      40.750659,
+      -73.960446
+    ],
+    "date": "2026-09-21",
+    "note": "OUR coordinate was 1,290 m out -- mid-island, OUTSIDE the park's OSM bounding box on BOTH axes (park: 40.7496-40.7517 / -73.9615 to -73.9592; ours was 40.7594, -73.9504). Moved to OSM's park point 40.750659,-73.960446, corroborated to 25 m by @urbanistariel's independently-authored 'The FDR Monument on Roosevelt Island' pin. 🔴 The spine audit MISSED this entirely -- no Wikidata candidate matched, so it sat in UNMATCHED, which is 'unexamined', not 'clean'. The owner caught it.",
+    "verdict": "fixed"
   },
   "Fushimi Inari Taisha | 伏見稲荷大社": {
     "at": [
@@ -503,6 +521,15 @@
     "note": "Wikidata places Q6479071 in Colorado (family-owned amusement park in Lakeside, Colorado adjacent to Denver), not Lakeside. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Lakhta Center": {
+    "at": [
+      59.9871202,
+      30.1707207
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED CORRECT. OSM's Лахта-центр is 0 m from our point; Wikidata's own main-tower record (Q4255374) sits 413 m away. The tool matched 'Lakhta Center 3' (Q136648950, 1 sitelink), a DIFFERENT tower in the same complex, so the 335 m gap is a sibling-building collision, not an error.",
+    "verdict": "wikidata-wrong"
+  },
   "Lion's Head": {
     "at": [
       -33.936899,
@@ -665,6 +692,15 @@
     "note": "Wikidata matched a different real entity of the same name. Q15303666 41 km from the Rio cluster; ours is 1.8 km from it. Our coordinate sits inside its own city's cluster. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Pier 39 Sea Lions": {
+    "at": [
+      37.8088,
+      -122.4098
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED CORRECT. Wikidata's match is typed 'group of living things' -- the sea lions as a TAXON, which has no fixed location at all. A distance to it means nothing.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Pilsen — Eighteenth Street, East to West": {
     "at": [
       41.8576,
@@ -745,6 +781,15 @@
     "date": "2026-09-21",
     "note": "Wikidata Q929965 states the address as '5757 South Woodlawn Avenue', Hyde Park -- which is its coordinate, not ours. Ours was 1,082 m south.",
     "verdict": "fixed"
+  },
+  "Roosevelt Island": {
+    "at": [
+      40.7605625,
+      -73.9509375
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED FINE. Our pin sits near the island's centre. The 260 m match is Q1865158 'Roosevelt Island' -- the SUBWAY STATION, which Wikidata labels with the island's bare name. The island itself (Q909777, 39 sitelinks) is 265 m away. Both distances are trivial for an entry titled after the whole island.",
+    "verdict": "name-collision"
   },
   "Saint-Sulpice": {
     "at": [
@@ -1177,6 +1222,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q17541 as \"mountain in Hong Kong\" — not a point. A 792 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Walden 7": {
+    "at": [
+      41.3803125,
+      2.0678125
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-DIRECTED. @ninosbuildings' pin sat 335 m from three other entries on the same building (Atlas Studio BCN tour, @thedesignssuite and @rayisaplace pins) which agree with Wikidata Q3043523 to 6 m. Moved onto the shared point.",
+    "verdict": "fixed"
   },
   "Wat Mahathat | วัดมหาธาตุ": {
     "at": [
