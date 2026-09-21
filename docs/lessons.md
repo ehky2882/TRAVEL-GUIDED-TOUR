@@ -2837,3 +2837,37 @@ the thing.
 trivially right, four false positives: the population is too small and too noisy
 to automate — *because the truncation destroyed it*. The check becomes worth
 building only if the caption decision goes the other way.
+
+### The counter-case, in the same afternoon: when the address IS the answer
+
+*Ginza Kojyu* was 258 m out, and the address settled it — but only because the
+order was right:
+
+1. **Search the NAME.** Nominatim returns **nothing at all** for `Ginza Kojyu`;
+   the restaurant's own listings give `4F Carioca Bldg, 5-4-8 Ginza, Chuo-ku`.
+2. **Geocode that with the authoritative service.** Rule 8d already says
+   Nominatim cannot geocode a Japanese address. **GSI** resolves 東京都中央区銀座
+   五丁目４番８号 to `35.671429, 139.763138`.
+3. **Check it against an independent source.** That is **33 m** from Wikidata's
+   point and **258 m** from ours.
+
+⚠️ **Reverse geocoding settled nothing here** — both points return 銀座五丁目, the
+same chōme. By rule 8d's *verify by ward, not by distance*, this was **not
+actionable at all** until the street address existed. The tool that beat
+everything last week was the wrong tool this time.
+
+### And when two sources agreeing IS corroboration
+
+*Chiesa di Nostra Signora del Cadore* was 675 m out. OSM holds a way named
+exactly `Nostra Signora del Cadore`, `building=church`, **34 m from Wikidata's
+independent point**.
+
+This looks like the London pubs — two lookups of one string, agreeing — and is
+the opposite, for one reason: **the name is unique to one building.** Five pubs
+called *The Royal Oak* let OSM and Wikidata resolve to the *same namesake* and
+agree at 10 m while both being wrong. There is no second Nostra Signora del
+Cadore to land on.
+
+🔴 **Independence is a property of the NAME, not of the number of sources.** Ask
+whether the two could have made the same mistake before treating their agreement
+as evidence.

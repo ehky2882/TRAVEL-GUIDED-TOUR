@@ -161,14 +161,35 @@ four false positives — too small and too noisy to automate, **because the
 truncation destroyed the population**. It becomes worth building only if the
 caption decision goes the other way.
 
+## The audit reached zero
+
+The two entries the previous handoff left unsettled are settled, and the
+coordinate audit now reports **`DISAGREES: 0 unexamined`, `STALE: 0`, exit 0** —
+clean for the first time.
+
+**Ginza Kojyu — 258 m.** Nominatim returns *nothing* for the name; the
+restaurant's own listings give `4F Carioca Bldg, 5-4-8 Ginza, Chuo-ku`, and
+**GSI** (authoritative where Nominatim is not) resolves it **33 m from
+Wikidata's point and 258 m from ours**. ⚠️ Reverse geocoding settled nothing —
+both points return 銀座五丁目, the same chōme, so by rule 8d this was not
+actionable until the street address existed.
+
+**Chiesa di Nostra Signora del Cadore — 675 m.** OSM holds a way named exactly
+`Nostra Signora del Cadore`, `building=church`, **34 m from Wikidata**. This
+looks like the London pubs and is the opposite: the name is **unique to one
+building**, so the two sources could not have landed on the same namesake.
+Both our point (127a Via Metanopoli) and Wikidata's (Via Ravenna) reverse-
+geocode inside the same ENI Village, so that tool could not separate them —
+the named geometry did.
+
 ## State
 
 | | |
 |---|---|
 | `validate-tours-mirror.py` | **0 errors**, 530 warnings · `control clean` · selftest 37/37 + 12/12 |
 | `check-city-outliers.py` | 21/21 · mutants 17/17 (+2 proven equivalent) |
-| coordinates moved | **2** — Great Court, British Museum (58 km) · Modern Coffee House (22.9 km) |
-| verdicts on file | 191 |
+| coordinates moved | **4** — British Museum (58 km) · Modern Coffee House (22.9 km) · Cadore church (675 m) · Ginza Kojyu (258 m) |
+| verdicts on file | **193** · audit `DISAGREES: 0 unexamined`, exit 0 |
 
 ## Still open for the owner
 
@@ -184,7 +205,8 @@ caption decision goes the other way.
 
 ## Next
 
-The two entries the audit still cannot settle are *Chiesa di Nostra Signora del
-Cadore* (708 m) and *Ginza Kojyu* (282 m); neither point names the subject, so
-neither is answerable by lookup or by city cluster. They need the creator's own
-caption or the owner.
+The gazetteer audit is at zero. What is left is the bucket it cannot speak to at
+all — **2,901 UNMATCHED** — and the city-outlier check is the only thing that
+reaches into it today. Its 76 flags have been read once and are mostly genuine
+far-out sights; a second pass, or a narrower question asked of that population,
+is where the next error will come from.

@@ -224,6 +224,15 @@
     "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours at the Queen's Road Central foot, theirs at Caine Road partway up; an 800 m escalator system.",
     "verdict": "extended-feature"
   },
+  "Chiesa di Nostra Signora del Cadore": {
+    "at": [
+      46.429176,
+      12.2390948
+    ],
+    "date": "2026-09-21",
+    "note": "675 m out. OSM holds a WAY named exactly 'Nostra Signora del Cadore', building=church, at 46.429176, 12.2390948 -- 34 m from Wikidata's independent point. 🔴 Two sources agreeing IS corroboration here, unlike the London pubs: the name is unique to one building, so OSM and Wikidata cannot have resolved it to the same namesake. Our point reverse-geocoded to 127a Via Metanopoli and Wikidata's to Via Ravenna, both inside the same ENI Village at Corte di Cadore, so reverse geocoding could not separate them either -- the named OSM geometry is what did.",
+    "verdict": "fixed"
+  },
   "Children's Railway (Gyermekvasút)": {
     "at": [
       47.5004125,
@@ -376,6 +385,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q714828 in Fushimi-ku (Shinto shrines in Kyoto, Japan), not Kyoto. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Ginza Kojyu": {
+    "at": [
+      35.671429,
+      139.763138
+    ],
+    "date": "2026-09-21",
+    "note": "258 m out. Rule 8d done in the right ORDER: searched the NAME first, which gives the restaurant's published address -- 4F Carioca Bldg, 5-4-8 Ginza, Chuo-ku -- then geocoded THAT with the GSI API, which is authoritative for a Japanese address where Nominatim is not (Nominatim returns nothing at all for 'Ginza Kojyu'). GSI resolves 東京都中央区銀座五丁目４番８号 to 35.671429, 139.763138 -- 33 m from Wikidata's independent point, against 258 m for ours. ⚠️ Reverse-geocoding settled NOTHING here: both points return 銀座五丁目, the same chome, so by rule 8d's 'verify by ward, not by distance' this was NOT actionable until the street address existed.",
+    "verdict": "fixed"
   },
   "Govind Dev Ji Temple": {
     "at": [
