@@ -1,0 +1,42 @@
+{
+ "Govind Dev Ji Temple": {
+  "verdict": "fixed",
+  "date": "2026-09-21",
+  "note": "OUR coordinate was 11.9 km NW. Wikidata Q5589834 sits inside Q2723395 = the City Palace complex, Jaipur, which is where the temple is. Moved to 26.928919,75.823965."
+ },
+ "MahaNakhon": {
+  "verdict": "fixed",
+  "date": "2026-09-21",
+  "note": "OUR coordinate was 6.9 km south. Q1640197 'King Power Mahanakhon', 27 sitelinks, a skyscraper in Bangkok (admin Q1861). Moved to 13.723611,100.528333."
+ },
+ "Pérez Art Museum Miami": {
+  "verdict": "wikidata-wrong",
+  "date": "2026-09-21",
+  "note": "🔴 WIKIDATA CONTRADICTS ITSELF. Q3026874 gives the address as '1103 Biscayne Boulevard' -- Museum Park, which is OUR coordinate -- while its P625 points at 25.7743,-80.1963, the museum's pre-2013 downtown site as the Miami Art Museum. Ours is right; do not move. Two catalogue entries share this title and point."
+ },
+ "Sardar Vallabhbhai Patel (SVP) Stadium": {
+  "verdict": "name-collision",
+  "date": "2026-09-21",
+  "note": "TWO Wikidata entities, both ~6.46 km away: Q134932381 '...Navrangpura' and Q7423742 '...Ahmedabad'. Our point is at Motera, the stadium renamed Narendra Modi Stadium in 2021 and previously called Sardar Patel Stadium. Which one the tour means is a content question. NOT MOVED."
+ },
+ "Fondation Cartier pour l'art contemporain": {
+  "verdict": "institution-moved",
+  "date": "2026-09-21",
+  "note": "Our point is Jean Nouvel's Boulevard Raspail building; Wikidata's is Place du Palais-Royal, where the foundation moved in 2025. Both are real. Which one the tour describes is a content question. NOT MOVED."
+ },
+ "Takase River | 高瀬川": {
+  "verdict": "linear-feature",
+  "date": "2026-09-21",
+  "note": "A canal, not a point. Three candidates all ~1.9 km away (Q7677301 the river itself, plus two named basins), which is what a linear feature looks like. Any point on it is defensible. NOT AN ERROR."
+ },
+ "The Sentry Box of Old San Juan": {
+  "verdict": "district-match",
+  "date": "2026-09-21",
+  "note": "Both candidates are the DISTRICT (Q1136674 Old San Juan Historic District, Q5413104 San Juan Antiguo), not the garita. CLAUDE.md rule 8d forbids moving a pin onto a district centroid. NOT MOVED."
+ },
+ "Jackson Street Bridge": {
+  "verdict": "undecided",
+  "date": "2026-09-21",
+  "note": "1.28 km gap, single candidate Q136760277 with ONE sitelink -- too thin to move a coordinate on. Needs a named-source check. NOT MOVED."
+ }
+}
