@@ -655,8 +655,7 @@ struct PlayerView: View {
                     // the clamp lives at the display site rather than in the data.
                     ExpandableText(text: caption,
                                    font: AtlasTypography.caption,
-                                   lineLimit: 3,
-                                   overflowThreshold: 240)
+                                   lineLimit: 3)
                 }
 
                 Text(formatTime(TimeInterval(stop.audioDurationSeconds)))

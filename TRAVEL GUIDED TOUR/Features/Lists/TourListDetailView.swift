@@ -106,7 +106,6 @@ struct TourListDetailView: View {
     @State private var showingEditDetails = false
     @State private var noteTarget: NoteTarget?
     @State private var topSectionTab: TopSectionTab = .gallery
-    @State private var isDescriptionExpanded = false
     /// Measured width of the grid container — drives square tile sizing.
     @State private var gridContentWidth: CGFloat = 0
 
@@ -138,7 +137,6 @@ struct TourListDetailView: View {
     /// `GeometryReader` round-trip on every body eval, which would fight the
     /// truncation animation.
     private static let descriptionPreviewLineLimit = 4
-    private static let descriptionOverflowThreshold = 240
 
     /// The list's metadata — yours from the service, someone else's from
     /// whoever pushed this screen.
@@ -509,27 +507,20 @@ struct TourListDetailView: View {
     /// Truncated to 4 lines with an inline toggle, like the other two pages.
     /// Untruncated, a long description pushes the tours off the screen — on
     /// the one page whose whole purpose is that list.
+    ///
+    /// 🔴 The overflow test used to be a CHARACTER COUNT (240 ≈ 4 lines of body
+    /// text). `ExpandableText` measures it instead, after that same count
+    /// shipped clamped stop captions with no toggle at all: 161- and 191-
+    /// character captions render at caption size in an indented row, not body
+    /// size at full width, so the count was calibrated for the wrong thing.
+    /// Clamping text while offering nothing to open it hides content with no
+    /// affordance to reach it, so the count is gone from every one of the four
+    /// places it had been copied to.
     private func descriptionSection(_ description: String) -> some View {
-        VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-            Text(description)
-                .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.primaryText)
-                .lineLimit(isDescriptionExpanded ? nil : Self.descriptionPreviewLineLimit)
-                .fixedSize(horizontal: false, vertical: true)
-                .animation(.easeInOut(duration: 0.2), value: isDescriptionExpanded)
-
-            if description.count > Self.descriptionOverflowThreshold {
-                Button {
-                    withAnimation(.easeInOut(duration: 0.2)) { isDescriptionExpanded.toggle() }
-                } label: {
-                    Text(isDescriptionExpanded ? "Show less" : "Read more")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel(isDescriptionExpanded ? "Show less description" : "Read more description")
-            }
-        }
+        ExpandableText(text: description,
+                       font: AtlasTypography.body,
+                       lineLimit: Self.descriptionPreviewLineLimit,
+                       color: AtlasColors.primaryText)
     }
 
     /// Three cases, because an empty screen should say what would fill it —
