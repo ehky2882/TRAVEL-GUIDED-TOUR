@@ -663,5 +663,20 @@
   "verdict": "fixed",
   "date": "2026-09-21",
   "note": "OSM way/496780880, building=yes, named 'Yachthouse Residence' -- WITHOUT the 'Club' our title carries, which is why an exact-name query returned nothing and a looser one found it. It agrees with Wikidata Q97167987 to 8 m and sits 2.9 km from our old point. Moved."
+ },
+ "Kiln": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata Q26616936 describes itself as 'kiln in Lane End, Wycombe, Buckinghamshire' -- an actual kiln, 51 km away. Ours is the Soho restaurant named Kiln, and our coordinate is central London. NOT MOVED."
+ },
+ "Nhiêu Lộc–Thị Nghè Canal | Kênh Nhiêu Lộc - Thị Nghè": {
+  "verdict": "extended-feature",
+  "date": "2026-09-21",
+  "note": "Wikidata Q10783045 calls it a 'waterway in Ho Chi Minh City' -- a canal roughly 9 km long. An 880 m gap along it is the normal condition, not a defect. NOT AN ERROR."
+ },
+ "Universidad de Buenos Aires": {
+  "verdict": "part-vs-whole",
+  "date": "2026-09-21",
+  "note": "Wikidata Q5855114 is 'Universidad de Buenos Aires. Facultad de …' -- ONE FACULTY BUILDING, not the university. A university has many buildings across a city, so a 1,027 m gap says nothing about whether our point is wrong. NOT MOVED."
  }
 }
