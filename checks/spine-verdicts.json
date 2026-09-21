@@ -645,19 +645,19 @@
   "note": "Q28224747 (10 sitelinks, built 2022) puts it at Belgrade Waterfront, 2,329 m from our point in the old town. Wikidata states NO address, so the only support is recollection, which is not a named source. NOT MOVED -- needs one independent document."
  },
  "Bahrain World Trade Center": {
-  "verdict": "likely-ours-wrong",
+  "verdict": "fixed",
   "date": "2026-09-21",
-  "note": "Q511612 (26 sitelinks) is 1,272 m north of ours. No address stated. NOT MOVED -- needs one independent document."
+  "note": "Wikipedia's article coordinate (26.23917,50.58139) matches Wikidata Q511612 to within a metre and is 1,272 m from ours. Two independent sources agree. Moved."
  },
  "Etihad Museum": {
-  "verdict": "likely-ours-wrong",
+  "verdict": "fixed",
   "date": "2026-09-21",
-  "note": "Q28736367 (5 sitelinks) is 1,345 m west of ours, toward Union House in Jumeirah. No address stated. NOT MOVED -- needs one independent document."
+  "note": "Wikipedia gives 25.23,55.26 -- only two decimals, so ~1 km of slop, but it lands on Wikidata's 55.269 rather than our 55.283, toward Union House in Jumeirah. Moved, with that precision noted."
  },
  "InterContinental Shanghai Wonderland": {
-  "verdict": "likely-ours-wrong",
+  "verdict": "fixed",
   "date": "2026-09-21",
-  "note": "Both points sit ~35 km from central Shanghai, which is correct for Songjiang, and they differ by 5 km. Neither side is corroborated. NOT MOVED."
+  "note": "Wikipedia's 31.06028,121.14944 matches Wikidata Q16928554 to ~60 m and is 5.1 km from ours. Both sides sit ~35 km from central Shanghai, which is correct for the Songjiang quarry; the question was only WHICH point, and two sources agree. Moved."
  },
  "Yachthouse Residence Club": {
   "verdict": "likely-ours-wrong",
