@@ -1,10 +1,11 @@
-RUN spine-match.py · rev c0555f6f · 2026-09-21T08:47:26Z · args: --limit 25 --out spine/audit.txt
-audited 4990 catalogue entries against Wikidata
+RUN spine-match.py · rev c0555f6f · 2026-09-21T12:07:05Z · args: --limit 25 --out spine/audit.txt
+audited 5058 catalogue entries against Wikidata
 
-🔴 DISAGREES — our coordinate is not where the subject is: 43 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
+🔴 DISAGREES — our coordinate is not where the subject is: 45 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
       18233 m   The Kings Arms                           London           -> Kings Arms
        8662 m   The Britannia                            London           -> The Britannia
        7966 m   Les Tres Xemeneies                       Sant Adrià de Be -> Les Tres Xemeneies
+       3615 m   The Royal Oak                            London           -> Royal Oak
        1545 m   Míčovna (Ball Game Hall)                 Prague           -> Míčovna
        1477 m   Amanohashidate | 天橋立                     Miyazu           -> Amanohashidate
         872 m   National Library of Latvia               Riga             -> National Library of Latvia
@@ -14,6 +15,7 @@ audited 4990 catalogue entries against Wikidata
         594 m   Avenida da Liberdade                     Lisbon           -> Avenida da Liberdade
         587 m   Hotel Negresco                           Nice             -> Hotel Negresco
         564 m   Carl Street Studios                      Chicago          -> Carl Street Studios
+        558 m   The Grapes                               London           -> The Grapes
         502 m   Cholon | Chợ Lớn                         Ho Chi Minh City -> Cholon
         480 m   Károlyi Palace (Petőfi Literary Museum)  Budapest         -> Károlyi Palace
         453 m   Three Gorges Dam                         Yichang (Yangtze -> Three Gorges Dam
@@ -25,13 +27,13 @@ audited 4990 catalogue entries against Wikidata
         390 m   West Kowloon Cultural District           Hong Kong        -> West Kowloon Cultural District
         388 m   Hotel Nacional                           Rio de Janeiro   -> Hotel Nacional
         382 m   Central–Mid-Levels Escalators | 中環半山扶手電梯 Hong Kong        -> Central–Mid-levels escalators
-        371 m   Xcaret                                   Playa del Carmen -> Xcaret
-        371 m   Santa Teresa Tram                        Rio de Janeiro   -> Santa Teresa Tram
-  … and 18 more (raise --limit to see them)
+  … and 20 more (raise --limit to see them)
 
-REVIEW — near, but further out than a correct entry usually sits: 169 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
+REVIEW — near, but further out than a correct entry usually sits: 171 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
+      12639 m ~ Redhouse                                 Newcastle upon T -> Hylton Red House
        7411 m ~ Pai Canyon | ปายแคนยอน                   Pai              -> Q49097134
        5237 m ~ The Fairy Tale Castle of Filiatra        Filiatra         -> Filiatra Eiffel Tower
+       2184 m ~ The Phoenix                              London           -> Cockpit Theatre
        1287 m   Machu Picchu                             Machu Picchu     -> Machu Picchu
        1042 m   Palmanova (star-shaped fortress town)    Palmanova        -> Palmanova
         861 m ~ National Archaeological Museum of Naples Naples           -> University of Naples Federico 
@@ -53,9 +55,7 @@ REVIEW — near, but further out than a correct entry usually sits: 169 unexamin
         403 m ~ Tsukiji Outer Market | 築地場外市場            Tokyo            -> Tsukiji fish market
         389 m ~ The Double Sunset of Barga               Barga            -> Barga
         388 m ~ Midway Barn at Taliesin                  Spring Green     -> Taliesin
-        381 m   Marco Island                             Marco Island     -> Marco Island
-        381 m ~ Pilsner Urquell Brewery                  Plzeň            -> Plzeňský Prazdroj
-  … and 144 more (raise --limit to see them)
+  … and 146 more (raise --limit to see them)
 
 EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no single point is honest for these: 115
       20689 m ~ The Train Carriage Hotel at Khao Yai     Pak Chong        -> Khao Yai National Park
@@ -85,7 +85,7 @@ EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no 
         941 m ~ Mount Royal — the Climb                  Montreal         -> Mount Royal
   … and 90 more (raise --limit to see them)
 
-CONFIRMS: 1788   EXTENDED: 115   UNMATCHED: 2799   STALE: 0   NOT-ASKED: 0
+CONFIRMS: 1801   EXTENDED: 115   UNMATCHED: 2850   STALE: 0   NOT-ASKED: 0
 
 coverage by creator (matched / asked) — where this method works:
    35%   116/326   TikTok @urbanistariel
@@ -97,9 +97,9 @@ coverage by creator (matched / asked) — where this method works:
    54%    57/104   Instagram @blessedarch
    75%    76/101   Atlas Studio NYC
    86%    86/100   Atlas Studio LDN
+   24%    24/97    TikTok @historicpubcrawls
    67%    64/95    TikTok @history_alice
     1%     1/88    Instagram @japanbyfood
-    7%     6/84    Instagram @nom_life
 
 ⚠️  UNMATCHED is NOT a clean bill of health — it means Wikidata has
     never heard of the subject. Coverage runs 78-83% for architecture
@@ -117,4 +117,4 @@ RULED: 139 entries carry a recorded verdict that still applies — checks/spine-
     STOPS APPLYING the moment that coordinate moves: nobody has judged
     the new point, and silence would look exactly like agreement.
 
-43 entries to put to the owner
+45 entries to put to the owner
