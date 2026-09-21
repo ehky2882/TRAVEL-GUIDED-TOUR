@@ -38,5 +38,85 @@
   "verdict": "undecided",
   "date": "2026-09-21",
   "note": "1.28 km gap, single candidate Q136760277 with ONE sitelink -- too thin to move a coordinate on. Needs a named-source check. NOT MOVED."
+ },
+ "The Knights of Columbus Building": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q141128288 'Columbus Building', 1 sitelink, 92 km away. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "The Elms": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q7731831 is a historic house in Old Bedhampton, Hampshire — verified. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Basilica di Santa Maria delle Grazie": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q3635768 is the church in CORTEMAGGIORE — verified; ours is Milan's, with the Last Supper. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Old City Hall": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q7083689 is in GUELPH, Ontario — verified; ours is Toronto's. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "La Fábrica (The Factory)": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q47179935 'La Fàbrica', 1 sitelink, 60 km away. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Saint-Sulpice": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q924614 is a COMMUNE IN OISE — verified; ours is the Paris church. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Parque das Ruínas": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q15303666 41 km from the Rio cluster; ours is 1.8 km from it. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Hōrin-ji Temple | 法輪寺": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q97192071 is a different Hōrin-ji, 16 km away — a common temple name. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Palácio da Justiça": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q111263442, 1 sitelink, 11 km out; ours sits in the Lisbon cluster. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Prada Aoyama | プラダ 青山店": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q56322351, 2 sitelinks, 10.6 km from Aoyama; ours is 1.3 km from the Tokyo cluster. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "Tung Po": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata matched a different real entity of the same name. Q16923237, 1 sitelink, 6.6 km out. Our coordinate sits inside its own city's cluster. NOT MOVED."
+ },
+ "A History of the Florida Keys": {
+  "verdict": "editorial-title",
+  "date": "2026-09-21",
+  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched 'Florida Keys Marathon Airport' — the title names a region, not a venue. Not a coordinate error. NOT MOVED."
+ },
+ "The Wizard of Park Avenue": {
+  "verdict": "editorial-title",
+  "date": "2026-09-21",
+  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Park Avenue, the STREET (30 sitelinks). Not a coordinate error. NOT MOVED."
+ },
+ "The Monumental Rosary of Montserrat": {
+  "verdict": "editorial-title",
+  "date": "2026-09-21",
+  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Montserrat itself (46 sitelinks); ours is 34 m from the cluster. Not a coordinate error. NOT MOVED."
+ },
+ "The Silk Weavers of Lucca": {
+  "verdict": "editorial-title",
+  "date": "2026-09-21",
+  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched the CITY of Lucca (112 sitelinks). Not a coordinate error. NOT MOVED."
+ },
+ "The Wertheim Study at the New York Public Library": {
+  "verdict": "editorial-title",
+  "date": "2026-09-21",
+  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched the NYPL for the Performing Arts — a DIFFERENT BRANCH. Not a coordinate error. NOT MOVED."
  }
 }
