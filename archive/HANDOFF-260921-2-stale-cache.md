@@ -77,6 +77,28 @@ third party, nothing a phone reads comes from here, and a failed refresh degrade
 precisely what the guard says: STALE, with the command named in the output. **The guard is
 what makes the automation safe to let fail.**
 
+## A third instance, found by looking for the shape
+
+Two instances of one defect are a pattern, so the next question was which *other* committed cache
+has a reader that does not version it. `grep` over `scripts/` for each file in `checks/` and
+`spine/` answered it in minutes.
+
+**The vision sweep.** `check-pin-subject.py` digests an entry's title **and hero image** and
+re-asks on a mismatch — the fetcher again — while nothing reading the cache back checks it.
+
+- **51 of 4,930** entries were retitled or re-imaged after their verdict (47 UNUSABLE, 3 CONFIRMS,
+  1 CONTRADICTS);
+- **69** had never been asked at all, and read as covered because nothing said otherwise.
+
+🔴 The single stale `CONTRADICTS` is **Old Spitalfields Market — whose hero was replaced precisely
+because that check flagged it.** The finding outlived its own fix and read exactly like a live one.
+
+Re-asking needs a Gemini key (the owner pastes one fresh; it does not survive the container), so
+the fix here is to make the gap **visible without one**: `check-pin-subject.py --status` reports
+what the cache can and cannot speak for, offline, and deliberately answers *before* the key check —
+coverage is answerable without a key, and refusing for want of one would be the same false silence.
+`cache_coverage()` was extracted so the guard is reachable from the selftest at all.
+
 ## Verification
 
 | | |
@@ -84,6 +106,8 @@ what makes the automation safe to let fail.**
 | `spine-match.py --selftest` | **68/68** (was 52) |
 | `scripts/mutate-spine-match.py` (new) | **19/19 caught**, control-first |
 | `spine-lookup.py --selftest` | 43/43 |
+| `check-pin-subject.py --selftest` | **52/52** |
+| `scripts/mutate-check-pin-subject.py` (new) | **10/10 caught** |
 | `validate-tours-mirror.py` | **0 errors**, 523 warnings — unchanged; no catalogue change in this PR |
 
 🔴 **Four guards were initially unreachable from the selftest**, each reading as an

@@ -129,6 +129,21 @@ Two structural notes worth keeping:
   for all 137 — and one `fixed` note's hand-typed coordinate turned out to be **~60 m from what
   was actually applied**, which is the argument for storing the fact as data rather than prose.
 
+**A third instance, found by looking for the SHAPE rather than for a bug.** Having fixed two,
+the obvious question was which other committed cache has a reader that does not version it. The
+answer was the vision sweep: `check-pin-subject.py` digests an entry's title **and hero image**
+and re-asks on a mismatch — the fetcher, again — while nothing reading the cache back checks it.
+**51 of 4,930 entries were retitled or re-imaged after their verdict, and 69 had never been asked
+at all.** The single stale `CONTRADICTS` was **Old Spitalfields Market, whose hero was replaced
+precisely because that check flagged it** — so the finding outlived its own fix, and read exactly
+like a live one. A `--status` mode now reports both, offline and without the API key, because
+coverage is answerable without one and refusing to answer it for want of a key is the same false
+silence.
+
+🔴 **Go looking for the shape.** Two instances of one defect are not a coincidence, they are a
+pattern, and the third was found in a few minutes by grepping for which scripts read a committed
+cache. Fixing the bug you tripped over and stopping there leaves the others.
+
 ⚠️ **A guard that reds a check must ship with the thing that clears it.** Exiting 2 on a stale
 cache would have turned the coordinate audit permanently red on the next content merge —
 `spine/README.md`'s own warning that *a red check nobody can fix reads as coverage and gets
