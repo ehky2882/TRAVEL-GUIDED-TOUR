@@ -182,6 +182,31 @@ Both our point (127a Via Metanopoli) and Wikidata's (Via Ravenna) reverse-
 geocode inside the same ENI Village, so that tool could not separate them —
 the named geometry did.
 
+## Two classes probed and CLOSED — do not re-run these
+
+Both were asked of the 2,901 `UNMATCHED` bucket, and both came back empty.
+Recording them so the next session spends its effort elsewhere.
+
+**1. The geocoder centroid.** A geocoder that gives up falls back to a city
+centre, which would put many *unrelated* subjects on one identical point.
+Measured: **126 identical-coordinate groups of 3 or more**, and after excluding
+groups that are a place (the designed answer) and groups where any two members
+share a significant word, **zero remain**. The largest are 8× Cathedral of St.
+John the Divine and 7× the Morgan Library — all places, working as intended.
+`check-place-candidates.py` plus the places discipline has already absorbed this
+class.
+
+**2. Coordinate precision as provenance.** A rounded coordinate looks like a
+centroid's fingerprint. It is a **weak signal and should not be built into a
+check**: trailing zeros are indistinguishable from rounding — Radio City Music
+Hall stores `40.76`, which reads as two decimals and is **11 m** from correct.
+Of 140 entries at ≤3 decimals, the 16 coarsest cross-check clean against the
+cache — every Wikidata-matched one within 231 m. The one apparent exception,
+**Prora at 2,282 m**, matched *"Prora Ost railway stop"*: a namesake of the
+4.5 km complex, already covered by an existing verdict. And most coarse entries
+are **neighbourhoods** — Haight-Ashbury, Le Marais, Little Tokyo — where a coarse
+coordinate is the honest one.
+
 ## State
 
 | | |
