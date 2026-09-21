@@ -252,8 +252,15 @@ def name_from_caption(handle, caption, max_words=6):
             if not acc:
                 break
             if acc == want:
-                phrase = " ".join(words[i:j + 1])
-                return phrase.strip(" .,:;!?-–—")
+                phrase = " ".join(words[i:j + 1]).strip(" .,:;!?-–—")
+                # 🔴 The handle also appears INLINE in captions ("Stopped by
+                # @lindustriebk in Brooklyn"), so stripping the 📍 marker is
+                # not enough -- the handle still matches ITSELF and would be
+                # returned as the venue's name. A name that is just a handle
+                # is not a name.
+                if not phrase.startswith("@"):
+                    return phrase
+                continue
             if len(acc) > len(want):
                 break
     return ""
@@ -375,6 +382,15 @@ def selftest():
           == "Marks Off Madison")
     check("punctuation in the real name survives",
           name_from_caption("@lindustriebk", "we love L'Industrie BK so much")
+          == "L'Industrie BK")
+    # 🔴 Found by resolving handles against the WHOLE catalogue's captions:
+    # five of seven "hits" were the handle matching itself inline.
+    check("🔴 a handle mentioned INLINE does not resolve to itself",
+          name_from_caption("@lindustriebk",
+                            "Stopped by @lindustriebk in Brooklyn") == "")
+    check("but a real spelling later in the same caption still wins",
+          name_from_caption("@lindustriebk",
+                            "at @lindustriebk today — L'Industrie BK is great")
           == "L'Industrie BK")
     check("🔴 a handle the caption never spells out yields NOTHING",
           name_from_caption("@someplace", "great food, loved it") == "")

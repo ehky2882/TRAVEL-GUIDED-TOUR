@@ -640,9 +640,9 @@
   "note": "Wikidata Q14530911 states the address as 'avinguda de Colòmbia, s/n', on Benidorm's Poniente side -- its coordinate, not ours. Ours was 2,939 m east."
  },
  "Belgrade Tower": {
-  "verdict": "likely-ours-wrong",
+  "verdict": "fixed",
   "date": "2026-09-21",
-  "note": "Q28224747 (10 sitelinks, built 2022) puts it at Belgrade Waterfront, 2,329 m from our point in the old town. Wikidata states NO address, so the only support is recollection, which is not a named source. NOT MOVED -- needs one independent document."
+  "note": "OSM way/670824807, tagged building=apartments and named Кула Београд, sits 25 m from Wikidata Q28224747 and 2.3 km from our old point. ⚠️ Two OSM NODES share that name and are bus stops named AFTER the tower -- the building way is the one to read. Moved to Wikidata's coordinate."
  },
  "Bahrain World Trade Center": {
   "verdict": "fixed",
@@ -660,8 +660,28 @@
   "note": "Wikipedia's 31.06028,121.14944 matches Wikidata Q16928554 to ~60 m and is 5.1 km from ours. Both sides sit ~35 km from central Shanghai, which is correct for the Songjiang quarry; the question was only WHICH point, and two sources agree. Moved."
  },
  "Yachthouse Residence Club": {
-  "verdict": "likely-ours-wrong",
+  "verdict": "fixed",
   "date": "2026-09-21",
-  "note": "Q97167987 'Yachthouse by Pininfarina', no address stated, 2,930 m from ours. NOT MOVED -- needs one independent document."
+  "note": "OSM way/496780880, building=yes, named 'Yachthouse Residence' -- WITHOUT the 'Club' our title carries, which is why an exact-name query returned nothing and a looser one found it. It agrees with Wikidata Q97167987 to 8 m and sits 2.9 km from our old point. Moved."
+ },
+ "Kiln": {
+  "verdict": "wikidata-elsewhere",
+  "date": "2026-09-21",
+  "note": "Wikidata Q26616936 describes itself as 'kiln in Lane End, Wycombe, Buckinghamshire' -- an actual kiln, 51 km away. Ours is the Soho restaurant named Kiln, and our coordinate is central London. NOT MOVED."
+ },
+ "Nhiêu Lộc–Thị Nghè Canal | Kênh Nhiêu Lộc - Thị Nghè": {
+  "verdict": "extended-feature",
+  "date": "2026-09-21",
+  "note": "Wikidata Q10783045 calls it a 'waterway in Ho Chi Minh City' -- a canal roughly 9 km long. An 880 m gap along it is the normal condition, not a defect. NOT AN ERROR."
+ },
+ "Universidad de Buenos Aires": {
+  "verdict": "part-vs-whole",
+  "date": "2026-09-21",
+  "note": "Wikidata Q5855114 is 'Universidad de Buenos Aires. Facultad de …' -- ONE FACULTY BUILDING, not the university. A university has many buildings across a city, so a 1,027 m gap says nothing about whether our point is wrong. NOT MOVED."
+ },
+ "Sun Tower": {
+  "verdict": "undecided",
+  "date": "2026-09-21",
+  "note": "23.5 km gap and NOTHING can settle it. Wikidata Q137310064 has one sitelink, no description and no stated municipality. OSM has no matching feature in a Yantai bbox under 'Sun Tower', '阳光塔' or '陽光塔'. English Wikipedia's 'Sun Tower' is VANCOUVER'S heritage building (49.281,-123.108) -- a different thing with the same name. Both coordinates fall in the Yantai region, so this is not a cross-city collision either. I have an opinion about which is right; an opinion is not a source. NOT MOVED -- needs the creator's post or the architect's own page."
  }
 }
