@@ -1189,12 +1189,12 @@
   },
   "Sun Tower": {
     "at": [
-      37.461928,
-      121.4425255
+      37.5746624,
+      121.2168678
     ],
     "date": "2026-09-21",
-    "note": "23.5 km gap and NOTHING can settle it. Wikidata Q137310064 has one sitelink, no description and no stated municipality. OSM has no matching feature in a Yantai bbox under 'Sun Tower', '阳光塔' or '陽光塔'. English Wikipedia's 'Sun Tower' is VANCOUVER'S heritage building (49.281,-123.108) -- a different thing with the same name. Both coordinates fall in the Yantai region, so this is not a cross-city collision either. I have an opinion about which is right; an opinion is not a source. NOT MOVED -- needs the creator's post or the architect's own page.",
-    "verdict": "undecided"
+    "note": "23.6 km out. Previously REFUSED and escalated to the owner: the only Wikidata candidate (Q137310064) had no description in any language but German, no Chinese label and exactly one sitelink -- too thin to move a pin 23 km on. The owner then supplied the address, 煙台市福山區海濻路揚帆廣場, which is INDEPENDENT of Wikidata and settles it by DISTRICT rather than by distance, as rule 8d requires: our point reverse-geocoded to 莱山区 (Laishan), the WRONG district, while Wikidata's lands on 海滨路, 福莱山街道, 烟台经济技术开发区, 福山区 -- matching the owner on district AND street. ⚠️ Note the likely cause: 滨海路 (Binhai Rd, Laishan) and 海滨路 (Haibin Rd, Fushan) are the same two characters reversed. Published sources place the building in the 'Yantai Yeda Development Zone' = 烟台经济技术开发区, which is where both candidates sit. Moved to OSM way 1132670545, amenity=arts_centre, building=yes, within 1 m of Wikidata's point. ⚠️ RESIDUAL UNCERTAINTY, stated rather than hidden: OSM names that way 时光塔 (Tower of Time), not 太阳塔 (Sun Tower), and it carries no wikidata tag. The identification rests on four things instead -- Wikidata placing 'Sun Tower' within 1 m of it, the building type matching a cultural observatory, the owner's address matching district and street, and OSM holding NO building named 太阳塔 anywhere in Shandong, so there is no competing candidate. The square the owner named, 揚帆广场, is an OSM square 390 m away; the building was preferred over an area centroid.",
+    "verdict": "fixed"
   },
   "TWA Hotel at JFK": {
     "at": [

@@ -2871,3 +2871,38 @@ Cadore to land on.
 🔴 **Independence is a property of the NAME, not of the number of sources.** Ask
 whether the two could have made the same mistake before treating their agreement
 as evidence.
+
+## Refusing a move can be right, and the owner is a SOURCE (2026-09-21)
+
+*Sun Tower* (Yantai) was flagged **23.5 km** from its only Wikidata candidate,
+and a session **refused to move it** and escalated instead: the candidate had no
+description in any language but German, no Chinese label and one sitelink — too
+thin to relocate a pin 23 km. That refusal was correct, and it was also not the
+end of the work; it was a **question put to the person who could answer it**.
+
+The owner supplied the address: `煙台市福山區海濱路揚帆廣場`. That is evidence
+**independent of Wikidata**, and it settles the pin **by district, not by
+distance**, exactly as rule 8d prescribes:
+
+| | reverse-geocodes to |
+|---|---|
+| our pin | 滨海路街道, **莱山区** — the **wrong district** |
+| Wikidata's | **海滨路**, 福莱山街道, 烟台经济技术开发区, **福山区** |
+
+Note what that comparison does: it proves the pin is **wrong** without yet
+proving where it belongs. Those are separate questions, and mixing them is how a
+thin candidate talks you into a 23 km move.
+
+⚠️ **The likely cause is a near-homonym: 滨海路 (Binhai Rd, Laishan) and 海滨路
+(Haibin Rd, Fushan) are the same two characters reversed.** The Great Notley
+error the same day was the same shape in English — *GREAT Court* → *GREAT
+Notley*. **A geocoder's wrong answer tends to look like the right one.**
+
+🔴 **And state the residual uncertainty rather than rounding it away.** OSM names
+the building at that point 时光塔, not 太阳塔, and carries no wikidata tag. The
+identification rests on four separate things — Wikidata placing *Sun Tower*
+within 1 m of it, the building type matching a cultural observatory, the owner's
+address matching district **and** street, and OSM holding **no** building named
+太阳塔 anywhere in Shandong. Four weak agreements that could not have copied each
+other beat one strong source, and the verdict file says so in full, so the next
+session can overturn it if a better source appears.
