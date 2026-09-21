@@ -1,13 +1,16 @@
-RUN spine-match.py · rev c0555f6f · 2026-09-21T12:07:05Z · args: --limit 25 --out spine/audit.txt
-audited 5058 catalogue entries against Wikidata
+RUN spine-match.py · rev c0555f6f · 2026-09-21T12:26:40Z · args: --limit 25 --out spine/audit.txt
+audited 5122 catalogue entries against Wikidata
 
-🔴 DISAGREES — our coordinate is not where the subject is: 45 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
+🔴 DISAGREES — our coordinate is not where the subject is: 48 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
       18233 m   The Kings Arms                           London           -> Kings Arms
        8662 m   The Britannia                            London           -> The Britannia
        7966 m   Les Tres Xemeneies                       Sant Adrià de Be -> Les Tres Xemeneies
+       3738 m   Bricklayers Arms                         London           -> Bricklayers Arms
        3615 m   The Royal Oak                            London           -> Royal Oak
+       3200 m   The Flying Horse                         London           -> The Flying Horse
        1545 m   Míčovna (Ball Game Hall)                 Prague           -> Míčovna
        1477 m   Amanohashidate | 天橋立                     Miyazu           -> Amanohashidate
+       1034 m   The Wellington                           London           -> The Wellington
         872 m   National Library of Latvia               Riga             -> National Library of Latvia
         811 m   Navy Pier                                Chicago          -> Navy Pier
         708 m   Chiesa di Nostra Signora del Cadore      Borca di Cadore  -> Chiesa di Nostra Signora del C
@@ -24,12 +27,9 @@ audited 5058 catalogue entries against Wikidata
         420 m   East Side Gallery                        Berlin           -> East Side Gallery
         412 m   Keage Incline | 蹴上インクライン                 Kyoto            -> Keage Incline
         411 m   Alton Estate                             London           -> Alton Estate
-        390 m   West Kowloon Cultural District           Hong Kong        -> West Kowloon Cultural District
-        388 m   Hotel Nacional                           Rio de Janeiro   -> Hotel Nacional
-        382 m   Central–Mid-Levels Escalators | 中環半山扶手電梯 Hong Kong        -> Central–Mid-levels escalators
-  … and 20 more (raise --limit to see them)
+  … and 23 more (raise --limit to see them)
 
-REVIEW — near, but further out than a correct entry usually sits: 171 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
+REVIEW — near, but further out than a correct entry usually sits: 172 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
       12639 m ~ Redhouse                                 Newcastle upon T -> Hylton Red House
        7411 m ~ Pai Canyon | ปายแคนยอน                   Pai              -> Q49097134
        5237 m ~ The Fairy Tale Castle of Filiatra        Filiatra         -> Filiatra Eiffel Tower
@@ -55,7 +55,7 @@ REVIEW — near, but further out than a correct entry usually sits: 171 unexamin
         403 m ~ Tsukiji Outer Market | 築地場外市場            Tokyo            -> Tsukiji fish market
         389 m ~ The Double Sunset of Barga               Barga            -> Barga
         388 m ~ Midway Barn at Taliesin                  Spring Green     -> Taliesin
-  … and 146 more (raise --limit to see them)
+  … and 147 more (raise --limit to see them)
 
 EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no single point is honest for these: 115
       20689 m ~ The Train Carriage Hotel at Khao Yai     Pak Chong        -> Khao Yai National Park
@@ -85,7 +85,7 @@ EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no 
         941 m ~ Mount Royal — the Climb                  Montreal         -> Mount Royal
   … and 90 more (raise --limit to see them)
 
-CONFIRMS: 1801   EXTENDED: 115   UNMATCHED: 2850   STALE: 0   NOT-ASKED: 0
+CONFIRMS: 1810   EXTENDED: 115   UNMATCHED: 2901   STALE: 0   NOT-ASKED: 0
 
 coverage by creator (matched / asked) — where this method works:
    35%   116/326   TikTok @urbanistariel
@@ -93,11 +93,11 @@ coverage by creator (matched / asked) — where this method works:
     7%    18/256   Instagram @jacksdiningroom
    35%    64/182   TikTok @archimarathon
    85%   153/178   Instagram @pasttworld
+   22%    37/161   TikTok @historicpubcrawls
    17%    18/105   Instagram @shivanidukhandee
    54%    57/104   Instagram @blessedarch
    75%    76/101   Atlas Studio NYC
    86%    86/100   Atlas Studio LDN
-   24%    24/97    TikTok @historicpubcrawls
    67%    64/95    TikTok @history_alice
     1%     1/88    Instagram @japanbyfood
 
@@ -117,4 +117,4 @@ RULED: 139 entries carry a recorded verdict that still applies — checks/spine-
     STOPS APPLYING the moment that coordinate moves: nobody has judged
     the new point, and silence would look exactly like agreement.
 
-45 entries to put to the owner
+48 entries to put to the owner
