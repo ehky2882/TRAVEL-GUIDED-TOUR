@@ -21,7 +21,7 @@ Two disciplines make it worth anything at all:
      comes back empty — a mirror that silently parses nothing passes anything.
   2. It is self-tested against injected faults before its verdict is believed.
 """
-import json, os, re, sys, math
+import collections, io, json, os, re, sys, math
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
@@ -297,6 +297,39 @@ def is_url(u):
     return isinstance(u, str) and u.startswith(("http://", "https://")) and " " not in u
 
 
+def summarise(items, limit):
+    """(the rows to print, how many are hidden, a shape tally).
+
+    🔴 The cap was silent. This printed `w[:40]` of 523 warnings and said
+    nothing about the other 483, so the list a reader saw LOOKED like the whole
+    finding. The error path was worse: 500 errors would have printed 40 and read
+    as forty problems. A truncation that does not announce itself is the same
+    family of defect as a stale cache reported as current — the output is not
+    merely incomplete, it is misleading about being incomplete.
+
+    `limit` of 0 means print everything. The tally makes the shape readable
+    without dumping every row: digits are masked so `no Theme tag` collapses to
+    one line whatever entry raised it.
+    """
+    rows = list(items)
+    shown = rows if limit <= 0 else rows[:limit]
+    tally = collections.Counter(
+        re.sub(r"\d+", "N", str(x).split(": ", 1)[-1]) for x in rows)
+    return shown, len(rows) - len(shown), tally
+
+
+def report(kind, items, limit):
+    shown, hidden, tally = summarise(items, limit)
+    for x in shown:
+        print(f"  {kind}:", x)
+    if hidden:
+        # Never silent. The count AND how to see the rest.
+        print(f"  … and {hidden} more {kind.strip().lower()}(s) not shown "
+              f"— re-run with --limit 0")
+    if len(tally) > 1 or hidden:
+        print(f"  by kind: " + " · ".join(f"{n}x {t}" for t, n in tally.most_common(8)))
+
+
 def selftest(facets, vocab, dom):
     base = json.load(open(CATALOG, encoding="utf-8"))
     def clone(): return json.loads(json.dumps(base))
@@ -361,6 +394,52 @@ def selftest(facets, vocab, dom):
              "relatedTourIds", [next(t["id"] for t in c["tours"]
                                      if (t.get("city") or "") != (c["linkPins"][0].get("city") or ""))]))
 
+    # 🔴 The truncation must announce itself. A silent cap makes a partial list
+    # read as a complete one — the error path especially.
+    extra = []
+    def sub(name, ok):
+        if not ok: extra.append(name)
+    shown, hidden, tally = summarise([f"e{i}: no Theme tag" for i in range(523)], 40)
+    sub("summarise: caps at the limit", len(shown) == 40)
+    sub("🔴 summarise: reports how many are hidden", hidden == 483)
+    sub("summarise: tally collapses digits into one shape", list(tally) == ["no Theme tag"])
+    shown, hidden, _ = summarise(["a: x"] * 5, 0)
+    sub("🔴 a limit of 0 prints everything and hides nothing",
+        len(shown) == 5 and hidden == 0)
+    shown, hidden, _ = summarise([], 40)
+    sub("an empty list hides nothing", shown == [] and hidden == 0)
+    shown, hidden, _ = summarise(["a: x"] * 40, 40)
+    sub("exactly at the limit hides nothing", hidden == 0)
+    _, hidden, _ = summarise(["a: x"] * 41, 40)
+    sub("🔴 one over the limit is reported, not swallowed", hidden == 1)
+    _, _, tally = summarise(["a: no Theme tag", "b: no Place type tag"], 40)
+    sub("two shapes stay two", len(tally) == 2)
+
+    # 🔴 summarise() RETURNS the count; report() PRINTS it. Testing only the
+    # first leaves the printing guard unable to fail — which is the whole bug:
+    # the number existed, nothing put it on screen. Found by mutation testing.
+    def printed(items, limit):
+        buf = io.StringIO()
+        keep, sys.stdout = sys.stdout, buf
+        try:
+            report("WARN ", items, limit)
+        finally:
+            sys.stdout = keep
+        return buf.getvalue()
+
+    out = printed([f"e{i}: no Theme tag" for i in range(523)], 40)
+    sub("🔴 report PRINTS the hidden count, not merely computes it",
+        "483 more" in out)
+    sub("report names how to see the rest", "--limit 0" in out)
+    # ⚠️ `out.split("by kind:")[-1]` returns the WHOLE output when the marker is
+    # absent, so asserting on it alone passes vacuously. Require the marker.
+    sub("report prints the shape tally",
+        "by kind:" in out and "523x no Theme tag" in out.split("by kind:")[-1])
+    sub("🔴 a complete list says nothing about truncation",
+        "more" not in printed(["a: x"] * 3, 40))
+    for name in extra:
+        print(f"  MISSED: {name}")
+
     passed = 0
     for name, fn, warns in cases:
         c = clone(); fn(c)
@@ -369,8 +448,10 @@ def selftest(facets, vocab, dom):
         else: print(f"  MISSED: {name}")
     e, w = check(clone(), facets, vocab, dom)
     ctrl = not e
-    print(f"selftest {passed}/{len(cases)} faults caught; control {'clean' if ctrl else 'DIRTY'}")
-    return passed == len(cases) and ctrl
+    print(f"selftest {passed}/{len(cases)} faults caught, "
+          f"{12 - len(extra)}/12 truncation checks; "
+          f"control {'clean' if ctrl else 'DIRTY'}")
+    return passed == len(cases) and ctrl and not extra
 
 
 if __name__ == "__main__":
@@ -389,7 +470,11 @@ if __name__ == "__main__":
     e, w = check(cat, facets, vocab, dom)
     print(f"\n{len(e)} errors, {len(w)} warnings across "
           f"{len(cat['tours'])} tours + {len(cat['linkPins'])} pins + {len(cat['places'])} places")
-    for x in e[:40]: print("  ERROR:", x)
-    for x in w[:40]: print("  WARN :", x)
+    limit = 40
+    for i, arg in enumerate(sys.argv):
+        if arg == "--limit" and i + 1 < len(sys.argv):
+            limit = int(sys.argv[i + 1])
+    report("ERROR", e, limit)
+    report("WARN ", w, limit)
     _run.close()
     sys.exit(1 if e else 0)
