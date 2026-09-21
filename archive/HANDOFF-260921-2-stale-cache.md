@@ -269,3 +269,47 @@ result this time.
 
 ⚠️ No `places` path was added to `check-same-name.py`. With zero cases to defend it,
 that is exactly how an untestable guard gets born — see the four found in #1037.
+
+## Two qualifiers that change what the findings mean
+
+### ✅ The caption titles are a CLOSED legacy set
+
+**369 of 3,348 link pins (11%) carry caption text where a venue name should be**, heavily
+concentrated (@suzyandaustin 64/66, @asamapov 35/37, @heyrosiedart 15/15, @lucymcorban 35/46).
+Read alone, that number invites a panic or a large cleanup.
+
+🔴 **It should not, because the leak is already closed.** `merge-link-pins.py` **refuses** a
+caption or a description used as a title at authoring time, via `check-pin-title.py`. Verified
+against the real strings rather than trusting the docstring:
+
+| tested | |
+|---|---|
+| `Here’s another @michelinguide spot you have to try! This…` | **REFUSED** |
+| `This bookstore in Chengdu is absolutely surr…` | **REFUSED** |
+| `Fuhang Soy Milk` · `寧波生煎包 (Ningbo pan-fried buns)` · `Walden 7` | passed, correctly |
+
+So no new ones can enter through the sanctioned pipeline. The 369 are a bounded backlog for a
+deliberate cleanup, not a widening problem — and most are **not** automatically recoverable
+(218 of 237 markerless captions have no usable signal; the prose patterns that look promising
+are noise, e.g. *"we line up to try"* matching as a venue name).
+
+### 🔴 PR #1019 must NOT be merged — it would resurrect a cleared owner item
+
+Three PRs from another session have been open since 2026-09-20. Checked against `origin/main`
+rather than read from their bodies:
+
+| PR | touches | state |
+|---|---|---|
+| **#1019** | `status/owner/sync-anthonykatiekay-pins-to-supabase.md` | 🔴 **that file no longer exists on main.** Merging it re-opens a settled item and asks the owner to do something already done — the failure CLAUDE.md's opening section says has cost real trust |
+| #1015 | removes four owner items | all four are **already gone**; its substantive work landed by another route |
+| #1020 | one `status/entries/` file | harmless historical board entry; one file per entry, cannot conflict |
+
+```
+already gone : reseed-supabase-1017-pins
+already gone : reseed-supabase-1025-pins
+already gone : sync-anthonykatiekay-pins-to-supabase
+already gone : remove-isle-of-capri-instagram-dup
+```
+
+Not closed — they are another session's PRs, and closing someone else's work is the owner's
+call. Recorded so the next session does not merge #1019 on autopilot.
