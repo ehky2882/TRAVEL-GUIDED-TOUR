@@ -1,9 +1,11 @@
 # HANDOFF 2026-09-21 — the overnight audit: coordinates, then titles
 
+> **Updated later the same night:** the count below rose from seven to **NINE**, and **all 92 reported disagreements are now resolved**. See § The last two, and the Overpass mirror.
+
 An unattended run on 50-minute scheduled wakes. Everything below is on
 `claude/overnight-audit` ([#1034](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1034)).
 
-## 1. Coordinates — seven fixed out of 92 reported
+## 1. Coordinates — NINE fixed out of 92 reported, all 92 resolved
 
 A wrong coordinate is the defect CLAUDE.md calls invisible to every other check: the validator
 passes, CI compiles, every URL 200s, and the tour simply never fires. `spine-match.py` reported
@@ -50,11 +52,31 @@ Park, which is *our* coordinate — while its own `P625` points at the museum's 
 site**. Acting on the distance alone would have moved a correct pin 1.6 km onto a building the
 museum left thirteen years ago.
 
-### Two still unproven, deliberately not moved
+### The last two, and the Overpass mirror
 
-**Belgrade Tower** and **Yachthouse by Pininfarina** look wrong the same way, but Wikidata states
-no address and Wikipedia carries no coordinate. The only thing supporting a move is recollection,
-**and recollection is not a named source.**
+**Belgrade Tower** and **Yachthouse by Pininfarina** looked wrong the same way, but Wikidata
+stated no address and Wikipedia carried no coordinate — for Belgrade, in **neither English nor
+Serbian**. They were left alone rather than moved on recollection.
+
+🔴 **Then Overpass turned out to work.** `CLAUDE.md` rule 8d records it as blocked by the egress
+proxy, and `overpass-api.de` does fail here every time — but **`overpass.kumi.systems` responds.**
+That answers the one question no gazetteer reliably does: *where is this building, by name?*
+
+| | |
+|---|---|
+| Belgrade Tower | OSM `way/670824807`, `building=apartments`, **21 m** from Wikidata, **2,332 m** from ours |
+| Yachthouse | OSM `way/496780880`, `building=yes`, **8 m** from Wikidata, **2,937 m** from ours |
+
+Both moved. **All 92 are now resolved.**
+
+⚠️ Three traps, all recorded in `docs/lessons.md`:
+- **A named node is not necessarily the thing.** Two of the three OSM elements named
+  *Кула Београд* are **bus stops named after the tower**. Read the tags.
+- **It 504s on an unindexed query** — a regex over a bbox, or an `area[…]` lookup, on anything
+  but a small city.
+- **Query the name loosely.** `["name"="Yachthouse Residence Club"]` returned nothing: OSM calls
+  it *"Yachthouse Residence"*. **An exact-name miss is not evidence the building is absent** — it
+  is evidence the two names differ.
 
 133 verdicts in `checks/spine-verdicts.json`; the 125 entity descriptions are cached in
 `checks/spine-admin.json.gz`, so this is reproducible without re-fetching.
@@ -91,7 +113,6 @@ promoted.
 
 ## What is open
 
-- **Belgrade Tower, Yachthouse by Pininfarina** — one document each and they can be fixed.
 - **237 caption titles have no 📍 marker at all**; 73 are bare handles. Unresolved from the post text.
 - Still in the NAME band and *not* clean: `Bleecker`, `Bowery` (truncated), `Colonnes de Buren
   Daniel Buren` (artist appended), `Kensington Gardens right by the @serpentineuk` (a phrase).
