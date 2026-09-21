@@ -124,6 +124,30 @@ mutation testing found a guard that could not fail:
 One mutant also exposed a bad anchor in the harness itself (`SKIP (anchor 0x)`), which is
 why the harness counts a skip as a miss rather than passing over it.
 
+## The 41 that remain — one finding, and a hypothesis that did NOT hold
+
+With the verdicts read, 41 disagreements are genuinely unexamined. Reading their Wikidata *types*
+suggested a systematic answer — islands, canals, districts, parks, a tram line, a dam, a pier all
+sitting in the findings list — which would have echoed the original `EXTENDED_TYPES` work that took
+145 findings to 86.
+
+🔴 **It did not hold.** The types are scattered, one entry each, and many are plainly point-like:
+`hotel`, `apartment building`, `Japanese restaurant`, `belvedere`. There is no missing class to add.
+
+Two things did fall out, both worth the owner's eye rather than a unilateral fix:
+
+- 🔴 **Roosevelt Island (New York) is being compared against an underground station** (`Q22808403`),
+  not the island. **Lakhta Center** likewise matches *"Lakhta Center 3"*, a different tower in the
+  same complex. These are name collisions — the failure `triage-spine.py` exists for — not
+  coordinate errors, and moving either pin would break a correct one.
+- Eight do carry genuinely extended types (`esplanade`, `promenade`, `avenue`, `canal inclined
+  plane`, `cultural district`, `Tram transport`, `ghost town`, `Tokyo metropolitan park`).
+
+**Deliberately not acted on.** Adding types to `EXTENDED_TYPES` reclassifies a finding as *not a
+finding*, and `spine-match.py`'s own footer says every line goes to the owner individually. Doing
+it during a Wikidata outage that resolved only **21 of 55** type labels would mean deciding on a
+third of the evidence. It is a good next task with the outage over.
+
 ## What is still open
 
 - **41 DISAGREES / 166 REVIEW genuinely unexamined**, down from 85 / 198 — the same PR

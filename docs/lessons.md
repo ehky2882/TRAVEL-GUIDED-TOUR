@@ -140,6 +140,26 @@ like a live one. A `--status` mode now reports both, offline and without the API
 coverage is answerable without one and refusing to answer it for want of a key is the same false
 silence.
 
+### Wikidata has three front doors and they fail independently (2026-09-21)
+
+Mid-session WDQS returned `429 Aggressively rate-limiting to 1 req / min - this rule was created
+during active wdqs outage`, and the action API (`w/api.php?action=wbgetentities`) 429'd as well.
+The **REST endpoint answered 200 throughout**:
+
+```
+https://www.wikidata.org/w/rest.php/wikibase/v1/entities/items/<QID>/labels/en
+https://www.wikidata.org/wiki/Special:EntityData/<QID>.json
+```
+
+It is one item per request rather than fifty, so it is a fallback and not a replacement — but it
+is the difference between "Wikidata is down" and "the batch route is down". Same rule as the 42
+Tokyo addresses and the Overpass mirror: **a blocked route is not an absent fact.** ⚠️ It is not a
+free pass either: it resolved only 21 of 55 labels before throttling in turn, so say what you
+could not get rather than reporting the partial set as the whole.
+
+⚠️ This is also why the `refresh-spine` CI job is `continue-on-error`. A third party's outage must
+degrade a reporting artefact, never block a content merge.
+
 🔴 **Go looking for the shape.** Two instances of one defect are not a coincidence, they are a
 pattern, and the third was found in a few minutes by grepping for which scripts read a committed
 cache. Fixing the bug you tripped over and stopping there leaves the others.
