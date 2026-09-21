@@ -628,5 +628,40 @@
   "verdict": "wikidata-elsewhere",
   "date": "2026-09-21",
   "note": "Wikidata places Q17704 in Islands District (main airport in Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED."
+ },
+ "Robie House": {
+  "verdict": "fixed",
+  "date": "2026-09-21",
+  "note": "Wikidata Q929965 states the address as '5757 South Woodlawn Avenue', Hyde Park -- which is its coordinate, not ours. Ours was 1,082 m south."
+ },
+ "Intempo": {
+  "verdict": "fixed",
+  "date": "2026-09-21",
+  "note": "Wikidata Q14530911 states the address as 'avinguda de Colòmbia, s/n', on Benidorm's Poniente side -- its coordinate, not ours. Ours was 2,939 m east."
+ },
+ "Belgrade Tower": {
+  "verdict": "likely-ours-wrong",
+  "date": "2026-09-21",
+  "note": "Q28224747 (10 sitelinks, built 2022) puts it at Belgrade Waterfront, 2,329 m from our point in the old town. Wikidata states NO address, so the only support is recollection, which is not a named source. NOT MOVED -- needs one independent document."
+ },
+ "Bahrain World Trade Center": {
+  "verdict": "likely-ours-wrong",
+  "date": "2026-09-21",
+  "note": "Q511612 (26 sitelinks) is 1,272 m north of ours. No address stated. NOT MOVED -- needs one independent document."
+ },
+ "Etihad Museum": {
+  "verdict": "likely-ours-wrong",
+  "date": "2026-09-21",
+  "note": "Q28736367 (5 sitelinks) is 1,345 m west of ours, toward Union House in Jumeirah. No address stated. NOT MOVED -- needs one independent document."
+ },
+ "InterContinental Shanghai Wonderland": {
+  "verdict": "likely-ours-wrong",
+  "date": "2026-09-21",
+  "note": "Both points sit ~35 km from central Shanghai, which is correct for Songjiang, and they differ by 5 km. Neither side is corroborated. NOT MOVED."
+ },
+ "Yachthouse Residence Club": {
+  "verdict": "likely-ours-wrong",
+  "date": "2026-09-21",
+  "note": "Q97167987 'Yachthouse by Pininfarina', no address stated, 2,930 m from ours. NOT MOVED -- needs one independent document."
  }
 }
