@@ -2323,3 +2323,29 @@ Preview-01.png"* contains spaces, so a bare `read fn w h url` splits it and curl
 that no longer applies.** "App Store release" is the right name for the case where the build
 does not exist yet, and the wrong tool for every release after a TestFlight cycle the owner
 has already signed off. Read what the lane does, not what it is called.
+
+## Overpass is reachable through a MIRROR (2026-09-21)
+
+`CLAUDE.md` rule 8d records Overpass as "blocked by the web egress proxy", and
+`overpass-api.de` does indeed fail here — `curl: (35) Recv failure: Connection
+reset by peer`, every time.
+
+🔴 **`https://overpass.kumi.systems/api/interpreter` works.** That is a real
+extra source for the one question no gazetteer always answers: *where is this
+building, by name?* It settled Belgrade Tower, where Wikidata stated no address
+and Wikipedia carried no coordinate in either English or Serbian.
+
+Two things to know before relying on it:
+
+- **A named node is not necessarily the thing.** Searching `Кула Београд`
+  returned three elements: **two bus stops named after the tower**, and one
+  `way` tagged `building=apartments` which is the tower itself. Read the tags,
+  not the name. Taking the first node would have moved the pin onto a bus stop.
+- **It times out on an unindexed query.** A regex over a bounding box, or an
+  `area[...]` lookup, returns **504** on anything but a small city. The Belgrade
+  query only succeeded because the area was small; the same shape 504'd
+  repeatedly for Balneário Camboriú. Prefer an exact `["name"="…"]` match, keep
+  the bbox tight, and expect to be rate-limited after a few calls.
+
+**A blocked host is not an absent fact** — the same lesson as the 42 Tokyo
+addresses. Try a mirror before saying a source is unavailable.

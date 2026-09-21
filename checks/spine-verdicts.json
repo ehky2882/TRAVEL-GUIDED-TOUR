@@ -640,9 +640,9 @@
   "note": "Wikidata Q14530911 states the address as 'avinguda de Colòmbia, s/n', on Benidorm's Poniente side -- its coordinate, not ours. Ours was 2,939 m east."
  },
  "Belgrade Tower": {
-  "verdict": "likely-ours-wrong",
+  "verdict": "fixed",
   "date": "2026-09-21",
-  "note": "Q28224747 (10 sitelinks, built 2022) puts it at Belgrade Waterfront, 2,329 m from our point in the old town. Wikidata states NO address, so the only support is recollection, which is not a named source. NOT MOVED -- needs one independent document."
+  "note": "OSM way/670824807, tagged building=apartments and named Кула Београд, sits 25 m from Wikidata Q28224747 and 2.3 km from our old point. ⚠️ Two OSM NODES share that name and are bus stops named AFTER the tower -- the building way is the one to read. Moved to Wikidata's coordinate."
  },
  "Bahrain World Trade Center": {
   "verdict": "fixed",
