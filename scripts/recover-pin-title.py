@@ -96,6 +96,49 @@ def strip_trailing_handles(text):
     return out.strip(" ,·-—")
 
 
+# 🔴 Words that essentially NEVER appear inside a venue name, and that a
+# creator's next sentence very often starts with. Deliberately small: a broad
+# list ("and", "with", "for") would cut real names in half, and a wrong cut
+# ships a truncated name that reads deliberate.
+HARD_CLAUSE = (
+    "if", "when", "where", "because", "swipe", "tag", "follow", "dm",
+    "comment", "save", "book", "link", "check", "watch", "wait",
+)
+# After a LEADING handle, these mean what follows LOCATES the venue rather
+# than naming it: "@berlinischegalerie in Kreuzberg".
+LOCATORS = ("in", "at", "near", "by", "on", "off", "inside", "outside")
+
+
+def trim_trailing_clause(text):
+    """Cut a name at the first word that can only start a new sentence.
+
+    "Mount St. Restaurant If you love art" -> "Mount St. Restaurant".
+    ⚠️ Only from the SECOND word on, so a name is never emptied, and only on
+    the HARD list -- "The Wizard of Park Avenue" keeps every word.
+    """
+    words = (text or "").split()
+    for i in range(1, len(words)):
+        if words[i].lower().strip(".,:;!?") in HARD_CLAUSE:
+            return " ".join(words[:i]).strip(" ,·-—")
+    return (text or "").strip(" ,·-—")
+
+
+def strip_leading_handle(text):
+    """"" if an @handle OPENS the text and what follows only LOCATES it.
+
+    🔴 "@berlinischegalerie in Kreuzberg" names nothing -- "in Kreuzberg" is a
+    location, so the entry stays a handle for a human. But "@corpus Museum
+    Hall" does carry a name, and keeps it.
+    """
+    words = (text or "").strip().split()
+    if not words or not words[0].startswith("@"):
+        return (text or "").strip()
+    rest = words[1:]
+    if not rest or rest[0].lower() in LOCATORS:
+        return ""
+    return " ".join(rest).strip(" ,·-—")
+
+
 def is_place_name(text, place_names):
     """Is this the name of a CITY or COUNTRY we carry, rather than a venue?
 
@@ -143,7 +186,9 @@ def classify(segment):
     prev = None
     while seg != prev:
         prev = seg
-        seg = strip_decoration(strip_trailing_handles(seg))
+        seg = trim_trailing_clause(
+            strip_decoration(strip_trailing_handles(seg)))
+    seg = strip_leading_handle(seg)
     if not seg:
         return "EMPTY", ""
     # Trailing sentence fragments: the marker often runs into the next clause.
@@ -367,6 +412,31 @@ def selftest():
           is_place_name("Cordoba, Spain", {place_key("Córdoba"), "spain"}))
     check("and the reverse direction too",
           is_place_name("Córdoba", {place_key("Cordoba")}))
+    # --- 🔴 the fourth defect: a trailing clause and a leading handle
+    check("a trailing IF-clause is cut at the If",
+          trim_trailing_clause("Mount St. Restaurant If you love art")
+          == "Mount St. Restaurant")
+    check("another sentence-starter cuts too",
+          trim_trailing_clause("Pave Bakery Swipe for the cookie") == "Pave Bakery")
+    check("🔴 a name with no hard clause word is untouched",
+          trim_trailing_clause("The Wizard of Park Avenue")
+          == "The Wizard of Park Avenue")
+    check("🔴 a name is never emptied by the trim",
+          trim_trailing_clause("If Only") == "If Only")
+    # 🔴 TWO clause words, so first-vs-last actually differ. Every fixture
+    # above has only one, and a mutant scanning from the END read as caught.
+    check("the cut is at the FIRST clause word, not the last",
+          trim_trailing_clause("Pave Bakery Swipe for it If you dare")
+          == "Pave Bakery")
+    check("🔴 a LEADING handle leaves a fragment, so nothing is proposed",
+          classify("@berlinischegalerie in Kreuzberg")[0] == "EMPTY")
+    check("and another shape of it",
+          classify("@crosbystreet_hotel in SoHo")[0] == "EMPTY")
+    check("a name merely CONTAINING a handle mid-way is untouched",
+          strip_leading_handle("Dinner at @marks") == "Dinner at @marks")
+    check("🔴 a leading handle followed by a real NAME keeps that name",
+          strip_leading_handle("@corpus Museum Hall") == "Museum Hall")
+
     check("punctuation is folded when comparing place names",
           is_place_name("St. Louis", {"st louis"}))
     check("emoji are stripped from a name",

@@ -51,8 +51,8 @@ MUTANTS = [
  ("classify: a handle with a name after it is rejected too",
   'if seg.startswith("@") and " " not in seg:', 'if seg.startswith("@"):'),
  ("classify: an empty segment is offered as a name",
-  'while seg != prev:\n        prev = seg\n        seg = strip_decoration(strip_trailing_handles(seg))\n    if not seg:',
-  'while seg != prev:\n        prev = seg\n        seg = strip_decoration(strip_trailing_handles(seg))\n    if False:'),
+  'seg = strip_leading_handle(seg)\n    if not seg:\n        return "EMPTY", ""',
+  'seg = strip_leading_handle(seg)\n    if False:\n        return "EMPTY", ""'),
  ("classify: the length ceiling is dropped",
   'if not seg or len(seg) > 60:', 'if not seg:'),
  ("classify: the trailing clause is no longer trimmed",
@@ -76,8 +76,8 @@ MUTANTS = [
 
  # --- the three guards that blocked 15 owner-reviewed proposals -------
  ("🔴 classify: a trailing @handle is left on the name",
-  'seg = strip_decoration(strip_trailing_handles(seg))',
-  'seg = strip_decoration(seg)'),
+  'seg = trim_trailing_clause(\n            strip_decoration(strip_trailing_handles(seg)))',
+  'seg = trim_trailing_clause(\n            strip_decoration(seg))'),
  ("🔴 classify: handles are stripped BEFORE the bare-handle check, so a bare "
   "handle becomes empty and is never seen",
   'if seg.startswith("@") and " " not in seg:\n        return "HANDLE", seg\n    # 🔴 Only AFTER',
@@ -113,6 +113,26 @@ MUTANTS = [
   'if True)'),
  ("strip_decoration: a name with no letters left is still offered",
   'return out if any(c.isalnum() for c in out) else ""', 'return out'),
+
+ # --- the fourth defect: trailing clause and leading handle -----------
+ ("🔴 trim_trailing_clause: nothing is ever cut",
+  'if words[i].lower().strip(".,:;!?") in HARD_CLAUSE:', 'if False:'),
+ ("🔴 trim_trailing_clause: the scan starts at 0, so a name can be emptied",
+  'for i in range(1, len(words)):', 'for i in range(0, len(words)):'),
+ ("trim_trailing_clause: the hard list is gutted",
+  'HARD_CLAUSE = (', 'HARD_CLAUSE = ("zzznope",) or ('),
+ ("trim_trailing_clause: it scans from the END, cutting at the LAST clause "
+  "word instead of the first",
+  'for i in range(1, len(words)):', 'for i in range(len(words) - 1, 0, -1):'),
+ ("🔴 strip_leading_handle: a locating phrase is offered as a name",
+  'if not rest or rest[0].lower() in LOCATORS:\n        return ""',
+  'if not rest:\n        return ""'),
+ ("🔴 strip_leading_handle: a REAL name after a handle is thrown away",
+  'return " ".join(rest).strip(" ,·-—")', 'return ""'),
+ ("strip_leading_handle: a mid-string handle triggers it",
+  'if not words or not words[0].startswith("@"):', 'if not words or "@" not in text:'),
+ ("classify: the leading-handle result is ignored",
+  'seg = strip_leading_handle(seg)\n    if not seg:', 'if not seg:'),
 
  # --- proposals(): scope ----------------------------------------------
  ("🔴 proposals: entries with GOOD titles are rewritten too",
