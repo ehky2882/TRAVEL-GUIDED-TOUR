@@ -100302,7 +100302,7 @@
     {
       "id": "6643f8c3-32aa-5d28-a303-b4dcc2b16665",
       "name": "Anthony & Son Panini Shoppe",
-      "description": "An Italian-American sandwich counter in Greenpoint, Brooklyn, building heroes on seeded bread to order.",
+      "description": "An Italian-American sandwich counter at 433 Graham Avenue in Williamsburg, Brooklyn, building heroes and panini to order over a deli case.",
       "latitude": 40.7179315,
       "longitude": -73.9452219,
       "city": "Brooklyn",
@@ -100363,7 +100363,7 @@
     {
       "id": "14b1a16a-0742-551b-b6ce-4dffcabb6a1c",
       "name": "L'Industrie Pizzeria",
-      "description": "A pizzeria in Williamsburg, Brooklyn, selling New York slices over the counter rather than whole pies to a table.",
+      "description": "A pizzeria at 254 South 2nd Street in Williamsburg, Brooklyn, selling New York slices over the counter rather than whole pies to a table. The address has become a reference point in arguments about New York pizza.",
       "latitude": 40.7115764,
       "longitude": -73.9578034,
       "city": "Brooklyn",
@@ -100393,7 +100393,7 @@
     {
       "id": "f73ac866-9cfd-536b-b8ce-7e0916f543fd",
       "name": "Namkeen",
-      "description": "A Brooklyn sandwich shop working Indian flavours into an American form — the fried chicken sandwich is what it is known for. Namkeen is the Hindi word for savoury.",
+      "description": "A Pakistani-American fried chicken shop at 338 Bedford Avenue in Williamsburg, Brooklyn, running its sandwiches through a range of heat levels and its own masala — the Nashville and the tikka-sauced Tikkaville among them. Namkeen means savoury in Urdu and Hindi.",
       "latitude": 40.7128869,
       "longitude": -73.962588,
       "city": "Brooklyn",
@@ -102745,7 +102745,7 @@
     {
       "id": "d3fd878f-e9cc-56a5-9fd3-89bee6a86453",
       "name": "Little Kirin",
-      "description": "An Asian sandwich shop in New York, building its sandwiches on milk bread and serving them with loaded tater tots.",
+      "description": "A pan-Asian sandwich shop at 81 St Marks Place in the East Village, building a short menu on crusty ciabatta — pho brisket, five-spice braised pork — each of which can be had as a rice bowl instead.",
       "latitude": 40.7278071,
       "longitude": -73.985483,
       "city": "New York",
@@ -103045,7 +103045,7 @@
     {
       "id": "bfeb1c91-2f31-5dc1-b57a-eb7847017e20",
       "name": "Soothr",
-      "description": "A Thai restaurant in New York, cooking regional dishes and noodle soups rather than the standard American-Thai menu.",
+      "description": "A Thai noodle bar at 204 East 13th Street in the East Village, opened by friends who grew up in different regions of Thailand and cook accordingly. The name means recipe.",
       "latitude": 40.7323273,
       "longitude": -73.9873238,
       "city": "New York",
@@ -105530,7 +105530,7 @@
     {
       "id": "5ea487d0-a904-5ffa-a8c2-90d38e2d8c43",
       "name": "House of Prime Rib",
-      "description": "A single-dish restaurant on Van Ness Avenue in San Francisco, open since 1949, serving prime rib carved to order at the table from silver trolleys.",
+      "description": "A single-dish restaurant at 1906 Van Ness Avenue, open since 1949, serving 21-day aged prime rib carved to order at the table from silver trolleys.",
       "latitude": 37.7933913,
       "longitude": -122.4225436,
       "city": "San Francisco",
@@ -105545,7 +105545,7 @@
     {
       "id": "c281b93f-ba5e-5075-99b9-52771222f3d1",
       "name": "Pecking House",
-      "description": "Eric Huang's fried chicken restaurant in New York, brining and frying to a recipe that sets Nashville hot chicken against Taiwanese method. It began as a delivery-only operation with a waiting list in the tens of thousands.",
+      "description": "Eric Huang's fried chicken restaurant, begun as a pandemic pop-up in 2020 and settled in Brooklyn in 2022. The chicken is Sichuan-chili, set against the Taiwanese cooking he grew up with and the fine-dining kitchens he came from — Eleven Madison Park, Gramercy Tavern, Cafe Boulud. Demand at the start ran to a waiting list in the tens of thousands.",
       "latitude": 40.7132144,
       "longitude": -73.9934677,
       "city": "New York",
@@ -105560,7 +105560,7 @@
     {
       "id": "82a99d04-0df0-5df9-ae19-a9d178989f80",
       "name": "Kossar's",
-      "description": "A bakery at 367 Grand Street on the Lower East Side, working since 1936 and known first for bialys — the flat, onion-centred roll that is baked rather than boiled, and so is not a bagel. It makes both.",
+      "description": "A bakery at 367 Grand Street on the Lower East Side, opened in 1936 as Mirsky and Kossar's and the oldest bialy bakery in the United States. A bialy is flat, onion-centred and baked rather than boiled, which is what makes it not a bagel; Kossar's makes both.",
       "latitude": 40.716407,
       "longitude": -73.988787,
       "city": "New York",
@@ -105575,7 +105575,7 @@
     {
       "id": "e6529570-a299-5bf6-9a99-44fa92305c82",
       "name": "Una Pizza Napoletana",
-      "description": "Anthony Mangieri's Neapolitan pizzeria on the Lower East Side, working a short menu of dough fermented long and fired fast. It was placed first in the 50 Top Pizza world ranking for 2024.",
+      "description": "Anthony Mangieri's pizzeria at 175 Orchard Street on the Lower East Side. He has been making naturally leavened, wood-fired Neapolitan pizza since 1996, on a short menu stripped to a few ingredients. It was placed first in the 50 Top Pizza world ranking for 2024.",
       "latitude": 40.7217167,
       "longitude": -73.9884995,
       "city": "New York",
@@ -105590,7 +105590,7 @@
     {
       "id": "a43e25bf-bd49-5d04-b1e1-ee378618d6ec",
       "name": "Peter Pan Donut & Pastry Shop",
-      "description": "A counter-service doughnut shop on Manhattan Avenue in Greenpoint, Brooklyn, run by the same family since the 1950s and still frying and hand-glazing on site.",
+      "description": "A counter-service doughnut shop at 727 Manhattan Avenue in Greenpoint, Brooklyn, family-owned since the 1950s and still frying and hand-glazing on site.",
       "latitude": 40.7260665,
       "longitude": -73.9522298,
       "city": "New York",
@@ -105605,7 +105605,7 @@
     {
       "id": "3051b68b-7719-5420-8484-a7d986593691",
       "name": "Hawksmoor NYC",
-      "description": "The New York room of the London steakhouse group, in the Gramercy area. British in method — dry-aged beef over charcoal, bone marrow as a fixture on the menu — rather than the American steakhouse template.",
+      "description": "The New York room of the London steakhouse group, at 109 East 22nd Street inside the Assembly Hall of the United Charities Building — an 1893 National Historic Landmark closed to the public for over a century before the restoration that opened it. Dry-aged beef over charcoal, and bone marrow as a fixture rather than a special.",
       "latitude": 40.7393841,
       "longitude": -73.9862985,
       "city": "New York",
@@ -105620,7 +105620,7 @@
     {
       "id": "94da36ea-570c-5e58-9496-de5b0aac36d0",
       "name": "Mark's Off Madison",
-      "description": "A New York restaurant working the Jewish-deli and Italian-American repertoires in the same kitchen, and known for its lasagna and its steak.",
+      "description": "Mark Strausman's restaurant and bakery at 41 Madison Avenue, off the corner of East 26th Street. It puts the two halves of his cooking in one kitchen — the rustic Italian he trained in and made his name on at Freds at Barneys, and the Jewish food of his New York upbringing, down to bagels and bialys at the bakery counter.",
       "latitude": 40.7424702,
       "longitude": -73.9862953,
       "city": "New York",
@@ -105636,7 +105636,7 @@
     {
       "id": "bdeebc71-f137-5513-be44-c5f49638182e",
       "name": "Round Swamp Farm",
-      "description": "A family farm store in East Hampton selling its own produce alongside prepared food, baked goods and prime cuts. Its prices are the reason it turns up in videos as often as its cooking.",
+      "description": "A Lester family farm stand at 184 Three Mile Harbor Road in East Hampton, on land the family has farmed since 1721. Carolyn Lester Snyder began selling produce from a red wagon more than fifty years ago; four generations now run it, selling their own produce alongside prepared food, baked goods and local seafood.",
       "latitude": 40.9853229,
       "longitude": -72.1831331,
       "city": "East Hampton",
@@ -106012,7 +106012,7 @@
     {
       "id": "5f8ef29a-8b6c-5fa3-b049-5eddf8b8c002",
       "name": "Miami Slice",
-      "description": "A pizzeria in Miami selling New York-style slices, and one of the addresses that gets named when people argue the city has a pizza scene at all.",
+      "description": "A small walk-in-only pizzeria at 1335 NE Miami Court on the northern edge of Downtown, selling New York-style slices — margherita through to versions with garlic confit cream and leeks. Named the city's best pizza by Miami New Times in 2024.",
       "latitude": 25.7877253,
       "longitude": -80.1929449,
       "city": "Miami",
