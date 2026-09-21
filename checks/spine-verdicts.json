@@ -215,6 +215,15 @@
     "note": "Wikidata places Q656576 in Chiang Mai (national park in Thailand), not Chom Thong. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Drottningholm": {
+    "at": [
+      59.3220162,
+      17.8871302
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — and the 'finding' is a title artefact. Our order==0 stop sits 56 m from Wikidata's Drottningholm PALACE (Q207686-class, 59 sitelinks), which is what this 3-stop walk is about. The 276 m match is the LOCALITY 'Drottningholm' (19 sitelinks), picked only because our walk carries the bare place name as its title and that label-matches the village exactly. ⚠️ multiStop besides, which the runbook refuses to move.",
+    "verdict": "name-collision"
+  },
   "East Side Gallery": {
     "at": [
       52.505,
