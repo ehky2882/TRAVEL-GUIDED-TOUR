@@ -1,4 +1,4 @@
-RUN spine-match.py · rev c385b8d7 · 2026-09-21T14:16:59Z · args: --limit 25 --out spine/audit.txt
+RUN spine-match.py · rev c385b8d7 · 2026-09-21T14:51:46Z · args: --limit 25 --out spine/audit.txt
 audited 5122 catalogue entries against Wikidata
 
 🔴 DISAGREES — our coordinate is not where the subject is: 22 unexamined (61 already ruled — 38 wikidata-elsewhere, 9 name-collision, 8 extended-feature, 3 wikidata-wrong, 1 undecided, 1 institution-moved, 1 part-vs-whole)
@@ -108,7 +108,7 @@ coverage by creator (matched / asked) — where this method works:
     three pins moved on a distance alone came out 11 m right, 220 m
     wrong and 100 m wrong. Every line goes to the owner individually.
 
-RULED: 171 entries carry a recorded verdict that still applies — checks/spine-verdicts.json
+RULED: 173 entries carry a recorded verdict that still applies — checks/spine-verdicts.json
 ⚠️  A verdict is stamped with the coordinate it was reached against and
     STOPS APPLYING the moment that coordinate moves: nobody has judged
     the new point, and silence would look exactly like agreement.

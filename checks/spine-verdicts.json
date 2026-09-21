@@ -233,6 +233,15 @@
     "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
     "verdict": "wikidata-elsewhere"
   },
+  "Edison's Menlo Park Laboratory": {
+    "at": [
+      42.305651,
+      -83.226917
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODING settled it, and the error was subtler than an offset. Our point resolves to the 'Ford Model AA Fort Meyers Lab stop' on Christie Street -- Greenfield Village holds BOTH of Edison's relocated laboratories, and our pin sat by the FORT MYERS one. The Menlo Park laboratory is 179 m away on Post Road, where OSM's named feature and its address both point.",
+    "verdict": "fixed"
+  },
   "Església vella de Santa Maria": {
     "at": [
       41.6893701,
@@ -970,6 +979,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q55721633 in Changi (), not Singapore. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Stortorget, Gamla Stan": {
+    "at": [
+      59.3269748,
+      18.0716979
+    ],
+    "date": "2026-09-21",
+    "note": "NOT MOVED, and the reason is the finding. Reverse-geocoding shows our point is 'Inre borggarden' -- the Royal Palace's inner courtyard -- 226 m from Stortorget itself. But this entry is a MEMBER OF THE PLACE 'Gamla stan', whose coordinate IS that point, and validate-tours requires every member's marker to sit exactly on its place. So the square cannot be moved on its own: either the entry leaves the place, or the place is not really 'Gamla stan'. A part-vs-whole question, which docs/places.md leaves to the owner.",
+    "verdict": "part-vs-whole"
   },
   "Sun Tower": {
     "at": [

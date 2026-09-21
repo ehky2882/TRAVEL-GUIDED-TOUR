@@ -73,6 +73,56 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 Place membership is recorded in the PLACE, not the entry — check both directions (2026-09-21)
+
+Every coordinate move today asserted `entry.get("placeId") is None` before touching a pin, on the
+belief that this was the runbook's *"refuse an entry in a place"*. Eleven moves passed it.
+
+The twelfth did too — and broke the catalogue. `validate-tours-mirror.py` came back
+**`control DIRTY` / `SELFTEST FAILED — verdict not trustworthy`**, refusing to print a verdict at
+all, which is exactly the behaviour § 1 asks for and the only reason it was caught immediately.
+
+**Membership is stored on the PLACE, as `places[].tourIds`.** An entry can be a member with no
+`placeId` of its own, so the guard was looking down a one-way street:
+
+```python
+# WRONG — passes for a member whose place lists it
+assert entry.get("placeId") is None
+
+# RIGHT — ask the places too
+members = {i for p in catalog.get("places") or [] for i in (p.get("tourIds") or [])}
+assert entry["id"] not in members and entry.get("placeId") is None
+```
+
+🔴 **The eleven earlier moves were safe by luck, not by design.** None happened to be a place
+member. A guard that has never fired is not a guard that works — the only reason this one's failure
+was visible is that a *different* check refused to answer.
+
+⚠️ **And the case it caught is a real content question.** `Stortorget, Gamla Stan` (a pin about the
+**square**) shares the place `Gamla stan` with a multi-stop walk about the **whole old town**. Since
+a place is a coordinate, both sit on one point — and reverse-geocoding shows that point is *Inre
+borggården*, the Royal Palace's inner courtyard, 226 m from Stortorget. **A part bound to its whole
+costs the part its real location.** `docs/places.md` leaves part-vs-whole to the owner; this is what
+the cost looks like when it goes unanswered.
+
+### 🔴 Ask what is AT the point, not only where the name is (2026-09-21)
+
+Two name lookups of the same string are not two sources (see the pub lesson above). **Reverse
+geocoding is**, because it asks a different question: *what is at these coordinates?*
+
+It settled two cases nothing else could:
+
+- **Stortorget** — our point resolves to `Inre borggården`, the Royal Palace's inner courtyard. Not
+  "226 m from the square" but *a different named landmark entirely*.
+- **Edison's Menlo Park Laboratory** — our point resolves to the `Ford Model AA Fort Meyers Lab
+  stop`. Greenfield Village holds **both** of Edison's relocated laboratories, and the pin sat by the
+  **Fort Myers** one. A plain distance would have read as a 179 m offset; the reverse lookup named
+  the actual mistake.
+
+**Reach for it whenever a candidate is close enough that distance alone cannot decide.** A forward
+lookup can only tell you the name is somewhere else; a reverse lookup tells you what you are
+standing on, which is often the thing that names the error.
+
 ### 🔴 UNMATCHED is not always a coverage gap — sometimes the title is not a name (2026-09-21)
 
 After the `@insightcities` sweep found three real errors, the same method was pointed at the three
