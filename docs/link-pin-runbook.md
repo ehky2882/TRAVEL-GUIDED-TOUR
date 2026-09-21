@@ -377,6 +377,38 @@ plausible but nonexistent address.
 
 ---
 
+## 🔴 Anything you DROP must keep its link
+
+A triage that skips a post records **the URL**, not just the subject. Without
+it the decision cannot be revisited, because the link lives only in the
+conversation that is about to end.
+
+This is not hypothetical. PR #1032 dropped four `@welldonestuff` posts as
+duplicates and named them by landmark only — *Calgary Central Library,
+Guangzhou Circle, Huajiang Grand Canyon Bridge, Three Gorges Dam*. The
+reasoning turned out to be **wrong** (the existing pins were by *other*
+creators, and the owner wants a second creator's take), and by then the four
+links were unrecoverable: the branch was deleted, the PR body carried no URLs,
+and Instagram offers no per-post search across a 1,241-post profile. **A
+correct decision and a recoverable one are different things**, and only the
+second survives being wrong.
+
+So when a batch skips anything, the owner item lists, per dropped post:
+
+| | |
+|---|---|
+| the **source URL** | the only irreplaceable part |
+| the subject | what it was about |
+| **who the existing entry is by** | the duplicate test turns on this — see below |
+| why it was skipped | so the reasoning can be checked, not just the outcome |
+
+⚠️ **And state the duplicate test correctly.** Same creator twice on one
+subject is a duplicate. **A different creator on the same subject is a second
+take, and the owner has twice asked for those to be kept** (#1040: Fraunces
+Tavern, Ye Olde Cheshire Cheese, the Stonewall Inn). Check `sourceAuthor` on
+the existing entry before calling anything a duplicate, and say in the item
+who it is.
+
 ## Traps
 
 - **A pin with no coordinate is the one defect nothing downstream catches.** It
