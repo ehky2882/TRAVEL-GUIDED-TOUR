@@ -1,7 +1,7 @@
-RUN spine-match.py · rev c0555f6f · 2026-09-21T12:26:40Z · args: --limit 25 --out spine/audit.txt
+RUN spine-match.py · rev c0555f6f · 2026-09-21T13:27:03Z · args: --limit 25 --out spine/audit.txt
 audited 5122 catalogue entries against Wikidata
 
-🔴 DISAGREES — our coordinate is not where the subject is: 48 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
+🔴 DISAGREES — our coordinate is not where the subject is: 43 unexamined (48 already ruled — 33 wikidata-elsewhere, 7 extended-feature, 3 wikidata-wrong, 2 name-collision, 1 undecided, 1 institution-moved, 1 part-vs-whole)
       18233 m   The Kings Arms                           London           -> Kings Arms
        8662 m   The Britannia                            London           -> The Britannia
        7966 m   Les Tres Xemeneies                       Sant Adrià de Be -> Les Tres Xemeneies
@@ -27,7 +27,7 @@ audited 5122 catalogue entries against Wikidata
         420 m   East Side Gallery                        Berlin           -> East Side Gallery
         412 m   Keage Incline | 蹴上インクライン                 Kyoto            -> Keage Incline
         411 m   Alton Estate                             London           -> Alton Estate
-  … and 23 more (raise --limit to see them)
+  … and 18 more (raise --limit to see them)
 
 REVIEW — near, but further out than a correct entry usually sits: 172 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
       12639 m ~ Redhouse                                 Newcastle upon T -> Hylton Red House
@@ -85,7 +85,7 @@ EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no 
         941 m ~ Mount Royal — the Climb                  Montreal         -> Mount Royal
   … and 90 more (raise --limit to see them)
 
-CONFIRMS: 1810   EXTENDED: 115   UNMATCHED: 2901   STALE: 0   NOT-ASKED: 0
+CONFIRMS: 1811   EXTENDED: 115   UNMATCHED: 2901   STALE: 0   NOT-ASKED: 0
 
 coverage by creator (matched / asked) — where this method works:
    35%   116/326   TikTok @urbanistariel
@@ -112,9 +112,9 @@ coverage by creator (matched / asked) — where this method works:
     three pins moved on a distance alone came out 11 m right, 220 m
     wrong and 100 m wrong. Every line goes to the owner individually.
 
-RULED: 139 entries carry a recorded verdict that still applies — checks/spine-verdicts.json
+RULED: 147 entries carry a recorded verdict that still applies — checks/spine-verdicts.json
 ⚠️  A verdict is stamped with the coordinate it was reached against and
     STOPS APPLYING the moment that coordinate moves: nobody has judged
     the new point, and silence would look exactly like agreement.
 
-48 entries to put to the owner
+43 entries to put to the owner
