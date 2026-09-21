@@ -187,3 +187,129 @@ wrong-entity four are a separate matter from the extended twenty-two.
 `@handles` still attached (`Pinacoteca di Brera Milan Italy @pinacotecabrera`,
 `Hepworth Wakefield @hepworthwakefield`, `Villa Medici in Rome @villa_medici`) and were
 described in chat more cleanly than they actually were. Corrected since.
+
+## Two more of the same shape, found by looking rather than by tripping
+
+### A defect class with no check: same name, different place
+
+`check-place-candidates.py` asks which entries are **close enough together to be one
+place**. Nothing asked the inverse — *we call these two things by the same name, so why
+are they 300 m apart?* `scripts/check-same-name.py` now does.
+
+Agreement is the overwhelming norm, which is what makes it worth running: **164
+same-name-same-city groups, 158 within 100 m.** The six that are not:
+
+| | span | what it is |
+|---|---|---|
+| Cheonggyecheon (Seoul) | 5,132 m | an 11 km stream — both pins right |
+| All'Antico Vinaio (Florence) | 1,150 m | a sandwich shop with more than one branch |
+| The Barbican (London) | 149 m | one estate, big enough for both |
+| **Walden 7** | **335 m** | 🔴 three entries; two agree with each other AND with Wikidata, one sits alone |
+| Taipei · Tainan | 3,129 m · 1,982 m | the "name" is a creator's boilerplate **caption** repeated across different restaurants — a titling defect, flagged separately |
+
+**Walden 7 was left as a finding, not fixed.** Two of our entries and Wikidata agree
+within 6 m and the third is 335 m off, which is suggestive — but rule 8d wants an
+independent third source and **Wikimedia was throttling everything at the time**
+(Wikipedia 429, the `overpass.kumi.systems` mirror timing out after 60 s, WDQS returning
+*"aggressively rate-limiting to 1 req / min — active wdqs outage"*). An outage is not a
+licence to move a pin on a distance.
+
+Design points the mutants defend: `spread()` is the **widest gap, never a centroid**
+(a centroid is pulled toward the outlier and softens the very case this exists for);
+the key is `(display_stem, city)` so a bilingual tail cannot split a group and two
+cities' identically named venues cannot merge; tours and pins are one population.
+20 selftests, 14/14 mutants, **plus one recorded as EQUIVALENT with its proof** rather
+than counted as a gap.
+
+### The validator printed 40 of 523 warnings and said nothing about the rest
+
+`validate-tours-mirror.py` — **what CI runs**, since there is no Swift on the runner —
+ended with `for x in e[:40]` and `for x in w[:40]`. It announced "0 errors, 523 warnings"
+and then printed forty, with no indication that 483 more existed.
+
+🔴 **The error path is the dangerous half: 500 errors would have printed 40 and read as
+forty problems.** And `validate-tours.swift` prints *every* finding, so the mirror had
+silently diverged from the thing it stands in for, in the direction of saying less.
+
+Now it names the hidden count, says how to see the rest (`--limit 0`), and prints a shape
+tally that answered a question nobody could previously ask:
+
+```
+by kind: 331x no Theme tag · 192x no Place type tag
+```
+
+12 truncation selftests, 9/9 mutants. **Two of those selftests exist only because
+mutation testing found the guards unable to fail**, and both are worth knowing:
+
+- `summarise()` **returns** the hidden count; `report()` **prints** it. Testing only the
+  first left the printing untestable — **and the printing was the entire bug.** The
+  number already existed; nothing put it on screen.
+- The tally assertion was **vacuous**: `out.split("by kind:")[-1]` returns the WHOLE
+  output when the marker is absent, so it matched the WARN lines and passed while the
+  tally was suppressed. It now requires the marker.
+
+## 🔴 And the same error, made by this session, in miniature
+
+Checking whether two `places` share a name, the query read `centroidLatitude` where the
+key is `latitude`. Every row came back `None`, the loop skipped all 408, and the output
+said **"same name + same city among PLACES: 0"** — which is indistinguishable from a
+genuine clean result. It was caught only because the keys happened to be printed beside
+it.
+
+The habit that closes it is one line, and it is the cheapest thing in this whole handoff:
+
+```python
+print(f"places: {len(places)} · usable: {placed} · skipped: {skipped}")
+assert placed + skipped == len(places), "population does not add up"
+```
+
+**State the population and make it add up.** The first version fails that assertion
+instantly. Re-run correctly: 408 places, 408 usable, **0 duplicates** — a real clean
+result this time.
+
+⚠️ No `places` path was added to `check-same-name.py`. With zero cases to defend it,
+that is exactly how an untestable guard gets born — see the four found in #1037.
+
+## Two qualifiers that change what the findings mean
+
+### ✅ The caption titles are a CLOSED legacy set
+
+**369 of 3,348 link pins (11%) carry caption text where a venue name should be**, heavily
+concentrated (@suzyandaustin 64/66, @asamapov 35/37, @heyrosiedart 15/15, @lucymcorban 35/46).
+Read alone, that number invites a panic or a large cleanup.
+
+🔴 **It should not, because the leak is already closed.** `merge-link-pins.py` **refuses** a
+caption or a description used as a title at authoring time, via `check-pin-title.py`. Verified
+against the real strings rather than trusting the docstring:
+
+| tested | |
+|---|---|
+| `Here’s another @michelinguide spot you have to try! This…` | **REFUSED** |
+| `This bookstore in Chengdu is absolutely surr…` | **REFUSED** |
+| `Fuhang Soy Milk` · `寧波生煎包 (Ningbo pan-fried buns)` · `Walden 7` | passed, correctly |
+
+So no new ones can enter through the sanctioned pipeline. The 369 are a bounded backlog for a
+deliberate cleanup, not a widening problem — and most are **not** automatically recoverable
+(218 of 237 markerless captions have no usable signal; the prose patterns that look promising
+are noise, e.g. *"we line up to try"* matching as a venue name).
+
+### 🔴 PR #1019 must NOT be merged — it would resurrect a cleared owner item
+
+Three PRs from another session have been open since 2026-09-20. Checked against `origin/main`
+rather than read from their bodies:
+
+| PR | touches | state |
+|---|---|---|
+| **#1019** | `status/owner/sync-anthonykatiekay-pins-to-supabase.md` | 🔴 **that file no longer exists on main.** Merging it re-opens a settled item and asks the owner to do something already done — the failure CLAUDE.md's opening section says has cost real trust |
+| #1015 | removes four owner items | all four are **already gone**; its substantive work landed by another route |
+| #1020 | one `status/entries/` file | harmless historical board entry; one file per entry, cannot conflict |
+
+```
+already gone : reseed-supabase-1017-pins
+already gone : reseed-supabase-1025-pins
+already gone : sync-anthonykatiekay-pins-to-supabase
+already gone : remove-isle-of-capri-instagram-dup
+```
+
+Not closed — they are another session's PRs, and closing someone else's work is the owner's
+call. Recorded so the next session does not merge #1019 on autopilot.
