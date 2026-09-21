@@ -660,8 +660,8 @@
   "note": "Wikipedia's 31.06028,121.14944 matches Wikidata Q16928554 to ~60 m and is 5.1 km from ours. Both sides sit ~35 km from central Shanghai, which is correct for the Songjiang quarry; the question was only WHICH point, and two sources agree. Moved."
  },
  "Yachthouse Residence Club": {
-  "verdict": "likely-ours-wrong",
+  "verdict": "fixed",
   "date": "2026-09-21",
-  "note": "Q97167987 'Yachthouse by Pininfarina', no address stated, 2,930 m from ours. NOT MOVED -- needs one independent document."
+  "note": "OSM way/496780880, building=yes, named 'Yachthouse Residence' -- WITHOUT the 'Club' our title carries, which is why an exact-name query returned nothing and a looser one found it. It agrees with Wikidata Q97167987 to 8 m and sits 2.9 km from our old point. Moved."
  }
 }

@@ -2347,5 +2347,10 @@ Two things to know before relying on it:
   repeatedly for Balneário Camboriú. Prefer an exact `["name"="…"]` match, keep
   the bbox tight, and expect to be rate-limited after a few calls.
 
+- **Query the name LOOSELY.** `["name"="Yachthouse Residence Club"]` returned
+  nothing; OSM calls it **"Yachthouse Residence"**, without the "Club" our title
+  carries. A regex on `Yacht` found it immediately. An exact-name miss is not
+  evidence the building is absent — it is evidence the two names differ.
+
 **A blocked host is not an absent fact** — the same lesson as the 42 Tokyo
 addresses. Try a mirror before saying a source is unavailable.
