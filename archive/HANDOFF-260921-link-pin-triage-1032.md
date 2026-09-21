@@ -26,6 +26,18 @@ the engineering/dam posts fit the app. Pin the rest.
 
 ## Two things nothing upstream would have caught
 
+> 🔴 **CORRECTED 2026-09-21 (later the same day).** The paragraph below is **wrong** and is
+> left in place rather than rewritten, because the record of what was believed is part of the
+> account. The four existing entries are **NOT** other `@welldonestuff` posts — they are by
+> **@taylinmaylin** (Calgary Central Library) and **@pasttworld** (the other three). A different
+> creator on the same subject is a **second take**, which the owner has twice asked to keep
+> (#1040: Fraunces Tavern, Ye Olde Cheshire Cheese, the Stonewall Inn), so all four should have
+> been pinned. The owner caught it: *"i dont have a duplicate at calgary central library unless
+> you say the tour by taylinmaylin is the same thing?"* ⚠️ **They could not be restored**, because
+> neither this handoff, the PR body, the deleted branch nor anything else in the tree recorded the
+> four **source URLs** — the one irreplaceable part. See `docs/lessons.md` and
+> `docs/link-pin-runbook.md` § *Anything you DROP must keep its link*.
+
 **Four pins would have duplicated existing content.** `merge-link-pins.py --check` flagged Calgary
 Central Library, Guangzhou Circle, Huajiang Grand Canyon Bridge, and Three Gorges Dam as sitting
 **0 m** from an entry already in the catalog — a different `@welldonestuff` post about the exact
