@@ -2906,3 +2906,37 @@ address matching district **and** street, and OSM holding **no** building named
 太阳塔 anywhere in Shandong. Four weak agreements that could not have copied each
 other beat one strong source, and the verdict file says so in full, so the next
 session can overturn it if a better source appears.
+
+## A correct decision and a recoverable one are different things (2026-09-21)
+
+PR #1032 triaged 62 links and dropped four as duplicates, recording them by
+landmark only: *Calgary Central Library, Guangzhou Circle, Huajiang Grand Canyon
+Bridge, Three Gorges Dam*. The owner read that note later and asked the obvious
+question — *"i dont have a duplicate at calgary central library unless you say
+the tour by taylinmaylin is the same thing?"*
+
+Two failures, and the second is the expensive one.
+
+**The reasoning was wrong.** The note said the four duplicated "earlier posts by
+the same creator". They do not: the existing pins are by **@taylinmaylin** and
+**@pasttworld**, and the dropped ones were **@welldonestuff**. Same creator twice
+on one subject is a duplicate; **a different creator is a second take**, and the
+owner had already ruled that way twice — on #1040 they overrode the same default
+for Fraunces Tavern, Ye Olde Cheshire Cheese and the Stonewall Inn. All four
+should have been kept.
+
+🔴 **And the decision could not be undone, because the links were never written
+down.** The branch was deleted on merge, the PR body named the landmarks and no
+URLs, nothing in the tree recorded them, and Instagram offers no per-post search
+across a 1,241-post profile. The subject was recoverable; **the only
+irreplaceable thing was the URL, and that is exactly what was dropped.**
+
+**So: record what you DISCARD, not only what you keep.** A skip is a decision,
+decisions get revisited, and a revisit needs the input. The rule is now in
+`docs/link-pin-runbook.md` — an owner item for a dropped post lists the source
+URL, the subject, **who the existing entry is by**, and the reason.
+
+⚠️ Note the shape it shares with the day's other findings: the caption
+truncation destroyed addresses, this destroyed URLs. **Both threw away the one
+field that could settle a later question, while keeping the parts that read
+well.**

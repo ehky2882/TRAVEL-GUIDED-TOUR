@@ -1,23 +1,47 @@
-# Confirm: 4 engineering pins dropped as duplicates of existing catalog entries
+# Send the 4 @welldonestuff links so they can be restored
 
-_opened 2026-09-21 · clear with `git rm status/owner/link-pin-batch-1032-duplicates.md`_
+_opened 2026-09-21 · rewritten 2026-09-21 after the original claim was found to be false_
 
-PR #1032 (54 new link pins) intentionally left out 4 posts from @welldonestuff
-that would have duplicated landmarks already pinned in the catalog from
-earlier posts by the same creator, at the same coordinate (0 m apart per
-`merge-link-pins.py --check`):
+## 🔴 What this item used to say was WRONG
 
-- Calgary Central Library
-- Guangzhou Circle
-- Huajiang Grand Canyon Bridge
-- Three Gorges Dam
+It said PR #1032 dropped four posts because they duplicated landmarks
+"already pinned in the catalog from **earlier posts by the same creator**".
 
-Each of the new posts is a different Instagram reel about the exact same
-subject as an existing pin. Default action taken: skip the new post, keep the
-existing pin — no second map marker at the same spot.
+**They are not the same creator.** Checked against the live catalogue:
 
-If you'd rather swap in the new post (e.g. better clip, more recent), or keep
-both pins side by side despite the overlap, say so and a follow-up PR will
-handle it. Otherwise no action needed — this is FYI only.
+| landmark | the existing pin is by | the dropped post was by |
+|---|---|---|
+| Calgary Central Library | **@taylinmaylin** | @welldonestuff |
+| Guangzhou Circle | **@pasttworld** | @welldonestuff |
+| Huajiang Grand Canyon Bridge | **@pasttworld** | @welldonestuff |
+| Three Gorges Dam | **@pasttworld** | @welldonestuff |
 
-Clear with: git rm status/owner/link-pin-batch-1032-duplicates.md
+The owner spotted this: *"i dont have a duplicate at calgary central library
+unless you say the tour by taylinmaylin is the same thing?"*
+
+**It matters because the owner has twice ruled the other way on exactly this
+case.** On the #1040 batch they overrode the duplicate-drop default for
+Fraunces Tavern, Ye Olde Cheshire Cheese and the Stonewall Inn, wanting a
+different creator's take pinned alongside the existing entry. Same-creator
+twice is a genuine duplicate; **a different creator is a second take, and the
+owner wants those.** All four of these should have been kept.
+
+## 🔴 What is blocking the fix
+
+**The four source URLs were never recorded anywhere**, so the posts cannot be
+restored from the repo. Checked and came up empty:
+
+- the `#1032` branch — **deleted** after merge
+- the PR body — names the four landmarks, no links
+- `drafts/` and the rest of the tree — nothing
+- a web search for the reels — @welldonestuff has 1,241 posts and Instagram
+  offers no per-post search; the profile will not serve a scrape
+
+## What is needed
+
+**Send the four Instagram reel links** (Calgary Central Library, Guangzhou
+Circle, Huajiang Grand Canyon Bridge, Three Gorges Dam) and a follow-up PR
+will pin all four alongside the existing entries — which will also make each
+of the four a two-entry **place candidate**, since the pairs sit on one point.
+
+Clear with: `git rm status/owner/link-pin-batch-1032-duplicates.md`
