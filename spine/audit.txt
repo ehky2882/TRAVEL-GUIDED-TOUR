@@ -1,7 +1,9 @@
-RUN spine-match.py · rev c0555f6f · 2026-09-21T06:35:14Z · args: --limit 25 --out spine/audit.txt
-audited 4930 catalogue entries against Wikidata
+RUN spine-match.py · rev c0555f6f · 2026-09-21T08:47:26Z · args: --limit 25 --out spine/audit.txt
+audited 4990 catalogue entries against Wikidata
 
-🔴 DISAGREES — our coordinate is not where the subject is: 41 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
+🔴 DISAGREES — our coordinate is not where the subject is: 43 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
+      18233 m   The Kings Arms                           London           -> Kings Arms
+       8662 m   The Britannia                            London           -> The Britannia
        7966 m   Les Tres Xemeneies                       Sant Adrià de Be -> Les Tres Xemeneies
        1545 m   Míčovna (Ball Game Hall)                 Prague           -> Míčovna
        1477 m   Amanohashidate | 天橋立                     Miyazu           -> Amanohashidate
@@ -25,15 +27,14 @@ audited 4930 catalogue entries against Wikidata
         382 m   Central–Mid-Levels Escalators | 中環半山扶手電梯 Hong Kong        -> Central–Mid-levels escalators
         371 m   Xcaret                                   Playa del Carmen -> Xcaret
         371 m   Santa Teresa Tram                        Rio de Janeiro   -> Santa Teresa Tram
-        347 m   Quartier des Spectacles                  Montreal         -> Quartier des Spectacles
-        335 m ~ Lakhta Center                            Saint Petersburg -> Lakhta Center 3
-  … and 16 more (raise --limit to see them)
+  … and 18 more (raise --limit to see them)
 
-REVIEW — near, but further out than a correct entry usually sits: 166 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
+REVIEW — near, but further out than a correct entry usually sits: 169 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
        7411 m ~ Pai Canyon | ปายแคนยอน                   Pai              -> Q49097134
        5237 m ~ The Fairy Tale Castle of Filiatra        Filiatra         -> Filiatra Eiffel Tower
        1287 m   Machu Picchu                             Machu Picchu     -> Machu Picchu
        1042 m   Palmanova (star-shaped fortress town)    Palmanova        -> Palmanova
+        861 m ~ National Archaeological Museum of Naples Naples           -> University of Naples Federico 
         767 m ~ Rudolph Hall                             New Haven        -> Yale Art and Architecture Buil
         751 m ~ The Rotunda, National Library of Finland Helsinki         -> Finnish National Gallery
         696 m ~ The Cube Houses of Rotterdam             Rotterdam        -> Rotterdam
@@ -54,8 +55,7 @@ REVIEW — near, but further out than a correct entry usually sits: 166 unexamin
         388 m ~ Midway Barn at Taliesin                  Spring Green     -> Taliesin
         381 m   Marco Island                             Marco Island     -> Marco Island
         381 m ~ Pilsner Urquell Brewery                  Plzeň            -> Plzeňský Prazdroj
-        378 m ~ CCTV Headquarters                        Beijing          -> China Media Group Guanghua Roa
-  … and 141 more (raise --limit to see them)
+  … and 144 more (raise --limit to see them)
 
 EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no single point is honest for these: 115
       20689 m ~ The Train Carriage Hotel at Khao Yai     Pak Chong        -> Khao Yai National Park
@@ -85,7 +85,7 @@ EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no 
         941 m ~ Mount Royal — the Climb                  Montreal         -> Mount Royal
   … and 90 more (raise --limit to see them)
 
-CONFIRMS: 1778   EXTENDED: 115   UNMATCHED: 2754   STALE: 0   NOT-ASKED: 0
+CONFIRMS: 1788   EXTENDED: 115   UNMATCHED: 2799   STALE: 0   NOT-ASKED: 0
 
 coverage by creator (matched / asked) — where this method works:
    35%   116/326   TikTok @urbanistariel
@@ -117,4 +117,4 @@ RULED: 139 entries carry a recorded verdict that still applies — checks/spine-
     STOPS APPLYING the moment that coordinate moves: nobody has judged
     the new point, and silence would look exactly like agreement.
 
-41 entries to put to the owner
+43 entries to put to the owner
