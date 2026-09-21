@@ -41,8 +41,10 @@ import gzip
 import json
 import math
 import os
+import re
 import statistics
 import sys
+import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -51,6 +53,7 @@ import runstamp  # noqa: E402
 
 CATALOG = os.path.join(REPO, "TRAVEL GUIDED TOUR", "Resources", "Tours.json")
 LOOKUPS = os.path.join(REPO, "spine", "lookups.json.gz")
+ADMIN = os.path.join(REPO, "checks", "spine-admin.json.gz")
 
 AGREE_M = 500.0      # at or under this, our coordinate and Wikidata's agree
 MIN_CLUSTER = 3      # fewer than this and the city median means nothing
@@ -73,6 +76,46 @@ def city_clusters(entries):
     return out
 
 
+# 🔴 What Wikidata SAYS the thing is. A kilometre means nothing for a tram
+# system, a towpath, an island or a conservation district -- a coordinate for
+# one of those is a label anchor, not a location, and "disagreeing" by 1.5 km
+# is the normal condition rather than a defect. The Hong Kong Tram runs 13 km.
+EXTENDED_WORDS = (
+    "system", "network", "route", "line", "service", "district", "neighborhood",
+    "neighbourhood", "quarter", "area", "region", "island", "park", "garden",
+    "cemetery", "campus", "towpath", "canal", "river", "street", "avenue",
+    "boulevard", "trail", "range", "beach", "lake", "valley", "mountain",
+    "reserve", "forest", "estate", "complex", "chain", "railway", "tramway",
+    "cable car", "gondola", "airport", "tunnels", "walk of fame",
+    "waterway", "promenade", "boulevard", "harbour", "harbor", "bay",
+)
+
+
+def extent(description):
+    """EXTENDED if Wikidata describes something that is not a point."""
+    d = (description or "").lower()
+    return "EXTENDED" if any(w in d for w in EXTENDED_WORDS) else "POINT"
+
+
+def same_municipality(our_city, wd_admin):
+    """Does Wikidata place this entity in the city we file it under?
+
+    🔴 This beats distance. Casa Costa sat 2.85x -- just inside the ratio, so
+    UNDECIDED -- while Wikidata plainly said "a building in Sant Just Desvern"
+    and ours is Barcelona's. The gazetteer states the municipality; use it.
+    """
+    if not our_city or not wd_admin:
+        return None
+    def key(text):
+        # 🔴 Strip the combining marks FIRST. Running the regex first turns the
+        # mark into a SPACE, so "Zürich" became "zu rich" and never matched
+        # "Zurich" -- the same accent trap this repo has now paid for twice.
+        t = unicodedata.normalize("NFKD", text.lower())
+        t = "".join(c for c in t if not unicodedata.combining(c))
+        return " ".join(re.sub(r"[^a-z0-9 ]", " ", t).split())
+    return key(our_city) == key(wd_admin)
+
+
 def verdict(ours_m, theirs_m, ratio=RATIO):
     """Who is wrong, given each side's distance to the city cluster."""
     if ours_m is None or theirs_m is None:
@@ -84,7 +127,7 @@ def verdict(ours_m, theirs_m, ratio=RATIO):
     return "UNDECIDED"                   # both near, or both far
 
 
-def triage(lookups, catalog, agree_m=AGREE_M, min_cluster=MIN_CLUSTER):
+def triage(lookups, catalog, agree_m=AGREE_M, min_cluster=MIN_CLUSTER, admin=None):
     entries = list(catalog.get("tours") or []) + list(catalog.get("linkPins") or [])
     by_id = {(e.get("id") or "").upper(): e for e in entries}
     clusters = city_clusters(entries)
@@ -122,6 +165,19 @@ def triage(lookups, catalog, agree_m=AGREE_M, min_cluster=MIN_CLUSTER):
             "their_coord": [best["lat"], best["lon"]],
             "verdict": verdict(ours, theirs),
         })
+        info = (admin or {}).get(key) or {}
+        row = rows[-1]
+        row["wd_desc"] = info.get("desc", "")
+        row["wd_admin"] = info.get("admin", "")
+        row["extent"] = extent(row["wd_desc"]) if row["wd_desc"] else ""
+        row["same_city"] = same_municipality(entry.get("city"), row["wd_admin"])
+        # 🔴 Two signals OVERRIDE the distance ratio, because each is a
+        # statement of fact rather than an inference from geometry.
+        if row["verdict"] == "UNDECIDED":
+            if row["same_city"] is False:
+                row["verdict"] = "WIKIDATA-ELSEWHERE"
+            elif row["extent"] == "EXTENDED":
+                row["verdict"] = "EXTENDED-FEATURE"
     rows.sort(key=lambda r: -r["gap_m"])
     return rows
 
@@ -274,6 +330,69 @@ def selftest():
     check("🔴 longitude is scaled by latitude",
           abs(metres(60.0, 0.0, 60.0, 1.0) - 55_700) < 2_000)
 
+    check("a tram SYSTEM is an extended feature",
+          extent("tram system in Hong Kong") == "EXTENDED")
+    check("a towpath is extended", extent("towpath along Naviglio Grande") == "EXTENDED")
+    check("a conservation DISTRICT is extended",
+          extent("heritage conservations district in Toronto") == "EXTENDED")
+    check("🔴 a skyscraper is a POINT and stays a finding",
+          extent("residential skyscraper in Benidorm") == "POINT")
+    check("a museum is a point", extent("museum in Dubai") == "POINT")
+    check("a waterway is extended",
+          extent("waterway in Ho Chi Minh City, Vietnam") == "EXTENDED")
+    check("no description means no extent claim", extent("") == "POINT")
+
+    check("the same municipality is recognised",
+          same_municipality("Barcelona", "Barcelona") is True)
+    check("🔴 a DIFFERENT municipality is recognised",
+          same_municipality("Barcelona", "Sant Just Desvern") is False)
+    check("accents do not break the comparison",
+          same_municipality("Zurich", "Zürich") is True)
+    check("a missing side yields no claim",
+          same_municipality("Barcelona", "") is None)
+
+    # The two signals must OVERRIDE an undecided distance verdict.
+    # ⚠️ Both sides must sit a SIMILAR distance from the cluster, or the
+    # distance rule decides on its own and the override under test never runs.
+    lk2 = {"E": {"at": [1.0, 1.0], "candidates": [
+        {"distance_m": 1500, "label": "x", "lat": 1.0135, "lon": 1.0,
+         "qid": "Q7", "sitelinks": 3}]}}
+    cat2 = {"tours": [
+        {"id": "E", "city": "Hong Kong", "title": "Tram",
+         "stops": [{"latitude": 1.0, "longitude": 1.0}]},
+        *[{"id": f"H{i}", "city": "Hong Kong", "title": f"H{i}",
+           "stops": [{"latitude": 1.0068 + i * 1e-4, "longitude": 1.0}]}
+          for i in range(3)]], "linkPins": []}
+    r2 = triage(lk2, cat2, admin={"E": {"desc": "tram system in Hong Kong",
+                                        "admin": "Hong Kong"}})
+    check("🔴 an EXTENDED feature is reclassified out of UNDECIDED",
+          r2 and r2[0]["verdict"] == "EXTENDED-FEATURE")
+    r3 = triage(lk2, cat2, admin={"E": {"desc": "building in Elsewhere",
+                                        "admin": "Elsewhere"}})
+    check("🔴 a different municipality overrides an undecided distance",
+          r3 and r3[0]["verdict"] == "WIKIDATA-ELSEWHERE")
+    r4 = triage(lk2, cat2, admin={})
+    check("with no cached description the verdict is untouched",
+          r4 and r4[0]["verdict"] == "UNDECIDED")
+
+    # 🔴 The overrides must apply ONLY to UNDECIDED. A real OURS-WRONG row
+    # that happens to carry an "extended" description, or a Wikidata admin we
+    # do not recognise, must NOT be reclassified out of the queue -- that
+    # would bury the only findings worth acting on.
+    lk5 = {"F": {"at": [2.0, 2.0], "candidates": [
+        {"distance_m": 40_000, "label": "x", "lat": 2.36, "lon": 2.0,
+         "qid": "Q8", "sitelinks": 9}]}}
+    cat5 = {"tours": [
+        {"id": "F", "city": "Faraway", "title": "F",
+         "stops": [{"latitude": 2.0, "longitude": 2.0}]},
+        *[{"id": f"G{i}", "city": "Faraway", "title": f"G{i}",
+           "stops": [{"latitude": 2.36 + i * 1e-4, "longitude": 2.0}]}
+          for i in range(3)]], "linkPins": []}
+    r5 = triage(lk5, cat5, admin={"F": {"desc": "park in Faraway",
+                                        "admin": "Somewhere Else"}})
+    check("🔴 an OURS-WRONG row is never buried by an override",
+          r5 and r5[0]["verdict"] == "OURS-WRONG")
+
     print(f"selftest {ran - failed}/{ran} passed")
     return 1 if failed else 0
 
@@ -284,7 +403,8 @@ def main():
     ap.add_argument("--catalog", default=CATALOG)
     ap.add_argument("--lookups", default=LOOKUPS)
     ap.add_argument("--verdict", choices=("OURS-WRONG", "WIKIDATA-ELSEWHERE",
-                                          "UNDECIDED"))
+                                          "EXTENDED-FEATURE", "UNDECIDED"))
+    ap.add_argument("--admin", default=ADMIN)
     ap.add_argument("--json", metavar="PATH")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
@@ -303,10 +423,15 @@ def main():
         with gzip.open(a.lookups, "rt", encoding="utf-8") as fh:
             lookups = json.load(fh)
 
-        rows = triage(lookups, catalog)
+        admin = {}
+        if os.path.exists(a.admin):
+            with gzip.open(a.admin, "rt", encoding="utf-8") as fh:
+                admin = json.load(fh)
+        rows = triage(lookups, catalog, admin=admin)
         counts = collections.Counter(r["verdict"] for r in rows)
         print(f"{len(rows)} entries disagree with Wikidata by more than {AGREE_M:.0f} m\n")
-        for name in ("OURS-WRONG", "WIKIDATA-ELSEWHERE", "UNDECIDED"):
+        for name in ("OURS-WRONG", "WIKIDATA-ELSEWHERE", "EXTENDED-FEATURE",
+                     "UNDECIDED"):
             print(f"  {name:<20} {counts[name]:>4}")
         if a.verdict:
             print()
