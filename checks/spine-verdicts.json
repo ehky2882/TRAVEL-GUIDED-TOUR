@@ -17,6 +17,24 @@
     "note": "Wikidata places Q3495648 in Štýřice (building in the Czech Republic), not Brno. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Al Seef": {
+    "at": [
+      25.2605,
+      55.2997
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours a pharmacy off Sheikh Sabah street, theirs an ATM on شارع السيف; a waterfront district.",
+    "verdict": "extended-feature"
+  },
+  "Alton Estate": {
+    "at": [
+      51.453563,
+      -0.246563
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours is Winchfield House, theirs 213-243 Danebury Avenue — both inside the estate.",
+    "verdict": "extended-feature"
+  },
   "Alzaia Naviglio Grande": {
     "at": [
       45.4469431,
@@ -24,6 +42,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata describes Q106960792 as \"towpath along Naviglio Grande in Milan\" — not a point. A 1577 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Amanohashidate | 天橋立": {
+    "at": [
+      35.5576645,
+      135.1847442
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both points sit on the 天の橋立線 rail line at different stations; a 3.6 km sandbar.",
     "verdict": "extended-feature"
   },
   "Ancient Rome": {
@@ -61,6 +88,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q16559 in Travis County (capital city of the U.S. state of Texas and seat of Travis County), not Austin. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Avenida da Liberdade": {
+    "at": [
+      38.7152615,
+      -9.1412481
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours is Praça dos Restauradores at the avenue's south end, theirs a monument along it; a 1.1 km boulevard.",
+    "verdict": "extended-feature"
   },
   "Bahrain World Trade Center": {
     "at": [
@@ -179,6 +215,15 @@
     "note": "Wikidata places Q107646375 in Sant Just Desvern (building in Sant Just Desvern, Spain), not Barcelona. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Central–Mid-Levels Escalators | 中環半山扶手電梯": {
+    "at": [
+      22.28357,
+      114.15499
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours at the Queen's Road Central foot, theirs at Caine Road partway up; an 800 m escalator system.",
+    "verdict": "extended-feature"
+  },
   "Children's Railway (Gyermekvasút)": {
     "at": [
       47.5004125,
@@ -188,6 +233,15 @@
     "note": "Wikidata places Q1029453 in Budapest District XII (railway line), not Budapest. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Cholon | Chợ Lớn": {
+    "at": [
+      10.7555296,
+      106.6584271
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both inside Phường Chợ Lớn; a district.",
+    "verdict": "extended-feature"
+  },
   "Church of Santa Maria": {
     "at": [
       41.1887162,
@@ -196,6 +250,24 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q10300634 in Celorico (São Pedro e Santa Maria) e Vila Boa do Mondego (church in Celorico da Beira, Portugal), not Marco de Canaveses. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Church of the Most Sacred Heart of Our Lord": {
+    "at": [
+      50.078035,
+      14.4507539
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: our point is 'The Pind', a restaurant on Korunní; the target reverse-geocodes to 'Nejsvětější Srdce Páně, náměstí Jiřího z Poděbrad' — the church itself.",
+    "verdict": "fixed"
+  },
+  "Château La Coste": {
+    "at": [
+      43.6349375,
+      5.4226875
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: theirs is 'Francis Mallmann en Provence', a restaurant ON the estate; a large vineyard-and-art estate.",
+    "verdict": "extended-feature"
   },
   "Cu Chi Tunnels – Bến Dược | Địa Đạo Củ Chi - Bến Dược": {
     "at": [
@@ -404,6 +476,15 @@
     "note": "🔴 A PRIOR VERDICT SAID THIS WAS FINE. OSM name lookup and an OSM geocode of Koulova 15 return the same 'Hotel International' node, 966 m from us; Wikidata (12 sitelinks) agrees at 953 m.",
     "verdict": "fixed"
   },
+  "Hotel Nacional": {
+    "at": [
+      -22.9980517,
+      -43.2568465
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: our point is the Autoestrada Engenheiro Fernando Mac Dowell — a MOTORWAY; the target reverse-geocodes to 'Gran Meliá Nacional Rio de Janeiro, 764, Avenida Niemeyer'. ⚠️ I had held this back as a generic name; reverse-geocoding named it exactly and settled it.",
+    "verdict": "fixed"
+  },
   "Hotel Negresco": {
     "at": [
       43.69471,
@@ -439,6 +520,24 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q4500907 in South East Delhi district (radha Krishna Temple in Delhi, India), not Delhi. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Imperial Palace | 皇居": {
+    "at": [
+      35.68534,
+      139.75285
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours a service road INSIDE 皇居, theirs the palace building; a 1.15 km² complex.",
+    "verdict": "extended-feature"
+  },
+  "Inokashira Park | 井の頭恩賜公園": {
+    "at": [
+      35.69992,
+      139.57371
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both on roads beside the park, 272 m apart.",
+    "verdict": "extended-feature"
   },
   "Inside the Museum of the City of New York": {
     "at": [
@@ -530,6 +629,15 @@
     "note": "Wikidata places Q28838028 in Karlín (), not Prague. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Keage Incline | 蹴上インクライン": {
+    "at": [
+      35.0107786,
+      135.7888568
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours is a hotel whose own address IS 蹴上インクライン; theirs the footway. A 582 m incline.",
+    "verdict": "extended-feature"
+  },
   "Khao Yai National Park | อุทยานแห่งชาติเขาใหญ่": {
     "at": [
       14.4067111,
@@ -556,6 +664,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q1120689 as \"Jewish cemetery in Budapest, Hungary\" — not a point. A 956 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Károlyi Palace (Petőfi Literary Museum)": {
+    "at": [
+      47.4913889,
+      19.0583333
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: our point is '10, Pollack Mihály tér', a different building; the target reverse-geocodes to 'Petőfi Irodalmi Múzeum, 16, Károlyi utca' — the museum itself, which is what the entry names.",
+    "verdict": "fixed"
   },
   "La Fábrica (The Factory)": {
     "at": [
@@ -611,6 +728,15 @@
     "note": "OWNER-CONFIRMED CORRECT. OSM's Лахта-центр is 0 m from our point; Wikidata's own main-tower record (Q4255374) sits 413 m away. The tool matched 'Lakhta Center 3' (Q136648950, 1 sitelink), a DIFFERENT tower in the same complex, so the 335 m gap is a sibling-building collision, not an error.",
     "verdict": "wikidata-wrong"
   },
+  "Les Tres Xemeneies": {
+    "at": [
+      41.4270698,
+      2.235212
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: CORRECT, and a textbook name collision. Our point is the 'Central tèrmica de Sant Adrià de Besòs' — the power station whose three chimneys the entry is about. Wikidata's match is the 'Xemeneies de la Fecsa' in Poble-sec: Barcelona has TWO famous sets of three chimneys, 8 km apart.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Lion's Head": {
     "at": [
       -33.936899,
@@ -654,6 +780,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata describes Q1069906 as \"sculpture garden in Budapest\" — not a point. A 1078 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Menara Gardens | حدائق المنارة": {
+    "at": [
+      31.6145007,
+      -8.0224996
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both resolve to the same arrondissement de Ménara.",
     "verdict": "extended-feature"
   },
   "Meteora": {
@@ -736,6 +871,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q3015728 as \"International airport in Navi Mumbai, India\" — not a point. A 1589 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Navy Pier": {
+    "at": [
+      41.8918,
+      -87.6095
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: CORRECT. Our point reverse-geocodes to '700, East Grand Avenue' — Navy Pier's own address. The match is 'Chicago Harbor', the marina beside it.",
+    "verdict": "wikidata-elsewhere"
   },
   "Ngong Ping 360 | 昂坪360": {
     "at": [
@@ -881,6 +1025,15 @@
     "note": "Wikidata places Q125846 in Queensland (skyscraper in Australia), not Gold Coast. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Quartier des Spectacles": {
+    "at": [
+      45.5088,
+      -73.5678
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: CORRECT. Our point is 'Cinquième Salle, 175 Rue Sainte-Catherine Ouest, Quartier des Spectacles' — inside the quarter. Wikidata's match is on Boulevard Saint-Laurent in Quartier Chinois, a different neighbourhood.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Queen Anne's Summer Palace": {
     "at": [
       50.093808,
@@ -943,6 +1096,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q3673376 in Pescia (church in Castellare, Italy), not Grizzana Morandi. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Santa Teresa Tram": {
+    "at": [
+      -22.9098176,
+      -43.1785171
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours at the Rua Lélio Gama terminus, theirs the Arcos da Lapa the line crosses; a tram route.",
+    "verdict": "extended-feature"
   },
   "Sardar Vallabhbhai Patel (SVP) Stadium": {
     "at": [
@@ -1375,6 +1537,24 @@
     "date": "2026-09-21",
     "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Park Avenue, the STREET (30 sitelinks). Not a coordinate error. NOT MOVED.",
     "verdict": "editorial-title"
+  },
+  "Three Gorges Dam": {
+    "at": [
+      30.8261831,
+      111.0075702
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both reverse-geocode to the SAME village, 中堡村; a 2.3 km dam.",
+    "verdict": "extended-feature"
+  },
+  "Toronto Islands": {
+    "at": [
+      43.6228,
+      -79.3817
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours the Toronto Island Marina, theirs Avenue Of The Islands — both on the islands.",
+    "verdict": "extended-feature"
   },
   "Tour Odéon": {
     "at": [
