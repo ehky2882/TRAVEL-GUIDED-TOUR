@@ -53,6 +53,28 @@ MUTANTS = [
   'return [r for r in rows if r["band"] not in ("NOT-ASKED", "STALE")]',
   'return [r for r in rows if r["band"] != "NOT-ASKED"]'),
 
+ # --- the verdict rule: the same "only for the point it was measured from"
+ # --- discipline, one layer up. Getting it wrong SUPPRESSES a finding.
+ ("🔴 verdict: the stamp is ignored, so a ruling survives the entry moving",
+  'return (abs(was[0] - at[0]) <= VERDICT_EPS\n            and abs(was[1] - at[1]) <= VERDICT_EPS)',
+  'return True'),
+ ("🔴 verdict: only latitude is compared, so a move due east keeps the ruling",
+  'and abs(was[1] - at[1]) <= VERDICT_EPS)', 'and True)'),
+ ("🔴 verdict: only longitude is compared",
+  'return (abs(was[0] - at[0]) <= VERDICT_EPS\n', 'return (True or (was[0] - at[0]) <= VERDICT_EPS\n'),
+ ("🔴 verdict: an UNSTAMPED record is trusted",
+  'if not was or len(was) != 2:\n        return False', 'if False:\n        return False'),
+ ("verdict: the tolerance is widened to a city block",
+  'VERDICT_EPS = 5e-7', 'VERDICT_EPS = 5e-2'),
+ ("verdict: nothing is ever ruled, so settled findings shout forever",
+  '"verdict": (ruling.get("verdict")', '"verdict": (None or (ruling or {}).get("zzz")'),
+ ("🔴 verdict: the ruling REPLACES the band, hiding a reverted fix",
+  '"band": band(best["distance_m"] if best else None,\n                         related=related, extended=extended),\n            "best": best,\n            "named": bool(best) and label_matches(entry, best),\n            # 🔴 The verdict rides ALONGSIDE',
+  '"band": (ruling.get("verdict") and "CONFIRMS") or band(best["distance_m"] if best else None,\n                         related=related, extended=extended),\n            "best": best,\n            "named": bool(best) and label_matches(entry, best),\n            # 🔴 The verdict rides ALONGSIDE'),
+ ("verdict: a ruling is matched to the wrong entry by dropping the title key",
+  'ruling = (verdicts or {}).get(entry.get("title") or "")',
+  'ruling = next(iter((verdicts or {}).values()), None) or {}'),
+
  # --- the bands the guard sits beside; a break here would mask it ---------
  ("🔴 band: the disagree floor is raised past a known real error",
   'DISAGREE_M = 250.0', 'DISAGREE_M = 6000.0'),

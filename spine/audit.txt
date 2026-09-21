@@ -1,61 +1,61 @@
-RUN spine-match.py · rev 5cb089f5 · 2026-09-21T06:26:47Z · args: --limit 25 --out spine/audit.txt
+RUN spine-match.py · rev c0555f6f · 2026-09-21T06:35:14Z · args: --limit 25 --out spine/audit.txt
 audited 4930 catalogue entries against Wikidata
 
-🔴 DISAGREES — our coordinate is not where the subject is: 85
-      23513 m   Sun Tower                                Yantai           -> Sun Tower
-      16276 m   Hōrin-ji Temple | 法輪寺                    Tokyo            -> Hōrin-ji Temple
-      11479 m   Palácio da Justiça                       Lisbon           -> Palácio da Justiça
-      10643 m   Prada Aoyama | プラダ 青山店                   Tokyo            -> Prada Aoyama
-       9830 m   Wat Phra That Doi Kong Mu | วัดพระธาตุดอ Mae Hong Son     -> Wat Phra That Doi Kong Mu
-       9562 m   Casa Costa                               Barcelona        -> Casa Costa
+🔴 DISAGREES — our coordinate is not where the subject is: 41 unexamined (44 already ruled — 31 wikidata-elsewhere, 7 extended-feature, 2 wikidata-wrong, 1 undecided, 1 name-collision, 1 institution-moved, 1 part-vs-whole)
        7966 m   Les Tres Xemeneies                       Sant Adrià de Be -> Les Tres Xemeneies
-       6460 m ~ Sardar Vallabhbhai Patel (SVP) Stadium   Ahmedabad        -> Sardar Vallabhbhai Patel Stadi
-       4660 m ~ Carette                                  Paris            -> Carette Place du Tertre
-       3647 m   Q1 Tower                                 Gold Coast       -> Q1 Tower
-       3388 m   Anyang Art Park | 안양예술공원                 Anyang           -> Anyang Art Park
-       2880 m   Fondation Cartier pour l'art contemporai Paris            -> Fondation Cartier pour l'art c
-       2634 m ~ Asahi Group Ōyamazaki Villa Museum of Ar Ōyamazaki        -> Asahi Group Oyamazaki Villa Mu
-       2440 m ~ Grosvenor Estate                         London           -> Grosvenor Estate Office
-       2292 m   Prora                                    Rügen            -> Prora
-       1757 m   Transfăgărășan                           Cârțișoara       -> Transfăgărășan
-       1664 m   Hollywood Walk of Fame                   Los Angeles      -> Hollywood Walk of Fame
-       1642 m   Pérez Art Museum Miami                   Miami            -> Pérez Art Museum Miami
-       1642 m   Pérez Art Museum Miami                   Miami            -> Pérez Art Museum Miami
-       1589 m   Navi Mumbai International Airport        Navi Mumbai      -> Navi Mumbai International Airp
        1545 m   Míčovna (Ball Game Hall)                 Prague           -> Míčovna
-       1544 m ~ Queen Street West                        Toronto          -> Queen Street West Heritage Con
        1477 m   Amanohashidate | 天橋立                     Miyazu           -> Amanohashidate
-       1423 m   Meteora                                  Kalabaka         -> Meteora
-       1397 m   Mile End                                 Montreal         -> Mile End
-  … and 60 more (raise --limit to see them)
+        872 m   National Library of Latvia               Riga             -> National Library of Latvia
+        811 m   Navy Pier                                Chicago          -> Navy Pier
+        708 m   Chiesa di Nostra Signora del Cadore      Borca di Cadore  -> Chiesa di Nostra Signora del C
+        646 m   Al Seef                                  Dubai            -> Al Seef
+        594 m   Avenida da Liberdade                     Lisbon           -> Avenida da Liberdade
+        587 m   Hotel Negresco                           Nice             -> Hotel Negresco
+        564 m   Carl Street Studios                      Chicago          -> Carl Street Studios
+        502 m   Cholon | Chợ Lớn                         Ho Chi Minh City -> Cholon
+        480 m   Károlyi Palace (Petőfi Literary Museum)  Budapest         -> Károlyi Palace
+        453 m   Three Gorges Dam                         Yichang (Yangtze -> Three Gorges Dam
+        441 m   Queen Anne's Summer Palace               Prague           -> Queen Anne's Summer Palace
+        428 m   Scheendijk                               Breukelen        -> Scheendijk
+        420 m   East Side Gallery                        Berlin           -> East Side Gallery
+        412 m   Keage Incline | 蹴上インクライン                 Kyoto            -> Keage Incline
+        411 m   Alton Estate                             London           -> Alton Estate
+        390 m   West Kowloon Cultural District           Hong Kong        -> West Kowloon Cultural District
+        388 m   Hotel Nacional                           Rio de Janeiro   -> Hotel Nacional
+        382 m   Central–Mid-Levels Escalators | 中環半山扶手電梯 Hong Kong        -> Central–Mid-levels escalators
+        371 m   Xcaret                                   Playa del Carmen -> Xcaret
+        371 m   Santa Teresa Tram                        Rio de Janeiro   -> Santa Teresa Tram
+        347 m   Quartier des Spectacles                  Montreal         -> Quartier des Spectacles
+        335 m ~ Lakhta Center                            Saint Petersburg -> Lakhta Center 3
+  … and 16 more (raise --limit to see them)
 
-REVIEW — near, but further out than a correct entry usually sits: 198
-      28045 m ~ Zonda at The Halfway                     Guiting Power    -> The Halfway House
-      13601 m ~ The Stone Forest of Tsingy               Antsalova        -> Tsingy de Bemaraha National Pa
-      12269 m ~ Cu Chi Tunnels – Bến Dược | Địa Đạo Củ C Ho Chi Minh City -> Củ Chi tunnels
+REVIEW — near, but further out than a correct entry usually sits: 166 unexamined (32 already ruled — 23 wikidata-elsewhere, 7 extended-feature, 2 editorial-title)
        7411 m ~ Pai Canyon | ปายแคนยอน                   Pai              -> Q49097134
-       6583 m ~ Tung Po                                  Hong Kong        -> TungPo
-       6520 m ~ White Temple (Wat Rong Khun) | วัดร่องขุ Chiang Rai       -> Wat Rong Khun
        5237 m ~ The Fairy Tale Castle of Filiatra        Filiatra         -> Filiatra Eiffel Tower
-       5077 m ~ Natural History Museum of LA County      Los Angeles      -> Los Angeles County
-       4818 m ~ The Terracotta Garden at Lamphun | สวนไม Lamphun          -> Lamphun
-       3566 m ~ Instituto Central de Ciências, Universit Brasília         -> Brasília
-       2398 m ~ Inside the Museum of the City of New Yor New York         -> New York Historical
-       2278 m ~ The Wertheim Study at the New York Publi New York         -> New York Public Library for th
-       2244 m   Naarden (star fort town)                 Naarden          -> Naarden
-       2154 m   Austin (Ellsworth Kelly)                 Austin           -> Austin
-       2029 m ~ The Most Valuable Ships at Alang         Alang            -> Alang
-       1650 m ~ Tour Odéon                               Monaco           -> Odeon Tower
        1287 m   Machu Picchu                             Machu Picchu     -> Machu Picchu
-       1280 m ~ Hong Kong Tram | 香港電車                    Hong Kong        -> Hong Kong Tramways
-       1230 m ~ The Berber Village of Chenini            Chenini          -> Chenini
-       1212 m ~ Kasárna Karlín                           Prague           -> Karlínská kasárna
-       1208 m ~ Cable Cars                               San Francisco    -> San Francisco cable car system
-       1174 m ~ The Bell Tower of Lake Reschen           Curon Venosta    -> Reschensee
        1042 m   Palmanova (star-shaped fortress town)    Palmanova        -> Palmanova
-       1015 m   Lake Louise                              Lake Louise      -> Lake Louise
-       1003 m ~ The Silk Weavers of Lucca                Lucca            -> Lucca
-  … and 173 more (raise --limit to see them)
+        767 m ~ Rudolph Hall                             New Haven        -> Yale Art and Architecture Buil
+        751 m ~ The Rotunda, National Library of Finland Helsinki         -> Finnish National Gallery
+        696 m ~ The Cube Houses of Rotterdam             Rotterdam        -> Rotterdam
+        641 m ~ The Bubble Domes of Wadi Rum             Wadi Rum         -> Wadi Rum Beduland Camp
+        616 m ~ The Fine Arts Museum at Panjab Universit Chandigarh       -> Panjab University
+        518 m   Chichén Itzá                             Chichén Itzá     -> Chichén-Itzá
+        484 m ~ The Vintage Watch Arcades of Mong Kok    Hong Kong        -> Mong Kok station
+        464 m ~ Municipal Library of Viana do Castelo    Viana do Castelo -> Viana do Castelo
+        452 m ~ Ice Skating at Nørrebro (Peblinge Sø)    Copenhagen       -> Nørrebros Theater
+        422 m ~ Ancient Messene                          Ancient Messene  -> Archaia Messini
+        422 m ~ Tetsugaku No Michi | 哲学の道                Kyoto            -> Philosopher's Walk
+        414 m ~ The Aalto Centre at Seinäjoki            Seinäjoki        -> Seinäjoki
+        405 m ~ Law Library, University of Zurich        Zürich           -> Schauspielhaus Zürich
+        403 m ~ Band des Bundes                          Berlin           -> Federal Ribbon
+        403 m ~ Rock Springs at Kelly Park               Apopka           -> Kelly Park
+        403 m ~ Tsukiji Outer Market | 築地場外市場            Tokyo            -> Tsukiji fish market
+        389 m ~ The Double Sunset of Barga               Barga            -> Barga
+        388 m ~ Midway Barn at Taliesin                  Spring Green     -> Taliesin
+        381 m   Marco Island                             Marco Island     -> Marco Island
+        381 m ~ Pilsner Urquell Brewery                  Plzeň            -> Plzeňský Prazdroj
+        378 m ~ CCTV Headquarters                        Beijing          -> China Media Group Guanghua Roa
+  … and 141 more (raise --limit to see them)
 
 EXTENDED SITE — a park, street, bridge, island or district. NOT a finding: no single point is honest for these: 115
       20689 m ~ The Train Carriage Hotel at Khao Yai     Pak Chong        -> Khao Yai National Park
@@ -112,4 +112,9 @@ coverage by creator (matched / asked) — where this method works:
     three pins moved on a distance alone came out 11 m right, 220 m
     wrong and 100 m wrong. Every line goes to the owner individually.
 
-85 entries to put to the owner
+RULED: 139 entries carry a recorded verdict that still applies — checks/spine-verdicts.json
+⚠️  A verdict is stamped with the coordinate it was reached against and
+    STOPS APPLYING the moment that coordinate moves: nobody has judged
+    the new point, and silence would look exactly like agreement.
+
+41 entries to put to the owner

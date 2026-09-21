@@ -341,7 +341,49 @@ def band(distance_m, *, related=True, extended=False):
     return "REVIEW"
 
 
-def classify(catalog, cache, features=None):
+VERDICTS = os.path.join(REPO, "checks", "spine-verdicts.json")
+
+# A verdict is stamped with the coordinate it was reached against, to 7 dp. A
+# move smaller than this is rounding, not an edit.
+VERDICT_EPS = 5e-7
+
+
+def verdict_applies(entry, at, record):
+    """Does this recorded verdict still describe the entry in front of us?
+
+    🔴 Only while the entry has not moved. A verdict is a judgement about ONE
+    coordinate: `wikidata-elsewhere` says *our* point is right and theirs is
+    not, and the moment ours changes nobody has judged the new one. Carrying the
+    verdict across the move would suppress the finding permanently — silence
+    that looks exactly like agreement, on the one defect CLAUDE.md calls
+    invisible to every other check.
+
+    This is the same rule the lookup cache needed, for the same reason and after
+    the same failure: an answer is only valid for the point it was measured
+    from, and every READER of the answer has to enforce that, not just whoever
+    wrote it.
+
+    A record with no `at` is not trusted. It cannot be — there is nothing to
+    compare, so "unstamped" and "unmoved" would be indistinguishable.
+    """
+    if not record:
+        return False
+    was = record.get("at")
+    if not was or len(was) != 2:
+        return False
+    return (abs(was[0] - at[0]) <= VERDICT_EPS
+            and abs(was[1] - at[1]) <= VERDICT_EPS)
+
+
+def load_verdicts(path=VERDICTS):
+    """Missing file is not an error — the audit simply rules nothing out."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def classify(catalog, cache, features=None, verdicts=None):
     """One record per entry: its band, its best candidate, and why."""
     out = []
     for entry in entries(catalog):
@@ -363,12 +405,19 @@ def classify(catalog, cache, features=None):
         best = best_candidate(entry, record.get("candidates") or [])
         related = bool(best) and label_related(entry, best)
         extended = bool(best) and is_extended(best["qid"], features)
+        ruling = (verdicts or {}).get(entry.get("title") or "")
         out.append({
             "entry": entry,
             "band": band(best["distance_m"] if best else None,
                          related=related, extended=extended),
             "best": best,
             "named": bool(best) and label_matches(entry, best),
+            # 🔴 The verdict rides ALONGSIDE the band, never replacing it. A
+            # ruled entry that later stops confirming — a fix reverted by a bad
+            # merge — must still be visible as a finding, and it would not be if
+            # the ruling overwrote the band.
+            "verdict": (ruling.get("verdict")
+                        if verdict_applies(entry, at, ruling) else None),
         })
     return out
 
@@ -436,7 +485,18 @@ def report(rows, catalog, *, limit=40):
             "EXTENDED": ("EXTENDED SITE — a park, street, bridge, island or district. "
                          "NOT a finding: no single point is honest for these"),
         }[name]
-        print(f"{headline}: {len(hits)}")
+        # ⚠️ Only the two FINDING bands. EXTENDED is not a finding — it is a
+        # heading that explains a distance — so subtracting its ruled rows
+        # would print a count smaller than the band, explaining nothing.
+        ruled = [r for r in hits if r["verdict"]] if name != "EXTENDED" else []
+        hits = [r for r in hits if r not in ruled]
+        if ruled:
+            tally = ", ".join(f"{n} {v}" for v, n in
+                              collections.Counter(r["verdict"] for r in ruled).most_common())
+            print(f"{headline}: {len(hits)} unexamined "
+                  f"({len(ruled)} already ruled — {tally})")
+        else:
+            print(f"{headline}: {len(hits)}")
         for row in hits[:limit]:
             entry, best = row["entry"], row["best"]
             flag = " " if row["named"] else "~"      # ~ = matched on alias, not label
@@ -478,6 +538,20 @@ def report(rows, catalog, *, limit=40):
     print("    three pins moved on a distance alone came out 11 m right, 220 m")
     print("    wrong and 100 m wrong. Every line goes to the owner individually.")
 
+    by_band["RULED"] = sum(1 for r in rows if r["verdict"])
+    # 🔴 What exit 1 must mean is "there is something here nobody has looked
+    # at". Counting a ruled row would keep the check shouting about 44 findings
+    # that were each read and settled, and a check that always shouts is one
+    # nobody reads.
+    by_band["DISAGREES"] = sum(1 for r in rows
+                               if r["band"] == "DISAGREES" and not r["verdict"])
+    if by_band["RULED"]:
+        print(f"\nRULED: {by_band['RULED']} entries carry a recorded verdict that "
+              f"still applies — checks/spine-verdicts.json")
+        print("⚠️  A verdict is stamped with the coordinate it was reached against "
+              "and\n    STOPS APPLYING the moment that coordinate moves: nobody has "
+              "judged\n    the new point, and silence would look exactly like "
+              "agreement.")
     return by_band
 
 
@@ -691,12 +765,53 @@ def selftest():
     check("🔴 STALE outranks findings — it is not a milder 1",
           exit_code({"STALE": 1, "DISAGREES": 9}) == 2)
 
+    # 🔴 A verdict is a judgement about ONE coordinate. Carrying it across a
+    # move would suppress a finding on a point nobody has judged — silence that
+    # looks exactly like agreement. Same rule as the lookup cache, same reason.
+    ruled = {"Tower": {"verdict": "wikidata-elsewhere", "at": list(here)}}
+    rows = classify(one, {"s": _cached("Tower", here, distance_m=900.0)}, None, ruled)
+    check("a verdict stamped on today's coordinate applies",
+          rows[0]["verdict"] == "wikidata-elsewhere")
+    check("🔴 the BAND is unchanged by a verdict — a ruled entry that stops "
+          "confirming must still read as a finding", rows[0]["band"] == "DISAGREES")
+    moved_cat = {"tours": [_entry("Tower", moved)], "linkPins": []}
+    check("🔴 a verdict does NOT survive the entry moving",
+          classify(moved_cat, {"s": _cached("Tower", moved, distance_m=900.0)},
+                   None, ruled)[0]["verdict"] is None)
+    # 🔴 Every other fixture here moves due NORTH, which leaves a longitude-only
+    # comparison passing. Mutation testing found this; a realistic fixture would
+    # not have, because a real move changes both.
+    east = (here[0], here[1] + 0.02)
+    east_cat = {"tours": [_entry("Tower", east)], "linkPins": []}
+    check("🔴 a verdict does not survive a move due EAST either",
+          classify(east_cat, {"s": _cached("Tower", east, distance_m=900.0)},
+                   None, ruled)[0]["verdict"] is None)
+    check("🔴 an UNSTAMPED verdict is not trusted — nothing to compare, so "
+          "'unstamped' and 'unmoved' would be indistinguishable",
+          not verdict_applies(_entry("Tower", here), here, {"verdict": "x"}))
+    check("a malformed stamp is not trusted",
+          not verdict_applies(_entry("Tower", here), here,
+                              {"verdict": "x", "at": [1.0]}))
+    check("no verdict on file is not a verdict",
+          not verdict_applies(_entry("Tower", here), here, None))
+    check("rounding at the 7th decimal is not a move",
+          verdict_applies(_entry("Tower", here), (here[0] + 1e-7, here[1]),
+                          {"verdict": "x", "at": list(here)}))
+    check("🔴 a verdict on a DIFFERENT title does not apply",
+          classify(one, {"s": _cached("Tower", here, distance_m=900.0)}, None,
+                   {"Other": {"verdict": "x", "at": list(here)}})[0]["verdict"] is None)
+    check("no verdict file at all leaves every finding standing",
+          classify(one, {"s": _cached("Tower", here, distance_m=900.0)})[0]["verdict"]
+          is None)
+    check("load_verdicts tolerates a missing file",
+          load_verdicts(os.path.join(HERE, "no-such-verdicts.json")) == {})
+
     check("🔴 coverage excludes STALE, which would otherwise inflate it",
           [r["band"] for r in covered_rows(
               [{"band": "CONFIRMS"}, {"band": "STALE"}, {"band": "NOT-ASKED"}])]
           == ["CONFIRMS"])
 
-    total = 68
+    total = 79
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
@@ -708,6 +823,9 @@ def main():
     ap.add_argument("--features", default=FEATURES,
                     help="item types from spine-features.py; optional — without "
                          "it nothing is reclassified as an extended site")
+    ap.add_argument("--verdicts", default=VERDICTS,
+                    help="recorded rulings; a finding already settled is "
+                         "counted separately, never silently dropped")
     ap.add_argument("--limit", type=int, default=40,
                     help="how many findings to print per band")
     ap.add_argument("--selftest", action="store_true")
@@ -737,7 +855,7 @@ def main():
         else:
             print(f"⚠️  no {a.features} — parks, streets and bridges will be "
                   f"reported as findings. Run scripts/spine-features.py.")
-        rows = classify(catalog, cache, features)
+        rows = classify(catalog, cache, features, load_verdicts(a.verdicts))
         counts = report(rows, catalog, limit=a.limit)
 
         code = exit_code(counts)
@@ -750,6 +868,9 @@ def main():
         elif counts["DISAGREES"]:
             print(f"\n{counts['DISAGREES']} entr"
                   f"{'y' if counts['DISAGREES'] == 1 else 'ies'} to put to the owner")
+        elif counts["RULED"]:
+            print(f"\nOK — every disagreement on file has been ruled on "
+                  f"({counts['RULED']} verdicts)")
         else:
             print("\nOK — no entry disagrees with Wikidata by 250 m or more")
         return code

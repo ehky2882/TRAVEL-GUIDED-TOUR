@@ -108,6 +108,27 @@ Three general rules:
   and the tool said 2,329 m. When a check's output contradicts a number you can compute by
   hand, the check is the thing to doubt.
 
+**The rule generalises, and the second instance was one layer up.** `checks/spine-verdicts.json`
+holds 137 rulings on individual findings — *this one is Wikidata's error, ours is right*. Each was
+a judgement about **one coordinate**, and the records stored none. Reading them back to quiet a
+settled finding would have meant carrying a verdict across a move nobody had judged: a finding
+suppressed on a point no human ever saw, which is **silence indistinguishable from agreement** on
+the one defect nothing else catches. So every verdict is now stamped with the coordinate it was
+reached against and **stops applying the moment that coordinate moves** — and an unstamped record
+is not trusted at all, because "unstamped" and "unmoved" would otherwise read the same. With that
+in place the findings list fell from **85 to 41 genuinely unexamined**.
+
+Two structural notes worth keeping:
+
+- **The verdict rides alongside the band, never replacing it.** A ruled entry that later stops
+  confirming — a fix reverted by a bad merge — must still read as a finding, and it would not if
+  the ruling overwrote the classification.
+- **The stamp was provable, not assumed.** Diffing the catalogue at the verdict file's first
+  commit against `HEAD` showed exactly eleven of the 137 entries had moved: the nine whose *fix
+  was the verdict*, plus two that did not exist yet. So stamping today's coordinate was correct
+  for all 137 — and one `fixed` note's hand-typed coordinate turned out to be **~60 m from what
+  was actually applied**, which is the argument for storing the fact as data rather than prose.
+
 ⚠️ **A guard that reds a check must ship with the thing that clears it.** Exiting 2 on a stale
 cache would have turned the coordinate audit permanently red on the next content merge —
 `spine/README.md`'s own warning that *a red check nobody can fix reads as coverage and gets

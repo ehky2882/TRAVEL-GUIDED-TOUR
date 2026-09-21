@@ -102,9 +102,16 @@ why the harness counts a skip as a miss rather than passing over it.
 
 ## What is still open
 
-- **85 DISAGREES / 198 REVIEW**, now honest numbers. 137 verdicts on file in
-  `checks/spine-verdicts.json`; `spine-match.py` does not yet read them, so a ruled entry
-  is still re-listed every run. That is the obvious next piece of work.
+- **41 DISAGREES / 166 REVIEW genuinely unexamined**, down from 85 / 198 — the same PR
+  taught `spine-match.py` to read `checks/spine-verdicts.json`, where 44 + 32 of those
+  were already settled. **The verdicts carry the same discipline as the cache**: each is
+  stamped with the coordinate it was reached against and stops applying when that
+  coordinate moves, and an unstamped record is not trusted. The stamp was *proved* rather
+  than assumed — diffing the catalogue at the verdict file's first commit against `HEAD`
+  showed exactly eleven entries had moved: the nine whose fix *was* the verdict, plus two
+  that did not exist yet. ⚠️ One `fixed` note's hand-typed coordinate was **~60 m from
+  what was actually applied** (still inside the 120 m confirm band); the applied value
+  came from Wikidata. Prose is not a machine-readable fact.
 - **Sun Tower (Yantai)** remains `undecided` at 23.5 km — no description, no municipality,
   nothing in OSM under 阳光塔/陽光塔 in a Yantai bbox, and English Wikipedia's "Sun Tower" is
   Vancouver's. An opinion is not a source.

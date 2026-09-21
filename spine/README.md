@@ -34,6 +34,14 @@ denominator, and exits **2 — COULD NOT VERIFY**. The cure is one command, name
 in the output. `scripts/mutate-spine-match.py` holds the mutants that keep it
 honest.
 
+**The same rule applies to the verdicts, one layer up.** `checks/spine-verdicts.json`
+records a judgement about **one coordinate** — *this one is Wikidata's error, ours is
+right*. Each record is stamped with the coordinate it was reached against and **stops
+applying the moment that coordinate moves**, because nobody has judged the new point and
+a suppressed finding is silence indistinguishable from agreement. An unstamped record is
+not trusted at all. The verdict rides **alongside** the band and never replaces it, so a
+ruled entry whose fix is later reverted still reads as a finding.
+
 ## The cache is committed, including while it is still partial
 
 A full sweep is ~4.5 hours and this session's container is not guaranteed to
