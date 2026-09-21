@@ -73,6 +73,56 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 Two sources agreeing is NOT corroboration when the name is generic (2026-09-21)
+
+Triaging 43 coordinate findings, the obvious method: look each subject up in OSM by name, and
+compare that independent answer against our point and against Wikidata's. Where OSM sits on
+Wikidata's point and far from ours, ours is wrong. Where it sits on ours, Wikidata matched
+something else. It had worked all week.
+
+It called **five of seven `@historicpubcrawls` London pubs OURS-WRONG**, by up to 8.7 km.
+
+**All five were correct.** Every caption carries a 📍 address, and geocoding the address the
+creator themselves wrote put our pin **0 m** away in four cases and 79 m in the fifth:
+
+| pub | the cross-check said | its own caption's address said |
+|---|---|---|
+| The Britannia | ours wrong by **8,673 m** | **0 m** — 1 Allen St, Kensington |
+| The Royal Oak | ours wrong by **3,615 m** | **0 m** — 44 Tabard St, Borough |
+| The Flying Horse | ours wrong by **3,201 m** | **0 m** — 52 Wilson St |
+| The Wellington | ours wrong by **1,037 m** | **0 m** — Waterloo Road |
+| The Grapes | ours wrong by 562 m | **562 m** — genuinely wrong |
+
+🔴 **The failure is specific and it is not "one source was bad".** *The Royal Oak*, *The
+Britannia*, *The Wellington* and *The Grapes* are among the commonest pub names in Britain. OSM's
+`limit=1` picked one; Wikidata had picked another; **they happened to pick the SAME one** — and
+agreed with each other to within 10 m, which reads exactly like strong corroboration. It is not.
+They agreed about a pub. They said nothing about *our* pub.
+
+**Independence is about the ENTITY, not the source.** Two databases resolving the same ambiguous
+string will land on the same popular referent for the same reason. Agreement only counts as
+corroboration once you know both are talking about the thing you mean.
+
+**What actually settled it** was the one signal that cannot collide: the creator's own words. A
+caption reading *"📍 44 Tabard St, London SE1 4JU"* identifies one building on earth. Rule 8d
+already says to search the venue's name — this extends it: **when the name is generic, the name is
+not enough; find something in the entry that is unique.**
+
+Practical test before trusting a name-based cross-check:
+
+- **Would this name match more than one thing in this city?** Pub, café, "Central Station",
+  "The Royal…", a saint's name, a chain — assume yes.
+- **Does the entry carry a unique identifier of its own?** A street address, a postcode, a venue
+  `@handle`. Use it, and prefer it over any gazetteer.
+- **Does the cross-check disagree with us by a city-scale distance?** For a subject that is
+  obviously *in* this city, a multi-kilometre "error" is far more likely a different entity than
+  a badly placed pin. Treat size as evidence of collision, not of severity.
+
+⚠️ The eight *distinctive*-named findings in the same batch (National Library of Latvia, Hotel
+Negresco, Drottningholm, Palika Kendra…) were deliberately **left for the owner**, not moved on the
+same heuristic that had just failed — and `Drottningholm` turned out to be `multiStop`, which the
+runbook refuses to move anyway.
+
 ### 🔴 State the population and make it add up (2026-09-21)
 
 Checking whether any two `places` shared a name, the query read `centroidLatitude` where the
