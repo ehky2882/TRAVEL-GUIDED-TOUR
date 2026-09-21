@@ -388,12 +388,12 @@
   },
   "Hotel International (Stalin's Cake)": {
     "at": [
-      50.1036,
-      14.4034
+      50.109346,
+      14.3932647
     ],
     "date": "2026-09-21",
-    "note": "Wikidata places Q1874734 in Dejvice (hotel building in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED.",
-    "verdict": "wikidata-elsewhere"
+    "note": "🔴 A PRIOR VERDICT SAID THIS WAS FINE. OSM name lookup and an OSM geocode of Koulova 15 return the same 'Hotel International' node, 966 m from us; Wikidata (12 sitelinks) agrees at 953 m.",
+    "verdict": "fixed"
   },
   "Hotel Negresco": {
     "at": [
@@ -467,6 +467,15 @@
     "note": "Wikipedia's 31.06028,121.14944 matches Wikidata Q16928554 to ~60 m and is 5.1 km from ours. Both sides sit ~35 km from central Shanghai, which is correct for the Songjiang quarry; the question was only WHICH point, and two sources agree. Moved.",
     "verdict": "fixed"
   },
+  "Invalidovna": {
+    "at": [
+      50.095,
+      14.4617
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT. Wikidata agrees with us to 0 m. An OSM name lookup returns the METRO STATION Invalidovna 253 m away -- named after the baroque building, not the building.",
+    "verdict": "name-collision"
+  },
   "Jackson Street Bridge": {
     "at": [
       33.7579,
@@ -500,8 +509,8 @@
       16.3583
     ],
     "date": "2026-09-21",
-    "note": "Wikidata places Q513211 in Heiligenstadt (architectural structure), not Vienna. A different entity of the same name. NOT MOVED.",
-    "verdict": "wikidata-elsewhere"
+    "note": "NOT MOVED, and the previous wikidata-elsewhere ruling replaced. Karl-Marx-Hof is a 1.1 KM LONG residential block, so no single point is honest: the three signals land 939 m, 1,283 m and 1,378 m from us -- a spread consistent with different points ALONG it, not with one wrong pin. Ours may sit at an end.",
+    "verdict": "extended-feature"
   },
   "Kasárna Karlín": {
     "at": [
@@ -737,6 +746,15 @@
     "note": "Wikidata Q10783045 calls it a 'waterway in Ho Chi Minh City' -- a canal roughly 9 km long. An 880 m gap along it is the normal condition, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Náplavka": {
+    "at": [
+      50.0729,
+      14.4159
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT. 'Náplavka' is a common Czech noun for a riverside embankment and Prague has several (Rašínovo, Hořejší, Dvořákovo). OSM's lookup returns a different one 2,289 m away. Ours is on Rašínovo nábřeží, the one the post is about. Generic name — the pub lesson exactly.",
+    "verdict": "name-collision"
+  },
   "Old City Hall": {
     "at": [
       43.6525,
@@ -871,6 +889,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q20726625 as \"heritage conservations district in Toronto, Ontario, Canada\" — not a point. A 1544 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Radium Palace Hotel": {
+    "at": [
+      50.3585086,
+      12.934132
+    ],
+    "date": "2026-09-21",
+    "note": "NEVER EXAMINED by the audit -- no Wikidata candidate at all, so it sat in UNMATCHED. OSM's name lookup and an OSM geocode of T. G. Masaryka 413 return the same type=hotel node, 1,691 m from us. Found only because the creator was swept deliberately.",
+    "verdict": "fixed"
   },
   "Robie House": {
     "at": [
@@ -1468,11 +1495,11 @@
   },
   "Žižkov Television Tower": {
     "at": [
-      50.0692,
-      14.4508
+      50.0810217,
+      14.4510584
     ],
     "date": "2026-09-21",
-    "note": "Wikidata places Q1413217 in Žižkov (TV tower in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED.",
-    "verdict": "wikidata-elsewhere"
+    "note": "🔴 A PRIOR VERDICT SAID THIS WAS FINE. Three independent signals disagree and agree with each other: OSM's name lookup, an OSM geocode of the tower's address (Mahlerovy sady 1, which returns 'Žižkovský vysílač' itself) -- BOTH landing on the same node -- and Wikidata (28 sitelinks) 1,296 m away. There is exactly one Žižkov TV Tower, so no name collision is possible. The old wikidata-elsewhere ruling was simply wrong.",
+    "verdict": "fixed"
   }
 }

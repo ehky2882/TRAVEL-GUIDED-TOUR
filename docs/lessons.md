@@ -73,6 +73,46 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 A recorded verdict can be WRONG, and suppressing it makes that permanent (2026-09-21)
+
+`spine-match.py` learned to read `checks/spine-verdicts.json` and stop re-listing findings a human
+had already ruled on. Sensible: 166 settled findings were shouting on every run.
+
+Hours later, sweeping one creator's pins directly, three of their entries turned out to be
+**1,316 m, 966 m and 1,691 m wrong** — and **two of the three carried a verdict of
+`wikidata-elsewhere`**, meaning *"our point is right, the gazetteer matched something else."*
+
+They were not right. Three independent signals said so and agreed with each other:
+
+| | prior ruling | OSM name lookup | OSM geocode of its street address | Wikidata |
+|---|---|---|---|---|
+| **Žižkov Television Tower** | "ours is fine" | 1,316 m | 1,316 m (*Žižkovský vysílač*, Mahlerovy sady 1) | 1,296 m (28 sitelinks) |
+| **Hotel International** | "ours is fine" | 966 m | 966 m (Koulova 15) | 953 m (12 sitelinks) |
+
+**There is exactly one Žižkov TV Tower.** No collision is possible, so the earlier ruling was
+simply mistaken — and from the moment suppression shipped, *no future run would ever have
+mentioned it again.*
+
+🔴 **A verdict is a human judgement stored as data, and it inherits every way a human can be
+wrong.** Caching a judgement is not like caching a fact: a stale fact gets re-fetched, a wrong
+judgement gets re-applied forever. Suppression turns a one-off mistake into a permanent blind spot,
+and the entry looks *more* trustworthy than an unexamined one because someone signed it off.
+
+**So suppression must be inspectable.** `spine-match.py --show-ruled` lists every finding a verdict
+is hiding, worst first, with the ruling that hides it. Re-read it after any sweep that finds a
+verdict wrong, and treat a `wikidata-elsewhere` on a **distinctive** name with particular suspicion
+— that ruling is correct overwhelmingly often *because* most such names collide, which is exactly
+what makes the non-colliding ones slip through.
+
+⚠️ **Two smaller things fell out of building it, both worth keeping.**
+
+- `--show-ruled` crashed with `KeyError: 'verdict'` the first time it ran, because `classify()`'s
+  early-return branches (`NOT-ASKED`, `STALE`) omitted the key. **Every record a function emits
+  should carry every key**, banded or not; a selftest now asserts all rows share one key set.
+- The third entry, **Radium Palace Hotel**, had *no Wikidata candidate at all* — it sat in
+  `UNMATCHED`, which the tool's own footer calls unexamined. **Nothing would ever have found it.**
+  Sweeping a creator's pins directly reaches what a gazetteer-driven audit structurally cannot.
+
 ### 🔴 Two sources agreeing is NOT corroboration when the name is generic (2026-09-21)
 
 Triaging 43 coordinate findings, the obvious method: look each subject up in OSM by name, and
