@@ -2354,3 +2354,16 @@ Two things to know before relying on it:
 
 **A blocked host is not an absent fact** — the same lesson as the 42 Tokyo
 addresses. Try a mirror before saying a source is unavailable.
+
+### ⚠️ Backticks inside a double-quoted shell string are COMMAND SUBSTITUTION
+
+Writing this very lesson, a `python3 -c "…"` one-liner containing
+`` `overpass.kumi.systems` `` in its text silently lost the hostname: bash ran
+it as a command, printed `command not found` to stderr, and substituted the
+empty string. The edit reported success and the committed index row read
+*"reachable through \*\*"*.
+
+**Use a heredoc (`python3 - <<'PYEOF'`) for any text containing backticks** —
+the quoted delimiter stops bash touching the body at all. And when a command
+prints something odd to stderr but still exits 0, read what it actually wrote
+rather than trusting the exit code.
