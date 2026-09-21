@@ -157,6 +157,14 @@ Tokyo addresses and the Overpass mirror: **a blocked route is not an absent fact
 free pass either: it resolved only 21 of 55 labels before throttling in turn, so say what you
 could not get rather than reporting the partial set as the whole.
 
+🔴 **And a partial sample can say the OPPOSITE of the whole, confidently.** On those 21 of 55
+labels the types looked scattered and point-like, so the conclusion recorded — in a merged PR body
+and a handoff — was *"the extended-types hypothesis does not hold."* An hour later Wikidata
+recovered, all 55 resolved, and **roughly 23 of the 41 turned out to be extended sites or the
+wrong entity altogether.** The sample size *was* stated, which is necessary and was not sufficient:
+**a stated limitation does not make a wrong conclusion right.** With a third of the evidence the
+honest output is *no* conclusion, not a negative one.
+
 ⚠️ This is also why the `refresh-spine` CI job is `continue-on-error`. A third party's outage must
 degrade a reporting artefact, never block a content merge.
 
