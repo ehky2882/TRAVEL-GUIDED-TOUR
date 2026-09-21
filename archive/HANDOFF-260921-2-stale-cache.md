@@ -131,22 +131,33 @@ suggested a systematic answer — islands, canals, districts, parks, a tram line
 sitting in the findings list — which would have echoed the original `EXTENDED_TYPES` work that took
 145 findings to 86.
 
-🔴 **It did not hold.** The types are scattered, one entry each, and many are plainly point-like:
-`hotel`, `apartment building`, `Japanese restaurant`, `belvedere`. There is no missing class to add.
+🔴 **First read: "it does not hold."** That was recorded here, and in #1037's body, on **21 of 55**
+type labels — all WDQS would give up during the outage. When Wikidata recovered an hour later and
+all 55 resolved, **the conclusion flipped.** Recorded rather than quietly rewritten, because the
+lesson is the finding: *a partial sample said the opposite of the whole, and it said it
+confidently.* The honest move at the time would have been to report no conclusion, not a negative
+one — flagging the sample size, as it did, is necessary but not sufficient.
 
-Two things did fall out, both worth the owner's eye rather than a unilateral fix:
+**What the full 55 say.** Roughly **23 of the 41 are extended sites or the wrong entity
+altogether**, and only about **15 are genuine point subjects** where a distance could mean a real
+error. Not scattered at all:
 
-- 🔴 **Roosevelt Island (New York) is being compared against an underground station** (`Q22808403`),
-  not the island. **Lakhta Center** likewise matches *"Lakhta Center 3"*, a different tower in the
-  same complex. These are name collisions — the failure `triage-spine.py` exists for — not
-  coordinate errors, and moving either pin would break a correct one.
-- Eight do carry genuinely extended types (`esplanade`, `promenade`, `avenue`, `canal inclined
-  plane`, `cultural district`, `Tram transport`, `ghost town`, `Tokyo metropolitan park`).
+| | |
+|---|---|
+| **Extended — no single honest point** | `shoal` (Amanohashidate, a 3.6 km sandbar) · `pier` (Navy Pier) · `estuary/esplanade/promenade` (Al Seef) · `boulevard/avenue/urban ensemble` (Avenida da Liberdade) · `human-geographic territorial entity` (Cholon) · `gravity dam` (Three Gorges) · `canal inclined plane` (Keage) · `housing estate` (Alton) · `land parcel/cultural district` (West Kowloon) · `stairs/escalator` (Central–Mid-Levels) · `Maya site` (Xcaret) · `Tram transport` (Santa Teresa) · `arts district` (Quartier des Spectacles) · `island group` (Toronto Islands) · `royal palace` (Imperial Palace) · `ghost town` (Burj Al Babas) · `garden` (Menara) · `urban area` (Drottningholm) · `Tokyo metropolitan park` (Inokashira) · `art museum/Hall of Fame` (East Side Gallery, a 1.3 km wall) · `flue-gas stack` (Les Tres Xemeneies) · the Château La Coste estate |
+| 🔴 **Wrong entity — moving the pin would BREAK a correct one** | **Roosevelt Island → `metro station, underground station`.** **Lakhta Center → "Lakhta Center 3"**, a different tower in the complex. **Pier 39 Sea Lions → `group of living things`** — the animals as a taxon, which has no location at all. And the best of them: **Canal Saint-Martin → `panel Histoire de Paris`**, an *information plaque about the canal*, not the canal. |
 
-**Deliberately not acted on.** Adding types to `EXTENDED_TYPES` reclassifies a finding as *not a
-finding*, and `spine-match.py`'s own footer says every line goes to the owner individually. Doing
-it during a Wikidata outage that resolved only **21 of 55** type labels would mean deciding on a
-third of the evidence. It is a good next task with the outage over.
+**The ~15 genuine point subjects are the real shortlist**, and a far more tractable one than 41:
+Míčovna (1,545 m) · National Library of Latvia (872 m) · Chiesa di Nostra Signora del Cadore
+(708 m) · Hotel Negresco (587 m) · Carl Street Studios (564 m) · Károlyi Palace (480 m) · Queen
+Anne's Summer Palace (441 m) · Scheendijk (428 m) · Hotel Nacional (388 m) · Walden 7 (332 m) ·
+Fiera District (318 m) · The Leonardo (299 m) · Ginza Kojyu (282 m) · Church of the Most Sacred
+Heart (277 m) · Palika Kendra (271 m).
+
+**Still deliberately not acted on.** Adding types to `EXTENDED_TYPES` reclassifies a finding as
+*not a finding*, and `spine-match.py`'s own footer says every line goes to the owner individually.
+The evidence is now complete, so this is ready to do — but it is the owner's call, and the
+wrong-entity four are a separate matter from the extended twenty-two.
 
 ## What is still open
 

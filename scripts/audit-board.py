@@ -241,6 +241,13 @@ ROWS = [
      "DISAGREES — mostly the gazetteer's own error; not a worklist"),
     ("A site with two entries and no place", "check-place-candidates.py", "CI", None,
      "candidate groups — owner decides each"),
+    # The INVERSE of the row above, and a class that had no check at all until
+    # 2026-09-21: two entries we call by the same name, sitting in different
+    # places. Agreement is the norm (158 of 164 groups within 100 m), so a
+    # disagreement is a real question — but an extended site and a chain with
+    # two branches both span legitimately, so it is never a defect count.
+    ("Same name, different place", "check-same-name.py", "CI", None,
+     "groups spanning >100 m — a stream or a chain spans legitimately"),
     ("Coordinate implausible for its city", "check-coordinates.py", "by hand, on a drop", None,
      "GROSS — every one is a defect"),
     ("Image written under the wrong name", "check-image-duplicates.py", "by hand (network)", None,

@@ -70,6 +70,34 @@ jobs:
             echo "::warning::$n unplaced pair(s) share a name — docs/places.md Rule 1 says every one is a place. See the job summary."
           fi
 
+      # The INVERSE question, in the same job because it shares the catalogue
+      # and costs nothing: check-place-candidates asks which entries are close
+      # enough to be one place; this asks why two entries we call by the SAME
+      # NAME sit in different places. Agreement is the norm — 158 of 164 groups
+      # within 100 m — so a disagreement is a real question about one in six.
+      - name: Scan for same-name entries in different places
+        run: |
+          # Same exit contract as above: 1 means "findings to read", which is
+          # not a failure. Read the code DIRECTLY, never through a pipe.
+          code=0
+          python3 scripts/check-same-name.py --out same-name.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::check-same-name.py could not run (exit $code)"
+            cat same-name.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Same name, different place"
+            echo
+            echo '```'
+            sed -n '/name(s) used by/,$p' same-name.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          n=$(grep -oE '^[0-9]+ name\(s\) to read' same-name.txt | grep -oE '^[0-9]+' || echo 0)
+          if [ "${n:-0}" -gt 0 ]; then
+            echo "::warning::$n repeated name(s) sit in more than one place. NOT a verdict — an extended site and a chain with two branches both span legitimately; what matters is a group where most members agree and one does not."
+          fi
+
   audit-board:
     name: Audit board
     runs-on: ubuntu-latest
