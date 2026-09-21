@@ -393,14 +393,14 @@ def classify(catalog, cache, features=None, verdicts=None):
         record = cache.get(entry["id"])
         if record is None:
             out.append({"entry": entry, "band": "NOT-ASKED", "best": None,
-                        "named": False})
+                        "named": False, "verdict": None})
             continue
         if is_stale(entry, at, record):
             # 🔴 Not banded, and deliberately given no distance. A number
             # measured from a coordinate this entry no longer sits on is not a
             # weaker answer than none — it is a confident wrong one.
             out.append({"entry": entry, "band": "STALE", "best": None,
-                        "named": False})
+                        "named": False, "verdict": None})
             continue
         best = best_candidate(entry, record.get("candidates") or [])
         related = bool(best) and label_related(entry, best)
@@ -806,12 +806,22 @@ def selftest():
     check("load_verdicts tolerates a missing file",
           load_verdicts(os.path.join(HERE, "no-such-verdicts.json")) == {})
 
+    # 🔴 EVERY row must carry EVERY key. The early-return branches once omitted
+    # "verdict", so any consumer iterating all rows hit a KeyError — which is
+    # exactly what --show-ruled did the moment it was written.
+    shapes = {frozenset(r) for r in classify(
+        {"tours": [_entry("Tower", here), _entry("Gone", (1.0, 2.0))], "linkPins": []},
+        {"s": _cached("Tower", here)}, None, {})}
+    check("🔴 every classify() row has the same keys, banded or not",
+          len(shapes) == 1)
+    check("and 'verdict' is one of them", all("verdict" in sh for sh in shapes))
+
     check("🔴 coverage excludes STALE, which would otherwise inflate it",
           [r["band"] for r in covered_rows(
               [{"band": "CONFIRMS"}, {"band": "STALE"}, {"band": "NOT-ASKED"}])]
           == ["CONFIRMS"])
 
-    total = 79
+    total = 81
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
@@ -823,6 +833,11 @@ def main():
     ap.add_argument("--features", default=FEATURES,
                     help="item types from spine-features.py; optional — without "
                          "it nothing is reclassified as an extended site")
+    ap.add_argument("--show-ruled", action="store_true",
+                    help="LIST the findings a verdict is suppressing, instead of "
+                         "only counting them. 🔴 A verdict can be WRONG, and "
+                         "suppression makes a wrong one permanent — this is how "
+                         "you audit them.")
     ap.add_argument("--verdicts", default=VERDICTS,
                     help="recorded rulings; a finding already settled is "
                          "counted separately, never silently dropped")
@@ -856,6 +871,20 @@ def main():
             print(f"⚠️  no {a.features} — parks, streets and bridges will be "
                   f"reported as findings. Run scripts/spine-features.py.")
         rows = classify(catalog, cache, features, load_verdicts(a.verdicts))
+        if a.show_ruled:
+            # 🔴 Suppression is only safe if it can be inspected. On 2026-09-21
+            # two entries carrying `wikidata-elsewhere` ("ours is right") turned
+            # out to be 1,316 m and 966 m WRONG — and the suppression shipped
+            # that morning was hiding them from every future run.
+            ruled = [r for r in rows if r["verdict"] and r["best"]]
+            print(f"{len(ruled)} finding(s) a verdict is suppressing — "
+                  f"a verdict can be wrong, so read them:\n")
+            for row in sorted(ruled, key=lambda r: -r["best"]["distance_m"]):
+                entry = row["entry"]
+                print(f"  {row['best']['distance_m']:8.0f} m  {row['verdict']:18} "
+                      f"{(entry.get('title') or '')[:38]:38} "
+                      f"{(entry.get('city') or '')[:16]}")
+            return 0
         counts = report(rows, catalog, limit=a.limit)
 
         code = exit_code(counts)

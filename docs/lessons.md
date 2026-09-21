@@ -73,6 +73,191 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 Place membership is recorded in the PLACE, not the entry — check both directions (2026-09-21)
+
+Every coordinate move today asserted `entry.get("placeId") is None` before touching a pin, on the
+belief that this was the runbook's *"refuse an entry in a place"*. Eleven moves passed it.
+
+The twelfth did too — and broke the catalogue. `validate-tours-mirror.py` came back
+**`control DIRTY` / `SELFTEST FAILED — verdict not trustworthy`**, refusing to print a verdict at
+all, which is exactly the behaviour § 1 asks for and the only reason it was caught immediately.
+
+**Membership is stored on the PLACE, as `places[].tourIds`.** An entry can be a member with no
+`placeId` of its own, so the guard was looking down a one-way street:
+
+```python
+# WRONG — passes for a member whose place lists it
+assert entry.get("placeId") is None
+
+# RIGHT — ask the places too
+members = {i for p in catalog.get("places") or [] for i in (p.get("tourIds") or [])}
+assert entry["id"] not in members and entry.get("placeId") is None
+```
+
+🔴 **The eleven earlier moves were safe by luck, not by design.** None happened to be a place
+member. A guard that has never fired is not a guard that works — the only reason this one's failure
+was visible is that a *different* check refused to answer.
+
+⚠️ **And the case it caught is a real content question.** `Stortorget, Gamla Stan` (a pin about the
+**square**) shares the place `Gamla stan` with a multi-stop walk about the **whole old town**. Since
+a place is a coordinate, both sit on one point — and reverse-geocoding shows that point is *Inre
+borggården*, the Royal Palace's inner courtyard, 226 m from Stortorget. **A part bound to its whole
+costs the part its real location.** `docs/places.md` leaves part-vs-whole to the owner; this is what
+the cost looks like when it goes unanswered.
+
+### 🔴 Ask what is AT the point, not only where the name is (2026-09-21)
+
+Two name lookups of the same string are not two sources (see the pub lesson above). **Reverse
+geocoding is**, because it asks a different question: *what is at these coordinates?*
+
+It settled two cases nothing else could:
+
+- **Stortorget** — our point resolves to `Inre borggården`, the Royal Palace's inner courtyard. Not
+  "226 m from the square" but *a different named landmark entirely*.
+- **Edison's Menlo Park Laboratory** — our point resolves to the `Ford Model AA Fort Meyers Lab
+  stop`. Greenfield Village holds **both** of Edison's relocated laboratories, and the pin sat by the
+  **Fort Myers** one. A plain distance would have read as a 179 m offset; the reverse lookup named
+  the actual mistake.
+
+**Reach for it whenever a candidate is close enough that distance alone cannot decide.** A forward
+lookup can only tell you the name is somewhere else; a reverse lookup tells you what you are
+standing on, which is often the thing that names the error.
+
+### 🔴 UNMATCHED is not always a coverage gap — sometimes the title is not a name (2026-09-21)
+
+After the `@insightcities` sweep found three real errors, the same method was pointed at the three
+largest creators: `@pasttworld` (178 pins), `@urbanistariel` (326), `@hereinnyc` (262). Scoped to
+the **434 blind spots** — `UNMATCHED` plus verdict-suppressed rows, where a gazetteer-driven audit
+cannot see.
+
+**It found essentially nothing**, and the reason is worth more than a finding would have been.
+
+| | |
+|---|---|
+| asked | 434 |
+| OSM answered | **73** |
+| **no result at all** | **361 (83%)** |
+| disagreed >150 m | 20 — and on inspection nearly all are the gazetteer matching a *different entity* |
+
+Those 20 include `Chapel Bar` → a **shingle beach** 837 km away, `The New York State Pavilion` → a
+**laundry**, `Meteora` → a **restaurant**, `MahaNakhon` → a **BTS station**. The generic-name lesson
+above, at scale.
+
+🔴 **But look at what the 361 actually are:**
+
+> *The Million Dollar Corner* · *Breakfast at Tiffany's Townhouse* · *The Man Who Predicted the
+> Titanic* · *A Greek Goddess on Fifth Avenue* · *Restoring Park Avenue* · *Madison Square Garden
+> and the Knicks*
+
+**These are story titles, not place names.** No gazetteer will ever match them, and not because
+coverage is thin — because they are not the names of things. `docs/places.md` already draws this
+line for place pages (*"an editorial angle never is"*); it applies to the audit too.
+
+**So `UNMATCHED` means two very different things and the tool cannot tell them apart:**
+
+1. *a real place a gazetteer happens not to know* — a neighbourhood restaurant. Reachable by
+   another route: the caption's 📍 marker, the linked post, an address.
+2. *an editorial title that names no place at all* — unreachable by any name-based method, ever.
+
+For `@hereinnyc` and `@urbanistariel`, **64–67% of pins are `UNMATCHED` and most are category 2**.
+A name-based audit will never verify them, and running it repeatedly in the hope of coverage
+improving is wasted effort.
+
+⚠️ **The practical rule: measure the ceiling before grinding at it.** `@insightcities` was worth
+sweeping because its titles are institutions (*National Library of Latvia*, *Žižkov Television
+Tower*) — 17 of 61 matched and 3 were real errors. These three were not, and one 11-minute run
+said so more honestly than any amount of reasoning about it would have.
+
+### 🔴 A recorded verdict can be WRONG, and suppressing it makes that permanent (2026-09-21)
+
+`spine-match.py` learned to read `checks/spine-verdicts.json` and stop re-listing findings a human
+had already ruled on. Sensible: 166 settled findings were shouting on every run.
+
+Hours later, sweeping one creator's pins directly, three of their entries turned out to be
+**1,316 m, 966 m and 1,691 m wrong** — and **two of the three carried a verdict of
+`wikidata-elsewhere`**, meaning *"our point is right, the gazetteer matched something else."*
+
+They were not right. Three independent signals said so and agreed with each other:
+
+| | prior ruling | OSM name lookup | OSM geocode of its street address | Wikidata |
+|---|---|---|---|---|
+| **Žižkov Television Tower** | "ours is fine" | 1,316 m | 1,316 m (*Žižkovský vysílač*, Mahlerovy sady 1) | 1,296 m (28 sitelinks) |
+| **Hotel International** | "ours is fine" | 966 m | 966 m (Koulova 15) | 953 m (12 sitelinks) |
+
+**There is exactly one Žižkov TV Tower.** No collision is possible, so the earlier ruling was
+simply mistaken — and from the moment suppression shipped, *no future run would ever have
+mentioned it again.*
+
+🔴 **A verdict is a human judgement stored as data, and it inherits every way a human can be
+wrong.** Caching a judgement is not like caching a fact: a stale fact gets re-fetched, a wrong
+judgement gets re-applied forever. Suppression turns a one-off mistake into a permanent blind spot,
+and the entry looks *more* trustworthy than an unexamined one because someone signed it off.
+
+**So suppression must be inspectable.** `spine-match.py --show-ruled` lists every finding a verdict
+is hiding, worst first, with the ruling that hides it. Re-read it after any sweep that finds a
+verdict wrong, and treat a `wikidata-elsewhere` on a **distinctive** name with particular suspicion
+— that ruling is correct overwhelmingly often *because* most such names collide, which is exactly
+what makes the non-colliding ones slip through.
+
+⚠️ **Two smaller things fell out of building it, both worth keeping.**
+
+- `--show-ruled` crashed with `KeyError: 'verdict'` the first time it ran, because `classify()`'s
+  early-return branches (`NOT-ASKED`, `STALE`) omitted the key. **Every record a function emits
+  should carry every key**, banded or not; a selftest now asserts all rows share one key set.
+- The third entry, **Radium Palace Hotel**, had *no Wikidata candidate at all* — it sat in
+  `UNMATCHED`, which the tool's own footer calls unexamined. **Nothing would ever have found it.**
+  Sweeping a creator's pins directly reaches what a gazetteer-driven audit structurally cannot.
+
+### 🔴 Two sources agreeing is NOT corroboration when the name is generic (2026-09-21)
+
+Triaging 43 coordinate findings, the obvious method: look each subject up in OSM by name, and
+compare that independent answer against our point and against Wikidata's. Where OSM sits on
+Wikidata's point and far from ours, ours is wrong. Where it sits on ours, Wikidata matched
+something else. It had worked all week.
+
+It called **five of seven `@historicpubcrawls` London pubs OURS-WRONG**, by up to 8.7 km.
+
+**All five were correct.** Every caption carries a 📍 address, and geocoding the address the
+creator themselves wrote put our pin **0 m** away in four cases and 79 m in the fifth:
+
+| pub | the cross-check said | its own caption's address said |
+|---|---|---|
+| The Britannia | ours wrong by **8,673 m** | **0 m** — 1 Allen St, Kensington |
+| The Royal Oak | ours wrong by **3,615 m** | **0 m** — 44 Tabard St, Borough |
+| The Flying Horse | ours wrong by **3,201 m** | **0 m** — 52 Wilson St |
+| The Wellington | ours wrong by **1,037 m** | **0 m** — Waterloo Road |
+| The Grapes | ours wrong by 562 m | **562 m** — genuinely wrong |
+
+🔴 **The failure is specific and it is not "one source was bad".** *The Royal Oak*, *The
+Britannia*, *The Wellington* and *The Grapes* are among the commonest pub names in Britain. OSM's
+`limit=1` picked one; Wikidata had picked another; **they happened to pick the SAME one** — and
+agreed with each other to within 10 m, which reads exactly like strong corroboration. It is not.
+They agreed about a pub. They said nothing about *our* pub.
+
+**Independence is about the ENTITY, not the source.** Two databases resolving the same ambiguous
+string will land on the same popular referent for the same reason. Agreement only counts as
+corroboration once you know both are talking about the thing you mean.
+
+**What actually settled it** was the one signal that cannot collide: the creator's own words. A
+caption reading *"📍 44 Tabard St, London SE1 4JU"* identifies one building on earth. Rule 8d
+already says to search the venue's name — this extends it: **when the name is generic, the name is
+not enough; find something in the entry that is unique.**
+
+Practical test before trusting a name-based cross-check:
+
+- **Would this name match more than one thing in this city?** Pub, café, "Central Station",
+  "The Royal…", a saint's name, a chain — assume yes.
+- **Does the entry carry a unique identifier of its own?** A street address, a postcode, a venue
+  `@handle`. Use it, and prefer it over any gazetteer.
+- **Does the cross-check disagree with us by a city-scale distance?** For a subject that is
+  obviously *in* this city, a multi-kilometre "error" is far more likely a different entity than
+  a badly placed pin. Treat size as evidence of collision, not of severity.
+
+⚠️ The eight *distinctive*-named findings in the same batch (National Library of Latvia, Hotel
+Negresco, Drottningholm, Palika Kendra…) were deliberately **left for the owner**, not moved on the
+same heuristic that had just failed — and `Drottningholm` turned out to be `multiStop`, which the
+runbook refuses to move anyway.
+
 ### 🔴 State the population and make it add up (2026-09-21)
 
 Checking whether any two `places` shared a name, the query read `centroidLatitude` where the

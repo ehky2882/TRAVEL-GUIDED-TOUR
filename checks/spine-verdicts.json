@@ -17,6 +17,24 @@
     "note": "Wikidata places Q3495648 in Štýřice (building in the Czech Republic), not Brno. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Al Seef": {
+    "at": [
+      25.2605,
+      55.2997
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours a pharmacy off Sheikh Sabah street, theirs an ATM on شارع السيف; a waterfront district.",
+    "verdict": "extended-feature"
+  },
+  "Alton Estate": {
+    "at": [
+      51.453563,
+      -0.246563
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours is Winchfield House, theirs 213-243 Danebury Avenue — both inside the estate.",
+    "verdict": "extended-feature"
+  },
   "Alzaia Naviglio Grande": {
     "at": [
       45.4469431,
@@ -24,6 +42,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata describes Q106960792 as \"towpath along Naviglio Grande in Milan\" — not a point. A 1577 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Amanohashidate | 天橋立": {
+    "at": [
+      35.5576645,
+      135.1847442
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both points sit on the 天の橋立線 rail line at different stations; a 3.6 km sandbar.",
     "verdict": "extended-feature"
   },
   "Ancient Rome": {
@@ -61,6 +88,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q16559 in Travis County (capital city of the U.S. state of Texas and seat of Travis County), not Austin. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Avenida da Liberdade": {
+    "at": [
+      38.7152615,
+      -9.1412481
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours is Praça dos Restauradores at the avenue's south end, theirs a monument along it; a 1.1 km boulevard.",
+    "verdict": "extended-feature"
   },
   "Bahrain World Trade Center": {
     "at": [
@@ -107,6 +143,15 @@
     "note": "Wikidata places Q160556 in Schönefeld (airport serving Berlin, Germany), not Berlin. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Bricklayers Arms": {
+    "at": [
+      51.5261509,
+      -0.0811105
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — confirmed against the address the creator's OWN CAPTION states (Charlotte Road, Shoreditch), which geocodes to 0-79 m of our point. 🔴 An OSM+Wikidata cross-check called this OURS-WRONG: both matched a DIFFERENT London pub of the same name and agreed with each other to within 10 m. Two sources agreeing is NOT corroboration when the name is generic.",
+    "verdict": "name-collision"
+  },
   "Brooklyn Bridge Park": {
     "at": [
       40.7030882,
@@ -114,6 +159,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata places Q929440 in Brooklyn (public park in Brooklyn, New York), not New York. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Burj Al Babas": {
+    "at": [
+      40.4448447,
+      31.2027028
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
     "verdict": "wikidata-elsewhere"
   },
   "Cable Cars": {
@@ -125,6 +179,15 @@
     "note": "Wikidata describes Q374956 as \"cable car system in San Francisco, California, United States\" — not a point. A 1208 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Canal Saint-Martin": {
+    "at": [
+      48.8713,
+      2.3659
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED FINE. Wikidata's match is typed 'panel Histoire de Paris' -- an information PLAQUE about the canal, not the canal. Also a 4.5 km waterway, so no single point is honest.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Carette": {
     "at": [
       48.8637238,
@@ -132,6 +195,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata places Q108900316 in 18th arrondissement of Paris (bakery in Montmartre, Paris), not Paris. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Carl Street Studios": {
+    "at": [
+      41.9089311,
+      -87.6337727
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
     "verdict": "wikidata-elsewhere"
   },
   "Casa Costa": {
@@ -143,6 +215,15 @@
     "note": "Wikidata places Q107646375 in Sant Just Desvern (building in Sant Just Desvern, Spain), not Barcelona. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Central–Mid-Levels Escalators | 中環半山扶手電梯": {
+    "at": [
+      22.28357,
+      114.15499
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours at the Queen's Road Central foot, theirs at Caine Road partway up; an 800 m escalator system.",
+    "verdict": "extended-feature"
+  },
   "Children's Railway (Gyermekvasút)": {
     "at": [
       47.5004125,
@@ -152,6 +233,15 @@
     "note": "Wikidata places Q1029453 in Budapest District XII (railway line), not Budapest. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Cholon | Chợ Lớn": {
+    "at": [
+      10.7555296,
+      106.6584271
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both inside Phường Chợ Lớn; a district.",
+    "verdict": "extended-feature"
+  },
   "Church of Santa Maria": {
     "at": [
       41.1887162,
@@ -160,6 +250,24 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q10300634 in Celorico (São Pedro e Santa Maria) e Vila Boa do Mondego (church in Celorico da Beira, Portugal), not Marco de Canaveses. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Church of the Most Sacred Heart of Our Lord": {
+    "at": [
+      50.078035,
+      14.4507539
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: our point is 'The Pind', a restaurant on Korunní; the target reverse-geocodes to 'Nejsvětější Srdce Páně, náměstí Jiřího z Poděbrad' — the church itself.",
+    "verdict": "fixed"
+  },
+  "Château La Coste": {
+    "at": [
+      43.6349375,
+      5.4226875
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: theirs is 'Francis Mallmann en Provence', a restaurant ON the estate; a large vineyard-and-art estate.",
+    "verdict": "extended-feature"
   },
   "Cu Chi Tunnels – Bến Dược | Địa Đạo Củ Chi - Bến Dược": {
     "at": [
@@ -179,6 +287,33 @@
     "note": "Wikidata places Q656576 in Chiang Mai (national park in Thailand), not Chom Thong. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Drottningholm": {
+    "at": [
+      59.3220162,
+      17.8871302
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — and the 'finding' is a title artefact. Our order==0 stop sits 56 m from Wikidata's Drottningholm PALACE (Q207686-class, 59 sitelinks), which is what this 3-stop walk is about. The 276 m match is the LOCALITY 'Drottningholm' (19 sitelinks), picked only because our walk carries the bare place name as its title and that label-matches the village exactly. ⚠️ multiStop besides, which the runbook refuses to move.",
+    "verdict": "name-collision"
+  },
+  "East Side Gallery": {
+    "at": [
+      52.505,
+      13.4394
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Edison's Menlo Park Laboratory": {
+    "at": [
+      42.305651,
+      -83.226917
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODING settled it, and the error was subtler than an offset. Our point resolves to the 'Ford Model AA Fort Meyers Lab stop' on Christie Street -- Greenfield Village holds BOTH of Edison's relocated laboratories, and our pin sat by the FORT MYERS one. The Menlo Park laboratory is 179 m away on Post Road, where OSM's named feature and its address both point.",
+    "verdict": "fixed"
+  },
   "Església vella de Santa Maria": {
     "at": [
       41.6893701,
@@ -197,6 +332,15 @@
     "note": "Wikipedia gives 25.23,55.26 -- only two decimals, so ~1 km of slop, but it lands on Wikidata's 55.269 rather than our 55.283, toward Union House in Jumeirah. Moved, with that precision noted.",
     "verdict": "fixed"
   },
+  "Fiera District": {
+    "at": [
+      44.50817,
+      11.36491
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
+    "verdict": "wikidata-elsewhere"
+  },
   "First National Bank of Hollywood": {
     "at": [
       34.101687,
@@ -214,6 +358,15 @@
     "date": "2026-09-21",
     "note": "Our point is Jean Nouvel's Boulevard Raspail building; Wikidata's is Place du Palais-Royal, where the foundation moved in 2025. Both are real. Which one the tour describes is a content question. NOT MOVED.",
     "verdict": "institution-moved"
+  },
+  "Four Freedoms Park": {
+    "at": [
+      40.750659,
+      -73.960446
+    ],
+    "date": "2026-09-21",
+    "note": "OUR coordinate was 1,290 m out -- mid-island, OUTSIDE the park's OSM bounding box on BOTH axes (park: 40.7496-40.7517 / -73.9615 to -73.9592; ours was 40.7594, -73.9504). Moved to OSM's park point 40.750659,-73.960446, corroborated to 25 m by @urbanistariel's independently-authored 'The FDR Monument on Roosevelt Island' pin. 🔴 The spine audit MISSED this entirely -- no Wikidata candidate matched, so it sat in UNMATCHED, which is 'unexamined', not 'clean'. The owner caught it.",
+    "verdict": "fixed"
   },
   "Fushimi Inari Taisha | 伏見稲荷大社": {
     "at": [
@@ -316,12 +469,30 @@
   },
   "Hotel International (Stalin's Cake)": {
     "at": [
-      50.1036,
-      14.4034
+      50.109346,
+      14.3932647
     ],
     "date": "2026-09-21",
-    "note": "Wikidata places Q1874734 in Dejvice (hotel building in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED.",
-    "verdict": "wikidata-elsewhere"
+    "note": "🔴 A PRIOR VERDICT SAID THIS WAS FINE. OSM name lookup and an OSM geocode of Koulova 15 return the same 'Hotel International' node, 966 m from us; Wikidata (12 sitelinks) agrees at 953 m.",
+    "verdict": "fixed"
+  },
+  "Hotel Nacional": {
+    "at": [
+      -22.9980517,
+      -43.2568465
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: our point is the Autoestrada Engenheiro Fernando Mac Dowell — a MOTORWAY; the target reverse-geocodes to 'Gran Meliá Nacional Rio de Janeiro, 764, Avenida Niemeyer'. ⚠️ I had held this back as a generic name; reverse-geocoding named it exactly and settled it.",
+    "verdict": "fixed"
+  },
+  "Hotel Negresco": {
+    "at": [
+      43.69471,
+      7.257752
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=hotel, 57 m from an independent geocode of 37 Promenade des Anglais and 56 m from Wikidata (20 sitelinks).",
+    "verdict": "fixed"
   },
   "Hotel Riu Palace Pacifico": {
     "at": [
@@ -349,6 +520,24 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q4500907 in South East Delhi district (radha Krishna Temple in Delhi, India), not Delhi. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Imperial Palace | 皇居": {
+    "at": [
+      35.68534,
+      139.75285
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours a service road INSIDE 皇居, theirs the palace building; a 1.15 km² complex.",
+    "verdict": "extended-feature"
+  },
+  "Inokashira Park | 井の頭恩賜公園": {
+    "at": [
+      35.69992,
+      139.57371
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both on roads beside the park, 272 m apart.",
+    "verdict": "extended-feature"
   },
   "Inside the Museum of the City of New York": {
     "at": [
@@ -386,6 +575,15 @@
     "note": "Wikipedia's 31.06028,121.14944 matches Wikidata Q16928554 to ~60 m and is 5.1 km from ours. Both sides sit ~35 km from central Shanghai, which is correct for the Songjiang quarry; the question was only WHICH point, and two sources agree. Moved.",
     "verdict": "fixed"
   },
+  "Invalidovna": {
+    "at": [
+      50.095,
+      14.4617
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT. Wikidata agrees with us to 0 m. An OSM name lookup returns the METRO STATION Invalidovna 253 m away -- named after the baroque building, not the building.",
+    "verdict": "name-collision"
+  },
   "Jackson Street Bridge": {
     "at": [
       33.7579,
@@ -419,8 +617,8 @@
       16.3583
     ],
     "date": "2026-09-21",
-    "note": "Wikidata places Q513211 in Heiligenstadt (architectural structure), not Vienna. A different entity of the same name. NOT MOVED.",
-    "verdict": "wikidata-elsewhere"
+    "note": "NOT MOVED, and the previous wikidata-elsewhere ruling replaced. Karl-Marx-Hof is a 1.1 KM LONG residential block, so no single point is honest: the three signals land 939 m, 1,283 m and 1,378 m from us -- a spread consistent with different points ALONG it, not with one wrong pin. Ours may sit at an end.",
+    "verdict": "extended-feature"
   },
   "Kasárna Karlín": {
     "at": [
@@ -430,6 +628,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q28838028 in Karlín (), not Prague. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Keage Incline | 蹴上インクライン": {
+    "at": [
+      35.0107786,
+      135.7888568
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours is a hotel whose own address IS 蹴上インクライン; theirs the footway. A 582 m incline.",
+    "verdict": "extended-feature"
   },
   "Khao Yai National Park | อุทยานแห่งชาติเขาใหญ่": {
     "at": [
@@ -457,6 +664,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q1120689 as \"Jewish cemetery in Budapest, Hungary\" — not a point. A 956 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Károlyi Palace (Petőfi Literary Museum)": {
+    "at": [
+      47.4913889,
+      19.0583333
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: our point is '10, Pollack Mihály tér', a different building; the target reverse-geocodes to 'Petőfi Irodalmi Múzeum, 16, Károlyi utca' — the museum itself, which is what the entry names.",
+    "verdict": "fixed"
   },
   "La Fábrica (The Factory)": {
     "at": [
@@ -501,6 +717,24 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata places Q6479071 in Colorado (family-owned amusement park in Lakeside, Colorado adjacent to Denver), not Lakeside. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Lakhta Center": {
+    "at": [
+      59.9871202,
+      30.1707207
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED CORRECT. OSM's Лахта-центр is 0 m from our point; Wikidata's own main-tower record (Q4255374) sits 413 m away. The tool matched 'Lakhta Center 3' (Q136648950, 1 sitelink), a DIFFERENT tower in the same complex, so the 335 m gap is a sibling-building collision, not an error.",
+    "verdict": "wikidata-wrong"
+  },
+  "Les Tres Xemeneies": {
+    "at": [
+      41.4270698,
+      2.235212
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: CORRECT, and a textbook name collision. Our point is the 'Central tèrmica de Sant Adrià de Besòs' — the power station whose three chimneys the entry is about. Wikidata's match is the 'Xemeneies de la Fecsa' in Poble-sec: Barcelona has TWO famous sets of three chimneys, 8 km apart.",
     "verdict": "wikidata-elsewhere"
   },
   "Lion's Head": {
@@ -548,6 +782,15 @@
     "note": "Wikidata describes Q1069906 as \"sculpture garden in Budapest\" — not a point. A 1078 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Menara Gardens | حدائق المنارة": {
+    "at": [
+      31.6145007,
+      -8.0224996
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both resolve to the same arrondissement de Ménara.",
+    "verdict": "extended-feature"
+  },
   "Meteora": {
     "at": [
       39.7250625,
@@ -584,6 +827,15 @@
     "note": "Wikidata places Q151963 in Bezirk Mitte (northern part of Spree Island in the Spree river in central Berlin), not Berlin. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Míčovna (Ball Game Hall)": {
+    "at": [
+      50.09244,
+      14.40119
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Naarden (star fort town)": {
     "at": [
       52.2802385,
@@ -592,6 +844,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q575616 in Gooise Meren (railway station in the Netherlands), not Naarden. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "National Library of Latvia": {
+    "at": [
+      56.941038,
+      24.096772
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=library, 'Latvijas Nacionala biblioteka, 3, Mukusalas iela, Tornakalns'. Confirmed by an independent Latvian-language lookup landing on the same node, and 35 m from Wikidata (41 sitelinks).",
+    "verdict": "fixed"
   },
   "Natural History Museum of LA County": {
     "at": [
@@ -611,6 +872,15 @@
     "note": "Wikidata describes Q3015728 as \"International airport in Navi Mumbai, India\" — not a point. A 1589 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Navy Pier": {
+    "at": [
+      41.8918,
+      -87.6095
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: CORRECT. Our point reverse-geocodes to '700, East Grand Avenue' — Navy Pier's own address. The match is 'Chicago Harbor', the marina beside it.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Ngong Ping 360 | 昂坪360": {
     "at": [
       22.2910445,
@@ -629,6 +899,15 @@
     "note": "Wikidata Q10783045 calls it a 'waterway in Ho Chi Minh City' -- a canal roughly 9 km long. An 880 m gap along it is the normal condition, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Náplavka": {
+    "at": [
+      50.0729,
+      14.4159
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT. 'Náplavka' is a common Czech noun for a riverside embankment and Prague has several (Rašínovo, Hořejší, Dvořákovo). OSM's lookup returns a different one 2,289 m away. Ours is on Rašínovo nábřeží, the one the post is about. Generic name — the pub lesson exactly.",
+    "verdict": "name-collision"
+  },
   "Old City Hall": {
     "at": [
       43.6525,
@@ -637,6 +916,15 @@
     "date": "2026-09-21",
     "note": "Wikidata matched a different real entity of the same name. Q7083689 is in GUELPH, Ontario — verified; ours is Toronto's. Our coordinate sits inside its own city's cluster. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Palika Kendra (NDMC HQ)": {
+    "at": [
+      28.62848,
+      77.21545
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=government, 13 m from Wikidata. ⚠️ The address geocode landed on a BUS STOP named after the building 136 m away -- the Belgrade Tower trap -- so it corroborates the area, not the point; the government-building node is what the coordinate follows.",
+    "verdict": "fixed"
   },
   "Palácio da Justiça": {
     "at": [
@@ -663,6 +951,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata matched a different real entity of the same name. Q15303666 41 km from the Rio cluster; ours is 1.8 km from it. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Pier 39 Sea Lions": {
+    "at": [
+      37.8088,
+      -122.4098
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED CORRECT. Wikidata's match is typed 'group of living things' -- the sea lions as a TAXON, which has no fixed location at all. A distance to it means nothing.",
     "verdict": "wikidata-elsewhere"
   },
   "Pilsen — Eighteenth Street, East to West": {
@@ -728,6 +1025,24 @@
     "note": "Wikidata places Q125846 in Queensland (skyscraper in Australia), not Gold Coast. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Quartier des Spectacles": {
+    "at": [
+      45.5088,
+      -73.5678
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED: CORRECT. Our point is 'Cinquième Salle, 175 Rue Sainte-Catherine Ouest, Quartier des Spectacles' — inside the quarter. Wikidata's match is on Boulevard Saint-Laurent in Quartier Chinois, a different neighbourhood.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Queen Anne's Summer Palace": {
+    "at": [
+      50.093808,
+      14.405312
+    ],
+    "date": "2026-09-21",
+    "note": "OSM type=civic, 0 m from an independent geocode of Marianske hradby 1 and 23 m from Wikidata (20 sitelinks).",
+    "verdict": "fixed"
+  },
   "Queen Street West": {
     "at": [
       43.643,
@@ -737,6 +1052,15 @@
     "note": "Wikidata describes Q20726625 as \"heritage conservations district in Toronto, Ontario, Canada\" — not a point. A 1544 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Radium Palace Hotel": {
+    "at": [
+      50.3585086,
+      12.934132
+    ],
+    "date": "2026-09-21",
+    "note": "NEVER EXAMINED by the audit -- no Wikidata candidate at all, so it sat in UNMATCHED. OSM's name lookup and an OSM geocode of T. G. Masaryka 413 return the same type=hotel node, 1,691 m from us. Found only because the creator was swept deliberately.",
+    "verdict": "fixed"
+  },
   "Robie House": {
     "at": [
       41.789833,
@@ -745,6 +1069,15 @@
     "date": "2026-09-21",
     "note": "Wikidata Q929965 states the address as '5757 South Woodlawn Avenue', Hyde Park -- which is its coordinate, not ours. Ours was 1,082 m south.",
     "verdict": "fixed"
+  },
+  "Roosevelt Island": {
+    "at": [
+      40.7605625,
+      -73.9509375
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-CONFIRMED FINE. Our pin sits near the island's centre. The 260 m match is Q1865158 'Roosevelt Island' -- the SUBWAY STATION, which Wikidata labels with the island's bare name. The island itself (Q909777, 39 sitelinks) is 265 m away. Both distances are trivial for an entry titled after the whole island.",
+    "verdict": "name-collision"
   },
   "Saint-Sulpice": {
     "at": [
@@ -764,6 +1097,15 @@
     "note": "Wikidata places Q3673376 in Pescia (church in Castellare, Italy), not Grizzana Morandi. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Santa Teresa Tram": {
+    "at": [
+      -22.9098176,
+      -43.1785171
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours at the Rua Lélio Gama terminus, theirs the Arcos da Lapa the line crosses; a tram route.",
+    "verdict": "extended-feature"
+  },
   "Sardar Vallabhbhai Patel (SVP) Stadium": {
     "at": [
       23.0917717,
@@ -782,6 +1124,15 @@
     "note": "Wikidata places Q543254 in Ontario (escarpment in Toronto, Canada), not Toronto. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Scheendijk": {
+    "at": [
+      52.1794101,
+      5.0203858
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Singapore Changi Airport": {
     "at": [
       1.3510921,
@@ -790,6 +1141,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q55721633 in Changi (), not Singapore. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Stortorget, Gamla Stan": {
+    "at": [
+      59.3269748,
+      18.0716979
+    ],
+    "date": "2026-09-21",
+    "note": "NOT MOVED, and the reason is the finding. Reverse-geocoding shows our point is 'Inre borggarden' -- the Royal Palace's inner courtyard -- 226 m from Stortorget itself. But this entry is a MEMBER OF THE PLACE 'Gamla stan', whose coordinate IS that point, and validate-tours requires every member's marker to sit exactly on its place. So the square cannot be moved on its own: either the entry leaves the place, or the place is not really 'Gamla stan'. A part-vs-whole question, which docs/places.md leaves to the owner.",
+    "verdict": "part-vs-whole"
   },
   "Sun Tower": {
     "at": [
@@ -890,6 +1250,15 @@
     "note": "Wikidata places Q2317502 in delegation of Tataouine Sud (village in Tunisia), not Chenini. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "The Britannia": {
+    "at": [
+      51.49862,
+      -0.19563
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — confirmed against the address the creator's OWN CAPTION states (1 Allen St, Kensington W8 6UX), which geocodes to 0-79 m of our point. 🔴 An OSM+Wikidata cross-check called this OURS-WRONG: both matched a DIFFERENT London pub of the same name and agreed with each other to within 10 m. Two sources agreeing is NOT corroboration when the name is generic.",
+    "verdict": "name-collision"
+  },
   "The Dragon Blood Trees of Socotra": {
     "at": [
       12.4999375,
@@ -926,6 +1295,15 @@
     "note": "Wikidata places Q35342 in Puno Department (Alpine lake in Peru and Bolivia), not Puno. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "The Flying Horse": {
+    "at": [
+      51.5204453,
+      -0.0849805
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — confirmed against the address the creator's OWN CAPTION states (52 Wilson Street), which geocodes to 0-79 m of our point. 🔴 An OSM+Wikidata cross-check called this OURS-WRONG: both matched a DIFFERENT London pub of the same name and agreed with each other to within 10 m. Two sources agreeing is NOT corroboration when the name is generic.",
+    "verdict": "name-collision"
+  },
   "The Four Columns at Kadoorie Farm": {
     "at": [
       22.4295625,
@@ -934,6 +1312,24 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q838392 in Tai Po District (botanical garden in Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "The Grapes": {
+    "at": [
+      51.50885,
+      -0.03396
+    ],
+    "date": "2026-09-21",
+    "note": "OUR coordinate was 562 m west. THREE independent signals agree on 51.50885,-0.03396: the street its own caption names (Narrow Street, Limehouse), OSM's geocode of the full address 76 Narrow St E14 8BP (type=pub), and Wikidata (4 m). The only one of seven @historicpubcrawls pubs that was actually wrong.",
+    "verdict": "fixed"
+  },
+  "The Kings Arms": {
+    "at": [
+      51.50444,
+      -0.10911
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — confirmed against the address the creator's OWN CAPTION states (Roupell Street, Waterloo), which geocodes to 0-79 m of our point. 🔴 An OSM+Wikidata cross-check called this OURS-WRONG: both matched a DIFFERENT London pub of the same name and agreed with each other to within 10 m. Two sources agreeing is NOT corroboration when the name is generic.",
+    "verdict": "name-collision"
   },
   "The Knights of Columbus Building": {
     "at": [
@@ -952,6 +1348,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q47554 in Kuyavian-Pomeranian Voivodeship (city in north-central Poland), not Toruń. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "The Leonardo": {
+    "at": [
+      -26.104216,
+      28.055564
+    ],
+    "date": "2026-09-21",
+    "note": "OSM building, 0 m from an independent geocode of 75 Maude Street, Sandton, and 2 m from Wikidata (12 sitelinks).",
+    "verdict": "fixed"
   },
   "The Magnificent Mile — DuSable Bridge to the Water Tower": {
     "at": [
@@ -1006,6 +1411,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q1652985 as \"1.4 kilometer funicular railway in Hong Kong, serving 6 stations (with\" — not a point. A 802 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "The Royal Oak": {
+    "at": [
+      51.5001186,
+      -0.0914253
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — confirmed against the address the creator's OWN CAPTION states (44 Tabard St, Borough SE1 4JU), which geocodes to 0-79 m of our point. 🔴 An OSM+Wikidata cross-check called this OURS-WRONG: both matched a DIFFERENT London pub of the same name and agreed with each other to within 10 m. Two sources agreeing is NOT corroboration when the name is generic.",
+    "verdict": "name-collision"
   },
   "The Sanctuary of Truth Museum | ปราสาทสัจธรรม": {
     "at": [
@@ -1079,6 +1493,15 @@
     "note": "Wikidata places Q386420 in Isan/North eastern Thailand (nature reserve in Thailand), not Pak Chong. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "The Wellington": {
+    "at": [
+      51.5036385,
+      -0.111312
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — confirmed against the address the creator's OWN CAPTION states (Waterloo Road), which geocodes to 0-79 m of our point. 🔴 An OSM+Wikidata cross-check called this OURS-WRONG: both matched a DIFFERENT London pub of the same name and agreed with each other to within 10 m. Two sources agreeing is NOT corroboration when the name is generic.",
+    "verdict": "name-collision"
+  },
   "The Wertheim Study at the New York Public Library": {
     "at": [
       40.7531875,
@@ -1114,6 +1537,24 @@
     "date": "2026-09-21",
     "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Park Avenue, the STREET (30 sitelinks). Not a coordinate error. NOT MOVED.",
     "verdict": "editorial-title"
+  },
+  "Three Gorges Dam": {
+    "at": [
+      30.8261831,
+      111.0075702
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: both reverse-geocode to the SAME village, 中堡村; a 2.3 km dam.",
+    "verdict": "extended-feature"
+  },
+  "Toronto Islands": {
+    "at": [
+      43.6228,
+      -79.3817
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours the Toronto Island Marina, theirs Avenue Of The Islands — both on the islands.",
+    "verdict": "extended-feature"
   },
   "Tour Odéon": {
     "at": [
@@ -1178,6 +1619,15 @@
     "note": "Wikidata describes Q17541 as \"mountain in Hong Kong\" — not a point. A 792 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Walden 7": {
+    "at": [
+      41.3803125,
+      2.0678125
+    ],
+    "date": "2026-09-21",
+    "note": "OWNER-DIRECTED. @ninosbuildings' pin sat 335 m from three other entries on the same building (Atlas Studio BCN tour, @thedesignssuite and @rayisaplace pins) which agree with Wikidata Q3043523 to 6 m. Moved onto the shared point.",
+    "verdict": "fixed"
+  },
   "Wat Mahathat | วัดมหาธาตุ": {
     "at": [
       14.3635963,
@@ -1196,6 +1646,15 @@
     "note": "Wikidata places Q13020754 in Pang Mu (Buddhist temple in Mae Hong Son province, Thailand), not Mae Hong Son. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "West Kowloon Cultural District": {
+    "at": [
+      22.3017093,
+      114.1629845
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
+    "verdict": "wikidata-elsewhere"
+  },
   "White Temple (Wat Rong Khun) | วัดร่องขุ่น": {
     "at": [
       19.8826889,
@@ -1203,6 +1662,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata places Q496543 in Pa O Don Chai (Buddhist site in Chiang Rai, Thailand), not Chiang Rai. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Xcaret": {
+    "at": [
+      20.5813925,
+      -87.1190365
+    ],
+    "date": "2026-09-21",
+    "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
     "verdict": "wikidata-elsewhere"
   },
   "Yachthouse Residence Club": {
@@ -1225,11 +1693,11 @@
   },
   "Žižkov Television Tower": {
     "at": [
-      50.0692,
-      14.4508
+      50.0810217,
+      14.4510584
     ],
     "date": "2026-09-21",
-    "note": "Wikidata places Q1413217 in Žižkov (TV tower in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED.",
-    "verdict": "wikidata-elsewhere"
+    "note": "🔴 A PRIOR VERDICT SAID THIS WAS FINE. Three independent signals disagree and agree with each other: OSM's name lookup, an OSM geocode of the tower's address (Mahlerovy sady 1, which returns 'Žižkovský vysílač' itself) -- BOTH landing on the same node -- and Wikidata (28 sitelinks) 1,296 m away. There is exactly one Žižkov TV Tower, so no name collision is possible. The old wikidata-elsewhere ruling was simply wrong.",
+    "verdict": "fixed"
   }
 }
