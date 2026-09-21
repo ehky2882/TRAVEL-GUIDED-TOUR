@@ -395,6 +395,15 @@
     "note": "Wikidata places Q69968588 in The Bronx (public library in the Bronx, New York, USA), not Bronx. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Great Court, British Museum": {
+    "at": [
+      51.519312,
+      -0.126705
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 58 km OUT, in Essex. Our point reverse-geocoded to 'Horizon Boulevard, Horizon 120, GREAT NOTLEY, Braintree, Essex' -- a business park. Note the tell: the entry is 'GREAT Court' and the pin landed in 'GREAT Notley', so a geocoder matched the wrong word. Moved to the British Museum, Great Russell Street (OSM type=museum). 🔴 Found by NEITHER gazetteer check -- it was UNMATCHED -- but by comparing it against the other London entries: 58 km from their median where London's own median spread is 2.8 km.",
+    "verdict": "fixed"
+  },
   "Green-Wood Cemetery": {
     "at": [
       40.6580892,
@@ -808,6 +817,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q3314040 in Le Plateau-Mont-Royal (neighbourhood in the borough of Plateau-Mont-Royal, Montreal, Quebec, ), not Montreal. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "Modern Coffee House": {
+    "at": [
+      40.7136888,
+      -73.993096
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 22.9 km OUT, on Staten Island. Found by check-city-outliers.py, not by any lookup. The creator's own caption carries the address -- 105 E BROADWAY, NY, NY 10002 -- but OUR stored copy of that caption is TRUNCATED and cuts off before the pin emoji, so the address was invisible here; it was read off the same creator's TikTok post of the same reel. Nominatim on that address returns THREE results and its THIRD is our exact stored point: a semidetached house at 105 East Broadway, Oakwood Heights, Staten Island 10306. Staten Island has an East Broadway too, and the postcode that separates them was in the truncated tail. Moved to the OSM cafe node named Modern Coffee House at 105 East Broadway, Two Bridges, Manhattan.",
+    "verdict": "fixed"
   },
   "Mount Royal — the Climb": {
     "at": [
