@@ -73,6 +73,51 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 UNMATCHED is not always a coverage gap — sometimes the title is not a name (2026-09-21)
+
+After the `@insightcities` sweep found three real errors, the same method was pointed at the three
+largest creators: `@pasttworld` (178 pins), `@urbanistariel` (326), `@hereinnyc` (262). Scoped to
+the **434 blind spots** — `UNMATCHED` plus verdict-suppressed rows, where a gazetteer-driven audit
+cannot see.
+
+**It found essentially nothing**, and the reason is worth more than a finding would have been.
+
+| | |
+|---|---|
+| asked | 434 |
+| OSM answered | **73** |
+| **no result at all** | **361 (83%)** |
+| disagreed >150 m | 20 — and on inspection nearly all are the gazetteer matching a *different entity* |
+
+Those 20 include `Chapel Bar` → a **shingle beach** 837 km away, `The New York State Pavilion` → a
+**laundry**, `Meteora` → a **restaurant**, `MahaNakhon` → a **BTS station**. The generic-name lesson
+above, at scale.
+
+🔴 **But look at what the 361 actually are:**
+
+> *The Million Dollar Corner* · *Breakfast at Tiffany's Townhouse* · *The Man Who Predicted the
+> Titanic* · *A Greek Goddess on Fifth Avenue* · *Restoring Park Avenue* · *Madison Square Garden
+> and the Knicks*
+
+**These are story titles, not place names.** No gazetteer will ever match them, and not because
+coverage is thin — because they are not the names of things. `docs/places.md` already draws this
+line for place pages (*"an editorial angle never is"*); it applies to the audit too.
+
+**So `UNMATCHED` means two very different things and the tool cannot tell them apart:**
+
+1. *a real place a gazetteer happens not to know* — a neighbourhood restaurant. Reachable by
+   another route: the caption's 📍 marker, the linked post, an address.
+2. *an editorial title that names no place at all* — unreachable by any name-based method, ever.
+
+For `@hereinnyc` and `@urbanistariel`, **64–67% of pins are `UNMATCHED` and most are category 2**.
+A name-based audit will never verify them, and running it repeatedly in the hope of coverage
+improving is wasted effort.
+
+⚠️ **The practical rule: measure the ceiling before grinding at it.** `@insightcities` was worth
+sweeping because its titles are institutions (*National Library of Latvia*, *Žižkov Television
+Tower*) — 17 of 61 matched and 3 were real errors. These three were not, and one 11-minute run
+said so more honestly than any amount of reasoning about it would have.
+
 ### 🔴 A recorded verdict can be WRONG, and suppressing it makes that permanent (2026-09-21)
 
 `spine-match.py` learned to read `checks/spine-verdicts.json` and stop re-listing findings a human
