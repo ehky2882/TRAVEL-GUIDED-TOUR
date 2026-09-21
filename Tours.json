@@ -100302,7 +100302,7 @@
     {
       "id": "6643f8c3-32aa-5d28-a303-b4dcc2b16665",
       "name": "Anthony & Son Panini Shoppe",
-      "description": null,
+      "description": "An Italian-American sandwich counter at 433 Graham Avenue in Williamsburg, Brooklyn, building heroes and panini to order over a deli case.",
       "latitude": 40.7179315,
       "longitude": -73.9452219,
       "city": "Brooklyn",
@@ -100363,7 +100363,7 @@
     {
       "id": "14b1a16a-0742-551b-b6ce-4dffcabb6a1c",
       "name": "L'Industrie Pizzeria",
-      "description": null,
+      "description": "A pizzeria at 254 South 2nd Street in Williamsburg, Brooklyn, selling New York slices over the counter rather than whole pies to a table. The address has become a reference point in arguments about New York pizza.",
       "latitude": 40.7115764,
       "longitude": -73.9578034,
       "city": "Brooklyn",
@@ -100393,7 +100393,7 @@
     {
       "id": "f73ac866-9cfd-536b-b8ce-7e0916f543fd",
       "name": "Namkeen",
-      "description": null,
+      "description": "A Pakistani-American fried chicken shop at 338 Bedford Avenue in Williamsburg, Brooklyn, running its sandwiches through a range of heat levels and its own masala — the Nashville and the tikka-sauced Tikkaville among them. Namkeen means savoury in Urdu and Hindi.",
       "latitude": 40.7128869,
       "longitude": -73.962588,
       "city": "Brooklyn",
@@ -100423,7 +100423,7 @@
     {
       "id": "b435b825-063a-501f-920a-4d9d54f716f6",
       "name": "Red Hook Lobster Pound",
-      "description": null,
+      "description": "A lobster roll shop at 284 Van Brunt Street in Red Hook, serving both regional styles from its own menu: Maine, cold and tossed with mayo, and Connecticut, poached in butter and lemon and served warm. Both come on a top-split New England bun, buttered and toasted.",
       "latitude": 40.6797691,
       "longitude": -74.0102925,
       "city": "Brooklyn",
@@ -100453,7 +100453,7 @@
     {
       "id": "5459f4b4-fd2a-5298-9602-d05b12ad56d4",
       "name": "Memento Park",
-      "description": null,
+      "description": "An open-air park south-west of Budapest where the monumental statuary of the communist decades was gathered after 1989 rather than destroyed — Lenin, Marx, Béla Kun, Red Army soldiers — set out along paths by the architect Ákos Eleőd. The arrangement is deliberately anticlimactic: the figures stand on level ground in a field, stripped of the squares that gave them their authority.",
       "latitude": 47.4276,
       "longitude": 18.9847,
       "city": "Budapest",
@@ -100483,7 +100483,7 @@
     {
       "id": "8c266cf1-cf63-5d51-828f-38f30f191a6d",
       "name": "Canterbury Cathedral",
-      "description": null,
+      "description": "The mother church of the Anglican Communion and seat of the Archbishop of Canterbury, founded in 597. Thomas Becket was murdered in the north-west transept in 1170 and the shrine that followed made the cathedral one of medieval Europe's great pilgrimage destinations — the journey Chaucer's pilgrims are making. The shrine itself was destroyed in 1538; a lit candle marks where it stood.",
       "latitude": 51.2798,
       "longitude": 1.082766,
       "city": "Canterbury",
@@ -100793,7 +100793,7 @@
     {
       "id": "24a66b96-9151-5407-95ca-f210480db97e",
       "name": "Kulturpalast Dresden",
-      "description": null,
+      "description": "The city's 1969 palace of culture, a flat-roofed modernist box on the Altmarkt, kept when much of East German Dresden was not. Its west wall carries the monumental mural known as Der Weg der roten Fahne — The Path of the Red Flag — so the building and the mural are one address. The interior was rebuilt around a new concert hall in 2017.",
       "latitude": 51.0511,
       "longitude": 13.7385,
       "city": "Dresden",
@@ -101558,7 +101558,7 @@
     {
       "id": "96c23548-fb5c-5bff-9a26-02ccc2507025",
       "name": "Michelin House",
-      "description": null,
+      "description": "The tyre company's London headquarters of 1911 on the Fulham Road, by François Espinasse: an Art Nouveau building in ceramic and glass, with stained glass and tilework showing Bibendum, the Michelin Man, and early motor-racing scenes. It has housed a restaurant and shop since Terence Conran and Paul Hamlyn restored it in the 1980s.",
       "latitude": 51.4931005,
       "longitude": -0.1684098,
       "city": "London",
@@ -102367,7 +102367,7 @@
     {
       "id": "4303b5c2-5cdc-5727-b624-7bce3eb927f0",
       "name": "All'Antico Vinaio on Sullivan Street",
-      "description": null,
+      "description": "The New York outpost of the Florentine sandwich shop, building the same schiacciata — flat bread split and filled with cured meats, cheeses and spreads — that draws the queues on Via dei Neri.",
       "latitude": 40.7295949,
       "longitude": -73.9996291,
       "city": "New York",
@@ -102745,7 +102745,7 @@
     {
       "id": "d3fd878f-e9cc-56a5-9fd3-89bee6a86453",
       "name": "Little Kirin",
-      "description": null,
+      "description": "A pan-Asian sandwich shop at 81 St Marks Place in the East Village, building a short menu on crusty ciabatta — pho brisket, five-spice braised pork — each of which can be had as a rice bowl instead.",
       "latitude": 40.7278071,
       "longitude": -73.985483,
       "city": "New York",
@@ -102917,7 +102917,7 @@
     {
       "id": "ea3ca547-bfd0-5897-9813-43f8e79ce0b5",
       "name": "One Vanderbilt",
-      "description": null,
+      "description": "Kohn Pedersen Fox's 1,401-foot tower beside Grand Central Terminal, completed in 2020, its four tapering volumes cut away at the base to open sightlines to the terminal's cornice. Summit, the observation and mirrored-installation floors near the top, is part of the same building rather than a separate attraction.",
       "latitude": 40.752974,
       "longitude": -73.97854,
       "city": "New York",
@@ -103045,7 +103045,7 @@
     {
       "id": "bfeb1c91-2f31-5dc1-b57a-eb7847017e20",
       "name": "Soothr",
-      "description": null,
+      "description": "A Thai noodle bar at 204 East 13th Street in the East Village, opened by friends who grew up in different regions of Thailand and cook accordingly. The name means recipe.",
       "latitude": 40.7323273,
       "longitude": -73.9873238,
       "city": "New York",
@@ -103697,7 +103697,7 @@
     {
       "id": "8aab9a75-0dd4-54c9-b7dd-d2bc5c9515d2",
       "name": "Edith Farnsworth House",
-      "description": null,
+      "description": "Mies van der Rohe's weekend house of 1951 on the Fox River at Plano, Illinois — a single glazed room floating on eight steel columns, white-painted and raised above the floodplain. Commissioned by the physician Edith Farnsworth, it ended in a lawsuit between client and architect, and her name was restored to the house in 2021.",
       "latitude": 41.635019,
       "longitude": -88.5357167,
       "city": "Plano",
@@ -103791,7 +103791,7 @@
     {
       "id": "e2e3e1e6-2d0a-55c7-b933-27210329326a",
       "name": "Walkway Over the Hudson",
-      "description": null,
+      "description": "A railway bridge of 1889 between Poughkeepsie and Highland, abandoned after a fire in 1974 and reopened in 2009 as a linear state park. It carries a footpath 212 feet above the river for a little over a mile, and is among the longest elevated pedestrian bridges in the world.",
       "latitude": 41.7106438,
       "longitude": -73.949931,
       "city": "Poughkeepsie",
@@ -103806,7 +103806,7 @@
     {
       "id": "d8418d33-28a2-5c9c-b531-a49263bf6717",
       "name": "Strahov Library",
-      "description": null,
+      "description": "The library of the Premonstratensian monastery at Strahov in Prague, in two great halls: the Theological Hall of the 1670s under stuccoed barrel vaults, and the Philosophical Hall of the 1790s, whose walnut cases rise the full height of the room beneath Anton Maulbertsch's ceiling fresco. A cabinet of curiosities and a locked case of books once on the Index sit between them.",
       "latitude": 50.085878,
       "longitude": 14.389242,
       "city": "Prague",
@@ -104088,7 +104088,7 @@
     {
       "id": "3a55b93e-4a76-5f75-92b3-7d70d1aa3df7",
       "name": "La Piscine",
-      "description": null,
+      "description": "Roubaix's art and industry museum, installed in a municipal swimming baths of 1932 by Albert Baert. The Art Deco pool remains the spine of the museum — sculpture is shown standing in and along the water, under the sunburst window at the far end — so the bath and the gallery are one building and one name.",
       "latitude": 50.6925142,
       "longitude": 3.1679469,
       "city": "Roubaix",
@@ -104328,7 +104328,7 @@
     {
       "id": "5cc1de0b-3356-516a-8d4c-028a4038d500",
       "name": "Fremont Lenin Statue",
-      "description": null,
+      "description": "A bronze Lenin, cast in Czechoslovakia and erected in Poprad in 1988, pulled down the following year and bought from a scrapyard by an American who shipped it home. It has stood on a corner in Fremont, Seattle, since 1995, privately owned and nominally for sale, and the argument about whether it should stay has never quite settled.",
       "latitude": 47.6512,
       "longitude": -122.3506,
       "city": "Seattle",
@@ -104557,7 +104557,7 @@
     {
       "id": "8b6d6f5e-8fb8-52d7-9c7a-ddfca3547039",
       "name": "Gotokuji Temple",
-      "description": null,
+      "description": "A Buddhist temple in Setagaya widely held to be the origin of the maneki-neko, the beckoning cat. Thousands of white cat figures, left as offerings and never removed, fill tiered racks in the temple grounds. The legend has a lord sheltering here after a cat waved him in from a storm.",
       "latitude": 35.648498,
       "longitude": 139.647263,
       "city": "Tokyo",
@@ -104664,7 +104664,7 @@
     {
       "id": "4d1c758b-a114-530b-a958-66ba3e9068c0",
       "name": "Todoroki Valley",
-      "description": null,
+      "description": "A ravine cut by the Yazawa River in Setagaya, roughly a kilometre long and the only valley of its kind inside Tokyo's twenty-three wards. A path follows the stream below the level of the surrounding city, which is what makes it quiet.",
       "latitude": 35.605057,
       "longitude": 139.645742,
       "city": "Tokyo",
@@ -105056,7 +105056,7 @@
     {
       "id": "70df0eff-080a-5375-be88-f23ab9d5ee33",
       "name": "Fondazione Querini Stampalia",
-      "description": null,
+      "description": "A Venetian palace library and museum whose ground floor and garden were rebuilt by Carlo Scarpa between 1959 and 1963. Rather than seal the building against acqua alta, Scarpa let the water in: a channel, concrete and Istrian stone detailed to be flooded and to drain, so the tide becomes part of the architecture.",
       "latitude": 45.4364575,
       "longitude": 12.3410349,
       "city": "Venice",
@@ -105086,7 +105086,7 @@
     {
       "id": "71791063-0ee2-53fb-94b2-8714ed7533c1",
       "name": "National Geographic Museum of Exploration",
-      "description": null,
+      "description": "The National Geographic Society's public museum at its Washington headquarters on 17th Street, showing the expeditions, photography and specimens the Society has funded since 1888.",
       "latitude": 38.9049611,
       "longitude": -77.0375484,
       "city": "Washington",
@@ -105197,7 +105197,7 @@
     {
       "id": "d64ca7fb-b9d5-57d4-b717-c6db7d42be9c",
       "name": "Yoyogi National Gymnasium",
-      "description": null,
+      "description": "Kenzo Tange's gymnasium for the 1964 Tokyo Olympics, in Yoyogi Park between Harajuku Station and Meiji Shrine. Two offset semi-circles in plan, with a suspended roof slung from cables between two concrete towers and falling away to a low curving base — a tent set down on the park rather than a slab raised over it.",
       "latitude": 35.6675,
       "longitude": 139.700278,
       "city": "Tokyo",
@@ -105212,7 +105212,7 @@
     {
       "id": "347800ff-abe5-5467-90f7-cfe2b26fa2b0",
       "name": "Toei Kyoto Studio Park",
-      "description": null,
+      "description": "A working film studio in Uzumasa that admits visitors to its standing sets: wooden shop fronts, clay roofs and stone paths built to be filmed, and filmed continuously since the 1920s. Kyoto became Japan's centre for jidaigeki period drama for the same reason it was the imperial capital — its historic fabric survived.",
       "latitude": 35.016389,
       "longitude": 135.708333,
       "city": "Kyoto",
@@ -105227,7 +105227,7 @@
     {
       "id": "fd256ebb-6668-5475-a274-5b7abaebf10b",
       "name": "One World Trade Center",
-      "description": null,
+      "description": "Completed in 2014 to 1,776 feet, the year of American independence and a deliberate figure. David Childs of Skidmore, Owings and Merrill chamfered a square base progressively into an octagon at mid-height and back to a rotated square at the top, so the silhouette appears to twist. It does not stand on either original tower's footprint.",
       "latitude": 40.713,
       "longitude": -74.0135,
       "city": "New York",
@@ -105242,7 +105242,7 @@
     {
       "id": "5f233aed-4777-5d7f-af12-a6e6337c1d5b",
       "name": "Chrysler Building",
-      "description": null,
+      "description": "William Van Alen's 1930 tower at 42nd Street and Lexington Avenue, seventy-seven storeys of brick and steel under a stainless-steel crown. It is a billboard for a car company read top to bottom: eagles modelled on Chrysler hood ornaments project from the sixty-first floor, with hubcaps banded lower down.",
       "latitude": 40.751430555,
       "longitude": -73.975719444,
       "city": "New York",
@@ -105257,7 +105257,7 @@
     {
       "id": "a37fb9f6-d8d3-5943-abfb-c4c11db02193",
       "name": "Burj Khalifa",
-      "description": null,
+      "description": "Opened in 2010 on a three-lobed plan loosely modelled on a desert flower, rising through a spiral of setbacks that narrow as they climb. The changing profile is structural rather than decorative: at that height wind organises into rhythmic gusts strong enough to shake a building, and a shape that keeps changing refuses to let them build.",
       "latitude": 25.197222222,
       "longitude": 55.274166666,
       "city": "Dubai",
@@ -105272,7 +105272,7 @@
     {
       "id": "c086784d-e554-5c96-8c42-f5777f9a288c",
       "name": "Guggenheim Museum Bilbao",
-      "description": null,
+      "description": "Frank Gehry's museum of 1997 on the Nervión, its titanium volumes curving above the river on a former dockside industrial site. Its effect on the city's fortunes was immediate enough to give the language a phrase, the Bilbao effect.",
       "latitude": 43.26883,
       "longitude": -2.934099,
       "city": "Bilbao",
@@ -105288,7 +105288,7 @@
     {
       "id": "b34e1636-033b-5718-b7f8-a56db5533e06",
       "name": "Lake Point Tower",
-      "description": null,
+      "description": "A 1968 apartment tower on a spit east of Lake Shore Drive, and the only building in Chicago standing east of the drive on the lakefront. Its curved bronze-glass walls follow a three-lobed plan drawn from an unbuilt Mies van der Rohe project of 1922, by two of his students, Schipporeit and Heinrich.",
       "latitude": 41.891666666,
       "longitude": -87.612222222,
       "city": "Chicago",
@@ -105303,7 +105303,7 @@
     {
       "id": "32ebbc5e-9fa6-56fa-b777-cf189a867d7e",
       "name": "The Shard",
-      "description": null,
+      "description": "Renzo Piano's tapering glass spike near London Bridge, completed in 2012 and the tallest building in the United Kingdom. The facets lean inwards without quite meeting, so the top dissolves into an unfinished point rather than closing.",
       "latitude": 51.504444444,
       "longitude": -0.086666666,
       "city": "London",
@@ -105319,7 +105319,7 @@
     {
       "id": "7244d3ac-c005-5cee-8ab1-1913e6c8c221",
       "name": "30 St Mary Axe",
-      "description": null,
+      "description": "Norman Foster's 2004 tower in the City of London, 41 storeys curved like a pinecone, swelling at the middle and tapering at the top. Universally called the Gherkin, so the address and the nickname describe one building. It was the first new City skyscraper in a generation, and the towers that followed came after it.",
       "latitude": 51.514444444,
       "longitude": -0.080277777,
       "city": "London",
@@ -105334,7 +105334,7 @@
     {
       "id": "3ecd8256-6b25-50c7-85e4-601e5627d187",
       "name": "20 Fenchurch Street",
-      "description": null,
+      "description": "Rafael Viñoly's City of London tower of 2014, wider at the top than the bottom and known to everyone as the Walkie-Talkie, so the address and the nickname name one building. Its concave south face briefly concentrated reflected sunlight onto the street below before permanent shading was fitted; the public Sky Garden occupies the top three floors.",
       "latitude": 51.511277777,
       "longitude": -0.083527777,
       "city": "London",
@@ -105349,7 +105349,7 @@
     {
       "id": "066613fe-426b-5be3-a6d3-98ad6710ac20",
       "name": "Transamerica Pyramid",
-      "description": null,
+      "description": "William Pereira's 1972 tower on the site of the old Montgomery Block. Attacked as a gimmick when it went up, its taper — drawn to throw less shadow and let more light down to the streets — became the defining shape of the San Francisco skyline.",
       "latitude": 37.795135,
       "longitude": -122.402748,
       "city": "San Francisco",
@@ -105364,7 +105364,7 @@
     {
       "id": "4ea3f660-cf59-53dc-aa9c-cd5505b4846c",
       "name": "432 Park Avenue",
-      "description": null,
+      "description": "Rafael Viñoly's 2015 residential tower, 1,396 feet tall on a footprint of roughly ninety-three feet square — for a time the slenderest of the Midtown supertalls. The facade is a plain grid of square windows in white concrete, and two-storey open floors are left at intervals to let wind pass straight through.",
       "latitude": 40.761666666,
       "longitude": -73.971944444,
       "city": "New York",
@@ -105379,7 +105379,7 @@
     {
       "id": "3814e76f-3c03-50cb-a9f6-dff530df1cd2",
       "name": "Rio de Janeiro Cathedral",
-      "description": null,
+      "description": "The Catedral Metropolitana de Sao Sebastiao, begun in 1964 on the feast day of Rio's patron saint and built through the 1960s and 70s to Edgar de Oliveira da Fonseca's design. Its truncated cone is usually traced to Mayan step-pyramids rather than to Gothic or Baroque models, following the Vatican's reforms toward a congregation gathered around the altar.",
       "latitude": -22.910925,
       "longitude": -43.180711,
       "city": "Rio de Janeiro",
@@ -105394,7 +105394,7 @@
     {
       "id": "1b66158e-e381-5d40-a5d5-0252a34e2cb1",
       "name": "56 Leonard Street",
-      "description": null,
+      "description": "Herzog & de Meuron's 2016 Tribeca tower, its floor plates shifted and cantilevered so the upper storeys read as stacked boxes — the reason it is called the Jenga building. Anish Kapoor's polished sculpture, known as the Bean, sits wedged beneath one corner at street level.",
       "latitude": 40.7177,
       "longitude": -74.0064,
       "city": "New York",
@@ -105410,7 +105410,7 @@
     {
       "id": "8d16beb9-1d1e-5858-9043-3b8adb1b8102",
       "name": "Absolute World",
-      "description": null,
+      "description": "Two residential towers in Mississauga completed in 2012 to a design by MAD Architects, each floor plate rotated a few degrees from the one below so the buildings twist through their full height. The curve of the taller tower earned them the local name the Marilyn Monroe towers.",
       "latitude": 43.5946,
       "longitude": -79.6354,
       "city": "Mississauga",
@@ -105425,7 +105425,7 @@
     {
       "id": "64b660a9-eca4-5a4e-b412-86d5228d83a9",
       "name": "Leaning Tower of Pisa",
-      "description": null,
+      "description": "The free-standing campanile of Pisa's cathedral, begun in 1173 and leaning before the third storey was finished because the ground beneath one side is soft. Construction stopped for most of a century, and the upper storeys were built at an angle to compensate, which is why the tower is slightly curved. Work between 1993 and 2001 reduced the tilt and stabilised it.",
       "latitude": 43.72301,
       "longitude": 10.396624,
       "city": "Pisa",
@@ -105440,7 +105440,7 @@
     {
       "id": "41d484b6-6ac6-5254-b6ac-192b4afe5697",
       "name": "MetLife Building",
-      "description": null,
+      "description": "The 1963 tower at 200 Park Avenue, built as the Pan Am Building to designs by Emery Roth & Sons with Walter Gropius and Pietro Belluschi. It straddles the tracks behind Grand Central and closed the view down Park Avenue, which made it one of the most resented buildings in the city and helped drive the preservation movement that saved the terminal.",
       "latitude": 40.753333333,
       "longitude": -73.976666666,
       "city": "New York",
@@ -105455,7 +105455,7 @@
     {
       "id": "ed419fb7-e8d7-5298-94ad-ae8df06e3ff3",
       "name": "One Yonge Street",
-      "description": null,
+      "description": "The Toronto Star building of 1971 at the foot of Yonge Street, a concrete-framed tower on the waterfront that housed the newspaper's offices and presses, and now the base of a much larger redevelopment around it.",
       "latitude": 43.6422,
       "longitude": -79.3744,
       "city": "Toronto",
@@ -105470,7 +105470,7 @@
     {
       "id": "d87616bf-3bfb-5e87-baba-f066007beced",
       "name": "Petronas Towers",
-      "description": null,
+      "description": "César Pelli's twin towers of 1998 in Kuala Lumpur, the tallest buildings in the world until 2004 and still the tallest twin towers. The floor plan is drawn from Islamic geometry — interlocking squares filled out with arcs — and a double-decker skybridge links the towers at the forty-first and forty-second floors.",
       "latitude": 3.157777777,
       "longitude": 101.711666666,
       "city": "Kuala Lumpur",
@@ -105485,7 +105485,7 @@
     {
       "id": "ebb398fb-ec83-5ee4-9815-3eaba9401325",
       "name": "Hearst Tower",
-      "description": null,
+      "description": "Norman Foster's 2006 tower rising out of the shell of Joseph Urban's six-storey Hearst Magazine Building of 1928, which had always been intended to carry a tower and waited seventy-eight years for one. The diagrid frame sets triangles four floors high and uses markedly less steel than a conventional frame.",
       "latitude": 40.766555555,
       "longitude": -73.983611111,
       "city": "New York",
@@ -105500,7 +105500,7 @@
     {
       "id": "46dcb0ff-0d16-5f72-a3ec-8d79db6f672b",
       "name": "Casa da Música",
-      "description": null,
+      "description": "Rem Koolhaas and OMA's concert hall on the Rotunda da Boavista, with Ellen van Loon as project architect. A white concrete polyhedron set on a sloping travertine plaza, angular and asymmetric with no obvious front or back. Commissioned in 1999 for Porto's turn as European Capital of Culture.",
       "latitude": 41.158886111,
       "longitude": -8.630711111,
       "city": "Porto",
@@ -105515,7 +105515,7 @@
     {
       "id": "4821f454-51df-5c1b-9560-961952d619a5",
       "name": "Philharmonie Luxembourg",
-      "description": null,
+      "description": "Christian de Portzamparc's concert hall of 2005 on the Kirchberg plateau, wrapped in an oval colonnade of 823 slender white steel columns standing in several ranks, so the building reads as a filter rather than a wall.",
       "latitude": 49.61849444,
       "longitude": 6.14208889,
       "city": "Luxembourg",
@@ -105530,7 +105530,7 @@
     {
       "id": "5ea487d0-a904-5ffa-a8c2-90d38e2d8c43",
       "name": "House of Prime Rib",
-      "description": null,
+      "description": "A single-dish restaurant at 1906 Van Ness Avenue, open since 1949, serving 21-day aged prime rib carved to order at the table from silver trolleys.",
       "latitude": 37.7933913,
       "longitude": -122.4225436,
       "city": "San Francisco",
@@ -105545,7 +105545,7 @@
     {
       "id": "c281b93f-ba5e-5075-99b9-52771222f3d1",
       "name": "Pecking House",
-      "description": null,
+      "description": "Eric Huang's fried chicken restaurant, begun as a pandemic pop-up in 2020 and settled in Brooklyn in 2022. The chicken is Sichuan-chili, set against the Taiwanese cooking he grew up with and the fine-dining kitchens he came from — Eleven Madison Park, Gramercy Tavern, Cafe Boulud. Demand at the start ran to a waiting list in the tens of thousands.",
       "latitude": 40.7132144,
       "longitude": -73.9934677,
       "city": "New York",
@@ -105560,7 +105560,7 @@
     {
       "id": "82a99d04-0df0-5df9-ae19-a9d178989f80",
       "name": "Kossar's",
-      "description": null,
+      "description": "A bakery at 367 Grand Street on the Lower East Side, opened in 1936 as Mirsky and Kossar's and the oldest bialy bakery in the United States. A bialy is flat, onion-centred and baked rather than boiled, which is what makes it not a bagel; Kossar's makes both.",
       "latitude": 40.716407,
       "longitude": -73.988787,
       "city": "New York",
@@ -105575,7 +105575,7 @@
     {
       "id": "e6529570-a299-5bf6-9a99-44fa92305c82",
       "name": "Una Pizza Napoletana",
-      "description": null,
+      "description": "Anthony Mangieri's pizzeria at 175 Orchard Street on the Lower East Side. He has been making naturally leavened, wood-fired Neapolitan pizza since 1996, on a short menu stripped to a few ingredients. It was placed first in the 50 Top Pizza world ranking for 2024.",
       "latitude": 40.7217167,
       "longitude": -73.9884995,
       "city": "New York",
@@ -105590,7 +105590,7 @@
     {
       "id": "a43e25bf-bd49-5d04-b1e1-ee378618d6ec",
       "name": "Peter Pan Donut & Pastry Shop",
-      "description": null,
+      "description": "A counter-service doughnut shop at 727 Manhattan Avenue in Greenpoint, Brooklyn, family-owned since the 1950s and still frying and hand-glazing on site.",
       "latitude": 40.7260665,
       "longitude": -73.9522298,
       "city": "New York",
@@ -105605,7 +105605,7 @@
     {
       "id": "3051b68b-7719-5420-8484-a7d986593691",
       "name": "Hawksmoor NYC",
-      "description": null,
+      "description": "The New York room of the London steakhouse group, at 109 East 22nd Street inside the Assembly Hall of the United Charities Building — an 1893 National Historic Landmark closed to the public for more than a century before the restoration that opened it, under a 26-foot vaulted ceiling. Dry-aged beef over charcoal, and bone marrow as a fixture rather than a special.",
       "latitude": 40.7393841,
       "longitude": -73.9862985,
       "city": "New York",
@@ -105620,7 +105620,7 @@
     {
       "id": "94da36ea-570c-5e58-9496-de5b0aac36d0",
       "name": "Mark's Off Madison",
-      "description": null,
+      "description": "Mark Strausman's restaurant and bakery at 41 Madison Avenue, off the corner of East 26th Street. It puts the two halves of his cooking in one kitchen — the rustic Italian he trained in and made his name on at Freds at Barneys, and the Jewish food of his New York upbringing, down to bagels and bialys at the bakery counter.",
       "latitude": 40.7424702,
       "longitude": -73.9862953,
       "city": "New York",
@@ -105636,7 +105636,7 @@
     {
       "id": "bdeebc71-f137-5513-be44-c5f49638182e",
       "name": "Round Swamp Farm",
-      "description": null,
+      "description": "A Lester family farm stand at 184 Three Mile Harbor Road in East Hampton, on land the family has farmed since 1721. Carolyn Lester Snyder began selling produce from a red wagon more than fifty years ago; four generations now run it, selling their own produce alongside prepared food, baked goods and local seafood.",
       "latitude": 40.9853229,
       "longitude": -72.1831331,
       "city": "East Hampton",
@@ -105651,7 +105651,7 @@
     {
       "id": "e5fdb0ca-04d9-5f85-9b8a-8928f1f747b6",
       "name": "St. Peter's Basilica",
-      "description": null,
+      "description": "The basilica over the traditional burial place of the apostle Peter, rebuilt across the sixteenth and seventeenth centuries by Bramante, Michelangelo, Maderno and Bernini among others. Michelangelo's dome carries the interior; Bernini's baldachin stands beneath it over the papal altar, and his colonnade encloses the square outside.",
       "latitude": 41.9021569,
       "longitude": 12.4537105,
       "city": "Vatican City",
@@ -105666,7 +105666,7 @@
     {
       "id": "4a41b52c-271d-513c-ad81-b9b72dc8f054",
       "name": "Turda Salt Mine",
-      "description": null,
+      "description": "A salt mine in Transylvania worked from the medieval period until 1932, reopened to visitors in the 1990s and fitted out in 2010 with lighting, a ferris wheel and boats on the lake at the bottom of the Rudolf chamber. The salt keeps the air at a constant temperature year-round, which is why it was used as a bomb shelter and later a cheese store.",
       "latitude": 46.5877045,
       "longitude": 23.787327,
       "city": "Turda",
@@ -105681,7 +105681,7 @@
     {
       "id": "deb71ac8-f5cb-5c60-9710-65c3e9b39d2d",
       "name": "Szabó Ervin Library",
-      "description": null,
+      "description": "Budapest's central municipal library, housed since 1931 in the Wenckheim Palace of 1889 on Reviczky utca. The former family rooms — oak panelling, plaster ceilings, a gilded ballroom — are still in use as reading rooms, so a neo-Baroque palace and a public lending library are one building.",
       "latitude": 47.4894505,
       "longitude": 19.0648989,
       "city": "Budapest",
@@ -105696,7 +105696,7 @@
     {
       "id": "f82fea73-444d-5c2b-8396-99e4df350f18",
       "name": "OTI building",
-      "description": null,
+      "description": "The headquarters built in the 1930s for Hungary's national social-insurance institute, and for a time the tallest building in Budapest — the city's first thing resembling a skyscraper. It was later demolished.",
       "latitude": 47.4955556,
       "longitude": 19.0830556,
       "city": "Budapest",
@@ -105711,7 +105711,7 @@
     {
       "id": "43216dc4-4ca0-519e-ac0c-08374890a3f0",
       "name": "Hungarian University of Fine Arts",
-      "description": null,
+      "description": "Hungary's national art academy on Andrássy Avenue, in a building of 1877 by Lajos Rauscher and Adolf Láng. Its anatomy department, where students draw from casts and specimens, is part of the same historic teaching building.",
       "latitude": 47.5071743,
       "longitude": 19.0670281,
       "city": "Budapest",
@@ -105726,7 +105726,7 @@
     {
       "id": "e3631bff-690f-537d-b689-f512f0232723",
       "name": "Rijksmuseum van Oudheden",
-      "description": null,
+      "description": "The Dutch national museum of antiquities in Leiden. The Temple of Taffeh stands in its entrance hall: a small Nubian temple of the first century AD, given to the Netherlands by Egypt for its help in the Aswan rescue campaign, dismantled and rebuilt here in 1979 — so the temple and the museum are one address.",
       "latitude": 52.1584375,
       "longitude": 4.4859375,
       "city": "Leiden",
@@ -105741,7 +105741,7 @@
     {
       "id": "a45c3aa9-f68e-5f42-9251-f08780d3579c",
       "name": "Willis Tower",
-      "description": null,
+      "description": "Not one tower but nine square tubes bundled together, each about seventy-five feet across, tied into a single block at the ground and stopping at different heights — two at the fiftieth floor, two at the sixty-sixth, three near the ninetieth, the last two carrying on to 1,450 feet. The stepped silhouette is tubes ending, not styling. The system is Fazlur Rahman Khan's.",
       "latitude": 41.87861,
       "longitude": -87.63583,
       "city": "Chicago",
@@ -105756,7 +105756,7 @@
     {
       "id": "fdb5f38d-688f-5809-8639-80ce310650f6",
       "name": "150 North Riverside",
-      "description": null,
+      "description": "A 2017 office tower on a narrow riverside site in Chicago, carried on a central core only about a quarter as wide as the floors above. Rail lines and the river left nothing else to build on, so the building stands on that spine and cantilevers out over both, with water-filled tuned mass dampers at the top to control sway.",
       "latitude": 41.88511,
       "longitude": -87.63867,
       "city": "Chicago",
@@ -105771,7 +105771,7 @@
     {
       "id": "26e1b2d1-ddb7-5f12-af94-be7248c65c01",
       "name": "Victor Churchill",
-      "description": null,
+      "description": "The Melbourne flagship of a butcher's brand in its hundred-and-forty-fourth year, opened in November 2021 inside a former Edwardian bank of 1910 on Armadale's High Street. Rod Faucheux designed it with Anthony Puharich, fourth generation of the family, to sit with the street rather than repeat the Sydney shop.",
       "latitude": -37.85526,
       "longitude": 145.020215,
       "city": "Melbourne",
@@ -105786,7 +105786,7 @@
     {
       "id": "c67081f2-6237-5baf-af54-05a01cffe707",
       "name": "Chez Alain Miam Miam",
-      "description": null,
+      "description": "A sandwich counter at 26 Rue Charlot in the 3rd arrondissement, made to order on a plancha in front of you: gruyère, cured ham, vegetables and herbs in a split baguette.",
       "latitude": 48.8622884,
       "longitude": 2.3620039,
       "city": "Paris",
@@ -105802,7 +105802,7 @@
     {
       "id": "a972c1a5-ea58-5cba-8f20-e2a2a77c5d39",
       "name": "Essanay Studios",
-      "description": null,
+      "description": "The Uptown studio of the Essanay Film Manufacturing Company, founded in 1907, where Charlie Chaplin worked during 1915 and Gloria Swanson began. Chicago was a centre of American film production before the industry moved west for the light; the terracotta entrance with the company's name survives on West Argyle Street.",
       "latitude": 41.97212,
       "longitude": -87.66383,
       "city": "Chicago",
@@ -105817,7 +105817,7 @@
     {
       "id": "f25744f3-ba0f-5dd4-aae8-fb590db8757b",
       "name": "Fairmont Banff Springs",
-      "description": null,
+      "description": "A Canadian Pacific Railway hotel opened in 1888 in the Bow Valley and rebuilt in stone through the 1920s in the Scottish Baronial manner, its towers and steep roofs set against the mountains. The railway built it to give people a reason to ride the line west.",
       "latitude": 51.16408,
       "longitude": -115.56177,
       "city": "Banff",
@@ -105832,7 +105832,7 @@
     {
       "id": "a6d3edc1-825b-5b75-b83e-091fbf7c7779",
       "name": "Pinacoteca di Brera",
-      "description": null,
+      "description": "Milan's principal picture gallery, in the Palazzo Brera. Antonio Canova's Napoleon stands in the courtyard cast as Mars the Peacemaker — not a general in uniform but an idealised nude god. The marble original is inside; this bronze was made for Eugene de Beauharnais, Napoleon's stepson and Viceroy of Italy.",
       "latitude": 45.4721343,
       "longitude": 9.1878255,
       "city": "Milan",
@@ -105847,7 +105847,7 @@
     {
       "id": "86cd851d-49f8-5752-ac89-7e6502c6d74c",
       "name": "Stedelijk Museum",
-      "description": null,
+      "description": "Amsterdam's museum of modern and contemporary art and design, from Malevich and Mondrian onward. Its 1895 brick building gained a seamless white composite extension in 2012 that cantilevers out over the Museumplein and was instantly nicknamed the bathtub.",
       "latitude": 52.358,
       "longitude": 4.8799,
       "city": "Amsterdam",
@@ -105862,7 +105862,7 @@
     {
       "id": "750f83d5-1f0f-5060-86c1-0440b44b2c3f",
       "name": "Cirkelbroen",
-      "description": null,
+      "description": "Olafur Eliasson's bridge of 2015 where Christianshavns Kanal narrows, given to the city rather than commissioned from it. Five circular platforms step across in a staggered zigzag instead of a straight line, each carrying its own mast — the tallest twenty-five metres — with cables fanning to the railings like the rigging of a moored ship.",
       "latitude": 55.67243,
       "longitude": 12.58379,
       "city": "Copenhagen",
@@ -105877,7 +105877,7 @@
     {
       "id": "0de69908-2a9b-5aed-b252-c777c7b0b893",
       "name": "Jardin Majorelle",
-      "description": null,
+      "description": "The painter Jacques Majorelle bought this plot in 1923 and spent decades planting it: cactus gardens, bamboo, lily ponds and more than a hundred and thirty-five species from as far as Mexico and Madagascar, around a Cubist villa built for him by Paul Sinoir in 1931. The saturated ultramarine he painted it now carries his name. He opened the gates in 1947.",
       "latitude": 31.64147,
       "longitude": -8.00291,
       "city": "Marrakech",
@@ -105892,7 +105892,7 @@
     {
       "id": "44d2ca02-524c-528a-947e-93bb0e0e0ba4",
       "name": "Coal Drops Yard",
-      "description": null,
+      "description": "Two long brick sheds behind King's Cross where Victorian trains tipped coal, grain and ice straight onto canal barges. Derelict for most of the twentieth century, they were reworked by Thomas Heatherwick, who stretched their swooping roofs towards each other until they touch, keeping the industrial bones and the old name.",
       "latitude": 51.5358,
       "longitude": -0.12667,
       "city": "London",
@@ -105907,7 +105907,7 @@
     {
       "id": "2d9b85b9-dec6-5ba8-b160-0ce36cf5a4cc",
       "name": "Wilton's Music Hall",
-      "description": null,
+      "description": "Built in the 1850s behind a row of houses off Graces Alley, and the oldest surviving grand music hall in the world: one balconied room carried on slender barley-twist iron columns. It was conserved rather than restored, so the worn walls are the building's own.",
       "latitude": 51.51064,
       "longitude": -0.06689,
       "city": "London",
@@ -105922,7 +105922,7 @@
     {
       "id": "4bda1f8e-cdeb-5f18-abc8-26be2ce7cb7d",
       "name": "Museum of Modern Art (MoMA)",
-      "description": null,
+      "description": "Founded in November 1929 by Abby Aldrich Rockefeller, Lillie P. Bliss and Mary Quinn Sullivan in a rented apartment, ten days after the Wall Street crash, on the then-untested idea of a museum given entirely to contemporary art. The 53rd Street building has been expanded five times since, most recently by Diller Scofidio + Renfro in 2019.",
       "latitude": 40.7614,
       "longitude": -73.9776,
       "city": "New York",
@@ -105937,7 +105937,7 @@
     {
       "id": "682edf4e-3357-5403-9b73-e809cda8f7fd",
       "name": "The Royal Academy",
-      "description": null,
+      "description": "Founded in 1768 by a group of artists under George III, with Joshua Reynolds as its first president: Britain's first proper art school and its first self-governing body of artists. It has occupied Burlington House on Piccadilly — one of the few surviving great aristocratic mansions of the West End — since the 1860s.",
       "latitude": 51.5093,
       "longitude": -0.1396,
       "city": "London",
@@ -105952,7 +105952,7 @@
     {
       "id": "5377a51e-d991-553d-9e41-215eea61f3f3",
       "name": "Louvre",
-      "description": null,
+      "description": "A medieval fortress that became a royal palace and then the greatest public museum on earth, holding its collections inside the architecture of the French monarchy. I. M. Pei's glass pyramid, dropped into the Cour Napoleon in 1989 and furiously resisted at the time, is now the building's signature.",
       "latitude": 48.86082,
       "longitude": 2.3358,
       "city": "Paris",
@@ -105967,7 +105967,7 @@
     {
       "id": "00dd1310-c159-598f-a554-77de5912ee2a",
       "name": "Pont Alexandre III & Petit Palais",
-      "description": null,
+      "description": "Bridge and palace were built together for the 1900 Exposition Universelle and face each other across the Seine's edge, which is why they read as one place. The bridge, named for Tsar Alexander III, marks the Franco-Russian alliance in gilded winged figures on four columns; its single low steel arch was engineered not to block the view of the Invalides. The Petit Palais holds the city's fine-arts museum.",
       "latitude": 48.8638,
       "longitude": 2.31352,
       "city": "Paris",
@@ -105982,7 +105982,7 @@
     {
       "id": "a360706e-dcbb-5422-af1a-024dcf8eb1ea",
       "name": "Rietveld Schröder House",
-      "description": null,
+      "description": "Gerrit Rietveld's house of 1924 in Utrecht, built with and for Truus Schröder-Schräder and the only building carried out fully to De Stijl principles: intersecting planes in white, grey, black and primary colours. The upper floor has almost no fixed walls — sliding panels reconfigure it through the day.",
       "latitude": 52.0853302,
       "longitude": 5.1475754,
       "city": "Utrecht",
@@ -105997,7 +105997,7 @@
     {
       "id": "556918e1-d7a3-5477-b0be-6fc30dc7ecb8",
       "name": "Isabella Stewart Gardner Museum",
-      "description": null,
+      "description": "A Venetian-style palace built in Boston in 1903 to hold Isabella Stewart Gardner's collection, arranged by her and, by the terms of her will, unchangeable. In 1990 thirteen works were stolen in the largest unsolved art theft on record; their empty frames still hang where they were, because the will forbids rehanging.",
       "latitude": 42.338245,
       "longitude": -71.0991538,
       "city": "Boston",
@@ -106012,7 +106012,7 @@
     {
       "id": "5f8ef29a-8b6c-5fa3-b049-5eddf8b8c002",
       "name": "Miami Slice",
-      "description": null,
+      "description": "A small walk-in-only pizzeria at 1335 NE Miami Court on the northern edge of Downtown, selling by the slice — margherita through to versions with garlic confit cream, leeks and bacon. Named the city's best pizza by Miami New Times in 2024.",
       "latitude": 25.7877253,
       "longitude": -80.1929449,
       "city": "Miami",
@@ -106027,7 +106027,7 @@
     {
       "id": "3e72d7ee-6845-53b8-88a2-8cba929ee725",
       "name": "Taste of Heaven",
-      "description": null,
+      "description": "A soul food restaurant at 251 Jackson Street in East Williamsburg, opened in 2016 by Tony and Melody Vergara — he a former Teamster who grew up in the Cooper Park Houses a few streets away, cooking for family long before he cooked for a room. Barbecue ribs, jerk chicken and turkey wings, with cornbread on the house.",
       "latitude": 40.7171398,
       "longitude": -73.9405413,
       "city": "Brooklyn",
@@ -106042,7 +106042,7 @@
     {
       "id": "c841d86d-002b-5078-8734-7435072f1a07",
       "name": "Hungarian Parliament Building",
-      "description": null,
+      "description": "Imre Steindl's parliament on the Pest bank, built between 1885 and 1904 in Gothic Revival to a symmetrical plan around a central dome — for a long time the largest building in Hungary. Its library and the service tunnels that heat and cool it are part of the same structure.",
       "latitude": 47.5070496,
       "longitude": 19.0459186,
       "city": "Budapest",
@@ -106057,7 +106057,7 @@
     {
       "id": "95bdd26b-0d49-5827-b4c0-957a7d5302dc",
       "name": "Budafok Cellars",
-      "description": null,
+      "description": "A district in south Buda undercut by tens of kilometres of cellars quarried out of the limestone, used for wine storage for centuries and, in places, lived in — the cave-dwelling exhibition preserves one such home. The Saint Stephen barrel cellar is part of the same network.",
       "latitude": 47.4193965,
       "longitude": 19.0307833,
       "city": "Budapest",
