@@ -73,6 +73,33 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 State the population and make it add up (2026-09-21)
+
+Checking whether any two `places` shared a name, the query read `centroidLatitude` where the
+key is `latitude`. Every row came back `None`, the loop skipped **all 408**, and the output
+read:
+
+```
+same name + same city among PLACES: 0
+```
+
+**A zero from a loop that never ran is indistinguishable from a zero that means "clean".** It
+was caught only because the keys happened to be printed beside it — luck, not method.
+
+The fix is one line, and it is the cheapest verification habit in this file:
+
+```python
+print(f"places: {len(places)} · usable: {placed} · skipped: {skipped}")
+assert placed + skipped == len(places), "population does not add up"
+```
+
+The broken version fails that assertion instantly. It is the same rule `check-image-duplicates.py`
+learned the hard way — **read the counts a checker prints, not only its verdict** — except
+applied to a throwaway one-off query, which is exactly where nobody bothers. 🔴 **A quick check
+written to answer one question deserves the guard, because it will be believed like any other
+output**, and this one was written *by the session that was busy cataloguing this very defect
+in four other places.*
+
 ### 🔴 Half a cache-invalidation is worse than none (2026-09-21)
 
 `spine-lookup.py` keys every cached Wikidata answer by a digest of the entry's title,
@@ -2355,6 +2382,23 @@ fresh — and the thing being looked for was simply never printed.
 
 **The habit:** before concluding "none of mine are in here", check that the file could have
 contained them. `grep -c WARN file` against the header's own total answers it in one command.
+
+✅ **FIXED AT SOURCE on 2026-09-21 — the habit above is now a backstop, not a necessity.**
+`validate-tours-mirror.py` announces what it withheld (`… and 483 more warn(s) not shown —
+re-run with --limit 0`), takes `--limit N` / `--limit 0`, and prints a shape tally
+(`by kind: 331x no Theme tag · 192x no Place type tag`). 🔴 **The ERROR path was truncated
+the same way and was the more dangerous of the two** — 500 errors would have printed 40 and
+read as forty problems — and `validate-tours.swift` prints *every* finding, so the mirror had
+silently diverged from the thing it stands in for, in the direction of saying less.
+
+🔴 **The wider lesson is that this entry existed for a day and prescribed a workaround
+instead of a fix.** A trap written down is still a trap. When a lesson's remedy is "remember
+to check X by hand", ask whether the tool can be made to say X by itself — here it was
+four lines. 12 selftests and 9/9 mutants guard it, two of which exist only because mutation
+testing showed the guards could not fail: `summarise()` *returns* the hidden count while
+`report()` *prints* it, and **the printing was the entire bug**; and the tally assertion was
+vacuous, because `out.split("by kind:")[-1]` returns the whole output when the marker is
+absent.
 
 ## A check keyed on a non-unique field silently tests half its subject (2026-09-20)
 
