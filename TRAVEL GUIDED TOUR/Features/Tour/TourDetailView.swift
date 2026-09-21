@@ -854,11 +854,14 @@ struct TourDetailView: View {
                         .multilineTextAlignment(.leading)
 
                     if let caption = stop.caption {
-                        Text(caption)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
+                        // Captions are the creator's full text since 2026-09-21
+                        // (the pipeline used to cut them at 140 characters and
+                        // lose the address). Clamped here so a stop row stays a
+                        // row; 240 ≈ 3 lines at caption size on iPhone width.
+                        ExpandableText(text: caption,
+                                       font: AtlasTypography.caption,
+                                       lineLimit: 3,
+                                       overflowThreshold: 240)
                     }
 
                     Text(AtlasFormatters.duration(seconds: stop.audioDurationSeconds))

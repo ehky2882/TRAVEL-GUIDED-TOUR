@@ -618,7 +618,15 @@ def build_entry(*, url, meta, slug, maker, lat, lon, city, country,
             "id": stop_id,
             "order": 0,
             "title": title or f"A post by {handle}",
-            "caption": (caption[:140] or f"A post by {handle}."),
+            # 🔴 The WHOLE caption, not caption[:140]. That cut ran until
+            # 2026-09-21 and destroyed 2,375 of 5,463 captions, 2,320 of them
+            # mid-word — and creators put their ADDRESS LAST, so it landed on
+            # the most useful line in the text. "Modern Coffee House" shipped
+            # 22.9 km wrong, on Staten Island, because the postcode that told
+            # two East Broadways apart was in the tail we deleted. The clamp
+            # now lives at the DISPLAY site (Components/ExpandableText.swift),
+            # where it can be undone by a reader; a cut here cannot be.
+            "caption": (caption or f"A post by {handle}."),
             "latitude": lat,
             "longitude": lon,
             # 🔴 Empty audio + zero duration is the representation a fresh
@@ -731,8 +739,10 @@ def selftest() -> int:
                      created_at="2026-08-24", image_base="https://x/images")
     if len(e4["title"]) > 60:
         fails.append(f"title not truncated: {len(e4['title'])}")
-    if len(e4["stops"][0]["caption"]) > 140:
-        fails.append("caption not truncated")
+    # The caption is kept WHOLE on purpose — see the note at the write site.
+    # This asserts the opposite of what it used to: a long caption must survive.
+    if e4["stops"][0]["caption"] != long_caption:
+        fails.append("caption was truncated — the address lives in the tail")
 
     check("slugify", slugify("Hello, World! Again", "f"), "hello-world-again")
     check("slugify empty", slugify("!!!", "fallback"), "fallback")
