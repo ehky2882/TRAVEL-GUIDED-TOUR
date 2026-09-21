@@ -73,6 +73,49 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 Half a cache-invalidation is worse than none (2026-09-21)
+
+`spine-lookup.py` keys every cached Wikidata answer by a digest of the entry's title,
+coordinate and search bound, and re-asks when any of them moves. `spine/README.md` said so.
+It was true — **of the fetcher**. `spine-match.py`, which is what CI runs and what a human
+reads, never looked at the digest and printed the cached distance regardless.
+
+So the audit reported **all nine coordinates corrected the previous night as still broken.**
+Belgrade Tower read *2,329 m out* while sitting on Wikidata's own point — a 0 m agreement.
+Fifty-nine rows were stale; refreshing them took **9 queries** and moved CONFIRMS 1,764 → 1,778.
+
+Two things to take from it, and the second is the one that matters.
+
+**The nuisance direction is the harmless one.** Being told a fix is unfixed wastes a session.
+But the same blindness runs the other way: **a coordinate moved to the WRONG place keeps
+reporting its OLD distance**, so the one check built to police such a move cannot see it, and
+CI stays green. The visible symptom was the benign half of a silent defect.
+
+**A stale number is a confident wrong answer, not a weak one.** The fix is not to flag such a
+row and print its distance anyway — it is to print **no distance at all**. `spine-match.py`
+bands them `STALE`, leaves them out of the coverage denominator (coverage is the claim
+"Wikidata knows this subject", which a row cached against an entry we no longer hold does not
+support), and exits **2 — COULD NOT VERIFY**, the same treatment `NOT-ASKED` already had.
+
+Three general rules:
+
+- **An invalidation rule belongs to every reader of the cache, not to the writer.** If only the
+  fetcher checks the digest, the cache is unversioned from the point of view of everyone else.
+- **Documentation describing an invariant is not evidence the invariant holds.** The README's
+  promise is exactly what stopped anyone looking; it described one half of the system and read
+  as describing all of it.
+- **The tell was arithmetic, not intuition.** Our point equalled Wikidata's to five decimals
+  and the tool said 2,329 m. When a check's output contradicts a number you can compute by
+  hand, the check is the thing to doubt.
+
+⚠️ **A guard that reds a check must ship with the thing that clears it.** Exiting 2 on a stale
+cache would have turned the coordinate audit permanently red on the next content merge —
+`spine/README.md`'s own warning that *a red check nobody can fix reads as coverage and gets
+ignored*. The `refresh-spine` job in `publish-catalog.yml` re-asks on every content merge, and
+is deliberately `continue-on-error`: it is a reporting artefact, WDQS is a third party, and a
+failed refresh degrades into precisely what the guard says — STALE, with the command named.
+**The guard is what makes the automation safe to let fail.**
+
 ---
 
 ## 2. Live systems vs. documents
