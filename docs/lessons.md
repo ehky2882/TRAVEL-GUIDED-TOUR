@@ -73,6 +73,105 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 Half a cache-invalidation is worse than none (2026-09-21)
+
+`spine-lookup.py` keys every cached Wikidata answer by a digest of the entry's title,
+coordinate and search bound, and re-asks when any of them moves. `spine/README.md` said so.
+It was true — **of the fetcher**. `spine-match.py`, which is what CI runs and what a human
+reads, never looked at the digest and printed the cached distance regardless.
+
+So the audit reported **all nine coordinates corrected the previous night as still broken.**
+Belgrade Tower read *2,329 m out* while sitting on Wikidata's own point — a 0 m agreement.
+Fifty-nine rows were stale; refreshing them took **9 queries** and moved CONFIRMS 1,764 → 1,778.
+
+Two things to take from it, and the second is the one that matters.
+
+**The nuisance direction is the harmless one.** Being told a fix is unfixed wastes a session.
+But the same blindness runs the other way: **a coordinate moved to the WRONG place keeps
+reporting its OLD distance**, so the one check built to police such a move cannot see it, and
+CI stays green. The visible symptom was the benign half of a silent defect.
+
+**A stale number is a confident wrong answer, not a weak one.** The fix is not to flag such a
+row and print its distance anyway — it is to print **no distance at all**. `spine-match.py`
+bands them `STALE`, leaves them out of the coverage denominator (coverage is the claim
+"Wikidata knows this subject", which a row cached against an entry we no longer hold does not
+support), and exits **2 — COULD NOT VERIFY**, the same treatment `NOT-ASKED` already had.
+
+Three general rules:
+
+- **An invalidation rule belongs to every reader of the cache, not to the writer.** If only the
+  fetcher checks the digest, the cache is unversioned from the point of view of everyone else.
+- **Documentation describing an invariant is not evidence the invariant holds.** The README's
+  promise is exactly what stopped anyone looking; it described one half of the system and read
+  as describing all of it.
+- **The tell was arithmetic, not intuition.** Our point equalled Wikidata's to five decimals
+  and the tool said 2,329 m. When a check's output contradicts a number you can compute by
+  hand, the check is the thing to doubt.
+
+**The rule generalises, and the second instance was one layer up.** `checks/spine-verdicts.json`
+holds 137 rulings on individual findings — *this one is Wikidata's error, ours is right*. Each was
+a judgement about **one coordinate**, and the records stored none. Reading them back to quiet a
+settled finding would have meant carrying a verdict across a move nobody had judged: a finding
+suppressed on a point no human ever saw, which is **silence indistinguishable from agreement** on
+the one defect nothing else catches. So every verdict is now stamped with the coordinate it was
+reached against and **stops applying the moment that coordinate moves** — and an unstamped record
+is not trusted at all, because "unstamped" and "unmoved" would otherwise read the same. With that
+in place the findings list fell from **85 to 41 genuinely unexamined**.
+
+Two structural notes worth keeping:
+
+- **The verdict rides alongside the band, never replacing it.** A ruled entry that later stops
+  confirming — a fix reverted by a bad merge — must still read as a finding, and it would not if
+  the ruling overwrote the classification.
+- **The stamp was provable, not assumed.** Diffing the catalogue at the verdict file's first
+  commit against `HEAD` showed exactly eleven of the 137 entries had moved: the nine whose *fix
+  was the verdict*, plus two that did not exist yet. So stamping today's coordinate was correct
+  for all 137 — and one `fixed` note's hand-typed coordinate turned out to be **~60 m from what
+  was actually applied**, which is the argument for storing the fact as data rather than prose.
+
+**A third instance, found by looking for the SHAPE rather than for a bug.** Having fixed two,
+the obvious question was which other committed cache has a reader that does not version it. The
+answer was the vision sweep: `check-pin-subject.py` digests an entry's title **and hero image**
+and re-asks on a mismatch — the fetcher, again — while nothing reading the cache back checks it.
+**51 of 4,930 entries were retitled or re-imaged after their verdict, and 69 had never been asked
+at all.** The single stale `CONTRADICTS` was **Old Spitalfields Market, whose hero was replaced
+precisely because that check flagged it** — so the finding outlived its own fix, and read exactly
+like a live one. A `--status` mode now reports both, offline and without the API key, because
+coverage is answerable without one and refusing to answer it for want of a key is the same false
+silence.
+
+### Wikidata has three front doors and they fail independently (2026-09-21)
+
+Mid-session WDQS returned `429 Aggressively rate-limiting to 1 req / min - this rule was created
+during active wdqs outage`, and the action API (`w/api.php?action=wbgetentities`) 429'd as well.
+The **REST endpoint answered 200 throughout**:
+
+```
+https://www.wikidata.org/w/rest.php/wikibase/v1/entities/items/<QID>/labels/en
+https://www.wikidata.org/wiki/Special:EntityData/<QID>.json
+```
+
+It is one item per request rather than fifty, so it is a fallback and not a replacement — but it
+is the difference between "Wikidata is down" and "the batch route is down". Same rule as the 42
+Tokyo addresses and the Overpass mirror: **a blocked route is not an absent fact.** ⚠️ It is not a
+free pass either: it resolved only 21 of 55 labels before throttling in turn, so say what you
+could not get rather than reporting the partial set as the whole.
+
+⚠️ This is also why the `refresh-spine` CI job is `continue-on-error`. A third party's outage must
+degrade a reporting artefact, never block a content merge.
+
+🔴 **Go looking for the shape.** Two instances of one defect are not a coincidence, they are a
+pattern, and the third was found in a few minutes by grepping for which scripts read a committed
+cache. Fixing the bug you tripped over and stopping there leaves the others.
+
+⚠️ **A guard that reds a check must ship with the thing that clears it.** Exiting 2 on a stale
+cache would have turned the coordinate audit permanently red on the next content merge —
+`spine/README.md`'s own warning that *a red check nobody can fix reads as coverage and gets
+ignored*. The `refresh-spine` job in `publish-catalog.yml` re-asks on every content merge, and
+is deliberately `continue-on-error`: it is a reporting artefact, WDQS is a third party, and a
+failed refresh degrades into precisely what the guard says — STALE, with the command named.
+**The guard is what makes the automation safe to let fail.**
+
 ---
 
 ## 2. Live systems vs. documents

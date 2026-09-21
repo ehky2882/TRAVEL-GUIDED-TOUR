@@ -154,6 +154,42 @@ subject_words = _cpc.subject_words
 marker = _cpc.marker
 
 
+def _load_lookup_module():
+    """`ask_digest` from the fetcher, so both halves agree on what a cached
+    answer depends on. Re-implementing it here would let the two drift, and a
+    drifted staleness check is worse than none: it would cry stale forever."""
+    path = os.path.join(HERE, "spine-lookup.py")
+    spec = importlib.util.spec_from_file_location("_spine_lookup", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+ask_digest = _load_lookup_module().ask_digest
+
+
+def is_stale(entry, at, record):
+    """Was this cached answer computed against the entry we hold TODAY?
+
+    🔴 Without this the tool reports a distance measured from a point the
+    catalogue no longer holds, and it does so with no warning at all. That cuts
+    BOTH ways, and the second way is the dangerous one:
+
+      * a coordinate we already CORRECTED keeps being reported as broken
+        (Belgrade Tower read 2,329 m out for hours after it was moved onto
+        Wikidata's own point, which is a 0 m agreement);
+      * a coordinate someone moves to the WRONG place keeps reporting its OLD
+        distance, so the one check that exists to police such a move is blind
+        to it, and CI stays green.
+
+    The bound comes from the RECORD, not from this run: the bound is the
+    fetcher's business, and the two things a reporter can see change are the
+    title and the marker.
+    """
+    return ask_digest(entry.get("title"), at,
+                      record.get("bound_km", 100.0)) != record.get("digest")
+
+
 def entries(catalog):
     """Tours and link pins alike — 13 of 15 known errors were tours."""
     return list(catalog.get("tours") or []) + list(catalog.get("linkPins") or [])
@@ -305,7 +341,49 @@ def band(distance_m, *, related=True, extended=False):
     return "REVIEW"
 
 
-def classify(catalog, cache, features=None):
+VERDICTS = os.path.join(REPO, "checks", "spine-verdicts.json")
+
+# A verdict is stamped with the coordinate it was reached against, to 7 dp. A
+# move smaller than this is rounding, not an edit.
+VERDICT_EPS = 5e-7
+
+
+def verdict_applies(entry, at, record):
+    """Does this recorded verdict still describe the entry in front of us?
+
+    🔴 Only while the entry has not moved. A verdict is a judgement about ONE
+    coordinate: `wikidata-elsewhere` says *our* point is right and theirs is
+    not, and the moment ours changes nobody has judged the new one. Carrying the
+    verdict across the move would suppress the finding permanently — silence
+    that looks exactly like agreement, on the one defect CLAUDE.md calls
+    invisible to every other check.
+
+    This is the same rule the lookup cache needed, for the same reason and after
+    the same failure: an answer is only valid for the point it was measured
+    from, and every READER of the answer has to enforce that, not just whoever
+    wrote it.
+
+    A record with no `at` is not trusted. It cannot be — there is nothing to
+    compare, so "unstamped" and "unmoved" would be indistinguishable.
+    """
+    if not record:
+        return False
+    was = record.get("at")
+    if not was or len(was) != 2:
+        return False
+    return (abs(was[0] - at[0]) <= VERDICT_EPS
+            and abs(was[1] - at[1]) <= VERDICT_EPS)
+
+
+def load_verdicts(path=VERDICTS):
+    """Missing file is not an error — the audit simply rules nothing out."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def classify(catalog, cache, features=None, verdicts=None):
     """One record per entry: its band, its best candidate, and why."""
     out = []
     for entry in entries(catalog):
@@ -317,17 +395,60 @@ def classify(catalog, cache, features=None):
             out.append({"entry": entry, "band": "NOT-ASKED", "best": None,
                         "named": False})
             continue
+        if is_stale(entry, at, record):
+            # 🔴 Not banded, and deliberately given no distance. A number
+            # measured from a coordinate this entry no longer sits on is not a
+            # weaker answer than none — it is a confident wrong one.
+            out.append({"entry": entry, "band": "STALE", "best": None,
+                        "named": False})
+            continue
         best = best_candidate(entry, record.get("candidates") or [])
         related = bool(best) and label_related(entry, best)
         extended = bool(best) and is_extended(best["qid"], features)
+        ruling = (verdicts or {}).get(entry.get("title") or "")
         out.append({
             "entry": entry,
             "band": band(best["distance_m"] if best else None,
                          related=related, extended=extended),
             "best": best,
             "named": bool(best) and label_matches(entry, best),
+            # 🔴 The verdict rides ALONGSIDE the band, never replacing it. A
+            # ruled entry that later stops confirming — a fix reverted by a bad
+            # merge — must still be visible as a finding, and it would not be if
+            # the ruling overwrote the band.
+            "verdict": (ruling.get("verdict")
+                        if verdict_applies(entry, at, ruling) else None),
         })
     return out
+
+
+def covered_rows(rows):
+    """The rows this method actually answered for — the coverage denominator.
+
+    🔴 STALE belongs out here with NOT-ASKED. Coverage is the claim "Wikidata
+    knows this subject", and a row cached against an entry we no longer hold
+    supports that claim no better than one never asked about at all. Counting it
+    would quietly inflate the one figure that decides where the address-parsing
+    path is needed instead.
+    """
+    return [r for r in rows if r["band"] not in ("NOT-ASKED", "STALE")]
+
+
+def exit_code(counts):
+    """0 clean · 1 findings to read · 2 the check could not answer.
+
+    🔴 2 is not a worse 1. It means entries exist that this run CANNOT speak
+    for, and it must win over both of the others: a run that reports
+    "no entry disagrees" while holding rows it never evaluated is the exact
+    shape CLAUDE.md calls a check that cannot run returning a pass.
+    """
+    if counts.get("STALE"):
+        return 2
+    if counts.get("NOT-ASKED"):
+        return 2
+    if counts.get("DISAGREES"):
+        return 1
+    return 0
 
 
 def maker_names(catalog):
@@ -342,6 +463,19 @@ def report(rows, catalog, *, limit=40):
 
     print(f"audited {total} catalogue entries against Wikidata\n")
 
+    stale = [r for r in rows if r["band"] == "STALE"]
+    if stale:
+        print(f"⚠️  STALE — moved or renamed since the cache was built, so this "
+              f"run CANNOT speak for them: {len(stale)}")
+        for row in stale[:limit]:
+            entry = row["entry"]
+            print(f"  {'':11} {(entry.get('title') or '')[:40]:40} "
+                  f"{(entry.get('city') or '')[:16]:16}")
+        if len(stale) > limit:
+            print(f"  … and {len(stale) - limit} more (raise --limit to see them)")
+        print("  Re-run: python3 scripts/spine-lookup.py   "
+              "(digest-gated — it re-asks only these)\n")
+
     for name in ("DISAGREES", "REVIEW", "EXTENDED"):
         hits = sorted((r for r in rows if r["band"] == name and r["best"]),
                       key=lambda r: -r["best"]["distance_m"])
@@ -351,7 +485,18 @@ def report(rows, catalog, *, limit=40):
             "EXTENDED": ("EXTENDED SITE — a park, street, bridge, island or district. "
                          "NOT a finding: no single point is honest for these"),
         }[name]
-        print(f"{headline}: {len(hits)}")
+        # ⚠️ Only the two FINDING bands. EXTENDED is not a finding — it is a
+        # heading that explains a distance — so subtracting its ruled rows
+        # would print a count smaller than the band, explaining nothing.
+        ruled = [r for r in hits if r["verdict"]] if name != "EXTENDED" else []
+        hits = [r for r in hits if r not in ruled]
+        if ruled:
+            tally = ", ".join(f"{n} {v}" for v, n in
+                              collections.Counter(r["verdict"] for r in ruled).most_common())
+            print(f"{headline}: {len(hits)} unexamined "
+                  f"({len(ruled)} already ruled — {tally})")
+        else:
+            print(f"{headline}: {len(hits)}")
         for row in hits[:limit]:
             entry, best = row["entry"], row["best"]
             flag = " " if row["named"] else "~"      # ~ = matched on alias, not label
@@ -364,11 +509,12 @@ def report(rows, catalog, *, limit=40):
     print(f"CONFIRMS: {by_band['CONFIRMS']}   "
           f"EXTENDED: {by_band['EXTENDED']}   "
           f"UNMATCHED: {by_band['UNMATCHED']}   "
+          f"STALE: {by_band['STALE']}   "
           f"NOT-ASKED: {by_band['NOT-ASKED']}")
 
     # Coverage by creator is the routing evidence: it says where this method
     # works and where the catalogue needs the address-parsing path instead.
-    asked = [r for r in rows if r["band"] != "NOT-ASKED"]
+    asked = covered_rows(rows)
     if asked:
         per = collections.defaultdict(lambda: [0, 0])
         for row in asked:
@@ -392,6 +538,20 @@ def report(rows, catalog, *, limit=40):
     print("    three pins moved on a distance alone came out 11 m right, 220 m")
     print("    wrong and 100 m wrong. Every line goes to the owner individually.")
 
+    by_band["RULED"] = sum(1 for r in rows if r["verdict"])
+    # 🔴 What exit 1 must mean is "there is something here nobody has looked
+    # at". Counting a ruled row would keep the check shouting about 44 findings
+    # that were each read and settled, and a check that always shouts is one
+    # nobody reads.
+    by_band["DISAGREES"] = sum(1 for r in rows
+                               if r["band"] == "DISAGREES" and not r["verdict"])
+    if by_band["RULED"]:
+        print(f"\nRULED: {by_band['RULED']} entries carry a recorded verdict that "
+              f"still applies — checks/spine-verdicts.json")
+        print("⚠️  A verdict is stamped with the coordinate it was reached against "
+              "and\n    STOPS APPLYING the moment that coordinate moves: nobody has "
+              "judged\n    the new point, and silence would look exactly like "
+              "agreement.")
     return by_band
 
 
@@ -541,7 +701,117 @@ def selftest():
     check("an entry missing from the cache is NOT-ASKED, never CONFIRMS",
           [r["band"] for r in rows] == ["NOT-ASKED", "NOT-ASKED"])
 
-    total = 52
+    # 🔴 The staleness guard. Belgrade Tower read 2,329 m out for hours AFTER it
+    # had been moved onto Wikidata's own point, because the cache still held the
+    # distance from where it used to sit. The same blindness hides a bad move.
+    def _cached(title, at, *, distance_m=10.0, label=None, bound_km=100.0):
+        return {"digest": ask_digest(title, at, bound_km), "bound_km": bound_km,
+                "at": list(at), "candidates": [
+                    {"label": label or title, "qid": "Q1", "sitelinks": 5,
+                     "lat": at[0], "lon": at[1], "distance_m": distance_m}]}
+
+    def _entry(title, at):
+        return {"id": "s", "title": title, "city": "C", "kind": "single",
+                "stops": [{"order": 0, "latitude": at[0], "longitude": at[1]}]}
+
+    here, moved = (10.0, 20.0), (10.02, 20.0)
+    one = {"tours": [_entry("Tower", here)], "linkPins": []}
+    check("a cache built against today's entry is used, not refused",
+          [r["band"] for r in classify(one, {"s": _cached("Tower", here)})]
+          == ["CONFIRMS"])
+    check("🔴 an entry MOVED since the cache was built is STALE, not CONFIRMS",
+          [r["band"] for r in classify(one, {"s": _cached("Tower", moved)})]
+          == ["STALE"])
+    check("🔴 an entry RENAMED since the cache was built is STALE",
+          [r["band"] for r in classify(one, {"s": _cached("Other", here)})]
+          == ["STALE"])
+    stale_row = classify(one, {"s": _cached("Tower", moved, distance_m=9000.0)})[0]
+    check("🔴 a STALE row carries NO distance — a stale number is a confident "
+          "wrong answer, not a weak one", stale_row["best"] is None)
+    check("🔴 a STALE row does not count as covered by this method",
+          "STALE" not in {r["band"] for r in classify(one, {"s": _cached("Tower", here)})})
+    # The bound is the fetcher's business: reading it from the record is what
+    # keeps this guard reporting only what a reporter can actually see change.
+    check("the record's own bound is used, so a differing bound is not 'stale'",
+          [r["band"] for r in classify(one, {"s": _cached("Tower", here, bound_km=7.0)})]
+          == ["CONFIRMS"])
+    check("a real move is detected below the rounding the digest applies",
+          is_stale(_entry("Tower", (10.0, 20.0)), (10.0, 20.0),
+                   _cached("Tower", (10.00001, 20.0))))
+
+    # 🔴 classify() must WIRE band()'s arguments, not merely have them. The
+    # thresholds were tested directly above and passed while the call site could
+    # still have hard-coded either flag.
+    unrelated = {"s": _cached("Tower", here, distance_m=900.0, label="Somewhere Else")}
+    check("🔴 classify passes `related` through: an unrelated distant label is "
+          "offered for reading, never asserted",
+          [r["band"] for r in classify(one, unrelated)] == ["REVIEW"])
+    park = {"s": _cached("Tower", here, distance_m=4486.0)}
+    check("🔴 classify passes `extended` through: a known extended site is not "
+          "a finding", [r["band"] for r in classify(one, park, {"Q1": {"types": ["Q22698"]}})]
+          == ["EXTENDED"])
+    check("classify without the features file still reports that site",
+          [r["band"] for r in classify(one, park)] == ["DISAGREES"])
+
+    # 🔴 The exit-code contract. 2 must beat both of the others: a run that
+    # prints "no entry disagrees" while holding rows it never evaluated is a
+    # check that could not run returning a pass.
+    check("exit 0 when nothing disagrees", exit_code({}) == 0)
+    check("exit 1 on findings", exit_code({"DISAGREES": 3}) == 1)
+    check("exit 2 when entries were never asked about",
+          exit_code({"NOT-ASKED": 1}) == 2)
+    check("🔴 exit 2 when entries are STALE, even with no findings",
+          exit_code({"STALE": 1}) == 2)
+    check("🔴 STALE outranks findings — it is not a milder 1",
+          exit_code({"STALE": 1, "DISAGREES": 9}) == 2)
+
+    # 🔴 A verdict is a judgement about ONE coordinate. Carrying it across a
+    # move would suppress a finding on a point nobody has judged — silence that
+    # looks exactly like agreement. Same rule as the lookup cache, same reason.
+    ruled = {"Tower": {"verdict": "wikidata-elsewhere", "at": list(here)}}
+    rows = classify(one, {"s": _cached("Tower", here, distance_m=900.0)}, None, ruled)
+    check("a verdict stamped on today's coordinate applies",
+          rows[0]["verdict"] == "wikidata-elsewhere")
+    check("🔴 the BAND is unchanged by a verdict — a ruled entry that stops "
+          "confirming must still read as a finding", rows[0]["band"] == "DISAGREES")
+    moved_cat = {"tours": [_entry("Tower", moved)], "linkPins": []}
+    check("🔴 a verdict does NOT survive the entry moving",
+          classify(moved_cat, {"s": _cached("Tower", moved, distance_m=900.0)},
+                   None, ruled)[0]["verdict"] is None)
+    # 🔴 Every other fixture here moves due NORTH, which leaves a longitude-only
+    # comparison passing. Mutation testing found this; a realistic fixture would
+    # not have, because a real move changes both.
+    east = (here[0], here[1] + 0.02)
+    east_cat = {"tours": [_entry("Tower", east)], "linkPins": []}
+    check("🔴 a verdict does not survive a move due EAST either",
+          classify(east_cat, {"s": _cached("Tower", east, distance_m=900.0)},
+                   None, ruled)[0]["verdict"] is None)
+    check("🔴 an UNSTAMPED verdict is not trusted — nothing to compare, so "
+          "'unstamped' and 'unmoved' would be indistinguishable",
+          not verdict_applies(_entry("Tower", here), here, {"verdict": "x"}))
+    check("a malformed stamp is not trusted",
+          not verdict_applies(_entry("Tower", here), here,
+                              {"verdict": "x", "at": [1.0]}))
+    check("no verdict on file is not a verdict",
+          not verdict_applies(_entry("Tower", here), here, None))
+    check("rounding at the 7th decimal is not a move",
+          verdict_applies(_entry("Tower", here), (here[0] + 1e-7, here[1]),
+                          {"verdict": "x", "at": list(here)}))
+    check("🔴 a verdict on a DIFFERENT title does not apply",
+          classify(one, {"s": _cached("Tower", here, distance_m=900.0)}, None,
+                   {"Other": {"verdict": "x", "at": list(here)}})[0]["verdict"] is None)
+    check("no verdict file at all leaves every finding standing",
+          classify(one, {"s": _cached("Tower", here, distance_m=900.0)})[0]["verdict"]
+          is None)
+    check("load_verdicts tolerates a missing file",
+          load_verdicts(os.path.join(HERE, "no-such-verdicts.json")) == {})
+
+    check("🔴 coverage excludes STALE, which would otherwise inflate it",
+          [r["band"] for r in covered_rows(
+              [{"band": "CONFIRMS"}, {"band": "STALE"}, {"band": "NOT-ASKED"}])]
+          == ["CONFIRMS"])
+
+    total = 79
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
@@ -553,6 +823,9 @@ def main():
     ap.add_argument("--features", default=FEATURES,
                     help="item types from spine-features.py; optional — without "
                          "it nothing is reclassified as an extended site")
+    ap.add_argument("--verdicts", default=VERDICTS,
+                    help="recorded rulings; a finding already settled is "
+                         "counted separately, never silently dropped")
     ap.add_argument("--limit", type=int, default=40,
                     help="how many findings to print per band")
     ap.add_argument("--selftest", action="store_true")
@@ -582,19 +855,25 @@ def main():
         else:
             print(f"⚠️  no {a.features} — parks, streets and bridges will be "
                   f"reported as findings. Run scripts/spine-features.py.")
-        rows = classify(catalog, cache, features)
+        rows = classify(catalog, cache, features, load_verdicts(a.verdicts))
         counts = report(rows, catalog, limit=a.limit)
 
-        if counts["NOT-ASKED"]:
+        code = exit_code(counts)
+        if counts["STALE"]:
+            print(f"\nCOULD NOT VERIFY — {counts['STALE']} entries moved or were "
+                  f"renamed after the cache was built; run scripts/spine-lookup.py")
+        elif counts["NOT-ASKED"]:
             print(f"\nCOULD NOT VERIFY — {counts['NOT-ASKED']} entries are not in "
                   f"the cache; run scripts/spine-lookup.py to finish the sweep")
-            return 2
-        if counts["DISAGREES"]:
+        elif counts["DISAGREES"]:
             print(f"\n{counts['DISAGREES']} entr"
                   f"{'y' if counts['DISAGREES'] == 1 else 'ies'} to put to the owner")
-            return 1
-        print("\nOK — no entry disagrees with Wikidata by 250 m or more")
-        return 0
+        elif counts["RULED"]:
+            print(f"\nOK — every disagreement on file has been ruled on "
+                  f"({counts['RULED']} verdicts)")
+        else:
+            print("\nOK — no entry disagrees with Wikidata by 250 m or more")
+        return code
     finally:
         run.close()
 

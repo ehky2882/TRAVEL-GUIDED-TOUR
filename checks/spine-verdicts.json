@@ -1,687 +1,1235 @@
 {
- "Govind Dev Ji Temple": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "OUR coordinate was 11.9 km NW. Wikidata Q5589834 sits inside Q2723395 = the City Palace complex, Jaipur, which is where the temple is. Moved to 26.928919,75.823965."
- },
- "MahaNakhon": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "OUR coordinate was 6.9 km south. Q1640197 'King Power Mahanakhon', 27 sitelinks, a skyscraper in Bangkok (admin Q1861). Moved to 13.723611,100.528333."
- },
- "Pérez Art Museum Miami": {
-  "verdict": "wikidata-wrong",
-  "date": "2026-09-21",
-  "note": "🔴 WIKIDATA CONTRADICTS ITSELF. Q3026874 gives the address as '1103 Biscayne Boulevard' -- Museum Park, which is OUR coordinate -- while its P625 points at 25.7743,-80.1963, the museum's pre-2013 downtown site as the Miami Art Museum. Ours is right; do not move. Two catalogue entries share this title and point."
- },
- "Sardar Vallabhbhai Patel (SVP) Stadium": {
-  "verdict": "name-collision",
-  "date": "2026-09-21",
-  "note": "TWO Wikidata entities, both ~6.46 km away: Q134932381 '...Navrangpura' and Q7423742 '...Ahmedabad'. Our point is at Motera, the stadium renamed Narendra Modi Stadium in 2021 and previously called Sardar Patel Stadium. Which one the tour means is a content question. NOT MOVED."
- },
- "Fondation Cartier pour l'art contemporain": {
-  "verdict": "institution-moved",
-  "date": "2026-09-21",
-  "note": "Our point is Jean Nouvel's Boulevard Raspail building; Wikidata's is Place du Palais-Royal, where the foundation moved in 2025. Both are real. Which one the tour describes is a content question. NOT MOVED."
- },
- "Takase River | 高瀬川": {
-  "verdict": "linear-feature",
-  "date": "2026-09-21",
-  "note": "A canal, not a point. Three candidates all ~1.9 km away (Q7677301 the river itself, plus two named basins), which is what a linear feature looks like. Any point on it is defensible. NOT AN ERROR."
- },
- "The Sentry Box of Old San Juan": {
-  "verdict": "district-match",
-  "date": "2026-09-21",
-  "note": "Both candidates are the DISTRICT (Q1136674 Old San Juan Historic District, Q5413104 San Juan Antiguo), not the garita. CLAUDE.md rule 8d forbids moving a pin onto a district centroid. NOT MOVED."
- },
- "Jackson Street Bridge": {
-  "verdict": "undecided",
-  "date": "2026-09-21",
-  "note": "1.28 km gap, single candidate Q136760277 with ONE sitelink -- too thin to move a coordinate on. Needs a named-source check. NOT MOVED."
- },
- "The Knights of Columbus Building": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q141128288 'Columbus Building', 1 sitelink, 92 km away. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "The Elms": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q7731831 is a historic house in Old Bedhampton, Hampshire — verified. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Basilica di Santa Maria delle Grazie": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q3635768 is the church in CORTEMAGGIORE — verified; ours is Milan's, with the Last Supper. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Old City Hall": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q7083689 is in GUELPH, Ontario — verified; ours is Toronto's. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "La Fábrica (The Factory)": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q47179935 'La Fàbrica', 1 sitelink, 60 km away. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Saint-Sulpice": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q924614 is a COMMUNE IN OISE — verified; ours is the Paris church. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Parque das Ruínas": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q15303666 41 km from the Rio cluster; ours is 1.8 km from it. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Hōrin-ji Temple | 法輪寺": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q97192071 is a different Hōrin-ji, 16 km away — a common temple name. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Palácio da Justiça": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q111263442, 1 sitelink, 11 km out; ours sits in the Lisbon cluster. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Prada Aoyama | プラダ 青山店": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q56322351, 2 sitelinks, 10.6 km from Aoyama; ours is 1.3 km from the Tokyo cluster. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "Tung Po": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata matched a different real entity of the same name. Q16923237, 1 sitelink, 6.6 km out. Our coordinate sits inside its own city's cluster. NOT MOVED."
- },
- "A History of the Florida Keys": {
-  "verdict": "editorial-title",
-  "date": "2026-09-21",
-  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched 'Florida Keys Marathon Airport' — the title names a region, not a venue. Not a coordinate error. NOT MOVED."
- },
- "The Wizard of Park Avenue": {
-  "verdict": "editorial-title",
-  "date": "2026-09-21",
-  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Park Avenue, the STREET (30 sitelinks). Not a coordinate error. NOT MOVED."
- },
- "The Monumental Rosary of Montserrat": {
-  "verdict": "editorial-title",
-  "date": "2026-09-21",
-  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Montserrat itself (46 sitelinks); ours is 34 m from the cluster. Not a coordinate error. NOT MOVED."
- },
- "The Silk Weavers of Lucca": {
-  "verdict": "editorial-title",
-  "date": "2026-09-21",
-  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched the CITY of Lucca (112 sitelinks). Not a coordinate error. NOT MOVED."
- },
- "The Wertheim Study at the New York Public Library": {
-  "verdict": "editorial-title",
-  "date": "2026-09-21",
-  "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched the NYPL for the Performing Arts — a DIFFERENT BRANCH. Not a coordinate error. NOT MOVED."
- },
- "Lake Saiko": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q11618607 in Sakura-ku (lake in Japan), not Fujikawaguchiko. A different entity of the same name. NOT MOVED."
- },
- "La Viña": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q95621200 as \"river in the Basque Country\" — not a point. A 88801 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Church of Santa Maria": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q10300634 in Celorico (São Pedro e Santa Maria) e Vila Boa do Mondego (church in Celorico da Beira, Portugal), not Marco de Canaveses. A different entity of the same name. NOT MOVED."
- },
- "Església vella de Santa Maria": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q11920593 in Montmajor (church building in Montmajor, Spain), not Vilanova de la Barca. A different entity of the same name. NOT MOVED."
- },
- "The Floating Islands of Lake Titicaca": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q35342 in Puno Department (Alpine lake in Peru and Bolivia), not Puno. A different entity of the same name. NOT MOVED."
- },
- "The Shrine of Our Lady of the Rosary of Namyang | 남양 성모 성지": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q12603322 in Namyangju (Buddhist temple), not Hwaseong. A different entity of the same name. NOT MOVED."
- },
- "Santa Maria Assunta": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q3673376 in Pescia (church in Castellare, Italy), not Grizzana Morandi. A different entity of the same name. NOT MOVED."
- },
- "Zonda at The Halfway": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q127509048 in Minchinhampton (pub in Box, Minchinhampton, Stroud, Gloucestershire, England), not Guiting Power. A different entity of the same name. NOT MOVED."
- },
- "The Train Carriage Hotel at Khao Yai": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q386420 in Isan/North eastern Thailand (nature reserve in Thailand), not Pak Chong. A different entity of the same name. NOT MOVED."
- },
- "The Stone Forest of Tsingy": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1969107 in Melaky (strict nature reserve of Madagascar), not Antsalova. A different entity of the same name. NOT MOVED."
- },
- "Cu Chi Tunnels – Bến Dược | Địa Đạo Củ Chi - Bến Dược": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q192721 as \"network of underground tunnels used by Viet Cong soldiers during comba\" — not a point. A 12269 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "The Baobabs of Morondava": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q3606079 in Toliara Province (airport in Madagascar), not Morondava. A different entity of the same name. NOT MOVED."
- },
- "The Dragon Blood Trees of Socotra": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q82859 in Socotra Archipelago Governorate (main island of Socotra Archipelago in the Guardafui Channel), not Hadibu. A different entity of the same name. NOT MOVED."
- },
- "Khao Yai National Park | อุทยานแห่งชาติเขาใหญ่": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q386420 in Isan/North eastern Thailand (nature reserve in Thailand), not Nakhon Ratchasima. A different entity of the same name. NOT MOVED."
- },
- "Wat Phra That Doi Kong Mu | วัดพระธาตุดอยกองมู": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q13020754 in Pang Mu (Buddhist temple in Mae Hong Son province, Thailand), not Mae Hong Son. A different entity of the same name. NOT MOVED."
- },
- "Casa Costa": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q107646375 in Sant Just Desvern (building in Sant Just Desvern, Spain), not Barcelona. A different entity of the same name. NOT MOVED."
- },
- "Doi Inthanon National Park | อุทยานแห่งชาติดอยอินทนนท์": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q656576 in Chiang Mai (national park in Thailand), not Chom Thong. A different entity of the same name. NOT MOVED."
- },
- "The Sanctuary of Truth Museum | ปราสาทสัจธรรม": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q262459 as \"park in Pattaya, Thailand\" — not a point. A 7189 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "White Temple (Wat Rong Khun) | วัดร่องขุ่น": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q496543 in Pa O Don Chai (Buddhist site in Chiang Rai, Thailand), not Chiang Rai. A different entity of the same name. NOT MOVED."
- },
- "Ngong Ping 360 | 昂坪360": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q1984341 as \"gondola lift service in Lantau Island, Hong Kong\" — not a point. A 5372 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Natural History Museum of LA County": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q104994 in California (county in California, United States), not Los Angeles. A different entity of the same name. NOT MOVED."
- },
- "The Terracotta Garden at Lamphun | สวนไม้ไทยบ้านพ่อเลี้ยงหมื่น": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1211214 in Mueang Lamphun (town in Lamphun province, Thailand), not Lamphun. A different entity of the same name. NOT MOVED."
- },
- "Vasco da Gama Bridge": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q233737 in Parque das Nações (bridge in Portugal), not Lisbon. A different entity of the same name. NOT MOVED."
- },
- "Carette": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q108900316 in 18th arrondissement of Paris (bakery in Montmartre, Paris), not Paris. A different entity of the same name. NOT MOVED."
- },
- "Mae Wang National Park | อุทยานแห่งชาติแม่วาง": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q25340864 in Thailand (national park in Thailand), not Mae Wang. A different entity of the same name. NOT MOVED."
- },
- "Q1 Tower": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q125846 in Queensland (skyscraper in Australia), not Gold Coast. A different entity of the same name. NOT MOVED."
- },
- "Instituto Central de Ciências, University of Brasília": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q3643852 in Federal District (administrative region in the Federal District in Brazil), not Brasília. A different entity of the same name. NOT MOVED."
- },
- "The West Side Cowboys of Tenth Avenue": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q130388 in Manhattan (avenue in Manhattan, New York City, USA), not New York. A different entity of the same name. NOT MOVED."
- },
- "Grand Concourse": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q69968588 in The Bronx (public library in the Bronx, New York, USA), not Bronx. A different entity of the same name. NOT MOVED."
- },
- "Asahi Group Ōyamazaki Villa Museum of Art | アサヒグループ大山崎山荘美術館": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q11283175 in Ōyamazaki-chō (art museum in Ōyamazaki, Japan), not Ōyamazaki. A different entity of the same name. NOT MOVED."
- },
- "Grosvenor Estate": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q26319330 in City of Westminster (building in Westminster, London, England, UK), not London. A different entity of the same name. NOT MOVED."
- },
- "Inside the Museum of the City of New York": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1059456 in Manhattan (American history museum and library located in New York City), not New York. A different entity of the same name. NOT MOVED."
- },
- "Prora": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q7250481 in Binz (railway stop in Binz, Germany), not Rügen. A different entity of the same name. NOT MOVED."
- },
- "Austin (Ellsworth Kelly)": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q16559 in Travis County (capital city of the U.S. state of Texas and seat of Travis County), not Austin. A different entity of the same name. NOT MOVED."
- },
- "The Most Valuable Ships at Alang": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q587137 in Talaja Taluka (town in Bhavnagar district, Gujarat, India), not Alang. A different entity of the same name. NOT MOVED."
- },
- "Naarden (star fort town)": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q575616 in Gooise Meren (railway station in the Netherlands), not Naarden. A different entity of the same name. NOT MOVED."
- },
- "Transfăgărășan": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q934803 in Wallachia (mountain pass), not Cârțișoara. A different entity of the same name. NOT MOVED."
- },
- "Hollywood Walk of Fame": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q71719 as \"more than 2,700 five-pointed terrazzo and brass stars embedded in the \" — not a point. A 1664 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Tour Odéon": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q3533145 in La Rousse (Skyscraper in Monaco), not Monaco. A different entity of the same name. NOT MOVED."
- },
- "Pilsen — Eighteenth Street, East to West": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q3264397 as \"community area in Chicago, Illinois, United States\" — not a point. A 1595 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Navi Mumbai International Airport": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q3015728 as \"International airport in Navi Mumbai, India\" — not a point. A 1589 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Alzaia Naviglio Grande": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q106960792 as \"towpath along Naviglio Grande in Milan\" — not a point. A 1577 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Queen Street West": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q20726625 as \"heritage conservations district in Toronto, Ontario, Canada\" — not a point. A 1544 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Meteora": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q3125051 in Meteora Municipality (rock formation with cluster of Greek Orthodox monasteries), not Kalabaka. A different entity of the same name. NOT MOVED."
- },
- "Mile End": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q3314040 in Le Plateau-Mont-Royal (neighbourhood in the borough of Plateau-Mont-Royal, Montreal, Quebec, ), not Montreal. A different entity of the same name. NOT MOVED."
- },
- "Žižkov Television Tower": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1413217 in Žižkov (TV tower in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED."
- },
- "Karl Marx-Hof": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q513211 in Heiligenstadt (architectural structure), not Vienna. A different entity of the same name. NOT MOVED."
- },
- "Hong Kong Tram | 香港電車": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q385245 as \"tram system in Hong Kong\" — not a point. A 1280 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "The Berber Village of Chenini": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q2317502 in delegation of Tataouine Sud (village in Tunisia), not Chenini. A different entity of the same name. NOT MOVED."
- },
- "Kasárna Karlín": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q28838028 in Karlín (), not Prague. A different entity of the same name. NOT MOVED."
- },
- "Taketomi Island": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q474560 as \"island in Okinawa, Japan\" — not a point. A 1209 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Cable Cars": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q374956 as \"cable car system in San Francisco, California, United States\" — not a point. A 1208 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "The Bell Tower of Lake Reschen": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1249840 in Graun im Vinschgau (artificial lake in Italy), not Curon Venosta. A different entity of the same name. NOT MOVED."
- },
- "First National Bank of Hollywood": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q34006 as \"neighborhood in Los Angeles, California, United States\" — not a point. A 1146 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Memento Park": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q1069906 as \"sculpture garden in Budapest\" — not a point. A 1078 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "ISKCON Temple": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q4500907 in South East Delhi district (radha Krishna Temple in Delhi, India), not Delhi. A different entity of the same name. NOT MOVED."
- },
- "Lake Louise": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1367398 in Improvement District No. 09 (Banff National Park) (lake in Alberta, Canada), not Lake Louise. A different entity of the same name. NOT MOVED."
- },
- "TWA Hotel at JFK": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q8685 in Queens (international airport in New York, United States), not New York. A different entity of the same name. NOT MOVED."
- },
- "Kozma Street Jewish Cemetery": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q1120689 as \"Jewish cemetery in Budapest, Hungary\" — not a point. A 956 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Hotel International (Stalin's Cake)": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1874734 in Dejvice (hotel building in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED."
- },
- "Mount Royal — the Climb": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1757764 in Urban agglomeration of Montreal (hill in Montreal, Quebec, Canada), not Montreal. A different entity of the same name. NOT MOVED."
- },
- "Anyang Art Park | 안양예술공원": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q137184 in Seoksu-dong (train station in Anyang-si, Gyeonggi-do, South Korea), not Anyang. A different entity of the same name. NOT MOVED."
- },
- "Berlin Brandenburg Airport (BER)": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q160556 in Schönefeld (airport serving Berlin, Germany), not Berlin. A different entity of the same name. NOT MOVED."
- },
- "M City": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q56277928 as \"residential building complex in Mississauga, Canada\" — not a point. A 888 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "The Magnificent Mile — DuSable Bridge to the Water Tower": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q285218 as \"section of Michigan Avenue in Chicago, United States\" — not a point. A 862 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "The Ancient City (Muang Boran) | เมืองโบราณ": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q257554 in Bang Pu Mai (open-air museum), not Samut Prakan. A different entity of the same name. NOT MOVED."
- },
- "Bakehouse at Victoria Peak": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q17541 as \"mountain in Hong Kong\" — not a point. A 843 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Children's Railway (Gyermekvasút)": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1029453 in Budapest District XII (railway line), not Budapest. A different entity of the same name. NOT MOVED."
- },
- "The Main — Boulevard Saint-Laurent": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q2460215 as \"street in Montreal, Quebec, Canada\" — not a point. A 837 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Kansai International Airport": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q193682 in Izumisano (airport serving Kobe, Osaka, and Kyoto, Japan), not Osaka. A different entity of the same name. NOT MOVED."
- },
- "The Peak Tram | 山頂纜車": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q1652985 as \"1.4 kilometer funicular railway in Hong Kong, serving 6 stations (with\" — not a point. A 802 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Singapore Changi Airport": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q55721633 in Changi (), not Singapore. A different entity of the same name. NOT MOVED."
- },
- "Victoria Peak | 太平山頂": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q17541 as \"mountain in Hong Kong\" — not a point. A 792 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "The White Tower of Thessaloniki": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q6627746 in Central Macedonia Region (municipality of Macedonia, Greece), not Thessaloniki. A different entity of the same name. NOT MOVED."
- },
- "AZ Tower": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q3495648 in Štýřice (building in the Czech Republic), not Brno. A different entity of the same name. NOT MOVED."
- },
- "Scarborough Bluffs": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q543254 in Ontario (escarpment in Toronto, Canada), not Toronto. A different entity of the same name. NOT MOVED."
- },
- "Ponte 25 de Abril": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q721152 in Alcântara (suspension bridge in Portugal), not Lisbon. A different entity of the same name. NOT MOVED."
- },
- "Hopewell Rocks": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q1627589 in Albert County (provincial park of New Brunswick, Canada), not Hopewell Cape. A different entity of the same name. NOT MOVED."
- },
- "Green-Wood Cemetery": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q239043 as \"cemetery in Greenwood Heights, Brooklyn, Kings County, New York; Natio\" — not a point. A 741 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "The Secrets Obelisk at Green-Wood": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q239043 as \"cemetery in Greenwood Heights, Brooklyn, Kings County, New York; Natio\" — not a point. A 741 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Wat Mahathat | วัดมหาธาตุ": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q660585 in Tha Wasukri (Buddhist temple in Ayutthaya, Thailand), not Ayutthaya. A different entity of the same name. NOT MOVED."
- },
- "The Face House of Kyoto": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q120730 in Japan (prefecture of Japan), not Kyoto. A different entity of the same name. NOT MOVED."
- },
- "Jardine's Lookout": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q6159818 as \"mountain in Hong Kong\" — not a point. A 686 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Table Mountain Aerial Cableway": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q7673149 in Western Cape (cable car to the top of Table Mountain in Cape Town, South Africa), not Cape Town. A different entity of the same name. NOT MOVED."
- },
- "The Leaning Tower of Toruń": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q47554 in Kuyavian-Pomeranian Voivodeship (city in north-central Poland), not Toruń. A different entity of the same name. NOT MOVED."
- },
- "The Barnacle Historic State Park": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q7715660 as \"Florida State Park\" — not a point. A 646 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Hotel Riu Palace Pacifico": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q136324482 in Nuevo Nayarit (hotel in Nuevo Vallarta, Nayarit, Mexico), not Nuevo Vallarta. A different entity of the same name. NOT MOVED."
- },
- "Brooklyn Bridge Park": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q929440 in Brooklyn (public park in Brooklyn, New York), not New York. A different entity of the same name. NOT MOVED."
- },
- "Parque da Cidade do Porto": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q10345423 in Aldoar, Foz do Douro e Nevogilde (urban park in Porto, Portugal), not Porto. A different entity of the same name. NOT MOVED."
- },
- "The National Theatre": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q27087082 in London Borough of Lambeth (theatre in Lambeth, London, England, UK), not London. A different entity of the same name. NOT MOVED."
- },
- "Ancient Rome": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q18287233 in Roman Italy (capital city and origin of ancient Rome), not Rome. A different entity of the same name. NOT MOVED."
- },
- "Tung Lung Chau": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q195675 in Sai Kung District (island of Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED."
- },
- "Heartwood at Vassar": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q5478803 in New York (art center for Vassar College), not Poughkeepsie. A different entity of the same name. NOT MOVED."
- },
- "The Four Columns at Kadoorie Farm": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q838392 in Tai Po District (botanical garden in Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED."
- },
- "Lion's Head": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q1718867 as \"mountain in South Africa\" — not a point. A 577 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Heathrow Airport": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q5694328 in London Borough of Hillingdon (bus station in London, England), not London. A different entity of the same name. NOT MOVED."
- },
- "The Beaches": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q7715974 in Ontario (neighbourhood in Toronto, Canada), not Toronto. A different entity of the same name. NOT MOVED."
- },
- "Museum Island": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q151963 in Bezirk Mitte (northern part of Spree Island in the Spree river in central Berlin), not Berlin. A different entity of the same name. NOT MOVED."
- },
- "Pullman Historic District": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata describes Q7259479 as \"historic district and national monument in Chicago\" — not a point. A 539 m gap is the normal condition for one of these, not a defect. NOT AN ERROR."
- },
- "Fushimi Inari Taisha | 伏見稲荷大社": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q714828 in Fushimi-ku (Shinto shrines in Kyoto, Japan), not Kyoto. A different entity of the same name. NOT MOVED."
- },
- "Lakeside Amusement Park": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q6479071 in Colorado (family-owned amusement park in Lakeside, Colorado adjacent to Denver), not Lakeside. A different entity of the same name. NOT MOVED."
- },
- "Hong Kong International Airport": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata places Q17704 in Islands District (main airport in Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED."
- },
- "Robie House": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "Wikidata Q929965 states the address as '5757 South Woodlawn Avenue', Hyde Park -- which is its coordinate, not ours. Ours was 1,082 m south."
- },
- "Intempo": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "Wikidata Q14530911 states the address as 'avinguda de Colòmbia, s/n', on Benidorm's Poniente side -- its coordinate, not ours. Ours was 2,939 m east."
- },
- "Belgrade Tower": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "OSM way/670824807, tagged building=apartments and named Кула Београд, sits 25 m from Wikidata Q28224747 and 2.3 km from our old point. ⚠️ Two OSM NODES share that name and are bus stops named AFTER the tower -- the building way is the one to read. Moved to Wikidata's coordinate."
- },
- "Bahrain World Trade Center": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "Wikipedia's article coordinate (26.23917,50.58139) matches Wikidata Q511612 to within a metre and is 1,272 m from ours. Two independent sources agree. Moved."
- },
- "Etihad Museum": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "Wikipedia gives 25.23,55.26 -- only two decimals, so ~1 km of slop, but it lands on Wikidata's 55.269 rather than our 55.283, toward Union House in Jumeirah. Moved, with that precision noted."
- },
- "InterContinental Shanghai Wonderland": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "Wikipedia's 31.06028,121.14944 matches Wikidata Q16928554 to ~60 m and is 5.1 km from ours. Both sides sit ~35 km from central Shanghai, which is correct for the Songjiang quarry; the question was only WHICH point, and two sources agree. Moved."
- },
- "Yachthouse Residence Club": {
-  "verdict": "fixed",
-  "date": "2026-09-21",
-  "note": "OSM way/496780880, building=yes, named 'Yachthouse Residence' -- WITHOUT the 'Club' our title carries, which is why an exact-name query returned nothing and a looser one found it. It agrees with Wikidata Q97167987 to 8 m and sits 2.9 km from our old point. Moved."
- },
- "Kiln": {
-  "verdict": "wikidata-elsewhere",
-  "date": "2026-09-21",
-  "note": "Wikidata Q26616936 describes itself as 'kiln in Lane End, Wycombe, Buckinghamshire' -- an actual kiln, 51 km away. Ours is the Soho restaurant named Kiln, and our coordinate is central London. NOT MOVED."
- },
- "Nhiêu Lộc–Thị Nghè Canal | Kênh Nhiêu Lộc - Thị Nghè": {
-  "verdict": "extended-feature",
-  "date": "2026-09-21",
-  "note": "Wikidata Q10783045 calls it a 'waterway in Ho Chi Minh City' -- a canal roughly 9 km long. An 880 m gap along it is the normal condition, not a defect. NOT AN ERROR."
- },
- "Universidad de Buenos Aires": {
-  "verdict": "part-vs-whole",
-  "date": "2026-09-21",
-  "note": "Wikidata Q5855114 is 'Universidad de Buenos Aires. Facultad de …' -- ONE FACULTY BUILDING, not the university. A university has many buildings across a city, so a 1,027 m gap says nothing about whether our point is wrong. NOT MOVED."
- },
- "Sun Tower": {
-  "verdict": "undecided",
-  "date": "2026-09-21",
-  "note": "23.5 km gap and NOTHING can settle it. Wikidata Q137310064 has one sitelink, no description and no stated municipality. OSM has no matching feature in a Yantai bbox under 'Sun Tower', '阳光塔' or '陽光塔'. English Wikipedia's 'Sun Tower' is VANCOUVER'S heritage building (49.281,-123.108) -- a different thing with the same name. Both coordinates fall in the Yantai region, so this is not a cross-city collision either. I have an opinion about which is right; an opinion is not a source. NOT MOVED -- needs the creator's post or the architect's own page."
- }
+  "A History of the Florida Keys": {
+    "at": [
+      24.7045625,
+      -81.1540625
+    ],
+    "date": "2026-09-21",
+    "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched 'Florida Keys Marathon Airport' — the title names a region, not a venue. Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "AZ Tower": {
+    "at": [
+      49.1815,
+      16.6116
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q3495648 in Štýřice (building in the Czech Republic), not Brno. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Alzaia Naviglio Grande": {
+    "at": [
+      45.4469431,
+      9.1479687
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q106960792 as \"towpath along Naviglio Grande in Milan\" — not a point. A 1577 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Ancient Rome": {
+    "at": [
+      41.8902,
+      12.4922
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q18287233 in Roman Italy (capital city and origin of ancient Rome), not Rome. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Anyang Art Park | 안양예술공원": {
+    "at": [
+      37.4191366,
+      126.919686
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q137184 in Seoksu-dong (train station in Anyang-si, Gyeonggi-do, South Korea), not Anyang. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Asahi Group Ōyamazaki Villa Museum of Art | アサヒグループ大山崎山荘美術館": {
+    "at": [
+      34.9192166,
+      135.6782935
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q11283175 in Ōyamazaki-chō (art museum in Ōyamazaki, Japan), not Ōyamazaki. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Austin (Ellsworth Kelly)": {
+    "at": [
+      30.280959,
+      -97.737458
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q16559 in Travis County (capital city of the U.S. state of Texas and seat of Travis County), not Austin. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Bahrain World Trade Center": {
+    "at": [
+      26.2391667,
+      50.5813889
+    ],
+    "date": "2026-09-21",
+    "note": "Wikipedia's article coordinate (26.23917,50.58139) matches Wikidata Q511612 to within a metre and is 1,272 m from ours. Two independent sources agree. Moved.",
+    "verdict": "fixed"
+  },
+  "Bakehouse at Victoria Peak": {
+    "at": [
+      22.2703561,
+      114.1498719
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q17541 as \"mountain in Hong Kong\" — not a point. A 843 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Basilica di Santa Maria delle Grazie": {
+    "at": [
+      45.4660985,
+      9.171005
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q3635768 is the church in CORTEMAGGIORE — verified; ours is Milan's, with the Last Supper. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Belgrade Tower": {
+    "at": [
+      44.80562,
+      20.44679
+    ],
+    "date": "2026-09-21",
+    "note": "OSM way/670824807, tagged building=apartments and named Кула Београд, sits 25 m from Wikidata Q28224747 and 2.3 km from our old point. ⚠️ Two OSM NODES share that name and are bus stops named AFTER the tower -- the building way is the one to read. Moved to Wikidata's coordinate.",
+    "verdict": "fixed"
+  },
+  "Berlin Brandenburg Airport (BER)": {
+    "at": [
+      52.3657974,
+      13.4888906
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q160556 in Schönefeld (airport serving Berlin, Germany), not Berlin. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Brooklyn Bridge Park": {
+    "at": [
+      40.7030882,
+      -73.9955935
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q929440 in Brooklyn (public park in Brooklyn, New York), not New York. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Cable Cars": {
+    "at": [
+      37.7847,
+      -122.4079
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q374956 as \"cable car system in San Francisco, California, United States\" — not a point. A 1208 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Carette": {
+    "at": [
+      48.8637238,
+      2.2872368
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q108900316 in 18th arrondissement of Paris (bakery in Montmartre, Paris), not Paris. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Casa Costa": {
+    "at": [
+      41.3764578,
+      2.1903196
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q107646375 in Sant Just Desvern (building in Sant Just Desvern, Spain), not Barcelona. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Children's Railway (Gyermekvasút)": {
+    "at": [
+      47.5004125,
+      18.9706551
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1029453 in Budapest District XII (railway line), not Budapest. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Church of Santa Maria": {
+    "at": [
+      41.1887162,
+      -8.1456769
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q10300634 in Celorico (São Pedro e Santa Maria) e Vila Boa do Mondego (church in Celorico da Beira, Portugal), not Marco de Canaveses. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Cu Chi Tunnels – Bến Dược | Địa Đạo Củ Chi - Bến Dược": {
+    "at": [
+      11.1499296,
+      106.45944
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q192721 as \"network of underground tunnels used by Viet Cong soldiers during comba\" — not a point. A 12269 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Doi Inthanon National Park | อุทยานแห่งชาติดอยอินทนนท์": {
+    "at": [
+      18.5358245,
+      98.5221453
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q656576 in Chiang Mai (national park in Thailand), not Chom Thong. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Església vella de Santa Maria": {
+    "at": [
+      41.6893701,
+      0.7264782
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q11920593 in Montmajor (church building in Montmajor, Spain), not Vilanova de la Barca. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Etihad Museum": {
+    "at": [
+      25.2392105,
+      55.269331
+    ],
+    "date": "2026-09-21",
+    "note": "Wikipedia gives 25.23,55.26 -- only two decimals, so ~1 km of slop, but it lands on Wikidata's 55.269 rather than our 55.283, toward Union House in Jumeirah. Moved, with that precision noted.",
+    "verdict": "fixed"
+  },
+  "First National Bank of Hollywood": {
+    "at": [
+      34.101687,
+      -118.338437
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q34006 as \"neighborhood in Los Angeles, California, United States\" — not a point. A 1146 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Fondation Cartier pour l'art contemporain": {
+    "at": [
+      48.8373683,
+      2.331913
+    ],
+    "date": "2026-09-21",
+    "note": "Our point is Jean Nouvel's Boulevard Raspail building; Wikidata's is Place du Palais-Royal, where the foundation moved in 2025. Both are real. Which one the tour describes is a content question. NOT MOVED.",
+    "verdict": "institution-moved"
+  },
+  "Fushimi Inari Taisha | 伏見稲荷大社": {
+    "at": [
+      34.9678962,
+      135.7791467
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q714828 in Fushimi-ku (Shinto shrines in Kyoto, Japan), not Kyoto. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Govind Dev Ji Temple": {
+    "at": [
+      26.9289189,
+      75.823965
+    ],
+    "date": "2026-09-21",
+    "note": "OUR coordinate was 11.9 km NW. Wikidata Q5589834 sits inside Q2723395 = the City Palace complex, Jaipur, which is where the temple is. Moved to 26.928919,75.823965.",
+    "verdict": "fixed"
+  },
+  "Grand Concourse": {
+    "at": [
+      40.8657022,
+      -73.894653
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q69968588 in The Bronx (public library in the Bronx, New York, USA), not Bronx. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Green-Wood Cemetery": {
+    "at": [
+      40.6580892,
+      -73.994841
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q239043 as \"cemetery in Greenwood Heights, Brooklyn, Kings County, New York; Natio\" — not a point. A 741 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Grosvenor Estate": {
+    "at": [
+      51.4939148,
+      -0.1306515
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q26319330 in City of Westminster (building in Westminster, London, England, UK), not London. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Heartwood at Vassar": {
+    "at": [
+      41.6903602,
+      -73.90133
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q5478803 in New York (art center for Vassar College), not Poughkeepsie. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Heathrow Airport": {
+    "at": [
+      51.467739,
+      -0.4587801
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q5694328 in London Borough of Hillingdon (bus station in London, England), not London. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Hollywood Walk of Fame": {
+    "at": [
+      34.1016,
+      -118.3269
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q71719 as \"more than 2,700 five-pointed terrazzo and brass stars embedded in the \" — not a point. A 1664 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Hong Kong International Airport": {
+    "at": [
+      22.3125986,
+      113.9172999
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q17704 in Islands District (main airport in Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Hong Kong Tram | 香港電車": {
+    "at": [
+      22.2837191,
+      114.1262875
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q385245 as \"tram system in Hong Kong\" — not a point. A 1280 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Hopewell Rocks": {
+    "at": [
+      45.8170059,
+      -64.5765048
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1627589 in Albert County (provincial park of New Brunswick, Canada), not Hopewell Cape. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Hotel International (Stalin's Cake)": {
+    "at": [
+      50.1036,
+      14.4034
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1874734 in Dejvice (hotel building in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Hotel Riu Palace Pacifico": {
+    "at": [
+      20.7386293,
+      -105.3188029
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q136324482 in Nuevo Nayarit (hotel in Nuevo Vallarta, Nayarit, Mexico), not Nuevo Vallarta. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Hōrin-ji Temple | 法輪寺": {
+    "at": [
+      35.70729,
+      139.71889
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q97192071 is a different Hōrin-ji, 16 km away — a common temple name. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "ISKCON Temple": {
+    "at": [
+      28.5564463,
+      77.2536098
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q4500907 in South East Delhi district (radha Krishna Temple in Delhi, India), not Delhi. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Inside the Museum of the City of New York": {
+    "at": [
+      40.7925266,
+      -73.951802
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1059456 in Manhattan (American history museum and library located in New York City), not New York. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Instituto Central de Ciências, University of Brasília": {
+    "at": [
+      -15.7641279,
+      -47.8703532
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q3643852 in Federal District (administrative region in the Federal District in Brazil), not Brasília. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Intempo": {
+    "at": [
+      38.538045,
+      -0.154645
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata Q14530911 states the address as 'avinguda de Colòmbia, s/n', on Benidorm's Poniente side -- its coordinate, not ours. Ours was 2,939 m east.",
+    "verdict": "fixed"
+  },
+  "InterContinental Shanghai Wonderland": {
+    "at": [
+      31.0608056,
+      121.1492778
+    ],
+    "date": "2026-09-21",
+    "note": "Wikipedia's 31.06028,121.14944 matches Wikidata Q16928554 to ~60 m and is 5.1 km from ours. Both sides sit ~35 km from central Shanghai, which is correct for the Songjiang quarry; the question was only WHICH point, and two sources agree. Moved.",
+    "verdict": "fixed"
+  },
+  "Jackson Street Bridge": {
+    "at": [
+      33.7579,
+      -84.3696
+    ],
+    "date": "2026-09-21",
+    "note": "1.28 km gap, single candidate Q136760277 with ONE sitelink -- too thin to move a coordinate on. Needs a named-source check. NOT MOVED.",
+    "verdict": "undecided"
+  },
+  "Jardine's Lookout": {
+    "at": [
+      22.26636,
+      114.19833
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q6159818 as \"mountain in Hong Kong\" — not a point. A 686 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Kansai International Airport": {
+    "at": [
+      34.4342045,
+      135.222523
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q193682 in Izumisano (airport serving Kobe, Osaka, and Kyoto, Japan), not Osaka. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Karl Marx-Hof": {
+    "at": [
+      48.2385,
+      16.3583
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q513211 in Heiligenstadt (architectural structure), not Vienna. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Kasárna Karlín": {
+    "at": [
+      50.0959,
+      14.4589
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q28838028 in Karlín (), not Prague. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Khao Yai National Park | อุทยานแห่งชาติเขาใหญ่": {
+    "at": [
+      14.4067111,
+      101.5167086
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q386420 in Isan/North eastern Thailand (nature reserve in Thailand), not Nakhon Ratchasima. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Kiln": {
+    "at": [
+      51.5113836,
+      -0.1360297
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata Q26616936 describes itself as 'kiln in Lane End, Wycombe, Buckinghamshire' -- an actual kiln, 51 km away. Ours is the Soho restaurant named Kiln, and our coordinate is central London. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Kozma Street Jewish Cemetery": {
+    "at": [
+      47.4808333,
+      19.1841667
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q1120689 as \"Jewish cemetery in Budapest, Hungary\" — not a point. A 956 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "La Fábrica (The Factory)": {
+    "at": [
+      41.3814241,
+      2.0683143
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q47179935 'La Fàbrica', 1 sitelink, 60 km away. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "La Viña": {
+    "at": [
+      43.3243906,
+      -1.9847417
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q95621200 as \"river in the Basque Country\" — not a point. A 88801 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Lake Louise": {
+    "at": [
+      51.41768,
+      -116.21705
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1367398 in Improvement District No. 09 (Banff National Park) (lake in Alberta, Canada), not Lake Louise. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Lake Saiko": {
+    "at": [
+      35.4990625,
+      138.6865625
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q11618607 in Sakura-ku (lake in Japan), not Fujikawaguchiko. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Lakeside Amusement Park": {
+    "at": [
+      39.7804526,
+      -105.0540339
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q6479071 in Colorado (family-owned amusement park in Lakeside, Colorado adjacent to Denver), not Lakeside. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Lion's Head": {
+    "at": [
+      -33.936899,
+      18.394841
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q1718867 as \"mountain in South Africa\" — not a point. A 577 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "M City": {
+    "at": [
+      43.591,
+      -79.6445
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q56277928 as \"residential building complex in Mississauga, Canada\" — not a point. A 888 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Mae Wang National Park | อุทยานแห่งชาติแม่วาง": {
+    "at": [
+      18.5333964,
+      98.7534528
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q25340864 in Thailand (national park in Thailand), not Mae Wang. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "MahaNakhon": {
+    "at": [
+      13.7236111,
+      100.5283333
+    ],
+    "date": "2026-09-21",
+    "note": "OUR coordinate was 6.9 km south. Q1640197 'King Power Mahanakhon', 27 sitelinks, a skyscraper in Bangkok (admin Q1861). Moved to 13.723611,100.528333.",
+    "verdict": "fixed"
+  },
+  "Memento Park": {
+    "at": [
+      47.4276,
+      18.9847
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q1069906 as \"sculpture garden in Budapest\" — not a point. A 1078 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Meteora": {
+    "at": [
+      39.7250625,
+      21.6298125
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q3125051 in Meteora Municipality (rock formation with cluster of Greek Orthodox monasteries), not Kalabaka. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Mile End": {
+    "at": [
+      45.523,
+      -73.601
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q3314040 in Le Plateau-Mont-Royal (neighbourhood in the borough of Plateau-Mont-Royal, Montreal, Quebec, ), not Montreal. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Mount Royal — the Climb": {
+    "at": [
+      45.499,
+      -73.583
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1757764 in Urban agglomeration of Montreal (hill in Montreal, Quebec, Canada), not Montreal. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Museum Island": {
+    "at": [
+      52.5169,
+      13.3986
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q151963 in Bezirk Mitte (northern part of Spree Island in the Spree river in central Berlin), not Berlin. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Naarden (star fort town)": {
+    "at": [
+      52.2802385,
+      5.1842252
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q575616 in Gooise Meren (railway station in the Netherlands), not Naarden. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Natural History Museum of LA County": {
+    "at": [
+      34.0175,
+      -118.2887
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q104994 in California (county in California, United States), not Los Angeles. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Navi Mumbai International Airport": {
+    "at": [
+      18.9913513,
+      73.0657484
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q3015728 as \"International airport in Navi Mumbai, India\" — not a point. A 1589 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Ngong Ping 360 | 昂坪360": {
+    "at": [
+      22.2910445,
+      113.9384914
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q1984341 as \"gondola lift service in Lantau Island, Hong Kong\" — not a point. A 5372 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Nhiêu Lộc–Thị Nghè Canal | Kênh Nhiêu Lộc - Thị Nghè": {
+    "at": [
+      10.7918353,
+      106.6819873
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata Q10783045 calls it a 'waterway in Ho Chi Minh City' -- a canal roughly 9 km long. An 880 m gap along it is the normal condition, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Old City Hall": {
+    "at": [
+      43.6525,
+      -79.3817
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q7083689 is in GUELPH, Ontario — verified; ours is Toronto's. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Palácio da Justiça": {
+    "at": [
+      38.7322898,
+      -9.1575063
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q111263442, 1 sitelink, 11 km out; ours sits in the Lisbon cluster. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Parque da Cidade do Porto": {
+    "at": [
+      41.16574,
+      -8.67182
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q10345423 in Aldoar, Foz do Douro e Nevogilde (urban park in Porto, Portugal), not Porto. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Parque das Ruínas": {
+    "at": [
+      -22.9164577,
+      -43.1829015
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q15303666 41 km from the Rio cluster; ours is 1.8 km from it. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Pilsen — Eighteenth Street, East to West": {
+    "at": [
+      41.8576,
+      -87.6469
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q3264397 as \"community area in Chicago, Illinois, United States\" — not a point. A 1595 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Ponte 25 de Abril": {
+    "at": [
+      38.700936,
+      -9.178717
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q721152 in Alcântara (suspension bridge in Portugal), not Lisbon. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Prada Aoyama | プラダ 青山店": {
+    "at": [
+      35.663774,
+      139.71444
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q56322351, 2 sitelinks, 10.6 km from Aoyama; ours is 1.3 km from the Tokyo cluster. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Prora": {
+    "at": [
+      54.43,
+      13.61
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q7250481 in Binz (railway stop in Binz, Germany), not Rügen. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Pullman Historic District": {
+    "at": [
+      41.6924,
+      -87.6088
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q7259479 as \"historic district and national monument in Chicago\" — not a point. A 539 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Pérez Art Museum Miami": {
+    "at": [
+      25.786033,
+      -80.186339
+    ],
+    "date": "2026-09-21",
+    "note": "🔴 WIKIDATA CONTRADICTS ITSELF. Q3026874 gives the address as '1103 Biscayne Boulevard' -- Museum Park, which is OUR coordinate -- while its P625 points at 25.7743,-80.1963, the museum's pre-2013 downtown site as the Miami Art Museum. Ours is right; do not move. Two catalogue entries share this title and point.",
+    "verdict": "wikidata-wrong"
+  },
+  "Q1 Tower": {
+    "at": [
+      -27.9745025,
+      153.4195474
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q125846 in Queensland (skyscraper in Australia), not Gold Coast. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Queen Street West": {
+    "at": [
+      43.643,
+      -79.413
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q20726625 as \"heritage conservations district in Toronto, Ontario, Canada\" — not a point. A 1544 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Robie House": {
+    "at": [
+      41.789833,
+      -87.595917
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata Q929965 states the address as '5757 South Woodlawn Avenue', Hyde Park -- which is its coordinate, not ours. Ours was 1,082 m south.",
+    "verdict": "fixed"
+  },
+  "Saint-Sulpice": {
+    "at": [
+      48.85107,
+      2.33474
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q924614 is a COMMUNE IN OISE — verified; ours is the Paris church. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Santa Maria Assunta": {
+    "at": [
+      44.224242,
+      11.0716527
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q3673376 in Pescia (church in Castellare, Italy), not Grizzana Morandi. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Sardar Vallabhbhai Patel (SVP) Stadium": {
+    "at": [
+      23.0917717,
+      72.5973345
+    ],
+    "date": "2026-09-21",
+    "note": "TWO Wikidata entities, both ~6.46 km away: Q134932381 '...Navrangpura' and Q7423742 '...Ahmedabad'. Our point is at Motera, the stadium renamed Narendra Modi Stadium in 2021 and previously called Sardar Patel Stadium. Which one the tour means is a content question. NOT MOVED.",
+    "verdict": "name-collision"
+  },
+  "Scarborough Bluffs": {
+    "at": [
+      43.704,
+      -79.233
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q543254 in Ontario (escarpment in Toronto, Canada), not Toronto. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Singapore Changi Airport": {
+    "at": [
+      1.3510921,
+      103.9949824
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q55721633 in Changi (), not Singapore. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Sun Tower": {
+    "at": [
+      37.461928,
+      121.4425255
+    ],
+    "date": "2026-09-21",
+    "note": "23.5 km gap and NOTHING can settle it. Wikidata Q137310064 has one sitelink, no description and no stated municipality. OSM has no matching feature in a Yantai bbox under 'Sun Tower', '阳光塔' or '陽光塔'. English Wikipedia's 'Sun Tower' is VANCOUVER'S heritage building (49.281,-123.108) -- a different thing with the same name. Both coordinates fall in the Yantai region, so this is not a cross-city collision either. I have an opinion about which is right; an opinion is not a source. NOT MOVED -- needs the creator's post or the architect's own page.",
+    "verdict": "undecided"
+  },
+  "TWA Hotel at JFK": {
+    "at": [
+      40.6447,
+      -73.7895
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q8685 in Queens (international airport in New York, United States), not New York. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Table Mountain Aerial Cableway": {
+    "at": [
+      -33.9472637,
+      18.4026785
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q7673149 in Western Cape (cable car to the top of Table Mountain in Cape Town, South Africa), not Cape Town. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Takase River | 高瀬川": {
+    "at": [
+      34.9952815,
+      135.7669264
+    ],
+    "date": "2026-09-21",
+    "note": "A canal, not a point. Three candidates all ~1.9 km away (Q7677301 the river itself, plus two named basins), which is what a linear feature looks like. Any point on it is defensible. NOT AN ERROR.",
+    "verdict": "linear-feature"
+  },
+  "Taketomi Island": {
+    "at": [
+      24.3201875,
+      124.0769375
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q474560 as \"island in Okinawa, Japan\" — not a point. A 1209 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "The Ancient City (Muang Boran) | เมืองโบราณ": {
+    "at": [
+      13.5397887,
+      100.6232673
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q257554 in Bang Pu Mai (open-air museum), not Samut Prakan. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Baobabs of Morondava": {
+    "at": [
+      -20.2114375,
+      44.4001875
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q3606079 in Toliara Province (airport in Madagascar), not Morondava. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Barnacle Historic State Park": {
+    "at": [
+      25.725332,
+      -80.242557
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q7715660 as \"Florida State Park\" — not a point. A 646 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "The Beaches": {
+    "at": [
+      43.6712,
+      -79.293
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q7715974 in Ontario (neighbourhood in Toronto, Canada), not Toronto. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Bell Tower of Lake Reschen": {
+    "at": [
+      46.8108125,
+      10.5366875
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1249840 in Graun im Vinschgau (artificial lake in Italy), not Curon Venosta. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Berber Village of Chenini": {
+    "at": [
+      32.9098125,
+      10.2749375
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q2317502 in delegation of Tataouine Sud (village in Tunisia), not Chenini. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Dragon Blood Trees of Socotra": {
+    "at": [
+      12.4999375,
+      54.0183125
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q82859 in Socotra Archipelago Governorate (main island of Socotra Archipelago in the Guardafui Channel), not Hadibu. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Elms": {
+    "at": [
+      51.46206,
+      -0.14587
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q7731831 is a historic house in Old Bedhampton, Hampshire — verified. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Face House of Kyoto": {
+    "at": [
+      35.0146347,
+      135.7571985
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q120730 in Japan (prefecture of Japan), not Kyoto. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Floating Islands of Lake Titicaca": {
+    "at": [
+      -15.8163443,
+      -69.9719069
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q35342 in Puno Department (Alpine lake in Peru and Bolivia), not Puno. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Four Columns at Kadoorie Farm": {
+    "at": [
+      22.4295625,
+      114.1216875
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q838392 in Tai Po District (botanical garden in Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Knights of Columbus Building": {
+    "at": [
+      41.3027782,
+      -72.9275801
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q141128288 'Columbus Building', 1 sitelink, 92 km away. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Leaning Tower of Toruń": {
+    "at": [
+      53.0084375,
+      18.6020625
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q47554 in Kuyavian-Pomeranian Voivodeship (city in north-central Poland), not Toruń. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Magnificent Mile — DuSable Bridge to the Water Tower": {
+    "at": [
+      41.8876,
+      -87.6243
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q285218 as \"section of Michigan Avenue in Chicago, United States\" — not a point. A 862 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "The Main — Boulevard Saint-Laurent": {
+    "at": [
+      45.5155,
+      -73.572
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q2460215 as \"street in Montreal, Quebec, Canada\" — not a point. A 837 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "The Monumental Rosary of Montserrat": {
+    "at": [
+      41.5937435,
+      1.8376757
+    ],
+    "date": "2026-09-21",
+    "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Montserrat itself (46 sitelinks); ours is 34 m from the cluster. Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "The Most Valuable Ships at Alang": {
+    "at": [
+      21.4070625,
+      72.1941875
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q587137 in Talaja Taluka (town in Bhavnagar district, Gujarat, India), not Alang. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The National Theatre": {
+    "at": [
+      51.507,
+      -0.114
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q27087082 in London Borough of Lambeth (theatre in Lambeth, London, England, UK), not London. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Peak Tram | 山頂纜車": {
+    "at": [
+      22.2778905,
+      114.1594283
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q1652985 as \"1.4 kilometer funicular railway in Hong Kong, serving 6 stations (with\" — not a point. A 802 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "The Sanctuary of Truth Museum | ปราสาทสัจธรรม": {
+    "at": [
+      13.0366487,
+      100.8786187
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q262459 as \"park in Pattaya, Thailand\" — not a point. A 7189 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "The Secrets Obelisk at Green-Wood": {
+    "at": [
+      40.6580892,
+      -73.994841
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q239043 as \"cemetery in Greenwood Heights, Brooklyn, Kings County, New York; Natio\" — not a point. A 741 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "The Sentry Box of Old San Juan": {
+    "at": [
+      18.470833,
+      -66.123889
+    ],
+    "date": "2026-09-21",
+    "note": "Both candidates are the DISTRICT (Q1136674 Old San Juan Historic District, Q5413104 San Juan Antiguo), not the garita. CLAUDE.md rule 8d forbids moving a pin onto a district centroid. NOT MOVED.",
+    "verdict": "district-match"
+  },
+  "The Shrine of Our Lady of the Rosary of Namyang | 남양 성모 성지": {
+    "at": [
+      37.2076121,
+      126.8178007
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q12603322 in Namyangju (Buddhist temple), not Hwaseong. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Silk Weavers of Lucca": {
+    "at": [
+      43.8456875,
+      10.5056875
+    ],
+    "date": "2026-09-21",
+    "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched the CITY of Lucca (112 sitelinks). Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "The Stone Forest of Tsingy": {
+    "at": [
+      -19.0170625,
+      44.7744375
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1969107 in Melaky (strict nature reserve of Madagascar), not Antsalova. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Terracotta Garden at Lamphun | สวนไม้ไทยบ้านพ่อเลี้ยงหมื่น": {
+    "at": [
+      18.6078421,
+      98.9719456
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1211214 in Mueang Lamphun (town in Lamphun province, Thailand), not Lamphun. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Train Carriage Hotel at Khao Yai": {
+    "at": [
+      14.5116875,
+      101.5350625
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q386420 in Isan/North eastern Thailand (nature reserve in Thailand), not Pak Chong. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Wertheim Study at the New York Public Library": {
+    "at": [
+      40.7531875,
+      -73.9823125
+    ],
+    "date": "2026-09-21",
+    "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched the NYPL for the Performing Arts — a DIFFERENT BRANCH. Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "The West Side Cowboys of Tenth Avenue": {
+    "at": [
+      40.7481144,
+      -74.0047864
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q130388 in Manhattan (avenue in Manhattan, New York City, USA), not New York. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The White Tower of Thessaloniki": {
+    "at": [
+      40.6264375,
+      22.9484375
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q6627746 in Central Macedonia Region (municipality of Macedonia, Greece), not Thessaloniki. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Wizard of Park Avenue": {
+    "at": [
+      40.7458125,
+      -73.9825625
+    ],
+    "date": "2026-09-21",
+    "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched Park Avenue, the STREET (30 sitelinks). Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "Tour Odéon": {
+    "at": [
+      43.7346,
+      7.4218
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q3533145 in La Rousse (Skyscraper in Monaco), not Monaco. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Transfăgărășan": {
+    "at": [
+      45.6024757,
+      24.6140093
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q934803 in Wallachia (mountain pass), not Cârțișoara. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Tung Lung Chau": {
+    "at": [
+      22.2546166,
+      114.2889708
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q195675 in Sai Kung District (island of Hong Kong), not Hong Kong. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Tung Po": {
+    "at": [
+      22.2795782,
+      114.178131
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata matched a different real entity of the same name. Q16923237, 1 sitelink, 6.6 km out. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Universidad de Buenos Aires": {
+    "at": [
+      -34.5882594,
+      -58.3962794
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata Q5855114 is 'Universidad de Buenos Aires. Facultad de …' -- ONE FACULTY BUILDING, not the university. A university has many buildings across a city, so a 1,027 m gap says nothing about whether our point is wrong. NOT MOVED.",
+    "verdict": "part-vs-whole"
+  },
+  "Vasco da Gama Bridge": {
+    "at": [
+      38.7837092,
+      -9.0896671
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q233737 in Parque das Nações (bridge in Portugal), not Lisbon. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Victoria Peak | 太平山頂": {
+    "at": [
+      22.271473,
+      114.1501997
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata describes Q17541 as \"mountain in Hong Kong\" — not a point. A 792 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
+    "verdict": "extended-feature"
+  },
+  "Wat Mahathat | วัดมหาธาตุ": {
+    "at": [
+      14.3635963,
+      100.5675112
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q660585 in Tha Wasukri (Buddhist temple in Ayutthaya, Thailand), not Ayutthaya. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Wat Phra That Doi Kong Mu | วัดพระธาตุดอยกองมู": {
+    "at": [
+      19.38613,
+      97.9818371
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q13020754 in Pang Mu (Buddhist temple in Mae Hong Son province, Thailand), not Mae Hong Son. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "White Temple (Wat Rong Khun) | วัดร่องขุ่น": {
+    "at": [
+      19.8826889,
+      99.7682017
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q496543 in Pa O Don Chai (Buddhist site in Chiang Rai, Thailand), not Chiang Rai. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Yachthouse Residence Club": {
+    "at": [
+      -27.00751,
+      -48.60711
+    ],
+    "date": "2026-09-21",
+    "note": "OSM way/496780880, building=yes, named 'Yachthouse Residence' -- WITHOUT the 'Club' our title carries, which is why an exact-name query returned nothing and a looser one found it. It agrees with Wikidata Q97167987 to 8 m and sits 2.9 km from our old point. Moved.",
+    "verdict": "fixed"
+  },
+  "Zonda at The Halfway": {
+    "at": [
+      51.9374,
+      -1.8605
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q127509048 in Minchinhampton (pub in Box, Minchinhampton, Stroud, Gloucestershire, England), not Guiting Power. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Žižkov Television Tower": {
+    "at": [
+      50.0692,
+      14.4508
+    ],
+    "date": "2026-09-21",
+    "note": "Wikidata places Q1413217 in Žižkov (TV tower in Prague, Czech Republic), not Prague. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  }
 }
