@@ -17076,7 +17076,7 @@
         "5604CD42-2DCE-4041-8045-A1A12DCBB026",
         "4488A2E8-4FB2-48D6-9EF8-72C892627298",
         "03A50FE4-0B29-470E-820F-95EA3905A7D1",
-        "a2e83e1e-21f6-5f2f-8416-f58e23f61fd7"
+        "A243EA16-E09A-5C09-8172-9A1647BA1D7B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -22285,8 +22285,8 @@
         "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
         "E743D100-97B3-43CC-948F-BFBF029EFB89",
-        "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
-        "8ED8CB10-3E8A-4C09-AFFD-356102F75948"
+        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
+        "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -50156,14 +50156,14 @@
       "city": "Bangkok",
       "country": "Thailand",
       "relatedTourIds": [
+        "1C7F5401-213F-5ED5-87D5-60BDE46B6833",
         "a464be99-a89f-59a9-91a8-5f72d61c8f35",
         "6b6ba814-b29e-52bb-8a04-2de65c66ec50",
         "1901a157-737e-5018-a26d-0870682e1534",
         "30ed0708-d9df-5782-bcc3-cfcd519d7061",
         "b7ea32b9-8149-5f46-9c91-bfb25bc03d9a",
         "db50d1e0-d8ad-5443-9aae-cd60de93c7b6",
-        "25ec5cd1-ddaa-5da9-8725-a0275e20a18b",
-        "c7ff950b-da58-5328-8dd3-cc2adece3b1a"
+        "25ec5cd1-ddaa-5da9-8725-a0275e20a18b"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -51408,10 +51408,10 @@
         "8aa3d5d7-cd39-5bdc-bac2-4feba1e8c45a",
         "5ADEE32C-4B5E-5D33-A935-43805CD3AF95",
         "5989fbdc-f267-572f-aba7-446b59def3b3",
+        "1C7F5401-213F-5ED5-87D5-60BDE46B6833",
         "bd08a0af-1a77-5c37-86c0-46fa72c73c2c",
         "A7B09ACF-93B6-5E1C-A6F2-F22BE5160415",
-        "0803b153-9b5a-56e8-ab78-9ef5f3a35ec5",
-        "3a8e63c0-5e5d-5ea4-8470-3884033abe43"
+        "0803b153-9b5a-56e8-ab78-9ef5f3a35ec5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -53769,11 +53769,11 @@
         "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
         "699295da-c427-522e-9c4a-17c5057f2d3a",
         "7d488e09-757f-581d-8de7-12b7a77c8067",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
         "ea06c347-180e-59a5-a6db-2604229a56de",
         "8b127963-bdb4-5e8d-8b89-f7e427e09380",
         "6b94cc41-ea57-5625-b281-e5453925d6a5",
-        "e816a1e6-2368-55d1-a947-9059c5645bb7",
-        "35d28cdd-df23-5b4d-99b8-ef54948db57d"
+        "e816a1e6-2368-55d1-a947-9059c5645bb7"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -54103,7 +54103,7 @@
         "2a7bfb4d-1d47-5f07-aa20-d0d6ede705d2",
         "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
         "a48cc6fe-7c4b-5a82-a91c-474c9964a648",
-        "dc2067a1-52d6-5ed2-a3e6-23ca35f8953c"
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -54364,11 +54364,11 @@
         "8b127963-bdb4-5e8d-8b89-f7e427e09380",
         "3d324428-9711-5480-9b5c-180374f3090c",
         "452e3825-0e6d-59bc-8083-2d3643352f02",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
         "35d28cdd-df23-5b4d-99b8-ef54948db57d",
         "998a538e-581b-5b6c-ab94-252b2ef0a972",
         "69f8d7d2-4246-5d8f-81f9-87e6b685473a",
-        "699295da-c427-522e-9c4a-17c5057f2d3a",
-        "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d"
+        "699295da-c427-522e-9c4a-17c5057f2d3a"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -60946,8 +60946,8 @@
         "2b792f2c-e508-545b-ae53-8cc6521258c5",
         "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
         "003f73f6-456d-5a12-ba47-e3558f7eb277",
-        "75c41631-dbdb-5d83-a7cf-9250edc4ed30",
-        "59c9eb6b-ddd3-5811-a779-ec4884fd90ba"
+        "CE6EE4D1-2E39-5FC4-B081-B89E10C7FEAD",
+        "75c41631-dbdb-5d83-a7cf-9250edc4ed30"
       ],
       "priceUSD": 0,
       "centroidLatitude": 40.4085,
@@ -81299,8 +81299,8 @@
         "6350bcee-b875-582c-aee3-a34fdb0741d4",
         "fe31d151-9f5d-5d28-9052-a47e322f340e",
         "91298278-bade-57b1-85a6-b5a2c358d10b",
-        "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
-        "164ee48a-1bc2-544d-b794-694dbe72a3b1"
+        "67F8CA8B-19FB-5E90-A1A6-577DA8B346C4",
+        "b51f52e9-7304-5d50-9a6f-27fb70f6013d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -83381,10 +83381,10 @@
         "ba243ad5-a243-5439-851d-91ed7773b2f7",
         "f731ae9a-fc05-5c1d-8756-7ffd416ab826",
         "7e57138e-a046-5278-8a01-136788c3574c",
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
         "68d19f6a-8ce3-5f8f-b038-52dbee13a72f",
         "F925F381-1216-520D-85D0-842F4BD214AF",
-        "f63a6d67-5d03-556c-a54b-039a53209fa8",
-        "10a6ae4d-cdd6-554d-a950-a4291489ba66"
+        "f63a6d67-5d03-556c-a54b-039a53209fa8"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -84563,7 +84563,7 @@
         "dfe62d65-4366-5f74-9c80-a3de14f14a2b",
         "190eca09-0869-5b16-a48a-be2b80814025",
         "07956ee2-9d07-5e0e-b29b-0e796389e7ed",
-        "f4125573-632f-567e-beb1-30fc42bccc8f"
+        "0F1804F2-42BE-5B31-82A8-F93906619240"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -95792,7 +95792,7 @@
         "9addc742-68a7-597f-a246-d419f8628fc5",
         "310fac17-247d-507b-9637-503685b7af85",
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
-        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787"
+        "8424AB53-BBB4-5082-8570-4856E2DECC16"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -95845,13 +95845,13 @@
       "country": "Denmark",
       "relatedTourIds": [
         "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "68d19f6a-8ce3-5f8f-b038-52dbee13a72f",
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
         "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
         "6c4581a9-2d5e-5089-a5af-7bcb86820351",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "78C5A964-5A46-5AD6-938C-1922A41827F0",
-        "5d2adffe-3839-54dc-8d49-6731894a7490",
-        "cdefd343-5849-51d5-bd99-5a9399656006"
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -96491,14 +96491,14 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba",
         "6c4581a9-2d5e-5089-a5af-7bcb86820351",
         "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
         "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "78C5A964-5A46-5AD6-938C-1922A41827F0",
-        "ae20b167-fe77-51bf-ac3f-96499b418250",
-        "f63a6d67-5d03-556c-a54b-039a53209fa8"
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -96775,13 +96775,13 @@
       "country": "Denmark",
       "relatedTourIds": [
         "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "5d3f0425-f6b7-5f49-82d3-2586cc900de6",
         "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
         "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba",
         "5d2adffe-3839-54dc-8d49-6731894a7490",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "836b17d2-f688-593d-beee-fe3b12e2ae42",
-        "6c4581a9-2d5e-5089-a5af-7bcb86820351"
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -96829,14 +96829,14 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
         "310fac17-247d-507b-9637-503685b7af85",
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
         "6c4581a9-2d5e-5089-a5af-7bcb86820351",
         "9addc742-68a7-597f-a246-d419f8628fc5",
-        "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
-        "cdefd343-5849-51d5-bd99-5a9399656006",
-        "0A6EED99-1771-5220-9CCC-59FF7C7803E0"
+        "2f5ad875-4166-58fb-b1a3-8967ab6be2d4"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -97001,12 +97001,12 @@
       "relatedTourIds": [
         "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba",
         "b64abb45-ca9f-5d0b-bb7e-707efef29fa7",
         "15d75927-2c50-588e-a526-e210c4d5d660",
-        "22f47573-64ce-5b4b-a344-ac89293e6202",
-        "a693cefc-48fe-578e-a55a-61bdf2e61379",
-        "23A18095-A91D-54D3-B568-195EB039880B"
+        "22f47573-64ce-5b4b-a344-ac89293e6202"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -97054,14 +97054,14 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
         "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
         "4f5eb672-dc6e-5d4d-a807-9f79771ba281",
         "68d19f6a-8ce3-5f8f-b038-52dbee13a72f",
         "78C5A964-5A46-5AD6-938C-1922A41827F0",
         "9addc742-68a7-597f-a246-d419f8628fc5",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba"
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -97287,14 +97287,14 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba",
         "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
         "6c4581a9-2d5e-5089-a5af-7bcb86820351",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
         "5d2adffe-3839-54dc-8d49-6731894a7490",
         "68d19f6a-8ce3-5f8f-b038-52dbee13a72f",
-        "78C5A964-5A46-5AD6-938C-1922A41827F0",
-        "f6ee029b-027c-5ca4-965c-906bad67478c"
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -106736,7 +106736,7 @@
         "DEE1789D-7659-58BC-81D5-6C6CD8354F2B",
         "D3FD149D-D825-536C-9B4D-687EF5979CD8",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
-        "1F17BE53-4450-53B6-84BC-4DC79B0ECB73"
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -107108,14 +107108,14 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "9C9F7941-FD4A-5EFE-AA43-F2038E059EA3",
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
         "6c4581a9-2d5e-5089-a5af-7bcb86820351",
         "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba",
-        "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
-        "4A25A149-8D4C-5505-BA58-8F3830F4F45D",
-        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
-        "68d19f6a-8ce3-5f8f-b038-52dbee13a72f",
-        "0A6EED99-1771-5220-9CCC-59FF7C7803E0"
+        "acf95c71-7b95-51ae-89f0-804cf99b4e0c"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -111999,9 +111999,9 @@
         "76DA191A-050A-5E6B-BF34-2B4BBE3C91D3",
         "4E62DBD9-23DD-5F10-9617-3A00514F260F",
         "b794fa21-1665-4f09-bf8f-ce6ce68fff9b",
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E",
         "81014923-08E4-5A6A-9244-2FDCB71461FB",
-        "E8D23E76-983D-5164-8227-3021A7885322",
-        "148658CE-C082-5D88-AC1E-4A1A2CDDCA75"
+        "E8D23E76-983D-5164-8227-3021A7885322"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -112105,6 +112105,7 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
         "3d324428-9711-5480-9b5c-180374f3090c",
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378"
       ],
@@ -113571,9 +113572,9 @@
         "05222115-7F54-5AFE-921F-4B0B920DA6BA",
         "DE15E1FF-D8EA-5FEF-9062-8884F53E033B",
         "62cca756-02e7-5848-ace4-502800c37005",
+        "CE6EE4D1-2E39-5FC4-B081-B89E10C7FEAD",
         "962093e8-2777-5053-b9f2-fa72590c5b96",
-        "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
-        "44bb3a6d-09d3-5763-8e20-4c129fc5e27c"
+        "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -164536,11 +164537,11 @@
         "5DC05AA4-5778-5C55-807A-82535CA11EDE",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
         "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "cdefd343-5849-51d5-bd99-5a9399656006",
-        "310fac17-247d-507b-9637-503685b7af85",
-        "a25df491-7cb5-5aea-bf3e-21efae47956a"
+        "310fac17-247d-507b-9637-503685b7af85"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -179274,12 +179275,12 @@
       "relatedTourIds": [
         "69d08739-f300-56b7-8c41-67f1e08b745b",
         "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
+        "D8CB27A9-261D-53D4-A36A-40AC957CBAF6",
         "7ed84c6e-2698-572e-901f-4fc13969845a",
         "3DA74EAD-CE5E-524A-A80D-77FA13D04B93",
         "7F813653-AA6A-5EF6-8FBA-7D0FAC395101",
         "AC83F010-C9F0-5E4F-AC7F-A231575BE931",
-        "04A23295-DC9A-527A-824F-038B0C4CF7A1",
-        "A266DE94-CA58-536A-AE6A-FBCD39C359A4"
+        "04A23295-DC9A-527A-824F-038B0C4CF7A1"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -186361,7 +186362,8 @@
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "FDFAB0F8-4272-588E-9234-865B56DE5302",
         "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F"
+        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -186984,7 +186986,7 @@
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302"
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -191116,12 +191118,12 @@
       "relatedTourIds": [
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
         "433D4444-9AB9-52D4-BC25-3DCCA10459EC",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
         "a48cc6fe-7c4b-5a82-a91c-474c9964a648",
         "d073c73a-ddc1-5484-8e00-51740325b524",
         "9D403B87-B9A2-5786-94B2-C70BD0487A00",
         "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
-        "dc2067a1-52d6-5ed2-a3e6-23ca35f8953c",
-        "20A7ED29-F9CF-57FC-AA4A-40413D09E3FC"
+        "dc2067a1-52d6-5ed2-a3e6-23ca35f8953c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -195324,6 +195326,9 @@
       "centroidLongitude": 54.398606,
       "city": "Abu Dhabi",
       "country": "United Arab Emirates",
+      "relatedTourIds": [
+        "48C4AED0-0D2E-5A8A-A59F-572FAAA1133D"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -207224,8 +207229,8 @@
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
         "372C3461-21A2-50C4-8397-92DDEA570136",
         "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
-        "433D4444-9AB9-52D4-BC25-3DCCA10459EC",
-        "d073c73a-ddc1-5484-8e00-51740325b524"
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "433D4444-9AB9-52D4-BC25-3DCCA10459EC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -207279,8 +207284,8 @@
         "372C3461-21A2-50C4-8397-92DDEA570136",
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
         "80943c5f-f117-59a3-bfcc-e55d8a78b63f",
-        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
-        "3d324428-9711-5480-9b5c-180374f3090c"
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -215951,6 +215956,7 @@
         "DB7536E0-30BF-5714-97F4-B1075E34520E",
         "f2605a06-195a-59b3-9b52-ab380b96023c",
         "E46BE249-304F-57ED-9928-A3D809BCCAF0",
+        "67F8CA8B-19FB-5E90-A1A6-577DA8B346C4",
         "A105CEF1-6A1C-508B-8D60-7026F595D962"
       ],
       "primaryCategory": "hiddenGems",
@@ -216117,9 +216123,9 @@
         "A2E1EBE1-21F0-55F6-AAF1-7DB1C0CF6464",
         "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
         "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
+        "67F8CA8B-19FB-5E90-A1A6-577DA8B346C4",
         "D89DE4C5-7873-5F06-81A7-10ECC84AE618",
-        "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345",
-        "3535426b-5531-514f-924b-eb72e9a1c3e5"
+        "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -216225,12 +216231,12 @@
       "relatedTourIds": [
         "9757C81E-088E-5540-A5BB-92D8B5FC5B12",
         "8c90b9f7-8300-575c-8e5f-66cd3cefcd3d",
+        "67F8CA8B-19FB-5E90-A1A6-577DA8B346C4",
         "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
         "D89DE4C5-7873-5F06-81A7-10ECC84AE618",
         "A105CEF1-6A1C-508B-8D60-7026F595D962",
         "8DBE5099-D3E9-5AB0-B361-78580B68530D",
-        "E46BE249-304F-57ED-9928-A3D809BCCAF0",
-        "DB7536E0-30BF-5714-97F4-B1075E34520E"
+        "E46BE249-304F-57ED-9928-A3D809BCCAF0"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -224105,10 +224111,10 @@
         "5ADEE32C-4B5E-5D33-A935-43805CD3AF95",
         "e6fef92a-aeca-52e3-9454-a610192f7085",
         "daf2ae76-bee9-5987-930d-a9fce8877926",
+        "8A292A38-E567-5552-84A9-FCBA33A168D9",
         "88b57468-dab9-56d8-b6ea-4caaca692651",
         "5989fbdc-f267-572f-aba7-446b59def3b3",
-        "c7ff950b-da58-5328-8dd3-cc2adece3b1a",
-        "25ec5cd1-ddaa-5da9-8725-a0275e20a18b"
+        "c7ff950b-da58-5328-8dd3-cc2adece3b1a"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224156,14 +224162,14 @@
       "city": "Bangkok",
       "country": "Thailand",
       "relatedTourIds": [
+        "54948D64-DA1D-541D-8A3B-9C45FAF75106",
         "A7B09ACF-93B6-5E1C-A6F2-F22BE5160415",
         "A8B423A8-669D-59DF-BCBB-1101CC5EAFD5",
         "daf2ae76-bee9-5987-930d-a9fce8877926",
         "bd08a0af-1a77-5c37-86c0-46fa72c73c2c",
-        "e6fef92a-aeca-52e3-9454-a610192f7085",
-        "E10ECAC4-E625-5D39-BAB8-623585BFAF26",
-        "25ec5cd1-ddaa-5da9-8725-a0275e20a18b",
-        "a464be99-a89f-59a9-91a8-5f72d61c8f35"
+        "1C7F5401-213F-5ED5-87D5-60BDE46B6833",
+        "8A292A38-E567-5552-84A9-FCBA33A168D9",
+        "e6fef92a-aeca-52e3-9454-a610192f7085"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -224320,12 +224326,13 @@
       "country": "Thailand",
       "relatedTourIds": [
         "5ADEE32C-4B5E-5D33-A935-43805CD3AF95",
+        "54948D64-DA1D-541D-8A3B-9C45FAF75106",
         "A7B09ACF-93B6-5E1C-A6F2-F22BE5160415",
         "bd08a0af-1a77-5c37-86c0-46fa72c73c2c",
+        "8A292A38-E567-5552-84A9-FCBA33A168D9",
         "E10ECAC4-E625-5D39-BAB8-623585BFAF26",
         "25ec5cd1-ddaa-5da9-8725-a0275e20a18b",
-        "e6fef92a-aeca-52e3-9454-a610192f7085",
-        "daf2ae76-bee9-5987-930d-a9fce8877926"
+        "1C7F5401-213F-5ED5-87D5-60BDE46B6833"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -225117,9 +225124,11 @@
       "relatedTourIds": [
         "daf2ae76-bee9-5987-930d-a9fce8877926",
         "5ADEE32C-4B5E-5D33-A935-43805CD3AF95",
+        "54948D64-DA1D-541D-8A3B-9C45FAF75106",
         "A7B09ACF-93B6-5E1C-A6F2-F22BE5160415",
         "bd08a0af-1a77-5c37-86c0-46fa72c73c2c",
-        "A8B423A8-669D-59DF-BCBB-1101CC5EAFD5"
+        "A8B423A8-669D-59DF-BCBB-1101CC5EAFD5",
+        "1C7F5401-213F-5ED5-87D5-60BDE46B6833"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -225600,11 +225609,11 @@
         "0334472C-2E52-5A9D-A921-6D09B847C116",
         "98452AC5-AB44-5E88-B38F-C123A91594D5",
         "71B33011-F8FE-5C09-94C7-6810F68F5514",
+        "EA327FAA-BDBC-50D9-B50F-90BC06D59FD0",
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
         "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
-        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
-        "A41BCB0D-C6A5-5785-8A70-D7E0FF8257F2"
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -234202,8 +234211,8 @@
         "0334472C-2E52-5A9D-A921-6D09B847C116",
         "79702152-6A98-54BA-9795-803F93ECAD50",
         "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
-        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7",
-        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+        "68D7440B-0E42-50C3-B9BE-D7C778C59616",
+        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -234255,9 +234264,9 @@
         "71B33011-F8FE-5C09-94C7-6810F68F5514",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "79702152-6A98-54BA-9795-803F93ECAD50",
+        "EA327FAA-BDBC-50D9-B50F-90BC06D59FD0",
         "9615AE86-F5D1-5043-80E0-0D6BEAB9B136",
-        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
-        "004770A3-5393-5AB0-B1F7-4C5FA2769C13"
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -235680,13 +235689,13 @@
       "country": "France",
       "relatedTourIds": [
         "0F278313-E88E-5A29-A6C7-EE145234206C",
+        "46DE9958-63C1-5E37-A369-E8030A5C4970",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "3916CE65-DC32-533A-98A7-E313AD8D553B",
         "79702152-6A98-54BA-9795-803F93ECAD50",
-        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
-        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -238533,7 +238542,7 @@
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
         "08EC1F00-10C1-57D8-8BB1-F0196F30403F",
-        "591DDDEB-C8D0-5309-890D-9E657D6F325B"
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -243822,7 +243831,7 @@
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "F9B2DDA8-C635-5C52-9279-5010B792942F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -243873,7 +243882,7 @@
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "F9B2DDA8-C635-5C52-9279-5010B792942F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -244014,11 +244023,11 @@
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "F9B2DDA8-C635-5C52-9279-5010B792942F",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
-        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -244065,13 +244074,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "F9B2DDA8-C635-5C52-9279-5010B792942F",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "22729270-A072-5E55-845D-D5FBB3FBED84",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -244288,6 +244297,7 @@
       "relatedTourIds": [
         "60A203C5-1369-5E72-9B93-F2AD1373E92C",
         "783129EA-C200-54B7-891C-1A7108E9DAAF",
+        "CE6EE4D1-2E39-5FC4-B081-B89E10C7FEAD",
         "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
         "2b792f2c-e508-545b-ae53-8cc6521258c5",
         "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
@@ -244341,6 +244351,7 @@
         "60A203C5-1369-5E72-9B93-F2AD1373E92C",
         "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
         "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "CE6EE4D1-2E39-5FC4-B081-B89E10C7FEAD",
         "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
         "1c43d008-386e-5413-b3de-cbda28a52381"
       ],
@@ -244388,6 +244399,7 @@
       "relatedTourIds": [
         "783129EA-C200-54B7-891C-1A7108E9DAAF",
         "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
+        "CE6EE4D1-2E39-5FC4-B081-B89E10C7FEAD",
         "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
         "2b792f2c-e508-545b-ae53-8cc6521258c5",
         "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
@@ -250982,10 +250994,10 @@
         "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
         "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "EA327FAA-BDBC-50D9-B50F-90BC06D59FD0",
         "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA",
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
-        "D89F4304-22E0-5461-90E7-90EC6649C227",
-        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
+        "D89F4304-22E0-5461-90E7-90EC6649C227"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -251081,6 +251093,9 @@
       "centroidLongitude": -9.1534271,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "A243EA16-E09A-5C09-8172-9A1647BA1D7B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -251126,6 +251141,8 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
+        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
         "5604CD42-2DCE-4041-8045-A1A12DCBB026",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1"
       ],
@@ -251288,8 +251305,8 @@
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
         "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+        "F9B2DDA8-C635-5C52-9279-5010B792942F",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -252619,10 +252636,10 @@
         "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "D3FD149D-D825-536C-9B4D-687EF5979CD8",
         "C3BE5960-C13B-5686-BABA-A27F9FEED746",
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E",
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
         "b0ef546a-db5c-4b27-8eb3-be4dd6665e61",
-        "1CDA55C8-4CD3-5735-B5AE-CAA77AA55303",
-        "1B62FA84-2346-5771-B155-9DF65757BE26"
+        "1CDA55C8-4CD3-5735-B5AE-CAA77AA55303"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254965,8 +254982,8 @@
         "bd4d95e6-403e-4b9b-a894-efbc205668a5",
         "9DBFEB11-F8D9-5507-8A3E-D9C5E81827C2",
         "D3FD149D-D825-536C-9B4D-687EF5979CD8",
-        "6EA186A8-54E1-5044-85DC-50FCEE8C1504",
-        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E",
+        "6EA186A8-54E1-5044-85DC-50FCEE8C1504"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -255413,11 +255430,11 @@
         "B31C6CD5-7903-5839-9C51-CE18F4331C20",
         "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
         "556D7D3D-D043-5C0A-A362-1B879FF8758B",
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E",
         "D3FD149D-D825-536C-9B4D-687EF5979CD8",
         "2DEA2C83-A7BB-500C-A30B-B8A107D6FCED",
         "9DBFEB11-F8D9-5507-8A3E-D9C5E81827C2",
-        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
-        "1FA1C817-9ABF-51DC-A25B-665E12EE03EF"
+        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -256206,13 +256223,13 @@
       "country": "USA",
       "relatedTourIds": [
         "9DBFEB11-F8D9-5507-8A3E-D9C5E81827C2",
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E",
         "1B62FA84-2346-5771-B155-9DF65757BE26",
         "E8D23E76-983D-5164-8227-3021A7885322",
         "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
         "2DEA2C83-A7BB-500C-A30B-B8A107D6FCED",
         "D3FD149D-D825-536C-9B4D-687EF5979CD8",
-        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
-        "D013BE7E-C21B-5934-AE3D-C95E0103E5C4"
+        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -257299,6 +257316,7 @@
       "city": "Osaka",
       "country": "Japan",
       "relatedTourIds": [
+        "1DB07613-98E4-5A26-9B39-C240B33164FC",
         "846A075A-4712-579A-9F3C-A5C000EBD1BE"
       ],
       "primaryCategory": "architecture",
@@ -257901,6 +257919,7 @@
         "769A4133-5472-590E-A8BB-F277981D1F02",
         "8cb1ee17-9758-5597-ae23-55308c3457f4",
         "69AB0C5F-2F3C-5886-95C0-7924C1CEA5CC",
+        "E6298CED-6F9C-56BE-8E85-33C90183D161",
         "985991d9-89c3-58b7-9a9d-61dfa39f61c7",
         "82627f41-5c54-57b9-b236-c34eb22de667",
         "c20b21e7-09b4-5f09-9574-4250fe445dd3"
@@ -259791,7 +259810,7 @@
         "82627f41-5c54-57b9-b236-c34eb22de667",
         "da4f0595-0607-58c2-9996-676b1734b626",
         "32130aa0-c428-5cb8-bf65-49d780ad4d02",
-        "c20b21e7-09b4-5f09-9574-4250fe445dd3"
+        "E6298CED-6F9C-56BE-8E85-33C90183D161"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -260542,7 +260561,7 @@
         "2DEA2C83-A7BB-500C-A30B-B8A107D6FCED",
         "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
         "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
-        "6EA186A8-54E1-5044-85DC-50FCEE8C1504"
+        "6E1064B4-76DA-5775-A09F-541FE736DA6E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -268603,7 +268622,7 @@
         "C7934243-8A39-5E68-82FE-91B18D01E5D6",
         "1BCD75BD-D1B4-50AD-BA26-8C64FD2D6D54",
         "5398A277-7B0E-5B48-8C00-859C184D9066",
-        "df1b9acf-5fb5-4ef0-b186-be992e69fb8f"
+        "0F1804F2-42BE-5B31-82A8-F93906619240"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -269175,13 +269194,13 @@
       "country": "Japan",
       "relatedTourIds": [
         "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216",
+        "67F8CA8B-19FB-5E90-A1A6-577DA8B346C4",
         "9757C81E-088E-5540-A5BB-92D8B5FC5B12",
         "9AC2E1C4-A8D9-5D37-80AC-BBD07E660345",
         "4DB3A10E-69BD-56E8-854E-ACCC1BA1BA0B",
         "CC0130C6-79D1-5E43-9603-9514F2E6899A",
         "ccda9933-558b-5739-9162-16cc68721d8b",
-        "D89DE4C5-7873-5F06-81A7-10ECC84AE618",
-        "E3E19249-703B-5AF6-A88F-3077D955EA24"
+        "D89DE4C5-7873-5F06-81A7-10ECC84AE618"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -269336,14 +269355,14 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
         "9D403B87-B9A2-5786-94B2-C70BD0487A00",
         "35d28cdd-df23-5b4d-99b8-ef54948db57d",
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
         "AD2E9300-9E61-51E0-9A31-E05E3A8BA8ED",
-        "3d324428-9711-5480-9b5c-180374f3090c",
-        "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
-        "d8111f1a-3093-56b6-951d-84358df67e2d",
-        "e2e6d14f-aec1-546c-8930-3d2c4a72c6d8"
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "3d324428-9711-5480-9b5c-180374f3090c"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -270423,8 +270442,8 @@
         "027561D7-DF07-55E6-9F06-E6147FCB8BA9",
         "1394E226-7767-54F5-BC0E-5D3576409C07",
         "23AFE0B0-89B8-53AC-BCFD-36E7CD20884C",
-        "EAD9A3AA-0BC3-5F2B-990A-FCB3D63E0653",
-        "B468E53C-5AA8-5C29-B047-499E7C7DC24D"
+        "D8CB27A9-261D-53D4-A36A-40AC957CBAF6",
+        "EAD9A3AA-0BC3-5F2B-990A-FCB3D63E0653"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -272389,6 +272408,7 @@
       "relatedTourIds": [
         "783129EA-C200-54B7-891C-1A7108E9DAAF",
         "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
+        "CE6EE4D1-2E39-5FC4-B081-B89E10C7FEAD",
         "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
         "1c43d008-386e-5413-b3de-cbda28a52381",
         "60A203C5-1369-5E72-9B93-F2AD1373E92C"
@@ -272740,6 +272760,7 @@
       "relatedTourIds": [
         "FF7DDD8C-A2D6-524C-910E-B3B1B5789AED",
         "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
+        "CE6EE4D1-2E39-5FC4-B081-B89E10C7FEAD",
         "783129EA-C200-54B7-891C-1A7108E9DAAF",
         "60A203C5-1369-5E72-9B93-F2AD1373E92C",
         "87ACD00F-4FD4-5B40-AFA7-67EB5F5665D7",
@@ -276857,6 +276878,16 @@
       "centroidLongitude": 2.3718765,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "98452AC5-AB44-5E88-B38F-C123A91594D5",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -276901,6 +276932,9 @@
       "centroidLongitude": -0.1360297,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "0F1804F2-42BE-5B31-82A8-F93906619240"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -276945,6 +276979,16 @@
       "centroidLongitude": -9.1456941,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "DEB56C03-ED04-5FE8-9DE2-AD84D9E6EB53",
+        "02DDDD4C-4A56-48B8-8326-185746E8837B",
+        "03A50FE4-0B29-470E-820F-95EA3905A7D1",
+        "194481D6-6865-42A1-96CC-041761B12EA7",
+        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
+        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
+        "9283D1D6-A58F-43A4-BF69-8BBBE41C1735",
+        "2418E4CC-7611-4FC9-A915-4DC596D5D9C7"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277033,6 +277077,16 @@
       "centroidLongitude": 4.8833994,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "75921CF5-9489-58EF-801A-825BCEA02423",
+        "ea06c347-180e-59a5-a6db-2604229a56de",
+        "3d324428-9711-5480-9b5c-180374f3090c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277077,6 +277131,9 @@
       "centroidLongitude": 23.7296335,
       "city": "Athens",
       "country": "Greece",
+      "relatedTourIds": [
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277121,6 +277178,16 @@
       "centroidLongitude": 12.579407,
       "city": "Copenhagen",
       "country": "Denmark",
+      "relatedTourIds": [
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
+        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
+        "78C5A964-5A46-5AD6-938C-1922A41827F0",
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
+        "6c4581a9-2d5e-5089-a5af-7bcb86820351",
+        "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
+        "68d19f6a-8ce3-5f8f-b038-52dbee13a72f"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277165,6 +277232,16 @@
       "centroidLongitude": 12.58285,
       "city": "Copenhagen",
       "country": "Denmark",
+      "relatedTourIds": [
+        "78C5A964-5A46-5AD6-938C-1922A41827F0",
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
+        "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba",
+        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
+        "6c4581a9-2d5e-5089-a5af-7bcb86820351"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277209,6 +277286,16 @@
       "centroidLongitude": 4.9047723,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "75921CF5-9489-58EF-801A-825BCEA02423",
+        "27AC7091-C26B-5F77-BF06-4196251407AD",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277253,6 +277340,16 @@
       "centroidLongitude": 4.883982,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
+        "75921CF5-9489-58EF-801A-825BCEA02423",
+        "d073c73a-ddc1-5484-8e00-51740325b524"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277297,6 +277394,16 @@
       "centroidLongitude": 4.9252745,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
+        "75921CF5-9489-58EF-801A-825BCEA02423",
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "dc2067a1-52d6-5ed2-a3e6-23ca35f8953c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277341,6 +277448,14 @@
       "centroidLongitude": 4.897927,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277385,6 +277500,11 @@
       "centroidLongitude": 12.4798767,
       "city": "Rome",
       "country": "Italy",
+      "relatedTourIds": [
+        "c7d6db46-7c8a-59a3-92af-7f3429d719df",
+        "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
+        "07d68f3a-b722-5402-8bcf-f44c5992eff5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277429,6 +277549,12 @@
       "centroidLongitude": -0.1110004,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "df1b9acf-5fb5-4ef0-b186-be992e69fb8f",
+        "216DDB19-ACE6-57F4-8734-3CE2F6793719",
+        "2D0C2877-6AA0-5FFF-A8CB-6E7203487376",
+        "F98C3528-59A7-5669-B72C-422AA9CF9026"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277473,6 +277599,16 @@
       "centroidLongitude": 2.3671315,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "EA327FAA-BDBC-50D9-B50F-90BC06D59FD0",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277517,6 +277653,16 @@
       "centroidLongitude": 2.3712473,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "F4041C5C-50E3-55D4-BD05-F8D7F3467E79",
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "82BF7C63-3145-51AC-848A-EACD3011E555",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "46DE9958-63C1-5E37-A369-E8030A5C4970",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277561,6 +277707,16 @@
       "centroidLongitude": 100.5894878,
       "city": "Bangkok",
       "country": "Thailand",
+      "relatedTourIds": [
+        "A7B09ACF-93B6-5E1C-A6F2-F22BE5160415",
+        "bd08a0af-1a77-5c37-86c0-46fa72c73c2c",
+        "5ADEE32C-4B5E-5D33-A935-43805CD3AF95",
+        "1C7F5401-213F-5ED5-87D5-60BDE46B6833",
+        "88b57468-dab9-56d8-b6ea-4caaca692651",
+        "A8B423A8-669D-59DF-BCBB-1101CC5EAFD5",
+        "daf2ae76-bee9-5987-930d-a9fce8877926",
+        "54948D64-DA1D-541D-8A3B-9C45FAF75106"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277605,6 +277761,16 @@
       "centroidLongitude": 100.5826643,
       "city": "Bangkok",
       "country": "Thailand",
+      "relatedTourIds": [
+        "5ADEE32C-4B5E-5D33-A935-43805CD3AF95",
+        "0803b153-9b5a-56e8-ab78-9ef5f3a35ec5",
+        "fc00dfe8-8c46-5607-9465-6416a14f916b",
+        "A7B09ACF-93B6-5E1C-A6F2-F22BE5160415",
+        "3a8e63c0-5e5d-5ea4-8470-3884033abe43",
+        "54948D64-DA1D-541D-8A3B-9C45FAF75106",
+        "e6fef92a-aeca-52e3-9454-a610192f7085",
+        "628f0451-5f65-57e4-b005-eec3b212c593"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277649,6 +277815,9 @@
       "centroidLongitude": 100.0060765,
       "city": "Koh Phangan",
       "country": "Thailand",
+      "relatedTourIds": [
+        "22E0ECCC-1073-51A3-9FFC-20EFBDE0B2EE"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277693,6 +277862,9 @@
       "centroidLongitude": 99.9998125,
       "city": "Koh Phangan",
       "country": "Thailand",
+      "relatedTourIds": [
+        "59E013B3-B72E-5536-B071-663AECF60F80"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277737,6 +277909,16 @@
       "centroidLongitude": 100.5083113,
       "city": "Bangkok",
       "country": "Thailand",
+      "relatedTourIds": [
+        "5ADEE32C-4B5E-5D33-A935-43805CD3AF95",
+        "a464be99-a89f-59a9-91a8-5f72d61c8f35",
+        "A8B423A8-669D-59DF-BCBB-1101CC5EAFD5",
+        "25ec5cd1-ddaa-5da9-8725-a0275e20a18b",
+        "1C7F5401-213F-5ED5-87D5-60BDE46B6833",
+        "e6fef92a-aeca-52e3-9454-a610192f7085",
+        "E10ECAC4-E625-5D39-BAB8-623585BFAF26",
+        "bd08a0af-1a77-5c37-86c0-46fa72c73c2c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277825,6 +278007,14 @@
       "centroidLongitude": 4.8805499,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277869,6 +278059,16 @@
       "centroidLongitude": -9.1438049,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "04656E37-13C2-5077-B527-3769A223710D",
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
+        "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA",
+        "73387EF4-3706-5B72-9668-61B6A618F8B8",
+        "02DDDD4C-4A56-48B8-8326-185746E8837B",
+        "3E5FE0E3-8A8C-48E7-A1D0-A4F528C88B38",
+        "447F5C9B-583F-4EF9-990E-BD2923E25EA0",
+        "03A50FE4-0B29-470E-820F-95EA3905A7D1"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277913,6 +278113,9 @@
       "centroidLongitude": -9.1402788,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -277958,6 +278161,16 @@
       "centroidLongitude": 12.559262,
       "city": "Copenhagen",
       "country": "Denmark",
+      "relatedTourIds": [
+        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
+        "9C9F7941-FD4A-5EFE-AA43-F2038E059EA3",
+        "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "78C5A964-5A46-5AD6-938C-1922A41827F0",
+        "6c4581a9-2d5e-5089-a5af-7bcb86820351",
+        "B3CC1B62-7371-5BA2-AE69-E3C4F9BD284A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278003,6 +278216,16 @@
       "centroidLongitude": 12.556248,
       "city": "Copenhagen",
       "country": "Denmark",
+      "relatedTourIds": [
+        "8424AB53-BBB4-5082-8570-4856E2DECC16",
+        "68d19f6a-8ce3-5f8f-b038-52dbee13a72f",
+        "78C5A964-5A46-5AD6-938C-1922A41827F0",
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "9999A156-4350-5D84-ABB2-A64146FB4FFB",
+        "d45d4faf-6a60-5a26-bd54-ce7e7447a1ba",
+        "9C9F7941-FD4A-5EFE-AA43-F2038E059EA3",
+        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278048,6 +278271,16 @@
       "centroidLongitude": 4.8879684,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "d073c73a-ddc1-5484-8e00-51740325b524",
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "dc2067a1-52d6-5ed2-a3e6-23ca35f8953c",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "3d324428-9711-5480-9b5c-180374f3090c",
+        "998a538e-581b-5b6c-ab94-252b2ef0a972"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278093,6 +278326,16 @@
       "centroidLongitude": -3.7017746,
       "city": "Madrid",
       "country": "Spain",
+      "relatedTourIds": [
+        "60A203C5-1369-5E72-9B93-F2AD1373E92C",
+        "2b792f2c-e508-545b-ae53-8cc6521258c5",
+        "1c43d008-386e-5413-b3de-cbda28a52381",
+        "4951D35E-A747-5C60-9B7D-65A1A4E2F396",
+        "783129EA-C200-54B7-891C-1A7108E9DAAF",
+        "BC7A28E3-5DEE-5D1A-A88A-F5C4CEFE5CFD",
+        "d565af69-7ad3-539c-8ad7-2bb4b5c57dd3",
+        "8f10f199-73f0-5be8-8ebf-273c662c5f23"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278228,6 +278471,16 @@
       "centroidLongitude": 4.8950747,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "69754830-143E-5CFE-A68B-3C68A3F05BF2",
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "75921CF5-9489-58EF-801A-825BCEA02423",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "d073c73a-ddc1-5484-8e00-51740325b524",
+        "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278273,6 +278526,15 @@
       "centroidLongitude": 23.7272417,
       "city": "Athens",
       "country": "Greece",
+      "relatedTourIds": [
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
+        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "2941CD08-C085-531E-9093-0398F3D015BF",
+        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
+        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
+        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278318,6 +278580,16 @@
       "centroidLongitude": 11.2470526,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
+        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278363,6 +278635,16 @@
       "centroidLongitude": 12.5080247,
       "city": "Rome",
       "country": "Italy",
+      "relatedTourIds": [
+        "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "c7d6db46-7c8a-59a3-92af-7f3429d719df",
+        "69d08739-f300-56b7-8c41-67f1e08b745b",
+        "34ee1c47-2571-56ff-becb-d719f43c3efc",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445",
+        "3DA74EAD-CE5E-524A-A80D-77FA13D04B93"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -278588,6 +278870,9 @@
       "centroidLongitude": 54.4188,
       "city": "Abu Dhabi",
       "country": "United Arab Emirates",
+      "relatedTourIds": [
+        "466DB02E-48D4-55AE-ABFA-093D57499F3D"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -278898,6 +279183,16 @@
       "centroidLongitude": 55.1507302,
       "city": "Dubai",
       "country": "United Arab Emirates",
+      "relatedTourIds": [
+        "8cb1ee17-9758-5597-ae23-55308c3457f4",
+        "985991d9-89c3-58b7-9a9d-61dfa39f61c7",
+        "dd678be5-73e4-53f7-af37-e183d897243f",
+        "769A4133-5472-590E-A8BB-F277981D1F02",
+        "39f7c17f-f07d-5454-99be-49a2cee96a2c",
+        "c20b21e7-09b4-5f09-9574-4250fe445dd3",
+        "2b5b06c9-9464-5f87-89fb-fcf76f101068",
+        "9b06ec4a-8e0d-59af-af1c-3a8cf6870342"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Engineering"
@@ -278941,6 +279236,9 @@
       "centroidLongitude": 109.8975228,
       "city": "Chongqing",
       "country": "China",
+      "relatedTourIds": [
+        "27386D9A-B8EA-5BCF-9C5C-0B5D88F2F07F"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Engineering"
@@ -279027,6 +279325,9 @@
       "centroidLongitude": 135.4638867,
       "city": "Osaka",
       "country": "Japan",
+      "relatedTourIds": [
+        "32943501-35BB-53A4-BBA4-58BF696EC69A"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Engineering"
@@ -279113,6 +279414,9 @@
       "centroidLongitude": 106.6045344,
       "city": "Chongqing",
       "country": "China",
+      "relatedTourIds": [
+        "FAA356FF-F674-5223-BD2F-AE7772DE9643"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -279157,6 +279461,16 @@
       "centroidLongitude": 139.7111781,
       "city": "Tokyo",
       "country": "Japan",
+      "relatedTourIds": [
+        "9757C81E-088E-5540-A5BB-92D8B5FC5B12",
+        "07ED40DD-54E8-524E-9C40-CCCACE3FBB02",
+        "3BB8679E-98D6-548B-8CDA-2DE11288F994",
+        "8D7B5423-FBE0-5E7D-B3CB-A5D0DB43A57E",
+        "E46BE249-304F-57ED-9928-A3D809BCCAF0",
+        "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
+        "AEED4EB7-BC41-5B22-B172-3A786AFC4436",
+        "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Fashion",
@@ -279201,6 +279515,16 @@
       "centroidLongitude": -73.9749675,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "556D7D3D-D043-5C0A-A362-1B879FF8758B",
+        "1B62FA84-2346-5771-B155-9DF65757BE26",
+        "D013BE7E-C21B-5934-AE3D-C95E0103E5C4",
+        "9DBFEB11-F8D9-5507-8A3E-D9C5E81827C2",
+        "D3FD149D-D825-536C-9B4D-687EF5979CD8",
+        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
+        "05E108BB-624E-5911-92DA-1EDBF6FB8ECE",
+        "EC928B29-9AD7-5F5B-BCD7-EA5EAFC81753"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
