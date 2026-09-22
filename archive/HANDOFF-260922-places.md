@@ -185,3 +185,121 @@ Both look like straightforward Rule 1 pairs, but the call is the owner's.
 - List-description clamp check (`status/owner/list-description-clamp-check.md`).
 - Stortorget part-vs-whole.
 - 🔴 **#1019 must NOT be merged.**
+
+---
+
+# Part 2 — the owner's two candidates, and the check that was crashing
+
+Owner: *"brunswick centre - make a place. smithfield market - make a place"*.
+Both created ([#1060](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1060)); **419 places**, NAME tier now empty.
+
+## 6 · The footprint method worked for one and NOT the other
+
+Part 1 settled Four Freedoms Park with an OSM polygon. Reaching for the same
+tool twice gave one good answer and one trap:
+
+| | OSM polygon of that name | usable? |
+|---|---|---|
+| **Smithfield Market** | way `145477213`, **166 × 217 m** — the market complex | ✅ yes |
+| **The Brunswick Centre** | way `291651300`, **11 × 20 m** — one retail unit | 🔴 **no** |
+
+🔴 **A named polygon is not necessarily the named thing.** The Brunswick Centre
+is a ~220 m megastructure; OSM's feature carrying its name is a shop inside it.
+Using that centroid would have been *exactly* as confident, and wrong. The
+published coordinate was no help either — 3 dp, ~100 m.
+
+**What settled Brunswick instead** was locality, per rule 8d: both pins
+reverse-geocode *inside* `Brunswick Centre, King's Cross, Camden` — one onto the
+Saturday food market in the raised concourse, one onto a shop unit. So both are
+on the complex, and the midpoint of two verified members is defensible. **Then
+the midpoint itself was checked** and resolves to a unit inside the centre.
+34.5 m each.
+
+**Smithfield was the opposite shape:** the Atlas pin reverse-geocodes to
+**Barley Mow Passage**, an alley *outside* the hall, while the pin is on the
+market. So the move is a **correction**, not a compromise — 91.4 m and 0.4 m,
+inside `make-places.py`'s 120 m bound (`TIGHT_M` 25 m is `join-places.py`'s
+bound and does not apply to minting).
+
+## 7 · 🔴 `check-place-candidates.py` was crashing, and the crash read as a pass
+
+Its documented contract, which CI implements:
+
+```
+0 = nothing found, 1 = candidates found (both fine), >=2 = the check failed
+```
+
+**An uncaught Python exception exits 1.** `report()` referenced an undefined
+`catalog` in its `if exact:` branch — my own refactor in #1058 — so it raised
+`NameError` on any catalogue with a coincident group, *after* printing the NAME
+section. Every run since printed one heading, died, and was read as *candidates
+found, fine*.
+
+The EXACT tier is the one **Rule 8c exists for**, written after the owner found
+duplicate pins on the map twice. It was unreported with **three groups in it**:
+
+| | |
+|---|---|
+| `Žižkov Television Tower` + `Zizkov Television Tower` | Prague — **identical** coordinate |
+| `Seashore Library` + `Chapel of Music` | Beidaihe |
+| `Long Ma She` + `Soft Square` | Shenzhen |
+
+🔴 **I reported "EXACT tier is clean" to the owner twice from those runs.** It
+was never clean; the check never reached it. **A tier that prints nothing is not
+a tier that found nothing** — the report was missing three of its four headings
+and still read as a pass. Count the sections you expected against the sections
+you got.
+
+**Both halves fixed.** The `NameError`, and `main()` now catches, prints the
+traceback and returns **2** — a script whose success codes include 1 must not
+let an exception produce a 1, or its error path *is* its happy path.
+
+**Why 51 green selftests said nothing.** `report()` *was* exercised — on a
+fixture whose two entries sit at **different** coordinates, so `if exact:` never
+ran. The only broken branch was the only branch no fixture entered.
+🔴 **Coverage of a function is not coverage of its branches.** The new fixture
+differs in exactly one respect: the two entries share a coordinate.
+
+Proven by re-introducing each defect:
+
+| mutant | selftest | real run |
+|---|---|---|
+| the original `NameError` | **red** | **exit 2** |
+| crash → `return 1` again | — | **exit 1** (CI calls this fine) |
+
+The second is what makes the exit-code change load-bearing rather than cosmetic.
+
+⚠️ **And a smaller trap on the way out:** the first attempt to prove the fixture
+could fail used `sed -i '473s/…/'` — a line number captured *before* the
+fixtures were added. It patched a different line, the selftest passed, and the
+run printed `exit=0 (want non-zero)` as though the fixture were dead. **A
+mutation applied by line number may not have been applied at all.** Anchor on
+content and assert the anchor matched exactly once.
+
+## 8 · The CI watcher announced ALL CHECKS COMPLETE with one still queued
+
+Unrelated to the catalogue, and the same shape. A watcher stopped when every
+check run it could see had `status == "completed"` — and `Run unit tests` was
+still **queued**. The run had not been *created* yet, so `all(...)` was true over
+the six that existed. It would have merged on six of seven, and a merge does not
+re-run the missing job.
+
+🔴 **A completion test is only as good as its denominator, and on CI the
+denominator arrives late.** Fixed by requiring the complete set to hold across
+**two consecutive polls** — not by hardcoding an expected count, which goes stale
+the next time the workflow gains a job.
+
+## State at Part 2 handoff
+
+| | |
+|---|---|
+| places | **419** |
+| `check-place-candidates.py` | **56/56**, both new defects proven catchable |
+| NAME tier | **empty** |
+| EXACT tier | **3 groups, for the owner** (above) |
+| `validate-tours-mirror.py` | exit 0, control clean |
+| `spine-match.py` | exit 0 — DISAGREES 0 unexamined, STALE 0 |
+
+**For the owner:** the three EXACT groups. `Žižkov`/`Zizkov` is two spellings of
+one tower on one point and looks like a plain Rule 1 pair; the other two are
+co-location calls. None created.
