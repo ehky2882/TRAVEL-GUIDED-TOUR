@@ -162,6 +162,53 @@ def caption_names_place(entry, place):
     return ""
 
 
+def title_introduces_another_name(entry, place):
+    """Does the entry's TITLE name a venue that the place's name does not?
+
+    🔴 WHY THIS EXISTS. The caption tier asks whether the entry's caption names
+    the place. On a pin TITLED WITH ITS CAPTION that question IS its identity —
+    `@centrepompidou is the coolest museum ever` has no other name to give. On a
+    pin that carries a venue name of its own it proves nothing at all: **Dead
+    Rabbit** says *"in the historic Fraunces Tavern district"*, which is a
+    LOCATOR, and `docs/places.md` Rule 3 is that **co-location is not identity**.
+    It sits 18.2 m from Fraunces Tavern and is a different bar at a different
+    address.
+
+    🔴 Nothing structural was stopping that. Of the seven rows the caption tier
+    matched on the live catalogue, ONE was right; four others were refused only
+    because the owner had already ruled on them one at a time (the Channel
+    Gardens, the Cosmati Pavement, the Shrine of Edward the Confessor, the Blue
+    Ribbon Garden — every one of them a part-vs-whole, which `docs/places.md`
+    leaves to the owner). The declined record was carrying a load that belongs
+    to a guard: a pairing nobody has happened to decline yet went straight
+    through.
+
+    So: strip the place's own name out of the title, and if a NAME is left over,
+    the entry is about something else.
+
+    ⚠️ Capitalisation is the test for what is left, so a word in a non-Latin
+    script — which folds to nothing — counts as a name rather than as filler.
+    That refuses the bilingual titles this tier might otherwise have taken, and
+    refusing sends the pair to the owner, which is the safe direction.
+    """
+    folded_place = fold(place.get("name") or "")
+    for word in re.split(r"[^\w]+", (entry.get("title") or "")):
+        if len(word) < 2:
+            continue
+        folded = fold(word)
+        # Part of the place's own name — say, `Stonewall` in `The Stonewall Inn`,
+        # or the whole of `@centrepompidou` in `Centre Pompidou`.
+        if folded and folded_place and folded in folded_place:
+            continue
+        if word.lower() in GENERIC_NAME_WORDS:
+            continue
+        if not folded:                     # non-Latin script: treat as a name
+            return word
+        if word[:1].isupper():
+            return word
+    return ""
+
+
 def declined_pairs():
     """Every pairing the owner has refused, from the machine-readable record.
 
@@ -197,7 +244,9 @@ def candidates(doc, max_move_m=MAX_MOVE_M):
     near = board.unjoined_places(doc, max_move_m)
     by_title = {id(r[1]) for r in board.same_name_as_place(doc, near)}
     rows = [r for r in near
-            if id(r[1]) in by_title or caption_names_place(r[1], r[2])]
+            if id(r[1]) in by_title
+            or (caption_names_place(r[1], r[2])
+                and not title_introduces_another_name(r[1], r[2]))]
     for gap, entry, place in rows:
         # ⚠️ No second distance filter here. `unjoined_places` already bounds
         # the search at `max_move_m`, so a filter after it could never fire —
@@ -360,6 +409,44 @@ def selftest():
           caption_names_place(cap("the Guggenheim reopened"),
                               {"name": "Solomon R. Guggenheim Museum",
                                "city": "New York"}) == "")
+
+    # 🔴 The guard that the LIVE catalogue needed: a title with a venue name of
+    # its own. `Dead Rabbit` is 18.2 m from Fraunces Tavern and says "in the
+    # historic Fraunces Tavern district" — a locator, not an identity.
+    tin = title_introduces_another_name
+    check("🔴 a title naming ANOTHER venue is refused (Dead Rabbit/Fraunces)",
+          tin({"title": "Dead Rabbit"}, {"name": "Fraunces Tavern"}) == "Dead")
+    check("a shorter form of the place's own name introduces nothing",
+          tin({"title": "Stonewall Inn"}, {"name": "The Stonewall Inn"}) == "")
+    check("🔴 a caption-titled pin still passes — it has no other name to give",
+          tin({"title": "@centrepompidou is the coolest museum ever"},
+              {"name": "Centre Pompidou"}) == "")
+    check("🔴 a part of the whole is refused (Cosmati Pavement/Westminster)",
+          tin({"title": "The Cosmati Pavement"},
+              {"name": "Westminster Abbey"}) == "Cosmati")
+    check("🔴 a tenant is refused (Bar Luce at Fondazione Prada)",
+          tin({"title": "Bar Luce at Fondazione Prada"},
+              {"name": "Fondazione Prada"}) == "Luce")
+    check("🔴 containment does not save a library from matching its TOWN",
+          tin({"title": "Municipal Library of Viana do Castelo"},
+              {"name": "Viana do Castelo"}) == "Municipal")
+    check("🔴 a one-letter initial is not a venue name (Solomon R. Guggenheim)",
+          tin({"title": "Solomon R. Guggenheim"},
+              {"name": "Solomon Guggenheim"}) == "")
+    check("a generic word left over is not a name",
+          tin({"title": "Walden 7 Tower"}, {"name": "Walden 7"}) == "")
+    check("🔴 a non-Latin word counts as a name — it folds to nothing",
+          tin({"title": "Walden 7 | 東京"}, {"name": "Walden 7"}) == "東京")
+    # 🔴 And the guard must reach `candidates`, not merely exist.
+    doc3 = json.loads(json.dumps(doc))
+    doc3["linkPins"][0]["title"] = "Dead Rabbit"
+    doc3["linkPins"][0]["longDescription"] = "in the historic Coincident Place district"
+    doc3["places"][0]["name"] = "Coincident Place"
+    check("🔴 the caption tier no longer joins a pin that names another venue",
+          candidates(doc3) == [])
+    doc3["linkPins"][0]["title"] = "it is the best of the Coincident Place"
+    check("   …and the same pin titled with its caption still joins",
+          len(candidates(doc3)) == 1)
 
     refused = declined_pairs()
     check("🔴 the declined record is non-empty — a guard reading an empty "

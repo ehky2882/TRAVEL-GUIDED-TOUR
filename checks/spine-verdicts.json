@@ -458,6 +458,15 @@
     "note": "Wikidata places Q5694328 in London Borough of Hillingdon (bus station in London, England), not London. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Hedigan's (The Brian Boru)": {
+    "at": [
+      53.3652103,
+      -6.2721763
+    ],
+    "date": "2026-09-22",
+    "note": "OSM puts \"Hedigan's - The Brian Boru\", Prospect Road, Dublin at 0 m from our pin. Wikidata's Q110831051 (0 sitelinks) is 3.7 km away. Our coordinate is exact. NOT MOVED.",
+    "verdict": "name-collision"
+  },
   "Hollywood Walk of Fame": {
     "at": [
       34.1016,
@@ -1412,6 +1421,15 @@
     "note": "Wikidata describes Q2460215 as \"street in Montreal, Quebec, Canada\" — not a point. A 837 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "The Marquis": {
+    "at": [
+      51.5097587,
+      -0.1257119
+    ],
+    "date": "2026-09-22",
+    "note": "OSM puts 'The Marquis', 51-52 Chandos Place, Covent Garden at 0 m from our pin, which is also the pub the creator's own caption names. Wikidata's Q136703485 'The Marquis' is 2.3 km away. Two catalogue entries share this pin and both banded DISAGREES. Our coordinate is exact. NOT MOVED.",
+    "verdict": "name-collision"
+  },
   "The Monumental Rosary of Montserrat": {
     "at": [
       41.5937435,
@@ -1447,6 +1465,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q1652985 as \"1.4 kilometer funicular railway in Hong Kong, serving 6 stations (with\" — not a point. A 802 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "The Roebuck": {
+    "at": [
+      51.452493,
+      -0.2985121
+    ],
+    "date": "2026-09-22",
+    "note": "OSM puts 'The Roebuck', 130 Richmond Hill (Petersham, London Borough of Richmond upon Thames) at 0 m from our pin. Wikidata offers THREE items named 'The Roebuck' at 15 km, 34 km and 85 km, and OSM shows a fourth Roebuck 4.6 km away in the SAME borough (Hampton Hill) — the name collides even locally. Our coordinate is exact. NOT MOVED.",
+    "verdict": "name-collision"
   },
   "The Royal Oak": {
     "at": [
@@ -1510,6 +1537,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q1969107 in Melaky (strict nature reserve of Madagascar), not Antsalova. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "The Sun Inn": {
+    "at": [
+      51.4734842,
+      -0.2473424
+    ],
+    "date": "2026-09-22",
+    "note": "OSM puts 'The Sun Inn', 7 Church Road (Barnes/Mortlake, London Borough of Richmond upon Thames) at 0 m from our pin. Wikidata's Q26593113 'The Sun Inn' is 29 km away — one of many English pubs of that name. Our coordinate is exact. NOT MOVED.",
+    "verdict": "name-collision"
   },
   "The Terracotta Garden at Lamphun | สวนไม้ไทยบ้านพ่อเลี้ยงหมื่น": {
     "at": [
