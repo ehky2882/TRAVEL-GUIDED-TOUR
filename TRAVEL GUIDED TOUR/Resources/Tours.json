@@ -106248,6 +106248,21 @@
         "d7f3a1c8-6b29-4e54-8a06-3c9e7b4d2f81",
         "2D0C2877-6AA0-5FFF-A8CB-6E7203487376"
       ]
+    },
+    {
+      "id": "766c7775-b0d2-521d-8d77-ff83f4590a3e",
+      "name": "Žižkov Television Tower",
+      "description": "Václav Aulický's 216-metre transmitter in Mahlerovy sady, begun in 1985 under the communist government and finished in 1992 — three concrete columns carrying stacked steel pods, still the tallest structure in Prague. It was built over part of a former Jewish cemetery, and has been voted one of the world's ugliest buildings more than once. Since 2000 ten of David Černý's faceless bronze babies have crawled up the columns.",
+      "latitude": 50.0810217,
+      "longitude": 14.4510584,
+      "city": "Prague",
+      "address": "Mahlerovy sady 1, Žižkov, Prague 3",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1B94C1BC-1DF4-5124-BFF4-62D45B046268",
+        "34075F82-512B-5582-986A-867458A6BB30"
+      ]
     }
   ],
   "linkPins": [
