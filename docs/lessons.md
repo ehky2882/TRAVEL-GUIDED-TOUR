@@ -3498,8 +3498,17 @@ also the geofence trigger**, and its caption may name a deliberate viewpoint.
 * **CAM** (moved 62 m, in #1066). The caption says *"stand… by the long curving
   canopy that sweeps from the museum out into the garden"*, which is a specific
   viewpoint. It was moved onto OSM's museum node **without reading that first**.
-  Which point is nearer the canopy cannot be told from here. **Flagged as
-  unverified, and not claimed as fine.**
+  **Resolved the same day, and the move had made it worse.** Architectural
+  Record, Dezeen and Wallpaper all describe Kuma's 107 m *Engawa* as tracing
+  the **south** side of the museum, facing the south gardens. OSM's CAM node,
+  where the place had been put, is addressed on *Percurso do Lago*, the lake
+  path on the **north** side. The original Atlas stop and Wikidata's point both
+  reverse-geocode to Rua Dr. Nicolau de Bettencourt, the campus's south edge.
+  So the move had taken the trigger north, away from the canopy the caption
+  names. The place was put back on the **Atlas author's own stop**, restoring a
+  deliberate choice rather than inventing a third point.
 
 **Check the stop caption of any Atlas tour before a place moves it.** A
-subject-accurate point can still be the wrong place to trigger a walk.
+subject-accurate point can still be the wrong place to trigger a walk. 🔴 **CAM
+is the proof: the museum's own OSM node was the right SUBJECT and the wrong
+place to stand.**

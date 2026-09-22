@@ -70,6 +70,45 @@ jobs:
             echo "::warning::$n unplaced pair(s) share a name — docs/places.md Rule 1 says every one is a place. See the job summary."
           fi
 
+      # 🔴 WHY THIS EXISTS. The step above asks which UNPLACED entries belong
+      # together. It cannot see an entry that belongs to a place that ALREADY
+      # exists: the moment a place is minted its site reads as finished. And
+      # join-places.py, which does ask, searches only 25 m by default — so on
+      # 2026-09-22 nine plain joins had sat unseen at 26–96 m (Kaktus Towers,
+      # Guggenheim, Marina City, The Oculus, Kyoto ICC …), every one with the
+      # place's own name. Report-only at 100 m, all guards still on: it proposes
+      # nothing it would refuse to apply. It does not move anything.
+      - name: Scan for entries that should join an existing place
+        run: |
+          # Report mode returns 0 by design, so ANY non-zero exit means the
+          # check could not run — including an uncaught exception, which Python
+          # exits as 1. Never let a crash read as "nothing to join".
+          code=0
+          python3 scripts/join-places.py --max-move 100 --out joins.txt || code=$?
+          if [ "$code" -ne 0 ]; then
+            echo "::error::join-places.py could not run (exit $code)"
+            cat joins.txt || true
+            exit 2
+          fi
+          # 🔴 And a run that exits 0 but never printed its count did not
+          # report — it is COULD NOT VERIFY, not zero.
+          n=$(grep -oE '^[0-9]+ entry\(ies\) to join' joins.txt | grep -oE '^[0-9]+' || true)
+          if [ -z "$n" ]; then
+            echo "::error::join-places.py exited 0 but printed no count — cannot verify"
+            cat joins.txt || true
+            exit 2
+          fi
+          {
+            echo "## Entries that should join an existing place"
+            echo
+            echo '```'
+            sed -n '2,$p' joins.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$n" -gt 0 ]; then
+            echo "::warning::$n entr(ies) carry an existing place's name but are not in it — see the job summary; apply with join-places.py --max-move 100 --apply after reading each one."
+          fi
+
       # The INVERSE question, in the same job because it shares the catalogue
       # and costs nothing: check-place-candidates asks which entries are close
       # enough to be one place; this asks why two entries we call by the SAME
