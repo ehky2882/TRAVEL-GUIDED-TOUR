@@ -56,6 +56,7 @@ import math
 import os
 import re
 import sys
+import traceback
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
@@ -460,7 +461,7 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
         # line carries a second, independent proof that it is one venue; the
         # rest is a coordinate and nothing else, which a centroid dump also is.
         proven, unproven = [], []
-        everywhere = ubiquitous_handles(entries(catalog))
+        everywhere = ubiquitous_handles(entries(doc))
         for coord, members in exact:
             ok, why = proven_same_venue(members, everywhere)
             (proven if ok else unproven).append((coord, members, why))
@@ -755,6 +756,41 @@ def selftest():
             "linkPins": [t("2", "Foo", 10.0, 20.0)], "places": []}
     check("a pin can form a place with a tour", len(scan(doc5)[0]), 1)
 
+    # 🔴 THE GAP THAT SHIPPED A CRASH. `report` WAS exercised above — but only
+    # ever on a doc whose EXACT tier is EMPTY, so the `if exact:` branch was
+    # never entered. It referred to an undefined `catalog` there, so it raised
+    # NameError on any catalogue with a coincident group, and 51 green
+    # selftests said nothing: every unit was fine, and the one branch no
+    # fixture reached was the broken one. Worse, an uncaught exception exits 1,
+    # which this script's own contract defines as "candidates found", so CI
+    # read the crash as a normal run and the EXACT tier — the tier rule 8c
+    # exists for — went unreported while three groups sat in it.
+    #
+    # ⚠️ Coverage of a FUNCTION is not coverage of its BRANCHES. The fixture
+    # below differs from the one above in one respect only: its two entries
+    # share a coordinate exactly.
+    doc_r = {"tours": [t("r1", "Tower", 10.0, 20.0)],
+             "linkPins": [t("r2", "Tower", 10.0, 20.0)], "places": []}
+    buf = io.StringIO()
+    try:
+        code = report(doc_r, out=buf)
+        crashed = ""
+    except Exception as exc:               # noqa: BLE001 — that is the fault
+        code, crashed = None, f"{type(exc).__name__}: {exc}"
+    check("🔴 report() survives a NON-EMPTY exact tier (it raised NameError)",
+          crashed, "")
+    check("   …and says so in its output",
+          "EXACT" in buf.getvalue() and "EXACT — none" not in buf.getvalue(), True)
+    check("   …and reports findings with exit 1", code, 1)
+
+    buf2 = io.StringIO()
+    doc_empty = {"tours": [t("e1", "Alone", 10.0, 20.0)], "linkPins": [], "places": []}
+    check("report() over a clean catalogue exits 0, not 1",
+          report(doc_empty, out=buf2), 0)
+    check("   …and every tier still prints its 'none' line",
+          all(x in buf2.getvalue() for x in ("NAME — none", "EXACT — none",
+                                             "TIGHT — none", "NEAR — none")), True)
+
     total = len(ran)
     if fails:
         print(f"SELFTEST FAILED — {len(fails)}/{total}")
@@ -787,6 +823,17 @@ def main():
         with open(a.catalog, encoding="utf-8") as fh:
             return report(json.load(fh), a.radius, a.tight,
                           name_radius_m=a.name_radius)
+    except Exception:                      # noqa: BLE001 — see below
+        # 🔴 EXIT 2, NEVER 1. This script's contract is 0 = nothing found,
+        # 1 = candidates found, >=2 = the check could not run, and CI treats 1
+        # as a normal outcome. An uncaught exception exits 1 in Python, so a
+        # CRASH was indistinguishable from a clean report — which is exactly
+        # what happened: `report()` raised NameError the moment an EXACT group
+        # existed, after printing the NAME section, and every run since read as
+        # "candidates found (fine)". The EXACT tier is the one rule 8c was
+        # written for, and it went unreported while three groups sat in it.
+        traceback.print_exc()
+        return 2
     finally:
         run.close()
 

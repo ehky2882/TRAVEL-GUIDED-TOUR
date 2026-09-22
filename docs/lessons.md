@@ -3336,3 +3336,55 @@ was entirely in what the answer was taken to mean.
 
 ⚠️ It would have merged a PR on six of seven checks. Nothing downstream would
 have caught it: a merge does not re-run the missing job.
+
+## The crash that exited 1, and 1 meant "fine" (2026-09-22)
+
+`check-place-candidates.py` documents its own contract, and CI reads it:
+
+```
+# 0 = nothing found, 1 = candidates found (both fine), >=2 = the check failed
+```
+
+An uncaught Python exception exits **1**. So when `report()` raised `NameError`
+— it referenced an undefined `catalog` in its `if exact:` branch, from a
+refactor in #1058 — the crash was **indistinguishable from a clean report**.
+Every run since had printed the NAME section, died, and been read as *candidates
+found, fine*.
+
+🔴 **The EXACT tier is the one Rule 8c exists for.** It is the tier written
+after the owner found duplicate pins on the map, twice. It had been silently
+unreported, with **three groups sitting in it** — including `Žižkov Television
+Tower` and `Zizkov Television Tower` on an *identical* coordinate, which is
+Rule 1 in its purest form.
+
+Two separate defects, and both had to be fixed:
+
+1. **The bug.** `entries(catalog)` → `entries(doc)`.
+2. **The contract.** `main()` now catches, prints the traceback and returns
+   **2**. A script whose success codes include 1 must never let an exception
+   produce a 1, or its own error path is its happy path.
+
+### Why 51 green selftests said nothing
+
+`report()` *was* exercised — on a fixture whose two entries sit at *different*
+coordinates. So the EXACT tier was empty, `if exact:` never ran, and the only
+broken branch was the only one no fixture entered.
+
+🔴 **Coverage of a function is not coverage of its branches.** The new fixture
+differs from the old one in exactly one respect: the two entries share a
+coordinate. That one character of difference is the whole test.
+
+⚠️ And I reported "EXACT tier is clean" to the owner **twice** from these runs.
+It was never clean; the check never got there. **A tier that prints nothing is
+not a tier that found nothing** — read the verdict line, and count the sections
+you expected against the sections you got. The report was missing three of its
+four headings and it still read as a pass.
+
+### A smaller trap on the way out
+
+The first attempt to prove the new fixture could fail used `sed -i '473s/.../'`
+— a line number, captured before the fixtures were added. It patched a
+different line, the selftest passed, and the run printed `exit=0 (want
+non-zero)` as though the fixture were dead. **A mutation applied by line number
+is a mutation that may not have been applied at all.** Anchor on content and
+assert the anchor matched exactly once.
