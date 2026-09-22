@@ -3302,3 +3302,37 @@ This was the fourth, and the tell was the same each time: **a number that makes 
 whole population look broken deserves one confirming probe before it is written
 down.** The probe costs a minute. The claim, unchecked, costs the reader's trust
 in every other number beside it.
+
+## "All checks complete" over a list that was still growing (2026-09-22)
+
+A CI watcher polled GitHub's check-runs API and stopped when every run it could
+see had `status == "completed"`:
+
+```python
+print('yes' if rs and all(r.get('status') == 'completed' for r in rs) else 'no')
+```
+
+It announced **ALL CHECKS COMPLETE** on PR #1059 — and `Run unit tests` was
+still **queued**. The check run did not yet exist in the API's response when the
+watcher polled, so `all(...)` was true over the six that did. The `rs and`
+guard was there precisely to stop the empty-list case, and it does; it cannot
+help with a list that is merely **short**.
+
+🔴 **A completion test is only as good as its denominator, and on CI the
+denominator arrives late.** Jobs are created as their dependencies resolve, so
+early in a run the set of known checks is a *prefix* of the real one. Every
+"have they all finished?" question asked against it answers yes.
+
+**The fix is not a hardcoded expected count** — the workflow gains jobs, and a
+stale constant would fail green runs forever. Require the complete set to hold
+**twice in a row**, thirty seconds apart: a list still growing changes between
+polls, a finished one does not.
+
+This is the same shape as the stale-output-file and `PIPESTATUS` traps in
+`CLAUDE.md` § Reading a check's result, arriving through a third door: **the
+check ran, reported honestly, and was asked a question whose premise was false.**
+Nothing was broken — the watcher, the API and CI were all behaving. The defect
+was entirely in what the answer was taken to mean.
+
+⚠️ It would have merged a PR on six of seven checks. Nothing downstream would
+have caught it: a merge does not re-run the missing job.
