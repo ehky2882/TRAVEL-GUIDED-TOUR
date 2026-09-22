@@ -350,6 +350,31 @@ or address is unavailable:
    Conrad Tokyo). Two independent sources agreeing is what makes either usable.
 4. **Only then** ask the owner, and say precisely which routes you tried.
 
+### The last look before asking: the cover frame
+
+When the name, the venue's own site and OSM have all come up empty, look at
+the one thing the platform always serves — **the post's cover frame** — before
+asking the owner:
+
+```bash
+python3 scripts/fetch-cover.py --urls /tmp/links.txt --out-dir /tmp/covers
+# accepts bare URLs or the batch format; needs NO coordinate
+```
+
+It saves each cover **uncropped** (the hero crop would cut away the edges, and
+the edge is where a sign usually is), then **open each image**. A shop sign, a
+street name or a recognisable landmark can settle a location no caption states.
+It exits **2** if any cover failed to download — a cover that could not be
+fetched is not a cover that showed nothing.
+
+⚠️ **It is one frame, not the video.** The process never downloads a creator's
+video (`make-link-pin.py` says so deliberately, and TikTok's API has no video
+field). Tried on Long Ma She: the cover shows restored earth-walled village
+buildings and a cobbled lane — it confirms the *kind* of place and would not,
+alone, pin the coordinate. That is the usual case. **When the frame does not
+settle it, ask the owner, who can watch the video** — on #1040 five posts with
+no name anywhere were resolved exactly that way.
+
 ### Pick the geocoder for the country
 
 ⚠️ **Nominatim CANNOT geocode a Japanese address, and fails like a success** —

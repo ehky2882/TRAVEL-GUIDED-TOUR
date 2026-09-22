@@ -284,6 +284,13 @@ of reading like a pass when they are not.**
    4 pins fixed to 85. **A blocked scrape is not an absent fact.** Search the
    name, look for the venue's own site in the results, check OSM by name, and
    only then ask the owner — naming which routes you actually tried.
+   **Last look before asking: the cover frame.**
+   `python3 scripts/fetch-cover.py --urls /tmp/links.txt --out-dir /tmp/covers`
+   saves each post's cover, uncropped, with no coordinate needed — then OPEN
+   each one. A shop sign, a street name or a landmark in shot can settle it.
+   ⚠️ It is **one frame, not the video** (the process never downloads videos);
+   often it shows what KIND of place it is and nothing more. If it does not
+   settle the location, ask Edward — he can watch the video.
    ⚠️ **For Japan, Nominatim cannot do addresses at all**: in romaji it returns
    a postcode centroid that looks exactly like a real hit. Use
    `https://msearch.gsi.go.jp/address-search/AddressSearch?q=<japanese address>`.
