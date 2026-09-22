@@ -3388,3 +3388,78 @@ different line, the selftest passed, and the run printed `exit=0 (want
 non-zero)` as though the fixture were dead. **A mutation applied by line number
 is a mutation that may not have been applied at all.** Anchor on content and
 assert the anchor matched exactly once.
+
+## A Chinese coordinate off a Chinese map is wrong by more than the error you are fixing (2026-09-22)
+
+Two pairs of pins shared one coordinate each — `Seashore Library` + `Chapel of
+Music` in the Aranya community, `Long Ma She` + `Soft Square` in Changshou
+Village. Each pair is two genuinely different buildings, so the shared point is
+a geocoding artefact and the owner asked for them to be spaced apart.
+
+**They were not separated, and that was the right answer.** Every route was
+exhausted first — Nominatim in English *and* Chinese, Wikidata by entity search
+(429) and then by SPARQL bounding box (4 items in the whole area, none of them
+these), two web searches, the ArchDaily project page (location: *"Qinhuangdao
+Shi, China"*), Overpass (proxy-blocked). Nothing anywhere gives a per-building
+coordinate.
+
+🔴 **Inventing a separation would have been worse than leaving them coincident.**
+A made-up offset looks precise, and a geofence fires where nobody stood. This
+file already records three pins moved on a weak distance signal that came out
+**11 m right, 220 m wrong and 100 m wrong**.
+
+⚠️ **And the reverse-geocode is what makes "leave it" defensible rather than
+lazy:** the Beidaihe point resolves to `阿那亚三期` (Aranya Phase 3) and the
+Shenzhen one to Jiangling Road, Maluan Sub-district. **The locality is right and
+only the precision is wrong** — which is a different, far milder defect than a
+pin in the wrong place, and worth establishing before reporting "cannot fix".
+
+### The trap if someone does go and get the numbers
+
+**China's public maps do not publish WGS-84.** Baidu serves **BD-09** and Amap
+and every other domestic service serve **GCJ-02** — a deliberate obfuscation
+offset from true WGS-84 by roughly **100–700 m**, varying with position.
+
+🔴 **That offset is LARGER than the separation being created.** A coordinate
+copied from Baidu or Amap would not merely be imprecise; it would move the pin
+further from the building than leaving both entries stacked on one point does,
+while looking like a careful fix. Google Maps' satellite layer and Apple Maps
+are WGS-84 and safe.
+
+Worth knowing generally: a coordinate has a **datum**, and outside the places
+where everyone silently agrees on WGS-84 the datum is part of the fact. Asking
+*"where did this number come from?"* is not pedantry there — it is the
+difference between a 5 m fix and a 500 m error.
+
+### The same datum trap, three times in one hour, each a different shape (2026-09-22)
+
+The owner sent Amap share links for four pins. Every one needed GCJ-02 → WGS-84
+conversion, and the *consequence of skipping it* was different each time:
+
+| pin | raw Amap number | after conversion | what skipping would have done |
+|---|---|---|---|
+| Long Ma She | 975 m from the old pin | **414 m** | left it **further** from the building than the wrong shared pin it replaced |
+| Seashore Library | 551 m away | **4 m** | 🔴 **moved a pin that was already CORRECT, by 551 m** |
+| Chapel of Music | 1,684 m away | 1,510 m | a 174 m error on top of a real 1.5 km fix |
+
+🔴 **The library case is the one to remember.** Its shared coordinate looked like
+a village-centroid guess — two pins on one point, the classic artefact. It was
+nothing of the kind: converting Amap's number landed **4 m** from it, so the
+coordinate was *right* and the real defect was that `Chapel of Music` had been
+given the library's position. **The shape of a defect is not its cause**, and
+"two pins share a point" has at least two causes that look identical.
+
+⚠️ **The 4 m agreement is also the best validation the converter got.** It is an
+external check at the exact location in question: an independently-sourced
+coordinate already in the catalogue, matched to within noise. That mattered when
+the chapel's reverse-geocode came back as bare "Changli County" for *both* the
+raw and converted points and **could not discriminate** — the locality check
+usually settles these (长守 vs 三河 did, for Long Ma She) and here it simply had
+nothing to say. **Say so when a check comes back mute, rather than counting it as
+support.**
+
+⚠️ And the small decision in the middle: once the library was known correct, it
+was tempting to apply its 4 m refinement immediately. That would have dropped
+the pair from `EXACT · ASK` — visible, addressed to the owner — into the 81-row
+`TIGHT` list, where it would not have been seen again. **A 4 m improvement is
+not worth hiding a 1.5 km fault.** Both were set together instead.

@@ -303,3 +303,82 @@ the next time the workflow gains a job.
 **For the owner:** the three EXACT groups. `Žižkov`/`Zizkov` is two spellings of
 one tower on one point and looks like a plain Rule 1 pair; the other two are
 co-location calls. None created.
+
+---
+
+# Part 3 — Žižkov, and the two pairs that could NOT be separated
+
+Owner: *"zizkov - make a place. seashore and library - can we space the
+coordinates apart properly? same for long ma she and soft square"*
+([#1061](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1061)). **420 places.**
+
+## 9 · Žižkov — the strongest evidence a place has had here
+
+`Žižkov Television Tower` (`@insightcities`) + `Zizkov Television Tower`
+(`@pasttworld`), already coincident. Three independent confirmations:
+
+* OSM names that **exact point** `Žižkov Television Tower, Mahlerovy sady, Praha 3`
+* **Both** entries resolve to the same Wikidata item **`Q1413217`**, 28 sitelinks, 32 m away
+* The two titles are the same name with and without diacritics
+
+Nothing moved. ⚠️ Note the pair never reached the NAME tier — `fold()` strips
+diacritics, so `Žižkov`/`Zizkov` *would* have matched there, but an **identical
+coordinate puts a pair in EXACT instead**, and EXACT is the tier that had been
+crashing (§ 7). The accent-folding worked; the tier that would have shown it did
+not.
+
+## 10 · 🔴 The two pairs were NOT separated, deliberately
+
+The owner's reading was right — each pair is two different buildings:
+
+| pair | what they are |
+|---|---|
+| `Seashore Library` + `Chapel of Music` | Vector Architects, **2015** and **2023**, both in the Aranya community, Changli County |
+| `Long Ma She` 龙马社 + `Soft Square` | different buildings by different architects (Soft Square is ZXD), both in Changshou Village |
+
+So the shared coordinate is a geocoding artefact. **But the LOCALITY is right and
+only the precision is wrong** — the Beidaihe point reverse-geocodes to
+`阿那亚三期` (Aranya Phase 3) and the Shenzhen one to Jiangling Road, Maluan
+Sub-district, Pingshan District. **These are not misplaced pins**, which is a
+different defect from the ones this session spent the day fixing.
+
+**No per-building coordinate is reachable from here.** Routes tried, per rule 8d
+— *a blocked scrape is not an absent fact*, so the point is that these were
+genuinely exhausted before asking:
+
+| route | result |
+|---|---|
+| Nominatim, English **and** Chinese (`三联海边图书馆`, `龙马社 长寿村`) | no results — OSM has no coverage of these |
+| Wikidata entity search | HTTP **429**, so retried by another service |
+| Wikidata SPARQL bounding box over the whole Aranya area | **4 items, none of them these buildings** |
+| Web search ×2, explicitly for coordinates | architecture press only |
+| ArchDaily project page | location field reads just *"Qinhuangdao Shi, China"* |
+| Overpass | blocked by the egress proxy |
+
+🔴 **Inventing a separation would have been worse than leaving them coincident.**
+It would look precise and put a geofence where nobody stood, and rule 8d's own
+record is three pins moved on a weak distance signal that came out **11 m right,
+220 m wrong and 100 m wrong**. The whole session had been about checks that
+report confidently on things they never evaluated; fabricating two coordinates
+would have been the same failure by hand.
+
+Recorded as `status/owner/china-pin-coordinates.md` with the routes tried and the
+one-minute unblock, rather than guessed.
+
+⚠️ **The trap waiting for whoever picks this up** is in `docs/lessons.md` now:
+Baidu and Amap publish **GCJ-02 / BD-09**, offset from WGS-84 by **100–700 m**
+inside China — *larger than the gap being created*. Google/Apple satellite is
+WGS-84 and safe.
+
+## State at Part 3 handoff
+
+| | |
+|---|---|
+| places | **420** |
+| `check-place-candidates.py` | NAME none · **EXACT 2** — the two open pairs, correctly reported |
+| `validate-tours-mirror.py` | exit 0, control clean |
+| `spine-match.py` | exit 0 — DISAGREES 0 unexamined, STALE 0 |
+
+**Owner-side, carried forward:** the four coordinates above · 1.1.3 *Release this
+version* · the four `@welldonestuff` reel links · the list-description clamp
+check · Stortorget part-vs-whole · 🔴 **#1019 must NOT be merged.**
