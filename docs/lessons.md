@@ -3512,3 +3512,32 @@ also the geofence trigger**, and its caption may name a deliberate viewpoint.
 subject-accurate point can still be the wrong place to trigger a walk. 🔴 **CAM
 is the proof: the museum's own OSM node was the right SUBJECT and the wrong
 place to stand.**
+
+## A correct NAME on the wrong KIND of feature is still the wrong pin (2026-09-22)
+
+Nominatim's first hit for *"The Warrington, Warrington Crescent"* was `building/yes` named **The
+Warrington**, near the Alan Turing plaque at no. 2, and 153 m from our pin. Moving there would have
+looked verified: an OSM feature, the exact name, a plausible distance. Searching the pub's
+**address** (93 Warrington Crescent) returned `amenity/pub "Warrington"` **150 m in the opposite
+direction**, where Wikidata also had it. **Accept a gazetteer point only when its TYPE matches the
+subject** (a pub is `amenity/pub`, a hotel `tourism/hotel`), and when two sources disagree, search
+the address as well as the name.
+
+## Renaming a pin means renaming its stop too (2026-09-22)
+
+A link pin carries its title twice: `title` and `stops[0].title`. Every earlier title correction
+changed only the first, so **62 stops still carried the names those fixes had removed**: *Crown
+Sydney* on Avaz Twist Tower, *Vittoriano* on Torre Velasca, *MSG Sphere* on the Lucas Museum,
+*Grace Farms* on the Glass House. No check compares the two. When you retitle a pin, set both in
+the same edit, and diff `title` against `stops[0].title` before committing.
+
+## A caption title blinds every coordinate check at once — recovering the name restores them (2026-09-22)
+
+355 entries were titled with a creator's caption. None of them can be geocoded, matched against
+Wikidata or asked of a photograph, so the spine audit counted them as UNMATCHED and nothing else
+looked at them. Recovering 269 names from the captions (only what the caption names, with the
+verbatim evidence kept for each) moved spine **CONFIRMS from 1,861 to 1,923** in one refresh, and
+surfaced 4 new place candidates and 3 disagreements to rule on. **The cheapest independent check on
+a recovered name is the place the pin already belongs to**: every renamed pin that sat in a place
+got a name matching that place, and the three that did not were spelling errors (one of them in the
+place's own name).
