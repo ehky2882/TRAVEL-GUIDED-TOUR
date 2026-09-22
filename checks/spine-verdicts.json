@@ -386,6 +386,15 @@
     "note": "Wikidata places Q714828 in Fushimi-ku (Shinto shrines in Kyoto, Japan), not Kyoto. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Futaba (そば処 冨多葉)": {
+    "at": [
+      35.699154,
+      139.758438
+    ],
+    "date": "2026-09-22",
+    "note": "Wikidata's 'Futaba' is a different entity 11 km away. The caption gives the soba shop's own address, 〒101-0064 東京都千代田区神田猿楽町２丁目２−9 (Kanda-Sarugakucho, Chiyoda), and the pin sits there. NOT MOVED.",
+    "verdict": "name-collision"
+  },
   "Ginza Kojyu": {
     "at": [
       35.671429,
@@ -619,6 +628,15 @@
     "date": "2026-09-21",
     "note": "CORRECT. Wikidata agrees with us to 0 m. An OSM name lookup returns the METRO STATION Invalidovna 253 m away -- named after the baroque building, not the building.",
     "verdict": "name-collision"
+  },
+  "Jack Shainman Gallery": {
+    "at": [
+      40.7158217,
+      -74.0029792
+    ],
+    "date": "2026-09-22",
+    "note": "The pin is on the gallery's Tribeca space on Lafayette Street; Wikidata's point is its Chelsea space 3.4 km north. The gallery runs more than one site and the post does not say which. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Jackson Street Bridge": {
     "at": [
@@ -1186,6 +1204,15 @@
     "date": "2026-09-21",
     "note": "Wikidata places Q55721633 in Changi (), not Singapore. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
+  },
+  "St. Anselm": {
+    "at": [
+      38.907638,
+      -76.9990396
+    ],
+    "date": "2026-09-22",
+    "note": "Wikidata matched St. Anselm's Abbey School in Brookland; the subject is the St. Anselm restaurant (@st.anselm_dc) at Union Market, where the pin sits. NOT MOVED.",
+    "verdict": "name-collision"
   },
   "Stortorget, Gamla Stan": {
     "at": [
