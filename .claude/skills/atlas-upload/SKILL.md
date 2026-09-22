@@ -211,7 +211,33 @@ python3 scripts/check-image-duplicates.py --pins
 
 # 5. Upload the heroes in ONE commit
 python3 scripts/upload-images.py --dir /tmp/heroes --message "Heroes for <creator> pins" --verify
+# 6. Places — a new pin often lands on a site the catalogue already has
+python3 scripts/check-place-candidates.py --out /tmp/candidates.txt
+python3 scripts/join-places.py --max-move 100 --out /tmp/joins.txt
 ```
+
+🔴 **Step 6 runs on EVERY batch, whatever the sender said — and it is the one
+most often skipped.** Nobody sending links will tell you which pins are places
+or which belong to an existing one; they send links, not place instructions.
+Finding those is this step's job, not theirs, so never wait to be told. A batch
+routinely lands a second entry on somewhere that already exists — the owner has
+found these on the map himself, three times. The two reports answer different
+questions, and you need both:
+
+- `check-place-candidates.py` — **new** pins that belong together (the same
+  name nearby, or the exact same point). Read the **NAME** and **EXACT**
+  sections.
+- `join-places.py` — new pins that belong to a place that **already exists**.
+  The first report cannot see these: once a place exists, its site looks
+  finished.
+
+**Do not create places or apply joins yourself.** List each one for Edward in
+plain English — *"your pin X is the same building as the existing place Y, 30 m
+away — join them?"* — and he decides. A place moves every member onto one
+point, so it is his call, and `docs/places.md` holds the rules he has already
+set. CI prints both reports on the PR too, but a report nobody reads decides
+nothing.
+
 
 Then commit `Tours.json` on a branch, open the PR, let CI go green, merge.
 
@@ -258,9 +284,25 @@ of reading like a pass when they are not.**
    4 pins fixed to 85. **A blocked scrape is not an absent fact.** Search the
    name, look for the venue's own site in the results, check OSM by name, and
    only then ask the owner — naming which routes you actually tried.
+   **Last look before asking: the cover frame.**
+   `python3 scripts/fetch-cover.py --urls /tmp/links.txt --out-dir /tmp/covers`
+   saves each post's cover, uncropped, with no coordinate needed — then OPEN
+   each one. A shop sign, a street name or a landmark in shot can settle it.
+   ⚠️ It is **one frame, not the video** (the process never downloads videos);
+   often it shows what KIND of place it is and nothing more. If it does not
+   settle the location, ask Edward — he can watch the video.
    ⚠️ **For Japan, Nominatim cannot do addresses at all**: in romaji it returns
    a postcode centroid that looks exactly like a real hit. Use
    `https://msearch.gsi.go.jp/address-search/AddressSearch?q=<japanese address>`.
+   ⚠️ **For China, a map app's coordinate is DELIBERATELY WRONG by ~500 m.**
+   Amap (高德) serves **GCJ-02**, Baidu serves **BD-09**; neither is the
+   WGS-84 the app uses. Convert an Amap number with
+   `python3 scripts/gcj02.py <lat> <lng>` before storing it. **Baidu numbers:
+   do not use** — BD-09 has a second offset `gcj02.py` does not undo; ask for
+   an Amap or Google/Apple Maps pin instead. Google and Apple are WGS-84 and
+   need no conversion. An Amap share link resolves with
+   `curl -sS -o /dev/null -D - -L <link> | grep -i '^location:'`: the
+   redirect's `p=` parameter carries id, lat, lng, name **and address**.
    Full detail: `docs/link-pin-runbook.md` § Getting the coordinate right.
 
 1. **🔴 Keep the JSON out of the chat.** `make-link-pin.py` prints ~1.9 KB per
@@ -371,10 +413,28 @@ has already happened here:
 # After a content merge
 
 `get_catalog` (Supabase) is the app's primary source; the gh-pages
-`Tours.json` mirror is a fallback. A merge to `main` republishes the mirror
-automatically, **but the database needs `backend/seed_from_toursjson.py`** or
-the mirror ends up newer than the live source. If you hand-edit catalog data in
-the Supabase SQL Editor, finish with `select public.refresh_catalog_snapshot();`.
+`Tours.json` mirror is a fallback. **A merge to `main` updates BOTH
+automatically** — `.github/workflows/publish-catalog.yml` rebuilds "More like
+this", refreshes the coordinate cache, republishes the mirror **and runs the
+`seed-supabase` job**. There is nothing to reseed by hand.
+
+🔴 **Do NOT open a "please reseed Supabase" owner item after a batch.** This
+file used to say the database needed `backend/seed_from_toursjson.py` run by
+hand. It did not, and sessions kept filing that task for the owner anyway —
+#1015 proved three such items false (3,293 pins in the catalogue, 3,293 live),
+and #1019 would have re-created one. If you genuinely doubt the database, ask
+it for a count: 47 bytes, and the answer is in the `content-range` header —
+
+```bash
+curl -sS -o /dev/null -D - "https://apkcihljybvuyuzpbnqd.supabase.co/rest/v1/tours?select=id&kind=eq.link&limit=1" \
+  -H "apikey: $KEY" -H "Authorization: Bearer $KEY" -H "Range: 0-0" -H "Prefer: count=exact" | grep -i content-range
+```
+
+(`$KEY` is the `sb_publishable_…` key in `Data/SupabaseConfig.swift` — public by
+design.) Compare it to `len(linkPins)` in `Tours.json`.
+
+If you hand-edit catalog data in the Supabase SQL Editor, finish with
+`select public.refresh_catalog_snapshot();` — that one IS manual.
 
 # At the end of a session
 

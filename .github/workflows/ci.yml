@@ -241,6 +241,12 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
+      # fetch-cover.py downloads nothing in CI — its selftest injects the fetcher,
+      # so this proves the exit contract (one failed cover -> 2, nothing to fetch
+      # -> 2) without touching TikTok or Instagram.
+      - name: Selftest the cover-frame fetcher
+        run: python3 scripts/fetch-cover.py --selftest
+
   audit-board:
     name: Audit board
     runs-on: ubuntu-latest

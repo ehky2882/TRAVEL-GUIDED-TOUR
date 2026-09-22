@@ -483,3 +483,92 @@ Triaged 2026-09-22 and all three closed, each with a comment:
 someone reached gets repeated until it reads as a fact someone stated. Record
 *why* a PR is being held, not just that it is — "held because it contradicts
 #1015" can be re-checked; "must NOT be merged" cannot.
+
+---
+
+# Part 5 — the afternoon: 17 more places and joins, a CI gap closed, and a move undone
+
+Merged: [#1065](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1065) ·
+[#1066](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1066) ·
+[#1067](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1067) ·
+[#1068](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1068). **431 places.**
+
+## 13 · TIGHT: seven places the NAME tier could not see (#1065)
+
+With NAME and EXACT clean, the next candidates were in **TIGHT** — pairs within
+25 m under *different* names. Of 81 rows most are neighbours; a curated list
+went to the owner, who took 1–8. Every point from a source independent of both
+pins: OSM ×4, Wikidata, **GSI** for Hermès (never Nominatim in Japan), and for
+Edelweiss the more precise of two same-creator pins 2.6 m apart. Created
+**4 Charles Prime Rib, Torre Velasca, Maison Hermès Ginza, First National Bank
+of Hollywood, Edelweiss Pastry Boutique, Zum Weissen Rauchfangkehrer, Grand
+Palais**; **Wilton's** was a join into an existing place.
+
+🔴 **Reading captions before offering the list kept one wrong one off it**:
+*"this new buffet at the top of 101"* is a restaurant INSIDE Taipei 101 — a
+tenant, which `docs/places.md` says is not the site.
+
+## 14 · The owner's part-vs-whole rulings (#1066)
+
+* **Barbican Centre** — its own place, separate from "The Barbican" (the
+  Estate). 🔴 **Both its pins were on a Santander bike dock** named "Barbican
+  Centre" in OSM; moved 124 m onto the arts-centre building polygon. The owner
+  noted it should have been flagged as a place, not only as part-vs-whole.
+* **CAM** — its own place. Its pin sat 1.2 m from the Gulbenkian Foundation
+  pin — on the Foundation HQ, the wrong building.
+* **British Museum** + the Great Court — the spine's CONFIRMS rose 1,860 → 1,861.
+* **Steinway Hall / 111 W 57th** and **Steinway Tower / 111 W 57th** — kept
+  separate in `DECLINED_PAIRS`; the second marked **provisional**, in the owner's
+  words "at least for now".
+
+## 15 · NEAR: nine joins a 25 m radius had hidden (#1067)
+
+Reading NEAR through `check-place-candidates.py`'s own `scan()` — after a regex
+over its printout returned a false **0 / 0** that matched nothing — found 35
+join-shaped rows. `join-places.py --max-move 100`, guards on, proposed six;
+the owner added three.
+
+🔴 **MahaNakhon joined the other way**: the stray pin was 0 m from Wikidata, the
+place 26 m off, so the PLACE moved onto the pin.
+
+## 16 · CI now reports joins; CAM restored (#1068)
+
+* A new step in the *Place candidates* job runs `join-places.py --max-move 100`
+  report-only. **Any non-zero exit, or an exit 0 that printed no count, fails
+  the job** — tested under `bash -e` in four cases, then confirmed on the real
+  run: step 4 ran and printed `0 entry(ies) to join`.
+* 🔴 **CAM had been made worse by #1066.** Its Atlas caption says to stand by
+  Kuma's canopy, which three sources place on the museum's **south** side; the
+  place had gone onto OSM's CAM node on the **north** (lake) side, moving the
+  audio trigger away from it. Restored to the Atlas author's own stop. **The
+  museum's own node was the right subject and the wrong place to stand.**
+
+## 17 · The contributor docs were wrong in two ways that bite a batch
+
+Found while answering the owner's question *"when either me or my brother sends
+a batch of links, what are the processes?"*:
+
+* **The `atlas-upload` skill said the database needs a manual reseed after a
+  merge. False** — `publish-catalog.yml`'s `seed-supabase` job does it. This is
+  the likely origin of the false reseed owner items (#1015, #1019). Corrected,
+  with the 47-byte count to settle any doubt (live: **3,657 = 3,657**).
+* **Neither the runbook nor the skill mentioned China at all** — a session
+  following them would have stored an Amap number 480–590 m off. Both now carry
+  the recipe, `gcj02.py`, the BD-09 caveat (Baidu not supported), and the three
+  measured cases. The runbook's example output was checked against the tool
+  and corrected by one digit; the Amap recipe was run on the owner's real link.
+
+## State at end of session
+
+| | |
+|---|---|
+| places | **431** |
+| `check-place-candidates.py` | NAME none · EXACT none · TIGHT 68 · NEAR 34 — the remainder are judgement calls, mostly true neighbours |
+| `join-places.py --max-move 100` | **0 to join** |
+| `make-places.py` | nothing new to mint (only Salón 1923, owner-declined) |
+| `spine-match.py` | exit 0 — 0 unexamined, STALE 0 |
+| live DB | 3,657 link pins = 3,657 in `Tours.json` |
+
+**Owner-side, unchanged:** 1.1.3 *Release this version* · the list-description
+clamp check · the four `@welldonestuff` links (ask `@arthuryung-gif`, whose
+batch #1032 was).
