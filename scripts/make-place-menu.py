@@ -129,6 +129,8 @@ DECLINED_GROUPS = {
 # Keyed by the frozen set of the two titles, never by the N-label: the labels
 # are positions in a sorted list and renumber whenever a batch lands.
 DECLINED_PAIRS = {
+    frozenset({"Steinway Tower", "111 West 57th Street (Steinway Tower)"}):
+        "owner 2026-09-22: keep separate AT LEAST FOR NOW — provisional, not a final ruling. Same building under two names, 145 m apart; revisit if the owner reopens it",
     frozenset({"Steinway Hall", "111 West 57th Street (Steinway Tower)"}):
         "owner 2026-09-22: keep separate — the landmark hall and the tower above it are two subjects",
     frozenset({"Tibidabo", "Tibidabo Amusement Park"}):
