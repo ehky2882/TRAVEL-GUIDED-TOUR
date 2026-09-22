@@ -184,7 +184,6 @@ Both look like straightforward Rule 1 pairs, but the call is the owner's.
 - Press **Release this version** for 1.1.3.
 - List-description clamp check (`status/owner/list-description-clamp-check.md`).
 - Stortorget part-vs-whole.
-- 🔴 **#1019 must NOT be merged.**
 
 ---
 
@@ -381,7 +380,7 @@ WGS-84 and safe.
 
 **Owner-side, carried forward:** the four coordinates above · 1.1.3 *Release this
 version* · the four `@welldonestuff` reel links · the list-description clamp
-check · Stortorget part-vs-whole · 🔴 **#1019 must NOT be merged.**
+check · Stortorget part-vs-whole
 
 ---
 
@@ -457,4 +456,30 @@ counting it as support.**
 
 **Owner-side, carried forward:** 1.1.3 *Release this version* · the four
 `@welldonestuff` reel links · the list-description clamp check · Stortorget
-part-vs-whole · 🔴 **#1019 must NOT be merged.**
+part-vs-whole
+
+
+---
+
+## Correction — "#1019 must NOT be merged" was never an owner instruction
+
+Parts 1–4 above carried that line forward as though the owner had said it. The
+owner did not recall saying it, and the PR shows why the line existed at all:
+**#1019 and #1015 contradicted each other.** #1019 added pins to an owner item
+telling the owner to reseed Supabase; #1015, opened the same day, proved every
+pin was already live. A session concluded that merging #1019 would re-assert a
+disproved task — a sound inference — and it was then repeated as the owner's
+instruction, which it was not.
+
+Triaged 2026-09-22 and all three closed, each with a comment:
+
+| PR | outcome |
+|---|---|
+| #1019 | **closed** — it edits a file already deleted from `main`, so merging would resurrect a false task; the live DB holds **3,657** link pins against **3,657** in the catalogue, so no reseed is owed |
+| #1020 | **closed** — a board entry for #1012's merge, two days late |
+| #1015 | **closed** — its four removals were already done; `status/builds/172.md`, the 1.1.3 App Store candidate record and a real gap on `main`, **salvaged byte-identical** into #1063 |
+
+🔴 **The lesson is the one this whole session kept meeting:** a conclusion
+someone reached gets repeated until it reads as a fact someone stated. Record
+*why* a PR is being held, not just that it is — "held because it contradicts
+#1015" can be re-checked; "must NOT be merged" cannot.
