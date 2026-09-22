@@ -2977,3 +2977,43 @@ compressed, and the arithmetic is cheap — one `gzip.compress(payload, 1)` on a
 copy with the field removed. **Do not warn someone off a change on an
 uncompressed guess.** Had the owner weighed my 12% more heavily, a recovery
 that cost 35 KB would have been declined on a number that was never measured.
+
+## The check found no wrong pins, and was still worth building (2026-09-22)
+
+`check-caption-address.py` asks one question of the creator's own sign-off:
+*the caption names a city we know — is it this entry's city?* Of **914**
+location-marker captions, 551 name a known city and **15 disagree**.
+
+**Not one of the 15 is a wrong pin.** They are adjacent towns (Caserta/Naples,
+East Hampton/Montauk), Hong Kong's *Austin* Road and *Aberdeen* district,
+Toronto's *Queens* Quay, and captions referencing a painting or a pizza's
+birthplace.
+
+🔴 **What it did find was a different defect entirely: `St Louis` and
+`St. Louis` were the same city stored twice**, one entry each, 2.6 km apart.
+The catalogue had already been through this — `Sao Paulo`/`São Paulo` and
+`Zurich`/`Zürich` were merged after the same discovery — and the accent-folding
+written then does not catch a **punctuation** variant. Merged to `St. Louis`.
+
+**Two things worth keeping:**
+
+**A check earns its place by the class of question it can ask, not by its first
+harvest.** This one runs on every PR now and costs nothing. The day a batch
+lands a pin in the wrong city, it says so — and that is the error nothing else
+here detects, because a coordinate in the wrong country still validates,
+geocodes and renders.
+
+**Three tunings took it from 28 findings to 15, and each one was a guard, not a
+threshold.** A neighbourhood is an agreement at a finer grain, so the named city
+must be **far** from this one (Williamsburg inside Brooklyn is not a
+disagreement). A city word inside the entry's **own title** is part of a venue's
+name, not a location claim — *Venice Leather*, *Bistrot Lyon*, *The Ice Bath
+Club*, *Shanghai Street*, the largest single class. And the location must come
+from the text after the **last** 📍, not from prose that happens to mention a
+city.
+
+⚠️ **The gazetteer is the catalogue's own list of cities**, like
+`check-city-outliers.py`. That means no external source and no network — and it
+means a caption naming a city the catalogue has never heard of is invisible by
+construction. That cost is stated in a selftest rather than left to be
+discovered.

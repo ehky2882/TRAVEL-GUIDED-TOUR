@@ -256,6 +256,13 @@ ROWS = [
     # British Museum" 58 km away in Great Notley, Essex, while UNMATCHED.
     ("Coordinate far from its own city", "check-city-outliers.py", "CI", None,
      "flagged — a question, not a defect count; Cape Point is 48 km out and right"),
+    # 🔴 The creator SAID where they were. Only possible since the caption
+    # recovery took location-marker captions from 535 to 914 — before that the
+    # population was 13 rows and too noisy to automate. Tests the LOCALITY, not
+    # the distance, per rule 8d: an address-only geocode would have moved the
+    # correct Cube House pin 1.4 km.
+    ("Caption names a city the pin disagrees with", "check-caption-address.py", "CI", None,
+     "disagreements — a question; adjacent towns and street names dominate"),
     ("Coordinate implausible for its city", "check-coordinates.py", "by hand, on a drop", None,
      "GROSS — every one is a defect"),
     ("Image written under the wrong name", "check-image-duplicates.py", "by hand (network)", None,
