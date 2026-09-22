@@ -114,6 +114,34 @@ jobs:
       # every way of breaking those produces NO finding rather than a wrong one.
       # An outlier check that silently flags nothing reads exactly like a clean
       # catalogue.
+      # 🔴 The creator's own location line, checked against the pin's city.
+      # Only worth running since the caption recovery: before it, 13 captions
+      # carried a usable location and the check was too noisy to automate; now
+      # 914 do. Selftested and mutation-tested first, for the same reason as
+      # the outlier check below — every way of breaking it produces silence.
+      - name: Selftest the caption-locality check before believing it
+        run: python3 scripts/check-caption-address.py --selftest
+      - name: Prove every guard in it can still fail
+        run: python3 scripts/mutate-check-caption-address.py
+      - name: Scan for captions naming a different city
+        run: |
+          # 1 means "findings to read", not a failure — most of what it finds
+          # is an adjacent town or a street that shares a city's name.
+          code=0
+          python3 scripts/check-caption-address.py --out caption-city.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::check-caption-address.py could not run (exit $code)"
+            cat caption-city.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Caption names a different city"
+            echo
+            echo '```'
+            sed -n '/captions carry a location marker/,$p' caption-city.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Selftest the outlier check before believing a number it prints
         run: python3 scripts/check-city-outliers.py --selftest
       - name: Prove every guard in it can still fail
