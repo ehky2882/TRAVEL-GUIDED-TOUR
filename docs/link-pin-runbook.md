@@ -343,6 +343,55 @@ says so. **A geocoder that reports its own precision is worth more than a
 confident one** — that is what exposed a parser bug that would otherwise have
 moved 20 correct pins onto centroids.
 
+### 🔴 China: the map apps are offset on purpose
+
+China's public map services **do not publish WGS-84**. Amap (高德) and most
+domestic services serve **GCJ-02**, a legally required obfuscation offset from
+true WGS-84 by roughly **100–700 m**; Baidu serves **BD-09**, which is GCJ-02
+with a further offset on top. A number copied out of one of them looks precise
+to fifteen decimal places and is wrong by more than most pin corrections move a
+pin at all.
+
+**Measured on 2026-09-22, on the owner's own Amap links:**
+
+| pin | raw Amap number vs the old pin | converted to WGS-84 | what storing the raw number would have done |
+|---|---|---|---|
+| Long Ma She | 975 m | **414 m** | put it further from the building than the wrong pin it replaced |
+| Seashore Library | 551 m | **4 m** | 🔴 moved a pin that was **already correct**, by 551 m |
+| Chapel of Music | 1,684 m | 1,510 m | a 174 m error on top of a real 1.5 km fix |
+
+**The recipe:**
+
+```bash
+# 1. An Amap share link resolves server-side; the p= parameter carries it all
+curl -sS -o /dev/null -D - -L "https://surl.amap.com/XXXX" | grep -i '^location:'
+#    … &p=B0KG4BL0O2,22.6628349,114.3697143,Longmashe,Changshoucun No.40&…
+#          poi id   , lat (GCJ-02), lng (GCJ-02), name, ADDRESS
+
+# 2. Convert — lat then lng
+python3 scripts/gcj02.py 22.6628349 114.3697143
+#    GCJ-02 22.6628349, 114.3697143
+#    WGS-84 22.6655240, 114.3647772   (moved 589 m)
+```
+
+* **Only Amap (GCJ-02) is supported.** `gcj02.py` does not undo Baidu's BD-09;
+  ask for an Amap or a Google/Apple Maps pin instead. **Google and Apple Maps
+  are WGS-84** and need no conversion — say which app a number came from,
+  because that is what decides whether it is converted.
+* **Never convert a number you do not KNOW came from a Chinese map.** Applied
+  to a coordinate that is already WGS-84, the transform corrupts a correct pin
+  by the same ~500 m, and inside China nothing can tell the two apart by
+  looking. `gcj02.py` is the identity outside China's bounding box, which
+  protects the rest of the catalogue — but not a Chinese pin.
+* **Then verify by locality, exactly as below.** For Long Ma She the converted
+  point reverse-geocoded to 长守 (Changshou), the village in Amap's own address
+  field; the raw number landed in 三河 (Sanhe), a different village. When the
+  reverse-geocode has nothing to say (it returned bare "Changli County" for both
+  points at Aranya), **say so** rather than counting it as support.
+* ⚠️ **The shape of a defect is not its cause.** Two pins sharing one point
+  looks like a village-centroid artefact; at Aranya it was instead the Seashore
+  Library's CORRECT coordinate, given wrongly to a second building 1.5 km away.
+
 ### Verify by ward, never by distance alone
 
 Geocode the address, then check the **result's ward against the neighbourhood the

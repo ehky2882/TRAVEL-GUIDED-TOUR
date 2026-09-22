@@ -261,6 +261,15 @@ of reading like a pass when they are not.**
    ⚠️ **For Japan, Nominatim cannot do addresses at all**: in romaji it returns
    a postcode centroid that looks exactly like a real hit. Use
    `https://msearch.gsi.go.jp/address-search/AddressSearch?q=<japanese address>`.
+   ⚠️ **For China, a map app's coordinate is DELIBERATELY WRONG by ~500 m.**
+   Amap (高德) serves **GCJ-02**, Baidu serves **BD-09**; neither is the
+   WGS-84 the app uses. Convert an Amap number with
+   `python3 scripts/gcj02.py <lat> <lng>` before storing it. **Baidu numbers:
+   do not use** — BD-09 has a second offset `gcj02.py` does not undo; ask for
+   an Amap or Google/Apple Maps pin instead. Google and Apple are WGS-84 and
+   need no conversion. An Amap share link resolves with
+   `curl -sS -o /dev/null -D - -L <link> | grep -i '^location:'`: the
+   redirect's `p=` parameter carries id, lat, lng, name **and address**.
    Full detail: `docs/link-pin-runbook.md` § Getting the coordinate right.
 
 1. **🔴 Keep the JSON out of the chat.** `make-link-pin.py` prints ~1.9 KB per
@@ -371,10 +380,28 @@ has already happened here:
 # After a content merge
 
 `get_catalog` (Supabase) is the app's primary source; the gh-pages
-`Tours.json` mirror is a fallback. A merge to `main` republishes the mirror
-automatically, **but the database needs `backend/seed_from_toursjson.py`** or
-the mirror ends up newer than the live source. If you hand-edit catalog data in
-the Supabase SQL Editor, finish with `select public.refresh_catalog_snapshot();`.
+`Tours.json` mirror is a fallback. **A merge to `main` updates BOTH
+automatically** — `.github/workflows/publish-catalog.yml` rebuilds "More like
+this", refreshes the coordinate cache, republishes the mirror **and runs the
+`seed-supabase` job**. There is nothing to reseed by hand.
+
+🔴 **Do NOT open a "please reseed Supabase" owner item after a batch.** This
+file used to say the database needed `backend/seed_from_toursjson.py` run by
+hand. It did not, and sessions kept filing that task for the owner anyway —
+#1015 proved three such items false (3,293 pins in the catalogue, 3,293 live),
+and #1019 would have re-created one. If you genuinely doubt the database, ask
+it for a count: 47 bytes, and the answer is in the `content-range` header —
+
+```bash
+curl -sS -o /dev/null -D - "https://apkcihljybvuyuzpbnqd.supabase.co/rest/v1/tours?select=id&kind=eq.link&limit=1" \
+  -H "apikey: $KEY" -H "Authorization: Bearer $KEY" -H "Range: 0-0" -H "Prefer: count=exact" | grep -i content-range
+```
+
+(`$KEY` is the `sb_publishable_…` key in `Data/SupabaseConfig.swift` — public by
+design.) Compare it to `len(linkPins)` in `Tours.json`.
+
+If you hand-edit catalog data in the Supabase SQL Editor, finish with
+`select public.refresh_catalog_snapshot();` — that one IS manual.
 
 # At the end of a session
 
