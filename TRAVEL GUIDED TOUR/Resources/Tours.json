@@ -106263,6 +106263,21 @@
         "1B94C1BC-1DF4-5124-BFF4-62D45B046268",
         "34075F82-512B-5582-986A-867458A6BB30"
       ]
+    },
+    {
+      "id": "dd321a4f-a67f-5b81-a8d9-cbbe8d295427",
+      "name": "Long Ma She",
+      "description": "A heritage regeneration site at Changshoucun No. 40 in Changshou Village, Pingshan District, on the eastern edge of Shenzhen, where old village fabric has been repaired and rebuilt rather than cleared. Soft Square, by ZXD Architects, is one of the structures on it.",
+      "latitude": 22.665524,
+      "longitude": 114.3647771,
+      "city": "Shenzhen",
+      "address": "Changshoucun No. 40, Maluan Sub-district, Pingshan District, Shenzhen",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "80778BC5-EE3D-52DA-A16D-F4C2E326E9BA",
+        "B50B150F-DBA4-5F8E-97A6-8C33DF225A18"
+      ]
     }
   ],
   "linkPins": [
@@ -296112,8 +296127,8 @@
           "order": 0,
           "title": "Soft Square",
           "caption": "Soft Sqaure at Changshou Village near Shenzhen, China by ZXD Architects. #archimarathontv #architecturetravel #architravel #architecturelesson #architectureeducation #archilovers",
-          "latitude": 22.6657039,
-          "longitude": 114.3607473,
+          "latitude": 22.665524,
+          "longitude": 114.3647771,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -296125,8 +296140,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 22.6657039,
-      "centroidLongitude": 114.3607473,
+      "centroidLatitude": 22.665524,
+      "centroidLongitude": 114.3647771,
       "city": "Shenzhen",
       "country": "China",
       "relatedTourIds": [
