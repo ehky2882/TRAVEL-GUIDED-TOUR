@@ -29,10 +29,26 @@ line in the text.
 | **refused by the prefix guard** | **1** |
 | characters restored | **897,983** (median +228) |
 
-🔴 **Captions carrying a 📍 went 535 → 943.** That is the strongest coordinate
-evidence this project gets — it settled The Grapes and *Modern Coffee House*,
-which had shipped **22.9 km wrong** because the postcode separating two East
-Broadways was in the tail the pipeline deleted.
+Captions carrying a 📍 went 535 → 943.
+
+🔴 **CORRECTION, made later the same day: that number is true of the caption
+FIELD and misleading about the evidence available.** `longDescription` was
+never truncated — it carried the full text all along, and **913 entries already
+had a location marker there** before a single caption was re-read. Measured:
+
+| | caption | longDescription | **either** |
+|---|---|---|---|
+| before | 535 | **913** | **913** |
+| after | 943 | 945 | **945** |
+
+**The addressable evidence base gained 32 entries, not 408.** What the recovery
+genuinely fixed is the display — 2,320 captions ended mid-word on screen — and
+the two fields now agree. The audit could have been built yesterday by reading
+`longDescription`, and now reads **both**.
+
+This is the exact failure this file spends the rest of its length warning about:
+**a number that is true of one field, stated as if it were true of the thing
+that matters.**
 
 **The prefix guard is the safety property.** A refetched caption is accepted only
 if the stored 140 characters are a prefix of it, compared on **normalised** text
@@ -95,7 +111,7 @@ unexcused cut.
 |---|---|
 | tours / pins / places | 1,582 · 3,657 · 408 |
 | makers · cities · countries | 527 · 774 · 93 |
-| captions with a 📍 | **943** (was 535) |
+| entries with a 📍 in either field | **945** (was 913) |
 | at exactly 140 | 24 — 10 with no URL, 14 excused, **0 unexcused** |
 | validator | 0 errors, 557 warnings, `control clean` |
 

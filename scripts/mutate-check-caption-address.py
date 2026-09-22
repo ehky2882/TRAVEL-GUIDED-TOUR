@@ -67,6 +67,11 @@ MUTANTS = [
   'distant = [n for n in named if far_apart(city, n, centres)]',
   'distant = list(named)'),
 
+ ("🔴 fields: only the caption is read, so every address the catalogue held "
+  "in longDescription alone goes unseen",
+  'text = tail(stops[0].get("caption") or "") + " " + tail(e.get("longDescription") or "")',
+  'text = tail(stops[0].get("caption") or "")'),
+
  # --- the population -----------------------------------------------------
  ("🔴 population: tours are dropped, so an Atlas caption is never checked",
   'return list(catalog.get("tours") or []) + list(catalog.get("linkPins") or [])',
@@ -75,8 +80,8 @@ MUTANTS = [
   'return list(catalog.get("tours") or []) + list(catalog.get("linkPins") or [])',
   'return list(catalog.get("tours") or [])'),
  ("population: an entry with no city is checked anyway",
-  'city = (e.get("city") or "").strip()\n        if not stops or not city:\n            continue\n        text = tail',
-  'city = (e.get("city") or "").strip()\n        if not stops:\n            continue\n        text = tail'),
+  'if not stops or not city:\n            continue\n        # 🔴 BOTH fields.',
+  'if not stops:\n            continue\n        # 🔴 BOTH fields.'),
 ]
 
 # 🔴 Control first. A harness once printed 14/14 against a file that would not

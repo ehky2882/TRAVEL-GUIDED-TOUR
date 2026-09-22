@@ -3092,3 +3092,47 @@ remember; this one stops the branch.
 sit at the cut with **no source URL**, so nothing can re-read them, and the
 output says so — `24 sit at exactly 140 · 10 have no source URL · 14 excused ·
 0 not excused`. The population adds up in the line itself.
+
+## The same field was full the whole time (2026-09-22)
+
+I recovered 2,351 truncated captions and reported the win as **"captions
+carrying a 📍 went 535 → 943 — a 70% larger evidence base."**
+
+Then I went to check whether the recovery had helped a *different* check, and
+found this:
+
+| | caption | longDescription | **either** |
+|---|---|---|---|
+| before the recovery | 535 | **913** | **913** |
+| after | 943 | 945 | **945** |
+
+🔴 **`longDescription` was never truncated.** The pipeline cut `caption[:140]` on
+the stop and wrote the full text to the description in the same breath. Before
+the recovery, 2,364 captions sat at exactly 140 characters and **seven**
+longDescriptions did.
+
+**So the addressable evidence base gained 32 entries, not 408**, and the
+caption-address audit could have been built the day before by reading the other
+field.
+
+**What the recovery did genuinely fix** is real but smaller than I said: 2,320
+captions ended mid-word **on screen**, which is a display defect users see, and
+the two fields now agree.
+
+### Why I got it wrong
+
+I measured the field I had just changed. The number was correct — captions *did*
+go 535 → 943 — and it answered a question nobody had asked. **The question was
+"how much more evidence do we have", and the answer required looking at every
+field that could carry it.**
+
+That is the same shape as the egress estimate I got wrong by 15× the day before,
+and as the *"0 duplicates"* places query that read the wrong key: **a true
+statement about the wrong population.** The habit that catches all three is the
+one already written here — **state the population and make it add up** — extended
+by one word: state which *fields* the population is drawn from.
+
+⚠️ And it is why `check-caption-address.py` now reads the caption **and**
+`longDescription`, with a mutant that goes red if either is dropped. A check
+reading one field would have been blind to 378 entries whose address the
+catalogue already held.
