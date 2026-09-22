@@ -3430,3 +3430,36 @@ Worth knowing generally: a coordinate has a **datum**, and outside the places
 where everyone silently agrees on WGS-84 the datum is part of the fact. Asking
 *"where did this number come from?"* is not pedantry there — it is the
 difference between a 5 m fix and a 500 m error.
+
+### The same datum trap, three times in one hour, each a different shape (2026-09-22)
+
+The owner sent Amap share links for four pins. Every one needed GCJ-02 → WGS-84
+conversion, and the *consequence of skipping it* was different each time:
+
+| pin | raw Amap number | after conversion | what skipping would have done |
+|---|---|---|---|
+| Long Ma She | 975 m from the old pin | **414 m** | left it **further** from the building than the wrong shared pin it replaced |
+| Seashore Library | 551 m away | **4 m** | 🔴 **moved a pin that was already CORRECT, by 551 m** |
+| Chapel of Music | 1,684 m away | 1,510 m | a 174 m error on top of a real 1.5 km fix |
+
+🔴 **The library case is the one to remember.** Its shared coordinate looked like
+a village-centroid guess — two pins on one point, the classic artefact. It was
+nothing of the kind: converting Amap's number landed **4 m** from it, so the
+coordinate was *right* and the real defect was that `Chapel of Music` had been
+given the library's position. **The shape of a defect is not its cause**, and
+"two pins share a point" has at least two causes that look identical.
+
+⚠️ **The 4 m agreement is also the best validation the converter got.** It is an
+external check at the exact location in question: an independently-sourced
+coordinate already in the catalogue, matched to within noise. That mattered when
+the chapel's reverse-geocode came back as bare "Changli County" for *both* the
+raw and converted points and **could not discriminate** — the locality check
+usually settles these (长守 vs 三河 did, for Long Ma She) and here it simply had
+nothing to say. **Say so when a check comes back mute, rather than counting it as
+support.**
+
+⚠️ And the small decision in the middle: once the library was known correct, it
+was tempting to apply its 4 m refinement immediately. That would have dropped
+the pair from `EXACT · ASK` — visible, addressed to the owner — into the 81-row
+`TIGHT` list, where it would not have been seen again. **A 4 m improvement is
+not worth hiding a 1.5 km fault.** Both were set together instead.
