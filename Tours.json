@@ -35715,8 +35715,8 @@
           "order": 0,
           "title": "Kyoto International Conference Center (ICC Kyoto) | 国立京都国際会館",
           "caption": "Sachio Otani's 1966 Metabolist conference centre of inclined trapezoidal geometry, where the Kyoto Protocol was brokered in a corridor in 1997.",
-          "latitude": 35.06194879347918,
-          "longitude": 135.78311443569086,
+          "latitude": 35.0610839,
+          "longitude": 135.7831473,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kyoto-international-conference-center-icc-kyoto.mp3",
           "audioDurationSeconds": 145,
           "triggerMode": "geofenced",
@@ -35728,8 +35728,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 145,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.06194879347918,
-      "centroidLongitude": 135.78311443569086,
+      "centroidLatitude": 35.0610839,
+      "centroidLongitude": 135.7831473,
       "city": "Kyoto",
       "country": "Japan",
       "relatedTourIds": [
@@ -50918,8 +50918,8 @@
           "order": 0,
           "title": "King Power Mahanakhon | คิง เพาเวอร์ มหานคร",
           "caption": "Ole Scheeren's pixelated tower carves chunks from its own glass facade, crowned by Thailand's highest deck and a glass-floored Skytray over open air.",
-          "latitude": 13.7234074,
-          "longitude": 100.5282227,
+          "latitude": 13.723611111111,
+          "longitude": 100.52833333333,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/king-power-mahanakhon.mp3",
           "audioDurationSeconds": 113,
           "triggerMode": "manual",
@@ -50931,8 +50931,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 113,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 13.7234074,
-      "centroidLongitude": 100.5282227,
+      "centroidLatitude": 13.723611111111,
+      "centroidLongitude": 100.52833333333,
       "city": "Bangkok",
       "country": "Thailand",
       "relatedTourIds": [
@@ -100016,15 +100016,16 @@
       "id": "365277f5-3820-52f5-a426-c0bbe21c576d",
       "name": "King Power Mahanakhon",
       "description": "Ole Scheeren's 314-metre tower, completed in 2016, with a ribbon of cut-away terraces spiralling down one face so the building looks half-dismantled. The pixelated void is structural theatre: the floor plates behind it are ordinary.",
-      "latitude": 13.7234074,
-      "longitude": 100.5282227,
+      "latitude": 13.723611111111,
+      "longitude": 100.52833333333,
       "city": "Bangkok",
       "address": "Soi Silom 9, Bang Rak, Bangkok 10500",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/king-power-mahanakhon_hero.webp",
       "additionalImageURLs": null,
       "tourIds": [
         "1f834e57-b2e3-57c7-a555-2bd20ea14596",
-        "5990E024-C085-5E2B-8590-38B1B96CE470"
+        "5990E024-C085-5E2B-8590-38B1B96CE470",
+        "BD592F0C-5F0C-53D4-8785-DF5D938E5AD1"
       ]
     },
     {
@@ -100308,7 +100309,8 @@
         "99079BED-61B1-54FA-9ED9-3A55DDE8D2F9",
         "80DEC22C-EB20-5ABC-835B-E1BEEFE17F87",
         "6DA50048-2DF3-57C6-BA8A-7022FEFC86E3",
-        "64D7FEE3-7DD4-5BBD-A7E7-2E885C91D0A4"
+        "64D7FEE3-7DD4-5BBD-A7E7-2E885C91D0A4",
+        "B90F92CC-8614-50B9-84C4-B40F676EDB03"
       ]
     },
     {
@@ -100598,7 +100600,8 @@
       "tourIds": [
         "5f8ecfcf-6841-5878-a76f-fa63c55b6d25",
         "6A2FCB9C-4620-59C9-B614-DE11AD1F4A6D",
-        "89C2B84E-2353-56B4-AA9F-835A22C8F4B0"
+        "89C2B84E-2353-56B4-AA9F-835A22C8F4B0",
+        "35225803-38D9-5C05-9272-6AF04A20C0A4"
       ]
     },
     {
@@ -100768,7 +100771,8 @@
       "tourIds": [
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
-        "34C2B094-CB95-5C25-B832-90AFDF7FF5F8"
+        "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C"
       ]
     },
     {
@@ -101328,7 +101332,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "35DC5B25-D967-5B10-9ABF-A850532E5324",
-        "980CF450-B8AB-5F92-92F9-BDA5D7ED153B"
+        "980CF450-B8AB-5F92-92F9-BDA5D7ED153B",
+        "8cfe0231-9f94-5ae5-a5c6-938ac4dd26a1"
       ]
     },
     {
@@ -101779,7 +101784,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "143DD9ED-3F09-575B-8357-FD0AF0D7612A",
-        "EC286FB1-1400-5E2C-8962-64A3FCFD15A9"
+        "EC286FB1-1400-5E2C-8962-64A3FCFD15A9",
+        "26826453-4AC0-5D78-A942-C82189EAE53C"
       ]
     },
     {
@@ -103051,7 +103057,8 @@
         "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
         "8730E2F2-A6C7-545B-989F-AAF2CE504790",
         "36C1FE8A-13FC-57D8-A6B3-6E813EAF5CE8",
-        "4419BA6B-E9B9-5867-AD1D-44A272E6F380"
+        "4419BA6B-E9B9-5867-AD1D-44A272E6F380",
+        "1C3D7D11-4592-5746-947E-86550ACD1363"
       ]
     },
     {
@@ -103277,7 +103284,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "32d39027-caf6-4b14-96c4-8ab8981f1675",
-        "B62DD08A-A6CF-51E7-B99C-2C2A22625B49"
+        "B62DD08A-A6CF-51E7-B99C-2C2A22625B49",
+        "855ED706-FBD1-565F-8A69-273BDBDEA1F0"
       ]
     },
     {
@@ -103421,7 +103429,8 @@
       "additionalImageURLs": [],
       "tourIds": [
         "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
-        "FB11F2BF-7AAF-5C1A-96CA-FF34BE6EB056"
+        "FB11F2BF-7AAF-5C1A-96CA-FF34BE6EB056",
+        "6D29A951-B367-5534-BE9B-3F0214EEE956"
       ]
     },
     {
@@ -126756,8 +126765,8 @@
           "order": 0,
           "title": "Yankee Stadium and a Baseball Anthem",
           "caption": "Did you know one of baseball’s most famous songs was written on the subway? #nychistory #nyc #subway #baseball #mta",
-          "latitude": 40.829877994221704,
-          "longitude": -73.92617450328507,
+          "latitude": 40.8296,
+          "longitude": -73.9262,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -126769,8 +126778,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.829877994221704,
-      "centroidLongitude": -73.92617450328507,
+      "centroidLatitude": 40.8296,
+      "centroidLongitude": -73.9262,
       "city": "Bronx",
       "country": "United States",
       "relatedTourIds": [
@@ -204148,8 +204157,8 @@
           "order": 0,
           "title": "The Oculus",
           "caption": "🐋 This looks like a whale carcass. It’s actually the world’s most expensive train station ever built. Santiago Calatrava’s Oculus at the World Trade Center cost nearly $4 billion, and he designed it to look like a dove leaving a boy’s hands, not a whale. #TikTokLearningCampaign #learnontiktok #nyctok",
-          "latitude": 40.7118125,
-          "longitude": -74.0118125,
+          "latitude": 40.711555,
+          "longitude": -74.01142,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -204161,8 +204170,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7118125,
-      "centroidLongitude": -74.0118125,
+      "centroidLatitude": 40.711555,
+      "centroidLongitude": -74.01142,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -205075,8 +205084,8 @@
           "order": 0,
           "title": "King Power Mahanakhon",
           "caption": "King Power Mahanakhon is defined by what was removed. Every void, terrace, and cut shapes the experience of the tower and its relationship with the city ✨ 👉🏻 Follow for more insights on architecture, design, and visual culture @sophia_architecture #architecture #designinspiration #modernarchitecture #thaiarchitecture",
-          "latitude": 13.7234074,
-          "longitude": 100.5282227,
+          "latitude": 13.723611111111,
+          "longitude": 100.52833333333,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -205088,8 +205097,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 13.7234074,
-      "centroidLongitude": 100.5282227,
+      "centroidLatitude": 13.723611111111,
+      "centroidLongitude": 100.52833333333,
       "city": "Bangkok",
       "country": "Thailand",
       "relatedTourIds": [
@@ -231777,8 +231786,8 @@
           "order": 0,
           "title": "Solomon R. Guggenheim Museum",
           "caption": "Do you recognize this museum? #fyp #architecture #nyc",
-          "latitude": 40.7829932,
-          "longitude": -73.958925,
+          "latitude": 40.7831793289656,
+          "longitude": -73.95916598843854,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -231790,8 +231799,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7829932,
-      "centroidLongitude": -73.958925,
+      "centroidLatitude": 40.7831793289656,
+      "centroidLongitude": -73.95916598843854,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -255222,8 +255231,8 @@
           "order": 0,
           "title": "Marina City",
           "caption": "This Skyscraper Has 19 Floors of just Parking 😳 Marina City isn't just one of Chicago's most famous skyscrapers—it was designed to be an entire city in the sky. Here's why nearly a third of each tower is nothing but parking. #chicago #marinacity #skyscraper #architecture",
-          "latitude": 41.8882,
-          "longitude": -87.6285,
+          "latitude": 41.888337,
+          "longitude": -87.628834,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -255235,8 +255244,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.8882,
-      "centroidLongitude": -87.6285,
+      "centroidLatitude": 41.888337,
+      "centroidLongitude": -87.628834,
       "city": "Chicago",
       "country": "United States",
       "relatedTourIds": [
@@ -257980,8 +257989,8 @@
           "order": 0,
           "title": "Vessel (Hudson Yards)",
           "caption": "New York's $300M Useless Structure 😮",
-          "latitude": 40.7537995,
-          "longitude": -74.0020025,
+          "latitude": 40.753964305467136,
+          "longitude": -74.00176489443685,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -257993,8 +258002,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7537995,
-      "centroidLongitude": -74.0020025,
+      "centroidLatitude": 40.753964305467136,
+      "centroidLongitude": -74.00176489443685,
       "city": "New York",
       "country": "USA",
       "relatedTourIds": [
@@ -267794,8 +267803,8 @@
           "order": 0,
           "title": "Trellick Tower",
           "caption": "Buildings of London - Ep 21: Trellick Tower Designed by the British-Hungarian architect Ernő Goldfinger, this iconic brutalist tower has divided opinion ever since it was built over 50 years ago. Completed in 1972, the building had a rocky start. For 4 days over the first Christmas, residents had no electricity or running water due to service issues, the lifts broke and the top floor residents had to descend 900 steps to an outdoor tap. It took a few decades before the building started to regain public favour, with updated services and a concierge, and now it’s one of London’s trendiest places to live.",
-          "latitude": 51.52362,
-          "longitude": -0.20541,
+          "latitude": 51.52381,
+          "longitude": -0.20586,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267807,8 +267816,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.52362,
-      "centroidLongitude": -0.20541,
+      "centroidLatitude": 51.52381,
+      "centroidLongitude": -0.20586,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -276505,8 +276514,8 @@
           "order": 0,
           "title": "Kaktus Towers",
           "caption": "The kaktus towers designed by Bjarke Ingels Group in Copenhagen. #blessedarch #architecture #design #copenhagen #housing",
-          "latitude": 55.66375,
-          "longitude": 12.56034,
+          "latitude": 55.663510015423974,
+          "longitude": 12.560377282200308,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -276518,8 +276527,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 55.66375,
-      "centroidLongitude": 12.56034,
+      "centroidLatitude": 55.663510015423974,
+      "centroidLongitude": 12.560377282200308,
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
