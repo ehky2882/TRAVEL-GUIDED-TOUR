@@ -1,0 +1,3 @@
+# Created The Brunswick Centre and Smithfield Market places (owner-approved); 419 places, NAME tier empty. 🔴 check-place-candidates.py had been CRASHING with NameError in report()'s exact branch since #1058 — an uncaught exception exits 1, which its own contract defines as 'candidates found, fine', so CI read the crash as a clean run and the EXACT tier went unreported with three groups in it (Žižkov/Zizkov Television Tower on an identical coordinate, Seashore Library/Chapel of Music, Long Ma She/Soft Square). Fixed the bug and made a crash exit 2; selftest 56/56 with both defects proven catchable.
+
+_2026-09-22 15:28 UTC · branch `scale-pinned-tours-automation-db`_
