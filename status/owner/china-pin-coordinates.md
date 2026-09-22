@@ -1,44 +1,50 @@
-# Two pins still need per-building coordinates (Aranya, Beidaihe)
+# ONE pin still needs a coordinate — Chapel of Music, Aranya
 
 _opened 2026-09-22 · clear with `git rm status/owner/china-pin-coordinates.md`_
 
-**Two of four resolved.** `Long Ma She` got a verified coordinate from an Amap
-share link, and `Soft Square` is now a member of the `Long Ma She` place, so it
-sits on that same verified point rather than needing one of its own.
+**Three of four resolved, and the fourth is now a single pin.**
 
 | pin | status |
 |---|---|
-| `Long Ma She` | ✅ `22.6655240, 114.3647771` — Amap, converted GCJ-02 → WGS-84, confirmed by village name |
-| `Soft Square` | ✅ member of the `Long Ma She` place, on the verified point |
-| `Seashore Library` | ⏸ Aranya, Changli County |
-| `Chapel of Music` | ⏸ Aranya, Changli County |
+| `Long Ma She` | ✅ `22.6655240, 114.3647771` — Amap, converted, confirmed by village name |
+| `Soft Square` | ✅ member of the `Long Ma She` place, on that verified point |
+| `Seashore Library` | ✅ **already correct** — see below |
+| `Chapel of Music` | ⏸ **the only one left** |
 
-The two remaining are both Vector Architects buildings (2015 and 2023) in the
-Aranya community, sharing one village-level coordinate at
-`39.6561544, 119.3169543` — which reverse-geocodes to `阿那亚三期` (Aranya
-Phase 3), so the **locality is right and only the precision is wrong**.
+## 🔴 The Beidaihe pair was NOT what it looked like
 
-## 🔴 An Amap link works, but ONLY after conversion
+Both pins sat on `39.6561544, 119.3169543`, which read as a shared village-level
+guess. The owner's Amap link for the library
+(*Joint Publishing Seaside Commonweal Library (Lonely Library)*, Binhai New
+Avenue) converts to `39.6561895, 119.3169566` — **4 m from that point.**
 
-`python3 scripts/gcj02.py <lat> <lng>` does it. The Long Ma She case is why it
-is not optional:
+So the shared coordinate **is the Seashore Library's correct position**, and the
+defect is narrower and different: **`Chapel of Music` was given the library's
+coordinate.** Only the chapel needs a new one.
 
-| | distance from the old pin |
+⚠️ **Both pins are deliberately left exactly coincident.** Applying the 4 m
+refinement to the library alone would drop the pair out of the `EXACT · ASK`
+tier — where it is visible and addressed to the owner — into the 81-row `TIGHT`
+list, where it would be effectively invisible. **A 4 m improvement is not worth
+hiding the real fault**, so the refinement waits until the chapel's coordinate
+arrives and both can be set together.
+
+## 🔴 Why the conversion is not optional — the sharpest case yet
+
+| | distance from the pin |
 |---|---|
-| Amap's raw number (GCJ-02) | **975 m** |
-| after conversion to WGS-84 | **414 m** |
+| Amap's raw number for the library (GCJ-02) | **551 m** |
+| after conversion to WGS-84 | **4 m** |
 
-The datum offset was **589 m** — so pasting Amap's number straight in would have
-put the pin *further* from the building than the wrong shared coordinate it
-replaced, while looking precise.
+Pasting Amap's raw number in would have taken a pin that was **already correct**
+and moved it **551 m**. That is rule 8d's own warning — *an address-only geocode
+would have moved a CORRECT pin* — arriving through a different door.
 
-**The locality check is what settles it, not the distance:** the converted point
-reverse-geocodes to **长守 (Changshou)**, the village in Amap's own address field
-(*Changshoucun No.40*). The raw number lands in **三河 (Sanhe)** — a different
-village.
+`python3 scripts/gcj02.py <lat> <lng>` does the conversion.
 
 ## What to send
 
-An Amap share link is fine — that is what worked. So is Google or Apple Maps,
-which need no conversion. **Say which app it came from**, because that is what
-decides whether the number gets converted.
+An Amap share link for **Chapel of Music** (阿那亚音乐厅 / the Aranya music hall,
+Vector Architects, 2023). Google or Apple Maps works too and needs no
+conversion — **say which app it came from**, because that decides whether the
+number gets converted.
