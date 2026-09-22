@@ -114,6 +114,18 @@ jobs:
       # every way of breaking those produces NO finding rather than a wrong one.
       # An outlier check that silently flags nothing reads exactly like a clean
       # catalogue.
+      # 🔴 make-places.py WRITES places into the catalogue, and a place is a
+      # COORDINATE — minting one moves every member onto a single point. Its
+      # selftest was not run anywhere, and on 2026-09-21 the new STALE band in
+      # spine-match.py broke its fixture: every row banded STALE instead of
+      # CONFIRMS, `propose` returned no groups, and the selftest died with an
+      # IndexError instead of a verdict. Nothing noticed for a day. A tool that
+      # edits the catalogue must not be the one tool CI does not check.
+      - name: Selftest the place minter (it writes to the catalogue)
+        run: python3 scripts/make-places.py --selftest
+      - name: Prove every guard in the place joiner can still fail
+        run: python3 scripts/mutate-join-places.py
+
       # 🔴 Did a batch arrive with its captions still cut at 140?
       # make-link-pin.py stopped truncating on 2026-09-21, and on 2026-09-22
       # EIGHTY-SEVEN fresh captions arrived cut anyway: #1054 was built from a

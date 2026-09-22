@@ -3136,3 +3136,48 @@ by one word: state which *fields* the population is drawn from.
 `longDescription`, with a mutant that goes red if either is dropped. A check
 reading one field would have been blind to 378 entries whose address the
 catalogue already held.
+
+## The tool that writes to the catalogue was the one CI did not check (2026-09-22)
+
+Running the place-candidate scan after a 117-pin day turned up **two defects in
+the place tooling itself**, and either would have put a wrong place into the
+catalogue. A place is a **coordinate**: minting one *moves every member onto a
+single point*.
+
+### 1 · `make-places.py --selftest` had been crashing for a day
+
+`IndexError`, not a verdict. The cause was mine: adding the **STALE** band to
+`spine-match.py` on 2026-09-21 meant a cache record with no `digest` now bands
+STALE instead of CONFIRMS — and this file's fixture supplies no digest, so
+`propose` saw no groups and indexed into an empty list.
+
+🔴 **Nothing noticed, because `make-places.py --selftest` was not run anywhere.**
+It is the only tool in `scripts/` that *writes places*, and it was the one tool
+CI did not gate. It is gated now, and the fixture asserts it is **live** — strip
+the digest and the group must vanish, so a fixture that quietly stops producing
+one cannot pass again.
+
+**The general form:** when you add a guard to a shared module, the things that
+break are not its own tests. They are the fixtures in every *other* file that
+imports it — and those are exactly the files nobody re-runs.
+
+### 2 · A tourism board is not a venue
+
+`proven_same_venue` treats a shared `@handle` as proof that two coincident
+entries are one venue. It already excludes the **creator's** handle, or every
+pair of pins by one food reviewer would pair. It did not exclude
+**`@visitscotland`** — so *The Last Drop* and *Biddy Mulligan's*, two different
+Grassmarket pubs **24 m apart**, were reported PROVEN and would have been minted
+as one place, merging two pubs into one page.
+
+`docs/places.md` states the rule this breaks: **co-location is not identity.**
+
+**The fix is measured, not a list.** `ubiquitous_handles()` counts the distinct
+points each handle appears at: a real venue handle appears at **one**, a tourism
+board at many. Twenty-five handles in this catalogue appear at four or more —
+`@visitscotland`, `@michelinguide`, `@guinnessgb`, `@invernesstouristboard`, and
+several creators' handles quoted in *other* creators' captions.
+
+⚠️ Both defects were found by **using** the tool, not by reading it. The scan is
+rule 8c and it is meant to run after every batch; it had not, and two batches
+had landed.

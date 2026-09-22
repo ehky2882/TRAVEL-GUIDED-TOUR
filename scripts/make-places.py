@@ -141,7 +141,12 @@ def propose_proven(catalog, *, max_move_m=MAX_MOVE_M):
     `--max-move` guard is inert here by construction, not by omission.
     """
     claimed = {t for p in (catalog.get("places") or []) for t in p.get("tourIds", [])}
-    by_point = proven_groups(_cpc.entries(catalog), TIGHT_M)
+    # ⚠️ A tourism-board handle is not a venue handle — see
+    # check-place-candidates.ubiquitous_handles. Without this, The Last Drop
+    # and Biddy Mulligan's (two Grassmarket pubs, 24 m apart, both tagging
+    # @visitscotland) mint as ONE place.
+    everywhere = _cpc.ubiquitous_handles(_cpc.entries(catalog))
+    by_point = proven_groups(_cpc.entries(catalog), TIGHT_M, everywhere)
 
     make, skip = [], []
     for point, (members, proof) in sorted(by_point.items()):
@@ -188,7 +193,7 @@ def propose_proven(catalog, *, max_move_m=MAX_MOVE_M):
 TIGHT_M = 25.0
 
 
-def proven_groups(entries_in, radius_m):
+def proven_groups(entries_in, radius_m, ubiquitous=frozenset()):
     """Groups built from PAIRS THAT PASS PROOF, then unioned.
 
     🔴 PROOF DRIVES THE GROUPING. PROXIMITY ONLY BOUNDS THE SEARCH — and the
@@ -232,7 +237,8 @@ def proven_groups(entries_in, radius_m):
             parent.setdefault(other["id"], other["id"])
             if haversine(point, other_point) > radius_m:
                 continue
-            ok, reason = _cpc.proven_same_venue([(kind, entry), (other_kind, other)])
+            ok, reason = _cpc.proven_same_venue(
+                [(kind, entry), (other_kind, other)], ubiquitous)
             if ok:
                 union(entry["id"], other["id"])
                 proofs.setdefault(find(entry["id"]), reason)
@@ -417,12 +423,30 @@ def selftest():
     cat = {"tours": [entry("a", "The Shard", 51.5045, -0.0865),
                      entry("b", "The Shard", 51.5046, -0.0866)],
            "linkPins": [], "places": []}
+    # 🔴 The digest is not decoration. `spine-match.classify` bands a record
+    # STALE when `ask_digest(title, at, bound_km)` does not match the stored
+    # one, and a fixture with no digest bands STALE rather than CONFIRMS — so
+    # `propose` sees no group at all and this selftest died with an IndexError
+    # instead of a verdict. That is exactly what happened when the STALE band
+    # was added on 2026-09-21: nothing noticed, because this file's selftest
+    # is not run in CI. It is now.
     cache = {eid: {"candidates": [{"qid": "Q18536", "label": "The Shard",
                                    "lat": 51.5045, "lon": -0.0865,
-                                   "distance_m": d, "sitelinks": 50}]}
+                                   "distance_m": d, "sitelinks": 50}],
+                   "bound_km": 100.0}
              for eid, d in (("a", 5.0), ("b", 12.0))}
+    for eid, rec in cache.items():
+        of = next(e for e in cat["tours"] if e["id"] == eid)
+        rec["digest"] = _sm.ask_digest(of.get("title"), _sm.entry_marker(of),
+                                       rec["bound_km"])
     make, skip = propose(cat, cache, {})
     check("two entries on one item propose a place", len(make) == 1)
+    # ⚠️ Prove the fixture is LIVE: strip the digest and the group must vanish.
+    # A fixture that silently stops producing a group is how this selftest
+    # spent a day raising IndexError instead of a verdict.
+    stale_cache = {eid: dict(rec, digest="not-the-digest") for eid, rec in cache.items()}
+    check("🔴 the fixture is live — a stale digest makes the group disappear",
+          propose(cat, stale_cache, {})[0] == [])
     check("the proposal carries both members", len(make[0]["members"]) == 2)
 
     minted = apply(cat, make)
@@ -437,6 +461,14 @@ def selftest():
     cat2 = json.loads(json.dumps(cat)); cat2["places"] = []
     cat2["tours"][1]["stops"][0]["latitude"] = 51.5200      # ~1.7 km away
     cache2 = json.loads(json.dumps(cache))
+    # ⚠️ Moving the entry invalidates its cached lookup — that is the STALE
+    # guard doing its job, not a problem to route around. A real run refreshes
+    # the cache after a move, so the fixture does too; without this the group
+    # vanishes as STALE and this check would pass for the wrong reason.
+    for eid, rec in cache2.items():
+        of = next(e for e in cat2["tours"] if e["id"] == eid)
+        rec["digest"] = _sm.ask_digest(of.get("title"), _sm.entry_marker(of),
+                                       rec["bound_km"])
     make2, skip2 = propose(cat2, cache2, {}, max_move_m=120.0)
     check("🔴 a group that would drag a member too far is SKIPPED, not minted",
           make2 == [] and len(skip2) == 1 and "would move" in skip2[0]["why"])
