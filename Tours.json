@@ -14654,8 +14654,8 @@
           "order": 0,
           "title": "Smithfield Market",
           "caption": "Stand at the corner and take in the length of the painted-iron market hall.",
-          "latitude": 51.5188,
-          "longitude": -0.1003,
+          "latitude": 51.5193568,
+          "longitude": -0.1012706,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/smithfield-market.mp3",
           "audioDurationSeconds": 144,
           "triggerMode": "geofenced",
@@ -14665,8 +14665,8 @@
         }
       ],
       "primaryCategory": "culturalHeritage",
-      "centroidLatitude": 51.5188,
-      "centroidLongitude": -0.1003,
+      "centroidLatitude": 51.5193568,
+      "centroidLongitude": -0.1012706,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "Smithfield is a long, ornate Victorian market hall — coloured ironwork, arched roofs, the look of a railway station crossed with a cathedral — and London's great meat market, a place of slaughter and trade for the better part of a thousand years. The name has nothing to do with blacksmiths: it's \"smooth field,\" the open ground just outside the medieval wall where livestock could be driven, sold and butchered. The hall was designed by Horace Jones — the same architect as Leadenhall Market and Tower Bridge — and opened in the 1860s, when the Victorians decided the messy, ancient business of meat deserved a grand iron palace; a railway runs beneath to bring carcasses in from across the country. It is even now one of the last great wholesale markets working on its original site in central London, though its days here are numbered, with a long-planned move out of the City.\n\nThe field's older history is darker. For centuries Smithfield was London's main site of public execution: the Scottish leader William Wallace was put to death here in 1305 (a plaque marks it on the hospital wall); Wat Tyler, leader of the Peasants' Revolt, was killed here in 1381 before the boy-king Richard II; and under Queen Mary dozens of Protestant martyrs were burned here for their faith. So hold the two things together: this cheerful Victorian hall, with its painted ironwork and its butchers in white coats, sits on a field that was for centuries the place London came to watch people die — the city paved over its execution ground and turned it into a place to buy a Sunday joint.",
@@ -106217,6 +106217,36 @@
       "tourIds": [
         "434932e4-9c75-452e-a83b-5ef3ae0cb995",
         "1CDA55C8-4CD3-5735-B5AE-CAA77AA55303"
+      ]
+    },
+    {
+      "id": "1577694e-2cf6-5f1e-be7b-0b6f5e6236d8",
+      "name": "The Brunswick Centre",
+      "description": "Patrick Hodgkinson's stepped concrete megastructure in Bloomsbury, built 1967–72 between Brunswick Square and Russell Square: 560 flats in two ziggurat terraces facing each other across a raised pedestrian concourse of shops, cafés and a cinema. The tiering is not styling but daylight — each flat's terrace is the roof of the one below. Long condemned as a concrete eyesore and once threatened with demolition, it is now Grade II listed. Signed as The Brunswick Centre and known simply as the Brunswick.",
+      "latitude": 51.5240705,
+      "longitude": -0.1234925,
+      "city": "London",
+      "address": "The Brunswick Centre, Bloomsbury, London WC1N",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "722884BD-87B4-5829-BA80-819957465286",
+        "C8C2C63B-2024-5075-8709-6FB71119C7D9"
+      ]
+    },
+    {
+      "id": "a6494492-f5dd-571b-8bc1-06e4c2c3fd89",
+      "name": "Smithfield Market",
+      "description": "Horace Jones's 1868 market hall at West Smithfield — painted ironwork, arcaded brick and a glazed roof, a railway terminus crossed with a cathedral — built over a goods railway so meat could be unloaded beneath the traders' feet. The ground beneath it has been used for livestock and meat trading for the better part of a thousand years, and for public executions besides. Also called London Central Markets, the name cut into its own pediment.",
+      "latitude": 51.5193568,
+      "longitude": -0.1012706,
+      "city": "London",
+      "address": "Smithfield Market, West Smithfield, London EC1A 9DY",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "d7f3a1c8-6b29-4e54-8a06-3c9e7b4d2f81",
+        "2D0C2877-6AA0-5FFF-A8CB-6E7203487376"
       ]
     }
   ],
@@ -199326,8 +199356,8 @@
           "order": 0,
           "title": "Brunswick Centre",
           "caption": "Should all run down estates have a makeover?🤔 #architecture #brutalism #modernarchitecture #socialhouse #gentrification #design #xybca",
-          "latitude": 51.524321,
-          "longitude": -0.123785,
+          "latitude": 51.5240705,
+          "longitude": -0.1234925,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -199339,8 +199369,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.524321,
-      "centroidLongitude": -0.123785,
+      "centroidLatitude": 51.5240705,
+      "centroidLongitude": -0.1234925,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -266981,8 +267011,8 @@
           "order": 0,
           "title": "Smithfield Market",
           "caption": "Buildings of London - Ep 6: Smithfield Market Things I love to wake up at 5am for… London’s historic architecture 😁 This is Smithfield Market, the UKs largest meat market which has been running for over 800 years. The current building was built in the 1868, designed by Sir Horace Jones. If you’re a foodie or an architecture lover than this is the place to visit. You can get amazing meat for a fraction of the price and all the sellers are so friendly! It’s closing and relocating in 2028 so catch it while you can.",
-          "latitude": 51.51936,
-          "longitude": -0.10127,
+          "latitude": 51.5193568,
+          "longitude": -0.1012706,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -266994,8 +267024,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.51936,
-      "centroidLongitude": -0.10127,
+      "centroidLatitude": 51.5193568,
+      "centroidLongitude": -0.1012706,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -267309,8 +267339,8 @@
           "order": 0,
           "title": "The Brunswick Centre",
           "caption": "Buildings of London - Ep 8: The Brunswick Centre The Brunswick Centre was once heavily criticised for its raw concrete design, and even faced demolition. Designed by Patrick Hodgkinson, its stepped, ziggurat-like form was actually a clever response to light, space, and community living. After a major refurbishment by Levitt Bernstein, it’s now one of the most loved modernist spaces in London. Today, it’s a great example of how opinions on architecture can change over time.",
-          "latitude": 51.52382,
-          "longitude": -0.1232,
+          "latitude": 51.5240705,
+          "longitude": -0.1234925,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267322,8 +267352,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.52382,
-      "centroidLongitude": -0.1232,
+      "centroidLatitude": 51.5240705,
+      "centroidLongitude": -0.1234925,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
