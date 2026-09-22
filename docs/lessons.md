@@ -2940,3 +2940,40 @@ URL, the subject, **who the existing entry is by**, and the reason.
 truncation destroyed addresses, this destroyed URLs. **Both threw away the one
 field that could settle a later question, while keeping the parts that read
 well.**
+
+## I estimated +12% egress. It was +0.8%. (2026-09-21)
+
+Recovering 2,351 truncated captions added **897,983 characters** to the
+catalogue. Before running it I warned the owner it would cost roughly **+12%**
+on a payload that has already drawn two overage notices, and flagged that as a
+reason to think twice.
+
+Measured after the fact, at gzip level 1, which is what PostgREST uses:
+
+| | before | after | |
+|---|---|---|---|
+| raw | 15,667,186 | 16,602,669 | **+6.0%** |
+| **gzip-1** | **4,431,645** | **4,467,188** | **+0.8%** |
+
+**A 15× overestimate**, and captions are only **2.7% of the compressed payload**
+in total.
+
+🔴 **This file already warned me.** § Egress in `CLAUDE.md` says in bold that
+egress is billed on compressed bytes, that raw size *"overstates text fields
+badly"*, and that **two separate cuts were nearly decided on the raw figure**.
+I read that, quoted the compressed-vs-raw rule back in my own commit messages
+that same day, and still produced my own estimate by reasoning about character
+counts.
+
+**Why captions in particular compress so hard:** they are the most repetitive
+text in the catalogue. Hashtags recur across thousands of posts, emoji repeat,
+and the phrasing is formulaic — *"📍"*, *"best … in"*, *"you have to try"*.
+Compression eats exactly that. The fields that resist compression are the ones
+that are genuinely varied, which is why `longDescription` is 43.9% compressed
+while being 29.4% raw — it goes the *other* way.
+
+**The habit:** an estimate of payload cost is worth nothing before it is
+compressed, and the arithmetic is cheap — one `gzip.compress(payload, 1)` on a
+copy with the field removed. **Do not warn someone off a change on an
+uncompressed guess.** Had the owner weighed my 12% more heavily, a recovery
+that cost 35 KB would have been declined on a number that was never measured.
