@@ -105,6 +105,32 @@ def save_cache(data, path=CACHE):
         json.dump(data, fh, ensure_ascii=False, sort_keys=True)
 
 
+def unexcused(catalog, cache, cut=CUT):
+    """Captions sitting on the cut that the cache does NOT excuse.
+
+    🔴 WHY THIS EXISTS. `make-link-pin.py` stopped truncating on 2026-09-21,
+    and on 2026-09-22 **87 fresh captions arrived at exactly 140 characters
+    anyway** — #1054 was built from a branch cut before the fix, so the batch
+    carried the old code with it. **A pipeline fix does not reach work already
+    in flight**, and nothing noticed until a count was re-derived by hand.
+
+    A caption may sit at the cut for an honest reason — the post is deleted, or
+    the text really is that long — and those are recorded in the cache. Anything
+    else is a NEW truncation, which means some checkout is still cutting.
+
+    ⚠️ Scope: `truncated()` requires a source URL, so a caption sitting on the
+    cut with no URL is invisible here — there is nothing to re-read it from.
+    Eleven such entries exist, and the printed count says "sit at 140" rather
+    than claiming to cover every caption in the catalogue.
+    """
+    out = []
+    for e, cap, url in truncated(catalog, cut):
+        rec = cache.get(e["id"])
+        if rec is None or rec.get("status") == "ok":
+            out.append(e)
+    return out
+
+
 def selftest():
     fails = []
 
@@ -161,7 +187,21 @@ def selftest():
               {"id": "e", "sourceURL": "https://x/5", "stops": [{"caption": "ab"}]}]},
               cut=2) != [])
 
-    total = 13
+    cat2 = {"tours": [], "linkPins": [
+        {"id": "new", "sourceURL": "https://x/1", "stops": [{"caption": "x" * CUT}]},
+        {"id": "dead", "sourceURL": "https://x/2", "stops": [{"caption": "y" * CUT}]},
+    ]}
+    cache2 = {"dead": {"status": "failed"}}
+    check("🔴 a caption at the cut with NO cache record is a new truncation",
+          [e["id"] for e in unexcused(cat2, cache2)] == ["new"])
+    check("a caption the cache records as unrecoverable is excused",
+          "dead" not in [e["id"] for e in unexcused(cat2, cache2)])
+    check("🔴 a caption the cache says was RECOVERED but is still at the cut is "
+          "NOT excused — it means something re-truncated it",
+          sorted(e["id"] for e in unexcused(cat2, {"dead": {"status": "ok"},
+                                                   "new": {"status": "ok"}})) == ["dead", "new"])
+
+    total = 16
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 
@@ -175,6 +215,9 @@ def main():
     ap.add_argument("--sleep", type=float, default=0.6)
     ap.add_argument("--apply", action="store_true",
                     help="write recovered captions into the catalogue and stop")
+    ap.add_argument("--check", action="store_true",
+                    help="report captions newly sitting on the cut and exit 1 "
+                         "(offline; no fetching)")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -187,6 +230,25 @@ def main():
             catalog = json.load(fh)
         rows = truncated(catalog)
         cache = load_cache(a.cache)
+
+        if a.check:
+            bad = unexcused(catalog, cache)
+            excused = len(rows) - len(bad)
+            everything = sum(1 for e in entries(catalog)
+                             for st in (e.get("stops") or [])[:1]
+                             if len(st.get("caption") or "") == CUT)
+            print(f"{everything} captions sit at exactly {CUT} characters · "
+                  f"{everything - len(rows)} have no source URL and cannot be re-read · "
+                  f"{excused} excused by the cache · {len(bad)} NOT excused")
+            for e in bad[:20]:
+                print(f"   {(e.get('sourceAuthor') or '?')[:22]:24} "
+                      f"{(e.get('title') or '')[:44]}")
+            if bad:
+                print(f"\n🔴 {len(bad)} caption(s) newly cut at {CUT}. Something is still "
+                      f"truncating —\n   a branch cut before make-link-pin.py stopped, most "
+                      f"likely. Rebase it, then:\n   python3 scripts/refetch-captions.py "
+                      f"--limit 200 && python3 scripts/refetch-captions.py --apply")
+            return 1 if bad else 0
 
         if a.apply:
             raw = open(a.catalog, encoding="utf-8").read()

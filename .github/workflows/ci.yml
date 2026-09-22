@@ -114,6 +114,30 @@ jobs:
       # every way of breaking those produces NO finding rather than a wrong one.
       # An outlier check that silently flags nothing reads exactly like a clean
       # catalogue.
+      # 🔴 Did a batch arrive with its captions still cut at 140?
+      # make-link-pin.py stopped truncating on 2026-09-21, and on 2026-09-22
+      # EIGHTY-SEVEN fresh captions arrived cut anyway: #1054 was built from a
+      # branch taken before the fix, so the batch carried the old code with it.
+      # A pipeline fix does not reach work already in flight, and nothing
+      # noticed until a count was re-derived by hand. This fails the step so
+      # the next one is caught instead of discovered.
+      - name: Selftest the truncation guard before believing it
+        run: python3 scripts/refetch-captions.py --selftest
+      - name: Prove every guard in it can still fail
+        run: python3 scripts/mutate-refetch-captions.py
+      - name: No caption may arrive newly cut at 140 characters
+        run: |
+          # ⚠️ Exit 1 here means NEW truncation and IS a failure — unlike the
+          # reporting checks around it. Known-dead posts are excused by the
+          # cache, so a red step means some checkout is still cutting.
+          code=0
+          python3 scripts/refetch-captions.py --check --out captions-cut.txt || code=$?
+          cat captions-cut.txt
+          if [ "$code" -ne 0 ]; then
+            echo "::error::captions arrived cut at 140 — rebase the branch onto a main that has make-link-pin.py's fix, then re-run the refetch"
+            exit 1
+          fi
+
       # 🔴 The creator's own location line, checked against the pin's city.
       # Only worth running since the caption recovery: before it, 13 captions
       # carried a usable location and the check was too noisy to automate; now

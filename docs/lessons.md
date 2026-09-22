@@ -3063,3 +3063,32 @@ Cape Town and correct, Lantau is 23–31 km from Hong Kong and correct, and
 Chongqing's 360 km outlier is correct because the municipality is the size of
 Austria. **A check that keeps returning "nothing wrong" on a population you have
 already examined is doing its job**; the value is the day it stops.
+## A pipeline fix does not reach work already in flight (2026-09-22)
+
+`make-link-pin.py` stopped truncating captions at 140 characters on 2026-09-21,
+and 2,351 captions were recovered the same day, leaving 24 at the cut — all of
+them dead posts or genuinely that long.
+
+**The next day there were 111 again.** Eighty-seven were `@historicpubcrawls`
+pins from #1054, which merged that morning: the branch had been cut **before**
+the fix, so the batch carried the old code with it and re-introduced the exact
+defect that had just been repaired.
+
+🔴 **Nothing noticed.** Every check passed, the validator was clean, CI was
+green. It surfaced only because a count was being re-derived by hand for a
+handoff — which is to say, by luck.
+
+**The habit this earns:** when a fix changes what a generator *writes*, ask what
+is already in flight that will write the old thing anyway. Long-lived branches,
+another contributor's checkout, a queued batch — none of them rebase themselves.
+
+**And the durable fix is a guard, not a memo.** `refetch-captions.py --check`
+now fails CI when a caption arrives on the cut that the recovery cache does not
+excuse. Known-dead posts stay excused; a genuinely new cut turns the step red
+and names the remedy. A rule that lives in a document is a rule somebody has to
+remember; this one stops the branch.
+
+⚠️ It also states its own scope rather than implying completeness: ten captions
+sit at the cut with **no source URL**, so nothing can re-read them, and the
+output says so — `24 sit at exactly 140 · 10 have no source URL · 14 excused ·
+0 not excused`. The population adds up in the line itself.
