@@ -37,9 +37,21 @@ restored from the repo. Checked and came up empty:
 - a web search for the reels — @welldonestuff has 1,241 posts and Instagram
   offers no per-post search; the profile will not serve a scrape
 
+### Re-checked 2026-09-22 — three more routes, all empty
+
+| route | result |
+|---|---|
+| **PR #1032's retained commits** (`refs/pull/1032/head` — GitHub keeps these after the branch is deleted) | 4 commits; the first carries **exactly 54** Instagram URLs, the 54 pins that were kept. **The four were filtered out before anything was committed**, so they were never in git at all |
+| PR #1032's comments, review comments and reviews | none exist |
+| a targeted web search for the four reels | reels about those landmarks exist, but **none by `@welldonestuff`** |
+
+🔴 **So the links only ever existed in the session that built the batch.**
+That PR was opened by **`@arthuryung-gif`**, not the owner — they pasted the
+original list, and are the likeliest person to still have the four links.
+
 ## What is needed
 
-**Send the four Instagram reel links** (Calgary Central Library, Guangzhou
+**Send the four Instagram reel links** (or ask `@arthuryung-gif`, whose batch this was) (Calgary Central Library, Guangzhou
 Circle, Huajiang Grand Canyon Bridge, Three Gorges Dam) and a follow-up PR
 will pin all four alongside the existing entries — which will also make each
 of the four a two-entry **place candidate**, since the pairs sit on one point.
