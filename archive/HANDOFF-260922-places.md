@@ -382,3 +382,79 @@ WGS-84 and safe.
 **Owner-side, carried forward:** the four coordinates above · 1.1.3 *Release this
 version* · the four `@welldonestuff` reel links · the list-description clamp
 check · Stortorget part-vs-whole · 🔴 **#1019 must NOT be merged.**
+
+---
+
+# Part 4 — the owner sent four Amap links, and the board went clean
+
+Part 3 ended by saying no per-building coordinate was reachable and asking the
+owner for them. The owner sent **Amap share links**, which resolve server-side —
+`curl -L` and read the `p=` parameter out of the redirect `Location` header:
+
+```
+p = B0KG4BL0O2, 22.662834926503454, 114.36971426010129, Longmashe, Changshoucun No.40
+```
+
+The address field alone is worth the link: it confirmed the village the pin's
+description named.
+
+## 11 · Every one needed GCJ-02 → WGS-84, and the cost of skipping differed each time
+
+`scripts/gcj02.py` (new, 8/8 selftests). The inverse has no closed form, so it is
+solved by iteration; the round trip holds to **1.4e-14°**.
+
+| pin | raw Amap | converted | what pasting the raw number would have done |
+|---|---|---|---|
+| Long Ma She | 975 m from the old pin | **414 m** | left it **further** from the building than the wrong shared pin |
+| Seashore Library | 551 m | **4 m** | 🔴 **moved a pin that was already CORRECT, by 551 m** |
+| Chapel of Music | 1,684 m | 1,510 m | a 174 m error on top of a real 1.5 km fix |
+
+⚠️ **The two selftests that matter are not the round trip.** One asserts the
+offset is **real** (482–589 m across six Chinese cities) — *a transform that
+quietly did nothing would pass a round trip perfectly*. The other asserts the
+transform is the **identity outside China**, because applying it to a coordinate
+already in WGS-84 corrupts a correct pin by the same ~500 m and nothing
+downstream could tell.
+
+## 12 · 🔴 The Beidaihe pair was one wrong pin, not two
+
+Both pins sat on `39.6561544, 119.3169543`, which reads unmistakably as a
+shared village-centroid artefact — the same shape as Changshou Village.
+
+It was nothing of the kind. The library's Amap point converts to **4 m** from
+it. So that coordinate **was the Seashore Library's correct position**, and the
+defect was that **`Chapel of Music` had been given it** — the chapel was
+**1,510 m** out.
+
+🔴 **The shape of a defect is not its cause.** "Two pins share a point" has at
+least two causes that look identical from the catalogue, and the fixes are
+opposite: one moves both, the other moves one.
+
+⚠️ **The near-miss in the middle.** Once the library was known correct, applying
+its 4 m refinement alone was tempting. It would have dropped the pair out of
+`EXACT · ASK` — visible, addressed to the owner — into the 81-row `TIGHT` list,
+where it would not have been seen again. **A 4 m improvement is not worth hiding
+a 1.5 km fault.** Both were set together.
+
+⚠️ **And the locality check went mute.** It settled Long Ma She decisively
+(converted → `长守 Changshou`, matching Amap's own address; raw → `三河 Sanhe`, a
+different village). For the chapel, OSM returned bare `Changli County` for
+**both** points and could not discriminate. What carried that conversion instead
+was the library case — the same converter landing within 4 m of an
+independently-sourced coordinate already in the catalogue, which is an external
+check at that exact location. **Say when a check has nothing to say, rather than
+counting it as support.**
+
+## State at the end of the session
+
+| | |
+|---|---|
+| places | **421** |
+| `check-place-candidates.py` | **exit 0** — `NAME — none` · `EXACT — none. Every coincident group is already a place.` **First clean board.** |
+| `validate-tours-mirror.py` | exit 0, control clean |
+| `spine-match.py` | exit 0 — DISAGREES 0 unexamined, STALE 0 |
+| `status/owner/china-pin-coordinates.md` | **cleared** (`git rm`) — all four resolved |
+
+**Owner-side, carried forward:** 1.1.3 *Release this version* · the four
+`@welldonestuff` reel links · the list-description clamp check · Stortorget
+part-vs-whole · 🔴 **#1019 must NOT be merged.**
