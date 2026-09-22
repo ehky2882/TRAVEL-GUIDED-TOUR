@@ -137,8 +137,16 @@ def propose_proven(catalog, *, max_move_m=MAX_MOVE_M):
     entry's name written in the other's caption. ⚠️ A coincident coordinate
     ALONE is not proof: a centroid dump puts unrelated pins on one point.
 
-    ⚠️ Members do not move — they are already on the same point — so the
-    `--max-move` guard is inert here by construction, not by omission.
+    🔴 MEMBERS CAN MOVE, and an earlier version of this docstring said they
+    could not. `proven_groups` bounds the search at `TIGHT_M` (25 m), not at
+    0 m, so a proven group may span up to that — and minting pulls every member
+    onto the anchor. On 2026-09-22 eight groups were minted after the proposal
+    reported `move<=0 m` for all of them; two entries moved, by 19.5 m and
+    11.6 m. Small, and the groups were right, but the figure the decision was
+    made on was hardcoded rather than measured.
+
+    `max_move_m` is now computed from the members, so `--max-move` is a real
+    guard here and the printed number is the true one.
     """
     claimed = {t for p in (catalog.get("places") or []) for t in p.get("tourIds", [])}
     # ⚠️ A tourism-board handle is not a venue handle — see
@@ -158,7 +166,10 @@ def propose_proven(catalog, *, max_move_m=MAX_MOVE_M):
             "signal": "PROVEN", "name": place_name(entries_only), "titles": titles,
             "city": next((e.get("city") for e in entries_only if e.get("city")), None),
             "lat": point[0], "lon": point[1],
-            "members": [e["id"] for e in entries_only], "max_move_m": 0.0,
+            "members": [e["id"] for e in entries_only],
+            # 🔴 Measured, not assumed — see the note above.
+            "max_move_m": max((haversine(_sm.entry_marker(e), point)
+                               for e in entries_only), default=0.0),
         }
         if any(e["id"] in claimed for e in entries_only):
             item["why"] = "a member already belongs to a place"
@@ -449,6 +460,15 @@ def selftest():
           propose(cat, stale_cache, {})[0] == [])
     check("the proposal carries both members", len(make[0]["members"]) == 2)
 
+    # 🔴 A proven group may span up to TIGHT_M, so the reported move must be
+    # the real one. This was hardcoded to 0.0 and two entries moved anyway.
+    spread = {"tours": [entry("p", "Same Pub", 51.50000, -0.12000),
+                        entry("q", "Same Pub", 51.50015, -0.12000)],
+              "linkPins": [], "places": []}
+    spread_make, _ = propose_proven(spread)
+    check("🔴 a proven group reports the distance it will actually move a member",
+          spread_make and spread_make[0]["max_move_m"] > 10.0)
+
     minted = apply(cat, make)
     check("apply mints exactly one place", minted == 1 and len(cat["places"]) == 1)
     moved = [s["latitude"] for e in cat["tours"] for s in e["stops"]]
@@ -497,7 +517,11 @@ def selftest():
 
     check("a shared venue handle is proof",
           made and "unapizzanapoletana" in made[0]["proof"])
-    check("a PROVEN group moves nobody", made and made[0]["max_move_m"] == 0.0)
+    # 🔴 This used to assert `max_move_m == 0.0` and so could never have caught
+    # the hardcoded value it was reading. The Una Pizza fixture's members sit
+    # 12.4 m apart, and minting really does pull one onto the other.
+    check("🔴 a PROVEN group reports the move it will actually make",
+          made and 5.0 < made[0]["max_move_m"] < 25.0)
 
     # 🔴 The creator's own handle must never be the proof, or every pin by one
     # food reviewer would pair with every other.
@@ -613,6 +637,11 @@ def main():
     ap.add_argument("--cache", default=CACHE)
     ap.add_argument("--features", default=FEATURES)
     ap.add_argument("--max-move", type=float, default=MAX_MOVE_M)
+    ap.add_argument("--only", choices=["PROVEN", "GAZETTEER"],
+                    help="mint only this signal. 🔴 PROVEN groups are already "
+                         "coincident so minting moves nobody; GAZETTEER MOVES "
+                         "members onto a gazetteer point, which is a coordinate "
+                         "change and a separate decision.")
     ap.add_argument("--apply", action="store_true",
                     help="write the places into the catalogue (default: propose only)")
     ap.add_argument("--selftest", action="store_true")
@@ -644,6 +673,11 @@ def main():
 
         make, extra = dedupe_across_signals(make_a + make_b)
         skip = list(skip_a) + list(skip_b) + extra
+
+        if a.only:
+            before = len(make)
+            make = [i for i in make if i["signal"] == a.only]
+            print(f"--only {a.only}: {len(make)} of {before} proposal(s) kept\n")
 
         by_signal = collections.Counter(i["signal"] for i in make)
         print(f"{len(make)} place(s) to create "

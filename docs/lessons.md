@@ -3181,3 +3181,40 @@ several creators' handles quoted in *other* creators' captions.
 ⚠️ Both defects were found by **using** the tool, not by reading it. The scan is
 rule 8c and it is meant to run after every batch; it had not, and two batches
 had landed.
+
+## The test asserted the hardcoded value, so it could never catch it (2026-09-22)
+
+`make-places.py` reported every proven group as **`move<=0 m`**, and its
+docstring said so in words: *"Members do not move — they are already on the same
+point — so the `--max-move` guard is inert here by construction, not by
+omission."*
+
+I chose to mint only those groups **because of that number**. Eight places were
+created, and two entries moved — by **19.5 m** and **11.6 m**.
+
+🔴 **The figure was hardcoded.** `propose_proven` wrote `"max_move_m": 0.0` as a
+literal, while `proven_groups` bounds its search at `TIGHT_M` = **25 m**, not at
+0. A proven group may legitimately span up to that, and minting pulls every
+member onto the anchor. The docstring asserted a property the code did not have.
+
+**And the selftest asserted the same literal:**
+
+```python
+check("a PROVEN group moves nobody", made and made[0]["max_move_m"] == 0.0)
+```
+
+It read the hardcoded value and confirmed it. A test that checks a constant
+against itself **cannot fail**, so this one had been passing while describing
+the wrong behaviour — including on the fixture whose own members sit 12.4 m
+apart, which the same file's docstring documents.
+
+**The fix:** `max_move_m` is computed from the members, the docstring says
+members *can* move and by how much, and the selftest asserts the fixture's real
+span (`5 m < move < 25 m`) instead of a literal.
+
+⚠️ The outcome here was harmless — the groups were right and 19 m is nothing.
+**What was not harmless is that a decision was made on a number nobody had
+measured**, which is the third time in two days: the +12% egress estimate, the
+`535 → 943` caption figure, and now this. The pattern is not carelessness about
+arithmetic. It is **trusting a number because it was printed**, when printing it
+cost nothing and measuring it was never done.

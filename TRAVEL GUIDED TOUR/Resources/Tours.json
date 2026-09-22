@@ -106081,6 +106081,127 @@
         "9F2BCD06-44A5-55F6-8982-BCF63A0A785D",
         "28EBDF0F-37C2-5A90-AD84-8E6B591F1911"
       ]
+    },
+    {
+      "id": "bd336b07-f148-5786-9e95-5560ac0559d2",
+      "name": "Intempo",
+      "description": null,
+      "latitude": 38.538045,
+      "longitude": -0.154645,
+      "city": "Benidorm",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0FA06627-6620-50CC-B0F5-A8547F477773",
+        "0590E159-CA26-562C-AEB9-220A6C795FA4"
+      ]
+    },
+    {
+      "id": "6592b71a-dd3c-5137-8c02-bb9c1bf53caa",
+      "name": "National Stadium, Beijing",
+      "description": null,
+      "latitude": 39.9914041,
+      "longitude": 116.3902864,
+      "city": "Beijing",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6F2E7F65-3E80-5402-A112-38448E1CC499",
+        "0613FB3A-6E47-5EA3-86F4-ABE7A92344E2"
+      ]
+    },
+    {
+      "id": "a4b0326c-847b-5145-beec-bc08fa3fca77",
+      "name": "Fraunces Tavern",
+      "description": null,
+      "latitude": 40.70334,
+      "longitude": -74.01122,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "63c7e6d8-30a9-482c-b2eb-5c2f640e1bb2",
+        "A9ECA2B2-2EA8-516C-83C0-67FA2273FB09"
+      ]
+    },
+    {
+      "id": "fd73b341-25f4-5bf5-b779-944ad14402fa",
+      "name": "Casa de Serralves",
+      "description": null,
+      "latitude": 41.1596098,
+      "longitude": -8.6564342,
+      "city": "Porto",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "049CCC3D-2523-5454-9C8D-3BE22A8901F1",
+        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70",
+        "8FF944C3-7D87-5977-A253-AEB4AD2048BA"
+      ]
+    },
+    {
+      "id": "999033bf-653a-57a4-ba12-cd28b4f2a5f6",
+      "name": "The Marquis",
+      "description": null,
+      "latitude": 51.5097587,
+      "longitude": -0.1257119,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AC4F5565-3FB9-57E5-ACD3-CAB807F78ED2",
+        "6C01CCDD-430C-5C31-902A-5FC6390727C2"
+      ]
+    },
+    {
+      "id": "2046c1eb-8f44-5abf-a0ab-75e92aa0b97c",
+      "name": "Ye Olde Cheshire Cheese",
+      "description": null,
+      "latitude": 51.5143424,
+      "longitude": -0.1071833,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "CCA9B4A7-7CCF-5C93-B474-D0DCB637F3D2",
+        "14BE9567-E229-53DF-8B32-394214FD623E"
+      ]
+    },
+    {
+      "id": "13e470b7-ae52-5287-8ca6-35a26f20a817",
+      "name": "The Warrington",
+      "description": null,
+      "latitude": 51.5259289,
+      "longitude": -0.183969,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "58C97163-EBB2-5ECC-A36E-BE72F5B46357",
+        "8AE479A2-A23A-5D6D-BDE8-82021ABDFA63"
+      ]
+    },
+    {
+      "id": "3e87eed7-281a-5534-9bbd-6bee3c9da818",
+      "name": "Concrete Matter",
+      "description": null,
+      "latitude": 52.37229,
+      "longitude": 4.88763,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "DD6693C3-CBF1-5CDE-843E-05001F3600D0",
+        "B464D765-F1D6-5D54-84DB-09CD9B467242"
+      ]
     }
   ],
   "linkPins": [
@@ -258686,8 +258807,8 @@
           "order": 0,
           "title": "In Tempo Building",
           "caption": "Europe’s Most Useless Skyscraper: The Intempo Building",
-          "latitude": 38.5382204,
-          "longitude": -0.1546347,
+          "latitude": 38.538045,
+          "longitude": -0.154645,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -258699,8 +258820,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 38.5382204,
-      "centroidLongitude": -0.1546347,
+      "centroidLatitude": 38.538045,
+      "centroidLongitude": -0.154645,
       "city": "Benidorm",
       "country": "Spain",
       "relatedTourIds": [
@@ -280303,8 +280424,8 @@
           "order": 0,
           "title": "Fraunces Tavern",
           "caption": "🔔 **Uncover the Secrets of NYC's Oldest Tavern!** 🦅 Ever wondered how a single bar could shape a nation? Welcome to Fraunces Tavern, the birthplace of American independence! Located at 54 Pearl Street, this bar was the go-to spot for the Founding Fathers, where revolutionary ideas and ales flowed freely. Picture General Washington delivering his emotional farewell to his officers here in 1783—talk about a historic moment! I paired my visit with a Wolfhound Nitro Stout from Flagship Brewing Company. The smooth, velvety brew matches the tavern's rich history perfectly. Whether you're a history lover or just after a unique drink, Fraunces Tavern is a must-visit! 🦅 Fraunces Tavern ✅ 10 of 10 📍 54 Pearl Street, NYC 🏷️ @frauncestavern 🍻 @flagshipbrewery #FrauncesTavern #NYCHistory #CraftBeer",
-          "latitude": 40.70339,
-          "longitude": -74.01134,
+          "latitude": 40.70334,
+          "longitude": -74.01122,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -280316,8 +280437,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.70339,
-      "centroidLongitude": -74.01134,
+      "centroidLatitude": 40.70334,
+      "centroidLongitude": -74.01122,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
