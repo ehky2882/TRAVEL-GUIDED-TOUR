@@ -89,7 +89,33 @@ swift scripts/validate-tours.swift          # or validate-tours-mirror.py off-Ma
 python3 scripts/check-image-duplicates.py --pins
 
 # 5. Upload the heroes in /tmp/heroes to gh-pages under images/, then commit.
+# 6. Places — a new pin often lands on a site the catalogue already has
+python3 scripts/check-place-candidates.py --out /tmp/candidates.txt
+python3 scripts/join-places.py --max-move 100 --out /tmp/joins.txt
 ```
+
+🔴 **Step 6 runs on EVERY batch, whatever the sender said — and it is the one
+most often skipped.** Nobody sending links will tell you which pins are places
+or which belong to an existing one; they send links, not place instructions.
+Finding those is this step's job, not theirs, so never wait to be told. A batch
+routinely lands a second entry on somewhere that already exists — the owner has
+found these on the map himself, three times. The two reports answer different
+questions, and you need both:
+
+- `check-place-candidates.py` — **new** pins that belong together (the same
+  name nearby, or the exact same point). Read the **NAME** and **EXACT**
+  sections.
+- `join-places.py` — new pins that belong to a place that **already exists**.
+  The first report cannot see these: once a place exists, its site looks
+  finished.
+
+**Do not create places or apply joins yourself.** List each one for Edward in
+plain English — *"your pin X is the same building as the existing place Y, 30 m
+away — join them?"* — and he decides. A place moves every member onto one
+point, so it is his call, and `docs/places.md` holds the rules he has already
+set. CI prints both reports on the PR too, but a report nobody reads decides
+nothing.
+
 
 `--check` on step 3 reports what would change and writes nothing.
 
