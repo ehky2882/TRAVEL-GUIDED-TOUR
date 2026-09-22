@@ -103293,7 +103293,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "17BE3EA0-C3E6-4CE9-87C5-E9F2C07CC2BD",
-        "ECA98BE2-712F-5AC2-9918-47EF398FD625"
+        "ECA98BE2-712F-5AC2-9918-47EF398FD625",
+        "1EFC80D6-5E8B-5847-89E0-22A77F78ECCE"
       ]
     },
     {
@@ -104335,7 +104336,8 @@
       "tourIds": [
         "6192A9EC-C601-5145-A600-5F7E8FF6940E",
         "75e125e5-577d-5c28-a579-9a521028b0d7",
-        "85F0B89A-FDE7-5DEA-BA0A-B121B8AA0620"
+        "85F0B89A-FDE7-5DEA-BA0A-B121B8AA0620",
+        "57922292-0EC9-5B03-AF97-3356D2988F08"
       ]
     },
     {
@@ -106201,6 +106203,21 @@
       "tourIds": [
         "DD6693C3-CBF1-5CDE-843E-05001F3600D0",
         "B464D765-F1D6-5D54-84DB-09CD9B467242"
+      ]
+    },
+    {
+      "id": "2720e648-9b50-5c33-80b2-bc522eb95edc",
+      "name": "Franklin D. Roosevelt Four Freedoms Park",
+      "description": "Louis Kahn's memorial to Franklin D. Roosevelt at the southern tip of Roosevelt Island — a granite wedge of lime trees narrowing to an open room above the East River, named for the four freedoms of his 1941 address. Kahn finished the design in 1974 and died before it was built; New York shelved it for thirty-five years and opened it in 2012. It is signposted as the FDR Four Freedoms State Park and known simply as Four Freedoms Park, so the three names describe one site.",
+      "latitude": 40.750659,
+      "longitude": -73.960446,
+      "city": "New York",
+      "address": "1 FDR Four Freedoms Park, Roosevelt Island, New York",
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "434932e4-9c75-452e-a83b-5ef3ae0cb995",
+        "1CDA55C8-4CD3-5735-B5AE-CAA77AA55303"
       ]
     }
   ],
@@ -178725,8 +178742,8 @@
           "order": 0,
           "title": "The FDR Monument on Roosevelt Island",
           "caption": "🫡 There’s a large monument in NYC’s Roosevelt Island to the American President that got us through both the Great Depression and World War 2. Here’s Four Freedoms State Park and the story of Franklin Delano Roosevelt. #LearnOnTikTokContest #EducatorAward #historytok",
-          "latitude": 40.7505625,
-          "longitude": -73.9605625,
+          "latitude": 40.750659,
+          "longitude": -73.960446,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -178738,8 +178755,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7505625,
-      "centroidLongitude": -73.9605625,
+      "centroidLatitude": 40.750659,
+      "centroidLongitude": -73.960446,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [

@@ -3218,3 +3218,87 @@ measured**, which is the third time in two days: the +12% egress estimate, the
 `535 → 943` caption figure, and now this. The pattern is not carelessness about
 arithmetic. It is **trusting a number because it was printed**, when printing it
 cost nothing and measuring it was never done.
+
+## The declined record was doing a guard's job (2026-09-22)
+
+`join-places.py` adds an entry to a place that already exists. It fires on two
+signals, either sufficient: the entry's **title** equals the place's name, or the
+entry's **caption** names the place. The caption tier was built for a real case —
+a pin titled with its own caption, `@centrepompidou is the coolest museum ever`,
+which no title test could ever see.
+
+Asked to join one orphan entry to **Walden 7**, the tool proposed three:
+
+```
+ 0.0m  Walden 7       -> Walden 7 (Sant Just Desvern)     ✅
+ 0.0m  Stonewall Inn  -> The Stonewall Inn (New York)     ✅
+18.2m  Dead Rabbit    -> Fraunces Tavern (New York)       🔴
+```
+
+The Dead Rabbit is a different bar at a different address. Its description says
+*"in the historic Fraunces Tavern **district**"* — a **locator**, and
+`docs/places.md` Rule 3 is that **co-location is not identity**. A join moves the
+member onto the place's coordinate and writes it into `tourIds`, so applying it
+would have merged two real venues into one.
+
+### The part that matters is WHY it was the only one
+
+Instrumenting the tier on the live catalogue: it matched **seven** rows. One was
+right. Four others — the Channel Gardens at Rockefeller Center, the Cosmati
+Pavement and the Shrine of Edward the Confessor at Westminster Abbey, the Blue
+Ribbon Garden at Walt Disney Concert Hall — were refused, every one of them by
+`declined_pairs()`, the record of ~60 decisions **the owner had already made one
+at a time**. Every one is a part-vs-whole, which `docs/places.md` leaves to the
+owner.
+
+So the tier's apparent accuracy was not a property of the tier. It was the
+owner's accumulated rulings, re-applied. A pairing nobody had happened to decline
+yet went straight through, and the first new one did.
+
+🔴 **A refusal list is a record of judgements already made; it cannot refuse a
+case nobody has judged.** When a check's clean record rests on such a list, its
+true precision is whatever it does on the rows the list has never seen — here,
+one in one wrong. Measure a tier on rows the declined record does NOT cover,
+because those are the only ones it is actually deciding.
+
+### The guard that was missing
+
+The caption tier is sound exactly when the entry has **no name of its own to
+contradict the match**. So: strip the place's name out of the entry's title, and
+if a name is left over, the entry is about something else.
+
+| title | place | left over | |
+|---|---|---|---|
+| `Stonewall Inn` | The Stonewall Inn | — | join |
+| `@centrepompidou is the coolest museum ever` | Centre Pompidou | filler only | join |
+| `Dead Rabbit` | Fraunces Tavern | **Dead** | refuse |
+| `The Cosmati Pavement` | Westminster Abbey | **Cosmati** | refuse |
+| `Bar Luce at Fondazione Prada` | Fondazione Prada | **Luce** | refuse |
+| `Municipal Library of Viana do Castelo` | Viana do Castelo | **Municipal** | refuse |
+
+The last two are cases the file's own docstrings already record as having gone
+wrong, and the guard now refuses them structurally rather than by memory.
+
+⚠️ **Editing the predicate broke three existing mutants' anchors.** A mutation
+harness patches source by quoting it, so changing the line a mutant quotes stops
+that mutant from applying — and a mutant that cannot apply proves nothing about
+the guard it was written for. All fifteen `scripts/mutate-*.py` already treat a
+non-matching anchor as `missed`, so the run went red and named the three. **That
+is the design worth keeping: a fixture that cannot run must fail, never pass.**
+Re-anchor the mutants in the same commit as the edit; re-running until the SKIPs
+are gone is the check.
+
+### A fourth "true of the wrong population", caught in the act
+
+Reading that skip report, I grepped for `missed += 1` on the SKIP *lines* and
+concluded 13 of the 15 harnesses did not count a SKIP as a failure — a CI-wide
+hole. The increment is simply on the **next** line. Every harness was already
+correct, and the write-up above said the opposite until re-checked with an
+`awk` that read both lines.
+
+🔴 Three times this session a measurement was **true of something other than what
+it was reported about** (the +12% egress, the 535→943 captions, `move<=0 m`).
+This was the fourth, and the tell was the same each time: **a number that makes a
+whole population look broken deserves one confirming probe before it is written
+down.** The probe costs a minute. The claim, unchecked, costs the reader's trust
+in every other number beside it.
