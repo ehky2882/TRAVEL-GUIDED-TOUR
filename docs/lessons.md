@@ -3463,3 +3463,43 @@ was tempting to apply its 4 m refinement immediately. That would have dropped
 the pair from `EXACT · ASK` — visible, addressed to the owner — into the 81-row
 `TIGHT` list, where it would not have been seen again. **A 4 m improvement is
 not worth hiding a 1.5 km fault.** Both were set together instead.
+
+## A 25 m search radius hid nine plain joins, and the unjoined pin was sometimes the right one (2026-09-22)
+
+With the NAME and EXACT candidate tiers both clean, reading the NEAR tier through
+`check-place-candidates.py`'s own `scan()` found **35 "join-shaped" rows**: an
+entry 26–418 m from an existing place on the same subject, not a member of it.
+`join-places.py` searches within **25 m** by default, so every one of them was
+invisible to it indefinitely. It is the Walden 7 hole at a larger radius.
+
+Run at `--max-move 100` with every guard still on, it proposed **six**: exact-name
+joins at 27–44 m (Kaktus Towers, Vessel, Guggenheim, Marina City, Trellick Tower,
+The Oculus). The owner added three the guards had conservatively skipped. The
+other ~26 rows were correctly left alone: part-vs-whole, two-building tours,
+shops inside a district, and pairs the owner had already declined.
+
+### 🔴 Joining is not always "move the stray onto the place"
+
+**MahaNakhon.** The unjoined `@pasttworld` pin was **0 m from Wikidata's** King
+Power Mahanakhon, and the existing place was 26 m off. Joining in the usual
+direction would have moved the one accurate coordinate onto a less accurate
+point. The place was **re-anchored onto the pin** instead, and its two existing
+members moved 26 m. **Before joining, ask which coordinate an independent source
+supports. The one being joined may be it.**
+
+### 🔴 An Atlas tour's stop is where the audio triggers, so read it before moving it
+
+A link pin's coordinate marks a subject. **An Atlas tour's stop coordinate is
+also the geofence trigger**, and its caption may name a deliberate viewpoint.
+
+* **Kyoto ICC** (moved 96 m). The caption describes the building and gives no
+  standing instruction, and the point was 95 m from Wikidata's building. It was
+  off; the move is a correction.
+* **CAM** (moved 62 m, in #1066). The caption says *"stand… by the long curving
+  canopy that sweeps from the museum out into the garden"*, which is a specific
+  viewpoint. It was moved onto OSM's museum node **without reading that first**.
+  Which point is nearer the canopy cannot be told from here. **Flagged as
+  unverified, and not claimed as fine.**
+
+**Check the stop caption of any Atlas tour before a place moves it.** A
+subject-accurate point can still be the wrong place to trigger a walk.
