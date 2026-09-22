@@ -1,0 +1,3 @@
+# Nine joins from the NEAR tier on the owner's go: join-places.py at --max-move 100 applied six exact-name joins (Kaktus Towers, Vessel, Guggenheim, Marina City, Trellick Tower, The Oculus; 27-44 m) and three by hand — Yankee Stadium (31 m), Kyoto ICC (the Atlas tour, 96 m off Wikidata's building) and MahaNakhon, where the unjoined pin was the Wikidata-accurate one so the PLACE was re-anchored onto it (members moved 26 m). NEAR 55 -> 36; join-places at 100 m finds nothing left. Flagged: CAM's Atlas tour (moved 62 m in #1066) names a canopy viewpoint in its caption that was not checked before the move.
+
+_2026-09-22 19:15 UTC · branch `scale-pinned-tours-automation-db`_
