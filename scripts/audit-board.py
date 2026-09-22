@@ -261,6 +261,10 @@ ROWS = [
     # population was 13 rows and too noisy to automate. Tests the LOCALITY, not
     # the distance, per rule 8d: an address-only geocode would have moved the
     # correct Cube House pin 1.4 km.
+    # 🔴 A class created by FIXING something: the pipeline stopped truncating,
+    # and a branch cut before the fix carried the old code into main anyway.
+    ("Caption arrives newly cut at 140 chars", "refetch-captions.py --check", "CI", None,
+     "unexcused cuts — any count means a checkout is still truncating"),
     ("Caption names a city the pin disagrees with", "check-caption-address.py", "CI", None,
      "disagreements — a question; adjacent towns and street names dominate"),
     ("Coordinate implausible for its city", "check-coordinates.py", "by hand, on a drop", None,

@@ -170,8 +170,13 @@ def disagreements(catalog):
         city = (e.get("city") or "").strip()
         if not stops or not city:
             continue
-        text = tail(stops[0].get("caption") or "")
-        if not text:
+        # 🔴 BOTH fields. The pipeline truncated the stop's `caption` at 140
+        # characters but never `longDescription`, which carried the full text
+        # all along — 913 entries had a location marker there while only 535
+        # had one in the caption. A check reading the caption alone would have
+        # been blind to 378 entries whose address the catalogue already held.
+        text = tail(stops[0].get("caption") or "") + " " + tail(e.get("longDescription") or "")
+        if not text.strip():
             continue
         named = cities_named(text, gaz)
         if not named:
@@ -272,6 +277,14 @@ def selftest():
     far["linkPins"][1]["stops"][0]["latitude"] = 55.0
     check("🔴 the same name far away IS a finding",
           [r["entry"]["id"] for r in disagreements(far)[0]] == ["a"])
+    # 🔴 The caption was truncated for years; longDescription was not. A check
+    # that reads only the caption misses every address the catalogue already
+    # held in the other field.
+    check("🔴 a location marker in longDescription alone is still read",
+          [r["entry"]["id"] for r in disagreements({"tours": [], "linkPins": [
+              dict(pin("ld", "Miami", "no marker here"), longDescription="lovely 📍 Paris"),
+              pin("pa3", "Paris", "x")]})[0]] == ["ld"])
+
     check("🔴 a city word inside the entry's OWN TITLE is part of the venue name, "
           "not a location claim",
           disagreements({"tours": [], "linkPins": [
@@ -289,7 +302,7 @@ def selftest():
           "inside ordinary words",
           known_cities({"tours": [], "linkPins": [pin("s", "Hue", "x")]}) == {})
 
-    total = 22
+    total = 23
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — {total - len(fails)}/{total}")
     return 1 if fails else 0
 

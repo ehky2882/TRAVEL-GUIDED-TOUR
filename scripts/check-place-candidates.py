@@ -48,6 +48,7 @@ Park are 48 m apart and were deliberately left separate in #541 — a mountain
 and a funfair are two subjects. Read them; do not batch-approve them.
 """
 
+import collections
 import argparse
 import io
 import json
@@ -216,7 +217,38 @@ def venue_handles(tour):
     return {h for h in found if h and h != creator}
 
 
-def proven_same_venue(members):
+def ubiquitous_handles(entries_in, min_places=4):
+    """Handles that turn up at MANY different places — not venue handles.
+
+    🔴 WHY. `venue_handles` already drops the creator's own handle, or every
+    pair of pins by one food reviewer would look like one venue. It does not
+    drop a TOURISM BOARD, and on 2026-09-22 that nearly minted a place merging
+    **The Last Drop** and **Biddy Mulligan's** — two different Grassmarket pubs
+    24 m apart, "proven" one venue because both captions tag `@visitscotland`.
+
+    `docs/places.md` states the rule this breaks: **co-location is not
+    identity.** A handle is evidence of a venue only if it belongs to one, and
+    that is measurable from the catalogue — count the distinct points a handle
+    appears at. A real venue handle appears at one.
+    """
+    seen = collections.defaultdict(set)
+    for item in entries_in:
+        # ⚠️ `entries()` yields (kind, entry) pairs; callers elsewhere pass bare
+        # entries. Accept both rather than making the caller remember which.
+        entry = item[1] if isinstance(item, tuple) else item
+        at = marker(entry)
+        if at is None:
+            stops = entry.get("stops") or []
+            at = (stops[0]["latitude"], stops[0]["longitude"]) if stops else None
+        if at is None:
+            continue
+        key = (round(at[0], 4), round(at[1], 4))
+        for handle in venue_handles(entry):
+            seen[handle].add(key)
+    return {h for h, points in seen.items() if len(points) >= min_places}
+
+
+def proven_same_venue(members, ubiquitous=frozenset()):
     """Is a coincident group provably ONE venue, with no judgement needed?
 
     🔴 THIS IS THE LINE BETWEEN "ACT" AND "ASK", so it is deliberately narrow.
@@ -255,7 +287,9 @@ def proven_same_venue(members):
     if len(names) == 1:
         return True, "identical name"
 
-    handle_sets = [venue_handles(t) for t in tours]
+    # ⚠️ A handle that appears at many different points is a tourism board or a
+    # city account, not a venue — see `ubiquitous_handles`.
+    handle_sets = [venue_handles(t) - set(ubiquitous) for t in tours]
 
     # A name can BE the handle: "Mark's Off Madison" is @marksoffmadison, so an
     # entry that carries the plain name and one that carries only the handle
@@ -426,8 +460,9 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
         # line carries a second, independent proof that it is one venue; the
         # rest is a coordinate and nothing else, which a centroid dump also is.
         proven, unproven = [], []
+        everywhere = ubiquitous_handles(entries(catalog))
         for coord, members in exact:
-            ok, why = proven_same_venue(members)
+            ok, why = proven_same_venue(members, everywhere)
             (proven if ok else unproven).append((coord, members, why))
 
         if proven:
@@ -547,6 +582,15 @@ def selftest():
     ok, why = proven_same_venue([pin("a", "Pecking House"),
                                  pin("b", "the fried chicken from Pecking House is unreal")])
     check("one entry named inside the other's caption proves it", ok, True)
+
+    # 🔴 Two different pubs, 24 m apart, both tagging a tourism board.
+    last_drop = pin("a", "The Last Drop @visitscotland", author="@historicpubcrawls")
+    biddy = pin("b", "Biddy Mulligan's @visitscotland", author="@historicpubcrawls")
+    ok, why = proven_same_venue([last_drop, biddy])
+    check("⚠️ without the guard a shared tourism handle reads as proof", ok, True)
+    ok, _ = proven_same_venue([last_drop, biddy], {"visitscotland"})
+    check("🔴 a handle that appears at MANY places is not proof of one venue",
+          ok, False)
 
     ok, _ = proven_same_venue([pin("a", "Round Swamp Farm"), pin("b", "Round Swamp Farm")])
     check("identical names prove it", ok, True)

@@ -3017,3 +3017,204 @@ city.
 means a caption naming a city the catalogue has never heard of is invisible by
 construction. That cost is stated in a selftest rather than left to be
 discovered.
+
+## The creator's caption can be wrong too (2026-09-22)
+
+A whole day of work rested on one premise: **the creator's own stated location is
+the strongest coordinate evidence this project gets.** It settled The Grapes,
+it settled *Modern Coffee House*, it settled *Sun Tower*, and recovering 2,351
+truncated captions was justified almost entirely by it.
+
+Here is the counter-case, found on the second pass over the city-outlier flags.
+
+**Rock Pools at Tai Long, Sai Kung** — 24.7 km from Hong Kong's centre, and its
+title and caption name *different places*:
+
+| | |
+|---|---|
+| title | Rock Pools at **Tai Long, Sai Kung** |
+| caption | *"Cliff Jumping at Rock pools in Hong Kong? 📍**Sai Wan Ho** Rock Pools"* |
+| our point reverse-geocodes to | **下鹿湖, Sheung Luk Wu, Sai Kung District** |
+
+**Sai Wan Ho is 17 km away, an urban MTR district on Hong Kong Island with no
+rock pools and nowhere to cliff-jump.** Sheung Luk Stream in Sai Kung is exactly
+where people go to do it. The creator wrote *Sai Wan **Ho*** for *Sai Wan* — one
+syllable, two entirely different places. **The pin is right and the caption is
+wrong.**
+
+🔴 **So the rule is not "trust the caption" — it is "the caption is evidence,
+and evidence gets weighed."** What settled this was the same thing that settled
+Sun Tower and the Cadore church: asking what is actually AT the point, and
+reading the subject. A place that cannot have cliff-jumping is not where you
+went cliff-jumping, whatever the caption says.
+
+⚠️ Note the shape it shares with the Barker Road extractor error and the *Great
+Notley* geocode: **a near-miss name is the dangerous kind.** *Sai Wan* / *Sai Wan
+Ho*, *Binhai Road* / *Haibin Road*, *Great Court* / *Great Notley*. A wrong
+answer that looks nothing like the right one gets caught immediately; one that
+differs by a syllable does not.
+
+### And the second pass's actual yield
+
+**79 flags read against full captions, and not one coordinate error.** The first
+pass read them with 140-character captions, so this was genuinely new evidence
+rather than a re-read — and the answer was still that Cape Point is 48 km from
+Cape Town and correct, Lantau is 23–31 km from Hong Kong and correct, and
+Chongqing's 360 km outlier is correct because the municipality is the size of
+Austria. **A check that keeps returning "nothing wrong" on a population you have
+already examined is doing its job**; the value is the day it stops.
+## A pipeline fix does not reach work already in flight (2026-09-22)
+
+`make-link-pin.py` stopped truncating captions at 140 characters on 2026-09-21,
+and 2,351 captions were recovered the same day, leaving 24 at the cut — all of
+them dead posts or genuinely that long.
+
+**The next day there were 111 again.** Eighty-seven were `@historicpubcrawls`
+pins from #1054, which merged that morning: the branch had been cut **before**
+the fix, so the batch carried the old code with it and re-introduced the exact
+defect that had just been repaired.
+
+🔴 **Nothing noticed.** Every check passed, the validator was clean, CI was
+green. It surfaced only because a count was being re-derived by hand for a
+handoff — which is to say, by luck.
+
+**The habit this earns:** when a fix changes what a generator *writes*, ask what
+is already in flight that will write the old thing anyway. Long-lived branches,
+another contributor's checkout, a queued batch — none of them rebase themselves.
+
+**And the durable fix is a guard, not a memo.** `refetch-captions.py --check`
+now fails CI when a caption arrives on the cut that the recovery cache does not
+excuse. Known-dead posts stay excused; a genuinely new cut turns the step red
+and names the remedy. A rule that lives in a document is a rule somebody has to
+remember; this one stops the branch.
+
+⚠️ It also states its own scope rather than implying completeness: ten captions
+sit at the cut with **no source URL**, so nothing can re-read them, and the
+output says so — `24 sit at exactly 140 · 10 have no source URL · 14 excused ·
+0 not excused`. The population adds up in the line itself.
+
+## The same field was full the whole time (2026-09-22)
+
+I recovered 2,351 truncated captions and reported the win as **"captions
+carrying a 📍 went 535 → 943 — a 70% larger evidence base."**
+
+Then I went to check whether the recovery had helped a *different* check, and
+found this:
+
+| | caption | longDescription | **either** |
+|---|---|---|---|
+| before the recovery | 535 | **913** | **913** |
+| after | 943 | 945 | **945** |
+
+🔴 **`longDescription` was never truncated.** The pipeline cut `caption[:140]` on
+the stop and wrote the full text to the description in the same breath. Before
+the recovery, 2,364 captions sat at exactly 140 characters and **seven**
+longDescriptions did.
+
+**So the addressable evidence base gained 32 entries, not 408**, and the
+caption-address audit could have been built the day before by reading the other
+field.
+
+**What the recovery did genuinely fix** is real but smaller than I said: 2,320
+captions ended mid-word **on screen**, which is a display defect users see, and
+the two fields now agree.
+
+### Why I got it wrong
+
+I measured the field I had just changed. The number was correct — captions *did*
+go 535 → 943 — and it answered a question nobody had asked. **The question was
+"how much more evidence do we have", and the answer required looking at every
+field that could carry it.**
+
+That is the same shape as the egress estimate I got wrong by 15× the day before,
+and as the *"0 duplicates"* places query that read the wrong key: **a true
+statement about the wrong population.** The habit that catches all three is the
+one already written here — **state the population and make it add up** — extended
+by one word: state which *fields* the population is drawn from.
+
+⚠️ And it is why `check-caption-address.py` now reads the caption **and**
+`longDescription`, with a mutant that goes red if either is dropped. A check
+reading one field would have been blind to 378 entries whose address the
+catalogue already held.
+
+## The tool that writes to the catalogue was the one CI did not check (2026-09-22)
+
+Running the place-candidate scan after a 117-pin day turned up **two defects in
+the place tooling itself**, and either would have put a wrong place into the
+catalogue. A place is a **coordinate**: minting one *moves every member onto a
+single point*.
+
+### 1 · `make-places.py --selftest` had been crashing for a day
+
+`IndexError`, not a verdict. The cause was mine: adding the **STALE** band to
+`spine-match.py` on 2026-09-21 meant a cache record with no `digest` now bands
+STALE instead of CONFIRMS — and this file's fixture supplies no digest, so
+`propose` saw no groups and indexed into an empty list.
+
+🔴 **Nothing noticed, because `make-places.py --selftest` was not run anywhere.**
+It is the only tool in `scripts/` that *writes places*, and it was the one tool
+CI did not gate. It is gated now, and the fixture asserts it is **live** — strip
+the digest and the group must vanish, so a fixture that quietly stops producing
+one cannot pass again.
+
+**The general form:** when you add a guard to a shared module, the things that
+break are not its own tests. They are the fixtures in every *other* file that
+imports it — and those are exactly the files nobody re-runs.
+
+### 2 · A tourism board is not a venue
+
+`proven_same_venue` treats a shared `@handle` as proof that two coincident
+entries are one venue. It already excludes the **creator's** handle, or every
+pair of pins by one food reviewer would pair. It did not exclude
+**`@visitscotland`** — so *The Last Drop* and *Biddy Mulligan's*, two different
+Grassmarket pubs **24 m apart**, were reported PROVEN and would have been minted
+as one place, merging two pubs into one page.
+
+`docs/places.md` states the rule this breaks: **co-location is not identity.**
+
+**The fix is measured, not a list.** `ubiquitous_handles()` counts the distinct
+points each handle appears at: a real venue handle appears at **one**, a tourism
+board at many. Twenty-five handles in this catalogue appear at four or more —
+`@visitscotland`, `@michelinguide`, `@guinnessgb`, `@invernesstouristboard`, and
+several creators' handles quoted in *other* creators' captions.
+
+⚠️ Both defects were found by **using** the tool, not by reading it. The scan is
+rule 8c and it is meant to run after every batch; it had not, and two batches
+had landed.
+
+## The test asserted the hardcoded value, so it could never catch it (2026-09-22)
+
+`make-places.py` reported every proven group as **`move<=0 m`**, and its
+docstring said so in words: *"Members do not move — they are already on the same
+point — so the `--max-move` guard is inert here by construction, not by
+omission."*
+
+I chose to mint only those groups **because of that number**. Eight places were
+created, and two entries moved — by **19.5 m** and **11.6 m**.
+
+🔴 **The figure was hardcoded.** `propose_proven` wrote `"max_move_m": 0.0` as a
+literal, while `proven_groups` bounds its search at `TIGHT_M` = **25 m**, not at
+0. A proven group may legitimately span up to that, and minting pulls every
+member onto the anchor. The docstring asserted a property the code did not have.
+
+**And the selftest asserted the same literal:**
+
+```python
+check("a PROVEN group moves nobody", made and made[0]["max_move_m"] == 0.0)
+```
+
+It read the hardcoded value and confirmed it. A test that checks a constant
+against itself **cannot fail**, so this one had been passing while describing
+the wrong behaviour — including on the fixture whose own members sit 12.4 m
+apart, which the same file's docstring documents.
+
+**The fix:** `max_move_m` is computed from the members, the docstring says
+members *can* move and by how much, and the selftest asserts the fixture's real
+span (`5 m < move < 25 m`) instead of a literal.
+
+⚠️ The outcome here was harmless — the groups were right and 19 m is nothing.
+**What was not harmless is that a decision was made on a number nobody had
+measured**, which is the third time in two days: the +12% egress estimate, the
+`535 → 943` caption figure, and now this. The pattern is not carelessness about
+arithmetic. It is **trusting a number because it was printed**, when printing it
+cost nothing and measuring it was never done.
