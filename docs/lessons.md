@@ -3017,3 +3017,49 @@ city.
 means a caption naming a city the catalogue has never heard of is invisible by
 construction. That cost is stated in a selftest rather than left to be
 discovered.
+
+## The creator's caption can be wrong too (2026-09-22)
+
+A whole day of work rested on one premise: **the creator's own stated location is
+the strongest coordinate evidence this project gets.** It settled The Grapes,
+it settled *Modern Coffee House*, it settled *Sun Tower*, and recovering 2,351
+truncated captions was justified almost entirely by it.
+
+Here is the counter-case, found on the second pass over the city-outlier flags.
+
+**Rock Pools at Tai Long, Sai Kung** — 24.7 km from Hong Kong's centre, and its
+title and caption name *different places*:
+
+| | |
+|---|---|
+| title | Rock Pools at **Tai Long, Sai Kung** |
+| caption | *"Cliff Jumping at Rock pools in Hong Kong? 📍**Sai Wan Ho** Rock Pools"* |
+| our point reverse-geocodes to | **下鹿湖, Sheung Luk Wu, Sai Kung District** |
+
+**Sai Wan Ho is 17 km away, an urban MTR district on Hong Kong Island with no
+rock pools and nowhere to cliff-jump.** Sheung Luk Stream in Sai Kung is exactly
+where people go to do it. The creator wrote *Sai Wan **Ho*** for *Sai Wan* — one
+syllable, two entirely different places. **The pin is right and the caption is
+wrong.**
+
+🔴 **So the rule is not "trust the caption" — it is "the caption is evidence,
+and evidence gets weighed."** What settled this was the same thing that settled
+Sun Tower and the Cadore church: asking what is actually AT the point, and
+reading the subject. A place that cannot have cliff-jumping is not where you
+went cliff-jumping, whatever the caption says.
+
+⚠️ Note the shape it shares with the Barker Road extractor error and the *Great
+Notley* geocode: **a near-miss name is the dangerous kind.** *Sai Wan* / *Sai Wan
+Ho*, *Binhai Road* / *Haibin Road*, *Great Court* / *Great Notley*. A wrong
+answer that looks nothing like the right one gets caught immediately; one that
+differs by a syllable does not.
+
+### And the second pass's actual yield
+
+**79 flags read against full captions, and not one coordinate error.** The first
+pass read them with 140-character captions, so this was genuinely new evidence
+rather than a re-read — and the answer was still that Cape Point is 48 km from
+Cape Town and correct, Lantau is 23–31 km from Hong Kong and correct, and
+Chongqing's 360 km outlier is correct because the municipality is the size of
+Austria. **A check that keeps returning "nothing wrong" on a population you have
+already examined is doing its job**; the value is the day it stops.
