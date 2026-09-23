@@ -157,3 +157,13 @@ plus a "For Edward" section in the PR body. Places made: **Le Relais de Venise**
 already on OSM's restaurant, 271 Bd Pereire), **Café de la Paix** (OSM restaurant, one pin moved
 20 m), **Musée Carnavalet** (OSM museum, the Atlas tour moved 21 m under the new stops-on-subject
 rule). Places **435 → 438**.
+
+## Part 6: 1.1.3 released
+
+Edward: *"1.1.3 IS NOW RELEASED - UPDATE THE DOCS"* (2026-09-23). Build 176, phased release over 7
+days, so the public `itunes.apple.com/lookup` still read **1.1.2** that afternoon. Updated:
+CLAUDE.md § Current state and § Egress (delta fetching is now live for updated phones; egress falls
+with adoption; a catalogue-wide rewrite now costs each updated phone more than a full fetch),
+`docs/scaling-to-100k-design.md`, ROADMAP, and the owner item `release-1-1-3-when-approved` is
+cleared. **Still owed:** `MARKETING_VERSION` 1.1.3 → 1.1.4, opened as its own PR because
+`project.pbxproj` waits for the owner's OK.

@@ -60,6 +60,8 @@ Run `bash scripts/session-start.sh` for what is actually true right now.
 
 **The 6 most recent blocks:**
 
+**Status (2026-09-23, “SCALE PINNED TOURS”): 🚀 1.1.3 RELEASED** — the owner released 1.1.3 (build 176) on **2026-09-23**, with phased release over 7 days. It carries **delta catalogue fetching** (#912 server, #914 client), so egress should fall as phones update — judge it by Supabase's daily egress, not the date. Next: `MARKETING_VERSION` 1.1.3 → 1.1.4 in its own PR (owner OK, `project.pbxproj`).
+
 **Status (2026-09-23, session “SCALE PINNED TOURS”, overnight):** web session (**content**). An OSM name sweep of the 2,175 link pins Wikidata cannot match: **557 independently confirmed**, **11 pins moved** (8 from the sweep, 3 where OSM and Wikidata agreed against us), 61 left alone and recorded, 12 Atlas tours listed for the owner. Places **435** after #1073. See `archive/HANDOFF-260922-titles.md` Part 3.
 
 **Status (2026-09-22, session “SCALE PINNED TOURS”, titles pass):** web session (**content**). Asked *"are we really done with existing content?"*, and the answer was no. **269 caption-titled pins renamed** from their own captions (caption titles 355 → 89), **331 stale stop titles synced**, **8 place descriptions** written, **9 coordinates corrected** where OSM and Wikidata agreed against us (The Warrington place among them), and the spine cache refreshed: CONFIRMS **1,861 → 1,923**. Four new place candidates and the Petit Palais question go to the owner. See `archive/HANDOFF-260922-titles.md`.
