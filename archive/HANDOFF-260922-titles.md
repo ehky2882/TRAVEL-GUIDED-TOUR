@@ -196,3 +196,32 @@ pin's current point. *First National Bank of Hollywood*'s old verdict was stampe
 pre-place point and no longer applied, so it was re-stamped. *Ancient Messene* was **not** ruled:
 OSM's match was a café of that name, not the archaeological site. REVIEW unexamined **163 → 137**.
 The remainder are large sites (parks, zoos, a racecourse, campuses, castles).
+
+## Part 9: the 68 close pairs, and why Queens Museum was missed
+
+Owner rulings on the TIGHT pairs: **NO** to Westminster Abbey interiors, Channel Gardens, Blue
+Ribbon Garden, Tomb of the Unknown Soldier, A Joy/Taipei 101, Eggslut/Grand Central Market; **YES**
+to Relics of the World's Fairs → The Unisphere (joined, 19 m) and Ara Pacis (new place on OSM's
+museum point, the tour moved 14 m). *"QUEENS MUSEUM — WHY DID WE MISS THIS … MAKE A PLACE"*: made.
+
+**Why it was missed, twice over:** (1) before #1079 the tour and *Before the Queens Museum* were
+68 m apart and the NEAR tier stripped the city name "Queens" from the title, leaving only
+"museum"; fixed and self-tested (a mutation proves the test bites). (2) #1079 then moved the tour
+onto the pin exactly, the report flagged it as EXACT · PROVEN, and I read only its first line.
+The same report held **Casa de Chá da Boa Nova + Boa Nova Tea House** (two names for one building;
+made a place under Rule 1) and **Palais-Royal + Colonnes de Buren**. The Buren pin was sitting on
+OSM's *Palais-Royal* point, not the columns', so it moved 63 m onto the artwork; whether it belongs
+in a place is for the owner.
+
+**I also re-offered a settled question** (Westminster interiors, declined 09-15). The report now
+reads `DECLINED_PAIRS` and skips 30 already-ruled pairs; all of today's rulings are recorded there
+and in `docs/places.md`. Places **438 → 441**.
+
+For the owner: Palais-Royal + Colonnes de Buren; *Inside the Museum of the City of New York* +
+the MCNY Atlas tour (32 m); Chichén Itzá + The Great Ball Court (224 m) — the last two surfaced by
+the Queens fix.
+
+Owner, on the three left open: *"1. BUT IS IT POSSIBLE TO MOVE THE PINS APART 2. YES, 3. NO"*.
+Palais-Royal + Buren declined; the pins were already apart (Buren moved 63 m onto the artwork).
+**Museum of the City of New York** made a place on OSM's museum point; the Atlas tour moved 32 m.
+Chichén Itzá + Great Ball Court declined. Both declines are in `DECLINED_PAIRS`. Places **442**.

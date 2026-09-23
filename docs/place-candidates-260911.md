@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-23 13:10 UTC against `main` at `81b34fc3`.** Every number here is a reading of
+**Regenerated 2026-09-23 19:41 UTC against `main` at `18e70502`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -11,7 +11,7 @@ python3 scripts/make-place-menu.py
 
 A `Place` is a site that more than one entry describes: the site becomes the thing on the map
 and the entries become its contents. The catalogue holds
-**438 places covering 1072 entries**.
+**442 places covering 1081 entries**.
 
 The 2026-09-11 sweep found 221 candidates and **45 became places** — 7 existing places gained
 the 8 entries standing on them, 38 new places came from the 0 m rows, and both held groups
@@ -23,16 +23,16 @@ the normal condition. What follows is what is open **right now**.
 
 | | Finding | Act on it? |
 |---|---|---|
-| **§ 1** | **1 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
-| **§ 2** | **26 sites** with 2+ entries within 25 m | Owner picks |
+| **§ 1** | **0 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
+| **§ 2** | **24 sites** with 2+ entries within 25 m | Owner picks |
 | **§ 3** | 33 same-subject pairs 25–500 m apart | Read one at a time |
-| **§ 4** | 35 groups **already declined** | Do not re-offer |
+| **§ 4** | 36 groups **already declined** | Do not re-offer |
 
 ## 🔴 What creating one costs — it is never just a list entry
 
 A place needs its own **name, description, address and a chosen coordinate**. And because a
 place's identity is **exact coordinate equality** (`Place.swift`, enforced by `validate-tours`
-at 1e-9°), every member is **snapped onto that coordinate** — all 1072 existing members sit
+at 1e-9°), every member is **snapped onto that coordinate** — all 1081 existing members sit
 exactly on their place. Creating a place *moves things on the map*.
 
 ⚠️ **Check each move against the entry's own `triggerRadiusMeters` (30 m) first.** A move inside
@@ -50,15 +50,7 @@ Proximity is evidence, not proof. Nothing here auto-creates.
 
 ---
 
-## § 1 — on an identical coordinate (1)
-
-The catalogue's documented identity rule: provably one site, no editorial judgement.
-
-| # | City | Entries |
-|---|---|---|
-| **Z1** | Paris | `[pin]` Colonnes de Buren<br>`[tour]` Palais-Royal |
-
-## § 2 — 26 sites with two or more entries within 25 m
+## § 2 — 24 sites with two or more entries within 25 m
 
 Built only from hops of 25 m or less; the widest group is **25 m** end to end, so
 none is a chain of separate sites strung together.
@@ -71,26 +63,24 @@ none is a chain of separate sites strung together.
 | P4 | New York | 10 m | `[pin]` Hoyt–Schermerhorn Streets Station<br>`[pin]` Schermerhorn Street: How Do You Say It? |
 | P5 | Chicago | 11 m | `[pin]` St. Regis Chicago<br>`[pin]` Tre Dita |
 | P6 | Los Angeles | 14 m | `[pin]` Eggslut<br>`[tour]` Grand Central Market |
-| P7 | Rome | 14 m | `[pin]` Ara Pacis Museum<br>`[tour]` The Ara Pacis and the Mausoleum of Augustus |
-| P8 | Paris | 14 m | `[pin]` Chez Ajia<br>`[pin]` Kura-ge |
-| P9 | Paris | 15 m | `[pin]` Homer<br>`[pin]` Le Procope, Paris |
-| P10 | Lisbon | 16 m | `[tour]` Pink Street<br>`[pin]` Sol e Pesca |
-| P11 | New York | 21 m | `[pin]` Old Mates Pub<br>`[pin]` The Purple FDR Drive |
-| P12 | Edinburgh | 21 m | `[pin]` Frankenstein's Bar<br>`[pin]` The Elephant House, Where Harry Potter Began |
-| P13 | Taipei | 22 m | `[pin]` A Joy, Taipei 101<br>`[pin]` Taipei 101 |
-| P14 | London | 22 m | `[tour]` Cutty Sark<br>`[tour]` Greenwich Foot Tunnel |
-| P15 | Edinburgh | 23 m | `[pin]` Cafe Royal<br>`[pin]` Guildford Arms |
-| P16 | New York | 23 m | `[pin]` 351 Riverside Drive<br>`[pin]` The Schinasi Mansion |
-| P17 | Boston | 24 m | `[pin]` Green Dragon Tavern<br>`[pin]` The Bell in Hand Tavern |
-| P18 | New York | 24 m | `[pin]` 111 West 57th Street (Steinway Tower)<br>`[pin]` Steinway Hall |
-| P19 | New York | 24 m | `[pin]` Banh by Lauren<br>`[pin]` Golden Diner |
-| P20 | Edinburgh | 24 m | `[pin]` Biddy Mulligan's<br>`[pin]` The Last Drop |
-| P21 | Edinburgh | 25 m | `[pin]` Halfway House<br>`[pin]` The Scotsman Hotel |
-| P22 | New York | 16 m | `[pin]` All'Antico Vinaio on Sullivan Street *(in All'Antico Vinaio on Sullivan Street)*<br>`[pin]` All'Antico Vinaio on Sullivan Street *(in All'Antico Vinaio on Sullivan Street)*<br>`[pin]` Eve's Hangout |
-| P23 | Los Angeles | 18 m | `[tour]` Downtown LA: Bunker Hill to the Pueblo *(in Walt Disney Concert Hall)*<br>`[pin]` The Blue Ribbon Garden<br>`[tour]` Walt Disney Concert Hall *(in Walt Disney Concert Hall)* |
-| P24 | New York | 18 m | `[pin]` Dead Rabbit<br>`[tour]` Fraunces Tavern *(in Fraunces Tavern)*<br>`[pin]` Fraunces Tavern *(in Fraunces Tavern)* |
-| P25 | Queens | 19 m | `[pin]` Relics of the World's Fairs<br>`[tour]` The Unisphere *(in The Unisphere)*<br>`[pin]` The Unisphere *(in The Unisphere)* |
-| P26 | New York | 24 m | `[pin]` Saigon Social<br>`[pin]` Una Pizza Napoletana *(in Una Pizza Napoletana)*<br>`[pin]` Una Pizza Napoletana *(in Una Pizza Napoletana)* |
+| P7 | Paris | 14 m | `[pin]` Chez Ajia<br>`[pin]` Kura-ge |
+| P8 | Paris | 15 m | `[pin]` Homer<br>`[pin]` Le Procope, Paris |
+| P9 | Lisbon | 16 m | `[tour]` Pink Street<br>`[pin]` Sol e Pesca |
+| P10 | New York | 21 m | `[pin]` Old Mates Pub<br>`[pin]` The Purple FDR Drive |
+| P11 | Edinburgh | 21 m | `[pin]` Frankenstein's Bar<br>`[pin]` The Elephant House, Where Harry Potter Began |
+| P12 | Taipei | 22 m | `[pin]` A Joy, Taipei 101<br>`[pin]` Taipei 101 |
+| P13 | London | 22 m | `[tour]` Cutty Sark<br>`[tour]` Greenwich Foot Tunnel |
+| P14 | Edinburgh | 23 m | `[pin]` Cafe Royal<br>`[pin]` Guildford Arms |
+| P15 | New York | 23 m | `[pin]` 351 Riverside Drive<br>`[pin]` The Schinasi Mansion |
+| P16 | Boston | 24 m | `[pin]` Green Dragon Tavern<br>`[pin]` The Bell in Hand Tavern |
+| P17 | New York | 24 m | `[pin]` 111 West 57th Street (Steinway Tower)<br>`[pin]` Steinway Hall |
+| P18 | New York | 24 m | `[pin]` Banh by Lauren<br>`[pin]` Golden Diner |
+| P19 | Edinburgh | 24 m | `[pin]` Biddy Mulligan's<br>`[pin]` The Last Drop |
+| P20 | Edinburgh | 25 m | `[pin]` Halfway House<br>`[pin]` The Scotsman Hotel |
+| P21 | New York | 16 m | `[pin]` All'Antico Vinaio on Sullivan Street *(in All'Antico Vinaio on Sullivan Street)*<br>`[pin]` All'Antico Vinaio on Sullivan Street *(in All'Antico Vinaio on Sullivan Street)*<br>`[pin]` Eve's Hangout |
+| P22 | Los Angeles | 18 m | `[tour]` Downtown LA: Bunker Hill to the Pueblo *(in Walt Disney Concert Hall)*<br>`[pin]` The Blue Ribbon Garden<br>`[tour]` Walt Disney Concert Hall *(in Walt Disney Concert Hall)* |
+| P23 | New York | 18 m | `[pin]` Dead Rabbit<br>`[tour]` Fraunces Tavern *(in Fraunces Tavern)*<br>`[pin]` Fraunces Tavern *(in Fraunces Tavern)* |
+| P24 | New York | 24 m | `[pin]` Saigon Social<br>`[pin]` Una Pizza Napoletana *(in Una Pizza Napoletana)*<br>`[pin]` Una Pizza Napoletana *(in Una Pizza Napoletana)* |
 
 ## § 3 — 33 same-subject pairs 25–500 m apart
 
@@ -133,7 +123,7 @@ is an editorial decision, and some are deliberately two subjects.
 | N32 | Kyoto | 418 m | `[pin]` Gion Kurashita, Hanamikoji, Gion, Kyoto<br>`[tour]` Gion \| 祇園 *(in Gion)* |
 | N33 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
 
-## § 4 — declined, standing (35 groups + 1 named case)
+## § 4 — declined, standing (36 groups + 1 named case)
 
 🔴 **These are decided. The sweep still reports them because it cannot know a decision was
 made — do not re-offer them as new candidates.**
@@ -155,7 +145,6 @@ made — do not re-offer them as new candidates.**
 | *(no place)* | `[tour]` ArkDes — Swedish Centre for Architecture and Design<br>`[tour]` Moderna Museet — owner: keep separate — they share a building on Skeppsholmen but are two institutions | owner, 2026-09-11 |
 | *(no place)* | `[pin]` Lazy Suzy<br>`[pin]` Peng Leng Zheng — dense block — two separate Hong Kong venues | owner, 2026-09-11 |
 | *(no place)* | `[tour]` Blue Bottle Studio Seoul \| 블루보틀 삼청 한옥<br>`[tour]` Kukje Gallery K3 \| 국제갤러리 K3 — dense block — a coffee studio and a gallery | owner, 2026-09-11 |
-| *(no place)* | `[tour]` Diego Iluminado<br>`[tour]` Fundación Proa — owner: keep separate | owner, 2026-09-11 |
 | *(no place)* | `[tour]` Bar Montan<br>`[tour]` Hosoi — dense block — two separate Stockholm bars | owner, 2026-09-11 |
 | *(no place)* | `[tour]` Baan Plern Jitt \| บ้านเพลินจิตต์ ณ คลองบางหลวง<br>`[tour]` Khlong Bang Luang Floating Market \| ตลาดชุมชนคลองบางหลวง — owner: keep separate | owner, 2026-09-11 |
 | *(no place)* | `[pin]` Social Goods<br>`[tour]` Stone Slab Street \| 石板街 — dense block — a shop on the street it stands in | owner, 2026-09-11 |
@@ -167,13 +156,15 @@ made — do not re-offer them as new candidates.**
 | Duddell Street Steps and Gas Lamps | `[pin]` Il Presidente | owner, 2026-09-11 |
 | Westminster Abbey | `[pin]` The Cosmati Pavement<br>`[pin]` The Shrine of Edward the Confessor | owner, 2026-09-11 |
 | Rockefeller Center | `[pin]` The Channel Gardens | owner, 2026-09-11 |
+| Casa Batlló | `[tour]` Casa Amatller | two separate houses side by side on the Illa de la Discòrdia — the point of that block |
 | **Tai Kwun** | `[pin]` Madame Fu — a restaurant *inside* a heritage compound is not the compound. It sits 27.4 m out, just past the TIGHT radius, so the sweep does not report it | owner, 2026-09-11 |
 | *(no place)* | `[tour]` Tibidabo<br>`[tour]` Tibidabo Amusement Park — a mountain and a funfair are two subjects (#541) (48 m apart) | owner |
-| *(no place)* | `[tour]` Fondazione Prada<br>`[pin]` Bar Luce at Fondazione Prada — owner: a restaurant inside a heritage compound is not the compound (Rule 4) (49 m apart) | owner |
+| *(no place)* | `[tour]` Fondazione Prada<br>`[pin]` Bar Luce at Fondazione Prada — owner: a restaurant inside a heritage compound is not the compound (Rule 4) (79 m apart) | owner |
 | *(no place)* | `[tour]` Victoria Peak \| 太平山頂<br>`[pin]` Bakehouse at Victoria Peak — owner: a tenant is not the site (Rule 4) (129 m apart) | owner |
 | *(no place)* | `[pin]` Big Ben<br>`[tour]` Houses of Parliament and Big Ben *(in Houses of Parliament)* — owner: declined as part-vs-whole (135 m apart) | owner |
 | *(no place)* | `[pin]` The Red Room at One Wall Street<br>`[tour]` Wall Street *(in Wall Street)* — owner: keep the Red Room separate — One Wall Street is a different building (135 m apart) | owner |
 | *(no place)* | `[pin]` The Red Room at One Wall Street<br>`[pin]` The Wall of Wall Street *(in Wall Street)* — owner: keep the Red Room separate — One Wall Street is a different building (135 m apart) | owner |
 | *(no place)* | `[pin]` 111 West 57th Street (Steinway Tower)<br>`[pin]` Steinway Tower — owner 2026-09-22: keep separate AT LEAST FOR NOW — provisional, not a final ruling. Same building under two names, 145 m apart; revisit if the owner reopens it (145 m apart) | owner |
 | *(no place)* | `[tour]` LACMA<br>`[pin]` LACMA's David Geffen Galleries — owner: all different — the pins were repaired instead (182 m apart) | owner |
+| *(no place)* | `[pin]` Chichén Itzá *(in Chichén Itzá)*<br>`[pin]` The Great Ball Court, Chichén Itzá — owner 2026-09-23: NO — the Great Ball Court stays out of Chichén Itzá (part vs whole) (224 m apart) | owner |
 
