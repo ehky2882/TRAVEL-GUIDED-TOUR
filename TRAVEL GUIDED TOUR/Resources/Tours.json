@@ -39654,8 +39654,8 @@
           "order": 0,
           "title": "Musée Carnavalet",
           "caption": "The museum of the history of Paris itself, in two joined Marais mansions — and free to enter.",
-          "latitude": 48.85736,
-          "longitude": 2.36275,
+          "latitude": 48.8573232,
+          "longitude": 2.3624734,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/musee-carnavalet.mp3",
           "audioDurationSeconds": 116,
           "triggerMode": "geofenced",
@@ -39667,8 +39667,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 116,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.85736,
-      "centroidLongitude": 2.36275,
+      "centroidLatitude": 48.8573232,
+      "centroidLongitude": 2.3624734,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -106508,6 +106508,51 @@
       "tourIds": [
         "0F278313-E88E-5A29-A6C7-EE145234206C",
         "89EFF81F-C049-5076-BC30-E8853C639C16"
+      ]
+    },
+    {
+      "id": "19b2cadf-4203-5800-b5c7-ac8f2c84cb49",
+      "name": "Le Relais de Venise",
+      "description": "A steak-frites restaurant at Porte Maillot, open since 1959, with no menu to speak of: one course of sliced entrecôte in its secret sauce, served in two rounds with frites, after a walnut salad.",
+      "latitude": 48.8780291,
+      "longitude": 2.2851108,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "7851F3E6-4714-5C38-823F-6D33566F6CC3"
+      ]
+    },
+    {
+      "id": "1229e0ae-7efc-536b-adbe-aee1852e46fa",
+      "name": "Café de la Paix",
+      "description": "The grand café on the corner of Place de l'Opéra, opened in 1862 in the building that is now the InterContinental Paris Le Grand, facing the Palais Garnier. Its Second Empire dining room is a listed historic monument.",
+      "latitude": 48.8707685,
+      "longitude": 2.3316957,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50"
+      ]
+    },
+    {
+      "id": "20415d46-9193-57f5-8a69-bb8e170dd270",
+      "name": "Musée Carnavalet",
+      "description": "The museum of the history of Paris, spread across two Marais mansions, the Hôtel Carnavalet and the Hôtel Le Peletier de Saint-Fargeau. It reopened in 2021 after a four-year renovation and is free to visit.",
+      "latitude": 48.8573232,
+      "longitude": 2.3624734,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "9b93d74b-505a-5886-9cf7-a5ca235c12de",
+        "EE07C8E2-CDE6-581D-9620-68F02D7145A7"
       ]
     }
   ],
@@ -297248,8 +297293,8 @@
           "order": 0,
           "title": "Café de la Paix",
           "caption": "@cafedelapaixparis forever favorite + the @icparislegrand winter garden",
-          "latitude": 48.870943,
-          "longitude": 2.331753,
+          "latitude": 48.8707685,
+          "longitude": 2.3316957,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -297261,8 +297306,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.870943,
-      "centroidLongitude": 2.331753,
+      "centroidLatitude": 48.8707685,
+      "centroidLongitude": 2.3316957,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -297519,8 +297564,8 @@
           "order": 0,
           "title": "Musée Carnavalet",
           "caption": "if you’re visiting paris, one place i would definitely tell you to go to is the @museecarnavalet it’s been one of my favorite places for years, especially for an early morning coffee and just taking in how beautiful and peaceful it is. it’s a museum about the history of paris, and there’s also a little café and restaurant called @joli.restaurant tucked into the corner 🖼️ also, the museum is free to visit, so you can just walk in and explore. only some special exhibitions have an entry fee. it’s open tuesday to sunday from 10 am to 6 pm and closed on mondays.",
-          "latitude": 48.857323,
-          "longitude": 2.362473,
+          "latitude": 48.8573232,
+          "longitude": 2.3624734,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -297532,8 +297577,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.857323,
-      "centroidLongitude": 2.362473,
+      "centroidLatitude": 48.8573232,
+      "centroidLongitude": 2.3624734,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -299957,8 +300002,8 @@
           "order": 0,
           "title": "Le Relais de Venise",
           "caption": "📍Le Relais de Venise - son entrecôte located in the 17eme transparency— this is not an AD. we fully & happily paid for our entire meal here like every single time. it’s one of my favorite places to go to in paris ever since i have been living here #paris #parisfrance #parisrestaurants #steakfrites #parisfood #pariscityguide #foodandtravel #visitparis #restaurant",
-          "latitude": 48.878029,
-          "longitude": 2.285111,
+          "latitude": 48.8780291,
+          "longitude": 2.2851108,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -299970,8 +300015,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.878029,
-      "centroidLongitude": 2.285111,
+      "centroidLatitude": 48.8780291,
+      "centroidLongitude": 2.2851108,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [

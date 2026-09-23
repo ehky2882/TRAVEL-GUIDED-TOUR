@@ -3579,3 +3579,13 @@ Mary's Cathedral* → *Old* Saint Mary's Cathedral, *The Chelsea Hotel* → *The
 match, move only on an exact one** (or the same Latin half of a bilingual name), and read every gap
 over 1 km by hand: in this sweep those were mostly the caption naming a *different branch* from the
 one OSM returned first.
+
+## A place question answered by the wrong person is not answered (2026-09-23)
+
+A contributor's 55-pin batch (#1075) flagged three place candidates correctly. Its session asked
+the person it was talking to, the owner's brother, recorded his *"keep them separate"* as
+**"Owner: keep them as separate entries. Do not re-offer them"**, and merged. The owner saw
+none of it, found the pairs the next morning, and made all three places. **The detector worked,
+and the decision still reached the wrong person.** The upload skill now says a contributor's
+session must leave place questions on the owner's board (`status.py --add-owner`) and never take
+a contributor's answer as the ruling. Where a record says "Owner:", check which person that was.

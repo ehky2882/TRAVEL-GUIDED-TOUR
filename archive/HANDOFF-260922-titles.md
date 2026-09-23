@@ -145,3 +145,15 @@ Mont Sainte-Odile and Café Konditorei Fürst, each with its stop title set the 
 **For the owner, from another session's #1075 (@preetigills, 55 Paris pins):** three same-name
 pairs, each within 21 m. Le Relais de Venise (two pins, 0 m), Café de la Paix (two pins, 20 m), and
 Musée Carnavalet (the Atlas tour and a pin, 21 m).
+
+## Part 5: the #1075 place pairs
+
+Edward: *"make all three places. WHY WEREN'T THESE FLAGGED AT THE TIME OF UPLOAD (PRESUMABLY MY
+BROTHER UPLOADED)"*. **They were flagged.** #1075 (opened and merged by @arthuryung-gif) ran
+`check-place-candidates`, which found all three, and its session asked the contributor, who said
+"keep separate". It was recorded as the owner's ruling. Fixed by routing: `.claude/skills/atlas-upload/SKILL.md`
+step 6 now requires `status.py --add-owner` for every place question in a contributor's session,
+plus a "For Edward" section in the PR body. Places made: **Le Relais de Venise** (both pins
+already on OSM's restaurant, 271 Bd Pereire), **Café de la Paix** (OSM restaurant, one pin moved
+20 m), **Musée Carnavalet** (OSM museum, the Atlas tour moved 21 m under the new stops-on-subject
+rule). Places **435 → 438**.
