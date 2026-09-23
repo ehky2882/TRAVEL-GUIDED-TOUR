@@ -3541,3 +3541,12 @@ surfaced 4 new place candidates and 3 disagreements to rule on. **The cheapest i
 a recovered name is the place the pin already belongs to**: every renamed pin that sat in a place
 got a name matching that place, and the three that did not were spelling errors (one of them in the
 place's own name).
+
+## Changing a pin's CITY breaks other pins' suggestions (2026-09-23)
+
+Correcting one Krispy Pizza pin from *New York* to *Brooklyn* failed `Validate Tours.json` with
+**63 errors**, none of them in the edited entry: 63 New York pins listed it in `relatedTourIds`,
+and a pin may only suggest pins in its own city. The city is an input to the related-tours graph,
+so editing it by hand makes other entries invalid. **Leave `city` alone unless the same PR rebuilds
+related tours** (`scripts/build-embeddings.py --write-related`), and before pushing, count how many
+entries name the one you are changing.
