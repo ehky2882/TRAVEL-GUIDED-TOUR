@@ -12,7 +12,7 @@
 > | Section | Status on 2026-09-16 |
 > |---|---|
 > | § 1 / § B1 — "Backend Phase 0, half a day" | ✅ **SHIPPED** — `backend/catalog_rev.sql`, PR #904, applied to production. That branch built its own Phase 0 in parallel and its author later wrote that it *"duplicates it and should not be merged"* |
-> | Phase 1 of the delta design | ✅ **SHIPPED** — `backend/catalog_since.sql`, PR #912, live. Phase 2 (the client) is PR #914, device-verified, **unreleased — it ships in 1.1.3** |
+> | Phase 1 of the delta design | ✅ **SHIPPED** — `backend/catalog_since.sql`, PR #912, live. Phase 2 (the client) is PR #914, device-verified, ✅ **released in 1.1.3 on 2026-09-23** (phased over 7 days) |
 >
 > 🔴 **Finding 1 below is UNDERSTATED. Re-derived on 2026-09-16 against the live catalogue:**
 >

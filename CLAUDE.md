@@ -212,21 +212,27 @@ at level 9, against **29.4% raw**. It is *used* — `TourDetailView` renders it,
 `SearchView` searches it — so the KEEP decision stands, but it stands on being
 load-bearing, not on being small.
 
-**Delta fetching: the server half is LIVE, the client half is not released.**
+**Delta fetching: both halves are LIVE — 1.1.3 was released on 2026-09-23 (build 176), with phased release over 7 days.**
 `get_catalog_since(rev)` (`backend/catalog_since.sql`, #912) is applied to
 production and returns **only the rows whose `rev` exceeds the cursor** — measured
 2026-09-15 on a real change: **43 rows in 19,496 bytes against 2,427,222 for the
 full catalogue**, and a **131-byte** envelope when nothing has changed. The client
 that consumes it is merged (#914) and **device-verified on build 161** — a real
 43-row delta applied on the owner's phone and the catalogue count came back
-exactly right. It ships in **1.1.3**.
+exactly right. It shipped in **1.1.3**, released by the owner on **2026-09-23**.
 
-🔴 **This changes NOTHING for any phone until 1.1.3 ships.** Every build in the
-field still downloads the entire catalogue whenever anything changes, so the
-egress arithmetic above is still what you are paying today. **Re-derive the state
-rather than quoting this paragraph** — one `get_catalog_since` call with a sentinel
-cursor costs 131 bytes and answers it (404 = not live), and the released version
-comes from the `itunes.apple.com/lookup` one-liner in § READ FIRST.
+🔴 **It helps only the phones that have updated, and it arrives gradually.** Phased
+release hands 1.1.3 to a growing share of automatic-update users over **7 days**, and
+every phone still on 1.1.2 or older keeps downloading the **entire** catalogue whenever
+anything changes. So egress falls **as adoption rises**, not on release day: judge it
+by the Supabase daily egress figures (§ above, 167 MB/day is the line to beat), not by
+the calendar. ⚠️ **Now that deltas are live, a catalogue-wide rewrite has a price** —
+a migration that touches every row bumps every `rev`, and each updated phone then pays
+**more than a full fetch** for it (`docs/delta-catalog-fetch-design.md` § the
+2,752,051-byte case). Batch such backfills and do them rarely. **Re-derive the state
+rather than quoting this paragraph** — the released version comes from the
+`itunes.apple.com/lookup` one-liner in § READ FIRST, which lags App Store Connect by
+hours (it still said 1.1.2 on the afternoon 1.1.3 was released).
 
 **What is still NOT built:** **removals.** `removedIds` is always empty, so content
 *deleted* from the catalogue reaches phones only via a full download — which
@@ -284,8 +290,11 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 🔴 **Run `bash scripts/session-start.sh` first — it prints live state; this file does not have
 it.** § READ FIRST above explains why that is not optional.
 
-**🚀 Dozent 1.1.2 is live on the App Store**, released **14 September 2026** on build 160
-(ASC `READY_FOR_SALE`, no phased release), after 1.1.1 on build 139 (1 September). This is the
+**🚀 Dozent 1.1.3 is live on the App Store**, released by the owner on **23 September 2026** on
+build 176 (**phased release, 7 days**), after 1.1.2 on build 160 (14 September) and 1.1.1 on
+build 139 (1 September). 1.1.3 is the release that carries **delta catalogue fetching** (§ Egress).
+⚠️ **`MARKETING_VERSION` must now go 1.1.3 → 1.1.4** in its own PR (a `project.pbxproj` change,
+so it waits for the owner's OK) before the next TestFlight upload will be accepted. This is the
 durable fact; **the live number is not** — the released version is checkable from any session with
 no key (§ READ FIRST's table has the one-line `curl`), so re-derive it rather than quoting this
 paragraph. ⚠️ **That public lookup lags App Store Connect by hours** — on release day it still
