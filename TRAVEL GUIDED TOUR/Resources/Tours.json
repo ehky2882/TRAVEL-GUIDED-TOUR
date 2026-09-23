@@ -6569,8 +6569,8 @@
           "order": 0,
           "title": "Museum of the City of New York",
           "caption": "Stand on Fifth Avenue at 103rd Street, looking at the red-brick Colonial Revival entrance.",
-          "latitude": 40.7927,
-          "longitude": -73.9521,
+          "latitude": 40.7925266,
+          "longitude": -73.951802,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/museum-of-the-city-of-new-york.mp3",
           "audioDurationSeconds": 132,
           "triggerMode": "manual",
@@ -6582,8 +6582,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 132,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7927,
-      "centroidLongitude": -73.9521,
+      "centroidLatitude": 40.7925266,
+      "centroidLongitude": -73.951802,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -106599,6 +106599,21 @@
       "tourIds": [
         "ae287886-2c55-4c3e-b8c2-e2389323aec6",
         "A9699968-D5B4-54D1-B697-804B86328B34"
+      ]
+    },
+    {
+      "id": "28fa1a7b-2598-5e18-9fc9-629073d8797a",
+      "name": "Museum of the City of New York",
+      "description": "The museum of New York's own history, in a neo-Georgian building on Fifth Avenue at 103rd Street that it opened in 1932, at the northern end of Museum Mile.",
+      "latitude": 40.7925266,
+      "longitude": -73.951802,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
+        "0C210FE0-406D-50BF-9DF6-1EB444041E69"
       ]
     }
   ],

@@ -220,3 +220,8 @@ and in `docs/places.md`. Places **438 → 441**.
 For the owner: Palais-Royal + Colonnes de Buren; *Inside the Museum of the City of New York* +
 the MCNY Atlas tour (32 m); Chichén Itzá + The Great Ball Court (224 m) — the last two surfaced by
 the Queens fix.
+
+Owner, on the three left open: *"1. BUT IS IT POSSIBLE TO MOVE THE PINS APART 2. YES, 3. NO"*.
+Palais-Royal + Buren declined; the pins were already apart (Buren moved 63 m onto the artwork).
+**Museum of the City of New York** made a place on OSM's museum point; the Atlas tour moved 32 m.
+Chichén Itzá + Great Ball Court declined. Both declines are in `DECLINED_PAIRS`. Places **442**.

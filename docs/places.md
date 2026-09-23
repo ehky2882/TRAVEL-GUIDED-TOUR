@@ -257,6 +257,9 @@ Put to the owner as numbered questions, answered in one line:
 | The Unisphere + Relics of the World's Fairs | **YES**, joined |
 | Queens Museum (Atlas tour) + *Before the Queens Museum* | **YES**, new place (and the owner asked why it was missed — see `docs/lessons.md`) |
 | Ara Pacis Museum + *The Ara Pacis and the Mausoleum of Augustus* | **YES**, new place |
+| Palais-Royal + Colonnes de Buren | **NO**; the owner asked for the pins to be moved apart, and the Buren pin now sits on the columns, 63 m from the Palais-Royal |
+| Museum of the City of New York (Atlas tour) + *Inside the Museum of the City of New York* | **YES**, new place |
+| Chichén Itzá + The Great Ball Court | **NO** |
 
 🔴 **Every part-of-a-site pairing was declined.** Together with 2026-09-15 this is now a consistent
 pattern: **a component inside or on a site stays out of the site's place.** It is still recorded as

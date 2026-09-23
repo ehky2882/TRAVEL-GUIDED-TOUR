@@ -129,6 +129,10 @@ DECLINED_GROUPS = {
 # Keyed by the frozen set of the two titles, never by the N-label: the labels
 # are positions in a sorted list and renumber whenever a batch lands.
 DECLINED_PAIRS = {
+    frozenset({'Palais-Royal', 'Colonnes de Buren'}):
+        'owner 2026-09-23: NO — the Buren columns stay out of the Palais-Royal (part vs whole); the pin was moved 63 m onto the artwork so the two no longer share a point',
+    frozenset({'Chichén Itzá', 'The Great Ball Court, Chichén Itzá'}):
+        'owner 2026-09-23: NO — the Great Ball Court stays out of Chichén Itzá (part vs whole)',
     frozenset({'The Cosmati Pavement', 'Westminster Abbey'}):
         "owner 2026-09-23: NO — a part inside Westminster Abbey stays out of the Abbey's place (the 2026-09-15 reason: don't comingle the interior with the building; docs/places.md)",
     frozenset({'The Shrine of Edward the Confessor', 'Westminster Abbey'}):
