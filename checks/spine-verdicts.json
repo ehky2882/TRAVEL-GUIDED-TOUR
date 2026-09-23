@@ -224,6 +224,15 @@
     "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: ours at the Queen's Road Central foot, theirs at Caine Road partway up; an 800 m escalator system.",
     "verdict": "extended-feature"
   },
+  "Chichu Art Museum | 地中美術館": {
+    "at": [
+      34.44796012421047,
+      133.9847261914423
+    ],
+    "date": "2026-09-23",
+    "note": "Wikidata's point is the ticket centre (地中美術館チケットセンター) at the foot of the hill. OSM's tourism=museum outline for 地中美術館 is 17 m from our stop, so the stop is on the museum. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Chiesa di Nostra Signora del Cadore": {
     "at": [
       46.429176,

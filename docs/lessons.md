@@ -3489,6 +3489,16 @@ supports. The one being joined may be it.**
 
 ### 🔴 An Atlas tour's stop is where the audio triggers, so read it before moving it
 
+> **Superseded on 2026-09-23 by the owner:** *"move the atlas tours. when I first started I did put
+> the coordinates in the deliberate spot to stand, but as the catalog evolved I think that would be
+> increasingly difficult to manage for a large catalog."* **An Atlas stop now sits on its subject,
+> the same as a pin**, and nine were moved that day (Estádio do Dragão, Jardins do Palácio de
+> Cristal, Castelo de São Jorge, Jardim da Estrela, Palais-Royal, Dolby Theatre, Gaysorn Amarin,
+> Nubank Parque, Candler Building; 113–185 m each). What survives from the account below: **the
+> subject can be a named PART of a site** (CAM's canopy, one facade of a walk), and a multi-stop
+> walk's stops each have their own subject, so a walk stop is never moved to its building's
+> centre. The history is kept because it explains every Atlas stop still sitting on an entrance.
+
 A link pin's coordinate marks a subject. **An Atlas tour's stop coordinate is
 also the geofence trigger**, and its caption may name a deliberate viewpoint.
 
