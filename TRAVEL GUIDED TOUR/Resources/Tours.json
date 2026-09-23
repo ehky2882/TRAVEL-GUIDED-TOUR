@@ -106615,6 +106615,21 @@
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
         "0C210FE0-406D-50BF-9DF6-1EB444041E69"
       ]
+    },
+    {
+      "id": "5a4f404e-d753-55f8-9d5d-ac835a6d023a",
+      "name": "Magazzino Italian Art",
+      "description": null,
+      "latitude": 41.42988,
+      "longitude": -73.91485,
+      "city": "Cold Spring",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "73E51D4E-1F3F-5AD2-A195-378F49868428",
+        "0004F49C-547B-597E-94C6-B9D563466670"
+      ]
     }
   ],
   "linkPins": [
@@ -107678,7 +107693,7 @@
     {
       "id": "78C5A964-5A46-5AD6-938C-1922A41827F0",
       "createdAt": "2026-08-26",
-      "title": "Is This Copenhagen’s Best Casual Restaurant?",
+      "title": "Levi",
       "shortDescription": "A post by @TheFoodFetishist on YouTube.",
       "longDescription": "Is This Copenhagen’s Best Casual Restaurant?",
       "makerId": "05A34772-F0AB-57B0-9850-131F156A1273",
@@ -107693,7 +107708,7 @@
         {
           "id": "5BFE8ACE-CC77-563F-8652-E6E5D1590428",
           "order": 0,
-          "title": "Is This Copenhagen’s Best Casual Restaurant?",
+          "title": "Levi",
           "caption": "Is This Copenhagen’s Best Casual Restaurant?",
           "latitude": 55.68195495631042,
           "longitude": 12.582230822059232,
@@ -107972,7 +107987,7 @@
     {
       "id": "A7A562FF-0E21-5A81-A5E2-08BA479C6DCF",
       "createdAt": "2026-08-26",
-      "title": "Fui à ORIGEM da Chanfana!",
+      "title": "Zé Padeiro",
       "shortDescription": "A post by @gastropico on YouTube.",
       "longDescription": "Fui à ORIGEM da Chanfana!",
       "makerId": "DA6225D8-82D3-5FF7-A65B-68D9401FBF21",
@@ -107987,7 +108002,7 @@
         {
           "id": "7F66D30B-0D43-5E1B-9EFB-B354BC905D4C",
           "order": 0,
-          "title": "Fui à ORIGEM da Chanfana!",
+          "title": "Zé Padeiro",
           "caption": "Fui à ORIGEM da Chanfana!",
           "latitude": 40.09590246754114,
           "longitude": -8.332432892471214,
@@ -151766,7 +151781,7 @@
     {
       "id": "350EBFA8-C58B-5A1E-A5F3-66C88BA50953",
       "createdAt": "2026-09-02",
-      "title": "A Vintage Toy Store in Tsim Sha Tsui",
+      "title": "OOampm Vintage Toys",
       "shortDescription": "A post by @notbadgalriri__ on Instagram.",
       "longDescription": "COMMENT “TOY” TO GET THE LOCATION!! [13/100] - you asked for random, you get random! This toy store is a love letter to Hong Kong vintage toys back in the 70s and 80s🥹 it was like preserving a piece of the past even in the present😁 Highly recommend you check it out!! Follow for more hidden gems! @notbadgalriri__ ❤️ #hongkong #explorehongkong #vintagetoys #discoverhongkong #hiddengemshk",
       "makerId": "B87BC541-FE27-5831-B356-6E42AC4D055E",
@@ -151781,7 +151796,7 @@
         {
           "id": "A8FB05BF-F520-5A6E-9D19-7437D4A9A331",
           "order": 0,
-          "title": "A Vintage Toy Store in Tsim Sha Tsui",
+          "title": "OOampm Vintage Toys",
           "caption": "COMMENT “TOY” TO GET THE LOCATION!! [13/100] - you asked for random, you get random! This toy store is a love letter to Hong Kong vintage toys back in the 70s and 80s🥹 it was like preserving a piece of the past even in the present😁 Highly recommend you check it out!! Follow for more hidden gems! @notbadgalriri__ ❤️ #hongkong #explorehongkong #vintagetoys #discoverhongkong #hiddengemshk",
           "latitude": 22.2999375,
           "longitude": 114.1751875,
@@ -232505,7 +232520,7 @@
     {
       "id": "C6DD4ED6-E0CF-5C09-B870-ABA170C42F29",
       "createdAt": "2026-09-16",
-      "title": "A transformed parking garage, Palermo",
+      "title": "OLA Palermo",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Should more parking garages be transformed? #architecture #design #adaptivereuse #argentina",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -232520,10 +232535,10 @@
         {
           "id": "ECE99BC7-6313-50AB-BC63-1AE78BB778CC",
           "order": 0,
-          "title": "A transformed parking garage, Palermo",
+          "title": "OLA Palermo",
           "caption": "Should more parking garages be transformed? #architecture #design #adaptivereuse #argentina",
-          "latitude": -34.5721309,
-          "longitude": -58.4259737,
+          "latitude": -34.5695941,
+          "longitude": -58.4220486,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -232535,8 +232550,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -34.5721309,
-      "centroidLongitude": -58.4259737,
+      "centroidLatitude": -34.5695941,
+      "centroidLongitude": -58.4220486,
       "city": "Buenos Aires",
       "country": "Argentina",
       "relatedTourIds": [
@@ -232711,7 +232726,7 @@
     {
       "id": "16371500-B2BA-5434-9600-9CEE19E9A3E8",
       "createdAt": "2026-09-16",
-      "title": "A traditional house, Kitashirakawa",
+      "title": "Former Kita Gen'itsu Residence | 旧喜多源逸邸",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Have you ever been in a Japanese home? #fyp #architecture #design #japan",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -232726,10 +232741,10 @@
         {
           "id": "7DD88FCB-BF66-50C6-991F-772AA8547FD8",
           "order": 0,
-          "title": "A traditional house, Kitashirakawa",
+          "title": "Former Kita Gen'itsu Residence | 旧喜多源逸邸",
           "caption": "Have you ever been in a Japanese home? #fyp #architecture #design #japan",
-          "latitude": 35.0362963,
-          "longitude": 135.7890954,
+          "latitude": 35.0352772,
+          "longitude": 135.7888999,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -232741,8 +232756,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.0362963,
-      "centroidLongitude": 135.7890954,
+      "centroidLatitude": 35.0352772,
+      "centroidLongitude": 135.7888999,
       "city": "Kyoto",
       "country": "Japan",
       "relatedTourIds": [
@@ -233019,7 +233034,7 @@
     {
       "id": "C70C7BF7-32D3-57FA-85D5-FB722094CD8F",
       "createdAt": "2026-09-16",
-      "title": "A guesthouse near Rossio",
+      "title": "Quarteirão do Rossio",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Should more buildings be preserved? #fyp #architecture #design #history",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -233034,7 +233049,7 @@
         {
           "id": "361F0CE0-8858-5DB2-9BD6-D8162C93CE2F",
           "order": 0,
-          "title": "A guesthouse near Rossio",
+          "title": "Quarteirão do Rossio",
           "caption": "Should more buildings be preserved? #fyp #architecture #design #history",
           "latitude": 38.713840876963324,
           "longitude": -9.138410832322638,
@@ -233072,7 +233087,7 @@
     {
       "id": "D8B0A233-57B2-5F10-977D-7A0F9FECB799",
       "createdAt": "2026-09-16",
-      "title": "A brutalist church, Coração de Jesus",
+      "title": "Igreja do Sagrado Coração de Jesus",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Did you know about this church? #fyp #architecture #design #brutalism #portugal",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -233087,7 +233102,7 @@
         {
           "id": "E32C90C4-C4F5-5DEA-A4C6-5808C99F350F",
           "order": 0,
-          "title": "A brutalist church, Coração de Jesus",
+          "title": "Igreja do Sagrado Coração de Jesus",
           "caption": "Did you know about this church? #fyp #architecture #design #brutalism #portugal",
           "latitude": 38.7247596,
           "longitude": -9.1468676,
@@ -233127,7 +233142,7 @@
     {
       "id": "9C1AE735-FD91-5C13-8D96-3AC695A9839E",
       "createdAt": "2026-09-16",
-      "title": "An apartment building, Santos",
+      "title": "EDP Headquarters",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Thoughts on concrete architecture? #architecture #design #fyp #brutalism",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -233142,7 +233157,7 @@
         {
           "id": "6EEC04BA-774E-56D5-8C05-44E4DFA972B0",
           "order": 0,
-          "title": "An apartment building, Santos",
+          "title": "EDP Headquarters",
           "caption": "Thoughts on concrete architecture? #architecture #design #fyp #brutalism",
           "latitude": 38.7079857938301,
           "longitude": -9.148719572827986,
@@ -233394,7 +233409,7 @@
     {
       "id": "0004F49C-547B-597E-94C6-B9D563466670",
       "createdAt": "2026-09-16",
-      "title": "A concrete building near Cold Spring",
+      "title": "Magazzino Italian Art",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Architectural day trips? #fyp #architecture #design #nyc",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -233409,10 +233424,10 @@
         {
           "id": "806D3DBB-EF9A-5069-A04A-D4B6EE72588B",
           "order": 0,
-          "title": "A concrete building near Cold Spring",
+          "title": "Magazzino Italian Art",
           "caption": "Architectural day trips? #fyp #architecture #design #nyc",
-          "latitude": 41.3694526,
-          "longitude": -73.9476435,
+          "latitude": 41.42988,
+          "longitude": -73.91485,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -233424,8 +233439,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.3694526,
-      "centroidLongitude": -73.9476435,
+      "centroidLatitude": 41.42988,
+      "centroidLongitude": -73.91485,
       "city": "Cold Spring",
       "country": "United States",
       "primaryCategory": "architecture",
@@ -233544,7 +233559,7 @@
     {
       "id": "61820D80-E811-5196-9569-39398E95092B",
       "createdAt": "2026-09-16",
-      "title": "A house on Avenida Atlântica, Copacabana",
+      "title": "Emiliano Rio",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Thoughts on this facade? #fyp #architecture #brasil #design",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -233559,7 +233574,7 @@
         {
           "id": "272BB7BE-072B-59BB-8110-B7949ABC98B5",
           "order": 0,
-          "title": "A house on Avenida Atlântica, Copacabana",
+          "title": "Emiliano Rio",
           "caption": "Thoughts on this facade? #fyp #architecture #brasil #design",
           "latitude": -22.9824480872078,
           "longitude": -43.190244729526526,
@@ -233597,7 +233612,7 @@
     {
       "id": "404749A2-C5F1-505E-9305-10A9E07E0642",
       "createdAt": "2026-09-16",
-      "title": "A house in Morumbi",
+      "title": "Chu Ming Silveira Residence",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Thoughts on this home? #fyp #architecture #brutalism #brasil",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -233612,7 +233627,7 @@
         {
           "id": "70C96E88-D479-5B99-96F9-A4C3628AE9E4",
           "order": 0,
-          "title": "A house in Morumbi",
+          "title": "Chu Ming Silveira Residence",
           "caption": "Thoughts on this home? #fyp #architecture #brutalism #brasil",
           "latitude": -23.614215530886696,
           "longitude": -46.70781441931615,
@@ -233852,7 +233867,7 @@
     {
       "id": "678E9EB5-7B0E-5527-A3FA-E6ED3E4E6095",
       "createdAt": "2026-09-16",
-      "title": "A plaza on Rua Alemanha, Jardim Europa",
+      "title": "MuBE – Museu Brasileiro da Escultura e Ecologia",
       "shortDescription": "A post by @ninosbuildings on TikTok.",
       "longDescription": "Do you guys like brutalism ? #fyp #architecture #design #brutalism",
       "makerId": "0E8FEED6-889E-5193-9B3C-EDE5DE55C56C",
@@ -233867,10 +233882,10 @@
         {
           "id": "37473E17-D6AE-5E85-ADC6-32C41AC546B2",
           "order": 0,
-          "title": "A plaza on Rua Alemanha, Jardim Europa",
+          "title": "MuBE – Museu Brasileiro da Escultura e Ecologia",
           "caption": "Do you guys like brutalism ? #fyp #architecture #design #brutalism",
-          "latitude": -23.5779683,
-          "longitude": -46.6767009,
+          "latitude": -23.5733563,
+          "longitude": -46.6764106,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -233882,8 +233897,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -23.5779683,
-      "centroidLongitude": -46.6767009,
+      "centroidLatitude": -23.5733563,
+      "centroidLongitude": -46.6764106,
       "city": "São Paulo",
       "country": "Brazil",
       "relatedTourIds": [

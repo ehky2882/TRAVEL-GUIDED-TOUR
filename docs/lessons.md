@@ -3614,3 +3614,18 @@ eight days earlier, because the decision lived in `docs/places.md` prose and the
 it. **Every place ruling now goes into `scripts/make-place-menu.py` `DECLINED_PAIRS`, and the
 report skips those pairs with a count.** Read `docs/places.md` before putting candidates to the
 owner anyway.
+
+## A TikTok video's own subtitles name what its caption does not (2026-09-23)
+
+Twelve pins were titled with a guess ("A house in Morumbi", "A concrete building near Cold
+Spring") because the caption named nothing. **Every one of them was named out loud in the video:**
+TikTok serves an auto-generated subtitle file with the post page, and in it the creator says
+"today we're visiting the EDP headquarters designed by Alejandro Aravena". Three of the twelve
+guesses were the wrong KIND of place too: the "guesthouse" was a Zara flagship, the "apartment
+building" an office HQ, the "house" a hotel. And three pins were 457 m, 514 m and **7.3 km** off,
+which a caption title had hidden from every coordinate check. **Before settling for a description,
+read the subtitles.**
+
+Two more routes that worked on caption-only pins: a pin that sits at exactly 0 m from a geocoded
+street address was placed from a venue's listing, so the listing at that address names it; and a
+chef's jacket, a lantern or a coaster in the hero image usually carries the shop's name.
