@@ -71,6 +71,24 @@
     "note": "Wikidata places Q137184 in Seoksu-dong (train station in Anyang-si, Gyeonggi-do, South Korea), not Anyang. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Arco della Pace": {
+    "at": [
+      45.47584316087181,
+      9.172472853576977
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/attraction for this name is 17 m from our pin, so the pin is on the subject. Wikidata's point (Arco della Pace) is 183 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Arkansas Museum of Fine Arts": {
+    "at": [
+      34.7383258,
+      -92.2663529
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/arts_centre for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Arkansas Museum of Fine Arts) is 133 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Asahi Group Ōyamazaki Villa Museum of Art | アサヒグループ大山崎山荘美術館": {
     "at": [
       34.9192166,
@@ -143,6 +161,15 @@
     "note": "Wikidata places Q160556 in Schönefeld (airport serving Berlin, Germany), not Berlin. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Biidaasige Park": {
+    "at": [
+      43.646281,
+      -79.346423
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's leisure/park for this name is 30 m from our pin, so the pin is on the subject. Wikidata's point (Biidaasige Park) is 225 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Bricklayers Arms": {
     "at": [
       51.5261509,
@@ -151,6 +178,15 @@
     "date": "2026-09-21",
     "note": "CORRECT — confirmed against the address the creator's OWN CAPTION states (Charlotte Road, Shoreditch), which geocodes to 0-79 m of our point. 🔴 An OSM+Wikidata cross-check called this OURS-WRONG: both matched a DIFFERENT London pub of the same name and agreed with each other to within 10 m. Two sources agreeing is NOT corroboration when the name is generic.",
     "verdict": "name-collision"
+  },
+  "Bronx Zoo": {
+    "at": [
+      40.8493045,
+      -73.8771379
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/zoo for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Bronx Zoo) is 148 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Brooklyn Bridge Park": {
     "at": [
@@ -168,6 +204,15 @@
     ],
     "date": "2026-09-21",
     "note": "CORRECT — an independent OSM name lookup lands 0-115 m from our point and 306-1,547 m from Wikidata's match, so Wikidata matched something else. Distinctive name, so the cross-check is trustworthy here in a way it is not for a generic one.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Byland Abbey": {
+    "at": [
+      54.203187,
+      -1.158977
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/attraction for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Byland Abbey) is 133 m away. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
   "Cable Cars": {
@@ -233,6 +278,15 @@
     "note": "Wikidata's point is the ticket centre (地中美術館チケットセンター) at the foot of the hill. OSM's tourism=museum outline for 地中美術館 is 17 m from our stop, so the stop is on the museum. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Chichén Itzá": {
+    "at": [
+      20.6829897,
+      -88.5686416
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's leisure/nature_reserve for this name is 15 m from our pin, so the pin is on the subject. Wikidata's point (Chichén-Itzá) is 518 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Chiesa di Nostra Signora del Cadore": {
     "at": [
       46.429176,
@@ -287,6 +341,24 @@
     "note": "🔴 REVERSE-GEOCODED BOTH POINTS and they land inside the SAME feature — the signature of a subject with no single honest point: theirs is 'Francis Mallmann en Provence', a restaurant ON the estate; a large vineyard-and-art estate.",
     "verdict": "extended-feature"
   },
+  "Court of Final Appeal | 香港終審法院": {
+    "at": [
+      22.281057029284323,
+      114.16051433511129
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/courthouse for this name is 23 m from our pin, so the pin is on the subject. Wikidata's point (Court of Final Appeal) is 197 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Crystal Bridges Museum of American Art": {
+    "at": [
+      36.382613,
+      -94.204063
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/museum for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Crystal Bridges Museum of American Art) is 152 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Cu Chi Tunnels – Bến Dược | Địa Đạo Củ Chi - Bến Dược": {
     "at": [
       11.1499296,
@@ -295,6 +367,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q192721 as \"network of underground tunnels used by Viet Cong soldiers during comba\" — not a point. A 12269 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Discovery Cove": {
+    "at": [
+      28.4052936,
+      -81.4639097
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/theme_park for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Discovery Cove) is 216 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Doi Inthanon National Park | อุทยานแห่งชาติดอยอินทนนท์": {
     "at": [
@@ -361,12 +442,12 @@
   },
   "First National Bank of Hollywood": {
     "at": [
-      34.101687,
-      -118.338437
+      34.1018577,
+      -118.3384229
     ],
-    "date": "2026-09-21",
-    "note": "Wikidata describes Q34006 as \"neighborhood in Los Angeles, California, United States\" — not a point. A 1146 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
-    "verdict": "extended-feature"
+    "date": "2026-09-23",
+    "note": "Re-stamped at the place point it moved to (#1060s). OSM's building/commercial for this name is 0 m from our pin; Wikidata's point (Hollywood) is 1151 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Fondation Cartier pour l'art contemporain": {
     "at": [
@@ -403,6 +484,15 @@
     "date": "2026-09-22",
     "note": "Wikidata's 'Futaba' is a different entity 11 km away. The caption gives the soba shop's own address, 〒101-0064 東京都千代田区神田猿楽町２丁目２−9 (Kanda-Sarugakucho, Chiyoda), and the pin sits there. NOT MOVED.",
     "verdict": "name-collision"
+  },
+  "George Washington's Mount Vernon": {
+    "at": [
+      38.71018,
+      -77.08882
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/attraction for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Mount Vernon) is 356 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Ginza Kojyu": {
     "at": [
@@ -494,6 +584,15 @@
     "note": "Wikidata describes Q71719 as \"more than 2,700 five-pointed terrazzo and brass stars embedded in the \" — not a point. A 1664 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Hong Kong Disneyland": {
+    "at": [
+      22.3130698,
+      114.0409846
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/theme_park for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Hong Kong Disneyland) is 243 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Hong Kong International Airport": {
     "at": [
       22.3125986,
@@ -555,6 +654,24 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata places Q136324482 in Nuevo Nayarit (hotel in Nuevo Vallarta, Nayarit, Mexico), not Nuevo Vallarta. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Hunters Point Library": {
+    "at": [
+      40.745255,
+      -73.958033
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/library for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Hunters Point Library) is 167 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Hôtel de Ville": {
+    "at": [
+      48.85657,
+      2.35222
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/townhall for this name is 28 m from our pin, so the pin is on the subject. Wikidata's point (Hôtel de Ville) is 122 m away. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
   "Hōrin-ji Temple | 法輪寺": {
@@ -637,6 +754,15 @@
     "date": "2026-09-21",
     "note": "CORRECT. Wikidata agrees with us to 0 m. An OSM name lookup returns the METRO STATION Invalidovna 253 m away -- named after the baroque building, not the building.",
     "verdict": "name-collision"
+  },
+  "Isla Bella Beach Resort": {
+    "at": [
+      24.7053962,
+      -81.1195735
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's leisure/resort for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Isla Bella Beach Resort & Spa - Florida Keys) is 189 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Jack Shainman Gallery": {
     "at": [
@@ -754,6 +880,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q95621200 as \"river in the Basque Country\" — not a point. A 88801 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Labour and Wait": {
+    "at": [
+      51.52468,
+      -0.07332
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's shop/houseware for this name is 1 m from our pin, so the pin is on the subject. Wikidata's point (Labour and Wait) is 216 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Lake Louise": {
     "at": [
@@ -899,6 +1034,15 @@
     "note": "Wikidata places Q151963 in Bezirk Mitte (northern part of Spree Island in the Spree river in central Berlin), not Berlin. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "Musée du Louvre": {
+    "at": [
+      48.8611473,
+      2.3380277
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's tourism/museum for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Louvre Museum) is 161 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Míčovna (Ball Game Hall)": {
     "at": [
       50.09244,
@@ -987,6 +1131,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata matched a different real entity of the same name. Q7083689 is in GUELPH, Ontario — verified; ours is Toronto's. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Osteria Francescana": {
+    "at": [
+      44.6447968,
+      10.9215627
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/restaurant for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Osteria Francescana) is 122 m away. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
   "Palika Kendra (NDMC HQ)": {
@@ -1151,6 +1304,15 @@
     "note": "OWNER-CONFIRMED FINE. Our pin sits near the island's centre. The 260 m match is Q1865158 'Roosevelt Island' -- the SUBWAY STATION, which Wikidata labels with the island's bare name. The island itself (Q909777, 39 sitelinks) is 265 m away. Both distances are trivial for an entry titled after the whole island.",
     "verdict": "name-collision"
   },
+  "Rudolph Hall": {
+    "at": [
+      41.3087688,
+      -72.9318864
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's building/university for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Yale Art and Architecture Building) is 767 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "Saint-Sulpice": {
     "at": [
       48.85107,
@@ -1158,6 +1320,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata matched a different real entity of the same name. Q924614 is a COMMUNE IN OISE — verified; ours is the Paris church. Our coordinate sits inside its own city's cluster. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "San Gervasio": {
+    "at": [
+      20.5010598,
+      -86.8467809
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's historic/archaeological_site for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (San Gervasio) is 176 m away. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
   "Santa Maria Assunta": {
@@ -1212,6 +1383,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata places Q55721633 in Changi (), not Singapore. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Smithfield Market": {
+    "at": [
+      51.5193568,
+      -0.1012706
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/marketplace for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Smithfield Market War Memorial) is 161 m away. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
   "St. Anselm": {
@@ -1277,6 +1457,15 @@
     "note": "Wikidata describes Q474560 as \"island in Okinawa, Japan\" — not a point. A 1209 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
   },
+  "Teatro Colón": {
+    "at": [
+      -34.60091353095575,
+      -58.38340290546154
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/theatre for this name is 28 m from our pin, so the pin is on the subject. Wikidata's point (Teatro Colón) is 156 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "The Ancient City (Muang Boran) | เมืองโบราณ": {
     "at": [
       13.5397887,
@@ -1331,6 +1520,15 @@
     "note": "Wikidata places Q2317502 in delegation of Tataouine Sud (village in Tunisia), not Chenini. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "The Blackfriar": {
+    "at": [
+      51.5121465,
+      -0.1036381
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/pub for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (The Blackfriars Settlement And Attached Railings) is 1078 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "The Britannia": {
     "at": [
       51.49862,
@@ -1365,6 +1563,15 @@
     ],
     "date": "2026-09-21",
     "note": "Wikidata places Q120730 in Japan (prefecture of Japan), not Kyoto. A different entity of the same name. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "The Federal Reserve Bank of New York": {
+    "at": [
+      40.7082308,
+      -74.0085461
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's building/yes for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (New York Stock Exchange) is 259 m away. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
   "The Floating Islands of Lake Titicaca": {
@@ -1402,6 +1609,15 @@
     "date": "2026-09-21",
     "note": "OUR coordinate was 562 m west. THREE independent signals agree on 51.50885,-0.03396: the street its own caption names (Narrow Street, Limehouse), OSM's geocode of the full address 76 Narrow St E14 8BP (type=pub), and Wikidata (4 m). The only one of seven @historicpubcrawls pubs that was actually wrong.",
     "verdict": "fixed"
+  },
+  "The Kampong": {
+    "at": [
+      25.715575,
+      -80.251241
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's leisure/garden for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (The Kampong) is 179 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "The Kings Arms": {
     "at": [
@@ -1493,6 +1709,15 @@
     "note": "Wikidata places Q27087082 in London Borough of Lambeth (theatre in Lambeth, London, England, UK), not London. A different entity of the same name. NOT MOVED.",
     "verdict": "wikidata-elsewhere"
   },
+  "The New York Botanical Garden": {
+    "at": [
+      40.8622431,
+      -73.8771541
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's leisure/garden for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (New York Botanical Garden) is 182 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "The Peak Tram | 山頂纜車": {
     "at": [
       22.2778905,
@@ -1564,6 +1789,15 @@
     "date": "2026-09-21",
     "note": "The gazetteer matched the place NAMED IN THE TITLE rather than the subject: matched the CITY of Lucca (112 sitelinks). Not a coordinate error. NOT MOVED.",
     "verdict": "editorial-title"
+  },
+  "The Spotted Horse": {
+    "at": [
+      51.4627042,
+      -0.2166634
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's amenity/pub for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Spotted Horse) is 133 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "The Stone Forest of Tsingy": {
     "at": [
@@ -1726,6 +1960,15 @@
     "date": "2026-09-21",
     "note": "Wikidata describes Q17541 as \"mountain in Hong Kong\" — not a point. A 792 m gap is the normal condition for one of these, not a defect. NOT AN ERROR.",
     "verdict": "extended-feature"
+  },
+  "Vizcaya Museum and Gardens": {
+    "at": [
+      25.744699,
+      -80.211577
+    ],
+    "date": "2026-09-23",
+    "note": "OSM's leisure/park for this name is 0 m from our pin, so the pin is on the subject. Wikidata's point (Vizcaya Museum and Gardens) is 178 m away. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
   },
   "Walden 7": {
     "at": [

@@ -185,3 +185,14 @@ botanic garden, De Wallen), where an OSM point is just the middle of an area; ch
 same-name branches; place members; the Four Facades walk; and two big gaps that were a different
 branch (Piccolina Gelateria) or an extended waterfront (the Dhow Wharfage). Record:
 `checks/osm-atlas-stops-260923.json`. Spine DISAGREES stays 0; cache refreshed.
+
+## Part 8: 28 near-miss rows ruled with OSM evidence
+
+Of the spine's REVIEW band (100 m–1 km from Wikidata), **27 rows had OSM's same-name point of
+interest within 31 m of our pin**, which settles them: the pin is on the subject and Wikidata's
+point is elsewhere, often a different entity (*The Blackfriar* pub vs *Blackfriars Settlement*,
+*Rudolph Hall* vs a campus point). Recorded as `wikidata-elsewhere` verdicts, each stamped at the
+pin's current point. *First National Bank of Hollywood*'s old verdict was stamped at its
+pre-place point and no longer applied, so it was re-stamped. *Ancient Messene* was **not** ruled:
+OSM's match was a café of that name, not the archaeological site. REVIEW unexamined **163 → 137**.
+The remainder are large sites (parks, zoos, a racecourse, campuses, castles).
