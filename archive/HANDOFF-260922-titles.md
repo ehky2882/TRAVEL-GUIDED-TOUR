@@ -81,3 +81,39 @@ dissolved places since the Westerkerk leak (`docs/lessons.md`), so no SQL is owe
 the 47-byte place count after the publish.
 
 Places **431 → 435**. Spine DISAGREES **0 unexamined** again; no unplaced same-name pairs are left.
+
+## Part 3 (overnight 2026-09-23): an OSM name sweep of the pins no gazetteer knew
+
+The owner went to bed and asked for meaningful overnight work. The target was the 2,906 entries the
+spine (Wikidata) cannot match. **2,175** of them are link pins with a title that could name a
+venue, and each was looked up **by name on OpenStreetMap**.
+
+| | |
+|---|---|
+| **CONFIRM** (a same-name OSM feature of a POI type within 60 m) | **557**. These are now independently checked for the first time |
+| no usable OSM match | 1,557 (editorial titles like *"The House of Death on West 10th Street"*, and venues OSM lacks) |
+| **moved** | **8**: Southwark Tavern 1,378 m (pinned near Waterloo; the caption says Borough), Café De Klos 1,305 m, Ernst Fuchs Museum 1,140 m (Otto Wagner villa, Hüttelbergstraße), Whiskers Smokehouse 370 m, The Twist (Kistefos) 263 m, Gordon Nicolson Kiltmakers 224 m (the caption's own address), Bust of Sylvette 202 m, The Anchor (Charlestown) 110 m |
+| left alone, recorded for a human | 61: chains with several same-name branches, loose names, place members, and >1 km gaps where the caption names **our** branch (Little Bao *in Central*, Henry's Burger *in Jiyugaoka*, Horatio's *new space in Soho*) |
+
+**The move rule:** the OSM name is exactly the title's (or the Latin half of a bilingual name
+matches), the feature is of a POI type, it is the only same-name hit, the pin is not in a place,
+and the gap is 100 m–1 km. Anything over 1 km was read by hand first. Loose containment matching was
+tried and **rejected for moves**: it paired *Saint Mary's Cathedral* with *Old* Saint Mary's (a
+different church) and *The Chelsea Hotel* with *The GEM Hotel Chelsea*. It is kept only for
+confirming a pin already within 60 m.
+
+**The REVIEW band, again:** 218 unruled rows were re-asked on Photon. Where **OSM and Wikidata
+agree with each other within 75 m and both disagree with us**, 3 link pins moved: Café Goldegg
+124 m, Auditorium Oscar Niemeyer (Ravello) 230 m, Brasília Palace Hotel 143 m. **12 Atlas tours met
+the same test and were NOT moved**, because an Atlas stop is a geofence trigger and may be a
+chosen viewpoint. They are for the owner: Estádio do Dragão 185 m, Jardins do Palácio de Cristal
+177 m, Nubank Parque 179 m, Castelo de São Jorge 163 m, Jardim da Estrela 149 m, Chichu Art
+Museum 241 m (OSM's point is the ticket office), Palais-Royal 156 m, Dolby Theatre 113 m, Gaysorn
+Amarin 150 m, Candler Building 141 m, and AMNH (a place member).
+
+**The record:** `checks/osm-name-sweep-260923.json`, with every CONFIRM (the pin's point and OSM's)
+and the 61 left-alone rows. No check reads it; it exists so the sweep is not redone blind.
+
+⚠️ **Nominatim banned the session after ~800 queries** (HTTP 429 on everything, even at one
+request per 2 s). The sweep moved to **Photon** (`photon.komoot.io`, the same OSM data, no key),
+which served the remaining ~1,500 at 1.5 s spacing without a single refusal.

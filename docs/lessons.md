@@ -3550,3 +3550,22 @@ and a pin may only suggest pins in its own city. The city is an input to the rel
 so editing it by hand makes other entries invalid. **Leave `city` alone unless the same PR rebuilds
 related tours** (`scripts/build-embeddings.py --write-related`), and before pushing, count how many
 entries name the one you are changing.
+
+## Nominatim will cut a bulk run off; Photon is the same OSM data (2026-09-23)
+
+An overnight name sweep was refused by Nominatim (**HTTP 429 on every request**) after about 800
+queries, although it was spaced 2 s apart. Nominatim's usage policy does not allow bulk geocoding,
+and it enforces that. **Photon** (`https://photon.komoot.io/api/?q=…`, no key) searches the same
+OpenStreetMap data, returns `osm_key`/`osm_value`/`name` on each feature, and served ~1,500 more
+queries at 1.5 s spacing with no refusals. Use Nominatim for a handful of lookups and Photon for a
+sweep. Either way, read the HTTP status: a 429 parsed as JSON turns into "no match".
+
+## A same-name match is only safe for MOVING when the name is exact (2026-09-23)
+
+Token-containment matching ("the shorter name's words all appear in the longer") looked like the
+right fix for bilingual OSM names, and it would have moved pins onto the wrong buildings: *Saint
+Mary's Cathedral* → *Old* Saint Mary's Cathedral, *The Chelsea Hotel* → *The GEM Hotel Chelsea*,
+*The House of Commons* → *Office of the Leader of the House of Commons*. **Confirm with a loose
+match, move only on an exact one** (or the same Latin half of a bilingual name), and read every gap
+over 1 km by hand: in this sweep those were mostly the caption naming a *different branch* from the
+one OSM returned first.
