@@ -63264,8 +63264,8 @@
           "order": 0,
           "title": "The Ara Pacis and the Mausoleum of Augustus",
           "caption": "Augustus wrote his own obituary — thirty-five chapters of everything he wanted remembered, in his own words — and this square holds the two monuments he built to make sure the remembering happened.",
-          "latitude": 41.9061,
-          "longitude": 12.4753,
+          "latitude": 41.9061386,
+          "longitude": 12.4754631,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ara-pacis.mp3",
           "audioDurationSeconds": 182,
           "triggerMode": "geofenced",
@@ -63277,8 +63277,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 182,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.9061,
-      "centroidLongitude": 12.4753,
+      "centroidLatitude": 41.9061386,
+      "centroidLongitude": 12.4754631,
       "city": "Rome",
       "country": "Italy",
       "relatedTourIds": [
@@ -103357,7 +103357,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "E80DAFED-B14D-5B38-9B34-43E74536362A",
-        "c7052e56-8a06-4e35-ba64-4a65f2f5e11c"
+        "c7052e56-8a06-4e35-ba64-4a65f2f5e11c",
+        "9BD9DBC9-51F5-5AAD-8D9C-9F67383758D7"
       ]
     },
     {
@@ -106553,6 +106554,51 @@
       "tourIds": [
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "EE07C8E2-CDE6-581D-9620-68F02D7145A7"
+      ]
+    },
+    {
+      "id": "bae51db2-c7f5-5220-b6d5-d302c36b1411",
+      "name": "Queens Museum",
+      "description": "The museum in the New York City Building, built for the 1939 World's Fair and the city's pavilion again in 1964; between 1946 and 1950 it was home to the United Nations General Assembly. Its best-known exhibit is the Panorama of the City of New York, a scale model of all five boroughs.",
+      "latitude": 40.745869,
+      "longitude": -73.8467413,
+      "city": "Queens",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "f4c92d43-14b3-48e7-8372-598996917b2d",
+        "ACEB5ABF-9EBA-5CCE-B4B4-2F444A004933"
+      ]
+    },
+    {
+      "id": "70b64822-084c-54bf-ae4f-20dd64383296",
+      "name": "Ara Pacis",
+      "description": "The Altar of Augustan Peace, consecrated in 9 BC to celebrate Augustus's return from Spain and Gaul, shown since 2006 in Richard Meier's glass-and-travertine museum beside the Mausoleum of Augustus.",
+      "latitude": 41.9061386,
+      "longitude": 12.4754631,
+      "city": "Rome",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "de735b9e-65ed-53f7-bb75-db34d5d660de",
+        "7F813653-AA6A-5EF6-8FBA-7D0FAC395101"
+      ]
+    },
+    {
+      "id": "79fdfae5-aadf-5fa5-b7ac-8034ac4158de",
+      "name": "Casa de Chá da Boa Nova",
+      "description": "Álvaro Siza's first major building, a tea house finished in 1963 and set low among the rocks above the Atlantic at Leça da Palmeira. It is a national monument and is now a restaurant.",
+      "latitude": 41.2029991,
+      "longitude": -8.7151089,
+      "city": "Leça da Palmeira",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "ae287886-2c55-4c3e-b8c2-e2389323aec6",
+        "A9699968-D5B4-54D1-B697-804B86328B34"
       ]
     }
   ],
@@ -127905,8 +127951,8 @@
           "order": 0,
           "title": "Relics of the World's Fairs",
           "caption": "Replying to @zzzamo Did you know there are plenty of relics from both World’s Fairs inside Flushing Meadows-Corona Park? #nychistory #nyc #flushingmeadowscoronapark #worldsfair #nyctiktok",
-          "latitude": 40.74655050747616,
-          "longitude": -73.84505217445324,
+          "latitude": 40.7463838,
+          "longitude": -73.8450748,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -127918,8 +127964,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.74655050747616,
-      "centroidLongitude": -73.84505217445324,
+      "centroidLatitude": 40.7463838,
+      "centroidLongitude": -73.8450748,
       "city": "Queens",
       "country": "United States",
       "relatedTourIds": [
@@ -271033,8 +271079,8 @@
           "order": 0,
           "title": "Colonnes de Buren",
           "caption": "This iconic Paris landmark was hated at first but now it’s one of the city’s most popular photo spots 📸 What do you think of it? 📍Colonnes de Buren 🎨 Daniel Buren",
-          "latitude": 48.8635847,
-          "longitude": 2.3362042,
+          "latitude": 48.8636008,
+          "longitude": 2.337068,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -271046,8 +271092,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8635847,
-      "centroidLongitude": 2.3362042,
+      "centroidLatitude": 48.8636008,
+      "centroidLongitude": 2.337068,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [

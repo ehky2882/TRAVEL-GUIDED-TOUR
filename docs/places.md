@@ -243,6 +243,27 @@ and the pin already sits among them, nearer mid-Gallery than any one of them. Wi
 one — so a mid-Gallery point is the honest answer. Rule 5 says a place is a coordinate and one
 point must be honest for everyone; here that point is deliberately the middle, not an endpoint.
 
+### 2026-09-23: seven parts and tenants declined in one sitting — the pattern is now clear
+
+Put to the owner as numbered questions, answered in one line:
+
+| Pair | Ruling |
+|---|---|
+| Westminster Abbey + four interior pins (Cosmati Pavement, Shrine of Edward the Confessor, Tomb of Elizabeth I, Britain's Oldest Door) | **NO** — a re-ask of the 2026-09-15 decision above; the comingling reason stands |
+| Rockefeller Center + The Channel Gardens | **NO** |
+| Walt Disney Concert Hall + its rooftop Blue Ribbon Garden | **NO** |
+| Arc de Triomphe + the Tomb of the Unknown Soldier beneath it | **NO** |
+| Taipei 101 + A Joy (the buffet at the top) · Grand Central Market + Eggslut (a stall) | **NO** — Rule 4, tenants |
+| The Unisphere + Relics of the World's Fairs | **YES**, joined |
+| Queens Museum (Atlas tour) + *Before the Queens Museum* | **YES**, new place (and the owner asked why it was missed — see `docs/lessons.md`) |
+| Ara Pacis Museum + *The Ara Pacis and the Mausoleum of Augustus* | **YES**, new place |
+
+🔴 **Every part-of-a-site pairing was declined.** Together with 2026-09-15 this is now a consistent
+pattern: **a component inside or on a site stays out of the site's place.** It is still recorded as
+undecided above only because the owner has not stated it as a rule; until they do, keep asking, but
+expect NO and never assume YES. Every ruling here is in `scripts/make-place-menu.py`
+`DECLINED_PAIRS`, which `check-place-candidates.py` now reads so it never re-lists them.
+
 ## 🔴 Before deciding anything: check the coordinate
 
 `Lloyd's of London` / `The Leadenhall Building` sat 7 m apart and looked like a

@@ -3589,3 +3589,28 @@ none of it, found the pairs the next morning, and made all three places. **The d
 and the decision still reached the wrong person.** The upload skill now says a contributor's
 session must leave place questions on the owner's board (`status.py --add-owner`) and never take
 a contributor's answer as the ruling. Where a record says "Owner:", check which person that was.
+
+## A landmark named after its own city is invisible to a title match (2026-09-23)
+
+`check-place-candidates.py` strips the city's name from each title before comparing, so "the
+Barcelona Pavilion" and "the Pavilion" can pair. That stripped **"Queens Museum" in city "Queens"
+down to `{museum}`**, which is generic, while the pin *"Before the Queens Museum"* (filed under
+"New York") kept `queens`. The two sat 68 m apart for weeks and the owner found them. The comparison
+now retries with the city kept when stripping leaves nothing distinctive. **Two cities spelled
+differently for one borough was half the cause**: the stripping only ran on one side.
+
+## Moving coordinates can CREATE a place candidate; read the whole report afterwards (2026-09-23)
+
+The Atlas-stops sweep moved the Queens Museum tour, Casa de Chá da Boa Nova and Palais-Royal onto
+OSM's points, and each landed **exactly** on a pin that was already there. `check-place-candidates`
+said so at once ("EXACT · PROVEN — create the place"), and it was missed because only the first
+line of the report was read. **After any batch of coordinate moves, read every tier of the report,
+not its first line.**
+
+## A ruling nobody's tool reads gets asked again (2026-09-23)
+
+The report re-offered four Westminster Abbey interiors the owner had kept out of the Abbey's place
+eight days earlier, because the decision lived in `docs/places.md` prose and the checker never read
+it. **Every place ruling now goes into `scripts/make-place-menu.py` `DECLINED_PAIRS`, and the
+report skips those pairs with a count.** Read `docs/places.md` before putting candidates to the
+owner anyway.

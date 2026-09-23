@@ -129,6 +129,38 @@ DECLINED_GROUPS = {
 # Keyed by the frozen set of the two titles, never by the N-label: the labels
 # are positions in a sorted list and renumber whenever a batch lands.
 DECLINED_PAIRS = {
+    frozenset({'The Cosmati Pavement', 'Westminster Abbey'}):
+        "owner 2026-09-23: NO — a part inside Westminster Abbey stays out of the Abbey's place (the 2026-09-15 reason: don't comingle the interior with the building; docs/places.md)",
+    frozenset({'The Shrine of Edward the Confessor', 'Westminster Abbey'}):
+        "owner 2026-09-23: NO — a part inside Westminster Abbey stays out of the Abbey's place (the 2026-09-15 reason: don't comingle the interior with the building; docs/places.md)",
+    frozenset({'The Tomb of Elizabeth I', 'Westminster Abbey'}):
+        "owner 2026-09-23: NO — a part inside Westminster Abbey stays out of the Abbey's place (the 2026-09-15 reason: don't comingle the interior with the building; docs/places.md)",
+    frozenset({"Britain's Oldest Door", 'Westminster Abbey'}):
+        "owner 2026-09-23: NO — a part inside Westminster Abbey stays out of the Abbey's place (the 2026-09-15 reason: don't comingle the interior with the building; docs/places.md)",
+    frozenset({"Britain's Oldest Door", 'The Tomb of Elizabeth I'}):
+        "owner 2026-09-23: NO — a part inside Westminster Abbey stays out of the Abbey's place (the 2026-09-15 reason: don't comingle the interior with the building; docs/places.md)",
+    frozenset({'The Shrine of Edward the Confessor', 'The Cosmati Pavement'}):
+        "owner 2026-09-23: NO — a part inside Westminster Abbey stays out of the Abbey's place (the 2026-09-15 reason: don't comingle the interior with the building; docs/places.md)",
+    frozenset({'The Channel Gardens', 'Rockefeller Center, the Plaza'}):
+        'owner 2026-09-23: NO — the Channel Gardens stay out of Rockefeller Center (part vs whole)',
+    frozenset({'The Channel Gardens', 'The Beam at Rockefeller Center'}):
+        'owner 2026-09-23: NO — the Channel Gardens stay out of Rockefeller Center (part vs whole)',
+    frozenset({'The Channel Gardens', 'The Rink at Rockefeller Center'}):
+        'owner 2026-09-23: NO — the Channel Gardens stay out of Rockefeller Center (part vs whole)',
+    frozenset({'The Channel Gardens', 'The Last Rivet at Rockefeller Center'}):
+        'owner 2026-09-23: NO — the Channel Gardens stay out of Rockefeller Center (part vs whole)',
+    frozenset({'The Channel Gardens', 'The Lost Theatre at Rockefeller Center'}):
+        'owner 2026-09-23: NO — the Channel Gardens stay out of Rockefeller Center (part vs whole)',
+    frozenset({'The Blue Ribbon Garden', 'Walt Disney Concert Hall'}):
+        'owner 2026-09-23: NO — the rooftop garden stays out of Walt Disney Concert Hall (part vs whole)',
+    frozenset({'The Blue Ribbon Garden', 'Downtown LA: Bunker Hill to the Pueblo'}):
+        'owner 2026-09-23: NO — the rooftop garden stays out of Walt Disney Concert Hall (part vs whole)',
+    frozenset({'The Tomb of the Unknown Soldier', 'Arc de Triomphe'}):
+        'owner 2026-09-23: NO — the tomb beneath the arch stays out of the Arc de Triomphe (part vs whole)',
+    frozenset({'A Joy, Taipei 101', 'Taipei 101'}):
+        'owner 2026-09-23: NO — a buffet on the top floor is a tenant, not the tower (Rule 4)',
+    frozenset({'Eggslut', 'Grand Central Market'}):
+        'owner 2026-09-23: NO — a stall is a tenant, not the market (Rule 4)',
     frozenset({"Steinway Tower", "111 West 57th Street (Steinway Tower)"}):
         "owner 2026-09-22: keep separate AT LEAST FOR NOW — provisional, not a final ruling. Same building under two names, 145 m apart; revisit if the owner reopens it",
     frozenset({"Steinway Hall", "111 West 57th Street (Steinway Tower)"}):
