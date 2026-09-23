@@ -167,3 +167,21 @@ with adoption; a catalogue-wide rewrite now costs each updated phone more than a
 `docs/scaling-to-100k-design.md`, ROADMAP, and the owner item `release-1-1-3-when-approved` is
 cleared. **Still owed:** `MARKETING_VERSION` 1.1.3 → 1.1.4, opened as its own PR because
 `project.pbxproj` waits for the owner's OK.
+
+## Part 7: every Atlas stop checked against OSM under the new rule
+
+Edward: *"START 2 NEXT"*, then *"merge 1078"* (MARKETING_VERSION is now **1.1.4**, #1078).
+
+All **1,954** Atlas tour stops were looked up by name on Photon (OSM). **503 confirmed** within 50 m.
+**52 moved** (50–130 m each) where OSM and Wikidata agree with each other (within 75 m) and both
+disagree with our stop: Brooklyn Museum 129 m, Ny Carlsberg Glyptotek 109 m, Jay Pritzker Pavilion,
+Designmuseum Danmark, Buckingham Palace 99 m, Fondazione Prada, Capitol Records, La Brea Tar Pits,
+Sydney Opera House, Musée Rodin, Radio City and more. **5 walk stops** sitting on the same old
+point under the same name moved with them (Capitol Records on the Hollywood walk, plus stops in Old
+Montreal, the Scheunenviertel, Chicago's Lakefront and the Dreta de l'Eixample).
+
+**Deliberately NOT moved:** large parks and districts (Retiro, Luxembourg, Champ de Mars, Porto's
+botanic garden, De Wallen), where an OSM point is just the middle of an area; chains with several
+same-name branches; place members; the Four Facades walk; and two big gaps that were a different
+branch (Piccolina Gelateria) or an extended waterfront (the Dhow Wharfage). Record:
+`checks/osm-atlas-stops-260923.json`. Spine DISAGREES stays 0; cache refreshed.
