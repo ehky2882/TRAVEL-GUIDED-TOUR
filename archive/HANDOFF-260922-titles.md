@@ -117,3 +117,43 @@ and the 61 left-alone rows. No check reads it; it exists so the sweep is not red
 ⚠️ **Nominatim banned the session after ~800 queries** (HTTP 429 on everything, even at one
 request per 2 s). The sweep moved to **Photon** (`photon.komoot.io`, the same OSM data, no key),
 which served the remaining ~1,500 at 1.5 s spacing without a single refusal.
+
+## Part 4 (2026-09-23 morning): the owner's rulings on the overnight questions
+
+**"MOVE THE ATLAS TOURS … as the catalog evolved I think [a deliberate spot to stand] would be
+increasingly difficult to manage for a large catalog."** This is a durable rule change, now in
+CLAUDE.md rule 8c and `docs/lessons.md`: **an Atlas stop sits on its subject, like a pin.**
+
+- **9 moved** onto an OSM feature of the right type that Wikidata agrees with (within 75 m): Estádio
+  do Dragão 185 m, Nubank Parque 179 m, Jardins do Palácio de Cristal 177 m, Castelo de São Jorge
+  163 m, Palais-Royal 156 m, Gaysorn Amarin 150 m, Jardim da Estrela 149 m, Candler Building
+  141 m, Dolby Theatre 113 m. The Hollywood Boulevard walk's *Dolby Theatre* stop shared the old
+  point and moved with it.
+- **Chichu Art Museum was NOT moved, and the evidence overturned the premise.** OSM's
+  `tourism=museum` outline for 地中美術館 is **17 m from our stop**. The OSM point that "agreed
+  with Wikidata" was the **ticket centre** at the foot of the hill, so Wikidata is the one pointing
+  at the wrong building. Recorded as a spine verdict (`wikidata-elsewhere`).
+- **American Museum of Natural History was NOT moved.** Its point is on the Central Park West
+  frontage, and it is also stop 0 of the *Four Facades* walk, whose subject is that facade.
+  Moving it to the centroid of a four-block building would pull the walk's first facade into the
+  middle of the block. It stays as a walk-stop exception to the new rule.
+
+**"RENAME THE 10":** Porchester Spa, Wilton's Music Hall, Michelin House, Le Beaujolais, Edith
+Macefield's House, James Gordon Bennett Monument, William H. Seward Monument, Unité d'Habitation,
+Mont Sainte-Odile and Café Konditorei Fürst, each with its stop title set the same.
+
+**For the owner, from another session's #1075 (@preetigills, 55 Paris pins):** three same-name
+pairs, each within 21 m. Le Relais de Venise (two pins, 0 m), Café de la Paix (two pins, 20 m), and
+Musée Carnavalet (the Atlas tour and a pin, 21 m).
+
+## Part 5: the #1075 place pairs
+
+Edward: *"make all three places. WHY WEREN'T THESE FLAGGED AT THE TIME OF UPLOAD (PRESUMABLY MY
+BROTHER UPLOADED)"*. **They were flagged.** #1075 (opened and merged by @arthuryung-gif) ran
+`check-place-candidates`, which found all three, and its session asked the contributor, who said
+"keep separate". It was recorded as the owner's ruling. Fixed by routing: `.claude/skills/atlas-upload/SKILL.md`
+step 6 now requires `status.py --add-owner` for every place question in a contributor's session,
+plus a "For Edward" section in the PR body. Places made: **Le Relais de Venise** (both pins
+already on OSM's restaurant, 271 Bd Pereire), **Café de la Paix** (OSM restaurant, one pin moved
+20 m), **Musée Carnavalet** (OSM museum, the Atlas tour moved 21 m under the new stops-on-subject
+rule). Places **435 → 438**.

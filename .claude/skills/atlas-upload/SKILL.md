@@ -238,6 +238,23 @@ point, so it is his call, and `docs/places.md` holds the rules he has already
 set. CI prints both reports on the PR too, but a report nobody reads decides
 nothing.
 
+🔴 **The person you are talking to may not be Edward — and only Edward can answer.**
+If you are working with anyone else (his brother, a partner, any contributor), **do
+not ask them and do not accept their answer as the ruling**, however sure they
+sound. Instead, leave every place question on Edward's board, in the same PR:
+
+```bash
+python3 scripts/status.py --add-owner place-<slug> "Place? <A> and <B>, <N> m apart, <city>"
+```
+
+and list them in the PR body under **"For Edward: place questions"**. Merge the pins
+as they are; the places come after he answers. *Why:* on 2026-09-23 a 55-pin batch
+flagged Café de la Paix, Musée Carnavalet and Le Relais de Venise correctly. The
+session put the question to the contributor it was talking to, recorded their
+"keep separate" as *"Owner: keep them as separate entries — do not re-offer"*, and
+Edward never saw it. He found them the next morning and made all three places.
+The check worked; the question went to the wrong person.
+
 
 Then commit `Tours.json` on a branch, open the PR, let CI go green, merge.
 

@@ -34,3 +34,10 @@ Worth folding into the tool properly; not done here.
 validate-tours-mirror clean (no new warnings after adding `Venue` to two shop pins);
 55 filenames match the catalogue; 55 heroes pushed to gh-pages as additions only (`e0050771`);
 place reports: only the three owner-ruled pairs, joins 0.
+
+## ⚠️ Superseded (2026-09-23, later the same day)
+
+The "Owner: keep them as separate entries" above was the **contributor's** answer, not Edward's.
+Edward has since ruled: **make all three places** (Le Relais de Venise, Café de la Paix, Musée
+Carnavalet). They were made on branch `claude/scale-pinned-tours-automation-dba3lx`. The upload
+skill now routes place questions to Edward's board, not to the person in the chat.

@@ -1,6 +1,6 @@
 # Place candidates — the live menu
 
-**Regenerated 2026-09-23 00:48 UTC against `main` at `8a3022c2`.** Every number here is a reading of
+**Regenerated 2026-09-23 13:10 UTC against `main` at `81b34fc3`.** Every number here is a reading of
 `Tours.json` and goes stale the moment a pin batch merges. Regenerate it — do not patch it:
 
 ```bash
@@ -11,7 +11,7 @@ python3 scripts/make-place-menu.py
 
 A `Place` is a site that more than one entry describes: the site becomes the thing on the map
 and the entries become its contents. The catalogue holds
-**435 places covering 1066 entries**.
+**438 places covering 1072 entries**.
 
 The 2026-09-11 sweep found 221 candidates and **45 became places** — 7 existing places gained
 the 8 entries standing on them, 38 new places came from the 0 m rows, and both held groups
@@ -23,16 +23,16 @@ the normal condition. What follows is what is open **right now**.
 
 | | Finding | Act on it? |
 |---|---|---|
-| **§ 1** | **0 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
+| **§ 1** | **1 on an identical coordinate** — the catalogue's own identity rule | Yes, highest confidence |
 | **§ 2** | **26 sites** with 2+ entries within 25 m | Owner picks |
-| **§ 3** | 32 same-subject pairs 25–500 m apart | Read one at a time |
+| **§ 3** | 33 same-subject pairs 25–500 m apart | Read one at a time |
 | **§ 4** | 35 groups **already declined** | Do not re-offer |
 
 ## 🔴 What creating one costs — it is never just a list entry
 
 A place needs its own **name, description, address and a chosen coordinate**. And because a
 place's identity is **exact coordinate equality** (`Place.swift`, enforced by `validate-tours`
-at 1e-9°), every member is **snapped onto that coordinate** — all 1066 existing members sit
+at 1e-9°), every member is **snapped onto that coordinate** — all 1072 existing members sit
 exactly on their place. Creating a place *moves things on the map*.
 
 ⚠️ **Check each move against the entry's own `triggerRadiusMeters` (30 m) first.** A move inside
@@ -49,6 +49,14 @@ trigger, and nothing else in the pipeline would object.
 Proximity is evidence, not proof. Nothing here auto-creates.
 
 ---
+
+## § 1 — on an identical coordinate (1)
+
+The catalogue's documented identity rule: provably one site, no editorial judgement.
+
+| # | City | Entries |
+|---|---|---|
+| **Z1** | Paris | `[pin]` Colonnes de Buren<br>`[tour]` Palais-Royal |
 
 ## § 2 — 26 sites with two or more entries within 25 m
 
@@ -84,7 +92,7 @@ none is a chain of separate sites strung together.
 | P25 | Queens | 19 m | `[pin]` Relics of the World's Fairs<br>`[tour]` The Unisphere *(in The Unisphere)*<br>`[pin]` The Unisphere *(in The Unisphere)* |
 | P26 | New York | 24 m | `[pin]` Saigon Social<br>`[pin]` Una Pizza Napoletana *(in Una Pizza Napoletana)*<br>`[pin]` Una Pizza Napoletana *(in Una Pizza Napoletana)* |
 
-## § 3 — 32 same-subject pairs 25–500 m apart
+## § 3 — 33 same-subject pairs 25–500 m apart
 
 Related by name but not coincident. **Never auto-create these** — picking the one coordinate
 is an editorial decision, and some are deliberately two subjects.
@@ -117,12 +125,13 @@ is an editorial decision, and some are deliberately two subjects.
 | N24 | Paris | 283 m | `[pin]` Petit Palais *(in Petit Palais)*<br>`[tour]` Pont Alexandre III & Petit Palais |
 | N25 | Hong Kong | 289 m | `[pin]` Kowloon Park Stone Columns \| 九龍公園百年石柱<br>`[pin]` Kowloon Park |
 | N26 | Stockholm | 301 m | `[tour]` Gamla stan 1859<br>`[tour]` Gamla stan *(in Gamla stan)* |
-| N27 | London | 352 m | `[pin]` Choosing Keeping in Covent Garden<br>`[tour]` Covent Garden *(in Covent Garden)* |
-| N28 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
-| N29 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
-| N30 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
-| N31 | Kyoto | 418 m | `[pin]` Gion Kurashita, Hanamikoji, Gion, Kyoto<br>`[tour]` Gion \| 祇園 *(in Gion)* |
-| N32 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
+| N27 | Paris | 302 m | `[pin]` Cinéma du Panthéon<br>`[tour]` Panthéon |
+| N28 | London | 352 m | `[pin]` Choosing Keeping in Covent Garden<br>`[tour]` Covent Garden *(in Covent Garden)* |
+| N29 | Brooklyn | 364 m | `[pin]` The Cyclone at Coney Island<br>`[tour]` Coney Island |
+| N30 | New York | 368 m | `[pin]` Roy Lichtenstein's Times Square Mural<br>`[pin]` Times Square *(in Times Square)* |
+| N31 | San Francisco | 395 m | `[tour]` Chinatown Dragon Gate<br>`[pin]` Chinatown |
+| N32 | Kyoto | 418 m | `[pin]` Gion Kurashita, Hanamikoji, Gion, Kyoto<br>`[tour]` Gion \| 祇園 *(in Gion)* |
+| N33 | Naoshima | 455 m | `[tour]` Benesse House Museum \| ベネッセハウス ミュージアム<br>`[tour]` Benesse House Museum Outdoor Works \| ベネッセハウスミュージアム屋外作品 |
 
 ## § 4 — declined, standing (35 groups + 1 named case)
 
