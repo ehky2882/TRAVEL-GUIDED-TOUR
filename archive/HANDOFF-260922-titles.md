@@ -70,7 +70,7 @@ check the feature's *type*, not just its name. → `docs/lessons.md`.
 | Place | Point | Source | Moves |
 |---|---|---|---|
 | Notre-Dame de Paris | the Atlas tour's own stop, on the parvis | the tour (not moved, since it is the geofence trigger) | the pin, 106 m |
-| Krispy Pizza (Brooklyn) | 7112 13th Avenue | OSM `amenity/restaurant`, on which one pin already sat | the other pin, 64 m; its city corrected New York → Brooklyn |
+| Krispy Pizza (Brooklyn) | 7112 13th Avenue | OSM `amenity/restaurant`, on which one pin already sat | the other pin, 64 m. ⚠️ One pin's city was changed New York → Brooklyn and **reverted**: 63 New York pins name it in `relatedTourIds`, and a pin takes same-city suggestions only, so the validator failed. Change a city only together with a related-tours rebuild |
 | Niku X | Wilshire Grand Center, 900 Wilshire Blvd, 2nd floor | the venue's listed address (Apple Maps point) | 39 m and 136 m |
 | Yorkshire Sculpture Park | the main visitor entrance | OSM `tourism/attraction` | 354 m and 248 m. ⚠️ The Turrell pin was on the Deer Shelter Skyspace itself, so the place point trades that precision for one honest point for the park |
 | **Petit Palais** | the museum | OSM `tourism/museum` | @lucymcorban's pin 283 m (off the bridge), @suzyandaustin's 54 m |
