@@ -5279,6 +5279,36 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/preetigills/"
+    },
+    {
+      "id": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "displayName": "Instagram @thefoodranger",
+      "platform": "instagram",
+      "handle": "thefoodranger",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/thefoodranger/"
+    },
+    {
+      "id": "CF9A0A64-0AB0-5594-822B-A224E766D4AD",
+      "displayName": "Instagram @klaudia.paris",
+      "platform": "instagram",
+      "handle": "klaudia.paris",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/klaudia.paris/"
+    },
+    {
+      "id": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "displayName": "Instagram @the_fatmap",
+      "platform": "instagram",
+      "handle": "the_fatmap",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/the_fatmap/"
     }
   ],
   "tours": [
@@ -40478,9 +40508,9 @@
         "2e894f42-7142-5739-b7cf-9c702494e4b4",
         "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00",
         "E753DE1F-6327-5FAC-877B-26DA39F26935",
+        "25275076-435E-59E2-A048-14D90ED0DB11",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "29e01aee-c177-552b-aba8-4533f3ed2935",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+        "29e01aee-c177-552b-aba8-4533f3ed2935"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -66519,10 +66549,10 @@
         "296d2093-704e-5892-a8c6-ee614a63cd4a",
         "32130aa0-c428-5cb8-bf65-49d780ad4d02",
         "c091e10f-9135-5432-bc1a-32ba5095c3ff",
+        "0B28F397-8ECB-5519-889D-29649681DB0E",
         "cb214a2c-ae60-5242-a96c-a27e21e76523",
-        "1e7b6ea3-0e70-5670-83c1-8fadac28286e",
-        "dbf20821-651f-5746-a28d-3b74f1212c6a",
-        "1D9A2CB2-B166-5525-8514-AFBDB08BA479"
+        "5CA6902F-DBE3-5B76-9801-C1048F222A1E",
+        "1e7b6ea3-0e70-5670-83c1-8fadac28286e"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -117378,10 +117408,10 @@
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "95988889-a1a8-5223-91f2-4670f26396b5",
+        "D4527217-EBD0-5C65-BFFE-1C9FA662A052",
         "E72F4DE0-8AA3-596A-8B67-EE23BC72309B",
-        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
-        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
-        "B606303B-2024-58E5-873F-64EF22723675"
+        "25275076-435E-59E2-A048-14D90ED0DB11",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -177483,7 +177513,8 @@
         "29e01aee-c177-552b-aba8-4533f3ed2935",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00",
-        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd"
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "25275076-435E-59E2-A048-14D90ED0DB11"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -185528,13 +185559,13 @@
       "country": "France",
       "relatedTourIds": [
         "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
+        "D4527217-EBD0-5C65-BFFE-1C9FA662A052",
         "E72F4DE0-8AA3-596A-8B67-EE23BC72309B",
         "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
         "589560DA-82CB-5B1F-B0D1-BCC59D176D6E",
         "0F278313-E88E-5A29-A6C7-EE145234206C",
         "1CA4297B-C597-582E-8263-90422B6446B9",
-        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
-        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215"
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -186218,8 +186249,8 @@
         "4FD3764D-84A9-5E3E-94CD-1F762D62DD3E",
         "2e894f42-7142-5739-b7cf-9c702494e4b4",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8",
-        "389a13e5-48b2-5027-874e-772e193dd158"
+        "25275076-435E-59E2-A048-14D90ED0DB11",
+        "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -186843,9 +186874,9 @@
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
         "2941CD08-C085-531E-9093-0398F3D015BF",
-        "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
-        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+        "078F4A1A-4B83-5134-9D43-20C6CF1240BE"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -186898,10 +186929,10 @@
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
         "172C4AC4-1CE7-59F0-B40E-80BAC95D1457",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "2941CD08-C085-531E-9093-0398F3D015BF",
-        "078F4A1A-4B83-5134-9D43-20C6CF1240BE"
+        "2941CD08-C085-531E-9093-0398F3D015BF"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -187057,12 +187088,12 @@
       "relatedTourIds": [
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "FDFAB0F8-4272-588E-9234-865B56DE5302",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+        "5F7B1433-8BC4-5B94-88E2-255975574E26"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -187951,8 +187982,8 @@
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
-        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038"
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -227013,9 +227044,9 @@
         "3916CE65-DC32-533A-98A7-E313AD8D553B",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
+        "F4166960-DAAC-516E-A81A-B141E6CFB1D7",
         "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
-        "F955C997-0310-56D0-B02F-416C9913B224",
-        "FEA23891-22F4-5EF5-9747-68E5361E2C7E"
+        "F955C997-0310-56D0-B02F-416C9913B224"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -234085,12 +234116,12 @@
       "relatedTourIds": [
         "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "25275076-435E-59E2-A048-14D90ED0DB11",
         "67F8D1E1-6CF0-555E-88BC-0F4D51CD547D",
         "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "1BFE9AE7-74B9-5AB6-80AA-EE73D0DC4D3F",
-        "280948c0-b59f-50d6-b237-2bb87253dede",
-        "0F278313-E88E-5A29-A6C7-EE145234206C"
+        "280948c0-b59f-50d6-b237-2bb87253dede"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -234296,11 +234327,11 @@
         "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
         "B7B68EB8-C795-5F14-9D3E-A62C6C6F700A",
         "82BF7C63-3145-51AC-848A-EACD3011E555",
+        "C0E4302C-D2DB-55FE-8BE3-535280E796AE",
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "10169772-6B9B-50FE-B5A4-F13D77068BED",
         "CB0C91E2-3A90-5930-ADCE-F95138CE43ED",
-        "C2B490E8-C124-58E9-9F75-F2189B565DFE",
-        "EE07C8E2-CDE6-581D-9620-68F02D7145A7"
+        "C2B490E8-C124-58E9-9F75-F2189B565DFE"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -234356,7 +234387,7 @@
         "E72F4DE0-8AA3-596A-8B67-EE23BC72309B",
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
-        "79702152-6A98-54BA-9795-803F93ECAD50"
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -234606,8 +234637,8 @@
         "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
         "40550E25-6721-534E-8AD6-08A61EE8EAA0",
         "B1846FA6-F1A2-5B54-BF43-D8733641C664",
-        "79702152-6A98-54BA-9795-803F93ECAD50",
-        "D378C8FE-AA28-5973-9ECA-AAFA10B45416"
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
+        "79702152-6A98-54BA-9795-803F93ECAD50"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -235733,9 +235764,9 @@
         "0334472C-2E52-5A9D-A921-6D09B847C116",
         "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
         "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "2FCAAA0D-D267-50DC-BCC5-4C103592320E",
         "D5C197A7-BAC0-5429-9BF2-5DADA138354A",
-        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
-        "C1EF1549-FB69-5122-9A10-FDF5569A879F"
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -236779,14 +236810,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
         "A957C31E-38FE-564B-8F0D-C11F7EA24456",
         "932C8EED-A776-5F27-B968-152E878DEB46",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
-        "46DE9958-63C1-5E37-A369-E8030A5C4970",
-        "3916CE65-DC32-533A-98A7-E313AD8D553B"
+        "46DE9958-63C1-5E37-A369-E8030A5C4970"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -237320,13 +237351,13 @@
       "country": "France",
       "relatedTourIds": [
         "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "3F3376C2-30E2-5C5A-B162-BC904D34642F",
         "B606303B-2024-58E5-873F-64EF22723675",
         "589560DA-82CB-5B1F-B0D1-BCC59D176D6E",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "D4527217-EBD0-5C65-BFFE-1C9FA662A052",
         "18DC6D8E-F909-5711-BD3A-B831B8A14D00",
-        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50",
-        "0F278313-E88E-5A29-A6C7-EE145234206C",
-        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -237429,8 +237460,8 @@
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "BD8C23AF-98C2-5B09-9F0F-C8C129B2AFCE"
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -238316,9 +238347,9 @@
         "0c99c91e-e39b-5c28-98c1-b3186c325122",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
+        "25275076-435E-59E2-A048-14D90ED0DB11",
         "2e894f42-7142-5739-b7cf-9c702494e4b4",
-        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "E753DE1F-6327-5FAC-877B-26DA39F26935"
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -243892,10 +243923,10 @@
         "932C8EED-A776-5F27-B968-152E878DEB46",
         "CEBAE99F-0A39-547D-9713-2792E783CB7B",
         "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
         "D89F4304-22E0-5461-90E7-90EC6649C227",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
-        "99D816F4-ACA4-5D64-851E-2DA8E5952041",
-        "EBE90D57-E597-56BA-B54D-153E1728BFCE"
+        "99D816F4-ACA4-5D64-851E-2DA8E5952041"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -243995,9 +244026,9 @@
         "B1846FA6-F1A2-5B54-BF43-D8733641C664",
         "CEBAE99F-0A39-547D-9713-2792E783CB7B",
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "2FCAAA0D-D267-50DC-BCC5-4C103592320E",
         "EBE90D57-E597-56BA-B54D-153E1728BFCE",
-        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
-        "45DC77F1-CAA3-576E-9939-53908497459C"
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -244253,8 +244284,8 @@
         "B1846FA6-F1A2-5B54-BF43-D8733641C664",
         "D51D97B2-9814-533A-9D9A-90292B89E5F5",
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
-        "45DC77F1-CAA3-576E-9939-53908497459C",
-        "1D16C73F-B7BE-5865-BAC4-92A7F099F8DA"
+        "F4166960-DAAC-516E-A81A-B141E6CFB1D7",
+        "45DC77F1-CAA3-576E-9939-53908497459C"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -244349,14 +244380,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "2FCAAA0D-D267-50DC-BCC5-4C103592320E",
         "B1846FA6-F1A2-5B54-BF43-D8733641C664",
         "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
         "CEBAE99F-0A39-547D-9713-2792E783CB7B",
         "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
         "D51D97B2-9814-533A-9D9A-90292B89E5F5",
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
-        "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
-        "A0289D43-368D-5B65-8555-52A0BD5E30ED"
+        "89BD3CF7-9EA4-5553-8677-BF3EAED88525"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -244455,10 +244486,10 @@
         "CEBAE99F-0A39-547D-9713-2792E783CB7B",
         "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
         "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "2FCAAA0D-D267-50DC-BCC5-4C103592320E",
         "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
         "40550E25-6721-534E-8AD6-08A61EE8EAA0",
-        "D51D97B2-9814-533A-9D9A-90292B89E5F5",
-        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215"
+        "D51D97B2-9814-533A-9D9A-90292B89E5F5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -252316,11 +252347,11 @@
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
         "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
         "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
+        "C0E4302C-D2DB-55FE-8BE3-535280E796AE",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
         "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
         "B7B68EB8-C795-5F14-9D3E-A62C6C6F700A",
-        "C2B490E8-C124-58E9-9F75-F2189B565DFE",
-        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA"
+        "C2B490E8-C124-58E9-9F75-F2189B565DFE"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -253314,14 +253345,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "25275076-435E-59E2-A048-14D90ED0DB11",
         "280948c0-b59f-50d6-b237-2bb87253dede",
         "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "33a95e17-5676-5a41-89e1-69114fd03a40",
         "30335E60-DCB4-59A1-B6E3-25FDBB872557",
         "eef8a099-2f7a-5883-9c02-35c0e1836bbd",
         "4FD3764D-84A9-5E3E-94CD-1F762D62DD3E",
-        "2e894f42-7142-5739-b7cf-9c702494e4b4",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+        "2e894f42-7142-5739-b7cf-9c702494e4b4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -256093,7 +256124,8 @@
         "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "030d8630-4c0a-5965-9758-5243a0074df9",
         "E72854DC-1A73-5966-A32F-53A3D4CED78A",
-        "33a95e17-5676-5a41-89e1-69114fd03a40"
+        "33a95e17-5676-5a41-89e1-69114fd03a40",
+        "25275076-435E-59E2-A048-14D90ED0DB11"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -278341,14 +278373,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "23C6F161-130C-5F38-B92C-1A16E3425162",
+        "5A071578-0DC1-52CE-942E-B9FA1C92056E",
         "14423F6E-0FF9-5DD9-9311-13EEE89E60C0",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "F4166960-DAAC-516E-A81A-B141E6CFB1D7",
         "3916CE65-DC32-533A-98A7-E313AD8D553B",
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
-        "FEA23891-22F4-5EF5-9747-68E5361E2C7E",
-        "6B79056F-92B8-5BBD-8950-095D161FD3F1",
-        "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
-        "DB2251A3-AE1A-5FD5-B44E-7FB21E823F9F"
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -278597,7 +278629,10 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
-        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "51BA4A4C-6328-52B0-A307-D58F8E482325"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279072,12 +279107,12 @@
       "relatedTourIds": [
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "48AECD5E-C4E3-5E97-996F-6FACBCFF454A",
         "0C9DCBA9-898A-5E17-803D-42C01FC51C91",
-        "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "79702152-6A98-54BA-9795-803F93ECAD50"
+        "C0E4302C-D2DB-55FE-8BE3-535280E796AE"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279131,7 +279166,7 @@
         "0C9DCBA9-898A-5E17-803D-42C01FC51C91",
         "A957C31E-38FE-564B-8F0D-C11F7EA24456",
         "14423F6E-0FF9-5DD9-9311-13EEE89E60C0",
-        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279994,12 +280029,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
         "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "51BA4A4C-6328-52B0-A307-D58F8E482325",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457"
+        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -283099,12 +283136,12 @@
       "relatedTourIds": [
         "09071FFB-B94D-5D6D-877D-7CEBD7CA9490",
         "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
+        "D4527217-EBD0-5C65-BFFE-1C9FA662A052",
+        "01D59174-232E-5074-878E-0DF3C6DBEC12",
         "10169772-6B9B-50FE-B5A4-F13D77068BED",
         "A957C31E-38FE-564B-8F0D-C11F7EA24456",
         "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
-        "0F278313-E88E-5A29-A6C7-EE145234206C",
-        "CB822A39-B66F-557B-BD4D-9CF9BE71FCA7",
-        "D5C197A7-BAC0-5429-9BF2-5DADA138354A"
+        "0F278313-E88E-5A29-A6C7-EE145234206C"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -283260,13 +283297,13 @@
       "country": "France",
       "relatedTourIds": [
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "23C6F161-130C-5F38-B92C-1A16E3425162",
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
         "A957C31E-38FE-564B-8F0D-C11F7EA24456",
+        "3F3376C2-30E2-5C5A-B162-BC904D34642F",
+        "01D59174-232E-5074-878E-0DF3C6DBEC12",
         "0F278313-E88E-5A29-A6C7-EE145234206C",
-        "D5C197A7-BAC0-5429-9BF2-5DADA138354A",
-        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
-        "589560DA-82CB-5B1F-B0D1-BCC59D176D6E",
-        "AF803867-FC80-58A7-8A54-718D46A23191"
+        "D5C197A7-BAC0-5429-9BF2-5DADA138354A"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -297371,14 +297408,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "D4527217-EBD0-5C65-BFFE-1C9FA662A052",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
         "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
         "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
         "E72F4DE0-8AA3-596A-8B67-EE23BC72309B",
         "3916CE65-DC32-533A-98A7-E313AD8D553B",
         "B606303B-2024-58E5-873F-64EF22723675",
-        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
-        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215"
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -297845,10 +297882,10 @@
         "932C8EED-A776-5F27-B968-152E878DEB46",
         "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
         "3916CE65-DC32-533A-98A7-E313AD8D553B",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
-        "D5C197A7-BAC0-5429-9BF2-5DADA138354A",
-        "18DC6D8E-F909-5711-BD3A-B831B8A14D00"
+        "D5C197A7-BAC0-5429-9BF2-5DADA138354A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -298096,13 +298133,13 @@
       "country": "France",
       "relatedTourIds": [
         "C37E821E-F28A-560E-B1F5-DC02771E47E9",
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
         "EE07C8E2-CDE6-581D-9620-68F02D7145A7",
         "EA327FAA-BDBC-50D9-B50F-90BC06D59FD0",
-        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B",
-        "C075CEAB-D14D-5C4E-8320-D08A9AF55E3C"
+        "9D7E1291-E601-5F8D-B051-DFA8F218EF8B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -298200,10 +298237,10 @@
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "B037442D-374C-53D1-A52C-C7900B183843",
+        "F3DE9D0E-8EFE-5258-9E7C-6B8CB96C0D27",
         "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
-        "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
+        "0334472C-2E52-5A9D-A921-6D09B847C116"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -298364,8 +298401,8 @@
         "4DB6C490-88D4-54B1-B76C-7CEBAF068A07",
         "CEBAE99F-0A39-547D-9713-2792E783CB7B",
         "7851F3E6-4714-5C38-823F-6D33566F6CC3",
-        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
-        "14423F6E-0FF9-5DD9-9311-13EEE89E60C0"
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -298738,14 +298775,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "23C6F161-130C-5F38-B92C-1A16E3425162",
         "E72F4DE0-8AA3-596A-8B67-EE23BC72309B",
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
         "B606303B-2024-58E5-873F-64EF22723675",
         "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "E6870B0F-3B0D-5C27-B3A0-F94FDEF9EE9D",
-        "98452AC5-AB44-5E88-B38F-C123A91594D5",
-        "4DB6C490-88D4-54B1-B76C-7CEBAF068A07"
+        "98452AC5-AB44-5E88-B38F-C123A91594D5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -298850,10 +298887,10 @@
         "14423F6E-0FF9-5DD9-9311-13EEE89E60C0",
         "B037442D-374C-53D1-A52C-C7900B183843",
         "B3261978-4DC0-5818-8BFA-8DAE651C1F4C",
+        "F3DE9D0E-8EFE-5258-9E7C-6B8CB96C0D27",
         "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
         "71B33011-F8FE-5C09-94C7-6810F68F5514",
-        "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
-        "98452AC5-AB44-5E88-B38F-C123A91594D5"
+        "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -298907,7 +298944,7 @@
         "7B2B370B-758A-5D2C-A318-2DBA97813986",
         "2354C610-22AF-5FA6-9DA3-FE328BBFB586",
         "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
-        "79702152-6A98-54BA-9795-803F93ECAD50"
+        "7A73937C-1C9D-53F5-A938-784F717F827A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -298956,12 +298993,12 @@
       "relatedTourIds": [
         "26AC511E-DADC-5E69-AEEC-4C6E8CA8287F",
         "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
         "8265AB2E-2CCF-5430-9395-F62F87951B68",
         "A957C31E-38FE-564B-8F0D-C11F7EA24456",
         "46DE9958-63C1-5E37-A369-E8030A5C4970",
         "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
-        "14423F6E-0FF9-5DD9-9311-13EEE89E60C0",
-        "0C9DCBA9-898A-5E17-803D-42C01FC51C91"
+        "5A071578-0DC1-52CE-942E-B9FA1C92056E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -299421,7 +299458,7 @@
         "46DE9958-63C1-5E37-A369-E8030A5C4970",
         "14423F6E-0FF9-5DD9-9311-13EEE89E60C0",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
-        "0C9DCBA9-898A-5E17-803D-42C01FC51C91"
+        "01D59174-232E-5074-878E-0DF3C6DBEC12"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -299830,10 +299867,10 @@
         "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
         "932C8EED-A776-5F27-B968-152E878DEB46",
         "D5C197A7-BAC0-5429-9BF2-5DADA138354A",
+        "C0E4302C-D2DB-55FE-8BE3-535280E796AE",
         "2D3FCD39-C3CE-578E-9DE5-948533FEFC5E",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
-        "B7B68EB8-C795-5F14-9D3E-A62C6C6F700A",
-        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
+        "B7B68EB8-C795-5F14-9D3E-A62C6C6F700A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -299929,9 +299966,9 @@
         "18DC6D8E-F909-5711-BD3A-B831B8A14D00",
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "F4166960-DAAC-516E-A81A-B141E6CFB1D7",
         "C2B490E8-C124-58E9-9F75-F2189B565DFE",
-        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
-        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -299981,12 +300018,12 @@
       "relatedTourIds": [
         "C1EF1549-FB69-5122-9A10-FDF5569A879F",
         "18DC6D8E-F909-5711-BD3A-B831B8A14D00",
+        "2FCAAA0D-D267-50DC-BCC5-4C103592320E",
         "0334472C-2E52-5A9D-A921-6D09B847C116",
         "7851F3E6-4714-5C38-823F-6D33566F6CC3",
         "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
-        "D5C197A7-BAC0-5429-9BF2-5DADA138354A",
-        "79702152-6A98-54BA-9795-803F93ECAD50"
+        "D5C197A7-BAC0-5429-9BF2-5DADA138354A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -300036,11 +300073,11 @@
         "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
         "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
         "F955C997-0310-56D0-B02F-416C9913B224",
+        "2FCAAA0D-D267-50DC-BCC5-4C103592320E",
         "D89F4304-22E0-5461-90E7-90EC6649C227",
         "79702152-6A98-54BA-9795-803F93ECAD50",
         "EBE90D57-E597-56BA-B54D-153E1728BFCE",
-        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
-        "AC3D70FC-3D23-5EEE-A99E-E8159D4FE05D"
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -300201,6 +300238,1106 @@
       "tags": [
         "Food",
         "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+      "createdAt": "2026-09-23",
+      "title": "Atlantikos",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "Trying the most Viral seafood restaurant in Greece, Atlantikos! This place is the number one most reviewed place in Athens for seafood, found just a short walk from Monastiraki. Every time I walk by this place in Athens, there is a massive lineup down the street, so we decided to try it. Was it any good? I would say yes, it’s incredible, but I found it to be quite too famous, it’s mostly tourists so if you want to get a table without a long wait you should go early. I would come back but I think I will explore more and more places in Athens first, but yes overall an amazing place I loved their Mussels saganaki, their anchovies in the oven with garlic , their grilled fish, their fava spread, and their seafood pasta! Amazing place to eat in Athens! I could go back just for their seafood pasta and mussels! And all their dishes!",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlantikos-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdKQ99pITr-/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "3B70D586-5789-5056-BEE7-B3DD945B526B",
+          "order": 0,
+          "title": "Atlantikos",
+          "caption": "Trying the most Viral seafood restaurant in Greece, Atlantikos! This place is the number one most reviewed place in Athens for seafood, found just a short walk from Monastiraki. Every time I walk by this place in Athens, there is a massive lineup down the street, so we decided to try it. Was it any good? I would say yes, it’s incredible, but I found it to be quite too famous, it’s mostly tourists so if you want to get a table without a long wait you should go early. I would come back but I think I will explore more and more places in Athens first, but yes overall an amazing place I loved their Mussels saganaki, their anchovies in the oven with garlic , their grilled fish, their fava spread, and their seafood pasta! Amazing place to eat in Athens! I could go back just for their seafood pasta and mussels! And all their dishes!",
+          "latitude": 37.977534,
+          "longitude": 23.722976,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlantikos-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.977534,
+      "centroidLongitude": 23.722976,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "51BA4A4C-6328-52B0-A307-D58F8E482325",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
+        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
+        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
+        "FDFAB0F8-4272-588E-9234-865B56DE5302"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6408C083-6D92-51E5-B388-06AA555C4079",
+      "createdAt": "2026-09-23",
+      "title": "Diporto",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "The oldest taverna in Athens? This shop is called Diporto and is a classic spot to visit to eat authentic Greek home style cooking, drink wine from the barrel, and feel like you’re stepping back in time. It’s a short walk from Monastiraki area and is worth the walk over, just make sure you find it! It’s underground and you should follow Diporto on Google Maps, and you will have a nice hearty lunch! Contrary to popular opinion, Anthony Bourdain did not actually eat here but I think he would have loved this place, it’s a true not so hidden anymore gem but it’s popular for good reason, you get honest and delicious home cooked Greek food. I would definitely come back to this place and I usually do whenever I visit Athens! Diporto, come here for a nice lunch! And follow for more great food finds around Europe!",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/diporto-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dc6ufZOIrFc/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "ADD7E1B8-BB91-5BD6-80CF-2F9B8CB8D7C2",
+          "order": 0,
+          "title": "Diporto",
+          "caption": "The oldest taverna in Athens? This shop is called Diporto and is a classic spot to visit to eat authentic Greek home style cooking, drink wine from the barrel, and feel like you’re stepping back in time. It’s a short walk from Monastiraki area and is worth the walk over, just make sure you find it! It’s underground and you should follow Diporto on Google Maps, and you will have a nice hearty lunch! Contrary to popular opinion, Anthony Bourdain did not actually eat here but I think he would have loved this place, it’s a true not so hidden anymore gem but it’s popular for good reason, you get honest and delicious home cooked Greek food. I would definitely come back to this place and I usually do whenever I visit Athens! Diporto, come here for a nice lunch! And follow for more great food finds around Europe!",
+          "latitude": 37.980733,
+          "longitude": 23.725835,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/diporto-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.980733,
+      "centroidLongitude": 23.725835,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "51BA4A4C-6328-52B0-A307-D58F8E482325",
+        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
+        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
+        "0FE8CB92-65EA-5C20-AFA8-0832F7566E25"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "38B70CD2-4A43-5CC9-A176-CB2D91E1D75A",
+      "createdAt": "2026-09-23",
+      "title": "Polpo",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "Trying apparently the best seafood restaurant in Athens @polpoathens . To be honest, this was a life changing meal! I will be coming back here again and again whenever I visit Athens, it was that good! Highlights included the fresh grilled red prawns literally right out of the ocean. A red shrimp ceviche with lemon, olive oil, salt, bell pepper. An incredible fisherman’s linguine. Fresh carpaccio, pickled octopus, and a star dish, tomatoes from the island of Crete which were the most flavorful tomatoes I’ve ever eaten! I already can’t wait to come back again! It’s a little outside the main downtown area, but so worth coming here, just a quick 15-20 minute taxi from downtown, and you’re in seafood heaven!",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/polpo-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcwuFysoJrY/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "AE52EB90-E891-5776-AB8B-CCA6C923BB4B",
+          "order": 0,
+          "title": "Polpo",
+          "caption": "Trying apparently the best seafood restaurant in Athens @polpoathens . To be honest, this was a life changing meal! I will be coming back here again and again whenever I visit Athens, it was that good! Highlights included the fresh grilled red prawns literally right out of the ocean. A red shrimp ceviche with lemon, olive oil, salt, bell pepper. An incredible fisherman’s linguine. Fresh carpaccio, pickled octopus, and a star dish, tomatoes from the island of Crete which were the most flavorful tomatoes I’ve ever eaten! I already can’t wait to come back again! It’s a little outside the main downtown area, but so worth coming here, just a quick 15-20 minute taxi from downtown, and you’re in seafood heaven!",
+          "latitude": 37.961269,
+          "longitude": 23.682804,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/polpo-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.961269,
+      "centroidLongitude": 23.682804,
+      "city": "Agios Ioannis Rentis",
+      "country": "Greece",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3C154C00-F1FE-59BC-BBA5-E1C9D2E32DFD",
+      "createdAt": "2026-09-23",
+      "title": "Kyr Aristos",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "Trying the most Viral kebab shop in Athens @kiraristos ! This place has been showing up on my feed and I flew into Athens just to try it!!I gotta say it was totally worth the hype! The kebabs were so juicy and they make a signature bread bowl packed with kebabs, tomato, and yogurt. Not only that they also make delicious gyros and souvlaki! I would highly recommend this place for anyone visiting Athens! I will be back whenever I’m craving some delicious kebabs, wow they were so juicy! Where should we try next in Athens?",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyr-aristos-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dcl3GXfo1x3/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "2775F004-7A42-5C82-A6AC-73E9FB07AC12",
+          "order": 0,
+          "title": "Kyr Aristos",
+          "caption": "Trying the most Viral kebab shop in Athens @kiraristos ! This place has been showing up on my feed and I flew into Athens just to try it!!I gotta say it was totally worth the hype! The kebabs were so juicy and they make a signature bread bowl packed with kebabs, tomato, and yogurt. Not only that they also make delicious gyros and souvlaki! I would highly recommend this place for anyone visiting Athens! I will be back whenever I’m craving some delicious kebabs, wow they were so juicy! Where should we try next in Athens?",
+          "latitude": 37.93249,
+          "longitude": 23.69914,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyr-aristos-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.93249,
+      "centroidLongitude": 23.69914,
+      "city": "Palaio Faliro",
+      "country": "Greece",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "51BA4A4C-6328-52B0-A307-D58F8E482325",
+      "createdAt": "2026-09-23",
+      "title": "O Thanasis",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "First meal fresh off the flight in Athens!! My go to first meal every single time!! Found at O Thanasis!! Order the yogurt kebab!",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/o-thanasis-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DZXum8woOFY/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "2109ADA9-C8F1-520E-AC27-8F2D4DBBBFD4",
+          "order": 0,
+          "title": "O Thanasis",
+          "caption": "First meal fresh off the flight in Athens!! My go to first meal every single time!! Found at O Thanasis!! Order the yogurt kebab!",
+          "latitude": 37.976264,
+          "longitude": 23.726355,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/o-thanasis-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.976264,
+      "centroidLongitude": 23.726355,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "430EC49D-0E23-5FD7-8E29-0E56252D105E",
+      "createdAt": "2026-09-23",
+      "title": "Tsopanakos",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "Most amazing whole baby goat in Kalymnos, Greece!! At @tsopanakoskalymnos restaurant!! You gotta try this!!!Cooked in the Kalymnian style, in a backyard wood oven, the baby goat is stuffed with tomato cinnamon rice and slow roasted for 7 hours! A must try if you visit this beautiful rock climbing island in Greece, Kalymnos!! Would you like to try?",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tsopanakos-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DP62jy0iJ0r/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "80D9BD60-1F02-5993-8FBE-FF627F8B8221",
+          "order": 0,
+          "title": "Tsopanakos",
+          "caption": "Most amazing whole baby goat in Kalymnos, Greece!! At @tsopanakoskalymnos restaurant!! You gotta try this!!!Cooked in the Kalymnian style, in a backyard wood oven, the baby goat is stuffed with tomato cinnamon rice and slow roasted for 7 hours! A must try if you visit this beautiful rock climbing island in Greece, Kalymnos!! Would you like to try?",
+          "latitude": 37.002297,
+          "longitude": 26.940255,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tsopanakos-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.002297,
+      "centroidLongitude": 26.940255,
+      "city": "Kalymnos",
+      "country": "Greece",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5CA6902F-DBE3-5B76-9801-C1048F222A1E",
+      "createdAt": "2026-09-23",
+      "title": "Darband",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "The Kings Pulao! This is one of the best dishes in Dubai! Just found it today and I gotta say wow! Found at @darband.ae and it was worth coming here for!! Also their lamb neck was amazing! DM me if you got any more recommended spots in Dubai!",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/darband-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DNVxtFLyfTm/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "64D0F0E5-9683-57F5-8619-5AE242CE9B80",
+          "order": 0,
+          "title": "Darband",
+          "caption": "The Kings Pulao! This is one of the best dishes in Dubai! Just found it today and I gotta say wow! Found at @darband.ae and it was worth coming here for!! Also their lamb neck was amazing! DM me if you got any more recommended spots in Dubai!",
+          "latitude": 25.308251,
+          "longitude": 55.339043,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/darband-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.308251,
+      "centroidLongitude": 55.339043,
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "relatedTourIds": [
+        "0B28F397-8ECB-5519-889D-29649681DB0E",
+        "2b5b06c9-9464-5f87-89fb-fcf76f101068",
+        "55d37f26-3733-5f7d-9e7a-672e0dbd7552",
+        "769A4133-5472-590E-A8BB-F277981D1F02"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0B28F397-8ECB-5519-889D-29649681DB0E",
+      "createdAt": "2026-09-23",
+      "title": "San Wan Hand Pulled Noodles",
+      "shortDescription": "A post by @thefoodranger on Instagram.",
+      "longDescription": "POV: The most Dubai Noodles ever! Just found these beauties today at @sanwan.dxb and wow they were incredible! Who would have thought that Zatar and olive oil and Chinese hand pulled chili oil biang biang noodles would pair so perfectly. I was blown away to be honest it’s a genius creation. I could taste both Xi’an and the Middle East mixed together so perfectly. The flavour was so unique, this creation is gonna keep me coming back for more, absolutely amazing. Food in Dubai is always so creative, that’s why I love living here. DM me for more recommended food spots in Dubai!",
+      "makerId": "25B49A25-C163-5C59-A459-76182CAEA7CF",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/san-wan-hand-pulled-noodles-thefoodranger_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DNYUUTcyQr3/",
+      "sourceAuthor": "@thefoodranger",
+      "stops": [
+        {
+          "id": "770BA0AC-658F-52DD-A1AA-FF9EE9C02579",
+          "order": 0,
+          "title": "San Wan Hand Pulled Noodles",
+          "caption": "POV: The most Dubai Noodles ever! Just found these beauties today at @sanwan.dxb and wow they were incredible! Who would have thought that Zatar and olive oil and Chinese hand pulled chili oil biang biang noodles would pair so perfectly. I was blown away to be honest it’s a genius creation. I could taste both Xi’an and the Middle East mixed together so perfectly. The flavour was so unique, this creation is gonna keep me coming back for more, absolutely amazing. Food in Dubai is always so creative, that’s why I love living here. DM me for more recommended food spots in Dubai!",
+          "latitude": 25.072491,
+          "longitude": 55.142132,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/san-wan-hand-pulled-noodles-thefoodranger_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.072491,
+      "centroidLongitude": 55.142132,
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "relatedTourIds": [
+        "5CA6902F-DBE3-5B76-9801-C1048F222A1E",
+        "55d37f26-3733-5f7d-9e7a-672e0dbd7552"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3F3376C2-30E2-5C5A-B162-BC904D34642F",
+      "createdAt": "2026-09-23",
+      "title": "La Galcante",
+      "shortDescription": "A post by @klaudia.paris on Instagram.",
+      "longDescription": "If you’re looking for a unique gift idea, check out 📍La Galcante 38 Rue de Charenton, 75012 Paris . . . . #parisguide #parisart #paristrip #parisianlife #paristips Paris tips guide magazines journaux Parisian cadeau",
+      "makerId": "CF9A0A64-0AB0-5594-822B-A224E766D4AD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-galcante-klaudiaparis_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaVlo4cMIuB/",
+      "sourceAuthor": "@klaudia.paris",
+      "stops": [
+        {
+          "id": "C93C31E0-9047-5099-A57F-381B529C76D0",
+          "order": 0,
+          "title": "La Galcante",
+          "caption": "If you’re looking for a unique gift idea, check out 📍La Galcante 38 Rue de Charenton, 75012 Paris . . . . #parisguide #parisart #paristrip #parisianlife #paristips Paris tips guide magazines journaux Parisian cadeau",
+          "latitude": 48.850593,
+          "longitude": 2.373075,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-galcante-klaudiaparis_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.850593,
+      "centroidLongitude": 2.373075,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "A957C31E-38FE-564B-8F0D-C11F7EA24456",
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "18DC6D8E-F909-5711-BD3A-B831B8A14D00",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "2D3FCD39-C3CE-578E-9DE5-948533FEFC5E"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Hidden Gem",
+        "Commerce",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D4527217-EBD0-5C65-BFFE-1C9FA662A052",
+      "createdAt": "2026-09-23",
+      "title": "Affair Vintage",
+      "shortDescription": "A post by @klaudia.paris on Instagram.",
+      "longDescription": "Where to get best vintage coats in Paris @riis.affair.vintage . . . . #vintageparis #vintageshops #vintagecoat #vintageshoppingparis #vintageshopping shopping coat guide shop",
+      "makerId": "CF9A0A64-0AB0-5594-822B-A224E766D4AD",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/affair-vintage-klaudiaparis_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdmA6IaMXmk/",
+      "sourceAuthor": "@klaudia.paris",
+      "stops": [
+        {
+          "id": "B0A7789B-9505-5EBB-91EA-20305869AA5C",
+          "order": 0,
+          "title": "Affair Vintage",
+          "caption": "Where to get best vintage coats in Paris @riis.affair.vintage . . . . #vintageparis #vintageshops #vintagecoat #vintageshoppingparis #vintageshopping shopping coat guide shop",
+          "latitude": 48.860855,
+          "longitude": 2.36448,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/affair-vintage-klaudiaparis_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.860855,
+      "centroidLongitude": 2.36448,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "31EC0DA2-81C2-5FAE-B67F-C6B561673CF3",
+        "0CC17267-0E30-550F-84E4-6E04C744C285",
+        "A957C31E-38FE-564B-8F0D-C11F7EA24456",
+        "A9043D2E-7006-59E7-939C-2620A151A88C",
+        "E72F4DE0-8AA3-596A-8B67-EE23BC72309B"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Commerce",
+        "Fashion",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "23C6F161-130C-5F38-B92C-1A16E3425162",
+      "createdAt": "2026-09-23",
+      "title": "Sound and Coffee",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "a little Paris hidden gem 🤎 @sound.and.coffee is tucked inside Passage des Panoramas, with vinyl playing downstairs and big, quieter room upstairs where you can get some work done. I ended up staying for hours #paris #hiddengems #coffee #cafe #vinyl",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sound-and-coffee-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdRp8uru-v4/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "70410D5A-83D3-534B-8E3A-0EFE7954BBDD",
+          "order": 0,
+          "title": "Sound and Coffee",
+          "caption": "a little Paris hidden gem 🤎 @sound.and.coffee is tucked inside Passage des Panoramas, with vinyl playing downstairs and big, quieter room upstairs where you can get some work done. I ended up staying for hours #paris #hiddengems #coffee #cafe #vinyl",
+          "latitude": 48.870925,
+          "longitude": 2.341625,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sound-and-coffee-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.870925,
+      "centroidLongitude": 2.341625,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "5A071578-0DC1-52CE-942E-B9FA1C92056E",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "01D59174-232E-5074-878E-0DF3C6DBEC12",
+        "68D7440B-0E42-50C3-B9BE-D7C778C59616",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "E72F4DE0-8AA3-596A-8B67-EE23BC72309B",
+        "F3DE9D0E-8EFE-5258-9E7C-6B8CB96C0D27"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "66B8D341-D15A-5361-A72F-5521503E6764",
+      "createdAt": "2026-09-23",
+      "title": "MYKA Greek Frozen Yogurt",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "an hour-long queue for frozen yogurt… turns out, there was a reason🍦 @myka_greek.fr isn’t just another frozen yogurt spot. inspired by Greek tradition, their frozen yogurt is made with authentic Greek yogurt and goat’s milk kefir, then finished with artisanal toppings that somehow feel both wholesome and indulgent at the same time. #paris #lemarais #frozenyogurt #froyo #myka",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/myka-greek-frozen-yogurt-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaLbToUMblA/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "89D66BFC-1946-5479-A70A-AEC124AB4A23",
+          "order": 0,
+          "title": "MYKA Greek Frozen Yogurt",
+          "caption": "an hour-long queue for frozen yogurt… turns out, there was a reason🍦 @myka_greek.fr isn’t just another frozen yogurt spot. inspired by Greek tradition, their frozen yogurt is made with authentic Greek yogurt and goat’s milk kefir, then finished with artisanal toppings that somehow feel both wholesome and indulgent at the same time. #paris #lemarais #frozenyogurt #froyo #myka",
+          "latitude": 48.856608,
+          "longitude": 2.362727,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/myka-greek-frozen-yogurt-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.856608,
+      "centroidLongitude": 2.362727,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "F3DE9D0E-8EFE-5258-9E7C-6B8CB96C0D27",
+        "79702152-6A98-54BA-9795-803F93ECAD50",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "2354C610-22AF-5FA6-9DA3-FE328BBFB586",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "14423F6E-0FF9-5DD9-9311-13EEE89E60C0"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7A73937C-1C9D-53F5-A938-784F717F827A",
+      "createdAt": "2026-09-23",
+      "title": "Pontochoux Café",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "just dessert, no dinner plans (for once) 🍐 @pontochoux.cafe x @akira_takahashi925 turn pastry into an experience. bold flavors, made right in front of you. #hiddengems #pariscafe #dessertinparis #parisguide #sweettreat",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pontochoux-cafe-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DUjMnf8jL_9/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "5F0F74B0-8082-5FF9-BD1B-343670EDAD7E",
+          "order": 0,
+          "title": "Pontochoux Café",
+          "caption": "just dessert, no dinner plans (for once) 🍐 @pontochoux.cafe x @akira_takahashi925 turn pastry into an experience. bold flavors, made right in front of you. #hiddengems #pariscafe #dessertinparis #parisguide #sweettreat",
+          "latitude": 48.861304,
+          "longitude": 2.365151,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pontochoux-cafe-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.861304,
+      "centroidLongitude": 2.365151,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "EA327FAA-BDBC-50D9-B50F-90BC06D59FD0",
+        "FEA23891-22F4-5EF5-9747-68E5361E2C7E",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "18DC6D8E-F909-5711-BD3A-B831B8A14D00",
+        "14423F6E-0FF9-5DD9-9311-13EEE89E60C0",
+        "B037442D-374C-53D1-A52C-C7900B183843"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C0E4302C-D2DB-55FE-8BE3-535280E796AE",
+      "createdAt": "2026-09-23",
+      "title": "Maxim's",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "one of Paris’ most iconic restaurants ✨ @maximsrestaurant_paris has been part of the Paris dining scene since 1893, and the Belle Époque interiors are still one of the most beautiful things about it. A true Paris institution for a special night out. #paris #restaurant #frenchfood #dinner #datenight",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maxim-s-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdjzfjxOjUH/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "78348982-A8EB-5B24-B02E-CD9A88188715",
+          "order": 0,
+          "title": "Maxim's",
+          "caption": "one of Paris’ most iconic restaurants ✨ @maximsrestaurant_paris has been part of the Paris dining scene since 1893, and the Belle Époque interiors are still one of the most beautiful things about it. A true Paris institution for a special night out. #paris #restaurant #frenchfood #dinner #datenight",
+          "latitude": 48.867315,
+          "longitude": 2.322225,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maxim-s-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.867315,
+      "centroidLongitude": 2.322225,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "01D59174-232E-5074-878E-0DF3C6DBEC12",
+        "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
+        "82BF7C63-3145-51AC-848A-EACD3011E555",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "18F179C5-AD7D-5ADB-8665-C7B581A0FE50"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
+      "createdAt": "2026-09-23",
+      "title": "Le Cornichon",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "a very local-feeling Paris spot you’ll want to know 🥒 @lecornichon.paris is a modern bar-tabac in the 11th with great food, cocktails, a flipper and a proper neighborhood vibe. get the côte de bœuf, pickle dirty martini + stay late- they’re open until 2am. 📍2 rue des Goncourt, 11th arr #paris #bar #frenchfood #restaurant #nightout",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-cornichon-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DddsVbKOL7F/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "AC5A1952-35AE-52F9-8601-2D45F993202B",
+          "order": 0,
+          "title": "Le Cornichon",
+          "caption": "a very local-feeling Paris spot you’ll want to know 🥒 @lecornichon.paris is a modern bar-tabac in the 11th with great food, cocktails, a flipper and a proper neighborhood vibe. get the côte de bœuf, pickle dirty martini + stay late- they’re open until 2am. 📍2 rue des Goncourt, 11th arr #paris #bar #frenchfood #restaurant #nightout",
+          "latitude": 48.869041,
+          "longitude": 2.37269,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-cornichon-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.869041,
+      "centroidLongitude": 2.37269,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "A957C31E-38FE-564B-8F0D-C11F7EA24456",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "3916CE65-DC32-533A-98A7-E313AD8D553B",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "0C9DCBA9-898A-5E17-803D-42C01FC51C91",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "01D59174-232E-5074-878E-0DF3C6DBEC12",
+      "createdAt": "2026-09-23",
+      "title": "Le Trente",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "september babies, i found your birthday spot in paris 🥂 if you’re celebrating with a bigger group, book the upstairs glass room!! it’s the kind of space that makes a birthday feel like an actual event without having to organize a whole venue yourself. @trenteparis, pigalle #paris #birthday #dinner #nightout #party",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-trente-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdHepdpO7aN/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "C97D0F44-7AAD-51F7-A99E-5B7C1EE981B4",
+          "order": 0,
+          "title": "Le Trente",
+          "caption": "september babies, i found your birthday spot in paris 🥂 if you’re celebrating with a bigger group, book the upstairs glass room!! it’s the kind of space that makes a birthday feel like an actual event without having to organize a whole venue yourself. @trenteparis, pigalle #paris #birthday #dinner #nightout #party",
+          "latitude": 48.881016,
+          "longitude": 2.337398,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-trente-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.881016,
+      "centroidLongitude": 2.337398,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "932C8EED-A776-5F27-B968-152E878DEB46",
+        "C0E4302C-D2DB-55FE-8BE3-535280E796AE",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
+        "7B2B370B-758A-5D2C-A318-2DBA97813986",
+        "BB12A6E4-7595-5549-8A14-239FE0B68EB2",
+        "D5C197A7-BAC0-5429-9BF2-5DADA138354A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F3DE9D0E-8EFE-5258-9E7C-6B8CB96C0D27",
+      "createdAt": "2026-09-23",
+      "title": "JJ Hings",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "currently craving ice cream by canal saint martin on repeat🍦 @jjhings is this tiny handmade gelato spot by @ju.bell, inspired by new zealand ice cream culture, and honestly the whole place feels like a little summer movie. the menu is handwritten, the flavors are original, and everything feels artisanal and thoughtfully made. #icecreamshop #icecream #sweettreat #summerinparis #paris",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jj-hings-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DY9WUz1O0xC/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "DF828F04-18C0-590F-949B-386B3C2434C7",
+          "order": 0,
+          "title": "JJ Hings",
+          "caption": "currently craving ice cream by canal saint martin on repeat🍦 @jjhings is this tiny handmade gelato spot by @ju.bell, inspired by new zealand ice cream culture, and honestly the whole place feels like a little summer movie. the menu is handwritten, the flavors are original, and everything feels artisanal and thoughtfully made. #icecreamshop #icecream #sweettreat #summerinparis #paris",
+          "latitude": 48.87383,
+          "longitude": 2.364638,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jj-hings-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.87383,
+      "centroidLongitude": 2.364638,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "14423F6E-0FF9-5DD9-9311-13EEE89E60C0",
+        "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "8D9ADB37-D9A7-5CFC-9D80-25B0602AAE50",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "45DC77F1-CAA3-576E-9939-53908497459C",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5A071578-0DC1-52CE-942E-B9FA1C92056E",
+      "createdAt": "2026-09-23",
+      "title": "Mimi",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "a coffee shop with good sandos that turns into a vinyl bar 💿 right by the louvre, @mimisando.paris starts with coffee and a good setup for remote work. but stay a little longer and it shifts. vinyl spinning. djs in the corner. wine and cocktails flowing. no club. no chaos. just the right energy. #paris #coffeeshop #vinylbar #djset #sando",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mimi-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DWE30upjBAF/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "17075548-FFD1-54CD-B6B0-4D3F3FA25959",
+          "order": 0,
+          "title": "Mimi",
+          "caption": "a coffee shop with good sandos that turns into a vinyl bar 💿 right by the louvre, @mimisando.paris starts with coffee and a good setup for remote work. but stay a little longer and it shifts. vinyl spinning. djs in the corner. wine and cocktails flowing. no club. no chaos. just the right energy. #paris #coffeeshop #vinylbar #djset #sando",
+          "latitude": 48.865187,
+          "longitude": 2.33653,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mimi-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.865187,
+      "centroidLongitude": 2.33653,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "23C6F161-130C-5F38-B92C-1A16E3425162",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176",
+        "C37E821E-F28A-560E-B1F5-DC02771E47E9",
+        "D3061BBE-186B-5FBF-BC30-6C12F13EC2FA",
+        "68D7440B-0E42-50C3-B9BE-D7C778C59616",
+        "EE07C8E2-CDE6-581D-9620-68F02D7145A7",
+        "A957C31E-38FE-564B-8F0D-C11F7EA24456",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F4166960-DAAC-516E-A81A-B141E6CFB1D7",
+      "createdAt": "2026-09-23",
+      "title": "Munch Bagels",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "sometimes all you want is a bagel done right. and this one felt like a small piece of new york in paris 🥯 simple ingredients, fresh toppings, soft toasted bread. not reinvented, just done right. 📍@munch_bagels, 10 rue des dames, 17th arr. #bagel #paris #lunch #parisfoodguide #hiddengems",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/munch-bagels-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DU3mTLFjPhN/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "F9A1AB6E-BFA2-5CA9-B9D0-2B5C57032D86",
+          "order": 0,
+          "title": "Munch Bagels",
+          "caption": "sometimes all you want is a bagel done right. and this one felt like a small piece of new york in paris 🥯 simple ingredients, fresh toppings, soft toasted bread. not reinvented, just done right. 📍@munch_bagels, 10 rue des dames, 17th arr. #bagel #paris #lunch #parisfoodguide #hiddengems",
+          "latitude": 48.885487,
+          "longitude": 2.325753,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/munch-bagels-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.885487,
+      "centroidLongitude": 2.325753,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "0334472C-2E52-5A9D-A921-6D09B847C116",
+        "1CAF31B2-83F6-58BF-9DFF-7F7A436D5277",
+        "18DC6D8E-F909-5711-BD3A-B831B8A14D00",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19",
+        "8C756B95-7114-58CE-B19C-180F758BED4A",
+        "C1EF1549-FB69-5122-9A10-FDF5569A879F",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2FCAAA0D-D267-50DC-BCC5-4C103592320E",
+      "createdAt": "2026-09-23",
+      "title": "Shwi",
+      "shortDescription": "A post by @the_fatmap on Instagram.",
+      "longDescription": "lebanese people just know how to do grilled chicken 🔥 @shwiparis is the new opening from the team behind @kubriparis, bringing Lebanese-style grill to canal saint-martin. the place is constantly packed, and the staff is lovely. special mention to the grilled chicken and spicy chicken sandwich! #paris #lebanesefood #lunch #sandwich #opening",
+      "makerId": "D1C4A8B2-1031-5A47-B02F-E0F9FA7BA444",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shwi-thefatmap_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYfUoi2spij/",
+      "sourceAuthor": "@the_fatmap",
+      "stops": [
+        {
+          "id": "7348D82A-0298-5DE8-ACDD-9C7C34A6E7CB",
+          "order": 0,
+          "title": "Shwi",
+          "caption": "lebanese people just know how to do grilled chicken 🔥 @shwiparis is the new opening from the team behind @kubriparis, bringing Lebanese-style grill to canal saint-martin. the place is constantly packed, and the staff is lovely. special mention to the grilled chicken and spicy chicken sandwich! #paris #lebanesefood #lunch #sandwich #opening",
+          "latitude": 48.8726547,
+          "longitude": 2.3635149,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shwi-thefatmap_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8726547,
+      "centroidLongitude": 2.3635149,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "D378C8FE-AA28-5973-9ECA-AAFA10B45416",
+        "89BD3CF7-9EA4-5553-8677-BF3EAED88525",
+        "BE3A9814-4B5E-5CAA-BF99-5CF6655FAB6D",
+        "B1846FA6-F1A2-5B54-BF43-D8733641C664",
+        "CEBAE99F-0A39-547D-9713-2792E783CB7B",
+        "5CF9934B-E1D5-5C36-9431-8BBB1DC6F215",
+        "1C3F5419-0D88-555A-A0AE-72CC92E74A39"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "25275076-435E-59E2-A048-14D90ED0DB11",
+      "createdAt": "2026-09-23",
+      "title": "Pavillon Suisse",
+      "shortDescription": "A post by @sashi_trip_tip on TikTok.",
+      "longDescription": "Pavillon Suisse. Paris. 1933. Le Corbusier. Almost no budget. Look at the south facade — identical windows, floor after floor. Each one is a room. Each room — a student. The pilotis at the centre make the building appear to float. Each room is completely independent from the structure. Like a bottle in a rack. Le Corbusier used this idea for the rest of his career. South facade: glass for light. North facade: brick for cold. Function determines form. Reyner Banham called it \"one of the seminal buildings of the century.\" Its influence reached Lever House in New York. Brazil's Ministry of Health in Rio. Still a student dormitory. 350 euros a month. UNESCO World Heritage since 2016. Have you ever walked past something this important without knowing it? 📍 Boulevard Jourdan, Paris 14e @fondationlecorbusier Follow for the parts of Europe most travelers walk straight past. pavillon suisse | lecorbusier | paris | modernarchitecture | architecturelovers | hiddeneurope",
+      "makerId": "B27792ED-52CB-58A0-A701-9016E7A6B5F6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pavillon-suisse-sashitriptip_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@sashi_trip_tip/video/7688735375107312929",
+      "sourceAuthor": "@sashi_trip_tip",
+      "stops": [
+        {
+          "id": "4A2520A7-FA90-5BCE-ADCC-D016A78798E6",
+          "order": 0,
+          "title": "Pavillon Suisse",
+          "caption": "Pavillon Suisse. Paris. 1933. Le Corbusier. Almost no budget. Look at the south facade — identical windows, floor after floor. Each one is a room. Each room — a student. The pilotis at the centre make the building appear to float. Each room is completely independent from the structure. Like a bottle in a rack. Le Corbusier used this idea for the rest of his career. South facade: glass for light. North facade: brick for cold. Function determines form. Reyner Banham called it \"one of the seminal buildings of the century.\" Its influence reached Lever House in New York. Brazil's Ministry of Health in Rio. Still a student dormitory. 350 euros a month. UNESCO World Heritage since 2016. Have you ever walked past something this important without knowing it? 📍 Boulevard Jourdan, Paris 14e @fondationlecorbusier Follow for the parts of Europe most travelers walk straight past. pavillon suisse | lecorbusier | paris | modernarchitecture | architecturelovers | hiddeneurope",
+          "latitude": 48.818109,
+          "longitude": 2.342186,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pavillon-suisse-sashitriptip_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.818109,
+      "centroidLongitude": 2.342186,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "39e4f325-e903-51dd-8032-aea6bb824ed1",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
+        "9b93d74b-505a-5886-9cf7-a5ca235c12de",
+        "A18526B6-C854-5AD0-AF75-5ECCF30628DC",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "2e894f42-7142-5739-b7cf-9c702494e4b4"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Designed by a Master",
+        "Modernist"
       ],
       "priceUSD": 0
     }
