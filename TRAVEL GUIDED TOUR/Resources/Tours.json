@@ -105989,21 +105989,6 @@
       ]
     },
     {
-      "id": "00dd1310-c159-598f-a554-77de5912ee2a",
-      "name": "Pont Alexandre III & Petit Palais",
-      "description": "Bridge and palace were built together for the 1900 Exposition Universelle and face each other across the Seine's edge, which is why they read as one place. The bridge, named for Tsar Alexander III, marks the Franco-Russian alliance in gilded winged figures on four columns; its single low steel arch was engineered not to block the view of the Invalides. The Petit Palais holds the city's fine-arts museum.",
-      "latitude": 48.8638,
-      "longitude": 2.31352,
-      "city": "Paris",
-      "address": null,
-      "heroImageURL": null,
-      "additionalImageURLs": null,
-      "tourIds": [
-        "ea203c0e-217d-5345-baad-e161b2cc2f66",
-        "0F278313-E88E-5A29-A6C7-EE145234206C"
-      ]
-    },
-    {
       "id": "a360706e-dcbb-5422-af1a-024dcf8eb1ea",
       "name": "Rietveld Schröder House",
       "description": "Gerrit Rietveld's house of 1924 in Utrecht, built with and for Truus Schröder-Schräder and the only building carried out fully to De Stijl principles: intersecting planes in white, grey, black and primary colours. The upper floor has almost no fixed walls — sliding panels reconfigure it through the day.",
@@ -106437,6 +106422,81 @@
       "tourIds": [
         "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
         "961C83D0-A201-5117-B11C-47B55EA63DB5"
+      ]
+    },
+    {
+      "id": "e9efe72e-8ab2-5d71-b16a-67df17178a3e",
+      "name": "Notre-Dame de Paris",
+      "description": "The Gothic cathedral on the Île de la Cité, begun in 1163. Fire destroyed its roof and spire in April 2019, and it reopened in December 2024 after five years of restoration.",
+      "latitude": 48.853401,
+      "longitude": 2.348788,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "eef8a099-2f7a-5883-9c02-35c0e1836bbd",
+        "C075CEAB-D14D-5C4E-8320-D08A9AF55E3C"
+      ]
+    },
+    {
+      "id": "9ca9c2c7-c36d-5332-9307-347a3c6f1d7b",
+      "name": "Krispy Pizza",
+      "description": "A neighbourhood pizzeria on 13th Avenue in Dyker Heights, Brooklyn, whose loaded slices and buffalo chicken pinwheels made it a regular on NYC food feeds.",
+      "latitude": 40.6224075,
+      "longitude": -74.0055756,
+      "city": "Brooklyn",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "831C19CB-0697-5B83-A9DE-DBA167ED90DC",
+        "B1BB48BF-718D-504B-B3E3-E4D14D630E5C"
+      ]
+    },
+    {
+      "id": "d968a664-f70f-52de-b68a-24beb8001bee",
+      "name": "Niku X",
+      "description": "A wagyu steakhouse on the second floor of the Wilshire Grand Center downtown, from the group behind San Francisco's Niku Steakhouse, known for its steak omakase.",
+      "latitude": 34.0501019,
+      "longitude": -118.259962,
+      "city": "Los Angeles",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B58C3ABB-41FE-53EB-8342-1289DF91672F",
+        "5E8C2124-8324-5F22-A3A9-8FBDBD36C198"
+      ]
+    },
+    {
+      "id": "a3eee40e-d1bb-58d6-ae52-ae1a6d551f8b",
+      "name": "Yorkshire Sculpture Park",
+      "description": "Some 500 acres of 18th-century parkland around Bretton Hall, opened in 1977 as the UK's first sculpture park. Work by Henry Moore and Barbara Hepworth sits in the open landscape, and James Turrell's Deer Shelter Skyspace is set into an old deer shelter in the grounds.",
+      "latitude": 53.6140685,
+      "longitude": -1.5693194,
+      "city": "West Bretton",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "EAC8D7F5-9371-5F14-941E-5A87D93530E0",
+        "E142EE8B-4196-5F35-A0FE-B7D605D849C5"
+      ]
+    },
+    {
+      "id": "b9c18fa9-00e7-58c1-a443-3a9e75970617",
+      "name": "Petit Palais",
+      "description": "Built for the 1900 Exposition Universelle and home since 1902 to the City of Paris Museum of Fine Arts, whose permanent collection is free to visit. Charles Girault's palace wraps a semicircular garden courtyard behind its gilded entrance gate.",
+      "latitude": 48.866042,
+      "longitude": 2.3153496,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0F278313-E88E-5A29-A6C7-EE145234206C",
+        "89EFF81F-C049-5076-BC30-E8853C639C16"
       ]
     }
   ],
@@ -111175,8 +111235,8 @@
           "order": 0,
           "title": "Petit Palais",
           "caption": "here's a spot to cool off in paris during the heatwave!",
-          "latitude": 48.866167852253696,
-          "longitude": 2.3146378566190187,
+          "latitude": 48.866042,
+          "longitude": 2.3153496,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -111188,8 +111248,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.866167852253696,
-      "centroidLongitude": 2.3146378566190187,
+      "centroidLatitude": 48.866042,
+      "centroidLongitude": 2.3153496,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -196337,8 +196397,8 @@
           "order": 0,
           "title": "Yorkshire Sculpture Park",
           "caption": "One of my favorite art sites in Europe, Yorkshire Sculpture Park is home to 500 acres of rolling countryside dotted with magnificent sculptures, including many works by Henry Moore and Barbara Hepworth, both of whom hail from Yorkshire themselves. @yspsculpture #art #sculpture #modernart #yorkshiresculpturepark",
-          "latitude": 53.61197,
-          "longitude": -1.565277,
+          "latitude": 53.6140685,
+          "longitude": -1.5693194,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -196350,8 +196410,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 53.61197,
-      "centroidLongitude": -1.565277,
+      "centroidLatitude": 53.6140685,
+      "centroidLongitude": -1.5693194,
       "city": "West Bretton",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -237180,8 +237240,8 @@
           "order": 0,
           "title": "Notre-Dame de Paris",
           "caption": "Save this for your next trip to Paris! Here’s a travel tip if you’re planning to visit Notre Dame in Paris! Since Notre Dame reopened late last year, tickets have been nearly impossible to redeem and the line everyday has been crazy.. BUT! If you visit in the morning, around the time it opens 8am or on Thursday night (closes at 10pm), you can completely avoid the line and walk right in! No ticket reservation needed! #paris #notredame #paristravel",
-          "latitude": 48.8529371,
-          "longitude": 2.3500501,
+          "latitude": 48.853401,
+          "longitude": 2.348788,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -237193,8 +237253,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8529371,
-      "centroidLongitude": 2.3500501,
+      "centroidLatitude": 48.853401,
+      "centroidLongitude": 2.348788,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -242001,8 +242061,8 @@
           "order": 0,
           "title": "Krispy Pizza",
           "caption": "Trying the viral buffalo chicken pinwheel from @krispypizza #pizza #nycpizza #buffalochicken #buffalosauce #phillycheesesteak #newyorkpizza #bluecheese",
-          "latitude": 40.6218387,
-          "longitude": -74.0056919,
+          "latitude": 40.6224075,
+          "longitude": -74.0055756,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -242014,8 +242074,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.6218387,
-      "centroidLongitude": -74.0056919,
+      "centroidLatitude": 40.6224075,
+      "centroidLongitude": -74.0055756,
       "city": "Brooklyn",
       "country": "United States",
       "relatedTourIds": [
@@ -242460,8 +242520,8 @@
           "order": 0,
           "title": "Niku X",
           "caption": "Trying the $400 Full Blood Wagyu Tomahawk Steak from @nikuxla in LA #steak #steakreel #wagyusteak #ribeye #tomahawksteak #wagyu #wagyubeef #bonemarrow #steakhouse #lafood #jacksdiningroom #losangelesfood",
-          "latitude": 34.0494976,
-          "longitude": -118.2586779,
+          "latitude": 34.0501019,
+          "longitude": -118.259962,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -242473,8 +242533,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0494976,
-      "centroidLongitude": -118.2586779,
+      "centroidLatitude": 34.0501019,
+      "centroidLongitude": -118.259962,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -248932,8 +248992,8 @@
           "order": 0,
           "title": "Niku X",
           "caption": "Steak Omakase is the wave 📍 @nikuxla",
-          "latitude": 34.0501526,
-          "longitude": -118.2603791,
+          "latitude": 34.0501019,
+          "longitude": -118.259962,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -248945,8 +249005,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.0501526,
-      "centroidLongitude": -118.2603791,
+      "centroidLatitude": 34.0501019,
+      "centroidLongitude": -118.259962,
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
@@ -270157,8 +270217,8 @@
           "order": 0,
           "title": "Petit Palais",
           "caption": "This is my favorite spot in Paris that I still think is overall underrated, I do not hear enough people talking about it!!! 🏰🎨 If you’re going to Paris this should be high on your list🩷 📍 @petitpalais_musee #girlandgallery #artinsider #parisart #parisartmuseum #petitpalais",
-          "latitude": 48.8638,
-          "longitude": 2.31352,
+          "latitude": 48.866042,
+          "longitude": 2.3153496,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -270170,8 +270230,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8638,
-      "centroidLongitude": 2.31352,
+      "centroidLatitude": 48.866042,
+      "centroidLongitude": 2.3153496,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -271685,8 +271745,8 @@
           "order": 0,
           "title": "Yorkshire Sculpture Park",
           "caption": "This artwork took 13 years to make! 🌤️ @jamesturell never disappoints! You can visit this artwork yourself at the @yspsculpture",
-          "latitude": 53.61193164210265,
-          "longitude": -1.5682205854040838,
+          "latitude": 53.6140685,
+          "longitude": -1.5693194,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -271698,8 +271758,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 53.61193164210265,
-      "centroidLongitude": -1.5682205854040838,
+      "centroidLatitude": 53.6140685,
+      "centroidLongitude": -1.5693194,
       "city": "West Bretton",
       "country": "United Kingdom",
       "relatedTourIds": [
