@@ -1,0 +1,1076 @@
+{
+ "_about": "Caption-address sweep of the link pins that neither Wikidata (spine UNMATCHED) nor the 2026-09-23 OSM name sweep could confirm, 2026-09-24. For each pin whose caption states a street address, the address was geocoded (GSI for Japanese script, Photon housenumber hits elsewhere) and compared with the pin. Coordinates are what the pin held when checked; a moved pin invalidates its row. Not read by any check; a record so the sweep is not redone blind.",
+ "summary": {
+  "with_address": 352,
+  "geocoded": 106,
+  "within_50m": 66,
+  "moved": [
+   "Juqi NY",
+   "Kawafuku Honten (udon)",
+   "Oi Man Sang (dai pai dong)",
+   "fromkora (Filipino donut bakery)"
+  ]
+ },
+ "rows": {
+  "7401FF11-992D-5D70-8627-40C174CD3C8B": {
+   "title": "Park Side Donuts",
+   "at": [
+    35.643082,
+    139.680405
+   ],
+   "address": "PARK STORE",
+   "m": 9562,
+   "how": "photon:61 3 文京区"
+  },
+  "850BF780-2F48-5A23-878D-093F01B2352C": {
+   "title": "Green Hub at the Old Tai Po Police Station",
+   "at": [
+    22.4465813,
+    114.1697123
+   ],
+   "address": "Green Hub",
+   "m": 0,
+   "how": "photon:11 運頭角里 Wan Tau Kok Lane 香港 Hong Kong"
+  },
+  "88B5AED3-F77C-5A67-A353-E0330F7D3B71": {
+   "title": "Man Hing Garment Factory - Sham Shui Po",
+   "at": [
+    22.3302648,
+    114.1631673
+   ],
+   "address": "Man Hing Garment Factory - Sham Shui Po",
+   "m": 0,
+   "how": "photon:180 長沙灣道 Cheung Sha Wan Road "
+  },
+  "D309DD13-3CF1-5112-8E59-766101687A5E": {
+   "title": "Kowloon Hum Hot Pot",
+   "at": [
+    22.3106784,
+    114.170789
+   ],
+   "address": "九龍坎麻辣火鍋 469-471 Nathan Road, Yau Ma Tei",
+   "m": 0,
+   "how": "photon:469-471 彌敦道 Nathan Road "
+  },
+  "B2E51C26-F246-57A9-8CF1-09E646D4831C": {
+   "title": "Handcrafter, D2 Place",
+   "at": [
+    22.33628392815349,
+    114.14883623646678
+   ],
+   "address": "Handcrafter, D2 Place Lai Chi Kok",
+   "m": 134,
+   "how": "photon:15 長順街 Cheung Shun Street "
+  },
+  "1BCB060D-DC8D-5035-963A-050FE29CF7BF": {
+   "title": "Hoopla, D2 Place",
+   "at": [
+    22.336249181091343,
+    114.14891986336997
+   ],
+   "address": "Hoopla, Lai Chi Kok D2 Place",
+   "m": 142,
+   "how": "photon:15 長順街 Cheung Shun Street "
+  },
+  "447A2A6E-0DA0-5DF5-ACE6-6A2C1F9BA7F3": {
+   "title": "Camelpaint Building",
+   "at": [
+    22.3101875,
+    114.2250625
+   ],
+   "address": "Camelpaint Building, Kwun Tong Also",
+   "m": 1127,
+   "how": "photon:332 觀塘道 Kwun Tong Road 香港 Hong Kong"
+  },
+  "05A13AEC-36EC-5833-8F7D-9745E4F7E513": {
+   "title": "Ohara Ikebana",
+   "at": [
+    22.2897002,
+    114.1997139
+   ],
+   "address": "56 Kam Ping Street, Hong Kong",
+   "m": 119,
+   "how": "photon:11 錦屏街 Kam Ping Street 香港 Hong Kong"
+  },
+  "C3B4BD35-78ED-5F8B-836B-2E4E6207FEC4": {
+   "title": "Savon Workshop",
+   "at": [
+    22.3271729,
+    114.1630198
+   ],
+   "address": "Tong Mi, Tai Nan St, 191-193號地舖",
+   "m": 0,
+   "how": "photon:191-193 大南街 Tai Nan Street "
+  },
+  "0EE316C7-CB68-57BB-A367-152C5EF74C40": {
+   "title": "Social Goods",
+   "at": [
+    22.2824305,
+    114.1551438
+   ],
+   "address": "Social Goods, 43 Wellington Street, Central, Hong Kong",
+   "m": 0,
+   "how": "photon:43-49 威靈頓街 Wellington Street "
+  },
+  "F2BA5545-8E4F-5A4B-B0D3-5B97E6901E1D": {
+   "title": "Tiffany Blue Box Cafe",
+   "at": [
+    22.2777417,
+    114.1853714
+   ],
+   "address": "Tiffany & Co., 1/F, Lee Gardens, Causeway Bay, Hong Kong",
+   "m": 63,
+   "how": "photon:18 希慎道 Hysan Avenue 香港 Hong Kong"
+  },
+  "ED3B13C5-5284-55B8-9980-93BA14590E87": {
+   "title": "Dieci",
+   "at": [
+    22.284375,
+    114.1523713
+   ],
+   "address": "@diecihk, 31 Gough Street, Central, Hong Kong",
+   "m": 0,
+   "how": "photon:31 歌賦街 Gough Street "
+  },
+  "0008D85E-4CD1-5B0A-A541-FBE6B3E35F9B": {
+   "title": "Roru Baru",
+   "at": [
+    22.2763007,
+    114.1700489
+   ],
+   "address": "100 Queen’s Road East, Wan Chai, Hong Kong",
+   "m": 0,
+   "how": "photon:100 皇后大道東 Queen's Road East HongKong"
+  },
+  "36CA1E83-4929-58D7-8941-BC92503DBD8A": {
+   "title": "Soft Thunder Bakery",
+   "at": [
+    22.2768125,
+    114.1686875
+   ],
+   "address": "31 Queen’s Road East, Wan Chai",
+   "m": 3,
+   "how": "photon:29-31 皇后大道東 Queen's Road East "
+  },
+  "F531FDDE-9C05-5F3A-A2D0-487C10A2F4F9": {
+   "title": "Crushed Wines",
+   "at": [
+    22.2860514,
+    114.1432052
+   ],
+   "address": "Crushed Wines, 6 - 8 Second St, Sai Ying Pun, Hong Kong",
+   "m": 4,
+   "how": "photon:6-8 第二街 Second Street 香港 Hong Kong"
+  },
+  "B24B6893-C7D6-5719-956C-7166F68797BA": {
+   "title": "Pineapple Bakery",
+   "at": [
+    22.2858666,
+    114.1519927
+   ],
+   "address": "Pineapple Bakery, 87 Wing Lok Street, Sheung Wan",
+   "m": 9,
+   "how": "photon:87 永樂街 Wing Lok Street "
+  },
+  "4D37B32E-FDEA-5261-AA71-5CCC6E9B4610": {
+   "title": "Primo Posto",
+   "at": [
+    22.2839325,
+    114.1522209
+   ],
+   "address": "Primo Posto, 9 Shin Hing St, Sheung Wan",
+   "m": 0,
+   "how": "photon:7-9 善慶街 Shin Hing Street "
+  },
+  "22ABAF57-D1B0-5DDB-8B9A-7188D5583F28": {
+   "title": "Little Bao",
+   "at": [
+    22.2840491,
+    114.1522651
+   ],
+   "address": "Little Bao, 1-3 Shin Hing St, Central",
+   "m": 0,
+   "how": "photon:1-3 善慶街 Shin Hing Street "
+  },
+  "E1072D25-C000-5F2C-8B17-F9199D7F3975": {
+   "title": "Louise",
+   "at": [
+    22.2832741,
+    114.1518456
+   ],
+   "address": "Louise, 35 Aberdeen Street, Central",
+   "m": 0,
+   "how": "photon:35 鴨巴甸街 Aberdeen Street 香港 Hong Kong"
+  },
+  "181961D0-8D04-5882-9D12-6882FE3F1A0D": {
+   "title": "Mama Tiger Noodles",
+   "at": [
+    22.2846418,
+    114.1528044
+   ],
+   "address": "Mama Tiger, 12 Kau U Fong, Central",
+   "m": 0,
+   "how": "photon:12-14 九如坊 Kau U Fong "
+  },
+  "41EF29C2-A7BC-543E-87BD-BD827FF11B4B": {
+   "title": "Trattoria Felino",
+   "at": [
+    22.2763454,
+    114.1708756
+   ],
+   "address": "Trattoria Felino 1-7 Ship Street, Wan Chai",
+   "m": 29,
+   "how": "photon:1-7 船街 Ship Street "
+  },
+  "4105EDE8-4067-5196-885A-F3880D5003B0": {
+   "title": "Aerosports Scarborough",
+   "at": [
+    43.736949,
+    -79.280679
+   ],
+   "address": "@aerosportsscarborough, 1120 Birchmount Road)",
+   "m": 192,
+   "how": "photon:1120 Birchmount Road Toronto"
+  },
+  "AD0F38ED-4808-500A-B0BE-E53BE3D8F24E": {
+   "title": "E. Albert Pallot Park",
+   "at": [
+    25.813073,
+    -80.18594
+   ],
+   "address": "3805 NE 6th Avenue Miami, FL 33161",
+   "m": 38,
+   "how": "photon:3805 Northeast 6th Avenue Miami"
+  },
+  "841D994F-160B-542B-B6ED-BE8BB2F703E4": {
+   "title": "The Aventura Mall Slide",
+   "at": [
+    25.956946,
+    -80.143033
+   ],
+   "address": "Aventura Mall Slide",
+   "m": 0,
+   "how": "photon:19501 Biscayne Boulevard Aventura"
+  },
+  "84E648C9-6F64-55A7-8D2F-452293F265BE": {
+   "title": "Lido at The Surf Club",
+   "at": [
+    25.877318,
+    -80.121166
+   ],
+   "address": "9011 Collins Avenue, Surfside, FL",
+   "m": 66,
+   "how": "photon:9011 Collins Avenue Surfside"
+  },
+  "E9C0777F-D200-548D-92DE-DA18517B9150": {
+   "title": "Onion Picking on Awaji Island",
+   "at": [
+    34.3196643,
+    134.7486239
+   ],
+   "address": "濱田ファーム 〒656-0313 兵庫県南あわじ市松帆志知川172-1 2,000円/人 （體驗時間大約為40分鐘）",
+   "m": 950474,
+   "how": "gsi:青森県横浜町浜田"
+  },
+  "10B12B30-456E-57E1-8A6F-B9D0B0629D91": {
+   "title": "The City Reliquary, NYC's Tiny Museum",
+   "at": [
+    40.7139536,
+    -73.9557409
+   ],
+   "address": "370 Metropolitan Ave",
+   "m": 0,
+   "how": "photon:370 Metropolitan Avenue Brooklyn"
+  },
+  "DEE32782-BBB3-5E8B-A01E-56264F811F84": {
+   "title": "Where Spider-Man Got His Powers",
+   "at": [
+    40.747377,
+    -73.8516136
+   ],
+   "address": "01 111th St. in Corona, Queens",
+   "m": 416,
+   "how": "photon:42-01 111th Street New York"
+  },
+  "061B2E06-4661-5279-97BC-94E9D0397146": {
+   "title": "58 Joralemon Street, the Fake Brownstone",
+   "at": [
+    40.6934375,
+    -73.9974375
+   ],
+   "address": "58 Joralemon Street in Brooklyn Heights",
+   "m": 4,
+   "how": "photon:58 Joralemon Street New York"
+  },
+  "C25C4380-4868-5319-AA29-89F87839BB7C": {
+   "title": "$500 Billion of Gold Under 33 Liberty Street",
+   "at": [
+    40.7082308,
+    -74.0085461
+   ],
+   "address": "33 Liberty Street",
+   "m": 0,
+   "how": "photon:33 Liberty Street New York"
+  },
+  "FC7B74B7-13FE-53EC-8972-E96740D4A10A": {
+   "title": "The Hell Gate Sabotage Plot",
+   "at": [
+    40.78266359736446,
+    -73.92197118047963
+   ],
+   "address": "via Ward and Randall Islands",
+   "m": 21725,
+   "how": "photon:400C Victory Boulevard New York"
+  },
+  "D46229A3-1177-5B61-9FBB-EF9AA07E49B0": {
+   "title": "The Windowless Skyscraper",
+   "at": [
+    40.7165418,
+    -74.0059177
+   ],
+   "address": "33 Thomas Street",
+   "m": 0,
+   "how": "photon:33 Thomas Street New York"
+  },
+  "5D68A84A-C33D-539A-B8DA-DCEBBCD2AC52": {
+   "title": "The Shinran Shonin Statue",
+   "at": [
+    40.8016539,
+    -73.9701238
+   ],
+   "address": "332 Riverside Drive",
+   "m": 6,
+   "how": "photon:332 Riverside Drive New York"
+  },
+  "4D82E3A2-AFA1-5AF6-BFD6-60304FBC8192": {
+   "title": "The Lenin Statue on Norfolk Street",
+   "at": [
+    40.7213125,
+    -73.9856875
+   ],
+   "address": "178 Norfolk St. in Lower East Side",
+   "m": 6,
+   "how": "photon:178 Norfolk Street New York"
+  },
+  "F04B3E13-259A-5041-ACA6-689145DF3252": {
+   "title": "Kossar's: How a New York Bagel Is Made",
+   "at": [
+    40.716407,
+    -73.988787
+   ],
+   "address": "367 Grand Street)",
+   "m": 0,
+   "how": "photon:367 Grand Street New York"
+  },
+  "9E39B1FE-4242-5E41-B61E-DAE61BC260FD": {
+   "title": "Berczy Square Atrium",
+   "at": [
+    43.64756,
+    -79.37699
+   ],
+   "address": "Berczy Square",
+   "m": 137,
+   "how": "photon:35 Wellington Street East Toronto"
+  },
+  "CA537FBC-33F8-5BE6-AAC7-E6E95AA5C9D2": {
+   "title": "Pocket Plaza",
+   "at": [
+    31.2093945,
+    121.4506537
+   ],
+   "address": "Pocket Plaza, Shanghai, China",
+   "m": 2235,
+   "how": "photon:299 铜仁路 上海"
+  },
+  "ABBBF0B7-52D8-576B-A2E9-BE5457200AB3": {
+   "title": "Gotokuji Temple",
+   "at": [
+    35.648498,
+    139.647263
+   ],
+   "address": "Gotokuji Temple, 2-24-7 Gotokuji, Setagaya-ku, Tokyo",
+   "m": 0,
+   "how": "photon:7 24 世田谷区"
+  },
+  "6CFED25E-8A82-5AF0-A7FF-4744DC3CB216": {
+   "title": "Japanime Art Gallery Tokyo",
+   "at": [
+    35.6705019,
+    139.7024144
+   ],
+   "address": "Japanime Art Gallery Tokyo ⏰ 11:00-20:00",
+   "m": 1983,
+   "how": "photon:2 20 新宿区"
+  },
+  "CF827ECF-13BD-5D19-9BEB-DDB096CF6598": {
+   "title": "Grandfather's",
+   "at": [
+    35.660576,
+    139.702133
+   ],
+   "address": "Grandfather's - B1F, 1-24-7 Shibuya, Tokyo",
+   "m": 4447,
+   "how": "photon:TOC ANNEX B1F 9-4 品川区"
+  },
+  "DB7536E0-30BF-5714-97F4-B1075E34520E": {
+   "title": "Indigo Ninja Tokyo",
+   "at": [
+    35.714729,
+    139.801819
+   ],
+   "address": "2-15-6 Hanakawado, Taito-ku, Tokyo 111-0033, Japan",
+   "m": 2255,
+   "how": "photon:6 15 東京都"
+  },
+  "9757C81E-088E-5540-A5BB-92D8B5FC5B12": {
+   "title": "Tokyo Kimono Denim",
+   "at": [
+    35.714989,
+    139.80043
+   ],
+   "address": "2 Chome-11-9 Hanakawado, Taito City, Tokyo 111-0033",
+   "m": 2225,
+   "how": "photon:9 11 東京都"
+  },
+  "C4ABDAB6-2BA3-5639-B3F7-7D77C93CB89A": {
+   "title": "Vowz Bar",
+   "at": [
+    35.6904492,
+    139.7232722
+   ],
+   "address": "Vowz Bar, 6 Arakicho, Shinjuku-ku, Tokyo",
+   "m": 132,
+   "how": "photon:42 6 東京都"
+  },
+  "726AB861-8269-51C3-AAE8-2D23395974A5": {
+   "title": "Monsta Sweets, Koenji",
+   "at": [
+    35.708015,
+    139.64975
+   ],
+   "address": "〒166-0002 2-37-8 Koenjikita, Suginami, Tokyo",
+   "m": 215,
+   "how": "photon:2 6 杉並区"
+  },
+  "113D8966-5620-5394-A190-C2A40D8D6BA3": {
+   "title": "Onigiri Mamma (おにぎりまんま), Shinjuku",
+   "at": [
+    35.692184,
+    139.705521
+   ],
+   "address": "おにぎりまんま 〒160-0022 3-14-23 Shinjuku, Tokyo",
+   "m": 139,
+   "how": "photon:1 14 新宿区"
+  },
+  "07040EB2-EA63-5341-8DC0-AACF247F68C3": {
+   "title": "Ebimaru Ramen, Jimbocho",
+   "at": [
+    35.698727,
+    139.7565
+   ],
+   "address": "Ebimaru Ramen",
+   "m": 5262,
+   "how": "photon:5 5 新宿区"
+  },
+  "044B4EE6-5C21-568B-A1C4-303CB35BE306": {
+   "title": "Yoshoku Yoshikami, Asakusa",
+   "at": [
+    35.712952,
+    139.793732
+   ],
+   "address": "Yoshoku Yoshikami 1 Chome-41-4 Asakusa, Taito City, Tokyo 111-0032",
+   "m": 6,
+   "how": "photon:4 41 台東区"
+  },
+  "EB392E88-66F7-59C2-A77C-1D6C15FCC904": {
+   "title": "Oi Man Sang (dai pai dong)",
+   "at": [
+    22.3295234,
+    114.1649564
+   ],
+   "address": "Oi Man Sang Sham Shui Po Building, 1A-1C Shek Kip Mei St, Sham Shui Po, Hong Kong",
+   "m": 420,
+   "how": "photon:1A - 1C 石硤尾街 Shek Kip Mei Street "
+  },
+  "96BE99E6-21C6-5C2E-92E6-071C2B00EA8A": {
+   "title": "fromkora (Filipino donut bakery)",
+   "at": [
+    40.7379977,
+    -73.9287804
+   ],
+   "address": "@fromkora 45-12 Greenpoint Ave, Sunnyside, NY 11104",
+   "m": 895,
+   "how": "photon:45-12 Greenpoint Avenue New York"
+  },
+  "46E8FEBF-1CEF-5E1E-9FDC-843589951C2F": {
+   "title": "Xocolatte",
+   "at": [
+    40.692291,
+    -73.9106643
+   ],
+   "address": "@xocolatte.bushwick 513 Wilson Ave, Brooklyn, NY 11221",
+   "m": 0,
+   "how": "photon:513 Wilson Avenue New York"
+  },
+  "0CB92DA2-C2D2-58F5-9FFA-2151CEA7BF8A": {
+   "title": "Papa d'Amour (by Dominique Ansel)",
+   "at": [
+    40.7331118,
+    -73.9938497
+   ],
+   "address": "@papadamournyc 64 University Pl, New York, NY 10003",
+   "m": 12,
+   "how": "photon:64 University Place New York"
+  },
+  "71B57228-D25D-5D72-B3A1-6DCE9A0A48EE": {
+   "title": "1915 Hand-Pulled Noodles",
+   "at": [
+    40.7164176,
+    -73.9978158
+   ],
+   "address": "@1915handpulled_noodles 76 Mott St, New York, NY 10013",
+   "m": 0,
+   "how": "photon:76 Mott Street New York"
+  },
+  "C1F09432-8953-57F5-A0AF-EFA6F8A14B04": {
+   "title": "I'm Donut? NYC",
+   "at": [
+    40.757465,
+    -73.9847632
+   ],
+   "address": "@imdonut.nyc 154 W 45th St, New York, NY 10036",
+   "m": 373,
+   "how": "photon:25 West 45th Street New York"
+  },
+  "5CCA3277-F9D4-5695-9CE7-2DE662121DF0": {
+   "title": "Kawafuku Honten (udon)",
+   "at": [
+    34.6753372,
+    135.4991998
+   ],
+   "address": "：Kawafuku honten 川福流手打うどん川福本店 1 Chome-14-17 Higashishinsaibashi, Chuo Ward, Osaka, 542-0083, Japan",
+   "m": 397156,
+   "how": "gsi:埼玉県上尾市川"
+  },
+  "314F76BB-AC22-5A19-8322-742434761B86": {
+   "title": "Little Gren Jai",
+   "at": [
+    40.6866581,
+    -73.947706
+   ],
+   "address": "@littlegrenjai 477 Gates Ave, Brooklyn, NY 11216",
+   "m": 20,
+   "how": "photon:477 Gates Avenue New York"
+  },
+  "DB228D36-0F28-52BA-BACA-3C558487F0E9": {
+   "title": "Formosa Dumplings",
+   "at": [
+    40.6992358,
+    -73.9315525
+   ],
+   "address": "@formosa.dumplings 144 Evergreen Ave, Brooklyn, NY 11206",
+   "m": 0,
+   "how": "photon:144 Evergreen Avenue New York"
+  },
+  "3B752FC0-DA16-5F7D-832F-67953ECC7F42": {
+   "title": "Dim Sum Palace",
+   "at": [
+    40.7139741,
+    -73.9961234
+   ],
+   "address": "DIM SUM PALACE 27 Division St NY, NY 10002",
+   "m": 3930,
+   "how": "photon:33 West 33rd Street New York"
+  },
+  "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD": {
+   "title": "Chef Katsu BK",
+   "at": [
+    40.6899221,
+    -73.9379295
+   ],
+   "address": "@chefkatsubk",
+   "m": 7727,
+   "how": "photon:89 East 42nd Street New York"
+  },
+  "D7C76B68-CFB4-5A3A-9472-6BA88E5CEE19": {
+   "title": "Boulangerie Mamiche",
+   "at": [
+    48.8802356,
+    2.343004
+   ],
+   "address": "@boulangeriemamiche 45 Rue Condorcet, 75009 Paris, France",
+   "m": 40,
+   "how": "photon:45 Rue Condorcet Paris"
+  },
+  "4608B278-89AB-5D9C-90E1-1A71C79F416C": {
+   "title": "Juqi NY",
+   "at": [
+    40.7641042,
+    -73.8211638
+   ],
+   "address": "@juqi_ny 133-36 37th Ave G17, Queens, NY 11354",
+   "m": 1143,
+   "how": "photon:133-36 37th Avenue New York"
+  },
+  "DD4C7F25-3E0B-5C83-AD10-ADF9C865D8BB": {
+   "title": "Kissa Lupra | 喫茶ルプラ",
+   "at": [
+    34.66732,
+    135.52475
+   ],
+   "address": "8-15 Obasecho, Tennoji Ward, Osaka, 543-0028, Japan",
+   "m": 161,
+   "how": "photon:13 3 大阪市"
+  },
+  "7B586F37-2057-5677-8045-6D240F5D723F": {
+   "title": "Italian Bar Bere Bene, Tenma",
+   "at": [
+    34.70768,
+    135.513962
+   ],
+   "address": "10-10 Ikedacho, Kita Ward, Osaka",
+   "m": 349,
+   "how": "photon:10 10 大阪市"
+  },
+  "9B8123D2-9902-5E30-814D-0ADE308677EB": {
+   "title": "Matsuyama Sushi",
+   "at": [
+    35.704666,
+    139.778336
+   ],
+   "address": "3 Chome-20-2 Taito, Taito City, Tokyo 110-0016, Japan",
+   "m": 246,
+   "how": "photon:3 20 東京都"
+  },
+  "EBD51DA1-98C1-586C-99A2-E744B8E9F200": {
+   "title": "Iga",
+   "at": [
+    35.70108,
+    139.664719
+   ],
+   "address": "3 Chome-8-2 Nakano, Nakano City, Tokyo 164-0001, Japan",
+   "m": 420,
+   "how": "photon:8 30 中野区"
+  },
+  "2CDF11D3-CDD0-5CBD-BC29-FB79D8FB5B8B": {
+   "title": "Kotaro (中華料理 幸太楼)",
+   "at": [
+    34.671349,
+    135.543732
+   ],
+   "address": "1 Chome-37-15 Oimazato, Higashinari Ward, Osaka, 537-0012, Japan",
+   "m": 257,
+   "how": "photon:11 17 大阪市"
+  },
+  "CCD8ECB4-CDF6-5825-BED2-26F97D051262": {
+   "title": "Kogane Sushi (小金寿司)",
+   "at": [
+    35.730652,
+    139.728134
+   ],
+   "address": "Kogane Sushi 小金寿司 〒170-0005 東京都豊島区南大塚３丁目５４−6",
+   "m": 21221,
+   "how": "gsi:千葉県松戸市小金"
+  },
+  "1738C88A-244D-57D1-9C74-0E1911C35D62": {
+   "title": "Cobble Court, the Goodnight Moon House",
+   "at": [
+    40.7344755,
+    -74.00679
+   ],
+   "address": "121 Charles Street",
+   "m": 0,
+   "how": "photon:121 Charles Street New York"
+  },
+  "72996712-5291-5458-9C28-4ADEF517B586": {
+   "title": "Make My Fish",
+   "at": [
+    40.8023545,
+    -73.9509307
+   ],
+   "address": "@makemyfish116",
+   "m": 5950,
+   "how": "photon:89 East 42nd Street New York"
+  },
+  "E35302CB-8CA0-519B-9C02-6024D343D55F": {
+   "title": "Taberna dos Papagaios",
+   "at": [
+    38.7354048,
+    -9.1319937
+   ],
+   "address": "rua lucinda simões 13, arroios",
+   "m": 0,
+   "how": "photon:13 Rua Lucinda Simões Lisboa"
+  },
+  "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2": {
+   "title": "Ouzeri Karayiannis",
+   "at": [
+    37.9803678,
+    23.7272417
+   ],
+   "address": "🇬🇷 Athinas 42",
+   "m": 1320,
+   "how": "photon:15 Διονυσίου Αρεοπαγίτου Αθήνα"
+  },
+  "AB1D064F-09A2-5575-8546-53E1DA06EA50": {
+   "title": "Sloan's",
+   "at": [
+    55.85882,
+    -4.25364
+   ],
+   "address": "62 Argyll Arcade, 108 Argyle Street, G2 8BG",
+   "m": 55,
+   "how": "photon:62-66 Argyll Arcade Glasgow"
+  },
+  "4F3210E1-E5C7-5D64-A27E-B52DE6B162F6": {
+   "title": "Hootananny's",
+   "at": [
+    57.47906,
+    -4.2273
+   ],
+   "address": "67 Church Street, IV1 1ES",
+   "m": 0,
+   "how": "photon:67 Church Street Inverness"
+  },
+  "59C46581-C293-5F4A-B22B-546B0F69E41F": {
+   "title": "The Village Tavern",
+   "at": [
+    40.73055,
+    -74.00426
+   ],
+   "address": "46 Bedford St, NY 10014",
+   "m": 0,
+   "how": "photon:46 Bedford Street New York"
+  },
+  "C3627FE5-2916-5E9C-A99A-1C2A570BD359": {
+   "title": "MacGregor's Pub",
+   "at": [
+    57.47984,
+    -4.22582
+   ],
+   "address": "113 Academy Street, IV1 1LX",
+   "m": 61,
+   "how": "photon:63 Academy Street Inverness"
+  },
+  "99A952D5-8A1C-5A6F-8B2D-191DE008018E": {
+   "title": "Tinney's Bar",
+   "at": [
+    55.0001,
+    -7.32351
+   ],
+   "address": "4 Patrick Street, BT48 7EL",
+   "m": 31981,
+   "how": "photon:59 Dublin Street Newtownstewart"
+  },
+  "054CD4DE-905C-5BC8-B46D-3E05D3426AE9": {
+   "title": "D.J. Reynolds",
+   "at": [
+    40.7678369,
+    -73.9848021
+   ],
+   "address": "351 W 57th St, New York, NY 10019",
+   "m": 0,
+   "how": "photon:351 West 57th Street New York"
+  },
+  "C7AB3BA4-9B65-561D-B7F8-3A0B5D195316": {
+   "title": "Thomas Maher's",
+   "at": [
+    52.2619597,
+    -7.1146804
+   ],
+   "address": "20 O'Connell St, X91 HR22",
+   "m": 0,
+   "how": "photon:20 O'Connell Street Waterford"
+  },
+  "79E1C461-67D7-545D-83C1-E0C89F9FF3B6": {
+   "title": "Seven Stars",
+   "at": [
+    50.8214143,
+    -0.1419024
+   ],
+   "address": "Ship St, BN1 1AD",
+   "m": 18,
+   "how": "photon:14 Ship Street Brighton"
+  },
+  "4B8B8CC3-00A7-5341-AB69-528ACF5CA26C": {
+   "title": "Skehan's",
+   "at": [
+    51.4675797,
+    -0.0494655
+   ],
+   "address": "1 Kitto Rd, SE14 5TW",
+   "m": 0,
+   "how": "photon:1 Kitto Road London"
+  },
+  "6A1D48F0-617A-5928-AC0B-9EBB95306E06": {
+   "title": "Café Chris",
+   "at": [
+    52.3742568,
+    4.8815665
+   ],
+   "address": "Bloemstraat 42, 1016 LC, Amsterdam",
+   "m": 1,
+   "how": "photon:42 Bloemstraat Amsterdam"
+  },
+  "41EA1190-0F6E-5338-B564-525930AF7272": {
+   "title": "The Globe Tavern",
+   "at": [
+    51.5054815,
+    -0.0899051
+   ],
+   "address": "8 Bedale St, London SE1 9AL",
+   "m": 0,
+   "how": "photon:8 Bedale Street London"
+  },
+  "0498C0DA-BD50-581E-A5E7-DC42CAE0AF6E": {
+   "title": "Tickety Boos",
+   "at": [
+    56.4615739,
+    -2.9681767
+   ],
+   "address": "51 Commercial Street, DD1 2AA",
+   "m": 0,
+   "how": "photon:51 Commercial Street Dundee"
+  },
+  "68686CC5-B16B-51FF-A983-51BAD53421BE": {
+   "title": "Girvan's Bar",
+   "at": [
+    55.5447552,
+    -4.6618384
+   ],
+   "address": "66 Portland Street, KA10 6QU",
+   "m": 0,
+   "how": "photon:66 Portland Street Troon"
+  },
+  "484D0FA8-9FFB-5762-94D3-AF4CCFF79C41": {
+   "title": "The Black Friar",
+   "at": [
+    53.4865538,
+    -2.2534725
+   ],
+   "address": "41-43 Blackfriars Rd, Manchester M3 7DB",
+   "m": 0,
+   "how": "photon:41-43 Blackfriars Road Salford"
+  },
+  "19478DCC-5DBF-5E75-AA4C-745E20D8628B": {
+   "title": "Doctor's Pub",
+   "at": [
+    55.9455179,
+    -3.190919
+   ],
+   "address": "32 Forrest Rd, Edinburgh EH1 2QN",
+   "m": 5,
+   "how": "photon:32 Forrest Road Edinburgh"
+  },
+  "F389C039-D724-55D9-BBC0-40B3CFA4C788": {
+   "title": "The Bank Bar",
+   "at": [
+    56.459166,
+    -2.9715442
+   ],
+   "address": "7/9 Union Street, DD1 4BN",
+   "m": 0,
+   "how": "photon:7-9 Union Street Dundee"
+  },
+  "89F68D05-EC73-5D7E-B598-DBF140FDED02": {
+   "title": "Denholm's Bar",
+   "at": [
+    55.8589639,
+    -4.2594443
+   ],
+   "address": "17 Hope St, Glasgow",
+   "m": 0,
+   "how": "photon:17 Hope Street Glasgow"
+  },
+  "C16559E7-91EB-5DA1-86AC-20AD054D8DA3": {
+   "title": "The Mall Tavern",
+   "at": [
+    51.5084715,
+    -0.193934
+   ],
+   "address": "71 Palace Gardens Terrace, W8 4DY",
+   "m": 0,
+   "how": "photon:71-73 Palace Gardens Terrace London"
+  },
+  "1BE01539-4A2F-5CC7-B998-D152CC9FA03D": {
+   "title": "The Boat House",
+   "at": [
+    51.465205,
+    -0.2127715
+   ],
+   "address": "32 Brewhouse Ln, London SW15 2JX",
+   "m": 0,
+   "how": "photon:32 Brewhouse Lane London"
+  },
+  "9D29DD37-EF50-597C-BF68-7AF1FA328CC4": {
+   "title": "Old George Inn",
+   "at": [
+    54.9715187,
+    -1.6125282
+   ],
+   "address": "Old George Yard, NE1 1EZ",
+   "m": 26,
+   "how": "photon:1 Old George Yard Newcastle upon Tyne"
+  },
+  "740ADD76-ABBE-5DFE-981D-083C02CA23BB": {
+   "title": "The Gravediggers (John Kavanagh's)",
+   "at": [
+    53.3696571,
+    -6.2719298
+   ],
+   "address": "1 Prospect Square, Glasnevin, Dublin, D09 CF72",
+   "m": 0,
+   "how": "photon:1-2 Prospect Square Dublin"
+  },
+  "B94B3D94-77A8-541E-BCF8-FFFDA49BECEB": {
+   "title": "O'Connell's",
+   "at": [
+    53.2745932,
+    -9.0483217
+   ],
+   "address": "8 Eyre Square, H91 FT22",
+   "m": 0,
+   "how": "photon:8 Eyre Square Galway"
+  },
+  "EEE6B2C8-23E1-5732-9A3A-1612EC589420": {
+   "title": "Dungloe Bar",
+   "at": [
+    54.9972558,
+    -7.321798
+   ],
+   "address": "41-43 Waterloo Street, BT48 6HD",
+   "m": 41,
+   "how": "photon:48 Waterloo Street Derry"
+  },
+  "187073AC-8586-5FCA-B0FB-98C57B092278": {
+   "title": "River Inn",
+   "at": [
+    54.996655,
+    -7.3204274
+   ],
+   "address": "34-38 Shipquay Street, BT48 6DW",
+   "m": 47,
+   "how": "photon:42 Shipquay Street Derry/Londonderry"
+  },
+  "A7148F29-786D-59CA-A92C-BB9385F344BD": {
+   "title": "Cask & Flagon",
+   "at": [
+    42.347316,
+    -71.098196
+   ],
+   "address": "62 Brookline Ave, Boston, MA 02215",
+   "m": 26,
+   "how": "photon:62 Brookline Avenue Boston"
+  },
+  "D329DEBA-CADA-59FC-B56D-2B434A45D113": {
+   "title": "Davy Mac's Bar",
+   "at": [
+    52.2579685,
+    -7.1113021
+   ],
+   "address": "7 John's Ave, Waterford, X91 V3YR",
+   "m": 0,
+   "how": "photon:7 John's Avenue Waterford"
+  },
+  "4761C98C-3B68-54D1-88CF-D305ADB38EEB": {
+   "title": "Green Devil's Absinthe Bar",
+   "at": [
+    50.0882684,
+    14.424055
+   ],
+   "address": "Týn 637/7, 110 00 Staré Město",
+   "m": 83,
+   "how": "photon:1053 Staré Město Praha"
+  },
+  "09378580-2397-5F49-8B2E-88A9BC8DFF28": {
+   "title": "The Castle Hotel",
+   "at": [
+    53.4837138,
+    -2.2338462
+   ],
+   "address": "66 Oldham St, Manchester M4 1LE",
+   "m": 0,
+   "how": "photon:66 Oldham Street Manchester"
+  },
+  "6D865179-B079-5289-8023-1539720EC934": {
+   "title": "The Dog House",
+   "at": [
+    55.9427354,
+    -3.182488
+   ],
+   "address": "18-24 Clerk St, Edinburgh EH8",
+   "m": 3,
+   "how": "photon:18-24 Clerk Street Edinburgh"
+  },
+  "55DADF6F-266F-5C7A-84C9-8277F62BCE15": {
+   "title": "Frankenstein's Bar",
+   "at": [
+    55.94738,
+    -3.1917057
+   ],
+   "address": "26 George IV Bridge, Edinburgh EH1 1EN",
+   "m": 9,
+   "how": "photon:26 George IV Bridge Edinburgh"
+  },
+  "3F5B3E3B-88B3-56E7-A735-CC446A6AD03A": {
+   "title": "Bennett's Bar",
+   "at": [
+    55.9417361,
+    -3.2032072
+   ],
+   "address": "8 Leven St, Edinburgh EH3 9LG",
+   "m": 0,
+   "how": "photon:8 Leven Street Edinburgh"
+  },
+  "06486972-23D1-5FA9-936C-E615A34A111B": {
+   "title": "Biddy Mulligan's",
+   "at": [
+    55.9479383,
+    -3.1949977
+   ],
+   "address": "94-96 Grassmarket, EH1 2JR",
+   "m": 7,
+   "how": "photon:94-96 Grassmarket Edinburgh"
+  },
+  "F4D68B85-1BCB-5762-9779-6A4AC7B8EB36": {
+   "title": "The Shambles Tavern",
+   "at": [
+    53.9596554,
+    -1.0803237
+   ],
+   "address": "44 Shambles, York YO1 7LX",
+   "m": 0,
+   "how": "photon:44 Shambles York"
+  },
+  "6A63FFBE-138D-50B3-AB0D-0F135E88B2F8": {
+   "title": "The Pevril of the Peak",
+   "at": [
+    53.4749771,
+    -2.2446285
+   ],
+   "address": "127 Great Bridgewater St, Manchester M1 5JQ",
+   "m": 0,
+   "how": "photon:127 Great Bridgewater Street Manchester"
+  },
+  "E67F81FF-B083-58A9-B4EB-9AE1E21BE548": {
+   "title": "The Church Bar & Cafe",
+   "at": [
+    53.3485803,
+    -6.2669174
+   ],
+   "address": "Jervis St, North City, Dublin 1, D01 YX64 @thechurchdublin",
+   "m": 28,
+   "how": "photon:125 Mary Street Dublin"
+  },
+  "0CC17267-0E30-550F-84E4-6E04C744C285": {
+   "title": "Landline General Store",
+   "at": [
+    48.867317,
+    2.372787
+   ],
+   "address": "107 avenue parmentier, 75011 paris, france",
+   "m": 12,
+   "how": "photon:107 Avenue Parmentier Paris"
+  }
+ }
+}
