@@ -106660,6 +106660,21 @@
         "73E51D4E-1F3F-5AD2-A195-378F49868428",
         "0004F49C-547B-597E-94C6-B9D563466670"
       ]
+    },
+    {
+      "id": "51ae7446-f952-51c9-b1d0-6dafc8ec0b40",
+      "name": "Shwi",
+      "description": null,
+      "latitude": 48.8726547,
+      "longitude": 2.3635149,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "EBE90D57-E597-56BA-B54D-153E1728BFCE",
+        "2FCAAA0D-D267-50DC-BCC5-4C103592320E"
+      ]
     }
   ],
   "linkPins": [
