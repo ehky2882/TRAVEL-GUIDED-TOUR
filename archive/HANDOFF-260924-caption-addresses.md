@@ -22,10 +22,13 @@ Cafe Fang Studio 1.7 km, Juqi NY 1.1 km, Saengchai Phochana 1 km, World's Larges
 Gongliao district office, Ruifang district, the 迪化街商圈 node, Gamcheon Culture Village — i.e.
 it was geocoded from the area name, not the venue.
 
-## Left for the owner
-- **Sky Coffee (Miami):** the caption's 1420 SW 1st Ct is Brickell; the pin sits on a Sky Coffee
-  at 1825 Biscayne Blvd; Yelp now says 710 Brickell Ave. Which site?
-- **Bloomsbury Tavern** (781 m, postcode centroid only), **Sushi Ishimatsu** (pin on the Honen-in
-  temple node), **Sushi Punch** (block level), **Daljib, Gamcheon** (pin on the village node),
-  **Uncle Liu's** (1036/24 Sukhumvit, would not geocode), **V-Sign Hand Sculpture** (caption says in
-  front of the Russian Embassy; pin 1–1.5 km from it), **Chuka Soba Aoba** (reviewer's memory only).
+## Owner answers, 2026-09-24 (all settled)
+- **Sky Coffee (Miami): SETTLED by the owner, 2026-09-24** — "1420 SW 1st Court, Miami, FL 33135". Moved 3.8 km onto the Census house-level point for 1420 SW 1st Ct (25.7603208, -80.1955968). ⚠️ The ZIP given is Little Havana's; SW 1st **Ct** exists only in 33130 (Brickell), and 33135 matches 1420 SW 1st **St** 2.4 km west. The street name, the caption and the Dec 2023 press all say Court, so Court won.
+- **Bloomsbury Tavern: SETTLED by the owner, 2026-09-24** — "236 Shaftesbury Avenue, WC2H 8EG". Moved ~780 m onto OSM's pub node "The Bloomsbury" beside No. 234, inside that postcode.
+- **Chuka Soba Aoba: moved 311 m.** The caption says Nakano; the official shop list, Hot Pepper and Retty give the main shop as 中野5-58-1, which GSI resolves at 号 level (35.707951, 139.666428).
+
+- **Sushi Ishimatsu: SETTLED by the owner, 2026-09-24** — "36 Shishigatani Honen-in Nishimachi, Sakyo, Kyoto 606-8427". Moved off the Hōnen-in temple node onto GSI's 番地-level point for 鹿ケ谷法然院西町36 (35.022064, 135.793304).
+- **Sushi Punch: SETTLED by the owner, 2026-09-24** — "3-3-9 Azabujuban, Minato, Vort 17F". GSI resolves only to the block (麻布十番3-3番) and OSM has no Vort building; the pin was 262 m outside that block, so it moved to the block point (35.653694, 139.735626) — block-level, within a few tens of metres.
+- **Uncle Liu's: moved 4.6 km (owner: "the address is even in the caption").** 1036/24 Sukhumvit Rd, Phra Khanong — confirmed by Corner, Restaurant Guru and @patty.plates. OSM carries 1036/13-14 and 1036/17 on Soi Sukhumvit 42/1; the pin moved to their midpoint (13.7162894, 100.5884726). It had sat near Nana, presumably geocoded as '24 Sukhumvit'. 🔴 The reviewer marked this UNSURE because the Thai house number would not geocode — **a Thai `NNNN/NN` address is a lot within a compound; find the compound's other lots in OSM instead of giving up.**
+- **V-Sign Hand Sculpture: SETTLED by the owner, 2026-09-24** — a Google Maps pin, 50.103399, 14.413255 (Bubeneč, by the Russian Embassy).
+- **Daljib (Gamcheon): SETTLED by the owner, 2026-09-24** — "just use Gamcheon Culture Village". The pin already sits on that node (35.0963371, 129.0087897), so it stays; do not re-flag it.
