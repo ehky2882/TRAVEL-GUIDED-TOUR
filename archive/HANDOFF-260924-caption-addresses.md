@@ -23,8 +23,7 @@ Gongliao district office, Ruifang district, the 迪化街商圈 node, Gamcheon C
 it was geocoded from the area name, not the venue.
 
 ## Left for the owner
-- **Sky Coffee (Miami):** the caption's 1420 SW 1st Ct is Brickell; the pin sits on a Sky Coffee
-  at 1825 Biscayne Blvd; Yelp now says 710 Brickell Ave. Which site?
+- **Sky Coffee (Miami): SETTLED by the owner, 2026-09-24** — "1420 SW 1st Court, Miami, FL 33135". Moved 3.8 km onto the Census house-level point for 1420 SW 1st Ct (25.7603208, -80.1955968). ⚠️ The ZIP given is Little Havana's; SW 1st **Ct** exists only in 33130 (Brickell), and 33135 matches 1420 SW 1st **St** 2.4 km west. The street name, the caption and the Dec 2023 press all say Court, so Court won.
 - **Bloomsbury Tavern** (781 m, postcode centroid only), **Sushi Ishimatsu** (pin on the Honen-in
   temple node), **Sushi Punch** (block level), **Daljib, Gamcheon** (pin on the village node),
   **Uncle Liu's** (1036/24 Sukhumvit, would not geocode), **V-Sign Hand Sculpture** (caption says in
