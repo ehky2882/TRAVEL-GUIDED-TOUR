@@ -22,10 +22,10 @@ Cafe Fang Studio 1.7 km, Juqi NY 1.1 km, Saengchai Phochana 1 km, World's Larges
 Gongliao district office, Ruifang district, the 迪化街商圈 node, Gamcheon Culture Village — i.e.
 it was geocoded from the area name, not the venue.
 
-## Owner answers, 2026-09-24 (all settled except Chuka Soba Aoba)
+## Owner answers, 2026-09-24 (all settled)
 - **Sky Coffee (Miami): SETTLED by the owner, 2026-09-24** — "1420 SW 1st Court, Miami, FL 33135". Moved 3.8 km onto the Census house-level point for 1420 SW 1st Ct (25.7603208, -80.1955968). ⚠️ The ZIP given is Little Havana's; SW 1st **Ct** exists only in 33130 (Brickell), and 33135 matches 1420 SW 1st **St** 2.4 km west. The street name, the caption and the Dec 2023 press all say Court, so Court won.
 - **Bloomsbury Tavern: SETTLED by the owner, 2026-09-24** — "236 Shaftesbury Avenue, WC2H 8EG". Moved ~780 m onto OSM's pub node "The Bloomsbury" beside No. 234, inside that postcode.
-- **Still open: Chuka Soba Aoba** — flagged only from a reviewer's memory of its address; unverified.
+- **Chuka Soba Aoba: moved 311 m.** The caption says Nakano; the official shop list, Hot Pepper and Retty give the main shop as 中野5-58-1, which GSI resolves at 号 level (35.707951, 139.666428).
 
 - **Sushi Ishimatsu: SETTLED by the owner, 2026-09-24** — "36 Shishigatani Honen-in Nishimachi, Sakyo, Kyoto 606-8427". Moved off the Hōnen-in temple node onto GSI's 番地-level point for 鹿ケ谷法然院西町36 (35.022064, 135.793304).
 - **Sushi Punch: SETTLED by the owner, 2026-09-24** — "3-3-9 Azabujuban, Minato, Vort 17F". GSI resolves only to the block (麻布十番3-3番) and OSM has no Vort building; the pin was 262 m outside that block, so it moved to the block point (35.653694, 139.735626) — block-level, within a few tens of metres.
