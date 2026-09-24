@@ -3629,3 +3629,14 @@ read the subtitles.**
 Two more routes that worked on caption-only pins: a pin that sits at exactly 0 m from a geocoded
 street address was placed from a venue's listing, so the listing at that address names it; and a
 chef's jacket, a lantern or a coaster in the hero image usually carries the shop's name.
+
+## A pin that sits EXACTLY on an area's node was geocoded from the area, not the venue (2026-09-24)
+
+The caption-address sweep moved 33 pins, and the largest errors shared one signature: the pin
+sat to the metre on a **district office, a district node, a "shopping area" node or a street
+midpoint** — Gongliao district (8 km), Ruifang district (3.4 km), the 迪化街商圈 node (1.7 km),
+Gamcheon Culture Village. Whoever made the pin geocoded the *area* the caption mentions and
+stopped there. **A pin 0 m from an admin or street-midpoint node is a finding, not a
+confirmation.** For Hong Kong, the government's own address service (als.gov.hk) returns
+building-level points that Photon cannot; for New York, NYC Geosearch; for other US addresses the
+Census geocoder.

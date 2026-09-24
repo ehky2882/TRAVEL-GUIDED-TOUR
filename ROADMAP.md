@@ -60,6 +60,8 @@ Run `bash scripts/session-start.sh` for what is actually true right now.
 
 **The 6 most recent blocks:**
 
+**Status (2026-09-24, session “SCALE PINNED TOURS”):** web session (**content**). Caption-address sweep of the 1,722 pins no gazetteer could confirm: 352 captions state an address; **33 pins moved** onto a house-level geocode or a same-name OSM point (largest 18 km). See `archive/HANDOFF-260924-caption-addresses.md`.
+
 **Status (2026-09-23, session “SCALE PINNED TOURS”, evening):** web session (**content**). The last caption-titled pins named: **56 of 57**, each on two independent signals (the caption's own address, the hero image, a named OSM point, the video's spoken subtitles). **14 moved onto their venue**, one by 30 km and one by 7.3 km. Magazzino Italian Art made a place (443). See `archive/HANDOFF-260923-caption-names.md`.
 
 **Status (2026-09-23, “SCALE PINNED TOURS”): 🚀 1.1.3 RELEASED** — the owner released 1.1.3 (build 176) on **2026-09-23**, with phased release over 7 days. It carries **delta catalogue fetching** (#912 server, #914 client), so egress should fall as phones update — judge it by Supabase's daily egress, not the date. Next: `MARKETING_VERSION` 1.1.3 → 1.1.4 in its own PR (owner OK, `project.pbxproj`).

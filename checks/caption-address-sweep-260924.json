@@ -1,5 +1,5 @@
 {
- "_about": "Caption-address sweep of the link pins that neither Wikidata (spine UNMATCHED) nor the 2026-09-23 OSM name sweep could confirm, 2026-09-24. For each pin whose caption states a street address, the address was geocoded (GSI for Japanese script, Photon housenumber hits elsewhere) and compared with the pin. Coordinates are what the pin held when checked; a moved pin invalidates its row. Not read by any check; a record so the sweep is not redone blind.",
+ "_about": "Caption-address sweep of the link pins that neither Wikidata (spine UNMATCHED) nor the 2026-09-23 OSM name sweep could confirm, 2026-09-24. For each pin whose caption states a street address, the address was geocoded (GSI for Japanese script, Photon housenumber hits elsewhere) and compared with the pin. Coordinates are what the pin held when checked; a moved pin invalidates its row. Not read by any check; a record so the sweep is not redone blind. A second pass (three reviewers, house-level geocodes only: GSI, the Hong Kong government ALS, NYC Geosearch, the US Census geocoder, Photon) checked the 246 addresses the first pass could not geocode.",
  "summary": {
   "with_address": 352,
   "geocoded": 106,
@@ -9,7 +9,49 @@
    "Kawafuku Honten (udon)",
    "Oi Man Sang (dai pai dong)",
    "fromkora (Filipino donut bakery)"
-  ]
+  ],
+  "second_pass": {
+   "checked": 246,
+   "classes": {
+    "NO-ADDRESS": 39,
+    "OK": 157,
+    "MOVE": 24,
+    "UNSURE": 24,
+    "NO-GEOCODE": 2
+   },
+   "moved": [
+    "Abbotsford Pub",
+    "Alila Shanghai",
+    "Azuki to Kouri",
+    "Cafe Fang Studio",
+    "Danish Bakery Hong Kong",
+    "Haeundae Galbi",
+    "Hanamon",
+    "Izushi Soba Katsura",
+    "Jan Palach Square Memorial",
+    "Katie Daly's",
+    "Le Bretagne",
+    "Maguro to Shari",
+    "Maoaohaiyangyi Station 卯澳海洋驛站",
+    "Mr. Kanso",
+    "Ng Kam Chun (hand-carved stamps)",
+    "ONCOR",
+    "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street",
+    "Planet of Curry, Shimokitazawa",
+    "Saengchai Phochana",
+    "Sotei",
+    "St. John of Nepomuk Statue",
+    "The Prague Turk (St. John of Matha Monument)",
+    "The World's Largest McDonald's",
+    "Togoshiya (automated onigiri)",
+    "Yakiniku Kitan",
+    "Yong Kang Beef Noodles",
+    "Yu Zai Fan Shu Tea Stall",
+    "“I Am Like You” Sculpture",
+    "寧波生煎包 (Ningbo pan-fried buns)"
+   ]
+  },
+  "moved_total": 33
  },
  "rows": {
   "7401FF11-992D-5D70-8627-40C174CD3C8B": {
@@ -1071,6 +1113,1730 @@
    "address": "107 avenue parmentier, 75011 paris, france",
    "m": 12,
    "how": "photon:107 Avenue Parmentier Paris"
+  }
+ },
+ "second_pass_rows": {
+  "4DB3A10E-69BD-56E8-854E-ACCC1BA1BA0B": {
+   "title": "Oedo Antique Market",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 122,
+   "evidence": "Caption names only the venue (Tokyo International Forum), no street address. OSM Forum building 122 m / attraction node 96 m from pin — consistent."
+  },
+  "7587A7A7-339D-5657-8981-D44B71B321CE": {
+   "title": "Orlando Chamber of Commerce Building",
+   "class": "OK",
+   "address": "75 S Ivanhoe Blvd, Orlando, FL",
+   "m": 4,
+   "evidence": "US Census geocoder house-level match 75 S IVANHOE BLVD; OSM \"Orlando Regional Chamber of Commerce\" 48 m."
+  },
+  "64728E1F-FF2D-56A0-9E3B-00E440509E09": {
+   "title": "Cosm Atlanta",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption names \"COSM Atlanta\" only; no street address. Venue not in Photon/OSM, not verified."
+  },
+  "98C3D4A5-F429-5260-B407-B1542DF4A235": {
+   "title": "Yonemoto Coffee",
+   "class": "OK",
+   "address": "東京都中央区築地4-11-1",
+   "m": 13,
+   "evidence": "GSI 東京都中央区築地四丁目１１番１号 (番/号 level) 13 m; OSM 米本珈琲本店 0 m."
+  },
+  "F65A390A-3A20-5D6E-8A5E-5933865B9026": {
+   "title": "165 Crosby Street",
+   "class": "OK",
+   "address": "165 Crosby Street, New York, NY",
+   "m": 21,
+   "evidence": "NYC Geosearch (PAD) 165 CROSBY STREET 21 m."
+  },
+  "A3303827-10F5-5B55-AC6E-6A54A8F3C0F3": {
+   "title": "House of the Redeemer",
+   "class": "OK",
+   "address": "7 East 95th Street, New York, NY (caption: E 95th St between Fifth and Madison)",
+   "m": 3,
+   "evidence": "Caption gives block only; known address 7 E 95th St geocoded NYC Geosearch 3 m, Photon house 0 m."
+  },
+  "DF1C65F9-DF16-5573-855E-FB85673EE668": {
+   "title": "Southern California Edison Building",
+   "class": "OK",
+   "address": "601 W 5th Street, Los Angeles, CA",
+   "m": 0,
+   "evidence": "Photon house-level OSM \"Edison Building\" 601 W 5th St, 0 m."
+  },
+  "21586B61-6113-5CF6-96D2-465E1F8BE07E": {
+   "title": "Criollas Empanadas",
+   "class": "OK",
+   "address": "888 Eighth Avenue, New York, NY",
+   "m": 2,
+   "evidence": "NYC Geosearch 888 8 AVENUE 2 m; Photon house 0 m."
+  },
+  "4E489D6B-DE26-5199-B843-D1108C84DAD9": {
+   "title": "The Grand Central Stones",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption: \"Van Cortlandt Park (Old Putnam Trail)\" — park, no address."
+  },
+  "DEB96E59-E5B8-5DAF-8A28-B5D903097D61": {
+   "title": "The Hidden Bamboo Garden at the Donnelly Centre",
+   "class": "OK",
+   "address": "160 College St, Toronto, ON",
+   "m": 0,
+   "evidence": "Photon house-level + named POI Donnelly Centre, 160 College St, 0 m."
+  },
+  "1EDBB4AA-7E66-5256-B8AB-0E22E16CF695": {
+   "title": "Red Incense Burner Summit",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption: Braemar Hill summit, no address; not in Photon."
+  },
+  "A8B58E21-ECDC-5BC6-99CB-E5BC3E88EB0F": {
+   "title": "The Graveyard of Buddhas at Waterfall Bay",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 276,
+   "evidence": "Caption gives directions only (Waterfall Bay). OSM Waterfall Bay Park 276 m — plausible for a shoreline site."
+  },
+  "CF92D098-19A5-5B0D-9898-7F199B5CB0A0": {
+   "title": "Chop Alley",
+   "class": "OK",
+   "address": "Man Wa Lane, Sheung Wan, Hong Kong",
+   "m": 0,
+   "evidence": "Lane-level only (no number): Photon Man Wa Lane 20 m; short lane, no move risk. ALS has no match."
+  },
+  "CFACB753-BCB9-53D7-9C7D-917625F76213": {
+   "title": "Pak Mei Snack 百味食品 1N Sai Yeung Choi Street",
+   "class": "MOVE",
+   "address": "Shop G10, G/F, CTMA Centre, 1N Sai Yeung Choi Street South, Mong Kok, Hong Kong",
+   "m": 427,
+   "evidence": "HK govt ALS building-level: 1N SAI YEUNG CHOI ST SOUTH = CTMA CENTRE 427 m; Photon OSM CTMA Centre (1N) 421 m; OpenRice lists 百味食品 in CTMA Centre. Pin sits exactly on an OSM 百味食品 at 688 Nathan Rd (Argyle Centre) — a SECOND branch; caption+title name the 1N SYCS branch."
+  },
+  "EA1D9540-E398-5A85-BCC1-18315448BE22": {
+   "title": "Haeundae Galbi",
+   "class": "MOVE",
+   "address": "G/F, M88 (Wellington Place), 2-8 Wellington Street, Central, Hong Kong",
+   "m": 219,
+   "evidence": "HK govt ALS building-level 2-8 WELLINGTON ST = WELLINGTON PLACE, 219 m; Photon house 2-8 Wellington St 224-233 m; OpenRice/Threads confirm Haeundae Galbi at G/F M88, 2-8 Wellington St."
+  },
+  "74A4BFE3-D981-5880-B213-D4EB49AF98A2": {
+   "title": "Chi Lin Nunnery & Nan Lian Garden",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 18,
+   "evidence": "Directions only. OSM Chi Lin Nunnery 31 m — consistent."
+  },
+  "1C01E5F9-6C52-5C02-9C47-3FB00A19099D": {
+   "title": "Lucky 7, Stanley Market",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Stanley Market only; OSM Stanley Market hawker bazaar 9 m — consistent."
+  },
+  "2E93D9A8-CAC8-5C05-93E9-5BB9A82E489D": {
+   "title": "Chi Ming Mahjong",
+   "class": "OK",
+   "address": "60 Fa Yuen Street, Mong Kok, Hong Kong",
+   "m": 24,
+   "evidence": "ALS 60 FA YUEN ST 24 m; Photon house (shop=toys) 38 m."
+  },
+  "B76060FE-42CB-5A0D-A94B-847CAFCCC674": {
+   "title": "Bagel Gogo",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption: \"Bagel Gogo, Hung Hom\" only; not in OSM."
+  },
+  "F3AB96D1-791A-596D-82C2-82F74AB3FE55": {
+   "title": "Chun Hing Garden Christmas Tree Farm",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption: \"Chun Hing Garden in Kam Tin\" only; not in OSM."
+  },
+  "91C35A70-C906-5474-8A7C-F2055D385314": {
+   "title": "Don'tail Cocktail Bar",
+   "class": "OK",
+   "address": "Shop D, G/F, 4 Water Street, Sai Ying Pun, Hong Kong",
+   "m": 13,
+   "evidence": "ALS 4 WATER ST (Wing To Building) 13 m; Photon 9 m."
+  },
+  "E9A18AD3-7F4A-5C7C-AF1A-26F217B3F739": {
+   "title": "Ho Lan Zheng",
+   "class": "OK",
+   "address": "2/F, LKF29, 29 Wyndham Street, Central, Hong Kong",
+   "m": 1,
+   "evidence": "ALS 29 WYNDHAM ST = LKF 29, 1 m."
+  },
+  "BE4E03D9-CB52-5A22-A6E8-EF10FCF853CD": {
+   "title": "Wake Record Store",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption: \"Wake Record Store, TST\" only."
+  },
+  "4AEF0B2C-5125-546B-A192-BDE6FD69F2EF": {
+   "title": "Jiksap",
+   "class": "OK",
+   "address": "9/F Block A, On Lok Factory Building, 90 Kowloon City Road, To Kwa Wan",
+   "m": 12,
+   "evidence": "ALS 90 KOWLOON CITY RD = ON LOK FACTORY BUILDING 12 m; OSM building 4 m."
+  },
+  "7E7373F1-74B5-551A-AD60-BBCE1FC78B93": {
+   "title": "Nocturnal Stationery",
+   "class": "OK",
+   "address": "Shop 17, G/F, Block E, Tsuen Tak Gardens, 208 Tsuen King Circuit, Tsuen Wan",
+   "m": 15,
+   "evidence": "ALS 208 TSUEN KING CIRCUIT 15-64 m (estate blocks); Photon Tsuen Tak Gardens 0 m."
+  },
+  "3A4F399A-889D-5AFE-8D9F-B250EB8CA92D": {
+   "title": "Frost Museum of Science",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 0,
+   "evidence": "Venue name only; OSM Frost Museum (1101 Biscayne Blvd) 0 m — consistent."
+  },
+  "4575B81F-879E-5D3D-A9B4-6B702479F376": {
+   "title": "EONIQ",
+   "class": "OK",
+   "address": "G02-03 Mill6, The Mills, 45 Pak Tin Par Street, Tsuen Wan",
+   "m": 3,
+   "evidence": "ALS 45 PAK TIN PAR ST = THE MILLS 3 m."
+  },
+  "C2793C9B-6A6D-57CA-97CF-3A7946D63938": {
+   "title": "Il Presidente",
+   "class": "OK",
+   "address": "13 Duddell Street, Central, Hong Kong",
+   "m": 15,
+   "evidence": "ALS 13 DUDDELL ST (Baskerville House) 15 m."
+  },
+  "A323CC38-8A9E-5AB0-8E4B-0A6FA0EF1607": {
+   "title": "Chouchou",
+   "class": "OK",
+   "address": "1/F, J Residence, 60 Johnston Road, Wan Chai",
+   "m": 17,
+   "evidence": "ALS 60 JOHNSTON RD = J RESIDENCE 17 m."
+  },
+  "F48F1265-52C0-5833-915F-36B4517D0295": {
+   "title": "Lazy Suzy",
+   "class": "OK",
+   "address": "21 Staunton Street, Central, Hong Kong",
+   "m": 3,
+   "evidence": "ALS 21 STAUNTON ST 3 m."
+  },
+  "C5AB955F-0F6B-5DA2-AD52-EF315E63D5E1": {
+   "title": "Alma",
+   "class": "OK",
+   "address": "51 Peel Street, Central, Hong Kong",
+   "m": 3,
+   "evidence": "ALS 51 PEEL ST 3 m (address from caption tail)."
+  },
+  "F925F381-1216-520D-85D0-842F4BD214AF": {
+   "title": "La Petite Maison",
+   "class": "OK",
+   "address": "23-29 Stanley Street, Central, Hong Kong",
+   "m": 75,
+   "evidence": "23-29 not in ALS; adjacent numbers 28 Stanley 75 m, 24-26 (Luk Yu) 87 m; Photon Stanley St 60 m. Adjacent-number level only, but within 100 m — no move case."
+  },
+  "633DA4F8-2341-5B2A-8934-7328CDB91435": {
+   "title": "Red Sugar",
+   "class": "OK",
+   "address": "7/F Kerry Hotel, 38 Hung Luen Road, Hung Hom",
+   "m": 98,
+   "evidence": "ALS 38 HUNG LUEN RD = KERRY HOTEL 98 m (large hotel; OSM hotel node 57 m)."
+  },
+  "1D236385-DE03-5F3F-9D69-E9999E1E12A8": {
+   "title": "O'rm",
+   "class": "OK",
+   "address": "8 On Wo Lane, Sheung Wan, Hong Kong",
+   "m": 4,
+   "evidence": "ALS 8 ON WO LANE 4 m (address from caption tail)."
+  },
+  "C2BBC340-E518-582A-9463-35ED3E4742BD": {
+   "title": "Omnia",
+   "class": "OK",
+   "address": "33 Staunton Street, Central, Hong Kong",
+   "m": 3,
+   "evidence": "ALS 33 STAUNTON ST (Kam Hei Mansion) 3 m."
+  },
+  "16333820-8A03-58FD-96DE-33E6A6B0A559": {
+   "title": "Tosca di Angelo",
+   "class": "OK",
+   "address": "102/F ICC (Ritz-Carlton), 1 Austin Road West, Kowloon",
+   "m": 0,
+   "evidence": "Photon ICC building + Ritz-Carlton 0-10 m; ALS 1 Austin Rd West 44 m."
+  },
+  "27E00961-A694-5D1A-848B-ED803D407ED5": {
+   "title": "The Ice Bath Club",
+   "class": "OK",
+   "address": "38 Belcher's Street, Kennedy Town",
+   "m": 93,
+   "evidence": "ALS 38 BELCHER'S ST = KENNEDY 38, 93 m (large podium complex; within 100 m)."
+  },
+  "B039CF72-99D4-5AEE-B1AB-C5D01BB41DB6": {
+   "title": "Jean-Pierre",
+   "class": "OK",
+   "address": "9 Bridges Street, Central, Hong Kong",
+   "m": 15,
+   "evidence": "9 not in ALS; neighbours 2 / 18 Bridges St 13-15 m, 17 at 58 m."
+  },
+  "40E6A5FA-2AC6-5E4B-9CD3-38853F6C9896": {
+   "title": "Ruins of St Paul's",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 0,
+   "evidence": "what3words only. OSM Ruins of St Paul 0-45 m — consistent."
+  },
+  "F42A4220-CA01-5D15-BFDD-1FF6421285AB": {
+   "title": "Fort Monte",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 0,
+   "evidence": "what3words only. OSM Fortaleza do Monte 0 m — consistent."
+  },
+  "278EF0E3-1283-5151-8B47-7B859451ACB4": {
+   "title": "The Blue House",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 0,
+   "evidence": "what3words only. OSM Blue House (72-74 Stone Nullah Lane) 0 m — consistent."
+  },
+  "63EDAD4E-4759-592F-9905-377EC91A6144": {
+   "title": "Cape Collinson Rock Carving",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 0,
+   "evidence": "what3words only. OSM rock carving 0 m — consistent."
+  },
+  "E69C1C06-AF1E-5E94-8F91-07120DF7E6D9": {
+   "title": "I Love Cake, Wan Chai",
+   "class": "OK",
+   "address": "G/F, 201 Wan Chai Road, Wan Chai",
+   "m": 7,
+   "evidence": "ALS 201 WAN CHAI RD (Wai Hay Mansion) 7 m."
+  },
+  "28BE346A-0FD6-55E3-BF04-C19316519B8B": {
+   "title": "The Riverwood Conservancy",
+   "class": "UNSURE",
+   "address": "4300 Riverwood Park Lane, Mississauga, ON",
+   "m": 200,
+   "evidence": "Only street-level: Photon Riverwood Park Lane centroid 200 m; nearest house-level is 4170 Riverwood Park Ln (Visual Arts Mississauga) 233 m. 4300 not geocodable; large park, pin coordinate is 4-dp."
+  },
+  "535DBDE2-3561-5B0F-A0A0-413BC2CCD827": {
+   "title": "Kayaking to the Toronto Islands",
+   "class": "OK",
+   "address": "283 Queens Quay W, Toronto (Harbourfront Canoe & Kayak Centre)",
+   "m": 0,
+   "evidence": "Photon house-level 283 Queens Quay W 0-5 m. (Address is the rental centre, the caption's start point.)"
+  },
+  "902C1CC1-6997-51C0-BB93-B13B43DE5CC0": {
+   "title": "Opening Day at Waterworks Food Hall",
+   "class": "OK",
+   "address": "50 Brant St, Toronto",
+   "m": 0,
+   "evidence": "Photon named POI Waterworks Food Hall, 50 Brant St, 0 m."
+  },
+  "A6CE55FF-7A56-5F34-93AF-A02A157B28D3": {
+   "title": "Solar Carve",
+   "class": "OK",
+   "address": "40 Tenth Avenue, New York, NY",
+   "m": 25,
+   "evidence": "NYC Geosearch 40 10 AVENUE 25 m."
+  },
+  "F15EFC27-0EC8-5668-9025-C9F809E47942": {
+   "title": "Sky Coffee",
+   "class": "UNSURE",
+   "address": "1420 SW 1st Ct, Miami, FL",
+   "m": 3783,
+   "evidence": "Caption address geocodes house-level (Photon \"1420 Southwest 1st Court\") 3.78 km from pin; press (Axios/OMAAT, Dec 2023) confirm Sky Coffee opened at 1420 SW 1st Ct, Brickell. BUT pin sits exactly on an OSM \"Sky Coffee Buenos Aires\" at 1825 Biscayne Blvd, and Yelp now lists 710 Brickell Ave — the ca"
+  },
+  "8E0EDE44-CB19-5805-A064-20A4B29F616D": {
+   "title": "Glaser Organic Farms",
+   "class": "OK",
+   "address": "13751 SW 192 St, Miami, FL",
+   "m": 5,
+   "evidence": "US Census geocoder 13751 SW 192ND ST 4 m (Photon had street only)."
+  },
+  "25B0E968-7AB5-54EA-9386-339A69D48DD5": {
+   "title": "Hobie Island Beach Park",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 0,
+   "evidence": "Road only (Old Rickenbacker Cswy). OSM Hobie Island Beach Park 0 m — consistent."
+  },
+  "294F8C20-EC37-5B6C-8995-C3C5646A20C1": {
+   "title": "The World's Largest McDonald's",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 906,
+   "evidence": "Caption gives name only (\"Worlds Biggest McDonald's, Orlando\") — BUT LEAD: the World's Largest Entertainment McDonald's is 6875 Sand Lake Rd (Wikipedia/Tripadvisor; Census geocode 28.45004,-81.47092; OSM McDonald's at 6875 I-Drive). Pin is on a DIFFERENT McDonald's (OSM, 7344 W Sand Lake Rd), ~905 m"
+  },
+  "20F4869C-801E-509F-BD8F-88D70211D216": {
+   "title": "The Schomburg Center's Ten Million Pieces",
+   "class": "OK",
+   "address": "515 Malcolm X Blvd, New York, NY",
+   "m": 5,
+   "evidence": "NYC Geosearch 515 MALCOLM X BLVD 5 m; OSM Schomburg Center 0 m."
+  },
+  "C8B77297-50E0-5E47-91BD-B5E3D65069CD": {
+   "title": "Chartwell Booksellers",
+   "class": "OK",
+   "address": "55 East 52nd Street, New York, NY",
+   "m": 5,
+   "evidence": "NYC Geosearch 5 m; Photon Park Avenue Plaza 0 m."
+  },
+  "89E2CEE5-A0F5-57D1-93BD-2FF965337E65": {
+   "title": "The 1920 Wall Street Bombing",
+   "class": "OK",
+   "address": "23 Wall Street, New York, NY",
+   "m": 49,
+   "evidence": "Caption: \"scars on 23 Wall Street\". NYC Geosearch 49 m, Photon building 23 m."
+  },
+  "134ED232-8D00-5550-ACDC-F4B59D3A0CAB": {
+   "title": "Olana: Frederic Church's Hilltop House",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "\"via Metro North\" false positive. OSM Olana museum 7 m — consistent."
+  },
+  "3B84BA04-3AC0-5DAA-888D-877F63DBF82A": {
+   "title": "Best Pizza: Baked in an Old-Style Oven",
+   "class": "OK",
+   "address": "33 Havemeyer St, Brooklyn, NY",
+   "m": 4,
+   "evidence": "NYC Geosearch 4 m; OSM Best Pizza 6 m."
+  },
+  "81FFE361-C5D2-59AA-A7EB-F48EE7D83E9D": {
+   "title": "Burp Castle: The Bar Where You Whisper",
+   "class": "OK",
+   "address": "41 East 7th Street, New York, NY",
+   "m": 9,
+   "evidence": "NYC Geosearch 9 m; OSM Burp Castle 0 m."
+  },
+  "968E626C-CE4B-5397-91A3-58045ECFE6CB": {
+   "title": "Villa Charlotte Bronte: English Villas in the Bronx",
+   "class": "OK",
+   "address": "2501 Palisade Ave, Bronx, NY",
+   "m": 0,
+   "evidence": "NYC Geosearch 0 m."
+  },
+  "FF5CA7F4-1B84-5592-9B0C-A1FDF4E1DC26": {
+   "title": "Eye Stone Spring, Aranya Wulingshan",
+   "class": "NO-GEOCODE",
+   "address": "Aranya Wulingshan (Phase 2), Yanshi Village, Wulingshan Town, Xinglong County, Chengde, Hebei",
+   "m": null,
+   "evidence": "Village-level address only; Photon has no Aranya Wulingshan feature. Not verifiable here."
+  },
+  "C6001D21-FA42-55D4-9B0C-C75D7F4C1838": {
+   "title": "400 West 12th Street",
+   "class": "OK",
+   "address": "400 West 12th Street, New York, NY",
+   "m": 24,
+   "evidence": "NYC Geosearch 24 m; OSM Superior Ink 24 m."
+  },
+  "3A7B137A-C0C0-5938-B16E-A90BD4B1793C": {
+   "title": "The Madison Street Rat Pit",
+   "class": "OK",
+   "address": "49 Madison Street, New York, NY",
+   "m": 15,
+   "evidence": "NYC Geosearch 15 m (Photon mis-hit Brooklyn)."
+  },
+  "0C01B1DE-3E91-5945-AD77-F4250CEC47FB": {
+   "title": "585 Kendall",
+   "class": "OK",
+   "address": "585 Kendall Street, Cambridge, MA",
+   "m": 0,
+   "evidence": "Photon house-level 585 Kendall St 0 m."
+  },
+  "59ECCB77-8473-573B-A3BE-480A97CF4407": {
+   "title": "Náplavka",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "\"via Wikimedia Commons\" false positive; long embankment, pin plausible."
+  },
+  "66D2B202-D8AF-5A75-BDEC-4BDBF444252B": {
+   "title": "YMCA Palace Paternoster",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "\"via Wikimedia\" false positive. OSM palác YMCA (Na Poříčí) 0 m — consistent."
+  },
+  "A32850BC-0E99-5740-8325-40D4C89D37E2": {
+   "title": "Kulturpalast Mural (Der Weg der roten Fahne)",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 0,
+   "evidence": "\"via Wikimedia\" false positive. OSM Kulturpalast 21 m — consistent."
+  },
+  "3BF94D20-990C-530F-A5B1-DA6396F1FAB7": {
+   "title": "The Prague Turk (St. John of Matha Monument)",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 276,
+   "evidence": "\"via Wikimedia\" false positive. LEAD: OSM memorial \"svatí Jan z Mathy, Felix z Valois a Ivan\" on Charles Bridge is 276 m W of pin (pin is near the Old Town end; statue is near the Malá Strana end, as caption says \"southern side\")."
+  },
+  "A2221620-E5E7-52A6-B3D6-EAC8A3F9DF95": {
+   "title": "St. John of Nepomuk Statue",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 141,
+   "evidence": "\"via Wikimedia\" false positive. LEAD: OSM memorial \"svatý Jan Nepomucký\" on Charles Bridge 141 m W of pin."
+  },
+  "64DAC586-0DC0-523C-91C7-FB3C6F3B380A": {
+   "title": "Jan Palach Square Memorial",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 348,
+   "evidence": "\"via Wikimedia\" false positive. LEAD: Hejduk memorial (OSM artworks \"Dům syna\"/\"Dům matky\", Alšovo nábřeží by Jan Palach Square) ~345 m from pin; square itself 273-315 m."
+  },
+  "687F4A2B-9D33-5C72-B67C-7BFA5BDD8F5E": {
+   "title": "Potsdamer Platz Ghost Station",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "\"via Wikimedia\" false positive. Potsdamer Platz station 55 m — consistent."
+  },
+  "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2": {
+   "title": "V-Sign Hand Sculpture",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 1550,
+   "evidence": "\"via Wikimedia\" false positive. LEAD: caption says the hand stands directly in front of the Russian Embassy (Bubeneč); OSM embassy POIs are 1.06-1.55 km from pin. Sculpture location not independently found."
+  },
+  "3639287C-B7A8-5879-B456-9D66DDF34211": {
+   "title": "777 Washington Street",
+   "class": "OK",
+   "address": "777 Washington Street, New York, NY",
+   "m": 23,
+   "evidence": "NYC Geosearch 23 m."
+  },
+  "0A9900AB-96A8-5DBF-841D-0C308F128E90": {
+   "title": "The Nighthawks Diner Site",
+   "class": "OK",
+   "address": "70 Greenwich Avenue, New York, NY",
+   "m": 6,
+   "evidence": "NYC Geosearch 6 m."
+  },
+  "73E36573-7040-5D3C-99D4-3EE2DBFDFD08": {
+   "title": "Smart Coffee",
+   "class": "OK",
+   "address": "京都府京都市中京区天性寺前町537",
+   "m": 0,
+   "evidence": "GSI 天性寺前町５３７番地 (番地 level) 71 m; OSM スマート珈琲 92 m."
+  },
+  "0A34008F-A4DC-57DA-A449-65BF50BC3804": {
+   "title": "Gotokuji Temple",
+   "class": "OK",
+   "address": "東京都世田谷区豪徳寺2-24-7",
+   "m": 0,
+   "evidence": "GSI 豪徳寺二丁目２４番７号 92 m (large temple precinct); OSM 豪徳寺 place_of_worship 0 m."
+  },
+  "22DAE8C9-E908-5F03-B644-71169466FBB5": {
+   "title": "Tokyo City Flea Market (Oi Racecourse)",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": 332,
+   "evidence": "\"Oi Racecourse first parking lot\", no street address. Racecourse POIs 332-416 m (parking lot is separate) — plausible."
+  },
+  "9D518873-A262-58E3-8992-AC47F9EC2413": {
+   "title": "Yokozuna Tonkatsu Dosukoi Tanaka",
+   "class": "OK",
+   "address": "東京都墨田区立川3-1-11",
+   "m": 0,
+   "evidence": "GSI 立川三丁目１番１１号 0 m."
+  },
+  "E3E19249-703B-5AF6-A88F-3077D955EA24": {
+   "title": "Record Conveni",
+   "class": "OK",
+   "address": "東京都中央区日本橋浜町2-55-5",
+   "m": 0,
+   "evidence": "GSI 日本橋浜町二丁目５５番５号 0 m."
+  },
+  "303DA889-828E-5325-AF4F-568656CA4F89": {
+   "title": "Super Potato",
+   "class": "OK",
+   "address": "東京都千代田区外神田1-11-2",
+   "m": 0,
+   "evidence": "GSI 外神田一丁目１１番２号 0 m; OSM スーパーポテト 9 m."
+  },
+  "33102B7F-DABF-5697-AE70-8AD58FE374E0": {
+   "title": "Live Haus",
+   "class": "OK",
+   "address": "東京都世田谷区北沢2-14-2",
+   "m": 0,
+   "evidence": "GSI 北沢二丁目１４番２号 0 m."
+  },
+  "6DE4B417-4D47-57B6-B142-4AA79BD4A700": {
+   "title": "Tir na nog",
+   "class": "OK",
+   "address": "東京都中央区銀座5-9-5",
+   "m": 0,
+   "evidence": "GSI 銀座五丁目９番５号 0 m."
+  },
+  "FBFDC09B-287D-574B-842E-661226BA6450": {
+   "title": "Cafe Meursault",
+   "class": "OK",
+   "address": "東京都台東区雷門2-1-5",
+   "m": 0,
+   "evidence": "GSI 雷門二丁目１番５号 0 m."
+  },
+  "A2E1EBE1-21F0-55F6-AAF1-7DB1C0CF6464": {
+   "title": "Betty Smith Ebisu Workshop",
+   "class": "OK",
+   "address": "東京都渋谷区恵比寿西2-4-7",
+   "m": 0,
+   "evidence": "GSI 恵比寿西二丁目４番７号 0 m."
+  },
+  "07ED40DD-54E8-524E-9C40-CCCACE3FBB02": {
+   "title": "Ken's Jewelry Shop",
+   "class": "OK",
+   "address": "東京都渋谷区神宮前5-28-7",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区神宮前五丁目２８番７号"
+  },
+  "4E1F2E02-4D0F-5D42-BCDD-B36BD2B224AD": {
+   "title": "Hanamon",
+   "class": "MOVE",
+   "address": "東京都板橋区上板橋3-6-7",
+   "m": 179,
+   "evidence": "GSI 上板橋三丁目６番７号 (35.76606,139.675079) + OSM POI \"居酒屋 花門 comeon\" 8 m from it; pin 179-186 m W"
+  },
+  "831E78CD-A0FA-5149-B4D3-29ED99388E1F": {
+   "title": "Kissa Laundry",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption gives only \"Morishita, Sumida-ku\"; no house number. Photon finds no 喫茶ランドリー POI"
+  },
+  "0457F251-0920-593D-85C3-1AA6B78C06AA": {
+   "title": "Mr. Kanso",
+   "class": "MOVE",
+   "address": "東京都台東区上野6-3-7 (UPS Miura Bldg 3F)",
+   "m": 4258,
+   "evidence": "GSI 上野六丁目３番７号 house-level; pin is in 門前仲町1丁目 (Koto-ku), 4.3 km away, not one of the branches the caption lists (Nakano/Nishi-Shinjuku/Tamachi). Caption notes smoking \"throughout the Ueno branch\" = filmed branch. No OSM POI at Ueno. CAVEAT: chain; pin may sit on another real branch"
+  },
+  "229250B1-051D-50EA-8137-B507542EF57D": {
+   "title": "Todoroki Valley",
+   "class": "OK",
+   "address": "東京都世田谷区等々力1-22-26",
+   "m": 37,
+   "evidence": "GSI house-level 37 m. PLACE member — no change"
+  },
+  "249FA2B5-EE0D-5213-AA7C-7E1BD651047F": {
+   "title": "Kappabashi Kitchen Town",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "District only (\"between Ueno and Asakusa\"). Pin is 65 m from the かっぱ橋道具街通り street feature — consistent"
+  },
+  "5578D0E0-F0F7-5EAE-A6C1-5476E314EBCB": {
+   "title": "Le Bretagne",
+   "class": "MOVE",
+   "address": "東京都新宿区神楽坂4-2",
+   "m": 164,
+   "evidence": "OSM \"Café-Crêperie Le Bretagne\" on 神楽坂通り, 7 m from GSI 神楽坂四丁目２番地; pin is 52 m from the SEPARATE \"Le Bretagne bar à cidre\" in かくれんぼ横丁 — caption describes the galette creperie (opened 1996, from 11:30)"
+  },
+  "15674F4E-057C-5D7F-8C54-3F33D15F1803": {
+   "title": "Yakushu Bar",
+   "class": "MOVE",
+   "address": "東京都世田谷区三軒茶屋2-13-7",
+   "m": 214,
+   "evidence": "GSI resolves only to 三軒茶屋二丁目１３番 (block, not 号); block centroid sits in the Triangle District the caption names; pin 214 m SW, across/south of Route 246. No OSM POI. Block-level: moderate confidence"
+  },
+  "F5A58E90-29E6-5CCD-A8DE-659B40016256": {
+   "title": "Sokichi",
+   "class": "OK",
+   "address": "東京都台東区雷門2-1-14",
+   "m": 0,
+   "evidence": "GSI: 東京都台東区雷門二丁目１番"
+  },
+  "6BA950A9-77B7-5FDC-9107-3FD122E6ACE9": {
+   "title": "Daitune Udon (だいつねうどん), Ginza",
+   "class": "OK",
+   "address": "東京都中央区銀座7-15-17",
+   "m": 0,
+   "evidence": "GSI: 東京都中央区銀座七丁目１５番１７号"
+  },
+  "58913225-C5C3-57D3-B230-BA436EF5550F": {
+   "title": "Miyazaki Shoten (ミヤザキ商店 はなれ), Hatagaya",
+   "class": "OK",
+   "address": "東京都渋谷区幡ヶ谷1-2-7",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区幡ケ谷一丁目２番７号"
+  },
+  "78839D3C-9E75-50C2-91FA-ACEB63D86376": {
+   "title": "Choshiya (元祖コロッケ チョウシ屋), Ginza",
+   "class": "OK",
+   "address": "東京都中央区銀座3-11-6",
+   "m": 0,
+   "evidence": "GSI: 東京都中央区銀座三丁目１１番６号"
+  },
+  "8C840628-7968-5060-8DE8-AF84B8AC25C8": {
+   "title": "Gamushara (我武者羅 幡ヶ谷本店), Hatagaya",
+   "class": "OK",
+   "address": "東京都渋谷区幡ヶ谷2-1-5",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区幡ケ谷二丁目１番５号"
+  },
+  "CA405857-95BC-5186-936F-0B11EB98DA60": {
+   "title": "Cerise, Conrad Tokyo",
+   "class": "OK",
+   "address": "東京都港区東新橋1-9-1 (Conrad Tokyo)",
+   "m": 76,
+   "evidence": "GSI 東新橋一丁目９番 (block) 76 m"
+  },
+  "A105CEF1-6A1C-508B-8D60-7026F595D962": {
+   "title": "BUY ME STAND, Shibuya",
+   "class": "OK",
+   "address": "東京都渋谷区東1-31-19 (〒150-0011 = 東, caption omitted the town)",
+   "m": 0,
+   "evidence": "GSI 東京都渋谷区東一丁目３１番１９号 exactly at pin; Photon unnamed cafe 11 m on 八幡通り. (Literal \"渋谷1-31-19\" does not exist: GSI only chome-level.)"
+  },
+  "9918630C-03B6-54C0-B1B3-A692102903E7": {
+   "title": "CAPOON Matcha Seizojo, Shimokitazawa",
+   "class": "OK",
+   "address": "東京都世田谷区北沢2-26-18",
+   "m": 0,
+   "evidence": "GSI: 東京都世田谷区北沢二丁目２６番１８号"
+  },
+  "BCB5268E-8A68-5887-B8D3-3F219551D411": {
+   "title": "Mendokoro Kawano, Kyoto (ramen kitchen tour)",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "\"Mendokoro Kawano, Kyoto\" only; no address; no Photon POI"
+  },
+  "469BB885-39A6-51D1-A47A-6379A5B68D4B": {
+   "title": "Sushi Himitsu, Akasaka",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "\"via=kateryna\" is a URL param, false positive; caption says only \"Akasaka\""
+  },
+  "0E284BC4-6963-574E-A5E3-1486E53BC494": {
+   "title": "Onigiri Korori (おにぎりころり), Okusawa",
+   "class": "OK",
+   "address": "東京都世田谷区奥沢4-26-7",
+   "m": 0,
+   "evidence": "GSI: 東京都世田谷区奥沢四丁目２６番７号"
+  },
+  "721EA196-A5FD-5FCB-A648-9DE42B4487C3": {
+   "title": "Uohide (魚秀), Kichijoji Honcho",
+   "class": "OK",
+   "address": "東京都武蔵野市吉祥寺本町1-23-6",
+   "m": 0,
+   "evidence": "GSI: 東京都武蔵野市吉祥寺本町一丁目２３番６号"
+  },
+  "EAFB18D0-A2C3-5F67-BA91-11401D054727": {
+   "title": "Saryo Tsujiri (祇園辻利), Daimaru Tokyo",
+   "class": "OK",
+   "address": "東京都千代田区丸の内1-9-1, Daimaru Tokyo 10F",
+   "m": 25,
+   "evidence": "GSI only 丸の内一丁目９番 (Tokyo Station block, 153 m); OSM POI \"大丸\" department store 25 m from pin"
+  },
+  "9C98D9BB-2566-5648-AA7F-BBF1CE45E806": {
+   "title": "BASO Omotesando",
+   "class": "OK",
+   "address": "東京都渋谷区神宮前6-11-7",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区神宮前六丁目１１番７号"
+  },
+  "9A49FD4D-89CA-5E33-9E1C-8655FEE46DB5": {
+   "title": "Le Souffle, Yoyogi",
+   "class": "OK",
+   "address": "東京都渋谷区代々木3-39-15",
+   "m": 75,
+   "evidence": "GSI: 東京都渋谷区代々木三丁目３９番１５号"
+  },
+  "92C69ED8-BBA7-53F2-B3D8-1D6C930C91B2": {
+   "title": "Tonkatsu Marushichi, Ginza",
+   "class": "OK",
+   "address": "東京都中央区銀座4-13-3",
+   "m": 0,
+   "evidence": "GSI: 東京都中央区銀座四丁目１３番３号"
+  },
+  "C0433FD1-A745-5417-AD45-DAAA12E3CD36": {
+   "title": "Ponipirika, Shimokitazawa",
+   "class": "OK",
+   "address": "東京都世田谷区北沢2-8-8",
+   "m": 4,
+   "evidence": "GSI: 東京都世田谷区北沢二丁目８番８号"
+  },
+  "9587ADF3-AEA4-5498-AA43-D61A2637E5AB": {
+   "title": "Watanabe Curry, Osaka",
+   "class": "OK",
+   "address": "大阪府大阪市北区曾根崎新地2-2-5",
+   "m": 0,
+   "evidence": "GSI: 大阪府大阪市北区曾根崎新地二丁目２番５号"
+  },
+  "D5ABB283-F307-5593-816F-846B4759D7DA": {
+   "title": "Taiko Sushi Minami, Osaka",
+   "class": "OK",
+   "address": "大阪府大阪市浪速区恵美須東3-3-11",
+   "m": 0,
+   "evidence": "GSI: 大阪府大阪市浪速区恵美須東三丁目３番１１号"
+  },
+  "FDFC1C34-FB0E-5FBD-BDAD-1733D1DB14DC": {
+   "title": "THE WAGYU BROTHERS, Asakusa",
+   "class": "OK",
+   "address": "東京都台東区浅草1-18-3",
+   "m": 0,
+   "evidence": "GSI: 東京都台東区浅草一丁目１８番３号"
+  },
+  "DC02F4A6-E22C-53AE-8054-AB43A2330F1D": {
+   "title": "A5 Wagyu Sukiyaki Ryu, Ueno",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption says only \"Ueno\"; no Photon POI"
+  },
+  "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38": {
+   "title": "Mutekiya, Ikebukuro",
+   "class": "OK",
+   "address": "東京都豊島区南池袋1-17-1",
+   "m": 0,
+   "evidence": "GSI: 東京都豊島区南池袋一丁目１７番１号"
+  },
+  "DD434A9B-646F-5BDF-A37C-5A25DF36632B": {
+   "title": "Planet of Curry, Shimokitazawa",
+   "class": "MOVE",
+   "address": "東京都世田谷区北沢2-33-11 (SY-I Bldg 1F)",
+   "m": 422,
+   "evidence": "GSI 北沢二丁目３３番１１号 house-level; Pannya (2-33-6, same block) pin is 24 m from its GSI point, confirming the block; pin 422 m S. No OSM POI"
+  },
+  "019AE23A-2A2B-5C0F-854A-765B968C0DEB": {
+   "title": "Meat & Cheese Forne, Nakameguro",
+   "class": "OK",
+   "address": "東京都目黒区上目黒1-20-12",
+   "m": 0,
+   "evidence": "GSI: 東京都目黒区上目黒一丁目２０番１２号"
+  },
+  "4A5A6FBC-F145-56B7-BEB2-FD424ED6B268": {
+   "title": "Chigusa, Osaka (okonomiyaki)",
+   "class": "OK",
+   "address": "大阪府大阪市北区天神橋4-11-18",
+   "m": 0,
+   "evidence": "GSI: 大阪府大阪市北区天神橋四丁目１１番１８号"
+  },
+  "F2C6A116-4827-550B-9C31-FA185FFE6440": {
+   "title": "Cream or Cruller, Shibuya",
+   "class": "OK",
+   "address": "東京都渋谷区神南1-8-11",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区神南一丁目８番１１号"
+  },
+  "2013D096-038A-5AE6-9DB2-1B0538B8A94C": {
+   "title": "Fry-ya, Takadanobaba",
+   "class": "OK",
+   "address": "東京都新宿区高田馬場1-32-11",
+   "m": 0,
+   "evidence": "GSI: 東京都新宿区高田馬場一丁目３２番１１号"
+  },
+  "992884D6-5002-5D0F-B5E6-8F8C45C68CD5": {
+   "title": "Ramen Matsui, Yotsuya",
+   "class": "OK",
+   "address": "東京都新宿区四谷4-25-10",
+   "m": 0,
+   "evidence": "GSI: 東京都新宿区四谷四丁目２５番地"
+  },
+  "52B088B7-AF41-57A3-A6A3-C398A17413EC": {
+   "title": "Kiwamiya, Tokyo Station",
+   "class": "UNSURE",
+   "address": "東京都千代田区丸の内1-9-1, グランスタ八重北 1F",
+   "m": 179,
+   "evidence": "GSI only 丸の内一丁目９番 (whole Tokyo Station block, 136 m). OSM \"Teuchi Soba Miyagawa – GRANSTA Yaekita\" (same arcade, B1F) is 170 m NW of pin; Yaekita is a ~100 m strip at Yaesu North — pin likely slightly south of it, but no same-name POI"
+  },
+  "F24E96BA-2291-51C4-939D-81460DD1C5F3": {
+   "title": "Gyoza no Fukuho, Shinjuku",
+   "class": "OK",
+   "address": "東京都新宿区新宿2-8-6",
+   "m": 0,
+   "evidence": "GSI: 東京都新宿区新宿二丁目８番６号"
+  },
+  "081392A5-7C74-58DD-B5AE-47E5C0AD33F5": {
+   "title": "Kamo & Negi Ramen, Sugamo",
+   "class": "OK",
+   "address": "東京都豊島区巣鴨1-11-4",
+   "m": 0,
+   "evidence": "GSI: 東京都豊島区巣鴨一丁目１１番４号"
+  },
+  "A652CF15-C28F-5DEB-812B-439B5AA0C3C8": {
+   "title": "Gyukatsu Ichi Ni San, Akihabara",
+   "class": "OK",
+   "address": "東京都千代田区外神田3-8-17",
+   "m": 0,
+   "evidence": "GSI: 東京都千代田区外神田三丁目８番１７号"
+  },
+  "4307B063-4515-513F-82E0-7EBDAA756144": {
+   "title": "Paquet Monté, Yoyogi",
+   "class": "OK",
+   "address": "東京都渋谷区代々木5-38-13",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区代々木五丁目３８番１３号"
+  },
+  "615365F4-7BA0-5111-A9E7-91863F3851E1": {
+   "title": "uniRA, Arakicho",
+   "class": "OK",
+   "address": "東京都新宿区荒木町3-3",
+   "m": 0,
+   "evidence": "GSI: 東京都新宿区荒木町３番地"
+  },
+  "2D9304E8-52E1-56C1-ACDE-F2B5529E400D": {
+   "title": "Cafe Accueil Ebisu",
+   "class": "OK",
+   "address": "東京都渋谷区恵比寿西2-10-10",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区恵比寿西二丁目１０番１０号"
+  },
+  "90F7C175-A454-51E4-BCA6-0C291D2D4E63": {
+   "title": "Aogaki, Shibuya",
+   "class": "OK",
+   "address": "東京都渋谷区渋谷2-19-19",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区渋谷二丁目１９番１９号"
+  },
+  "F5FDA7CB-A9AE-5CF1-B8B6-848BBB9BA6F6": {
+   "title": "Ten to Sen, Shimokitazawa",
+   "class": "OK",
+   "address": "東京都世田谷区北沢3-34-2",
+   "m": 13,
+   "evidence": "GSI: 東京都世田谷区北沢三丁目３４番２号"
+  },
+  "8DBE5099-D3E9-5AB0-B361-78580B68530D": {
+   "title": "House of the White Dragon, Kabukicho",
+   "class": "OK",
+   "address": "東京都新宿区歌舞伎町2-45-5",
+   "m": 0,
+   "evidence": "GSI: 東京都新宿区歌舞伎町二丁目４５番５号"
+  },
+  "581FB85F-5792-5C31-825E-C5099B914253": {
+   "title": "Pannya, Shimokitazawa",
+   "class": "OK",
+   "address": "東京都世田谷区北沢2-33-6",
+   "m": 24,
+   "evidence": "GSI: 東京都世田谷区北沢二丁目３３番６号"
+  },
+  "CAD34610-AD6C-547B-9592-4BEB474BCEA2": {
+   "title": "JANAI COFFEE (speakeasy bar), Ebisu",
+   "class": "OK",
+   "address": "東京都渋谷区恵比寿南2-3-13",
+   "m": 9,
+   "evidence": "GSI: 東京都渋谷区恵比寿南二丁目３番１３号"
+  },
+  "DE77E4FB-E343-5544-A763-0BC24E27D914": {
+   "title": "Sanzou Tokyo, Shimokitazawa",
+   "class": "OK",
+   "address": "東京都世田谷区北沢3-19-20",
+   "m": 0,
+   "evidence": "GSI: 東京都世田谷区北沢三丁目１９番２０号"
+  },
+  "0E6BF83D-E164-5CD3-99D4-4BF76E52108F": {
+   "title": "Aruteria Bekari, Zoshigaya",
+   "class": "OK",
+   "address": "東京都豊島区雑司が谷2-7-13",
+   "m": 0,
+   "evidence": "GSI: 東京都豊島区雑司が谷二丁目７番１３号"
+  },
+  "74AB2A77-C7ED-5534-8557-E8AE900C444F": {
+   "title": "Sandwich Club, Shimokitazawa",
+   "class": "OK",
+   "address": "東京都世田谷区北沢2-12-2",
+   "m": 0,
+   "evidence": "GSI: 東京都世田谷区北沢二丁目１２番２号"
+  },
+  "B231886D-417F-5006-B9F3-2C6993DF56C0": {
+   "title": "Ikura Hambagu & Omurice Shop, Shibuya",
+   "class": "OK",
+   "address": "東京都渋谷区円山町5-3",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区円山町５番３号"
+  },
+  "90F986E4-F998-5B13-84C6-FD825688052D": {
+   "title": "Cafe Angelina, Setagaya",
+   "class": "OK",
+   "address": "東京都世田谷区世田谷1-15-12",
+   "m": 0,
+   "evidence": "GSI: 東京都世田谷区世田谷一丁目１５番１２号"
+  },
+  "B065FA79-D0A9-5A25-B07E-F642CE4A026E": {
+   "title": "Ramen Ushio, Ueno",
+   "class": "OK",
+   "address": "東京都台東区東上野3-22-2",
+   "m": 0,
+   "evidence": "GSI: 東京都台東区東上野三丁目２２番２号"
+  },
+  "EFBB34B0-1A61-598D-AF99-4F79EFADE5EC": {
+   "title": "Tempura Satoumisatoyama, Kabukicho",
+   "class": "OK",
+   "address": "東京都新宿区歌舞伎町2-30-3",
+   "m": 11,
+   "evidence": "GSI: 東京都新宿区歌舞伎町二丁目３０番３号"
+  },
+  "3B24430F-2B47-52A7-8186-869DBA92B9C2": {
+   "title": "Tadaima Henshinchu, Nakano",
+   "class": "OK",
+   "address": "東京都中野区中野5-53-3",
+   "m": 0,
+   "evidence": "GSI: 東京都中野区中野五丁目５３番３号"
+  },
+  "AF3C03FA-BE74-547D-A254-CB159D0A8FF2": {
+   "title": "Takeda, Yotsuya",
+   "class": "OK",
+   "address": "東京都新宿区四谷1-4-2",
+   "m": 0,
+   "evidence": "GSI: 東京都新宿区四谷一丁目４番地"
+  },
+  "908EBB83-17C2-51D6-8BB8-1E83532D0D9B": {
+   "title": "Premier Mai, Tomigaya",
+   "class": "OK",
+   "address": "東京都渋谷区富ヶ谷1-6-10",
+   "m": 0,
+   "evidence": "GSI: 東京都渋谷区富ケ谷一丁目６番１０号"
+  },
+  "5EC3260B-2F35-5EBA-80D4-632AE814061D": {
+   "title": "Chuka Soba Aoba",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Caption says only \"Nakano\". NOTE (not caption-derived, from memory): 中華そば青葉 中野本店 is 中野区中野5-58-1, which GSI puts at 35.707951,139.666428 — 311 m N of pin; worth a name-search check"
+  },
+  "C809B81A-E1C5-5B89-B4C1-DAF0F6F3D418": {
+   "title": "Sotei",
+   "class": "MOVE",
+   "address": "東京都渋谷区恵比寿南1-16-3 (細井ビル)",
+   "m": 140,
+   "evidence": "GSI 恵比寿南一丁目１６番３号 house-level; pin 140 m W. No OSM POI to confirm"
+  },
+  "65A7FC7A-3A69-57E3-B368-3D4597DD1CD5": {
+   "title": "Alila Shanghai",
+   "class": "MOVE",
+   "address": "500 Weihai Road, Jing'an, Shanghai",
+   "m": 252,
+   "evidence": "Pin sits EXACTLY (0 m) on a 威海路 street-segment centroid (auto-geocoded to the street). OSM hotel POI \"Alila\" (tourism=hotel) on 威海路 at 252 m, and building \"阿丽拉上海\" at 288 m. House number itself not geocoded; the same-name POI is the evidence"
+  },
+  "CBF47EEA-7405-5351-8DE2-AE0F5FD7A667": {
+   "title": "Ren He Guan 人和馆",
+   "class": "OK",
+   "address": "407 Zhaojiabang Rd, Xuhui, Shanghai",
+   "m": 0,
+   "evidence": "OSM POI 人和馆, 407 肇嘉浜路 at 0 m"
+  },
+  "E18FBEB6-668E-58E2-9F31-B307CB84B8D8": {
+   "title": "Gold Garden (egg tarts)",
+   "class": "OK",
+   "address": "314 Castle Peak Rd, Cheung Sha Wan, HK",
+   "m": 10,
+   "evidence": "OSM \"Gold Garden Restaurant\" 314 Castle Peak Rd, 10 m"
+  },
+  "01C9B328-1C76-5819-9FB1-E5035DD7A6A7": {
+   "title": "山东杂粮煎饼 (Shandong jian bing stall)",
+   "class": "UNSURE",
+   "address": "166-7 Guoqing Rd, Jing'an, Shanghai (60 m NW of Guoqing Rd × Hengtong East Rd)",
+   "m": null,
+   "evidence": "Pin sits EXACTLY (0 m) on a 国庆路 street-segment centroid. No house-level geocode for 166; 恒通东路 street feature centroid is 441 m away — intersection not locatable with Photon. Pin is likely a street centroid, not the stall"
+  },
+  "315B4A60-556D-5EDF-9664-D6B1DD29C41D": {
+   "title": "Beibuyuan Old Hot Pot (Daijia Alley)",
+   "class": "UNSURE",
+   "address": "戴家巷26号1单元, Yuzhong, Chongqing",
+   "m": null,
+   "evidence": "Pin sits EXACTLY (0 m) on a 戴家巷 street-segment centroid; house number not geocodable; no POI for 北步园老火锅. Alley is short (a second segment is 131 m away), so error is bounded but unknown"
+  },
+  "E442812C-6F95-5EFB-BC1C-A8363CA888FD": {
+   "title": "Ng Kam Chun (hand-carved stamps)",
+   "class": "UNSURE",
+   "address": "G/F, 8 Man Wa Lane (文華里), Sheung Wan, HK",
+   "m": 18012,
+   "evidence": "GROSS: pin is in Tai Po, 18 km away, ~150 m from \"8 Wan Tau Kok Lane\" (Prosperity Mansion) — a geocoder mis-match of \"8 Man Wa Lane\". Man Wa Lane is a tiny ~80 m lane off Des Voeux Rd Central; coords given are the lane footway (street-level only, not house-level) — hence UNSURE per rule, but the cur"
+  },
+  "4AD329BF-6F76-59C6-8DEA-136E7DCFD5E9": {
+   "title": "Danish Bakery Hong Kong",
+   "class": "MOVE",
+   "address": "106 Leighton Rd (Leishun Court, G/F), Causeway Bay, HK",
+   "m": 195,
+   "evidence": "OSM POI \"丹麥麵包店 Danish Bakery\" shop=bakery on Leighton Rd, 195 m E of pin; building \"Leishun Court 106-126 Leighton Road\" 215 m, 20 m from the POI"
+  },
+  "62878BD5-855A-5B1C-A3F5-0984F8EE7A79": {
+   "title": "Heap Seng Leong (kopi + kaya toast)",
+   "class": "OK",
+   "address": "10 North Bridge Rd, #01-5109, Singapore 190010",
+   "m": 27,
+   "evidence": "Photon 10 North Bridge Road at 0 m; OSM POI \"Heap Seng Leong\" 27 m"
+  },
+  "50CFB5A0-E6C2-54B0-952F-702397DBE263": {
+   "title": "King's Kitchen",
+   "class": "OK",
+   "address": "92 E Broadway, New York, NY 10002",
+   "m": 5,
+   "evidence": "OSM POI \"Kings Kitchen\" 92 East Broadway, 5 m"
+  },
+  "A7B09ACF-93B6-5E1C-A6F2-F22BE5160415": {
+   "title": "Thai street-food breakfast stall (Thai-script name)",
+   "class": "UNSURE",
+   "address": "70 Fueang Nakhon Rd, Wang Burapha Phirom, Phra Nakhon, Bangkok 10200",
+   "m": null,
+   "evidence": "Pin sits EXACTLY (0 m) on the ถนนเฟื่องนคร street centroid; no house-level hit for 70; no POI for the stall. Name \"หลอดวัดราชบพิธ\" says it is by Wat Ratchabophit (wat POI 132 m from pin) — plausible but unverified"
+  },
+  "5ADEE32C-4B5E-5D33-A935-43805CD3AF95": {
+   "title": "Aunglo by Yangrak",
+   "class": "OK",
+   "address": "174/4-6 Decho Rd, Suriya Wong, Bang Rak, Bangkok 10500",
+   "m": 19,
+   "evidence": "Pin is the Decho Rd street centroid, but OSM POI \"อั้งโล่\" (Aunglo) is 19 m away — OK by luck"
+  },
+  "762549CC-5D47-5148-B5A2-5DE98D93F998": {
+   "title": "Lau Hing Kee 劉興記 (sheng jian bao)",
+   "class": "MOVE",
+   "address": "2 Bonham Strand (文咸東街2號), Sheung Wan, HK",
+   "m": 274,
+   "evidence": "Pin sits EXACTLY (0 m) on a Bonham Strand street centroid. House-level hit: OSM \"noodlemi\" tagged 2 Bonham Strand at the E end (274 m); 135 Bonham Strand is 96 m W of pin, so numbering confirms #2 is at the E end. No same-name POI (caption says multiple branches) — moderate confidence"
+  },
+  "A8B423A8-669D-59DF-BCBB-1101CC5EAFD5": {
+   "title": "Uncle Liu's",
+   "class": "UNSURE",
+   "address": "1036/24 Sukhumvit Rd, Phra Khanong, Khlong Toei, Bangkok 10110",
+   "m": null,
+   "evidence": "Address not geocodable (Photon has no 1036 Sukhumvit). Pin sits on the Sukhumvit Rd line near Nana (soi 3-8, Khlong Toei Nuea); caption says Phra Khanong subdistrict and No. 1036 — far east (Ekkamai/Phra Khanong stretch, ~3 km+). Pin likely from mis-parsed \"24 Sukhumvit\". Strongly suspect, unlocated"
+  },
+  "368A0753-CEE6-52B0-9719-AE3BEC686B8D": {
+   "title": "LJ Shanghai (soup dumplings)",
+   "class": "NO-GEOCODE",
+   "address": "3142 Superior Ave E, Cleveland, OH",
+   "m": null,
+   "evidence": "Photon has no house-level 3142 Superior; no LJ Shanghai POI. Pin on Superior Ave E in the Asiatown 3000s block — plausible"
+  },
+  "8A02259E-3632-570E-BCB3-69AF19EAFED1": {
+   "title": "Tadhana NYC",
+   "class": "OK",
+   "address": "151 Allen St, New York, NY 10002",
+   "m": 0,
+   "evidence": "Photon 151 Allen Street at 0 m (no Tadhana POI; building also hosts Sushi King/Izakaya Juraku)"
+  },
+  "FF29E360-E7F8-56A0-8909-178A8259DD2E": {
+   "title": "Tam Tam Mia",
+   "class": "OK",
+   "address": "99 NW 1st St, Miami, FL 33128",
+   "m": 0,
+   "evidence": "Photon 99 Northwest 1st Street at 0 m (no POI)"
+  },
+  "875C9B86-0246-5783-8C4D-1075D59B2DB1": {
+   "title": "Phoenix Palace",
+   "class": "OK",
+   "address": "85 Bowery, New York, NY 10002",
+   "m": 0,
+   "evidence": "Photon 85 Bowery at 0 m (no POI)"
+  },
+  "6E9353FF-1196-5D6F-B4F7-1AD9AB916CD0": {
+   "title": "Sushi Sato Japan",
+   "class": "OK",
+   "address": "東京都渋谷区代官山町12-1",
+   "m": 98,
+   "evidence": "GSI: 東京都渋谷区代官山町１２番１号"
+  },
+  "65078ECA-6CD8-5C97-8686-C67E23DBC49D": {
+   "title": "Rau Kyoto",
+   "class": "OK",
+   "address": "京都府京都市下京区稲荷町318-6",
+   "m": 56,
+   "evidence": "GSI: 京都府京都市下京区稲荷町３１８番地"
+  },
+  "7D0903BD-5B20-5AA5-8A4D-E1EEBDB85B20": {
+   "title": "Coqodaq",
+   "class": "OK",
+   "address": "12 E 22nd St, New York, NY 10010",
+   "m": 10,
+   "evidence": "OSM POI \"COQODAQ\" 12 East 22nd Street, 10 m"
+  },
+  "E10ECAC4-E625-5D39-BAB8-623585BFAF26": {
+   "title": "Jodd Fairs (night market)",
+   "class": "NO-ADDRESS",
+   "address": "",
+   "m": null,
+   "evidence": "Street only (\"Rama IX Rd\"). Pin is 364 m from Central Rama 9, consistent with the original Jodd Fairs Rama 9 site; OSM only has \"จ๊อดแฟร์ รัชดา\" (Ratchada) 1.4 km N — the Rama 9 market may have relocated"
+  },
+  "20EBDBF9-FC51-5AEB-BA3D-BD72508C409B": {
+   "title": "Dontaku Doyama (tonpeiyaki)",
+   "class": "OK",
+   "address": "大阪府大阪市北区堂山町16-12",
+   "m": 86,
+   "evidence": "GSI: 大阪府大阪市北区堂山町１６番１２号"
+  },
+  "EC5FA504-3AAF-577E-811E-6E13B0198211": {
+   "title": "Sushi Ishimatsu",
+   "class": "UNSURE",
+   "address": "京都府京都市左京区鹿ケ谷法然院西町36 (36 Shishigatani Honenin Nishimachi, Sakyo-ku, Kyoto)",
+   "m": 409,
+   "evidence": "GSI returns 36番地 only 27 m from the 町 centroid, so not trustworthy as house-level; no Sushi Ishimatsu POI found. Pin sits exactly on the OSM node of Honen-in temple (法然院) — looks like a landmark pin, not the restaurant. Needs a name lookup."
+  },
+  "64F436F3-FF30-55F0-8D24-7C6717A250EF": {
+   "title": "Yakiniku Kitan",
+   "class": "MOVE",
+   "address": "大阪府大阪市中央区道頓堀1-7-12",
+   "m": 121,
+   "evidence": "GSI 道頓堀一丁目７番１２号 (号-level) 121 m. No same-name POI found (marginal distance)."
+  },
+  "4735A7C7-26CF-5192-904C-A5AA31F52915": {
+   "title": "QQ Cafe",
+   "class": "OK",
+   "address": "67A E Broadway, New York, NY 10002",
+   "m": 11,
+   "evidence": "Photon house 67A East Broadway 11 m."
+  },
+  "0383B334-4BE5-59AC-9BB3-E4A7A4F8D32B": {
+   "title": "Dai Ho Restaurant",
+   "class": "UNSURE",
+   "address": "9148 Las Tunas Dr, Temple City, CA 91780",
+   "m": null,
+   "evidence": "Photon only returns Las Tunas Drive street segments (226 m); no house number or Dai Ho POI. Pin is on Las Tunas Dr in Temple City — consistent, unverified."
+  },
+  "0334472C-2E52-5A9D-A921-6D09B847C116": {
+   "title": "Mam39 Paris",
+   "class": "OK",
+   "address": "39 Rue de Cléry, 75002 Paris",
+   "m": 0,
+   "evidence": "Photon house 39 Rue de Cléry 0 m; restaurant POI \"Mắm From Hanoï\" at 39 Rue de Cléry 3 m."
+  },
+  "3EB975D3-8AB9-5013-AE6D-59AAAEEAFD91": {
+   "title": "Cafe Fang Studio",
+   "class": "MOVE",
+   "address": "No. 9, Lane 296, Sec. 2, Dihua St, Datong District, Taipei (迪化街二段296巷9號)",
+   "m": 1696,
+   "evidence": "Photon house 9號 迪化街二段296巷 1696 m (both Chinese and English queries agree). Pin reverse-geocodes to the generic \"迪化街商圈\" district node on Dihua St Sec 1 — a district-centroid pin. No Cafe Fang POI in OSM."
+  },
+  "23E0B0EF-9D7C-5E96-B34A-FF0EBC2694B0": {
+   "title": "寧波生煎包 (Ningbo pan-fried buns)",
+   "class": "MOVE",
+   "address": "No. 59, Sec. 1, Roosevelt Rd, Zhongzheng District, Taipei (羅斯福路一段59號)",
+   "m": 130,
+   "evidence": "Photon house 59號 羅斯福路一段 126 m AND same-name OSM restaurant 寧波生煎包 (corner of 寧波東街) 130 m — the two agree within 4 m."
+  },
+  "39E249A5-F2B0-5A23-9735-6504F1CFAD1D": {
+   "title": "Sushi Punch",
+   "class": "UNSURE",
+   "address": "東京都港区麻布十番3-3-9 (Vort麻布十番)",
+   "m": 262,
+   "evidence": "GSI resolves only to 麻布十番三丁目３番 (block, no 号) 262 m; no Sushi Punch / Vort POI found. Block-level only."
+  },
+  "AEED4EB7-BC41-5B22-B172-3A786AFC4436": {
+   "title": "Togoshi Ginza Shopping Street",
+   "class": "OK",
+   "address": "東京都品川区戸越1-15-16 (Togoshi Ginza shopping street)",
+   "m": 54,
+   "evidence": "GSI 戸越一丁目１５番１６号 54 m (the subject is a 1.3 km street; fine)."
+  },
+  "C2891E3A-B4BF-51A2-900E-7860E6AA142A": {
+   "title": "Togoshiya (automated onigiri)",
+   "class": "MOVE",
+   "address": "東京都渋谷区道玄坂2-10-4 高野商店",
+   "m": 147,
+   "evidence": "GSI 道玄坂二丁目１０番４号 (号-level) 147 m. No Togoshiya POI in OSM."
+  },
+  "A323D6ED-3522-5A09-859E-9CAC4DCB413F": {
+   "title": "Katsudon-ya Zuicho",
+   "class": "OK",
+   "address": "東京都渋谷区宇田川町41-26",
+   "m": 4,
+   "evidence": "GSI 宇田川町４１番２６号 4 m."
+  },
+  "156A7408-534D-5CBE-98E8-44FD801F3927": {
+   "title": "Maguro to Shari",
+   "class": "MOVE",
+   "address": "東京都渋谷区渋谷1-6-4 The Neat 青山 1F",
+   "m": 126,
+   "evidence": "GSI 渋谷一丁目６番４号 (号-level) 126 m. No POI found."
+  },
+  "8D7ECA41-F83B-533F-A432-417DECFB55D6": {
+   "title": "Izushi Soba Katsura",
+   "class": "MOVE",
+   "address": "兵庫県豊岡市出石町宵田104",
+   "m": 499,
+   "evidence": "GSI 出石町宵田１０４番地 464 m AND same-name OSM restaurant 桂 (豊岡市) 499 m — the two agree within ~40 m."
+  },
+  "FCF01EF1-C8B6-5AC7-B174-95C5875C61FF": {
+   "title": "Red Lantern Restaurant",
+   "class": "OK",
+   "address": "6F, No. 36, Sec. 2, Minquan Rd, Yilan City (蘭城晶英酒店 / Silks Place Yilan)",
+   "m": 69,
+   "evidence": "No house-level Photon hit; the address is the Silks Place Yilan hotel (蘭城晶英酒店, whose 6F Chinese restaurant is known for its five-way duck) — OSM hotel POI 69 m."
+  },
+  "F5742A60-2EAB-5B4C-A83A-685BB5D703D5": {
+   "title": "Yu Zai Fan Shu Tea Stall",
+   "class": "MOVE",
+   "address": "No. 18, Shixia Ln (市下巷18號), Jiufen, Ruifang District, New Taipei",
+   "m": 3423,
+   "evidence": "Pin reverse-geocodes to the Ruifang District (瑞芳區) node — ~3.4 km from Jiufen. Same-name OSM restaurant 芋仔番薯茶坊 (Yu Zai Fan Shu teahouse) in Jiufen off 豎崎路, next to 阿妹茶樓 (市下巷20號). House number itself not geocodable; named POI is the evidence."
+  },
+  "215675F5-B774-5DB4-8919-C3FB2EBFB81F": {
+   "title": "Maoaohaiyangyi Station 卯澳海洋驛站",
+   "class": "MOVE",
+   "address": "No. 37, Fulian St, Gongliao District, New Taipei (福連街37號, Maoao)",
+   "m": 8043,
+   "evidence": "Photon house 37號 福連街 8043 m AND same-name OSM building 卯澳海洋驛站 on 福連街 8052 m. Pin sits on the Gongliao District office/police node — district centroid, 8 km off."
+  },
+  "EFBE619A-9915-5A71-BDE8-474A9FC41A00": {
+   "title": "Tianjing Chong Zhua Pancake",
+   "class": "OK",
+   "address": "No. 1, Lane 6, Yongkang St, Da'an District, Taipei (永康街6巷1號)",
+   "m": 21,
+   "evidence": "Same-name OSM restaurant 天津葱抓餅 at 1 永康街6巷 21 m."
+  },
+  "DE9CF736-C03D-5B67-9403-0D7F255C12BD": {
+   "title": "Snow King Ice Cream",
+   "class": "OK",
+   "address": "2F, No. 65, Sec. 1, Wuchang St, Zhongzheng District, Taipei (武昌街一段65號2樓)",
+   "m": 81,
+   "evidence": "Same-name OSM POI 雪王冰淇淋 at 65 武昌街一段 81 m."
+  },
+  "F0BD78FA-5BEE-5E6E-8764-8651B4E11435": {
+   "title": "Yong Kang Beef Noodles",
+   "class": "MOVE",
+   "address": "No. 17, Lane 31, Sec. 2, Jinshan S Rd, Da'an District, Taipei (金山南路二段31巷17號)",
+   "m": 540,
+   "evidence": "Same-name OSM restaurant 永康牛肉麵 at 17 金山南路二段31巷 540 m; Photon house 17號 same lane 544 m."
+  },
+  "C122B9DF-7410-571E-8C63-F35D85203FEC": {
+   "title": "Azuki to Kouri",
+   "class": "MOVE",
+   "address": "東京都渋谷区代々木1-46-2 グランデュオ代々木 1F (〒151-0053)",
+   "m": 300,
+   "evidence": "GSI 代々木一丁目４６番２号 (号-level) 300 m. No POI found."
+  },
+  "F2426F26-EF93-5BE2-8944-A0A22F2DABC9": {
+   "title": "Fujisaku",
+   "class": "OK",
+   "address": "東京都墨田区錦糸4-5-6 越後屋ビル102",
+   "m": 0,
+   "evidence": "GSI 錦糸四丁目５番６号 0 m."
+  },
+  "54E19E19-B485-5CD0-B48B-C52AD566DCA8": {
+   "title": "Kariyushi (かりゆし)",
+   "class": "OK",
+   "address": "埼玉県さいたま市見沼区東大宮4-27-1",
+   "m": 0,
+   "evidence": "GSI 東大宮四丁目２７番 0 m; same-name OSM pub かりゆし 61 m."
+  },
+  "02CBE8C6-2542-592E-B56E-89E32C3DB059": {
+   "title": "Sanyu Sushi (三勇鮨)",
+   "class": "OK",
+   "address": "東京都渋谷区幡ヶ谷3-21-3",
+   "m": 0,
+   "evidence": "GSI 幡ケ谷三丁目２１番３号 0 m."
+  },
+  "4A883783-4A4B-5561-8564-49D5652089F2": {
+   "title": "Aletta (アレッタ)",
+   "class": "OK",
+   "address": "東京都目黒区碑文谷1-13-18",
+   "m": 0,
+   "evidence": "GSI 碑文谷一丁目１３番１８号 0 m."
+  },
+  "20899139-EC03-5B8F-9FCA-03CCFB286039": {
+   "title": "70 Nagomi",
+   "class": "OK",
+   "address": "大阪府大阪市浪速区元町3-8-12",
+   "m": 0,
+   "evidence": "GSI 元町三丁目８番１２号 0 m."
+  },
+  "52441CEC-6B91-53BE-ADE4-F5454FF68DF1": {
+   "title": "Niku Kabuku | 肉かぶく",
+   "class": "OK",
+   "address": "東京都新宿区歌舞伎町2-22-1 ホテルシェーナ2F",
+   "m": 0,
+   "evidence": "GSI 歌舞伎町二丁目２２番１号 0 m."
+  },
+  "57B0427C-D63A-5504-8A39-CE112C6BFD72": {
+   "title": "Unagi Kappo Ushiwaka | うなぎ割烹 牛若",
+   "class": "OK",
+   "address": "東京都墨田区錦糸2-4-3",
+   "m": 0,
+   "evidence": "GSI 錦糸二丁目４番３号 0 m; same-name OSM restaurant 牛若 9 m."
+  },
+  "CC0130C6-79D1-5E43-9603-9514F2E6899A": {
+   "title": "Taishikan | 大使館",
+   "class": "OK",
+   "address": "東京都台東区谷中3-6-14",
+   "m": 0,
+   "evidence": "GSI 谷中三丁目６番１４号 0 m."
+  },
+  "448946F1-25C9-5FCF-8026-291CDFE283DF": {
+   "title": "Sakura Sushi | 櫻寿司",
+   "class": "OK",
+   "address": "東京都文京区本駒込2-28-38",
+   "m": 0,
+   "evidence": "GSI 本駒込二丁目２８番３８号 0 m."
+  },
+  "CCDB04F2-E668-5358-B766-177513956FD7": {
+   "title": "Sushi Mimasu | 鮨 三ます",
+   "class": "OK",
+   "address": "東京都新宿区四谷4-28",
+   "m": 0,
+   "evidence": "GSI 四谷四丁目２８番地 0 m (caption gives block only)."
+  },
+  "3BFB241D-2649-5318-8EDB-7CC00E7D5435": {
+   "title": "Fukusushi (福寿し)",
+   "class": "OK",
+   "address": "大阪府大阪市西成区山王1-11-4",
+   "m": 0,
+   "evidence": "GSI 山王一丁目１１番４号 0 m."
+  },
+  "E0142550-AC28-5780-970B-7BC24DEA421B": {
+   "title": "New Louvre | ニュールーブル",
+   "class": "OK",
+   "address": "大阪府大阪市住吉区沢之町2-8-18 眉山マンション",
+   "m": 0,
+   "evidence": "GSI 沢之町二丁目８番１８号 0 m."
+  },
+  "5770930D-1D33-5B3C-A7E5-D5709F96FC2A": {
+   "title": "Mocha (モカ)",
+   "class": "OK",
+   "address": "東京都足立区千住元町38-1",
+   "m": 0,
+   "evidence": "GSI 千住元町３８番１号 0 m."
+  },
+  "232C29BB-21E1-50D1-8C85-C8B48D133073": {
+   "title": "Daikonya | だいこん屋",
+   "class": "OK",
+   "address": "東京都杉並区阿佐谷北1-9-2",
+   "m": 0,
+   "evidence": "GSI 阿佐谷北一丁目９番２号 0 m; same-name OSM pub だいこん屋 5 m."
+  },
+  "8B17681D-CE62-5FE3-85CF-5C261E9433AA": {
+   "title": "Hayashi | はやし",
+   "class": "OK",
+   "address": "東京都墨田区江東橋4-26-13",
+   "m": 0,
+   "evidence": "GSI 江東橋四丁目２６番１３号 0 m; same-name OSM restaurant はやし 2 m."
+  },
+  "92D77E1F-B0FA-5EE0-9571-327E48E2FD7B": {
+   "title": "Yakiniku Kobeya | 焼肉 神戸屋",
+   "class": "OK",
+   "address": "東京都新宿区新宿2-15-28 2F",
+   "m": 0,
+   "evidence": "GSI 新宿二丁目１５番２８号 0 m."
+  },
+  "8B2D99AD-BF9E-58B3-A0B9-A7493AD673A2": {
+   "title": "ONCOR",
+   "class": "MOVE",
+   "address": "B2, No. 101, Songren Rd, Xinyi District, Taipei (松仁路101號)",
+   "m": 158,
+   "evidence": "Photon: building 群益金融大樓 tagged 97/99/101 松仁路 158 m, plus several POIs with housenumber 101 松仁路 at 158–170 m. No ONCOR POI in OSM."
+  },
+  "6F21D117-359C-517D-A8E0-3203F45DA1BB": {
+   "title": "Daiwa Ubiquitous Computing Research Building",
+   "class": "OK",
+   "address": "7-3-1 Hongo, Bunkyo-ku, Tokyo (University of Tokyo Hongo campus)",
+   "m": 0,
+   "evidence": "Campus-wide address (GSI 本郷七丁目３番 663 m is meaningless for a campus); same-name OSM building ダイワユビキタス学術研究館 at 0 m."
+  },
+  "5E009ED0-A803-5655-BE6A-012D4C12FFC0": {
+   "title": "A::Light by Pierre Huyghe",
+   "class": "OK",
+   "address": "165 Broadway, New York (One Liberty Plaza lobby)",
+   "m": 0,
+   "evidence": "Photon: One Liberty Plaza, 165 Broadway 0 m. (place member)"
+  },
+  "D173EEDB-D95F-5CB0-87B9-D8B50DFD8737": {
+   "title": "63 Bank Street",
+   "class": "OK",
+   "address": "63 Bank St, New York",
+   "m": 0,
+   "evidence": "Photon house 63 Bank Street 0 m."
+  },
+  "73D3176F-4C27-5FF9-BB90-7F704F2F06B1": {
+   "title": "Coral Rock House",
+   "class": "OK",
+   "address": "900 Collins Ave, Miami Beach",
+   "m": 0,
+   "evidence": "Photon house 900 Collins Avenue 0 m."
+  },
+  "E8712A04-F32F-5F29-A0FA-6FB0CA44B01D": {
+   "title": "Mexican Seafood (107th St)",
+   "class": "UNSURE",
+   "address": "117 W 107th St, Los Angeles, CA 90003",
+   "m": null,
+   "evidence": "Photon returns only West 107th Street segments (208 m); no house number. Pin lies on W 107th St just west of Main St — consistent with a low W-numbered address, unverified."
+  },
+  "219D0495-BE29-560C-8104-0F7BD149CE2E": {
+   "title": "Age.3",
+   "class": "NO-ADDRESS",
+   "address": "(handle only: @age.3_ginza)",
+   "m": 0,
+   "evidence": "No street address. Name check: OSM \"Age.3 Ginza\" at 0 m — pin is on it."
+  },
+  "7A64915D-C5BF-5AE3-AB78-7DFBF5E4A50D": {
+   "title": "Jack & Charlie's No. 118",
+   "class": "NO-ADDRESS",
+   "address": "(handle only: @jackandcharlies118)",
+   "m": null,
+   "evidence": "No street address. Pin reverse-geocodes to 118 Greenwich Ave, consistent with the \"No. 118\" name."
+  },
+  "E13DE8CB-02EE-5486-9A9C-B4CB93376D7C": {
+   "title": "Gasthof Pachmair (600-year family-run hotel), Uderns",
+   "class": "NO-ADDRESS",
+   "address": "(handle only: @pachmair1453, Uderns)",
+   "m": 0,
+   "evidence": "No street address. Name check: OSM hotel \"Pachmair\", Dorfstraße 62, Uderns at 0 m."
+  },
+  "7A4869E2-B3C8-52EB-A797-A1E4B3F0EC3D": {
+   "title": "Nelly's Grocery & Wine",
+   "class": "UNSURE",
+   "address": "630 Indian St Unit A, Savannah, GA",
+   "m": null,
+   "evidence": "Photon returns only Indian Street segments (39 m); no house number, no Nelly's POI. Pin is on Indian St — consistent, unverified."
+  },
+  "6B300C46-027F-59AE-8907-A497FE3B897A": {
+   "title": "The Cotswold Guy",
+   "class": "OK",
+   "address": "Church Lane, Guiting Power, Cheltenham GL54 5TX",
+   "m": 5,
+   "evidence": "No house number; UK unit postcode GL54 5TX centroid (postcodes.io) 5 m; Guiting Power Village Hall 8 m."
+  },
+  "3F9CFE71-0CAA-5061-B50A-E3CE59DDBD0F": {
+   "title": "Eataly West Palm Beach",
+   "class": "UNSURE",
+   "address": "580 Hibiscus St, West Palm Beach, FL",
+   "m": null,
+   "evidence": "Photon returns only Hibiscus Street segments (28 m); no house number, no Eataly POI. Pin is on Hibiscus St at Rosemary Square — consistent, unverified."
+  },
+  "246AC093-B65B-52A1-860F-EF4C7D8A6506": {
+   "title": "351 Riverside Drive",
+   "class": "OK",
+   "address": "351 Riverside Dr, New York",
+   "m": 0,
+   "evidence": "Photon house 351 Riverside Drive 0 m."
+  },
+  "72CB3475-B4C3-59EB-9151-539E63F1A721": {
+   "title": "NOIR Bar",
+   "class": "UNSURE",
+   "address": "861 N Orange Ave, Orlando, FL 32801 (inside Talay)",
+   "m": null,
+   "evidence": "No Photon hit for the house number, Talay or NOIR. Pin is on N Orange Ave north of the 425 N Orange courthouse — plausible, unverified."
+  },
+  "EF6E2238-8168-5E91-BEF5-1264D77EBF63": {
+   "title": "W Punta Cana",
+   "class": "NO-ADDRESS",
+   "address": "(city only: Punta Cana)",
+   "m": null,
+   "evidence": "Caption gives only \"Punta Cana, Dominican Republic\". W Punta Cana not in Photon (nearest resort hit 5 km). Not checked."
+  },
+  "4212828A-1D7B-58D5-9691-60D298F36F07": {
+   "title": "Daljib (postcard shop), Gamcheon Culture Village",
+   "class": "UNSURE",
+   "address": "Gamnae 2-ro, Gamcheon Culture Village, Saha-gu, Busan (감내2로)",
+   "m": null,
+   "evidence": "Street-only address. Pin sits exactly on the generic OSM \"감천문화마을\" attraction node (0 m) — a village-centroid pin, not the Daljib shop; no 달집 POI in OSM."
+  },
+  "8A292A38-E567-5552-84A9-FCBA33A168D9": {
+   "title": "Lung Cheay Egg Noodles",
+   "class": "UNSURE",
+   "address": "Ekkamai Rd, Khlong Tan Nuea, Watthana, Bangkok 10110",
+   "m": null,
+   "evidence": "Street-only address; no Lung Cheay POI in OSM. Pin is on Ekkamai Rd — consistent, unverified."
+  },
+  "1C7F5401-213F-5ED5-87D5-60BDE46B6833": {
+   "title": "Saengchai Phochana",
+   "class": "UNSURE",
+   "address": "762/5–7 Sukhumvit Rd, Bangkok 10110",
+   "m": 1011,
+   "evidence": "Thai house number not geocodable. Same-name OSM restaurant แสงชัยโภชนา on Sukhumvit Rd (Khlong Tan, 10110) is 1,011 m WEST of the pin; pin reverse-geocodes to Sukhumvit at Soi 61. Numbering (Emporium = 622 Sukhumvit) favours the OSM node. Strong candidate, but no house-level confirmation."
+  },
+  "22E0ECCC-1073-51A3-9FFC-20EFBDE0B2EE": {
+   "title": "Grilled Fish Miang",
+   "class": "OK",
+   "address": "Plus code PX9X+6W, Ko Pha-ngan, Surat Thani",
+   "m": 0,
+   "evidence": "Plus code decoded by hand against the pin: centre = 9.7180625, 99.9998125, i.e. the pin exactly (0 m)."
+  },
+  "54948D64-DA1D-541D-8A3B-9C45FAF75106": {
+   "title": "Guy Kao Grilled Squid",
+   "class": "UNSURE",
+   "address": "414–416 Yaowarat Rd, Samphanthawong, Bangkok",
+   "m": null,
+   "evidence": "Thai house number not geocodable; street stall. Pin is on Yaowarat Rd (0 m to the road); unnamed restaurant node 107 m. Consistent, unverified."
+  },
+  "D9C23B1C-ED95-5AF9-8522-669A0C32E75D": {
+   "title": "Anchovies",
+   "class": "OK",
+   "address": "433 Columbus Ave, Boston",
+   "m": 0,
+   "evidence": "Photon house 433 Columbus Avenue 0 m."
+  },
+  "E4E4CB83-A025-56E2-BF11-87D72A94F406": {
+   "title": "Sally Longs",
+   "class": "OK",
+   "address": "33 Abbeygate Street Upper, Galway H91 F2RV",
+   "m": 0,
+   "evidence": "Same-name OSM pub Sally Long's at 33 Abbeygate Street Upper 0 m."
+  },
+  "CC3E07CB-678D-5042-9D0E-FEA87F5CA997": {
+   "title": "Johnny Foxes and the Den",
+   "class": "OK",
+   "address": "26 Bank Street, Inverness IV1 1QU",
+   "m": 72,
+   "evidence": "Same-name OSM pub Johnny Foxes on Bank Street 72 m; postcode IV1 1QU centroid 42 m."
+  },
+  "3B91E3C2-8D9E-5C54-948B-EB85AF1536FD": {
+   "title": "Abbotsford Pub",
+   "class": "MOVE",
+   "address": "3–5 Rose Street, Edinburgh EH2 2PR",
+   "m": 453,
+   "evidence": "Same-name OSM pub Abbotsford tagged 3-5 Rose Street 453 m; UK postcode EH2 2PR centroid 434 m agrees. Pin is at the WEST end of Rose Street; the pub is at the east end by St Andrew Square."
+  },
+  "36F11BD6-7C75-5D0F-8076-37C6AF17FE83": {
+   "title": "The Mad Hatter",
+   "class": "OK",
+   "address": "3–7 Stamford St, London SE1 9NY",
+   "m": 15,
+   "evidence": "Same-name OSM pub The Mad Hatter Hotel, 3-7 Stamford Street 15 m; postcode SE1 9NY 19 m."
+  },
+  "7A4CE2F6-08F8-5C13-B49A-8320E6AE1335": {
+   "title": "Peter Dillons",
+   "class": "OK",
+   "address": "2 E 36th St, New York",
+   "m": 0,
+   "evidence": "Same-name OSM pub Peter Dillon's at 2 East 36th Street 0 m."
+  },
+  "559FF505-9079-5ABF-A870-BE785726CE41": {
+   "title": "The Amsterdam",
+   "class": "OK",
+   "address": "106–108 Brunswick Street, Glasgow G1 1TF",
+   "m": 21,
+   "evidence": "Postcode G1 1TF centroid 21 m; OSM \"The Brunswick\" hotel/bar (the caption says it was the Brunswick Hotel's bar) 19–24 m."
+  },
+  "48E4BE8D-1B7C-5867-9839-6F96CDCE72ED": {
+   "title": "The Pillars Pub",
+   "class": "OK",
+   "address": "7G Crichton Street, Dundee DD1 3AR",
+   "m": 37,
+   "evidence": "No house-level Photon hit; UK unit postcode DD1 3AR centroid 37 m; pin on Crichton St."
+  },
+  "E4EFB78D-CAC8-5A1A-8041-674D06534099": {
+   "title": "The Stags Head",
+   "class": "OK",
+   "address": "1 Dame Ct, Dublin D02 TW84",
+   "m": 0,
+   "evidence": "Same-name OSM pub The Stag's Head at 1 Dame Court 0 m."
+  },
+  "625634AA-A697-540B-8165-4A80182E60E7": {
+   "title": "Katie Daly's",
+   "class": "MOVE",
+   "address": "12 Castle St, Castle Parade, King's Island, Limerick V94 F7V7",
+   "m": 125,
+   "evidence": "Same-name OSM pub \"Katie Dalys Heritage Pub and Kitchen\", housenumber 12, 125 m (marginal). Pin is on Castle Street 41 m from the road line."
+  },
+  "859A559D-1FEF-5807-892B-D4B820337752": {
+   "title": "Greyhound Tavern",
+   "class": "OK",
+   "address": "Market Square, Kinsale P17 FR83",
+   "m": 0,
+   "evidence": "Address is the square itself; pin on the Market Square locality node (0 m); square is ~60 m across. No Greyhound POI found (Eircode not geocodable)."
+  },
+  "662B6A66-231A-50ED-BD64-9BD1A050F11E": {
+   "title": "Grattan Bar",
+   "class": "OK",
+   "address": "1 & 2 Bridge Street, Waterford",
+   "m": 97,
+   "evidence": "Photon house 1 Bridge Street 97 m (just inside threshold)."
+  },
+  "79822C82-FF52-5DB9-9EF7-53DB8EA14535": {
+   "title": "Bloomsbury Tavern",
+   "class": "UNSURE",
+   "address": "236 Shaftesbury Ave, London WC2H 8EG",
+   "m": 781,
+   "evidence": "No house-level Photon hit, no Bloomsbury Tavern POI. UK unit postcode WC2H 8EG centroid is 781 m NE, at the New Oxford St end where the 200s are; pin reverse-geocodes to 33 Shaftesbury Ave (Rupert St / Chinatown end). Strong candidate for a move, but postcode-level only."
+  },
+  "D5CA2D2C-1C38-5620-B01D-C655A03F3C73": {
+   "title": "The Minories",
+   "class": "OK",
+   "address": "64–73 Minories, London EC3N 1LA",
+   "m": 26,
+   "evidence": "Same-name OSM pub The Minories, 64-73 Minories 26 m; postcode EC3N 1LA 9 m."
+  },
+  "CC461174-DE63-5502-88A8-8255B35BC099": {
+   "title": "“I Am Like You” Sculpture",
+   "class": "UNSURE",
+   "address": "Avenida da Liberdade, Lisboa (street only)",
+   "m": 256,
+   "evidence": "Street-only address. Same-name OSM artwork node \"Sou Como Tu\" (Rui Chafes, = \"I Am Like You\") on Avenida da Liberdade is 256 m NW of the pin. Strong candidate, but no house-level address exists."
+  },
+  "82823681-E708-50EC-8FDD-689371E92A8F": {
+   "title": "Avenida Infante Santo Tile Panels",
+   "class": "UNSURE",
+   "address": "Avenida Infante Santo, Lisboa (street only)",
+   "m": null,
+   "evidence": "Street-only address for a street-scale subject (tile panels along the avenue). Pin 60 m from the avenue line — consistent; nothing finer to check."
+  },
+  "BE967E94-F10E-5FF8-9515-8A979C0692A1": {
+   "title": "Di Giu",
+   "class": "OK",
+   "address": "34 Rue des Vinaigriers, 75010 Paris",
+   "m": 0,
+   "evidence": "Photon house 34 Rue des Vinaigriers 0 m; same-name OSM pastry shop Di Giú 4 m."
+  },
+  "3B10DFE4-4963-500E-9AC1-86D63C4D6896": {
+   "title": "Le Pré Verger – Christian Drouin",
+   "class": "OK",
+   "address": "1895 Route de Trouville, 14130 Pont-l'Évêque",
+   "m": 0,
+   "evidence": "Photon house 1895 Route de Trouville 0 m; Calvados Christian Drouin distillery 77 m."
+  },
+  "E17909C0-AF57-509B-A792-5CB6AAF11CD5": {
+   "title": "Les Belles Perdrix de Troplong Mondot",
+   "class": "NO-ADDRESS",
+   "address": "(Château Troplong Mondot, Saint-Émilion — no street address)",
+   "m": 116,
+   "evidence": "No address in caption. Name check: pin is on the OSM Château Troplong Mondot building (0 m); OSM restaurant \"Les Belles Perdrix de Troplong Mondot\" is 116 m away on the same estate."
+  },
+  "14423F6E-0FF9-5DD9-9311-13EEE89E60C0": {
+   "title": "La Scène Thélème",
+   "class": "UNSURE",
+   "address": "Rue Troyon, 75017 Paris (street only)",
+   "m": null,
+   "evidence": "Street-only address; no La Scène Thélème POI in Photon. Pin 36 m from Rue Troyon (a 150 m street) — consistent, unverified."
+  },
+  "89BD3CF7-9EA4-5553-8677-BF3EAED88525": {
+   "title": "La Joie",
+   "class": "OK",
+   "address": "117 Rue du Chemin Vert, 75011 Paris",
+   "m": 0,
+   "evidence": "Photon house 117 Rue du Chemin Vert 0 m; same-name OSM restaurant La joie 5 m."
+  },
+  "2D3FCD39-C3CE-578E-9DE5-948533FEFC5E": {
+   "title": "Café du Coin",
+   "class": "OK",
+   "address": "9 Rue Camille Desmoulins, 75011 Paris",
+   "m": 0,
+   "evidence": "Same-name OSM restaurant Café du Coin at 9 Rue Camille Desmoulins 0 m."
+  },
+  "18DC6D8E-F909-5711-BD3A-B831B8A14D00": {
+   "title": "B. La Parisienne",
+   "class": "OK",
+   "address": "12 Rue du Faubourg Poissonnière, 75010 Paris",
+   "m": 0,
+   "evidence": "Photon house 12 Rue du Faubourg Poissonnière 0 m; OSM bakery \"La Parisienne\" at 12 6 m."
+  },
+  "B257360A-3040-5E36-B4C0-764160FEE94A": {
+   "title": "Araku Coffee",
+   "class": "OK",
+   "address": "Rue de Prague, 75012 Paris (the location shown in the video; caption lists three cafés)",
+   "m": 20,
+   "evidence": "Same-name OSM café Araku at 8 Rue de Prague 20 m."
+  },
+  "8C756B95-7114-58CE-B19C-180F758BED4A": {
+   "title": "Poilâne",
+   "class": "OK",
+   "address": "8 Rue du Cherche-Midi, 75006 Paris",
+   "m": 0,
+   "evidence": "Photon house 8 Rue du Cherche-Midi 0 m; OSM Comptoir Poilâne 3 m."
+  },
+  "B3261978-4DC0-5818-8BFA-8DAE651C1F4C": {
+   "title": "Gyoza Hohei",
+   "class": "UNSURE",
+   "address": "Rue Sainte-Anne, 75001/75002 Paris (street only)",
+   "m": null,
+   "evidence": "Street-only address; no Gyoza Hohei POI in Photon. Pin 28 m from Rue Sainte-Anne — consistent, unverified."
   }
  }
 }
