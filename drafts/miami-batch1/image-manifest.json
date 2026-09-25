@@ -1,0 +1,695 @@
+[
+ {
+  "num": "01",
+  "slug": "royal-palm-hotel-site",
+  "code": "01B",
+  "name": "royal-palm-hotel-site_hero.webp",
+  "src": "View of the Miami River from the South Miami Avenue bridge 2026-04-06.jpg",
+  "orig": "3840x4023",
+  "sha": "9f3f114cdc1af094d0f904e436f6f75d82782927a362202b1cf7516f62688f2e"
+ },
+ {
+  "num": "02",
+  "slug": "freedom-tower",
+  "code": "02B",
+  "name": "freedom-tower_hero.webp",
+  "src": "Freedom Tower Miami (top), NE view.jpg",
+  "orig": "3840x2579",
+  "sha": "5908ed399a146f5495cec094350163dfd29c939eec52446943cf392f6967ef67"
+ },
+ {
+  "num": "02",
+  "slug": "freedom-tower",
+  "code": "02H",
+  "name": "freedom-tower_3.webp",
+  "src": "Miami freedom tower night.jpg",
+  "orig": "3840x2550",
+  "sha": "a47943dab9690cf868c9023bf6f229750e26cfd5999a8e1330228df180227212"
+ },
+ {
+  "num": "03",
+  "slug": "bayfront-park",
+  "code": "03A",
+  "name": "bayfront-park_hero.webp",
+  "src": "Torch of Friendship - panoramio.jpg",
+  "orig": "3840x2880",
+  "sha": "c5fd3810cdcc60f1e133014895cfe97007c8ecec3d2fbd679e679b14b7ac23c9"
+ },
+ {
+  "num": "03",
+  "slug": "bayfront-park",
+  "code": "03D",
+  "name": "bayfront-park_2.webp",
+  "src": "Challenger Memorial (Miami) by night (January 2022) - inscription.JPG",
+  "orig": "3840x2880",
+  "sha": "cc784bdfaec9f0229ddb28806a7eea207bb50785053a63e6734398cf8ca9fe80"
+ },
+ {
+  "num": "03",
+  "slug": "bayfront-park",
+  "code": "03C",
+  "name": "bayfront-park_3.webp",
+  "src": "Challenger Memorial (Miami) by night (January 2022).JPG",
+  "orig": "1920x2560",
+  "sha": "98f7a21f607290c4cf2aa5521dc98bba54b5360471f2af268ac2a6e1fc2d8830"
+ },
+ {
+  "num": "04",
+  "slug": "miami-circle",
+  "code": "04B",
+  "name": "miami-circle_2.webp",
+  "src": "Miami Circle aerial view with river and tower.JPG",
+  "orig": "1920x2560",
+  "sha": "9546659d1cd22a0be8b7ab94bf8842afa5f4034df09071a7904373127eac2355"
+ },
+ {
+  "num": "04",
+  "slug": "miami-circle",
+  "code": "04F",
+  "name": "miami-circle_4.webp",
+  "src": "Miami FL Miami Circle pano01.jpg",
+  "orig": "3840x1602",
+  "sha": "26b905e324145fefd6b60ecba572645392bffcd702b11748822d847fe727c1a6"
+ },
+ {
+  "num": "05",
+  "slug": "brickell-avenue-bridge",
+  "code": "05C",
+  "name": "brickell-avenue-bridge_hero.webp",
+  "src": "Brickell Avenue Bridge from northwest in 2015.jpg",
+  "orig": "3840x2527",
+  "sha": "8b777d1996650fa819c990aa17d4f3276e420364aaebc65e01e564511bec3fbe"
+ },
+ {
+  "num": "05",
+  "slug": "brickell-avenue-bridge",
+  "code": "05A",
+  "name": "brickell-avenue-bridge_2.webp",
+  "src": "Brickell Avenue Bridge at night with bascule span open (2017).jpg",
+  "orig": "3840x2553",
+  "sha": "eb3b5aaf07f65db24085bdcc7aff2c1b040b5098837cedb8b7cb2a628b443e58"
+ },
+ {
+  "num": "05",
+  "slug": "brickell-avenue-bridge",
+  "code": "05F",
+  "name": "brickell-avenue-bridge_3.webp",
+  "src": "Miami River Downtown Miami Florida 1 May 2023.jpg",
+  "orig": "3840x2880",
+  "sha": "5e46e5cd3828a6650bc4516f03352ebcc3809d8e9ed5a9a5e99e300a60d77a33"
+ },
+ {
+  "num": "06",
+  "slug": "ocean-drive-art-deco",
+  "code": "06A",
+  "name": "ocean-drive-art-deco_hero.webp",
+  "src": "Ocean Drive in the Miami Beach Art Deco Historic District.jpg",
+  "orig": "3840x2560",
+  "sha": "89e97ce79a610c7a76f870bc83f117e8954687959a94b150788144994b49fe91"
+ },
+ {
+  "num": "06",
+  "slug": "ocean-drive-art-deco",
+  "code": "06B",
+  "name": "ocean-drive-art-deco_2.webp",
+  "src": "Ocean Drive NB past 11th Street Miami Beach at night.jpeg",
+  "orig": "3840x2880",
+  "sha": "11e494e5dbb621325765e516e15ecae520083050ee1b8809542acf8d16b71be6"
+ },
+ {
+  "num": "06",
+  "slug": "ocean-drive-art-deco",
+  "code": "06G",
+  "name": "ocean-drive-art-deco_3.webp",
+  "src": "Ocean Drive - panoramio (1).jpg",
+  "orig": "3840x2161",
+  "sha": "ea2567aee43a25d54f7d40d1dd55ffed0c614df1ac85e086219446587d513168"
+ },
+ {
+  "num": "08",
+  "slug": "maximo-gomez-park",
+  "code": "08H",
+  "name": "maximo-gomez-park_hero.webp",
+  "src": "Domino Park Little Havana, Miami Florida 6 June 2024.jpg",
+  "orig": "3840x2880",
+  "sha": "7a6d33d3aeb87acb0423ff485c242bfc371ebb3f6c18b06695f2c0f457bee4a3"
+ },
+ {
+  "num": "08",
+  "slug": "maximo-gomez-park",
+  "code": "08D",
+  "name": "maximo-gomez-park_2.webp",
+  "src": "Domino Club \u2013 Florida Heritage; M\u00e1ximo G\u00f3mez Park (Domino Park), Little Havana, Miami, Florida (2019) (6).jpg",
+  "orig": "3840x2560",
+  "sha": "0de56900f7a5071d288032aba84a218d9500ce9b64070f780a2ae5bf3a9bfbb0"
+ },
+ {
+  "num": "09",
+  "slug": "cuban-memorial-boulevard",
+  "code": "09F",
+  "name": "cuban-memorial-boulevard_hero.webp",
+  "src": "Cuban Memorial Boulevard Calle Ocho Little Havana, Miami 2023.jpg",
+  "orig": "3840x2880",
+  "sha": "9c0c0b030ea47f3fdff70b620281bb56dbc8247faf3c713ede2b1d32ed58660d"
+ },
+ {
+  "num": "10",
+  "slug": "the-barnacle",
+  "code": "10A",
+  "name": "the-barnacle_hero.webp",
+  "src": "The Barnacle Coconut Grove (16815440570).jpg",
+  "orig": "3840x2560",
+  "sha": "665ca9343a31a88353685c40a26dfc781bd902cc350907e3626067fad461cfc1"
+ },
+ {
+  "num": "10",
+  "slug": "the-barnacle",
+  "code": "10D",
+  "name": "the-barnacle_2.webp",
+  "src": "The Barnacle Coconut Grove (16815512178).jpg",
+  "orig": "3840x2560",
+  "sha": "523e3a3148a08c55b11996713071861a7aad9dd707dbdf8a389e33559c196f7d"
+ },
+ {
+  "num": "11",
+  "slug": "vizcaya",
+  "code": "11C",
+  "name": "vizcaya_hero.webp",
+  "src": "Vizcaya Museum and Gardens 060524 DSC6661.jpg",
+  "orig": "3840x2560",
+  "sha": "72433a62432f05225c1cd6d333659424058760ee86804f11cf533349a12348de"
+ },
+ {
+  "num": "11",
+  "slug": "vizcaya",
+  "code": "11F",
+  "name": "vizcaya_2.webp",
+  "src": "Vizcaya Museum and Gardens 060524 DSC6702.jpg",
+  "orig": "3840x2560",
+  "sha": "4f00a3c73e3b460a7947bc8fcad51746d5557890a2e7d93d7c02499b27790d0e"
+ },
+ {
+  "num": "11",
+  "slug": "vizcaya",
+  "code": "11E",
+  "name": "vizcaya_3.webp",
+  "src": "Vizcaya Museum and Gardens 060524 DSC6700.jpg",
+  "orig": "3840x2560",
+  "sha": "0599fcd816d572e0e4de3ec81c36612b56c0342acfaa2a761d1484d074116e9e"
+ },
+ {
+  "num": "11",
+  "slug": "vizcaya",
+  "code": "11G",
+  "name": "vizcaya_4.webp",
+  "src": "Vizcaya Museum and Gardens 060524 DSC6677.jpg",
+  "orig": "3840x2560",
+  "sha": "2010a110b3483c8ba63e6e00418f174deaad1e87f42067f704094bb9f48fd4f2"
+ },
+ {
+  "num": "11",
+  "slug": "vizcaya",
+  "code": "11H",
+  "name": "vizcaya_5.webp",
+  "src": "Vizcaya Museum and Gardens 060524 DSC6697.jpg",
+  "orig": "3840x2560",
+  "sha": "7519e50f95497e30c7ac9284ed1a0dee459377cbd5ace811ac690ee935ff0b1a"
+ },
+ {
+  "num": "12",
+  "slug": "wynwood-walls",
+  "code": "12D",
+  "name": "wynwood-walls_hero.webp",
+  "src": "April 7, 2015 - Wynwood Miami - 07.jpg",
+  "orig": "3840x2880",
+  "sha": "7062481cdb496bb176b3d8c08125c31cf21e6380b3f662f3d4df940e47e7e49f"
+ },
+ {
+  "num": "12",
+  "slug": "wynwood-walls",
+  "code": "12G",
+  "name": "wynwood-walls_3.webp",
+  "src": "Wynwood Mural (16811746490).jpg",
+  "orig": "3840x2562",
+  "sha": "5eb00e22dcd8b16725d52764c923333bd18b037a3a7add8df7a6f8c30e03b0b5"
+ },
+ {
+  "num": "12",
+  "slug": "wynwood-walls",
+  "code": "12E",
+  "name": "wynwood-walls_5.webp",
+  "src": "Wynwood Murals (12926225503).jpg",
+  "orig": "3840x2560",
+  "sha": "e5799b8d333fb19b1dd70c44db91e9a2bc8370f8b2f006ee3eebead6e65efd11"
+ },
+ {
+  "num": "12",
+  "slug": "wynwood-walls",
+  "code": "12C",
+  "name": "wynwood-walls_6.webp",
+  "src": "April 7, 2015 - Wynwood Miami - 05.jpg",
+  "orig": "3840x2880",
+  "sha": "1bc1e9e46da43b02fff12f798f4ebb72e802f5f25a651f5ecff5529b94d94325"
+ },
+ {
+  "num": "13",
+  "slug": "dade-county-courthouse",
+  "code": "13E",
+  "name": "dade-county-courthouse_2.webp",
+  "src": "The Miami Dade County Flagler Courthouse.jpg",
+  "orig": "3840x2880",
+  "sha": "876cdbaaef74ed4c9862144b53186ec6307c5dcecb028ae81c362b4bce0262a6"
+ },
+ {
+  "num": "15",
+  "slug": "gesu-church",
+  "code": "15A",
+  "name": "gesu-church_hero.webp",
+  "src": "Gesu Catholic Church (Miami, Florida).jpg",
+  "orig": "3840x2560",
+  "sha": "173c6bd58a403fbd233da51c93ca2ae87a5b3be1fe2b178f6d815cc1a7478ad6"
+ },
+ {
+  "num": "15",
+  "slug": "gesu-church",
+  "code": "15C",
+  "name": "gesu-church_2.webp",
+  "src": "Gesu Catholic Church Downtown Miami - exterior - 26 November 2022 - Inscription.jpg",
+  "orig": "3840x2880",
+  "sha": "46caa6dae730929435ab42c847fd4a9c49aff71cbccc12cc1f9d154c1ffc63eb"
+ },
+ {
+  "num": "16",
+  "slug": "miami-dade-cultural-center",
+  "code": "16G",
+  "name": "miami-dade-cultural-center_hero.webp",
+  "src": "Cultural Center Downtown Miami FL, construction in background, 4 May 2023.jpg",
+  "orig": "3840x2880",
+  "sha": "e4faecc394f4ecb8a42796a38f0243c2fa0bc463ed7bd9ac9425013506a9d611"
+ },
+ {
+  "num": "16",
+  "slug": "miami-dade-cultural-center",
+  "code": "16E",
+  "name": "miami-dade-cultural-center_2.webp",
+  "src": "Miami-Dade Cultural Center, Miami FL 7 January 2023 - 05.jpg",
+  "orig": "3840x2880",
+  "sha": "ebe915f7e2e34481bc148c93ecfec5ccd6b42172ea17ac68f90759d2176aff7c"
+ },
+ {
+  "num": "16",
+  "slug": "miami-dade-cultural-center",
+  "code": "16D",
+  "name": "miami-dade-cultural-center_3.webp",
+  "src": "Miami-Dade Cultural Center, Miami FL 7 January 2023 - 04.jpg",
+  "orig": "3840x2880",
+  "sha": "861fbda149e2af0dd214d6603929e063e96ed36101c2711cf03558f0d2976dd3"
+ },
+ {
+  "num": "16",
+  "slug": "miami-dade-cultural-center",
+  "code": "16F",
+  "name": "miami-dade-cultural-center_4.webp",
+  "src": "Miami-Dade Cultural Center, Miami FL 7 January 2023 - 06.jpg",
+  "orig": "3840x2880",
+  "sha": "eb9256f2d83b7da17e7f3635f095d3a7ffa6867ae793f25c347d2cb778cd5273"
+ },
+ {
+  "num": "16",
+  "slug": "miami-dade-cultural-center",
+  "code": "16C",
+  "name": "miami-dade-cultural-center_5.webp",
+  "src": "Miami-Dade Cultural Center, Miami FL 7 January 2023 - 03.jpg",
+  "orig": "3840x2880",
+  "sha": "20397b3a098c72c436f2ff75248694acb01546a60129e11c6adc579e5e72a58d"
+ },
+ {
+  "num": "17",
+  "slug": "ferre-park",
+  "code": "17D",
+  "name": "ferre-park_hero.webp",
+  "src": "Bicentennial Park June 2014.JPG",
+  "orig": "3840x1629",
+  "sha": "6089a789e9ebd4c3413cf40f43203c5922b7f6fcb52fc55e72723361d1e23dc9"
+ },
+ {
+  "num": "17",
+  "slug": "ferre-park",
+  "code": "17E",
+  "name": "ferre-park_2.webp",
+  "src": "PAMM MRD 21.jpg",
+  "orig": "3840x2880",
+  "sha": "43d42b5ffade8d1ff01cdc9c4fb6a029cab1a6eed5698b4eaae66b8956d6c060"
+ },
+ {
+  "num": "17",
+  "slug": "ferre-park",
+  "code": "17H",
+  "name": "ferre-park_3.webp",
+  "src": "PAMM MRD 28.jpg",
+  "orig": "3840x2880",
+  "sha": "774b0f9cc6a35f8cc894ecca478d90a29c44c685655e457aa881bf494e86c809"
+ },
+ {
+  "num": "18",
+  "slug": "lummus-park-downtown",
+  "code": "18D",
+  "name": "lummus-park-downtown_2.webp",
+  "src": "Fort Dallas William English Plantation Lummus Park Historic District (30642638520).jpg",
+  "orig": "3840x2880",
+  "sha": "c2aeab5d3f8cb0200cdce1a23eefb8c1782a691bfd05a686cd2ff5bc9e29cf1a"
+ },
+ {
+  "num": "18",
+  "slug": "lummus-park-downtown",
+  "code": "18E",
+  "name": "lummus-park-downtown_3.webp",
+  "src": "William Wagner House Circa 1855 Lummus Park Historic District (22765725588).jpg",
+  "orig": "3840x2880",
+  "sha": "12a981136c9374fd4cb1e866e3c4c8b75d27284e7afbdc887c7dcdcd9d715544"
+ },
+ {
+  "num": "19",
+  "slug": "espanola-way",
+  "code": "19A",
+  "name": "espanola-way_hero.webp",
+  "src": "Miami Beach - Espa\u00f1ola Way Reconstruction February 2016 01 View East Mid Street.jpg",
+  "orig": "3840x2880",
+  "sha": "0b034c279f57a84ecfbb6992273d090a5604e35a0e13ab8403ac6fe3f23e6a85"
+ },
+ {
+  "num": "20",
+  "slug": "casa-casuarina",
+  "code": "20F",
+  "name": "casa-casuarina_hero.webp",
+  "src": "Gianni versace miami home.JPG",
+  "orig": "3840x2555",
+  "sha": "9f29b42d04e2d577c32e8060e74437b831563ce7c0e7cfea27362057f8edd45a"
+ },
+ {
+  "num": "20",
+  "slug": "casa-casuarina",
+  "code": "20B",
+  "name": "casa-casuarina_3.webp",
+  "src": "Casa Casuarina at night Versace Mansion, hotel restaurant at 1116 Ocean Drive, Miami Beach.jpg",
+  "orig": "3840x2880",
+  "sha": "7b188da30ea18b8b932110e613c7bb1f66fc6fc8b73d3e27d10df9d53df31926"
+ },
+ {
+  "num": "22",
+  "slug": "holocaust-memorial-miami-beach",
+  "code": "22G",
+  "name": "holocaust-memorial-miami-beach_hero.webp",
+  "src": "Miami Beach - South Beach Monuments - Holocaust Memorial 28.jpg",
+  "orig": "3840x5120",
+  "sha": "047d869a332031e1f6b3c0336b6b93ba7028f79d51bd79266e262a3e8c26b882"
+ },
+ {
+  "num": "22",
+  "slug": "holocaust-memorial-miami-beach",
+  "code": "22A",
+  "name": "holocaust-memorial-miami-beach_2.webp",
+  "src": "Reaching sky - Flickr - LANSA301.jpg",
+  "orig": "3840x5760",
+  "sha": "424b988dd89104b4ac1bccefea54baef033a04537e89eb90ff8094c2e44240a2"
+ },
+ {
+  "num": "22",
+  "slug": "holocaust-memorial-miami-beach",
+  "code": "22B",
+  "name": "holocaust-memorial-miami-beach_3.webp",
+  "src": "Miami Beach - South Beach Monuments - Holocaust Memorial 01.jpg",
+  "orig": "3840x2880",
+  "sha": "2fc563a3a9e0bdcffd620c7f567deea3ab89edb0435de3ccf88ee7583b096802"
+ },
+ {
+  "num": "24",
+  "slug": "fontainebleau",
+  "code": "24A",
+  "name": "fontainebleau_hero.webp",
+  "src": "Fontainebleau Miami Beach Aerial 2025.jpg",
+  "orig": "3840x2877",
+  "sha": "324228df16f2f0b5de66f3857dda8d96f2674238b7859d3b6a5bbffa25c90873"
+ },
+ {
+  "num": "24",
+  "slug": "fontainebleau",
+  "code": "24E",
+  "name": "fontainebleau_3.webp",
+  "src": "Fontainebleau-10.jpg",
+  "orig": "3840x2560",
+  "sha": "4d6a9049fd3af7b8d616dd03881e413b5ed9548110273c358e59cf192717c12f"
+ },
+ {
+  "num": "24",
+  "slug": "fontainebleau",
+  "code": "24G",
+  "name": "fontainebleau_4.webp",
+  "src": "Fontainebleau Miami interior FL3.jpg",
+  "orig": "3840x2589",
+  "sha": "e6cf33181a6cd4a284e7743468fc04981134c11394a4c74e8bb2eaaa09ac97d6"
+ },
+ {
+  "num": "25",
+  "slug": "tower-theater",
+  "code": "25A",
+  "name": "tower-theater_hero.webp",
+  "src": "Tower Theater (Miami, Florida).jpg",
+  "orig": "3840x3072",
+  "sha": "f72ae46eec7c570f5f0cbcd6d5128ffbab7469715a8807f75270c9ed672d2ae2"
+ },
+ {
+  "num": "26",
+  "slug": "lyric-theater",
+  "code": "26A",
+  "name": "lyric-theater_hero.webp",
+  "src": "Miami Lyric Theater (4).jpg",
+  "orig": "3840x2560",
+  "sha": "0901cce06670ff6d1549cfcdb0b3c58e253825fab94651f3fb12b60efaa47303"
+ },
+ {
+  "num": "26",
+  "slug": "lyric-theater",
+  "code": "26B",
+  "name": "lyric-theater_2.webp",
+  "src": "Miami Lyric Theater (1).jpg",
+  "orig": "3840x3072",
+  "sha": "91d32213697ef87687abd730436aa209ff9016f5dc5a0dbd604ad0522a6a9520"
+ },
+ {
+  "num": "01",
+  "slug": "royal-palm-hotel-site",
+  "code": "01E",
+  "name": "royal-palm-hotel-site_2.webp",
+  "src": "TRAFFIC INTERCHANGE CUTS THROUGH THE HEART OF DOWNTOWN MIAMI - NARA - 544634.jpg",
+  "orig": "1280x1909",
+  "sha": "da9dab1a06d2ad1fe88a9bf97d65d21d8afa6483d7355ed87c899faf8bb6fb1c"
+ },
+ {
+  "num": "02",
+  "slug": "freedom-tower",
+  "code": "02G",
+  "name": "freedom-tower_2.webp",
+  "src": "Miami Florida 2018-01-16 - Freedom Tower.jpg",
+  "orig": "1280x1322",
+  "sha": "06148a4c3e356df1ab420df7d9ae9279cf42e072908700a62c6b636d8512a7b7"
+ },
+ {
+  "num": "04",
+  "slug": "miami-circle",
+  "code": "04A",
+  "name": "miami-circle_hero.webp",
+  "src": "Miami Circle aerial view.JPG",
+  "orig": "1280x960",
+  "sha": "a9529e758acf44e91c1c2dbfd21cc922fc005aad9029481ce665d18b3ca7e932"
+ },
+ {
+  "num": "04",
+  "slug": "miami-circle",
+  "code": "04E",
+  "name": "miami-circle_3.webp",
+  "src": "Brickell Point Site 2012-09-15 16-54-59.jpg",
+  "orig": "1280x960",
+  "sha": "016f29907fd4804bee832de6bfc0400b667453dbfc38f363b758816017c5a8ed"
+ },
+ {
+  "num": "04",
+  "slug": "miami-circle",
+  "code": "04D",
+  "name": "miami-circle_5.webp",
+  "src": "Miami FL Miami Circle plaque01.jpg",
+  "orig": "1280x960",
+  "sha": "2c3a513dcb07227d7431ca7d77bbef9066569b8e67da09e3fa9498f80540a3b6"
+ },
+ {
+  "num": "04",
+  "slug": "miami-circle",
+  "code": "04G",
+  "name": "miami-circle_6.webp",
+  "src": "Miami Circle (9081683470).jpg",
+  "orig": "1280x849",
+  "sha": "c885db5575270ece6b08a1d18fb9f454e22cd74a27792422f805f04f0f47dff8"
+ },
+ {
+  "num": "09",
+  "slug": "cuban-memorial-boulevard",
+  "code": "09E",
+  "name": "cuban-memorial-boulevard_2.webp",
+  "src": "Josemartibust.jpg",
+  "orig": "1280x960",
+  "sha": "c39b1d51097505dcbb07dabbf4c27cbff740722e80491ad54217b7cbd8ba85a6"
+ },
+ {
+  "num": "12",
+  "slug": "wynwood-walls",
+  "code": "12F",
+  "name": "wynwood-walls_2.webp",
+  "src": "Wynwood Walls Miami Florida October 2013.jpg",
+  "orig": "1280x960",
+  "sha": "53f98870fc42ce3f2a3a20e2d4e6cfbfc073788bb62b72e6e0d66af781ad28d6"
+ },
+ {
+  "num": "12",
+  "slug": "wynwood-walls",
+  "code": "12H",
+  "name": "wynwood-walls_4.webp",
+  "src": "-RETNA Wynwood Walls (8170950212).jpg",
+  "orig": "1280x960",
+  "sha": "03b8f58af0bd6a54a5e8e3dcfa5b138fc286f8c1b7de29a69385374828c75efc"
+ },
+ {
+  "num": "13",
+  "slug": "dade-county-courthouse",
+  "code": "13F",
+  "name": "dade-county-courthouse_hero.webp",
+  "src": "Miami-Dade County Courthouse - Miami - Daniel Di Palma Photography 06.jpg",
+  "orig": "1280x960",
+  "sha": "21dd3d75acfaf042057102601c36a19ff07325509659ea20e953258557b77b69"
+ },
+ {
+  "num": "14",
+  "slug": "dupont-building",
+  "code": "14H",
+  "name": "dupont-building_hero.webp",
+  "src": "Entrance Alfred I DuPont Building (8344800391).jpg",
+  "orig": "1280x730",
+  "sha": "24777a8cdb8ba3a15ea888c054d3ca2a0b0f8ddeb48c77b8f0b862be22e89d70"
+ },
+ {
+  "num": "18",
+  "slug": "lummus-park-downtown",
+  "code": "18H",
+  "name": "lummus-park-downtown_hero.webp",
+  "src": "Lummus Park Historic Distric - Miami - Daniel Di Palma Photography 03.jpg",
+  "orig": "1280x960",
+  "sha": "446a92b4a0431859c5a7cc4985e563aa9bdff67afc15a0c7891e7590969e76c4"
+ },
+ {
+  "num": "18",
+  "slug": "lummus-park-downtown",
+  "code": "18A",
+  "name": "lummus-park-downtown_4.webp",
+  "src": "Lummus Park Historic Distric - Miami - Daniel Di Palma Photography 01 Wagner House and Fort Dallas.jpg",
+  "orig": "1280x960",
+  "sha": "67cc05f0bc22c28a23dd6bf2cb62fb54c445bb61bc1ede8ad1f1427f5b50b61b"
+ },
+ {
+  "num": "18",
+  "slug": "lummus-park-downtown",
+  "code": "18C",
+  "name": "lummus-park-downtown_5.webp",
+  "src": "Miami FL Lummus Park HD Wagner Homestead plaque01.jpg",
+  "orig": "1280x960",
+  "sha": "8e2bc19133f3acb9fb6e46289c97e868a83d0bfd7146217a5fa00ff11e712a27"
+ },
+ {
+  "num": "20",
+  "slug": "casa-casuarina",
+  "code": "20C",
+  "name": "casa-casuarina_2.webp",
+  "src": "Casa Casuarina Pool.jpg",
+  "orig": "1280x1707",
+  "sha": "be018877fbb89a0d240446773cc2d3c3043c9b97cfc730a5e48d3ba5d5dff12b"
+ },
+ {
+  "num": "23",
+  "slug": "jewish-museum-of-florida",
+  "code": "23B",
+  "name": "jewish-museum-of-florida_hero.webp",
+  "src": "Miami Beach FL Beth Jacob Hall msm01.jpg",
+  "orig": "1280x960",
+  "sha": "873305bc6efc1ba9901de2b55fa15d4ebe4ddb36dc2782c6136e96fa37844e84"
+ },
+ {
+  "num": "23",
+  "slug": "jewish-museum-of-florida",
+  "code": "23E",
+  "name": "jewish-museum-of-florida_2.webp",
+  "src": "Miami Beach FL Beth Jacob Hall msm07.jpg",
+  "orig": "1280x960",
+  "sha": "414810950a295a8af102e37335d9601e0c52177200da1b8e5bc7fb6b2061626c"
+ },
+ {
+  "num": "24",
+  "slug": "fontainebleau",
+  "code": "24D",
+  "name": "fontainebleau_2.webp",
+  "src": "Fontainebleau-1.jpg",
+  "orig": "1280x1920",
+  "sha": "67810bbcc5ac3e53a24552deabda71a148b8c5ae41bebb09141d25b0232ba45a"
+ },
+ {
+  "num": "25",
+  "slug": "tower-theater",
+  "code": "25B",
+  "name": "tower-theater_2.webp",
+  "src": "Tower Theater - Looks Like That 70's show.jpg",
+  "orig": "1280x1600",
+  "sha": "22852dc8e647a3cedccf68278d9d0a1f569c90ac09df1358540c529d80301af9"
+ },
+ {
+  "num": "28",
+  "slug": "bacardi-building",
+  "code": "28A",
+  "name": "bacardi-building_hero.webp",
+  "src": "20131012 Miami 3615 Bacardi annex.jpg",
+  "orig": "1280x960",
+  "sha": "e85bf3eabf15ab5b40455474a722416cd934083137b9d2cbc99245a7ab48e914"
+ },
+ {
+  "num": "28",
+  "slug": "bacardi-building",
+  "code": "28B",
+  "name": "bacardi-building_2.webp",
+  "src": "20131019 Miami 3688 Bacardi plaza.jpg",
+  "orig": "1280x960",
+  "sha": "b87aaff4c1441f8d254b953468efe6b51da400ce360addbe5168350bcba6bab6"
+ },
+ {
+  "num": "28",
+  "slug": "bacardi-building",
+  "code": "28F",
+  "name": "bacardi-building_3.webp",
+  "src": "Miami Bacardi Building lit up.jpg",
+  "orig": "1280x591",
+  "sha": "2b22067eff4079a2375025bd166b15507aa3a4d6235b6fb58b70d58b20a9dae7"
+ },
+ {
+  "num": "28",
+  "slug": "bacardi-building",
+  "code": "28H",
+  "name": "bacardi-building_4.webp",
+  "src": "Bacardi Building Biscayne Boulevard Miami.jpg",
+  "orig": "1280x960",
+  "sha": "2a2de8393710359f2131e059a7597b494f163b21510de70831bb7f1f269c3181"
+ },
+ {
+  "num": "29",
+  "slug": "little-haiti-cultural-complex",
+  "code": "29A",
+  "name": "little-haiti-cultural-complex_hero.webp",
+  "src": "Little Haiti south.jpg",
+  "orig": "1280x720",
+  "sha": "818938657f7010e54cba703d1083723ea39178c771f98f6046400da992b4726e"
+ }
+]

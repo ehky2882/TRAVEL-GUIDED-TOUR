@@ -184,7 +184,90 @@ Versace's death in one clause — **image sourcing must not drift toward the dea
 - [x] slugs checked against all 1,954 existing stop audio slugs — no collisions, no internal dupes
 - [x] coordinates derived, audited (GROSS none, no bias), 6 unverifiable hand-read
 - [x] trigger radii sized per stop; one deliberate overlap recorded
-- [ ] images sourced — owner picks hero + gallery
+- [x] images sourced; owner picked 2026-09-25 — **74 live on gh-pages, 3 owed, 4 tours unpicked** (see Images below)
 - [ ] audio — **PENDING**, nothing recorded yet
 - [ ] wire into `Tours.json` when audio arrives
+
+
+---
+
+## Images — 74 live on gh-pages, 3 outstanding
+
+Owner picks made 2026-09-25 from 206 verified candidates. Every image passed **two independent
+Gemini gates** (modern photograph; correct subject with look-alikes named), was cropped to
+1200×900 WebP **without upscaling**, and had its live bytes hash-verified after upload — all 74
+matched, none missing, none mismatched.
+
+**Source is Wikimedia Commons under the PD/CC0-only search, so NO attribution is owed** and
+`drafts/CREDITS.md` gains no rows for this batch.
+
+Base URL: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
+
+| # | slug | hero | gallery |
+|---|------|------|---------|
+| 01 | `royal-palm-hotel-site` | `royal-palm-hotel-site_hero.webp` | 2 |
+| 02 | `freedom-tower` | `freedom-tower_hero.webp` | 2, 3 |
+| 03 | `bayfront-park` | `bayfront-park_hero.webp` | 2, 3 |
+| 04 | `miami-circle` | `miami-circle_hero.webp` | 2, 3, 4, 5, 6 |
+| 05 | `brickell-avenue-bridge` | `brickell-avenue-bridge_hero.webp` | 2, 3 |
+| 06 | `ocean-drive-art-deco` | `ocean-drive-art-deco_hero.webp` | 2, 3 |
+| 08 | `maximo-gomez-park` | `maximo-gomez-park_hero.webp` | 2 |
+| 09 | `cuban-memorial-boulevard` | `cuban-memorial-boulevard_hero.webp` | 2 |
+| 10 | `the-barnacle` | `the-barnacle_hero.webp` | 2 |
+| 11 | `vizcaya` | `vizcaya_hero.webp` | 2, 3, 4, 5 |
+| 12 | `wynwood-walls` | `wynwood-walls_hero.webp` | 2, 3, 4, 5, 6 |
+| 13 | `dade-county-courthouse` | `dade-county-courthouse_hero.webp` | 2 |
+| 14 | `dupont-building` | `dupont-building_hero.webp` ⏳ | — |
+| 15 | `gesu-church` | `gesu-church_hero.webp` | 2 |
+| 16 | `miami-dade-cultural-center` | `miami-dade-cultural-center_hero.webp` | 2, 3, 4, 5 |
+| 17 | `ferre-park` | `ferre-park_hero.webp` | 2, 3 |
+| 18 | `lummus-park-downtown` | `lummus-park-downtown_hero.webp` | 2, 3, 4, 5 |
+| 19 | `espanola-way` | `espanola-way_hero.webp` | — |
+| 20 | `casa-casuarina` | `casa-casuarina_hero.webp` | 2, 3 |
+| 22 | `holocaust-memorial-miami-beach` | `holocaust-memorial-miami-beach_hero.webp` | 2, 3 |
+| 23 | `jewish-museum-of-florida` | `jewish-museum-of-florida_hero.webp` | 2 |
+| 24 | `fontainebleau` | `fontainebleau_hero.webp` | 2, 3, 4 |
+| 25 | `tower-theater` | `tower-theater_hero.webp` | 2 |
+| 26 | `lyric-theater` | `lyric-theater_hero.webp` | 2 |
+| 28 | `bacardi-building` | `bacardi-building_hero.webp` | 2, 3⏳, 4 |
+| 29 | `little-haiti-cultural-complex` | `little-haiti-cultural-complex_hero.webp` ⏳ | — |
+
+⏳ = picked and cropped but **not yet uploaded** — see below.
+
+### 🔴 Three picks still owed
+
+Wikimedia rate-limited this session after ~2,000 requests, and the copies obtainable at the time
+crop below 1200×900. They were **held back rather than shipped upscaled**, because two of them are
+heroes and a soft hero is visible on every card in the app.
+
+| # | file | original | crops to | status |
+|---|------|----------|----------|--------|
+| 14 | `dupont-building_hero.webp` | 1795×1024 | 1365×1024 ✅ big enough | needs re-fetch when the limit clears |
+| 29 | `little-haiti-cultural-complex_hero.webp` | 3328×1872 | 2496×1872 ✅ big enough | needs re-fetch |
+| 28 | `bacardi-building_3.webp` | 3008×1388 | 1850×1388 ✅ big enough | needs re-fetch |
+
+All three originals are comfortably large; **only the throttle is in the way**, so a later session
+just re-fetches the original file URL from `upload.wikimedia.org` and crops. Nothing needs
+re-picking.
+
+⚠️ **`miami-circle_6.webp` shipped with a 1.06× upscale** (crop was 1132×849). Six percent, not
+visible in practice, recorded so it is not rediscovered as a defect.
+
+### Four tours have no picks yet
+
+Candidates are sourced and verified, waiting on the owner:
+
+| # | slug | verified candidates |
+|---|------|--------------------:|
+| 07 | `lincoln-road` | 8 |
+| 21 | `south-pointe-park` | 8 |
+| 27 | `overtown-interchange` | 8 |
+| 30 | `virginia-key-beach` | 7 |
+
+### Thin subjects — owner photographs would help
+
+Commons runs out on these, and **Unsplash produced zero verified images across 144 candidates**
+(stock returns the city, not the place — the documented pattern):
+
+`little-haiti-cultural-complex` 1 · `gesu-church` 3 · `tower-theater` 3 · `lyric-theater` 3
 
