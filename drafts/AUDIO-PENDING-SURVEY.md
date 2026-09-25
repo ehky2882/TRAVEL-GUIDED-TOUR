@@ -31,7 +31,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-09-22 — **the queue is EMPTY.** `TOTAL PENDING` below reads 0 and that is right: 🇺🇸 **Atlanta, staged on 2026-08-26, has since gone LIVE** — 30 tours under Atlas Studio ATL in `origin/main`'s `Tours.json` (#900, the 35th bureau). ⚠️ **This header still read "Atlanta added to the queue" for four weeks after that**, contradicting the table directly beneath it — the header and the table are one record, so **move both in the same edit**. The branches still holding old staged drafts (`claude/london-batch3-scripts-260616`, `claude/paris-scripts-260622`, `claude/amsterdam-handoff-preserve-hlhyp8`) are for cities now fully live (London 100, Paris 50, Atlanta 30) and hold no pending content.
+**Last verified:** 2026-09-25 — 🇺🇸 **MIAMI added to the queue: 30 single-stop tours staged, 0 MP3s.** Scripts only; images are being sourced now. See the row below and `drafts/miami-batch1/README.md` on `claude/new-city-staging-260925`. Miami will be the **36th bureau** (Atlas Studio MIA, `aed488af-23d3-514f-90f1-035ca2285d0d`) — the city has no Atlas tours today, only 39 creator link pins.
+
+**Previously verified:** 2026-09-22 — **the queue was EMPTY.** `TOTAL PENDING` below reads 0 and that is right: 🇺🇸 **Atlanta, staged on 2026-08-26, has since gone LIVE** — 30 tours under Atlas Studio ATL in `origin/main`'s `Tours.json` (#900, the 35th bureau). ⚠️ **This header still read "Atlanta added to the queue" for four weeks after that**, contradicting the table directly beneath it — the header and the table are one record, so **move both in the same edit**. The branches still holding old staged drafts (`claude/london-batch3-scripts-260616`, `claude/paris-scripts-260622`, `claude/amsterdam-handoff-preserve-hlhyp8`) are for cities now fully live (London 100, Paris 50, Atlanta 30) and hold no pending content.
 **Previously verified:** 2026-08-26 (🇺🇸 **Atlanta added to the queue** — 30 single-stop tours staged, 21 image-complete, 0 MP3s; see the row below. Previously 2026-08-26: 🇩🇰 **Copenhagen COMPLETE** — 40 tours live under Atlas Studio CPH, the 34th Atlas maker, Denmark's first city and the catalog's 22nd country; catalog 1552 tours / 1924 stops. **Never in this table** — the thirteenth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 103 MB, first try; 155 images already 1200×900, 40 clean/TTS-safe pairs 1:1, zero byte-duplicates) and wired the same day.)
 
 > ✅ **RESOLVED 2026-08-26 — the Atlanta batch is real, and it now has a row below.** The flag was right: gh-pages `c533f3c4` (2026-08-24) and `1a23eea4` (2026-08-26) are an Atlanta staging push. **30 single-stop scripts** live on `claude/amsterdam-handoff-preserve-hlhyp8` at `drafts/atlanta-batch1/` (30 clean `.txt` + 30 `_TTS.txt` + a README pick-map), staged since 2026-08-17. **No narration audio exists** — `git ls-tree origin/gh-pages audio/` matches nothing Atlanta (`flatiron-building.mp3` is New York's, `the-temple-of-the-emerald-buddha.mp3` is Bangkok's). This was the Dubai failure repeating, and the fix is the row below.
@@ -56,15 +58,44 @@ the branches to answer "what's left?".
 
 ## PENDING — staged, awaiting narration audio
 
-**🎉 NOTHING IS PENDING. The queue is empty again** — Atlanta was the last staged city and it
-went live 2026-09-14. Five singles the Chicago master list marks as drafted (18 Wrigley Field,
+**🇺🇸 Miami is pending** — staged 2026-09-25, scripts only, no narration recorded. It is the
+only thing in the queue. Five singles the Chicago master list marks as drafted (18 Wrigley Field,
 19 Lincoln Park, 22 Gold Coast/Astor, 26 Wicker Park, 27 The 606) were never delivered as
 scripts, images or audio — **if they ever arrive they are a second batch** and get a fresh row
 here, per the staging rule below.
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| **TOTAL PENDING** | **0** | | **0** | | |
+| 🇺🇸 **Miami** | **30** | 30 single-stop, no walks | **30** | `claude/new-city-staging-260925` | **Atlas Studio MIA** `aed488af-23d3-514f-90f1-035ca2285d0d` (new, 36th) |
+| **TOTAL PENDING** | **30** | | **30** | | |
+
+### 🇺🇸 Miami batch 1 — what a later session needs to know
+
+Full detail in `drafts/miami-batch1/README.md` on the staging branch. The parts that cost real
+time to re-derive:
+
+- **The scripts carry NO coordinates** — a prose position paragraph and nothing machine-readable,
+  the same shape as Atlanta, where eleven of thirty derived points came out wrong and every one
+  was invisible to the validator, to CI and to every URL check. All 30 are derived, audited and
+  hand-read already; `drafts/miami-batch1/coordinates.tsv` holds them with the audit trail beside
+  it. **Do not re-derive them casually.**
+- **`check-coordinates.py` reports GROSS none and NO directional bias** (10/24 north, median
+  -0.0 m, p = 0.54), so this drop is *not* from the pipeline that pushed Barcelona and Milan
+  ~10 m north. Six came back UNVERIFIABLE — not a pass — and each was reverse-geocoded by hand
+  and recorded.
+- 🔴 **Lummus Park is TWO different parks 5 km apart.** Stop 06 is the Miami Beach one (Ocean
+  Drive), stop 18 the downtown one (360 NW 3rd St). Slugs are `ocean-drive-art-deco` and
+  `lummus-park-downtown`; **neither may be shortened to `lummus-park`.** A bare shared slug is how
+  London's Natural History Museum played Los Angeles' narration for six and a half weeks.
+- **Trigger radii are sized per stop (30–120 m), not fixed at 30 m.** A stop written from across
+  the street or along a pedestrian mall cannot be served by a 30 m circle on a building centroid;
+  the catalogue already runs 30–120 m. Do not normalise them back to 30.
+- **Stops 08 and 25 overlap deliberately** — Máximo Gómez Park and the Tower Theater genuinely
+  share the corner of Calle Ocho and SW 15th Ave, 33 m apart. Flagged to the owner, left as-is.
+- **Two coordinates the geocoder gets wrong if you trust it:** searching `Cuban Memorial
+  Boulevard` returns the median's relation centroid ~576 m south of the Bay of Pigs column (the
+  median runs south; the column stands at the north end), and searching `Bayfront Park` ranks a
+  Metromover station above the park.
 
 _(✅ 🇺🇸 **Atlanta = DONE (2026-09-14, PR #900): 30 tours LIVE** — 30 single-stop, geofenced at
 30 m, no walks, under new maker **Atlas Studio ATL** (`ccaab715-2f29-597e-8b3a-0d38e8d370da`) —
