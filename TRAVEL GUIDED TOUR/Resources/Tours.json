@@ -45087,8 +45087,8 @@
           "order": 0,
           "title": "HAUS NOWHERE SEOUL | 하우스 노웨어 서울",
           "caption": "Enter from the industrial street and let the ground-floor installation set the register.",
-          "latitude": 37.538154727874534,
-          "longitude": 127.05893518893855,
+          "latitude": 37.5381547,
+          "longitude": 127.0589352,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/haus-nowhere-seoul.mp3",
           "audioDurationSeconds": 120,
           "triggerMode": "manual",
@@ -45100,8 +45100,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 120,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.538154727874534,
-      "centroidLongitude": 127.05893518893855,
+      "centroidLatitude": 37.5381547,
+      "centroidLongitude": 127.0589352,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -45596,8 +45596,8 @@
           "order": 0,
           "title": "Photo SeMA — Photography Seoul Museum of Art | 서울시립 사진미술관",
           "caption": "You're in Jungnang, northeast of the centre — step inside the refurbished complex where galleries meet working darkrooms.",
-          "latitude": 37.65570967992203,
-          "longitude": 127.0488574932842,
+          "latitude": 37.6557097,
+          "longitude": 127.0488575,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/photo-sema.mp3",
           "audioDurationSeconds": 113,
           "triggerMode": "manual",
@@ -45609,8 +45609,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 113,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.65570967992203,
-      "centroidLongitude": 127.0488574932842,
+      "centroidLatitude": 37.6557097,
+      "centroidLongitude": 127.0488575,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -45710,8 +45710,8 @@
           "order": 0,
           "title": "Seo-Seoul Museum of Art | 서울시립 서서울미술관",
           "caption": "Step into the old water purification plant in Yangcheon and find the circular concrete tanks turned into galleries.",
-          "latitude": 37.45788393083843,
-          "longitude": 126.895075413535,
+          "latitude": 37.4578839,
+          "longitude": 126.8950754,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/seo-seoul-museum-of-art.mp3",
           "audioDurationSeconds": 120,
           "triggerMode": "manual",
@@ -45723,8 +45723,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 120,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.45788393083843,
-      "centroidLongitude": 126.895075413535,
+      "centroidLatitude": 37.4578839,
+      "centroidLongitude": 126.8950754,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -101701,7 +101701,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "0e044571-e715-4b5b-a2c3-785e184e1379",
-        "3D739E82-5C7D-541E-B9AF-A1EDD2969682"
+        "3D739E82-5C7D-541E-B9AF-A1EDD2969682",
+        "7F00E0D2-5CE7-588C-98A9-D82B4C077DB5"
       ]
     },
     {
@@ -104239,7 +104240,8 @@
       "tourIds": [
         "042D6ACF-4283-5DB0-BC6C-0AC6DD68B729",
         "0C23386A-ACB0-5844-8CC8-456167A3372E",
-        "99C7F724-851B-5A05-9A67-07A0E33B1609"
+        "99C7F724-851B-5A05-9A67-07A0E33B1609",
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732"
       ]
     },
     {
@@ -106735,6 +106737,66 @@
       "tourIds": [
         "EBE90D57-E597-56BA-B54D-153E1728BFCE",
         "2FCAAA0D-D267-50DC-BCC5-4C103592320E"
+      ]
+    },
+    {
+      "id": "fee52acb-f1dd-5adc-8fa2-993bc4e1cda1",
+      "name": "Seo-Seoul Museum of Art",
+      "description": null,
+      "latitude": 37.4578839,
+      "longitude": 126.8950754,
+      "city": "Seoul",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "92655fdd-493b-564c-a19f-57ccce10e026",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041"
+      ]
+    },
+    {
+      "id": "b80c312c-73a3-5d28-a756-d7ebff1dd23f",
+      "name": "Centre Pompidou Hanwha",
+      "description": null,
+      "latitude": 37.51972,
+      "longitude": 126.94,
+      "city": "Seoul",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "976420fe-e66e-59bf-99e2-0071fe45a1ff",
+        "856D117A-26F7-5B1F-B715-CDF2E2E0B662"
+      ]
+    },
+    {
+      "id": "da96f554-e6c1-58f2-bed6-d3e3a124ed26",
+      "name": "HAUS NOWHERE SEOUL",
+      "description": null,
+      "latitude": 37.5381547,
+      "longitude": 127.0589352,
+      "city": "Seoul",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "11378809-f986-505b-80c9-cad3c8aafb2d",
+        "99331766-28B5-5A29-B81E-67E03790A6EB"
+      ]
+    },
+    {
+      "id": "29f9f321-ad16-555a-9cb1-e62e79086317",
+      "name": "Photo SeMA",
+      "description": null,
+      "latitude": 37.6557097,
+      "longitude": 127.0488575,
+      "city": "Seoul",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6"
       ]
     }
   ],
@@ -302041,8 +302103,8 @@
           "order": 0,
           "title": "Seo-Seoul Museum of Art",
           "caption": "Seoul’s New Media Art Museum is Now Open The SeMA Seo-Seoul Museum of Art is the first public museum dedicated to new media art and digital practices and the first to open in the city’s southwest. Built low and open, designed to blend into Geumnarae Central Park around it. These are the exhibitions and programs to enjoy: Mneme Topos: five artists tracing the layered memories of western Seoul through photography, installation, and augmented reality. Until Jul 12, 2026. SeMA Project V: Shininho Landing: an 86-year-old grandmother as a K-pop idol and data pirate, hijacking West Seoul’s history through LED panels and generative AI. Until Jun 7, 2026. VISIT INFO Seo-Seoul Museum of Art (Seo-SeMA) Doksan-dong, Geumcheon-gu, Seoul Opening Hours: Tue-Fri: 10 AM-8 PM Weekends 10 AM-7PM Closed on Mondays Admission Free → Save this for your Seoul trip and follow for more recommendations in the city. #SeoulArt #NewMediaArt #SeoSeMA #SeoulMuseum #ThingsToDoInSeoul",
-          "latitude": 37.457884,
-          "longitude": 126.895075,
+          "latitude": 37.4578839,
+          "longitude": 126.8950754,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -302054,8 +302116,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.457884,
-      "centroidLongitude": 126.895075,
+      "centroidLatitude": 37.4578839,
+      "centroidLongitude": 126.8950754,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -302151,8 +302213,8 @@
           "order": 0,
           "title": "Photo SeMA (Seoul Museum of Photography)",
           "caption": "If you want to learn more about Korean photography, this is the place to start. The Seoul Museum of Photography is South Korea’s first museum dedicated entirely to photography. Its architecture references a camera iris, capturing the idea of a frozen moment, and shifting with light throughout the day. The current exhibition, All That Photography, brings together 36 Korean photographers from the late 1950s, a pivotal period often considered the beginning of Korean contemporary art. If you’re interested in understanding the foundations of Korean photography and its role in shaping contemporary art, this is a must-visit. PHOTO SEMA VISIT INFO Opening Hours (Tue–Fri): 10:00–20:00 Sat, Sun & Public Holidays: Summer 10:00–19:00 | Winter 10:00–18:00 Last admission 1 hour before closing Closed Every Monday, January 1 Admission Free Access 3-minute walk from Exit 1, Changdong Station (Lines 1 & 4) → Save this for your next museum day in Seoul. #SeoulMuseumOfPhotography #KoreanPhotography #SeoulArt #ContemporaryKoreanArt #SeoulExhibitions",
-          "latitude": 37.65571,
-          "longitude": 127.048857,
+          "latitude": 37.6557097,
+          "longitude": 127.0488575,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -302164,8 +302226,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.65571,
-      "centroidLongitude": 127.048857,
+      "centroidLatitude": 37.6557097,
+      "centroidLongitude": 127.0488575,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -302300,8 +302362,8 @@
           "order": 0,
           "title": "Haus Nowhere Seoul",
           "caption": "This store is not a store… Haus Nowhere in Seongsu blends art, design, and architecture across an entire building. Created by the parent company of brands such as Gentle Monster and Tamburins, this space is an immersive conceptual experience. First floor: Sunshine, Tamburin’s warrior-dreaming dog character. Second floor: towering sculptures and cyborg machines guard Gentle Monster’s eyewear. And at the entrance, ‘More Is More’, a bold collaboration with Max Siedentopf. Part art space, part design lab, completely unforgettable. VISIT INFO Haus of Nowhere Visit Tip: If you’re interested in trying the Nudake menu on the top floor, you can make a reservation in advance via the Catchtable app. Save this to your Seoul must-visit guide. And follow for more art insights from Korea. #SeoulArt #HausOfNowhere #Songsu #GentleMonster #seoulguide #seoultravel",
-          "latitude": 37.538155,
-          "longitude": 127.058935,
+          "latitude": 37.5381547,
+          "longitude": 127.0589352,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -302313,8 +302375,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.538155,
-      "centroidLongitude": 127.058935,
+      "centroidLatitude": 37.5381547,
+      "centroidLongitude": 127.0589352,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -302466,8 +302528,8 @@
           "order": 0,
           "title": "Fondation Maeght",
           "caption": "Whether it was funding apartments or additional studios for artists such as Joan Miro and Henri Matisse, to guiding some of the worlds most renowned sculptors such as Giacometti - the Maeght family reshaped how patronage could be offered to artists. Not only did it benefit the artists, but the family were able to amass one of the most significant collections of contemporary art, promoting them to open France’s first ever private museum. Established in 1964 by visionary art dealers Aimé and Marguerite Maeght, the architectural complex was designed by Catalan architect Josep Lluís Sert as a “museum in nature” where indoor galleries blend effortlessly with Mediterranean gardens. The foundation houses over 13,000 works and features iconic, site-specific installations created in collaboration with the artists themselves, including the world-renowned Alberto Giacometti courtyard, the Joan Miró sculpture labyrinth, and monumental mosaics by Marc Chagall. PS, my french accent is abysmal and am fully expecting takedown for the pronunciation of ‘Maeght’. For local accommodation - I stayed at @toileblanche and I highly recommend others to do the same! ———- @fondationmaeght",
-          "latitude": 43.700868,
-          "longitude": 7.114904,
+          "latitude": 43.7008677,
+          "longitude": 7.1149037,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -302479,8 +302541,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.700868,
-      "centroidLongitude": 7.114904,
+      "centroidLatitude": 43.7008677,
+      "centroidLongitude": 7.1149037,
       "city": "Saint-Paul-de-Vence",
       "country": "France",
       "relatedTourIds": [
@@ -302797,8 +302859,8 @@
           "order": 0,
           "title": "Millennium Bridge",
           "caption": "The biggest architectural disaster of the 2000s was quickly avoided, but gave a now long-standing bridge its nickname: 'The Wobbly Bridge’.🧱 The Millennium Bridge is a pedestrian suspension bridge over the River Thames in London, connecting St Paul's Cathedral with Tate Modern and the Globe Theatre. Opened on June 10, 2000, it quickly gained the nickname \"Wobbly Bridge\" due to unexpected and unsettling lateral swaying caused by pedestrian footsteps, a phenomenon known as synchronous lateral excitation. The bridge was closed just two days after opening and underwent TWO YEARS of engineering fixes before reopening in 2002. The bridge was a collaboration between architect Sir Norman Foster, sculptor Sir Anthony Caro, and engineering firm Arup. It was designed as a sleek, modern \"blade of light,\" emphasizing minimal visual obstruction and integration with the surrounding cityscape. The bridge was one of several high-profile UK projects celebrating the year 2000, collectively known as Millennium Projects. Others included the Millennium Dome (now The 02 Arena) in Greenwich and the Eden Project in Cornwall. These were funded in part by the Millennium Commission, set up with National Lottery money. Many of these projects, including the bridge, were rushed to meet the symbolic January 1, 2000 deadline. This time pressure often led to technical issues, budget overruns, and public criticism, particularly in the case of the Dome and the bridge's wobble. Did you know this? ———— #millenium #milleniumbridge #london #architecture #architect #architectural #history #wobblybridge #harrypotter #bridges #londonarchitecture",
-          "latitude": 51.509888,
-          "longitude": -0.098508,
+          "latitude": 51.5098883,
+          "longitude": -0.0985076,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -302810,8 +302872,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.509888,
-      "centroidLongitude": -0.098508,
+      "centroidLatitude": 51.5098883,
+      "centroidLongitude": -0.0985076,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
