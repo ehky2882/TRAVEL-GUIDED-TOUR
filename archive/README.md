@@ -131,6 +131,7 @@ not written down.
 | `HANDOFF-260719-3.md` | Historical (superseded by `-260720`). Session 61, 2026-07-19… — maker bookmark removed — Follow is the single "keep a creator" concept | 2026-07-19 |
 | `HANDOFF-260719-2.md` | Historical (superseded by `-260719-3`). Session 60, 2026-07… — (1) home map/animation performance fix → TestFlight 1.1 (10) | 2026-07-19 |
 | `HANDOFF-260719.md` | Historical (superseded by `-260719-2`). Session 59, 2026-07… — (1) on-demand signed-TestFlight CI | 2026-07-19 |
+| `HANDOFF-260707.md` | Historical (superseded by `-260719`). 2026-07-07 (web, content) — Amsterdam batch staged: 33 singles + 5 walks, awaiting narration. Recovered 2026-09-25 from the unmerged staging branch `claude/amsterdam-handoff-preserve-hlhyp8`, where it had been the only copy | 2026-07-07 |
 | `HANDOFF-260705-5.md` | Historical (superseded by `-260719`). Session 58, 2026-07-05… — Me-tab first-open lag fully killed → TestFlight 1.0 (74). | 2026-07-05 |
 | `HANDOFF-260705-4.md` | Historical (superseded by `-5`). Session 58, 2026-07-05 (cod… — Build 73 cut — profile perf + create-tour tag picker + bottom-module fix. | 2026-07-05 |
 | `HANDOFF-260705-3.md` | #357 merged into build 73 | 2026-07-05 |
@@ -304,7 +305,7 @@ not written down.
 | `HANDOFF-260909-4.md` | 61 `@urbanistariel` link pins (#777), Greece 7 → 35; two Plus Codes labelled `Lower Town` recovered 88 km out to sea before their captions named Mystras. Then #779 placed the held link and #780 made The Parthenon a place — which hard-errors unless every member's stop sits exactly on it. |  |
 | `HANDOFF-260909.md` | thirty-six `@urbanistariel` pins; four join places that already existed, and two titles were wrong until the picture was opened. |  |
 
-232 entries (re-derived via `grep -c '^| ' archive/README.md`, not quoted from the prior value).
+258 entries (re-derived via `grep -c '^| ' archive/README.md`, not quoted from the prior value).
 Full text for every one of them is in
 [`INDEX-DETAIL.md`](INDEX-DETAIL.md), in this same order.
 
