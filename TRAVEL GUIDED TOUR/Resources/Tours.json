@@ -11821,14 +11821,14 @@
       "city": "Campo Maior",
       "country": "Portugal",
       "relatedTourIds": [
+        "85F8C2F4-E528-59A5-88EE-AC443AEA9AFF",
         "03A50FE4-0B29-470E-820F-95EA3905A7D1",
         "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
         "ae287886-2c55-4c3e-b8c2-e2389323aec6",
         "aaf11e1b-619b-49b7-99ab-7af06c549903",
         "f52baac3-7f4d-43c2-b516-4b703451f15a",
         "57330DDF-BEBB-4218-AD87-DEB1A4D2647C",
-        "6B2D7C72-2F49-43F7-A66C-02C9B15D8F43",
-        "00bc47f9-639f-44d9-9735-65c8ac608144"
+        "6B2D7C72-2F49-43F7-A66C-02C9B15D8F43"
       ],
       "walkingDistanceMeters": null
     },
@@ -16208,12 +16208,12 @@
       "relatedTourIds": [
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
         "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
         "03A50FE4-0B29-470E-820F-95EA3905A7D1",
-        "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
-        "C4415E25-892D-4FFA-8B73-BB24676BD0FB",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
-        "E743D100-97B3-43CC-948F-BFBF029EFB89"
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "B8C51640-E596-5728-9545-FF31CA13AB67",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -16262,14 +16262,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
         "02DDDD4C-4A56-48B8-8326-185746E8837B",
         "52187B20-0857-4F93-AF49-CA085BDF288D",
-        "C4415E25-892D-4FFA-8B73-BB24676BD0FB",
-        "03A50FE4-0B29-470E-820F-95EA3905A7D1",
-        "5604CD42-2DCE-4041-8045-A1A12DCBB026",
-        "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA",
-        "2DDA0046-686D-440B-8EEF-1E40E399CC34"
+        "65053BA1-BC85-5480-8952-CBBAEC547D79"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -17239,14 +17239,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
         "E743D100-97B3-43CC-948F-BFBF029EFB89",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
         "421D7599-EBF8-4898-9F80-14B63783C74E",
-        "03D522D9-BD8B-545B-A547-6E7D567C9412",
-        "5604CD42-2DCE-4041-8045-A1A12DCBB026",
-        "4488A2E8-4FB2-48D6-9EF8-72C892627298",
-        "A243EA16-E09A-5C09-8172-9A1647BA1D7B"
+        "65053BA1-BC85-5480-8952-CBBAEC547D79"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -17470,11 +17470,11 @@
         "defeef28-4159-4ad2-813a-111c64720889",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "73c6f127-c1c7-49af-abd2-f889b57dc214",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
         "e25e5718-6f18-4f7c-8d5a-174662f1a953",
         "2DDA0046-686D-440B-8EEF-1E40E399CC34",
         "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
-        "cde97f1e-4c16-5ab7-8fe4-1988a8aa1815",
-        "0aa26daf-e710-4eea-b08c-160ff35a71ee"
+        "cde97f1e-4c16-5ab7-8fe4-1988a8aa1815"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -22450,14 +22450,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
-        "52187B20-0857-4F93-AF49-CA085BDF288D",
-        "3E5FE0E3-8A8C-48E7-A1D0-A4F528C88B38",
-        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
-        "03D522D9-BD8B-545B-A547-6E7D567C9412",
-        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
-        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
-        "3B78F99C-A031-4EF7-A55B-10D9D7C550A4"
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "92900A1E-5F05-5894-9042-44FFEF9F64CB",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "8EDB3EC4-BDF5-590A-9B95-DE013ABB085B",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -88153,8 +88153,8 @@
         "bbcbc067-bfa6-5231-aa5b-3cd1f3314d93",
         "4973a4ab-cf9e-5ff6-b00b-54d00b18367f",
         "23b8d6b5-56f4-5f0d-9460-ef04751d8a73",
-        "1e7b6ea3-0e70-5670-83c1-8fadac28286e",
-        "52187B20-0857-4F93-AF49-CA085BDF288D"
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "1e7b6ea3-0e70-5670-83c1-8fadac28286e"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -111261,9 +111261,9 @@
         "868AE974-7EE5-4C95-9259-005771357CBA",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
         "73387EF4-3706-5B72-9668-61B6A618F8B8",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
         "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
-        "C6D74828-2FC9-40AE-A70F-318F1B812AB7",
-        "7D7BB92F-5208-5540-88C2-366BD50EBA64"
+        "B8C51640-E596-5728-9545-FF31CA13AB67"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -115019,7 +115019,8 @@
       "relatedTourIds": [
         "D4B29073-C63C-5542-9233-F427F7C7ED4D",
         "C8683190-CCF6-5E5A-AE2E-0E672D93D4A6",
-        "D372E86B-9DF0-53F9-8F5F-BDC94F23F5D3"
+        "D372E86B-9DF0-53F9-8F5F-BDC94F23F5D3",
+        "8990184B-2009-5DF3-BF7B-0391C50FC4BC"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -252600,8 +252601,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
-        "E0B1BA3B-6515-5289-874A-3C269C19CD98",
-        "A243EA16-E09A-5C09-8172-9A1647BA1D7B"
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "9AD67924-D804-5682-A091-25E49794C3CC"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -252648,13 +252655,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
-        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
-        "03D522D9-BD8B-545B-A547-6E7D567C9412",
-        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
-        "804543FB-1E9C-5F70-9074-A0260645C638",
-        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "5604CD42-2DCE-4041-8045-A1A12DCBB026",
-        "4869C445-B103-5494-A5D3-22C47A83B781"
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -253778,8 +253786,8 @@
         "804543FB-1E9C-5F70-9074-A0260645C638",
         "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA",
         "9283D1D6-A58F-43A4-BF69-8BBBE41C1735",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "77FC2E1C-51EB-507F-A29A-A2F1E0BCA83A"
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -253948,7 +253956,7 @@
         "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
         "3CD5FE07-FE45-40D4-B0D3-233397ED1F0E",
         "5F39B500-3A5D-528D-84D8-A476943D0592",
-        "BE32E1B7-FCBA-4ED8-B599-92F9FE09BB3D"
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -278627,14 +278635,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
-        "DEB56C03-ED04-5FE8-9DE2-AD84D9E6EB53",
-        "03D522D9-BD8B-545B-A547-6E7D567C9412",
-        "03A50FE4-0B29-470E-820F-95EA3905A7D1",
-        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
-        "02DDDD4C-4A56-48B8-8326-185746E8837B",
-        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "194481D6-6865-42A1-96CC-041761B12EA7",
-        "9283D1D6-A58F-43A4-BF69-8BBBE41C1735"
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -278681,7 +278689,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
-        "C4415E25-892D-4FFA-8B73-BB24676BD0FB"
+        "F89EC46A-B4EA-538D-B548-B1BEFF7C8618",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "3835227D-32E5-5208-8F14-A7EAF3B673AD",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "245E5403-F316-5077-A805-18A02EA7C862",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -278729,13 +278744,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
         "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
         "5A74F582-16EB-51BE-8813-4C283EF45FC2",
         "C33E96B3-5AB4-5D1A-B512-663B1124D349",
         "B755F829-8291-53E1-B072-D558ED7D206C",
         "6A1D48F0-617A-5928-AC0B-9EBB95306E06",
-        "ea06c347-180e-59a5-a6db-2604229a56de",
-        "75921CF5-9489-58EF-801A-825BCEA02423"
+        "ea06c347-180e-59a5-a6db-2604229a56de"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -278992,13 +279007,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
         "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
         "C33E96B3-5AB4-5D1A-B512-663B1124D349",
         "5A74F582-16EB-51BE-8813-4C283EF45FC2",
         "B755F829-8291-53E1-B072-D558ED7D206C",
         "6A1D48F0-617A-5928-AC0B-9EBB95306E06",
-        "75921CF5-9489-58EF-801A-825BCEA02423",
-        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
+        "75921CF5-9489-58EF-801A-825BCEA02423"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279049,10 +279064,10 @@
         "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
         "B755F829-8291-53E1-B072-D558ED7D206C",
         "75921CF5-9489-58EF-801A-825BCEA02423",
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
         "0913EF55-6EB1-501C-967E-F914B01EF82B",
         "5A74F582-16EB-51BE-8813-4C283EF45FC2",
-        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
-        "6A1D48F0-617A-5928-AC0B-9EBB95306E06"
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279103,7 +279118,8 @@
         "C33E96B3-5AB4-5D1A-B512-663B1124D349",
         "A871E406-28BE-58FD-982B-907D1A347F0D",
         "5A74F582-16EB-51BE-8813-4C283EF45FC2",
-        "0913EF55-6EB1-501C-967E-F914B01EF82B"
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279715,14 +279731,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
-        "04656E37-13C2-5077-B527-3769A223710D",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "73387EF4-3706-5B72-9668-61B6A618F8B8",
-        "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA",
-        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
-        "03D522D9-BD8B-545B-A547-6E7D567C9412",
-        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "02DDDD4C-4A56-48B8-8326-185746E8837B"
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "0D27D67A-1D0D-5669-951E-46029B279041"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279769,7 +279785,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
-        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1"
+        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
+        "245E5403-F316-5077-A805-18A02EA7C862",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -280036,6 +280059,9 @@
       "centroidLongitude": -0.5708472,
       "city": "Valencia",
       "country": "Spain",
+      "relatedTourIds": [
+        "99F76C46-661B-5189-AD28-97F0520AA36C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -280127,14 +280153,14 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
         "A871E406-28BE-58FD-982B-907D1A347F0D",
         "0913EF55-6EB1-501C-967E-F914B01EF82B",
         "C33E96B3-5AB4-5D1A-B512-663B1124D349",
         "B755F829-8291-53E1-B072-D558ED7D206C",
         "75921CF5-9489-58EF-801A-825BCEA02423",
         "d073c73a-ddc1-5484-8e00-51740325b524",
-        "6A1D48F0-617A-5928-AC0B-9EBB95306E06",
-        "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E"
+        "6A1D48F0-617A-5928-AC0B-9EBB95306E06"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -286554,13 +286580,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "B755F829-8291-53E1-B072-D558ED7D206C",
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
         "69754830-143E-5CFE-A68B-3C68A3F05BF2",
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
         "A871E406-28BE-58FD-982B-907D1A347F0D",
         "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
         "0913EF55-6EB1-501C-967E-F914B01EF82B",
-        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
-        "0b030b2b-eab2-50d8-bf50-31e810357fb0"
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -297298,12 +297324,12 @@
       "relatedTourIds": [
         "C550CE51-CB31-59B9-89CB-7A539B7ACFED",
         "82823681-E708-50EC-8FDD-689371E92A8F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
         "2A8A35E2-09D8-5089-81A2-FBC17918ADB7",
         "4869C445-B103-5494-A5D3-22C47A83B781",
-        "868AE974-7EE5-4C95-9259-005771357CBA",
-        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
-        "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
-        "BF959358-F583-53DE-B608-312E42CB3910"
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "868AE974-7EE5-4C95-9259-005771357CBA"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -301588,6 +301614,16 @@
       "centroidLongitude": -9.1434666,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "EFA7EB16-12C7-5F2F-B6FD-5314C0E6430E",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "33E1B58E-E36F-5F4A-AEFB-29738B92647B",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -301634,13 +301670,13 @@
       "country": "Portugal",
       "relatedTourIds": [
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
-        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
-        "DEB56C03-ED04-5FE8-9DE2-AD84D9E6EB53",
-        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
-        "5604CD42-2DCE-4041-8045-A1A12DCBB026",
-        "03A50FE4-0B29-470E-820F-95EA3905A7D1",
-        "52187B20-0857-4F93-AF49-CA085BDF288D"
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "B8C51640-E596-5728-9545-FF31CA13AB67",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -302987,6 +303023,9 @@
       "centroidLongitude": 12.342268,
       "city": "Venice",
       "country": "Italy",
+      "relatedTourIds": [
+        "BB0A995A-399D-5D1F-9C6E-C82E59EDCD62"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Venue",
@@ -303032,6 +303071,9 @@
       "centroidLongitude": -7.094109,
       "city": "Campo Maior",
       "country": "Portugal",
+      "relatedTourIds": [
+        "a17dbd1d-3491-4062-a62e-9b0059c678f7"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303210,6 +303252,16 @@
       "centroidLongitude": -9.155094,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "E1F60E98-7E46-5794-8811-C8AA18C91568"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303254,6 +303306,16 @@
       "centroidLongitude": -9.145759,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303298,6 +303360,16 @@
       "centroidLongitude": -9.142632,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "7A8C370F-3BB8-517F-A02F-C62786979217",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "E1129A4E-7A7D-5B66-A074-B28938CF1B73"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303342,6 +303414,16 @@
       "centroidLongitude": -9.146209,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "37532F5D-0593-57FC-846A-2F749FCF531F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303386,6 +303468,16 @@
       "centroidLongitude": -9.130176,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "33E1B58E-E36F-5F4A-AEFB-29738B92647B",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "E1129A4E-7A7D-5B66-A074-B28938CF1B73",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "245E5403-F316-5077-A805-18A02EA7C862"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303430,6 +303522,16 @@
       "centroidLongitude": -9.14719,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "EFA7EB16-12C7-5F2F-B6FD-5314C0E6430E",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "33E1B58E-E36F-5F4A-AEFB-29738B92647B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303518,6 +303620,16 @@
       "centroidLongitude": -9.161234,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "E1129A4E-7A7D-5B66-A074-B28938CF1B73",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "F89EC46A-B4EA-538D-B548-B1BEFF7C8618"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303562,6 +303674,16 @@
       "centroidLongitude": -9.134142,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "C57D6BF7-D193-5F26-8CFD-75F9FA388699",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "E1129A4E-7A7D-5B66-A074-B28938CF1B73",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303606,6 +303728,16 @@
       "centroidLongitude": -9.150365,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "7A8C370F-3BB8-517F-A02F-C62786979217",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41",
+        "E1129A4E-7A7D-5B66-A074-B28938CF1B73"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303694,6 +303826,16 @@
       "centroidLongitude": -9.147087,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "9AD67924-D804-5682-A091-25E49794C3CC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303738,6 +303880,16 @@
       "centroidLongitude": -9.162308,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "7A8C370F-3BB8-517F-A02F-C62786979217",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "F89EC46A-B4EA-538D-B548-B1BEFF7C8618"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303782,6 +303934,16 @@
       "centroidLongitude": -9.146759,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "B8C51640-E596-5728-9545-FF31CA13AB67",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303828,6 +303990,16 @@
       "centroidLongitude": -9.139968,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "B8C51640-E596-5728-9545-FF31CA13AB67",
+        "11950672-8258-5860-9B71-CB10495A1C83"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303872,6 +304044,16 @@
       "centroidLongitude": -9.146822,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303916,6 +304098,16 @@
       "centroidLongitude": -9.151345,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -303960,6 +304152,16 @@
       "centroidLongitude": -9.13835,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "B8C51640-E596-5728-9545-FF31CA13AB67",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304004,6 +304206,16 @@
       "centroidLongitude": -9.141723,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "B8C51640-E596-5728-9545-FF31CA13AB67"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304048,6 +304260,16 @@
       "centroidLongitude": -9.130903,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304092,6 +304314,16 @@
       "centroidLongitude": -9.141112,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "B53DE4AD-A534-503C-BBE3-565E7BC04CF1",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "0D27D67A-1D0D-5669-951E-46029B279041"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304137,6 +304369,16 @@
       "centroidLongitude": -9.135526,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304181,6 +304423,16 @@
       "centroidLongitude": -9.139,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304225,6 +304477,16 @@
       "centroidLongitude": -9.151993,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304269,6 +304531,16 @@
       "centroidLongitude": -9.092821,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "245E5403-F316-5077-A805-18A02EA7C862",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304313,6 +304585,16 @@
       "centroidLongitude": -9.143256,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "58B564E6-267F-5F53-806F-1B25FA318976"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304358,6 +304640,16 @@
       "centroidLongitude": -9.127097,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "37532F5D-0593-57FC-846A-2F749FCF531F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304446,6 +304738,16 @@
       "centroidLongitude": -9.155853,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "245E5403-F316-5077-A805-18A02EA7C862",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304490,6 +304792,16 @@
       "centroidLongitude": -9.151329,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "D8A3D2CD-D84C-5EAB-8EC1-98F9160C7B6B",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304535,6 +304847,16 @@
       "centroidLongitude": -9.214542,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "11950672-8258-5860-9B71-CB10495A1C83",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "0D27D67A-1D0D-5669-951E-46029B279041"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304579,6 +304901,16 @@
       "centroidLongitude": -9.153695,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304623,6 +304955,16 @@
       "centroidLongitude": -9.138162,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "B8C51640-E596-5728-9545-FF31CA13AB67",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304667,6 +305009,16 @@
       "centroidLongitude": -9.143254,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "11950672-8258-5860-9B71-CB10495A1C83"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304711,6 +305063,9 @@
       "centroidLongitude": -0.370593,
       "city": "Valencia",
       "country": "Spain",
+      "relatedTourIds": [
+        "E214589B-A943-5527-A63E-ED3FA51E95FA"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304757,6 +305112,16 @@
       "centroidLongitude": -9.149364,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304801,6 +305166,16 @@
       "centroidLongitude": -9.155185,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "9AD67924-D804-5682-A091-25E49794C3CC"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304845,6 +305220,16 @@
       "centroidLongitude": -9.160945,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "0D27D67A-1D0D-5669-951E-46029B279041"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -304890,6 +305275,16 @@
       "centroidLongitude": 4.84925,
       "city": "Amsterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B",
+        "6A1D48F0-617A-5928-AC0B-9EBB95306E06",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "B755F829-8291-53E1-B072-D558ED7D206C",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
+        "ea06c347-180e-59a5-a6db-2604229a56de"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -304978,6 +305373,16 @@
       "centroidLongitude": -9.145969,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "B8C51640-E596-5728-9545-FF31CA13AB67",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -305022,6 +305427,16 @@
       "centroidLongitude": -9.156235,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -305067,6 +305482,16 @@
       "centroidLongitude": -9.157798,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "245E5403-F316-5077-A805-18A02EA7C862",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "0D27D67A-1D0D-5669-951E-46029B279041",
+        "B8C51640-E596-5728-9545-FF31CA13AB67"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -305111,6 +305536,16 @@
       "centroidLongitude": -9.149429,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "245E5403-F316-5077-A805-18A02EA7C862",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "37532F5D-0593-57FC-846A-2F749FCF531F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -305156,6 +305591,16 @@
       "centroidLongitude": -9.140731,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "65053BA1-BC85-5480-8952-CBBAEC547D79"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -305200,6 +305645,16 @@
       "centroidLongitude": -9.143167,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "9AD67924-D804-5682-A091-25E49794C3CC",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
