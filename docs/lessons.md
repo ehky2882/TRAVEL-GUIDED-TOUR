@@ -3640,3 +3640,13 @@ stopped there. **A pin 0 m from an admin or street-midpoint node is a finding, n
 confirmation.** For Hong Kong, the government's own address service (als.gov.hk) returns
 building-level points that Photon cannot; for New York, NYC Geosearch; for other US addresses the
 Census geocoder.
+
+## A pin's stop image is a second copy of its hero, and a rename can strand it (2026-09-25)
+
+Nine pins had `stops[0].imageURL` pointing at a hero file their own `heroImageURL` had already
+replaced. It surfaced only as a "one image on entries in different cities" error: two
+@suzyandaustin pins in Keelung and Paris still shared the stop image `here-s-one-of-our-favorite-…`,
+a caption-slug file from before the pins were renamed. **When a pin's hero is corrected, move its
+stop image with it** (every other pin has `stop == hero`). Also: two pins cut from one post are
+byte-identical by construction; `check-image-duplicates.py` now allows that, as it already did for
+two pins sharing one file.

@@ -55,3 +55,12 @@ PLAY INLINE report. Selftest 74 → 78.
 - `status/owner/place-where-to-taste-260925.md` — Adega Mayor pin vs Atlas tour (59 m);
   A Mesa do CAM inside CAM (part vs whole).
 - `status/owner/where-to-taste-held-260925.md` — the 6 held pins and 6 skipped posts.
+
+## Follow-up, 2026-09-25: the 6 held pins shipped
+Owner: *"ship the wheretotaste with the play button. it's ok for now"*. Búzio, Manteigaria Silva,
+The Kissaten, Parra, Rumours and MUSE were minted at the coordinates above, with the link-preview
+cover (play button included) as the hero: `images/<slug>-wheretotaste_hero.webp`. Búzio and Parra
+returned no Open Graph image on the first try and succeeded on a retry 5 s later. Place checks
+are clean (NAME none, EXACT none, 0 joins). ⚠️ **A clean frame can replace any of these later,
+but only under a NEW filename** (Image Pipeline step 9). The 6 skipped posts stay skipped, which
+was the contributor's call; their URLs are in the table above this note.
