@@ -5309,6 +5309,46 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/the_fatmap/"
+    },
+    {
+      "id": "047A291C-54F5-52D9-9522-5EBF6BB132B5",
+      "displayName": "Instagram @shahaanabbasy",
+      "platform": "instagram",
+      "handle": "shahaanabbasy",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/shahaanabbasy/"
+    },
+    {
+      "id": "1C4DA334-77B4-5E8C-9798-60B8E4714AF6",
+      "displayName": "Instagram @heyrosiedart",
+      "platform": "instagram",
+      "handle": "heyrosiedart",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/heyrosiedart/"
+    },
+    {
+      "id": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "displayName": "Instagram @_seoullista",
+      "platform": "instagram",
+      "handle": "_seoullista",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/_seoullista/"
+    },
+    {
+      "id": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "displayName": "TikTok @jamesinculture",
+      "platform": "tiktok",
+      "handle": "jamesinculture",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-jamesinculture.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@jamesinculture"
     }
   ],
   "tours": [
@@ -9069,10 +9109,10 @@
         "1EFC80D6-5E8B-5847-89E0-22A77F78ECCE",
         "ECA98BE2-712F-5AC2-9918-47EF398FD625",
         "29637113-9919-596F-A670-E7955136B249",
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
         "070FFAF7-F62C-5A81-BB30-360A227B4A97",
         "4E378097-7165-59A5-9DB2-358BC581B750",
-        "5849FED5-D760-5331-A796-BBDF7FB0DB5D",
-        "83090c8c-ab5d-4311-a881-519b1e36183e"
+        "5849FED5-D760-5331-A796-BBDF7FB0DB5D"
       ],
       "walkingDistanceMeters": null
     },
@@ -9698,10 +9738,10 @@
         "1EFC80D6-5E8B-5847-89E0-22A77F78ECCE",
         "ECA98BE2-712F-5AC2-9918-47EF398FD625",
         "83090c8c-ab5d-4311-a881-519b1e36183e",
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
         "29637113-9919-596F-A670-E7955136B249",
         "5849FED5-D760-5331-A796-BBDF7FB0DB5D",
-        "070FFAF7-F62C-5A81-BB30-360A227B4A97",
-        "434932e4-9c75-452e-a83b-5ef3ae0cb995"
+        "070FFAF7-F62C-5A81-BB30-360A227B4A97"
       ],
       "walkingDistanceMeters": null
     },
@@ -14778,7 +14818,7 @@
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
         "aa22f015-7b43-41ca-9fe3-282519b7f5d3",
         "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
-        "06caa939-25fe-4f25-8936-5ac6b4993db8"
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB"
       ],
       "walkingDistanceMeters": null
     },
@@ -15531,12 +15571,12 @@
       "relatedTourIds": [
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
         "f8c2a6e1-9b43-4e54-8a06-3c9e7b2d1f98",
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
         "A739D87D-D18A-5E85-B9C9-8103D3139B3A",
         "61934bd2-5077-43db-bc5d-268ab6c6103d",
         "d5c8a6e1-9d47-4e54-8a06-3c9e7b2d1f9c",
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
-        "16D5B31E-38CB-5AE3-B3BF-98D09442033C",
-        "06caa939-25fe-4f25-8936-5ac6b4993db8"
+        "16D5B31E-38CB-5AE3-B3BF-98D09442033C"
       ],
       "walkingDistanceMeters": null
     },
@@ -17183,10 +17223,10 @@
         "E743D100-97B3-43CC-948F-BFBF029EFB89",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
         "421D7599-EBF8-4898-9F80-14B63783C74E",
+        "03D522D9-BD8B-545B-A547-6E7D567C9412",
         "5604CD42-2DCE-4041-8045-A1A12DCBB026",
         "4488A2E8-4FB2-48D6-9EF8-72C892627298",
-        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
-        "03A50FE4-0B29-470E-820F-95EA3905A7D1"
+        "A243EA16-E09A-5C09-8172-9A1647BA1D7B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -17523,12 +17563,12 @@
       "relatedTourIds": [
         "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
+        "03D522D9-BD8B-545B-A547-6E7D567C9412",
         "5604CD42-2DCE-4041-8045-A1A12DCBB026",
         "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
         "03A50FE4-0B29-470E-820F-95EA3905A7D1",
         "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
-        "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA"
+        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -19074,7 +19114,7 @@
         "2a70bf61-e826-4f20-a4e7-576352dc5699",
         "6b81f90e-935e-48e0-bb75-bd527cb7bbbd",
         "0AAB6314-9D22-5A26-88D6-80300EBFC76E",
-        "dc142370-e3da-4acc-a448-897a9bea171c"
+        "440C093E-0A90-5432-922D-21F6AC980634"
       ],
       "walkingDistanceMeters": null
     },
@@ -19352,14 +19392,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "7F00E0D2-5CE7-588C-98A9-D82B4C077DB5",
         "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
         "b689e044-e156-4bb4-9ee3-09dc3f6c7f31",
         "3D739E82-5C7D-541E-B9AF-A1EDD2969682",
         "39A2BCF0-12A1-5225-9D1A-24F08824B0EB",
         "9932791e-1c59-4c12-8616-31bd0db64a94",
-        "26826453-4AC0-5D78-A942-C82189EAE53C",
-        "f2e248ef-1b00-49a1-b27e-e31172641815"
+        "26826453-4AC0-5D78-A942-C82189EAE53C"
       ],
       "walkingDistanceMeters": null
     },
@@ -21391,9 +21431,9 @@
         "fc7430f8-c9a6-44b7-beec-0d375f346135",
         "02b511fd-d7e8-4571-8b25-c680da651476",
         "61934bd2-5077-43db-bc5d-268ab6c6103d",
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
         "f1b7d4c9-6a28-4e53-8d05-3c9a7e6b2f84",
-        "224a9981-9d3a-4364-9d6a-b93c6b18e332",
-        "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e"
+        "224a9981-9d3a-4364-9d6a-b93c6b18e332"
       ],
       "walkingDistanceMeters": null
     },
@@ -22288,12 +22328,12 @@
       "relatedTourIds": [
         "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
         "483551c1-c37f-43cf-af2e-066fe1fce456",
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
         "1bba7d45-498d-4885-ba93-c77a491727d3",
         "D2C1CA8A-253C-5D3F-AC51-70C0D6F1503D",
         "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
         "B19263EA-1F04-5A03-B52E-343638E6D43B",
-        "C7934243-8A39-5E68-82FE-91B18D01E5D6",
-        "C53131BC-6A79-5075-9F0C-D7499CEADC7F"
+        "C7934243-8A39-5E68-82FE-91B18D01E5D6"
       ],
       "walkingDistanceMeters": null
     },
@@ -22394,10 +22434,10 @@
         "52187B20-0857-4F93-AF49-CA085BDF288D",
         "3E5FE0E3-8A8C-48E7-A1D0-A4F528C88B38",
         "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
+        "03D522D9-BD8B-545B-A547-6E7D567C9412",
         "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
         "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
-        "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
-        "E743D100-97B3-43CC-948F-BFBF029EFB89"
+        "3B78F99C-A031-4EF7-A55B-10D9D7C550A4"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -44199,8 +44239,8 @@
         "976420fe-e66e-59bf-99e2-0071fe45a1ff",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43"
+        "D97E831E-346D-567F-8068-1098A93B361E",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -44254,14 +44294,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff"
+        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -44317,7 +44357,7 @@
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
-        "FED40890-5ADF-5CD0-8751-732232799E8A"
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -44530,14 +44570,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
+        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -44704,12 +44744,12 @@
       "relatedTourIds": [
         "17d77b0d-070f-5414-b79b-5a22e78644ba",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
+        "87C6E02C-AE70-5F7C-8FA6-F28D56845D1E",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
         "4212828A-1D7B-58D5-9691-60D298F36F07",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "bc042fda-60f8-560f-92d4-3d478816d9ee"
+        "6b48cbd2-3f97-5887-9060-fde4750001d0"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -44814,14 +44854,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "be6af98d-156a-5a62-9b18-ea7ed90b8686",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "89fa0677-9165-5507-9d25-a769338ed8df",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "976420fe-e66e-59bf-99e2-0071fe45a1ff",
-        "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
+        "88f85bce-f765-5b54-b807-edcd0832ec8e"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -44878,9 +44918,9 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "92655fdd-493b-564c-a19f-57ccce10e026"
+        "88f85bce-f765-5b54-b807-edcd0832ec8e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -44994,7 +45034,7 @@
         "7c9541b3-d162-5655-8da1-de0286f43d21",
         "17d77b0d-070f-5414-b79b-5a22e78644ba",
         "8b8be0d5-7647-56a9-ac0d-1eb786a08ac1",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -45045,14 +45085,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "99331766-28B5-5A29-B81E-67E03790A6EB",
         "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4",
         "aaeec061-64f1-5126-bed6-95716f9fd00e",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -45163,8 +45203,8 @@
         "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
+        "28427603-2539-5712-8d8f-33e5261fdc2a"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -45219,10 +45259,10 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
-        "88f85bce-f765-5b54-b807-edcd0832ec8e"
+        "976420fe-e66e-59bf-99e2-0071fe45a1ff"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -45280,8 +45320,8 @@
         "976420fe-e66e-59bf-99e2-0071fe45a1ff",
         "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "92655fdd-493b-564c-a19f-57ccce10e026"
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "28427603-2539-5712-8d8f-33e5261fdc2a"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -45389,10 +45429,10 @@
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "88f85bce-f765-5b54-b807-edcd0832ec8e",
         "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -45506,7 +45546,7 @@
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "92655fdd-493b-564c-a19f-57ccce10e026",
-        "1d402527-2285-55a7-97db-67ed5071efc4"
+        "99331766-28B5-5A29-B81E-67E03790A6EB"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -45554,14 +45594,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
         "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "28427603-2539-5712-8d8f-33e5261fdc2a"
+        "D97E831E-346D-567F-8068-1098A93B361E",
+        "11378809-f986-505b-80c9-cad3c8aafb2d"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -45613,10 +45653,10 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "88f85bce-f765-5b54-b807-edcd0832ec8e",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43"
+        "856D117A-26F7-5B1F-B715-CDF2E2E0B662"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -45668,14 +45708,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "80df1e35-1f11-5505-823b-b81cf3768521",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
-        "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba"
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -45725,12 +45765,12 @@
       "relatedTourIds": [
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "be6af98d-156a-5a62-9b18-ea7ed90b8686",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
         "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "92655fdd-493b-564c-a19f-57ccce10e026"
+        "11378809-f986-505b-80c9-cad3c8aafb2d"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -45782,11 +45822,11 @@
         "7c9541b3-d162-5655-8da1-de0286f43d21",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "4fe03935-405b-53c8-9991-d21eba60c45c",
-        "EE51B458-1E2C-5ACE-A948-C08321368C3A",
-        "8b8be0d5-7647-56a9-ac0d-1eb786a08ac1"
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -45841,10 +45881,10 @@
         "EE51B458-1E2C-5ACE-A948-C08321368C3A",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -46005,14 +46045,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "AB0D9AC4-989E-593F-9407-513B18797E3E",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "aaeec061-64f1-5126-bed6-95716f9fd00e"
+        "be6af98d-156a-5a62-9b18-ea7ed90b8686"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -46120,11 +46160,11 @@
         "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "1d402527-2285-55a7-97db-67ed5071efc4",
+        "99331766-28B5-5A29-B81E-67E03790A6EB",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "89fa0677-9165-5507-9d25-a769338ed8df"
+        "407f8416-3a6d-54c3-af84-775b448fd96f"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -46338,14 +46378,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "4fe03935-405b-53c8-9991-d21eba60c45c",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "28427603-2539-5712-8d8f-33e5261fdc2a"
+        "4fe03935-405b-53c8-9991-d21eba60c45c"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -46397,10 +46437,10 @@
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
         "89fa0677-9165-5507-9d25-a769338ed8df",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -85984,13 +86024,13 @@
       "country": "South Africa",
       "relatedTourIds": [
         "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e",
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
         "06caa939-25fe-4f25-8936-5ac6b4993db8",
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
         "fceeb6bf-89a6-40c9-81c4-4b8efc781dcd",
         "d5c8a6e1-9d47-4e54-8a06-3c9e7b2d1f9c",
         "6081f95d-2db6-437c-9aca-84df986b6145",
-        "595609f3-77f0-5c4e-8168-3ba0fd34b228",
-        "a3e0b206-b6c0-500f-b12e-b1c0961adc94"
+        "595609f3-77f0-5c4e-8168-3ba0fd34b228"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -96192,7 +96232,7 @@
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "310fac17-247d-507b-9637-503685b7af85",
         "a614133e-a2f0-537b-9d1e-efed96d6e99b",
-        "8990f4cd-848c-567f-995c-dfe70b4ad8e0"
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -96250,9 +96290,9 @@
         "b8cf99a3-f696-54bd-81e3-b7afa4a8eb51",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "9addc742-68a7-597f-a246-d419f8628fc5",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "310fac17-247d-507b-9637-503685b7af85",
-        "640C4BEC-C30D-5A93-A47E-39F86E8EC668"
+        "310fac17-247d-507b-9637-503685b7af85"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -96777,11 +96817,11 @@
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787",
         "8424AB53-BBB4-5082-8570-4856E2DECC16",
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
-        "330654ef-6d56-5883-9f64-0734e3b8d5b6",
-        "3a9e9052-4a97-580a-95ec-317952ea5044"
+        "330654ef-6d56-5883-9f64-0734e3b8d5b6"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -96832,12 +96872,12 @@
       "relatedTourIds": [
         "b8cf99a3-f696-54bd-81e3-b7afa4a8eb51",
         "4f5eb672-dc6e-5d4d-a807-9f79771ba281",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "310fac17-247d-507b-9637-503685b7af85",
         "9addc742-68a7-597f-a246-d419f8628fc5",
         "13d19c5e-e7e7-5281-b8d1-03cac7ad31c8",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "f6ee029b-027c-5ca4-965c-906bad67478c",
-        "3e79c19b-65fb-5b3e-8da1-7d8ceaaed787"
+        "f6ee029b-027c-5ca4-965c-906bad67478c"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -97573,12 +97613,12 @@
       "relatedTourIds": [
         "8990f4cd-848c-567f-995c-dfe70b4ad8e0",
         "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "ad55caf6-07fd-5034-b10d-0b66deb6fcfd",
         "b8cf99a3-f696-54bd-81e3-b7afa4a8eb51",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "23013e1a-09bb-55f5-947e-282456ff1000",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "310fac17-247d-507b-9637-503685b7af85"
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -97682,6 +97722,7 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "13d19c5e-e7e7-5281-b8d1-03cac7ad31c8",
         "64DE0FCC-52DB-59F1-808E-D401482EE5FA",
         "78D0D350-3A76-58D4-A28E-2E07DB46A89B",
@@ -97737,13 +97778,13 @@
       "country": "Denmark",
       "relatedTourIds": [
         "13d19c5e-e7e7-5281-b8d1-03cac7ad31c8",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "51fdf48f-2908-521e-86e9-5a49013fe49d",
         "3a9e9052-4a97-580a-95ec-317952ea5044",
         "a614133e-a2f0-537b-9d1e-efed96d6e99b",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "9addc742-68a7-597f-a246-d419f8628fc5",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "2f5ad875-4166-58fb-b1a3-8967ab6be2d4"
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -97858,10 +97899,10 @@
         "51fdf48f-2908-521e-86e9-5a49013fe49d",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "310fac17-247d-507b-9637-503685b7af85",
         "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53",
-        "642B99E8-BA43-515E-BFF5-A2434DB631FE",
-        "67b1cf33-4405-57fc-a9ba-9ab81f549f90"
+        "642B99E8-BA43-515E-BFF5-A2434DB631FE"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -97914,12 +97955,12 @@
       "relatedTourIds": [
         "b8cf99a3-f696-54bd-81e3-b7afa4a8eb51",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "310fac17-247d-507b-9637-503685b7af85",
         "3a9e9052-4a97-580a-95ec-317952ea5044",
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
-        "9addc742-68a7-597f-a246-d419f8628fc5",
-        "c4041071-0993-50d9-a14f-2f623fb387e3"
+        "9addc742-68a7-597f-a246-d419f8628fc5"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -98095,11 +98136,11 @@
         "f6ee029b-027c-5ca4-965c-906bad67478c",
         "51fdf48f-2908-521e-86e9-5a49013fe49d",
         "b8cf99a3-f696-54bd-81e3-b7afa4a8eb51",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "b68bfb3f-0507-5ec0-9906-87585504952b",
         "91fb820a-fc69-50fe-9735-11ff0dd86058",
         "67b1cf33-4405-57fc-a9ba-9ab81f549f90",
-        "3ddfc72d-3574-5bf7-bce4-5d85b73c623c",
-        "525a7b02-4293-50da-bd48-0214e64c918f"
+        "3ddfc72d-3574-5bf7-bce4-5d85b73c623c"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -111700,14 +111741,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
         "7D38A405-6D21-5FC1-9414-D814B63A89FD",
         "D2C1CA8A-253C-5D3F-AC51-70C0D6F1503D",
         "36656E92-3D5D-51CB-9019-B4E8CDF8DBCE",
         "5398A277-7B0E-5B48-8C00-859C184D9066",
         "687C0D76-88C2-57BC-AE2F-601D50C7A529",
         "B5BF6E95-3EA9-52F2-BD3E-242088ABFE0D",
-        "B19263EA-1F04-5A03-B52E-343638E6D43B",
-        "C9B859B7-183C-522C-9910-C0D344757F23"
+        "B19263EA-1F04-5A03-B52E-343638E6D43B"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -115628,8 +115669,10 @@
       "country": "France",
       "relatedTourIds": [
         "0C23386A-ACB0-5844-8CC8-456167A3372E",
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
         "99C7F724-851B-5A05-9A67-07A0E33B1609",
         "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
+        "A42107EB-CC9B-5765-B41A-D837298C58C6",
         "D637B6BF-8062-5BF5-8AAD-F4797D485FA5"
       ],
       "primaryCategory": "visualArt",
@@ -116883,13 +116926,13 @@
       "country": "Denmark",
       "relatedTourIds": [
         "51fdf48f-2908-521e-86e9-5a49013fe49d",
+        "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
         "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
         "642B99E8-BA43-515E-BFF5-A2434DB631FE",
         "4A25A149-8D4C-5505-BA58-8F3830F4F45D",
-        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
-        "ad55caf6-07fd-5034-b10d-0b66deb6fcfd"
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -119343,6 +119386,8 @@
       "relatedTourIds": [
         "51825906-85E6-548F-A07E-CFB03BC110B1",
         "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
+        "A42107EB-CC9B-5765-B41A-D837298C58C6",
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
         "042D6ACF-4283-5DB0-BC6C-0AC6DD68B729"
       ],
       "primaryCategory": "visualArt",
@@ -121495,12 +121540,12 @@
       "relatedTourIds": [
         "89aa9c49-b8b3-5cad-9751-2ce13b542c71",
         "80df1e35-1f11-5505-823b-b81cf3768521",
+        "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
         "976420fe-e66e-59bf-99e2-0071fe45a1ff",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "025053CE-0E61-543D-8841-8531DAEF62EB",
-        "92655fdd-493b-564c-a19f-57ccce10e026"
+        "025053CE-0E61-543D-8841-8531DAEF62EB"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122754,7 +122799,7 @@
         "29E57142-9BC5-56B8-8543-6D6658521F81",
         "b8e2c6a1-7d39-4f54-9a06-3c9e7b2d1f84",
         "0CA51A97-EDCC-53DB-89D5-6891E48080FF",
-        "f24f565f-efcd-4631-b20b-211e326996e7"
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -126591,10 +126636,10 @@
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
         "1F17BE53-4450-53B6-84BC-4DC79B0ECB73",
         "7E43727D-44CB-53B2-BA75-9DDEC30D3383",
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
         "114E099F-5291-55F2-A63C-B6B7A335294C",
         "E0B4B77D-CC41-58CE-A5CA-478919365F98",
-        "65993891-DFCF-526C-986B-59EAF7BB9458",
-        "CD45EE77-D41B-58CE-BA3A-B1515A243248"
+        "65993891-DFCF-526C-986B-59EAF7BB9458"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -129792,7 +129837,7 @@
         "7E43727D-44CB-53B2-BA75-9DDEC30D3383",
         "E0B4B77D-CC41-58CE-A5CA-478919365F98",
         "C592FEA8-CC5F-59EC-A97D-D6BA2FB657E5",
-        "31CDA6B4-E288-5599-B566-1BEB9413E432"
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -133189,11 +133234,11 @@
         "5849FED5-D760-5331-A796-BBDF7FB0DB5D",
         "F9294EDC-1588-51AB-BCC3-529FF7F292CC",
         "A0B50432-3203-5101-92E6-734B95E7068D",
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
         "CD45EE77-D41B-58CE-BA3A-B1515A243248",
         "051957C8-9EAC-5882-B79D-89AAE7996A29",
         "90B78864-5CD5-5473-9AAB-0C75DF2D77B8",
-        "81014923-08E4-5A6A-9244-2FDCB71461FB",
-        "84B72FA0-F7B7-5930-9C04-F33ED8EEE4FA"
+        "81014923-08E4-5A6A-9244-2FDCB71461FB"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -160563,9 +160608,9 @@
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
-        "aaeec061-64f1-5126-bed6-95716f9fd00e"
+        "99331766-28B5-5A29-B81E-67E03790A6EB"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -168700,11 +168745,11 @@
         "7c9541b3-d162-5655-8da1-de0286f43d21",
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
+        "D97E831E-346D-567F-8068-1098A93B361E",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "5C5D4FA4-AEBE-571B-B62B-B4BA27C66FB8",
-        "28427603-2539-5712-8d8f-33e5261fdc2a"
+        "5C5D4FA4-AEBE-571B-B62B-B4BA27C66FB8"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -176546,7 +176591,9 @@
       "country": "France",
       "relatedTourIds": [
         "0C23386A-ACB0-5844-8CC8-456167A3372E",
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
         "042D6ACF-4283-5DB0-BC6C-0AC6DD68B729",
+        "A42107EB-CC9B-5765-B41A-D837298C58C6",
         "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
         "51825906-85E6-548F-A07E-CFB03BC110B1"
       ],
@@ -176744,7 +176791,9 @@
       "relatedTourIds": [
         "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
         "D637B6BF-8062-5BF5-8AAD-F4797D485FA5",
+        "A42107EB-CC9B-5765-B41A-D837298C58C6",
         "99C7F724-851B-5A05-9A67-07A0E33B1609",
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
         "0C23386A-ACB0-5844-8CC8-456167A3372E"
       ],
       "primaryCategory": "visualArt",
@@ -184524,13 +184573,13 @@
       "country": "United States",
       "relatedTourIds": [
         "1ADE909E-5396-51EE-8F92-B56A28D20612",
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
         "BEB12531-063F-5C39-8C32-C9CD22321795",
         "A2592733-8F10-5477-9302-E902CEDCC1C8",
         "0DB13660-9E90-5745-96CD-28309617C93F",
         "79FED394-1311-4446-A55C-9BEC9C772081",
         "211C1887-3A39-5A37-A48E-296110DC294C",
-        "61B2E48C-BB42-5B4C-8CB7-1A739F3FBC29",
-        "48E2AC07-4B10-5BFF-AFF0-6BC5C7333DF6"
+        "61B2E48C-BB42-5B4C-8CB7-1A739F3FBC29"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -186834,8 +186883,8 @@
         "4E378097-7165-59A5-9DB2-358BC581B750",
         "29637113-9919-596F-A670-E7955136B249",
         "5849FED5-D760-5331-A796-BBDF7FB0DB5D",
-        "CF128FD5-4AE9-5E9F-BC34-A593BD84C749",
-        "7E43727D-44CB-53B2-BA75-9DDEC30D3383"
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
+        "CF128FD5-4AE9-5E9F-BC34-A593BD84C749"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -190154,7 +190203,8 @@
         "dc2067a1-52d6-5ed2-a3e6-23ca35f8953c",
         "7c014473-2b3f-54dd-b949-330aeb7b21bf",
         "4cc6758c-5b14-501e-a148-b9e49ba3f822",
-        "2060B299-8605-55B6-888B-D6214CC1B042"
+        "2060B299-8605-55B6-888B-D6214CC1B042",
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -191231,8 +191281,8 @@
         "9D1DBFB4-AAC3-5B06-BCEF-53A1AB3F8E8F",
         "4504C57C-22F3-5903-AFE7-8645E10F5283",
         "603B4E85-458F-5577-B3D2-9C04B415DDB1",
-        "5BE5FDC8-5659-57B7-966C-FDE5002F7931",
-        "39A2BCF0-12A1-5225-9D1A-24F08824B0EB"
+        "440C093E-0A90-5432-922D-21F6AC980634",
+        "5BE5FDC8-5659-57B7-966C-FDE5002F7931"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -192063,10 +192113,10 @@
         "699295da-c427-522e-9c4a-17c5057f2d3a",
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
         "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
         "a48cc6fe-7c4b-5a82-a91c-474c9964a648",
         "08aaddac-1aa5-5f3c-9d4c-29807ae87498",
-        "9D403B87-B9A2-5786-94B2-C70BD0487A00",
-        "9ea1a377-9089-5b5d-b0f0-3ce9d1088240"
+        "9D403B87-B9A2-5786-94B2-C70BD0487A00"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -192548,9 +192598,9 @@
         "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
         "642B99E8-BA43-515E-BFF5-A2434DB631FE",
         "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53",
+        "40136580-1A93-5F76-B89C-0DB28F6F6BC6",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "cdefd343-5849-51d5-bd99-5a9399656006"
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -196135,7 +196185,9 @@
       "relatedTourIds": [
         "51825906-85E6-548F-A07E-CFB03BC110B1",
         "D637B6BF-8062-5BF5-8AAD-F4797D485FA5",
+        "A42107EB-CC9B-5765-B41A-D837298C58C6",
         "0C23386A-ACB0-5844-8CC8-456167A3372E",
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
         "99C7F724-851B-5A05-9A67-07A0E33B1609",
         "042D6ACF-4283-5DB0-BC6C-0AC6DD68B729"
       ],
@@ -196185,9 +196237,11 @@
       "city": "Saint-Paul-de-Vence",
       "country": "France",
       "relatedTourIds": [
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
         "99C7F724-851B-5A05-9A67-07A0E33B1609",
         "042D6ACF-4283-5DB0-BC6C-0AC6DD68B729",
         "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
+        "A42107EB-CC9B-5765-B41A-D837298C58C6",
         "51825906-85E6-548F-A07E-CFB03BC110B1"
       ],
       "primaryCategory": "visualArt",
@@ -201480,11 +201534,11 @@
         "5B35C771-97E1-5A21-BB34-BBC41D6B606F",
         "B5BF6E95-3EA9-52F2-BD3E-242088ABFE0D",
         "4504C57C-22F3-5903-AFE7-8645E10F5283",
+        "440C093E-0A90-5432-922D-21F6AC980634",
         "CCA9B4A7-7CCF-5C93-B474-D0DCB637F3D2",
         "df1b9acf-5fb5-4ef0-b186-be992e69fb8f",
         "CED1DE89-ABFF-5B03-83BB-2C3B5F40B31C",
-        "61A2C149-FD52-54AB-BDBC-A78D047EB773",
-        "0AAB6314-9D22-5A26-88D6-80300EBFC76E"
+        "61A2C149-FD52-54AB-BDBC-A78D047EB773"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -201860,13 +201914,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "4504C57C-22F3-5903-AFE7-8645E10F5283",
+        "440C093E-0A90-5432-922D-21F6AC980634",
         "1BCD75BD-D1B4-50AD-BA26-8C64FD2D6D54",
         "3F54E25C-3A48-5311-BD96-79C358F4AE25",
         "5398A277-7B0E-5B48-8C00-859C184D9066",
         "0975AD41-D74D-5002-9065-9BCC1CC8DF69",
         "050793E1-F158-5E08-955E-29AE2D27F735",
-        "3E0C2571-30DF-52CD-8D6A-32231CD1644F",
-        "5F0957E7-EE00-5CE5-839C-432A104631C6"
+        "3E0C2571-30DF-52CD-8D6A-32231CD1644F"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -208314,12 +208368,12 @@
       "relatedTourIds": [
         "AD2E9300-9E61-51E0-9A31-E05E3A8BA8ED",
         "9D403B87-B9A2-5786-94B2-C70BD0487A00",
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
         "20A7ED29-F9CF-57FC-AA4A-40413D09E3FC",
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
         "372C3461-21A2-50C4-8397-92DDEA570136",
         "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
-        "433D4444-9AB9-52D4-BC25-3DCCA10459EC",
-        "2060B299-8605-55B6-888B-D6214CC1B042"
+        "433D4444-9AB9-52D4-BC25-3DCCA10459EC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -208367,14 +208421,14 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
         "AD2E9300-9E61-51E0-9A31-E05E3A8BA8ED",
         "9D403B87-B9A2-5786-94B2-C70BD0487A00",
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
         "372C3461-21A2-50C4-8397-92DDEA570136",
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
         "80943c5f-f117-59a3-bfcc-e55d8a78b63f",
-        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
-        "3d324428-9711-5480-9b5c-180374f3090c"
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -208475,14 +208529,14 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
         "AD2E9300-9E61-51E0-9A31-E05E3A8BA8ED",
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
         "20A7ED29-F9CF-57FC-AA4A-40413D09E3FC",
         "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
         "372C3461-21A2-50C4-8397-92DDEA570136",
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
-        "3d324428-9711-5480-9b5c-180374f3090c",
-        "80943c5f-f117-59a3-bfcc-e55d8a78b63f"
+        "3d324428-9711-5480-9b5c-180374f3090c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -208681,6 +208735,7 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
         "AD2E9300-9E61-51E0-9A31-E05E3A8BA8ED",
         "20A7ED29-F9CF-57FC-AA4A-40413D09E3FC",
         "9D403B87-B9A2-5786-94B2-C70BD0487A00",
@@ -209718,10 +209773,10 @@
         "39A2BCF0-12A1-5225-9D1A-24F08824B0EB",
         "8C8EC604-3F5F-5F82-A00B-A1AECC28FC6D",
         "3EE590DE-AF5B-5194-9D02-8EA11637E8A1",
+        "7F00E0D2-5CE7-588C-98A9-D82B4C077DB5",
         "A5389D78-E011-5858-B843-922B28C15E27",
         "FFA76F71-2FF7-5FDB-9EEA-D8E5037E3C72",
-        "10440093-459C-5824-A9B1-4D9B6EB36F9E",
-        "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2"
+        "10440093-459C-5824-A9B1-4D9B6EB36F9E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -210113,14 +210168,14 @@
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [
+        "08D1B503-49F2-5789-B30E-0F3AFB2BC781",
         "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "cdefd343-5849-51d5-bd99-5a9399656006",
         "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
-        "4A25A149-8D4C-5505-BA58-8F3830F4F45D",
-        "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
+        "40136580-1A93-5F76-B89C-0DB28F6F6BC6",
+        "4A25A149-8D4C-5505-BA58-8F3830F4F45D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -210482,14 +210537,14 @@
       "city": "Amsterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
         "9D403B87-B9A2-5786-94B2-C70BD0487A00",
         "20A7ED29-F9CF-57FC-AA4A-40413D09E3FC",
         "372C3461-21A2-50C4-8397-92DDEA570136",
         "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
         "2060B299-8605-55B6-888B-D6214CC1B042",
-        "d78e3e44-0b4a-5802-b219-b3dee4646203",
-        "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E"
+        "d78e3e44-0b4a-5802-b219-b3dee4646203"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -214852,14 +214907,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
         "A4DF0BAF-BAEC-5344-A2B3-F260BE2D3CEE",
         "3722D8CA-AC92-5525-8BD6-4BC7A1E49BE4",
         "1EDC717C-BE6C-51A8-904A-0E56133582DE",
         "4E62DBD9-23DD-5F10-9617-3A00514F260F",
         "0BE9F96F-D3C5-55F2-A383-B8E70E939414",
         "DCFBDA9D-8A8B-5839-AEF6-DB155BDA7447",
-        "A88CCF79-94F5-57C6-ADDB-FA8C03C533FE",
-        "BAEFD3B9-C2F7-5885-999B-9A3D8F0DA8C9"
+        "A88CCF79-94F5-57C6-ADDB-FA8C03C533FE"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -252512,6 +252567,7 @@
       "country": "Portugal",
       "relatedTourIds": [
         "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
+        "03D522D9-BD8B-545B-A547-6E7D567C9412",
         "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
         "804543FB-1E9C-5F70-9074-A0260645C638",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
@@ -258081,7 +258137,7 @@
         "976420fe-e66e-59bf-99e2-0071fe45a1ff",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "AB0D9AC4-989E-593F-9407-513B18797E3E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -260021,10 +260077,10 @@
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
         "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
         "cdefd343-5849-51d5-bd99-5a9399656006",
+        "40136580-1A93-5F76-B89C-0DB28F6F6BC6",
         "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
         "4A25A149-8D4C-5505-BA58-8F3830F4F45D",
-        "642B99E8-BA43-515E-BFF5-A2434DB631FE",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
+        "642B99E8-BA43-515E-BFF5-A2434DB631FE"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -267749,10 +267805,10 @@
         "df1b9acf-5fb5-4ef0-b186-be992e69fb8f",
         "a72c5e94-8f31-4b06-9d28-6c0a3b7e1f52",
         "cd87391c-47c0-4b6c-a341-a9f334ab84a2",
+        "440C093E-0A90-5432-922D-21F6AC980634",
         "6b81f90e-935e-48e0-bb75-bd527cb7bbbd",
         "B2340D29-2C0E-5730-92DE-6C1742BBCA2E",
-        "0F1804F2-42BE-5B31-82A8-F93906619240",
-        "26826453-4AC0-5D78-A942-C82189EAE53C"
+        "0F1804F2-42BE-5B31-82A8-F93906619240"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -270943,7 +270999,7 @@
         "5C1DC18B-6CA3-53D7-9F95-0F80ED85018D",
         "6EB603AA-37EE-5ACA-B1BF-1A19D66D8E27",
         "13AA77B6-8052-55C8-B88D-1F5799808089",
-        "9CE5C0E3-98E6-55F2-910B-B910CEB68ABF"
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -277058,13 +277114,13 @@
       "country": "Denmark",
       "relatedTourIds": [
         "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
+        "08D1B503-49F2-5789-B30E-0F3AFB2BC781",
         "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
         "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
         "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
         "cdefd343-5849-51d5-bd99-5a9399656006",
-        "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "B3CC1B62-7371-5BA2-AE69-E3C4F9BD284A",
-        "310fac17-247d-507b-9637-503685b7af85"
+        "40136580-1A93-5F76-B89C-0DB28F6F6BC6",
+        "b97319cb-e1cf-5d09-b58d-df94d19a8713"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -278490,13 +278546,13 @@
       "country": "Portugal",
       "relatedTourIds": [
         "DEB56C03-ED04-5FE8-9DE2-AD84D9E6EB53",
+        "03D522D9-BD8B-545B-A547-6E7D567C9412",
         "03A50FE4-0B29-470E-820F-95EA3905A7D1",
         "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
         "02DDDD4C-4A56-48B8-8326-185746E8837B",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
         "194481D6-6865-42A1-96CC-041761B12EA7",
-        "9283D1D6-A58F-43A4-BF69-8BBBE41C1735",
-        "52187B20-0857-4F93-AF49-CA085BDF288D"
+        "9283D1D6-A58F-43A4-BF69-8BBBE41C1735"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279072,8 +279128,8 @@
         "5C29BC3A-8223-5FBD-A39D-A2D2DF2C0A09",
         "9B7CFC7C-D5A4-53EB-9804-D8A0A3BD65EE",
         "C16559E7-91EB-5DA1-86AC-20AD054D8DA3",
-        "75154AFB-F856-5C10-85D8-B4637DEEC400",
-        "2D0C2877-6AA0-5FFF-A8CB-6E7203487376"
+        "440C093E-0A90-5432-922D-21F6AC980634",
+        "75154AFB-F856-5C10-85D8-B4637DEEC400"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -279582,9 +279638,9 @@
         "73387EF4-3706-5B72-9668-61B6A618F8B8",
         "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA",
         "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
+        "03D522D9-BD8B-545B-A547-6E7D567C9412",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "02DDDD4C-4A56-48B8-8326-185746E8837B",
-        "194481D6-6865-42A1-96CC-041761B12EA7"
+        "02DDDD4C-4A56-48B8-8326-185746E8837B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -281473,11 +281529,11 @@
         "17BE3EA0-C3E6-4CE9-87C5-E9F2C07CC2BD",
         "C6C2D598-DF2F-436D-8B19-C9B8B206BC9D",
         "ECA98BE2-712F-5AC2-9918-47EF398FD625",
+        "82FBF54A-3477-5349-8AD3-5E1523E902AB",
         "29637113-9919-596F-A670-E7955136B249",
         "5849FED5-D760-5331-A796-BBDF7FB0DB5D",
         "59C46581-C293-5F4A-B22B-546B0F69E41F",
-        "070FFAF7-F62C-5A81-BB30-360A227B4A97",
-        "1F17BE53-4450-53B6-84BC-4DC79B0ECB73"
+        "070FFAF7-F62C-5A81-BB30-360A227B4A97"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -282725,8 +282781,8 @@
         "DD6693C3-CBF1-5CDE-843E-05001F3600D0",
         "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
-        "A871E406-28BE-58FD-982B-907D1A347F0D",
-        "9D403B87-B9A2-5786-94B2-C70BD0487A00"
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
+        "A871E406-28BE-58FD-982B-907D1A347F0D"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -282834,7 +282890,7 @@
         "35d28cdd-df23-5b4d-99b8-ef54948db57d",
         "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
         "AD2E9300-9E61-51E0-9A31-E05E3A8BA8ED",
-        "DA7A1864-C6BE-5007-8416-EC14F7E34E66"
+        "956703C6-FC1E-56A0-B4DF-625A3ED3154D"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -283102,7 +283158,7 @@
         "4504C57C-22F3-5903-AFE7-8645E10F5283",
         "539b9351-317e-423f-a073-c5b3d79b51bd",
         "5BC6E3E8-D332-550F-B118-E4611C96B447",
-        "B5ED5042-66DC-5985-A69A-83C660BCF4D7"
+        "440C093E-0A90-5432-922D-21F6AC980634"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -301353,6 +301409,1462 @@
         "Architecture",
         "Designed by a Master",
         "Modernist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3F170BBF-25E3-5928-9F83-98A1A9B622BE",
+      "createdAt": "2026-09-25",
+      "title": "Park 'n' Play (Konditaget Lüders)",
+      "shortDescription": "A post by @matter.by.millie on Instagram.",
+      "longDescription": "Shared Copenhagen - Ep 2: Park ‘n’ Play Completed in 2016 by JAJA Architects, this building challenges the monofunctional use of conventional parking structures. The architects wanted to give back to the city with a space that respected the scale, history and future on Nordhavn. The structure is made from a concrete frame wrapped in weathered steel with hanging planting boxes, giving it the amazing red rust colour with an abundance of greenery. Two huge staircases lead up to the activity deck at the top, and you can even race a friend up with the clock that times you. At the top the space is designed for all ages, with swings, a running track, climbing frames and 360 views of Copenhagen Harbour.",
+      "makerId": "1AC8376F-EB45-594C-9BF0-B929F9DEF40F",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/park-n-play-matterbymillie_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Ddo9AxWtSmH/",
+      "sourceAuthor": "@matter.by.millie",
+      "stops": [
+        {
+          "id": "2DBDD5C0-79FA-52D8-9835-9DDE8B94455A",
+          "order": 0,
+          "title": "Park 'n' Play (Konditaget Lüders)",
+          "caption": "Shared Copenhagen - Ep 2: Park ‘n’ Play Completed in 2016 by JAJA Architects, this building challenges the monofunctional use of conventional parking structures. The architects wanted to give back to the city with a space that respected the scale, history and future on Nordhavn. The structure is made from a concrete frame wrapped in weathered steel with hanging planting boxes, giving it the amazing red rust colour with an abundance of greenery. Two huge staircases lead up to the activity deck at the top, and you can even race a friend up with the clock that times you. At the top the space is designed for all ages, with swings, a running track, climbing frames and 360 views of Copenhagen Harbour.",
+          "latitude": 55.7076895,
+          "longitude": 12.5979342,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/park-n-play-matterbymillie_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.7076895,
+      "centroidLongitude": 12.5979342,
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "relatedTourIds": [
+        "51fdf48f-2908-521e-86e9-5a49013fe49d",
+        "b8cf99a3-f696-54bd-81e3-b7afa4a8eb51",
+        "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53",
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "cdefd343-5849-51d5-bd99-5a9399656006",
+        "9addc742-68a7-597f-a246-d419f8628fc5",
+        "310fac17-247d-507b-9637-503685b7af85",
+        "13d19c5e-e7e7-5281-b8d1-03cac7ad31c8"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Park",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E7838888-D081-5929-8933-B58C1206DBA6",
+      "createdAt": "2026-09-25",
+      "title": "Landeau Chocolate",
+      "shortDescription": "A post by @shahaanabbasy on Instagram.",
+      "longDescription": "The best chocolate cake I have ever had in my life 📍 Landeau Chocolate - Lisbon, Portugal",
+      "makerId": "047A291C-54F5-52D9-9522-5EBF6BB132B5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/landeau-chocolate-shahaanabbasy_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdnQjYmovQc/",
+      "sourceAuthor": "@shahaanabbasy",
+      "stops": [
+        {
+          "id": "2A2DE370-3615-51E2-9936-8D3665E74DF4",
+          "order": 0,
+          "title": "Landeau Chocolate",
+          "caption": "The best chocolate cake I have ever had in my life 📍 Landeau Chocolate - Lisbon, Portugal",
+          "latitude": 38.7091456,
+          "longitude": -9.1434666,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/landeau-chocolate-shahaanabbasy_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7091456,
+      "centroidLongitude": -9.1434666,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03D522D9-BD8B-545B-A547-6E7D567C9412",
+      "createdAt": "2026-09-25",
+      "title": "A Valenciana",
+      "shortDescription": "A post by @shahaanabbasy on Instagram.",
+      "longDescription": "A Valenciana didn’t start as a restaurant. It started as a corner shop — kerosene, wine, the basics a Lisbon neighborhood needed in 1914. Somewhere along the way, the grill in the back became the reason people showed up. One dining room turned into four kitchens and ten dining rooms. Over a century later, it’s one of Lisbon’s most beloved charcoal grill spots — and the chicken is still cooked exactly the way it started: slow, over real fire, no shortcuts. 📍 A Valenciana - Campolide, Lisbon",
+      "makerId": "047A291C-54F5-52D9-9522-5EBF6BB132B5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/a-valenciana-shahaanabbasy_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DciZJEAOxHr/",
+      "sourceAuthor": "@shahaanabbasy",
+      "stops": [
+        {
+          "id": "DC5FF1DF-3CBA-58FC-AEEF-D786B65FE3D9",
+          "order": 0,
+          "title": "A Valenciana",
+          "caption": "A Valenciana didn’t start as a restaurant. It started as a corner shop — kerosene, wine, the basics a Lisbon neighborhood needed in 1914. Somewhere along the way, the grill in the back became the reason people showed up. One dining room turned into four kitchens and ten dining rooms. Over a century later, it’s one of Lisbon’s most beloved charcoal grill spots — and the chicken is still cooked exactly the way it started: slow, over real fire, no shortcuts. 📍 A Valenciana - Campolide, Lisbon",
+          "latitude": 38.727518,
+          "longitude": -9.1617929,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/a-valenciana-shahaanabbasy_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.727518,
+      "centroidLongitude": -9.1617929,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
+        "A243EA16-E09A-5C09-8172-9A1647BA1D7B",
+        "DEB56C03-ED04-5FE8-9DE2-AD84D9E6EB53",
+        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
+        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
+        "5604CD42-2DCE-4041-8045-A1A12DCBB026",
+        "03A50FE4-0B29-470E-820F-95EA3905A7D1",
+        "52187B20-0857-4F93-AF49-CA085BDF288D"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "440C093E-0A90-5432-922D-21F6AC980634",
+      "createdAt": "2026-09-25",
+      "title": "Cubitts Broadway Market (F. Cooke Pie and Mash)",
+      "shortDescription": "A post by @heyrosiedart on TikTok.",
+      "longDescription": "A pie and mash shop that sells glasses? 🥧 Thank you Cubitts for having me! #historiclondon #londonbuildings #londonshop #vintagelondon #interiordesign",
+      "makerId": "490F1A41-F4FA-59E8-8898-91E2D93685D3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cubitts-broadway-market-heyrosiedart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@heyrosiedart/video/7687545023407115542",
+      "sourceAuthor": "@heyrosiedart",
+      "stops": [
+        {
+          "id": "E598AA08-E463-58D5-A604-89A86E155672",
+          "order": 0,
+          "title": "Cubitts Broadway Market (F. Cooke Pie and Mash)",
+          "caption": "A pie and mash shop that sells glasses? 🥧 Thank you Cubitts for having me! #historiclondon #londonbuildings #londonshop #vintagelondon #interiordesign",
+          "latitude": 51.5359788,
+          "longitude": -0.0623876,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cubitts-broadway-market-heyrosiedart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5359788,
+      "centroidLongitude": -0.0623876,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "df1b9acf-5fb5-4ef0-b186-be992e69fb8f",
+        "4504C57C-22F3-5903-AFE7-8645E10F5283",
+        "8345960E-3246-565D-AE71-A2EBF136462E",
+        "5B35C771-97E1-5A21-BB34-BBC41D6B606F",
+        "cd87391c-47c0-4b6c-a341-a9f334ab84a2",
+        "BCB4F5C3-01B7-5286-8B58-1D30909D851A",
+        "3F54E25C-3A48-5311-BD96-79C358F4AE25",
+        "5F0957E7-EE00-5CE5-839C-432A104631C6"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "956703C6-FC1E-56A0-B4DF-625A3ED3154D",
+      "createdAt": "2026-09-25",
+      "title": "WoZoCo",
+      "shortDescription": "A post by @blessedarch on Instagram.",
+      "longDescription": "The WoZoCo Housing by MVRDV #blessedarch #architecture #design #amsterdam #mvrdv",
+      "makerId": "2D9DACE1-F75D-5A4F-8E48-58B5C081B03D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wozoco-blessedarch_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdrAeD1AnFy/",
+      "sourceAuthor": "@blessedarch",
+      "stops": [
+        {
+          "id": "19C72FD9-ADA8-51AA-94B0-F32F46EB7A84",
+          "order": 0,
+          "title": "WoZoCo",
+          "caption": "The WoZoCo Housing by MVRDV #blessedarch #architecture #design #amsterdam #mvrdv",
+          "latitude": 52.3639,
+          "longitude": 4.7944,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wozoco-blessedarch_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.3639,
+      "centroidLongitude": 4.7944,
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [
+        "9D403B87-B9A2-5786-94B2-C70BD0487A00",
+        "AD2E9300-9E61-51E0-9A31-E05E3A8BA8ED",
+        "20A7ED29-F9CF-57FC-AA4A-40413D09E3FC",
+        "45FDE4F7-17D5-5AB8-8778-34F93B87D378",
+        "372C3461-21A2-50C4-8397-92DDEA570136",
+        "8C4F2CC4-E142-5A3D-A436-B43BE353EF5E",
+        "A3DA466E-C044-5BBF-8F68-F5CF14DFC7E6",
+        "2060B299-8605-55B6-888B-D6214CC1B042"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Designed by a Master",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "40136580-1A93-5F76-B89C-0DB28F6F6BC6",
+      "createdAt": "2026-09-25",
+      "title": "VM Houses",
+      "shortDescription": "A post by @blessedarch on Instagram.",
+      "longDescription": "The VM Houses in Copenhagen #blessedarch #architecture #design #copenhagen #housing",
+      "makerId": "2D9DACE1-F75D-5A4F-8E48-58B5C081B03D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vm-houses-blessedarch_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdomDTmMPYh/",
+      "sourceAuthor": "@blessedarch",
+      "stops": [
+        {
+          "id": "EA842494-7689-535A-9633-29E74501E98E",
+          "order": 0,
+          "title": "VM Houses",
+          "caption": "The VM Houses in Copenhagen #blessedarch #architecture #design #copenhagen #housing",
+          "latitude": 55.6342,
+          "longitude": 12.5826,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vm-houses-blessedarch_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.6342,
+      "centroidLongitude": 12.5826,
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "relatedTourIds": [
+        "08D1B503-49F2-5789-B30E-0F3AFB2BC781",
+        "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
+        "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
+        "642B99E8-BA43-515E-BFF5-A2434DB631FE",
+        "4A25A149-8D4C-5505-BA58-8F3830F4F45D",
+        "cdefd343-5849-51d5-bd99-5a9399656006"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Designed by a Master",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "08D1B503-49F2-5789-B30E-0F3AFB2BC781",
+      "createdAt": "2026-09-25",
+      "title": "8 House",
+      "shortDescription": "A post by @blessedarch on Instagram.",
+      "longDescription": "The 8 house designed by Bjarke Ingels Group #blessedarch #architecture #design #copenhagen #housing",
+      "makerId": "2D9DACE1-F75D-5A4F-8E48-58B5C081B03D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/8-house-blessedarch_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdZSKAvquB3/",
+      "sourceAuthor": "@blessedarch",
+      "stops": [
+        {
+          "id": "171B50F6-901D-5593-B6D4-452E41DA708F",
+          "order": 0,
+          "title": "8 House",
+          "caption": "The 8 house designed by Bjarke Ingels Group #blessedarch #architecture #design #copenhagen #housing",
+          "latitude": 55.6174713,
+          "longitude": 12.5717197,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/8-house-blessedarch_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.6174713,
+      "centroidLongitude": 12.5717197,
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "relatedTourIds": [
+        "9CC3E982-E5EA-593B-95FB-D4DA66BAE47C",
+        "40136580-1A93-5F76-B89C-0DB28F6F6BC6",
+        "640C4BEC-C30D-5A93-A47E-39F86E8EC668",
+        "0A6EED99-1771-5220-9CCC-59FF7C7803E0",
+        "cdefd343-5849-51d5-bd99-5a9399656006",
+        "34C2B094-CB95-5C25-B832-90AFDF7FF5F8",
+        "2f5ad875-4166-58fb-b1a3-8967ab6be2d4",
+        "4A25A149-8D4C-5505-BA58-8F3830F4F45D"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Designed by a Master",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "40A04634-2F5C-5BC6-BFB4-F8227A390524",
+      "createdAt": "2026-09-25",
+      "title": "The Little Theatre",
+      "shortDescription": "A post by @heyrosiedart on Instagram.",
+      "longDescription": "This Wes Anderson location actually exists! 🦊 The ‘Little Theatre’ cinema from Fantastic Mr Fox (perhaps my favourite of Wes’s films!) actually exists in Bath, built in 1935. Rumour has it that Wes was taking pictures in and around Bath two years before the film, inspired by the city’s architecture and design. The Little Theatre features almost exactly as is in the film! It’s such a cute place to visit and feels like Wes designed the facade himself. Have you been here? ✨ @littletheatrecinema #movieplacesinreallife #moviefacts #movielocation #wesandersonstyle #vintagecinema",
+      "makerId": "1C4DA334-77B4-5E8C-9798-60B8E4714AF6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-theatre-bath-heyrosiedart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdrXwcXB11u/",
+      "sourceAuthor": "@heyrosiedart",
+      "stops": [
+        {
+          "id": "5FD46311-36E0-5A30-95A6-2028024A535F",
+          "order": 0,
+          "title": "The Little Theatre",
+          "caption": "This Wes Anderson location actually exists! 🦊 The ‘Little Theatre’ cinema from Fantastic Mr Fox (perhaps my favourite of Wes’s films!) actually exists in Bath, built in 1935. Rumour has it that Wes was taking pictures in and around Bath two years before the film, inspired by the city’s architecture and design. The Little Theatre features almost exactly as is in the film! It’s such a cute place to visit and feels like Wes designed the facade himself. Have you been here? ✨ @littletheatrecinema #movieplacesinreallife #moviefacts #movielocation #wesandersonstyle #vintagecinema",
+          "latitude": 51.3810449,
+          "longitude": -2.3618275,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-theatre-bath-heyrosiedart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.3810449,
+      "centroidLongitude": -2.3618275,
+      "city": "Bath",
+      "country": "United Kingdom",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D97E831E-346D-567F-8068-1098A93B361E",
+      "createdAt": "2026-09-25",
+      "title": "Park Seo-Bo Museum",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "Emptiness. Fullness. And the quiet space between. The PARKSEOBO MUSEUM opens next to the Yeonhui-dong studio where Park Seo-Bo lived and worked, in a building designed by Choi Moongyu and Ga.A Architects. The architecture itself feels like an extension of his values: nature visible between floors, daylight drawn into the central gallery volume, nothing forced. The inaugural exhibition pairs Park Seo-Bo with Vietnamese-born French painter Huong Dodinh. Two artists who worked oceans apart and arrived at the same place. Park Seo-Bo drew pencil lines into water-soaked hanji over and over, pressing and pushing until ridges and valleys rose from the surface. A practice of repetition that became one of the defining movements in Korean contemporary art: Dansaekhwa. Dodinh layers of translucent pigment coat by coat until light rises from within. She once said that colors serve to reveal light. Standing in front of her work, you understand exactly what she means. VISIT INFO Park Seo-Bo and Huong Dodinh: Emptiness Fullness PARKSEOBO MUSEUM 9-54 Yeonhuiro 24-gil, Seodaemun-gu, Seoul Aug 21, 2026 – Jan 3, 2027 Tue – Sun, 11:00 – 18:00 Admission 5,000 KRW → Save this for your Seoul Art Guide and follow for more art scene insights from Korea #ParkSeoBoMuseum #SeoulArt #SeoulMuseum #KoreanContemporaryArt #HuongDodinh",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/park-seo-bo-museum-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdjDDzTOB14/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "35BD3A1A-8CBD-5F5B-AC94-ACE991C24845",
+          "order": 0,
+          "title": "Park Seo-Bo Museum",
+          "caption": "Emptiness. Fullness. And the quiet space between. The PARKSEOBO MUSEUM opens next to the Yeonhui-dong studio where Park Seo-Bo lived and worked, in a building designed by Choi Moongyu and Ga.A Architects. The architecture itself feels like an extension of his values: nature visible between floors, daylight drawn into the central gallery volume, nothing forced. The inaugural exhibition pairs Park Seo-Bo with Vietnamese-born French painter Huong Dodinh. Two artists who worked oceans apart and arrived at the same place. Park Seo-Bo drew pencil lines into water-soaked hanji over and over, pressing and pushing until ridges and valleys rose from the surface. A practice of repetition that became one of the defining movements in Korean contemporary art: Dansaekhwa. Dodinh layers of translucent pigment coat by coat until light rises from within. She once said that colors serve to reveal light. Standing in front of her work, you understand exactly what she means. VISIT INFO Park Seo-Bo and Huong Dodinh: Emptiness Fullness PARKSEOBO MUSEUM 9-54 Yeonhuiro 24-gil, Seodaemun-gu, Seoul Aug 21, 2026 – Jan 3, 2027 Tue – Sun, 11:00 – 18:00 Admission 5,000 KRW → Save this for your Seoul Art Guide and follow for more art scene insights from Korea #ParkSeoBoMuseum #SeoulArt #SeoulMuseum #KoreanContemporaryArt #HuongDodinh",
+          "latitude": 37.5714702,
+          "longitude": 126.9355379,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/park-seo-bo-museum-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.5714702,
+      "centroidLongitude": 126.9355379,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "92655fdd-493b-564c-a19f-57ccce10e026",
+        "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "89fa0677-9165-5507-9d25-a769338ed8df",
+        "0937722e-26f7-5453-88bf-bdf691fcdf43"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
+      "createdAt": "2026-09-25",
+      "title": "MMCA Space Kids, MMCA Seoul",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "A cultural activity to enjoy with the family in Seoul: MMCA Space Kids is a dedicated space for children and families inside MMCA Seoul. The current exhibition is The Days We Still Tried, created in collaboration with Yang Jung-uk, winner of the 2024 Korea Artist Prize. Three works that invite children to play, observe, and discover, accompanied by the artist’s own texts, which are very much part of the experience. Connected to the exhibition, three hands-on workshops where children get to experiment for themselves. VISIT INFO The Days We Still Tried MMCA Space Kids MMCA Seoul, Education Building 2F Apr 17 – Aug 30, 2026 Tue – Sun, 10:00 – 17:30 Free admission, reservation required 🔗 Book via the MMCA website. You can also check these profiles for more details: @mmcakorea @mmca_education → Save this for your Seoul art guide. #MMCASeoul #SeoulwithKids #FamilySeoul #SeoulArt #helloMMCA",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mmca-space-kids-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DZr5DafR4Q3/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "13C32511-54CE-5AB0-BA9F-832A090EC9DA",
+          "order": 0,
+          "title": "MMCA Space Kids, MMCA Seoul",
+          "caption": "A cultural activity to enjoy with the family in Seoul: MMCA Space Kids is a dedicated space for children and families inside MMCA Seoul. The current exhibition is The Days We Still Tried, created in collaboration with Yang Jung-uk, winner of the 2024 Korea Artist Prize. Three works that invite children to play, observe, and discover, accompanied by the artist’s own texts, which are very much part of the experience. Connected to the exhibition, three hands-on workshops where children get to experiment for themselves. VISIT INFO The Days We Still Tried MMCA Space Kids MMCA Seoul, Education Building 2F Apr 17 – Aug 30, 2026 Tue – Sun, 10:00 – 17:30 Free admission, reservation required 🔗 Book via the MMCA website. You can also check these profiles for more details: @mmcakorea @mmca_education → Save this for your Seoul art guide. #MMCASeoul #SeoulwithKids #FamilySeoul #SeoulArt #helloMMCA",
+          "latitude": 37.57902,
+          "longitude": 126.980433,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mmca-space-kids-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57902,
+      "centroidLongitude": 126.980433,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "AB0D9AC4-989E-593F-9407-513B18797E3E",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "88f85bce-f765-5b54-b807-edcd0832ec8e",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
+        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
+      "createdAt": "2026-09-25",
+      "title": "Centre Pompidou Hanwha",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "Seoul just got a new museum, and it’s one of the world’s great modern art institutions, right on the Han River. Centre Pompidou Hanwha sits inside the completely renovated annex of the 63 Building. Architect Jean-Michel Wilmotte transformed it into what he calls a box of light: a 150-metre glass facade whose curves were drawn from the profile of traditional Korean roof tiles. The experience starts in the lobby, where the first thing you encounter is The Large Horse, a bronze Cubist sculpture by Raymond Duchamp-Villon from the Pompidou collection in Paris. The inaugural exhibition, The Cubists: Inventing Modern Vision, brings together 112 works by 54 artists tracing Cubism from 1907 to the 1920s. A special Korea Focus section examines how that same movement shaped Korean modern art, through works by Kim Whanki, Yoo Youngkuk, and Park Rehyun. This opened on the 140th anniversary of diplomatic ties between France and Korea. For Seoul, it is a new kind of institution. And a new chapter for the city on the global art map. VISIT INFO The Cubists: Inventing Modern Vision Centre Pompidou Hanwha Seoul Yeouido, Seoul Jun 4 – Oct 4, 2026 Admission 28,000 KRW Tickets via the Centre Pompidou Hanwha website @centrepompidouhanwha → Save this for your Seoul art guide. #CentrePompidouHanwha #SeoulArt #Yeouido #TheCubists #seoulmuseum",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centre-pompidou-hanwha-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DZSEHfpRpBu/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "3EFAF6E7-3339-5A68-97C1-F1B9A16747B4",
+          "order": 0,
+          "title": "Centre Pompidou Hanwha",
+          "caption": "Seoul just got a new museum, and it’s one of the world’s great modern art institutions, right on the Han River. Centre Pompidou Hanwha sits inside the completely renovated annex of the 63 Building. Architect Jean-Michel Wilmotte transformed it into what he calls a box of light: a 150-metre glass facade whose curves were drawn from the profile of traditional Korean roof tiles. The experience starts in the lobby, where the first thing you encounter is The Large Horse, a bronze Cubist sculpture by Raymond Duchamp-Villon from the Pompidou collection in Paris. The inaugural exhibition, The Cubists: Inventing Modern Vision, brings together 112 works by 54 artists tracing Cubism from 1907 to the 1920s. A special Korea Focus section examines how that same movement shaped Korean modern art, through works by Kim Whanki, Yoo Youngkuk, and Park Rehyun. This opened on the 140th anniversary of diplomatic ties between France and Korea. For Seoul, it is a new kind of institution. And a new chapter for the city on the global art map. VISIT INFO The Cubists: Inventing Modern Vision Centre Pompidou Hanwha Seoul Yeouido, Seoul Jun 4 – Oct 4, 2026 Admission 28,000 KRW Tickets via the Centre Pompidou Hanwha website @centrepompidouhanwha → Save this for your Seoul art guide. #CentrePompidouHanwha #SeoulArt #Yeouido #TheCubists #seoulmuseum",
+          "latitude": 37.51972,
+          "longitude": 126.94,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centre-pompidou-hanwha-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.51972,
+      "centroidLongitude": 126.94,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "976420fe-e66e-59bf-99e2-0071fe45a1ff",
+        "D97E831E-346D-567F-8068-1098A93B361E",
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
+        "0937722e-26f7-5453-88bf-bdf691fcdf43"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+      "createdAt": "2026-09-25",
+      "title": "Seo-Seoul Museum of Art",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "Seoul’s New Media Art Museum is Now Open The SeMA Seo-Seoul Museum of Art is the first public museum dedicated to new media art and digital practices and the first to open in the city’s southwest. Built low and open, designed to blend into Geumnarae Central Park around it. These are the exhibitions and programs to enjoy: Mneme Topos: five artists tracing the layered memories of western Seoul through photography, installation, and augmented reality. Until Jul 12, 2026. SeMA Project V: Shininho Landing: an 86-year-old grandmother as a K-pop idol and data pirate, hijacking West Seoul’s history through LED panels and generative AI. Until Jun 7, 2026. VISIT INFO Seo-Seoul Museum of Art (Seo-SeMA) Doksan-dong, Geumcheon-gu, Seoul Opening Hours: Tue-Fri: 10 AM-8 PM Weekends 10 AM-7PM Closed on Mondays Admission Free → Save this for your Seoul trip and follow for more recommendations in the city. #SeoulArt #NewMediaArt #SeoSeMA #SeoulMuseum #ThingsToDoInSeoul",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seo-seoul-museum-of-art-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DXUJhdyNKcH/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "DF123C08-136E-5F0B-A0F1-1C8133508F45",
+          "order": 0,
+          "title": "Seo-Seoul Museum of Art",
+          "caption": "Seoul’s New Media Art Museum is Now Open The SeMA Seo-Seoul Museum of Art is the first public museum dedicated to new media art and digital practices and the first to open in the city’s southwest. Built low and open, designed to blend into Geumnarae Central Park around it. These are the exhibitions and programs to enjoy: Mneme Topos: five artists tracing the layered memories of western Seoul through photography, installation, and augmented reality. Until Jul 12, 2026. SeMA Project V: Shininho Landing: an 86-year-old grandmother as a K-pop idol and data pirate, hijacking West Seoul’s history through LED panels and generative AI. Until Jun 7, 2026. VISIT INFO Seo-Seoul Museum of Art (Seo-SeMA) Doksan-dong, Geumcheon-gu, Seoul Opening Hours: Tue-Fri: 10 AM-8 PM Weekends 10 AM-7PM Closed on Mondays Admission Free → Save this for your Seoul trip and follow for more recommendations in the city. #SeoulArt #NewMediaArt #SeoSeMA #SeoulMuseum #ThingsToDoInSeoul",
+          "latitude": 37.457884,
+          "longitude": 126.895075,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seo-seoul-museum-of-art-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.457884,
+      "centroidLongitude": 126.895075,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "92655fdd-493b-564c-a19f-57ccce10e026",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "D97E831E-346D-567F-8068-1098A93B361E",
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "17d77b0d-070f-5414-b79b-5a22e78644ba",
+        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B3D63624-AD97-5962-9434-0113C816FF34",
+      "createdAt": "2026-09-25",
+      "title": "The Hangul Moment Calligraphy Class",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "A class in Insadong where you slow down, pick up a brush, and connect with traditional Korean culture. You start with the basics, dots and lines, the building blocks of Hangeul. The instructor guides every step with calm and care. Then, somewhere in the middle of the session, something shifts. You realize calligraphy isn’t just writing. It’s a practice connected to the body, to the emotions, and especially to the mind. By the end, you’re writing simple phrases and your own name in Korean characters. The class closes with tea brewed by the calligraphy artist running the studio, who is also a tea master. At the end, you leave with a memory to take home. One of those Seoul moments that stays with you. VISIT INFO Korean Calligraphy Class The Hangul Moment (@thehangulmoment) Insadong, Seoul Fri & Sat, 2–4 PM Reserve in advance via Creatrip Save this for your Seoul trip. #SeoulTravel #KoreanCalligraphy #Insadong #HangeulClass #KoreaTravel",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hangul-moment-calligraphy-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DV6JESKlRjM/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "73011A03-BDD2-5F23-897A-A15AD0CA3141",
+          "order": 0,
+          "title": "The Hangul Moment Calligraphy Class",
+          "caption": "A class in Insadong where you slow down, pick up a brush, and connect with traditional Korean culture. You start with the basics, dots and lines, the building blocks of Hangeul. The instructor guides every step with calm and care. Then, somewhere in the middle of the session, something shifts. You realize calligraphy isn’t just writing. It’s a practice connected to the body, to the emotions, and especially to the mind. By the end, you’re writing simple phrases and your own name in Korean characters. The class closes with tea brewed by the calligraphy artist running the studio, who is also a tea master. At the end, you leave with a memory to take home. One of those Seoul moments that stays with you. VISIT INFO Korean Calligraphy Class The Hangul Moment (@thehangulmoment) Insadong, Seoul Fri & Sat, 2–4 PM Reserve in advance via Creatrip Save this for your Seoul trip. #SeoulTravel #KoreanCalligraphy #Insadong #HangeulClass #KoreaTravel",
+          "latitude": 37.5718358,
+          "longitude": 126.9866397,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hangul-moment-calligraphy-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.5718358,
+      "centroidLongitude": 126.9866397,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
+        "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "D97E831E-346D-567F-8068-1098A93B361E",
+        "1d402527-2285-55a7-97db-67ed5071efc4",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "d7bee72e-70d6-518f-acb3-ce3dd2babee4"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+      "createdAt": "2026-09-25",
+      "title": "Photo SeMA (Seoul Museum of Photography)",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "If you want to learn more about Korean photography, this is the place to start. The Seoul Museum of Photography is South Korea’s first museum dedicated entirely to photography. Its architecture references a camera iris, capturing the idea of a frozen moment, and shifting with light throughout the day. The current exhibition, All That Photography, brings together 36 Korean photographers from the late 1950s, a pivotal period often considered the beginning of Korean contemporary art. If you’re interested in understanding the foundations of Korean photography and its role in shaping contemporary art, this is a must-visit. PHOTO SEMA VISIT INFO Opening Hours (Tue–Fri): 10:00–20:00 Sat, Sun & Public Holidays: Summer 10:00–19:00 | Winter 10:00–18:00 Last admission 1 hour before closing Closed Every Monday, January 1 Admission Free Access 3-minute walk from Exit 1, Changdong Station (Lines 1 & 4) → Save this for your next museum day in Seoul. #SeoulMuseumOfPhotography #KoreanPhotography #SeoulArt #ContemporaryKoreanArt #SeoulExhibitions",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/photo-sema-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DVGHu6KgXiC/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "C8967986-5883-5C52-94BB-3D4E38CC469B",
+          "order": 0,
+          "title": "Photo SeMA (Seoul Museum of Photography)",
+          "caption": "If you want to learn more about Korean photography, this is the place to start. The Seoul Museum of Photography is South Korea’s first museum dedicated entirely to photography. Its architecture references a camera iris, capturing the idea of a frozen moment, and shifting with light throughout the day. The current exhibition, All That Photography, brings together 36 Korean photographers from the late 1950s, a pivotal period often considered the beginning of Korean contemporary art. If you’re interested in understanding the foundations of Korean photography and its role in shaping contemporary art, this is a must-visit. PHOTO SEMA VISIT INFO Opening Hours (Tue–Fri): 10:00–20:00 Sat, Sun & Public Holidays: Summer 10:00–19:00 | Winter 10:00–18:00 Last admission 1 hour before closing Closed Every Monday, January 1 Admission Free Access 3-minute walk from Exit 1, Changdong Station (Lines 1 & 4) → Save this for your next museum day in Seoul. #SeoulMuseumOfPhotography #KoreanPhotography #SeoulArt #ContemporaryKoreanArt #SeoulExhibitions",
+          "latitude": 37.65571,
+          "longitude": 127.048857,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/photo-sema-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.65571,
+      "centroidLongitude": 127.048857,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "92655fdd-493b-564c-a19f-57ccce10e026",
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "D97E831E-346D-567F-8068-1098A93B361E",
+        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
+        "17d77b0d-070f-5414-b79b-5a22e78644ba",
+        "28427603-2539-5712-8d8f-33e5261fdc2a"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "025D5A2B-D34B-5BC4-9674-C1C4F07DBFAD",
+      "createdAt": "2026-09-25",
+      "title": "MMCA Gwacheon",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "One Day at MMCA Gwacheon: The Perfect Museum Visit Outside Seoul Looking for what to do in Korea beyond the city? MMCA Gwacheon offers a complete art experience worth the journey from Seoul. Start with the Outdoor Sculpture Museum. The head inside for MMCA Highlights: 40 global artworks spanning centuries. For a lunch break, D Lounge has a simple menu with pasta, risottos, and sandwiches. Don’t miss Nam June Paik‘s monumental video tower “The More The Better, an 8.5-meter art installation of 1,000+ TVs. Wrap up your visit at the peaceful Rooftop Gallery, then browse the Museum Shop for art-inspired finds. VISIT INFO MMCA Gwacheon Tuesday–Sunday 10:00–18:00 Admission: 3,000 KRW Free shuttle bus from the Seoul Grand Park Station. Ideal activity to enjoy near Seoul. →Save this for your next museum visit and follow for more art insights from Korea. #helloMMCA #MMCA #MMCAGwacheon #SeoulDayTrip #KoreanArt",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mmca-gwacheon-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DQejSVIgY_o/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "8A01BD61-99A9-5640-9501-97DE32A47EED",
+          "order": 0,
+          "title": "MMCA Gwacheon",
+          "caption": "One Day at MMCA Gwacheon: The Perfect Museum Visit Outside Seoul Looking for what to do in Korea beyond the city? MMCA Gwacheon offers a complete art experience worth the journey from Seoul. Start with the Outdoor Sculpture Museum. The head inside for MMCA Highlights: 40 global artworks spanning centuries. For a lunch break, D Lounge has a simple menu with pasta, risottos, and sandwiches. Don’t miss Nam June Paik‘s monumental video tower “The More The Better, an 8.5-meter art installation of 1,000+ TVs. Wrap up your visit at the peaceful Rooftop Gallery, then browse the Museum Shop for art-inspired finds. VISIT INFO MMCA Gwacheon Tuesday–Sunday 10:00–18:00 Admission: 3,000 KRW Free shuttle bus from the Seoul Grand Park Station. Ideal activity to enjoy near Seoul. →Save this for your next museum visit and follow for more art insights from Korea. #helloMMCA #MMCA #MMCAGwacheon #SeoulDayTrip #KoreanArt",
+          "latitude": 37.4309964,
+          "longitude": 127.0196745,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mmca-gwacheon-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.4309964,
+      "centroidLongitude": 127.0196745,
+      "city": "Gwacheon",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "87C6E02C-AE70-5F7C-8FA6-F28D56845D1E"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "87C6E02C-AE70-5F7C-8FA6-F28D56845D1E",
+      "createdAt": "2026-09-25",
+      "title": "The More the Better, Nam June Paik",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "If there’s one artwork of Korean art you should know about, this is it. The More the Better created by Nam June Paik in 1988. An 8.5-meter tower made with 1,003 TVs. That number references October 3rd, the founding date of Gojoseon, Korea’s first kingdom. After deep restoration, what you see now is a hybrid: original tubes mixed with modern LCDs, carefully hidden to preserve the aesthetic. VISIT INFO MMCA Gwacheon Tuesday–Sunday 10:00–18:00 Visit between 2:00 and 4:00 PM for full experience. General Admission: 3,000 KRW Save this to your Seoul art guide. #helloMMCA #MMCA #MMCAGwacheon #NamJunePaik #TheMoreTheBetter #KoreanArt #modernart",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-more-the-better-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DP_XMs7gavy/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "C3FAA009-F27A-5489-AE58-44A1347887AE",
+          "order": 0,
+          "title": "The More the Better, Nam June Paik",
+          "caption": "If there’s one artwork of Korean art you should know about, this is it. The More the Better created by Nam June Paik in 1988. An 8.5-meter tower made with 1,003 TVs. That number references October 3rd, the founding date of Gojoseon, Korea’s first kingdom. After deep restoration, what you see now is a hybrid: original tubes mixed with modern LCDs, carefully hidden to preserve the aesthetic. VISIT INFO MMCA Gwacheon Tuesday–Sunday 10:00–18:00 Visit between 2:00 and 4:00 PM for full experience. General Admission: 3,000 KRW Save this to your Seoul art guide. #helloMMCA #MMCA #MMCAGwacheon #NamJunePaik #TheMoreTheBetter #KoreanArt #modernart",
+          "latitude": 37.4309964,
+          "longitude": 127.0196745,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-more-the-better-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.4309964,
+      "centroidLongitude": 127.0196745,
+      "city": "Gwacheon",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "025D5A2B-D34B-5BC4-9674-C1C4F07DBFAD"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "99331766-28B5-5A29-B81E-67E03790A6EB",
+      "createdAt": "2026-09-25",
+      "title": "Haus Nowhere Seoul",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "This store is not a store… Haus Nowhere in Seongsu blends art, design, and architecture across an entire building. Created by the parent company of brands such as Gentle Monster and Tamburins, this space is an immersive conceptual experience. First floor: Sunshine, Tamburin’s warrior-dreaming dog character. Second floor: towering sculptures and cyborg machines guard Gentle Monster’s eyewear. And at the entrance, ‘More Is More’, a bold collaboration with Max Siedentopf. Part art space, part design lab, completely unforgettable. VISIT INFO Haus of Nowhere Visit Tip: If you’re interested in trying the Nudake menu on the top floor, you can make a reservation in advance via the Catchtable app. Save this to your Seoul must-visit guide. And follow for more art insights from Korea. #SeoulArt #HausOfNowhere #Songsu #GentleMonster #seoulguide #seoultravel",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/haus-nowhere-seoul-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DP6l0EhASKp/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "FD239CA5-38E8-5733-B0CD-69B346DC70DD",
+          "order": 0,
+          "title": "Haus Nowhere Seoul",
+          "caption": "This store is not a store… Haus Nowhere in Seongsu blends art, design, and architecture across an entire building. Created by the parent company of brands such as Gentle Monster and Tamburins, this space is an immersive conceptual experience. First floor: Sunshine, Tamburin’s warrior-dreaming dog character. Second floor: towering sculptures and cyborg machines guard Gentle Monster’s eyewear. And at the entrance, ‘More Is More’, a bold collaboration with Max Siedentopf. Part art space, part design lab, completely unforgettable. VISIT INFO Haus of Nowhere Visit Tip: If you’re interested in trying the Nudake menu on the top floor, you can make a reservation in advance via the Catchtable app. Save this to your Seoul must-visit guide. And follow for more art insights from Korea. #SeoulArt #HausOfNowhere #Songsu #GentleMonster #seoulguide #seoultravel",
+          "latitude": 37.538155,
+          "longitude": 127.058935,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/haus-nowhere-seoul-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.538155,
+      "centroidLongitude": 127.058935,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "11378809-f986-505b-80c9-cad3c8aafb2d",
+        "D97E831E-346D-567F-8068-1098A93B361E",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "aaeec061-64f1-5126-bed6-95716f9fd00e",
+        "92655fdd-493b-564c-a19f-57ccce10e026",
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AB0D9AC4-989E-593F-9407-513B18797E3E",
+      "createdAt": "2026-09-25",
+      "title": "MoMA Bookstore Seoul",
+      "shortDescription": "A post by @_seoullista on Instagram.",
+      "longDescription": "MoMA’s first bookstore outside New York just opened in Seoul. Tucked in Dosan Park, Gangnam, the space’s atmosphere is a blend of gallery and design store. Over 1,100 volumes span exhibition catalogues, art theory, architecture, plus a rare selection of English-language art books for Seoul. Beyond books: MoMA’s cult merchandise fills the shelves. The iconic tote, New Era caps, varsity sweaters, and limited-edition design pieces. VISIT INFO MoMA Bookstore Seoul Tuesday–Saturday: 12:00 pm–9:00 pm, until 6:00 pm on Sundays and holidays. → Save this for your Seoul art guide. #SeoulArt #MoMAStore #KoreanCulture #SeoulGuide #moma",
+      "makerId": "90345E6A-B78C-5886-B59B-35A842108EE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/moma-bookstore-seoul-seoullista_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DPbm0ToActu/",
+      "sourceAuthor": "@_seoullista",
+      "stops": [
+        {
+          "id": "8DE67A02-3B85-50B5-899A-A6B2A1A519F2",
+          "order": 0,
+          "title": "MoMA Bookstore Seoul",
+          "caption": "MoMA’s first bookstore outside New York just opened in Seoul. Tucked in Dosan Park, Gangnam, the space’s atmosphere is a blend of gallery and design store. Over 1,100 volumes span exhibition catalogues, art theory, architecture, plus a rare selection of English-language art books for Seoul. Beyond books: MoMA’s cult merchandise fills the shelves. The iconic tote, New Era caps, varsity sweaters, and limited-edition design pieces. VISIT INFO MoMA Bookstore Seoul Tuesday–Saturday: 12:00 pm–9:00 pm, until 6:00 pm on Sundays and holidays. → Save this for your Seoul art guide. #SeoulArt #MoMAStore #KoreanCulture #SeoulGuide #moma",
+          "latitude": 37.5234918,
+          "longitude": 127.0354588,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/moma-bookstore-seoul-seoullista_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.5234918,
+      "centroidLongitude": 127.0354588,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "11378809-f986-505b-80c9-cad3c8aafb2d",
+        "8fd2d042-3de2-5e89-ab0f-085df6533c51",
+        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6"
+      ],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A42107EB-CC9B-5765-B41A-D837298C58C6",
+      "createdAt": "2026-09-25",
+      "title": "Toile Blanche",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "What if your hotel stay was actually a work of art? Set across 22,000 sqm in Saint-Paul-de-Vence, Toile Blanche is one of the strangest and most compelling places I’ve stayed in the South of France. With just 22 suites, the property sits somewhere between a hotel, an artists’ residency and a living exhibition. Almost everything has been designed or made by artists - from sculptures scattered through the gardens to flowers from the estate becoming gifts during turndown. And yes, the idea of being a ‘subject’ of art in a rural luxury villa sounds slightly ominous. Think The Menu meets Knives Out. But in reality, it’s the complete opposite. Nothing feels staged or exploitative. Instead, the artists work with what is already there - leftover wine bottles, wilted flowers, materials from the estate - turning the remnants of a stay into new works. The creative force behind it all is the Leroy Brothers: Nicolas, Gilles and Gregory, who have worked together as an artistic collective since 1997. The result is a constantly evolving ecosystem of art, hospitality and experimentation, right in the heart of one of France’s most historically significant art villages. Definitely not your average hotel!",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toile-blanche-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7689134704594930966",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "0020D296-B7BE-5746-B497-6E2466B4B519",
+          "order": 0,
+          "title": "Toile Blanche",
+          "caption": "What if your hotel stay was actually a work of art? Set across 22,000 sqm in Saint-Paul-de-Vence, Toile Blanche is one of the strangest and most compelling places I’ve stayed in the South of France. With just 22 suites, the property sits somewhere between a hotel, an artists’ residency and a living exhibition. Almost everything has been designed or made by artists - from sculptures scattered through the gardens to flowers from the estate becoming gifts during turndown. And yes, the idea of being a ‘subject’ of art in a rural luxury villa sounds slightly ominous. Think The Menu meets Knives Out. But in reality, it’s the complete opposite. Nothing feels staged or exploitative. Instead, the artists work with what is already there - leftover wine bottles, wilted flowers, materials from the estate - turning the remnants of a stay into new works. The creative force behind it all is the Leroy Brothers: Nicolas, Gilles and Gregory, who have worked together as an artistic collective since 1997. The result is a constantly evolving ecosystem of art, hospitality and experimentation, right in the heart of one of France’s most historically significant art villages. Definitely not your average hotel!",
+          "latitude": 43.6874575,
+          "longitude": 7.1286138,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toile-blanche-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6874575,
+      "centroidLongitude": 7.1286138,
+      "city": "Saint-Paul-de-Vence",
+      "country": "France",
+      "relatedTourIds": [
+        "51825906-85E6-548F-A07E-CFB03BC110B1",
+        "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
+        "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
+        "D637B6BF-8062-5BF5-8AAD-F4797D485FA5",
+        "99C7F724-851B-5A05-9A67-07A0E33B1609",
+        "0C23386A-ACB0-5844-8CC8-456167A3372E",
+        "042D6ACF-4283-5DB0-BC6C-0AC6DD68B729"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26CFBEFC-C1AE-5878-895E-1D9CCF35F732",
+      "createdAt": "2026-09-25",
+      "title": "Fondation Maeght",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "Whether it was funding apartments or additional studios for artists such as Joan Miro and Henri Matisse, to guiding some of the worlds most renowned sculptors such as Giacometti - the Maeght family reshaped how patronage could be offered to artists. Not only did it benefit the artists, but the family were able to amass one of the most significant collections of contemporary art, promoting them to open France’s first ever private museum. Established in 1964 by visionary art dealers Aimé and Marguerite Maeght, the architectural complex was designed by Catalan architect Josep Lluís Sert as a “museum in nature” where indoor galleries blend effortlessly with Mediterranean gardens. The foundation houses over 13,000 works and features iconic, site-specific installations created in collaboration with the artists themselves, including the world-renowned Alberto Giacometti courtyard, the Joan Miró sculpture labyrinth, and monumental mosaics by Marc Chagall. PS, my french accent is abysmal and am fully expecting takedown for the pronunciation of ‘Maeght’. For local accommodation - I stayed at @toileblanche and I highly recommend others to do the same! ———- @fondationmaeght",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fondation-maeght-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7689133398241119510",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "AF3ABC37-0216-5FA4-B024-EC0866116912",
+          "order": 0,
+          "title": "Fondation Maeght",
+          "caption": "Whether it was funding apartments or additional studios for artists such as Joan Miro and Henri Matisse, to guiding some of the worlds most renowned sculptors such as Giacometti - the Maeght family reshaped how patronage could be offered to artists. Not only did it benefit the artists, but the family were able to amass one of the most significant collections of contemporary art, promoting them to open France’s first ever private museum. Established in 1964 by visionary art dealers Aimé and Marguerite Maeght, the architectural complex was designed by Catalan architect Josep Lluís Sert as a “museum in nature” where indoor galleries blend effortlessly with Mediterranean gardens. The foundation houses over 13,000 works and features iconic, site-specific installations created in collaboration with the artists themselves, including the world-renowned Alberto Giacometti courtyard, the Joan Miró sculpture labyrinth, and monumental mosaics by Marc Chagall. PS, my french accent is abysmal and am fully expecting takedown for the pronunciation of ‘Maeght’. For local accommodation - I stayed at @toileblanche and I highly recommend others to do the same! ———- @fondationmaeght",
+          "latitude": 43.700868,
+          "longitude": 7.114904,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fondation-maeght-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.700868,
+      "centroidLongitude": 7.114904,
+      "city": "Saint-Paul-de-Vence",
+      "country": "France",
+      "relatedTourIds": [
+        "0C23386A-ACB0-5844-8CC8-456167A3372E",
+        "99C7F724-851B-5A05-9A67-07A0E33B1609",
+        "042D6ACF-4283-5DB0-BC6C-0AC6DD68B729",
+        "A42107EB-CC9B-5765-B41A-D837298C58C6",
+        "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
+        "D637B6BF-8062-5BF5-8AAD-F4797D485FA5",
+        "51825906-85E6-548F-A07E-CFB03BC110B1"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
+      "createdAt": "2026-09-25",
+      "title": "Banksy Sculpture, Waterloo Place",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "NEW BANKSY ALERT! Pall Mall, Central London. 📍 The anonymous prolific street artist has done it again - but this time through public sculpture in one of London’s most prestigious areas. A new statue has appeared on a plinth in St James’, and it bears the legendary artist’s signature. The sculpture shows a suited person marching forward off of a plinth, their face smothered by a billowing flag. It sits on Waterloo Place, near statues of Edward VII and Florence Nightingale and the Crimean War Memorial. A suited person, a politician, let’s assume – blinded by a gigantic flag, patriotism, ideology? Stepping off a plinth and into danger? Sounds like classic Banksy. This follows the artist’s recent intervention outside a magistrates’ court - an artwork that was swiftly removed almost as soon as it appeared. In that context, the question now shifts: what will happen to this new sculpture? Will it be preserved, protected, or similarly erased? Go check it out before its fate is decided! ————- #banksy #centrallondon #london #banksyart #breaking",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banksy-waterloo-place-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7634354283462397206",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "93EA60F1-9ABE-51FA-8D49-A99429CA773A",
+          "order": 0,
+          "title": "Banksy Sculpture, Waterloo Place",
+          "caption": "NEW BANKSY ALERT! Pall Mall, Central London. 📍 The anonymous prolific street artist has done it again - but this time through public sculpture in one of London’s most prestigious areas. A new statue has appeared on a plinth in St James’, and it bears the legendary artist’s signature. The sculpture shows a suited person marching forward off of a plinth, their face smothered by a billowing flag. It sits on Waterloo Place, near statues of Edward VII and Florence Nightingale and the Crimean War Memorial. A suited person, a politician, let’s assume – blinded by a gigantic flag, patriotism, ideology? Stepping off a plinth and into danger? Sounds like classic Banksy. This follows the artist’s recent intervention outside a magistrates’ court - an artwork that was swiftly removed almost as soon as it appeared. In that context, the question now shifts: what will happen to this new sculpture? Will it be preserved, protected, or similarly erased? Go check it out before its fate is decided! ————- #banksy #centrallondon #london #banksyart #breaking",
+          "latitude": 51.507007,
+          "longitude": -0.132223,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banksy-waterloo-place-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.507007,
+      "centroidLongitude": -0.132223,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "29E57142-9BC5-56B8-8543-6D6658521F81",
+        "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e",
+        "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
+        "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
+        "D2C1CA8A-253C-5D3F-AC51-70C0D6F1503D",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
+        "d5c8a6e1-9d47-4e54-8a06-3c9e7b2d1f9c",
+        "f1b7d4c9-6a28-4e53-8d05-3c9a7e6b2f84"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Monument",
+        "Public Art",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "02CBC0DC-3ECE-5B6F-8099-783D9B38AF87",
+      "createdAt": "2026-09-25",
+      "title": "Queer History of the Gardens of Versailles",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "Did you know these famous palace gardens are filled with queer history?…👀 The Palace of Versailles was not only the political center of absolutist France under Louis XIV - it was also a space where intimacy, favor, and proximity shaped power. Court life functioned through patronage networks: who you dined with, who you accompanied in the gardens(!), who had access to your private apartments, who bathed and dressed you. Relationships were political currency. One of the most visible examples of queer relationships at court was the king’s younger brother, Philippe I, Duke of Orléans, known as “Monsieur.” Philippe was openly effeminate by the standards of the time and maintained long-term romantic relationships with male favorites, most famously Philippe de Lorraine. At Versailles, these relationships were not framed in modern identity terms, but they were visible, influential, and embedded in court culture. Male favorites could gain wealth, titles, and political leverage through acts we may deem as ‘gay’. Salons, masquerades, performances, and the semi-private spaces of the palace gardens created environments where alliances were formed - in many, many ways. In the Baroque court, emotional bonds between men, replicated masculinity, and theatrical self-presentation were part of elite culture. Not only was it specific to men however, Marie Antoinette also had many famous lesbian lovers. The female intimacies across this period were naturally less recorded due to the patriarchal systems in play during those periods. What do you think?👀 ———- #queer #history #gay #versaille #cruising",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/versailles-gardens-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7612643703332588822",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "09AAC428-4AE5-50C7-B599-9FEA0AEDD5ED",
+          "order": 0,
+          "title": "Queer History of the Gardens of Versailles",
+          "caption": "Did you know these famous palace gardens are filled with queer history?…👀 The Palace of Versailles was not only the political center of absolutist France under Louis XIV - it was also a space where intimacy, favor, and proximity shaped power. Court life functioned through patronage networks: who you dined with, who you accompanied in the gardens(!), who had access to your private apartments, who bathed and dressed you. Relationships were political currency. One of the most visible examples of queer relationships at court was the king’s younger brother, Philippe I, Duke of Orléans, known as “Monsieur.” Philippe was openly effeminate by the standards of the time and maintained long-term romantic relationships with male favorites, most famously Philippe de Lorraine. At Versailles, these relationships were not framed in modern identity terms, but they were visible, influential, and embedded in court culture. Male favorites could gain wealth, titles, and political leverage through acts we may deem as ‘gay’. Salons, masquerades, performances, and the semi-private spaces of the palace gardens created environments where alliances were formed - in many, many ways. In the Baroque court, emotional bonds between men, replicated masculinity, and theatrical self-presentation were part of elite culture. Not only was it specific to men however, Marie Antoinette also had many famous lesbian lovers. The female intimacies across this period were naturally less recorded due to the patriarchal systems in play during those periods. What do you think?👀 ———- #queer #history #gay #versaille #cruising",
+          "latitude": 48.8050938,
+          "longitude": 2.119216,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/versailles-gardens-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8050938,
+      "centroidLongitude": 2.119216,
+      "city": "Versailles",
+      "country": "France",
+      "primaryCategory": "history",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E1D94508-FACD-533C-921F-B8F7D319F98A",
+      "createdAt": "2026-09-25",
+      "title": "Abu Simbel",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "Ancient billboard, propaganda tactic - or an enormous show of power? This temple was built for the same pharaoh who apparently met with Moses in both Islam and Christianity - but its reason for building has somewhat of a dark, yet familiar past. The land of Nubia was a colonial target throughout a lot of ancient egypt. Large quantities of gold and mineral-rich land saw egyptians seek to conquer and invade these lands. Most of the gold we see across artifacts came from colonised areas of Nubia. What’s ironic is that Nubian beliefs are one of the only forms of ancient religion from that era that still exists today - far outliving many of the ancient egyptian myths and belief systems. Whilst their land is much smaller today, a Nubian Village exists in the city of Aswan - crocodiles are kept as pets and dome-shaped houses still scatter across the architectural landscape. Located at Abu Simbel, near the border of Sudan. #ancientegypt #nubia #abusimbel #mountrushmore #colonisation",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abu-simbel-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7600463409724787990",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "9B64B174-5339-58E3-BED3-8F3FB9BC20DD",
+          "order": 0,
+          "title": "Abu Simbel",
+          "caption": "Ancient billboard, propaganda tactic - or an enormous show of power? This temple was built for the same pharaoh who apparently met with Moses in both Islam and Christianity - but its reason for building has somewhat of a dark, yet familiar past. The land of Nubia was a colonial target throughout a lot of ancient egypt. Large quantities of gold and mineral-rich land saw egyptians seek to conquer and invade these lands. Most of the gold we see across artifacts came from colonised areas of Nubia. What’s ironic is that Nubian beliefs are one of the only forms of ancient religion from that era that still exists today - far outliving many of the ancient egyptian myths and belief systems. Whilst their land is much smaller today, a Nubian Village exists in the city of Aswan - crocodiles are kept as pets and dome-shaped houses still scatter across the architectural landscape. Located at Abu Simbel, near the border of Sudan. #ancientegypt #nubia #abusimbel #mountrushmore #colonisation",
+          "latitude": 22.33694,
+          "longitude": 31.62556,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abu-simbel-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.33694,
+      "centroidLongitude": 31.62556,
+      "city": "Abu Simbel",
+      "country": "Egypt",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "History",
+        "Monument"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D40DE18D-06CA-5CCE-B70C-43C5E891A8A3",
+      "createdAt": "2026-09-25",
+      "title": "Philae Temple",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "Can you guess (before the reveal) what this kitchen appliance is? We still use it today over 4000 years later. Nowadays however, its size has reduced by about 500x. SPOILER: The Ancient Egyptians had a fondness for aromatherapy, spices and oils - so pestle and mortars were essential to the lives of those lucky enough to have access and afford them. This ancient pestle and mortar would have been operated using a steel ball and large wooden arm/stick, crushing huge quantities of materials to keep stocks going. This is located in south egypt at the Temple of Philae in Aswan - a historic tourist attraction across hundreds of generations since Alexander the Great. ————- #ancientegypt #aswan #didyouknow #history #cooking",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/philae-temple-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7600435860873465110",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "C95FA314-0BA3-5051-8374-260FBB37B5E7",
+          "order": 0,
+          "title": "Philae Temple",
+          "caption": "Can you guess (before the reveal) what this kitchen appliance is? We still use it today over 4000 years later. Nowadays however, its size has reduced by about 500x. SPOILER: The Ancient Egyptians had a fondness for aromatherapy, spices and oils - so pestle and mortars were essential to the lives of those lucky enough to have access and afford them. This ancient pestle and mortar would have been operated using a steel ball and large wooden arm/stick, crushing huge quantities of materials to keep stocks going. This is located in south egypt at the Temple of Philae in Aswan - a historic tourist attraction across hundreds of generations since Alexander the Great. ————- #ancientegypt #aswan #didyouknow #history #cooking",
+          "latitude": 24.0252548,
+          "longitude": 32.8841893,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/philae-temple-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.0252548,
+      "centroidLongitude": 32.8841893,
+      "city": "Aswan",
+      "country": "Egypt",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "History",
+        "Monument"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EE0A849E-6C7B-563B-BD93-7EB6AEEAE98A",
+      "createdAt": "2026-09-25",
+      "title": "Khufu's Solar Boat, Grand Egyptian Museum",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "The man responsible for the pyramids also holds the record for the largest archeological find in Egypt - King Khufu’s ‘Solar Boat’ (coincidentally discovered beneath the pyramids themselves). The Grand Egyptian Museum’s recent launch sees the 142ft, 4500 year old King Khufu ship presented in one of the buildings. Split across 3 floors, visitors are able to witness the feats of engineering still strikingly present from the ancient egyptian culture. King Khufu (also known as Cheops) was an ancient Egyptian pharaoh of the Fourth Dynasty, famous for commissioning the Great Pyramid of Giza around 2550 BCE. His reign marked a peak in royal power, architectural innovation, and centralized state organization in the Old Kingdom. The boat depicted, discovered in 1954, is a full-sized wooden vessel buried in a pit beside his tomb. The boat was likely intended for the pharaoh’s journey with the sun god Ra across the heavens in the afterlife. However, as mentioned in the video, real life use has been proven with water degradation marks present across the vessel. Make sure to visit this fantastic museum if you’re in Egypt! #egypt #grandegyptianmuseum #history #ancientegypt #museum",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/khufu-solar-boat-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7598346174109617430",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "42D1636A-7DE4-5D51-A5CB-A07E2A806B53",
+          "order": 0,
+          "title": "Khufu's Solar Boat, Grand Egyptian Museum",
+          "caption": "The man responsible for the pyramids also holds the record for the largest archeological find in Egypt - King Khufu’s ‘Solar Boat’ (coincidentally discovered beneath the pyramids themselves). The Grand Egyptian Museum’s recent launch sees the 142ft, 4500 year old King Khufu ship presented in one of the buildings. Split across 3 floors, visitors are able to witness the feats of engineering still strikingly present from the ancient egyptian culture. King Khufu (also known as Cheops) was an ancient Egyptian pharaoh of the Fourth Dynasty, famous for commissioning the Great Pyramid of Giza around 2550 BCE. His reign marked a peak in royal power, architectural innovation, and centralized state organization in the Old Kingdom. The boat depicted, discovered in 1954, is a full-sized wooden vessel buried in a pit beside his tomb. The boat was likely intended for the pharaoh’s journey with the sun god Ra across the heavens in the afterlife. However, as mentioned in the video, real life use has been proven with water degradation marks present across the vessel. Make sure to visit this fantastic museum if you’re in Egypt! #egypt #grandegyptianmuseum #history #ancientegypt #museum",
+          "latitude": 29.9945754,
+          "longitude": 31.1190738,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/khufu-solar-boat-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 29.9945754,
+      "centroidLongitude": 31.1190738,
+      "city": "Giza",
+      "country": "Egypt",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7F7637E5-2F2E-5D88-B7BE-70F3652ED4C0",
+      "createdAt": "2026-09-25",
+      "title": "Kom Ombo Temple",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "What could this lavish hole contain? Legend has it, this was the location for a spa getaway for no other than Queen Cleopatra - and her favourite jacuzzi still stands today, over 2000 years later. This temple was the equivalent of a spa getaway for many egyptians, including the famous queen. With water pumped directly from the nile, this jacuzzi was adorned with essential oils, flowers and fragrances to beautifully cool off travellers and locals who were deemed worthy enough to bathe. This is located in Aswan at Kom Ombo Temple, Egypt (south). We done a Nile cruise and would heavily recommend anyone wanting to explore Egypt! #egypt #cleopatra #history #ancientegypt #didyouknow",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kom-ombo-temple-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7598321669601627414",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "9836F228-74EF-57F6-B0C7-83AA995D60B6",
+          "order": 0,
+          "title": "Kom Ombo Temple",
+          "caption": "What could this lavish hole contain? Legend has it, this was the location for a spa getaway for no other than Queen Cleopatra - and her favourite jacuzzi still stands today, over 2000 years later. This temple was the equivalent of a spa getaway for many egyptians, including the famous queen. With water pumped directly from the nile, this jacuzzi was adorned with essential oils, flowers and fragrances to beautifully cool off travellers and locals who were deemed worthy enough to bathe. This is located in Aswan at Kom Ombo Temple, Egypt (south). We done a Nile cruise and would heavily recommend anyone wanting to explore Egypt! #egypt #cleopatra #history #ancientegypt #didyouknow",
+          "latitude": 24.452073,
+          "longitude": 32.9284135,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kom-ombo-temple-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.452073,
+      "centroidLongitude": 32.9284135,
+      "city": "Kom Ombo",
+      "country": "Egypt",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Monument"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7F00E0D2-5CE7-588C-98A9-D82B4C077DB5",
+      "createdAt": "2026-09-25",
+      "title": "Millennium Bridge",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "The biggest architectural disaster of the 2000s was quickly avoided, but gave a now long-standing bridge its nickname: 'The Wobbly Bridge’.🧱 The Millennium Bridge is a pedestrian suspension bridge over the River Thames in London, connecting St Paul's Cathedral with Tate Modern and the Globe Theatre. Opened on June 10, 2000, it quickly gained the nickname \"Wobbly Bridge\" due to unexpected and unsettling lateral swaying caused by pedestrian footsteps, a phenomenon known as synchronous lateral excitation. The bridge was closed just two days after opening and underwent TWO YEARS of engineering fixes before reopening in 2002. The bridge was a collaboration between architect Sir Norman Foster, sculptor Sir Anthony Caro, and engineering firm Arup. It was designed as a sleek, modern \"blade of light,\" emphasizing minimal visual obstruction and integration with the surrounding cityscape. The bridge was one of several high-profile UK projects celebrating the year 2000, collectively known as Millennium Projects. Others included the Millennium Dome (now The 02 Arena) in Greenwich and the Eden Project in Cornwall. These were funded in part by the Millennium Commission, set up with National Lottery money. Many of these projects, including the bridge, were rushed to meet the symbolic January 1, 2000 deadline. This time pressure often led to technical issues, budget overruns, and public criticism, particularly in the case of the Dome and the bridge's wobble. Did you know this? ———— #millenium #milleniumbridge #london #architecture #architect #architectural #history #wobblybridge #harrypotter #bridges #londonarchitecture",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7524276810331311382",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "4FFAE781-FAA3-544F-9AFA-E452721CFCB2",
+          "order": 0,
+          "title": "Millennium Bridge",
+          "caption": "The biggest architectural disaster of the 2000s was quickly avoided, but gave a now long-standing bridge its nickname: 'The Wobbly Bridge’.🧱 The Millennium Bridge is a pedestrian suspension bridge over the River Thames in London, connecting St Paul's Cathedral with Tate Modern and the Globe Theatre. Opened on June 10, 2000, it quickly gained the nickname \"Wobbly Bridge\" due to unexpected and unsettling lateral swaying caused by pedestrian footsteps, a phenomenon known as synchronous lateral excitation. The bridge was closed just two days after opening and underwent TWO YEARS of engineering fixes before reopening in 2002. The bridge was a collaboration between architect Sir Norman Foster, sculptor Sir Anthony Caro, and engineering firm Arup. It was designed as a sleek, modern \"blade of light,\" emphasizing minimal visual obstruction and integration with the surrounding cityscape. The bridge was one of several high-profile UK projects celebrating the year 2000, collectively known as Millennium Projects. Others included the Millennium Dome (now The 02 Arena) in Greenwich and the Eden Project in Cornwall. These were funded in part by the Millennium Commission, set up with National Lottery money. Many of these projects, including the bridge, were rushed to meet the symbolic January 1, 2000 deadline. This time pressure often led to technical issues, budget overruns, and public criticism, particularly in the case of the Dome and the bridge's wobble. Did you know this? ———— #millenium #milleniumbridge #london #architecture #architect #architectural #history #wobblybridge #harrypotter #bridges #londonarchitecture",
+          "latitude": 51.509888,
+          "longitude": -0.098508,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.509888,
+      "centroidLongitude": -0.098508,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "0e044571-e715-4b5b-a2c3-785e184e1379",
+        "3D739E82-5C7D-541E-B9AF-A1EDD2969682",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
+        "b689e044-e156-4bb4-9ee3-09dc3f6c7f31",
+        "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
+        "9932791e-1c59-4c12-8616-31bd0db64a94",
+        "39A2BCF0-12A1-5225-9D1A-24F08824B0EB",
+        "26826453-4AC0-5D78-A942-C82189EAE53C"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "82FBF54A-3477-5349-8AD3-5E1523E902AB",
+      "createdAt": "2026-09-25",
+      "title": "Keith Haring Bathroom Mural",
+      "shortDescription": "A post by @jamesinculture on TikTok.",
+      "longDescription": "You can visit this super-famous artwork by walking in to a public bathroom! A year before his passing from HIV, Keith Haring painted a bathroom located in an LGBTQ+ Centre, at a time when the HIV & AIDS crisis ran rampant (and which Keith was diagnosed with at the time and shortly passed from the next year). Unlike the artists signature work, this piece - a one off, contains imagery pertaining to male relations and love, a strong differentiation from his usual motifs and emblems with love hearts and dogs. The Keith Haring bathroom, also known as the Keith Haring Mural Bathroom, is located at The Center (Leslie-Lohman Museum) in New York City, formerly the LGBT Community Center on West 13th Street in Manhattan. ——— #lgbtqart #queerart #keithharing #nycart #streetart #queer #art #gallery #newyork #manhattan #transrightsarehumanrights #hiv #aidsawareness #aids #queerart #culture #thingstodo",
+      "makerId": "809FBEB7-34E2-56D8-8427-0C6490C5BF3E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/keith-haring-bathroom-jamesinculture_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@jamesinculture/video/7495500448363760918",
+      "sourceAuthor": "@jamesinculture",
+      "stops": [
+        {
+          "id": "6A17FA21-9F0E-59D6-9549-B50769B63D68",
+          "order": 0,
+          "title": "Keith Haring Bathroom Mural",
+          "caption": "You can visit this super-famous artwork by walking in to a public bathroom! A year before his passing from HIV, Keith Haring painted a bathroom located in an LGBTQ+ Centre, at a time when the HIV & AIDS crisis ran rampant (and which Keith was diagnosed with at the time and shortly passed from the next year). Unlike the artists signature work, this piece - a one off, contains imagery pertaining to male relations and love, a strong differentiation from his usual motifs and emblems with love hearts and dogs. The Keith Haring bathroom, also known as the Keith Haring Mural Bathroom, is located at The Center (Leslie-Lohman Museum) in New York City, formerly the LGBT Community Center on West 13th Street in Manhattan. ——— #lgbtqart #queerart #keithharing #nycart #streetart #queer #art #gallery #newyork #manhattan #transrightsarehumanrights #hiv #aidsawareness #aids #queerart #culture #thingstodo",
+          "latitude": 40.7380084,
+          "longitude": -74.0010489,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/keith-haring-bathroom-jamesinculture_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7380084,
+      "centroidLongitude": -74.0010489,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "31A8F013-642A-5A6D-B3AC-73BFBA68273C",
+        "5849FED5-D760-5331-A796-BBDF7FB0DB5D",
+        "070FFAF7-F62C-5A81-BB30-360A227B4A97",
+        "C7D2E5E7-6BB8-58DE-A9D1-3114D9D4A945",
+        "C6C2D598-DF2F-436D-8B19-C9B8B206BC9D",
+        "17BE3EA0-C3E6-4CE9-87C5-E9F2C07CC2BD",
+        "1EFC80D6-5E8B-5847-89E0-22A77F78ECCE",
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Hidden Gem",
+        "History"
       ],
       "priceUSD": 0
     }
