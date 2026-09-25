@@ -282,3 +282,17 @@ That check found **nine wrong coordinates** in a single day. The signature is a
 **4-decimal coordinate on a tour**: pins are geocoded per link at import, while
 tours carry coordinates typed once and never verified. In the 26–49 m band,
 **fifteen of seventeen groups had the pin right and the tour wrong.**
+
+## 2026-09-25: four more rulings, including the first part-of-a-museum YESes
+
+| Pair | Ruling |
+|---|---|
+| Banksy Sculpture, Waterloo Place + Banksy-Signed Sculpture | **YES**: the same artwork (Rule 1) |
+| MMCA Seoul (tour) + MMCA Space Kids (pin) | **YES**: the owner's judgement call. A space inside the museum, placed with it |
+| MMCA Gwacheon + *The More the Better*, Nam June Paik | **YES**: the owner's judgement call. The Paik tower is inside the museum |
+| Adega Mayor (tour) + Adega Mayor (pin), 59 m apart | **YES** (Rule 1); the place sits on the tour's point |
+| A Mesa do CAM + CAM Gulbenkian | **NO for now**: the restaurant stays outside the museum's place |
+
+⚠️ **Part vs whole is still decided one case at a time.** Two museum parts were accepted here, after
+many earlier refusals (Westminster Abbey interiors, Rockefeller Center parts, the Tomb of the
+Unknown Soldier). Ask; do not infer a rule from either side.

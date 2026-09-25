@@ -106798,6 +106798,66 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6"
       ]
+    },
+    {
+      "id": "39687709-30da-5003-846f-85c64f737227",
+      "name": "Banksy Sculpture, Waterloo Place",
+      "description": null,
+      "latitude": 51.50700668420346,
+      "longitude": -0.13222348921498006,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "29E57142-9BC5-56B8-8543-6D6658521F81",
+        "F5344049-A11D-5976-B6D6-6749DE4C1CFB"
+      ]
+    },
+    {
+      "id": "97d90a69-7681-53eb-a53c-aa3a63a6d5e5",
+      "name": "National Museum of Modern and Contemporary Art (MMCA) Seoul",
+      "description": null,
+      "latitude": 37.57902036079364,
+      "longitude": 126.98043346444082,
+      "city": "Seoul",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "80df1e35-1f11-5505-823b-b81cf3768521",
+        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614"
+      ]
+    },
+    {
+      "id": "e5242281-f562-5351-ab10-6654fccd2825",
+      "name": "MMCA Gwacheon",
+      "description": null,
+      "latitude": 37.4309964,
+      "longitude": 127.0196745,
+      "city": "Gwacheon",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "025D5A2B-D34B-5BC4-9674-C1C4F07DBFAD",
+        "87C6E02C-AE70-5F7C-8FA6-F28D56845D1E"
+      ]
+    },
+    {
+      "id": "862c6026-dd53-5322-966e-a8872b4e4e6b",
+      "name": "Adega Mayor",
+      "description": null,
+      "latitude": 39.04975,
+      "longitude": -7.09437,
+      "city": "Campo Maior",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "a17dbd1d-3491-4062-a62e-9b0059c678f7",
+        "85F8C2F4-E528-59A5-88EE-AC443AEA9AFF"
+      ]
     }
   ],
   "linkPins": [
@@ -302030,8 +302090,8 @@
           "order": 0,
           "title": "MMCA Space Kids, MMCA Seoul",
           "caption": "A cultural activity to enjoy with the family in Seoul: MMCA Space Kids is a dedicated space for children and families inside MMCA Seoul. The current exhibition is The Days We Still Tried, created in collaboration with Yang Jung-uk, winner of the 2024 Korea Artist Prize. Three works that invite children to play, observe, and discover, accompanied by the artist’s own texts, which are very much part of the experience. Connected to the exhibition, three hands-on workshops where children get to experiment for themselves. VISIT INFO The Days We Still Tried MMCA Space Kids MMCA Seoul, Education Building 2F Apr 17 – Aug 30, 2026 Tue – Sun, 10:00 – 17:30 Free admission, reservation required 🔗 Book via the MMCA website. You can also check these profiles for more details: @mmcakorea @mmca_education → Save this for your Seoul art guide. #MMCASeoul #SeoulwithKids #FamilySeoul #SeoulArt #helloMMCA",
-          "latitude": 37.57902,
-          "longitude": 126.980433,
+          "latitude": 37.57902036079364,
+          "longitude": 126.98043346444082,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -302043,8 +302103,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.57902,
-      "centroidLongitude": 126.980433,
+      "centroidLatitude": 37.57902036079364,
+      "centroidLongitude": 126.98043346444082,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -302618,8 +302678,8 @@
           "order": 0,
           "title": "Banksy Sculpture, Waterloo Place",
           "caption": "NEW BANKSY ALERT! Pall Mall, Central London. 📍 The anonymous prolific street artist has done it again - but this time through public sculpture in one of London’s most prestigious areas. A new statue has appeared on a plinth in St James’, and it bears the legendary artist’s signature. The sculpture shows a suited person marching forward off of a plinth, their face smothered by a billowing flag. It sits on Waterloo Place, near statues of Edward VII and Florence Nightingale and the Crimean War Memorial. A suited person, a politician, let’s assume – blinded by a gigantic flag, patriotism, ideology? Stepping off a plinth and into danger? Sounds like classic Banksy. This follows the artist’s recent intervention outside a magistrates’ court - an artwork that was swiftly removed almost as soon as it appeared. In that context, the question now shifts: what will happen to this new sculpture? Will it be preserved, protected, or similarly erased? Go check it out before its fate is decided! ————- #banksy #centrallondon #london #banksyart #breaking",
-          "latitude": 51.507007,
-          "longitude": -0.132223,
+          "latitude": 51.50700668420346,
+          "longitude": -0.13222348921498006,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -302631,8 +302691,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.507007,
-      "centroidLongitude": -0.132223,
+      "centroidLatitude": 51.50700668420346,
+      "centroidLongitude": -0.13222348921498006,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -303054,8 +303114,8 @@
           "order": 0,
           "title": "Adega Mayor",
           "caption": "A pretty winery that you can visit when passing through Alentejo! 🍇 🍷 @adegamayor 📍 Campo Maior (2 hours from Lisbon) 💰 15€ follow @where.to.taste for more Portugal food tips 💌 . . . #visitportugal #wineharvest #winery #portuguesewines",
-          "latitude": 39.050239,
-          "longitude": -7.094109,
+          "latitude": 39.04975,
+          "longitude": -7.09437,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -303067,8 +303127,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 39.050239,
-      "centroidLongitude": -7.094109,
+      "centroidLatitude": 39.04975,
+      "centroidLongitude": -7.09437,
       "city": "Campo Maior",
       "country": "Portugal",
       "relatedTourIds": [
