@@ -1,8 +1,12 @@
-# 6 @where.to.taste pins held for clean heroes (embed off, play button baked in); 6 skipped with URLs
+# 6 @where.to.taste pins: OWNER SAYS SHIP WITH THE PLAY-BUTTON HERO (2026-09-25); 6 skipped with URLs
 
 _opened 2026-09-25 · clear with `git rm status/owner/where-to-taste-held-260925.md`_
 
 # @where.to.taste batch: 6 pins held for a clean hero, 6 posts skipped
+
+## 🟢 Owner decision, 2026-09-25: "ship the wheretotaste with the play button. it's ok for now"
+
+The next session should mint these six with the link-preview cover as the hero, play button included. Follow `docs/link-pin-runbook.md` (`make-link-pin.py` → `merge-link-pins.py`); the coordinates are in the handoff. Then run the rule 8c place checks and `check-image-duplicates.py --pins`. Clear this item once they have merged. A clean-frame hero can replace one later **under a new filename** (Image Pipeline step 9).
 
 **Held — embed switched off by the creator (6).** Instagram serves these only as a
 360x640 link-preview cover **with a play button baked into its centre**, so their heroes
