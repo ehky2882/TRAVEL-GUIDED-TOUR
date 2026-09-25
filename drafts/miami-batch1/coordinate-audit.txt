@@ -1,0 +1,56 @@
+RUN check-coordinates.py · rev 8f1e9672 · 2026-09-25T13:25:45Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/7d716f20-3c17-51ca-9119-6833636f0c8a/scratchpad/mia_checkdrop --city Miami, United States --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/7d716f20-3c17-51ca-9119-6833636f0c8a/scratchpad/mia_coordcheck.txt
+auditing 30 coordinate(s) against 'Miami, United States'  (~2.6 min at Nominatim's rate limit)
+
+  [  1/30] Bayfront Park                      fwd      0m  at: The Light Tower
+  [  2/30] Historic Virginia Key Beach Park   fwd      0m  at: Historic Virginia Key Beach Pa
+  [  3/30] Lyric Theater Overtown             fwd      0m  at: -
+  [  4/30] Bacardi Building                   fwd    n/a  at: -
+  [  5/30] Maximo Gomez Park                  fwd      0m  at: -
+  [  6/30] Espanola Way                       fwd      0m  at: -
+  [  7/30] Little Haiti Cultural Complex      fwd    n/a  at: Caribbean Marketplace
+  [  8/30] Alfred I duPont Building           fwd    n/a  at: Cantwell Academy
+  [  9/30] Lincoln Road Mall                  fwd      0m  at: BCBGMaxazria
+  [ 10/30] Maurice A Ferre Park               fwd      0m  at: Maurice A Ferre Dog Park
+  [ 11/30] Cuban Memorial Boulevard           fwd    576m  at: -
+  [ 12/30] Royal Palm Hotel site, Miami River fwd    n/a  at: Epic Residences & Hotel
+  [ 13/30] South Pointe Park                  fwd      0m  at: Miami Beach Parking Lot (P1)
+  [ 14/30] Holocaust Memorial Miami Beach     fwd      0m  at: -
+  [ 15/30] Brickell Avenue Bridge             fwd      0m  at: Brickell Avenue Bridge
+  [ 16/30] Fontainebleau Miami Beach          fwd      0m  at: LIV Nightclub Miami
+  [ 17/30] Freedom Tower                      fwd     91m  at: Freedom Tower at Miami Dade Co
+  [ 18/30] Wynwood Walls                      fwd      0m  at: Jugofresh
+  [ 19/30] Miami-Dade Cultural Center         fwd     17m  at: HistoryMiami Museum
+  [ 20/30] Jewish Museum of Florida           fwd      0m  at: Jewish Museum of Florida
+  [ 21/30] Vizcaya Museum and Gardens         fwd    113m  at: Villa Vizcaya
+  [ 22/30] Miami Circle at Brickell Point     fwd      0m  at: -
+  [ 23/30] Lummus Park downtown Miami         fwd    n/a  at: -
+  [ 24/30] Lummus Park Miami Beach            fwd      0m  at: Lummus Park Boardwalk
+  [ 25/30] Tower Theater                      fwd      0m  at: Tower Theater
+  [ 26/30] Casa Casuarina                     fwd      0m  at: Gianni’s At The Villa
+  [ 27/30] NW 2nd Avenue Overtown interchange fwd    n/a  at: -
+  [ 28/30] Miami-Dade County Courthouse       fwd      0m  at: Miami - Dade County Law Librar
+  [ 29/30] Gesu Church                        fwd      0m  at: Gesu Church
+  [ 30/30] The Barnacle Historic State Park   fwd      0m  at: -
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 6: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Bacardi Building                         venue could not be geocoded
+    Little Haiti Cultural Complex            venue could not be geocoded
+    Alfred I duPont Building                 venue could not be geocoded
+    Royal Palm Hotel site, Miami Riverwalk   venue could not be geocoded
+    Lummus Park downtown Miami               venue could not be geocoded
+    NW 2nd Avenue Overtown interchange       venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 10/24 north of true position, median -0.0 m, p = 0.54
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> No significant directional bias. Consistent with upstream fixed.
