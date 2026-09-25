@@ -214,6 +214,10 @@ python3 scripts/upload-images.py --dir /tmp/heroes --message "Heroes for <creato
 # 6. Places — a new pin often lands on a site the catalogue already has
 python3 scripts/check-place-candidates.py --out /tmp/candidates.txt
 python3 scripts/join-places.py --max-move 100 --out /tmp/joins.txt
+
+# 7. Wikidata lookups for the new pins — commit spine/lookups.json.gz with the
+#    batch, or CI's "Spine coordinate audit" fails with COULD NOT VERIFY
+python3 scripts/spine-lookup.py --out /tmp/spine.txt
 ```
 
 🔴 **Step 6 runs on EVERY batch, whatever the sender said — and it is the one

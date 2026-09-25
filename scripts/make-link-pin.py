@@ -322,10 +322,10 @@ def platform_of(url: str) -> str:
     return "other"
 
 
-def curl(url: str, binary: bool = False):
+def curl(url: str, binary: bool = False,
+         agent: str = "Dozent/1.0 (link-pin tool; +https://dozent.world)"):
     r = subprocess.run(
-        ["curl", "-sSL", "--max-time", "45", "-A",
-         "Dozent/1.0 (link-pin tool; +https://dozent.world)", url],
+        ["curl", "-sSL", "--max-time", "45", "-A", agent, url],
         capture_output=True,
     )
     if r.returncode != 0:
@@ -383,6 +383,53 @@ def instagram_playability(html: str) -> tuple[bool, str]:
     return False, "Instagram is not exposing the media file for this post"
 
 
+LINK_PREVIEW_AGENT = "Mozilla/5.0 (compatible; facebookexternalhit/1.1)"
+
+
+def instagram_og_meta(html: str, url: str) -> dict:
+    """Fallback for a post whose embed page is a stub (`EmbedBrokenMedia`).
+
+    Some creators switch embedding off per post; the embed page then carries
+    no username, caption or image. The post page still serves Open Graph tags
+    to link-preview crawlers, so read those instead. Observed 2026-09-25 on 6
+    of 63 @where.to.taste reels.
+
+    🔴 The og:image is the reel cover at 360x640 WITH A PLAY BUTTON BAKED INTO
+    ITS CENTRE (Instagram's link-preview treatment; the URL is signed, so no
+    variant without it can be requested). The hero this produces must be
+    replaced before it ships — the warning rides on `no_inline_reason` so it
+    prints in the batch's WILL NOT PLAY INLINE report. Such a post also
+    cannot play inline.
+    """
+    import html as _html
+    import re as _re
+
+    def og(prop):
+        g = _re.search(rf'<meta property="og:{prop}" content="([^"]*)"', html)
+        return _html.unescape(g.group(1)) if g else None
+
+    page, thumb, title = og("url"), og("image"), og("title")
+    g = _re.search(r"instagram\.com/([A-Za-z0-9._]+)/(?:p|reel|tv)/", page or "")
+    handle = g.group(1) if g else None
+    if not handle or not thumb:
+        raise SystemExit(
+            "COULD NOT VERIFY — Instagram's embed is disabled for this post and its\n"
+            f"link-preview tags yielded no handle and image. URL: {url}")
+    # og:title reads `Name on Instagram: "<caption>"`.
+    g = _re.search(r' on Instagram: "(.*)"\s*$', title or "", _re.S)
+    return {
+        "plays_inline": False,
+        "no_inline_reason": ("the creator has switched off embedding for this post"
+                             " — AND ITS COVER HAS A BAKED-IN PLAY BUTTON: replace the hero"),
+        "title": (g.group(1) if g else "").strip(),
+        "author_name": handle,
+        "author_unique_id": handle,
+        "author_url": f"https://www.instagram.com/{handle}/",
+        "provider_name": "Instagram",
+        "thumbnail_url": thumb,
+    }
+
+
 def instagram_meta(url: str) -> dict:
     """Instagram's oEmbed needs a Meta app token, but its **embed page** is
     public and carries everything we need in a JSON blob.
@@ -411,6 +458,11 @@ def instagram_meta(url: str) -> dict:
     handle = grab(r'\\"username\\":\\"(.*?)\\"')
     thumb = grab(r'\\"display_url\\":\\"(.*?)\\"')
     caption = grab(r'\\"edge_media_to_caption\\":\{\\"edges\\":\[\{\\"node\\":\{\\"text\\":\\"(.*?)\\"\}')
+    if (not handle or not thumb) and "EmbedBrokenMedia" in html:
+        # Embedding switched off for this post — the embed page is a stub.
+        return instagram_og_meta(
+            curl(f"https://www.instagram.com/{parts[parts.index(code) - 1]}/{code}/",
+                 agent=LINK_PREVIEW_AGENT), url)
     if not handle or not thumb:
         raise SystemExit(
             "COULD NOT VERIFY — Instagram's embed did not yield a handle and a\n"
@@ -687,6 +739,17 @@ def selftest() -> int:
           is_already_canonical("https://www.tiktok.com/@a/video/12345"), True)
     check("instagram reel is canonical",
           is_already_canonical("https://www.instagram.com/reel/ABC/"), True)
+    og_html = ('<meta property="og:title" content="Mariana | Food on Instagram: '
+               '&quot;Parra \U0001f377\n&#x1f377; bistro&quot;" />'
+               '<meta property="og:image" content="https://x.cdninstagram.com/a.jpg?a=1&amp;b=2" />'
+               '<meta property="og:url" content="https://www.instagram.com/where.to.taste/reel/C7R/" />')
+    og_meta = instagram_og_meta(og_html, "u")
+    check("embed-disabled post: handle from og:url", og_meta["author_name"], "where.to.taste")
+    check("embed-disabled post: caption unwrapped",
+          og_meta["title"], "Parra \U0001f377\n\U0001f377 bistro")
+    check("embed-disabled post: image unescaped",
+          og_meta["thumbnail_url"], "https://x.cdninstagram.com/a.jpg?a=1&b=2")
+    check("embed-disabled post never plays inline", og_meta["plays_inline"], False)
     # 🔴 Short forms must STILL resolve, or the same post shared two ways
     # hashes to two different pins.
     check("youtu.be is NOT canonical",
