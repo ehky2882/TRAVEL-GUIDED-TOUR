@@ -70,34 +70,37 @@ func dozentWordmark(_ trailing: String = "") -> Text {
 /// Reels-style: one segment per screen. 🔴 OWNER DECISION 2026-09-22 — *"B,
 /// Reels style, my preference"* — over the chapter-segmented alternative.
 ///
-/// Past segments fill, the current one half-fills, the rest are empty.
+/// Owner, 2026-09-26, on build 180: *"just have as many counts as there are
+/// screens"* and *"minimise the appearance of it … just white is fine."* So:
+/// · every segment up to and INCLUDING the current screen is full — no
+///   half-filled segment, which read as a screen you were partway through;
+/// · the count comes from the run actually being shown, so a replay (which
+///   drops the three account screens) draws 13 segments, not 16 with three
+///   that could never fill;
+/// · the fill is the primary ink, not brass — white in dark mode, black in
+///   light, where white would vanish on the ground.
 struct OnboardingProgressBar: View {
     /// Index of the current segment, or `nil` on a screen the bar skips.
     let index: Int?
+    /// How many segments this run has.
+    let count: Int
 
     var body: some View {
         HStack(spacing: 2.5) {
-            ForEach(0..<OnboardingFlow.progressSegmentCount, id: \.self) { i in
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule().fill(AtlasColors.primaryText.opacity(0.18))
-                        Capsule()
-                            .fill(AtlasColors.brass)
-                            .frame(width: geo.size.width * fraction(for: i))
-                    }
-                }
-                .frame(height: 3)
+            ForEach(0..<max(count, 0), id: \.self) { i in
+                Capsule()
+                    .fill(AtlasColors.primaryText.opacity(isFilled(i) ? 1 : 0.18))
+                    .frame(height: 3)
             }
         }
+        .frame(height: 3)
         .opacity(index == nil ? 0 : 1)
         .accessibilityHidden(true)
     }
 
-    private func fraction(for segment: Int) -> CGFloat {
-        guard let index else { return 0 }
-        if segment < index { return 1 }
-        if segment == index { return 0.52 }
-        return 0
+    private func isFilled(_ segment: Int) -> Bool {
+        guard let index else { return false }
+        return segment <= index
     }
 }
 
@@ -152,7 +155,10 @@ struct OnboardingLink: View {
 
 /// The frame every card is drawn into.
 struct OnboardingScaffold<Content: View, Actions: View>: View {
+    @Environment(OnboardingCoordinator.self) private var onboarding
     var progressIndex: Int?
+    /// Segments in this run — read from the coordinator, so every card agrees.
+    private var progressCount: Int { onboarding.progressCount }
     var expression: DozentExpression = .rest
     /// Screens 2 and the splash-adjacent ones hide the face; everything from 3
     /// on shows it in exactly the same spot.
@@ -165,7 +171,7 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            OnboardingProgressBar(index: progressIndex)
+            OnboardingProgressBar(index: progressIndex, count: progressCount)
                 .padding(.top, 9)
                 .padding(.horizontal, AtlasSpacing.lg)
 

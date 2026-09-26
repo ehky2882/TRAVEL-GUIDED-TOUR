@@ -118,9 +118,19 @@ final class OnboardingCoordinator {
 
     // MARK: - Progress
 
-    /// Which Reels segment is filling, or `nil` on a step the bar skips.
+    /// The steps in THIS run that carry the bar. A replay drops the account
+    /// screens, so its bar is shorter — one segment per screen shown, never a
+    /// segment for a screen that will not appear.
+    var progressSteps: [OnboardingStep] {
+        steps.filter { OnboardingStep.progressBarSteps.contains($0) }
+    }
+
+    /// Segments in this run's bar.
+    var progressCount: Int { progressSteps.count }
+
+    /// Which segment is current, or `nil` on a step the bar skips.
     var progressIndex: Int? {
         guard let step = currentStep else { return nil }
-        return OnboardingFlow.progressIndex(of: step)
+        return progressSteps.firstIndex(of: step)
     }
 }

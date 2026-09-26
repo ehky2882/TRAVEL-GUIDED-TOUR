@@ -236,6 +236,29 @@ final class OnboardingCoordinatorTests: XCTestCase {
         XCTAssertFalse(relaunched.holdsBottomModule)
     }
 
+    /// Owner on build 180: *"just have as many counts as there are screens."*
+    /// A replay shows 13 of them, so its bar must have 13 segments — not 16
+    /// with three that could never fill.
+    func testTheBarHasOneSegmentPerScreenInThisRun() {
+        let (coordinator, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        coordinator.begin()
+        XCTAssertEqual(coordinator.progressCount, 16)
+
+        coordinator.begin(replaying: true)
+        XCTAssertEqual(coordinator.progressCount, 13)
+
+        // Walk the replay: the index runs 0…12 with no gaps, and the last
+        // screen fills the last segment.
+        var seen: [Int] = []
+        while coordinator.isCovering {
+            if let i = coordinator.progressIndex { seen.append(i) }
+            coordinator.advance()
+        }
+        XCTAssertEqual(seen, Array(0..<13))
+    }
+
     func testReplayDropsTheAccountScreens() {
         let (coordinator, defaults, suite) = makeCoordinator()
         defer { defaults.removePersistentDomain(forName: suite) }
