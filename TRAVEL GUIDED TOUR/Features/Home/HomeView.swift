@@ -31,6 +31,7 @@ struct HomeView: View {
     /// nil simply means "not launching", which is the right default anywhere
     /// other than the real app's first seconds.
     @Environment(LaunchState.self) private var launchState: LaunchState?
+    @Environment(OnboardingCoordinator.self) private var onboarding: OnboardingCoordinator?
 
     /// Drawer detent — owned by `ContentView` so it persists across
     /// tab switches and so the drawer (also at `ContentView`) and the
@@ -415,7 +416,10 @@ struct HomeView: View {
         // mark somewhere to fly to. That was letting an animation dictate how
         // the map frames you — owner, 2026-08-22: *"I don't think it works."*
         // The mark no longer travels, so this is a plain centre again.
-        if launchState?.isSplashVisible == true {
+        // Also instant while onboarding is up: a camera flight that arrives
+        // after the first card clears makes the user watch the map travel
+        // somewhere for no reason.
+        if launchState?.isSplashVisible == true || onboarding?.isCovering == true {
             cameraPosition = .region(region)
             return
         }

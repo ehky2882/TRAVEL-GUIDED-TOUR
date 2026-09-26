@@ -24,6 +24,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // later in .task), so build it here and hand the same instance in.
         let auth = AuthService()
         _authService = State(initialValue: auth)
+        // 🔴 Built HERE, not in a view, because `willPresentWelcome` has to be
+        // settled before any view runs: `ContentView`'s location-permission
+        // guard reads it, and that `.onChange` fires before `begin()` does.
+        let onboardingStore = OnboardingStore()
+        _onboarding = State(initialValue: OnboardingCoordinator(store: onboardingStore))
         _makerProfileService = State(initialValue: MakerProfileService(auth: auth))
         _makerTourService = State(initialValue: MakerTourService(auth: auth))
         _followService = State(initialValue: FollowService(auth: auth))
@@ -32,6 +37,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
     }
 
     @State private var dataService = DataService()
+    /// Whether the first-run flow is on screen, and where it is up to.
+    /// See `Features/Onboarding/OnboardingCoordinator.swift`.
+    @State private var onboarding: OnboardingCoordinator
     @State private var authService: AuthService
     /// The signed-in user's own creator profile (their `makers` row). Loaded by
     /// the Profile tab; created/edited via the profile editor. See
@@ -320,6 +328,28 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 // window while the player is up — the cover slides
                 // over the module in the same window.
                 .environment(launchState)
+                .environment(onboarding)
+                // First run. Drawn UNDER the splash overlay below, so the
+                // hand-off still finishes over the top of it and the first
+                // card is already in place when the splash clears.
+                .overlay {
+                    if onboarding.isCovering {
+                        OnboardingRootView()
+                            .environment(onboarding)
+                            .transition(.opacity)
+                    }
+                }
+                // A cold deep link during first run is held, not dropped: it
+                // presents once onboarding closes. Presenting it underneath
+                // would put a detail layer behind the carousel.
+                .onChange(of: onboarding.isCovering) { _, covering in
+                    guard !covering, let link = pendingDeepLink else { return }
+                    pendingDeepLink = nil
+                    Task { @MainActor in
+                        try? await Task.sleep(for: .milliseconds(350))
+                        present(link)
+                    }
+                }
                 // The splash covers the whole app, including the inline
                 // fallback bars. It cannot cover the mini-player's separate
                 // window, though — that sits a level above every window in
@@ -422,6 +452,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
             try? await Task.sleep(for: .milliseconds(8))
         }
         await playHandOff()
+        // First run goes here — after the hand-off, so the permission alert
+        // and any deep link land over a finished screen rather than over the
+        // splash. `beginIfNeeded` is a no-op once this install has completed
+        // the current flow version.
+        if onboarding.beginIfNeeded() { return }
         if let link = pendingDeepLink {
             pendingDeepLink = nil
             try? await Task.sleep(for: .milliseconds(350))
