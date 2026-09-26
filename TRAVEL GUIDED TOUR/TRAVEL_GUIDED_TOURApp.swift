@@ -336,6 +336,12 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     if onboarding.isCovering {
                         OnboardingRootView()
                             .environment(onboarding)
+                            // 🔴 Passed in here, not inherited: this overlay
+                            // wraps the chain OUTSIDE the `.environment(...)`
+                            // calls on the content, so nothing set there
+                            // reaches it. Screen 14 reads the catalogue to
+                            // show the makers' real avatars.
+                            .environment(dataService)
                             .transition(.opacity)
                     }
                 }

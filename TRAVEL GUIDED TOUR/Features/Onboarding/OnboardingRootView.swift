@@ -523,6 +523,9 @@ private struct SuggestLeadInCard: View {
 
 private struct FollowSixCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
+    /// Optional: previews and tests have no catalogue, and the card still
+    /// draws — every avatar just falls back to initials.
+    @Environment(DataService.self) private var dataService: DataService?
     @State private var followed: Set<String> = []
 
     /// ⚠️ Keyed to INTERESTS, not city. 82% of the catalogue's cities have
@@ -533,12 +536,12 @@ private struct FollowSixCard: View {
     /// tags" needs a rule — most tours, most recent, most cities, or editorial
     /// — and until it exists this is a fixed list.
     private static let creators: [OnboardingCreator] = [
-        .init(initials: "AS", handle: "Atlas Studio LDN", tag: "ARCHITECTURE"),
-        .init(initials: "UA", handle: "@urbanistariel", tag: "ARCHITECTURE"),
-        .init(initials: "HA", handle: "@history_alice", tag: "HISTORY"),
-        .init(initials: "AM", handle: "@archimarathon", tag: "ARCHITECTURE"),
-        .init(initials: "HN", handle: "@hereinnyc", tag: "HISTORY"),
-        .init(initials: "BL", handle: "@benlookingatart", tag: "ART")
+        .init(initials: "AS", handle: "Atlas Studio LDN", catalogueHandle: "atlas.ldn", tag: "ARCHITECTURE"),
+        .init(initials: "UA", handle: "@urbanistariel", catalogueHandle: "urbanistariel", tag: "ARCHITECTURE"),
+        .init(initials: "HA", handle: "@history_alice", catalogueHandle: "history_alice", tag: "HISTORY"),
+        .init(initials: "AM", handle: "@archimarathon", catalogueHandle: "archimarathon", tag: "ARCHITECTURE"),
+        .init(initials: "HN", handle: "@hereinnyc", catalogueHandle: "hereinnyc", tag: "HISTORY"),
+        .init(initials: "BL", handle: "@benlookingatart", catalogueHandle: "benlookingatart", tag: "ART")
     ]
 
     private var chosenLabels: [String] {
@@ -584,16 +587,8 @@ private struct FollowSixCard: View {
     private func creatorCell(_ creator: OnboardingCreator) -> some View {
         let isFollowing = followed.contains(creator.handle)
         return VStack(spacing: 7) {
-            // 🔴 Every avatar is brass (owner, 2026-09-26). They were six
-            // different colours, which sorted the eye by colour — and the
-            // colours meant nothing.
-            ZStack {
-                Circle().fill(AtlasColors.brass)
-                Text(creator.initials)
-                    .font(.system(size: 17, weight: .bold, design: .monospaced))
-                    .foregroundStyle(Color.white)
-            }
-            .frame(width: 58, height: 58)
+            avatar(for: creator)
+                .frame(width: 58, height: 58)
             Text(creator.handle)
                 .font(.system(size: 10.5, weight: .bold, design: .monospaced))
                 .foregroundStyle(AtlasColors.primaryText)
@@ -616,6 +611,45 @@ private struct FollowSixCard: View {
             }
             .buttonStyle(.plain)
         }
+    }
+}
+
+extension FollowSixCard {
+    /// The maker's own avatar when they have one, brass initials when not.
+    ///
+    /// Owner on build 180: *"If there's an avatar/icon available it should be
+    /// shown here."* So a real photo wins, drawn by `MakerAvatarView` — the
+    /// same view every other surface in the app uses. So does an Atlas
+    /// studio's flag, which is that studio's brand mark.
+    ///
+    /// ⚠️ NOT a pinned creator's emoji. Every TikTok pin carries 🎵 and every
+    /// Instagram pin 📷 — a platform marker, identical across hundreds of
+    /// makers, not anyone's icon. Those fall through to brass initials.
+    ///
+    /// 🔴 The fallback stays BRASS (owner, 2026-09-26), deliberately not
+    /// `MakerAvatarView`'s own monogram, whose colour is hashed from the id
+    /// and would reintroduce the arbitrary palette the owner removed.
+    @ViewBuilder
+    func avatar(for creator: OnboardingCreator) -> some View {
+        if let maker = dataService?.makers.first(where: { $0.handle == creator.catalogueHandle }),
+           Self.hasOwnIcon(maker) {
+            MakerAvatarView(maker: maker, size: 58)
+        } else {
+            ZStack {
+                Circle().fill(AtlasColors.brass)
+                Text(creator.initials)
+                    .font(.system(size: 17, weight: .bold, design: .monospaced))
+                    .foregroundStyle(Color.white)
+            }
+        }
+    }
+
+    /// A photo always counts. An emoji counts only for an Atlas studio,
+    /// where it is a chosen brand mark rather than a platform stamp.
+    static func hasOwnIcon(_ maker: Maker) -> Bool {
+        if let url = maker.avatarURL, !url.isEmpty { return true }
+        if maker.platform == "dozent", let emoji = maker.avatarEmoji, !emoji.isEmpty { return true }
+        return false
     }
 }
 
@@ -748,7 +782,11 @@ struct OnboardingInterest: Identifiable {
 /// One of the six suggested makers on screen 14.
 struct OnboardingCreator: Identifiable {
     let initials: String
+    /// What the card prints.
     let handle: String
+    /// `Maker.handle` in the catalogue — how the card finds the real maker,
+    /// and with it their real avatar.
+    let catalogueHandle: String
     let tag: String
     var id: String { handle }
 }
