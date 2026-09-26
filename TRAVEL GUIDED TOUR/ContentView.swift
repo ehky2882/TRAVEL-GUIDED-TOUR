@@ -49,6 +49,13 @@ struct ContentView: View {
     @Environment(BottomModuleWindowController.self) private var bottomModuleWindow: BottomModuleWindowController?
     /// Optional so previews and tests still render. Present on the real app.
     @Environment(OnboardingCoordinator.self) private var onboarding: OnboardingCoordinator?
+    @Environment(CoachMarkCenter.self) private var coachMarks: CoachMarkCenter?
+
+    /// From the first onboarding card to the last coach-mark stop. The
+    /// location prompt waits for this, so it never lands on a card or a stop.
+    private var firstRunIsActive: Bool {
+        (onboarding?.isCovering ?? false) || (coachMarks?.isRunning ?? false)
+    }
 
     /// `.onAppear` fires every time the view re-attaches (tab switch,
     /// returning from background, etc.). Request location permission
@@ -230,9 +237,11 @@ struct ContentView: View {
             guard onboarding?.willPresentWelcome != true else { return }
             requestLocationPermissionIfNeeded()
         }
-        // …and asked for once onboarding closes instead.
-        .onChange(of: onboarding?.isCovering ?? false) { _, covering in
-            guard !covering else { return }
+        // …and asked for once first run is over — after the navigation
+        // tour's last stop, not when onboarding closes, because that is the
+        // moment the tour's first stop appears.
+        .onChange(of: firstRunIsActive) { _, active in
+            guard !active else { return }
             requestLocationPermissionIfNeeded()
         }
 
@@ -606,6 +615,7 @@ struct ContentView: View {
                     sheetDetent: $homeSheetDetent
                 )
             }
+            .coachMarkAnchor(.drawer)
         }
     }
 

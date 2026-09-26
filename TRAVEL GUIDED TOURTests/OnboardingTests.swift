@@ -291,3 +291,126 @@ final class OnboardingInterestsTests: XCTestCase {
         }
     }
 }
+
+// MARK: - The navigation tour
+
+@MainActor
+final class CoachMarkCenterTests: XCTestCase {
+    private func makeCenter() -> (CoachMarkCenter, OnboardingStore, UserDefaults, String) {
+        let suite = "coachmarks.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suite)!
+        let store = OnboardingStore(defaults: defaults)
+        return (CoachMarkCenter(store: store), store, defaults, suite)
+    }
+
+    /// Owner's order, 2026-09-22: "1. map 2. search bar 3. filters 4. drawer
+    /// 5. tab bar".
+    func testTheStopsRunInTheOwnersOrder() {
+        let (center, _, defaults, suite) = makeCenter()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        var seen: [CoachMark] = []
+        center.beginTour()
+        while let mark = center.current {
+            seen.append(mark)
+            center.advance()
+        }
+        XCTAssertEqual(seen, [.map, .search, .filters, .drawer, .tabBar])
+        XCTAssertFalse(center.isRunning)
+        XCTAssertTrue(center.hasSeenAll)
+    }
+
+    func testOnlyTheLastStopSaysGotIt() {
+        XCTAssertEqual(CoachMark.tabBar.buttonTitle, "Got it")
+        for mark in CoachMark.tour.dropLast() {
+            XCTAssertEqual(mark.buttonTitle, "Next")
+        }
+    }
+
+    /// The map IS the screen, so it is the one stop with nothing to cut out.
+    func testOnlyTheMapHasNoSpotlight() {
+        XCTAssertFalse(CoachMark.map.hasSpotlight)
+        for mark in CoachMark.tour where mark != .map {
+            XCTAssertTrue(mark.hasSpotlight)
+        }
+    }
+
+    /// Settings → "Show tips again" must actually run the tour again, not just
+    /// clear a flag that nothing reads.
+    func testReplayForgetsAndRestarts() {
+        let (center, _, defaults, suite) = makeCenter()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        center.beginTour()
+        center.finish()
+        XCTAssertTrue(center.hasSeenAll)
+
+        center.replay()
+        XCTAssertEqual(center.current, .map)
+        XCTAssertFalse(center.hasSeenAll)
+    }
+
+    /// Mid-layout frames arrive empty; one would put the spotlight in the
+    /// top-left corner for a frame.
+    func testEmptyFramesAreIgnored() {
+        let (center, _, defaults, suite) = makeCenter()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        center.setAnchor(.search, .zero)
+        XCTAssertNil(center.anchors[.search])
+        center.setAnchor(.search, CGRect(x: 8, y: 67, width: 377, height: 44))
+        XCTAssertNotNil(center.anchors[.search])
+        center.clearAnchor(.search)
+        XCTAssertNil(center.anchors[.search])
+    }
+
+    /// The hand-off from onboarding to the tour happens in the SAME call.
+    /// Done as two updates there was a moment where neither was on screen, and
+    /// the location prompt would have landed on the tour's first stop.
+    func testClosingOnboardingStartsTheTourInTheSameCall() {
+        let suite = "handoff.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suite)!
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let store = OnboardingStore(defaults: defaults)
+        let onboarding = OnboardingCoordinator(store: store)
+        let center = CoachMarkCenter(store: store)
+        onboarding.onFinish = { center.beginTour() }
+
+        onboarding.begin()
+        onboarding.finish()
+
+        XCTAssertFalse(onboarding.isCovering)
+        XCTAssertTrue(center.isRunning, "no gap between onboarding and the tour")
+    }
+}
+
+#if canImport(UIKit)
+/// 🔴 The tour's overlay lives in the bars' window, which normally takes only
+/// the strip the bars paint. While the tour is up it must take every touch —
+/// and the moment it ends, give them all back. Stuck on, the whole app is dead.
+final class PassThroughWindowClaimTests: XCTestCase {
+    private let height: CGFloat = 852
+    private let strip: CGFloat = 126
+
+    func testOrdinarilyOnlyTheBottomStripIsTaken() {
+        XCTAssertFalse(PassThroughWindow.claimsTouch(
+            atY: 300, windowHeight: height, interactiveBottomInset: strip,
+            isPresentingModal: false, claimsEntireScreen: false))
+        XCTAssertTrue(PassThroughWindow.claimsTouch(
+            atY: 800, windowHeight: height, interactiveBottomInset: strip,
+            isPresentingModal: false, claimsEntireScreen: false))
+    }
+
+    func testTheTourTakesEveryTouch() {
+        XCTAssertTrue(PassThroughWindow.claimsTouch(
+            atY: 10, windowHeight: height, interactiveBottomInset: strip,
+            isPresentingModal: false, claimsEntireScreen: true))
+    }
+
+    func testTheFullPlayerStillTakesEveryTouch() {
+        XCTAssertTrue(PassThroughWindow.claimsTouch(
+            atY: 10, windowHeight: height, interactiveBottomInset: strip,
+            isPresentingModal: true, claimsEntireScreen: false))
+    }
+}
+#endif

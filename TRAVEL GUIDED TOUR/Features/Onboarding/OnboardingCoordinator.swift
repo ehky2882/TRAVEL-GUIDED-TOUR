@@ -53,6 +53,16 @@ final class OnboardingCoordinator {
     /// launch. The account screens are dropped — see `OnboardingFlow.steps`.
     private(set) var isReplay = false
 
+    /// Runs in the SAME call that closes the flow — the App wires it to start
+    /// the navigation tour.
+    ///
+    /// 🔴 Deliberately a synchronous hand-off, not an `.onChange` on
+    /// `isCovering`. Done as two separate updates, there was a moment where
+    /// neither onboarding nor the tour was on screen, and `ContentView` —
+    /// which asks for location the instant first run is over — would put the
+    /// system alert on top of the tour's first stop.
+    var onFinish: (@MainActor () -> Void)?
+
     /// Set when the user takes Apple or Google on screen 5, which shortens the
     /// form on screen 6 to the one thing a provider cannot give us.
     var usedProvider = false
@@ -111,6 +121,7 @@ final class OnboardingCoordinator {
         steps = []
         index = 0
         store.markCompleted()
+        onFinish?()
     }
 
     /// Settings → "Show tips again". Clears only the coach-mark record.

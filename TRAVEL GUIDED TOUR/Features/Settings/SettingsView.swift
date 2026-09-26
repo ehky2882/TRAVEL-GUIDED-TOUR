@@ -46,10 +46,8 @@ struct SettingsView: View {
     /// Optional for the same reason. Drives the HELP section below.
     @Environment(OnboardingCoordinator.self) private var onboarding: OnboardingCoordinator?
     @Environment(\.dismiss) private var dismiss
+    @Environment(CoachMarkCenter.self) private var coachMarks: CoachMarkCenter?
     @State private var showingSignIn = false
-    /// One-shot confirmation under "Show tips again" — the row has no visible
-    /// effect otherwise, so tapping it would read as broken.
-    @State private var didResetTips = false
     /// Drives the "Checking…" label while the catalogue refresh runs.
     /// `DataService.isRefreshing` is private and un-observed, so the only
     /// honest way to show the tap did something is to track it here.
@@ -296,14 +294,21 @@ struct SettingsView: View {
                             Label("Take the app tour", systemImage: "sparkles")
                         }
 
-                        Button {
-                            onboarding.resetCoachMarks()
-                            didResetTips = true
-                        } label: {
-                            Label(didResetTips ? "Tips will show again" : "Show tips again",
-                                  systemImage: "lightbulb")
+                        // Runs the five-stop navigation tour again, straight
+                        // away, over Home. Same dismiss-then-run dance as the
+                        // row above, for the same reason: the tour draws in the
+                        // bars' window, which a sheet sits on top of.
+                        if let coachMarks {
+                            Button {
+                                dismiss()
+                                Task { @MainActor in
+                                    try? await Task.sleep(for: .milliseconds(350))
+                                    coachMarks.replay()
+                                }
+                            } label: {
+                                Label("Show tips again", systemImage: "lightbulb")
+                            }
                         }
-                        .disabled(didResetTips)
                     }
                 }
 

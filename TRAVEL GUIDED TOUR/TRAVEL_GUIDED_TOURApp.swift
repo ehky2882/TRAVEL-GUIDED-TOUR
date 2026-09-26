@@ -28,7 +28,17 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // settled before any view runs: `ContentView`'s location-permission
         // guard reads it, and that `.onChange` fires before `begin()` does.
         let onboardingStore = OnboardingStore()
-        _onboarding = State(initialValue: OnboardingCoordinator(store: onboardingStore))
+        let onboardingCoordinator = OnboardingCoordinator(store: onboardingStore)
+        // The navigation tour shares the store: it records which stops were
+        // seen, and Settings → "Show tips again" resets exactly that.
+        let coachMarkCenter = CoachMarkCenter(store: onboardingStore)
+        // Onboarding closing hands straight to the navigation tour — after a
+        // first run, a replay, and a Skip alike (skipping the account screens
+        // is not skipping learning the app). Synchronous, in the same call; see
+        // `OnboardingCoordinator.onFinish` for why an `.onChange` was a race.
+        onboardingCoordinator.onFinish = { [coachMarkCenter] in coachMarkCenter.beginTour() }
+        _onboarding = State(initialValue: onboardingCoordinator)
+        _coachMarks = State(initialValue: coachMarkCenter)
         _makerProfileService = State(initialValue: MakerProfileService(auth: auth))
         _makerTourService = State(initialValue: MakerTourService(auth: auth))
         _followService = State(initialValue: FollowService(auth: auth))
@@ -40,6 +50,14 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// Whether the first-run flow is on screen, and where it is up to.
     /// See `Features/Onboarding/OnboardingCoordinator.swift`.
     @State private var onboarding: OnboardingCoordinator
+    /// The five-stop navigation tour that runs when onboarding closes.
+    /// See `Features/Onboarding/CoachMarks/CoachMarkCenter.swift`.
+    @State private var coachMarks: CoachMarkCenter
+
+    /// True from the first onboarding card to the last coach-mark stop.
+    /// The location prompt and any held deep link both wait for this to end,
+    /// so neither lands over a card or a stop.
+    private var firstRunIsActive: Bool { onboarding.isCovering || coachMarks.isRunning }
     @State private var authService: AuthService
     /// The signed-in user's own creator profile (their `makers` row). Loaded by
     /// the Profile tab; created/edited via the profile editor. See
@@ -182,6 +200,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 ContentView()
             }
                 .environment(dataService)
+                .environment(coachMarks)
                 .environment(instagramResolver)
                 .environment(authService)
                 .environment(makerProfileService)
@@ -353,8 +372,18 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .onChange(of: onboarding.holdsBottomModule) { _, _ in
                     syncBottomModuleVisibility()
                 }
-                .onChange(of: onboarding.isCovering) { _, covering in
-                    guard !covering, let link = pendingDeepLink else { return }
+                // The tour's overlay lives in the bars' window, which must
+                // take every touch while it shows — and give them back after.
+                .onChange(of: coachMarks.isRunning) { _, running in
+                    // Every stop points at Home's controls. "Show tips again"
+                    // is tapped from the Me tab, so bring Home forward first —
+                    // Home stays mounted when hidden, and its controls would
+                    // otherwise report frames for things nobody can see.
+                    if running { appShared.selectedTab = .home }
+                    syncBottomModuleVisibility()
+                }
+                .onChange(of: firstRunIsActive) { _, active in
+                    guard !active, let link = pendingDeepLink else { return }
                     pendingDeepLink = nil
                     Task { @MainActor in
                         try? await Task.sleep(for: .milliseconds(350))
@@ -578,6 +607,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             })
                 .environment(launchState)
                 .environment(dataService)
+                .environment(coachMarks)
                 .environment(authService)
                 .environment(followService)
                 .environment(purchaseService)
@@ -618,6 +648,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// re-derivation, not a command, which is exactly what makes it a self-heal
     /// rather than one more thing that can be missed.
     private func syncBottomModuleVisibility() {
+        // 🔴 Derived, like the visibility below: while the navigation tour is
+        // up the bars' window claims every touch (its overlay covers the whole
+        // screen); the moment it closes, the claim goes. Re-asserted on every
+        // foreground, so a claim can never outlive the tour.
+        bottomModuleWindow.setClaimsEntireScreen(coachMarks.isRunning)
         bottomModuleWindow.setHidden(
             BottomModuleWindowController.shouldWithdraw(
                 launchHoldsModule: launchHoldsBottomModule,
