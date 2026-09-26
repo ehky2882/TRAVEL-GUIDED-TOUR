@@ -26,6 +26,25 @@ final class OnboardingCoordinator {
     /// True while any onboarding card is on screen.
     private(set) var isCovering = false
 
+    /// Set by the first `begin()` of this process.
+    private(set) var hasBegun = false
+
+    /// Should the bottom module (mini-player + tab bar) be withdrawn?
+    ///
+    /// 🔴 That module lives in its OWN `UIWindow`, one level ABOVE the main
+    /// window, so it paints over anything the main window draws — onboarding
+    /// included. Build 179 shipped without this and the bars sat on top of
+    /// the first card, covering Continue: the flow could not be advanced.
+    ///
+    /// Also true in the gap between the splash handing off and `begin()`
+    /// running, so the bars do not flash in and straight back out. That gap
+    /// is a single synchronous step in `runLaunchGate` — `beginIfNeeded()` is
+    /// the very next line after the hand-off — so this cannot strand the bars
+    /// hidden (the failure this app has shipped three times).
+    var holdsBottomModule: Bool {
+        isCovering || (willPresentWelcome && !hasBegun)
+    }
+
     /// The steps for the run in progress.
     private(set) var steps: [OnboardingStep] = []
     private(set) var index = 0
@@ -57,6 +76,7 @@ final class OnboardingCoordinator {
     /// Present the flow from the top. Called after the launch hand-off, and
     /// again from Settings when the user asks for the tour.
     func begin(replaying: Bool = false) {
+        hasBegun = true
         isReplay = replaying
         usedProvider = false
         steps = OnboardingFlow.steps(replaying: replaying)

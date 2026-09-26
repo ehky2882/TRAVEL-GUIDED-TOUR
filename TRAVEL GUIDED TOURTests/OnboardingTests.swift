@@ -194,6 +194,48 @@ final class OnboardingCoordinatorTests: XCTestCase {
         XCTAssertEqual(coordinator.currentStep, .faceAppears)
     }
 
+    /// 🔴 Build 179: the bars' window sits ABOVE the main window, so it painted
+    /// over the first card and covered Continue — the flow could not advance.
+    /// The hold must cover the whole run, and release when it closes.
+    func testFirstRunWithdrawsTheBottomModuleUntilItCloses() {
+        let (coordinator, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        // Between the splash handing off and `begin()` — no flash of bars.
+        XCTAssertTrue(coordinator.holdsBottomModule)
+        coordinator.begin()
+        XCTAssertTrue(coordinator.holdsBottomModule)
+        coordinator.finish()
+        XCTAssertFalse(coordinator.holdsBottomModule)
+    }
+
+    /// The failure this app has shipped three times is the bars going missing
+    /// for a whole session. An install that has finished onboarding must
+    /// never hold them, not even for an instant.
+    func testACompletedInstallNeverWithdrawsTheBottomModule() {
+        let (first, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+        first.begin()
+        first.finish()
+
+        let relaunched = OnboardingCoordinator(store: OnboardingStore(defaults: defaults))
+        XCTAssertFalse(relaunched.holdsBottomModule)
+    }
+
+    /// A replay from Settings must hold them too, and give them back.
+    func testReplayWithdrawsAndRestoresTheBottomModule() {
+        let (first, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+        first.begin()
+        first.finish()
+
+        let relaunched = OnboardingCoordinator(store: OnboardingStore(defaults: defaults))
+        relaunched.begin(replaying: true)
+        XCTAssertTrue(relaunched.holdsBottomModule)
+        relaunched.finish()
+        XCTAssertFalse(relaunched.holdsBottomModule)
+    }
+
     func testReplayDropsTheAccountScreens() {
         let (coordinator, defaults, suite) = makeCoordinator()
         defer { defaults.removePersistentDomain(forName: suite) }

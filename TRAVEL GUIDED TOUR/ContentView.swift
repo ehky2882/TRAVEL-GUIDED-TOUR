@@ -200,7 +200,8 @@ struct ContentView: View {
             if let bottomModuleWindow,
                BottomModuleWindowController.rendersInlineFallback(
                    isShowingBars: bottomModuleWindow.isShowingBars,
-                   withdrawnByScreen: appShared.hidesBottomModule,
+                   withdrawnByScreen: appShared.hidesBottomModule
+                       || (onboarding?.holdsBottomModule ?? false),
                    isSplashVisible: launchState?.isSplashVisible ?? false
                ) {
                 BottomModuleRoot()

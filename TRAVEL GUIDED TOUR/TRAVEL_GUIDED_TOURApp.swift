@@ -342,6 +342,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 // A cold deep link during first run is held, not dropped: it
                 // presents once onboarding closes. Presenting it underneath
                 // would put a detail layer behind the carousel.
+                // Re-derive the bars' visibility whenever onboarding opens or
+                // closes — including a replay started from Settings.
+                .onChange(of: onboarding.holdsBottomModule) { _, _ in
+                    syncBottomModuleVisibility()
+                }
                 .onChange(of: onboarding.isCovering) { _, covering in
                     guard !covering, let link = pendingDeepLink else { return }
                     pendingDeepLink = nil
@@ -610,7 +615,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
         bottomModuleWindow.setHidden(
             BottomModuleWindowController.shouldWithdraw(
                 launchHoldsModule: launchHoldsBottomModule,
-                withdrawnByScreen: appShared.hidesBottomModule
+                // Onboarding counts as a screen that withdraws the bars:
+                // their window sits above the main one and would otherwise
+                // paint over the cards and swallow taps on Continue.
+                withdrawnByScreen: appShared.hidesBottomModule || onboarding.holdsBottomModule
             )
         )
     }
