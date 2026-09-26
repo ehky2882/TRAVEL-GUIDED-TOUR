@@ -91,8 +91,12 @@ private struct FaceMarks: View {
     private var mouth: some View {
         switch expression {
         case .rest, .wink:
-            // A small upward arc — the same curve as an eye, turned over.
-            ArcStroke(width: radius * 0.46, dip: -radius * 0.17)
+            // A smile: the middle sits LOWER than the ends. 🔴 Positive `dip`.
+            // Build 180 shipped this negative and every resting face on the
+            // run was frowning (owner: *"why would a face ever be frowning?!"*).
+            // Screen y grows downward, so "curves up" in the geometry is a
+            // frown on the glass. The eyes are the same curve, same sign.
+            ArcStroke(width: radius * 0.46, dip: radius * 0.17)
                 .stroke(ink, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                 .frame(width: radius * 0.46, height: radius * 0.17)
         case .beam:
@@ -108,7 +112,9 @@ private struct FaceMarks: View {
     }
 }
 
-/// A single quadratic arc. `dip` positive curves downward, negative upward.
+/// A single quadratic arc. `dip` positive pulls the MIDDLE DOWN — on screen
+/// that is a smile (‿). Negative pulls it up, which reads as a frown (⌒); no
+/// expression uses that.
 private struct ArcStroke: Shape {
     var width: CGFloat
     var dip: CGFloat
