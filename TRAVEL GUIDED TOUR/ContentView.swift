@@ -47,6 +47,8 @@ struct ContentView: View {
     /// still render. When present and not installed, the bottom module is drawn
     /// inline as a fallback — see the render site in `body`.
     @Environment(BottomModuleWindowController.self) private var bottomModuleWindow: BottomModuleWindowController?
+    /// Optional so previews and tests still render. Present on the real app.
+    @Environment(OnboardingCoordinator.self) private var onboarding: OnboardingCoordinator?
 
     /// `.onAppear` fires every time the view re-attaches (tab switch,
     /// returning from background, etc.). Request location permission
@@ -220,6 +222,16 @@ struct ContentView: View {
         // stall the gate.
         .onChange(of: launchState?.isSplashVisible ?? false) { _, splashVisible in
             guard !splashVisible else { return }
+            // 🔴 Withheld through first run. `willPresentWelcome` is resolved in
+            // App `init`, NOT read live: this `.onChange` fires before
+            // `OnboardingCoordinator.begin()` does, so a live `isCovering`
+            // check would still let the system alert land over the first card.
+            guard onboarding?.willPresentWelcome != true else { return }
+            requestLocationPermissionIfNeeded()
+        }
+        // …and asked for once onboarding closes instead.
+        .onChange(of: onboarding?.isCovering ?? false) { _, covering in
+            guard !covering else { return }
             requestLocationPermissionIfNeeded()
         }
 

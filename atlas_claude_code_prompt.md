@@ -367,7 +367,17 @@ roadmap milestones spell out which.
 - **No push notifications.** Local notifications for geofenced stop
   arrivals are allowed (they're how the geofence trigger surfaces when
   the app is backgrounded).
-- **No onboarding tutorial.** The app should be self-evident.
+- ~~**No onboarding tutorial.** The app should be self-evident.~~
+  **🔴 REVISED 2026-09-26 — a first-run flow IS in scope.** That line was
+  written for a 12-tour V1 with no accounts, no paywall, no maker wizard and
+  no Group Listen. The app now carries a three-detent map drawer, multi-select
+  tag filtering, geofenced auto-play, offline download, Group Listen, Lists,
+  Places, link pins, follows, accounts + sync, ten IAP tiers and a seven-step
+  maker wizard — and roughly fourteen of those behaviours have no discoverable
+  affordance at all. "Self-evident" stopped being true some time ago.
+  The flow lives in `Features/Onboarding/`, runs once, and is replayable from
+  Settings → HELP. It is **never a gate**: every account screen can be skipped,
+  which keeps the promise the App Store listing makes.
 - **No advanced search.** V1 has a minimal search bar (title /
   maker / category — see "Key screens" below), but no filters,
   facets, sort options, fuzzy matching, or saved-search features.

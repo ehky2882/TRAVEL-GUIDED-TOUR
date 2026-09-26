@@ -43,7 +43,13 @@ struct SettingsView: View {
     /// Optional, like every other main-window reader: Settings is also built in
     /// previews and tests where no cross-window state is injected.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    /// Optional for the same reason. Drives the HELP section below.
+    @Environment(OnboardingCoordinator.self) private var onboarding: OnboardingCoordinator?
+    @Environment(\.dismiss) private var dismiss
     @State private var showingSignIn = false
+    /// One-shot confirmation under "Show tips again" — the row has no visible
+    /// effect otherwise, so tapping it would read as broken.
+    @State private var didResetTips = false
     /// Drives the "Checking…" label while the catalogue refresh runs.
     /// `DataService.isRefreshing` is private and un-observed, so the only
     /// honest way to show the tap did something is to track it here.
@@ -269,6 +275,38 @@ struct SettingsView: View {
                 // are canonical on dozent.world so there is one copy to keep
                 // current, rather than a bundled duplicate that silently
                 // drifts out of date.
+                // The revisitable half of the app tour (surface 6 of the six
+                // the owner named). Both rows are no-ops if the coordinator
+                // is absent, which is only ever previews and tests.
+                if let onboarding {
+                    Section(header: sectionHeader("Help")) {
+                        Button {
+                            // 🔴 Settings is a SHEET (`ProfileView`), and the
+                            // onboarding overlay lives at App level — UNDER
+                            // that sheet. Dismiss first, then replay on the
+                            // next runloop turn, or the flow presents where
+                            // nobody can see it. This repo has shipped that
+                            // bug twice.
+                            dismiss()
+                            Task { @MainActor in
+                                try? await Task.sleep(for: .milliseconds(350))
+                                onboarding.begin(replaying: true)
+                            }
+                        } label: {
+                            Label("Take the app tour", systemImage: "sparkles")
+                        }
+
+                        Button {
+                            onboarding.resetCoachMarks()
+                            didResetTips = true
+                        } label: {
+                            Label(didResetTips ? "Tips will show again" : "Show tips again",
+                                  systemImage: "lightbulb")
+                        }
+                        .disabled(didResetTips)
+                    }
+                }
+
                 Section(header: sectionHeader("Legal")) {
                     Link(destination: AtlasLegalLinks.privacy) {
                         Label("Privacy Policy", systemImage: "hand.raised")

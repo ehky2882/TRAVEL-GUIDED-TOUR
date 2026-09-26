@@ -476,7 +476,7 @@ is the handoff's job, and `STATUS.md`'s for anything still in flight across para
 | `scripts/validate-tours.swift` | Validates `Tours.json`; run: `swift scripts/validate-tours.swift` |
 | `scripts/make-place-menu.py` | **Regenerates `docs/place-candidates-260911.md`, the live place-candidate menu** — re-run it, never hand-patch it: 45 of the first sweep's rows became places within hours. Escapes pipes in bilingual titles (24 entries carry one) and refuses to write a table whose columns do not line up |
 | `scripts/merge-link-pins.py` | Merges `make-link-pin.py`'s output into `Tours.json` disk-to-disk, so a batch's JSON never passes through context. Idempotent; refuses pins in `tours`, missing coordinates, and a non-byte-stable catalog |
-| `TRAVEL GUIDED TOURTests/` | 6 XCTest classes, data/logic layer |
+| `TRAVEL GUIDED TOURTests/` | XCTest classes covering the data/logic layer — **re-derive the count, never quote it** (`grep -rc 'XCTestCase' 'TRAVEL GUIDED TOURTests'/*.swift`); this cell read "6" while the target held 68 |
 | `archive/` | Dated session snapshots |
 
 **`validate-tours.swift` mirrors `Tour/Stop/Maker/TourCategory.swift` — update the script in the same commit if any model changes.**
@@ -553,4 +553,6 @@ Tokens in `Theme/` are single source of truth. **Brand accent is decided: dark g
 
 ## Out of Scope for V1
 
-No: backend/API, user accounts/auth, in-app maker upload, payments/IAP, moderation, comments/reviews/ratings, follow/sharing/social, push notifications (local geofence notifications OK), onboarding tutorial, in-app search, analytics SDK. Don't introduce any without a spec update.
+No: backend/API, user accounts/auth, in-app maker upload, payments/IAP, moderation, comments/reviews/ratings, follow/sharing/social, push notifications (local geofence notifications OK), in-app search, analytics SDK. Don't introduce any without a spec update.
+
+**🔴 "onboarding tutorial" was removed from that list on 2026-09-26.** A first-run flow is in scope and is being built — `Features/Onboarding/`, once per install, replayable from Settings → HELP, never a gate. See `atlas_claude_code_prompt.md` § Out of Scope for why the original line no longer held. ⚠️ Seven of the ten items on this list shipped anyway before anyone revisited it; if you are about to build something else named here, amend the spec in the same PR rather than contradicting it quietly.
