@@ -588,3 +588,12 @@ same way at ship time.
 **No credit required:** `alserkal-avenue_hero.webp` is Wikimedia **CC0**, and the
 `al-shindagha_hero.webp` / `difc-gate_hero.webp` heroes are owner-supplied (both
 carry provenance flags — see `drafts/dubai-batch1/README.md`).
+
+## Istanbul batch 1 (Atlas Studio IST) — 187 images, licence per image NOT recorded
+
+Wired 2026-09-28. The contributor supplied every photograph (1200×900 webp, already
+cropped) and described them as **"from Creative Commons"**. No per-image source,
+author or licence came with them, so none can be listed here yet, and the crops defeat
+a SHA-1 lookup against Commons. **Owner item `istanbul-photo-licences`** asks Edward
+to accept them as shipped or have the contributor send a source link per image; any
+CC BY / BY-SA rows then belong in this section.
