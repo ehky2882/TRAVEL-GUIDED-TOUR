@@ -5379,6 +5379,96 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/where.to.taste/"
+    },
+    {
+      "id": "91643F45-7315-54F2-86B3-57A54F653CE9",
+      "displayName": "Instagram @flipdaddie",
+      "platform": "instagram",
+      "handle": "flipdaddie",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/flipdaddie/"
+    },
+    {
+      "id": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "displayName": "Instagram @historyskills",
+      "platform": "instagram",
+      "handle": "historyskills",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/historyskills/"
+    },
+    {
+      "id": "64D644DC-8182-53E1-BB83-D97EC0099C40",
+      "displayName": "Instagram @diegosomewhere",
+      "platform": "instagram",
+      "handle": "diegosomewhere",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/diegosomewhere/"
+    },
+    {
+      "id": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "displayName": "TikTok @chiara_in_italy",
+      "platform": "tiktok",
+      "handle": "chiara_in_italy",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-chiara-in-italy.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@chiara_in_italy"
+    },
+    {
+      "id": "23EA5CC1-BF96-51F9-A9EE-711B9421BE28",
+      "displayName": "Instagram @jacobzander_",
+      "platform": "instagram",
+      "handle": "jacobzander_",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/jacobzander_/"
+    },
+    {
+      "id": "94D27D01-61B4-54C5-8EBD-7F29782092FB",
+      "displayName": "Instagram @reinesoleill",
+      "platform": "instagram",
+      "handle": "reinesoleill",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/reinesoleill/"
+    },
+    {
+      "id": "3198A503-1E7B-55B6-9FC6-BFB50647B75B",
+      "displayName": "Instagram @thedesignssuite",
+      "platform": "instagram",
+      "handle": "thedesignssuite",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/thedesignssuite/"
+    },
+    {
+      "id": "BDACA203-163C-5D6E-B61F-87126BE6DE9A",
+      "displayName": "Instagram @scot.landbeauty",
+      "platform": "instagram",
+      "handle": "scot.landbeauty",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/scot.landbeauty/"
+    },
+    {
+      "id": "AF86B311-4380-5867-B1C0-0BDE79D8EE20",
+      "displayName": "Instagram @babatunde_roy",
+      "platform": "instagram",
+      "handle": "babatunde_roy",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/babatunde_roy/"
     }
   ],
   "tours": [
@@ -18574,12 +18664,12 @@
       "relatedTourIds": [
         "5dae724d-b494-4886-b056-e2e276b40ded",
         "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
         "70a6cf56-ba03-4be2-b569-dda7b08ef7a4",
         "e812b4fa-35dd-4715-9b60-b068db0741d7",
-        "0c535436-71b3-4af1-9258-154d84ca3acf",
-        "224a9981-9d3a-4364-9d6a-b93c6b18e332"
+        "0c535436-71b3-4af1-9258-154d84ca3acf"
       ],
       "walkingDistanceMeters": null
     },
@@ -18808,8 +18898,8 @@
         "483551c1-c37f-43cf-af2e-066fe1fce456",
         "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
         "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
-        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
-        "06caa939-25fe-4f25-8936-5ac6b4993db8"
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
+        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb"
       ],
       "walkingDistanceMeters": null
     },
@@ -21222,13 +21312,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "5dae724d-b494-4886-b056-e2e276b40ded",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
         "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
         "483551c1-c37f-43cf-af2e-066fe1fce456",
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
-        "1bba7d45-498d-4885-ba93-c77a491727d3",
-        "06caa939-25fe-4f25-8936-5ac6b4993db8"
+        "1bba7d45-498d-4885-ba93-c77a491727d3"
       ],
       "walkingDistanceMeters": null
     },
@@ -21285,11 +21375,11 @@
         "5dae724d-b494-4886-b056-e2e276b40ded",
         "f76079e2-b876-4451-a3ba-551886f9c4be",
         "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
         "483551c1-c37f-43cf-af2e-066fe1fce456",
         "e812b4fa-35dd-4715-9b60-b068db0741d7",
-        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
-        "a342e458-5de5-4e74-82bf-26fc6b1ea4c0"
+        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb"
       ],
       "walkingDistanceMeters": null
     },
@@ -21906,14 +21996,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "808399A7-5925-512E-ADD5-00AC2B98E734",
         "243083e3-5607-5a7a-88b3-4e948c605e72",
         "f24f565f-efcd-4631-b20b-211e326996e7",
         "f8c2a6e1-9b43-4e54-8a06-3c9e7b2d1f98",
         "5dae724d-b494-4886-b056-e2e276b40ded",
         "70a6cf56-ba03-4be2-b569-dda7b08ef7a4",
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
-        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
-        "a342e458-5de5-4e74-82bf-26fc6b1ea4c0"
+        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb"
       ],
       "walkingDistanceMeters": null
     },
@@ -26387,10 +26477,10 @@
         "06caa939-25fe-4f25-8936-5ac6b4993db8",
         "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
         "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "bc4fca93-4c40-4041-8303-ddf4422fba1c",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
-        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
-        "0eb6ec6f-cc39-4016-861b-8fee4ac64e07"
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb"
       ],
       "walkingDistanceMeters": 850
     },
@@ -62891,14 +62981,14 @@
       "city": "Rome",
       "country": "Italy",
       "relatedTourIds": [
+        "08A263B4-95EE-53CE-9D0C-73BA50295009",
         "b898ab3b-374b-50bd-a53b-dbbacf55a12e",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
         "675cff67-7f73-543a-8339-61b55d4a8ec8",
         "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
         "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445",
-        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2",
-        "0401F573-1962-5BE6-B1F8-834FA3F4C1AC"
+        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -64422,12 +64512,12 @@
       "relatedTourIds": [
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
         "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
+        "E95999B8-5D05-5C64-AA7F-581CED3E84A4",
         "4e9a4a35-8415-576c-a828-fbf0d4adb3b6",
         "7ed84c6e-2698-572e-901f-4fc13969845a",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
         "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8",
-        "9ce70403-81e1-566e-8288-349f2be37e9c",
-        "cb10c8c2-243d-5646-ba30-446a006d4703"
+        "9ce70403-81e1-566e-8288-349f2be37e9c"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -92321,7 +92411,7 @@
         "726b2a64-0a04-5a1a-a431-d8a879f17e45",
         "e858fbf5-ad82-52c7-9224-64b918276554",
         "ea0cf211-37a9-50db-b1f8-8d21176d4793",
-        "1E5796D2-82A4-52A1-819E-6C0E3812C63A"
+        "48CB9ED5-63B7-5AAC-A0DE-E2F11068D665"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -113594,6 +113684,9 @@
       "centroidLongitude": 22.753948225403246,
       "city": "Mycenae",
       "country": "Greece",
+      "relatedTourIds": [
+        "9FDD8959-9A67-5EB3-8AB2-20B6DA1F1DB9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -116588,6 +116681,9 @@
       "centroidLongitude": 14.34740835438564,
       "city": "Ercolano",
       "country": "Italy",
+      "relatedTourIds": [
+        "66A82C38-D777-52A7-AAC1-0B0B13820484"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -119824,7 +119920,9 @@
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "700B85E8-585C-55C5-9FDD-F261A2C11A91",
         "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
         "BE068749-30D5-57E4-A5AC-6246FEB72058"
       ],
       "primaryCategory": "foodAndDrink",
@@ -135640,6 +135738,7 @@
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "B2495278-DEEA-5D59-B655-65523FFF4DC4",
         "22729270-A072-5E55-845D-D5FBB3FBED84"
       ],
       "primaryCategory": "history",
@@ -142361,6 +142460,7 @@
       "country": "Italy",
       "relatedTourIds": [
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "B2495278-DEEA-5D59-B655-65523FFF4DC4",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
       ],
       "primaryCategory": "culturalHeritage",
@@ -142416,6 +142516,7 @@
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
         "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "B2495278-DEEA-5D59-B655-65523FFF4DC4",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD"
       ],
       "primaryCategory": "history",
@@ -142526,9 +142627,9 @@
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -142579,12 +142680,12 @@
       "relatedTourIds": [
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "B2495278-DEEA-5D59-B655-65523FFF4DC4",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "BE068749-30D5-57E4-A5AC-6246FEB72058"
+        "700B85E8-585C-55C5-9FDD-F261A2C11A91"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -180362,10 +180463,10 @@
         "0491F82F-B3C5-5FBE-856D-D217DEC823C5",
         "E01AD5C9-4E46-5D1C-9B38-3C2DB83DD8C0",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "3E0C2571-30DF-52CD-8D6A-32231CD1644F",
         "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2",
-        "2D5C9958-DB17-56CF-BBC6-2E397D11827A",
-        "B19263EA-1F04-5A03-B52E-343638E6D43B"
+        "2D5C9958-DB17-56CF-BBC6-2E397D11827A"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -182950,14 +183051,14 @@
       "city": "Rome",
       "country": "Italy",
       "relatedTourIds": [
+        "9AC733F6-5F7D-58CC-A6DB-F3DD4B604806",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "2A7C8EAA-6CF9-50DE-8FEC-D8E61B418F0F",
         "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
         "fb9c16a1-8a99-585a-abee-c5869052f50f",
         "34ee1c47-2571-56ff-becb-d719f43c3efc",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
-        "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445",
-        "90678150-2AB5-5255-9937-8C6AB677ECEA"
+        "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -183062,11 +183163,11 @@
         "04A23295-DC9A-527A-824F-038B0C4CF7A1",
         "2217954A-A7AC-504E-B829-A1D18C3AC8EF",
         "137146d0-0398-5074-8c5c-484d1244172d",
+        "E0DA32EA-3187-5110-9B69-ECE31C05D9FB",
         "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
         "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8",
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
-        "4e9a4a35-8415-576c-a828-fbf0d4adb3b6",
-        "c9611436-6e6a-526c-ad3d-e34b9bfe6117"
+        "4e9a4a35-8415-576c-a828-fbf0d4adb3b6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -183215,14 +183316,14 @@
       "city": "Rome",
       "country": "Italy",
       "relatedTourIds": [
+        "08A263B4-95EE-53CE-9D0C-73BA50295009",
         "18696d8a-c775-51c5-b9d8-4129ed1ff1a1",
         "EEC22F57-0562-5C92-8BFA-9116965DE5A8",
         "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
         "97E68647-734B-5394-818E-D19C7B638413",
         "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
-        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
-        "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8"
+        "017D6D8D-AF5B-5A8F-B110-823F29B40B5F"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -191888,6 +191989,9 @@
       "centroidLongitude": 25.4034375,
       "city": "Akrotiri",
       "country": "Greece",
+      "relatedTourIds": [
+        "720C43EE-9C00-5C21-A070-268EF05A0F26"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Monument",
@@ -191939,9 +192043,9 @@
         "b898ab3b-374b-50bd-a53b-dbbacf55a12e",
         "017D6D8D-AF5B-5A8F-B110-823F29B40B5F",
         "0401F573-1962-5BE6-B1F8-834FA3F4C1AC",
+        "08A263B4-95EE-53CE-9D0C-73BA50295009",
         "10cfabca-e222-5c06-bd29-1fa00c6fcbe5",
-        "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
-        "04A23295-DC9A-527A-824F-038B0C4CF7A1"
+        "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -201357,14 +201461,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
         "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
         "5dae724d-b494-4886-b056-e2e276b40ded",
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
         "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2",
         "CC720DB6-1A77-530F-9D99-D35BBE1D608D",
-        "E10B005C-4234-588E-A488-79388D285B97",
-        "D2C1CA8A-253C-5D3F-AC51-70C0D6F1503D",
-        "F97D7579-668E-5FAE-89BA-32B41A6FD8F2"
+        "E10B005C-4234-588E-A488-79388D285B97"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -211855,12 +211959,12 @@
       "relatedTourIds": [
         "C1AF6B81-ADC0-57B8-AD1B-5497EBE0A663",
         "D724175A-6502-577C-B197-2CD687CCB1E5",
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
         "10440093-459C-5824-A9B1-4D9B6EB36F9E",
         "3EE590DE-AF5B-5194-9D02-8EA11637E8A1",
         "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
         "3AC3E485-FF15-597B-A9E0-2C9B69DE8EED",
-        "A4501309-29DF-57BC-94E5-394AAF64E688",
-        "D2112F93-FDF7-5B32-960F-41EABF20463C"
+        "A4501309-29DF-57BC-94E5-394AAF64E688"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -255038,6 +255142,8 @@
       "relatedTourIds": [
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
       ],
@@ -255304,12 +255410,12 @@
       "relatedTourIds": [
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+        "700B85E8-585C-55C5-9FDD-F261A2C11A91",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -270597,6 +270703,7 @@
       "relatedTourIds": [
         "EFADE0A9-1B93-5414-8FEC-DC43061BFC79",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "023B1C82-BBCB-5A33-847E-547328FA10B1",
         "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
         "15B8D796-27E0-5A11-BA64-AEE99C3D41B4",
@@ -270655,7 +270762,7 @@
         "C6DE249D-9645-5DEE-A0E9-7B5A72BA0D03",
         "02b511fd-d7e8-4571-8b25-c680da651476",
         "70a6cf56-ba03-4be2-b569-dda7b08ef7a4",
-        "5398A277-7B0E-5B48-8C00-859C184D9066"
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -271033,13 +271140,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "C6DE249D-9645-5DEE-A0E9-7B5A72BA0D03",
         "B2340D29-2C0E-5730-92DE-6C1742BBCA2E",
         "7DD8FCCE-0712-5560-96BF-74B8674741D3",
         "e7a2d9c4-1b86-4f30-8a75-2c9e6b3d8f41",
         "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
-        "B5387365-CD89-57F7-A589-B07292218EE6",
-        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82"
+        "B5387365-CD89-57F7-A589-B07292218EE6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -271759,11 +271866,11 @@
         "C9B859B7-183C-522C-9910-C0D344757F23",
         "A1A0EA9D-4045-5709-9FCD-B1F86CED7343",
         "687C0D76-88C2-57BC-AE2F-601D50C7A529",
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
         "5398A277-7B0E-5B48-8C00-859C184D9066",
         "42F9B41D-4FBD-568A-BBD6-86C1D277C120",
         "216DDB19-ACE6-57F4-8734-3CE2F6793719",
-        "3F54E25C-3A48-5311-BD96-79C358F4AE25",
-        "C53131BC-6A79-5075-9F0C-D7499CEADC7F"
+        "3F54E25C-3A48-5311-BD96-79C358F4AE25"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -271815,10 +271922,10 @@
         "687C0D76-88C2-57BC-AE2F-601D50C7A529",
         "D2C1CA8A-253C-5D3F-AC51-70C0D6F1503D",
         "A1A0EA9D-4045-5709-9FCD-B1F86CED7343",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
-        "B05DA5BA-A36D-5F68-8A0A-20743E76B37D",
-        "483551c1-c37f-43cf-af2e-066fe1fce456",
-        "C7934243-8A39-5E68-82FE-91B18D01E5D6"
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
+        "B05DA5BA-A36D-5F68-8A0A-20743E76B37D"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -272091,9 +272198,9 @@
         "36656E92-3D5D-51CB-9019-B4E8CDF8DBCE",
         "C9B859B7-183C-522C-9910-C0D344757F23",
         "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
         "4504C57C-22F3-5903-AFE7-8645E10F5283",
-        "483551c1-c37f-43cf-af2e-066fe1fce456",
-        "37CEA33B-6D3A-5797-98FA-AB315D4D60E5"
+        "483551c1-c37f-43cf-af2e-066fe1fce456"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -272720,9 +272827,9 @@
         "7D38A405-6D21-5FC1-9414-D814B63A89FD",
         "5C29BC3A-8223-5FBD-A39D-A2D2DF2C0A09",
         "36656E92-3D5D-51CB-9019-B4E8CDF8DBCE",
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
         "4504C57C-22F3-5903-AFE7-8645E10F5283",
-        "005CD324-5421-5E9C-BCF0-894CA4A2A173",
-        "3ADD1890-B882-52E6-A63C-B02C2D898E90"
+        "005CD324-5421-5E9C-BCF0-894CA4A2A173"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -272939,8 +273046,8 @@
         "7D38A405-6D21-5FC1-9414-D814B63A89FD",
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
         "C7934243-8A39-5E68-82FE-91B18D01E5D6",
-        "EF41CFCC-79D9-5549-AB85-2705A9D380A7",
-        "36656E92-3D5D-51CB-9019-B4E8CDF8DBCE"
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
+        "EF41CFCC-79D9-5549-AB85-2705A9D380A7"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -274204,11 +274311,11 @@
         "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
         "A4501309-29DF-57BC-94E5-394AAF64E688",
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
         "2B3330D2-4F43-5120-A306-59FCDA15B837",
         "7DD8FCCE-0712-5560-96BF-74B8674741D3",
         "E10B005C-4234-588E-A488-79388D285B97",
-        "CC720DB6-1A77-530F-9D99-D35BBE1D608D",
-        "88b44354-87c7-402f-99a2-778c1dd1e889"
+        "CC720DB6-1A77-530F-9D99-D35BBE1D608D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -277812,13 +277919,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "D100E0D7-A6D0-51F8-B69C-C7C096C0CCF5",
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
         "14f26785-46df-42cb-a280-5be806d70b93",
         "5398A277-7B0E-5B48-8C00-859C184D9066",
         "ed4ab3f3-8fc3-4446-a90e-a02ee599b20f",
         "2D5C9958-DB17-56CF-BBC6-2E397D11827A",
         "f24f565f-efcd-4631-b20b-211e326996e7",
-        "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
-        "483551c1-c37f-43cf-af2e-066fe1fce456"
+        "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -281655,10 +281762,10 @@
         "D8CB27A9-261D-53D4-A36A-40AC957CBAF6",
         "07d68f3a-b722-5402-8bcf-f44c5992eff5",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "E95999B8-5D05-5C64-AA7F-581CED3E84A4",
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
         "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
-        "69d08739-f300-56b7-8c41-67f1e08b745b",
-        "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445"
+        "69d08739-f300-56b7-8c41-67f1e08b745b"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -308449,6 +308556,1295 @@
       "tags": [
         "Food",
         "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3AAE43AF-D55F-5A13-8C3E-BAE784DB9BBE",
+      "createdAt": "2026-09-28",
+      "title": "Il Giardino Mediterraneo",
+      "shortDescription": "A post by @flipdaddie on Instagram.",
+      "longDescription": "My favorite dinner experience in Ischia! Don’t forget to put Il Giardino Mediterraneo on your list when traveling to Ischia, Italy! Such an incredible experience trying local dishes and the best dessert! #ischia #travelrecommendations #italytravels #restaurantrecommendation #ischiaisland",
+      "makerId": "91643F45-7315-54F2-86B3-57A54F653CE9",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/il-giardino-mediterraneo-flipdaddie_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdjxNuDRfWz/",
+      "sourceAuthor": "@flipdaddie",
+      "stops": [
+        {
+          "id": "700841E6-2DE3-56C4-B344-92B4CFD6379F",
+          "order": 0,
+          "title": "Il Giardino Mediterraneo",
+          "caption": "My favorite dinner experience in Ischia! Don’t forget to put Il Giardino Mediterraneo on your list when traveling to Ischia, Italy! Such an incredible experience trying local dishes and the best dessert! #ischia #travelrecommendations #italytravels #restaurantrecommendation #ischiaisland",
+          "latitude": 40.733921,
+          "longitude": 13.937816,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/il-giardino-mediterraneo-flipdaddie_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.733921,
+      "centroidLongitude": 13.937816,
+      "city": "Ischia",
+      "country": "Italy",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E95999B8-5D05-5C64-AA7F-581CED3E84A4",
+      "createdAt": "2026-09-28",
+      "title": "Trajan's Column",
+      "shortDescription": "A post by @historyskills on Instagram.",
+      "longDescription": "Details on Trajan's Column When you see Trajan's Column in person, it is hard not to be amazed at the incredible detailed carved into the figures. Here are the things that jumped out to me. #AncientRome #TrajansColumn #RomanHistory #HistoryFacts #AncientHistory",
+      "makerId": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trajan-s-column-historyskills_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdLAhvuCFbt/",
+      "sourceAuthor": "@historyskills",
+      "stops": [
+        {
+          "id": "736C14EC-1F84-5894-A61E-3F371646F11A",
+          "order": 0,
+          "title": "Trajan's Column",
+          "caption": "Details on Trajan's Column When you see Trajan's Column in person, it is hard not to be amazed at the incredible detailed carved into the figures. Here are the things that jumped out to me. #AncientRome #TrajansColumn #RomanHistory #HistoryFacts #AncientHistory",
+          "latitude": 41.895809,
+          "longitude": 12.484273,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trajan-s-column-historyskills_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.895809,
+      "centroidLongitude": 12.484273,
+      "city": "Rome",
+      "country": "Italy",
+      "relatedTourIds": [
+        "a19d7ab7-46cf-58f0-8045-f022d9574533",
+        "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
+        "4e9a4a35-8415-576c-a828-fbf0d4adb3b6",
+        "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
+        "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8",
+        "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
+        "04A23295-DC9A-527A-824F-038B0C4CF7A1",
+        "422ef78c-4407-5609-aeca-6e885ae727b7"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Monument",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9AC733F6-5F7D-58CC-A6DB-F3DD4B604806",
+      "createdAt": "2026-09-28",
+      "title": "San Pietro in Vincoli",
+      "shortDescription": "A post by @historyskills on Instagram.",
+      "longDescription": "The chains of Saint Peter A Roman basilica claims to hold an iron chain that supposedly bound Saint Peter in two different prisons, centuries apart. When a pope brought the two chains together, they reportedly fused on their own. #Rome #SaintPeter #SanPietroinVincoli #christianity #church",
+      "makerId": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/san-pietro-in-vincoli-historyskills_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dcz-gKJgrcS/",
+      "sourceAuthor": "@historyskills",
+      "stops": [
+        {
+          "id": "7FC17D92-FA02-5A31-B19F-9E8A557B2FBF",
+          "order": 0,
+          "title": "San Pietro in Vincoli",
+          "caption": "The chains of Saint Peter A Roman basilica claims to hold an iron chain that supposedly bound Saint Peter in two different prisons, centuries apart. When a pope brought the two chains together, they reportedly fused on their own. #Rome #SaintPeter #SanPietroinVincoli #christianity #church",
+          "latitude": 41.893851,
+          "longitude": 12.493158,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/san-pietro-in-vincoli-historyskills_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.893851,
+      "centroidLongitude": 12.493158,
+      "city": "Rome",
+      "country": "Italy",
+      "relatedTourIds": [
+        "7D192959-8A34-52A8-A96A-7422F1D4556B",
+        "fb9c16a1-8a99-585a-abee-c5869052f50f",
+        "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "9ce70403-81e1-566e-8288-349f2be37e9c"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E0DA32EA-3187-5110-9B69-ECE31C05D9FB",
+      "createdAt": "2026-09-28",
+      "title": "The Pantheon's Bronze Doors",
+      "shortDescription": "A post by @historyskills on Instagram.",
+      "longDescription": "The Oldest Doors in Rome The Pantheon's bronze doors have been opening and closing since 128 AD, but most visitors tned to walk right past them. #History #AncientRome #Pantheon #RomanEngineering #HistoryFacts",
+      "makerId": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-pantheon-s-bronze-doors-historyskills_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dcu6ZB3GuGe/",
+      "sourceAuthor": "@historyskills",
+      "stops": [
+        {
+          "id": "E4AA443D-B979-5712-88A6-14EF5DC37E8D",
+          "order": 0,
+          "title": "The Pantheon's Bronze Doors",
+          "caption": "The Oldest Doors in Rome The Pantheon's bronze doors have been opening and closing since 128 AD, but most visitors tned to walk right past them. #History #AncientRome #Pantheon #RomanEngineering #HistoryFacts",
+          "latitude": 41.898616,
+          "longitude": 12.476833,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-pantheon-s-bronze-doors-historyskills_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.898616,
+      "centroidLongitude": 12.476833,
+      "city": "Rome",
+      "country": "Italy",
+      "relatedTourIds": [
+        "AF6C10CC-E6BA-5432-A413-B869ADD6396E",
+        "137146d0-0398-5074-8c5c-484d1244172d",
+        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2",
+        "2217954A-A7AC-504E-B829-A1D18C3AC8EF"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Iconic Landmark",
+        "Architecture",
+        "Monument"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D76BC095-6991-5FCB-A01C-B1A682E5C8B2",
+      "createdAt": "2026-09-28",
+      "title": "The Plaster Casts of Pompeii",
+      "shortDescription": "A post by @historyskills on Instagram.",
+      "longDescription": "Plaster faces of Pompeii How a 19th-century archaeologist found a way to bring Pompeii's victims back from the ash. #History #Pompeii #AncientRome #DarkHistory #ForgottenHistory",
+      "makerId": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-plaster-casts-of-pompeii-historyskills_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcaIUDTCqtY/",
+      "sourceAuthor": "@historyskills",
+      "stops": [
+        {
+          "id": "6A024C9E-B45D-5A6E-90A5-A722819866B7",
+          "order": 0,
+          "title": "The Plaster Casts of Pompeii",
+          "caption": "Plaster faces of Pompeii How a 19th-century archaeologist found a way to bring Pompeii's victims back from the ash. #History #Pompeii #AncientRome #DarkHistory #ForgottenHistory",
+          "latitude": 40.7495,
+          "longitude": 14.492626,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-plaster-casts-of-pompeii-historyskills_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7495,
+      "centroidLongitude": 14.492626,
+      "city": "Pompeii",
+      "country": "Italy",
+      "relatedTourIds": [
+        "72B451D1-5469-5C13-8FA0-4E171AC3DF1C"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Remembrance",
+        "District"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E0E67EE9-CC85-5E18-9608-4F9581AB4BA8",
+      "createdAt": "2026-09-28",
+      "title": "Theatre of Epidaurus",
+      "shortDescription": "A post by @historyskills on Instagram.",
+      "longDescription": "Amazing acoustics of the Epidauros theatre The ancient Greeks built perfect sound stage 2,000 years before microphones at the Theatre of Epidauros with incredible acoustics that modern engineers still admire. #History #AncientGreece #Epidauros #ancienthistory",
+      "makerId": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/theatre-of-epidaurus-historyskills_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbZxKUCgiPg/",
+      "sourceAuthor": "@historyskills",
+      "stops": [
+        {
+          "id": "78CD45A6-29A5-5255-88EE-F9A451D8FEBE",
+          "order": 0,
+          "title": "Theatre of Epidaurus",
+          "caption": "Amazing acoustics of the Epidauros theatre The ancient Greeks built perfect sound stage 2,000 years before microphones at the Theatre of Epidauros with incredible acoustics that modern engineers still admire. #History #AncientGreece #Epidauros #ancienthistory",
+          "latitude": 37.596003,
+          "longitude": 23.079422,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/theatre-of-epidaurus-historyskills_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.596003,
+      "centroidLongitude": 23.079422,
+      "city": "Epidaurus",
+      "country": "Greece",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Performance",
+        "Engineering",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9FDD8959-9A67-5EB3-8AB2-20B6DA1F1DB9",
+      "createdAt": "2026-09-28",
+      "title": "Mycenae",
+      "shortDescription": "A post by @historyskills on Instagram.",
+      "longDescription": "The mysterious ruins of Mycenae Mycenae was already a ruin when classical Athens was at its peak. The Greeks blamed giants. You can still walk through it today. #History #AncientGreece #Mycenae #Archaeology #BronzeAge #HistoryFacts #AncientRuins #GreekHistory #LearnOnSocial",
+      "makerId": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mycenae-historyskills_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbUjlHEDaUo/",
+      "sourceAuthor": "@historyskills",
+      "stops": [
+        {
+          "id": "5451130E-42F0-5B11-9027-D22324B19822",
+          "order": 0,
+          "title": "Mycenae",
+          "caption": "The mysterious ruins of Mycenae Mycenae was already a ruin when classical Athens was at its peak. The Greeks blamed giants. You can still walk through it today. #History #AncientGreece #Mycenae #Archaeology #BronzeAge #HistoryFacts #AncientRuins #GreekHistory #LearnOnSocial",
+          "latitude": 37.729194,
+          "longitude": 22.754429,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mycenae-historyskills_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.729194,
+      "centroidLongitude": 22.754429,
+      "city": "Mycenae",
+      "country": "Greece",
+      "relatedTourIds": [
+        "F8640FEE-C911-5FB0-9449-3B9F045A3656"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Monument"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "720C43EE-9C00-5C21-A070-268EF05A0F26",
+      "createdAt": "2026-09-28",
+      "title": "Akrotiri",
+      "shortDescription": "A post by @historyskills on Instagram.",
+      "longDescription": "The Eruption that Buried Akrotiri A Bronze Age city that is older than Pompeii and was buried under 60 metres of ash, perfectly preserved for 3,600 years. However, every person had vanished before the eruption. #History #AncientHistory #Akrotiri #Santorini #BronzeAge #Pompeii #Archaeology #AncientGreece",
+      "makerId": "CCBF2B4C-5801-5064-B8EA-FCF959A39796",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/akrotiri-historyskills_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbHzz4XgaUa/",
+      "sourceAuthor": "@historyskills",
+      "stops": [
+        {
+          "id": "E2368B37-DCD0-51D4-9BF2-596CAC4BFB60",
+          "order": 0,
+          "title": "Akrotiri",
+          "caption": "The Eruption that Buried Akrotiri A Bronze Age city that is older than Pompeii and was buried under 60 metres of ash, perfectly preserved for 3,600 years. However, every person had vanished before the eruption. #History #AncientHistory #Akrotiri #Santorini #BronzeAge #Pompeii #Archaeology #AncientGreece",
+          "latitude": 36.351793,
+          "longitude": 25.403487,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/akrotiri-historyskills_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.351793,
+      "centroidLongitude": 25.403487,
+      "city": "Akrotiri",
+      "country": "Greece",
+      "relatedTourIds": [
+        "11C2BA41-4B32-555E-A265-208B726ECFDC"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Hidden Gem",
+        "District"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "72B451D1-5469-5C13-8FA0-4E171AC3DF1C",
+      "createdAt": "2026-09-28",
+      "title": "Pompeii After AD 79",
+      "shortDescription": "A post by @diegosomewhere on Instagram.",
+      "longDescription": "Pompeii didn’t end in AD 79. Recent excavations by the Archaeological Park of Pompeii have revealed more evidence that people returned to the city after the eruption and continued living among its ruins. With the lower levels covered by volcanic material, people reused parts of the buildings that were still accessible. Former spaces were adapted for everyday life and work, with evidence including ovens and mills. This wasn’t really Pompeii rebuilt. It was a much more informal settlement living among the remains of the old city. Evidence suggests this continued, in some form, into the fifth century. What makes the story even more interesting is that early excavators were mostly trying to reach the spectacular Pompeii of AD 79: the frescoes, mosaics and Roman houses. In doing so, evidence of what happened after the eruption was sometimes ignored or destroyed. So Vesuvius preserved the Pompeii everyone knows today… while its excavation nearly erased the story of what came next. Source: Archaeological Park of Pompeii, Pompei oltre il 79 d.C., 2026.",
+      "makerId": "64D644DC-8182-53E1-BB83-D97EC0099C40",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pompeii-after-ad-79-diegosomewhere_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdHFrKKOVIQ/",
+      "sourceAuthor": "@diegosomewhere",
+      "stops": [
+        {
+          "id": "98AD9858-B071-5515-8A6E-4FB7BF1F8EE4",
+          "order": 0,
+          "title": "Pompeii After AD 79",
+          "caption": "Pompeii didn’t end in AD 79. Recent excavations by the Archaeological Park of Pompeii have revealed more evidence that people returned to the city after the eruption and continued living among its ruins. With the lower levels covered by volcanic material, people reused parts of the buildings that were still accessible. Former spaces were adapted for everyday life and work, with evidence including ovens and mills. This wasn’t really Pompeii rebuilt. It was a much more informal settlement living among the remains of the old city. Evidence suggests this continued, in some form, into the fifth century. What makes the story even more interesting is that early excavators were mostly trying to reach the spectacular Pompeii of AD 79: the frescoes, mosaics and Roman houses. In doing so, evidence of what happened after the eruption was sometimes ignored or destroyed. So Vesuvius preserved the Pompeii everyone knows today… while its excavation nearly erased the story of what came next. Source: Archaeological Park of Pompeii, Pompei oltre il 79 d.C., 2026.",
+          "latitude": 40.749329,
+          "longitude": 14.484851,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pompeii-after-ad-79-diegosomewhere_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.749329,
+      "centroidLongitude": 14.484851,
+      "city": "Pompeii",
+      "country": "Italy",
+      "relatedTourIds": [
+        "D76BC095-6991-5FCB-A01C-B1A682E5C8B2"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "District"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "08A263B4-95EE-53CE-9D0C-73BA50295009",
+      "createdAt": "2026-09-28",
+      "title": "Largo di Torre Argentina",
+      "shortDescription": "A post by @diegosomewhere on Instagram.",
+      "longDescription": "Rome is basically a city built on top of itself. Over the centuries, new streets and buildings were constructed over older parts of the city, leaving layers of ancient Rome underneath the modern one. Largo di Torre Argentina is a perfect example. The archaeological site was uncovered during demolition work in the 1920s, revealing temples and other remains from Ancient Rome, including part of the Curia of Pompey, where Julius Caesar was assassinated in 44 BC. And there’s still plenty of ancient Rome underneath the city that we don’t see today. 📍 Largo di Torre Argentina, Rome",
+      "makerId": "64D644DC-8182-53E1-BB83-D97EC0099C40",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-di-torre-argentina-diegosomewhere_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdlwH_BNJVN/",
+      "sourceAuthor": "@diegosomewhere",
+      "stops": [
+        {
+          "id": "D7F93E71-CA7E-50FB-9AAB-E93B4C97887D",
+          "order": 0,
+          "title": "Largo di Torre Argentina",
+          "caption": "Rome is basically a city built on top of itself. Over the centuries, new streets and buildings were constructed over older parts of the city, leaving layers of ancient Rome underneath the modern one. Largo di Torre Argentina is a perfect example. The archaeological site was uncovered during demolition work in the 1920s, revealing temples and other remains from Ancient Rome, including part of the Curia of Pompey, where Julius Caesar was assassinated in 44 BC. And there’s still plenty of ancient Rome underneath the city that we don’t see today. 📍 Largo di Torre Argentina, Rome",
+          "latitude": 41.895325,
+          "longitude": 12.47688,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-di-torre-argentina-diegosomewhere_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.895325,
+      "centroidLongitude": 12.47688,
+      "city": "Rome",
+      "country": "Italy",
+      "relatedTourIds": [
+        "18696d8a-c775-51c5-b9d8-4129ed1ff1a1",
+        "0401F573-1962-5BE6-B1F8-834FA3F4C1AC",
+        "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
+        "b898ab3b-374b-50bd-a53b-dbbacf55a12e",
+        "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8",
+        "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445",
+        "7ed84c6e-2698-572e-901f-4fc13969845a",
+        "408e3ea7-5407-5498-a692-ffbc300c451d"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Monument"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "66A82C38-D777-52A7-AAC1-0B0B13820484",
+      "createdAt": "2026-09-28",
+      "title": "Herculaneum",
+      "shortDescription": "A post by @diegosomewhere on Instagram.",
+      "longDescription": "Pompeii gets all the attention, but Herculaneum completely surprised me. It’s smaller, but the level of preservation is incredible. Because of the way the city was destroyed, things that normally disappear over time survived here: wooden doors, furniture, roof beams, food and even parts of upper floors. If you visit Herculaneum, don’t miss: • The House of Neptune and Amphitrite, especially the incredible mosaic • The Men’s Baths, one of the best places to see how elaborate Roman public baths were • The preserved wooden elements throughout the site • The ancient shoreline and boat chambers • The houses where you can still see original mosaics, frescoes and upper floors • The Antiquarium, where some of the extraordinary objects found here are displayed And definitely don’t skip Herculaneum just because you’ve already been to Pompeii. They tell two very different stories. Save this for your trip to Naples 🇮🇹",
+      "makerId": "64D644DC-8182-53E1-BB83-D97EC0099C40",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/herculaneum-diegosomewhere_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcPKWn6tMZc/",
+      "sourceAuthor": "@diegosomewhere",
+      "stops": [
+        {
+          "id": "DF9156D2-8CA1-51E5-9D8E-1307AC997D60",
+          "order": 0,
+          "title": "Herculaneum",
+          "caption": "Pompeii gets all the attention, but Herculaneum completely surprised me. It’s smaller, but the level of preservation is incredible. Because of the way the city was destroyed, things that normally disappear over time survived here: wooden doors, furniture, roof beams, food and even parts of upper floors. If you visit Herculaneum, don’t miss: • The House of Neptune and Amphitrite, especially the incredible mosaic • The Men’s Baths, one of the best places to see how elaborate Roman public baths were • The preserved wooden elements throughout the site • The ancient shoreline and boat chambers • The houses where you can still see original mosaics, frescoes and upper floors • The Antiquarium, where some of the extraordinary objects found here are displayed And definitely don’t skip Herculaneum just because you’ve already been to Pompeii. They tell two very different stories. Save this for your trip to Naples 🇮🇹",
+          "latitude": 40.805364,
+          "longitude": 14.347113,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/herculaneum-diegosomewhere_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.805364,
+      "centroidLongitude": 14.347113,
+      "city": "Ercolano",
+      "country": "Italy",
+      "relatedTourIds": [
+        "47F7550E-0681-57E7-8224-AA2D272B6035"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Hidden Gem",
+        "District"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2B1C6F61-A5E9-53DD-8501-FDC2F3109A53",
+      "createdAt": "2026-09-28",
+      "title": "Naples Cathedral (Duomo di Napoli)",
+      "shortDescription": "A post by @diegosomewhere on Instagram.",
+      "longDescription": "📍Duomo di Napoli I came to Naples and somehow ended up invested in whether a vial of 1700-year-old dry blood turns liquid or not 😂 San Gennaro is the patron saint of Naples, and inside the city’s cathedral are two small vials believed to contain his blood. Three times a year, they’re brought out for a centuries-old ceremony where thousands gather to see if the solid blood will liquefy. When it does, it’s traditionally seen as a good sign for Naples. When it doesn’t... people pay attention. Over the years, failures to liquefy have become associated with some dark moments in the city’s history, including World War Il, a cholera outbreak, the devastating 1980 Irpinia earthquake and a global pandemic. There have also been scientific theories proposed to explain how a substance like this could change from solid to liquid. But the actual vials have never been opened for a definitive chemical analysis, so the mystery continues. The blood successfully liquefied during the May ceremony this year. The next one is on September 19. And yes... now l’ll be checking😅 #travelreels #italytrip #bellanapoli #napoli",
+      "makerId": "64D644DC-8182-53E1-BB83-D97EC0099C40",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naples-cathedral-duomo-di-napoli-diegosomewhere_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dcv6ENwtA_H/",
+      "sourceAuthor": "@diegosomewhere",
+      "stops": [
+        {
+          "id": "2C5BCF23-B439-501B-A73A-63E4A03D4E7E",
+          "order": 0,
+          "title": "Naples Cathedral (Duomo di Napoli)",
+          "caption": "📍Duomo di Napoli I came to Naples and somehow ended up invested in whether a vial of 1700-year-old dry blood turns liquid or not 😂 San Gennaro is the patron saint of Naples, and inside the city’s cathedral are two small vials believed to contain his blood. Three times a year, they’re brought out for a centuries-old ceremony where thousands gather to see if the solid blood will liquefy. When it does, it’s traditionally seen as a good sign for Naples. When it doesn’t... people pay attention. Over the years, failures to liquefy have become associated with some dark moments in the city’s history, including World War Il, a cholera outbreak, the devastating 1980 Irpinia earthquake and a global pandemic. There have also been scientific theories proposed to explain how a substance like this could change from solid to liquid. But the actual vials have never been opened for a definitive chemical analysis, so the mystery continues. The blood successfully liquefied during the May ceremony this year. The next one is on September 19. And yes... now l’ll be checking😅 #travelreels #italytrip #bellanapoli #napoli",
+          "latitude": 40.852653,
+          "longitude": 14.25987,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naples-cathedral-duomo-di-napoli-diegosomewhere_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.852653,
+      "centroidLongitude": 14.25987,
+      "city": "Naples",
+      "country": "Italy",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "915CB53C-D49B-5B9D-99E3-0A3048068E95",
+      "createdAt": "2026-09-28",
+      "title": "Teotihuacán",
+      "shortDescription": "A post by @diegosomewhere on Instagram.",
+      "longDescription": "This was once one of the largest cities on Earth. Yet more than 1,500 years later, we still don’t know exactly who built it. Most people assume Teotihuacán was built by the Mexica (commonly known as the Aztecs). In reality, the Mexica arrived centuries after the city had already been abandoned. They found it in ruins and gave it the name Teotihuacán: “the place where the gods were created.” Today, it’s one of the most important archaeological sites in the world and a reminder that some of history’s greatest civilizations are still full of unanswered questions. Were you surprised to learn the Aztecs didn’t build Teotihuacán? #travelreels #mexico #historylovers #mexicocity #mexicotravel",
+      "makerId": "64D644DC-8182-53E1-BB83-D97EC0099C40",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/teotihuac-n-diegosomewhere_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dbq5X6eNmPw/",
+      "sourceAuthor": "@diegosomewhere",
+      "stops": [
+        {
+          "id": "90F39308-0570-5B03-A50A-DF0778716B5A",
+          "order": 0,
+          "title": "Teotihuacán",
+          "caption": "This was once one of the largest cities on Earth. Yet more than 1,500 years later, we still don’t know exactly who built it. Most people assume Teotihuacán was built by the Mexica (commonly known as the Aztecs). In reality, the Mexica arrived centuries after the city had already been abandoned. They found it in ruins and gave it the name Teotihuacán: “the place where the gods were created.” Today, it’s one of the most important archaeological sites in the world and a reminder that some of history’s greatest civilizations are still full of unanswered questions. Were you surprised to learn the Aztecs didn’t build Teotihuacán? #travelreels #mexico #historylovers #mexicocity #mexicotravel",
+          "latitude": 19.692367,
+          "longitude": -98.843607,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/teotihuac-n-diegosomewhere_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.692367,
+      "centroidLongitude": -98.843607,
+      "city": "Teotihuacán",
+      "country": "Mexico",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Monument",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3C17E947-78EF-5C8D-89B8-F3E31F823692",
+      "createdAt": "2026-09-28",
+      "title": "Cerro de las Campanas",
+      "shortDescription": "A post by @diegosomewhere on Instagram.",
+      "longDescription": "📍 Cerro de las Campanas, Querétaro One of the most unexpected chapters in Mexican history ended right here. Maximilian of Habsburg was an Austrian archduke who accepted the crown of Mexico in 1864, becoming Emperor Maximilian I during a turbulent period of French intervention and civil conflict. His empire lasted only three years. After French troops withdrew, Republican forces under President Benito Juárez regained control of the country. Maximilian was captured in Querétaro, tried by court-martial, and executed by firing squad at Cerro de las Campanas on June 19, 1867, alongside generals Miguel Miramón and Tomás Mejía. Today, you can visit the very place where his story ended. This is one of my favorite things about traveling: sometimes you arrive somewhere beautiful without realizing how much history happened exactly where you’re standing. #travel #history #mexico #queretaro #méxicotravel",
+      "makerId": "64D644DC-8182-53E1-BB83-D97EC0099C40",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cerro-de-las-campanas-diegosomewhere_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dba9Zf9tYT4/",
+      "sourceAuthor": "@diegosomewhere",
+      "stops": [
+        {
+          "id": "A76B0E98-8DA9-5896-878B-1590DD7775B1",
+          "order": 0,
+          "title": "Cerro de las Campanas",
+          "caption": "📍 Cerro de las Campanas, Querétaro One of the most unexpected chapters in Mexican history ended right here. Maximilian of Habsburg was an Austrian archduke who accepted the crown of Mexico in 1864, becoming Emperor Maximilian I during a turbulent period of French intervention and civil conflict. His empire lasted only three years. After French troops withdrew, Republican forces under President Benito Juárez regained control of the country. Maximilian was captured in Querétaro, tried by court-martial, and executed by firing squad at Cerro de las Campanas on June 19, 1867, alongside generals Miguel Miramón and Tomás Mejía. Today, you can visit the very place where his story ended. This is one of my favorite things about traveling: sometimes you arrive somewhere beautiful without realizing how much history happened exactly where you’re standing. #travel #history #mexico #queretaro #méxicotravel",
+          "latitude": 20.593073,
+          "longitude": -100.409875,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cerro-de-las-campanas-diegosomewhere_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 20.593073,
+      "centroidLongitude": -100.409875,
+      "city": "Querétaro",
+      "country": "Mexico",
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Remembrance",
+        "Park"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B2495278-DEEA-5D59-B655-65523FFF4DC4",
+      "createdAt": "2026-09-28",
+      "title": "Bargello Museum",
+      "shortDescription": "A post by @chiara_in_italy on TikTok.",
+      "longDescription": "Florence museums to visit 💜⚜️ This is the Bargello Museum, which is one of my favorites!! Not crowded and has a great mixed collection, mainly of renaissance sculpture. FYI it is closed on Mondays 😬 Save this for your Italy & Florence trip 🇮🇹 #florence #italytravel #italianculture #florencetravel",
+      "makerId": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bargello-museum-chiarainitaly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chiara_in_italy/video/7688025986578861345",
+      "sourceAuthor": "@chiara_in_italy",
+      "stops": [
+        {
+          "id": "C9BD9F71-D073-5477-A0B1-F59541852C19",
+          "order": 0,
+          "title": "Bargello Museum",
+          "caption": "Florence museums to visit 💜⚜️ This is the Bargello Museum, which is one of my favorites!! Not crowded and has a great mixed collection, mainly of renaissance sculpture. FYI it is closed on Mondays 😬 Save this for your Italy & Florence trip 🇮🇹 #florence #italytravel #italianculture #florencetravel",
+          "latitude": 43.770379,
+          "longitude": 11.258262,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bargello-museum-chiarainitaly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.770379,
+      "centroidLongitude": 11.258262,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "91D1E21B-AAA0-500A-8624-3CCBF3FACE06",
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B989A59C-19F6-5A7F-8440-A86B8CBCCF42",
+      "createdAt": "2026-09-28",
+      "title": "Lago di Braies",
+      "shortDescription": "A post by @chiara_in_italy on TikTok.",
+      "longDescription": "THE Dolomites Lake 🇮🇹⛰️ Yes it’s in Italy and here is the FULL GUIDE 🌿 🚗 Driving from July 1st to September 15th? Between 9 am and 4 pm you need to book your parking ahead of time. You book online at prags.bz ‼️ The dates can change each year but for 2026 these are the rules. You can drive in without a reservation outside of these times but we prefer to reserve. 🚌 No car is possible! There is the bus 442 that runs from some stops to the lake 🥾 On foot you do not need a reservation but it’s quite a hike from nearby towns. 💶 Our parking cost us 44€ for the day BUT we had a 22€ voucher for one of the restaurants on the lake ❤️ this included our shuttle too. 🚤 The boat like us super long, if you want to rent one you need to go very early!! #italytravel #dolomites #lagodibraies #visitsudtirol #italianculture Hiking in the Dolomites | where to hike Dolomites | how to visit lake Braies Dolomites",
+      "makerId": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lago-di-braies-chiarainitaly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chiara_in_italy/video/7669818418001874209",
+      "sourceAuthor": "@chiara_in_italy",
+      "stops": [
+        {
+          "id": "AE4EF736-068D-59E2-B292-4CD4D9CDB263",
+          "order": 0,
+          "title": "Lago di Braies",
+          "caption": "THE Dolomites Lake 🇮🇹⛰️ Yes it’s in Italy and here is the FULL GUIDE 🌿 🚗 Driving from July 1st to September 15th? Between 9 am and 4 pm you need to book your parking ahead of time. You book online at prags.bz ‼️ The dates can change each year but for 2026 these are the rules. You can drive in without a reservation outside of these times but we prefer to reserve. 🚌 No car is possible! There is the bus 442 that runs from some stops to the lake 🥾 On foot you do not need a reservation but it’s quite a hike from nearby towns. 💶 Our parking cost us 44€ for the day BUT we had a 22€ voucher for one of the restaurants on the lake ❤️ this included our shuttle too. 🚤 The boat like us super long, if you want to rent one you need to go very early!! #italytravel #dolomites #lagodibraies #visitsudtirol #italianculture Hiking in the Dolomites | where to hike Dolomites | how to visit lake Braies Dolomites",
+          "latitude": 46.694721,
+          "longitude": 12.085843,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lago-di-braies-chiarainitaly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.694721,
+      "centroidLongitude": 12.085843,
+      "city": "Braies",
+      "country": "Italy",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Green Escape",
+        "Viewpoint",
+        "Park",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D516F7EE-7CCE-5810-8FB8-4E6B08EDA2CE",
+      "createdAt": "2026-09-28",
+      "title": "Km.0 Praiano",
+      "shortDescription": "A post by @chiara_in_italy on TikTok.",
+      "longDescription": "Amalfi coast restaurants I recommend 🩵🇮🇹 today I’m showcasing Km.0 Praiano which is truly a hidden gem in every way. Chef Antonio is the master behind this place, cooking everything from scratch with local ingredients. You can watch him cook right in front of you or book a cooking class to learn from him. Truly a magical experience along the Amalfi coast (just a short drive from Positano)!! 💛 it’s in Praiano which is a small town (super quiet!) For more Italy travel and content showcasing local vendors and real experiences that I personally recommend as an Italian make sure you follow along 🍋❤️ #amalficoast #italianculture #italytravel #traveltoitaly #positano Where to eat in Positano | Amalfi coast trip | Sorrento vacation | Positano hidden gems |",
+      "makerId": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/km-0-praiano-chiarainitaly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chiara_in_italy/video/7661714984870743328",
+      "sourceAuthor": "@chiara_in_italy",
+      "stops": [
+        {
+          "id": "F65B756B-415B-594C-A282-839A73B06927",
+          "order": 0,
+          "title": "Km.0 Praiano",
+          "caption": "Amalfi coast restaurants I recommend 🩵🇮🇹 today I’m showcasing Km.0 Praiano which is truly a hidden gem in every way. Chef Antonio is the master behind this place, cooking everything from scratch with local ingredients. You can watch him cook right in front of you or book a cooking class to learn from him. Truly a magical experience along the Amalfi coast (just a short drive from Positano)!! 💛 it’s in Praiano which is a small town (super quiet!) For more Italy travel and content showcasing local vendors and real experiences that I personally recommend as an Italian make sure you follow along 🍋❤️ #amalficoast #italianculture #italytravel #traveltoitaly #positano Where to eat in Positano | Amalfi coast trip | Sorrento vacation | Positano hidden gems |",
+          "latitude": 40.610206,
+          "longitude": 14.526224,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/km-0-praiano-chiarainitaly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.610206,
+      "centroidLongitude": 14.526224,
+      "city": "Praiano",
+      "country": "Italy",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+      "createdAt": "2026-09-28",
+      "title": "Caffè Gilli",
+      "shortDescription": "A post by @chiara_in_italy on TikTok.",
+      "longDescription": "Where to eat / drink in Florence 🇮🇹❤️ Gilli has been open since 1733!! It’s a staple here in Firenze and a very loved cafe, bar, and restaurant. My family has been coming here for generations!! Make sure you save this for your Florence trip. ☀️ #italytravel #florence #florenceitaly #italianculture #italianfood Where to eat in Florence | Florence travel tips | Italy travel tips | where to get coffee in Florence | historic cafes Florence",
+      "makerId": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/caff-gilli-chiarainitaly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chiara_in_italy/video/7643050067082874145",
+      "sourceAuthor": "@chiara_in_italy",
+      "stops": [
+        {
+          "id": "FC854963-DE3B-5B9B-85E8-815038902477",
+          "order": 0,
+          "title": "Caffè Gilli",
+          "caption": "Where to eat / drink in Florence 🇮🇹❤️ Gilli has been open since 1733!! It’s a staple here in Firenze and a very loved cafe, bar, and restaurant. My family has been coming here for generations!! Make sure you save this for your Florence trip. ☀️ #italytravel #florence #florenceitaly #italianculture #italianfood Where to eat in Florence | Florence travel tips | Italy travel tips | where to get coffee in Florence | historic cafes Florence",
+          "latitude": 43.771945,
+          "longitude": 11.254283,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/caff-gilli-chiarainitaly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.771945,
+      "centroidLongitude": 11.254283,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "63166E79-D792-588E-8179-6328F82FD06C",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "History",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+      "createdAt": "2026-09-28",
+      "title": "Pegna dal 1860",
+      "shortDescription": "A post by @chiara_in_italy on TikTok.",
+      "longDescription": "Pegna dal 1860 is a MUST 🇮🇹 on any Florence trip! ➡️ Via dello Studio, 26R, 50122 Firenze This spot is exactly why shopping in Italy feels like an experience and not just an errand!! Right in the heart of Florence, this historic shop is full of beautiful gourmet products you can take home (or eat on your trip lol!) ❤️ #italytravel #shoppingitaly #florence #italianfood #italianculture Shopping in Florence | grocery store Florence | Florence shopping trip |",
+      "makerId": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pegna-dal-1860-chiarainitaly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chiara_in_italy/video/7631992947881430294",
+      "sourceAuthor": "@chiara_in_italy",
+      "stops": [
+        {
+          "id": "A48C2C65-7B98-5860-AE19-6C0047CAD622",
+          "order": 0,
+          "title": "Pegna dal 1860",
+          "caption": "Pegna dal 1860 is a MUST 🇮🇹 on any Florence trip! ➡️ Via dello Studio, 26R, 50122 Firenze This spot is exactly why shopping in Italy feels like an experience and not just an errand!! Right in the heart of Florence, this historic shop is full of beautiful gourmet products you can take home (or eat on your trip lol!) ❤️ #italytravel #shoppingitaly #florence #italianfood #italianculture Shopping in Florence | grocery store Florence | Florence shopping trip |",
+          "latitude": 43.772049,
+          "longitude": 11.256854,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pegna-dal-1860-chiarainitaly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.772049,
+      "centroidLongitude": 11.256854,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
+        "B2495278-DEEA-5D59-B655-65523FFF4DC4",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "63166E79-D792-588E-8179-6328F82FD06C"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Commerce",
+        "Food",
+        "History",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2E4AFB8C-F96B-57CB-994B-816525680464",
+      "createdAt": "2026-09-28",
+      "title": "Santa Marinella Beach",
+      "shortDescription": "A post by @chiara_in_italy on TikTok.",
+      "longDescription": "Rome has a BEACH? 👀🇮🇹🌊☀️ well kind of!! Welcome to Santa Marinella, which is my favorite beach day spot close to Rome. Here is exactly how to get there ⬇️ ❤️ Take a direct regional train to Santa Marinella from Roma Termini, Ostiense, Trastevere, or San Pietro and in under an hour you’re at the beach. Once you get off, it’s just a short walk from the station to the shore. Buy tickets at the station or on the Trenitalia app! ‼️ if you have a paper ticket don’t forget to validate it before getting on the train. 🏖️You can usually rent an umbrella the same day, or call ahead and reserve if you want to be safe. Usually 1 umbrella is for 2 people, but you can always book multiple umbrellas if you’re going with friends or want more space. One of the easiest beach day trips from Rome 🫶🏼 #rometrip #italytravel #italianbeach #traveltoitaly #italiansummer Day trip Rome | beach in Rome | Italy travel tips | Santa Marinella | how to get to Santa Marinella",
+      "makerId": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-marinella-beach-chiarainitaly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chiara_in_italy/video/7629418164346014998",
+      "sourceAuthor": "@chiara_in_italy",
+      "stops": [
+        {
+          "id": "85694F85-763A-5118-8CA7-E2D41845B751",
+          "order": 0,
+          "title": "Santa Marinella Beach",
+          "caption": "Rome has a BEACH? 👀🇮🇹🌊☀️ well kind of!! Welcome to Santa Marinella, which is my favorite beach day spot close to Rome. Here is exactly how to get there ⬇️ ❤️ Take a direct regional train to Santa Marinella from Roma Termini, Ostiense, Trastevere, or San Pietro and in under an hour you’re at the beach. Once you get off, it’s just a short walk from the station to the shore. Buy tickets at the station or on the Trenitalia app! ‼️ if you have a paper ticket don’t forget to validate it before getting on the train. 🏖️You can usually rent an umbrella the same day, or call ahead and reserve if you want to be safe. Usually 1 umbrella is for 2 people, but you can always book multiple umbrellas if you’re going with friends or want more space. One of the easiest beach day trips from Rome 🫶🏼 #rometrip #italytravel #italianbeach #traveltoitaly #italiansummer Day trip Rome | beach in Rome | Italy travel tips | Santa Marinella | how to get to Santa Marinella",
+          "latitude": 42.034028,
+          "longitude": 11.868674,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-marinella-beach-chiarainitaly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 42.034028,
+      "centroidLongitude": 11.868674,
+      "city": "Santa Marinella",
+      "country": "Italy",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "48CB9ED5-63B7-5AAC-A0DE-E2F11068D665",
+      "createdAt": "2026-09-28",
+      "title": "Milano Fashion Library",
+      "shortDescription": "A post by @jacobzander_ on Instagram.",
+      "longDescription": "Wow. This place was incredible. This is the largest archive of fashion & design magazines in the world!!! Recently I’ve been getting a lot of inspiration from physical books and magazines so I went to see what I would find. I picked up 7 books at the end of the video based around shoes, denim, and interior design.",
+      "makerId": "23EA5CC1-BF96-51F9-A9EE-711B9421BE28",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/milano-fashion-library-jacobzander_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DduOY-aI8Zd/",
+      "sourceAuthor": "@jacobzander_",
+      "stops": [
+        {
+          "id": "0AA81A95-7564-5589-8DF5-936586AB5D10",
+          "order": 0,
+          "title": "Milano Fashion Library",
+          "caption": "Wow. This place was incredible. This is the largest archive of fashion & design magazines in the world!!! Recently I’ve been getting a lot of inspiration from physical books and magazines so I went to see what I would find. I picked up 7 books at the end of the video based around shoes, denim, and interior design.",
+          "latitude": 45.523956,
+          "longitude": 9.003538,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/milano-fashion-library-jacobzander_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.523956,
+      "centroidLongitude": 9.003538,
+      "city": "Vanzago",
+      "country": "Italy",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Library",
+        "Fashion",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03574E10-2D20-5815-88D5-C3B7DB59FA6B",
+      "createdAt": "2026-09-28",
+      "title": "Sennelier",
+      "shortDescription": "A post by @reinesoleill on Instagram.",
+      "longDescription": "the 137-year-old Paris art shop that supplied Cézanne, Picasso, and Hockney, and even invented oil pastels for Picasso himself. History, pigment, and the sweetest staff who actually know their craft. #Sennelier #ArtHistory #paris #Picasso #art",
+      "makerId": "94D27D01-61B4-54C5-8EBD-7F29782092FB",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sennelier-reinesoleill_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdPdYqnPMly/",
+      "sourceAuthor": "@reinesoleill",
+      "stops": [
+        {
+          "id": "E62B2586-53A0-5A88-88C9-F0AF984EFEC0",
+          "order": 0,
+          "title": "Sennelier",
+          "caption": "the 137-year-old Paris art shop that supplied Cézanne, Picasso, and Hockney, and even invented oil pastels for Picasso himself. History, pigment, and the sweetest staff who actually know their craft. #Sennelier #ArtHistory #paris #Picasso #art",
+          "latitude": 48.858284,
+          "longitude": 2.332702,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sennelier-reinesoleill_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.858284,
+      "centroidLongitude": 2.332702,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "D4527217-EBD0-5C65-BFFE-1C9FA662A052",
+        "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
+        "17059288-2D00-5052-92E3-D9AFEC83425B",
+        "B606303B-2024-58E5-873F-64EF22723675"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Commerce",
+        "Art",
+        "History",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0ACA0AA4-88DA-5F30-975B-0CA335518612",
+      "createdAt": "2026-09-28",
+      "title": "V&A East Museum",
+      "shortDescription": "A post by @thedesignssuite on Instagram.",
+      "longDescription": "Looks like London is getting a new museum 👀 Designed by O’Donnell + Tuomey, V&A East Museum is one of the most interesting new buildings in London right now. Sculptural, inviting, and full of small details that make the whole thing feel carefully crafted. A museum should hold objects, yes.. but it should also make people feel welcome. This one seems to understand that. What do you rate this building? And would you visit for the exhibitions, the architecture, or both? V&A East Museum opens Saturday 18th April. #architecture #vandaeastmuseum #design #londonarchitecture #architectsplayground",
+      "makerId": "3198A503-1E7B-55B6-9FC6-BFB50647B75B",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/v-a-east-museum-thedesignssuite_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DXM6vFYDUXs/",
+      "sourceAuthor": "@thedesignssuite",
+      "stops": [
+        {
+          "id": "4679A867-5E77-59C3-AECE-C5D7307572DF",
+          "order": 0,
+          "title": "V&A East Museum",
+          "caption": "Looks like London is getting a new museum 👀 Designed by O’Donnell + Tuomey, V&A East Museum is one of the most interesting new buildings in London right now. Sculptural, inviting, and full of small details that make the whole thing feel carefully crafted. A museum should hold objects, yes.. but it should also make people feel welcome. This one seems to understand that. What do you rate this building? And would you visit for the exhibitions, the architecture, or both? V&A East Museum opens Saturday 18th April. #architecture #vandaeastmuseum #design #londonarchitecture #architectsplayground",
+          "latitude": 51.541884,
+          "longitude": -0.013549,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/v-a-east-museum-thedesignssuite_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.541884,
+      "centroidLongitude": -0.013549,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
+        "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
+        "5dae724d-b494-4886-b056-e2e276b40ded",
+        "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
+        "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2",
+        "CC720DB6-1A77-530F-9D99-D35BBE1D608D",
+        "808399A7-5925-512E-ADD5-00AC2B98E734"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Contemporary",
+        "Museum",
+        "Notable Building",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A5CFD082-3F57-5B7C-9FB1-DB2D265E1FF9",
+      "createdAt": "2026-09-28",
+      "title": "V&A Dundee",
+      "shortDescription": "A post by @scot.landbeauty on Instagram.",
+      "longDescription": "VISITED DUNDEE MUSEUM #scot_landbeauty #dundeecity #dundeemusicscene #dundeevandamuseum #dundeeriverside",
+      "makerId": "BDACA203-163C-5D6E-B61F-87126BE6DE9A",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/v-a-dundee-scotlandbeauty_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Ddj1yVsoziO/",
+      "sourceAuthor": "@scot.landbeauty",
+      "stops": [
+        {
+          "id": "DA776104-F4A0-5C9B-9036-F344E95C547D",
+          "order": 0,
+          "title": "V&A Dundee",
+          "caption": "VISITED DUNDEE MUSEUM #scot_landbeauty #dundeecity #dundeemusicscene #dundeevandamuseum #dundeeriverside",
+          "latitude": 56.457223,
+          "longitude": -2.967036,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/v-a-dundee-scotlandbeauty_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 56.457223,
+      "centroidLongitude": -2.967036,
+      "city": "Dundee",
+      "country": "United Kingdom",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Designed by a Master",
+        "Kengo Kuma",
+        "Waterfront",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A2098F4F-BD2E-51DD-A339-8F2F3179ED8C",
+      "createdAt": "2026-09-28",
+      "title": "Wellcome Collection",
+      "shortDescription": "A post by @babatunde_roy on Instagram.",
+      "longDescription": "Am I gatekeeping this place or sharing it?? Because this might be the most beautiful reading room in London. Free entry. 1.1 million items in the library. Places to work + study. And that’s just the start. The whole building has stunning galleries + interactive exhibitions on everything from human emotions to health + disease. I really should keep it a secret… But it’s too good not to share. This is @wellcomecollection 📍 Wellcome Collection, 183 Euston Rd., London NW1 2BE Follow me as I ungatekeep the best places in London #freelondon #thingstodoinlondon #londonlibrary #londongallery #londonhiddengems",
+      "makerId": "AF86B311-4380-5867-B1C0-0BDE79D8EE20",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wellcome-collection-babatunderoy_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dbqidp2tLOi/",
+      "sourceAuthor": "@babatunde_roy",
+      "stops": [
+        {
+          "id": "490B47E3-D2E6-5433-A580-2B014785D315",
+          "order": 0,
+          "title": "Wellcome Collection",
+          "caption": "Am I gatekeeping this place or sharing it?? Because this might be the most beautiful reading room in London. Free entry. 1.1 million items in the library. Places to work + study. And that’s just the start. The whole building has stunning galleries + interactive exhibitions on everything from human emotions to health + disease. I really should keep it a secret… But it’s too good not to share. This is @wellcomecollection 📍 Wellcome Collection, 183 Euston Rd., London NW1 2BE Follow me as I ungatekeep the best places in London #freelondon #thingstodoinlondon #londonlibrary #londongallery #londonhiddengems",
+          "latitude": 51.525974,
+          "longitude": -0.13402,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wellcome-collection-babatunderoy_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.525974,
+      "centroidLongitude": -0.13402,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
+        "5398A277-7B0E-5B48-8C00-859C184D9066",
+        "4EBD4A3A-A347-5186-8D72-EFC95E4C69EB",
+        "61885E4F-9150-53F1-948A-BFB69CC14F0F",
+        "C9B859B7-183C-522C-9910-C0D344757F23",
+        "216DDB19-ACE6-57F4-8734-3CE2F6793719",
+        "BC6BC2ED-B4E6-5689-AE1D-5B9BB3FBD6CE"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Library",
+        "Free to Visit",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "808399A7-5925-512E-ADD5-00AC2B98E734",
+      "createdAt": "2026-09-28",
+      "title": "National Maritime Museum",
+      "shortDescription": "A post by @babatunde_roy on Instagram.",
+      "longDescription": "One of London’s best free museums and somehow still feels underrated 👀 @royalmuseumsgreenwich The national maritime museum in Greenwich is the largest maritime museum in the world, with historic artefacts, interactive exhibits, dedicated kids’ spaces and exhibitions exploring Britain’s maritime history. My favourite was the exhibition exploring Caribbean food and the impact of the Windrush generation through food and culture. 📍 National Maritime Museum, Greenwich 🎟️ Free entry Save this for your next London day out. #LondonThingsToDo #FreeThingsToDoLondon #LondonMuseums #Greenwich #LondonHiddenGems",
+      "makerId": "AF86B311-4380-5867-B1C0-0BDE79D8EE20",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum-babatunderoy_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Ddeldn0KD0L/",
+      "sourceAuthor": "@babatunde_roy",
+      "stops": [
+        {
+          "id": "605FCE9A-3FEA-50F3-9DE8-2A464A847990",
+          "order": 0,
+          "title": "National Maritime Museum",
+          "caption": "One of London’s best free museums and somehow still feels underrated 👀 @royalmuseumsgreenwich The national maritime museum in Greenwich is the largest maritime museum in the world, with historic artefacts, interactive exhibits, dedicated kids’ spaces and exhibitions exploring Britain’s maritime history. My favourite was the exhibition exploring Caribbean food and the impact of the Windrush generation through food and culture. 📍 National Maritime Museum, Greenwich 🎟️ Free entry Save this for your next London day out. #LondonThingsToDo #FreeThingsToDoLondon #LondonMuseums #Greenwich #LondonHiddenGems",
+          "latitude": 51.480776,
+          "longitude": -0.005123,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum-babatunderoy_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.480776,
+      "centroidLongitude": -0.005123,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "d534ac4d-b9ce-4379-8fd7-a2c20fd989d4",
+        "0ACA0AA4-88DA-5F30-975B-0CA335518612",
+        "B5F01975-BD69-5748-BFE8-D7D0D619A2E6",
+        "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
+        "E6E062EC-8FC0-5E3F-90E8-9CD50CE901F2",
+        "C9B859B7-183C-522C-9910-C0D344757F23",
+        "3E0C2571-30DF-52CD-8D6A-32231CD1644F",
+        "C7934243-8A39-5E68-82FE-91B18D01E5D6"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "Maritime",
+        "Free to Visit"
       ],
       "priceUSD": 0
     }
