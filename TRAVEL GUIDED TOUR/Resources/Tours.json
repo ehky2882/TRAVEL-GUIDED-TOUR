@@ -60027,7 +60027,7 @@
         "5d2adffe-3839-54dc-8d49-6731894a7490",
         "1a432307-07be-5f77-8f6c-c549ca664ed4",
         "26ed9a65-a11a-5980-9789-f5c3cae990f8",
-        "a693cefc-48fe-578e-a55a-61bdf2e61379"
+        "70f4a292-474f-55de-aadc-46b24b39da26"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -75562,6 +75562,9 @@
       "country": "Morocco",
       "relatedTourIds": [
         "d5e696eb-1696-5dac-b80d-09c009656edd",
+        "934035fc-db21-5db8-a1e5-cd96fcf12f5b",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20",
         "c4d28dda-65d8-58c3-ba4a-b35f8be7f0b0",
         "8cfb136f-f30d-5a57-afc1-0426417bd62d",
         "be6af98d-156a-5a62-9b18-ea7ed90b8686",
@@ -75674,8 +75677,8 @@
         "54fd0804-2858-5002-82f4-8f27a02b24fe",
         "9f48ffaf-5128-5c14-b945-630978f6e185",
         "b57293ab-8421-54c1-b750-580af0a53a30",
-        "CA666546-F322-4330-9AB9-7089C37B34C0",
-        "FFBA7F9E-DF5B-5827-8C0B-9E1A29C72F65"
+        "5de62959-64c0-5cf2-b794-d9ce498f89aa",
+        "CA666546-F322-4330-9AB9-7089C37B34C0"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -81905,6 +81908,7 @@
         "07956ee2-9d07-5e0e-b29b-0e796389e7ed",
         "f8a2654e-f1c1-59ef-a7c5-0f43514e6b9f",
         "05575f3a-3394-5e0c-a805-8462be17fb31",
+        "07d53a1f-5138-5bdb-8019-e4eeee0e0fe9",
         "dec315ef-f23a-58d9-9f40-94c1025349b5"
       ],
       "primaryCategory": "foodAndDrink",
@@ -82067,8 +82071,8 @@
         "f4125573-632f-567e-beb1-30fc42bccc8f",
         "07956ee2-9d07-5e0e-b29b-0e796389e7ed",
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
-        "EC5FA504-3AAF-577E-811E-6E13B0198211",
-        "aad3792e-246c-5953-95ea-9f3bb4484007"
+        "70f4a292-474f-55de-aadc-46b24b39da26",
+        "EC5FA504-3AAF-577E-811E-6E13B0198211"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -97384,11 +97388,11 @@
         "fe8af15c-f542-5dd2-be52-a39a052052da",
         "2e0198e7-55ff-5f65-a197-6c1be6d7319a",
         "194398fe-4c19-5c96-8ab4-60f690c06f1d",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
         "760759dd-7337-5126-8b0e-4ac4b4d62303",
         "67372cad-0dd5-5120-9a8d-a88c3641890a",
         "25ec5cd1-ddaa-5da9-8725-a0275e20a18b",
-        "a308f6b5-1fa2-551a-86a2-22dce35b4f69",
-        "30ed0708-d9df-5782-bcc3-cfcd519d7061"
+        "a308f6b5-1fa2-551a-86a2-22dce35b4f69"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -100004,7 +100008,16 @@
       "centroidLongitude": 29.0269585,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "7c69825f-682a-5f3c-a3cf-18ed1b46be61",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "a208a149-748e-5be4-ae6b-2e0acfc01ee9"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -100052,7 +100065,16 @@
       "centroidLongitude": 29.0260683,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "ce3cbcba-2c68-5460-a8e6-8aa7fca4f9c0",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "f650b428-57e4-53c2-8e75-5244e2a649ee",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "be72b933-5382-580a-9c8e-c7482e489a32"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100100,7 +100122,16 @@
       "centroidLongitude": 29.0416238,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -100149,7 +100180,16 @@
       "centroidLongitude": 28.973083,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "9c3904f0-a494-5687-8a19-a0fe0e6dd251",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100196,7 +100236,16 @@
       "centroidLongitude": 29.0379678,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "38a2b6ba-3c07-597a-a33f-63366114c899",
+        "7011d656-0c84-5d38-ac6c-cb33134bd896",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "93bef539-61a8-5c04-8feb-1b3ca689b282",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "f650b428-57e4-53c2-8e75-5244e2a649ee",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -100244,7 +100293,16 @@
       "centroidLongitude": 28.9389175,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -100294,7 +100352,16 @@
       "centroidLongitude": 28.9878184,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "793f652f-9b45-580c-8865-27292f4e3121",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "35286e95-babc-548b-956a-53e485bc070c",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "7c69825f-682a-5f3c-a3cf-18ed1b46be61",
+        "be72b933-5382-580a-9c8e-c7482e489a32"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Performance",
@@ -100345,7 +100412,16 @@
       "centroidLongitude": 29.0361413,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "6de2e5a7-1fd9-5ef7-9fbc-550a7ef800ea",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100392,7 +100468,16 @@
       "centroidLongitude": 28.9654934,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Library",
@@ -100439,7 +100524,16 @@
       "centroidLongitude": 28.9683619,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "35286e95-babc-548b-956a-53e485bc070c",
+        "26c2a25e-1e3a-5130-9134-5d2d720a0e9e",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Commerce",
@@ -100485,7 +100579,16 @@
       "centroidLongitude": 28.9740237,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100531,7 +100634,16 @@
       "centroidLongitude": 28.9723735,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "40f15e6b-436f-5d49-893e-fd9c6bdf3096",
+        "a208a149-748e-5be4-ae6b-2e0acfc01ee9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -100576,7 +100688,16 @@
       "centroidLongitude": 29.0292379,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "f650b428-57e4-53c2-8e75-5244e2a649ee",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -100620,7 +100741,16 @@
       "centroidLongitude": 29.0262605,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "bca3a202-e7aa-55ce-99de-920324990340"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100665,7 +100795,16 @@
       "centroidLongitude": 28.9802076,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "35286e95-babc-548b-956a-53e485bc070c",
+        "6de2e5a7-1fd9-5ef7-9fbc-550a7ef800ea",
+        "4c01527e-3fb8-5b9d-bed4-35e1d0f71c74",
+        "bc8a6e0c-7b67-503c-b03e-69945cd908cc",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "bca3a202-e7aa-55ce-99de-920324990340"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Market",
@@ -100710,7 +100849,16 @@
       "centroidLongitude": 29.0301962,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "5de62959-64c0-5cf2-b794-d9ce498f89aa",
+        "53671677-3462-59ee-8265-c8eb7a4b1849",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100756,7 +100904,16 @@
       "centroidLongitude": 28.9680574,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "6de2e5a7-1fd9-5ef7-9fbc-550a7ef800ea",
+        "35286e95-babc-548b-956a-53e485bc070c",
+        "7011d656-0c84-5d38-ac6c-cb33134bd896",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -100804,7 +100961,16 @@
       "centroidLongitude": 29.0295685,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "9c3904f0-a494-5687-8a19-a0fe0e6dd251"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100849,7 +101015,16 @@
       "centroidLongitude": 28.9737501,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ead33fe1-381e-59e0-9619-cdd298b8a824",
+        "e0c70663-7916-5023-982e-7f6027a49416",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "7c69825f-682a-5f3c-a3cf-18ed1b46be61",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "D81C8ECD-B3B1-5281-8FDD-9928E48A05CA",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -100898,7 +101073,16 @@
       "centroidLongitude": 28.9801935,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -100942,7 +101126,16 @@
       "centroidLongitude": 28.9392205,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "7c69825f-682a-5f3c-a3cf-18ed1b46be61",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "26c2a25e-1e3a-5130-9134-5d2d720a0e9e",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -100990,7 +101183,16 @@
       "centroidLongitude": 29.0539579,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Waterfront",
@@ -101032,7 +101234,16 @@
       "centroidLongitude": 29.0314279,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "35286e95-babc-548b-956a-53e485bc070c",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "7011d656-0c84-5d38-ac6c-cb33134bd896",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -101078,7 +101289,16 @@
       "centroidLongitude": 28.9805888,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c5b50ac4-9776-5a8d-a7b0-f76eeeee2eda",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "3b430cb6-312c-5fc4-95da-00ea57dd0da0",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "283b941c-7234-56fd-a08a-d452d266eed1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -101121,7 +101341,16 @@
       "centroidLongitude": 29.0041212,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "26c2a25e-1e3a-5130-9134-5d2d720a0e9e"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Tower",
@@ -101170,7 +101399,16 @@
       "centroidLongitude": 28.9742177,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -101216,7 +101454,16 @@
       "centroidLongitude": 28.9730698,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4c01527e-3fb8-5b9d-bed4-35e1d0f71c74",
+        "38a2b6ba-3c07-597a-a33f-63366114c899",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "f650b428-57e4-53c2-8e75-5244e2a649ee",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "07d53a1f-5138-5bdb-8019-e4eeee0e0fe9",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -101263,7 +101510,16 @@
       "centroidLongitude": 28.9713084,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -101309,7 +101565,16 @@
       "centroidLongitude": 29.0095139,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "ce3cbcba-2c68-5460-a8e6-8aa7fca4f9c0",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "5de62959-64c0-5cf2-b794-d9ce498f89aa",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -101354,7 +101619,16 @@
       "centroidLongitude": 28.9734726,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e0c70663-7916-5023-982e-7f6027a49416",
+        "67662107-be72-5bc3-bca2-7ac0c427b08a",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "D81C8ECD-B3B1-5281-8FDD-9928E48A05CA",
+        "545b2012-1d76-5155-a735-110791c3b49d"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -101402,7 +101676,16 @@
       "centroidLongitude": 29.0177106,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -101450,7 +101733,16 @@
       "centroidLongitude": 28.6018412,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "26c2a25e-1e3a-5130-9134-5d2d720a0e9e",
+        "a208a149-748e-5be4-ae6b-2e0acfc01ee9",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "545b2012-1d76-5155-a735-110791c3b49d"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -101497,7 +101789,16 @@
       "centroidLongitude": 29.0441966,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "9c3904f0-a494-5687-8a19-a0fe0e6dd251"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -101541,7 +101842,16 @@
       "centroidLongitude": 29.0322449,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ce3cbcba-2c68-5460-a8e6-8aa7fca4f9c0",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "6de2e5a7-1fd9-5ef7-9fbc-550a7ef800ea",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "a208a149-748e-5be4-ae6b-2e0acfc01ee9",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "District",
@@ -101589,7 +101899,16 @@
       "centroidLongitude": 28.9730073,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ead33fe1-381e-59e0-9619-cdd298b8a824",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "e0c70663-7916-5023-982e-7f6027a49416",
+        "35286e95-babc-548b-956a-53e485bc070c",
+        "00b933d6-ea4e-5897-93e0-d1bd46622369",
+        "5E6047F6-12BD-4BFB-A2F1-D74622EFAB62"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -101635,7 +101954,16 @@
       "centroidLongitude": 28.967588,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "26c2a25e-1e3a-5130-9134-5d2d720a0e9e",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "7c69825f-682a-5f3c-a3cf-18ed1b46be61",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "a208a149-748e-5be4-ae6b-2e0acfc01ee9",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -101678,7 +102006,16 @@
       "centroidLongitude": 28.9640247,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "7c69825f-682a-5f3c-a3cf-18ed1b46be61",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -101727,7 +102064,16 @@
       "centroidLongitude": 28.9777458,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "bca3a202-e7aa-55ce-99de-920324990340",
+        "283ab3e0-7358-5f84-aeb7-8b0463d8581b",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "9c3904f0-a494-5687-8a19-a0fe0e6dd251",
+        "724bb9e8-2116-5a14-bb0a-6d7bdd73ea98",
+        "a8eadaea-7af3-5309-b694-01cfa348b486"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -101772,7 +102118,16 @@
       "centroidLongitude": 28.9851028,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c1485865-2d3a-55c5-a301-8aa8f316e5c5",
+        "99a765a9-b698-5534-8807-72fdaec4c06d",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "a208a149-748e-5be4-ae6b-2e0acfc01ee9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Square",
@@ -101822,7 +102177,16 @@
       "centroidLongitude": 28.9744304,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ead33fe1-381e-59e0-9619-cdd298b8a824",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "67662107-be72-5bc3-bca2-7ac0c427b08a",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -101866,7 +102230,16 @@
       "centroidLongitude": 28.9768138,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "7c69825f-682a-5f3c-a3cf-18ed1b46be61",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "26c2a25e-1e3a-5130-9134-5d2d720a0e9e",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "a208a149-748e-5be4-ae6b-2e0acfc01ee9",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -101913,7 +102286,16 @@
       "centroidLongitude": 28.9798862,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7011d656-0c84-5d38-ac6c-cb33134bd896",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "c5b50ac4-9776-5a8d-a7b0-f76eeeee2eda"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Museum",
@@ -101960,7 +102342,16 @@
       "centroidLongitude": 28.9779274,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "e0c70663-7916-5023-982e-7f6027a49416",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Waterfront",
@@ -102006,7 +102397,16 @@
       "centroidLongitude": 29.0251391,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "40f15e6b-436f-5d49-893e-fd9c6bdf3096",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "6de2e5a7-1fd9-5ef7-9fbc-550a7ef800ea",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Waterfront",
@@ -102052,7 +102452,16 @@
       "centroidLongitude": 28.981247,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "b92370c3-4b37-50d1-967c-aaf9330af2c5",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "99a765a9-b698-5534-8807-72fdaec4c06d",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -102097,7 +102506,16 @@
       "centroidLongitude": 29.029904,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ce3cbcba-2c68-5460-a8e6-8aa7fca4f9c0",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "40f15e6b-436f-5d49-893e-fd9c6bdf3096",
+        "e050ee5f-2e8d-5c24-8448-8d99625c3637",
+        "bd6cb95b-0f40-5929-94b4-e8d88b8b1b4b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -102142,7 +102560,16 @@
       "centroidLongitude": 28.9954244,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4c01527e-3fb8-5b9d-bed4-35e1d0f71c74",
+        "93bef539-61a8-5c04-8feb-1b3ca689b282",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "9c3904f0-a494-5687-8a19-a0fe0e6dd251",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -102184,7 +102611,16 @@
       "centroidLongitude": 29.015572,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "6de2e5a7-1fd9-5ef7-9fbc-550a7ef800ea",
+        "7011d656-0c84-5d38-ac6c-cb33134bd896",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "be72b933-5382-580a-9c8e-c7482e489a32",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Commerce",
@@ -102231,7 +102667,16 @@
       "centroidLongitude": 28.9804484,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "3b430cb6-312c-5fc4-95da-00ea57dd0da0",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "40f15e6b-436f-5d49-893e-fd9c6bdf3096",
+        "cc1c1287-1399-52f8-a2a0-8d903d81b231",
+        "83ba13e0-716d-5c46-92ca-55c37fb11785"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -102276,7 +102721,16 @@
       "centroidLongitude": 28.9869897,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "793f652f-9b45-580c-8865-27292f4e3121",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "3b430cb6-312c-5fc4-95da-00ea57dd0da0",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "35286e95-babc-548b-956a-53e485bc070c",
+        "545b2012-1d76-5155-a735-110791c3b49d"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Park",
@@ -102372,7 +102826,16 @@
       "centroidLongitude": 28.982485,
       "city": "Istanbul",
       "country": "Turkey",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "438cffa8-f4b9-5a2d-8a5c-83694283ad20",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "09f9f515-b026-5a60-99e0-9f3a4e923868",
+        "ead33fe1-381e-59e0-9619-cdd298b8a824"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Waterfront",
@@ -258925,6 +259388,16 @@
       "centroidLongitude": 29.0655,
       "city": "Istanbul",
       "country": "Turkey",
+      "relatedTourIds": [
+        "283b941c-7234-56fd-a08a-d452d266eed1",
+        "3cc78143-84f4-534c-a255-c4f7bac5528b",
+        "9d94505c-d49f-5769-8c5c-48d86792b68c",
+        "ead33fe1-381e-59e0-9619-cdd298b8a824",
+        "5ff4f637-7ae4-555a-b786-8eea154b5769",
+        "cd605502-7307-5f0f-8c5a-dc48fc5cf32c",
+        "545b2012-1d76-5155-a735-110791c3b49d",
+        "67e7fb23-4300-5b46-9d37-9a5417a79ff7"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -269333,6 +269806,16 @@
       "centroidLongitude": 28.9831651,
       "city": "Istanbul",
       "country": "Turkey",
+      "relatedTourIds": [
+        "03e2dfd3-85e9-5483-86a8-d8ea90e2888f",
+        "b2f7ccbc-31f5-5e3c-b8fb-a31858b0bd5c",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "67952dc0-cdff-5604-9830-7a428fac4ffa",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "9c3904f0-a494-5687-8a19-a0fe0e6dd251",
+        "1fd731eb-dd85-5043-a887-49dfadb86a8e",
+        "506afa7b-4457-52ba-b2ff-b7b9dd43ca4b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food"
