@@ -100025,7 +100025,8 @@
         "Waterfront",
         "Baroque",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Balyan family"
       ],
       "priceUSD": 0
     },
@@ -100138,7 +100139,9 @@
         "History",
         "Art",
         "Power",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Alexandre Vallaury",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -100369,7 +100372,9 @@
         "Modernist",
         "Contemporary",
         "After Dark",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Tabanlıoğlu Architects",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -100483,7 +100488,9 @@
         "Library",
         "History",
         "Notable Building",
-        "Free to Visit"
+        "Free to Visit",
+        "Tabanlıoğlu Architects",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -101305,7 +101312,8 @@
         "Architecture",
         "History",
         "Maritime",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Mimar Sinan"
       ],
       "priceUSD": 0
     },
@@ -101636,7 +101644,8 @@
         "Library",
         "Neoclassical",
         "Free to Visit",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Alexandre Vallaury"
       ],
       "priceUSD": 0
     },
@@ -101748,7 +101757,8 @@
         "Religious Building",
         "Faith",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Emre Arolat"
       ],
       "priceUSD": 0
     },
@@ -101970,7 +101980,8 @@
         "Faith",
         "Waterfront",
         "Hidden Gem",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Mimar Sinan"
       ],
       "priceUSD": 0
     },
@@ -102023,7 +102034,8 @@
         "Iconic Landmark",
         "Viewpoint",
         "Free to Visit",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Mimar Sinan"
       ],
       "priceUSD": 0
     },
@@ -102411,7 +102423,9 @@
       "tags": [
         "Waterfront",
         "Notable Building",
-        "History"
+        "History",
+        "Balyan family",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -102626,7 +102640,10 @@
         "Commerce",
         "Performance",
         "Contemporary",
-        "Venue"
+        "Venue",
+        "Tabanlıoğlu Architects",
+        "Emre Arolat",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },

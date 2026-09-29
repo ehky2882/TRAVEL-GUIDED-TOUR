@@ -133,6 +133,8 @@ enum Tag {
             "Luis Rey", "Manuel Salgado", "Mara Servetto",
             "Mario Buschiazzo", "Mario Cucinella", "Mario Tamagno",
             "Mario Vodret", "Massimiliano Locatelli", "Michael Van Valkenburgh",
+            "Mimar Sinan", "Balyan family", "Alexandre Vallaury",
+            "Tabanlıoğlu Architects", "Emre Arolat",
             "Michele De Lucchi", "Min Hyun-jun", "Minard Lafever",
             "Nelson Dupré", "Ngô Viết Thụ", "Nicodemus Tessin the Elder",
             "Nicodemus Tessin the Younger", "Nicola Salvi", "Norman Peebles",
