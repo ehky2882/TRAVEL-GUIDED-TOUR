@@ -294,12 +294,13 @@ photographs are unaffected.
 ## Update 2026-09-29 (later) — South Pointe hero and Lyric gallery shot
 
 The two photos that "never arrived" last session were re-sent and are now on gh-pages
-(commit `2d9d2c2b`):
+(commits `2d9d2c2b`, and a second South Pointe shot after it):
 
 | # | slug | file | role | sha256 |
 |---|------|------|------|--------|
 | 21 | `south-pointe-park` | `south-pointe-park_hero.webp` | hero | `8ec72f6f9b1d…` |
 | 26 | `lyric-theater` | `lyric-theater_4.webp` | gallery (after `_2`, `_3`) | `212703a3a2c6…` |
+| 21 | `south-pointe-park` | `south-pointe-park_2.webp` | gallery | `22978f21d3a4…` |
 
 ⚠️ **Both are owner photographs that were edited with an AI tool.** The session flagged the
 signs of it (warped sign lettering, smudged crowds, identical 1448×1086 size, no camera
