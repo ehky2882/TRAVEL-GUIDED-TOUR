@@ -290,3 +290,26 @@ photographs are unaffected.
 | `bacardi-building_4.webp` | CC BY-SA 4.0 | Bacardi Building Biscayne Boulevard Miami.jpg |
 | `little-haiti-cultural-complex_hero.webp` | CC BY 3.0 (held, not uploaded) | Little Haiti south.jpg |
 | `tower-theater_hero-2.webp`, `lyric-theater_hero-2.webp`, `gesu-church_hero-2.webp` + 3 more | owner photograph, no credit owed | — |
+
+## Update 2026-09-29 (later) — South Pointe hero and Lyric gallery shot
+
+The two photos that "never arrived" last session were re-sent and are now on gh-pages
+(commit `2d9d2c2b`):
+
+| # | slug | file | role | sha256 |
+|---|------|------|------|--------|
+| 21 | `south-pointe-park` | `south-pointe-park_hero.webp` | hero | `8ec72f6f9b1d…` |
+| 26 | `lyric-theater` | `lyric-theater_4.webp` | gallery (after `_2`, `_3`) | `212703a3a2c6…` |
+
+⚠️ **Both are owner photographs that were edited with an AI tool.** The session flagged the
+signs of it (warped sign lettering, smudged crowds, identical 1448×1086 size, no camera
+metadata). The owner confirmed *"photo that was edited in AI... just use them"*. **This is
+the owner's decision. Do not remove them as a Gate A failure.** Owner-supplied, so no
+attribution is owed.
+
+**The upload path still does not write files**, but a pasted image **is** recoverable.
+It is stored base64 in the session transcript (`~/.claude/projects/<proj>/<session>.jsonl`,
+content blocks with `type: image`). Decode it from there instead of asking the owner to resend.
+
+South Pointe now has a hero; `lincoln-road`, `overtown-interchange` and `virginia-key-beach`
+still have no picks.

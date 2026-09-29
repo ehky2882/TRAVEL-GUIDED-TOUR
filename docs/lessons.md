@@ -818,6 +818,15 @@ batch after the fact while Commons is throttled, match each exact Commons filena
 against Openverse (`?q=<title>&source=wikimedia`, with a real User-Agent — the default
 Python one is 403'd). Commons filenames are unique, so an exact title match is the same file.
 
+### A pasted image that never became a file is still in the transcript (2026-09-29)
+
+In web sessions an image the owner pastes into chat can render for Claude and still never
+appear on disk. Two sessions in a row hit this, and the first asked the owner to resend
+repeatedly. The image **is** saved in the session transcript,
+`~/.claude/projects/<project>/<session>.jsonl`, as a content block with `type: image` and
+base64 `source.data`. Decode it with a few lines of Python, then hash the written file as
+usual. **Do this before asking the owner to resend anything.**
+
 ### A creator's cover frame is not a picture of the venue (2026-09-16)
 
 `make-link-pin.py` takes a pin's hero from the post's own `display_url`, so the hero is whatever
