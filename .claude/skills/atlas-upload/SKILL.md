@@ -21,7 +21,8 @@ newly onboarded.
   Do not guess at catalog shape.
 - **When something needs Edward** (the owner), say so plainly and stop that
   thread. Anything touching `*.swift`, the Xcode project, or app behaviour is
-  his call, not theirs.
+  his call, not theirs. **The one exception is adding new architect tags**
+  (Job 5), which they may do and merge themselves.
 
 ## Before anything else, every session
 
@@ -110,9 +111,10 @@ Always: **new branch → commit → open a PR → CI green → merge.** Never pu
 | Kind of change | Merges how |
 |---|---|
 | `Resources/Tours.json`, docs, `scripts/`, images and audio on `gh-pages` | Auto-merge once CI is green — no approval needed |
-| Anything in `*.swift`, `*.xcodeproj`, `Assets.xcassets/`, `Info.plist` | **Stop.** Owner reviews on a simulator or TestFlight first |
+| **Adding new architect tags** (Job 5), and nothing else in Swift | Auto-merge once CI is green. This is the only `.swift` change a contributor may make (Edward, 2026-09-29) |
+| Anything else in `*.swift`, `*.xcodeproj`, `Assets.xcassets/`, `Info.plist` | **Stop.** Owner reviews on a simulator or TestFlight first |
 
-A content contributor should essentially never be in the second row. If a task
+A content contributor should essentially never be in the last row. If a task
 drifts there, say so and hand it to Edward.
 
 ---
@@ -410,6 +412,52 @@ Use the `atlas-audio-tour` skill if it is available in the session. Scripts stag
 on a branch under `drafts/<city>-batch1/`; only the README pick-map goes to
 `main`. Add the row to `drafts/AUDIO-PENDING-SURVEY.md` on `main` as soon as the
 batch is staged, not at the end of the city.
+
+---
+
+# Job 5 — Adding an architect tag
+
+Use this job when a tour's script names the architect behind the building and
+that name is missing from the tag list, so the tour can only carry *Designed by
+a Master*. Architect tags are the one `.swift` change a contributor may make
+and merge without Edward (his decision, 2026-09-29). #1096, the Istanbul
+architects, is the worked example.
+
+**The permission is narrow. Keep inside it:**
+
+- **Add names only.** Never rename or remove an existing tag, because tours
+  already carry those strings. Never touch another facet or any other line of
+  Swift. If the job needs any of that, stop and hand it to Edward.
+- **The name goes in exactly two places, spelled identically:**
+  1. `TRAVEL GUIDED TOUR/Models/Tag.swift`, inside `(.architect, [ … ])`.
+  2. `scripts/validate-tours.swift`, inside `let architectTags: Set<String> = [ … ]`.
+
+  Put the new names on a **line of their own** in each list (not tacked onto
+  an existing line), so the diff is pure additions.
+- **Check that it isn't already there under another spelling** before adding
+  it (`grep -i` for the surname in `Tag.swift`). A firm and its founder are
+  different tags, so follow what the script credits.
+- **Every attribution comes from the tour's own script** or another reliable
+  source. Tag only what the building's architect actually built. For example,
+  the Tiled Pavilion was not tagged Vallaury, because he only surveyed it.
+- Tag the tours in `Resources/Tours.json`, and add *Designed by a Master* to
+  any tagged tour that lacks it.
+
+**Before opening the PR, prove it stayed inside the lines:**
+
+```bash
+python3 scripts/validate-tours-mirror.py        # must report 0 errors
+git diff origin/main --stat -- '*.swift' '*.pbxproj' '*.xcassets' Info.plist
+#   → must list ONLY Models/Tag.swift and scripts/validate-tours.swift
+git diff origin/main -U0 -- '*.swift' | grep '^[-+][^-+]'
+#   → must show ONLY '+' lines of quoted names, and no '-' lines
+```
+
+If any of these three fails, the PR needs Edward's OK. Say so and stop.
+Otherwise open the PR, say in its body that it is an architect-tag-only change
+under this rule, and merge once CI is green (the simulator build and unit tests
+must pass). New tags work on phones straight away. The app offers them as
+browse filters from its next App Store release.
 
 ---
 

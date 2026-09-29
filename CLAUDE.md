@@ -71,7 +71,7 @@ These happen **automatically, without the owner asking**.
 | 1 | Every session start | **Run `bash scripts/session-start.sh`** (§ READ FIRST) + read the latest HANDOFF file — before any other work. It prints live state; this file does not have it. |
 | 2 | After any edit to `Resources/Tours.json` | Run `swift scripts/validate-tours.swift`; fix errors before continuing |
 | 3 | Before pushing any code PR | **Local (Mac) session:** call `test_sim` (XcodeBuildMCP); fix failures before pushing. **Web/remote session (no Mac):** open the PR so `ci.yml` runs the simulator build + unit tests (the `test_sim` stand-in); fix any red before merge. |
-| 4 | Doc-only / content-only / asset PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line. Delete the merged branch. **Code PRs (anything in `*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) wait for explicit owner OK + visual simulator confirmation — see § Merging PRs for the exact boundary.** |
+| 4 | Doc-only / content-only / asset PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line. Delete the merged branch. **Code PRs (anything in `*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) wait for explicit owner OK + visual simulator confirmation — see § Merging PRs for the exact boundary.** One narrow exception: **adding new architect tags** auto-merges (§ Merging PRs). |
 | 5 | Session ends (touched code or content) | Write `archive/HANDOFF-YYMMDD.md`; add a **one-line** row to `archive/README.md` (it is an index — the long account belongs in the handoff itself) and update `ROADMAP.md`. **🔴 Do NOT append a session narrative to this file.** That is what grew it to 1.5 MB — ~409,000 tokens on *every request of every session* (see § Current state). Touch `CLAUDE.md` only when a **durable rule** changes; a durable *lesson* goes in `docs/lessons.md`; everything else is the handoff's job. |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | **Web/remote session (preferred, no Mac):** push the branch, then trigger `.github/workflows/testflight.yml` (Actions → Run workflow on the branch, or add the `build` label to its PR) — CI builds + signs + uploads automatically; build number = `github.run_number` → `1.1 (N)`. See `docs/testflight-ci.md`. **Local (Mac) session:** bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, `xcodebuild archive` (`docs/testflight.md`), owner uploads via Organizer. |
@@ -414,11 +414,12 @@ of health. Do not rely on that.
 - `.github/workflows/` (CI definitions)
 - Lint / tooling configs (`.swiftlint.yml`, etc.)
 - Audio + image uploads to `gh-pages` branch
+- **Adding new architect tags. This is the one `.swift` exception** (owner, 2026-09-29), and a content contributor may do it. It qualifies only when **every** Swift change is a new, quoted name **added** to the Architect list in `Models/Tag.swift` (`(.architect, [ … ])`) and to the same name in `architectTags` in `scripts/validate-tours.swift`, and the PR otherwise touches only `Tours.json` (tagging the tours), docs and `status/`. It does not qualify if it renames or removes a tag, touches another facet or any other Swift line, or changes the Xcode project, assets or `Info.plist`. Those go back to owner OK. It must also pass `python3 scripts/validate-tours-mirror.py` with 0 errors and green CI (the simulator build and unit tests), and every attribution must come from the tour's own script or a reliable source. How to do it is in `.claude/skills/atlas-upload/SKILL.md` § Job 5. **Why this is safe:** `Tour.tags` is `[String]`, so builds already on phones decode a new tag without trouble. They just don't offer it as a browse filter until the next App Store release.
 
 Flow for auto-merge PRs: open PR → wait for CI green → `gh pr merge --squash --delete-branch`.
 
 **Wait for owner OK (visual simulator review required) — code:**
-- Anything in `TRAVEL GUIDED TOUR/<source-folder>/*.swift` (`Audio/`, `Components/`, `Data/`, `Features/`, `Location/`, `Models/`, `Theme/`, `ContentView.swift`, `SplashView.swift`, the App entry)
+- Anything else in `TRAVEL GUIDED TOUR/<source-folder>/*.swift` (`Audio/`, `Components/`, `Data/`, `Features/`, `Location/`, `Models/`, `Theme/`, `ContentView.swift`, `SplashView.swift`, the App entry)
 - Xcode project file (`*.xcodeproj`/`*.pbxproj`)
 - Asset catalogs (`Assets.xcassets/`)
 - `Info.plist`
