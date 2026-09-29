@@ -5479,6 +5479,16 @@
       "avatarEmoji": "🇬🇧",
       "bio": "Atlas Studio's Glasgow bureau — audio tours of a city that built ships and locomotives for the world and then kept the cranes: a cathedral raised over a saint's grave, Mackintosh's tearooms and churches, a ballroom above a market, and a duke on a horse who has worn a traffic cone for forty years.",
       "websiteURL": null
+    },
+    {
+      "id": "E64917C9-2B5A-54F6-908C-A6F6BA0EB231",
+      "displayName": "Instagram @pinointeriors",
+      "platform": "instagram",
+      "handle": "pinointeriors",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/pinointeriors/"
     }
   ],
   "tours": [
@@ -313180,6 +313190,96 @@
         "Museum",
         "Maritime",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FF68754D-F409-5499-8783-4275432ED6AF",
+      "createdAt": "2026-09-29",
+      "title": "Peter's Beach",
+      "shortDescription": "A post by @chiara_in_italy on TikTok.",
+      "longDescription": "Sorrento tips 🇮🇹 I wouldn’t miss 🍋 Today we’re talking beach clubs, and there are lots of them right in the center of Sorrento, but Peter’s beach is special 🥰 I’ve come here for years because not only is the actual beach stunning with beautiful water, but their restaurant is INSANE. Some of the best food you can get along the coast. 🦞🐟 Peter’s Sorrento thanks for having me and we can’t wait to come back! 💛 #sorrento #italytravel #amalficoast #italiansummer #traveltoitaly Sorrento tips | beach clubs in Sorrento | best beach Sorrento | Amalfi coast tips",
+      "makerId": "56778276-FB1D-5415-ACC5-078C11DB64F2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peter-s-beach-chiarainitaly_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chiara_in_italy/video/7659087414941469984",
+      "sourceAuthor": "@chiara_in_italy",
+      "stops": [
+        {
+          "id": "3CEF3296-A177-5B91-987F-ADE9EDCA7B75",
+          "order": 0,
+          "title": "Peter's Beach",
+          "caption": "Sorrento tips 🇮🇹 I wouldn’t miss 🍋 Today we’re talking beach clubs, and there are lots of them right in the center of Sorrento, but Peter’s beach is special 🥰 I’ve come here for years because not only is the actual beach stunning with beautiful water, but their restaurant is INSANE. Some of the best food you can get along the coast. 🦞🐟 Peter’s Sorrento thanks for having me and we can’t wait to come back! 💛 #sorrento #italytravel #amalficoast #italiansummer #traveltoitaly Sorrento tips | beach clubs in Sorrento | best beach Sorrento | Amalfi coast tips",
+          "latitude": 40.628707,
+          "longitude": 14.373656,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peter-s-beach-chiarainitaly_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.628707,
+      "centroidLongitude": 14.373656,
+      "city": "Sorrento",
+      "country": "Italy",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Waterfront",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "822BFF22-DCBC-5B2E-A12D-45A1E9680457",
+      "createdAt": "2026-09-29",
+      "title": "Talo Scandinavian Furniture",
+      "shortDescription": "A post by @pinointeriors on Instagram.",
+      "longDescription": "What is it like to run a multi-million-euro business built around Scandinavian furniture in Japan? In this seven-part series, Onni visits Taro at @talo_scandinavia_furniture . We have filmed with Taro before, but this time we go deeper behind the scenes. Taro shows us the whole space: the showroom, the restoration areas, his office, and the pieces he has collected over several decades. We talk about his journey, how he became one of Japan’s leading Scandinavian furniture dealers, and also look back at the path we have shared with him so far. Watch the whole video on our Youtube-channel, Link in bio. Part 4/7. Suomeksi 🇫🇮 Millaista on pyörittää monimiljoonabisnestä skandinaavisilla huonekaluilla Japanissa? Tässä seitsemänosaisessa videosarjassa Onni vierailee Taron luona @talo_scandinavia_furniture . Olemme kuvanneet Taron kanssa aikaisemminkin, mutta tällä kertaa pääsemme syvemmälle kulissien taakse. Taro esittelee meille koko liiketilan: showroomin, kunnostustilat, toimiston ja tuotteita, joita hän on keräillyt useiden vuosikymmenten ajan. Samalla keskustelemme hänen matkastaan, siitä miten hänestä tuli yksi Japanin johtavista skandinaavisten huonekalujen välittäjistä, sekä meidän ja Taron yhteisestä taipaleesta tähän asti. Katso koko video Youtube-kanavaltamme, linkki biossa! Osa 4/7. #pinointeriors #scandinaviandesign #finnishdesign #japan #alvaraalto",
+      "makerId": "E64917C9-2B5A-54F6-908C-A6F6BA0EB231",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/talo-scandinavian-furniture-pinointeriors_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaxaPI5I6RI/",
+      "sourceAuthor": "@pinointeriors",
+      "stops": [
+        {
+          "id": "DC759225-E952-56DF-87C9-DB0E6829FC49",
+          "order": 0,
+          "title": "Talo Scandinavian Furniture",
+          "caption": "What is it like to run a multi-million-euro business built around Scandinavian furniture in Japan? In this seven-part series, Onni visits Taro at @talo_scandinavia_furniture . We have filmed with Taro before, but this time we go deeper behind the scenes. Taro shows us the whole space: the showroom, the restoration areas, his office, and the pieces he has collected over several decades. We talk about his journey, how he became one of Japan’s leading Scandinavian furniture dealers, and also look back at the path we have shared with him so far. Watch the whole video on our Youtube-channel, Link in bio. Part 4/7. Suomeksi 🇫🇮 Millaista on pyörittää monimiljoonabisnestä skandinaavisilla huonekaluilla Japanissa? Tässä seitsemänosaisessa videosarjassa Onni vierailee Taron luona @talo_scandinavia_furniture . Olemme kuvanneet Taron kanssa aikaisemminkin, mutta tällä kertaa pääsemme syvemmälle kulissien taakse. Taro esittelee meille koko liiketilan: showroomin, kunnostustilat, toimiston ja tuotteita, joita hän on keräillyt useiden vuosikymmenten ajan. Samalla keskustelemme hänen matkastaan, siitä miten hänestä tuli yksi Japanin johtavista skandinaavisten huonekalujen välittäjistä, sekä meidän ja Taron yhteisestä taipaleesta tähän asti. Katso koko video Youtube-kanavaltamme, linkki biossa! Osa 4/7. #pinointeriors #scandinaviandesign #finnishdesign #japan #alvaraalto",
+          "latitude": 35.378201,
+          "longitude": 139.176483,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/talo-scandinavian-furniture-pinointeriors_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.378201,
+      "centroidLongitude": 139.176483,
+      "city": "Hadano",
+      "country": "Japan",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Commerce",
+        "Venue",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
