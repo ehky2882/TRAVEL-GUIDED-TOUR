@@ -106210,12 +106210,12 @@
           "order": 0,
           "title": "Vizcaya",
           "caption": "The drive is built so that you won't see the house, not yet: it bends through native forest, limestone and shade on either side, and whatever you came to look at stays hidden until the trees give way.",
-          "latitude": 25.744381,
-          "longitude": -80.210502,
+          "latitude": 25.744699,
+          "longitude": -80.211577,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vizcaya.mp3",
           "audioDurationSeconds": 126,
           "triggerMode": "geofenced",
-          "triggerRadiusMeters": 100,
+          "triggerRadiusMeters": 120,
           "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya_hero.webp",
           "transcriptText": "The drive is built so that you won't see the house, not yet: it bends through native forest, limestone and shade on either side, and whatever you came to look at stays hidden until the trees give way. The delay is deliberate. James Deering, a vice president of the farm-machinery company International Harvester, wanted arrival here to feel like discovery, and the road still performs it for everyone who comes after him.\n\nHe moved in on Christmas Day, 1916, into an Italian villa assembled on this shore for a man who only ever wintered in it, and the gardens and the estate village went on being built into the early 1920s. By most estimates the work employed around a thousand people in a city of perhaps ten thousand, many of them Black laborers from the Bahamas who lived, by law, in the segregated parts of town. Deering spent fewer than ten winters here and died at sea in 1925, a year before the land boom came apart.\n\nIt very nearly became something else. The storm of 1926 damaged the house and the gardens; the heirs restored them and tried to run the estate as an attraction until a second storm in 1935 set that back, and most of the land around it was sold off for development, including ground for the hospital next door. In the early 1950s his nieces sold the house and formal gardens to the county for a sum below their value, gave it the furnishings on condition that it remain a public museum, and the doors opened soon after.\n\nTaken together, the sequence stops looking like bad luck. A fortune arrives at the top of a boom and builds; a storm and a bust break it; the land is parceled out to whoever is buying next; and what survives is handed to the public while the next boom goes up on the horizon, the way the towers that rose along the bay in the 2020s stand a few miles north of these gates. In Miami, boom and bust are less an interruption than the way the city breathes.\n\nWhether or not you go in, the drive has already done the thing it was built to do, which is to make you wait for the house and then give it to you all at once."
         }
@@ -106223,8 +106223,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 126,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 25.744381,
-      "centroidLongitude": -80.210502,
+      "centroidLatitude": 25.744699,
+      "centroidLongitude": -80.211577,
       "city": "Miami",
       "country": "United States",
       "relatedTourIds": [],
@@ -109527,7 +109527,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "3CCC739B-0070-5A3F-8D90-64F35F740743",
-        "F0124B4E-65F1-5300-8B32-828A721BCA8B"
+        "F0124B4E-65F1-5300-8B32-828A721BCA8B",
+        "eebfa594-a561-5971-967b-987825a94da0"
       ]
     },
     {
@@ -114126,6 +114127,66 @@
       "tourIds": [
         "a17dbd1d-3491-4062-a62e-9b0059c678f7",
         "85F8C2F4-E528-59A5-88EE-AC443AEA9AFF"
+      ]
+    },
+    {
+      "id": "da976a39-fc18-5916-ac71-c865a3992d9a",
+      "name": "The Barnacle",
+      "city": "Miami",
+      "address": null,
+      "latitude": 25.725332,
+      "longitude": -80.242557,
+      "description": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-barnacle_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "18b72fc9-9685-5426-904f-3e73d1b707b9",
+        "4EC1AEA7-6ECE-5742-A723-CFD3E35AFC7D"
+      ]
+    },
+    {
+      "id": "c2c220d1-50f9-5f0b-aeea-adc2b0c35aa9",
+      "name": "Miami-Dade County Courthouse",
+      "city": "Miami",
+      "address": null,
+      "latitude": 25.774587,
+      "longitude": -80.195136,
+      "description": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dade-county-courthouse_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5879f10d-87af-52b2-8129-d439495445da",
+        "40A61570-2050-5CF0-A022-43111C7B7A90"
+      ]
+    },
+    {
+      "id": "4f9e309a-86ce-5035-8712-0144c062fdd0",
+      "name": "Historic Virginia Key Beach Park",
+      "city": "Miami",
+      "address": null,
+      "latitude": 25.736439,
+      "longitude": -80.156325,
+      "description": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/virginia-key-beach_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0187e605-c21e-5862-9c6d-0554f1777e6f",
+        "5C7C68AF-3BD8-5EAE-8883-6A39AC53A63C"
+      ]
+    },
+    {
+      "id": "9fd898ec-99bb-5fd8-88a2-708eff357032",
+      "name": "Casa Casuarina",
+      "city": "Miami Beach",
+      "address": null,
+      "latitude": 25.782015,
+      "longitude": -80.13063,
+      "description": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-casuarina_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "e01770af-347d-5f43-a63e-1fa97ce3551d",
+        "61E00612-61EB-5FA3-AB73-4C51116FE26D"
       ]
     }
   ],

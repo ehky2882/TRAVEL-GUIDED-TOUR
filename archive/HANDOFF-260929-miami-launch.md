@@ -45,17 +45,19 @@ assembler lives only in the scratchpad. Its rules:
 - `join-places --max-move 100`: only an unrelated Rome entry.
 - The coordinate audit was done at staging: GROSS none, no bias.
 
-## Left for Edward: place questions (not created)
-`check-place-candidates` found new tours sitting on existing creator pins. They sit on the same
-point because staging took those coordinates from the pins:
-
-| New tour | Existing pin | |
-|---|---|---|
-| The Barnacle | The Barnacle Historic State Park | same point |
-| Dade County Courthouse | Miami-Dade County Courthouse | same point |
-| Virginia Key Beach | Historic Virginia Key Beach Park | same point |
-| Casa Casuarina | The Mosaic Pool at Villa Casa Casuarina | same point, **part vs whole** |
-| Vizcaya | Vizcaya Museum and Gardens (2 pins) | 113 m |
+## Places: the owner said "join all" (done in the same PR)
+`check-place-candidates` found five new tours sitting on existing creator pins.
+- **Four new places**, each on the point its two members already shared, so nothing moved:
+  *The Barnacle*, *Miami-Dade County Courthouse*, *Historic Virginia Key Beach Park* and *Casa
+  Casuarina*. The last one pairs the house with the pin for its mosaic pool, which is a
+  part-vs-whole case; the owner ruled it in. Ids use the documented
+  `atlas-place:{slug(city)}:{slug(name)}` formula.
+- **Vizcaya joined the existing place** *Vizcaya Museum and Gardens* (`8cf359f8…`), which already
+  held the two creator pins at OSM's estate point. The tour's stop moved **113 m**, from
+  25.744381,-80.210502 onto 25.744699,-80.211577, and its radius went **100 → 120 m** so the
+  entrance drive the script is written for stays inside the circle.
+- The catalogue has 452 → 456 places. The validator reports 0 errors, and a re-run of
+  `check-place-candidates` lists no Miami group.
 
 ## Not done
 - **The five walks** (W1 *The Pitch*, W2 *Ocean Drive*, W3 *Calle Ocho*, W4 *The Grove*, W5 *The
