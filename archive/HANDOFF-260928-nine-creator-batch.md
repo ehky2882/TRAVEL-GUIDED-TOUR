@@ -60,3 +60,11 @@ creators = a second take, per the owner's standing preference).
 ## Owed by Edward
 - `status/owner/place-batch-260928.md` — 7 same-site pairs.
 - `status/owner/held-ads-260928.md` — the 2 held pins.
+
+## Follow-up, 2026-09-29: the 2 held pins minted
+The contributor asked again for **Peter's Beach** (Sorrento, 40.628707,14.373656) and
+**Talo Scandinavian Furniture** (Hadano, 35.378201,139.176483) after being told they read as
+promotional. Minted as asked; heroes on gh-pages in `b1b53888` (2 A — @chiara_in_italy's avatar
+was already live and was not re-uploaded). Place checks, spine lookup and audit clean.
+`status/owner/held-ads-260928.md` is replaced by `status/owner/ads-minted-260929.md`, which asks
+Edward whether to keep them — removing a pin is a catalogue edit **plus** an SQL delete.
