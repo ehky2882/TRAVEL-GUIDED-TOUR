@@ -228,7 +228,7 @@ Base URL: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 23 | `jewish-museum-of-florida` | `jewish-museum-of-florida_hero.webp` | 2 |
 | 24 | `fontainebleau` | `fontainebleau_hero.webp` | 2, 3, 4 |
 | 25 | `tower-theater` | `tower-theater_hero-2.webp` ⭐ | 2, 3 |
-| 26 | `lyric-theater` | `lyric-theater_hero.webp` | 2 |
+| 26 | `lyric-theater` | `lyric-theater_hero-2.webp` ⭐ | 2, 3 |
 | 28 | `bacardi-building` | `bacardi-building_hero.webp` | 2, 3⏳, 4 |
 | 29 | `little-haiti-cultural-complex` | `little-haiti-cultural-complex_hero.webp` ⏳ | — |
 
@@ -269,6 +269,7 @@ Candidates are sourced and verified, waiting on the owner:
 | # | slug | file | why |
 |---|------|------|-----|
 | 25 | `tower-theater` | `tower-theater_hero-2.webp` | Commons ran thin (3 candidates) and Unsplash gave nothing; the owner supplied the Calle Ocho facade with the steel mast, marquee and 1508 address — the scene the script describes |
+| 26 | `lyric-theater` | `lyric-theater_hero-2.webp` | also thin (3 candidates); the owner supplied the restored 1913 arched portico on NW 2nd Avenue with the Black Archives' *Street Talk* wing beside it |
 
 Published under a **new filename** rather than overwritten at the live
 `tower-theater_hero.webp`, per Image Pipeline step 9: a new filename is a new
@@ -282,5 +283,5 @@ as `tower-theater_3.webp` so their choice is not discarded; the old
 Commons runs out on these, and **Unsplash produced zero verified images across 144 candidates**
 (stock returns the city, not the place — the documented pattern):
 
-`little-haiti-cultural-complex` 1 · `gesu-church` 3 · `lyric-theater` 3 — ✅ **`tower-theater` resolved by an owner photograph**
+`little-haiti-cultural-complex` 1 · `gesu-church` 3 — ✅ **`tower-theater` and `lyric-theater` both resolved by owner photographs**
 
