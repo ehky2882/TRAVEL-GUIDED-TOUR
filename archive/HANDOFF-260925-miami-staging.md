@@ -307,6 +307,7 @@ The two photos that "never arrived" last session were re-sent and are now on gh-
 | 30 | `virginia-key-beach` | `virginia-key-beach_hero.webp` | hero | `7483f1582097…` |
 | 07 | `lincoln-road` | `lincoln-road_hero.webp` | hero | `ea24f7bfce2c…` |
 | 07 | `lincoln-road` | `lincoln-road_2.webp` | gallery (the coral-stone fountain) | `f2a329d4e983…` |
+| 27 | `overtown-interchange` | `overtown-interchange_hero.webp` | hero — **historical B&W aerial, source unknown** (see below) | `845c74f94d84…` |
 
 ⚠️ **Both are owner photographs that were edited with an AI tool.** The session flagged the
 signs of it (warped sign lettering, smudged crowds, identical 1448×1086 size, no camera
@@ -318,5 +319,22 @@ attribution is owed.
 It is stored base64 in the session transcript (`~/.claude/projects/<proj>/<session>.jsonl`,
 content blocks with `type: image`). Decode it from there instead of asking the owner to resend.
 
-South Pointe now has a hero; `lincoln-road`, `overtown-interchange` and `virginia-key-beach`
-still have no picks.
+**Every Miami tour now has a hero.** The owner supplied photos for duPont, Little Haiti, Virginia Key
+Beach and Lincoln Road, plus gallery shots for Little Haiti and Lincoln Road. All are AI-edited, used on
+the owner's decision.
+
+⚠️ **`overtown-interchange_hero.webp` has unknown provenance.** It is a black-and-white 1960s-era aerial
+of a stacked interchange over a street grid, with rail yards through the middle and what looks like the
+old Orange Bowl on the horizon. That is consistent with the Midtown Interchange looking west, but this
+was not confirmed. The session asked where the photo came from, because a state/FDOT archive photo is
+likely free to use and a Miami Herald or wire photo is not. **The owner said "just use it".** Before
+Miami goes live, it is worth a reverse-image search to find the source. If it turns out to be a
+newspaper photo, swap in the public-domain alternatives below.
+
+**Overtown fallbacks found this session:**
+- **NARA 544634**: EPA Documerica, Aug 1972, I-95 cutting north through the corridor. Public domain,
+  "Unrestricted". The full 2012×3000 TIFF is at
+  `https://catalog.archives.gov/medialz/stillpix/412-da/412-DA-02141_06-0329M.TIF`. A crop of it
+  is already `royal-palm-hotel-site_2.webp`.
+- **Commons "Miami traffic aerial I-95 North downtown"** (B137, CC0). The owner sent a copy. It looks
+  **south** from a downtown tower over the Miami River, so it is not Overtown.
