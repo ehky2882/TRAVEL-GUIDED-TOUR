@@ -59,6 +59,16 @@ assembler lives only in the scratchpad. Its rules:
 - The catalogue has 452 → 456 places. The validator reports 0 errors, and a re-run of
   `check-place-candidates` lists no Miami group.
 
+## 🔴 A coordinate error caught after staging: Española Way was 457 m off
+CI's *Spine coordinate audit* flagged Española Way 420 m from its Wikidata item. The staged point
+(25.786811,-80.136966) reverse-geocodes to **821 Espanola Way**, a residential segment west of
+Meridian Avenue. The script is set on *"the pedestrian lane that runs west from Washington
+Avenue"*, which OSM's `highway=pedestrian` way puts at **25.786919,-80.132411**. The tour was moved
+there, 457 m, and its 80 m radius now spans the lane. The staged `coordinates.tsv` / README on
+`claude/new-city-staging-260925` still carry the old point; they are drafts and never reach `main`.
+The same audit's other Miami flags were checked and left alone. The Barnacle (646 m) sits exactly
+on OSM's park point, so Wikidata is elsewhere. Virginia Key Beach (632 m) is a large beach park.
+
 ## Not done
 - **The five walks** (W1 *The Pitch*, W2 *Ocean Drive*, W3 *Calle Ocho*, W4 *The Grove*, W5 *The
   Water Line*; 33 MP3s). Scripts, stop coordinates and images were never staged. See the tracker's
