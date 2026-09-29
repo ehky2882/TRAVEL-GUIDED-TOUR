@@ -306,6 +306,7 @@ The two photos that "never arrived" last session were re-sent and are now on gh-
 | 29 | `little-haiti-cultural-complex` | `little-haiti-cultural-complex_2.webp` | gallery (the plaza and mural stage) | `9832c2371129…` |
 | 30 | `virginia-key-beach` | `virginia-key-beach_hero.webp` | hero | `7483f1582097…` |
 | 07 | `lincoln-road` | `lincoln-road_hero.webp` | hero | `ea24f7bfce2c…` |
+| 07 | `lincoln-road` | `lincoln-road_2.webp` | gallery (the coral-stone fountain) | `f2a329d4e983…` |
 
 ⚠️ **Both are owner photographs that were edited with an AI tool.** The session flagged the
 signs of it (warped sign lettering, smudged crowds, identical 1448×1086 size, no camera
