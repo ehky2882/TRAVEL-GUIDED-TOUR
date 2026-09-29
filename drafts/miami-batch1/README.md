@@ -227,7 +227,7 @@ Base URL: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 22 | `holocaust-memorial-miami-beach` | `holocaust-memorial-miami-beach_hero.webp` | 2, 3 |
 | 23 | `jewish-museum-of-florida` | `jewish-museum-of-florida_hero.webp` | 2 |
 | 24 | `fontainebleau` | `fontainebleau_hero.webp` | 2, 3, 4 |
-| 25 | `tower-theater` | `tower-theater_hero.webp` | 2 |
+| 25 | `tower-theater` | `tower-theater_hero-2.webp` ⭐ | 2, 3 |
 | 26 | `lyric-theater` | `lyric-theater_hero.webp` | 2 |
 | 28 | `bacardi-building` | `bacardi-building_hero.webp` | 2, 3⏳, 4 |
 | 29 | `little-haiti-cultural-complex` | `little-haiti-cultural-complex_hero.webp` ⏳ | — |
@@ -264,10 +264,23 @@ Candidates are sourced and verified, waiting on the owner:
 | 27 | `overtown-interchange` | 8 |
 | 30 | `virginia-key-beach` | 7 |
 
+### ⭐ Owner-supplied images
+
+| # | slug | file | why |
+|---|------|------|-----|
+| 25 | `tower-theater` | `tower-theater_hero-2.webp` | Commons ran thin (3 candidates) and Unsplash gave nothing; the owner supplied the Calle Ocho facade with the steel mast, marquee and 1508 address — the scene the script describes |
+
+Published under a **new filename** rather than overwritten at the live
+`tower-theater_hero.webp`, per Image Pipeline step 9: a new filename is a new
+address, so nothing serves stale bytes. The owner's earlier Commons pick is kept
+as `tower-theater_3.webp` so their choice is not discarded; the old
+`_hero.webp` is orphaned and can be deleted once nothing references it.
+**Owner-supplied, so no attribution is owed.**
+
 ### Thin subjects — owner photographs would help
 
 Commons runs out on these, and **Unsplash produced zero verified images across 144 candidates**
 (stock returns the city, not the place — the documented pattern):
 
-`little-haiti-cultural-complex` 1 · `gesu-church` 3 · `tower-theater` 3 · `lyric-theater` 3
+`little-haiti-cultural-complex` 1 · `gesu-church` 3 · `lyric-theater` 3 — ✅ **`tower-theater` resolved by an owner photograph**
 
