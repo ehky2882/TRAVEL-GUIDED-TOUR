@@ -43,3 +43,9 @@ by name search also The Mackintosh House stop vs the "Mackintosh at The Hunteria
 - `place-glasgow-260929` — the three same-site pairs; Burrell-inside-Pollok (part vs whole);
   The Social Hub Glasgow minted at the contributor's request despite reading as an advert;
   photo sources/licences not recorded.
+
+**Follow-up, same day:** #1097 merged (`c008c6e`) after all 7 checks passed and all 226 media
+files were confirmed live byte-for-byte. The contributor then asked for the Mackintosh tag to
+be created; it is a Swift vocabulary change, so it went up as its own PR (Tag.swift +
+validate-tours.swift + the six Glasgow tours tagged) **for Edward's review, not auto-merged**.
+That PR removes the `mackintosh-tag` owner item, so the item clears when he merges it.
