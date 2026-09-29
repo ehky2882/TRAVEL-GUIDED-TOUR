@@ -218,7 +218,7 @@ Base URL: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 12 | `wynwood-walls` | `wynwood-walls_hero.webp` | 2, 3, 4, 5, 6 |
 | 13 | `dade-county-courthouse` | `dade-county-courthouse_hero.webp` | 2 |
 | 14 | `dupont-building` | `dupont-building_hero.webp` ⏳ | — |
-| 15 | `gesu-church` | `gesu-church_hero.webp` | 2 |
+| 15 | `gesu-church` | `gesu-church_hero-2.webp` ⭐ | 2, 3 |
 | 16 | `miami-dade-cultural-center` | `miami-dade-cultural-center_hero.webp` | 2, 3, 4, 5 |
 | 17 | `ferre-park` | `ferre-park_hero.webp` | 2, 3 |
 | 18 | `lummus-park-downtown` | `lummus-park-downtown_hero.webp` | 2, 3, 4, 5 |
@@ -270,6 +270,7 @@ Candidates are sourced and verified, waiting on the owner:
 |---|------|------|-----|
 | 25 | `tower-theater` | `tower-theater_hero-2.webp` | Commons ran thin (3 candidates) and Unsplash gave nothing; the owner supplied the Calle Ocho facade with the steel mast, marquee and 1508 address — the scene the script describes |
 | 26 | `lyric-theater` | `lyric-theater_hero-2.webp` | also thin (3 candidates); the owner supplied the restored 1913 arched portico on NW 2nd Avenue with the Black Archives' *Street Talk* wing beside it |
+| 15 | `gesu-church` | `gesu-church_hero-2.webp` | also thin (3 candidates); the owner supplied the twin towers, arched entrance and NE 1st Avenue corner — the standpoint the script names |
 
 Published under a **new filename** rather than overwritten at the live
 `tower-theater_hero.webp`, per Image Pipeline step 9: a new filename is a new
@@ -283,5 +284,5 @@ as `tower-theater_3.webp` so their choice is not discarded; the old
 Commons runs out on these, and **Unsplash produced zero verified images across 144 candidates**
 (stock returns the city, not the place — the documented pattern):
 
-`little-haiti-cultural-complex` 1 · `gesu-church` 3 — ✅ **`tower-theater` and `lyric-theater` both resolved by owner photographs**
+**Only `little-haiti-cultural-complex` remains, with 1 usable Commons image** — the weakest coverage in the batch. ✅ `tower-theater`, `lyric-theater` and `gesu-church` were all resolved by owner photographs.
 
