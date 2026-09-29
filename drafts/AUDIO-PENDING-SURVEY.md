@@ -60,7 +60,7 @@ the branches to answer "what's left?".
 
 ## PENDING — staged, awaiting narration audio
 
-**🇺🇸 Miami walks W1–W5 are pending, in reverse.** The narration EXISTS; the staging does not.
+**🇺🇸 Miami walks W1–W5: STAGED 2026-09-29.** See `drafts/miami-walks/README.md` on `main`, which has all 33 stop coordinates, audio names, the image plan and what is still owed. The narrative below is the pre-staging account.
 The owner's 2026-09-29 Dropbox drop held 30 single MP3s, which are now wired, plus 33 walk MP3s
 (`MIAMI W1/…` to `MIAMI W5/…`, each walk with an `00_intro` and numbered or `c` connector stops),
 and three planning docs (`miami_tour_master_list.md`, `miami_scope_proposal.md`,
@@ -73,7 +73,7 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 
 | City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|-----:|----------------|------------------|
-| 🇺🇸 **Miami walks** | **5** | W1 *The Pitch* (9 files), W2 *Ocean Drive* (7), W3 *Calle Ocho* (6), W4 *The Grove* (5), W5 *The Water Line* (6) | **33 delivered** | — not staged | **Atlas Studio MIA** (exists since 2026-09-29) |
+| 🇺🇸 **Miami walks** | **5** | W1 *The Pitch* (9 stops), W2 *Ocean Drive* (7), W3 *Calle Ocho* (6), W4 *The Grove* (5), W5 *The Water Line* (6) | **32 of 33 on gh-pages**; Grove intro owed | **Staged 2026-09-29: coordinates + pick-map in `drafts/miami-walks/` on `main`. Scripts and 11 photos owed** | **Atlas Studio MIA** |
 | **TOTAL PENDING** | **5** | | **33 delivered** | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
