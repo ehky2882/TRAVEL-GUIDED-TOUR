@@ -597,3 +597,187 @@ author or licence came with them, so none can be listed here yet, and the crops 
 a SHA-1 lookup against Commons. **Owner item `istanbul-photo-licences`** asks Edward
 to accept them as shipped or have the contributor send a source link per image; any
 CC BY / BY-SA rows then belong in this section.
+
+## Miami — 60 credit-required images (`drafts/miami-batch1`, staged 2026-09-25)
+
+**Owner decision 2026-09-29: keep these Commons photos with credits (option 1),** rather than swap them.
+They were first reported as all PD/CC0, which was wrong; see `archive/HANDOFF-260925-miami-staging.md`
+§ Correction 2026-09-29. **Every file below was byte-verified** against the gh-pages copy (sha256
+from the sourcing manifest). Licence and author come from Openverse's Wikimedia index, matched on
+the exact Commons filename. Commons itself was rate-limiting this container, so **re-confirm against
+each file page before the credits are surfaced in the app.**
+
+Three Commons heroes were superseded by owner photographs and live on as `_3` (byte-identical
+to the orphaned `_hero.webp`). They are listed under their `_3` name.
+
+### miami-circle
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `miami-circle_2.webp` | EduardoValle | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Circle_aerial_view_with_river_and_tower.JPG |
+| `miami-circle_4.webp` | Ebyabe | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_FL_Miami_Circle_pano01.jpg |
+| `miami-circle_hero.webp` | EduardoValle | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Circle_aerial_view.JPG |
+| `miami-circle_3.webp` | CobraZaroia | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Brickell_Point_Site_2012-09-15_16-54-59.jpg |
+
+### brickell-avenue-bridge
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `brickell-avenue-bridge_hero.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Brickell_Avenue_Bridge_from_northwest_in_2015.jpg |
+| `brickell-avenue-bridge_2.webp` | Neil Williamson | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Brickell_Avenue_Bridge_at_night_with_bascule_span_open_%282017%29.jpg |
+| `brickell-avenue-bridge_3.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami_River_Downtown_Miami_Florida_1_May_2023.jpg |
+
+### ocean-drive-art-deco
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `ocean-drive-art-deco_hero.webp` | Robbschultz69 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ocean_Drive_in_the_Miami_Beach_Art_Deco_Historic_District.jpg |
+| `ocean-drive-art-deco_2.webp` | Dough4872 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ocean_Drive_NB_past_11th_Street_Miami_Beach_at_night.jpeg |
+| `ocean-drive-art-deco_3.webp` | Mickey Løgitmark | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Ocean_Drive_-_panoramio_%281%29.jpg |
+
+### maximo-gomez-park
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `maximo-gomez-park_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Domino_Park_Little_Havana%2C_Miami_Florida_6_June_2024.jpg |
+| `maximo-gomez-park_2.webp` | SK Sturm Fan | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Domino_Club_%E2%80%93_Florida_Heritage%3B_M%C3%A1ximo_G%C3%B3mez_Park_%28Domino_Park%29%2C_Little_Havana%2C_Miami%2C_Florida_%282019%29_%286%29.jpg |
+
+### cuban-memorial-boulevard
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `cuban-memorial-boulevard_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Cuban_Memorial_Boulevard_Calle_Ocho_Little_Havana%2C_Miami_2023.jpg |
+
+### the-barnacle
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `the-barnacle_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:The_Barnacle_Coconut_Grove_%2816815440570%29.jpg |
+| `the-barnacle_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:The_Barnacle_Coconut_Grove_%2816815512178%29.jpg |
+
+### vizcaya
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `vizcaya_hero.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6661.jpg |
+| `vizcaya_2.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6702.jpg |
+| `vizcaya_3.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6700.jpg |
+| `vizcaya_4.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6677.jpg |
+| `vizcaya_5.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6697.jpg |
+
+### wynwood-walls
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `wynwood-walls_hero.webp` | osseous | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:April_7%2C_2015_-_Wynwood_Miami_-_07.jpg |
+| `wynwood-walls_3.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Wynwood_Mural_%2816811746490%29.jpg |
+| `wynwood-walls_5.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Wynwood_Murals_%2812926225503%29.jpg |
+| `wynwood-walls_6.webp` | osseous | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:April_7%2C_2015_-_Wynwood_Miami_-_05.jpg |
+| `wynwood-walls_2.webp` | Dan Lundberg | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Wynwood_Walls_Miami_Florida_October_2013.jpg |
+
+### dade-county-courthouse
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `dade-county-courthouse_2.webp` | Rob Olivera | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:The_Miami_Dade_County_Flagler_Courthouse.jpg |
+| `dade-county-courthouse_hero.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_County_Courthouse_-_Miami_-_Daniel_Di_Palma_Photography_06.jpg |
+
+### gesu-church
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `gesu-church_3.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Gesu_Catholic_Church_%28Miami%2C_Florida%29.jpg |
+| `gesu-church_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Gesu_Catholic_Church_Downtown_Miami_-_exterior_-_26_November_2022_-_Inscription.jpg |
+
+### miami-dade-cultural-center
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `miami-dade-cultural-center_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Cultural_Center_Downtown_Miami_FL%2C_construction_in_background%2C_4_May_2023.jpg |
+| `miami-dade-cultural-center_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_05.jpg |
+| `miami-dade-cultural-center_3.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_04.jpg |
+| `miami-dade-cultural-center_4.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_06.jpg |
+| `miami-dade-cultural-center_5.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_03.jpg |
+
+### ferre-park
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `ferre-park_hero.webp` | AuntieMamesTravels | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Bicentennial_Park_June_2014.JPG |
+| `ferre-park_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:PAMM_MRD_21.jpg |
+| `ferre-park_3.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:PAMM_MRD_28.jpg |
+
+### lummus-park-downtown
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `lummus-park-downtown_2.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Fort_Dallas_William_English_Plantation_Lummus_Park_Historic_District_%2830642638520%29.jpg |
+| `lummus-park-downtown_3.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:William_Wagner_House_Circa_1855_Lummus_Park_Historic_District_%2822765725588%29.jpg |
+| `lummus-park-downtown_hero.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Lummus_Park_Historic_Distric_-_Miami_-_Daniel_Di_Palma_Photography_03.jpg |
+| `lummus-park-downtown_4.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Lummus_Park_Historic_Distric_-_Miami_-_Daniel_Di_Palma_Photography_01_Wagner_House_and_Fort_Dallas.jpg |
+
+### casa-casuarina
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `casa-casuarina_hero.webp` | chensiyuan | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Gianni_versace_miami_home.JPG |
+| `casa-casuarina_3.webp` | CZmarlin — Christopher Ziemnowicz would appreciate a photo credit if this image is used anywhere other than Wikipedia. Please leave a note at Wikipedia here. Thank you! | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Casa_Casuarina_at_night_Versace_Mansion%2C_hotel_restaurant_at_1116_Ocean_Drive%2C_Miami_Beach.jpg |
+| `casa-casuarina_2.webp` | Vadelmavene | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Casa_Casuarina_Pool.jpg |
+
+### holocaust-memorial-miami-beach
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `holocaust-memorial-miami-beach_hero.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_-_South_Beach_Monuments_-_Holocaust_Memorial_28.jpg |
+| `holocaust-memorial-miami-beach_3.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_-_South_Beach_Monuments_-_Holocaust_Memorial_01.jpg |
+
+### fontainebleau
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `fontainebleau_hero.webp` | InvadingInvader | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Beach_Aerial_2025.jpg |
+| `fontainebleau_3.webp` | Visitor7 | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau-10.jpg |
+| `fontainebleau_4.webp` | Acroterion | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_interior_FL3.jpg |
+| `fontainebleau_2.webp` | Visitor7 | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau-1.jpg |
+
+### tower-theater
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `tower-theater_3.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Tower_Theater_%28Miami%2C_Florida%29.jpg |
+| `tower-theater_2.webp` | Raghavan Prabhu | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Tower_Theater_-_Looks_Like_That_70%27s_show.jpg |
+
+### lyric-theater
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `lyric-theater_3.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Lyric_Theater_%284%29.jpg |
+| `lyric-theater_2.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Lyric_Theater_%281%29.jpg |
+
+### freedom-tower
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `freedom-tower_2.webp` | Infrogmation of New Orleans | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami_Florida_2018-01-16_-_Freedom_Tower.jpg |
+
+### jewish-museum-of-florida
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `jewish-museum-of-florida_hero.webp` | Ebyabe | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_FL_Beth_Jacob_Hall_msm01.jpg |
+| `jewish-museum-of-florida_2.webp` | Ebyabe | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_FL_Beth_Jacob_Hall_msm07.jpg |
+
+### bacardi-building
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `bacardi-building_hero.webp` | Dan Lundberg | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:20131012_Miami_3615_Bacardi_annex.jpg |
+| `bacardi-building_2.webp` | Dan Lundberg | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:20131019_Miami_3688_Bacardi_plaza.jpg |
+| `bacardi-building_4.webp` | PhillipPessar | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Bacardi_Building_Biscayne_Boulevard_Miami.jpg |
+
+### Miami — no credit owed
+| File | Why | Source |
+|------|-----|--------|
+| `royal-palm-hotel-site_hero.webp` | CC0 — no credit owed | https://commons.wikimedia.org/wiki/File:View_of_the_Miami_River_from_the_South_Miami_Avenue_bridge_2026-04-06.jpg |
+| `bayfront-park_2.webp` | CC0 — no credit owed | https://commons.wikimedia.org/wiki/File:Challenger_Memorial_%28Miami%29_by_night_%28January_2022%29_-_inscription.JPG |
+| `bayfront-park_3.webp` | CC0 — no credit owed | https://commons.wikimedia.org/wiki/File:Challenger_Memorial_%28Miami%29_by_night_%28January_2022%29.JPG |
+| `royal-palm-hotel-site_2.webp` | US National Archives (NARA 544634) — public domain | https://commons.wikimedia.org/wiki/File:TRAFFIC_INTERCHANGE_CUTS_THROUGH_THE_HEART_OF_DOWNTOWN_MIAMI_-_NARA_-_544634.jpg |
+| all `*_hero-2`, `lyric-theater_4`, `south-pointe-park_*`, `dupont-building_hero-2`, `little-haiti-cultural-complex_*`, `virginia-key-beach_hero`, `lincoln-road_*` | owner-supplied | — |
+| `overtown-interchange_hero.webp` | owner-supplied, **source unknown**; reverse-search before launch (handoff § Overtown) | — |
+
+### ⚠️ Miami — licence NOT yet verified (10)
+Openverse had no record of these files and Commons was throttled. **Look each one up before launch.**
+
+| File | Source |
+|------|--------|
+| `freedom-tower_hero.webp` | https://commons.wikimedia.org/wiki/File:Freedom_Tower_Miami_%28top%29%2C_NE_view.jpg |
+| `freedom-tower_3.webp` | https://commons.wikimedia.org/wiki/File:Miami_freedom_tower_night.jpg |
+| `bayfront-park_hero.webp` | https://commons.wikimedia.org/wiki/File:Torch_of_Friendship_-_panoramio.jpg |
+| `espanola-way_hero.webp` | https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Espa%C3%B1ola_Way_Reconstruction_February_2016_01_View_East_Mid_Street.jpg |
+| `holocaust-memorial-miami-beach_2.webp` | https://commons.wikimedia.org/wiki/File:Reaching_sky_-_Flickr_-_LANSA301.jpg |
+| `miami-circle_5.webp` | https://commons.wikimedia.org/wiki/File:Miami_FL_Miami_Circle_plaque01.jpg |
+| `miami-circle_6.webp` | https://commons.wikimedia.org/wiki/File:Miami_Circle_%289081683470%29.jpg |
+| `cuban-memorial-boulevard_2.webp` | https://commons.wikimedia.org/wiki/File:Josemartibust.jpg |
+| `wynwood-walls_4.webp` | https://commons.wikimedia.org/wiki/File:-RETNA_Wynwood_Walls_%288170950212%29.jpg |
+| `lummus-park-downtown_5.webp` | https://commons.wikimedia.org/wiki/File:Miami_FL_Lummus_Park_HD_Wagner_Homestead_plaque01.jpg |
+
+Held back and never uploaded, so they need no row: `dupont-building_hero` (CC BY 2.0) and `little-haiti-cultural-complex_hero` (CC BY 3.0), both replaced by owner photos, and `bacardi-building_3` (CC BY 2.0), which is unused.
