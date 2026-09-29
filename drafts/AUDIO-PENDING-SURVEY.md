@@ -31,7 +31,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-09-25 — 🇺🇸 **MIAMI added to the queue: 30 single-stop tours staged, 0 MP3s.** Scripts only; images are being sourced now. See the row below and `drafts/miami-batch1/README.md` on `claude/new-city-staging-260925`. Miami will be the **36th bureau** (Atlas Studio MIA, `aed488af-23d3-514f-90f1-035ca2285d0d`) — the city has no Atlas tours today, only 39 creator link pins.
+**Last verified:** 2026-09-29 — 🇺🇸 **MIAMI's 30 singles are WIRED** (Atlas Studio MIA, `aed488af-23d3-514f-90f1-035ca2285d0d`, the 38th studio). The same Dropbox drop also carried **33 MP3s for five Miami walks (W1–W5)** that were never staged: no scripts in the repo, no stop coordinates, no images. They are the only thing in the queue now; see the row below.
+
+**Previously verified:** 2026-09-25 — Miami added to the queue: 30 single-stop tours staged, 0 MP3s.
 
 **Previously verified:** 2026-09-22 — **the queue was EMPTY.** `TOTAL PENDING` below reads 0 and that is right: 🇺🇸 **Atlanta, staged on 2026-08-26, has since gone LIVE** — 30 tours under Atlas Studio ATL in `origin/main`'s `Tours.json` (#900, the 35th bureau). ⚠️ **This header still read "Atlanta added to the queue" for four weeks after that**, contradicting the table directly beneath it — the header and the table are one record, so **move both in the same edit**. The branches still holding old staged drafts (`claude/london-batch3-scripts-260616`, `claude/paris-scripts-260622`, `claude/amsterdam-handoff-preserve-hlhyp8`) are for cities now fully live (London 100, Paris 50, Atlanta 30) and hold no pending content.
 **Previously verified:** 2026-08-26 (🇺🇸 **Atlanta added to the queue** — 30 single-stop tours staged, 21 image-complete, 0 MP3s; see the row below. Previously 2026-08-26: 🇩🇰 **Copenhagen COMPLETE** — 40 tours live under Atlas Studio CPH, the 34th Atlas maker, Denmark's first city and the catalog's 22nd country; catalog 1552 tours / 1924 stops. **Never in this table** — the thirteenth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 103 MB, first try; 155 images already 1200×900, 40 clean/TTS-safe pairs 1:1, zero byte-duplicates) and wired the same day.)
@@ -58,16 +60,21 @@ the branches to answer "what's left?".
 
 ## PENDING — staged, awaiting narration audio
 
-**🇺🇸 Miami is pending** — staged 2026-09-25, scripts only, no narration recorded. It is the
-only thing in the queue. Five singles the Chicago master list marks as drafted (18 Wrigley Field,
-19 Lincoln Park, 22 Gold Coast/Astor, 26 Wicker Park, 27 The 606) were never delivered as
-scripts, images or audio — **if they ever arrive they are a second batch** and get a fresh row
-here, per the staging rule below.
+**🇺🇸 Miami walks W1–W5 are pending, in reverse.** The narration EXISTS; the staging does not.
+The owner's 2026-09-29 Dropbox drop held 30 single MP3s, which are now wired, plus 33 walk MP3s
+(`MIAMI W1/…` to `MIAMI W5/…`, each walk with an `00_intro` and numbered or `c` connector stops),
+and three planning docs (`miami_tour_master_list.md`, `miami_scope_proposal.md`,
+`miami_session_handoff.md`). **The walk scripts, stop coordinates and images are not in the repo.**
+The master list names each stop's standpoint, e.g. W5: Lenox Avenue mouth → Alton → Venetian
+Causeway foot → Maurice Gibb Park → Purdy Avenue → 20th and Purdy. The MP3s were not uploaded,
+because slugs are undecided. Ask the owner for the drop again when a session stages them.
+The author's own handoff also lists **pre-record flags 25–66 as open** (factual claims to verify or
+soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 
-| City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
-|------|--------------:|-----------|------------:|----------------|------------------|
-| 🇺🇸 **Miami** | **30** | 30 single-stop, no walks | **30** | `claude/new-city-staging-260925` | **Atlas Studio MIA** `aed488af-23d3-514f-90f1-035ca2285d0d` (new, 36th) |
-| **TOTAL PENDING** | **30** | | **30** | | |
+| City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
+|------|--------------:|-----------|-----:|----------------|------------------|
+| 🇺🇸 **Miami walks** | **5** | W1 *The Pitch* (9 files), W2 *Ocean Drive* (7), W3 *Calle Ocho* (6), W4 *The Grove* (5), W5 *The Water Line* (6) | **33 delivered** | — not staged | **Atlas Studio MIA** (exists since 2026-09-29) |
+| **TOTAL PENDING** | **5** | | **33 delivered** | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
 
@@ -96,6 +103,8 @@ time to re-derive:
   Boulevard` returns the median's relation centroid ~576 m south of the Bay of Pigs column (the
   median runs south; the column stands at the north end), and searching `Bayfront Park` ranks a
   Metromover station above the park.
+
+_(✅ 🇺🇸 **Miami singles = DONE (2026-09-29): 30 tours LIVE** under Atlas Studio MIA — 30 single-stop, geofenced at 30–120 m per the staged pick-map; 8 in `Miami Beach`, 22 in `Miami`. Images: 60 CC credit rows in `drafts/CREDITS.md` (owner chose to keep them with credits), plus owner photographs. The walks are still pending, above.)_
 
 _(✅ 🇺🇸 **Atlanta = DONE (2026-09-14, PR #900): 30 tours LIVE** — 30 single-stop, geofenced at
 30 m, no walks, under new maker **Atlas Studio ATL** (`ccaab715-2f29-597e-8b3a-0d38e8d370da`) —

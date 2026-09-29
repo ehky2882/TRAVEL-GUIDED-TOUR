@@ -5489,6 +5489,16 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/pinointeriors/"
+    },
+    {
+      "id": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "displayName": "Atlas Studio MIA",
+      "platform": "dozent",
+      "handle": "atlas.mia",
+      "avatarURL": null,
+      "avatarEmoji": "🇺🇸",
+      "bio": "Atlas Studio's Miami bureau — audio tours of a city that was sold before it was built: the hotel that opened at the railroad's last stop, the tower where a generation of Cuban exiles was processed, a beachfront of hotels saved when saving them looked foolish, and a highway laid across the neighbourhood that housed the Beach's own performers.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -105699,6 +105709,1432 @@
         "Designed by a Master",
         "Charles Rennie Mackintosh",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dc34ae3a-1e18-508b-9c6f-949844b1844c",
+      "createdAt": "2026-09-29",
+      "title": "Royal Palm Hotel Site",
+      "shortDescription": "It's March of 1896, and everything around you is woods. Three houses on a few cleared acres, and a crushed-rock lane running up from the river…",
+      "longDescription": "It's March of 1896, and everything around you is woods. Three houses on a few cleared acres, and a crushed-rock lane running up from the river where a handful of shacks and tents pass for downtown. A man named John Sewell steps off a steamer with orders to strip a square mile of it bare. Picture the hotel. Five stories of yellow-painted wood, six at the center, running close to seven hundred feet along this bank, four hundred and fifty rooms, sixteen cooks, and the first electric lights, elevators and swimming pool this place had ever seen. It opened in January of 1897 and it was called the Royal Palm. Not a board of it survives; a hurricane in 1926 broke it, termites finished it, and it came down in 1930.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-palm-hotel-site_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-palm-hotel-site_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d1749a64-ed1d-5733-ba18-e87887fbaf5d",
+          "order": 0,
+          "title": "Royal Palm Hotel Site",
+          "caption": "You should be on the Riverwalk at the mouth of the Miami River, on the north bank, where the river opens into Biscayne Bay.",
+          "latitude": 25.77055,
+          "longitude": -80.1885,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-palm-hotel-site.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-palm-hotel-site_hero.webp",
+          "transcriptText": "It's March of 1896, and everything around you is woods. Three houses on a few cleared acres, and a crushed-rock lane running up from the river where a handful of shacks and tents pass for downtown. A man named John Sewell steps off a steamer with orders to strip a square mile of it bare.\n\nYou should be on the Riverwalk at the mouth of the Miami River, on the north bank, where the river opens into Biscayne Bay. Face the bay and the river is on your right; behind you, glass towers stand on the old hotel's ground, give or take a block; across the water, a low green point closes the far bank. This bank is what Sewell was clearing.\n\nPicture the hotel. Five stories of yellow-painted wood, six at the center, running close to seven hundred feet along this bank, four hundred and fifty rooms, sixteen cooks, and the first electric lights, elevators and swimming pool this place had ever seen. It opened in January of 1897 and it was called the Royal Palm. Not a board of it survives; a hurricane in 1926 broke it, termites finished it, and it came down in 1930.\n\nThe reason it existed at all is the reason the city does. A woman named Julia Tuttle owned the land on this bank and wanted a railroad, and a railroad man named Henry Flagler had stopped his line at Palm Beach and saw no reason to come farther. After the freezes of the winter of 1894 and 1895 killed citrus across the north of the state, she offered him land, and he took it on condition that he build a railroad, a hotel and a town. The famous version says she mailed him a box of orange blossoms to prove the frost had never reached her. That's a legend, and a good one; what the record shows is that his own agent came down, saw the groves intact, and reported back.\n\nSo the deal is the founding act: no harbor to speak of, no reason for a city here except that two people talked each other into one. On the twenty-eighth of July, 1896, three hundred and sixty-eight men voted to incorporate, a large share of them the Black laborers who had cleared and built the place. Julia Tuttle couldn't vote; neither could any woman.\n\nSomewhere along this bank, on a January evening in 1897, a room full of people from the north looked out at this water under the town's first electric light and were sold. Stand a minute where they stood. The pitch still works."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 149,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.77055,
+      "centroidLongitude": -80.1885,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4bd57de1-6494-5b3d-af3a-808ee518c111",
+      "createdAt": "2026-09-29",
+      "title": "Freedom Tower",
+      "shortDescription": "The tower with the pale octagonal top and the small cupola above it is the one you want. Seventeen stories of cream stucco and terra-cotta trim…",
+      "longDescription": "The tower with the pale octagonal top and the small cupola above it is the one you want. Seventeen stories of cream stucco and terra-cotta trim, wrought iron at the balconies, and a crown that belongs in Seville, because it does: the design borrows the Giralda, the bell tower of Seville's cathedral. Two dates. In 1925 this opened as the headquarters of a newspaper, the Miami News, and the tower was a deliberately loud announcement: a boomtown declaring that it would have the architecture of an old city immediately, without waiting to be old. The presses ran downstairs, and the words went out from here.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/freedom-tower_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/freedom-tower_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/freedom-tower_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cb2167a9-2b1b-579c-9470-647c0d3c2ac8",
+          "order": 0,
+          "title": "Freedom Tower",
+          "caption": "You should be on the Biscayne Boulevard sidewalk, on the west side of the street, with the tower directly ahead of you and the arena across the boulevard at your back.",
+          "latitude": 25.780312,
+          "longitude": -80.189714,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/freedom-tower.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/freedom-tower_hero.webp",
+          "transcriptText": "The tower with the pale octagonal top and the small cupola above it is the one you want. Seventeen stories of cream stucco and terra-cotta trim, wrought iron at the balconies, and a crown that belongs in Seville, because it does: the design borrows the Giralda, the bell tower of Seville's cathedral.\n\nYou should be on the Biscayne Boulevard sidewalk, on the west side of the street, with the tower directly ahead of you and the arena across the boulevard at your back. This stop is written from the sidewalk on purpose, because the museum inside keeps its own hours and its own tickets, and the building's story is legible from out here.\n\nTwo dates. In 1925 this opened as the headquarters of a newspaper, the Miami News, and the tower was a deliberately loud announcement: a boomtown declaring that it would have the architecture of an old city immediately, without waiting to be old. The presses ran downstairs, and the words went out from here.\n\nThen in 1962 the direction reversed. The federal government took over the building as the Cuban Refugee Emergency Center, and for twelve years, until 1974, people arriving from Cuba came through these doors to be registered, given medical checks and financial help, and pointed toward work and somewhere to sleep. Hundreds of thousands passed through. In Spanish it's La Torre de la Libertad, and it is often called the Ellis Island of the South, a comparison that works as far as it goes: Ellis Island processed people and sent them onward, while this building processed people who, mostly, stayed within a few miles.\n\nThat is the detail worth holding. A receiving station is a threshold, and a threshold is supposed to be brief. Here the threshold became the address. The families who signed in upstairs settled the streets west of here and along Eighth Street, arrivals kept coming from other coasts in other decades, and what a receiving station looks like once nobody leaves is, more or less, the city you're standing in.\n\nThe newspaper moved out in 1957; in 2005 it was given to Miami Dade College, in 2008 it was named a National Historic Landmark, and in September 2025 it reopened for its hundredth birthday.\n\nLook at the top again. It was built to broadcast a city outward and ended up as the room the city walked into. Same tower, both directions."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.780312,
+      "centroidLongitude": -80.189714,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Tower",
+        "Notable Building",
+        "History",
+        "Immigration",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2c8f075f-826a-594b-8dd6-9130a0defb9b",
+      "createdAt": "2026-09-29",
+      "title": "Bayfront Park",
+      "shortDescription": "Everything you're standing on arrived through a pipe. In 1896 the shoreline of Biscayne Bay ran roughly where Biscayne Boulevard runs now, and…",
+      "longDescription": "Everything you're standing on arrived through a pipe. In 1896 the shoreline of Biscayne Bay ran roughly where Biscayne Boulevard runs now, and the park under your feet was open water until the mid-1920s, when the city dredged the bay bottom, pumped it ashore and let it settle into thirty-two acres of ground. The park opened in March of 1925. It is a made thing. Walk toward the water. The torch first: the Torch of Friendship, put up in 1960 as a gesture toward Latin America and rededicated in 1964 to John F. Kennedy. The flame is gas; whether it's lit when you pass varies.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bayfront-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bayfront-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bayfront-park_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a4acc2bd-6a1e-5b5d-8d28-a0e0a38ea78d",
+          "order": 0,
+          "title": "Bayfront Park",
+          "caption": "You should be inside Bayfront Park on the main walkway, with Biscayne Boulevard behind you and the bay ahead.",
+          "latitude": 25.77538,
+          "longitude": -80.186166,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bayfront-park.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 100,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bayfront-park_hero.webp",
+          "transcriptText": "Everything you're standing on arrived through a pipe. In 1896 the shoreline of Biscayne Bay ran roughly where Biscayne Boulevard runs now, and the park under your feet was open water until the mid-1920s, when the city dredged the bay bottom, pumped it ashore and let it settle into thirty-two acres of ground. The park opened in March of 1925. It is a made thing.\n\nYou should be inside Bayfront Park on the main walkway, with Biscayne Boulevard behind you and the bay ahead. Off to your left as you face the water, up near the boulevard at the park's northwest corner, a bronze torch stands on a tall column; straight ahead, the walkway runs down to a big round fountain; beyond it, a steel spiral climbs about a hundred feet into the air.\n\nWalk toward the water. The torch first: the Torch of Friendship, put up in 1960 as a gesture toward Latin America and rededicated in 1964 to John F. Kennedy. The flame is gas; whether it's lit when you pass varies.\n\nThe fountain and the walkway under you are the work of Isamu Noguchi, the Japanese American sculptor, who took on the redesign in 1980, when the park was worn out and half hidden behind a public library that had been built on it in the 1950s. His first move was to talk the city into tearing the library down so the ground could see the water again. He worked on this park until his death in 1988, and his longtime collaborator finished it in 1996.\n\nThe steel spiral is Noguchi's too, and it is a memorial to the crew of the space shuttle Challenger, dedicated in 1988 on the second anniversary of the loss. Two ribbons of steel twist upward and never quite meet. Give it the quiet it asks for.\n\nSo the sequence runs: bay bottom, then ground, then a garden, then a library on the garden, then a sculptor arguing for the water back. This land has been argued over since the day it was made, and every one of those arguments began with a decision that there should be land here at all.\n\nBefore you leave, walk to the edge where the seawall meets the bay and look along it. That is the one line in this park that nature never drew. Somebody chose exactly where it goes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.77538,
+      "centroidLongitude": -80.186166,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "Monument",
+        "History",
+        "Remembrance",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fbe85c7f-66f7-5974-9099-3f8bf4e7d5e5",
+      "createdAt": "2026-09-29",
+      "title": "Miami Circle",
+      "shortDescription": "Don't look for it. You won't find it, and that is the whole point of this stop: the most important thing here is under the grass, on purpose…",
+      "longDescription": "Don't look for it. You won't find it, and that is the whole point of this stop: the most important thing here is under the grass, on purpose, and will stay there. Underneath, then. In 1998 a pair of 1950s apartment buildings had just come down for two new towers, and a routine salvage dig went in first. What it found, cut into the limestone bedrock about a foot down, was a circle thirty-eight feet across: twenty-four basins and hundreds of smaller holes, the footprint of a building whose posts had been set into the rock. The radiocarbon dates put it around two thousand years old. The people were the Tequesta, or their ancestors, and the village that stood on both banks of this river mouth was still here when the Spanish arrived in the fifteen sixties.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-circle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-circle_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-circle_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-circle_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-circle_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-circle_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cd201e8e-f2bd-5b66-84fb-c50faaaef082",
+          "order": 0,
+          "title": "Miami Circle",
+          "caption": "You should be in the small park at the tip of Brickell Point, on the south bank where the Miami River meets Biscayne Bay.",
+          "latitude": 25.769358,
+          "longitude": -80.189164,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miami-circle.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-circle_hero.webp",
+          "transcriptText": "Don't look for it. You won't find it, and that is the whole point of this stop: the most important thing here is under the grass, on purpose, and will stay there.\n\nYou should be in the small park at the tip of Brickell Point, on the south bank where the Miami River meets Biscayne Bay. The river is on one side of you and the bay opens ahead; a low grassy rise sits near the middle of the park, with metal interpretive markers beside it; upriver, the Brickell Avenue bridge crosses to downtown, and on its far side a tall stone column carries bronze figures of a family. Dog walkers use it, which is fine and a little strange.\n\nUnderneath, then. In 1998 a pair of 1950s apartment buildings had just come down for two new towers, and a routine salvage dig went in first. What it found, cut into the limestone bedrock about a foot down, was a circle thirty-eight feet across: twenty-four basins and hundreds of smaller holes, the footprint of a building whose posts had been set into the rock. The radiocarbon dates put it around two thousand years old. The people were the Tequesta, or their ancestors, and the village that stood on both banks of this river mouth was still here when the Spanish arrived in the fifteen sixties.\n\nThe developer wanted to build; the public argued otherwise, loudly, and the state bought the land. In 2009 the site was named a National Historic Landmark, and in 2011 it opened as this park, with the circle reburied beneath the rise for its own protection and the markers set beside it. What you are looking at is the ground over it, and nothing more.\n\nThen it happened again. Across the river, on the lot beside the bridge, demolition for another set of towers began in 2021, and the excavation underneath turned up more than a million objects from the same village. The city designated part of that site in 2023, the towers are going up on the rest, and the argument about what the finished buildings owe the ground is still running.\n\nEvery deep hole dug at this river mouth in the last thirty years has hit the same town. The oldest address in the city is among its most expensive, and the city keeps finding out, one foundation at a time, exactly what it built on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.769358,
+      "centroidLongitude": -80.189164,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Waterfront",
+        "Monument",
+        "History",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "547735c3-f000-5da2-a2f0-2ca04c4b8210",
+      "createdAt": "2026-09-29",
+      "title": "Brickell Skyline from the River",
+      "shortDescription": "This is Brickell: a residential neighborhood dressed as a financial district, or a financial district that people happen to sleep in, and after…",
+      "longDescription": "This is Brickell: a residential neighborhood dressed as a financial district, or a financial district that people happen to sleep in, and after fifty years nobody has settled which. The skyline in front of you is the argument, in glass. Read it in layers. The oldest layer is invisible: in 1871 a couple from Ohio named Brickell ran a trading post on the south bank right about where the column stands, and for the first decades of the city this avenue was a row of big houses along the bay. Almost none of that is left.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brickell-avenue-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brickell-avenue-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brickell-avenue-bridge_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1dc1c4b8-ffba-59dd-b608-d514dcc976b7",
+          "order": 0,
+          "title": "Brickell Skyline from the River",
+          "caption": "You should be on the sidewalk of the Brickell Avenue bridge, on the downtown side of the river, facing south toward Brickell.",
+          "latitude": 25.769905,
+          "longitude": -80.190024,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/brickell-avenue-bridge.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brickell-avenue-bridge_hero.webp",
+          "transcriptText": "This is Brickell: a residential neighborhood dressed as a financial district, or a financial district that people happen to sleep in, and after fifty years nobody has settled which. The skyline in front of you is the argument, in glass.\n\nYou should be on the sidewalk of the Brickell Avenue bridge, on the downtown side of the river, facing south toward Brickell. The tall column with the bronze figures is at the south end of the bridge; beyond it, towers rise on both sides of the avenue. The river runs under you, and if a boat is coming, the bridge will lift and you'll wait.\n\nRead it in layers. The oldest layer is invisible: in 1871 a couple from Ohio named Brickell ran a trading post on the south bank right about where the column stands, and for the first decades of the city this avenue was a row of big houses along the bay. Almost none of that is left.\n\nThe first layer you can actually see is from the 1970s and 1980s, when banks arrived. Money from across Latin America came looking for a safe place to sit, and not all of what arrived in those years was clean; the city has said so plainly and moved on. Look for the tower with a square hole punched through its middle and a palm tree growing in the hole, put there in 1982 by a young local firm. It ended up in a television show's opening credits, and for a while it was the shape people meant when they said Miami.\n\nThe second layer is the 2000s, when nearly every remaining lot got a tower, and the third is what happened next. In 2008 the bust left thousands of those units dark, and three or four years later they were full again, bought in cash from abroad. By 2016 a shopping city had opened in the middle of it, and in the 2020s the finance firms came in earnest, so the neighborhood grew into the costume it had been wearing since the eighties.\n\nThis skyline isn't a record of growth. It's a record of digestion: each layer built in a boom, emptied in a bust, and filled by whoever arrived next with money and a reason to leave somewhere else.\n\nThe avenue has burned through four economies without ever once looking worried. Watch the bridge lift for a boat, and count how many of these towers had a bad decade you would never guess from here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.769905,
+      "centroidLongitude": -80.190024,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Waterfront",
+        "Architecture",
+        "Commerce",
+        "Contemporary",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "71dcd5cf-b253-51d6-b020-e259fbb5a128",
+      "createdAt": "2026-09-29",
+      "title": "Ocean Drive Art Deco",
+      "shortDescription": "In the middle of the 1970s, the most realistic future for the row of hotels across the street was a bulldozer. The buildings were about forty…",
+      "longDescription": "In the middle of the 1970s, the most realistic future for the row of hotels across the street was a bulldozer. The buildings were about forty years old, small and stucco and cracked, painted in beiges and off-whites, and filled largely with retirees living on fixed incomes; developers and a good part of city government saw a tired strip waiting to be cleared for towers, and almost nobody thought these were buildings worth a fight. Her name was Barbara Baer Capitman. She came to Miami Beach in the mid 1970s and in 1976 she and a small group of designers, among them Leonard Horowitz, founded the Miami Design Preservation League to argue that this unloved row was a historic district — at a time when historic meant old, and old meant the nineteenth century at the latest. The argument won on paper on the fourteenth of May, 1979, when the district was listed on the National Register of Historic Places; the state's own marker describes it as the first urban district of twentieth-century buildings to receive that listing. It lost some battles on the street, where Capitman stood in front of bulldozers and several hotels came down anyway.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ocean-drive-art-deco_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ocean-drive-art-deco_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ocean-drive-art-deco_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e843d9d1-5693-5e08-ad0d-bd6e96949715",
+          "order": 0,
+          "title": "Ocean Drive Art Deco",
+          "caption": "You are in Lummus Park, on the beach side of Ocean Drive, looking west at the row.",
+          "latitude": 25.780613,
+          "longitude": -80.129893,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ocean-drive-art-deco.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 120,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ocean-drive-art-deco_hero.webp",
+          "transcriptText": "In the middle of the 1970s, the most realistic future for the row of hotels across the street was a bulldozer. The buildings were about forty years old, small and stucco and cracked, painted in beiges and off-whites, and filled largely with retirees living on fixed incomes; developers and a good part of city government saw a tired strip waiting to be cleared for towers, and almost nobody thought these were buildings worth a fight.\n\nYou are in Lummus Park, on the beach side of Ocean Drive, looking west at the row. Most of it went up through the Depression years of the 1930s and into the early 1940s, which is why it is modest: three and four stories, rounded corners, flat roofs finished with a stepped parapet or a thin spire, and horizontal bands scored across the front to suggest speed in buildings that go nowhere. The style is a local, budget version of Art Deco, built quickly by architects who had to make inexpensive hotels look like ocean liners.\n\nHer name was Barbara Baer Capitman. She came to Miami Beach in the mid 1970s and in 1976 she and a small group of designers, among them Leonard Horowitz, founded the Miami Design Preservation League to argue that this unloved row was a historic district — at a time when historic meant old, and old meant the nineteenth century at the latest. The argument won on paper on the fourteenth of May, 1979, when the district was listed on the National Register of Historic Places; the state's own marker describes it as the first urban district of twentieth-century buildings to receive that listing. It lost some battles on the street, where Capitman stood in front of bulldozers and several hotels came down anyway.\n\nThe colors you are looking at came afterward. Leonard Horowitz chose the pastel palette in the early 1980s, painting over the beige with pinks and lemons and blues, so what reads as original Deco is partly a preservationist's idea laid over the real thing, and it worked. The district now holds one of the largest concentrations of Art Deco architecture in the world, most of it saved when saving it looked foolish.\n\nWalk the row slowly and keep the argument underneath it in mind: the city did not keep these buildings because anyone thought them precious, but because a few stubborn people insisted that cheap, ordinary, overlooked things could be history too."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.780613,
+      "centroidLongitude": -80.129893,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Waterfront",
+        "Architecture",
+        "History",
+        "Art Deco",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "90beaf95-a629-5b1e-95f9-c16a4a6f06f3",
+      "createdAt": "2026-09-29",
+      "title": "Lincoln Road",
+      "shortDescription": "By his wife Jane's account, Carl Fisher peeled a stick on a walk through the mangroves here, and when the two of them reached clean sand he drew…",
+      "longDescription": "By his wife Jane's account, Carl Fisher peeled a stick on a walk through the mangroves here, and when the two of them reached clean sand he drew streets and squares on the ground with it; she later wrote that the damp sand he drew on became Lincoln Road. Go back to before any of it existed. Fisher was an Indiana man who had made a fortune in automobile headlights, helped build the Indianapolis Motor Speedway, and pushed for the Lincoln Highway, an early road meant to cross the whole country. He arrived here at the end of 1912 to find a narrow, mosquito-ridden island of mangrove and scrub, and he and his partners spent staggering sums clearing it and dredging it into building lots, long before a single sale paid them back. He named this street for the president whose name he had already put on a highway, and he wanted it to become the Fifth Avenue of the South.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincoln-road_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincoln-road_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e6871c97-f61e-5956-bcdd-765c206ef60a",
+          "order": 0,
+          "title": "Lincoln Road",
+          "caption": "You are on Lincoln Road, the pedestrian mall that crosses the Beach from near Washington Avenue west toward the bay, with shops and restaurants on both sides, shade structures and plantings running down the middle, and no cars.",
+          "latitude": 25.790304,
+          "longitude": -80.136518,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lincoln-road.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 120,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincoln-road_hero.webp",
+          "transcriptText": "By his wife Jane's account, Carl Fisher peeled a stick on a walk through the mangroves here, and when the two of them reached clean sand he drew streets and squares on the ground with it; she later wrote that the damp sand he drew on became Lincoln Road.\n\nYou are on Lincoln Road, the pedestrian mall that crosses the Beach from near Washington Avenue west toward the bay, with shops and restaurants on both sides, shade structures and plantings running down the middle, and no cars. Stand anywhere along it and you are standing on that drawing.\n\nGo back to before any of it existed. Fisher was an Indiana man who had made a fortune in automobile headlights, helped build the Indianapolis Motor Speedway, and pushed for the Lincoln Highway, an early road meant to cross the whole country. He arrived here at the end of 1912 to find a narrow, mosquito-ridden island of mangrove and scrub, and he and his partners spent staggering sums clearing it and dredging it into building lots, long before a single sale paid them back. He named this street for the president whose name he had already put on a highway, and he wanted it to become the Fifth Avenue of the South.\n\nWhat Fisher was really selling was not land but an idea of winter. He advertised sunshine to people shoveling snow in Indianapolis, Chicago and New York, staged speedboat races and publicity stunts, and filled the island with buyers who had never seen it; by the 1940s the fashionable department stores had storefronts here. When the street faded after the war, the city hired the architect Morris Lapidus, who closed it to traffic in 1960 and gave it the canopies and follies you are walking among.\n\nThe city across the bay began when two people agreed to make one. The Beach is that same move made bigger and bolder: one promoter, a stick, a stretch of sand nobody wanted, and a sales campaign aimed at strangers a thousand miles away, and it worked so well that the island Fisher described now looks like the one he advertised.\n\nWhichever direction you head from here, every step is on a line first drawn by a man who could see a city on an empty beach, and who was persuasive enough to make everyone else see it too."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.790304,
+      "centroidLongitude": -80.136518,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Commerce",
+        "Modernist",
+        "Designed by a Master",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8f45b6e5-21f4-5850-a55b-72f1e4e6713b",
+      "createdAt": "2026-09-29",
+      "title": "Domino Park",
+      "shortDescription": "Listen for the tiles before you listen for the voices: a hard, flat click, then another, and now and then the long rattle of pieces shuffled…",
+      "longDescription": "Listen for the tiles before you listen for the voices: a hard, flat click, then another, and now and then the long rattle of pieces shuffled face down for the next hand. You're at the corner of Calle Ocho and Fifteenth Avenue, beside a small fenced park with a shaded pavilion and the tables set out beneath it, and the sound reaches the sidewalk well before you can make out a single game. Officially this is Máximo Gómez Park, and the name holds the neighborhood's first surprise. The general it honors, Máximo Gómez, was born in the Dominican Republic and rose to command Cuba's army of independence against Spain, so a room as Cuban as any in the city carries the name of a man from another island who took up Cuba's cause as his own. The city built the present park in 1976 around a gathering that had already claimed this corner, and the tables belong to members, older players from the neighborhood, while visitors are welcome to watch from the benches along the edge.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maximo-gomez-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maximo-gomez-park_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4fb93a84-aaea-524f-9b06-e6d7735fd569",
+          "order": 0,
+          "title": "Domino Park",
+          "caption": "Listen for the tiles before you listen for the voices: a hard, flat click, then another, and now and then the long rattle of pieces shuffled face down for the next hand.",
+          "latitude": 25.765491,
+          "longitude": -80.219374,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/maximo-gomez-park.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maximo-gomez-park_hero.webp",
+          "transcriptText": "Listen for the tiles before you listen for the voices: a hard, flat click, then another, and now and then the long rattle of pieces shuffled face down for the next hand. You're at the corner of Calle Ocho and Fifteenth Avenue, beside a small fenced park with a shaded pavilion and the tables set out beneath it, and the sound reaches the sidewalk well before you can make out a single game.\n\nOfficially this is Máximo Gómez Park, and the name holds the neighborhood's first surprise. The general it honors, Máximo Gómez, was born in the Dominican Republic and rose to command Cuba's army of independence against Spain, so a room as Cuban as any in the city carries the name of a man from another island who took up Cuba's cause as his own. The city built the present park in 1976 around a gathering that had already claimed this corner, and the tables belong to members, older players from the neighborhood, while visitors are welcome to watch from the benches along the edge.\n\nThe posted rules explain the place better than any plaque. A sign sets out how people are expected to behave, and it reads like the house rules of a family parlor: no alcohol, no shouting, no bad language, no bare chests and no flip-flops, with a suspension of two to four weeks for anyone who forgets. None of it is written for tourists; it is written by and for the people who treat this park as the neighborhood's living room, where baseball, news from home and a close game can fill an afternoon, and the manners are those of someone's house.\n\nWhen a place built to receive people discovers that they have stayed, it needs somewhere ordinary to spend its days. The Freedom Tower downtown records the moment of arrival, and this corner records what came afterward, when arrival turned into routine and routine, over decades, into an institution with members, rules and players waiting their turn for the next game. On the wall behind the tables, a mural painted for the Summit of the Americas, held in Miami in 1994, gathers the leaders of the hemisphere above the dominoes.\n\nGive the tables their room. Take a bench or stand at the edge, keep your voice at the level of the park, and let the sound of the pieces be what you carry away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.765491,
+      "centroidLongitude": -80.219374,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Park",
+        "Public Square",
+        "Immigration",
+        "History",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "76ec69a3-a12e-512e-b110-202ecf1691f6",
+      "createdAt": "2026-09-29",
+      "title": "Cuban Memorial Boulevard",
+      "shortDescription": "In gold letters above the names on these plaques, the words read Mártires de Playa Girón: the martyrs of Girón beach. You're a block east of…",
+      "longDescription": "In gold letters above the names on these plaques, the words read Mártires de Playa Girón: the martyrs of Girón beach. You're a block east of Domino Park, where Southwest Thirteenth Avenue meets Calle Ocho and a broad, tree-shaded median runs south between the traffic lanes, and the first thing on it is this column of gray marble, a little taller than two people, with the brigade's crest on its face and an urn on top holding a flame meant never to go out. That wording is not the phrase most English speakers would reach for. In the United States the landing of April 1961 is remembered as the Bay of Pigs; the exile force that went ashore, Brigade Twenty-Five Oh Six, and the families who raised this column name it for the beach where they landed, Playa Girón, as they knew it. The landing failed within days, most of the brigade was captured, and at the end of the following year the prisoners were released to the United States, many of them settling in this neighborhood. Ten years to the day after the landing, the community dedicated the column, and the flame was first lit by the daughter of one of the men it remembers.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cuban-memorial-boulevard_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cuban-memorial-boulevard_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "318a10fe-937a-50bd-ab95-5f17e576b4c3",
+          "order": 0,
+          "title": "Cuban Memorial Boulevard",
+          "caption": "In gold letters above the names on these plaques, the words read Mártires de Playa Girón: the martyrs of Girón beach.",
+          "latitude": 25.7654,
+          "longitude": -80.2167,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cuban-memorial-boulevard.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cuban-memorial-boulevard_hero.webp",
+          "transcriptText": "In gold letters above the names on these plaques, the words read Mártires de Playa Girón: the martyrs of Girón beach. You're a block east of Domino Park, where Southwest Thirteenth Avenue meets Calle Ocho and a broad, tree-shaded median runs south between the traffic lanes, and the first thing on it is this column of gray marble, a little taller than two people, with the brigade's crest on its face and an urn on top holding a flame meant never to go out.\n\nThat wording is not the phrase most English speakers would reach for. In the United States the landing of April 1961 is remembered as the Bay of Pigs; the exile force that went ashore, Brigade Twenty-Five Oh Six, and the families who raised this column name it for the beach where they landed, Playa Girón, as they knew it. The landing failed within days, most of the brigade was captured, and at the end of the following year the prisoners were released to the United States, many of them settling in this neighborhood. Ten years to the day after the landing, the community dedicated the column, and the flame was first lit by the daughter of one of the men it remembers.\n\nThe flame does not stand alone. Along the median the boulevard becomes a sequence the community assembled over decades: a bronze map of Cuba, a memorial to José Martí, a statue of the Virgin, a bust of the independence general Antonio Maceo, a statue of the brigade veteran Nestor Izquierdo, a bust of a tango star who left the island in 1959, a small plaza for Cuban journalists, and a great ceiba tree, sacred in Afro-Cuban religious tradition, where small offerings sometimes appear at the roots and are best left undisturbed.\n\nCities usually put official monuments downtown; this one stands on a residential median, raised by the families of the men it names, carrying their own dead and their own heroes, and people gather at it on their own anniversaries. Whatever a visitor thinks about the politics of the island, this is a community's memorial, placed where its members live and worded in their language.\n\nThe boulevard runs south from here under its trees, past the monuments and on into quiet residential blocks, and the flame stays at the head of it, facing Calle Ocho."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.7654,
+      "centroidLongitude": -80.2167,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Monument",
+        "Remembrance",
+        "Immigration",
+        "War",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "18b72fc9-9685-5426-904f-3e73d1b707b9",
+      "createdAt": "2026-09-29",
+      "title": "The Barnacle",
+      "shortDescription": "Stand under the trees along Main Highway for a moment and the temperature drops before anything else changes: the canopy over this stretch…",
+      "longDescription": "Stand under the trees along Main Highway for a moment and the temperature drops before anything else changes: the canopy over this stretch closes almost completely, and the air beneath it is cooler and stiller than the open road behind you. You're on the edge of what remains of a tropical hardwood hammock, with the Barnacle's gate on the bay side and Peacock Park opening toward the water just north. The Barnacle is a pioneer house, finished in 1891 for Ralph Munroe, a yacht designer from Staten Island, and the state park that keeps it describes it as the oldest house in the county still standing where it was built. Neighbors raised it for him out of timbers salvaged from shipwrecks and set it up off the ground for the breeze, and in 1908, when the family outgrew it, they jacked the whole house into the air and built a new ground floor underneath.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-barnacle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-barnacle_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "53c1a557-f2f8-5fda-aaa5-a354fd3937ac",
+          "order": 0,
+          "title": "The Barnacle",
+          "caption": "Stand under the trees along Main Highway for a moment and the temperature drops before anything else changes: the canopy over this stretch closes almost completely, and the air beneath it is cooler and stiller than the open road behind you.",
+          "latitude": 25.725332,
+          "longitude": -80.242557,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-barnacle.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-barnacle_hero.webp",
+          "transcriptText": "Stand under the trees along Main Highway for a moment and the temperature drops before anything else changes: the canopy over this stretch closes almost completely, and the air beneath it is cooler and stiller than the open road behind you. You're on the edge of what remains of a tropical hardwood hammock, with the Barnacle's gate on the bay side and Peacock Park opening toward the water just north.\n\nThe Barnacle is a pioneer house, finished in 1891 for Ralph Munroe, a yacht designer from Staten Island, and the state park that keeps it describes it as the oldest house in the county still standing where it was built. Neighbors raised it for him out of timbers salvaged from shipwrecks and set it up off the ground for the breeze, and in 1908, when the family outgrew it, they jacked the whole house into the air and built a new ground floor underneath.\n\nThe inn's guest book tells half the story. In 1882 an English couple, Charles and Isabella Peacock, opened a hotel on the ground that is now Peacock Park, remembered as the first on this shore of the bay, and its guests, winter visitors from the North, left the letters and photographs the Grove's early history was written from. The people who cooked, gardened and cleaned for them came, most of them, from the Bahamas by way of Key West, bringing a working knowledge of tropical plants and building the newcomers lacked. Among the first was a woman from Eleuthera named Mariah Brown, whose house of 1890 still stands a few blocks west, on a street the settlers cleared for themselves and called Evangelist Street for its churches; it is Charles Avenue now, and the historical marker there calls it the first Black community on the South Florida mainland.\n\nMiami likes to date itself from 1896, a railroad and a vote. On this ground a working community was already close to a decade old by then, and it was Black and Bahamian, and it built a good part of what the pioneers' photographs show. That community is still here, west of Main Highway, underneath the Grove most visitors come to see.\n\nCome back in the last hour of daylight, when the light comes flat off the bay and the hammock goes dark behind you, and the two halves of the Grove are easy to tell apart."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.725332,
+      "centroidLongitude": -80.242557,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Park",
+        "History",
+        "Architecture",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eebfa594-a561-5971-967b-987825a94da0",
+      "createdAt": "2026-09-29",
+      "title": "Vizcaya",
+      "shortDescription": "The drive is built so that you won't see the house, not yet: it bends through native forest, limestone and shade on either side, and whatever…",
+      "longDescription": "The drive is built so that you won't see the house, not yet: it bends through native forest, limestone and shade on either side, and whatever you came to look at stays hidden until the trees give way. The delay is deliberate. James Deering, a vice president of the farm-machinery company International Harvester, wanted arrival here to feel like discovery, and the road still performs it for everyone who comes after him. He moved in on Christmas Day, 1916, into an Italian villa assembled on this shore for a man who only ever wintered in it, and the gardens and the estate village went on being built into the early 1920s. By most estimates the work employed around a thousand people in a city of perhaps ten thousand, many of them Black laborers from the Bahamas who lived, by law, in the segregated parts of town. Deering spent fewer than ten winters here and died at sea in 1925, a year before the land boom came apart.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "95dd3991-7f1d-58c4-93a5-5e015e219fa2",
+          "order": 0,
+          "title": "Vizcaya",
+          "caption": "The drive is built so that you won't see the house, not yet: it bends through native forest, limestone and shade on either side, and whatever you came to look at stays hidden until the trees give way.",
+          "latitude": 25.744381,
+          "longitude": -80.210502,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vizcaya.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 100,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vizcaya_hero.webp",
+          "transcriptText": "The drive is built so that you won't see the house, not yet: it bends through native forest, limestone and shade on either side, and whatever you came to look at stays hidden until the trees give way. The delay is deliberate. James Deering, a vice president of the farm-machinery company International Harvester, wanted arrival here to feel like discovery, and the road still performs it for everyone who comes after him.\n\nHe moved in on Christmas Day, 1916, into an Italian villa assembled on this shore for a man who only ever wintered in it, and the gardens and the estate village went on being built into the early 1920s. By most estimates the work employed around a thousand people in a city of perhaps ten thousand, many of them Black laborers from the Bahamas who lived, by law, in the segregated parts of town. Deering spent fewer than ten winters here and died at sea in 1925, a year before the land boom came apart.\n\nIt very nearly became something else. The storm of 1926 damaged the house and the gardens; the heirs restored them and tried to run the estate as an attraction until a second storm in 1935 set that back, and most of the land around it was sold off for development, including ground for the hospital next door. In the early 1950s his nieces sold the house and formal gardens to the county for a sum below their value, gave it the furnishings on condition that it remain a public museum, and the doors opened soon after.\n\nTaken together, the sequence stops looking like bad luck. A fortune arrives at the top of a boom and builds; a storm and a bust break it; the land is parceled out to whoever is buying next; and what survives is handed to the public while the next boom goes up on the horizon, the way the towers that rose along the bay in the 2020s stand a few miles north of these gates. In Miami, boom and bust are less an interruption than the way the city breathes.\n\nWhether or not you go in, the drive has already done the thing it was built to do, which is to make you wait for the house and then give it to you all at once."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.744381,
+      "centroidLongitude": -80.210502,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Gilded Age",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1e6817b7-0e8e-52e6-8418-aea499c813d1",
+      "createdAt": "2026-09-29",
+      "title": "Wynwood Walls",
+      "shortDescription": "Listen to the sidewalk before you look at the walls: the languages passing you are from everywhere, and the one you'll hear least is the Spanish…",
+      "longDescription": "Listen to the sidewalk before you look at the walls: the languages passing you are from everywhere, and the one you'll hear least is the Spanish this neighborhood spoke when people here called it El Barrio. None of what you're looking at is meant to last. The walls are repainted on a cycle, most heavily each December when the art fairs come to town, and a mural that draws crowds one winter is primed over the next, so the district is less a collection than a schedule, and the only permanent thing on the block is the habit of change.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wynwood-walls_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wynwood-walls_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wynwood-walls_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wynwood-walls_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wynwood-walls_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wynwood-walls_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3e8a753c-5c7b-57e6-92c3-ef993508ff73",
+          "order": 0,
+          "title": "Wynwood Walls",
+          "caption": "You're on Northwest Second Avenue in Wynwood, a district of low, windowless warehouses that spent decades as a garment and industrial quarter with a Puerto Rican neighborhood beside it.",
+          "latitude": 25.801139,
+          "longitude": -80.199658,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wynwood-walls.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wynwood-walls_hero.webp",
+          "transcriptText": "Listen to the sidewalk before you look at the walls: the languages passing you are from everywhere, and the one you'll hear least is the Spanish this neighborhood spoke when people here called it El Barrio.\n\nYou're on Northwest Second Avenue in Wynwood, a district of low, windowless warehouses that spent decades as a garment and industrial quarter with a Puerto Rican neighborhood beside it. In 2009 a developer named Tony Goldman, who had worked on SoHo and South Beach, bought six of the warehouses on this block and had their blank exterior walls painted by invited street artists, with the curator Jeffrey Deitch assembling the first group; he called the result Wynwood Walls and meant it, in his own words, as a town center for a neighborhood that had never had one.\n\nNone of what you're looking at is meant to last. The walls are repainted on a cycle, most heavily each December when the art fairs come to town, and a mural that draws crowds one winter is primed over the next, so the district is less a collection than a schedule, and the only permanent thing on the block is the habit of change.\n\nTwo accounts of what happened here are held with equal conviction. The company that built the Walls describes them as the engine of a revival: art brought people to a district nobody visited, and restaurants, galleries and apartments followed. Longtime residents and preservation advocates describe the same sequence from the other end, with the art as the advance guard of rents that the neighborhood's families and small businesses could no longer pay, a place made famous and made unaffordable in one motion.\n\nBoth accounts are true to the people who hold them, and the walls will not settle the argument, since a painted surface can be read as a gift or as a signal depending on who is reading and where they live.\n\nThe Walls are a ticketed compound now, where they once were free, and the gate will tell you what it costs to walk in, but the streets around it are open, and the murals spill down the side streets for blocks in every direction.\n\nCome back in a year and stand on this same corner, because the wall in front of you will be a different wall, and how you feel about that is the whole subject of this stop."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.801139,
+      "centroidLongitude": -80.199658,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "District",
+        "Art",
+        "Commerce",
+        "Contemporary",
+        "Public Art",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5879f10d-87af-52b2-8129-d439495445da",
+      "createdAt": "2026-09-29",
+      "title": "Dade County Courthouse",
+      "shortDescription": "If it's anywhere between October and March, look at the very top before you look at anything else. The stepped pyramid up there is a winter…",
+      "longDescription": "If it's anywhere between October and March, look at the very top before you look at anything else. The stepped pyramid up there is a winter roost for turkey vultures, and they have been coming back to this roof for so long that their return used to get written up in the newspaper as the city's version of the leaves changing. In summer the roof is empty and you'll have to take my word for it. Now the building. Twenty-eight stories, three hundred and sixty-one feet, begun in 1925 and finished in 1928, and for about thirty years after that nothing downtown stood taller. It was built for everything at once: courtrooms, the city and county governments, and, under that stepped roof, the jail; the top floors were cells with a view. Al Capone was tried in one of the courtrooms in 1930, on a perjury charge, and acquitted.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dade-county-courthouse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dade-county-courthouse_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b30d940c-9ca0-5ece-ae8f-ba2bb0a37b55",
+          "order": 0,
+          "title": "Dade County Courthouse",
+          "caption": "You should be on the north sidewalk of West Flagler Street, across from the courthouse, facing its front.",
+          "latitude": 25.774587,
+          "longitude": -80.195136,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dade-county-courthouse.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dade-county-courthouse_hero.webp",
+          "transcriptText": "If it's anywhere between October and March, look at the very top before you look at anything else. The stepped pyramid up there is a winter roost for turkey vultures, and they have been coming back to this roof for so long that their return used to get written up in the newspaper as the city's version of the leaves changing. In summer the roof is empty and you'll have to take my word for it.\n\nYou should be on the north sidewalk of West Flagler Street, across from the courthouse, facing its front. The columns at the entrance run up a full three stories, a statue of Henry Flagler stands near the doors, and a few steps away at Northwest First Avenue a newer glass tower rises with a curved, mirrored bubble on its face. That's the replacement, and the old tower is reflected in that bubble on purpose.\n\nNow the building. Twenty-eight stories, three hundred and sixty-one feet, begun in 1925 and finished in 1928, and for about thirty years after that nothing downtown stood taller. It was built for everything at once: courtrooms, the city and county governments, and, under that stepped roof, the jail; the top floors were cells with a view. Al Capone was tried in one of the courtrooms in 1930, on a perjury charge, and acquitted.\n\nLook at the dates again. Begun in the boom of 1925, when lots in this county were changing hands twice in an afternoon; finished in 1928, after a hurricane in September of 1926 had ended the boom a full three years ahead of the rest of the country's crash. The courthouse is a sentence that began in one economy and finished in another, and downtown is full of them: buildings whose foundations were poured by optimists and whose upper floors were paid for, slowly, by whoever was left.\n\nAnd the sentence isn't finished. In December of 2025 the civil courts moved into the glass tower after nearly a century here, and this building emptied. The county has tried to sell it; the historic designation forbids demolition and protects the lobby, the atrium and the courtrooms inside; the auction in the summer of 2026 drew lookers and no bids. It stands here, for now, waiting for the next economy to decide what it's for.\n\nBoom, storm, bust, and then a long patience. The vultures, to be fair, have never once missed a season."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.774587,
+      "centroidLongitude": -80.195136,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Notable Building",
+        "Architecture",
+        "Power",
+        "History",
+        "Neoclassical",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2eee23a8-78bf-5b27-a4c5-1989997d35c2",
+      "createdAt": "2026-09-29",
+      "title": "Alfred I. duPont Building",
+      "shortDescription": "Put your hand on the black granite that wraps the base of this building; on a hot afternoon it is the coolest thing on the block. Above it the…",
+      "longDescription": "Put your hand on the black granite that wraps the base of this building; on a hot afternoon it is the coolest thing on the block. Above it the wall turns to pale limestone and goes straight up for seventeen stories, windows in neat pairs, the panels between them tinted green, the top two floors stepping back like a stair. Follow it up. This is the Alfred I. duPont Building, begun in 1937 and finished in 1939, and the years matter more than the name. Downtown Miami built nothing tall between the courthouse in 1928 and this: the boom had died, the Depression had settled in, and a whole decade of skyline simply didn't happen. Then a Delaware fortune put a bank headquarters on the site of the old Halcyon Hotel, and the city read it as permission to begin again. The man himself had died in 1935; the money kept building without him.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dupont-building_hero-2.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "83d7dd43-5e5f-52a5-ac40-bfd0c0a88682",
+          "order": 0,
+          "title": "Alfred I. duPont Building",
+          "caption": "You should be at the corner of East Flagler Street and Northeast Second Avenue, on the corner diagonally opposite the building, so the whole shaft is in view at once.",
+          "latitude": 25.77454,
+          "longitude": -80.190642,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dupont-building.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dupont-building_hero-2.webp",
+          "transcriptText": "Put your hand on the black granite that wraps the base of this building; on a hot afternoon it is the coolest thing on the block. Above it the wall turns to pale limestone and goes straight up for seventeen stories, windows in neat pairs, the panels between them tinted green, the top two floors stepping back like a stair.\n\nYou should be at the corner of East Flagler Street and Northeast Second Avenue, on the corner diagonally opposite the building, so the whole shaft is in view at once. The main doors face Flagler.\n\nFollow it up. This is the Alfred I. duPont Building, begun in 1937 and finished in 1939, and the years matter more than the name. Downtown Miami built nothing tall between the courthouse in 1928 and this: the boom had died, the Depression had settled in, and a whole decade of skyline simply didn't happen. Then a Delaware fortune put a bank headquarters on the site of the old Halcyon Hotel, and the city read it as permission to begin again. The man himself had died in 1935; the money kept building without him.\n\nThe gift is inside, if the lobby is open when you pass: the elevator doors are brass, worked in relief with palm trees, flamingos and other Florida creatures, and the ceilings above the old banking floor are painted. Where the buildings around it reached for Spain and Italy, this one decorated itself with the place it was actually in, herons and Seminole patterns instead of Andalusian towers. It's a small shift in confidence and a real one; by 1939 Miami had decided it was a subject and not only a stage set.\n\nWhile you're on this corner, a practical gift. In 1921 the city renumbered itself, and Flagler Street became the line dividing north from south, while Miami Avenue, two blocks west of where you're standing, became the line dividing east from west. Every address in the city, and across most of the county around it, counts outward from that crossing into one of four quadrants: northeast, northwest, southeast, southwest. Once you know that, you can't really get lost here.\n\nLook at the top once more, at the way it steps back. That crown was the first thing Miami built after it stopped being afraid."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.77454,
+      "centroidLongitude": -80.190642,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Art Deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9d5441dc-6d98-59ff-86e9-277d4e44d511",
+      "createdAt": "2026-09-29",
+      "title": "Gesu Church",
+      "shortDescription": "A salmon-pink church on a corner where nearly everything else is glass and parking, its two towers holding a big arched window between them. You…",
+      "longDescription": "A salmon-pink church on a corner where nearly everything else is glass and parking, its two towers holding a big arched window between them. You could pass it as a period piece; it isn't one. Mass is still said here, on the same ground the parish has held since before there was a city to hold it in. Find the letters. In the ironwork of the gates and grilles, three letters repeat: I, H, S. They are the emblem of the Jesuits, the Society of Jesus, who have run this parish from the beginning, and the name says the same thing twice over. The word Gesu is Italian for Jesus, the short form of the parish's full name, the Holy Name of Jesus, and it is borrowed from the Jesuits' mother church in Rome.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gesu-church_hero-2.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gesu-church_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gesu-church_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "546b9288-ba70-5072-8764-236dd0d12dd6",
+          "order": 0,
+          "title": "Gesu Church",
+          "caption": "You should be across Northeast Second Street from the church's front doors, with the towers rising ahead of you and Northeast First Avenue running along the building's side.",
+          "latitude": 25.775983,
+          "longitude": -80.191663,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gesu-church.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gesu-church_hero-2.webp",
+          "transcriptText": "A salmon-pink church on a corner where nearly everything else is glass and parking, its two towers holding a big arched window between them. You could pass it as a period piece; it isn't one. Mass is still said here, on the same ground the parish has held since before there was a city to hold it in.\n\nYou should be across Northeast Second Street from the church's front doors, with the towers rising ahead of you and Northeast First Avenue running along the building's side. Stay on the sidewalk; the exterior is the stop.\n\nFind the letters. In the ironwork of the gates and grilles, three letters repeat: I, H, S. They are the emblem of the Jesuits, the Society of Jesus, who have run this parish from the beginning, and the name says the same thing twice over. The word Gesu is Italian for Jesus, the short form of the parish's full name, the Holy Name of Jesus, and it is borrowed from the Jesuits' mother church in Rome.\n\nThe parish is older than the city. It was organized in the spring of 1896, some months before the incorporation vote, on a lot given by Henry Flagler, who was not Catholic. A Presbyterian handing a Catholic congregation a downtown lot is a fair picture of how a boomtown thought about churches: you needed them, all of them, quickly. The first church was wood and cost a few thousand dollars. By the early 1920s the congregation had outgrown it, and this building rose on the same ground: cornerstone in December 1920, dedication in 1925, eight hundred seats, marble altars from Italy, and windows of colored leaded glass made in Germany.\n\nHere is what makes it more than a survivor. Almost every building of its generation on these blocks has changed jobs. The courthouse emptied; the newspaper tower became a museum; a bank became a hall full of jewelers; hotels became apartments. This one has never done anything but what it was built to do, at the same address, for one hundred and thirty years, and it did it through every boom and every bust without once pausing, which no bank on Flagler Street can say.\n\nYou don't need to go in, and if a service is underway you shouldn't. Stand here and let it be the one fixed thing in the frame while everything around it keeps changing hands."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.775983,
+      "centroidLongitude": -80.191663,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0db0e880-5fd6-54cb-81be-df7968fb1aa3",
+      "createdAt": "2026-09-29",
+      "title": "Miami-Dade Cultural Center",
+      "shortDescription": "You came up steps or a ramp to get here, and either way you are now a full story above Flagler Street with the traffic somewhere under your…",
+      "longDescription": "You came up steps or a ramp to get here, and either way you are now a full story above Flagler Street with the traffic somewhere under your feet. That was the idea. The plaza is the building. Turn around slowly and notice what you can't see: the street. Philip Johnson designed this in the late 1970s and it opened in 1983, and he lifted the whole civic ensemble onto a podium, turning its back to the sidewalk and its face to an interior square, a Mediterranean town plaza raised out of the town with the town kept out.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-dade-cultural-center_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-dade-cultural-center_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-dade-cultural-center_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-dade-cultural-center_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-dade-cultural-center_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "26b898f3-65b9-5b8d-bafa-b09ec02a657a",
+          "order": 0,
+          "title": "Miami-Dade Cultural Center",
+          "caption": "You should be standing on the raised plaza of the Miami-Dade Cultural Center, roughly at its middle.",
+          "latitude": 25.774463,
+          "longitude": -80.196586,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miami-dade-cultural-center.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/miami-dade-cultural-center_hero.webp",
+          "transcriptText": "You came up steps or a ramp to get here, and either way you are now a full story above Flagler Street with the traffic somewhere under your feet. That was the idea. The plaza is the building.\n\nYou should be standing on the raised plaza of the Miami-Dade Cultural Center, roughly at its middle. Around you, arcaded walls in pale stone and terracotta-colored stucco; along one side, a long building behind a colonnade, the main public library; facing it, the museum. Metromover tracks run just outside, and the station sits a few steps from the plaza's edge.\n\nTurn around slowly and notice what you can't see: the street. Philip Johnson designed this in the late 1970s and it opened in 1983, and he lifted the whole civic ensemble onto a podium, turning its back to the sidewalk and its face to an interior square, a Mediterranean town plaza raised out of the town with the town kept out.\n\nThe argument about that started the day it opened and hasn't stopped. One side says a plaza a story above the street is a fortress: nobody drifts in, Flagler Street gets a blank wall where it wanted shopfronts, and civic buildings should meet the sidewalk. The other side says the podium is the only reason there is a public room here at all: shaded, quiet, out of the traffic, a place that reads as a piece of a city rather than a lobby. Both sides are describing the same few feet of elevation, and this isn't the place to referee it; walk to the edge and see which one you believe.\n\nWhat's inside has moved around more than the walls have. The art museum that opened here left in 2013 for a new building on the bay. The history museum stayed, grew into the space it left behind, and in 2026 changed its name from HistoryMiami to the Museum of Miami. It holds the city's memory: a 1920s trolley car, gold from Spanish wrecks, and rafts that carried people here across the water, kept as artifacts because that is what they have become.\n\nA raised square, a library, a room full of the city's things, and a street below that can't see any of it. For a city that has spent one hundred and thirty years selling its surface, this is the one place downtown that was built to think a floor above it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 143,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.774463,
+      "centroidLongitude": -80.196586,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Public Square",
+        "Museum",
+        "Library",
+        "Architecture",
+        "Modernist",
+        "Designed by a Master",
+        "Philip Johnson"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "269acc17-2165-501e-a05f-5c8fdeabc252",
+      "createdAt": "2026-09-29",
+      "title": "Maurice A. Ferré Park",
+      "shortDescription": "This is Maurice A. Ferré Park. Until the 1960s it was the port.\n\nYou should be on the park's main lawn, east of Biscayne Boulevard, with the bay…",
+      "longDescription": "This is Maurice A. Ferré Park. Until the 1960s it was the port. The ships came in roughly where the art museum stands. From the early 1900s this was the working waterfront, freight and passenger docks on land that had been dredged up out of the bay for that purpose, and the ships stayed until the port moved in the 1960s to Dodge Island, out in the bay to your right, also made ground. The old docks were cleared, and in 1976 the site opened as Bicentennial Park. A Grand Prix ran through it for a few years; then it sat fenced and mostly closed; and it reopened in 2014, remade around the museums, and took its present name in 2019 from a former mayor.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferre-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferre-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferre-park_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ac908c0c-12e3-5c6c-aaad-ff0454522291",
+          "order": 0,
+          "title": "Maurice A. Ferré Park",
+          "caption": "You should be on the park's main lawn, east of Biscayne Boulevard, with the bay ahead of you.",
+          "latitude": 25.784245,
+          "longitude": -80.187316,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ferre-park.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 100,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferre-park_hero.webp",
+          "transcriptText": "This is Maurice A. Ferré Park. Until the 1960s it was the port.\n\nYou should be on the park's main lawn, east of Biscayne Boulevard, with the bay ahead of you. To your left as you face the water, a wide, low building sits up on a deck under a deep flat canopy, with columns of hanging plants dropping from its edge: that's the art museum. Beside it, a taller building with a big pale cone rising through the middle: the science museum. To your right, an inlet cuts in from the bay, and beyond it the arena.\n\nThe ships came in roughly where the art museum stands. From the early 1900s this was the working waterfront, freight and passenger docks on land that had been dredged up out of the bay for that purpose, and the ships stayed until the port moved in the 1960s to Dodge Island, out in the bay to your right, also made ground. The old docks were cleared, and in 1976 the site opened as Bicentennial Park. A Grand Prix ran through it for a few years; then it sat fenced and mostly closed; and it reopened in 2014, remade around the museums, and took its present name in 2019 from a former mayor.\n\nThe art museum opened in 2013, by the Swiss firm Herzog and de Meuron, and the building is mostly porch: the galleries are lifted onto a platform, the roof spreads far past the walls, and the plant columns hang in the gap so the whole thing reads as a shaded deck you can walk under without a ticket, and should. The science museum followed in 2017, and inside the cone is an aquarium you look down into from the top and up into from below.\n\nSo count the ground here. The bay was filled to make a port. The port moved to a second piece of filled bay. The first piece became a park, then a fenced lot, then a park again, and the museums that landed on it were designed to sit up off it. Every square foot east of the road is a decision somebody made, then re-made, then built a museum on.\n\nWalk to the seawall and look across at the island the port went to. Two pieces of manufactured land, facing each other across the water they were both taken from. The view is the history."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.784245,
+      "centroidLongitude": -80.187316,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "Museum",
+        "Maritime",
+        "Architecture",
+        "Green Escape",
+        "Free to Visit",
+        "Designed by a Master",
+        "Herzog & de Meuron"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2961a66c-26ab-51dc-8b3a-95c175f1e5fa",
+      "createdAt": "2026-09-29",
+      "title": "Lummus Park and Fort Dallas",
+      "shortDescription": "The sign says Fort Dallas. Hold that name loosely; the building was a fort for about a decade and several other things for longer.\n\nYou should…",
+      "longDescription": "The sign says Fort Dallas. Hold that name loosely; the building was a fort for about a decade and several other things for longer. The stone building has had four lives. It was built in the 1840s at the mouth of the river, not here, as part of a plantation belonging to a man named William English, and it was built as quarters for the enslaved people who worked that plantation. When the Army returned to the river during the Third Seminole War in the 1850s, it took over the plantation buildings and used this one as a barracks, hence the name. The land later passed to Julia Tuttle, who bought it in 1891 and made the stone building part of her homestead. It was on her ground when she made the deal that started the city.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lummus-park-downtown_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lummus-park-downtown_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lummus-park-downtown_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lummus-park-downtown_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lummus-park-downtown_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1e2dbfaa-f8d1-57ca-9691-d28dc9f86a68",
+          "order": 0,
+          "title": "Lummus Park and Fort Dallas",
+          "caption": "You should be inside Lummus Park, the downtown one, not the beach one, on the north bank of the Miami River just west of the interstate.",
+          "latitude": 25.77619,
+          "longitude": -80.201237,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lummus-park-downtown.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lummus-park-downtown_hero.webp",
+          "transcriptText": "The sign says Fort Dallas. Hold that name loosely; the building was a fort for about a decade and several other things for longer.\n\nYou should be inside Lummus Park, the downtown one, not the beach one, on the north bank of the Miami River just west of the interstate. The river is along the park's west edge; the highway is east, and a big columned temple, the Scottish Rite building, stands north. Two old structures sit in the grass: a long, low building of rough gray limestone, and, near it, a small two-story wooden house with a porch.\n\nThe stone building has had four lives. It was built in the 1840s at the mouth of the river, not here, as part of a plantation belonging to a man named William English, and it was built as quarters for the enslaved people who worked that plantation. When the Army returned to the river during the Third Seminole War in the 1850s, it took over the plantation buildings and used this one as a barracks, hence the name. The land later passed to Julia Tuttle, who bought it in 1891 and made the stone building part of her homestead. It was on her ground when she made the deal that started the city.\n\nIn 1925, at the top of the boom, a hotel was planned for that ground, and the building was taken down stone by stone and put back together here, in what is usually called the city's first act of preservation.\n\nThe wooden house is older still, or nearly: William Wagner built it around 1855 upriver, and by most accounts it is the oldest house still standing in the city. Wagner was an Army veteran who stayed on with his wife, Everline, and the house was moved here in 1979, ahead of the elevated rail line.\n\nBoth buildings stood on the river, both were in the way, and both were carried to a park to make room for something newer. This is how the city has always handled its past: not by leaving it where it was, but by lifting it out of the path, which is why the oldest things in Miami are so rarely in their original places, and why the ground they came from keeps turning out to hold older things still.\n\nA building made for enslaved people, then for soldiers, then for a woman who sold a city, then for a park. Four lives, one set of stones, and every one of them began at the same river mouth."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.77619,
+      "centroidLongitude": -80.201237,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Park",
+        "History",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dd44c362-22c4-5db1-81e4-6c68c9575808",
+      "createdAt": "2026-09-29",
+      "title": "Española Way",
+      "shortDescription": "This street is pretending, and it has been pretending since 1925: the arcades, the barrel-tile roofs, the iron balconies and the stucco washed…",
+      "longDescription": "This street is pretending, and it has been pretending since 1925: the arcades, the barrel-tile roofs, the iron balconies and the stucco washed in the colors of a Mediterranean afternoon were all built new, at the height of the Florida land boom, to make a short strip of Miami Beach feel like a village that had been standing for centuries. A first colony of Spanish-style buildings went up here in 1922, and in 1925 the developer N.B.T. Roney bought in with a larger idea. He wanted an artists' quarter, a place like Greenwich Village or the Left Bank where painters and writers would gather, and his architect, Robert A. Taylor, drew on real towns for the look: San Sebastián and Fuenterrabía on the Basque coast of Spain, Biarritz just over the French border, and Cannes on the Riviera. The result borrows from two countries and belongs to neither, and the artists never arrived in the numbers Roney imagined, so the shops that opened sold antiques, books and tea instead.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espanola-way_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "beba79ef-7bc6-5860-93b2-5d564332c12b",
+          "order": 0,
+          "title": "Española Way",
+          "caption": "You are on Española Way, the pedestrian lane that runs west from Washington Avenue, with its striped awnings, its café tables, and strings of lights crossing overhead between the palms.",
+          "latitude": 25.786811,
+          "longitude": -80.136966,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/espanola-way.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espanola-way_hero.webp",
+          "transcriptText": "This street is pretending, and it has been pretending since 1925: the arcades, the barrel-tile roofs, the iron balconies and the stucco washed in the colors of a Mediterranean afternoon were all built new, at the height of the Florida land boom, to make a short strip of Miami Beach feel like a village that had been standing for centuries.\n\nYou are on Española Way, the pedestrian lane that runs west from Washington Avenue, with its striped awnings, its café tables, and strings of lights crossing overhead between the palms. It is barely two blocks long, and nothing on it rises more than three stories.\n\nA first colony of Spanish-style buildings went up here in 1922, and in 1925 the developer N.B.T. Roney bought in with a larger idea. He wanted an artists' quarter, a place like Greenwich Village or the Left Bank where painters and writers would gather, and his architect, Robert A. Taylor, drew on real towns for the look: San Sebastián and Fuenterrabía on the Basque coast of Spain, Biarritz just over the French border, and Cannes on the Riviera. The result borrows from two countries and belongs to neither, and the artists never arrived in the numbers Roney imagined, so the shops that opened sold antiques, books and tea instead.\n\nNone of it was ever Spanish, strictly speaking, and after a hundred years that turns out not to matter. The buildings have now stood long enough to become history in their own right, and in 1986 the city designated the street a historic district, protecting a 1920s imitation of old Europe as a genuine piece of old Miami Beach.\n\nWhat happened here is a slow conversion. A developer built a stage set to sell an atmosphere, the atmosphere took, and the set aged into the real thing; the plaster cracked and was patched, the tiles weathered, generations of residents and visitors laid down their own memories, and the fake-old became simply old. Most cities eventually lose their make-believe, but this one kept it long enough for it to turn authentic.\n\nSit for a few minutes at one of the tables if you can, especially toward evening when the lights come on, and enjoy the street for what it has become: an honest place built on a charming pretense."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.786811,
+      "centroidLongitude": -80.136966,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Commerce",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e01770af-347d-5f43-a63e-1fa97ce3551d",
+      "createdAt": "2026-09-29",
+      "title": "Casa Casuarina",
+      "shortDescription": "Across the Caribbean, in the old colonial quarter of Santo Domingo, stands a coral-stone palace built around 1510 for Diego Colón, the son of…",
+      "longDescription": "Across the Caribbean, in the old colonial quarter of Santo Domingo, stands a coral-stone palace built around 1510 for Diego Colón, the son of Christopher Columbus, and the house behind this wall is its deliberate, scaled-down copy. It went up in 1930 for Alden Freeman, an heir to a Standard Oil fortune, who modeled it on the Alcázar de Colón, that Santo Domingo palace, down to the rough coral-rock blocks; a stone from the original is said to be set into the wall beside the entrance. Freeman lived on the top floor and rented the rest out as apartments to friends and tenants, and he named the house for the casuarina, the Australian pine, though nobody recorded exactly why.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-casuarina_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-casuarina_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-casuarina_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "49dcdf12-cdd8-52b1-83cb-7b224122b4ff",
+          "order": 0,
+          "title": "Casa Casuarina",
+          "caption": "You are on the sidewalk outside eleven sixteen Ocean Drive, looking at Casa Casuarina, the three-story Mediterranean Revival house behind the high wall and the iron gates.",
+          "latitude": 25.782015,
+          "longitude": -80.13063,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/casa-casuarina.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-casuarina_hero.webp",
+          "transcriptText": "Across the Caribbean, in the old colonial quarter of Santo Domingo, stands a coral-stone palace built around 1510 for Diego Colón, the son of Christopher Columbus, and the house behind this wall is its deliberate, scaled-down copy.\n\nYou are on the sidewalk outside eleven sixteen Ocean Drive, looking at Casa Casuarina, the three-story Mediterranean Revival house behind the high wall and the iron gates. Everything worth seeing for this stop can be seen from exactly where you stand, so there is no need to go any closer.\n\nIt went up in 1930 for Alden Freeman, an heir to a Standard Oil fortune, who modeled it on the Alcázar de Colón, that Santo Domingo palace, down to the rough coral-rock blocks; a stone from the original is said to be set into the wall beside the entrance. Freeman lived on the top floor and rented the rest out as apartments to friends and tenants, and he named the house for the casuarina, the Australian pine, though nobody recorded exactly why.\n\nThe copy outlived the life it was built for. After Freeman's death in 1937 it spent half a century as an ordinary apartment house on a declining street, and by the 1980s its rooms rented for almost nothing while the fittings Freeman had installed survived, dusty and intact, behind the same wall. In 1992 the Italian designer Gianni Versace bought it, together with the hotel next door, and rebuilt it into the palace most people now picture; he was killed on its front steps in 1997. Since 2015 the house has operated as a small hotel, The Villa Casa Casuarina.\n\nSo the building has worn four identities in a century: a rich man's tribute to a colonial palace, a rooming house, a designer's showplace, and a place where travelers can book a night. None of them erased the one before, and through all of them the face it shows the street has stayed the same, a borrowed front from another island and another century.\n\nLet your eye rest on the stone and the ironwork a moment longer, then walk on, since the most interesting thing about this house is not any one owner but how many times it has quietly become something else."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.782015,
+      "centroidLongitude": -80.13063,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Fashion",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d2414b9d-b2e1-5f69-8cfd-af919e3876e2",
+      "createdAt": "2026-09-29",
+      "title": "South Pointe Park",
+      "shortDescription": "If a cruise ship is sliding past the end of this park, it is closer than your eyes want to accept: close enough to count the balconies and…",
+      "longDescription": "If a cruise ship is sliding past the end of this park, it is closer than your eyes want to accept: close enough to count the balconies and moving through a channel that was dry ground when the twentieth century began. Until 1905 there was no gap here at all. The barrier island kept running south as one long ribbon of beach and mangrove, and any vessel bound for the small port at the mouth of the Miami River had to swing all the way around Cape Florida, at the bottom of Key Biscayne, before feeling its way north through the shallows. Congress authorized a straight path in 1902; the dredges opened it three years later and went on deepening it for years afterward.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-pointe-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-pointe-park_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "335ba6f4-930d-5e52-9311-d615137f5f79",
+          "order": 0,
+          "title": "South Pointe Park",
+          "caption": "You are at the southern tip of Miami Beach, in South Pointe Park, and if you face the water, the Atlantic opens to your left while downtown Miami stands across the bay to your right.",
+          "latitude": 25.765923,
+          "longitude": -80.133447,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/south-pointe-park.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 100,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-pointe-park_hero.webp",
+          "transcriptText": "If a cruise ship is sliding past the end of this park, it is closer than your eyes want to accept: close enough to count the balconies and moving through a channel that was dry ground when the twentieth century began.\n\nYou are at the southern tip of Miami Beach, in South Pointe Park, and if you face the water, the Atlantic opens to your left while downtown Miami stands across the bay to your right. The strip of water in front of you is Government Cut, and the name is a plain description, since this is the channel the federal government sliced through the island so that ships could come straight in from the ocean.\n\nUntil 1905 there was no gap here at all. The barrier island kept running south as one long ribbon of beach and mangrove, and any vessel bound for the small port at the mouth of the Miami River had to swing all the way around Cape Florida, at the bottom of Key Biscayne, before feeling its way north through the shallows. Congress authorized a straight path in 1902; the dredges opened it three years later and went on deepening it for years afterward.\n\nThe low green island across the channel, crowded with red tile roofs, was the southern end of the ground under your feet until the dredges came through. The cut severed it, and it has lived ever since as a separate place with its own name, Fisher Island, reached only by boat.\n\nMost afternoons, somewhere between four and six, the departures begin, and every one of them comes this way. The ships are leaving one of the busiest cruise ports in the world, tied up on an island in the bay to your right, and all of them share exactly one road to the open sea: the line the government drew here in 1905.\n\nPeople tend to describe Miami Beach by its ocean edge, the long east-facing sand that runs north from the pier. Its southern edge belongs to a different kind of history, because no tide or current put it here; an act of Congress did, and the place where the Beach stops and the shipping lane begins is, quite literally, a line on a federal survey. If you have the time, wait for one departure, and watch something the size of a city block pass through the gap that line became."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.765923,
+      "centroidLongitude": -80.133447,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "Maritime",
+        "Engineering",
+        "Viewpoint",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "de7b356f-ae80-511f-a90f-89297839bcc8",
+      "createdAt": "2026-09-29",
+      "title": "Holocaust Memorial Miami Beach",
+      "shortDescription": "This memorial was begun by the people it speaks for. In 1984 a small committee of Holocaust survivors living on and around Miami Beach decided…",
+      "longDescription": "This memorial was begun by the people it speaks for. In 1984 a small committee of Holocaust survivors living on and around Miami Beach decided that their community needed a permanent place of remembrance, and the city set aside this corner of Meridian Avenue and Dade Boulevard for it, on land that had been the home of a survivor family who came here from Rotterdam. The memorial was designed by the Miami architect and sculptor Kenneth Treister and dedicated on the fourth of February, 1990, with the writer Elie Wiesel, himself a survivor, among those who spoke. Its street address on Meridian Avenue runs from 1933 to 1945, the years themselves.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/holocaust-memorial-miami-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/holocaust-memorial-miami-beach_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/holocaust-memorial-miami-beach_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "68eb50a3-e024-5f44-9fa2-414e3c9b8ad2",
+          "order": 0,
+          "title": "Holocaust Memorial Miami Beach",
+          "caption": "You are at the memorial's entrance, where a path lined with palms leads inward toward a reflecting pool, a long wall of black granite, and a large bronze sculpture at the center.",
+          "latitude": 25.795451,
+          "longitude": -80.136224,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/holocaust-memorial-miami-beach.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/holocaust-memorial-miami-beach_hero.webp",
+          "transcriptText": "This memorial was begun by the people it speaks for. In 1984 a small committee of Holocaust survivors living on and around Miami Beach decided that their community needed a permanent place of remembrance, and the city set aside this corner of Meridian Avenue and Dade Boulevard for it, on land that had been the home of a survivor family who came here from Rotterdam.\n\nYou are at the memorial's entrance, where a path lined with palms leads inward toward a reflecting pool, a long wall of black granite, and a large bronze sculpture at the center. It is open to the public without charge, and there is no right way through it except slowly.\n\nThe memorial was designed by the Miami architect and sculptor Kenneth Treister and dedicated on the fourth of February, 1990, with the writer Elie Wiesel, himself a survivor, among those who spoke. Its street address on Meridian Avenue runs from 1933 to 1945, the years themselves.\n\nThe people who built it had reasons to build it here. By the 1970s and 1980s, South Beach was home to a large community of elderly Jewish retirees living in the small apartment hotels a few blocks east, and many of them had survived the camps or lost nearly everyone they had known in Europe. They wanted a place that would outlast them, where their children could stand, and where the names of the people they had lost could be written down in the city where they had finally settled.\n\nThe names on the granite were submitted by survivors and their families, many of whom lived nearby, often for parents, children and siblings who left no grave behind. The wall is less a monument than a record kept by the families themselves, which is what gives this garden its particular weight: it was made by witnesses, for the people they carried with them.\n\nStay on the path as long or as briefly as you like, at whatever pace feels right. The memorial asks nothing more of a visitor than attention, and nothing less."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.795451,
+      "centroidLongitude": -80.136224,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Monument",
+        "Remembrance",
+        "History",
+        "Public Art",
+        "Designed by a Master",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "48c5eec1-dd89-56ba-b169-18f63d6bc4b3",
+      "createdAt": "2026-09-29",
+      "title": "Jewish Museum of Florida",
+      "shortDescription": "The location of this synagogue is part of its history, not an accident of real estate. It stands on Washington Avenue a few blocks south of…",
+      "longDescription": "The location of this synagogue is part of its history, not an accident of real estate. It stands on Washington Avenue a few blocks south of Fifth Street, in the corner of Miami Beach where the island's first Jewish residents were permitted to live. The congregation, Beth Jacob, was founded in 1927, and within a few years it had outgrown its first home. The new sanctuary was designed by one of its own members, Henry Hohauser, in what was likely his first completed building, and he went on to design many of the hotels whose rounded corners you may already have seen along Ocean Drive and Collins Avenue.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jewish-museum-of-florida_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jewish-museum-of-florida_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b9c2334d-459b-5f5a-87cd-4af82a0fa5c7",
+          "order": 0,
+          "title": "Jewish Museum of Florida",
+          "caption": "You are outside three oh one Washington Avenue, the home of the Jewish Museum of Florida, run by Florida International University.",
+          "latitude": 25.772523,
+          "longitude": -80.134232,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jewish-museum-of-florida.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jewish-museum-of-florida_hero.webp",
+          "transcriptText": "The location of this synagogue is part of its history, not an accident of real estate. It stands on Washington Avenue a few blocks south of Fifth Street, in the corner of Miami Beach where the island's first Jewish residents were permitted to live.\n\nYou are outside three oh one Washington Avenue, the home of the Jewish Museum of Florida, run by Florida International University. There are two buildings here, joined together: a plain stucco synagogue from 1929, the first built on Miami Beach, and beside it the larger 1936 sanctuary with its copper dome, Art Deco details, and eighty stained-glass windows.\n\nThe congregation, Beth Jacob, was founded in 1927, and within a few years it had outgrown its first home. The new sanctuary was designed by one of its own members, Henry Hohauser, in what was likely his first completed building, and he went on to design many of the hotels whose rounded corners you may already have seen along Ocean Drive and Collins Avenue.\n\nBy the 1930s, exclusion was written into the Beach itself. Deeds across much of the island barred sale to Jews and to Black buyers, which is why the congregation built south of Fifth; hotels advertised restricted or gentile clientele in plain words, Black guests were shut out entirely, and the practice held into the late 1940s, when first the city and then the state outlawed it.\n\nThe building served its congregation until 1986 and then stood empty, slated at one point for demolition to make room for apartments, until a traveling exhibition on the history of Florida's Jews found it and made it a permanent home, opening as a museum in 1995. So the synagogue built where Jews were allowed to be now holds the record of everywhere they went afterward, across the whole state and over more than two centuries.\n\nSpend a moment with the facade and the dome. They were paid for, prayed in and saved by a community that was once told exactly where on this island it could stand, and they are still standing in that same place."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.772523,
+      "centroidLongitude": -80.134232,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Religious Building",
+        "Faith",
+        "Immigration",
+        "History",
+        "Art Deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "61fb7bb5-657a-57c3-aa6d-361985b16384",
+      "createdAt": "2026-09-29",
+      "title": "Fontainebleau",
+      "shortDescription": "The story Morris Lapidus liked to tell about this hotel begins on a staircase. Guests dressed for dinner, he said, would ride up one floor just…",
+      "longDescription": "The story Morris Lapidus liked to tell about this hotel begins on a staircase. Guests dressed for dinner, he said, would ride up one floor just so they could sweep back down a curving stair into the lobby in full view of everyone waiting below, and the stair came to be called the staircase to nowhere. It is a wonderful story and mostly his own; the stair did lead somewhere, to a mezzanine with a coat check and a powder room, and whether anyone climbed it only to descend is the part nobody can check. Before the developer Ben Novack handed him this commission, Lapidus had spent most of his career designing stores and hotel interiors, and he treated the job as a stage: curves instead of corners, a lobby like a ballroom, and an openly theatrical idea of what a vacation should feel like. The public loved it, and the architecture critics treated it as an embarrassment, a vulgar confection by a man who had never learned restraint; he answered them decades later by titling his memoir Too Much Is Never Enough.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fontainebleau_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fontainebleau_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fontainebleau_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fontainebleau_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "76d6cc28-8f37-5898-a1de-41c2c854880e",
+          "order": 0,
+          "title": "Fontainebleau",
+          "caption": "You are on Collins Avenue at the Fontainebleau, which opened in 1954 on the site of the old Firestone estate, a long slab bent into a gentle curve.",
+          "latitude": 25.818085,
+          "longitude": -80.122042,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fontainebleau.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fontainebleau_hero.webp",
+          "transcriptText": "The story Morris Lapidus liked to tell about this hotel begins on a staircase. Guests dressed for dinner, he said, would ride up one floor just so they could sweep back down a curving stair into the lobby in full view of everyone waiting below, and the stair came to be called the staircase to nowhere. It is a wonderful story and mostly his own; the stair did lead somewhere, to a mezzanine with a coat check and a powder room, and whether anyone climbed it only to descend is the part nobody can check.\n\nYou are on Collins Avenue at the Fontainebleau, which opened in 1954 on the site of the old Firestone estate, a long slab bent into a gentle curve. Everything for this stop is visible from the public sidewalk.\n\nBefore the developer Ben Novack handed him this commission, Lapidus had spent most of his career designing stores and hotel interiors, and he treated the job as a stage: curves instead of corners, a lobby like a ballroom, and an openly theatrical idea of what a vacation should feel like. The public loved it, and the architecture critics treated it as an embarrassment, a vulgar confection by a man who had never learned restraint; he answered them decades later by titling his memoir Too Much Is Never Enough.\n\nNothing about it is small. When Lapidus designed the Eden Roc next door for Novack's estranged former partner, the Fontainebleau responded at the end of the 1950s with a tall, nearly blank tower on its northern edge that threw the neighbor's pool into afternoon shade, and Florida's courts ruled that no property owner has a right to the sunlight falling across a boundary.\n\nFor decades this style had no respectable name. Preservationists eventually called it Miami Modern, or MiMo, and in 2008 the hotel critics once despised was listed on the National Register of Historic Places, which makes it the second generation of buildings this city was told were not worth keeping and then decided to save. The small stucco hotels on Ocean Drive were dismissed as too cheap; this one was dismissed as too much, and the same stubborn argument rescued both.\n\nEnjoy the curve without apology on your way out, since that is exactly what its architect always intended."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.818085,
+      "centroidLongitude": -80.122042,
+      "city": "Miami Beach",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dfca8058-fdfb-5473-b44d-07dac56a3042",
+      "createdAt": "2026-09-29",
+      "title": "Tower Theater",
+      "shortDescription": "If the tower is lit when you arrive, you already have the building's best idea: a forty-foot steel mast rising from the corner of Calle Ocho and…",
+      "longDescription": "If the tower is lit when you arrive, you already have the building's best idea: a forty-foot steel mast rising from the corner of Calle Ocho and Fifteenth Avenue, carrying its name in neon down the street. It went up in 1931, when the theater was barely five years old and its owners wanted a more modern face, and behind the zigzag banding and the glass block the 1926 picture house is still there, a first-run cinema built by a local chain on a road the rest of the country knew as the Tamiami Trail. For its first three decades the Tower played to an English-speaking neighborhood. By the early 1960s the blocks around this corner were filling with families from Cuba, many of them expecting to go home within months, and the theater adjusted the way a business does when its audience changes faster than its bookings: it kept the Hollywood features and added Spanish subtitles along the bottom of the screen, then films in Spanish as well. The street picked up a new name in the same years, Calle Ocho, which is simply Eighth Street said in Spanish, and to the neighborhood the marquee became Teatro Tower.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-theater_hero-2.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-theater_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-theater_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "30def761-8095-512f-9966-1fd7b0710d3e",
+          "order": 0,
+          "title": "Tower Theater",
+          "caption": "If the tower is lit when you arrive, you already have the building's best idea: a forty-foot steel mast rising from the corner of Calle Ocho and Fifteenth Avenue, carrying its name in neon down the street.",
+          "latitude": 25.765357,
+          "longitude": -80.219672,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tower-theater.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-theater_hero-2.webp",
+          "transcriptText": "If the tower is lit when you arrive, you already have the building's best idea: a forty-foot steel mast rising from the corner of Calle Ocho and Fifteenth Avenue, carrying its name in neon down the street. It went up in 1931, when the theater was barely five years old and its owners wanted a more modern face, and behind the zigzag banding and the glass block the 1926 picture house is still there, a first-run cinema built by a local chain on a road the rest of the country knew as the Tamiami Trail.\n\nFor its first three decades the Tower played to an English-speaking neighborhood. By the early 1960s the blocks around this corner were filling with families from Cuba, many of them expecting to go home within months, and the theater adjusted the way a business does when its audience changes faster than its bookings: it kept the Hollywood features and added Spanish subtitles along the bottom of the screen, then films in Spanish as well. The street picked up a new name in the same years, Calle Ocho, which is simply Eighth Street said in Spanish, and to the neighborhood the marquee became Teatro Tower.\n\nWhat happened at the bottom of that screen mattered more than anything on the facade. People who grew up in these seats describe the double features as the place they learned English a line of translated dialogue at a time, and learned the country with it, its jokes, its westerns, its idea of a happy ending. An arrival center hands people papers; a movie house, week after week, hands them the place they have arrived in, while letting them keep their own language in the same frame.\n\nThe theater closed in 1984, after nearly sixty years, and the City of Miami bought it in 1991. Miami Dade College ran it for two decades as an art house and a home for the city's film festival, programming in English and in Spanish, so the building went on doing its old second job for audiences who no longer needed the translation. Management has changed hands more than once since then, and the marquee will tell you where things stand.\n\nCross to the far curb for the whole tower in one view, neon and steel reading as a single gesture, a signal to the length of Calle Ocho that there is a story showing here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.765357,
+      "centroidLongitude": -80.219672,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Immigration",
+        "History",
+        "Art Deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "950adc03-416c-59f5-a032-7ee3c30c1bed",
+      "createdAt": "2026-09-29",
+      "title": "Lyric Theater",
+      "shortDescription": "In 1915 the Miami Metropolis called this building \"possibly the most beautiful and costly playhouse owned by colored people in all the…",
+      "longDescription": "In 1915 the Miami Metropolis called this building \"possibly the most beautiful and costly playhouse owned by colored people in all the Southland,\" and the phrasing tells you two things at once: that a white downtown paper had noticed, and that the city had already sorted its theaters by the color of the people who owned them. When Walker died in 1919, his estate included a bakery, an ice cream shop, a café and land across the neighborhood, so the theater was one piece of a small economy he had assembled lot by lot, and his widow, Henrietta, kept its doors open for another forty years.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lyric-theater_hero-2.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lyric-theater_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lyric-theater_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lyric-theater_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "86d229f4-a61a-543e-bc9a-e6c306d9cbff",
+          "order": 0,
+          "title": "Lyric Theater",
+          "caption": "You're on Northwest Second Avenue in Overtown, in front of a two-story stucco building on a stretch the neighborhood once called Little Broadway.",
+          "latitude": 25.782223,
+          "longitude": -80.197696,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lyric-theater.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lyric-theater_hero-2.webp",
+          "transcriptText": "In 1915 the Miami Metropolis called this building \"possibly the most beautiful and costly playhouse owned by colored people in all the Southland,\" and the phrasing tells you two things at once: that a white downtown paper had noticed, and that the city had already sorted its theaters by the color of the people who owned them.\n\nYou're on Northwest Second Avenue in Overtown, in front of a two-story stucco building on a stretch the neighborhood once called Little Broadway. A businessman from Georgia named Geder Walker built the Lyric in 1913 and ran it himself; it seated about four hundred and showed movies, vaudeville, boxing and graduations, because in a segregated city a Black theater had to be every kind of hall at once.\n\nWhen Walker died in 1919, his estate included a bakery, an ice cream shop, a café and land across the neighborhood, so the theater was one piece of a small economy he had assembled lot by lot, and his widow, Henrietta, kept its doors open for another forty years.\n\nThe crossing to the Beach ran one way at eight in the evening and the other way at two in the morning. From the 1930s into the 1950s, Black entertainers headlined the big hotels on Miami Beach, and when the last set ended they were not permitted to take a room in the buildings they had just filled, so they rode back across the bay to Overtown, where hotels on this side of the tracks put them up and the clubs along this avenue kept going until dawn. Nat King Cole, Ella Fitzgerald and Count Basie were among the guests, and a promoter named Clyde Killens made a career of bringing the late shows here.\n\nThe Beach bought the music and sent the musicians home at night, and the home it sent them to was this avenue, so the resort everyone came to see was running on a second city it would not let its own headliners sleep in.\n\nA church used the Lyric from 1959, and in the late 1980s the Black Archives, which owns it now, restored it and saw it listed on the National Register in 1989; the Archives describes it as the last building standing from Little Broadway.\n\nIf a show is on the bill when you pass, buy a ticket, since a full house is what this room was built for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.782223,
+      "centroidLongitude": -80.197696,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "History",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "34c0059e-97e5-57e7-967a-7961075918be",
+      "createdAt": "2026-09-29",
+      "title": "Overtown Interchange",
+      "shortDescription": "On a street map of Miami from the early 1950s, the ground where you're standing is drawn full: narrow lots, churches on corners, storefronts…",
+      "longDescription": "On a street map of Miami from the early 1950s, the ground where you're standing is drawn full: narrow lots, churches on corners, storefronts along the avenue and residential streets running west, where now there are decks overhead and columns where the lots were. The first line drawn through here was a railroad: when the Florida East Coast tracks came south in 1896 they split the new city, white Miami to the east and Black Miami to the west, and the neighborhood took its shape from someone else's route.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/overtown-interchange_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "240b8a4a-1fc4-56af-87d7-2025d36705bc",
+          "order": 0,
+          "title": "Overtown Interchange",
+          "caption": "You're on Northwest Second Avenue beneath the interchange where Interstate Ninety-Five meets Interstate Three Ninety-Five and the Dolphin Expressway, at the southern edge of Overtown.",
+          "latitude": 25.7865,
+          "longitude": -80.1985,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/overtown-interchange.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/overtown-interchange_hero.webp",
+          "transcriptText": "On a street map of Miami from the early 1950s, the ground where you're standing is drawn full: narrow lots, churches on corners, storefronts along the avenue and residential streets running west, where now there are decks overhead and columns where the lots were.\n\nYou're on Northwest Second Avenue beneath the interchange where Interstate Ninety-Five meets Interstate Three Ninety-Five and the Dolphin Expressway, at the southern edge of Overtown. For decades this neighborhood was officially called Colored Town, and it was the part of Miami where the law allowed Black residents to live, which made it a confinement and a capital at once, with doctors, lawyers, hotels and churches packed into a few dozen blocks.\n\nThe first line drawn through here was a railroad: when the Florida East Coast tracks came south in 1896 they split the new city, white Miami to the east and Black Miami to the west, and the neighborhood took its shape from someone else's route.\n\nThe road overhead has a destination, and it matters. In the 1960s, planners routed the expressways through the middle of Overtown, and the east-west spur, Interstate Three Ninety-Five, runs straight to the MacArthur Causeway and across the bay to Miami Beach. Homes, shops and churches were condemned block by block; most residents rented, renters were offered little or nothing, and families scattered north and west to Liberty City and Brownsville. Much of Miami's leadership backed the route as progress, while others warned that no one was planning where the people would go.\n\nThe road built to carry visitors to the Beach was laid across the neighborhood that had housed the Beach's own performers when the Beach refused to, and the second color line in this city turned out to be a highway, set higher than the first and far harder to cross.\n\nOvertown did not vanish: its surviving churches still hold services, and the community that built this corner of the city remains in the blocks beyond the columns, a neighborhood underneath a road designed to carry other people past it. The highway is being rebuilt higher, with open ground and a trail planned beneath it, and whether that knits anything back together is Overtown's to judge.\n\nBefore you walk on, look up once at the underside of the deck, then bring your eyes back to street level, where this neighborhood has always kept its business."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.7865,
+      "centroidLongitude": -80.1985,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Power",
+        "Engineering",
+        "Remembrance",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3261bd51-24b5-5a79-a691-a1e1a868ccfb",
+      "createdAt": "2026-09-29",
+      "title": "Bacardi Building",
+      "shortDescription": "Pilots see this building before you do. Painted across the plaza in front of it is a company logo large enough to read from the air, laid out…",
+      "longDescription": "Pilots see this building before you do. Painted across the plaza in front of it is a company logo large enough to read from the air, laid out for passengers descending toward the airport, and the tower behind it was designed with the same confidence, to be recognized from a distance by people who had not yet arrived. The company arrived the way its customers did, and Bacardi had been a Cuban firm since the 1860s; when the Cuban government took its assets in 1960 the family carried the business into exile and chose this boulevard for its American headquarters, then commissioned a building that no one could mistake for a temporary arrangement. The president who ordered it, José \"Pepín\" Bosch, wanted a landmark, and the tile, the glass and the plaza were the argument: a company that had lost its home was announcing that it had found another.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacardi-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacardi-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacardi-building_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ae3e1bb2-57e2-5eb3-9f01-45e9402e84ed",
+          "order": 0,
+          "title": "Bacardi Building",
+          "caption": "You're on Biscayne Boulevard at Twenty-First Street, looking at a slim tower faced on two sides with blue and white ceramic tile, designed by the Cuban architect Enrique Gutiérrez and finished in 1963, and beside it a smaller square building lifted on a single pedestal, its walls made of stained glass, added in 1973.",
+          "latitude": 25.797375,
+          "longitude": -80.189381,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bacardi-building.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacardi-building_hero.webp",
+          "transcriptText": "Pilots see this building before you do. Painted across the plaza in front of it is a company logo large enough to read from the air, laid out for passengers descending toward the airport, and the tower behind it was designed with the same confidence, to be recognized from a distance by people who had not yet arrived.\n\nYou're on Biscayne Boulevard at Twenty-First Street, looking at a slim tower faced on two sides with blue and white ceramic tile, designed by the Cuban architect Enrique Gutiérrez and finished in 1963, and beside it a smaller square building lifted on a single pedestal, its walls made of stained glass, added in 1973. The tile murals are the work of the Brazilian artist Francisco Brennand, and up close they break into small ceramic pieces; from the far curb they read as one blue field.\n\nThe company arrived the way its customers did, and Bacardi had been a Cuban firm since the 1860s; when the Cuban government took its assets in 1960 the family carried the business into exile and chose this boulevard for its American headquarters, then commissioned a building that no one could mistake for a temporary arrangement. The president who ordered it, José \"Pepín\" Bosch, wanted a landmark, and the tile, the glass and the plaza were the argument: a company that had lost its home was announcing that it had found another.\n\nMost of what this city calls exile is told through people, and it looks like a park bench, a memorial or a movie house; here it is told through a corporation, and it looks like a headquarters, which is what arrival looks like when it comes with a payroll.\n\nThe company itself moved to Coral Gables in 2009, and the buildings sat empty until residents pushed the city to protect them as historic, which it did; in 2012 the family sold the complex, at a price well below its market value, to a national arts foundation that has kept the exteriors exactly as they were, and in 2018 the two buildings reached the National Register more than a decade before their fiftieth birthday.\n\nDon't try to count the tiles. Cross to the west side of the boulevard, find the spot where both façades line up, and let them read as a single surface, the way they were meant to be seen by someone still on approach."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.797375,
+      "centroidLongitude": -80.189381,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Modernist",
+        "Public Art",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b7c1499b-9839-530f-9069-b4980c9600fd",
+      "createdAt": "2026-09-29",
+      "title": "Little Haiti Cultural Complex",
+      "shortDescription": "You'll know the building a block before you reach it, because nothing else on Northeast Second Avenue is painted this shade of yellow, and the…",
+      "longDescription": "You'll know the building a block before you reach it, because nothing else on Northeast Second Avenue is painted this shade of yellow, and the roofline, with its steep gables and iron fretwork, belongs to another city entirely. This is the Caribbean Marketplace, Mache Ayisyen, and it is a deliberate copy of the Iron Market in Port-au-Prince, the covered bazaar of the Haitian capital. Haitians began arriving in Miami in numbers in the 1970s, and through the 1980s many came by sea in small boats while the United States ran a policy of interdiction, stopping vessels offshore and returning most of those aboard; the ones who reached this neighborhood, then still known as Lemon City, made it the heart of Haitian Miami.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-haiti-cultural-complex_hero-2.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-haiti-cultural-complex_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a12be1ae-9455-5f4d-9337-bf8cc24a31d0",
+          "order": 0,
+          "title": "Little Haiti Cultural Complex",
+          "caption": "You'll know the building a block before you reach it, because nothing else on Northeast Second Avenue is painted this shade of yellow, and the roofline, with its steep gables and iron fretwork, belongs to another city entirely.",
+          "latitude": 25.830313,
+          "longitude": -80.191985,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/little-haiti-cultural-complex.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-haiti-cultural-complex_hero-2.webp",
+          "transcriptText": "You'll know the building a block before you reach it, because nothing else on Northeast Second Avenue is painted this shade of yellow, and the roofline, with its steep gables and iron fretwork, belongs to another city entirely.\n\nThis is the Caribbean Marketplace, Mache Ayisyen, and it is a deliberate copy of the Iron Market in Port-au-Prince, the covered bazaar of the Haitian capital. Haitians began arriving in Miami in numbers in the 1970s, and through the 1980s many came by sea in small boats while the United States ran a policy of interdiction, stopping vessels offshore and returning most of those aboard; the ones who reached this neighborhood, then still known as Lemon City, made it the heart of Haitian Miami.\n\nThe building itself was a rescue twice over. In 1984 the local architects' association and a Haitian community group held a competition to remake a derelict building on this corner, and the winner, Charles Harrison Pawley, born in Haiti to American parents, drew on the Iron Market and the gingerbread houses of Port-au-Prince; the market opened in 1990, won a national architecture award, and closed in 1999 when the money ran out. The city took it over in 2005 intending to tear it down, and protests from the neighborhood saved it, so the cultural complex beside it, opened in 2006 at the urging of the commissioner Arthur E. Teele, was built around a survivor.\n\nExile usually leaves a doorway behind; here it rebuilt the marketplace people had left, in the place they arrived, and the neighborhood has fought twice to keep the copy standing.\n\nLittle Haiti sits on a limestone ridge, higher than most of the city, and two positions are held about what that means. Researchers at Harvard reported in 2018 that homes at higher elevations across the county had gained value faster than homes near the coast, and named this neighborhood as one where residents could be priced out by buyers seeking higher ground; researchers at the University of Miami answered in 2022 that the buyers arriving in Little Haiti were drawn by location and price, not elevation. A large mixed-use development a few blocks north is the ground the two positions argue over, and both are reported here without a verdict.\n\nThe market keeps weekend hours, so if the doors are open, go in, and if they are closed the courtyard and the colors are the visit."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.830313,
+      "centroidLongitude": -80.191985,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Venue",
+        "Immigration",
+        "Art",
+        "Performance",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0187e605-c21e-5862-9c6d-0554f1777e6f",
+      "createdAt": "2026-09-29",
+      "title": "Virginia Key Beach",
+      "shortDescription": "Turn your back to the parking lot and look along the sand, and you won't find a single tower; downtown is a few miles off, yet from here the…",
+      "longDescription": "Turn your back to the parking lot and look along the sand, and you won't find a single tower; downtown is a few miles off, yet from here the city might not exist, and the distance was part of the arrangement. This is Historic Virginia Key Beach Park, on a barrier island between the mainland and Key Biscayne, and from 1945 until desegregation it was the county's designated beach for Black residents. It had a bathhouse, a dance pavilion, a carousel and a miniature train, and churches held services on the sand.",
+      "makerId": "aed488af-23d3-514f-90f1-035ca2285d0d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/virginia-key-beach_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c29e511d-7473-5fc7-b174-92796bb2808b",
+          "order": 0,
+          "title": "Virginia Key Beach",
+          "caption": "Turn your back to the parking lot and look along the sand, and you won't find a single tower; downtown is a few miles off, yet from here the city might not exist, and the distance was part of the arrangement.",
+          "latitude": 25.736439,
+          "longitude": -80.156325,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/virginia-key-beach.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 120,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/virginia-key-beach_hero.webp",
+          "transcriptText": "Turn your back to the parking lot and look along the sand, and you won't find a single tower; downtown is a few miles off, yet from here the city might not exist, and the distance was part of the arrangement.\n\nThis is Historic Virginia Key Beach Park, on a barrier island between the mainland and Key Biscayne, and from 1945 until desegregation it was the county's designated beach for Black residents. It had a bathhouse, a dance pavilion, a carousel and a miniature train, and churches held services on the sand.\n\nThe idea of a Black beach here is older than this one. In 1918 Dana A. Dorsey, by most accounts the city's first Black millionaire, bought the small island just north of here for a Black resort; the next year he sold it to the developers of Miami Beach, and the island now carries its buyer's name.\n\nNobody handed this beach over. On May ninth, 1945, the day after the war in Europe ended, a group of Black Miamians led by the attorney Lawson E. Thomas walked into the surf at Baker's Haulover, a whites-only county beach to the north, carrying bail money in case they were arrested. No one was taken in; a county commissioner agreed to meet Thomas instead, and within weeks the county announced this beach, which opened that August, reachable only by boat until the causeway of 1947.\n\nA concession meant to settle the matter became something else, as the people it was built for turned a segregated beach into a place they loved, while the demand behind it kept going, to a second wade-in at Crandon Park in 1959 and the gradual end of beach segregation in the county.\n\nThe city of Miami closed the park in 1982, citing the cost of upkeep, and left it fenced for twenty-six years. When private development was floated at the end of the 1990s, residents marched against it, and a task force chaired by the former city commissioner M. Athalie Range fought for its return; the park reached the National Register in 2002, reopened in 2008, and broke ground for a museum on August twenty-second, 2026.\n\nTake your shoes off, walk down to where the sand turns wet, and stand there, because the right to do exactly that on this shore was won by people prepared to go to jail for it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.736439,
+      "centroidLongitude": -80.156325,
+      "city": "Miami",
+      "country": "United States",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "History",
+        "Remembrance",
+        "Green Escape"
       ],
       "priceUSD": 0
     }
