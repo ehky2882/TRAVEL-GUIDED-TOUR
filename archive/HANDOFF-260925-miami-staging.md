@@ -301,6 +301,7 @@ The two photos that "never arrived" last session were re-sent and are now on gh-
 | 21 | `south-pointe-park` | `south-pointe-park_hero.webp` | hero | `8ec72f6f9b1d…` |
 | 26 | `lyric-theater` | `lyric-theater_4.webp` | gallery (after `_2`, `_3`) | `212703a3a2c6…` |
 | 21 | `south-pointe-park` | `south-pointe-park_2.webp` | gallery | `22978f21d3a4…` |
+| 14 | `dupont-building` | `dupont-building_hero-2.webp` | hero (replaces the held-back CC BY Commons pick, which is no longer needed) | `5ed97fd6a607…` |
 
 ⚠️ **Both are owner photographs that were edited with an AI tool.** The session flagged the
 signs of it (warped sign lettering, smudged crowds, identical 1448×1086 size, no camera
