@@ -105,6 +105,53 @@ Use Commons for named subjects; Unsplash only for atmosphere.
 ⚠️ `miami-circle_6.webp` shipped with a **1.06× upscale** (crop was 1132×849).
 Six percent, not visible — recorded so it is not rediscovered as a defect.
 
+
+## Update 2026-09-29 — six owner photographs, and an upload path that died
+
+The owner supplied photographs that resolved **three of the four thin subjects**.
+All six files are **live and hash-verified** on gh-pages:
+
+| # | slug | hero | gallery kept |
+|---|------|------|--------------|
+| 25 | `tower-theater` | `tower-theater_hero-2.webp` | `_3` (their earlier Commons pick) |
+| 26 | `lyric-theater` | `lyric-theater_hero-2.webp` | `_3` |
+| 15 | `gesu-church` | `gesu-church_hero-2.webp` | `_3` |
+
+Each went out under a **new filename** rather than overwriting the live
+`_hero.webp`, per Image Pipeline step 9, and each owner's earlier Commons pick was
+**preserved as `_3`** rather than discarded — so every gallery gained an image.
+Owner-supplied, so **no attribution is owed**.
+
+🔴 **The session's image upload path failed after the third file.** Images 1–3
+(Tower, Lyric hero, Gesu) reached `…/images/N.webp` normally; every image after
+that rendered in the conversation but **never wrote a file**, across four
+attempts and two subjects, with 25 GB free. Not a user error and not fixable
+from inside the session. **If images stop arriving, check
+`ls <session>/images/` before asking the owner to resend** — and move to a fresh
+session rather than retrying.
+
+⚠️ A **ChatGPT `/s/` share link cannot be used as an image source**: it renders
+client-side behind auth and exposes no image URL. Ask for a direct file link or
+an attachment. If an image ever *is* generated rather than photographed, it must
+not ship — Gate A exists to reject exactly that, and a synthetic picture of a
+real building is the one failure a listener standing in front of it would catch.
+
+### Still owed after this update
+
+- **Lyric gallery shot** and **South Pointe hero** — both sent, neither arrived.
+- **Four tours unpicked**: 07 `lincoln-road`, 21 `south-pointe-park`,
+  27 `overtown-interchange`, 30 `virginia-key-beach`.
+- **`little-haiti-cultural-complex`** — still one usable Commons image, the
+  weakest coverage in the batch; its hero is also one of the three held-back
+  re-fetches below.
+- **Three Commons re-fetches**, still throttled as of 2026-09-29:
+  `dupont-building_hero`, `little-haiti-cultural-complex_hero`,
+  `bacardi-building_3`. Held rather than shipped upscaled. Re-fetch the original
+  `upload.wikimedia.org` URL. **Nothing needs re-picking.**
+- **Narration audio for all 30** — the real gate on Miami going live.
+
+**80 images now live**: 74 Commons + 6 owner.
+
 ## Where things are
 
 | | |
