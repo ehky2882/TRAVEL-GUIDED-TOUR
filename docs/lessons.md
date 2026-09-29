@@ -749,6 +749,16 @@ sat. A different branch of the same bar, and the pin was left alone.
 2026-09-15 pass, Kiwamiya and Saryo Tsujiri still share a point and are **correct**: both are
 inside 丸の内1-9-1, the Daimaru Tokyo / Gransta building. Check the addresses before "fixing" it.
 
+### 🔴 A street name geocodes to ONE of its segments, and it may be the wrong one (2026-09-29)
+
+Miami's Española Way was staged 457 m from where its script stands. The script is on the
+pedestrian lane off Washington Avenue; the point was on a residential stretch of the same street
+four blocks west. `check-coordinates.py` passed it, because its geocoder returned that same wrong
+segment: the check compared a point with itself. CI's **Spine coordinate audit** caught it (420 m
+from the Wikidata item). **For a street, a mall or any linear subject, match the point to the
+stretch the script describes** (OSM `highway=pedestrian` and the like), and read every Spine
+DISAGREES line on a city launch rather than filing it under "large site".
+
 ## 5. Images
 
 🔴 **Correcting an image means a NEW filename — never overwrite bytes at a live URL.** A phone
