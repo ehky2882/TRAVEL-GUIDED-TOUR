@@ -270,7 +270,7 @@ let architectTags: Set<String> = [
     "Bonaventura Bassegoda", "Bond Ryder", "Brad Cloepfil",
     "Bruce Price", "Carl Fredrik Adelcrantz", "Carlo Maciachini",
     "Carlo Scarpa",
-    "Carlos Zapata", "Charles Collens", "Charles Garnier",
+    "Carlos Zapata", "Charles Collens", "Charles Garnier", "Charles Rennie Mackintosh",
     "Charles W. Clinton", "Chu Ming Silveira", "DHK Architects",
     "Dan Kiley", "Daniel Libeskind", "David Chipperfield",
     "David McGlashan", "David Rockwell", "Der Scutt",
