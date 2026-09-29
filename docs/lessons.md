@@ -802,6 +802,31 @@ hand-building a `/thumb/` path (a constructed one returns 400).
 **rawpixel serves `editor_1024` whatever Openverse advertises.** Two images advertised at
 7000×5249 delivered 1024×768. Download and measure.
 
+### 🔴 A Commons category listing has NO licence filter (2026-09-29)
+
+The Miami batch was reported as "all PD/CC0 Commons, no attribution owed". The owner picked
+77 images on that basis, and 74 were uploaded. **At least 61 were CC BY or CC BY-SA.** The
+`license=cc0,pdm` filter exists on Openverse; a Commons `Category:` listing or MediaWiki
+search applies none. The pool had been drawn from both. The manifest recorded
+`num, slug, code, name, src, orig, sha` and **no licence**, so no later step could catch
+it. It surfaced only when a later session opened one file's Flickr source page.
+
+**Record the licence per candidate at sourcing time** (Commons `extmetadata.LicenseShortName`,
+or Openverse's `license`), carry it on the contact sheet, and refuse to call a batch
+"no attribution owed" unless every pick's recorded licence is `cc0`/`pdm`. To check a
+batch after the fact while Commons is throttled, match each exact Commons filename
+against Openverse (`?q=<title>&source=wikimedia`, with a real User-Agent — the default
+Python one is 403'd). Commons filenames are unique, so an exact title match is the same file.
+
+### A pasted image that never became a file is still in the transcript (2026-09-29)
+
+In web sessions an image the owner pastes into chat can render for Claude and still never
+appear on disk. Two sessions in a row hit this, and the first asked the owner to resend
+repeatedly. The image **is** saved in the session transcript,
+`~/.claude/projects/<project>/<session>.jsonl`, as a content block with `type: image` and
+base64 `source.data`. Decode it with a few lines of Python, then hash the written file as
+usual. **Do this before asking the owner to resend anything.**
+
 ### A creator's cover frame is not a picture of the venue (2026-09-16)
 
 `make-link-pin.py` takes a pin's hero from the post's own `display_url`, so the hero is whatever

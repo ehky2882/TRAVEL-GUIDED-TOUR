@@ -160,3 +160,157 @@ real building is the one failure a listener standing in front of it would catch.
 | tracker row | `main` (PR #1089) |
 | 74 images | `gh-pages`, commit `499486e3` |
 | picking page | a private Artifact; rebuild from `picks_manifest.json` if needed |
+
+
+## 🔴 Correction 2026-09-29 — the Commons picks are NOT public domain
+
+**Everything above that says "all PD/CC0 Commons, no attribution owed" is wrong.**
+A later session tried to finish the three held-back re-fetches, found the DuPont
+photo's Flickr source page says **CC BY 2.0**, and then checked every pick.
+
+**Of the 77 Commons picks (74 on gh-pages plus the 3 held back), at least 61 require attribution.** Only 3 are confirmed CC0.
+
+| licence | picks |
+|---|---:|
+| CC BY (2.0 / 3.0 / 4.0) | 31 |
+| CC BY-SA (2.0 / 3.0 / 4.0) | 30 |
+| CC0 | 3 |
+| not found in Openverse | 13 |
+
+**This includes all three held-back re-fetches** (DuPont CC BY 2.0, Little Haiti
+CC BY 3.0, Bacardi-lit-up CC BY 2.0). **Do not re-fetch and upload them.** Under
+the PD-only policy, they are not waiting on a throttle. They need the owner's
+decision.
+
+**How it was checked.** Each pick's Commons filename (the manifest's `src`) was
+matched exactly against Openverse's Wikimedia index, which records the licence.
+Commons filenames are unique, so an exact title match is the same file. The
+Commons API itself was still returning **429** to this container, so the
+licences could not be read from Commons directly. The 13 "not found" were not
+confirmed either way. One is a NARA photograph, which is very likely PD. The
+others need a Commons lookup once the throttle clears.
+
+**How it happened.** The pipeline notes say "PD/CC0-only search", but the pool
+was evidently drawn from Commons categories with no licence filter. Openverse
+applies a `license=cc0,pdm` filter, but Commons category listings apply none.
+Nothing in the manifest records a licence (`num, slug, code, name, src, orig,
+sha` only), so no later step could have caught it. **Record the licence per pick
+at sourcing time.**
+
+**Exposure right now: none in the app.** No Miami tour is wired, and no catalogue
+entry points at these files. They are on gh-pages, unreferenced. The 6 owner
+photographs are unaffected.
+
+**Owner decision owed** (`status/owner/miami-image-licences.md`):
+1. **Approve as CC** and add 61+ rows to `drafts/CREDITS.md`. Those rows must be
+   surfaced before Miami ships, as the ledger requires for every CC image.
+2. **Swap them** for owner photographs or Unsplash, which needs no credit line.
+   Unsplash gave zero verified images for Miami's named subjects, though.
+3. **A mix**: keep CC where nothing else exists, swap the rest.
+
+### Per-image licence (Openverse, 2026-09-29)
+
+| file | licence | Commons source |
+|---|---|---|
+| `royal-palm-hotel-site_hero.webp` | CC0 | View of the Miami River from the South Miami Avenue bridge 2026-04-06.jpg |
+| `freedom-tower_hero.webp` | not found | Freedom Tower Miami (top), NE view.jpg |
+| `freedom-tower_3.webp` | not found | Miami freedom tower night.jpg |
+| `bayfront-park_hero.webp` | not found | Torch of Friendship - panoramio.jpg |
+| `bayfront-park_2.webp` | CC0 | Challenger Memorial (Miami) by night (January 2022) - inscription.JPG |
+| `bayfront-park_3.webp` | CC0 | Challenger Memorial (Miami) by night (January 2022).JPG |
+| `miami-circle_2.webp` | CC BY-SA 3.0 | Miami Circle aerial view with river and tower.JPG |
+| `miami-circle_4.webp` | CC BY-SA 3.0 | Miami FL Miami Circle pano01.jpg |
+| `brickell-avenue-bridge_hero.webp` | CC BY 2.0 | Brickell Avenue Bridge from northwest in 2015.jpg |
+| `brickell-avenue-bridge_2.webp` | CC BY-SA 2.0 | Brickell Avenue Bridge at night with bascule span open (2017).jpg |
+| `brickell-avenue-bridge_3.webp` | CC BY 2.0 | Miami River Downtown Miami Florida 1 May 2023.jpg |
+| `ocean-drive-art-deco_hero.webp` | CC BY-SA 4.0 | Ocean Drive in the Miami Beach Art Deco Historic District.jpg |
+| `ocean-drive-art-deco_2.webp` | CC BY-SA 4.0 | Ocean Drive NB past 11th Street Miami Beach at night.jpeg |
+| `ocean-drive-art-deco_3.webp` | CC BY 3.0 | Ocean Drive - panoramio (1).jpg |
+| `maximo-gomez-park_hero.webp` | CC BY 2.0 | Domino Park Little Havana, Miami Florida 6 June 2024.jpg |
+| `maximo-gomez-park_2.webp` | CC BY-SA 4.0 | Domino Club – Florida Heritage; Máximo Gómez Park (Domino Park), Little Havana, Miami, Florida (2019) (6).jpg |
+| `cuban-memorial-boulevard_hero.webp` | CC BY 2.0 | Cuban Memorial Boulevard Calle Ocho Little Havana, Miami 2023.jpg |
+| `the-barnacle_hero.webp` | CC BY 2.0 | The Barnacle Coconut Grove (16815440570).jpg |
+| `the-barnacle_2.webp` | CC BY 2.0 | The Barnacle Coconut Grove (16815512178).jpg |
+| `vizcaya_hero.webp` | CC BY 2.0 | Vizcaya Museum and Gardens 060524 DSC6661.jpg |
+| `vizcaya_2.webp` | CC BY 2.0 | Vizcaya Museum and Gardens 060524 DSC6702.jpg |
+| `vizcaya_3.webp` | CC BY 2.0 | Vizcaya Museum and Gardens 060524 DSC6700.jpg |
+| `vizcaya_4.webp` | CC BY 2.0 | Vizcaya Museum and Gardens 060524 DSC6677.jpg |
+| `vizcaya_5.webp` | CC BY 2.0 | Vizcaya Museum and Gardens 060524 DSC6697.jpg |
+| `wynwood-walls_hero.webp` | CC BY 2.0 | April 7, 2015 - Wynwood Miami - 07.jpg |
+| `wynwood-walls_3.webp` | CC BY 2.0 | Wynwood Mural (16811746490).jpg |
+| `wynwood-walls_5.webp` | CC BY 2.0 | Wynwood Murals (12926225503).jpg |
+| `wynwood-walls_6.webp` | CC BY 2.0 | April 7, 2015 - Wynwood Miami - 05.jpg |
+| `dade-county-courthouse_2.webp` | CC BY 2.0 | The Miami Dade County Flagler Courthouse.jpg |
+| `gesu-church_hero.webp` | CC BY-SA 4.0 | Gesu Catholic Church (Miami, Florida).jpg |
+| `gesu-church_2.webp` | CC BY 2.0 | Gesu Catholic Church Downtown Miami - exterior - 26 November 2022 - Inscription.jpg |
+| `miami-dade-cultural-center_hero.webp` | CC BY 2.0 | Cultural Center Downtown Miami FL, construction in background, 4 May 2023.jpg |
+| `miami-dade-cultural-center_2.webp` | CC BY 2.0 | Miami-Dade Cultural Center, Miami FL 7 January 2023 - 05.jpg |
+| `miami-dade-cultural-center_3.webp` | CC BY 2.0 | Miami-Dade Cultural Center, Miami FL 7 January 2023 - 04.jpg |
+| `miami-dade-cultural-center_4.webp` | CC BY 2.0 | Miami-Dade Cultural Center, Miami FL 7 January 2023 - 06.jpg |
+| `miami-dade-cultural-center_5.webp` | CC BY 2.0 | Miami-Dade Cultural Center, Miami FL 7 January 2023 - 03.jpg |
+| `ferre-park_hero.webp` | CC BY-SA 4.0 | Bicentennial Park June 2014.JPG |
+| `ferre-park_2.webp` | CC BY 2.0 | PAMM MRD 21.jpg |
+| `ferre-park_3.webp` | CC BY 2.0 | PAMM MRD 28.jpg |
+| `lummus-park-downtown_2.webp` | CC BY 2.0 | Fort Dallas William English Plantation Lummus Park Historic District (30642638520).jpg |
+| `lummus-park-downtown_3.webp` | CC BY 2.0 | William Wagner House Circa 1855 Lummus Park Historic District (22765725588).jpg |
+| `espanola-way_hero.webp` | not found | Miami Beach - Española Way Reconstruction February 2016 01 View East Mid Street.jpg |
+| `casa-casuarina_hero.webp` | CC BY-SA 4.0 | Gianni versace miami home.JPG |
+| `casa-casuarina_3.webp` | CC BY-SA 4.0 | Casa Casuarina at night Versace Mansion, hotel restaurant at 1116 Ocean Drive, Miami Beach.jpg |
+| `holocaust-memorial-miami-beach_hero.webp` | CC BY-SA 4.0 | Miami Beach - South Beach Monuments - Holocaust Memorial 28.jpg |
+| `holocaust-memorial-miami-beach_2.webp` | not found | Reaching sky - Flickr - LANSA301.jpg |
+| `holocaust-memorial-miami-beach_3.webp` | CC BY-SA 4.0 | Miami Beach - South Beach Monuments - Holocaust Memorial 01.jpg |
+| `fontainebleau_hero.webp` | CC BY 4.0 | Fontainebleau Miami Beach Aerial 2025.jpg |
+| `fontainebleau_3.webp` | CC BY-SA 3.0 | Fontainebleau-10.jpg |
+| `fontainebleau_4.webp` | CC BY-SA 4.0 | Fontainebleau Miami interior FL3.jpg |
+| `tower-theater_hero.webp` | CC BY-SA 4.0 | Tower Theater (Miami, Florida).jpg |
+| `lyric-theater_hero.webp` | CC BY-SA 4.0 | Miami Lyric Theater (4).jpg |
+| `lyric-theater_2.webp` | CC BY-SA 4.0 | Miami Lyric Theater (1).jpg |
+| `royal-palm-hotel-site_2.webp` | not found | TRAFFIC INTERCHANGE CUTS THROUGH THE HEART OF DOWNTOWN MIAMI - NARA - 544634.jpg |
+| `freedom-tower_2.webp` | CC BY 2.0 | Miami Florida 2018-01-16 - Freedom Tower.jpg |
+| `miami-circle_hero.webp` | CC BY-SA 3.0 | Miami Circle aerial view.JPG |
+| `miami-circle_3.webp` | CC BY-SA 3.0 | Brickell Point Site 2012-09-15 16-54-59.jpg |
+| `miami-circle_5.webp` | not found | Miami FL Miami Circle plaque01.jpg |
+| `miami-circle_6.webp` | not found | Miami Circle (9081683470).jpg |
+| `cuban-memorial-boulevard_2.webp` | not found | Josemartibust.jpg |
+| `wynwood-walls_2.webp` | CC BY-SA 2.0 | Wynwood Walls Miami Florida October 2013.jpg |
+| `wynwood-walls_4.webp` | not found | -RETNA Wynwood Walls (8170950212).jpg |
+| `dade-county-courthouse_hero.webp` | CC BY-SA 4.0 | Miami-Dade County Courthouse - Miami - Daniel Di Palma Photography 06.jpg |
+| `dupont-building_hero.webp` | CC BY 2.0 (its Flickr source page) (held, not uploaded) | Entrance Alfred I DuPont Building (8344800391).jpg |
+| `lummus-park-downtown_hero.webp` | CC BY-SA 4.0 | Lummus Park Historic Distric - Miami - Daniel Di Palma Photography 03.jpg |
+| `lummus-park-downtown_4.webp` | CC BY-SA 4.0 | Lummus Park Historic Distric - Miami - Daniel Di Palma Photography 01 Wagner House and Fort Dallas.jpg |
+| `lummus-park-downtown_5.webp` | not found | Miami FL Lummus Park HD Wagner Homestead plaque01.jpg |
+| `casa-casuarina_2.webp` | CC BY-SA 4.0 | Casa Casuarina Pool.jpg |
+| `jewish-museum-of-florida_hero.webp` | CC BY-SA 3.0 | Miami Beach FL Beth Jacob Hall msm01.jpg |
+| `jewish-museum-of-florida_2.webp` | CC BY-SA 3.0 | Miami Beach FL Beth Jacob Hall msm07.jpg |
+| `fontainebleau_2.webp` | CC BY-SA 3.0 | Fontainebleau-1.jpg |
+| `tower-theater_2.webp` | CC BY 2.0 | Tower Theater - Looks Like That 70's show.jpg |
+| `bacardi-building_hero.webp` | CC BY-SA 2.0 | 20131012 Miami 3615 Bacardi annex.jpg |
+| `bacardi-building_2.webp` | CC BY-SA 2.0 | 20131019 Miami 3688 Bacardi plaza.jpg |
+| `bacardi-building_3.webp` | CC BY 2.0 (its Flickr source, via Openverse) (held, not uploaded) | Miami Bacardi Building lit up.jpg |
+| `bacardi-building_4.webp` | CC BY-SA 4.0 | Bacardi Building Biscayne Boulevard Miami.jpg |
+| `little-haiti-cultural-complex_hero.webp` | CC BY 3.0 (held, not uploaded) | Little Haiti south.jpg |
+| `tower-theater_hero-2.webp`, `lyric-theater_hero-2.webp`, `gesu-church_hero-2.webp` + 3 more | owner photograph, no credit owed | — |
+
+## Update 2026-09-29 (later) — South Pointe hero and Lyric gallery shot
+
+The two photos that "never arrived" last session were re-sent and are now on gh-pages
+(commits `2d9d2c2b`, and a second South Pointe shot after it):
+
+| # | slug | file | role | sha256 |
+|---|------|------|------|--------|
+| 21 | `south-pointe-park` | `south-pointe-park_hero.webp` | hero | `8ec72f6f9b1d…` |
+| 26 | `lyric-theater` | `lyric-theater_4.webp` | gallery (after `_2`, `_3`) | `212703a3a2c6…` |
+| 21 | `south-pointe-park` | `south-pointe-park_2.webp` | gallery | `22978f21d3a4…` |
+
+⚠️ **Both are owner photographs that were edited with an AI tool.** The session flagged the
+signs of it (warped sign lettering, smudged crowds, identical 1448×1086 size, no camera
+metadata). The owner confirmed *"photo that was edited in AI... just use them"*. **This is
+the owner's decision. Do not remove them as a Gate A failure.** Owner-supplied, so no
+attribution is owed.
+
+**The upload path still does not write files**, but a pasted image **is** recoverable.
+It is stored base64 in the session transcript (`~/.claude/projects/<proj>/<session>.jsonl`,
+content blocks with `type: image`). Decode it from there instead of asking the owner to resend.
+
+South Pointe now has a hero; `lincoln-road`, `overtown-interchange` and `virginia-key-beach`
+still have no picks.
