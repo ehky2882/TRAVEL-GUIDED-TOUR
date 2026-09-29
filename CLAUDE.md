@@ -293,8 +293,12 @@ it.** § READ FIRST above explains why that is not optional.
 **🚀 Dozent 1.1.3 is live on the App Store**, released by the owner on **23 September 2026** on
 build 176 (**phased release, 7 days**), after 1.1.2 on build 160 (14 September) and 1.1.1 on
 build 139 (1 September). 1.1.3 is the release that carries **delta catalogue fetching** (§ Egress).
-⚠️ **`MARKETING_VERSION` must now go 1.1.3 → 1.1.4** in its own PR (a `project.pbxproj` change,
-so it waits for the owner's OK) before the next TestFlight upload will be accepted. This is the
+⚠️ **After every release, `MARKETING_VERSION` must be bumped** in its own PR (a `project.pbxproj`
+change, so it waits for the owner's OK) before the next TestFlight upload will be accepted.
+**Whether that bump is still owed is perishable. Read the current value from `project.pbxproj`
+on `origin/main` and compare it with the released version. Never assume it is owed from this
+paragraph.** It said "must now go 1.1.3 → 1.1.4" for days after #1078 had already done it, and on
+2026-09-29 a session repeated that to the owner as outstanding work. The owner corrected it. This is the
 durable fact; **the live number is not** — the released version is checkable from any session with
 no key (§ READ FIRST's table has the one-line `curl`), so re-derive it rather than quoting this
 paragraph. ⚠️ **That public lookup lags App Store Connect by hours** — on release day it still
