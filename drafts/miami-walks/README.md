@@ -16,7 +16,7 @@ list's standpoints, plus a whisper-tiny transcript of every recording, drove the
 3. **Photos: 7 of 11 done (2026-09-30), on gh-pages**, all credited in `drafts/CREDITS.md`:
    `miami-pitch_stop5` (Olympia), `miami-calle-ocho_stop2` (Walk of Fame), `miami-calle-ocho_stop5` (Woodlawn),
    `miami-grove_stop1` (Charles Ave), `miami-grove_stop2` (Plymouth), `miami-grove_stop4` (Vizcaya gate),
-   `miami-water-line_stop2` (Venetian Causeway). **Still owed:** W2-4 Senator site, W5-3 Maurice Gibb Park,
+   `miami-water-line_stop2` (Venetian Causeway). `miami-ocean-drive_stop4` (the Senator Hotel: an owner-supplied historic B&W print, **source unknown**, upscaled 1.2× from 1024×753). **Still owed:** W5-3 Maurice Gibb Park,
    W5-4 Purdy Avenue, W5-5 Sunset Harbour. Openverse had nothing usable for the Senator or Sunset Harbour, and only
    weak candidates for Gibb and Purdy, so these need owner photos.
 
