@@ -122,7 +122,9 @@ struct OnboardingChip: View {
                 .fontWeight(isOn ? .bold : .regular)
                 .foregroundStyle(isOn ? Color.white : AtlasColors.primaryText)
                 .padding(.horizontal, 12)
-                .frame(height: 31)
+                // 29, not 31: at 31 the twenty-four chips ran one row past
+                // the button on a 6-inch phone (build 181), hiding the last.
+                .frame(height: 29)
                 .background(Capsule().fill(isOn ? AtlasColors.brass : AtlasColors.secondaryBackground))
                 .overlay(
                     Capsule().stroke(isOn ? AtlasColors.brass

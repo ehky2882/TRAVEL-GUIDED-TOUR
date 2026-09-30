@@ -472,7 +472,7 @@ private struct InterestsQuestionCard: View {
                 OnboardingLine("What are you drawn to?")
                 OnboardingLine(countLine)
                     .padding(.top, OnboardingType.Gap.tight)
-                ChipFlowLayout(spacing: 7) {
+                ChipFlowLayout(spacing: 6) {
                     ForEach(OnboardingInterests.all) { interest in
                         OnboardingChip(
                             label: interest.label,
