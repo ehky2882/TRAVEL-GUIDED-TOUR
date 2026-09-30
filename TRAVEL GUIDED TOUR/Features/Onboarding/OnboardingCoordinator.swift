@@ -70,6 +70,7 @@ final class OnboardingCoordinator {
     init(store: OnboardingStore) {
         self.store = store
         self.willPresentWelcome = store.shouldPresentOnLaunch
+        self.state = store.state
     }
 
     var currentStep: OnboardingStep? {
@@ -77,9 +78,19 @@ final class OnboardingCoordinator {
         return steps[index]
     }
 
-    var state: OnboardingState { store.state }
+    /// The answers so far — an OBSERVED copy of the store's.
+    ///
+    /// 🔴 Must be stored here, not computed from `store.state`. The store is
+    /// a plain class, so reading through it records no dependency: build 181
+    /// saved every tap on screens 8, 10, 12, 16 and 18 and never redrew one,
+    /// so no row or chip could be seen to select. Every write goes through
+    /// `update`, which re-syncs this copy.
+    private(set) var state: OnboardingState
 
-    func update(_ mutate: (inout OnboardingState) -> Void) { store.update(mutate) }
+    func update(_ mutate: (inout OnboardingState) -> Void) {
+        store.update(mutate)
+        state = store.state
+    }
 
     // MARK: - Running
 
@@ -121,11 +132,15 @@ final class OnboardingCoordinator {
         steps = []
         index = 0
         store.markCompleted()
+        state = store.state
         onFinish?()
     }
 
     /// Settings → "Show tips again". Clears only the coach-mark record.
-    func resetCoachMarks() { store.resetCoachMarks() }
+    func resetCoachMarks() {
+        store.resetCoachMarks()
+        state = store.state
+    }
 
     // MARK: - Progress
 

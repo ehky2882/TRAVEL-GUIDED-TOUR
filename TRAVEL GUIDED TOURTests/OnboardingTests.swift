@@ -10,6 +10,7 @@
 //
 
 import XCTest
+import Observation
 @testable import TRAVEL_GUIDED_TOUR
 
 @MainActor
@@ -192,6 +193,26 @@ final class OnboardingCoordinatorTests: XCTestCase {
         coordinator.back()
         XCTAssertEqual(coordinator.index, 0)
         XCTAssertEqual(coordinator.currentStep, .faceAppears)
+    }
+
+    /// 🔴 Build 181: every answer was saved and none was ever drawn — rows and
+    /// chips could not be seen to select, because `state` was read through the
+    /// non-observable store and so recorded no dependency. A view reading an
+    /// answer must be told when that answer changes.
+    func testAnsweringAQuestionNotifiesTheScreenReadingIt() {
+        let (coordinator, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        var redrawn = false
+        withObservationTracking {
+            _ = coordinator.state.uses
+        } onChange: {
+            redrawn = true
+        }
+        coordinator.update { $0.uses.insert("From home") }
+
+        XCTAssertTrue(redrawn)
+        XCTAssertEqual(coordinator.state.uses, ["From home"])
     }
 
     /// 🔴 Build 179: the bars' window sits ABOVE the main window, so it painted
