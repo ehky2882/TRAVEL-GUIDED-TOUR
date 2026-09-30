@@ -781,3 +781,17 @@ Openverse had no record of these files and Commons was throttled. **Look each on
 | `lummus-park-downtown_5.webp` | https://commons.wikimedia.org/wiki/File:Miami_FL_Lummus_Park_HD_Wagner_Homestead_plaque01.jpg |
 
 Held back and never uploaded, so they need no row: `dupont-building_hero` (CC BY 2.0) and `little-haiti-cultural-complex_hero` (CC BY 3.0), both replaced by owner photos, and `bacardi-building_3` (CC BY 2.0), which is unused.
+
+## Miami walks — 7 credit-required images (`drafts/miami-walks`, picked 2026-09-30)
+
+Flickr originals sourced via Openverse. The licence was read from each live Flickr page. Owner option 1 applies: keep with credits.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `miami-pitch_stop5.webp` | W1-5 Olympia Theater | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/11375548644/ |
+| `miami-calle-ocho_stop2.webp` | W3-2 Walk of Fame (Celia Cruz star) | Phillip Pessar | CC BY 4.0 | https://www.flickr.com/photos/southbeachcars/31825441737/ |
+| `miami-calle-ocho_stop5.webp` | W3-5 Woodlawn Park mausoleum | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/6654773763/ |
+| `miami-grove_stop1.webp` | W4-1 Mariah Brown House, Charles Ave | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/17093231140/ |
+| `miami-grove_stop2.webp` | W4-2 Plymouth Congregational Church | Jorge Elías | CC BY 2.0 | https://www.flickr.com/photos/italintheheart/11658406774/ |
+| `miami-grove_stop4.webp` | W4-4 Vizcaya entrance, S Miami Ave | Jared | CC BY 2.0 | https://www.flickr.com/photos/jared422/8772177391/ |
+| `miami-water-line_stop2.webp` | W5-2 Venetian Causeway | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/17009368825/ |
