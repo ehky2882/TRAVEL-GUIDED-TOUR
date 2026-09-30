@@ -13,7 +13,12 @@ list's standpoints, plus a whisper-tiny transcript of every recording, drove the
    before you… Calle Ocho at 32nd Avenue". The Grove's real intro is missing. `miami-grove-walk_stop0.mp3` is **not**
    on gh-pages; the other 32 are (`579feac8`).
 2. ~~**The 33 walk scripts**~~ ✅ **received 2026-09-30**, all 33 clean + `_TTS` pairs, in `scripts/`. Each clean script was matched against its recording's transcript (88–100% on the opening 120 words); only the Grove intro fails, because its recording is the wrong file. They are on `main`, against the drafts-stay-on-staging convention, because this session could push only to its own branch and the container is temporary.
-3. **Photos for the 11 connective/new stops** (the table's `new` rows). Reused stops take the single tour's hero.
+3. **Photos: 7 of 11 done (2026-09-30), on gh-pages**, all credited in `drafts/CREDITS.md`:
+   `miami-pitch_stop5` (Olympia), `miami-calle-ocho_stop2` (Walk of Fame), `miami-calle-ocho_stop5` (Woodlawn),
+   `miami-grove_stop1` (Charles Ave), `miami-grove_stop2` (Plymouth), `miami-grove_stop4` (Vizcaya gate),
+   `miami-water-line_stop2` (Venetian Causeway). **Still owed:** W2-4 Senator site, W5-3 Maurice Gibb Park,
+   W5-4 Purdy Avenue, W5-5 Sunset Harbour. Openverse had nothing usable for the Senator or Sunset Harbour, and only
+   weak candidates for Gibb and Purdy, so these need owner photos.
 
 ## Walks
 
