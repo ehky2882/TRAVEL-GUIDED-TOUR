@@ -195,6 +195,29 @@ final class OnboardingCoordinatorTests: XCTestCase {
         XCTAssertEqual(coordinator.currentStep, .faceAppears)
     }
 
+    /// Owner on build 181: "it would be good to be able to go backwards."
+    /// Back works between cards, but never onto screen 2 — that is the
+    /// splash's face-appearing moment, not a card.
+    func testBackWorksBetweenCardsButNotOntoTheSplash() {
+        let (coordinator, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        coordinator.begin()
+        coordinator.advance()                                   // → 3
+        XCTAssertEqual(coordinator.currentStep, .definition)
+        XCTAssertFalse(coordinator.canGoBack)
+        coordinator.back()
+        XCTAssertEqual(coordinator.currentStep, .definition)
+
+        coordinator.advance()                                   // → 4
+        coordinator.advance()                                   // → 5
+        XCTAssertTrue(coordinator.canGoBack)
+        coordinator.back()
+        XCTAssertEqual(coordinator.currentStep, .accountAsk)
+        coordinator.back()
+        XCTAssertEqual(coordinator.currentStep, .definition)
+    }
+
     /// 🔴 Build 181: every answer was saved and none was ever drawn — rows and
     /// chips could not be seen to select, because `state` was read through the
     /// non-observable store and so recorded no dependency. A view reading an

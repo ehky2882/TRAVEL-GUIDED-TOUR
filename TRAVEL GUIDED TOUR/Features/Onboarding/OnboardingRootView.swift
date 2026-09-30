@@ -33,6 +33,17 @@ struct OnboardingRootView: View {
             }
         }
         .animation(reduceMotion ? nil : .easeInOut(duration: 0.22), value: onboarding.index)
+        // A swipe to the right goes back, as it does everywhere else on iOS.
+        // Horizontal and deliberate only, so it never fights a scroll.
+        .simultaneousGesture(
+            DragGesture(minimumDistance: 24)
+                .onEnded { drag in
+                    let dx = drag.translation.width, dy = drag.translation.height
+                    if dx > 80, abs(dx) > abs(dy) * 2 { onboarding.back() }
+                }
+        )
+        // VoiceOver's two-finger scrub.
+        .accessibilityAction(.escape) { onboarding.back() }
         .onDisappear { password = "" }
     }
 

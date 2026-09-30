@@ -119,8 +119,17 @@ final class OnboardingCoordinator {
         index += 1
     }
 
+    /// Can the user step back from here? Only between two screens that carry
+    /// the progress bar — never back onto screen 2, which is the splash's own
+    /// face-appearing moment rather than a card anyone chose to be on.
+    var canGoBack: Bool {
+        guard index > 0, let step = currentStep else { return false }
+        let bar = OnboardingStep.progressBarSteps
+        return bar.contains(step) && bar.contains(steps[index - 1])
+    }
+
     func back() {
-        guard index > 0 else { return }
+        guard canGoBack else { return }
         index -= 1
     }
 

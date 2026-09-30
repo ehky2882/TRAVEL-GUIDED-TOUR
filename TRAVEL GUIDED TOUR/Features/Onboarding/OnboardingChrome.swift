@@ -203,5 +203,23 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(AtlasColors.background)
+        // Back, in the gap between the bar and the face — the same corner
+        // every screen, like the bar itself. A 44pt target around a small
+        // glyph, so it reads as quiet chrome rather than a second button.
+        .overlay(alignment: .topLeading) {
+            if onboarding.canGoBack {
+                Button { onboarding.back() } label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 17, weight: .medium))
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .frame(width: 44, height: 44)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 14)
+                .padding(.leading, AtlasSpacing.lg - 14)
+                .accessibilityLabel("Back")
+            }
+        }
     }
 }
