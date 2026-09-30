@@ -17,10 +17,10 @@
 - **Stop images:**
   - Reused stops take the live single's `heroImageURL`. **Read it from Tours.json**; the README's `<slug>_hero` column is stale for duPont, Gesu, Tower, Lyric and Little Haiti.
   - 7 new photos on gh-pages (`8b92d5a0`), credited in `drafts/CREDITS.md`: `miami-pitch_stop5`, `miami-calle-ocho_stop2`, `miami-calle-ocho_stop5`, `miami-grove_stop1`, `miami-grove_stop2`, `miami-grove_stop4`, `miami-water-line_stop2`.
-  - **STILL OWED (1 photo):** Sunset Harbour (W5 order 4; the Purdy Avenue stop was DROPPED by the owner 2026-09-30, so W5 is 5 stops and order 4 plays `miami-water-line-walk_stop5.mp3`). Openverse had nothing usable, so these need owner photos. Intro stops (order 0) carry no image, per the Chicago walk convention.
+  - **Sunset Harbour DONE:** owner photo of the Pubbelly corner at 20th St → `miami-water-line_stop4.webp` (gh-pages `c1445c95`, sha256 `c3e1482bd95c…`). **All walk photos are now in.** (W5 order 4; the Purdy Avenue stop was DROPPED by the owner 2026-09-30, so W5 is 5 stops and order 4 plays `miami-water-line-walk_stop5.mp3`). Openverse had nothing usable, so these need owner photos. Intro stops (order 0) carry no image, per the Chicago walk convention.
 - **Owner board:** `status/owner/miami-walks-owed.md` lists exactly these two items.
 
-## To wire the walks (when the intro + 4 photos arrive)
+## To wire the walks (when the Grove intro recording arrives; all photos are in)
 1. Upload `miami-grove-walk_stop0.mp3`, then new photos as `<walk>_stopN.webp` (1200×900). Hash-verify live.
 2. Build 5 `kind: "multiStop"` tours in `Tours.json`, modelled on an existing walk (e.g. Chicago *The Riverwalk*):
    - intro is stop order 0 at the start point;
