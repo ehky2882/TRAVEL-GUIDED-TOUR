@@ -16,9 +16,16 @@ list's standpoints, plus a whisper-tiny transcript of every recording, drove the
 3. **Photos: 7 of 11 done (2026-09-30), on gh-pages**, all credited in `drafts/CREDITS.md`:
    `miami-pitch_stop5` (Olympia), `miami-calle-ocho_stop2` (Walk of Fame), `miami-calle-ocho_stop5` (Woodlawn),
    `miami-grove_stop1` (Charles Ave), `miami-grove_stop2` (Plymouth), `miami-grove_stop4` (Vizcaya gate),
-   `miami-water-line_stop2` (Venetian Causeway). `miami-ocean-drive_stop4` (the Senator Hotel: an owner-supplied historic B&W print, **source unknown**, upscaled 1.2× from 1024×753). `miami-water-line_stop3` (Maurice Gibb Park sign, owner photo). **Still owed:**
-   W5-4 Purdy Avenue, W5-5 Sunset Harbour. Openverse had nothing usable for the Senator or Sunset Harbour, and only
+   `miami-water-line_stop2` (Venetian Causeway). `miami-ocean-drive_stop4` (the Senator Hotel: an owner-supplied historic B&W print, **source unknown**, upscaled 1.2× from 1024×753). `miami-water-line_stop3` (Maurice Gibb Park sign, owner photo). **Still owed:** Sunset Harbour (W5 order 4). Openverse had nothing usable for the Senator or Sunset Harbour, and only
    weak candidates for Gibb and Purdy, so these need owner photos.
+
+
+## ✂️ Owner decision 2026-09-30: W5's Purdy Avenue stop is DROPPED
+*"The description isn't even actually all that accurate. Purdy has had some luxury residential development on it."*
+**W5 is now 5 stops:** 00 intro · 01 Lincoln Road west · C1 Venetian Causeway · C2 Maurice Gibb Park · **C4 Sunset Harbour as order 4**.
+- **No gap in the route.** Maurice Gibb Park's script already hands off to *"walk up Purdy Avenue… toward Twentieth Street and the center of Sunset Harbour"*.
+- **One passing mention remains.** Sunset Harbour's narration still names "the loading docks" among the walk's steps; listeners still pass them on Purdy.
+- **At wire-in**, order 4 plays `audio/miami-water-line-walk_stop5.mp3`. The filename is kept; nothing is re-uploaded. `miami-water-line-walk_stop4.mp3` (Purdy) is **orphaned on gh-pages**, and its script stays in `scripts/` for the record. Do not wire it.
 
 ## Walks
 
@@ -28,7 +35,7 @@ list's standpoints, plus a whisper-tiny transcript of every recording, drove the
 | W2 | *Ocean Drive* | `miami-ocean-drive-walk` | 7 | 10 min 29 s | ~2 mi |
 | W3 | *Calle Ocho* | `miami-calle-ocho-walk` | 6 | 8 min 52 s | ~1.5 mi (Woodlawn is far west) |
 | W4 | *The Grove* | `miami-grove-walk` | 5 | 7 min 25 s (incl. the wrong intro file) | ~3.5 mi |
-| W5 | *The Water Line* | `miami-water-line-walk` | 6 | 8 min 37 s | ~1 mi |
+| W5 | *The Water Line* | `miami-water-line-walk` | 5 (Purdy dropped) | 8 min 37 s | ~1 mi |
 
 Tour/stop ids at wire-in: uuid5 `atlas-tour:mia:<tour slug>` and `atlas-stop:mia:<tour slug>:<order>`,
 following the singles, **but check the existing multi-stop scheme first** (e.g. an ATL, GLA or IST walk) and use that if it differs.
