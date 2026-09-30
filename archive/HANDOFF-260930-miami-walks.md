@@ -9,7 +9,7 @@
   - W2 *Ocean Drive* (7)
   - W3 *Calle Ocho* (6)
   - W4 *The Grove* (5)
-  - W5 *The Water Line* (6)
+  - W5 *The Water Line* (5, Purdy dropped)
 - **Scripts:** all 33 clean + `_TTS` in `drafts/miami-walks/scripts/` (#1105). Each clean script was matched against a transcript of its recording.
 - **Audio:** 32 of 33 on gh-pages as `audio/<walk-slug>-walk_stopN.mp3` (`579feac8`). Walk slugs: `miami-pitch`, `miami-ocean-drive`, `miami-calle-ocho`, `miami-grove`, `miami-water-line`.
   - **MISSING: `miami-grove-walk_stop0.mp3`.** The drop's `miami_w4_00_intro.mp3` is byte-identical to `miami_w3_c_woodlawn.mp3`. The owner must re-export it from `miami_w4_00_intro_TTS.txt` ("This street exists because the town said no…").
@@ -17,7 +17,7 @@
 - **Stop images:**
   - Reused stops take the live single's `heroImageURL`. **Read it from Tours.json**; the README's `<slug>_hero` column is stale for duPont, Gesu, Tower, Lyric and Little Haiti.
   - 7 new photos on gh-pages (`8b92d5a0`), credited in `drafts/CREDITS.md`: `miami-pitch_stop5`, `miami-calle-ocho_stop2`, `miami-calle-ocho_stop5`, `miami-grove_stop1`, `miami-grove_stop2`, `miami-grove_stop4`, `miami-water-line_stop2`.
-  - **STILL OWED (4 photos):** W2-4 the Senator site (12th & Collins), W5-3 Maurice Gibb Park, W5-4 Purdy Avenue, W5-5 Sunset Harbour. Openverse had nothing usable, so these need owner photos. Intro stops (order 0) carry no image, per the Chicago walk convention.
+  - **STILL OWED (1 photo):** Sunset Harbour (W5 order 4; the Purdy Avenue stop was DROPPED by the owner 2026-09-30, so W5 is 5 stops and order 4 plays `miami-water-line-walk_stop5.mp3`). Openverse had nothing usable, so these need owner photos. Intro stops (order 0) carry no image, per the Chicago walk convention.
 - **Owner board:** `status/owner/miami-walks-owed.md` lists exactly these two items.
 
 ## To wire the walks (when the intro + 4 photos arrive)
