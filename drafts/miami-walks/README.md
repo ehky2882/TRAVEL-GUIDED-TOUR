@@ -12,8 +12,7 @@ list's standpoints, plus a whisper-tiny transcript of every recording, drove the
    Woodlawn stop** (`miami_w3_c_woodlawn.mp3`); its transcript opens "The gate of Woodlawn Park Cemetery stands
    before you… Calle Ocho at 32nd Avenue". The Grove's real intro is missing. `miami-grove-walk_stop0.mp3` is **not**
    on gh-pages; the other 32 are (`579feac8`).
-2. **The 33 walk scripts** (clean `.txt`). None were in the drop. They supply each stop's caption and transcript,
-   and each walk's descriptions. The master list says they exist ("126 files shipped").
+2. ~~**The 33 walk scripts**~~ ✅ **received 2026-09-30**, all 33 clean + `_TTS` pairs, in `scripts/`. Each clean script was matched against its recording's transcript (88–100% on the opening 120 words); only the Grove intro fails, because its recording is the wrong file. They are on `main`, against the drafts-stay-on-staging convention, because this session could push only to its own branch and the container is temporary.
 3. **Photos for the 11 connective/new stops** (the table's `new` rows). Reused stops take the single tour's hero.
 
 ## Walks
