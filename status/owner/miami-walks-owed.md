@@ -1,4 +1,4 @@
-# Miami walks: Grove intro recording, 33 walk scripts, 11 stop photos
+# Miami walks: Grove intro recording, 11 stop photos
 
 _opened 2026-09-29 · clear with `git rm status/owner/miami-walks-owed.md`_
 
