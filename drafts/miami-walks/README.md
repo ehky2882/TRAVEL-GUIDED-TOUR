@@ -8,7 +8,7 @@ list's standpoints, plus a whisper-tiny transcript of every recording, drove the
 
 ## 🔴 Still owed before wire-in
 
-1. **The Grove intro recording** (`miami_w4_00_intro.mp3`). The drop's file is **byte-identical to Calle Ocho's
+1. ✅ **RESOLVED 2026-10-01:** the owner re-exported the intro as a WAV, and it is on gh-pages as `miami-grove-walk_stop0.mp3`. Original problem: **The Grove intro recording** (`miami_w4_00_intro.mp3`). The drop's file is **byte-identical to Calle Ocho's
    Woodlawn stop** (`miami_w3_c_woodlawn.mp3`); its transcript opens "The gate of Woodlawn Park Cemetery stands
    before you… Calle Ocho at 32nd Avenue". The Grove's real intro is missing. `miami-grove-walk_stop0.mp3` is **not**
    on gh-pages; the other 32 are (`579feac8`).
@@ -72,7 +72,7 @@ even though the script stands on the hotel-side sidewalk.
 | W3-3 | Tower Theater | 25.765357 | -80.219672 | high | `tower-theater_hero` | `miami-calle-ocho-walk_stop3.mp3` | 75 | reuses single tower-theater exactly |
 | W3-4 | Domino Park | 25.765491 | -80.219374 | high | `maximo-gomez-park_hero` | `miami-calle-ocho-walk_stop4.mp3` | 110 | reuses single maximo-gomez-park exactly |
 | W3-5 | Woodlawn Park Cemetery gate (connective) | 25.764470 | -80.248550 | high | **new** | `miami-calle-ocho-walk_stop5.mp3` | 82 | OSM gate node 3262295528 on the entrance drive off SW 8th St (way 319768604), matches 3260 SW 8th St address p |
-| W4-0 | Intro | 25.725420 | -80.253100 | medium | **new** | `miami-grove-walk_stop0.mp3` ⚠️ held | 82 | inside NW corner of Charlotte Jane Memorial Park Cemetery (way1328880265) at Charles Ave x Douglas Rd (25.7255 |
+| W4-0 | Intro | 25.725420 | -80.253100 | medium | **new** | `miami-grove-walk_stop0.mp3` ✅ (re-export, 2026-10-01) | 82 | inside NW corner of Charlotte Jane Memorial Park Cemetery (way1328880265) at Charles Ave x Douglas Rd (25.7255 |
 | W4-1 | Charles Avenue (connective) | 25.725510 | -80.246295 | medium | **new** | `miami-grove-walk_stop1.mp3` | 86 | OSM building way638572551 = 3298 Charles Ave (Mariah Brown House address); connective subject is the avenue, p |
 | W4-2 | Plymouth Congregational Church (connective) | 25.722030 | -80.248380 | medium | **new** | `miami-grove-walk_stop2.mp3` | 84 | OSM building way436040740 = 3400 Devon Rd (13 m tall), between Devon Rd and Main Hwy; unnamed in OSM, church p |
 | W4-3 | The Barnacle / Peacock Park | 25.725332 | -80.242557 | high | `the-barnacle_hero` | `miami-grove-walk_stop3.mp3` | 111 | reuses single the-barnacle exactly / reverse returns 3190 Via Abitare Way but point-in-polygon confirms it is  |

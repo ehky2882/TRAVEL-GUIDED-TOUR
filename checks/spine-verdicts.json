@@ -2059,5 +2059,23 @@
     "date": "2026-09-23",
     "note": "CORRECT — the pin is on the schist village of Cerdeira (Lousã) and its arts centre, 'Atelier da Cerdeira' in OSM within 2 m. Wikidata matched the parish 'Cerdeira e Moura da Serra' in Arganil, 28 km away — a different place sharing the word.",
     "verdict": "name-collision"
+  },
+  "Ocean Drive — South Pointe to Lincoln Road": {
+    "at": [
+      25.76725,
+      -80.1355
+    ],
+    "date": "2026-10-01",
+    "note": "A multi-stop WALK named for the street it follows; the gazetteer matched the street 'Ocean Drive' (an extended feature, ~1.5 km long) against the walk's first stop, the intro at the South Pointe Park entrance where the route deliberately begins. Its Ocean Drive stop reuses the live single's coordinate exactly. Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "Calle Ocho — The Seam": {
+    "at": [
+      25.76572,
+      -80.21657
+    ],
+    "date": "2026-10-01",
+    "note": "A multi-stop WALK named for the street it follows; the gazetteer matched 'Calle Ocho Festival' (an event, not a venue) against the walk's first stop, the intro at SW 8th St x SW 13th Ave where the route deliberately begins. Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
   }
 }
