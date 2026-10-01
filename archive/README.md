@@ -348,3 +348,4 @@ Full text for every one of them is in
 - [HANDOFF-260925-six-creator-batch.md](HANDOFF-260925-six-creator-batch.md) — **28 link pins from six creators** (Seoul art, Egypt, Copenhagen housing, Lisbon food); 4 skipped as already pinned; 9 place questions left for Edward.
 - [HANDOFF-260923-foodranger-fatmap.md](HANDOFF-260923-foodranger-fatmap.md) — **21 link pins** (@thefoodranger, @the_fatmap, @klaudia.paris, @sashi_trip_tip) from 31 triaged; Shwi left to Edward as a place question.
 - `HANDOFF-260925-miami-staging.md` — Miami staged: 30 scripts, 30 derived + audited coordinates, sized geofences, 74 hero/gallery images live. Three picks and four tours still owed.
+- [HANDOFF-261001-miami-walks-live.md](HANDOFF-261001-miami-walks-live.md) — **5 Miami walks wired** (32 stops; MIA 30 → 35 tours). The pick-map's stale single heroes were caught by the duplicate check.

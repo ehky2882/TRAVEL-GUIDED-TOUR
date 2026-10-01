@@ -73,7 +73,7 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 
 | City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|-----:|----------------|------------------|
-| 🇺🇸 **Miami walks** | **5** | W1 *The Pitch* (9 stops), W2 *Ocean Drive* (7), W3 *Calle Ocho* (6), W4 *The Grove* (5), W5 *The Water Line* (6) | **All 33 on gh-pages** | **READY TO WIRE (2026-10-01): coordinates, scripts, audio and photos all in. W5 is 5 stops (Purdy dropped), so 32 stops are wired; see `archive/HANDOFF-260930-miami-walks.md`** | **Atlas Studio MIA** |
+| 🇺🇸 **Miami walks** | **5** | W1 *The Pitch* (9 stops), W2 *Ocean Drive* (7), W3 *Calle Ocho* (6), W4 *The Grove* (5), W5 *The Water Line* (5, Purdy dropped) | **All on gh-pages** | **✅ LIVE 2026-10-01: wired into `Tours.json` (32 stops). See `archive/HANDOFF-261001-miami-walks-live.md`** | **Atlas Studio MIA** |
 | **TOTAL PENDING** | **5** | | **33 delivered** | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know

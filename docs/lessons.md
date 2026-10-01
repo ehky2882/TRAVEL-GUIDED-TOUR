@@ -3685,3 +3685,13 @@ a caption-slug file from before the pins were renamed. **When a pin's hero is co
 stop image with it** (every other pin has `stop == hero`). Also: two pins cut from one post are
 byte-identical by construction; `check-image-duplicates.py` now allows that, as it already did for
 two pins sharing one file.
+
+## A staged walk's image names go stale when a single's hero is corrected (2026-10-01)
+
+The Miami walk pick-map was written on 2026-09-29. It named the reused singles' heroes as `<slug>_hero`. Then three of
+those heroes were corrected the only safe way, under a NEW filename (`_hero-2`, CLAUDE.md § Image Pipeline step 9).
+Copying the pick-map at wire-in pointed one stop at a **404** (`dupont-building_hero`) and two at an orphaned
+old hero, byte-identical to its single's `_3` gallery image. The validator passed all three, because a URL
+is well-formed whether or not it exists. `check-image-duplicates.py --maker <CODE>` caught both kinds.
+**At wire-in, take a reused stop's image from the single's current `heroImageURL` in `Tours.json`, never
+from the staging document.**
