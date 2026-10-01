@@ -349,3 +349,4 @@ Full text for every one of them is in
 - [HANDOFF-260923-foodranger-fatmap.md](HANDOFF-260923-foodranger-fatmap.md) — **21 link pins** (@thefoodranger, @the_fatmap, @klaudia.paris, @sashi_trip_tip) from 31 triaged; Shwi left to Edward as a place question.
 - `HANDOFF-260925-miami-staging.md` — Miami staged: 30 scripts, 30 derived + audited coordinates, sized geofences, 74 hero/gallery images live. Three picks and four tours still owed.
 - [HANDOFF-261001-miami-walks-live.md](HANDOFF-261001-miami-walks-live.md) — **5 Miami walks wired** (32 stops; MIA 30 → 35 tours). The pick-map's stale single heroes were caught by the duplicate check.
+- [HANDOFF-261001-ricardo-courtney-pins.md](HANDOFF-261001-ricardo-courtney-pins.md) — **54 link pins** (7 creators) from 56 triaged; 4 architect tags; Wat Rong Khun tour moved 6.5 km onto the temple; place stacking left to Edward.

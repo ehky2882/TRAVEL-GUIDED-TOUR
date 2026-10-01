@@ -2077,5 +2077,32 @@
     "date": "2026-10-01",
     "note": "A multi-stop WALK named for the street it follows; the gazetteer matched 'Calle Ocho Festival' (an event, not a venue) against the walk's first stop, the intro at SW 8th St x SW 13th Ave where the route deliberately begins. Not a coordinate error. NOT MOVED.",
     "verdict": "editorial-title"
+  },
+  "Catacombs of Kom El Shoqafa": {
+    "at": [
+      31.17839,
+      29.89305
+    ],
+    "date": "2026-10-01",
+    "note": "OUR POINT IS CORRECT. en.wikipedia gives 31.178558, 29.892954 (~20 m from ours), and OSM's tourist-attraction node is at the same spot in Karmouz, just west of Pompey's Pillar. Wikidata Q2671839 sits 1.46 km north-east, which is not where the catacombs are. NOT MOVED.",
+    "verdict": "wikidata-wrong"
+  },
+  "Garuda Wisnu Kencana": {
+    "at": [
+      -8.81416,
+      115.16665
+    ],
+    "date": "2026-10-01",
+    "note": "The post is about the 121 m statue. Our point is 7.9 m from Wikidata's statue item 'Big Vishnu' (Q12498977). The 508 m match is Q1132052, the whole cultural park around it. NOT MOVED.",
+    "verdict": "extended-feature"
+  },
+  "Tuna el-Gebel": {
+    "at": [
+      27.74171,
+      30.7044
+    ],
+    "date": "2026-10-01",
+    "note": "A desert necropolis spread over several km (catacombs, the Petosiris tomb, the boundary stela). Our point is OSM's 'Tuna el-Gebel necropolis' attraction; Wikidata's centroid is 376 m away inside the same site. No single point is honest. NOT MOVED.",
+    "verdict": "extended-feature"
   }
 }
