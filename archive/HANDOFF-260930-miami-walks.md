@@ -41,7 +41,7 @@
 ## Other open Miami items (not blocking)
 - **10 Commons photo licences unverified.** Commons returned 429 to this container for two days; see `drafts/CREDITS.md` § Miami.
 - **Overtown aerial** (`overtown-interchange_hero.webp`): source unknown; reverse-image search it.
-- **Architect tags** (Job 5 PR): Lapidus, Treister, Hohauser, Enrique Gutiérrez, Schultze & Weaver.
+- ~~**Architect tags**~~ ✅ done 2026-10-01: Morris Lapidus, Kenneth Treister, Henry Hohauser, Enrique Gutiérrez, Schultze & Weaver (9 Miami tours tagged).
 - **The author's pre-record flags 25–66** (in `miami_session_handoff.md` in the owner's drop): facts to verify or soften.
 
 ## Lessons from this session (also in docs/lessons.md)
