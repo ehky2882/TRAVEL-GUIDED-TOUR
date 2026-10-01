@@ -11,8 +11,8 @@
   - W4 *The Grove* (5)
   - W5 *The Water Line* (5, Purdy dropped)
 - **Scripts:** all 33 clean + `_TTS` in `drafts/miami-walks/scripts/` (#1105). Each clean script was matched against a transcript of its recording.
-- **Audio:** 32 of 33 on gh-pages as `audio/<walk-slug>-walk_stopN.mp3` (`579feac8`). Walk slugs: `miami-pitch`, `miami-ocean-drive`, `miami-calle-ocho`, `miami-grove`, `miami-water-line`.
-  - **MISSING: `miami-grove-walk_stop0.mp3`.** The drop's `miami_w4_00_intro.mp3` is byte-identical to `miami_w3_c_woodlawn.mp3`. The owner must re-export it from `miami_w4_00_intro_TTS.txt` ("This street exists because the town said no…").
+- **Audio:** ALL 33 on gh-pages (32 at `579feac8`; the Grove intro at `0bb52dc0`) as `audio/<walk-slug>-walk_stopN.mp3` (`579feac8`). Walk slugs: `miami-pitch`, `miami-ocean-drive`, `miami-calle-ocho`, `miami-grove`, `miami-water-line`.
+  - **Grove intro DONE 2026-10-01:** owner re-exported it as `miami_w4_00_intro.wav` in the same Dropbox folder. The transcript matches `miami_w4_00_intro.txt` ("This street exists because the town said no…"), and it was encoded to 128k/44.1k stereo MP3 like the others → `audio/miami-grove-walk_stop0.mp3` (82.65 s, sha256 `9cfc139f407c…`). Nothing is owed: the walks are READY TO WIRE.
 - **Coordinates:** all 33 in `drafts/miami-walks/coordinates.tsv` (27 high, 6 medium). Stops that revisit a live single reuse its EXACT point, since several are places now.
 - **Stop images:**
   - Reused stops take the live single's `heroImageURL`. **Read it from Tours.json**; the README's `<slug>_hero` column is stale for duPont, Gesu, Tower, Lyric and Little Haiti.
@@ -20,8 +20,8 @@
   - **Sunset Harbour DONE:** owner photo of the Pubbelly corner at 20th St → `miami-water-line_stop4.webp` (gh-pages `c1445c95`, sha256 `c3e1482bd95c…`). **All walk photos are now in.** (W5 order 4; the Purdy Avenue stop was DROPPED by the owner 2026-09-30, so W5 is 5 stops and order 4 plays `miami-water-line-walk_stop5.mp3`). Openverse had nothing usable, so these need owner photos. Intro stops (order 0) carry no image, per the Chicago walk convention.
 - **Owner board:** `status/owner/miami-walks-owed.md` lists exactly these two items.
 
-## To wire the walks (when the Grove intro recording arrives; all photos are in)
-1. Upload `miami-grove-walk_stop0.mp3`, then new photos as `<walk>_stopN.webp` (1200×900). Hash-verify live.
+## To wire the walks (ALL ASSETS IN as of 2026-10-01; start here)
+1. ~~Upload the intro + photos~~ done. Hash-verify the live URLs before wiring.
 2. Build 5 `kind: "multiStop"` tours in `Tours.json`, modelled on an existing walk (e.g. Chicago *The Riverwalk*):
    - intro is stop order 0 at the start point;
    - `triggerRadiusMeters` 40 (the walks' convention);
