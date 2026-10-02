@@ -18,7 +18,7 @@
 - **Walk stops that revisit a single use that single's CURRENT hero.** That is the Miami walks lesson, and it matters here, because 06, 07 and 14 have owner `_hero-2` heroes.
 - **Every walk intro shares its stop 1 point.** The intros' walking distances come from W1 (1.5 mi) and W5 (a little over a mile); the rest are computed.
 
-**Images:** 93 references, all on gh-pages and hash-verified live.
+**Images:** 96 distinct files, all on gh-pages and hash-verified live; `check-image-duplicates --maker BOS` is OK (96 images).
 - 83 picks were made in the Boston Image Picks artifact; all are Unsplash, Pexels or public domain.
 - **10 owner photos**, some AI-edited.
 - 2 CC BY-SA Haymarket images, credited.
