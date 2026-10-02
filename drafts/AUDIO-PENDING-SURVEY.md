@@ -31,7 +31,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-09-29 — 🇺🇸 **MIAMI's 30 singles are WIRED** (Atlas Studio MIA, `aed488af-23d3-514f-90f1-035ca2285d0d`, the 38th studio). The same Dropbox drop also carried **33 MP3s for five Miami walks (W1–W5)** that were never staged: no scripts in the repo, no stop coordinates, no images. They are the only thing in the queue now; see the row below.
+**Last verified:** 2026-10-02 — 🇺🇸 **BOSTON added to the queue: 30 single-stop tours + 5 walks (29 segments) STAGED, 0 MP3s.** Scripts, audited coordinates and pick-maps are in `drafts/boston-batch1/` and `drafts/boston-walks/` on `main`. Maker at wire-in: Atlas Studio BOS, `cebccd48-7b4b-5719-bb5b-194734d5db8e` (uuid5 `atlas-maker:bos`, scheme re-verified against MIA). Miami is fully LIVE (30 singles + 5 walks), so it has left the table.
+
+**Previously verified:** 2026-09-29 — 🇺🇸 **MIAMI's 30 singles are WIRED** (Atlas Studio MIA, `aed488af-23d3-514f-90f1-035ca2285d0d`, the 38th studio). The same Dropbox drop also carried **33 MP3s for five Miami walks (W1–W5)** that were never staged: no scripts in the repo, no stop coordinates, no images. They are the only thing in the queue now; see the row below.
 
 **Previously verified:** 2026-09-25 — Miami added to the queue: 30 single-stop tours staged, 0 MP3s.
 
@@ -73,8 +75,9 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 
 | City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|-----:|----------------|------------------|
-| 🇺🇸 **Miami walks** | **5** | W1 *The Pitch* (9 stops), W2 *Ocean Drive* (7), W3 *Calle Ocho* (6), W4 *The Grove* (5), W5 *The Water Line* (5, Purdy dropped) | **All on gh-pages** | **✅ LIVE 2026-10-01: wired into `Tours.json` (32 stops). See `archive/HANDOFF-261001-miami-walks-live.md`** | **Atlas Studio MIA** |
-| **TOTAL PENDING** | **5** | | **33 delivered** | | |
+| 🇺🇸 **Boston** | **30** | 30 single-stop tours, 01–30 (T1 12 + T2 18; a further 15 T3 singles are GATED by the author and not written) | **0** (scripts only) | **Staged on `main`** in `drafts/boston-batch1/` (2026-10-02) | **Atlas Studio BOS** |
+| 🇺🇸 **Boston walks** | **5** | W1 *Downhill* (6), W2 *The Second Revolution* (6), W3 *Under the Artery* (6), W4 *The Other Bank* (5), W5 *The Name Above the Door* (6) | **0** | **Staged on `main`** in `drafts/boston-walks/` (2026-10-02) | **Atlas Studio BOS** |
+| **TOTAL PENDING** | **35** | | **0 delivered** | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
 
