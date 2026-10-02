@@ -1,7 +1,7 @@
-# Handoff 2026-10-02: 113 link pins from Edward's "Random links" + "Jojo's in NYC" note
+# Handoff 2026-10-02: 114 link pins from Edward's "Random links" + "Jojo's in NYC" note
 
 ## What shipped (one PR, branch `claude/link-pins-261002`)
-- **113 link pins from 97 creators**, triaged from 113 links Edward pasted from an iCloud note
+- **114 link pins from 98 creators** (net +113: one replaced a cross-posted Instagram duplicate), triaged from 113 links Edward pasted from an iCloud note
   (57 "Random links started 9/20", 56 "Jojo's in NYC"; the note itself was shared to named people
   only, `publicPermission: NONE`, so the text had to be pasted).
 - Edward ruled on every question himself (he is the owner, so these are rulings, not proposals):
@@ -60,10 +60,15 @@ closed instead, those three posts need minting again.
 - Left as they are: Thorne Rooms/Art Institute and Telephone Box/Royal Academy (part vs whole), and
   the Little Prince sculpture beside Albertine (co-located, not the same thing).
 
-## Held out for Edward
-| Link | Why |
-|---|---|
-| https://www.tiktok.com/t/ZP8TBpNmA/ (TikTok @nycartgal, Chinese Scholar's Garden) | the **same video and caption** as the live IG @oneyearinparis pin, so apparently one person cross-posting from two accounts. `check-image-duplicates.py` caught it ("visually identical"). Held back because adding later is cheap and deleting after merge needs an SQL paste |
+## Cross-posted duplicate: Edward kept the TikTok
+The TikTok @nycartgal Chinese Scholar's Garden post (https://www.tiktok.com/t/ZP8TBpNmA/) is the same
+video and caption as the live IG @oneyearinparis pin (https://www.instagram.com/reel/Dc2Denkg4mb/,
+id 460EFECF-…). `check-image-duplicates.py` flagged it as "visually identical". Edward: *"keep
+tiktok and discard instagram"*. The Instagram pin was removed from `linkPins`, along with two
+`relatedTourIds` references to it. **Its maker row was deliberately KEPT** (now with no entries),
+because the seed's prune deletes a missing pin from Postgres only while its maker is still in the
+catalogue, so the merge removes it from the live database with no SQL paste. Check after the
+publish job: `get_catalog` should no longer carry 460efecf-3451-570c-9db5-9018b501895d.
 
 ## Gotchas
 - **Two posts from one creator on one subject produce the SAME hero filename.** The Elms
