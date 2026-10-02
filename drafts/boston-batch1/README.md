@@ -85,7 +85,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 | 11 | `copley-square_hero.webp` | `copley-square_2.webp`, `copley-square_3.webp`, `copley-square_4.webp` |
 | 12 | `fenway-park_hero.webp` | `fenway-park_2.webp`, `fenway-park_3.webp`, `fenway-park_4.webp`, `fenway-park_5.webp` |
 | 13 | `granary-burying-ground_hero.webp` | — |
-| 14 | `park-street-church_hero.webp` | — |
+| 14 | `park-street-church_hero-2.webp` (owner photo, 2026-10-02) | `park-street-church_hero.webp` (the original pick 14-1, kept under its filename) |
 | 15 | `old-south-meeting-house_hero.webp` | `old-south-meeting-house_2.webp`, `old-south-meeting-house_3.webp`, `old-south-meeting-house_4.webp` |
 | 16 | `kings-chapel_hero.webp` (owner photo, 2026-10-02) | — |
 | 17 | `boston-city-hall-plaza_hero.webp` | `boston-city-hall-plaza_2.webp`, `boston-city-hall-plaza_3.webp`, `boston-city-hall-plaza_4.webp` |
