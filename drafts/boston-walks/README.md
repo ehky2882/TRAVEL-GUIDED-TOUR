@@ -53,7 +53,7 @@ The walks come from the same drop as `drafts/boston-batch1/` (the author's hando
 | W5-5 | Faneuil Hall | 42.360034 | -71.056234 | 50 | `boston-name-above-the-door-walk_stop5.mp3` | `boston_the_name_above_the_door_multistop_05_faneuil_hall.txt` | reuses single 04 `faneuil-hall` exactly |
 
 ## Flags for the owner and the author
-- 🔴 **The "Charlestown Bridge" (W4-4) is now named the William Felton "Bill" Russell Bridge** in OpenStreetMap: it is the replacement North Washington Street bridge. The script calls it the Charlestown Bridge throughout, so the author should check the name before recording.
+- 🔴 **The "Charlestown Bridge" (W4-4) is now named the William Felton "Bill" Russell Bridge** in OpenStreetMap: it is the replacement North Washington Street bridge. The script calls it the Charlestown Bridge throughout, so the author should check the name before recording. **Resolved 2026-10-02:** the owner had the stop titled *Bill Russell Bridge* in the catalogue. The recorded narration still says "Charlestown Bridge", and `transcriptText` is left matching the audio.
 - The author notes **W4-02 runs 343 words** (three over the cap): trim at record time or accept.
 
 ## Owed before wire-in

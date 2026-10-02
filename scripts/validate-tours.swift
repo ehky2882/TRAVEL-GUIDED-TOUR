@@ -382,6 +382,7 @@ let architectTags: Set<String> = [
     "Kim Swoo-geun", "MGT Architects", "Shin Takamatsu",
     "Timo Suomalainen", "Tuomo Suomalainen",
     "Morris Lapidus", "Kenneth Treister", "Henry Hohauser", "Enrique Gutiérrez", "Schultze & Weaver",
+    "Charles Bulfinch", "H. H. Richardson", "Peter Banner", "Peter Harrison", "Arthur Gilman", "Araldo Cossutta", "James McLaughlin", "Kallmann McKinnell & Knowles", "Alexander Parris",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)
