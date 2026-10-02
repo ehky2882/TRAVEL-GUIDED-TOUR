@@ -8,7 +8,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 
 ## Owed before wire-in
 1. **Audio:** 30 MP3s. Name them `<slug>.mp3` from the table below (gh-pages `audio/`).
-2. **Images: 23 of 30 tours done (2026-10-02).** Still owed: **08** Bunker Hill Monument, **16** King's Chapel, **19** Shaw Memorial, **20** African Meeting House, **22** Hanover Street, **23** Copp's Hill, and **26** Commonwealth Avenue Mall. For each, the picker had no usable or chosen photo, so it needs an owner photo or a re-run.
+2. **Images: 24 of 30 tours done (2026-10-02).** Still owed: **08** Bunker Hill Monument, **19** Shaw Memorial, **20** African Meeting House, **22** Hanover Street, **23** Copp's Hill, and **26** Commonwealth Avenue Mall. For each, the picker had no usable or chosen photo, so it needs an owner photo or a re-run.
 
 ## Coordinates: derived 2026-10-02, audited
 **The scripts carry no coordinates.** Each point was geocoded from the script's own position paragraph against OpenStreetMap (Nominatim; Overpass is blocked from web sessions). The OSM object is named in every row.
@@ -87,6 +87,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 | 13 | `granary-burying-ground_hero.webp` | — |
 | 14 | `park-street-church_hero.webp` | — |
 | 15 | `old-south-meeting-house_hero.webp` | `old-south-meeting-house_2.webp`, `old-south-meeting-house_3.webp`, `old-south-meeting-house_4.webp` |
+| 16 | `kings-chapel_hero.webp` (owner photo, 2026-10-02) | — |
 | 17 | `boston-city-hall-plaza_hero.webp` | `boston-city-hall-plaza_2.webp`, `boston-city-hall-plaza_3.webp`, `boston-city-hall-plaza_4.webp` |
 | 18 | `quincy-market_hero.webp` | `quincy-market_2.webp` |
 | 21 | `charles-street-beacon-hill_hero.webp` | `charles-street-beacon-hill_2.webp`, `charles-street-beacon-hill_3.webp`, `charles-street-beacon-hill_4.webp` |

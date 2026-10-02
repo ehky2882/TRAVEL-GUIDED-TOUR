@@ -1090,5 +1090,18 @@
   "orig": "2400x1601",
   "upscaled": false,
   "sha": "e44cc25f2be2c19bfbcaa53beeafed45adbc3c9f28002a24f1189d1f41116cb4"
+ },
+ {
+  "code": "owner",
+  "num": "16",
+  "slug": "kings-chapel",
+  "name": "kings-chapel_hero.webp",
+  "src": "owner",
+  "lic": "owner-supplied",
+  "credit": "",
+  "page": "",
+  "orig": "1448x1086",
+  "upscaled": false,
+  "sha": "3b5955071155"
  }
 ]
