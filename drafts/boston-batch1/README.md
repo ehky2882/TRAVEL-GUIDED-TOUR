@@ -8,7 +8,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 
 ## Owed before wire-in
 1. **Audio:** 30 MP3s. Name them `<slug>.mp3` from the table below (gh-pages `audio/`).
-2. **Images:** a hero plus a gallery for each tour, via the image pipeline (CLAUDE.md § Image Pipeline) or photos from the owner.
+2. **Images: 29 of 30 tours done (2026-10-02).** Still owed: **22** Hanover Street. For each, the picker had no usable or chosen photo, so it needs an owner photo or a re-run.
 
 ## Coordinates: derived 2026-10-02, audited
 **The scripts carry no coordinates.** Each point was geocoded from the script's own position paragraph against OpenStreetMap (Nominatim; Overpass is blocked from web sessions). The OSM object is named in every row.
@@ -66,3 +66,42 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 - **Pronunciation pass before recording:** Faneuil above all; also Abiel, Mather, Schön, Cossutta, McLaughlin, Lansdowne, Cato, Belknap, Copp's, Sasaki, Trumbull, Zakim, Tremont, Boylston.
 - **Flag 115:** re-verify the Faneuil Hall renaming status at record time. It is the corpus's one rewrite-risk flag.
 - **On-site and outreach flags 57, 86–115:** the master list (not in the repo) carries them.
+
+## Images (owner-picked 2026-10-02, live on gh-pages `56d6b026`)
+
+**Picked in the Boston Image Picks artifact.** All 83 are Unsplash, Pexels or public domain, so no credit is owed. Every candidate passed both Gemini gates (a modern colour photograph; the right subject, with its look-alikes named) and then a by-eye review that pulled 54 of 258. Hashes and sources are in `image-manifest.json`. ⚠️ `chinatown-gate-boston_2.webp` is a panorama crop upscaled about 5%.
+
+| # | Hero | Gallery |
+|---|---|---|
+| 01 | `massachusetts-state-house_hero.webp` | `massachusetts-state-house_2.webp`, `massachusetts-state-house_3.webp`, `massachusetts-state-house_4.webp` |
+| 02 | `boston-common_hero.webp` | `boston-common_2.webp`, `boston-common_3.webp` |
+| 03 | `old-state-house_hero.webp` | `old-state-house_2.webp`, `old-state-house_3.webp`, `old-state-house_4.webp` |
+| 04 | `faneuil-hall_hero.webp` | `faneuil-hall_2.webp` |
+| 05 | `acorn-street-louisburg-square_hero.webp` | `acorn-street-louisburg-square_2.webp`, `acorn-street-louisburg-square_3.webp` |
+| 06 | `paul-revere-house_hero-2.webp` (owner photo, 2026-10-02) | `paul-revere-house_hero.webp` (the original pick 06-1, kept under its filename) |
+| 07 | `old-north-church_hero-2.webp` (owner photo, 2026-10-02) | `old-north-church_hero.webp` (the original pick 07-1, kept under its filename) |
+| 08 | `bunker-hill-monument_hero.webp` (owner photo, 2026-10-02) | — |
+| 09 | `uss-constitution_hero.webp` | `uss-constitution_2.webp`, `uss-constitution_3.webp`, `uss-constitution_4.webp` |
+| 10 | `boston-public-garden_hero.webp` | `boston-public-garden_2.webp`, `boston-public-garden_3.webp`, `boston-public-garden_4.webp`, `boston-public-garden_5.webp`, `boston-public-garden_6.webp`, `boston-public-garden_7.webp`, `boston-public-garden_8.webp`, `boston-public-garden_9.webp`, `boston-public-garden_10.webp` |
+| 11 | `copley-square_hero.webp` | `copley-square_2.webp`, `copley-square_3.webp`, `copley-square_4.webp` |
+| 12 | `fenway-park_hero.webp` | `fenway-park_2.webp`, `fenway-park_3.webp`, `fenway-park_4.webp`, `fenway-park_5.webp` |
+| 13 | `granary-burying-ground_hero.webp` | — |
+| 14 | `park-street-church_hero-2.webp` (owner photo, 2026-10-02) | `park-street-church_hero.webp` (the original pick 14-1, kept under its filename) |
+| 15 | `old-south-meeting-house_hero.webp` | `old-south-meeting-house_2.webp`, `old-south-meeting-house_3.webp`, `old-south-meeting-house_4.webp` |
+| 16 | `kings-chapel_hero.webp` (owner photo, 2026-10-02) | — |
+| 17 | `boston-city-hall-plaza_hero.webp` | `boston-city-hall-plaza_2.webp`, `boston-city-hall-plaza_3.webp`, `boston-city-hall-plaza_4.webp` |
+| 18 | `quincy-market_hero.webp` | `quincy-market_2.webp` |
+| 19 | `shaw-54th-memorial_hero.webp` (owner photo, 2026-10-02) | — |
+| 20 | `african-meeting-house_hero.webp` (owner photo, 2026-10-02; appears to show the Abiel Smith School at Joy St x Smith Court, which the tour also covers) | — |
+| 21 | `charles-street-beacon-hill_hero.webp` | `charles-street-beacon-hill_2.webp`, `charles-street-beacon-hill_3.webp`, `charles-street-beacon-hill_4.webp` |
+| 23 | `copps-hill-burying-ground_hero.webp` (owner photo, 2026-10-02) | — |
+| 24 | `greenway-north-end_hero.webp` | `greenway-north-end_2.webp`, `greenway-north-end_3.webp` |
+| 25 | `long-wharf-boston_hero.webp` | `long-wharf-boston_2.webp`, `long-wharf-boston_3.webp`, `long-wharf-boston_4.webp`, `long-wharf-boston_5.webp`, `long-wharf-boston_6.webp` |
+| 26 | `commonwealth-avenue-mall_hero.webp` (owner photo, 2026-10-02) | — |
+| 27 | `boston-marathon-finish-line_hero.webp` | — |
+| 28 | `christian-science-plaza_hero.webp` | `christian-science-plaza_2.webp` |
+| 29 | `chinatown-gate-boston_hero.webp` | `chinatown-gate-boston_2.webp`, `chinatown-gate-boston_3.webp`, `chinatown-gate-boston_4.webp`, `chinatown-gate-boston_5.webp` |
+| 30 | `harvard-yard_hero.webp` | `harvard-yard_2.webp`, `harvard-yard_3.webp`, `harvard-yard_4.webp` |
+| W4-4 | `boston-the-other-bank_stop4.webp` | `boston-the-other-bank_stop4-2.webp`, `boston-the-other-bank_stop4-3.webp`, `boston-the-other-bank_stop4-4.webp`, `boston-the-other-bank_stop4-5.webp` |
+
+The `W4-4` row is the walk connective (W4-4, the bridge), not a single tour: `boston-the-other-bank_stop4.webp` is its stop image, and the `-2…-5` files are extras for the W4 walk gallery.
