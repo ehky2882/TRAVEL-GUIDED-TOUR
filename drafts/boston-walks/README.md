@@ -60,5 +60,6 @@ The walks come from the same drop as `drafts/boston-batch1/` (the author's hando
 - **29 MP3s.**
 - **Images for the connectives:**
   - **W4-4 is DONE:** `boston-the-other-bank_stop4.webp`, plus 4 extras.
-  - **Still owed: W2-5** Phillips Street, **W3-2** Haymarket, **W4-3** City Square, **W5-2** Joy Street and **W5-3** Government Center. The picker had verified photos for W3-2 and W5-3, but none was picked.
+  - **W3-2 is DONE (2026-10-02):** `boston-under-the-artery_stop2.webp` plus `_stop2-2.webp`. Both are CC BY-SA, credited in `drafts/CREDITS.md`.
+  - **Still owed: W2-5** Phillips Street, **W4-3** City Square, **W5-2** Joy Street and **W5-3** Government Center. The picker has verified photos for W5-3.
   - Every other segment reuses its single's hero. Intros carry no image, per the walk convention.

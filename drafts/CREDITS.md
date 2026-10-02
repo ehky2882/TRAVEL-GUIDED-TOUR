@@ -895,3 +895,12 @@ The owner picked these in the Boston Image Picks page. **None is credit-required
 | `boston-the-other-bank_stop4-3.webp` | W4-4-7 | Pexels | Brandon Benedict | https://www.pexels.com/photo/cars-parked-on-side-of-the-road-9715151/ |
 | `boston-the-other-bank_stop4-4.webp` | W4-4-4 | Unsplash | Bernd 📷 Dittrich | https://unsplash.com/photos/esplanade-riel-with-a-blue-sky-l_zgRHPm3WM |
 | `boston-the-other-bank_stop4-5.webp` | W4-4-6 | Pexels | Phil Evenden | https://www.pexels.com/photo/scenic-view-of-boston-s-skyline-and-river-29864742/ |
+
+## Boston walks — 2 credit-required images (picked 2026-10-02)
+
+Wikimedia Commons originals, sourced via Openverse. The owner picked them in the Boston Image Picks page, where each was labelled CREDIT NEEDED (the Miami "option 1" precedent applies).
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `boston-under-the-artery_stop2.webp` | W3-2 Haymarket stalls | Daniel Brody | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=46574361 |
+| `boston-under-the-artery_stop2-2.webp` | W3-2 Haymarket stalls | NewtonCourt | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=42773894 |

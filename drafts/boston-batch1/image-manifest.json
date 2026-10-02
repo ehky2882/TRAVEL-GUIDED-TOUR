@@ -1194,5 +1194,31 @@
   "orig": "",
   "upscaled": false,
   "sha": "1d5e8af0d9af"
+ },
+ {
+  "code": "W3-2-1",
+  "num": "W3-2",
+  "slug": "boston-under-the-artery-walk_stop2",
+  "name": "boston-under-the-artery_stop2.webp",
+  "src": "openverse",
+  "lic": "by-sa 4.0",
+  "credit": "Daniel Brody",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=46574361",
+  "orig": "2400x1800",
+  "upscaled": false,
+  "sha": "188746ea10454b327d28353cbbccb6f6eacad772f70f1eb49b949159915d7b64"
+ },
+ {
+  "code": "W3-2-5",
+  "num": "W3-2",
+  "slug": "boston-under-the-artery-walk_stop2",
+  "name": "boston-under-the-artery_stop2-2.webp",
+  "src": "openverse",
+  "lic": "by-sa 4.0",
+  "credit": "NewtonCourt",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=42773894",
+  "orig": "2400x1351",
+  "upscaled": false,
+  "sha": "0605ca710bf19f102d5567a05ab1bae427efdb38f862436f7187b8fc3574165d"
  }
 ]
