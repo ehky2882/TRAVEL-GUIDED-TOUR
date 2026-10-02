@@ -899,11 +899,16 @@ missing from the primary source and is wrong.
 decodes a missing key as nil and the feature just stops existing — no crash, no log, no failed CI.
 Asking the live RPC what keys it returns is the only detection.
 
-🔴 **Deleting from `Tours.json` does NOT remove it from Postgres.** `seed_from_toursjson.py` is
-**upsert-only by design**, so a deletion reaches the gh-pages mirror and the bundled seed and
-never reaches the database the app reads first. A removal is a two-part change: the catalogue
-edit **plus SQL the owner runs**. `backend/pull_nycunfilteredstories.sql` sat committed and
-unpasted for **eight days** while four "removed" pins kept being served.
+🔴 **Deleting from `Tours.json` reaches Postgres ONLY while the entry's maker stays in the
+catalogue.** `seed_from_toursjson.py` was upsert-only until it gained a prune step, and that prune
+deletes a missing tour or pin **only when its `maker_id` is still a catalogue maker** (the guard
+that keeps in-app uploads safe). So to remove a pin, delete the pin and **keep its maker row**,
+even if the maker now has no entries. The next content merge's seed then deletes it from the
+database with no owner paste (2026-10-02: the Instagram @oneyearinparis Chinese Scholar's Garden
+duplicate). ⚠️ **Delete the maker row as well and the prune can no longer see the pin**, and you
+are back to the old two-part change: the catalogue edit **plus SQL the owner runs**. That is how
+`backend/pull_nycunfilteredstories.sql` sat committed and unpasted for **eight days** while four
+"removed" pins kept being served.
 
 **And the inverse: adding a key to `Tours.json` does not put it in front of users.** Supabase is
 primary. Build 68 shipped the place layer and showed the old behaviour because `places.sql` had
