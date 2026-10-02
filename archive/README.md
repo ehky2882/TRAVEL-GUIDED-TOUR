@@ -352,3 +352,4 @@ Full text for every one of them is in
 - [HANDOFF-261001-ricardo-courtney-pins.md](HANDOFF-261001-ricardo-courtney-pins.md) — **54 link pins** (7 creators) from 56 triaged; 4 architect tags; Wat Rong Khun tour moved 6.5 km onto the temple; place stacking left to Edward.
 - [HANDOFF-261002-boston-staging.md](HANDOFF-261002-boston-staging.md) — **Boston staged:** 30 singles + 5 walks (29 segments), scripts and audited coordinates; audio and images owed.
 - [HANDOFF-261002-random-and-jojo-pins.md](HANDOFF-261002-random-and-jojo-pins.md) — **114 link pins** (98 creators; one replaced a cross-posted IG duplicate) from Edward's 113-link note, 21 new places + 9 joins; Karl Marx-Hof pin moved 1.3 km onto the building; 3 posts left to open PR #1072.
+- [HANDOFF-261002-boston-live.md](HANDOFF-261002-boston-live.md) — **Boston launched:** Atlas Studio BOS, 30 singles + 5 walks (35 tours, 59 MP3s, 96 images).

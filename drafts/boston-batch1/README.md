@@ -8,7 +8,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 
 ## Owed before wire-in
 1. **Audio:** 30 MP3s. Name them `<slug>.mp3` from the table below (gh-pages `audio/`).
-2. **Images: 29 of 30 tours done (2026-10-02).** Still owed: **22** Hanover Street. For each, the picker had no usable or chosen photo, so it needs an owner photo or a re-run.
+2. **Images: ALL 30 tours done (2026-10-02).**
 
 ## Coordinates: derived 2026-10-02, audited
 **The scripts carry no coordinates.** Each point was geocoded from the script's own position paragraph against OpenStreetMap (Nominatim; Overpass is blocked from web sessions). The OSM object is named in every row.
@@ -95,6 +95,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 | 20 | `african-meeting-house_hero.webp` (owner photo, 2026-10-02; appears to show the Abiel Smith School at Joy St x Smith Court, which the tour also covers) | — |
 | 21 | `charles-street-beacon-hill_hero.webp` | `charles-street-beacon-hill_2.webp`, `charles-street-beacon-hill_3.webp`, `charles-street-beacon-hill_4.webp` |
 | 23 | `copps-hill-burying-ground_hero.webp` (owner photo, 2026-10-02) | — |
+| 22 | `hanover-street-north-end_hero.webp` (owner photo, 2026-10-02, Hanover x Prince; appears AI-edited) | — |
 | 24 | `greenway-north-end_hero.webp` | `greenway-north-end_2.webp`, `greenway-north-end_3.webp` |
 | 25 | `long-wharf-boston_hero.webp` | `long-wharf-boston_2.webp`, `long-wharf-boston_3.webp`, `long-wharf-boston_4.webp`, `long-wharf-boston_5.webp`, `long-wharf-boston_6.webp` |
 | 26 | `commonwealth-avenue-mall_hero.webp` (owner photo, 2026-10-02) | — |

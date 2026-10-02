@@ -60,5 +60,10 @@ The walks come from the same drop as `drafts/boston-batch1/` (the author's hando
 - **29 MP3s.**
 - **Images for the connectives:**
   - **W4-4 is DONE:** `boston-the-other-bank_stop4.webp`, plus 4 extras.
-  - **Still owed: W2-5** Phillips Street, **W3-2** Haymarket, **W4-3** City Square, **W5-2** Joy Street and **W5-3** Government Center. The picker had verified photos for W3-2 and W5-3, but none was picked.
+  - **W3-2 is DONE (2026-10-02):** `boston-under-the-artery_stop2.webp` plus `_stop2-2.webp`. Both are CC BY-SA, credited in `drafts/CREDITS.md`.
+  - **W5-3 is DONE (2026-10-02):** `boston-name-above-the-door_stop3.webp`, an owner photo of City Hall Plaza with the Government Center station.
+  - **W2-5, W4-3 and W5-2 REUSE existing images** (owner, 2026-10-02: "reuse"). No new files:
+    - W2-5 Phillips Street → `charles-street-beacon-hill_hero.webp`, a leafy Beacon Hill side street.
+    - W4-3 City Square → `uss-constitution_2.webp`, the Charlestown waterfront. W4 already uses the Bunker Hill and USS Constitution *heroes*, so this avoids repeating a photo within the walk.
+    - W5-2 Joy Street → `charles-street-beacon-hill_2.webp`, a brick residential corner. The owner's African Meeting House photo actually shows Joy St, but W5-1 Smith Court already uses it, so this avoids a duplicate within the walk.
   - Every other segment reuses its single's hero. Intros carry no image, per the walk convention.

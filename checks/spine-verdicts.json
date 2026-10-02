@@ -2104,5 +2104,14 @@
     "date": "2026-10-01",
     "note": "A desert necropolis spread over several km (catacombs, the Petosiris tomb, the boundary stela). Our point is OSM's 'Tuna el-Gebel necropolis' attraction; Wikidata's centroid is 376 m away inside the same site. No single point is honest. NOT MOVED.",
     "verdict": "extended-feature"
+  },
+  "Commonwealth Avenue Mall": {
+    "at": [
+      42.353618,
+      -71.071715
+    ],
+    "date": "2026-10-02",
+    "note": "CORRECT — the Mall is a ~1.5 km linear park from Arlington St to Massachusetts Ave; Wikidata's point sits mid-length. The script is told from the Arlington Street end looking west, and the stop sits on the east end of the Mall polygon (OSM way 820334088). NOT MOVED.",
+    "verdict": "extended-feature"
   }
 }
