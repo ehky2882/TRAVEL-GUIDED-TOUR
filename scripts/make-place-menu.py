@@ -129,6 +129,10 @@ DECLINED_GROUPS = {
 # Keyed by the frozen set of the two titles, never by the N-label: the labels
 # are positions in a sorted list and renumber whenever a batch lands.
 DECLINED_PAIRS = {
+    frozenset({'Grand Egyptian Museum', "Khufu's Solar Boat, Grand Egyptian Museum"}):
+        'owner 2026-10-02: NO — the Solar Boat is one exhibit inside the museum and stays its own pin (part vs whole)',
+    frozenset({'The Burrell Collection', 'Pollok Country Park'}):
+        'owner 2026-10-02: NO — the Burrell stands inside Pollok Country Park but is a different subject ~300 m away (part vs whole)',
     frozenset({'Palais-Royal', 'Colonnes de Buren'}):
         'owner 2026-09-23: NO — the Buren columns stay out of the Palais-Royal (part vs whole); the pin was moved 63 m onto the artwork so the two no longer share a point',
     frozenset({'Chichén Itzá', 'The Great Ball Court, Chichén Itzá'}):
