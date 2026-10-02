@@ -1220,5 +1220,18 @@
   "orig": "2400x1351",
   "upscaled": false,
   "sha": "0605ca710bf19f102d5567a05ab1bae427efdb38f862436f7187b8fc3574165d"
+ },
+ {
+  "code": "owner",
+  "num": "W5-3",
+  "slug": "boston-name-above-the-door-walk_stop3",
+  "name": "boston-name-above-the-door_stop3.webp",
+  "src": "owner",
+  "lic": "owner-supplied",
+  "credit": "",
+  "page": "",
+  "orig": "1448x1086",
+  "upscaled": false,
+  "sha": "f3e82e56da8c9c16a545b268ad641cea9e697f654795446acf6e4b4283707116"
  }
 ]
