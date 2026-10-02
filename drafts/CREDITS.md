@@ -803,6 +803,7 @@ The owner picked these in the Boston Image Picks page. **None is credit-required
 
 | File | Pick | Licence | Author | Source |
 |------|------|---------|--------|--------|
+| `hanover-street-north-end_hero.webp` | owner | Owner-supplied (2026-10-02; appears AI-edited, signage garbled) | — | pasted in chat |
 | `boston-name-above-the-door_stop3.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `commonwealth-avenue-mall_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `copps-hill-burying-ground_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |

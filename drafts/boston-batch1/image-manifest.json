@@ -1233,5 +1233,18 @@
   "orig": "1448x1086",
   "upscaled": false,
   "sha": "f3e82e56da8c9c16a545b268ad641cea9e697f654795446acf6e4b4283707116"
+ },
+ {
+  "code": "owner",
+  "num": "22",
+  "slug": "hanover-street-north-end",
+  "name": "hanover-street-north-end_hero.webp",
+  "src": "owner",
+  "lic": "owner-supplied",
+  "credit": "",
+  "page": "",
+  "orig": "1448x1086",
+  "upscaled": false,
+  "sha": "a56436b3838b65318f114681a385c40b285e7645d56bbad09451adfcc1dd712e"
  }
 ]
