@@ -24,6 +24,21 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // later in .task), so build it here and hand the same instance in.
         let auth = AuthService()
         _authService = State(initialValue: auth)
+        // 🔴 Built HERE, not in a view, because `willPresentWelcome` has to be
+        // settled before any view runs: `ContentView`'s location-permission
+        // guard reads it, and that `.onChange` fires before `begin()` does.
+        let onboardingStore = OnboardingStore()
+        let onboardingCoordinator = OnboardingCoordinator(store: onboardingStore)
+        // The navigation tour shares the store: it records which stops were
+        // seen, and Settings → "Show tips again" resets exactly that.
+        let coachMarkCenter = CoachMarkCenter(store: onboardingStore)
+        // Onboarding closing hands straight to the navigation tour — after a
+        // first run, a replay, and a Skip alike (skipping the account screens
+        // is not skipping learning the app). Synchronous, in the same call; see
+        // `OnboardingCoordinator.onFinish` for why an `.onChange` was a race.
+        onboardingCoordinator.onFinish = { [coachMarkCenter] in coachMarkCenter.beginTour() }
+        _onboarding = State(initialValue: onboardingCoordinator)
+        _coachMarks = State(initialValue: coachMarkCenter)
         _makerProfileService = State(initialValue: MakerProfileService(auth: auth))
         _makerTourService = State(initialValue: MakerTourService(auth: auth))
         _followService = State(initialValue: FollowService(auth: auth))
@@ -32,6 +47,17 @@ struct TRAVEL_GUIDED_TOURApp: App {
     }
 
     @State private var dataService = DataService()
+    /// Whether the first-run flow is on screen, and where it is up to.
+    /// See `Features/Onboarding/OnboardingCoordinator.swift`.
+    @State private var onboarding: OnboardingCoordinator
+    /// The five-stop navigation tour that runs when onboarding closes.
+    /// See `Features/Onboarding/CoachMarks/CoachMarkCenter.swift`.
+    @State private var coachMarks: CoachMarkCenter
+
+    /// True from the first onboarding card to the last coach-mark stop.
+    /// The location prompt and any held deep link both wait for this to end,
+    /// so neither lands over a card or a stop.
+    private var firstRunIsActive: Bool { onboarding.isCovering || coachMarks.isRunning }
     @State private var authService: AuthService
     /// The signed-in user's own creator profile (their `makers` row). Loaded by
     /// the Profile tab; created/edited via the profile editor. See
@@ -174,6 +200,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 ContentView()
             }
                 .environment(dataService)
+                .environment(coachMarks)
                 .environment(instagramResolver)
                 .environment(authService)
                 .environment(makerProfileService)
@@ -320,6 +347,49 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 // window while the player is up — the cover slides
                 // over the module in the same window.
                 .environment(launchState)
+                .environment(onboarding)
+                // First run. Drawn UNDER the splash overlay below, so the
+                // hand-off still finishes over the top of it and the first
+                // card is already in place when the splash clears.
+                .overlay {
+                    if onboarding.isCovering {
+                        OnboardingRootView()
+                            .environment(onboarding)
+                            // 🔴 Passed in here, not inherited: this overlay
+                            // wraps the chain OUTSIDE the `.environment(...)`
+                            // calls on the content, so nothing set there
+                            // reaches it. Screen 14 reads the catalogue to
+                            // show the makers' real avatars.
+                            .environment(dataService)
+                            .transition(.opacity)
+                    }
+                }
+                // A cold deep link during first run is held, not dropped: it
+                // presents once onboarding closes. Presenting it underneath
+                // would put a detail layer behind the carousel.
+                // Re-derive the bars' visibility whenever onboarding opens or
+                // closes — including a replay started from Settings.
+                .onChange(of: onboarding.holdsBottomModule) { _, _ in
+                    syncBottomModuleVisibility()
+                }
+                // The tour's overlay lives in the bars' window, which must
+                // take every touch while it shows — and give them back after.
+                .onChange(of: coachMarks.isRunning) { _, running in
+                    // Every stop points at Home's controls. "Show tips again"
+                    // is tapped from the Me tab, so bring Home forward first —
+                    // Home stays mounted when hidden, and its controls would
+                    // otherwise report frames for things nobody can see.
+                    if running { appShared.selectedTab = .home }
+                    syncBottomModuleVisibility()
+                }
+                .onChange(of: firstRunIsActive) { _, active in
+                    guard !active, let link = pendingDeepLink else { return }
+                    pendingDeepLink = nil
+                    Task { @MainActor in
+                        try? await Task.sleep(for: .milliseconds(350))
+                        present(link)
+                    }
+                }
                 // The splash covers the whole app, including the inline
                 // fallback bars. It cannot cover the mini-player's separate
                 // window, though — that sits a level above every window in
@@ -422,6 +492,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
             try? await Task.sleep(for: .milliseconds(8))
         }
         await playHandOff()
+        // First run goes here — after the hand-off, so the permission alert
+        // and any deep link land over a finished screen rather than over the
+        // splash. `beginIfNeeded` is a no-op once this install has completed
+        // the current flow version.
+        if onboarding.beginIfNeeded() { return }
         if let link = pendingDeepLink {
             pendingDeepLink = nil
             try? await Task.sleep(for: .milliseconds(350))
@@ -532,6 +607,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             })
                 .environment(launchState)
                 .environment(dataService)
+                .environment(coachMarks)
                 .environment(authService)
                 .environment(followService)
                 .environment(purchaseService)
@@ -572,10 +648,18 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// re-derivation, not a command, which is exactly what makes it a self-heal
     /// rather than one more thing that can be missed.
     private func syncBottomModuleVisibility() {
+        // 🔴 Derived, like the visibility below: while the navigation tour is
+        // up the bars' window claims every touch (its overlay covers the whole
+        // screen); the moment it closes, the claim goes. Re-asserted on every
+        // foreground, so a claim can never outlive the tour.
+        bottomModuleWindow.setClaimsEntireScreen(coachMarks.isRunning)
         bottomModuleWindow.setHidden(
             BottomModuleWindowController.shouldWithdraw(
                 launchHoldsModule: launchHoldsBottomModule,
-                withdrawnByScreen: appShared.hidesBottomModule
+                // Onboarding counts as a screen that withdraws the bars:
+                // their window sits above the main one and would otherwise
+                // paint over the cards and swallow taps on Continue.
+                withdrawnByScreen: appShared.hidesBottomModule || onboarding.holdsBottomModule
             )
         )
     }

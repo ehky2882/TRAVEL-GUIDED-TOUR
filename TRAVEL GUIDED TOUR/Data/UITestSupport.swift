@@ -28,6 +28,9 @@ enum UITestSupport {
 
     /// Pre-populate `LibraryStore` with a handful of saved tours.
     static let seedLibraryArgument = "-UITestSeedLibrary"
+    /// 🔴 Passed by `ScreenshotUITests`. Without it every App Store screenshot
+    /// taken after onboarding ships would be of the welcome carousel.
+    static let skipOnboardingArgument = "-UITestSkipOnboarding"
 
     /// Parsed once. `ProcessInfo.arguments` never changes for a running
     /// process, so caching it keeps `MarqueeText`'s body cheap.
@@ -35,6 +38,7 @@ enum UITestSupport {
 
     static let isMarqueeDisabled = launchArguments.contains(disableMarqueeArgument)
     static let shouldSeedLibrary = launchArguments.contains(seedLibraryArgument)
+    static let shouldSkipOnboarding = launchArguments.contains(skipOnboardingArgument)
 
     // MARK: - Library seeding
 

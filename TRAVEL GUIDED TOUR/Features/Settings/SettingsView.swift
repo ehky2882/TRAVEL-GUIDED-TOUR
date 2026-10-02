@@ -43,6 +43,10 @@ struct SettingsView: View {
     /// Optional, like every other main-window reader: Settings is also built in
     /// previews and tests where no cross-window state is injected.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    /// Optional for the same reason. Drives the HELP section below.
+    @Environment(OnboardingCoordinator.self) private var onboarding: OnboardingCoordinator?
+    @Environment(\.dismiss) private var dismiss
+    @Environment(CoachMarkCenter.self) private var coachMarks: CoachMarkCenter?
     @State private var showingSignIn = false
     /// Drives the "Checking…" label while the catalogue refresh runs.
     /// `DataService.isRefreshing` is private and un-observed, so the only
@@ -269,6 +273,45 @@ struct SettingsView: View {
                 // are canonical on dozent.world so there is one copy to keep
                 // current, rather than a bundled duplicate that silently
                 // drifts out of date.
+                // The revisitable half of the app tour (surface 6 of the six
+                // the owner named). Both rows are no-ops if the coordinator
+                // is absent, which is only ever previews and tests.
+                if let onboarding {
+                    Section(header: sectionHeader("Help")) {
+                        Button {
+                            // 🔴 Settings is a SHEET (`ProfileView`), and the
+                            // onboarding overlay lives at App level — UNDER
+                            // that sheet. Dismiss first, then replay on the
+                            // next runloop turn, or the flow presents where
+                            // nobody can see it. This repo has shipped that
+                            // bug twice.
+                            dismiss()
+                            Task { @MainActor in
+                                try? await Task.sleep(for: .milliseconds(350))
+                                onboarding.begin(replaying: true)
+                            }
+                        } label: {
+                            Label("Take the app tour", systemImage: "sparkles")
+                        }
+
+                        // Runs the five-stop navigation tour again, straight
+                        // away, over Home. Same dismiss-then-run dance as the
+                        // row above, for the same reason: the tour draws in the
+                        // bars' window, which a sheet sits on top of.
+                        if let coachMarks {
+                            Button {
+                                dismiss()
+                                Task { @MainActor in
+                                    try? await Task.sleep(for: .milliseconds(350))
+                                    coachMarks.replay()
+                                }
+                            } label: {
+                                Label("Show tips again", systemImage: "lightbulb")
+                            }
+                        }
+                    }
+                }
+
                 Section(header: sectionHeader("Legal")) {
                     Link(destination: AtlasLegalLinks.privacy) {
                         Label("Privacy Policy", systemImage: "hand.raised")
