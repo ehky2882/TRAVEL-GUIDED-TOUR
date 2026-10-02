@@ -795,3 +795,94 @@ Flickr originals sourced via Openverse. The licence was read from each live Flic
 | `miami-grove_stop2.webp` | W4-2 Plymouth Congregational Church | Jorge Elías | CC BY 2.0 | https://www.flickr.com/photos/italintheheart/11658406774/ |
 | `miami-grove_stop4.webp` | W4-4 Vizcaya entrance, S Miami Ave | Jared | CC BY 2.0 | https://www.flickr.com/photos/jared422/8772177391/ |
 | `miami-water-line_stop2.webp` | W5-2 Venetian Causeway | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/17009368825/ |
+
+
+## Boston — no credit owed (83 images, picked 2026-10-02)
+
+The owner picked these in the Boston Image Picks page. **None is credit-required:** 54 come from Unsplash and 14 from Pexels (both licences need no credit), and 15 are public domain (CC0/PDM, via Openverse). Sources are recorded for provenance. Byte hashes are in `drafts/boston-batch1/image-manifest.json`.
+
+| File | Pick | Licence | Author | Source |
+|------|------|---------|--------|--------|
+| `massachusetts-state-house_hero.webp` | 01-2 | Unsplash | Pix Tresa | https://unsplash.com/photos/massachusetts-state-house-with-golden-dome-and-flags-NfgDqrqaqJQ |
+| `massachusetts-state-house_2.webp` | 01-3 | Pexels | Richard Lathrop | https://www.pexels.com/photo/golden-dome-at-massachusetts-state-house-at-sunset-38276919/ |
+| `massachusetts-state-house_3.webp` | 01-1 | Unsplash | Aubrey Odom | https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-uQStpRlY1qw |
+| `massachusetts-state-house_4.webp` | 01-6 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=47119979 |
+| `boston-common_hero.webp` | 02-3 | Unsplash | Wei Liang | https://unsplash.com/photos/boston-skyline-viewed-from-a-park-at-sunset-1dLS643cqiE |
+| `boston-common_2.webp` | 02-2 | Unsplash | Christopher Ryan | https://unsplash.com/photos/a-field-full-of-american-flags-with-a-city-in-the-background-1JAYItINTpw |
+| `boston-common_3.webp` | 02-8 | Unsplash | Sean Sweeney | https://unsplash.com/photos/boston-skyline-above-boston-common-park-8sCtnULy3aE |
+| `old-state-house_hero.webp` | 03-1 | Unsplash | Leo Heisenberg | https://unsplash.com/photos/cars-parked-on-side-of-the-road-near-brown-concrete-building-during-daytime-LgHghP14qeU |
+| `old-state-house_2.webp` | 03-2 | Unsplash | Herry Sutanto | https://unsplash.com/photos/a-brick-building-with-a-clock-tower-with-old-state-house-in-the-background-L0J_ejfmyKs |
+| `old-state-house_3.webp` | 03-3 | Unsplash | Aubrey Odom | https://unsplash.com/photos/brown-and-white-concrete-building--J0uMCDL2KQ |
+| `old-state-house_4.webp` | 03-10 | Unsplash | Nils Huenerfuerst | https://unsplash.com/photos/a-city-street-at-night-TuNgI21FyMc |
+| `faneuil-hall_hero.webp` | 04-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/a-large-brick-building-with-a-dome-with-faneuil-hall-in-the-background-DibBKV3MTp8 |
+| `faneuil-hall_2.webp` | 04-2 | Public domain (cc0 1.0) | Marco Almbauer | https://commons.wikimedia.org/w/index.php?curid=68436449 |
+| `acorn-street-louisburg-square_hero.webp` | 05-1 | Unsplash | Wei Zeng | https://unsplash.com/photos/brown-brick-building-with-green-tree-yYHnNSZSK5E |
+| `acorn-street-louisburg-square_2.webp` | 05-2 | Unsplash | Mike Bryant | https://unsplash.com/photos/cobblestone-street-lined-with-historic-brick-buildings-5aSGI7qPx5I |
+| `acorn-street-louisburg-square_3.webp` | 05-4 | Public domain (cc0 1.0) | Michael Browning michaelwb | https://commons.wikimedia.org/w/index.php?curid=61872608 |
+| `paul-revere-house_hero.webp` | 06-1 | Public domain (cc0 1.0) | Education Prof | https://commons.wikimedia.org/w/index.php?curid=112487492 |
+| `old-north-church_hero.webp` | 07-1 | Unsplash | Julie Haider | https://unsplash.com/photos/a-church-steeple-towering-over-a-city-street-wufGIg3LBd4 |
+| `uss-constitution_hero.webp` | 09-1 | Unsplash | David Trinks | https://unsplash.com/photos/a-large-sailing-ship-in-the-water-with-a-city-in-the-background-0yMtNlunh_c |
+| `uss-constitution_2.webp` | 09-3 | Unsplash | Sarah Brown | https://unsplash.com/photos/black-galleon-near-dock-mvRKPeJuHJg |
+| `uss-constitution_3.webp` | 09-7 | Unsplash | David Trinks | https://unsplash.com/photos/a-large-sailing-ship-in-the-water-with-a-city-in-the-background-efLu9QmkuIU |
+| `uss-constitution_4.webp` | 09-10 | Unsplash | Lens Fables | https://unsplash.com/photos/deck-of-an-old-sailing-ship-with-cannons-zz7HNj1E_pw |
+| `boston-public-garden_hero.webp` | 10-2 | Unsplash | Aubrey Odom | https://unsplash.com/photos/black-horse-statue-near-green-trees-and-buildings-during-daytime-dwYY9NDj4_Q |
+| `boston-public-garden_2.webp` | 10-1 | Unsplash | Sean Sweeney | https://unsplash.com/photos/man-riding-horse-statue-on-snow-covered-ground-during-daytime-6LOmOsHGQ9w |
+| `boston-public-garden_3.webp` | 10-3 | Unsplash | Taylor Keeran | https://unsplash.com/photos/a-boat-floating-on-top-of-a-lake-next-to-a-lush-green-park-2gWWRPvW3gw |
+| `boston-public-garden_4.webp` | 10-4 | Unsplash | Josephine Baran | https://unsplash.com/photos/woman-sitting-on-bench-cjrULwnJKhI |
+| `boston-public-garden_5.webp` | 10-5 | Unsplash | Spyder Marketing Co. | https://unsplash.com/photos/green-trees-beside-lake-during-daytime-26Yv9t_rCSU |
+| `boston-public-garden_6.webp` | 10-6 | Unsplash | Ana Garnica | https://unsplash.com/photos/a-park-with-trees-and-a-building-in-the-background-znU3QLzfZbw |
+| `boston-public-garden_7.webp` | 10-7 | Unsplash | Yassine Khalfalli | https://unsplash.com/photos/red-and-white-boat-on-water-near-city-buildings-during-daytime-k2mcSzPYHmA |
+| `boston-public-garden_8.webp` | 10-8 | Unsplash | Sean Sweeney | https://unsplash.com/photos/boston-public-garden-pond-and-skyline-5BSN8C8abm4 |
+| `boston-public-garden_9.webp` | 10-9 | Unsplash | Isaac S | https://unsplash.com/photos/weeping-willow-trees-reflected-in-calm-water-at-night-PiqBvbwOaF0 |
+| `boston-public-garden_10.webp` | 10-10 | Unsplash | Isaac S | https://unsplash.com/photos/bridge-over-water-at-night-with-reflections-k-cwISNBsQk |
+| `copley-square_hero.webp` | 11-6 | Pexels | Phil Evenden | https://www.pexels.com/photo/winter-view-of-boston-s-historic-architecture-36989585/ |
+| `copley-square_2.webp` | 11-2 | Unsplash | Piermario Eva | https://unsplash.com/photos/a-group-of-people-walking-in-front-of-a-building-1aH0IU3YAhg |
+| `copley-square_3.webp` | 11-5 | Pexels | Guohua Song | https://www.pexels.com/photo/boston-public-library-with-trinity-church-in-view-38911057/ |
+| `copley-square_4.webp` | 11-7 | Pexels | Mohammed Abubakr | https://www.pexels.com/photo/traffic-in-front-of-the-old-south-church-at-dusk-19828348/ |
+| `fenway-park_hero.webp` | 12-1 | Unsplash | Clark Van Der Beken | https://unsplash.com/photos/text-eA0-9tGE13k |
+| `fenway-park_2.webp` | 12-2 | Unsplash | Wei Zeng | https://unsplash.com/photos/people-watching-football-game-during-daytime-tnn5A1uT1I4 |
+| `fenway-park_3.webp` | 12-3 | Unsplash | Richard Scordato | https://unsplash.com/photos/a-large-boston-red-sox-stadium-sign-on-the-side-of-a-building-IfZRmG5Yl94 |
+| `fenway-park_4.webp` | 12-4 | Unsplash | Ilse Orsel | https://unsplash.com/photos/aerial-view-of-green-and-brown-stadium-during-daytime-71m6FIV9Brw |
+| `fenway-park_5.webp` | 12-7 | Unsplash | NICOLE UMANA | https://unsplash.com/photos/fenway-park-entrance-is-shown-in-the-image-CZ96_KN7YgI |
+| `granary-burying-ground_hero.webp` | 13-1 | Public domain (cc0 1.0) | Marco Almbauer | https://commons.wikimedia.org/w/index.php?curid=76382340 |
+| `park-street-church_hero.webp` | 14-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/a-view-of-a-city-with-tall-buildings-laPXdiH2tS8 |
+| `old-south-meeting-house_hero.webp` | 15-2 | Unsplash | Pascal Bernardon | https://unsplash.com/photos/tower-clock-surrounded-with-high-rise-buildings-during-daytime-z8k6D7gKVws |
+| `old-south-meeting-house_2.webp` | 15-1 | Unsplash | Nathalie Anfuso | https://unsplash.com/photos/a-church-with-a-steeple-and-a-clock-tower-bRUGeCrWDWU |
+| `old-south-meeting-house_3.webp` | 15-3 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=76947597 |
+| `old-south-meeting-house_4.webp` | 15-4 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=76947598 |
+| `boston-city-hall-plaza_hero.webp` | 17-5 | Public domain (cc0 1.0) | Daniel Lobo | https://commons.wikimedia.org/w/index.php?curid=101393489 |
+| `boston-city-hall-plaza_2.webp` | 17-6 | Public domain (cc0 1.0) | — | https://commons.wikimedia.org/w/index.php?curid=96759382 |
+| `boston-city-hall-plaza_3.webp` | 17-1 | Unsplash | Leon Bredella | https://unsplash.com/photos/a-very-tall-building-with-a-clock-on-its-side-BVJtR3YQunE |
+| `boston-city-hall-plaza_4.webp` | 17-2 | Unsplash | CDMA | https://unsplash.com/photos/brown-concrete-building-with-glass-windows-YgofkpLw82M |
+| `quincy-market_hero.webp` | 18-1 | Unsplash | Bernd 📷 Dittrich | https://unsplash.com/photos/a-group-of-people-standing-in-front-of-a-building-p_phiM5drG0 |
+| `quincy-market_2.webp` | 18-2 | Public domain (cc0 1.0) | Marco Almbauer | https://commons.wikimedia.org/w/index.php?curid=72816412 |
+| `charles-street-beacon-hill_hero.webp` | 21-1 | Unsplash | Matt Collamer | https://unsplash.com/photos/brown-brick-building-near-green-trees-during-daytime-UpYF6ibFud0 |
+| `charles-street-beacon-hill_2.webp` | 21-3 | Unsplash | Matías  Ramos | https://unsplash.com/photos/red-car-parked-beside-brown-brick-building-H-lFz_ZuJwQ |
+| `charles-street-beacon-hill_3.webp` | 21-2 | Unsplash | Zoshua Colah | https://unsplash.com/photos/a-city-street-lined-with-parked-cars-and-tall-buildings-Iv0ZWxTW15s |
+| `charles-street-beacon-hill_4.webp` | 21-6 | Unsplash | Wei Liang | https://unsplash.com/photos/street-view-of-historic-buildings-and-parked-cars-in-city-truWglYhWuM |
+| `greenway-north-end_hero.webp` | 24-1 | Pexels | Phil Evenden | https://www.pexels.com/photo/custom-house-tower-seen-from-park-in-boston-usa-13710117/ |
+| `greenway-north-end_2.webp` | 24-3 | Pexels | Phil Evenden | https://www.pexels.com/photo/a-view-of-the-city-from-a-park-bench-27359141/ |
+| `greenway-north-end_3.webp` | 24-4 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=47109888 |
+| `long-wharf-boston_hero.webp` | 25-2 | Pexels | Mohan Nannapaneni | https://www.pexels.com/photo/skyscrapers-on-sea-coast-in-boston-at-sunset-27062463/ |
+| `long-wharf-boston_2.webp` | 25-4 | Pexels | Mohan Nannapaneni | https://www.pexels.com/photo/skyline-of-modern-skyscrapers-in-the-boston-harbor-massachusetts-usa-12754933/ |
+| `long-wharf-boston_3.webp` | 25-9 | Public domain (cc0 1.0) | Emw | https://commons.wikimedia.org/w/index.php?curid=88460632 |
+| `long-wharf-boston_4.webp` | 25-6 | Public domain (cc0 1.0) | Emw | https://commons.wikimedia.org/w/index.php?curid=88460630 |
+| `long-wharf-boston_5.webp` | 25-1 | Pexels | Phil Evenden | https://www.pexels.com/photo/night-cityscape-with-fan-pier-park-in-boston-17424551/ |
+| `long-wharf-boston_6.webp` | 25-8 | Public domain (cc0 1.0) | Emw | https://commons.wikimedia.org/w/index.php?curid=88460629 |
+| `boston-marathon-finish-line_hero.webp` | 27-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/a-group-of-people-standing-on-top-of-a-street-ZvPBlmp7F2g |
+| `christian-science-plaza_hero.webp` | 28-1 | Pexels | Karan Dalal | https://www.pexels.com/photo/cathedral-in-city-in-winter-11012217/ |
+| `christian-science-plaza_2.webp` | 28-2 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=132346430 |
+| `chinatown-gate-boston_hero.webp` | 29-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/snowy-street-scene-in-a-chinatown-with-people-walking-jwskDdqfUGY |
+| `chinatown-gate-boston_2.webp` | 29-3 | Unsplash | Ethan Hansen | https://unsplash.com/photos/a-narrow-city-street-with-tall-buildings-on-both-sides-uyHHQ7wtA1E |
+| `chinatown-gate-boston_3.webp` | 29-4 | Unsplash | Brett Wharton | https://unsplash.com/photos/chinese-archway-with-american-and-taiwanese-flags-poO-Lk9a83Q |
+| `chinatown-gate-boston_4.webp` | 29-2 | Unsplash | Rina Kemppainen | https://unsplash.com/photos/busy-street-market-in-chinatown-with-traditional-archway-and-people-hFaseTAhiKM |
+| `chinatown-gate-boston_5.webp` | 29-5 | Unsplash | Charlie Young | https://unsplash.com/photos/chinatown-gate-with-cars-on-street-DGcrG8IEnaU |
+| `harvard-yard_hero.webp` | 30-2 | Unsplash | Arthur Tseng | https://unsplash.com/photos/a-bunch-of-chairs-that-are-in-the-grass-NRRtq0f2xC0 |
+| `harvard-yard_2.webp` | 30-1 | Unsplash | Pascal Bernardon | https://unsplash.com/photos/people-standing-in-front-of-white-concrete-building-during-daytime-dLifkLvc5t8 |
+| `harvard-yard_3.webp` | 30-3 | Pexels | Trần Phan Phạm Lê | https://www.pexels.com/photo/harvard-statue-and-tourists-on-sunny-day-39714010/ |
+| `harvard-yard_4.webp` | 30-4 | Pexels | Gu Bra | https://www.pexels.com/photo/black-statue-of-a-man-6477521/ |
+| `boston-the-other-bank_stop4.webp` | W4-4-1 | Unsplash | Michael Denning | https://unsplash.com/photos/brown-bridge-over-river-under-blue-sky-during-daytime-nFzZH0Qxy40 |
+| `boston-the-other-bank_stop4-2.webp` | W4-4-2 | Unsplash | Bernd 📷 Dittrich | https://unsplash.com/photos/a-bridge-over-water-4i0VmAIIqvk |
+| `boston-the-other-bank_stop4-3.webp` | W4-4-7 | Pexels | Brandon Benedict | https://www.pexels.com/photo/cars-parked-on-side-of-the-road-9715151/ |
+| `boston-the-other-bank_stop4-4.webp` | W4-4-4 | Unsplash | Bernd 📷 Dittrich | https://unsplash.com/photos/esplanade-riel-with-a-blue-sky-l_zgRHPm3WM |
+| `boston-the-other-bank_stop4-5.webp` | W4-4-6 | Pexels | Phil Evenden | https://www.pexels.com/photo/scenic-view-of-boston-s-skyline-and-river-29864742/ |

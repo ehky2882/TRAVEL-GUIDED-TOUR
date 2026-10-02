@@ -58,4 +58,7 @@ The walks come from the same drop as `drafts/boston-batch1/` (the author's hando
 
 ## Owed before wire-in
 - **29 MP3s.**
-- **Images for the 6 connectives.** Every other segment reuses its single's hero. Intros carry no image, per the walk convention.
+- **Images for the connectives:**
+  - **W4-4 is DONE:** `boston-the-other-bank_stop4.webp`, plus 4 extras.
+  - **Still owed: W2-5** Phillips Street, **W3-2** Haymarket, **W4-3** City Square, **W5-2** Joy Street and **W5-3** Government Center. The picker had verified photos for W3-2 and W5-3, but none was picked.
+  - Every other segment reuses its single's hero. Intros carry no image, per the walk convention.
