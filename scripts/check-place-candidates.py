@@ -486,6 +486,14 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
     n_declined = sum(1 for r in tight + near if _declined(r))
     tight = [r for r in tight if not _declined(r)]
     near = [r for r in near if not _declined(r)]
+    # The same record applies to a coincident GROUP whose titles are exactly a
+    # declined pair: the owner's 2026-10-02 "no" to the Grand Egyptian Museum +
+    # Khufu's Solar Boat was still being offered here, because only TIGHT and
+    # NEAR read it. `make-places.py` already refuses to mint it.
+    def _declined_group(members):
+        return frozenset(e.get("title") for _, e in members) in ruled
+    n_declined += sum(1 for _, members in exact if _declined_group(members))
+    exact = [(c, m) for c, m in exact if not _declined_group(m)]
 
     if names:
         out.write(f"\nNAME — {len(names)} unplaced pair(s) carrying the SAME NAME "
