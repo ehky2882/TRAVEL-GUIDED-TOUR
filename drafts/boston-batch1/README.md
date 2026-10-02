@@ -8,7 +8,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 
 ## Owed before wire-in
 1. **Audio:** 30 MP3s. Name them `<slug>.mp3` from the table below (gh-pages `audio/`).
-2. **Images: 24 of 30 tours done (2026-10-02).** Still owed: **08** Bunker Hill Monument, **19** Shaw Memorial, **20** African Meeting House, **22** Hanover Street, **23** Copp's Hill, and **26** Commonwealth Avenue Mall. For each, the picker had no usable or chosen photo, so it needs an owner photo or a re-run.
+2. **Images: 25 of 30 tours done (2026-10-02).** Still owed: **19** Shaw Memorial, **20** African Meeting House, **22** Hanover Street, **23** Copp's Hill, and **26** Commonwealth Avenue Mall. For each, the picker had no usable or chosen photo, so it needs an owner photo or a re-run.
 
 ## Coordinates: derived 2026-10-02, audited
 **The scripts carry no coordinates.** Each point was geocoded from the script's own position paragraph against OpenStreetMap (Nominatim; Overpass is blocked from web sessions). The OSM object is named in every row.
@@ -80,6 +80,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 | 05 | `acorn-street-louisburg-square_hero.webp` | `acorn-street-louisburg-square_2.webp`, `acorn-street-louisburg-square_3.webp` |
 | 06 | `paul-revere-house_hero-2.webp` (owner photo, 2026-10-02) | `paul-revere-house_hero.webp` (the original pick 06-1, kept under its filename) |
 | 07 | `old-north-church_hero-2.webp` (owner photo, 2026-10-02) | `old-north-church_hero.webp` (the original pick 07-1, kept under its filename) |
+| 08 | `bunker-hill-monument_hero.webp` (owner photo, 2026-10-02) | — |
 | 09 | `uss-constitution_hero.webp` | `uss-constitution_2.webp`, `uss-constitution_3.webp`, `uss-constitution_4.webp` |
 | 10 | `boston-public-garden_hero.webp` | `boston-public-garden_2.webp`, `boston-public-garden_3.webp`, `boston-public-garden_4.webp`, `boston-public-garden_5.webp`, `boston-public-garden_6.webp`, `boston-public-garden_7.webp`, `boston-public-garden_8.webp`, `boston-public-garden_9.webp`, `boston-public-garden_10.webp` |
 | 11 | `copley-square_hero.webp` | `copley-square_2.webp`, `copley-square_3.webp`, `copley-square_4.webp` |
