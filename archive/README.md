@@ -354,3 +354,4 @@ Full text for every one of them is in
 - [HANDOFF-261002-random-and-jojo-pins.md](HANDOFF-261002-random-and-jojo-pins.md) — **114 link pins** (98 creators; one replaced a cross-posted IG duplicate) from Edward's 113-link note, 21 new places + 9 joins; Karl Marx-Hof pin moved 1.3 km onto the building; 3 posts left to open PR #1072.
 - [HANDOFF-261002-boston-live.md](HANDOFF-261002-boston-live.md) — **Boston launched:** Atlas Studio BOS, 30 singles + 5 walks (35 tours, 59 MP3s, 96 images).
 - [HANDOFF-261002-next-city.md](HANDOFF-261002-next-city.md) — **Playbook for the next city**, from Boston: download, stage, coordinates, the image picker, audio, wiring, checks and post-launch tags and places. Read this first in a fresh chat.
+- [HANDOFF-261002-triage-batch.md](HANDOFF-261002-triage-batch.md) — **33 link pins** (18 creators, 7 new) triaged from 43 links; 10 dropped (9 duplicates, 1 unreadable); 8 place questions on Edward's board.
