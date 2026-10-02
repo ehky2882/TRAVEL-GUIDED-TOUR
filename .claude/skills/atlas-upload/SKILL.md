@@ -400,8 +400,11 @@ Full process in `CLAUDE.md` § Image Pipeline. The short version:
   Gate B: is this the required subject, with the look-alikes named explicitly?
   A single compound prompt gets answered on subject match only, and once shipped
   a set of 19th-century prints to the owner as "photos".
-- Present candidates as **individual full-size images with a number burned in**,
-  sent inline — never a small contact-sheet grid. The owner picks by number.
+- Present candidates in the **image picker**, which is how the owner likes to
+  choose: `python3 scripts/make-image-picker.py <dir> --city <City>`, then
+  publish the page with the Artifact tool. The owner taps the hero, then the
+  gallery photos, and pastes back the lines it assembles. Never use a small
+  contact-sheet grid. CLAUDE.md § Image Pipeline step 3 has the details.
 - Finish with `python3 scripts/check-image-duplicates.py --maker <CODE>`.
 
 ---

@@ -37,3 +37,10 @@
 - 22's hero looks AI-edited.
 
 **Lesson:** pushing gh-pages a few minutes apart cancels each Pages deploy, so batch the pushes (`docs/lessons.md`).
+
+## Follow-up the same day (#1119)
+- **Architect tags added.** Nine names are now in the vocabulary (Bulfinch, H. H. Richardson, Banner, Harrison, Gilman, Cossutta, James McLaughlin, Kallmann McKinnell & Knowles, Parris), tagging 11 BOS tours. Saint-Gaudens was left out because he was a sculptor.
+- **W4-4 retitled "Bill Russell Bridge".** 🔴 **Owner decision: leave the audio as recorded.** The narration still says "Charlestown Bridge", and that is accepted, so do not flag it again or ask for a re-record.
+- **New place: City Hall Plaza.** It holds the City Hall Plaza single and the *Under the Artery* walk. The @ninosbuildings "Boston City Hall" pin is deliberately **not** a member (owner).
+- 🔴 **Trinity Church (pin) and Copley Square (BOS tour) stay SEPARATE.** The owner ruled no place page, so do not offer it again.
+- **The image picker is now a repo tool.** `scripts/make-image-picker.py` with `scripts/image-picker/template.html` is the owner's preferred way to choose images; see CLAUDE.md § Image Pipeline step 3. It was rebuilt from this session's Boston picker, and regenerating Boston from its `data.json` gives the same page byte for byte.

@@ -1,0 +1,152 @@
+<title>__TITLE__</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Libre+Franklin:wght@400;600&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: sticky header + jump chips, one section per tour, auto-fill photo grid, fixed tray with the copyable summary */
+:root{
+  --bg:#EEF0F1; --panel:#FFFFFF; --edge:#C9CFD4; --ink:#1B2430; --muted:#5D6A76; --shade:#DDE2E6;
+  --brick:#A63D2F; --navy:#24456B; --on-accent:#FFFFFF; --warn:#9A5B00;
+  --display:"Zilla Slab",Rockwell,Georgia,serif; --body:"Libre Franklin",ui-sans-serif,system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#11161C; --panel:#19212A; --edge:#2D3946; --ink:#E4E9EE; --muted:#93A1AE; --shade:#222C37;
+  --brick:#E07A69; --navy:#7FA6D4; --on-accent:#0E141A; --warn:#E3A84E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11161C; --panel:#19212A; --edge:#2D3946; --ink:#E4E9EE; --muted:#93A1AE; --shade:#222C37;
+  --brick:#E07A69; --navy:#7FA6D4; --on-accent:#0E141A; --warn:#E3A84E; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:0 170px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--bg);border-bottom:1px solid var(--edge);padding-block:12px 10px;margin-bottom:22px}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.6vw,32px);margin:0;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px}
+.tally{margin-left:auto;font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-top:10px;scrollbar-width:thin}
+.chips a{flex:0 0 auto;font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--ink);border:1px solid var(--edge);border-radius:3px;padding:2px 7px;background:var(--panel)}
+.chips a.done{background:var(--navy);color:var(--on-accent);border-color:var(--navy)}
+.chips a.none{color:var(--warn);border-style:dashed}
+.intro{background:var(--panel);border:1px solid var(--edge);border-radius:4px;padding:14px 16px;margin-bottom:28px;max-width:68ch}
+.intro p{margin:0 0 8px}.intro p:last-child{margin:0}
+.intro label{display:inline-flex;gap:8px;align-items:center;font-weight:600;cursor:pointer}
+.k-hero{color:var(--brick);font-weight:600}.k-gal{color:var(--navy);font-weight:600}
+section.stop{margin-bottom:36px;scroll-margin-top:120px}
+.hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:12px}
+.no{font-family:var(--mono);font-weight:600;font-size:13px;background:var(--ink);color:var(--bg);padding:2px 8px;border-radius:3px}
+.hd h2{font-family:var(--display);font-weight:600;font-size:19px;margin:0;min-width:0}
+.cnt{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.warn{color:var(--warn);font-weight:600}
+.empty{border:1px dashed var(--edge);border-radius:4px;padding:14px 16px;color:var(--muted);max-width:68ch}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{position:relative;background:var(--panel);border:1px solid var(--edge);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.card[hidden]{display:none!important}
+.pick{all:unset;cursor:pointer;display:block}
+.pick:focus-visible{outline:2px solid var(--navy);outline-offset:-2px}
+.card img{display:block;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--shade)}
+.meta{padding:6px 8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.pill{border:1px solid var(--edge);border-radius:99px;padding:0 7px}
+.pill.cr{color:var(--warn);border-color:var(--warn)}
+.mark{margin-left:auto;font-weight:600;font-size:12px;color:var(--ink)}
+.view{all:unset;cursor:pointer;position:absolute;top:6px;right:6px;font:600 11px var(--mono);background:var(--panel);color:var(--ink);border:1px solid var(--edge);border-radius:3px;padding:2px 7px;opacity:.92}
+.view:focus-visible{outline:2px solid var(--navy)}
+.card[data-pick="hero"]{border-color:var(--brick);box-shadow:inset 0 0 0 3px var(--brick)}
+.card[data-pick="hero"] .mark{color:var(--brick)}
+.card[data-pick="gal"]{border-color:var(--navy);box-shadow:inset 0 0 0 3px var(--navy)}
+.card[data-pick="gal"] .mark{color:var(--navy)}
+footer.tray{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--panel);border-top:1px solid var(--edge);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px))}
+.trayrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding-inline:16px}
+#out{flex:1 1 300px;min-width:0;width:100%;font-family:var(--mono);font-size:12px;background:var(--bg);color:var(--ink);border:1px solid var(--edge);border-radius:3px;padding:7px 9px;height:62px;resize:vertical}
+button.act{font:600 14px var(--body);background:var(--navy);color:var(--on-accent);border:0;border-radius:3px;padding:9px 16px;cursor:pointer}
+button.ghost{background:transparent;color:var(--muted);border:1px solid var(--edge)}
+button.act:focus-visible{outline:2px solid var(--brick);outline-offset:2px}
+dialog.lb{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh}
+dialog.lb::backdrop{background:rgba(8,12,16,.88)}
+dialog.lb img{max-width:96vw;max-height:80vh;display:block;border-radius:3px}
+.lbbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:#E4E9EE;padding:8px 2px}
+.lbbar button{font:600 13px var(--body);border-radius:3px;padding:7px 12px;cursor:pointer;border:1px solid #5D6A76;background:transparent;color:#E4E9EE}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="top"><div class="wrap" style="padding-block:0">
+  <div class="brand"><h1>__HEADING__</h1><span class="sub">__SUBTITLE__</span><span class="tally" id="tally"></span></div>
+  <nav class="chips" id="chips" aria-label="Jump to a tour"></nav>
+</div></header>
+
+<div class="wrap">
+  <div class="intro">
+    <p><strong>Tap a photo to pick it.</strong> The first photo you pick for a tour becomes the <span class="k-hero">hero</span>. Each one after that joins the <span class="k-gal">gallery</span>, in the order you tap. Tap again to unpick. Use <strong>View</strong> to see a photo full size.</p>
+    <p>Every photo here passed two automated checks (a real modern photograph, and the right place), and then a look by eye. Codes like <code>03-5</code> match the numbered images in our chat.</p>
+    <p>Photos marked <span class="warn">CREDIT NEEDED</span> are Creative Commons and need a photographer credit, which we keep in the repo since the app has no credit line. <label><input type="checkbox" id="hidecr"> Hide them</label></p>
+    <p>Your picks are saved in this browser as you go. When you're done, tap <strong>Copy picks</strong> and paste the summary to me.</p>
+  </div>
+  <div id="stops"></div>
+</div>
+
+<footer class="tray"><div class="trayrow">
+  <textarea id="out" readonly aria-label="Your picks"></textarea>
+  <button class="act" id="copy" type="button">Copy picks</button>
+  <button class="act ghost" id="clear" type="button">Clear all</button>
+</div></footer>
+
+<dialog class="lb" id="lb">
+  <div class="lbbar"><span id="lbcode"></span><span><button id="lbpick" type="button">Pick</button> <button id="lbclose" type="button">Close</button></span></div>
+  <img id="lbimg" alt="">
+  <div class="lbbar"><span id="lbmeta"></span></div>
+</dialog>
+
+<script>
+const DATA = __DATA__;
+const KEY='__KEY__';
+let picks={}; try{picks=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){picks={}}
+let hideCr=false; try{hideCr=localStorage.getItem(KEY+'-hidecr')==='1'}catch(e){}
+const $=id=>document.getElementById(id);
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function state(num,code){const a=picks[num]||[];const i=a.indexOf(code);if(i<0)return null;return i===0?{k:'hero',l:'HERO'}:{k:'gal',l:'gallery '+i}}
+function toggle(num,code){const a=picks[num]||(picks[num]=[]);const i=a.indexOf(code);if(i<0)a.push(code);else a.splice(i,1);if(!a.length)delete picks[num];save();paint()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(picks))}catch(e){}}
+function render(){
+  const chips=$('chips'), stops=$('stops');
+  for(const s of DATA){
+    const a=document.createElement('a');a.href='#s'+s.num.replace('-','');a.textContent=s.num;a.dataset.num=s.num;if(!s.imgs.length)a.className='none';chips.appendChild(a);
+    const sec=document.createElement('section');sec.className='stop';sec.id='s'+s.num.replace('-','');
+    const n=s.imgs.length, thin=n>0&&n<4;
+    sec.innerHTML='<div class="hd"><span class="no">'+s.num+'</span><h2>'+esc(s.title)+'</h2><span class="cnt">'+n+' photo'+(n==1?'':'s')+(thin?' · <span class="warn">thin, your own photo may be better</span>':'')+'</span></div>';
+    if(!n){sec.insertAdjacentHTML('beforeend','<div class="empty">No photo passed the checks for this one. Send your own photo in the chat, or tell me which tour\'s photo to reuse here.</div>');stops.appendChild(sec);continue}
+    const g=document.createElement('div');g.className='grid';
+    for(const im of s.imgs){
+      const c=document.createElement('div');c.className='card';c.dataset.num=s.num;c.dataset.code=im.code;c.dataset.cr=im.credit?'1':'0';
+      c.innerHTML='<button class="pick" type="button" aria-label="Pick '+im.code+'"><img loading="lazy" src="'+im.f+'" alt="Candidate '+im.code+' for '+esc(s.title)+'"></button>'+
+        '<button class="view" type="button">View</button>'+
+        '<div class="meta"><span class="pill'+(im.credit?' cr':'')+'">'+esc(im.lic)+(im.credit?' · CREDIT NEEDED':'')+'</span><span class="mark">'+im.code+'</span></div>';
+      c.querySelector('.pick').addEventListener('click',()=>toggle(s.num,im.code));
+      c.querySelector('.view').addEventListener('click',()=>openLb(im,s));
+      g.appendChild(c);
+    }
+    sec.appendChild(g);stops.appendChild(sec);
+  }
+  $('hidecr').checked=hideCr;
+  $('hidecr').addEventListener('change',e=>{hideCr=e.target.checked;try{localStorage.setItem(KEY+'-hidecr',hideCr?'1':'0')}catch(err){}paint()});
+  paint();
+}
+function paint(){
+  document.querySelectorAll('.card').forEach(c=>{const st=state(c.dataset.num,c.dataset.code);
+    if(st){c.dataset.pick=st.k;c.querySelector('.mark').textContent=c.dataset.code+' · '+st.l}else{delete c.dataset.pick;c.querySelector('.mark').textContent=c.dataset.code}
+    c.hidden=hideCr&&c.dataset.cr==='1'&&!st});
+  document.querySelectorAll('#chips a').forEach(a=>a.classList.toggle('done',!!picks[a.dataset.num]));
+  const lines=[];for(const s of DATA){const a=picks[s.num];if(a&&a.length)lines.push(s.num+' '+s.slug+': '+a[0]+' hero'+(a.length>1?', '+a.slice(1).join(', '):''))}
+  $('out').value=lines.length?lines.join('\n'):'No picks yet. Tap a photo to start.';
+  const withImgs=DATA.filter(s=>s.imgs.length).length;
+  $('tally').textContent=Object.keys(picks).length+' of '+withImgs+' picked';
+}
+$('copy').addEventListener('click',async e=>{const b=e.currentTarget;try{await navigator.clipboard.writeText($('out').value);b.textContent='Copied'}catch(err){$('out').removeAttribute('readonly');$('out').focus();$('out').select();b.textContent='Now copy the selected text'}setTimeout(()=>b.textContent='Copy picks',2200)});
+let armed=false;
+$('clear').addEventListener('click',e=>{const b=e.currentTarget;if(!armed){armed=true;b.textContent='Tap again to clear';setTimeout(()=>{armed=false;b.textContent='Clear all'},2500);return}armed=false;b.textContent='Clear all';picks={};save();paint()});
+const lb=$('lb');let cur=null;
+function openLb(im,s){cur={im,s};$('lbimg').src=im.f;$('lbimg').alt='Candidate '+im.code;$('lbcode').textContent=im.code+' · '+s.title;
+  $('lbmeta').textContent=im.w+'×'+im.h+' original · '+im.lic+(im.credit?' · credit: '+(im.by||'see source'):'');lbBtn();if(lb.showModal)lb.showModal()}
+function lbBtn(){const st=cur&&state(cur.s.num,cur.im.code);$('lbpick').textContent=st?'Unpick ('+st.l+')':'Pick'}
+$('lbpick').addEventListener('click',()=>{if(cur){toggle(cur.s.num,cur.im.code);lbBtn()}});
+$('lbclose').addEventListener('click',()=>lb.close());
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+render();
+</script>
