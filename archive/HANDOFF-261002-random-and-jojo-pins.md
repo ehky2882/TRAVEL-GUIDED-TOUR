@@ -1,7 +1,7 @@
-# Handoff 2026-10-02: 114 link pins from Edward's "Random links" + "Jojo's in NYC" note
+# Handoff 2026-10-02: 113 link pins from Edward's "Random links" + "Jojo's in NYC" note
 
 ## What shipped (one PR, branch `claude/link-pins-261002`)
-- **114 link pins from 98 creators**, triaged from 113 links Edward pasted from an iCloud note
+- **113 link pins from 97 creators**, triaged from 113 links Edward pasted from an iCloud note
   (57 "Random links started 9/20", 56 "Jojo's in NYC"; the note itself was shared to named people
   only, `publicPermission: NONE`, so the text had to be pasted).
 - Edward ruled on every question himself (he is the owner, so these are rulings, not proposals):
@@ -43,15 +43,27 @@
 🔴 **PR #1072** (contributor account, 12 pins, opened 2026-09-22) is still unmerged. If it is
 closed instead, those three posts need minting again.
 
-## Places: put to Edward, not yet applied
-`check-place-candidates.py` marks ~24 groups with a new pin EXACT · PROVEN (Soane, Kioi Seido,
-Rookery, Freedom Tower, Kunstmuseum Basel, Jefferson Market Library, Carpenter Center, Huntington
-Beach Library, Karl-Marx-Hof, Bourse de Commerce, Igreja do Sagrado Coração, The Ranch ×3, Helena,
-Le Procope, Aon Center, The Breakers, The Elms, Piedmont Park), and `join-places.py` finds 7 joins
-into existing places (Lucas Museum, HKDI, Orsay, Battersea, Louisiana, The Henderson, Magazzino).
-ASK groups: CAM Gulbenkian, Albertine/Venetian Room, TWA Hotel/Connie Bar, Pullman, Ushaw.
-Part-vs-whole left alone: Thorne Rooms/Art Institute, Telephone Box/Royal Academy. Co-located but
-not the same thing: Little Prince sculpture/Albertine.
+## Places: applied in this PR on Edward's answer ("a - yes, b - yes, c - yes")
+- **18 new PROVEN places** (`make-places.py --only PROVEN` run on a copy, and only the groups that
+  contain a pin from this batch carried across): Aon Center, Bourse de Commerce, Carpenter Center,
+  Freedom Tower, Helena Modern Riviera, Huntington Beach Central Library, Igreja do Sagrado Coração
+  de Jesus, Jefferson Market Library, Karl Marx-Hof, Kioi Seido, Kunstmuseum Basel, Le Procope,
+  Piedmont Park, Sir John Soane's Museum, The Breakers, The Elms, The Ranch Hudson Valley, The Rookery.
+- **3 more new places** from the judgement groups: Albertine Books (with the Venetian Room), Pullman
+  National Historical Park (with the Pullman Historic District pin), and Ushaw Historic House,
+  Chapels and Gardens (two posts by one creator).
+- **9 joins into existing places:** Lucas Museum, HKDI, Musée d'Orsay, Battersea, Louisiana,
+  The Henderson, Magazzino, plus Gulbenkian Modern Art Centre → CAM and the Connie Bar → TWA Flight Center.
+- 🔴 **Not touched:** the Bruder Klaus, Petronas and Largo di Torre Argentina joins, and the
+  2026-10-01 batch's PROVEN groups. Those are still on Edward's board
+  (`status/owner/place-batch-261001.md`), and a plain `--apply` would have swept them in.
+- Left as they are: Thorne Rooms/Art Institute and Telephone Box/Royal Academy (part vs whole), and
+  the Little Prince sculpture beside Albertine (co-located, not the same thing).
+
+## Held out for Edward
+| Link | Why |
+|---|---|
+| https://www.tiktok.com/t/ZP8TBpNmA/ (TikTok @nycartgal, Chinese Scholar's Garden) | the **same video and caption** as the live IG @oneyearinparis pin, so apparently one person cross-posting from two accounts. `check-image-duplicates.py` caught it ("visually identical"). Held back because adding later is cheap and deleting after merge needs an SQL paste |
 
 ## Gotchas
 - **Two posts from one creator on one subject produce the SAME hero filename.** The Elms
