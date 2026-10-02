@@ -6,4 +6,4 @@ _opened 2026-10-02 · clear with `git rm status/owner/boston-audio-images.md`_
 
 **Images:** 83 were picked and are live on 2026-10-02. Still owed:
 - **1 tour:** 22 Hanover Street.
-- **3 walk stops:** W2-5 Phillips Street, W4-3 City Square, W5-2 Joy Street.
+- **Walk stops:** none. W2-5, W4-3 and W5-2 reuse existing images (owner, 2026-10-02).
