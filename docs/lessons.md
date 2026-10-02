@@ -3695,3 +3695,13 @@ old hero, byte-identical to its single's `_3` gallery image. The validator passe
 is well-formed whether or not it exists. `check-image-duplicates.py --maker <CODE>` caught both kinds.
 **At wire-in, take a reused stop's image from the single's current `heroImageURL` in `Tours.json`, never
 from the staging document.**
+
+## gh-pages pushes a few minutes apart cancel each other's deploy (2026-10-02)
+
+The owner pasted Boston photos one at a time, and each was pushed to gh-pages as it arrived, 1 to 8 minutes
+apart. A Pages build takes about 8–10 minutes, and **each new push cancels the deploy still running**.
+Eight deploys in a row ended `cancelled`. So for an hour **none** of 92 images was live, including the
+first batch, pushed long before. The live check returned 404 on every file, and the branch looked fine
+throughout. **Batch the uploads: commit each photo locally, push gh-pages once when the owner pauses,
+then hash-verify the live URLs.** If a hash check fails across the board, list the `pages build and
+deployment` runs before suspecting the files.
