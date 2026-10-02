@@ -208,6 +208,19 @@
   "sha": "c702cae7a98a8fd689e1eac38363282e35532aa95d33c3c7ec979572ac6e79ee"
  },
  {
+  "code": "owner",
+  "num": "06",
+  "slug": "paul-revere-house",
+  "name": "paul-revere-house_hero-2.webp",
+  "src": "owner",
+  "lic": "owner-supplied",
+  "credit": "",
+  "page": "",
+  "orig": "1448x1086",
+  "upscaled": false,
+  "sha": "652685a39c55"
+ },
+ {
   "code": "06-1",
   "num": "06",
   "slug": "paul-revere-house",

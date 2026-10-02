@@ -803,6 +803,7 @@ The owner picked these in the Boston Image Picks page. **None is credit-required
 
 | File | Pick | Licence | Author | Source |
 |------|------|---------|--------|--------|
+| `paul-revere-house_hero-2.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `massachusetts-state-house_hero.webp` | 01-2 | Unsplash | Pix Tresa | https://unsplash.com/photos/massachusetts-state-house-with-golden-dome-and-flags-NfgDqrqaqJQ |
 | `massachusetts-state-house_2.webp` | 01-3 | Pexels | Richard Lathrop | https://www.pexels.com/photo/golden-dome-at-massachusetts-state-house-at-sunset-38276919/ |
 | `massachusetts-state-house_3.webp` | 01-1 | Unsplash | Aubrey Odom | https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-uQStpRlY1qw |

@@ -78,7 +78,7 @@ Boston is the **39th studio**. The city already has **28 creator link pins** but
 | 03 | `old-state-house_hero.webp` | `old-state-house_2.webp`, `old-state-house_3.webp`, `old-state-house_4.webp` |
 | 04 | `faneuil-hall_hero.webp` | `faneuil-hall_2.webp` |
 | 05 | `acorn-street-louisburg-square_hero.webp` | `acorn-street-louisburg-square_2.webp`, `acorn-street-louisburg-square_3.webp` |
-| 06 | `paul-revere-house_hero.webp` | — |
+| 06 | `paul-revere-house_hero-2.webp` (owner photo, 2026-10-02) | `paul-revere-house_hero.webp` (the original pick 06-1, kept under its filename) |
 | 07 | `old-north-church_hero.webp` | — |
 | 09 | `uss-constitution_hero.webp` | `uss-constitution_2.webp`, `uss-constitution_3.webp`, `uss-constitution_4.webp` |
 | 10 | `boston-public-garden_hero.webp` | `boston-public-garden_2.webp`, `boston-public-garden_3.webp`, `boston-public-garden_4.webp`, `boston-public-garden_5.webp`, `boston-public-garden_6.webp`, `boston-public-garden_7.webp`, `boston-public-garden_8.webp`, `boston-public-garden_9.webp`, `boston-public-garden_10.webp` |
