@@ -1,0 +1,30 @@
+01	independence-hall	39.948887	-75.150026	40	history	building (OSM way 25271595); script on the north side of Chestnut St between 5th and 6th, facing it
+02	liberty-bell-center	39.949954	-75.150205	30	history	building (way 40086417); script on the Chestnut St sidewalk at its south end
+03	presidents-house-site	39.950465	-75.150089	25	history	open-air site (way 87325590) at 6th & Market, where the script stands
+04	elfreths-alley	39.952772	-75.142381	40	architecture	the alley (way 12150950); script at its mouth on 2nd St looking east
+05	christ-church-philadelphia	39.950730	-75.143880	40	sacredSites	church (way 332757057); script on 2nd St beside it
+06	philadelphia-city-hall	39.952399	-75.162989	70	architecture	building (relation 4720912); the courtyard is its centre, where the script stands
+07	philadelphia-museum-of-art-steps	39.964945	-75.180080	70	culturalHeritage	the East Terrace steps (way 1387913459); script at Eakins Oval then the top of the steps
+08	reading-terminal-market	39.953144	-75.159049	50	foodAndDrink	market (way 42784822); script at 12th & Arch
+09	rittenhouse-square	39.949466	-75.171890	70	natureAndParks	park (way 32122312); script in the middle by the pool
+10	franklin-court	39.949638	-75.146596	40	history	courtyard (relation 9808332); script under the steel frame
+11	logan-square	39.957937	-75.170592	60	natureAndParks	Swann Memorial Fountain (node 1015369635), Logan Circle; script at the fountain's rim
+12	washington-square-philadelphia	39.947095	-75.152708	50	history	memorial (node 11084813612), west side of the square; script on its plaza
+13	carpenters-hall	39.948142	-75.147215	35	history	building (way 261314259); script in its court off Chestnut St
+14	betsy-ross-house	39.952285	-75.144625	30	history	building (way 353034105); script in front on Arch St
+15	congress-hall	39.948981	-75.150645	25	history	building (way 40083518); script at 6th & Chestnut
+16	second-bank-of-the-united-states	39.948572	-75.148410	35	architecture	building (way 261314260); script on the south side of Chestnut facing the portico
+17	mother-bethel-ame-church	39.943325	-75.151761	40	sacredSites	church (way 338920265), 6th & Lombard; script across the corner
+18	head-house-square	39.942647	-75.145359	50	history	the Shambles (way 705214912); script at the Pine St end
+19	penns-landing	39.943521	-75.140996	60	history	the cruiser Olympia (way 170349584) at the Seaport Museum basin, where the script stands
+20	race-street-pier	39.953099	-75.138665	60	natureAndParks	pier (way 259095154); script at the pier tip
+21	eastern-state-penitentiary	39.968341	-75.172663	80	history	prison (way 320052082); script on Fairmount Ave opposite the gatehouse. Same point as 3 existing creator pins
+22	fairmount-water-works	39.966189	-75.183525	60	history	Water Works (node 1847081969); script on the terrace above the dam
+23	boathouse-row	39.969414	-75.187107	100	architecture	the row (relation 15693769) along the east bank of the Schuylkill
+24	rodin-museum	39.961929	-75.173951	50	visualArt	museum (way 183625405); script at the Parkway gate
+25	masonic-temple-philadelphia	39.953620	-75.162657	35	architecture	building (way 309294828), 1 N Broad St; script on the west sidewalk of Broad
+26	chinatown-friendship-gate	39.953719	-75.156265	30	culturalHeritage	the gate (way 486671294) over 10th St
+27	franklin-square	39.955658	-75.150435	70	natureAndParks	park (way 705322048); script at the central fountain
+28	christ-church-burial-ground	39.951776	-75.148134	40	history	cemetery (way 49961134) at 5th & Arch; the script then walks to Arch Street Meeting House (way 298694561)
+29	love-park	39.954149	-75.165745	50	natureAndParks	park (way 50171181); script beside the LOVE sculpture
+30	one-liberty-place	39.952579	-75.168134	60	architecture	tower (way 42784982); script at 16th & Market

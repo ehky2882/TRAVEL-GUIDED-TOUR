@@ -1,0 +1,44 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-10-02T20:31:09Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/720b58b8-42f0-541c-9a00-4d0869fe5158/scratchpad/fakedrop --city Philadelphia, United States --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/720b58b8-42f0-541c-9a00-4d0869fe5158/scratchpad/coordinate-audit.txt
+auditing 30 coordinate(s) against 'Philadelphia, United States'  (~1.1 min at Nominatim's rate limit)
+
+  [  1/30] Philadelphia City Hall             fwd      0m  at: William Penn
+  [  2/30] Reading Terminal Market            fwd      0m  at: Godshall's Poultry
+  [  3/30] Rodin Museum                       fwd      0m  at: Rodin Garden Bar
+  [  4/30] Chinatown Friendship Gate          fwd      0m  at: Chinatown Friendship Gate
+  [  5/30] One Liberty Place                  fwd      0m  at: -
+  [  6/30] Boathouse Row                      fwd      0m  at: #6 Boathouse Row
+  [  7/30] Head House Square                  fwd      0m  at: Head House Square
+  [  8/30] Rocky Steps                        fwd      0m  at: Rocky Steps
+  [  9/30] Franklin Court                     fwd      0m  at: Franklin Court Courtyard
+  [ 10/30] Betsy Ross House                   fwd      0m  at: Betsy Ross House
+  [ 11/30] Independence Hall                  fwd      0m  at: Independence Hall
+  [ 12/30] Rittenhouse Square                 fwd      0m  at: -
+  [ 13/30] USS Olympia                        fwd      0m  at: Penn's Landing Operations
+  [ 14/30] Christ Church Burial Ground        fwd      0m  at: Congregation Mikveh Israel
+  [ 15/30] President's House                  fwd      0m  at: President's House
+  [ 16/30] Masonic Temple                     fwd      0m  at: The Philadelphia Masonic Templ
+  [ 17/30] Eastern State Penitentiary         fwd      0m  at: Eastern State Penitentiary
+  [ 18/30] Second Bank of the United States   fwd      0m  at: Portrait Gallery in the Second
+  [ 19/30] Carpenters' Hall                   fwd      0m  at: Carpenters' Hall
+  [ 20/30] Tomb of the Unknown Soldier of the fwd      0m  at: Tomb of the Unknown Soldier of
+  [ 21/30] Congress Hall                      fwd      0m  at: Congress Hall
+  [ 22/30] Elfreth's Alley                    fwd      0m  at: -
+  [ 23/30] Franklin Square                    fwd      0m  at: Franklin Square Fountain
+  [ 24/30] Love Park                          fwd      0m  at: -
+  [ 25/30] Race Street Pier                   fwd      0m  at: -
+  [ 26/30] Fairmount Water Works Interpretive fwd      0m  at: Fairmount Water Works Interpre
+  [ 27/30] Christ Church                      fwd     24m  at: Christ Church Philadelphia
+  [ 28/30] Swann Memorial Fountain            fwd      0m  at: Swann Memorial Fountain
+  [ 29/30] Mother Bethel African Methodist Ep fwd      0m  at: Mother Bethel African Methodis
+  [ 30/30] Liberty Bell Center                fwd      0m  at: Liberty Bell
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+========================================================================
+BIAS - 13/27 north of true position, median +0.0 m, p = 1
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> No significant directional bias. Consistent with upstream fixed.
