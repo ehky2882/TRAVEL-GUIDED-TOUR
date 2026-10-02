@@ -803,6 +803,7 @@ The owner picked these in the Boston Image Picks page. **None is credit-required
 
 | File | Pick | Licence | Author | Source |
 |------|------|---------|--------|--------|
+| `copps-hill-burying-ground_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `african-meeting-house_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `shaw-54th-memorial_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `bunker-hill-monument_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
