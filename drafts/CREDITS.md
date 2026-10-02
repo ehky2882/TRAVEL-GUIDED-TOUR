@@ -803,6 +803,7 @@ The owner picked these in the Boston Image Picks page. **None is credit-required
 
 | File | Pick | Licence | Author | Source |
 |------|------|---------|--------|--------|
+| `old-north-church_hero-2.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `park-street-church_hero-2.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `kings-chapel_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
 | `paul-revere-house_hero-2.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |

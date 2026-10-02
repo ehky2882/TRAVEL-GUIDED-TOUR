@@ -1116,5 +1116,18 @@
   "orig": "1448x1086",
   "upscaled": false,
   "sha": "325e6cfdc7b7"
+ },
+ {
+  "code": "owner",
+  "num": "07",
+  "slug": "old-north-church",
+  "name": "old-north-church_hero-2.webp",
+  "src": "owner",
+  "lic": "owner-supplied",
+  "credit": "",
+  "page": "",
+  "orig": "1448x1086",
+  "upscaled": false,
+  "sha": "50629e2ef7e3"
  }
 ]
