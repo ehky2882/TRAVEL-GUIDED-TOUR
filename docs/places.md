@@ -243,6 +243,30 @@ and the pin already sits among them, nearer mid-Gallery than any one of them. Wi
 one — so a mid-Gallery point is the honest answer. Rule 5 says a place is a coordinate and one
 point must be honest for everyone; here that point is deliberately the middle, not an endpoint.
 
+### 2026-09-23: seven parts and tenants declined in one sitting — the pattern is now clear
+
+Put to the owner as numbered questions, answered in one line:
+
+| Pair | Ruling |
+|---|---|
+| Westminster Abbey + four interior pins (Cosmati Pavement, Shrine of Edward the Confessor, Tomb of Elizabeth I, Britain's Oldest Door) | **NO** — a re-ask of the 2026-09-15 decision above; the comingling reason stands |
+| Rockefeller Center + The Channel Gardens | **NO** |
+| Walt Disney Concert Hall + its rooftop Blue Ribbon Garden | **NO** |
+| Arc de Triomphe + the Tomb of the Unknown Soldier beneath it | **NO** |
+| Taipei 101 + A Joy (the buffet at the top) · Grand Central Market + Eggslut (a stall) | **NO** — Rule 4, tenants |
+| The Unisphere + Relics of the World's Fairs | **YES**, joined |
+| Queens Museum (Atlas tour) + *Before the Queens Museum* | **YES**, new place (and the owner asked why it was missed — see `docs/lessons.md`) |
+| Ara Pacis Museum + *The Ara Pacis and the Mausoleum of Augustus* | **YES**, new place |
+| Palais-Royal + Colonnes de Buren | **NO**; the owner asked for the pins to be moved apart, and the Buren pin now sits on the columns, 63 m from the Palais-Royal |
+| Museum of the City of New York (Atlas tour) + *Inside the Museum of the City of New York* | **YES**, new place |
+| Chichén Itzá + The Great Ball Court | **NO** |
+
+🔴 **Every part-of-a-site pairing was declined.** Together with 2026-09-15 this is now a consistent
+pattern: **a component inside or on a site stays out of the site's place.** It is still recorded as
+undecided above only because the owner has not stated it as a rule; until they do, keep asking, but
+expect NO and never assume YES. Every ruling here is in `scripts/make-place-menu.py`
+`DECLINED_PAIRS`, which `check-place-candidates.py` now reads so it never re-lists them.
+
 ## 🔴 Before deciding anything: check the coordinate
 
 `Lloyd's of London` / `The Leadenhall Building` sat 7 m apart and looked like a
@@ -258,3 +282,17 @@ That check found **nine wrong coordinates** in a single day. The signature is a
 **4-decimal coordinate on a tour**: pins are geocoded per link at import, while
 tours carry coordinates typed once and never verified. In the 26–49 m band,
 **fifteen of seventeen groups had the pin right and the tour wrong.**
+
+## 2026-09-25: four more rulings, including the first part-of-a-museum YESes
+
+| Pair | Ruling |
+|---|---|
+| Banksy Sculpture, Waterloo Place + Banksy-Signed Sculpture | **YES**: the same artwork (Rule 1) |
+| MMCA Seoul (tour) + MMCA Space Kids (pin) | **YES**: the owner's judgement call. A space inside the museum, placed with it |
+| MMCA Gwacheon + *The More the Better*, Nam June Paik | **YES**: the owner's judgement call. The Paik tower is inside the museum |
+| Adega Mayor (tour) + Adega Mayor (pin), 59 m apart | **YES** (Rule 1); the place sits on the tour's point |
+| A Mesa do CAM + CAM Gulbenkian | **NO for now**: the restaurant stays outside the museum's place |
+
+⚠️ **Part vs whole is still decided one case at a time.** Two museum parts were accepted here, after
+many earlier refusals (Westminster Abbey interiors, Rockefeller Center parts, the Tomb of the
+Unknown Soldier). Ask; do not infer a rule from either side.

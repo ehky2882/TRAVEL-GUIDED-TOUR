@@ -94,7 +94,7 @@ enum Tag {
             "Bonaventura Bassegoda", "Bond Ryder", "Brad Cloepfil",
             "Bruce Price", "Carl Fredrik Adelcrantz", "Carlo Maciachini",
             "Carlo Scarpa",
-            "Carlos Zapata", "Charles Collens", "Charles Garnier",
+            "Carlos Zapata", "Charles Collens", "Charles Garnier", "Charles Rennie Mackintosh",
             "Charles W. Clinton", "Chu Ming Silveira", "DHK Architects",
             "Dan Kiley", "Daniel Libeskind", "David Chipperfield",
             "David McGlashan", "David Rockwell", "Der Scutt",
@@ -133,6 +133,9 @@ enum Tag {
             "Luis Rey", "Manuel Salgado", "Mara Servetto",
             "Mario Buschiazzo", "Mario Cucinella", "Mario Tamagno",
             "Mario Vodret", "Massimiliano Locatelli", "Michael Van Valkenburgh",
+            "Mimar Sinan", "Balyan family", "Alexandre Vallaury",
+            "Tabanlıoğlu Architects", "Emre Arolat",
+            "John Pawson", "Aldo Rossi", "Luis Barragán", "César Pelli",
             "Michele De Lucchi", "Min Hyun-jun", "Minard Lafever",
             "Nelson Dupré", "Ngô Viết Thụ", "Nicodemus Tessin the Elder",
             "Nicodemus Tessin the Younger", "Nicola Salvi", "Norman Peebles",
@@ -201,6 +204,7 @@ enum Tag {
             "BVN Architecture", "EMTB", "Hirvonen-Huttunen",
             "Kim Swoo-geun", "MGT Architects", "Shin Takamatsu",
             "Timo Suomalainen", "Tuomo Suomalainen",
+            "Morris Lapidus", "Kenneth Treister", "Henry Hohauser", "Enrique Gutiérrez", "Schultze & Weaver",
         ]),
     ]
 

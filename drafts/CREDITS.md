@@ -588,3 +588,310 @@ same way at ship time.
 **No credit required:** `alserkal-avenue_hero.webp` is Wikimedia **CC0**, and the
 `al-shindagha_hero.webp` / `difc-gate_hero.webp` heroes are owner-supplied (both
 carry provenance flags — see `drafts/dubai-batch1/README.md`).
+
+## Istanbul batch 1 (Atlas Studio IST) — 187 images, licence per image NOT recorded
+
+Wired 2026-09-28. The contributor supplied every photograph (1200×900 webp, already
+cropped) and described them as **"from Creative Commons"**. No per-image source,
+author or licence came with them, so none can be listed here yet, and the crops defeat
+a SHA-1 lookup against Commons. **Owner item `istanbul-photo-licences`** asks Edward
+to accept them as shipped or have the contributor send a source link per image; any
+CC BY / BY-SA rows then belong in this section.
+
+## Miami — 60 credit-required images (`drafts/miami-batch1`, staged 2026-09-25)
+
+**Owner decision 2026-09-29: keep these Commons photos with credits (option 1),** rather than swap them.
+They were first reported as all PD/CC0, which was wrong; see `archive/HANDOFF-260925-miami-staging.md`
+§ Correction 2026-09-29. **Every file below was byte-verified** against the gh-pages copy (sha256
+from the sourcing manifest). Licence and author come from Openverse's Wikimedia index, matched on
+the exact Commons filename. Commons itself was rate-limiting this container, so **re-confirm against
+each file page before the credits are surfaced in the app.**
+
+Three Commons heroes were superseded by owner photographs and live on as `_3` (byte-identical
+to the orphaned `_hero.webp`). They are listed under their `_3` name.
+
+### miami-circle
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `miami-circle_2.webp` | EduardoValle | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Circle_aerial_view_with_river_and_tower.JPG |
+| `miami-circle_4.webp` | Ebyabe | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_FL_Miami_Circle_pano01.jpg |
+| `miami-circle_hero.webp` | EduardoValle | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Circle_aerial_view.JPG |
+| `miami-circle_3.webp` | CobraZaroia | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Brickell_Point_Site_2012-09-15_16-54-59.jpg |
+
+### brickell-avenue-bridge
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `brickell-avenue-bridge_hero.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Brickell_Avenue_Bridge_from_northwest_in_2015.jpg |
+| `brickell-avenue-bridge_2.webp` | Neil Williamson | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Brickell_Avenue_Bridge_at_night_with_bascule_span_open_%282017%29.jpg |
+| `brickell-avenue-bridge_3.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami_River_Downtown_Miami_Florida_1_May_2023.jpg |
+
+### ocean-drive-art-deco
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `ocean-drive-art-deco_hero.webp` | Robbschultz69 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ocean_Drive_in_the_Miami_Beach_Art_Deco_Historic_District.jpg |
+| `ocean-drive-art-deco_2.webp` | Dough4872 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ocean_Drive_NB_past_11th_Street_Miami_Beach_at_night.jpeg |
+| `ocean-drive-art-deco_3.webp` | Mickey Løgitmark | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Ocean_Drive_-_panoramio_%281%29.jpg |
+
+### maximo-gomez-park
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `maximo-gomez-park_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Domino_Park_Little_Havana%2C_Miami_Florida_6_June_2024.jpg |
+| `maximo-gomez-park_2.webp` | SK Sturm Fan | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Domino_Club_%E2%80%93_Florida_Heritage%3B_M%C3%A1ximo_G%C3%B3mez_Park_%28Domino_Park%29%2C_Little_Havana%2C_Miami%2C_Florida_%282019%29_%286%29.jpg |
+
+### cuban-memorial-boulevard
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `cuban-memorial-boulevard_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Cuban_Memorial_Boulevard_Calle_Ocho_Little_Havana%2C_Miami_2023.jpg |
+
+### the-barnacle
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `the-barnacle_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:The_Barnacle_Coconut_Grove_%2816815440570%29.jpg |
+| `the-barnacle_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:The_Barnacle_Coconut_Grove_%2816815512178%29.jpg |
+
+### vizcaya
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `vizcaya_hero.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6661.jpg |
+| `vizcaya_2.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6702.jpg |
+| `vizcaya_3.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6700.jpg |
+| `vizcaya_4.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6677.jpg |
+| `vizcaya_5.webp` | Leslie Platt | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Vizcaya_Museum_and_Gardens_060524_DSC6697.jpg |
+
+### wynwood-walls
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `wynwood-walls_hero.webp` | osseous | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:April_7%2C_2015_-_Wynwood_Miami_-_07.jpg |
+| `wynwood-walls_3.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Wynwood_Mural_%2816811746490%29.jpg |
+| `wynwood-walls_5.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Wynwood_Murals_%2812926225503%29.jpg |
+| `wynwood-walls_6.webp` | osseous | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:April_7%2C_2015_-_Wynwood_Miami_-_05.jpg |
+| `wynwood-walls_2.webp` | Dan Lundberg | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Wynwood_Walls_Miami_Florida_October_2013.jpg |
+
+### dade-county-courthouse
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `dade-county-courthouse_2.webp` | Rob Olivera | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:The_Miami_Dade_County_Flagler_Courthouse.jpg |
+| `dade-county-courthouse_hero.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_County_Courthouse_-_Miami_-_Daniel_Di_Palma_Photography_06.jpg |
+
+### gesu-church
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `gesu-church_3.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Gesu_Catholic_Church_%28Miami%2C_Florida%29.jpg |
+| `gesu-church_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Gesu_Catholic_Church_Downtown_Miami_-_exterior_-_26_November_2022_-_Inscription.jpg |
+
+### miami-dade-cultural-center
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `miami-dade-cultural-center_hero.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Cultural_Center_Downtown_Miami_FL%2C_construction_in_background%2C_4_May_2023.jpg |
+| `miami-dade-cultural-center_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_05.jpg |
+| `miami-dade-cultural-center_3.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_04.jpg |
+| `miami-dade-cultural-center_4.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_06.jpg |
+| `miami-dade-cultural-center_5.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami-Dade_Cultural_Center%2C_Miami_FL_7_January_2023_-_03.jpg |
+
+### ferre-park
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `ferre-park_hero.webp` | AuntieMamesTravels | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Bicentennial_Park_June_2014.JPG |
+| `ferre-park_2.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:PAMM_MRD_21.jpg |
+| `ferre-park_3.webp` | Phillip Pessar | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:PAMM_MRD_28.jpg |
+
+### lummus-park-downtown
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `lummus-park-downtown_2.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Fort_Dallas_William_English_Plantation_Lummus_Park_Historic_District_%2830642638520%29.jpg |
+| `lummus-park-downtown_3.webp` | Phillip Pessar from Miami, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:William_Wagner_House_Circa_1855_Lummus_Park_Historic_District_%2822765725588%29.jpg |
+| `lummus-park-downtown_hero.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Lummus_Park_Historic_Distric_-_Miami_-_Daniel_Di_Palma_Photography_03.jpg |
+| `lummus-park-downtown_4.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Lummus_Park_Historic_Distric_-_Miami_-_Daniel_Di_Palma_Photography_01_Wagner_House_and_Fort_Dallas.jpg |
+
+### casa-casuarina
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `casa-casuarina_hero.webp` | chensiyuan | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Gianni_versace_miami_home.JPG |
+| `casa-casuarina_3.webp` | CZmarlin — Christopher Ziemnowicz would appreciate a photo credit if this image is used anywhere other than Wikipedia. Please leave a note at Wikipedia here. Thank you! | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Casa_Casuarina_at_night_Versace_Mansion%2C_hotel_restaurant_at_1116_Ocean_Drive%2C_Miami_Beach.jpg |
+| `casa-casuarina_2.webp` | Vadelmavene | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Casa_Casuarina_Pool.jpg |
+
+### holocaust-memorial-miami-beach
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `holocaust-memorial-miami-beach_hero.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_-_South_Beach_Monuments_-_Holocaust_Memorial_28.jpg |
+| `holocaust-memorial-miami-beach_3.webp` | Daniel Di Palma | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_-_South_Beach_Monuments_-_Holocaust_Memorial_01.jpg |
+
+### fontainebleau
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `fontainebleau_hero.webp` | InvadingInvader | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Beach_Aerial_2025.jpg |
+| `fontainebleau_3.webp` | Visitor7 | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau-10.jpg |
+| `fontainebleau_4.webp` | Acroterion | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_interior_FL3.jpg |
+| `fontainebleau_2.webp` | Visitor7 | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Fontainebleau-1.jpg |
+
+### tower-theater
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `tower-theater_3.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Tower_Theater_%28Miami%2C_Florida%29.jpg |
+| `tower-theater_2.webp` | Raghavan Prabhu | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Tower_Theater_-_Looks_Like_That_70%27s_show.jpg |
+
+### lyric-theater
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `lyric-theater_3.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Lyric_Theater_%284%29.jpg |
+| `lyric-theater_2.webp` | Tamanoeconomico | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Miami_Lyric_Theater_%281%29.jpg |
+
+### freedom-tower
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `freedom-tower_2.webp` | Infrogmation of New Orleans | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Miami_Florida_2018-01-16_-_Freedom_Tower.jpg |
+
+### jewish-museum-of-florida
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `jewish-museum-of-florida_hero.webp` | Ebyabe | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_FL_Beth_Jacob_Hall_msm01.jpg |
+| `jewish-museum-of-florida_2.webp` | Ebyabe | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Miami_Beach_FL_Beth_Jacob_Hall_msm07.jpg |
+
+### bacardi-building
+| File | Author | License | Source |
+|------|--------|---------|--------|
+| `bacardi-building_hero.webp` | Dan Lundberg | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:20131012_Miami_3615_Bacardi_annex.jpg |
+| `bacardi-building_2.webp` | Dan Lundberg | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:20131019_Miami_3688_Bacardi_plaza.jpg |
+| `bacardi-building_4.webp` | PhillipPessar | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Bacardi_Building_Biscayne_Boulevard_Miami.jpg |
+
+### Miami — no credit owed
+| File | Why | Source |
+|------|-----|--------|
+| `royal-palm-hotel-site_hero.webp` | CC0 — no credit owed | https://commons.wikimedia.org/wiki/File:View_of_the_Miami_River_from_the_South_Miami_Avenue_bridge_2026-04-06.jpg |
+| `bayfront-park_2.webp` | CC0 — no credit owed | https://commons.wikimedia.org/wiki/File:Challenger_Memorial_%28Miami%29_by_night_%28January_2022%29_-_inscription.JPG |
+| `bayfront-park_3.webp` | CC0 — no credit owed | https://commons.wikimedia.org/wiki/File:Challenger_Memorial_%28Miami%29_by_night_%28January_2022%29.JPG |
+| `royal-palm-hotel-site_2.webp` | US National Archives (NARA 544634) — public domain | https://commons.wikimedia.org/wiki/File:TRAFFIC_INTERCHANGE_CUTS_THROUGH_THE_HEART_OF_DOWNTOWN_MIAMI_-_NARA_-_544634.jpg |
+| all `*_hero-2`, `lyric-theater_4`, `south-pointe-park_*`, `dupont-building_hero-2`, `little-haiti-cultural-complex_*`, `virginia-key-beach_hero`, `lincoln-road_*` | owner-supplied | — |
+| `overtown-interchange_hero.webp` | owner-supplied, **source unknown**; reverse-search before launch (handoff § Overtown) | — |
+
+### ⚠️ Miami — licence NOT yet verified (10)
+Openverse had no record of these files and Commons was throttled. **Look each one up before launch.**
+
+| File | Source |
+|------|--------|
+| `freedom-tower_hero.webp` | https://commons.wikimedia.org/wiki/File:Freedom_Tower_Miami_%28top%29%2C_NE_view.jpg |
+| `freedom-tower_3.webp` | https://commons.wikimedia.org/wiki/File:Miami_freedom_tower_night.jpg |
+| `bayfront-park_hero.webp` | https://commons.wikimedia.org/wiki/File:Torch_of_Friendship_-_panoramio.jpg |
+| `espanola-way_hero.webp` | https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Espa%C3%B1ola_Way_Reconstruction_February_2016_01_View_East_Mid_Street.jpg |
+| `holocaust-memorial-miami-beach_2.webp` | https://commons.wikimedia.org/wiki/File:Reaching_sky_-_Flickr_-_LANSA301.jpg |
+| `miami-circle_5.webp` | https://commons.wikimedia.org/wiki/File:Miami_FL_Miami_Circle_plaque01.jpg |
+| `miami-circle_6.webp` | https://commons.wikimedia.org/wiki/File:Miami_Circle_%289081683470%29.jpg |
+| `cuban-memorial-boulevard_2.webp` | https://commons.wikimedia.org/wiki/File:Josemartibust.jpg |
+| `wynwood-walls_4.webp` | https://commons.wikimedia.org/wiki/File:-RETNA_Wynwood_Walls_%288170950212%29.jpg |
+| `lummus-park-downtown_5.webp` | https://commons.wikimedia.org/wiki/File:Miami_FL_Lummus_Park_HD_Wagner_Homestead_plaque01.jpg |
+
+Held back and never uploaded, so they need no row: `dupont-building_hero` (CC BY 2.0) and `little-haiti-cultural-complex_hero` (CC BY 3.0), both replaced by owner photos, and `bacardi-building_3` (CC BY 2.0), which is unused.
+
+## Miami walks — 7 credit-required images (`drafts/miami-walks`, picked 2026-09-30)
+
+Flickr originals sourced via Openverse. The licence was read from each live Flickr page. Owner option 1 applies: keep with credits.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `miami-pitch_stop5.webp` | W1-5 Olympia Theater | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/11375548644/ |
+| `miami-calle-ocho_stop2.webp` | W3-2 Walk of Fame (Celia Cruz star) | Phillip Pessar | CC BY 4.0 | https://www.flickr.com/photos/southbeachcars/31825441737/ |
+| `miami-calle-ocho_stop5.webp` | W3-5 Woodlawn Park mausoleum | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/6654773763/ |
+| `miami-grove_stop1.webp` | W4-1 Mariah Brown House, Charles Ave | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/17093231140/ |
+| `miami-grove_stop2.webp` | W4-2 Plymouth Congregational Church | Jorge Elías | CC BY 2.0 | https://www.flickr.com/photos/italintheheart/11658406774/ |
+| `miami-grove_stop4.webp` | W4-4 Vizcaya entrance, S Miami Ave | Jared | CC BY 2.0 | https://www.flickr.com/photos/jared422/8772177391/ |
+| `miami-water-line_stop2.webp` | W5-2 Venetian Causeway | Phillip Pessar | CC BY 2.0 | https://www.flickr.com/photos/southbeachcars/17009368825/ |
+
+
+## Boston — no credit owed (83 images, picked 2026-10-02)
+
+The owner picked these in the Boston Image Picks page. **None is credit-required:** 54 come from Unsplash and 14 from Pexels (both licences need no credit), and 15 are public domain (CC0/PDM, via Openverse). Sources are recorded for provenance. Byte hashes are in `drafts/boston-batch1/image-manifest.json`.
+
+| File | Pick | Licence | Author | Source |
+|------|------|---------|--------|--------|
+| `commonwealth-avenue-mall_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `copps-hill-burying-ground_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `african-meeting-house_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `shaw-54th-memorial_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `bunker-hill-monument_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `old-north-church_hero-2.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `park-street-church_hero-2.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `kings-chapel_hero.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `paul-revere-house_hero-2.webp` | owner | Owner-supplied (2026-10-02) | — | pasted in chat |
+| `massachusetts-state-house_hero.webp` | 01-2 | Unsplash | Pix Tresa | https://unsplash.com/photos/massachusetts-state-house-with-golden-dome-and-flags-NfgDqrqaqJQ |
+| `massachusetts-state-house_2.webp` | 01-3 | Pexels | Richard Lathrop | https://www.pexels.com/photo/golden-dome-at-massachusetts-state-house-at-sunset-38276919/ |
+| `massachusetts-state-house_3.webp` | 01-1 | Unsplash | Aubrey Odom | https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-uQStpRlY1qw |
+| `massachusetts-state-house_4.webp` | 01-6 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=47119979 |
+| `boston-common_hero.webp` | 02-3 | Unsplash | Wei Liang | https://unsplash.com/photos/boston-skyline-viewed-from-a-park-at-sunset-1dLS643cqiE |
+| `boston-common_2.webp` | 02-2 | Unsplash | Christopher Ryan | https://unsplash.com/photos/a-field-full-of-american-flags-with-a-city-in-the-background-1JAYItINTpw |
+| `boston-common_3.webp` | 02-8 | Unsplash | Sean Sweeney | https://unsplash.com/photos/boston-skyline-above-boston-common-park-8sCtnULy3aE |
+| `old-state-house_hero.webp` | 03-1 | Unsplash | Leo Heisenberg | https://unsplash.com/photos/cars-parked-on-side-of-the-road-near-brown-concrete-building-during-daytime-LgHghP14qeU |
+| `old-state-house_2.webp` | 03-2 | Unsplash | Herry Sutanto | https://unsplash.com/photos/a-brick-building-with-a-clock-tower-with-old-state-house-in-the-background-L0J_ejfmyKs |
+| `old-state-house_3.webp` | 03-3 | Unsplash | Aubrey Odom | https://unsplash.com/photos/brown-and-white-concrete-building--J0uMCDL2KQ |
+| `old-state-house_4.webp` | 03-10 | Unsplash | Nils Huenerfuerst | https://unsplash.com/photos/a-city-street-at-night-TuNgI21FyMc |
+| `faneuil-hall_hero.webp` | 04-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/a-large-brick-building-with-a-dome-with-faneuil-hall-in-the-background-DibBKV3MTp8 |
+| `faneuil-hall_2.webp` | 04-2 | Public domain (cc0 1.0) | Marco Almbauer | https://commons.wikimedia.org/w/index.php?curid=68436449 |
+| `acorn-street-louisburg-square_hero.webp` | 05-1 | Unsplash | Wei Zeng | https://unsplash.com/photos/brown-brick-building-with-green-tree-yYHnNSZSK5E |
+| `acorn-street-louisburg-square_2.webp` | 05-2 | Unsplash | Mike Bryant | https://unsplash.com/photos/cobblestone-street-lined-with-historic-brick-buildings-5aSGI7qPx5I |
+| `acorn-street-louisburg-square_3.webp` | 05-4 | Public domain (cc0 1.0) | Michael Browning michaelwb | https://commons.wikimedia.org/w/index.php?curid=61872608 |
+| `paul-revere-house_hero.webp` | 06-1 | Public domain (cc0 1.0) | Education Prof | https://commons.wikimedia.org/w/index.php?curid=112487492 |
+| `old-north-church_hero.webp` | 07-1 | Unsplash | Julie Haider | https://unsplash.com/photos/a-church-steeple-towering-over-a-city-street-wufGIg3LBd4 |
+| `uss-constitution_hero.webp` | 09-1 | Unsplash | David Trinks | https://unsplash.com/photos/a-large-sailing-ship-in-the-water-with-a-city-in-the-background-0yMtNlunh_c |
+| `uss-constitution_2.webp` | 09-3 | Unsplash | Sarah Brown | https://unsplash.com/photos/black-galleon-near-dock-mvRKPeJuHJg |
+| `uss-constitution_3.webp` | 09-7 | Unsplash | David Trinks | https://unsplash.com/photos/a-large-sailing-ship-in-the-water-with-a-city-in-the-background-efLu9QmkuIU |
+| `uss-constitution_4.webp` | 09-10 | Unsplash | Lens Fables | https://unsplash.com/photos/deck-of-an-old-sailing-ship-with-cannons-zz7HNj1E_pw |
+| `boston-public-garden_hero.webp` | 10-2 | Unsplash | Aubrey Odom | https://unsplash.com/photos/black-horse-statue-near-green-trees-and-buildings-during-daytime-dwYY9NDj4_Q |
+| `boston-public-garden_2.webp` | 10-1 | Unsplash | Sean Sweeney | https://unsplash.com/photos/man-riding-horse-statue-on-snow-covered-ground-during-daytime-6LOmOsHGQ9w |
+| `boston-public-garden_3.webp` | 10-3 | Unsplash | Taylor Keeran | https://unsplash.com/photos/a-boat-floating-on-top-of-a-lake-next-to-a-lush-green-park-2gWWRPvW3gw |
+| `boston-public-garden_4.webp` | 10-4 | Unsplash | Josephine Baran | https://unsplash.com/photos/woman-sitting-on-bench-cjrULwnJKhI |
+| `boston-public-garden_5.webp` | 10-5 | Unsplash | Spyder Marketing Co. | https://unsplash.com/photos/green-trees-beside-lake-during-daytime-26Yv9t_rCSU |
+| `boston-public-garden_6.webp` | 10-6 | Unsplash | Ana Garnica | https://unsplash.com/photos/a-park-with-trees-and-a-building-in-the-background-znU3QLzfZbw |
+| `boston-public-garden_7.webp` | 10-7 | Unsplash | Yassine Khalfalli | https://unsplash.com/photos/red-and-white-boat-on-water-near-city-buildings-during-daytime-k2mcSzPYHmA |
+| `boston-public-garden_8.webp` | 10-8 | Unsplash | Sean Sweeney | https://unsplash.com/photos/boston-public-garden-pond-and-skyline-5BSN8C8abm4 |
+| `boston-public-garden_9.webp` | 10-9 | Unsplash | Isaac S | https://unsplash.com/photos/weeping-willow-trees-reflected-in-calm-water-at-night-PiqBvbwOaF0 |
+| `boston-public-garden_10.webp` | 10-10 | Unsplash | Isaac S | https://unsplash.com/photos/bridge-over-water-at-night-with-reflections-k-cwISNBsQk |
+| `copley-square_hero.webp` | 11-6 | Pexels | Phil Evenden | https://www.pexels.com/photo/winter-view-of-boston-s-historic-architecture-36989585/ |
+| `copley-square_2.webp` | 11-2 | Unsplash | Piermario Eva | https://unsplash.com/photos/a-group-of-people-walking-in-front-of-a-building-1aH0IU3YAhg |
+| `copley-square_3.webp` | 11-5 | Pexels | Guohua Song | https://www.pexels.com/photo/boston-public-library-with-trinity-church-in-view-38911057/ |
+| `copley-square_4.webp` | 11-7 | Pexels | Mohammed Abubakr | https://www.pexels.com/photo/traffic-in-front-of-the-old-south-church-at-dusk-19828348/ |
+| `fenway-park_hero.webp` | 12-1 | Unsplash | Clark Van Der Beken | https://unsplash.com/photos/text-eA0-9tGE13k |
+| `fenway-park_2.webp` | 12-2 | Unsplash | Wei Zeng | https://unsplash.com/photos/people-watching-football-game-during-daytime-tnn5A1uT1I4 |
+| `fenway-park_3.webp` | 12-3 | Unsplash | Richard Scordato | https://unsplash.com/photos/a-large-boston-red-sox-stadium-sign-on-the-side-of-a-building-IfZRmG5Yl94 |
+| `fenway-park_4.webp` | 12-4 | Unsplash | Ilse Orsel | https://unsplash.com/photos/aerial-view-of-green-and-brown-stadium-during-daytime-71m6FIV9Brw |
+| `fenway-park_5.webp` | 12-7 | Unsplash | NICOLE UMANA | https://unsplash.com/photos/fenway-park-entrance-is-shown-in-the-image-CZ96_KN7YgI |
+| `granary-burying-ground_hero.webp` | 13-1 | Public domain (cc0 1.0) | Marco Almbauer | https://commons.wikimedia.org/w/index.php?curid=76382340 |
+| `park-street-church_hero.webp` | 14-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/a-view-of-a-city-with-tall-buildings-laPXdiH2tS8 |
+| `old-south-meeting-house_hero.webp` | 15-2 | Unsplash | Pascal Bernardon | https://unsplash.com/photos/tower-clock-surrounded-with-high-rise-buildings-during-daytime-z8k6D7gKVws |
+| `old-south-meeting-house_2.webp` | 15-1 | Unsplash | Nathalie Anfuso | https://unsplash.com/photos/a-church-with-a-steeple-and-a-clock-tower-bRUGeCrWDWU |
+| `old-south-meeting-house_3.webp` | 15-3 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=76947597 |
+| `old-south-meeting-house_4.webp` | 15-4 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=76947598 |
+| `boston-city-hall-plaza_hero.webp` | 17-5 | Public domain (cc0 1.0) | Daniel Lobo | https://commons.wikimedia.org/w/index.php?curid=101393489 |
+| `boston-city-hall-plaza_2.webp` | 17-6 | Public domain (cc0 1.0) | — | https://commons.wikimedia.org/w/index.php?curid=96759382 |
+| `boston-city-hall-plaza_3.webp` | 17-1 | Unsplash | Leon Bredella | https://unsplash.com/photos/a-very-tall-building-with-a-clock-on-its-side-BVJtR3YQunE |
+| `boston-city-hall-plaza_4.webp` | 17-2 | Unsplash | CDMA | https://unsplash.com/photos/brown-concrete-building-with-glass-windows-YgofkpLw82M |
+| `quincy-market_hero.webp` | 18-1 | Unsplash | Bernd 📷 Dittrich | https://unsplash.com/photos/a-group-of-people-standing-in-front-of-a-building-p_phiM5drG0 |
+| `quincy-market_2.webp` | 18-2 | Public domain (cc0 1.0) | Marco Almbauer | https://commons.wikimedia.org/w/index.php?curid=72816412 |
+| `charles-street-beacon-hill_hero.webp` | 21-1 | Unsplash | Matt Collamer | https://unsplash.com/photos/brown-brick-building-near-green-trees-during-daytime-UpYF6ibFud0 |
+| `charles-street-beacon-hill_2.webp` | 21-3 | Unsplash | Matías  Ramos | https://unsplash.com/photos/red-car-parked-beside-brown-brick-building-H-lFz_ZuJwQ |
+| `charles-street-beacon-hill_3.webp` | 21-2 | Unsplash | Zoshua Colah | https://unsplash.com/photos/a-city-street-lined-with-parked-cars-and-tall-buildings-Iv0ZWxTW15s |
+| `charles-street-beacon-hill_4.webp` | 21-6 | Unsplash | Wei Liang | https://unsplash.com/photos/street-view-of-historic-buildings-and-parked-cars-in-city-truWglYhWuM |
+| `greenway-north-end_hero.webp` | 24-1 | Pexels | Phil Evenden | https://www.pexels.com/photo/custom-house-tower-seen-from-park-in-boston-usa-13710117/ |
+| `greenway-north-end_2.webp` | 24-3 | Pexels | Phil Evenden | https://www.pexels.com/photo/a-view-of-the-city-from-a-park-bench-27359141/ |
+| `greenway-north-end_3.webp` | 24-4 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=47109888 |
+| `long-wharf-boston_hero.webp` | 25-2 | Pexels | Mohan Nannapaneni | https://www.pexels.com/photo/skyscrapers-on-sea-coast-in-boston-at-sunset-27062463/ |
+| `long-wharf-boston_2.webp` | 25-4 | Pexels | Mohan Nannapaneni | https://www.pexels.com/photo/skyline-of-modern-skyscrapers-in-the-boston-harbor-massachusetts-usa-12754933/ |
+| `long-wharf-boston_3.webp` | 25-9 | Public domain (cc0 1.0) | Emw | https://commons.wikimedia.org/w/index.php?curid=88460632 |
+| `long-wharf-boston_4.webp` | 25-6 | Public domain (cc0 1.0) | Emw | https://commons.wikimedia.org/w/index.php?curid=88460630 |
+| `long-wharf-boston_5.webp` | 25-1 | Pexels | Phil Evenden | https://www.pexels.com/photo/night-cityscape-with-fan-pier-park-in-boston-17424551/ |
+| `long-wharf-boston_6.webp` | 25-8 | Public domain (cc0 1.0) | Emw | https://commons.wikimedia.org/w/index.php?curid=88460629 |
+| `boston-marathon-finish-line_hero.webp` | 27-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/a-group-of-people-standing-on-top-of-a-street-ZvPBlmp7F2g |
+| `christian-science-plaza_hero.webp` | 28-1 | Pexels | Karan Dalal | https://www.pexels.com/photo/cathedral-in-city-in-winter-11012217/ |
+| `christian-science-plaza_2.webp` | 28-2 | Public domain (cc0 1.0) | Daderot | https://commons.wikimedia.org/w/index.php?curid=132346430 |
+| `chinatown-gate-boston_hero.webp` | 29-1 | Unsplash | Brett Wharton | https://unsplash.com/photos/snowy-street-scene-in-a-chinatown-with-people-walking-jwskDdqfUGY |
+| `chinatown-gate-boston_2.webp` | 29-3 | Unsplash | Ethan Hansen | https://unsplash.com/photos/a-narrow-city-street-with-tall-buildings-on-both-sides-uyHHQ7wtA1E |
+| `chinatown-gate-boston_3.webp` | 29-4 | Unsplash | Brett Wharton | https://unsplash.com/photos/chinese-archway-with-american-and-taiwanese-flags-poO-Lk9a83Q |
+| `chinatown-gate-boston_4.webp` | 29-2 | Unsplash | Rina Kemppainen | https://unsplash.com/photos/busy-street-market-in-chinatown-with-traditional-archway-and-people-hFaseTAhiKM |
+| `chinatown-gate-boston_5.webp` | 29-5 | Unsplash | Charlie Young | https://unsplash.com/photos/chinatown-gate-with-cars-on-street-DGcrG8IEnaU |
+| `harvard-yard_hero.webp` | 30-2 | Unsplash | Arthur Tseng | https://unsplash.com/photos/a-bunch-of-chairs-that-are-in-the-grass-NRRtq0f2xC0 |
+| `harvard-yard_2.webp` | 30-1 | Unsplash | Pascal Bernardon | https://unsplash.com/photos/people-standing-in-front-of-white-concrete-building-during-daytime-dLifkLvc5t8 |
+| `harvard-yard_3.webp` | 30-3 | Pexels | Trần Phan Phạm Lê | https://www.pexels.com/photo/harvard-statue-and-tourists-on-sunny-day-39714010/ |
+| `harvard-yard_4.webp` | 30-4 | Pexels | Gu Bra | https://www.pexels.com/photo/black-statue-of-a-man-6477521/ |
+| `boston-the-other-bank_stop4.webp` | W4-4-1 | Unsplash | Michael Denning | https://unsplash.com/photos/brown-bridge-over-river-under-blue-sky-during-daytime-nFzZH0Qxy40 |
+| `boston-the-other-bank_stop4-2.webp` | W4-4-2 | Unsplash | Bernd 📷 Dittrich | https://unsplash.com/photos/a-bridge-over-water-4i0VmAIIqvk |
+| `boston-the-other-bank_stop4-3.webp` | W4-4-7 | Pexels | Brandon Benedict | https://www.pexels.com/photo/cars-parked-on-side-of-the-road-9715151/ |
+| `boston-the-other-bank_stop4-4.webp` | W4-4-4 | Unsplash | Bernd 📷 Dittrich | https://unsplash.com/photos/esplanade-riel-with-a-blue-sky-l_zgRHPm3WM |
+| `boston-the-other-bank_stop4-5.webp` | W4-4-6 | Pexels | Phil Evenden | https://www.pexels.com/photo/scenic-view-of-boston-s-skyline-and-river-29864742/ |

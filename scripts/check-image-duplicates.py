@@ -227,6 +227,8 @@ def build_index(catalog, maker_code=None, scope="tours"):
         if maker_code and maker_code.upper() not in maker.get("displayName", "").upper():
             continue
         slug_kind[tour_slug(tour)] = tour.get("kind", "single")
+        if tour.get("kind") == "link" and tour.get("sourceURL"):
+            SLUG_SOURCE[tour_slug(tour)] = tour["sourceURL"]
         for url in [tour.get("heroImageURL")] + (tour.get("additionalImageURLs") or []):
             if url:
                 urls.add(url)
@@ -515,6 +517,12 @@ def fetch_hash(url):
     return url, digest, ph, th, None
 
 
+# slug -> sourceURL for link pins, filled by build_index. Two pins cut from ONE
+# post (@ninosbuildings' "these two towers": Beverly Mai and The Concourse) are
+# two downloads of one thumbnail, so they are byte-identical by construction.
+SLUG_SOURCE = {}
+
+
 def classify(group, slug_kind, walk_stop_urls=frozenset()):
     """Classify one set of byte-identical URLs -> ('error'|'info', reason)."""
     slugs = [asset_slug(u) for u in group]
@@ -533,6 +541,11 @@ def classify(group, slug_kind, walk_stop_urls=frozenset()):
     kinds = [slug_kind.get(s, "single") for s in slugs]
     if any(k == "multiStop" for k in kinds):
         return "info", "multi-stop walk reusing a single-stop image (expected convention)"
+
+    if all(k == "link" for k in kinds):
+        srcs = {SLUG_SOURCE.get(s) for s in slugs}
+        if len(srcs) == 1 and None not in srcs:
+            return "info", "link pins cut from one source post share its thumbnail"
 
     if any(k == "link" for k in kinds):
         # A link pin re-hosts its own post's thumbnail and nothing else. Two
@@ -675,6 +688,14 @@ def selftest():
     slug_kind["shun-hing-restaurant-thedesigndetourist"] = "link"
     cases.append((["papaya-king-thedesigndetourist_hero.webp",
                    "shun-hing-restaurant-thedesigndetourist_hero.webp"], "error"))
+    # ...unless both pins were cut from ONE post, which makes them byte-identical
+    # by construction (@ninosbuildings: Beverly Mai + The Concourse).
+    slug_kind["beverly-mai-ninosbuildings"] = "link"
+    slug_kind["the-concourse-ninosbuildings"] = "link"
+    SLUG_SOURCE["beverly-mai-ninosbuildings"] = "https://www.tiktok.com/@n/video/1"
+    SLUG_SOURCE["the-concourse-ninosbuildings"] = "https://www.tiktok.com/@n/video/1"
+    cases.append((["beverly-mai-ninosbuildings_hero.webp",
+                   "the-concourse-ninosbuildings_hero.webp"], "info"))
     # A pin sharing bytes with an Atlas tour's hero is the same mis-stage.
     cases.append((["papaya-king-thedesigndetourist_hero.webp",
                    "museo-reina-sofia_hero.webp"], "error"))

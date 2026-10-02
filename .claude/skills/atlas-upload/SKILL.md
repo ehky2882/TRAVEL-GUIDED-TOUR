@@ -21,7 +21,8 @@ newly onboarded.
   Do not guess at catalog shape.
 - **When something needs Edward** (the owner), say so plainly and stop that
   thread. Anything touching `*.swift`, the Xcode project, or app behaviour is
-  his call, not theirs.
+  his call, not theirs. **The one exception is adding new architect tags**
+  (Job 5), which they may do and merge themselves.
 
 ## Before anything else, every session
 
@@ -110,9 +111,10 @@ Always: **new branch → commit → open a PR → CI green → merge.** Never pu
 | Kind of change | Merges how |
 |---|---|
 | `Resources/Tours.json`, docs, `scripts/`, images and audio on `gh-pages` | Auto-merge once CI is green — no approval needed |
-| Anything in `*.swift`, `*.xcodeproj`, `Assets.xcassets/`, `Info.plist` | **Stop.** Owner reviews on a simulator or TestFlight first |
+| **Adding new architect tags** (Job 5), and nothing else in Swift | Auto-merge once CI is green. This is the only `.swift` change a contributor may make (Edward, 2026-09-29) |
+| Anything else in `*.swift`, `*.xcodeproj`, `Assets.xcassets/`, `Info.plist` | **Stop.** Owner reviews on a simulator or TestFlight first |
 
-A content contributor should essentially never be in the second row. If a task
+A content contributor should essentially never be in the last row. If a task
 drifts there, say so and hand it to Edward.
 
 ---
@@ -211,7 +213,54 @@ python3 scripts/check-image-duplicates.py --pins
 
 # 5. Upload the heroes in ONE commit
 python3 scripts/upload-images.py --dir /tmp/heroes --message "Heroes for <creator> pins" --verify
+# 6. Places — a new pin often lands on a site the catalogue already has
+python3 scripts/check-place-candidates.py --out /tmp/candidates.txt
+python3 scripts/join-places.py --max-move 100 --out /tmp/joins.txt
+
+# 7. Wikidata lookups for the new pins — commit spine/lookups.json.gz with the
+#    batch, or CI's "Spine coordinate audit" fails with COULD NOT VERIFY
+python3 scripts/spine-lookup.py --out /tmp/spine.txt
 ```
+
+🔴 **Step 6 runs on EVERY batch, whatever the sender said — and it is the one
+most often skipped.** Nobody sending links will tell you which pins are places
+or which belong to an existing one; they send links, not place instructions.
+Finding those is this step's job, not theirs, so never wait to be told. A batch
+routinely lands a second entry on somewhere that already exists — the owner has
+found these on the map himself, three times. The two reports answer different
+questions, and you need both:
+
+- `check-place-candidates.py` — **new** pins that belong together (the same
+  name nearby, or the exact same point). Read the **NAME** and **EXACT**
+  sections.
+- `join-places.py` — new pins that belong to a place that **already exists**.
+  The first report cannot see these: once a place exists, its site looks
+  finished.
+
+**Do not create places or apply joins yourself.** List each one for Edward in
+plain English — *"your pin X is the same building as the existing place Y, 30 m
+away — join them?"* — and he decides. A place moves every member onto one
+point, so it is his call, and `docs/places.md` holds the rules he has already
+set. CI prints both reports on the PR too, but a report nobody reads decides
+nothing.
+
+🔴 **The person you are talking to may not be Edward — and only Edward can answer.**
+If you are working with anyone else (his brother, a partner, any contributor), **do
+not ask them and do not accept their answer as the ruling**, however sure they
+sound. Instead, leave every place question on Edward's board, in the same PR:
+
+```bash
+python3 scripts/status.py --add-owner place-<slug> "Place? <A> and <B>, <N> m apart, <city>"
+```
+
+and list them in the PR body under **"For Edward: place questions"**. Merge the pins
+as they are; the places come after he answers. *Why:* on 2026-09-23 a 55-pin batch
+flagged Café de la Paix, Musée Carnavalet and Le Relais de Venise correctly. The
+session put the question to the contributor it was talking to, recorded their
+"keep separate" as *"Owner: keep them as separate entries — do not re-offer"*, and
+Edward never saw it. He found them the next morning and made all three places.
+The check worked; the question went to the wrong person.
+
 
 Then commit `Tours.json` on a branch, open the PR, let CI go green, merge.
 
@@ -258,9 +307,25 @@ of reading like a pass when they are not.**
    4 pins fixed to 85. **A blocked scrape is not an absent fact.** Search the
    name, look for the venue's own site in the results, check OSM by name, and
    only then ask the owner — naming which routes you actually tried.
+   **Last look before asking: the cover frame.**
+   `python3 scripts/fetch-cover.py --urls /tmp/links.txt --out-dir /tmp/covers`
+   saves each post's cover, uncropped, with no coordinate needed — then OPEN
+   each one. A shop sign, a street name or a landmark in shot can settle it.
+   ⚠️ It is **one frame, not the video** (the process never downloads videos);
+   often it shows what KIND of place it is and nothing more. If it does not
+   settle the location, ask Edward — he can watch the video.
    ⚠️ **For Japan, Nominatim cannot do addresses at all**: in romaji it returns
    a postcode centroid that looks exactly like a real hit. Use
    `https://msearch.gsi.go.jp/address-search/AddressSearch?q=<japanese address>`.
+   ⚠️ **For China, a map app's coordinate is DELIBERATELY WRONG by ~500 m.**
+   Amap (高德) serves **GCJ-02**, Baidu serves **BD-09**; neither is the
+   WGS-84 the app uses. Convert an Amap number with
+   `python3 scripts/gcj02.py <lat> <lng>` before storing it. **Baidu numbers:
+   do not use** — BD-09 has a second offset `gcj02.py` does not undo; ask for
+   an Amap or Google/Apple Maps pin instead. Google and Apple are WGS-84 and
+   need no conversion. An Amap share link resolves with
+   `curl -sS -o /dev/null -D - -L <link> | grep -i '^location:'`: the
+   redirect's `p=` parameter carries id, lat, lng, name **and address**.
    Full detail: `docs/link-pin-runbook.md` § Getting the coordinate right.
 
 1. **🔴 Keep the JSON out of the chat.** `make-link-pin.py` prints ~1.9 KB per
@@ -350,6 +415,52 @@ batch is staged, not at the end of the city.
 
 ---
 
+# Job 5 — Adding an architect tag
+
+Use this job when a tour's script names the architect behind the building and
+that name is missing from the tag list, so the tour can only carry *Designed by
+a Master*. Architect tags are the one `.swift` change a contributor may make
+and merge without Edward (his decision, 2026-09-29). #1096, the Istanbul
+architects, is the worked example.
+
+**The permission is narrow. Keep inside it:**
+
+- **Add names only.** Never rename or remove an existing tag, because tours
+  already carry those strings. Never touch another facet or any other line of
+  Swift. If the job needs any of that, stop and hand it to Edward.
+- **The name goes in exactly two places, spelled identically:**
+  1. `TRAVEL GUIDED TOUR/Models/Tag.swift`, inside `(.architect, [ … ])`.
+  2. `scripts/validate-tours.swift`, inside `let architectTags: Set<String> = [ … ]`.
+
+  Put the new names on a **line of their own** in each list (not tacked onto
+  an existing line), so the diff is pure additions.
+- **Check that it isn't already there under another spelling** before adding
+  it (`grep -i` for the surname in `Tag.swift`). A firm and its founder are
+  different tags, so follow what the script credits.
+- **Every attribution comes from the tour's own script** or another reliable
+  source. Tag only what the building's architect actually built. For example,
+  the Tiled Pavilion was not tagged Vallaury, because he only surveyed it.
+- Tag the tours in `Resources/Tours.json`, and add *Designed by a Master* to
+  any tagged tour that lacks it.
+
+**Before opening the PR, prove it stayed inside the lines:**
+
+```bash
+python3 scripts/validate-tours-mirror.py        # must report 0 errors
+git diff origin/main --stat -- '*.swift' '*.pbxproj' '*.xcassets' Info.plist
+#   → must list ONLY Models/Tag.swift and scripts/validate-tours.swift
+git diff origin/main -U0 -- '*.swift' | grep '^[-+][^-+]'
+#   → must show ONLY '+' lines of quoted names, and no '-' lines
+```
+
+If any of these three fails, the PR needs Edward's OK. Say so and stop.
+Otherwise open the PR, say in its body that it is an architect-tag-only change
+under this rule, and merge once CI is green (the simulator build and unit tests
+must pass). New tags work on phones straight away. The app offers them as
+browse filters from its next App Store release.
+
+---
+
 # Reading a check's result
 
 **A check that cannot run must not be able to return a pass.** Three ways that
@@ -371,10 +482,28 @@ has already happened here:
 # After a content merge
 
 `get_catalog` (Supabase) is the app's primary source; the gh-pages
-`Tours.json` mirror is a fallback. A merge to `main` republishes the mirror
-automatically, **but the database needs `backend/seed_from_toursjson.py`** or
-the mirror ends up newer than the live source. If you hand-edit catalog data in
-the Supabase SQL Editor, finish with `select public.refresh_catalog_snapshot();`.
+`Tours.json` mirror is a fallback. **A merge to `main` updates BOTH
+automatically** — `.github/workflows/publish-catalog.yml` rebuilds "More like
+this", refreshes the coordinate cache, republishes the mirror **and runs the
+`seed-supabase` job**. There is nothing to reseed by hand.
+
+🔴 **Do NOT open a "please reseed Supabase" owner item after a batch.** This
+file used to say the database needed `backend/seed_from_toursjson.py` run by
+hand. It did not, and sessions kept filing that task for the owner anyway —
+#1015 proved three such items false (3,293 pins in the catalogue, 3,293 live),
+and #1019 would have re-created one. If you genuinely doubt the database, ask
+it for a count: 47 bytes, and the answer is in the `content-range` header —
+
+```bash
+curl -sS -o /dev/null -D - "https://apkcihljybvuyuzpbnqd.supabase.co/rest/v1/tours?select=id&kind=eq.link&limit=1" \
+  -H "apikey: $KEY" -H "Authorization: Bearer $KEY" -H "Range: 0-0" -H "Prefer: count=exact" | grep -i content-range
+```
+
+(`$KEY` is the `sb_publishable_…` key in `Data/SupabaseConfig.swift` — public by
+design.) Compare it to `len(linkPins)` in `Tours.json`.
+
+If you hand-edit catalog data in the Supabase SQL Editor, finish with
+`select public.refresh_catalog_snapshot();` — that one IS manual.
 
 # At the end of a session
 

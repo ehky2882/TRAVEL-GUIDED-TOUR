@@ -749,6 +749,16 @@ sat. A different branch of the same bar, and the pin was left alone.
 2026-09-15 pass, Kiwamiya and Saryo Tsujiri still share a point and are **correct**: both are
 inside 丸の内1-9-1, the Daimaru Tokyo / Gransta building. Check the addresses before "fixing" it.
 
+### 🔴 A street name geocodes to ONE of its segments, and it may be the wrong one (2026-09-29)
+
+Miami's Española Way was staged 457 m from where its script stands. The script is on the
+pedestrian lane off Washington Avenue; the point was on a residential stretch of the same street
+four blocks west. `check-coordinates.py` passed it, because its geocoder returned that same wrong
+segment: the check compared a point with itself. CI's **Spine coordinate audit** caught it (420 m
+from the Wikidata item). **For a street, a mall or any linear subject, match the point to the
+stretch the script describes** (OSM `highway=pedestrian` and the like), and read every Spine
+DISAGREES line on a city launch rather than filing it under "large site".
+
 ## 5. Images
 
 🔴 **Correcting an image means a NEW filename — never overwrite bytes at a live URL.** A phone
@@ -801,6 +811,31 @@ hand-building a `/thumb/` path (a constructed one returns 400).
 
 **rawpixel serves `editor_1024` whatever Openverse advertises.** Two images advertised at
 7000×5249 delivered 1024×768. Download and measure.
+
+### 🔴 A Commons category listing has NO licence filter (2026-09-29)
+
+The Miami batch was reported as "all PD/CC0 Commons, no attribution owed". The owner picked
+77 images on that basis, and 74 were uploaded. **At least 61 were CC BY or CC BY-SA.** The
+`license=cc0,pdm` filter exists on Openverse; a Commons `Category:` listing or MediaWiki
+search applies none. The pool had been drawn from both. The manifest recorded
+`num, slug, code, name, src, orig, sha` and **no licence**, so no later step could catch
+it. It surfaced only when a later session opened one file's Flickr source page.
+
+**Record the licence per candidate at sourcing time** (Commons `extmetadata.LicenseShortName`,
+or Openverse's `license`), carry it on the contact sheet, and refuse to call a batch
+"no attribution owed" unless every pick's recorded licence is `cc0`/`pdm`. To check a
+batch after the fact while Commons is throttled, match each exact Commons filename
+against Openverse (`?q=<title>&source=wikimedia`, with a real User-Agent — the default
+Python one is 403'd). Commons filenames are unique, so an exact title match is the same file.
+
+### A pasted image that never became a file is still in the transcript (2026-09-29)
+
+In web sessions an image the owner pastes into chat can render for Claude and still never
+appear on disk. Two sessions in a row hit this, and the first asked the owner to resend
+repeatedly. The image **is** saved in the session transcript,
+`~/.claude/projects/<project>/<session>.jsonl`, as a content block with `type: image` and
+base64 `source.data`. Decode it with a few lines of Python, then hash the written file as
+usual. **Do this before asking the owner to resend anything.**
 
 ### A creator's cover frame is not a picture of the venue (2026-09-16)
 
@@ -864,11 +899,16 @@ missing from the primary source and is wrong.
 decodes a missing key as nil and the feature just stops existing — no crash, no log, no failed CI.
 Asking the live RPC what keys it returns is the only detection.
 
-🔴 **Deleting from `Tours.json` does NOT remove it from Postgres.** `seed_from_toursjson.py` is
-**upsert-only by design**, so a deletion reaches the gh-pages mirror and the bundled seed and
-never reaches the database the app reads first. A removal is a two-part change: the catalogue
-edit **plus SQL the owner runs**. `backend/pull_nycunfilteredstories.sql` sat committed and
-unpasted for **eight days** while four "removed" pins kept being served.
+🔴 **Deleting from `Tours.json` reaches Postgres ONLY while the entry's maker stays in the
+catalogue.** `seed_from_toursjson.py` was upsert-only until it gained a prune step, and that prune
+deletes a missing tour or pin **only when its `maker_id` is still a catalogue maker** (the guard
+that keeps in-app uploads safe). So to remove a pin, delete the pin and **keep its maker row**,
+even if the maker now has no entries. The next content merge's seed then deletes it from the
+database with no owner paste (2026-10-02: the Instagram @oneyearinparis Chinese Scholar's Garden
+duplicate). ⚠️ **Delete the maker row as well and the prune can no longer see the pin**, and you
+are back to the old two-part change: the catalogue edit **plus SQL the owner runs**. That is how
+`backend/pull_nycunfilteredstories.sql` sat committed and unpasted for **eight days** while four
+"removed" pins kept being served.
 
 **And the inverse: adding a key to `Tours.json` does not put it in front of users.** Supabase is
 primary. Build 68 shipped the place layer and showed the old behaviour because `places.sql` had
@@ -3388,3 +3428,285 @@ different line, the selftest passed, and the run printed `exit=0 (want
 non-zero)` as though the fixture were dead. **A mutation applied by line number
 is a mutation that may not have been applied at all.** Anchor on content and
 assert the anchor matched exactly once.
+
+## A Chinese coordinate off a Chinese map is wrong by more than the error you are fixing (2026-09-22)
+
+Two pairs of pins shared one coordinate each — `Seashore Library` + `Chapel of
+Music` in the Aranya community, `Long Ma She` + `Soft Square` in Changshou
+Village. Each pair is two genuinely different buildings, so the shared point is
+a geocoding artefact and the owner asked for them to be spaced apart.
+
+**They were not separated, and that was the right answer.** Every route was
+exhausted first — Nominatim in English *and* Chinese, Wikidata by entity search
+(429) and then by SPARQL bounding box (4 items in the whole area, none of them
+these), two web searches, the ArchDaily project page (location: *"Qinhuangdao
+Shi, China"*), Overpass (proxy-blocked). Nothing anywhere gives a per-building
+coordinate.
+
+🔴 **Inventing a separation would have been worse than leaving them coincident.**
+A made-up offset looks precise, and a geofence fires where nobody stood. This
+file already records three pins moved on a weak distance signal that came out
+**11 m right, 220 m wrong and 100 m wrong**.
+
+⚠️ **And the reverse-geocode is what makes "leave it" defensible rather than
+lazy:** the Beidaihe point resolves to `阿那亚三期` (Aranya Phase 3) and the
+Shenzhen one to Jiangling Road, Maluan Sub-district. **The locality is right and
+only the precision is wrong** — which is a different, far milder defect than a
+pin in the wrong place, and worth establishing before reporting "cannot fix".
+
+### The trap if someone does go and get the numbers
+
+**China's public maps do not publish WGS-84.** Baidu serves **BD-09** and Amap
+and every other domestic service serve **GCJ-02** — a deliberate obfuscation
+offset from true WGS-84 by roughly **100–700 m**, varying with position.
+
+🔴 **That offset is LARGER than the separation being created.** A coordinate
+copied from Baidu or Amap would not merely be imprecise; it would move the pin
+further from the building than leaving both entries stacked on one point does,
+while looking like a careful fix. Google Maps' satellite layer and Apple Maps
+are WGS-84 and safe.
+
+Worth knowing generally: a coordinate has a **datum**, and outside the places
+where everyone silently agrees on WGS-84 the datum is part of the fact. Asking
+*"where did this number come from?"* is not pedantry there — it is the
+difference between a 5 m fix and a 500 m error.
+
+### The same datum trap, three times in one hour, each a different shape (2026-09-22)
+
+The owner sent Amap share links for four pins. Every one needed GCJ-02 → WGS-84
+conversion, and the *consequence of skipping it* was different each time:
+
+| pin | raw Amap number | after conversion | what skipping would have done |
+|---|---|---|---|
+| Long Ma She | 975 m from the old pin | **414 m** | left it **further** from the building than the wrong shared pin it replaced |
+| Seashore Library | 551 m away | **4 m** | 🔴 **moved a pin that was already CORRECT, by 551 m** |
+| Chapel of Music | 1,684 m away | 1,510 m | a 174 m error on top of a real 1.5 km fix |
+
+🔴 **The library case is the one to remember.** Its shared coordinate looked like
+a village-centroid guess — two pins on one point, the classic artefact. It was
+nothing of the kind: converting Amap's number landed **4 m** from it, so the
+coordinate was *right* and the real defect was that `Chapel of Music` had been
+given the library's position. **The shape of a defect is not its cause**, and
+"two pins share a point" has at least two causes that look identical.
+
+⚠️ **The 4 m agreement is also the best validation the converter got.** It is an
+external check at the exact location in question: an independently-sourced
+coordinate already in the catalogue, matched to within noise. That mattered when
+the chapel's reverse-geocode came back as bare "Changli County" for *both* the
+raw and converted points and **could not discriminate** — the locality check
+usually settles these (长守 vs 三河 did, for Long Ma She) and here it simply had
+nothing to say. **Say so when a check comes back mute, rather than counting it as
+support.**
+
+⚠️ And the small decision in the middle: once the library was known correct, it
+was tempting to apply its 4 m refinement immediately. That would have dropped
+the pair from `EXACT · ASK` — visible, addressed to the owner — into the 81-row
+`TIGHT` list, where it would not have been seen again. **A 4 m improvement is
+not worth hiding a 1.5 km fault.** Both were set together instead.
+
+## A 25 m search radius hid nine plain joins, and the unjoined pin was sometimes the right one (2026-09-22)
+
+With the NAME and EXACT candidate tiers both clean, reading the NEAR tier through
+`check-place-candidates.py`'s own `scan()` found **35 "join-shaped" rows**: an
+entry 26–418 m from an existing place on the same subject, not a member of it.
+`join-places.py` searches within **25 m** by default, so every one of them was
+invisible to it indefinitely. It is the Walden 7 hole at a larger radius.
+
+Run at `--max-move 100` with every guard still on, it proposed **six**: exact-name
+joins at 27–44 m (Kaktus Towers, Vessel, Guggenheim, Marina City, Trellick Tower,
+The Oculus). The owner added three the guards had conservatively skipped. The
+other ~26 rows were correctly left alone: part-vs-whole, two-building tours,
+shops inside a district, and pairs the owner had already declined.
+
+### 🔴 Joining is not always "move the stray onto the place"
+
+**MahaNakhon.** The unjoined `@pasttworld` pin was **0 m from Wikidata's** King
+Power Mahanakhon, and the existing place was 26 m off. Joining in the usual
+direction would have moved the one accurate coordinate onto a less accurate
+point. The place was **re-anchored onto the pin** instead, and its two existing
+members moved 26 m. **Before joining, ask which coordinate an independent source
+supports. The one being joined may be it.**
+
+### 🔴 An Atlas tour's stop is where the audio triggers, so read it before moving it
+
+> **Superseded on 2026-09-23 by the owner:** *"move the atlas tours. when I first started I did put
+> the coordinates in the deliberate spot to stand, but as the catalog evolved I think that would be
+> increasingly difficult to manage for a large catalog."* **An Atlas stop now sits on its subject,
+> the same as a pin**, and nine were moved that day (Estádio do Dragão, Jardins do Palácio de
+> Cristal, Castelo de São Jorge, Jardim da Estrela, Palais-Royal, Dolby Theatre, Gaysorn Amarin,
+> Nubank Parque, Candler Building; 113–185 m each). What survives from the account below: **the
+> subject can be a named PART of a site** (CAM's canopy, one facade of a walk), and a multi-stop
+> walk's stops each have their own subject, so a walk stop is never moved to its building's
+> centre. The history is kept because it explains every Atlas stop still sitting on an entrance.
+
+A link pin's coordinate marks a subject. **An Atlas tour's stop coordinate is
+also the geofence trigger**, and its caption may name a deliberate viewpoint.
+
+* **Kyoto ICC** (moved 96 m). The caption describes the building and gives no
+  standing instruction, and the point was 95 m from Wikidata's building. It was
+  off; the move is a correction.
+* **CAM** (moved 62 m, in #1066). The caption says *"stand… by the long curving
+  canopy that sweeps from the museum out into the garden"*, which is a specific
+  viewpoint. It was moved onto OSM's museum node **without reading that first**.
+  **Resolved the same day, and the move had made it worse.** Architectural
+  Record, Dezeen and Wallpaper all describe Kuma's 107 m *Engawa* as tracing
+  the **south** side of the museum, facing the south gardens. OSM's CAM node,
+  where the place had been put, is addressed on *Percurso do Lago*, the lake
+  path on the **north** side. The original Atlas stop and Wikidata's point both
+  reverse-geocode to Rua Dr. Nicolau de Bettencourt, the campus's south edge.
+  So the move had taken the trigger north, away from the canopy the caption
+  names. The place was put back on the **Atlas author's own stop**, restoring a
+  deliberate choice rather than inventing a third point.
+
+**Check the stop caption of any Atlas tour before a place moves it.** A
+subject-accurate point can still be the wrong place to trigger a walk. 🔴 **CAM
+is the proof: the museum's own OSM node was the right SUBJECT and the wrong
+place to stand.**
+
+## A correct NAME on the wrong KIND of feature is still the wrong pin (2026-09-22)
+
+Nominatim's first hit for *"The Warrington, Warrington Crescent"* was `building/yes` named **The
+Warrington**, near the Alan Turing plaque at no. 2, and 153 m from our pin. Moving there would have
+looked verified: an OSM feature, the exact name, a plausible distance. Searching the pub's
+**address** (93 Warrington Crescent) returned `amenity/pub "Warrington"` **150 m in the opposite
+direction**, where Wikidata also had it. **Accept a gazetteer point only when its TYPE matches the
+subject** (a pub is `amenity/pub`, a hotel `tourism/hotel`), and when two sources disagree, search
+the address as well as the name.
+
+## Renaming a pin means renaming its stop too (2026-09-22)
+
+A link pin carries its title twice: `title` and `stops[0].title`. Every earlier title correction
+changed only the first, so **62 stops still carried the names those fixes had removed**: *Crown
+Sydney* on Avaz Twist Tower, *Vittoriano* on Torre Velasca, *MSG Sphere* on the Lucas Museum,
+*Grace Farms* on the Glass House. No check compares the two. When you retitle a pin, set both in
+the same edit, and diff `title` against `stops[0].title` before committing.
+
+## A caption title blinds every coordinate check at once — recovering the name restores them (2026-09-22)
+
+355 entries were titled with a creator's caption. None of them can be geocoded, matched against
+Wikidata or asked of a photograph, so the spine audit counted them as UNMATCHED and nothing else
+looked at them. Recovering 269 names from the captions (only what the caption names, with the
+verbatim evidence kept for each) moved spine **CONFIRMS from 1,861 to 1,923** in one refresh, and
+surfaced 4 new place candidates and 3 disagreements to rule on. **The cheapest independent check on
+a recovered name is the place the pin already belongs to**: every renamed pin that sat in a place
+got a name matching that place, and the three that did not were spelling errors (one of them in the
+place's own name).
+
+## Changing a pin's CITY breaks other pins' suggestions (2026-09-23)
+
+Correcting one Krispy Pizza pin from *New York* to *Brooklyn* failed `Validate Tours.json` with
+**63 errors**, none of them in the edited entry: 63 New York pins listed it in `relatedTourIds`,
+and a pin may only suggest pins in its own city. The city is an input to the related-tours graph,
+so editing it by hand makes other entries invalid. **Leave `city` alone unless the same PR rebuilds
+related tours** (`scripts/build-embeddings.py --write-related`), and before pushing, count how many
+entries name the one you are changing.
+
+## Nominatim will cut a bulk run off; Photon is the same OSM data (2026-09-23)
+
+An overnight name sweep was refused by Nominatim (**HTTP 429 on every request**) after about 800
+queries, although it was spaced 2 s apart. Nominatim's usage policy does not allow bulk geocoding,
+and it enforces that. **Photon** (`https://photon.komoot.io/api/?q=…`, no key) searches the same
+OpenStreetMap data, returns `osm_key`/`osm_value`/`name` on each feature, and served ~1,500 more
+queries at 1.5 s spacing with no refusals. Use Nominatim for a handful of lookups and Photon for a
+sweep. Either way, read the HTTP status: a 429 parsed as JSON turns into "no match".
+
+## A same-name match is only safe for MOVING when the name is exact (2026-09-23)
+
+Token-containment matching ("the shorter name's words all appear in the longer") looked like the
+right fix for bilingual OSM names, and it would have moved pins onto the wrong buildings: *Saint
+Mary's Cathedral* → *Old* Saint Mary's Cathedral, *The Chelsea Hotel* → *The GEM Hotel Chelsea*,
+*The House of Commons* → *Office of the Leader of the House of Commons*. **Confirm with a loose
+match, move only on an exact one** (or the same Latin half of a bilingual name), and read every gap
+over 1 km by hand: in this sweep those were mostly the caption naming a *different branch* from the
+one OSM returned first.
+
+## A place question answered by the wrong person is not answered (2026-09-23)
+
+A contributor's 55-pin batch (#1075) flagged three place candidates correctly. Its session asked
+the person it was talking to, the owner's brother, recorded his *"keep them separate"* as
+**"Owner: keep them as separate entries. Do not re-offer them"**, and merged. The owner saw
+none of it, found the pairs the next morning, and made all three places. **The detector worked,
+and the decision still reached the wrong person.** The upload skill now says a contributor's
+session must leave place questions on the owner's board (`status.py --add-owner`) and never take
+a contributor's answer as the ruling. Where a record says "Owner:", check which person that was.
+
+## A landmark named after its own city is invisible to a title match (2026-09-23)
+
+`check-place-candidates.py` strips the city's name from each title before comparing, so "the
+Barcelona Pavilion" and "the Pavilion" can pair. That stripped **"Queens Museum" in city "Queens"
+down to `{museum}`**, which is generic, while the pin *"Before the Queens Museum"* (filed under
+"New York") kept `queens`. The two sat 68 m apart for weeks and the owner found them. The comparison
+now retries with the city kept when stripping leaves nothing distinctive. **Two cities spelled
+differently for one borough was half the cause**: the stripping only ran on one side.
+
+## Moving coordinates can CREATE a place candidate; read the whole report afterwards (2026-09-23)
+
+The Atlas-stops sweep moved the Queens Museum tour, Casa de Chá da Boa Nova and Palais-Royal onto
+OSM's points, and each landed **exactly** on a pin that was already there. `check-place-candidates`
+said so at once ("EXACT · PROVEN — create the place"), and it was missed because only the first
+line of the report was read. **After any batch of coordinate moves, read every tier of the report,
+not its first line.**
+
+## A ruling nobody's tool reads gets asked again (2026-09-23)
+
+The report re-offered four Westminster Abbey interiors the owner had kept out of the Abbey's place
+eight days earlier, because the decision lived in `docs/places.md` prose and the checker never read
+it. **Every place ruling now goes into `scripts/make-place-menu.py` `DECLINED_PAIRS`, and the
+report skips those pairs with a count.** Read `docs/places.md` before putting candidates to the
+owner anyway.
+
+## A TikTok video's own subtitles name what its caption does not (2026-09-23)
+
+Twelve pins were titled with a guess ("A house in Morumbi", "A concrete building near Cold
+Spring") because the caption named nothing. **Every one of them was named out loud in the video:**
+TikTok serves an auto-generated subtitle file with the post page, and in it the creator says
+"today we're visiting the EDP headquarters designed by Alejandro Aravena". Three of the twelve
+guesses were the wrong KIND of place too: the "guesthouse" was a Zara flagship, the "apartment
+building" an office HQ, the "house" a hotel. And three pins were 457 m, 514 m and **7.3 km** off,
+which a caption title had hidden from every coordinate check. **Before settling for a description,
+read the subtitles.**
+
+Two more routes that worked on caption-only pins: a pin that sits at exactly 0 m from a geocoded
+street address was placed from a venue's listing, so the listing at that address names it; and a
+chef's jacket, a lantern or a coaster in the hero image usually carries the shop's name.
+
+## A pin that sits EXACTLY on an area's node was geocoded from the area, not the venue (2026-09-24)
+
+The caption-address sweep moved 33 pins, and the largest errors shared one signature: the pin
+sat to the metre on a **district office, a district node, a "shopping area" node or a street
+midpoint** — Gongliao district (8 km), Ruifang district (3.4 km), the 迪化街商圈 node (1.7 km),
+Gamcheon Culture Village. Whoever made the pin geocoded the *area* the caption mentions and
+stopped there. **A pin 0 m from an admin or street-midpoint node is a finding, not a
+confirmation.** For Hong Kong, the government's own address service (als.gov.hk) returns
+building-level points that Photon cannot; for New York, NYC Geosearch; for other US addresses the
+Census geocoder.
+
+## A pin's stop image is a second copy of its hero, and a rename can strand it (2026-09-25)
+
+Nine pins had `stops[0].imageURL` pointing at a hero file their own `heroImageURL` had already
+replaced. It surfaced only as a "one image on entries in different cities" error: two
+@suzyandaustin pins in Keelung and Paris still shared the stop image `here-s-one-of-our-favorite-…`,
+a caption-slug file from before the pins were renamed. **When a pin's hero is corrected, move its
+stop image with it** (every other pin has `stop == hero`). Also: two pins cut from one post are
+byte-identical by construction; `check-image-duplicates.py` now allows that, as it already did for
+two pins sharing one file.
+
+## A staged walk's image names go stale when a single's hero is corrected (2026-10-01)
+
+The Miami walk pick-map was written on 2026-09-29. It named the reused singles' heroes as `<slug>_hero`. Then three of
+those heroes were corrected the only safe way, under a NEW filename (`_hero-2`, CLAUDE.md § Image Pipeline step 9).
+Copying the pick-map at wire-in pointed one stop at a **404** (`dupont-building_hero`) and two at an orphaned
+old hero, byte-identical to its single's `_3` gallery image. The validator passed all three, because a URL
+is well-formed whether or not it exists. `check-image-duplicates.py --maker <CODE>` caught both kinds.
+**At wire-in, take a reused stop's image from the single's current `heroImageURL` in `Tours.json`, never
+from the staging document.**
+
+## gh-pages pushes a few minutes apart cancel each other's deploy (2026-10-02)
+
+The owner pasted Boston photos one at a time, and each was pushed to gh-pages as it arrived, 1 to 8 minutes
+apart. A Pages build takes about 8–10 minutes, and **each new push cancels the deploy still running**.
+Eight deploys in a row ended `cancelled`. So for an hour **none** of 92 images was live, including the
+first batch, pushed long before. The live check returned 404 on every file, and the branch looked fine
+throughout. **Batch the uploads: commit each photo locally, push gh-pages once when the owner pauses,
+then hash-verify the live URLs.** If a hash check fails across the board, list the `pages build and
+deployment` runs before suspecting the files.

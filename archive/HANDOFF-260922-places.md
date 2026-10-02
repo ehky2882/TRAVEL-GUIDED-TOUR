@@ -184,7 +184,6 @@ Both look like straightforward Rule 1 pairs, but the call is the owner's.
 - Press **Release this version** for 1.1.3.
 - List-description clamp check (`status/owner/list-description-clamp-check.md`).
 - Stortorget part-vs-whole.
-- 🔴 **#1019 must NOT be merged.**
 
 ---
 
@@ -303,3 +302,273 @@ the next time the workflow gains a job.
 **For the owner:** the three EXACT groups. `Žižkov`/`Zizkov` is two spellings of
 one tower on one point and looks like a plain Rule 1 pair; the other two are
 co-location calls. None created.
+
+---
+
+# Part 3 — Žižkov, and the two pairs that could NOT be separated
+
+Owner: *"zizkov - make a place. seashore and library - can we space the
+coordinates apart properly? same for long ma she and soft square"*
+([#1061](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1061)). **420 places.**
+
+## 9 · Žižkov — the strongest evidence a place has had here
+
+`Žižkov Television Tower` (`@insightcities`) + `Zizkov Television Tower`
+(`@pasttworld`), already coincident. Three independent confirmations:
+
+* OSM names that **exact point** `Žižkov Television Tower, Mahlerovy sady, Praha 3`
+* **Both** entries resolve to the same Wikidata item **`Q1413217`**, 28 sitelinks, 32 m away
+* The two titles are the same name with and without diacritics
+
+Nothing moved. ⚠️ Note the pair never reached the NAME tier — `fold()` strips
+diacritics, so `Žižkov`/`Zizkov` *would* have matched there, but an **identical
+coordinate puts a pair in EXACT instead**, and EXACT is the tier that had been
+crashing (§ 7). The accent-folding worked; the tier that would have shown it did
+not.
+
+## 10 · 🔴 The two pairs were NOT separated, deliberately
+
+The owner's reading was right — each pair is two different buildings:
+
+| pair | what they are |
+|---|---|
+| `Seashore Library` + `Chapel of Music` | Vector Architects, **2015** and **2023**, both in the Aranya community, Changli County |
+| `Long Ma She` 龙马社 + `Soft Square` | different buildings by different architects (Soft Square is ZXD), both in Changshou Village |
+
+So the shared coordinate is a geocoding artefact. **But the LOCALITY is right and
+only the precision is wrong** — the Beidaihe point reverse-geocodes to
+`阿那亚三期` (Aranya Phase 3) and the Shenzhen one to Jiangling Road, Maluan
+Sub-district, Pingshan District. **These are not misplaced pins**, which is a
+different defect from the ones this session spent the day fixing.
+
+**No per-building coordinate is reachable from here.** Routes tried, per rule 8d
+— *a blocked scrape is not an absent fact*, so the point is that these were
+genuinely exhausted before asking:
+
+| route | result |
+|---|---|
+| Nominatim, English **and** Chinese (`三联海边图书馆`, `龙马社 长寿村`) | no results — OSM has no coverage of these |
+| Wikidata entity search | HTTP **429**, so retried by another service |
+| Wikidata SPARQL bounding box over the whole Aranya area | **4 items, none of them these buildings** |
+| Web search ×2, explicitly for coordinates | architecture press only |
+| ArchDaily project page | location field reads just *"Qinhuangdao Shi, China"* |
+| Overpass | blocked by the egress proxy |
+
+🔴 **Inventing a separation would have been worse than leaving them coincident.**
+It would look precise and put a geofence where nobody stood, and rule 8d's own
+record is three pins moved on a weak distance signal that came out **11 m right,
+220 m wrong and 100 m wrong**. The whole session had been about checks that
+report confidently on things they never evaluated; fabricating two coordinates
+would have been the same failure by hand.
+
+Recorded as `status/owner/china-pin-coordinates.md` with the routes tried and the
+one-minute unblock, rather than guessed.
+
+⚠️ **The trap waiting for whoever picks this up** is in `docs/lessons.md` now:
+Baidu and Amap publish **GCJ-02 / BD-09**, offset from WGS-84 by **100–700 m**
+inside China — *larger than the gap being created*. Google/Apple satellite is
+WGS-84 and safe.
+
+## State at Part 3 handoff
+
+| | |
+|---|---|
+| places | **420** |
+| `check-place-candidates.py` | NAME none · **EXACT 2** — the two open pairs, correctly reported |
+| `validate-tours-mirror.py` | exit 0, control clean |
+| `spine-match.py` | exit 0 — DISAGREES 0 unexamined, STALE 0 |
+
+**Owner-side, carried forward:** the four coordinates above · 1.1.3 *Release this
+version* · the four `@welldonestuff` reel links · the list-description clamp
+check · Stortorget part-vs-whole
+
+---
+
+# Part 4 — the owner sent four Amap links, and the board went clean
+
+Part 3 ended by saying no per-building coordinate was reachable and asking the
+owner for them. The owner sent **Amap share links**, which resolve server-side —
+`curl -L` and read the `p=` parameter out of the redirect `Location` header:
+
+```
+p = B0KG4BL0O2, 22.662834926503454, 114.36971426010129, Longmashe, Changshoucun No.40
+```
+
+The address field alone is worth the link: it confirmed the village the pin's
+description named.
+
+## 11 · Every one needed GCJ-02 → WGS-84, and the cost of skipping differed each time
+
+`scripts/gcj02.py` (new, 8/8 selftests). The inverse has no closed form, so it is
+solved by iteration; the round trip holds to **1.4e-14°**.
+
+| pin | raw Amap | converted | what pasting the raw number would have done |
+|---|---|---|---|
+| Long Ma She | 975 m from the old pin | **414 m** | left it **further** from the building than the wrong shared pin |
+| Seashore Library | 551 m | **4 m** | 🔴 **moved a pin that was already CORRECT, by 551 m** |
+| Chapel of Music | 1,684 m | 1,510 m | a 174 m error on top of a real 1.5 km fix |
+
+⚠️ **The two selftests that matter are not the round trip.** One asserts the
+offset is **real** (482–589 m across six Chinese cities) — *a transform that
+quietly did nothing would pass a round trip perfectly*. The other asserts the
+transform is the **identity outside China**, because applying it to a coordinate
+already in WGS-84 corrupts a correct pin by the same ~500 m and nothing
+downstream could tell.
+
+## 12 · 🔴 The Beidaihe pair was one wrong pin, not two
+
+Both pins sat on `39.6561544, 119.3169543`, which reads unmistakably as a
+shared village-centroid artefact — the same shape as Changshou Village.
+
+It was nothing of the kind. The library's Amap point converts to **4 m** from
+it. So that coordinate **was the Seashore Library's correct position**, and the
+defect was that **`Chapel of Music` had been given it** — the chapel was
+**1,510 m** out.
+
+🔴 **The shape of a defect is not its cause.** "Two pins share a point" has at
+least two causes that look identical from the catalogue, and the fixes are
+opposite: one moves both, the other moves one.
+
+⚠️ **The near-miss in the middle.** Once the library was known correct, applying
+its 4 m refinement alone was tempting. It would have dropped the pair out of
+`EXACT · ASK` — visible, addressed to the owner — into the 81-row `TIGHT` list,
+where it would not have been seen again. **A 4 m improvement is not worth hiding
+a 1.5 km fault.** Both were set together.
+
+⚠️ **And the locality check went mute.** It settled Long Ma She decisively
+(converted → `长守 Changshou`, matching Amap's own address; raw → `三河 Sanhe`, a
+different village). For the chapel, OSM returned bare `Changli County` for
+**both** points and could not discriminate. What carried that conversion instead
+was the library case — the same converter landing within 4 m of an
+independently-sourced coordinate already in the catalogue, which is an external
+check at that exact location. **Say when a check has nothing to say, rather than
+counting it as support.**
+
+## State at the end of the session
+
+| | |
+|---|---|
+| places | **421** |
+| `check-place-candidates.py` | **exit 0** — `NAME — none` · `EXACT — none. Every coincident group is already a place.` **First clean board.** |
+| `validate-tours-mirror.py` | exit 0, control clean |
+| `spine-match.py` | exit 0 — DISAGREES 0 unexamined, STALE 0 |
+| `status/owner/china-pin-coordinates.md` | **cleared** (`git rm`) — all four resolved |
+
+**Owner-side, carried forward:** 1.1.3 *Release this version* · the four
+`@welldonestuff` reel links · the list-description clamp check · Stortorget
+part-vs-whole
+
+
+---
+
+## Correction — "#1019 must NOT be merged" was never an owner instruction
+
+Parts 1–4 above carried that line forward as though the owner had said it. The
+owner did not recall saying it, and the PR shows why the line existed at all:
+**#1019 and #1015 contradicted each other.** #1019 added pins to an owner item
+telling the owner to reseed Supabase; #1015, opened the same day, proved every
+pin was already live. A session concluded that merging #1019 would re-assert a
+disproved task — a sound inference — and it was then repeated as the owner's
+instruction, which it was not.
+
+Triaged 2026-09-22 and all three closed, each with a comment:
+
+| PR | outcome |
+|---|---|
+| #1019 | **closed** — it edits a file already deleted from `main`, so merging would resurrect a false task; the live DB holds **3,657** link pins against **3,657** in the catalogue, so no reseed is owed |
+| #1020 | **closed** — a board entry for #1012's merge, two days late |
+| #1015 | **closed** — its four removals were already done; `status/builds/172.md`, the 1.1.3 App Store candidate record and a real gap on `main`, **salvaged byte-identical** into #1063 |
+
+🔴 **The lesson is the one this whole session kept meeting:** a conclusion
+someone reached gets repeated until it reads as a fact someone stated. Record
+*why* a PR is being held, not just that it is — "held because it contradicts
+#1015" can be re-checked; "must NOT be merged" cannot.
+
+---
+
+# Part 5 — the afternoon: 17 more places and joins, a CI gap closed, and a move undone
+
+Merged: [#1065](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1065) ·
+[#1066](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1066) ·
+[#1067](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1067) ·
+[#1068](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/1068). **431 places.**
+
+## 13 · TIGHT: seven places the NAME tier could not see (#1065)
+
+With NAME and EXACT clean, the next candidates were in **TIGHT** — pairs within
+25 m under *different* names. Of 81 rows most are neighbours; a curated list
+went to the owner, who took 1–8. Every point from a source independent of both
+pins: OSM ×4, Wikidata, **GSI** for Hermès (never Nominatim in Japan), and for
+Edelweiss the more precise of two same-creator pins 2.6 m apart. Created
+**4 Charles Prime Rib, Torre Velasca, Maison Hermès Ginza, First National Bank
+of Hollywood, Edelweiss Pastry Boutique, Zum Weissen Rauchfangkehrer, Grand
+Palais**; **Wilton's** was a join into an existing place.
+
+🔴 **Reading captions before offering the list kept one wrong one off it**:
+*"this new buffet at the top of 101"* is a restaurant INSIDE Taipei 101 — a
+tenant, which `docs/places.md` says is not the site.
+
+## 14 · The owner's part-vs-whole rulings (#1066)
+
+* **Barbican Centre** — its own place, separate from "The Barbican" (the
+  Estate). 🔴 **Both its pins were on a Santander bike dock** named "Barbican
+  Centre" in OSM; moved 124 m onto the arts-centre building polygon. The owner
+  noted it should have been flagged as a place, not only as part-vs-whole.
+* **CAM** — its own place. Its pin sat 1.2 m from the Gulbenkian Foundation
+  pin — on the Foundation HQ, the wrong building.
+* **British Museum** + the Great Court — the spine's CONFIRMS rose 1,860 → 1,861.
+* **Steinway Hall / 111 W 57th** and **Steinway Tower / 111 W 57th** — kept
+  separate in `DECLINED_PAIRS`; the second marked **provisional**, in the owner's
+  words "at least for now".
+
+## 15 · NEAR: nine joins a 25 m radius had hidden (#1067)
+
+Reading NEAR through `check-place-candidates.py`'s own `scan()` — after a regex
+over its printout returned a false **0 / 0** that matched nothing — found 35
+join-shaped rows. `join-places.py --max-move 100`, guards on, proposed six;
+the owner added three.
+
+🔴 **MahaNakhon joined the other way**: the stray pin was 0 m from Wikidata, the
+place 26 m off, so the PLACE moved onto the pin.
+
+## 16 · CI now reports joins; CAM restored (#1068)
+
+* A new step in the *Place candidates* job runs `join-places.py --max-move 100`
+  report-only. **Any non-zero exit, or an exit 0 that printed no count, fails
+  the job** — tested under `bash -e` in four cases, then confirmed on the real
+  run: step 4 ran and printed `0 entry(ies) to join`.
+* 🔴 **CAM had been made worse by #1066.** Its Atlas caption says to stand by
+  Kuma's canopy, which three sources place on the museum's **south** side; the
+  place had gone onto OSM's CAM node on the **north** (lake) side, moving the
+  audio trigger away from it. Restored to the Atlas author's own stop. **The
+  museum's own node was the right subject and the wrong place to stand.**
+
+## 17 · The contributor docs were wrong in two ways that bite a batch
+
+Found while answering the owner's question *"when either me or my brother sends
+a batch of links, what are the processes?"*:
+
+* **The `atlas-upload` skill said the database needs a manual reseed after a
+  merge. False** — `publish-catalog.yml`'s `seed-supabase` job does it. This is
+  the likely origin of the false reseed owner items (#1015, #1019). Corrected,
+  with the 47-byte count to settle any doubt (live: **3,657 = 3,657**).
+* **Neither the runbook nor the skill mentioned China at all** — a session
+  following them would have stored an Amap number 480–590 m off. Both now carry
+  the recipe, `gcj02.py`, the BD-09 caveat (Baidu not supported), and the three
+  measured cases. The runbook's example output was checked against the tool
+  and corrected by one digit; the Amap recipe was run on the owner's real link.
+
+## State at end of session
+
+| | |
+|---|---|
+| places | **431** |
+| `check-place-candidates.py` | NAME none · EXACT none · TIGHT 68 · NEAR 34 — the remainder are judgement calls, mostly true neighbours |
+| `join-places.py --max-move 100` | **0 to join** |
+| `make-places.py` | nothing new to mint (only Salón 1923, owner-declined) |
+| `spine-match.py` | exit 0 — 0 unexamined, STALE 0 |
+| live DB | 3,657 link pins = 3,657 in `Tours.json` |
+
+**Owner-side, unchanged:** 1.1.3 *Release this version* · the list-description
+clamp check · the four `@welldonestuff` links (ask `@arthuryung-gif`, whose
+batch #1032 was).

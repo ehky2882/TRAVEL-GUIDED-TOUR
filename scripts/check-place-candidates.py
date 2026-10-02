@@ -50,6 +50,7 @@ and a funfair are two subjects. Read them; do not batch-approve them.
 
 import collections
 import argparse
+import importlib.util
 import io
 import json
 import math
@@ -138,8 +139,18 @@ def same_subject(a, b):
     pairs within 200 m catalogue-wide, so distance alone is useless and a fuzzy
     threshold would drown the signal. Containment left exactly two pairs.
     """
-    wa = subject_words(a.get("title"), a.get("city"))
-    wb = subject_words(b.get("title"), b.get("city"))
+    if _contains(subject_words(a.get("title"), a.get("city")),
+                 subject_words(b.get("title"), b.get("city"))):
+        return True
+    # 🔴 A landmark named after its own city loses its only distinctive word
+    # when the city is stripped: "Queens Museum" in city "Queens" became just
+    # {museum}, which is GENERIC, so it never paired with "Before the Queens
+    # Museum" (filed under "New York"), and the two sat 68 m apart unflagged
+    # until the owner spotted them on 2026-09-23. Retry with the city kept.
+    return _contains(subject_words(a.get("title")), subject_words(b.get("title")))
+
+
+def _contains(wa, wb):
     if not wa or not wb:
         return False
     if not (wa <= wb or wb <= wa):
@@ -426,6 +437,28 @@ def scan_names(doc, name_radius_m=NAME_RADIUS_M):
     return out
 
 
+_DECLINED = None
+
+
+def declined_pairs():
+    """The owner's recorded declines, as frozensets of two titles.
+
+    Read from make-place-menu.py, which is where rulings are written. A copy
+    here would drift; an import failure returns an empty set and so fails SAFE
+    (everything is listed, nothing is hidden)."""
+    global _DECLINED
+    if _DECLINED is None:
+        try:
+            spec = importlib.util.spec_from_file_location(
+                "_menu", os.path.join(os.path.dirname(os.path.abspath(__file__)), "make-place-menu.py"))
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            _DECLINED = set(getattr(mod, "DECLINED_PAIRS", {}))
+        except Exception:
+            _DECLINED = set()
+    return _DECLINED
+
+
 def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
            name_radius_m=NAME_RADIUS_M):
     # ⚠️ `out=sys.stdout` as a DEFAULT binds the stream at import time, so it
@@ -442,6 +475,17 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
     named_pairs = {(a["id"], b["id"]) for _, (_, a), (_, b) in names}
     tight = [r for r in tight if (r[1][1]["id"], r[2][1]["id"]) not in named_pairs]
     near = [r for r in near if (r[1][1]["id"], r[2][1]["id"]) not in named_pairs]
+
+    # 🔴 A pair the owner has already declined is not a question any more.
+    # On 2026-09-23 this report re-offered four Westminster Abbey interiors the
+    # owner had kept out of the Abbey's place on 09-15, because nothing here
+    # read the record of that ruling. Count them, never list them.
+    ruled = declined_pairs()
+    def _declined(r):
+        return frozenset({r[1][1].get("title"), r[2][1].get("title")}) in ruled
+    n_declined = sum(1 for r in tight + near if _declined(r))
+    tight = [r for r in tight if not _declined(r)]
+    near = [r for r in near if not _declined(r)]
 
     if names:
         out.write(f"\nNAME — {len(names)} unplaced pair(s) carrying the SAME NAME "
@@ -485,6 +529,10 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
                     out.write(f"     [{kind:<4}] {t['title'][:56]:<57} {t.get('city')}\n")
     else:
         out.write("\nEXACT — none. Every coincident group is already a place.\n")
+
+    if n_declined:
+        out.write(f"\n({n_declined} TIGHT/NEAR pair(s) not re-listed: the owner already declined them — "
+                  "scripts/make-place-menu.py DECLINED_PAIRS.)\n")
 
     if tight:
         out.write(f"\nTIGHT — {len(tight)} pair(s) within {tight_m:.0f} m, regardless of title.\n")
@@ -551,6 +599,22 @@ def selftest():
             "linkPins": [], "places": []}
     e2, g2, n2 = scan(doc2)
     check("same subject nearby is NEAR", len(n2), 1)
+    # 🔴 A pair the owner already declined is counted, never re-listed.
+    global _DECLINED
+    saved = _DECLINED
+    _DECLINED = {frozenset({"Declined A", "Declined B"})}
+    dd = {"tours": [t("d1", "Declined A", 51.5, -0.1), t("d2", "Declined B", 51.50005, -0.1)],
+          "places": []}
+    buf = io.StringIO(); report(dd, out=buf); txt = buf.getvalue()
+    check("🔴 a declined TIGHT pair is not re-listed", "Declined A" in txt, False)
+    check("...but it is counted, not silently dropped", "1 TIGHT/NEAR pair(s) not re-listed" in txt, True)
+    _DECLINED = saved
+    # A landmark named after its city must not lose its only distinctive word.
+    q = {"tours": [t("q1", "Queens Museum", 40.7461, -73.846, city="Queens"),
+                   t("q2", "Before the Queens Museum", 40.745869, -73.8467413,
+                     city="New York")], "places": []}
+    _, _, nq = scan(q)
+    check("🔴 a landmark named after its own city still pairs (Queens Museum)", len(nq), 1)
     check("same subject nearby is not EXACT", len(e2), 0)
     check("71 m is beyond TIGHT, so NEAR is the only tier that sees it", len(g2), 0)
     check("distance is roughly right", 60 < n2[0][0] < 80, True)

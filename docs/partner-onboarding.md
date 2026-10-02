@@ -261,6 +261,7 @@ want:
 | **A city's audio tours** | "I have a Dropbox folder of MP3s, scripts and photos for Lisbon — help me get them into the app." Claude will check every coordinate first; a wrong one is invisible to every other check and has shipped twice before |
 | **Photos for a tour** | "The Whitney tour has no photos — find some." Claude finds copyright-free candidates, sends them to you numbered, and you reply with your picks: "3 for the main photo, then 1, 7, 9" |
 | **Writing tour scripts** | "Write a tour script for the Palace of Westminster." There's a separate skill for the house writing voice |
+| **Adding an architect tag** | "The Süleymaniye script says Mimar Sinan designed it, but there's no Mimar Sinan tag. Add it and tag his buildings." Claude adds the name to the tag list, tags the tours and checks it changed nothing else. It merges without Edward once the tests pass |
 
 Do the first city drop **with Edward on the call**. It's a bigger job with more
 moving parts, and it's much easier the second time.
@@ -273,7 +274,9 @@ Five things. They exist because each one has already gone wrong.
 
 1. **Never change anything ending in `.swift`.** That's the app itself. If
    Claude proposes touching one, stop and ask Edward. Content and photos are
-   yours; the app is his.
+   yours; the app is his. **One exception: you may add new architect tags**
+   (see Part 3), because it's only a list of names. Renaming or removing a tag,
+   or anything else in Swift, still goes to Edward.
 2. **Never let Claude "just fix" a photo by replacing it.** A replacement photo
    must get a **new filename**. Phones that have already downloaded a tour keep
    the old photo forever otherwise. The skill knows this — but if you see the
