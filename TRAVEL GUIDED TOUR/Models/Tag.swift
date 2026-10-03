@@ -206,6 +206,18 @@ enum Tag {
             "Timo Suomalainen", "Tuomo Suomalainen",
             "Morris Lapidus", "Kenneth Treister", "Henry Hohauser", "Enrique Gutiérrez", "Schultze & Weaver",
             "Charles Bulfinch", "H. H. Richardson", "Peter Banner", "Peter Harrison", "Arthur Gilman", "Araldo Cossutta", "James McLaughlin", "Kallmann McKinnell & Knowles", "Alexander Parris",
+            "Bogdan Bogdanović", "Georgi Stoilov", "Avraam Miletsky",
+            "Arseniusz Romanowicz", "Mihajlo Mitrović", "Jadwiga Grabowska-Hawrylak",
+            "Irina Raud", "Miklós Hófer", "Boris Banykin",
+            "Vladimir Azimov", "Risto Šekerinski", "Vadym Hopkalo",
+            "Victor Djorbenadze", "Zdeněk Řihák", "Volodymyr Lykhodov",
+            "Mart Port", "Allan Murdmaa", "Uglješa Bogunović",
+            "Živorad Janković", "Karl-Ernst Swora", "Mikhail Vinogradov",
+            "Horia Maicu", "Iskra Grabuloska", "Oleg Vronski",
+            "Velimir Lima Stojanović", "Andrija Mutnjaković", "Kazimierz Thor",
+            "Vera Ćirković", "Semion Șoihet", "Gradimir Medaković",
+            "Otar Kalandarishvili", "George Chakhava", "Alexandr Kireev",
+            "Kamen Goranov",
         ]),
     ]
 
