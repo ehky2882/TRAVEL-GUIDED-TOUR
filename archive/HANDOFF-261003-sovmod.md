@@ -42,11 +42,11 @@
 **For Edward:** Kosmaj (22 m), Avala (34 m) and Genex (93 m) sit on existing creator pins. The contributor prefers separate entries. This is on the board as `status/owner/place-sovmod-belgrade-trio.md`.
 
 **Not done:**
-- **Architect tags.** Bogdan Bogdanović appears four times, plus Stoilov, Miletsky, Džamonja and Živković. Job 5 can add them.
+- ~~**Architect tags.**~~ Done in the follow-up below.
 - **Hotel Cosmos audio** says "on this walk".
 - **Cafenea Guguță.** A 2018 court ruling allowed its demolition, so its current state is unverified.
 
 ## Follow-up the same day: architect tags
-**34 names added** to the Architect vocabulary (Job 5), tagging 37 SovMod tours. Bogdan Bogdanović tags four tours; Georgi Stoilov, Avraam Miletsky and Arseniusz Romanowicz two each; the rest one each.
+**34 names added** to the Architect vocabulary (Job 5), tagging 39 SovMod tours. Bogdan Bogdanović tags four tours; Georgi Stoilov, Avraam Miletsky and Arseniusz Romanowicz two each; the rest one each.
 - Each tag credits the script's lead architect. For Maarjamäe it credits both Mart Port (the obelisk) and Allan Murdmaa (the memorial).
 - **Left out, per the Saint-Gaudens precedent:** sculptors (Džamonja, Živković, Bakić, Denković, Sabolić, Damyanov), engineers, surname-only credits (Filimonov & Malyshev, Begunts & Teneta), a "team that included" credit (Milkov), and Saint Bonaventure's unnamed Zagreb architect.
