@@ -906,3 +906,134 @@ Wikimedia Commons originals, sourced via Openverse. The owner picked them in the
 |------|---------|--------|---------|--------|
 | `boston-under-the-artery_stop2.webp` | W3-2 Haymarket stalls | Daniel Brody | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=46574361 |
 | `boston-under-the-artery_stop2-2.webp` | W3-2 Haymarket stalls | NewtonCourt | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=42773894 |
+
+## Philadelphia — no credit owed (124 images, picked 2026-10-03)
+
+The owner picked these in the Philadelphia Image Picks page. **None is credit-required:** 31 come from Unsplash and 37 from Pexels (neither licence needs a credit), and 56 are public domain on Wikimedia Commons (licence read per file from Commons' own metadata). Sources are recorded for provenance. Byte hashes are in `drafts/philadelphia-batch1/image-manifest.json`.
+
+| File | Pick | Licence | Author | Source |
+|------|------|---------|--------|--------|
+| `independence-hall_hero.webp` | 01-3 | Unsplash | Jimmy Hu | https://unsplash.com/photos/a-large-building-with-a-clock-tower-in-the-middle-of-a-park-5rRzN_a0RzY |
+| `independence-hall_2.webp` | 01-2 | Unsplash | Miguel Ángel Sanz | https://unsplash.com/photos/a-large-building-with-a-clock-tower-with-maryland-state-house-in-the-background-eJCQOMWhrGA |
+| `independence-hall_3.webp` | 01-4 | Unsplash | Ernie Journeys | https://unsplash.com/photos/a-clock-on-a-tower-M23cLuSb_Yo |
+| `independence-hall_4.webp` | 01-5 | Pexels | Lavdrim Mustafi | https://www.pexels.com/photo/independence-hall-in-philadelphia-under-blue-sky-14088457/ |
+| `independence-hall_5.webp` | 01-6 | Pexels | Lavdrim Mustafi | https://www.pexels.com/photo/independence-national-historic-park-in-philadelphia-14088588/ |
+| `independence-hall_6.webp` | 01-8 | Pexels | A G | https://www.pexels.com/photo/independence-hall-tower-in-philadelphia-39382017/ |
+| `liberty-bell-center_hero.webp` | 02-1 | Pexels | Joshua Santos | https://www.pexels.com/photo/liberty-bell-in-philadelphia-historical-landmark-39677739/ |
+| `liberty-bell-center_2.webp` | 02-2 | Pexels | Brett Sayles | https://www.pexels.com/photo/pass-and-stow-bell-on-sunny-street-5437555/ |
+| `liberty-bell-center_3.webp` | 02-3 | Public domain | National Park Service Digital Image Archives | https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_INDE0004_b.jpg |
+| `liberty-bell-center_4.webp` | 02-4 | Public domain | Victoria Stauffenberg | https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(35606c2d-3a41-4e6b-99aa-ae4fa72d51e1).jpg |
+| `liberty-bell-center_5.webp` | 02-5 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Visiting_the_Liberty_Bell_(2f5d5c60-1dd8-b71b-0b12-fa813e740f6a).JPG |
+| `presidents-house-site_hero.webp` | 03-4 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:President%27s_House_Site_overview_(af38328e-f519-485d-8af2-d292752a5de1).JPG |
+| `presidents-house-site_2.webp` | 03-2 | Public domain | Kreuz und quer | https://commons.wikimedia.org/wiki/File:President%27s_House_Site_2022-06_(57).jpg |
+| `presidents-house-site_3.webp` | 03-3 | Public domain | Kreuz und quer | https://commons.wikimedia.org/wiki/File:President%27s_House_Site_2022-06_(92).jpg |
+| `presidents-house-site_4.webp` | 03-5 | Public domain | Kreuz und quer | https://commons.wikimedia.org/wiki/File:Names_of_the_Enslaved_-_President%27s_House_Site_2022-06_(96).jpg |
+| `presidents-house-site_5.webp` | 03-8 | Public domain | Kreuz und quer | https://commons.wikimedia.org/wiki/File:Presidents_House_Site_-_Enslaved_Memorial_2022-06_(9).jpg |
+| `presidents-house-site_6.webp` | 03-9 | Public domain | Kreuz und quer | https://commons.wikimedia.org/wiki/File:House_and_People,_Visitor_Center_-_President%27s_House_Site_2022-06_(27).jpg |
+| `elfreths-alley_hero.webp` | 04-1 | Unsplash | Vinicius Brasil | https://unsplash.com/photos/a-narrow-street-lined-with-red-brick-buildings-wnBUOvKzFoo |
+| `elfreths-alley_2.webp` | 04-2 | Public domain | Céline Harrand | https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia.jpg |
+| `elfreths-alley_3.webp` | 04-4 | Pexels | Noriely Fernandez | https://www.pexels.com/photo/elfreths-alley-history-museum-in-philadelphia-9525391/ |
+| `philadelphia-city-hall_hero.webp` | 06-1 | Unsplash | Alejandro Barba | https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-JZ1XdKW5oHs |
+| `philadelphia-city-hall_2.webp` | 06-2 | Public domain | Daderot | https://commons.wikimedia.org/wiki/File:Philadelphia_City_Hall_-_DSC06801.JPG |
+| `philadelphia-city-hall_3.webp` | 06-3 | Pexels | Joel Zar | https://www.pexels.com/photo/the-philadelphia-city-hall-13570337/ |
+| `philadelphia-city-hall_4.webp` | 06-4 | Pexels | Dan Parlante | https://www.pexels.com/photo/low-angle-shot-of-a-concrete-clock-tower-5719245/ |
+| `philadelphia-city-hall_5.webp` | 06-5 | Unsplash | Pretty Pink | https://unsplash.com/photos/timelapse-photography-of-city-6LCen1qDcOw |
+| `philadelphia-city-hall_6.webp` | 06-7 | Pexels | Mariya Eskina | https://www.pexels.com/photo/majestic-philadelphia-city-hall-clock-tower-37023169/ |
+| `philadelphia-city-hall_7.webp` | 06-8 | Pexels | K | https://www.pexels.com/photo/philadelphia-cityscape-featuring-city-hall-37143598/ |
+| `philadelphia-city-hall_8.webp` | 06-9 | Pexels | Mariya Eskina | https://www.pexels.com/photo/iconic-philadelphia-city-hall-at-dusk-39466836/ |
+| `philadelphia-city-hall_9.webp` | 06-10 | Pexels | K | https://www.pexels.com/photo/dramatic-aerial-view-of-philadelphia-city-hall-at-night-37195569/ |
+| `philadelphia-city-hall_10.webp` | 06-11 | Pexels | Trev W. Adams | https://www.pexels.com/photo/festive-night-at-philadelphia-city-hall-35377996/ |
+| `philadelphia-city-hall_11.webp` | 06-12 | Unsplash | Mike Conway | https://unsplash.com/photos/a-view-of-a-city-with-a-statue-in-the-middle-3vDkhjwV7hM |
+| `philadelphia-city-hall_12.webp` | 06-13 | Unsplash | Tomas Martinez | https://unsplash.com/photos/a-large-building-with-a-steeple-on-top-of-it-ARlO29SKa-Q |
+| `philadelphia-museum-of-art-steps_hero.webp` | 07-1 | Unsplash | Andrew Adams | https://unsplash.com/photos/a-group-of-people-walking-up-and-down-steps-in-front-of-a-building-E8igli19YzA |
+| `philadelphia-museum-of-art-steps_2.webp` | 07-2 | Unsplash | Jonathan Gong | https://unsplash.com/photos/a-group-of-people-walking-up-a-set-of-stairs-GTfHVTxMkd8 |
+| `philadelphia-museum-of-art-steps_3.webp` | 07-3 | Unsplash | Yucel M | https://unsplash.com/photos/a-large-building-with-a-fountain-in-front-of-it-EypiOYgXgHU |
+| `philadelphia-museum-of-art-steps_4.webp` | 07-6 | Unsplash | Praswin Prakashan | https://unsplash.com/photos/a-large-building-with-a-statue-in-front-of-it-r2Q3G8KGqPc |
+| `philadelphia-museum-of-art-steps_5.webp` | 07-7 | Public domain | Heather Dong | https://commons.wikimedia.org/wiki/File:Philadelphia_Museum_of_Art_2016.jpg |
+| `philadelphia-museum-of-art-steps_6.webp` | 07-8 | Unsplash | Luisa Frassier | https://unsplash.com/photos/a-group-of-people-walking-up-stairs-_kns36IC6U0 |
+| `philadelphia-museum-of-art-steps_7.webp` | 07-12 | Pexels | K | https://www.pexels.com/photo/old-museum-of-art-near-sculptures-and-lawn-in-philadelphia-4642501/ |
+| `philadelphia-museum-of-art-steps_8.webp` | 07-13 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-museum-of-art-37143585/ |
+| `philadelphia-museum-of-art-steps_9.webp` | 07-14 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-museum-of-art-37143589/ |
+| `rittenhouse-square_hero.webp` | 09-1 | Public domain | Daderot | https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6570.JPG |
+| `rittenhouse-square_2.webp` | 09-2 | Public domain | Ii2nmd | https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_2024.jpg |
+| `rittenhouse-square_3.webp` | 09-3 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Lion_Snake_Rittenhs_Sq.jpg |
+| `rittenhouse-square_4.webp` | 09-4 | Public domain | Daderot | https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6567.JPG |
+| `rittenhouse-square_5.webp` | 09-6 | Public domain | Daderot | https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6550.JPG |
+| `franklin-court_hero.webp` | 10-2 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:The_large_white_steel_frame_in_the_foreground_marks_the_location_and_size_of_Benjamin_Franklin%27s_home_in_Franklin_Court_(3d00c6b9-155d-451f-67cb-cdfa110dc69e).jpg |
+| `franklin-court_2.webp` | 10-1 | Public domain | Carol M. Highsmith | https://commons.wikimedia.org/wiki/File:Franklin%27s_%22House%22_art_in_Philadelphia,_Pennsylvania_LCCN2011630519.tif |
+| `franklin-court_3.webp` | 10-4 | Public domain | Victoria Stauffenberg | https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(a80d78de-5277-4fa2-b783-27b335d927c5).jpg |
+| `franklin-court_4.webp` | 10-9 | Public domain | Missvain | https://commons.wikimedia.org/wiki/File:Franklin_Court_-_July_2009_-_Sarah_Stierch_02.jpg |
+| `franklin-court_5.webp` | 10-10 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Fragments_of_Franklin_Court,_courtyard_entrance_(3e04860c-155d-451f-67db-a509d50beda9).jpg |
+| `franklin-court_6.webp` | 10-11 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Reproduction_presses,_Franklin_Court_Printing_Office_(3de3dcae-155d-451f-6790-9f06d701dd35).jpg |
+| `logan-square_hero.webp` | 11-1 | Unsplash | Keith McCrea | https://unsplash.com/photos/a-couple-of-statues-sitting-in-front-of-a-fountain-a2OVPyIWoFo |
+| `logan-square_2.webp` | 11-3 | Public domain | Wickedthought | https://commons.wikimedia.org/wiki/File:LoganCircle_Philadelphia.jpg |
+| `logan-square_3.webp` | 11-5 | Public domain | Peter Bond from Philadelphia, USA | https://commons.wikimedia.org/wiki/File:SwannFountainatNight.jpg |
+| `washington-square-philadelphia_hero.webp` | 12-1 | Public domain | Ken Thomas | https://commons.wikimedia.org/wiki/File:Tomb_of_the_Unknown_Revolutionary_War_Soldier-27527.jpg |
+| `washington-square-philadelphia_2.webp` | 12-4 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:A_fountain_sits_in_the_middle_of_this_urban_park,_not_far_from_the_Tomb_of_the_Unknown_Soldier_of_the_American_Revolution_(174876bf-1dd8-b71b-0b3f-f0d23ffdb233).jpg |
+| `washington-square-philadelphia_3.webp` | 12-3 | Public domain | Victoria Stauffenberg | https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(3e63b85e-8e30-4dca-89de-45681aa949a4).jpg |
+| `washington-square-philadelphia_4.webp` | 12-10 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Washington_Square,_tree_lined_walk_(178b431a-1dd8-b71b-0bec-bbfbee385a59).jpg |
+| `carpenters-hall_hero.webp` | 13-2 | Public domain | Davidt8 | https://commons.wikimedia.org/wiki/File:CarpentersHall00.jpg |
+| `carpenters-hall_2.webp` | 13-4 | Public domain | Carol M. Highsmith | https://commons.wikimedia.org/wiki/File:Carpenters%27_Hall,_Philadelphia,_Pennsylvania,_where_the_First_Continental_Congress_met_in_1774_LCCN2011633597.tiff |
+| `carpenters-hall_3.webp` | 13-3 | Public domain | Victoria Stauffenberg | https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(20c71063-48ce-46ff-b7d1-fe35fd3bb460).jpg |
+| `carpenters-hall_4.webp` | 13-1 | Public domain | Davidt8 | https://commons.wikimedia.org/wiki/File:CarpentersHall03.jpg |
+| `carpenters-hall_5.webp` | 13-5 | Public domain | DimiTalen | https://commons.wikimedia.org/wiki/File:Carpenters%27_Hall_and_New_Hall_Military_Museum,_Philadelphia,_2007.jpg |
+| `betsy-ross-house_hero.webp` | 14-1 | Public domain | Carol M. Highsmith | https://commons.wikimedia.org/wiki/File:Betsy_Ross_house_in_Philadelphia,_Pennsylvania_LCCN2011630511.tif |
+| `second-bank-of-the-united-states_hero.webp` | 16-2 | Public domain | Rfj0906 | https://commons.wikimedia.org/wiki/File:Philly_secondBank_(2).JPG |
+| `second-bank-of-the-united-states_2.webp` | 16-1 | Pexels | Carlos Aviles | https://www.pexels.com/photo/classical-architecture-of-historic-building-facade-28951656/ |
+| `second-bank-of-the-united-states_3.webp` | 16-11 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Back_gallery_with_Peale_image_(10d269a9-328a-461c-938a-33b0d407b976).jpg |
+| `second-bank-of-the-united-states_4.webp` | 16-12 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Dd_(24579235-4a7d-464c-adb9-5373c5d078b7).jpg |
+| `mother-bethel-ame-church_hero.webp` | 17-1 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Mother_Bethel_Philly_b.JPG |
+| `mother-bethel-ame-church_2.webp` | 17-2 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Mother_Bethel_Philly_a.JPG |
+| `race-street-pier_hero.webp` | 20-2 | Unsplash | Chris Henry | https://unsplash.com/photos/bridge-over-water-during-daytime-UM9kOT9kyBI |
+| `race-street-pier_2.webp` | 20-3 | Pexels | Mariya Eskina | https://www.pexels.com/photo/ben-franklin-bridge-over-delaware-river-at-dusk-38154629/ |
+| `race-street-pier_3.webp` | 20-6 | Pexels | Matt Weissinger | https://www.pexels.com/photo/ben-franklin-bridge-during-sunset-11309850/ |
+| `race-street-pier_4.webp` | 20-5 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-ben-franklin-bridge-in-philadelphia-37195589/ |
+| `race-street-pier_5.webp` | 20-8 | Pexels | K | https://www.pexels.com/photo/modern-bridge-over-river-behind-cityscape-under-sky-4642494/ |
+| `race-street-pier_6.webp` | 20-7 | Pexels | Trev W. Adams | https://www.pexels.com/photo/a-long-bridge-above-a-river-6379461/ |
+| `race-street-pier_7.webp` | 20-9 | Pexels | Mariya Eskina | https://www.pexels.com/photo/silhouetted-cafe-view-of-ben-franklin-bridge-38154657/ |
+| `race-street-pier_8.webp` | 20-10 | Pexels | K | https://www.pexels.com/photo/suspension-bridge-over-river-in-megapolis-4642485/ |
+| `race-street-pier_9.webp` | 20-12 | Unsplash | Say Cheeze Studios | https://unsplash.com/photos/suspension-bride-during-golden-hour-oyApv95pHCU |
+| `race-street-pier_10.webp` | 20-11 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-benjamin-franklin-bridge-in-philadelphia-37195592/ |
+| `eastern-state-penitentiary_hero.webp` | 21-1 | Unsplash | Lance Anderson | https://unsplash.com/photos/a-long-hallway-with-many-doors-UDT5em_-lUk |
+| `eastern-state-penitentiary_2.webp` | 21-2 | Unsplash | Ashim D’Silva | https://unsplash.com/photos/brown-brick-building-under-white-clouds-PwwyH_0oVIg |
+| `eastern-state-penitentiary_3.webp` | 21-4 | Unsplash | Edan Cohen | https://unsplash.com/photos/a-long-tunnel-with-a-metal-railing-leading-up-to-it-MOKze3c_iq4 |
+| `eastern-state-penitentiary_4.webp` | 21-5 | Unsplash | Sidney Trobee | https://unsplash.com/photos/brown-abandoned-building-interior-gJcOCUuarsQ |
+| `eastern-state-penitentiary_5.webp` | 21-8 | Pexels | Joshua Santos | https://www.pexels.com/photo/historic-abandoned-prison-corridor-in-philadelphia-39677665/ |
+| `eastern-state-penitentiary_6.webp` | 21-9 | Pexels | Philippe Gerber | https://www.pexels.com/photo/historic-eastern-state-penitentiary-corridor-32608262/ |
+| `eastern-state-penitentiary_7.webp` | 21-11 | Pexels | Joshua Santos | https://www.pexels.com/photo/abandoned-prison-cell-in-philadelphia-39677662/ |
+| `fairmount-water-works_hero.webp` | 22-1 | Unsplash | RAFIK KHALFALLAH | https://unsplash.com/photos/white-and-brown-concrete-building-beside-river-during-daytime-2HAqbm_XuRA |
+| `fairmount-water-works_2.webp` | 22-3 | Unsplash | Dan Mall | https://unsplash.com/photos/white-and-brown-concrete-building-beside-body-of-water-during-daytime-GO_GCM60dMI |
+| `fairmount-water-works_3.webp` | 22-4 | Unsplash | Chris Murray | https://unsplash.com/photos/gray-concrete-building-near-body-of-water-PLgY0KpeL-g |
+| `boathouse-row_hero.webp` | 23-1 | Pexels | Malik | https://www.pexels.com/photo/historic-boathouse-row-by-river-in-fall-29172432/ |
+| `boathouse-row_2.webp` | 23-4 | Pexels | Ítalo Delani Lopez | https://www.pexels.com/photo/winter-view-of-boathouse-row-in-philadelphia-37993423/ |
+| `boathouse-row_3.webp` | 23-2 | Public domain | Ciricula | https://commons.wikimedia.org/wiki/File:Vesper-Malta2010.jpg |
+| `boathouse-row_4.webp` | 23-7 | Unsplash | John Maldonado | https://unsplash.com/photos/a-view-of-a-body-of-water-with-houses-in-the-background-nLdLW_yZ7nk |
+| `rodin-museum_hero.webp` | 24-5 | Pexels | Nancy Bourque | https://www.pexels.com/photo/elegant-facade-of-the-rodin-museum-in-philadelphia-38325334/ |
+| `rodin-museum_2.webp` | 24-3 | Public domain | Wickedthought | https://commons.wikimedia.org/wiki/File:Rodin_Museum_Entry_Philadelphia.jpg |
+| `rodin-museum_3.webp` | 24-4 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Rodin_Musee_Philly.JPG |
+| `rodin-museum_4.webp` | 24-9 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Rodin_Museum_Philly.JPG |
+| `masonic-temple-philadelphia_hero.webp` | 25-1 | Public domain | Carol M. Highsmith | https://commons.wikimedia.org/wiki/File:Masonic_Temple,_Philadelphia,_Pennsylvania_LCCN2011635136.tif |
+| `masonic-temple-philadelphia_2.webp` | 25-2 | Pexels | Samyantak Mohanty | https://www.pexels.com/photo/historic-architecture-in-philadelphia-pa-32182596/ |
+| `masonic-temple-philadelphia_3.webp` | 25-4 | Public domain | Daderot | https://commons.wikimedia.org/wiki/File:Grand_Lodge_of_Pennsylvania_-_Philadelphia,_PA_-_DSC06820.jpg |
+| `chinatown-friendship-gate_hero.webp` | 26-1 | Unsplash | Michael R | https://unsplash.com/photos/chinatowns-colorful-gate-framed-by-buildings-and-cars-u4v3uKyw8-I |
+| `chinatown-friendship-gate_2.webp` | 26-10 | Pexels | Pexels User | https://www.pexels.com/photo/vibrant-chinese-archway-in-busy-street-scene-33796854/ |
+| `chinatown-friendship-gate_3.webp` | 26-11 | Pexels | James L | https://www.pexels.com/photo/city-street-and-gate-in-china-14288871/ |
+| `franklin-square_hero.webp` | 27-1 | Public domain | Wobbanight | https://commons.wikimedia.org/wiki/File:Franklin_Square_Fountain_a.jpg |
+| `franklin-square_2.webp` | 27-2 | Public domain | Wobbanight | https://commons.wikimedia.org/wiki/File:Franklin_Square_Fountain_b.jpg |
+| `franklin-square_3.webp` | 27-10 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Franklin_Sq_Carousel_eagle.JPG |
+| `franklin-square_4.webp` | 27-11 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Franklin_Sq_Carousel_lead_horse.JPG |
+| `franklin-square_5.webp` | 27-12 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Franklin_Sq_Carousel_sea_creature.JPG |
+| `christ-church-burial-ground_hero.webp` | 28-1 | Unsplash | Dan Mall | https://unsplash.com/photos/black-and-brown-brick-wall--K3gKiI4a2I |
+| `christ-church-burial-ground_2.webp` | 28-4 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Ben_Rush_Christ_CH_Burial_G_Philly.JPG |
+| `love-park_hero.webp` | 29-3 | Public domain | See below | https://commons.wikimedia.org/wiki/File:WTP_D17_Techserv_1.jpg |
+| `love-park_2.webp` | 29-4 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:LOVE_Park_Philly.JPG |
+| `love-park_3.webp` | 29-5 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:1_South_Broad_EVOL.jpg |
+| `love-park_4.webp` | 29-7 | Pexels | Hao Chen | https://www.pexels.com/photo/philadelphia-s-iconic-love-sculpture-in-urban-setting-31986024/ |
+| `one-liberty-place_hero.webp` | 30-1 | Unsplash | ActionVance | https://unsplash.com/photos/aerial-photo-of-buildings-guy5aS3GvgA |
+| `one-liberty-place_2.webp` | 30-3 | Public domain | Carol M. Highsmith | https://commons.wikimedia.org/wiki/File:Liberty_Place_in_Philadelphia,_Pennsylvania_LCCN2011630493.tif |
+| `one-liberty-place_3.webp` | 30-4 | Pexels | Sarah Williams | https://www.pexels.com/photo/philly-skyline-at-sunset-28050870/ |
+| `one-liberty-place_4.webp` | 30-5 | Unsplash | Nick Fewings | https://unsplash.com/photos/high-rise-buildings-during-daytime-KLiQpODADVA |
+| `one-liberty-place_5.webp` | 30-6 | Unsplash | Catherine Kerr | https://unsplash.com/photos/a-city-with-tall-buildings-oxTSUoWlO6M |
+| `one-liberty-place_6.webp` | 30-7 | Unsplash | Jimmy Hu | https://unsplash.com/photos/a-view-of-a-city-skyline-with-tall-buildings-H2QyE1poI6A |
+| `one-liberty-place_7.webp` | 30-11 | Pexels | Scott Duygun | https://www.pexels.com/photo/city-skyline-during-night-time-8738915/ |
+| `one-liberty-place_8.webp` | 30-12 | Unsplash | Alejandro Barba | https://unsplash.com/photos/city-skyline-during-day-time-YLn87mac45M |
