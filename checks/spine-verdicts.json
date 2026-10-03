@@ -395,6 +395,15 @@
     "note": "CORRECT — and the 'finding' is a title artefact. Our order==0 stop sits 56 m from Wikidata's Drottningholm PALACE (Q207686-class, 59 sitelinks), which is what this 3-stop walk is about. The 276 m match is the LOCALITY 'Drottningholm' (19 sitelinks), picked only because our walk carries the bare place name as its title and that label-matches the village exactly. ⚠️ multiStop besides, which the runbook refuses to move.",
     "verdict": "name-collision"
   },
+  "Dudik Memorial Park": {
+    "at": [
+      45.330562,
+      19.017382
+    ],
+    "date": "2026-10-03",
+    "note": "Wikidata Q12759418 carries a rounded point (45.3336, 19.0125) 510 m north-west. OpenStreetMap's 'Spomen park Dudik' is 35 m from our point, which is on the memorial. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "East Side Gallery": {
     "at": [
       52.505,
