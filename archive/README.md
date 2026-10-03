@@ -355,3 +355,4 @@ Full text for every one of them is in
 - [HANDOFF-261002-boston-live.md](HANDOFF-261002-boston-live.md) — **Boston launched:** Atlas Studio BOS, 30 singles + 5 walks (35 tours, 59 MP3s, 96 images).
 - [HANDOFF-261002-next-city.md](HANDOFF-261002-next-city.md) — **Playbook for the next city**, from Boston: download, stage, coordinates, the image picker, audio, wiring, checks and post-launch tags and places. Read this first in a fresh chat.
 - [HANDOFF-261002-triage-batch.md](HANDOFF-261002-triage-batch.md) — **33 link pins** (18 creators, 7 new) triaged from 43 links; 10 dropped (9 duplicates, 1 unreadable); 8 place questions on Edward's board.
+- [HANDOFF-261003-sovmod.md](HANDOFF-261003-sovmod.md) — **SovMod launched:** 72 original audio tours of socialist-era architecture (21 countries, 8 new); 8 coordinates moved to OSM.
