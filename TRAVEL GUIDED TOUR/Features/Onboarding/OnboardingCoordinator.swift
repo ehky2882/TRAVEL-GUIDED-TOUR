@@ -190,12 +190,32 @@ final class OnboardingCoordinator {
     /// when the user skipped out of it, because someone who skipped has made a
     /// decision and re-asking on the next launch is nagging.
     func finish() {
+        lastRunSteps = steps
         isCovering = false
         steps = []
         index = 0
         store.markCompleted()
         state = store.state
         onFinish?()
+    }
+
+    /// The run that just closed, kept so a back tap on the first navigation
+    /// guide can return to its last card (owner, 2026-10-06).
+    private var lastRunSteps: [OnboardingStep] = []
+
+    /// Back from the first navigation guide: put the last card of the run
+    /// that just finished back on screen. Returns `false` when there is no
+    /// such run in this process (nothing to go back to).
+    ///
+    /// Completion stays recorded — the user did reach the end — so quitting
+    /// from here never brings onboarding back on the next launch.
+    @discardableResult
+    func reopenAtLastCard() -> Bool {
+        guard !lastRunSteps.isEmpty else { return false }
+        steps = lastRunSteps
+        index = steps.count - 1
+        isCovering = true
+        return true
     }
 
     /// Settings → "Show tips again". Clears only the coach-mark record.

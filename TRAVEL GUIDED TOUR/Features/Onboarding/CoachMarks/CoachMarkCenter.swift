@@ -43,11 +43,20 @@ final class CoachMarkCenter {
 
     // MARK: - Running
 
-    /// Start from the first stop. Called when onboarding closes, and by
-    /// Settings → "Show tips again".
-    func beginTour() {
+    /// Start from the first stop. Called when onboarding closes
+    /// (`afterOnboarding: true`), and by Settings → "Show tips again".
+    func beginTour(afterOnboarding: Bool = false) {
+        cameFromOnboarding = afterOnboarding
         current = CoachMark.tour.first
     }
+
+    /// Did onboarding hand straight to this run? Only then does back on the
+    /// first stop have somewhere to go.
+    private var cameFromOnboarding = false
+
+    /// Wired by the App to `OnboardingCoordinator.reopenAtLastCard()`.
+    /// Returns whether onboarding is back on screen.
+    var onBackToOnboarding: (@MainActor () -> Bool)?
 
     /// Move to the next stop, or finish after the last.
     func advance() {
@@ -62,10 +71,18 @@ final class CoachMarkCenter {
     /// Step back one stop — a tap on the left third, like the onboarding
     /// cards (owner, 2026-10-06). A no-op on the first stop.
     func back() {
-        guard let current,
-              let i = CoachMark.tour.firstIndex(of: current), i > 0
-        else { return }
-        self.current = CoachMark.tour[i - 1]
+        guard let current, let i = CoachMark.tour.firstIndex(of: current) else { return }
+        if i > 0 {
+            self.current = CoachMark.tour[i - 1]
+            return
+        }
+        // The first stop: back to onboarding's last card, when that is where
+        // the user came from (owner, 2026-10-06). 🔴 Onboarding goes back on
+        // screen BEFORE the tour leaves it, in this one call — a moment with
+        // neither showing would let the location prompt in (see
+        // `firstRunIsActive`).
+        guard cameFromOnboarding, onBackToOnboarding?() == true else { return }
+        self.current = nil
     }
 
     /// End the tour and record every stop as seen.

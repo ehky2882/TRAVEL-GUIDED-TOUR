@@ -244,6 +244,13 @@ struct ContentView: View {
             guard !active else { return }
             requestLocationPermissionIfNeeded()
         }
+        // The navigation tour explains Home as a fresh launch shows it — the
+        // drawer at mid-detent — however it was left (owner, 2026-10-06: a
+        // replay from Settings found it collapsed).
+        .onChange(of: coachMarks?.isRunning ?? false) { _, running in
+            guard running else { return }
+            withAnimation(.easeInOut(duration: 0.25)) { homeSheetDetent = .medium }
+        }
 
         .onAppear {
             // Backstop for any host that never injects `LaunchState` (previews,

@@ -36,7 +36,14 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // first run, a replay, and a Skip alike (skipping the account screens
         // is not skipping learning the app). Synchronous, in the same call; see
         // `OnboardingCoordinator.onFinish` for why an `.onChange` was a race.
-        onboardingCoordinator.onFinish = { [coachMarkCenter] in coachMarkCenter.beginTour() }
+        onboardingCoordinator.onFinish = { [coachMarkCenter] in
+            coachMarkCenter.beginTour(afterOnboarding: true)
+        }
+        // …and back from the tour's first stop returns to onboarding's last
+        // card, in the same synchronous way.
+        coachMarkCenter.onBackToOnboarding = { [onboardingCoordinator] in
+            onboardingCoordinator.reopenAtLastCard()
+        }
         _onboarding = State(initialValue: onboardingCoordinator)
         _coachMarks = State(initialValue: coachMarkCenter)
         _makerProfileService = State(initialValue: MakerProfileService(auth: auth))

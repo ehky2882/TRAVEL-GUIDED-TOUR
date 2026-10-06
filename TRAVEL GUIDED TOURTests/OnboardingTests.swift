@@ -500,6 +500,37 @@ final class CoachMarkCenterTests: XCTestCase {
         XCTAssertFalse(onboarding.isCovering)
         XCTAssertTrue(center.isRunning, "no gap between onboarding and the tour")
     }
+
+    /// Owner, 2026-10-06: back on the first guide returns to the last card —
+    /// again with no gap — but only when onboarding handed to the tour.
+    func testBackFromTheFirstGuideReturnsToTheLastCard() {
+        let suite = "handback.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suite)!
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let store = OnboardingStore(defaults: defaults)
+        let onboarding = OnboardingCoordinator(store: store)
+        let center = CoachMarkCenter(store: store)
+        onboarding.onFinish = { center.beginTour(afterOnboarding: true) }
+        center.onBackToOnboarding = { onboarding.reopenAtLastCard() }
+
+        onboarding.begin()
+        onboarding.finish()
+        center.back()
+        XCTAssertTrue(onboarding.isCovering)
+        XCTAssertFalse(center.isRunning)
+        XCTAssertEqual(onboarding.currentStep, .questionMakerIntent)
+
+        // Going on again restarts the tour.
+        onboarding.finish()
+        XCTAssertTrue(center.isRunning)
+
+        // "Show tips again" alone: the first stop has nowhere to go back to.
+        center.finish()
+        center.replay()
+        center.back()
+        XCTAssertTrue(center.isRunning)
+        XCTAssertFalse(onboarding.isCovering)
+    }
 }
 
 #if canImport(UIKit)
