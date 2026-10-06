@@ -80,11 +80,8 @@ private struct CoachMarkStop: View {
     /// the control has not reported where it is yet.
     private func spotlight(in size: CGSize) -> CGRect? {
         guard mark.hasSpotlight, var rect = anchor else { return nil }
-        // The drawer reports its whole height, most of it below the fold.
-        // Light only its top edge and header — that is the part you drag.
-        if mark == .drawer {
-            rect.size.height = min(rect.height, 110)
-        }
+        // The drawer reports its visible panel, so it is lit whole — the
+        // list is the thing being explained (owner, 2026-10-06).
         rect = rect.insetBy(dx: -6, dy: -6)
         // Keep it on the glass.
         return rect.intersection(CGRect(origin: .zero, size: size))

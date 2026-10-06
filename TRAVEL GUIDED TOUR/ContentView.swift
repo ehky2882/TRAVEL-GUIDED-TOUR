@@ -609,13 +609,14 @@ struct ContentView: View {
                 // when the drawer is fully expanded. AtlasSpacing.sm
                 // is a small visual buffer between the chip row's
                 // bottom edge and the drawer's top edge.
-                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm,
+                // Anchored on the panel inside the sheet — see `coachMark`.
+                coachMark: .drawer
             ) {
                 HomeDrawerContent(
                     sheetDetent: $homeSheetDetent
                 )
             }
-            .coachMarkAnchor(.drawer)
         }
     }
 
