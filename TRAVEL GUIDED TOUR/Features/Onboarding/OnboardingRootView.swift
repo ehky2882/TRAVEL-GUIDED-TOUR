@@ -161,6 +161,7 @@ private struct DefinitionCard: View {
 
 private struct AccountAskCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
+    @State private var showingSignIn = false
 
     var body: some View {
         // Tapping or swiping through is not choosing to sign up: "next"
@@ -176,9 +177,55 @@ private struct AccountAskCard: View {
             }
         } actions: {
             OnboardingButton(title: "Create an account") { onboarding.advance() }
-            OnboardingLink(title: "I already have an account") { onboarding.advance() }
+            OnboardingLink(title: "I already have an account") { showingSignIn = true }
             OnboardingLink(title: "Skip", dimmed: true) { onboarding.skipAccount() }
         }
+        .onboardingSignIn(isPresented: $showingSignIn, skipIfSignedIn: true)
+    }
+}
+
+// MARK: - Signing in to an existing account
+
+extension View {
+    /// "I already have an account" → the app's real `SignInView` (email +
+    /// password, Apple, Google — the same sheet as Settings → Sign in). When
+    /// it closes signed in, the account screens leave the run and it carries
+    /// on at "Welcome back." Closed without signing in: nothing changes.
+    ///
+    /// `skipIfSignedIn` (screen 4 only): someone already signed in when the
+    /// run reaches the account screens — a reinstall keeps the session in the
+    /// Keychain — is never asked to make an account they already have.
+    func onboardingSignIn(isPresented: Binding<Bool>, skipIfSignedIn: Bool = false) -> some View {
+        modifier(OnboardingSignInModifier(isPresented: isPresented, skipIfSignedIn: skipIfSignedIn))
+    }
+}
+
+private struct OnboardingSignInModifier: ViewModifier {
+    @Environment(OnboardingCoordinator.self) private var onboarding
+    @Environment(AuthService.self) private var authService: AuthService?
+    @Binding var isPresented: Bool
+    let skipIfSignedIn: Bool
+
+    func body(content: Content) -> some View {
+        content
+            .sheet(isPresented: $isPresented, onDismiss: finishIfSignedIn) {
+                if let authService {
+                    SignInView().environment(authService)
+                }
+            }
+            .onAppear {
+                if skipIfSignedIn, authService?.isSignedIn == true { onboarding.didSignIn() }
+            }
+            // 🔴 Also on the change itself: `AuthService.user` is published
+            // from the auth-state stream a beat AFTER `signIn` returns and the
+            // sheet dismisses, so `onDismiss` alone can still read signed-out.
+            .onChange(of: authService?.isSignedIn == true) { _, signedIn in
+                if signedIn { onboarding.didSignIn() }
+            }
+    }
+
+    private func finishIfSignedIn() {
+        if authService?.isSignedIn == true { onboarding.didSignIn() }
     }
 }
 
@@ -186,6 +233,7 @@ private struct AccountAskCard: View {
 
 private struct AccountProvidersCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
+    @State private var showingSignIn = false
 
     var body: some View {
         // Tapping or swiping through is not choosing to sign up: "next"
@@ -221,8 +269,9 @@ private struct AccountProvidersCard: View {
             }
         } actions: {
             OnboardingButton(title: "Skip for now", filled: false) { onboarding.skipAccount() }
-            OnboardingLink(title: "I already have an account") { onboarding.advance() }
+            OnboardingLink(title: "I already have an account") { showingSignIn = true }
         }
+        .onboardingSignIn(isPresented: $showingSignIn)
     }
 
     private func provider(_ label: String, symbol: String, action: @escaping () -> Void) -> some View {
@@ -353,13 +402,16 @@ private struct AccountFormCard: View {
 
 private struct WelcomeByNameCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
+    @Environment(AuthService.self) private var authService: AuthService?
 
     /// Someone can reach this screen having skipped the account, so there may
     /// be no name. The line then reads "Welcome." rather than leaving a hole
-    /// where a name should be.
+    /// where a name should be — or "Welcome back." for someone who signed in
+    /// to an account they already had.
     private var greeting: String {
         let name = onboarding.state.firstName
-        return name.isEmpty ? "Welcome." : "Welcome, \(name)."
+        if !name.isEmpty { return "Welcome, \(name)." }
+        return authService?.isSignedIn == true ? "Welcome back." : "Welcome."
     }
 
     var body: some View {

@@ -59,6 +59,15 @@ final class CoachMarkCenter {
         self.current = CoachMark.tour[i + 1]
     }
 
+    /// Step back one stop — a tap on the left third, like the onboarding
+    /// cards (owner, 2026-10-06). A no-op on the first stop.
+    func back() {
+        guard let current,
+              let i = CoachMark.tour.firstIndex(of: current), i > 0
+        else { return }
+        self.current = CoachMark.tour[i - 1]
+    }
+
     /// End the tour and record every stop as seen.
     func finish() {
         store.update { state in

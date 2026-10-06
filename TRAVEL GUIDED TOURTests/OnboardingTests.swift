@@ -218,6 +218,23 @@ final class OnboardingCoordinatorTests: XCTestCase {
         XCTAssertEqual(coordinator.currentStep, .definition)
     }
 
+    /// "I already have an account" → signed in: the account screens leave the
+    /// run and it carries on at Welcome; back never returns to them.
+    func testSigningInDropsTheAccountScreens() {
+        let (coordinator, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        coordinator.begin()
+        coordinator.advance()                                   // → 3
+        coordinator.advance()                                   // → 4
+        coordinator.didSignIn()
+        XCTAssertEqual(coordinator.currentStep, .welcomeByName)
+        XCTAssertFalse(coordinator.steps.contains(.accountAsk))
+        XCTAssertEqual(coordinator.progressCount, 13)
+        coordinator.back()
+        XCTAssertEqual(coordinator.currentStep, .definition)
+    }
+
     /// Owner, 2026-10-06: "Skip" skips signing up, not the rest of onboarding.
     func testSkippingTheAccountContinuesTheRun() {
         let (coordinator, defaults, suite) = makeCoordinator()
@@ -404,6 +421,21 @@ final class CoachMarkCenterTests: XCTestCase {
         XCTAssertEqual(seen, [.map, .search, .filters, .drawer, .tabBar])
         XCTAssertFalse(center.isRunning)
         XCTAssertTrue(center.hasSeenAll)
+    }
+
+    /// Owner, 2026-10-06: a left tap goes back a stop, never off the front.
+    func testBackStepsToThePreviousStop() {
+        let (center, _, defaults, suite) = makeCenter()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        center.beginTour()
+        center.back()
+        XCTAssertEqual(center.current, .map)
+        center.advance()
+        center.advance()
+        XCTAssertEqual(center.current, .filters)
+        center.back()
+        XCTAssertEqual(center.current, .search)
     }
 
     func testOnlyTheLastStopSaysGotIt() {

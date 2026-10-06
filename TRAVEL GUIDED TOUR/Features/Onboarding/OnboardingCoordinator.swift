@@ -149,6 +149,16 @@ final class OnboardingCoordinator {
         }
     }
 
+    /// Signed in — through "I already have an account", or already signed in
+    /// when the run began. The account screens leave this run entirely (there
+    /// is nothing left to choose), and it carries on at "Welcome back."
+    func didSignIn() {
+        steps.removeAll { $0 == .accountAsk || $0 == .accountProviders || $0 == .accountForm }
+        usedProvider = false
+        skippedAccount = false
+        if let next = steps.firstIndex(of: .welcomeByName) { index = next }
+    }
+
     /// "Skip" on the account screens (owner, 2026-10-06): skips signing up,
     /// NOT the rest of onboarding. The questions are stored on the device and
     /// need no account, so the run carries on at "Welcome", which already

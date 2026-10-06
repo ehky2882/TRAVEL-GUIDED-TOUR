@@ -28,9 +28,9 @@ struct CoachMarkOverlay: View {
     var body: some View {
         ZStack {
             if let center, let mark = center.current {
-                CoachMarkStop(mark: mark, anchor: center.anchors[mark]) {
-                    center.advance()
-                }
+                CoachMarkStop(mark: mark, anchor: center.anchors[mark],
+                              advance: { center.advance() },
+                              back: { center.back() })
                 .id(mark)
                 .transition(.opacity)
             }
@@ -44,6 +44,7 @@ private struct CoachMarkStop: View {
     let mark: CoachMark
     let anchor: CGRect?
     let advance: () -> Void
+    let back: () -> Void
 
     private let faceRadius: CGFloat = 22
     private let edge: CGFloat = 20
@@ -55,11 +56,24 @@ private struct CoachMarkStop: View {
                 dim(spot: spot)
                 bubbleColumn(spot: spot, size: geo.size)
             }
-            // A tap anywhere advances; the button's own tap takes priority on
-            // its own area. Never require a tap ON the target — that needs
-            // pass-through hit-testing across two windows and does not ship.
+            // Reels-style, like the onboarding cards (owner, 2026-10-06): a
+            // tap on the left third goes back, anywhere else advances; swipe
+            // left for next, right for back. The button's own tap takes
+            // priority on its own area. Never require a tap ON the target —
+            // that needs pass-through hit-testing across two windows and does
+            // not ship.
             .contentShape(Rectangle())
-            .onTapGesture(perform: advance)
+            .onTapGesture { location in
+                if location.x < geo.size.width / 3 { back() } else { advance() }
+            }
+            .simultaneousGesture(
+                DragGesture(minimumDistance: 24)
+                    .onEnded { drag in
+                        let dx = drag.translation.width, dy = drag.translation.height
+                        guard abs(dx) > 80, abs(dx) > abs(dy) * 2 else { return }
+                        if dx > 0 { back() } else { advance() }
+                    }
+            )
         }
         .ignoresSafeArea()
         // The likeliest defect here is VoiceOver focus landing behind the
