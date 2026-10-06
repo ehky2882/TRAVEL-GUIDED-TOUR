@@ -10,7 +10,7 @@ Philadelphia is the **40th studio**. The city already has **12 creator link pins
 
 ## Owed before wire-in
 1. 🔴 **The author's pronunciation pass, before recording.** The author calls it "the one hard blocker": a native pass on *Lenape*, *Lenapehoking*, *Schuylkill*, *Wissahickon* and *Deborah's*. Also apply "Reading" → "redding" in 08's TTS at record (handoff №13 §4).
-2. **Audio:** 30 MP3s, named `<slug>.mp3` from the table below (gh-pages `audio/`).
+2. **Audio: DONE (2026-10-06).** All 66 MP3s (30 singles + 36 walk segments) are on gh-pages as `audio/<slug>.mp3` and `audio/<walk-slug>_stop<N>.mp3`, hash-verified live. Each file was transcript-matched to its own script (faster-whisper on its first 30 s; the lowest score was 0.90, and none matched another script better). They are 128 kbps / 44.1 kHz **mono**, 40–194 s each, 8,327 s in total. Durations and hashes are in `audio-manifest.json`. ⚠️ The author's pronunciation pass (item 1) was owed before recording. Nothing here can confirm it happened, so listen for *Schuylkill*, *Lenape* and *Reading* on device.
 3. **Images: 25 of 30 tours done (2026-10-03), 124 files on gh-pages, all hash-verified live.** The owner picked them in the [Philadelphia Image Picks](https://claude.ai/artifact/Ky2zRMHBARidzPDbgzsq5B) page. None needs a credit (`drafts/CREDITS.md`). The files are `images/<slug>_hero.webp`, then `_2`, `_3` and so on, in the owner's gallery order. The manifest is `image-manifest.json`. **Still owed:** 05, 08, 15, 18, 19 (Christ Church, Reading Terminal, Congress Hall, Head House, Penn's Landing), plus the three walk connectives (W1-3, W2-5, W4-4). The owner left those rows unpicked. For 05, 15 and 18 the picker's options were almost all CC BY-SA; 08 and 19 also had credit-free options. Ask before re-sourcing.
 
 ## The assembler must strip a metadata header
@@ -65,3 +65,32 @@ Philadelphia is the **40th studio**. The city already has **12 creator link pins
 
 **City:** `Philadelphia`, **country:** `United States` for all 30, matching the 12 existing pins.
 **Ids at wire-in:** uuid5 `atlas-tour:phl:<slug>`, and `atlas-stop:phl:<slug>:1` at order 0 (the BOS/MIA scheme).
+
+## How to launch (once every image is in)
+
+🔴 **Owner, 2026-10-06: "dont launch the tours until i've backfilled everything".** The assembler enforces this: it exits `NOT READY` while any single or walk connective lacks an image.
+
+1. Process the owner's backfill picks the same way as the first 124, and **add their rows to `image-manifest.json`**:
+   - a single gets `num` set to `05` (etc.) and name `<slug>_hero.webp`, `_2`, …;
+   - a connective gets `num` set to `W1-3` / `W2-5` / `W4-4` and name `<walk-slug>_stop<N>.webp`.
+
+   Push the files to gh-pages in **one** batch and hash-verify them live.
+2. Run `python3 drafts/philadelphia-batch1/tools/wire_philly.py --created <launch date>` from the repo root.
+   - A `--dry-run <path>` run on 2026-10-06 (with stand-ins for the missing images) wrote 35 tours and passed `validate-tours-mirror.py` with **0 errors** and no Philadelphia warnings.
+3. Then run the launch checklist in `archive/HANDOFF-261002-next-city.md` §4:
+   - `validate-tours-mirror`;
+   - `check-image-duplicates --maker PHL`;
+   - `spine-lookup.py`;
+   - `check-place-candidates` (expect **Eastern State Penitentiary**: the tour sits on the same point as 3 creator pins);
+   - `join-places --max-move 100`.
+
+   Update CLAUDE.md Key facts (re-derived; this is the 40th studio) and the tracker, and confirm Supabase with a count query after the merge.
+4. Walks:
+   - **W1** *The Fifth Square*: 6 stops, ~1.7 km, 522 s
+   - **W2** *Broad and Market*: 9 stops, ~2.7 km, 755 s
+   - **W3** *The Boulevard*: 6 stops, ~2.4 km, 786 s
+   - **W4** *Brick*: 8 stops, ~2.3 km, 994 s
+   - **W5** *The House That Isn't There*: 7 stops, ~0.6 km, 942 s
+
+   Walking distances are computed (stop-to-stop × 1.25).
+5. After launch, offer **architect tags** (atlas-upload Job 5). Candidates named in the scripts or well documented include William Strickland, Andrew Hamilton, John McArthur Jr., Paul Cret & Jacques Gréber, Helmut Jahn, Frederick Graff, Robert Smith and Venturi, Rauch & Scott Brown. Check each against its script before tagging.
