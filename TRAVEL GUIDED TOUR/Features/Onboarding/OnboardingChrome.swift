@@ -111,6 +111,8 @@ struct OnboardingButton: View {
     let title: String
     var filled = true
     let action: () -> Void
+    /// `.disabled(_:)` from the call site — dimmed so it reads as not yet.
+    @Environment(\.isEnabled) private var isEnabled
 
     var body: some View {
         Button(action: action) {
@@ -129,6 +131,7 @@ struct OnboardingButton: View {
                         .stroke(filled ? Color.clear : AtlasColors.primaryText.opacity(0.24),
                                 lineWidth: 1.5)
                 )
+                .opacity(isEnabled ? 1 : 0.4)
         }
         .buttonStyle(.plain)
     }

@@ -246,8 +246,21 @@ private struct AccountFormCard: View {
     /// What is left is the one thing they cannot give us.
     private var fromProvider: Bool { onboarding.usedProvider }
 
-    /// The button and a swipe both come here, so neither loses the names.
+    private func filled(_ value: String) -> Bool {
+        !value.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+
+    /// Every field on screen is required (owner, 2026-10-06). Anyone who would
+    /// rather not sign up has Skip, below the button.
+    private var isComplete: Bool {
+        guard filled(firstName), filled(lastName), filled(homeCity) else { return false }
+        return fromProvider || (filled(username) && !password.isEmpty)
+    }
+
+    /// The button and a swipe both come here, so neither loses the names —
+    /// and neither gets past an empty field.
     private func saveAndContinue() {
+        guard isComplete else { return }
         onboarding.update {
             $0.firstName = firstName.trimmingCharacters(in: .whitespaces)
             $0.lastName = lastName.trimmingCharacters(in: .whitespaces)
@@ -281,12 +294,14 @@ private struct AccountFormCard: View {
             }
         } actions: {
             OnboardingButton(title: "Continue", action: saveAndContinue)
+                .disabled(!isComplete)
+            OnboardingLink(title: "Skip", dimmed: true) { onboarding.skipAccount() }
         }
     }
 
     private func field(_ label: String, text: Binding<String>, prefilled: Bool = false) -> some View {
         HStack(spacing: 8) {
-            TextField(label, text: text)
+            TextField(text: text, prompt: requiredPrompt(label)) { Text(label) }
                 .font(AtlasTypography.caption)
                 // `textInputAutocapitalization` does not exist on macOS, and
                 // this target builds there too — `PlatformHelpers` is the shim.
@@ -308,8 +323,13 @@ private struct AccountFormCard: View {
             .stroke(AtlasColors.primaryText.opacity(0.18), lineWidth: 1))
     }
 
+    /// "First name *" — the asterisk in brass, the usual mark for required.
+    private func requiredPrompt(_ label: String) -> Text {
+        Text("\(label) ") + Text("*").foregroundColor(AtlasColors.brass)
+    }
+
     private func secureField(_ label: String) -> some View {
-        SecureField(label, text: $password)
+        SecureField(text: $password, prompt: requiredPrompt(label)) { Text(label) }
             .font(AtlasTypography.caption)
             .padding(.horizontal, 16)
             .frame(height: 52)

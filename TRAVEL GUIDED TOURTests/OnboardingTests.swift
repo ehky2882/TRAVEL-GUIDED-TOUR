@@ -243,6 +243,14 @@ final class OnboardingCoordinatorTests: XCTestCase {
         // Skipping from screen 5 lands in the same place.
         coordinator.skipAccount()
         XCTAssertEqual(coordinator.currentStep, .welcomeByName)
+
+        // …and so does skipping from the form, half-filled or not.
+        coordinator.back()
+        coordinator.advance()                                   // → 5
+        coordinator.advance()                                   // → 6
+        XCTAssertEqual(coordinator.currentStep, .accountForm)
+        coordinator.skipAccount()
+        XCTAssertEqual(coordinator.currentStep, .welcomeByName)
     }
 
     /// 🔴 Build 181: every answer was saved and none was ever drawn — rows and
