@@ -218,6 +218,33 @@ final class OnboardingCoordinatorTests: XCTestCase {
         XCTAssertEqual(coordinator.currentStep, .definition)
     }
 
+    /// Owner, 2026-10-06: "Skip" skips signing up, not the rest of onboarding.
+    func testSkippingTheAccountContinuesTheRun() {
+        let (coordinator, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        coordinator.begin()
+        coordinator.advance()                                   // → 3
+        coordinator.advance()                                   // → 4
+        coordinator.skipAccount()
+        XCTAssertTrue(coordinator.isCovering)
+        XCTAssertEqual(coordinator.currentStep, .welcomeByName)
+        // One segment per screen shown: providers and form are gone.
+        XCTAssertEqual(coordinator.progressCount, 14)
+
+        // Back returns to the choice, and changing your mind restores the
+        // account screens.
+        coordinator.back()
+        XCTAssertEqual(coordinator.currentStep, .accountAsk)
+        XCTAssertEqual(coordinator.progressCount, 16)
+        coordinator.advance()
+        XCTAssertEqual(coordinator.currentStep, .accountProviders)
+
+        // Skipping from screen 5 lands in the same place.
+        coordinator.skipAccount()
+        XCTAssertEqual(coordinator.currentStep, .welcomeByName)
+    }
+
     /// 🔴 Build 181: every answer was saved and none was ever drawn — rows and
     /// chips could not be seen to select, because `state` was read through the
     /// non-observable store and so recorded no dependency. A view reading an

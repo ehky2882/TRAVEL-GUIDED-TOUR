@@ -131,6 +131,34 @@ final class OnboardingCoordinator {
     func back() {
         guard canGoBack else { return }
         index -= 1
+        // Back onto "First, an account" after skipping it: put the provider
+        // and form screens back, so changing your mind leads to them again.
+        if currentStep == .accountAsk {
+            let full = OnboardingFlow.steps(replaying: isReplay)
+            if let at = full.firstIndex(of: .accountAsk) {
+                steps = full
+                index = at
+            }
+        }
+    }
+
+    /// "Skip" on the account screens (owner, 2026-10-06): skips signing up,
+    /// NOT the rest of onboarding. The questions are stored on the device and
+    /// need no account, so the run carries on at "Welcome", which already
+    /// reads without a name.
+    ///
+    /// The provider and form screens leave this run, so the bar keeps one
+    /// segment per screen actually shown. "First, an account" stays, so back
+    /// from Welcome returns to where the choice was made — see `back()`.
+    func skipAccount() {
+        guard let from = currentStep else { return }
+        steps.removeAll { $0 == .accountProviders || $0 == .accountForm }
+        usedProvider = false
+        if let next = steps.firstIndex(of: .welcomeByName) {
+            index = next
+        } else if let stay = steps.firstIndex(of: from) {
+            index = stay
+        }
     }
 
     /// Leave the flow. Marks it complete so it never reappears — including

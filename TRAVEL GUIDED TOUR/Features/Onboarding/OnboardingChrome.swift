@@ -163,11 +163,26 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
     /// Screens 2 and the splash-adjacent ones hide the face; everything from 3
     /// on shows it in exactly the same spot.
     var showsFace = true
+    /// What "next" means on this card when it is reached by a tap or a swipe
+    /// rather than the button — `nil` is a plain `advance()`. A card whose
+    /// button does more than advance (saves a form, finishes the run) passes
+    /// the same closure here, so the three ways forward always agree.
+    var onForward: (() -> Void)? = nil
+    /// Reels-style tap zones. Off only where the empty space between controls
+    /// is not empty — the account form, where a tap beside a field must not
+    /// leave the screen.
+    var tapsNavigate = true
     @ViewBuilder var content: () -> Content
     @ViewBuilder var actions: () -> Actions
 
     /// 42pt radius — the size the whole run was drawn at.
     private let faceRadius: CGFloat = 42
+
+    @State private var width: CGFloat = 0
+
+    private func forward() {
+        if let onForward { onForward() } else { onboarding.advance() }
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -203,6 +218,27 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(AtlasColors.background)
+        // Reels-style navigation (owner, 2026-10-06): tap the left third to go
+        // back, anywhere else to go on; swipe left for next, right for back.
+        // The buttons stay for anyone who prefers them. Controls inside the
+        // card are children, so their own taps win — only empty space reaches
+        // these. Not an accessibility element: VoiceOver users have the
+        // buttons and the escape scrub.
+        .contentShape(Rectangle())
+        .onGeometryChange(for: CGFloat.self) { $0.size.width } action: { width = $0 }
+        .onTapGesture { location in
+            guard tapsNavigate else { return }
+            if location.x < width / 3 { onboarding.back() } else { forward() }
+        }
+        // Horizontal and deliberate only, so it never fights a scroll.
+        .simultaneousGesture(
+            DragGesture(minimumDistance: 24)
+                .onEnded { drag in
+                    let dx = drag.translation.width, dy = drag.translation.height
+                    guard abs(dx) > 80, abs(dx) > abs(dy) * 2 else { return }
+                    if dx > 0 { onboarding.back() } else { forward() }
+                }
+        )
         // Back, in the gap between the bar and the face — the same corner
         // every screen, like the bar itself. A 44pt target around a small
         // glyph, so it reads as quiet chrome rather than a second button.

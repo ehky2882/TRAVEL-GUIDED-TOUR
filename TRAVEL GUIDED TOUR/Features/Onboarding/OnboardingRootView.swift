@@ -33,16 +33,8 @@ struct OnboardingRootView: View {
             }
         }
         .animation(reduceMotion ? nil : .easeInOut(duration: 0.22), value: onboarding.index)
-        // A swipe to the right goes back, as it does everywhere else on iOS.
-        // Horizontal and deliberate only, so it never fights a scroll.
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 24)
-                .onEnded { drag in
-                    let dx = drag.translation.width, dy = drag.translation.height
-                    if dx > 80, abs(dx) > abs(dy) * 2 { onboarding.back() }
-                }
-        )
-        // VoiceOver's two-finger scrub.
+        // Taps and swipes live in `OnboardingScaffold`, which knows what
+        // "next" means on each card. VoiceOver's two-finger scrub:
         .accessibilityAction(.escape) { onboarding.back() }
         .onDisappear { password = "" }
     }
@@ -144,19 +136,15 @@ private struct DefinitionCard: View {
                     .opacity(0.55)
                     .padding(.top, 2)
                 OnboardingLine(
-                    "a person who acts as a guide, leading others through a place "
-                    + "and telling them what is worth knowing about it."
+                    "a person who leads guided tours, especially through a museum, "
+                    + "gallery or historic place."
                 )
                 .padding(.top, OnboardingType.Gap.tight)
-                // The usage example every dictionary entry carries. It is what
-                // introduces the lowercase common noun the rest of the run uses.
-                OnboardingLine(Text("“we spent the morning with a dozent.”").italic())
-                    .opacity(0.55)
-                    .padding(.top, OnboardingType.Gap.tight)
                 // 🔴 The handoff. The entry defines *docent*; this sentence uses
                 // *Dozent*; screens 11, 13, 14 and 17 then use it as an ordinary
                 // word. Before 2026-09-26 this line said "docent" and the switch
-                // was never made anywhere.
+                // was never made anywhere. (The italic usage example that sat
+                // above it was removed on the owner's call, 2026-10-06.)
                 OnboardingLine(
                     Text("An app built for travel and exploration. Think of it as having a ")
                     + dozentInline + Text(" in your hands.")
@@ -184,7 +172,7 @@ private struct AccountAskCard: View {
         } actions: {
             OnboardingButton(title: "Create an account") { onboarding.advance() }
             OnboardingLink(title: "I already have an account") { onboarding.advance() }
-            OnboardingLink(title: "Skip", dimmed: true) { onboarding.finish() }
+            OnboardingLink(title: "Skip", dimmed: true) { onboarding.skipAccount() }
         }
     }
 }
@@ -222,7 +210,7 @@ private struct AccountProvidersCard: View {
                 .padding(.top, OnboardingType.Gap.step)
             }
         } actions: {
-            OnboardingButton(title: "Skip for now", filled: false) { onboarding.finish() }
+            OnboardingButton(title: "Skip for now", filled: false) { onboarding.skipAccount() }
             OnboardingLink(title: "I already have an account") { onboarding.advance() }
         }
     }
@@ -258,8 +246,22 @@ private struct AccountFormCard: View {
     /// What is left is the one thing they cannot give us.
     private var fromProvider: Bool { onboarding.usedProvider }
 
+    /// The button and a swipe both come here, so neither loses the names.
+    private func saveAndContinue() {
+        onboarding.update {
+            $0.firstName = firstName.trimmingCharacters(in: .whitespaces)
+            $0.lastName = lastName.trimmingCharacters(in: .whitespaces)
+            $0.homeCity = homeCity.trimmingCharacters(in: .whitespaces)
+        }
+        onboarding.advance()
+    }
+
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(
+            progressIndex: onboarding.progressIndex,
+            onForward: saveAndContinue,
+            tapsNavigate: false
+        ) {
             VStack(spacing: 0) {
                 OnboardingLine(Text("Welcome to ") + dozentWordmark())
                 if fromProvider {
@@ -278,14 +280,7 @@ private struct AccountFormCard: View {
                 .padding(.top, 22)
             }
         } actions: {
-            OnboardingButton(title: "Continue") {
-                onboarding.update {
-                    $0.firstName = firstName.trimmingCharacters(in: .whitespaces)
-                    $0.lastName = lastName.trimmingCharacters(in: .whitespaces)
-                    $0.homeCity = homeCity.trimmingCharacters(in: .whitespaces)
-                }
-                onboarding.advance()
-            }
+            OnboardingButton(title: "Continue", action: saveAndContinue)
         }
     }
 
@@ -742,7 +737,12 @@ private struct MakerIntentCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .beam) {
+        // The last card: "next" is the same as "Start exploring".
+        OnboardingScaffold(
+            progressIndex: onboarding.progressIndex,
+            expression: .beam,
+            onForward: { onboarding.finish() }
+        ) {
             VStack(spacing: 0) {
                 OnboardingLine(
                     Text("Whichever you choose, we are happy to have you in the ")
