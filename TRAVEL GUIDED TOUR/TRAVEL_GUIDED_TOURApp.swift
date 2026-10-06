@@ -371,6 +371,8 @@ struct TRAVEL_GUIDED_TOURApp: App {
                             .environment(dataService)
                             .environment(authService)
                             .environment(followService)
+                            // Screen 6 names the new account's profile.
+                            .environment(makerProfileService)
                             .transition(.opacity)
                     }
                 }
@@ -379,6 +381,13 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 // would put a detail layer behind the carousel.
                 // Re-derive the bars' visibility whenever onboarding opens or
                 // closes — including a replay started from Settings.
+                // An email account made in onboarding waits on its
+                // confirmation link; its name and username are applied on its
+                // first sign-in, whenever that is.
+                .onChange(of: authService.userId) { _, userId in
+                    guard userId != nil else { return }
+                    Task { await onboarding.applyPendingProfile(using: makerProfileService) }
+                }
                 .onChange(of: onboarding.holdsBottomModule) { _, _ in
                     syncBottomModuleVisibility()
                 }

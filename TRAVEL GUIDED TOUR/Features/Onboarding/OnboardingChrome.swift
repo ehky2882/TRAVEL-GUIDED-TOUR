@@ -56,6 +56,21 @@ struct OnboardingLine: View {
     }
 }
 
+/// Why an account step did not go through — the line under the fields.
+/// Same type as every other line; only the colour says "problem".
+struct OnboardingError: View {
+    private let message: String
+    init(_ message: String) { self.message = message }
+
+    var body: some View {
+        Text(message)
+            .font(OnboardingType.caption)
+            .foregroundStyle(AtlasColors.mapPin)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
+    }
+}
+
 /// "Dozent", always in the wordmark — New York serif 15pt, tracked 2, Title
 /// Case. Same as `SplashView` and the Settings masthead.
 func dozentWordmark(_ trailing: String = "") -> Text {

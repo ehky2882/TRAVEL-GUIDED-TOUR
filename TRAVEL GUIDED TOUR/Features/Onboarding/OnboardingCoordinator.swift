@@ -66,6 +66,14 @@ final class OnboardingCoordinator {
     /// Set when the user takes Apple or Google on screen 5, which shortens the
     /// form on screen 6 to the one thing a provider cannot give us.
     var usedProvider = false
+    /// "Apple" or "Google" — named on screen 6's short form.
+    var providerName = "Apple"
+
+    /// True from tapping Apple / Google / Email on screen 5 until the run
+    /// leaves the account screens. A sign-in that happens while it is set is
+    /// account CREATION, which goes on to the form — not "I already have an
+    /// account", which skips it (see `OnboardingSignInModifier`).
+    var isCreatingAccount = false
 
     /// Set by "Skip" on the account screens. Screen 14 reads it: following
     /// needs an account (the app hides Follow when signed out), so someone who
@@ -105,6 +113,7 @@ final class OnboardingCoordinator {
         hasBegun = true
         isReplay = replaying
         usedProvider = false
+        isCreatingAccount = false
         skippedAccount = false
         steps = OnboardingFlow.steps(replaying: replaying)
         index = 0
@@ -155,6 +164,7 @@ final class OnboardingCoordinator {
     func didSignIn() {
         steps.removeAll { $0 == .accountAsk || $0 == .accountProviders || $0 == .accountForm }
         usedProvider = false
+        isCreatingAccount = false
         skippedAccount = false
         if let next = steps.firstIndex(of: .welcomeByName) { index = next }
     }
@@ -171,6 +181,7 @@ final class OnboardingCoordinator {
         guard let from = currentStep else { return }
         steps.removeAll { $0 == .accountProviders || $0 == .accountForm }
         usedProvider = false
+        isCreatingAccount = false
         skippedAccount = true
         // Whatever was typed into the form belonged to an account they chose
         // not to make — and must not greet them as "Welcome, Ada."

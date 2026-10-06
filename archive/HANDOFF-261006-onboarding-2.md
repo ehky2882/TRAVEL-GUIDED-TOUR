@@ -27,14 +27,31 @@ Follows `archive/HANDOFF-261006-onboarding.md`. Same PR, same branch.
 | Drawer guide | Anchor moved onto the panel inside `BottomSheet` (`coachMark:` param) and the 110pt clamp removed | It lit the search bar: `BottomSheet.body` is a full-screen GeometryReader |
 | App | Onboarding overlay now gets `AuthService` + `FollowService` (it sits outside the environment chain and had neither) | Needed by screens 4/5/7/14 |
 
+## Round 2 (same session): account creation is REAL
+
+Owner: *"why would 'create an account' be anything except a real account"*. Screens 5–6 now create one:
+
+| Path | What happens |
+|---|---|
+| Apple | Native Apple flow from our own capsule (`OnboardingAppleSignIn`) → `AuthService.signInWithApple`. Apple's name (first authorisation only) prefills the form, which asks names + home city; Continue names the profile |
+| Google | `AuthService.signInWithGoogle` (OAuth sheet); name from `full_name` metadata (`AuthService.providerFullName`) |
+| Email | Form gains **Email** + "Password (6+ characters)". Continue checks the username (`handle_available`), then `signUp`. Signed in → profile name + username saved. **Confirmation required (the project default)** → "Check your email" card, run continues, name + username held in `OnboardingState.pendingDisplayName/pendingUsername` and applied on the account's first sign-in (`applyPendingProfile`, App `.onChange(of: authService.userId)`) |
+
+- 🔴 An existing profile is never overwritten (`applyProfile` only fills an account with no maker row; username only when it is still automatic).
+- `isCreatingAccount` stops the "I already have an account" watcher from skipping the form when a provider sign-in happens on screen 5.
+- Screen 14: Follow buttons only when signed in; an unconfirmed email account sees "Confirm your email to follow them."
+- Apple's error codes are replaced with a sentence (`friendlyAccountError`).
+- `SignInView`'s nonce helpers moved to `AppleNonce` (shared).
+
 ## Not verifiable in the Simulator — check on device
+
+- **Every real account path**: Apple, Google, Email sign-up (+ the confirmation link → first sign-in applying the name/username). Creating an account on the live Supabase from a session is not allowed, and the Simulator has no Apple Account.
 
 - Signing in from "I already have an account" (no test account; we do not type real credentials).
 - Screen 14's real follow writes (needs a session).
 
 ## Still not built
 
-- **"Create an account" does not create an account** — the onboarding form only stores names. `SignInView` already does real sign-up; wiring screens 5/6 to `AuthService.signUp` / Apple / Google is the obvious next step (offered to the owner).
 - Screen 14's six are a fixed list; answers don't personalise Home yet; `caption` is fixed 13pt.
 
 ## Testing notes for the next local session

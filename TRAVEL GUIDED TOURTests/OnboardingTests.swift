@@ -45,6 +45,17 @@ final class OnboardingStoreTests: XCTestCase {
         XCTAssertFalse(relaunched.shouldPresentOnLaunch)
     }
 
+    /// A state saved by build 182 (no pending-profile keys) must still load —
+    /// otherwise every tester would be thrown back into onboarding.
+    func testAStateSavedBeforePendingProfileStillLoads() throws {
+        let old = #"{"completedVersion":1,"firstName":"Ada","lastName":"","homeCity":"","uses":[],"formats":[],"interests":[],"listUses":[],"seenCoachMarks":[]}"#
+        defaults.set(Data(old.utf8), forKey: "onboarding.state")
+        let store = OnboardingStore(defaults: defaults)
+        XCTAssertEqual(store.state.completedVersion, 1)
+        XCTAssertEqual(store.state.firstName, "Ada")
+        XCTAssertNil(store.state.pendingDisplayName)
+    }
+
     func testAnswersSurviveRelaunch() {
         let store = OnboardingStore(defaults: defaults)
         store.update {

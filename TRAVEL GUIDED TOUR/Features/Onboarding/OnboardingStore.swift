@@ -42,6 +42,12 @@ struct OnboardingState: Codable, Equatable, Sendable {
     var makerIntent: String?
     /// Coach marks already shown. Phase 3 reads this; nothing writes it yet.
     var seenCoachMarks: Set<String> = []
+    /// An email account made on screen 6 has no session until its confirmation
+    /// link is tapped, so its name and username wait here and are applied on
+    /// its first sign-in (`applyPendingProfile`). Optional so older saved
+    /// states still decode.
+    var pendingDisplayName: String?
+    var pendingUsername: String?
 }
 
 /// Reads and writes `OnboardingState`.

@@ -89,10 +89,10 @@ struct SignInView: View {
 
     private var appleButton: some View {
         SignInWithAppleButton(.signIn) { request in
-            let nonce = Self.randomNonce()
+            let nonce = AppleNonce.random()
             appleNonce = nonce
             request.requestedScopes = [.fullName, .email]
-            request.nonce = Self.sha256(nonce)
+            request.nonce = AppleNonce.sha256(nonce)
         } onCompletion: { result in
             handleApple(result)
         }
@@ -291,27 +291,6 @@ struct SignInView: View {
                 errorMessage = error.localizedDescription
             }
         }
-    }
-
-    // MARK: - Nonce helpers (Apple ⇄ Supabase)
-
-    /// A random URL-safe nonce. Apple receives its SHA256; Supabase receives the
-    /// raw value to verify the token's `nonce` claim and prevent replay.
-    private static func randomNonce(length: Int = 32) -> String {
-        let charset = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-._")
-        var result = ""
-        while result.count < length {
-            for byte in (0..<16).map({ _ in UInt8.random(in: 0...255) }) where result.count < length {
-                result.append(charset[Int(byte) % charset.count])
-            }
-        }
-        return result
-    }
-
-    private static func sha256(_ input: String) -> String {
-        SHA256.hash(data: Data(input.utf8))
-            .map { String(format: "%02x", $0) }
-            .joined()
     }
 }
 

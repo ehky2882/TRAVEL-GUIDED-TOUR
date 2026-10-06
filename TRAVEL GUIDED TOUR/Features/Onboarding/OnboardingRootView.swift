@@ -219,13 +219,15 @@ private struct OnboardingSignInModifier: ViewModifier {
             // 🔴 Also on the change itself: `AuthService.user` is published
             // from the auth-state stream a beat AFTER `signIn` returns and the
             // sheet dismisses, so `onDismiss` alone can still read signed-out.
+            // ⚠️ Not while an account is being CREATED on screen 5 — that
+            // sign-in goes on to the form, not past it.
             .onChange(of: authService?.isSignedIn == true) { _, signedIn in
-                if signedIn { onboarding.didSignIn() }
+                if signedIn, !onboarding.isCreatingAccount { onboarding.didSignIn() }
             }
     }
 
     private func finishIfSignedIn() {
-        if authService?.isSignedIn == true { onboarding.didSignIn() }
+        if authService?.isSignedIn == true, !onboarding.isCreatingAccount { onboarding.didSignIn() }
     }
 }
 
@@ -233,7 +235,11 @@ private struct OnboardingSignInModifier: ViewModifier {
 
 private struct AccountProvidersCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
+    @Environment(AuthService.self) private var authService: AuthService?
     @State private var showingSignIn = false
+    @State private var isWorking = false
+    @State private var errorMessage: String?
+    @State private var apple = OnboardingAppleSignIn()
 
     var body: some View {
         // Tapping or swiping through is not choosing to sign up: "next"
@@ -245,20 +251,20 @@ private struct AccountProvidersCard: View {
             VStack(spacing: 0) {
                 OnboardingLine("Create an account")
                 VStack(spacing: 10) {
-                    provider("Apple", symbol: "apple.logo") {
-                        onboarding.usedProvider = true
-                        onboarding.advance()
-                    }
-                    provider("Google", symbol: "g.circle") {
-                        onboarding.usedProvider = true
-                        onboarding.advance()
-                    }
+                    provider("Apple", symbol: "apple.logo", action: signUpWithApple)
+                    provider("Google", symbol: "g.circle", action: signUpWithGoogle)
                     provider("Email", symbol: "envelope") {
                         onboarding.usedProvider = false
+                        onboarding.isCreatingAccount = true
                         onboarding.advance()
                     }
                 }
+                .disabled(isWorking)
                 .padding(.top, 22)
+                if let errorMessage {
+                    OnboardingError(errorMessage)
+                        .padding(.top, OnboardingType.Gap.tight)
+                }
                 // The line that makes the three account screens acceptable
                 // this early. It is the owner's own wording from their page 5.
                 OnboardingLine(
@@ -272,6 +278,64 @@ private struct AccountProvidersCard: View {
             OnboardingLink(title: "I already have an account") { showingSignIn = true }
         }
         .onboardingSignIn(isPresented: $showingSignIn)
+    }
+
+    /// A real account, made with Apple. The name Apple hands back (only ever
+    /// on the first authorisation) fills screen 6's name fields.
+    private func signUpWithApple() {
+        #if canImport(UIKit)
+        guard let authService else { return }
+        begin()
+        Task {
+            defer { isWorking = false }
+            do {
+                let result = try await apple.run()
+                try await authService.signInWithApple(idToken: result.idToken, nonce: result.nonce)
+                onboarding.update { state in
+                    if let given = result.givenName, !given.isEmpty { state.firstName = given }
+                    if let family = result.familyName, !family.isEmpty { state.lastName = family }
+                }
+                created(by: "Apple")
+            } catch {
+                failed(error)
+            }
+        }
+        #else
+        showingSignIn = true
+        #endif
+    }
+
+    /// A real account, made with Google (the OAuth web sheet).
+    private func signUpWithGoogle() {
+        guard let authService else { return }
+        begin()
+        Task {
+            defer { isWorking = false }
+            do {
+                try await authService.signInWithGoogle()
+                created(by: "Google")
+            } catch {
+                failed(error)
+            }
+        }
+    }
+
+    private func begin() {
+        errorMessage = nil
+        isWorking = true
+        onboarding.isCreatingAccount = true
+    }
+
+    private func created(by provider: String) {
+        onboarding.usedProvider = true
+        onboarding.providerName = provider
+        onboarding.advance()
+    }
+
+    private func failed(_ error: Error) {
+        onboarding.isCreatingAccount = false
+        guard !isUserCancellation(error) else { return }
+        errorMessage = friendlyAccountError(error)
     }
 
     private func provider(_ label: String, symbol: String, action: @escaping () -> Void) -> some View {
@@ -294,71 +358,172 @@ private struct AccountProvidersCard: View {
 
 private struct AccountFormCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
+    @Environment(AuthService.self) private var authService: AuthService?
+    @Environment(MakerProfileService.self) private var profiles: MakerProfileService?
     @Binding var password: String
     @State private var firstName = ""
     @State private var lastName = ""
+    @State private var email = ""
     @State private var username = ""
     @State private var homeCity = ""
+    @State private var isWorking = false
+    @State private var errorMessage: String?
+    /// Set when the account was made but waits on its confirmation link.
+    @State private var confirmationSentTo: String?
 
-    /// Apple and Google both hand back the name and the email, so username and
-    /// password are meaningless on that path — the provider IS the login.
-    /// What is left is the one thing they cannot give us.
+    /// Apple and Google ARE the login, so username and password mean nothing
+    /// on that path. What is left is what they could not give us.
     private var fromProvider: Bool { onboarding.usedProvider }
 
-    private func filled(_ value: String) -> Bool {
-        !value.trimmingCharacters(in: .whitespaces).isEmpty
+    private func trimmed(_ value: String) -> String {
+        value.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+
+    private func filled(_ value: String) -> Bool { !trimmed(value).isEmpty }
 
     /// Every field on screen is required (owner, 2026-10-06). Anyone who would
     /// rather not sign up has Skip, below the button.
     private var isComplete: Bool {
         guard filled(firstName), filled(lastName), filled(homeCity) else { return false }
-        return fromProvider || (filled(username) && !password.isEmpty)
+        if fromProvider { return true }
+        return trimmed(email).contains("@") && filled(username) && password.count >= 6
     }
 
-    /// The button and a swipe both come here, so neither loses the names —
-    /// and neither gets past an empty field.
-    private func saveAndContinue() {
-        guard isComplete else { return }
+    private var displayName: String {
+        [trimmed(firstName), trimmed(lastName)].filter { !$0.isEmpty }.joined(separator: " ")
+    }
+
+    /// The button and a swipe both come here, so neither loses what was typed
+    /// — and neither gets past an empty field.
+    private func forward() {
+        if confirmationSentTo != nil { return onboarding.advance() }
+        guard isComplete, !isWorking else { return }
         onboarding.update {
-            $0.firstName = firstName.trimmingCharacters(in: .whitespaces)
-            $0.lastName = lastName.trimmingCharacters(in: .whitespaces)
-            $0.homeCity = homeCity.trimmingCharacters(in: .whitespaces)
+            $0.firstName = trimmed(firstName)
+            $0.lastName = trimmed(lastName)
+            $0.homeCity = trimmed(homeCity)
         }
-        onboarding.advance()
+        errorMessage = nil
+        isWorking = true
+        Task {
+            defer { isWorking = false }
+            if fromProvider {
+                // Already signed in on screen 5: give the new account its name.
+                if let profiles {
+                    try? await onboarding.applyProfile(displayName: displayName, username: nil, using: profiles)
+                }
+                onboarding.advance()
+            } else {
+                await createEmailAccount()
+            }
+        }
+    }
+
+    /// A real email account. The username is checked first, so a taken one
+    /// is caught before an account exists rather than after.
+    private func createEmailAccount() async {
+        guard let authService, let profiles else { return }
+        switch await profiles.checkUsername(username) {
+        case .taken:              return errorMessage = "That username is taken. Try another."
+        case .reserved:           return errorMessage = "That username isn't available. Try another."
+        case .invalid(let issue): return errorMessage = "Username \(issue)."
+        default: break
+        }
+        do {
+            let outcome = try await authService.signUp(email: trimmed(email), password: password)
+            switch outcome {
+            case .signedIn:
+                // The session is published a beat after signUp returns.
+                for _ in 0..<30 where !authService.isSignedIn {
+                    try? await Task.sleep(for: .milliseconds(100))
+                }
+                do {
+                    try await onboarding.applyProfile(displayName: displayName, username: username,
+                                                      using: profiles)
+                } catch {
+                    // The account exists; a refused username is fixable later
+                    // on the profile, so it must not hold up the run.
+                }
+                onboarding.advance()
+            case .confirmationRequired:
+                // No session until the link is tapped: keep the name and
+                // username for the first sign-in.
+                onboarding.update {
+                    $0.pendingDisplayName = displayName
+                    $0.pendingUsername = Username.normalise(username)
+                }
+                withAnimation { confirmationSentTo = trimmed(email) }
+            }
+        } catch {
+            errorMessage = error.localizedDescription
+        }
     }
 
     var body: some View {
         OnboardingScaffold(
             progressIndex: onboarding.progressIndex,
-            onForward: saveAndContinue,
+            onForward: forward,
             tapsNavigate: false
         ) {
             VStack(spacing: 0) {
-                OnboardingLine(Text("Welcome to ") + dozentWordmark())
-                if fromProvider {
-                    OnboardingLine("Two things we could not get from Apple.")
-                        .padding(.top, OnboardingType.Gap.tight)
+                if let sentTo = confirmationSentTo {
+                    OnboardingLine("Check your email")
+                    OnboardingLine("We sent a link to \(sentTo). Tap it to finish making your account — your name and username will be waiting.")
+                        .padding(.top, OnboardingType.Gap.step)
+                } else {
+                    form
                 }
-                VStack(spacing: 11) {
-                    field("First name", text: $firstName, prefilled: fromProvider)
-                    field("Last name", text: $lastName, prefilled: fromProvider)
-                    if !fromProvider {
-                        field("Username", text: $username)
-                        secureField("Password")
-                    }
-                    field("Home city", text: $homeCity)
-                }
-                .padding(.top, 22)
             }
         } actions: {
-            OnboardingButton(title: "Continue", action: saveAndContinue)
-                .disabled(!isComplete)
-            OnboardingLink(title: "Skip", dimmed: true) { onboarding.skipAccount() }
+            OnboardingButton(title: isWorking ? "Creating your account…" : "Continue", action: forward)
+                .disabled(confirmationSentTo == nil && (!isComplete || isWorking))
+            if confirmationSentTo == nil {
+                OnboardingLink(title: "Skip", dimmed: true) { onboarding.skipAccount() }
+            }
+        }
+        .onAppear(perform: prefillFromProvider)
+        .onChange(of: authService?.providerFullName) { _, _ in prefillFromProvider() }
+    }
+
+    @ViewBuilder
+    private var form: some View {
+        OnboardingLine(Text("Welcome to ") + dozentWordmark())
+        if fromProvider {
+            OnboardingLine("A few things \(onboarding.providerName) did not tell us.")
+                .padding(.top, OnboardingType.Gap.tight)
+        }
+        VStack(spacing: 11) {
+            field("First name", text: $firstName, prefilled: fromProvider && filled(firstName))
+            field("Last name", text: $lastName, prefilled: fromProvider && filled(lastName))
+            if !fromProvider {
+                field("Email", text: $email, isEmail: true)
+                field("Username", text: $username)
+                secureField("Password (6+ characters)")
+            }
+            field("Home city", text: $homeCity)
+        }
+        .padding(.top, 22)
+        if let errorMessage {
+            OnboardingError(errorMessage)
+                .padding(.top, OnboardingType.Gap.tight)
         }
     }
 
-    private func field(_ label: String, text: Binding<String>, prefilled: Bool = false) -> some View {
+    /// Fill the names a provider handed back — Apple's arrive with the token
+    /// (screen 5 stores them); Google's sit in the account's metadata.
+    private func prefillFromProvider() {
+        guard fromProvider else { return }
+        if !filled(firstName), filled(onboarding.state.firstName) { firstName = onboarding.state.firstName }
+        if !filled(lastName), filled(onboarding.state.lastName) { lastName = onboarding.state.lastName }
+        if !filled(firstName), let full = authService?.providerFullName {
+            let parts = full.split(separator: " ", maxSplits: 1).map(String.init)
+            firstName = parts.first ?? ""
+            if !filled(lastName), parts.count > 1 { lastName = parts[1] }
+        }
+    }
+
+    private func field(_ label: String, text: Binding<String>, prefilled: Bool = false,
+                       isEmail: Bool = false) -> some View {
         HStack(spacing: 8) {
             TextField(text: text, prompt: requiredPrompt(label)) { Text(label) }
                 .font(AtlasTypography.caption)
@@ -366,8 +531,12 @@ private struct AccountFormCard: View {
                 // this target builds there too — `PlatformHelpers` is the shim.
                 .atlasNoAutocapitalization()
                 .autocorrectionDisabled()
+                #if canImport(UIKit)
+                .keyboardType(isEmail ? .emailAddress : .default)
+                .textContentType(isEmail ? .emailAddress : nil)
+                #endif
             if prefilled {
-                Text("FROM APPLE")
+                Text("FROM \(onboarding.providerName.uppercased())")
                     .font(.system(size: 9.5, design: .monospaced))
                     .foregroundStyle(AtlasColors.brass)
                     .padding(.horizontal, 8)
@@ -626,14 +795,12 @@ private struct FollowSixCard: View {
     /// (owner, 2026-10-06).
     ///
     /// Signed in → Follow is real (`FollowService`, the same writes as a
-    /// maker's page). Skipped, or a replay while signed out → no buttons.
-    /// ⚠️ The one remaining case — came through the sign-up form, which does
-    /// not create an account yet — still toggles on screen only. It becomes
-    /// real when the account screens are wired to `AuthService`.
-    private var canFollow: Bool {
-        if isSignedIn { return true }
-        return !onboarding.isReplay && !onboarding.skippedAccount
-    }
+    /// maker's page). Anyone else — skipped, signed out, or an email account
+    /// still waiting on its confirmation link — sees no buttons.
+    private var canFollow: Bool { isSignedIn }
+
+    /// Made an email account that is not confirmed yet.
+    private var awaitingConfirmation: Bool { onboarding.state.pendingDisplayName != nil }
 
     private func maker(for creator: OnboardingCreator) -> Maker? {
         dataService?.makers.first { $0.handle == creator.catalogueHandle }
@@ -715,7 +882,9 @@ private struct FollowSixCard: View {
                 }
                 .padding(.top, OnboardingType.Gap.step)
                 if !canFollow {
-                    OnboardingLine("Create an account any time to follow them.")
+                    OnboardingLine(awaitingConfirmation
+                                   ? "Confirm your email to follow them."
+                                   : "Create an account any time to follow them.")
                         .opacity(0.55)
                         .padding(.top, OnboardingType.Gap.step)
                 }
