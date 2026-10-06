@@ -359,8 +359,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
                             // wraps the chain OUTSIDE the `.environment(...)`
                             // calls on the content, so nothing set there
                             // reaches it. Screen 14 reads the catalogue to
-                            // show the makers' real avatars.
+                            // show the makers' real avatars, and follows them
+                            // for real when the user is signed in.
                             .environment(dataService)
+                            .environment(authService)
+                            .environment(followService)
                             .transition(.opacity)
                     }
                 }

@@ -552,7 +552,56 @@ private struct FollowSixCard: View {
     /// Optional: previews and tests have no catalogue, and the card still
     /// draws — every avatar just falls back to initials.
     @Environment(DataService.self) private var dataService: DataService?
+    /// Optional for the same reason as `dataService`.
+    @Environment(AuthService.self) private var authService: AuthService?
+    @Environment(FollowService.self) private var followService: FollowService?
     @State private var followed: Set<String> = []
+
+    private var isSignedIn: Bool { authService?.isSignedIn == true }
+
+    /// Following needs an account — the app hides Follow when signed out —
+    /// so someone without one sees the six with no button that cannot work
+    /// (owner, 2026-10-06).
+    ///
+    /// Signed in → Follow is real (`FollowService`, the same writes as a
+    /// maker's page). Skipped, or a replay while signed out → no buttons.
+    /// ⚠️ The one remaining case — came through the sign-up form, which does
+    /// not create an account yet — still toggles on screen only. It becomes
+    /// real when the account screens are wired to `AuthService`.
+    private var canFollow: Bool {
+        if isSignedIn { return true }
+        return !onboarding.isReplay && !onboarding.skippedAccount
+    }
+
+    private func maker(for creator: OnboardingCreator) -> Maker? {
+        dataService?.makers.first { $0.handle == creator.catalogueHandle }
+    }
+
+    /// Start from the truth: anyone already followed shows as Following.
+    private func loadFollowState() async {
+        guard isSignedIn, let followService else { return }
+        for creator in Self.creators {
+            guard let id = maker(for: creator)?.id else { continue }
+            let state = await followService.state(for: id)
+            if state.isFollowing || state.isPending { followed.insert(creator.handle) }
+        }
+    }
+
+    private func toggleFollow(_ creator: OnboardingCreator) {
+        let wasFollowing = followed.contains(creator.handle)
+        // On screen at once, as a maker's page does; put back if it fails.
+        if wasFollowing { followed.remove(creator.handle) } else { followed.insert(creator.handle) }
+        guard isSignedIn, let followService, let id = maker(for: creator)?.id else { return }
+        AtlasHaptics.selection()
+        Task {
+            do {
+                if wasFollowing { try await followService.unfollow(id) }
+                else { try await followService.follow(id) }
+            } catch {
+                if wasFollowing { followed.insert(creator.handle) } else { followed.remove(creator.handle) }
+            }
+        }
+    }
 
     /// ⚠️ Keyed to INTERESTS, not city. 82% of the catalogue's cities have
     /// exactly one maker, so a city-keyed grid would show one avatar and five
@@ -603,11 +652,17 @@ private struct FollowSixCard: View {
                     }
                 }
                 .padding(.top, OnboardingType.Gap.step)
+                if !canFollow {
+                    OnboardingLine("Create an account any time to follow them.")
+                        .opacity(0.55)
+                        .padding(.top, OnboardingType.Gap.step)
+                }
             }
         } actions: {
             OnboardingButton(title: "Continue") { onboarding.advance() }
             OnboardingLink(title: "Show me different ones") { onboarding.advance() }
         }
+        .task(id: isSignedIn) { await loadFollowState() }
     }
 
     private func creatorCell(_ creator: OnboardingCreator) -> some View {
@@ -624,19 +679,23 @@ private struct FollowSixCard: View {
                 .font(.system(size: 8, design: .monospaced))
                 .tracking(0.9)
                 .foregroundStyle(AtlasColors.secondaryText)
-            Button {
-                if isFollowing { followed.remove(creator.handle) } else { followed.insert(creator.handle) }
-            } label: {
-                Text(isFollowing ? "Following" : "Follow")
-                    .font(.system(size: 11.5, weight: .bold, design: .monospaced))
-                    .foregroundStyle(isFollowing ? AtlasColors.brass : Color.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 28)
-                    .background(Capsule().fill(isFollowing ? AtlasColors.brass.opacity(0.14)
-                                                           : AtlasColors.brass))
-            }
-            .buttonStyle(.plain)
+            if canFollow { followButton(for: creator, isFollowing: isFollowing) }
         }
+    }
+
+    private func followButton(for creator: OnboardingCreator, isFollowing: Bool) -> some View {
+        Button {
+            toggleFollow(creator)
+        } label: {
+            Text(isFollowing ? "Following" : "Follow")
+                .font(.system(size: 11.5, weight: .bold, design: .monospaced))
+                .foregroundStyle(isFollowing ? AtlasColors.brass : Color.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 28)
+                .background(Capsule().fill(isFollowing ? AtlasColors.brass.opacity(0.14)
+                                                       : AtlasColors.brass))
+        }
+        .buttonStyle(.plain)
     }
 }
 

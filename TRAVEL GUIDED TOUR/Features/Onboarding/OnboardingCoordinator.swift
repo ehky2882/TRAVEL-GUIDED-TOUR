@@ -67,6 +67,11 @@ final class OnboardingCoordinator {
     /// form on screen 6 to the one thing a provider cannot give us.
     var usedProvider = false
 
+    /// Set by "Skip" on the account screens. Screen 14 reads it: following
+    /// needs an account (the app hides Follow when signed out), so someone who
+    /// skipped sees the six without Follow buttons.
+    private(set) var skippedAccount = false
+
     init(store: OnboardingStore) {
         self.store = store
         self.willPresentWelcome = store.shouldPresentOnLaunch
@@ -100,6 +105,7 @@ final class OnboardingCoordinator {
         hasBegun = true
         isReplay = replaying
         usedProvider = false
+        skippedAccount = false
         steps = OnboardingFlow.steps(replaying: replaying)
         index = 0
         isCovering = true
@@ -138,6 +144,7 @@ final class OnboardingCoordinator {
             if let at = full.firstIndex(of: .accountAsk) {
                 steps = full
                 index = at
+                skippedAccount = false
             }
         }
     }
@@ -154,6 +161,14 @@ final class OnboardingCoordinator {
         guard let from = currentStep else { return }
         steps.removeAll { $0 == .accountProviders || $0 == .accountForm }
         usedProvider = false
+        skippedAccount = true
+        // Whatever was typed into the form belonged to an account they chose
+        // not to make — and must not greet them as "Welcome, Ada."
+        update {
+            $0.firstName = ""
+            $0.lastName = ""
+            $0.homeCity = ""
+        }
         if let next = steps.firstIndex(of: .welcomeByName) {
             index = next
         } else if let stay = steps.firstIndex(of: from) {

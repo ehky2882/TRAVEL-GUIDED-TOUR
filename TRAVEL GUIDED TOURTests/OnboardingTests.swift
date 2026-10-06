@@ -226,9 +226,15 @@ final class OnboardingCoordinatorTests: XCTestCase {
         coordinator.begin()
         coordinator.advance()                                   // → 3
         coordinator.advance()                                   // → 4
+        XCTAssertFalse(coordinator.skippedAccount)
+        coordinator.update { $0.firstName = "Ada" }
         coordinator.skipAccount()
+        // Skipping forgets the form, so "Welcome." carries no stale name.
+        XCTAssertEqual(coordinator.state.firstName, "")
         XCTAssertTrue(coordinator.isCovering)
         XCTAssertEqual(coordinator.currentStep, .welcomeByName)
+        // Screen 14 drops its Follow buttons for someone who skipped.
+        XCTAssertTrue(coordinator.skippedAccount)
         // One segment per screen shown: providers and form are gone.
         XCTAssertEqual(coordinator.progressCount, 14)
 
@@ -237,6 +243,7 @@ final class OnboardingCoordinatorTests: XCTestCase {
         coordinator.back()
         XCTAssertEqual(coordinator.currentStep, .accountAsk)
         XCTAssertEqual(coordinator.progressCount, 16)
+        XCTAssertFalse(coordinator.skippedAccount)
         coordinator.advance()
         XCTAssertEqual(coordinator.currentStep, .accountProviders)
 
