@@ -163,7 +163,12 @@ private struct AccountAskCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        // Tapping or swiping through is not choosing to sign up: "next"
+        // here is Skip (owner, 2026-10-06). Signing up takes a button.
+        OnboardingScaffold(
+            progressIndex: onboarding.progressIndex,
+            onForward: { onboarding.skipAccount() }
+        ) {
             VStack(spacing: 0) {
                 OnboardingLine("First, an account")
                 OnboardingLine("An account keeps your playlists, your downloads, and where you left off.")
@@ -183,7 +188,12 @@ private struct AccountProvidersCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        // Tapping or swiping through is not choosing to sign up: "next"
+        // here is Skip (owner, 2026-10-06). Signing up takes a button.
+        OnboardingScaffold(
+            progressIndex: onboarding.progressIndex,
+            onForward: { onboarding.skipAccount() }
+        ) {
             VStack(spacing: 0) {
                 OnboardingLine("Create an account")
                 VStack(spacing: 10) {
