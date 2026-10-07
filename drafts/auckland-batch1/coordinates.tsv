@@ -1,0 +1,20 @@
+01	bar-martin	-36.876096	174.719391	40	foodAndDrink	supplied
+02	blue-franklin-road	-36.853363	174.745795	40	foodAndDrink	supplied
+03	blue-rose-cafe	-36.886422	174.738070	40	foodAndDrink	supplied
+04	cafe-hanoi	-36.844665	174.768535	40	foodAndDrink	supplied; Ghost Street is in its basement, 3 m
+05	gemmayze-st	-36.857110	174.760204	40	foodAndDrink	supplied
+06	ghost-street-britomart	-36.844689	174.768529	40	foodAndDrink	supplied; basement of 27 Galway St
+07	goblin-ponsonby	-36.856346	174.746683	40	foodAndDrink	supplied; 33 m from 134 Ponsonby Rd (Golden Dawn)
+09	homeground-auckland	-36.850634	174.760613	40	architecture	supplied
+10	kingi-britomart	-36.844624	174.768612	40	foodAndDrink	supplied; OSM node 41 m SSW on Tuawhiti Lane
+11	lamplight-books	-36.852405	174.778909	40	literature	supplied
+12	metita-auckland	-36.849106	174.762294	40	foodAndDrink	supplied
+13	mr-morris-britomart	-36.844580	174.768227	40	foodAndDrink	supplied
+14	ooh-fa	-36.879573	174.749632	40	foodAndDrink	supplied
+15	piha-beach	-36.953931	174.467021	60	natureAndParks	MOVED to OSM Lion Rock (supplied -36.956532,174.467640 was 294 m S on Marine Parade South)
+16	public-record-ponsonby	-36.857855	174.749366	40	visualArt	supplied
+17	takutai-square	-36.844752	174.770063	60	history	supplied; SE corner by Te Rou Kai, 65 m from OSM centroid
+18	tala-parnell	-36.855452	174.780055	40	foodAndDrink	supplied
+19	the-convent-grey-lynn	-36.867049	174.740162	40	architecture	supplied; 20 m from OSM The Convent
+20	the-frog-k-road	-36.858446	174.755220	40	foodAndDrink	supplied; unverified, next to Daily Daily 452 K Rd
+21	the-hotel-britomart	-36.844656	174.768657	40	architecture	supplied; 25 m from OSM
