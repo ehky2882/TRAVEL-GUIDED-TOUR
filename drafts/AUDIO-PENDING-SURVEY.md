@@ -82,7 +82,7 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 | City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|-----:|----------------|------------------|
 | 🇺🇸 **Boston** | **0** | ✅ **LIVE 2026-10-02:** 30 singles + 5 walks (29 segments) wired under Atlas Studio BOS. See `archive/HANDOFF-261002-boston-live.md` | **59 on gh-pages** | — | **Atlas Studio BOS** |
-| 🇺🇸 **Philadelphia** | **35** | 30 singles + 5 walks (36 segments). **Audio arrived 2026-10-06: all 66 MP3s on gh-pages, transcript-matched.** 🔴 **Owner: do NOT launch until every image is backfilled** (05, 08, 15, 18, 19 + walk connectives W1-3, W2-5, W4-4). Launch = `drafts/philadelphia-batch1/README.md` § How to launch | **66 on gh-pages** | `main` (drafts) | **Atlas Studio PHL** `e6977a1f-af18-5f64-923a-052c350ce76e` |
+| 🇺🇸 **Philadelphia** | **35** | 30 singles + 5 walks (36 segments). **Audio arrived 2026-10-06: all 66 MP3s on gh-pages, transcript-matched.** 🔴 **Owner: do NOT launch until every image is backfilled** (walk connectives W1-3, W2-5, W4-4 remain). Launch = `drafts/philadelphia-batch1/README.md` § How to launch | **66 on gh-pages** | `main` (drafts) | **Atlas Studio PHL** `e6977a1f-af18-5f64-923a-052c350ce76e` |
 | **TOTAL PENDING** | **35** | | | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
@@ -278,7 +278,7 @@ If you replace an image under an existing name, update `CREDITS.md` in the same 
 - ~~`paris-leftbank` — "The Left Bank"~~ — **LIVE 2026-07-09 (PR #383)**, 7 tracks — **all 5 Paris walks now live**
 - Reuse the 45 live single-stop Paris heroes where stops overlap; a few fresh walk images already staged (Îles hero, Marais Musée Picasso — CC credits in `IMAGE-CREDITS-paris-batch1.txt`). READMEs say "create the PAR maker" — **stale**: PAR now exists, so walks wire straight in.
 
-**🇨🇦 Montreal — ✅ LIVE (2026-07-28)** — all **29 tours** under **Atlas Studio YUL** (`4f7241f0-9392-54a4-8807-24fd959e61fe`): 25 single-stop (geofenced 30 m) + 4 walks — `montreal-oldmontreal-walk` (intro+5, 1.5 km, history) · `montreal-mountroyal-walk` (intro+4, 1.8 km, natureAndParks) · `montreal-plateaumileend-walk` (intro+4, 3.0 km, culturalHeritage) · `montreal-downtown-walk` (intro+4, 1.5 km, culturalHeritage). **46 MP3s, 90m13s narration** (57m10 singles + 33m03 walks). Owner audio arrived complete and matched the staged drafts 1:1 — the numbering gaps (13, 18, 19, 20, 28, 29) in the delivery are exactly the scripts that were never written. Nothing Montreal pending. Credits: `drafts/CREDITS.md` (Montreal — 19 CC-credited).
+**🇨🇦 Montreal — ✅ LIVE (2026-07-28)** — all **29 tours** under **Atlas Studio YUL** (`4f7241f0-9392-54a4-8807-24fd959e61fe`): 25 single-stop (geofenced 30 m) + 4 walks — `montreal-oldmontreal-walk` (intro+5, 1.5 km, history) · `montreal-mountroyal-walk` (intro+4, 1.8 km, natureAndParks) · `montreal-plateaumileend-walk` (intro+4, 3.0 km, culturalHeritage) · `montreal-downtown-walk` (intro+4, 1.5 km, culturalHeritage). **46 MP3s, 90m13s narration** (57m10 singles + 33m03 walks). Owner audio arrived complete and matched the staged drafts 1:1 — the numbering gaps (13, 19, 20, 28, 29) in the delivery are exactly the scripts that were never written. Nothing Montreal pending. Credits: `drafts/CREDITS.md` (Montreal — 19 CC-credited).
 
 ⚠️ **Mount Royal's walk hero was an open question the staging README flagged owner-to-confirm** — the Kondiaronk Belvedere (the payoff view) vs the Cross (the narrative climax, since the walk is bookended by Maisonneuve's 1643 vow). Wired with the **belvedere**, the README's own stated default. One-line swap if the owner prefers the Cross.
 
@@ -324,7 +324,7 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
   image count, tags and credit, tag-validated against the controlled vocabulary. **Written as staging went, not
   after** — the lesson from Dubai.
 - **Singles: image staging COMPLETE and audited** — 84 files, every hero present, every gallery contiguous from `_2`.
-- **⚠️ The script numbering is NOT contiguous: 01–17, 20, 21, 23, 24, 25, 28, 29, 30. Numbers 18, 19, 22, 26 and 27
+- **⚠️ The script numbering is NOT contiguous: 01–17, 20, 21, 23, 24, 25, 28, 29, 30. Numbers 19, 22, 26 and 27
   were never delivered.** Recorded so nobody assumes a gap means a lost file — the Rome failure, written down in
   advance. If those five exist they are a second batch.
 - **5 walks** — three of intro + 5 stops, two (the Magnificent Mile, Pilsen) of intro + 4:

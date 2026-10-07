@@ -1037,3 +1037,17 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `one-liberty-place_6.webp` | 30-7 | Unsplash | Jimmy Hu | https://unsplash.com/photos/a-view-of-a-city-skyline-with-tall-buildings-H2QyE1poI6A |
 | `one-liberty-place_7.webp` | 30-11 | Pexels | Scott Duygun | https://www.pexels.com/photo/city-skyline-during-night-time-8738915/ |
 | `one-liberty-place_8.webp` | 30-12 | Unsplash | Alejandro Barba | https://unsplash.com/photos/city-skyline-during-day-time-YLn87mac45M |
+| `christ-church-philadelphia_hero.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+| `reading-terminal-market_hero.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+| `reading-terminal-market_2.webp` | owner | Owner-supplied (2026-10-07; appears AI-edited, signage garbled) | — | pasted in chat |
+| `reading-terminal-market_3.webp` | owner | Owner-supplied (2026-10-07; appears AI-edited, signage garbled) | — | pasted in chat |
+| `congress-hall_hero.webp` | 15-8 | Public domain | NPS Photo | https://commons.wikimedia.org/wiki/File:Photo_showing_exterior_of_Congress_Hall_(2b87705d-155d-451f-67ef-6c39d9572636).jpg |
+| `congress-hall_2.webp` | 15-9 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Congress_Hall,_House_of_Representatives_(09fae55e-1dd8-b71b-0b23-da8b4de174d2).jpg |
+| `congress-hall_3.webp` | 15-10 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Congress_Hall,_detail_of_Senate_Chamber_carpet_(0a4d957d-1dd8-b71b-0b11-f87566130668).jpg |
+| `congress-hall_4.webp` | 15-11 | Pexels | A G | https://www.pexels.com/photo/historic-congress-hall-in-philadelphia-39382019/ |
+| `head-house-square_hero.webp` | 18-1 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Headhouse_Philly_am.JPG |
+| `penns-landing_hero.webp` | 19-7 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-skyline-and-waterfront-37195586/ |
+| `penns-landing_2.webp` | 19-8 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-benjamin-franklin-bridge-and-philadelphia-skyline-37195587/ |
+| `penns-landing_3.webp` | 19-6 | Unsplash | Ervin Lukacs | https://unsplash.com/photos/people-walking-on-bridge-during-night-time-4ydO_FM10cE |
+| `penns-landing_4.webp` | 19-4 | Unsplash | LJ Montague | https://unsplash.com/photos/blue-and-white-bridge-over-body-of-water-during-daytime-33rk_5R3BiI |
+| `penns-landing_5.webp` | 19-12 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-with-battleship-37195593/ |
