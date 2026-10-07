@@ -1053,3 +1053,4 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `penns-landing_5.webp` | 19-12 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-with-battleship-37195593/ |
 | `philadelphia-fifth-square-walk_stop3.webp` | W1-3-3 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Pine_at_5th,_Philly.JPG |
 | `philadelphia-broad-and-market-walk_stop5.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+| `philadelphia-brick-walk_stop4.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |

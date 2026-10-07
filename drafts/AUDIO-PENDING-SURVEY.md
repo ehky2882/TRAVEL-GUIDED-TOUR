@@ -31,9 +31,11 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-10-06 — 🇺🇸 **Philadelphia's 66 MP3s arrived and are on gh-pages** (transcript-matched, hash-verified). The city is held, by the owner's instruction, until the last 5 tours' and 3 walk connectives' images are backfilled. The assembler is ready at `drafts/philadelphia-batch1/tools/wire_philly.py`.
+**Last verified:** 2026-10-07 (evening) — 🇺🇸 **PHILADELPHIA IS LIVE: 30 singles + 5 walks wired (Atlas Studio PHL, the 41st studio). The queue is EMPTY.**
 
-**Previously verified:** 2026-10-02 (night) — 🇺🇸 **PHILADELPHIA added to the queue: 30 single-stop tours + 5 walks (36 segments) STAGED, 0 MP3s, 0 images.** Scripts, audited coordinates and pick-maps are in `drafts/philadelphia-batch1/` and `drafts/philadelphia-walks/` on `main`. Maker at wire-in: Atlas Studio PHL, `e6977a1f-af18-5f64-923a-052c350ce76e` (uuid5 `atlas-maker:phl`, scheme re-verified against BOS), the 40th studio. 🔴 The author's pronunciation pass is a hard blocker before recording (`drafts/philadelphia-batch1/README.md` § Owed).
+**Previously verified:** 2026-10-06 — 🇺🇸 **Philadelphia's 66 MP3s arrived and are on gh-pages** (transcript-matched, hash-verified). The city is held, by the owner's instruction, until the last 5 tours' and 3 walk connectives' images are backfilled. The assembler is ready at `drafts/philadelphia-batch1/tools/wire_philly.py`.
+
+**Previously verified:** 2026-10-02 (night) — 🇺🇸 **PHILADELPHIA added to the queue: 30 single-stop tours + 5 walks (36 segments) STAGED, 0 MP3s, 0 images.** Scripts, audited coordinates and pick-maps are in `drafts/philadelphia-batch1/` and `drafts/philadelphia-walks/` on `main`. Maker at wire-in: Atlas Studio PHL, `e6977a1f-af18-5f64-923a-052c350ce76e` (uuid5 `atlas-maker:phl`, scheme re-verified against BOS), the 41st studio (Auckland took 40th on 2026-10-07). 🔴 The author's pronunciation pass is a hard blocker before recording (`drafts/philadelphia-batch1/README.md` § Owed).
 
 **Previously verified:** 2026-10-02 (evening) — 🇺🇸 **BOSTON IS LIVE: 30 singles + 5 walks wired. The queue is EMPTY.**
 
@@ -82,8 +84,8 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 | City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|-----:|----------------|------------------|
 | 🇺🇸 **Boston** | **0** | ✅ **LIVE 2026-10-02:** 30 singles + 5 walks (29 segments) wired under Atlas Studio BOS. See `archive/HANDOFF-261002-boston-live.md` | **59 on gh-pages** | — | **Atlas Studio BOS** |
-| 🇺🇸 **Philadelphia** | **35** | 30 singles + 5 walks (36 segments). **Audio arrived 2026-10-06: all 66 MP3s on gh-pages, transcript-matched.** 🔴 **Owner: do NOT launch until every image is backfilled** (walk connective W4-4 remains). Launch = `drafts/philadelphia-batch1/README.md` § How to launch | **66 on gh-pages** | `main` (drafts) | **Atlas Studio PHL** `e6977a1f-af18-5f64-923a-052c350ce76e` |
-| **TOTAL PENDING** | **35** | | | | |
+| 🇺🇸 **Philadelphia** | **0** | ✅ **LIVE 2026-10-07:** 30 singles + 5 walks (36 segments) wired under Atlas Studio PHL, the 41st studio. See `archive/HANDOFF-261006-philadelphia-ready.md` | **66 on gh-pages** | — | **Atlas Studio PHL** |
+| **TOTAL PENDING** | **0** | | | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
 

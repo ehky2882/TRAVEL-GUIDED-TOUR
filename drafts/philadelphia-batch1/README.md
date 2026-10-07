@@ -6,7 +6,7 @@ The owner's drop (OneDrive folder `261002_PHILADELPHIA`) held the author's non-g
 
 🔴 **The root folder's handoff is STALE (№8, written before the walks). The newest is №13, inside `PHILLY W5`.** It is kept here as `author/handoff-13.md`, beside its master list (`author/master-list-session9.md`). Both carry the pronunciation library, the pre-record flags and the judgment calls awaiting the owner.
 
-Philadelphia is the **40th studio**. The city already has **12 creator link pins** but no Atlas tours.
+Philadelphia is the **41st studio (Auckland took 40th on 2026-10-07)**. The city already has **12 creator link pins** but no Atlas tours.
 
 ## Owed before wire-in
 1. 🔴 **The author's pronunciation pass, before recording.** The author calls it "the one hard blocker": a native pass on *Lenape*, *Lenapehoking*, *Schuylkill*, *Wissahickon* and *Deborah's*. Also apply "Reading" → "redding" in 08's TTS at record (handoff №13 §4).
@@ -84,7 +84,7 @@ Philadelphia is the **40th studio**. The city already has **12 creator link pins
    - `check-place-candidates` (expect **Eastern State Penitentiary**: the tour sits on the same point as 3 creator pins);
    - `join-places --max-move 100`.
 
-   Update CLAUDE.md Key facts (re-derived; this is the 40th studio) and the tracker, and confirm Supabase with a count query after the merge.
+   Update CLAUDE.md Key facts (re-derived; this is the 41st studio (Auckland took 40th on 2026-10-07)) and the tracker, and confirm Supabase with a count query after the merge.
 4. Walks:
    - **W1** *The Fifth Square*: 6 stops, ~1.7 km, 522 s
    - **W2** *Broad and Market*: 9 stops, ~2.7 km, 755 s

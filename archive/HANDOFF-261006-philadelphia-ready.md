@@ -1,4 +1,4 @@
-# HANDOFF 2026-10-06: Philadelphia staged, imaged (25/30) and voiced. Launch held for images
+# HANDOFF 2026-10-06/07: Philadelphia staged, imaged, voiced and LAUNCHED (2026-10-07)
 
 **State:** Atlas Studio PHL is ready to launch except for images. 🔴 **The owner said "dont launch the
 tours until i've backfilled everything"**, and `drafts/philadelphia-batch1/tools/wire_philly.py` enforces
@@ -40,3 +40,18 @@ Expect one place candidate: **Eastern State Penitentiary**, where the tour sits 
 - **For famous Philadelphia landmarks, free modern photos are mostly CC BY-SA.** The owner did not pick any CREDIT NEEDED photo this time, and left those rows empty instead.
 - **The Unsplash index is thin for exact landmark names.** "Rittenhouse Square" returned 1 result in total. Pexels was deeper.
 - **A source script that saves only at the end loses everything on a timeout.** Save after every subject.
+
+## Launched 2026-10-07
+- **Image backfill:** the owner completed it on 2026-10-07. It covered 05, 08 (hero + 2 owner photos), 15, 18 and 19, plus walk connectives W1-3 (picker W1-3-3, "Pine at 5th"), W2-5 (owner photo of the Dilworth fountain) and W4-4 (owner photo of Arch Street). All are in `image-manifest.json`, none credit-required.
+  - ⚠️ An owner-sent "Congress Hall" photo was actually Independence Hall, so it was held back and the picker images used instead.
+  - ⚠️ 8 pushes in one afternoon each cancelled the previous Pages deploy. The last deploy carries everything. Verify after the LAST push, not after each one.
+- **Wired:** `wire_philly.py --created 2026-10-07` added 35 tours as pure additions to `Tours.json`.
+- **Checks:**
+  - `validate-tours-mirror`: 0 errors.
+  - `join-places --max-move 100 --apply`: 3 exact-name joins at ≤0.1 m. Eastern State Penitentiary (the new tour joins the existing place) and two older pending ones, Žižkov TV Tower (Prague) and Villa E-1027.
+  - `check-place-candidates`: only walk/single shared points (by design) and the Beiler's Doughnuts tenant at Reading Terminal (not a place).
+  - `spine-lookup`: 35 asked, 0 failed. `spine-match`: no Philadelphia findings.
+  - The Swift validator runs in CI.
+- **Still worth doing:**
+  - Listen on device for *Schuylkill* / *Lenape* / *Reading*.
+  - Offer **architect tags** (README § How to launch, step 5).

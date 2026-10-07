@@ -2099,5 +2099,20 @@
   "fetched": "1448x1086",
   "upscaled": false,
   "sha": "2d12e77b7211a96f211130a9fca56a8d6573e4e9da6eb140fd606553b9599eb0"
+ },
+ {
+  "code": "owner",
+  "num": "W4-4",
+  "slug": "philadelphia-brick-walk",
+  "name": "philadelphia-brick-walk_stop4.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-07)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "863575ab4b817ccce86fa06ff9dff8675dff35ff321243e705f89ba57969057d"
  }
 ]
