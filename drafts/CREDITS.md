@@ -1041,3 +1041,7 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `reading-terminal-market_hero.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
 | `reading-terminal-market_2.webp` | owner | Owner-supplied (2026-10-07; appears AI-edited, signage garbled) | — | pasted in chat |
 | `reading-terminal-market_3.webp` | owner | Owner-supplied (2026-10-07; appears AI-edited, signage garbled) | — | pasted in chat |
+| `congress-hall_hero.webp` | 15-8 | Public domain | NPS Photo | https://commons.wikimedia.org/wiki/File:Photo_showing_exterior_of_Congress_Hall_(2b87705d-155d-451f-67ef-6c39d9572636).jpg |
+| `congress-hall_2.webp` | 15-9 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Congress_Hall,_House_of_Representatives_(09fae55e-1dd8-b71b-0b23-da8b4de174d2).jpg |
+| `congress-hall_3.webp` | 15-10 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Congress_Hall,_detail_of_Senate_Chamber_carpet_(0a4d957d-1dd8-b71b-0b11-f87566130668).jpg |
+| `congress-hall_4.webp` | 15-11 | Pexels | A G | https://www.pexels.com/photo/historic-congress-hall-in-philadelphia-39382019/ |

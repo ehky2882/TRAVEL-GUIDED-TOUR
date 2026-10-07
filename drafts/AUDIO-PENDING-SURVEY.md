@@ -82,7 +82,7 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 | City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|-----:|----------------|------------------|
 | 🇺🇸 **Boston** | **0** | ✅ **LIVE 2026-10-02:** 30 singles + 5 walks (29 segments) wired under Atlas Studio BOS. See `archive/HANDOFF-261002-boston-live.md` | **59 on gh-pages** | — | **Atlas Studio BOS** |
-| 🇺🇸 **Philadelphia** | **35** | 30 singles + 5 walks (36 segments). **Audio arrived 2026-10-06: all 66 MP3s on gh-pages, transcript-matched.** 🔴 **Owner: do NOT launch until every image is backfilled** (15, 18, 19 + walk connectives W1-3, W2-5, W4-4). Launch = `drafts/philadelphia-batch1/README.md` § How to launch | **66 on gh-pages** | `main` (drafts) | **Atlas Studio PHL** `e6977a1f-af18-5f64-923a-052c350ce76e` |
+| 🇺🇸 **Philadelphia** | **35** | 30 singles + 5 walks (36 segments). **Audio arrived 2026-10-06: all 66 MP3s on gh-pages, transcript-matched.** 🔴 **Owner: do NOT launch until every image is backfilled** (18, 19 + walk connectives W1-3, W2-5, W4-4). Launch = `drafts/philadelphia-batch1/README.md` § How to launch | **66 on gh-pages** | `main` (drafts) | **Atlas Studio PHL** `e6977a1f-af18-5f64-923a-052c350ce76e` |
 | **TOTAL PENDING** | **35** | | | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
