@@ -2069,5 +2069,50 @@
   "fetched": "2400x1350",
   "upscaled": false,
   "sha": "e45cb146fa76cf77c43835ee45d560d51bea70e2dbfa5f39b2f098c6adcba964"
+ },
+ {
+  "code": "W1-3-3",
+  "num": "W1-3",
+  "slug": "philadelphia-fifth-square-walk",
+  "name": "philadelphia-fifth-square-walk_stop3.webp",
+  "src": "commons",
+  "lic": "Public domain",
+  "credit_required": false,
+  "credit": "Smallbones",
+  "page": "https://commons.wikimedia.org/wiki/File:Pine_at_5th,_Philly.JPG",
+  "orig": "4261x2841",
+  "fetched": "1920x1280",
+  "upscaled": false,
+  "sha": "035e2ed0206cfa76c853e7463f3f1fcb1ed6780a0c50cb9eaef4d4e358a31d16"
+ },
+ {
+  "code": "owner",
+  "num": "W2-5",
+  "slug": "philadelphia-broad-and-market-walk",
+  "name": "philadelphia-broad-and-market-walk_stop5.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-07)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "2d12e77b7211a96f211130a9fca56a8d6573e4e9da6eb140fd606553b9599eb0"
+ },
+ {
+  "code": "owner",
+  "num": "W4-4",
+  "slug": "philadelphia-brick-walk",
+  "name": "philadelphia-brick-walk_stop4.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-07)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "863575ab4b817ccce86fa06ff9dff8675dff35ff321243e705f89ba57969057d"
  }
 ]

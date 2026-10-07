@@ -1051,3 +1051,6 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `penns-landing_3.webp` | 19-6 | Unsplash | Ervin Lukacs | https://unsplash.com/photos/people-walking-on-bridge-during-night-time-4ydO_FM10cE |
 | `penns-landing_4.webp` | 19-4 | Unsplash | LJ Montague | https://unsplash.com/photos/blue-and-white-bridge-over-body-of-water-during-daytime-33rk_5R3BiI |
 | `penns-landing_5.webp` | 19-12 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-with-battleship-37195593/ |
+| `philadelphia-fifth-square-walk_stop3.webp` | W1-3-3 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Pine_at_5th,_Philly.JPG |
+| `philadelphia-broad-and-market-walk_stop5.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+| `philadelphia-brick-walk_stop4.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |

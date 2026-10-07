@@ -6,12 +6,12 @@ The owner's drop (OneDrive folder `261002_PHILADELPHIA`) held the author's non-g
 
 🔴 **The root folder's handoff is STALE (№8, written before the walks). The newest is №13, inside `PHILLY W5`.** It is kept here as `author/handoff-13.md`, beside its master list (`author/master-list-session9.md`). Both carry the pronunciation library, the pre-record flags and the judgment calls awaiting the owner.
 
-Philadelphia is the **40th studio**. The city already has **12 creator link pins** but no Atlas tours.
+Philadelphia is the **41st studio (Auckland took 40th on 2026-10-07)**. The city already has **12 creator link pins** but no Atlas tours.
 
 ## Owed before wire-in
 1. 🔴 **The author's pronunciation pass, before recording.** The author calls it "the one hard blocker": a native pass on *Lenape*, *Lenapehoking*, *Schuylkill*, *Wissahickon* and *Deborah's*. Also apply "Reading" → "redding" in 08's TTS at record (handoff №13 §4).
 2. **Audio: DONE (2026-10-06).** All 66 MP3s (30 singles + 36 walk segments) are on gh-pages as `audio/<slug>.mp3` and `audio/<walk-slug>_stop<N>.mp3`, hash-verified live. Each file was transcript-matched to its own script (faster-whisper on its first 30 s; the lowest score was 0.90, and none matched another script better). They are 128 kbps / 44.1 kHz **mono**, 40–194 s each, 8,327 s in total. Durations and hashes are in `audio-manifest.json`. ⚠️ The author's pronunciation pass (item 1) was owed before recording. Nothing here can confirm it happened, so listen for *Schuylkill*, *Lenape* and *Reading* on device.
-3. **Images: 25 of 30 tours done (2026-10-03), 124 files on gh-pages, all hash-verified live.** The owner picked them in the [Philadelphia Image Picks](https://claude.ai/artifact/Ky2zRMHBARidzPDbgzsq5B) page. None needs a credit (`drafts/CREDITS.md`). The files are `images/<slug>_hero.webp`, then `_2`, `_3` and so on, in the owner's gallery order. The manifest is `image-manifest.json`. **05 Christ Church and 08 Reading Terminal Market: owner photos, 2026-10-07** (05 hero only; 08 hero + 2 gallery, the gallery two apparently AI-edited). **Still owed:** the three walk connectives (W1-3, W2-5, W4-4). The owner left those rows unpicked. 19 Penn's Landing: owner picks 19-7 hero, 19-8, 19-6, 19-4, 19-12 (2026-10-07). 18 Head House: owner pick 18-1 hero (2026-10-07). 15 Congress Hall: owner picks 15-8 hero, 15-9, 15-10, 15-11 (2026-10-07). Ask before re-sourcing.
+3. **Images: 25 of 30 tours done (2026-10-03), 124 files on gh-pages, all hash-verified live.** The owner picked them in the [Philadelphia Image Picks](https://claude.ai/artifact/Ky2zRMHBARidzPDbgzsq5B) page. None needs a credit (`drafts/CREDITS.md`). The files are `images/<slug>_hero.webp`, then `_2`, `_3` and so on, in the owner's gallery order. The manifest is `image-manifest.json`. **05 Christ Church and 08 Reading Terminal Market: owner photos, 2026-10-07** (05 hero only; 08 hero + 2 gallery, the gallery two apparently AI-edited). **Still owed:** walk connective W4-4 (Arch Street) only. W1-3 = picker W1-3-3 (public domain); W2-5 = owner photo of the Dilworth Park fountain (2026-10-07). Both are on gh-pages. The owner left those rows unpicked. 19 Penn's Landing: owner picks 19-7 hero, 19-8, 19-6, 19-4, 19-12 (2026-10-07). 18 Head House: owner pick 18-1 hero (2026-10-07). 15 Congress Hall: owner picks 15-8 hero, 15-9, 15-10, 15-11 (2026-10-07). Ask before re-sourcing.
 
 ## The assembler must strip a metadata header
 🔴 **Most clean scripts carry metadata above their first `---` line.** There is a title line, and from B3 onward also `Vantage:` and `Spines:` lines. The narration starts after the `---`. `transcriptText`, `caption` and `shortDescription` must be built from the text **after the first `---`** only, or the app will show "Spines: S4 · docket 8".
@@ -84,7 +84,7 @@ Philadelphia is the **40th studio**. The city already has **12 creator link pins
    - `check-place-candidates` (expect **Eastern State Penitentiary**: the tour sits on the same point as 3 creator pins);
    - `join-places --max-move 100`.
 
-   Update CLAUDE.md Key facts (re-derived; this is the 40th studio) and the tracker, and confirm Supabase with a count query after the merge.
+   Update CLAUDE.md Key facts (re-derived; this is the 41st studio (Auckland took 40th on 2026-10-07)) and the tracker, and confirm Supabase with a count query after the merge.
 4. Walks:
    - **W1** *The Fifth Square*: 6 stops, ~1.7 km, 522 s
    - **W2** *Broad and Market*: 9 stops, ~2.7 km, 755 s
