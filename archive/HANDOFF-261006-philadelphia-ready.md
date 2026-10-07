@@ -20,7 +20,7 @@ it: the script exits `NOT READY` until every single and walk connective has an i
 
 ## What is owed (owner)
 - **Images still missing (all 30 singles are done):**
-  - Walk connectives: W1-3 Lombard & Pine, W2-5 Dilworth Park, W4-4 Arch Street.
+  - Walk connective W4-4 Arch Street (W1-3 and W2-5 done 2026-10-07).
 - The owner will backfill: from the picker, with their own photos, or with a fresh search.
 - ⚠️ **Christ Church's only "free" candidate (picker 05-12, Pexels) is NOT Philadelphia's Christ Church.** Its steeple is a cupola with no spire, so it looks like Christ Church in Alexandria, Virginia. Never use it. The owner supplied the real one on 2026-10-07 (`christ-church-philadelphia_hero.webp`).
 - The author's **pronunciation pass** was owed before recording. Nothing here confirms it. Listen for *Schuylkill*, *Lenape* and *Reading* ("redding") on device.
