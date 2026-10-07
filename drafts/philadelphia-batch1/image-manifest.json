@@ -1978,5 +1978,21 @@
   "fetched": "2400x1600",
   "upscaled": false,
   "sha": "8a1890299e672e9e3433f223c9ce65efb808c7b834468a44463b17530f1d99e3"
+ },
+ {
+  "code": "18-1",
+  "num": "18",
+  "slug": "head-house-square",
+  "name": "head-house-square_hero.webp",
+  "src": "commons",
+  "lic": "Public domain",
+  "credit_required": false,
+  "credit": "Smallbones",
+  "page": "https://commons.wikimedia.org/wiki/File:Headhouse_Philly_am.JPG",
+  "orig": "3153x4204",
+  "fetched": "1920x2560",
+  "upscaled": false,
+  "sha": "da112eeee24e19f8cb2eaee7e149c0fa2c720bef4584751fc0238b7d7f9d7306",
+  "note": "top-weighted crop to keep the cupola"
  }
 ]

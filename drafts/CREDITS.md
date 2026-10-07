@@ -1045,3 +1045,4 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `congress-hall_2.webp` | 15-9 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Congress_Hall,_House_of_Representatives_(09fae55e-1dd8-b71b-0b23-da8b4de174d2).jpg |
 | `congress-hall_3.webp` | 15-10 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Congress_Hall,_detail_of_Senate_Chamber_carpet_(0a4d957d-1dd8-b71b-0b11-f87566130668).jpg |
 | `congress-hall_4.webp` | 15-11 | Pexels | A G | https://www.pexels.com/photo/historic-congress-hall-in-philadelphia-39382019/ |
+| `head-house-square_hero.webp` | 18-1 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Headhouse_Philly_am.JPG |
