@@ -358,3 +358,4 @@ Full text for every one of them is in
 - [HANDOFF-261003-sovmod.md](HANDOFF-261003-sovmod.md) — **SovMod launched:** 72 original audio tours of socialist-era architecture (21 countries, 8 new); 8 coordinates moved to OSM.
 - [HANDOFF-261006-philadelphia-ready.md](HANDOFF-261006-philadelphia-ready.md) — **Philadelphia ready except images:** 66 MP3s on gh-pages, 124 images (25/30 tours), assembler dry-run clean; **launch held** by owner until 5 tours + 3 walk connectives are backfilled.
 - [HANDOFF-261007-auckland.md](HANDOFF-261007-auckland.md) — **Auckland launched:** Atlas Studio AKL (40th studio), 20 singles; Piha moved 294 m to Lion Rock; architect tags Cheshire Architects + Stevens Lawson Architects.
+- [HANDOFF-261007-triage-pins.md](HANDOFF-261007-triage-pins.md) — **25 link pins** (10 creators) from 39 triaged; 6 architect tags; 4 place questions for Edward.
