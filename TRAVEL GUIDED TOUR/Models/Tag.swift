@@ -218,6 +218,7 @@ enum Tag {
             "Vera Ćirković", "Semion Șoihet", "Gradimir Medaković",
             "Otar Kalandarishvili", "George Chakhava", "Alexandr Kireev",
             "Kamen Goranov",
+            "Charles and Ray Eames", "Walter Gropius", "Eliot Noyes", "Eileen Gray", "Takamitsu Azuma", "Fritz Höger",
         ]),
     ]
 

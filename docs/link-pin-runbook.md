@@ -568,6 +568,14 @@ unset GIT_INDEX_FILE      # 🔴 or every later `git add` writes the wrong index
 `git ls-files | wc -l` before and after the loop must differ by exactly the file
 count — that is the check that every blob actually landed.
 
+⚠️ **In a partial clone, `git write-tree` and a rename-detecting `git diff` fetch
+every missing blob lazily — the 4 GB download again, silently** (2026-10-07: both
+hung for minutes before anyone noticed). Run them as
+`GIT_NO_LAZY_FETCH=1 git write-tree --missing-ok` and
+`git diff-tree -r --no-renames --name-status`. A write-tree killed mid-way leaves
+a truncated index (`index file smaller than expected`): start again from a fresh
+`GIT_INDEX_FILE`.
+
 ⚠️ **Then wait for Pages before believing any checker.** The push puts blobs in
 the branch; it does not deploy them. `check-image-duplicates.py` will fetch the
 new URLs, get **404**, and still print `OK — no suspicious duplicates`, because
