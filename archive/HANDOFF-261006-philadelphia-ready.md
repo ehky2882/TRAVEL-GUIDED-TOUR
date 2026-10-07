@@ -19,8 +19,7 @@ it: the script exits `NOT READY` until every single and walk connective has an i
 - **Assembler:** `wire_philly.py`. A dry run (stand-ins for the missing images) gave 35 tours with 0 validator errors.
 
 ## What is owed (owner)
-- **Images still missing:**
-  - Singles: 19 Penn's Landing.
+- **Images still missing (all 30 singles are done):**
   - Walk connectives: W1-3 Lombard & Pine, W2-5 Dilworth Park, W4-4 Arch Street.
 - The owner will backfill: from the picker, with their own photos, or with a fresh search.
 - ⚠️ **Christ Church's only "free" candidate (picker 05-12, Pexels) is NOT Philadelphia's Christ Church.** Its steeple is a cupola with no spire, so it looks like Christ Church in Alexandria, Virginia. Never use it. The owner supplied the real one on 2026-10-07 (`christ-church-philadelphia_hero.webp`).

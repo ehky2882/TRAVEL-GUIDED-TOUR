@@ -1046,3 +1046,8 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `congress-hall_3.webp` | 15-10 | Public domain | NPS photo | https://commons.wikimedia.org/wiki/File:Congress_Hall,_detail_of_Senate_Chamber_carpet_(0a4d957d-1dd8-b71b-0b11-f87566130668).jpg |
 | `congress-hall_4.webp` | 15-11 | Pexels | A G | https://www.pexels.com/photo/historic-congress-hall-in-philadelphia-39382019/ |
 | `head-house-square_hero.webp` | 18-1 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Headhouse_Philly_am.JPG |
+| `penns-landing_hero.webp` | 19-7 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-skyline-and-waterfront-37195586/ |
+| `penns-landing_2.webp` | 19-8 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-benjamin-franklin-bridge-and-philadelphia-skyline-37195587/ |
+| `penns-landing_3.webp` | 19-6 | Unsplash | Ervin Lukacs | https://unsplash.com/photos/people-walking-on-bridge-during-night-time-4ydO_FM10cE |
+| `penns-landing_4.webp` | 19-4 | Unsplash | LJ Montague | https://unsplash.com/photos/blue-and-white-bridge-over-body-of-water-during-daytime-33rk_5R3BiI |
+| `penns-landing_5.webp` | 19-12 | Pexels | K | https://www.pexels.com/photo/aerial-view-of-philadelphia-with-battleship-37195593/ |
