@@ -1873,5 +1873,20 @@
   "fetched": "1448x1086",
   "upscaled": false,
   "sha": "376551c72f21b2f8d74fdd2e5818413bc76eb64076e22bd67dc0eea616263f5b"
+ },
+ {
+  "code": "owner",
+  "num": "08",
+  "slug": "reading-terminal-market",
+  "name": "reading-terminal-market_hero.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-07)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "86ebf5bf61ddffb0be0cccb5f8618438d6e0489110afb71e3879182cddce7972"
  }
 ]

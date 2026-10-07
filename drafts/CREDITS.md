@@ -1038,3 +1038,4 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `one-liberty-place_7.webp` | 30-11 | Pexels | Scott Duygun | https://www.pexels.com/photo/city-skyline-during-night-time-8738915/ |
 | `one-liberty-place_8.webp` | 30-12 | Unsplash | Alejandro Barba | https://unsplash.com/photos/city-skyline-during-day-time-YLn87mac45M |
 | `christ-church-philadelphia_hero.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+| `reading-terminal-market_hero.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
