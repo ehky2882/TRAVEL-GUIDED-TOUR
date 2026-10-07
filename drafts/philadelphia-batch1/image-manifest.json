@@ -1858,5 +1858,20 @@
   "fetched": "2400x1350",
   "upscaled": false,
   "sha": "8875ef354efaef03fc306d8b05c168f7205a602ca3d67b86847267d1bc15da30"
+ },
+ {
+  "code": "owner",
+  "num": "05",
+  "slug": "christ-church-philadelphia",
+  "name": "christ-church-philadelphia_hero.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-07)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "376551c72f21b2f8d74fdd2e5818413bc76eb64076e22bd67dc0eea616263f5b"
  }
 ]
