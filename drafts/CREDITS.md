@@ -1039,3 +1039,5 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `one-liberty-place_8.webp` | 30-12 | Unsplash | Alejandro Barba | https://unsplash.com/photos/city-skyline-during-day-time-YLn87mac45M |
 | `christ-church-philadelphia_hero.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
 | `reading-terminal-market_hero.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+| `reading-terminal-market_2.webp` | owner | Owner-supplied (2026-10-07; appears AI-edited, signage garbled) | — | pasted in chat |
+| `reading-terminal-market_3.webp` | owner | Owner-supplied (2026-10-07; appears AI-edited, signage garbled) | — | pasted in chat |

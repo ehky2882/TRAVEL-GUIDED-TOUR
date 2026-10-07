@@ -1888,5 +1888,35 @@
   "fetched": "1448x1086",
   "upscaled": false,
   "sha": "86ebf5bf61ddffb0be0cccb5f8618438d6e0489110afb71e3879182cddce7972"
+ },
+ {
+  "code": "owner",
+  "num": "08",
+  "slug": "reading-terminal-market",
+  "name": "reading-terminal-market_2.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-07; appears AI-edited, signage garbled)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "e48cbf1028a44420fabd160272b30dade4daa263932427ac53e2f1d6f876b38e"
+ },
+ {
+  "code": "owner",
+  "num": "08",
+  "slug": "reading-terminal-market",
+  "name": "reading-terminal-market_3.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-07; appears AI-edited, signage garbled)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "0e5d6d31a315ed754624e6e96a9bd8200c839b107134046c653849580961d316"
  }
 ]
