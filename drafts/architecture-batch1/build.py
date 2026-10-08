@@ -48,7 +48,7 @@ for src in sorted(glob.glob(os.path.join(HERE, "src", "*.txt"))):
         bad = check_tts(tts)
         if bad: print(f"WARN {stem}: TTS-safe still has {', '.join(bad)}", file=sys.stderr)
     words = len(re.findall(r"\b\w+\b", body.replace("[beat]", "")))
-    md = [f"# {title}", "", f"**Place:** {meta.get('PLACE','')}  ", f"**Coordinate (WGS-84):** {meta.get('COORD','')}  ",
+    md = [f"# {title}", "", f"**Place:** {meta.get('PLACE','')}  ", f"**Coordinate (WGS-84):** {meta.get('COORD','')}  ",] + ([f"**Note:** {meta['NOTE']}  "] if meta.get('NOTE') else []) + [
           f"**Length:** {words} words (about {round(words/150*60)} seconds)", "", "## Script (clean)", "", body, "",
           "## Sources read before writing", ""] + [f"- {s}" for s in meta["SOURCE"]]
     if meta["RESPELL"]:

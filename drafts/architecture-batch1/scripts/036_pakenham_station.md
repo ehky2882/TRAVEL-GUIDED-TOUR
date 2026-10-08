@@ -1,0 +1,40 @@
+# Pakenham Station, Melbourne
+
+**Place:** Pakenham, Victoria, Australia (elevated station over Main Street; Bunurong/Boon Wurrung and Wurundjeri Country)  
+**Coordinate (WGS-84):** -38.08030, 145.48590 (exact)  
+**Length:** 318 words (about 127 seconds)
+
+## Script (clean)
+
+Most suburban stations are a shelter and a ticket machine. This one is wearing a bronze cloud.
+
+Stand in the open space below the platforms and look up. You should see the railway running overhead on a long concrete bridge, and above the platforms, a wide, floating roof whose underside rolls in gentle waves, all in warm, metallic bronze.
+
+That roof is the gift. It's made from two hundred and fifty-eight panels, and the shape is borrowed from the countryside out east, the rolling golden hills of Gippsland, and the colour from the bronze sunsets. Pakenham is the last stop before the city gives way to the farmland, and the architects, Genton, wanted the station to feel like a gateway to it.
+
+Notice what's missing beneath it. Hardly any walls. The materials underneath are kept plain and quiet so the roof does the talking, and the station is almost see-through. You can look in from the street, and from the platform you can look out.
+
+That's worth doing. Go up the stairs or the lift to the platforms and look both ways. North and south, towards Gippsland one way and the city the other. Genton call it a viewing deck for Pakenham.
+
+[beat]
+
+And here's the real story. Until June twenty twenty-four, the trains ran at ground level, and the boom gates at Main Street, McGregor Road and Racecourse Road came down again and again. Then the old station was demolished, the line was lifted onto a rail bridge two and a half kilometres long, and two new stations opened. The level crossings went, and the land underneath became public space, about as much as six Melbourne Cricket Grounds.
+
+Before you go, walk along under the viaduct a little way. It's a strange pleasure to stand where the boom gates used to be and hear a train go over your head.
+
+## Sources read before writing
+
+- https://genton.com.au/projects/pakenham-station
+- https://bigbuild.vic.gov.au/news/level-crossing-removal-project/new-stations-at-pakenham-to-open-next-month (search summary)
+- https://bigbuild.vic.gov.au/__data/assets/pdf_file/0006/823443/Pakenham-community-update-December-2023.pdf (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Pakenham | packenum |
+| Gippsland | gipsland |
+| Genton | jenton |
+| Bunurong | bunnoo rong |
+| Boon Wurrung | boon wurrung |
+| Wurundjeri | wurrun jerry |
