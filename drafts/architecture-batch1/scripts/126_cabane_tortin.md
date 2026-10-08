@@ -1,0 +1,46 @@
+# Cabane Tortin, Nendaz
+
+**Place:** Above the Tortin Glacier, Les 4 Vallées (between Verbier and Nendaz), Valais, Switzerland (just below Mont Fort)  
+**Coordinate (WGS-84):** 46.08096, 7.31867 (area: Mont Fort summit point; the cabane sits just below. Move before use)  
+**Note:** A private, staffed chalet for up to about six guests; reached by the Verbier lift system and on skis. View from the pistes  
+**Length:** 333 words (about 133 seconds)
+
+## Script (clean)
+
+High above the glacier, on the site of an old mountain hut, there's a chalet with one enormous window. It's ten metres of glass, tilted towards the Alps.
+
+From the pistes below Mont Fort, look up the slope. You should see a small, low building of stone, pale wood and dark steel, sitting into the mountainside, with a long, sloping wall of glass facing out across the valleys of the Valais.
+
+Start with that window. It's about ten metres long and sloped, like a giant screen, and from inside it frames the whole sweep of the Valais Alps, with Mont Blanc in the far distance on a clear day.
+
+The architect is Snorre Stinessen, from Norway, known for small, precise buildings in wild northern landscapes. Here, he replaced an old mountain hut with something very minimal: stone, blond wood and powder-coated steel, brushed concrete floors, wood-burning fires in glass cases, and furniture by Le Corbusier and the Norwegian designer Fredrik Kayser.
+
+It's a tiny place, sleeping about six, fully staffed, with a chef cooking Swiss food, raclette with local cheese, and a serious wine cellar. And it looks after itself up here. It has its own spring water, solar panels, and a pellet stove for heat.
+
+Getting here is half the point. You come up through the Verbier lift system and ski down from Mont Fort, or skin up from the Col des Gentianes on touring skis.
+
+[beat]
+
+What I like is how small it is. In a ski area full of big hotels, this is a single hut with one great window, a reminder that the best thing about a mountain is usually the view, and you don't need much more than a warm room to enjoy it.
+
+If you're skiing past, stop on the slope and look back at the cabane against the mountain. And on a clear day, turn round and look for Mont Blanc, the same view that window was built for.
+
+## Sources read before writing
+
+- https://galeriemagazine.com/hotel-of-the-week-cabane-tortin/
+- https://cabanetortin.com/
+- https://www.snorrestinessen.com/
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Cabane Tortin | kabann tortan |
+| Tortin | tortan |
+| Nendaz | nondaz |
+| Verbier | vairbeeay |
+| Valais | valay |
+| Mont Fort | mon for |
+| Col des Gentianes | kol day zhonseeahn |
+| Snorre Stinessen | snorreh stinnessen |
+| Fredrik A Kayser | fredrik a kyser |
