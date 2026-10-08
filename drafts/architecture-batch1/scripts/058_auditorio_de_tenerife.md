@@ -1,0 +1,42 @@
+# Auditorio de Tenerife, Santa Cruz
+
+**Place:** Avenida de la Constitución, Santa Cruz de Tenerife, Canary Islands, Spain (by the port and the Castillo de San Juan)  
+**Coordinate (WGS-84):** 28.45607, -16.25124 (exact)  
+**Length:** 357 words (about 143 seconds)
+
+## Script (clean)
+
+From the sea, it looks like a wave about to break over the city. Up close, the wave turns out to be made of broken crockery.
+
+Stand on the plaza in front of the building, between the auditorium and the Atlantic. You should see a gleaming white building, and above it a single, enormous curved wing that sweeps up off the back, arches high over the main hall, and narrows down to a sharp point, hanging in the air.
+
+Start with that wing. It's the building's signature, and it rises fifty-eight metres. It's a single arch, only fifteen to twenty centimetres thick in places, and it's said to be the only large arch of its kind held up by just two points. The tip simply hangs there. It's by the Valencian architect Santiago Calatrava, who loves nothing more than making a structure look as though it shouldn't stand up.
+
+Now go closer to the walls. That white surface isn't paint. It's trencadís, a mosaic of broken white ceramic, shipped from Valencia, the technique Gaudí made famous in Barcelona. Look at the low walls around the plaza too. There the shards are coloured.
+
+Inside, under the dome, the symphony hall seats one thousand six hundred and sixteen, with a smaller chamber hall for four hundred and twenty-two. It opened on the twenty-sixth of September, two thousand and three. It's officially named after Adán Martín, the island politician who pushed the project through, though almost everyone still just calls it the Auditorio.
+
+[beat]
+
+There's a catch, of course. Look carefully and you may notice missing or patched tiles. The trencadís has been damaged, there's damp inside, and Calatrava's studio and the builders have argued in court over who should pay. A wave in the Atlantic is never going to be easy to keep white.
+
+If you've time, walk out along the sea front towards the port. Look back from a distance, and you'll see the whole thing the way it was meant to be seen: a great white crest rising beside the ocean.
+
+## Sources read before writing
+
+- https://en.wikipedia.org/wiki/Auditorio_de_Tenerife
+- https://auditoriodetenerife.com/
+- https://arquitecturaviva.com/articles/fanfarria-y-fantasia-6 (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Auditorio de Tenerife | owditoreeo deh tenereefeh |
+| Santa Cruz | santa crooth |
+| Santiago Calatrava | santiahgo calatrahva |
+| trencadís | trenkadeess |
+| Adán Martín | adahn marteen |
+| Castillo de San Juan | kasteeyo deh san hwan |
+| Penderecki | pendeh retskee |
+| Cabildo | kabeeldo |

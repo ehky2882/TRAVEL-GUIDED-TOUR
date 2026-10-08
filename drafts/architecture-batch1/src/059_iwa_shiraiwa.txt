@@ -1,0 +1,34 @@
+TITLE: IWA, Shiraiwa, Toyama
+TTS_TITLE: Eewa, Sheeraeewa, Toyama
+PLACE: Shiraiwa, Tateyama-machi, Toyama Prefecture, Japan
+COORD: 36.63821, 137.37021 (area: Shiraiwa neighbourhood point; move onto the brewery before use)
+NOTE: A working brewery; the sources give no public visiting arrangements. Script works from outside
+SOURCE: https://iwa-sake.jp/
+SOURCE: https://galeriemagazine.com/sake-kengo-kuma/
+RESPELL: IWA => eewa
+RESPELL: Shiraiwa => sheeraeewa
+RESPELL: Tateyama => tahteyama
+RESPELL: Toyama => toyama
+RESPELL: Kengo Kuma => kengo kooma
+RESPELL: Richard Geoffroy => richard jeffroy
+RESPELL: Dom Pérignon => dom perrinyon
+RESPELL: Masato Yabuta => masahto yaboota
+RESPELL: kura => koora
+RESPELL: toji => toe jee
+RESPELL: Marc Newson => mark newson
+---
+For twenty-eight years, Richard Geoffroy was in charge of making Dom Pérignon. Then he left Champagne and came here, to a village in the Japanese Alps, to make sake.
+
+Stand on the lane looking across the rice fields to the brewery. You should see a long, low building under one great metal roof that sweeps down almost to the ground, with tall glass walls beneath it, and, on a clear day, the mountains rising behind.
+
+Start with the roof. It's by Kengo Kuma, his first sake brewery, and it's made to hug the land rather than stand up from it. Everything happens under that one roof. The brewing, a place to receive guests, a dining room and a couple of rooms to stay in, all gathered round a shared hearth, as in an old farmhouse.
+
+Now look out at the paddies around you. That's the point of the place. Inside, there's a sunken tasting table looking straight out over the rice. And to the south is Mount Tate, one of Japan's three holy mountains, whose heavy snow feeds the pure water this sake depends on.
+
+The sake itself works like Champagne. Geoffroy brought the idea of assemblage, of blending. Instead of grapes, he blends sakes made from three kinds of rice and five strains of yeast, alongside a local master brewer, Masato Yabuta. The blend changes every year. Even the bottle was designed by Marc Newson.
+
+[beat]
+
+What I find rather touching is Geoffroy's own description. He calls it an outsider's project, made out of love for Japan. He says he believes in the power of collaborative tensions. A French winemaker, a Japanese brewer and a Japanese architect, under one roof, is about as collaborative as tension gets.
+
+If you've got time, look north-west from here. On a good day you can see down to the city of Toyama, and beyond it, the line of the Sea of Japan on the horizon.
