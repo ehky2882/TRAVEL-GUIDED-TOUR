@@ -1,0 +1,43 @@
+# Aranya Art Center, Qinhuangdao
+
+**Place:** Aranya Gold Coast community, Beidaihe New District, Qinhuangdao, Hebei, China  
+**Coordinate (WGS-84):** none: inside the Aranya community, not yet geocoded. Locate before use  
+**Length:** 351 words (about 140 seconds)
+
+## Script (clean)
+
+From the outside, it looks like a dark rock worn down by the sea. Inside, it's a bright white funnel open to the sky, and sometimes, a pool.
+
+Stand outside and look at the building. You should see a heavy, charcoal-grey mass of concrete, faceted like a weathered boulder, with windows framed in blackened bronze set into its sides.
+
+Start with the outside. The architects, Neri and Hu, from Shanghai, led by Lyndon Neri and Rossana Hu, wanted it to look like a rock shaped by water and time, which suits a building a short walk from the sea. The faceted panels catch the light at different angles, so the surface changes through the day.
+
+Now go inside and find the centre. The walls turn bright white and curve round a great cone-shaped void, with circular stepped seating at the bottom, like a little amphitheatre. At the very top is an oculus, a round opening that lets in the sky, the sun and the rain.
+
+Here's the clever part. That central stage can be filled with water to become a shallow pool. The architects were thinking of the sea nearby, calm and blue in summer, broken ice in winter, and they wanted its presence at the heart of the building. Drain it, and it becomes a place for people to gather and sit.
+
+Around the void, a ramp climbs through five exhibition spaces, so you spiral up past the art. Look at the doors too, big bamboo doors with bronze handles. There's a café and a gallery on the ground floor. It was completed in twenty nineteen and won a major international design award the following year.
+
+[beat]
+
+The architects said it was as much about that courtyard, a place for the residents to meet and sit, as about the art. I think that's the right way round. A gallery that's also a village square.
+
+Before you go, follow the ramp all the way to the top. From there you get a view right round the courtyard, and down into the cone, wet or dry.
+
+## Sources read before writing
+
+- https://www.azuremagazine.com/article/az-awards-2020-winner-aranya-art-centre/
+- https://www.architecturelab.net/aranya-art-center-neri-and-hu-design-and-research-office/ (search summary)
+- https://wallpaper.com/architecture/neri-and-hu-aranya-art-center-china (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Aranya | arahnya |
+| Qinhuangdao | chin hwahng dow |
+| Beidaihe | bay dye huh |
+| Hebei | huh bay |
+| Neri&Hu | nerry and hoo |
+| Lyndon Neri | lyndon nerry |
+| Rossana Hu | rossahna hoo |
