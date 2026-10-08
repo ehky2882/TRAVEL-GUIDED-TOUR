@@ -1,0 +1,42 @@
+# Green School Bali
+
+**Place:** Jalan Raya Sibang Kaja, Banjar Saren, Abiansemal, Badung, Bali, Indonesia (about 30 minutes south of Ubud)  
+**Coordinate (WGS-84):** -8.56700, 115.21402 (exact)  
+**Note:** A working school; visits are by campus tour only (see the school's Visit Our Campus page)  
+**Length:** 335 words (about 134 seconds)
+
+## Script (clean)
+
+Imagine going to school in a building with no walls, made almost entirely of grass. Because that, technically, is what bamboo is.
+
+Stand at the edge of the main building, the one they call the Heart of School. You should see a huge, open structure of honey-coloured bamboo, three storeys high, its roof curling round in great spirals, with jungle all around and, somewhere below, the sound of the Ayung River.
+
+Start with the size. The Heart of School is about sixty metres long and was built from around two and a half thousand bamboo poles. Its founder, John Hardy, has called it perhaps the largest freestanding bamboo building in the world. That's a claim, rather than a record, but standing underneath it, you won't be in a mood to argue.
+
+Now look up at the columns. Three great bamboo towers rise and twist into three spirals that run into one another, like a cluster of shells, holding up the roof. There's no glass in the walls, because there aren't any walls. Air, light and the noise of the forest come straight in, and that's the point.
+
+The school opened in September two thousand and eight with ninety pupils. John Hardy and his wife Cynthia had sold their jewellery company and wanted to build a school that taught children to live more lightly. Hardy didn't hold a competition. He gathered a mixed team of designers, artists and bamboo specialists, with a Swiss sculptor, Aldo Landwehr, as the first design director. Today more than five hundred children study here.
+
+[beat]
+
+What I love is that it shows bamboo can be serious architecture. It grows back in a few years. It's strong, it's flexible, and it can make a cathedral. It just needed someone willing to try.
+
+If you're on a campus tour, ask to walk down to the river. There's a bamboo bridge across the Ayung, twenty-two metres long, built even before the school opened.
+
+## Sources read before writing
+
+- https://bali.greenschool.org/
+- https://en.wikipedia.org/wiki/Green_School_(Bali) (search summary)
+- https://www.theglobeandmail.com/arts/in-bali-a-new-school-thats-already-a-legend/article622224 (search summary)
+- https://www.ted.com/talks/john_hardy_my_green_school_dream (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Sibang Kaja | seebang kahja |
+| Abiansemal | ahbian semahl |
+| Ayung | ah yoong |
+| Ubud | oobood |
+| Aldo Landwehr | aldo lantvair |
+| IBUKU | ee boo koo |
