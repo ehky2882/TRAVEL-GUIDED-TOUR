@@ -1,0 +1,38 @@
+# Skanderbeg Building, Tirana
+
+**Place:** North-east corner of Skanderbeg Square, Tirana, Albania  
+**Coordinate (WGS-84):** 41.32999, 19.81931 (Wikidata, "Tirana's Rock"). ⚠️ The existing catalogue pin (41.3277, 19.8184) sits in the middle of the square, about 270 m south-west  
+**Length:** 331 words (about 132 seconds)
+
+## Script (clean)
+
+Most cities put their hero on a plinth. Tirana has gone rather further, and turned him into eighty-five metres of flats.
+
+Stand in Skanderbeg Square and face the north-east corner. The tall, pale building there, wrapped from bottom to top in curving balconies, is the one. Give it a moment, because it can take a second look. Then the outline resolves: broad shoulders at the base, and above them, a head, turned slightly to one side, looking out over the square.
+
+The man is Gjergj Kastrioti, known as Skanderbeg, who held off the Ottoman Empire for a quarter of a century in the fourteen hundreds and has been Albania's national hero ever since. His statue on horseback is in this square too, so you can compare the two.
+
+Now look at how the face is made. There's no carving. Every floor has a balcony running right round it, and where the balconies bulge outwards they become a nose, ears, a beard. The glass balustrades fade from milky white to clear, which gives the whole thing the look of marble. And at night, strips of light under each balcony draw the head out against the sky.
+
+Inside, it's a perfectly ordinary mixed-use building: shops at the bottom, four floors of offices in the shoulders, and around twenty floors of homes in the head. The deep balconies are practical, too, shading the flats from the Albanian sun, with planters between them carrying native greenery up the face.
+
+[beat]
+
+The Dutch architects, MVRDV, said they wanted to help a city keep its own character while so many others start to look the same. You can argue about whether a giant face is the way to do it. But nobody is going to mistake this square for anywhere else.
+
+Before you go, find the statue of Skanderbeg on horseback and line it up with the building behind. With a bit of shuffling, you'll get Skanderbeg twice in one view.
+
+## Sources read before writing
+
+- https://www.mvrdv.com/projects/461/skanderbeg-building
+- https://globaldesignnews.com/mvrdvs-skanderbeg-building-is-85-meter-tall-mixed-use-project-sculpted-into-the-shape-of-a-bust-of-albanias-national-hero/
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Skanderbeg | skander beg |
+| Tirana | tirahna |
+| Gjergj Kastrioti | jerj kastree oti |
+| Winy Maas | vinny mahss |
+| MVRDV | em vee ar dee vee |

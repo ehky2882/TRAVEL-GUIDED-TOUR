@@ -1,0 +1,44 @@
+# Mushroom Pavilion, Casa Wabi
+
+**Place:** Fundación Casa Wabi, Carretera Federal 200 km 113, Puerto Escondido, Oaxaca, Mexico  
+**Coordinate (WGS-84):** not located; get a map pin for the pavilion within the Casa Wabi grounds before use  
+**Length:** 322 words (about 129 seconds)
+
+## Script (clean)
+
+A building whose main job is to grow mushrooms, and whose second job is to bring people together over them.
+
+Look for a low concrete dome among the scrub, rather like a cap pushing up out of the ground. That's it. Walk round it and you'll see it has no windows, just a door on each side, small vents around the base, and a hole in the top. The concrete was poured on site, trowelled, and pressed with burlap, so the surface carries the weave of the sacking. The architects say it will weather and change colour over time.
+
+This is the Mushroom Pavilion, designed by OMA, led by Shohei Shigematsu. It's the firm's first building in Mexico, and it belongs to Fundación Casa Wabi, the arts foundation started here by the artist Bosco Sodi, with its headquarters by Tadao Ando. Casa Wabi also has buildings by Alberto Kalach, Kengo Kuma and Álvaro Siza, which makes this stretch of coast an unlikely architecture collection.
+
+Now the inside, if it's open. The lower half of the dome steps down like a small amphitheatre, and on those steps sit hundreds of terracotta mushroom pots, handmade by local artisans. Around the edge are three rooms for the growing itself, fruiting, incubation and storage, and in the middle, a gathering space lit by the round opening in the roof, with a fountain to keep the air damp for the mushrooms.
+
+One more thing. Look at how the base curves inwards. It's lifted to touch as little ground as possible, to protect a native guayacán tree on the site.
+
+[beat]
+
+Shigematsu calls it an incubator of both food and community. It's a modest building with a modest purpose, and that's exactly why it works.
+
+Before you leave, climb to the top of the steps and look through the square opening there. It frames the brush and, beyond it, the Pacific.
+
+## Sources read before writing
+
+- https://arqa.com/en/architecture/mushroom-pavilion.html
+- https://interiordesign.net/designwire/oma-mushroom-pavilion-casa-wabi/
+- https://casawabi.org/en/about/
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Casa Wabi | casa wahbee |
+| Bosco Sodi | bosco sody |
+| Tadao Ando | tadow ahndo |
+| Shohei Shigematsu | sho hey shigga mahtsoo |
+| Oaxaca | wa hah ka |
+| Puerto Escondido | pwair toe escon deedo |
+| guayacán | gwy a kahn |
+| Kengo Kuma | kengo kooma |
+| Álvaro Siza | alvaro seeza |
+| Alberto Kalach | alberto kalahch |
