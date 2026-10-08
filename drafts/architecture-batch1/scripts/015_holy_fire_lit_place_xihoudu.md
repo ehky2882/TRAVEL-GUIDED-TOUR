@@ -1,0 +1,44 @@
+# Holy Fire Lit Place, Xihoudu
+
+**Place:** Xihoudu Site, Ruicheng County, Yuncheng, Shanxi, China  
+**Coordinate (WGS-84):** 34.69712, 110.30013 (site level: Xihoudu relic park, OpenStreetMap)  
+**Length:** 373 words (about 149 seconds)
+
+## Script (clean)
+
+This hillside is where people believe our ancestors first learned to use fire. So when China needed a flame for a national sporting event, this is where they came to light it.
+
+Stand where you can see the slope of the hill, and look for an entrance that seems to be cut straight into it. The walls around you should be the colour of the ground, the yellow-brown of loess, the fine wind-blown soil that this whole plateau is made of. That's deliberate. Most of what you can see isn't soil at all; it's glass-fibre reinforced concrete, made to match it.
+
+We're at the meeting point of three provinces, Shanxi, Shaanxi and Henan, on the Loess Plateau. From the late nineteen fifties, archaeologists working here found Old Stone Age remains that they read as evidence of people using fire around one point eight million years ago, among the earliest anywhere. In nineteen eighty-eight the State Council listed the site as a cultural relic of the first rank.
+
+The architects, URBANUS, rebuilt the old fire-lighting plaza for the Second National Youth Games in twenty nineteen, and they arranged it as a story in three acts. The discovery of fire is a cave: you walk into the hill, and a single beam of daylight cuts through the dark, its angle calculated from the height of the sun at the moment the flame was gathered. The rite of fire is a square, reusing material from the earlier plaza. And the conquest of fire is a zigzag path cut into trenches, leading out to five cantilevered platforms over the dig site and the Yellow River.
+
+The concrete was a practical choice as much as a poetic one. The building time was very short, and the winter cold was severe.
+
+[beat]
+
+The most remarkable thing is how little it shows. A national ceremony could have had a monument. Instead, it has a hill that you walk into.
+
+Before you go, follow the zigzag right to the last platform and look out over the river valley. On a clear day you'll see the Yellow River below and Mount Hua in the distance, much the view the first fire-makers had.
+
+## Sources read before writing
+
+- https://www.yellowtrace.com.au/urbanus-holy-fire-lit-place-china-national-youth-games-underground-architecture/
+- https://www.thisispaper.com/mag/holy-fire-lit-place-china-urbanus
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Xihoudu | shee hoe doo |
+| Ruicheng | rway chung |
+| Yuncheng | yoon chung |
+| Shanxi | shan shee |
+| Shaanxi | shahn shee |
+| Henan | huh nahn |
+| URBANUS | urbanus |
+| Wang Hui | wahng hway |
+| Mount Hua | mount hwah |
+| Loess | low ess |
+| loess | low ess |
