@@ -1,0 +1,38 @@
+# 798 Art Zone, Beijing
+
+**Place:** Dashanzi, 2 Jiuxianqiao Road, Chaoyang District, Beijing, China  
+**Coordinate (WGS-84):** 39.98475, 116.48787 (district-level, Wikidata)  
+**Length:** 318 words (about 127 seconds)
+
+## Script (clean)
+
+Look up at the ceilings in this neighbourhood and you might find a slogan about Chairman Mao painted on the arches. The artists who took over these factories asked for them to be kept.
+
+Stand anywhere in the main lanes and look at the old factory halls. You should see long brick buildings with a distinctive saw-tooth roofline: curved arches that rise and then drop down to a row of tall, slanting windows, again and again along the roof.
+
+Those roofs are the gift detail here. They face north, so they catch steady, even daylight without the glare of direct sun, which is exactly what you want in a factory, and, as it turns out, exactly what you want in an art gallery too.
+
+They were designed by East Germans. In the nineteen fifties, China planned a huge electronics complex here with Soviet help. The Soviets passed, and suggested East Germany instead, so German consultants designed it, in a plain, functional style that owes a lot to the Bauhaus, rather than the heavier Soviet look. The complex was called Joint Factory seven one eight. Building started in nineteen fifty-four and production in fifty-seven, with the equipment brought in on the Trans-Siberian Railway.
+
+As the factories wound down, artists moved in. Around two thousand and two they began renting the empty halls. Galleries followed, then cafés, then crowds. The UCCA Center for Contemporary Art is now the district's anchor and its most visited space.
+
+[beat]
+
+What I find rather wonderful is the chain of borrowings. A Chinese factory, designed by Germans, in a style from a German art school, now full of contemporary art. The building was always more international than it looked.
+
+Before you go, step inside one of the big halls and look up at the arches. If you're lucky, the old red slogans will still be there, under the north light.
+
+## Sources read before writing
+
+- https://en.wikipedia.org/wiki/798_Art_Zone
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| 798 | seven nine eight |
+| Dashanzi | dah shahn dzuh |
+| Jiuxianqiao | jyo shyen chyow |
+| Chaoyang | chow yahng |
+| UCCA | u c c a |
+| Bauhaus | bow house |

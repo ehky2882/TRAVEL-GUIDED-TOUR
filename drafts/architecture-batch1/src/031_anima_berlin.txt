@@ -1,0 +1,34 @@
+TITLE: Anima, Berlin
+TTS_TITLE: Ahnima, Berlin
+PLACE: Locke at East Side Gallery, Mühlenstraße 61–63, 10243 Friedrichshain, Berlin, Germany
+COORD: 52.50537, 13.43861 (exact: OpenStreetMap node "Anima", Mühlenstraße, matches the venue's published address)
+SOURCE: http://anima.radio/
+SOURCE: https://www.lockeliving.com/en/features/berlins-latest-drinking-and-listening-experience-anima
+SOURCE: https://ceecee.cc/en/anima-listening-bar-die-gute-cocktails-bar-menue-und-musik-vereint/
+RESPELL: Anima => ahnima
+RESPELL: Mühlenstraße => mewlen strahsseh
+RESPELL: Friedrichshain => freedrichs hine
+RESPELL: Spree => shpray
+RESPELL: Thibaut Machet => teebo mashay
+RESPELL: Robin Ordell => robin or dell
+RESPELL: H.A.N.D.hifi => hand hi fi
+RESPELL: Resor => ree zor
+RESPELL: Iannicella => yanni chella
+RESPELL: FluxFM => flux f m
+RESPELL: Locke => lock
+---
+Berlin is famous for clubs where you dance till dawn. This is the other kind of place: somewhere you sit down, and actually listen.
+
+You'll find it at the entrance of the Locke hotel on Mühlenstraße, right by the East Side Gallery, with the River Spree on the other side of the building. Through the windows you should see low lights, soft sofas in pale colours, a bar, a turntable, and beyond it all, the water.
+
+Anima is a listening bar, a Japanese idea that has spread round the world: a room built around good recordings played properly. Look at the sound system. It was custom built by a Berlin firm, H.A.N.D.hifi, with a mixer made by another, Resor. The two founders, Thibaut Machet and Robin Ordell, are both DJs, and they worked with local makers on almost every detail.
+
+Then look at the shelf by the record player. The sleeve of whatever's playing is put on display, so you can always see what you're hearing. At weekends there are curated listening sessions, the mood set by whoever's choosing the records.
+
+The day runs in shifts. Coffee in the morning, people working through the afternoon, and in the evening, food and drink. The menu changes with the seasons, small plates to share, things like beef tartare, mussels in tomato sauce, and a pork slider with a mushroom version for vegetarians, with natural wines and cocktails. The Paloma comes in a glass rimmed with chilli salt.
+
+[beat]
+
+It opened in September twenty twenty-three. There's something quietly radical about a bar where the music is the point and the talking is optional, in a city better known for the opposite.
+
+If you've got time, step out onto the terrace and look across the Spree. Then walk round the corner to the East Side Gallery, the longest surviving stretch of the Berlin Wall, painted end to end.
