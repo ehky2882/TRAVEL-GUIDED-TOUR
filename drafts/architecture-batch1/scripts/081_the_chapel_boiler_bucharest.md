@@ -1,0 +1,43 @@
+# The Chapel, Bucharest
+
+**Place:** Bazilescu Street area (Caffeatlas lists Boiler @ Bazilescu at Strada Bârlogeni 58; confirm this is The Chapel), Sector 1, Bucharest, Romania (Boiler @ Bazilescu)  
+**Coordinate (WGS-84):** 44.49055, 26.03554 (area: Bazilescu neighbourhood; move onto Strada Bârlogeni 58 before use)  
+**Note:** Boiler @ Bazilescu listed hours 08:00–16:00 daily (Caffeatlas); confirm before use  
+**Length:** 315 words (about 126 seconds)
+
+## Script (clean)
+
+Into a gap between two houses that most people would never notice, someone has slotted a tiny chapel. It serves coffee.
+
+Stand on the pavement and look for it. You should see a very narrow, single-storey building squeezed between two residential blocks, with a steep, triangular roof, clad in corrugated metal, its ends fully glazed, and a few benches outside.
+
+Start with the shape. The architect, Ștefan Păvăluță of the Bucharest studio Vinklu, was inspired by the little roadside shrines and tea houses of Japan. He said his main aim was not to make yet another shipping-container café. The steep roof makes the most of a very tight plot, and the glass ends make it glow like a lantern at night.
+
+Now look at the tree beside it. A big, mature street tree shaped the whole design. The building was arranged to live alongside it, rather than fight it, and the big windows bring its leaves almost inside.
+
+Then look at how it sits. Most of the steel frame was made off site and assembled here, so the building work disturbed the neighbours as little as possible. It's raised slightly off the ground and stands with a slim gap on either side, not quite touching the houses next door. Inside, there's warm timber, and room for a barista and a handful of customers. Everyone else sits on the benches outside.
+
+It's a branch of Boiler, a local chain known for its carefully made espresso.
+
+[beat]
+
+There's something cheering about it. Cities are full of leftover slivers of land, and most of them just collect bins. This one collects people, a few at a time, around a cup of coffee.
+
+Before you go, order an espresso and take it to the bench. Then come back after dark, when the glass ends light up and the little chapel glows between its neighbours.
+
+## Sources read before writing
+
+- https://www.thisiscolossal.com/2025/08/vinklu-the-chapel/
+- https://caffeatlas.com/boiler-bazilescu-bucharest
+- https://www.dezeen.com/?p=2235075 (search summary)
+- https://vinklu.com/
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Bucharest | bookarest |
+| Bazilescu | bazeelescoo |
+| Bârlogeni | burlojen |
+| Vinklu | vinkloo |
+| Ștefan Păvăluță | shteffan puh vuh loo tsuh |
