@@ -1,0 +1,46 @@
+# Omakase, Shanghai
+
+**Place:** 1–2F, No. 22, Lane 320 Tianping Road, Xuhui District, Shanghai, China  
+**Coordinate (WGS-84):** none: address known (Lane 320 Tianping Road, Xuhui) but not geocoded to the house. Locate before use  
+**Note:** Sources date from 2019–2020; whether the restaurant is still trading could not be confirmed. Check before use  
+**Length:** 353 words (about 141 seconds)
+
+## Script (clean)
+
+Omakase means, roughly, I leave it to you. You hand the meal over to the chef. Here, it seems, they handed the room over to the cherry blossom.
+
+Find number twenty-two in the lane off Tianping Road. You should see an early twentieth-century house, the kind of old lane building Xuhui is full of. The surprise is all inside, and through the windows, at night, there may be a pink glow.
+
+Inside, start with the floor. It's glass, textured and lit from beneath with coloured light, so you walk on something that glows. Over your head, by contrast, the ceilings are painted black. The effect is a bit like a night club, and the designers said that was deliberate. They wanted the room to feel otherworldly, a match for the food.
+
+Now look at the walls between the rooms. They're glass too, engraved and painted with falling cherry petals and dewdrops, with thin, translucent fabric sandwiched between the layers to give them depth. The idea is sakura rain, the moment in a Japanese spring when the blossom comes down like weather.
+
+Downstairs, there's a long sushi bar along one wall, with pink and orange light glowing around it, so you can watch the chefs work. Upstairs and at the back are private rooms, six of them in all, including a tatami room, plus one shared dining area. The whole place is only about a hundred and sixty square metres.
+
+The design is by Sun Tianwen of the Shanghai studio Hip-pop, and it opened in twenty nineteen, serving kaiseki, the refined Japanese meal of many small seasonal courses.
+
+[beat]
+
+What I like is the contrast. Kaiseki is all restraint and seasonality, and the room is a pink, glowing fantasy. And yet they're both about the same thing: a single fleeting moment, the cherry blossom, served up before it's gone.
+
+Before you go, take a walk along Tianping Road and the lanes off it. This corner of the old French Concession is full of houses like this one, and plenty of them hide something unexpected behind the door.
+
+## Sources read before writing
+
+- https://architecturalrecord.com/articles/14235-omakase-by-shanghai-hip-pop-design-team
+- https://interiordesign.net/projects/omakase-by-shanghai-hip-pop-design-2019-best-of-year-winner-for-fine-dining/ (search summary)
+- https://www.yatzer.com/omakase-restaurant (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Omakase | oh mah kah seh |
+| Tianping | tyen ping |
+| Xuhui | shoo hway |
+| kaiseki | kye seki |
+| sakura | sakoora |
+| Sun Tianwen | swun tyen wen |
+| Hip-pop | hip pop |
+| Setsugekka | setsoo gekka |
+| omakase | oh mah kah seh |

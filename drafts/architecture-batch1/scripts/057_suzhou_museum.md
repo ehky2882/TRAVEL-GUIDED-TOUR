@@ -1,0 +1,44 @@
+# Suzhou Museum
+
+**Place:** 204 Dongbei Street, Gusu District, Suzhou, Jiangsu, China (next to the Humble Administrator's Garden)  
+**Coordinate (WGS-84):** 31.32525, 120.62357 (exact)  
+**Note:** Free, but timed reservation needed (official WeChat channel); closed Mondays; 9:00–17:00, last entry 16:00  
+**Length:** 363 words (about 145 seconds)
+
+## Script (clean)
+
+The architect of the glass pyramid at the Louvre grew up in this city. When he came home to build, in his eighties, he did something far quieter, and, I'd argue, far harder.
+
+Stand in the courtyard by the pond and look around. You should see white walls and grey-edged roofs, all crisp geometry, triangles, diamonds and octagons, with glass skylights cut into the rooflines, and across the water, a long white wall with a row of grey stone shapes in front of it.
+
+Start with the roofs. In old Suzhou, roofs were dark grey tile on white walls. I. M. Pei kept the colours, black, white and grey, but swapped the tile for grey granite and the timber for steel and glass. The skylights let soft light down into the galleries. It's a traditional Suzhou house, drawn with a ruler.
+
+Now look at the rock garden across the pond. Classical gardens here are famous for their strange, holey rocks, piled into miniature mountains. Pei didn't want imitations. Instead he had slabs of stone cut thin and stood in a row against the white wall, so they read like a landscape painting, mountains in ink on a sheet of paper. It's one of the most quietly radical things in the building.
+
+Pei was born in Guangzhou, but his family's roots were here, and he spent boyhood summers in Suzhou, in the Lion Grove garden his family owned. The city asked him to design the museum in nineteen ninety-nine, and it opened in October two thousand and six. The museum itself began in nineteen sixty, in the next-door mansion of Li Xiucheng, a general of the Taiping Rebellion, and that old house is still part of your visit.
+
+[beat]
+
+What's striking is the restraint. He could have built a landmark. Instead he built a garden wall, and let the city's own vocabulary do the talking.
+
+Before you go, walk through into the old mansion next door. And when you leave, the Humble Administrator's Garden is right beside you. Go and see the real holey rocks, and you'll understand exactly what Pei was answering.
+
+## Sources read before writing
+
+- https://en.wikipedia.org/wiki/Suzhou_Museum
+- https://chinafortravelers.com/guides/suzhou-museum/
+- https://www.pbs.org/wnet/americanmasters/american-masters-im-pei-creating-the-suzhou-museum-garden/12868 (search summary)
+- https://www.szmuseum.com/ (503 on fetch)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Suzhou | soo joe |
+| Jiangsu | jyahng soo |
+| Gusu | goo soo |
+| Dongbei | dong bay |
+| I. M. Pei | i m pay |
+| Li Xiucheng | lee shyo chung |
+| Zhongwang | jong wahng |
+| Taiping | tie ping |

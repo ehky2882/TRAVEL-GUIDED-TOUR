@@ -1,0 +1,45 @@
+# Songshan Lake Exhibition and Performance Center, Dongguan
+
+**Place:** Songshan Lake, Dongguan, Guangdong, China (now also home to the Dongguan Art Center)  
+**Coordinate (WGS-84):** none: lakeshore site at Songshan Lake, not yet geocoded. Locate before use  
+**Note:** Opened 30 March 2026; the Dongguan Art Center was installed in the building in August 2026  
+**Length:** 348 words (about 139 seconds)
+
+## Script (clean)
+
+Picture a Cantonese opera singer flicking out a long white silk sleeve. Now imagine that frozen in concrete, several storeys high, by a lake.
+
+Stand on the waterfront promenade and look at the building. You should see a cluster of pale, pearly grey roofs flaring up and outwards, rising towards the western end, with deep overhangs casting long shade over glass walls and terraces underneath.
+
+Start with those flares. The architects, ZHA, the practice Zaha Hadid founded, say they're inspired by the water sleeves of Cantonese opera, the extra-long white cuffs performers swirl and throw to show emotion. And the deep overhangs come from Lingnan architecture, the traditional building style of southern China, where you want a broad roof to keep off the sun and the rain.
+
+Now look at the surface. The outside is clad in prefabricated panels of ultra-high-performance concrete, with aluminium beneath the eaves, all finished in a soft, slightly opalescent grey that changes with the light off the water.
+
+Inside, there's a twelve-hundred-seat theatre, a four-hundred-seat hall, exhibition space and a gallery. If you can get into the main theatre, look closely at the walls and ceiling. They're covered in around a hundred thousand slender spines. They're not decoration. They scatter the sound evenly around the room.
+
+It opened on the thirtieth of March, twenty twenty-six, with a concert by the China National Symphony Orchestra, and by the summer it had become the home of the city's new art centre. It was designed with the Beijing Institute of Architectural Design, under Patrik Schumacher.
+
+[beat]
+
+Zaha Hadid once said that architecture is really about well-being. Here, that means shade, water, a place to sit outside. The swirling sleeves get the photographs, but the overhangs do the work.
+
+If you've got time, walk the promenade along the lake and look back. From a distance, the roofs line up like a row of performers mid-gesture. And check what's on. A building like this makes most sense with an audience in it.
+
+## Sources read before writing
+
+- https://illustrarch.com/architecture-news/97553-zaha-hadid-songshan-lake.html
+- https://info.newsgd.com/node_f5302f2a31/c67fc5c984.shtml (search summary)
+- https://www.news.cn/20260331/ed34b50ddc9b453da3d3c83ed2d7fefd/c.html (search summary)
+- https://m.mp.oeeee.com/a/BAAFRD0000202608231649376.html (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Songshan | song shahn |
+| Dongguan | dong gwahn |
+| Guangdong | gwahng dong |
+| Lingnan | ling nahn |
+| Patrik Schumacher | patrik shoomakker |
+| ZHA | z h a |
+| UHPC | u h p c |
