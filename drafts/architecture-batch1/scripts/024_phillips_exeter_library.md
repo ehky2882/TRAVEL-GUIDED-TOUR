@@ -1,0 +1,34 @@
+# Phillips Exeter Academy Library
+
+**Place:** Class of 1945 Library, Phillips Exeter Academy, Maple Street, Exeter, New Hampshire, USA  
+**Coordinate (WGS-84):** 42.97882, -70.94946 (exact, OpenStreetMap)  
+**Length:** 333 words (about 133 seconds)
+
+## Script (clean)
+
+"A man with a book goes to the light. A library begins that way." That's Louis Kahn, and this building is that sentence, made of brick.
+
+From the lawn, look at the building straight on. It's a plain brick cube, almost square, with rows of tall windows in a strict grid and the corners cut away so you can see the structure. It's a bit severe, if you ask me, and that's deliberate. All the drama is inside.
+
+Kahn thought of it as three rings, which he called doughnuts. The outer one, which you're looking at, is load-bearing brick, and it holds the reading desks, two hundred and ten of them, each one tucked against a window with a small teak panel beside it. That's the man with his book, going to the light.
+
+The middle ring is concrete, and it holds the books, the stacks, away from the sunlight that would fade them. And the inner ring is the surprise.
+
+Go in and up the stairs, and you come out into a central hall about fifty-two feet high. On every side, the concrete walls have huge circular openings, and through them you can see floor after floor of books. Two great concrete beams cross overhead in an X, and daylight falls in from above.
+
+[beat]
+
+It was finished in nineteen seventy-one, and it's said to be the largest secondary school library in the world, with room for a quarter of a million books. In nineteen ninety-seven, the American Institute of Architects gave it their Twenty-five Year Award. What stays with me is the order of things: the reader is placed first, at the window, and the books bring themselves to you.
+
+If the library is open to visitors, find one of those window carrels, sit down for a minute, and look out. Then look back across the hall through the big circles. Kahn wanted you to see every book at once.
+
+## Sources read before writing
+
+- https://en.wikipedia.org/wiki/Phillips_Exeter_Academy_Library
+- https://www.exeter.edu/
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Louis Kahn | louie kahn |
