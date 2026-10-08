@@ -1,0 +1,44 @@
+# Luis Ángel Arango Library, Bogotá
+
+**Place:** Calle 11 No. 4–14, La Candelaria, Bogotá, Colombia  
+**Coordinate (WGS-84):** 4.59720, -74.07291 (exact)  
+**Length:** 298 words (about 119 seconds)
+
+## Script (clean)
+
+In two thousand and eight, this library had six point seven million visitors. And it was started by a bank.
+
+Stand on the street outside, in the old colonial quarter of La Candelaria. You should see a large, modern library building filling a whole city block, set among the colourful low colonial houses and steep streets of the oldest part of Bogotá.
+
+Start with who runs it. It belongs to the Banco de la República, Colombia's central bank, which has built a network of libraries and museums around the country. This one began in nineteen fifty-eight as a small collection of economics books. It's named after Luis Ángel Arango, the bank's director for a decade.
+
+Now look at the scale. It's grown, in several stages, to about forty-five thousand square metres across two city blocks, with room for nineteen hundred readers at a time and a collection of more than a million books. The expansions were designed by the Bogotá firm of Esguerra, Sáenz, Urdaneta and Samper.
+
+Then find the concert hall. Designed by Germán Samper, it opened in nineteen ninety and is used for chamber music. And look for the treasures: rare books and manuscripts, and the Hemeroteca, a huge archive of newspapers.
+
+The library also connects to the bank's museums next door: the Botero Museum, with Fernando Botero's gift of his own work and his collection, and the Miguel Urrutia Art Museum across the street.
+
+[beat]
+
+I love the thought that a central bank, an institution all about money, decided one of its best investments was a public library. Judging by the queues, the people of Bogotá agreed.
+
+Before you go, step into the Botero Museum next door. You'll come out smiling at his famous round, cheerful figures.
+
+## Sources read before writing
+
+- https://en.wikipedia.org/wiki/Luis_%C3%81ngel_Arango_Library
+- https://www.banrepcultural.org/bogota/biblioteca-luis-angel-arango
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Luis Ángel Arango | looees anhel arango |
+| Bogotá | bogotah |
+| La Candelaria | la kandelaria |
+| Banco de la República | banko deh la repooblika |
+| Banrepcultural | banrep kooltooral |
+| Germán Samper | hairmahn samper |
+| Rafael Esguerra | rafah el esgerra |
+| Botero | botairo |
+| Hemeroteca | emeh roteka |
