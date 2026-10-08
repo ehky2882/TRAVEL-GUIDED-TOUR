@@ -1,0 +1,41 @@
+# Monologue, Hongcheon
+
+**Place:** Odochi-gil, Seo-myeon, Hongcheon-gun, Gangwon Special Self-Governing Province, South Korea  
+**Coordinate (WGS-84):** none: road named (Odochi-gil, Seo-myeon) but not geocoded. Locate before use  
+**Note:** A café. No primary source found that describes the menu, so the script does not describe the food or drink. Confirm hours and menu before use  
+**Length:** 303 words (about 121 seconds)
+
+## Script (clean)
+
+The story behind this café is pure science fiction. Imagine the Earth was once wiped clean and started again. Before the reset, there was an ancient civilisation, and in it, a monastery. This building is the architects' guess at what that monastery looked like.
+
+Stand back from the building in the open ground around it. You should see a single-storey mass of red brick with thick walls and sharp, abrupt angles, flashes of brushed stainless steel, set in a quiet, wooded Gangwon landscape. Walk round it and the outline keeps changing.
+
+Start with the brick walls. They're the whole point of the thing. The designers say the massing came from the Wall in Game of Thrones, the great barrier in the north, reimagined here as a boundary between civilisations, a break in time. The thickness of the walls and the steep angles are meant to make going in feel like crossing a threshold.
+
+Now go inside. The mood changes completely. It's calm and restrained, like a monastery, with earthy plaster, textured stucco and stone tiles, and very little decoration. The atmosphere comes from the materials, the mass, and the way daylight moves across the walls during the day.
+
+It's by the Seoul studio SOSOKKI ANAC, led by Gi-Tae Chung, who directed everything: the building, the interiors, the branding, even the sculpture and paintings. It was finished in October twenty twenty-five.
+
+[beat]
+
+The architects' line is that Monologue isn't defined by consumption but by experience. That's a bold claim for a café. But walking round it, it does feel more like a pilgrimage than a coffee stop.
+
+Before you leave, walk a full circle round the outside. The architects designed each side to look different, so the building tells you a slightly different story from every direction.
+
+## Sources read before writing
+
+- https://mag.tecture.jp/culture/20260331-monologue/
+- https://www.archdaily.com/1039707/monologue-cafe-sosokki-anac (search summary)
+- https://www.designboom.com/architecture/monolithic-cafe-south-korea-ancient-fortress-monologue-sosokki-anac/ (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Hongcheon | hong chun |
+| Odochi-gil | oh doh chee gil |
+| Seo-myeon | suh myun |
+| Gangwon | gahng won |
+| SOSOKKI ANAC | so sokkee anak |
+| Gi-Tae Chung | ghee teh chung |
