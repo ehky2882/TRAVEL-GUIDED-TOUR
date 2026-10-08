@@ -1,0 +1,36 @@
+# Fosun Foundation, Bund Finance Centre
+
+**Place:** Bund Finance Centre (BFC), 600 Zhongshan Road East No. 2, Huangpu, Shanghai, China  
+**Coordinate (WGS-84):** 31.22861, 121.49341 (exact: BFC, OpenStreetMap)  
+**Length:** 347 words (about 139 seconds)
+
+## Script (clean)
+
+Shanghai's riverfront is a parade of banks in stone. At the far end of it, someone hung a golden curtain, and it actually moves.
+
+Stand on the Bund promenade, or in the square of the Bund Finance Centre, and look for the smaller building raised up off the ground on two pillars, wrapped in hanging golden tubes. That's the Fosun Foundation arts centre. The towers around it are offices; this is the bit with a show in it.
+
+Look at the tubes first. There are six hundred and seventy-five of them, which Heatherwick Studio calls tassels, each sleeved in coloured stainless steel, and they hang on three separate tracks. When the tracks rotate round the building, the three layers slide past each other, the tassels overlap, and the veil opens and closes like a stage curtain, revealing the windows and balcony behind. For a few hours every day it turns in time with music, which is why locals call this the dancing building.
+
+Now get closer if you can. The surface of each sleeve is embossed, and the patterns were worked out with local craftspeople, borrowing from Chinese weaving, rope and knots. The textures get looser and finer as they rise, so the whole curtain looks lighter towards the top.
+
+The raised form is a nod to traditional Chinese theatre, a stage lifted above the crowd. Inside, it hosts theatre, art exhibitions and fashion shows. And look down at the buildings around it: their frames are rough, hand-carved stone, set against the latest office glass.
+
+[beat]
+
+This was the last empty site on the Bund, and it was finished in twenty seventeen, by Heatherwick working with Foster + Partners as equals. Every other building on this river tells you how much money it has. This one puts on a performance instead.
+
+If you catch the veil moving, stay until it settles; a full change takes a few minutes. And afterwards, walk north along the Bund and look back. From a distance, among all that grey granite, the gold is the thing you'll notice first.
+
+## Sources read before writing
+
+- https://heatherwick.com/project/bund-finance-centre/
+- https://www.fosunfoundation.com/en/about
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Fosun | foe sun |
+| Huangpu | hwahng poo |
+| Foster + Partners | Foster and Partners |
