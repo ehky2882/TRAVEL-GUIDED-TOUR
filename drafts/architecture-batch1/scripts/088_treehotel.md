@@ -1,0 +1,48 @@
+# Treehotel, Harads
+
+**Place:** Treehotel, Harads, Norrbotten, Swedish Lapland, Sweden (check-in at Britta's Pensionat)  
+**Coordinate (WGS-84):** 66.07286, 20.98187 (exact)  
+**Note:** The rooms are for guests; the forest paths and Britta's Pensionat are the natural vantage points  
+**Length:** 336 words (about 134 seconds)
+
+## Script (clean)
+
+Somewhere in these pine trees there's a hotel room you can't see, even when you're standing right in front of it. It's a cube of mirrors, hanging in the forest.
+
+Walk out along the forest path from the guest house. You should be among tall, thin pines, and looking up, you'll start to spot rooms in the trees: a wooden cabin, a giant bird's nest of branches, a flying saucer, and if you look very carefully, a box that seems to be made of nothing but more forest.
+
+Start with that box. It's the Mirrorcube, by the Stockholm architects Tham and Videgård, four metres on each side, clad in mirrored glass, so it reflects the trees and the sky and almost disappears. You reach it by a rope bridge. And there's a lovely detail. To stop birds flying into it, the glass has a layer laminated in that only birds can see.
+
+Now look for the others. Every room is by a different designer. There's the Bird's Nest, which looks like a huge tangle of sticks, and the UFO, a silver saucer, both by Inredningsgruppen. There's the 7th Room by Snøhetta, raised high in the canopy, the Biosphere by BIG, the Dragonfly, the Blue Cone, The Cabin and the Oasis.
+
+It all started with a small guest house, Britta's Pensionat, run by Kent and Britta Lindvall. The story goes that they'd always regretted never having had a tree house. So they built some. Treehotel opened in July twenty ten, and it's grown ever since.
+
+[beat]
+
+What I love is the spirit of it: a hotel built on a childhood wish. Every room tries to make you see the forest differently, and the best of them makes itself disappear into it.
+
+Before you go, call in at Britta's Pensionat, where guests check in and have breakfast. And then walk the path once more, slowly, looking up. There's always one room you missed.
+
+## Sources read before writing
+
+- https://treehotel.se/
+- https://www.dezeen.com/?p=111382 (search summary)
+- https://www.swedishwood.com/inspiration/architecture/treehotel/ (search summary)
+- https://www.domusweb.it/en/architecture/2011/07/09/tree-hotel.amp.html (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Harads | hahrads |
+| Norrbotten | norbotten |
+| Britta | britta |
+| Lindvall | lindvahl |
+| Tham & Videgård | tam and veedegord |
+| Snøhetta | snur hetta |
+| Rintala Eggertsson | rintala eggertsson |
+| Sandellsandberg | sandell sandberg |
+| Inredningsgruppen | inredningsgroopen |
+| Cyrén | sirain |
+| Nadén | nadain |
+| 7th Room | seventh room |
