@@ -1,0 +1,43 @@
+# Rosso, Mexico City
+
+**Place:** Inside Pavorosso, Puebla 329A, Roma Norte, Cuauhtémoc, 06700 Mexico City, Mexico  
+**Coordinate (WGS-84):** 19.42101, -99.17160 (address)  
+**Note:** Reservations only, groups of up to six, card guarantee; late-cancel or no-show fee. OpenTable pages returned 503 on direct fetch and Instagram is login-walled, so Rosso details are from OpenTable listing text in search results; Pavorosso details are from its own site  
+**Length:** 343 words (about 137 seconds)
+
+## Script (clean)
+
+To find this bar, you go into a turkey restaurant and walk through the kitchen. Honestly.
+
+Stand outside number three twenty-nine on Calle Puebla. You should see the front of Pavorosso, a restaurant, market and deli all devoted to one bird. Pavo is Spanish for turkey. Rosso, behind it, is the hidden bit.
+
+Start with the front of house, because it's a story in itself. Pavorosso was started by a Mexican family who have been selling turkey for more than fifty years. Their idea was that turkey shouldn't be saved for Christmas. They cook every part, from the breast to the bones: a smoked and fried turkey leg, a bone broth, and a burger that works the wing in, which they call the Pavurguer.
+
+They've got history on their side. The turkey was domesticated here, in what's now central Mexico, more than two thousand years ago, and in Tenochtitlan, the Aztec city that stood where Mexico City is now, it was already a centrepiece.
+
+[beat]
+
+Now, Rosso. If you've booked, you'll be led through the kitchen, past the cooks, and that walk is part of the show. Rosso means red, and it's the theme of the whole room: red as desire, with the music and lighting set to match. It calls itself a place to explore pleasure through the senses. It's small and intimate. Bookings are for groups of six at most, and you'll need a card to hold the table, so it's not one to wander into on a whim.
+
+I like the joke at the heart of it. A wholesome lunch spot out front, a red-lit bar out back, and the only way between the two is through the kitchen.
+
+If you've got time before your booking, have a turkey sandwich at the front, and then take a slow walk round Roma Norte. The streets around here are lined with early twentieth-century mansions, and some of the best bars in the city are only a few blocks away.
+
+## Sources read before writing
+
+- https://www.pavorosso.com/
+- https://www.pavorosso.com/pages/nosotros
+- https://www.pavorosso.com/pages/oda-al-pavo
+- https://www.opentable.hk/r/rosso-speakeasy-ciudad-de-mexico (listing text via search)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Pavorosso | pahvo rosso |
+| Puebla | pwebla |
+| Roma Norte | roma norteh |
+| Cuauhtémoc | kwow temok |
+| pavo | pahvo |
+| Pavurguer | pahvoorger |
+| Tenochtitlan | tenotch teetlan |
