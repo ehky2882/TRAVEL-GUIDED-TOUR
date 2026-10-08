@@ -1,0 +1,40 @@
+# Shebara, Red Sea
+
+**Place:** Sheybarah Island, Red Sea, off Tabuk Province, Saudi Arabia  
+**Coordinate (WGS-84):** 25.36303, 36.90628 (exact)  
+**Note:** shebara.com returned 503 when fetched  
+**Length:** 341 words (about 136 seconds)
+
+## Script (clean)
+
+From a distance, you might not see the rooms at all. They're mirrors, and out here, a mirror just turns into more sea and more sky.
+
+Stand on the beach and look out over the lagoon. You should see a long curve of shining silver balls, like a string of pearls laid on the water, each one standing on slim legs a little way above the surface. Behind you, on the sand, low, curving villas sit tucked in among the dunes and the planting.
+
+Those orbs are the gift. Each one is a villa clad in polished stainless steel, so it reflects the water, the sky and the island round it, and on a bright day it almost disappears. There are seventy-three villas altogether, thirty-eight out over the water and thirty-five on the beach. The architects, Killa Design, from Dubai, are the same studio that did the Museum of the Future there. The founder, Shaun Killa, describes the villas as bubbles rising from the ocean floor.
+
+Now look down at the water under them. The pods were built off site and brought out finished, then set down on as few supports as possible, so that the coral, sea grass and mangroves underneath would be left alone. The builders got quick at it. The first villa took nine hours to install, and the last took under two.
+
+You've come a long way to see this. The island is about fifteen miles off the Saudi coast, a boat ride or a seaplane from the Red Sea airport, and the whole resort runs on its own solar farm.
+
+[beat]
+
+It's an odd thing, a luxury hotel that tries to vanish. But there's a sort of good manners to it. On an island this beautiful, the best a building can do is reflect it.
+
+If you swim, go and look at the reef. The drop-off is only about a hundred feet from the beach, and from out there, you can look back at the orbs from the water.
+
+## Sources read before writing
+
+- https://mymodernmet.com/shebara-red-sea-resort/
+- https://openspace.ae/shebara-resort-by-killa-design/
+- https://identity.ae/shebara-killa-design (search summary)
+- https://www.e-architect.com/saudiarabia/shebara-red-sea-luxury-hotel (search summary)
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Shebara | shebarra |
+| Sheybarah | shaybarra |
+| Tabuk | tabook |
+| Shaun Killa | shawn killa |
