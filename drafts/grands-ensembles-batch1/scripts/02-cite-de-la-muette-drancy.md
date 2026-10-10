@@ -1,0 +1,51 @@
+# Cité de la Muette and the Drancy Memorial
+
+**Series:** Grands Ensembles · **Place:** Cité de la Muette / Mémorial de la Shoah de Drancy, avenue Jean-Jaurès  
+**City:** Drancy, France  
+**Coordinates:** 48.91915597553556, 2.4550710393194985  
+**Length:** 421 words · about 2:42 at a natural pace  
+**TTS title:** Seetay de la Mwet and the Dronsee Memorial
+
+## Script (clean)
+
+The building in front of you is still somebody's home. Keep that in mind for the next few minutes.
+
+Avenue Jean-Jaurès, Drancy, with the glass front of the Shoah Memorial behind you. Across the road is a long, low block of flats folded into a U shape and wrapped round a lawn. At the open end of the U stands a sculpture in pink granite, and beside it, on a short length of track, an old goods wagon.
+
+This is the Cité de la Muette. It was designed in the early nineteen thirties by Eugène Beaudouin and Marcel Lods, with the engineers Vladimir Bodiansky and Jean Prouvé, and it was meant to be the future: a steel frame, concrete panels made in a factory, five tower blocks of fifteen storeys, a school, gardens. Architects still describe it as a landmark in the history of French housing. Then the money ran out in nineteen thirty-five, and this U-shaped block was left unfinished.
+
+From August nineteen forty-one, the empty block became an internment camp for Jews. A courtyard closed on three sides, with a single open end, needed very little to be turned into a prison. From the summer of nineteen forty-two it was the main transit camp in France. Nearly sixty-three thousand people were deported from here, most of them to Auschwitz-Birkenau. Thousands of them were children.
+
+Have a look at the sculpture. It's by Shelomo Selinger, unveiled in nineteen seventy-six: three blocks of granite which together form the Hebrew letter shin. The wagon came later, in nineteen eighty-eight, a reminder of how people left this place.
+
+[beat]
+
+What is hardest to take in, standing here, is that it's the same building. After the war it was finished, as it had always been meant to be, and from nineteen forty-six families moved into these flats. The towers were pulled down in the nineteen seventies. The U remained. In two thousand and one it was listed as a historic monument, both as a major work of twentieth-century architecture and as a place of national memory. It's rare for one building to carry both.
+
+If you have time, cross the road into the memorial itself. Entry is free. It was built to face the cité, and from inside you look straight back at the courtyard you've just been studying, which changes how you see it. When you leave, walk quietly along the outside of the block. It's a memorial, and it's also someone's street.
+
+## Respellings (used in the TTS-safe version)
+
+| Written | Say it |
+|---|---|
+| Cité de la Muette | seetay de la mwet |
+| Eugène Beaudouin | oo zhen bo dwan |
+| Marcel Lods | marsell lod |
+| Vladimir Bodiansky | vladimir bodee ansky |
+| Jean Prouvé | zhon proovay |
+| Jean-Jaurès | zhon zho ress |
+| Auschwitz-Birkenau | owsh vits beer kuh now |
+| Shelomo Selinger | shlomo selinger |
+| letter shin | letter sheen |
+| Drancy | dronsee |
+| Shoah | show ah |
+| the cité | the seetay |
+
+`[beat]` marks a deliberate pause. The TTS-safe file replaces it with a paragraph break.
+
+## Sources read before writing
+
+- https://fr.wikipedia.org/wiki/Cit%C3%A9_de_la_Muette
+- https://www.europeremembers.com/pois/411/the-shoah-memorial-drancy
+- https://uk.tourisme93.com/drancy-camp-memorial.html
+- https://www.visitparisregion.com/fr/memorial-de-la-shoah-drancy
