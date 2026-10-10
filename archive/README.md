@@ -360,3 +360,4 @@ Full text for every one of them is in
 - [HANDOFF-261007-hungrywolf-triage.md](HANDOFF-261007-hungrywolf-triage.md) — **Triage batch:** 119 reels triaged, 88 pins merged (76 @hungrywolfgrams restaurants, the Blue House, 11 from other creators); Napoleon advert, Hermès hero and Barragunda coordinate held for Edward.
 - [HANDOFF-261007-auckland.md](HANDOFF-261007-auckland.md) — **Auckland launched:** Atlas Studio AKL (40th studio), 20 singles; Piha moved 294 m to Lion Rock; architect tags Cheshire Architects + Stevens Lawson Architects.
 - [HANDOFF-261007-triage-pins.md](HANDOFF-261007-triage-pins.md) — **25 link pins** (10 creators) from 39 triaged; 6 architect tags; 4 place questions for Edward.
+- [HANDOFF-261010-sovmod-batch2.md](HANDOFF-261010-sovmod-batch2.md) — **SovMod batch 2:** 53 more SovMod singles (Armenia and Cuba new) + Atlas Studio TAO (42nd studio, Qingdao Observatory); Qingdao moved 310 m; Blok 23 / Sorge place questions for Edward.
