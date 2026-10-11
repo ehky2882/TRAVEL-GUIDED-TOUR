@@ -21,6 +21,7 @@ Worked directly with **Edward (the owner)** in session, so place and advertising
 
 ## Coordinates worth knowing
 - Harvard Graduate Center = Harkness Commons = today's Caspersen Student Center (the cover shows the sign).
+- Ganondagan moved 1.4 km from the park centroid to the Seneca Art & Culture Center (visitor entrance), after the spine audit flagged it. Canandaigua Lake (lake centroid), Cuixmala (Wikidata = the hamlet) and Sonnenberg (Wikidata rounded to 3 dp) stay as minted.
 - He Art Museum's city is **Shunde**, matching the existing pin (not Foshan).
 - Hillstone Winter Park: OSM restaurant node, on Lake Killarney. Castelgrande entrance: Piazza del Sole.
 - Wikidata and Commons returned **HTTP 429** mid-session from this container; Photon (komoot) and Nominatim covered the gaps.
