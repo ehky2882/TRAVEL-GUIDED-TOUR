@@ -45,3 +45,18 @@ if a TTS file still contains a digit, an accent or a hyphen.
 The picker is at https://claude.ai/artifact/3jLdc39jxBCdrtj7ouQyBq (84 photos, 11 of them free to
 ship). `images/IMAGE-SOURCES.md` lists every source link, and `images/data.json` holds the
 picker's data.
+
+## Image wire-in (picked 2026-10-11, uploaded to gh-pages)
+
+These are ready for when each tour is added to `Tours.json`: `heroImageURL` is the first, and `additionalImageURLs` the rest, in order. **29 of the 35 are CC BY / BY-SA**, so they owe credits (see `drafts/CREDITS.md`) before they go live.
+
+| Tour | heroImageURL | additionalImageURLs (in order) |
+|---|---|---|
+| tours-aillaud | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tours-aillaud_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tours-aillaud_2.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tours-aillaud_3.webp |
+| cite-de-la-muette-drancy | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_2.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_3.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_4.webp |
+| la-grande-borne | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-borne_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-borne_2.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-borne_3.webp |
+| arcades-du-lac | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_2.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_3.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_4.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_5.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_6.webp |
+| etoiles-de-renaudie | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_2.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_3.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_4.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_5.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_6.webp |
+| orgues-de-flandre | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/orgues-de-flandre_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/orgues-de-flandre_2.webp |
+| arenes-de-picasso | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_2.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_3.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_4.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_5.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_6.webp |
+| choux-de-creteil | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_hero.webp | https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_2.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_3.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_4.webp<br>https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_5.webp |

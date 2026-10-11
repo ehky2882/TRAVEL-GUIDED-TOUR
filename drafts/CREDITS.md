@@ -1054,3 +1054,41 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `philadelphia-fifth-square-walk_stop3.webp` | W1-3-3 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Pine_at_5th,_Philly.JPG |
 | `philadelphia-broad-and-market-walk_stop5.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
 | `philadelphia-brick-walk_stop4.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+
+## Grands Ensembles — 29 credit-required images (`drafts/grands-ensembles-batch1`, picked 2026-10-11)
+
+The owner picked these in the Grands Ensembles Image Picks page, knowingly including CC BY / CC BY-SA photos (marked CREDIT NEEDED there): no public-domain, Unsplash or Pexels photo existed for most of these sites. Licence and author were read per file from Commons' own metadata. The other 6 picks owe no credit and are listed after the table. Byte hashes are in `drafts/grands-ensembles-batch1/images/image-manifest.json`.
+
+| File | Pick | Licence | Author | Source |
+|------|------|---------|--------|--------|
+| `tours-aillaud_hero.webp` | 01-2 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Tours_Aillaud_@_Parc_Andr%C3%A9_Malraux_@_La_D%C3%A9fense_@_Paris_(34376638913).jpg |
+| `tours-aillaud_2.webp` | 01-6 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Tours_Aillaud_Cit%C3%A9_Pablo_Picasso_@_La_D%C3%A9fense_@_Paris_(34341720614).jpg |
+| `tours-aillaud_3.webp` | 01-7 | CC BY-SA 3.0 | Lionel Pateyron | https://commons.wikimedia.org/wiki/File:Tours_Aillaud,_de_la_prefecture_des_Hauts_de_Seine.JPG |
+| `cite-de-la-muette-drancy_hero.webp` | 02-5 | CC BY-SA 4.0 | Jpcuvelier | https://commons.wikimedia.org/wiki/File:DRANCY_%E2%80%94_Cit%C3%A9_de_la_Muette_2016_(03).jpg |
+| `cite-de-la-muette-drancy_2.webp` | 02-4 | CC BY-SA 4.0 | Jpcuvelier | https://commons.wikimedia.org/wiki/File:DRANCY_%E2%80%94_Cit%C3%A9_de_la_Muette_2006_(04).jpg |
+| `cite-de-la-muette-drancy_3.webp` | 02-6 | CC BY-SA 4.0 | Chris93 | https://commons.wikimedia.org/wiki/File:Drancy_%E2%80%94_M%C3%A9morial_-_Cit%C3%A9_de_la_Muette_2023.jpg |
+| `cite-de-la-muette-drancy_4.webp` | 02-11 | CC BY-SA 4.0 | Chabe01 | https://commons.wikimedia.org/wiki/File:Wagon_T%C3%A9moin_Esplanade_G%C3%A9n%C3%A9ral_Charles_Gaulle_-_Drancy_(FR93)_-_2022-08-06_-_4.jpg |
+| `la-grande-borne_hero.webp` | 03-4 | CC BY-SA 3.0 | Nioux | https://commons.wikimedia.org/wiki/File:Places_Hautes.JPG |
+| `la-grande-borne_2.webp` | 03-5 | CC BY-SA 3.0 | No machine-readable author provided. Nioux assumed (based on | https://commons.wikimedia.org/wiki/File:GrandeBorneRueSerpente2.jpg |
+| `la-grande-borne_3.webp` | 03-10 | CC BY-SA 3.0 | Nioux | https://commons.wikimedia.org/wiki/File:Serpent_Radars.JPG |
+| `arcades-du-lac_hero.webp` | 04-8 | CC BY-SA 4.0 | Mikeshaheen1 | https://commons.wikimedia.org/wiki/File:Les_Arcades_du_Lac.jpg |
+| `arcades-du-lac_2.webp` | 04-2 | CC BY-SA 4.0 | Rémih | https://commons.wikimedia.org/wiki/File:Arcades_du_Lac_13.jpg |
+| `arcades-du-lac_3.webp` | 04-4 | CC BY-SA 4.0 | Rémih | https://commons.wikimedia.org/wiki/File:Arcades_du_Lac_14.jpg |
+| `arcades-du-lac_4.webp` | 04-7 | CC BY-SA 4.0 | Mikeshaheen1 | https://commons.wikimedia.org/wiki/File:Les_Arcades_du_Lac_interior_courtyard.jpg |
+| `arcades-du-lac_5.webp` | 04-10 | CC BY-SA 4.0 | Rémih | https://commons.wikimedia.org/wiki/File:Arcades_du_Lac_02.jpg |
+| `arcades-du-lac_6.webp` | 04-9 | CC BY-SA 4.0 | Rémih | https://commons.wikimedia.org/wiki/File:Arcades_du_Lac_03.jpg |
+| `etoiles-de-renaudie_hero.webp` | 05-3 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Etoiles_d%27Ivry_@_Brutalist_housing_project_@_Jean_Renaudie_@_Ivry-sur-Seine_(30581123371).jpg |
+| `etoiles-de-renaudie_2.webp` | 05-5 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Etoiles_d%27Ivry_@_Brutalist_housing_project_@_Jean_Renaudie_@_Place_Voltaire_@_Ivry-sur-Seine_(30632862956).jpg |
+| `etoiles-de-renaudie_3.webp` | 05-8 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Etoiles_d%27Ivry_@_Brutalist_housing_project_@_Jean_Renaudie_@_Ivry-sur-Seine_(30035342263).jpg |
+| `etoiles-de-renaudie_4.webp` | 05-10 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Etoiles_d%27Ivry_@_Brutalist_housing_project_@_Jean_Renaudie_@_Ivry-sur-Seine_(30369711980).jpg |
+| `etoiles-de-renaudie_5.webp` | 05-11 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Etoiles_d%27Ivry_@_Brutalist_housing_project_@_Jean_Renaudie_@_Place_Voltaire_@_Ivry-sur-Seine_(30632805926).jpg |
+| `etoiles-de-renaudie_6.webp` | 05-1 | CC BY 2.0 | Guilhem Vellut from Annecy, France | https://commons.wikimedia.org/wiki/File:Etoiles_d%27Ivry_@_Brutalist_housing_project_@_Jean_Renaudie_@_Ivry-sur-Seine_(30632903406).jpg |
+| `arenes-de-picasso_hero.webp` | 07-7 | CC BY-SA 4.0 | Arthur Weidmann | https://commons.wikimedia.org/wiki/File:Ar%C3%A8nes_de_Picasso_1.jpg |
+| `arenes-de-picasso_2.webp` | 07-8 | CC BY-SA 4.0 | Zairon | https://commons.wikimedia.org/wiki/File:Noisy-le-Grand_Ar%C3%A8nes_de_Picasso_Mail_Federico_Garcia_Lorca_4.jpg |
+| `arenes-de-picasso_5.webp` | 07-10 | CC BY-SA 4.0 | Zairon | https://commons.wikimedia.org/wiki/File:Noisy-le-Grand_Ar%C3%A8nes_de_Picasso_Place_Pablo_Picasso_18.jpg |
+| `arenes-de-picasso_6.webp` | 07-12 | CC BY-SA 4.0 | Zairon | https://commons.wikimedia.org/wiki/File:Noisy-le-Grand_Ar%C3%A8nes_de_Picasso_Place_Pablo_Picasso_21.jpg |
+| `choux-de-creteil_hero.webp` | 08-5 | CC BY-SA 4.0 | GFreihalter | https://commons.wikimedia.org/wiki/File:Cr%C3%A9teil_(95)_Choux_de_Cr%C3%A9teil_618.jpg |
+| `choux-de-creteil_4.webp` | 08-9 | CC BY-SA 4.0 | GFreihalter | https://commons.wikimedia.org/wiki/File:Cr%C3%A9teil_(95)_Choux_de_Cr%C3%A9teil_612.jpg |
+| `choux-de-creteil_5.webp` | 08-7 | CC BY-SA 4.0 | Rémih | https://commons.wikimedia.org/wiki/File:Lac_de_Cr%C3%A9teil_05.jpg |
+
+No credit owed: `orgues-de-flandre_hero.webp` (Unsplash, Mohammad Mahdi Aminnezhad), `orgues-de-flandre_2.webp` (CC0, Calicoquelicot), `arenes-de-picasso_3.webp` (Public domain, Luctor), `arenes-de-picasso_4.webp` (Public domain, Luctor), `choux-de-creteil_2.webp` (Unsplash, Laurent Etourneau), `choux-de-creteil_3.webp` (Unsplash, Sébastien Lavalaye).
