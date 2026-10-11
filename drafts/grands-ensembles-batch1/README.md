@@ -39,3 +39,9 @@ if a TTS file still contains a digit, an accent or a hyphen.
   the Arènes, and the script says so.
 - Drancy: the memorial's opening days. They are perishable, so the script says only that
   entry is free.
+
+## Images
+
+The picker is at https://claude.ai/artifact/3jLdc39jxBCdrtj7ouQyBq (84 photos, 11 of them free to
+ship). `images/IMAGE-SOURCES.md` lists every source link, and `images/data.json` holds the
+picker's data.
