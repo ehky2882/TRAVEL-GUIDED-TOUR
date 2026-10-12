@@ -1,0 +1,45 @@
+# Chronos
+
+**Area:** Lavington, Nairobi, Kenya | **Coordinate:** -1.2799339, 36.7702097 | **cave_bureau category:** DRINK | **Length:** ~395 words (~2.6 min)
+
+**Source list:** [Architecture Hunter — Nairobi city guide by cave_bureau](https://architecturehunter.com/guide/nairobi_cave_bureau/)
+
+**Primary sources read before writing:**
+- https://eatout.co.ke/restaurant/chronos/
+- https://mycitykeyto.com/restaurant/chronos-speakeasy-restaurant/
+- https://www.threads.com/@erin_paige_wanderingnerd/post/DRFhYUkDLdr/chronos-in-lavington-green-if-you-were-looking-at-chandarana-to-the-left-there
+
+## Script (clean)
+
+Chronos
+
+Look for a blue door. That's all the sign you'll get.
+
+Lavington Green, on James Gichuru Road — a perfectly ordinary suburban shopping centre. Find the Chandarana supermarket, and to its left you should see a door lit blue. The instructions in the cave_bureau guide are wonderfully cloak-and-dagger: enter by the "bureau entrance", then follow a long blue corridor. If you're standing in a car park wondering whether you've got the right shopping centre, you probably have.
+
+Chronos is a speakeasy — a bar, and a restaurant, hidden behind a door that doesn't announce itself. It describes itself as a place "where clocks misbehave and music lingers till late", which is a nice way of saying you'll lose track of time. Chronos, of course, is the Greek personification of time itself. They've named the bar after the thing it's designed to make you forget.
+
+Have a look at the house rules before you go. It pitches itself at over-thirties, which rather sets the tone: strong cocktails, small plates, soulful DJs, live acoustic sets on some nights, and karaoke on others. Up top, there's a rooftop corner done out in a Moroccan style, made for a drink at sundown. Opening hours have shifted over time, so check before you set off — it tends to open from the late afternoon and run on well past midnight.
+
+And here's what I find interesting about it. The speakeasy began as a necessity — American bars hiding from Prohibition, a century ago. Today, nobody in Lavington needs to hide a drink. The hidden door has become pure theatre. But it's good theatre. In a city where so much social life happens in plain view, behind security barriers and in big glass malls, a door you have to know about turns a night out into a small secret shared.
+
+[beat]
+
+It's also, quietly, a cave. Cave_bureau's whole practice begins with the idea that caves are where architecture started — and here's a room you reach down a long corridor, away from the street, where time goes a bit strange. You can see why they liked it.
+
+If you arrive early, head straight up to the rooftop corner and catch the light going over Lavington. Then follow the corridor back down, and let the clocks do what they like.
+
+## Pronunciation (TTS-safe respellings)
+
+| Written | Spoken as |
+|---|---|
+| cave_bureau | cave bureau |
+| Cave_bureau | Cave bureau |
+| Chronos | Kronos |
+| Gichuru | Geechooroo |
+| Chandarana | Chundarahna |
+| DJs | dee jays |
+
+## TTS-safe version
+
+See `04-chronos-lavington-tts.txt` — `[beat]` removed (paragraph break), names respelled, hyphens dropped.

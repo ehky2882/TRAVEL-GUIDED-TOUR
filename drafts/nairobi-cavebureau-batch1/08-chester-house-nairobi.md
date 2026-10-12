@@ -1,0 +1,40 @@
+# Chester House
+
+**Area:** City Centre, Nairobi, Kenya | **Coordinate:** -1.2845799, 36.8186918 | **cave_bureau category:** STAY | **Length:** ~354 words (~2.4 min)
+
+**Source list:** [Architecture Hunter — Nairobi city guide by cave_bureau](https://architecturehunter.com/guide/nairobi_cave_bureau/)
+
+**Primary sources read before writing:**
+- https://www.kenyans.co.ke/news/87066-chester-house-story-nairobis-iconic-hotel-where-police-stormed-azimio-presser
+- https://en.wikipedia.org/wiki/Koinange_Street
+
+## Script (clean)
+
+Chester House
+
+Plain concrete, deep balconies, and a surprising amount of Kenyan history.
+
+Chester House stands on Koinange Street in the city centre — a street that, until nineteen sixty-four, was called Sadler Street, after a colonial governor. Look up for a tall block in bare, unadorned concrete, its face stepped out with big, deep balconies. That's your building. If it looks a bit stern, it's meant to.
+
+The style is Brutalism — architecture that shows off its raw materials and its structure, rather than hiding them under decoration. The Museum of Kenyan Architecture credits the design to Richard Hughes, and it went up around nineteen seventy. Have a look at those balconies. They were made big enough to host a barbecue with friends, which tells you a lot about who the building was for — families, visiting dignitaries, people who planned to live well in the middle of the city. And right at the top, alone on the seventeenth floor, there's a penthouse. One flat, one floor, the whole city spread out underneath.
+
+Now here's the part that surprises people. In the early nineteen nineties, under President Moi, Chester House became a place where politicians came to speak to the press and call for change — for Kenya to become a multiparty democracy. The building hosted the International Press Association, and over the years everyone from the United Nations to the Red Cross held statements here. When a Kenyan said something the government didn't want said, Chester House was often where they said it.
+
+[beat]
+
+So a building that looks closed and severe from the street turned out to be one of the city's most open rooms. These days, it's a hotel and serviced apartments. The cave_bureau guide calls it a city centre gem, with its flats looking out towards Uhuru Park. Uhuru, of course, means freedom.
+
+If you've time, walk south from here to Uhuru Park itself, and look back at the city centre skyline from the grass. It's the view the upper balconies have been looking at for over half a century — just the other way round.
+
+## Pronunciation (TTS-safe respellings)
+
+| Written | Spoken as |
+|---|---|
+| cave_bureau | cave bureau |
+| Koinange | Koynahngeh |
+| Uhuru | Oohooroo |
+| Moi | Moy |
+
+## TTS-safe version
+
+See `08-chester-house-nairobi-tts.txt` — `[beat]` removed (paragraph break), names respelled, hyphens dropped.

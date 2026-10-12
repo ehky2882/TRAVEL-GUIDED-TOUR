@@ -1,0 +1,45 @@
+# Ololo Safari Lodge
+
+**Area:** Nairobi National Park, Nairobi, Kenya | **Coordinate:** -1.3875375, 36.8322352 | **cave_bureau category:** STAY | **Length:** ~372 words (~2.5 min)
+
+**Source list:** [Architecture Hunter — Nairobi city guide by cave_bureau](https://architecturehunter.com/guide/nairobi_cave_bureau/)
+
+**Primary sources read before writing:**
+- https://mobile.nation.co.ke/lifestyle/A-luxury-lodge-in-Nairobi-park/1950774-4866858-13ooi5xz/index.html
+- https://www.discoverafrica.com/accommodation/ololo-safari-lodge/
+- https://en.wikipedia.org/wiki/Nairobi_National_Park
+
+## Script (clean)
+
+Ololo Safari Lodge
+
+To reach this hotel, you cross the edge of a national park on foot.
+
+Ololo sits on the southern bank of the Mbagathi River, which forms the southern boundary of Nairobi National Park. Guests come in through the park itself, then walk across a short suspension bridge over the river to reach the lodge. If you're on that bridge, with the park behind you and a farmhouse in front, you're exactly where you should be. And notice what isn't there. The park is fenced on three sides; this side, the river side, is left open.
+
+That matters more than it looks. The open southern edge lets wildlife move between the park and the plains beyond, the Kitengela and the Athi-Kapiti, as it always has. So the lodge sits on a seam — city behind you, a protected park around you, and the old migration routes running straight past the garden.
+
+Now the house. It's a converted homestead on a working farm of about twenty acres, opened as a lodge in twenty fifteen by an Australian family, the Chapmans. A good deal of what lands on your plate is grown right here, on the shamba — the Swahili word for a farm or garden plot. A game drive in the morning, vegetables from the field at lunch. That pairing is rather the whole idea.
+
+The cave_bureau guide is refreshingly honest about it: "a great place to stay in Nairobi National Park — pricey though." Fair. Rooms here cost several hundred dollars a night.
+
+[beat]
+
+And here's why it earns its place on an architects' list. Most safari lodges are built to look as though the city doesn't exist. Ololo can't pretend that — the capital is under an hour's drive away. So it doesn't try. It's a farm on a river, at the one point where Nairobi's wild edge is still open to the plains.
+
+If you're staying, ask for a walk down to the riverbank in the early morning, when the park across the water is at its busiest. And if you're only passing, the drive in through the park is reason enough — keep your eyes on the grass for the rhino.
+
+## Pronunciation (TTS-safe respellings)
+
+| Written | Spoken as |
+|---|---|
+| cave_bureau | cave bureau |
+| Ololo | Ohlohloh |
+| Mbagathi | Mbahgahthee |
+| Kitengela | Keetengehla |
+| Athi-Kapiti | Ahthee Kapeetee |
+| shamba | shahmba |
+
+## TTS-safe version
+
+See `07-ololo-safari-lodge-tts.txt` — `[beat]` removed (paragraph break), names respelled, hyphens dropped.

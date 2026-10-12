@@ -1,0 +1,47 @@
+# Paradise Lost — the Mbai Caves
+
+**Area:** Kiambu, Nairobi, Kenya | **Coordinate:** -1.1918716, 36.8279837 | **cave_bureau category:** VISIT | **Length:** ~392 words (~2.6 min)
+
+**Source list:** [Architecture Hunter — Nairobi city guide by cave_bureau](https://architecturehunter.com/guide/nairobi_cave_bureau/)
+
+**Primary sources read before writing:**
+- https://nation.africa/kenya/news/paradise-lost-a-hidden-gem-of-prehistoric-artefacts-1210580
+- https://en.wikipedia.org/wiki/Paradise_Lost_Caves
+- https://africa.com/the-first-kenyan-firm-to-make-its-debut-at-the-venice-architecture-biennale
+- https://fieldtheory.us/field-theory/p/cave-bureau
+
+## Script (clean)
+
+Paradise Lost — the Mbai Caves
+
+To get into these caves, you have to walk behind a waterfall.
+
+Paradise Lost is in Kiambu, a little north of Nairobi, surrounded on all sides by coffee farms. Follow the path down to the River Gichi, and you'll find the falls pouring over a rock lip. The cave entrances are tucked behind the curtain of water. If you can feel spray on your face and see dark openings in the rock just beyond it, you're in the right place.
+
+This is a labyrinth of caves cut into the rock by the river itself. They were officially found in nineteen ninety-six by the landowner, Joseph Mbai, and some of his farmworkers, which is why the architects of cave_bureau call them the Mbai Caves. When the National Museums of Kenya came to look, they found human remains between eight thousand and twelve thousand years old, along with tools of obsidian, the black volcanic glass, from the Later Stone Age. People have been sheltering behind this waterfall for a very long time.
+
+And not only in prehistory. During the fight for independence in the nineteen fifties, the caves were used by the Mau Mau. Mukami Kimathi, widow of the freedom fighter Dedan Kimathi, said she and others hid here — and that colonial forces later used the caves to torture captured fighters. Paradise Lost is a lovely name for a park. It's also, quietly, an accurate one.
+
+[beat]
+
+Here's why this place matters to the people who sent you here. Cave_bureau are a Nairobi architecture practice built on a simple, radical idea: that caves are the origin of architecture. One of its two founders, Kabage Karanja, grew up near here. And when they became the first Kenyan practice to exhibit at the Venice Architecture Biennale, they hung sixteen hundred pieces of obsidian on a timber frame to recreate a section of this very cave's roof. A Stone Age shelter, rebuilt as a work of art, in Venice.
+
+Go in with a guide — the passages narrow sharply in places — and once you're inside, turn round and look back at the light coming through the water. Then, back outside, walk up to the dam and look around you: coffee farms on every side, and the capital barely ten kilometres away. The freedom fighters were hiding almost within sight of it.
+
+## Pronunciation (TTS-safe respellings)
+
+| Written | Spoken as |
+|---|---|
+| cave_bureau | cave bureau |
+| Cave_bureau | Cave bureau |
+| Dedan Kimathi | Dehdan Keemahthee |
+| Kimathi | Keemahthee |
+| Kiambu | Kee ahmboo |
+| Gichi | Geechee |
+| Mbai | Mbye |
+| Mukami | Mookahmee |
+| Kabage Karanja | Kahbahgeh Karahnja |
+
+## TTS-safe version
+
+See `12-paradise-lost-mbai-caves-tts.txt` — `[beat]` removed (paragraph break), names respelled, hyphens dropped.
