@@ -1,0 +1,22 @@
+# Bangunan Zhongshan (TTS-safe)
+
+- **Google Maps name:** Bangunan Zhongshan
+- **Category:** SHOP
+- **Coordinates (WGS-84):** 3.137892, 101.697139
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+There were offers to knock this building down, and one to turn it into a karaoke bar of a less respectable kind.
+
+Jah lahn Roh tahn, in Kahm poong Ah tahp, a quiet district just south of Chinatown. The Jong shahn Building is the row in front of you: three four storey shophouses from the nineteen fifties, joined together, with a plain, mid century front. You should be able to see small shop signs at street level and windows stacked above.
+
+The name comes from the Seh lahng or Jong shahn Association, a Chinese clan association that once had its rooms here. Over the decades, the building housed families, small merchants and a frozen food business, and later became a hostel for foreign workers. It belongs to the family of Rob Tan, whose grandparents bought up the units one by one.
+
+When the family considered selling, the offers were not encouraging: buyers wanted to demolish it, or to convert it into a karaoke bar with rooms upstairs. Instead, Rob Tan and his wife, Liza Hoh, chose to restore it. A grant from the heritage organisation Think City covered about a fifth of the cost, and in twenty seventeen the building reopened as a home for independent creative businesses.
+
+Go in and wander. When it opened, the tenants included a record shop, Tahn dahng Records. There's the Malaysia Design Archive, which collects the country's graphic design history, posters, packaging and the rest. There's a library, studios, a bakery and small galleries. Around two dozen small businesses share the space, though the mix changes over time.
+
+What's worth knowing is how the place is run. The owners keep the rents low and choose tenants who fit, rather than the highest bidder. That's the whole trick: a building can only stay interesting if the people who make it interesting can afford to stay.
+
+When you leave, wander the streets of Kahm poong Ah tahp, one of the city's less polished corners. Then look up and north east; the vast spire of Mer day kah one one eight is close enough to dominate the view, and Stadium Mer day kah, where independence was declared, lies at its foot.

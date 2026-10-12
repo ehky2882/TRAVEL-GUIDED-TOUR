@@ -1,0 +1,20 @@
+# The Majestic Hotel (TTS-safe)
+
+- **Google Maps name:** The Majestic Hotel Kuala Lumpur, Autograph Collection
+- **Category:** STAY
+- **Coordinates (WGS-84):** 3.138563, 101.692064
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+For fourteen years, the national art collection of Malaysia hung in a hotel.
+
+Stand on the pavement of Jah lahn Sool tahn Hee shah moo din with the white domes of the old railway station behind you. Up the slope in front, set back behind its lawn, is a long, pale facade of arches and pilasters with a cornice running along the top. That's the original Majestic, opened in nineteen thirty two. The tall block rising beside it is new, and we'll come to that.
+
+Have a look at the old building first. The architects were the firm Keys and Dowdz well, and they gave it a split personality: classical arches and columns for dignity, and the cleaner lines of Art Deco for modernity. It's the look of a colony that wanted to seem both ancient and up to date. When it opened it had fifty one rooms, modern plumbing that was something of a boast at the time, and a roof garden with a dance floor that could seat three hundred and fifty. Arriving by train, you simply crossed the road.
+
+Its history is a fair summary of the country's. During the war the Japanese used it as a transit camp. In nineteen fifty one, the Independence of Malaya Party held its very first meeting here. By the seventies, the smart crowd had drifted to new hotels in Boo kit Bin tahng, and in nineteen eighty three the government gazetted the building as a historic landmark and closed the hotel. From nineteen eighty four it became the National Art Gallery, which is how a hotel ended up full of paintings.
+
+And here's the thing. The building was saved not by sentiment but by a trade. In the nineties the developer Why Tee El was given the hotel in exchange for building the nation a new art gallery. It restored the old wing, added the fifteen storey tower beside it, and reopened the Majestic in December twenty twelve.
+
+Before you leave, turn round and look at the railway station across the road. The two have faced each other since nineteen thirty two, one for arriving, one for staying. The footbridge over the Klahng River will take you on to Central Market in about ten minutes.

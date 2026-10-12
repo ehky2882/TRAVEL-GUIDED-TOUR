@@ -1,0 +1,22 @@
+# Bar Trigona (TTS-safe)
+
+- **Google Maps name:** Bar Trigona
+- **Category:** DRINK
+- **Coordinates (WGS-84):** 3.158093, 101.713682
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+This bar is named after a bee with no sting.
+
+You're at the Four Seasons Hotel on Per see ah rahn Petronas, right beside the Petronas Towers. Bar Trig oh nah is inside the hotel. If you're standing in the forecourt, the towers will be filling most of the sky above you.
+
+Trig oh nah is the name of a family of tiny stingless bees found across Malaysia. They build their hives in hollow places, including coconut trees, and their honey, known in Malay as mah doo keh loo loot, is thinner and sharper than ordinary honey, with a sourness that surprises people. It sits at the heart of the bar's drinks.
+
+The bar has been a regular on the list of Asia's Fifty Best Bars, appearing for six years running by twenty twenty four, and in twenty twenty two it won the award for the best cocktail menu on that list. It has also picked up awards for sustainability, more than once.
+
+That's the real story here. The team works on what they call a root to shoot approach, using as much of each ingredient as they can rather than throwing away the parts that don't look pretty. Their motto is reuse, recycle, repurpose. They have gone further than most: guests have been able to adopt a beehive on a keh loo loot farm in Neh gree Sem bee lahn, and part of what you pay for a drink goes towards restoring habitats for local bees.
+
+What's worth knowing, standing here, is how unusual this is. Hotel bars exist to make guests feel they could be anywhere comfortable in the world. Bar Trig oh nah does the opposite: it builds its menu from Malaysian farms and Malaysian forests, and quietly argues that the most luxurious thing in a glass might be something grown down the road.
+
+When you leave, step out into Kay El See See Park, the gardens at the foot of the towers. After dark the lake has a fountain show, set to music, and the towers look best from the far side of the water.

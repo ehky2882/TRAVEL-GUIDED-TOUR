@@ -1,0 +1,22 @@
+# Stadium Merdeka (TTS-safe)
+
+- **Google Maps name:** Stadium Merdeka
+- **Category:** OBSERVE
+- **Coordinates (WGS-84):** 3.139270, 101.700772
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+On the thirty first of August, nineteen fifty seven, a man stood in this stadium and shouted the same word seven times.
+
+You're at Stadium Mer day kah, in the old city, on the hill south of Chinatown. In front of you is a low, open stadium, with cantilevered roofs over its stands and tall floodlight towers at its corners. And right next to it, filling the sky, is Mer day kah one one eight.
+
+The stadium was built in less than a year, between September nineteen fifty six and August nineteen fifty seven, for one purpose: the declaration of independence of the Federation of Malaya. It was designed by Stanley Jooks, director of the Public Works Department, and when it was finished it held world records for its prestressed floodlight towers and its cantilevered shell roofs.
+
+Then, on the morning of the thirty first of August, nineteen fifty seven, in front of more than twenty thousand people, the first prime minister, Toon koo Ab dool Rah mahn, read the proclamation and shouted Mer day kah, freedom, seven times.
+
+The stadium had a lively life afterwards: the proclamation of Malaysia in nineteen sixty three, Muhammad Ali boxing Joe Bugner in nineteen seventy five, and Michael Jackson in nineteen ninety six. But by the nineties it was threatened with demolition. It survived thanks to a public outcry and the Asian financial crisis, which killed off the redevelopment. It was then restored to its nineteen fifty seven appearance, work that won a Yoo nes koh heritage conservation award in two thousand and eight and was completed the following year.
+
+And here's the thing about the tower beside it. Mer day kah one one eight, now officially Meh nah rah Mer day kah Maybank, is the second tallest building in the world, and it was built on the stadium's doorstep. You can read that as a celebration of independence, or as the modern city crowding its own birthplace. Standing here, it's hard not to feel both.
+
+Before you leave, if the gates are open, find a spot in the stands facing the field, and picture the crowd in nineteen fifty seven. Then look up at the tower. Few places put a country's past and present quite so close together.

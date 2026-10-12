@@ -1,0 +1,22 @@
+# Saloma Link (TTS-safe)
+
+- **Google Maps name:** Saloma Link
+- **Category:** OBSERVE
+- **Coordinates (WGS-84):** 3.160956, 101.708976
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+This footbridge was designed after a wedding decoration.
+
+You're on Sah loh mah Link, the pedestrian bridge between Kahm poong Bah roo and the Kay El See See area. Walk to the middle of the span and stop. Behind you is Kahm poong Bah roo, the old Malay village with its low houses and gardens. Ahead are the Petronas Towers and the glass towers around them.
+
+The bridge opened in February twenty twenty. Its main span is about sixty nine metres, crossing the Klahng River and an elevated highway, and the walkway runs some three hundred and seventy metres end to end. It was designed by Veritas Design Group for the Kahm poong Bah roo Development Corporation.
+
+The gift detail is its shape. The curved, woven lattice that wraps the walkway was inspired by the see ree joon joong, an arrangement of betel leaves that plays a special part in Malay weddings. So this bridge, between an old Malay village and the modern city, is dressed as a wedding gift. After dark, the lattice lights up.
+
+The name comes from the street where the bridge lands: Jah lahn Sah loh mah, named after Sah loh mah, one of the great Malay singers and screen stars of the fifties and sixties.
+
+What's worth thinking about, standing here, is the view on either side. Kahm poong Bah roo has been a Malay settlement since the turn of the twentieth century, and it has resisted redevelopment for decades. The towers have been pressing at its edges for just as long. This bridge doesn't settle that argument. It simply lets you walk from one side to the other in a few minutes, which makes the contrast impossible to miss.
+
+Before you leave, walk to the Kahm poong Bah roo end and turn into its streets. Look for the timber houses with their steep roofs, and the food stalls in between. Then turn round and look back at the towers; it's one of the best views in the city.

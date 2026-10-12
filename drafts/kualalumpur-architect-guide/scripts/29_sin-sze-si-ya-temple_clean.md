@@ -1,0 +1,24 @@
+# Sin Sze Si Ya Temple
+
+- **Google Maps name:** Sin Sze Si Ya Temple
+- **Category:** VISIT
+- **Coordinates (WGS-84):** 3.145641, 101.696398
+- **Version:** clean (authoring script; `[beat]` marks the engineered pause)
+
+---
+
+The man who built this temple is often called the founder of Kuala Lumpur, and he built it for two dead men he believed were watching over him.
+
+You're on Lebuh Pudu, in Chinatown, a short walk from Central Market. The temple sits back from the street, so look for a narrow gateway leading off it. Inside you'll find a modest temple of red and gold, thick with incense smoke.
+
+It was founded in 1864 by Yap Ah Loy, the Kapitan Cina, the leader of the Chinese community in early Kuala Lumpur. He was the man who rebuilt the town after fire and war, and who did more than anyone to make a mining camp into a city.
+
+The temple is dedicated to two figures, both of whom Yap believed had guided him through the Selangor Civil War. The first, Sin Sze Ya, was Seng Meng Lee, a Kapitan from Sungai Ujong, killed in 1860. The second, Si Sze Ya, was Chung Piang Lai, one of Yap's own generals. To Yap, they were protectors, and after their deaths he gave them a home.
+
+At first the shrine was made of wood. Then, in 1873, Yap gave the land behind his own house for a proper temple, finished in 1875. It was rebuilt after fire and flood in the early 1880s, and repaired and restored several times since.
+
+[beat]
+
+What I find quietly remarkable is how hidden this is. It's the oldest Taoist temple in the city and a national heritage site, yet you could walk past the entrance and never know. That's the way Chinatown works: the important things are often tucked behind the shopfronts.
+
+Before you leave, walk out and down the lane to Medan Pasar, the old market square, just to the north. This was the centre of Yap Ah Loy's town. Stand there for a moment, and you're in the middle of the first Kuala Lumpur.

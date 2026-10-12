@@ -1,0 +1,22 @@
+# Kwai Chai Hong (TTS-safe)
+
+- **Google Maps name:** Kwai Chai Hong
+- **Category:** VISIT
+- **Coordinates (WGS-84):** 3.141609, 101.697731
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+Kwhy Chye Hong means little ghost lane. The ghosts, it's said, were the children who used to play here.
+
+You're at the entrance to Kwhy Chye Hong, off Loh rong Pahng goong, in Chinatown. In front of you is a narrow back lane between two rows of old shophouses, with murals painted on the walls.
+
+For decades this was what back lanes usually are: the service side of a row of shops, used for drains, deliveries and rubbish. Then in twenty eighteen, a group of five local entrepreneurs who had formed a company called Bye Chwahn Management took it on, with a grant from Think City. They restored ten shophouses and the lane behind them, and opened it to the public in twenty nineteen.
+
+Have a look at the murals. They show everyday scenes of life in Chinatown in the nineteen sixties, painted by five local artists, and they're placed where you'd have seen such things in real life. Some of them carry a code you can scan to hear a soundtrack or story.
+
+The gift detail is in the history of the lane itself. Until twenty eighteen, one of the shops facing it was Hoh Cow, a Hye nah neez coffee shop that had been in this spot since nineteen fifty six. It moved round the corner the year before the lane reopened.
+
+What I like about this place is the idea behind it. Back lanes are where a city keeps its secrets, and where its ordinary life goes on. Kwhy Chye Hong turns that hidden life into the main event, and asks you to look at the back of a building as carefully as the front.
+
+When you've walked the lane, step round to Jah lahn Bah lye Poh liss and find Hoh Cow, now on the main street. Order a coffee and a bowl of soft boiled eggs, and you'll have the whole story.

@@ -1,0 +1,22 @@
+# Menara Tun Perak (formerly Menara Maybank) (TTS-safe)
+
+- **Google Maps name:** Menara Tun Perak
+- **Category:** OBSERVE
+- **Coordinates (WGS-84):** 3.147451, 101.699417
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+This tower is a dagger, still in its sheath.
+
+You're on Jah lahn Toon Peh rak, at the foot of the tall white tower that until July twenty twenty six was called Meh nah rah Maybank. It's now Meh nah rah Toon Peh rak. Look up and find the shape: two square blocks, locked together at one corner, rising to a sharp, angled top.
+
+It was designed by Hee jahs Kahs too ree Associates and built between nineteen eighty four and nineteen eighty eight for Maybank, one of the country's largest banks. It's around two hundred and forty four metres tall, with fifty floors, and for a time it was among the tallest buildings in the city.
+
+The gift detail is the form. It's based on the keh riss, the wavy bladed Malay dagger, shown pointing upwards and partly drawn from its sheath. The keh riss is a sacred object in Malay culture, a symbol of power, protection and status. So the tower presents the bank as something strong and dignified, and very much of this place.
+
+Now, have a look at the name. Toon Peh rak was the Ben dah hah rah, or chief minister, of the Mah lah kah Sultanate in the fifteenth century, one of the great statesmen of Malay history. When Maybank moved its headquarters into Mer day kah one one eight, which has been renamed Meh nah rah Mer day kah Maybank, this building took his name.
+
+What I find interesting is how this tower sits next to its successor. Look south, and you'll see Mer day kah one one eight on the skyline, the second tallest building in the world. Forty years separate them. The old tower used a Malay symbol to look modern; the new one is simply very, very tall.
+
+Before you go, remember that the tower also houses the Maybank Numismatic Museum, which tells the story of money in Malaysia. And then walk round to the side to see how the two blocks interlock, the trick is easiest to read from the corner.

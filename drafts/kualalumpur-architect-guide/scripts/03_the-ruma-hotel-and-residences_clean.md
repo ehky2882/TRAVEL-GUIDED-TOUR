@@ -1,0 +1,24 @@
+# The RuMa Hotel and Residences
+
+- **Google Maps name:** The RuMa Hotel and Residences
+- **Category:** STAY
+- **Coordinates (WGS-84):** 3.152416, 101.714374
+- **Version:** clean (authoring script; `[beat]` marks the engineered pause)
+
+---
+
+There's a birdcage at the front door of this hotel, and it's there because of the canaries.
+
+You're on Jalan Kia Peng, in the leafy stretch of the Golden Triangle just south of the Petronas Towers. The RuMa is the dark, quietly detailed building in front of you. Step up to the entrance and look into the foyer: you should see a large round cage of terracotta, with a bronze fountain inside it.
+
+RuMa comes from rumah, the Malay word for home. The interiors were led by Andy Hall, a British designer based in Shanghai, and he began not with a style but with research into the two industries that built this city: tin mining and rubber.
+
+The cage is the tin. In mines, miners once carried canaries in small metal cages, because the birds sensed dangerous gas before people did. Here that humble object has been blown up in terracotta and turned into a welcome. Inside, a double staircase appears to drill up through a ceiling tiled in copper, another nod to what came out of the ground. The rubber plantations, meanwhile, are in the bedrooms, which borrow the look of colonial planters' houses.
+
+Look closely at the walls and you'll find kelarai, a traditional hand-woven panel, and the checked cotton cloth called kain pelikat worked into the furnishings. These are everyday Malaysian materials, the kind you'd find in a grandmother's house rather than a palace.
+
+And that's the interesting bit. Luxury hotels usually tell you how far you've travelled. This one keeps trying to tell you where you've arrived, and the story it chooses is not the glamorous one. Kuala Lumpur grew out of muddy tin fields, and the most expensive room in the house is dressed in their memory.
+
+[beat]
+
+When you leave, walk a few minutes south-east to Jalan Stonor and find the Badan Warisan heritage centre. In its garden stands Rumah Penghulu Abu Seman, an old timber house from Kedah — the real thing, raised on stilts, that a hotel like this one is quietly quoting.

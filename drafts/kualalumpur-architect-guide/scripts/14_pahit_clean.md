@@ -1,0 +1,22 @@
+# Pahit
+
+- **Google Maps name:** Pahit
+- **Category:** DRINK
+- **Coordinates (WGS-84):** 3.143408, 101.705019
+- **Version:** clean (authoring script; `[beat]` marks the engineered pause)
+
+---
+
+In colonial Malaya, the sundowner of choice was gin with bitters, and the word for bitter was pahit.
+
+Jalan Sin Chew Kee is a short, quiet street of old shophouses, tucked between Chinatown and Bukit Bintang. Pahit is at number three, in a shophouse from the 1920s. If you're facing it, you're in the right place; if you're lost, you're probably one street over, which is easily done round here.
+
+The name is the joke and the history at once. Planters and officials in colonial Malaya would call for a gin pahit — gin with a dash of bitters — as the sun went down. The phrase outlived the empire that coined it, and a Malaysian bar has now borrowed it back.
+
+The bar was set up by CK Kho, who also runs Coley in Bangsar, one of the city's better-known cocktail bars. The back bar is lined with gins, dozens of them, from all over the world. The house speciality is the gin and tonic, and here it's done with fruit infused into the gin by slow, gentle cooking. Look out for local flavours: jackfruit, pomelo, and assam boi, the salty preserved plum that Malaysians have been dropping into drinks for generations.
+
+[beat]
+
+What I like about Pahit is that it takes the most colonial drink there is and makes it unmistakably local. Gin is the British part. The jackfruit and the preserved plum are not. It's a small, cheerful act of reclamation, and it happens to taste very good.
+
+When you leave, VCR, the café in a 1927 house, is a minute away on Jalan Galloway, if you need a coffee to balance things out. And if you walk the length of Jalan Sin Chew Kee, look up at the upper floors as you go; the shopfronts have changed many times, but the upper storeys are where these buildings keep their age.

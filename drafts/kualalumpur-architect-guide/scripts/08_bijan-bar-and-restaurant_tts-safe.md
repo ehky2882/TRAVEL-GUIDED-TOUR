@@ -1,0 +1,20 @@
+# Bijan Bar and Restaurant (TTS-safe)
+
+- **Google Maps name:** Bijan Bar and Restaurant
+- **Category:** DINE
+- **Coordinates (WGS-84):** 3.148392, 101.705971
+- **Version:** TTS-safe — paste the text below the rule into the TTS tool
+
+---
+
+Twenty odd years ago, you could struggle to find a proper Malay restaurant in the middle of Kuala Lumpur.
+
+Number three, Jah lahn Ceylon. You're on a short, sloping street between Boo kit Bin tahng and the city centre, and Bee jahn is the low colonial era building in front of you, with its terrace and bar opening onto the street.
+
+Bee jahn is the Malay word for sesame, and the restaurant was the idea of three friends, Yoo en See Toh, Lissa Yoh and Way Cheng Yoh, who began researching it in two thousand and two. Their problem was simple. Malay food was everywhere in Malaysia, in homes, at stalls and at weddings, but hardly anyone served it in a restaurant setting, with the care you'd expect for French or Japanese cooking. In two thousand and four, Tourism Malaysia named it the country's best Malay restaurant.
+
+The cooking leans on recipes handed down in the owners' own families, then sharpened with a few restaurant habits, cuts of beef, such as ribs, that you wouldn't normally find in a Malay dish, and plating that takes its time. Look out for the ren dahng, the slow cooked spiced beef, and the dishes cooked in mah sak leh mak, a rich turmeric and coconut gravy.
+
+What's worth knowing, standing here, is that this restaurant helped change what people thought Malay food was for. Not just something you ate at home, but something you could take a guest to. Plenty of modern Malay restaurants have followed since.
+
+From here, walk up the hill to Chahng kaht Boo kit Bin tahng, a short street of old shophouses turned into bars and restaurants, where the city goes to have dinner and keep going.

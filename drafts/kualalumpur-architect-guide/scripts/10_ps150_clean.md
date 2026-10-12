@@ -1,0 +1,24 @@
+# PS150
+
+- **Google Maps name:** PS150
+- **Category:** DRINK
+- **Coordinates (WGS-84):** 3.141045, 101.698096
+- **Version:** clean (authoring script; `[beat]` marks the engineered pause)
+
+---
+
+The way in is through a toy shop.
+
+Number one hundred and fifty, Jalan Petaling, at the southern end of Chinatown. That's where the name comes from: Petaling Street, one-fifty. Look for a small, brightly lit shopfront full of old toys and retro figures. The bar's name is on a modest sign on the wall, and the entrance is a door at the back of the shop.
+
+The building is a pre-war shophouse with a past. In the 1980s it was a brothel, and later a hostel for migrant workers, before it was left empty. When the bar moved in, the owners kept as much of the decay as they could: plaster peeling in its own good time, bare brick, tree roots pushing through the walls.
+
+Once you're through, the bar unfolds in three rooms, and each one is a different period. First, the Opium Den, small and close, with beaded curtains. Then an open-air courtyard. Then the main bar, with a red neon sign that reads Chi Cheung Kai, the old Cantonese name for Petaling Street.
+
+The menu follows the same idea. It's arranged by era — vintage, classic, tiki, disco and contemporary — so you can drink your way from the nineteenth century to the present, and the flavours are local: pandan, lychee, chilli.
+
+[beat]
+
+What's interesting is the timing. PS150 opened in 2016, when this end of Chinatown was mostly closed shutters after dark, and in its first year it was the only bar from Malaysia on the list of Asia's Fifty Best Bars. A good deal of the neighbourhood's revival since has followed in its footsteps.
+
+The upstairs café, Merchant's Lane, ran in the same building for nearly ten years and closed at the start of 2026. From here, Kwai Chai Hong is a couple of minutes' walk away, off Lorong Panggung: a little restored back lane with murals of 1960s street life, and the best place in Chinatown to see what these shophouses looked like from behind.
