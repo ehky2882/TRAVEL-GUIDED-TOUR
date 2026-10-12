@@ -1,0 +1,31 @@
+# num	slug	lat	lon	source	note
+01	elco-pani-puri-centre	19.055639	72.833004	OSM node 10678500294 (Elco Market, Hill Road)	existing creator pin nearby: place candidate
+02	the-bombay-canteen	19.004146	72.827484	OSM node 9879398059 (Kamala Mills compound)	APPROX: compound, not Process House itself — confirm
+03	trishna	18.928658	72.832393	OSM node 858938542 (Trishna, Rope Walk Street)	
+04	americano-kala-ghoda	18.929433	72.832324	OSM way 22845846 (Nagindas Master Road, Kala Ghoda)	APPROX: street, not the venue — confirm
+05	cafe-madras-matunga	19.027673	72.855047	OSM node 1977933168 (Cafe Madras)	
+06	ayubs-kala-ghoda	18.928216	72.832888	OSM node 3366422124 (Ayub's)	
+07	eau-bar-the-oberoi	18.926984	72.820585	OSM way 753875937 (The Oberoi)	same point as 14: deliberate (bar inside hotel)
+08	aer-four-seasons-worli	18.994118	72.820360	OSM way 402645524 (Four Seasons Hotel)	
+09	slink-and-bardot	19.016986	72.817552	OSM node 12473206401 (Slink & Bardot)	
+10	bombay-gymkhana	18.937130	72.831113	OSM way 207353005 (Bombay Gymkhana)	
+11	willingdon-sports-club	18.976350	72.815949	OSM way 27088816 (Willingdon Sports Club)	centroid of 30-acre grounds; gate is on the edge
+12	bastian-at-the-top	19.024982	72.841501	OSM way 1127561376 (Kohinoor Square)	
+13	taj-mahal-palace	18.921876	72.833043	OSM way 207318948 (The Taj Mahal Palace)	existing creator pin: place candidate
+14	the-oberoi-mumbai	18.926984	72.820585	OSM way 753875937 (The Oberoi)	
+15	royal-bombay-yacht-club	18.923397	72.833308	OSM way 207417323 (Royal Bombay Yacht Club)	
+16	intercontinental-marine-drive	18.935081	72.824142	OSM node 1541857829 (InterContinental, 135 Marine Drive)	
+17	colaba-causeway	18.922712	72.831763	OSM way 40387597 (Cafe Leopold)	
+18	kala-ghoda	18.928458	72.832599	OSM node 2630028159 (Kala Ghoda, Fort)	🔴 NOT node 10108039535 — that is the ORIGINAL statue at Byculla, 5.6 km away
+19	linking-road-bandra	19.078068	72.834394	OSM way 620535057 (Linking Road)	APPROX: a road segment in Khar; script stands at the National College end — confirm
+20	phoenix-mills	18.994669	72.824310	OSM way 113483204 (High Street Phoenix)	
+21	chor-bazaar	18.960604	72.829813	OSM way 44011471 (Mutton Street)	
+22	khotachiwadi	18.956	72.817	NOT GEOCODED — Nominatim has no match	needs a real lookup before wire-in
+23	gateway-of-india	18.921966	72.834566	OSM way 28845634 (Gateway of India)	
+24	marine-drive	18.937500	72.823600	hand-placed on the promenade opposite the Deco row near Churchgate	OSM way 40444798 is the road at Gamdevi — too far north; confirm
+25	pali-village-bandra	19.063506	72.830454	OSM node 2442390173 (Pali Village)	
+26	chhatrapati-shivaji-maharaj-vastu-sangrahalaya	18.926927	72.832650	OSM way 206808196 (CSMVS)	
+27	kanchanjunga-apartments	18.969	72.809	NOT GEOCODED — Nominatim has no match	needs a real lookup before wire-in
+28	bandra-worli-sea-link	19.041864	72.818378	OSM way 654567861 (Bandra Fort)	
+29	dr-bhau-daji-lad-museum	18.979102	72.834794	OSM way 53369531 (Dr. Bhau Daji Lad Museum)	
+30	girgaon-chowpatty	18.952365	72.821914	OSM node 14101252979 (Girgaon Chowpatty)	
