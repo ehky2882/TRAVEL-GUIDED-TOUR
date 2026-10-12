@@ -67,6 +67,12 @@ These were checked on 2026-10-12. Re-check them before recording.
 | 12 | baike.baidu.com (Xin Rong Ji history); Michelin Guide Nanyang Rd; postcard.inc (Pei mansion) |
 | 13 | neriandhu.com Design Commune project page; dezeen.com; architecturalrecord.com |
 
-## Images
+## Images (2026-10-12): picker published, nothing picked yet
 
-The owner's candidates are in the image picker (see the handoff). Gemini verification could not run, because the "key" supplied was a Google Cloud project ID. Every candidate was instead checked by eye for gate A (modern colour photograph) and gate B (the right subject).
+**Picker:** [Shanghai Image Picks](https://claude.ai/artifact/1EjYxPqJjtFygrGfRzH7aU). It holds 24 photos across 7 tours. Each source page and licence is listed in `image-candidates.tsv`, and every place to look further is in `IMAGE-LINKS.md`.
+
+- **Only 03 has photos of the venue itself:** two CC0 photos of Three on the Bund. Every other photo is labelled `CONTEXT` on its card: the dish, the street, or the place the closing walk sends you.
+- **No candidates at all for six tours:** 02 Hotung, 07 Rockbund, 10 Sukhothai, 11 West Bund, 12 Xin Rong Ji and 13 Design Republic. There are no public-domain, Pexels or Unsplash photos of these buildings. Commons has CC BY-SA photos, which need an owner OK and a credit. Otherwise the fallback is owner photos, or press images with the venue's permission.
+- **Checks were done by eye.** Gemini could not run, because the "key" supplied was a Google Cloud project ID (`gen-lang-client-…`), not an API key. Both gates were applied as separate passes.
+- **Unsplash returned `Rate Limit Exceeded` for the whole session**, so it contributed nothing.
+- **Wikimedia rate-limits this egress IP** (429 "robot policy"). Only **standard thumbnail widths** (`/1280px-`) got through; Openverse's thumbnail proxy returns 424 for Commons files. The public-domain finds are therefore 1280 px on the long side, enough for a 1200×900 crop with no upscaling.
