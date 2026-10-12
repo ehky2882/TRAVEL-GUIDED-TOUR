@@ -1,0 +1,28 @@
+# Karamanlidika tou Fani
+
+**Atlas · Athens · 07 · Dine** — single-stop tour  
+**Address:** Sokratous 1 / Evripidou, Central Market district  
+**Pin (WGS-84):** 37.980006, 23.725924  
+**Length:** 318 words, about 2:07 spoken
+
+---
+
+Look at what's on display before you look at the menu. The cured meats will tell you most of the story.
+
+You should be on the corner of Sokratous and Evripidou, in the market streets just off Athinas. Half delicatessen, half restaurant, with the cured meats and cheeses on show. This is Karamanlidika tou Fani: Fani's Karamanlidika.
+
+Fanis Theodoropoulos comes from a family who arrived in Athens from Asia Minor after nineteen twenty two. His original shop is still a few doors along Evripidou, at number forty one, selling cured meat to the trade. In twenty fourteen he opened this place round the corner, so people could stop selling and start eating.
+
+The word on the sign needs a little explaining. The Karamanlides were Orthodox Christians from Cappadocia and the Karaman region of central Anatolia. Their everyday language was Turkish, but they wrote it in the Greek alphabet. That's the gift detail: a whole literature in Turkish, spelt in Greek letters. Karamanlidika is the name for that writing, and here it's the name for their food.
+
+And the food is cured meat. Pastirma, the spiced, air-dried beef their families made for centuries, here made from veal, from sheep, and even from camel. Soutzouki sausage, which comes to the table fried with eggs and little potatoes. A good deal of it is made by a family curer in Drama, in northern Greece, who traces his roots to the same people. It goes with a glass of tsipouro or ouzo.
+
+*[beat]*
+
+What you're eating, really, is the population exchange of nineteen twenty three: the great uprooting that sent more than a million people across the Aegean and rebuilt Athens around them. They didn't bring much. They brought this.
+
+From here, walk down Evripidou and follow your nose. The street is lined with old spice shops. One of the hotels nearby says you won't need an address, and they're quite right.
+
+---
+
+**Sources read before writing:** karamanlidika.gr (home, Charcuterie); Culinary Backstreets; Insights Greece; Greek City Times

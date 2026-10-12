@@ -1,0 +1,28 @@
+# Diporto
+
+**Atlas · Athens · 06 · Dine** — single-stop tour  
+**Address:** Sokratous 9 (corner of Theatrou), Central Market district  
+**Pin (WGS-84):** 37.980734, 23.725835  
+**Length:** 324 words, about 2:10 spoken
+
+---
+
+There's no sign. Don't bother looking for one.
+
+You want the corner of Sokratous and Theatrou streets, a couple of minutes from the central market. Look for an old building with two plain doorways, one on each street, each with a staircase going down. No menu in the window. No name over the door. The word taverna appears nowhere at all. That's Diporto, and the name more or less means two doors.
+
+Mind your head on the way down. At the bottom you'll find a stone basement: the kitchen on your left, and across from you a wall of enormous wine barrels, said to weigh six hundred kilos each. There are about ten tables, with paper tablecloths. Don't expect one to yourself. When it's busy, and it usually is, you sit wherever there's a space, which generally means next to strangers.
+
+There's no written menu, either. The cooking is the plainest, oldest Athenian food there is: chickpea soup, bean soup, fava, salt cod, fried sardines, a salad, and wine poured straight from those barrels. It arrives astonishingly fast.
+
+Most accounts date the place to the eighteen eighties, which makes it one of the oldest tavernas in the city. For years it was run by a man called Michalis, who died, so the story goes, inside the taverna at Easter in nineteen ninety one. His waiter, Mitsos, took it on, in a spotless white jacket, and became as much a fixture as the barrels.
+
+*[beat]*
+
+And here's the thing about Diporto. Almost every restaurant now is designed to be seen. This one is designed to be found, by people who already know. Nothing about it has been arranged for you, and that's exactly why it feels like a gift.
+
+When you come back up, turn towards Athinas Street and walk through the Varvakios market, two minutes away. The fish and the meat halls are the same world Diporto has been feeding for well over a century.
+
+---
+
+**Sources read before writing:** Greek Gastronomy Guide; Atlas Obscura; Insights Greece; Perianth Hotel neighbourhood guide

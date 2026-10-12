@@ -1,0 +1,28 @@
+# Kombologadiko
+
+**Atlas · Athens · 17 · Shop** — single-stop tour  
+**Address:** Amerikis 9, Syntagma / Kolonaki  
+**Pin (WGS-84):** 37.978403, 23.735228  
+**Length:** 270 words, about 1:48 spoken
+
+---
+
+Watch the older men in any Athens café and sooner or later one of them will start clicking a string of beads. This is where those beads come from.
+
+You should be on Amerikis Street, the short street running between Stadiou and Panepistimiou, a few minutes from Syntagma Square, outside number nine. The shop window is full of strings of beads of every size and colour. The sign says Kombologadiko, which means, roughly, the komboloi shop.
+
+A komboloi is a string of worry beads. It's descended from the knotted prayer strings of Orthodox monks, but in Greece it lost its religious job a long time ago. Nobody prays with one. You flick it, swing it, click the beads through your fingers, and pass the time. It's a fidget toy with a very long history.
+
+The family behind this shop, the Ieropoulos family, started in Nafplio, in the Peloponnese, and then brought the business to Athens, with this shop as its headquarters. Inside, the range runs from simple, inexpensive strings to serious collectors' pieces, gathered from all over the world.
+
+Here's a little gift detail to take home. A Greek komboloi almost always has an odd number of beads, and one popular account says twenty three became the usual count. Count them when you pick one up.
+
+*[beat]*
+
+And that's why I like this shop. It's a whole business built around a habit, not a need. Nobody needs a komboloi. Half of Greece has one anyway.
+
+From here, Kolonaki Square is a short walk uphill to the east. Take your new beads and find a café table there. You'll fit right in.
+
+---
+
+**Sources read before writing:** kombologadiko.gr (About); This is Athens (official city guide); Greek City Times (komboloi history, 2021 & 2023)

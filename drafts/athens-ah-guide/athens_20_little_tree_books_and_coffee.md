@@ -1,0 +1,26 @@
+# Little Tree Books & Coffee
+
+**Atlas · Athens · 20 · Shop** — single-stop tour  
+**Address:** Kavalloti 2, Koukaki  
+**Pin (WGS-84):** 37.968139, 23.727028  
+**Length:** 246 words, about 1:38 spoken
+
+---
+
+Some neighbourhood places are started by businesses. This one was started by a group of parents who needed something good to happen.
+
+You should be on Kavalloti Street in Koukaki, a couple of minutes' walk from the Acropolis Museum, outside number two. Little Tree is the small café that is also a bookshop.
+
+It opened in twenty fifteen, in the middle of Greece's financial crisis, when a lot of the city was closing down rather than opening up. The people behind it were a group of local parents who wanted to make something worthwhile on their own street. It's been a neighbourhood favourite ever since.
+
+Inside, the walls are lined with carefully chosen books, and the kitchen serves food all day, so you can come for breakfast and still be here at tea time. It feels less like a shop than like walking into a friend's front room, if your friend owned rather a lot of books.
+
+*[beat]*
+
+Koukaki has changed a great deal in the last ten years. It's become one of the most popular places for visitors to stay in Athens. Little Tree is a reminder of what was here first: neighbours, and a place for them to sit down together.
+
+From here, the Acropolis Museum is just round the corner. Or head the other way, up towards Philopappou Hill, and look for the stone paths laid by the architect Dimitris Pikionis in the nineteen fifties. They're one of the great walks in the city.
+
+---
+
+**Sources read before writing:** To Vima ("Coffee and Books: Athens' Most Charming Book Cafés"); Athens Insider; Mapstr

@@ -1,0 +1,13 @@
+Forget Me Not
+
+Here's a souvenir shop in the heart of Plaka that, on principle, doesn't sell souvenirs.
+
+You should be on ah dree ah noo Street, the long lane that winds through Plaka beneath the Acropolis, outside number one hundred. ah dree ah noo is lined with tourist shops, fridge magnets and plaster columns, and this is the one that isn't quite like the others.
+
+Forget Me Not was opened, around twenty fourteen, by fee lee poss koo ree, who gave up a good job abroad to come back to Athens and open a different kind of gift shop. His idea was simple. If someone wants to take a piece of Greece home, it ought to be something a Greek person actually designed and made, and something they'd actually use.
+
+So instead of miniature Parthenons, you'll find work from well over a hundred Greek designers and brands: olive oil, handmade sunglasses, pottery, notebooks, bags and tee shirts. The shop got itself recommended by The New York Times and The Guardian remarkably quickly.
+
+And here's the thing. The shops either side of this one are selling the past, mostly in plaster. Forget Me Not is selling the present, which is the bit of Greece visitors usually leave without seeing. It turns out the present is rather good.
+
+From here, follow ah dree ah noo and then turn up towards kee dah thee neh on Street. bret toss is there, the old distillery bar with its glowing wall of bottles, and it's a good place to rest your shopping bags.

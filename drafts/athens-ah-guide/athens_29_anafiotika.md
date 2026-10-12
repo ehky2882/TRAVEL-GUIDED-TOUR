@@ -1,0 +1,28 @@
+# Anafiotika
+
+**Atlas · Athens · 29 · Observe** — single-stop tour  
+**Address:** Northeast slope of the Acropolis, above Plaka  
+**Pin (WGS-84):** 37.972407, 23.728133  
+**Length:** 343 words, about 2:17 spoken
+
+---
+
+You've just walked out of a capital city and into a Greek island. Nobody moved the island. They built it here.
+
+You should be on the narrow, whitewashed lanes high up on the northeast side of the Acropolis rock, above Plaka. Look for tiny cube-shaped houses, steps that turn into alleys, alleys that turn into someone's terrace, and bougainvillea everywhere. The great rock rises right behind them. This is Anafiotika.
+
+It began in the reign of King Otto, after Greek independence, when Athens was being rebuilt as a capital. Builders came from the little Cycladic island of Anafi to work on the king's new palace, the building that is now the Parliament. They needed somewhere to live, so they built what they knew: an island village, on the steep, unwanted slope beneath the Acropolis. The first two names on record are a carpenter, G. Damigos, and a builder, M. Sigalas.
+
+Have a look at the houses themselves. Small, plain, white, with flat roofs and tiny courtyards, they're the kind of buildings you'd find on Anafi, Naxos or Paros. Later came stonemasons and marble workers from other islands, and then, after nineteen twenty two, refugees from Asia Minor.
+
+Here's the gift detail. In nineteen fifty, part of the village was cleared for archaeological digs, and from nineteen seventy the state began buying up the houses. Only about forty five survive. And many of these little lanes still have no street names at all. The houses are simply numbered: Anafiotika one, Anafiotika two, and so on.
+
+*[beat]*
+
+What's worth knowing, standing here, is that this is the other half of the story of modern Athens. The palace on Syntagma Square was the official version. This is the people who built it, quietly making a home for themselves on the side of the most famous hill in the world.
+
+Please keep your voice down; people live here. Then follow the lanes downhill into Plaka, and finish on Kydathineon Street with a glass of something at Brettos, the old distillery bar with its wall of glowing bottles.
+
+---
+
+**Sources read before writing:** Wikipedia (Anafiotika, citing Caftanzoglou, Oral History 2000); This is Athens (official city guide)
