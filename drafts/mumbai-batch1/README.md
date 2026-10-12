@@ -26,6 +26,12 @@ Source list: [architecturehunter.com/guide/mumbai-india](https://architecturehun
 - **No candidate at all:** 02 Bombay Canteen, 12 Bastian, 17 Colaba Causeway, 19 Linking Road, 20 Phoenix Mills, 22 Khotachiwadi, 27 Kanchanjunga. Use `mumbai-image-links.md`, or owner photos.
 - **Wikimedia Commons was rate-limited** for this session's egress (HTTP 429 "robot policy" on both the API and `upload.wikimedia.org`), so Commons was reached only through Openverse's index. A later session should retry Commons directly, especially for Kanchanjunga, Khotachiwadi, the Gymkhana and the Yacht Club.
 
+### Owner picks processed (2026-10-12)
+**22 images for 10 tours are on gh-pages** (commit `64c987fb`, one commit, 22 additions only). They are listed in `image-manifest.json`, with the hero first and the gallery in the owner's order. The tours are 13 Taj, 14 Oberoi, 18 Kala Ghoda, 21 Chor Bazaar, 23 Gateway, 24 Marine Drive, 26 CSMVS, 28 Sea Link, 29 Bhau Daji Lad and 30 Chowpatty. Every Unsplash pick's download was pinged.
+- ⚠️ `bandra-worli-sea-link_hero.webp` is **upscaled**: its public-domain source exists only at 1024×685 (rawpixel). It may look soft on device.
+- ⚠️ `kala-ghoda_2.webp` carries a camera **date stamp** in the bottom-right corner.
+- **Still unpicked:** 01–12, 15–17, 19, 20, 22, 25 and 27.
+
 ## Coordinates: four need a human
 From OpenStreetMap by name (Nominatim), each with its OSM object in `coordinates.tsv`. Not yet run through `check-coordinates.py`.
 - 🔴 **18 Kala Ghoda: do NOT take Nominatim's first hit.** It is the *original* statue now at Byculla (node 10108039535), 5.6 km from the junction. The junction is node 2630028159.

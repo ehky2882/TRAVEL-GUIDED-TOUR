@@ -1,0 +1,358 @@
+{
+ "picker": "https://claude.ai/artifact/D1f6mYjnq59JcSVLR3v8VX",
+ "gh_pages_commit": "64c987fb98000181a5cc24e93c705d46a491d85d",
+ "images": [
+  {
+   "num": "13",
+   "slug": "taj-mahal-palace",
+   "name": "taj-mahal-palace_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taj-mahal-palace_hero.webp",
+   "picker_code": "13-4",
+   "source_page": "https://www.pexels.com/photo/facade-of-taj-mahal-palace-6071476/",
+   "licence": "Pexels",
+   "photographer": "HARSH",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1880,
+    1218
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "13",
+   "slug": "taj-mahal-palace",
+   "name": "taj-mahal-palace_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taj-mahal-palace_2.webp",
+   "picker_code": "13-7",
+   "source_page": "https://www.pexels.com/photo/majestic-view-of-taj-mahal-palace-in-mumbai-39488948/",
+   "licence": "Pexels",
+   "photographer": "AKJ        S T U D I O",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1733,
+    1300
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "13",
+   "slug": "taj-mahal-palace",
+   "name": "taj-mahal-palace_3.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taj-mahal-palace_3.webp",
+   "picker_code": "13-11",
+   "source_page": "https://unsplash.com/photos/a-body-of-water-with-boats-and-buildings-along-it-WYHiu6XYNMI",
+   "licence": "Unsplash",
+   "photographer": "Joydeep Sensarma",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    2400,
+    1349
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "13",
+   "slug": "taj-mahal-palace",
+   "name": "taj-mahal-palace_4.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taj-mahal-palace_4.webp",
+   "picker_code": "13-6",
+   "source_page": "https://www.pexels.com/photo/iconic-facade-of-taj-mahal-palace-in-mumbai-36874543/",
+   "licence": "Pexels",
+   "photographer": "Frank van Dijk",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1880,
+    1253
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "14",
+   "slug": "the-oberoi-mumbai",
+   "name": "the-oberoi-mumbai_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-oberoi-mumbai_hero.webp",
+   "picker_code": "14-1",
+   "source_page": "https://unsplash.com/photos/tall-buildings-sit-beneath-a-cloudy-sky-g9Q8fH7E__w",
+   "licence": "Unsplash",
+   "photographer": "Zoshua Colah",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    2400,
+    1350
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "18",
+   "slug": "kala-ghoda",
+   "name": "kala-ghoda_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kala-ghoda_hero.webp",
+   "picker_code": "18-1",
+   "source_page": "https://unsplash.com/photos/crowded-street-festival-with-colorful-flags-overhead-decorations-at-night-9db5VwSfAgs",
+   "licence": "Unsplash",
+   "photographer": "Pratik Dugam",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    1400,
+    933
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "18",
+   "slug": "kala-ghoda",
+   "name": "kala-ghoda_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kala-ghoda_2.webp",
+   "picker_code": "18-2",
+   "source_page": "https://commons.wikimedia.org/w/index.php?curid=66353791",
+   "licence": "CC0",
+   "photographer": "Rudolph.A.furtado",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1280,
+    960
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "21",
+   "slug": "chor-bazaar",
+   "name": "chor-bazaar_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chor-bazaar_hero.webp",
+   "picker_code": "21-1",
+   "source_page": "https://unsplash.com/photos/a-cluttered-art-shop-filled-with-many-curios-and-artifacts-dyHDk61HnYc",
+   "licence": "Unsplash",
+   "photographer": "Zoshua Colah",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    1400,
+    939
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "21",
+   "slug": "chor-bazaar",
+   "name": "chor-bazaar_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chor-bazaar_2.webp",
+   "picker_code": "21-3",
+   "source_page": "https://unsplash.com/photos/man-looking-at-intricately-carved-wooden-statues-in-market-yH_DwFc0CLE",
+   "licence": "Unsplash",
+   "photographer": "Zoshua Colah",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    2400,
+    1255
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "23",
+   "slug": "gateway-of-india",
+   "name": "gateway-of-india_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gateway-of-india_hero.webp",
+   "picker_code": "23-1",
+   "source_page": "https://wordpress.org/photos/photo/11169ea3a3/",
+   "licence": "Public domain",
+   "photographer": "Bigul Malayi",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    2048,
+    1536
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "23",
+   "slug": "gateway-of-india",
+   "name": "gateway-of-india_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gateway-of-india_2.webp",
+   "picker_code": "23-4",
+   "source_page": "https://www.pexels.com/photo/gateway-of-india-mumbai-under-clear-blue-sky-6522114/",
+   "licence": "Pexels",
+   "photographer": "Shubam Bhasin",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1880,
+    1253
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "23",
+   "slug": "gateway-of-india",
+   "name": "gateway-of-india_3.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gateway-of-india_3.webp",
+   "picker_code": "23-9",
+   "source_page": "https://unsplash.com/photos/boats-on-body-of-water-YtfUqAPLqMk",
+   "licence": "Unsplash",
+   "photographer": "Raj Rana",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    1400,
+    933
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "24",
+   "slug": "marine-drive",
+   "name": "marine-drive_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marine-drive_hero.webp",
+   "picker_code": "24-9",
+   "source_page": "https://unsplash.com/photos/a-body-of-water-with-a-city-in-the-background-nsunJX3Q9lg",
+   "licence": "Unsplash",
+   "photographer": "Nishith Parikh",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    1400,
+    1050
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "24",
+   "slug": "marine-drive",
+   "name": "marine-drive_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marine-drive_2.webp",
+   "picker_code": "24-5",
+   "source_page": "https://www.pexels.com/photo/silhouette-of-city-skyline-during-dusk-10906000/",
+   "licence": "Pexels",
+   "photographer": "Asim Mateen",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1880,
+    905
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "26",
+   "slug": "chhatrapati-shivaji-maharaj-vastu-sangrahalaya",
+   "name": "chhatrapati-shivaji-maharaj-vastu-sangrahalaya_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chhatrapati-shivaji-maharaj-vastu-sangrahalaya_hero.webp",
+   "picker_code": "26-3",
+   "source_page": "https://unsplash.com/photos/a-large-building-with-a-dome-and-trees-in-front-of-it-with-chhatrapati-shivaji-maharaj-vastu-sangrahalaya-in-the-background-kuVLVxn2qao",
+   "licence": "Unsplash",
+   "photographer": "Shweta L",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    1400,
+    1050
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "26",
+   "slug": "chhatrapati-shivaji-maharaj-vastu-sangrahalaya",
+   "name": "chhatrapati-shivaji-maharaj-vastu-sangrahalaya_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chhatrapati-shivaji-maharaj-vastu-sangrahalaya_2.webp",
+   "picker_code": "26-7",
+   "source_page": "https://unsplash.com/photos/a-large-building-with-a-dome-on-top-of-it-P7iYPSRqx0U",
+   "licence": "Unsplash",
+   "photographer": "Zoshua Colah",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    1400,
+    1050
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "28",
+   "slug": "bandra-worli-sea-link",
+   "name": "bandra-worli-sea-link_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bandra-worli-sea-link_hero.webp",
+   "picker_code": "28-1",
+   "source_page": "https://www.rawpixel.com/image/5964319/free-public-domain-cc0-photo",
+   "licence": "Public domain",
+   "photographer": "unknown",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1024,
+    685
+   ],
+   "upscaled": true
+  },
+  {
+   "num": "28",
+   "slug": "bandra-worli-sea-link",
+   "name": "bandra-worli-sea-link_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bandra-worli-sea-link_2.webp",
+   "picker_code": "28-2",
+   "source_page": "https://www.pexels.com/photo/sunset-at-bandra-worli-sea-link-in-mumbai-37573046/",
+   "licence": "Pexels",
+   "photographer": "Phani Varanasi",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1880,
+    1254
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "28",
+   "slug": "bandra-worli-sea-link",
+   "name": "bandra-worli-sea-link_3.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bandra-worli-sea-link_3.webp",
+   "picker_code": "28-7",
+   "source_page": "https://www.pexels.com/photo/the-boats-are-green-27808653/",
+   "licence": "Pexels",
+   "photographer": "Kewal Nagda",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1732,
+    1300
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "29",
+   "slug": "dr-bhau-daji-lad-museum",
+   "name": "dr-bhau-daji-lad-museum_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dr-bhau-daji-lad-museum_hero.webp",
+   "picker_code": "29-2",
+   "source_page": "https://unsplash.com/photos/a-large-white-building-surrounded-by-palm-trees-ddl_klRJK5M",
+   "licence": "Unsplash",
+   "photographer": "ROSHAN AALSHI",
+   "unsplash_download_pinged": true,
+   "source_px": [
+    1400,
+    1050
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "29",
+   "slug": "dr-bhau-daji-lad-museum",
+   "name": "dr-bhau-daji-lad-museum_2.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dr-bhau-daji-lad-museum_2.webp",
+   "picker_code": "29-1",
+   "source_page": "https://commons.wikimedia.org/w/index.php?curid=165209499",
+   "licence": "CC0",
+   "photographer": "Historical Trains",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1920,
+    1080
+   ],
+   "upscaled": false
+  },
+  {
+   "num": "30",
+   "slug": "girgaon-chowpatty",
+   "name": "girgaon-chowpatty_hero.webp",
+   "url": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/girgaon-chowpatty_hero.webp",
+   "picker_code": "30-1",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Chowpatty_beach1.jpg",
+   "licence": "Public domain",
+   "photographer": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Chry",
+   "unsplash_download_pinged": false,
+   "source_px": [
+    1920,
+    1440
+   ],
+   "upscaled": false
+  }
+ ]
+}
