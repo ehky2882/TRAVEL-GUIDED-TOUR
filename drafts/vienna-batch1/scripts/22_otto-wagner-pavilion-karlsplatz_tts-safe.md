@@ -1,0 +1,15 @@
+# Otto Wagner Pavilion karls plats
+
+This is a railway station that the city nearly threw away.
+
+You're on karls plats, in the open space between the Ring and the great baroque dome of the karls keer kheh. In front of you are two small, matching pavilions facing each other, built of thin white marble panels held in a frame of green painted iron, with gilded sunflowers spreading across the edges of their roofs. Pick one and walk up to it.
+
+They were built in eighteen ninety eight and ninety nine, as entrances to the new shtat barn, Vienna's city railway. Otto Wagner designed the whole network, with help from his assistant yo zef maria ol brikh, who went on to design the Secession. Most of Wagner's stations are plastered; these two are different, a steel framework hung with marble slabs.
+
+Now look at the colours. The ironwork is painted a particular apple green, the signal colour of the whole shtat barn, and you'll see it on Wagner's bridges and railings all over the city. The gold sunflowers are an Art Nouveau signature, and they're what makes these two stand out from their plainer sisters.
+
+In the nineteen seventies, when the line was rebuilt as the underground, the pavilions were scheduled for demolition. There was a public outcry. They were taken apart piece by piece, restored, and put back up in nineteen seventy seven, about a metre and a half higher than before, to sit above the new tunnels.
+
+One is now a caffay. The other belongs to the veen Museum and has a small permanent exhibition about Otto Wagner.
+
+From here, walk across to the karls keer kheh and look at its two giant columns, carved with spirals like Trajan's in Rome. Then turn round and look back at Wagner's little pavilions. Nearly two centuries apart, and both trying to make Vienna feel like the centre of the world.

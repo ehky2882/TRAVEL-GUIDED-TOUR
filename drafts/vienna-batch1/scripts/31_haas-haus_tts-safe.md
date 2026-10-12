@@ -1,0 +1,15 @@
+# harss house
+
+Stand in front of Saint Stephen's Cathedral and turn round. The building behind you was, for a while, the most hated in Vienna.
+
+You're on shtef ans plats, beside the great west front of the cathedral. Turn your back on it and look across the square, to where the grah ben begins. On the corner is a building of pale stone and glass with a rounded, mirrored bay curving out towards the square. That's the harss house, by the Viennese architect hans hol line.
+
+It opened in September nineteen ninety. The site has a long history. The first harss house, built in the eighteen sixties for a carpet firm, was one of Vienna's first department stores; it was destroyed by bombing at the end of the Second World War. A plain replacement went up in the fifties, and hol line's building replaced that.
+
+When the design was unveiled, there was uproar. A modern building, in glass, on the most sacred square in the city? Even more contested, the papers said, than the building it replaced.
+
+Now look closely at that curved, mirrored bay. Stand in the right place and you'll see the cathedral reflected in it. That's hol line's answer to his critics. He didn't try to compete with Saint Stephen's, and he didn't try to imitate it. He made a building that hands the cathedral back to you, broken into panes and slightly distorted, as if seen through a modern eye.
+
+And here's the thing. Thirty odd years on, most people walking past don't notice it at all. That might be the best compliment a building on this square can get.
+
+If you can, go up to the restaurant or caffay on the upper floors and look out of the window. You'll be eye to eye with the cathedral's patterned tile roof, and you'll see it the way hol line must have pictured it from his drawing board.

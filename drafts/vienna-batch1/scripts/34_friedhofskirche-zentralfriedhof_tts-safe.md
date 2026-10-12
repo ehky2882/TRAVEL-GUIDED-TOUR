@@ -1,0 +1,15 @@
+# Church of Saint Charles Borromeo, Central Cemetery
+
+In the middle of a city of the dead, there's a church with a sky blue dome. Vienna's relationship with its cemeteries is famously affectionate, and this is its centrepiece.
+
+You're in the Central Cemetery, the tsen trahl freed hofe, in zimmer ing, at the far south east of Vienna. From the main gate, walk straight ahead up the long central avenue. At the end, raised up on a terrace with broad steps, is a great domed church in pale stone. That's the Church of Saint Charles Borromeo.
+
+It was designed by the architect max hay geh leh, a pupil of Otto Wagner, and built between nineteen hundred and eight and nineteen hundred and eleven. hay geh leh had his design worked out years earlier, by eighteen ninety nine, but construction took almost a decade to begin. It's considered his masterpiece, and one of the finest yoo gent shteel churches in Vienna, alongside Wagner's own keer kheh am shtine hofe.
+
+Locals often call it the loo eh ger church, because the crypt beneath it holds the tomb of karl loo eh ger, mayor of Vienna at the turn of the twentieth century. He's a deeply controversial figure today, as an openly antisemitic politician, and that's part of what you're standing in front of too.
+
+Now climb the steps and go in, if it's open. The interior is a complete work of art, painted and decorated by a team of artists, and the dome is painted a deep sky blue. Coming in from the grey of the cemetery, it's quite something.
+
+The three flights of steps leading up to the church are often said to represent three paths to God: scripture, the contemplation of nature, and the contemplation of the good and beautiful.
+
+Afterwards, find the musicians' graves near the main avenue, Group thirty two ay. Beethoven, Schubert, Brahms and yo hahn strauss are all there, within a few metres of each other. Come early on a misty morning if you can, when the cemetery is at its most beautiful.

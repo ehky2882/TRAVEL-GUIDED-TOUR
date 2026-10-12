@@ -1,0 +1,15 @@
+# jay and el lob my er
+
+If you've looked up at the chandeliers in the Vienna State Opera, or at the Met in New York, you've already met this shop.
+
+You're on kairnt ner shtrasser, number twenty six, the busy pedestrian street running from the Opera to Saint Stephen's. In front of you is a dignified old shopfront with the name lob my er above it and glass glinting in the windows.
+
+yo zef lob my er founded the business in eighteen twenty three, selling beeder my er glass round the corner on vy boorg gasser. His son lood vig turned it into one of the great names in European glass, worked with the builders of the ring shtrasser, and in eighteen sixty four helped found what's now the Museum of Applied Arts. In the eighteen eighties lob my er made some of the first electric chandeliers in the world, in collaboration with Thomas Edison.
+
+Then came the moderns. In the first decades of the twentieth century the firm worked with yo zef hoffman, adolf lohs and the artists of the veener vairk shtetter, and several of those designs are still made today. The most famous is the drinking set designed by lohs, plain, heavy bottomed tumblers with a faint cut pattern in the base.
+
+My favourite detail is a goblet. In nineteen ten, when the second mountain spring water line reached Vienna, Emperor Franz Joseph switched it on in the City Hall and took the first sip from a lob my er crystal goblet.
+
+The family still runs the company, six generations on. And on the second floor of this building, up the stairs, is a small glass museum.
+
+Go in and climb to the museum. Then, back outside, walk a couple of minutes towards Saint Stephen's and turn right into vy boorg gasser. That's the street where yo zef lob my er opened his first shop in eighteen twenty three, and the firm has never moved more than a few hundred metres from it.

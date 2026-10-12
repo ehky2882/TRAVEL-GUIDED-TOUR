@@ -1,0 +1,17 @@
+# Mühlbauer
+
+In nineteen hundred and three, Julianna Mühlbauer opened a small hat workshop in Floridsdorf, on the far side of the Danube. Her great-grandson runs it now, and the hats are still made by hand, here in the middle of Vienna.
+
+You're on Seilergasse, number ten, a narrow street running between Stephansplatz and the Neuer Markt. In front of you is a clean, spare shopfront with the name Mühlbauer above it. That's the flagship, opened in two thousand and five.
+
+It was designed by the Berlin architects Kühn Malvezzi, who are better known for galleries and museums. You can see why they got the job. A good hat shop has the same problem as a good gallery: a small number of precious objects that need to be seen properly, with nothing competing with them.
+
+The hats themselves are the point. Klaus Mühlbauer, the fourth generation, designs the collections with two in-house designers. The workshop is near Schwedenplatz, and most of what's sold here is made in and around Vienna. Felt, straw, fabric and fur are shaped over wooden moulds, the way hatters have always done it. And most hats ordered are made to fit the person who ordered them.
+
+What I find quietly impressive is the combination. A family business more than a hundred and twenty years old that has become one of the most respected names in headwear, without either fossilising or forgetting what it's for.
+
+It's worth knowing they have a second shop in Neubaugasse, in the seventh district, if you're over that way.
+
+[beat]
+
+From here, walk to the end of Seilergasse and onto the Neuer Markt. The fountain in the middle, by Georg Raphael Donner, has four figures representing Austrian rivers, and the Capuchin church on the corner holds the imperial crypt, where the Habsburgs are buried.

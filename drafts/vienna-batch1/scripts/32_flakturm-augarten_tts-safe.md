@@ -1,0 +1,15 @@
+# flak toorm ow garten
+
+In the middle of a baroque garden, among the chestnut trees, there's a concrete tower about fifty metres tall. Nobody knows what to do with it.
+
+You're in the ow garten, in the second district, Vienna's oldest baroque park. Walk along the main chestnut avenue until you can see it over the trees: a massive, round, windowless concrete tower with a ring of platforms near the top. That's the flak tower, the flak toorm, and there's a second, square one elsewhere in the same park.
+
+They were built during the Second World War, finished by nineteen forty four, to designs by the German architect freed rikh tamms. Vienna got six of them, in three pairs. In each pair, one tower, like this one, carried the anti aircraft guns, and the other carried the radar and the fire control. They were also shelters for thousands of people during the air raids.
+
+Look at the scale of it, and the walls. Reinforced concrete several metres thick. After the war the Soviet army tried a test explosion inside this one. The interior partly collapsed, but the walls stood. And because the towers are so close to housing, nobody has ever dared to blow them up properly.
+
+So they've stayed. Both ow garten towers are now protected monuments. Over the years there have been plenty of proposals to give it a new use. None has stuck. So far, it has simply stood here, slowly being reclaimed by birds.
+
+What's worth knowing is that this is one of the most honest things in Vienna. A city of palaces and coffee houses also has to carry this.
+
+When you've seen it, walk across the park to the baroque palace on its far side. That's the home of the ow garten porcelain manufactory, with a small museum and workshop tours. Few places put the elegant and the brutal quite so close together.

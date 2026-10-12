@@ -1,0 +1,17 @@
+# Grand Ferdinand
+
+The Ringstraße was built to impress, and most of it still does. This building was put up long after the party, and it's all the better for it.
+
+Schubertring, numbers ten to twelve. Stand on the far side of the Ring and look back across the tram lines. You'll see a long, flat, very upright façade with rows of identical windows: the Grand Ferdinand. The Opera is a few minutes' walk one way along the Ring, the Stadtpark a few minutes the other.
+
+It went up in the early nineteen fifties as an office building, and you can tell. It's tidy and rhythmical, with none of the stucco and statues of its nineteenth-century neighbours. That plainness is exactly why the façade and the marble foyer behind it are now protected. When the Vienna architects Atelier Heiss turned it into a hotel, opening in twenty fifteen, they kept the front and the entrance hall and rebuilt much of what lay behind.
+
+Inside, the owner, the hotelier Florian Weitzer, did something nicely contrary. He hung handmade chandeliers by Lobmeyr, the glassmakers round the corner on Kärntner Straße since eighteen twenty-three, under ceilings about seven metres high. Post-war office, imperial crystal.
+
+Then there's the roof. Eight floors up is a heated infinity pool, open every day of the year, for hotel guests only. There's also a rooftop restaurant and a breakfast room with views across to St Stephen's. And downstairs, Meissl and Schadn serves the schnitzel that Viennese families argue about.
+
+And one more resident: the hotel keeps a horse. He's called Pferdinand.
+
+[beat]
+
+When you've seen it, walk along the Ring into the Stadtpark. The gilded statue of Johann Strauss playing his violin is a few minutes away, and beyond it the Wien river runs between Jugendstil stone embankments, one of the city's loveliest bits of engineering.

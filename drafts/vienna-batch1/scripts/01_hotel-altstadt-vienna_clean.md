@@ -1,0 +1,15 @@
+# Hotel Altstadt Vienna
+
+A hotel is usually one person's idea, repeated sixty times. This one is sixty-two ideas, and almost none of them agree.
+
+Kirchengasse, number forty-one, on the slope of Spittelberg. You're looking at a tall, pale patrician house with a modest front door and nothing in particular to announce it, which is rather the point. Behind you and downhill are the narrow lanes of Spittelberg itself, all Biedermeier fronts and cobbles.
+
+The story starts with one man, Otto Ernst Wiesenthal, who wanted his own hotel and finally got one about thirty-five years ago. Instead of fitting out sixty-two identical rooms, he handed them to different hands. Some were designed by the Milanese architect Matteo Thun, others by the fashion designer Atıl Kutoğlu, and the newest is a suite by Elfrid Wimmer-Repp themed on Sigmund Freud. No two rooms here are alike, and they're not meant to be.
+
+Then there's the art. Up the stairs and along the corridors you'll find Warhol, Brigitte Kowanz, Prachensky, Attersee, Helnwein. Some of it is on loan from museums, some belongs to Wiesenthal himself. It isn't hung like a gallery. It's hung like a house where someone collects rather more than the walls can comfortably hold.
+
+What I like, as an architect, is that the building doesn't try to be anything. The old house does the old-house job, high ceilings and deep windows, and lets the rooms argue with each other inside it. It's a very Viennese idea: a calm façade, and a great deal going on behind it.
+
+[beat]
+
+Before you head off, walk down to Spittelberggasse and wander the lanes for ten minutes. The little Biedermeier houses are the reason this neighbourhood is protected at all, and they're at their best early in the morning, before the bars open.
