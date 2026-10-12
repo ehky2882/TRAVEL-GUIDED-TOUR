@@ -16,6 +16,9 @@ Udaipur has no Atlas tours yet, and no studio code is assigned. **Owner's call:*
 ## Images
 Picker: https://claude.ai/artifact/WP88rMVQMjxxbVFnvMEyMz. It has 12 of the 24 tours and 106 photos, from Unsplash, Pexels and public domain only. **Only the landmarks have real on-subject photos.** For the restaurants, cafés, shops and hotels, nothing free-licence exists. Those rows show the view or context only, labelled as such. `IMAGE-LINKS.md` lists, per tour, where the venue's own photos live.
 
+
+**Owner picks (2026-10-12), on gh-pages:** 13 Old City Market (hero + 1), 18 City Palace (hero + 6), 21 Fateh Sagar (hero + 1), 22 Manjhi Ka Ghat (hero + 2). That's 14 files at 1200×900, named `<slug>_hero.webp`, `_2`… in pick order, all Unsplash, Pexels or public domain, so no credit is needed. See `image-manifest.json`. 21's gallery photo was upscaled 4% from a 1152-px-wide source. **The other 20 tours have no images yet.**
+
 ## Pick-map
 
 | # | Title | Slug | lat | lon | type | script |
