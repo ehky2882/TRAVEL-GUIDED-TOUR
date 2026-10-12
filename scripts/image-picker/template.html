@@ -43,6 +43,7 @@ section.stop{margin-bottom:36px;scroll-margin-top:120px}
 .pick{all:unset;cursor:pointer;display:block}
 .pick:focus-visible{outline:2px solid var(--navy);outline-offset:-2px}
 .card img{display:block;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--shade)}
+.meta a.src,#lbsrc{color:inherit;text-decoration:underline;margin-left:auto}
 .meta{padding:6px 8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--muted)}
 .pill{border:1px solid var(--edge);border-radius:99px;padding:0 7px}
 .pill.cr{color:var(--warn);border-color:var(--warn)}
@@ -91,7 +92,7 @@ dialog.lb img{max-width:96vw;max-height:80vh;display:block;border-radius:3px}
 <dialog class="lb" id="lb">
   <div class="lbbar"><span id="lbcode"></span><span><button id="lbpick" type="button">Pick</button> <button id="lbclose" type="button">Close</button></span></div>
   <img id="lbimg" alt="">
-  <div class="lbbar"><span id="lbmeta"></span></div>
+  <div class="lbbar"><span id="lbmeta"></span><a id="lbsrc" target="_blank" rel="noopener" hidden>Source page</a></div>
 </dialog>
 
 <script>
@@ -117,7 +118,7 @@ function render(){
       const c=document.createElement('div');c.className='card';c.dataset.num=s.num;c.dataset.code=im.code;c.dataset.cr=im.credit?'1':'0';
       c.innerHTML='<button class="pick" type="button" aria-label="Pick '+im.code+'"><img loading="lazy" src="'+im.f+'" alt="Candidate '+im.code+' for '+esc(s.title)+'"></button>'+
         '<button class="view" type="button">View</button>'+
-        '<div class="meta"><span class="pill'+(im.credit?' cr':'')+'">'+esc(im.lic)+(im.credit?' · CREDIT NEEDED':'')+'</span><span class="mark">'+im.code+'</span></div>';
+        '<div class="meta"><span class="pill'+(im.credit?' cr':'')+'">'+esc(im.lic)+(im.credit?' · CREDIT NEEDED':'')+'</span><span class="mark">'+im.code+'</span>'+(im.src?'<a class="src" href="'+esc(im.src)+'" target="_blank" rel="noopener">source</a>':'')+'</div>';
       c.querySelector('.pick').addEventListener('click',()=>toggle(s.num,im.code));
       c.querySelector('.view').addEventListener('click',()=>openLb(im,s));
       g.appendChild(c);
@@ -143,7 +144,7 @@ let armed=false;
 $('clear').addEventListener('click',e=>{const b=e.currentTarget;if(!armed){armed=true;b.textContent='Tap again to clear';setTimeout(()=>{armed=false;b.textContent='Clear all'},2500);return}armed=false;b.textContent='Clear all';picks={};save();paint()});
 const lb=$('lb');let cur=null;
 function openLb(im,s){cur={im,s};$('lbimg').src=im.f;$('lbimg').alt='Candidate '+im.code;$('lbcode').textContent=im.code+' · '+s.title;
-  $('lbmeta').textContent=im.w+'×'+im.h+' original · '+im.lic+(im.credit?' · credit: '+(im.by||'see source'):'');lbBtn();if(lb.showModal)lb.showModal()}
+  $('lbmeta').textContent=im.w+'×'+im.h+' original · '+im.lic+(im.credit?' · credit: '+(im.by||'see source'):'');const ls=$('lbsrc');if(im.src){ls.href=im.src;ls.hidden=false}else{ls.hidden=true}lbBtn();if(lb.showModal)lb.showModal()}
 function lbBtn(){const st=cur&&state(cur.s.num,cur.im.code);$('lbpick').textContent=st?'Unpick ('+st.l+')':'Pick'}
 $('lbpick').addEventListener('click',()=>{if(cur){toggle(cur.s.num,cur.im.code);lbBtn()}});
 $('lbclose').addEventListener('click',()=>lb.close());

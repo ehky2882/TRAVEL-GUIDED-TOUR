@@ -27,6 +27,9 @@ names. Keep each JPEG about 1000-1600 px on the long side; Boston's 258 came to
   credit  true for CC BY / BY-SA. The page marks it CREDIT NEEDED, because the
           app has no credit line and the credit must then go in drafts/CREDITS.md
   by      the photographer, shown on the card
+  src     OPTIONAL: the photo's source page (Unsplash / Pexels / Commons page).
+          Shown as a "source" link on the card and in the lightbox, so the
+          owner can open the original
 
 OUTPUT: `<out>` (default `picker.html` in the directory) plus `files.json`, the
 map to hand the Artifact tool's `files` parameter so every image is published
