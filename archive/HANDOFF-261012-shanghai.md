@@ -9,7 +9,7 @@
 
 ## Owed
 1. **Owner:** send an Amap pin for 01 Blue Bottle Zhang Yuan. The given point was 10 km out, so the README uses Zhang Yuan's centroid.
-2. **Owner:** say which 05 Meet the Bund branch is meant. The given point is 59 Hong Kong Rd; the script is written for BFC.
+2. ~~Meet the Bund branch~~: **the owner confirmed BFC** (2026-10-12). The point is the BFC complex, 31.22861, 121.49341.
 3. **Owner picks** from the picker. Six tours have no candidates: they need owner photos, an OK for CC BY-SA, or press images with the venue's permission.
 4. Before recording: re-check Mercato's status, Xin Rong Ji's star count and name, and Jesse's founding year (README § perishable).
 

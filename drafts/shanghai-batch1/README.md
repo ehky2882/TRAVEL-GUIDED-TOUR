@@ -24,7 +24,7 @@ All 13 coordinates came from a Chinese map app, so they use **GCJ-02**, which is
 | 02 | Former Residence of Hotung | `hotung-residence-shanghai` | 31.23278 | 121.44803 | Shaanxi N. Rd, at 457 (Beijing W. Rd corner). OK |
 | 03 | Jean-Georges & Mercato | `jean-georges-mercato-three-on-the-bund` | 31.23619 | 121.48628 | 有利大楼, 3 Zhongshan E. 1st Rd (Three on the Bund). OK |
 | 04 | Jesse Restaurant | `jesse-restaurant-tianping-road` | 31.20506 | 121.43337 | Tianping Rd, at 41. OK |
-| 05 | Meet the Bund | `meet-the-bund-bfc` | ? | ? | 🔴 **Unresolved.** Converted, the point is **59 Hong Kong Rd**, the former Shanghai Bankers' Club in Waitanyuan. No source puts Meet the Bund there. The verified branches are: **BFC South Block 3F**, 600 Zhongshan E. 2nd Rd (the Michelin-starred original, about 31.2286, 121.4934); **Skyline**, Raffles City The Bund West Tower 56F, Hongkou (already pinned as "Meet the Bund Skyline"); and **Xintiandi**, 338 Huangpi S. Rd. **The script is written for BFC.** Ask the owner which branch they mean before wiring. |
+| 05 | Meet the Bund | `meet-the-bund-bfc` | 31.22861 | 121.49341 | **Owner confirmed BFC (2026-10-12).** The point is the OSM object for the Bund Finance Center complex (外滩金融中心, 600 Zhongshan E. 2nd Rd). The restaurant is S301, South Block 3F, inside that complex, so this is within about 150 m. The owner's original point was 59 Hong Kong Rd, and is not used. The Fosun Foundation (OSM way 520214798) is at 31.22888, 121.49358 |
 | 06 | Ops Cafe | `ops-cafe-taiyuan-road` | 31.20766 | 121.45076 | Taiyuan Rd near Yongjia Rd (Lane 177 No. 1). OK |
 | 07 | Rockbund Art Museum | `rockbund-art-museum` | 31.24313 | 121.48305 | OSM object 上海外滩美术馆. OK |
 | 08 | The PuLi Hotel and Spa | `the-puli-hotel-shanghai` | 31.22432 | 121.44375 | 1 Changde Rd, beside Jing'an Park. OK |
@@ -36,7 +36,7 @@ All 13 coordinates came from a Chinese map app, so they use **GCJ-02**, which is
 
 ## Place questions for Edward (not decided here)
 
-- **05 Meet the Bund ↔ the existing pin "Meet the Bund Skyline".** Same brand, different branch. A tenant is not the site and two branches are not one place, so this is probably not a place. It is listed only so it is seen.
+- **05 Meet the Bund (BFC) ↔ the existing pin "Meet the Bund Skyline".** Same brand, different branch, about 3.0 km apart. A tenant is not the site and two branches are not one place, so this is probably not a place. It is listed only so it is seen.
 - **02 Hotung, 12 Xin Rong Ji, and the existing pin "Mi Shang Prada Rong Zhai".** These are three different houses within about 400 m on Shaanxi N. Rd. They are not places, but the scripts cross-refer to each other.
 
 ## Facts that are perishable or single-source
