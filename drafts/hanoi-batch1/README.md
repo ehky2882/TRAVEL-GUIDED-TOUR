@@ -49,6 +49,6 @@ Run `python3 scripts/check-coordinates.py` before wiring: none of these coordina
 
 ## Images uploaded (owner picks, 2026-10-12)
 
-35 WebPs at 1200×900 on gh-pages, for 11 tours: 09, 16–23, 27, 28.  has each file's URL, licence, photographer and source page.
+35 WebPs at 1200×900 on gh-pages, for 11 tours: 09, 16–23, 27, 28. `image-manifest.json` has each file's URL, licence, photographer and source page.
 Tours with no picks yet: 01–08, 10–15, 24–26.
-⚠️  (pick 09-3) may not be the Metropole: the building has a tower the Heritage Wing doesn't. Confirm before wiring.
+⚠️ `metropole-hanoi_2.webp` (pick 09-3) may not be the Metropole: the building has a tower the Heritage Wing doesn't. Confirm before wiring.
