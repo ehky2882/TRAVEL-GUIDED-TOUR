@@ -1,0 +1,21 @@
+# Imperial Citadel of tang long
+
+*TTS-safe version — paste the body below into ElevenLabs.*
+
+---
+
+In the year ten ten, a king moved his capital here and gave it a name: tang long. Ascending Dragon.
+
+You're standing in front of dwan mon, the great south gate of the citadel, a long, solid wall of old brick and stone, with five arched gateways at the bottom and a two storey watchtower on top. If you can see five arches side by side, you're in the right place.
+
+Have a look at the arches. They're not all the same size, and that was the point. The tall one in the middle was for the emperor alone. The ones either side were for the royal family and high officials. Everyone else went another way. You could tell a man's rank by which hole in the wall he walked through.
+
+The citadel was founded by King lee tie toh, and it was the seat of the Vietnamese court for most of the next eight centuries, until the capital moved south to hway in seventeen eighty nine. Most of what stood here was later demolished by the French. What survives is a scattering of pieces, this gate; the North Gate, which still has cannon damage on its face from the French attack of eighteen eighty two; and, through the gate behind you, a pair of stone dragons flanking the steps of a palace that's no longer there.
+
+Go through and find them. They're the steps of king tee en Palace, carved in the fifteenth century, and they lead up to nothing but a platform and the sky.
+
+And here's what makes this place unusual. Behind those dragon steps stands a plain, two storey building called D sixty seven, built in nineteen sixty seven. Underneath it is a bunker. During the American war, the Politburo and the army's high command met down there and directed the fighting. So one site holds the court of the lee kings and the command room of the twentieth century, a few metres apart.
+
+That's why UNESCO made the citadel a World Heritage Site in twenty ten: not for any single building, but for the layers. A thousand years of Vietnamese power, all stacked on one patch of ground.
+
+Before you leave, cross hwang zee oh Street to the excavation site at number eighteen. Walkways take you over the dug up foundations of the old palaces, and there you can look straight down through the centuries.

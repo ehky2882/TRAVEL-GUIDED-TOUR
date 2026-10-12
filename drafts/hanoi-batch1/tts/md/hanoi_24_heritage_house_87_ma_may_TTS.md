@@ -1,0 +1,21 @@
+# Heritage House, eighty seven mah may
+
+*TTS-safe version — paste the body below into ElevenLabs.*
+
+---
+
+Five families lived in this house at once. It was built for one.
+
+You're on mah may Street in the Old Quarter, outside number eighty seven. It's a narrow wooden front under a tiled roof, rather lower and older looking than its neighbours. This is the Heritage House, one of the best preserved traditional merchant's houses in Hanoi. You can go in.
+
+It went up in the late nineteenth century, on the typical Old Quarter plot: narrow at the street and very deep behind. For generations it belonged to traders, and until nineteen fifty four it was a shop selling medicinal herbs.
+
+Go inside and walk straight through, and you'll see how the house solves its own problem. A long thin plot is dark in the middle, so the house is broken up by courtyards. First the shop at the front. Then an open air courtyard, letting light and air down into the heart of the building. Then the main house, with the family altar on the upper floor. Another courtyard. Then, right at the back, the kitchen and the washroom, as far as possible from the street and from the shrine. Front to back is public to private, and that order is the house.
+
+Look up at the timber: dark, heavy, carved wooden frames, and roofs of small curved tiles laid in rows. Nothing here is grand. Everything is careful.
+
+After nineteen fifty four, the house was taken over and divided between five families, who lived here until nineteen ninety nine. Then the city of Hanoi and the city of Toulouse, in France, restored it together, and in two thousand and four it was recognised as a national heritage site. A French president, fron swah oh lond, came to see it on a state visit.
+
+What's worth knowing, standing here, is that most of the houses around you were once just like this, and most have lost their courtyards to extra rooms. This one shows you what the Old Quarter was built for: trade at the front, family in the middle, fire at the back, and the sky let in every few metres.
+
+When you leave, walk a few minutes north to oh kwan choo ung, the last surviving gate of the old city. It's where the merchants of streets like this one once passed in and out with their goods.
