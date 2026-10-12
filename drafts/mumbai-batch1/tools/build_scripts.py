@@ -14,7 +14,7 @@ Writes, per tour:
     mumbai_NN_<slug>_TTS.txt  TTS-safe: phonetic respellings (lowercase, no
                               hyphens), no brackets, [beat] -> paragraph break,
                               dashes -> commas, '&' -> 'and'
-and one combined mumbai-batch1-scripts.md holding every clean script.
+    mumbai_NN_<slug>.md       the clean script as Markdown, one file per tour.
 
 Exits 1 if any TTS file still holds a digit, a hyphen, a bracket, or a
 respelling key it failed to replace.
@@ -233,7 +233,7 @@ def main():
     src, out = sys.argv[1], sys.argv[2]
     os.makedirs(out, exist_ok=True)
     blocks = re.split(r"^=== ", open(src, encoding="utf-8").read(), flags=re.M)[1:]
-    combined, bad = ["# Mumbai batch 1: clean scripts\n"], []
+    bad = []
     for b in blocks:
         head, rest = b.split("\n", 1)
         num, slug, title = [x.strip() for x in head.split("|")]
@@ -250,9 +250,9 @@ def main():
             if re.search(pat, t_body):
                 bad.append(f"{base}: {why} left in TTS body: {re.findall('.{0,20}'+pat+'.{0,20}', t_body)[:2]}")
         words = len(body.replace("[beat]", "").split())
-        combined.append(f"\n---\n\n## {num} · {title}\n\n*{vantage.strip()}* · {words} words · about {round(words/150*60)} s\n\n{body}")
+        open(os.path.join(out, base + ".md"), "w", encoding="utf-8").write(
+            f"# Mumbai {num} · {title}\n\n*{vantage.strip()}* · {words} words · about {round(words/150*60)} s\n\n{body}")
         print(f"{num}  {words:4d} words  {base}")
-    open(os.path.join(out, "mumbai-batch1-scripts.md"), "w", encoding="utf-8").write("".join(combined))
     if bad:
         print("\n".join(bad)); sys.exit(1)
     print(f"OK — {len(blocks)} tours, clean + TTS written, TTS bodies free of digits/hyphens/brackets")

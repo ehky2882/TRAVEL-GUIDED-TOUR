@@ -1,0 +1,15 @@
+# Mumbai 08 · AER, Four Seasons Mumbai
+
+*Vantage: on Dr E Moses Road, Worli, outside the Four Seasons Hotel* · 326 words · about 130 s
+
+Thirty-four floors up, there's a roof that opens. On a Bombay night, that's worth more than it sounds.
+
+You're on Dr E Moses Road in Worli, outside the Four Seasons Hotel — a tall glass tower among the old mill land and new skyscrapers of the district. AER is right at the top of it, on the thirty-fourth floor.
+
+Here's why people go. It's an open-air bar, so the whole of central Mumbai is laid out around you: the Arabian Sea to the west, the cables of the Bandra–Worli Sea Link to the north, and the towers of Lower Parel and Worli all around. In the dry season the sky is open. In the monsoon, when the rain comes in sideways off the sea, a retractable roof slides across and the party carries on beneath it. The interiors are styled loosely after a yacht — which, up here, in a strong wind, feels about right.
+
+Now have a look at the neighbourhood down at street level. Worli was mill land and fishing villages within living memory. The towers you're standing among have mostly gone up in the last twenty-odd years, on land where cotton was spun. From the top of this building you can see both versions of the city at once: the fishing village at the tip of the Worli shore, and the glass going up around it.
+
+And that's really the point of a place like this. A rooftop bar is a slightly ridiculous thing in a city where most people will never see the view. But it does show you something you can't see from the pavement: how much of Mumbai is water, and how much of it is still being built.
+
+If you've a few minutes, head west to the sea front. The Worli seaface promenade runs along the shore, and at the northern end, by the fishing village, you'll get the same Sea Link view from ground level, and for free.

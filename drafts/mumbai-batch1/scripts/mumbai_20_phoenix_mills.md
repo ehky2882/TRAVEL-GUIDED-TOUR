@@ -1,0 +1,17 @@
+# Mumbai 20 · Phoenix Mills and Palladium
+
+*Vantage: on Senapati Bapat Marg, Lower Parel, at the main entrance to the Phoenix Mills compound* · 321 words · about 128 s
+
+There's a chimney in this shopping centre. Nobody spins cotton here any more, but somebody decided it should stay.
+
+You're on Senapati Bapat Marg in Lower Parel, at the entrance to Phoenix Mills. Behind the gates, a compound of malls, restaurants, bars, a cinema and a hotel, with the Palladium at its smartest end. Look among the newer buildings for a tall brick chimney standing on its own.
+
+Here's what it remembers. Phoenix Mills was incorporated on the twenty-seventh of January, nineteen oh five, as a cotton textile mill on about seventeen acres of land here in Lower Parel. This whole district was Girangaon, the village of the mills — rows of chimneys, workers' tenements, and hundreds of thousands of people making cloth for the empire and then for India.
+
+Then came nineteen eighty-two. The great Bombay textile strike shut every mill in the city for more than a year. Many never properly recovered. Mill owners found that the land under their machines was worth more than anything the machines could make, and Phoenix was among the first to act. It began with a bowling alley in a corner of the old mill, while parts of the mill were still running. Shops followed, then the malls, then everything else. The chimney was kept.
+
+And that, I think, is the real point. The chimney is a beautiful object, and it's also a slightly uncomfortable one. It marks a moment when this city decided that its future lay in selling things rather than making them — and the tens of thousands of mill workers who lost their jobs aren't the people shopping here now.
+
+[beat]
+
+If you fancy seeing what was here before, walk out of the compound and into the side streets of Lower Parel. Among the towers you'll still find chawls — the old tenement blocks of the mill workers — with their long shared balconies and washing hung out to dry.

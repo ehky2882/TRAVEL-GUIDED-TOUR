@@ -1,0 +1,17 @@
+# Mumbai 19 · Linking Road, Bandra
+
+*Vantage: on Linking Road, Bandra West, near the National College end among the street stalls* · 315 words · about 126 s
+
+The name of this road is a description of the job it was given. It did it rather too well.
+
+You're on Linking Road in Bandra West, among the stalls near the National College end. Look around: footwear piled high on folding tables, racks of kurtas and jeans, bags, belts, phone covers, and, behind them, the glass fronts of international brands. Expect traffic. The guide that sent you here warns about it, and it's right.
+
+Here's the history. In the nineteen forties, Bandra and Juhu were still separate suburbs with fields and villages between them. This was one of the first roads built to link them — hence the name — and it originally carried the name of Dadabhai Naoroji, the Parsi economist and politician who was the first Indian elected to the British Parliament. Over the following decades the suburbs grew into each other along it, and so did the shops.
+
+Have a look at the two economies sitting side by side. On the pavement, small traders selling shoes, copies and bargains from a few square feet of space; behind them, flagship stores paying some of the highest rents in the country. In the late two thousands, newspapers were calling this India's most expensive retail location. The stalls are still here anyway.
+
+And here's the thing. Most cities separate their luxury shopping from their street trade. Mumbai rarely bothers. On Linking Road the two lean on each other: the stalls bring the crowds, and the crowds go on to the stores. If you bargain at a stall here, the convention is to start at about half of what you're asked. Smile while you do it.
+
+[beat]
+
+If the traffic gets to you, turn west off Linking Road towards Pali Village and Carter Road. Within ten minutes you'll be among old cottages and cafes, and then at the sea wall, which is a different suburb entirely.

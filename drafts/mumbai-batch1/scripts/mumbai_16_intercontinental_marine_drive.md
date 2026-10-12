@@ -1,0 +1,19 @@
+# Mumbai 16 · InterContinental Marine Drive
+
+*Vantage: on the Marine Drive promenade, across the road from number one thirty-five, the InterContinental* · 342 words · about 137 s
+
+The newest building on this stretch of Marine Drive was told, more or less, to dress up as the oldest.
+
+You're on the Marine Drive promenade, with the sea wall behind you. Across the road, look for a cream-coloured building of eight storeys, with one rounded corner and a short turret on the roof. That's the InterContinental Marine Drive.
+
+Have a look at its neighbours first: the long run of apartment blocks to either side, with rounded balconies, horizontal bands and stepped tops. That's Art Deco, built mostly in the nineteen thirties and forties, much of it for wealthy Parsi families. In twenty eighteen, UNESCO made this stretch part of a World Heritage Site — the Victorian Gothic and Art Deco Ensembles of Mumbai.
+
+Now look back at the hotel. For decades this plot held the Hotel Nataraj. When it was rebuilt as the InterContinental — it's been here a little over twenty years — anything new on Marine Drive had to sit politely among its neighbours. So the architects gave it a rounded side and that turret, so it would read, at a glance, as one of the family. It's a small hotel, just fifty-nine rooms, and every one faces the sea.
+
+That turret, by the way, has a job. Up there is the Dome, the hotel's rooftop bar, and it's one of the classic places in the city to watch the sun go down over the Arabian Sea.
+
+And here's the thing. This is how a heritage street survives — not only by keeping the old buildings, but by persuading the new ones to behave. You can argue about whether a modern hotel ought to imitate the nineteen thirties. But stand here and look along the row, and you'll find it hard to pick out the impostor.
+
+[beat]
+
+If you fancy finding the real thing, walk north along the promenade towards Churchgate. Keep an eye out for Kapur Mahal, Zaver Mahal and Keval Mahal — three of the earliest Deco blocks on the drive, built between nineteen thirty-seven and nineteen thirty-nine.

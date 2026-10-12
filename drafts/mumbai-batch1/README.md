@@ -10,7 +10,7 @@ Source list: [architecturehunter.com/guide/mumbai-india](https://architecturehun
 |---|---|
 | `scripts/mumbai_NN_<slug>.txt` | Clean script. The metadata header sits above the first `---`; narration follows it. Keeps `[beat]` as an authoring marker |
 | `scripts/mumbai_NN_<slug>_TTS.txt` | TTS-safe: phonetic respellings (lowercase, no hyphens), titles respelled too, no brackets, `[beat]` → paragraph break, every number in words |
-| `scripts/mumbai-batch1-scripts.md` | All 30 clean scripts in one file, with word counts |
+| `scripts/mumbai_NN_<slug>.md` | The clean script as Markdown, one file per tour, with word count |
 | `source.md` | The single source the scripts are built from. **Edit this, then rebuild:** `python3 drafts/mumbai-batch1/tools/build_scripts.py drafts/mumbai-batch1/source.md drafts/mumbai-batch1/scripts`. It exits 1 if a TTS body still holds a digit, hyphen or bracket |
 | `coordinates.tsv` | One point per tour, with confidence notes. **Four are approximate or missing, see below** |
 | `image-candidates.json` | Picker code → source page, licence, photographer, and (Unsplash) the `download_location` to ping when a photo is used |

@@ -1,0 +1,15 @@
+# Mumbai 06 · Ayub's
+
+*Vantage: Forbes Street, Kala Ghoda, outside Ayub's counter, near the old Rhythm House* · 314 words · about 126 s
+
+A kebab roll here cost two rupees fifty when it started. That's not the interesting part.
+
+You're on Forbes Street, which signs call V B Gandhi Marg, in Kala Ghoda — a few doors from where Rhythm House, the city's most famous record shop, used to stand. Look for the Ayub's sign and a grill counter working flat out. Ayub's opens in the late afternoon and keeps going until well past one in the morning.
+
+The family story is a short one. Ayub's began in nineteen eighty-five as a food cart, started by a man who had come to Bombay from Delhi, and run now by his son, Ajaz Ayub Shaikh. In the early days it was meat only — mutton seekh kebabs, mostly. A vegetarian kitchen was added in nineteen eighty-nine, which, in this city, is how you double your customers overnight.
+
+Have a look at the menu board. The roll is the thing: a paratha wrapped round chicken tikka, reshmi kebab or seekh kebab, with sliced onion, lime and two chutneys. Eaten standing up, or sitting in a taxi, or on the steps of an office building. Paneer and mushroom tikka on the vegetarian side, and, for the brave, the baida roti — a flatbread folded round egg and mince.
+
+And here's the thing. The Fort is the city's grand district by day: high courts, banks, the old university. But at night it empties, and then it belongs to the people who feed it — office cleaners, students, party crowds heading home, taxi drivers. Ayub's has fed all of them for forty years, and the prices have gone up roughly a hundredfold in that time without the queue noticing.
+
+If you've time, walk round the corner to the Kala Ghoda junction and the black horse. After dark, with the galleries shut and the stone glowing, it's the quietest the district ever gets.

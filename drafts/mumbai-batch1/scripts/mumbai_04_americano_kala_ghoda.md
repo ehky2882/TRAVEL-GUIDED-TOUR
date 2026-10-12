@@ -1,0 +1,15 @@
+# Mumbai 04 · Americano
+
+*Vantage: Nagindas Master Road, Kala Ghoda, in front of Radha Bhavan* · 310 words · about 124 s
+
+A Californian chef, an Italian menu and a dash of Puerto Rico, in an old Bombay office building. It works rather better than it sounds.
+
+Nagindas Master Road, Kala Ghoda. In front of you, Radha Bhavan, an old commercial building with tall windows — and at street level, behind fluted glass, Americano. Inside, if you can see in, the ceilings are about twenty feet high and there's a counter where you can sit and watch the kitchen.
+
+The chef is Alex Sanchez, who grew up in California and cooked at Eleven Madison Park in New York before coming to Mumbai, where he ran the kitchen of a much-loved restaurant called The Table for seven years. He opened Americano in twenty nineteen with the restaurateur Mallyeka Watsa. The menu calls itself Italian, but it's Italian as you'd find it in California — handmade pastas, wood-fired pizzas — with flashes of Puerto Rico and a good deal of Bombay in the pantry. Sweetcorn ribs. A crispy jalapeño pork belly. And, it being this city, a butter garlic crab.
+
+Now, the dish everybody photographs is the tiramisu: tall, generous, with a chocolate-coated wafer disc on top. Order it. It is, as the reviews keep saying, rather good.
+
+And here's the thing about this road. Kala Ghoda is Bombay's old business district, full of Victorian stone and colonial counting houses, and for most of the twentieth century you'd have eaten here only at your desk. Places like Americano have turned these old offices into dining rooms — a quiet change, but it means the Fort now has an evening life it never really had.
+
+If you're making an evening of it, walk a couple of minutes east to the Kala Ghoda junction, where the black horse stands — and then, if you've room, Trishna is round the corner for a second course of crab.

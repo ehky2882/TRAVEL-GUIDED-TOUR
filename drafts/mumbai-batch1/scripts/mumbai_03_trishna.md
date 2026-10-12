@@ -1,0 +1,17 @@
+# Mumbai 03 · Trishna
+
+*Vantage: Sai Baba Marg, the old Rope Walk Lane, in front of the restaurant's doorway in Kala Ghoda* · 310 words · about 124 s
+
+The ropes are long gone from Rope Walk Lane. The crab, mercifully, is not.
+
+You're on Sai Baba Marg, a narrow back street in Kala Ghoda — older maps call it Rope Walk Lane, after the ropemakers who once worked the length of it. Look for a modest doorway with the name Trishna above it. Nothing about the frontage tells you that this is one of the most talked-about seafood rooms in the city. That's rather the charm.
+
+Trishna serves the coastal cooking of Mangalore and the Konkan shore, and has done so, by most accounts, since the nineteen sixties. Have a look at the menu if it's on display, and find the line that matters: butter, pepper and garlic crab. A whole crab, cracked, drowned in butter, sharp with garlic and black pepper, eaten with your hands. Regulars call ahead to make sure the crab has come in; when it hasn't, there's simply no crab.
+
+Then the rest of the board — prawns koliwada, fried crisp in the style of the city's Koli fishing villages; tandoori fish; rawas, which is Indian salmon, cooked in a dozen ways. None of it is fussy. All of it is about what came out of the sea that morning.
+
+What's worth knowing, standing here, is that the name has travelled further than the room. In two thousand and eight a restaurant called Trishna opened in London, crab and all, and was taken by many British diners as a discovery. It was a homage. This is the original, still in its back street, still small, still full.
+
+[beat]
+
+If you can't get a table, walk to the end of the lane and turn towards the Kala Ghoda junction — you'll be in the middle of the city's gallery quarter within a minute, and the queue may well have shortened by the time you come back.
