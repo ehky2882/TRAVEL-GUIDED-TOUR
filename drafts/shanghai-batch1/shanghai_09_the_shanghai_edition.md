@@ -1,0 +1,23 @@
+# The Shanghai EDITION
+
+*Atlas · Shanghai · 09 · ~362 words, about 140 seconds*
+
+---
+
+For most of the last century, this building kept the lights on in Shanghai. Now the lights are the main attraction.
+
+You're on Nanjing East Road, a few minutes' walk in from the Bund. In front of you is an Art Deco block in stone. It was the headquarters of the Shanghai Power Company, completed in nineteen twenty-nine. Rising behind it is a newer glass tower. Together they make up the Shanghai EDITION hotel.
+
+The idea came from Ian Schrager, the New Yorker usually credited with inventing the boutique hotel. When the EDITION opened here in twenty eighteen, it kept the old power company building for the bars, restaurants, spa and rooftops. The hundred and forty-five bedrooms went into the new tower. The two halves are joined by what the hotel calls the Urban Lobby.
+
+Go into the main lobby and look up. Hanging in the middle is a huge glowing sphere of light, made by the French designer Eric Schmitt. Around it, the grey stone walls rise nine and a half metres, set off with dark walnut. In a building that once ran the city's electricity supply, the centrepiece is a lamp, and I don't think that's an accident.
+
+Then find the Urban Lobby. It has a hanging garden, an antique mirror seven storeys tall, and a bronze spiral staircase. That's how you get from the old building to the new one.
+
+Upstairs is the Punch Room, a cocktail bar brought over from the EDITION in London. Right at the top is a roof garden looking out over the river to Pudong. It even has a lawn, and on some days, croquet.
+
+[beat]
+
+It would have been easy to keep the old building as a pretty face on the new tower. Instead, almost all the social life of the hotel happens inside the old walls. The tower is for sleeping. The power station is for going out.
+
+When you come out, walk east to the end of Nanjing Road, where it meets the Bund. On the corner is the green pyramid roof of the Peace Hotel, the old Sassoon House. It's another Art Deco landmark, and it's two minutes away.

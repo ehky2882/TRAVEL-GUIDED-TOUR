@@ -1,0 +1,21 @@
+# Rockbund Art Museum 上海外滩美术馆
+
+*Atlas · Shanghai · 07 · ~352 words, about 140 seconds*
+
+---
+
+This street used to be called Museum Road, and for once the name has come true again.
+
+You're on Huqiu Road, at number twenty, a block back from the Bund, near where Suzhou Creek meets the Huangpu. In front of you is a compact Art Deco building of five storeys. That's the Rockbund Art Museum.
+
+The story starts long before this building. In the eighteen seventies, the North China Branch of the Royal Asiatic Society, a learned society of scholars and amateurs, built a library, a lecture hall and a museum near here. It collected Chinese natural history specimens and objects, and it was one of the first modern museums in China. In eighteen eighty-six the city renamed this street Museum Road in its honour.
+
+The building you're looking at replaced the old one in the early nineteen thirties. It was designed by George Wilson of the firm Palmer and Turner, the same practice behind the old HSBC bank building on the Bund. Look up at the front. It's Art Deco, but Chinese decorative elements have been worked into the design. Western architecture in Shanghai was starting to borrow from China rather than simply ignore it.
+
+In two thousand and seven, the British architect David Chipperfield was brought in to restore it. He kept the front true to the original. Inside, he cleared the floors into plain, light galleries and cut a skylight through the top three storeys. He added a roof terrace that looks out over the river. The museum opened in twenty ten, as a non-profit space for contemporary art.
+
+[beat]
+
+It's worth noticing what happened here. Around this building, eleven old blocks were restored over seventeen years, and many became offices, shops and restaurants. This one went back to its first job, a place where the public come to look at things and argue about them.
+
+Before you leave, walk round to the new museum square at the back and along Yuanmingyuan Road. It's one of the best-preserved streets of old office buildings in Shanghai. At the end of it, the iron Waibaidu Bridge crosses Suzhou Creek.

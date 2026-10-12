@@ -1,0 +1,21 @@
+# West Bund Museum 西岸美術館
+
+*Atlas · Shanghai · 11 · ~324 words, about 130 seconds*
+
+---
+
+Not long ago, this stretch of riverbank was all coal yards, docks and an airfield. Now it's lined with art museums.
+
+You're on Longteng Avenue, at the northern tip of a long riverside park, where the road meets the Huangpu. In front of you are three tall, pale blocks arranged around a lower centre, a bit like the blades of a pinwheel. That's the West Bund Museum, designed by the British architect David Chipperfield.
+
+Have a look at what it's made of. The three blocks are clad in translucent glass, and the glass is recycled. Chipperfield's office describes its finish as opaline. In daylight it has a faint, milky shimmer, and after dark, when the galleries are lit, it glows. Between the blocks, the roof of the central lobby seems to hover, and it reaches out towards the river on two slim, tapering columns.
+
+Now walk round to the river side. The whole building stands on a raised terrace, above the flood plain. Steps lead down to the water. There's a long, low café right on the edge.
+
+The museum opened in November twenty nineteen, and it's best known for its partnership with the Centre Pompidou in Paris. The French president, Emmanuel Macron, came to the opening. Since then, works from the Pompidou's collection of modern art have been shown here in long-running exhibitions, and the partnership was renewed in twenty twenty-three for another five years.
+
+[beat]
+
+This was a city deciding what to do with its old industrial waterfront. Shanghai chose culture. In just a few years this riverbank has filled with museums, and many of them are in the old industrial buildings themselves.
+
+From here, follow the riverside path upstream, along the water. You'll pass the Long Museum, built round an old concrete coal-unloading bridge. Further on is the Yuz Museum, in a former aircraft hangar from the old Longhua airport. It's a good walk, especially in the late afternoon.

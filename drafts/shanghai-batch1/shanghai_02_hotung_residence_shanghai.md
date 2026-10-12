@@ -1,0 +1,21 @@
+# Former Residence of Hotung 何东旧居
+
+*Atlas · Shanghai · 02 · ~374 words, about 150 seconds*
+
+---
+
+Shanghai's grandest dictionary was written in a millionaire's living room.
+
+You're on North Shaanxi Road, at number four-five-seven, near the corner with Beijing West Road. Behind the gate and the lawn there's a large, pale villa with a row of tall columns across its front. It sits right in the middle of its garden, which in this part of the city is a rare thing.
+
+The man who built it was Sir Robert Hotung. He was a Eurasian businessman from Hong Kong who started out working for the trading house Jardine Matheson and ended up, by most accounts, the richest man in Hong Kong. He was knighted in nineteen fifteen. He bought this plot in nineteen twenty-six, when this road was called Seymour Road. The family moved in two years later, and his son Edward ran the family's Shanghai business from here.
+
+Have a look at the front. It's built in the English manner, in brick, timber and stone. The tall columns hold up a covered hall, and that hall leads into a very large drawing room. The grounds once covered more than a hectare, and they were fenced with bamboo, so people walking past could catch glimpses of the house through the gaps.
+
+After nineteen forty-nine the family went back to Hong Kong, and the house passed to the city. Then something rather unexpected happened. In nineteen fifty-seven, Mao Zedong suggested that the great Chinese dictionary, the Cihai, should be revised, and that Shanghai should do it. The next year, the editors moved in here. The new edition came out in nineteen seventy-nine, and the dictionary's publisher still works in this house today.
+
+[beat]
+
+So the house of one of the richest men in Asia became a house of words. Cihai, by the way, means "sea of words". Rather a good name for a dictionary, and for a building full of people trying to pin down a whole language.
+
+Before you go, walk a few minutes south along North Shaanxi Road, past the plane trees, to number one-eight-six. That's Rong Zhai, the house built for the industrialist known as the flour king. It's another family villa, from nineteen eighteen, and it opens its doors for exhibitions.
