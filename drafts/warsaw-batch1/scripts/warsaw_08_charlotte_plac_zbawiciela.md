@@ -1,0 +1,32 @@
+# Charlotte, Plac Zbawiciela
+
+| | |
+|---|---|
+| Tour | Warsaw 08 · DINE · single stop |
+| Google Maps name | Charlotte |
+| Coordinates (WGS-84) | 52.220090, 21.018640 |
+| Vantage | at a table outside Charlotte, on the curved edge of Plac Zbawiciela at Aleja Wyzwolenia eighteen, facing the church across the square |
+| Length | ~342 words, about 2.3 minutes |
+
+## Script
+
+Breakfast in Warsaw has a front row, and this is it.
+
+Plac Zbawiciela, the Square of the Saviour. Find a seat at Charlotte, at number eighteen Aleja Wyzwolenia, on the curve of the square. In front of you, the round square itself, with traffic and trams swinging around it. Across the way, the great twin-towered church that gives the square its name. And around much of it, the tall, even fronts of the early nineteen-fifties, following the curve of the square.
+
+Charlotte is a French-style bakery and bistro, and the bread is baked on site. The gift detail is on the table: the jams and the chocolate spread are made to the house's own recipes and set out in big jars, so you help yourself. Inside, there's one long communal table down the middle, which is the best seat in the house if you're on your own.
+
+The building around you is worth a look too. After the war, this square was meant to be rebuilt as a single grand classical set piece, part of the new socialist city centre. Only some of that plan was carried out. What you get is a square that's half ceremonial and half neighbourhood: big architecture, small cafés.
+
+*[beat]*
+
+And here's the thing I love about this spot. Warsaw's planners in the fifties designed squares like this for marching. They got breakfast instead. The local writing about the square says that the bar upstairs may have been here first, but it was Charlotte that put the square on the map, and turned it into the place where the city comes to see and be seen over coffee.
+
+There's a quieter detail on the church side. The twin towers belong to the Church of the Holiest Saviour, finished in the nineteen-twenties in a neo-Renaissance style. Finish your coffee, then walk the full circle of the square and look up at the fronts, to see where the grand plan stops and the older city carries on. Five minutes south down Marszałkowska brings you to the old milk bar Prasowy.
+
+## Sources read before writing
+
+- <https://www.inyourpocket.com/poland/warsaw/venues/charlotte-chleb-i-wino>
+- <https://myartguides.com/leisure/restaurants/warsaw/charlotte>
+- <https://warsawinsider.pl/best-of-warsaw-2024-bars/>
+- <https://www.inyourpocket.com/poland/warsaw/venues/plac-zbawiciela>

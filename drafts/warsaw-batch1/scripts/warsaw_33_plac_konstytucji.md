@@ -1,0 +1,32 @@
+# Plac Konstytucji and the MDM
+
+| | |
+|---|---|
+| Tour | Warsaw 33 · OBSERVE · single stop |
+| Google Maps name | Plac Konstytucji |
+| Coordinates (WGS-84) | 52.221690, 21.016461 |
+| Vantage | on Plac Konstytucji beside one of the giant lamp standards, looking around the square at the heavy stone façades |
+| Length | ~325 words, about 2.2 minutes |
+
+## Script
+
+This square was designed to make you feel the future had arrived, and that it was built of granite.
+
+You're on Plac Konstytucji, Constitution Square, beside one of three gigantic lamp standards, each with a cluster of lanterns. Around you, tall apartment blocks of heavy stone, with arcades at street level and sculpted figures of workers on their fronts. Marszałkowska runs straight through the middle.
+
+This is the heart of the MDM, the Marszałkowska Housing District. It was built between nineteen fifty and nineteen fifty-two, by a team led by Józef Sigalin and Stanisław Jankowski, with Jan Knothe and Zygmunt Stępiński. The square was opened on the twenty-second of July, nineteen fifty-two, the same day the new communist constitution was adopted. Hence the name.
+
+Look up at the reliefs. There are dozens of them across the district: builders, workers, mothers and children, rendered in heroic stone. This was socialist realism, the official style of the moment. The MDM was launched under a slogan promising that "the people will enter the city centre". Ordinary workers would live on the grandest avenue in the capital.
+
+Now here's the gift. Those three huge lamp standards aren't just lamps. The planners realised that the view south from the square was lopsided and spoiled the symmetry. So they put up three giant candelabra to restore the balance. Pure stage scenery.
+
+*[beat]*
+
+It's easy to sneer at all this. But stand here a while and you may find it's actually rather a good urban space: generous pavements, arcades for shelter, shops on the ground floor, people living above. What it got wrong was the politics. What it got right, quite often, was the city.
+
+Walk a couple of minutes to Koszykowa Street and look at the building at numbers thirty-four to fifty, with allegorical figures by the sculptor Józef Gosławski. Then look out for the Hotel MDM on the square. It was the first hotel to open in Warsaw after the war.
+
+## Sources read before writing
+
+- <https://en.wikipedia.org/wiki/Constitution_Square,_Warsaw>
+- <https://pl.wikipedia.org/wiki/Marsza%C5%82kowska_Dzielnica_Mieszkaniowa>

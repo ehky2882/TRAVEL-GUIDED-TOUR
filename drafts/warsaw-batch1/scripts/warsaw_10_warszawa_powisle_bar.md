@@ -1,0 +1,32 @@
+# Warszawa Powiśle
+
+| | |
+|---|---|
+| Tour | Warsaw 10 · DRINK · single stop |
+| Google Maps name | Warszawa Powiśle |
+| Coordinates (WGS-84) | 52.234078, 21.029892 |
+| Vantage | at the lower ticket pavilion of Warszawa Powiśle station, on Kruczkowskiego Street beside the Poniatowski Bridge viaduct; the bar is inside the pavilion and on the terrace around it |
+| Length | ~314 words, about 2.1 minutes |
+
+## Script
+
+Look at the roof first. People have compared it to a spaceship, and once you've heard that, you won't unsee it.
+
+You should be at the foot of the great viaduct that carries the road up to the Poniatowski Bridge, on Kruczkowskiego Street. In front of you is a small pavilion with a roof shaped like a slice of a sphere turned upside down. That's the old ticket office of Warszawa Powiśle station. Today it's a bar, and on any warm evening the terrace around it will be full.
+
+The station was designed by Arseniusz Romanowicz and Piotr Szymaniak, two of the most inventive architects of post-war Poland. It was built between nineteen fifty-four and nineteen sixty-three. Romanowicz had co-designed Poland's pavilion at the New York World's Fair before the war, and after it he gave this city a whole family of railway stations.
+
+The trick of this station is where it sits. It's halfway up the escarpment between the low riverside district of Powiśle and the city centre above. For a while it was even going to be called Warszawa Skarpa, "Warsaw Escarpment". There are two ticket pavilions: an upper one, still a ticket hall, whose roof is stretched between two arches like a kite, and this lower one, the upside-down dome.
+
+*[beat]*
+
+Since two thousand and nine, the lower pavilion has been the café-club called, simply, Warszawa Powiśle. And here's what I find rather lovely. Modernism promised people light, air, and public life. In this case, the promise came good half a century late, not in the waiting room but on the terrace with a drink in hand.
+
+Before you settle in, walk up the stairs towards the upper pavilion and look back down at this roof from above. Then follow Kruczkowskiego down to the river and the boulevards, a few minutes away. You'll be on the Vistula in time for the sunset.
+
+## Sources read before writing
+
+- <https://www.whitemad.pl/en/the-modernist-warszawa-powisle-station-a-pearl-on-the-rails-designed-by-romanowicz-and-szymaniak/>
+- <https://kathmanduandbeyond.com/?p=251680>
+- <https://warsawinsider.pl/landmark-ochota-station/>
+- <https://en.wikipedia.org/wiki/Warszawa_Powi%C5%9Ble_railway_station>

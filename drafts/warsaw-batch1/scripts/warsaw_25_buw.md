@@ -1,0 +1,32 @@
+# The University of Warsaw Library and its roof garden
+
+| | |
+|---|---|
+| Tour | Warsaw 25 · VISIT · single stop |
+| Google Maps name | Biblioteka Uniwersytecka w Warszawie |
+| Coordinates (WGS-84) | 52.242643, 21.025068 |
+| Vantage | on Dobra Street facing the library's main front, with its giant text panels; then up to the roof garden (Ogród BUW, 52.242680, 21.025670) |
+| Length | ~329 words, about 2.2 minutes |
+
+## Script
+
+Most libraries hide their books. This one wears them on its front.
+
+You're on Dobra Street in Powiśle, in front of the University of Warsaw Library. Look at the front. Between the entrances are eight huge panels, like the pages of an open book, covered in writing. That's where we'll start.
+
+The building was designed by Marek Budzyński and Zbigniew Badowski, who won the competition in nineteen ninety-three. It opened to readers in December nineteen ninety-nine. Those panels are the gift. They carry text and notation in many scripts and languages: a passage of music by Karol Szymanowski, mathematical formulas, Sanskrit, Hebrew, Arabic, Greek, Old Russian, Old Polish. The architects called this the "cultural" façade. Above the main entrance, there's a bronze open book with two Latin words: "Hinc omnia". "From here, everything."
+
+Now go inside. At the top of the stairs leading to the catalogue hall, four philosophers stand on tall columns: Kazimierz Twardowski, Jan Łukasiewicz, Alfred Tarski and Stanisław Leśniewski, giants of the Lwów–Warsaw school of logic. They're by the sculptor Adam Myjak.
+
+*[beat]*
+
+And now go up, because here's the real reason I've brought you. On the roof, there's a garden of more than a hectare, designed by the landscape architect Irena Bajerska, opened in two thousand and two. It's one of the largest roof gardens in Europe, and it's open to everyone. An upper garden and a lower one are linked by a stream that tumbles down between them. From the upper garden, look down through the glass skylights into the library halls, at people reading. Then look out across the river.
+
+I think this is the most generous building of its decade in Poland. It gives the city a garden it never had, on top of a building full of books.
+
+The upper garden is open from April to October; the lower garden all year. From the upper garden, look east over the rooftops of Powiśle to the river. It's my favourite view in Warsaw.
+
+## Sources read before writing
+
+- <https://en.wikipedia.org/wiki/Warsaw_University_Library>
+- <https://pl.wikipedia.org/wiki/Biblioteka_Uniwersytecka_w_Warszawie>

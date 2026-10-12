@@ -1,0 +1,33 @@
+# Raffles Europejski Warsaw
+
+| | |
+|---|---|
+| Tour | Warsaw 01 · STAY · single stop |
+| Google Maps name | Raffles Europejski Warsaw |
+| Coordinates (WGS-84) | 52.241927, 21.015059 |
+| Vantage | on the pavement of Krakowskie Przedmieście outside number thirteen, facing the hotel's long front; the Bristol is across the street behind you |
+| Length | ~366 words, about 2.4 minutes |
+
+## Script
+
+This building has been a hotel, a ruin, a military academy, a government office, a hotel again, and the subject of a twelve-year lawsuit. It's now a hotel once more, and I'd say it has earned the rest.
+
+Stand on Krakowskie Przedmieście, the old Royal Route, with the long pale front of the Europejski in front of you. Behind you, across the street, is the Hotel Bristol. These two have been eyeing each other across this road for well over a century.
+
+It opened on the first of January, eighteen fifty-seven, designed by Enrico Marconi, an architect of Italian family who did more than almost anyone to give nineteenth-century Warsaw its manners. In its day it was one of the grandest hotels in the Russian Empire. Then came the war. During the occupation it served Wehrmacht officers only, and when the Germans pulled out in the winter of nineteen forty-four, they left it a wreck.
+
+Here's what I find rather wonderful. After the war, the new government took the building and turned it into a school for training army political officers. The grand staircase and the ballrooms were ripped out. Then, in the late fifties, somebody decided Warsaw needed its hotel back, and in nineteen sixty-two it reopened as a state-run Orbis hotel. The Rolling Stones, Marlene Dietrich, Lech Wałęsa: they all came through.
+
+When communism ended, the heirs of the original owners went to court. It took them twelve years, and they won. The hotel closed in two thousand and five, and reopened under Raffles in twenty eighteen, with a hundred and six rooms.
+
+*[beat]*
+
+Go inside if you can, because the real gift is on the walls. Nearly five hundred works by more than a hundred and twenty Polish artists, chosen by Anda Rottenberg, once director of the Zachęta gallery, a short walk away. Tadeusz Kantor, Wilhelm Sasnal, Monika Sosnowska. It's quietly one of the better collections of Polish art in the city, and it lives in the corridors.
+
+Before you leave, find Lourse, the pâtisserie on the ground floor. Warsaw's well-to-do took their tea and cakes under that name before the First World War. Order something sweet and you're keeping a very old appointment.
+
+## Sources read before writing
+
+- <https://www.raffles.com/warsaw/>
+- <https://en.wikipedia.org/wiki/Hotel_Europejski>
+- <https://www.luxurytraveladvisor.com/hotels/raffles-europejski-warsaw-opens-polish-capital>

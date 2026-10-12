@@ -1,0 +1,33 @@
+# Bar Mleczny Prasowy
+
+| | |
+|---|---|
+| Tour | Warsaw 04 · DINE · single stop |
+| Google Maps name | Bar Mleczny Prasowy |
+| Coordinates (WGS-84) | 52.215796, 21.020592 |
+| Vantage | on Marszałkowska Street at number ten to sixteen, facing the bar's glass front and neon sign; then inside at the counter |
+| Length | ~340 words, about 2.3 minutes |
+
+## Script
+
+This milk bar is a year older than the Palace of Culture. And unlike the Palace, it was very nearly lost.
+
+You should be on Marszałkowska, the long avenue that runs down the spine of the city centre, outside numbers ten to sixteen. Look for the glass front and the neon sign spelling Prasowy. Go in and stand by the counter, where the menu is written up on the wall.
+
+A milk bar, bar mleczny, is a very Polish institution: a cheap canteen serving plain home cooking, originally meatless and dairy-heavy, hence the name. Prasowy opened in nineteen fifty-four and fed this neighbourhood for about half a century. In twenty eleven it closed, and that would usually be the end of the story.
+
+It wasn't, because the neighbours made a fuss. Residents pressed the city until it ran a special competition for the premises, with one condition: whoever won had to keep it a milk bar. The rent was set at a fraction of what the shops next door paid. A new tenant took it on, and it reopened in twenty thirteen.
+
+Now have a look around you, because the designers, Mikołaj Wojciechowski and Konrad Sojka, were careful about what to keep. Look down: part of the black-and-white mosaic floor is original. Look at the serving hatches where the plates come through. They stayed. And the menu on the wall is modelled on the old black board with its white letters.
+
+*[beat]*
+
+Here's why I'd send any visiting architect here before the museums. This place is a lesson in what preservation actually means. It isn't only a façade or a listed staircase. Sometimes the thing worth saving is a use: a room where anyone, of any income, can sit down to a plate of pierogi and a bowl of soup.
+
+Order the pierogi, or whatever the soup of the day is, and pay at the till. Then walk north up Marszałkowska to Plac Konstytucji, a few minutes away, and you'll see the grand socialist housing district this little bar has outlived.
+
+## Sources read before writing
+
+- <https://www.bryla.pl/bryla/1,85301,12662086,Nowy_Bar_Prasowy__wizualizacje_.html>
+- <https://www.whitemad.pl/nowy-bar-prasowy-w-warszawie-drugie-wcielenie-legendarnego-baru-mlecznego/>
+- <https://freewalkingtour.com/milk-bars-in-warsaw-history-guidebook/>

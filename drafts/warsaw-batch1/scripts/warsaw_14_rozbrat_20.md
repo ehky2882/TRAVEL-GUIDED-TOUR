@@ -1,0 +1,33 @@
+# Rozbrat 20
+
+| | |
+|---|---|
+| Tour | Warsaw 14 · DRINK · single stop |
+| Google Maps name | Rozbrat 20 |
+| Coordinates (WGS-84) | 52.224200, 21.035099 |
+| Vantage | on the corner of Rozbrat Street at number twenty, in Powiśle's Solec quarter, facing the restaurant's windows |
+| Length | ~319 words, about 2.1 minutes |
+
+## Script
+
+If you want one bottle of wine in Warsaw chosen by someone who really cares, come to this corner.
+
+Rozbrat Street, number twenty. You're on a quiet corner in the lower part of town, near the river, where residential streets give way to the green of the park along the escarpment. The restaurant is a smart corner room with big windows. Nothing shouts. It's the sort of place you find on purpose.
+
+Rozbrat 20 started life with a reputation for its wine and its bread, and grew into something more ambitious. The chef is Bartosz Szymczak, who trained in Britain, in the kitchens of Tom Aikens and Lee Westcott, before coming home to Warsaw. His cooking is Polish at the root, with a curiosity for Asian flavours and a British training in technique. In twenty twenty-four the Michelin Guide gave the restaurant its first star.
+
+The menu is a tasting menu that follows the seasons, and the kitchen likes to divide the year more finely than the usual four. But the real gift is the wine list, which leans heavily on Italy, and especially on organic and biodynamic growers, many of them brought into Poland by the owner himself. It's often named among the best wine lists in the country.
+
+*[beat]*
+
+Here's what interests me about it, standing on this ordinary corner. For a long time, grand dining in Warsaw meant hotel restaurants with chandeliers. Now the most serious cooking in the city is happening in rooms like this, in residential streets, run by people who simply want to do one thing properly. It's a shift in the map of the city as much as in the food.
+
+Book ahead, as it's dinner only, Tuesday to Saturday. If you're early, walk a couple of minutes towards the escarpment and into the park, then follow the slope north. Or head downhill to the river and the boulevards, and come back hungry.
+
+## Sources read before writing
+
+- <https://www.the50.com/discovery/Establishments/Poland/Warsaw/Rozbrat-20.html>
+- <https://www.enprimeurclub.com/restaurants/rozbrat-20>
+- <https://www.krug.com/en-gb/krug-ambassades/rozbrat-20>
+- <https://warsawinsider.pl/review-rozbrat-20/>
+- <https://www.lot.com/de/en/explore/about-lot/lot-initiatives/new-culinary-experience-lot-business-class>

@@ -1,0 +1,32 @@
+# Pan Tu Nie Stał
+
+| | |
+|---|---|
+| Tour | Warsaw 17 · SHOP · single stop |
+| Google Maps name | Pan Tu Nie Stał |
+| Coordinates (WGS-84) | 52.223017, 21.014392 |
+| Vantage | on Koszykowa Street at number thirty-four to fifty, outside the shop, in the arcade of the big nineteen-fifties block just off Plac Konstytucji |
+| Length | ~313 words, about 2.1 minutes |
+
+## Script
+
+The name of this shop is a line every Pole of a certain age will recognise. "Pan tu nie stał." It means, "You weren't standing here, sir." It's what you shouted at someone pushing into a queue.
+
+You're on Koszykowa Street, at numbers thirty-four to fifty, a few steps from Plac Konstytucji. Look up before you go in. This shop sits in one of the big, heavily decorated apartment blocks of the early nineteen-fifties, part of the socialist-realist district built around the square. The allegorical figures on this very building are by the sculptor Józef Gosławski.
+
+The brand began in Łódź, a city an hour or so to the south-west, in two thousand and eight. Justyna Burzyńska and Maciek Lebiedowicz started a blog about the graphic design and typography of communist-era Poland. Readers loved it. They printed some T-shirts. They sold out. The shop followed, and this Warsaw branch opened in June twenty fourteen. The clothes are still designed and made in Łódź.
+
+The gift is the joke in that name. The early nineteen-eighties, under martial law, were the years of empty shelves and endless queues. And here's a shop, selling things people actually want, named after the battle cry of the queue.
+
+*[beat]*
+
+What I like is the setting. The building around you was designed to show off the new socialist city. Seventy years on, it houses a shop that gently teases that era, using the lettering and graphics the era itself produced. That's how Warsaw tends to handle its past: not with a sledgehammer, but with a raised eyebrow.
+
+Inside you'll find T-shirts, socks, mugs, ceramics, notebooks and postcards, a lot of it with old lettering and slogans. Then step out and walk the few metres to Plac Konstytucji, and look at the giant lamp standards and the carved workers on the façades. The originals of the joke are all around you.
+
+## Sources read before writing
+
+- <https://pantuniestal.com/strona/pan-tu-nie-stal-warszawa>
+- <https://natemat.pl/105921,otwarcie-pan-tu-nie-stal-w-warszawie-juz-w-piatek>
+- <https://www.inyourpocket.com/poland/lodz/venues/pan-tu-nie-stal>
+- <https://pl.wikipedia.org/wiki/Marsza%C5%82kowska_Dzielnica_Mieszkaniowa>

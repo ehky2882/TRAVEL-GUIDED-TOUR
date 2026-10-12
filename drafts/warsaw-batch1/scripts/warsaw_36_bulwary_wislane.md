@@ -1,0 +1,34 @@
+# The Vistula Boulevards
+
+| | |
+|---|---|
+| Tour | Warsaw 36 · OBSERVE · single stop |
+| Google Maps name | Bulwar Flotylli Wiślanej |
+| Coordinates (WGS-84) | 52.230966, 21.042417 |
+| Vantage | on the left-bank riverside promenade, on the wide steps going down towards the water, looking across the Vistula to the far bank |
+| Length | ~347 words, about 2.3 minutes |
+
+## Script
+
+For decades, Warsaw had a beautiful river and turned its back on it. Then, about ten years ago, it turned round.
+
+You're on the Vistula boulevards, the long riverside promenade on the city side of the river. Find a place on the wide steps that lead down towards the water, and look across. On the far bank, almost no city at all: trees, sandbanks, wild-looking beaches. Behind you, the busy embankment road and the city rising up the escarpment.
+
+That contrast is the gift. For a river running through a capital city, the Vistula has been left remarkably wild, and here the east bank was largely left to nature. So you sit on a city promenade, and look at what is practically a wilderness.
+
+For a long time, this side was no fun at all. In the nineteen-seventies the riverbank was given concrete boulevards, but a busy road cut them off from the city, and few people came. Then the boulevards were rebuilt in stages, to a design by the landscape architects RS Architektura Krajobrazu. The sections opened one after another: a first stretch in twenty fifteen, more in the summer of twenty seventeen, and a section near the mermaid in twenty nineteen.
+
+*[beat]*
+
+Look down the steps before you go. Some of the old nineteen-seventies concrete steps survived the rebuild, and on them you can still find inscriptions scratched or painted in the communist years, some of them distinctly anti-communist. A little piece of the city's argument with itself, right at the water's edge.
+
+What changed here wasn't just paving. A city that had spent its post-war years facing inward, towards its avenues and its monuments, discovered it had a river. On a summer evening, these steps are full: people sitting with drinks, cyclists, music, the sun dropping behind the city.
+
+Walk north along the river towards the Copernicus Science Centre, and look for the boulevard sections named after the Vistula Flotilla, General Patton and Jan Karski. Stay until sunset if you can, when the light comes down across the city behind you onto the far bank.
+
+## Sources read before writing
+
+- <https://pl.wikipedia.org/wiki/Bulwary_wi%C5%9Blane_w_Warszawie>
+- <https://pik.warszawa.pl/miejsca/bulwary-wislane>
+- <https://sarp.warszawa.pl/wordpress/wp-content/uploads/2017/09/Konkurs_Bulwary_ogloszenie_wynikow_prezentacja_popr.pdf>
+- <https://www.wprost.pl/306719>

@@ -1,0 +1,34 @@
+# Bez Gwiazdek
+
+| | |
+|---|---|
+| Tour | Warsaw 05 · DINE · single stop |
+| Google Maps name | Bez Gwiazdek |
+| Coordinates (WGS-84) | 52.241921, 21.021865 |
+| Vantage | on Wiślana Street at number eight, a quiet side street in Powiśle running down towards the river |
+| Length | ~314 words, about 2.1 minutes |
+
+## Script
+
+The name means "without stars". Which is a nicely dry thing to call a restaurant whose chef has worked in some of the most decorated kitchens in Europe.
+
+Wiślana Street, number eight. You're in Powiśle, the old riverside district below the escarpment, on a small street that slopes down towards the Vistula. Bez Gwiazdek is a single, low-key room. Easy to walk past, which I suspect is rather the point.
+
+The chef is Robert Trzópek, and the idea is simple and quite brave. There are sixteen regions in Poland. The menu changes roughly month by month, and each version takes you to one of them. One month it's Silesia, with karminadle, the region's meat patties. Another, it's the mountains of Podhale, and the smoked sheep's cheese called oscypek. The recipes are traditional. The technique is not.
+
+Dinner is a tasting menu of around six courses, and there's a vegetarian version too. It's listed in the Michelin Guide, and it turns up on European lists of restaurants worth travelling for.
+
+*[beat]*
+
+What interests me here, as an architect, is the parallel with this city. Warsaw had to rebuild itself from drawings and memory after the war, and it chose to rebuild faithfully, but with modern materials and modern tools. This kitchen does exactly the same thing with the food of the whole country: faithful to the source, built with today's methods.
+
+And there's something generous in it. Most Poles never get to eat their way round all sixteen regions. Come back in a few months and you'll eat in a different part of the country without leaving this room.
+
+Book ahead; it's dinner only, Tuesday to Saturday. Afterwards, walk a couple of minutes up the street to Dobra and look for the University Library, with its green roof garden. From April to October the upper garden is open, and it looks right out over the river.
+
+## Sources read before writing
+
+- <https://guide.michelin.com/at/en/masovia/warsaw/restaurant/bez-gwiazdek>
+- <https://warsawinsider.pl/best-of-warsaw-2024-polish/>
+- <https://www.enprimeurclub.com/restaurants/bez-gwiazdek-warsaw-restaurant>
+- <https://tablejourney.com/poland/warsaw/cuisine/polish-modern/>

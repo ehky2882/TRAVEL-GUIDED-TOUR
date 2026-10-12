@@ -1,0 +1,31 @@
+# Pawilony Nowy Świat
+
+| | |
+|---|---|
+| Tour | Warsaw 11 · DRINK · single stop |
+| Google Maps name | Pawilony za Nowym Światem |
+| Coordinates (WGS-84) | 52.232943, 21.020321 |
+| Vantage | at the gateway into the courtyard behind Nowy Świat twenty-two to twenty-eight; then a few steps inside, among the pavilions |
+| Length | ~325 words, about 2.2 minutes |
+
+## Script
+
+Behind one of Warsaw's smartest streets is a maze of tiny sheds full of bars. Nobody planned it that way. It just happened.
+
+You should be on Nowy Świat, the elegant street that carries the Royal Route south towards the city's grand avenues. Find the passage at numbers twenty-two to twenty-eight and walk through it into the courtyard behind. Suddenly you're in a different city: a tight warren of low, single-storey pavilions, each a separate bar with its own door, sign and music.
+
+Nowy Świat itself was levelled in the war and rebuilt in the late nineteen-forties in a calm, neoclassical style. The pavilions came later. In nineteen seventy-two a group of small craftsmen set up a company and were given about one and a half thousand square metres of land back here on a forty-year lease. They built little workshops and shops. At a time when state shops were often empty, a newspaper called this place "an enclave of elegant trade".
+
+Then, in the late nineteen-nineties, things changed fast. Owners and their children swapped workshops for bars, one by one. Today there are well over a dozen, packed into what was once a little arcade of craftsmen's workshops.
+
+*[beat]*
+
+And here's the interesting bit. The forty-year lease ran out in twenty twelve. The businesses went to court and won an extension, but the city hadn't signed a new agreement years later, and the area's local plan now allows it to be redeveloped. So this beloved mess survives on borrowed time, as a good deal of Warsaw always has.
+
+As an architect, I'd say this is the most honest building type in the city: no architect, no masterplan, just a hundred small decisions. Wander in, take a lap, and pick whichever bar has the music you like. When you've had enough, step back through the gateway onto Nowy Świat and walk north towards the university. Ten minutes brings you to Krakowskie Przedmieście and the old hotels.
+
+## Sources read before writing
+
+- <https://pl.wikipedia.org/wiki/Pawilony_Nowy_%C5%9Awiat>
+- <https://www.inyourpocket.com/warsaw/nowy-swiat_42003v>
+- <https://warsawluke.pl/pl/wycieczki-po-warszawie-z-przewodnikiem/nowy-swiat-historia-najslynniejszej-ulicy-handlowej-warszawy/>

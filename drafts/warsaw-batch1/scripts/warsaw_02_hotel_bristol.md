@@ -1,0 +1,30 @@
+# Hotel Bristol
+
+| | |
+|---|---|
+| Tour | Warsaw 02 · STAY · single stop |
+| Google Maps name | Hotel Bristol, a Luxury Collection Hotel, Warsaw |
+| Coordinates (WGS-84) | 52.242404, 21.015724 |
+| Vantage | on Krakowskie Przedmieście at the corner of Karowa, facing the hotel; the Europejski is across the street behind you |
+| Length | ~358 words, about 2.4 minutes |
+
+## Script
+
+A concert pianist built this hotel. Not personally, with a trowel, but with his money. Ignacy Jan Paderewski, the most famous pianist of his age, bought most of the shares in the company behind it and gave the site to the project.
+
+You're on Krakowskie Przedmieście, where Karowa Street drops away towards the river, looking at the Bristol's cream front and its corner dome. Turn round and the Europejski is right there across the road. Two grand hotels, by two members of one family. Enrico Marconi designed that one, and his son Władysław revised the plans for this one.
+
+The story of the design is a small comedy. A competition was won by two architects from Kraków with an Art Nouveau scheme. Then the builders lost their nerve and switched to something safer, a neo-Renaissance front. So the outside is sober. The original interiors, though, were by Otto Wagner Junior, son of the great Viennese architect. The café opened in October nineteen hundred and one, the hotel a month later, with two hundred rooms and what the hotel's history calls the first lift in the country.
+
+Now the gift. Look up at the balcony. On the second of January, nineteen nineteen, Paderewski came home to a newly independent Poland and spoke to the crowd from up there. He became Prime Minister, lived in this hotel, and resigned here at the end of that year. A hotel, briefly, doing the job of a state.
+
+*[beat]*
+
+And here's the remarkable thing. Most of this street was destroyed in nineteen forty-four. The Bristol survived the war and the Uprising largely intact, and reopened in nineteen forty-five. Then came nationalisation, a long state-run stretch, and in nineteen eighty-one it simply closed and stood empty for about a decade. Margaret Thatcher cut the ribbon on its reopening in nineteen ninety-three.
+
+Marie Curie stayed here. So did Picasso, Marlene Dietrich and John F. Kennedy. The Café Bristol on the corner is the place to sit, with a slice of cake and a window onto the Royal Route. Then walk north a few minutes and you'll reach the Castle Square and the old town beyond it.
+
+## Sources read before writing
+
+- <https://en.wikipedia.org/wiki/Hotel_Bristol,_Warsaw>
+- <https://hoteldesigns.net/uncategorised/the-luxury-collection-hotels-resorts-debuts-in-poland-with-the-iconic-hotel-bristol-in-warsaw/>

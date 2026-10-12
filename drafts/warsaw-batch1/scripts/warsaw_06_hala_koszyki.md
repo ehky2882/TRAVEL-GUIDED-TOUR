@@ -1,0 +1,33 @@
+# Hala Koszyki
+
+| | |
+|---|---|
+| Tour | Warsaw 06 · DINE · single stop |
+| Google Maps name | Hala Koszyki |
+| Coordinates (WGS-84) | 52.222224, 21.011017 |
+| Vantage | on Koszykowa Street, facing the arched brick gateway building of the hall, number sixty-three |
+| Length | ~324 words, about 2.2 minutes |
+
+## Script
+
+Koszyki means "baskets", and the name has nothing to do with shopping. It comes from the wicker that was once used to shore up the city's old earth ramparts nearby.
+
+You should be on Koszykowa Street, in front of the brick gateway building with its arched entrance and carved decoration. Look for the Warsaw mermaid among the carved cartouches. Behind this front is a long hall of steel and glass, and today, a food hall.
+
+It opened on the second of March, nineteen hundred and nine, designed by the architect Juliusz Dzierżanowski, to give the growing south of the city a covered market. The decorated fronts on the street were the showpiece. The rest was much plainer than drawn.
+
+In nineteen forty-four, during the Uprising, the hall burned. Its steel frame kept it standing, and it was rebuilt in nineteen forty-nine and listed as a monument in nineteen sixty-five.
+
+Here's the uncomfortable part, and I think it matters. In two thousand and nine a developer bought the hall, and most of it was demolished. What survived were the two side wings and the northern wall along this street. A new owner then rebuilt it, to a design by the Warsaw practice JEMS Architekci, putting the original structural pieces back in. It reopened in October twenty sixteen.
+
+*[beat]*
+
+So is this the old market or a new one? Honestly, it's both, and that's the Warsaw condition. Almost everything here is a reconstruction of some kind. The real question is never "is it original?" but "was it done with care?" Walk inside, look up at the steel frame, and judge for yourself.
+
+Inside, the hall is lined with counters, bars and restaurants, and it's loud and busy most evenings. Find the old steelwork overhead and follow it to the far end. Then, back on the street, look east along Koszykowa: the Faculty of Architecture is just along the road, so the students know this place very well.
+
+## Sources read before writing
+
+- <https://en.wikipedia.org/wiki/Koszyki_Hall>
+- <https://brickarchitecture.com/projects/hala-koszyki-jems-architekci>
+- <https://eurobuildcee.com/en/magazine/2426-hala-koszyki-rises-again>
