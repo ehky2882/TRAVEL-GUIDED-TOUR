@@ -41,7 +41,7 @@ Before you go, walk a few minutes south along North Shaanxi Road, past the plane
 ("03", "jean-georges-mercato-three-on-the-bund", "Jean-Georges & Mercato", "zhahn zhorzh and mer kahto", """\
 The best views of Shanghai's new skyline are from inside one of its oldest office blocks.
 
-You're on the Bund, at Number Three, where Guangdong Road meets the river road. In front of you is a heavy stone building in the classical style. That's Three on the Bund. Behind you, across the road and the riverside promenade, the towers of Pudong are on the far bank.
+You're on the Bund, at Number Three, where Guangdong Road meets the river road. In front of you is a heavy stone building in the classical style, with a tall tower and cupola on its corner. That's Three on the Bund. Behind you, across the road and the riverside promenade, the towers of Pudong are on the far bank.
 
 This was built in nineteen sixteen for the Union Assurance Company, in the grand classical style that every bank and insurer on this stretch was competing in. In two thousand and four, the American architect Michael Graves turned the inside into restaurants, shops and a gallery, and the French chef Jean-Georges Vongerichten opened his restaurant on the fourth floor. It's still there.
 
@@ -55,7 +55,7 @@ Two floors higher, on the sixth, is Mercato, the chef's more relaxed Italian pla
 
 What I like about this building is that you're never allowed to forget where you are. Every new room in it has been arranged around the windows, and every window looks at the other side of the river.
 
-When you come out, cross over to the riverside promenade and turn round. From there you can see the whole curve of the Bund, and pick out Number Three among its neighbours.
+When you come out, cross over to the riverside promenade and turn round. From there you can see the whole curve of the Bund, and pick out Number Three by its corner tower.
 """),
 
 ("04", "jesse-restaurant-tianping-road", "Jesse Restaurant", "Jesse Restaurant", """\
