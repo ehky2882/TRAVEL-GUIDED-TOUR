@@ -38,3 +38,9 @@ Every photo was checked by eye against the two gates (a modern colour photograph
 - Pexels/Unsplash results for 'Ricardo Bofill': La Muralla Roja (Calp), Walden 7 (Sant Just), Antigone (Montpellier), W Barcelona
 
 No public-domain (CC0 / PDM) photograph of Abraxas exists on Openverse.
+
+## Owner's picks (2026-10-13)
+
+`09 espaces-dabraxas: 09-1 hero, 09-3, 09-9, 09-5, 09-4, 09-6, 09-7`
+
+Cropped to 1200×900 WebP in `images/`: hero = 09-1, _2 = 09-3, _3 = 09-9, _4 = 09-5, _5 = 09-4, _6 = 09-6, _7 = 09-7. Not yet on gh-pages — upload with the audio when the tour is wired.
