@@ -40,3 +40,38 @@ Each tour has three files: `NN-slug.md` (script, sources, respellings), `NN-slug
 - **Paradise Lost age** — the Nation's "2.5 million years" is not used; the NMK dating (8,000–12,000-year-old human remains) is.
 - **Ngong House ownership** (former Belgian diplomat) is from older press and is framed as "is said to".
 - **Chester House facing Uhuru Park** — framed as the guide's description; the building is on Koinange Street, a short walk north of the park.
+
+## Images chosen (owner picks, 2026-10-12)
+
+Uploaded to gh-pages at 1200×900 WebP. These fields are ready to go into `Tours.json` when the tours are wired. Unsplash and Pexels licences need no credit line.
+
+**10 maasai-market-nairobi**
+- `heroImageURL`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_hero.webp
+- `additionalImageURLs`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_2.webp, https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_3.webp, https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_4.webp, https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_5.webp
+  - `10-8` → `maasai-market-nairobi_hero.webp` · Unsplash · MARIOLA GROBELSKA · https://unsplash.com/photos/a-couple-of-women-sitting-on-top-of-a-blanket-GI1nLaiJDcQ
+  - `10-1` → `maasai-market-nairobi_2.webp` · Unsplash · Bj Pearce · https://unsplash.com/photos/people-sitting-on-white-textile-beside-beaded-decors-oa5go66juJc
+  - `10-3` → `maasai-market-nairobi_3.webp` · Unsplash · Richard Goggin · https://unsplash.com/photos/a-table-topped-with-lots-of-different-types-of-bracelets-YhYbnx6FZIE
+  - `10-7` → `maasai-market-nairobi_4.webp` · Pexels · Amani  Allan · https://www.pexels.com/photo/colorful-maasai-beaded-jewelry-in-ngorongoro-29831467/
+  - `10-9` → `maasai-market-nairobi_5.webp` · Unsplash · Brian McMahon` · https://unsplash.com/photos/person-wearing-beaded-multicolored-necklace-in-selective-focus-photography-PTXrQVFNIAk
+
+**15 nairobi-national-park**
+- `heroImageURL`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-national-park_hero.webp
+- `additionalImageURLs`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-national-park_2.webp, https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-national-park_3.webp
+  - `15-4` → `nairobi-national-park_hero.webp` · Unsplash · Amon Richie · https://unsplash.com/photos/a-herd-of-zebra-standing-on-top-of-a-lush-green-field-XqAxzMbOheM
+  - `15-2` → `nairobi-national-park_2.webp` · Unsplash · Grace Nandi · https://unsplash.com/photos/a-giraffe-standing-in-a-field-with-a-city-in-the-background-7XA8SJ5ODq4
+  - `15-11` → `nairobi-national-park_3.webp` · Pexels · Kyama Kilonzo · https://www.pexels.com/photo/black-rhinoceros-grazing-in-nairobi-national-park-29506189/
+
+**16 kicc-rooftop**
+- `heroImageURL`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kicc-rooftop_hero.webp
+- `additionalImageURLs`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kicc-rooftop_2.webp
+  - `16-1` → `kicc-rooftop_hero.webp` · Pexels · jamies.x. co · https://www.pexels.com/photo/trees-near-concrete-buildings-4242550/
+  - `16-2` → `kicc-rooftop_2.webp` · Unsplash · Kenny Murgor · https://unsplash.com/photos/a-view-of-a-city-from-a-tall-building-E_0kbeQbyV0
+
+**17 giraffe-centre-nairobi**
+- `heroImageURL`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/giraffe-centre-nairobi_hero.webp
+- `additionalImageURLs`: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/giraffe-centre-nairobi_2.webp, https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/giraffe-centre-nairobi_3.webp
+  - `17-11` → `giraffe-centre-nairobi_hero.webp` · Pexels · Youngafrikanna . · https://www.pexels.com/photo/relaxing-breakfast-with-giraffe-in-nairobi-35648217/
+  - `17-8` → `giraffe-centre-nairobi_2.webp` · Unsplash · Carol Musyoka · https://unsplash.com/photos/giraffe-head-in-forest-5LMu20-hcgk
+  - `17-9` → `giraffe-centre-nairobi_3.webp` · Pexels · Youngafrikanna . · https://www.pexels.com/photo/smiling-man-feeding-giraffes-at-zoo-19765798/
+
+⚠️ The Giraffe Centre hero (`17-11`) shows breakfast at **Giraffe Manor**, the hotel next door, not the Centre's feeding deck. The script mentions the Manor, but swap the hero if the Centre should lead.
