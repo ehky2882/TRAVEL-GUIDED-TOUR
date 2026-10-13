@@ -1054,3 +1054,20 @@ The owner picked these in the Philadelphia Image Picks page. **None is credit-re
 | `philadelphia-fifth-square-walk_stop3.webp` | W1-3-3 | Public domain | Smallbones | https://commons.wikimedia.org/wiki/File:Pine_at_5th,_Philly.JPG |
 | `philadelphia-broad-and-market-walk_stop5.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
 | `philadelphia-brick-walk_stop4.webp` | owner | Owner-supplied (2026-10-07) | — | pasted in chat |
+
+## Shanghai batch 1 (staged 2026-10-13, owner picks from the image picker; all Wikimedia Commons)
+
+Not yet on gh-pages. The files are cropped 1200×900 WebP, named by tour slug.
+
+| File | Licence | Photographer | Source |
+|---|---|---|---|
+| hotung-residence-shanghai_hero.webp | CC BY-SA 3.0 | Fayhoo | https://commons.wikimedia.org/wiki/File:Hedong_Gongguan.JPG |
+| jean-georges-mercato-three-on-the-bund_hero.webp | CC BY-SA 3.0 | Legolas1024 | https://commons.wikimedia.org/wiki/File:%E6%9C%89%E5%88%A9%E5%A4%A7%E6%A5%BC%E6%AD%A3%E9%97%A8.jpg |
+| jean-georges-mercato-three-on-the-bund_2.webp | CC BY-SA 4.0 | ScareCriterion12 | https://commons.wikimedia.org/wiki/File:Union_Building%2C_The_Bund_Dec_2017.jpg |
+| jesse-restaurant-tianping-road_hero.webp | CC BY-SA 2.0 | bryan... from Taipei, Taiwan | https://commons.wikimedia.org/wiki/File:Food_%E8%80%81%E5%90%89%E5%A3%AB%2C_%E4%B8%8A%E6%B5%B7%E8%8F%9C%2C_%E6%BB%AC%E8%8F%9C%2C_%E6%9C%AC%E5%B9%AB%E8%8F%9C%2C_%E4%B8%8A%E6%B5%B7%2C_%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%2C_%E4%B8%AD%E5%9C%8B%2C_Shanghai%2C_People%27s_Republic_of_China%2C_PRC%2C_China_%2829831506763%29.jpg |
+| jesse-restaurant-tianping-road_2.webp | CC BY-SA 2.0 | bryan... from Taipei, Taiwan | https://commons.wikimedia.org/wiki/File:Food_%E8%80%81%E5%90%89%E5%A3%AB%2C_%E4%B8%8A%E6%B5%B7%E8%8F%9C%2C_%E6%BB%AC%E8%8F%9C%2C_%E6%9C%AC%E5%B9%AB%E8%8F%9C%2C_%E4%B8%8A%E6%B5%B7%2C_%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%2C_%E4%B8%AD%E5%9C%8B%2C_Shanghai%2C_People%27s_Republic_of_China%2C_PRC%2C_China_%2829831478413%29.jpg |
+| rockbund-art-museum_hero.webp | CC BY-SA 3.0 | Legolas1024 | https://commons.wikimedia.org/wiki/File:North_China_Branch_of_the_Royal_Asiatic_Society%27_Building.jpg |
+| rockbund-art-museum_2.webp | CC BY 3.0 | Rockbund Art Museum | https://commons.wikimedia.org/wiki/File:RAM_building.jpg |
+| the-puli-hotel-shanghai_hero.webp | Free Art Licence | The PuLi Hotel and Spa | https://commons.wikimedia.org/wiki/File:Puli_exterior_jingan_park.jpg |
+| west-bund-museum_hero.webp | CC BY-SA 4.0 | Lcsun | https://commons.wikimedia.org/wiki/File:West_Bund_Museum%2C_Shanghai%2C_Jun_2020.jpg |
+| west-bund-museum_2.webp | CC BY-SA 4.0 | Lcsun | https://commons.wikimedia.org/wiki/File:Ladder_of_West_Bund_Museum_Shanghai%2C_Jun_2020.jpg |

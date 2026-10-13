@@ -67,7 +67,23 @@ These were checked on 2026-10-12. Re-check them before recording.
 | 12 | baike.baidu.com (Xin Rong Ji history); Michelin Guide Nanyang Rd; postcard.inc (Pei mansion) |
 | 13 | neriandhu.com Design Commune project page; dezeen.com; architecturalrecord.com |
 
-## Images: picker v3 published 2026-10-13, nothing picked yet
+## Images: owner picks, 2026-10-13
+
+```
+02 hotung-residence-shanghai: 02-1 hero
+03 jean-georges-mercato-three-on-the-bund: 03-7 hero, 03-2
+04 jesse-restaurant-tianping-road: 04-4 hero, 04-6
+07 rockbund-art-museum: 07-2 hero, 07-1
+08 the-puli-hotel-shanghai: 08-1 hero
+11 west-bund-museum: 11-1 hero, 11-3
+```
+
+- **10 files**, cropped to 1200×900 WebP (`<slug>_hero.webp`, `<slug>_2.webp`). They came from the 1920 px Commons thumbnails, so nothing is upscaled, and were sent to the owner as a zip.
+- **Not uploaded to gh-pages yet.**
+- **All 10 need a credit line**; they are listed in `drafts/CREDITS.md` § Shanghai batch 1.
+- **Still no picks** for 01, 05, 06, 09, 10, 12 and 13.
+
+### Picker v3 notes
 
 **Picker:** [Shanghai Image Picks](https://claude.ai/artifact/1EjYxPqJjtFygrGfRzH7aU) (version 3). It holds **92 photos across 10 tours**. Each source page and licence is listed in `image-candidates.tsv`, and every place to look further is in `IMAGE-LINKS.md`.
 
