@@ -28,7 +28,7 @@ RESPELL = {
     "Fujian": "foo jyen", "Hetian": "huh tyen", "Longyan": "long yen", "Heatherwick": "hether wick",
     "Taiyuan": "tie yooen", "Yongjia": "yong jyah", "Ahguang": "ah gwahng", "Siwei": "suh way",
     "Huqiu": "hoo cheeoh", "Huangpu": "hwahng poo", "Suzhou": "soo joe", "Yuanmingyuan": "yooen ming yooen",
-    "Waibaidu": "why by doo", "Chipperfield": "chipper field",
+    "Waibaidu": "why by doo", "bagua": "bah gwah", "Chipperfield": "chipper field",
     "PuLi": "poo lee", "Jing'an": "jing ahn", "Yan'an": "yen ahn", "Changde": "chahng duh",
     "Kume Sekkei": "koo meh sekkay", "Jaya": "jaya",
     "Schrager": "shray ger", "Schmitt": "shmit",
