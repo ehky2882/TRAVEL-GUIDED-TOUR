@@ -10,7 +10,7 @@ You're on the approach to the new Vietnam Military History Museum, out on the we
 
 The museum opened at the start of November twenty twenty four, timed to the eightieth anniversary of the Vietnamese People's Army, which was founded in December nineteen forty four. The building took almost five years, the site covers more than thirty eight hectares, and it cost around two and a half trillion dong, something like a hundred million US dollars. That same year it won the top prize at Vietnam's national architecture awards.
 
-The style is brutalist, in the Soviet tradition, big, bare, unapologetic concrete. One writer called it a symphony in concrete, and that seems about right.
+The style is brutalist, in the Soviet tradition, big, bare, unapologetic concrete, used the way a composer uses brass.
 
 Now look at the two courtyards either side. They're arranged by side. In the western courtyard: French, American and South Vietnamese equipment, a Chinook helicopter, a C one thirty transport, and a tower sculpted out of the wreckage of downed aircraft, brought over from the old museum. In the eastern courtyard: North Vietnamese, Soviet and Chinese hardware, T thirty four and T fifty four tanks, mig fighters, surface to air missiles. Even the layout tells a story.
 

@@ -8,7 +8,7 @@
 
 In Hanoi, the front of a building is rarely the whole story. This one's barely the first page.
 
-You're on Hàng Khay, the street that runs along the southern end of Hoàn Kiếm Lake. With the water behind you, look for number twenty-one — a narrow neoclassical front squeezed between its neighbours. One travel writer described it as almost invisible, wedged between a perfume shop and a café. That's the Silk Path Boutique.
+You're on Hàng Khay, the street that runs along the southern end of Hoàn Kiếm Lake. With the water behind you, look for number twenty-one — a narrow neoclassical front squeezed between a perfume shop and a café, so modest it's easy to walk straight past. That's the Silk Path Boutique.
 
 Have a look at the façade. It speaks the language of the old colonial townhouse — classical mouldings, tall windows, a proper sense of occasion — all folded into a frontage only a shopfront wide. It reads like a small townhouse. You'd guess a handful of rooms at most.
 
