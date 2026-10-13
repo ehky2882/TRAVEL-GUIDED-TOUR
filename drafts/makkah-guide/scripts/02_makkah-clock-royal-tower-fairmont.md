@@ -1,0 +1,53 @@
+# 02 · Makkah Clock Royal Tower, a Fairmont Hotel
+
+| | |
+|---|---|
+| Category | Stay |
+| Google Maps name | Fairmont Makkah Clock Royal Tower |
+| Coordinates (WGS-84) | `21.418038, 39.825302` (OSM) |
+| Length | 301 words, ~1:56 |
+| Files | `02_makkah-clock-royal-tower-fairmont_clean.txt` · `02_makkah-clock-royal-tower-fairmont_tts-safe.txt` |
+
+## Script (clean)
+
+The hotel is the least remarkable thing about this building, and it has one thousand, six hundred and sixty-two rooms.
+
+From the plaza south of the mosque, look up at the tallest of the seven towers, the one carrying the four great clock faces. That is the Makkah Clock Royal Tower, six hundred and one metres to the tip of its spire, and the Fairmont runs the hotel floors inside it.
+
+Have a look at the clock first. Each face is forty-three metres across, the largest clock faces anywhere, and the clock sits higher above the ground than any other in the world. The hotel beneath it is built on the same scale: more than sixteen hundred rooms and suites, many of them fitted with speakers that carry the sound of the Haram, so the call to prayer reaches you in your room.
+
+Then there is the hotel within the hotel. Fairmont Gold has its own entrance, its own reception and its own lifts, with private prayer rooms looking over the Kaaba, and a restaurant the hotel describes as the highest in Makkah.
+
+What's worth knowing, standing here, is what the tower replaced. This hill once carried the Ajyad Fortress, an Ottoman citadel built in seventeen eighty to protect the sanctuary from raiders. It was demolished in January two thousand and two, and Turkey protested loudly. So the tallest building in the city now stands where an old fort once kept watch over the mosque, and in its own way it has taken over the job.
+
+[beat]
+
+Before you leave the plaza, wait for the next call to prayer and keep your eyes on the crown of the tower. Its lights flash in time with the prayer, and on a clear night they can be seen from far out across the valley.
+
+## Script (TTS-safe)
+
+The hotel is the least remarkable thing about this building, and it has one thousand, six hundred and sixty two rooms.
+
+From the plaza south of the mosque, look up at the tallest of the seven towers, the one carrying the four great clock faces. That is the Makkah Clock Royal Tower, six hundred and one metres to the tip of its spire, and the Fairmont runs the hotel floors inside it.
+
+Have a look at the clock first. Each face is forty three metres across, the largest clock faces anywhere, and the clock sits higher above the ground than any other in the world. The hotel beneath it is built on the same scale: more than sixteen hundred rooms and suites, many of them fitted with speakers that carry the sound of the Harahm, so the call to prayer reaches you in your room.
+
+Then there is the hotel within the hotel. Fairmont Gold has its own entrance, its own reception and its own lifts, with private prayer rooms looking over the Kahbah, and a restaurant the hotel describes as the highest in Makkah.
+
+What's worth knowing, standing here, is what the tower replaced. This hill once carried the Ajyaad Fortress, an Ottoman citadel built in seventeen eighty to protect the sanctuary from raiders. It was demolished in January two thousand and two, and Turkey protested loudly. So the tallest building in the city now stands where an old fort once kept watch over the mosque, and in its own way it has taken over the job.
+
+Before you leave the plaza, wait for the next call to prayer and keep your eyes on the crown of the tower. Its lights flash in time with the prayer, and on a clear night they can be seen from far out across the valley.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Kaaba | Kahbah |
+| Haram | Harahm |
+| Ajyad | Ajyaad |
+
+## Sources read
+
+- https://www.fairmont.com/en/hotels/makkah/makkah-clock-royal-tower.html
+- https://en.wikipedia.org/wiki/The_Clock_Towers
+- https://en.wikipedia.org/wiki/Ajyad_Fortress

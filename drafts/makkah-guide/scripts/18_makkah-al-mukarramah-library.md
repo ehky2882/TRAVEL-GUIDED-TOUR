@@ -1,0 +1,54 @@
+# 18 · Makkah Al Mukarramah Library
+
+| | |
+|---|---|
+| Category | Visit |
+| Google Maps name | Makkah Al Mukarramah Library |
+| Coordinates (WGS-84) | `21.424907, 39.829817` (Google) |
+| Length | 280 words, ~1:48 |
+| Files | `18_makkah-al-mukarramah-library_clean.txt` · `18_makkah-al-mukarramah-library_tts-safe.txt` |
+
+## Script (clean)
+
+This is a small, plain building with a very large claim to make about the ground it stands on.
+
+Walk out of the mosque on its eastern side, towards the open plaza by the Safa end. On the plaza, look for a modest, rectangular two-storey building standing on its own, with its main façade turned west, towards the mosque. That is the Makkah Al Mukarramah Library.
+
+Start with what lies beneath it. The library is also known as Bayt al-Mawlid, the House of the Birth, because it is believed to stand on the spot where the Prophet Muhammad was born. Whatever stood here before was levelled under early Saudi rule, out of concern that it would become a focus of excessive veneration.
+
+Then the library itself. It was founded by Sheikh Abbas Qattan, around nineteen fifty, built on the old foundations and stocked with a collection of books he had bought and donated. It is two small floors, a main hall and a few rooms, and that is all. Accounts of the exact year differ, but none of them describes anything grander.
+
+And here's the point worth pausing on. Look around and you'll see some of the largest buildings in the world, put up in the last twenty years. This one is tiny and old-fashioned, and that is exactly why it still stands. It survives because it asks so little of the visitor: not a shrine, not a monument, just a library.
+
+[beat]
+
+Stand at the west façade and turn round to face the mosque. The two buildings look at each other across the plaza, one enormous and one hardly noticed, and the smaller of them is arguably the older idea.
+
+## Script (TTS-safe)
+
+This is a small, plain building with a very large claim to make about the ground it stands on.
+
+Walk out of the mosque on its eastern side, towards the open plaza by the Safa end. On the plaza, look for a modest, rectangular two storey building standing on its own, with its main facade turned west, towards the mosque. That is the Makkah al Mukarrama Library.
+
+Start with what lies beneath it. The library is also known as Bait al Mowlid, the House of the Birth, because it is believed to stand on the spot where the Prophet Muhammad was born. Whatever stood here before was levelled under early Saudi rule, out of concern that it would become a focus of excessive veneration.
+
+Then the library itself. It was founded by Sheikh Abbas Kattaan, around nineteen fifty, built on the old foundations and stocked with a collection of books he had bought and donated. It is two small floors, a main hall and a few rooms, and that is all. Accounts of the exact year differ, but none of them describes anything grander.
+
+And here's the point worth pausing on. Look around and you'll see some of the largest buildings in the world, put up in the last twenty years. This one is tiny and old fashioned, and that is exactly why it still stands. It survives because it asks so little of the visitor: not a shrine, not a monument, just a library.
+
+Stand at the west facade and turn round to face the mosque. The two buildings look at each other across the plaza, one enormous and one hardly noticed, and the smaller of them is arguably the older idea.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Makkah Al Mukarramah Library | Makkah al Mukarrama Library |
+| Abbas Qattan | Abbas Kattaan |
+| Bayt al-Mawlid | Bait al Mowlid |
+| façade | facade |
+
+## Sources read
+
+- https://www.islamiclandmarks.com/makkah-other/birthplace-of-the-prophet-saw
+- https://muslim.sg/articles/5-historical-places-to-visit-in-makkah
+- https://muhammadencyclopedia.com/article/first-demolition-and-re-construction-of-the-birthplace-of-prophet-muhammad

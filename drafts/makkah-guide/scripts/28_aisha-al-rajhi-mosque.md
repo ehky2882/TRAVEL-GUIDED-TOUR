@@ -1,0 +1,59 @@
+# 28 · Aisha Al Rajhi Mosque
+
+| | |
+|---|---|
+| Category | Visit |
+| Google Maps name | Aisha Al Rajhi Mosque |
+| Coordinates (WGS-84) | `21.381866, 39.873747` (Google) |
+| Length | 259 words, ~1:40 |
+| Files | `28_aisha-al-rajhi-mosque_clean.txt` · `28_aisha-al-rajhi-mosque_tts-safe.txt` |
+
+## Script (clean)
+
+Most new mosques in Makkah are built to cope with numbers. This one was built as a gift.
+
+The Aisha Al Rajhi Mosque stands in Al-Naseem, about four kilometres east of the Haram. Look for the two tall minarets first, and you'll find the mosque at their feet, with Arak Park and its palm-lined paths beside it.
+
+Start with the minarets, because they are the thing you see from across the district. There are two, each about sixty-eight metres high.
+
+Then go inside, to the prayer halls. They are finished in black and white marble, which gives the interior a sharp, graphic look. The men's prayer hall runs over three floors and the women's over two, and with its outer courtyard, the mosque can hold about forty-eight thousand people.
+
+It was built by the businessman and philanthropist Suleiman Al Rajhi, and it opened in two thousand and thirteen, inaugurated by Prince Khalid Al Faisal, the governor of the Makkah region.
+
+And here's what I find interesting. In the Grand Mosque, every new hall is a state project, an answer to the problem of the crowd. This is something else: one man's offering, built in a residential district, among the people who live around it. It is a reminder that Makkah is a city where people live, as well as a place people visit.
+
+[beat]
+
+Come back in the evening and walk out into Arak Park next door. From the lawns, the minarets rise straight up over the palms, and you'll see why local families choose to spend their evenings here.
+
+## Script (TTS-safe)
+
+Most new mosques in Makkah are built to cope with numbers. This one was built as a gift.
+
+The Aysha al Rajhee Mosque stands in an Naseem, about four kilometres east of the Harahm. Look for the two tall minarets first, and you'll find the mosque at their feet, with Arak Park and its palm lined paths beside it.
+
+Start with the minarets, because they are the thing you see from across the district. There are two, each about sixty eight metres high.
+
+Then go inside, to the prayer halls. They are finished in black and white marble, which gives the interior a sharp, graphic look. The men's prayer hall runs over three floors and the women's over two, and with its outer courtyard, the mosque can hold about forty eight thousand people.
+
+It was built by the businessman and philanthropist Sulaiman al Rajhee, and it opened in two thousand and thirteen, inaugurated by Prince Khaalid al Faisal, the governor of the Makkah region.
+
+And here's what I find interesting. In the Grand Mosque, every new hall is a state project, an answer to the problem of the crowd. This is something else: one man's offering, built in a residential district, among the people who live around it. It is a reminder that Makkah is a city where people live, as well as a place people visit.
+
+Come back in the evening and walk out into Arak Park next door. From the lawns, the minarets rise straight up over the palms, and you'll see why local families choose to spend their evenings here.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Aisha Al Rajhi | Aysha al Rajhee |
+| Suleiman Al Rajhi | Sulaiman al Rajhee |
+| Khalid Al Faisal | Khaalid al Faisal |
+| Al-Naseem | an Naseem |
+| Haram | Harahm |
+
+## Sources read
+
+- https://mosqpedia.org/masajid/aisha-al-rajhi-mosque/
+- https://www.arabnews.com/news/456717
+- https://visitsaudi.com/en/makkah/attractions/masjid-al-rajhi

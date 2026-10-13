@@ -1,0 +1,61 @@
+# 19 · Exhibition of the Two Holy Mosques Architecture
+
+| | |
+|---|---|
+| Category | Visit |
+| Google Maps name | Exhibition of the Two Holy Mosques Architecture |
+| Coordinates (WGS-84) | `21.433782, 39.754361` (Google) |
+| Length | 305 words, ~1:57 |
+| Files | `19_exhibition-two-holy-mosques-architecture_clean.txt` · `19_exhibition-two-holy-mosques-architecture_tts-safe.txt` |
+
+## Script (clean)
+
+If you want to understand how the Grand Mosque became what it is, start here, ten kilometres away, in a single exhibition building in Umm al-Joud.
+
+The Exhibition of the Two Holy Mosques Architecture sits in the Umm al-Joud district on the western edge of the city, just beside the Kiswa factory. It is a museum building of about twelve hundred square metres, divided into seven halls, beginning with a reception hall set around a large model of the Grand Mosque.
+
+Find the Kaaba hall first. Among old coverings and doors, there is a wooden pillar believed to date from around the sixty-fifth year after the Hijra, from the rebuilding of the Kaaba under Abdullah ibn al-Zubayr. Close by is a door of the Kaaba from nineteen forty-four, made in the reign of King Abdulaziz.
+
+Then go and find the staircase. It is a carved teak ladder on wheels, dating from the eighteen-twenties, which was rolled up to the Kaaba so the door, set more than two metres above the ground, could be reached. There is also a rain spout from the roof of the Kaaba, from early in the seventeenth century.
+
+And save a few minutes for the photographs. The rare photographs hall has pictures of Makkah and Madinah taken in eighteen seventy-nine and eighteen ninety by the Egyptian photographer Sadeq Bek, which show you the city before almost everything around the mosque was rebuilt.
+
+That's the real gift of the place. The mosque today is all scale, and here you see it at human size, in wood, stone and metal you could reach out and touch.
+
+[beat]
+
+In the Zamzam hall, look out for a sundial from sixteen fourteen and, near it, the first clock ever installed in the Grand Mosque, in nineteen thirty-three. Then walk next door to see the Kiswa being made.
+
+## Script (TTS-safe)
+
+If you want to understand how the Grand Mosque became what it is, start here, ten kilometres away, in a single exhibition building in Oom al Jood.
+
+The Exhibition of the Two Holy Mosques Architecture sits in the Oom al Jood district on the western edge of the city, just beside the Kisswa factory. It is a museum building of about twelve hundred square metres, divided into seven halls, beginning with a reception hall set around a large model of the Grand Mosque.
+
+Find the Kahbah hall first. Among old coverings and doors, there is a wooden pillar believed to date from around the sixty fifth year after the Hijra, from the rebuilding of the Kahbah under Abdullah ibn az Zubair. Close by is a door of the Kahbah from nineteen forty four, made in the reign of King Abdul Azeez.
+
+Then go and find the staircase. It is a carved teak ladder on wheels, dating from the eighteen twenties, which was rolled up to the Kahbah so the door, set more than two metres above the ground, could be reached. There is also a rain spout from the roof of the Kahbah, from early in the seventeenth century.
+
+And save a few minutes for the photographs. The rare photographs hall has pictures of Makkah and Madinah taken in eighteen seventy nine and eighteen ninety by the Egyptian photographer Saadik Bek, which show you the city before almost everything around the mosque was rebuilt.
+
+That's the real gift of the place. The mosque today is all scale, and here you see it at human size, in wood, stone and metal you could reach out and touch.
+
+In the Zamzam hall, look out for a sundial from sixteen fourteen and, near it, the first clock ever installed in the Grand Mosque, in nineteen thirty three. Then walk next door to see the Kisswa being made.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Abdullah ibn al-Zubayr | Abdullah ibn az Zubair |
+| Sadeq Bek | Saadik Bek |
+| Umm al-Joud | Oom al Jood |
+| King Abdulaziz | King Abdul Azeez |
+| Kaaba | Kahbah |
+| Kiswa | Kisswa |
+
+## Sources read
+
+- https://en.wikipedia.org/wiki/The_Two_Holy_Mosques_Architecture_Exhibition
+- https://www.arabnews.com/makkah-exhibition-features-historical-aspects-two-holy-mosques
+- https://madainproject.com/exhibition_of_the_two_holy_mosques_architecture
+- https://en.wikipedia.org/wiki/Kaaba

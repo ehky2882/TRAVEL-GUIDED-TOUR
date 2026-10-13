@@ -1,0 +1,52 @@
+# 38 · Arak Park
+
+| | |
+|---|---|
+| Category | Observe |
+| Google Maps name | Arak Park |
+| Coordinates (WGS-84) | `21.383342, 39.876428` (Google) |
+| Length | 246 words, ~1:35 |
+| Files | `38_arak-park_clean.txt` · `38_arak-park_tts-safe.txt` |
+
+## Script (clean)
+
+Not everything in Makkah is about pilgrimage. This is where the city simply goes out for the evening.
+
+Arak Park is in Al-Naseem, about four kilometres east of the Haram, right beside the Aisha Al Rajhi Mosque. Stand on one of the paths between the lawns and look up: the mosque's two minarets rise just beyond the palms.
+
+Start with what's here. Green lawns, rows of palm trees, walking paths with proper surfaces, shade over parts of them, and playgrounds for children. It is open around the clock, and it costs nothing to get in.
+
+Then look at who is using it. After the heat of the day, this is where families from the neighbourhood come to walk, to sit on the grass and to let their children run. It is an ordinary municipal park, and that is exactly what makes it worth seeing.
+
+Here's the thing. Visitors tend to see Makkah only as the Haram and its towers, a city made for crowds who are just passing through. A park like this is a reminder that more than two million people call this place home, and need what people need anywhere: a bit of green, a bit of shade and somewhere to take the children.
+
+[beat]
+
+Stay on into the evening, when the paths fill up and the minarets of the Aisha Al Rajhi Mosque are lit up over the trees. It's the best place in the city to see how Makkah lives when nobody's visiting.
+
+## Script (TTS-safe)
+
+Not everything in Makkah is about pilgrimage. This is where the city simply goes out for the evening.
+
+Arak Park is in an Naseem, about four kilometres east of the Harahm, right beside the Aysha al Rajhee Mosque. Stand on one of the paths between the lawns and look up: the mosque's two minarets rise just beyond the palms.
+
+Start with what's here. Green lawns, rows of palm trees, walking paths with proper surfaces, shade over parts of them, and playgrounds for children. It is open around the clock, and it costs nothing to get in.
+
+Then look at who is using it. After the heat of the day, this is where families from the neighbourhood come to walk, to sit on the grass and to let their children run. It is an ordinary municipal park, and that is exactly what makes it worth seeing.
+
+Here's the thing. Visitors tend to see Makkah only as the Harahm and its towers, a city made for crowds who are just passing through. A park like this is a reminder that more than two million people call this place home, and need what people need anywhere: a bit of green, a bit of shade and somewhere to take the children.
+
+Stay on into the evening, when the paths fill up and the minarets of the Aysha al Rajhee Mosque are lit up over the trees. It's the best place in the city to see how Makkah lives when nobody's visiting.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Aisha Al Rajhi | Aysha al Rajhee |
+| Al-Naseem | an Naseem |
+| Haram | Harahm |
+
+## Sources read
+
+- https://discovermakkah.sa/en/places-worth-visiting/landmarks/arak-park
+- https://wanderlog.com/list/geoCategory/105953/top-things-to-do-and-attractions-in-mecca

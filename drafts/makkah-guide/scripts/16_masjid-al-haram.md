@@ -1,0 +1,56 @@
+# 16 · Masjid al-Haram
+
+| | |
+|---|---|
+| Category | Visit |
+| Google Maps name | Masjid al-Haram |
+| Coordinates (WGS-84) | `21.423658, 39.82536` (Google) |
+| Length | 348 words, ~2:14 |
+| Files | `16_masjid-al-haram_clean.txt` · `16_masjid-al-haram_tts-safe.txt` |
+
+## Script (clean)
+
+You are standing in front of a building that has been expanded, again and again, for almost fourteen centuries, and the parts it has kept are the parts worth looking for.
+
+From the great plaza on the south side, face the King Abdulaziz Gate, with the Clock Towers at your back. Ahead of you is the Masjid al-Haram, the Sacred Mosque, wrapped around the Kaaba at its centre, and stretching away to your left and right much further than you can see from here.
+
+Start with the oldest layer, which is deep inside, around the courtyard. In fifteen seventy, Sultan Selim the Second commissioned Mimar Sinan, the great Ottoman architect, to renovate the mosque. His team replaced the flat roof of the arcades with domes, decorated inside with calligraphy, and set new columns beneath them. Those Ottoman arcades are the oldest surviving parts of the building.
+
+Then come the Saudi layers. The first expansion, between nineteen fifty-five and nineteen seventy-six, roofed in the processional route between Safa and Marwa and added minarets, but it also pulled down much of the Ottoman work. A second expansion under King Fahd, from nineteen eighty-six, added a whole new wing, reached through the King Fahd Gate. The architect most often credited with the Saudi expansions is Mohamed Kamal Ismail, an Egyptian who lived to ninety-nine. The third, begun under King Abdullah, pushed north across three hundred thousand square metres, its halls hung with thousands of gilded chandeliers made in Vienna.
+
+And here's the thing. Every one of those expansions answers the same question: how do you let more people stand in the same place? Over the centuries the answer has meant marble, escalators, air conditioning and, in the end, the demolition of much of the old city around it. The building's real design brief has always been the crowd.
+
+[beat]
+
+When you go in, make your way to the courtyard and look for the arcades crowned with small domes. They are Sinan's, more than four hundred and fifty years old, and they are the oldest part of the building you can see today.
+
+## Script (TTS-safe)
+
+You are standing in front of a building that has been expanded, again and again, for almost fourteen centuries, and the parts it has kept are the parts worth looking for.
+
+From the great plaza on the south side, face the King Abdul Azeez Gate, with the Clock Towers at your back. Ahead of you is the Masjid al Harahm, the Sacred Mosque, wrapped around the Kahbah at its centre, and stretching away to your left and right much further than you can see from here.
+
+Start with the oldest layer, which is deep inside, around the courtyard. In fifteen seventy, Sultan Seleem the Second commissioned Meemar Sinahn, the great Ottoman architect, to renovate the mosque. His team replaced the flat roof of the arcades with domes, decorated inside with calligraphy, and set new columns beneath them. Those Ottoman arcades are the oldest surviving parts of the building.
+
+Then come the Saudi layers. The first expansion, between nineteen fifty five and nineteen seventy six, roofed in the processional route between Safa and Marwa and added minarets, but it also pulled down much of the Ottoman work. A second expansion under King Fahd, from nineteen eighty six, added a whole new wing, reached through the King Fahd Gate. The architect most often credited with the Saudi expansions is Mohammed Kamaal Ismaeel, an Egyptian who lived to ninety nine. The third, begun under King Abdullah, pushed north across three hundred thousand square metres, its halls hung with thousands of gilded chandeliers made in Vienna.
+
+And here's the thing. Every one of those expansions answers the same question: how do you let more people stand in the same place? Over the centuries the answer has meant marble, escalators, air conditioning and, in the end, the demolition of much of the old city around it. The building's real design brief has always been the crowd.
+
+When you go in, make your way to the courtyard and look for the arcades crowned with small domes. They are Sinahn's, more than four hundred and fifty years old, and they are the oldest part of the building you can see today.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Mohamed Kamal Ismail | Mohammed Kamaal Ismaeel |
+| Masjid al-Haram | Masjid al Harahm |
+| Mimar Sinan | Meemar Sinahn |
+| Sinan's | Sinahn's |
+| Selim the Second | Seleem the Second |
+| King Abdulaziz | King Abdul Azeez |
+| Kaaba | Kahbah |
+
+## Sources read
+
+- https://en.wikipedia.org/wiki/Great_Mosque_of_Mecca
+- https://en.wikipedia.org/wiki/Mohamed_Kamal_Ismail

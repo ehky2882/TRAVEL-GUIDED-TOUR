@@ -14,7 +14,8 @@ Where a source contradicted the original guide, the source won — see *What cha
 |---|---|
 | `scripts/NN_slug_clean.txt` | Authoring script. Keeps `[beat]` and normal spelling. |
 | `scripts/NN_slug_tts-safe.txt` | For the TTS engine. Phonetic respellings (plain lowercase-style words, no caps, no hyphens), no brackets or markup, `[beat]` replaced by a paragraph break, every number and year spelled out in full. Titles respelled where the title itself trips TTS. |
-| `MAKKAH-GUIDE.md` | This file: index, coordinates, every clean script, its respelling table and its sources. |
+| `scripts/NN_slug.md` | One Markdown file per tour: Google Maps name, coordinates, length, the clean script, the TTS-safe script, its respelling table and the sources read. |
+| `MAKKAH-GUIDE.md` | This file: index of all 38 tours, coordinates, what changed from the guide and the sourcing flags. |
 | `source/*.txt`, `tools/build.py` | Edit the source, re-run `python3 tools/build.py`; it rebuilds both txt sets and this file, and fails if a TTS-safe file still holds a digit, hyphen, bracket, non-ASCII letter, all-caps word or unrespelled apostrophe name. |
 
 Every script carries a `[beat]`, so every tour has a TTS-safe version.

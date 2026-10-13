@@ -1,0 +1,55 @@
+# 13 · Cultivo Cafe and Roastry
+
+| | |
+|---|---|
+| Category | Drink |
+| Google Maps name | cultivo cafe and roastry  مقهى ومحمصة كالتيفو |
+| Coordinates (WGS-84) | `21.46286, 39.967878` (Google) |
+| Length | 247 words, ~1:35 |
+| Files | `13_cultivo-cafe-and-roastry_clean.txt` · `13_cultivo-cafe-and-roastry_tts-safe.txt` |
+
+## Script (clean)
+
+To cultivate is to grow something with care, which is a fair description of what happens to the coffee here.
+
+Cultivo is on Al Qadisiyyah Road in Ar-Rashidiyyah, in the north-east of the city, a long way from the Haram. Look for the café sign, in Arabic and English, and step inside.
+
+The first thing regulars mention is the room. More than one visitor has said the design reminds them of Greece, as if it had transported them somewhere else entirely, and it is a deliberately peaceful space in a city that rarely stops moving.
+
+Then the coffee. Cultivo roasts its own beans, and the single-origin list is the point. The Colombian brewed through a V60 has its admirers, and the Ugandan espresso has been described, memorably, as brain-hitting. If you see a Cup of Excellence coffee on the board, that is a lot that has been judged in competition, and it is worth trying while it lasts. To eat, the banoffee pie is the house favourite.
+
+What's worth noticing is the care. Reviewers keep praising the preparation of each cup, and the staff by name, which is rarely what people remember about a café. Here, the ritual of making the coffee is as much the attraction as the result.
+
+[beat]
+
+Ask the barista what has just been roasted and let them choose for you. Then, if you're heading back towards the centre, take the road past Jabal al-Nour and look up at the mountain on your way.
+
+## Script (TTS-safe)
+
+To cultivate is to grow something with care, which is a fair description of what happens to the coffee here.
+
+Kultivo is on al Kaadiseeya Road in ar Rasheedeeya, in the north east of the city, a long way from the Harahm. Look for the cafe sign, in Arabic and English, and step inside.
+
+The first thing regulars mention is the room. More than one visitor has said the design reminds them of Greece, as if it had transported them somewhere else entirely, and it is a deliberately peaceful space in a city that rarely stops moving.
+
+Then the coffee. Kultivo roasts its own beans, and the single origin list is the point. The Colombian brewed through a vee sixty has its admirers, and the Ugandan espresso has been described, memorably, as brain hitting. If you see a Cup of Excellence coffee on the board, that is a lot that has been judged in competition, and it is worth trying while it lasts. To eat, the banoffee pie is the house favourite.
+
+What's worth noticing is the care. Reviewers keep praising the preparation of each cup, and the staff by name, which is rarely what people remember about a cafe. Here, the ritual of making the coffee is as much the attraction as the result.
+
+Ask the barista what has just been roasted and let them choose for you. Then, if you're heading back towards the centre, take the road past Jabbal an Noor and look up at the mountain on your way.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Jabal al-Nour | Jabbal an Noor |
+| Ar-Rashidiyyah | ar Rasheedeeya |
+| Al Qadisiyyah Road | al Kaadiseeya Road |
+| café | cafe |
+| Haram | Harahm |
+| Cultivo | Kultivo |
+| V60 | vee sixty |
+
+## Sources read
+
+- https://wanderlog.com/place/details/9573411 (Google listing + review summary)

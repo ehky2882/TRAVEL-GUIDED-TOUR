@@ -1,0 +1,55 @@
+# 35 · Mina
+
+| | |
+|---|---|
+| Category | Observe |
+| Google Maps name | Mina |
+| Coordinates (WGS-84) | `21.414605, 39.894564` (Google) |
+| Length | 268 words, ~1:43 |
+| Files | `35_mina_clean.txt` · `35_mina_tts-safe.txt` |
+
+## Script (clean)
+
+For most of the year, this is a city with almost nobody in it.
+
+Mina lies in a valley about eight kilometres south-east of the Grand Mosque. From a high point at its western end, near the Jamarat Bridge, look east. You should see white roofs filling the valley floor and climbing the slopes on both sides, as far as you can see.
+
+Start with the tents. There are more than a hundred thousand of them, each eight metres square, made of fibreglass with a fireproof Teflon coating. They are grouped into walled camps, divided by the pilgrims' nationalities, each with its own kitchen and washrooms, and marked with colour-and-number codes so that people can find their way back. At its peak, this valley houses up to three million people.
+
+Then the reason they look like this. Before the nineteen nineties, pilgrims brought their own tents. Permanent cotton tents followed, and they burned: the fire of nineteen ninety-seven killed more than three hundred and forty people. The fireproof tents were the response.
+
+In the middle of the valley is the Masjid al-Khayf, the largest mosque in Mina, covering some twenty thousand square metres, which comes fully alive only during the Hajj.
+
+And here's the thing worth sitting with. Mina is a city designed to be used for a few days a year, and to stand empty and waiting for the rest. Few places anywhere are built so completely around a single week.
+
+[beat]
+
+Drive slowly along one of the valley roads outside the Hajj season. It's eerily quiet, and the rows of white roofs reach further than seems possible.
+
+## Script (TTS-safe)
+
+For most of the year, this is a city with almost nobody in it.
+
+Meena lies in a valley about eight kilometres south east of the Grand Mosque. From a high point at its western end, near the Jamaraht Bridge, look east. You should see white roofs filling the valley floor and climbing the slopes on both sides, as far as you can see.
+
+Start with the tents. There are more than a hundred thousand of them, each eight metres square, made of fibreglass with a fireproof Teflon coating. They are grouped into walled camps, divided by the pilgrims' nationalities, each with its own kitchen and washrooms, and marked with colour and number codes so that people can find their way back. At its peak, this valley houses up to three million people.
+
+Then the reason they look like this. Before the nineteen nineties, pilgrims brought their own tents. Permanent cotton tents followed, and they burned: the fire of nineteen ninety seven killed more than three hundred and forty people. The fireproof tents were the response.
+
+In the middle of the valley is the Masjid al Khaif, the largest mosque in Meena, covering some twenty thousand square metres, which comes fully alive only during the Hajj.
+
+And here's the thing worth sitting with. Meena is a city designed to be used for a few days a year, and to stand empty and waiting for the rest. Few places anywhere are built so completely around a single week.
+
+Drive slowly along one of the valley roads outside the Hajj season. It's eerily quiet, and the rows of white roofs reach further than seems possible.
+
+## TTS respellings
+
+| Written | Spoken as |
+|---|---|
+| Masjid al-Khayf | Masjid al Khaif |
+| Jamarat | Jamaraht |
+| Mina | Meena |
+
+## Sources read
+
+- https://en.wikipedia.org/wiki/Mina,_Saudi_Arabia

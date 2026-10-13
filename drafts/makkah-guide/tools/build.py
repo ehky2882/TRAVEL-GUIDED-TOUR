@@ -330,7 +330,7 @@ def parse():
 def main():
     OUT.mkdir(exist_ok=True)
     tours = parse()
-    problems, md_rows, md_body = [], [], []
+    problems, md_rows = [], []
     for num, slug, title, body in tours:
         clean = f"{title}\n\n{body}\n"
         tts, used = tts_safe(clean)
@@ -346,15 +346,23 @@ def main():
         md_rows.append(f"| {num} | {cat} | {name.replace('|', '\\|')} | `{lat}, {lon}` | {src} | {words} | ~{secs // 60}:{secs % 60:02d} |")
         resp = "\n".join(f"| {a} | {b} |" for a, b in used) or "| — | — |"
         srcs = "\n".join(f"- {s}" for s in SOURCES[num])
-        md_body.append(
-            f"## {num} · {title}\n\n**{cat}** · Google Maps name: **{name}** · `{lat}, {lon}` ({src}) · "
-            f"{words} words, ~{secs // 60}:{secs % 60:02d}\n\nFiles: `scripts/{num}_{slug}_clean.txt`, "
-            f"`scripts/{num}_{slug}_tts-safe.txt`\n\n### Script (clean)\n\n"
-            + "\n\n".join(p for p in body.split("\n\n")) +
-            f"\n\n### TTS respellings\n\n| Written | Spoken as |\n|---|---|\n{resp}\n\n### Sources read\n\n{srcs}\n"
+        tour_md = (
+            f"# {num} · {title}\n\n"
+            f"| | |\n|---|---|\n"
+            f"| Category | {cat} |\n"
+            f"| Google Maps name | {name.replace('|', chr(92) + '|')} |\n"
+            f"| Coordinates (WGS-84) | `{lat}, {lon}` ({src}) |\n"
+            f"| Length | {words} words, ~{secs // 60}:{secs % 60:02d} |\n"
+            f"| Files | `{num}_{slug}_clean.txt` · `{num}_{slug}_tts-safe.txt` |\n\n"
+            f"## Script (clean)\n\n{body}\n\n"
+            f"## Script (TTS-safe)\n\n{tts.split(chr(10), 2)[2].strip()}\n\n"
+            f"## TTS respellings\n\n| Written | Spoken as |\n|---|---|\n{resp}\n\n"
+            f"## Sources read\n\n{srcs}\n"
         )
+        (OUT / f"{num}_{slug}.md").write_text(tour_md)
+        md_rows[-1] += f" [{num}_{slug}.md](scripts/{num}_{slug}.md) |"
     header = (ROOT / "tools" / "md-header.md").read_text()
-    md = header + "\n## Index\n\n| # | Category | Google Maps name | Coordinates (WGS-84) | Coord source | Words | Est. length |\n|---|---|---|---|---|---|---|\n" + "\n".join(md_rows) + "\n\n---\n\n" + "\n---\n\n".join(md_body)
+    md = header + "\n## Index\n\n| # | Category | Google Maps name | Coordinates (WGS-84) | Coord source | Words | Est. length | Tour file |\n|---|---|---|---|---|---|---|---|\n" + "\n".join(md_rows) + "\n"
     (ROOT / "MAKKAH-GUIDE.md").write_text(md)
     print(f"built {len(tours)} tours -> {OUT}")
     for p in problems:
