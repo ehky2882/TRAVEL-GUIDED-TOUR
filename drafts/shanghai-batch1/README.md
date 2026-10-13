@@ -67,12 +67,17 @@ These were checked on 2026-10-12. Re-check them before recording.
 | 12 | baike.baidu.com (Xin Rong Ji history); Michelin Guide Nanyang Rd; postcard.inc (Pei mansion) |
 | 13 | neriandhu.com Design Commune project page; dezeen.com; architecturalrecord.com |
 
-## Images (2026-10-12): picker published, nothing picked yet
+## Images: picker v2 published 2026-10-13, nothing picked yet
 
-**Picker:** [Shanghai Image Picks](https://claude.ai/artifact/1EjYxPqJjtFygrGfRzH7aU). It holds 24 photos across 7 tours. Each source page and licence is listed in `image-candidates.tsv`, and every place to look further is in `IMAGE-LINKS.md`.
+**Picker:** [Shanghai Image Picks](https://claude.ai/artifact/1EjYxPqJjtFygrGfRzH7aU) (version 2). It holds **83 photos across 10 tours**. Each source page and licence is listed in `image-candidates.tsv`, and every place to look further is in `IMAGE-LINKS.md`.
 
-- **Only 03 has photos of the venue itself:** two CC0 photos of Three on the Bund. Every other photo is labelled `CONTEXT` on its card: the dish, the street, or the place the closing walk sends you.
-- **No candidates at all for six tours:** 02 Hotung, 07 Rockbund, 10 Sukhothai, 11 West Bund, 12 Xin Rong Ji and 13 Design Republic. There are no public-domain, Pexels or Unsplash photos of these buildings. Commons has CC BY-SA photos, which need an owner OK and a credit. Otherwise the fallback is owner photos, or press images with the venue's permission.
-- **Checks were done by eye.** Gemini could not run, because the "key" supplied was a Google Cloud project ID (`gen-lang-client-…`), not an API key. Both gates were applied as separate passes.
-- **Unsplash returned `Rate Limit Exceeded` for the whole session**, so it contributed nothing.
-- **Wikimedia rate-limits this egress IP** (429 "robot policy"). Only **standard thumbnail widths** (`/1280px-`) got through; Openverse's thumbnail proxy returns 424 for Commons files. The public-domain finds are therefore 1280 px on the long side, enough for a 1200×900 crop with no upscaling.
+- **Photos of the venue itself** (labelled `SUBJECT`): 02 Hotung (Commons *Hedong Gongguan*), 03 Three on the Bund (exterior plus actual Mercato dishes), 05 BFC / Fosun Foundation, 07 Rockbund (exterior, bagua windows, interior), 08 the PuLi (one tower shot), and 11 West Bund Museum. 01 has Zhang Yuan's lanes but not the café, and 04 has Tianping Road but not the restaurant.
+- **`CREDIT NEEDED`** marks Wikimedia CC BY / BY-SA photos. The app has no credit line, so each one needs the owner's OK and a `drafts/CREDITS.md` line before shipping. Public domain, CC0, Pexels and Openverse photos need nothing.
+- **Still nothing** for 06 Ops, 10 Sukhothai, 12 Xin Rong Ji or 13 Design Republic. None of them has a Commons category or a free photo.
+- **How Commons was reached:** this egress IP gets HTTP 429 from Wikimedia's API and from `upload.wikimedia.org`. The route that worked was:
+  - **PetScan** (`petscan.wmcloud.org`) to list a category's files;
+  - **Toolforge commonsapi** (`magnus-toolserver.toolforge.org/commonsapi.php`) for each file's licence and size;
+  - the **i0.wp.com image CDN** for the pixels, requesting the standard `/thumb/…/1280px-` URL.
+
+  ⚠️ That CDN returns 404 to Python's urllib but 200 to curl, so download with curl.
+- **Checks were done by eye.** Gemini could not run: the value supplied (`gen-lang-client-…`) is a Google Cloud project ID, not an API key. Unsplash returned "Rate Limit Exceeded" all session.
