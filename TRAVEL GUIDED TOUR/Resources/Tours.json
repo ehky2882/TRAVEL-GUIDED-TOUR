@@ -122723,6 +122723,58 @@
         "Gérard Grandval"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "1ff51015-6af1-544e-91f5-bbd975bbfa28",
+      "createdAt": "2026-10-13",
+      "title": "Les Espaces d'Abraxas",
+      "shortDescription": "A palace, a theatre and a triumphal arch, built for people on modest incomes in a new town on the edge of Paris. That was the idea, anyway. …",
+      "longDescription": "A palace, a theatre and a triumphal arch, built for people on modest incomes in a new town on the edge of Paris. That was the idea, anyway.\n\nThe architect was the Catalan Ricardo Bofill, with his practice, the Taller de Arquitectura. It was designed in nineteen seventy-eight and finished in the early nineteen eighties, as social housing for the new town of Marne-la-Vallée. Altogether there are around six hundred flats.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3da8d2d3-50d2-537f-a412-5a7ef9fb2f14",
+          "order": 0,
+          "title": "Les Espaces d'Abraxas",
+          "caption": "Place des Fédérés, Noisy-le-Grand, a short walk from the Noisy-le-Grand–Mont d'Est station.",
+          "latitude": 48.84018131090563,
+          "longitude": 2.542929727151812,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/espaces-dabraxas.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/espaces-dabraxas_hero.webp",
+          "transcriptText": "A palace, a theatre and a triumphal arch, built for people on modest incomes in a new town on the edge of Paris. That was the idea, anyway.\n\nPlace des Fédérés, Noisy-le-Grand, a short walk from the Noisy-le-Grand–Mont d'Est station. You're in a long, enclosed courtyard. In the middle stands a block of flats shaped like a triumphal arch. That's L'Arc. To the west, a building curving round in a great half-circle: Le Théâtre. And to the east, the biggest of the three, a cliff of concrete eighteen storeys high: Le Palacio.\n\nThe architect was the Catalan Ricardo Bofill, with his practice, the Taller de Arquitectura. It was designed in nineteen seventy-eight and finished in the early nineteen eighties, as social housing for the new town of Marne-la-Vallée. Altogether there are around six hundred flats.\n\nHave a look at the columns first. They're enormous, and they aren't holding anything up in the usual way. Some of them are staircase towers. Others are stacks of living-room windows, one flat on top of the next. Bofill took the parts of a classical temple and filled them with homes.\n\nThen the arch. It's the sort of monument you'd expect at the end of a grand avenue, celebrating a victory. This one holds twenty flats.\n\nAnd the concrete. It was cast in panels in a factory, with oxides mixed in for colour, which kept the costs down. That's the same method that gave France its grey post-war slabs, the grands ensembles Bofill was arguing against. He used it to make columns and cornices instead.\n\nHere's the thing. Bofill said he wanted to build an emblematic monument in a very poorly made area. Critics have argued ever since about whether that was generous or overbearing. One called the place sinister and domineering. In two thousand and fourteen Bofill admitted he hadn't managed to change the city. But when demolition was floated, he said knocking it down would be a lack of culture. Residents fought the plans, and the buildings are still here.\n\nFilm-makers never needed persuading. Terry Gilliam shot scenes for Brazil here, and in The Hunger Games: Mockingjay Part Two, this courtyard floods with a black, tar-like ooze.\n\nBefore you go, stand at the foot of one of the Palacio's columns and look straight up. Then, if you've time, walk east for about fifteen minutes to the Arènes de Picasso. It's the same idea, a palace for the suburbs, built by a man who once worked in Bofill's office."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.84018131090563,
+      "centroidLongitude": 2.542929727151812,
+      "city": "Noisy-le-Grand",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Public Square",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Ricardo Bofill"
+      ],
+      "priceUSD": 0
     }
   ],
   "places": [
