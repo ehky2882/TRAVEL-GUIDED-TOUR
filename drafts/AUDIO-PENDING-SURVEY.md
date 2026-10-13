@@ -31,7 +31,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-10-07 (evening) — 🇺🇸 **PHILADELPHIA IS LIVE: 30 singles + 5 walks wired (Atlas Studio PHL, the 41st studio). The queue is EMPTY.**
+**Last verified:** 2026-10-13 — 🇺🇸 **WASHINGTON DC added to the queue: 31 single-stop tours + 5 walks (34 segments) STAGED, 0 MP3s, 0 images.** Scripts, audited coordinates and pick-maps are in `drafts/washington-dc-batch1/` and `drafts/washington-dc-walks/` on `main`. Maker at wire-in: Atlas Studio WAS, `e170d645-86aa-51d2-a5e6-ad1cacf06e26` (uuid5 `atlas-maker:was`, scheme re-verified against PHL). Expect 65 MP3s.
+
+**Previously verified:** 2026-10-07 (evening) — 🇺🇸 **PHILADELPHIA IS LIVE: 30 singles + 5 walks wired (Atlas Studio PHL, the 41st studio). The queue is EMPTY.**
 
 **Previously verified:** 2026-10-06 — 🇺🇸 **Philadelphia's 66 MP3s arrived and are on gh-pages** (transcript-matched, hash-verified). The city is held, by the owner's instruction, until the last 5 tours' and 3 walk connectives' images are backfilled. The assembler is ready at `drafts/philadelphia-batch1/tools/wire_philly.py`.
 
@@ -85,7 +87,8 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 |------|--------------:|-----------|-----:|----------------|------------------|
 | 🇺🇸 **Boston** | **0** | ✅ **LIVE 2026-10-02:** 30 singles + 5 walks (29 segments) wired under Atlas Studio BOS. See `archive/HANDOFF-261002-boston-live.md` | **59 on gh-pages** | — | **Atlas Studio BOS** |
 | 🇺🇸 **Philadelphia** | **0** | ✅ **LIVE 2026-10-07:** 30 singles + 5 walks (36 segments) wired under Atlas Studio PHL, the 41st studio. See `archive/HANDOFF-261006-philadelphia-ready.md` | **66 on gh-pages** | — | **Atlas Studio PHL** |
-| **TOTAL PENDING** | **0** | | | | |
+| 🇺🇸 **Washington DC** | **36** | 31 singles (01–30 + 40 Old Stone House) + 5 walks (34 segments). STAGED 2026-10-13: scripts + audited coordinates. **0 MP3s, 0 images.** Pronunciation pass owed before recording (`drafts/washington-dc-batch1/README.md`) | **0 of 65** | `main` (`drafts/washington-dc-*`) | **Atlas Studio WAS** `e170d645-…` |
+| **TOTAL PENDING** | **36** | | | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
 

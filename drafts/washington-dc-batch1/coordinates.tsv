@@ -1,0 +1,31 @@
+01	lincoln-memorial	38.889214	-77.050172	50	history	memorial (OSM way 398769543); script on the plaza at the foot of the steps, then inside
+02	washington-monument	38.889475	-77.035243	60	history	obelisk (way 766761337); script on the rise at the base, inside the ring of flags
+03	us-capitol-west-front	38.889813	-77.009021	120	history	building (way 66418809). ⚠️ The script stands on the Mall at Third Street, about 500 m west; 120 m reaches the West Front terrace, not Third Street. W5 07 ends here too
+04	white-house-lafayette-square	38.897639	-77.036552	150	history	building (relation 19761182). Script in Lafayette Square facing south; 150 m reaches the square's south edge (the square has been fenced since January 2026, per the script)
+05	jefferson-memorial	38.881418	-77.036551	50	history	memorial (way 248460669); script on the north steps
+06	martin-luther-king-jr-memorial	38.886287	-77.044456	50	history	the Stone of Hope (relation 12268799), the memorial's figure; script on the plaza between the split blocks
+07	vietnam-veterans-memorial	38.890980	-77.048087	60	history	the wall (way 173932971); script on the path along it
+08	national-archives-dc	38.892737	-77.022920	70	history	building (way 66418953); script on Constitution Avenue facing the south portico
+09	library-of-congress-jefferson-building	38.888674	-77.004636	70	architecture	Thomas Jefferson Building (relation 1029374); script on First Street SE opposite
+10	supreme-court-of-the-united-states	38.890593	-77.004439	60	architecture	building (relation 286501); script on the First Street NE sidewalk in front
+11	georgetown-co-canal	38.904175	-77.060165	40	history	the canal (way 137952716) where Thomas Jefferson Street (way 45532025) bridges it, where the script stands
+12	washington-union-station	38.897643	-77.006146	100	architecture	building (way 67100178); script at Columbus Circle in front, about 150 m from the centre
+13	world-war-ii-memorial	38.889395	-77.040308	70	history	memorial (way 66418767); script at the rim of the oval plaza
+14	korean-war-veterans-memorial	38.887839	-77.047749	50	history	memorial (way 173927230); script on the walkway beside the statues
+15	fdr-memorial	38.883297	-77.042737	100	history	memorial (way 471998865), a long walk of rooms; script at the entrance off the Tidal Basin path
+16	tidal-basin-cherry-trees	38.884645	-77.034814	80	natureAndParks	the Tidal Basin's north-east shore at the paddle-boat dock (way 431104544), on the water's edge; the basin's own centroid is in the water. W2's intro starts here too
+17	smithsonian-castle	38.888795	-77.025938	60	architecture	building (relation 7393969); script on the Mall side, the north face
+18	fords-theatre-petersen-house	38.896676	-77.025645	40	history	Ford's Theatre (way 152132898); the Petersen House (way 48041513) is 50 m across 10th Street, where the script stands between them
+19	old-post-office-dc	38.894118	-77.027563	60	architecture	building (way 66418840, now a hotel); script on the south side of Pennsylvania Avenue looking north
+20	freedom-plaza-pennsylvania-avenue	38.895850	-77.030779	60	history	plaza (relation 8060882), Pennsylvania Avenue between 13th and 14th
+21	chinatown-friendship-archway-dc	38.899816	-77.021647	30	culturalHeritage	the archway (way 48041375) over H Street; script at 7th and H
+22	dupont-circle	38.909646	-77.043438	60	natureAndParks	the circle's park (way 41965262); script in the circle
+23	embassy-row-massachusetts-avenue	38.912171	-77.050659	60	architecture	Sheridan Circle (way 41964882) on Massachusetts Avenue, where the script stands
+24	u-street-lincoln-theatre	38.917397	-77.028986	50	musicAndPerformance	Lincoln Theatre (way 67133481), 1215 U St; script on the south sidewalk at 13th. The Howard Theatre (way 67231795) is the one "you cannot see from here", 700 m east
+25	african-american-civil-war-memorial	38.916542	-77.025970	40	history	memorial (node 358960294); script at the Metro escalators at 10th and U
+26	eastern-market-dc	38.886587	-76.996470	50	foodAndDrink	market hall (way 67460471); script on 7th St SE outside it
+27	us-botanic-garden	38.888340	-77.013218	70	natureAndParks	garden (relation 12300250); script on Maryland Avenue SW facing the Conservatory; the Bartholdi Fountain (way 348428680) is 140 m south
+28	washington-national-cathedral	38.930651	-77.070595	80	sacredSites	cathedral (relation 2682714); script on the east sidewalk of Wisconsin Avenue across the west lawn
+29	wharf-maine-avenue-fish-market	38.881050	-77.028253	50	foodAndDrink	the fish market (way 295732304) on Maine Avenue SW, where the script stands
+30	frederick-douglass-cedar-hill	38.863388	-76.985171	50	history	the house, 1411 W St SE (way 295276504), inside the historic site (way 41965168); script on the lawn in front
+40	old-stone-house-georgetown	38.905419	-77.060379	30	history	house (way 66693149), 3051 M St; script on the south sidewalk opposite

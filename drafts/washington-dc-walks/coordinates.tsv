@@ -1,0 +1,34 @@
+W1-0	Intro, at the Lincoln steps	38.889214	-77.050172	50	washington_dc_long_room_multistop_00_intro_lincoln_steps.txt	reuses single 01 `lincoln-memorial` exactly
+W1-1	Lincoln Memorial	38.889214	-77.050172	50	washington_dc_long_room_multistop_01_lincoln_memorial.txt	reuses single 01 `lincoln-memorial` exactly
+W1-2	Vietnam Veterans Memorial	38.890980	-77.048087	60	washington_dc_long_room_multistop_02_vietnam_veterans_memorial.txt	reuses single 07 `vietnam-veterans-memorial` exactly
+W1-3	Korean War Veterans Memorial	38.887839	-77.047749	50	washington_dc_long_room_multistop_03_korean_war_veterans_memorial.txt	reuses single 14 `korean-war-veterans-memorial` exactly
+W1-4	The Reflecting Pool, south walk	38.888950	-77.044665	60	washington_dc_long_room_multistop_04_connective_reflecting_pool_south_walk.txt	new: the south walk midway along the Lincoln Memorial Reflecting Pool (OSM way 990979896, whose south edge is lat 38.88908)
+W1-5	World War II Memorial	38.889395	-77.040308	70	washington_dc_long_room_multistop_05_world_war_two_memorial.txt	reuses single 13 `world-war-ii-memorial` exactly
+W1-6	Washington Monument	38.889475	-77.035243	60	washington_dc_long_room_multistop_06_washington_monument.txt	reuses single 02 `washington-monument` exactly
+W2-0	Intro, at the paddle-boat dock	38.884645	-77.034814	80	washington_dc_around_the_water_multistop_00_intro_boat_dock.txt	reuses single 16 `tidal-basin-cherry-trees` exactly
+W2-1	The cherry trees	38.884645	-77.034814	80	washington_dc_around_the_water_multistop_01_the_cherry_trees.txt	reuses single 16 `tidal-basin-cherry-trees` exactly
+W2-2	Jefferson Memorial	38.881418	-77.036551	50	washington_dc_around_the_water_multistop_02_jefferson_memorial.txt	reuses single 05 `jefferson-memorial` exactly
+W2-3	The Inlet Bridge	38.879850	-77.041050	40	washington_dc_around_the_water_multistop_03_connective_inlet_bridge.txt	new: where the Tidal Basin's inlet channel (the south-west arm of way 26755238) passes under the road toward the Potomac
+W2-4	Franklin D. Roosevelt Memorial	38.883297	-77.042737	100	washington_dc_around_the_water_multistop_04_roosevelt_memorial.txt	reuses single 15 `fdr-memorial` exactly
+W2-5	Martin Luther King Jr. Memorial	38.886287	-77.044456	50	washington_dc_around_the_water_multistop_05_king_memorial_the_last_stop.txt	reuses single 06 `martin-luther-king-jr-memorial` exactly
+W3-0	Intro, at the foot of Key Bridge	38.904721	-77.068231	50	washington_dc_older_than_the_city_multistop_00_key_bridge_foot.txt	new: Francis Scott Key Memorial park (way 235071651) at the Georgetown end of Key Bridge; the script says Key's house stood about here
+W3-1	M Street and the canal	38.905309	-77.062975	40	washington_dc_older_than_the_city_multistop_01_m_street_and_the_canal.txt	new: M Street and Wisconsin Avenue, under the gold-domed bank at 1200 Wisconsin Ave (node 6324414849). Single 11 is pinned at the Thomas Jefferson Street bridge, 250 m east
+W3-2	The locks	38.904140	-77.059300	50	washington_dc_older_than_the_city_multistop_02_the_locks_connective.txt	new: the canal (way 137952716) between Thomas Jefferson St and 30th St, where Locks 4 and 3 sit; OSM has no named node for either lock
+W3-3	Old Stone House	38.905419	-77.060379	30	washington_dc_older_than_the_city_multistop_03_old_stone_house.txt	reuses single 40 `old-stone-house-georgetown` exactly
+W3-4	The waterfront	38.901562	-77.060113	70	washington_dc_older_than_the_city_multistop_04_the_waterfront.txt	new: Washington Harbour's plaza (way 538791319), at the river railing
+W4-0	Intro, at Lafayette Square	38.899501	-77.036540	120	washington_dc_the_avenue_multistop_00_intro_lafayette_square.txt	new: Lafayette Square (relation 21322658); the script stands at H and 16th, the square's north-west corner, about 120 m from its centre
+W4-1	The White House, the avenue leaving	38.897639	-77.036552	150	washington_dc_the_avenue_multistop_01_the_white_house_the_avenue_leaving.txt	reuses single 04 `white-house-lafayette-square` exactly
+W4-2	Freedom Plaza, the parade	38.895850	-77.030779	60	washington_dc_the_avenue_multistop_02_freedom_plaza_the_parade.txt	reuses single 20 `freedom-plaza-pennsylvania-avenue` exactly
+W4-3	Old Post Office, the tower	38.894118	-77.027563	60	washington_dc_the_avenue_multistop_03_old_post_office_the_tower.txt	reuses single 19 `old-post-office-dc` exactly
+W4-4	National Archives, the arrival	38.892737	-77.022920	70	washington_dc_the_avenue_multistop_04_national_archives_the_arrival.txt	reuses single 08 `national-archives-dc` exactly
+W4-5	Seventh Street	38.895000	-77.021917	60	washington_dc_the_avenue_multistop_05_connective_seventh_street.txt	new: 7th St NW (way 1377702116's line) between Pennsylvania Avenue and E Street; the script walks two blocks north to E
+W4-6	Ford's Theatre, Tenth Street	38.896676	-77.025645	40	washington_dc_the_avenue_multistop_06_fords_theatre_tenth_street.txt	reuses single 18 `fords-theatre-petersen-house` exactly
+W4-7	Chinatown, the archway	38.899816	-77.021647	30	washington_dc_the_avenue_multistop_07_chinatown_the_archway.txt	reuses single 21 `chinatown-friendship-archway-dc` exactly
+W5-0	Intro, at Columbus Circle	38.896388	-77.006599	50	washington_dc_the_city_that_isnt_a_state_multistop_00_intro_columbus_circle.txt	new: Columbus Fountain (node 13911028691) in front of Union Station
+W5-1	Union Station	38.897643	-77.006146	100	washington_dc_the_city_that_isnt_a_state_multistop_01_union_station.txt	reuses single 12 `washington-union-station` exactly
+W5-2	Eastern Market	38.886587	-76.996470	50	washington_dc_the_city_that_isnt_a_state_multistop_02_eastern_market.txt	reuses single 26 `eastern-market-dc` exactly
+W5-3	East Capitol Street	38.889817	-77.000820	60	washington_dc_the_city_that_isnt_a_state_multistop_03_connective_east_capitol_street.txt	new: East Capitol Street (way 1041714183) at about 4th Street, on the script's walk west toward the dome
+W5-4	Supreme Court	38.890593	-77.004439	60	washington_dc_the_city_that_isnt_a_state_multistop_04_supreme_court.txt	reuses single 10 `supreme-court-of-the-united-states` exactly
+W5-5	Library of Congress	38.888674	-77.004636	70	washington_dc_the_city_that_isnt_a_state_multistop_05_library_of_congress.txt	reuses single 09 `library-of-congress-jefferson-building` exactly
+W5-6	Botanic Garden	38.888340	-77.013218	70	washington_dc_the_city_that_isnt_a_state_multistop_06_botanic_garden.txt	reuses single 27 `us-botanic-garden` exactly
+W5-7	The West Front: The Open Question	38.889813	-77.009021	120	washington_dc_the_city_that_isnt_a_state_multistop_07_final_the_open_question.txt	reuses single 03 `us-capitol-west-front` exactly
