@@ -67,13 +67,13 @@ These were checked on 2026-10-12. Re-check them before recording.
 | 12 | baike.baidu.com (Xin Rong Ji history); Michelin Guide Nanyang Rd; postcard.inc (Pei mansion) |
 | 13 | neriandhu.com Design Commune project page; dezeen.com; architecturalrecord.com |
 
-## Images: picker v2 published 2026-10-13, nothing picked yet
+## Images: picker v3 published 2026-10-13, nothing picked yet
 
-**Picker:** [Shanghai Image Picks](https://claude.ai/artifact/1EjYxPqJjtFygrGfRzH7aU) (version 2). It holds **83 photos across 10 tours**. Each source page and licence is listed in `image-candidates.tsv`, and every place to look further is in `IMAGE-LINKS.md`.
+**Picker:** [Shanghai Image Picks](https://claude.ai/artifact/1EjYxPqJjtFygrGfRzH7aU) (version 3). It holds **92 photos across 10 tours**. Each source page and licence is listed in `image-candidates.tsv`, and every place to look further is in `IMAGE-LINKS.md`.
 
-- **Photos of the venue itself** (labelled `SUBJECT`): 02 Hotung (Commons *Hedong Gongguan*), 03 Three on the Bund (exterior plus actual Mercato dishes), 05 BFC / Fosun Foundation, 07 Rockbund (exterior, bagua windows, interior), 08 the PuLi (one tower shot), and 11 West Bund Museum. 01 has Zhang Yuan's lanes but not the café, and 04 has Tianping Road but not the restaurant.
+- **Photos of the venue itself** (labelled `SUBJECT`): 02 Hotung (Commons *Hedong Gongguan*), 03 Three on the Bund (exterior plus actual Mercato dishes), 05 BFC / Fosun Foundation, 07 Rockbund (exterior, bagua windows, interior), 08 the PuLi (one tower shot), and 11 West Bund Museum. **04 Jesse now has Old Jesse's own dishes**, found by a Commons search for 老吉士: the scallion fish head and the red-braised pork the script names, among others. **08 now has the PuLi tower seen from Jing'an Park** (Free Art Licence). 01 has Zhang Yuan's lanes but not the café.
 - **`CREDIT NEEDED`** marks Wikimedia CC BY / BY-SA photos. The app has no credit line, so each one needs the owner's OK and a `drafts/CREDITS.md` line before shipping. Public domain, CC0, Pexels and Openverse photos need nothing.
-- **Still nothing** for 06 Ops, 10 Sukhothai, 12 Xin Rong Ji or 13 Design Republic. None of them has a Commons category or a free photo.
+- **Still nothing of the venue itself** for 06 Ops (only a Taiyuan Road street view), 10 Sukhothai, 12 Xin Rong Ji or 13 Design Republic. Commons was searched by category and by file name, in English and Chinese. ⚠️ **Search file names in Chinese**: the Old Jesse dishes came up only under 老吉士.
 - **How Commons was reached:** this egress IP gets HTTP 429 from Wikimedia's API and from `upload.wikimedia.org`. The route that worked was:
   - **PetScan** (`petscan.wmcloud.org`) to list a category's files;
   - **Toolforge commonsapi** (`magnus-toolserver.toolforge.org/commonsapi.php`) for each file's licence and size;
