@@ -1,0 +1,691 @@
+[
+{
+"num": "01",
+"slug": "perianth-hotel",
+"title": "Perianth Hotel",
+"imgs": []
+},
+{
+"num": "02",
+"slug": "shila",
+"title": "Shila",
+"imgs": []
+},
+{
+"num": "03",
+"slug": "the-modernist-athens",
+"title": "The Modernist Athens",
+"imgs": []
+},
+{
+"num": "04",
+"slug": "xenodocheio-milos",
+"title": "Xenodocheio Milos",
+"imgs": []
+},
+{
+"num": "05",
+"slug": "hotel-grande-bretagne",
+"title": "Hotel Grande Bretagne",
+"imgs": [
+{
+"code": "05-1",
+"f": "img/05_1.jpg",
+"w": 3024,
+"h": 4032,
+"lic": "Pexels",
+"credit": false,
+"by": "Eduardo Ortiz",
+"src": "https://www.pexels.com/photo/modern-cityscape-view-of-syntagma-square-33201836/"
+},
+{
+"code": "05-2",
+"f": "img/05_2.jpg",
+"w": 3264,
+"h": 2448,
+"lic": "Public domain",
+"credit": false,
+"by": "athenswalk",
+"src": "https://commons.wikimedia.org/wiki/File:Grand_Bretagne_Hotel_Athens.jpg"
+}
+]
+},
+{
+"num": "06",
+"slug": "diporto",
+"title": "Diporto",
+"imgs": []
+},
+{
+"num": "07",
+"slug": "karamanlidika-tou-fani",
+"title": "Karamanlidika tou Fani",
+"imgs": []
+},
+{
+"num": "08",
+"slug": "seychelles",
+"title": "Seychelles",
+"imgs": []
+},
+{
+"num": "09",
+"slug": "atlantikos",
+"title": "Atlantikos",
+"imgs": []
+},
+{
+"num": "10",
+"slug": "nolan",
+"title": "Nolan",
+"imgs": []
+},
+{
+"num": "11",
+"slug": "the-clumsies",
+"title": "The Clumsies",
+"imgs": []
+},
+{
+"num": "12",
+"slug": "brettos",
+"title": "Brettos",
+"imgs": [
+{
+"code": "12-1",
+"f": "img/12_1.jpg",
+"w": 4714,
+"h": 3143,
+"lic": "Pexels",
+"credit": false,
+"by": "Buğrahan Haksever",
+"src": "https://www.pexels.com/photo/illuminated-shelves-with-bottles-of-alcohol-in-bar-14698219/"
+}
+]
+},
+{
+"num": "13",
+"slug": "couleur-locale",
+"title": "Couleur Locale",
+"imgs": []
+},
+{
+"num": "14",
+"slug": "baba-au-rum",
+"title": "Baba au Rum",
+"imgs": []
+},
+{
+"num": "15",
+"slug": "taf-coffee",
+"title": "Taf Coffee",
+"imgs": []
+},
+{
+"num": "16",
+"slug": "melissinos-art",
+"title": "Melissinos Art – The Poet Sandal Maker",
+"imgs": []
+},
+{
+"num": "17",
+"slug": "kombologadiko",
+"title": "Kombologadiko",
+"imgs": []
+},
+{
+"num": "18",
+"slug": "forget-me-not",
+"title": "Forget Me Not",
+"imgs": []
+},
+{
+"num": "19",
+"slug": "varvakios-agora",
+"title": "Varvakios Agora (Athens Central Market)",
+"imgs": [
+{
+"code": "19-1",
+"f": "img/19_1.jpg",
+"w": 6000,
+"h": 4000,
+"lic": "Unsplash",
+"credit": false,
+"by": "Eirini Pollali",
+"src": "https://unsplash.com/photos/empty-market-hall-with-lights-at-night-FwVcZ4zKfHo"
+},
+{
+"code": "19-2",
+"f": "img/19_2.jpg",
+"w": 3264,
+"h": 2448,
+"lic": "Public domain",
+"credit": false,
+"by": "athenswalk",
+"src": "https://commons.wikimedia.org/wiki/File:Central_Market_of_Athens.jpg"
+}
+]
+},
+{
+"num": "20",
+"slug": "little-tree-books-and-coffee",
+"title": "Little Tree Books & Coffee",
+"imgs": []
+},
+{
+"num": "21",
+"slug": "pikionis-paths-loumbardiaris",
+"title": "Pikionis Paths & Agios Dimitrios Loumbardiaris",
+"imgs": [
+{
+"code": "21-1",
+"f": "img/21_1.jpg",
+"w": 3999,
+"h": 2666,
+"lic": "Unsplash",
+"credit": false,
+"by": "Markus Winkler",
+"src": "https://unsplash.com/photos/white-wooden-picnic-table-on-brown-field-during-daytime-7sD_5z-cdcU"
+},
+{
+"code": "21-2",
+"f": "img/21_2.jpg",
+"w": 3999,
+"h": 2666,
+"lic": "Unsplash",
+"credit": false,
+"by": "Markus Winkler",
+"src": "https://unsplash.com/photos/brown-concrete-building-under-white-sky-during-daytime-hZBecyuCcLo"
+},
+{
+"code": "21-3",
+"f": "img/21_3.jpg",
+"w": 6000,
+"h": 4000,
+"lic": "Unsplash",
+"credit": false,
+"by": "Constantinos Kollias",
+"src": "https://unsplash.com/photos/acropolis-of-athens-at-golden-hour-yqBvJJ8jGBQ"
+},
+{
+"code": "21-4",
+"f": "img/21_4.jpg",
+"w": 6000,
+"h": 4000,
+"lic": "Public domain",
+"credit": false,
+"by": "George E. Koronaios",
+"src": "https://commons.wikimedia.org/wiki/File:The_Church_of_Agios_Demetrios_Loumbardiaris_on_17_September_2019.jpg"
+}
+]
+},
+{
+"num": "22",
+"slug": "acropolis-museum",
+"title": "Acropolis Museum",
+"imgs": [
+{
+"code": "22-1",
+"f": "img/22_1.jpg",
+"w": 5824,
+"h": 3882,
+"lic": "Unsplash",
+"credit": false,
+"by": "Arno Senoner",
+"src": "https://unsplash.com/photos/people-walking-on-white-tiled-floor-fekOj0LCFQY"
+},
+{
+"code": "22-2",
+"f": "img/22_2.jpg",
+"w": 4032,
+"h": 3024,
+"lic": "Unsplash",
+"credit": false,
+"by": "Luna Zhang",
+"src": "https://unsplash.com/photos/a-couple-of-people-that-are-standing-in-a-building-3CD5LEvep3k"
+},
+{
+"code": "22-3",
+"f": "img/22_3.jpg",
+"w": 3560,
+"h": 2373,
+"lic": "Unsplash",
+"credit": false,
+"by": "Athens at a Glance",
+"src": "https://unsplash.com/photos/brown-concrete-building-under-white-sky-during-daytime-RO1eA80bUVk"
+},
+{
+"code": "22-4",
+"f": "img/22_4.jpg",
+"w": 4123,
+"h": 2319,
+"lic": "Unsplash",
+"credit": false,
+"by": "Nick Night",
+"src": "https://unsplash.com/photos/a-building-with-a-lot-of-lights-on-it-dhZBj1YnsFM"
+},
+{
+"code": "22-5",
+"f": "img/22_5.jpg",
+"w": 4016,
+"h": 6016,
+"lic": "Unsplash",
+"credit": false,
+"by": "Francesco Zivoli",
+"src": "https://unsplash.com/photos/a-building-with-a-glass-front-KWU34_BB6Bw"
+},
+{
+"code": "22-6",
+"f": "img/22_6.jpg",
+"w": 4110,
+"h": 2745,
+"lic": "Unsplash",
+"credit": false,
+"by": "Nick Night",
+"src": "https://unsplash.com/photos/a-large-building-rhLmn35UUdI"
+},
+{
+"code": "22-7",
+"f": "img/22_7.jpg",
+"w": 2550,
+"h": 3818,
+"lic": "Unsplash",
+"credit": false,
+"by": "Nick Night",
+"src": "https://unsplash.com/photos/a-close-up-of-a-brick-building-YN9-tCJ2SJs"
+},
+{
+"code": "22-8",
+"f": "img/22_8.jpg",
+"w": 3368,
+"h": 5988,
+"lic": "Pexels",
+"credit": false,
+"by": "Fran Zaina",
+"src": "https://www.pexels.com/photo/ancient-greek-caryatids-in-athens-museum-33456278/"
+},
+{
+"code": "22-9",
+"f": "img/22_9.jpg",
+"w": 4000,
+"h": 6000,
+"lic": "Pexels",
+"credit": false,
+"by": "Hoàng Vũ",
+"src": "https://www.pexels.com/photo/aerial-view-of-athens-with-acropolis-museum-31079269/"
+},
+{
+"code": "22-10",
+"f": "img/22_10.jpg",
+"w": 3948,
+"h": 5922,
+"lic": "Unsplash",
+"credit": false,
+"by": "Arno Senoner",
+"src": "https://unsplash.com/photos/man-in-blue-t-shirt-and-white-shorts-walking-on-hallway-iQ6PCaBWrQs"
+},
+{
+"code": "22-11",
+"f": "img/22_11.jpg",
+"w": 2592,
+"h": 1672,
+"lic": "Public domain",
+"credit": false,
+"by": "Peeperman",
+"src": "https://commons.wikimedia.org/wiki/File:Acropolis_-_Museum_Interior.JPG"
+},
+{
+"code": "22-12",
+"f": "img/22_12.jpg",
+"w": 3648,
+"h": 2736,
+"lic": "Public domain",
+"credit": false,
+"by": "Challisrussia",
+"src": "https://commons.wikimedia.org/wiki/File:EHGritaly_120304-08_(Acropolis_Museum_2).JPG"
+}
+]
+},
+{
+"num": "23",
+"slug": "snfcc",
+"title": "Stavros Niarchos Foundation Cultural Center",
+"imgs": [
+{
+"code": "23-1",
+"f": "img/23_1.jpg",
+"w": 4032,
+"h": 3024,
+"lic": "Unsplash",
+"credit": false,
+"by": "John Cameron",
+"src": "https://unsplash.com/photos/a-large-building-with-a-lot-of-windows-and-a-sky-background-cALCikgNaao"
+},
+{
+"code": "23-2",
+"f": "img/23_2.jpg",
+"w": 6016,
+"h": 3384,
+"lic": "Unsplash",
+"credit": false,
+"by": "Dimitris Chapsoulas",
+"src": "https://unsplash.com/photos/building-with-outdoor-stairs-jW0GNbnlLHE"
+},
+{
+"code": "23-3",
+"f": "img/23_3.jpg",
+"w": 4032,
+"h": 3024,
+"lic": "Pexels",
+"credit": false,
+"by": "Nik Cvetkovic",
+"src": "https://www.pexels.com/photo/a-bicycle-parked-near-the-stavros-niarchos-park-14446410/"
+},
+{
+"code": "23-4",
+"f": "img/23_4.jpg",
+"w": 3872,
+"h": 2592,
+"lic": "Pexels",
+"credit": false,
+"by": "Valeria Drozdova",
+"src": "https://www.pexels.com/photo/evening-at-the-cultural-center-cafe-35154986/"
+},
+{
+"code": "23-5",
+"f": "img/23_5.jpg",
+"w": 4032,
+"h": 3024,
+"lic": "Pexels",
+"credit": false,
+"by": "Simon Gough",
+"src": "https://www.pexels.com/photo/lights-on-the-building-of-stavros-niarchos-foundation-cultural-center-in-greece-14367680/"
+},
+{
+"code": "23-6",
+"f": "img/23_6.jpg",
+"w": 4426,
+"h": 3319,
+"lic": "Pexels",
+"credit": false,
+"by": "George Zografidis",
+"src": "https://www.pexels.com/photo/reflection-of-a-building-on-water-surface-13809454/"
+},
+{
+"code": "23-7",
+"f": "img/23_7.jpg",
+"w": 3274,
+"h": 4911,
+"lic": "Unsplash",
+"credit": false,
+"by": "Michalis Mantelos",
+"src": "https://unsplash.com/photos/concrete-building-showing-fence-tcl_kWStec8"
+},
+{
+"code": "23-8",
+"f": "img/23_8.jpg",
+"w": 3024,
+"h": 4032,
+"lic": "Unsplash",
+"credit": false,
+"by": "John Cameron",
+"src": "https://unsplash.com/photos/a-large-library-filled-with-lots-of-books-FppOlvqdrS0"
+},
+{
+"code": "23-9",
+"f": "img/23_9.jpg",
+"w": 4016,
+"h": 6016,
+"lic": "Unsplash",
+"credit": false,
+"by": "Yorgos Triantafyllou",
+"src": "https://unsplash.com/photos/a-person-walking-in-front-of-a-large-building-lVbuSYly30s"
+}
+]
+},
+{
+"num": "24",
+"slug": "emst-fix-building",
+"title": "National Museum of Contemporary Art (EMST)",
+"imgs": []
+},
+{
+"num": "25",
+"slug": "benaki-pireos-138",
+"title": "Benaki Museum – Pireos 138",
+"imgs": []
+},
+{
+"num": "26",
+"slug": "blue-building-exarchia",
+"title": "The Blue Building (Μπλε Πολυκατοικία)",
+"imgs": []
+},
+{
+"num": "27",
+"slug": "athens-conservatoire",
+"title": "Athens Conservatoire",
+"imgs": [
+{
+"code": "27-1",
+"f": "img/27_1.jpg",
+"w": 1500,
+"h": 1125,
+"lic": "Public domain",
+"credit": false,
+"by": "EMST",
+"src": "https://commons.wikimedia.org/wiki/File:Odeio_xasprismeno.jpg"
+}
+]
+},
+{
+"num": "28",
+"slug": "conrad-athens-the-ilisian",
+"title": "Conrad Athens The Ilisian (former Athens Hilton)",
+"imgs": []
+},
+{
+"num": "29",
+"slug": "anafiotika",
+"title": "Anafiotika",
+"imgs": [
+{
+"code": "29-1",
+"f": "img/29_1.jpg",
+"w": 7008,
+"h": 4672,
+"lic": "Unsplash",
+"credit": false,
+"by": "Kameron Kincade",
+"src": "https://unsplash.com/photos/narrow-cobblestone-street-in-a-mediterranean-village-XALkWXTXk6Y"
+},
+{
+"code": "29-2",
+"f": "img/29_2.jpg",
+"w": 3130,
+"h": 2075,
+"lic": "Unsplash",
+"credit": false,
+"by": "Liza Zhukovska",
+"src": "https://unsplash.com/photos/a-white-building-with-a-red-shuttered-window-weeZx19gc4Q"
+},
+{
+"code": "29-3",
+"f": "img/29_3.jpg",
+"w": 2075,
+"h": 3130,
+"lic": "Unsplash",
+"credit": false,
+"by": "Liza Zhukovska",
+"src": "https://unsplash.com/photos/a-white-building-with-a-yellow-potted-plant-next-to-it-c3BfUG5ATOM"
+},
+{
+"code": "29-4",
+"f": "img/29_4.jpg",
+"w": 3130,
+"h": 2075,
+"lic": "Unsplash",
+"credit": false,
+"by": "Liza Zhukovska",
+"src": "https://unsplash.com/photos/a-view-of-a-city-from-behind-a-fence--2IF_LBepTk"
+},
+{
+"code": "29-5",
+"f": "img/29_5.jpg",
+"w": 2316,
+"h": 3463,
+"lic": "Pexels",
+"credit": false,
+"by": "Polina Chistyakova",
+"src": "https://www.pexels.com/photo/alley-in-greek-village-14578866/"
+},
+{
+"code": "29-6",
+"f": "img/29_6.jpg",
+"w": 3024,
+"h": 4032,
+"lic": "Pexels",
+"credit": false,
+"by": "Polina Chistyakova",
+"src": "https://www.pexels.com/photo/small-yard-with-flowers-by-house-in-town-18252676/"
+},
+{
+"code": "29-7",
+"f": "img/29_7.jpg",
+"w": 6000,
+"h": 4000,
+"lic": "Unsplash",
+"credit": false,
+"by": "Anastasiya D",
+"src": "https://unsplash.com/photos/two-cats-sitting-on-a-window-sill-lbPM2O7TfR0"
+},
+{
+"code": "29-8",
+"f": "img/29_8.jpg",
+"w": 2017,
+"h": 1309,
+"lic": "Public domain",
+"credit": false,
+"by": "Oseko",
+"src": "https://commons.wikimedia.org/wiki/File:Anafiotika-1.jpg"
+},
+{
+"code": "29-9",
+"f": "img/29_9.jpg",
+"w": 2000,
+"h": 1125,
+"lic": "Public domain",
+"credit": false,
+"by": "Oseko",
+"src": "https://commons.wikimedia.org/wiki/File:Anafiotika-2.jpg"
+},
+{
+"code": "29-10",
+"f": "img/29_10.jpg",
+"w": 2000,
+"h": 1125,
+"lic": "Public domain",
+"credit": false,
+"by": "Oseko",
+"src": "https://commons.wikimedia.org/wiki/File:Anafiotika-4.jpg"
+}
+]
+},
+{
+"num": "30",
+"slug": "lycabettus-funicular",
+"title": "Lycabettus Funicular",
+"imgs": [
+{
+"code": "30-1",
+"f": "img/30_1.jpg",
+"w": 4496,
+"h": 3000,
+"lic": "Pexels",
+"credit": false,
+"by": "Soare Emi",
+"src": "https://www.pexels.com/photo/mount-lycabettus-athens-greece-17585447/"
+},
+{
+"code": "30-2",
+"f": "img/30_2.jpg",
+"w": 3556,
+"h": 2362,
+"lic": "Unsplash",
+"credit": false,
+"by": "Lazarescu Alexandra",
+"src": "https://unsplash.com/photos/city-buildings-near-mountain-under-blue-sky-during-daytime-afmMFZtKmSI"
+},
+{
+"code": "30-3",
+"f": "img/30_3.jpg",
+"w": 4000,
+"h": 3000,
+"lic": "Pexels",
+"credit": false,
+"by": "Usman Younas",
+"src": "https://www.pexels.com/photo/town-buildings-in-mountain-foot-12480251/"
+},
+{
+"code": "30-4",
+"f": "img/30_4.jpg",
+"w": 5184,
+"h": 3456,
+"lic": "Pexels",
+"credit": false,
+"by": "Bruna Santos",
+"src": "https://www.pexels.com/photo/panoramic-view-of-mount-lycabettus-in-athens-29906166/"
+},
+{
+"code": "30-5",
+"f": "img/30_5.jpg",
+"w": 5472,
+"h": 3648,
+"lic": "Unsplash",
+"credit": false,
+"by": "Pramod Kumar Sharma",
+"src": "https://unsplash.com/photos/a-view-of-the-city-of-paris-from-the-top-of-the-eiffel-tower-qtrAkFnk_CQ"
+},
+{
+"code": "30-6",
+"f": "img/30_6.jpg",
+"w": 6000,
+"h": 4000,
+"lic": "Unsplash",
+"credit": false,
+"by": "Mert Kahveci",
+"src": "https://unsplash.com/photos/the-acropolis-of-athens-is-seen-at-dusk-V_exkOzgzEM"
+},
+{
+"code": "30-7",
+"f": "img/30_7.jpg",
+"w": 3456,
+"h": 2304,
+"lic": "Unsplash",
+"credit": false,
+"by": "gemmmm 🖤",
+"src": "https://unsplash.com/photos/the-sun-is-setting-over-a-large-city-MgUULpVK-jE"
+},
+{
+"code": "30-8",
+"f": "img/30_8.jpg",
+"w": 9520,
+"h": 6336,
+"lic": "Unsplash",
+"credit": false,
+"by": "Adrien Olichon",
+"src": "https://unsplash.com/photos/an-aerial-view-of-a-city-with-a-blue-sky-9LlhHtAd2oc"
+},
+{
+"code": "30-9",
+"f": "img/30_9.jpg",
+"w": 6016,
+"h": 4000,
+"lic": "Pexels",
+"credit": false,
+"by": "Gergely Meszárcsek",
+"src": "https://www.pexels.com/photo/the-lycabettos-hill-in-athens-greece-5141280/"
+}
+]
+}
+]
