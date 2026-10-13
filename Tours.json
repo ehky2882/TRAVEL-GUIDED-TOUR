@@ -6361,6 +6361,16 @@
       "websiteURL": null
     },
     {
+      "id": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "displayName": "Grands Ensembles",
+      "platform": "dozent",
+      "handle": "grandsensembles",
+      "avatarURL": null,
+      "avatarEmoji": "🏢",
+      "bio": "Original audio guides to France's post-war housing estates: the towers, stars, cabbages and palaces for the people that architects built around Paris, and what became of them.",
+      "websiteURL": null
+    },
+    {
       "id": "EA46126F-D68E-5C07-A7AF-914BC4082543",
       "displayName": "Instagram @sanfranciscoguide",
       "platform": "instagram",
@@ -14292,9 +14302,9 @@
         "AFAB2329-F072-5E4C-B574-F6684EB9D898",
         "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
         "b8b71d88-7dfc-4ff9-af2f-1fc195c6f175",
+        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710",
         "5567ddcd-304a-577f-b178-b2dcb8f9ddd5",
-        "c307eabb-fb36-57ce-8be7-c30d5093b561",
-        "bc45f93d-016b-455c-ac94-e5c82f60d77c"
+        "c307eabb-fb36-57ce-8be7-c30d5093b561"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -40147,9 +40157,9 @@
         "C075CEAB-D14D-5C4E-8320-D08A9AF55E3C",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "030d8630-4c0a-5965-9758-5243a0074df9",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
         "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00",
-        "33a95e17-5676-5a41-89e1-69114fd03a40",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+        "33a95e17-5676-5a41-89e1-69114fd03a40"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -41706,11 +41716,11 @@
         "E72854DC-1A73-5966-A32F-53A3D4CED78A",
         "389a13e5-48b2-5027-874e-772e193dd158",
         "5E8A80CD-BA84-59F5-860A-D9AAB7A15D29",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
         "33a95e17-5676-5a41-89e1-69114fd03a40",
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
-        "eef8a099-2f7a-5883-9c02-35c0e1836bbd"
+        "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -41768,7 +41778,7 @@
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "2e894f42-7142-5739-b7cf-9c702494e4b4",
         "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8",
-        "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad"
+        "49b2c18c-616f-57e5-81db-efb59ef54a89"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -41824,7 +41834,7 @@
         "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
         "d24962af-60ab-52f4-9ad1-efa18d201a34",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "389a13e5-48b2-5027-874e-772e193dd158"
+        "49b2c18c-616f-57e5-81db-efb59ef54a89"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -42695,12 +42705,12 @@
       "relatedTourIds": [
         "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
         "030d8630-4c0a-5965-9758-5243a0074df9",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
         "7059efa5-1166-55d6-99e6-903769fecfb8",
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "554213fa-0593-5e69-b2dd-e95d10940097",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
-        "E72854DC-1A73-5966-A32F-53A3D4CED78A",
-        "9b93d74b-505a-5886-9cf7-a5ca235c12de"
+        "E72854DC-1A73-5966-A32F-53A3D4CED78A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -70261,8 +70271,8 @@
         "0165232e-3d55-5685-a448-a7bf5afece8f",
         "E0B1BA3B-6515-5289-874A-3C269C19CD98",
         "82823681-E708-50EC-8FDD-689371E92A8F",
-        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
-        "c764921a-4010-5ad7-9828-6ef156ec9ef9"
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -77403,9 +77413,9 @@
         "4ee9a90a-96ad-5913-9c64-3f8efbe3ec0c",
         "CD8A37C5-4FAF-5EC2-9D7A-783FB8DE11CA",
         "29e01aee-c177-552b-aba8-4533f3ed2935",
+        "932acd4f-66df-5152-ba4d-3ca6e8d7381c",
         "b4f87483-ebae-567e-896f-b7b4042ca34a",
-        "525a7b02-4293-50da-bd48-0214e64c918f",
-        "3ad6f369-1a73-595e-8a78-26e67a7b139b"
+        "525a7b02-4293-50da-bd48-0214e64c918f"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -91158,8 +91168,8 @@
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
         "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
         "34887987-540B-4388-839D-D0CD4BD5BBCE",
-        "ed91593f-60d4-597c-86c5-cd8e6efaf207",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27"
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+        "ed91593f-60d4-597c-86c5-cd8e6efaf207"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -91559,9 +91569,9 @@
         "85F0B89A-FDE7-5DEA-BA0A-B121B8AA0620",
         "213c813e-3584-5dc8-9837-f86f4b8592dd",
         "5f8ecfcf-6841-5878-a76f-fa63c55b6d25",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
         "BC696F0B-19B6-5C54-86DE-AE3D312B1598",
-        "e98bc0b4-2984-51a7-8bf9-d247d1d1d4f2",
-        "70a01d74-8edf-5f78-9d8b-a05850c0299a"
+        "e98bc0b4-2984-51a7-8bf9-d247d1d1d4f2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -112857,7 +112867,7 @@
         "3ce34aaa-d077-54a2-8bde-15bb3a1f8e98",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "2b130fb4-a12c-5c58-8596-ba0355551a4f",
-        "9504178e-9883-5bc9-86ea-774619774b7c"
+        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -120953,7 +120963,7 @@
         "c056c499-76ae-5306-a407-b4eb22663f2e",
         "db7c779a-39ea-5e1b-a09a-b4e727b6a9d7",
         "0ce03565-8bb6-57fe-baea-e25a498289e9",
-        "1fcb4bcd-2b25-5b6c-acbb-12222610ac71"
+        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -122239,6 +122249,478 @@
         "War",
         "Museum",
         "Public Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+      "createdAt": "2026-10-13",
+      "title": "Les Tours Aillaud",
+      "shortDescription": "Clouds. That's what these towers were meant to be. Not so much the shape, though there's a bit of that. The skin.  Avenue Pablo-Picasso…",
+      "longDescription": "Clouds. That's what these towers were meant to be. Not so much the shape, though there's a bit of that. The skin.\n\nHave a look at the facades first. Every one of those tiles is a little square of glass paste, about two centimetres across. The patterns were worked out by the architect, Émile Aillaud, with his son-in-law, the painter Fabio Rieti, and they show clouds, trees and sky, so the towers half dissolve into the weather around them. No two towers are dressed alike, either. The idea was that you could look up from the ground and pick out your own home.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tours-aillaud_hero-2.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tours-aillaud_2-2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tours-aillaud_3-2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a60a9ac7-e079-512c-bc14-9a3dadee925d",
+          "order": 0,
+          "title": "Les Tours Aillaud",
+          "caption": "Avenue Pablo-Picasso, Nanterre, on the edge of the Parc André-Malraux.",
+          "latitude": 48.889872,
+          "longitude": 2.2269925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tours-aillaud.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tours-aillaud_hero-2.webp",
+          "transcriptText": "Clouds. That's what these towers were meant to be. Not so much the shape, though there's a bit of that. The skin.\n\nAvenue Pablo-Picasso, Nanterre, on the edge of the Parc André-Malraux. In front of you, a cluster of rounded, lobed towers covered in tiny coloured tiles: blues, greens, pinks and white. There are eighteen of them, in a range of heights, and the two tallest reach about a hundred and five metres. Turn round and the glass of La Défense is less than a kilometre away. Quite a contrast.\n\nHave a look at the facades first. Every one of those tiles is a little square of glass paste, about two centimetres across. The patterns were worked out by the architect, Émile Aillaud, with his son-in-law, the painter Fabio Rieti, and they show clouds, trees and sky, so the towers half dissolve into the weather around them. No two towers are dressed alike, either. The idea was that you could look up from the ground and pick out your own home.\n\nThen the windows. Some are square, some round, some shaped like a drop of water. Look closely and you'll find that no window sits directly above another. Aillaud called it a very carefully arranged chance.\n\nAnd here's the thing about the date. Work began here in nineteen seventy-three, the same year the French government called a halt to the vast estates it called grands ensembles. They had gone up in a hurry after the war, rows of identical slabs, and the country had decided it had built quite enough of them. These towers are among the very last, and they read like a reply to everything that came before. Aillaud wrote a memoir in nineteen seventy-five called Désordre apparent, ordre caché: apparent disorder, hidden order. That's the whole place, really. It looks like whimsy, and it's planned down to the last tile.\n\nNot everyone was charmed. The story goes that President Giscard d'Estaing saw the first two towers going up and asked for the rest to be built lower. Look at the skyline and you can see where that wish landed: two giants, and everything else stepping down.\n\nBefore you leave, follow the winding footpath that runs between the towers. It's called the Serpent, and it was designed by Florence Rieti. Walk it slowly and keep looking up. The tiles change with the light, and on a grey afternoon the towers really do go a bit cloudy."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.889872,
+      "centroidLongitude": 2.2269925,
+      "city": "Nanterre",
+      "country": "France",
+      "relatedTourIds": [
+        "0758555B-6807-5AB1-8E54-1CB2B4B2DAF3",
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Modernist",
+        "Public Art",
+        "Designed by a Master",
+        "Émile Aillaud"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710",
+      "createdAt": "2026-10-13",
+      "title": "Cité de la Muette and the Drancy Memorial",
+      "shortDescription": "The building in front of you is still somebody's home. Keep that in mind for the next few minutes.  Avenue Jean-Jaurès, Drancy, with the glass…",
+      "longDescription": "The building in front of you is still somebody's home. Keep that in mind for the next few minutes.\n\nThis is the Cité de la Muette. It was designed in the early nineteen thirties by Eugène Beaudouin and Marcel Lods, with the engineers Vladimir Bodiansky and Jean Prouvé, and it was meant to be the future: a steel frame, concrete panels made in a factory, five tower blocks of fifteen storeys, a school, gardens. Architects still describe it as a landmark in the history of French housing. Then the money ran out in nineteen thirty-five, and this U-shaped block was left unfinished.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_hero-2.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_2-2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6e0f4c44-c1ef-54c0-9a16-7e499b25414a",
+          "order": 0,
+          "title": "Cité de la Muette and the Drancy Memorial",
+          "caption": "Avenue Jean-Jaurès, Drancy, with the glass front of the Shoah Memorial behind you.",
+          "latitude": 48.919156,
+          "longitude": 2.455071,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cite-de-la-muette-drancy.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cite-de-la-muette-drancy_hero-2.webp",
+          "transcriptText": "The building in front of you is still somebody's home. Keep that in mind for the next few minutes.\n\nAvenue Jean-Jaurès, Drancy, with the glass front of the Shoah Memorial behind you. Across the road is a long, low block of flats folded into a U shape and wrapped round a lawn. At the open end of the U stands a sculpture in pink granite, and beside it, on a short length of track, an old goods wagon.\n\nThis is the Cité de la Muette. It was designed in the early nineteen thirties by Eugène Beaudouin and Marcel Lods, with the engineers Vladimir Bodiansky and Jean Prouvé, and it was meant to be the future: a steel frame, concrete panels made in a factory, five tower blocks of fifteen storeys, a school, gardens. Architects still describe it as a landmark in the history of French housing. Then the money ran out in nineteen thirty-five, and this U-shaped block was left unfinished.\n\nFrom August nineteen forty-one, the empty block became an internment camp for Jews. A courtyard closed on three sides, with a single open end, needed very little to be turned into a prison. From the summer of nineteen forty-two it was the main transit camp in France. Nearly sixty-three thousand people were deported from here, most of them to Auschwitz-Birkenau. Thousands of them were children.\n\nHave a look at the sculpture. It's by Shelomo Selinger, unveiled in nineteen seventy-six: three blocks of granite which together form the Hebrew letter shin. The wagon came later, in nineteen eighty-eight, a reminder of how people left this place.\n\nWhat is hardest to take in, standing here, is that it's the same building. After the war it was finished, as it had always been meant to be, and from nineteen forty-six families moved into these flats. The towers were pulled down in the nineteen seventies. The U remained. In two thousand and one it was listed as a historic monument, both as a major work of twentieth-century architecture and as a place of national memory. It's rare for one building to carry both.\n\nIf you have time, cross the road into the memorial itself. Entry is free. It was built to face the cité, and from inside you look straight back at the courtyard you've just been studying, which changes how you see it. When you leave, walk quietly along the outside of the block. It's a memorial, and it's also someone's street."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.919156,
+      "centroidLongitude": 2.455071,
+      "city": "Drancy",
+      "country": "France",
+      "relatedTourIds": [
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "e10b22c1-874e-5efe-a683-4aa37a64e974",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "e22f888b-f47f-5f4e-9cfe-cd6842e7d671"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Notable Building",
+        "Remembrance",
+        "War",
+        "History",
+        "Architecture",
+        "Modernist",
+        "Free to Visit",
+        "Designed by a Master",
+        "Eugène Beaudouin",
+        "Marcel Lods"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+      "createdAt": "2026-10-13",
+      "title": "La Grande Borne",
+      "shortDescription": "There's a giant buried in the sand somewhere on this estate. Hold that thought.  You're in La Grande Borne, in Grigny, south of Paris. Around…",
+      "longDescription": "There's a giant buried in the sand somewhere on this estate. Hold that thought.\n\nThe architect was Émile Aillaud, the same man who dressed the towers at Nanterre in clouds. He built this between nineteen sixty-seven and nineteen seventy-one, and it's big: three thousand six hundred and eighty-five homes on about ninety hectares. Many of the first families came from the shanty towns on the edge of Paris, and from streets in the thirteenth arrondissement that were being cleared at the time.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-borne_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-borne_2-2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "303ef884-b47f-5e9f-bf95-692a1b123452",
+          "order": 0,
+          "title": "La Grande Borne",
+          "caption": "You're in La Grande Borne, in Grigny, south of Paris. Around you, low blocks of flats curve and snake across the ground, none of them much more than five storeys high.",
+          "latitude": 48.6522428,
+          "longitude": 2.3753693,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/la-grande-borne.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-borne_hero.webp",
+          "transcriptText": "There's a giant buried in the sand somewhere on this estate. Hold that thought.\n\nYou're in La Grande Borne, in Grigny, south of Paris. Around you, low blocks of flats curve and snake across the ground, none of them much more than five storeys high. Somewhere off to one side you may hear the A6 motorway, which runs along one edge of the estate.\n\nThe architect was Émile Aillaud, the same man who dressed the towers at Nanterre in clouds. He built this between nineteen sixty-seven and nineteen seventy-one, and it's big: three thousand six hundred and eighty-five homes on about ninety hectares. Many of the first families came from the shanty towns on the edge of Paris, and from streets in the thirteenth arrondissement that were being cleared at the time.\n\nHave a look at the shapes first. Instead of straight slabs lined up in rows, Aillaud gave the estate curves, enclosed courtyards and quarters with names. Labyrinthe, the labyrinth. Méridien, the meridian. Peupleraie, the poplar grove.\n\nThen the colour. The painter Fabio Rieti drew up a scheme for the whole estate, with glass mosaic on the curving blocks and glazed stoneware on the straight ones. Other painters, among them Aillaud's own son Gilles, added murals. Most of those have since been covered over, during repairs in the nineteen eighties.\n\nAnd then the sculptures, put where children could get at them. Pigeons by François-Xavier Lalanne. A sea serpent. And in the Place de l'Œuf, a figure of Gulliver by Aillaud's daughter, Laurence Rieti: a giant lying half sunk in the sand of a playground, his leg doubling as a slide.\n\nHere's the thing. Most of the big estates of that era were planned from above, for the car and the crane. Aillaud planned this one at the height of someone walking, and ideally someone small. In the late nineteen sixties that was a radical way to think about public housing.\n\nIt hasn't been easy here since. Unemployment has been high for decades, and a renewal scheme in the two thousands knocked down hundreds of flats. But in two thousand and eight the state gave La Grande Borne its label for twentieth-century heritage, the same day as Aillaud's towers at Nanterre. Both, in their way, were attempts to make public housing feel like somewhere a person might choose to live.\n\nIf you've got a few minutes, ask for the Place de l'Œuf and go looking for Gulliver: a head rising out of the sand, and a leg you can slide down. Bring a child if you can. That's who he's for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 149,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.6522428,
+      "centroidLongitude": 2.3753693,
+      "city": "Grigny",
+      "country": "France",
+      "relatedTourIds": [
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "26576879-3416-5c4a-9f17-6ac88f56a688",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "89443016-9aea-5422-a33a-be72636e89f1",
+        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Public Art",
+        "Modernist",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Émile Aillaud"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26576879-3416-5c4a-9f17-6ac88f56a688",
+      "createdAt": "2026-10-13",
+      "title": "Les Arcades du Lac",
+      "shortDescription": "\"Versailles for the people.\" That was the line, and whether it was a compliment or a jibe rather depended on who was saying it.  Find a spot on…",
+      "longDescription": "\"Versailles for the people.\" That was the line, and whether it was a compliment or a jibe rather depended on who was saying it.\n\nThis was the work of the Catalan architect Ricardo Bofill and his practice, the Taller de Arquitectura, finished in the early nineteen eighties. It was their first major building in France, and it was social housing: three hundred and eighty-nine flats in the Arcades and seventy-four more out on the Viaduc, built quickly and cheaply for one of the new towns the state was raising around Paris.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ea8f535f-dd1e-52aa-b1d0-6a365c415785",
+          "order": 0,
+          "title": "Les Arcades du Lac",
+          "caption": "Find a spot on the shore of the Lac de la Sourderie, in Montigny-le-Bretonneux, where you can see a long building running straight out across the water on a row of arches.",
+          "latitude": 48.767013,
+          "longitude": 2.0462485,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/arcades-du-lac.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arcades-du-lac_hero.webp",
+          "transcriptText": "\"Versailles for the people.\" That was the line, and whether it was a compliment or a jibe rather depended on who was saying it.\n\nFind a spot on the shore of the Lac de la Sourderie, in Montigny-le-Bretonneux, where you can see a long building running straight out across the water on a row of arches. That's Le Viaduc. Behind it, on dry land, are the blocks of Les Arcades du Lac, laid out in a grid of straight avenues and enclosed squares.\n\nThis was the work of the Catalan architect Ricardo Bofill and his practice, the Taller de Arquitectura, finished in the early nineteen eighties. It was their first major building in France, and it was social housing: three hundred and eighty-nine flats in the Arcades and seventy-four more out on the Viaduc, built quickly and cheaply for one of the new towns the state was raising around Paris.\n\nHave a look at the plan first, if you can picture it from above. It's a French formal garden, the kind you'd find behind a château, except the clipped hedges have become buildings. The long walks between them are streets. And the cars were put underground, so those streets belong to people on foot.\n\nNow the Viaduc. Bofill's office cited the Pont d'Avignon, the Roman aqueduct at Segovia, and the château of Chenonceau, which spans a river on arches of its own. Here the same idea carries flats instead of a royal gallery. And because the blocks are only eight to ten metres deep, every flat has windows on both sides.\n\nThe interesting bit is this. Most social housing of the time said, quite plainly, that it was social housing. Bofill took the language of palaces and gave it to people on modest incomes. Critics argued about whether that was generous or theatrical, and they still do.\n\nStand here long enough and the argument starts to feel beside the point. The reflection of those arches on the water is the reflection of somebody's kitchen window.\n\nFrom here, walk away from the lake into the Arcades themselves and find one of the inner squares. Then come back to the shore and look at the Viaduc from further along the bank. It's one of those buildings that changes completely with every hundred metres you walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.767013,
+      "centroidLongitude": 2.0462485,
+      "city": "Montigny-le-Bretonneux",
+      "country": "France",
+      "relatedTourIds": [
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "280948c0-b59f-50d6-b237-2bb87253dede",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Waterfront",
+        "Architecture",
+        "Viewpoint",
+        "Designed by a Master",
+        "Ricardo Bofill"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "89443016-9aea-5422-a33a-be72636e89f1",
+      "createdAt": "2026-10-13",
+      "title": "Les Étoiles de Renaudie",
+      "shortDescription": "Every flat in this building has a garden. In social housing built around nineteen seventy, that was almost unheard of.  The centre of…",
+      "longDescription": "Every flat in this building has a garden. In social housing built around nineteen seventy, that was almost unheard of.\n\nSome background first. In the nineteen sixties the town decided to pull down its run-down centre and start again. The architect Renée Gailhoustet led the project, and she brought in Jean Renaudie to work alongside her. Building began in nineteen sixty-nine and ran for about six years, and the star shapes you're looking at made Renaudie's name.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a877f24a-7f9b-5ef6-8a3c-a5b03d9dc2e9",
+          "order": 0,
+          "title": "Les Étoiles de Renaudie",
+          "caption": "The centre of Ivry-sur-Seine, a short walk from the Mairie d'Ivry metro.",
+          "latitude": 48.8137558,
+          "longitude": 2.3850938,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/etoiles-de-renaudie.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etoiles-de-renaudie_hero.webp",
+          "transcriptText": "Every flat in this building has a garden. In social housing built around nineteen seventy, that was almost unheard of.\n\nThe centre of Ivry-sur-Seine, a short walk from the Mairie d'Ivry metro. In front of you, a heap of raw concrete that seems to have grown rather than been built: pointed balconies jutting out at sharp angles, terraces stepping back floor by floor, and plants spilling over almost every edge. At street level there are shops. That's the Centre Jeanne-Hachette.\n\nSome background first. In the nineteen sixties the town decided to pull down its run-down centre and start again. The architect Renée Gailhoustet led the project, and she brought in Jean Renaudie to work alongside her. Building began in nineteen sixty-nine and ran for about six years, and the star shapes you're looking at made Renaudie's name.\n\nHave a look at the terraces. Because the plan is a star rather than a box, every floor throws out points and corners, and each of those becomes somebody's outdoor space. That's why the whole thing looks so green. The residents did the planting, and over fifty years they've rather outdone the architects.\n\nThen look at how it's stacked. Shops on the ground and first floors, offices above them, and homes on top, all folded into the same structure. Because the floors are staggered, the flats inside come in a huge variety of layouts. You could live here for years and never visit two neighbours with the same front room.\n\nAnd here's the point of it. The standard estate of the period stacked one identical flat on top of another. Gailhoustet and Renaudie argued that ordinary people deserved what the wealthy took for granted: light, a view, and a piece of ground of their own, even on the fifth floor.\n\nIt hasn't all aged gracefully. The shopping centre slid into decline for the best part of thirty years, and in two thousand and twenty-one the town began working on bringing it back. But stand here in late spring, with everything in leaf, and it's hard not to think they were onto something.\n\nIf you've got a few minutes, walk to the Danielle Casanova block, a few streets away. It's another of Renaudie's stars, and seeing the second one is the best way to understand the first."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8137558,
+      "centroidLongitude": 2.3850938,
+      "city": "Ivry-sur-Seine",
+      "country": "France",
+      "relatedTourIds": [
+        "1C3123A0-4025-57AF-82F5-7974297D1882",
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
+        "26576879-3416-5c4a-9f17-6ac88f56a688"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Brutalist",
+        "Commerce",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Renée Gailhoustet",
+        "Jean Renaudie"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "49b2c18c-616f-57e5-81db-efb59ef54a89",
+      "createdAt": "2026-10-13",
+      "title": "Les Orgues de Flandre",
+      "shortDescription": "Prélude. Fugue. Cantate. Sonate. Somebody here had a sense of humour about tower blocks.  Avenue de Flandre, in the nineteenth arrondissement…",
+      "longDescription": "Prélude. Fugue. Cantate. Sonate. Somebody here had a sense of humour about tower blocks.\n\nThey were designed by the German architect Martin Schulz van Treeck and went up through the nineteen seventies, the last of them finished in nineteen eighty. Altogether there are about one thousand nine hundred and fifty homes on six hectares.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/orgues-de-flandre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/orgues-de-flandre_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aa708901-41f6-536f-ae5c-9665363549c4",
+          "order": 0,
+          "title": "Les Orgues de Flandre",
+          "caption": "Avenue de Flandre, in the nineteenth arrondissement, somewhere between the Crimée and Riquet metro stations.",
+          "latitude": 48.8897757,
+          "longitude": 2.375006,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/orgues-de-flandre.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/orgues-de-flandre_hero.webp",
+          "transcriptText": "Prélude. Fugue. Cantate. Sonate. Somebody here had a sense of humour about tower blocks.\n\nAvenue de Flandre, in the nineteenth arrondissement, somewhere between the Crimée and Riquet metro stations. Above you, a group of towers whose tops step down in stages, like the pipes of a church organ. Hence the name: the Orgues de Flandre, the organs of Flandre. The tallest of them is Prélude.\n\nThey were designed by the German architect Martin Schulz van Treeck and went up through the nineteen seventies, the last of them finished in nineteen eighty. Altogether there are about one thousand nine hundred and fifty homes on six hectares.\n\nHave a look at Prélude first. It's a hundred and twenty-three metres tall, with thirty-nine floors, and it's often described as the tallest residential building in Paris. Not long after it went up, the city tightened its rules on height, and nobody has built a taller home inside Paris since.\n\nNow look at the way the towers are shaped. They aren't sheer slabs. The upper floors step back in tiers, so the skyline rises and falls as you walk past, like a chord being played. The names, every one of them a piece of music, finish the joke.\n\nAnd this site has an older story. Before the towers, it was a nineteenth-century workers' estate known as the cité des Flamands. It was pulled down to make room, but its gateway, dating from eighteen fifty, was kept and moved about forty metres. It's now called the Porte des Flamands.\n\nWhat's worth knowing, standing here, is that the towers were not universally loved. They were one of the last great tower projects inside Paris, and they arrived just as the city was turning against towers altogether. Fifty years on, they're officially recognised as remarkable contemporary architecture, and Prélude and Sonate were re-clad in steel at the end of the twenty-tens.\n\nCédric Klapisch filmed parts of Le Péril jeune around here in the nineteen nineties, if you want to see the place on screen.\n\nBefore you go, find the Porte des Flamands, the old gate that survived the demolition. Then walk south-west for a few minutes to the Bassin de la Villette, and look back. From across the water you get the whole skyline at once."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8897757,
+      "centroidLongitude": 2.375006,
+      "city": "Paris",
+      "country": "France",
+      "relatedTourIds": [
+        "389a13e5-48b2-5027-874e-772e193dd158",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "030d8630-4c0a-5965-9758-5243a0074df9",
+        "E72854DC-1A73-5966-A32F-53A3D4CED78A",
+        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Modernist",
+        "Viewpoint",
+        "Martin Schulz van Treeck"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8751aa0e-b1e8-530f-8df7-2914cef14602",
+      "createdAt": "2026-10-13",
+      "title": "Les Arènes de Picasso",
+      "shortDescription": "The people who live here call those two round buildings the camemberts. Once you've heard that, you can't unhear it.  Place Pablo-Picasso…",
+      "longDescription": "The people who live here call those two round buildings the camemberts. Once you've heard that, you can't unhear it.\n\nThis was designed by the Spanish architect Manuel Núñez Yanowsky, who had worked alongside Ricardo Bofill. It was commissioned in nineteen eighty-one and opened in nineteen eighty-five, as part of the new town of Marne-la-Vallée: five hundred and forty flats, a nursery, a school and shops, all wrapped round this one square.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ddd80969-af07-508b-97a2-9048a358db89",
+          "order": 0,
+          "title": "Les Arènes de Picasso",
+          "caption": "Place Pablo-Picasso, Noisy-le-Grand. You're in an eight-sided square, enclosed by buildings on every side but the south.",
+          "latitude": 48.8390288,
+          "longitude": 2.5555229,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/arenes-de-picasso.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arenes-de-picasso_hero.webp",
+          "transcriptText": "The people who live here call those two round buildings the camemberts. Once you've heard that, you can't unhear it.\n\nPlace Pablo-Picasso, Noisy-le-Grand. You're in an eight-sided square, enclosed by buildings on every side but the south. On either side of you, east and west, stand two enormous round facades facing each other across the square, each about fifty metres across, and pierced all over with windows.\n\nThis was designed by the Spanish architect Manuel Núñez Yanowsky, who had worked alongside Ricardo Bofill. It was commissioned in nineteen eighty-one and opened in nineteen eighty-five, as part of the new town of Marne-la-Vallée: five hundred and forty flats, a nursery, a school and shops, all wrapped round this one square.\n\nHave a look at the two discs first. The architect described the whole complex as an abstract cart that has been tipped over, and those are its wheels. Once you see the wheels, the long buildings between them start to look like the body of the cart lying on its side.\n\nThen think about what he was borrowing. Núñez Yanowsky pointed to Gaudí's Park Güell in Barcelona, to the Pantheon in Rome, and to Boullée's great spherical monument to Isaac Newton, which was never built. That's a lot of history to bring to a housing estate in the eastern suburbs.\n\nAnd here's the thing. By the early nineteen eighties, the grey slab estates of the post-war years had become a byword for everything wrong with the suburbs. The new towns tried the opposite: theatre, ceremony, a public square as grand as anything in the city centre. This is that idea at its most confident.\n\nFilm-makers noticed straight away. Billy Ze Kick, released the year this opened, was shot entirely here, and the square has turned up in films and music videos ever since, most recently the horror film Vermines.\n\nIf you've got time, walk on to the Espaces d'Abraxas, Ricardo Bofill's housing a short way across Noisy-le-Grand. It's where Terry Gilliam shot parts of Brazil, and seeing the two side by side tells you a great deal about what these architects thought a suburb could be."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.8390288,
+      "centroidLongitude": 2.5555229,
+      "city": "Noisy-le-Grand",
+      "country": "France",
+      "relatedTourIds": [
+        "12941F35-7822-5498-9CD5-93718AD4B692",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710",
+        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
+        "932acd4f-66df-5152-ba4d-3ca6e8d7381c"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Public Square",
+        "Notable Building",
+        "Architecture",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Manuel Núñez Yanowsky"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "932acd4f-66df-5152-ba4d-3ca6e8d7381c",
+      "createdAt": "2026-10-13",
+      "title": "Les Choux de Créteil",
+      "shortDescription": "Before these towers, this ground grew vegetables. So the nickname was always going to write itself.  Boulevard Pablo-Picasso, Créteil. Around…",
+      "longDescription": "Before these towers, this ground grew vegetables. So the nickname was always going to write itself.\n\nThey were designed by Gérard Grandval and built between nineteen sixty-nine and nineteen seventy-four: ten round towers, each about twenty-one metres across and most around fifteen floors high, plus one lower ring-shaped building. The plain they stand on was market-garden country, and it was also home to the Choucrouterie Benoist, said to be the biggest sauerkraut factory in the Paris region. Cabbages, very much on brand.",
+      "makerId": "17711786-8c4b-5e81-8393-cda58a108f15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2f73b34-e3a1-5b59-ae2c-2fbe13be443f",
+          "order": 0,
+          "title": "Les Choux de Créteil",
+          "caption": "Boulevard Pablo-Picasso, Créteil. Around you stand round concrete towers, each covered in curving balconies that overlap like leaves.",
+          "latitude": 48.7851046,
+          "longitude": 2.4447226,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/choux-de-creteil.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choux-de-creteil_hero.webp",
+          "transcriptText": "Before these towers, this ground grew vegetables. So the nickname was always going to write itself.\n\nBoulevard Pablo-Picasso, Créteil. Around you stand round concrete towers, each covered in curving balconies that overlap like leaves. Hence the name: les Choux, the cabbages. The university is to the north, and the Lac de Créteil is a short walk to the south. One of these towers is now a student residence.\n\nThey were designed by Gérard Grandval and built between nineteen sixty-nine and nineteen seventy-four: ten round towers, each about twenty-one metres across and most around fifteen floors high, plus one lower ring-shaped building. The plain they stand on was market-garden country, and it was also home to the Choucrouterie Benoist, said to be the biggest sauerkraut factory in the Paris region. Cabbages, very much on brand.\n\nHave a look at the balconies. Each one is a curved concrete shell, and they're staggered across the facade in a chequerboard, so no balcony sits directly on top of the next. Grandval said he wanted forms that were austere in their mass but supple and plant-like in their shape.\n\nNow imagine them green. Grandval meant every one of those balconies to hold planters, so the towers would be covered in plants: a vertical garden, decades before the idea became fashionable. The developer said no.\n\nAnd here's the bit I like. In nineteen ninety-eight the central tower was rebuilt, and the town set aside a share of its flats for students, to mix the generations. Today it's run as a student residence with a hundred and seventy-two small studios, a few minutes from the university. So some of the people living in Grandval's cabbages were born a good forty years after he drew them.\n\nThe towers have had more screen time than most estates. They turn up in Tellement proches and in Le Brio, and in two thousand and eight they were labelled as part of France's twentieth-century heritage.\n\nBefore you leave, walk south to the Lac de Créteil and look back across the water. And one small curiosity to take with you: this is boulevard Pablo-Picasso, and the Aillaud towers in Nanterre and the Arènes in Noisy-le-Grand both have Picasso addresses too. The painter turns up all over the post-war suburbs."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.7851046,
+      "centroidLongitude": 2.4447226,
+      "city": "Créteil",
+      "country": "France",
+      "relatedTourIds": [
+        "60916A4D-9376-56AA-98E7-C899806F7C9E",
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
+        "b4f87483-ebae-567e-896f-b7b4042ca34a",
+        "26576879-3416-5c4a-9f17-6ac88f56a688"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Brutalist",
+        "Designed by a Master",
+        "Gérard Grandval"
       ],
       "priceUSD": 0
     }
@@ -130384,6 +130866,9 @@
       "centroidLongitude": 2.44558,
       "city": "Créteil",
       "country": "France",
+      "relatedTourIds": [
+        "932acd4f-66df-5152-ba4d-3ca6e8d7381c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -134663,6 +135148,9 @@
       "centroidLongitude": 2.5429407453895685,
       "city": "Noisy-le-Grand",
       "country": "France",
+      "relatedTourIds": [
+        "8751aa0e-b1e8-530f-8df7-2914cef14602"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -197550,6 +198038,7 @@
         "E72854DC-1A73-5966-A32F-53A3D4CED78A",
         "030d8630-4c0a-5965-9758-5243a0074df9",
         "389a13e5-48b2-5027-874e-772e193dd158",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "33a95e17-5676-5a41-89e1-69114fd03a40",
@@ -199632,6 +200121,9 @@
       "centroidLongitude": 2.3850625,
       "city": "Ivry-sur-Seine",
       "country": "France",
+      "relatedTourIds": [
+        "89443016-9aea-5422-a33a-be72636e89f1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -209193,12 +209685,12 @@
       "relatedTourIds": [
         "030d8630-4c0a-5965-9758-5243a0074df9",
         "5E8A80CD-BA84-59F5-860A-D9AAB7A15D29",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
         "389a13e5-48b2-5027-874e-772e193dd158",
         "33a95e17-5676-5a41-89e1-69114fd03a40",
         "004770A3-5393-5AB0-B1F7-4C5FA2769C13",
         "3851D982-58C7-5840-89C4-DB748835B989",
-        "E753DE1F-6327-5FAC-877B-26DA39F26935",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+        "E753DE1F-6327-5FAC-877B-26DA39F26935"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -217846,7 +218338,8 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
-        "4FD3764D-84A9-5E3E-94CD-1F762D62DD3E"
+        "4FD3764D-84A9-5E3E-94CD-1F762D62DD3E",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -279781,6 +280274,7 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
         "389a13e5-48b2-5027-874e-772e193dd158",
         "E753DE1F-6327-5FAC-877B-26DA39F26935",
         "030d8630-4c0a-5965-9758-5243a0074df9",
@@ -298640,6 +299134,9 @@
       "centroidLongitude": 2.2281781,
       "city": "Nanterre",
       "country": "France",
+      "relatedTourIds": [
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
