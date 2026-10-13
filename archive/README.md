@@ -362,3 +362,4 @@ Full text for every one of them is in
 - [HANDOFF-261007-triage-pins.md](HANDOFF-261007-triage-pins.md) — **25 link pins** (10 creators) from 39 triaged; 6 architect tags; 4 place questions for Edward.
 - [HANDOFF-261010-sovmod-batch2.md](HANDOFF-261010-sovmod-batch2.md) — **SovMod batch 2:** 53 more SovMod singles (Armenia and Cuba new) + Atlas Studio TAO (42nd studio, Qingdao Observatory); Qingdao moved 310 m; Blok 23 / Sorge place questions for Edward.
 - [HANDOFF-261011-random-batch.md](HANDOFF-261011-random-batch.md) — **67 link pins** (50 creators) from 76 triaged; 10 new places + 7 joins, owner-approved in session; 6 posts held for Edward.
+- [HANDOFF-261013-grands-ensembles.md](HANDOFF-261013-grands-ensembles.md) — **Grands Ensembles 🏢:** 8 original audio tours of Paris-region housing estates under a new creator + 8 architect tags; 3 place questions and photo licences for Edward.
