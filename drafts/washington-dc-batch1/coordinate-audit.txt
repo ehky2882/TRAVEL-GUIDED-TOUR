@@ -1,0 +1,54 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-10-13T16:12:32Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/720b58b8-42f0-541c-9a00-4d0869fe5158/scratchpad/dc/fakedrop --city Washington, United States --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/720b58b8-42f0-541c-9a00-4d0869fe5158/scratchpad/dc/coordinate-audit.txt
+auditing 31 coordinate(s) against 'Washington, United States'  (~1.1 min at Nominatim's rate limit)
+
+  [  1/31] Korean War Veterans Memorial       fwd     27m  at: -
+  [  2/31] Washington Union Station           fwd      0m  at: -
+  [  3/31] Sheridan Circle                    fwd      0m  at: General Philip H. Sheridan Sta
+  [  4/31] Franklin Delano Roosevelt Memorial fwd      0m  at: -
+  [  5/31] African American Civil War Memoria fwd      0m  at: African American Civil War Mem
+  [  6/31] National Archives                  fwd    102m  at: National Archives Research Cen
+  [  7/31] Lincoln Memorial                   fwd      7m  at: -
+  [  8/31] Chesapeake and Ohio Canal          fwd    515m  at: Thomas Jefferson Street Northw
+  [  9/31] Old Post Office                    fwd     48m  at: -
+  [ 10/31] Vietnam Veterans Memorial          fwd     32m  at: Vietnam Veterans Memorial
+  [ 11/31] Municipal Fish Market              fwd      0m  at: -
+  [ 12/31] World War II Memorial              fwd      3m  at: -
+  [ 13/31] United States Botanic Garden       fwd      0m  at: -
+  [ 14/31] Ford's Theatre                     fwd      0m  at: -
+  [ 15/31] Tidal Basin                        fwd    288m  at: Tidal Basin Paddle Boats
+  [ 16/31] United States Capitol              fwd      0m  at: United States Capitol
+  [ 17/31] Stone of Hope                      fwd      0m  at: West Basin Drive Southwest
+  [ 18/31] Washington National Cathedral      fwd      0m  at: Gloria in Excelsis Tower
+  [ 19/31] Lincoln Theatre                    fwd      0m  at: Lincoln Theatre
+  [ 20/31] White House                        fwd      0m  at: White House
+  [ 21/31] Dupont Circle                      fwd    157m  at: Dupont Circle Fountain
+  [ 22/31] Frederick Douglass National Histor fwd     84m  at: -
+  [ 23/31] Freedom Plaza                      fwd      0m  at: Plan of the White House
+  [ 24/31] Friendship Archway                 fwd      0m  at: H Street Northwest
+  [ 25/31] Supreme Court of the United States fwd      0m  at: Chief Justice John Marshall St
+  [ 26/31] Library of Congress                fwd      0m  at: Library of Congress, Thomas Je
+  [ 27/31] Smithsonian Institution Building   fwd      0m  at: Smithsonian Institution Buildi
+  [ 28/31] Washington Monument                fwd      0m  at: -
+  [ 29/31] Jefferson Memorial                 fwd      0m  at: Thomas Jefferson
+  [ 30/31] Old Stone House                    fwd      0m  at: -
+  [ 31/31] Eastern Market                     fwd    266m  at: Market Lunch
+
+========================================================================
+GROSS - 1 coordinate(s) may not be at their venue
+Check each by hand. Reverse-geocoding the SUPPLIED point is what
+settles it: a motorway or an unrelated office means it is wrong;
+a neighbour on the right street means it is fine.
+
+  Chesapeake and Ohio Canal
+    supplied      38.9041750, -77.0601650
+    sits on       Thomas Jefferson Street Northwest  [highway]
+    venue geocode 515 m away - Chesapeake and Ohio Canal, Georgetown, Ward 2, Washington, D
+
+========================================================================
+BIAS - 11/23 north of true position, median +0.0 m, p = 1
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> No significant directional bias. Consistent with upstream fixed.
+EXIT=1

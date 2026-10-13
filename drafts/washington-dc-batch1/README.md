@@ -17,7 +17,9 @@ The author's newest handoff is **№8 (CLOSING)**, and its stale-upload check pa
 
 ## Coordinates: derived 2026-10-13, audited
 **The scripts carry no coordinates.** Each point is the subject's own OpenStreetMap object, found by name with Nominatim; the OSM object is named in every row.
-- (audit pending)
+- `check-coordinates.py` (`coordinate-audit.txt`, run 2026-10-13 after a Nominatim rate-limit cleared): **no directional bias** (11/23 north, median +0.0 m, p = 1). That is expected, since these points came from the same geocoder rather than an upstream pipeline. The independent check is that every row names an OSM object carrying the subject's own name.
+- **GROSS: 1, checked by hand and correct.** 11 Georgetown's point sits on the Thomas Jefferson Street bridge over the C&O Canal, exactly where the script stands. The forward geocode lands 515 m away because it aims at the middle of a canal several kilometres long.
+- **Eastern Market (26) read 266 m** because the forward geocode found the Metro station; the supplied point reverse-geocodes to Market Lunch, a stall inside the market hall. Correct.
 - **A stop sits ON its subject** (owner, 2026-09-23). Where the script stands across a street, the trigger radius is sized to reach the listener. **Do not normalise the radii.**
 - 🔴 **Two subjects are far bigger than any radius we use, so the owner should look at them:**
   - **03 United States Capitol** is pinned on the building, radius 120 m. The script stands on the Mall at Third Street, about **500 m** west, so the tour will not trigger where the script is read; it triggers on the West Front. W5's final stop sits on the same point, which suits that script ("the West Front").
