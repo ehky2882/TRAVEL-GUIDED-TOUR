@@ -60246,14 +60246,14 @@
       "city": "Pang Mapha",
       "country": "Thailand",
       "relatedTourIds": [
+        "e7310a36-3381-53e3-8ad7-edb470b6f559",
         "3f477a80-420e-58ff-abe7-fa21825abcfd",
         "39da967e-ad82-5ab0-ad37-fa31cccb060b",
         "2B5B8402-E164-55B9-994B-E665328E77CD",
         "ee2b411b-3308-5837-b424-2e7b80bc0073",
         "A8B58E21-ECDC-5BC6-99CB-E5BC3E88EB0F",
         "aa4cffca-ea34-5706-9b59-2c96da3189be",
-        "5fdd4da6-c43b-5496-9637-4c759ab0b392",
-        "c4d28dda-65d8-58c3-ba4a-b35f8be7f0b0"
+        "5fdd4da6-c43b-5496-9637-4c759ab0b392"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -122832,7 +122832,16 @@
       "centroidLongitude": 36.8052166,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -122880,7 +122889,16 @@
       "centroidLongitude": 36.7931475,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -122926,7 +122944,16 @@
       "centroidLongitude": 36.8218418,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -122974,7 +123001,16 @@
       "centroidLongitude": 36.7702097,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "03c18be5-fa1d-502c-bee2-da87aca34151",
+        "ada17ad9-8c2d-5e74-b104-88c92eec5299",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "1c1b956a-4b83-5a3f-8f89-c29965091c1f",
+        "B8BDA2BF-FA8E-5902-809E-F6AE24E7EEEE",
+        "6339e837-a7b5-56f9-8dbf-c19710f25473",
+        "6d3f40c1-6c3a-53e9-a090-d163082c47e2",
+        "69EB38FF-7C43-5DB5-9138-E6EA425EDD4E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -123022,7 +123058,16 @@
       "centroidLongitude": 36.8322352,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Notable Building",
@@ -123068,7 +123113,16 @@
       "centroidLongitude": 36.8186918,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -123118,7 +123172,16 @@
       "centroidLongitude": 36.8231204,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -123165,7 +123228,16 @@
       "centroidLongitude": 36.8194576,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "f648068f-a0ff-514e-8d91-837b24a5da25"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Market",
@@ -123213,7 +123285,16 @@
       "centroidLongitude": 36.8279837,
       "city": "Kiambu",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "d6e8ca26-c945-5631-af40-6e4894cd536f",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef"
+      ],
       "primaryCategory": "history",
       "tags": [
         "History",
@@ -123259,7 +123340,16 @@
       "centroidLongitude": 36.8303801,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "d57ec000-10a8-543a-9775-0a2197a72212"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -123305,7 +123395,16 @@
       "centroidLongitude": 36.7798646,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "d57ec000-10a8-543a-9775-0a2197a72212",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -123351,7 +123450,16 @@
       "centroidLongitude": 36.823103,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -123401,7 +123509,16 @@
       "centroidLongitude": 36.7443169,
       "city": "Nairobi",
       "country": "Kenya",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "f4be2f7b-5cec-58c6-9399-706015043da0"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Green Escape",
@@ -284018,6 +284135,14 @@
       "centroidLongitude": 36.813216,
       "city": "Nairobi",
       "country": "Kenya",
+      "relatedTourIds": [
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
