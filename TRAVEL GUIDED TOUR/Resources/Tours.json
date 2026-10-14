@@ -5551,6 +5551,16 @@
       "websiteURL": null
     },
     {
+      "id": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "displayName": "Atlas Studio HAN",
+      "platform": "dozent",
+      "handle": "atlas.han",
+      "avatarURL": null,
+      "avatarEmoji": "🇻🇳",
+      "bio": "Atlas Studio's Hanoi bureau — audio tours of a thousand-year-old capital: the citadel and the tube houses of the Old Quarter, French villas divided into flats and turned into cafés, a bridge kept standing through the bombing, and the architects building the city now.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -123693,6 +123703,1347 @@
       "tags": [
         "Green Escape",
         "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a6e02904-9a9d-5c15-90ba-52bceaaf81f9",
+      "createdAt": "2026-10-14",
+      "title": "Gia",
+      "shortDescription": "The best table in this restaurant faces a building that's nearly a thousand years old.  You're on Văn Miếu Street, outside number sixty-one.…",
+      "longDescription": "The best table in this restaurant faces a building that's nearly a thousand years old.\n\nThe name is half a word. Gia, as in gia đình — family. The chef, Sam Tran, and business partner Long Tran spent years working abroad, and the name is what homesickness looks like when you finally come back and do something about it. The same year as the star, Sam Tran was given Michelin's Young Chef Award.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-gia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-gia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-gia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-gia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-gia_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "15aaf7f0-42d8-5a60-8f63-7a02e3b80c9a",
+          "order": 0,
+          "title": "Gia",
+          "caption": "The pavement outside 61 Văn Miếu, the Temple of Literature's wall at your back.",
+          "latitude": 21.027329,
+          "longitude": 105.83591,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-gia.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-gia_hero.webp",
+          "transcriptText": "The best table in this restaurant faces a building that's nearly a thousand years old.\n\nYou're on Văn Miếu Street, outside number sixty-one. Turn round for a moment. The long wall across the road belongs to the Temple of Literature — Vietnam's first university, founded in ten seventy. Now turn back. The narrow terraced house in front of you is Gia, and in twenty twenty-three it became one of the first restaurants in Vietnam to win a Michelin star.\n\nThe name is half a word. Gia, as in gia đình — family. The chef, Sam Tran, and business partner Long Tran spent years working abroad, and the name is what homesickness looks like when you finally come back and do something about it. The same year as the star, Sam Tran was given Michelin's Young Chef Award.\n\nInside, the room borrows from the temple across the street — dark wooden rafters, bold light fixtures, and a stone dog that guests rub for luck, exactly as people do with the stone animals over the road. There's one menu, a dozen or so courses, and it changes with the seasons and with what northern Vietnam happens to be growing.\n\nHere's the detail I like best. One of the opening bites has, in some seasons, been a betel leaf with caviar and areca nut. Betel and areca is how a Vietnamese visit traditionally began — a chew of it was offered to a guest before anyone said anything of consequence. There's an old saying that the betel quid is the start of every conversation. So the most expensive meal on this street opens, quite deliberately, with the oldest form of hello.\n\nThat's the trick of the place. It isn't fusion, and it isn't nostalgia. It's a kitchen that took its training abroad, then came home and sat down opposite the national university to show its working.\n\nIf you've got time before or after, cross the road and go into the temple itself. In the second courtyard you'll find Khuê Văn Các, the little red pavilion on four white pillars — the one printed on the hundred-thousand-dong note. Have one in your pocket and compare."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.027329,
+      "centroidLongitude": 105.83591,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3d516c17-d4ef-5cca-95e8-12415d776f4a",
+      "createdAt": "2026-10-14",
+      "title": "T.U.N.G Dining",
+      "shortDescription": "Twenty-five seats. That's the whole of it.  You're on Quang Trung Street, outside number two C. There's very little to see from the pavement…",
+      "longDescription": "Twenty-five seats. That's the whole of it.\n\nHoàng Tùng went to Finland to study business and came back a cook. In between, he worked his way through Nordic kitchens — the cold, precise, foraging school of cooking that made Copenhagen famous. He returned to Hanoi, won bronze at the Vietnamese selection for the Bocuse d'Or in twenty eighteen, and opened here that December, still in his early twenties.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-tung-dining_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-tung-dining_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-tung-dining_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-tung-dining_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-tung-dining_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8736b4e0-4fe0-5881-8b0d-247703c2ad70",
+          "order": 0,
+          "title": "T.U.N.G Dining",
+          "caption": "Outside 2C Quang Trung, a short walk south of St Joseph's Cathedral.",
+          "latitude": 21.0269,
+          "longitude": 105.850015,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-tung-dining.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-tung-dining_hero.webp",
+          "transcriptText": "Twenty-five seats. That's the whole of it.\n\nYou're on Quang Trung Street, outside number two C. There's very little to see from the pavement, and that's rather the point. The restaurant behind this door is T.U.N.G Dining — the letters stand for twisted, unique, natural and gastronomic, and they also happen to spell the chef's name.\n\nHoàng Tùng went to Finland to study business and came back a cook. In between, he worked his way through Nordic kitchens — the cold, precise, foraging school of cooking that made Copenhagen famous. He returned to Hanoi, won bronze at the Vietnamese selection for the Bocuse d'Or in twenty eighteen, and opened here that December, still in his early twenties.\n\nNow, the door. Most restaurants hide the kitchen. This one walks you straight past it on the way in, so the first thing you see isn't a table but people working. After that the dining room goes quiet — cool colours, clean lines, almost Scandinavian in its restraint, and hushed in a way Hanoi very rarely is.\n\nThe food follows the same rule. A long tasting menu that changes every few months, and most dishes built from just three or four ingredients. Nordic technique; Vietnamese produce. The Michelin Guide recommends it, and the World's Fifty Best organisation has put it on its list of Asia's best hundred restaurants.\n\nAnd here's the thing. When it opened, a tasting menu was a genuinely odd idea in Hanoi — a city that eats standing up, sitting low, and quickly. Tùng's bet was that the produce of northern Vietnam deserved the same slow, serious attention a Copenhagen kitchen would give a turnip. Several restaurants in this guide owe something to that bet.\n\nBefore you go, walk two minutes north to St Joseph's Cathedral, finished in eighteen eighty-six and looking very much like a smaller, sootier Notre-Dame. Stand in the square and look at the bell towers. You'll see why a chef who trained in the north felt rather at home round here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.0269,
+      "centroidLongitude": 105.850015,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c2a689c7-53fc-5720-98d0-819222df44dd",
+      "createdAt": "2026-10-14",
+      "title": "Ngõ Trung Yên",
+      "shortDescription": "Some of the best cooking in Hanoi happens about a foot off the ground.  You're at the mouth of Ngõ Trung Yên, one of the narrow alleys threaded…",
+      "longDescription": "Some of the best cooking in Hanoi happens about a foot off the ground.\n\nHold on to that tree, because it's on the menu. One of the alley's best-known lunch stalls is Bún Cá Sâm Cây Si — Sâm's fish noodles by the si tree. Rice noodles, fried fish, a light broth with tomato in it, and tables that jut out into the motorbikes. In Hanoi, a good stall doesn't need an address. A tree will do.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngo-trung-yen_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngo-trung-yen_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngo-trung-yen_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ca6b626b-f739-551e-963c-6212dcbf4a33",
+          "order": 0,
+          "title": "Ngõ Trung Yên",
+          "caption": "The mouth of the alley, by the small shrine and the old fig tree.",
+          "latitude": 21.033375,
+          "longitude": 105.852656,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-ngo-trung-yen.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngo-trung-yen_hero.webp",
+          "transcriptText": "Some of the best cooking in Hanoi happens about a foot off the ground.\n\nYou're at the mouth of Ngõ Trung Yên, one of the narrow alleys threaded through the Old Quarter. Look for the small shrine by the entrance, with an old si tree in front of it — a kind of banyan fig, roots and all. If you can see the shrine, the tree, and a row of plastic stools vanishing into the alley beyond, you're in the right place.\n\nHold on to that tree, because it's on the menu. One of the alley's best-known lunch stalls is Bún Cá Sâm Cây Si — Sâm's fish noodles by the si tree. Rice noodles, fried fish, a light broth with tomato in it, and tables that jut out into the motorbikes. In Hanoi, a good stall doesn't need an address. A tree will do.\n\nNow look along the alley itself. It changes shape through the day. In the morning it's a little market — vegetables, poultry, meat on low tables. By late morning the cooks have taken over. There's a duck noodle stall, Bún Ngan Nhàn, that you find by looking for the queue and the woman ladling soup out front; it's gone by mid-afternoon. A squid and glass-noodle place at number one keeps going through the lunch rush. And somewhere in here, of course, a pot of phở bò, beef noodle soup, has been on since before you woke up.\n\nHave a look above the food, too. Weathered façades, layers of signage, wiring, lanterns, motorbikes parked anywhere they'll fit.\n\nAnd here's the thing. Nobody designed any of this. The stools, the awnings, the stall named after a tree — it's architecture made by hundreds of small decisions over a very long time, and it works better than most things that were planned. The furniture here costs a few pounds and gets stacked away every afternoon. The place has lasted centuries.\n\nIf you're hungry, the honest advice is simple: sit where there's a queue, and point. And afterwards, walk out the far end of the alley and turn towards Hàng Bạc — Silver Street — where a few jewellers still work behind the shopfronts, as their guild has done for generations."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.033375,
+      "centroidLongitude": 105.852656,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "858f510b-0e43-5272-9a1c-0c30a3c3cd46",
+      "createdAt": "2026-10-14",
+      "title": "Long Waits Jazz",
+      "shortDescription": "To get a piano up these stairs, they had to take the stairs apart.  You're in the alley at number five Nguyễn Quang Bích, on the western edge of…",
+      "longDescription": "To get a piano up these stairs, they had to take the stairs apart.\n\nThe club was started in twenty twenty-three by the saxophonist Nguyễn Bảo Long and two friends. Bảo Long has been a fixture of Vietnamese jazz for years, and the club is his bandstand. One of the friends had learned saxophone from him; the other oversaw the renovation, which included that piano. To hoist it in they removed the banisters, rigged a lifting system, and put everything back afterwards.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-waits-jazz_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-waits-jazz_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-waits-jazz_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-waits-jazz_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aecde9a3-d4e3-58c4-877c-be93273fd399",
+          "order": 0,
+          "title": "Long Waits Jazz",
+          "caption": "The alley at 5 Nguyễn Quang Bích, at the foot of the stairs.",
+          "latitude": 21.032513,
+          "longitude": 105.845655,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-long-waits-jazz.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-waits-jazz_hero.webp",
+          "transcriptText": "To get a piano up these stairs, they had to take the stairs apart.\n\nYou're in the alley at number five Nguyễn Quang Bích, on the western edge of the Old Quarter. Long Waits is upstairs — the whole first floor of an old house, wedged between a café and somebody's home. If you can see a staircase in dark, worn-looking wood heading up from the alley, that's your way in. It looks old. It's actually brand new; they built it to suit the house.\n\nThe club was started in twenty twenty-three by the saxophonist Nguyễn Bảo Long and two friends. Bảo Long has been a fixture of Vietnamese jazz for years, and the club is his bandstand. One of the friends had learned saxophone from him; the other oversaw the renovation, which included that piano. To hoist it in they removed the banisters, rigged a lifting system, and put everything back afterwards.\n\nUpstairs, the floor is one room: a stage, a bar, and just enough space for a small audience. The walls and stage are painted a warm maroon-brown. The ceiling and the bar are left bare, so the old house still shows through. Light comes from the stage and from one glass cube hanging over the bar, and that's more or less it.\n\nHave a look at the programme on the way in. The band has been working through a hundred classic jazz albums, one a week, start to finish. There's a Sonny Rollins night. There's a Bass Night, when eight bass players take turns.\n\nAnd here's what I find rather lovely about it. This is a listening room. Not a bar with music in the corner — a place where people actually stop talking. In a city that runs on noise, someone climbed a staircase, hauled up a piano, and made a room for quiet attention. Bảo Long uses it to give young players a stage, picking them out at student recitals.\n\nCome back after dark; the music starts in the evening and runs to around midnight. And if you've a little time beforehand, walk ten minutes west to the Hanoi Flag Tower, built in eighteen twelve, and have a look at the city's oldest lookout before you go and sit in its newest listening room."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.032513,
+      "centroidLongitude": 105.845655,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+      "createdAt": "2026-10-14",
+      "title": "Workshop14",
+      "shortDescription": "Eight hundred years ago, this lane belonged to a princess who kept silkworms.  You're in a quiet lane off Từ Hoa Street, near the shore of West…",
+      "longDescription": "Eight hundred years ago, this lane belonged to a princess who kept silkworms.\n\nThe ground has a long memory. In the twelfth century, under the Lý dynasty, this was the palace of Princess Từ Hoa, where silkworms were raised to weave the robes of the royal court. The land later became Nghi Tàm, a weaving village — one of thirteen craft villages that supplied the old capital. The people behind this bar call themselves the fourteenth. You can draw your own conclusions about the name.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-workshop14_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-workshop14_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-workshop14_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-workshop14_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "75ffc002-bc8e-55fa-9607-cbda736d3caf",
+          "order": 0,
+          "title": "Workshop14",
+          "caption": "The wooden gate at 6 Ngõ 5 Từ Hoa, Tây Hồ, beside Kim Liên Pagoda.",
+          "latitude": 21.058153,
+          "longitude": 105.832437,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-workshop14.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-workshop14_hero.webp",
+          "transcriptText": "Eight hundred years ago, this lane belonged to a princess who kept silkworms.\n\nYou're in a quiet lane off Từ Hoa Street, near the shore of West Lake, next to Kim Liên Pagoda. In front of you is a traditional wooden gate with a small garden behind it. That's Workshop14 — a cocktail bar of about fourteen seats, in what used to be an architect's studio.\n\nThe ground has a long memory. In the twelfth century, under the Lý dynasty, this was the palace of Princess Từ Hoa, where silkworms were raised to weave the robes of the royal court. The land later became Nghi Tàm, a weaving village — one of thirteen craft villages that supplied the old capital. The people behind this bar call themselves the fourteenth. You can draw your own conclusions about the name.\n\nThe team is three people with three different jobs. Hiếu Long, an architect, designed the conversion. Cường Nguyễn runs the place. And the drinks are Rich McDonough's. They went from signing the lease to opening night in three months. Inside, they kept the studio's footprint, put in a steel beam to hold the ceiling, and opened the roof with skylights. Wood, low light, very little else. It's a room that's been edited rather than decorated.\n\nThe menu is edited too: a dozen drinks at most, rotating with the seasons, each worked out in a small lab a few minutes away. There's one that crosses an espresso martini with Hanoi's egg coffee, and it's called \"Is One Un Oeuf?\" — which tells you something about the sense of humour.\n\nAnd here's the interesting bit. In twenty twenty-five, only months after opening, it was placed on Asia's Fifty Best Bars list and given the Campari One To Watch award. Yet almost everyone drinking here is local — around ninety-eight per cent. It wasn't built for visitors. It just turned out that visitors wanted it too.\n\nBefore you go in, or once you come out, step next door into Kim Liên Pagoda. It sits on the same old palace ground. Then walk down to the lake edge; on a clear evening the water goes silver, rather like silk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.058153,
+      "centroidLongitude": 105.832437,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+      "createdAt": "2026-10-14",
+      "title": "Mémoire 15",
+      "shortDescription": "You're standing on Sugar Street. Hold on to that; it matters later.  This is Hàng Đường, in the thick of the Old Quarter, and you want number…",
+      "longDescription": "You're standing on Sugar Street. Hold on to that; it matters later.\n\nIt's a café that has quietly moved in on top of somebody else's house. Everything up there is made of the same red steel — a stack of staircases, each one set slightly out of line with the last. And the staircases don't just get you to the top. The steps are the seats. The landings are the tables. There's no clear point where the building stops and the furniture starts. You climb it, and then you sit on it.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-memoire-15_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-memoire-15_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-memoire-15_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-memoire-15_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e5b99794-fb81-5a17-bdf1-c3021309d51e",
+          "order": 0,
+          "title": "Mémoire 15",
+          "caption": "The pavement outside 15 Hàng Đường, looking up at the roofline.",
+          "latitude": 21.03659,
+          "longitude": 105.849623,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-memoire-15.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-memoire-15_hero.webp",
+          "transcriptText": "You're standing on Sugar Street. Hold on to that; it matters later.\n\nThis is Hàng Đường, in the thick of the Old Quarter, and you want number fifteen. From the pavement it looks like any of its neighbours: a narrow terraced house, a shop at street level, washing and wires above. Now tip your head back and look right up to the roofline. If the angle's kind to you, you'll catch a flash of terracotta-red steel up there. That's Mémoire 15.\n\nIt's a café that has quietly moved in on top of somebody else's house. Everything up there is made of the same red steel — a stack of staircases, each one set slightly out of line with the last. And the staircases don't just get you to the top. The steps are the seats. The landings are the tables. There's no clear point where the building stops and the furniture starts. You climb it, and then you sit on it.\n\nAt the top, you get the one thing the Old Quarter almost never gives you at street level: the whole view, all the way round. A sea of tiled roofs, water tanks, satellite dishes and other people's rooftop gardens, with the city carrying on underneath you as if you weren't there.\n\nHere's why the street name matters. Hàng Đường was named for the sugar trade, and it still sells sugar and sweets, busiest of all in the weeks before Tết and the Mid-Autumn Festival. Its other speciality is ô mai — dried apricots, plums and kumquats, salted or sugared, sometimes spiced with ginger or liquorice. And Mémoire 15 sells itself on tea, coffee and ô mai. So the strangest new building on the street is, underneath it all, a sweet shop, exactly as the street has always been.\n\nThe Old Quarter ran out of ground a very long time ago. Every plot was claimed centuries back, and the houses fill them wall to wall. The only space left is upwards. This little café is one of the boldest grabs for it, and I rather love that it makes the grab with stairs.\n\nBefore you climb, buy a small bag of ô mai from one of the shops along here and take it up with you. Then, when you come back down, carry on north. Hàng Đường runs straight up to Đồng Xuân Market, the great covered market the French built in eighteen eighty-nine."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.03659,
+      "centroidLongitude": 105.849623,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Food",
+        "Contemporary",
+        "Viewpoint",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "94927f68-cb34-5aac-808d-2b4d6e16fbac",
+      "createdAt": "2026-10-14",
+      "title": "Duy Trí Café | Cà Phê Duy Trí",
+      "shortDescription": "The sign says it plainly: Có từ năm 1936. Since nineteen thirty-six.  You're on Yên Phụ Street, near the edge of West Lake, outside Duy Trí.…",
+      "longDescription": "The sign says it plainly: Có từ năm 1936. Since nineteen thirty-six.\n\nThe café was opened by a man called Phan Duy Sen. It's named after his son, Duy Trí, and it's run today by Duy Trí's daughter, Phạm Thanh Hương. Three generations, one name over the door. It hasn't always been this door, mind you — the business has moved several times over the years. But the family, the roast and the habits have come along each time.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-duy-tri_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-duy-tri_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-duy-tri_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "803ec681-09bc-5f10-8a2e-6f620640b28c",
+          "order": 0,
+          "title": "Duy Trí Café | Cà Phê Duy Trí",
+          "caption": "The pavement outside the café on Yên Phụ Street, by the roaster at the door.",
+          "latitude": 21.051497,
+          "longitude": 105.838798,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-duy-tri.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-duy-tri_hero.webp",
+          "transcriptText": "The sign says it plainly: Có từ năm 1936. Since nineteen thirty-six.\n\nYou're on Yên Phụ Street, near the edge of West Lake, outside Duy Trí. It's a tall, narrow tube house, a nhà ống, with a slightly dusty, weathered front. If you can smell coffee roasting before you see the door, you're in the right spot. The roasting is done right there at the entrance, and they'll sell you the beans in a paper bag.\n\nThe café was opened by a man called Phan Duy Sen. It's named after his son, Duy Trí, and it's run today by Duy Trí's daughter, Phạm Thanh Hương. Three generations, one name over the door. It hasn't always been this door, mind you — the business has moved several times over the years. But the family, the roast and the habits have come along each time.\n\nGo in and look at the walls. There are framed photographs of Duy Trí receiving a civic award, pictures from the war years, and — my favourite — the founder's sword and his badminton racket, given equal honour.\n\nThen look up. The house goes up three floors. The ground floor belongs to the regulars, mostly middle-aged, on old dark wooden chairs. A narrow staircase takes you up to the second floor, where the ceilings are low enough to make you duck and the tables are so close you'll be shuffling aside for strangers. Keep going to the third floor, where there's a balcony over the street and, if you lean a little, a glimpse of West Lake.\n\nOrder the sữa chua cà phê — yoghurt coffee. The yoghurt is made here and frozen before it goes in the glass, so it arrives thick and half-set, with dark coffee poured over the top. It's one of those drinks that sounds wrong and tastes completely right.\n\nPlenty of Hanoi cafés have a story. This one has a family album. The coffee is a house blend of Arabica and Robusta, roasted by the door, and the recipe has travelled with them from address to address for almost ninety years.\n\nAfterwards, walk north to the lake and along Thanh Niên Road to Trấn Quốc Pagoda, the slender red tower on a little island. It's Hanoi's oldest pagoda — older even than this café's recipe, by the best part of fourteen centuries."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.051497,
+      "centroidLongitude": 105.838798,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+      "createdAt": "2026-10-14",
+      "title": "Loading T",
+      "shortDescription": "One house, more than a dozen families, and a café that fits in two of the rooms.  You're on Chân Cầm, a short street just north of St Joseph's…",
+      "longDescription": "One house, more than a dozen families, and a café that fits in two of the rooms.\n\nBefore you climb, look at the whole house. It was built for one family — most likely a well-off merchant's, in the colonial years. Tall windows, green-grey shutters, small rounded balconies with patterned railings. It was meant to be lived in grandly.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-loading-t_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-loading-t_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-loading-t_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6329140e-a7ef-5fba-8b6d-aec5ef7bc314",
+          "order": 0,
+          "title": "Loading T",
+          "caption": "The gate of 8 Chân Cầm, a few metres from St Joseph's Cathedral.",
+          "latitude": 21.030522,
+          "longitude": 105.848501,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-loading-t.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-loading-t_hero.webp",
+          "transcriptText": "One house, more than a dozen families, and a café that fits in two of the rooms.\n\nYou're on Chân Cầm, a short street just north of St Joseph's Cathedral, outside number eight. Behind the gate is a French colonial villa from around the nineteen thirties. There's a bakery on the ground floor. The café is upstairs: go through the gate and take the staircase on your left.\n\nBefore you climb, look at the whole house. It was built for one family — most likely a well-off merchant's, in the colonial years. Tall windows, green-grey shutters, small rounded balconies with patterned railings. It was meant to be lived in grandly.\n\nAfter nineteen fifty-five, it wasn't. Like many villas in Hanoi, it was taken over by the new socialist government and divided up between more than a dozen households. Rooms became flats. Walls went up across the old reception spaces. And here's the curious thing: those partitions are still standing. The house never went back to being one house. Bit by bit, some of its pieces have simply become small businesses instead — and Loading T is one of them.\n\nUpstairs, you'll see what that means. Two rooms, high ceilings, the original patterned floor tiles, weathered shutters, and furniture that doesn't match because it was never meant to. There's a little mezzanine, too, and a balcony that the café shares with everyone else at number eight. That's the part I love: you're having coffee on a communal landing.\n\nOrder something with cinnamon in it; that's their habit. The cinnamon egg coffee is the one people come back for.\n\nMost old houses tell you about the people who built them. This one tells you about everyone who came after — the merchant, then the families who split it into flats, then the people who opened it up for coffee. All three are still visible at once.\n\nWhen you come down, walk the few steps to the cathedral square and look at St Joseph's from the side street. Then look back at number eight. The cathedral is the French city as it wanted to be seen. This house is what happened to it next."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.030522,
+      "centroidLongitude": 105.848501,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Colonial",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c096f22d-9b92-5661-9568-ef811a1de910",
+      "createdAt": "2026-10-14",
+      "title": "Sofitel Legend Metropole Hanoi",
+      "shortDescription": "Charlie Chaplin spent his honeymoon here. And underneath, there's a bomb shelter.  You're on Ngô Quyền Street, in the French Quarter, looking…",
+      "longDescription": "Charlie Chaplin spent his honeymoon here. And underneath, there's a bomb shelter.\n\nThe idea came from a French education official in Tonkin, Gustave Dumoutier, and the money from André Ducamp, who put in half a million francs and ran the place. The building you're looking at is the original wing, now called the Heritage Wing. The modern Opera Wing behind it came much later, in the nineteen nineties.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "30fb27b8-702e-5bf9-a0cb-255d807385fd",
+          "order": 0,
+          "title": "Sofitel Legend Metropole Hanoi",
+          "caption": "Across Ngô Quyền Street from the hotel's white front, number 15.",
+          "latitude": 21.025413,
+          "longitude": 105.856375,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-metropole.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-metropole_hero.webp",
+          "transcriptText": "Charlie Chaplin spent his honeymoon here. And underneath, there's a bomb shelter.\n\nYou're on Ngô Quyền Street, in the French Quarter, looking across at number fifteen. It's hard to miss: a long white building, four storeys high, with dark green shutters at the windows. This is the Metropole, and it opened in August nineteen-oh-one.\n\nThe idea came from a French education official in Tonkin, Gustave Dumoutier, and the money from André Ducamp, who put in half a million francs and ran the place. The building you're looking at is the original wing, now called the Heritage Wing. The modern Opera Wing behind it came much later, in the nineteen nineties.\n\nHave a look at the roofline. It's a little flatter than it was meant to be. In nineteen sixty-two a fourth floor was added, and the copper dome that once crowned the middle of the building was taken away.\n\nNow, the guest book. Chaplin and Paulette Goddard came in nineteen thirty-six. Graham Greene stayed in nineteen fifty-one, and Vietnam went into The Quiet American. And in nineteen seventy-two the actress Jane Fonda sheltered here during an air raid; that December, during the heaviest American bombing of Hanoi, the folk singer Joan Baez recorded a song underground.\n\nThat's the second half of the story. In the mid-nineteen sixties a shelter was built beneath the hotel, with a concrete ceiling a metre thick. After the war it was forgotten. In twenty eleven, builders working under the Bamboo Bar broke through into it. It has been restored and can be visited.\n\nSo the white façade is only half the building. Above ground, a hotel built for the colonial elite, renamed the Thống Nhất — Reunification — after independence, and given its old name back in nineteen ninety-two. Below ground, a concrete room where people waited for the bombs to stop. Very few buildings carry both of those at once.\n\nFrom here, walk a few minutes south-east to the Hanoi Opera House, finished in nineteen eleven. Same decade, same ambitions — and the square in front of it is where, in August nineteen forty-five, a mass rally set the revolution going."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.025413,
+      "centroidLongitude": 105.856375,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "War",
+        "Colonial",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "22105398-48b5-561c-b2ca-a3156a0ad623",
+      "createdAt": "2026-10-14",
+      "title": "JW Marriott Hanoi",
+      "shortDescription": "Most big hotels go up. This one lies down.  You're out in the new western side of Hanoi, a long way from the Old Quarter, on the edge of the…",
+      "longDescription": "Most big hotels go up. This one lies down.\n\nThe architect was Carlos Zapata, whose studio is in New York, and the hotel opened in twenty thirteen. The brief he set himself was a reverse skyscraper — the floor space of a tower, laid on its side. So instead of fifty storeys stacked up, you get eight storeys stretched out, holding some four hundred and fifty rooms, a grand lobby, and a glass-walled pool up on the roof.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jw-marriott_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jw-marriott_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jw-marriott_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jw-marriott_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "df4341af-047c-50a7-96c3-2bd9182766d2",
+          "order": 0,
+          "title": "JW Marriott Hanoi",
+          "caption": "The lakeside in front of the hotel, 8 Đỗ Đức Dục, looking back at the curved façade.",
+          "latitude": 21.006956,
+          "longitude": 105.783168,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-jw-marriott.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jw-marriott_hero.webp",
+          "transcriptText": "Most big hotels go up. This one lies down.\n\nYou're out in the new western side of Hanoi, a long way from the Old Quarter, on the edge of the artificial lake in front of the JW Marriott. Look back at the building. It's hard to take in all at once: a long, low, curving mass of glass and pale cladding, bending along the water, with sections that swing out over the ground below. Next door is the National Convention Centre; beyond it, the Hanoi Museum.\n\nThe architect was Carlos Zapata, whose studio is in New York, and the hotel opened in twenty thirteen. The brief he set himself was a reverse skyscraper — the floor space of a tower, laid on its side. So instead of fifty storeys stacked up, you get eight storeys stretched out, holding some four hundred and fifty rooms, a grand lobby, and a glass-walled pool up on the roof.\n\nNow look at the shape again, and let your eye run from one end to the other. It's meant to be a dragon. In Vietnamese myth the dragon is the ancestor of the people, and the city's old name, Thăng Long, means \"ascending dragon\". The building's long, sinuous body is also said to echo the line of the Vietnamese coast — a country that is itself long, thin and curving.\n\nHave a look at the entrance, too. Guests arrive on a raised plaza, with the working levels tucked underneath, so the hotel seems to hover over its own forecourt rather than sit on it.\n\nAnd here's the thing. For a thousand years, Hanoi's big statements were made in the old city — the citadel, the temples, the French boulevards. Out here, on what was farmland not long ago, the city is making new ones, and doing it in glass and steel rather than stone. Whether you find this one graceful or a little much, it's an honest picture of where the city is heading.\n\nIf you've got time, walk next door to the Hanoi Museum, the building shaped like an upside-down pyramid. Stand between the two and look from one to the other. Two very different ideas of a modern Vietnamese landmark, a few hundred metres apart."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.006956,
+      "centroidLongitude": 105.783168,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Carlos Zapata"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+      "createdAt": "2026-10-14",
+      "title": "Silk Path Boutique Hanoi",
+      "shortDescription": "In Hanoi, the front of a building is rarely the whole story. This one's barely the first page.  You're on Hàng Khay, the street that runs along…",
+      "longDescription": "In Hanoi, the front of a building is rarely the whole story. This one's barely the first page.\n\nHave a look at the façade. It speaks the language of the old colonial townhouse — classical mouldings, tall windows, a proper sense of occasion — all folded into a frontage only a shopfront wide. It reads like a small townhouse. You'd guess a handful of rooms at most.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-silk-path-boutique_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-silk-path-boutique_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-silk-path-boutique_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "21b9fd1f-e127-5e39-95eb-a62de769a374",
+          "order": 0,
+          "title": "Silk Path Boutique Hanoi",
+          "caption": "The pavement on Hàng Khay, opposite number 21, the lake behind you.",
+          "latitude": 21.025574,
+          "longitude": 105.852421,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-silk-path-boutique.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-silk-path-boutique_hero.webp",
+          "transcriptText": "In Hanoi, the front of a building is rarely the whole story. This one's barely the first page.\n\nYou're on Hàng Khay, the street that runs along the southern end of Hoàn Kiếm Lake. With the water behind you, look for number twenty-one — a narrow neoclassical front squeezed between its neighbours. One travel writer described it as almost invisible, wedged between a perfume shop and a café. That's the Silk Path Boutique.\n\nHave a look at the façade. It speaks the language of the old colonial townhouse — classical mouldings, tall windows, a proper sense of occasion — all folded into a frontage only a shopfront wide. It reads like a small townhouse. You'd guess a handful of rooms at most.\n\nThere are thirty-three. That's the trick. The front is only a gateway: behind it, the hotel opens out into a much larger property hidden behind a whole row of old terraced houses. From the street, you see the width of one shopfront. Inside, you're in something closer to a block.\n\nAnd there's an old logic to that. Hanoi's traditional houses were built narrow at the front and long at the back — the famous tube houses — because street frontage was the precious, contested thing. Space was won by going deep, not wide. This hotel plays the same game at a larger scale. It takes the narrowest possible slice of one of the city's best streets, and then quietly expands where nobody can see.\n\nThe street itself has a name worth knowing. Hàng Khay means \"trays\" — it was once the place for lacquered and mother-of-pearl inlaid trays and boxes. A street of beautiful containers, which is rather fitting for a hotel that's mostly hidden inside its own box.\n\nSo, next time you walk past a slim old front in this city, give it a second look. There may be far more behind it than it's letting on.\n\nBefore you go, turn round and cross to the lake. From the southern shore you can see Turtle Tower, the little three-tiered tower standing on its islet in the middle of the water. And if you're staying here, ask about the rooftop: it looks straight back over the lake."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.025574,
+      "centroidLongitude": 105.852421,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Colonial",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+      "createdAt": "2026-10-14",
+      "title": "Jackfruit Village",
+      "shortDescription": "Before the architects drew a single line here, they counted the trees. Thirty-eight jackfruit, thirteen pomelo.  You're in Trại Lãng, a farming…",
+      "longDescription": "Before the architects drew a single line here, they counted the trees. Thirty-eight jackfruit, thirteen pomelo.\n\nThe design is by the Hanoi practice 1+1>2, led by the architect Hoàng Thúc Hào, and it was finished in twenty nineteen. The rule they set themselves was simple: keep the trees. Every one of those jackfruit and pomelo trees stayed where it was, and the houses were placed between and beneath them, so the old trees shade the shared yards.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jackfruit-village_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jackfruit-village_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jackfruit-village_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jackfruit-village_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jackfruit-village_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3930f4d0-4513-5f33-8805-a360b10c7ea3",
+          "order": 0,
+          "title": "Jackfruit Village",
+          "caption": "Beside the meditation house at the centre of the site, Trại Lãng village, Sơn Tây.",
+          "latitude": 21.058897,
+          "longitude": 105.528113,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-jackfruit-village.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-jackfruit-village_hero.webp",
+          "transcriptText": "Before the architects drew a single line here, they counted the trees. Thirty-eight jackfruit, thirteen pomelo.\n\nYou're in Trại Lãng, a farming village about an hour west of central Hanoi, near the old town of Sơn Tây. This is Jackfruit Village, a small retreat of brick and thatch spread over about a hectare and three-quarters, with a lake along its southern edge. Find the meditation house at the centre of the site; everything else radiates out from it.\n\nThe design is by the Hanoi practice 1+1>2, led by the architect Hoàng Thúc Hào, and it was finished in twenty nineteen. The rule they set themselves was simple: keep the trees. Every one of those jackfruit and pomelo trees stayed where it was, and the houses were placed between and beneath them, so the old trees shade the shared yards.\n\nHave a look at the houses themselves. The walls are local clay brick. The roofs are wide and thatched, with deep overhangs that keep the sun off the walls and the rain away from the doors. And look down at the base: each house sits up on a raised platform. That's partly to keep termites and damp out, and partly so the rainwater still drains across the land the way it always did.\n\nNow look at the meditation house, with its quiet, shaded space for the whole community, set among the homes. That's the point of the plan. Guests and villagers are meant to share it — the people who stay here live alongside working farmers, eat what's grown here, and cycle or row out to the neighbouring villages.\n\nAnd here's the thing. A lot of new rural building in Vietnam replaces the village with something from the city. This does the reverse. It takes the oldest materials around — brick, clay, thatch, shade — and proves they're still good enough for a new building, as long as somebody is willing to design carefully with them.\n\nTake the long way back. Ask about the cycling paths out through the paddy fields, or a boat across the lake. And if you're curious what the same architects do with a very different brief, the Bát Tràng Museum, east of the city, is theirs too — terracotta, curves, and not a jackfruit tree in sight."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.058897,
+      "centroidLongitude": 105.528113,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Green Escape",
+        "Designed by a Master",
+        "1+1>2 Architects"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2a82b7bd-d267-5e10-94c9-ed8289658343",
+      "createdAt": "2026-10-14",
+      "title": "54 Traditions",
+      "shortDescription": "There's a rattle in here that was made to hold the attention of spirits.  You're on Hàng Bún, a few streets from Trúc Bạch Lake, outside number…",
+      "longDescription": "There's a rattle in here that was made to hold the attention of spirits.\n\nThe number in the name is the number of ethnic groups officially recognised in Vietnam: the Kinh majority, and fifty-three others, many of them living in the mountains of the north and the Central Highlands. This is, as far as anyone knows, the only gallery in the country given over entirely to their art and objects.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-54-traditions_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-54-traditions_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "62b298a9-2039-5a23-b78a-75563660c4f4",
+          "order": 0,
+          "title": "54 Traditions",
+          "caption": "The shopfront at 44B Hàng Bún, Ba Đình, near Trúc Bạch Lake.",
+          "latitude": 21.041701,
+          "longitude": 105.844855,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-54-traditions.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-54-traditions_hero.webp",
+          "transcriptText": "There's a rattle in here that was made to hold the attention of spirits.\n\nYou're on Hàng Bún, a few streets from Trúc Bạch Lake, outside number forty-four B. It's a terraced house, like the others along here, but the windows are full of carved wood, woven cloth and old pots rather than the usual things for sale. This is 54 Traditions — part private collection, part antique shop.\n\nThe number in the name is the number of ethnic groups officially recognised in Vietnam: the Kinh majority, and fifty-three others, many of them living in the mountains of the north and the Central Highlands. This is, as far as anyone knows, the only gallery in the country given over entirely to their art and objects.\n\nIt was started by two people. Mark Rapoport is a former paediatrician from New York who first came to Vietnam as a medical volunteer during the war. Nguyễn Thị Nhung is a Hanoi native who has spent her life learning to spot what matters. Between them they built up a collection of something like fifteen thousand objects. Some of their early finds are now in the Metropolitan Museum in New York and the Musée du quai Branly in Paris.\n\nGo in and have a look; you'll usually be shown round in person. The interior is kept plain on purpose so the objects can do the talking — textiles, ceramics, carvings, jewellery. Rapoport's particular passion is the equipment of the shamans of the northern mountains. Ask about the power rattle: a sword-shaped object strung with antique coins, shaken during ceremonies to keep the spirits listening.\n\nAnd here's what's worth knowing, standing here. Most of what people buy in Hanoi as \"ethnic\" is made for them. What's in here was made for use — for a wedding, a funeral, a harvest, a healing — by people who never imagined it in a shop window. That's what makes it difficult, and rather moving, to look at.\n\nWhen you leave, walk the few minutes to Trúc Bạch Lake and follow its edge to Thanh Niên Road. On the shore there's a small memorial marking where an American pilot, John McCain, came down in the lake in nineteen sixty-seven. The neighbourhood has more stories than its quiet streets let on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.041701,
+      "centroidLongitude": 105.844855,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Art",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cfcedff2-0f98-59c9-9958-1b31f2630bda",
+      "createdAt": "2026-10-14",
+      "title": "Art Vietnam Gallery",
+      "shortDescription": "Getting here is a bit of an anticlimax. That's deliberate.  You're in a lane off Yên Lạc Street, in the south-east of the city — ordinary…",
+      "longDescription": "Getting here is a bit of an anticlimax. That's deliberate.\n\nLecht has been showing Vietnamese contemporary art in Hanoi for a long time — she's closely associated with the generation of painters known as the Gang of Five, who broke away from official, propaganda-style art in the nineteen nineties. The gallery used to be public. It began in an old tube house, moved once, and then in twenty seventeen she closed the public space and went back to where she says she started: a salon in her own house. So it's open by appointment only. Ring ahead, and you'll be let in.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-art-vietnam-gallery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-art-vietnam-gallery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-art-vietnam-gallery_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "631185ac-8b6f-5dcd-ad91-74f0eac56b5e",
+          "order": 0,
+          "title": "Art Vietnam Gallery",
+          "caption": "The lane at 2 Ngõ 66 Yên Lạc, Vĩnh Tuy, outside the gallery house.",
+          "latitude": 21.000688,
+          "longitude": 105.863753,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-art-vietnam-gallery.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-art-vietnam-gallery_hero.webp",
+          "transcriptText": "Getting here is a bit of an anticlimax. That's deliberate.\n\nYou're in a lane off Yên Lạc Street, in the south-east of the city — ordinary, residential, frankly humdrum. Shops, motorbikes, washing, nothing to tell you there's an art gallery anywhere nearby. Find number two, in lane sixty-six. Behind it is Art Vietnam Gallery, and it's the American dealer Suzanne Lecht's home.\n\nLecht has been showing Vietnamese contemporary art in Hanoi for a long time — she's closely associated with the generation of painters known as the Gang of Five, who broke away from official, propaganda-style art in the nineteen nineties. The gallery used to be public. It began in an old tube house, moved once, and then in twenty seventeen she closed the public space and went back to where she says she started: a salon in her own house. So it's open by appointment only. Ring ahead, and you'll be let in.\n\nNow, the house. It's a restored traditional house of the White Thai, one of Vietnam's upland ethnic groups — the kind of timber house usually found raised on stilts in the mountains of the north-west, not in a Hanoi lane. Inside, it's all dark wood, quiet, and low light. Painting and sculpture are shown in a setting that feels much more like visiting someone than visiting a gallery.\n\nAnd here's the interesting bit. Most galleries do everything they can to make arriving feel grand. This one does the opposite. You come through the most ordinary part of the city, and then a door opens on dark timber and paintings. The contrast is the point. The walk here is the frame.\n\nIt's also a fair picture of Vietnamese contemporary art itself, which for decades happened in houses, studios and back rooms rather than in museums. A lot of the best work in this city still does.\n\nIf you're coming back by appointment, give yourself time to sit with one picture rather than ten. And on the way out, look back down the lane. Knowing what's behind that door, the humdrum looks rather different."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.000688,
+      "centroidLongitude": 105.863753,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "30786ccc-6c5c-5089-8736-060335aaccb8",
+      "createdAt": "2026-10-14",
+      "title": "Manzi Art Space",
+      "shortDescription": "Part gallery, part café, part shop, part lecture hall — and all of it in somebody's old house.  You're on Phan Huy Ích, a quiet side street on…",
+      "longDescription": "Part gallery, part café, part shop, part lecture hall — and all of it in somebody's old house.\n\nIt was set up by three people who described themselves as cultural activists: Trâm Vũ; Giang Đặng, one of the founders of the Vietnamese-language literary journal talawas; and the artist Bill Nguyễn, who has taught at Vietnam's Fine Arts University. What they wanted was simple and, in Hanoi, unusual — an independent place for contemporary art that wasn't trying to sell to tourists.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-manzi-art-space_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-manzi-art-space_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-manzi-art-space_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fab415e8-8060-5731-9a49-4f4f7615f309",
+          "order": 0,
+          "title": "Manzi Art Space",
+          "caption": "The gate of 14 Phan Huy Ích, Ba Đình, looking into the front courtyard.",
+          "latitude": 21.041389,
+          "longitude": 105.845556,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-manzi-art-space.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-manzi-art-space_hero.webp",
+          "transcriptText": "Part gallery, part café, part shop, part lecture hall — and all of it in somebody's old house.\n\nYou're on Phan Huy Ích, a quiet side street on the edge of the Old Quarter, outside number fourteen. Behind the gate is a leafy front courtyard and, beyond it, a French villa from the nineteen twenties. That's Manzi.\n\nIt was set up by three people who described themselves as cultural activists: Trâm Vũ; Giang Đặng, one of the founders of the Vietnamese-language literary journal talawas; and the artist Bill Nguyễn, who has taught at Vietnam's Fine Arts University. What they wanted was simple and, in Hanoi, unusual — an independent place for contemporary art that wasn't trying to sell to tourists.\n\nGo through the gate and have a look. Downstairs is the café, and the rooms around it hang work by contemporary, mostly non-commercial Hanoi artists. There's a small room upstairs that's lovely on a sunny afternoon. And in the evenings the house turns into a venue — talks, film screenings, performances. Manzi also co-organises Art For You, an annual fair of affordable art, now more than a decade old.\n\nNow look at the building itself. A colonial villa, built for one prosperous household, with its shutters and its garden. A hundred years on, it's become a kind of public living room. The courtyard is where people sit and argue.\n\nAnd here's the thing. A great deal of Hanoi's contemporary art scene has been built in houses like this one — rented, restored, and opened up. It's cheaper than building, of course. But it also means the city's newest ideas keep turning up inside its oldest walls, and that's rather a good thing to see.\n\nBefore you leave, walk round the corner to Manzi's second address, its exhibition space. That one is in a very different kind of building: the ground floor of a modernist terraced house. Two houses, two eras of the city, one programme. Go and compare."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.041389,
+      "centroidLongitude": 105.845556,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Contemporary",
+        "Colonial",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "143de005-d2f2-5bcb-a346-517ba150920f",
+      "createdAt": "2026-10-14",
+      "title": "The Old Quarter | Phố Cổ Hà Nội",
+      "shortDescription": "Nearly every street name around you begins with the same word: Hàng. It means goods, or merchandise.  You're on Hàng Buồm, in the heart of…",
+      "longDescription": "Nearly every street name around you begins with the same word: Hàng. It means goods, or merchandise.\n\nThis district has been the city's market since about the eleventh century, when craftsmen and traders from the villages around the capital began settling here, between the royal citadel and the Red River. People from the same village, with the same trade, tended to settle on the same street. So the streets took the names of what they sold. Hàng Buồm, where you're standing, was sails. Hàng Bạc is silver. Hàng Gai, silk and hemp. Hàng Đường, sugar. You'll hear it called the Thirty-Six Streets, though there have always been more than that; thirty-six is a lucky, symbolic number rather than a count.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-old-quarter_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-old-quarter_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-old-quarter_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-old-quarter_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-old-quarter_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b24bd322-dd73-597c-b656-b09a6bff20ed",
+          "order": 0,
+          "title": "The Old Quarter | Phố Cổ Hà Nội",
+          "caption": "Outside Bạch Mã Temple, 76 Hàng Buồm, in the middle of the Old Quarter.",
+          "latitude": 21.035934,
+          "longitude": 105.850988,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-old-quarter.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-old-quarter_hero.webp",
+          "transcriptText": "Nearly every street name around you begins with the same word: Hàng. It means goods, or merchandise.\n\nYou're on Hàng Buồm, in the heart of Hanoi's Old Quarter, outside an old temple gate — the Bạch Mã Temple, the Temple of the White Horse. If you can see the temple, a press of shopfronts on both sides, and motorbikes filling every gap, you're in the right place.\n\nThis district has been the city's market since about the eleventh century, when craftsmen and traders from the villages around the capital began settling here, between the royal citadel and the Red River. People from the same village, with the same trade, tended to settle on the same street. So the streets took the names of what they sold. Hàng Buồm, where you're standing, was sails. Hàng Bạc is silver. Hàng Gai, silk and hemp. Hàng Đường, sugar. You'll hear it called the Thirty-Six Streets, though there have always been more than that; thirty-six is a lucky, symbolic number rather than a count.\n\nNow look at the houses. Narrow fronts, sometimes only a few metres wide, and then they run back a very long way — a shop at the front, then courtyards, then living rooms, then a kitchen at the back. They're called nhà ống, tube houses. Street frontage was what everyone wanted, so the plots were sliced thin and built deep.\n\nThen turn to the temple. The story goes that when King Lý Thái Tổ founded the capital, in the year ten-ten, his city walls kept falling down, until a white horse appeared and showed him where to build. The temple honours the spirit of that horse. It's thought to be the oldest temple in the Old Quarter.\n\nAnd here's the thing. Nobody planned this district. There's no grand axis, no square, no master plan. It grew, lot by lot and trade by trade, over a thousand years, and it still works. That's quite something.\n\nPick a street with a name you like, and follow it. Walk a few minutes north-east and you'll reach Ô Quan Chưởng, the only one of the old city gates still standing. It's small, battered and still in use, which is the Old Quarter all over."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.035934,
+      "centroidLongitude": 105.850988,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Commerce",
+        "Free to Visit",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d012b7b0-0eff-5618-9763-4643768c05d1",
+      "createdAt": "2026-10-14",
+      "title": "The French Quarter | Khu Phố Pháp",
+      "shortDescription": "Ten minutes' walk from the Old Quarter, and the city changes completely.  You're on the square in front of the Hanoi Opera House, at the top of…",
+      "longDescription": "Ten minutes' walk from the Old Quarter, and the city changes completely.\n\nThe French took control of Hanoi in eighteen eighty-two, and they built their city here, to the south and east of the old one, on low, wet, swampy ground. Look around at the street pattern: wide boulevards, straight lines, villas set back in their gardens. It's the opposite of the tangle you've just come from. The idea was to build a European capital in Indochina.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-french-quarter_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-french-quarter_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-french-quarter_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-french-quarter_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3886fbc5-b6b9-529d-a439-b1488bbd0f19",
+          "order": 0,
+          "title": "The French Quarter | Khu Phố Pháp",
+          "caption": "August Revolution Square, in front of the Hanoi Opera House, 1 Tràng Tiền.",
+          "latitude": 21.0243,
+          "longitude": 105.8576,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-french-quarter.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-french-quarter_hero.webp",
+          "transcriptText": "Ten minutes' walk from the Old Quarter, and the city changes completely.\n\nYou're on the square in front of the Hanoi Opera House, at the top of Tràng Tiền Street. The building in front of you has columns, balconies and a grand flight of steps. Behind you, the streets run broad and straight, lined with big trees. That's the French Quarter.\n\nThe French took control of Hanoi in eighteen eighty-two, and they built their city here, to the south and east of the old one, on low, wet, swampy ground. Look around at the street pattern: wide boulevards, straight lines, villas set back in their gardens. It's the opposite of the tangle you've just come from. The idea was to build a European capital in Indochina.\n\nThe Opera House is that idea at its most confident. Construction started in nineteen-oh-one and finished in nineteen eleven, and it's modelled on the Palais Garnier in Paris — a smaller copy, in materials thought better suited to Hanoi. It was the centre of French cultural life in the colony. Then, on the nineteenth of August nineteen forty-five, a mass rally on this very square helped set off the August Revolution. The building made for colonial evenings out became the backdrop to the end of the colony.\n\nNow, the weather. Hanoi is hot, humid and very wet, and a lot of what the French built here wasn't made for that. They adapted as best they could — deep verandas, shutters, high ceilings, and those enormous street trees for shade. Sometimes it worked; often it didn't.\n\nAnd here's the interesting bit. In the nineteen twenties, an architect called Ernest Hébrard took charge of planning in Indochina and tried a different approach: borrow from Asian buildings instead of ignoring them. Wide sheltering roofs, layered eaves, local forms on a European plan. They called it the Indochine style.\n\nYou can see it for yourself, just round the corner. Walk behind the Opera House to the National Museum of Vietnamese History, built in the nineteen twenties and thirties to Hébrard's design. Stand in front of it, then think back to the Opera House. One building copies Paris. The other is trying to belong here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.0243,
+      "centroidLongitude": 105.8576,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "History",
+        "Colonial",
+        "Power",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "697cb1a8-f8ca-58a2-838a-be19bab70ab1",
+      "createdAt": "2026-10-14",
+      "title": "Ba Đình Square | Quảng trường Ba Đình",
+      "shortDescription": "On the second of September, nineteen forty-five, a man in a khaki suit stood on a wooden platform here and read out a declaration of…",
+      "longDescription": "On the second of September, nineteen forty-five, a man in a khaki suit stood on a wooden platform here and read out a declaration of independence.\n\nThe declaration, read by Hồ Chí Minh, founded the Democratic Republic of Vietnam. He died in nineteen sixty-nine. Work on the mausoleum started on the second of September nineteen seventy-three, and it was opened in August nineteen seventy-five. Its architect was the Soviet designer Garol Isakovich, and it owes a clear debt to Lenin's tomb in Moscow — but look at the roof. It slopes, like a Vietnamese temple roof, and it softens the whole thing.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ba-dinh-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ba-dinh-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ba-dinh-square_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2dd9037b-4e2d-53de-ab2c-4ff5115319ac",
+          "order": 0,
+          "title": "Ba Đình Square | Quảng trường Ba Đình",
+          "caption": "The edge of Ba Đình Square on Hùng Vương, facing the Mausoleum.",
+          "latitude": 21.036897,
+          "longitude": 105.834667,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-ba-dinh-square.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ba-dinh-square_hero.webp",
+          "transcriptText": "On the second of September, nineteen forty-five, a man in a khaki suit stood on a wooden platform here and read out a declaration of independence.\n\nYou're at the edge of Ba Đình Square — a vast, flat lawn laid out in green squares, the most important open space in Vietnam. In front of you, across the grass, is a heavy grey granite building with columns and a sloping roof. That's the Hồ Chí Minh Mausoleum. And on the far side of the square, facing it, a much newer building with a pale stone base and a glowing green glass drum rising from it: the National Assembly.\n\nThe declaration, read by Hồ Chí Minh, founded the Democratic Republic of Vietnam. He died in nineteen sixty-nine. Work on the mausoleum started on the second of September nineteen seventy-three, and it was opened in August nineteen seventy-five. Its architect was the Soviet designer Garol Isakovich, and it owes a clear debt to Lenin's tomb in Moscow — but look at the roof. It slopes, like a Vietnamese temple roof, and it softens the whole thing.\n\nHave a look at the inscription at the top, in dark red stone — it's jade, from Cao Bằng province, near where Hồ Chí Minh lived when he first came back to Vietnam in nineteen forty-one. It reads simply: Chủ tịch Hồ Chí Minh — President Hồ Chí Minh. The guard at the door changes every hour. Hồ Chí Minh himself had asked, in his will, to be cremated; the state decided otherwise.\n\nNow find the National Assembly again. It's by the German practice gmp, and it was finished in twenty fourteen. The plan is a circle inside a square — heaven and earth, in traditional Vietnamese thinking. The circle is the debating chamber, a translucent jade-green drum for nearly five hundred deputies. When they dug its foundations, they found the remains of the old royal city underneath.\n\nSo, two buildings, forty years apart, facing each other across the same lawn. One is built of grey granite to stand still forever. The other is built of glass, so you can see in. You can decide for yourself what each one is trying to say.\n\nIf you're here at nine in the evening, stay for the flag-lowering ceremony. Otherwise, walk to the far side of the mausoleum: the yellow Presidential Palace and the stilt house where Hồ Chí Minh actually lived are just beyond it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 153,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.036897,
+      "centroidLongitude": 105.834667,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "Monument",
+        "Civic",
+        "Power",
+        "Remembrance",
+        "Free to Visit",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "gmp Architekten",
+        "Garol Isakovich"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "436a0522-009a-52d4-b493-57ceae896b84",
+      "createdAt": "2026-10-14",
+      "title": "Imperial Citadel of Thăng Long | Hoàng thành Thăng Long",
+      "shortDescription": "In the year ten-ten, a king moved his capital here and gave it a name: Thăng Long. Ascending Dragon.  You're standing in front of Đoan Môn, the…",
+      "longDescription": "In the year ten-ten, a king moved his capital here and gave it a name: Thăng Long. Ascending Dragon.\n\nHave a look at the arches. They're not all the same size, and that was the point. The tall one in the middle was for the emperor alone. The ones either side were for the royal family and high officials. Everyone else went another way. You could tell a man's rank by which hole in the wall he walked through.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-imperial-citadel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-imperial-citadel_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bc06db47-79d0-5311-932d-dd42a0b655a4",
+          "order": 0,
+          "title": "Imperial Citadel of Thăng Long | Hoàng thành Thăng Long",
+          "caption": "In front of Đoan Môn, the south gate, inside the citadel grounds off Hoàng Diệu.",
+          "latitude": 21.035223,
+          "longitude": 105.840259,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-imperial-citadel.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-imperial-citadel_hero.webp",
+          "transcriptText": "In the year ten-ten, a king moved his capital here and gave it a name: Thăng Long. Ascending Dragon.\n\nYou're standing in front of Đoan Môn, the great south gate of the citadel — a long, solid wall of old brick and stone, with five arched gateways at the bottom and a two-storey watchtower on top. If you can see five arches side by side, you're in the right place.\n\nHave a look at the arches. They're not all the same size, and that was the point. The tall one in the middle was for the emperor alone. The ones either side were for the royal family and high officials. Everyone else went another way. You could tell a man's rank by which hole in the wall he walked through.\n\nThe citadel was founded by King Lý Thái Tổ, and it was the seat of the Vietnamese court for most of the next eight centuries, until the capital moved south to Huế in seventeen eighty-nine. Most of what stood here was later demolished by the French. What survives is a scattering of pieces — this gate; the North Gate, which still has cannon damage on its face from the French attack of eighteen eighty-two; and, through the gate behind you, a pair of stone dragons flanking the steps of a palace that's no longer there.\n\nGo through and find them. They're the steps of Kính Thiên Palace, carved in the fifteenth century, and they lead up to nothing but a platform and the sky.\n\nAnd here's what makes this place unusual. Behind those dragon steps stands a plain, two-storey building called D67, built in nineteen sixty-seven. Underneath it is a bunker. During the American war, the Politburo and the army's high command met down there and directed the fighting. So one site holds the court of the Lý kings and the command room of the twentieth century, a few metres apart.\n\nThat's why UNESCO made the citadel a World Heritage Site in twenty ten: not for any single building, but for the layers. A thousand years of Vietnamese power, all stacked on one patch of ground.\n\nBefore you leave, cross Hoàng Diệu Street to the excavation site at number eighteen. Walkways take you over the dug-up foundations of the old palaces, and there you can look straight down through the centuries."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.035223,
+      "centroidLongitude": 105.840259,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "War",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b6d4fc8f-d905-5856-acad-55dcc1737926",
+      "createdAt": "2026-10-14",
+      "title": "Vietnam Military History Museum | Bảo tàng Lịch sử Quân sự Việt Nam",
+      "shortDescription": "Forty-five metres of concrete, and it's only the front door.  You're on the approach to the new Vietnam Military History Museum, out on the…",
+      "longDescription": "Forty-five metres of concrete, and it's only the front door.\n\nThe museum opened at the start of November twenty twenty-four, timed to the eightieth anniversary of the Vietnamese People's Army, which was founded in December nineteen forty-four. The building took almost five years, the site covers more than thirty-eight hectares, and it cost around two and a half trillion dong — something like a hundred million US dollars. That same year it won the top prize at Vietnam's national architecture awards.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-military-history-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-military-history-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-military-history-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-military-history-museum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "41984e70-7e41-58b0-8d7c-41eb3d71b08d",
+          "order": 0,
+          "title": "Vietnam Military History Museum | Bảo tàng Lịch sử Quân sự Việt Nam",
+          "caption": "The main approach, facing the Victory Tower, off Thăng Long Avenue, Xuân Phương.",
+          "latitude": 21.008513,
+          "longitude": 105.755774,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-military-history-museum.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-military-history-museum_hero.webp",
+          "transcriptText": "Forty-five metres of concrete, and it's only the front door.\n\nYou're on the approach to the new Vietnam Military History Museum, out on the western edge of Hanoi off Thăng Long Avenue. In front of you rises the Victory Tower, a forty-five-metre concrete shaft that serves as the museum's grand entrance. Spread out on either side, low and severe, are the halls. If the concrete feels like it's leaning on you a little, it's meant to.\n\nThe museum opened at the start of November twenty twenty-four, timed to the eightieth anniversary of the Vietnamese People's Army, which was founded in December nineteen forty-four. The building took almost five years, the site covers more than thirty-eight hectares, and it cost around two and a half trillion dong — something like a hundred million US dollars. That same year it won the top prize at Vietnam's national architecture awards.\n\nThe style is brutalist, in the Soviet tradition — big, bare, unapologetic concrete. One writer called it a symphony in concrete, and that seems about right.\n\nNow look at the two courtyards either side. They're arranged by side. In the western courtyard: French, American and South Vietnamese equipment — a Chinook helicopter, a C-130 transport, and a tower sculpted out of the wreckage of downed aircraft, brought over from the old museum. In the eastern courtyard: North Vietnamese, Soviet and Chinese hardware — T-34 and T-54 tanks, MiG fighters, surface-to-air missiles. Even the layout tells a story.\n\nInside, four halls take you through the country's wars from around nine hundred BC to the present day, with about a hundred and fifty thousand objects. In the hall for the American war, look for tank number eight-four-three, a T-54 from the fall of Saigon in nineteen seventy-five.\n\nFor decades the museum was housed in a pale-yellow French colonial building on Điện Biên Phủ Street, in the old centre. A national story told inside a colonial office. Now it has a building made for it, and it's chosen to speak in concrete. That says a good deal about how the country sees that history.\n\nBefore you go in, walk the full length of both courtyards, west and then east. Then climb as high as the building lets you, and look back at the city you've driven out from."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.008513,
+      "centroidLongitude": 105.755774,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "War",
+        "History",
+        "Brutalist",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b70d58ee-9044-5a9b-b7be-33b70d6933df",
+      "createdAt": "2026-10-14",
+      "title": "Long Biên Bridge | Cầu Long Biên",
+      "shortDescription": "Here's something you'll notice straight away. The motorbikes on this bridge keep to the left.  You're on the narrow walkway at the Hanoi end of…",
+      "longDescription": "Here's something you'll notice straight away. The motorbikes on this bridge keep to the left.\n\nThe bridge was built between eighteen ninety-nine and nineteen-oh-two, and opened to traffic the following year. More than three thousand Vietnamese labourers worked on it. It's well over two kilometres long, with nineteen spans, and in its day it was one of the longest bridges in Asia. The French called it the Paul Doumer Bridge, after the governor-general of Indochina, who later became President of France.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-bien-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-bien-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-bien-bridge_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-bien-bridge_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-bien-bridge_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e2cc2e47-993c-50f6-accd-569c067b8265",
+          "order": 0,
+          "title": "Long Biên Bridge | Cầu Long Biên",
+          "caption": "The pedestrian walkway at the Hanoi end, looking out over the Red River.",
+          "latitude": 21.04063,
+          "longitude": 105.85166,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-long-bien-bridge.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-long-bien-bridge_hero.webp",
+          "transcriptText": "Here's something you'll notice straight away. The motorbikes on this bridge keep to the left.\n\nYou're on the narrow walkway at the Hanoi end of Long Biên Bridge, with the railway track running down the middle and the Red River opening out ahead. Around you is a lattice of steel — riveted girders, rust and paint in roughly equal measure. If a train comes, you'll feel it.\n\nThe bridge was built between eighteen ninety-nine and nineteen-oh-two, and opened to traffic the following year. More than three thousand Vietnamese labourers worked on it. It's well over two kilometres long, with nineteen spans, and in its day it was one of the longest bridges in Asia. The French called it the Paul Doumer Bridge, after the governor-general of Indochina, who later became President of France.\n\nYou'll often hear that Gustave Eiffel designed it. He didn't. The engineering firm was Daydé et Pillé, of Paris. It makes a better story with Eiffel in it, which is why the myth won't go away.\n\nAnd those motorbikes on the left? Nobody seems to have written down why. The usual explanation is that the bridge was laid out by the French and simply never changed.\n\nNow look along the line of trusses, and you'll see that it isn't all of a piece. For years this was the only bridge across the Red River linking Hanoi to the port of Haiphong, and so it was bombed again and again. On the eleventh of August nineteen sixty-seven, American planes brought down the central span. More raids followed in nineteen seventy-two. Each time, it was patched back together, and only about half of it still has its original shape.\n\nSo when you look at the joins — the trusses that don't quite match, the newer steel next to the old — you're looking at the war, repaired. Most cities would have pulled this down and built something new. Hanoi kept it, and still uses it.\n\nIf you've got twenty minutes, walk out towards the middle. Partway across, steps lead down to the long sandbank in the river, where people farm bananas and vegetables right under the bridge. And come back at dusk, when the light catches the rust."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.04063,
+      "centroidLongitude": 105.85166,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "War",
+        "Colonial",
+        "Iconic Landmark",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+      "createdAt": "2026-10-14",
+      "title": "Hồ Chí Minh Museum | Bảo tàng Hồ Chí Minh",
+      "shortDescription": "From up close, it's a big white block. From above, it's meant to be a lotus.  You're at the foot of the steps of the Hồ Chí Minh Museum, just…",
+      "longDescription": "From up close, it's a big white block. From above, it's meant to be a lotus.\n\nThe museum opened on the nineteenth of May nineteen ninety, the hundredth anniversary of Hồ Chí Minh's birth. Ground was broken in nineteen eighty-five. It was built with Soviet support, and the official account credits the design to the Russian architect Garol Isakovich — the same architect who designed the Mausoleum, a few hundred metres away.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ho-chi-minh-museum_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "24953172-f019-5cd7-8bd2-fceffb3341a6",
+          "order": 0,
+          "title": "Hồ Chí Minh Museum | Bảo tàng Hồ Chí Minh",
+          "caption": "The foot of the museum steps, 19 Ngọc Hà, with the One Pillar Pagoda close by.",
+          "latitude": 21.035641,
+          "longitude": 105.832663,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-ho-chi-minh-museum.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ho-chi-minh-museum_hero.webp",
+          "transcriptText": "From up close, it's a big white block. From above, it's meant to be a lotus.\n\nYou're at the foot of the steps of the Hồ Chí Minh Museum, just behind the Mausoleum. In front of you is a large, pale building of squared-off forms, with a broad flight of stairs leading up into it. Close by is a tiny wooden temple on a single stone column: the One Pillar Pagoda. Keep it in mind.\n\nThe museum opened on the nineteenth of May nineteen ninety, the hundredth anniversary of Hồ Chí Minh's birth. Ground was broken in nineteen eighty-five. It was built with Soviet support, and the official account credits the design to the Russian architect Garol Isakovich — the same architect who designed the Mausoleum, a few hundred metres away.\n\nHave another look at the shape. The building is designed as a lotus flower in bloom, its forms opening outwards like petals. Guides sometimes call it the White Lotus. In Vietnam the lotus stands for purity: it grows out of the mud and stays clean. Here it's being used to say something about the man the museum is for.\n\nInside, the route moves in sequence: high, open, almost theatrical spaces, and eight chronological sections from his childhood in the eighteen-nineties to his death in nineteen sixty-nine, with more than a hundred and seventy thousand documents and objects.\n\nNow turn to the One Pillar Pagoda. It was first built in ten forty-nine, by a Lý dynasty king, also in the form of a lotus rising from the water. The French destroyed it in nineteen fifty-four, and it was rebuilt the following year.\n\nSo the museum is a quotation. A late-Soviet building, designed by a foreign architect, borrowing the most Vietnamese shape there is from a nine-hundred-year-old pagoda next door. Whether that's homage or appropriation is a question worth asking as you go up the steps.\n\nBefore you go in, walk over to the pagoda and look at it properly. It's small, a little crowded and rather perfect. Then look back at its giant cousin."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.035641,
+      "centroidLongitude": 105.832663,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "Monument",
+        "History",
+        "Power",
+        "Designed by a Master",
+        "Garol Isakovich"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d23c9145-0945-54d4-aba5-9bedd27ed217",
+      "createdAt": "2026-10-14",
+      "title": "Ngọc Sơn Temple | Đền Ngọc Sơn",
+      "shortDescription": "The bridge in front of you is painted red for a reason. Its name means something like \"the perch of the morning sunlight\".  You're on the…",
+      "longDescription": "The bridge in front of you is painted red for a reason. Its name means something like \"the perch of the morning sunlight\".\n\nStart with the tower. It's the Pen Tower, and near its top are three carved characters that read, roughly, \"writing on the blue sky\". Then walk towards the bridge and you'll pass through a gate shaped like an ink stone. A pen, then an inkstand. This is a temple to scholarship, and the approach is laid out like a writing desk.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngoc-son-temple_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngoc-son-temple_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngoc-son-temple_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6538bdb9-6e30-5e91-85e4-bd6b0a500c35",
+          "order": 0,
+          "title": "Ngọc Sơn Temple | Đền Ngọc Sơn",
+          "caption": "The lakeshore on Đinh Tiên Hoàng, by the Pen Tower, facing the red Thê Húc Bridge.",
+          "latitude": 21.030688,
+          "longitude": 105.852386,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-ngoc-son-temple.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-ngoc-son-temple_hero.webp",
+          "transcriptText": "The bridge in front of you is painted red for a reason. Its name means something like \"the perch of the morning sunlight\".\n\nYou're on the north-eastern shore of Hoàn Kiếm Lake, on Đinh Tiên Hoàng Street. Ahead of you, a curved red wooden bridge runs out across the water to a small wooded island; that's Thê Húc Bridge, and the island is Ngọc Sơn — Jade Mountain. Beside you on the shore, on a little rocky mound, stands a slim stone tower. Find all three and you're in the right place.\n\nStart with the tower. It's the Pen Tower, and near its top are three carved characters that read, roughly, \"writing on the blue sky\". Then walk towards the bridge and you'll pass through a gate shaped like an ink stone. A pen, then an inkstand. This is a temple to scholarship, and the approach is laid out like a writing desk.\n\nThe temple on the island was built in the early nineteenth century. It honours Văn Xương, a god of literature, and later took in Trần Hưng Đạo, the general who beat back the Mongol invasions in the thirteenth century. Scholars studying for the imperial exams came here to pray. Some, I imagine, still do.\n\nNow the bridge. Before eighteen sixty-five, the way across was a simple bamboo footbridge. Then a scholar called Nguyễn Văn Siêu, given the job of restoring the temple under the emperor Tự Đức, built the arched bridge and painted it red. Come early in the morning and you'll see why it got its name.\n\nAnd then there's the turtle. Inside the temple is a preserved giant turtle from this lake. The lake's name, Hoàn Kiếm, means \"Lake of the Returned Sword\": legend says a golden turtle rose from the water to take back a magic sword that had helped the king Lê Lợi drive out an invading army. So the turtle isn't just a curiosity. It's the reason the lake is called what it is.\n\nThat's what this little island does so well. A pen, an ink stone, a scholar's bridge, a general and a sacred turtle, all within a few dozen paces. The whole of Vietnamese learning and legend fits on one rock in a city-centre lake.\n\nCross over, and on your way back, look south along the water. Out in the middle stands the small Turtle Tower on its own islet. On weekend evenings the streets around the lake close to traffic, and the whole shore turns into a promenade."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 150,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.030688,
+      "centroidLongitude": 105.852386,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Literature",
+        "Waterfront",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e0502736-5719-5179-9113-3d9b9e0273f4",
+      "createdAt": "2026-10-14",
+      "title": "Heritage House, 87 Mã Mây | Nhà cổ 87 Mã Mây",
+      "shortDescription": "Five families lived in this house at once. It was built for one.  You're on Mã Mây Street in the Old Quarter, outside number eighty-seven. It's…",
+      "longDescription": "Five families lived in this house at once. It was built for one.\n\nIt went up in the late nineteenth century, on the typical Old Quarter plot: narrow at the street and very deep behind. For generations it belonged to traders, and until nineteen fifty-four it was a shop selling medicinal herbs.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-heritage-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-heritage-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-heritage-house_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "76702f3c-42da-5db5-aa9d-e0aba3a77801",
+          "order": 0,
+          "title": "Heritage House, 87 Mã Mây | Nhà cổ 87 Mã Mây",
+          "caption": "The shopfront at 87 Mã Mây, Old Quarter.",
+          "latitude": 21.034419,
+          "longitude": 105.853528,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-heritage-house.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-heritage-house_hero.webp",
+          "transcriptText": "Five families lived in this house at once. It was built for one.\n\nYou're on Mã Mây Street in the Old Quarter, outside number eighty-seven. It's a narrow wooden front under a tiled roof, rather lower and older-looking than its neighbours. This is the Heritage House, one of the best-preserved traditional merchant's houses in Hanoi. You can go in.\n\nIt went up in the late nineteenth century, on the typical Old Quarter plot: narrow at the street and very deep behind. For generations it belonged to traders, and until nineteen fifty-four it was a shop selling medicinal herbs.\n\nGo inside and walk straight through, and you'll see how the house solves its own problem. A long thin plot is dark in the middle, so the house is broken up by courtyards. First the shop at the front. Then an open-air courtyard, letting light and air down into the heart of the building. Then the main house, with the family altar on the upper floor. Another courtyard. Then, right at the back, the kitchen and the washroom, as far as possible from the street and from the shrine. Front to back is public to private, and that order is the house.\n\nLook up at the timber: dark, heavy, carved wooden frames, and roofs of small curved tiles laid in rows. Nothing here is grand. Everything is careful.\n\nAfter nineteen fifty-four, the house was taken over and divided between five families, who lived here until nineteen ninety-nine. Then the city of Hanoi and the city of Toulouse, in France, restored it together, and in two thousand and four it was recognised as a national heritage site. A French president, François Hollande, came to see it on a state visit.\n\nWhat's worth knowing, standing here, is that most of the houses around you were once just like this — and most have lost their courtyards to extra rooms. This one shows you what the Old Quarter was built for: trade at the front, family in the middle, fire at the back, and the sky let in every few metres.\n\nWhen you leave, walk a few minutes north to Ô Quan Chưởng, the last surviving gate of the old city. It's where the merchants of streets like this one once passed in and out with their goods."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.034419,
+      "centroidLongitude": 105.853528,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Commerce",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "53647327-525c-5670-8aab-55daef6447d4",
+      "createdAt": "2026-10-14",
+      "title": "Concrete Flakes",
+      "shortDescription": "It looks unfinished. It's meant to.  You're in a narrow lane off Lê Văn Hưu Street, just south of the French Quarter, outside number twenty-one.…",
+      "longDescription": "It looks unfinished. It's meant to.\n\nIt was designed by the Vietnamese practice G8A Architecture and finished in twenty twenty-five. It's not a home. It's an extension to the headquarters of OpenAsia, a company whose offices G8A had already designed nearby, in a building called The Bridge.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-concrete-flakes_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-concrete-flakes_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-concrete-flakes_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-concrete-flakes_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4822292d-7430-5dc3-ae9f-c6f379a29cec",
+          "order": 0,
+          "title": "Concrete Flakes",
+          "caption": "The lane at 21 Ngõ 2 Lê Văn Hưu, Hai Bà Trưng, looking up at the façade.",
+          "latitude": 21.017766,
+          "longitude": 105.852507,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-concrete-flakes.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-concrete-flakes_hero.webp",
+          "transcriptText": "It looks unfinished. It's meant to.\n\nYou're in a narrow lane off Lê Văn Hưu Street, just south of the French Quarter, outside number twenty-one. Look up at the building in front of you. Raw grey concrete slabs and walls, stacked into a deep frame, with a fine layer of stainless-steel mesh in front, and openings cut through so the light and air get in behind it. It's called Concrete Flakes.\n\nIt was designed by the Vietnamese practice G8A Architecture and finished in twenty twenty-five. It's not a home. It's an extension to the headquarters of OpenAsia, a company whose offices G8A had already designed nearby, in a building called The Bridge.\n\nHave a look at the structure. The concrete frame carries the building on the outside, like an exoskeleton, and the façade sits within it in layers. The idea is climate before style. In Hanoi's heat, a deep, shaded, perforated front keeps the direct sun off the glass, lets the breeze through, and turns hard daylight into something soft. The rough concrete is set against pale surfaces and bronze details inside.\n\nThe architects call their approach a \"sustainable ruin\". The thinking goes like this: build a strong, simple, honest frame, the sort of thing that could outlast what it's first used for, and let everything else inside it change over time. On each floor there's a shared kitchen at the entrance, the room where people actually meet. On the roof, there's a photography studio and a space for exercise and meditation.\n\nAnd here's the thing. Most new buildings in this city try very hard to look finished, polished and new. This one starts out looking a little like a ruin on purpose, so that it has nowhere to fall from. It's an odd idea, and rather a clever one.\n\nIt's a working office, so enjoy it from the lane. Then, if you're curious, look along the street. Every old house nearby has dealt with the same sun and the same rain using shutters, balconies and deep eaves. This is the same answer, given in concrete."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.017766,
+      "centroidLongitude": 105.852507,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "G8A Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e0cce5a0-9cf3-53a4-9e92-09586169aa02",
+      "createdAt": "2026-10-14",
+      "title": "Bát Tràng House",
+      "shortDescription": "Every brick on this front was made by hand. About four thousand of them.  You're in Bát Tràng, the pottery village on the Red River just…",
+      "longDescription": "Every brick on this front was made by hand. About four thousand of them.\n\nThe house is by VTN Architects, the practice of Võ Trọng Nghĩa, and it was finished around twenty twenty. It belongs to a family of seven who also run a ceramics business, so there's a shop on the ground floor, and they live above it.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-house_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-house_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-house_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "829d92e6-1dae-5516-a3de-303bf3260cda",
+          "order": 0,
+          "title": "Bát Tràng House",
+          "caption": "The street outside 188 Bát Tràng, in the ceramics village, looking at the brick façade.",
+          "latitude": 20.977073,
+          "longitude": 105.912553,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-bat-trang-house.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-house_hero.webp",
+          "transcriptText": "Every brick on this front was made by hand. About four thousand of them.\n\nYou're in Bát Tràng, the pottery village on the Red River just south-east of Hanoi, outside number one-eight-eight. In front of you is a tall, narrow house — five storeys — wrapped from top to bottom in a screen of brick, full of irregular gaps. If you can see daylight and greenery through a wall of brick, you're in the right place.\n\nThe house is by VTN Architects, the practice of Võ Trọng Nghĩa, and it was finished around twenty twenty. It belongs to a family of seven who also run a ceramics business, so there's a shop on the ground floor, and they live above it.\n\nHave a look at the bricks. They're ceramic, and each one was made individually — some four thousand and ninety-eight of them — then laid with gaps between, so the whole front becomes a perforated skin. It's the village's own trade turned into architecture. Bát Tràng has been firing pottery for centuries, and much of it in brick kilns, so a house built of hand-made ceramic brick is about the most local thing you could put up here.\n\nNow look through the gaps. Behind the brick screen, the house has a second, inner façade, and between the two are gardens, raised up floor by floor. So the brick shades the plants, the plants shade the rooms, and the breeze comes through the holes. According to the architects, it stays cool enough inside that the family doesn't need air conditioning.\n\nThat's rather the point. VTN is known for buildings that let nature in — trees on roofs, plants in the walls — and this one does it in a crowded village street with very little room to spare. In twenty twenty-one, the design magazine Wallpaper named it the best new private house of the year.\n\nIt's a family's home, so admire it from here. But think about it next time you see a solid concrete house sealed up against the heat with an air conditioner on the front. This one breathes, and it's built from what the village has always made.\n\nFrom here, walk a few minutes to the Bát Tràng Museum, the terracotta building that curves like stacked pots. Then lose an hour in the pottery market, where you can try a wheel yourself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 20.977073,
+      "centroidLongitude": 105.912553,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "VTN Architects"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "92720c59-e03f-53d2-a7e0-f511b79f5878",
+      "createdAt": "2026-10-14",
+      "title": "Bát Tràng Museum | Bảo tàng Gốm Bát Tràng",
+      "shortDescription": "Imagine seven potter's wheels, each with a pot half-thrown on it, all spinning at once. Then build it.  You're at the Bát Tràng Museum, in the…",
+      "longDescription": "Imagine seven potter's wheels, each with a pot half-thrown on it, all spinning at once. Then build it.\n\nThe architects are the Hanoi practice 1+1>2, led by Hoàng Thúc Hào, and the building opened around twenty twenty-three. It's often called the Bát Tràng Pottery Museum, though officially it's more of a community house for the village's ceramics: exhibitions, workshops, festivals, and the business of selling pots.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-museum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "45bed7c7-872f-50f8-84a0-af4116ff3327",
+          "order": 0,
+          "title": "Bát Tràng Museum | Bảo tàng Gốm Bát Tràng",
+          "caption": "The open ground floor at Số 1 Đường 1-5, Bát Tràng, looking up into the curved terracotta forms.",
+          "latitude": 20.974738,
+          "longitude": 105.912975,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-bat-trang-museum.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-bat-trang-museum_hero.webp",
+          "transcriptText": "Imagine seven potter's wheels, each with a pot half-thrown on it, all spinning at once. Then build it.\n\nYou're at the Bát Tràng Museum, in the pottery village south-east of Hanoi. Stand on the open ground floor and look up. Above you, the building swells outwards in curved terracotta-coloured tiers, like a cluster of vessels caught mid-turn on the wheel. If you feel a little as though you're standing inside an upturned pot, you're in the right place.\n\nThe architects are the Hanoi practice 1+1>2, led by Hoàng Thúc Hào, and the building opened around twenty twenty-three. It's often called the Bát Tràng Pottery Museum, though officially it's more of a community house for the village's ceramics: exhibitions, workshops, festivals, and the business of selling pots.\n\nHave a look at the shape. It's made of seven segments, each one an inverted dome — seven turntables, the architects say, turning together. The tiers step outward as they rise, exactly the way clay rises and widens under a potter's hands. And the colour is deliberate: it's the colour of fired earth, and of the brick kilns that have stood in this village for centuries.\n\nNow the materials. The main structure is concrete reinforced with fibre, but it's dressed in the village's own products — earthen bricks, ceramic mosaic, pottery tiles. Skylights cut through the domes to let light and air down into the middle.\n\nInside, there's a lot more than a museum: four storeys holding exhibitions, studios, shops, a restaurant, homestay rooms, and an auditorium for performances. And on the very top, a garden full of plants, with space for workshops and children to play.\n\nAnd here's the interesting bit. Most museums put the craft in glass cases. This one takes the way the craft is made — the turn of the wheel, the stack of the kiln — and turns that into the building. You're not just looking at pots. You're standing in one.\n\nWhen you've been through, go up to the roof garden and look out over the village rooftops, many of them still potteries. Then walk to the old market and find a stall where they'll let you sit at a wheel. Try to throw one pot. It's harder than this building makes it look."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 20.974738,
+      "centroidLongitude": 105.912975,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Contemporary",
+        "Designed by a Master",
+        "1+1>2 Architects"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c73a2320-8aae-5e40-8174-273d1da42484",
+      "createdAt": "2026-10-14",
+      "title": "Vietnam Museum of Ethnology | Bảo tàng Dân tộc học Việt Nam",
+      "shortDescription": "The building in front of you is shaped like a drum that's two and a half thousand years old.  You're at the Vietnam Museum of Ethnology, on…",
+      "longDescription": "The building in front of you is shaped like a drum that's two and a half thousand years old.\n\nThe architect was Hà Đức Lịnh, himself from the Tày people, one of Vietnam's ethnic minorities. The model was a Đông Sơn drum — the great bronze drums made in northern Vietnam more than two thousand years ago, and still one of the most powerful symbols of the country's ancient culture. Inside, the galleries were designed by the French architect Véronique Dollfus. The museum was built between nineteen eighty-seven and nineteen ninety-five, and opened in November nineteen ninety-seven.",
+      "makerId": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e1432e72-0e99-59e3-9113-de529d2053d6",
+          "order": 0,
+          "title": "Vietnam Museum of Ethnology | Bảo tàng Dân tộc học Việt Nam",
+          "caption": "In front of the main exhibition building, the Bronze Drum, Nguyễn Văn Huyên Street, Cầu Giấy.",
+          "latitude": 21.040342,
+          "longitude": 105.798735,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/han-museum-of-ethnology.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/han-museum-of-ethnology_hero.webp",
+          "transcriptText": "The building in front of you is shaped like a drum that's two and a half thousand years old.\n\nYou're at the Vietnam Museum of Ethnology, on Nguyễn Văn Huyên Street, in the west of the city. Stand in front of the main exhibition building. It's round, with a flat top and gently tapering sides, and if you squint it looks like an enormous bronze drum set down on the grass. That's exactly what it's meant to be.\n\nThe architect was Hà Đức Lịnh, himself from the Tày people, one of Vietnam's ethnic minorities. The model was a Đông Sơn drum — the great bronze drums made in northern Vietnam more than two thousand years ago, and still one of the most powerful symbols of the country's ancient culture. Inside, the galleries were designed by the French architect Véronique Dollfus. The museum was built between nineteen eighty-seven and nineteen ninety-five, and opened in November nineteen ninety-seven.\n\nIndoors, the collections cover Vietnam's fifty-four officially recognised ethnic groups — clothes, tools, ritual objects, everyday things. It's very good. But for the architecture, you'll want to go outside.\n\nBehind the drum is a garden of about two hectares, full of full-size traditional houses brought down from all over the country, or rebuilt here by people from the communities themselves. You can walk into them. There's a long house of the Ê Đê people from the Central Highlands, raised on stilts and stretching away from you like a train carriage. And there's a Bahnar communal house, with a thatched roof that rises steep and high, shaped like a blade. Each one solves the same problems — rain, heat, family, ritual — in its own way.\n\nAnd here's the thing. Most museums show you a culture in a glass case. This one lets you climb the stairs, duck under the eaves, and stand in the half-light inside, which is the only real way to understand a house.\n\nLeave yourself at least an hour for the garden, and climb up into the long house. And look back at the drum from outside: it's a modern building that borrowed its shape from the very oldest thing in the collection."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 21.040342,
+      "centroidLongitude": 105.798735,
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Architecture",
+        "Art",
+        "Designed by a Master",
+        "Hà Đức Lịnh"
       ],
       "priceUSD": 0
     }
