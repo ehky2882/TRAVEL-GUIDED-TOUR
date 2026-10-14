@@ -1,0 +1,13 @@
+beit-e-selam	-1.2623316	36.8052166	40	foodAndDrink	Beit é Selam	Nairobi	Kenya	Venue,Food,Faith,Hidden Gem,Green Escape	supplied; reverse-geocodes onto Maua Close
+road-house-grill-kilimani	-1.2849379	36.7931475	40	foodAndDrink	Road House Grill, Kilimani	Nairobi	Kenya	Venue,Food,Hidden Gem,After Dark	supplied; 1 m from OSM Road House Grill Kilimani
+kosewe-ranalo-foods	-1.2828721	36.8218418	40	foodAndDrink	K'Osewe Ranalo Foods	Nairobi	Kenya	Venue,Food,Commerce,History	supplied; on Kimathi Street as scripted (geocoder GROSS was the Upper Hill branch)
+chronos-lavington	-1.2799339	36.7702097	40	foodAndDrink	Chronos	Nairobi	Kenya	Venue,Food,Hidden Gem,After Dark	supplied; Lavington Green, James Gichuru Road
+ololo-safari-lodge	-1.3875375	36.8322352	60	natureAndParks	Ololo Safari Lodge	Nairobi	Kenya	Notable Building,History,Green Escape,Hidden Gem	supplied; on OSM Ololo Safari Lodge
+chester-house-nairobi	-1.2845799	36.8186918	40	architecture	Chester House	Nairobi	Kenya	Notable Building,Architecture,Brutalist,History,Designed by a Master,Richard Hughes	supplied; on Chester House (ArtCaffe - Chester House)
+maasai-market-nairobi	-1.2871757	36.8231204	60	culturalHeritage	Maasai Market, City Centre	Nairobi	Kenya	Market,Commerce,Art,Free to Visit	supplied; Saturday car park off Taifa Road
+nairobi-city-market	-1.2836408	36.8194576	50	architecture	Nairobi City Market	Nairobi	Kenya	Market,Architecture,Art Deco,Engineering,Free to Visit	supplied; on OSM City Market
+paradise-lost-mbai-caves	-1.1918716	36.8279837	60	history	Paradise Lost — the Mbai Caves	Kiambu	Kenya	History,War,Green Escape,Hidden Gem	supplied; 5 m from OSM Paradise Lost (geocoder GROSS matched a second node 497 m away)
+karura-forest	-1.2368316	36.8303801	80	natureAndParks	Karura Forest	Nairobi	Kenya	Park,Green Escape,History,War	supplied; on OSM Caves of Karura Forest
+nairobi-national-park	-1.336773	36.7798646	100	natureAndParks	Nairobi National Park	Nairobi	Kenya	Park,Green Escape,Iconic Landmark,History	MOVED from supplied -1.3824923,36.86102 (mid-park, 9.4 km away) to OSM node 'Nairobi National Park Main Gate', Langata Road; contributor approved 2026-10-14
+kicc-rooftop	-1.288693	36.823103	50	architecture	Kenyatta International Conference Centre Rooftop	Nairobi	Kenya	Tower,Viewpoint,Architecture,Modernist,Iconic Landmark,Designed by a Master,Karl Henrik Nøstvik,David Mutiso	supplied; Harambee Avenue at the tower
+giraffe-centre-nairobi	-1.3763639	36.7443169	60	natureAndParks	Giraffe Centre	Nairobi	Kenya	Green Escape,Iconic Landmark	supplied; 38 m from OSM Giraffe Centre
