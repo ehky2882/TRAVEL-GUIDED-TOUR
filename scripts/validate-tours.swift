@@ -385,6 +385,7 @@ let architectTags: Set<String> = [
     "Charles Bulfinch", "H. H. Richardson", "Peter Banner", "Peter Harrison", "Arthur Gilman", "Araldo Cossutta", "James McLaughlin", "Kallmann McKinnell & Knowles", "Alexander Parris",
     "Andrew Hamilton", "William Strickland", "Robert Smith", "John McArthur Jr.", "Horace Trumbauer", "Paul Cret", "Jacques Gréber", "Venturi, Rauch & Scott Brown", "John Haviland", "Frederick Graff", "Wilson Eyre", "James H. Windrim", "Helmut Jahn",
     "Émile Aillaud", "Eugène Beaudouin", "Marcel Lods", "Renée Gailhoustet", "Jean Renaudie", "Martin Schulz van Treeck", "Manuel Núñez Yanowsky", "Gérard Grandval",
+    "VTN Architects", "1+1>2 Architects", "G8A Architecture", "gmp Architekten", "Garol Isakovich", "Hà Đức Lịnh",
     "Bogdan Bogdanović", "Georgi Stoilov", "Avraam Miletsky",
     "Arseniusz Romanowicz", "Mihajlo Mitrović", "Jadwiga Grabowska-Hawrylak",
     "Irina Raud", "Miklós Hófer", "Boris Banykin",
