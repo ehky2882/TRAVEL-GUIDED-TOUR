@@ -2122,5 +2122,23 @@
     "date": "2026-10-02",
     "note": "CORRECT — the Mall is a ~1.5 km linear park from Arlington St to Massachusetts Ave; Wikidata's point sits mid-length. The script is told from the Arlington Street end looking west, and the stop sits on the east end of the Mall polygon (OSM way 820334088). NOT MOVED.",
     "verdict": "extended-feature"
+  },
+  "Nairobi National Park": {
+    "at": [
+      -1.336773,
+      36.7798646
+    ],
+    "date": "2026-10-14",
+    "note": "Deliberately at the main gate, not the subject's centre: a whole 117 km² national park has no single honest point, and the tour's script opens at the gate (\"wherever your vehicle has stopped… head towards the main gate\"). Moved there at the contributor's request on 2026-10-14; Wikidata's point is the centre of the park.",
+    "verdict": "extended-feature"
+  },
+  "Karura Forest": {
+    "at": [
+      -1.2471606,
+      36.816451
+    ],
+    "date": "2026-10-14",
+    "note": "Deliberately at the main gate, not the subject's centre: a whole 1,000-hectare forest has no single honest point, and the tour's script opens at the gate (\"you're most likely at a gate off Kiambu Road or Limuru Road\"). Moved there at the contributor's request on 2026-10-14; Wikidata's point is the centre of the forest.",
+    "verdict": "extended-feature"
   }
 }

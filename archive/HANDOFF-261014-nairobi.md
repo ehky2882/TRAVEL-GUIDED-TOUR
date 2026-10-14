@@ -38,3 +38,10 @@ Spine lookups: 13 asked, 0 failed. Images and audio hash-checked live after the 
 
 **Heads-up, not changed:** the Giraffe Centre hero (from the 12 Oct upload, identical in the drop) shows breakfast at
 Giraffe Manor next door, not the Centre; the Maasai Market hero shows Maasai people, not the market.
+
+**Follow-up, same day:**
+- **Karura Forest moved** to the OSM node *Main Gate* on Limuru Road, beside Gate A (-1.2471606, 36.816451), at
+  the contributor's request, matching the National Park. It was on the Mau Mau caves, 1.9 km inside; the script
+  opens "you're most likely at a gate… off Kiambu Road or Limuru Road" and ends by sending you down to the caves.
+- **The contributor answered the two board questions:** the cave_bureau mentions are fine, and the photos are
+  royalty-free. Recorded on `status/owner/nairobi-cave-bureau-credit.md` as their answer, for Edward to clear.
