@@ -58907,13 +58907,13 @@
       "country": "Vietnam",
       "relatedTourIds": [
         "9aa0f615-9597-555e-bd56-892aee2d6b6a",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
         "2d5de4fb-a7f3-5780-b69e-fc1d0cbdf06f",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
         "E898F878-14E3-5202-8B9D-5FA9F93DC252",
-        "2e042406-4c16-5fdc-a906-86694f87341c",
-        "f379b0be-08ce-5afb-8de4-ad03719da9b5",
-        "e2e6d14f-aec1-546c-8930-3d2c4a72c6d8",
-        "c1ba17f2-6e78-550f-ab25-fa44ed1d6eee",
-        "a342e458-5de5-4e74-82bf-26fc6b1ea4c0"
+        "cfcedff2-0f98-59c9-9958-1b31f2630bda"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -59131,7 +59131,7 @@
         "a0c68fa5-425e-527d-8db4-cb8a0cf9c999",
         "3f477a80-420e-58ff-abe7-fa21825abcfd",
         "f0298daa-cbd3-5ebe-8bab-ac64ecfc3f0a",
-        "711140c3-43d3-51d6-98c6-b4f28b0fdd06"
+        "d23c9145-0945-54d4-aba5-9bedd27ed217"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -59563,10 +59563,10 @@
         "e42c537a-3f08-521f-acd0-34068f16622f",
         "a64371c0-c3ab-5805-ac83-191ba480d234",
         "9aa0f615-9597-555e-bd56-892aee2d6b6a",
+        "92720c59-e03f-53d2-a7e0-f511b79f5878",
         "f5082b4d-3083-50f1-91df-2076a6a64011",
         "8598c57b-9c52-5814-a7a2-52c781573a00",
-        "50e19933-69db-5bee-8e2e-6d9b9eef5a69",
-        "44bee7a9-b1b0-4134-b7e4-fd3fcabcebb6"
+        "50e19933-69db-5bee-8e2e-6d9b9eef5a69"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -59997,11 +59997,11 @@
         "e5811244-9b0a-5453-82be-a31e84832dfe",
         "ecdb349d-51d4-4fc0-a4d4-3bc83916a400",
         "aa4cffca-ea34-5706-9b59-2c96da3189be",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
         "e704db8e-daa4-5cf0-a27b-7a15e36e6793",
         "a535fa20-6e52-5a76-ae00-6e5d595ad2d6",
         "30f2046b-621d-5358-b436-d12925316d92",
-        "a5bf544a-d6ad-5cd9-b985-4c63f4a5819d",
-        "cbfb7b9d-31ca-58b0-a7ba-3fb704608027"
+        "a5bf544a-d6ad-5cd9-b985-4c63f4a5819d"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -60634,7 +60634,7 @@
         "5fdd4da6-c43b-5496-9637-4c759ab0b392",
         "79acccd5-bcde-5cd2-81fd-61c8bedbeda1",
         "7f0f68ca-f589-578a-98a7-033f26fa77f5",
-        "0803b153-9b5a-56e8-ab78-9ef5f3a35ec5"
+        "d23c9145-0945-54d4-aba5-9bedd27ed217"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -60787,12 +60787,12 @@
       "relatedTourIds": [
         "d5e696eb-1696-5dac-b80d-09c009656edd",
         "a5bf544a-d6ad-5cd9-b985-4c63f4a5819d",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "92720c59-e03f-53d2-a7e0-f511b79f5878",
         "39da967e-ad82-5ab0-ad37-fa31cccb060b",
         "49a3d308-4a29-5f4f-ab13-e7de83f44638",
         "7b73dc17-024f-5d19-9a7e-c4ae94dadc6f",
-        "dcf0d9c4-4d40-587b-a06b-d8053f34a6a7",
-        "b1d84c0d-aeab-5041-9eed-5305b4dcf0ed",
-        "c4d28dda-65d8-58c3-ba4a-b35f8be7f0b0"
+        "dcf0d9c4-4d40-587b-a06b-d8053f34a6a7"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -61275,9 +61275,9 @@
         "2ca66553-f0da-5ccc-822f-bc737d6054a0",
         "bed12af2-22bf-5b5d-8707-74d68b71bc17",
         "b2c1d7e3-4210-5d45-a474-411b43942036",
+        "d23c9145-0945-54d4-aba5-9bedd27ed217",
         "3f477a80-420e-58ff-abe7-fa21825abcfd",
-        "1f834e57-b2e3-57c7-a555-2bd20ea14596",
-        "A8B58E21-ECDC-5BC6-99CB-E5BC3E88EB0F"
+        "1f834e57-b2e3-57c7-a555-2bd20ea14596"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -61384,11 +61384,11 @@
         "15d75927-2c50-588e-a526-e210c4d5d660",
         "061DE119-2D08-5635-8357-A2D33F0315DD",
         "5055CB00-BC1E-537A-BAFE-7AB9A31B77DF",
+        "3d516c17-d4ef-5cca-95e8-12415d776f4a",
         "758b216b-8d7b-547a-b90a-9e518da7fe21",
         "42029080-B37C-5A05-AF62-D4460BC113DF",
         "c8eaf8ef-ffdf-592c-83ed-e2590d1fdf9a",
-        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
-        "DBBB3C4A-5F52-581B-9AD5-ABF2545D6712"
+        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -86691,9 +86691,9 @@
         "E74E3767-D0DB-573F-B297-A61D773CF294",
         "9b664129-d7b4-540a-99c5-9f3f469ae70d",
         "c025e132-f7e6-589f-b739-47228a4b6aa2",
+        "cfcedff2-0f98-59c9-9958-1b31f2630bda",
         "24a3b3ef-9ae7-5d1f-bcc3-e28cb0aa65a2",
-        "73a7f84f-5eb3-570b-9d0c-ba613f7f2d1d",
-        "1acbaeeb-ba40-5c80-88a2-a7e51c060d10"
+        "73a7f84f-5eb3-570b-9d0c-ba613f7f2d1d"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -123018,8 +123018,8 @@
         "1c1b956a-4b83-5a3f-8f89-c29965091c1f",
         "B8BDA2BF-FA8E-5902-809E-F6AE24E7EEEE",
         "6339e837-a7b5-56f9-8dbf-c19710f25473",
-        "6d3f40c1-6c3a-53e9-a090-d163082c47e2",
-        "69EB38FF-7C43-5DB5-9138-E6EA425EDD4E"
+        "858f510b-0e43-5272-9a1c-0c30a3c3cd46",
+        "6d3f40c1-6c3a-53e9-a090-d163082c47e2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -123574,7 +123574,16 @@
       "centroidLongitude": 105.83591,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3d516c17-d4ef-5cca-95e8-12415d776f4a",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "94927f68-cb34-5aac-808d-2b4d6e16fbac"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -123621,7 +123630,16 @@
       "centroidLongitude": 105.850015,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9",
+        "94927f68-cb34-5aac-808d-2b4d6e16fbac",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "c2a689c7-53fc-5720-98d0-819222df44dd",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -123666,7 +123684,16 @@
       "centroidLongitude": 105.852656,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "3d516c17-d4ef-5cca-95e8-12415d776f4a",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "143de005-d2f2-5bcb-a346-517ba150920f",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "94927f68-cb34-5aac-808d-2b4d6e16fbac",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -123713,7 +123740,16 @@
       "centroidLongitude": 105.845655,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "cfcedff2-0f98-59c9-9958-1b31f2630bda",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -123760,7 +123796,16 @@
       "centroidLongitude": 105.832437,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "94927f68-cb34-5aac-808d-2b4d6e16fbac",
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "92720c59-e03f-53d2-a7e0-f511b79f5878"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -123808,7 +123853,16 @@
       "centroidLongitude": 105.849623,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "c2a689c7-53fc-5720-98d0-819222df44dd",
+        "143de005-d2f2-5bcb-a346-517ba150920f",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "94927f68-cb34-5aac-808d-2b4d6e16fbac",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -123855,7 +123909,16 @@
       "centroidLongitude": 105.838798,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "3d516c17-d4ef-5cca-95e8-12415d776f4a",
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "e0502736-5719-5179-9113-3d9b9e0273f4"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -123901,7 +123964,16 @@
       "centroidLongitude": 105.848501,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "94927f68-cb34-5aac-808d-2b4d6e16fbac",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -123952,7 +124024,16 @@
       "centroidLongitude": 105.856375,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "697cb1a8-f8ca-58a2-838a-be19bab70ab1"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -124000,7 +124081,16 @@
       "centroidLongitude": 105.783168,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "c096f22d-9b92-5661-9568-ef811a1de910",
+        "436a0522-009a-52d4-b493-57ceae896b84",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -124047,7 +124137,16 @@
       "centroidLongitude": 105.852421,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -124095,7 +124194,16 @@
       "centroidLongitude": 105.528113,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "e0cce5a0-9cf3-53a4-9e92-09586169aa02"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -124142,7 +124250,16 @@
       "centroidLongitude": 105.844855,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "cfcedff2-0f98-59c9-9958-1b31f2630bda",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -124188,7 +124305,16 @@
       "centroidLongitude": 105.863753,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Notable Building",
@@ -124234,7 +124360,16 @@
       "centroidLongitude": 105.845556,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "cfcedff2-0f98-59c9-9958-1b31f2630bda",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -124283,7 +124418,16 @@
       "centroidLongitude": 105.850988,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "c2a689c7-53fc-5720-98d0-819222df44dd",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9",
+        "436a0522-009a-52d4-b493-57ceae896b84"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
@@ -124331,7 +124475,16 @@
       "centroidLongitude": 105.8576,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c096f22d-9b92-5661-9568-ef811a1de910",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9",
+        "697cb1a8-f8ca-58a2-838a-be19bab70ab1",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "District",
@@ -124379,7 +124532,16 @@
       "centroidLongitude": 105.834667,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "436a0522-009a-52d4-b493-57ceae896b84",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "c096f22d-9b92-5661-9568-ef811a1de910",
+        "c73a2320-8aae-5e40-8174-273d1da42484"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Square",
@@ -124430,7 +124592,16 @@
       "centroidLongitude": 105.840259,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "697cb1a8-f8ca-58a2-838a-be19bab70ab1",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+        "d23c9145-0945-54d4-aba5-9bedd27ed217",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "c096f22d-9b92-5661-9568-ef811a1de910",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -124478,7 +124649,16 @@
       "centroidLongitude": 105.755774,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "697cb1a8-f8ca-58a2-838a-be19bab70ab1",
+        "436a0522-009a-52d4-b493-57ceae896b84",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "c096f22d-9b92-5661-9568-ef811a1de910"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -124527,7 +124707,16 @@
       "centroidLongitude": 105.85166,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "c096f22d-9b92-5661-9568-ef811a1de910",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9",
+        "53647327-525c-5670-8aab-55daef6447d4"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Bridge",
@@ -124573,7 +124762,16 @@
       "centroidLongitude": 105.832663,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "697cb1a8-f8ca-58a2-838a-be19bab70ab1",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "436a0522-009a-52d4-b493-57ceae896b84",
+        "0E718482-45AA-5D69-8084-89B7ECE94C76",
+        "30786ccc-6c5c-5089-8736-060335aaccb8"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -124621,7 +124819,16 @@
       "centroidLongitude": 105.852386,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "436a0522-009a-52d4-b493-57ceae896b84",
+        "143de005-d2f2-5bcb-a346-517ba150920f",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+        "b70d58ee-9044-5a9b-b7be-33b70d6933df",
+        "30786ccc-6c5c-5089-8736-060335aaccb8"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -124668,7 +124875,16 @@
       "centroidLongitude": 105.853528,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "a6e02904-9a9d-5c15-90ba-52bceaaf81f9"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
@@ -124715,7 +124931,16 @@
       "centroidLongitude": 105.852507,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+        "d012b7b0-0eff-5618-9763-4643768c05d1",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f",
+        "b70d58ee-9044-5a9b-b7be-33b70d6933df",
+        "22105398-48b5-561c-b2ca-a3156a0ad623"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -124765,7 +124990,16 @@
       "centroidLongitude": 105.912553,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "92720c59-e03f-53d2-a7e0-f511b79f5878",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "3474367b-50f8-5d9a-bfbe-d0037cf61a2a",
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "dc46de64-e8f5-58d1-b4ec-3b5200a5580f"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -124813,7 +125047,16 @@
       "centroidLongitude": 105.912975,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e0cce5a0-9cf3-53a4-9e92-09586169aa02",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "d6f7cf66-5fae-59d7-93c3-4fab5ae4f24f",
+        "ca304933-19cb-5b74-bcd7-b84b831ad16f",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "0a8cafe6-ee70-556a-8d43-0cf283246f5d"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -124865,7 +125108,16 @@
       "centroidLongitude": 105.798735,
       "city": "Hanoi",
       "country": "Vietnam",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+        "92720c59-e03f-53d2-a7e0-f511b79f5878",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "e0502736-5719-5179-9113-3d9b9e0273f4",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "cfcedff2-0f98-59c9-9958-1b31f2630bda"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -134154,6 +134406,16 @@
       "centroidLongitude": 105.8059636179486,
       "city": "Hanoi",
       "country": "Vietnam",
+      "relatedTourIds": [
+        "b6d4fc8f-d905-5856-acad-55dcc1737926",
+        "a552ee1a-fa37-53ab-b6c9-c60c0da76bf5",
+        "30786ccc-6c5c-5089-8736-060335aaccb8",
+        "c73a2320-8aae-5e40-8174-273d1da42484",
+        "2a82b7bd-d267-5e10-94c9-ed8289658343",
+        "22105398-48b5-561c-b2ca-a3156a0ad623",
+        "697cb1a8-f8ca-58a2-838a-be19bab70ab1",
+        "e0502736-5719-5179-9113-3d9b9e0273f4"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
