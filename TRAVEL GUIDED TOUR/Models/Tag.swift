@@ -223,6 +223,7 @@ enum Tag {
             "Kamen Goranov",
             "Cheshire Architects", "Stevens Lawson Architects",
             "Charles and Ray Eames", "Walter Gropius", "Eliot Noyes", "Eileen Gray", "Takamitsu Azuma", "Fritz Höger",
+            "Karl Henrik Nøstvik", "David Mutiso", "Richard Hughes",
         ]),
     ]
 

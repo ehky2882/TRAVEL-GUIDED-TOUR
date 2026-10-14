@@ -5541,6 +5541,16 @@
       "websiteURL": null
     },
     {
+      "id": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "displayName": "Atlas Studio NBO",
+      "platform": "dozent",
+      "handle": "atlas.nbo",
+      "avatarURL": null,
+      "avatarEmoji": "🇰🇪",
+      "bio": "Atlas Studio's Nairobi bureau — audio tours of a city that grew out of a railway depot in 1899 and still keeps the wild at its edges: a national park with a skyline behind the rhino, a forest where freedom fighters hid, a market hall under concrete arches, and nyama choma in the suburbs.",
+      "websiteURL": null
+    },
+    {
       "id": "6d677b5b-b2d9-5435-a040-586c9fb5766b",
       "displayName": "Atlas Studio HAN",
       "platform": "dozent",
@@ -60246,14 +60256,14 @@
       "city": "Pang Mapha",
       "country": "Thailand",
       "relatedTourIds": [
+        "e7310a36-3381-53e3-8ad7-edb470b6f559",
         "3f477a80-420e-58ff-abe7-fa21825abcfd",
         "39da967e-ad82-5ab0-ad37-fa31cccb060b",
         "2B5B8402-E164-55B9-994B-E665328E77CD",
         "ee2b411b-3308-5837-b424-2e7b80bc0073",
         "A8B58E21-ECDC-5BC6-99CB-E5BC3E88EB0F",
         "aa4cffca-ea34-5706-9b59-2c96da3189be",
-        "5fdd4da6-c43b-5496-9637-4c759ab0b392",
-        "c4d28dda-65d8-58c3-ba4a-b35f8be7f0b0"
+        "5fdd4da6-c43b-5496-9637-4c759ab0b392"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -122792,6 +122802,737 @@
         "Hidden Gem",
         "Designed by a Master",
         "Ricardo Bofill"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f648068f-a0ff-514e-8d91-837b24a5da25",
+      "createdAt": "2026-10-14",
+      "title": "Beit é Selam",
+      "shortDescription": "Before we get to the food, the tree.  Maua Close, Westlands — a quiet turning off Parklands Road, a few hundred metres from The Alchemist. Look…",
+      "longDescription": "Before we get to the food, the tree.\n\nThat's a mugumo. In Kikuyu tradition it's a sacred tree — a shrine, a place to pray for rain, said to be where Ngai, God, rests when he comes down from heaven. Cutting one down is taboo; when a road or a church really must take one, elders are called in first to perform a rite. The architects of cave_bureau, whose Nairobi guide brought you here, count this as one of the finest specimens in the city. It's a strangler fig, by the way. It starts life as a seed lodged in another tree, sends its roots down to the ground, and slowly encloses its host. Rather a lot of patience for a tree.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beit-e-selam_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beit-e-selam_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beit-e-selam_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beit-e-selam_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c04a5451-9807-57ce-9a3b-b851ae77a895",
+          "order": 0,
+          "title": "Beit é Selam",
+          "caption": "Maua Close, Westlands — a quiet turning off Parklands Road, a few hundred metres from The Alchemist.",
+          "latitude": -1.2623316,
+          "longitude": 36.8052166,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/beit-e-selam.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beit-e-selam_hero.webp",
+          "transcriptText": "Before we get to the food, the tree.\n\nMaua Close, Westlands — a quiet turning off Parklands Road, a few hundred metres from The Alchemist. Look for a white wall and an arched, ornate metal gate, the sort of entrance you'd expect on a courtyard house in Lamu rather than a side street lined with office blocks. Through it, a terracotta-tiled patio runs the length of the plot under a long wooden pergola. And over all of it, throwing the shade, a very large fig.\n\nThat's a mugumo. In Kikuyu tradition it's a sacred tree — a shrine, a place to pray for rain, said to be where Ngai, God, rests when he comes down from heaven. Cutting one down is taboo; when a road or a church really must take one, elders are called in first to perform a rite. The architects of cave_bureau, whose Nairobi guide brought you here, count this as one of the finest specimens in the city. It's a strangler fig, by the way. It starts life as a seed lodged in another tree, sends its roots down to the ground, and slowly encloses its host. Rather a lot of patience for a tree.\n\nNow the house. Beit é Selam means \"house of peace\" in Amharic, and it's a small converted home, filled with books, paintings and objects from right across the continent, with antique birdcages and chandeliers hanging above the bar. The owner is a musician, which explains the DJ booth by the patio.\n\nThe menu is split into Ndogo, Kati and Kubwa — Swahili for small, middle and big — and it wanders the whole of Africa: corn ribs dusted with mitmita, an Ethiopian chilli blend; kitfo tartare; and mandazi with chai for pudding. Menus change, so treat that as a flavour rather than a promise. And one reviewer in the Business Daily called the gents here \"the Oscars of washrooms\". You have been told.\n\nHere's the thing, though. In a neighbourhood that rebuilds itself every few years, the oldest thing on this plot is the guest everyone's been seated round.\n\nIf the mugumo has got under your skin, there's a more famous one not far from here, on Waiyaki Way. In twenty twenty it stood in the path of the new Nairobi Expressway — and after a public campaign the president issued a decree to protect it, and the road went round. It's a short ride away, and well worth the detour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 149,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2623316,
+      "centroidLongitude": 36.8052166,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Faith",
+        "Hidden Gem",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+      "createdAt": "2026-10-14",
+      "title": "Road House Grill, Kilimani",
+      "shortDescription": "Smell it before you see it. Woodsmoke, charcoal, and goat.  Dennis Pritt Road, Kilimani. Road House Grill sits inside a private compound, so you…",
+      "longDescription": "Smell it before you see it. Woodsmoke, charcoal, and goat.\n\nThis is a nyama choma joint. Nyama choma is Swahili for roasted meat, and in Nairobi it's less a dish than an institution — the thing friends do on a Friday after work. Goat is the classic. You'll usually see it ordered by weight, grilled slowly, then chopped on a board and brought to the table for everyone to share. Alongside come ugali, the stiff maize porridge you tear and use as a spoon, and kachumbari, a sharp little salad of tomato, onion and chilli.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/road-house-grill-kilimani_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/road-house-grill-kilimani_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/road-house-grill-kilimani_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/road-house-grill-kilimani_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "72d791b9-0807-5622-909f-cc6f6b2c71e2",
+          "order": 0,
+          "title": "Road House Grill, Kilimani",
+          "caption": "Dennis Pritt Road, Kilimani. Road House Grill sits inside a private compound, so you may be through a gate before you realise you've arrived.",
+          "latitude": -1.2849379,
+          "longitude": 36.7931475,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/road-house-grill-kilimani.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/road-house-grill-kilimani_hero.webp",
+          "transcriptText": "Smell it before you see it. Woodsmoke, charcoal, and goat.\n\nDennis Pritt Road, Kilimani. Road House Grill sits inside a private compound, so you may be through a gate before you realise you've arrived. What you'll find is gloriously unglamorous: plastic chairs and tables, a few of them branded with local beer, a television showing whatever football is on, and somewhere round the back, the grill. If the scene in front of you looks more like a family's back garden than a restaurant, you're in the right place.\n\nThis is a nyama choma joint. Nyama choma is Swahili for roasted meat, and in Nairobi it's less a dish than an institution — the thing friends do on a Friday after work. Goat is the classic. You'll usually see it ordered by weight, grilled slowly, then chopped on a board and brought to the table for everyone to share. Alongside come ugali, the stiff maize porridge you tear and use as a spoon, and kachumbari, a sharp little salad of tomato, onion and chilli.\n\nThe regulars' tip is worth passing on: ring ahead and order your meat, or be prepared to wait the best part of an hour. Good choma isn't hurried, and nobody here pretends otherwise.\n\nThen there's the mutura. Have a look for it if you're feeling brave. It's a Kenyan sausage, made from finely minced meat with onion, chilli, garlic and ginger, packed into a casing and grilled — the nearest thing Nairobi has to black pudding. One local reviewer insists you simply have to try it, and I'd be inclined to agree.\n\nLonely Planet says locals widely regard this place as the top nyama choma spot in town. Food critics have said much the same. And that's the interesting bit. The reputation hasn't been bought with décor or design — there isn't any. It's been built entirely out of smoke, patience and meat done right.\n\nIt's worth noticing, too, that the architects who recommended this place spend their working lives thinking about space. And they sent you to a compound full of plastic chairs.\n\nIf you've a free evening, come back on a Friday, when the after-work crowd arrives and the place finds its rhythm. Order the goat, order the mutura, and let the grill set the pace."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2849379,
+      "centroidLongitude": 36.7931475,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+      "createdAt": "2026-10-14",
+      "title": "K'Osewe Ranalo Foods",
+      "shortDescription": "It all started with five kilos of kebabs.  Kimathi Street, in the heart of the city centre, a short walk from Nation Centre. You're looking for…",
+      "longDescription": "It all started with five kilos of kebabs.\n\nHere's the story. In the early nineteen seventies, a young man called William Osewe sold a five-kilogramme batch of mshikaki — skewered meat, Kenya's answer to the shish kebab — to his neighbours in Kaloleni, in Nairobi's Eastlands. The hawking grew into an eatery under a tree in Kaloleni. That became Ranalo Foods at the Kenya Railways central station. Then a move to the old Cameo Cinema on Kenyatta Avenue. And finally, here, on Kimathi Street. From a tree to a cinema to one of the best-known restaurant names in the capital. Rather a good journey.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosewe-ranalo-foods_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosewe-ranalo-foods_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosewe-ranalo-foods_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "722b88f8-38c9-5924-9d13-1c935a993d93",
+          "order": 0,
+          "title": "K'Osewe Ranalo Foods",
+          "caption": "Kimathi Street, in the heart of the city centre, a short walk from Nation Centre.",
+          "latitude": -1.2828721,
+          "longitude": 36.8218418,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kosewe-ranalo-foods.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosewe-ranalo-foods_hero.webp",
+          "transcriptText": "It all started with five kilos of kebabs.\n\nKimathi Street, in the heart of the city centre, a short walk from Nation Centre. You're looking for K'Osewe, which you'll also see written as Ranalo Foods — two names for one restaurant, and Nairobi uses them interchangeably. Politicians, office workers and tourists have been squeezing through its doors on this street for years.\n\nHere's the story. In the early nineteen seventies, a young man called William Osewe sold a five-kilogramme batch of mshikaki — skewered meat, Kenya's answer to the shish kebab — to his neighbours in Kaloleni, in Nairobi's Eastlands. The hawking grew into an eatery under a tree in Kaloleni. That became Ranalo Foods at the Kenya Railways central station. Then a move to the old Cameo Cinema on Kenyatta Avenue. And finally, here, on Kimathi Street. From a tree to a cinema to one of the best-known restaurant names in the capital. Rather a good journey.\n\nWhat you're here for is Luo cooking, from the shores of Lake Victoria in western Kenya. The classic order is a whole tilapia, fried, served with brown ugali — the maize staple, made with a darker flour — and greens such as sukuma wiki, which is kale, more or less. Fish from the lake, eaten in the middle of the city. Use your hands; everybody else does.\n\nNow, it hasn't all been plain sailing. In the last few years the Osewe business has had a rough time in the courts and with the banks, and one branch, in Upper Hill, was auctioned off. It's worth knowing, because it makes the place feel less like an institution carved in stone and more like what it actually is: a family business, built from nothing, still trying to keep its lights on.\n\nAnd that's why the architects at cave_bureau put it on their list. Not for the room — for the route. A street hawker's kebabs, followed all the way to the city's main shopping street. That's Nairobi's story in a single menu.\n\nWhen you've eaten, walk to the corner of Kimathi Street and Mama Ngina Street and find the statue of Dedan Kimathi — the Mau Mau leader this road is named after, rifle in hand. The man who fought from the forests, standing in the middle of the city that came after."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2828721,
+      "centroidLongitude": 36.8218418,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "63f70ff6-93f4-5dc3-a4d8-b9ba76ac7ee6",
+      "createdAt": "2026-10-14",
+      "title": "Chronos",
+      "shortDescription": "Look for a blue door. That's all the sign you'll get.  Lavington Green, on James Gichuru Road — a perfectly ordinary suburban shopping centre.…",
+      "longDescription": "Look for a blue door. That's all the sign you'll get.\n\nChronos is a speakeasy — a bar, and a restaurant, hidden behind a door that doesn't announce itself. It describes itself as a place \"where clocks misbehave and music lingers till late\", which is a nice way of saying you'll lose track of time. Chronos, of course, is the Greek personification of time itself. They've named the bar after the thing it's designed to make you forget.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chronos-lavington_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chronos-lavington_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chronos-lavington_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chronos-lavington_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chronos-lavington_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6968741c-84eb-5f64-bcff-2fab668043c6",
+          "order": 0,
+          "title": "Chronos",
+          "caption": "Lavington Green, on James Gichuru Road — a perfectly ordinary suburban shopping centre.",
+          "latitude": -1.2799339,
+          "longitude": 36.7702097,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chronos-lavington.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chronos-lavington_hero.webp",
+          "transcriptText": "Look for a blue door. That's all the sign you'll get.\n\nLavington Green, on James Gichuru Road — a perfectly ordinary suburban shopping centre. Find the Chandarana supermarket, and to its left you should see a door lit blue. The instructions in the cave_bureau guide are wonderfully cloak-and-dagger: enter by the \"bureau entrance\", then follow a long blue corridor. If you're standing in a car park wondering whether you've got the right shopping centre, you probably have.\n\nChronos is a speakeasy — a bar, and a restaurant, hidden behind a door that doesn't announce itself. It describes itself as a place \"where clocks misbehave and music lingers till late\", which is a nice way of saying you'll lose track of time. Chronos, of course, is the Greek personification of time itself. They've named the bar after the thing it's designed to make you forget.\n\nHave a look at the house rules before you go. It pitches itself at over-thirties, which rather sets the tone: strong cocktails, small plates, soulful DJs, live acoustic sets on some nights, and karaoke on others. Up top, there's a rooftop corner done out in a Moroccan style, made for a drink at sundown. Opening hours have shifted over time, so check before you set off — it tends to open from the late afternoon and run on well past midnight.\n\nAnd here's what I find interesting about it. The speakeasy began as a necessity — American bars hiding from Prohibition, a century ago. Today, nobody in Lavington needs to hide a drink. The hidden door has become pure theatre. But it's good theatre. In a city where so much social life happens in plain view, behind security barriers and in big glass malls, a door you have to know about turns a night out into a small secret shared.\n\nIt's also, quietly, a cave. Cave_bureau's whole practice begins with the idea that caves are where architecture started — and here's a room you reach down a long corridor, away from the street, where time goes a bit strange. You can see why they liked it.\n\nIf you arrive early, head straight up to the rooftop corner and catch the light going over Lavington. Then follow the corridor back down, and let the clocks do what they like."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2799339,
+      "centroidLongitude": 36.7702097,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "03c18be5-fa1d-502c-bee2-da87aca34151",
+        "ada17ad9-8c2d-5e74-b104-88c92eec5299",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "1c1b956a-4b83-5a3f-8f89-c29965091c1f",
+        "B8BDA2BF-FA8E-5902-809E-F6AE24E7EEEE",
+        "6339e837-a7b5-56f9-8dbf-c19710f25473",
+        "6d3f40c1-6c3a-53e9-a090-d163082c47e2",
+        "69EB38FF-7C43-5DB5-9138-E6EA425EDD4E"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+      "createdAt": "2026-10-14",
+      "title": "Ololo Safari Lodge",
+      "shortDescription": "To reach this hotel, you cross the edge of a national park on foot.  Ololo sits on the southern bank of the Mbagathi River, which forms the…",
+      "longDescription": "To reach this hotel, you cross the edge of a national park on foot.\n\nThat matters more than it looks. The open southern edge lets wildlife move between the park and the plains beyond, the Kitengela and the Athi-Kapiti, as it always has. So the lodge sits on a seam — city behind you, a protected park around you, and the old migration routes running straight past the garden.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ololo-safari-lodge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ololo-safari-lodge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ololo-safari-lodge_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ololo-safari-lodge_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ololo-safari-lodge_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dde69718-6907-5d2a-b555-25ce0ca500bc",
+          "order": 0,
+          "title": "Ololo Safari Lodge",
+          "caption": "Ololo sits on the southern bank of the Mbagathi River, which forms the southern boundary of Nairobi National Park.",
+          "latitude": -1.3875375,
+          "longitude": 36.8322352,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ololo-safari-lodge.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ololo-safari-lodge_hero.webp",
+          "transcriptText": "To reach this hotel, you cross the edge of a national park on foot.\n\nOlolo sits on the southern bank of the Mbagathi River, which forms the southern boundary of Nairobi National Park. Guests come in through the park itself, then walk across a short suspension bridge over the river to reach the lodge. If you're on that bridge, with the park behind you and a farmhouse in front, you're exactly where you should be. And notice what isn't there. The park is fenced on three sides; this side, the river side, is left open.\n\nThat matters more than it looks. The open southern edge lets wildlife move between the park and the plains beyond, the Kitengela and the Athi-Kapiti, as it always has. So the lodge sits on a seam — city behind you, a protected park around you, and the old migration routes running straight past the garden.\n\nNow the house. It's a converted homestead on a working farm of about twenty acres, opened as a lodge in twenty fifteen by an Australian family, the Chapmans. A good deal of what lands on your plate is grown right here, on the shamba — the Swahili word for a farm or garden plot. A game drive in the morning, vegetables from the field at lunch. That pairing is rather the whole idea.\n\nThe cave_bureau guide is refreshingly honest about it: \"a great place to stay in Nairobi National Park — pricey though.\" Fair. Rooms here cost several hundred dollars a night.\n\nAnd here's why it earns its place on an architects' list. Most safari lodges are built to look as though the city doesn't exist. Ololo can't pretend that — the capital is under an hour's drive away. So it doesn't try. It's a farm on a river, at the one point where Nairobi's wild edge is still open to the plains.\n\nIf you're staying, ask for a walk down to the riverbank in the early morning, when the park across the water is at its busiest. And if you're only passing, the drive in through the park is reason enough — keep your eyes on the grass for the rhino."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.3875375,
+      "centroidLongitude": 36.8322352,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+      "createdAt": "2026-10-14",
+      "title": "Chester House",
+      "shortDescription": "Plain concrete, deep balconies, and a surprising amount of Kenyan history.  Chester House stands on Koinange Street in the city centre — a…",
+      "longDescription": "Plain concrete, deep balconies, and a surprising amount of Kenyan history.\n\nThe style is Brutalism — architecture that shows off its raw materials and its structure, rather than hiding them under decoration. The Museum of Kenyan Architecture credits the design to Richard Hughes, and it went up around nineteen seventy. Have a look at those balconies. They were made big enough to host a barbecue with friends, which tells you a lot about who the building was for — families, visiting dignitaries, people who planned to live well in the middle of the city. And right at the top, alone on the seventeenth floor, there's a penthouse. One flat, one floor, the whole city spread out underneath.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chester-house-nairobi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chester-house-nairobi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chester-house-nairobi_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8daf94c0-b427-53ec-bad4-16a0b58f79b3",
+          "order": 0,
+          "title": "Chester House",
+          "caption": "Chester House stands on Koinange Street in the city centre — a street that, until nineteen sixty-four, was called Sadler Street, after a colonial governor.",
+          "latitude": -1.2845799,
+          "longitude": 36.8186918,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chester-house-nairobi.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chester-house-nairobi_hero.webp",
+          "transcriptText": "Plain concrete, deep balconies, and a surprising amount of Kenyan history.\n\nChester House stands on Koinange Street in the city centre — a street that, until nineteen sixty-four, was called Sadler Street, after a colonial governor. Look up for a tall block in bare, unadorned concrete, its face stepped out with big, deep balconies. That's your building. If it looks a bit stern, it's meant to.\n\nThe style is Brutalism — architecture that shows off its raw materials and its structure, rather than hiding them under decoration. The Museum of Kenyan Architecture credits the design to Richard Hughes, and it went up around nineteen seventy. Have a look at those balconies. They were made big enough to host a barbecue with friends, which tells you a lot about who the building was for — families, visiting dignitaries, people who planned to live well in the middle of the city. And right at the top, alone on the seventeenth floor, there's a penthouse. One flat, one floor, the whole city spread out underneath.\n\nNow here's the part that surprises people. In the early nineteen nineties, under President Moi, Chester House became a place where politicians came to speak to the press and call for change — for Kenya to become a multiparty democracy. The building hosted the International Press Association, and over the years everyone from the United Nations to the Red Cross held statements here. When a Kenyan said something the government didn't want said, Chester House was often where they said it.\n\nSo a building that looks closed and severe from the street turned out to be one of the city's most open rooms. These days, it's a hotel and serviced apartments. The cave_bureau guide calls it a city centre gem, with its flats looking out towards Uhuru Park. Uhuru, of course, means freedom.\n\nIf you've time, walk south from here to Uhuru Park itself, and look back at the city centre skyline from the grass. It's the view the upper balconies have been looking at for over half a century — just the other way round."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2845799,
+      "centroidLongitude": 36.8186918,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Brutalist",
+        "History",
+        "Designed by a Master",
+        "Richard Hughes"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+      "createdAt": "2026-10-14",
+      "title": "Maasai Market, City Centre",
+      "shortDescription": "This market doesn't have a building. It has a timetable.  On Saturdays, it sets up in the car park beside the courts in the city centre, behind…",
+      "longDescription": "This market doesn't have a building. It has a timetable.\n\nThe Maasai Market moves. Through the week it rotates round the city: different days, different car parks and shopping centres, packing up each evening and reappearing somewhere else the next morning. The cave_bureau guide puts it simply: \"scattered across the city on different dates and times.\" The days and places have changed over the years, so check before you go. But the Saturday city-centre market is traditionally the biggest and busiest of the lot.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eb36e728-a39b-5983-8219-83352257e68b",
+          "order": 0,
+          "title": "Maasai Market, City Centre",
+          "caption": "On Saturdays, it sets up in the car park beside the courts in the city centre, behind the Hilton and a short walk from the Kenyatta International Conference Centre.",
+          "latitude": -1.2871757,
+          "longitude": 36.8231204,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/maasai-market-nairobi.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maasai-market-nairobi_hero.webp",
+          "transcriptText": "This market doesn't have a building. It has a timetable.\n\nOn Saturdays, it sets up in the car park beside the courts in the city centre, behind the Hilton and a short walk from the Kenyatta International Conference Centre. If it's a Saturday morning and you're looking at rows of colour laid out on cloths across the tarmac, you're in the right place. If it's any other day, you may be looking at an empty car park — which is rather the point of this tour.\n\nThe Maasai Market moves. Through the week it rotates round the city: different days, different car parks and shopping centres, packing up each evening and reappearing somewhere else the next morning. The cave_bureau guide puts it simply: \"scattered across the city on different dates and times.\" The days and places have changed over the years, so check before you go. But the Saturday city-centre market is traditionally the biggest and busiest of the lot.\n\nHave a look at the beadwork first. Collars, bracelets and belts, worked in tiny glass beads in bold reds, blues, whites and greens. Then the shukas — the checked and striped cloths, often red, that Maasai men wear as wraps. Then the carvings, the soapstone, the baskets, the sandals cut from old tyres. Much of it comes from makers right across Kenya, not just Maasai, so ask who made what. People are generally happy to tell you.\n\nBargaining is expected, and it's meant to be friendly. Start low, smile, and settle somewhere you're both pleased with.\n\nHere's what I find rather lovely about it. We usually think of a market as a place — a hall, a square, a roof. This one is closer to a habit. A whole market that the city carries round with it, setting itself up and taking itself down, week after week. Architecture made of cloth, tables and trust.\n\nWhen you've done the stalls, walk round the corner to the Kenyatta International Conference Centre and take the lift up to its rooftop. From up there, you can look back down on the market — a patchwork of colour laid across the tarmac, which by nightfall will have vanished entirely."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2871757,
+      "centroidLongitude": 36.8231204,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "548a680b-932b-5a43-9ad9-5ee9577e5141",
+      "createdAt": "2026-10-14",
+      "title": "Nairobi City Market",
+      "shortDescription": "Step inside and look up. The roof is the reason you're here.  Muindi Mbingu Street, in the city centre — a street that was once called Stewart…",
+      "longDescription": "Step inside and look up. The roof is the reason you're here.\n\nThose arches are the story. They're parabolic — shaped a bit like the inside of an egg — and they spring straight up from square piers to carry the whole roof. The market opened in nineteen thirty-two, replacing an older market that stood nearby. It's an Art Deco building, and it has since been gazetted as a national monument.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-city-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-city-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-city-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-city-market_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "83392282-9751-5362-bb99-ec70b3e1c7d4",
+          "order": 0,
+          "title": "Nairobi City Market",
+          "caption": "Muindi Mbingu Street, in the city centre — a street that was once called Stewart Street.",
+          "latitude": -1.2836408,
+          "longitude": 36.8194576,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nairobi-city-market.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-city-market_hero.webp",
+          "transcriptText": "Step inside and look up. The roof is the reason you're here.\n\nMuindi Mbingu Street, in the city centre — a street that was once called Stewart Street. The City Market is a low, cream-painted building with a taller hall rising from the middle. Go in through the main entrance, past the stalls, and into the hall. You'll know you're in the right spot when the ceiling suddenly soars away above you in a run of tall, pointed concrete arches.\n\nThose arches are the story. They're parabolic — shaped a bit like the inside of an egg — and they spring straight up from square piers to carry the whole roof. The market opened in nineteen thirty-two, replacing an older market that stood nearby. It's an Art Deco building, and it has since been gazetted as a national monument.\n\nYou'll often hear that this was once an aircraft hangar. The cave_bureau guide says it too, and you can see why — with that soaring vaulted roof, it really does look the part. The historical record, though, describes a purpose-built municipal market, designed after the town council called for a modern market hall. So the hangar is probably a story the building tells about itself. A rather good one.\n\nNow notice how cool it is in here. That's not an accident. In the early nineteen thirties, Nairobi had barely any electricity to light or cool a building, so the design does it all by itself. Windows face north and south to dodge the sun. Deep fins shade the glass. Hot air rises and slips out through high louvres, drawing cooler air in below. And the stepped roof bounces soft daylight down onto the stalls.\n\nSo before anybody used the phrase \"green architecture\", here it was — not as a moral stance, just as common sense. This building has been keeping its traders cool for over ninety years without switching anything on.\n\nBefore you go, wander through the flower sellers and the curio stalls, then stop at the far end of the hall and look back along the arches. It's the best view in the building — and it costs nothing at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2836408,
+      "centroidLongitude": 36.8194576,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "f648068f-a0ff-514e-8d91-837b24a5da25"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Market",
+        "Architecture",
+        "Art Deco",
+        "Engineering",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e7310a36-3381-53e3-8ad7-edb470b6f559",
+      "createdAt": "2026-10-14",
+      "title": "Paradise Lost — the Mbai Caves",
+      "shortDescription": "To get into these caves, you have to walk behind a waterfall.  Paradise Lost is in Kiambu, a little north of Nairobi, surrounded on all sides by…",
+      "longDescription": "To get into these caves, you have to walk behind a waterfall.\n\nThis is a labyrinth of caves cut into the rock by the river itself. They were officially found in nineteen ninety-six by the landowner, Joseph Mbai, and some of his farmworkers, which is why the architects of cave_bureau call them the Mbai Caves. When the National Museums of Kenya came to look, they found human remains between eight thousand and twelve thousand years old, along with tools of obsidian, the black volcanic glass, from the Later Stone Age. People have been sheltering behind this waterfall for a very long time.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paradise-lost-mbai-caves_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paradise-lost-mbai-caves_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paradise-lost-mbai-caves_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paradise-lost-mbai-caves_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ba5fdafe-bdce-52d9-88c4-69340e41baf1",
+          "order": 0,
+          "title": "Paradise Lost — the Mbai Caves",
+          "caption": "Paradise Lost is in Kiambu, a little north of Nairobi, surrounded on all sides by coffee farms.",
+          "latitude": -1.1918716,
+          "longitude": 36.8279837,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paradise-lost-mbai-caves.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paradise-lost-mbai-caves_hero.webp",
+          "transcriptText": "To get into these caves, you have to walk behind a waterfall.\n\nParadise Lost is in Kiambu, a little north of Nairobi, surrounded on all sides by coffee farms. Follow the path down to the River Gichi, and you'll find the falls pouring over a rock lip. The cave entrances are tucked behind the curtain of water. If you can feel spray on your face and see dark openings in the rock just beyond it, you're in the right place.\n\nThis is a labyrinth of caves cut into the rock by the river itself. They were officially found in nineteen ninety-six by the landowner, Joseph Mbai, and some of his farmworkers, which is why the architects of cave_bureau call them the Mbai Caves. When the National Museums of Kenya came to look, they found human remains between eight thousand and twelve thousand years old, along with tools of obsidian, the black volcanic glass, from the Later Stone Age. People have been sheltering behind this waterfall for a very long time.\n\nAnd not only in prehistory. During the fight for independence in the nineteen fifties, the caves were used by the Mau Mau. Mukami Kimathi, widow of the freedom fighter Dedan Kimathi, said she and others hid here — and that colonial forces later used the caves to torture captured fighters. Paradise Lost is a lovely name for a park. It's also, quietly, an accurate one.\n\nHere's why this place matters to the people who sent you here. Cave_bureau are a Nairobi architecture practice built on a simple, radical idea: that caves are the origin of architecture. One of its two founders, Kabage Karanja, grew up near here. And when they became the first Kenyan practice to exhibit at the Venice Architecture Biennale, they hung sixteen hundred pieces of obsidian on a timber frame to recreate a section of this very cave's roof. A Stone Age shelter, rebuilt as a work of art, in Venice.\n\nGo in with a guide — the passages narrow sharply in places — and once you're inside, turn round and look back at the light coming through the water. Then, back outside, walk up to the dam and look around you: coffee farms on every side, and the capital barely ten kilometres away. The freedom fighters were hiding almost within sight of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.1918716,
+      "centroidLongitude": 36.8279837,
+      "city": "Kiambu",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "d6e8ca26-c945-5631-af40-6e4894cd536f",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "War",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "782d1565-fedd-543e-85f1-59412263a7ce",
+      "createdAt": "2026-10-14",
+      "title": "Karura Forest",
+      "shortDescription": "The city's real infrastructure, according to the architects who sent you here, isn't a road or a railway. It's this.  Karura Forest lies on…",
+      "longDescription": "The city's real infrastructure, according to the architects who sent you here, isn't a road or a railway. It's this.\n\nIt's big — just over a thousand hectares, with more than fifty kilometres of trails — and it's one of the largest forests inside any city in the world. It was gazetted as a forest reserve in nineteen thirty-two. Inside, there's a waterfall on the Karura River, a bamboo thicket, marshland, and something you won't find in most city parks: the Mau Mau caves.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/karura-forest_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/karura-forest_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/karura-forest_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "439ce74c-0d96-5022-9b64-f0ca90304bbc",
+          "order": 0,
+          "title": "Karura Forest",
+          "caption": "Karura Forest lies on Nairobi's northern edge, a few kilometres from the city centre.",
+          "latitude": -1.2368316,
+          "longitude": 36.8303801,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/karura-forest.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/karura-forest_hero.webp",
+          "transcriptText": "The city's real infrastructure, according to the architects who sent you here, isn't a road or a railway. It's this.\n\nKarura Forest lies on Nairobi's northern edge, a few kilometres from the city centre. You're most likely at a gate off Kiambu Road or Limuru Road, where the tarmac gives way to red-earth trails and the noise of traffic drops away behind a wall of trees. If you can hear birds over the cars, you're in.\n\nIt's big — just over a thousand hectares, with more than fifty kilometres of trails — and it's one of the largest forests inside any city in the world. It was gazetted as a forest reserve in nineteen thirty-two. Inside, there's a waterfall on the Karura River, a bamboo thicket, marshland, and something you won't find in most city parks: the Mau Mau caves.\n\nHave a look for those. The cave_bureau guide makes the point beautifully. Nairobi's forests — Karura to the north, Ngong and Oloolua to the south-west — were, in their words, \"infrastructures of freedom\". In the nineteen fifties, Mau Mau fighters used caves like these to hide, regroup and move unseen, right under the noses of the colonial city. They'd argue you can't read Nairobi at all without its forests and its caves.\n\nNow the second fight this forest has seen. In the late nineteen nineties, huge parts of Karura were quietly handed to private developers for housing. Wangari Maathai and the Green Belt Movement led the resistance. There were protests in the forest itself, and Maathai was attacked and beaten by guards in nineteen ninety-nine. The forest was saved. She went on to win the Nobel Peace Prize.\n\nSo twice in one century, these trees have stood in the way of somebody taking Nairobi from Nairobians. That's the infrastructure cave_bureau mean.\n\nIf you've a couple of hours, take the trail down to the Karura River — it drops quite steeply — and follow it to the waterfall and the caves. It's an easy walk, but wear proper shoes. In the rainy season, the water runs orange."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.2368316,
+      "centroidLongitude": 36.8303801,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "d57ec000-10a8-543a-9775-0a2197a72212"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "History",
+        "War"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+      "createdAt": "2026-10-14",
+      "title": "Nairobi National Park",
+      "shortDescription": "There aren't many places on earth where you can watch a rhino graze with a skyline behind it.  You're inside Nairobi National Park, on the…",
+      "longDescription": "There aren't many places on earth where you can watch a rhino graze with a skyline behind it.\n\nThe cave_bureau guide puts it neatly: here you can \"observe pre-nineteen hundreds Nairobi\" — the rolling grasslands, forest and wildlife that were here before the railway and the city, kept in a hundred and seventeen square kilometres. It was the first national park in Kenya, opened in nineteen forty-six, after the conservationist Mervyn Cowie campaigned for it. Before that, this was a game reserve, where cattle grazed, rubbish was dumped, and the Royal Air Force even practised bombing. And its creation came at a cost: Maasai herders were moved off the land.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-national-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-national-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-national-park_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9616b936-0cc1-55dc-8969-f1f894311565",
+          "order": 0,
+          "title": "Nairobi National Park",
+          "caption": "You're inside Nairobi National Park, on the southern side of the city — open grassland, scattered acacia, the odd stand of forest.",
+          "latitude": -1.336773,
+          "longitude": 36.7798646,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nairobi-national-park.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 100,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nairobi-national-park_hero.webp",
+          "transcriptText": "There aren't many places on earth where you can watch a rhino graze with a skyline behind it.\n\nYou're inside Nairobi National Park, on the southern side of the city — open grassland, scattered acacia, the odd stand of forest. Wherever your vehicle has stopped, turn and look north. On a clear day, the towers of the city rise straight out of the horizon. The city centre is only about seven kilometres away. Giraffe in the foreground, office blocks behind. That's the picture.\n\nThe cave_bureau guide puts it neatly: here you can \"observe pre-nineteen hundreds Nairobi\" — the rolling grasslands, forest and wildlife that were here before the railway and the city, kept in a hundred and seventeen square kilometres. It was the first national park in Kenya, opened in nineteen forty-six, after the conservationist Mervyn Cowie campaigned for it. Before that, this was a game reserve, where cattle grazed, rubbish was dumped, and the Royal Air Force even practised bombing. And its creation came at a cost: Maasai herders were moved off the land.\n\nNow have a look at what's living here. Lion, leopard, buffalo, cheetah, hippo, zebra and wildebeest. And above all, black rhino. This is one of Kenya's most successful rhino sanctuaries, and one of the few places where you can be fairly sure of seeing one in the wild.\n\nHere's something else worth knowing. The park is fenced on three sides — the north, east and west, the city sides. The south, along the Mbagathi River, is left open, so the animals can still wander out onto the plains and back again with the seasons.\n\nSo the city has a wall on one side and an open door on the other. Nairobi hasn't swallowed this place, not yet. It has simply agreed to live next door.\n\nBefore you leave, head towards the main gate and find the Ivory Burning Site Monument. In nineteen eighty-nine, President Moi set fire to twelve tonnes of ivory here, to tell the world Kenya would no longer trade in it. It's a quiet spot now — and one of the most important in the whole park."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.336773,
+      "centroidLongitude": 36.7798646,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "d57ec000-10a8-543a-9775-0a2197a72212",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "Iconic Landmark",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+      "createdAt": "2026-10-14",
+      "title": "Kenyatta International Conference Centre Rooftop",
+      "shortDescription": "Up here, you can see where the city ends. Which is rather a lot to ask of most rooftops.  You're on the roof of the Kenyatta International…",
+      "longDescription": "Up here, you can see where the city ends. Which is rather a lot to ask of most rooftops.\n\nStart with the building itself. It was completed in the early nineteen seventies, the work of the Norwegian architect Karl Henrik Nøstvik with the Kenyan architect David Mutiso — Kenya's first African chief government architect — and it rises thirty-two storeys. For years, it was the tallest building in the city. Look down into the courtyard and you'll see its low amphitheatre under a cone-shaped roof — often said to echo a traditional hut — and the statue of Jomo Kenyatta, the first president, seated in front.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kicc-rooftop_hero-2.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kicc-rooftop_2-2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kicc-rooftop_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5d9d7854-9855-5329-8b8a-4e2453b65ef6",
+          "order": 0,
+          "title": "Kenyatta International Conference Centre Rooftop",
+          "caption": "You're on the roof of the Kenyatta International Conference Centre, the tall cylindrical tower on City Square, in the heart of Nairobi.",
+          "latitude": -1.288693,
+          "longitude": 36.823103,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kicc-rooftop.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kicc-rooftop_hero-2.webp",
+          "transcriptText": "Up here, you can see where the city ends. Which is rather a lot to ask of most rooftops.\n\nYou're on the roof of the Kenyatta International Conference Centre, the tall cylindrical tower on City Square, in the heart of Nairobi. You'll have come up in the lift and paid a small fee on the way, and now you're on the open platform at the top — once the building's helipad — with a low wall all round and the whole city at your feet. If the wind has picked up and you can see in every direction, you've made it.\n\nStart with the building itself. It was completed in the early nineteen seventies, the work of the Norwegian architect Karl Henrik Nøstvik with the Kenyan architect David Mutiso — Kenya's first African chief government architect — and it rises thirty-two storeys. For years, it was the tallest building in the city. Look down into the courtyard and you'll see its low amphitheatre under a cone-shaped roof — often said to echo a traditional hut — and the statue of Jomo Kenyatta, the first president, seated in front.\n\nNow turn round slowly. To the west, the green of Uhuru Park and Central Park. To the south, past the railway, Nairobi National Park — on a good day you can make out the open grassland. And if the sky is really clear, look north-east for Mount Kenya, the second-highest mountain in Africa, floating over the haze.\n\nThe cave_bureau guide simply calls this the best view of Nairobi City. They're right. But I think the reason it's the best view isn't the height. It's that from up here, you can see what they spend their whole guide arguing: the city is held in place by green. The park, the forests, the open plains. Nairobi isn't really surrounded by countryside. It's surrounded by wilderness.\n\nBefore you head down, find the city's main shopping streets below you and trace them back towards the station. That grid grew from the railway depot that was set down here in eighteen ninety-nine. Everything else you can see grew out of it in little more than a century."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.288693,
+      "centroidLongitude": 36.823103,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "0C25DCAD-C3F7-5D83-9544-9B9C4125B853",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Viewpoint",
+        "Architecture",
+        "Modernist",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Karl Henrik Nøstvik",
+        "David Mutiso"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d57ec000-10a8-543a-9775-0a2197a72212",
+      "createdAt": "2026-10-14",
+      "title": "Giraffe Centre",
+      "shortDescription": "You're about to be eye to eye with the tallest animal on earth. Mind your head.  The Giraffe Centre is on Duma Road in Langata, in the…",
+      "longDescription": "You're about to be eye to eye with the tallest animal on earth. Mind your head.\n\nHave a look at the giraffes first. These are Rothschild's giraffes, a subspecies found only in East Africa. You can tell them by their legs: below the knee they're plain white, as if they're wearing stockings. When this centre began, they were in serious trouble. In the late nineteen seventies, only about a hundred and thirty were left in western Kenya, on a ranch that was being divided up for settlement.",
+      "makerId": "e4eb6e6a-d72b-5cd6-9ab4-980821a663ce",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/giraffe-centre-nairobi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/giraffe-centre-nairobi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/giraffe-centre-nairobi_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2a2257a-c2d3-5822-9ca9-2b73696a7e23",
+          "order": 0,
+          "title": "Giraffe Centre",
+          "caption": "The Giraffe Centre is on Duma Road in Langata, in the south-western suburbs.",
+          "latitude": -1.3763639,
+          "longitude": 36.7443169,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/giraffe-centre-nairobi.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/giraffe-centre-nairobi_hero.webp",
+          "transcriptText": "You're about to be eye to eye with the tallest animal on earth. Mind your head.\n\nThe Giraffe Centre is on Duma Road in Langata, in the south-western suburbs. You'll find a raised wooden platform with a feeding deck at roughly giraffe height. If a very long neck has just swung towards you and a dark purple tongue is reaching for your hand, you're in the right place.\n\nHave a look at the giraffes first. These are Rothschild's giraffes, a subspecies found only in East Africa. You can tell them by their legs: below the knee they're plain white, as if they're wearing stockings. When this centre began, they were in serious trouble. In the late nineteen seventies, only about a hundred and thirty were left in western Kenya, on a ranch that was being divided up for settlement.\n\nThat's when Jock and Betty Leslie Melville stepped in. He was a Kenyan of British descent; she was American. In nineteen seventy-nine they founded the African Fund for Endangered Wildlife, and brought two young giraffes, Daisy and Marlon, to their home here in Langata to raise them. From there they started breeding giraffes, and moving herds to safe parks around the country. Today there are more than three hundred Rothschild's giraffes breeding in Kenyan national parks.\n\nNow, the feeding. You'll be handed pellets. Hold one between your fingertips, or lay it on your flat palm. And be warned: the cave_bureau guide's advice is not a joke — \"careful, it can headbutt you.\" A giraffe swinging that head round can deliver a proper knock. Respect the neck.\n\nAnd here's the part that's easy to miss. This isn't really a tourist attraction. It was built as an education centre, and its main purpose is to teach Kenyan schoolchildren about their own wildlife. Every one of those visitors with a pellet in their hand is part of the plan.\n\nWhen you've finished, look out through the trees for the grand old ivy-covered house that shares this land. That was the Leslie Melvilles' home, where Daisy and Marlon grew up. It's now a hotel, Giraffe Manor, where the giraffes are known to put their heads through the windows at breakfast."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.3763639,
+      "centroidLongitude": 36.7443169,
+      "city": "Nairobi",
+      "country": "Kenya",
+      "relatedTourIds": [
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "fef955d1-7262-542b-ac8f-b15a87a0ef18",
+        "782d1565-fedd-543e-85f1-59412263a7ce",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "f648068f-a0ff-514e-8d91-837b24a5da25",
+        "b9265c8e-5a7e-58ec-a305-6bf889f0a7ca",
+        "f4be2f7b-5cec-58c6-9399-706015043da0"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Green Escape",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -284745,6 +285486,14 @@
       "centroidLongitude": 36.813216,
       "city": "Nairobi",
       "country": "Kenya",
+      "relatedTourIds": [
+        "150adfab-8f0c-5fb2-b533-607b14d58ff2",
+        "548a680b-932b-5a43-9ad9-5ee9577e5141",
+        "351e36d8-fc5c-5b30-a8a8-fd19938d57e2",
+        "80e081d4-0cf5-5c51-af61-05bf720d9ff2",
+        "eb801c90-e68c-5f6b-b472-3348c7d062ef",
+        "9a9e9227-4795-58e5-a0e9-b59d6142ab51"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",

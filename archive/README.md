@@ -364,4 +364,5 @@ Full text for every one of them is in
 - [HANDOFF-261011-random-batch.md](HANDOFF-261011-random-batch.md) — **67 link pins** (50 creators) from 76 triaged; 10 new places + 7 joins, owner-approved in session; 6 posts held for Edward.
 - [HANDOFF-261013-grands-ensembles.md](HANDOFF-261013-grands-ensembles.md) — **Grands Ensembles 🏢:** 8 original audio tours of Paris-region housing estates under a new creator + 8 architect tags; 3 place questions and photo licences for Edward.
 - [HANDOFF-261013-grands-ensembles-abraxas.md](HANDOFF-261013-grands-ensembles-abraxas.md) — **Grands Ensembles:** Les Espaces d'Abraxas, a 9th tour, scripted, photo-picked and recorded in one session; place question for Edward.
-- [HANDOFF-261014-hanoi.md](HANDOFF-261014-hanoi.md) — **Hanoi launches:** Atlas Studio HAN 🇻🇳, the 43rd studio, 28 singles + 6 architect tags; photo licences and three editorial calls for Edward.
+- [HANDOFF-261014-nairobi.md](HANDOFF-261014-nairobi.md) — **Nairobi launches:** Atlas Studio NBO, 13 singles + 3 architect tags; National Park moved to the main gate; cave_bureau credit and photo licences for Edward.
+- [HANDOFF-261014-hanoi.md](HANDOFF-261014-hanoi.md) — **Hanoi launches:** Atlas Studio HAN 🇻🇳, the 44th studio, 28 singles + 6 architect tags; photo licences and three editorial calls for Edward.

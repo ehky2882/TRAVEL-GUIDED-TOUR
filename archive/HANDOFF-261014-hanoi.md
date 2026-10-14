@@ -1,9 +1,9 @@
 # HANDOFF 2026-10-14: Hanoi launches (Atlas Studio HAN 🇻🇳, 28 singles)
 
-**What shipped:** a new studio, **Atlas Studio HAN**, the 43rd — 28 single-stop audio tours of Hanoi, no walks.
+**What shipped:** a new studio, **Atlas Studio HAN**, the 44th (Nairobi, NBO, merged minutes earlier as the 43rd) — 28 single-stop audio tours of Hanoi, no walks.
 - **Maker:** platform `dozent`, handle `atlas.han`, uuid5 `atlas-maker:han` = `6d677b5b-b2d9-5435-a040-586c9fb5766b`.
 - **Ids:** `atlas-tour:han:<slug>`, stops `atlas-stop:han:<slug>:1`; every slug starts `han-`.
-- **Catalogue:** tours 1942 → 1970, makers 680 → 681. Cities and countries did not move: a creator pin
+- **Catalogue:** tours 1955 → 1983, makers 681 → 682 (measured on top of Nairobi; 1942 → 1970 before it). Cities and countries did not move: a creator pin
   (Bảo Tàng Đạo Mẫu) already counted Hanoi, Vietnam.
 - **Naming:** the contributor asked for "Atlas Studio + city abbreviation"; HAN is Nội Bài's IATA code.
 
