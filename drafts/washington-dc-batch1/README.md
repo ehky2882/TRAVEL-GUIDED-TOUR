@@ -13,14 +13,15 @@ The author's newest handoff is **№8 (CLOSING)**, and its stale-upload check pa
 2. **Record-time choices the author left open** (handoff №8 §2.1–2.2): either-state sentences (the Tidal Basin seawall, the Reflecting Pool, the W3 canal water and boat, the W4 square fence, the W5 scaffold and barriers, and the works lines in 03, 04, 18, 19, 20 and 28) need one state chosen; two docket wordings align at record.
 3. **Open decisions for the owner** (handoff №8 §3). None blocks staging. The author recommends "as written" for all but W5's intro register ("none of them elected and none of them can vote out").
 4. **Audio:** none yet. Expect 31 singles + 34 walk segments = **65 MP3s**.
-5. **Images: all 31 tours and 6 of 10 picker walk stops done (2026-10-14, Georgetown 2026-10-15).** The owner picked them in the [Washington DC Image Picks](https://claude.ai/artifact/4ZVazgKzoGmgsavTrWcoGy) page (461 candidates). 164 files are on gh-pages as `images/<slug>_hero.webp`, then `_2`, `_3` and so on in the owner's order, and walk stops as `images/<walk-slug>_stop<N>.webp`. Records: `image-manifest.json` (picked) and `image-candidates.json` (all 461 picker codes and their sources). None needs a credit: Unsplash, Pexels and public-domain Commons only.
+5. **Images: all 31 tours and 7 of 10 picker walk stops done (2026-10-14, Georgetown 2026-10-15).** The owner picked them in the [Washington DC Image Picks](https://claude.ai/artifact/4ZVazgKzoGmgsavTrWcoGy) page (461 candidates). 165 files are on gh-pages as `images/<slug>_hero.webp`, then `_2`, `_3` and so on in the owner's order, and walk stops as `images/<walk-slug>_stop<N>.webp`. Records: `image-manifest.json` (picked) and `image-candidates.json` (all 461 picker codes and their sources). None needs a credit: Unsplash, Pexels and public-domain Commons only.
    - **11 Georgetown: owner photo as hero (2026-10-15)**, gallery 11-1 (Unsplash) and 11-3 (Pexels).
    - **18 Ford's Theatre: two owner photos (2026-10-15)**, the facade as hero and the Petersen House as gallery 2, then 18-1, 18-5, 18-2, 18-3 and 18-6. ⚠️ The facade photo's vertical banner reads "BOFDF THPATRE", not "FORD'S THEATRE", which suggests AI-edited text; flagged to the owner. 18-3 carries a burned-in 2006 date stamp.
    - **20 Freedom Plaza: owner photo as hero (2026-10-15)**, then 20-7, 20-3 and 20-5 (public domain). **23 Embassy Row:** 23-1 hero, 23-4, 23-2.
    - **28 National Cathedral: owner photo as hero (2026-10-15)**, then 28-1, 28-4, 28-5, 28-6, 28-7, 28-9, 28-10 and 28-13.
    - **40 Old Stone House: owner photo, hero only (2026-10-15).** None of its picker candidates was used, so no credit is owed.
+   - **W3-1 (M Street and Wisconsin): owner photo (2026-10-15).**
    - **W5-0 (Columbus Circle) reuses `washington-union-station_hero.webp`.** The owner picked the same photograph for both (picker 12-1 = W5-0-1), so it was published once.
-   - **Still owed (the owner left these rows unpicked):** walk stops **W3-1** M Street and Wisconsin, **W3-4** the waterfront, **W4-5** Seventh Street, **W5-3** East Capitol Street. Their candidates are still in the picker.
+   - **Still owed (the owner left these rows unpicked):** walk stops **W3-4** the waterfront, **W4-5** Seventh Street, **W5-3** East Capitol Street. Their candidates are still in the picker.
    - Walk stops that revisit a single use that single's hero; connectives and intros not in the picker (W1-0, W2-0) reuse a single's point and its hero.
 
 ## Coordinates: derived 2026-10-13, audited

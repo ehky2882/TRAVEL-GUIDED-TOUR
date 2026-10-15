@@ -2474,5 +2474,20 @@
   "fetched": "2400x1611",
   "upscaled": false,
   "sha": "f5abc19b778245a329616b295e79dea4ef4398cd5e6d565b71adb21ab110251c"
+ },
+ {
+  "code": "owner",
+  "num": "W3-1",
+  "slug": "washington-dc-older-than-the-city-walk_stop1",
+  "name": "washington-dc-older-than-the-city-walk_stop1.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-15)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "8c9abc2be7a3c4c4cc5819e09b2525a1c632a44e4c407a00792cc26ee31824d3"
  }
 ]
