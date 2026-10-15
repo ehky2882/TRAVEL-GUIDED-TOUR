@@ -2459,5 +2459,20 @@
   "fetched": "1448x1086",
   "upscaled": false,
   "sha": "e318dca74749d2eee748cd3233a5222d190f38651681652b895ff1497cf6db23"
+ },
+ {
+  "code": "W3-2-1",
+  "num": "W3-2",
+  "slug": "washington-dc-older-than-the-city-walk_stop2",
+  "name": "washington-dc-older-than-the-city-walk_stop2.webp",
+  "src": "unsplash",
+  "lic": "Unsplash",
+  "credit_required": false,
+  "credit": "Srini Somanchi",
+  "page": "https://unsplash.com/photos/a-boat-traveling-down-a-river-next-to-a-bridge-UHst9ej7XJg",
+  "orig": "8199x5504",
+  "fetched": "2400x1611",
+  "upscaled": false,
+  "sha": "f5abc19b778245a329616b295e79dea4ef4398cd5e6d565b71adb21ab110251c"
  }
 ]
