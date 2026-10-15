@@ -2504,5 +2504,20 @@
   "fetched": "1448x1086",
   "upscaled": false,
   "sha": "346fd1825add088c95858c285e5d4377f168b2f1b8ce64ce720b0cdddded5da5"
+ },
+ {
+  "code": "owner",
+  "num": "W4-5",
+  "slug": "washington-dc-the-avenue-walk_stop5",
+  "name": "washington-dc-the-avenue-walk_stop5.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-15)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "64a4f429b300d6760b5ed1b9f1bf49adcd9c4fcaffba3319bace05ca49c6d775"
  }
 ]
