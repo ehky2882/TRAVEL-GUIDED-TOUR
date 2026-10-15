@@ -22,12 +22,12 @@ TITLE = {
     '01': 'ELCO Pani Puri Centre', '02': 'The Bombay Canteen', '03': 'Trishna', '04': 'Americano',
     '05': 'Café Madras', '06': "Ayub's", '07': 'Eau Bar, The Oberoi', '08': 'AER, Four Seasons Mumbai',
     '09': 'Slink & Bardot', '10': 'The Bombay Gymkhana', '11': 'Willingdon Sports Club',
-    '12': 'Bastian At The Top', '13': 'The Taj Mahal Palace', '14': 'The Oberoi, Nariman Point',
-    '15': 'The Royal Bombay Yacht Club', '16': 'InterContinental Marine Drive', '17': 'Colaba Causeway',
-    '18': 'Kala Ghoda', '21': 'Chor Bazaar', '23': 'Gateway of India', '24': 'Marine Drive',
-    '26': 'Chhatrapati Shivaji Maharaj Vastu Sangrahalaya', '28': 'Bandra–Worli Sea Link and the Coastal Road',
-    '29': 'Dr Bhau Daji Lad Museum', '30': 'Girgaon Chowpatty', '31': "St. Mary's School, Mazagaon",
-    '32': 'BMC Head Office', '33': 'David Sassoon Library and Reading Room',
+    '12': 'Bastian At The Top', '13': 'The Taj Mahal Palace | ताजमहाल पॅलेस', '14': 'The Oberoi, Nariman Point',
+    '15': 'The Royal Bombay Yacht Club', '16': 'InterContinental Marine Drive', '17': 'Colaba Causeway | कुलाबा कॉजवे',
+    '18': 'Kala Ghoda | काळा घोडा', '21': 'Chor Bazaar | चोर बाजार', '23': 'Gateway of India | गेटवे ऑफ इंडिया', '24': 'Marine Drive | मरीन ड्राइव्ह',
+    '26': 'Chhatrapati Shivaji Maharaj Vastu Sangrahalaya | छत्रपती शिवाजी महाराज वस्तुसंग्रहालय', '28': 'Bandra–Worli Sea Link and the Coastal Road | वांद्रे–वरळी सागरी सेतू',
+    '29': 'Dr Bhau Daji Lad Museum | डॉ. भाऊ दाजी लाड संग्रहालय', '30': 'Girgaon Chowpatty | गिरगाव चौपाटी', '31': "St. Mary's School, Mazagaon",
+    '32': 'BMC Head Office | बृहन्मुंबई महानगरपालिका मुख्यालय', '33': 'David Sassoon Library and Reading Room | डेव्हिड ससून ग्रंथालय',
 }
 M = 'Designed by a Master'
 TAGS = {

@@ -12,7 +12,7 @@
 - **Audio:** 102–136 s each, all present. Three were misnamed in the drop and renamed; their durations match their
   scripts (the three longest scripts are the three longest files). Not transcribed against the scripts.
 - **Photos:** 73, all already 1200×900; supplied by the contributor, licence unrecorded.
-- **Text:** title English only (no native-script half: Mumbai's names are commonly written in English).
+- **Text:** titles bilingual (`English | मराठी`) for the 12 landmarks with a Marathi name; restaurants, hotels, clubs and the school keep one name (proper-noun rule, as SGN and RAK).
   `longDescription` = hook + paragraph 3; `shortDescription` cut at 145 with whitespace collapsed.
 - **Geofence:** 40 m venues; 50–75 m for districts, the waterfronts, the beach, the clubs, museums and landmarks.
 
