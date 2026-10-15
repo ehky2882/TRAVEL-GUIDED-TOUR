@@ -27409,7 +27409,9 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
-        "7811381f-5806-4423-8b95-ba9c53ae2114"
+        "7811381f-5806-4423-8b95-ba9c53ae2114",
+        "945d32f3-4aab-5b69-808c-752d64381636",
+        "b1a9a65c-923d-5b40-8bec-b506f2c54749"
       ],
       "primaryCategory": "history",
       "priceUSD": 0
@@ -86815,9 +86817,9 @@
         "062d203b-ca32-5993-aa8d-c5c39552b621",
         "3352A793-95F0-4C16-B96B-3A7AFAB05CA3",
         "a25d5724-04fa-57bf-9b16-db2851bf0fcd",
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f",
         "2DDA0046-686D-440B-8EEF-1E40E399CC34",
-        "243083e3-5607-5a7a-88b3-4e948c605e72",
-        "b4a638a4-81fd-4876-90f5-60949a742c5f"
+        "243083e3-5607-5a7a-88b3-4e948c605e72"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -87256,9 +87258,9 @@
         "702a293f-7f2f-5544-bc1b-8787ea8a96a9",
         "508e1b58-8f7b-5b15-ab1b-7c73edc0fd97",
         "05238c77-9ef3-5138-8a16-774cb27d0267",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
         "ca135f56-0930-502e-8696-a1e5264741ab",
-        "f584dcc8-d83d-5bc5-b052-138abf1ae766",
-        "7104efd6-180e-56b7-9cd3-1ed218fe179d"
+        "f584dcc8-d83d-5bc5-b052-138abf1ae766"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -104074,8 +104076,8 @@
         "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
         "67e7fb23-4300-5b46-9d37-9a5417a79ff7",
         "40f15e6b-436f-5d49-893e-fd9c6bdf3096",
-        "e050ee5f-2e8d-5c24-8448-8d99625c3637",
-        "bd6cb95b-0f40-5929-94b4-e8d88b8b1b4b"
+        "f210858e-ee17-592c-9670-16b35101b0e6",
+        "e050ee5f-2e8d-5c24-8448-8d99625c3637"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -120333,7 +120335,7 @@
         "2d5545c6-9f84-5bdb-bac9-30f1cb2214d0",
         "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
         "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "ce456ec3-1071-5475-bcce-e0973b88d945"
+        "219f9236-c058-5b7a-9a29-7b7332317402"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -125344,7 +125346,16 @@
       "centroidLongitude": 72.83322453555145,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "87BEFFA6-E4B2-5B67-BBAA-6EB000959915",
+        "88f5590d-9f21-548b-a217-59919becd93b",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "778547de-528d-58a4-869f-751598971b63",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "0c499e13-d098-525e-a9a1-2bb74e623266",
+        "16c13404-8889-55bb-b6d4-a9ff014808a0",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125391,7 +125402,16 @@
       "centroidLongitude": 72.82754380934354,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "0c499e13-d098-525e-a9a1-2bb74e623266",
+        "778547de-528d-58a4-869f-751598971b63",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+        "88f5590d-9f21-548b-a217-59919becd93b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125436,7 +125456,16 @@
       "centroidLongitude": 72.83237399155108,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0c499e13-d098-525e-a9a1-2bb74e623266",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e",
+        "778547de-528d-58a4-869f-751598971b63",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "f210858e-ee17-592c-9670-16b35101b0e6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125483,7 +125512,16 @@
       "centroidLongitude": 72.8326251792826,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "af8394ae-ff07-52ca-be4f-6c73f9bfe375",
+        "16c13404-8889-55bb-b6d4-a9ff014808a0",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e",
+        "778547de-528d-58a4-869f-751598971b63",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125526,7 +125564,16 @@
       "centroidLongitude": 72.85506835952795,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "16c13404-8889-55bb-b6d4-a9ff014808a0",
+        "778547de-528d-58a4-869f-751598971b63",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "0c499e13-d098-525e-a9a1-2bb74e623266",
+        "70000ac7-5d40-5379-b16d-c33ff1ff49d9",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125570,7 +125617,16 @@
       "centroidLongitude": 72.8329033641404,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "16c13404-8889-55bb-b6d4-a9ff014808a0",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "0c499e13-d098-525e-a9a1-2bb74e623266",
+        "88f5590d-9f21-548b-a217-59919becd93b",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e",
+        "70000ac7-5d40-5379-b16d-c33ff1ff49d9",
+        "af8394ae-ff07-52ca-be4f-6c73f9bfe375"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125614,7 +125670,16 @@
       "centroidLongitude": 72.8207179958501,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "2b950c86-684e-502a-994e-94083adbd8c6",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125659,7 +125724,16 @@
       "centroidLongitude": 72.82026076301167,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "2b950c86-684e-502a-994e-94083adbd8c6",
+        "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125706,7 +125780,16 @@
       "centroidLongitude": 72.8174780805078,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "f210858e-ee17-592c-9670-16b35101b0e6",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125750,7 +125833,16 @@
       "centroidLongitude": 72.83075533603191,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b1a9a65c-923d-5b40-8bec-b506f2c54749",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "16c13404-8889-55bb-b6d4-a9ff014808a0",
+        "75499e75-6678-5873-b656-b91cfada0b0f"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Venue",
@@ -125798,7 +125890,16 @@
       "centroidLongitude": 72.81534698050699,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "945d32f3-4aab-5b69-808c-752d64381636",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "667e7975-9fd4-5158-80c7-c5d18bb6e5f1",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "e7167f17-8aa6-504d-b545-6066579d75e2"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Venue",
@@ -125846,7 +125947,16 @@
       "centroidLongitude": 72.84108765352431,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "945d32f3-4aab-5b69-808c-752d64381636",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -125894,7 +126004,16 @@
       "centroidLongitude": 72.8332848,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "340AFDD5-361B-5D40-B684-64072FEA29EA",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "75499e75-6678-5873-b656-b91cfada0b0f",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "945d32f3-4aab-5b69-808c-752d64381636",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -125944,7 +126063,16 @@
       "centroidLongitude": 72.82007768216923,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -125989,7 +126117,16 @@
       "centroidLongitude": 72.83353005057957,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b1a9a65c-923d-5b40-8bec-b506f2c54749",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "945d32f3-4aab-5b69-808c-752d64381636",
+        "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "75499e75-6678-5873-b656-b91cfada0b0f",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -126038,7 +126175,16 @@
       "centroidLongitude": 72.82438323817826,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "2b950c86-684e-502a-994e-94083adbd8c6",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -126085,7 +126231,16 @@
       "centroidLongitude": 72.83166455461954,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "af8394ae-ff07-52ca-be4f-6c73f9bfe375",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "778547de-528d-58a4-869f-751598971b63",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751"
+      ],
       "primaryCategory": "history",
       "tags": [
         "District",
@@ -126134,7 +126289,16 @@
       "centroidLongitude": 72.83183916647423,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "cfca4c7a-bd3d-5630-a159-9ac706ddfda7",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "75499e75-6678-5873-b656-b91cfada0b0f",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "778547de-528d-58a4-869f-751598971b63",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "District",
@@ -126180,7 +126344,16 @@
       "centroidLongitude": 72.82988845352303,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "70000ac7-5d40-5379-b16d-c33ff1ff49d9",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "778547de-528d-58a4-869f-751598971b63",
+        "16c13404-8889-55bb-b6d4-a9ff014808a0",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "cfca4c7a-bd3d-5630-a159-9ac706ddfda7",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "219f9236-c058-5b7a-9a29-7b7332317402"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -126226,7 +126399,16 @@
       "centroidLongitude": 72.83461138050585,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+        "219f9236-c058-5b7a-9a29-7b7332317402",
+        "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+        "cfca4c7a-bd3d-5630-a159-9ac706ddfda7"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Monument",
@@ -126274,7 +126456,16 @@
       "centroidLongitude": 72.82341104555498,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "2b950c86-684e-502a-994e-94083adbd8c6",
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f",
+        "a5dfa559-b53c-53d8-8392-53190af43b5e",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Waterfront",
@@ -126320,7 +126511,16 @@
       "centroidLongitude": 72.8326498,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "cfca4c7a-bd3d-5630-a159-9ac706ddfda7",
+        "219f9236-c058-5b7a-9a29-7b7332317402",
+        "75499e75-6678-5873-b656-b91cfada0b0f",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "667e7975-9fd4-5158-80c7-c5d18bb6e5f1"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -126367,7 +126567,16 @@
       "centroidLongitude": 72.8183782,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "f210858e-ee17-592c-9670-16b35101b0e6",
+        "2b950c86-684e-502a-994e-94083adbd8c6",
+        "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
@@ -126414,7 +126623,16 @@
       "centroidLongitude": 72.8347938381791,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "219f9236-c058-5b7a-9a29-7b7332317402",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "16c13404-8889-55bb-b6d4-a9ff014808a0"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -126457,7 +126675,16 @@
       "centroidLongitude": 72.8137,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8feea001-54ba-5c05-87ee-746d86aa80ed",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "af8394ae-ff07-52ca-be4f-6c73f9bfe375",
+        "0c499e13-d098-525e-a9a1-2bb74e623266",
+        "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+        "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+        "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+        "e7167f17-8aa6-504d-b545-6066579d75e2"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Waterfront",
@@ -126500,7 +126727,15 @@
       "centroidLongitude": 72.83599865282805,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "b1a9a65c-923d-5b40-8bec-b506f2c54749",
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "945d32f3-4aab-5b69-808c-752d64381636",
+        "cfca4c7a-bd3d-5630-a159-9ac706ddfda7"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -126543,7 +126778,16 @@
       "centroidLongitude": 72.83446213339249,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "cfca4c7a-bd3d-5630-a159-9ac706ddfda7",
+        "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "75499e75-6678-5873-b656-b91cfada0b0f",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+        "8feea001-54ba-5c05-87ee-746d86aa80ed"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -126589,7 +126833,16 @@
       "centroidLongitude": 72.83110748614428,
       "city": "Mumbai",
       "country": "India",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "cfca4c7a-bd3d-5630-a159-9ac706ddfda7",
+        "75499e75-6678-5873-b656-b91cfada0b0f",
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "219f9236-c058-5b7a-9a29-7b7332317402",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "91cb8f5a-e42e-56f6-b42d-39b8581a82ca"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Library",
@@ -177954,6 +178207,12 @@
       "centroidLongitude": 72.83322453555145,
       "city": "Mumbai",
       "country": "India",
+      "relatedTourIds": [
+        "70000ac7-5d40-5379-b16d-c33ff1ff49d9",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "e7167f17-8aa6-504d-b545-6066579d75e2",
+        "0c499e13-d098-525e-a9a1-2bb74e623266"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -234643,8 +234902,13 @@
       "city": "Mumbai",
       "country": "India",
       "relatedTourIds": [
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
         "9F9428AA-D5EF-5A58-A24F-0D9832F70317",
-        "1DE3866F-F1FB-5F0C-B156-45145F809BE0"
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+        "1DE3866F-F1FB-5F0C-B156-45145F809BE0",
+        "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+        "75499e75-6678-5873-b656-b91cfada0b0f"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -237207,7 +237471,8 @@
       "city": "Mumbai",
       "country": "India",
       "relatedTourIds": [
-        "340AFDD5-361B-5D40-B684-64072FEA29EA"
+        "340AFDD5-361B-5D40-B684-64072FEA29EA",
+        "abec24ae-0195-53c4-908d-c25c64167449"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -286352,7 +286617,10 @@
       "city": "Mumbai",
       "country": "India",
       "relatedTourIds": [
-        "340AFDD5-361B-5D40-B684-64072FEA29EA"
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "340AFDD5-361B-5D40-B684-64072FEA29EA",
+        "abec24ae-0195-53c4-908d-c25c64167449",
+        "9b367ee6-c80c-5591-9e7b-0835554fd3b9"
       ],
       "primaryCategory": "architecture",
       "tags": [
