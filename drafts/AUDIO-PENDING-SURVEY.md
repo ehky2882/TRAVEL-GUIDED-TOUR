@@ -87,7 +87,7 @@ soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 |------|--------------:|-----------|-----:|----------------|------------------|
 | 🇺🇸 **Boston** | **0** | ✅ **LIVE 2026-10-02:** 30 singles + 5 walks (29 segments) wired under Atlas Studio BOS. See `archive/HANDOFF-261002-boston-live.md` | **59 on gh-pages** | — | **Atlas Studio BOS** |
 | 🇺🇸 **Philadelphia** | **0** | ✅ **LIVE 2026-10-07:** 30 singles + 5 walks (36 segments) wired under Atlas Studio PHL, the 41st studio. See `archive/HANDOFF-261006-philadelphia-ready.md` | **66 on gh-pages** | — | **Atlas Studio PHL** |
-| 🇺🇸 **Washington DC** | **36** | 31 singles (01–30 + 40 Old Stone House) + 5 walks (34 segments). STAGED 2026-10-13: scripts + audited coordinates. **0 MP3s, 0 images.** Pronunciation pass owed before recording (`drafts/washington-dc-batch1/README.md`) | **0 of 65** | `main` (`drafts/washington-dc-*`) | **Atlas Studio WAS** `e170d645-…` |
+| 🇺🇸 **Washington DC** | **36** | 31 singles (01–30 + 40 Old Stone House) + 5 walks (34 segments). STAGED 2026-10-13: scripts + audited coordinates. **Images DONE 2026-10-15 (168 on gh-pages). 0 MP3s.** Pronunciation pass owed before recording (`drafts/washington-dc-batch1/README.md`) | **0 of 65** | `main` (`drafts/washington-dc-*`) | **Atlas Studio WAS** `e170d645-…` |
 | **TOTAL PENDING** | **36** | | | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
