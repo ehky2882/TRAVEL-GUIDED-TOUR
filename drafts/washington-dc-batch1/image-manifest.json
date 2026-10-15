@@ -2444,5 +2444,20 @@
   "fetched": "2400x3600",
   "upscaled": false,
   "sha": "e500ef7a0afb2ce020a4fa2b12cd11c93e4d0f158a936d046a95d53de4c54965"
+ },
+ {
+  "code": "owner",
+  "num": "40",
+  "slug": "old-stone-house-georgetown",
+  "name": "old-stone-house-georgetown_hero.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-15)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "e318dca74749d2eee748cd3233a5222d190f38651681652b895ff1497cf6db23"
  }
 ]
