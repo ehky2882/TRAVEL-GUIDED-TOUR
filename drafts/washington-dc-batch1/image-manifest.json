@@ -2054,5 +2054,50 @@
   "upscaled": false,
   "sha": "8d7059919f10197bc93a1265772f60c568fdbd30dba7f701749bf28a45503c3e",
   "note": "same photograph as 12's hero (picker 12-1 = W5-0-1); the walk stop reuses that file"
+ },
+ {
+  "code": "owner",
+  "num": "11",
+  "slug": "georgetown-co-canal",
+  "name": "georgetown-co-canal_hero.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-15)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "035b5e9aaef1bbcf3a96e167dc7ac449687d65d4717bd50b31ede612db1ebf4a"
+ },
+ {
+  "code": "11-1",
+  "num": "11",
+  "slug": "georgetown-co-canal",
+  "name": "georgetown-co-canal_2.webp",
+  "src": "unsplash",
+  "lic": "Unsplash",
+  "credit_required": false,
+  "credit": "Yeon Choi",
+  "page": "https://unsplash.com/photos/brown-concrete-building-near-bridge-during-daytime-gU3rHe3HF54",
+  "orig": "5360x3573",
+  "fetched": "1400x933",
+  "upscaled": false,
+  "sha": "06db19455f4719e45fb340b098700824a02d9e229763a5e48c85e36ab49f03b4"
+ },
+ {
+  "code": "11-3",
+  "num": "11",
+  "slug": "georgetown-co-canal",
+  "name": "georgetown-co-canal_3.webp",
+  "src": "pexels",
+  "lic": "Pexels",
+  "credit_required": false,
+  "credit": "Rola Al Homsi",
+  "page": "https://www.pexels.com/photo/peaceful-autumn-park-scene-with-reflective-pond-29860322/",
+  "orig": "3024x4032",
+  "fetched": "2400x3200",
+  "upscaled": false,
+  "sha": "8f03fcfbd9ea17e5c8aa05f5e4cd2fdfddcb1bcd237b35636bf4b3da5f05216e"
  }
 ]
