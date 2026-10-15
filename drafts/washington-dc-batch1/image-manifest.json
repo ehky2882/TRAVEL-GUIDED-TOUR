@@ -2519,5 +2519,20 @@
   "fetched": "1448x1086",
   "upscaled": false,
   "sha": "64a4f429b300d6760b5ed1b9f1bf49adcd9c4fcaffba3319bace05ca49c6d775"
+ },
+ {
+  "code": "owner",
+  "num": "W5-3",
+  "slug": "washington-dc-city-that-isnt-a-state-walk_stop3",
+  "name": "washington-dc-city-that-isnt-a-state-walk_stop3.webp",
+  "src": "owner",
+  "lic": "Owner-supplied (2026-10-15)",
+  "credit_required": false,
+  "credit": "",
+  "page": "pasted in chat (labelled W4-5; residential East Capitol Street scene)",
+  "orig": "1448x1086",
+  "fetched": "1448x1086",
+  "upscaled": false,
+  "sha": "86d033d836c09ad239654b06876395e5c41c63a9e53f2c439cf071dd73d4cacf"
  }
 ]
