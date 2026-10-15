@@ -5561,6 +5561,16 @@
       "websiteURL": null
     },
     {
+      "id": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "displayName": "Atlas Studio BOM",
+      "platform": "dozent",
+      "handle": "atlas.bom",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇳",
+      "bio": "Atlas Studio's Mumbai bureau — audio tours of a city built on reclaimed islands: Gothic offices and Art Deco seafronts, members' clubs and the clubs founded to answer them, kebab counters, Udupi breakfasts and rooftop bars, and the stories the street names forgot.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -125298,6 +125308,1297 @@
         "Art",
         "Designed by a Master",
         "Hà Đức Lịnh"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "70000ac7-5d40-5379-b16d-c33ff1ff49d9",
+      "createdAt": "2026-10-15",
+      "title": "ELCO Pani Puri Centre",
+      "shortDescription": "The most famous name on this road belongs to a market most people have forgotten. Hill Road, Bandra West. Look for the sign reading ELCO above a…",
+      "longDescription": "The most famous name on this road belongs to a market most people have forgotten.\n\nHere's how it began. The Bhagnani family were Sindhi merchants, uprooted by Partition in nineteen forty-seven, who rebuilt their lives in Bombay. In nineteen seventy-five their son, Mohandas, set up a single hand cart outside the ELCO market, then one of the smartest places to shop in Bandra. His pani puri was good — properly good — and his customers started calling him the ELCO pani puri wala. The man at the cart outside the market. The name stuck so firmly that the business outlived the reputation of the market it was named after.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-elco-pani-puri_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0d7df6fc-ce25-52fa-8199-d45a0652788e",
+          "order": 0,
+          "title": "ELCO Pani Puri Centre",
+          "caption": "Hill Road, Bandra West, on the pavement outside the ELCO shopfront.",
+          "latitude": 19.056087708778655,
+          "longitude": 72.83322453555145,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-elco-pani-puri.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-elco-pani-puri_hero.webp",
+          "transcriptText": "The most famous name on this road belongs to a market most people have forgotten.\n\nHill Road, Bandra West. Look for the sign reading ELCO above a busy shopfront, with a counter at street level and a queue that never quite clears. Upstairs, a family restaurant. At the counter, a man filling small, hollow puris faster than you can count them.\n\nHere's how it began. The Bhagnani family were Sindhi merchants, uprooted by Partition in nineteen forty-seven, who rebuilt their lives in Bombay. In nineteen seventy-five their son, Mohandas, set up a single hand cart outside the ELCO market, then one of the smartest places to shop in Bandra. His pani puri was good — properly good — and his customers started calling him the ELCO pani puri wala. The man at the cart outside the market. The name stuck so firmly that the business outlived the reputation of the market it was named after.\n\nNow have a look at what they're actually serving. Pani puri is a thin, crisp shell, punctured with a thumb, filled with potato or chickpea, then dunked in tamarind water and a sharp, green, spiced water. You eat it in one go, or not at all. The family's own account puts the secret down to two unglamorous things: good Sindhi puris, and bottled water, at a time when nobody at a street cart bothered. One cart became two. Fifteen or twenty years on, they bought a shop on this spot, and later the floors above it.\n\nAnd that, if you ask me, is the real story. Mumbai street food is usually talked about as something wild and anonymous. This is the opposite — one family, fifty years, one corner, and a reputation built almost entirely on not making people ill.\n\nIf you're eating, stand at the counter and let them hand you each puri as it's made — that's how it's meant to go. And if you fancy a walk afterwards, Hill Road is one long market in both directions — clothes, shoes, fruit and phone cases, all the way along."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.056087708778655,
+      "centroidLongitude": 72.83322453555145,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Immigration"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "16c13404-8889-55bb-b6d4-a9ff014808a0",
+      "createdAt": "2026-10-15",
+      "title": "The Bombay Canteen",
+      "shortDescription": "You're standing in an old cotton mill, about to walk into a bungalow that was built to look like it had always been here. Kamala Mills, Lower…",
+      "longDescription": "You're standing in an old cotton mill, about to walk into a bungalow that was built to look like it had always been here.\n\nHave a look at the room first. It's a recreation of an old Bombay bungalow — the sort of house with a deep verandah and a dining room nobody ever quite finished furnishing. When it was refreshed after its first seven years, the architect Shonan Purie Trehan kept the idea and sharpened it: traditional tiles, warm wood, terrazzo tabletops, and Art Deco lamps of the kind you'd find in a grand flat on Marine Drive.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-bombay-canteen_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-bombay-canteen_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-bombay-canteen_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-bombay-canteen_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-bombay-canteen_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "76390a9a-c26d-5a17-98b8-530e18ab793f",
+          "order": 0,
+          "title": "The Bombay Canteen",
+          "caption": "Inside the Kamala Mills compound, Lower Parel, at the entrance to Process House.",
+          "latitude": 19.003468152517048,
+          "longitude": 72.82754380934354,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-the-bombay-canteen.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-bombay-canteen_hero.webp",
+          "transcriptText": "You're standing in an old cotton mill, about to walk into a bungalow that was built to look like it had always been here.\n\nKamala Mills, Lower Parel. The compound around you was once a working textile mill; now it's glass offices, bars and restaurants. Find Process House and the entrance marked The Bombay Canteen — patterned tiles, low stone walls, and through the door, high ceilings and stained glass.\n\nHave a look at the room first. It's a recreation of an old Bombay bungalow — the sort of house with a deep verandah and a dining room nobody ever quite finished furnishing. When it was refreshed after its first seven years, the architect Shonan Purie Trehan kept the idea and sharpened it: traditional tiles, warm wood, terrazzo tabletops, and Art Deco lamps of the kind you'd find in a grand flat on Marine Drive.\n\nThen the people. The Bombay Canteen opened in twenty fifteen, founded by the New York chef Floyd Cardoz with Sameer Seth, Yash Bhanage and the chef Thomas Zacharias. Cardoz, Bombay-born, had made his name in Manhattan cooking Indian flavours for American diners. Here the idea was turned round: regional Indian food, cooked with seasonal ingredients, for a city that thought it already knew its own cuisine. Cardoz died in twenty twenty, early in the pandemic. The restaurant carried on.\n\nAnd here's the thing. A place like this could easily have been a pastiche of colonial nostalgia, all ceiling fans and wistfulness. Instead it treats Indian food without borders as the point — a Goan dish beside a Bengali one beside a street snack, taken as seriously as anything in the city. The bar, too: it has appeared on the list of Asia's fifty best.\n\nIf you're staying, ask what's on the seasonal menu and order from that rather than the regulars. And on your way out, walk the length of the compound. The street names and the scale of the plots are what's left of the mills — a reminder of what Lower Parel made before it made dinner."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.003468152517048,
+      "centroidLongitude": 72.82754380934354,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "af8394ae-ff07-52ca-be4f-6c73f9bfe375",
+      "createdAt": "2026-10-15",
+      "title": "Trishna",
+      "shortDescription": "The ropes are long gone from Rope Walk Lane. The crab, mercifully, is not. You're on Sai Baba Marg, a narrow back street in Kala Ghoda — older…",
+      "longDescription": "The ropes are long gone from Rope Walk Lane. The crab, mercifully, is not.\n\nTrishna serves the coastal cooking of Mangalore and the Konkan shore, and has done so, by most accounts, since the nineteen sixties. Have a look at the menu if it's on display, and find the line that matters: butter, pepper and garlic crab. A whole crab, cracked, drowned in butter, sharp with garlic and black pepper, eaten with your hands. Regulars call ahead to make sure the crab has come in; when it hasn't, there's simply no crab.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-trishna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-trishna_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-trishna_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-trishna_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "30bf8ec6-fee4-57dc-a4d4-0f3bf01cd657",
+          "order": 0,
+          "title": "Trishna",
+          "caption": "Sai Baba Marg, the old Rope Walk Lane, in front of the restaurant's doorway in Kala Ghoda.",
+          "latitude": 18.92872883155363,
+          "longitude": 72.83237399155108,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-trishna.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-trishna_hero.webp",
+          "transcriptText": "The ropes are long gone from Rope Walk Lane. The crab, mercifully, is not.\n\nYou're on Sai Baba Marg, a narrow back street in Kala Ghoda — older maps call it Rope Walk Lane, after the ropemakers who once worked the length of it. Look for a modest doorway with the name Trishna above it. Nothing about the frontage tells you that this is one of the most talked-about seafood rooms in the city. That's rather the charm.\n\nTrishna serves the coastal cooking of Mangalore and the Konkan shore, and has done so, by most accounts, since the nineteen sixties. Have a look at the menu if it's on display, and find the line that matters: butter, pepper and garlic crab. A whole crab, cracked, drowned in butter, sharp with garlic and black pepper, eaten with your hands. Regulars call ahead to make sure the crab has come in; when it hasn't, there's simply no crab.\n\nThen the rest of the board — prawns koliwada, fried crisp in the style of the city's Koli fishing villages; tandoori fish; rawas, which is Indian salmon, cooked in a dozen ways. None of it is fussy. All of it is about what came out of the sea that morning.\n\nWhat's worth knowing, standing here, is that the name has travelled further than the room. In two thousand and eight a restaurant called Trishna opened in London, crab and all, and was taken by many British diners as a discovery. It was a homage. This is the original, still in its back street, still small, still full.\n\nIf you can't get a table, walk to the end of the lane and turn towards the Kala Ghoda junction — you'll be in the middle of the city's gallery quarter within a minute, and the queue may well have shortened by the time you come back."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.92872883155363,
+      "centroidLongitude": 72.83237399155108,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0c499e13-d098-525e-a9a1-2bb74e623266",
+      "createdAt": "2026-10-15",
+      "title": "Americano",
+      "shortDescription": "A Californian chef, an Italian menu and a dash of Puerto Rico, in an old Bombay office building. It works rather better than it sounds. Nagindas…",
+      "longDescription": "A Californian chef, an Italian menu and a dash of Puerto Rico, in an old Bombay office building. It works rather better than it sounds.\n\nThe chef is Alex Sanchez, who grew up in California and cooked at Eleven Madison Park in New York before coming to Mumbai, where he ran the kitchen of a much-loved restaurant called The Table for seven years. He opened Americano in twenty nineteen with the restaurateur Mallyeka Watsa. The menu calls itself Italian, but it's Italian as you'd find it in California — handmade pastas, wood-fired pizzas — with flashes of Puerto Rico and a good deal of Bombay in the pantry. Sweetcorn ribs. A crispy jalapeño pork belly. And, it being this city, a butter garlic crab.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-americano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-americano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-americano_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-americano_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-americano_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7b961a6b-1208-59c9-a82a-e8c45fafcc73",
+          "order": 0,
+          "title": "Americano",
+          "caption": "Nagindas Master Road, Kala Ghoda, in front of Radha Bhavan.",
+          "latitude": 18.929049645288693,
+          "longitude": 72.8326251792826,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-americano.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-americano_hero.webp",
+          "transcriptText": "A Californian chef, an Italian menu and a dash of Puerto Rico, in an old Bombay office building. It works rather better than it sounds.\n\nNagindas Master Road, Kala Ghoda. In front of you, Radha Bhavan, an old commercial building with tall windows — and at street level, behind fluted glass, Americano. Inside, if you can see in, the ceilings are about twenty feet high and there's a counter where you can sit and watch the kitchen.\n\nThe chef is Alex Sanchez, who grew up in California and cooked at Eleven Madison Park in New York before coming to Mumbai, where he ran the kitchen of a much-loved restaurant called The Table for seven years. He opened Americano in twenty nineteen with the restaurateur Mallyeka Watsa. The menu calls itself Italian, but it's Italian as you'd find it in California — handmade pastas, wood-fired pizzas — with flashes of Puerto Rico and a good deal of Bombay in the pantry. Sweetcorn ribs. A crispy jalapeño pork belly. And, it being this city, a butter garlic crab.\n\nNow, the dish everybody photographs is the tiramisu: tall, generous, with a chocolate-coated wafer disc on top. Order it. It is, as the reviews keep saying, rather good.\n\nAnd here's the thing about this road. Kala Ghoda is Bombay's old business district, full of Victorian stone and colonial counting houses, and for most of the twentieth century you'd have eaten here only at your desk. Places like Americano have turned these old offices into dining rooms — a quiet change, but it means the Fort now has an evening life it never really had.\n\nIf you're making an evening of it, walk a couple of minutes east to the Kala Ghoda junction, where the black horse stands — and then, if you've room, Trishna is round the corner for a second course of crab."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.929049645288693,
+      "centroidLongitude": 72.8326251792826,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e7167f17-8aa6-504d-b545-6066579d75e2",
+      "createdAt": "2026-10-15",
+      "title": "Café Madras",
+      "shortDescription": "Breakfast here has been served by the same family since nineteen forty. The queue is part of the menu. You're in Matunga, near King's Circle…",
+      "longDescription": "Breakfast here has been served by the same family since nineteen forty. The queue is part of the menu.\n\nThe café was opened in nineteen forty by the Kamath family, and three generations on it's still theirs. It started as a hole in the wall serving breakfast — four items on the menu, by one account. It belongs to a very particular Bombay tradition: the Udupi restaurant, named after the temple town on the Karnataka coast. Owners from the coast would send word home that there was work in the city, and young men would come up to wait tables, cook and make deliveries, with a bed and meals thrown in.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-cafe-madras_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-cafe-madras_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "722625c2-c7d3-55d6-8000-64620fe47bfd",
+          "order": 0,
+          "title": "Café Madras",
+          "caption": "On the pavement outside Café Madras, near King's Circle, Matunga.",
+          "latitude": 19.027838367050173,
+          "longitude": 72.85506835952795,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-cafe-madras.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-cafe-madras_hero.webp",
+          "transcriptText": "Breakfast here has been served by the same family since nineteen forty. The queue is part of the menu.\n\nYou're in Matunga, near King's Circle, outside a small, plain vegetarian restaurant with Café Madras painted above the door. Expect a crowd on the pavement, a waiter calling names, and a smell of ghee and coffee drifting out on the air.\n\nThe café was opened in nineteen forty by the Kamath family, and three generations on it's still theirs. It started as a hole in the wall serving breakfast — four items on the menu, by one account. It belongs to a very particular Bombay tradition: the Udupi restaurant, named after the temple town on the Karnataka coast. Owners from the coast would send word home that there was work in the city, and young men would come up to wait tables, cook and make deliveries, with a bed and meals thrown in.\n\nHave a look at what's on the tables. Dosas, thin and crisp. Idlis, soft rice cakes. Upma, rava dosa, and filter coffee served in a steel tumbler set in a little steel bowl, poured from one to the other to cool it. And watch for the small pots of white butter, made in-house. Regulars spoon it onto everything. The family says simply that their recipes are their own: nothing is textbook.\n\nHere's what I find rather lovely. Matunga became the South Indian heart of Bombay as families from the south settled here in the twentieth century, and within a short walk of this door there are a dozen other places doing much the same thing. Café Madras has survived eighty-odd years of that competition largely by word of mouth.\n\nBefore you go, walk round King's Circle itself, with its garden in the middle. The streets around it are lined with other South Indian cafés and with shops selling coffee powder and spice mixes, so you can take a little of breakfast home."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.027838367050173,
+      "centroidLongitude": 72.85506835952795,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Immigration"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "778547de-528d-58a4-869f-751598971b63",
+      "createdAt": "2026-10-15",
+      "title": "Ayub's",
+      "shortDescription": "A kebab roll here cost two rupees fifty when it started. That's not the interesting part. You're on Forbes Street, which signs call V B Gandhi…",
+      "longDescription": "A kebab roll here cost two rupees fifty when it started. That's not the interesting part.\n\nThe family story is a short one. Ayub's began in nineteen eighty-five as a food cart, started by a man who had come to Bombay from Delhi, and run now by his son, Ajaz Ayub Shaikh. In the early days it was meat only — mutton seekh kebabs, mostly. A vegetarian kitchen was added in nineteen eighty-nine, which, in this city, is how you double your customers overnight.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-ayubs_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-ayubs_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cdb9560e-181d-5dce-aa9f-9e3c7bdbd5c2",
+          "order": 0,
+          "title": "Ayub's",
+          "caption": "Forbes Street, Kala Ghoda, outside Ayub's counter, near the old Rhythm House.",
+          "latitude": 18.92823542815258,
+          "longitude": 72.8329033641404,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-ayubs.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-ayubs_hero.webp",
+          "transcriptText": "A kebab roll here cost two rupees fifty when it started. That's not the interesting part.\n\nYou're on Forbes Street, which signs call V B Gandhi Marg, in Kala Ghoda — a few doors from where Rhythm House, the city's most famous record shop, used to stand. Look for the Ayub's sign and a grill counter working flat out. Ayub's opens in the late afternoon and keeps going until well past one in the morning.\n\nThe family story is a short one. Ayub's began in nineteen eighty-five as a food cart, started by a man who had come to Bombay from Delhi, and run now by his son, Ajaz Ayub Shaikh. In the early days it was meat only — mutton seekh kebabs, mostly. A vegetarian kitchen was added in nineteen eighty-nine, which, in this city, is how you double your customers overnight.\n\nHave a look at the menu board. The roll is the thing: a paratha wrapped round chicken tikka, reshmi kebab or seekh kebab, with sliced onion, lime and two chutneys. Eaten standing up, or sitting in a taxi, or on the steps of an office building. Paneer and mushroom tikka on the vegetarian side, and, for the brave, the baida roti — a flatbread folded round egg and mince.\n\nAnd here's the thing. The Fort is the city's grand district by day: high courts, banks, the old university. But at night it empties, and then it belongs to the people who feed it — office cleaners, students, party crowds heading home, taxi drivers. Ayub's has fed all of them for forty years, and the prices have gone up roughly a hundredfold in that time without the queue noticing.\n\nIf you've time, walk round the corner to the Kala Ghoda junction and the black horse. After dark, with the galleries shut and the stone glowing, it's the quietest the district ever gets."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.92823542815258,
+      "centroidLongitude": 72.8329033641404,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a2d5db0e-4e23-5c28-9a35-e52d413dc865",
+      "createdAt": "2026-10-15",
+      "title": "Eau Bar, The Oberoi",
+      "shortDescription": "The best seat for a Bombay sunset is a matter of fierce local opinion. This is one serious contender. You're at the southern tip of Marine…",
+      "longDescription": "The best seat for a Bombay sunset is a matter of fierce local opinion. This is one serious contender.\n\nHave a look along the curve of the bay first, to your right as you face the hotel. That long crescent of road and lights is Marine Drive, and from up on the terrace at dusk it turns into what everyone here calls the Queen's Necklace — the streetlamps coming on one by one round the edge of the bay, like a string of pearls.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-eau-bar-the-oberoi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-eau-bar-the-oberoi_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "78efc092-9da2-508f-96a2-bbbd82218dcf",
+          "order": 0,
+          "title": "Eau Bar, The Oberoi",
+          "caption": "On the Marine Drive promenade at Nariman Point, facing The Oberoi.",
+          "latitude": 18.927693402756724,
+          "longitude": 72.8207179958501,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-eau-bar-the-oberoi.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-eau-bar-the-oberoi_hero.webp",
+          "transcriptText": "The best seat for a Bombay sunset is a matter of fierce local opinion. This is one serious contender.\n\nYou're at the southern tip of Marine Drive, at Nariman Point, on the promenade by the sea wall. Turn so the water is behind you and look for the tall hotel marked The Oberoi. The Eau Bar is inside it, with an open terrace that looks straight out over the Arabian Sea — the same water you've just had your back to.\n\nHave a look along the curve of the bay first, to your right as you face the hotel. That long crescent of road and lights is Marine Drive, and from up on the terrace at dusk it turns into what everyone here calls the Queen's Necklace — the streetlamps coming on one by one round the edge of the bay, like a string of pearls.\n\nNow the room itself. The Oberoi describes the Eau Bar's interiors as Art Deco, with red velvet and a modern take on the Tree of Life motif — a nod to the Art Deco apartment blocks that line Marine Drive, which you can see from the terrace. The cocktail list was put together by the British bartender Andrew Pearson. It opens at five in the evening and runs until half past one in the morning, with a DJ at weekends, so sunset and the late crowd overlap rather neatly.\n\nWhat's worth knowing, standing here, is what this hotel has been through. In November two thousand and eight, The Oberoi was one of the targets of the attacks on Mumbai, and guests and staff were killed inside. The hotel closed, was rebuilt, and reopened in twenty ten. Coming here for a drink and the view is, in its quiet way, part of the city's answer to that.\n\nIf you're not going up, the promenade is a perfectly good substitute. Walk north along the sea wall as the light goes, and the necklace will switch itself on round you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.927693402756724,
+      "centroidLongitude": 72.8207179958501,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e03ebffe-2b2e-5c69-97b2-adb6f4e62751",
+      "createdAt": "2026-10-15",
+      "title": "AER, Four Seasons Mumbai",
+      "shortDescription": "Thirty-four floors up, there's a roof that opens. On a Bombay night, that's worth more than it sounds. You're on Dr E Moses Road in Worli…",
+      "longDescription": "Thirty-four floors up, there's a roof that opens. On a Bombay night, that's worth more than it sounds.\n\nHere's why people go. It's an open-air bar, so the whole of central Mumbai is laid out around you: the Arabian Sea to the west, the cables of the Bandra–Worli Sea Link to the north, and the towers of Lower Parel and Worli all around. In the dry season the sky is open. In the monsoon, when the rain comes in sideways off the sea, a retractable roof slides across and the party carries on beneath it. The interiors are styled loosely after a yacht — which, up here, in a strong wind, feels about right.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-aer-four-seasons_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-aer-four-seasons_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "81308fc9-5345-5978-9af3-acb062b2ca5f",
+          "order": 0,
+          "title": "AER, Four Seasons Mumbai",
+          "caption": "On Dr E Moses Road, Worli, outside the Four Seasons Hotel.",
+          "latitude": 18.993851447439337,
+          "longitude": 72.82026076301167,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-aer-four-seasons.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-aer-four-seasons_hero.webp",
+          "transcriptText": "Thirty-four floors up, there's a roof that opens. On a Bombay night, that's worth more than it sounds.\n\nYou're on Dr E Moses Road in Worli, outside the Four Seasons Hotel — a tall glass tower among the old mill land and new skyscrapers of the district. AER is right at the top of it, on the thirty-fourth floor.\n\nHere's why people go. It's an open-air bar, so the whole of central Mumbai is laid out around you: the Arabian Sea to the west, the cables of the Bandra–Worli Sea Link to the north, and the towers of Lower Parel and Worli all around. In the dry season the sky is open. In the monsoon, when the rain comes in sideways off the sea, a retractable roof slides across and the party carries on beneath it. The interiors are styled loosely after a yacht — which, up here, in a strong wind, feels about right.\n\nNow have a look at the neighbourhood down at street level. Worli was mill land and fishing villages within living memory. The towers you're standing among have mostly gone up in the last twenty-odd years, on land where cotton was spun. From the top of this building you can see both versions of the city at once: the fishing village at the tip of the Worli shore, and the glass going up around it.\n\nAnd that's really the point of a place like this. A rooftop bar is a slightly ridiculous thing in a city where most people will never see the view. But it does show you something you can't see from the pavement: how much of Mumbai is water, and how much of it is still being built.\n\nIf you've a few minutes, head west to the sea front. The Worli seaface promenade runs along the shore, and at the northern end, by the fishing village, you'll get the same Sea Link view from ground level, and for free."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.993851447439337,
+      "centroidLongitude": 72.82026076301167,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "41f9d486-ee7c-5c92-b889-e97547fb3dcb",
+      "createdAt": "2026-10-15",
+      "title": "Slink & Bardot",
+      "shortDescription": "To find one of the smartest bars in Mumbai, you have to walk into a fishing village. That's rather the point. You're in Worli Koliwada — the…",
+      "longDescription": "To find one of the smartest bars in Mumbai, you have to walk into a fishing village. That's rather the point.\n\nHave a look at the bungalow first. It's been refurbished rather than replaced — which, in Worli, is the exception rather than the rule. Inside, it's a French bar and kitchen, with a speakeasy feel: low light, booths, lounge seating, a series of connected rooms, and music that starts unobtrusive and gets louder as the night goes on, with DJs at the weekend. The drinks are French classics and aperitifs — the French seventy-five is the one regulars point you to — and the food is small French plates.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-slink-and-bardot_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-slink-and-bardot_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-slink-and-bardot_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-slink-and-bardot_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d3271ae9-3416-5e2c-841c-127257046098",
+          "order": 0,
+          "title": "Slink & Bardot",
+          "caption": "In Worli Koliwada, outside Thadani House, opposite the Coast Guard station.",
+          "latitude": 19.017429560719297,
+          "longitude": 72.8174780805078,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-slink-and-bardot.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-slink-and-bardot_hero.webp",
+          "transcriptText": "To find one of the smartest bars in Mumbai, you have to walk into a fishing village. That's rather the point.\n\nYou're in Worli Koliwada — the Koli fishing village at the northern tip of Worli, on the road that runs opposite the Indian Coast Guard station. In front of you, an old colonial bungalow called Thadani House. Inside it is Slink & Bardot. Behind you, the lanes of the village run down to the boats.\n\nHave a look at the bungalow first. It's been refurbished rather than replaced — which, in Worli, is the exception rather than the rule. Inside, it's a French bar and kitchen, with a speakeasy feel: low light, booths, lounge seating, a series of connected rooms, and music that starts unobtrusive and gets louder as the night goes on, with DJs at the weekend. The drinks are French classics and aperitifs — the French seventy-five is the one regulars point you to — and the food is small French plates.\n\nNow look the other way, at the village. The Kolis are among the oldest inhabitants of the seven islands that became Bombay; the city's name, and the goddess Mumbadevi, belong to their world before they belonged to anyone else's. This koliwada still fishes. In the morning you'll see nets drying and boats coming in, a few hundred metres from tower blocks and the Sea Link.\n\nAnd here's the thing. There are two Mumbais within a hundred yards of where you're standing — a bar where a cocktail costs more than a fisherman might take home in a day, and a village that was here first. Neither is going anywhere soon. Being honest about that, standing here, is part of seeing the city properly.\n\nWalk on into the village while it's light. At the end of the lanes, on the point, is the little Worli Fort, put up by the British in the late seventeenth century, with one of the best views of the Sea Link in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.017429560719297,
+      "centroidLongitude": 72.8174780805078,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Colonial",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "945d32f3-4aab-5b69-808c-752d64381636",
+      "createdAt": "2026-10-15",
+      "title": "The Bombay Gymkhana",
+      "shortDescription": "India's first home Test match was played on the grass in front of you. The bar behind it is members only. You're on Mahatma Gandhi Road, at the…",
+      "longDescription": "India's first home Test match was played on the grass in front of you. The bar behind it is members only.\n\nThe club was founded in eighteen seventy-five, as a gentlemen's club for the British — and only the British. The clubhouse was designed by the English architect Claude Batley, with a broad verandah facing the ground, from which members could watch the game with a drink in hand. Have a look at the timbering and the deep roof: it's an English idea of a sports pavilion, adapted for a climate with a monsoon.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bombay-gymkhana_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5fd5cce8-9131-555a-a938-a727002ff4c1",
+          "order": 0,
+          "title": "The Bombay Gymkhana",
+          "caption": "On Mahatma Gandhi Road at the southern end of Azad Maidan, facing the Gymkhana clubhouse.",
+          "latitude": 18.937625814015316,
+          "longitude": 72.83075533603191,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-bombay-gymkhana.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bombay-gymkhana_hero.webp",
+          "transcriptText": "India's first home Test match was played on the grass in front of you. The bar behind it is members only.\n\nYou're on Mahatma Gandhi Road, at the triangular southern end of Azad Maidan, the great open ground of south Bombay, a short walk from the Victoria Terminus. The low, timbered clubhouse in front of you is the Bombay Gymkhana, and the cricket ground you're looking across is its own.\n\nThe club was founded in eighteen seventy-five, as a gentlemen's club for the British — and only the British. The clubhouse was designed by the English architect Claude Batley, with a broad verandah facing the ground, from which members could watch the game with a drink in hand. Have a look at the timbering and the deep roof: it's an English idea of a sports pavilion, adapted for a climate with a monsoon.\n\nNow the gift detail. On the fifteenth of December, nineteen thirty-three, India played its first ever home Test match here, against England, under the captain C K Nayudu. A young batsman called Lala Amarnath scored a century in it — India's first Test hundred — and people who saw it talked about it for the rest of their lives. Within a few years the big matches had moved to the Brabourne Stadium, and this ground went back to club cricket.\n\nHere's the thing about the bar. The guide that sent you here says it's usually full, and you need a member to take you in. That's quite true. It's still a private club, with private rules. But the club that kept Indians out at its founding is now entirely Indian, and the ground where the empire played its game became the place where India first played it back against England on home soil.\n\nIf you can't get in, walk out onto the maidan itself. On almost any day there are a dozen informal matches going at once, and you can stand at a boundary and watch the game the club made famous being played for nothing at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.937625814015316,
+      "centroidLongitude": 72.83075533603191,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Venue",
+        "History",
+        "Power",
+        "Colonial",
+        "Designed by a Master",
+        "Claude Batley"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b1a9a65c-923d-5b40-8bec-b506f2c54749",
+      "createdAt": "2026-10-15",
+      "title": "Willingdon Sports Club",
+      "shortDescription": "This club exists because another club refused to let some Indians in. You're in Tardeo, outside the gates of the Willingdon Sports Club — behind…",
+      "longDescription": "This club exists because another club refused to let some Indians in.\n\nHere's the story. Lord Willingdon became Governor of Bombay in nineteen thirteen, sent out, it was said, with the King's instruction to smash through the fences that divided the city's communities. He tried to bring Indian friends into the Royal Bombay Yacht Club, near the Gateway of India. They were refused. Willingdon resigned his membership, and in nineteen seventeen he founded a club of his own — this one — with no colour bar. Indians and Europeans could join on equal terms. It opened to members that December.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-willingdon-sports-club_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-willingdon-sports-club_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-willingdon-sports-club_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0ba299da-8c29-5a41-bfec-baa72a9de613",
+          "order": 0,
+          "title": "Willingdon Sports Club",
+          "caption": "On the road outside the main gate of the Willingdon Sports Club, Tardeo.",
+          "latitude": 18.976881996707544,
+          "longitude": 72.81534698050699,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-willingdon-sports-club.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-willingdon-sports-club_hero.webp",
+          "transcriptText": "This club exists because another club refused to let some Indians in.\n\nYou're in Tardeo, outside the gates of the Willingdon Sports Club — behind the wall, thirty-odd acres of lawns, a golf course and a clubhouse. You'll see the club's purple on the gate and the signs. Purple, as it happens, was Lady Willingdon's favourite colour; it went into the crest, and for decades into the waiters' uniforms.\n\nHere's the story. Lord Willingdon became Governor of Bombay in nineteen thirteen, sent out, it was said, with the King's instruction to smash through the fences that divided the city's communities. He tried to bring Indian friends into the Royal Bombay Yacht Club, near the Gateway of India. They were refused. Willingdon resigned his membership, and in nineteen seventeen he founded a club of his own — this one — with no colour bar. Indians and Europeans could join on equal terms. It opened to members that December.\n\nNow, inside those gates, the clubhouse was designed by F G B Hawkins, the architect of the city's Improvement Trust, and laid out with tennis courts, croquet lawns, a cricket ground and one of the first full-size polo fields in India. Indian princes came to play polo here; the Prince of Wales became an honorary member in nineteen twenty-one. And one small claim to fame: the club is said to be where eggs Kejriwal — fried eggs on cheese toast, with green chilli — was invented, by a member who couldn't eat eggs at home.\n\nAnd here's the thing. It would be easy to tell this as a story of a liberal governor and a happy ending. It's subtler than that. This was still a club for the rich, and today membership is mostly closed except to members' children. But in its moment, a door opened here that had been shut elsewhere, and the city noticed.\n\nIf you fancy completing the story, the Royal Bombay Yacht Club is on the waterfront at Apollo Bunder, beside the Gateway. Stand outside both and you've seen both sides of the same argument."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.976881996707544,
+      "centroidLongitude": 72.81534698050699,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Venue",
+        "History",
+        "Power",
+        "Colonial",
+        "Designed by a Master",
+        "F. G. B. Hawkins"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9b056d08-4ad3-5f30-9f99-bc6aedc3cf59",
+      "createdAt": "2026-10-15",
+      "title": "Bastian At The Top",
+      "shortDescription": "Forty-eight floors up, there's a restaurant designed to feel like a cave. It's a surprisingly good joke. You're on N C Kelkar Marg in Dadar…",
+      "longDescription": "Forty-eight floors up, there's a restaurant designed to feel like a cave. It's a surprisingly good joke.\n\nBastian is one of the best-known restaurant names in Mumbai, co-owned by the restaurateur Ranjit Bindra and the actor Shilpa Shetty. The original opened in Bandra in twenty sixteen, and this rooftop version opened in twenty twenty-three. It's big — four hundred and fifty seats — and divided between a main bar called the Forest and a quieter dining room. Bindra and the designer Minal Chopra went for earthy tones and curved, cave-like surfaces, with a slightly mythological air. There's a swimming pool, open at weekends.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bastian-at-the-top_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bastian-at-the-top_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bastian-at-the-top_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d8cc23da-61c8-55db-9df9-7495b01a4772",
+          "order": 0,
+          "title": "Bastian At The Top",
+          "caption": "On N C Kelkar Marg, Dadar West, at the foot of Kohinoor Square.",
+          "latitude": 19.025084180690772,
+          "longitude": 72.84108765352431,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-bastian-at-the-top.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bastian-at-the-top_hero.webp",
+          "transcriptText": "Forty-eight floors up, there's a restaurant designed to feel like a cave. It's a surprisingly good joke.\n\nYou're on N C Kelkar Marg in Dadar West, at the foot of Kohinoor Square, one of the tallest towers in this part of the city. Look up: Bastian At The Top occupies the forty-eighth floor.\n\nBastian is one of the best-known restaurant names in Mumbai, co-owned by the restaurateur Ranjit Bindra and the actor Shilpa Shetty. The original opened in Bandra in twenty sixteen, and this rooftop version opened in twenty twenty-three. It's big — four hundred and fifty seats — and divided between a main bar called the Forest and a quieter dining room. Bindra and the designer Minal Chopra went for earthy tones and curved, cave-like surfaces, with a slightly mythological air. There's a swimming pool, open at weekends.\n\nHave a look at the menu if you're going up. It began as a seafood restaurant, and the seafood is still the draw — steamed garlic prawns, the much-photographed lobster bomb — alongside burrata, Mongolian lamb and rice bowls at lunch. The guide that sent you here calls it Mumbai's largest bar; that's a claim I'd leave to the owners, but nobody would call it small.\n\nAnd here's the thing about Dadar. This is not glamour country. It's one of the most Marathi parts of Mumbai, a neighbourhood of flower markets, cricket and political rallies at Shivaji Park, a few hundred metres away. Putting the city's most celebrity-heavy dining room on top of a tower here says a lot about where Mumbai's money is moving: north from the old Fort, into the middle of the city.\n\nIf you've time before going up, walk to Shivaji Park. It's where Sachin Tendulkar learned his cricket, and on a weekend evening there will be dozens of matches running at once on the dusty ground."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.025084180690772,
+      "centroidLongitude": 72.84108765352431,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Tower",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "746258af-f84f-5c06-a48f-bf6e55d70010",
+      "createdAt": "2026-10-15",
+      "title": "The Taj Mahal Palace",
+      "shortDescription": "The hotel in front of you had electricity before most of the city did. It ran its own power station to manage it. You're on the waterfront at…",
+      "longDescription": "The hotel in front of you had electricity before most of the city did. It ran its own power station to manage it.\n\nThe Taj was built by Jamsetji Tata, the industrialist, and it opened on the sixteenth of December, nineteen oh three — before the Gateway existed. There's a popular story that Tata built it after being turned away from a whites-only hotel; historians have their doubts, and the truth is probably more ordinary and more ambitious. He wanted Bombay to have a hotel as good as any in Europe, and he went to the exhibitions of Europe and America to equip it. He came back with lifts and American electric fans, and installed a power plant in the building to run them. The hotel likes to say it was the first in India with electricity, and it's at least true that very few buildings here had it.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-taj-mahal-palace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-taj-mahal-palace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-taj-mahal-palace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-taj-mahal-palace_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a5db0ccb-b19b-5e8f-ad07-a154cce7c00c",
+          "order": 0,
+          "title": "The Taj Mahal Palace",
+          "caption": "On the Apollo Bunder waterfront, beside the Gateway of India, looking across at the hotel's sea face.",
+          "latitude": 18.921778,
+          "longitude": 72.8332848,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-taj-mahal-palace.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-taj-mahal-palace_hero.webp",
+          "transcriptText": "The hotel in front of you had electricity before most of the city did. It ran its own power station to manage it.\n\nYou're on the waterfront at Apollo Bunder, with the Gateway of India at your shoulder and the harbour behind you. Facing you, the old wing of the Taj Mahal Palace: grey stone with pale trim, rows of arched balconies, small domes at the corners, and a great red dome in the middle. To its right, your right, the taller tower block added in the nineteen seventies.\n\nThe Taj was built by Jamsetji Tata, the industrialist, and it opened on the sixteenth of December, nineteen oh three — before the Gateway existed. There's a popular story that Tata built it after being turned away from a whites-only hotel; historians have their doubts, and the truth is probably more ordinary and more ambitious. He wanted Bombay to have a hotel as good as any in Europe, and he went to the exhibitions of Europe and America to equip it. He came back with lifts and American electric fans, and installed a power plant in the building to run them. The hotel likes to say it was the first in India with electricity, and it's at least true that very few buildings here had it.\n\nHave a look at the architecture. The architects were two Indians, Sitaram Khanderao Vaidya and D N Mirza, and the result is a mixture — Moorish, Florentine, Rajput — that only really makes sense in Bombay. Inside, the Harbour Bar claims to be the city's first licensed bar.\n\nOn the twenty-sixth of November, two thousand and eight, gunmen attacked the hotel. The siege lasted three days; at least thirty-one people died here, guests and staff among them, and the great dome caught fire on live television. Parts of the hotel reopened within a month. The staff who stayed at their posts to protect guests are remembered inside, and that is the story people in this city tell about the building now.\n\nIf you'd like to see it properly, walk in. The lobby and the arcades of the old wing are open to anyone, and the sea lounge on the first floor looks straight out at the Gateway — the view Tata built the whole thing for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.921778,
+      "centroidLongitude": 72.8332848,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Remembrance",
+        "Colonial",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Sitaram Khanderao Vaidya",
+        "D. N. Mirza"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2b950c86-684e-502a-994e-94083adbd8c6",
+      "createdAt": "2026-10-15",
+      "title": "The Oberoi, Nariman Point",
+      "shortDescription": "Every grand old hotel in this city faces the harbour. This one chose the open sea. You're at Nariman Point, at the southern tip of Marine Drive…",
+      "longDescription": "Every grand old hotel in this city faces the harbour. This one chose the open sea.\n\nThe neighbour came first. It opened in nineteen seventy-three as the Oberoi-Sheraton, later the Oberoi Towers, on land that had been reclaimed from the sea only a few years earlier. Nariman Point itself is a piece of engineering: the bay was filled in during the nineteen sixties and seventies to create the office district you're standing in. The Oberoi beside it, the smaller and smarter of the pair, followed, with two hundred and thirty-seven rooms that look out over the Arabian Sea or across Back Bay to Malabar Hill.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-oberoi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-oberoi_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "61016c23-d307-5da7-8741-169722e1a8c2",
+          "order": 0,
+          "title": "The Oberoi, Nariman Point",
+          "caption": "At the southern end of Marine Drive, Nariman Point, facing The Oberoi from the sea wall.",
+          "latitude": 18.927006436873356,
+          "longitude": 72.82007768216923,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-the-oberoi.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-the-oberoi_hero.webp",
+          "transcriptText": "Every grand old hotel in this city faces the harbour. This one chose the open sea.\n\nYou're at Nariman Point, at the southern tip of Marine Drive, by the sea wall. With the water behind you, look at the tall, pale hotel with The Oberoi on it. Next to it stands its older sister, the Trident — the two are joined, and for most of their lives they've been thought of as one place.\n\nThe neighbour came first. It opened in nineteen seventy-three as the Oberoi-Sheraton, later the Oberoi Towers, on land that had been reclaimed from the sea only a few years earlier. Nariman Point itself is a piece of engineering: the bay was filled in during the nineteen sixties and seventies to create the office district you're standing in. The Oberoi beside it, the smaller and smarter of the pair, followed, with two hundred and thirty-seven rooms that look out over the Arabian Sea or across Back Bay to Malabar Hill.\n\nHave a look at the view the rooms are built for. Turn round, if you like. The long curve of Marine Drive runs away to your right, the Art Deco blocks along it, and at the far end, the green bulk of Malabar Hill. At night that curve becomes the Queen's Necklace.\n\nWhat's worth knowing, standing here, is what happened in this building in November two thousand and eight. Gunmen attacked both The Oberoi and the Trident, and guests and staff died inside. The hotel closed for more than a year and was rebuilt, reopening in twenty ten. It's a strange thing, a luxury hotel as a memorial, but the people who work here have never treated it as anything else.\n\nBefore you go, head up to the Eau Bar terrace if it's evening, or simply walk north along the sea wall. Most of Marine Drive's Art Deco is within a twenty-minute stroll, and the light on the buildings at sunset is the best way to see it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.927006436873356,
+      "centroidLongitude": 72.82007768216923,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Waterfront",
+        "Engineering",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "91cb8f5a-e42e-56f6-b42d-39b8581a82ca",
+      "createdAt": "2026-10-15",
+      "title": "The Royal Bombay Yacht Club",
+      "shortDescription": "Turn your back on the Gateway for a moment. The building across the road made the city change its mind about something. You're at Apollo Bunder…",
+      "longDescription": "Turn your back on the Gateway for a moment. The building across the road made the city change its mind about something.\n\nThe club was founded in eighteen forty-six, and Queen Victoria allowed it to add Royal to its name thirty years later. This building, designed by the architect John Adams, was finished in eighteen ninety-six. Have a look at the style: Venetian Gothic, with Indian touches worked in — pointed arches and deep shade, the look of a Venetian palazzo that has learned about the monsoon.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-royal-bombay-yacht-club_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-royal-bombay-yacht-club_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "873fc6fb-62d0-59e8-8987-44e5a05c50a5",
+          "order": 0,
+          "title": "The Royal Bombay Yacht Club",
+          "caption": "On Chhatrapati Shivaji Maharaj Marg at Apollo Bunder, across the road from the clubhouse, with the Gateway of India behind you.",
+          "latitude": 18.923737544854294,
+          "longitude": 72.83353005057957,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-royal-bombay-yacht-club.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-royal-bombay-yacht-club_hero.webp",
+          "transcriptText": "Turn your back on the Gateway for a moment. The building across the road made the city change its mind about something.\n\nYou're at Apollo Bunder, with the harbour and the Gateway of India behind you. Across the road, a stone clubhouse with a steep tiled roof, gables and Gothic windows: the Royal Bombay Yacht Club.\n\nThe club was founded in eighteen forty-six, and Queen Victoria allowed it to add Royal to its name thirty years later. This building, designed by the architect John Adams, was finished in eighteen ninety-six. Have a look at the style: Venetian Gothic, with Indian touches worked in — pointed arches and deep shade, the look of a Venetian palazzo that has learned about the monsoon.\n\nNow the story that matters. For more than a century, membership was for Europeans only. During his time as Governor of Bombay, Lord Willingdon tried to bring Indian friends in as his guests. They were refused. He resigned, and in nineteen seventeen founded the Willingdon Sports Club, on the other side of the city, specifically with no colour bar. The Yacht Club itself stayed European until the nineteen fifties. The first Indian invited to join, Kerse Naoroji, turned it down for several years before accepting in nineteen fifty-nine.\n\nAnd here's the thing. The club still sails, still has its bar and its library, and still keeps residential rooms overlooking the Gateway — rooms you can only book through a member. In two thousand and thirteen, the restored residential chambers won a UNESCO heritage award. A building that once kept most of the city out is now valued by the whole city as part of its face to the sea.\n\nBefore you go, look along the waterfront at the club's neighbours: the Gateway, the Taj, and, set back, the old Sailors' Home, also by John Adams, which is now the headquarters of Maharashtra's police. One architect, two very different ideas of who the waterfront was for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.923737544854294,
+      "centroidLongitude": 72.83353005057957,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Maritime",
+        "Gothic",
+        "Colonial",
+        "Designed by a Master",
+        "John Adams"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0cc0b0cc-60b1-5e13-a4f0-5931fa1dd65e",
+      "createdAt": "2026-10-15",
+      "title": "InterContinental Marine Drive",
+      "shortDescription": "The newest building on this stretch of Marine Drive was told, more or less, to dress up as the oldest. You're on the Marine Drive promenade…",
+      "longDescription": "The newest building on this stretch of Marine Drive was told, more or less, to dress up as the oldest.\n\nHave a look at its neighbours first: the long run of apartment blocks to either side, with rounded balconies, horizontal bands and stepped tops. That's Art Deco, built mostly in the nineteen thirties and forties, much of it for wealthy Parsi families. In twenty eighteen, UNESCO made this stretch part of a World Heritage Site — the Victorian Gothic and Art Deco Ensembles of Mumbai.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-intercontinental-marine-drive_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-intercontinental-marine-drive_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-intercontinental-marine-drive_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-intercontinental-marine-drive_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b75a2fd9-f8d4-592b-ac0e-afcc8d72a183",
+          "order": 0,
+          "title": "InterContinental Marine Drive",
+          "caption": "On the Marine Drive promenade, across the road from number one thirty-five, the InterContinental.",
+          "latitude": 18.93527479562398,
+          "longitude": 72.82438323817826,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-intercontinental-marine-drive.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-intercontinental-marine-drive_hero.webp",
+          "transcriptText": "The newest building on this stretch of Marine Drive was told, more or less, to dress up as the oldest.\n\nYou're on the Marine Drive promenade, with the sea wall behind you. Across the road, look for a cream-coloured building of eight storeys, with one rounded corner and a short turret on the roof. That's the InterContinental Marine Drive.\n\nHave a look at its neighbours first: the long run of apartment blocks to either side, with rounded balconies, horizontal bands and stepped tops. That's Art Deco, built mostly in the nineteen thirties and forties, much of it for wealthy Parsi families. In twenty eighteen, UNESCO made this stretch part of a World Heritage Site — the Victorian Gothic and Art Deco Ensembles of Mumbai.\n\nNow look back at the hotel. For decades this plot held the Hotel Nataraj. When it was rebuilt as the InterContinental — it's been here a little over twenty years — anything new on Marine Drive had to sit politely among its neighbours. So the architects gave it a rounded side and that turret, so it would read, at a glance, as one of the family. It's a small hotel, just fifty-nine rooms, and every one faces the sea.\n\nThat turret, by the way, has a job. Up there is the Dome, the hotel's rooftop bar, and it's one of the classic places in the city to watch the sun go down over the Arabian Sea.\n\nAnd here's the thing. This is how a heritage street survives — not only by keeping the old buildings, but by persuading the new ones to behave. You can argue about whether a modern hotel ought to imitate the nineteen thirties. But stand here and look along the row, and you'll find it hard to pick out the impostor.\n\nIf you fancy finding the real thing, walk north along the promenade towards Churchgate. Keep an eye out for Kapur Mahal, Zaver Mahal and Keval Mahal — three of the earliest Deco blocks on the drive, built between nineteen thirty-seven and nineteen thirty-nine."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.93527479562398,
+      "centroidLongitude": 72.82438323817826,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Waterfront",
+        "Art Deco",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f210858e-ee17-592c-9670-16b35101b0e6",
+      "createdAt": "2026-10-15",
+      "title": "Colaba Causeway",
+      "shortDescription": "The street you're standing on used to be under water at high tide. That's not a figure of speech. You're on Colaba Causeway, officially Shahid…",
+      "longDescription": "The street you're standing on used to be under water at high tide. That's not a figure of speech.\n\nHere's the story of the street. Colaba was once two separate islands at the bottom of Bombay, reachable on foot only at low tide; at high tide you went by boat, and overcrowded boats sometimes capsized. In eighteen thirty-eight the East India Company finished a causeway to join them to the rest of the city. It was widened twice in the eighteen sixties, and the road you're standing on is that causeway, long since swallowed by buildings on either side.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-colaba-causeway_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-colaba-causeway_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-colaba-causeway_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "838ebd55-c96d-5d84-96d7-e31c8ebcd501",
+          "order": 0,
+          "title": "Colaba Causeway",
+          "caption": "On Colaba Causeway, outside Leopold Cafe, at the corner of Nowroji Furdonji Road.",
+          "latitude": 18.922851770313038,
+          "longitude": 72.83166455461954,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-colaba-causeway.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-colaba-causeway_hero.webp",
+          "transcriptText": "The street you're standing on used to be under water at high tide. That's not a figure of speech.\n\nYou're on Colaba Causeway, officially Shahid Bhagat Singh Road, outside Leopold Cafe — the one with the open front and the busy ceiling fans. The pavements on both sides are crowded with stalls: sunglasses, scarves, silver jewellery, books, and a great deal of bargaining.\n\nHere's the story of the street. Colaba was once two separate islands at the bottom of Bombay, reachable on foot only at low tide; at high tide you went by boat, and overcrowded boats sometimes capsized. In eighteen thirty-eight the East India Company finished a causeway to join them to the rest of the city. It was widened twice in the eighteen sixties, and the road you're standing on is that causeway, long since swallowed by buildings on either side.\n\nHave a look at Leopold. It was founded in eighteen seventy-one by Iranis — Zoroastrian immigrants from Persia — and named after the King of the Belgians. In its early years it was a shop of one kind or another — accounts differ as to whether it sold cooking oil or medicines — before becoming the cafe and bar it is now. In November two thousand and eight it was one of the first places attacked in the assault on the city, and the bullet holes in the walls were deliberately left in place. Look for them inside.\n\nAnd here's the thing. The guide that sent you here notes there are no high-end shops on the Causeway. That's not quite a criticism. This is a street where everything is for sale, cheaply, to everybody, as it's been for a century and a half.\n\nIf you've time, walk south along the Causeway into Colaba proper. The stalls thin out, and in fifteen minutes or so you'll reach Sassoon Dock, the fish market where the city's catch has come ashore since eighteen seventy-five. Early morning is when it's at its loudest."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.922851770313038,
+      "centroidLongitude": 72.83166455461954,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "Market",
+        "Commerce",
+        "Engineering",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "219f9236-c058-5b7a-9a29-7b7332317402",
+      "createdAt": "2026-10-15",
+      "title": "Kala Ghoda",
+      "shortDescription": "Kala Ghoda means black horse. For more than fifty years, there wasn't one. You're at the Kala Ghoda junction, in the middle of Bombay's art…",
+      "longDescription": "Kala Ghoda means black horse. For more than fifty years, there wasn't one.\n\nHere's the story of the name. In the late nineteenth century, the Sassoon family — Baghdadi Jewish merchants who did a great deal to build this part of the city — presented a black stone statue of King Edward the Seventh on horseback, as Prince of Wales. It was everyone's landmark, so the district took its name. In nineteen sixty-five, with independent India removing its colonial statues, the king and his horse were taken down and moved to the gardens at Byculla, where you can still visit them. The neighbourhood kept the name and lost the horse. Then in twenty seventeen, the Kala Ghoda Association commissioned this one, the Spirit of Kala Ghoda, without a king.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-kala-ghoda_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-kala-ghoda_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-kala-ghoda_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-kala-ghoda_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-kala-ghoda_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dd8ecfa4-eb6c-5f52-b46a-510f67f80c57",
+          "order": 0,
+          "title": "Kala Ghoda",
+          "caption": "At the Kala Ghoda junction, beside the riderless black horse statue.",
+          "latitude": 18.927978198297573,
+          "longitude": 72.83183916647423,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-kala-ghoda.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-kala-ghoda_hero.webp",
+          "transcriptText": "Kala Ghoda means black horse. For more than fifty years, there wasn't one.\n\nYou're at the Kala Ghoda junction, in the middle of Bombay's art district, beside a black horse on a plinth — standing, saddled, and quite riderless. Around you: Victorian stone buildings, galleries, cafes, and, if you look south, the dome of the city's great museum behind its gardens.\n\nHere's the story of the name. In the late nineteenth century, the Sassoon family — Baghdadi Jewish merchants who did a great deal to build this part of the city — presented a black stone statue of King Edward the Seventh on horseback, as Prince of Wales. It was everyone's landmark, so the district took its name. In nineteen sixty-five, with independent India removing its colonial statues, the king and his horse were taken down and moved to the gardens at Byculla, where you can still visit them. The neighbourhood kept the name and lost the horse. Then in twenty seventeen, the Kala Ghoda Association commissioned this one, the Spirit of Kala Ghoda, without a king.\n\nHave a look around the junction. Jehangir Art Gallery, the city's best-known exhibition space. The David Sassoon Library. The pale blue front of Knesseth Eliyahoo Synagogue, a short walk away. And Esplanade Mansion, once Watson's Hotel, which is said to be the oldest surviving cast-iron building in India.\n\nAnd here's the thing. A horse without its rider is a rather neat image for what this city did after empire. It kept the buildings, the streets and the names, and quietly took the king off the top.\n\nIf you're here in February, the Kala Ghoda Arts Festival takes over these streets for nine days. At any other time of year, walk down V B Gandhi Marg to the synagogue, past the old Rhythm House corner and the galleries — a whole afternoon within five minutes of this horse."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.927978198297573,
+      "centroidLongitude": 72.83183916647423,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "District",
+        "Art",
+        "Public Art",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "88f5590d-9f21-548b-a217-59919becd93b",
+      "createdAt": "2026-10-15",
+      "title": "Chor Bazaar",
+      "shortDescription": "Chor Bazaar means Thieves' Market. It almost certainly started out as something else. You're on Mutton Street, in the old Muslim quarter near…",
+      "longDescription": "Chor Bazaar means Thieves' Market. It almost certainly started out as something else.\n\nHere's the trouble with the name. The story most people here will tell you is that this was once Shor Bazaar — the noisy market — and that the British couldn't, or wouldn't, pronounce it, and turned shor into chor, the word for thief. Nobody has ever quite proved it. But it's the sort of explanation that sticks because it fits: the place is noisy, and over the years enough stolen goods passed through it that the new name earned itself.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-chor-bazaar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-chor-bazaar_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ca2dd687-2b2c-5b7a-8a5c-8cbf2b2d83e8",
+          "order": 0,
+          "title": "Chor Bazaar",
+          "caption": "On Mutton Street, in the middle of the antique and furniture shops.",
+          "latitude": 18.960039957504858,
+          "longitude": 72.82988845352303,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-chor-bazaar.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-chor-bazaar_hero.webp",
+          "transcriptText": "Chor Bazaar means Thieves' Market. It almost certainly started out as something else.\n\nYou're on Mutton Street, in the old Muslim quarter near Bhendi Bazaar, in south Mumbai. Around you, shopfronts overflowing onto the road: brass lamps, gramophones, ships' clocks, carved doors, old film posters, chandeliers, chairs stacked six high. The lanes either side carry on in the same vein for blocks.\n\nHere's the trouble with the name. The story most people here will tell you is that this was once Shor Bazaar — the noisy market — and that the British couldn't, or wouldn't, pronounce it, and turned shor into chor, the word for thief. Nobody has ever quite proved it. But it's the sort of explanation that sticks because it fits: the place is noisy, and over the years enough stolen goods passed through it that the new name earned itself.\n\nThen there's the other story — that Queen Victoria lost a violin, or some other possessions, while visiting India, and that they turned up for sale here. It's a lovely tale. It also has a small flaw: Queen Victoria never visited India.\n\nHave a look at what's actually on sale. A great deal of the furniture is genuinely old, rescued from bungalows and mansions as the city tore them down. A great deal of the rest is skilfully made to look old, in workshops round the corner. The Bollywood posters are a speciality — hand-painted ones from the old cinemas are the real prize. The skill is telling one from the other, and the shopkeepers are, it must be said, better at it than you are.\n\nThe market has been here for something like a hundred and fifty years, through every redevelopment scheme the city has thrown at it. If you've time, walk east into Bhendi Bazaar for kebabs and sweets on the main road — and haggle here, politely and at length. Nobody in this street expects the first price to be the last."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.960039957504858,
+      "centroidLongitude": 72.82988845352303,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75499e75-6678-5873-b656-b91cfada0b0f",
+      "createdAt": "2026-10-15",
+      "title": "Gateway of India",
+      "shortDescription": "The king it was built for never walked through it. He got a cardboard version. You're at Apollo Bunder on the waterfront, in front of the…",
+      "longDescription": "The king it was built for never walked through it. He got a cardboard version.\n\nHere's why it's here. In December nineteen eleven, King George the Fifth and Queen Mary landed in India, the first reigning British monarch to do so. The city wanted a grand ceremonial entrance. There wasn't time to build one, so the royal party was greeted by a temporary structure, largely of cardboard. The foundation stone of the real thing was laid in nineteen thirteen, the Scottish architect George Wittet's design was approved in nineteen fourteen, and the Gateway finally opened in nineteen twenty-four, thirteen years after the visit it commemorates.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-gateway-of-india_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-gateway-of-india_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-gateway-of-india_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "32537553-5c02-59c3-86c3-7454e7829a5f",
+          "order": 0,
+          "title": "Gateway of India",
+          "caption": "On the Apollo Bunder waterfront, in front of the Gateway's central arch, facing the harbour.",
+          "latitude": 18.922187063268677,
+          "longitude": 72.83461138050585,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-gateway-of-india.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-gateway-of-india_hero.webp",
+          "transcriptText": "The king it was built for never walked through it. He got a cardboard version.\n\nYou're at Apollo Bunder on the waterfront, in front of the Gateway of India: a single great arch in yellow basalt, twenty-six metres high, with four turrets on top and the harbour beyond it. Behind you, the Taj Mahal Palace hotel. Ahead, the ferries heading out to Elephanta and to Alibaug.\n\nHere's why it's here. In December nineteen eleven, King George the Fifth and Queen Mary landed in India, the first reigning British monarch to do so. The city wanted a grand ceremonial entrance. There wasn't time to build one, so the royal party was greeted by a temporary structure, largely of cardboard. The foundation stone of the real thing was laid in nineteen thirteen, the Scottish architect George Wittet's design was approved in nineteen fourteen, and the Gateway finally opened in nineteen twenty-four, thirteen years after the visit it commemorates.\n\nHave a look at the detail on the arch. Wittet borrowed heavily from sixteenth-century Gujarati architecture — the carved stone screens, the arches, the bracketed balconies — and mixed it with a Roman triumphal arch. It's what's called Indo-Saracenic: an imperial building dressed in Indian clothes.\n\nAnd here's the twist that makes it worth standing here. On the twenty-eighth of February, nineteen forty-eight, the last British troops to leave India — the First Battalion of the Somerset Light Infantry — marched through this arch to their ship, to a twenty-one gun salute. The gate built to welcome the empire in became the door it left by.\n\nIf you have a couple of hours, take a ferry from the jetty steps to Elephanta Island. Its rock-cut cave temples are more than a thousand years older than anything on this waterfront, and the view back at the Gateway from the water is the one Wittet actually designed for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.922187063268677,
+      "centroidLongitude": 72.83461138050585,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Monument",
+        "Maritime",
+        "Colonial",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "George Wittet"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8feea001-54ba-5c05-87ee-746d86aa80ed",
+      "createdAt": "2026-10-15",
+      "title": "Marine Drive",
+      "shortDescription": "Behind you is the sea. In front of you is one of the largest collections of Art Deco buildings anywhere in the world. You're on the promenade at…",
+      "longDescription": "Behind you is the sea. In front of you is one of the largest collections of Art Deco buildings anywhere in the world.\n\nHave a look across the road. That row of cream, pale yellow and white apartment blocks — rounded corners, long balconies, horizontal bands, names on the fronts like Kapur Mahal, Zaver Mahal, Keval Mahal — is Art Deco. Most of it went up from the late nineteen thirties, built largely by wealthy Parsi families on freshly reclaimed land, when the promenade itself was completed. Look for the details: porthole windows, ship-like railings, sunburst grilles over the doors. This is a city that had just discovered streamlining, and decided it suited a sea front.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-marine-drive_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-marine-drive_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1a69ef1a-305e-52ab-a1bf-9a9a1d7fa40c",
+          "order": 0,
+          "title": "Marine Drive",
+          "caption": "On the Marine Drive promenade, at the sea wall opposite the Art Deco blocks near Churchgate.",
+          "latitude": 18.933727637047987,
+          "longitude": 72.82341104555498,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-marine-drive.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-marine-drive_hero.webp",
+          "transcriptText": "Behind you is the sea. In front of you is one of the largest collections of Art Deco buildings anywhere in the world.\n\nYou're on the promenade at Marine Drive, with the sea wall at your back and the six-lane road in front of you. The promenade runs for about three kilometres in a long curve, from Nariman Point at the southern end to Chowpatty Beach at the foot of Malabar Hill.\n\nHave a look across the road. That row of cream, pale yellow and white apartment blocks — rounded corners, long balconies, horizontal bands, names on the fronts like Kapur Mahal, Zaver Mahal, Keval Mahal — is Art Deco. Most of it went up from the late nineteen thirties, built largely by wealthy Parsi families on freshly reclaimed land, when the promenade itself was completed. Look for the details: porthole windows, ship-like railings, sunburst grilles over the doors. This is a city that had just discovered streamlining, and decided it suited a sea front.\n\nIn twenty eighteen, UNESCO inscribed these buildings, together with the Victorian Gothic ones across the Oval Maidan, as a World Heritage Site. It's one of the few places where you can stand between two centuries of architecture, a few hundred metres apart.\n\nNow, the Queen's Necklace. Come back at night, or look at photos taken from Malabar Hill after dark: the streetlights curve round the bay like a string of pearls. That's the nickname, and it's well earned.\n\nAnd here's the thing about the promenade itself. It's the city's living room. Couples, joggers, retired men in pairs, families, vendors selling roasted corn — everyone comes to the sea wall, nobody is charged a rupee, and it's one of the only places in Mumbai where you can see the horizon.\n\nIf you've the energy, walk north along the sea wall to Chowpatty Beach. It's about half an hour, the Deco blocks keep you company most of the way, and the last of the sunset is best watched from the sand."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.933727637047987,
+      "centroidLongitude": 72.82341104555498,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Waterfront",
+        "Architecture",
+        "Art Deco",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9b367ee6-c80c-5591-9e7b-0835554fd3b9",
+      "createdAt": "2026-10-15",
+      "title": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+      "shortDescription": "The Prince of Wales laid the first stone of this museum. By the time it opened, it was being used as a military hospital. You're inside the…",
+      "longDescription": "The Prince of Wales laid the first stone of this museum. By the time it opened, it was being used as a military hospital.\n\nThe foundation stone was laid in November nineteen oh five by the Prince of Wales, later King George the Fifth. The design came from an open competition, and was won by George Wittet — the same Scottish architect who would go on to design the Gateway of India down the road. The building was finished in nineteen fifteen, but the First World War got there first: it served as a children's welfare centre and a military hospital before the museum finally opened in January nineteen twenty-two.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-csmvs_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-csmvs_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ad7069fc-8860-5516-9375-55c673e1a282",
+          "order": 0,
+          "title": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+          "caption": "Inside the museum's garden gate on Mahatma Gandhi Road, Kala Ghoda, facing the domed main building.",
+          "latitude": 18.9269268,
+          "longitude": 72.8326498,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-csmvs.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-csmvs_hero.webp",
+          "transcriptText": "The Prince of Wales laid the first stone of this museum. By the time it opened, it was being used as a military hospital.\n\nYou're inside the garden gate on Mahatma Gandhi Road, in Kala Ghoda, looking along the path to a large domed building in grey and buff stone — the Chhatrapati Shivaji Maharaj Vastu Sangrahalaya, which the guide that sent you here, and many older Bombayites, still call the Prince of Wales Museum.\n\nThe foundation stone was laid in November nineteen oh five by the Prince of Wales, later King George the Fifth. The design came from an open competition, and was won by George Wittet — the same Scottish architect who would go on to design the Gateway of India down the road. The building was finished in nineteen fifteen, but the First World War got there first: it served as a children's welfare centre and a military hospital before the museum finally opened in January nineteen twenty-two.\n\nHave a look at the stone. The grey is local basalt quarried at Kurla; the warm buff is trachyte from Malad. Then the white dome, which Wittet modelled on the domes of the Deccan sultanates. Under it, a mix of Mughal, Maratha and Jain detail — the style called Indo-Saracenic, which tried to give imperial buildings an Indian face.\n\nAnd here's the thing. In nineteen ninety-eight the museum was renamed after Shivaji, the seventeenth-century founder of the Maratha kingdom. A building begun to honour an English prince now carries the name of an Indian king. It hasn't changed a stone of it, which is perhaps the most Bombay thing about it.\n\nGo in if you have an hour. The museum holds around fifty thousand objects — Indus Valley finds, sculpture from the Elephanta caves, miniature paintings, and a suit of armour said to have belonged to the emperor Akbar. And if you haven't yet, the black horse of Kala Ghoda is just outside the gate."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.9269268,
+      "centroidLongitude": 72.8326498,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Colonial",
+        "Designed by a Master",
+        "George Wittet"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "21dad720-d2dd-5fb1-b263-d37752c18c5f",
+      "createdAt": "2026-10-15",
+      "title": "Bandra–Worli Sea Link and the Coastal Road",
+      "shortDescription": "From a Portuguese watchtower, you're looking at the newest way into the city. Both were built to control traffic. You're at Land's End in…",
+      "longDescription": "From a Portuguese watchtower, you're looking at the newest way into the city. Both were built to control traffic.\n\nThe fort first. The Portuguese built it in sixteen forty, as a watchtower over the bay and the sea. Its real name is Castella de Aguada — the fort of the watering place — because there was a freshwater spring here where passing ships could fill their casks.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bandra-worli-sea-link_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bandra-worli-sea-link_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bandra-worli-sea-link_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a432b722-a4bc-5067-9cc8-33543ef437f8",
+          "order": 0,
+          "title": "Bandra–Worli Sea Link and the Coastal Road",
+          "caption": "On the ramparts of Bandra Fort, Land's End, Bandra, looking south across the bay at the Sea Link.",
+          "latitude": 19.0418641,
+          "longitude": 72.8183782,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-bandra-worli-sea-link.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bandra-worli-sea-link_hero.webp",
+          "transcriptText": "From a Portuguese watchtower, you're looking at the newest way into the city. Both were built to control traffic.\n\nYou're at Land's End in Bandra, on the old stone ramparts of Bandra Fort, looking south across Mahim Bay. That great curve of bridge across the water, with its tall pylons and fans of cables, is the Bandra–Worli Sea Link. On the far shore, the towers of Worli.\n\nThe fort first. The Portuguese built it in sixteen forty, as a watchtower over the bay and the sea. Its real name is Castella de Aguada — the fort of the watering place — because there was a freshwater spring here where passing ships could fill their casks.\n\nNow the bridge. It's five point six kilometres long, eight lanes wide, and opened in two thousand and nine. Have a look at the central sections: those are cable-stayed spans, hung from pylons around a hundred and twenty-six metres tall, with hundreds of steel stays fanning down to the deck. The rest is concrete viaduct on piers in the sea. Before it opened, the drive from Bandra to Worli could take the better part of an hour. Now it can take about ten minutes, for a toll.\n\nAt its southern end, the bridge now meets the Coastal Road, the first phase of which opened in twenty twenty-four. It runs along the shore to Marine Drive, partly on reclaimed land and partly through twin tunnels, about two kilometres long, under Malabar Hill and under the sea off Chowpatty Beach.\n\nAnd here's the thing. Mumbai has always been a city of islands that refused to stay islands — the causeways, the reclamations, the railways. This is just the latest version. Whether it's progress or just more traffic is a fierce local argument, and you'll hear both sides.\n\nIf you'd like to cross it, take a taxi over the Sea Link at dusk, when the cables are lit. Or stay here a while: the bay at sunset, from the Portuguese walls, is one of the best free views in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.0418641,
+      "centroidLongitude": 72.8183782,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "History",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cfca4c7a-bd3d-5630-a159-9ac706ddfda7",
+      "createdAt": "2026-10-15",
+      "title": "Dr Bhau Daji Lad Museum",
+      "shortDescription": "The oldest museum in the city is also where its old statues came to retire. You're in the gardens at Byculla, called Jijamata Udyan, standing in…",
+      "longDescription": "The oldest museum in the city is also where its old statues came to retire.\n\nThe museum began in eighteen fifty-five as a collection of the decorative and industrial arts of the region. The cornerstone of this building was laid in eighteen sixty-two, and it opened on the second of May, eighteen seventy-two, as the Victoria and Albert Museum, Bombay. Its benefactors were the merchant princes of the city — David Sassoon, Jamsetjee Jejeebhoy, Jagannath Shankarseth. In nineteen seventy-five it was renamed after Dr Bhau Daji Lad, a physician, scholar and philanthropist who did much to found it.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bhau-daji-lad-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bhau-daji-lad-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bhau-daji-lad-museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "30f3f80c-2f6c-50e6-9226-de48d83599d6",
+          "order": 0,
+          "title": "Dr Bhau Daji Lad Museum",
+          "caption": "In Jijamata Udyan, Byculla, in front of the museum's portico, by the stone elephant.",
+          "latitude": 18.979171502728466,
+          "longitude": 72.8347938381791,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-bhau-daji-lad-museum.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bhau-daji-lad-museum_hero.webp",
+          "transcriptText": "The oldest museum in the city is also where its old statues came to retire.\n\nYou're in the gardens at Byculla, called Jijamata Udyan, standing in front of a pale classical building with a columned portico: the Dr Bhau Daji Lad Museum. Near you, on the lawn, a great stone elephant.\n\nThe museum began in eighteen fifty-five as a collection of the decorative and industrial arts of the region. The cornerstone of this building was laid in eighteen sixty-two, and it opened on the second of May, eighteen seventy-two, as the Victoria and Albert Museum, Bombay. Its benefactors were the merchant princes of the city — David Sassoon, Jamsetjee Jejeebhoy, Jagannath Shankarseth. In nineteen seventy-five it was renamed after Dr Bhau Daji Lad, a physician, scholar and philanthropist who did much to found it.\n\nHave a look at the elephant first. It's a basalt sculpture from Elephanta Island in the harbour; the Portuguese named the island after it. It came apart when it was moved, and was pieced back together here early in the twentieth century. Then look for another familiar face: the original Kala Ghoda statue, the black horse and its royal rider, removed from the city centre in nineteen sixty-five, now stands in these grounds.\n\nInside, if you go in, the hall is a Victorian jewel box — gilded ceilings, painted columns and patterned tiles. By the late twentieth century it was crumbling. A restoration that began in two thousand and three, carried out by the heritage trust INTACH with private and municipal partners, brought it back, reopening in two thousand and eight. It won a UNESCO award for conservation.\n\nAnd that's the point of this place. It's not just a museum of Bombay's history. It's where the city put the bits of its past it didn't know what to do with, and then — rather to its credit — decided to look after them.\n\nBefore you leave, walk to the garden's entrance to see the David Sassoon clock tower, and then into the gardens behind the museum, which also hold the city's zoo — one of the largest green spaces in south Mumbai."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.979171502728466,
+      "centroidLongitude": 72.8347938381791,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Victorian",
+        "Colonial"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a5dfa559-b53c-53d8-8392-53190af43b5e",
+      "createdAt": "2026-10-15",
+      "title": "Girgaon Chowpatty",
+      "shortDescription": "Under the sand you're standing on, there's a motorway. That's not the strangest thing about this beach. You're on the sand at Girgaon Chowpatty…",
+      "longDescription": "Under the sand you're standing on, there's a motorway. That's not the strangest thing about this beach.\n\nHave a look at the stalls first. Chowpatty is where the city comes to eat in the evening: bhel puri, the puffed-rice snack tossed with chutney, onion and sev; pav bhaji, a buttery vegetable mash with soft rolls; roasted corn on the cob; kulfi. Nobody comes here to swim. People come to eat, sit, walk and look at the sea.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-girgaon-chowpatty_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "72fede30-db66-5c82-b69c-438baa24eebc",
+          "order": 0,
+          "title": "Girgaon Chowpatty",
+          "caption": "On the sand at Girgaon Chowpatty, at the northern end of Marine Drive, facing the sea.",
+          "latitude": 18.9542,
+          "longitude": 72.8137,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-girgaon-chowpatty.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-girgaon-chowpatty_hero.webp",
+          "transcriptText": "Under the sand you're standing on, there's a motorway. That's not the strangest thing about this beach.\n\nYou're on the sand at Girgaon Chowpatty, at the northern end of Marine Drive, where the Queen's Necklace runs out at the foot of Malabar Hill. Behind you, a row of food stalls. Ahead, the Arabian Sea. To your left, the wooded hill with its mansions.\n\nHave a look at the stalls first. Chowpatty is where the city comes to eat in the evening: bhel puri, the puffed-rice snack tossed with chutney, onion and sev; pav bhaji, a buttery vegetable mash with soft rolls; roasted corn on the cob; kulfi. Nobody comes here to swim. People come to eat, sit, walk and look at the sea.\n\nNow the gift detail. In twenty twenty-four, Mumbai opened the first phase of its Coastal Road. To get it from Marine Drive to the north, engineers drove twin tunnels under Malabar Hill and under this beach — about twenty-five metres below the sand at Chowpatty. Every few seconds, beneath your feet, a car is passing.\n\nAnd then there's the festival. Every year, at the end of Ganesh Chaturthi, hundreds of thousands of people come here with idols of the god Ganesh — some small enough to carry, some several storeys high on trucks — and immerse them in the sea. It's the single biggest crowd you'll see in Mumbai, and it happens on this sand.\n\nThis has always been a beach for the whole city. Bal Gangadhar Tilak, the nationalist leader who did more than anyone to turn Ganesh Chaturthi into a public festival, was cremated here in nineteen twenty, and his statue stands nearby. It's fitting, really — the man who brought the festival into the street is remembered on the beach where it ends.\n\nIf you've the legs for it, climb the hill behind you to the Hanging Gardens on Malabar Hill. From the top, looking back at the bay after dark, you'll see the whole Queen's Necklace at once."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.9542,
+      "centroidLongitude": 72.8137,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "Food",
+        "Engineering",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "667e7975-9fd4-5158-80c7-c5d18bb6e5f1",
+      "createdAt": "2026-10-15",
+      "title": "St. Mary's School, Mazagaon",
+      "shortDescription": "Somewhere behind these walls, a boy called Farrokh Bulsara once sat in a classroom. The world would come to know him as Freddie Mercury. Nesbit…",
+      "longDescription": "Somewhere behind these walls, a boy called Farrokh Bulsara once sat in a classroom. The world would come to know him as Freddie Mercury.\n\nThe church came first, in eighteen sixty. Four years later, in eighteen sixty-four, Jesuit priests opened the school next door. It didn't begin as a school for the city's comfortable families. It began as a Catholic school and a military orphanage — a place for the children of soldiers, many of whom had no one else. Only later were the gates opened to Catholic families more generally, and the school grew to fill four buildings on this site. Have a look at the largest of them, the senior school. Its foundation stone was laid by Lord Linlithgow, Viceroy of India from nineteen thirty-six to nineteen forty-three — one of the last men to run the Raj, laying a stone for a building that would teach the generation who lived after it.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-st-marys-school-mazagaon_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "21e76bab-13e7-576f-b521-5a76ab01e2da",
+          "order": 0,
+          "title": "St. Mary's School, Mazagaon",
+          "caption": "On Nesbit Road, Mazagaon, at the school gate, with St. Anne's Church beside it.",
+          "latitude": 18.969624501332174,
+          "longitude": 72.83599865282805,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-st-marys-school-mazagaon.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-st-marys-school-mazagaon_hero.webp",
+          "transcriptText": "Somewhere behind these walls, a boy called Farrokh Bulsara once sat in a classroom. The world would come to know him as Freddie Mercury.\n\nNesbit Road, Mazagaon. In front of you, the gates of St. Mary's School, and beyond them a cluster of buildings with pointed Gothic windows. Beside the school, St. Anne's Church — the two have stood together since the eighteen sixties, and it's hard to say where one ends and the other begins.\n\nThe church came first, in eighteen sixty. Four years later, in eighteen sixty-four, Jesuit priests opened the school next door. It didn't begin as a school for the city's comfortable families. It began as a Catholic school and a military orphanage — a place for the children of soldiers, many of whom had no one else. Only later were the gates opened to Catholic families more generally, and the school grew to fill four buildings on this site. Have a look at the largest of them, the senior school. Its foundation stone was laid by Lord Linlithgow, Viceroy of India from nineteen thirty-six to nineteen forty-three — one of the last men to run the Raj, laying a stone for a building that would teach the generation who lived after it.\n\nNow the gift detail. The list of boys who passed through here is long and rather surprising. The conductor Zubin Mehta, who left Bombay for Vienna at eighteen. The industrialist Azim Premji. An Attorney General of India. And Freddie Mercury, who came here to finish his schooling in India before his family left for Zanzibar and, eventually, England.\n\nAnd here's the thing. A school founded for orphans of the army became one of the places that shaped modern Bombay — its courts, its businesses, its music. Nobody planning a military orphanage in eighteen sixty-four could have pictured a conductor in Vienna or a rock singer at Wembley. That's rather the point of schools: they are built for one city and end up serving another.\n\nThis is a working school, so stay on the pavement and keep the gates clear at the start and end of the day. Then have a look at St. Anne's Church next door, and walk on into Mazagaon — one of the oldest neighbourhoods in the city, where old houses and churches sit a short walk from the docks."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.969624501332174,
+      "centroidLongitude": 72.83599865282805,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Performance",
+        "Faith",
+        "Gothic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "abec24ae-0195-53c4-908d-c25c64167449",
+      "createdAt": "2026-10-15",
+      "title": "BMC Head Office",
+      "shortDescription": "The city put its own town hall directly across the road from its greatest railway station, and gave both jobs to the same architect. Stand on…",
+      "longDescription": "The city put its own town hall directly across the road from its greatest railway station, and gave both jobs to the same architect.\n\nHere's how it came about. When the city wanted a home for its corporation, two designs were put forward: a Gothic one by Stevens, and an Indo-Saracenic one by Robert Fellowes Chisholm, which borrowed from Mughal and Indian architecture. Stevens won, though if you look carefully you'll see he hedged his bets — the domes and some of the detailing are a nod to the other side. The Viceroy, Lord Ripon, laid the foundation stone in December eighteen eighty-four, and the building was finished in eighteen ninety-three. The tower is about seventy-seven metres high.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bmc-head-office_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bb6a9a15-7b96-51f9-90f5-ffee251088e8",
+          "order": 0,
+          "title": "BMC Head Office",
+          "caption": "On the Chhatrapati Shivaji Terminus side of the junction, looking across at the corner tower of the BMC building.",
+          "latitude": 18.940529936496727,
+          "longitude": 72.83446213339249,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-bmc-head-office.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-bmc-head-office_hero.webp",
+          "transcriptText": "The city put its own town hall directly across the road from its greatest railway station, and gave both jobs to the same architect.\n\nStand on the station side of the junction, where Dadabhai Naoroji Road meets Mahapalika Marg, and look across at the building on the corner. Grey-gold stone, rows of pointed arches, and a tall tower rising from the angle of the two streets, with a dome behind it. This is the headquarters of the Brihanmumbai Municipal Corporation — the body that runs the whole of Mumbai. Turn round, and the station behind you is Chhatrapati Shivaji Terminus. Both are the work of Frederick William Stevens.\n\nHere's how it came about. When the city wanted a home for its corporation, two designs were put forward: a Gothic one by Stevens, and an Indo-Saracenic one by Robert Fellowes Chisholm, which borrowed from Mughal and Indian architecture. Stevens won, though if you look carefully you'll see he hedged his bets — the domes and some of the detailing are a nod to the other side. The Viceroy, Lord Ripon, laid the foundation stone in December eighteen eighty-four, and the building was finished in eighteen ninety-three. The tower is about seventy-seven metres high.\n\nNow look up at the gable above the main entrance. There's a winged female figure there, standing over the city's coat of arms. She represents Urbs Prima in Indis — the first city in India. Bombay wasn't shy about it, and this was the building where it said so in stone. At street level, by the entrance, there's a bronze of Sir Pherozeshah Mehta, the lawyer often called the father of the city's municipal government.\n\nWhat's worth knowing, standing here, is that this isn't a museum. A great many people work in it, and the water you drink in this city, the roads, the drains, are all argued over inside. For more than a century you could only admire it from out here.\n\nThat changed in twenty twenty-one, when the corporation and the state tourism board started running heritage walks inside, usually at weekends, starting from Gate Two. If you can book one, do. Otherwise, walk down the side on Mahapalika Marg and look at the carving on the arches — among the foliage you'll find animals, including a monkey, if you look hard enough."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.940529936496727,
+      "centroidLongitude": 72.83446213339249,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Power",
+        "Gothic",
+        "Colonial",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Frederick William Stevens"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8169ba88-f5e4-5c5e-90e6-7ed94efb3f11",
+      "createdAt": "2026-10-15",
+      "title": "David Sassoon Library and Reading Room",
+      "shortDescription": "This building was put up for the mechanics of the Mint and the Dockyard. These days the members come for the quiet. Mahatma Gandhi Road, Kala…",
+      "longDescription": "This building was put up for the mechanics of the Mint and the Dockyard. These days the members come for the quiet.\n\nThe story begins in eighteen forty-seven, when European workers at the government Mint and Dockyard set up a Mechanics' Institution — evening lectures and a library for men who worked with their hands. They needed a home. David Sassoon, a Baghdadi Jewish merchant who had made his fortune in Bombay, gave sixty thousand rupees, and the government paid the rest. The building went up between eighteen sixty-seven and eighteen seventy, designed by J. Campbell and G. E. Gosling, in yellow stone quarried at Malad. In time the mechanics drifted away, and by the nineteen twenties it had become the David Sassoon Library and Reading Room.",
+      "makerId": "c8cebea9-8d66-58ea-97bd-dc4ba3b0bf64",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-david-sassoon-library_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "13e2a67e-74b9-5bd8-a7ad-ca890a8a9988",
+          "order": 0,
+          "title": "David Sassoon Library and Reading Room",
+          "caption": "On Mahatma Gandhi Road in Kala Ghoda, on the pavement in front of the library's entrance portico.",
+          "latitude": 18.927871704134194,
+          "longitude": 72.83110748614428,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bom-david-sassoon-library.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bom-david-sassoon-library_hero.webp",
+          "transcriptText": "This building was put up for the mechanics of the Mint and the Dockyard. These days the members come for the quiet.\n\nMahatma Gandhi Road, Kala Ghoda. In front of you, a building in pale yellow stone, with pointed arches, a steep roof, and a portico over the entrance. Above the portico, a white marble bust of a bearded man. That's David Sassoon. Inside, at the foot of the stairs, he appears again, full length, in marble.\n\nThe story begins in eighteen forty-seven, when European workers at the government Mint and Dockyard set up a Mechanics' Institution — evening lectures and a library for men who worked with their hands. They needed a home. David Sassoon, a Baghdadi Jewish merchant who had made his fortune in Bombay, gave sixty thousand rupees, and the government paid the rest. The building went up between eighteen sixty-seven and eighteen seventy, designed by J. Campbell and G. E. Gosling, in yellow stone quarried at Malad. In time the mechanics drifted away, and by the nineteen twenties it had become the David Sassoon Library and Reading Room.\n\nHave a look at the columns of the porch, and the carving around the arches. Look closely, and you'll find animals worked into the stone. Then look at the roof. That steep slope is new, and old at the same time. In the nineteen sixties the original pitched roof was taken off and replaced with a flat concrete one, which leaked for half a century. In a restoration finished in twenty twenty-three, led by the conservation architect Abha Narain Lambah, the sloping roof went back on. They kept the old Minton floor tiles, the antique switches and the chandeliers, and rehoused nearly thirty thousand books.\n\nAnd that's what I like about this place. It isn't a monument. It's a working library, open long hours, where people still come to sit and read a newspaper on the balcony, as members have done for a century and a half.\n\nThe reading rooms are for members, but visitors can usually step into the ground floor and the garden behind, which is one of the calmest spots in the Fort. When you come out, Jehangir Art Gallery is just across the road, and the black horse of Kala Ghoda a minute's walk away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.927871704134194,
+      "centroidLongitude": 72.83110748614428,
+      "city": "Mumbai",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "literature",
+      "tags": [
+        "Library",
+        "Literature",
+        "Victorian",
+        "Gothic",
+        "Designed by a Master",
+        "J. Campbell",
+        "G. E. Gosling"
       ],
       "priceUSD": 0
     }

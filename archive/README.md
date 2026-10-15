@@ -367,3 +367,4 @@ Full text for every one of them is in
 - [HANDOFF-261014-nairobi.md](HANDOFF-261014-nairobi.md) — **Nairobi launches:** Atlas Studio NBO, 13 singles + 3 architect tags; National Park moved to the main gate; cave_bureau credit and photo licences for Edward.
 - [HANDOFF-261014-triage-batch.md](HANDOFF-261014-triage-batch.md) — **Triage batch:** 52 pins from 23 creators (Singapore, HK, Zürich, Beijing/Shanghai, Paris); 7 held for a play-button-free hero, 6 for answers, 6 place questions for Edward.
 - [HANDOFF-261014-hanoi.md](HANDOFF-261014-hanoi.md) — **Hanoi launches:** Atlas Studio HAN 🇻🇳, the 44th studio, 28 singles + 6 architect tags; photo licences and three editorial calls for Edward.
+- [HANDOFF-261015-mumbai.md](HANDOFF-261015-mumbai.md) — **Mumbai launches:** Atlas Studio BOM 🇮🇳, the 45th studio, 28 singles + 9 architect tags; ELCO/Taj place questions and photo licences for Edward.
