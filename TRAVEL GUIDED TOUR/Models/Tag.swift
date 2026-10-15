@@ -209,6 +209,7 @@ enum Tag {
             "Andrew Hamilton", "William Strickland", "Robert Smith", "John McArthur Jr.", "Horace Trumbauer", "Paul Cret", "Jacques Gréber", "Venturi, Rauch & Scott Brown", "John Haviland", "Frederick Graff", "Wilson Eyre", "James H. Windrim", "Helmut Jahn",
             "Émile Aillaud", "Eugène Beaudouin", "Marcel Lods", "Renée Gailhoustet", "Jean Renaudie", "Martin Schulz van Treeck", "Manuel Núñez Yanowsky", "Gérard Grandval",
             "VTN Architects", "1+1>2 Architects", "G8A Architecture", "gmp Architekten", "Garol Isakovich", "Hà Đức Lịnh",
+            "Frederick William Stevens", "George Wittet", "Sitaram Khanderao Vaidya", "D. N. Mirza", "John Adams", "Claude Batley", "F. G. B. Hawkins", "J. Campbell", "G. E. Gosling",
             "Bogdan Bogdanović", "Georgi Stoilov", "Avraam Miletsky",
             "Arseniusz Romanowicz", "Mihajlo Mitrović", "Jadwiga Grabowska-Hawrylak",
             "Irina Raud", "Miklós Hófer", "Boris Banykin",
