@@ -1,0 +1,17 @@
+# Mumbai 31 · St. Mary's School, Mazagaon
+
+*Vantage: on Nesbit Road, Mazagaon, at the school gate, with St. Anne's Church beside it* · 390 words · about 156 s
+
+Somewhere behind these walls, a boy called Farrokh Bulsara once sat in a classroom. The world would come to know him as Freddie Mercury.
+
+Nesbit Road, Mazagaon. In front of you, the gates of St. Mary's School, and beyond them a cluster of buildings with pointed Gothic windows. Beside the school, St. Anne's Church — the two have stood together since the eighteen sixties, and it's hard to say where one ends and the other begins.
+
+The church came first, in eighteen sixty. Four years later, in eighteen sixty-four, Jesuit priests opened the school next door. It didn't begin as a school for the city's comfortable families. It began as a Catholic school and a military orphanage — a place for the children of soldiers, many of whom had no one else. Only later were the gates opened to Catholic families more generally, and the school grew to fill four buildings on this site. Have a look at the largest of them, the senior school. Its foundation stone was laid by Lord Linlithgow, Viceroy of India from nineteen thirty-six to nineteen forty-three — one of the last men to run the Raj, laying a stone for a building that would teach the generation who lived after it.
+
+Now the gift detail. The list of boys who passed through here is long and rather surprising. The conductor Zubin Mehta, who left Bombay for Vienna at eighteen. The industrialist Azim Premji. An Attorney General of India. And Freddie Mercury, who came here to finish his schooling in India before his family left for Zanzibar and, eventually, England.
+
+[beat]
+
+And here's the thing. A school founded for orphans of the army became one of the places that shaped modern Bombay — its courts, its businesses, its music. Nobody planning a military orphanage in eighteen sixty-four could have pictured a conductor in Vienna or a rock singer at Wembley. That's rather the point of schools: they are built for one city and end up serving another.
+
+This is a working school, so stay on the pavement and keep the gates clear at the start and end of the day. Then have a look at St. Anne's Church next door, and walk on into Mazagaon — one of the oldest neighbourhoods in the city, where old houses and churches sit a short walk from the docks.

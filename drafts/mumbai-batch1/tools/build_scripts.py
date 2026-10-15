@@ -25,6 +25,22 @@ import sys
 
 # Respellings: lowercase, no caps, no hyphens. Longest keys are applied first.
 RESPELL = {
+    "Farrokh Bulsara": "fa rook bool saa raa",
+    "Mazagaon": "mudge gaon",
+    "Nesbit": "nez bit",
+    "Linlithgow": "lin lith go",
+    "Zubin Mehta": "zoo bin may taa",
+    "Azim Premji": "uh zeem prem jee",
+    "Zanzibar": "zan zee bar",
+    "Brihanmumbai": "bree hun mum bye",
+    "Mahapalika": "maa haa paa lee kaa",
+    "Chhatrapati Shivaji Terminus": "chuttra puttee shiva jee terminus",
+    "Urbs Prima in Indis": "urbs preema in indees",
+    "Pherozeshah Mehta": "feh roze shaa may taa",
+    "Ripon": "rippon",
+    "Chisholm": "chizzum",
+    "Abha Narain Lambah": "aa baa nuh rine lum baa",
+    "Gosling": "gozling",
     "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya": "chuttra puttee shiva jee maha raj vaastoo sungra haa lie",
     "Chhatrapati Shivaji Maharaj Marg": "chuttra puttee shiva jee maha raj marg",
     "Castella de Aguada": "kass tella day ag waa da",
