@@ -1,0 +1,23 @@
+01	udr-syah	24.575127	73.627611	50	foodAndDrink	supplied
+02	udr-page-break-manuscript	24.576704	73.685128	40	foodAndDrink	supplied
+03	udr-bougainvillea-terrace	24.591362	73.676905	40	foodAndDrink	supplied
+04	udr-upri-manzil-rooftop	24.580435	73.679810	40	foodAndDrink	supplied
+05	udr-the-lily-court	24.686769	73.638594	40	foodAndDrink	supplied
+06	udr-ninkasi	24.597686	73.688422	40	foodAndDrink	supplied
+07	udr-obrew	24.589098	73.681752	40	foodAndDrink	supplied
+08	udr-aosa-cafe	24.597597	73.688557	40	foodAndDrink	supplied
+09	udr-tapri-niwas	24.602514	73.689970	40	foodAndDrink	supplied; same point as Ladu (contributor OK)
+10	udr-raas-devigarh	24.772726	73.749366	75	history	supplied; city Delwara
+11	udr-kaladwas-lal-haveli	24.581698	73.685069	40	architecture	supplied
+12	udr-oberoi-udaivilas	24.577383	73.672441	60	architecture	supplied
+13	udr-old-city-market	24.582386	73.689884	60	culturalHeritage	supplied
+14	udr-bougainvillaea-art-gallery	24.687407	73.639171	40	visualArt	supplied
+15	udr-ganesh-emporium	24.578709	73.683884	40	culturalHeritage	supplied
+16	udr-ladu	24.602514	73.689970	40	hiddenGems	supplied; same point as Tapri Niwas (contributor OK)
+17	udr-third-space	24.619973	73.720754	50	architecture	supplied
+18	udr-city-palace	24.576442	73.683511	60	history	supplied
+20	udr-gulab-bagh	24.572175	73.692746	75	natureAndParks	supplied; a gate, 446 m from the garden centroid (checker GROSS, read by hand: fine)
+21	udr-fateh-sagar-sunset	24.601400	73.674223	75	natureAndParks	supplied
+22	udr-manjhi-ka-ghat	24.577970	73.679878	50	culturalHeritage	supplied
+23	udr-karni-mata-climb	24.567803586109985	73.68639296739197	50	sacredSites	folder point = trailhead (contributor OK); script header gives the temple, ~350 m SE
+24	udr-udaan-park	24.590109	73.683606	50	natureAndParks	supplied

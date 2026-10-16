@@ -5571,6 +5571,16 @@
       "websiteURL": null
     },
     {
+      "id": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "displayName": "Atlas Studio UDR",
+      "platform": "dozent",
+      "handle": "atlas.udr",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇳",
+      "bio": "Atlas Studio's Udaipur bureau — audio tours of the City of Lakes: the City Palace and the ghats of Lake Pichola, havelis turned into hotels and shops, rooftops facing the palace, a hill fort in the Aravallis, and new buildings that borrow the old city's jali and courtyards.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -126852,6 +126862,1101 @@
         "Designed by a Master",
         "J. Campbell",
         "G. E. Gosling"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "72d1480a-9ac9-5258-b5ff-c1b45b4cba9d",
+      "createdAt": "2026-10-16",
+      "title": "Syah",
+      "shortDescription": "Most restaurants want to be found. This one sits at the end of a farm track, six kilometres out of town, and only opens if you've booked. You're…",
+      "longDescription": "Most restaurants want to be found. This one sits at the end of a farm track, six kilometres out of town, and only opens if you've booked.\n\nHave a look at the land around you first, because it is the menu. Syah calls itself farm to table, and it means the farm you're standing on. Much of what turns up on the plate is grown here or foraged nearby, and the kitchen changes with the seasons. It even keeps its own season. Syah opens from July to April and closes for the worst of the summer heat.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-syah_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-syah_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-syah_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-syah_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-syah_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3ef15c0f-89a8-5107-bf4e-412bd6e47660",
+          "order": 0,
+          "title": "Syah",
+          "caption": "At Kasotia Ji Farm, off the Kodiyat road, six kilometres west of the city.",
+          "latitude": 24.575127,
+          "longitude": 73.627611,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-syah.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-syah_hero.webp",
+          "transcriptText": "Most restaurants want to be found. This one sits at the end of a farm track, six kilometres out of town, and only opens if you've booked.\n\nYou're at Kasotia Ji Farm, off the Kodiyat road, with the city behind you and the Aravalli hills folded up ahead. Low buildings, a lot of planting, and very little to suggest a kitchen of any ambition. That's Syah.\n\nHave a look at the land around you first, because it is the menu. Syah calls itself farm to table, and it means the farm you're standing on. Much of what turns up on the plate is grown here or foraged nearby, and the kitchen changes with the seasons. It even keeps its own season. Syah opens from July to April and closes for the worst of the summer heat.\n\nThe meal itself is a single tasting menu, twelve courses, and nothing à la carte. The chef, Pankaj, takes Rajasthani ingredients and puts them through modern technique. You get small, exact plates that sometimes look nothing like the dish they began as.\n\nAnd the story behind it is a curious one. Syah didn't start in Udaipur at all. It started in two thousand and sixteen, high in the Himalayas in Ladakh, where it was once called the most exciting culinary experience in the region. The team came down to these hills in two thousand and nineteen.\n\nHere's what I find rather lovely about that. A restaurant that learned its trade cooking with whatever a mountain desert would give it has ended up in a valley, cooking the same way. The landscape changed. The idea didn't.\n\nIf you've arrived early, take a slow turn round the grounds before you sit down. The light goes gold on the Aravallis just before sunset, and the vegetable beds are the best preview of dinner you'll get."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.575127,
+      "centroidLongitude": 73.627611,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "449f1fcb-a481-52aa-9d9a-018f8a873a89",
+      "createdAt": "2026-10-16",
+      "title": "Page Break at Manuscript",
+      "shortDescription": "The best view of the City Palace isn't always from the lake. Sometimes it's from a rooftop two minutes up a side street. This is Bhatiyani…",
+      "longDescription": "The best view of the City Palace isn't always from the lake. Sometimes it's from a rooftop two minutes up a side street.\n\nHave a look at the building on your way up. It was built in nineteen ten as a residence for the Jhilwara family. By Udaipur standards that makes it fairly young, but it kept the old vocabulary. There's carved stone jaali latticework, hand-carved pillars and pointed arches, and the restorers left them in place. The new interiors are deliberately quiet, all neutral tones and rust, so the old carving does the talking.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-page-break-manuscript_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-page-break-manuscript_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-page-break-manuscript_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-page-break-manuscript_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-page-break-manuscript_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f35d2893-b90e-5959-ad75-f85148666a7b",
+          "order": 0,
+          "title": "Page Break at Manuscript",
+          "caption": "On the roof of Manuscript, off Bhatiyani Chohatta, facing the City Palace.",
+          "latitude": 24.576704,
+          "longitude": 73.685128,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-page-break-manuscript.mp3",
+          "audioDurationSeconds": 91,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-page-break-manuscript_hero.webp",
+          "transcriptText": "The best view of the City Palace isn't always from the lake. Sometimes it's from a rooftop two minutes up a side street.\n\nThis is Bhatiyani Chohatta, the lane that runs off City Palace Road into the old city. The building you want is Manuscript, a hotel in the old Jhilwara Haveli, and Page Break is the restaurant at the top of it. If you're on the roof, turn towards the long, pale wall of the palace. That's the view people come for.\n\nHave a look at the building on your way up. It was built in nineteen ten as a residence for the Jhilwara family. By Udaipur standards that makes it fairly young, but it kept the old vocabulary. There's carved stone jaali latticework, hand-carved pillars and pointed arches, and the restorers left them in place. The new interiors are deliberately quiet, all neutral tones and rust, so the old carving does the talking.\n\nThen there's the name. A hotel called Manuscript, with a restaurant called Page Break. Someone clearly enjoyed themselves. And it suits a building in this part of town, where every house has a few chapters behind it.\n\nThe interesting thing about this rooftop is what it tells you about the old city. From the street, these lanes feel closed in. You get walls, doorways and the odd scooter. Up here you realise the whole neighbourhood is built to look at the palace. Every roof turns the same way.\n\nWhen you come back down, walk up to the top of City Palace Road. The Jagdish Temple is just there, up a steep flight of steps, and it's worth the climb."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 91,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.576704,
+      "centroidLongitude": 73.685128,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9f476ba6-a97f-505b-834c-9e7ebe25c8c2",
+      "createdAt": "2026-10-16",
+      "title": "Bougainvillea Terrace by the Lake",
+      "shortDescription": "Somebody decided a rooftop restaurant should feel like a greenhouse. On the shore of Fateh Sagar, it rather works. You should find yourself on…",
+      "longDescription": "Somebody decided a rooftop restaurant should feel like a greenhouse. On the shore of Fateh Sagar, it rather works.\n\nLook at the planting first. The hotel describes the terrace as an open greenhouse, with the outdoors brought indoors, and that's exactly how it feels. The flowers do the decorating. There's very little else competing with them, which is the right decision with a view like this.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillea-terrace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillea-terrace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillea-terrace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillea-terrace_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e247a299-3205-5620-8e93-35840fa50757",
+          "order": 0,
+          "title": "Bougainvillea Terrace by the Lake",
+          "caption": "On the roof of Hotel Lakend, on the eastern shore of Fateh Sagar.",
+          "latitude": 24.591362,
+          "longitude": 73.676905,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-bougainvillea-terrace.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillea-terrace_hero.webp",
+          "transcriptText": "Somebody decided a rooftop restaurant should feel like a greenhouse. On the shore of Fateh Sagar, it rather works.\n\nYou should find yourself on the roof of Hotel Lakend, on the eastern side of the lake. The water is spread out in front of you, with hills behind it on three sides. Around you the walls are covered in bougainvillea, pink and magenta. That's where the place gets its name.\n\nLook at the planting first. The hotel describes the terrace as an open greenhouse, with the outdoors brought indoors, and that's exactly how it feels. The flowers do the decorating. There's very little else competing with them, which is the right decision with a view like this.\n\nThen look out at the water. Fateh Sagar isn't quite what it seems. There was a lake here in the seventeenth century, but its earthen dam was washed away in a flood. In eighteen eighty-nine Maharana Fateh Singh built a new masonry dam, the Connaught Bund, named for Queen Victoria's son, the Duke of Connaught, who visited that year. The lake took the Maharana's name. You can pick out its islands from here. The largest is Nehru Park, and boats run out to it from the shore.\n\nWhat's worth knowing, sitting up here with a drink, is that this lake isn't scenery to the city. It's one of Udaipur's main sources of drinking water. The view and the water supply are the same thing.\n\nWhen you leave, walk the Pal, the long promenade along the dam on the lake's eastern edge. It comes alive in the evening, with street food and half the city out to watch the sunset."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.591362,
+      "centroidLongitude": 73.676905,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "96d15b00-dd98-520d-9759-50f28b318029",
+      "createdAt": "2026-10-16",
+      "title": "Upri Manzil Rooftop",
+      "shortDescription": "Upri Manzil means, quite simply, the upper floor. In this part of Udaipur, the upper floor is where everybody wants to be. You're near Hanuman…",
+      "longDescription": "Upri Manzil means, quite simply, the upper floor. In this part of Udaipur, the upper floor is where everybody wants to be.\n\nStart with the lake. It's older than the city around it. The story goes that Maharana Udai Singh the Second enlarged it after he founded Udaipur in the fifteen fifties. In doing so he flooded a village called Picholi, which gave the lake its name. So under the water you're looking at, there's a village.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-upri-manzil-rooftop_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-upri-manzil-rooftop_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-upri-manzil-rooftop_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-upri-manzil-rooftop_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5176b5a7-e3ea-55ae-b081-54644c289390",
+          "order": 0,
+          "title": "Upri Manzil Rooftop",
+          "caption": "On the rooftop near Hanuman Ghat, facing east across Lake Pichola.",
+          "latitude": 24.580435,
+          "longitude": 73.67981,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-upri-manzil-rooftop.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-upri-manzil-rooftop_hero.webp",
+          "transcriptText": "Upri Manzil means, quite simply, the upper floor. In this part of Udaipur, the upper floor is where everybody wants to be.\n\nYou're near Hanuman Ghat, on the western shore of Lake Pichola, just south of the Chandpole bridge. Climb to the rooftop restaurant and face east, across the water. The long white mass on the far shore is the City Palace. Out on the water, to your right, is the Lake Palace, which seems to float.\n\nStart with the lake. It's older than the city around it. The story goes that Maharana Udai Singh the Second enlarged it after he founded Udaipur in the fifteen fifties. In doing so he flooded a village called Picholi, which gave the lake its name. So under the water you're looking at, there's a village.\n\nNow the food, which the restaurant keeps deliberately simple. It's local dishes and familiar ones, and the menu changes every few months. Regulars point you to the gatte, little gram-flour dumplings in a spiced yoghurt curry, a Rajasthani staple. Nobody comes up here for theatre on the plate. The theatre is across the water.\n\nAnd here's the thing about this side of the lake. The famous postcard of Udaipur, with the palace walls rising out of the water, is taken from roughly this shore. Over there you're inside the history. Over here you get to look at it.\n\nCome back after dark if you can. The palace lights come up one floor at a time and stretch out across the water. From the Chandpole bridge, just to your north, you can watch the whole shoreline light up."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.580435,
+      "centroidLongitude": 73.67981,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "Waterfront",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8b41b3fd-c5ab-5945-a54d-c472c1100e21",
+      "createdAt": "2026-10-16",
+      "title": "The Lily Court",
+      "shortDescription": "Out on the edge of Udaipur, past the last of the traffic, there's a restaurant built round a pond. The Lily Court sits off the highway north of…",
+      "longDescription": "Out on the edge of Udaipur, past the last of the traffic, there's a restaurant built round a pond.\n\nHave a look at how little there is. The water is the centrepiece, and everything else, the tables, the paths and the planting, is there to frame it. On a still evening it reflects the sky and the lamps. That does more for the room than any chandelier would.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-the-lily-court_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-the-lily-court_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-the-lily-court_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c0c78a16-cbb5-5fe6-a56f-b06415d4932e",
+          "order": 0,
+          "title": "The Lily Court",
+          "caption": "At the edge of the lily pond, off the highway north of the city near Kavita.",
+          "latitude": 24.686769,
+          "longitude": 73.638594,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-the-lily-court.mp3",
+          "audioDurationSeconds": 84,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-the-lily-court_hero.webp",
+          "transcriptText": "Out on the edge of Udaipur, past the last of the traffic, there's a restaurant built round a pond.\n\nThe Lily Court sits off the highway north of the city, near Kavita. It's an open-air space with planting and seating arranged round a simple stretch of water. If you're standing at the edge of it, you should see water lilies on the surface, and quite possibly a swan or two looking unimpressed.\n\nHave a look at how little there is. The water is the centrepiece, and everything else, the tables, the paths and the planting, is there to frame it. On a still evening it reflects the sky and the lamps. That does more for the room than any chandelier would.\n\nThe menu wanders more than the setting. Diners talk about khow suey, the Burmese coconut noodle soup, alongside Awadhi biryani, kebabs and a mezze plate or two. It's an eclectic list for a quiet garden. But this is a city that has always taken in travellers, so perhaps that's fitting.\n\nThe interesting bit is the company it keeps. Just next door is the Bougainvillaea Art Gallery, often described as the most established contemporary gallery in Rajasthan. People who come for dinner tend to wander through it, and people who come for the art tend to stay for dinner.\n\nBefore you sit down, take five minutes in the gallery next door. Then come back for the pond just as the sun goes, which is when the lilies and the light look their best."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 84,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.686769,
+      "centroidLongitude": 73.638594,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3406d929-7f2a-5318-9fe3-ff90052ca764",
+      "createdAt": "2026-10-16",
+      "title": "Ninkasi",
+      "shortDescription": "Ninkasi was the Sumerian goddess of beer. Nearly four thousand years ago someone wrote her a hymn, and the hymn is also a recipe. You're in…",
+      "longDescription": "Ninkasi was the Sumerian goddess of beer. Nearly four thousand years ago someone wrote her a hymn, and the hymn is also a recipe.\n\nLook at the bar area first. The designers, an architecture practice called Studio Rust, put large paintings in saturated yellows and reds into its corners. They're a nod to Rajasthani folk art, under exposed ceiling beams. Then go further in, to the lounge. The ceilings there are painted in red and gold geometric patterns, borrowed from traditional palace frescoes. The doorways are framed in golden arches that echo the jharokha, the projecting carved balcony you'll see all over this city's old havelis.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ninkasi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ninkasi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ninkasi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ninkasi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ninkasi_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e394f915-ae89-5b6e-b239-b4b6d4e78f82",
+          "order": 0,
+          "title": "Ninkasi",
+          "caption": "In Fatehpura, Panchwati, just off the junction near UIT Circle.",
+          "latitude": 24.597686,
+          "longitude": 73.688422,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-ninkasi.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ninkasi_hero.webp",
+          "transcriptText": "Ninkasi was the Sumerian goddess of beer. Nearly four thousand years ago someone wrote her a hymn, and the hymn is also a recipe.\n\nYou're in Fatehpura, in the Panchwati neighbourhood, just off the busy junction near UIT Circle. Step inside and you'll know you've arrived. There's colour on every surface, gold on the ceilings, and nothing whatsoever left plain.\n\nLook at the bar area first. The designers, an architecture practice called Studio Rust, put large paintings in saturated yellows and reds into its corners. They're a nod to Rajasthani folk art, under exposed ceiling beams. Then go further in, to the lounge. The ceilings there are painted in red and gold geometric patterns, borrowed from traditional palace frescoes. The doorways are framed in golden arches that echo the jharokha, the projecting carved balcony you'll see all over this city's old havelis.\n\nSo you have an ancient Mesopotamian goddess, a Rajput palace and a tapas menu, all in one room. By rights it shouldn't work. The trick is that nobody here is pretending to be subtle. The place calls itself maximalist, and it means it.\n\nWhat's worth noticing is where the ideas come from. That gold on the ceiling, and the arch round the door, are the same ones you'd see in the City Palace. Here they've been moved out of the royal court and into somewhere you can sit with a cocktail.\n\nWhen you leave, the café a few steps along is Aosa, a bakery and coffee roaster. If you're here in the morning rather than the evening, it makes a very civilised start to the day."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.597686,
+      "centroidLongitude": 73.688422,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Contemporary",
+        "Designed by a Master",
+        "Studio Rust"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ee0d7858-67d7-5f6f-b4e2-c122f0a3db5b",
+      "createdAt": "2026-10-16",
+      "title": "O'Brew",
+      "shortDescription": "There's a café on a hill in Udaipur where you can see a lake out of both sides. You're at Ambavgarh, up the steep road above Swaroop Sagar, near…",
+      "longDescription": "There's a café on a hill in Udaipur where you can see a lake out of both sides.\n\nStart with the view, since it's the reason the place was put here. From this height you can read how Udaipur is built: a string of lakes, dammed and linked over several centuries, with the city filling the gaps between them. Down at street level you'd never guess. Up here it's obvious.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-obrew_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-obrew_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-obrew_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-obrew_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2b20b63f-9168-5edf-94b0-d3c061e06a7a",
+          "order": 0,
+          "title": "O'Brew",
+          "caption": "On the roof terrace at Ambavgarh, above Swaroop Sagar.",
+          "latitude": 24.589098,
+          "longitude": 73.681752,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-obrew.mp3",
+          "audioDurationSeconds": 81,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-obrew_hero.webp",
+          "transcriptText": "There's a café on a hill in Udaipur where you can see a lake out of both sides.\n\nYou're at Ambavgarh, up the steep road above Swaroop Sagar, near the Hilltop hotel. O'Brew is on the upper floors above the guest house there. Go up to the roof terrace, and the city spreads out below you, with water catching the light either side of the ridge.\n\nStart with the view, since it's the reason the place was put here. From this height you can read how Udaipur is built: a string of lakes, dammed and linked over several centuries, with the city filling the gaps between them. Down at street level you'd never guess. Up here it's obvious.\n\nThen the coffee, which is what the guide that sent you here rates above everything else. It promises the best for miles. Regulars describe it as floral and gentle rather than bitter, the sort of cup that tastes of the bean rather than the roast. There are wood-fired pizzas too, if the climb has left you hungry.\n\nWhat I like about O'Brew is how understated it is. In a city where so many views come with a palace attached, this one comes with a flat roof, a few tables and a good cup of coffee. That turns out to be plenty.\n\nStay until the lamps come on across the city. Then take the walk back down slowly. The road down the hill gives you the lakes one more time, from a different angle, at every bend."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 81,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.589098,
+      "centroidLongitude": 73.681752,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "65eef272-b2e2-54f2-86f7-0928e9b97ec8",
+      "createdAt": "2026-10-16",
+      "title": "Aosa Café",
+      "shortDescription": "You'll probably smell it before you see it. Fresh bread, butter, and coffee being roasted somewhere behind the counter. Aosa is in Fatehpura, in…",
+      "longDescription": "You'll probably smell it before you see it. Fresh bread, butter, and coffee being roasted somewhere behind the counter.\n\nHave a look at the counter first. Aosa roasts its own coffee, which not every café in a city this size bothers to do. It means the beans haven't travelled far before they reach your cup. Then look at the pastry case, which does a lot of the persuading. Croissants are the thing here, including one made into a paneer tikka sandwich. That's a French pastry wrapped round a north Indian grill, and it's rather better than it has any right to be.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-aosa-cafe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-aosa-cafe_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-aosa-cafe_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-aosa-cafe_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-aosa-cafe_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-aosa-cafe_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "19751962-25a6-5182-a4e7-00a719bac0ad",
+          "order": 0,
+          "title": "Aosa Café",
+          "caption": "In Fatehpura, Panchwati, a short walk from UIT Circle.",
+          "latitude": 24.597597,
+          "longitude": 73.688557,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-aosa-cafe.mp3",
+          "audioDurationSeconds": 86,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-aosa-cafe_hero.webp",
+          "transcriptText": "You'll probably smell it before you see it. Fresh bread, butter, and coffee being roasted somewhere behind the counter.\n\nAosa is in Fatehpura, in the Panchwati neighbourhood, a short walk from UIT Circle. Look for a café that calls itself a bakehouse and roastery. Inside, it's rustic and contemporary at once, with a garden seating area further back.\n\nHave a look at the counter first. Aosa roasts its own coffee, which not every café in a city this size bothers to do. It means the beans haven't travelled far before they reach your cup. Then look at the pastry case, which does a lot of the persuading. Croissants are the thing here, including one made into a paneer tikka sandwich. That's a French pastry wrapped round a north Indian grill, and it's rather better than it has any right to be.\n\nFind a table out in the garden, if you can. It's quieter back there, with planting all round and the noise of the junction a long way off, though it's only a few metres.\n\nThe interesting thing about Aosa is that it's doing something very old in a new way. Udaipur has always been a city of tea, and of the chai stall on the corner. A café roasting its own coffee and baking its own croissants tells you the city's tastes are widening, and that someone thought there was a market for it here.\n\nNinkasi, the colourful tapas bar, is just a few steps along. And if you'd rather have tea, Tapri Niwas is about ten minutes' walk north."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 86,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.597597,
+      "centroidLongitude": 73.688557,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "57a38163-e978-5f7f-89c2-eba9e05367cb",
+      "createdAt": "2026-10-16",
+      "title": "Tapri Niwas",
+      "shortDescription": "A tapri is the humblest thing in Indian street life: a roadside chai stall, often just a stove under a tarpaulin. This place took the name and…",
+      "longDescription": "A tapri is the humblest thing in Indian street life: a roadside chai stall, often just a stove under a tarpaulin. This place took the name and built a house round it.\n\nLook at what's being drunk around you. Chai, made simply, the way it would be at home. The company's founders have said that's the whole secret: simple recipes, plain good ingredients, and nothing that needs a chef's attention to get right. The food follows the same rule. Think home-style snacks rather than a menu that's trying to impress you.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-tapri-niwas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-tapri-niwas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-tapri-niwas_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-tapri-niwas_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f9b8a585-7532-5399-b913-52c3270a9af3",
+          "order": 0,
+          "title": "Tapri Niwas",
+          "caption": "On the main road in New Fatehpura, near St Mary's School.",
+          "latitude": 24.602514,
+          "longitude": 73.68997,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-tapri-niwas.mp3",
+          "audioDurationSeconds": 90,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-tapri-niwas_hero.webp",
+          "transcriptText": "A tapri is the humblest thing in Indian street life: a roadside chai stall, often just a stove under a tarpaulin. This place took the name and built a house round it.\n\nYou're in New Fatehpura, on the main road near St Mary's School. Tapri Niwas, niwas meaning a home or residence, is the building with people spilling out of it, cups in hand.\n\nLook at what's being drunk around you. Chai, made simply, the way it would be at home. The company's founders have said that's the whole secret: simple recipes, plain good ingredients, and nothing that needs a chef's attention to get right. The food follows the same rule. Think home-style snacks rather than a menu that's trying to impress you.\n\nThe story behind it is rather charming. Tapri started in Jaipur in two thousand and ten as an MBA project, and the founders cheerfully admit it failed academically. It worked as a business instead. Tapri Niwas was its first outlet in Udaipur.\n\nThere's one more thing to notice. Tapri has made a point of hiring staff who are deaf or speech-impaired, and putting them out front, serving, rather than tucking them away in the kitchen. If someone signs your order back to you, that's why.\n\nAnd here's the thing. A chai stall was always really about the conversation. The tea was just the excuse to stop. Tapri built a business by taking that seriously.\n\nBefore you go, have a look in the shop on the same site. It's called Ladu, and it sells goods from small makers."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 90,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.602514,
+      "centroidLongitude": 73.68997,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "76eef321-14ce-5bac-801d-e5b0b4486f48",
+      "createdAt": "2026-10-16",
+      "title": "RAAS Devigarh",
+      "shortDescription": "Look up. That's an eighteenth-century fort on top of the hill, and since nineteen ninety-nine it has been a hotel. You should be at the foot of…",
+      "longDescription": "Look up. That's an eighteenth-century fort on top of the hill, and since nineteen ninety-nine it has been a hotel.\n\nIts story starts with a battle. In fifteen seventy-six, after the battle of Haldighati, the principality of Delwara was given to Rajrana Sajja Singh and his brother, Ajja, for their service to Maharana Pratap of Mewar. The palace you see was completed in seventeen sixty, under a later Rajrana, Sajja Singh the Second. It was built with marble quarried nearby.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-raas-devigarh_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-raas-devigarh_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-raas-devigarh_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-raas-devigarh_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "94188c94-190f-5dde-b799-cda35d7cbb17",
+          "order": 0,
+          "title": "RAAS Devigarh",
+          "caption": "At the foot of the hill in Delwara village, looking up at the fort.",
+          "latitude": 24.772726,
+          "longitude": 73.749366,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-raas-devigarh.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-raas-devigarh_hero.webp",
+          "transcriptText": "Look up. That's an eighteenth-century fort on top of the hill, and since nineteen ninety-nine it has been a hotel.\n\nYou should be at the foot of the hill in the village of Delwara, some twenty-five kilometres north of Udaipur. Above you, the palace rises in tiers of pale stone, with the Aravalli hills all round. RAAS Devigarh is the name now. For most of its life it was simply the Delwara Fort Palace.\n\nIts story starts with a battle. In fifteen seventy-six, after the battle of Haldighati, the principality of Delwara was given to Rajrana Sajja Singh and his brother, Ajja, for their service to Maharana Pratap of Mewar. The palace you see was completed in seventeen sixty, under a later Rajrana, Sajja Singh the Second. It was built with marble quarried nearby.\n\nThen it fell quiet. When it was finally restored, the work took a team of seven hundred and fifty people almost fifteen years. They went back to the same locally mined marble. That's why the patches and the originals sit so comfortably together.\n\nAnd here's what's worth knowing. Inside, the restorers didn't try to recreate a maharaja's fantasy. The rooms are largely plain marble, almost minimal, set against the old mirror-work ante-chambers and murals of Marwari horses. It was a bold choice for a palace hotel, and it makes the old parts look more remarkable, not less.\n\nSo the fort that guarded a valley now looks after guests. Rather a gentle retirement, if you ask me.\n\nIf you have an hour, walk down into Delwara itself. The hotel sends guests out on walks from its gates, and from the village lanes you get the best view of the fort above."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 101,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.772726,
+      "centroidLongitude": 73.749366,
+      "city": "Delwara",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "be58bd91-cfdd-52ff-872f-45ca18441a8d",
+      "createdAt": "2026-10-16",
+      "title": "Kaladwas Lal Haveli",
+      "shortDescription": "Every morning at six, the clock tower across the street chimes. For the man who now runs this house, that sound has been his alarm since…",
+      "longDescription": "Every morning at six, the clock tower across the street chimes. For the man who now runs this house, that sound has been his alarm since childhood.\n\nLook at the facade first. It's Sajjangarh quarry stone, named for the hill west of the city where the Monsoon Palace stands. When the house was restored, it was cleaned and repaired by hand. The restoration took six years, working with the late architect Viral Munshi. The builders avoided cement entirely. They used lime-based plaster and mortar, the way the house was first built, because lime lets old walls breathe in this climate.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-kaladwas-lal-haveli_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-kaladwas-lal-haveli_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-kaladwas-lal-haveli_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-kaladwas-lal-haveli_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-kaladwas-lal-haveli_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "be4c87bc-5cba-586d-b289-16748aee8cbc",
+          "order": 0,
+          "title": "Kaladwas Lal Haveli",
+          "caption": "On Ganesh Ghati, facing the old house across from the clock tower.",
+          "latitude": 24.581698,
+          "longitude": 73.685069,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-kaladwas-lal-haveli.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-kaladwas-lal-haveli_hero.webp",
+          "transcriptText": "Every morning at six, the clock tower across the street chimes. For the man who now runs this house, that sound has been his alarm since childhood.\n\nYou're on Ganesh Ghati, in the thick of the old city, a few minutes' walk from the City Palace. Find the Ghanta Ghar, Udaipur's clock tower, and turn to face the old stone house that looks onto it. That's Kaladwas Lal Haveli. Lal means red, and the name is fair warning.\n\nLook at the facade first. It's Sajjangarh quarry stone, named for the hill west of the city where the Monsoon Palace stands. When the house was restored, it was cleaned and repaired by hand. The restoration took six years, working with the late architect Viral Munshi. The builders avoided cement entirely. They used lime-based plaster and mortar, the way the house was first built, because lime lets old walls breathe in this climate.\n\nThe house itself is around three hundred years old. It belongs to the Chawra family of Varsoda, who for generations ran the village of Kaladwas for the Maharanas. That's where the name comes from. Parakram Singh Chawra, who grew up running up and down these stairs, decided to restore it rather than let it crumble.\n\nInside, there are just seven suites. The rooms work through every imaginable shade of red, scarlet and saffron.\n\nThe interesting bit is that this is a family house first and a hotel second. The family still runs it day to day. That's increasingly rare in an old city where plenty of havelis have changed hands, or been left to fall down.\n\nBefore you move on, stand under the clock tower for a moment and look along the lanes in each direction. The old bazaars start right here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.581698,
+      "centroidLongitude": 73.685069,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75b11f63-cf8a-587d-87d3-f13d14b8fdb0",
+      "createdAt": "2026-10-16",
+      "title": "The Oberoi Udaivilas",
+      "shortDescription": "There's a hotel on Lake Pichola that suggests you arrive by boat. Having seen the approach, I'd say they're right. If you've come across the…",
+      "longDescription": "There's a hotel on Lake Pichola that suggests you arrive by boat. Having seen the approach, I'd say they're right.\n\nHave a look at the domes first. The hotel was built new, and it opened in two thousand and two, but the domes are borrowed from the old palaces of Mewar. By one count there are thirty-seven of them, the one over the lobby painted inside with gold leaf, and they're linked by covered walkways. Walk underneath them and you're in shade almost the whole way, which in a Rajasthani summer is not decoration but survival.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-oberoi-udaivilas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-oberoi-udaivilas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-oberoi-udaivilas_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-oberoi-udaivilas_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-oberoi-udaivilas_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "33e3d67d-e4cd-5018-84e6-4861364c668a",
+          "order": 0,
+          "title": "The Oberoi Udaivilas",
+          "caption": "On the western shore of Lake Pichola, facing the City Palace across the water.",
+          "latitude": 24.577383,
+          "longitude": 73.672441,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-oberoi-udaivilas.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-oberoi-udaivilas_hero.webp",
+          "transcriptText": "There's a hotel on Lake Pichola that suggests you arrive by boat. Having seen the approach, I'd say they're right.\n\nIf you've come across the water, you'll have stepped off at the jetty on the western shore. In front of you are low pavilions and domes set in long gardens. Behind you, across the lake, the City Palace fills the far shore. That's The Oberoi Udaivilas.\n\nHave a look at the domes first. The hotel was built new, and it opened in two thousand and two, but the domes are borrowed from the old palaces of Mewar. By one count there are thirty-seven of them, the one over the lobby painted inside with gold leaf, and they're linked by covered walkways. Walk underneath them and you're in shade almost the whole way, which in a Rajasthani summer is not decoration but survival.\n\nThen look at the size of the place. The grounds cover around thirty acres of gardens running along the lakeshore. The hotel says this was once royal hunting land. That would explain why there's so much room, and why the planting feels closer to a park than to a garden.\n\nAnd finally, the view the whole thing is built around: across the water to the City Palace, with Jag Mandir, the island palace, out on the lake to the south.\n\nWhat's worth thinking about is the trick it pulls off. Udaivilas isn't old, but it was built to sit politely beside buildings that are. It faces the real palace. It doesn't compete with it.\n\nIf you're not staying, the best way to see it is from the water. The boats from the city ghats pass right along this shore, and from the lake, the domes line up exactly as the architects intended."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.577383,
+      "centroidLongitude": 73.672441,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Waterfront",
+        "Viewpoint",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3cd70885-9098-51bf-aa46-836ac7f058db",
+      "createdAt": "2026-10-16",
+      "title": "Old City Market | मोचीवाडा",
+      "shortDescription": "Nothing in Udaipur's old city runs in a straight line. Lanes narrow to the width of a scooter, open into a little square, then narrow again.…",
+      "longDescription": "Nothing in Udaipur's old city runs in a straight line. Lanes narrow to the width of a scooter, open into a little square, then narrow again.\n\nStart with the name of the neighbourhood. A mochi is a cobbler, and Mochiwada is the cobblers' quarter. Old Indian cities were often laid out like this, trade by trade, a street of shoemakers here and a street of metalworkers there. The names stuck around long after the neat divisions blurred.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-old-city-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-old-city-market_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "37c1b252-1115-521a-8cf7-6ec140986ae7",
+          "order": 0,
+          "title": "Old City Market | मोचीवाडा",
+          "caption": "In the lanes of Mochiwada, east of the clock tower.",
+          "latitude": 24.582386,
+          "longitude": 73.689884,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-old-city-market.mp3",
+          "audioDurationSeconds": 92,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-old-city-market_hero.webp",
+          "transcriptText": "Nothing in Udaipur's old city runs in a straight line. Lanes narrow to the width of a scooter, open into a little square, then narrow again.\n\nYou're on the edge of Mochiwada, east of the clock tower, in the knot of streets that make up the old bazaars. There'll be shopfronts open to the lane on both sides, goods hung from every hook and awning, and an auto-rickshaw trying to get past you. Step in to a doorway and let it.\n\nStart with the name of the neighbourhood. A mochi is a cobbler, and Mochiwada is the cobblers' quarter. Old Indian cities were often laid out like this, trade by trade, a street of shoemakers here and a street of metalworkers there. The names stuck around long after the neat divisions blurred.\n\nThen look at what's actually for sale. A lot of it is made by hand, and some of it has clearly been around a while: brass, textiles, carved wood, silver, and leather shoes with turned-up toes, the traditional mojari. In places like this the line between antique and simply old is rather generous. Bargaining is expected, and it's done with good humour.\n\nHere's what I love about these lanes. They aren't laid out for visitors. They're laid out for the people who've lived and traded here for generations. That's exactly why they're so pleasant to get lost in. You never quite know what's round the next bend, and neither, sometimes, does the auto-rickshaw.\n\nHead west and you'll come out at the Ghanta Ghar, the clock tower. From there it's a short climb up to the Jagdish Temple and the City Palace."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 92,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.582386,
+      "centroidLongitude": 73.689884,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "District",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "125b8d9b-c261-5284-a847-a4640fe89f13",
+      "createdAt": "2026-10-16",
+      "title": "Bougainvillaea Art Gallery",
+      "shortDescription": "Udaipur is famous for its miniature painters, who work at the scale of a postage stamp. This gallery shows what happens when the city's artists…",
+      "longDescription": "Udaipur is famous for its miniature painters, who work at the scale of a postage stamp. This gallery shows what happens when the city's artists decide to go large.\n\nThe person behind it is the sculptor Bhupesh Kavadia. He's a Udaipur artist whose own stone carvings stand in public spaces in the city. He and his gallery have become a focal point for Rajasthani artists who want their work taken seriously, as art rather than as souvenirs for the tourist streets. It has been running for many years now. Travel writers regularly call it the most established contemporary gallery in the state.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillaea-art-gallery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillaea-art-gallery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillaea-art-gallery_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4b4c1e66-1b06-5467-9fca-287178894c75",
+          "order": 0,
+          "title": "Bougainvillaea Art Gallery",
+          "caption": "On the highway near Kavita, on the northern edge of the city.",
+          "latitude": 24.687407,
+          "longitude": 73.639171,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-bougainvillaea-art-gallery.mp3",
+          "audioDurationSeconds": 88,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-bougainvillaea-art-gallery_hero.webp",
+          "transcriptText": "Udaipur is famous for its miniature painters, who work at the scale of a postage stamp. This gallery shows what happens when the city's artists decide to go large.\n\nYou're out on the northern edge of the city, on the highway near Kavita. The gallery is a bright, modern space, a long way in spirit from the antique shops of the old city.\n\nThe person behind it is the sculptor Bhupesh Kavadia. He's a Udaipur artist whose own stone carvings stand in public spaces in the city. He and his gallery have become a focal point for Rajasthani artists who want their work taken seriously, as art rather than as souvenirs for the tourist streets. It has been running for many years now. Travel writers regularly call it the most established contemporary gallery in the state.\n\nHave a look at what's on the walls. The exhibitions rotate, so I can't tell you exactly what you'll find. Expect painting, prints, photography and drawing, and sculpture in marble and bronze. Some of it will be by well-known Indian names. Some will be by artists you won't have heard of yet.\n\nAnd here's the thing about seeing contemporary art in this city. Udaipur's palaces are full of extraordinary art, but almost all of it is centuries old. This is one of the few places where you can see what Rajasthan's artists are making now.\n\nWhen you've finished, the Lily Court restaurant is right next door, built round a pond of water lilies. It's a good place to sit and argue about what you've just seen."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 88,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.687407,
+      "centroidLongitude": 73.639171,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6fec30c5-455d-5ecc-afc2-00f16e591637",
+      "createdAt": "2026-10-16",
+      "title": "Ganesh Emporium",
+      "shortDescription": "Think of it as a department store hidden inside an old haveli. It's a city mansion of archways and courtyards, packed from floor to ceiling with…",
+      "longDescription": "Think of it as a department store hidden inside an old haveli. It's a city mansion of archways and courtyards, packed from floor to ceiling with fabric.\n\nLook up, rather than at the stock, for a moment. The guide that sent you here dates the building to the seventeenth century, and says it has been heavily restored. You can see it in the bones: the grand archways, the high ceilings, the windows set with little mirrors, and the open courtyards that let light down through the middle of the house. Havelis were built inward-looking, around those courtyards, for privacy and to stay cool.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ganesh-emporium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ganesh-emporium_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ganesh-emporium_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ganesh-emporium_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ganesh-emporium_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "11fe1558-ed2e-51e4-9154-cc87b007e029",
+          "order": 0,
+          "title": "Ganesh Emporium",
+          "caption": "On City Palace Road, between the Jagdish Temple and the palace gates.",
+          "latitude": 24.578709,
+          "longitude": 73.683884,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-ganesh-emporium.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ganesh-emporium_hero.webp",
+          "transcriptText": "Think of it as a department store hidden inside an old haveli. It's a city mansion of archways and courtyards, packed from floor to ceiling with fabric.\n\nYou're on City Palace Road, the busy street that runs between the Jagdish Temple and the gates of the City Palace. Ganesh Emporium is the old house on the street, three storeys high. The shopfront gives very little away.\n\nLook up, rather than at the stock, for a moment. The guide that sent you here dates the building to the seventeenth century, and says it has been heavily restored. You can see it in the bones: the grand archways, the high ceilings, the windows set with little mirrors, and the open courtyards that let light down through the middle of the house. Havelis were built inward-looking, around those courtyards, for privacy and to stay cool.\n\nThen the stock. This is where people come for textiles: block prints, embroidery, quilts and fabric by the metre, alongside bags and carved wood. One well-known travel guide passes on a useful tip. The tailors here can make you a tunic to measure in a couple of hours.\n\nThe interesting bit is how naturally the building takes to this. A haveli was always a place where a family's wealth was stored and shown off: textiles, jewellery and fine things kept in chests round the courtyard. Turning one into a shop for exactly those goods isn't really a change of use at all.\n\nLeave yourself an hour, then walk two minutes up to the Jagdish Temple. Its carved stone is the perfect counterpoint to all that cloth."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.578709,
+      "centroidLongitude": 73.683884,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Fashion",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5edccb4f-3ee6-53ff-bf86-69feb95825ab",
+      "createdAt": "2026-10-16",
+      "title": "Ladu",
+      "shortDescription": "Ladu is the name of a shop, and it's also an acronym. It stands for Life Around Daily Utilities. You'll find it at the Tapri Niwas tea house, on…",
+      "longDescription": "Ladu is the name of a shop, and it's also an acronym. It stands for Life Around Daily Utilities.\n\nHave a look at the labels as you browse. Ladu stocks products from small makers, with a preference for things that are local, handmade, reusable and made in small batches. You'll find tea blends, spices, homeware and the odd piece of art. Its founder, Ankit Bohra, set it up in Jaipur alongside the Tapri tea houses. The idea was to give new small businesses a platform they couldn't afford on their own.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ladu_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ladu_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ladu_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "041c94b6-eb12-57c4-8d6f-1c3fd67b13e9",
+          "order": 0,
+          "title": "Ladu",
+          "caption": "At the Tapri Niwas site in New Fatehpura, near St Mary's School.",
+          "latitude": 24.602514,
+          "longitude": 73.68997,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-ladu.mp3",
+          "audioDurationSeconds": 81,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-ladu_hero.webp",
+          "transcriptText": "Ladu is the name of a shop, and it's also an acronym. It stands for Life Around Daily Utilities.\n\nYou'll find it at the Tapri Niwas tea house, on the main road in New Fatehpura near St Mary's School. Ladu is the shop on the same site. Look for shelves of small, considered things rather than a wall of souvenirs.\n\nHave a look at the labels as you browse. Ladu stocks products from small makers, with a preference for things that are local, handmade, reusable and made in small batches. You'll find tea blends, spices, homeware and the odd piece of art. Its founder, Ankit Bohra, set it up in Jaipur alongside the Tapri tea houses. The idea was to give new small businesses a platform they couldn't afford on their own.\n\nHe described one rule in particular. Every maker gets the same amount of space and the same visibility on the shelves. There's no prime position you can pay for, no brand that shouts over the others. In a shopping centre, he pointed out, the big names always get the best spot. Here they don't.\n\nSo a shop that looks like a nice place to buy a present is quietly doing something a bit more radical. It treats the smallest maker on the shelf exactly like the largest.\n\nWhen you've chosen something, take it next door and have a chai at Tapri Niwas. The two were built to go together."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 81,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.602514,
+      "centroidLongitude": 73.68997,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ab9f8b70-9dab-54f4-a523-e713e6b1258e",
+      "createdAt": "2026-10-16",
+      "title": "Third Space",
+      "shortDescription": "White marble screens wrap this building like lace. Behind them, children are climbing walls, building gadgets and putting on shows. You're at…",
+      "longDescription": "White marble screens wrap this building like lace. Behind them, children are climbing walls, building gadgets and putting on shows.\n\nHave a look at the screens first. Jali is one of the oldest ideas in Rajasthani building. It's a stone lattice that lets breeze in, keeps the glare out, and gives privacy without walls. The architects, Studio Saar, cut these with modern machinery. They then reused the offcuts and marble waste inside, as flooring and wall infill, so little was thrown away.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-third-space_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-third-space_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-third-space_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-third-space_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-third-space_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8b012e8e-9825-5d79-8a94-8162237f6509",
+          "order": 0,
+          "title": "Third Space",
+          "caption": "At the entrance to Third Space, Pahada, facing the marble jali screens.",
+          "latitude": 24.619973,
+          "longitude": 73.720754,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-third-space.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-third-space_hero.webp",
+          "transcriptText": "White marble screens wrap this building like lace. Behind them, children are climbing walls, building gadgets and putting on shows.\n\nYou're at Pahada, on the north-eastern side of Udaipur, at Third Space. If you're facing the entrance, you should see a low building wrapped in white marble jali, perforated stone screens. Here and there little boxes project out of the screens, like windows that have stepped forward.\n\nHave a look at the screens first. Jali is one of the oldest ideas in Rajasthani building. It's a stone lattice that lets breeze in, keeps the glare out, and gives privacy without walls. The architects, Studio Saar, cut these with modern machinery. They then reused the offcuts and marble waste inside, as flooring and wall infill, so little was thrown away.\n\nNow those projecting boxes. They're gokhra, a traditional overhanging niche that works as a wind-catcher. It pulls air into the building, and inside it makes a small private seat. Together with an evaporative cooling tower, they keep the interior comfortable without leaning on air-conditioning.\n\nThe plan is borrowed too. Studio Saar called it the Haveli of Curiosity, after the old courtyard mansions, with a pinwheel of cloisters round a central court. Overhead, bamboo sails shade the roof. And there's a sunken, shaded space modelled on a stepwell, where people sit out of the heat.\n\nAnd here's the thing. A third space is the place that isn't home and isn't school or work. It's the place you go to simply be among people. The charity behind it, Dharohar, built one using the city's oldest building ideas. It's a very good argument that those ideas were never just for palaces.\n\nBefore you leave, look across the road. The centre's programmes reach into fifty hectares of reforested jungle on the other side, and it's worth asking at the desk whether you can walk a little way in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.619973,
+      "centroidLongitude": 73.720754,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Contemporary",
+        "Designed by a Master",
+        "Studio Saar"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "335c7f61-607b-5b41-a300-e4ac5ff82286",
+      "createdAt": "2026-10-16",
+      "title": "City Palace | सिटी पैलेस",
+      "shortDescription": "It took twenty-two generations of one family to build this, and from the outside you'd swear it was designed in one go. You should be in the…",
+      "longDescription": "It took twenty-two generations of one family to build this, and from the outside you'd swear it was designed in one go.\n\nStart with the gate behind you. The Tripolia was built in seventeen twenty-five. Between it and the earlier Badi Pol, the great gate, stand a row of marble arches. Tradition has it the Maharanas were weighed here against gold and silver, which was then given away to the people.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f1ddfa9f-543b-5224-ad63-1e663dc944d9",
+          "order": 0,
+          "title": "City Palace | सिटी पैलेस",
+          "caption": "In the great courtyard just inside the Tripolia gate.",
+          "latitude": 24.576442,
+          "longitude": 73.683511,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-city-palace.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-city-palace_hero.webp",
+          "transcriptText": "It took twenty-two generations of one family to build this, and from the outside you'd swear it was designed in one go.\n\nYou should be in the great open courtyard just inside the Tripolia, the triple-arched gate, with the palace rising in front of you along the ridge. It's a wall of pale stone, balconies, towers and little domed pavilions, getting busier the higher it goes. Lake Pichola is on the far side, below.\n\nStart with the gate behind you. The Tripolia was built in seventeen twenty-five. Between it and the earlier Badi Pol, the great gate, stand a row of marble arches. Tradition has it the Maharanas were weighed here against gold and silver, which was then given away to the people.\n\nThen the palace itself. Maharana Udai Singh the Second began building here in fifteen fifty-nine, when he founded Udaipur. The story goes that he chose the spot on a hermit's advice. Over the following four centuries, his descendants of the Sisodia clan kept adding to it. The result is eleven palaces joined into one, linked by courtyards and deliberately zig-zagging corridors, designed to slow down any attacker who got inside.\n\nOnce you're in, look out for the Mor Chowk, the Peacock Courtyard. Its walls carry peacocks made of tiny pieces of coloured glass, which shimmer as you move.\n\nWhat's worth knowing, standing here, is why it all looks so unified. These rulers had four hundred years to change their minds and very rarely did. Each generation added to the palace in the same language as the one before. That restraint is the real achievement, more than the size.\n\nWhen you've seen the inside, take a boat out onto Lake Pichola. Only from the water do you see the full length of the palace, rising straight out of the lake."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.576442,
+      "centroidLongitude": 73.683511,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Waterfront",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c2d24ddb-a962-53a1-a384-51764dc01f93",
+      "createdAt": "2026-10-16",
+      "title": "Gulab Bagh | गुलाब बाग",
+      "shortDescription": "Gulab means rose, and bagh means garden. So this is the rose garden, although these days it feels more like a jungle that someone has very…",
+      "longDescription": "Gulab means rose, and bagh means garden. So this is the rose garden, although these days it feels more like a jungle that someone has very kindly put paths through.\n\nIts other name is Sajjan Niwas Garden, after Maharana Sajjan Singh, who had it laid out in the eighteen-eighties. In eighteen eighty-two a horticulturist from Madras, T. H. Story, was brought in to stock it. He planted fruit trees and medicinal plants and labelled every one with its name in Hindi, in English and in botany's own Latin. He stayed until nineteen-twenty. The garden even had its own zoo, one of the oldest in the country.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-gulab-bagh_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-gulab-bagh_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-gulab-bagh_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-gulab-bagh_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "edf8b508-825e-5c00-957c-8bfd46368ba5",
+          "order": 0,
+          "title": "Gulab Bagh | गुलाब बाग",
+          "caption": "At a gate on Gulab Bagh Road, south-east of the City Palace.",
+          "latitude": 24.572175,
+          "longitude": 73.692746,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-gulab-bagh.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-gulab-bagh_hero.webp",
+          "transcriptText": "Gulab means rose, and bagh means garden. So this is the rose garden, although these days it feels more like a jungle that someone has very kindly put paths through.\n\nYou're on Gulab Bagh Road, at one of the garden's gates, just south-east of the City Palace. In front of you are tall old trees, shade, and paths heading off in several directions. Early in the morning you'll share them with walkers, joggers and a good many birds.\n\nIts other name is Sajjan Niwas Garden, after Maharana Sajjan Singh, who had it laid out in the eighteen-eighties. In eighteen eighty-two a horticulturist from Madras, T. H. Story, was brought in to stock it. He planted fruit trees and medicinal plants and labelled every one with its name in Hindi, in English and in botany's own Latin. He stayed until nineteen-twenty. The garden even had its own zoo, one of the oldest in the country.\n\nSomewhere in the trees is the Victoria Hall. It opened in eighteen-ninety as a museum, the first in Rajasthan. Today it's the Saraswati Bhawan Library, with more than thirty thousand books, some manuscripts among them. The building still has the formal look of a Victorian museum.\n\nWhat's worth knowing is that this was a royal garden made for public use. It was a ruler's idea of improvement, with plants that were labelled so people could learn their names. A hundred and forty years on, it's still doing that job. You'll see people from every corner of the city walking here every morning.\n\nIf walking isn't on the cards, look out for the little toy train. It loops round the garden past the rose beds, the library and the old museum, and it's quite unashamedly charming."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.572175,
+      "centroidLongitude": 73.692746,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Library",
+        "History",
+        "Victorian",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "301ea949-8558-50b0-aa63-3e6bde63085c",
+      "createdAt": "2026-10-16",
+      "title": "Sunset on the Fateh Sagar Pal | फ़तेह सागर पाल",
+      "shortDescription": "Every evening, half of Udaipur comes to this embankment to watch the sky change colour. It's well worth joining them. You're on the Pal, the…",
+      "longDescription": "Every evening, half of Udaipur comes to this embankment to watch the sky change colour. It's well worth joining them.\n\nLet's start with what you're standing on. This embankment is the dam that makes the lake. The first lake here was built in the seventeenth century, but its earth dam was washed away. In eighteen eighty-nine Maharana Fateh Singh rebuilt it in stone. He named the new dam the Connaught Bund, after Queen Victoria's son, who happened to be visiting. The lake took the Maharana's own name. Locals simply call the embankment the Pal.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-fateh-sagar-sunset_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-fateh-sagar-sunset_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8809d942-948d-567e-bee1-27a053073e64",
+          "order": 0,
+          "title": "Sunset on the Fateh Sagar Pal | फ़तेह सागर पाल",
+          "caption": "On the Pal, the embankment along the eastern side of Fateh Sagar.",
+          "latitude": 24.6014,
+          "longitude": 73.674223,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-fateh-sagar-sunset.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-fateh-sagar-sunset_hero.webp",
+          "transcriptText": "Every evening, half of Udaipur comes to this embankment to watch the sky change colour. It's well worth joining them.\n\nYou're on the Pal, the long stone embankment along the eastern side of Fateh Sagar Lake. The water is in front of you, with the Aravalli hills behind it and the sun dropping towards them. Behind you are the food stalls and the traffic. Out on the lake are the islands.\n\nLet's start with what you're standing on. This embankment is the dam that makes the lake. The first lake here was built in the seventeenth century, but its earth dam was washed away. In eighteen eighty-nine Maharana Fateh Singh rebuilt it in stone. He named the new dam the Connaught Bund, after Queen Victoria's son, who happened to be visiting. The lake took the Maharana's own name. Locals simply call the embankment the Pal.\n\nNow the islands. The biggest one, with gardens and a café, is Nehru Park, and boats go out to it from here. Another has a white domed building on it, and that's not a pavilion. It's the Udaipur Solar Observatory, one of India's research observatories for studying the sun. It's built on the water because the lake keeps the air above it steady, which makes for sharper pictures of the sun.\n\nThere's something rather nice in that. Scientists picked this lake to watch the sun by day. Every evening, the rest of the city comes to the same lake to watch it set.\n\nBefore you go, do what everyone else on the Pal is doing and eat something. Street food is part of the ritual here, so follow the longest queue. Then walk the full length of the embankment as the lights come on across the water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.6014,
+      "centroidLongitude": 73.674223,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Engineering",
+        "Viewpoint",
+        "Free to Visit",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "20d9d12a-f007-5b13-94a0-a5f87aacf893",
+      "createdAt": "2026-10-16",
+      "title": "Manjhi Ka Ghat | मांझी का घाट",
+      "shortDescription": "If you've seen one photograph of Udaipur, it was very probably taken from about here. You should be on the steps of Manjhi Ka Ghat, also called…",
+      "longDescription": "If you've seen one photograph of Udaipur, it was very probably taken from about here.\n\nStart with the steps you're on. A ghat is a flight of steps down to water, for bathing, washing, landing boats, or simply sitting. Udaipur's lakes are lined with them. This one's old name was Manji Raj ka Ghat, and it's now kept up by the city, with marble edging and wide seats. It's one of the easiest places in town to do nothing at all for an hour.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-manjhi-ka-ghat_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-manjhi-ka-ghat_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-manjhi-ka-ghat_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "315ff59b-2416-5435-afde-c8a54a1c92b5",
+          "order": 0,
+          "title": "Manjhi Ka Ghat | मांझी का घाट",
+          "caption": "On the steps of Manjhi Ka Ghat, on the western shore of Lake Pichola.",
+          "latitude": 24.57797,
+          "longitude": 73.679878,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-manjhi-ka-ghat.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-manjhi-ka-ghat_hero.webp",
+          "transcriptText": "If you've seen one photograph of Udaipur, it was very probably taken from about here.\n\nYou should be on the steps of Manjhi Ka Ghat, also called Ambrai Ghat, on the western shore of Lake Pichola. Facing across the water, you'll see the long frontage of the City Palace on the far shore. Down to your right are the white walls of the Lake Palace, out on the water. Straight across from you, at the water's edge, is Gangaur Ghat.\n\nStart with the steps you're on. A ghat is a flight of steps down to water, for bathing, washing, landing boats, or simply sitting. Udaipur's lakes are lined with them. This one's old name was Manji Raj ka Ghat, and it's now kept up by the city, with marble edging and wide seats. It's one of the easiest places in town to do nothing at all for an hour.\n\nThen the lake. It was here before the city. Maharana Udai Singh the Second enlarged it after founding Udaipur, flooding a village called Picholi in the process. That's where the name comes from.\n\nAnd then the view itself. From this side, the palace and the old city stack up together, roof above roof, with the temple spires behind. You're far enough away to see it whole and close enough to pick out the windows.\n\nHere's the thing about this spot. From the palace side, you're inside Udaipur's history. From here, you're simply looking at it, which is how most of its visitors have always seen it. Sometimes the view from outside is the better one.\n\nStay for the hour after sunset, when the palace lights come on and double in the water. Then walk north along the shore to the Chandpole bridge, for one more angle on the same view."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 98,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.57797,
+      "centroidLongitude": 73.679878,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Viewpoint",
+        "Iconic Landmark",
+        "Free to Visit",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1db6edd1-5207-536e-ae30-316f653c9b6e",
+      "createdAt": "2026-10-16",
+      "title": "The Climb to Karni Mata | करणी माता",
+      "shortDescription": "There's a cable car to the top of this hill. This is the other way up. You're at the foot of Machla Magra, the steep hill that rises east of…",
+      "longDescription": "There's a cable car to the top of this hill. This is the other way up.\n\nAs you climb, keep turning round. It's the best reason to walk rather than ride. First you'll see the rooftops of the old city close below you. Then, as you gain height, the palace on its ridge, the shine of Lake Pichola, and finally the hills ringing the whole valley. On a winter morning there's often mist sitting in the low ground, and the city comes out of it a roof at a time.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-karni-mata-climb_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-karni-mata-climb_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "38514a37-0280-5495-ba34-da310b5824d1",
+          "order": 0,
+          "title": "The Climb to Karni Mata | करणी माता",
+          "caption": "At the foot of Machla Magra, where the path up to the temple begins.",
+          "latitude": 24.567803586109985,
+          "longitude": 73.68639296739197,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-karni-mata-climb.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-karni-mata-climb_hero.webp",
+          "transcriptText": "There's a cable car to the top of this hill. This is the other way up.\n\nYou're at the foot of Machla Magra, the steep hill that rises east of Lake Pichola, where the path begins. It's best walked early, before the heat. Above you, at the top, is the temple of Karni Mata. Most visitors ride up from Doodh Talai on the ropeway. You're going to earn it.\n\nAs you climb, keep turning round. It's the best reason to walk rather than ride. First you'll see the rooftops of the old city close below you. Then, as you gain height, the palace on its ridge, the shine of Lake Pichola, and finally the hills ringing the whole valley. On a winter morning there's often mist sitting in the low ground, and the city comes out of it a roof at a time.\n\nAt the top is the temple of Karni Mata, a form of the goddess Durga, much loved across Rajasthan. Just to be clear, this isn't the famous Karni Mata temple at Deshnok, out in the desert near Bikaner, the one with thousands of sacred rats. This one is quieter. What you'll notice first is the incense drifting down the path to meet you.\n\nAnd here's what I find rather lovely about this climb. The ropeway gets you the same view in a few minutes. Walking, you watch the city slowly assemble itself below you, street by street. By the time you reach the top, you understand how Udaipur fits together.\n\nAt the summit, find a spot facing the lake and wait for the sun to clear the hills. Then, if your legs have had enough, take the ropeway down. Nobody will tell."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.567803586109985,
+      "centroidLongitude": 73.68639296739197,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0d8c03c8-e240-5de2-b0fc-a03ff3bc3a9b",
+      "createdAt": "2026-10-16",
+      "title": "Udaan Park | उड़ान पार्क",
+      "shortDescription": "Look up. Above the entrance to this little park, tens of thousands of birds are frozen in mid-flight. You're on the western bank of Swaroop…",
+      "longDescription": "Look up. Above the entrance to this little park, tens of thousands of birds are frozen in mid-flight.\n\nStart with the canopy. The architects, Studio Saar, took the idea from a starling murmuration: those great swirling clouds of birds that gather over lakes and fields at dusk. Starlings come here in winter, so the canopy is a portrait of the park's own visitors. It also gives shade and a place for gatherings, which is why the park has become so popular for parties.",
+      "makerId": "370fb311-760d-5657-8d8d-f27da57914b6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-udaan-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-udaan-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-udaan-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-udaan-park_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "86247c07-fedd-53f2-9e52-2f108f3106dd",
+          "order": 0,
+          "title": "Udaan Park | उड़ान पार्क",
+          "caption": "At the gate of Udaan Park, on the western bank of Swaroop Sagar.",
+          "latitude": 24.590109,
+          "longitude": 73.683606,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/udr-udaan-park.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/udr-udaan-park_hero.webp",
+          "transcriptText": "Look up. Above the entrance to this little park, tens of thousands of birds are frozen in mid-flight.\n\nYou're on the western bank of Swaroop Sagar, one of Udaipur's chain of lakes, at the gate of Udaan Park. Over your head is a canopy of small, life-size handmade birds, strung between branching steel frames that look like trees. Below you, a path winds down over the rocks to the water.\n\nStart with the canopy. The architects, Studio Saar, took the idea from a starling murmuration: those great swirling clouds of birds that gather over lakes and fields at dusk. Starlings come here in winter, so the canopy is a portrait of the park's own visitors. It also gives shade and a place for gatherings, which is why the park has become so popular for parties.\n\nThen the path down. Before this redesign, the park was run-down and hard to get into, perched on a rocky outcrop. Now an accessible route leads from the street right down to the lakeside, past play areas and lookouts. Much of it is made from salvage: old tyres turned into planters, swings and tunnels, and reclaimed steel reinforcing bar bent into the gates and railings.\n\nAnd here's the thing worth knowing. Udaipur has very little public green space. By one measure, about two square metres per person, against a recommended nine. Udaan was the first park revived under a charity's campaign to plant a million trees across the city. The planting here was chosen for the birds: native trees whose fruit lasts into the dry season.\n\nBefore you leave, walk down to the water's edge and look out across the lake. In winter you might count ducks, geese, egrets, kingfishers and cormorants, all from one bench."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 24.590109,
+      "centroidLongitude": 73.683606,
+      "city": "Udaipur",
+      "country": "India",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "Architecture",
+        "Public Art",
+        "Contemporary",
+        "Green Escape",
+        "Free to Visit",
+        "Designed by a Master",
+        "Studio Saar"
       ],
       "priceUSD": 0
     }
