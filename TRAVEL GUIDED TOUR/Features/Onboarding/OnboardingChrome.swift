@@ -1,0 +1,279 @@
+//
+//  OnboardingChrome.swift
+//  TRAVEL GUIDED TOUR
+//
+//  The fixed skeleton every onboarding card is drawn into, and the one type
+//  style they all use.
+//
+//  🔴 THE SKELETON IS THE DESIGN. Owner decisions, 2026-09-22/23:
+//  · the face is the same size, in the same place, on every screen from 3 on;
+//  · Continue is at the same height on every screen that has one;
+//  · the copy is CENTRED in the band between them;
+//  · the progress bar sits as high as iOS allows — 9pt under the safe area,
+//    because the Dynamic Island owns everything above it.
+//  Only the middle changes. That is what makes twenty screens not read as
+//  twenty.
+//
+
+import SwiftUI
+
+// MARK: - Type
+
+/// One style, everywhere. Owner, 2026-09-22: *"make all font same 'caption' …
+/// including font size, color etc."*
+///
+/// ⚠️ `AtlasTypography.caption` is a hard 13pt and does **not** respond to
+/// Dynamic Type (`docs/design-tokens.md`). Onboarding is the worst place in the
+/// app to inherit that — it is the first thing a new user reads and it is
+/// almost entirely text — so `.dynamicTypeSize` is left unclamped here and the
+/// scaling fix is tracked as a follow-up rather than silently diverging from
+/// the token the owner asked for.
+enum OnboardingType {
+    static let caption = AtlasTypography.caption
+    /// Hierarchy comes from space, not size. These are the only gaps used.
+    enum Gap {
+        static let tight: CGFloat = 8
+        static let step: CGFloat = 16
+        static let block: CGFloat = 32
+        static let section: CGFloat = 40
+    }
+}
+
+/// A line of onboarding copy. Centred, caption, primary ink — no exceptions
+/// but the wordmark.
+struct OnboardingLine: View {
+    private let content: Text
+    init(_ text: String) { self.content = Text(text) }
+    init(_ text: Text) { self.content = text }
+
+    var body: some View {
+        content
+            .font(OnboardingType.caption)
+            .foregroundStyle(AtlasColors.primaryText)
+            .multilineTextAlignment(.center)
+            .lineSpacing(5)
+            .frame(maxWidth: .infinity)
+    }
+}
+
+/// Why an account step did not go through — the line under the fields.
+/// Same type as every other line; only the colour says "problem".
+struct OnboardingError: View {
+    private let message: String
+    init(_ message: String) { self.message = message }
+
+    var body: some View {
+        Text(message)
+            .font(OnboardingType.caption)
+            .foregroundStyle(AtlasColors.mapPin)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
+    }
+}
+
+/// "Dozent", always in the wordmark — New York serif 15pt, tracked 2, Title
+/// Case. Same as `SplashView` and the Settings masthead.
+func dozentWordmark(_ trailing: String = "") -> Text {
+    Text("Dozent")
+        .font(AtlasTypography.wordmark)
+        .tracking(2)
+    + Text(trailing)
+}
+
+// MARK: - Progress
+
+/// Reels-style: one segment per screen. 🔴 OWNER DECISION 2026-09-22 — *"B,
+/// Reels style, my preference"* — over the chapter-segmented alternative.
+///
+/// Owner, 2026-09-26, on build 180: *"just have as many counts as there are
+/// screens"* and *"minimise the appearance of it … just white is fine."* So:
+/// · every segment up to and INCLUDING the current screen is full — no
+///   half-filled segment, which read as a screen you were partway through;
+/// · the count comes from the run actually being shown, so a replay (which
+///   drops the three account screens) draws 13 segments, not 16 with three
+///   that could never fill;
+/// · the fill is the primary ink, not brass — white in dark mode, black in
+///   light, where white would vanish on the ground.
+struct OnboardingProgressBar: View {
+    /// Index of the current segment, or `nil` on a screen the bar skips.
+    let index: Int?
+    /// How many segments this run has.
+    let count: Int
+
+    var body: some View {
+        HStack(spacing: 2.5) {
+            ForEach(0..<max(count, 0), id: \.self) { i in
+                Capsule()
+                    .fill(AtlasColors.primaryText.opacity(isFilled(i) ? 1 : 0.18))
+                    .frame(height: 3)
+            }
+        }
+        .frame(height: 3)
+        .opacity(index == nil ? 0 : 1)
+        .accessibilityHidden(true)
+    }
+
+    private func isFilled(_ segment: Int) -> Bool {
+        guard let index else { return false }
+        return segment <= index
+    }
+}
+
+// MARK: - Actions
+
+/// The primary button. Same height, same place, every screen.
+struct OnboardingButton: View {
+    let title: String
+    var filled = true
+    let action: () -> Void
+    /// `.disabled(_:)` from the call site — dimmed so it reads as not yet.
+    @Environment(\.isEnabled) private var isEnabled
+
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(AtlasTypography.caption)
+                .fontWeight(.bold)
+                .foregroundStyle(filled ? Color.white : AtlasColors.secondaryText)
+                .frame(maxWidth: .infinity)
+                .frame(height: 54)
+                .background(
+                    Capsule()
+                        .fill(filled ? AtlasColors.brass : Color.clear)
+                )
+                .overlay(
+                    Capsule()
+                        .stroke(filled ? Color.clear : AtlasColors.primaryText.opacity(0.24),
+                                lineWidth: 1.5)
+                )
+                .opacity(isEnabled ? 1 : 0.4)
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+/// A secondary link under the button — "I already have an account", "Skip".
+struct OnboardingLink: View {
+    let title: String
+    var dimmed = false
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(dimmed ? AtlasColors.tertiaryText : AtlasColors.secondaryText)
+                .frame(maxWidth: .infinity, minHeight: 40)
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+// MARK: - The scaffold
+
+/// The frame every card is drawn into.
+struct OnboardingScaffold<Content: View, Actions: View>: View {
+    @Environment(OnboardingCoordinator.self) private var onboarding
+    var progressIndex: Int?
+    /// Segments in this run — read from the coordinator, so every card agrees.
+    private var progressCount: Int { onboarding.progressCount }
+    var expression: DozentExpression = .rest
+    /// Screens 2 and the splash-adjacent ones hide the face; everything from 3
+    /// on shows it in exactly the same spot.
+    var showsFace = true
+    /// What "next" means on this card when it is reached by a tap or a swipe
+    /// rather than the button — `nil` is a plain `advance()`. A card whose
+    /// button does more than advance (saves a form, finishes the run) passes
+    /// the same closure here, so the three ways forward always agree.
+    var onForward: (() -> Void)? = nil
+    /// Reels-style tap zones. Off only where the empty space between controls
+    /// is not empty — the account form, where a tap beside a field must not
+    /// leave the screen.
+    var tapsNavigate = true
+    @ViewBuilder var content: () -> Content
+    @ViewBuilder var actions: () -> Actions
+
+    /// 42pt radius — the size the whole run was drawn at.
+    private let faceRadius: CGFloat = 42
+
+    @State private var width: CGFloat = 0
+
+    private func forward() {
+        if let onForward { onForward() } else { onboarding.advance() }
+    }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            OnboardingProgressBar(index: progressIndex, count: progressCount)
+                .padding(.top, 9)
+                .padding(.horizontal, AtlasSpacing.lg)
+
+            Spacer().frame(height: 36)
+
+            DozentFace(expression: expression, radius: faceRadius)
+                .opacity(showsFace ? 1 : 0)
+
+            // The band. Copy centres in it; anything taller scrolls rather
+            // than being squeezed or clipped.
+            GeometryReader { geo in
+                ScrollView {
+                    VStack(spacing: 0) {
+                        Spacer(minLength: 0)
+                        content()
+                        Spacer(minLength: 0)
+                    }
+                    .frame(minHeight: geo.size.height)
+                    .frame(maxWidth: .infinity)
+                }
+                .scrollBounceBehavior(.basedOnSize)
+            }
+            .padding(.top, 36)
+            .padding(.horizontal, AtlasSpacing.lg)
+
+            VStack(spacing: 0) { actions() }
+                .padding(.horizontal, AtlasSpacing.lg)
+                .padding(.bottom, AtlasSpacing.sm)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(AtlasColors.background)
+        // Reels-style navigation (owner, 2026-10-06): tap the left third to go
+        // back, anywhere else to go on; swipe left for next, right for back.
+        // The buttons stay for anyone who prefers them. Controls inside the
+        // card are children, so their own taps win — only empty space reaches
+        // these. Not an accessibility element: VoiceOver users have the
+        // buttons and the escape scrub.
+        .contentShape(Rectangle())
+        .onGeometryChange(for: CGFloat.self) { $0.size.width } action: { width = $0 }
+        .onTapGesture { location in
+            guard tapsNavigate else { return }
+            if location.x < width / 3 { onboarding.back() } else { forward() }
+        }
+        // Horizontal and deliberate only, so it never fights a scroll.
+        .simultaneousGesture(
+            DragGesture(minimumDistance: 24)
+                .onEnded { drag in
+                    let dx = drag.translation.width, dy = drag.translation.height
+                    guard abs(dx) > 80, abs(dx) > abs(dy) * 2 else { return }
+                    if dx > 0 { onboarding.back() } else { forward() }
+                }
+        )
+        // Back, in the gap between the bar and the face — the same corner
+        // every screen, like the bar itself. A 44pt target around a small
+        // glyph, so it reads as quiet chrome rather than a second button.
+        .overlay(alignment: .topLeading) {
+            if onboarding.canGoBack {
+                Button { onboarding.back() } label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 17, weight: .medium))
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .frame(width: 44, height: 44)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 14)
+                .padding(.leading, AtlasSpacing.lg - 14)
+                .accessibilityLabel("Back")
+            }
+        }
+    }
+}

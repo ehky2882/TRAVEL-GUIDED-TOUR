@@ -111,6 +111,9 @@ struct BottomModuleRoot: View {
             } action: { height in
                 onInteractiveHeightChange?(height)
             }
+            // Stop 5 of the navigation tour lights the mini-player and the
+            // tab bar together — they read as one bar.
+            .coachMarkAnchor(.tabBar)
             // The launch slide. Offset only — the measured height above is
             // unaffected by a translation, so the window still claims the right
             // strip while the bars are on their way in.
@@ -141,6 +144,11 @@ struct BottomModuleRoot: View {
         .ignoresSafeArea(.all, edges: .bottom)
         // Toasts render here, in this higher-level window, so they appear above
         // every UIKit modal (tour/maker layers, sheets) and the main window.
+        // The navigation tour. Here, in this higher window, because it is the
+        // only place a dim can cover the tab bar as well as the map below it —
+        // see `CoachMarkCenter`. The window takes every touch while it shows
+        // (`PassThroughWindow.claimsEntireScreen`).
+        .overlay { CoachMarkOverlay() }
         .overlay(alignment: .top) { ToastHost() }
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)
         // Present the full player from THIS window (above the detail

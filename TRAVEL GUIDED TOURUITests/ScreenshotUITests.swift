@@ -69,7 +69,7 @@ final class ScreenshotUITests: XCTestCase {
         //   * the marquee never stops scrolling, so without this every shot
         //     catches the mini-player title mid-word;
         //   * an empty Library advertises an app with no content.
-        app.launchArguments += ["-UITestDisableMarquee", "-UITestSeedLibrary"]
+        app.launchArguments += ["-UITestDisableMarquee", "-UITestSeedLibrary", "-UITestSkipOnboarding"]
 
         // Must be set before the app asks, so the very first camera move is
         // already centred on Midtown.
