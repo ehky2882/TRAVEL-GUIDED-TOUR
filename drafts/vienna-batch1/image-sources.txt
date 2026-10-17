@@ -1,0 +1,47 @@
+Vienna batch 1 — picked images (1200x900 WebP), 2026-10-17
+All Unsplash / Pexels / public domain: no credit line required.
+
+cafe-prueckel_hero.webp                          06-1   Unsplash Florian Schindler  https://unsplash.com/photos/cafe-pruckel-illuminated-at-night-on-a-city-street-corner-FR-JDSI8xQc
+cafe-prueckel_2.webp                             06-2   Pexels   Kim Magno  https://www.pexels.com/photo/charming-evening-at-cafe-pruckel-vienna-39356668/
+kleines-cafe_hero.webp                           10-1   Pexels   Sorina Ghe  https://www.pexels.com/photo/people-sitting-on-chair-outside-the-restaurant-13132366/
+das-loft_hero.webp                               11-2   Pexels   pierre matile  https://www.pexels.com/photo/illuminated-donaukanal-in-vienna-18054355/
+das-loft_2.webp                                  11-1   Pexels   pierre matile  https://www.pexels.com/photo/donaukanal-in-vienna-at-night-18054345/
+cafe-museum_hero.webp                            13-1   Pexels   Amy Burry  https://www.pexels.com/photo/close-up-shot-of-a-cup-of-cappuccino-on-a-saucer-10966812/
+looshaus_hero.webp                               20-1   Pexels   Shlok Rana  https://www.pexels.com/photo/raiffeisen-bank-building-in-vienna-austria-38261077/
+secession_hero.webp                              21-1   Unsplash Bernd 📷 Dittrich  https://unsplash.com/photos/the-secession-building-is-illuminated-at-night-z5G7IllfVCQ
+secession_2.webp                                 21-4   Pexels   Lydia Griva  https://www.pexels.com/photo/secession-building-golden-dome-in-vienna-36562382/
+secession_3.webp                                 21-3   Pexels   Lydia Griva  https://www.pexels.com/photo/facade-of-the-secession-building-in-vienna-34902884/
+secession_4.webp                                 21-8   Pexels   Lydia Griva  https://www.pexels.com/photo/art-nouveau-building-in-vienna-model-34922113/
+secession_5.webp                                 21-7   Pexels   Lydia Griva  https://www.pexels.com/photo/stunning-secession-building-with-golden-dome-34922111/
+secession_6.webp                                 21-10  Pexels   drB drB  https://www.pexels.com/photo/tree-in-ornate-planter-outside-architectural-building-34847754/
+otto-wagner-pavilion-karlsplatz_hero.webp        22-2   Pexels   Pham Ngoc Anh  https://www.pexels.com/photo/front-view-of-karlsplatz-13070459/
+otto-wagner-pavilion-karlsplatz_2.webp           22-1   Pexels   Luna Bas  https://www.pexels.com/photo/skateboarder-in-front-of-historic-karlsplatz-pavilion-34533956/
+otto-wagner-pavilion-karlsplatz_3.webp           22-3   Unsplash Sam  https://unsplash.com/photos/a-large-building-with-a-green-dome-on-top-of-it-6_mcJUb4iSE
+kirche-am-steinhof_hero.webp                     23-1   Unsplash Gerald Hartl  https://unsplash.com/photos/white-and-green-dome-building-under-cloudy-sky-during-daytime-2hZz3U9vRUg
+kirche-am-steinhof_2.webp                        23-3   Pexels   Erika Hierschlaeger  https://www.pexels.com/photo/st-leopold-s-church-dome-in-vienna-austria-33160298/
+kirche-am-steinhof_3.webp                        23-4   Pexels   Austria by Öffis  https://www.pexels.com/photo/architectural-dome-of-otto-wagner-church-in-vienna-32859861/
+kirche-am-steinhof_4.webp                        23-2   Pexels   Austria by Öffis  https://www.pexels.com/photo/otto-wagner-s-kirche-am-steinhof-facade-details-32859852/
+kirche-am-steinhof_5.webp                        23-5   Pexels   Austria by Öffis  https://www.pexels.com/photo/stunning-otto-wagner-architecture-in-wien-32859862/
+wotrubakirche_hero.webp                          25-1   Pexels   Michael Pointner  https://www.pexels.com/photo/church-in-vienna-13862332/
+library-and-learning-center_hero.webp            28-1   Pexels   Airam Dato-on  https://www.pexels.com/photo/modern-architectural-design-in-vienna-34141744/
+library-and-learning-center_2.webp               28-2   Pexels   Anh Nguyen  https://www.pexels.com/photo/modern-architecture-of-vienna-university-building-39835256/
+prunksaal_hero.webp                              29-1   Pexels   Airam Dato-on  https://www.pexels.com/photo/the-grand-hall-of-austrian-national-library-34141712/
+prunksaal_2.webp                                 29-3   Pexels   Jorge Urosa  https://www.pexels.com/photo/inside-of-austrian-national-library-5435001/
+prunksaal_3.webp                                 29-7   Pexels   Abstracts  photo  https://www.pexels.com/photo/stunning-baroque-ceiling-of-austrian-library-37365009/
+prunksaal_4.webp                                 29-9   Pexels   Mihai Vlasceanu  https://www.pexels.com/photo/library-in-hofburg-palace-in-vienna-16632444/
+prunksaal_5.webp                                 29-10  Pexels   BERK OZDEMIR  https://www.pexels.com/photo/brown-wooden-book-shelves-with-books-9099412/
+haas-haus_hero.webp                              31-2   Unsplash Nikolai Kolosov  https://unsplash.com/photos/modern-glass-building-with-unique-architectural-design-_1qHLlKagJY
+haas-haus_2.webp                                 31-3   Unsplash Andreas Weilguny  https://unsplash.com/photos/modern-building-with-reflective-glass-facade-and-unique-architecture-s5fJ8RBh3nw
+haas-haus_3.webp                                 31-7   Pexels   Alexey K.  https://www.pexels.com/photo/modern-architectural-facade-with-unique-glass-design-31822719/
+haas-haus_4.webp                                 31-6   Pexels   solivagus  https://www.pexels.com/photo/historic-and-modern-architecture-in-vienna-38769740/
+flakturm-augarten_hero.webp                      32-3   Pexels   Matthew Irvine  https://www.pexels.com/photo/historic-flak-tower-in-vienna-s-augarten-park-34216733/
+flakturm-augarten_2.webp                         32-1   Unsplash Tomasz Anusiewicz  https://unsplash.com/photos/a-very-tall-tower-with-a-sky-in-the-background-yvVMzDYWMm8
+flakturm-augarten_3.webp                         32-2   Unsplash Marek Omasta  https://unsplash.com/photos/a-tall-building-surrounded-by-trees-and-a-blue-sky-CTJXUd6xv1M
+flakturm-augarten_4.webp                         32-4   Pexels   Dolores Miskovic  https://www.pexels.com/photo/scenic-view-of-augarten-park-in-vienna-34323441/
+flakturm-augarten_5.webp                         32-6   Pexels   Frank Wesneck  https://www.pexels.com/photo/runner-in-augarten-vienna-with-historic-tower-34498307/
+friedhofskirche-zentralfriedhof_hero.webp        34-1   Pexels   Andrew N  https://www.pexels.com/photo/building-with-dome-23938741/
+friedhofskirche-zentralfriedhof_2.webp           34-4   Pexels   Jonas Horsch  https://www.pexels.com/photo/serene-pathway-in-historic-viennese-cemetery-36380358/
+friedhofskirche-zentralfriedhof_3.webp           34-3   Pexels   Heinz Reisenhofer  https://www.pexels.com/photo/military-cemetery-in-vienna-with-rows-of-soldier-graves-33886213/
+kahlenberg_hero.webp                             35-5   Pexels   Heinz Reisenhofer  https://www.pexels.com/photo/vienna-skyline-from-vineyard-in-spring-33636686/
+kahlenberg_2.webp                                35-6   Pexels   Daniel Żabiński  https://www.pexels.com/photo/breathtaking-view-of-danube-river-in-vienna-31781001/
+kahlenberg_3.webp                                35-10  Pexels   Andrew N  https://www.pexels.com/photo/panoramic-view-of-vienna-vineyards-in-autumn-40193971/

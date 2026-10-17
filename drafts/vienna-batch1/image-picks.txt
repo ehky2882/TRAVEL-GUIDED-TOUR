@@ -1,0 +1,15 @@
+06 cafe-prueckel: 06-1 hero, 06-2
+10 kleines-cafe: 10-1 hero
+11 das-loft: 11-2 hero, 11-1
+13 cafe-museum: 13-1 hero
+20 looshaus: 20-1 hero
+21 secession: 21-1 hero, 21-4, 21-3, 21-8, 21-7, 21-10
+22 otto-wagner-pavilion-karlsplatz: 22-2 hero, 22-1, 22-3
+23 kirche-am-steinhof: 23-1 hero, 23-3, 23-4, 23-2, 23-5
+25 wotrubakirche: 25-1 hero
+28 library-and-learning-center: 28-1 hero, 28-2
+29 prunksaal: 29-1 hero, 29-3, 29-7, 29-9, 29-10
+31 haas-haus: 31-2 hero, 31-3, 31-7, 31-6
+32 flakturm-augarten: 32-3 hero, 32-1, 32-2, 32-4, 32-6
+34 friedhofskirche-zentralfriedhof: 34-1 hero, 34-4, 34-3
+35 kahlenberg: 35-5 hero, 35-6, 35-10
