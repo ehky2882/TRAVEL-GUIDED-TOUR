@@ -49,3 +49,40 @@ Coordinates are OpenStreetMap objects that carry each venue's own name, found by
 | Written | Spoken |
 |---|---|
 @@PRON@@
+
+## Images (picked 2026-10-18)
+
+The owner picked these in the [Warsaw Image Picks](https://claude.ai/artifact/QGGnecrEVZRKg6mGgk4N7J) page. They are 24 photos for 9 tours, all from Unsplash or Pexels. Neither licence requires a credit line.
+
+Each file was cropped from a full-size (2400 px) original to 1200 × 900 WebP, and none had to be enlarged. They are staged in `images/`, **not yet on gh-pages**. Upload them only when the tours are wired into `Tours.json`, then run `check-image-duplicates.py --maker <CODE>`. The filenames use the tour slugs from the index above, and none clashes with an existing gh-pages file (checked 2026-10-18).
+
+⚠️ **The Gemini gates were NOT run.** The key supplied was a Cloud project name, not an API key. Every photo was identified by eye instead, and checked against its source caption. That review rejected look-alikes from Bucharest, Bratislava, Mysuru, Jabłonna and Poissy.
+
+**28 tours still have no image.** Wikimedia Commons, and Openverse (which fetches from it), returned 429 to every request from the cloud session. A session with Commons access, or owner or venue photos, is needed for those tours.
+
+| Tour | File | Role | Licence | Photographer | Source |
+|---|---|---|---|---|---|
+| 02 hotel-bristol | `hotel-bristol_hero.webp` | hero | Unsplash | flickch | <https://unsplash.com/photos/elegant-illuminated-building-at-night-with-street-and-parked-cars-h1xPyeW9Nqs> |
+| 18 hala-mirowska | `hala-mirowska_hero.webp` | hero | Pexels | MART  PRODUCTION | <https://www.pexels.com/photo/brown-building-with-arched-windows-7316948/> |
+| 20 palac-kultury-i-nauki | `palac-kultury-i-nauki_hero.webp` | hero | Unsplash | Valentyn Chernetskyi | <https://unsplash.com/photos/high-rise-building-beside-park-D7fPbwGQMHY> |
+| 20 palac-kultury-i-nauki | `palac-kultury-i-nauki_2.webp` | gallery 1 | Pexels | Julia Filirovska | <https://www.pexels.com/photo/the-facade-of-the-palace-of-culture-and-science-8259171/> |
+| 20 palac-kultury-i-nauki | `palac-kultury-i-nauki_3.webp` | gallery 2 | Unsplash | JEREMY MALECKI | <https://unsplash.com/photos/gray-concrete-building-under-white-clouds-during-daytime-sF7ClFY47yM> |
+| 20 palac-kultury-i-nauki | `palac-kultury-i-nauki_4.webp` | gallery 3 | Unsplash | Paweł Malinowski | <https://unsplash.com/photos/a-view-of-a-large-city-with-tall-buildings-UwfHpAg_A6w> |
+| 20 palac-kultury-i-nauki | `palac-kultury-i-nauki_5.webp` | gallery 4 | Pexels | Memory Lane | <https://www.pexels.com/photo/night-view-of-palace-of-culture-and-science-in-warsaw-35119863/> |
+| 22 muzeum-sztuki-nowoczesnej | `muzeum-sztuki-nowoczesnej_hero.webp` | hero | Unsplash | Mathis Mauprivez | <https://unsplash.com/photos/an-aerial-view-of-a-building-in-a-city-S1W2Bf81qoE> |
+| 25 buw | `buw_hero.webp` | hero | Pexels | Bogdan Krupin | <https://www.pexels.com/photo/flowerbeds-at-warsaw-university-library-garden-12028385/> |
+| 25 buw | `buw_2.webp` | gallery 1 | Pexels | Anastasiia Lopushynska | <https://www.pexels.com/photo/warsaw-university-library-building-with-plants-growing-on-walls-12022296/> |
+| 25 buw | `buw_3.webp` | gallery 2 | Pexels | Thomas Renaud | <https://www.pexels.com/photo/green-rooftop-walkway-in-warsaw-botanical-garden-35792463/> |
+| 25 buw | `buw_4.webp` | gallery 3 | Pexels | vilnis Izotovs | <https://www.pexels.com/photo/drone-shot-of-house-roofs-and-green-grass-6054755/> |
+| 26 sad-najwyzszy | `sad-najwyzszy_hero.webp` | hero | Unsplash | Nikolai Kolosov | <https://unsplash.com/photos/modern-building-with-a-large-stone-sculpture-outside-m11GGxMpsXs> |
+| 26 sad-najwyzszy | `sad-najwyzszy_2.webp` | gallery 1 | Pexels | MART  PRODUCTION | <https://www.pexels.com/photo/a-historical-monument-in-front-of-a-building-7316991/> |
+| 32 rynek-starego-miasta | `rynek-starego-miasta_hero.webp` | hero | Unsplash | Maksym Harbar | <https://unsplash.com/photos/people-walking-near-multicolored-building-okn8ZIjPMxI> |
+| 32 rynek-starego-miasta | `rynek-starego-miasta_2.webp` | gallery 1 | Unsplash | Federico Mata | <https://unsplash.com/photos/the-mermaid-of-warsaw-statue-stands-in-the-city-center-LJ4pJtkMTzU> |
+| 32 rynek-starego-miasta | `rynek-starego-miasta_3.webp` | gallery 2 | Unsplash | Sam | <https://unsplash.com/photos/a-group-of-people-walking-down-a-street-next-to-tall-buildings-WvNvTf5fb-k> |
+| 32 rynek-starego-miasta | `rynek-starego-miasta_4.webp` | gallery 3 | Pexels | Egor Komarov | <https://www.pexels.com/photo/old-town-in-warsaw-17741460/> |
+| 32 rynek-starego-miasta | `rynek-starego-miasta_5.webp` | gallery 4 | Pexels | Lesław Dzik | <https://www.pexels.com/photo/old-town-market-square-during-daytime-7115502/> |
+| 36 bulwary-wislane | `bulwary-wislane_hero.webp` | hero | Pexels | Wojciech Wyszkowski | <https://www.pexels.com/photo/aerial-view-of-swietokrzyski-bridge-warsaw-poland-38487655/> |
+| 36 bulwary-wislane | `bulwary-wislane_2.webp` | gallery 1 | Pexels | Radek Przybyłek | <https://www.pexels.com/photo/panoramic-view-of-warsaw-s-urban-skyline-31479746/> |
+| 36 bulwary-wislane | `bulwary-wislane_3.webp` | gallery 2 | Pexels | Oleksiy Yeshtokyn,🌻🇺🇦🌻 | <https://www.pexels.com/photo/warsaw-s-national-stadium-and-vistula-river-view-38094410/> |
+| 37 zlota-44 | `zlota-44_hero.webp` | hero | Pexels | urtimud.89 | <https://www.pexels.com/photo/aerial-view-warsaw-downtown-poland-18261856/> |
+| 37 zlota-44 | `zlota-44_2.webp` | gallery 1 | Pexels | Wojciech Wyszkowski | <https://www.pexels.com/photo/modern-aerial-view-of-warsaw-s-skyline-38487664/> |
