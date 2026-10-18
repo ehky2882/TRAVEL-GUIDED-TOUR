@@ -5581,6 +5581,16 @@
       "websiteURL": null
     },
     {
+      "id": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "displayName": "Atlas Studio VIE",
+      "platform": "dozent",
+      "handle": "atlas.vie",
+      "avatarURL": null,
+      "avatarEmoji": "🇦🇹",
+      "bio": "Atlas Studio's Vienna bureau — an architect's guide to the city: Otto Wagner and Adolf Loos, coffee houses and Heurigen, Red Vienna's housing, baroque libraries and post-war hotels, and the shops and workshops that have made the city's things for two hundred years.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -128166,6 +128176,1717 @@
         "Free to Visit",
         "Designed by a Master",
         "Studio Saar"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "596e20d2-6956-5998-b0eb-4a8147b2a939",
+      "createdAt": "2026-10-18",
+      "title": "Hotel Altstadt Vienna",
+      "shortDescription": "A hotel is usually one person's idea, repeated sixty times. This one is sixty-two ideas, and almost none of them agree. Kirchengasse, number…",
+      "longDescription": "A hotel is usually one person's idea, repeated sixty times. This one is sixty-two ideas, and almost none of them agree.\n\nThe story starts with one man, Otto Ernst Wiesenthal, who wanted his own hotel and finally got one about thirty-five years ago. Instead of fitting out sixty-two identical rooms, he handed them to different hands. Some were designed by the Milanese architect Matteo Thun, others by the fashion designer Atıl Kutoğlu, and the newest is a suite by Elfrid Wimmer-Repp themed on Sigmund Freud. No two rooms here are alike, and they're not meant to be.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-altstadt-vienna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-altstadt-vienna_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-altstadt-vienna_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-altstadt-vienna_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "77f4221a-5b3d-5e1e-a4be-7888e6af6a08",
+          "order": 0,
+          "title": "Hotel Altstadt Vienna",
+          "caption": "On Kirchengasse, on the slope of Spittelberg, facing the hotel’s plain front door.",
+          "latitude": 48.204817,
+          "longitude": 16.351339,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-hotel-altstadt-vienna.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-altstadt-vienna_hero.webp",
+          "transcriptText": "A hotel is usually one person's idea, repeated sixty times. This one is sixty-two ideas, and almost none of them agree.\n\nKirchengasse, number forty-one, on the slope of Spittelberg. You're looking at a tall, pale patrician house with a modest front door and nothing in particular to announce it, which is rather the point. Behind you and downhill are the narrow lanes of Spittelberg itself, all Biedermeier fronts and cobbles.\n\nThe story starts with one man, Otto Ernst Wiesenthal, who wanted his own hotel and finally got one about thirty-five years ago. Instead of fitting out sixty-two identical rooms, he handed them to different hands. Some were designed by the Milanese architect Matteo Thun, others by the fashion designer Atıl Kutoğlu, and the newest is a suite by Elfrid Wimmer-Repp themed on Sigmund Freud. No two rooms here are alike, and they're not meant to be.\n\nThen there's the art. Up the stairs and along the corridors you'll find Warhol, Brigitte Kowanz, Prachensky, Attersee, Helnwein. Some of it is on loan from museums, some belongs to Wiesenthal himself. It isn't hung like a gallery. It's hung like a house where someone collects rather more than the walls can comfortably hold.\n\nWhat I like, as an architect, is that the building doesn't try to be anything. The old house does the old-house job, high ceilings and deep windows, and lets the rooms argue with each other inside it. It's a very Viennese idea: a calm façade, and a great deal going on behind it.\n\nBefore you head off, walk down to Spittelberggasse and wander the lanes for ten minutes. The little Biedermeier houses are the reason this neighbourhood is protected at all, and they're at their best early in the morning, before the bars open."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.204817,
+      "centroidLongitude": 16.351339,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Architecture",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+      "createdAt": "2026-10-18",
+      "title": "The Guesthouse Vienna",
+      "shortDescription": "Some hotels shout from across the street. This one would rather you noticed the door handles. Führichgasse, number ten, in the old city. Find…",
+      "longDescription": "Some hotels shout from across the street. This one would rather you noticed the door handles.\n\nThe design is by Sir Terence Conran and his studio, Conran and Partners, and their brief, as the hotel puts it, was no theatrical gestures and no design for design's sake. What they did instead was fill the rooms with Vienna's own modern furniture. There are pieces from the Carl Auböck workshop, the family studio that has been making brass and leather objects here for generations. There's seating by Wittmann. There are designs by Oswald Haerdtl. And beside a small library of Austrian literature, there's Friedrich Kiesler's cantilever chair.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-the-guesthouse-vienna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-the-guesthouse-vienna_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-the-guesthouse-vienna_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1eaf383d-bdaa-5e9f-a3c4-0521b5305ea4",
+          "order": 0,
+          "title": "The Guesthouse Vienna",
+          "caption": "On Führichgasse, with the Albertina on its terrace directly opposite.",
+          "latitude": 48.205173,
+          "longitude": 16.369009,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-the-guesthouse-vienna.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-the-guesthouse-vienna_hero.webp",
+          "transcriptText": "Some hotels shout from across the street. This one would rather you noticed the door handles.\n\nFührichgasse, number ten, in the old city. Find the hotel's front, a plain townhouse with a brasserie at street level, then turn round. Directly opposite, up on its raised terrace, is the Albertina, the great palace of drawings and prints. The brasserie windows look straight across at it.\n\nThe design is by Sir Terence Conran and his studio, Conran and Partners, and their brief, as the hotel puts it, was no theatrical gestures and no design for design's sake. What they did instead was fill the rooms with Vienna's own modern furniture. There are pieces from the Carl Auböck workshop, the family studio that has been making brass and leather objects here for generations. There's seating by Wittmann. There are designs by Oswald Haerdtl. And beside a small library of Austrian literature, there's Friedrich Kiesler's cantilever chair.\n\nThat last one is worth a moment. Kiesler left Vienna in the nineteen twenties and became one of the great experimental architects of New York. Finding his chair here, next to the books, feels a little like a homecoming.\n\nThe brasserie downstairs is open every day of the year, from early morning to late evening. Bread comes in fresh each morning from the organic bakery Öfferl, the coffee is a house roast from the old Viennese roaster Naber, and the wine list sticks to Austria.\n\nHere's the thing about it. The Guesthouse isn't really a Conran interior in Vienna. It's a Viennese interior, edited by an Englishman who knew when to stop.\n\nIf you have twenty minutes, climb the ramp to the Albertina terrace opposite. Stand by the balustrade and look back at the hotel. The State Opera is a few steps away, and the view over the Burggarten palm house is one of the best free ones in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.205173,
+      "centroidLongitude": 16.369009,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Food",
+        "Contemporary",
+        "Designed by a Master",
+        "Conran and Partners"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "45c2ace9-a42f-55c7-8248-ce90f58a663a",
+      "createdAt": "2026-10-18",
+      "title": "Grand Ferdinand",
+      "shortDescription": "The Ringstraße was built to impress, and most of it still does. This building was put up long after the party, and it's all the better for it.…",
+      "longDescription": "The Ringstraße was built to impress, and most of it still does. This building was put up long after the party, and it's all the better for it.\n\nIt went up in the early nineteen fifties as an office building, and you can tell. It's tidy and rhythmical, with none of the stucco and statues of its nineteenth-century neighbours. That plainness is exactly why the façade and the marble foyer behind it are now protected. When the Vienna architects Atelier Heiss turned it into a hotel, opening in twenty fifteen, they kept the front and the entrance hall and rebuilt much of what lay behind.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-grand-ferdinand_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-grand-ferdinand_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-grand-ferdinand_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-grand-ferdinand_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-grand-ferdinand_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "98ec4b9e-8a1f-53a6-8cee-dc0c8dfebc51",
+          "order": 0,
+          "title": "Grand Ferdinand",
+          "caption": "On the far side of the Schubertring, looking back across the tram lines.",
+          "latitude": 48.20232,
+          "longitude": 16.374967,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-grand-ferdinand.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-grand-ferdinand_hero.webp",
+          "transcriptText": "The Ringstraße was built to impress, and most of it still does. This building was put up long after the party, and it's all the better for it.\n\nSchubertring, numbers ten to twelve. Stand on the far side of the Ring and look back across the tram lines. You'll see a long, flat, very upright façade with rows of identical windows: the Grand Ferdinand. The Opera is a few minutes' walk one way along the Ring, the Stadtpark a few minutes the other.\n\nIt went up in the early nineteen fifties as an office building, and you can tell. It's tidy and rhythmical, with none of the stucco and statues of its nineteenth-century neighbours. That plainness is exactly why the façade and the marble foyer behind it are now protected. When the Vienna architects Atelier Heiss turned it into a hotel, opening in twenty fifteen, they kept the front and the entrance hall and rebuilt much of what lay behind.\n\nInside, the owner, the hotelier Florian Weitzer, did something nicely contrary. He hung handmade chandeliers by Lobmeyr, the glassmakers round the corner on Kärntner Straße since eighteen twenty-three, under ceilings about seven metres high. Post-war office, imperial crystal.\n\nThen there's the roof. Eight floors up is a heated infinity pool, open every day of the year, for hotel guests only. There's also a rooftop restaurant and a breakfast room with views across to St Stephen's. And downstairs, Meissl and Schadn serves the schnitzel that Viennese families argue about.\n\nAnd one more resident: the hotel keeps a horse. He's called Pferdinand.\n\nWhen you've seen it, walk along the Ring into the Stadtpark. The gilded statue of Johann Strauss playing his violin is a few minutes away, and beyond it the Wien river runs between Jugendstil stone embankments, one of the city's loveliest bits of engineering."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.20232,
+      "centroidLongitude": 16.374967,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Viewpoint",
+        "Designed by a Master",
+        "Atelier Heiss"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
+      "createdAt": "2026-10-18",
+      "title": "Hotel Daniel Vienna",
+      "shortDescription": "Look up at the roof. There's a full-size sailing boat on it, and it's bent like a banana. You're on Landstraßer Gürtel, a few minutes' walk from…",
+      "longDescription": "Look up at the roof. There's a full-size sailing boat on it, and it's bent like a banana.\n\nThe building is older than it looks. It was designed in nineteen sixty-two by Georg Lippert and Roland Rohn as offices for a pharmaceutical company, and it's considered the first building in Austria with a curtain wall, a façade hung on the frame like a coat rather than built up like a wall. That's why the front and the staircase are now protected. When Atelier Heiss converted it into a hotel in twenty eleven, they kept the original window frames, which were still in good order after half a century.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-daniel-vienna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-daniel-vienna_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e539a00c-eacb-5aeb-9ec7-fddee7a142ef",
+          "order": 0,
+          "title": "Hotel Daniel Vienna",
+          "caption": "On the Landstraßer Gürtel, looking up at the boat on the roof.",
+          "latitude": 48.188862,
+          "longitude": 16.383851,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-hotel-daniel-vienna.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hotel-daniel-vienna_hero.webp",
+          "transcriptText": "Look up at the roof. There's a full-size sailing boat on it, and it's bent like a banana.\n\nYou're on Landstraßer Gürtel, a few minutes' walk from the Belvedere, with the new main railway station close by. In front of you is a crisp glass block, its façade a grid of glass and pale anodised aluminium. That's Hotel Daniel, and the curved boat on top is by the Austrian artist Erwin Wurm.\n\nThe building is older than it looks. It was designed in nineteen sixty-two by Georg Lippert and Roland Rohn as offices for a pharmaceutical company, and it's considered the first building in Austria with a curtain wall, a façade hung on the frame like a coat rather than built up like a wall. That's why the front and the staircase are now protected. When Atelier Heiss converted it into a hotel in twenty eleven, they kept the original window frames, which were still in good order after half a century.\n\nInside, they were honest about it. The concrete ceilings were left raw, and you can still see the marks where the old office partitions once stood. The rooms are deliberately compact, slotted between the existing columns, with walnut bedheads and green mosaic showers.\n\nThe ground floor is one big open room: lobby, lounge and a bakery, open to anyone walking in off the street. And out in the grounds there's a silver American caravan from nineteen fifty-two, converted into a single hotel room with its own bathtub.\n\nWhat I like about it is the attitude. Nobody pretended this was a palace. They took a good modern building, cleaned it up, and let it be itself.\n\nFrom here it's five minutes to the gate of the Upper Belvedere. Walk through the garden and look back down towards the city; on a clear day the spire of St Stephen's sits right in the middle of the view."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.188862,
+      "centroidLongitude": 16.383851,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Public Art",
+        "Designed by a Master",
+        "Georg Lippert",
+        "Atelier Heiss"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "37bbe872-3d86-5a5e-8d31-1f771b44e126",
+      "createdAt": "2026-10-18",
+      "title": "Steirereck",
+      "shortDescription": "In nineteen hundred and three, this was where the Viennese came to drink a glass of milk in the park. You're in the Stadtpark, on the path along…",
+      "longDescription": "In nineteen hundred and three, this was where the Viennese came to drink a glass of milk in the park.\n\nThe Meierei opened as a milk-drinking hall, a very respectable idea for a public park at the time. It was badly damaged in the Second World War, rebuilt, and listed in two thousand and four. Then in January two thousand and five, the Reitbauer family moved their restaurant in here after about thirty-five years elsewhere in the city.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-steirereck_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-steirereck_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-steirereck_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-steirereck_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-steirereck_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-steirereck_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6f4e74a9-fd3f-5e4b-976e-b24267d73bc2",
+          "order": 0,
+          "title": "Steirereck",
+          "caption": "On the river path in the Stadtpark, beside the Wien river embankment.",
+          "latitude": 48.20446,
+          "longitude": 16.381279,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-steirereck.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-steirereck_hero.webp",
+          "transcriptText": "In nineteen hundred and three, this was where the Viennese came to drink a glass of milk in the park.\n\nYou're in the Stadtpark, on the path along the Wien river, with the river's stone embankment beside you. In front of you, set into the bank, is a pale, villa-like pavilion, and wrapped around it a cluster of low, angular extensions in a slightly hazy, reflective metal. That's Steirereck, and the old building at its heart is the Meierei, the park's original dairy.\n\nThe Meierei opened as a milk-drinking hall, a very respectable idea for a public park at the time. It was badly damaged in the Second World War, rebuilt, and listed in two thousand and four. Then in January two thousand and five, the Reitbauer family moved their restaurant in here after about thirty-five years elsewhere in the city.\n\nThe newer parts you're looking at came later. The Viennese studio PPAG architects won a competition to extend and renovate the building, and finished in twenty fourteen. They describe their pavilions as finger-like, and they designed them, they say, by working outward from individual tables. Every table sits right against the façade, with its own view of the park. The metal cladding is meant to look as if it's coated with dew. Look closely and the trees seem to blur into it.\n\nAnd on the roof, where you can't see it from here, there's a herb garden.\n\nThat's the clever bit, if you ask me. A temple of serious cooking that has decided to look like part of the park rather than a monument in it.\n\nIf a full dinner isn't on the cards, the Meierei on the lower level is a separate, more relaxed place with a great reputation for cheese. Or simply follow the river path a little further and look back: from the far bank, the mirrored pavilions almost disappear into the green."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.20446,
+      "centroidLongitude": 16.381279,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Green Escape",
+        "Designed by a Master",
+        "PPAG architects"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8289fd85-eaec-5fe8-8c6e-f157a2dfc9cc",
+      "createdAt": "2026-10-18",
+      "title": "Café Prückel",
+      "shortDescription": "Most Viennese coffee houses want you to feel you've stepped back into eighteen ninety. This one stopped the clock at nineteen fifty-five. You're…",
+      "longDescription": "Most Viennese coffee houses want you to feel you've stepped back into eighteen ninety. This one stopped the clock at nineteen fifty-five.\n\nIt opened on Christmas Day, nineteen hundred and three, under another name entirely, Café Lurion, after its founder, Maxime Lurion, a former European cycling champion. The building above was by Jakob Gartner, and the original interior was all historicist plush.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-prueckel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-prueckel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-prueckel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-prueckel_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "38674107-0fbe-5174-a4d0-f9427c90ecc4",
+          "order": 0,
+          "title": "Café Prückel",
+          "caption": "On the corner of the Stubenring and Dr-Karl-Lueger-Platz, opposite the MAK.",
+          "latitude": 48.207607,
+          "longitude": 16.380417,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-cafe-prueckel.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-prueckel_hero.webp",
+          "transcriptText": "Most Viennese coffee houses want you to feel you've stepped back into eighteen ninety. This one stopped the clock at nineteen fifty-five.\n\nYou're at the corner of the Stubenring and Dr-Karl-Lueger-Platz, with the Ringstraße trams going past and the Museum of Applied Arts, the MAK, across the Ring. On the corner in front of you is a café with a long run of big, plain windows and an awning over the terrace. That's Café Prückel.\n\nIt opened on Christmas Day, nineteen hundred and three, under another name entirely, Café Lurion, after its founder, Maxime Lurion, a former European cycling champion. The building above was by Jakob Gartner, and the original interior was all historicist plush.\n\nThen, in nineteen fifty-five, the architect Oswald Haerdtl was asked to modernise it. He took out the pillars and made the window openings much bigger. The result is the room you can see through the glass: light, open and quietly fifties. It's a post-war café interior that Vienna now protects as a monument, which tells you how far opinion has travelled. The rooms at the back went the other way and were rebuilt in Jugendstil style in the nineteen eighties, so you can sit in two eras at once.\n\nDownstairs, there's a third story. In November nineteen thirty-one, the actress Stella Kadmon opened a cabaret in the basement called Der liebe Augustin. Until nineteen thirty-eight it was a stage for artists who had fled Nazi Germany, and the cellar has been a small theatre, on and off, ever since.\n\nGo in, take a window seat on the Ring side, and order a Prückel Creme: a small mocha with a little jug of cream on the side. Then, when you leave, walk two minutes down the Stubenring to Otto Wagner's Post Office Savings Bank, which this room would make an excellent argument with."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.207607,
+      "centroidLongitude": 16.380417,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Performance",
+        "Modernist",
+        "Designed by a Master",
+        "Oswald Haerdtl"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "618e3268-b878-5e1f-837b-b5530f56c737",
+      "createdAt": "2026-10-18",
+      "title": "Zum Schwarzen Kameel",
+      "shortDescription": "There has been a shop selling good things to eat on this spot since sixteen eighteen. The camel came with the founder. You're on Bognergasse…",
+      "longDescription": "There has been a shop selling good things to eat on this spot since sixteen eighteen. The camel came with the founder.\n\nIn sixteen eighteen, a man called Johann Baptist Cameel bought the house and opened a spice shop under his own name. Kameel, camel: a pun that has outlived him by four centuries. Two hundred years later the Stiebitz family added a wine tavern, the business became a supplier to the imperial court, and Beethoven is listed among the guests. The painter Ferdinand Georg Waldmüller drew the camel logo you're looking at.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-zum-schwarzen-kameel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-zum-schwarzen-kameel_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fe6ce620-42ff-577d-b344-1b8dca946375",
+          "order": 0,
+          "title": "Zum Schwarzen Kameel",
+          "caption": "On Bognergasse, a narrow street just off the Graben.",
+          "latitude": 48.209994,
+          "longitude": 16.368316,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-zum-schwarzen-kameel.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-zum-schwarzen-kameel_hero.webp",
+          "transcriptText": "There has been a shop selling good things to eat on this spot since sixteen eighteen. The camel came with the founder.\n\nYou're on Bognergasse, number five, a narrow street just off the Graben. In front of you is the shop with the camel in its name, and through the windows a long counter, usually with a small crowd standing at it. The restaurant is on the floor above.\n\nIn sixteen eighteen, a man called Johann Baptist Cameel bought the house and opened a spice shop under his own name. Kameel, camel: a pun that has outlived him by four centuries. Two hundred years later the Stiebitz family added a wine tavern, the business became a supplier to the imperial court, and Beethoven is listed among the guests. The painter Ferdinand Georg Waldmüller drew the camel logo you're looking at.\n\nIn nineteen hundred and one the whole building was rebuilt, and the interior was done in Viennese Jugendstil by the firm Portois and Fix. That's the restaurant upstairs, and the house rightly calls it a Jugendstil jewel.\n\nDownstairs is where the Viennese actually go. The counter is famous for very small open sandwiches, ham carved by hand, and an array of spreads. People stand, eat two or three, have a glass of wine and leave. It's an eleven-in-the-morning habit as much as an evening one.\n\nWhat's worth knowing, standing here, is that the Kameel isn't preserved because someone decided it was heritage. It's preserved because people never stopped coming.\n\nBefore you go, walk ten paces to the end of Bognergasse and look into the square Am Hof, one of the largest in the old city. And on your way back to the Graben, have a look at the Engel Apotheke at number nine, with its gilded Jugendstil angels on the façade."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.209994,
+      "centroidLongitude": 16.368316,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1260aab6-0d44-5ce4-b763-4eee14859da2",
+      "createdAt": "2026-10-18",
+      "title": "Gasthaus Pöschl",
+      "shortDescription": "This is what Vienna means by a Beisl: a neighbourhood inn with no pretensions, wooden panelling, and a schnitzel that fills the plate. You're on…",
+      "longDescription": "This is what Vienna means by a Beisl: a neighbourhood inn with no pretensions, wooden panelling, and a schnitzel that fills the plate.\n\nThe man behind it is Hanno Pöschl, an actor you may have seen in Before Sunrise, and a Viennese institution in his own right. He's run the Kleines Café on the square round the corner since the nineteen seventies. Around the turn of the millennium he took over this old wine room and made it a Gasthaus, and according to the city's weekly, Falter, it was the architect Hermann Czech, his collaborator on the café, who did the conversion.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-gasthaus-poeschl_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-gasthaus-poeschl_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-gasthaus-poeschl_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-gasthaus-poeschl_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "74072473-0a06-59c1-bb66-b97c8d0f06f2",
+          "order": 0,
+          "title": "Gasthaus Pöschl",
+          "caption": "On Weihburggasse, a step from the corner of Franziskanerplatz.",
+          "latitude": 48.206657,
+          "longitude": 16.373858,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-gasthaus-poeschl.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-gasthaus-poeschl_hero.webp",
+          "transcriptText": "This is what Vienna means by a Beisl: a neighbourhood inn with no pretensions, wooden panelling, and a schnitzel that fills the plate.\n\nYou're on Weihburggasse, number seventeen, a step or two from the corner of Franziskanerplatz. In front of you is an unassuming shopfront with the name above it, and through the windows wood panelling, small tables, and very little else. Just round the corner to your left is the little square with the Franciscan church and its fountain.\n\nThe man behind it is Hanno Pöschl, an actor you may have seen in Before Sunrise, and a Viennese institution in his own right. He's run the Kleines Café on the square round the corner since the nineteen seventies. Around the turn of the millennium he took over this old wine room and made it a Gasthaus, and according to the city's weekly, Falter, it was the architect Hermann Czech, his collaborator on the café, who did the conversion.\n\nThat's the interesting bit, if you're an architect. Czech is famous for interiors that barely seem designed at all, rooms that look as though they've simply always been like that. Here that's exactly what you get. Nothing is new for the sake of being new. The kitchen sends out the classics, the room stays out of the way, and the Viennese come back for both.\n\nThe menu changes with the seasons, but this is the place for the dishes you came to Vienna for, done properly. It's open from lunchtime until late most days, and it's small, so it's worth booking.\n\nWhen you come out, walk round the corner onto Franziskanerplatz and stand by the Moses fountain in the middle. On the far side, at number three, is the Kleines Café, the other half of this story. Sit outside if there's a table free."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.206657,
+      "centroidLongitude": 16.373858,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Hermann Czech"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5988f39e-1680-5394-9f96-6ba6b4406a1e",
+      "createdAt": "2026-10-18",
+      "title": "Mayer am Pfarrplatz",
+      "shortDescription": "In the summer of eighteen seventeen, a deaf composer rented rooms in this house and worked on his Ninth Symphony. You're on Pfarrplatz in…",
+      "longDescription": "In the summer of eighteen seventeen, a deaf composer rented rooms in this house and worked on his Ninth Symphony.\n\nIt's a Heuriger, which is the most Viennese institution of all: a wine tavern run by the people who grow the wine. Wine has been made here, they say, since sixteen eighty-three. The vines are on the hills right behind you, and the wine in your glass came from them.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-mayer-am-pfarrplatz_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-mayer-am-pfarrplatz_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-mayer-am-pfarrplatz_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-mayer-am-pfarrplatz_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c4ee90f5-8a4e-56c4-8c46-4a5ffd3cf810",
+          "order": 0,
+          "title": "Mayer am Pfarrplatz",
+          "caption": "On Pfarrplatz in Heiligenstadt, beside the little church of St Jakob.",
+          "latitude": 48.255131,
+          "longitude": 16.358982,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-mayer-am-pfarrplatz.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-mayer-am-pfarrplatz_hero.webp",
+          "transcriptText": "In the summer of eighteen seventeen, a deaf composer rented rooms in this house and worked on his Ninth Symphony.\n\nYou're on Pfarrplatz in Heiligenstadt, in the vineyard country at the edge of Vienna. In front of you is a long, low old house with a gateway and a courtyard full of tables behind it. To one side is the little parish church of St Jakob. That's Mayer am Pfarrplatz, and the house is the one where Beethoven lived that year.\n\nIt's a Heuriger, which is the most Viennese institution of all: a wine tavern run by the people who grow the wine. Wine has been made here, they say, since sixteen eighty-three. The vines are on the hills right behind you, and the wine in your glass came from them.\n\nBeethoven came to Heiligenstadt more than once. It was a rural village then, and he hoped the spa next door would help with his failing hearing. It didn't. Fifteen years earlier, in eighteen oh two, he had written his despairing letter to his brothers in this same village, the Heiligenstadt Testament. By the time he stayed in this house, he was working on the symphony that ends with the Ode to Joy.\n\nHis rooms are on the first floor, reached by a small staircase from the terrace, and they're marked to this day.\n\nNow have a look at the courtyard itself. This is how a Heuriger works: a buffet of hot and cold food, wine by the quarter-litre, long tables you share, and in the evenings, often, a pair of musicians playing old Viennese songs. Nobody's in a hurry.\n\nWhen you're done, look for the Beethovengang, a path a few minutes' walk away that follows a little stream through the trees towards the vineyards. It's named after the walks he took there, and it's still the nicest way to leave Heiligenstadt."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.255131,
+      "centroidLongitude": 16.358982,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Performance",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fcc5cf6d-6957-599c-b622-54843af70465",
+      "createdAt": "2026-10-18",
+      "title": "Kleines Café",
+      "shortDescription": "The name means the small café, and they weren't exaggerating. You're on Franziskanerplatz, a tiny square in the old city with the Franciscan…",
+      "longDescription": "The name means the small café, and they weren't exaggerating.\n\nIt was one of the first works of the architect Hermann Czech, done in stages from nineteen seventy. He fitted out the lower room first, then added the upper room in nineteen seventy-three and seventy-four. If you ask me, he's the architect's architect in Vienna, and this is where his reputation started.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kleines-cafe_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1264a056-71c1-5cbd-8adb-1b4795a2d71e",
+          "order": 0,
+          "title": "Kleines Café",
+          "caption": "On Franziskanerplatz, by the Moses fountain, facing number three.",
+          "latitude": 48.206583,
+          "longitude": 16.374358,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-kleines-cafe.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kleines-cafe_hero.webp",
+          "transcriptText": "The name means the small café, and they weren't exaggerating.\n\nYou're on Franziskanerplatz, a tiny square in the old city with the Franciscan church on one side and a fountain of Moses in the middle. Find number three. There are two doors and two little rooms, one slightly higher than the other, and in good weather a scatter of chairs and tables out on the square. That's the Kleines Café.\n\nIt was one of the first works of the architect Hermann Czech, done in stages from nineteen seventy. He fitted out the lower room first, then added the upper room in nineteen seventy-three and seventy-four. If you ask me, he's the architect's architect in Vienna, and this is where his reputation started.\n\nWhat he does here is make a very small space behave like a larger one. The proportions are tight, rather like a submarine. But mirrors are placed to stretch the room, and every centimetre has a job. It doesn't look designed. It looks as though it has always been here, which is the hardest effect of all to achieve.\n\nNow look down, if you're inside the lower room. In nineteen seventy-seven Czech laid old gravestones in the floor, face down, inscriptions hidden. It was a reply to the sculptor Karl Prantl, who had proposed paving Stephansplatz with discarded gravestones.\n\nThe café belongs to the actor Hanno Pöschl, and if it seems oddly familiar, that may be because it appears in Before Sunrise.\n\nTake a table on the square if you can, then walk round the corner onto Weihburggasse. Gasthaus Pöschl, at number seventeen, is the same owner and the same architect, a quarter of a century later."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 95,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.206583,
+      "centroidLongitude": 16.374358,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Hermann Czech"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d102fac4-3be4-5890-ad16-330fad5cd6a7",
+      "createdAt": "2026-10-18",
+      "title": "Das LOFT",
+      "shortDescription": "Wait until it gets dark, then look up at the top of the tower beside the canal. The ceiling is glowing. You're on Praterstraße, on the…",
+      "longDescription": "Wait until it gets dark, then look up at the top of the tower beside the canal. The ceiling is glowing.\n\nThe building is by the French architect Jean Nouvel. From down here it reads as a crisp, almost severe block of dark glass. The surprise is overhead. The ceilings of the top floor are covered by a huge video and light installation by the Swiss artist Pipilotti Rist: slow, shifting colour, a bit like looking up through a kaleidoscope. At night it shines out through the glass and you can see it from the street, and from half the old city.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-das-loft_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-das-loft_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-das-loft_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d2b831dc-9c43-5cba-974a-39f99971d0f6",
+          "order": 0,
+          "title": "Das LOFT",
+          "caption": "On Praterstraße at the foot of the bridge, below the dark glass tower.",
+          "latitude": 48.212719,
+          "longitude": 16.37979,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-das-loft.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-das-loft_hero.webp",
+          "transcriptText": "Wait until it gets dark, then look up at the top of the tower beside the canal. The ceiling is glowing.\n\nYou're on Praterstraße, on the Leopoldstadt side of the Danube Canal, at the foot of the bridge. In front of you is a tall, dark glass tower. That's the hotel now called SO/ Vienna, which opened as the Sofitel in December twenty ten. The bar and restaurant on the top floor, the eighteenth, is Das LOFT.\n\nThe building is by the French architect Jean Nouvel. From down here it reads as a crisp, almost severe block of dark glass. The surprise is overhead. The ceilings of the top floor are covered by a huge video and light installation by the Swiss artist Pipilotti Rist: slow, shifting colour, a bit like looking up through a kaleidoscope. At night it shines out through the glass and you can see it from the street, and from half the old city.\n\nGo up, and the view is the other half of the experience. The Danube Canal is right below you. Across the water is the whole of the old city, with St Stephen's Cathedral spire rising out of it, and the green hills of the Vienna Woods on the horizon.\n\nHere's what I find rather lovely about it. Vienna is a city that's generally nervous of tall new buildings in the middle of its old views. This one turns the tables: it isn't a tower you look at so much as a place you look out from.\n\nCome back down and walk across the bridge to Schwedenplatz, then turn left along the canal towards the Urania. In summer the whole bank is lined with bars and benches, and the graffiti on the canal walls is some of the best in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 98,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.212719,
+      "centroidLongitude": 16.37979,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Tower",
+        "Viewpoint",
+        "After Dark",
+        "Public Art",
+        "Contemporary",
+        "Designed by a Master",
+        "Jean Nouvel"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "00ec26d9-9e7e-50e8-ad0d-b6509fb9413a",
+      "createdAt": "2026-10-18",
+      "title": "Café Sperl",
+      "shortDescription": "If you want to know what a Viennese coffee house was like in eighteen eighty, this is still one of the best answers. You're on Gumpendorfer…",
+      "longDescription": "If you want to know what a Viennese coffee house was like in eighteen eighty, this is still one of the best answers.\n\nIt opened in eighteen eighty as Café Ronacher, and was bought five years later by the Sperl family, whose name it has kept ever since. The interior was designed in the Ringstraße style by Wilhelm Jelinek and Anton Groß, and it has survived remarkably intact: parquet floors, marble tables, bentwood Thonet chairs, a crystal chandelier, and the carom billiard tables you can see from here. The last major renovation, in nineteen eighty-three, was done carefully, and the whole room is now protected.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-sperl_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-sperl_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-sperl_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-sperl_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c183ae29-3d91-553c-82c3-286d05e3198e",
+          "order": 0,
+          "title": "Café Sperl",
+          "caption": "On Gumpendorfer Straße, at the corner of Lehárgasse.",
+          "latitude": 48.199838,
+          "longitude": 16.361169,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-cafe-sperl.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-sperl_hero.webp",
+          "transcriptText": "If you want to know what a Viennese coffee house was like in eighteen eighty, this is still one of the best answers.\n\nYou're on Gumpendorfer Straße, at the corner of Lehárgasse, a few minutes' walk from the Naschmarkt. In front of you is a broad corner café, and through the glass, with luck, the green of billiard tables. That's Café Sperl.\n\nIt opened in eighteen eighty as Café Ronacher, and was bought five years later by the Sperl family, whose name it has kept ever since. The interior was designed in the Ringstraße style by Wilhelm Jelinek and Anton Groß, and it has survived remarkably intact: parquet floors, marble tables, bentwood Thonet chairs, a crystal chandelier, and the carom billiard tables you can see from here. The last major renovation, in nineteen eighty-three, was done carefully, and the whole room is now protected.\n\nThink about who sat here. Officers from the military academy round the corner. The composer Franz Lehár, whose name is on the side street. And between eighteen ninety-five and the Second World War, a regular table of artists, the Hagengesellschaft, while Josef Hoffmann and Koloman Moser met here with friends in the years before they founded the Vienna Secession.\n\nAnd here's the thing. Nobody comes to Café Sperl for novelty. They come because it doesn't change. A coffee here comes on a small silver tray with a glass of water, and nobody will rush you if you sit with it all afternoon.\n\nWhen you leave, walk two minutes down towards the Naschmarkt and look at the two buildings by Otto Wagner on the Linke Wienzeile, numbers thirty-eight and forty. One has gilded medallions; the other is covered in painted majolica roses. They're the best argument going for crossing the road."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.199838,
+      "centroidLongitude": 16.361169,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "342d83f1-37bf-51eb-b747-31a2b8668c7a",
+      "createdAt": "2026-10-18",
+      "title": "Café Museum",
+      "shortDescription": "In April eighteen ninety-nine, a young critic who hated ornament got his first big job. This is it. You're at the corner of Operngasse and…",
+      "longDescription": "In April eighteen ninety-nine, a young critic who hated ornament got his first big job. This is it.\n\nThe building itself dates from eighteen seventy-two. The interior was given to Adolf Loos, who was then better known for his writing than his buildings. It was his first major commission, and he treated it as a manifesto. Smooth walls, brass strips, marble tables, bentwood chairs, mirrors, and bare light bulbs. No garlands, no gilding. A plain room for people who had better things to look at.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2d9dad3b-4211-5161-920f-cdcc56ffd97c",
+          "order": 0,
+          "title": "Café Museum",
+          "caption": "At the corner of Operngasse and Friedrichstraße, facing the Secession.",
+          "latitude": 48.201437,
+          "longitude": 16.367665,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-cafe-museum.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-cafe-museum_hero.webp",
+          "transcriptText": "In April eighteen ninety-nine, a young critic who hated ornament got his first big job. This is it.\n\nYou're at the corner of Operngasse and Friedrichstraße, a few minutes from the State Opera. Look across Friedrichstraße and you'll see the white cube and golden dome of the Secession. Behind you, on the corner, is a large café with big windows on two sides. That's Café Museum.\n\nThe building itself dates from eighteen seventy-two. The interior was given to Adolf Loos, who was then better known for his writing than his buildings. It was his first major commission, and he treated it as a manifesto. Smooth walls, brass strips, marble tables, bentwood chairs, mirrors, and bare light bulbs. No garlands, no gilding. A plain room for people who had better things to look at.\n\nAnd here's the joke. Loos despised the Secession, the gold-domed temple of ornament across the road. Yet the Secession artists adopted his café as their local. Klimt, Schiele, Kokoschka, Otto Wagner, Karl Kraus and Robert Musil all drank coffee here.\n\nLoos's room didn't last. In nineteen thirty and thirty-one, Josef Zotti, a pupil of Josef Hoffmann, remodelled it with cosy red booths. In two thousand and three it was rebuilt to look like Loos's original, a reconstruction that critics found neither authentic nor comfortable. Since it reopened in twenty ten, the look has gone back towards Zotti: red velvet benches and round globe lamps.\n\nWhat's worth knowing is that this is a room the city has argued over for a hundred and twenty-five years. Few cafés can say that.\n\nWhen you leave, cross Friedrichstraße to the Secession and read the gold lettering over its door. Then look back at the café's plain corner, and you'll be standing exactly between the two sides of the argument."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.201437,
+      "centroidLongitude": 16.367665,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Art",
+        "Modernist",
+        "Designed by a Master",
+        "Adolf Loos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9bcccf86-aaa2-55ab-9312-50a786d41d9a",
+      "createdAt": "2026-10-18",
+      "title": "Strandbar Herrmann",
+      "shortDescription": "Twenty years ago this was a patch of builders' wasteland. Then somebody tipped a load of sand on it. You're on the Danube Canal, on the…",
+      "longDescription": "Twenty years ago this was a patch of builders' wasteland. Then somebody tipped a load of sand on it.\n\nIt opened in the summer of two thousand and five, the first of the canal's sand bars. The founder, Alexander Kaiser, had seen beach bars in Berlin and thought the idea would work here, on a neglected stretch at the mouth of the Wien river. Within days of opening, people were queuing for deckchairs.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-strandbar-herrmann_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-strandbar-herrmann_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-strandbar-herrmann_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "556c1d78-2334-5338-96e8-57964c526a5a",
+          "order": 0,
+          "title": "Strandbar Herrmann",
+          "caption": "On the Danube Canal, where the Wien river flows in, opposite the Urania.",
+          "latitude": 48.211946,
+          "longitude": 16.385805,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-strandbar-herrmann.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-strandbar-herrmann_hero.webp",
+          "transcriptText": "Twenty years ago this was a patch of builders' wasteland. Then somebody tipped a load of sand on it.\n\nYou're on the Danube Canal, on the Landstraße bank, at the point where the little Wien river flows into it. Just upstream, across the mouth of the Wien river, you'll see the Urania, the domed observatory and adult education centre. On your side, along the embankment, are deckchairs, sand, and a long wooden bar. That's Strandbar Herrmann.\n\nIt opened in the summer of two thousand and five, the first of the canal's sand bars. The founder, Alexander Kaiser, had seen beach bars in Berlin and thought the idea would work here, on a neglected stretch at the mouth of the Wien river. Within days of opening, people were queuing for deckchairs.\n\nThe name has nothing to do with the owner. The little park it sits in, the Herrmannpark, is named after Emanuel Herrmann, a Viennese economist who is generally credited with inventing the postcard. I find that rather fitting for a place most visitors leave having taken a photograph.\n\nHere's the bigger point, and it's an urban-planning one. For decades, the Danube Canal was the city's back yard: fast traffic on top, concrete walls below, nothing to stop for. The beach bars proved that people would come down to the water if you gave them a reason. The city followed, and today the canal banks are one of the liveliest public spaces in Vienna.\n\nIt's seasonal, roughly spring to early autumn, so check before you make a special trip.\n\nBefore you leave, walk upstream along the canal path towards Schwedenplatz. The walls are covered with graffiti, much of it legal and repainted every few weeks, and on a summer evening the whole bank turns into a promenade."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.211946,
+      "centroidLongitude": 16.385805,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "33a15e34-957a-5eaf-a871-2ab4a08bc4b3",
+      "createdAt": "2026-10-18",
+      "title": "J. & L. Lobmeyr",
+      "shortDescription": "If you've looked up at the chandeliers in the Vienna State Opera, or at the Met in New York, you've already met this shop. You're on Kärntner…",
+      "longDescription": "If you've looked up at the chandeliers in the Vienna State Opera, or at the Met in New York, you've already met this shop.\n\nJosef Lobmeyr founded the business in eighteen twenty-three, selling Biedermeier glass round the corner on Weihburggasse. His son Ludwig turned it into one of the great names in European glass, worked with the builders of the Ringstraße, and in eighteen sixty-four helped found what's now the Museum of Applied Arts. In the eighteen eighties Lobmeyr made some of the first electric chandeliers in the world, in collaboration with Thomas Edison.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f0496905-5d5f-5632-8459-1da0ebc4350f",
+          "order": 0,
+          "title": "J. & L. Lobmeyr",
+          "caption": "On Kärntner Straße, between the Opera and St Stephen’s.",
+          "latitude": 48.205196,
+          "longitude": 16.3708,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-lobmeyr.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-lobmeyr_hero.webp",
+          "transcriptText": "If you've looked up at the chandeliers in the Vienna State Opera, or at the Met in New York, you've already met this shop.\n\nYou're on Kärntner Straße, number twenty-six, the busy pedestrian street running from the Opera to St Stephen's. In front of you is a dignified old shopfront with the name Lobmeyr above it and glass glinting in the windows.\n\nJosef Lobmeyr founded the business in eighteen twenty-three, selling Biedermeier glass round the corner on Weihburggasse. His son Ludwig turned it into one of the great names in European glass, worked with the builders of the Ringstraße, and in eighteen sixty-four helped found what's now the Museum of Applied Arts. In the eighteen eighties Lobmeyr made some of the first electric chandeliers in the world, in collaboration with Thomas Edison.\n\nThen came the moderns. In the first decades of the twentieth century the firm worked with Josef Hoffmann, Adolf Loos and the artists of the Wiener Werkstätte, and several of those designs are still made today. The most famous is the drinking set designed by Loos, plain, heavy-bottomed tumblers with a faint cut pattern in the base.\n\nMy favourite detail is a goblet. In nineteen ten, when the second mountain spring water line reached Vienna, Emperor Franz Joseph switched it on in the City Hall and took the first sip from a Lobmeyr crystal goblet.\n\nThe family still runs the company, six generations on. And on the second floor of this building, up the stairs, is a small glass museum.\n\nGo in and climb to the museum. Then, back outside, walk a couple of minutes towards St Stephen's and turn right into Weihburggasse. That's the street where Josef Lobmeyr opened his first shop in eighteen twenty-three, and the firm has never moved more than a few hundred metres from it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.205196,
+      "centroidLongitude": 16.3708,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Art",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c933fed3-eb24-5319-87df-7ce498c62100",
+      "createdAt": "2026-10-18",
+      "title": "Knize",
+      "shortDescription": "On the Graben, Vienna's grandest shopping street, there's a shopfront by Adolf Loos that has barely changed in more than a century. You're on…",
+      "longDescription": "On the Graben, Vienna's grandest shopping street, there's a shopfront by Adolf Loos that has barely changed in more than a century.\n\nThe firm was founded in eighteen fifty-eight by a Czech tailor, Josef Kniže, who made riding clothes, sporting wear and liveries for Vienna's grand households. Between nineteen ten and nineteen thirteen, Adolf Loos designed this shop. It has survived almost unaltered, which is rare for any Loos interior, let alone one still doing the job it was built for.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-knize_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-knize_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-knize_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f285c845-34c0-5b39-9199-e9249e07243c",
+          "order": 0,
+          "title": "Knize",
+          "caption": "On the Graben, with the Plague Column behind you.",
+          "latitude": 48.208438,
+          "longitude": 16.369821,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-knize.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-knize_hero.webp",
+          "transcriptText": "On the Graben, Vienna's grandest shopping street, there's a shopfront by Adolf Loos that has barely changed in more than a century.\n\nYou're on the Graben, at number thirteen. Find the shopfront with the name Knize spelled out above it, in a band of polished dark stone around the door and windows. Turn round and the Plague Column, with its swirling cloud of saints, is behind you in the middle of the street.\n\nThe firm was founded in eighteen fifty-eight by a Czech tailor, Josef Kniže, who made riding clothes, sporting wear and liveries for Vienna's grand households. Between nineteen ten and nineteen thirteen, Adolf Loos designed this shop. It has survived almost unaltered, which is rare for any Loos interior, let alone one still doing the job it was built for.\n\nLoos thought ornament belonged to the past, but he never thought luxury did. Look at the way the front is made: plain, dark, beautifully proportioned, the lettering doing almost all of the decoration. Inside, the rooms are lined in wood and feel more like a gentleman's club than a shop.\n\nThe client list is a little startling. Marlene Dietrich had her stage tailcoats made here. Oskar Kokoschka, Billy Wilder, Josephine Baker and Georgia O'Keeffe are all on it. Loos even designed a second Knize shop on the Champs-Élysées in Paris in the late nineteen twenties.\n\nAnd the craft continues. The art of making tailcoats to measure is on Austria's list of intangible cultural heritage, and Knize is one of the last workshops still doing it by hand, in the master workshop here on the Graben.\n\nBefore you go, walk a few doors along to the Graben's crossing with Kohlmarkt, then look down Kohlmarkt to the Michaelerplatz. The plain building facing the palace gate at the end is Loos's Looshaus, the one that so offended the Emperor."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.208438,
+      "centroidLongitude": 16.369821,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Fashion",
+        "Commerce",
+        "Modernist",
+        "Designed by a Master",
+        "Adolf Loos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b3c0904c-11a8-59b4-98f2-ffa72d8b4c9f",
+      "createdAt": "2026-10-18",
+      "title": "Mühlbauer",
+      "shortDescription": "In nineteen hundred and three, Julianna Mühlbauer opened a small hat workshop in Floridsdorf, on the far side of the Danube. Her great-grandson…",
+      "longDescription": "In nineteen hundred and three, Julianna Mühlbauer opened a small hat workshop in Floridsdorf, on the far side of the Danube. Her great-grandson runs it now, and the hats are still made by hand, here in the middle of Vienna.\n\nIt was designed by the Berlin architects Kühn Malvezzi, who are better known for galleries and museums. You can see why they got the job. A good hat shop has the same problem as a good gallery: a small number of precious objects that need to be seen properly, with nothing competing with them.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-muehlbauer_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-muehlbauer_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-muehlbauer_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "42d16816-17c0-5c6f-b9fd-3d2a37ee5224",
+          "order": 0,
+          "title": "Mühlbauer",
+          "caption": "On Seilergasse, between Stephansplatz and the Neuer Markt.",
+          "latitude": 48.207233,
+          "longitude": 16.37064,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-muehlbauer.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-muehlbauer_hero.webp",
+          "transcriptText": "In nineteen hundred and three, Julianna Mühlbauer opened a small hat workshop in Floridsdorf, on the far side of the Danube. Her great-grandson runs it now, and the hats are still made by hand, here in the middle of Vienna.\n\nYou're on Seilergasse, number ten, a narrow street running between Stephansplatz and the Neuer Markt. In front of you is a clean, spare shopfront with the name Mühlbauer above it. That's the flagship, opened in two thousand and five.\n\nIt was designed by the Berlin architects Kühn Malvezzi, who are better known for galleries and museums. You can see why they got the job. A good hat shop has the same problem as a good gallery: a small number of precious objects that need to be seen properly, with nothing competing with them.\n\nThe hats themselves are the point. Klaus Mühlbauer, the fourth generation, designs the collections with two in-house designers. The workshop is near Schwedenplatz, and most of what's sold here is made in and around Vienna. Felt, straw, fabric and fur are shaped over wooden moulds, the way hatters have always done it. And most hats ordered are made to fit the person who ordered them.\n\nWhat I find quietly impressive is the combination. A family business more than a hundred and twenty years old that has become one of the most respected names in headwear, without either fossilising or forgetting what it's for.\n\nIt's worth knowing they have a second shop in Neubaugasse, in the seventh district, if you're over that way.\n\nFrom here, walk to the end of Seilergasse and onto the Neuer Markt. The fountain in the middle, by Georg Raphael Donner, has four figures representing Austrian rivers, and the Capuchin church on the corner holds the imperial crypt, where the Habsburgs are buried."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.207233,
+      "centroidLongitude": 16.37064,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "Contemporary",
+        "Designed by a Master",
+        "Kühn Malvezzi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "99e96973-7bdf-5043-83b0-4b2c7b0c4436",
+      "createdAt": "2026-10-18",
+      "title": "Augarten Wien",
+      "shortDescription": "Since seventeen eighteen, Vienna has been making its own porcelain. Only Meissen, in Saxony, is older in Europe. You're on Spiegelgasse, number…",
+      "longDescription": "Since seventeen eighteen, Vienna has been making its own porcelain. Only Meissen, in Saxony, is older in Europe.\n\nThe story begins in May seventeen eighteen, when Emperor Charles the Sixth gave a man called Claudius Innocentius du Paquier the exclusive right to make porcelain in Austria. In seventeen forty-four the manufactory passed to Maria Theresa, and from then on every piece carried that blue shield, the old Babenberg arms, under the glaze, as a mark nobody could forge. The empress loved figurines and flowers, and you'll still see both in the windows.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-augarten-wien_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-augarten-wien_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-augarten-wien_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-augarten-wien_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d79ca846-795d-5ffb-90b0-f7bcdbf29e29",
+          "order": 0,
+          "title": "Augarten Wien",
+          "caption": "On Spiegelgasse, a narrow lane between the Graben and the Albertina.",
+          "latitude": 48.207749,
+          "longitude": 16.370522,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-augarten-wien.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-augarten-wien_hero.webp",
+          "transcriptText": "Since seventeen eighteen, Vienna has been making its own porcelain. Only Meissen, in Saxony, is older in Europe.\n\nYou're on Spiegelgasse, number three, a narrow lane between the Graben and the Albertina. In front of you is the Augarten flagship shop, with white porcelain in the windows, much of it marked underneath with a small blue shield.\n\nThe story begins in May seventeen eighteen, when Emperor Charles the Sixth gave a man called Claudius Innocentius du Paquier the exclusive right to make porcelain in Austria. In seventeen forty-four the manufactory passed to Maria Theresa, and from then on every piece carried that blue shield, the old Babenberg arms, under the glaze, as a mark nobody could forge. The empress loved figurines and flowers, and you'll still see both in the windows.\n\nThe old imperial manufactory closed in eighteen sixty-four, beaten by industrial competition. In nineteen twenty-three it was revived in the baroque palace in the Augarten park, where it still is today. The new firm brought in the modern Viennese designers: Josef Hoffmann, Michael Powolny and others.\n\nLook for one design in particular. In nineteen twenty-nine Hoffmann designed a mocha service shaped like a ribbed melon. It is still made, and the curves are notoriously difficult to paint, so if you see it decorated in fine stripes, someone with a very steady hand has spent a long time on it.\n\nHere's the thing about Augarten. It isn't really a shop selling antiques. It's a workshop that still makes three hundred years of designs, alongside new ones.\n\nIf you'd like to see it being made, the manufactory and its museum are in the Augarten park itself, in the second district, with guided tours of the workshop. And while you're in the park, look for the two concrete flak towers rising out of the trees. They make a very strange neighbour for a porcelain palace."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.207749,
+      "centroidLongitude": 16.370522,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Art",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f257573b-056e-5649-960b-9c9e1e7cad7f",
+      "createdAt": "2026-10-18",
+      "title": "Austrian Postal Savings Bank | Österreichische Postsparkasse",
+      "shortDescription": "Look closely at the walls. They're covered in metal bolt heads, thousands of them, and for most of the last century people thought they were…",
+      "longDescription": "Look closely at the walls. They're covered in metal bolt heads, thousands of them, and for most of the last century people thought they were decoration.\n\nIt was built between nineteen hundred and four and nineteen hundred and six, with an extension in nineteen ten to nineteen twelve, in reinforced concrete, a material that was still very new. The façade is covered in thin marble slabs because marble is easy to clean. And the bolts? A study of the materials in twenty twenty-four found they really were how the thin slabs were fixed over the mortar. Form and function, almost literally nailed together.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-postsparkasse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-postsparkasse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-postsparkasse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-postsparkasse_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-postsparkasse_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-postsparkasse_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e0ed3ee2-5075-562d-9023-b2381d924c8b",
+          "order": 0,
+          "title": "Austrian Postal Savings Bank | Österreichische Postsparkasse",
+          "caption": "On Georg-Coch-Platz, just off the Ringstraße.",
+          "latitude": 48.209977,
+          "longitude": 16.380647,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-postsparkasse.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-postsparkasse_hero.webp",
+          "transcriptText": "Look closely at the walls. They're covered in metal bolt heads, thousands of them, and for most of the last century people thought they were decoration.\n\nYou're on Georg-Coch-Platz, a small square just off the Ringstraße. In front of you is a vast building filling a whole city block, its walls faced in square slabs of pale marble and studded in a regular grid with small metal caps. On top of the façade stand two winged figures in shining metal. That's the Postal Savings Bank, by Otto Wagner.\n\nIt was built between nineteen hundred and four and nineteen hundred and six, with an extension in nineteen ten to nineteen twelve, in reinforced concrete, a material that was still very new. The façade is covered in thin marble slabs because marble is easy to clean. And the bolts? A study of the materials in twenty twenty-four found they really were how the thin slabs were fixed over the mortar. Form and function, almost literally nailed together.\n\nNow look up at those figures. They're by Othmar Schimkowitz, over four metres tall, and they're among the first sculptures ever cast in aluminium. Aluminium turns up all over this building, in the entrance columns and the heating fans inside, because in nineteen hundred and six it was the modern metal.\n\nInside, up a flight of stairs, is the banking hall: a great room under a glass roof, with a floor of glass blocks that lets daylight through to the post rooms below.\n\nThe bank has moved out. The building now belongs to universities and research institutions, including the University of Applied Arts, and the banking hall has been opened to the public again.\n\nGo in and see the hall if it's open; check the times before you come. And on your way in, look at the slim columns holding up the entrance canopy. They're aluminium too, and if you ask me they're the most modern thing on the whole square."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.209977,
+      "centroidLongitude": 16.380647,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Modernist",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Otto Wagner"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+      "createdAt": "2026-10-18",
+      "title": "Looshaus",
+      "shortDescription": "The Emperor was said to dislike this building so much that he kept his curtains closed. You're on Michaelerplatz. Behind you is the great curved…",
+      "longDescription": "The Emperor was said to dislike this building so much that he kept his curtains closed.\n\nIt was commissioned in nineteen hundred and nine by the tailors Goldman and Salatsch, after a competition that hadn't produced anything they liked. Loos hadn't even entered. When the scaffolding came down in nineteen ten, Vienna was outraged. Opposite the imperial palace, a building with no decoration at all. A critic called it inappropriate nakedness. The city stopped the works.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-looshaus_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-looshaus_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-looshaus_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2aeba24e-d7e0-5f23-9f4e-d27b3388b2f2",
+          "order": 0,
+          "title": "Looshaus",
+          "caption": "On Michaelerplatz, with the gateway of the Hofburg behind you.",
+          "latitude": 48.208468,
+          "longitude": 16.366592,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-looshaus.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-looshaus_hero.webp",
+          "transcriptText": "The Emperor was said to dislike this building so much that he kept his curtains closed.\n\nYou're on Michaelerplatz. Behind you is the great curved gateway into the Hofburg palace, with its domed entrance and heroic statues. In front of you, on the corner, is a building in two halves: the lower floors faced in green-veined marble with a row of tall columns, and above that, several storeys of perfectly plain white plaster with simple square windows. That's the Looshaus, by Adolf Loos.\n\nIt was commissioned in nineteen hundred and nine by the tailors Goldman and Salatsch, after a competition that hadn't produced anything they liked. Loos hadn't even entered. When the scaffolding came down in nineteen ten, Vienna was outraged. Opposite the imperial palace, a building with no decoration at all. A critic called it inappropriate nakedness. The city stopped the works.\n\nLoos defended himself in public lectures, and in the end a compromise was reached: he added window boxes, so the bare front would at least have flowers. You'll often see them there today. The building was finished in nineteen twelve.\n\nNow look at the lower part again. The marble is cipollino, from the Greek island of Euboea, and it's anything but plain. Its veins are as rich as any carving. The columns echo the portal of St Michael's Church, right next door. Loos wasn't against beauty. He was against putting on a costume. Fine materials for the shop, honest plaster for the flats above.\n\nAnd here's the irony. The building that scandalised Vienna is now one of the city's most admired. A bank has owned it since nineteen eighty-seven and restored it carefully.\n\nBefore you move on, walk to the middle of the square and look down into the excavation of Roman and medieval walls. Then look up at the Looshaus and the palace together, the two halves of an argument that Vienna never quite finished."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.208468,
+      "centroidLongitude": 16.366592,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Power",
+        "Modernist",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Adolf Loos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "527f3825-e099-55b7-97c6-1c4543ae806e",
+      "createdAt": "2026-10-18",
+      "title": "Secession",
+      "shortDescription": "Above the door, in gold letters, it says: to every age its art, to every art its freedom. This building was the manifesto. You're on…",
+      "longDescription": "Above the door, in gold letters, it says: to every age its art, to every art its freedom. This building was the manifesto.\n\nIt was built in eighteen ninety-seven and eighteen ninety-eight by Joseph Maria Olbrich, then barely thirty, for a group of young artists led by Gustav Klimt who had walked out of the official art establishment. They wanted a building for exhibitions, and they wanted it to look like nothing Vienna had seen.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-secession_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-secession_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-secession_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-secession_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-secession_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-secession_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "84c4ea3a-3380-5e09-aefa-ab1020045dd4",
+          "order": 0,
+          "title": "Secession",
+          "caption": "On Friedrichstraße, a few steps from the Naschmarkt.",
+          "latitude": 48.200497,
+          "longitude": 16.365768,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-secession.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-secession_hero.webp",
+          "transcriptText": "Above the door, in gold letters, it says: to every age its art, to every art its freedom. This building was the manifesto.\n\nYou're on Friedrichstraße, a few steps from the Naschmarkt. In front of you is a squat, white, almost temple-like building with very few windows, and on top a great openwork dome of gilded metal laurel leaves. The Viennese have a nickname for it, the golden cabbage. That's the Secession.\n\nIt was built in eighteen ninety-seven and eighteen ninety-eight by Joseph Maria Olbrich, then barely thirty, for a group of young artists led by Gustav Klimt who had walked out of the official art establishment. They wanted a building for exhibitions, and they wanted it to look like nothing Vienna had seen.\n\nNow look at the details. Below that gold motto are three faces of gorgons, standing for painting, sculpture and architecture. Along the walls are owls, attributed to Koloman Moser. And the dome is a laurel crown, the symbol of victory, lifted up and made into architecture.\n\nThen go inside, down to the basement, and you'll find Klimt's Beethoven Frieze. He painted it in nineteen hundred and two for an exhibition celebrating Beethoven, and its theme is the Ninth Symphony: humanity's search for happiness, ending in an embrace. It was meant to be temporary. It survived, and it's now back where it began.\n\nAnd here's the thing. The Secession is still run by artists, as it has been since eighteen ninety-seven. It isn't a museum to a movement. It's the movement, still going.\n\nYou'll also find the building on the back of the Austrian fifty-cent coin, if you have one handy.\n\nWhen you come out, walk round to the side facing the Naschmarkt and look for the bronze of Mark Antony in his chariot, pulled by lions. Then cross over to the market, and look at the Otto Wagner houses on the far side of it, numbers thirty-eight and forty Linke Wienzeile."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.200497,
+      "centroidLongitude": 16.365768,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Joseph Maria Olbrich"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+      "createdAt": "2026-10-18",
+      "title": "Otto Wagner Pavilion Karlsplatz",
+      "shortDescription": "This is a railway station that the city nearly threw away. You're on Karlsplatz, in the open space between the Ring and the great baroque dome…",
+      "longDescription": "This is a railway station that the city nearly threw away.\n\nThey were built in eighteen ninety-eight and ninety-nine, as entrances to the new Stadtbahn, Vienna's city railway. Otto Wagner designed the whole network, with help from his assistant Joseph Maria Olbrich, who went on to design the Secession. Most of Wagner's stations are plastered; these two are different, a steel framework hung with marble slabs.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-otto-wagner-pavilion-karlsplatz_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-otto-wagner-pavilion-karlsplatz_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-otto-wagner-pavilion-karlsplatz_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "38570ec3-921a-5dcd-bdae-05ef87d247c8",
+          "order": 0,
+          "title": "Otto Wagner Pavilion Karlsplatz",
+          "caption": "On Karlsplatz, between the two pavilions, with the Karlskirche beyond.",
+          "latitude": 48.200275,
+          "longitude": 16.370266,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-otto-wagner-pavilion-karlsplatz.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-otto-wagner-pavilion-karlsplatz_hero.webp",
+          "transcriptText": "This is a railway station that the city nearly threw away.\n\nYou're on Karlsplatz, in the open space between the Ring and the great baroque dome of the Karlskirche. In front of you are two small, matching pavilions facing each other, built of thin white marble panels held in a frame of green-painted iron, with gilded sunflowers spreading across the edges of their roofs. Pick one and walk up to it.\n\nThey were built in eighteen ninety-eight and ninety-nine, as entrances to the new Stadtbahn, Vienna's city railway. Otto Wagner designed the whole network, with help from his assistant Joseph Maria Olbrich, who went on to design the Secession. Most of Wagner's stations are plastered; these two are different, a steel framework hung with marble slabs.\n\nNow look at the colours. The ironwork is painted a particular apple green, the signal colour of the whole Stadtbahn, and you'll see it on Wagner's bridges and railings all over the city. The gold sunflowers are an Art Nouveau signature, and they're what makes these two stand out from their plainer sisters.\n\nIn the nineteen seventies, when the line was rebuilt as the underground, the pavilions were scheduled for demolition. There was a public outcry. They were taken apart piece by piece, restored, and put back up in nineteen seventy-seven, about a metre and a half higher than before, to sit above the new tunnels.\n\nOne is now a café. The other belongs to the Wien Museum and has a small permanent exhibition about Otto Wagner.\n\nFrom here, walk across to the Karlskirche and look at its two giant columns, carved with spirals like Trajan's in Rome. Then turn round and look back at Wagner's little pavilions. Nearly two centuries apart, and both trying to make Vienna feel like the centre of the world."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.200275,
+      "centroidLongitude": 16.370266,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Museum",
+        "Free to Visit",
+        "Designed by a Master",
+        "Otto Wagner"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0929d219-6962-5f4a-a515-f0f0659ba1aa",
+      "createdAt": "2026-10-18",
+      "title": "Kirche am Steinhof",
+      "shortDescription": "This church was designed for patients of a psychiatric hospital, and almost every detail in it was thought through for their sake. You're on the…",
+      "longDescription": "This church was designed for patients of a psychiatric hospital, and almost every detail in it was thought through for their sake.\n\nThe hospital around you was built as a whole town for the mentally ill, laid out down the slope below, and the church was its crown. The figures on the towers, by Richard Luksch, are Saint Leopold and Saint Severin, two saints with deep roots in Austria. The angels over the entrance are by Othmar Schimkowitz, who also made the aluminium figures on Wagner's Post Office Savings Bank.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "09ab49f6-94dc-5261-b0c1-0841ac45a803",
+          "order": 0,
+          "title": "Kirche am Steinhof",
+          "caption": "At the top of the Steinhof grounds, on the Baumgartner Höhe.",
+          "latitude": 48.210383,
+          "longitude": 16.278411,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-kirche-am-steinhof.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kirche-am-steinhof_hero.webp",
+          "transcriptText": "This church was designed for patients of a psychiatric hospital, and almost every detail in it was thought through for their sake.\n\nYou're on the hill of the Baumgartner Höhe, at the top of the grounds of the old Steinhof hospital, in the west of the city. In front of you is a white church faced in marble slabs, with a gilded dome and two slender towers, each topped by a seated saint. That's the Kirche am Steinhof, Otto Wagner's church of St Leopold, completed in nineteen hundred and seven.\n\nThe hospital around you was built as a whole town for the mentally ill, laid out down the slope below, and the church was its crown. The figures on the towers, by Richard Luksch, are Saint Leopold and Saint Severin, two saints with deep roots in Austria. The angels over the entrance are by Othmar Schimkowitz, who also made the aluminium figures on Wagner's Post Office Savings Bank.\n\nInside, the windows and the mosaics are by Koloman Moser, and they're glorious. But the cleverest things are practical. The floor slopes down about twenty-six centimetres from the entrance to the altar, so that everyone can see. The corners are rounded, so there's nowhere for dirt to gather. Instead of holy water standing in basins, the holy water runs, for hygiene. And there were separate entrances for men and women.\n\nWhat's worth knowing is that Wagner saw no contradiction in any of this. A modern church could be beautiful and sensible at once. That's the whole of his philosophy in one building.\n\nOpening hours are limited, so check before you make the climb.\n\nWhen you've seen it, turn round and look back down the slope over the hospital pavilions. On a clear day you can see right across Vienna, and it's worth a long, slow look."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.210383,
+      "centroidLongitude": 16.278411,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Architecture",
+        "Viewpoint",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Otto Wagner"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1c5c1794-39ef-5fbb-9a39-d6428fecb8fd",
+      "createdAt": "2026-10-18",
+      "title": "Wittgenstein House | Haus Wittgenstein",
+      "shortDescription": "One of the twentieth century's great philosophers spent two years designing a house for his sister. He once had a ceiling raised by three…",
+      "longDescription": "One of the twentieth century's great philosophers spent two years designing a house for his sister. He once had a ceiling raised by three centimetres because the proportions weren't quite right.\n\nIt was commissioned in nineteen twenty-five by Margaret Stonborough-Wittgenstein, a wealthy patron of the arts and the subject of a famous portrait by Klimt. She hired the architect Paul Engelmann, a pupil of Adolf Loos, and then invited her brother Ludwig, the philosopher, to help. Ludwig became so involved that Engelmann later considered him the real author.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haus-wittgenstein_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haus-wittgenstein_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haus-wittgenstein_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haus-wittgenstein_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "34501c36-780f-500d-a560-898feae1a0c3",
+          "order": 0,
+          "title": "Wittgenstein House | Haus Wittgenstein",
+          "caption": "On Kundmanngasse, at the garden wall of number nineteen.",
+          "latitude": 48.203361,
+          "longitude": 16.39432,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-haus-wittgenstein.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haus-wittgenstein_hero.webp",
+          "transcriptText": "One of the twentieth century's great philosophers spent two years designing a house for his sister. He once had a ceiling raised by three centimetres because the proportions weren't quite right.\n\nYou're on Kundmanngasse, in the third district, at number nineteen. Behind a garden wall you'll see a stark, white, blocky house of several stacked volumes, with tall plain windows and no decoration of any kind. That's Haus Wittgenstein.\n\nIt was commissioned in nineteen twenty-five by Margaret Stonborough-Wittgenstein, a wealthy patron of the arts and the subject of a famous portrait by Klimt. She hired the architect Paul Engelmann, a pupil of Adolf Loos, and then invited her brother Ludwig, the philosopher, to help. Ludwig became so involved that Engelmann later considered him the real author.\n\nLudwig worried at every detail. He designed the windows, the doors, the radiators and the door handles himself. Each window had a heavy metal screen, about a hundred and fifty kilos, that he arranged to move on a pulley. And that ceiling: raised thirty millimetres, because it was wrong. The house was finished in December nineteen twenty-eight, in time for the family to spend Christmas there.\n\nEven he had doubts. Ludwig said the house had good manners but no primordial life or health.\n\nIt nearly didn't survive. In nineteen sixty-eight it was sold to a developer to be pulled down. A campaign saved it, it became a national monument in nineteen seventy-one, and it's housed the cultural department of the Bulgarian Embassy ever since. Access to the inside varies, so check ahead.\n\nStand back from the wall for a moment and look at the proportions of the windows against the white walls. Then walk ten minutes or so to the Rochusmarkt, a cheerful local market square, and remind yourself what life looks like when nobody is measuring it in millimetres."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.203361,
+      "centroidLongitude": 16.39432,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Literature",
+        "Modernist",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Paul Engelmann",
+        "Ludwig Wittgenstein"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4e227a06-777e-571a-80ad-4c53decfc0d6",
+      "createdAt": "2026-10-18",
+      "title": "Church of the Most Holy Trinity | Wotrubakirche",
+      "shortDescription": "From the bottom of the hill it looks like a pile of giant concrete blocks that someone forgot to tidy away. It's a church. You're on the…",
+      "longDescription": "From the bottom of the hill it looks like a pile of giant concrete blocks that someone forgot to tidy away. It's a church.\n\nIt was designed by the sculptor Fritz Wotruba, with the architect Fritz Gerhard Mayr turning his model into buildable plans. Construction ran from August nineteen seventy-four to October nineteen seventy-six. Wotruba died in nineteen seventy-five and never saw it finished.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-wotrubakirche_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cbc5a0a2-bca2-54d6-98f7-2e60341b9447",
+          "order": 0,
+          "title": "Church of the Most Holy Trinity | Wotrubakirche",
+          "caption": "On the Georgenberg in Mauer, at the foot of the slope below the church.",
+          "latitude": 48.147632,
+          "longitude": 16.253453,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-wotrubakirche.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-wotrubakirche_hero.webp",
+          "transcriptText": "From the bottom of the hill it looks like a pile of giant concrete blocks that someone forgot to tidy away. It's a church.\n\nYou're on the Georgenberg, in Mauer, on the south-western edge of Vienna, where the city turns into woods and meadows. In front of you, at the top of the slope, is a jumble of rough grey concrete blocks of every size, stacked at angles with gaps of glass between them. That's the Church of the Most Holy Trinity, which everyone calls the Wotrubakirche.\n\nIt was designed by the sculptor Fritz Wotruba, with the architect Fritz Gerhard Mayr turning his model into buildable plans. Construction ran from August nineteen seventy-four to October nineteen seventy-six. Wotruba died in nineteen seventy-five and never saw it finished.\n\nHere are the numbers, because they're part of the experience. There are a hundred and fifty-two blocks, all of them bare concrete. The biggest weighs about a hundred and forty-one tonnes. The tallest rises just over thirteen metres.\n\nNow walk round it slowly. No two sides look the same, and the gaps between the blocks are filled with plain glass. That's the trick of the place. From outside it seems closed and heavy, almost hostile. Inside, light falls in through those gaps in long, overlapping shafts, and the whole thing feels unexpectedly gentle.\n\nAnd here's the thing. Wotruba wasn't trying to make a building look like a sculpture. He made a sculpture you could hold a service in. It's a small, local parish church, still in use, and this year it celebrates fifty years of services.\n\nIf the door is open, step inside and stand still for a minute while your eyes adjust. Then come out and take the path into the meadows on the Georgenberg. The view back to the church, with the Vienna Woods behind it, is the one to take home."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.147632,
+      "centroidLongitude": 16.253453,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Brutalist",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Fritz Wotruba"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "058e446a-0d75-52a2-b775-cbf746f8edb9",
+      "createdAt": "2026-10-18",
+      "title": "Karl-Marx-Hof",
+      "shortDescription": "This single building is about a kilometre long. It was built to house five thousand people, and to make a point. You're on Heiligenstädter…",
+      "longDescription": "This single building is about a kilometre long. It was built to house five thousand people, and to make a point.\n\nIt was designed by Karl Ehn, a pupil of Otto Wagner, and built between nineteen twenty-seven and nineteen thirty for the city's Social Democratic government, the period known as Red Vienna. It holds one thousand three hundred and eighty-two flats, each between thirty and sixty square metres. Modest homes, but with running water, light and air, which most working families in Vienna had never had.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "728bf438-35f2-5acc-b7d7-56faaf69d303",
+          "order": 0,
+          "title": "Karl-Marx-Hof",
+          "caption": "On Zwölfter-Februar-Platz, facing the great arches of the central block.",
+          "latitude": 48.25016,
+          "longitude": 16.364539,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-karl-marx-hof.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-karl-marx-hof_hero.webp",
+          "transcriptText": "This single building is about a kilometre long. It was built to house five thousand people, and to make a point.\n\nYou're on Heiligenstädter Straße, in the nineteenth district, at the square called Zwölfter-Februar-Platz, a short walk from Heiligenstadt station. In front of you is a vast wall of housing in red and ochre, broken by enormous arches, with flagpole towers rising above the central block. That's the Karl-Marx-Hof.\n\nIt was designed by Karl Ehn, a pupil of Otto Wagner, and built between nineteen twenty-seven and nineteen thirty for the city's Social Democratic government, the period known as Red Vienna. It holds one thousand three hundred and eighty-two flats, each between thirty and sixty square metres. Modest homes, but with running water, light and air, which most working families in Vienna had never had.\n\nNow here's the number that matters most. Only about eighteen and a half per cent of the site is built on. Everything else is gardens, courtyards and playgrounds. And the estate came with laundries, baths, kindergartens, a library and doctors' surgeries. It's not just housing. It's a piece of a city.\n\nThe architecture was political, too, and people read it that way. In February nineteen thirty-four, during Austria's brief civil war, workers barricaded themselves inside, and the army shelled the building until they surrendered. The damage was repaired in the nineteen fifties.\n\nToday the Karl-Marx-Hof is still council housing, still lived in, and still owned by the city. In one of the old communal laundries, there's a small museum about Red Vienna called the Waschsalon. It's open on limited days, so check before you go.\n\nWalk through the great central arches into the courtyard and stand among the trees for a moment. Then look back at the façade from inside. From the street it looks like a fortress; from in here, it looks like a garden with a very long house around it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.25016,
+      "centroidLongitude": 16.364539,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Power",
+        "War",
+        "Modernist",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Karl Ehn"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b2cb7227-0bce-5f4e-8c13-63c7faa7a803",
+      "createdAt": "2026-10-18",
+      "title": "Vienna Werkbund Estate | Werkbundsiedlung",
+      "shortDescription": "In the summer of nineteen thirty-two, Vienna opened seventy brand new houses to the public as an exhibition. People still live in them. You're…",
+      "longDescription": "In the summer of nineteen thirty-two, Vienna opened seventy brand new houses to the public as an exhibition. People still live in them.\n\nThe idea was to show the modern way of living, and to show it could be affordable. The overall plan was drawn by the architect Josef Frank. He brought in thirty-two architects, plus Margarete Schütte-Lihotzky, the designer of the famous Frankfurt kitchen. Many were Viennese, some came from abroad, and the list reads like a roll call of modernism: Adolf Loos, Josef Hoffmann, Gerrit Rietveld from the Netherlands, Richard Neutra from Los Angeles, Hugo Häring from Berlin, André Lurçat from Paris.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-werkbundsiedlung_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-werkbundsiedlung_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-werkbundsiedlung_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-werkbundsiedlung_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-werkbundsiedlung_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "113da069-14d5-5d65-bd3f-10b780000b1e",
+          "order": 0,
+          "title": "Vienna Werkbund Estate | Werkbundsiedlung",
+          "caption": "In the lanes of the estate in Hietzing, at the foot of the Roter Berg.",
+          "latitude": 48.179905,
+          "longitude": 16.269496,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-werkbundsiedlung.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-werkbundsiedlung_hero.webp",
+          "transcriptText": "In the summer of nineteen thirty-two, Vienna opened seventy brand new houses to the public as an exhibition. People still live in them.\n\nYou're in Hietzing, in the thirteenth district, at the foot of the hill called the Roter Berg. Around you, along gently curving lanes, is a loose village of small white and pastel houses, most of them plain flat-roofed boxes with big windows facing their gardens. That's the Werkbundsiedlung, the Vienna Werkbund Estate.\n\nThe idea was to show the modern way of living, and to show it could be affordable. The overall plan was drawn by the architect Josef Frank. He brought in thirty-two architects, plus Margarete Schütte-Lihotzky, the designer of the famous Frankfurt kitchen. Many were Viennese, some came from abroad, and the list reads like a roll call of modernism: Adolf Loos, Josef Hoffmann, Gerrit Rietveld from the Netherlands, Richard Neutra from Los Angeles, Hugo Häring from Berlin, André Lurçat from Paris.\n\nNow look at how Frank arranged them. He deliberately avoided uniformity. The houses sit strictly parallel to the lanes, which gives the place order, but they vary in size and type, so it feels more like a small settlement than a showroom. At the western tip, a taller house by Oswald Haerdtl stands guard like a watchtower.\n\nThe houses were designed for people of modest means, and that's still the spirit. The city owns forty-eight of the seventy, and they're let as council homes. The estate has been protected since nineteen seventy-eight, and in twenty twenty it received the European Heritage Label.\n\nPlease do remember that these are people's homes. Look from the lanes, and leave the gardens alone.\n\nIf you'd like more than the outsides, the estate has its own guided tours and an audio guide app. Otherwise, wander until you find the Loos houses and the Rietveld houses, then compare them. Two of the century's great architects, a few metres apart, solving the same small problem in completely different ways."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.179905,
+      "centroidLongitude": 16.269496,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Modernist",
+        "Hidden Gem",
+        "Free to Visit",
+        "Designed by a Master",
+        "Josef Frank",
+        "Adolf Loos",
+        "Josef Hoffmann",
+        "Gerrit Rietveld",
+        "Richard Neutra"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0ad42d09-6a9b-5533-af7d-e47c81f6e947",
+      "createdAt": "2026-10-18",
+      "title": "Library & Learning Center",
+      "shortDescription": "A building that leans out over its own front door at a startling angle, and somehow doesn't fall over. That's Zaha Hadid. You're on the campus…",
+      "longDescription": "A building that leans out over its own front door at a startling angle, and somehow doesn't fall over. That's Zaha Hadid.\n\nIt was designed by Zaha Hadid Architects and opened in October twenty thirteen, the centrepiece of a new campus of seven buildings for around twenty-four thousand students. Hadid took the most ordinary part of a university, the library, and gave it the most dramatic form on the site.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-library-and-learning-center_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-library-and-learning-center_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "83783091-2010-5035-abdd-1e5615bfc645",
+          "order": 0,
+          "title": "Library & Learning Center",
+          "caption": "On the WU campus plaza, beneath the library’s leaning front.",
+          "latitude": 48.213856,
+          "longitude": 16.408884,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-library-and-learning-center.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-library-and-learning-center_hero.webp",
+          "transcriptText": "A building that leans out over its own front door at a startling angle, and somehow doesn't fall over. That's Zaha Hadid.\n\nYou're on the campus of the WU, Vienna's University of Economics and Business, on the edge of the Prater park. In front of you is the campus's central building: a huge, sculpted block with black and white bands wrapped around it and a great slanting front that leans forward over the plaza. That's the Library and Learning Center.\n\nIt was designed by Zaha Hadid Architects and opened in October twenty thirteen, the centrepiece of a new campus of seven buildings for around twenty-four thousand students. Hadid took the most ordinary part of a university, the library, and gave it the most dramatic form on the site.\n\nNow look at the front. The façade leans outward at around thirty-five degrees, and the upper part, where the main library sits, cantilevers over the square, giving the readers inside long views across the campus and the park. The surface is made of panels of fibre-reinforced concrete, cut with narrow, canyon-like slots of glass.\n\nIf you can, go in. The interior is a tall, canyon-like atrium, with ramps and walkways crossing through it, so you can see the whole life of the building at once: people climbing, reading, meeting.\n\nAnd here's the thing worth knowing, standing underneath. Not long after it opened, a couple of the concrete cladding panels came loose and fell. Nobody was hurt, the panels were replaced, and the building carried on. It's a useful reminder that even the most futuristic architecture is still made of heavy things held up by fixings.\n\nBefore you go, walk a full circle round the campus. Each of the other buildings is by a different practice from around the world, and they make a deliberately mismatched set. Then step out into the Prater's long chestnut avenue, the Hauptallee, a few minutes away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.213856,
+      "centroidLongitude": 16.408884,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Architecture",
+        "Engineering",
+        "Contemporary",
+        "Designed by a Master",
+        "Zaha Hadid"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+      "createdAt": "2026-10-18",
+      "title": "State Hall of the Austrian National Library | Prunksaal der Österreichischen Nationalbibliothek",
+      "shortDescription": "The first time you walk into this room, the usual reaction is to stop dead and look up. Allow yourself that. You're on Josefsplatz, a quiet…",
+      "longDescription": "The first time you walk into this room, the usual reaction is to stop dead and look up. Allow yourself that.\n\nThe hall was built between seventeen twenty-three and seventeen twenty-six for Emperor Charles the Sixth. It was designed by Johann Bernhard Fischer von Erlach, the great architect of Viennese baroque, and when he died, his son, Joseph Emanuel, finished it.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-prunksaal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-prunksaal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-prunksaal_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-prunksaal_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-prunksaal_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-prunksaal_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "771f9172-304f-5ba7-b691-20f13aba357e",
+          "order": 0,
+          "title": "State Hall of the Austrian National Library | Prunksaal der Österreichischen Nationalbibliothek",
+          "caption": "On Josefsplatz, by the statue of Joseph the Second, facing the old court library.",
+          "latitude": 48.206167,
+          "longitude": 16.36669,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-prunksaal.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-prunksaal_hero.webp",
+          "transcriptText": "The first time you walk into this room, the usual reaction is to stop dead and look up. Allow yourself that.\n\nYou're on Josefsplatz, a quiet square inside the Hofburg, the old imperial palace. In front of you is the long baroque front of the former court library, with the bronze equestrian statue of Emperor Joseph the Second in the middle of the square. The entrance to the State Hall is from the square itself.\n\nThe hall was built between seventeen twenty-three and seventeen twenty-six for Emperor Charles the Sixth. It was designed by Johann Bernhard Fischer von Erlach, the great architect of Viennese baroque, and when he died, his son, Joseph Emanuel, finished it.\n\nInside, the numbers do a lot of the work. It's almost eighty metres long and twenty metres high, lined with about two hundred thousand old books, with galleries running round above them. The court painter Daniel Gran covered the ceiling and the great central dome with frescoes, completed in seventeen thirty. In the dome the emperor is shown being raised to glory, surrounded by allegories of everything a ruler hoped to be known for.\n\nUnder the dome stands a marble statue of Charles the Sixth himself, dressed as Hercules, patron of the Muses. And around the oval centre of the hall is the library of Prince Eugene of Savoy, the military commander and collector, about fifteen thousand volumes in their original bindings. Near them are four great Venetian globes, each more than a metre across.\n\nWhat's worth knowing is that this was never just a library. It was an argument about power, made with books. Knowledge, collected, ordered and housed by an emperor.\n\nWhen you come out, look across Josefsplatz to the Palais Pallavicini and the Palais Pálffy opposite. Then walk round to the Michaelerplatz, where the Looshaus stands facing the palace, and you'll go from the height of the baroque to the birth of the modern in about ninety seconds."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.206167,
+      "centroidLongitude": 16.36669,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Library",
+        "History",
+        "Power",
+        "Baroque",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Johann Bernhard Fischer von Erlach"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f748fea4-fee0-5ad1-ad40-52bc21575422",
+      "createdAt": "2026-10-18",
+      "title": "Furniture Museum Vienna | Hofmobiliendepot",
+      "shortDescription": "This is where the Habsburgs kept their furniture when they weren't using it. And they owned an extraordinary amount of furniture. You're on…",
+      "longDescription": "This is where the Habsburgs kept their furniture when they weren't using it. And they owned an extraordinary amount of furniture.\n\nIn seventeen forty-seven Maria Theresa appointed the first Inspector of Court Chattels. His job was to keep track of the imperial furnishings, repair them, and move them. The court didn't furnish each palace permanently; when it travelled to its summer residences or hunting lodges, the furniture travelled with it. Look out for the travelling thrones.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hofmobiliendepot_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hofmobiliendepot_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hofmobiliendepot_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "668040d7-62cd-57ac-9e68-54f31949681b",
+          "order": 0,
+          "title": "Furniture Museum Vienna | Hofmobiliendepot",
+          "caption": "On Andreasgasse, just off Mariahilfer Straße.",
+          "latitude": 48.198706,
+          "longitude": 16.347049,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-hofmobiliendepot.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-hofmobiliendepot_hero.webp",
+          "transcriptText": "This is where the Habsburgs kept their furniture when they weren't using it. And they owned an extraordinary amount of furniture.\n\nYou're on Andreasgasse, in the seventh district, just off Mariahilfer Straße, Vienna's long shopping street. In front of you is a large, plain, rather functional building. That's the former court furniture depot, now the Furniture Museum Vienna, the Möbel Museum Wien.\n\nIn seventeen forty-seven Maria Theresa appointed the first Inspector of Court Chattels. His job was to keep track of the imperial furnishings, repair them, and move them. The court didn't furnish each palace permanently; when it travelled to its summer residences or hunting lodges, the furniture travelled with it. Look out for the travelling thrones.\n\nThat's the charm of the place. It isn't laid out as a palace, it's laid out as a store. Chandeliers, mirrors, clocks, even spittoons. The cradle of Crown Prince Rudolf. The furniture used for the signing of the Austrian State Treaty in nineteen fifty-five, the moment Austria regained its independence.\n\nThe museum is especially strong on Biedermeier, the quiet, comfortable, beautifully made furniture of the early nineteenth century. Vienna's cabinetmakers were at their peak then, and the chaises longues and sofas here are a lesson in how to make something simple feel luxurious. Some of the rooms were set up in the nineteen twenties as model middle-class interiors.\n\nAnd then the moderns. Among the complete rooms on display is the gentleman's study designed by Adolf Loos for the apartment of Georg Roy. If you've been to Loos's buildings in the old city, this is a chance to see what he did indoors.\n\nWhat I like most is the honesty. Most palaces show you furniture as it was meant to be seen. This shows you how it was actually kept.\n\nFrom here, wander the side streets of Neubau, the seventh district you're already standing in. It's full of small design shops and cafés, and it's the right neighbourhood to come down to earth in after an afternoon with emperors."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.198706,
+      "centroidLongitude": 16.347049,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Power",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2b01133f-e7a7-53e5-9f19-c00075f73733",
+      "createdAt": "2026-10-18",
+      "title": "Haas-Haus",
+      "shortDescription": "Stand in front of St Stephen's Cathedral and turn round. The building behind you was, for a while, the most hated in Vienna. You're on…",
+      "longDescription": "Stand in front of St Stephen's Cathedral and turn round. The building behind you was, for a while, the most hated in Vienna.\n\nIt opened in September nineteen ninety. The site has a long history. The first Haas-Haus, built in the eighteen sixties for a carpet firm, was one of Vienna's first department stores; it was destroyed by bombing at the end of the Second World War. A plain replacement went up in the fifties, and Hollein's building replaced that.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haas-haus_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haas-haus_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haas-haus_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haas-haus_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d437d6a2-0c59-5b7e-aee5-86f943ae97b2",
+          "order": 0,
+          "title": "Haas-Haus",
+          "caption": "On Stephansplatz, with your back to the cathedral’s west front.",
+          "latitude": 48.208364,
+          "longitude": 16.371555,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-haas-haus.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-haas-haus_hero.webp",
+          "transcriptText": "Stand in front of St Stephen's Cathedral and turn round. The building behind you was, for a while, the most hated in Vienna.\n\nYou're on Stephansplatz, beside the great west front of the cathedral. Turn your back on it and look across the square, to where the Graben begins. On the corner is a building of pale stone and glass with a rounded, mirrored bay curving out towards the square. That's the Haas-Haus, by the Viennese architect Hans Hollein.\n\nIt opened in September nineteen ninety. The site has a long history. The first Haas-Haus, built in the eighteen sixties for a carpet firm, was one of Vienna's first department stores; it was destroyed by bombing at the end of the Second World War. A plain replacement went up in the fifties, and Hollein's building replaced that.\n\nWhen the design was unveiled, there was uproar. A modern building, in glass, on the most sacred square in the city? Even more contested, the papers said, than the building it replaced.\n\nNow look closely at that curved, mirrored bay. Stand in the right place and you'll see the cathedral reflected in it. That's Hollein's answer to his critics. He didn't try to compete with St Stephen's, and he didn't try to imitate it. He made a building that hands the cathedral back to you, broken into panes and slightly distorted, as if seen through a modern eye.\n\nAnd here's the thing. Thirty-odd years on, most people walking past don't notice it at all. That might be the best compliment a building on this square can get.\n\nIf you can, go up to the restaurant or café on the upper floors and look out of the window. You'll be eye to eye with the cathedral's patterned tile roof, and you'll see it the way Hollein must have pictured it from his drawing board."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.208364,
+      "centroidLongitude": 16.371555,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Viewpoint",
+        "Designed by a Master",
+        "Hans Hollein"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "91351c83-e088-5d93-8ec2-b3a5d3db7359",
+      "createdAt": "2026-10-18",
+      "title": "Augarten Flak Tower | Flakturm Augarten",
+      "shortDescription": "In the middle of a baroque garden, among the chestnut trees, there's a concrete tower about fifty metres tall. Nobody knows what to do with it.…",
+      "longDescription": "In the middle of a baroque garden, among the chestnut trees, there's a concrete tower about fifty metres tall. Nobody knows what to do with it.\n\nThey were built during the Second World War, finished by nineteen forty-four, to designs by the German architect Friedrich Tamms. Vienna got six of them, in three pairs. In each pair, one tower, like this one, carried the anti-aircraft guns, and the other carried the radar and the fire control. They were also shelters for thousands of people during the air raids.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-flakturm-augarten_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-flakturm-augarten_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-flakturm-augarten_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-flakturm-augarten_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-flakturm-augarten_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e0a2b3b0-bd6f-5fd6-a6a6-e6ca7ce79c18",
+          "order": 0,
+          "title": "Augarten Flak Tower | Flakturm Augarten",
+          "caption": "On the main chestnut avenue of the Augarten, looking up at the round tower.",
+          "latitude": 48.225826,
+          "longitude": 16.373287,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-flakturm-augarten.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-flakturm-augarten_hero.webp",
+          "transcriptText": "In the middle of a baroque garden, among the chestnut trees, there's a concrete tower about fifty metres tall. Nobody knows what to do with it.\n\nYou're in the Augarten, in the second district, Vienna's oldest baroque park. Walk along the main chestnut avenue until you can see it over the trees: a massive, round, windowless concrete tower with a ring of platforms near the top. That's the flak tower, the Flakturm, and there's a second, square one elsewhere in the same park.\n\nThey were built during the Second World War, finished by nineteen forty-four, to designs by the German architect Friedrich Tamms. Vienna got six of them, in three pairs. In each pair, one tower, like this one, carried the anti-aircraft guns, and the other carried the radar and the fire control. They were also shelters for thousands of people during the air raids.\n\nLook at the scale of it, and the walls. Reinforced concrete several metres thick. After the war the Soviet army tried a test explosion inside this one. The interior partly collapsed, but the walls stood. And because the towers are so close to housing, nobody has ever dared to blow them up properly.\n\nSo they've stayed. Both Augarten towers are now protected monuments. Over the years there have been plenty of proposals to give it a new use. None has stuck. So far, it has simply stood here, slowly being reclaimed by birds.\n\nWhat's worth knowing is that this is one of the most honest things in Vienna. A city of palaces and coffee houses also has to carry this.\n\nWhen you've seen it, walk across the park to the baroque palace on its far side. That's the home of the Augarten porcelain manufactory, with a small museum and workshop tours. Few places put the elegant and the brutal quite so close together."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.225826,
+      "centroidLongitude": 16.373287,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Tower",
+        "Park",
+        "War",
+        "Remembrance",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6ba4f56b-78c7-5591-8d8f-96fc9d5a6eb4",
+      "createdAt": "2026-10-18",
+      "title": "Yppenplatz",
+      "shortDescription": "If the Naschmarkt is Vienna's market for visitors, this is the one for the people who live here. You're on Yppenplatz, in Ottakring, the…",
+      "longDescription": "If the Naschmarkt is Vienna's market for visitors, this is the one for the people who live here.\n\nThe market goes back to the late eighteenth century, when this was the village of Neulerchenfeld, outside the city walls. Food sold inside Vienna was taxed; out here it wasn't, so traders and customers came out to the villages. The square had its own market by the end of the nineteenth century, and over time the two grew together.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-yppenplatz_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-yppenplatz_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "51269ab2-ed05-56e4-b0f8-c9898592fd5f",
+          "order": 0,
+          "title": "Yppenplatz",
+          "caption": "On Yppenplatz, at the upper end of the Brunnenmarkt.",
+          "latitude": 48.213564,
+          "longitude": 16.335837,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-yppenplatz.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-yppenplatz_hero.webp",
+          "transcriptText": "If the Naschmarkt is Vienna's market for visitors, this is the one for the people who live here.\n\nYou're on Yppenplatz, in Ottakring, the sixteenth district, just outside the old line of the Gürtel. Around you is a square lined with cafés and restaurants, with market pavilions and stalls on one side. Running off it, south along Brunnengasse, is a long street of market stalls. That's the Brunnenmarkt, and the square is its upper end.\n\nThe market goes back to the late eighteenth century, when this was the village of Neulerchenfeld, outside the city walls. Food sold inside Vienna was taxed; out here it wasn't, so traders and customers came out to the villages. The square had its own market by the end of the nineteenth century, and over time the two grew together.\n\nToday the Brunnenmarkt runs for nearly a kilometre and has around a hundred and seventy stalls. It's often described as one of the longest permanent street markets in Europe, and it's certainly the most international market in Vienna, with a large share of Turkish and Balkan traders among many others.\n\nNow look round the square itself. Over the past twenty years, Yppenplatz has become one of the city's liveliest corners, with bakeries, cafés and restaurants spilling outside on fine days. The interesting bit is that the market never left. The new places have settled in around it rather than replacing it.\n\nSaturday is the day to come. In the morning, farmers from around Vienna set up on Yppenplatz with honey, cheese, vegetables and wine, right beside the regular stalls.\n\nBefore you go, walk the whole length of the Brunnenmarkt, from here down to Thaliastraße, and back. Buy something you can't name, ask the stallholder how to cook it, and you'll have done the Brunnenmarkt properly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.213564,
+      "centroidLongitude": 16.335837,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "Market",
+        "Food",
+        "Immigration",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0a454b83-93e9-56d5-a24f-28b312935a2f",
+      "createdAt": "2026-10-18",
+      "title": "Church of St Charles Borromeo | Friedhofskirche zum Heiligen Karl Borromäus",
+      "shortDescription": "In the middle of a city of the dead, there's a church with a sky-blue dome. Vienna's relationship with its cemeteries is famously affectionate…",
+      "longDescription": "In the middle of a city of the dead, there's a church with a sky-blue dome. Vienna's relationship with its cemeteries is famously affectionate, and this is its centrepiece.\n\nIt was designed by the architect Max Hegele, a pupil of Otto Wagner, and built between nineteen hundred and eight and nineteen hundred and eleven. Hegele had his design worked out years earlier, by eighteen ninety-nine, but construction took almost a decade to begin. It's considered his masterpiece, and one of the finest Jugendstil churches in Vienna, alongside Wagner's own Kirche am Steinhof.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-friedhofskirche-zentralfriedhof_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-friedhofskirche-zentralfriedhof_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-friedhofskirche-zentralfriedhof_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "92b47f41-089d-5777-8d4e-272e402c1936",
+          "order": 0,
+          "title": "Church of St Charles Borromeo | Friedhofskirche zum Heiligen Karl Borromäus",
+          "caption": "At the foot of the steps up to the church, at the end of the cemetery’s central avenue.",
+          "latitude": 48.150619,
+          "longitude": 16.438094,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-friedhofskirche-zentralfriedhof.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-friedhofskirche-zentralfriedhof_hero.webp",
+          "transcriptText": "In the middle of a city of the dead, there's a church with a sky-blue dome. Vienna's relationship with its cemeteries is famously affectionate, and this is its centrepiece.\n\nYou're in the Central Cemetery, the Zentralfriedhof, in Simmering, at the far south-east of Vienna. From the main gate, walk straight ahead up the long central avenue. At the end, raised up on a terrace with broad steps, is a great domed church in pale stone. That's the Church of St Charles Borromeo.\n\nIt was designed by the architect Max Hegele, a pupil of Otto Wagner, and built between nineteen hundred and eight and nineteen hundred and eleven. Hegele had his design worked out years earlier, by eighteen ninety-nine, but construction took almost a decade to begin. It's considered his masterpiece, and one of the finest Jugendstil churches in Vienna, alongside Wagner's own Kirche am Steinhof.\n\nLocals often call it the Lueger church, because the crypt beneath it holds the tomb of Karl Lueger, mayor of Vienna at the turn of the twentieth century. He's a deeply controversial figure today, as an openly antisemitic politician, and that's part of what you're standing in front of too.\n\nNow climb the steps and go in, if it's open. The interior is a complete work of art, painted and decorated by a team of artists, and the dome is painted a deep sky blue. Coming in from the grey of the cemetery, it's quite something.\n\nThe three flights of steps leading up to the church are often said to represent three paths to God: scripture, the contemplation of nature, and the contemplation of the good and beautiful.\n\nAfterwards, find the musicians' graves near the main avenue, Group thirty-two A. Beethoven, Schubert, Brahms and Johann Strauss are all there, within a few metres of each other. Come early on a misty morning if you can, when the cemetery is at its most beautiful."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.150619,
+      "centroidLongitude": 16.438094,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Remembrance",
+        "Performance",
+        "Designed by a Master",
+        "Max Hegele"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9428619c-5c72-52b4-b3a8-1c29082cfc06",
+      "createdAt": "2026-10-18",
+      "title": "Kahlenberg",
+      "shortDescription": "From up here you can see the whole of Vienna at once: the old city, the river, the plain beyond. In sixteen eighty-three, an army stood on this…",
+      "longDescription": "From up here you can see the whole of Vienna at once: the old city, the river, the plain beyond. In sixteen eighty-three, an army stood on this spot and looked down at a city under siege.\n\nIn September sixteen eighty-three, Vienna had been besieged by the Ottoman army for two months. The relief army, under the Polish king Jan Sobieski, gathered on these hills, and on the twelfth of September came down through the vineyards to break the siege. The little baroque church of St Joseph behind you, the Josefskirche, recalls it. It was destroyed in the siege, rebuilt by seventeen thirty-four, and today it has a memorial chapel to Sobieski.",
+      "makerId": "49778265-42af-5f37-be6d-16f714a1ea0b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kahlenberg_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kahlenberg_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kahlenberg_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "79e4bbca-412f-5279-8933-d3044a80a6ad",
+          "order": 0,
+          "title": "Kahlenberg",
+          "caption": "On the viewing terrace at the summit, looking down over the vineyards to the city.",
+          "latitude": 48.276341,
+          "longitude": 16.333068,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-kahlenberg.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vie-kahlenberg_hero.webp",
+          "transcriptText": "From up here you can see the whole of Vienna at once: the old city, the river, the plain beyond. In sixteen eighty-three, an army stood on this spot and looked down at a city under siege.\n\nYou're on the summit of the Kahlenberg, at the north-western edge of the city, in the Vienna Woods. Walk to the viewing terrace. Below you, vineyards drop away down the slopes to the villages of Grinzing and Nussdorf. Beyond them, the whole city spreads out, with the spire of St Stephen's in the middle and the Danube on your left.\n\nIn September sixteen eighty-three, Vienna had been besieged by the Ottoman army for two months. The relief army, under the Polish king Jan Sobieski, gathered on these hills, and on the twelfth of September came down through the vineyards to break the siege. The little baroque church of St Joseph behind you, the Josefskirche, recalls it. It was destroyed in the siege, rebuilt by seventeen thirty-four, and today it has a memorial chapel to Sobieski.\n\nNow look at the view as an architect would. You can read the shape of the city from here. The tight knot of the old centre, ringed by the Ringstraße. The big outer belt of nineteenth-century districts. Then the Danube, and the modern towers of the Donau City across it. Vienna grew outward in rings, and from up here you can count them.\n\nThe terrace is open at all hours and it's free. Sunset is the busiest time; early morning is the most beautiful.\n\nDon't take the bus back down. Take one of the footpaths down through the vineyards towards Grinzing or Nussdorf, and stop at a Heuriger on the way for a glass of the wine you've just walked past. That, more or less, is how the Viennese spend a Sunday."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.276341,
+      "centroidLongitude": 16.333068,
+      "city": "Vienna",
+      "country": "Austria",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Viewpoint",
+        "History",
+        "War",
+        "Green Escape",
+        "Free to Visit"
       ],
       "priceUSD": 0
     }

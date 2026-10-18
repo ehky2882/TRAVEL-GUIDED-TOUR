@@ -369,3 +369,4 @@ Full text for every one of them is in
 - [HANDOFF-261014-hanoi.md](HANDOFF-261014-hanoi.md) — **Hanoi launches:** Atlas Studio HAN 🇻🇳, the 44th studio, 28 singles + 6 architect tags; photo licences and three editorial calls for Edward.
 - [HANDOFF-261015-mumbai.md](HANDOFF-261015-mumbai.md) — **Mumbai launches:** Atlas Studio BOM 🇮🇳, the 45th studio, 28 singles + 9 architect tags; ELCO/Taj place questions and photo licences for Edward.
 - [HANDOFF-261016-udaipur.md](HANDOFF-261016-udaipur.md) — **Udaipur launches:** Atlas Studio UDR 🇮🇳, the 46th studio, 23 singles + 2 architect tags (Studio Saar, Studio Rust); Tapri/Ladu and Ninkasi/Aosa place questions for Edward.
+- [HANDOFF-261018-vienna.md](HANDOFF-261018-vienna.md) — **Vienna launches:** Atlas Studio VIE 🇦🇹, the 47th studio, 35 singles + 20 architect tags; six stack-on-existing-pin place questions for Edward.
