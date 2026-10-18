@@ -211,6 +211,7 @@ enum Tag {
             "VTN Architects", "1+1>2 Architects", "G8A Architecture", "gmp Architekten", "Garol Isakovich", "Hà Đức Lịnh",
             "Frederick William Stevens", "George Wittet", "Sitaram Khanderao Vaidya", "D. N. Mirza", "John Adams", "Claude Batley", "F. G. B. Hawkins", "J. Campbell", "G. E. Gosling",
             "Studio Saar", "Studio Rust",
+            "Otto Wagner", "Adolf Loos", "Josef Hoffmann", "Hermann Czech", "Oswald Haerdtl", "Hans Hollein", "Joseph Maria Olbrich", "Johann Bernhard Fischer von Erlach", "Karl Ehn", "Josef Frank", "Fritz Wotruba", "Paul Engelmann", "Ludwig Wittgenstein", "Max Hegele", "PPAG architects", "Atelier Heiss", "Kühn Malvezzi", "Conran and Partners", "Georg Lippert", "Richard Neutra",
             "Bogdan Bogdanović", "Georgi Stoilov", "Avraam Miletsky",
             "Arseniusz Romanowicz", "Mihajlo Mitrović", "Jadwiga Grabowska-Hawrylak",
             "Irina Raud", "Miklós Hófer", "Boris Banykin",
