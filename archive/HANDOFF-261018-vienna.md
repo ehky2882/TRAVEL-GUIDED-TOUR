@@ -39,9 +39,10 @@ Werkbundsiedlung carries five of its architects (Frank, Loos, Hoffmann, Rietveld
 Edward can rule on places, so nothing was created or joined. Note that the pre-existing creator pins for these sites do
 not carry the new architect tags; tagging them would be a small follow-up.
 
-**gh-pages:** one commit adding 170 files (35 audio, 135 images), built with plumbing. ⚠️ **`git write-tree` on a
-blobless fetch lazily downloads every blob in the tree (~4 GB)** to check that each one exists. Next time use
-`git write-tree --missing-ok`, since the new blobs are written locally anyway.
+**gh-pages:** `0a4983f7`, one commit adding 170 files (35 audio, 135 images), built with plumbing. ⚠️ **`git write-tree` on a
+blobless fetch lazily downloads every blob in the tree (~4 GB)** to check that each one exists. It was stopped at 6 GB.
+What worked: `GIT_NO_LAZY_FETCH=1`, then `git write-tree --missing-ok` and `git diff --no-renames`. The new blobs are
+written locally, so nothing else needs fetching.
 
 **Checks:** validate-tours-mirror 0 errors, no warnings on the new tours; filenames align (170);
 check-place-candidates and join-places as above.
