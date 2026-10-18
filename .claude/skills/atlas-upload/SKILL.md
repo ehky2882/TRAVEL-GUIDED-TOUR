@@ -87,16 +87,21 @@ missing, build the gh-pages commit with plumbing rather than checking out the
 property that script exists to protect:
 
 ```bash
-export GIT_INDEX_FILE=/tmp/ghp.index; rm -f "$GIT_INDEX_FILE"
+git fetch --filter=blob:none origin gh-pages   # trees only, ~35 MB
+export GIT_NO_LAZY_FETCH=1 GIT_INDEX_FILE=/tmp/ghp.index; rm -f "$GIT_INDEX_FILE"
 git read-tree origin/gh-pages
 for f in /tmp/heroes/*.webp; do
   git update-index --add --cacheinfo 100644,"$(git hash-object -w "$f")","images/$(basename "$f")"
 done
-tree=$(git write-tree)
-git diff --name-status origin/gh-pages "$tree" | awk '{print $1}' | sort | uniq -c   # expect only A
+tree=$(git write-tree --missing-ok)
+git diff --no-renames --name-status origin/gh-pages "$tree" | awk '{print $1}' | sort | uniq -c   # expect only A
 commit=$(git commit-tree "$tree" -p origin/gh-pages -m "Heroes for …")
 git push origin "$commit:gh-pages"
 ```
+
+⚠️ **On a blobless fetch, keep `GIT_NO_LAZY_FETCH=1`, `--missing-ok` and `--no-renames`.**
+Without them, `git write-tree` quietly downloads every blob on the branch (4 GB+) just to
+check that each one exists. On 2026-10-18 it was stopped at 6 GB and still growing.
 
 ⚠️ **Never `git checkout` the gh-pages branch to do this.** It is ~4 GB; a
 checkout that dies partway leaves a tree where `git add` stages thousands of
