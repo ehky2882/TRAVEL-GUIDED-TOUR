@@ -371,3 +371,4 @@ Full text for every one of them is in
 - [HANDOFF-261016-udaipur.md](HANDOFF-261016-udaipur.md) — **Udaipur launches:** Atlas Studio UDR 🇮🇳, the 46th studio, 23 singles + 2 architect tags (Studio Saar, Studio Rust); Tapri/Ladu and Ninkasi/Aosa place questions for Edward.
 - [HANDOFF-261018-vienna.md](HANDOFF-261018-vienna.md) — **Vienna launches:** Atlas Studio VIE 🇦🇹, the 47th studio, 35 singles + 20 architect tags; six stack-on-existing-pin place questions for Edward.
 - [HANDOFF-261020-warsaw.md](HANDOFF-261020-warsaw.md) — **Warsaw launches:** Atlas Studio WAW 🇵🇱, the 48th studio, 34 singles + 18 architect tags; Palace of Culture and University Library place questions for Edward.
+- [HANDOFF-261020-triage-batch.md](HANDOFF-261020-triage-batch.md) — **26-pin triage batch** from 17 creators (5 new). TikTok oEmbed went blank, so make-link-pin.py now reads the video page. 9 stack-on-existing place questions for Edward.
