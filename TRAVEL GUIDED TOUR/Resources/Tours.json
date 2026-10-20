@@ -5591,6 +5591,16 @@
       "websiteURL": null
     },
     {
+      "id": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "displayName": "Atlas Studio WAW",
+      "platform": "dozent",
+      "handle": "atlas.waw",
+      "avatarURL": null,
+      "avatarEmoji": "🇵🇱",
+      "bio": "Atlas Studio's Warsaw bureau — an architect's guide to a city rebuilt from rubble: Stalin's Palace and the museums that answer it, milk bars and market halls, interwar villas and socialist estates, and the bars, shops and hotels where Warsaw lives now.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -130252,6 +130262,1632 @@
         "War",
         "Green Escape",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
+      "createdAt": "2026-10-20",
+      "title": "Raffles Europejski Warsaw",
+      "shortDescription": "This building has been a hotel, a ruin, a military academy, a government office, a hotel again, and the subject of a twelve-year lawsuit. It's…",
+      "longDescription": "This building has been a hotel, a ruin, a military academy, a government office, a hotel again, and the subject of a twelve-year lawsuit. It's now a hotel once more, and I'd say it has earned the rest.\n\nIt opened on the first of January, eighteen fifty-seven, designed by Enrico Marconi, an architect of Italian family who did more than almost anyone to give nineteenth-century Warsaw its manners. In its day it was one of the grandest hotels in the Russian Empire. Then came the war. During the occupation it served Wehrmacht officers only, and when the Germans pulled out in the winter of nineteen forty-four, they left it a wreck.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b4af0faf-7b9b-5309-a3f7-e83554237ed6",
+          "order": 0,
+          "title": "Raffles Europejski Warsaw",
+          "caption": "On Krakowskie Przedmieście outside number thirteen, with the Bristol across the street.",
+          "latitude": 52.241927,
+          "longitude": 21.015059,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-raffles-europejski.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-raffles-europejski_hero.webp",
+          "transcriptText": "This building has been a hotel, a ruin, a military academy, a government office, a hotel again, and the subject of a twelve-year lawsuit. It's now a hotel once more, and I'd say it has earned the rest.\n\nStand on Krakowskie Przedmieście, the old Royal Route, with the long pale front of the Europejski in front of you. Behind you, across the street, is the Hotel Bristol. These two have been eyeing each other across this road for well over a century.\n\nIt opened on the first of January, eighteen fifty-seven, designed by Enrico Marconi, an architect of Italian family who did more than almost anyone to give nineteenth-century Warsaw its manners. In its day it was one of the grandest hotels in the Russian Empire. Then came the war. During the occupation it served Wehrmacht officers only, and when the Germans pulled out in the winter of nineteen forty-four, they left it a wreck.\n\nHere's what I find rather wonderful. After the war, the new government took the building and turned it into a school for training army political officers. The grand staircase and the ballrooms were ripped out. Then, in the late fifties, somebody decided Warsaw needed its hotel back, and in nineteen sixty-two it reopened as a state-run Orbis hotel. The Rolling Stones, Marlene Dietrich, Lech Wałęsa: they all came through.\n\nWhen communism ended, the heirs of the original owners went to court. It took them twelve years, and they won. The hotel closed in two thousand and five, and reopened under Raffles in twenty eighteen, with a hundred and six rooms.\n\nGo inside if you can, because the real gift is on the walls. Nearly five hundred works by more than a hundred and twenty Polish artists, chosen by Anda Rottenberg, once director of the Zachęta gallery, a short walk away. Tadeusz Kantor, Wilhelm Sasnal, Monika Sosnowska. It's quietly one of the better collections of Polish art in the city, and it lives in the corridors.\n\nBefore you leave, find Lourse, the pâtisserie on the ground floor. Warsaw's well-to-do took their tea and cakes under that name before the First World War. Order something sweet and you're keeping a very old appointment."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.241927,
+      "centroidLongitude": 21.015059,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Neoclassical",
+        "Designed by a Master",
+        "Enrico Marconi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b9aa0360-6536-5c85-9c7e-b7767cc32c9b",
+      "createdAt": "2026-10-20",
+      "title": "Hotel Bristol",
+      "shortDescription": "A concert pianist built this hotel. Not personally, with a trowel, but with his money. Ignacy Jan Paderewski, the most famous pianist of his…",
+      "longDescription": "A concert pianist built this hotel. Not personally, with a trowel, but with his money. Ignacy Jan Paderewski, the most famous pianist of his age, bought most of the shares in the company behind it and gave the site to the project.\n\nThe story of the design is a small comedy. A competition was won by two architects from Kraków with an Art Nouveau scheme. Then the builders lost their nerve and switched to something safer, a neo-Renaissance front. So the outside is sober. The original interiors, though, were by Otto Wagner Junior, son of the great Viennese architect. The café opened in October nineteen hundred and one, the hotel a month later, with two hundred rooms and what the hotel's history calls the first lift in the country.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hotel-bristol_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hotel-bristol_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hotel-bristol_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hotel-bristol_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hotel-bristol_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bf248a06-0630-5d38-872d-0465dcdcdcc2",
+          "order": 0,
+          "title": "Hotel Bristol",
+          "caption": "On Krakowskie Przedmieście at the corner of Karowa, facing the corner dome.",
+          "latitude": 52.242404,
+          "longitude": 21.015724,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-hotel-bristol.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hotel-bristol_hero.webp",
+          "transcriptText": "A concert pianist built this hotel. Not personally, with a trowel, but with his money. Ignacy Jan Paderewski, the most famous pianist of his age, bought most of the shares in the company behind it and gave the site to the project.\n\nYou're on Krakowskie Przedmieście, where Karowa Street drops away towards the river, looking at the Bristol's cream front and its corner dome. Turn round and the Europejski is right there across the road. Two grand hotels, by two members of one family. Enrico Marconi designed that one, and his son Władysław revised the plans for this one.\n\nThe story of the design is a small comedy. A competition was won by two architects from Kraków with an Art Nouveau scheme. Then the builders lost their nerve and switched to something safer, a neo-Renaissance front. So the outside is sober. The original interiors, though, were by Otto Wagner Junior, son of the great Viennese architect. The café opened in October nineteen hundred and one, the hotel a month later, with two hundred rooms and what the hotel's history calls the first lift in the country.\n\nNow the gift. Look up at the balcony. On the second of January, nineteen nineteen, Paderewski came home to a newly independent Poland and spoke to the crowd from up there. He became Prime Minister, lived in this hotel, and resigned here at the end of that year. A hotel, briefly, doing the job of a state.\n\nAnd here's the remarkable thing. Most of this street was destroyed in nineteen forty-four. The Bristol survived the war and the Uprising largely intact, and reopened in nineteen forty-five. Then came nationalisation, a long state-run stretch, and in nineteen eighty-one it simply closed and stood empty for about a decade. Margaret Thatcher cut the ribbon on its reopening in nineteen ninety-three.\n\nMarie Curie stayed here. So did Picasso, Marlene Dietrich and John F. Kennedy. The Café Bristol on the corner is the place to sit, with a slice of cake and a window onto the Royal Route. Then walk north a few minutes and you'll reach the Castle Square and the old town beyond it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.242404,
+      "centroidLongitude": 21.015724,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Designed by a Master",
+        "Władysław Marconi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f8e28067-d6d6-5e7a-bfcb-3534241ae088",
+      "createdAt": "2026-10-20",
+      "title": "Prasowy Milk Bar | Bar Mleczny Prasowy",
+      "shortDescription": "This milk bar is a year older than the Palace of Culture. And unlike the Palace, it was very nearly lost. You should be on Marszałkowska, the…",
+      "longDescription": "This milk bar is a year older than the Palace of Culture. And unlike the Palace, it was very nearly lost.\n\nA milk bar, bar mleczny, is a very Polish institution: a cheap canteen serving plain home cooking, originally meatless and dairy-heavy, hence the name. Prasowy opened in nineteen fifty-four and fed this neighbourhood for about half a century. In twenty eleven it closed, and that would usually be the end of the story.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bar-mleczny-prasowy_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bar-mleczny-prasowy_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "85dd0e2c-ec74-5c9a-8012-0939640ef5ca",
+          "order": 0,
+          "title": "Prasowy Milk Bar | Bar Mleczny Prasowy",
+          "caption": "On Marszałkowska at numbers ten to sixteen, below the Prasowy neon.",
+          "latitude": 52.215796,
+          "longitude": 21.020592,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-bar-mleczny-prasowy.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bar-mleczny-prasowy_hero.webp",
+          "transcriptText": "This milk bar is a year older than the Palace of Culture. And unlike the Palace, it was very nearly lost.\n\nYou should be on Marszałkowska, the long avenue that runs down the spine of the city centre, outside numbers ten to sixteen. Look for the glass front and the neon sign spelling Prasowy. Go in and stand by the counter, where the menu is written up on the wall.\n\nA milk bar, bar mleczny, is a very Polish institution: a cheap canteen serving plain home cooking, originally meatless and dairy-heavy, hence the name. Prasowy opened in nineteen fifty-four and fed this neighbourhood for about half a century. In twenty eleven it closed, and that would usually be the end of the story.\n\nIt wasn't, because the neighbours made a fuss. Residents pressed the city until it ran a special competition for the premises, with one condition: whoever won had to keep it a milk bar. The rent was set at a fraction of what the shops next door paid. A new tenant took it on, and it reopened in twenty thirteen.\n\nNow have a look around you, because the designers, Mikołaj Wojciechowski and Konrad Sojka, were careful about what to keep. Look down: part of the black-and-white mosaic floor is original. Look at the serving hatches where the plates come through. They stayed. And the menu on the wall is modelled on the old black board with its white letters.\n\nHere's why I'd send any visiting architect here before the museums. This place is a lesson in what preservation actually means. It isn't only a façade or a listed staircase. Sometimes the thing worth saving is a use: a room where anyone, of any income, can sit down to a plate of pierogi and a bowl of soup.\n\nOrder the pierogi, or whatever the soup of the day is, and pay at the till. Then walk north up Marszałkowska to Plac Konstytucji, a few minutes away, and you'll see the grand socialist housing district this little bar has outlived."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.215796,
+      "centroidLongitude": 21.020592,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "131498f9-9405-58b7-bb8a-fb05d8ff6279",
+      "createdAt": "2026-10-20",
+      "title": "Bez Gwiazdek",
+      "shortDescription": "The name means \"without stars\". Which is a nicely dry thing to call a restaurant whose chef has worked in some of the most decorated kitchens in…",
+      "longDescription": "The name means \"without stars\". Which is a nicely dry thing to call a restaurant whose chef has worked in some of the most decorated kitchens in Europe.\n\nThe chef is Robert Trzópek, and the idea is simple and quite brave. There are sixteen regions in Poland. The menu changes roughly month by month, and each version takes you to one of them. One month it's Silesia, with karminadle, the region's meat patties. Another, it's the mountains of Podhale, and the smoked sheep's cheese called oscypek. The recipes are traditional. The technique is not.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bez-gwiazdek_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bez-gwiazdek_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bez-gwiazdek_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bez-gwiazdek_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bez-gwiazdek_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e85696c3-132e-5ecd-956c-ee0d793c4e63",
+          "order": 0,
+          "title": "Bez Gwiazdek",
+          "caption": "On Wiślana Street in Powiśle, a quiet side street running down to the river.",
+          "latitude": 52.241921,
+          "longitude": 21.021865,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-bez-gwiazdek.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bez-gwiazdek_hero.webp",
+          "transcriptText": "The name means \"without stars\". Which is a nicely dry thing to call a restaurant whose chef has worked in some of the most decorated kitchens in Europe.\n\nWiślana Street, number eight. You're in Powiśle, the old riverside district below the escarpment, on a small street that slopes down towards the Vistula. Bez Gwiazdek is a single, low-key room. Easy to walk past, which I suspect is rather the point.\n\nThe chef is Robert Trzópek, and the idea is simple and quite brave. There are sixteen regions in Poland. The menu changes roughly month by month, and each version takes you to one of them. One month it's Silesia, with karminadle, the region's meat patties. Another, it's the mountains of Podhale, and the smoked sheep's cheese called oscypek. The recipes are traditional. The technique is not.\n\nDinner is a tasting menu of around six courses, and there's a vegetarian version too. It's listed in the Michelin Guide, and it turns up on European lists of restaurants worth travelling for.\n\nWhat interests me here, as an architect, is the parallel with this city. Warsaw had to rebuild itself from drawings and memory after the war, and it chose to rebuild faithfully, but with modern materials and modern tools. This kitchen does exactly the same thing with the food of the whole country: faithful to the source, built with today's methods.\n\nAnd there's something generous in it. Most Poles never get to eat their way round all sixteen regions. Come back in a few months and you'll eat in a different part of the country without leaving this room.\n\nBook ahead; it's dinner only, Tuesday to Saturday. Afterwards, walk a couple of minutes up the street to Dobra and look for the University Library, with its green roof garden. From April to October the upper garden is open, and it looks right out over the river."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.241921,
+      "centroidLongitude": 21.021865,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
+      "createdAt": "2026-10-20",
+      "title": "Koszyki Hall | Hala Koszyki",
+      "shortDescription": "Koszyki means \"baskets\", and the name has nothing to do with shopping. It comes from the wicker that was once used to shore up the city's old…",
+      "longDescription": "Koszyki means \"baskets\", and the name has nothing to do with shopping. It comes from the wicker that was once used to shore up the city's old earth ramparts nearby.\n\nIt opened on the second of March, nineteen hundred and nine, designed by the architect Juliusz Dzierżanowski, to give the growing south of the city a covered market. The decorated fronts on the street were the showpiece. The rest was much plainer than drawn.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-koszyki_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-koszyki_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-koszyki_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-koszyki_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4e055edf-3585-59b0-8d3f-c9b19bd697e9",
+          "order": 0,
+          "title": "Koszyki Hall | Hala Koszyki",
+          "caption": "On Koszykowa Street, facing the arched brick gateway at number sixty-three.",
+          "latitude": 52.222224,
+          "longitude": 21.011017,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-hala-koszyki.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-koszyki_hero.webp",
+          "transcriptText": "Koszyki means \"baskets\", and the name has nothing to do with shopping. It comes from the wicker that was once used to shore up the city's old earth ramparts nearby.\n\nYou should be on Koszykowa Street, in front of the brick gateway building with its arched entrance and carved decoration. Look for the Warsaw mermaid among the carved cartouches. Behind this front is a long hall of steel and glass, and today, a food hall.\n\nIt opened on the second of March, nineteen hundred and nine, designed by the architect Juliusz Dzierżanowski, to give the growing south of the city a covered market. The decorated fronts on the street were the showpiece. The rest was much plainer than drawn.\n\nIn nineteen forty-four, during the Uprising, the hall burned. Its steel frame kept it standing, and it was rebuilt in nineteen forty-nine and listed as a monument in nineteen sixty-five.\n\nHere's the uncomfortable part, and I think it matters. In two thousand and nine a developer bought the hall, and most of it was demolished. What survived were the two side wings and the northern wall along this street. A new owner then rebuilt it, to a design by the Warsaw practice JEMS Architekci, putting the original structural pieces back in. It reopened in October twenty sixteen.\n\nSo is this the old market or a new one? Honestly, it's both, and that's the Warsaw condition. Almost everything here is a reconstruction of some kind. The real question is never \"is it original?\" but \"was it done with care?\" Walk inside, look up at the steel frame, and judge for yourself.\n\nInside, the hall is lined with counters, bars and restaurants, and it's loud and busy most evenings. Find the old steelwork overhead and follow it to the far end. Then, back on the street, look east along Koszykowa: the Faculty of Architecture is just along the road, so the students know this place very well."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.222224,
+      "centroidLongitude": 21.011017,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Architecture",
+        "Commerce",
+        "Designed by a Master",
+        "Juliusz Dzierżanowski",
+        "JEMS Architekci"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2ed7186f-6b2e-5baf-85bd-a9ad19149510",
+      "createdAt": "2026-10-20",
+      "title": "Powiśle Power Station | Elektrownia Powiśle",
+      "shortDescription": "For more than a month in nineteen forty-four, the lights of a besieged city depended on the men who worked here. Stand on Dobra Street, in front…",
+      "longDescription": "For more than a month in nineteen forty-four, the lights of a besieged city depended on the men who worked here.\n\nThe plant opened in nineteen hundred and four as the city's first big power station. In nineteen fifty-five it got a new heating unit to keep a certain new building warm: the Palace of Culture, a mile or so to the west. It worked for nearly a century, and shut down in two thousand and one.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-elektrownia-powisle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-elektrownia-powisle_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-elektrownia-powisle_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-elektrownia-powisle_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3bdc72ee-5dad-594c-9003-3a34992c7fb8",
+          "order": 0,
+          "title": "Powiśle Power Station | Elektrownia Powiśle",
+          "caption": "On Dobra Street, in the square in front of the old boiler house.",
+          "latitude": 52.240774,
+          "longitude": 21.027832,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-elektrownia-powisle.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-elektrownia-powisle_hero.webp",
+          "transcriptText": "For more than a month in nineteen forty-four, the lights of a besieged city depended on the men who worked here.\n\nStand on Dobra Street, in front of the long brick halls of the old power station, with its big industrial windows. You're in Powiśle, the low ground by the Vistula, and the river is just beyond the buildings. The engine room is now a food hall. Go in, find a seat, and look up.\n\nThe plant opened in nineteen hundred and four as the city's first big power station. In nineteen fifty-five it got a new heating unit to keep a certain new building warm: the Palace of Culture, a mile or so to the west. It worked for nearly a century, and shut down in two thousand and one.\n\nThe gift, though, is the war. When the Warsaw Uprising broke out in August nineteen forty-four, sixty-three of the plant's own workers formed a fighting unit, under Captain Stanisław Skibniewski, known as Cubryna. They took the plant and held it, and kept electricity flowing to the insurgents' city. Twenty of them were killed. It finally fell on the fourth of September.\n\nSo when you're sitting here with a bowl of noodles under the steel trusses, it's worth knowing that this building was once a front line. The conversion, finished in twenty twenty by APA Wojciechowski Architekci, kept the heavy bones: the steel supports, the brickwork, old neon signs, and thousands of preserved fittings. Around them came offices, flats and a hotel.\n\nIs it a little polished for a power station? Perhaps. But it's honest about what it was, and the space under that roof is still quite something.\n\nBefore you leave, walk round the outside of the boiler house and look at the brickwork up close. Then head two minutes north along Dobra to the University Library, whose roof garden looks straight down over this whole quarter."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.240774,
+      "centroidLongitude": 21.027832,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Notable Building",
+        "Food",
+        "Engineering",
+        "War"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8b7e334a-4c95-58f1-86f6-9af484be1db0",
+      "createdAt": "2026-10-20",
+      "title": "Charlotte, Plac Zbawiciela",
+      "shortDescription": "Breakfast in Warsaw has a front row, and this is it. Plac Zbawiciela, the Square of the Saviour. Find a seat at Charlotte, at number eighteen…",
+      "longDescription": "Breakfast in Warsaw has a front row, and this is it.\n\nCharlotte is a French-style bakery and bistro, and the bread is baked on site. The gift detail is on the table: the jams and the chocolate spread are made to the house's own recipes and set out in big jars, so you help yourself. Inside, there's one long communal table down the middle, which is the best seat in the house if you're on your own.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-charlotte_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-charlotte_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-charlotte_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-charlotte_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b5ad66e9-234d-5bc1-a886-11e50aa0f407",
+          "order": 0,
+          "title": "Charlotte, Plac Zbawiciela",
+          "caption": "On the curved edge of Plac Zbawiciela, facing the church across the square.",
+          "latitude": 52.22009,
+          "longitude": 21.01864,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-charlotte.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-charlotte_hero.webp",
+          "transcriptText": "Breakfast in Warsaw has a front row, and this is it.\n\nPlac Zbawiciela, the Square of the Saviour. Find a seat at Charlotte, at number eighteen Aleja Wyzwolenia, on the curve of the square. In front of you, the round square itself, with traffic and trams swinging around it. Across the way, the great twin-towered church that gives the square its name. And around much of it, the tall, even fronts of the early nineteen-fifties, following the curve of the square.\n\nCharlotte is a French-style bakery and bistro, and the bread is baked on site. The gift detail is on the table: the jams and the chocolate spread are made to the house's own recipes and set out in big jars, so you help yourself. Inside, there's one long communal table down the middle, which is the best seat in the house if you're on your own.\n\nThe building around you is worth a look too. After the war, this square was meant to be rebuilt as a single grand classical set piece, part of the new socialist city centre. Only some of that plan was carried out. What you get is a square that's half ceremonial and half neighbourhood: big architecture, small cafés.\n\nAnd here's the thing I love about this spot. Warsaw's planners in the fifties designed squares like this for marching. They got breakfast instead. The local writing about the square says that the bar upstairs may have been here first, but it was Charlotte that put the square on the map, and turned it into the place where the city comes to see and be seen over coffee.\n\nThere's a quieter detail on the church side. The twin towers belong to the Church of the Holiest Saviour, finished in the nineteen-twenties in a neo-Renaissance style. Finish your coffee, then walk the full circle of the square and look up at the fronts, to see where the grand plan stops and the older city carries on. Five minutes south down Marszałkowska brings you to the old milk bar Prasowy."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.22009,
+      "centroidLongitude": 21.01864,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "30234cc2-792a-5ef5-9588-e7646e04c81d",
+      "createdAt": "2026-10-20",
+      "title": "Kulturalna",
+      "shortDescription": "There is something deeply satisfying about having a cheap beer inside a building that Stalin gave you. You're at the Palace of Culture, on its…",
+      "longDescription": "There is something deeply satisfying about having a cheap beer inside a building that Stalin gave you.\n\nFirst, a little background. The Palace was finished in nineteen fifty-five, a gift from the Soviet Union, and from the start it was meant to be full of culture: theatres, a concert hall, museums. The Dramatic Theatre moved into this wing that same year. Decades later, the theatre made some of its space available, and Kulturalna moved in. It's been running for close to twenty years now.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kulturalna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kulturalna_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kulturalna_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kulturalna_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kulturalna_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2e9e036f-db2f-5f67-924c-9eced15a1d57",
+          "order": 0,
+          "title": "Kulturalna",
+          "caption": "At the Teatr Dramatyczny entrance of the Palace of Culture, on the Plac Defilad side.",
+          "latitude": 52.231263,
+          "longitude": 21.007087,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-kulturalna.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kulturalna_hero.webp",
+          "transcriptText": "There is something deeply satisfying about having a cheap beer inside a building that Stalin gave you.\n\nYou're at the Palace of Culture, on its south-eastern corner, where the Teatr Dramatyczny, the Dramatic Theatre, has its entrance. Look for the doors and the signs for Kulturalna, and go in. The bar sits beside the theatre's lobby, inside the Palace itself.\n\nFirst, a little background. The Palace was finished in nineteen fifty-five, a gift from the Soviet Union, and from the start it was meant to be full of culture: theatres, a concert hall, museums. The Dramatic Theatre moved into this wing that same year. Decades later, the theatre made some of its space available, and Kulturalna moved in. It's been running for close to twenty years now.\n\nWhat you'll find is a café by day and a club by night. The kitchen does food. The stage has hosted indie bands from Poland and well beyond, and there are readings and literary evenings too. People come before a play, after a play, and very often instead of a play.\n\nHere's the reason I'd send you here, and it's not the drinks. The Palace is the most argued-about building in Poland. For many, it's a symbol of domination, built to be looked up to. Kulturalna is what Warsaw does with a symbol like that. It doesn't knock it down. It moves in, turns the music up, and makes it its own. The city has slowly domesticated its most overbearing monument, one bar at a time.\n\nWhen you come out, walk round to the main front of the Palace, facing the wide expanse of Plac Defilad, and look up at the tower. If it's daytime, you can ride the lift to the thirtieth-floor terrace. Either way, look across the square at the white box of the new Museum of Modern Art, which was built to stand up to this tower."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.231263,
+      "centroidLongitude": 21.007087,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Performance",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "71dbdc42-1df9-5f3f-b005-9ffa760652ca",
+      "createdAt": "2026-10-20",
+      "title": "Nowy Świat Pavilions | Pawilony Nowy Świat",
+      "shortDescription": "Behind one of Warsaw's smartest streets is a maze of tiny sheds full of bars. Nobody planned it that way. It just happened. You should be on…",
+      "longDescription": "Behind one of Warsaw's smartest streets is a maze of tiny sheds full of bars. Nobody planned it that way. It just happened.\n\nNowy Świat itself was levelled in the war and rebuilt in the late nineteen-forties in a calm, neoclassical style. The pavilions came later. In nineteen seventy-two a group of small craftsmen set up a company and were given about one and a half thousand square metres of land back here on a forty-year lease. They built little workshops and shops. At a time when state shops were often empty, a newspaper called this place \"an enclave of elegant trade\".",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pawilony-nowy-swiat_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pawilony-nowy-swiat_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "06503c26-360b-5203-b029-0f6f0d2332ee",
+          "order": 0,
+          "title": "Nowy Świat Pavilions | Pawilony Nowy Świat",
+          "caption": "At the gateway into the courtyard behind Nowy Świat twenty-two to twenty-eight.",
+          "latitude": 52.232943,
+          "longitude": 21.020321,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-pawilony-nowy-swiat.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pawilony-nowy-swiat_hero.webp",
+          "transcriptText": "Behind one of Warsaw's smartest streets is a maze of tiny sheds full of bars. Nobody planned it that way. It just happened.\n\nYou should be on Nowy Świat, the elegant street that carries the Royal Route south towards the city's grand avenues. Find the passage at numbers twenty-two to twenty-eight and walk through it into the courtyard behind. Suddenly you're in a different city: a tight warren of low, single-storey pavilions, each a separate bar with its own door, sign and music.\n\nNowy Świat itself was levelled in the war and rebuilt in the late nineteen-forties in a calm, neoclassical style. The pavilions came later. In nineteen seventy-two a group of small craftsmen set up a company and were given about one and a half thousand square metres of land back here on a forty-year lease. They built little workshops and shops. At a time when state shops were often empty, a newspaper called this place \"an enclave of elegant trade\".\n\nThen, in the late nineteen-nineties, things changed fast. Owners and their children swapped workshops for bars, one by one. Today there are well over a dozen, packed into what was once a little arcade of craftsmen's workshops.\n\nAnd here's the interesting bit. The forty-year lease ran out in twenty twelve. The businesses went to court and won an extension, but the city hadn't signed a new agreement years later, and the area's local plan now allows it to be redeveloped. So this beloved mess survives on borrowed time, as a good deal of Warsaw always has.\n\nAs an architect, I'd say this is the most honest building type in the city: no architect, no masterplan, just a hundred small decisions. Wander in, take a lap, and pick whichever bar has the music you like. When you've had enough, step back through the gateway onto Nowy Świat and walk north towards the university. Ten minutes brings you to Krakowskie Przedmieście and the old hotels."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.232943,
+      "centroidLongitude": 21.020321,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "District",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "02df7840-a258-5f68-9314-cd9184b1c87e",
+      "createdAt": "2026-10-20",
+      "title": "Plan B",
+      "shortDescription": "On a warm night in Warsaw, the bar isn't really the bar. It's the pavement outside it. You're standing on Plac Zbawiciela, below the windows of…",
+      "longDescription": "On a warm night in Warsaw, the bar isn't really the bar. It's the pavement outside it.\n\nPlan B is, in the words of the local city magazine, a dive bar with cult status: low light, strong drinks, loud music, and a crowd of students and seasoned night owls. It may well have been the first bar on this square, years before the cafés made it fashionable.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-plan-b_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-plan-b_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-plan-b_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3ab637b8-d07e-5b72-9cc3-e226fc917596",
+          "order": 0,
+          "title": "Plan B",
+          "caption": "On Plac Zbawiciela, on the pavement below the bar’s windows.",
+          "latitude": 52.220004,
+          "longitude": 21.018694,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-plan-b.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-plan-b_hero.webp",
+          "transcriptText": "On a warm night in Warsaw, the bar isn't really the bar. It's the pavement outside it.\n\nYou're standing on Plac Zbawiciela, below the windows of Plan B, at number eighteen Aleja Wyzwolenia. The bar is upstairs. Down here, the edge of the square fills with people holding drinks, perched on steps and kerbs. In front of you is the round square with its traffic, and the twin towers of the Church of the Holiest Saviour across the way.\n\nPlan B is, in the words of the local city magazine, a dive bar with cult status: low light, strong drinks, loud music, and a crowd of students and seasoned night owls. It may well have been the first bar on this square, years before the cafés made it fashionable.\n\nNow look at the middle of the square, because this is where the story gets good. In twenty twelve the artist Julita Wójcik's rainbow arrived here: a steel arch covered in artificial flowers, which had already stood in front of the European Parliament in Brussels. When it was rebuilt after one attack, more than twenty-two thousand flowers went back onto it. To some people it was a cheerful work of art. To others it was a provocation, sitting in front of a church. It was set on fire more than once, repaired, and attacked again. In twenty fifteen it was finally taken down for good.\n\nSo this little circle of tarmac has hosted one of the sharpest public arguments in modern Poland: about art, faith, tolerance, and who gets to decide what a public square is for. And through all of it, people kept sitting on these steps with a drink, talking it over. That, if you ask me, is exactly what a square is for.\n\nThe rainbow hasn't come back, despite campaigns to return it. But keep an eye on the planters in the middle of the square in summer. The city has talked of a flowerbed in rainbow colours as a quieter nod to it. Then head up the stairs and see what the noise is about."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.220004,
+      "centroidLongitude": 21.018694,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "95de4cb3-d951-5f60-91a5-69e7dff43901",
+      "createdAt": "2026-10-20",
+      "title": "Kafka",
+      "shortDescription": "Every university town needs a café where you can stay all afternoon with one coffee and a book, and nobody minds. This is Warsaw's. You should…",
+      "longDescription": "Every university town needs a café where you can stay all afternoon with one coffee and a book, and nobody minds. This is Warsaw's.\n\nStep inside and the gift is immediately obvious: books. The walls are lined floor to ceiling with shelves, and the furniture is cheerfully mismatched, as though it has been collected from a dozen different flats. It's the kind of room that asks you to sit down and read, which is exactly what most people here are doing.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kafka_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kafka_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kafka_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kafka_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "23d8e643-2edd-5282-bcf6-4b04b1a3b95e",
+          "order": 0,
+          "title": "Kafka",
+          "caption": "On Oboźna Street at number three, by the chairs set out in front.",
+          "latitude": 52.239532,
+          "longitude": 21.022711,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-kafka.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kafka_hero.webp",
+          "transcriptText": "Every university town needs a café where you can stay all afternoon with one coffee and a book, and nobody minds. This is Warsaw's.\n\nYou should be on Oboźna Street, at number three. Oboźna runs down the escarpment from the old university quarter on Krakowskie Przedmieście towards the riverside district of Powiśle. Kafka is right here on the slope. Outside, there are chairs scattered about, usually occupied by people in their twenties doing very little, very contentedly.\n\nStep inside and the gift is immediately obvious: books. The walls are lined floor to ceiling with shelves, and the furniture is cheerfully mismatched, as though it has been collected from a dozen different flats. It's the kind of room that asks you to sit down and read, which is exactly what most people here are doing.\n\nThe menu is straightforward: coffee, cakes, sandwiches. And there's a breakfast on the menu named after the People's Republic, the old communist state. The menu itself apparently declines to describe it, and says you'll just have to try it. I'd take that as a challenge.\n\nHere's why I've put a small café into a guide that's mostly about architecture. Cities aren't only made of buildings. They're made of rooms like this, where nobody hurries you, where you can be alone in company. The University of Warsaw is just up the hill, and generations of students have done their real thinking in places like this rather than in lecture halls.\n\nWhen you've finished, head downhill and a little north, a few minutes' walk, to Dobra Street and the University Library, with its walls of text and its garden on the roof, which is where the more serious reading gets done."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.239532,
+      "centroidLongitude": 21.022711,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Literature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cc4de8f5-7589-5c42-95cd-8c3c7e7aa2e9",
+      "createdAt": "2026-10-20",
+      "title": "Rozbrat 20",
+      "shortDescription": "If you want one bottle of wine in Warsaw chosen by someone who really cares, come to this corner. Rozbrat Street, number twenty. You're on a…",
+      "longDescription": "If you want one bottle of wine in Warsaw chosen by someone who really cares, come to this corner.\n\nRozbrat 20 started life with a reputation for its wine and its bread, and grew into something more ambitious. The chef is Bartosz Szymczak, who trained in Britain, in the kitchens of Tom Aikens and Lee Westcott, before coming home to Warsaw. His cooking is Polish at the root, with a curiosity for Asian flavours and a British training in technique. In twenty twenty-four the Michelin Guide gave the restaurant its first star.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rozbrat-20_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rozbrat-20_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rozbrat-20_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rozbrat-20_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "544436bb-8734-5713-b439-985fb3507ce8",
+          "order": 0,
+          "title": "Rozbrat 20",
+          "caption": "On the corner of Rozbrat Street at number twenty, in Powiśle’s Solec quarter.",
+          "latitude": 52.2242,
+          "longitude": 21.035099,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-rozbrat-20.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rozbrat-20_hero.webp",
+          "transcriptText": "If you want one bottle of wine in Warsaw chosen by someone who really cares, come to this corner.\n\nRozbrat Street, number twenty. You're on a quiet corner in the lower part of town, near the river, where residential streets give way to the green of the park along the escarpment. The restaurant is a smart corner room with big windows. Nothing shouts. It's the sort of place you find on purpose.\n\nRozbrat 20 started life with a reputation for its wine and its bread, and grew into something more ambitious. The chef is Bartosz Szymczak, who trained in Britain, in the kitchens of Tom Aikens and Lee Westcott, before coming home to Warsaw. His cooking is Polish at the root, with a curiosity for Asian flavours and a British training in technique. In twenty twenty-four the Michelin Guide gave the restaurant its first star.\n\nThe menu is a tasting menu that follows the seasons, and the kitchen likes to divide the year more finely than the usual four. But the real gift is the wine list, which leans heavily on Italy, and especially on organic and biodynamic growers, many of them brought into Poland by the owner himself. It's often named among the best wine lists in the country.\n\nHere's what interests me about it, standing on this ordinary corner. For a long time, grand dining in Warsaw meant hotel restaurants with chandeliers. Now the most serious cooking in the city is happening in rooms like this, in residential streets, run by people who simply want to do one thing properly. It's a shift in the map of the city as much as in the food.\n\nBook ahead, as it's dinner only, Tuesday to Saturday. If you're early, walk a couple of minutes towards the escarpment and into the park, then follow the slope north. Or head downhill to the river and the boulevards, and come back hungry."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.2242,
+      "centroidLongitude": 21.035099,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a8a4bbf9-093a-5da1-a573-46de26cefe94",
+      "createdAt": "2026-10-20",
+      "title": "Cepelia Pavilion | Pawilon Cepelii",
+      "shortDescription": "For years this little building was so plastered in billboards that most people forgot there was architecture underneath. Then somebody peeled…",
+      "longDescription": "For years this little building was so plastered in billboards that most people forgot there was architecture underneath. Then somebody peeled them off.\n\nIt was finished in nineteen sixty-six, designed by Zygmunt Stępiński with Andrzej Milewski, as a shop for Cepelia. Cepelia was the state network of folk-art and craft cooperatives, set up after the war to sell Polish folk art and handicrafts. The pavilion was conceived as one big shop window. Here's the gift: the turquoise tiles are by the artist Stanisław Kucharski, and each one carries its own geometric pattern.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pawilon-cepelii_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "218630b9-612b-5e29-9a95-5fcbb28838d9",
+          "order": 0,
+          "title": "Cepelia Pavilion | Pawilon Cepelii",
+          "caption": "On Marszałkowska at number ninety-nine, beside the Hotel Metropol.",
+          "latitude": 52.228941,
+          "longitude": 21.011624,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-pawilon-cepelii.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pawilon-cepelii_hero.webp",
+          "transcriptText": "For years this little building was so plastered in billboards that most people forgot there was architecture underneath. Then somebody peeled them off.\n\nYou should be on Marszałkowska, the city's great north–south avenue, at number ninety-nine, looking at a low pavilion of glass and metal. It sits beside the taller Hotel Metropol. Look at the ground floor and you'll see turquoise ceramic tiles.\n\nIt was finished in nineteen sixty-six, designed by Zygmunt Stępiński with Andrzej Milewski, as a shop for Cepelia. Cepelia was the state network of folk-art and craft cooperatives, set up after the war to sell Polish folk art and handicrafts. The pavilion was conceived as one big shop window. Here's the gift: the turquoise tiles are by the artist Stanisław Kucharski, and each one carries its own geometric pattern.\n\nThe nineteen-nineties were cruel to it. The windows vanished under advertising, a nightclub took the basement, and Cepelia sold the building. In twenty nineteen a fast-food chain wanted to move in. The heritage authorities said no, an appeal said yes, and in the end the chain walked away. The building was protected as a monument, restored by the architect Andrzej Chołdzyński, and reopened in December twenty twenty-four. It's now a branch of Empik, the country's big book and media chain.\n\nSo, a fair warning: you won't find folk art for sale here any more. What you'll find is a rescued building doing a different job. And I think that's the right lesson. Warsaw spent the nineties and two thousands treating its modernist buildings as embarrassing leftovers. This pavilion is part of a slow change of heart. A city that lost so much of its old fabric is finally learning to value its younger buildings too.\n\nBefore you go in, walk round to the Nowogrodzka Street side, round the corner. Look for the neon cockerel, the old Cepelia emblem. And look up at the first floor, where a strip of the original wavy aluminium front has been left uncovered, like a window into nineteen sixty-six."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.228941,
+      "centroidLongitude": 21.011624,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Modernist",
+        "Public Art",
+        "Designed by a Master",
+        "Zygmunt Stępiński"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0042d665-7040-5fee-86ae-dfbce0cb5f54",
+      "createdAt": "2026-10-20",
+      "title": "Bęc Zmiana",
+      "shortDescription": "If you want to understand how Warsaw thinks about itself, don't start with a guidebook. Start with this shop. You're on Mokotowska Street, at…",
+      "longDescription": "If you want to understand how Warsaw thinks about itself, don't start with a guidebook. Start with this shop.\n\nThe foundation was registered in two thousand and two by Bogna Świątkowska, who still leads it. Its job is to support art, architecture, design and urban culture, and a great deal of its work happens in public space rather than in galleries. It runs competitions for artists, architects and designers. It started a free magazine in two thousand and three, and it has run a free university of Warsaw, open to anyone.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bec-zmiana_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bec-zmiana_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bec-zmiana_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "910b5900-5e30-528e-b866-88e491ae296a",
+          "order": 0,
+          "title": "Bęc Zmiana",
+          "caption": "On Mokotowska Street at number sixty-five, outside the bookshop and gallery.",
+          "latitude": 52.226793,
+          "longitude": 21.022248,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-bec-zmiana.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bec-zmiana_hero.webp",
+          "transcriptText": "If you want to understand how Warsaw thinks about itself, don't start with a guidebook. Start with this shop.\n\nYou're on Mokotowska Street, at number sixty-five, in the city centre's south. Behind the shopfront is a bookshop, a small gallery, and the office of the foundation that runs them, all under one roof. The name is a bit of wordplay: bęc is the sound of something landing with a thump, and zmiana means change. Which tells you something about the spirit of the place.\n\nThe foundation was registered in two thousand and two by Bogna Świątkowska, who still leads it. Its job is to support art, architecture, design and urban culture, and a great deal of its work happens in public space rather than in galleries. It runs competitions for artists, architects and designers. It started a free magazine in two thousand and three, and it has run a free university of Warsaw, open to anyone.\n\nNow, the gift, which is on the shelves. The foundation is also a publisher, with its own book series on contemporary art, graphic design, architecture and visual culture. Architecture and the city run all through the list. If you want a book on Polish architecture and design that you won't find at the airport, this is where you look.\n\nHere's why I think this matters. Warsaw had to be rebuilt by decree, from the top down, after the war. Places like this are the opposite. They're the city talking to itself from the bottom up, asking who public space belongs to, and what should be built next. It's a small shop with an outsized voice.\n\nHave a browse, and ask about the events: there are often openings, talks and readings. Then walk west a few minutes towards Marszałkowska, and you'll find the city of grand avenues that so many of these books are arguing with."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.226793,
+      "centroidLongitude": 21.022248,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8d7ffae6-757f-521c-b399-f935897483d3",
+      "createdAt": "2026-10-20",
+      "title": "Pan Tu Nie Stał",
+      "shortDescription": "The name of this shop is a line every Pole of a certain age will recognise. \"Pan tu nie stał.\" It means, \"You weren't standing here, sir.\" It's…",
+      "longDescription": "The name of this shop is a line every Pole of a certain age will recognise. \"Pan tu nie stał.\" It means, \"You weren't standing here, sir.\" It's what you shouted at someone pushing into a queue.\n\nThe brand began in Łódź, a city an hour or so to the south-west, in two thousand and eight. Justyna Burzyńska and Maciek Lebiedowicz started a blog about the graphic design and typography of communist-era Poland. Readers loved it. They printed some T-shirts. They sold out. The shop followed, and this Warsaw branch opened in June twenty fourteen. The clothes are still designed and made in Łódź.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pan-tu-nie-stal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pan-tu-nie-stal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pan-tu-nie-stal_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8c54061a-8944-5ea6-8213-59c326e0a281",
+          "order": 0,
+          "title": "Pan Tu Nie Stał",
+          "caption": "On Koszykowa Street, in the arcade of the big fifties block off Plac Konstytucji.",
+          "latitude": 52.223017,
+          "longitude": 21.014392,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-pan-tu-nie-stal.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-pan-tu-nie-stal_hero.webp",
+          "transcriptText": "The name of this shop is a line every Pole of a certain age will recognise. \"Pan tu nie stał.\" It means, \"You weren't standing here, sir.\" It's what you shouted at someone pushing into a queue.\n\nYou're on Koszykowa Street, at numbers thirty-four to fifty, a few steps from Plac Konstytucji. Look up before you go in. This shop sits in one of the big, heavily decorated apartment blocks of the early nineteen-fifties, part of the socialist-realist district built around the square. The allegorical figures on this very building are by the sculptor Józef Gosławski.\n\nThe brand began in Łódź, a city an hour or so to the south-west, in two thousand and eight. Justyna Burzyńska and Maciek Lebiedowicz started a blog about the graphic design and typography of communist-era Poland. Readers loved it. They printed some T-shirts. They sold out. The shop followed, and this Warsaw branch opened in June twenty fourteen. The clothes are still designed and made in Łódź.\n\nThe gift is the joke in that name. The early nineteen-eighties, under martial law, were the years of empty shelves and endless queues. And here's a shop, selling things people actually want, named after the battle cry of the queue.\n\nWhat I like is the setting. The building around you was designed to show off the new socialist city. Seventy years on, it houses a shop that gently teases that era, using the lettering and graphics the era itself produced. That's how Warsaw tends to handle its past: not with a sledgehammer, but with a raised eyebrow.\n\nInside you'll find T-shirts, socks, mugs, ceramics, notebooks and postcards, a lot of it with old lettering and slogans. Then step out and walk the few metres to Plac Konstytucji, and look at the giant lamp standards and the carved workers on the façades. The originals of the joke are all around you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.223017,
+      "centroidLongitude": 21.014392,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "Public Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "35caf549-eea1-5ab2-8afc-4804237b8b78",
+      "createdAt": "2026-10-20",
+      "title": "Mirowska Hall | Hala Mirowska",
+      "shortDescription": "Look closely at the brickwork on these halls. Some of those marks aren't weathering. They're bullet holes, and they were kept on purpose. You…",
+      "longDescription": "Look closely at the brickwork on these halls. Some of those marks aren't weathering. They're bullet holes, and they were kept on purpose.\n\nThey were the city's first great covered market. The first stone was laid in October eighteen ninety-nine, and they opened in nineteen hundred and two, on the site of an old army barracks. More than five hundred stalls sold food and household goods, and before the war these were the largest market buildings in Warsaw.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-mirowska_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-mirowska_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "01d173cc-0840-562b-b99a-6d6d6c1b7f69",
+          "order": 0,
+          "title": "Mirowska Hall | Hala Mirowska",
+          "caption": "On Plac Mirowski, beside the brick halls, facing the west hall.",
+          "latitude": 52.238837,
+          "longitude": 20.99737,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-hala-mirowska.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-hala-mirowska_hero.webp",
+          "transcriptText": "Look closely at the brickwork on these halls. Some of those marks aren't weathering. They're bullet holes, and they were kept on purpose.\n\nYou should be on Plac Mirowski, beside two long market halls of red brick, with tall arched windows. They stand side by side, east and west, full of stalls, shops and food counters, with more trade going on outside.\n\nThey were the city's first great covered market. The first stone was laid in October eighteen ninety-nine, and they opened in nineteen hundred and two, on the site of an old army barracks. More than five hundred stalls sold food and household goods, and before the war these were the largest market buildings in Warsaw.\n\nThen the twentieth century arrived here very hard. In nineteen forty the ghetto wall was built right alongside. In August nineteen forty-four, in the first days of the Uprising, German troops seized the halls, and civilians from the neighbourhood were executed here. Both halls burned.\n\nThe afterlife is almost surreal. The east hall was patched up and used as a bus depot, and later it became a sports hall that hosted European boxing and world weightlifting championships. The west hall went back to being a market in nineteen sixty-two. In twenty eleven, when the west hall was restored, the bullet holes and damage on its walls were deliberately left in place.\n\nThat decision, I think, is the right one, and it's a very Warsaw one. In a city that rebuilt its old town to look untouched, here's a building that's allowed to keep its scars. You can buy your apples and still read the history off the wall.\n\nWalk the length of both halls outside, and look for the damage around the windows. Then go into the east hall: inside you'll find a small museum devoted to the boxing coach Feliks Stamm, a reminder of the years when these halls were full of shouting fans instead of shoppers."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.238837,
+      "centroidLongitude": 20.99737,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Market",
+        "Commerce",
+        "War",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "388f2294-3b9c-54a0-a4d6-70cf4c8c6322",
+      "createdAt": "2026-10-20",
+      "title": "Różycki Bazaar | Bazar Różyckiego",
+      "shortDescription": "For forty years, while the rest of the country ran on a planned economy, this market quietly ran on the free one. Everybody knew. Very few…",
+      "longDescription": "For forty years, while the rest of the country ran on a planned economy, this market quietly ran on the free one. Everybody knew. Very few complained.\n\nThe market is named after Julian Różycki, a pharmacist who bought this land in eighteen seventy-four. It opened officially in eighteen eighty-two. Here's the gift detail: around nineteen hundred and one, a kiosk was put up at the Targowa gate in the shape of a giant blue soda siphon, seven metres tall, selling the owner's soda water. It became the symbol of the place until it was removed in the nineteen-thirties.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bazar-rozyckiego_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bazar-rozyckiego_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bazar-rozyckiego_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ce9e650a-b428-5d3b-95fb-1f02eddb2044",
+          "order": 0,
+          "title": "Różycki Bazaar | Bazar Różyckiego",
+          "caption": "At the market’s gate on Targowa Street in Praga.",
+          "latitude": 52.252305,
+          "longitude": 21.040079,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-bazar-rozyckiego.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bazar-rozyckiego_hero.webp",
+          "transcriptText": "For forty years, while the rest of the country ran on a planned economy, this market quietly ran on the free one. Everybody knew. Very few complained.\n\nYou're in Praga, on the east bank of the Vistula, at the gate of Bazar Różyckiego on Targowa Street. In front of you are rows of stalls and newer green pavilions of corrugated metal. Behind you is Targowa, one of Praga's main streets, with its trams.\n\nThe market is named after Julian Różycki, a pharmacist who bought this land in eighteen seventy-four. It opened officially in eighteen eighty-two. Here's the gift detail: around nineteen hundred and one, a kiosk was put up at the Targowa gate in the shape of a giant blue soda siphon, seven metres tall, selling the owner's soda water. It became the symbol of the place until it was removed in the nineteen-thirties.\n\nThe war years here are complicated. Under the occupation, the market was where you could buy what the Germans rationed. It was also where weapons sold off by German soldiers were bought up for the Polish underground. Most of the traders before the war were Jewish, around three hundred families, and in nineteen forty they were driven out into the ghetto.\n\nAfter the war, the communist state nationalised the market in nineteen fifty, and yet private trading carried on. In a country of state shops, this was an island of the free market: clothes, deals, and, people said, a section where you might buy back what had been stolen from you. Its hot tripe soup and its pyzy, the round potato dumplings, were famous.\n\nToday it's in an odd, in-between state. Part of it belongs to the city, which has put up those green pavilions, and some of the new stalls sell vintage clothes and ceramics. Part has gone back to the founder's heirs. It may not look like much, but this is one of the most storied acres in Warsaw.\n\nFrom here, head to Ząbkowska Street on the market's north side and walk east for a few minutes. You'll reach the red-brick vodka factory of Koneser, another of Praga's survivors, now reborn."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.252305,
+      "centroidLongitude": 21.040079,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Market",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
+      "createdAt": "2026-10-20",
+      "title": "Palace of Culture and Science | Pałac Kultury i Nauki",
+      "shortDescription": "There's an old Warsaw joke that the best view of the city is from the top of the Palace of Culture, because it's the only place in Warsaw where…",
+      "longDescription": "There's an old Warsaw joke that the best view of the city is from the top of the Palace of Culture, because it's the only place in Warsaw where you can't see the Palace of Culture.\n\nIt was a gift from the Soviet Union, designed by the Soviet architect Lev Rudnev in the manner of Moscow's great Stalin-era towers. Construction began in May nineteen fifty-two and finished in July nineteen fifty-five. Thousands of Soviet workers built it alongside Polish ones, and sixteen died in accidents. It was originally named after Stalin. After his death, his name was removed, from the colonnade, the lobby and even a sculpture.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-palac-kultury-i-nauki_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-palac-kultury-i-nauki_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-palac-kultury-i-nauki_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-palac-kultury-i-nauki_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-palac-kultury-i-nauki_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b4e9fa6f-d08d-5fd9-9186-18ca02890170",
+          "order": 0,
+          "title": "Palace of Culture and Science | Pałac Kultury i Nauki",
+          "caption": "On Plac Defilad, in front of the Palace’s main steps on the Marszałkowska side.",
+          "latitude": 52.231766,
+          "longitude": 21.005798,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-palac-kultury-i-nauki.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-palac-kultury-i-nauki_hero.webp",
+          "transcriptText": "There's an old Warsaw joke that the best view of the city is from the top of the Palace of Culture, because it's the only place in Warsaw where you can't see the Palace of Culture.\n\nStand on the big open square in front of the main steps, with the traffic of Marszałkowska behind you, and tip your head back. In front of you, a stepped tower of pale stone, rising in tiers to a spire. On either side, long wings with colonnades, statues and turrets. It's hard to miss. That has always been the problem.\n\nIt was a gift from the Soviet Union, designed by the Soviet architect Lev Rudnev in the manner of Moscow's great Stalin-era towers. Construction began in May nineteen fifty-two and finished in July nineteen fifty-five. Thousands of Soviet workers built it alongside Polish ones, and sixteen died in accidents. It was originally named after Stalin. After his death, his name was removed, from the colonnade, the lobby and even a sculpture.\n\nNow look at the top edges of the wings and the tower: the decorative parapets. Here's the gift. To make the building look Polish, those parapets were modelled on the Renaissance houses of Kraków and Zamość. A Soviet skyscraper wearing a Polish crown.\n\nSo what do you do with a building like this? Love it or loathe it, Warsaw didn't knock it down. Instead the city filled it: theatres, cinemas, museums, a swimming pool, a congress hall seating three thousand, where the Rolling Stones played in nineteen sixty-seven as the first major Western rock band behind the Iron Curtain. In two thousand, giant clock faces were added to the tower. Over seventy years it has slowly been tamed. If you ask me, it's become Warsaw's most useful argument.\n\nThere are more than three thousand rooms inside. Take the lift to the terrace on the thirtieth floor, a hundred and fourteen metres up, and look out over the whole rebuilt city: the river, the old town, the glass towers springing up around this one. From up there, as the joke promised, you can't see the Palace at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.231766,
+      "centroidLongitude": 21.005798,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Power",
+        "Iconic Landmark",
+        "Viewpoint",
+        "Designed by a Master",
+        "Lev Rudnev"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
+      "createdAt": "2026-10-20",
+      "title": "Neon Museum | Muzeum Neonów",
+      "shortDescription": "After the war, Warsaw was a city of grey reconstruction. And then, at night, it lit up in pink, blue and green. You should be in the Palace of…",
+      "longDescription": "After the war, Warsaw was a city of grey reconstruction. And then, at night, it lit up in pink, blue and green.\n\nThe collection was started by two people: Ilona Karwińska and David Hill. From two thousand and five they set out to rescue the neon signs of communist-era Poland before they were all scrapped, and in twenty twelve they opened a museum in a former factory in Kamionek, across the river in Praga. In twenty twenty-five the museum moved here, into the very building that defined the post-war city. In a sense it's a homecoming: the founders held their first neon exhibition in this Palace almost twenty years ago.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-neonow_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-neonow_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-neonow_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c674e978-35a4-592f-816c-192111369dac",
+          "order": 0,
+          "title": "Neon Museum | Muzeum Neonów",
+          "caption": "Inside the Palace of Culture, on the fourth floor, up the side lifts from the cloakroom.",
+          "latitude": 52.231878,
+          "longitude": 21.006114,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-muzeum-neonow.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-neonow_hero.webp",
+          "transcriptText": "After the war, Warsaw was a city of grey reconstruction. And then, at night, it lit up in pink, blue and green.\n\nYou should be in the Palace of Culture, on the fourth floor, in the hall named after Maria Skłodowska-Curie. To get here, you take the side lifts from the cloakroom level. You'll know you've arrived when you're surrounded by glowing letters, glass tubes bent into words, animals and flowers, all humming softly in a dark room.\n\nThe collection was started by two people: Ilona Karwińska and David Hill. From two thousand and five they set out to rescue the neon signs of communist-era Poland before they were all scrapped, and in twenty twelve they opened a museum in a former factory in Kamionek, across the river in Praga. In twenty twenty-five the museum moved here, into the very building that defined the post-war city. In a sense it's a homecoming: the founders held their first neon exhibition in this Palace almost twenty years ago.\n\nNow, the signs. Find the names of cafés, cinemas and restaurants you'll never visit: the Szanghaj restaurant, the Berlin, the Syrenka. Look for the Cepelia sign, from the folk-art shop on Marszałkowska. And find the cow from the Bambino milk bar on Krucza Street, recreated here. A neon cow advertising a milk bar is about as cheerful as communist marketing got.\n\nHere's what I find touching about this place. Under communism there was very little to advertise and almost no competition. And yet the city was covered in these signs, designed by serious graphic artists, with real wit and real craft. They weren't selling anything, really. They were giving people a little bit of joy on the way home in the dark.\n\nWhen you leave, go back down and out onto the square at night. Look across Marszałkowska at the shop fronts and signs. After an hour in this room, I promise you'll never read a Warsaw shop sign in quite the same way again."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.231878,
+      "centroidLongitude": 21.006114,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
+      "createdAt": "2026-10-20",
+      "title": "Museum of Modern Art | Muzeum Sztuki Nowoczesnej",
+      "shortDescription": "Few buildings have a harder neighbour. This one was built right in front of Stalin's Palace, and it doesn't flinch. You're on Plac Defilad, the…",
+      "longDescription": "Few buildings have a harder neighbour. This one was built right in front of Stalin's Palace, and it doesn't flinch.\n\nIt was designed by the New York architect Thomas Phifer, whose practice won an international competition against eleven other firms. It's the first building his studio has completed in Europe. It opened to the public on the twenty-fifth of October, twenty twenty-four. The concrete was poured in place and left white, so the building reads almost as a single block cut from one piece.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-sztuki-nowoczesnej_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-sztuki-nowoczesnej_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-sztuki-nowoczesnej_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-sztuki-nowoczesnej_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "46ec7205-7595-5db4-ad1e-5dc7976acbda",
+          "order": 0,
+          "title": "Museum of Modern Art | Muzeum Sztuki Nowoczesnej",
+          "caption": "On Plac Defilad, between Marszałkowska and the Palace of Culture.",
+          "latitude": 52.233129,
+          "longitude": 21.008984,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-muzeum-sztuki-nowoczesnej.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-sztuki-nowoczesnej_hero.webp",
+          "transcriptText": "Few buildings have a harder neighbour. This one was built right in front of Stalin's Palace, and it doesn't flinch.\n\nYou're on Plac Defilad, the parade square, with the Palace of Culture rising behind you and a long, low, very white building in front of you. Smooth white concrete, crisp edges, very little ornament. That's the Museum of Modern Art in Warsaw, the city's newest major public building.\n\nIt was designed by the New York architect Thomas Phifer, whose practice won an international competition against eleven other firms. It's the first building his studio has completed in Europe. It opened to the public on the twenty-fifth of October, twenty twenty-four. The concrete was poured in place and left white, so the building reads almost as a single block cut from one piece.\n\nSome Varsovians weren't charmed. People compared it to a bunker. Phifer's answer was that a calm white backdrop lets the art do the talking. And from out here, you can see what else it does: it doesn't try to compete with the Palace's towers and turrets. It refuses to play that game altogether.\n\nNow go inside, because that's where the gift is. In the middle there's a great double staircase in white concrete, climbing through the building to a glazed ceiling, so daylight pours down through the whole space. Phifer meant it as a place for people to stop, meet and talk, not just a way upstairs. I think it's the best new room in Warsaw.\n\nAnd there's a second part still to come. The plan for this square includes a theatre for TR Warszawa, also by Phifer, to stand beside the museum. When it's done, this square will have been reclaimed from parade ground to cultural quarter.\n\nWhen you come out, stand back on the square and look from one building to the other. It's quite a conversation: nineteen fifty-five and twenty twenty-four, face to face across the square."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.233129,
+      "centroidLongitude": 21.008984,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Thomas Phifer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d7574936-364f-5015-ad5c-0202b5a26888",
+      "createdAt": "2026-10-20",
+      "title": "Zachęta National Gallery of Art | Zachęta — Narodowa Galeria Sztuki",
+      "shortDescription": "Look up at the word over the door. \"Artibus\". Latin, \"for the arts\". This building has had to fight for that word more than once. You're on Plac…",
+      "longDescription": "Look up at the word over the door. \"Artibus\". Latin, \"for the arts\". This building has had to fight for that word more than once.\n\nThe name means something like \"encouragement\". It comes from the Society for the Encouragement of Fine Arts, founded in Warsaw in eighteen sixty. The society held a competition for a building, won by the architect Stefan Szyller, and the front opened in December nineteen hundred. The allegorical figures around the portal are by the sculptor Zygmunt Otto.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zacheta_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zacheta_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zacheta_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zacheta_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zacheta_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "66162d12-c6f0-5837-8221-faf26aeda76f",
+          "order": 0,
+          "title": "Zachęta National Gallery of Art | Zachęta — Narodowa Galeria Sztuki",
+          "caption": "On Plac Małachowskiego, in front of the gallery’s columned portal.",
+          "latitude": 52.239241,
+          "longitude": 21.011491,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-zacheta.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zacheta_hero.webp",
+          "transcriptText": "Look up at the word over the door. \"Artibus\". Latin, \"for the arts\". This building has had to fight for that word more than once.\n\nYou're on Plac Małachowskiego, a small square just off the Royal Route, facing a pale neo-Renaissance building with columns, a grand portal and sculpted figures. This is Zachęta, the National Gallery of Art.\n\nThe name means something like \"encouragement\". It comes from the Society for the Encouragement of Fine Arts, founded in Warsaw in eighteen sixty. The society held a competition for a building, won by the architect Stefan Szyller, and the front opened in December nineteen hundred. The allegorical figures around the portal are by the sculptor Zygmunt Otto.\n\nNow here's the hardest fact about this building. On the sixteenth of December, nineteen twenty-two, the first President of the restored Polish Republic, Gabriel Narutowicz, came to this gallery. He was shot dead here by a painter called Eligiusz Niewiadomski. A painter, at an art gallery, murdering the head of state.\n\nDuring the occupation the Germans turned the building into a \"House of German Culture\" for their propaganda. The collection was scattered. Then it was badly damaged in the Uprising.\n\nAnd it's still a place where Poland argues with itself. In two thousand, an exhibition here included a sculpture by Maurizio Cattelan of Pope John Paul the Second struck down by a meteorite. A member of parliament came in and attacked it, and the scandal cost the gallery's director, Anda Rottenberg, her job. That's quite a lot of drama for one building. But it tells you that art in Warsaw has never been mere decoration. People feel it matters enough to fight over.\n\nGo in and see whatever's on. Zachęta shows contemporary art, and the shows are often sharp. Then, from the steps, walk a couple of minutes west into the Saxon Garden, the city's oldest public park, for a breather under the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.239241,
+      "centroidLongitude": 21.011491,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Beaux-Arts",
+        "Designed by a Master",
+        "Stefan Szyller"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2152f2e3-dba7-5d2b-ae02-c8ed35dd74fe",
+      "createdAt": "2026-10-20",
+      "title": "POLIN Museum of the History of Polish Jews | Muzeum Historii Żydów Polskich POLIN",
+      "shortDescription": "Polin. It's a Hebrew word, and it can be read two ways. It means \"Poland\". And, according to an old legend, it also means \"rest here\". You're in…",
+      "longDescription": "Polin. It's a Hebrew word, and it can be read two ways. It means \"Poland\". And, according to an old legend, it also means \"rest here\".\n\nThe legend goes like this. When Jews fleeing persecution first arrived in this country, they heard a voice, or saw a sign, saying \"Po lin\", \"rest here\". So they stayed. And for nearly a thousand years, Poland was home to one of the largest Jewish communities in the world.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-polin_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-polin_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-polin_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-polin_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-polin_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f9349565-488a-55e4-b612-9a79fcf3d72f",
+          "order": 0,
+          "title": "POLIN Museum of the History of Polish Jews | Muzeum Historii Żydów Polskich POLIN",
+          "caption": "On the square in Muranów, between the museum and the Monument to the Ghetto Heroes.",
+          "latitude": 52.249372,
+          "longitude": 20.993161,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-polin.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-polin_hero.webp",
+          "transcriptText": "Polin. It's a Hebrew word, and it can be read two ways. It means \"Poland\". And, according to an old legend, it also means \"rest here\".\n\nYou're in Muranów, standing on the open square between two things. Behind you, the monument to the heroes of the Warsaw Ghetto Uprising. In front of you, a pale, almost weightless box of glass fins and copper mesh. Look closely at the glass and you'll see the word POLIN printed into it, in both Latin and Hebrew letters.\n\nThe legend goes like this. When Jews fleeing persecution first arrived in this country, they heard a voice, or saw a sign, saying \"Po lin\", \"rest here\". So they stayed. And for nearly a thousand years, Poland was home to one of the largest Jewish communities in the world.\n\nThe building was designed by the Finnish architects Rainer Mahlamäki and Ilmari Lahdelma, who won the competition in two thousand and five. It opened in April twenty thirteen, and the main exhibition followed in October twenty fourteen. It was named European Museum of the Year in twenty sixteen.\n\nNow, this ground. Everything around you was the Warsaw Ghetto. The neighbourhood you're standing in was rebuilt after the war on top of its ruins. So the architects had a nearly impossible brief: a museum of a thousand years of life, on a site of death.\n\nTheir answer is inside. Go in, and the entrance hall splits the building in two with a towering, curving wall, like a gorge cut through rock. It stands for the rupture in the history of Polish Jews. Some see in it the parting of the Red Sea. And the museum's story isn't only about the end. It's about the thousand years before it.\n\nSpend time with the main exhibition if you can; it deserves hours. When you come out, walk slowly round the monument. Then turn back to the museum and find the word Polin in the glass, in Hebrew letters, catching the light."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.249372,
+      "centroidLongitude": 20.993161,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Remembrance",
+        "Faith",
+        "Contemporary",
+        "Designed by a Master",
+        "Lahdelma & Mahlamäki"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "726a0fba-a5fd-5771-9d83-677c11a89309",
+      "createdAt": "2026-10-20",
+      "title": "University of Warsaw Library | Biblioteka Uniwersytecka w Warszawie",
+      "shortDescription": "Most libraries hide their books. This one wears them on its front. You're on Dobra Street in Powiśle, in front of the University of Warsaw…",
+      "longDescription": "Most libraries hide their books. This one wears them on its front.\n\nThe building was designed by Marek Budzyński and Zbigniew Badowski, who won the competition in nineteen ninety-three. It opened to readers in December nineteen ninety-nine. Those panels are the gift. They carry text and notation in many scripts and languages: a passage of music by Karol Szymanowski, mathematical formulas, Sanskrit, Hebrew, Arabic, Greek, Old Russian, Old Polish. The architects called this the \"cultural\" façade. Above the main entrance, there's a bronze open book with two Latin words: \"Hinc omnia\". \"From here, everything.\"",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-buw_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-buw_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-buw_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-buw_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0761f323-49b3-5734-9663-26dc06960b03",
+          "order": 0,
+          "title": "University of Warsaw Library | Biblioteka Uniwersytecka w Warszawie",
+          "caption": "On Dobra Street, facing the library’s front of giant text panels.",
+          "latitude": 52.242643,
+          "longitude": 21.025068,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-buw.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-buw_hero.webp",
+          "transcriptText": "Most libraries hide their books. This one wears them on its front.\n\nYou're on Dobra Street in Powiśle, in front of the University of Warsaw Library. Look at the front. Between the entrances are eight huge panels, like the pages of an open book, covered in writing. That's where we'll start.\n\nThe building was designed by Marek Budzyński and Zbigniew Badowski, who won the competition in nineteen ninety-three. It opened to readers in December nineteen ninety-nine. Those panels are the gift. They carry text and notation in many scripts and languages: a passage of music by Karol Szymanowski, mathematical formulas, Sanskrit, Hebrew, Arabic, Greek, Old Russian, Old Polish. The architects called this the \"cultural\" façade. Above the main entrance, there's a bronze open book with two Latin words: \"Hinc omnia\". \"From here, everything.\"\n\nNow go inside. At the top of the stairs leading to the catalogue hall, four philosophers stand on tall columns: Kazimierz Twardowski, Jan Łukasiewicz, Alfred Tarski and Stanisław Leśniewski, giants of the Lwów–Warsaw school of logic. They're by the sculptor Adam Myjak.\n\nAnd now go up, because here's the real reason I've brought you. On the roof, there's a garden of more than a hectare, designed by the landscape architect Irena Bajerska, opened in two thousand and two. It's one of the largest roof gardens in Europe, and it's open to everyone. An upper garden and a lower one are linked by a stream that tumbles down between them. From the upper garden, look down through the glass skylights into the library halls, at people reading. Then look out across the river.\n\nI think this is the most generous building of its decade in Poland. It gives the city a garden it never had, on top of a building full of books.\n\nThe upper garden is open from April to October; the lower garden all year. From the upper garden, look east over the rooftops of Powiśle to the river. It's my favourite view in Warsaw."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.242643,
+      "centroidLongitude": 21.025068,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Architecture",
+        "Green Escape",
+        "Viewpoint",
+        "Contemporary",
+        "Designed by a Master",
+        "Marek Budzyński",
+        "Zbigniew Badowski",
+        "Irena Bajerska"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bd159290-2586-5fff-a2cf-fc993dde8084",
+      "createdAt": "2026-10-20",
+      "title": "Supreme Court | Sąd Najwyższy",
+      "shortDescription": "Read the columns. On this building, the law is literally written in stone, and you're invited to stand among it. You're on Plac Krasińskich, in…",
+      "longDescription": "Read the columns. On this building, the law is literally written in stone, and you're invited to stand among it.\n\nThe building was designed by Marek Budzyński and Zbigniew Badowski, the same pair behind the University Library, with a team of twenty-one architects. It was built between nineteen ninety-six and nineteen ninety-nine. There are seventy-six pillars in all, and the greenery on top was, the architects said, inspired by the cities of the Incas. Look at the tops of the columns, and you'll see the scales of justice worked into them.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-sad-najwyzszy_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-sad-najwyzszy_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e5a805b4-12e3-5979-8925-e3b734064c69",
+          "order": 0,
+          "title": "Supreme Court | Sąd Najwyższy",
+          "caption": "On Plac Krasińskich, among the green-topped pillars of the colonnade.",
+          "latitude": 52.249808,
+          "longitude": 21.00528,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-sad-najwyzszy.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-sad-najwyzszy_hero.webp",
+          "transcriptText": "Read the columns. On this building, the law is literally written in stone, and you're invited to stand among it.\n\nYou're on Plac Krasińskich, in front of Poland's Supreme Court. Ahead of you, a long colonnade of tall green pillars, and on top of the pillars, plants growing. Nearby stands the great bronze monument to the Warsaw Uprising.\n\nThe building was designed by Marek Budzyński and Zbigniew Badowski, the same pair behind the University Library, with a team of twenty-one architects. It was built between nineteen ninety-six and nineteen ninety-nine. There are seventy-six pillars in all, and the greenery on top was, the architects said, inspired by the cities of the Incas. Look at the tops of the columns, and you'll see the scales of justice worked into them.\n\nThe gift is the writing. Eighty-six legal maxims are carved on the pillars, in Latin and in Polish, chosen by a team of scholars of Roman law led by Professor Witold Wołodkiewicz. Many come from the Roman jurists and the great Roman law books of Justinian. Walk along and read a few. \"Nulla poena sine lege\": no punishment without law. \"Ius est ars boni et aequi\": law is the art of the good and the fair.\n\nAnd here's why this building matters so much. It went up in the nineteen-nineties, just after Poland came out of communism. A country that had lived for decades under a system where law bent to politics built its highest court out of the oldest principles of law it could find, and carved them into the street for everyone to read. That is a statement, and it's not a subtle one.\n\nNow look at the pillars nearest the Uprising monument. On those, you'll find the anchor symbol of Fighting Poland, the emblem of the wartime underground. Then go round to the back of the building and find the three figures holding it up: caryatids standing for Faith, Hope and Love."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.249808,
+      "centroidLongitude": 21.00528,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Architecture",
+        "Power",
+        "Contemporary",
+        "Designed by a Master",
+        "Marek Budzyński",
+        "Zbigniew Badowski"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "46ae1b3d-591c-513f-bb30-318a1333c60b",
+      "createdAt": "2026-10-20",
+      "title": "Church of the Ascension | Kościół Wniebowstąpienia Pańskiego",
+      "shortDescription": "This church was built by a parish in a brand-new housing estate, through the hardest decade of late communism, and it was almost a decade before…",
+      "longDescription": "This church was built by a parish in a brand-new housing estate, through the hardest decade of late communism, and it was almost a decade before the upper church could open its doors.\n\nIt was designed by Marek Budzyński and Zbigniew Badowski, with Piotr Wicha, between nineteen eighty and nineteen eighty-five. Budzyński was also one of the creators of the Ursynów estate itself, so he designed the neighbourhood and then its church. Building began in March nineteen eighty-two, in the months of martial law. The lower church opened, unfinished, at Christmas that year. The upper church opened, still raw, in May nineteen eighty-nine.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kosciol-wniebowstapienia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kosciol-wniebowstapienia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kosciol-wniebowstapienia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kosciol-wniebowstapienia_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f1b11e57-6939-5591-a1ef-4546b6597e8c",
+          "order": 0,
+          "title": "Church of the Ascension | Kościół Wniebowstąpienia Pańskiego",
+          "caption": "In the park on Ursynów’s main avenue, facing the brick front and great cross.",
+          "latitude": 52.157667,
+          "longitude": 21.030359,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-kosciol-wniebowstapienia.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-kosciol-wniebowstapienia_hero.webp",
+          "transcriptText": "This church was built by a parish in a brand-new housing estate, through the hardest decade of late communism, and it was almost a decade before the upper church could open its doors.\n\nYou're in Ursynów, in the south of the city, in the park in front of the church. In front of you, a low, broad church of unplastered brick and concrete, spreading wide rather than rising high, with a huge cross on its front. Around you, the tall blocks of the estate.\n\nIt was designed by Marek Budzyński and Zbigniew Badowski, with Piotr Wicha, between nineteen eighty and nineteen eighty-five. Budzyński was also one of the creators of the Ursynów estate itself, so he designed the neighbourhood and then its church. Building began in March nineteen eighty-two, in the months of martial law. The lower church opened, unfinished, at Christmas that year. The upper church opened, still raw, in May nineteen eighty-nine.\n\nNow look at the shapes, because this is the gift. The curves of the front remember the Baroque churches of small Polish towns. The buttresses along the sides remember Gothic. The bare brick is honest about what it's made of. In the middle of a modern concrete estate, the architects made something that feels as if it had always been here.\n\nAnd here's a lovely detail for film lovers. Krzysztof Kieślowski shot his great television series, The Decalogue, among the blocks of this estate, and this church appears in the very first episode. So this building is a small part of cinema history too.\n\nI'd say it's one of the best Polish buildings of the nineteen-eighties, and the culture press has called it one of the most interesting churches of that decade. In those years the Church was one of the few places where Poles could build something on their own terms, and this is what they built.\n\nWalk all the way round the outside and look at how the brick walls step and fold. Then come back by metro: the line along this avenue runs straight back into the city centre."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.157667,
+      "centroidLongitude": 21.030359,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Architecture",
+        "Designed by a Master",
+        "Marek Budzyński",
+        "Zbigniew Badowski",
+        "Piotr Wicha"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d9abcabd-77b9-5460-9ede-1341db822354",
+      "createdAt": "2026-10-20",
+      "title": "Królikarnia Palace | Pałac Królikarnia",
+      "shortDescription": "Królikarnia means \"the rabbit warren\". And yes, it's named after rabbits. A king kept them here. You're in Mokotów, standing in front of a neat…",
+      "longDescription": "Królikarnia means \"the rabbit warren\". And yes, it's named after rabbits. A king kept them here.\n\nFirst, the rabbits. In the early eighteenth century, the Saxon King of Poland, Augustus the Second, known as Augustus the Strong, used this hill as a royal rabbit warren. The name stuck long after the rabbits had gone.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-krolikarnia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-krolikarnia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-krolikarnia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2ba1e890-3c6c-56c3-9284-983dccb846a9",
+          "order": 0,
+          "title": "Królikarnia Palace | Pałac Królikarnia",
+          "caption": "On the terrace in front of the palace, above the sculpture park on the escarpment.",
+          "latitude": 52.189025,
+          "longitude": 21.02837,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-krolikarnia.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-krolikarnia_hero.webp",
+          "transcriptText": "Królikarnia means \"the rabbit warren\". And yes, it's named after rabbits. A king kept them here.\n\nYou're in Mokotów, standing in front of a neat white palace with a portico and a dome, perched on the edge of the escarpment. Below you, the park drops away down the slope, dotted with sculpture.\n\nFirst, the rabbits. In the early eighteenth century, the Saxon King of Poland, Augustus the Second, known as Augustus the Strong, used this hill as a royal rabbit warren. The name stuck long after the rabbits had gone.\n\nThe palace came later, in the seventeen-eighties. It was designed by Domenico Merlini, a royal architect, for the theatre impresario Carlo Thomatis, a chamberlain at the court of King Stanisław August. Here's the gift: Merlini modelled it on Palladio's Villa Rotonda, near Vicenza in Italy, one of the most copied buildings in the world. A little piece of Italy on a Polish hilltop.\n\nIn seventeen ninety-four, during his uprising against the Russians, Tadeusz Kościuszko stayed here. The palace burned in eighteen seventy-nine and was rebuilt, and then in nineteen forty-four, during the Warsaw Uprising, it was completely destroyed.\n\nIt was rebuilt in the nineteen-sixties for a single purpose: to house the work of the sculptor Xawery Dunikowski. Since nineteen sixty-five it has been a museum of sculpture, part of the National Museum in Warsaw. And I find that rather moving. A palace that kept being destroyed has been given over to sculpture, the most solid, most permanent of the arts.\n\nGo inside for Dunikowski's work and the temporary shows. Then walk down into the sculpture park, which is open every day. Follow the paths down the slope to the bottom, and turn round. The view back up to the white palace on the hill is the best one in the park."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.189025,
+      "centroidLongitude": 21.02837,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Neoclassical",
+        "Green Escape",
+        "Designed by a Master",
+        "Domenico Merlini"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ba203d48-fcab-5256-9ebd-889b8d221d77",
+      "createdAt": "2026-10-20",
+      "title": "Polish Vodka Museum | Muzeum Polskiej Wódki",
+      "shortDescription": "Wyborowa. Luksusowa. Żubrówka. If you know any Polish vodka at all, there's a good chance it was born in these buildings. You're on Plac…",
+      "longDescription": "Wyborowa. Luksusowa. Żubrówka. If you know any Polish vodka at all, there's a good chance it was born in these buildings.\n\nThis was the Koneser distillery. Its oldest buildings went up between eighteen ninety-five and eighteen ninety-seven, when this part of Poland was under Russian rule, and the site was split between a private spirits company and a state-owned spirits store. The style is neo-Gothic, all red brick and pointed windows, a factory dressed up as a castle.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-polskiej-wodki_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-polskiej-wodki_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-polskiej-wodki_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-polskiej-wodki_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-polskiej-wodki_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d8df2e5a-7e3d-5653-a825-9eb9d3489d47",
+          "order": 0,
+          "title": "Polish Vodka Museum | Muzeum Polskiej Wódki",
+          "caption": "On Plac Konesera, at the heart of the old Koneser distillery in Praga.",
+          "latitude": 52.255393,
+          "longitude": 21.045988,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-muzeum-polskiej-wodki.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-muzeum-polskiej-wodki_hero.webp",
+          "transcriptText": "Wyborowa. Luksusowa. Żubrówka. If you know any Polish vodka at all, there's a good chance it was born in these buildings.\n\nYou're on Plac Konesera, in Praga, on the east bank of the river. Around you are red-brick industrial buildings with narrow arched windows and Gothic-style details. In front of you, the building that now holds the Polish Vodka Museum.\n\nThis was the Koneser distillery. Its oldest buildings went up between eighteen ninety-five and eighteen ninety-seven, when this part of Poland was under Russian rule, and the site was split between a private spirits company and a state-owned spirits store. The style is neo-Gothic, all red brick and pointed windows, a factory dressed up as a castle.\n\nThe gift is in the names. In the nineteen-twenties, this factory was producing Wyborowa, Luksusowa and Żubrówka, the bison-grass vodka. Brands that are still on shelves around the world.\n\nThe factory survived the war, kept going under the communist state, and finally stopped production in two thousand and seven. Then it was redeveloped. Google opened a campus for start-ups here in twenty fifteen. The museum opened in June twenty eighteen, in the old rectification building, where the spirit was purified. The new main square opened that September.\n\nWhat interests me here is that Praga, the poorer side of the river, survived the war far better than the city centre. So while the left bank was rebuilt from scratch, this side still has its nineteenth-century factories and tenements. Koneser is what happens when one of them gets a second life: offices, flats, restaurants, a hotel, and a museum about the thing it used to make.\n\nGo in and take the tour. Then walk out onto Ząbkowska Street and wander west for a few minutes to the old Różycki market."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.255393,
+      "centroidLongitude": 21.045988,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Museum",
+        "Food",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ee5be70b-02db-5294-aef8-be93d4304251",
+      "createdAt": "2026-10-20",
+      "title": "Warsaw Fotoplastikon | Fotoplastikon Warszawski",
+      "shortDescription": "Before cinema, this was how you travelled the world without leaving your seat. Sit down, press your face to the eyepieces, and the photographs…",
+      "longDescription": "Before cinema, this was how you travelled the world without leaving your seat. Sit down, press your face to the eyepieces, and the photographs come to you.\n\nIt's a stereoscopic viewer. Inside, a wheel of three-dimensional photographs turns slowly past every viewer in turn, each one shown for about fifteen seconds before it clicks on to the next. Here's the gift: it's been at this address since October nineteen forty-six, and even then it was about fifty years old. Before that, it had worked in Lwów and in Kraków.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-fotoplastikon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-fotoplastikon_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-fotoplastikon_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-fotoplastikon_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "06a1fdac-008b-5197-bb73-b3e136fa299a",
+          "order": 0,
+          "title": "Warsaw Fotoplastikon | Fotoplastikon Warszawski",
+          "caption": "In the courtyard entrance at Aleje Jerozolimskie fifty-one.",
+          "latitude": 52.22859,
+          "longitude": 21.008643,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-fotoplastikon.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-fotoplastikon_hero.webp",
+          "transcriptText": "Before cinema, this was how you travelled the world without leaving your seat. Sit down, press your face to the eyepieces, and the photographs come to you.\n\nYou're on Aleje Jerozolimskie, at number fifty-one, a short walk from the Palace of Culture. Go through the entrance into the old Hoser tenement. Inside, in a dim room, is a large round wooden cabinet with pairs of eyepieces set around it, and seats. That's the fotoplastikon.\n\nIt's a stereoscopic viewer. Inside, a wheel of three-dimensional photographs turns slowly past every viewer in turn, each one shown for about fifteen seconds before it clicks on to the next. Here's the gift: it's been at this address since October nineteen forty-six, and even then it was about fifty years old. Before that, it had worked in Lwów and in Kraków.\n\nIt was built for twenty-five viewers, and twenty-four seats are used today. A full show is forty-eight images and takes twelve and a half minutes. A family called Krempa ran it after the war, then a man called Józef Chudy. It closed when he died in nineteen eighty, and his grandson reopened it in nineteen ninety-two. Since twenty twelve it has belonged to the Warsaw Rising Museum, and the collection now runs to more than ten thousand photographs.\n\nHere's why I'd send you here before almost anywhere else. Around a third of the pictures are of Warsaw, and among them is the city as it was before nineteen forty-four. Streets that no longer exist, in three dimensions. It's the closest thing to time travel the city can offer.\n\nTake a seat and look at whatever's playing; the shows change. When you come out, step back onto Aleje Jerozolimskie, look along the avenue, and try to imagine it as you've just seen it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.22859,
+      "centroidLongitude": 21.008643,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Museum",
+        "History",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
+      "createdAt": "2026-10-20",
+      "title": "Old Town Market Square | Rynek Starego Miasta",
+      "shortDescription": "Almost nothing you can see here is older than about seventy-five years. And it's on the World Heritage list precisely because of that. Stand in…",
+      "longDescription": "Almost nothing you can see here is older than about seventy-five years. And it's on the World Heritage list precisely because of that.\n\nIn the autumn of nineteen forty-four, after the Warsaw Uprising was crushed, the German army set about destroying the city deliberately, building by building. This square was blown up. When the war ended, the old town was a field of rubble.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rynek-starego-miasta_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rynek-starego-miasta_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rynek-starego-miasta_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rynek-starego-miasta_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rynek-starego-miasta_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "729fe629-5928-5869-ba76-65094c68d255",
+          "order": 0,
+          "title": "Old Town Market Square | Rynek Starego Miasta",
+          "caption": "In the middle of the square, beside the mermaid statue.",
+          "latitude": 52.249795,
+          "longitude": 21.011799,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-rynek-starego-miasta.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-rynek-starego-miasta_hero.webp",
+          "transcriptText": "Almost nothing you can see here is older than about seventy-five years. And it's on the World Heritage list precisely because of that.\n\nStand in the middle of the square, by the statue of the mermaid. Around you, four sides of tall, narrow, brightly painted houses, each one different. Turn slowly. Each side has a name, after an eighteenth-century parliamentarian: Dekert on the north, Barss on the east, Kołłątaj on the west, and Zakrzewski on the south.\n\nIn the autumn of nineteen forty-four, after the Warsaw Uprising was crushed, the German army set about destroying the city deliberately, building by building. This square was blown up. When the war ended, the old town was a field of rubble.\n\nAnd then the city did something extraordinary. Between nineteen forty-eight and nineteen fifty-three, it rebuilt this square to look as it had in the seventeenth century. Here's the gift. One of the key sources was a set of paintings by Bernardo Bellotto, an eighteenth-century Italian painter who painted Warsaw in minute detail. His views were used as references, and in some cases they were the only record of buildings that had vanished completely.\n\nThere's a twist, though, and I love it. Bellotto wasn't a camera. He took artistic liberties, tidying and improving as painters do. So the city that was rebuilt is partly his idealised Warsaw. Look around you: in a sense you're standing inside an eighteenth-century painting that was turned back into a city.\n\nThat's why UNESCO listed the historic centre in nineteen eighty. Not for its age, but as a near-total reconstruction, an act of collective memory on a heroic scale.\n\nThe mermaid has been the city's emblem for a very long time; Konstanty Hegel's statue of her dates back to eighteen fifty-five. Before you go, walk to the Royal Castle, a few minutes south, and find the Canaletto Room. That's where Bellotto's paintings hang today. Stand in front of them, and you'll see the blueprints for the square you've just left."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.249795,
+      "centroidLongitude": 21.011799,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "History",
+        "War",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bf2abda0-745b-577c-bc92-676f0dc0de92",
+      "createdAt": "2026-10-20",
+      "title": "Constitution Square | Plac Konstytucji",
+      "shortDescription": "This square was designed to make you feel the future had arrived, and that it was built of granite. You're on Plac Konstytucji, Constitution…",
+      "longDescription": "This square was designed to make you feel the future had arrived, and that it was built of granite.\n\nThis is the heart of the MDM, the Marszałkowska Housing District. It was built between nineteen fifty and nineteen fifty-two, by a team led by Józef Sigalin and Stanisław Jankowski, with Jan Knothe and Zygmunt Stępiński. The square was opened on the twenty-second of July, nineteen fifty-two, the same day the new communist constitution was adopted. Hence the name.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-plac-konstytucji_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-plac-konstytucji_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "32cfc095-487a-5d08-9609-c5572aa3d16c",
+          "order": 0,
+          "title": "Constitution Square | Plac Konstytucji",
+          "caption": "On Plac Konstytucji, beside one of the giant lamp standards.",
+          "latitude": 52.22169,
+          "longitude": 21.016461,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-plac-konstytucji.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-plac-konstytucji_hero.webp",
+          "transcriptText": "This square was designed to make you feel the future had arrived, and that it was built of granite.\n\nYou're on Plac Konstytucji, Constitution Square, beside one of three gigantic lamp standards, each with a cluster of lanterns. Around you, tall apartment blocks of heavy stone, with arcades at street level and sculpted figures of workers on their fronts. Marszałkowska runs straight through the middle.\n\nThis is the heart of the MDM, the Marszałkowska Housing District. It was built between nineteen fifty and nineteen fifty-two, by a team led by Józef Sigalin and Stanisław Jankowski, with Jan Knothe and Zygmunt Stępiński. The square was opened on the twenty-second of July, nineteen fifty-two, the same day the new communist constitution was adopted. Hence the name.\n\nLook up at the reliefs. There are dozens of them across the district: builders, workers, mothers and children, rendered in heroic stone. This was socialist realism, the official style of the moment. The MDM was launched under a slogan promising that \"the people will enter the city centre\". Ordinary workers would live on the grandest avenue in the capital.\n\nNow here's the gift. Those three huge lamp standards aren't just lamps. The planners realised that the view south from the square was lopsided and spoiled the symmetry. So they put up three giant candelabra to restore the balance. Pure stage scenery.\n\nIt's easy to sneer at all this. But stand here a while and you may find it's actually rather a good urban space: generous pavements, arcades for shelter, shops on the ground floor, people living above. What it got wrong was the politics. What it got right, quite often, was the city.\n\nWalk a couple of minutes to Koszykowa Street and look at the building at numbers thirty-four to fifty, with allegorical figures by the sculptor Józef Gosławski. Then look out for the Hotel MDM on the square. It was the first hotel to open in Warsaw after the war."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.22169,
+      "centroidLongitude": 21.016461,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "Power",
+        "Free to Visit",
+        "Designed by a Master",
+        "Józef Sigalin",
+        "Stanisław Jankowski",
+        "Zygmunt Stępiński"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
+      "createdAt": "2026-10-20",
+      "title": "Za Żelazną Bramą Estate | Osiedle Za Żelazną Bramą",
+      "shortDescription": "Nineteen enormous blocks, sixteen storeys each, and more than twenty-five thousand people. This is what a socialist city centre was supposed to…",
+      "longDescription": "Nineteen enormous blocks, sixteen storeys each, and more than twenty-five thousand people. This is what a socialist city centre was supposed to look like.\n\nThe name comes from the old Iron Gate that once led into the Saxon Garden, nearby. The design came out of a competition in nineteen sixty-one, won by a group of graduates of the Warsaw University of Technology's Faculty of Architecture, among them Jerzy Czyż, Jan Furman and Andrzej Skopiński. It was built between nineteen sixty-five and nineteen seventy-two.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-za-zelazna-brama_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-za-zelazna-brama_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3fa6889b-9736-5dc2-9846-54c3a052e93f",
+          "order": 0,
+          "title": "Za Żelazną Bramą Estate | Osiedle Za Żelazną Bramą",
+          "caption": "Among the sixteen-storey slabs, north-west of the Palace of Culture.",
+          "latitude": 52.238118,
+          "longitude": 20.999971,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-za-zelazna-brama.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-za-zelazna-brama_hero.webp",
+          "transcriptText": "Nineteen enormous blocks, sixteen storeys each, and more than twenty-five thousand people. This is what a socialist city centre was supposed to look like.\n\nYou're in the estate called Za Żelazną Bramą, \"Behind the Iron Gate\", just north-west of the Palace of Culture. Around you are long, flat-fronted apartment blocks, each a huge horizontal slab, set in rows with green space between them. Look between two of them and you'll probably catch the spire of the Palace in the gap.\n\nThe name comes from the old Iron Gate that once led into the Saxon Garden, nearby. The design came out of a competition in nineteen sixty-one, won by a group of graduates of the Warsaw University of Technology's Faculty of Architecture, among them Jerzy Czyż, Jan Furman and Andrzej Skopiński. It was built between nineteen sixty-five and nineteen seventy-two.\n\nHere's the gift, and it surprises even Varsovians. Almost everyone assumes these are prefabricated panel blocks, the classic communist kind. They're not. They were cast in place, poured in concrete into formwork on site. Solid, monolithic buildings.\n\nAnd another surprise. The architects' original competition design had eleven-storey blocks. The authorities pushed for taller ones, to squeeze in more people. The planners expected around eighteen thousand residents. More than twenty-five thousand live here.\n\nSo what do you make of it? For many visitors this is the bleak image of the East. But walk through on a summer afternoon and you'll see trees, playgrounds, and people living ordinary lives in flats that are a few minutes' walk from the very centre of a capital city. That's something plenty of Western cities never managed for their working families. The blocks are hard on the eye. The idea behind them was not so foolish.\n\nWalk south-east through the estate towards the Palace, then look back. The rhythm of the slabs from a distance is the essential Warsaw view: modernist utopia in the foreground, Stalin's palace behind."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.238118,
+      "centroidLongitude": 20.999971,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Modernist",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a0aa6ff3-fc2f-5d6c-83be-b6575ed0c866",
+      "createdAt": "2026-10-20",
+      "title": "Katowicka Street, Saska Kępa | Ulica Katowicka",
+      "shortDescription": "Most of central Warsaw had to be rebuilt after the war. This quiet street on the far bank still has its interwar houses, and that makes it a…",
+      "longDescription": "Most of central Warsaw had to be rebuilt after the war. This quiet street on the far bank still has its interwar houses, and that makes it a time capsule of the city's most hopeful years.\n\nThis street is a small catalogue of Polish interwar modernism. Thirteen of its buildings are on the heritage register. The one in front of you is by Bohdan Lachert and Józef Szanajca, built in nineteen twenty-eight and twenty-nine. It's a house for three families, and Lachert's own father paid for it.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-ulica-katowicka_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-ulica-katowicka_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-ulica-katowicka_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-ulica-katowicka_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-ulica-katowicka_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-ulica-katowicka_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b094359e-c2b2-54cb-b4b4-4ce702085179",
+          "order": 0,
+          "title": "Katowicka Street, Saska Kępa | Ulica Katowicka",
+          "caption": "On Katowicka Street, outside numbers nine to eleven, facing the white villa.",
+          "latitude": 52.231889,
+          "longitude": 21.052497,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-ulica-katowicka.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-ulica-katowicka_hero.webp",
+          "transcriptText": "Most of central Warsaw had to be rebuilt after the war. This quiet street on the far bank still has its interwar houses, and that makes it a time capsule of the city's most hopeful years.\n\nYou're in Saska Kępa, a leafy district of villas on the east bank of the Vistula, on Katowicka Street. In front of you, at numbers nine to eleven, a crisp, plain-walled building with long horizontal windows. Look along the street and you'll see more: flat roofs, plain walls, clean geometry, set in gardens.\n\nThis street is a small catalogue of Polish interwar modernism. Thirteen of its buildings are on the heritage register. The one in front of you is by Bohdan Lachert and Józef Szanajca, built in nineteen twenty-eight and twenty-nine. It's a house for three families, and Lachert's own father paid for it.\n\nHere's the gift. The house follows Le Corbusier's famous five points of modern architecture: walls freed from the structure, open plans, long ribbon windows. And one Polish architecture writer put it beautifully: from the front it looks like a fortress, and from the back it opens up completely to the garden.\n\nWalk on, and the names multiply. There's a villa by Szymon and Helena Syrkus, at number twenty-six, two of the most important figures of the Polish avant-garde. There are houses by Stanisław Barylski, Henryk Oderfeld and Marian Lalewicz, and a row of houses from nineteen twenty-six by Włodzimierz Gall. Several of the architects were linked to Praesens, the radical modernist group of the period.\n\nWhat strikes me, every time, is the optimism. These architects were building for a new country, independent for the first time in over a century, and they believed design could change how people lived. Within twenty years the war would take almost everything. But not this street.\n\nWalk the whole length of Katowicka, slowly, and look over the fences. Then wander the neighbouring streets of Saska Kępa: the quarter is full of cafés, and many more villas of the same era."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.231889,
+      "centroidLongitude": 21.052497,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Modernist",
+        "Hidden Gem",
+        "Free to Visit",
+        "Designed by a Master",
+        "Bohdan Lachert",
+        "Józef Szanajca"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1a1ff96a-6c7d-5424-839b-b8b2f04cb2e6",
+      "createdAt": "2026-10-20",
+      "title": "Vistula Boulevards | Bulwary Wiślane",
+      "shortDescription": "For decades, Warsaw had a beautiful river and turned its back on it. Then, about ten years ago, it turned round. You're on the Vistula…",
+      "longDescription": "For decades, Warsaw had a beautiful river and turned its back on it. Then, about ten years ago, it turned round.\n\nThat contrast is the gift. For a river running through a capital city, the Vistula has been left remarkably wild, and here the east bank was largely left to nature. So you sit on a city promenade, and look at what is practically a wilderness.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bulwary-wislane_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bulwary-wislane_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bulwary-wislane_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e3dd8007-3a85-5778-9620-7bf8c85fe556",
+          "order": 0,
+          "title": "Vistula Boulevards | Bulwary Wiślane",
+          "caption": "On the left-bank riverside promenade, on the wide steps down to the water.",
+          "latitude": 52.230966,
+          "longitude": 21.042417,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-bulwary-wislane.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-bulwary-wislane_hero.webp",
+          "transcriptText": "For decades, Warsaw had a beautiful river and turned its back on it. Then, about ten years ago, it turned round.\n\nYou're on the Vistula boulevards, the long riverside promenade on the city side of the river. Find a place on the wide steps that lead down towards the water, and look across. On the far bank, almost no city at all: trees, sandbanks, wild-looking beaches. Behind you, the busy embankment road and the city rising up the escarpment.\n\nThat contrast is the gift. For a river running through a capital city, the Vistula has been left remarkably wild, and here the east bank was largely left to nature. So you sit on a city promenade, and look at what is practically a wilderness.\n\nFor a long time, this side was no fun at all. In the nineteen-seventies the riverbank was given concrete boulevards, but a busy road cut them off from the city, and few people came. Then the boulevards were rebuilt in stages, to a design by the landscape architects RS Architektura Krajobrazu. The sections opened one after another: a first stretch in twenty fifteen, more in the summer of twenty seventeen, and a section near the mermaid in twenty nineteen.\n\nLook down the steps before you go. Some of the old nineteen-seventies concrete steps survived the rebuild, and on them you can still find inscriptions scratched or painted in the communist years, some of them distinctly anti-communist. A little piece of the city's argument with itself, right at the water's edge.\n\nWhat changed here wasn't just paving. A city that had spent its post-war years facing inward, towards its avenues and its monuments, discovered it had a river. On a summer evening, these steps are full: people sitting with drinks, cyclists, music, the sun dropping behind the city.\n\nWalk north along the river towards the Copernicus Science Centre, and look for the boulevard sections named after the Vistula Flotilla, General Patton and Jan Karski. Stay until sunset if you can, when the light comes down across the city behind you onto the far bank."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.230966,
+      "centroidLongitude": 21.042417,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Green Escape",
+        "Free to Visit",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "762c63b0-84e1-5636-87a9-a5d8ab11157c",
+      "createdAt": "2026-10-20",
+      "title": "Złota 44",
+      "shortDescription": "The architect of this tower was born in Poland, the son of Holocaust survivors. He left as a child, and came back half a century later to put…",
+      "longDescription": "The architect of this tower was born in Poland, the son of Holocaust survivors. He left as a child, and came back half a century later to put one of the tallest towers in the city right next to Stalin's Palace.\n\nIt was designed by Daniel Libeskind, born in Łódź in nineteen forty-six. His family left Poland when he was a boy, and he went on to design the Jewish Museum in Berlin and the master plan for the World Trade Center site in New York. This tower is a hundred and ninety-two metres tall, with fifty-two storeys of flats.",
+      "makerId": "cc43781a-ce30-5191-9658-75ade6fdb56e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zlota-44_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zlota-44_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6c7db7a4-3476-52df-a4f6-afea19838c5a",
+          "order": 0,
+          "title": "Złota 44",
+          "caption": "Across Emilii Plater Street from the Palace of Culture, below the curving glass tower.",
+          "latitude": 52.231214,
+          "longitude": 21.002445,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waw-zlota-44.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 75,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waw-zlota-44_hero.webp",
+          "transcriptText": "The architect of this tower was born in Poland, the son of Holocaust survivors. He left as a child, and came back half a century later to put one of the tallest towers in the city right next to Stalin's Palace.\n\nStand on the western side of the Palace of Culture and look across the road. You'll see a tower of glass and steel with a long, curving edge that sweeps up one side like a blade, or a sail. That's Złota 44, named after its address on Złota Street, Golden Street.\n\nIt was designed by Daniel Libeskind, born in Łódź in nineteen forty-six. His family left Poland when he was a boy, and he went on to design the Jewish Museum in Berlin and the master plan for the World Trade Center site in New York. This tower is a hundred and ninety-two metres tall, with fifty-two storeys of flats.\n\nHere's the gift. Libeskind said the shape was inspired by an eagle's wing, a symbol of change and freedom, and of Poland itself, whose emblem is a white eagle. Varsovians, characteristically, call it Żagiel, \"the sail\".\n\nThe tower had a rough birth. Work began in two thousand and seven, then stalled in two thousand and nine, and the half-built skeleton stood here for well over a year like a broken promise. It was finally finished in the middle of the next decade. Inside, there's a twenty-five-metre swimming pool and a wine cellar for ten thousand bottles.\n\nHere's why I wanted you to see it from right here. Turn round and look at the Palace. Then back at Złota 44. In one glance, you have the two big stories of this city in the twentieth century and after: the tower that was imposed on Warsaw from Moscow, and the tower of a city that chose to join the global market. Neither of them is modest. Both are, in their way, about who gets to shape the skyline.\n\nFrom here, cross over to Złota Street itself for a closer look at the base of the tower, or head back into the Palace for the Neon Museum on the fourth floor."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.231214,
+      "centroidLongitude": 21.002445,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Daniel Libeskind"
       ],
       "priceUSD": 0
     }
