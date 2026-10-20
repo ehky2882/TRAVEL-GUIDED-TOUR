@@ -227,6 +227,7 @@ enum Tag {
             "Cheshire Architects", "Stevens Lawson Architects",
             "Charles and Ray Eames", "Walter Gropius", "Eliot Noyes", "Eileen Gray", "Takamitsu Azuma", "Fritz Höger",
             "Karl Henrik Nøstvik", "David Mutiso", "Richard Hughes",
+            "Enrico Marconi", "Władysław Marconi", "Juliusz Dzierżanowski", "JEMS Architekci", "Zygmunt Stępiński", "Lev Rudnev", "Thomas Phifer", "Stefan Szyller", "Lahdelma & Mahlamäki", "Marek Budzyński", "Zbigniew Badowski", "Irena Bajerska", "Piotr Wicha", "Domenico Merlini", "Józef Sigalin", "Stanisław Jankowski", "Bohdan Lachert", "Józef Szanajca",
         ]),
     ]
 
