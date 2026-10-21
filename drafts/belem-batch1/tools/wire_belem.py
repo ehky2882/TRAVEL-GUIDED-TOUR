@@ -60,6 +60,10 @@ META = {
            ['Notable Building', 'Architecture', 'History', 'Waterfront', 'Maritime']),
 }
 
+# Held by the contributor on 2026-10-21 pending the location question (script says Vila Container on
+# Av. Gov. Magalhães Barata; the Google Maps pin is on the waterfront). Its audio and photos are on gh-pages.
+HOLD = {'03'}
+
 # Both from Google Maps pins the contributor supplied on 2026-10-21, replacing the folder-name points.
 COORD_OVERRIDE = {'03': ('-1.4463218155965005', '-48.498597975460996'),
                   '09': ('-1.4572820020680872', '-48.487694251577324')}
@@ -92,7 +96,7 @@ os.makedirs(f'{OUT}/audio', exist_ok=True)
 os.makedirs(f'{OUT}/images', exist_ok=True)
 os.makedirs(D + 'scripts', exist_ok=True)
 new, tsv = [], []
-for n in sorted(META):
+for n in sorted(set(META) - HOLD):
     slug, title, r, cat, caption, tags = META[n]
     src, script, la, lo = folders[n]
     la, lo = COORD_OVERRIDE.get(n, (la, lo))

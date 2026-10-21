@@ -1,14 +1,14 @@
-# HANDOFF 2026-10-21: Belém launches (Atlas Studio BEL 🇧🇷, 11 singles)
+# HANDOFF 2026-10-21: Belém launches (Atlas Studio BEL 🇧🇷, 10 singles, Muamba held)
 
-**What shipped:** a new studio, **Atlas Studio BEL**, the 50th, with 11 single-stop audio tours of Belém (Pará,
+**What shipped:** a new studio, **Atlas Studio BEL**, the 50th, with 10 single-stop audio tours of Belém (Pará,
 Brazil) and no walks.
 - **Maker:** platform `dozent`, handle `atlas.bel`, uuid5 `atlas-maker:bel` = `bd867715-70c6-5d98-b4da-2bdcb9db4905`.
 - **Ids:** `atlas-tour:bel:<slug>`, stops `atlas-stop:bel:<slug>:1`; every slug starts `bel-`.
-- **Catalogue:** tours 2120 → 2131, makers 709 → 710, stops 2579 → 2590, cities 994 → 995 (Belém is new; the
+- **Catalogue:** tours 2120 → 2130, makers 709 → 710, stops 2579 → 2589, cities 994 → 995 (Belém is new; the
   catalogue had nothing there). Countries and places did not move.
 
 **Source:** a Dropbox drop from arthur.yung (the contributor), 11 folders. Triage went to the contributor first and
-they approved all 11, supplied two corrected coordinates, confirmed the photos are fine to use, and chose to add
+they approved all 11, supplied two corrected coordinates, then **held Muamba** pending its location question (below), confirmed the photos are fine to use, and chose to add
 Museu das Amazônias despite the dating issue below.
 - **Audio:** 112–121 s each. Not transcribed against the scripts.
 - **Photos:** 41, no byte duplicates, all 1200×900 WebP. Theatro da Paz has two. No licence recorded per image.
@@ -29,7 +29,8 @@ Marechal Hermes along the waterfront warehouses. Bias: too few point-like matche
   waterfront by Estação das Docas. But the **script** places the bar in Vila Container on Av. Governador Magalhães
   Barata (number 62, per Exame and the MinC guide), ~2.2 km east near the Basílica, and its sign-off walks the
   listener to the Basílica "just a short walk away". Either the bar has moved to the waterfront and the narration's
-  directions are out of date, or the pin is wrong. On Edward's board.
+  directions are out of date, or the pin is wrong. **Held out of the catalogue** on the contributor's instruction;
+  its audio and photos are already on gh-pages, so releasing it is a catalogue edit only. On Edward's board.
 - **Ver-o-Pesinho:** moved to the contributor's Google Maps pin (-1.45728, -48.48769). Listings give Tv. Benjamin
   Constant 1793; the folder's point was a block over on Tv. Rui Barbosa.
 
@@ -45,7 +46,7 @@ restoration architect.
 
 **Places:** none. `check-place-candidates` and `join-places --max-move 100` list nothing in Belém.
 
-**gh-pages:** `21c11f9b`, one commit adding 52 files (11 audio, 41 images), built with plumbing. Diff was 52 A only.
+**gh-pages:** `21c11f9b`, one commit adding 52 files (11 audio, 41 images, Muamba's included), built with plumbing. Diff was 52 A only.
 
-**Checks:** `validate-tours-mirror` 0 errors, no warnings on the new tours · filenames align (41) ·
+**Checks:** `validate-tours-mirror` 0 errors, no warnings on the new tours · filenames align (41, before Muamba was held) ·
 `spine-lookup` 11 answered, 0 failed.

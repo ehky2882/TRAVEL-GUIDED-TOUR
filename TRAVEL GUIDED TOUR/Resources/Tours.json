@@ -133318,52 +133318,6 @@
       "priceUSD": 0
     },
     {
-      "id": "86f27e14-4420-5bec-98c0-b5b635bdd950",
-      "createdAt": "2026-10-21",
-      "title": "Muamba Bar e Coquetéis",
-      "shortDescription": "There's a curious thing about the name of this bar: in Brazilian slang, muamba means contraband, the sort of goods that come in under the…",
-      "longDescription": "There's a curious thing about the name of this bar: in Brazilian slang, muamba means contraband, the sort of goods that come in under the counter, and that tells you something about the attitude before you've ordered.\n\nLean in close to those tiles first, because cocktail recipes are written straight onto them, so the wall works as decoration, menu and cheat sheet all at once. The bar was opened in 2019 by bartender Yvens Penna, who was born in Belém, together with Iuri Fernandes and Bruno Ayres, and the idea from the start was cocktails without pretension.",
-      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-muamba_hero.webp",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-muamba_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-muamba_3.webp"
-      ],
-      "kind": "single",
-      "stops": [
-        {
-          "id": "2465351d-cc6b-5f49-aa87-68a9227d2192",
-          "order": 0,
-          "title": "Muamba Bar e Coquetéis",
-          "caption": "At the small container bar with white tiled walls, where the recipes are written on the tiles.",
-          "latitude": -1.4463218155965005,
-          "longitude": -48.498597975460996,
-          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-muamba.mp3",
-          "audioDurationSeconds": 114,
-          "triggerMode": "geofenced",
-          "triggerRadiusMeters": 40,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-muamba_hero.webp",
-          "transcriptText": "There's a curious thing about the name of this bar: in Brazilian slang, muamba means contraband, the sort of goods that come in under the counter, and that tells you something about the attitude before you've ordered.\n\nClimb to the upper level of Vila Container, the cluster of converted shipping containers on Avenida Governador Magalhães Barata, and look for a small bar with wooden chairs, an open-air seating area and walls covered in white tiles. That's Muamba, which squeezes around thirty-five people into one container and the space in front of it.\n\nLean in close to those tiles first, because cocktail recipes are written straight onto them, so the wall works as decoration, menu and cheat sheet all at once. The bar was opened in 2019 by bartender Yvens Penna, who was born in Belém, together with Iuri Fernandes and Bruno Ayres, and the idea from the start was cocktails without pretension.\n\nThe drink people tend to mention is the urucum pisco sour, where the Andean classic gets a dose of urucum, the red seed that has coloured food across the Amazon for generations, and is finished with a guava foam. The other is anything built on jambu gin, because jambu is the herb that makes your mouth tingle and go faintly numb; one visitor described a jambu drink here as tasting like a cold, boozy tacacá, the hot shrimp soup sold on Belém's street corners.\n\nIf you ask me, the clever part is how little fuss is made of all this. A classic cocktail is really just a structure, and once the lime becomes local citrus and the gin is infused with jambu, the drink stops being an import and starts sounding like it was born here.\n\nOrder a Caboclinha, the house's tangerine-and-lime take on a caipirinha, and if you fancy it, take it down in a plastic cup and wander the other containers before the Basílica de Nazaré, just a short walk away, draws you on."
-        }
-      ],
-      "introAudioURL": null,
-      "totalDurationSeconds": 114,
-      "walkingDistanceMeters": null,
-      "centroidLatitude": -1.4463218155965005,
-      "centroidLongitude": -48.498597975460996,
-      "city": "Belém",
-      "country": "Brazil",
-      "relatedTourIds": [],
-      "primaryCategory": "foodAndDrink",
-      "tags": [
-        "Venue",
-        "Food",
-        "After Dark",
-        "Hidden Gem"
-      ],
-      "priceUSD": 0
-    },
-    {
       "id": "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
       "createdAt": "2026-10-21",
       "title": "Museum of the Amazons | Museu das Amazônias",
