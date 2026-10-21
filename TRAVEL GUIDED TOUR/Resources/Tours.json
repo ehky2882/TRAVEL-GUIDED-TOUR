@@ -19208,10 +19208,10 @@
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "73c6f127-c1c7-49af-abd2-f889b57dc214",
         "58B564E6-267F-5F53-806F-1B25FA318976",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
         "e25e5718-6f18-4f7c-8d5a-174662f1a953",
-        "2DDA0046-686D-440B-8EEF-1E40E399CC34",
-        "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
-        "cde97f1e-4c16-5ab7-8fe4-1988a8aa1815"
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "2DDA0046-686D-440B-8EEF-1E40E399CC34"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -73107,9 +73107,9 @@
         "8941e2d3-583e-553c-8625-817f7e2ac985",
         "7f1c44dc-ad8b-53c6-9e9b-c4281fcf3ffd",
         "6339e837-a7b5-56f9-8dbf-c19710f25473",
+        "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8",
         "4dcf4a84-0066-5267-87ae-c315600d8cf2",
-        "15674F4E-057C-5D7F-8C54-3F33D15F1803",
-        "9f48ffaf-5128-5c14-b945-630978f6e185"
+        "15674F4E-057C-5D7F-8C54-3F33D15F1803"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -83658,9 +83658,9 @@
         "1acbaeeb-ba40-5c80-88a2-a7e51c060d10",
         "346e343c-a9fd-5542-99db-126e36904781",
         "bb251a04-d582-5fd6-ac92-69bc27f5a38d",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
         "7d2995aa-48bf-51c7-8cf3-5cbcf12f90e1",
-        "62ce120d-8f20-514c-b657-fcf679eab005",
-        "f4be2f7b-5cec-58c6-9399-706015043da0"
+        "62ce120d-8f20-514c-b657-fcf679eab005"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -133254,7 +133254,16 @@
       "centroidLongitude": -48.50562306256552,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "a666b6a5-2e0d-557f-8d41-4f55f7fc2903",
+        "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -133303,7 +133312,16 @@
       "centroidLongitude": -48.49932423558195,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "a666b6a5-2e0d-557f-8d41-4f55f7fc2903",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "EB123E68-A754-458A-9D1C-F9920DC1D18B"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Waterfront",
@@ -133355,7 +133373,16 @@
       "centroidLongitude": -48.498433704893365,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "346e343c-a9fd-5542-99db-126e36904781",
+        "62ce120d-8f20-514c-b657-fcf679eab005"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -133404,7 +133431,16 @@
       "centroidLongitude": -48.49084441569248,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "c3ddaab3-461e-5665-81cb-428132e60f9a",
+        "1ff51015-6af1-544e-91f5-bbd975bbfa28",
+        "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
+        "6D37E1F5-0083-5F5C-9364-EE17AC1C5CCB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -133454,7 +133490,16 @@
       "centroidLongitude": -48.48997516441803,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
+        "E0D5B392-7C18-4A6F-9B24-1F8360C5A7D4",
+        "364fbc84-62fe-590d-acbe-71fa035d5b87",
+        "ab59f8da-db2a-5a73-bfad-80fef03f70ce",
+        "3f61c7f1-bc43-5646-98ae-0aef4db75a06",
+        "03D221D8-BC4A-4F95-806F-CF9094C28EA7"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -133503,7 +133548,16 @@
       "centroidLongitude": -48.48292392023766,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "081392A5-7C74-58DD-B5AE-47E5C0AD33F5",
+        "07040EB2-EA63-5341-8DC0-AACF247F68C3",
+        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38",
+        "D44C7F68-5DC4-56B7-AA68-50EB6600AFEB",
+        "350527D0-AA44-565B-914A-E20161C470A0",
+        "f28be4e3-70d2-53ab-a5ff-add7796ff088"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -133548,7 +133602,16 @@
       "centroidLongitude": -48.49370682764774,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "c4c7d771-94ff-5abc-94e7-0e4f6fe09924",
+        "8efa1abc-1274-475f-89ee-c506bb72f1ea",
+        "62ce120d-8f20-514c-b657-fcf679eab005",
+        "9f3aa784-002e-5e43-bad3-c68e2a88b022",
+        "dfeb21ed-ac84-5819-a177-24b08786691f"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -133598,7 +133661,16 @@
       "centroidLongitude": -48.487694251577324,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -133646,7 +133718,16 @@
       "centroidLongitude": -48.50368116256551,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
+        "0aa26daf-e710-4eea-b08c-160ff35a71ee"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -133697,7 +133778,16 @@
       "centroidLongitude": -48.49612230429719,
       "city": "Belém",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "fa6c4699-ef21-4eb2-879c-d51b03bf830d",
+        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
