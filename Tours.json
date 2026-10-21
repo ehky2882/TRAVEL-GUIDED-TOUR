@@ -5611,6 +5611,16 @@
       "websiteURL": null
     },
     {
+      "id": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "displayName": "Atlas Studio BEL",
+      "platform": "dozent",
+      "handle": "atlas.bel",
+      "avatarURL": null,
+      "avatarEmoji": "🇧🇷",
+      "bio": "Atlas Studio's Belém bureau — the city at the mouth of the Amazon, where rubber money built an opera house and iron markets, the old port has been handed back to the river, and the kitchens and bars cook with jambu, açaí and fish from upstream.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -19198,10 +19208,10 @@
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "73c6f127-c1c7-49af-abd2-f889b57dc214",
         "58B564E6-267F-5F53-806F-1B25FA318976",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
         "e25e5718-6f18-4f7c-8d5a-174662f1a953",
-        "2DDA0046-686D-440B-8EEF-1E40E399CC34",
-        "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
-        "cde97f1e-4c16-5ab7-8fe4-1988a8aa1815"
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "2DDA0046-686D-440B-8EEF-1E40E399CC34"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -73097,9 +73107,9 @@
         "8941e2d3-583e-553c-8625-817f7e2ac985",
         "7f1c44dc-ad8b-53c6-9e9b-c4281fcf3ffd",
         "6339e837-a7b5-56f9-8dbf-c19710f25473",
+        "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8",
         "4dcf4a84-0066-5267-87ae-c315600d8cf2",
-        "15674F4E-057C-5D7F-8C54-3F33D15F1803",
-        "9f48ffaf-5128-5c14-b945-630978f6e185"
+        "15674F4E-057C-5D7F-8C54-3F33D15F1803"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -83648,9 +83658,9 @@
         "1acbaeeb-ba40-5c80-88a2-a7e51c060d10",
         "346e343c-a9fd-5542-99db-126e36904781",
         "bb251a04-d582-5fd6-ac92-69bc27f5a38d",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
         "7d2995aa-48bf-51c7-8cf3-5cbcf12f90e1",
-        "62ce120d-8f20-514c-b657-fcf679eab005",
-        "f4be2f7b-5cec-58c6-9399-706015043da0"
+        "62ce120d-8f20-514c-b657-fcf679eab005"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -133204,6 +133214,587 @@
         "Food",
         "Commerce",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c014912d-5637-5290-a4cd-0628bd6058d7",
+      "createdAt": "2026-10-21",
+      "title": "Casa do Saulo das Onze Janelas",
+      "shortDescription": "Late in the afternoon, the sun drops low over Guajará Bay and turns the water the colour of strong tea, which is a fine reason to book a late…",
+      "longDescription": "Late in the afternoon, the sun drops low over Guajará Bay and turns the water the colour of strong tea, which is a fine reason to book a late lunch.\n\nThe house began in the eighteenth century as a sugar planter's weekend retreat, until the colonial government bought it in 1768 and had the Italian architect Antonio Landi turn it into the Royal Military Hospital. The army kept it for generations, and during the military dictatorship political prisoners were held here, which is worth carrying quietly to the table; since 2002 it has been a contemporary art space.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-casa-do-saulo-onze-janelas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-casa-do-saulo-onze-janelas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-casa-do-saulo-onze-janelas_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-casa-do-saulo-onze-janelas_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "db8961c9-ecae-537c-8138-1afaf82ac853",
+          "order": 0,
+          "title": "Casa do Saulo das Onze Janelas",
+          "caption": "On the riverside terrace of the Casa das Onze Janelas, beside the old fort in Cidade Velha.",
+          "latitude": -1.4550261551680923,
+          "longitude": -48.50562306256552,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-casa-do-saulo-onze-janelas.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-casa-do-saulo-onze-janelas_hero.webp",
+          "transcriptText": "Late in the afternoon, the sun drops low over Guajará Bay and turns the water the colour of strong tea, which is a fine reason to book a late lunch.\n\nThe long, pale building beside you, with its row of tall windows facing the river, is the Casa das Onze Janelas, the House of Eleven Windows, and the restaurant spreads across its riverside terrace above the bay. Count the upper windows if you like, since the name is entirely literal, and off to your right as you face the water, the low walls of the old fort mark the spot where the Portuguese founded Belém in 1616.\n\nThe house began in the eighteenth century as a sugar planter's weekend retreat, until the colonial government bought it in 1768 and had the Italian architect Antonio Landi turn it into the Royal Military Hospital. The army kept it for generations, and during the military dictatorship political prisoners were held here, which is worth carrying quietly to the table; since 2002 it has been a contemporary art space.\n\nThe kitchen belongs to Saulo Jennings, who grew up on the Tapajós River near Santarém and started his first restaurant at home with five tables in 2009. He calls his style Tapajós cooking, and in 2024 UN Tourism named him its first gastronomy ambassador. Order the freshwater fish, pirarucu, tambaqui or filhote, with Santarém beans and rice turned green with jambu, the herb that leaves your lips tingling.\n\nWhat I find rather touching is the direction of travel. For centuries the rivers sent their wealth down to this corner of the city to be taxed and shipped away, and now a cook from upriver has moved into the old hospital and serves the rivers' own food back across the terrace.\n\nBefore you go, walk a couple of minutes north to the Forte do Presépio and look back from its walls, where all eleven windows line up along the waterfront exactly as the name promised."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4550261551680923,
+      "centroidLongitude": -48.50562306256552,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "a666b6a5-2e0d-557f-8d41-4f55f7fc2903",
+        "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Waterfront",
+        "Colonial",
+        "History",
+        "Designed by a Master",
+        "Antonio Landi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+      "createdAt": "2026-10-21",
+      "title": "Docks Station | Estação das Docas",
+      "shortDescription": "The iron holding up these warehouses crossed the Atlantic from England more than a century ago, and it was paid for, more or less, with rubber.…",
+      "longDescription": "The iron holding up these warehouses crossed the Atlantic from England more than a century ago, and it was paid for, more or less, with rubber.\n\nStart with those cranes, which were built in the United States in the early twentieth century and once swung cargo aboard ships bound for Europe and North America, though these days their main job is framing everyone's sunset photographs.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-estacao-das-docas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-estacao-das-docas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-estacao-das-docas_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d72e4c92-307e-5e5e-a73a-134a7366a4f9",
+          "order": 0,
+          "title": "Docks Station | Estação das Docas",
+          "caption": "On the riverfront promenade, between the old port cranes and the three iron warehouses.",
+          "latitude": -1.4475924274274095,
+          "longitude": -48.49932423558195,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-estacao-das-docas.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-estacao-das-docas_hero.webp",
+          "transcriptText": "The iron holding up these warehouses crossed the Atlantic from England more than a century ago, and it was paid for, more or less, with rubber.\n\nOn the riverfront promenade at Estação das Docas, with Guajará Bay on your left as you walk north and three long warehouses on your right, you're on what became, from 1909, the city's new commercial port. Along the water's edge, tall painted cranes still stand on the quay with their arms angled out towards the river.\n\nStart with those cranes, which were built in the United States in the early twentieth century and once swung cargo aboard ships bound for Europe and North America, though these days their main job is framing everyone's sunset photographs.\n\nThe warehouses behind you have been given new work: one for regional crafts, one for restaurants and bars, and one for fairs and exhibitions, which also houses a small museum of the port, with photographs and objects dug up while the site was being restored. The restaurant warehouse is where Amazon Beer brews on site, and where Cairu, a local institution, scoops ice cream in flavours like cupuaçu and bacuri that you won't find at home.\n\nThen look up, because the best detail is overhead. In the evenings, musicians perform from a small stage that slides along a rail above the tables, so the band travels down the room to you rather than the other way round.\n\nHere's the reframe worth taking with you: this quay was built to send the Amazon's wealth away, and after the rubber trade collapsed the waterfront slid into decades of neglect, with a reputation that kept most residents away; when the complex reopened in 2000, it became the place where Belém comes to look at its own river.\n\nWalk to the far end of the promenade towards sunset, pick a spot beside one of the cranes, and watch the light go down behind the Ilha das Onças across the water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4475924274274095,
+      "centroidLongitude": -48.49932423558195,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "a666b6a5-2e0d-557f-8d41-4f55f7fc2903",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "EB123E68-A754-458A-9D1C-F9920DC1D18B"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Waterfront",
+        "Maritime",
+        "Engineering",
+        "Commerce",
+        "Food",
+        "After Dark",
+        "Free to Visit",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+      "createdAt": "2026-10-21",
+      "title": "Museum of the Amazons | Museu das Amazônias",
+      "shortDescription": "This is the Museu das Amazônias, and the plural in its name is doing a great deal of work. Porto Futuro, warehouse four, on the waterfront just…",
+      "longDescription": "This is the Museu das Amazônias, and the plural in its name is doing a great deal of work.\n\nThe museum opened on the fourth of October 2025, a month before the United Nations climate conference came to Belém, and President Lula was here to open it; more than six and a half thousand people came through on the first day, many of them for Sebastião Salgado's black-and-white photographs of the forest and its peoples.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-museu-das-amazonias_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-museu-das-amazonias_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-museu-das-amazonias_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-museu-das-amazonias_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-museu-das-amazonias_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9a905c6c-c9bc-5edc-9e37-94c07d255274",
+          "order": 0,
+          "title": "Museum of the Amazons | Museu das Amazônias",
+          "caption": "At Porto Futuro warehouse four, on the waterfront just north of Estação das Docas.",
+          "latitude": -1.4470843085678562,
+          "longitude": -48.498433704893365,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-museu-das-amazonias.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-museu-das-amazonias_hero.webp",
+          "transcriptText": "This is the Museu das Amazônias, and the plural in its name is doing a great deal of work.\n\nPorto Futuro, warehouse four, on the waterfront just north of Estação das Docas: the building ahead of you is one of five restored port warehouses from the early twentieth century, with the same English ironwork and red oxide metal as its older neighbour, and Guajará Bay running along just behind it.\n\nThe museum opened on the fourth of October 2025, a month before the United Nations climate conference came to Belém, and President Lula was here to open it; more than six and a half thousand people came through on the first day, many of them for Sebastião Salgado's black-and-white photographs of the forest and its peoples.\n\nAfter a renovation, the inside reopened in November 2026 with a new long-term show on the ground floor called Amazônias no Plural, which runs from how the region was formed geologically to how people live, eat and work there now. Upstairs on the mezzanine, a shorter exhibition ties together water, fire and the Pantanal wetlands further south. The science behind it comes from the Museu Goeldi, the city's long-established research museum, and entry is free, though you'll need to book a ticket online, and it's closed on Wednesdays.\n\nOutsiders tend to talk about the Amazon as a single thing, whether a forest, a lung or a cause, and the quiet argument of this building is that it has always been many places at once: rivers and floodplains, Indigenous nations, fishing towns, kitchens, and cities like this one, which has been sending boats up those rivers for four hundred years.\n\nWhen you come back out, turn towards the gastronomy warehouse that opened alongside the museum, find something regional to eat, and carry it down to the water's edge, where the river the whole exhibition is about will be sliding past in front of you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4470843085678562,
+      "centroidLongitude": -48.498433704893365,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "346e343c-a9fd-5542-99db-126e36904781",
+        "62ce120d-8f20-514c-b657-fcf679eab005"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Waterfront",
+        "Art",
+        "History",
+        "Contemporary",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7c55f24c-6c77-509a-8e79-0803f237b12f",
+      "createdAt": "2026-10-21",
+      "title": "Bolonha Palace | Palacete Bolonha",
+      "shortDescription": "It's 1905, and the plot on this corner is little more than a swamp, alive with insects and rats, which is not the obvious place to build a…",
+      "longDescription": "It's 1905, and the plot on this corner is little more than a swamp, alive with insects and rats, which is not the obvious place to build a palace for the woman you love.\n\nHe was Francisco Bolonha, an engineer born in Belém in 1872, who happened to be the biggest cement importer in Pará, which helps when your building site is a bog. Between 1905 and 1908 he brought in foreign engineers, pneumatic tools and pumps to drain the ground, and the house that went up was among the tallest in the city.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-palacete-bolonha_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-palacete-bolonha_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-palacete-bolonha_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-palacete-bolonha_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f9940d7e-78cc-595c-b165-8a124a0be5b7",
+          "order": 0,
+          "title": "Bolonha Palace | Palacete Bolonha",
+          "caption": "Across Avenida Governador José Malcher, facing the Art Nouveau gate and the lookout on top.",
+          "latitude": -1.4518096476110223,
+          "longitude": -48.49084441569248,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-palacete-bolonha.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-palacete-bolonha_hero.webp",
+          "transcriptText": "It's 1905, and the plot on this corner is little more than a swamp, alive with insects and rats, which is not the obvious place to build a palace for the woman you love.\n\nAcross Avenida Governador José Malcher from you stands a tall and heavily decorated house with a lookout at the very top and an Art Nouveau iron gate at street level. That's the Palacete Bolonha, and the narrow lane running alongside it, Passagem Bolonha, was laid out by the same man.\n\nHe was Francisco Bolonha, an engineer born in Belém in 1872, who happened to be the biggest cement importer in Pará, which helps when your building site is a bog. Between 1905 and 1908 he brought in foreign engineers, pneumatic tools and pumps to drain the ground, and the house that went up was among the tallest in the city.\n\nThe story usually told is that he promised his wife Alice, a pianist, a home as fine as anything in Europe, and the music room on the first floor is still the heart of the visit. Inside, the house had gas, running water and an American electric refrigerator, which in Belém at the time was close to science fiction, along with French tiles, gilded plasterwork and a corridor lined in azulejos.\n\nHere's what I love about the place, though: it was built to prove that Belém could hold its own with Paris, in a climate that disagreed: the house was poorly ventilated and hard to live in, and after Bolonha died in 1939 it was eventually left empty. The state listed it in 1982, and today the city runs it as a museum with much of the original decoration intact.\n\nFree guided visits run on weekdays in groups of around fifteen, and as you step inside, look down at the entrance floor, where a mosaic spells out cave canem, beware of the dog, just as it would in Pompeii."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4518096476110223,
+      "centroidLongitude": -48.49084441569248,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "c3ddaab3-461e-5665-81cb-428132e60f9a",
+        "1ff51015-6af1-544e-91f5-bbd975bbfa28",
+        "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
+        "6D37E1F5-0083-5F5C-9364-EE17AC1C5CCB"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Museum",
+        "Architecture",
+        "History",
+        "Free to Visit",
+        "Designed by a Master",
+        "Francisco Bolonha"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a666b6a5-2e0d-557f-8d41-4f55f7fc2903",
+      "createdAt": "2026-10-21",
+      "title": "Doca Linear Park | Parque Linear da Doca",
+      "shortDescription": "Beneath this smart avenue runs a creek that people once called the Igarapé das Almas, the Creek of Souls. The canal running down the middle of…",
+      "longDescription": "Beneath this smart avenue runs a creek that people once called the Igarapé das Almas, the Creek of Souls.\n\nThat name goes back to the Cabanagem, the uprising that shook Pará in the eighteen-thirties, when many people here believed the souls of fallen rebels still wandered this wetland; a neighbouring stream earned the name Creek of Arms from stories of weapons hidden along its banks. Afterwards the land turned to dairy farms supplying milk to the old city, then to docks for river trade, and in the nineteen-seventies the water was pushed into a channel and the avenue built over the old wetland, named after an imperial-era politician, Bernardo de Souza Franco. By the nineties this was becoming one of the most expensive addresses in Belém.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-parque-linear-da-doca_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-parque-linear-da-doca_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-parque-linear-da-doca_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-parque-linear-da-doca_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "38693fa3-b70d-5fc5-981c-48c281a66b02",
+          "order": 0,
+          "title": "Doca Linear Park | Parque Linear da Doca",
+          "caption": "On a footbridge over the canal down the middle of Avenida Visconde de Souza Franco.",
+          "latitude": -1.4436398286870205,
+          "longitude": -48.48997516441803,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-parque-linear-da-doca.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-parque-linear-da-doca_hero.webp",
+          "transcriptText": "Beneath this smart avenue runs a creek that people once called the Igarapé das Almas, the Creek of Souls.\n\nThe canal running down the middle of Avenida Visconde de Souza Franco is your guide here, so find one of the footbridges or viewing decks over it. Apartment towers and traffic line both sides, and between them a green strip of planting, paths and a cycle lane follows the water for about a kilometre and a quarter, with kiosks, a playground and outdoor exercise machines along the way.\n\nThat name goes back to the Cabanagem, the uprising that shook Pará in the eighteen-thirties, when many people here believed the souls of fallen rebels still wandered this wetland; a neighbouring stream earned the name Creek of Arms from stories of weapons hidden along its banks. Afterwards the land turned to dairy farms supplying milk to the old city, then to docks for river trade, and in the nineteen-seventies the water was pushed into a channel and the avenue built over the old wetland, named after an imperial-era politician, Bernardo de Souza Franco. By the nineties this was becoming one of the most expensive addresses in Belém.\n\nThe park you're in opened in October 2025, ahead of the climate conference, designed by the landscape studio Natureza Urbana. The canal was cleaned, and new drainage and sewage pipes went in, because in a city where rain arrives most afternoons, a waterway is infrastructure before it's scenery.\n\nThe thought worth holding onto is that most cities spent the twentieth century burying their streams and pretending they'd never been there. This one has gone partway back, giving the water room and air again, and letting it keep a name that remembers the people who once fought here.\n\nFollow the canal downstream towards Guajará Bay, and at the far end look for where the old creek finally slips out into the river that it was always heading for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4436398286870205,
+      "centroidLongitude": -48.48997516441803,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
+        "E0D5B392-7C18-4A6F-9B24-1F8360C5A7D4",
+        "364fbc84-62fe-590d-acbe-71fa035d5b87",
+        "ab59f8da-db2a-5a73-bfad-80fef03f70ce",
+        "3f61c7f1-bc43-5646-98ae-0aef4db75a06",
+        "03D221D8-BC4A-4F95-806F-CF9094C28EA7"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "Free to Visit",
+        "Contemporary",
+        "History",
+        "Designed by a Master",
+        "Natureza Urbana"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8",
+      "createdAt": "2026-10-21",
+      "title": "Restaurante Rua Belém",
+      "shortDescription": "Look for the neon, because the entrance to this restaurant glows like a side street in Tokyo, which is not quite what you expect on Avenida…",
+      "longDescription": "Look for the neon, because the entrance to this restaurant glows like a side street in Tokyo, which is not quite what you expect on Avenida Generalíssimo Deodoro.\n\nRua simply means street, and the name is the brief: city food, the kind you'd eat on a stool somewhere busy, with an Amazonian accent. The chef, Samila Seki, has described her menu as a reunion, built partly out of her own experiences, and it shows in the dish people come back for, the Lamén Rua. It's a ramen with pork belly chashu, a cured egg, spring onion, sesame and caramelised carrot, plus a tangle of jambu, the local herb that makes your lips tingle.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-restaurante-rua-belem_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-restaurante-rua-belem_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-restaurante-rua-belem_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5322dce2-9544-5e5e-8f61-ad9f45e02df4",
+          "order": 0,
+          "title": "Restaurante Rua Belém",
+          "caption": "Outside number 468 Avenida Generalíssimo Deodoro in Umarizal, by the neon-lit doorway.",
+          "latitude": -1.4445259779224546,
+          "longitude": -48.48292392023766,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-restaurante-rua-belem.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-restaurante-rua-belem_hero.webp",
+          "transcriptText": "Look for the neon, because the entrance to this restaurant glows like a side street in Tokyo, which is not quite what you expect on Avenida Generalíssimo Deodoro.\n\nFrom the pavement outside number 468, in Umarizal, you should see the lit-up doorway on the ground floor, with a dining room behind it dressed in pop art and city-street graphics, most of them pointing firmly towards Japan.\n\nRua simply means street, and the name is the brief: city food, the kind you'd eat on a stool somewhere busy, with an Amazonian accent. The chef, Samila Seki, has described her menu as a reunion, built partly out of her own experiences, and it shows in the dish people come back for, the Lamén Rua. It's a ramen with pork belly chashu, a cured egg, spring onion, sesame and caramelised carrot, plus a tangle of jambu, the local herb that makes your lips tingle.\n\nThe broth is where it gets interesting, because it's made with chicken, pork and seaweed, along with chicória, which sounds like chicory but in Pará means a different plant entirely, a sharp, leafy herb related to coriander that finds its way into half the region's cooking. On the drinks side, the Bud Smash is gin infused with cucumber, shaken with lemon and basil, and finished with a pinch of sea salt.\n\nThe bit to hold onto is that this isn't as unlikely a pairing as it sounds. Japanese families have farmed in Pará since the late nineteen-twenties, and their influence runs through the state's food, so a ramen seasoned with jambu reads less like a gimmick and more like two old neighbours finally sitting down at the same table.\n\nThe kitchen opens from Wednesday to Sunday evenings, and if you've room afterwards, the canal park along the Doca is a few blocks away, and makes a pleasant place to walk off the noodles under the lights."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4445259779224546,
+      "centroidLongitude": -48.48292392023766,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "081392A5-7C74-58DD-B5AE-47E5C0AD33F5",
+        "07040EB2-EA63-5341-8DC0-AACF247F68C3",
+        "A90A1F09-6BFD-5F3A-99BB-69DE6191AD38",
+        "D44C7F68-5DC4-56B7-AA68-50EB6600AFEB",
+        "350527D0-AA44-565B-914A-E20161C470A0",
+        "f28be4e3-70d2-53ab-a5ff-add7796ff088"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Immigration",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9a0ad257-6e04-573e-a0e5-19d385309440",
+      "createdAt": "2026-10-21",
+      "title": "Theatro da Paz",
+      "shortDescription": "When it opened in February 1878, this theatre could seat around eleven hundred people, in a city that had grown rich on rubber almost faster…",
+      "longDescription": "When it opened in February 1878, this theatre could seat around eleven hundred people, in a city that had grown rich on rubber almost faster than it could build.\n\nThe model was La Scala in Milan, and the building took from 1869 to 1874 to put up, with the opening delayed while irregularities in the works were investigated, which is a very theatrical start for a theatre. Almost everything that mattered was imported: English cast iron, Italian marble for the staircases, French chandeliers and Portuguese stone mosaics, while the floors were laid in Amazonian hardwoods.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-theatro-da-paz_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-theatro-da-paz_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9cd55c87-fbb7-5b84-8169-40be3ddf3fc3",
+          "order": 0,
+          "title": "Theatro da Paz",
+          "caption": "Under the mango trees of Praça da República, far enough back to take in the whole front.",
+          "latitude": -1.452680611435873,
+          "longitude": -48.49370682764774,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-theatro-da-paz.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-theatro-da-paz_hero.webp",
+          "transcriptText": "When it opened in February 1878, this theatre could seat around eleven hundred people, in a city that had grown rich on rubber almost faster than it could build.\n\nPraça da República spreads out around you, shaded by tall mango trees, and the theatre sits along one edge of it: a long, pale neoclassical front with a run of columns across the upper floor and a triangular pediment on top. Stand back far enough to take in the whole width of it, because it's designed to be seen from the square.\n\nThe model was La Scala in Milan, and the building took from 1869 to 1874 to put up, with the opening delayed while irregularities in the works were investigated, which is a very theatrical start for a theatre. Almost everything that mattered was imported: English cast iron, Italian marble for the staircases, French chandeliers and Portuguese stone mosaics, while the floors were laid in Amazonian hardwoods.\n\nInside, the painted ceiling mixes Greek and Roman gods with the plants and animals of the Amazon, as if Olympus had relocated to the riverbank, and marble busts honour the writers José de Alencar and Gonçalves Dias alongside the composers Carlos Gomes and Henrique Gurjão.\n\nAnd here's the thing: for a century and more, this place and the Teatro Amazonas, a thousand miles or so upriver in Manaus, were rivals, two rubber cities each insisting it had the finer opera house. In July 2026, UNESCO settled the argument by not settling it at all, adding them to the World Heritage list together as the Theatres of the Amazon.\n\nIf the box office is offering a guided visit, take it, because the ceiling is the reason to go in; and on your way out, walk the length of Praça da República, where the old bandstand and the mango trees have been keeping the theatre company since the rubber years."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.452680611435873,
+      "centroidLongitude": -48.49370682764774,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "c4c7d771-94ff-5abc-94e7-0e4f6fe09924",
+        "8efa1abc-1274-475f-89ee-c506bb72f1ea",
+        "62ce120d-8f20-514c-b657-fcf679eab005",
+        "9f3aa784-002e-5e43-bad3-c68e2a88b022",
+        "dfeb21ed-ac84-5819-a177-24b08786691f"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Architecture",
+        "History",
+        "Neoclassical",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "799af2cb-a13a-501d-845f-5a051627b7a7",
+      "createdAt": "2026-10-21",
+      "title": "Ver-o-Pesinho Casa & Café",
+      "shortDescription": "Ver-o-Pesinho translates roughly as little Ver-o-Peso, and the joke is that the city's huge, noisy riverside market has been shrunk down to fit…",
+      "longDescription": "Ver-o-Pesinho translates roughly as little Ver-o-Peso, and the joke is that the city's huge, noisy riverside market has been shrunk down to fit inside a house in Nazaré.\n\nIt began in 2018 as a pop-up in a shopping centre, trying to recreate the feeling of the real market, and in 2023 it settled here as a café and shop, with Manoel Netto, a designer turned cook, running the kitchen alongside his family. Have a look at the walls as you wait, where you'll find ribbons from the Círio de Nazaré, the enormous October procession that takes over this part of the city, along with T-shirts printed with local slang.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-pesinho_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-pesinho_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-pesinho_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-pesinho_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-pesinho_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c4a6ea9d-e689-5d50-a37c-696c203ebe64",
+          "order": 0,
+          "title": "Ver-o-Pesinho Casa & Café",
+          "caption": "Through the front door on Travessa Benjamin Constant in Nazaré, by the café counter.",
+          "latitude": -1.4572820020680872,
+          "longitude": -48.487694251577324,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-ver-o-pesinho.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-pesinho_hero.webp",
+          "transcriptText": "Ver-o-Pesinho translates roughly as little Ver-o-Peso, and the joke is that the city's huge, noisy riverside market has been shrunk down to fit inside a house in Nazaré.\n\nThrough the front door on Travessa Benjamin Constant, you'll find a tall, double-height room painted in strong colours, with hollow-brick screens and long benches borrowed from the look of the market stalls, a café counter ahead of you and a shop running down the side.\n\nIt began in 2018 as a pop-up in a shopping centre, trying to recreate the feeling of the real market, and in 2023 it settled here as a café and shop, with Manoel Netto, a designer turned cook, running the kitchen alongside his family. Have a look at the walls as you wait, where you'll find ribbons from the Círio de Nazaré, the enormous October procession that takes over this part of the city, along with T-shirts printed with local slang.\n\nThe menu is about ninety per cent Amazonian, so breakfast might be toast with Marajó buffalo cheese, and the dish people photograph most is a lasagne made with smoked pirarucu, the giant river fish, served with fried banana; for something sweet, there's an açaí crème brûlée topped with bacuri, a tart, creamy fruit you'll rarely meet outside the region.\n\nThe shop showcases more than thirty Amazonian makers, from Marajó pottery and toys carved from the soft pith of the miriti palm to cachaça infused with jambu, and upstairs, visitors are asked to take their shoes off, as if they've been invited home.\n\nThe clever part is that this is a translation rather than a replacement. The real Ver-o-Peso can be overwhelming on a first morning, and this place gives you the vocabulary first, so that when you get there, you know what you're looking at.\n\nSo take what you've learned here down to the waterfront and go and find the real thing, ideally early, while the morning's açaí is still coming off the river."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4572820020680872,
+      "centroidLongitude": -48.487694251577324,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dc4d6896-7b5d-53be-89c3-de907226a589",
+      "createdAt": "2026-10-21",
+      "title": "Ver-o-Peso Market | Mercado Ver-o-Peso",
+      "shortDescription": "It's 1625, and the Portuguese have set up a post on this shore where every cargo coming off the river must be weighed and taxed, a place they…",
+      "longDescription": "It's 1625, and the Portuguese have set up a post on this shore where every cargo coming off the river must be weighed and taxed, a place they called the Casa de Haver o Peso, the house for checking the weight.\n\nThat iron hall opened in 1901, prefabricated in Europe and shipped over in pieces at the height of the rubber boom, which is why it looks like a railway station that has wandered down to the river. Further along, the older meat market has its own ironwork inside, and these days it carries the name of Francisco Bolonha, the engineer whose palace stands across town.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-peso_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-peso_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-peso_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-peso_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-peso_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "37c79c03-d64e-5b17-838d-479e293191ea",
+          "order": 0,
+          "title": "Ver-o-Peso Market | Mercado Ver-o-Peso",
+          "caption": "With your back to the city, facing the iron fish market at the water’s edge.",
+          "latitude": -1.4521023279509524,
+          "longitude": -48.50368116256551,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-ver-o-peso.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-ver-o-peso_hero.webp",
+          "transcriptText": "It's 1625, and the Portuguese have set up a post on this shore where every cargo coming off the river must be weighed and taxed, a place they called the Casa de Haver o Peso, the house for checking the weight.\n\nWith your back to the city and the bay in front of you, the Mercado de Ferro, the iron fish market, should be sitting right at the water's edge: a long hall with pointed towers at its corners, covered in small grey scales of zinc. Spreading out on either side are rows of stalls under awnings, and a great deal of shouting.\n\nThat iron hall opened in 1901, prefabricated in Europe and shipped over in pieces at the height of the rubber boom, which is why it looks like a railway station that has wandered down to the river. Further along, the older meat market has its own ironwork inside, and these days it carries the name of Francisco Bolonha, the engineer whose palace stands across town.\n\nThe stalls in between are the real show, starting with the açaí, which arrives by boat in the very early morning and is sold by the basket, and then there are the herb sellers, with bundles of bark, roots and little bottles promising luck, love or a good night's sleep. It's often called the largest open-air market in Latin America.\n\nWhat's easy to miss is how the name has drifted. Haver o peso, to have the weight checked, softened over the centuries into Ver-o-Peso, to see the weight, and so a colonial tax office became the city's favourite thing to look at. Long before the Portuguese, the Tupinambá traded on this shore, and a recent renovation for the climate conference has left some people worrying about losing the market's glorious chaos, while others welcome the cleaner stalls.\n\nCome back at first light, when the açaí boats are pulling in, and buy a bowl from a stall right beside the water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4521023279509524,
+      "centroidLongitude": -48.50368116256551,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "75539769-ab9e-5283-afbb-5358c3f2947b",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
+        "0aa26daf-e710-4eea-b08c-160ff35a71ee"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "Waterfront",
+        "Engineering",
+        "Colonial",
+        "History",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75539769-ab9e-5283-afbb-5358c3f2947b",
+      "createdAt": "2026-10-21",
+      "title": "Vila Galé Collection Amazônia",
+      "shortDescription": "Two hundred and twenty-seven rooms make up this hotel, and every one of them is dedicated to a woman. Count three long warehouses along the…",
+      "longDescription": "Two hundred and twenty-seven rooms make up this hotel, and every one of them is dedicated to a woman.\n\nThe conversion was done in about a year, at a cost of around a hundred and eighty million reais, so that the hotel could open in late 2025 in time for the COP30 climate summit. Behind the iron, there are two outdoor pools looking straight onto the bay, a heated indoor pool, a spa, and a children's club.",
+      "makerId": "bd867715-70c6-5d98-b4da-2bdcb9db4905",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-vila-gale-amazonia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-vila-gale-amazonia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-vila-gale-amazonia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "02c5ac30-0299-561c-900a-fba82037f3e1",
+          "order": 0,
+          "title": "Vila Galé Collection Amazônia",
+          "caption": "On the Porto Futuro waterfront, facing warehouses seven, eight and eight A.",
+          "latitude": -1.4428912898592972,
+          "longitude": -48.49612230429719,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bel-vila-gale-amazonia.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bel-vila-gale-amazonia_hero.webp",
+          "transcriptText": "Two hundred and twenty-seven rooms make up this hotel, and every one of them is dedicated to a woman.\n\nCount three long warehouses along the Porto Futuro waterfront, numbers seven, eight and eight A, a short walk from Estação das Docas, and you have the whole hotel, with its old iron frames kept in place and Guajará Bay on the far side. These were port buildings put up by English engineers in the first years of the last century, and they're heritage-listed, so the bones you can see from the street are original.\n\nThe conversion was done in about a year, at a cost of around a hundred and eighty million reais, so that the hotel could open in late 2025 in time for the COP30 climate summit. Behind the iron, there are two outdoor pools looking straight onto the bay, a heated indoor pool, a spa, and a children's club.\n\nNow for those rooms, each of which honours a woman from the arts, music, literature or humanitarian work, with Elis Regina, Fernanda Torres and Mother Teresa among them, and Fafá de Belém, the city's own singer, holding her place; a code on the wall brings up her biography, a poem and a song, so you go to sleep with company.\n\nThe part I keep coming back to is who's doing the restoring. Vila Galé is a Portuguese group, and Belém was founded by the Portuguese in 1616, about a kilometre from here, so this is a long relationship, and not always an easy one, now playing out with hotel keys rather than tax ledgers. The group's founder has said that cities which don't rescue their historic centres lose their character, and the iron frames suggest he meant it.\n\nAsk at the waterfront about boats to Combu Island, about forty minutes across the river, where the forest comes right down to the water and family restaurants sit on stilts above it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -1.4428912898592972,
+      "centroidLongitude": -48.49612230429719,
+      "city": "Belém",
+      "country": "Brazil",
+      "relatedTourIds": [
+        "dc4d6896-7b5d-53be-89c3-de907226a589",
+        "0c84801b-6b7f-50af-afef-3ba01c3a6f38",
+        "f0a2f507-59ff-5aa7-a7e7-2f4c2a162ac1",
+        "c014912d-5637-5290-a4cd-0628bd6058d7",
+        "7c55f24c-6c77-509a-8e79-0803f237b12f",
+        "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "fa6c4699-ef21-4eb2-879c-d51b03bf830d",
+        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Waterfront",
+        "Maritime"
       ],
       "priceUSD": 0
     }
