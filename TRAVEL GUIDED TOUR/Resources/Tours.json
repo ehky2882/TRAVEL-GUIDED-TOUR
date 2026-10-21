@@ -5601,6 +5601,16 @@
       "websiteURL": null
     },
     {
+      "id": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "displayName": "Atlas Studio OSL",
+      "platform": "dozent",
+      "handle": "atlas.osl",
+      "avatarURL": null,
+      "avatarEmoji": "🇳🇴",
+      "bio": "Atlas Studio's Oslo bureau — an architect's guide to a city that rebuilt its harbour as a stage: Snøhetta's marble roof and the museums lined up beside it, the City Hall and Vigeland's granite, and the coffee bars, shops and hotels where Oslo lives now.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -132194,6 +132204,855 @@
         "Contemporary",
         "Designed by a Master",
         "Daniel Libeskind"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "17d376ef-34f9-517a-ba32-ab3bf6d7955d",
+      "createdAt": "2026-10-21",
+      "title": "Aesop Prinsens gate",
+      "shortDescription": "Of all the places a skincare company might choose for its hundredth shop in the world, a small old room on a Kvadraturen side street isn't the…",
+      "longDescription": "Of all the places a skincare company might choose for its hundredth shop in the world, a small old room on a Kvadraturen side street isn't the obvious one, and yet that's where Aesop opened in 2014, its first in Norway.\n\nNow tilt your head back, because the ceiling is the real event: ten intersecting domes of different sizes, finished in matte plaster and borrowed from the vaults of Orthodox churches, with tiny spotlights tucked into the hollows so that the light gathers in pools.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-aesop-prinsens-gate_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-aesop-prinsens-gate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-aesop-prinsens-gate_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "533fe1d9-1d8c-5890-b967-7a8f2195bac1",
+          "order": 0,
+          "title": "Aesop Prinsens gate",
+          "caption": "At Prinsens gate twenty-one in Kvadraturen, by the counter under the domed ceiling.",
+          "latitude": 59.91211188336195,
+          "longitude": 10.741938691821671,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-aesop-prinsens-gate.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-aesop-prinsens-gate_hero.webp",
+          "transcriptText": "Of all the places a skincare company might choose for its hundredth shop in the world, a small old room on a Kvadraturen side street isn't the obvious one, and yet that's where Aesop opened in 2014, its first in Norway.\n\nThe shopfront in front of you, at number twenty-one Prinsens gate, is easy to walk past, so look through the glass for whitewashed brick, rows of brown bottles and a glint of brass, and if the door's open, step inside and stand by the counter, where you can take in the whole room.\n\nNow tilt your head back, because the ceiling is the real event: ten intersecting domes of different sizes, finished in matte plaster and borrowed from the vaults of Orthodox churches, with tiny spotlights tucked into the hollows so that the light gathers in pools.\n\nBeneath them stands an outsized concrete sink with three brass taps over shallow basins, and it's there to be used, since washing your hands and trying things is the heart of the Aesop ritual, turned into furniture.\n\nThe walls carry a quieter story, because when Snøhetta's architects stripped the room back, they found surfaces hidden for decades, some dating from the 1800s, and rather than cover them again they whitewashed the old brick and gave the original floor tiles a pale, cloudy finish.\n\nWhat I find rather lovely is how little has been added, since in a room of only sixty-six square metres the aim was to do a lot with little, and the result feels less like a shop fitted into an old building than an old building persuaded, very gently, into becoming one.\n\nBefore you leave, look along the brick wall facing the counter for a long horizontal niche where a single course of bricks seems to be missing, a shelf made out of an absence, and if you'd like a companion piece, Aesop's other Oslo shop, in Homansbyen, is also by Snøhetta and dressed in faceted oak instead."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.91211188336195,
+      "centroidLongitude": 10.741938691821671,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Snøhetta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f7469117-1788-571c-9672-1cd98736869d",
+      "createdAt": "2026-10-21",
+      "title": "Amerikalinjen",
+      "shortDescription": "It's 1919, and the shipping company that carries Norwegians across the Atlantic to New York has just moved into a grand new headquarters on the…",
+      "longDescription": "It's 1919, and the shipping company that carries Norwegians across the Atlantic to New York has just moved into a grand new headquarters on the city's main station square, so that anyone leaving by train or by ship would walk right past its door.\n\nThe architects, Andreas Bjercke and Georg Eliassen, gave the Norwegian America Line exactly the Neo-Baroque confidence a young company wanted, and the line, founded in 1910, ran its passenger traffic between Oslo and America from here, its first steamer having sailed into the Oslofjord in 1913.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-amerikalinjen_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-amerikalinjen_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-amerikalinjen_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-amerikalinjen_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-amerikalinjen_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-amerikalinjen_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0938d2fd-728f-514e-8b3f-97247a48c70d",
+          "order": 0,
+          "title": "Amerikalinjen",
+          "caption": "On Jernbanetorget by Oslo Central Station, facing the tritons over the door.",
+          "latitude": 59.91082444596429,
+          "longitude": 10.749688602272597,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-amerikalinjen.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-amerikalinjen_hero.webp",
+          "transcriptText": "It's 1919, and the shipping company that carries Norwegians across the Atlantic to New York has just moved into a grand new headquarters on the city's main station square, so that anyone leaving by train or by ship would walk right past its door.\n\nJernbanetorget, the busy square at the bottom of Karl Johans gate, is where you'll want to stand, with Oslo Central Station close by and the tall, pale building with the balustraded roofline in front of you, and over its entrance, look for a pair of tritons, the half-human, half-fish attendants of the sea, still keeping watch over the door.\n\nThe architects, Andreas Bjercke and Georg Eliassen, gave the Norwegian America Line exactly the Neo-Baroque confidence a young company wanted, and the line, founded in 1910, ran its passenger traffic between Oslo and America from here, its first steamer having sailed into the Oslofjord in 1913.\n\nSince 2019 the building has been a hotel, and the conversion kept more of its past than you might expect: the old boardrooms are now suites under their original ornate ceilings, and the framed maps, photographs and ships' dining menus that turned up during the work are back on display. Even the basement jazz club, Gustav, shares its name with the company's first managing director, Gustav Henriksen.\n\nThe interesting bit is this: the building was designed around departure, a place where people bought tickets for journeys that many of them would never make in reverse, and it now earns its living from arrival, welcoming travellers who have only just stepped off the train.\n\nIf you step inside, keep an eye out for those maps and menus in the public rooms, and for the art chosen by the curator Sune Nordgren, with names such as Alex Katz and Julian Opie among them, then, back outside, look up once more at the tritons, who have watched an awful lot of comings and goings from that doorway."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.91082444596429,
+      "centroidLongitude": 10.749688602272597,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Immigration",
+        "Maritime",
+        "Architecture",
+        "Designed by a Master",
+        "Bjercke & Eliassen"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e400c5a2-8e6e-5f4a-8811-2c9bc495218a",
+      "createdAt": "2026-10-21",
+      "title": "Astrup Fearnley Museum of Modern Art | Astrup Fearnley Museet",
+      "shortDescription": "That great curved glass roof is meant to look like a sail, with its supporting beams standing in for masts and rigging, and once someone has…",
+      "longDescription": "That great curved glass roof is meant to look like a sail, with its supporting beams standing in for masts and rigging, and once someone has pointed it out, it's rather hard to see it as anything else.\n\nThis is the Astrup Fearnley Museum of Modern Art, designed by Renzo Piano's studio with the Norwegian firm Narud Stokke Wiig and opened in September 2012, though the museum itself was founded back in 1993, and its collection, with names such as Jeff Koons, Damien Hirst and Cindy Sherman, is counted among the most important for contemporary art in Norway.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-astrup-fearnley-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-astrup-fearnley-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-astrup-fearnley-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-astrup-fearnley-museum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ff28d171-8d1d-5ab6-a1b3-ac4da6f44108",
+          "order": 0,
+          "title": "Astrup Fearnley Museum of Modern Art | Astrup Fearnley Museet",
+          "caption": "Halfway across the footbridge over the canal on Tjuvholmen, under the glass sail.",
+          "latitude": 59.906931407650305,
+          "longitude": 10.721564515764376,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-astrup-fearnley-museum.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-astrup-fearnley-museum_hero.webp",
+          "transcriptText": "That great curved glass roof is meant to look like a sail, with its supporting beams standing in for masts and rigging, and once someone has pointed it out, it's rather hard to see it as anything else.\n\nWalk out onto the footbridge over the narrow canal that runs between the museum's two buildings and stop halfway across, so that one building faces the fjord, with the sculpture park and a small public beach beyond it, the other looks back towards the piazza, and the single sweep of glass ties the pair together over your head.\n\nThis is the Astrup Fearnley Museum of Modern Art, designed by Renzo Piano's studio with the Norwegian firm Narud Stokke Wiig and opened in September 2012, though the museum itself was founded back in 1993, and its collection, with names such as Jeff Koons, Damien Hirst and Cindy Sherman, is counted among the most important for contemporary art in Norway.\n\nNow look towards the water, where the Tjuvholmen sculpture park wraps around the fjord-side building and runs down to the beach, so that art sits out on the lawns while, in the warmer months, people swim just a few steps away.\n\nThe cleverest move of all is that most of this asks nothing of you, since the canal, the bridge, the park and the beach are simply there to be used, which means a museum of demanding contemporary art spends much of its day as a place where people sit, chat and dangle their feet over the edge of the quay.\n\nIf you've got a few minutes, carry on to the very tip of the headland and then turn round, because from there the whole sail of the roof lines up against the city behind it, and that's the view where the idea finally clicks into place."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.906931407650305,
+      "centroidLongitude": 10.721564515764376,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Waterfront",
+        "Public Art",
+        "Contemporary",
+        "Designed by a Master",
+        "Renzo Piano",
+        "Narud Stokke Wiig"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fee8d132-bc35-5fc1-9f43-3d09244ddd88",
+      "createdAt": "2026-10-21",
+      "title": "Deichman Bjørvika",
+      "shortDescription": "Somewhere above your head, in a quiet room near the top of this building, sit manuscripts by writers including Margaret Atwood, Han Kang and…",
+      "longDescription": "Somewhere above your head, in a quiet room near the top of this building, sit manuscripts by writers including Margaret Atwood, Han Kang and Karl Ove Knausgård, and nobody will be allowed to read them until 2114.\n\nThat overhang is the building's party trick, held up from above rather than propped from below, which is why it looks so improbable. Deichman Bjørvika opened in June 2020, designed by Atelier Oslo and Lundhagem, and a year later it was named Public Library of the Year by the international federation of library associations.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-deichman-bjorvika_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-deichman-bjorvika_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-deichman-bjorvika_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-deichman-bjorvika_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f323f434-eb10-5e24-92b0-7f51021efa84",
+          "order": 0,
+          "title": "Deichman Bjørvika",
+          "caption": "On the square between Oslo Central Station and the water, below the overhanging top floor.",
+          "latitude": 59.908885161683855,
+          "longitude": 10.752603142747933,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-deichman-bjorvika.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-deichman-bjorvika_hero.webp",
+          "transcriptText": "Somewhere above your head, in a quiet room near the top of this building, sit manuscripts by writers including Margaret Atwood, Han Kang and Karl Ove Knausgård, and nobody will be allowed to read them until 2114.\n\nThe open square between Oslo Central Station and the water gives you the best view, with the library's pale, glassy bulk ahead of you and the white slope of the Opera House just beyond, so look up at the upper corner, where a whole floor reaches out almost twenty metres over the square with nothing at all beneath it.\n\nThat overhang is the building's party trick, held up from above rather than propped from below, which is why it looks so improbable. Deichman Bjørvika opened in June 2020, designed by Atelier Oslo and Lundhagem, and a year later it was named Public Library of the Year by the international federation of library associations.\n\nWalk round the outside and you'll notice there isn't one grand front door but three equal entrances facing different ways, each opening into a diagonal shaft of light that cuts up through the floors towards big skylights in the roof.\n\nIf you ask me, that's the whole philosophy in concrete and glass, because a library that has been open to all citizens since Carl Deichman's bequest of books founded it in 1785 has built itself a home with no back door and no front one either, where everyone comes in on equal terms.\n\nHead up to the top floor and look for the Silent Room, where those Future Library manuscripts are kept, and remember that a forest of a thousand spruce trees, planted in Nordmarka in 2014, is quietly growing to become the paper they'll finally be printed on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.908885161683855,
+      "centroidLongitude": 10.752603142747933,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Architecture",
+        "Literature",
+        "Contemporary",
+        "Free to Visit",
+        "Designed by a Master",
+        "Atelier Oslo",
+        "Lundhagem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1af8c5fc-a882-580b-9ab7-7c68ffd9c19f",
+      "createdAt": "2026-10-21",
+      "title": "Eff Eff Oyster and Wine Bar",
+      "shortDescription": "Norway has one of the longest and most ragged coastlines in Europe, so you might assume Oslo had always been full of oyster bars, and you'd have…",
+      "longDescription": "Norway has one of the longest and most ragged coastlines in Europe, so you might assume Oslo had always been full of oyster bars, and you'd have been wrong, at least until 2019, when this one opened its doors.\n\nThe idea came from Colin Duignan, originally from Vancouver, who noticed that Oslo had no proper oyster bar despite all that coastline, and he opened Eff Eff with his partners Aksel Steen and Torstein Voksø Eek.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-eff-eff_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-eff-eff_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-eff-eff_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1dfaa06e-079c-51ec-a84c-d77178fd96d6",
+          "order": 0,
+          "title": "Eff Eff Oyster and Wine Bar",
+          "caption": "On Fredensborgveien at number twenty-two A, by the small street-level bar.",
+          "latitude": 59.91860874258907,
+          "longitude": 10.747676494862526,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-eff-eff.mp3",
+          "audioDurationSeconds": 94,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-eff-eff_hero.webp",
+          "transcriptText": "Norway has one of the longest and most ragged coastlines in Europe, so you might assume Oslo had always been full of oyster bars, and you'd have been wrong, at least until 2019, when this one opened its doors.\n\nFredensborgveien twenty-two A, a quiet residential street a short walk north of the city centre, is the address, and the small bar at street level, with tables outside when the weather allows, is the place you're after, opening at four on weekday afternoons and at two on Saturdays, while Sundays depend on what the bar posts on its Instagram.\n\nThe idea came from Colin Duignan, originally from Vancouver, who noticed that Oslo had no proper oyster bar despite all that coastline, and he opened Eff Eff with his partners Aksel Steen and Torstein Voksø Eek.\n\nThere are three menus, one for oysters, one for food and one for drinks, and the oysters themselves come from Norway, when they're in season from October, as well as from France and Canada, with Champagne and crisp French whites doing most of the pouring, and a kitchen that leans towards cold dishes, which rather suits a place built around the raw and the briny.\n\nIt's a nice reminder that it often takes a newcomer to spot what everyone else has stopped noticing, because the oysters were always out there along the coast, and it took someone used to a different shoreline to ask why nobody in Oslo was serving them.\n\nIf you're in town from October onwards, when the Norwegian oysters return to the list, order one alongside a French oyster and see how much a stretch of cold northern water changes the taste."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 94,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.91860874258907,
+      "centroidLongitude": 10.747676494862526,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Maritime",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8f5cab88-5bbf-5232-9cca-9f0a678ed055",
+      "createdAt": "2026-10-21",
+      "title": "élan",
+      "shortDescription": "Before you order anything, listen for a moment, because the sound in this room was composed for it, a bespoke soundscape by Jonas von der Fehr…",
+      "longDescription": "Before you order anything, listen for a moment, because the sound in this room was composed for it, a bespoke soundscape by Jonas von der Fehr, playing through the turquoise ring that hangs from the ceiling and doubles as a speaker.\n\nThe counter is the key to the whole design, since the architects at Snøhetta have explained that, rather than a conventional bar with baristas on one side and guests on the other, they wanted a new centre point for the conversation, so you can walk all the way round and watch every step of the brewing.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-elan_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-elan_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-elan_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-elan_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5af2bce4-bf0d-56e5-8d2c-ef695fe52316",
+          "order": 0,
+          "title": "élan",
+          "caption": "At Kirkegata seven in Kvadraturen, by the round oak counter under the turquoise ring.",
+          "latitude": 59.90963784554706,
+          "longitude": 10.742708753863035,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-elan.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-elan_hero.webp",
+          "transcriptText": "Before you order anything, listen for a moment, because the sound in this room was composed for it, a bespoke soundscape by Jonas von der Fehr, playing through the turquoise ring that hangs from the ceiling and doubles as a speaker.\n\nThe stone building around you is the old Shipping Building at Kirkegata seven, in the grid of streets called Kvadraturen, and élan occupies the ground floor behind its Neo-Baroque front, so once inside, stand where you can see the round, dark oak counter in the middle of the room, with that ring floating above it.\n\nThe counter is the key to the whole design, since the architects at Snøhetta have explained that, rather than a conventional bar with baristas on one side and guests on the other, they wanted a new centre point for the conversation, so you can walk all the way round and watch every step of the brewing.\n\nBeside it sits a carved volume of solid, heat-treated cork, soft and slightly rough against all that dark, precise wood, and the colours around the room come straight from coffee itself, with the red of the ripe cherry, the green of raw beans and the browns of the roast.\n\nFor about a decade this room was the showroom of Magnat Kaffehus, the coffee company behind élan, and the French name, suggesting flair, energy and style all at once, tells you something about the ambition.\n\nTo my mind, it treats coffee as theatre in the round, with no backstage and nowhere for the barista to hide, and in a city that takes its coffee very seriously, that kind of openness feels quietly confident.\n\nOn your way out, run a hand over the cork, then peek into the room at the back, where a long, coffee-brown sofa waits for meetings, and since élan opens at eight on weekdays and ten on Saturdays, it makes a good first stop on a morning in Kvadraturen."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.90963784554706,
+      "centroidLongitude": 10.742708753863035,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Snøhetta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7af58788-37ef-5e32-8389-34e63e0234c9",
+      "createdAt": "2026-10-21",
+      "title": "Holmenkollen Ski Museum | Holmenkollen skimuseum",
+      "shortDescription": "Four thousand years of skiing, from Stone Age rock carvings to the kit that went with Nansen and Amundsen to the polar ice, are tucked into the…",
+      "longDescription": "Four thousand years of skiing, from Stone Age rock carvings to the kit that went with Nansen and Amundsen to the polar ice, are tucked into the hillside right in front of you.\n\nOpened in 1923, it's the oldest ski museum in the world, built on the private collection of the architect Hjalmar Welhaven and first housed further up the hill at Frognerseteren, before moving here in time for the 1952 Winter Olympics and later burrowing deeper into the rock, with a new foyer by Snøhetta added for its centenary.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-holmenkollen-ski-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-holmenkollen-ski-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-holmenkollen-ski-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-holmenkollen-ski-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-holmenkollen-ski-museum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "55f6e24f-7874-503e-9875-133dab8a04a7",
+          "order": 0,
+          "title": "Holmenkollen Ski Museum | Holmenkollen skimuseum",
+          "caption": "At the foot of the Holmenkollen jump tower, where the museum is built into the hill.",
+          "latitude": 59.96419441952059,
+          "longitude": 10.666430213911855,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-holmenkollen-ski-museum.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-holmenkollen-ski-museum_hero.webp",
+          "transcriptText": "Four thousand years of skiing, from Stone Age rock carvings to the kit that went with Nansen and Amundsen to the polar ice, are tucked into the hillside right in front of you.\n\nTip your head back and follow the steel ramp of the Holmenkollen jump all the way up into the sky, then bring your eyes back down to the foot of its tower, where the Ski Museum is built into the hill, with the landing slope dropping steeply away towards the arena far below.\n\nOpened in 1923, it's the oldest ski museum in the world, built on the private collection of the architect Hjalmar Welhaven and first housed further up the hill at Frognerseteren, before moving here in time for the 1952 Winter Olympics and later burrowing deeper into the rock, with a new foyer by Snøhetta added for its centenary.\n\nInside, look out for the equipment from the polar expeditions, much of it given to the museum by Nansen and Amundsen themselves, because it's one thing to read about those journeys and quite another to stand in front of the gear that made them.\n\nThe jump has an even longer story, since the first competition here was held in January 1892, and the hill has been rebuilt something like nineteen times since, most recently in 2010 as a steel structure designed by Julien De Smedt, with its own built-in wind screen.\n\nIt's worth pausing on that pairing, since the museum holds skiing as Norway once lived it, a practical way of getting about in deep snow, while the jump above it turns the same pair of planks into pure spectacle, and both, in their way, are portraits of the country.\n\nMake time to go up to the top of the jump tower, which is part of the museum visit, because from up there Oslo and the fjord lie spread out far below you, and if your nerve holds, there's a ski-jump simulator waiting inside as well."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.96419441952059,
+      "centroidLongitude": 10.666430213911855,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Engineering",
+        "Iconic Landmark",
+        "Viewpoint",
+        "Designed by a Master",
+        "Snøhetta",
+        "Julien De Smedt"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "12dd6787-b1da-57d1-af11-de0a47143898",
+      "createdAt": "2026-10-21",
+      "title": "Kafeteria August",
+      "shortDescription": "The name promises something plain and practical, a canteen with trays and a queue, and the gentle joke is that the place you're about to find is…",
+      "longDescription": "The name promises something plain and practical, a canteen with trays and a queue, and the gentle joke is that the place you're about to find is nothing of the sort.\n\nIt opened in 2022, started by the team behind Maaemo, one of Norway's most celebrated fine-dining restaurants, as an all-day place for coffee, lunch and a glass of wine, and it has since changed hands, so that today it's run by the crew behind Betong, a lively restaurant over in Bjørvika.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-kafeteria-august_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-kafeteria-august_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-kafeteria-august_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "97918741-cbee-5e77-b772-63ce7cb39b28",
+          "order": 0,
+          "title": "Kafeteria August",
+          "caption": "In the courtyard through the gateway at Universitetsgata nine, near Tullinløkka.",
+          "latitude": 59.91703702211176,
+          "longitude": 10.738609070587263,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-kafeteria-august.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-kafeteria-august_hero.webp",
+          "transcriptText": "The name promises something plain and practical, a canteen with trays and a queue, and the gentle joke is that the place you're about to find is nothing of the sort.\n\nThrough the gateway at Universitetsgata nine lies a quiet courtyard, a few steps from the open square of Tullinløkka in the university quarter, and that's where to stand, with Kafeteria August's windows and, in good weather, its outdoor tables facing you across the yard.\n\nIt opened in 2022, started by the team behind Maaemo, one of Norway's most celebrated fine-dining restaurants, as an all-day place for coffee, lunch and a glass of wine, and it has since changed hands, so that today it's run by the crew behind Betong, a lively restaurant over in Bjørvika.\n\nOne room lives three different lives here in a single day: it opens at eleven, Tuesday to Saturday, with coffee and lunch, slides into small plates such as tartare as the afternoon turns to evening, and on Fridays and Saturdays stays open until one in the morning, often with DJs, which it announces on Instagram.\n\nThe courtyard setting matters too, because tucked behind the street front you're sheltered from the traffic on Universitetsgata, and on a warm evening the yard can feel more like a private gathering than a restaurant.\n\nThe real charm, I think, is in the name, because a kafeteria is, at heart, somewhere people drop in without ceremony, and for all its pedigree this place has kept that promise, so you can come for a coffee, stay for wine, and nobody will make you feel you've ordered the wrong thing.\n\nWhen you head off, wander back out towards Tullinløkka and, after dark, keep an eye on the ground, because light art has been set into the paving of the new Tullin quarter around you, and it's very easy to walk straight over it without noticing."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.91703702211176,
+      "centroidLongitude": 10.738609070587263,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "462f6a07-f3d6-5ff6-a81d-8e93da39b655",
+      "createdAt": "2026-10-21",
+      "title": "Harbour Warehouse | Havnelageret",
+      "shortDescription": "When this warehouse was finished in 1920, it was described as the largest concrete building in Europe, and standing beneath its long…",
+      "longDescription": "When this warehouse was finished in 1920, it was described as the largest concrete building in Europe, and standing beneath its long, many-windowed front, that's not a hard claim to believe.\n\nIt was designed by Bredo Henrik Berntsen and built between 1916 and 1920, when wartime shipping was booming and Oslo needed somewhere vast to store the grain and goods arriving by sea, and eleven floors on soft harbour ground called for serious foundations, so the building stands on a hundred and thirty pillars resting on some fifteen hundred and fifty piles.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-havnelageret_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-havnelageret_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0dfd4f0b-d04d-5b1d-a8ed-9be55aebf0c1",
+          "order": 0,
+          "title": "Harbour Warehouse | Havnelageret",
+          "caption": "On the quayside along Langkaia, below the warehouse’s long front and tower.",
+          "latitude": 59.90768161030916,
+          "longitude": 10.746880015764372,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-havnelageret.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-havnelageret_hero.webp",
+          "transcriptText": "When this warehouse was finished in 1920, it was described as the largest concrete building in Europe, and standing beneath its long, many-windowed front, that's not a hard claim to believe.\n\nYour best vantage is the quayside along Langkaia, close to the water, so that the building known as Havnelageret, the Harbour Warehouse, fills your view, with its tower rising above the roofline and the Opera House a short walk away to the east.\n\nIt was designed by Bredo Henrik Berntsen and built between 1916 and 1920, when wartime shipping was booming and Oslo needed somewhere vast to store the grain and goods arriving by sea, and eleven floors on soft harbour ground called for serious foundations, so the building stands on a hundred and thirty pillars resting on some fifteen hundred and fifty piles.\n\nDuring the Second World War, all that concrete made it useful for something else entirely, and the fourth floor served as a shelter for civilians, before a conversion in 1983 turned the warehouse into offices for shipowners, financiers and oil companies and painted it pink, which earned it the nickname the pink palace of Bjørvika.\n\nThe real story here is that the harbour moved but the building stayed, so the warehouse that once served ships now looks out over a waterfront given over to culture, with the opera, the library and the Munch museum lined up beside it, and in that sense it's the hinge between the working port Oslo was and the city it has become.\n\nWalk east along the water to the Opera House and climb its roof, then look back, since from up there the old warehouse and its tower sit squarely in view, and you can see just how much of the harbour this one building used to command."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.90768161030916,
+      "centroidLongitude": 10.746880015764372,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Maritime",
+        "War",
+        "Waterfront",
+        "Designed by a Master",
+        "Bredo Henrik Berntsen"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "44453301-37bb-53a6-8aef-bd47b9ca14b5",
+      "createdAt": "2026-10-21",
+      "title": "Moniker Oslo",
+      "shortDescription": "This is Moniker, a fashion shop that decided to have five personalities instead of one, and borrowed each of them from a remarkable woman.…",
+      "longDescription": "This is Moniker, a fashion shop that decided to have five personalities instead of one, and borrowed each of them from a remarkable woman.\n\nMoniker opened in the spring of 2020, hardly the easiest moment to launch a shop, and its interior, designed by Snøhetta across some eight hundred square metres, is divided into departments that each take their mood from a different woman: Peggy Guggenheim for the eccentric and maximalist, Grace Jones for bright colour and bold geometry, Jane Birkin for the romantic and bohemian, Hedy Lamarr for glamour, and the Victorian traveller Isabella Bird for curiosity.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-moniker_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e9339627-27e1-5cc4-afa8-50f10b56a24b",
+          "order": 0,
+          "title": "Moniker Oslo",
+          "caption": "On Valkyrie plass in Majorstuen, just inside the door at Valkyriegata three.",
+          "latitude": 59.928428636715275,
+          "longitude": 10.71855729856756,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-moniker.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-moniker_hero.webp",
+          "transcriptText": "This is Moniker, a fashion shop that decided to have five personalities instead of one, and borrowed each of them from a remarkable woman.\n\nValkyrie plass, the little square in Majorstuen where Valkyriegata meets Bogstadveien, is the spot, with trams rattling through and the shop's entrance at Valkyriegata three ahead of you, so step through the door and pause just inside to get your bearings.\n\nMoniker opened in the spring of 2020, hardly the easiest moment to launch a shop, and its interior, designed by Snøhetta across some eight hundred square metres, is divided into departments that each take their mood from a different woman: Peggy Guggenheim for the eccentric and maximalist, Grace Jones for bright colour and bold geometry, Jane Birkin for the romantic and bohemian, Hedy Lamarr for glamour, and the Victorian traveller Isabella Bird for curiosity.\n\nEven the logo joins in, appearing in five typographic variations drawn from one shared grid, so that the name shifts its character as you move through the rooms, much as the rails do.\n\nUpstairs you'll find Moniker Man and Moniker Sport, added later, and the labels on the shop floor run from Ganni and Acne Studios to Totême and Zimmermann.\n\nTaken as a whole, it's a quiet argument against the identikit department store, because rather than one polished look repeated floor after floor, you get a cast of characters, and you're invited to work out which of them you'd most like to borrow from today.\n\nWhen you come back out onto the square, spare a thought for what lies under your feet, since a metro station operated beneath Valkyrie plass until 1985, and although it has long been closed, trains still rumble through the tunnel below."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.928428636715275,
+      "centroidLongitude": 10.71855729856756,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "Contemporary",
+        "Designed by a Master",
+        "Snøhetta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d2bae9da-b93b-5f10-81eb-ca8b8181c32d",
+      "createdAt": "2026-10-21",
+      "title": "MUNCH",
+      "shortDescription": "Look at the top of the building before you and you'll see it tip forward, as though the upper floors were leaning in for a better look at the…",
+      "longDescription": "Look at the top of the building before you and you'll see it tip forward, as though the upper floors were leaning in for a better look at the Opera House and the old city across the water.\n\nThis is MUNCH, designed by the Spanish studio of Juan Herreros, which won the competition in 2009, and opened by King Harald in October 2021, standing just over fifty-seven metres tall, and opinion in Oslo has been divided about it, with some admiring its boldness and others finding it severe.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4f7c2320-2f96-5ca8-9cd0-e27a5a646813",
+          "order": 0,
+          "title": "MUNCH",
+          "caption": "On the open quayside at the museum’s foot, far enough back to see all thirteen storeys.",
+          "latitude": 59.9058,
+          "longitude": 10.7546,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-munch.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-munch_hero.webp",
+          "transcriptText": "Look at the top of the building before you and you'll see it tip forward, as though the upper floors were leaning in for a better look at the Opera House and the old city across the water.\n\nFrom the open quayside at the museum's foot, step back far enough to take in all thirteen storeys, wrapped in panels of recycled, perforated aluminium that shift from silvery to almost see-through depending on the light and the angle you catch them from.\n\nThis is MUNCH, designed by the Spanish studio of Juan Herreros, which won the competition in 2009, and opened by King Harald in October 2021, standing just over fifty-seven metres tall, and opinion in Oslo has been divided about it, with some admiring its boldness and others finding it severe.\n\nWhat it protects is the gift of a lifetime, because in 1940 Edvard Munch left his own works to the city, close to twelve hundred paintings, around seven thousand drawings and more than eighteen thousand prints, the largest collection of his work anywhere.\n\nThe way The Scream is shown is rather touching, since three versions take turns on the fourth floor, so that one is always on view while the other two rest in darkness, protecting their fragile pigments, paper and card from the light.\n\nThe thing to hold onto is this: a museum whose most famous treasures must be kept out of the light has wrapped itself in a skin built for filtering light, which seems to me a fitting tribute to a painter who spent his life chasing moods of light and shadow.\n\nOnce inside, head for the fourth floor and see which Scream is having its turn when you arrive, then carry on up to the higher floors, where the big windows look straight back over Bjørvika and the fjord."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.9058,
+      "centroidLongitude": 10.7546,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Waterfront",
+        "Contemporary",
+        "Iconic Landmark",
+        "Viewpoint",
+        "Designed by a Master",
+        "Juan Herreros"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ddb28d0f-9d5e-50ca-a63c-4a8cb2eeec3e",
+      "createdAt": "2026-10-21",
+      "title": "Oslo City Hall | Oslo rådhus",
+      "shortDescription": "Every year on the tenth of December, the Nobel Peace Prize is presented inside this building, in a great hall that, for the rest of the year…",
+      "longDescription": "Every year on the tenth of December, the Nobel Peace Prize is presented inside this building, in a great hall that, for the rest of the year, belongs to civic receptions and to anyone who wanders in.\n\nThose reliefs are the Yggdrasil frieze by Dagfin Werenskiold, telling stories from Norse myth around the great world tree, including the Norns watering it from their well, and they're cut from pine, soaked in linseed oil, then painted and gilded so they can stand up to the Oslo weather.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-city-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-city-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-city-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-city-hall_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-city-hall_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-city-hall_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2a0f5ea5-c871-5524-927b-9250d29ce7ff",
+          "order": 0,
+          "title": "Oslo City Hall | Oslo rådhus",
+          "caption": "In the courtyard facing Fridtjof Nansens plass, among the carved Yggdrasil reliefs.",
+          "latitude": 59.91248757682052,
+          "longitude": 10.733869345264628,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-oslo-city-hall.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-city-hall_hero.webp",
+          "transcriptText": "Every year on the tenth of December, the Nobel Peace Prize is presented inside this building, in a great hall that, for the rest of the year, belongs to civic receptions and to anyone who wanders in.\n\nIn the courtyard on the city side of the Rådhus, facing Fridtjof Nansens plass, the two square brick towers rise ahead of you, and along the walls around you runs a series of carved wooden reliefs, painted and touched with gold.\n\nThose reliefs are the Yggdrasil frieze by Dagfin Werenskiold, telling stories from Norse myth around the great world tree, including the Norns watering it from their well, and they're cut from pine, soaked in linseed oil, then painted and gilded so they can stand up to the Oslo weather.\n\nThe towers look like twins but aren't, since the eastern one is sixty-six metres tall and the western one sixty-three, and the eastern tower also holds a carillon of forty-nine bells, while on this north side you can look out, too, for the building's astronomical clock.\n\nArnstein Arneberg and Magnus Poulsson won the design competition in 1918, the foundation stone went down in 1931, and after the war interrupted everything, the building finally opened on the fifteenth of May 1950, for the city's nine-hundredth anniversary, on ground where the crowded old neighbourhood of Pipervika had been cleared away.\n\nHere's a thought to carry inside: because it took more than thirty years to finish, this building ended up telling the story of a city before and after occupation, and the murals in the main hall, by Henrik Sørensen and Alf Rolfsen, trace that story in paint, from everyday working life to the war years.\n\nWhen you're ready, walk through to the harbour side, Rådhusplassen, and look back at the towers from the water's edge, and listen out for the carillon drifting across the square."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.91248757682052,
+      "centroidLongitude": 10.733869345264628,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Architecture",
+        "Power",
+        "Public Art",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Arnstein Arneberg",
+        "Magnus Poulsson"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5d1f8221-725a-5578-a79e-7c089c2a8014",
+      "createdAt": "2026-10-21",
+      "title": "Oslo Opera House | Operahuset",
+      "shortDescription": "Most opera houses would much rather you kept off the roof, but this one was designed so that you'd walk straight up it. That white ramp rising…",
+      "longDescription": "Most opera houses would much rather you kept off the roof, but this one was designed so that you'd walk straight up it.\n\nSnøhetta won the competition for the Norwegian National Opera and Ballet from some three hundred and fifty entries, and the building opened in April 2008, in the presence of King Harald and Queen Margrethe of Denmark, and rather unusually for a public building, it came in under budget. The surfaces under your feet are Carrara marble and white granite, which is why so many people, looking across the water, compare it to ice sliding into the fjord.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-opera-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-opera-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-opera-house_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-opera-house_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7228aa71-1145-5976-870b-f555f8d9e637",
+          "order": 0,
+          "title": "Oslo Opera House | Operahuset",
+          "caption": "At the foot of the white marble ramp that rises to the roof, by the waterfront.",
+          "latitude": 59.90760102792315,
+          "longitude": 10.753130448305486,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-oslo-opera-house.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-oslo-opera-house_hero.webp",
+          "transcriptText": "Most opera houses would much rather you kept off the roof, but this one was designed so that you'd walk straight up it.\n\nThat white ramp rising ahead of you is the roof itself, angled down to meet the waterfront so that anyone can stroll up, with the tall glass wall of the foyer set into its side and the stage tower, clad in white aluminium, standing above it all.\n\nSnøhetta won the competition for the Norwegian National Opera and Ballet from some three hundred and fifty entries, and the building opened in April 2008, in the presence of King Harald and Queen Margrethe of Denmark, and rather unusually for a public building, it came in under budget. The surfaces under your feet are Carrara marble and white granite, which is why so many people, looking across the water, compare it to ice sliding into the fjord.\n\nLook up at the stage tower and you'll see its aluminium panels are patterned, an echo of old weaving designs, and if you peer through the foyer glass, which rises some fifteen metres, you'll catch the warm oak inside, a deliberate contrast with the cool white shell.\n\nIf there's a single idea here, it's that a national opera house shouldn't belong only to people with tickets, and in that sense the roof is the building's real performance, running every day, free of charge, with tourists, families and office workers on their lunch break as the cast.\n\nBefore you climb, look out on the water beside the building for She Lies, a sculpture of stainless steel and glass by Monica Bonvicini, which floats on the fjord and shifts with the tide and wind, then walk to the very top of the roof for a view right across the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 98,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.90760102792315,
+      "centroidLongitude": 10.753130448305486,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Architecture",
+        "Waterfront",
+        "Contemporary",
+        "Iconic Landmark",
+        "Viewpoint",
+        "Free to Visit",
+        "Public Art",
+        "Designed by a Master",
+        "Snøhetta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cf499e05-7751-59fe-b83b-eece14040d16",
+      "createdAt": "2026-10-21",
+      "title": "Sommerro",
+      "shortDescription": "For most of the twentieth century, people came into this building to pay their electricity bills, beneath a mural celebrating the joys of being…",
+      "longDescription": "For most of the twentieth century, people came into this building to pay their electricity bills, beneath a mural celebrating the joys of being plugged into the modern world.\n\nAndreas Bjercke and Georg Eliassen won the design competition back in 1917, though building didn't begin until 1927, and by the time it opened in the early 1930s the company had renamed itself Oslo Lysverker and spent generously on art, with twenty-four reliefs by the sculptor Asbjørg Borgfelt and murals and a mosaic by Per Krohg.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-sommerro_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-sommerro_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-sommerro_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-sommerro_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "655382a7-20a0-5530-a614-77246f6971f8",
+          "order": 0,
+          "title": "Sommerro",
+          "caption": "On Sommerrogata near Solli plass, facing the long block of the old electricity company.",
+          "latitude": 59.91539461093402,
+          "longitude": 10.719643016812682,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-sommerro.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-sommerro_hero.webp",
+          "transcriptText": "For most of the twentieth century, people came into this building to pay their electricity bills, beneath a mural celebrating the joys of being plugged into the modern world.\n\nSommerrogata, a few steps from Solli plass on the edge of Frogner, is where you'll find it, and the building facing you is the long, sober block with its rows and rows of windows, once the headquarters of the city's electricity company and now the Sommerro hotel.\n\nAndreas Bjercke and Georg Eliassen won the design competition back in 1917, though building didn't begin until 1927, and by the time it opened in the early 1930s the company had renamed itself Oslo Lysverker and spent generously on art, with twenty-four reliefs by the sculptor Asbjørg Borgfelt and murals and a mosaic by Per Krohg.\n\nIt also held something unexpected for a power company, Vestkantbadet, a public bath that opened in 1932, which has been restored as part of the hotel, Krohg's mosaic wall and hand-painted blue tiles included, with the old Roman-style pool serving as a cold plunge.\n\nThe hotel opened in September 2022 after a five-year renovation, with the city's conservation office insisting that the stair, the bath, the foyer and the hall keep their original character, while a new disc-shaped addition on the roof holds a pool, a sauna and a restaurant.\n\nWhat strikes me most is the optimism of it all, since here was a utility company treating a trip to pay the bill as an occasion worth decorating, and nearly a century on, that same generosity is what makes the building feel like a gift to the city rather than simply a hotel.\n\nDo step inside, if you can, and find Ekspedisjonshallen, the old public hall that's now the all-day dining room, where Per Krohg's mural still looks down over the spot where the cashiers' tills once stood."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.91539461093402,
+      "centroidLongitude": 10.719643016812682,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "History",
+        "Designed by a Master",
+        "Bjercke & Eliassen"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "90574406-3020-589b-b385-e0684aff6f56",
+      "createdAt": "2026-10-21",
+      "title": "Summit Bar",
+      "shortDescription": "On a clear evening, high above Holbergs gate, Oslo spreads out beneath you, from the fjord and its islands to the dark, wooded ridges that wrap…",
+      "longDescription": "On a clear evening, high above Holbergs gate, Oslo spreads out beneath you, from the fjord and its islands to the dark, wooded ridges that wrap round the city.\n\nIt was designed by Snøhetta and opened in 2016, and the idea was to capture the feeling of standing on top of a mountain, with seating on two levels, linked by ramps so that everyone can reach both, and a natural palette drawn from the landscape outside.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-summit-bar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-summit-bar_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3d870555-5aa5-5df0-95fb-08e5a50e3b13",
+          "order": 0,
+          "title": "Summit Bar",
+          "caption": "Twenty-one storeys up, at the top of the Radisson Blu Scandinavia on Holbergs gate.",
+          "latitude": 59.91852162263217,
+          "longitude": 10.73412902687948,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-summit-bar.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-summit-bar_hero.webp",
+          "transcriptText": "On a clear evening, high above Holbergs gate, Oslo spreads out beneath you, from the fjord and its islands to the dark, wooded ridges that wrap round the city.\n\nTwenty-one storeys up, right at the top of the Radisson Blu Scandinavia Hotel, the bar you've stepped into is arranged around its windows, with a raised floor running along the glass so that even from the seats further back you can see out over the rooftops.\n\nIt was designed by Snøhetta and opened in 2016, and the idea was to capture the feeling of standing on top of a mountain, with seating on two levels, linked by ramps so that everyone can reach both, and a natural palette drawn from the landscape outside.\n\nLook for the two walls that do most of the storytelling: on one side a dark, sky-blue wall, and on the other a wall of warm brass that the architects likened to fire, so that you're sitting, in effect, between the evening sky and the hearth.\n\nThere's a third trick that's easy to miss, because the remaining wall is highly reflective, and after dark the bar's own warm light seems to dissolve into the reflections of the city, which makes the room feel bigger and the view wider still.\n\nAnd here's the thing: in a country where walking up a mountain and then warming up by a fire is close to a national pastime, someone has managed to bottle that whole ritual into a hundred and forty square metres, without any of the hiking.\n\nFind a seat by the glass and, if the evening is clear, look north-west towards the hills, where you may be able to pick out the Holmenkollen ski jump on the skyline, and remember the bar opens from four in the afternoon, Monday to Saturday."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.91852162263217,
+      "centroidLongitude": 10.73412902687948,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "After Dark",
+        "Contemporary",
+        "Designed by a Master",
+        "Snøhetta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2e9e6004-13c3-51a8-8e53-33774ab06326",
+      "createdAt": "2026-10-21",
+      "title": "Vigeland Park | Vigelandsparken",
+      "shortDescription": "A hundred and twenty-one human figures climb towards the sky on the column in front of you, all of them carved from a single block of granite…",
+      "longDescription": "A hundred and twenty-one human figures climb towards the sky on the column in front of you, all of them carved from a single block of granite, and it took four stone carvers some thirteen years to free them.\n\nThe stone came from Iddefjord, in the far south-east of Norway, and arrived here in the late 1920s, and although Gustav Vigeland designed it, the carving itself was done by those four craftsmen, working directly into the granite, while Vigeland once described the column as his religion.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4d39ec12-8f47-55e5-8eb2-48f2f5b93fbd",
+          "order": 0,
+          "title": "Vigeland Park | Vigelandsparken",
+          "caption": "On the stepped platform at the park’s highest point, below the Monolith.",
+          "latitude": 59.927477079433324,
+          "longitude": 10.700871023838626,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-vigeland-park.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-vigeland-park_hero.webp",
+          "transcriptText": "A hundred and twenty-one human figures climb towards the sky on the column in front of you, all of them carved from a single block of granite, and it took four stone carvers some thirteen years to free them.\n\nThe granite column before you, on the highest point of the park, is the Monolith, seventeen metres tall and raised on a broad stepped platform where groups of stone figures gather around its base, so stand back far enough to see the very top, where the smallest figures, the children, are clustered.\n\nThe stone came from Iddefjord, in the far south-east of Norway, and arrived here in the late 1920s, and although Gustav Vigeland designed it, the carving itself was done by those four craftsmen, working directly into the granite, while Vigeland once described the column as his religion.\n\nEverything around you is his, too, because in 1921 Vigeland reached an agreement with the city of Oslo that shaped the rest of his working life, and the result is more than two hundred sculptures in bronze and granite, laid out along a single line that runs from the main gates, over a hundred-metre bridge lined with fifty-eight bronze figures, past the fountain and up the steps to here.\n\nI always think the park makes most sense read as one long story about being human, from childhood to old age, through love, quarrels and grief, and the Monolith is where that story stops being ordinary life and becomes something closer to longing, with people pressing upwards and nobody quite sure what waits at the top.\n\nFrom here, walk back down the axis towards the bridge and look for Sinnataggen, the furious little boy stamping his foot, whose hand has been rubbed shiny by visitors hoping for a bit of luck, and since the park is free and open all year, it rewards a second visit on a quieter morning."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.927477079433324,
+      "centroidLongitude": 10.700871023838626,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Park",
+        "Art",
+        "Public Art",
+        "Green Escape",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Gustav Vigeland"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "30ddfe99-5f42-56dc-8bea-fd05a38724f2",
+      "createdAt": "2026-10-21",
+      "title": "Tim Wendelboe",
+      "shortDescription": "Here's what I love about this little espresso bar: from the day it opened in the summer of 2007, it has sold coffee and nothing else, with milk…",
+      "longDescription": "Here's what I love about this little espresso bar: from the day it opened in the summer of 2007, it has sold coffee and nothing else, with milk and sugar about the only additions you'll be offered.\n\nTim Wendelboe himself won the World Barista Championship in 2004 and the World Cup Tasters Championship the following year, and before opening here he ran staff training at the Oslo coffee company Stockfleths, so this place was always meant as much as a training centre and a showroom as a café.",
+      "makerId": "69406f5a-56cf-5e65-bd64-d1091e3824ca",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-tim-wendelboe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-tim-wendelboe_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cfd8f8b2-0769-56a4-86c8-5c92d28af46a",
+          "order": 0,
+          "title": "Tim Wendelboe",
+          "caption": "At Grüners gate one in Grünerløkka, by the small, plain shopfront.",
+          "latitude": 59.92349532498528,
+          "longitude": 10.755654023698602,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-tim-wendelboe.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osl-tim-wendelboe_hero.webp",
+          "transcriptText": "Here's what I love about this little espresso bar: from the day it opened in the summer of 2007, it has sold coffee and nothing else, with milk and sugar about the only additions you'll be offered.\n\nGrüners gate one, in Grünerløkka, has a small, plain shopfront that's easy to miss, so look for the name, then step inside, where the room is arranged around the bar and the coffees on offer change from one day to the next.\n\nTim Wendelboe himself won the World Barista Championship in 2004 and the World Cup Tasters Championship the following year, and before opening here he ran staff training at the Oslo coffee company Stockfleths, so this place was always meant as much as a training centre and a showroom as a café.\n\nThe beans are now roasted in larger premises on Tøyengata, where the roastery moved in 2018, and they're bought directly from farmers in Kenya, Ethiopia, Colombia, Honduras and El Salvador, whom the team visits every year, and since 2019 they've even owned a farm of their own, Finca El Suelo, in the Huila region of Colombia.\n\nThe radical part, though, isn't the coffee itself but the paperwork, because the company publishes what it pays for its green coffee, and in an industry where prices are often kept quiet, that kind of openness turns a cup of coffee into a small statement about how trade could work.\n\nAsk what's on today and, if you're with someone, order two different coffees to compare, because tasting them together is the quickest way to understand what all that care at origin actually does to the cup."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 59.92349532498528,
+      "centroidLongitude": 10.755654023698602,
+      "city": "Oslo",
+      "country": "Norway",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
