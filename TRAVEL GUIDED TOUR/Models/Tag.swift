@@ -229,6 +229,7 @@ enum Tag {
             "Karl Henrik Nøstvik", "David Mutiso", "Richard Hughes",
             "Enrico Marconi", "Władysław Marconi", "Juliusz Dzierżanowski", "JEMS Architekci", "Zygmunt Stępiński", "Lev Rudnev", "Thomas Phifer", "Stefan Szyller", "Lahdelma & Mahlamäki", "Marek Budzyński", "Zbigniew Badowski", "Irena Bajerska", "Piotr Wicha", "Domenico Merlini", "Józef Sigalin", "Stanisław Jankowski", "Bohdan Lachert", "Józef Szanajca",
             "Snøhetta", "Bjercke & Eliassen", "Narud Stokke Wiig", "Lundhagem", "Bredo Henrik Berntsen", "Juan Herreros", "Arnstein Arneberg", "Magnus Poulsson", "Gustav Vigeland",
+            "Antonio Landi", "Francisco Bolonha", "Natureza Urbana",
         ]),
     ]
 
