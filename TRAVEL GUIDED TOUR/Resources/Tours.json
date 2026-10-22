@@ -27474,13 +27474,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
+        "31622691-CCC7-57D6-809D-7755DEF89B75",
         "be422529-4b8f-47f2-be8a-723bb4a354f5",
         "944b321c-dc24-4531-bbe0-6db9d22228ea",
         "5dae724d-b494-4886-b056-e2e276b40ded",
         "96FD0D11-2F4D-5C88-90CB-3B8BD6939937",
         "52c5e3dd-828a-4316-b841-1325f7ccb122",
-        "FA3CB786-16F4-594A-A732-6917B66C12DE",
-        "3838498C-4F6B-5D6E-9415-41ABCC072CD9"
+        "FA3CB786-16F4-594A-A732-6917B66C12DE"
       ],
       "primaryCategory": "culturalHeritage",
       "priceUSD": 0
@@ -214099,9 +214099,9 @@
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
         "E16440DF-6177-5D98-B2CA-05483B2445D7",
         "39A2BCF0-12A1-5225-9D1A-24F08824B0EB",
+        "44CE9E59-31E5-5688-82B8-8A1BD6F89944",
         "9932791e-1c59-4c12-8616-31bd0db64a94",
-        "9D1DBFB4-AAC3-5B06-BCEF-53A1AB3F8E8F",
-        "0CA51A97-EDCC-53DB-89D5-6891E48080FF"
+        "9D1DBFB4-AAC3-5B06-BCEF-53A1AB3F8E8F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -246060,12 +246060,12 @@
       "relatedTourIds": [
         "5A5E2A1A-D752-55A3-B09B-58ADEB1F4F42",
         "60944363-58DF-54B1-90A4-EC2018EB3D19",
+        "44CE9E59-31E5-5688-82B8-8A1BD6F89944",
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
         "E16440DF-6177-5D98-B2CA-05483B2445D7",
         "3EE590DE-AF5B-5194-9D02-8EA11637E8A1",
         "3D739E82-5C7D-541E-B9AF-A1EDD2969682",
-        "9932791e-1c59-4c12-8616-31bd0db64a94",
-        "F0A53ABF-BA6B-5B13-8D1B-901A4A8118BD"
+        "9932791e-1c59-4c12-8616-31bd0db64a94"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -308047,7 +308047,7 @@
         "9FE0FC12-0930-567A-82C1-F97AFA8A8450",
         "F0A53ABF-BA6B-5B13-8D1B-901A4A8118BD",
         "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
-        "AFF1A476-13E1-5E93-8ECB-A848822ECF56"
+        "44CE9E59-31E5-5688-82B8-8A1BD6F89944"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -348334,6 +348334,7 @@
       "relatedTourIds": [
         "9FE0FC12-0930-567A-82C1-F97AFA8A8450",
         "60944363-58DF-54B1-90A4-EC2018EB3D19",
+        "44CE9E59-31E5-5688-82B8-8A1BD6F89944",
         "E16440DF-6177-5D98-B2CA-05483B2445D7",
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
         "9932791e-1c59-4c12-8616-31bd0db64a94"
@@ -368059,6 +368060,16 @@
       "centroidLongitude": -0.1445821,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "9FE0FC12-0930-567A-82C1-F97AFA8A8450",
+        "5A5E2A1A-D752-55A3-B09B-58ADEB1F4F42",
+        "60944363-58DF-54B1-90A4-EC2018EB3D19",
+        "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
+        "9932791e-1c59-4c12-8616-31bd0db64a94",
+        "E16440DF-6177-5D98-B2CA-05483B2445D7",
+        "0CA51A97-EDCC-53DB-89D5-6891E48080FF",
+        "BC6BC2ED-B4E6-5689-AE1D-5B9BB3FBD6CE"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Performance",
@@ -368149,6 +368160,16 @@
       "centroidLongitude": -0.1670208,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "ed4ab3f3-8fc3-4446-a90e-a02ee599b20f",
+        "D5CA2D2C-1C38-5620-B01D-C655A03F3C73",
+        "5398A277-7B0E-5B48-8C00-859C184D9066",
+        "D7A027D1-B53A-5999-8600-1502545E94ED",
+        "2D2F4D34-7AD6-5C60-AAEC-5C57F3D56D32",
+        "04B97DE4-5B93-5A7D-BC72-040165B8A046",
+        "2B58395C-F644-514E-A841-D047C5F0C8B3",
+        "1BE97272-8B4C-5006-AB11-96DC56A46C92"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Performance",
@@ -368194,6 +368215,9 @@
       "centroidLongitude": -0.1355432,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "31622691-CCC7-57D6-809D-7755DEF89B75"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Performance",
@@ -368239,6 +368263,16 @@
       "centroidLongitude": -0.0812099,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "c5c86612-76b3-46cd-a9c6-ca8b5337f190",
+        "04B97DE4-5B93-5A7D-BC72-040165B8A046",
+        "2B58395C-F644-514E-A841-D047C5F0C8B3",
+        "FCFC4470-8DF0-5E52-AE9F-6B2A76B4B9F8",
+        "5EF8048A-145D-57E3-9291-F901E2CB3CC9",
+        "31622691-CCC7-57D6-809D-7755DEF89B75",
+        "D7A027D1-B53A-5999-8600-1502545E94ED",
+        "DB1AA144-9929-578D-8CB2-2E60C0A532F1"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Performance",
