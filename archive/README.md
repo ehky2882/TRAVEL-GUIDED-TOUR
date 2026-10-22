@@ -373,4 +373,5 @@ Full text for every one of them is in
 - [HANDOFF-261020-warsaw.md](HANDOFF-261020-warsaw.md) — **Warsaw launches:** Atlas Studio WAW 🇵🇱, the 48th studio, 34 singles + 18 architect tags; Palace of Culture and University Library place questions for Edward.
 - [HANDOFF-261021-oslo.md](HANDOFF-261021-oslo.md) — **Oslo launches:** Atlas Studio OSL 🇳🇴, the 49th studio, 17 singles + 9 architect tags (Snøhetta among them); Opera House and Deichman place questions for Edward.
 - [HANDOFF-261021-belem.md](HANDOFF-261021-belem.md) — **Belém launches:** Atlas Studio BEL 🇧🇷, the 50th studio, 10 singles + 3 architect tags (Muamba held on its location question); Museu das Amazônias dating for Edward.
+- [HANDOFF-261022-helsinki.md](HANDOFF-261022-helsinki.md) — **Helsinki launches:** Atlas Studio HEL 🇫🇮, the 51st studio, 19 singles + 11 architect tags (Eliel Saarinen among them); Katajanokka moved ~330 m to Luotsikatu; no places.
 - [HANDOFF-261020-triage-batch.md](HANDOFF-261020-triage-batch.md) — **26-pin triage batch** from 17 creators (5 new). TikTok oEmbed went blank, so make-link-pin.py now reads the video page. 9 stack-on-existing place questions for Edward.
