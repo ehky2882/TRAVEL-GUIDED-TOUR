@@ -5621,6 +5621,16 @@
       "websiteURL": null
     },
     {
+      "id": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "displayName": "Atlas Studio HEL",
+      "platform": "dozent",
+      "handle": "atlas.hel",
+      "avatarURL": null,
+      "avatarEmoji": "🇫🇮",
+      "bio": "Atlas Studio's Helsinki bureau — the granite capital on the Baltic, where Saarinen's station and the Aaltos' furniture set the tone, the saunas and swimming halls keep their own rules, and the kitchens bake Karelian pies and cook as close to zero waste as they can.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -11550,10 +11560,10 @@
         "CCA55540-D608-5275-A25B-E06803AB708D",
         "0128056F-C30B-5DA1-865B-334AF49AF818",
         "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "8f8cabb3-ad8c-5ebb-990b-48166e827932",
         "a4acf61e-ad8b-560d-b0c6-a5545f8b92b3",
-        "177004b7-279b-5351-bc53-9fa3ae4e3dee",
-        "af027d67-cf8c-5667-a977-2b6a3554227d"
+        "177004b7-279b-5351-bc53-9fa3ae4e3dee"
       ],
       "walkingDistanceMeters": null
     },
@@ -98535,8 +98545,8 @@
         "B3CC1B62-7371-5BA2-AE69-E3C4F9BD284A",
         "5c3fd907-141d-5d71-97bb-f3c4a542ebc7",
         "bd6cb95b-0f40-5929-94b4-e8d88b8b1b4b",
-        "121c5e14-92d3-524f-a947-cc7751d93a00",
-        "65087606-b1f8-5989-bb06-f40d0bafd514"
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
+        "121c5e14-92d3-524f-a947-cc7751d93a00"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -121320,12 +121330,12 @@
       "relatedTourIds": [
         "0EBB25E3-90CE-5AE7-A8F4-80E6F18ACF13",
         "D1B6D16D-436B-51C8-B843-0D20A891608F",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "daa173c2-95ff-5cf7-93fc-854e933f9c14",
         "A30040D9-3057-51C3-B701-E4FF776090F5",
         "7236b5e0-cb1a-5e87-9025-39caf99916cf",
         "B8100F58-3A4A-5869-8E8B-9A97446A84F2",
-        "c83fc832-9dbd-5ef0-b4e1-7a35de0b1539",
-        "a6caddc6-3c4a-576c-992d-d5869c90476d"
+        "c83fc832-9dbd-5ef0-b4e1-7a35de0b1539"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122104,9 +122114,9 @@
         "64DE0FCC-52DB-59F1-808E-D401482EE5FA",
         "7a871c32-8514-51de-840f-3ab30d79b32d",
         "1b99637c-aec0-5714-b104-04849a1d97ee",
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
         "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
-        "c4041071-0993-50d9-a14f-2f623fb387e3",
-        "da803a7d-61a5-44c7-a1b0-7c9f35994e64"
+        "c4041071-0993-50d9-a14f-2f623fb387e3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -133795,6 +133805,1103 @@
         "History",
         "Waterfront",
         "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e699c7d4-f383-5431-b712-5c3721bcf901",
+      "createdAt": "2026-10-22",
+      "title": "Artek 2nd Cycle",
+      "shortDescription": "The chairs in this shop are valued for precisely the things most shops would try to hide: the scuffs, the scratches and the faint rings left by…",
+      "longDescription": "The chairs in this shop are valued for precisely the things most shops would try to hide: the scuffs, the scratches and the faint rings left by decades of other people's coffee cups.\n\nArtek itself was founded in Helsinki in 1935 by Alvar and Aino Aalto with two partners, and its name was coined to bring art and technology together. Look in the window for its best-known product, the Stool 60, a round seat on three bent birch legs that Alvar Aalto designed in the early 1930s and that the company still makes today.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-artek-2nd-cycle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-artek-2nd-cycle_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-artek-2nd-cycle_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dd85265a-c608-5040-98f9-527a79a08208",
+          "order": 0,
+          "title": "Artek 2nd Cycle",
+          "caption": "On Pieni Roobertinkatu, a block south of the Esplanadi, at the shop window of stools and chairs.",
+          "latitude": 60.16420954883189,
+          "longitude": 24.947135813911856,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-artek-2nd-cycle.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-artek-2nd-cycle_hero.webp",
+          "transcriptText": "The chairs in this shop are valued for precisely the things most shops would try to hide: the scuffs, the scratches and the faint rings left by decades of other people's coffee cups.\n\nPieni Roobertinkatu is the short side street you've turned into, a block south of the Esplanadi, and the shopfront at numbers four to six belongs to Artek 2nd Cycle, its window usually holding a few stools and chairs whose birch has mellowed to the colour of honey.\n\nArtek itself was founded in Helsinki in 1935 by Alvar and Aino Aalto with two partners, and its name was coined to bring art and technology together. Look in the window for its best-known product, the Stool 60, a round seat on three bent birch legs that Alvar Aalto designed in the early 1930s and that the company still makes today.\n\nThe idea of selling these pieces second-hand took shape around 2006, and the British designer Tom Dixon, then working with Artek, helped launch it: over roughly six months the team gathered about four hundred used Aalto pieces from old people's homes, factories, schools and libraries across Finland. When the first batch went on show in London in 2007, every chair carried a radio tag that a mobile phone could read, linking it to an online record of its own past.\n\nThis shop opened in 2011 to mark the company's seventy-sixth birthday, a pleasingly unround anniversary, and its stock now reaches well beyond Aalto, to Finnish lighting, carpets, ceramics and prints from the early twentieth century to the present.\n\nWhat the shop is really selling, when you think about it, is time, because a new stool leaves the factory looking exactly like every other, while one that has spent forty years in a school canteen has gathered a character no workshop could fake, and the team reconditions each piece gently rather than sanding that history away.\n\nThe shop keeps its doors open on Thursdays and Fridays, or by appointment, and if you'd like to see Aalto furniture in its original setting, walk five minutes north to the South Esplanade, where the Savoy restaurant still occupies the rooms the Aaltos furnished in 1937."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16420954883189,
+      "centroidLongitude": 24.947135813911856,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Architecture",
+        "Modernist",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Alvar Aalto",
+        "Aino Aalto"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+      "createdAt": "2026-10-22",
+      "title": "Dance House Helsinki | Tanssin talo",
+      "shortDescription": "Finland's dancers waited a very long time for a home of their own, and when one finally arrived in 2022, it was attached to a factory that once…",
+      "longDescription": "Finland's dancers waited a very long time for a home of their own, and when one finally arrived in 2022, it was attached to a factory that once made cables.\n\nStart with the factory, which the architect Wäinö Gustaf Palmqvist designed for Nokia and which went up in stages between 1939 and 1954 to make cables, many of them for use at sea. When production wound down, artists drifted into the empty halls, and the city backed turning the whole complex into a cultural centre, now the largest in Finland.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-dance-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-dance-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-dance-house_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-dance-house_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c9a4d4ff-524d-5604-a8b5-8960062cb0fe",
+          "order": 0,
+          "title": "Dance House Helsinki | Tanssin talo",
+          "caption": "On Kaapeliaukio, the square beside the old Cable Factory, facing the steel-clad Dance House.",
+          "latitude": 60.16229966885381,
+          "longitude": 24.905851413911858,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-dance-house.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-dance-house_hero.webp",
+          "transcriptText": "Finland's dancers waited a very long time for a home of their own, and when one finally arrived in 2022, it was attached to a factory that once made cables.\n\nKaapeliaukio, the open square at the edge of the old Cable Factory, is where you've arrived, with the factory's long, pale industrial bulk stretching away on one side and, beside it, the Dance House itself, a newer block wrapped in rust-red steel, mirror-bright metal and a shimmering skin of small aluminium discs.\n\nStart with the factory, which the architect Wäinö Gustaf Palmqvist designed for Nokia and which went up in stages between 1939 and 1954 to make cables, many of them for use at sea. When production wound down, artists drifted into the empty halls, and the city backed turning the whole complex into a cultural centre, now the largest in Finland.\n\nThe Dance House, designed by JKMM Architects together with ILO Architects, opened on the second of February 2022 as the first extension in the factory's history. Inside there are two stages, the seven-hundred-seat Erkko Hall, which is entirely new, and the smaller Pannu Hall, whose name recalls the boiler that once stood in that part of the factory.\n\nNow look again at the outside, because the architects compared the building to a kite, and they hung its heavy steel walls so that they seem to float just above the ground, while on another side hundreds of aluminium discs catch the light like sequins on a costume.\n\nThat's the clever trick of the design, really: tonnes of steel made to look weightless, which is more or less what a dancer spends years of training learning to do with a body, so the building quietly performs the art it was built to house.\n\nStep into the glass-covered courtyard that serves as the shared lobby, and look for Toinen, The Other, an interactive light work by Eetu Huhtala in the entrance foyer, before wandering on through the Cable Factory's long corridors of studios and galleries."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16229966885381,
+      "centroidLongitude": 24.905851413911858,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "JKMM Architects",
+        "ILO Architects"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52b44eda-7497-5352-9b22-cca790e4eb8c",
+      "createdAt": "2026-10-22",
+      "title": "Gallery Lemmetti",
+      "shortDescription": "Telling a genuine piece of mid-century Finnish art glass from a convincing copy is a rare skill, and the man behind this small gallery has been…",
+      "longDescription": "Telling a genuine piece of mid-century Finnish art glass from a convincing copy is a rare skill, and the man behind this small gallery has been sharpening it for more than forty years.\n\nThat man is Juhani Lemmetti, who began collecting Finnish design in the early 1980s and has since assembled private collections and supplied museums abroad. In 1995 he acquired the rights to put Ilmari Tapiovaara's furniture back into production, and at this same address he once ran a design shop called Aero, which Artek later took over.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-gallery-lemmetti_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-gallery-lemmetti_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-gallery-lemmetti_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-gallery-lemmetti_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b30520bd-da2e-5ab5-b392-cee07ec93028",
+          "order": 0,
+          "title": "Gallery Lemmetti",
+          "caption": "At number eight Yrjönkatu, by the gallery window of Finnish glass, ceramics and lamps.",
+          "latitude": 60.16463773612182,
+          "longitude": 24.94341782023767,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-gallery-lemmetti.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-gallery-lemmetti_hero.webp",
+          "transcriptText": "Telling a genuine piece of mid-century Finnish art glass from a convincing copy is a rare skill, and the man behind this small gallery has been sharpening it for more than forty years.\n\nYrjönkatu's quieter stretch of stone apartment blocks is where number eight stands, and since Gallery Lemmetti opens by appointment only, its window may well be your view of it today, with glass, ceramics and lamps set out with the care of a private collection.\n\nThat man is Juhani Lemmetti, who began collecting Finnish design in the early 1980s and has since assembled private collections and supplied museums abroad. In 1995 he acquired the rights to put Ilmari Tapiovaara's furniture back into production, and at this same address he once ran a design shop called Aero, which Artek later took over.\n\nThe gallery itself opened in 2016, and its heart is glass and ceramics from Finland's great post-war decades, with art glass by Kaj Franck, Timo Sarpaneva and Oiva Toikka, ceramics by Toini Muona, and the brass lamps of Paavo Tynell. Among the pieces it has handled are an Alvar Aalto Savoy vase from 1936 and a rare 1960s Bambu vase by Toikka, which was tracked down in Australia and brought home.\n\nHere's the thought worth taking away from a place like this: Finland's designers sent their glass all over the world, and some of the finest pieces have spent decades in homes abroad, so a gallery of this kind is partly a shop and partly a slow homecoming, carried out one vase at a time.\n\nCall ahead to arrange a visit if you'd like to see inside, and in the meantime carry on along Yrjönkatu to the swimming hall at number twenty-one, whose 1920s interior is a design treasure of an entirely different kind."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16463773612182,
+      "centroidLongitude": 24.94341782023767,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Modernist",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0e7b12a6-ed24-515c-8267-9183da3d0561",
+      "createdAt": "2026-10-22",
+      "title": "Hakaniemi Market Square | Hakaniementori",
+      "shortDescription": "It's Christmas 1897, and the first traders are setting out their stalls on a brand-new square, laid on land that had only recently been…",
+      "longDescription": "It's Christmas 1897, and the first traders are setting out their stalls on a brand-new square, laid on land that had only recently been reclaimed from the water.\n\nThe square was laid out on the strip of land that once separated the islet of Siltasaari from the mainland, with food stalls joined over the years by tailors and cloth sellers and, from the 1920s, by fishmongers, and today trade still carries on here every weekday.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-hakaniemi-market-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-hakaniemi-market-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-hakaniemi-market-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-hakaniemi-market-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-hakaniemi-market-square_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ad8a16ab-8e92-5b98-a077-e6dcec15b97a",
+          "order": 0,
+          "title": "Hakaniemi Market Square | Hakaniementori",
+          "caption": "On the cobbled square, with the red-brick market hall along one edge and Paasitorni’s tower to the south-west.",
+          "latitude": 60.17917838061293,
+          "longitude": 24.951137806745884,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-hakaniemi-market-square.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-hakaniemi-market-square_hero.webp",
+          "transcriptText": "It's Christmas 1897, and the first traders are setting out their stalls on a brand-new square, laid on land that had only recently been reclaimed from the water.\n\nHakaniementori spreads out around you, a broad cobbled square framed by lime trees, and along one edge stands the long red-brick market hall, while a short way to the south-west, across the road, the tower of Paasitorni, the old Workers' House, rises above the rooftops.\n\nThe square was laid out on the strip of land that once separated the islet of Siltasaari from the mainland, with food stalls joined over the years by tailors and cloth sellers and, from the 1920s, by fishmongers, and today trade still carries on here every weekday.\n\nThe market hall opened on the first of June 1914, designed by Einar Flinckenberg and praised at the time as the largest and most modern in Europe, with grocers downstairs and more than a hundred little shops for cloth, leather and handicrafts upstairs. It closed for renovation in 2018 and reopened in April 2023, with its interior restored close to how it first looked.\n\nPaasitorni carries a different kind of history, because on the evening of the twenty-sixth of January 1918 a red lantern was raised on its tower, a signal widely regarded as the start of the Finnish Civil War, and this square has hosted May Day marches and demonstrations for as long as the workers' movement has made Hakaniemi its home.\n\nPut the two halves of the square together and they make perfect sense, because Hakaniemi has always been where the northern working districts came to buy their potatoes and herring, and also where they came to make themselves heard, so the shopping and the marching have shared these cobbles for well over a century.\n\nHead inside the hall and climb to the upper floor, where the textile and craft stalls still follow the spirit of the original plan, and if you're here on the first Sunday of the month, give yourself an hour for the fair outside."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.17917838061293,
+      "centroidLongitude": 24.951137806745884,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "33cdb1cc-da7c-548b-a089-354c56c997a3",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Public Square",
+        "Food",
+        "Commerce",
+        "History",
+        "Power",
+        "Free to Visit",
+        "Designed by a Master",
+        "Einar Flinckenberg"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+      "createdAt": "2026-10-22",
+      "title": "Katajanokka",
+      "shortDescription": "This whole neighbourhood is named after a juniper bush that was never really there, thanks to a slip of the ear between two languages.…",
+      "longDescription": "This whole neighbourhood is named after a juniper bush that was never really there, thanks to a slip of the ear between two languages.\n\nThe name means Juniper Point in Finnish, but the story goes that Finnish speakers misheard the Swedish word for a point, skata, as kataja, their own word for juniper, and the mistake simply stuck.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-katajanokka_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-katajanokka_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "328b80ad-f486-50f5-bde0-0f23885370c8",
+          "order": 0,
+          "title": "Katajanokka",
+          "caption": "On Luotsikatu, between the Tallberg House at number one and the Aeolus House across the street.",
+          "latitude": 60.168,
+          "longitude": 24.96315,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-katajanokka.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-katajanokka_hero.webp",
+          "transcriptText": "This whole neighbourhood is named after a juniper bush that was never really there, thanks to a slip of the ear between two languages.\n\nLuotsikatu, Pilot Street, is the one to find, here in the old Art Nouveau quarter of Katajanokka, and around you the apartment blocks rise in pastel render and rough-cut granite, with turrets, bay windows and steep roofs crowding the skyline above the street corners.\n\nThe name means Juniper Point in Finnish, but the story goes that Finnish speakers misheard the Swedish word for a point, skata, as kataja, their own word for juniper, and the mistake simply stuck.\n\nLook for number one Luotsikatu, the Tallberg House, finished in 1898, which was the first competition win for the young trio of Herman Gesellius, Armas Lindgren and Eliel Saarinen, who went on to design the National Museum and, in Saarinen's case, the Central Station. They used its triangular plot to make a miniature castle, with towering slate roofs and a whiplash curve of wrought iron on the main door.\n\nAcross the street at number two, the Aeolus House of 1903 by Selim A. Lindqvist takes its name from the Greek keeper of the winds, and its decoration alludes to wind as well, above a stone ground floor, green plaster and a corner turret topped by a pointed spire.\n\nKatajanokka's real distinction is the speed of it, because at the end of the nineteenth century this was a district of shacks, and within roughly a decade stone houses had replaced them, so the quarter reads as one coherent piece, as though a single generation of architects had been handed an island to play with.\n\nFollow Luotsikatu down to the northern shore, where Finland's state icebreakers tie up between their winter tours of duty, and then circle back along the water towards the red-brick Uspenski Cathedral at the western tip of the island."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.168,
+      "centroidLongitude": 24.96315,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "2B989637-8AA6-5C71-A36C-FA019C7CEFF9",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "33cdb1cc-da7c-548b-a089-354c56c997a3"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "History",
+        "Free to Visit",
+        "Designed by a Master",
+        "Herman Gesellius",
+        "Armas Lindgren",
+        "Eliel Saarinen",
+        "Selim A. Lindqvist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+      "createdAt": "2026-10-22",
+      "title": "Konditoria Hopia",
+      "shortDescription": "Some cafés chase every new trend, but this one has stayed so faithful to its recipes and its furniture that it has come all the way round to…",
+      "longDescription": "Some cafés chase every new trend, but this one has stayed so faithful to its recipes and its furniture that it has come all the way round to feeling fashionable again.\n\nKonditoria Hopia has been baking here since 1949, and the recipe behind its most famous product came from further east, since according to the city's own guide it was brought to Helsinki by Emma Hopia from Sortavala, a town on the shores of Lake Ladoga in Karelia that has been on the Russian side of the border since the Second World War.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-konditoria-hopia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-konditoria-hopia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-konditoria-hopia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4ead3477-c22f-5fad-ac13-97b7b774f304",
+          "order": 0,
+          "title": "Konditoria Hopia",
+          "caption": "At number nine Pohjoinen Hesperiankatu in Taka-Töölö, by the door of the little café.",
+          "latitude": 60.177763314846445,
+          "longitude": 24.92662987976233,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-konditoria-hopia.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-konditoria-hopia_hero.webp",
+          "transcriptText": "Some cafés chase every new trend, but this one has stayed so faithful to its recipes and its furniture that it has come all the way round to feeling fashionable again.\n\nPohjoinen Hesperiankatu cuts through the solid apartment blocks of Taka-Töölö, and the small café at number nine is the one you're after, with room inside for only around ten people, so you may well find a short queue at the counter.\n\nKonditoria Hopia has been baking here since 1949, and the recipe behind its most famous product came from further east, since according to the city's own guide it was brought to Helsinki by Emma Hopia from Sortavala, a town on the shores of Lake Ladoga in Karelia that has been on the Russian side of the border since the Second World War.\n\nThat product is the Karelian pie, a thin rye crust folded around a filling of porridge, traditionally eaten warm with butter mixed with chopped egg, and Hopia is particularly admired for its barley version. The cinnamon buns are made to a recipe that hasn't changed in more than sixty years, and the coffee menu is refreshingly short, so don't come looking for a latte.\n\nThen have a look at the room itself, which is decorated with Karelian-style woodwork, and at the benches, where lines from the Kalevala, Finland's national epic, were painted on long ago and have been left undisturbed ever since.\n\nIn a sense, you're tasting a piece of a region that Finland no longer holds, because Karelian baking spread across the country with the people who moved west from that border region, and places like this have kept it going so steadily that the pie now feels simply Finnish, eaten in kitchens everywhere.\n\nHopia opens on weekdays only, from early morning until late afternoon, so take a warm pie with you if the tables are full, and walk about fifteen minutes west to Sibelius Park, where the steel-pipe monument to the composer stands among the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.177763314846445,
+      "centroidLongitude": 24.92662987976233,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "39409c87-5e9e-5c45-9a22-feced660255c",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a0b7bcd4-4d18-5e69-a670-08b688e632d5",
+      "createdAt": "2026-10-22",
+      "title": "Culture Sauna | Kulttuurisauna",
+      "shortDescription": "On a still evening the only sounds here are the hiss of water on hot stone and the occasional splash of someone lowering themselves into the…",
+      "longDescription": "On a still evening the only sounds here are the hiss of water on hot stone and the occasional splash of someone lowering themselves into the sea.\n\nKulttuurisauna, the Culture Sauna, was designed by a Finnish and Japanese couple, the architects Tuomas Toivonen and Nene Tsuboi, who still run it themselves, and it opened in May 2013. It was the first new public sauna Helsinki had seen in decades, and the couple set out to make a place where a Finnish sauna and a Japanese bathhouse could meet.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kulttuurisauna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kulttuurisauna_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kulttuurisauna_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1e0b60f7-b997-5718-a8fb-c6d416fc446b",
+          "order": 0,
+          "title": "Culture Sauna | Kulttuurisauna",
+          "caption": "On the Hakaniemenranta shore path, by the low white sauna and its concrete pyramid.",
+          "latitude": 60.17814700694646,
+          "longitude": 24.963128233729446,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-kulttuurisauna.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kulttuurisauna_hero.webp",
+          "transcriptText": "On a still evening the only sounds here are the hiss of water on hot stone and the occasional splash of someone lowering themselves into the sea.\n\nHakaniemenranta, the waterside path below the concrete terraces of Merihaka, brings you right to it, a low white building at the water's edge with dark wooden doors and a squat concrete pyramid rising at one corner, and with a way down into the water for swimmers.\n\nKulttuurisauna, the Culture Sauna, was designed by a Finnish and Japanese couple, the architects Tuomas Toivonen and Nene Tsuboi, who still run it themselves, and it opened in May 2013. It was the first new public sauna Helsinki had seen in decades, and the couple set out to make a place where a Finnish sauna and a Japanese bathhouse could meet.\n\nThe stove is the first surprise, a wood-fired concrete cube with a small hollow in its top, and rather than flinging a ladle of water at it, you pour slowly, so the steam arrives with a deep hiss and spreads gently through the room. The second is that pyramid outside, cast in untreated concrete as a nod to the hard, grey materials of the neighbourhood around it.\n\nThe third is a house rule called saunarauha, or sauna peace, which means conversation belongs in the salon, the courtyard or outdoors and never in the bathing room, groups of more than two aren't admitted, and Friday evenings are held as silent sessions.\n\nAnd that's the thought behind the whole building, I think, since a sauna is one of the few places left where strangers sit side by side with nothing to look at and nothing to do, and this one has been designed to protect that stillness rather than sell it.\n\nMornings from Friday to Sunday are walk-in, while evenings from Wednesday to Sunday need booking, and first-timers are encouraged to come alone; afterwards, follow the shore path west towards Hakaniemi and finish with something warm from the old market hall."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.17814700694646,
+      "centroidLongitude": 24.963128233729446,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "33cdb1cc-da7c-548b-a089-354c56c997a3",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Waterfront",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Tuomas Toivonen",
+        "Nene Tsuboi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+      "createdAt": "2026-10-22",
+      "title": "Lapuan Kankurit",
+      "shortDescription": "This linen company started life making felt boots, and more than a century later the same family is still running it, now into its fifth…",
+      "longDescription": "This linen company started life making felt boots, and more than a century later the same family is still running it, now into its fifth generation.\n\nThe story begins in 1917 in Lapua, a small town in western Finland, where Juho Annala opened a felt-boot factory; his family bought their first weaving machines in the 1930s, and in 1973 his grandson Juha Hjelt and Juha's wife Liisa founded the weaving mill of Lapuan Kankurit, which means the Weavers of Lapua, with just three employees.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lapuan-kankurit_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lapuan-kankurit_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lapuan-kankurit_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "071909ae-ffe8-5b72-9383-70b94fe6ece3",
+          "order": 0,
+          "title": "Lapuan Kankurit",
+          "caption": "At number two Katariinankatu, between the Market Square and Senate Square, by the linen window.",
+          "latitude": 60.16835868480523,
+          "longitude": 24.953382469731483,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-lapuan-kankurit.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lapuan-kankurit_hero.webp",
+          "transcriptText": "This linen company started life making felt boots, and more than a century later the same family is still running it, now into its fifth generation.\n\nKatariinankatu is the short street climbing between the Market Square and Senate Square, in the old block known as the Tori Quarter, and the Lapuan Kankurit store at number two is easy to recognise by its calm window of folded linen, woollen blankets and towels in natural, earthy colours.\n\nThe story begins in 1917 in Lapua, a small town in western Finland, where Juho Annala opened a felt-boot factory; his family bought their first weaving machines in the 1930s, and in 1973 his grandson Juha Hjelt and Juha's wife Liisa founded the weaving mill of Lapuan Kankurit, which means the Weavers of Lapua, with just three employees.\n\nThey began with traditional wall hangings, and the company has since become known for linen and wool woven on jacquard looms at the mill in Lapua, which is still very much at work. Juha's son Esko and his wife Jaana took over in 1999, the fifth generation joined in 2025, and these days there's a Lapuan Kankurit shop in Tokyo as well.\n\nStep inside and notice how the shop has been designed, because when it was renewed in 2019, the Japanese studio IMA design, run by Mana and Takashi Kobayashi, set Finnish materials such as birch shingles against a pared-back Japanese calm, and there's even a faint scent of tar, the traditional Finnish preservative for wooden boats and buildings.\n\nIt feels entirely natural that a Japanese studio was asked to frame these textiles, since the two cultures share a respect for natural materials and quiet rooms, and the shop makes that kinship feel obvious rather than exotic.\n\nRun your hand over the linen towels, which feel stiff at first and soften with every wash, and then walk the few steps up to Senate Square, or round the corner to the Helsinki City Museum, which tells the story of the city from its earliest days."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16835868480523,
+      "centroidLongitude": 24.953382469731483,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "33cdb1cc-da7c-548b-a089-354c56c997a3",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "822BFF22-DCBC-5B2E-A12D-45A1E9680457"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Fashion",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+      "createdAt": "2026-10-22",
+      "title": "Lokal",
+      "shortDescription": "When this gallery opened in 2012, it described itself with unusual precision as seventy-two per cent art and twenty-eight per cent coffee. The…",
+      "longDescription": "When this gallery opened in 2012, it described itself with unusual precision as seventy-two per cent art and twenty-eight per cent coffee.\n\nIts founder, Katja Hagelstam, spent around twenty-five years photographing art, design and interiors for magazines and books before opening Lokal in April 2012, the year Helsinki was World Design Capital, and she has said she wanted a home-like room where art could be handled, used and passed down through the generations.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lokal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lokal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lokal_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f5131a13-458f-51ea-acf6-291688140e15",
+          "order": 0,
+          "title": "Lokal",
+          "caption": "At number nine Annankatu in Punavuori, looking into the gallery’s two ground-floor rooms.",
+          "latitude": 60.16402776032779,
+          "longitude": 24.941219127403635,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-lokal.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-lokal_hero.webp",
+          "transcriptText": "When this gallery opened in 2012, it described itself with unusual precision as seventy-two per cent art and twenty-eight per cent coffee.\n\nThe ground-floor space at number nine Annankatu, here in Punavuori at the heart of Helsinki's Design District, is Lokal, and from the pavement you can see into its two rooms, one of them set aside for a changing exhibition and the other for the work it sells.\n\nIts founder, Katja Hagelstam, spent around twenty-five years photographing art, design and interiors for magazines and books before opening Lokal in April 2012, the year Helsinki was World Design Capital, and she has said she wanted a home-like room where art could be handled, used and passed down through the generations.\n\nThe coffee has since stepped aside, and what fills the space now is the work of more than two dozen Finnish makers, among them Matias Liimatainen and Nathalie Lautenbacher, with ceramics, wood, glass, textiles, jewellery and paintings, many of them made in very small numbers.\n\nRecognition followed fairly quickly, with the Finnish Design Deed award in 2015 and the Finnish State Prize for Design in 2017, and in 2024 a selection from Lokal crossed to Paris for a show at the Finnish Institute in the Latin Quarter, where eleven of its makers were shown side by side.\n\nThe point Lokal makes is a gentle one, that a bowl or a stool can carry as much thought as a painting, and that when you buy it to use every day rather than to hang on a wall, the art simply becomes part of how you live.\n\nAsk what's on in the exhibition room, and then spend a little time in the surrounding streets of Punavuori, where small design shops, studios and galleries fill the ground floors of the old apartment houses on almost every block."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16402776032779,
+      "centroidLongitude": 24.941219127403635,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "33cdb1cc-da7c-548b-a089-354c56c997a3",
+      "createdAt": "2026-10-22",
+      "title": "Majamaja",
+      "shortDescription": "The little black cabins on these rocks have no water pipes, no power cables and no sewer, and yet the city centre is only around half an hour…",
+      "longDescription": "The little black cabins on these rocks have no water pipes, no power cables and no sewer, and yet the city centre is only around half an hour away by bus.\n\nThis is Majamaja, an off-grid retreat designed by the Paris-based architect Pekka Littow, which opened here in the autumn of 2020 after a prototype had been shown in 2019 in the courtyard of Station F, a start-up campus in Paris. Each cabin covers about twenty-three square metres and was built in a factory, then assembled on site without heavy machinery.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-majamaja_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-majamaja_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-majamaja_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-majamaja_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5fbb3bfd-32f5-5f20-9d5e-ca3881c2d513",
+          "order": 0,
+          "title": "Majamaja",
+          "caption": "On the rocks of Vuorilahdenniemi in Laajasalo, by the row of small black cabins along the shore.",
+          "latitude": 60.16058595972069,
+          "longitude": 25.04155465092626,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-majamaja.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-majamaja_hero.webp",
+          "transcriptText": "The little black cabins on these rocks have no water pipes, no power cables and no sewer, and yet the city centre is only around half an hour away by bus.\n\nOut on Vuorilahdenniemi, a rocky headland on the island of Laajasalo, the cabins sit in a loose row along the shore, small gabled huts painted black and linked by a narrow wooden deck that runs across the rocks, each with a wide window turned towards the sea.\n\nThis is Majamaja, an off-grid retreat designed by the Paris-based architect Pekka Littow, which opened here in the autumn of 2020 after a prototype had been shown in 2019 in the courtyard of Station F, a start-up campus in Paris. Each cabin covers about twenty-three square metres and was built in a factory, then assembled on site without heavy machinery.\n\nLook up at the roofs, where solar panels supply the electricity, and then think about the water, which comes from rain and from the sea itself, cleaned by a purification system the company has patented, while water from the shower and sink is treated and reused and the toilets are dry. Inside, the furniture folds down from the walls and the kitchen hides behind birch plywood doors.\n\nEven the bedding is local, since the cabins are dressed in textiles from Lapuan Kankurit, the family weavers whose mill is in the town of Lapua.\n\nThe company's chief executive, Tuomas Autio, has said he hopes to do for housing what Nokia did for telephones, freeing it from fixed networks, which is a big ambition for a cabin you can cross in a few strides, but that's precisely the idea, with the smallest possible building carrying its whole infrastructure on its back.\n\nThe cabins are open to guests from spring to late autumn, and even if you're only visiting, it's worth finding a spot on the warm rock along the shore and looking out across the islands, which is exactly the view each cabin's big window was placed to frame."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16058595972069,
+      "centroidLongitude": 25.04155465092626,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "92197c3f-65e2-551d-ab93-7467c7f5f7ec",
+        "6dd34b79-17f1-5b88-be50-d26628f4e5cd"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Waterfront",
+        "Contemporary",
+        "Green Escape",
+        "Viewpoint",
+        "Designed by a Master",
+        "Pekka Littow"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+      "createdAt": "2026-10-22",
+      "title": "Pataässä",
+      "shortDescription": "On a dignified street of banks and old parliament buildings, the loudest room for several blocks is very probably this one, at almost any hour…",
+      "longDescription": "On a dignified street of banks and old parliament buildings, the loudest room for several blocks is very probably this one, at almost any hour between eight in the evening and six in the morning.\n\nPataässä opened in 1994 on Mariankatu, a few streets away, as Helsinki's first karaoke restaurant, and it moved to this address in 2011, so these respectable surroundings have had a karaoke bar for a neighbour for well over a decade. It celebrated thirty years in 2024, and its regulars know it simply as Patis.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-pataassa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-pataassa_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aebf7a0c-0bd0-5298-882f-2f62751cec84",
+          "order": 0,
+          "title": "Pataässä",
+          "caption": "At number thirteen Snellmaninkatu, a few doors from the House of the Estates.",
+          "latitude": 60.17182779903006,
+          "longitude": 24.953496312059336,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-pataassa.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-pataassa_hero.webp",
+          "transcriptText": "On a dignified street of banks and old parliament buildings, the loudest room for several blocks is very probably this one, at almost any hour between eight in the evening and six in the morning.\n\nA few doors from the old House of the Estates and the solid stone headquarters of the Bank of Finland, at number thirteen Snellmaninkatu, you'll find Pataässä, whose name means the Ace of Spades, behind a doorway that gives very little away in daylight.\n\nPataässä opened in 1994 on Mariankatu, a few streets away, as Helsinki's first karaoke restaurant, and it moved to this address in 2011, so these respectable surroundings have had a karaoke bar for a neighbour for well over a decade. It celebrated thirty years in 2024, and its regulars know it simply as Patis.\n\nInside there are two sides, a karaoke room and a tiny disco beside it, but the detail I love is the pair of karaoke kiosks, small booths for no more than two people, where anyone feeling nervous can practise a song before facing the room.\n\nThe hours are generous to the point of heroism, because on most nights the doors stay open until six in the morning, and at weekends the singing can begin as early as nine o'clock in the morning.\n\nFinland has a reputation for reserve, and karaoke is one of the places where that reputation gives way, so a bar like this works as a kind of public living room, where a stranger's ballad earns the same applause as a friend's and nobody worries much about the high notes.\n\nIf you're passing in daylight, walk the few steps to the House of the Estates, where the Finnish Diet met in the nineteenth century, and look up at the sculpted relief above its entrance, before coming back after dark to hear who's braving the microphone."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.17182779903006,
+      "centroidLongitude": 24.953496312059336,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "39409c87-5e9e-5c45-9a22-feced660255c",
+      "createdAt": "2026-10-22",
+      "title": "Nolla",
+      "shortDescription": "Ask to see the bin in this restaurant's kitchen and you'll be disappointed, because there simply isn't one. Find number twenty-two on…",
+      "longDescription": "Ask to see the bin in this restaurant's kitchen and you'll be disappointed, because there simply isn't one.\n\nIt was founded by three chefs from three countries, Carlos Henriques from Portugal, Albert Franch Sunyer from Spain and Luka Balac from Serbia, who ran it first as a pop-up in 2018 and opened here permanently in July 2019, with a promise to produce as close to no waste as a working kitchen can.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-nolla_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-nolla_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-nolla_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-nolla_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-nolla_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "14fb445c-0f88-53ec-ad82-a6d9c71cd9d7",
+          "order": 0,
+          "title": "Nolla",
+          "caption": "At number twenty-two Fredrikinkatu in Punavuori, outside the restaurant door.",
+          "latitude": 60.16347361280285,
+          "longitude": 24.938226347333504,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-nolla.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-nolla_hero.webp",
+          "transcriptText": "Ask to see the bin in this restaurant's kitchen and you'll be disappointed, because there simply isn't one.\n\nFind number twenty-two on Fredrikinkatu, a shopping street running through Punavuori, and you've found Nolla, a neighbourhood restaurant whose name is the Finnish word for zero.\n\nIt was founded by three chefs from three countries, Carlos Henriques from Portugal, Albert Franch Sunyer from Spain and Luka Balac from Serbia, who ran it first as a pop-up in 2018 and opened here permanently in July 2019, with a promise to produce as close to no waste as a working kitchen can.\n\nSuppliers are asked not to deliver anything in single-use packaging, the staff aprons are cut from discarded bed linen, used cooking oil is turned into soap, and in the dining room you can see the composting machine, which turns up to twenty-eight kilos of scraps into soil overnight, soil that then goes back to the farms that grew the food.\n\nThe ingredients follow the same logic, since Balac has explained that almost everything comes from within three hundred kilometres, with exceptions for salt, coffee, tea, wine, seaweed and rapeseed oil, and the Michelin Guide recommends Nolla for good value, singling out bold, hearty cooking such as roast deer with a glossy reduction, with a chef's table for anyone who'd like to watch it being made.\n\nNolla's quiet radicalism lies in refusing to make you eat less well in order to waste less, and the founders treat zero waste as a standard any restaurant could reach, so the pleasure of the meal becomes the argument they use to make that case.\n\nNolla opens for dinner from Tuesday to Saturday, and the Chef's Choice menu is the easiest way in; beforehand, walk ten minutes west to the red-brick Hietalahti Market Hall, where food stalls and small restaurants fill the old trading hall."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16347361280285,
+      "centroidLongitude": 24.938226347333504,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
+        "f63a6d67-5d03-556c-a54b-039a53209fa8",
+        "8aa3d5d7-cd39-5bdc-bac2-4feba1e8c45a"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+      "createdAt": "2026-10-22",
+      "title": "BasBas Kulma",
+      "shortDescription": "The odd name over this door comes from two nicknames, Baskeri and Basso, belonging to the two founders who have built a small restaurant family…",
+      "longDescription": "The odd name over this door comes from two nicknames, Baskeri and Basso, belonging to the two founders who have built a small restaurant family around this street corner.\n\nThose founders are Nicolas Thieulon, known as Baskeri, and Kalle Kiukainen, known as Basso, who opened the bistro in 2015 with a menu inspired by Parisian bistros, casual San Francisco joints and small Italian osterias, and it soon became a fixture on lists of Finland's best restaurants.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-basbas-kulma_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-basbas-kulma_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-basbas-kulma_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3e95bf56-1945-5496-8c68-0ea87f91d95e",
+          "order": 0,
+          "title": "BasBas Kulma",
+          "caption": "On the corner where Tehtaankatu meets Telakkakatu, outside the long bar counter.",
+          "latitude": 60.157925561742786,
+          "longitude": 24.933658411815237,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-basbas-kulma.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-basbas-kulma_hero.webp",
+          "transcriptText": "The odd name over this door comes from two nicknames, Baskeri and Basso, belonging to the two founders who have built a small restaurant family around this street corner.\n\nTehtaankatu, Factory Street, meets Telakkakatu, Dockyard Street, right here, and BasBas Kulma occupies the corner itself, kulma being the Finnish word for corner, with a long bar counter inside and the founders' first restaurant, the Baskeri and Basso bistro, just upstairs at the same address.\n\nThose founders are Nicolas Thieulon, known as Baskeri, and Kalle Kiukainen, known as Basso, who opened the bistro in 2015 with a menu inspired by Parisian bistros, casual San Francisco joints and small Italian osterias, and it soon became a fixture on lists of Finland's best restaurants.\n\nKulma followed in 2020 as the more casual sibling, a busy wine bar of small plates and mostly natural wines, serving from late afternoon until around midnight, and the dishes regulars recommend run from charcuterie and cheese through salmon crudo and beef tartare to fried whitefish and grilled pork belly.\n\nThe wine is the real draw, chosen from growers the team knows and loves, and the BasBas list has collected Star Wine List awards, while the family has kept on growing, with a studio for pop-ups in 2023 and, in September 2026, a new place called Sirkus across the Long Bridge in Siltasaari, named after the travelling circuses that once stopped in the little park there.\n\nThe corner tells a neat story, since its two street names recall the factories and shipyard that once gave this end of town its living, and today its trade is sociability itself, a long counter where cooks, sommeliers and neighbours end up shoulder to shoulder after their own shifts are over.\n\nGet here early if you want a seat at the bar, since walk-ins are welcome but the room fills quickly, and afterwards stroll down Telakkakatu towards Hietalahti, where the shipyard still builds icebreakers on the edge of the city centre."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.157925561742786,
+      "centroidLongitude": 24.933658411815237,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "39409c87-5e9e-5c45-9a22-feced660255c"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+      "createdAt": "2026-10-22",
+      "title": "Sea Horse",
+      "shortDescription": "Seahorses have been watching diners from the back wall of this restaurant for generations, and nobody seems entirely sure who painted them.…",
+      "longDescription": "Seahorses have been watching diners from the back wall of this restaurant for generations, and nobody seems entirely sure who painted them.\n\nInside, head for the main dining room and look at the back wall, where the famous seahorse mural swims above the tables. One story says art students broke in during the 1940s and painted it; another says a penniless art student painted it to settle a bill, and the restaurant itself simply credits art students, which is probably the wisest position to take.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-sea-horse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-sea-horse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-sea-horse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-sea-horse_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-sea-horse_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9403d5d4-7748-5071-9f58-40fc5efb2249",
+          "order": 0,
+          "title": "Sea Horse",
+          "caption": "At number eleven Kapteeninkatu in Ullanlinna, outside the restaurant.",
+          "latitude": 60.15876723451923,
+          "longitude": 24.946483350925764,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-sea-horse.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-sea-horse_hero.webp",
+          "transcriptText": "Seahorses have been watching diners from the back wall of this restaurant for generations, and nobody seems entirely sure who painted them.\n\nKapteeninkatu, Captain Street, cuts through the quiet Art Nouveau blocks of Ullanlinna, and at number eleven you'll find the Sea Horse, which has been serving Finnish home cooking at this address since December 1933.\n\nInside, head for the main dining room and look at the back wall, where the famous seahorse mural swims above the tables. One story says art students broke in during the 1940s and painted it; another says a penniless art student painted it to settle a bill, and the restaurant itself simply credits art students, which is probably the wisest position to take.\n\nThe menu is a roll-call of Finnish classics, from fried Baltic herring and herring platters to cabbage rolls, salmon soup and Wiener schnitzel, but the dish with an international reputation is the onion steak, which the journalist Tyler Brûlé wrote about warmly in the 1990s, sending a fresh wave of visitors to the door.\n\nRegulars have long called the place Sikala, the Pigsty, with obvious affection, and over the decades it has been a haunt of local writers, artists and musicians, which gives it something of the air of a neighbourhood club that happens to let strangers in.\n\nI find it rather touching how little the Sea Horse has tried to keep up, because restaurants around it have come and gone through ninety years of fashions, while this one has gone on frying the herring and keeping the seahorses on the wall, and that steadiness has become its whole appeal.\n\nAfter your meal, walk five minutes east into Kaivopuisto, the old seaside park, and follow the shore path, where on a clear day you can watch the ferries heading out between the islands."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.15876723451923,
+      "centroidLongitude": 24.946483350925764,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "39409c87-5e9e-5c45-9a22-feced660255c",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+      "createdAt": "2026-10-22",
+      "title": "Savoy",
+      "shortDescription": "A glass vase that now sits in homes all over the world took its name from the restaurant at the top of this building. The sober block in front…",
+      "longDescription": "A glass vase that now sits in homes all over the world took its name from the restaurant at the top of this building.\n\nThe restaurant opened in 1937, and the vision behind it came from Maire Gullichsen, an heiress of the Ahlström family and a co-founder of Artek, who wanted a dining room that showed off modern Finnish design. Aino and Alvar Aalto designed the interior, with walls of Oregon pine, elm-wood armchairs by Aino, and above the tables a brass pendant lamp Alvar made for the room, which became known as the Golden Bell.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-savoy_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-savoy_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-savoy_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-savoy_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-savoy_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-savoy_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "62a37fca-459d-5f29-88bb-9bb723a483c2",
+          "order": 0,
+          "title": "Savoy",
+          "caption": "In front of number fourteen on the South Esplanade; the restaurant fills the top two floors.",
+          "latitude": 60.16708107751944,
+          "longitude": 24.94731890674588,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-savoy.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-savoy_hero.webp",
+          "transcriptText": "A glass vase that now sits in homes all over the world took its name from the restaurant at the top of this building.\n\nThe sober block in front of you, number fourteen on the South Esplanade, was built for the Ahlström industrial company in the 1930s, and the Savoy restaurant fills its top two floors, with terraces looking out across the Esplanadi park and the rooftops of the city centre.\n\nThe restaurant opened in 1937, and the vision behind it came from Maire Gullichsen, an heiress of the Ahlström family and a co-founder of Artek, who wanted a dining room that showed off modern Finnish design. Aino and Alvar Aalto designed the interior, with walls of Oregon pine, elm-wood armchairs by Aino, and above the tables a brass pendant lamp Alvar made for the room, which became known as the Golden Bell.\n\nThen there's the vase, because in 1936 Aalto entered a glass competition with a series of wavy, free-form vessels, and after they were shown at the Paris World Exposition in 1937, one of them took its place in this restaurant and has been called the Savoy vase ever since.\n\nField Marshal Mannerheim was a regular here, and some of his favourites are still on the menu, including vorschmack, a rich dish of minced meat and herring, and a shot of spirits poured so generously that it arrives filled right to the brim.\n\nStep back and it's the homeliness that stands out, because the designer Ilse Crawford, who refreshed the rooms in 2020, described the Aaltos' approach as creating warm, domestic spaces, and that's exactly the trick: a grand restaurant at the top of a corporate headquarters, furnished like a well-loved house.\n\nEven without a table booked, you can spot the terraces from the park below, and then stroll the length of the Esplanadi towards the Market Square and the harbour, about five minutes away, past the bandstand and the cafés under the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16708107751944,
+      "centroidLongitude": 24.94731890674588,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Modernist",
+        "Viewpoint",
+        "Designed by a Master",
+        "Alvar Aalto",
+        "Aino Aalto",
+        "Ilse Crawford"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+      "createdAt": "2026-10-22",
+      "title": "Wine Bar Apotek | Viinibaari Apotek",
+      "shortDescription": "The shelves in this wine bar are protected by law, which is not something many bars can say about their furniture. Where Lapinlahdenkatu meets…",
+      "longDescription": "The shelves in this wine bar are protected by law, which is not something many bars can say about their furniture.\n\nThis was the Swan Pharmacy, which served the neighbourhood from the early 1910s until 2018, when it finally closed because it no longer paid its way, and its fixed fittings, in the Art Nouveau style the Finns call Jugend, had been protected since 1999, so nothing could simply be ripped out.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-apotek_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-apotek_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-apotek_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bd46cbfd-dc02-50b5-a140-7dba621d7b59",
+          "order": 0,
+          "title": "Wine Bar Apotek | Viinibaari Apotek",
+          "caption": "Where Lapinlahdenkatu meets Eerikinkatu, at the corner windows of the old pharmacy.",
+          "latitude": 60.16644614824086,
+          "longitude": 24.932440964417967,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-apotek.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-apotek_hero.webp",
+          "transcriptText": "The shelves in this wine bar are protected by law, which is not something many bars can say about their furniture.\n\nWhere Lapinlahdenkatu meets Eerikinkatu, look through the corner windows of Wine Bar Apotek, and you should see dark wooden shelves running round the walls, lined with old brown glass pharmacy bottles lit from above.\n\nThis was the Swan Pharmacy, which served the neighbourhood from the early 1910s until 2018, when it finally closed because it no longer paid its way, and its fixed fittings, in the Art Nouveau style the Finns call Jugend, had been protected since 1999, so nothing could simply be ripped out.\n\nThe restaurateurs Tio Tikka and Asta Nurmilaukas took on the space, and after a fifteen-month renovation and a long chain of permits, Apotek opened in June 2020, keeping the warm wooden shelving, the bottles and even an old mechanical cash register, along with two small side rooms that once belonged to the pharmacy.\n\nThe wine leans towards small, little-known family producers from Europe, with grower Champagne, German Riesling and Burgundy among them, and since the bar shares its ownership with a wine importer and the restaurant Carelia, the list is built from bottles the team knows well. To eat, there are cheeses, charcuterie and seasonal small plates.\n\nThe law that protected those shelves turned out to be the making of the place, because the bar had to fit itself around the pharmacy rather than the other way round, and that's why the room feels so unhurried, with something of a dispensary's hush still hanging in the air.\n\nApotek opens on Tuesday, Thursday, Friday and Saturday evenings, so check before you come, and if you're early, walk a few minutes south-east to the park around the Old Church, built in the 1820s and the oldest church in central Helsinki."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.16644614824086,
+      "centroidLongitude": 24.932440964417967,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "abfba41f-5a76-5e21-af32-53d5462109c9",
+      "createdAt": "2026-10-22",
+      "title": "Yrjönkatu Swimming Hall | Yrjönkadun uimahalli",
+      "shortDescription": "Until 2001, swimsuits were not allowed in this swimming pool at all. Head for number twenty-one on Yrjönkatu, in the middle of the city centre…",
+      "longDescription": "Until 2001, swimsuits were not allowed in this swimming pool at all.\n\nThe hall opened on the fourth of June 1928 as Finland's first public swimming hall, designed by Väinö Vähäkallio in the restrained classicism of the 1920s, the first architectural style of newly independent Finland, and he drew ideas from Stockholm's Centralbadet and from the spa traditions of Europe.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-yrjonkatu-swimming-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-yrjonkatu-swimming-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-yrjonkatu-swimming-hall_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0180349b-a6cf-5860-a61a-7f624f51d0dd",
+          "order": 0,
+          "title": "Yrjönkatu Swimming Hall | Yrjönkadun uimahalli",
+          "caption": "At number twenty-one Yrjönkatu, by the entrance and its photographs printed on glass.",
+          "latitude": 60.1684128362006,
+          "longitude": 24.93901359325411,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-yrjonkatu-swimming-hall.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-yrjonkatu-swimming-hall_hero.webp",
+          "transcriptText": "Until 2001, swimsuits were not allowed in this swimming pool at all.\n\nHead for number twenty-one on Yrjönkatu, in the middle of the city centre, where a new artwork called Water Bodies by Noora Sandgren, six photographs printed on glass, now greets you at the entrance.\n\nThe hall opened on the fourth of June 1928 as Finland's first public swimming hall, designed by Väinö Vähäkallio in the restrained classicism of the 1920s, the first architectural style of newly independent Finland, and he drew ideas from Stockholm's Centralbadet and from the spa traditions of Europe.\n\nInside, a twenty-five-metre pool sits in a long, tiled hall with galleries above it and a café upstairs looking down over the water, and in 1931 Toivo Reingoldt set a world record here in the five-hundred-metre breaststroke, becoming the first Finnish swimmer to set a world record.\n\nThe rules are as distinctive as the room, since women and men still swim on separate days, women on Mondays, Wednesdays, Fridays and Sundays and men on the other three, and swimsuits are entirely optional, so you may bathe in one or in nothing at all.\n\nThere are several saunas, including a traditional wood-heated one, and the restorers kept the 1920s ceramic tiles and the character of the spaces, after the city's deputy mayor for culture asked, in effect, that nobody change the building's soul.\n\nSeen that way, the hall is less a gym than a civic ritual, a stately room where bathing is slow and unselfconscious, and nearly a century on it still invites you to treat a swim as an occasion rather than a workout.\n\nCheck whose day it is before you come, and afterwards walk round the corner to Amos Rex, where the domed skylights of an underground art museum rise out of the square behind the Lasipalatsi."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.1684128362006,
+      "centroidLongitude": 24.93901359325411,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "4f5eb672-dc6e-5d4d-a807-9f79771ba281",
+        "93d78b33-8933-5a44-8d77-0d6c233e96ad",
+        "cf499e05-7751-59fe-b83b-eece14040d16"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Neoclassical",
+        "History",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Väinö Vähäkallio"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+      "createdAt": "2026-10-22",
+      "title": "Helsinki Central Station | Helsingin päärautatieasema",
+      "shortDescription": "Four men have been holding the lights up outside this building for more than a hundred years. They're made of granite, and they've never once…",
+      "longDescription": "Four men have been holding the lights up outside this building for more than a hundred years. They're made of granite, and they've never once put them down.\n\nStart with the figures. They're the Lantern Carriers, carved in nineteen fourteen by the sculptor Emil Wikström. Have a look at where they end. From the waist down they stop being men and turn into columns, so they're holding up the building as well as the lights. These days the national railway uses them as its mascots — the Stone Men, they call them. In twenty twenty they were even fitted with face masks.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-central-station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-central-station_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-central-station_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-central-station_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d662ec5c-6b16-5639-8129-53359b617e5f",
+          "order": 0,
+          "title": "Helsinki Central Station | Helsingin päärautatieasema",
+          "caption": "On Kaivokatu, across from the main entrance, facing the granite Lantern Carriers and the clock tower.",
+          "latitude": 60.17196912104046,
+          "longitude": 24.941405300659603,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-central-station.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-central-station_hero.webp",
+          "transcriptText": "Four men have been holding the lights up outside this building for more than a hundred years. They're made of granite, and they've never once put them down.\n\nOn Kaivokatu, across the road from the station's main entrance, facing it. You're in the right place if you can see a tall arched doorway set into a wall of reddish stone, two pairs of enormous granite figures standing either side of it, each clutching a round lamp — and, off to your right, the clock tower.\n\nStart with the figures. They're the Lantern Carriers, carved in nineteen fourteen by the sculptor Emil Wikström. Have a look at where they end. From the waist down they stop being men and turn into columns, so they're holding up the building as well as the lights. These days the national railway uses them as its mascots — the Stone Men, they call them. In twenty twenty they were even fitted with face masks.\n\nNow the tower. Forty-eight and a half metres, with a clock facing each point of the compass. When the station was finished, it was the tallest tower in Helsinki.\n\nHere's the curious thing. The building you're looking at is the architect's second answer. Eliel Saarinen won the competition in nineteen oh-four with a design steeped in national romance — a tall tower and eight bears. Two younger architects then spent nearly a month taking it apart in the newspapers. A railway station, they argued, was the most modern thing a city could build, so why make it look like something out of a legend? Saarinen toured the stations of Europe and redrew it. The bears went. The lantern men came in.\n\nAnd the timing is the real story. When Saarinen drew it, Finland was a Grand Duchy of the Russian Empire. During the First World War the half-finished building served as a Russian military hospital. By the time it opened, in March nineteen nineteen, Finland was an independent country. It was designed as the front door of one place, and it opened as the front door of another.\n\nSomething like two hundred thousand people come through here on an ordinary day, which makes it Finland's most visited building. If you've a few minutes, walk right, round the foot of the tower, into Rautatientori — the big square on the station's east side. On that side there's a separate, more formal doorway. It leads to the presidential lounge, a private waiting room for the head of state, and it's very easy to walk past without realising."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.17196912104046,
+      "centroidLongitude": 24.941405300659603,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "C6AF71DC-B237-5249-BE07-EA129FB2C034",
+        "2B989637-8AA6-5C71-A36C-FA019C7CEFF9",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Public Art",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Eliel Saarinen"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+      "createdAt": "2026-10-22",
+      "title": "Kuurna",
+      "shortDescription": "You could walk straight past this door. Plenty of people do, which is rather part of its charm. Meritullinkatu, in Kruununhaka, a few minutes'…",
+      "longDescription": "You could walk straight past this door. Plenty of people do, which is rather part of its charm.\n\nInside it's two small rooms, low light, candles, and tables set close enough that you'll hear a bit of the next conversation. Kuurna has been part of Helsinki's bistro wave since two thousand and five — by its own account, it helped start it. It's run by Laura Styyra and Tom Hansen, who met at restaurant school with the plan of raising the standard of the city's restaurants. They didn't open a new one. They took over Kuurna, which had been their own favourite.",
+      "makerId": "3446cd26-dde6-5c9d-8a09-16ce6c35fd49",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kuurna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kuurna_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kuurna_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kuurna_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kuurna_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c3c48e53-a589-50db-85f2-5b8ab9e4f85c",
+          "order": 0,
+          "title": "Kuurna",
+          "caption": "At number six Meritullinkatu in Kruununhaka, by the modest street-level doorway.",
+          "latitude": 60.17033655225587,
+          "longitude": 24.958583162568967,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hel-kuurna.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hel-kuurna_hero.webp",
+          "transcriptText": "You could walk straight past this door. Plenty of people do, which is rather part of its charm.\n\nMeritullinkatu, in Kruununhaka, a few minutes' walk east of Senate Square. Look for number six: a modest doorway at street level in an old stone building. That's Kuurna. The little wine bar next door, Klaava, belongs to the same people.\n\nInside it's two small rooms, low light, candles, and tables set close enough that you'll hear a bit of the next conversation. Kuurna has been part of Helsinki's bistro wave since two thousand and five — by its own account, it helped start it. It's run by Laura Styyra and Tom Hansen, who met at restaurant school with the plan of raising the standard of the city's restaurants. They didn't open a new one. They took over Kuurna, which had been their own favourite.\n\nHave a look at how the food works, because it's the opposite of a long tasting menu. A short set menu, two or three courses, changing every three weeks with the season, plus whatever's chalked up on the board that day. A couple of dishes never leave: the classic steak tartare, and the pepper steak, which is the one reviewers keep singling out. The meat is Finnish, the fish and seafood Nordic, and the cheese comes from a supplier called Lentävä Lehmä, which translates, rather wonderfully, as the Flying Cow. And Klaava, the bar next door, is the Finnish word for the tails side of a coin.\n\nHere's what I like about this place. Its ambition never went into more courses or grander rooms. It went into the vegetables. The owners now run their own greengrocer, selling organic and biodynamic produce, and twice a week it delivers to other Helsinki restaurants as well. A bistro that ended up supplying the competition.\n\nIf you've time before or after, walk north across the water to Hakaniemi Market Hall, about fifteen minutes from here. Kuurna's vegetable shop is on the ground floor, with a little side counter for an espresso and a fresh date. It keeps daytime hours, so go in the morning. And if you've turned up here without a booking, Klaava next door doesn't take any. You simply walk in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.17033655225587,
+      "centroidLongitude": 24.958583162568967,
+      "city": "Helsinki",
+      "country": "Finland",
+      "relatedTourIds": [
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "39409c87-5e9e-5c45-9a22-feced660255c",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
@@ -150746,7 +151853,10 @@
       "city": "Helsinki",
       "country": "Finland",
       "relatedTourIds": [
-        "C6AF71DC-B237-5249-BE07-EA129FB2C034"
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "C6AF71DC-B237-5249-BE07-EA129FB2C034",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -200413,8 +201523,10 @@
       "city": "Helsinki",
       "country": "Finland",
       "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "2B989637-8AA6-5C71-A36C-FA019C7CEFF9",
-        "A62ABF8E-2B6A-5BFA-B0AD-02BF46783207"
+        "A62ABF8E-2B6A-5BFA-B0AD-02BF46783207",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -203621,6 +204733,7 @@
       "country": "Finland",
       "relatedTourIds": [
         "C6AF71DC-B237-5249-BE07-EA129FB2C034",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "D31FE62B-6A9D-56EA-95FF-512E85F664D1"
       ],
       "primaryCategory": "sacredSites",
@@ -366031,6 +367144,7 @@
       "city": "Helsinki",
       "country": "Finland",
       "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "A62ABF8E-2B6A-5BFA-B0AD-02BF46783207"
       ],
       "primaryCategory": "sacredSites",
