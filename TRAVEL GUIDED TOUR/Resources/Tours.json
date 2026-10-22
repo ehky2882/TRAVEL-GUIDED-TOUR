@@ -9036,7 +9036,7 @@
         "B250524B-FD74-5D6F-A873-9701DAA15528",
         "00994DD5-36DB-5A8B-8DB1-42F6062C813F",
         "0c54e6d4-03f5-4550-a8e9-78c7224d4def",
-        "527f3825-e099-55b7-97c6-1c4543ae806e"
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -10490,14 +10490,14 @@
       "city": "Leixões",
       "country": "Portugal",
       "relatedTourIds": [
+        "EBC0934A-421D-592E-BA04-1387A61794F2",
         "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
         "defeef28-4159-4ad2-813a-111c64720889",
         "a6af8461-6f38-489f-a8d0-f05768ecf107",
         "3352A793-95F0-4C16-B96B-3A7AFAB05CA3",
         "e25e5718-6f18-4f7c-8d5a-174662f1a953",
         "CAB7F0DE-0884-4B42-ACCA-AC3C8C878C68",
-        "A03FFA2D-6F9F-4BBD-9A32-43273D95D44C",
-        "77675265-3f7c-4894-8762-7c49878e1c17"
+        "A03FFA2D-6F9F-4BBD-9A32-43273D95D44C"
       ],
       "walkingDistanceMeters": null
     },
@@ -27328,8 +27328,8 @@
         "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
         "f4be2f7b-5cec-58c6-9399-706015043da0",
         "525a7b02-4293-50da-bd48-0214e64c918f",
-        "5b7ab228-7c58-5f5b-821b-2f52b37d71c8",
-        "364fbc84-62fe-590d-acbe-71fa035d5b87"
+        "F5241FF2-EF44-5A5D-BF2E-0487975B9E9E",
+        "5b7ab228-7c58-5f5b-821b-2f52b37d71c8"
       ],
       "primaryCategory": "natureAndParks",
       "priceUSD": 0
@@ -33044,14 +33044,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "E42FC0CA-2CC5-58EF-9D2D-A6F34885F94F",
         "d575f72c-bcd4-551e-80bb-20e16a4a88a3",
         "8f1bae74-890d-5910-95f2-f26a5fc908d4",
         "d53c4d56-5e1f-5d19-a47c-48e373bbd9da",
         "0ea1f129-f9d7-53aa-a07d-a65011697be1",
         "899c4062-e786-590a-b825-d1b0dd4ec79b",
         "1c7b05ad-953a-539e-875d-94eca960dcdc",
-        "2946afff-1ff9-597d-aadc-4a43cc9b79bc",
-        "4d50a4d9-bff8-5a55-aa48-665b08e39134"
+        "2946afff-1ff9-597d-aadc-4a43cc9b79bc"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -41713,13 +41713,13 @@
       "country": "France",
       "relatedTourIds": [
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "F9946337-3A37-591D-B5F2-EC0E8D3E268B",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
         "846A553D-BB50-52D0-9F14-E5E098FB6DC5",
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
-        "e1e5e09b-36e0-51ff-bde3-e8b2b7f65187",
-        "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad"
+        "e1e5e09b-36e0-51ff-bde3-e8b2b7f65187"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -50622,14 +50622,14 @@
       "city": "Los Angeles",
       "country": "United States",
       "relatedTourIds": [
+        "AFDF8A9E-839E-5346-8844-493FC882395D",
         "4754C562-061B-582E-82AC-A09CE93C6098",
         "7cc87aaf-5e52-582e-a4ef-6115ec73389d",
         "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
         "0a38ef9e-ae97-5992-a5bc-50eb1b0ee3ef",
         "b16a508b-17d4-5ba8-9d4d-cce0d553f714",
         "d70278c3-dfa7-51d4-b26d-1222d96733a2",
-        "00832f7a-e18a-534a-920e-37a23a4fda6e",
-        "751D5948-306A-507E-BF8F-3448AD903848"
+        "00832f7a-e18a-534a-920e-37a23a4fda6e"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -96855,13 +96855,13 @@
       "country": "Sweden",
       "relatedTourIds": [
         "a6caddc6-3c4a-576c-992d-d5869c90476d",
+        "0F959B55-34AA-538E-AD98-AA233E3248DD",
         "4fe35064-260a-595a-bc69-979a9ea08d37",
         "bd6cb95b-0f40-5929-94b4-e8d88b8b1b4b",
         "a928e667-a1f9-5f55-92ff-bd4244616cfc",
         "1bb124b3-067a-5c95-b9cd-b42e16c100d4",
         "7ff7cb81-1a48-524f-b609-510e0a7dee83",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c",
-        "6dd34b79-17f1-5b88-be50-d26628f4e5cd"
+        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -115074,11 +115074,11 @@
         "b2d278dc-b373-5b6a-8082-bd0fc44766e7",
         "46ae1b3d-591c-513f-bb30-318a1333c60b",
         "79FED394-1311-4446-A55C-9BEC9C772081",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
         "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
         "44435929-e4f2-5dbd-a6d7-d96b42d25097",
         "98f0406d-f7fa-531f-8db0-540bcb932621",
-        "85D07EAB-88C2-5456-B3C8-492B743D534C",
-        "4e227a06-777e-571a-80ad-4c53decfc0d6"
+        "85D07EAB-88C2-5456-B3C8-492B743D534C"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -119803,7 +119803,8 @@
         "5dab1d51-f312-5425-8dca-d16e63b16083",
         "245E7CE0-BEF5-52B5-95CC-B8922517E821",
         "8add1db1-098c-48c1-a637-cf71e30b05dd",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba"
+        "17d77b0d-070f-5414-b79b-5a22e78644ba",
+        "C8D7AE94-1B7D-538A-B4F4-A080D9DC2089"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -128400,7 +128401,7 @@
         "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
         "00ec26d9-9e7e-50e8-ad0d-b6509fb9413a",
-        "fcc5cf6d-6957-599c-b622-54843af70465"
+        "E09433C2-339A-5435-B993-7A6C258EFB8C"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -128513,9 +128514,9 @@
         "596e20d2-6956-5998-b0eb-4a8147b2a939",
         "2b01133f-e7a7-53e5-9f19-c00075f73733",
         "8289fd85-eaec-5fe8-8c6e-f157a2dfc9cc",
+        "EC982594-3799-568D-87A1-E98145A0F730",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
-        "fcc5cf6d-6957-599c-b622-54843af70465"
+        "d102fac4-3be4-5890-ad16-330fad5cd6a7"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -128634,7 +128635,7 @@
         "618e3268-b878-5e1f-837b-b5530f56c737",
         "596e20d2-6956-5998-b0eb-4a8147b2a939",
         "342d83f1-37bf-51eb-b747-31a2b8668c7a",
-        "37bbe872-3d86-5a5e-8d31-1f771b44e126"
+        "C9A81D9E-07E8-560A-97B6-818637550E57"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -128745,8 +128746,8 @@
         "e2839c00-a694-56a8-bd9b-e1c2c4072736",
         "596e20d2-6956-5998-b0eb-4a8147b2a939",
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
-        "618e3268-b878-5e1f-837b-b5530f56c737"
+        "C9A81D9E-07E8-560A-97B6-818637550E57",
+        "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -128796,14 +128797,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
         "0a454b83-93e9-56d5-a24f-28b312935a2f",
         "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
         "9428619c-5c72-52b4-b3a8-1c29082cfc06",
         "527f3825-e099-55b7-97c6-1c4543ae806e",
         "1260aab6-0d44-5ce4-b763-4eee14859da2",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "0929d219-6962-5f4a-a515-f0f0659ba1aa"
+        "45c2ace9-a42f-55c7-8248-ce90f58a663a"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -128910,9 +128911,9 @@
         "9428619c-5c72-52b4-b3a8-1c29082cfc06",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
         "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
-        "596e20d2-6956-5998-b0eb-4a8147b2a939",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+        "EC982594-3799-568D-87A1-E98145A0F730",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "596e20d2-6956-5998-b0eb-4a8147b2a939"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -129079,13 +129080,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "d102fac4-3be4-5890-ad16-330fad5cd6a7",
+        "753009F9-7684-57A9-9B9F-15AF8E59475C",
+        "24EDBEDC-82DD-5932-8884-DE523FB07485",
         "9428619c-5c72-52b4-b3a8-1c29082cfc06",
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "596e20d2-6956-5998-b0eb-4a8147b2a939",
-        "6ba4f56b-78c7-5591-8d8f-96fc9d5a6eb4",
-        "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
-        "37bbe872-3d86-5a5e-8d31-1f771b44e126"
+        "95571E1F-3627-5A95-9648-3E0AB462F819",
+        "EC982594-3799-568D-87A1-E98145A0F730"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -129142,9 +129143,9 @@
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
         "1260aab6-0d44-5ce4-b763-4eee14859da2",
         "8289fd85-eaec-5fe8-8c6e-f157a2dfc9cc",
+        "24F21D4C-15EA-515D-AA6C-A17B6407E24C",
         "342d83f1-37bf-51eb-b747-31a2b8668c7a",
-        "b3c0904c-11a8-59b4-98f2-ffa72d8b4c9f",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48"
+        "b3c0904c-11a8-59b4-98f2-ffa72d8b4c9f"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -129199,8 +129200,8 @@
         "33a15e34-957a-5eaf-a871-2ab4a08bc4b3",
         "b2cb7227-0bce-5f4e-8c13-63c7faa7a803",
         "99e96973-7bdf-5043-83b0-4b2c7b0c4436",
-        "618e3268-b878-5e1f-837b-b5530f56c737",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+        "5FD518A0-2202-5313-83AD-7D49AE9D915F",
+        "618e3268-b878-5e1f-837b-b5530f56c737"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -129252,12 +129253,12 @@
       "relatedTourIds": [
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "24F21D4C-15EA-515D-AA6C-A17B6407E24C",
         "99e96973-7bdf-5043-83b0-4b2c7b0c4436",
         "33a15e34-957a-5eaf-a871-2ab4a08bc4b3",
         "e2839c00-a694-56a8-bd9b-e1c2c4072736",
         "8289fd85-eaec-5fe8-8c6e-f157a2dfc9cc",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "b2cb7227-0bce-5f4e-8c13-63c7faa7a803"
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -129368,12 +129369,12 @@
       "relatedTourIds": [
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
         "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
         "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "0929d219-6962-5f4a-a515-f0f0659ba1aa",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48"
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -129425,13 +129426,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "342d83f1-37bf-51eb-b747-31a2b8668c7a",
+        "F8C6124D-7E63-546E-9A18-F443BFB2636E",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
         "2b01133f-e7a7-53e5-9f19-c00075f73733",
         "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
         "c933fed3-eb24-5319-87df-7ce498c62100",
-        "f748fea4-fee0-5ad1-ad40-52bc21575422",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48"
+        "f748fea4-fee0-5ad1-ad40-52bc21575422"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -129491,9 +129492,9 @@
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
         "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "0a454b83-93e9-56d5-a24f-28b312935a2f",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "5988f39e-1680-5394-9f96-6ba6b4406a1e"
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -129547,10 +129548,10 @@
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
         "527f3825-e099-55b7-97c6-1c4543ae806e",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "00ec26d9-9e7e-50e8-ad0d-b6509fb9413a",
-        "342d83f1-37bf-51eb-b747-31a2b8668c7a",
-        "1260aab6-0d44-5ce4-b763-4eee14859da2"
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -129607,12 +129608,12 @@
       "relatedTourIds": [
         "0a454b83-93e9-56d5-a24f-28b312935a2f",
         "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
         "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "9428619c-5c72-52b4-b3a8-1c29082cfc06",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
-        "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1"
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -129720,14 +129721,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
         "0929d219-6962-5f4a-a515-f0f0659ba1aa",
         "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
         "9428619c-5c72-52b4-b3a8-1c29082cfc06",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
-        "fcc5cf6d-6957-599c-b622-54843af70465"
+        "2b01133f-e7a7-53e5-9f19-c00075f73733"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -129781,14 +129782,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
         "9FBA6174-676B-5E6C-A095-96F965D11D1C",
         "b2cb7227-0bce-5f4e-8c13-63c7faa7a803",
         "45c2ace9-a42f-55c7-8248-ce90f58a663a",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
         "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
-        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
-        "91351c83-e088-5d93-8ec2-b3a5d3db7359",
-        "8DA482EA-E980-5536-964C-5F68F1B79EAC",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733"
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -129846,11 +129847,11 @@
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
         "596e20d2-6956-5998-b0eb-4a8147b2a939",
         "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
         "1260aab6-0d44-5ce4-b763-4eee14859da2",
-        "f748fea4-fee0-5ad1-ad40-52bc21575422",
-        "342d83f1-37bf-51eb-b747-31a2b8668c7a",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "fcc5cf6d-6957-599c-b622-54843af70465"
+        "f748fea4-fee0-5ad1-ad40-52bc21575422"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -129907,11 +129908,11 @@
         "52A835F2-F314-5A02-A4AC-2412823306F8",
         "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
         "2b01133f-e7a7-53e5-9f19-c00075f73733",
         "f257573b-056e-5649-960b-9c9e1e7cad7f",
-        "596e20d2-6956-5998-b0eb-4a8147b2a939",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
-        "4e227a06-777e-571a-80ad-4c53decfc0d6"
+        "77FA8C62-AB46-5A29-9EA9-B32622BFDF73",
+        "EC982594-3799-568D-87A1-E98145A0F730"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -129966,12 +129967,12 @@
       "relatedTourIds": [
         "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
         "fcc5cf6d-6957-599c-b622-54843af70465",
         "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
-        "0a454b83-93e9-56d5-a24f-28b312935a2f",
-        "342d83f1-37bf-51eb-b747-31a2b8668c7a",
-        "8DD8CA83-4F88-5372-8B5C-C9823383C689",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733"
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -130025,11 +130026,11 @@
         "e2839c00-a694-56a8-bd9b-e1c2c4072736",
         "592F0737-559E-5077-B4BB-A5F5739D77D2",
         "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "89ABE86E-9CFE-5CC1-AAA3-6CC7569ADA2C",
         "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
         "b3c0904c-11a8-59b4-98f2-ffa72d8b4c9f",
         "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
-        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
-        "99e96973-7bdf-5043-83b0-4b2c7b0c4436"
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -130083,9 +130084,9 @@
         "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
         "0929d219-6962-5f4a-a515-f0f0659ba1aa",
-        "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "0a454b83-93e9-56d5-a24f-28b312935a2f",
-        "9428619c-5c72-52b4-b3a8-1c29082cfc06"
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "605C7205-754C-55E5-B91E-6DE64883B110"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -130138,13 +130139,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
-        "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "9428619c-5c72-52b4-b3a8-1c29082cfc06",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48"
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -130250,13 +130251,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "0929d219-6962-5f4a-a515-f0f0659ba1aa",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
         "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
-        "9428619c-5c72-52b4-b3a8-1c29082cfc06",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "5988f39e-1680-5394-9f96-6ba6b4406a1e"
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -130312,8 +130313,8 @@
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
         "0a454b83-93e9-56d5-a24f-28b312935a2f",
         "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc"
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -132818,6 +132819,7 @@
       "city": "Oslo",
       "country": "Norway",
       "relatedTourIds": [
+        "5FD518A0-2202-5313-83AD-7D49AE9D915F",
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
         "1BE97272-8B4C-5006-AB11-96DC56A46C92",
@@ -150663,10 +150665,10 @@
         "0929d219-6962-5f4a-a515-f0f0659ba1aa",
         "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
         "0a454b83-93e9-56d5-a24f-28b312935a2f",
-        "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
-        "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "B57FC237-90B5-5A06-B476-80BB54609955",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -150717,12 +150719,12 @@
       "relatedTourIds": [
         "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
         "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
-        "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "0929d219-6962-5f4a-a515-f0f0659ba1aa",
-        "0a454b83-93e9-56d5-a24f-28b312935a2f",
-        "4e227a06-777e-571a-80ad-4c53decfc0d6"
+        "EC8819D0-F340-555B-93B7-A641020F8D9E",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "E28253BF-25E6-5ECE-859F-219BD2554550",
+        "580D30BB-6FE2-52F3-88C7-6AEB8806CC1A",
+        "F64378C7-8D46-54EE-AEDE-DBB06AAA2FAA",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -150776,12 +150778,12 @@
       "relatedTourIds": [
         "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E",
         "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
-        "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "52A835F2-F314-5A02-A4AC-2412823306F8",
-        "E3914BBB-9F11-5064-ABD2-755BF49DDE38"
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "77FA8C62-AB46-5A29-9EA9-B32622BFDF73",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -155662,14 +155664,14 @@
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
+        "E42FC0CA-2CC5-58EF-9D2D-A6F34885F94F",
         "6F21D117-359C-517D-A8E0-3203F45DA1BB",
         "f2605a06-195a-59b3-9b52-ab380b96023c",
         "355420fc-fa6e-5ed9-b824-d50eef75ee75",
         "ab710cea-40f9-5ecd-a03b-a1e8bb96c9d4",
         "013a3386-6b49-5ee4-a965-bd6d1c1f8b25",
         "F298ECD1-84CA-5806-A234-5C2707E294CA",
-        "7c53e4fa-c0ed-5016-a731-ea51a3828866",
-        "1B86825B-5DA3-53A6-BB2C-B5BD82B14E8C"
+        "7c53e4fa-c0ed-5016-a731-ea51a3828866"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -199012,9 +199014,9 @@
         "C4764693-0C40-5B5F-B06F-39489F18D147",
         "8D4439F1-4A24-54AB-B1BD-D314243B4A7E",
         "0ea1f129-f9d7-53aa-a07d-a65011697be1",
+        "E42FC0CA-2CC5-58EF-9D2D-A6F34885F94F",
         "1c7b05ad-953a-539e-875d-94eca960dcdc",
-        "C0D195EE-C976-578D-9331-643574F84C12",
-        "240206C6-7AC0-5ED0-B68D-4A9BFA528109"
+        "C0D195EE-C976-578D-9331-643574F84C12"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -220301,13 +220303,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "A8A70D65-CBAD-5250-B2A9-9E08D51DE7D0",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
         "8B2D5923-6544-52F0-80C0-180D5E986D1E",
         "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "C9A81D9E-07E8-560A-97B6-818637550E57",
+        "7F4252EE-C87B-5A36-B0C7-22038E540978",
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
-        "8F14C3F2-F85E-573F-881D-A074D1F24847",
-        "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
-        "8289fd85-eaec-5fe8-8c6e-f157a2dfc9cc"
+        "77FA8C62-AB46-5A29-9EA9-B32622BFDF73"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -220356,14 +220358,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "C9A81D9E-07E8-560A-97B6-818637550E57",
         "8289fd85-eaec-5fe8-8c6e-f157a2dfc9cc",
         "342d83f1-37bf-51eb-b747-31a2b8668c7a",
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
         "8B2D5923-6544-52F0-80C0-180D5E986D1E",
         "00ec26d9-9e7e-50e8-ad0d-b6509fb9413a",
         "fcc5cf6d-6957-599c-b622-54843af70465",
-        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -233152,7 +233154,7 @@
         "85bfcf5a-af16-545a-b690-60f95bc100fb",
         "62ECCD3D-535D-5168-9299-54AEECE3FD16",
         "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB",
-        "6BFF8453-B8DD-516F-A752-5C2792AAC6D6"
+        "AFDF8A9E-839E-5346-8844-493FC882395D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -237286,14 +237288,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
         "b2cb7227-0bce-5f4e-8c13-63c7faa7a803",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
         "596e20d2-6956-5998-b0eb-4a8147b2a939",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
-        "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
-        "91351c83-e088-5d93-8ec2-b3a5d3db7359",
-        "4e227a06-777e-571a-80ad-4c53decfc0d6"
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -248737,14 +248739,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "EA93D02F-202E-5A04-A092-245E23C894F0",
+        "559D7FD1-1540-5730-8636-D27F8FAEC5BA",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
         "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
-        "9428619c-5c72-52b4-b3a8-1c29082cfc06",
-        "91351c83-e088-5d93-8ec2-b3a5d3db7359",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "527f3825-e099-55b7-97c6-1c4543ae806e",
-        "8DD8CA83-4F88-5372-8B5C-C9823383C689",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+        "9428619c-5c72-52b4-b3a8-1c29082cfc06"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -248839,14 +248841,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
         "b2cb7227-0bce-5f4e-8c13-63c7faa7a803",
         "596e20d2-6956-5998-b0eb-4a8147b2a939",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
-        "1c5c1794-39ef-5fbb-9a39-d6428fecb8fd",
-        "342d83f1-37bf-51eb-b747-31a2b8668c7a"
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -248941,13 +248943,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "0ad42d09-6a9b-5533-af7d-e47c81f6e947",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "77FA8C62-AB46-5A29-9EA9-B32622BFDF73",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
         "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
-        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
-        "058e446a-0d75-52a2-b775-cbf746f8edb9"
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "EC982594-3799-568D-87A1-E98145A0F730"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -248996,13 +248998,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "EC982594-3799-568D-87A1-E98145A0F730",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
         "527f3825-e099-55b7-97c6-1c4543ae806e",
-        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -249049,14 +249051,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
         "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
         "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
         "592F0737-559E-5077-B4BB-A5F5739D77D2",
-        "23F99407-E1A5-54E5-B612-D109362FFA16",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+        "C9A81D9E-07E8-560A-97B6-818637550E57",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -249213,14 +249215,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
         "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
         "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E",
         "b2cb7227-0bce-5f4e-8c13-63c7faa7a803",
-        "2b01133f-e7a7-53e5-9f19-c00075f73733",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "527f3825-e099-55b7-97c6-1c4543ae806e"
+        "2b01133f-e7a7-53e5-9f19-c00075f73733"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -249323,12 +249325,12 @@
       "relatedTourIds": [
         "8DA482EA-E980-5536-964C-5F68F1B79EAC",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "9428619c-5c72-52b4-b3a8-1c29082cfc06",
-        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "91351c83-e088-5d93-8ec2-b3a5d3db7359",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "23F99407-E1A5-54E5-B612-D109362FFA16",
-        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644"
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -258364,10 +258366,10 @@
         "1F1E6C55-3557-553C-9DDA-F94325F3446F",
         "76127777-fee0-53a2-809c-d00386c0f2fe",
         "687F4A2B-9D33-5C72-B67C-7BFA5BDD8F5E",
+        "B0EFD8ED-9E30-5ABC-A03E-5596AC6AF57B",
         "03e5c64c-8ea5-57b5-8d9d-0ec003b4f1ed",
         "d1997162-06ab-52b7-b7b3-b2e1de3a7bf8",
-        "32DC7EE6-8D6C-5D56-A7FC-8BA893F5D726",
-        "5BA18838-6721-564E-ADEF-7AFF3D46A483"
+        "32DC7EE6-8D6C-5D56-A7FC-8BA893F5D726"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -259930,8 +259932,8 @@
         "34C7F2FA-77CF-5280-BC69-DF231D6E2BF4",
         "948f8ce6-e540-5ec1-bcbf-b64ddc23a934",
         "B70632C6-27FE-5012-8D36-590633D4A06A",
-        "0b41073e-c7c4-52f4-bdde-4174cf91354a",
-        "dd29ccca-d231-5af9-aadb-91ee4e171032"
+        "E42FC0CA-2CC5-58EF-9D2D-A6F34885F94F",
+        "0b41073e-c7c4-52f4-bdde-4174cf91354a"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -267643,8 +267645,8 @@
         "62ECCD3D-535D-5168-9299-54AEECE3FD16",
         "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
         "4512B026-0E44-577F-96AF-30B9A89522CB",
-        "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
-        "6F762F18-8968-56BD-9C27-446B178A664A"
+        "AFDF8A9E-839E-5346-8844-493FC882395D",
+        "E0DF335E-71C7-5049-BDE4-ECE48C9DC401"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -267696,10 +267698,10 @@
         "871828DC-B6CB-5132-8C13-6CBAB27CB966",
         "4512B026-0E44-577F-96AF-30B9A89522CB",
         "62ECCD3D-535D-5168-9299-54AEECE3FD16",
+        "AFDF8A9E-839E-5346-8844-493FC882395D",
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "1E5878A8-D8BF-597D-90BB-E838A9B5F9F7",
-        "DD11D46E-CB44-5D18-B526-6E3B5E967AFE",
-        "6F762F18-8968-56BD-9C27-446B178A664A"
+        "DD11D46E-CB44-5D18-B526-6E3B5E967AFE"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -308577,12 +308579,12 @@
       "relatedTourIds": [
         "527f3825-e099-55b7-97c6-1c4543ae806e",
         "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9",
         "592F0737-559E-5077-B4BB-A5F5739D77D2",
         "5988f39e-1680-5394-9f96-6ba6b4406a1e",
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
-        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
-        "0a454b83-93e9-56d5-a24f-28b312935a2f",
-        "8DD8CA83-4F88-5372-8B5C-C9823383C689"
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -308681,7 +308683,7 @@
         "e2839c00-a694-56a8-bd9b-e1c2c4072736",
         "8B2D5923-6544-52F0-80C0-180D5E986D1E",
         "8F14C3F2-F85E-573F-881D-A074D1F24847",
-        "5740FBE9-85E7-5EEA-87C4-258BCAD8949E"
+        "C9A81D9E-07E8-560A-97B6-818637550E57"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -309212,9 +309214,9 @@
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
         "e2839c00-a694-56a8-bd9b-e1c2c4072736",
-        "8F14C3F2-F85E-573F-881D-A074D1F24847",
-        "8B2D5923-6544-52F0-80C0-180D5E986D1E"
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -309788,11 +309790,11 @@
         "592F0737-559E-5077-B4BB-A5F5739D77D2",
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
         "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
-        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
-        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
-        "77A0C66E-2530-5F56-9D32-73B139B5FA64"
+        "EC982594-3799-568D-87A1-E98145A0F730",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -309940,12 +309942,12 @@
       "relatedTourIds": [
         "592F0737-559E-5077-B4BB-A5F5739D77D2",
         "43F880E2-71B3-58BF-B43C-6F5B3B9CEC1B",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
         "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "f748fea4-fee0-5ad1-ad40-52bc21575422",
-        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48"
+        "f748fea4-fee0-5ad1-ad40-52bc21575422"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -310100,7 +310102,7 @@
         "5740FBE9-85E7-5EEA-87C4-258BCAD8949E",
         "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
         "216BC040-CC24-5F80-8DA2-2C18AF4B8A80",
-        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+        "C9A81D9E-07E8-560A-97B6-818637550E57"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -323870,9 +323872,9 @@
         "49D126C6-E081-52E8-9B05-E0535FFA77FF",
         "09378580-2397-5F49-8B2E-88A9BC8DFF28",
         "AA61A538-9090-5862-A5E9-6DA6AC951E50",
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4",
         "484D0FA8-9FFB-5762-94D3-AF4CCFF79C41",
-        "36FE7210-065F-5E05-B768-C6F377E9D90D",
-        "B141DD06-4FC9-5A8C-8034-88A533938DBC"
+        "36FE7210-065F-5E05-B768-C6F377E9D90D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -325944,6 +325946,7 @@
         "A8F1977A-1942-5146-873B-36A81E27C2D9",
         "09378580-2397-5F49-8B2E-88A9BC8DFF28",
         "AA61A538-9090-5862-A5E9-6DA6AC951E50",
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4",
         "36FE7210-065F-5E05-B768-C6F377E9D90D"
       ],
       "primaryCategory": "foodAndDrink",
@@ -329396,11 +329399,11 @@
         "0C99DA99-76A9-54B0-8581-9E2A57AEA2AB",
         "6A63FFBE-138D-50B3-AB0D-0F135E88B2F8",
         "AA61A538-9090-5862-A5E9-6DA6AC951E50",
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4",
         "49D126C6-E081-52E8-9B05-E0535FFA77FF",
         "A8F1977A-1942-5146-873B-36A81E27C2D9",
         "B141DD06-4FC9-5A8C-8034-88A533938DBC",
-        "484D0FA8-9FFB-5762-94D3-AF4CCFF79C41",
-        "36FE7210-065F-5E05-B768-C6F377E9D90D"
+        "484D0FA8-9FFB-5762-94D3-AF4CCFF79C41"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -330026,6 +330029,7 @@
       "city": "Manchester",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4",
         "0C99DA99-76A9-54B0-8581-9E2A57AEA2AB",
         "09378580-2397-5F49-8B2E-88A9BC8DFF28",
         "6A63FFBE-138D-50B3-AB0D-0F135E88B2F8",
@@ -332038,7 +332042,7 @@
         "49D126C6-E081-52E8-9B05-E0535FFA77FF",
         "484D0FA8-9FFB-5762-94D3-AF4CCFF79C41",
         "B141DD06-4FC9-5A8C-8034-88A533938DBC",
-        "36FE7210-065F-5E05-B768-C6F377E9D90D"
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -332093,8 +332097,8 @@
         "49D126C6-E081-52E8-9B05-E0535FFA77FF",
         "A8F1977A-1942-5146-873B-36A81E27C2D9",
         "B141DD06-4FC9-5A8C-8034-88A533938DBC",
-        "36FE7210-065F-5E05-B768-C6F377E9D90D",
-        "484D0FA8-9FFB-5762-94D3-AF4CCFF79C41"
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4",
+        "36FE7210-065F-5E05-B768-C6F377E9D90D"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -335131,14 +335135,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "F9946337-3A37-591D-B5F2-EC0E8D3E268B",
         "3EC40D8C-4513-53F3-AB16-665D37CFEDD3",
         "B606303B-2024-58E5-873F-64EF22723675",
         "43318a61-f8bd-51e1-a393-43ba4944b10e",
         "AF199257-C9D3-5D9E-B8EC-B195EA0BEBEE",
         "7D273F60-65E9-5765-8DBA-5485BB4BEF8B",
         "9b93d74b-505a-5886-9cf7-a5ca235c12de",
-        "BD8C23AF-98C2-5B09-9F0F-C8C129B2AFCE",
-        "E753DE1F-6327-5FAC-877B-26DA39F26935"
+        "BD8C23AF-98C2-5B09-9F0F-C8C129B2AFCE"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -347381,10 +347385,10 @@
         "E898F878-14E3-5202-8B9D-5FA9F93DC252",
         "25F5C368-3CE1-5E32-81F4-A7C6DDB4D028",
         "3F4AEF87-81F7-5D1D-A090-EF9CF945E424",
+        "AFDF8A9E-839E-5346-8844-493FC882395D",
         "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
         "4d829f4f-0398-5289-acc8-cc2eac02df81",
-        "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
-        "607A8E0D-9476-5509-BBBD-C61A3FB0BA5F"
+        "B979272D-42C9-578F-882C-F5DCAB4E8D6D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -347491,13 +347495,13 @@
       "country": "Austria",
       "relatedTourIds": [
         "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
         "058e446a-0d75-52a2-b775-cbf746f8edb9",
-        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
-        "EFA4CCCE-A501-56D6-9874-613F647CD8EC",
-        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
-        "6ba4f56b-78c7-5591-8d8f-96fc9d5a6eb4",
-        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
-        "f748fea4-fee0-5ad1-ad40-52bc21575422"
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "030CDFEF-64F3-50DE-9C71-0D49C96D8915",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -354730,7 +354734,8 @@
         "535508D8-DA71-56DE-B2F2-0DA0013FEF5D",
         "CDF648C2-37D8-5BD8-88AA-C4281023C1E5",
         "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
-        "8E05C1D6-D270-5DD8-A8A0-8B351111D59F"
+        "8E05C1D6-D270-5DD8-A8A0-8B351111D59F",
+        "B0EFD8ED-9E30-5ABC-A03E-5596AC6AF57B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -367320,6 +367325,7 @@
         "0C99DA99-76A9-54B0-8581-9E2A57AEA2AB",
         "49D126C6-E081-52E8-9B05-E0535FFA77FF",
         "A8F1977A-1942-5146-873B-36A81E27C2D9",
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4",
         "6A63FFBE-138D-50B3-AB0D-0F135E88B2F8"
       ],
       "primaryCategory": "history",
@@ -367372,6 +367378,7 @@
         "0C99DA99-76A9-54B0-8581-9E2A57AEA2AB",
         "6A63FFBE-138D-50B3-AB0D-0F135E88B2F8",
         "09378580-2397-5F49-8B2E-88A9BC8DFF28",
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4",
         "AA61A538-9090-5862-A5E9-6DA6AC951E50",
         "A8F1977A-1942-5146-873B-36A81E27C2D9"
       ],
@@ -368382,6 +368389,16 @@
       "centroidLongitude": 16.347041,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "605C7205-754C-55E5-B91E-6DE64883B110"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -368429,6 +368446,16 @@
       "centroidLongitude": 16.367861,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "2226DF4E-E91E-590F-AE57-88806E18640B",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "AD55248C-5F33-594C-8BD4-5288DBF13F15",
+        "DAF1A160-9A3B-5E38-8B06-AC84ED6724B1",
+        "9428619c-5c72-52b4-b3a8-1c29082cfc06",
+        "6CF7A2F4-13D2-5419-8EDE-325C57B90603"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -368476,6 +368503,16 @@
       "centroidLongitude": 16.362394,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "DA9F96B1-5ABD-5F64-84E0-70F82315D117"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Square",
@@ -368523,6 +368560,16 @@
       "centroidLongitude": 16.379195,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -368568,6 +368615,16 @@
       "centroidLongitude": 16.358465,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -368617,6 +368674,16 @@
       "centroidLongitude": 16.367376,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "34B84403-CF4F-5FDE-99F0-42FDC70F9D5E",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "64D3BC37-B816-5179-9C71-129FAC69CE63",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "552159A1-A233-55FE-927D-F1FC6471DB67",
+        "B4FB2A81-8E4F-5754-B6E6-835B45B95E22",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -368663,6 +368730,16 @@
       "centroidLongitude": 16.356907,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "2657A3AA-C4D2-513C-BBCE-CD6CDD1F8CFB"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Religious Building",
@@ -368709,6 +368786,16 @@
       "centroidLongitude": 16.368547,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4",
+        "F76CA9B5-1807-5C63-A9A1-78505CF50D3E",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -368756,6 +368843,16 @@
       "centroidLongitude": 16.371619,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "A9DC71C8-01D7-5E13-BA4B-F52C40026BFB",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "64D3BC37-B816-5179-9C71-129FAC69CE63",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -368802,6 +368899,16 @@
       "centroidLongitude": 16.356877,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -368847,6 +368954,16 @@
       "centroidLongitude": 16.332504,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
+        "6306A700-7596-5FFD-A08D-BD7030425C7A",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -368895,6 +369012,16 @@
       "centroidLongitude": 16.363834,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "D07FFD05-4FFD-5482-9D3F-2D199B7B735C",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -368941,6 +369068,16 @@
       "centroidLongitude": 16.376669,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "b2cb7227-0bce-5f4e-8c13-63c7faa7a803",
+        "5FD518A0-2202-5313-83AD-7D49AE9D915F",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "2AE9A0B0-EDFB-542F-AEB9-5356D5866637",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -368988,6 +369125,12 @@
       "centroidLongitude": 16.371301,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "86D9B909-ACE2-5422-8E99-94F30B61A098",
+        "DAF1A160-9A3B-5E38-8B06-AC84ED6724B1",
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "527f3825-e099-55b7-97c6-1c4543ae806e"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Monument",
@@ -369035,6 +369178,16 @@
       "centroidLongitude": 16.355589,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "89ABE86E-9CFE-5CC1-AAA3-6CC7569ADA2C",
+        "F0CC5A86-9D84-5605-B2F8-D62F8EB5D0CC",
+        "c933fed3-eb24-5319-87df-7ce498c62100",
+        "b3c0904c-11a8-59b4-98f2-ffa72d8b4c9f",
+        "99e96973-7bdf-5043-83b0-4b2c7b0c4436",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -369081,6 +369234,16 @@
       "centroidLongitude": 16.396103,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -369127,6 +369290,16 @@
       "centroidLongitude": 16.340511,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "1D521442-845A-52D1-8115-B3772915A05D",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "605C7205-754C-55E5-B91E-6DE64883B110"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -369174,6 +369347,16 @@
       "centroidLongitude": 16.338843,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
+        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
+        "37DDDD30-4954-562F-A694-25F08EA9E174",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "8FCA3808-7FD3-5692-8330-501E68468D3C"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -369220,6 +369403,16 @@
       "centroidLongitude": 16.370658,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "15DE5EE8-DB93-5397-86FB-F170B561DACF",
+        "CFAED095-43A9-543F-87F2-6B624FC7150F"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -369266,6 +369459,16 @@
       "centroidLongitude": 16.343621,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "8DA482EA-E980-5536-964C-5F68F1B79EAC",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "EC8819D0-F340-555B-93B7-A641020F8D9E",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "8857393C-E4B2-5199-883A-9C73C7A53689"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -369311,6 +369514,16 @@
       "centroidLongitude": 16.355003,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C",
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -369357,6 +369570,16 @@
       "centroidLongitude": 16.348562,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "c933fed3-eb24-5319-87df-7ce498c62100",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "fcc5cf6d-6957-599c-b622-54843af70465",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "C9A81D9E-07E8-560A-97B6-818637550E57",
+        "b2cb7227-0bce-5f4e-8c13-63c7faa7a803"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -369405,6 +369628,16 @@
       "centroidLongitude": 16.35279,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "1D521442-845A-52D1-8115-B3772915A05D",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -369451,6 +369684,16 @@
       "centroidLongitude": 16.353153,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "6306A700-7596-5FFD-A08D-BD7030425C7A",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "EC8819D0-F340-555B-93B7-A641020F8D9E",
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "C7610C0B-7F78-5F9E-9B29-225BE03786C5"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -369496,6 +369739,16 @@
       "centroidLongitude": 16.358003,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9",
+        "B57FC237-90B5-5A06-B476-80BB54609955",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC",
+        "7224C876-61B6-5547-950F-02005F850F20"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -369541,6 +369794,16 @@
       "centroidLongitude": 16.354264,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "EC982594-3799-568D-87A1-E98145A0F730",
+        "77FA8C62-AB46-5A29-9EA9-B32622BFDF73",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "F36B100B-3B65-58F5-AE4E-DEF218AE74BB",
+        "CDEBFA6C-4882-5C3C-9AAB-251CBC417118",
+        "8857393C-E4B2-5199-883A-9C73C7A53689"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -369587,6 +369850,16 @@
       "centroidLongitude": 16.369194,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F64378C7-8D46-54EE-AEDE-DBB06AAA2FAA",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD",
+        "BE0C0DB5-2FFC-5466-8FD2-6FF41CC26E52",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "B57FC237-90B5-5A06-B476-80BB54609955"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -369636,6 +369909,16 @@
       "centroidLongitude": 16.3658,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "91351c83-e088-5d93-8ec2-b3a5d3db7359",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "37DDDD30-4954-562F-A694-25F08EA9E174"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -369682,6 +369965,16 @@
       "centroidLongitude": 16.363054,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "1418CFEB-7755-5679-960C-6A769BD77B13",
+        "6D6E82CE-0724-5951-897A-34C28815069B",
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "C8E19D5B-ABD8-54DB-A6A8-767632A62520",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "7F4252EE-C87B-5A36-B0C7-22038E540978"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -369726,6 +370019,16 @@
       "centroidLongitude": 16.370104,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "CFAED095-43A9-543F-87F2-6B624FC7150F",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "8857393C-E4B2-5199-883A-9C73C7A53689"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -369772,6 +370075,16 @@
       "centroidLongitude": 16.369457,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "A9DC71C8-01D7-5E13-BA4B-F52C40026BFB",
+        "64D3BC37-B816-5179-9C71-129FAC69CE63",
+        "B4FB2A81-8E4F-5754-B6E6-835B45B95E22",
+        "95571E1F-3627-5A95-9648-3E0AB462F819",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "552159A1-A233-55FE-927D-F1FC6471DB67",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -369817,6 +370130,16 @@
       "centroidLongitude": 16.377345,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "0F959B55-34AA-538E-AD98-AA233E3248DD",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "8FCA3808-7FD3-5692-8330-501E68468D3C",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -369863,6 +370186,16 @@
       "centroidLongitude": 16.368261,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "BE0C0DB5-2FFC-5466-8FD2-6FF41CC26E52",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4",
+        "37DDDD30-4954-562F-A694-25F08EA9E174",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -369909,6 +370242,16 @@
       "centroidLongitude": 16.37734,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "580D30BB-6FE2-52F3-88C7-6AEB8806CC1A",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "EC8819D0-F340-555B-93B7-A641020F8D9E",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -369955,6 +370298,16 @@
       "centroidLongitude": 16.379046,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
+        "CDEBFA6C-4882-5C3C-9AAB-251CBC417118",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "EC982594-3799-568D-87A1-E98145A0F730",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -370000,6 +370353,16 @@
       "centroidLongitude": 16.369788,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "2226DF4E-E91E-590F-AE57-88806E18640B",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "64D3BC37-B816-5179-9C71-129FAC69CE63",
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -370048,6 +370411,16 @@
       "centroidLongitude": 16.371442,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "34B84403-CF4F-5FDE-99F0-42FDC70F9D5E",
+        "753009F9-7684-57A9-9B9F-15AF8E59475C",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "DB3B616F-7F0D-5285-BC50-07F2645A23EC",
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370094,6 +370467,16 @@
       "centroidLongitude": 16.382984,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "E59EF97F-A5DB-58AF-9765-5EA0187790A6",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "91351c83-e088-5d93-8ec2-b3a5d3db7359",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -370140,6 +370523,16 @@
       "centroidLongitude": 16.373127,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "8092FDFF-C11B-53F6-9B6C-F9A94CAA6A62",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "8857393C-E4B2-5199-883A-9C73C7A53689"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370186,6 +370579,16 @@
       "centroidLongitude": 16.365796,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "86D9B909-ACE2-5422-8E99-94F30B61A098",
+        "C996FCBD-F3AF-5DFA-A13E-14CA648A2451",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "0F959B55-34AA-538E-AD98-AA233E3248DD",
+        "95571E1F-3627-5A95-9648-3E0AB462F819",
+        "580D30BB-6FE2-52F3-88C7-6AEB8806CC1A"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -370231,6 +370634,16 @@
       "centroidLongitude": 16.3716273,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "F64378C7-8D46-54EE-AEDE-DBB06AAA2FAA",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -370278,6 +370691,16 @@
       "centroidLongitude": 16.370712,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
+        "3BB02EA2-D64C-56EE-A4E9-596476F8EF93",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "24F21D4C-15EA-515D-AA6C-A17B6407E24C",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "38AE0136-4C79-510A-9455-676433862BCC"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Monument",
@@ -370325,6 +370748,16 @@
       "centroidLongitude": 16.405664,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "64D3BC37-B816-5179-9C71-129FAC69CE63",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "AA5A5556-05AE-5050-97B1-177BE864449B"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370370,6 +370803,16 @@
       "centroidLongitude": 16.374933,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "733FE466-3E32-52B5-8438-C9D537565ACB",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "DCEE1D70-8520-5EDA-8D69-92FC629235B1",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "05E14885-C833-5D28-A508-03747354DE81"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Museum",
@@ -370415,6 +370858,16 @@
       "centroidLongitude": 16.374394,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "B57FC237-90B5-5A06-B476-80BB54609955",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370460,6 +370913,16 @@
       "centroidLongitude": 16.408847,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "0929d219-6962-5f4a-a515-f0f0659ba1aa",
+        "05E14885-C833-5D28-A508-03747354DE81",
+        "F76CA9B5-1807-5C63-A9A1-78505CF50D3E",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370506,6 +370969,16 @@
       "centroidLongitude": 16.454803,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "95571E1F-3627-5A95-9648-3E0AB462F819",
+        "77A0C66E-2530-5F56-9D32-73B139B5FA64",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370552,6 +371025,16 @@
       "centroidLongitude": 16.349953,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "DAF1A160-9A3B-5E38-8B06-AC84ED6724B1",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "4BD7EEF2-10AC-57A8-A329-9FC0FA244B9A",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -370599,6 +371082,16 @@
       "centroidLongitude": 16.304772,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "77A0C66E-2530-5F56-9D32-73B139B5FA64",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "3BB02EA2-D64C-56EE-A4E9-596476F8EF93",
+        "C7610C0B-7F78-5F9E-9B29-225BE03786C5",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -370645,6 +371138,16 @@
       "centroidLongitude": 16.363638,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "34B84403-CF4F-5FDE-99F0-42FDC70F9D5E",
+        "A9DC71C8-01D7-5E13-BA4B-F52C40026BFB",
+        "15DE5EE8-DB93-5397-86FB-F170B561DACF"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370691,6 +371194,16 @@
       "centroidLongitude": 16.372206,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "9bcccf86-aaa2-55ab-9312-50a786d41d9a",
+        "95571E1F-3627-5A95-9648-3E0AB462F819",
+        "8FCA3808-7FD3-5692-8330-501E68468D3C",
+        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "DA9F96B1-5ABD-5F64-84E0-70F82315D117",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Waterfront",
@@ -370736,6 +371249,16 @@
       "centroidLongitude": 16.371939,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -370782,6 +371305,16 @@
       "centroidLongitude": 16.368503,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "E59EF97F-A5DB-58AF-9765-5EA0187790A6",
+        "733FE466-3E32-52B5-8438-C9D537565ACB",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "1418CFEB-7755-5679-960C-6A769BD77B13",
+        "1A21D9A3-8F61-5C1A-8378-071C4BB6CB81"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -370828,6 +371361,16 @@
       "centroidLongitude": 16.361842,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "23F99407-E1A5-54E5-B612-D109362FFA16",
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE",
+        "A1A85613-157A-5B87-BD50-A3008FADC71C",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -370874,6 +371417,16 @@
       "centroidLongitude": 16.365981,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "8857393C-E4B2-5199-883A-9C73C7A53689"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -370920,6 +371473,16 @@
       "centroidLongitude": 16.3589,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "77A0C66E-2530-5F56-9D32-73B139B5FA64",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "13E903BD-E545-535E-BD48-A024B4385102",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "8FCA3808-7FD3-5692-8330-501E68468D3C",
+        "DB3B616F-7F0D-5285-BC50-07F2645A23EC",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Monument",
@@ -370966,6 +371529,16 @@
       "centroidLongitude": 16.36639,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "3BB02EA2-D64C-56EE-A4E9-596476F8EF93",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "0F959B55-34AA-538E-AD98-AA233E3248DD",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "86D9B909-ACE2-5422-8E99-94F30B61A098",
+        "AD55248C-5F33-594C-8BD4-5288DBF13F15",
+        "753009F9-7684-57A9-9B9F-15AF8E59475C"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Monument",
@@ -371013,6 +371586,16 @@
       "centroidLongitude": 16.330676,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "b3c0904c-11a8-59b4-98f2-ffa72d8b4c9f",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "4546D045-91F1-5E33-82CE-204F166A37E5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -371059,6 +371642,16 @@
       "centroidLongitude": 16.373399,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "6373EA4F-353F-5077-BE3D-49D4B25FD30B",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "B57FC237-90B5-5A06-B476-80BB54609955",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Religious Building",
@@ -371104,6 +371697,16 @@
       "centroidLongitude": 16.370011,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "988EC3BB-5CC3-5D35-AB82-168AB41402B7",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "7224C876-61B6-5547-950F-02005F850F20"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -371152,6 +371755,16 @@
       "centroidLongitude": 16.368325,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "733FE466-3E32-52B5-8438-C9D537565ACB",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "1418CFEB-7755-5679-960C-6A769BD77B13",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "86D9B909-ACE2-5422-8E99-94F30B61A098",
+        "3BB02EA2-D64C-56EE-A4E9-596476F8EF93"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Public Square",
@@ -371198,6 +371811,16 @@
       "centroidLongitude": 16.373127,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "05E14885-C833-5D28-A508-03747354DE81",
+        "B4FB2A81-8E4F-5754-B6E6-835B45B95E22",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Religious Building",
@@ -371243,6 +371866,16 @@
       "centroidLongitude": 16.356227,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "24EDBEDC-82DD-5932-8884-DE523FB07485"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -371289,6 +371922,16 @@
       "centroidLongitude": 16.413195,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "1D521442-845A-52D1-8115-B3772915A05D",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "6D6E82CE-0724-5951-897A-34C28815069B"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -371334,6 +371977,16 @@
       "centroidLongitude": 16.383828,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "1418CFEB-7755-5679-960C-6A769BD77B13",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "94420BA9-D9A2-54F1-8B13-9EF0E9E33E72",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -371380,6 +372033,16 @@
       "centroidLongitude": 16.343598,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "3BB02EA2-D64C-56EE-A4E9-596476F8EF93",
+        "86D9B909-ACE2-5422-8E99-94F30B61A098",
+        "0F959B55-34AA-538E-AD98-AA233E3248DD",
+        "580D30BB-6FE2-52F3-88C7-6AEB8806CC1A",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Monument",
@@ -371426,6 +372089,16 @@
       "centroidLongitude": 16.373127,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "DCEE1D70-8520-5EDA-8D69-92FC629235B1",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "B4FB2A81-8E4F-5754-B6E6-835B45B95E22",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "0929d219-6962-5f4a-a515-f0f0659ba1aa"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Religious Building",
@@ -371471,6 +372144,16 @@
       "centroidLongitude": 16.370195,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "CDEBFA6C-4882-5C3C-9AAB-251CBC417118",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "DB3B616F-7F0D-5285-BC50-07F2645A23EC",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -371516,6 +372199,16 @@
       "centroidLongitude": 16.377939,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733",
+        "EC982594-3799-568D-87A1-E98145A0F730",
+        "527f3825-e099-55b7-97c6-1c4543ae806e",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -371562,6 +372255,16 @@
       "centroidLongitude": 16.383849,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "8DD8CA83-4F88-5372-8B5C-C9823383C689",
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733",
+        "89ABE86E-9CFE-5CC1-AAA3-6CC7569ADA2C",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -371610,6 +372313,16 @@
       "centroidLongitude": 16.363834,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -371656,6 +372369,16 @@
       "centroidLongitude": 16.369405,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C339AE90-0EFD-5CB7-AB1D-12D78407C78D",
+        "8289fd85-eaec-5fe8-8c6e-f157a2dfc9cc",
+        "1260aab6-0d44-5ce4-b763-4eee14859da2",
+        "8B2D5923-6544-52F0-80C0-180D5E986D1E",
+        "00ec26d9-9e7e-50e8-ad0d-b6509fb9413a",
+        "97D4D042-9C5F-583B-B20F-196D2FA6EBEA",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "fcc5cf6d-6957-599c-b622-54843af70465"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -371703,6 +372426,16 @@
       "centroidLongitude": 16.399152,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "8FCA3808-7FD3-5692-8330-501E68468D3C",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "C7610C0B-7F78-5F9E-9B29-225BE03786C5",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Monument",
@@ -371748,6 +372481,16 @@
       "centroidLongitude": 16.372651,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "CA91DD45-1D2B-56A6-A06C-BE1DCE809BD8",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "9bcccf86-aaa2-55ab-9312-50a786d41d9a",
+        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
+        "2AE9A0B0-EDFB-542F-AEB9-5356D5866637",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -371795,6 +372538,16 @@
       "centroidLongitude": 16.365962,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "6CF7A2F4-13D2-5419-8EDE-325C57B90603",
+        "23F99407-E1A5-54E5-B612-D109362FFA16",
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "EA93D02F-202E-5A04-A092-245E23C894F0",
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -371841,6 +372594,16 @@
       "centroidLongitude": 16.367558,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -371886,6 +372649,16 @@
       "centroidLongitude": 16.355977,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -371932,6 +372705,16 @@
       "centroidLongitude": 16.359105,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "B57FC237-90B5-5A06-B476-80BB54609955",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -371980,6 +372763,14 @@
       "centroidLongitude": 16.376307,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "718A7FC6-DF7A-5F67-A3D1-31DE29FCA48D",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "E65CC993-63DB-5F7D-9798-B171137401A7",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "618e3268-b878-5e1f-837b-b5530f56c737"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -372026,6 +372817,16 @@
       "centroidLongitude": 16.363491,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "2657A3AA-C4D2-513C-BBCE-CD6CDD1F8CFB",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "53369C7D-614F-5726-9B7B-EF422652D651"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -372071,6 +372872,16 @@
       "centroidLongitude": 16.336063,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -372116,6 +372927,16 @@
       "centroidLongitude": 16.35919,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "2AE9A0B0-EDFB-542F-AEB9-5356D5866637",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "F36B100B-3B65-58F5-AE4E-DEF218AE74BB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -372163,6 +372984,16 @@
       "centroidLongitude": 16.353354,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "580D30BB-6FE2-52F3-88C7-6AEB8806CC1A",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
+        "E65CC993-63DB-5F7D-9798-B171137401A7",
+        "3BB02EA2-D64C-56EE-A4E9-596476F8EF93",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -372208,6 +373039,16 @@
       "centroidLongitude": 16.385111,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "1A21D9A3-8F61-5C1A-8378-071C4BB6CB81"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -372256,6 +373097,16 @@
       "centroidLongitude": 16.365556,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -372301,6 +373152,16 @@
       "centroidLongitude": 16.380167,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "15DE5EE8-DB93-5397-86FB-F170B561DACF",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -372346,6 +373207,16 @@
       "centroidLongitude": 16.350683,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C7610C0B-7F78-5F9E-9B29-225BE03786C5",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -372392,6 +373263,16 @@
       "centroidLongitude": 16.352958,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "91351c83-e088-5d93-8ec2-b3a5d3db7359",
+        "EC8819D0-F340-555B-93B7-A641020F8D9E",
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Park",
@@ -372438,6 +373319,16 @@
       "centroidLongitude": 16.363671,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "1A21D9A3-8F61-5C1A-8378-071C4BB6CB81",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "6373EA4F-353F-5077-BE3D-49D4B25FD30B",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -372484,6 +373375,16 @@
       "centroidLongitude": 16.367212,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F64378C7-8D46-54EE-AEDE-DBB06AAA2FAA",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "F36B100B-3B65-58F5-AE4E-DEF218AE74BB",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -372529,6 +373430,16 @@
       "centroidLongitude": 16.363834,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "552159A1-A233-55FE-927D-F1FC6471DB67",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "D07FFD05-4FFD-5482-9D3F-2D199B7B735C"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -372575,6 +373486,16 @@
       "centroidLongitude": 16.371417,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "8092FDFF-C11B-53F6-9B6C-F9A94CAA6A62",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "05E14885-C833-5D28-A508-03747354DE81",
+        "DCEE1D70-8520-5EDA-8D69-92FC629235B1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -372620,6 +373541,16 @@
       "centroidLongitude": 16.371175,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -372665,6 +373596,16 @@
       "centroidLongitude": 16.368232,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "8092FDFF-C11B-53F6-9B6C-F9A94CAA6A62",
+        "24EDBEDC-82DD-5932-8884-DE523FB07485",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "F64378C7-8D46-54EE-AEDE-DBB06AAA2FAA"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -372710,6 +373651,16 @@
       "centroidLongitude": 16.365687,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "3BB02EA2-D64C-56EE-A4E9-596476F8EF93",
+        "86D9B909-ACE2-5422-8E99-94F30B61A098",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "C996FCBD-F3AF-5DFA-A13E-14CA648A2451",
+        "0F959B55-34AA-538E-AD98-AA233E3248DD",
+        "EA93D02F-202E-5A04-A092-245E23C894F0",
+        "23F99407-E1A5-54E5-B612-D109362FFA16"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Monument",
@@ -372756,6 +373707,16 @@
       "centroidLongitude": 16.366501,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -372803,6 +373764,16 @@
       "centroidLongitude": 16.361404,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "53369C7D-614F-5726-9B7B-EF422652D651"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -372849,6 +373820,16 @@
       "centroidLongitude": 16.366817,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "559D7FD1-1540-5730-8636-D27F8FAEC5BA",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "EA93D02F-202E-5A04-A092-245E23C894F0",
+        "23F99407-E1A5-54E5-B612-D109362FFA16",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -372896,6 +373877,16 @@
       "centroidLongitude": 16.358245,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "2657A3AA-C4D2-513C-BBCE-CD6CDD1F8CFB",
+        "1D521442-845A-52D1-8115-B3772915A05D"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -372941,6 +373932,16 @@
       "centroidLongitude": 16.365687,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "e2839c00-a694-56a8-bd9b-e1c2c4072736",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -372987,6 +373988,16 @@
       "centroidLongitude": 16.390588,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "2657A3AA-C4D2-513C-BBCE-CD6CDD1F8CFB",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "B8A53D17-B597-50FC-849F-23197B665DD9",
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -373033,6 +374044,16 @@
       "centroidLongitude": 16.354607,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "DB3B616F-7F0D-5285-BC50-07F2645A23EC",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
+        "8857393C-E4B2-5199-883A-9C73C7A53689"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Religious Building",
@@ -373079,6 +374100,16 @@
       "centroidLongitude": 16.361436,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "E28253BF-25E6-5ECE-859F-219BD2554550",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "EC8819D0-F340-555B-93B7-A641020F8D9E",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "0F959B55-34AA-538E-AD98-AA233E3248DD",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -373124,6 +374155,16 @@
       "centroidLongitude": 16.355038,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "1A21D9A3-8F61-5C1A-8378-071C4BB6CB81"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -373172,6 +374213,16 @@
       "centroidLongitude": 16.358763,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "BE0C0DB5-2FFC-5466-8FD2-6FF41CC26E52",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "EC8819D0-F340-555B-93B7-A641020F8D9E",
+        "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E",
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -373217,6 +374268,16 @@
       "centroidLongitude": 16.367376,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -373263,6 +374324,16 @@
       "centroidLongitude": 16.358609,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "5988f39e-1680-5394-9f96-6ba6b4406a1e",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Public Square",
@@ -373310,6 +374381,16 @@
       "centroidLongitude": 16.34923,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "64D3BC37-B816-5179-9C71-129FAC69CE63",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4",
+        "2657A3AA-C4D2-513C-BBCE-CD6CDD1F8CFB"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -373357,6 +374438,16 @@
       "centroidLongitude": 16.366592,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "342d83f1-37bf-51eb-b747-31a2b8668c7a",
+        "c933fed3-eb24-5319-87df-7ce498c62100",
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD",
+        "38AE0136-4C79-510A-9455-676433862BCC",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC",
+        "53369C7D-614F-5726-9B7B-EF422652D651"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -373405,6 +374496,16 @@
       "centroidLongitude": 16.373127,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "B4FB2A81-8E4F-5754-B6E6-835B45B95E22",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "D07FFD05-4FFD-5482-9D3F-2D199B7B735C",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "AA5A5556-05AE-5050-97B1-177BE864449B",
+        "A9DC71C8-01D7-5E13-BA4B-F52C40026BFB"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -373450,6 +374551,16 @@
       "centroidLongitude": 16.3844,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "24EDBEDC-82DD-5932-8884-DE523FB07485",
+        "d102fac4-3be4-5890-ad16-330fad5cd6a7",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "F64378C7-8D46-54EE-AEDE-DBB06AAA2FAA",
+        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "9bcccf86-aaa2-55ab-9312-50a786d41d9a"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
@@ -373497,6 +374608,16 @@
       "centroidLongitude": 16.384413,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "4BD7EEF2-10AC-57A8-A329-9FC0FA244B9A",
+        "B2A1F987-5E61-5104-99D6-8EAE7E431C6A",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -373543,6 +374664,16 @@
       "centroidLongitude": 16.387784,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "E28253BF-25E6-5ECE-859F-219BD2554550",
+        "8FCA3808-7FD3-5692-8330-501E68468D3C",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "D879EF95-5BA4-59B2-9C59-CECAB65FB3AD",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -373588,6 +374719,16 @@
       "centroidLongitude": 16.342654,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -373633,6 +374774,16 @@
       "centroidLongitude": 16.363834,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
+        "4EE25E2C-1D0E-5857-9863-17B5DC13ABC4",
+        "BC7F7ECF-4EB5-5C9F-9002-5B3A013597BE"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Religious Building",
@@ -373678,6 +374829,16 @@
       "centroidLongitude": 16.367605,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "EA93D02F-202E-5A04-A092-245E23C894F0",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "BC7F7ECF-4EB5-5C9F-9002-5B3A013597BE",
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "D07FFD05-4FFD-5482-9D3F-2D199B7B735C"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Religious Building",
@@ -373723,6 +374884,16 @@
       "centroidLongitude": 16.378785,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD",
+        "EC982594-3799-568D-87A1-E98145A0F730",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "4546D045-91F1-5E33-82CE-204F166A37E5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Park",
@@ -373769,6 +374940,16 @@
       "centroidLongitude": 16.438094,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
+        "0929d219-6962-5f4a-a515-f0f0659ba1aa",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "15DE5EE8-DB93-5397-86FB-F170B561DACF"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -373817,6 +374998,16 @@
       "centroidLongitude": 16.442424,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "7F4252EE-C87B-5A36-B0C7-22038E540978",
+        "0a454b83-93e9-56d5-a24f-28b312935a2f"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Park",
@@ -373863,6 +375054,16 @@
       "centroidLongitude": 16.372873,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "1B850791-9B5E-5560-BD26-BE67D634D5FB",
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "58F2294B-1BE5-5D7D-B981-CC461CB98934",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Square",
@@ -373908,6 +375109,16 @@
       "centroidLongitude": 16.372856,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "EC8819D0-F340-555B-93B7-A641020F8D9E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -373957,6 +375168,16 @@
       "centroidLongitude": 16.374241,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "E09433C2-339A-5435-B993-7A6C258EFB8C",
+        "580D30BB-6FE2-52F3-88C7-6AEB8806CC1A",
+        "3CB11423-2BDF-5B29-AB3D-3383583F38E5",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "11DF95A6-BDA2-56FB-A8BD-AF09FBF16C7E",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -374005,6 +375226,16 @@
       "centroidLongitude": 16.374562,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "F76CA9B5-1807-5C63-A9A1-78505CF50D3E",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "AA5A5556-05AE-5050-97B1-177BE864449B"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -374050,6 +375281,16 @@
       "centroidLongitude": 16.374946,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "B57FC237-90B5-5A06-B476-80BB54609955",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "13E903BD-E545-535E-BD48-A024B4385102",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -374096,6 +375337,16 @@
       "centroidLongitude": 16.362259,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "D65EAA59-B2FB-5480-A4FC-709F756A4FD9",
+        "1D521442-845A-52D1-8115-B3772915A05D",
+        "F64378C7-8D46-54EE-AEDE-DBB06AAA2FAA",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -374141,6 +375392,16 @@
       "centroidLongitude": 16.35914,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "84B514C6-73D4-5CA5-A7AA-E4F58AC7D573",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "15DE5EE8-DB93-5397-86FB-F170B561DACF",
+        "2B520CA2-7B61-5F76-A71A-50AEDB63ABDC"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -374187,6 +375448,16 @@
       "centroidLongitude": 16.365205,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "F0CC5A86-9D84-5605-B2F8-D62F8EB5D0CC",
+        "8857393C-E4B2-5199-883A-9C73C7A53689"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -374233,6 +375504,16 @@
       "centroidLongitude": 16.363834,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
+        "8DA482EA-E980-5536-964C-5F68F1B79EAC",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "f748fea4-fee0-5ad1-ad40-52bc21575422",
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
+        "94420BA9-D9A2-54F1-8B13-9EF0E9E33E72",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -374281,6 +375562,16 @@
       "centroidLongitude": 16.356573,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "61CB8A21-DCB1-5D46-BCD1-917E96F3FB14",
+        "4546D045-91F1-5E33-82CE-204F166A37E5",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "B7B16BF4-860C-54DC-9528-23B7EF427885",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
+        "EC041806-07EB-503E-9606-6EDB6436D184",
+        "B57FC237-90B5-5A06-B476-80BB54609955"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -374330,6 +375621,16 @@
       "centroidLongitude": 16.253453,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "4e227a06-777e-571a-80ad-4c53decfc0d6",
+        "2657A3AA-C4D2-513C-BBCE-CD6CDD1F8CFB",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -374378,6 +375679,16 @@
       "centroidLongitude": 16.381671,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "15DE5EE8-DB93-5397-86FB-F170B561DACF",
+        "DB3B616F-7F0D-5285-BC50-07F2645A23EC",
+        "F76CA9B5-1807-5C63-A9A1-78505CF50D3E",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -374424,6 +375735,16 @@
       "centroidLongitude": 16.346344,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
+        "4B6F45B7-98AD-5271-8ECD-F8F3D0A577D3",
+        "53369C7D-614F-5726-9B7B-EF422652D651",
+        "CDEBFA6C-4882-5C3C-9AAB-251CBC417118",
+        "2C2DBD0D-864F-5149-954C-BF1CDBB10293",
+        "8857393C-E4B2-5199-883A-9C73C7A53689",
+        "37DDDD30-4954-562F-A694-25F08EA9E174",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -374469,6 +375790,16 @@
       "centroidLongitude": 16.365626,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
+        "5E5B323C-D34C-55C6-9A0B-43C72B0C2FDE",
+        "E3E8891A-D5B9-55D0-831D-6CA0ECCE72C3",
+        "14D35B41-35AE-5853-90CB-612FEFFEAF66",
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "4B605B0F-8459-5DCC-B276-A9161C1C6026",
+        "592F0737-559E-5077-B4BB-A5F5739D77D2",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -374515,6 +375846,16 @@
       "centroidLongitude": 16.373127,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "954F83FF-1A38-52FB-85C4-C750980DBD47",
+        "DCEE1D70-8520-5EDA-8D69-92FC629235B1",
+        "A9DC71C8-01D7-5E13-BA4B-F52C40026BFB",
+        "05E14885-C833-5D28-A508-03747354DE81",
+        "34B84403-CF4F-5FDE-99F0-42FDC70F9D5E",
+        "0929d219-6962-5f4a-a515-f0f0659ba1aa",
+        "605C7205-754C-55E5-B91E-6DE64883B110",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -374560,6 +375901,16 @@
       "centroidLongitude": 16.373127,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "BA383C8E-C5B2-5341-A1BD-5F0D5F47EAE4",
+        "B4FB2A81-8E4F-5754-B6E6-835B45B95E22",
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "05E14885-C833-5D28-A508-03747354DE81",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "2b01133f-e7a7-53e5-9f19-c00075f73733",
+        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E",
+        "8092FDFF-C11B-53F6-9B6C-F9A94CAA6A62"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Tower",
@@ -374605,6 +375956,16 @@
       "centroidLongitude": 16.363638,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "64D3BC37-B816-5179-9C71-129FAC69CE63",
+        "9B0DA1C2-8237-5A34-AD4C-2A2506396CC3",
+        "B2935F2B-2CC4-557F-AFF0-54A32A052C39",
+        "7224C876-61B6-5547-950F-02005F850F20",
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83",
+        "15DE5EE8-DB93-5397-86FB-F170B561DACF",
+        "4BFC8454-9AFA-5197-B339-2930B62A6B68"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -374650,6 +376011,16 @@
       "centroidLongitude": -2.232339,
       "city": "Manchester",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "AA61A538-9090-5862-A5E9-6DA6AC951E50",
+        "09378580-2397-5F49-8B2E-88A9BC8DFF28",
+        "49D126C6-E081-52E8-9B05-E0535FFA77FF",
+        "0C99DA99-76A9-54B0-8581-9E2A57AEA2AB",
+        "B141DD06-4FC9-5A8C-8034-88A533938DBC",
+        "6A63FFBE-138D-50B3-AB0D-0F135E88B2F8",
+        "A8F1977A-1942-5146-873B-36A81E27C2D9",
+        "36FE7210-065F-5E05-B768-C6F377E9D90D"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -374696,6 +376067,16 @@
       "centroidLongitude": 13.374343,
       "city": "Berlin",
       "country": "Germany",
+      "relatedTourIds": [
+        "03c0f1c1-0a74-521c-88b3-87927f33f954",
+        "687F4A2B-9D33-5C72-B67C-7BFA5BDD8F5E",
+        "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
+        "c056c499-76ae-5306-a407-b4eb22663f2e",
+        "642ec68c-5148-5833-a9f9-c7825e295c2d",
+        "9ef33a0e-d5bb-530d-a43e-5c601ec99fe1",
+        "76127777-fee0-53a2-809c-d00386c0f2fe",
+        "5a785271-81bb-52db-bf2f-2ca084f5e81c"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -374742,6 +376123,16 @@
       "centroidLongitude": -118.2879,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "3F4AEF87-81F7-5D1D-A090-EF9CF945E424",
+        "ee249344-4ce3-5fbc-a25b-09ab465c8192",
+        "4754C562-061B-582E-82AC-A09CE93C6098",
+        "11F7DFB1-AF93-522D-A927-DBCE3DA4C9D7",
+        "62ECCD3D-535D-5168-9299-54AEECE3FD16",
+        "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
+        "DDB83027-4F0F-5716-B574-32540DFCE9A5",
+        "21EA3E2B-51F7-5194-BFF5-A20BFDC0A7EB"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -374788,6 +376179,9 @@
       "centroidLongitude": -8.614860428995875,
       "city": "Porto",
       "country": "Portugal",
+      "relatedTourIds": [
+        "34887987-540B-4388-839D-D0CD4BD5BBCE"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Library",
@@ -374834,6 +376228,16 @@
       "centroidLongitude": 2.34706,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "846A553D-BB50-52D0-9F14-E5E098FB6DC5",
+        "43318a61-f8bd-51e1-a393-43ba4944b10e",
+        "E72F4DE0-8AA3-596A-8B67-EE23BC72309B",
+        "E753DE1F-6327-5FAC-877B-26DA39F26935",
+        "B606303B-2024-58E5-873F-64EF22723675",
+        "1E5796D2-82A4-52A1-819E-6C0E3812C63A",
+        "6DEEF297-C315-53F8-811E-D737B7DD4B31",
+        "9b93d74b-505a-5886-9cf7-a5ca235c12de"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Library",
@@ -374880,6 +376284,16 @@
       "centroidLongitude": 139.74218,
       "city": "Tokyo",
       "country": "Japan",
+      "relatedTourIds": [
+        "948f8ce6-e540-5ec1-bcbf-b64ddc23a934",
+        "d575f72c-bcd4-551e-80bb-20e16a4a88a3",
+        "2946afff-1ff9-597d-aadc-4a43cc9b79bc",
+        "55CCC2CC-9AA4-55F7-AC22-0848B2580BF0",
+        "dd29ccca-d231-5af9-aadb-91ee4e171032",
+        "5D32B563-DC04-57D3-9861-D666AA93170A",
+        "e6eea53e-7962-5e49-bbf5-88f91c5cf63a",
+        "4d50a4d9-bff8-5a55-aa48-665b08e39134"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
@@ -374926,6 +376340,9 @@
       "centroidLongitude": -8.701836600093268,
       "city": "Leixões",
       "country": "Portugal",
+      "relatedTourIds": [
+        "11B4526D-530F-4792-B2A0-CBBB23065AA0"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
