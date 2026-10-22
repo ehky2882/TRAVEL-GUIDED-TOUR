@@ -11560,10 +11560,10 @@
         "CCA55540-D608-5275-A25B-E06803AB708D",
         "0128056F-C30B-5DA1-865B-334AF49AF818",
         "d1692f72-8e9c-5cf8-aea2-1576a83a0ea1",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "8f8cabb3-ad8c-5ebb-990b-48166e827932",
         "a4acf61e-ad8b-560d-b0c6-a5545f8b92b3",
-        "177004b7-279b-5351-bc53-9fa3ae4e3dee",
-        "af027d67-cf8c-5667-a977-2b6a3554227d"
+        "177004b7-279b-5351-bc53-9fa3ae4e3dee"
       ],
       "walkingDistanceMeters": null
     },
@@ -98545,8 +98545,8 @@
         "B3CC1B62-7371-5BA2-AE69-E3C4F9BD284A",
         "5c3fd907-141d-5d71-97bb-f3c4a542ebc7",
         "bd6cb95b-0f40-5929-94b4-e8d88b8b1b4b",
-        "121c5e14-92d3-524f-a947-cc7751d93a00",
-        "65087606-b1f8-5989-bb06-f40d0bafd514"
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
+        "121c5e14-92d3-524f-a947-cc7751d93a00"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -121330,12 +121330,12 @@
       "relatedTourIds": [
         "0EBB25E3-90CE-5AE7-A8F4-80E6F18ACF13",
         "D1B6D16D-436B-51C8-B843-0D20A891608F",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "daa173c2-95ff-5cf7-93fc-854e933f9c14",
         "A30040D9-3057-51C3-B701-E4FF776090F5",
         "7236b5e0-cb1a-5e87-9025-39caf99916cf",
         "B8100F58-3A4A-5869-8E8B-9A97446A84F2",
-        "c83fc832-9dbd-5ef0-b4e1-7a35de0b1539",
-        "a6caddc6-3c4a-576c-992d-d5869c90476d"
+        "c83fc832-9dbd-5ef0-b4e1-7a35de0b1539"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122114,9 +122114,9 @@
         "64DE0FCC-52DB-59F1-808E-D401482EE5FA",
         "7a871c32-8514-51de-840f-3ab30d79b32d",
         "1b99637c-aec0-5714-b104-04849a1d97ee",
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
         "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
-        "c4041071-0993-50d9-a14f-2f623fb387e3",
-        "da803a7d-61a5-44c7-a1b0-7c9f35994e64"
+        "c4041071-0993-50d9-a14f-2f623fb387e3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -133844,7 +133844,16 @@
       "centroidLongitude": 24.947135813911856,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -133895,7 +133904,16 @@
       "centroidLongitude": 24.905851413911858,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -133945,7 +133963,16 @@
       "centroidLongitude": 24.94341782023767,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -133994,7 +134021,16 @@
       "centroidLongitude": 24.951137806745884,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "33cdb1cc-da7c-548b-a089-354c56c997a3",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -134044,7 +134080,16 @@
       "centroidLongitude": 24.96315,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "2B989637-8AA6-5C71-A36C-FA019C7CEFF9",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "33cdb1cc-da7c-548b-a089-354c56c997a3"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "District",
@@ -134095,7 +134140,16 @@
       "centroidLongitude": 24.92662987976233,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "39409c87-5e9e-5c45-9a22-feced660255c",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -134141,7 +134195,16 @@
       "centroidLongitude": 24.963128233729446,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "33cdb1cc-da7c-548b-a089-354c56c997a3",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "abfba41f-5a76-5e21-af32-53d5462109c9",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -134191,7 +134254,16 @@
       "centroidLongitude": 24.953382469731483,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "33cdb1cc-da7c-548b-a089-354c56c997a3",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "822BFF22-DCBC-5B2E-A12D-45A1E9680457"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -134237,7 +134309,16 @@
       "centroidLongitude": 24.941219127403635,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -134285,7 +134366,16 @@
       "centroidLongitude": 25.04155465092626,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561",
+        "3e3b1108-e77e-5af5-afdc-9d0e3a60e4fa",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "92197c3f-65e2-551d-ab93-7467c7f5f7ec",
+        "6dd34b79-17f1-5b88-be50-d26628f4e5cd"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -134335,7 +134425,16 @@
       "centroidLongitude": 24.953496312059336,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -134383,7 +134482,16 @@
       "centroidLongitude": 24.938226347333504,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "acf95c71-7b95-51ae-89f0-804cf99b4e0c",
+        "f63a6d67-5d03-556c-a54b-039a53209fa8",
+        "8aa3d5d7-cd39-5bdc-bac2-4feba1e8c45a"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -134429,7 +134537,16 @@
       "centroidLongitude": 24.933658411815237,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "39409c87-5e9e-5c45-9a22-feced660255c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -134476,7 +134593,16 @@
       "centroidLongitude": 24.946483350925764,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "39409c87-5e9e-5c45-9a22-feced660255c",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -134525,7 +134651,16 @@
       "centroidLongitude": 24.94731890674588,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -134576,7 +134711,16 @@
       "centroidLongitude": 24.932440964417967,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "e699c7d4-f383-5431-b712-5c3721bcf901",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "0e7b12a6-ed24-515c-8267-9183da3d0561"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -134623,7 +134767,16 @@
       "centroidLongitude": 24.93901359325411,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "a0b7bcd4-4d18-5e69-a670-08b688e632d5",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "4f5eb672-dc6e-5d4d-a807-9f79771ba281",
+        "93d78b33-8933-5a44-8d77-0d6c233e96ad",
+        "cf499e05-7751-59fe-b83b-eece14040d16"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -134673,7 +134826,16 @@
       "centroidLongitude": 24.941405300659603,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "C6AF71DC-B237-5249-BE07-EA129FB2C034",
+        "2B989637-8AA6-5C71-A36C-FA019C7CEFF9",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "52b44eda-7497-5352-9b22-cca790e4eb8c",
+        "99a4b0da-c137-5bb2-bb89-bd8c9975d2bd"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -134725,7 +134887,16 @@
       "centroidLongitude": 24.958583162568967,
       "city": "Helsinki",
       "country": "Finland",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "2146dc8e-512d-59e5-a0f6-d0f22f5f0bdc",
+        "0632d3c5-719f-5d65-bbcd-a5e559258e2f",
+        "5003d24f-c7ba-5fe4-93c8-e74c9614e699",
+        "f234025b-bdfd-50e6-bc38-5f828b48b5e1",
+        "30f50cde-a5ff-5039-bc8f-14228cc051fc",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746",
+        "39409c87-5e9e-5c45-9a22-feced660255c",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -151682,7 +151853,10 @@
       "city": "Helsinki",
       "country": "Finland",
       "relatedTourIds": [
-        "C6AF71DC-B237-5249-BE07-EA129FB2C034"
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
+        "C6AF71DC-B237-5249-BE07-EA129FB2C034",
+        "56f6a171-18c5-58b7-bffa-19cbc37ba977",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -201349,8 +201523,10 @@
       "city": "Helsinki",
       "country": "Finland",
       "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "2B989637-8AA6-5C71-A36C-FA019C7CEFF9",
-        "A62ABF8E-2B6A-5BFA-B0AD-02BF46783207"
+        "A62ABF8E-2B6A-5BFA-B0AD-02BF46783207",
+        "f003ae50-d95c-5a0c-ac99-5630d6a95746"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -204557,6 +204733,7 @@
       "country": "Finland",
       "relatedTourIds": [
         "C6AF71DC-B237-5249-BE07-EA129FB2C034",
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "D31FE62B-6A9D-56EA-95FF-512E85F664D1"
       ],
       "primaryCategory": "sacredSites",
@@ -366967,6 +367144,7 @@
       "city": "Helsinki",
       "country": "Finland",
       "relatedTourIds": [
+        "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "A62ABF8E-2B6A-5BFA-B0AD-02BF46783207"
       ],
       "primaryCategory": "sacredSites",
