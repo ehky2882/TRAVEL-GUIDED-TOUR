@@ -12,8 +12,8 @@ script 17.
 - **Audio:** 103–145 s each. Not transcribed against the scripts. (Lokal and Savoy are the same length to the frame
   and byte size, but their decoded audio differs — checked, not a duplicate.) Central Station and Kuurna came from a
   different pipeline whose script starts with a title line; the recording may open by reading the title.
-- **Photos:** 70, no byte duplicates, all 1200×900 WebP. Katajanokka and Pataässä have two. **No licence recorded per
-  image** (on the owner's board).
+- **Photos:** 70, no byte duplicates, all 1200×900 WebP. Katajanokka and Pataässä have two. The contributor confirmed
+  on 2026-10-22 that they are cleared and fine to use; no licence recorded per image (on the owner's board).
 - **Text:** `longDescription` = hook + paragraph 3, as in Vienna, Warsaw, Oslo and Belém. `shortDescription` cut at
   145 characters. Captions written by hand from each script's orientation paragraph.
 - **Bilingual `English | Finnish`** on 6 tours: Tanssin talo, Hakaniementori, Helsingin päärautatieasema,
