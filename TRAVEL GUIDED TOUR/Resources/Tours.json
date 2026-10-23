@@ -73157,9 +73157,9 @@
         "8941e2d3-583e-553c-8625-817f7e2ac985",
         "7f1c44dc-ad8b-53c6-9e9b-c4281fcf3ffd",
         "6339e837-a7b5-56f9-8dbf-c19710f25473",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
         "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8",
-        "4dcf4a84-0066-5267-87ae-c315600d8cf2",
-        "15674F4E-057C-5D7F-8C54-3F33D15F1803"
+        "4dcf4a84-0066-5267-87ae-c315600d8cf2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -103617,7 +103617,7 @@
         "e0c70663-7916-5023-982e-7f6027a49416",
         "35286e95-babc-548b-956a-53e485bc070c",
         "3261bd51-24b5-5a79-a691-a1e1a868ccfb",
-        "632478cb-b0b2-5aa6-aa08-46f2e47e2f3e"
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -123067,9 +123067,9 @@
         "e9740319-7b4f-5e89-ac29-7471dd0f3881",
         "8751aa0e-b1e8-530f-8df7-2914cef14602",
         "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
         "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
-        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
-        "b4f87483-ebae-567e-896f-b7b4042ca34a"
+        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132829,6 +132829,7 @@
       "city": "Oslo",
       "country": "Norway",
       "relatedTourIds": [
+        "268691cd-719a-5243-a758-d205cfbe90cb",
         "5FD518A0-2202-5313-83AD-7D49AE9D915F",
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
@@ -134983,7 +134984,16 @@
       "centroidLongitude": 3.0622566124296915,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -135032,7 +135042,16 @@
       "centroidLongitude": 3.124959439154304,
       "city": "Wasquehal",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "A957C31E-38FE-564B-8F0D-C11F7EA24456",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "C37E821E-F28A-560E-B1F5-DC02771E47E9",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
+        "B039CF72-99D4-5AEE-B1AB-C5D01BB41DB6",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -135078,7 +135097,16 @@
       "centroidLongitude": 3.058431183594242,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "268691cd-719a-5243-a758-d205cfbe90cb",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -135126,7 +135154,16 @@
       "centroidLongitude": 3.0586052547581657,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "e381dd4d-bc72-5c91-8b28-e4127be90431",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "924fb37f-f106-5626-9112-e89b3ececd84",
+        "54ea68c0-e852-5264-b867-9a651c1eb4d1"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -135173,7 +135210,16 @@
       "centroidLongitude": 3.0643352124299414,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -135226,7 +135272,16 @@
       "centroidLongitude": 3.0215494101762888,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "12985eac-ae42-58e7-9a0a-e887c830640a"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -135274,7 +135329,16 @@
       "centroidLongitude": 3.062591369731487,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "e381dd4d-bc72-5c91-8b28-e4127be90431",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -135320,7 +135384,16 @@
       "centroidLongitude": 3.155118010580932,
       "city": "Tourcoing",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
+        "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
+        "096a3cba-09b6-57e7-8379-2e49f3a7b507",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
+        "2e894f42-7142-5739-b7cf-9c702494e4b4",
+        "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
+        "2bfc11d0-23e9-5e67-ad0f-fe89ba8700b3",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -135369,7 +135442,16 @@
       "centroidLongitude": 3.0642330663973296,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e381dd4d-bc72-5c91-8b28-e4127be90431",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -135416,7 +135498,16 @@
       "centroidLongitude": 3.072180325921706,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -135463,7 +135554,16 @@
       "centroidLongitude": 3.0655302179875257,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "0926fd1d-5182-58c9-8c27-a6310504c1da",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -135515,7 +135615,16 @@
       "centroidLongitude": 3.061991697081611,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -135565,7 +135674,16 @@
       "centroidLongitude": 3.0497061390367715,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "e381dd4d-bc72-5c91-8b28-e4127be90431"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -135617,7 +135735,16 @@
       "centroidLongitude": 3.062670268249752,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "98f0406d-f7fa-531f-8db0-540bcb932621",
+        "eef8a099-2f7a-5883-9c02-35c0e1836bbd",
+        "7f755582-1524-5ed5-9215-2a0d7b044fc3"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -135672,7 +135799,16 @@
       "centroidLongitude": 3.0627820682491906,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "0926fd1d-5182-58c9-8c27-a6310504c1da",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -135723,7 +135859,16 @@
       "centroidLongitude": 3.061535425921906,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "89b99107-9d86-509c-9cf6-56bd7f756471"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Square",
@@ -135773,7 +135918,16 @@
       "centroidLongitude": 3.0589895394130275,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -135816,7 +135970,16 @@
       "centroidLongitude": 3.0649425682496623,
       "city": "Lille",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "87197947-f2f1-5565-aad8-7575508ea9df"
+      ],
       "primaryCategory": "history",
       "tags": [
         "District",
@@ -135869,7 +136032,16 @@
       "centroidLongitude": 3.1639932761424183,
       "city": "Croix",
       "country": "France",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e01770af-347d-5f43-a63e-1fa97ce3551d",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "89443016-9aea-5422-a33a-be72636e89f1",
+        "b4f87483-ebae-567e-896f-b7b4042ca34a",
+        "6CD8B760-BD43-567C-97AE-E626351787F4",
+        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70",
+        "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
+        "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
