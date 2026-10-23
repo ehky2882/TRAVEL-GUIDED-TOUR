@@ -11,6 +11,5 @@ these were put to them as rulings, and nothing was created or joined.
    source or licence is recorded per image.
 3. **Dated lines in the audio:** Le Fresnoy says "Panorama 28 runs until early January 2027"; Le Tripostal mentions an
    exhibition "due to open this autumn". Shipped as recorded; re-record the closing lines if they grate.
-4. **Script 14 is missing** from the drop (numbered 01–20); asked, not answered.
 
 Full account: `archive/HANDOFF-261023-lille.md`.

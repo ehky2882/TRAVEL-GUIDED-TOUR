@@ -9,7 +9,7 @@ metropolis, and no walks.
 
 **Source:** a Dropbox drop from arthur.yung (the contributor, not the owner), 19 folders numbered 01–20 with no 14.
 Triage went to the contributor first; they approved all 19 with titles as proposed and confirmed the photos are good
-to use. The missing 14 was asked about and not answered; this batch ships the 19 that exist.
+to use, and confirmed there is no script 14 ("there's no 14, ship the 19").
 - **Audio:** 103–125 s each. Not transcribed against the scripts. Most clean scripts open with a title line, so a
   recording may open by reading the title (as Helsinki's Central Station and Kuurna).
 - **Photos:** 77, no byte duplicates, all 1200×900 WebP; every hero looked at and on-subject. Place aux Oignons and

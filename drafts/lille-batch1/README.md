@@ -1,6 +1,6 @@
 # Lille batch 1 — Atlas Studio LIL (19 singles) — LIVE 2026-10-23
 
-Source: contributor drop (Dropbox, arthur.yung), 19 `output <Name> <lat>, <lon>` folders, numbered 01–20 with no 14.
+Source: contributor drop (Dropbox, arthur.yung), 19 `output <Name> <lat>, <lon>` folders, numbered 01–20 with no 14 (contributor, 2026-10-23: "there's no 14").
 Each holds `NN_<slug>_clean.txt` + `NN_<slug>_tts-safe.txt` (every clean script but Bienheureux opens with a title
 line), one MP3 and 1–7 photos at 1200×900 WebP. Folder names arrive with accents escaped as `#U00e9` etc.
 
